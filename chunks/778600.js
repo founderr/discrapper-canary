@@ -61,7 +61,7 @@ function I(e, t, r, n, a = window) {
                 ? r
                 : {
                       set(e) {
-                          f(() => {
+                          L(() => {
                               r.set.call(this, e);
                           }, 0),
                               _ && _.set && _.set.call(this, e);
@@ -127,10 +127,10 @@ function T(e) {
 function d(...e) {
     return T('requestAnimationFrame')(...e);
 }
-function f(...e) {
+function L(...e) {
     return T('setTimeout')(...e);
 }
-var L = (((_ = L || {})[(_['2D'] = 0)] = '2D'), (_[(_.WebGL = 1)] = 'WebGL'), (_[(_.WebGL2 = 2)] = 'WebGL2'), _);
+var f = (((_ = f || {})[(_['2D'] = 0)] = '2D'), (_[(_.WebGL = 1)] = 'WebGL'), (_[(_.WebGL2 = 2)] = 'WebGL2'), _);
 let O = (e) =>
     n
         ? (...t) => {
@@ -367,7 +367,7 @@ class m {
                 let { base64: n, type: a, width: _, height: o } = t;
                 this.mutationCb({
                     id: r,
-                    type: L['2D'],
+                    type: f['2D'],
                     commands: [
                         {
                             property: 'clearRect',
@@ -420,10 +420,10 @@ class m {
                             return function (...i) {
                                 return (
                                     !N(this.canvas, r, n, a, !0) &&
-                                        f(() => {
+                                        L(() => {
                                             let r = U(i, t, this);
                                             e(this.canvas, {
-                                                type: L['2D'],
+                                                type: f['2D'],
                                                 property: o,
                                                 args: r
                                             });
@@ -437,7 +437,7 @@ class m {
                         let r = I(t.CanvasRenderingContext2D.prototype, o, {
                             set(t) {
                                 e(this.canvas, {
-                                    type: L['2D'],
+                                    type: f['2D'],
                                     property: o,
                                     args: [t],
                                     setter: !0
@@ -453,8 +453,8 @@ class m {
             o = (function (e, t, r, n, a, _) {
                 let o = [];
                 return (
-                    o.push(...G(t.WebGLRenderingContext.prototype, L.WebGL, e, r, n, a, _, t)),
-                    void 0 !== t.WebGL2RenderingContext && o.push(...G(t.WebGL2RenderingContext.prototype, L.WebGL2, e, r, n, a, _, t)),
+                    o.push(...G(t.WebGLRenderingContext.prototype, f.WebGL, e, r, n, a, _, t)),
+                    void 0 !== t.WebGL2RenderingContext && o.push(...G(t.WebGL2RenderingContext.prototype, f.WebGL2, e, r, n, a, _, t)),
                     () => {
                         o.forEach((e) => e());
                     }

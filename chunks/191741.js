@@ -4,7 +4,7 @@ n.r(t),
             return A;
         },
         useAppSidebarState: function () {
-            return T;
+            return N;
         }
     });
 var i = n(200651),
@@ -26,40 +26,40 @@ var i = n(200651),
     I = n(998502),
     C = n(981631),
     v = n(741764),
-    N = n(350133);
-let T = (0, l.U)(() => ({ isOpen: !0 }));
-function S(e) {
+    S = n(350133);
+let N = (0, l.U)(() => ({ isOpen: !0 }));
+function T(e) {
     e.stopPropagation();
 }
 function A() {
     let e = (0, a.e7)([_.Z], () => _.Z.getChannelId()),
         t = (0, a.e7)([g.Z], () => g.Z.getChannel(e), [e]),
         n = f.Z.getGuild(null == t ? void 0 : t.guild_id),
-        l = T((e) => e.isOpen),
+        l = N((e) => e.isOpen),
         { hasBugReporterAccess: A } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     r.useLayoutEffect(() => {
         I.ZP.setMinimumSize(v.J, v.N);
     }, []);
-    let b = r.useCallback(() => {
+    let x = r.useCallback(() => {
         (0, E.isMac)() && I.ZP.maximize();
     }, []);
     return (0, i.jsxs)('div', {
-        className: N.bar,
-        onDoubleClick: b,
+        className: S.bar,
+        onDoubleClick: x,
         children: [
             (0, i.jsx)('div', {
-                className: N.left,
+                className: S.left,
                 'data-sidebar-collapsed': !l,
-                onDoubleClick: S,
+                onDoubleClick: T,
                 children:
                     !l &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(s.Clickable, {
                                 onClick: () => {
-                                    T.setState({ isOpen: !T.getState().isOpen });
+                                    N.setState({ isOpen: !N.getState().isOpen });
                                 },
-                                children: (0, i.jsx)(x, {})
+                                children: (0, i.jsx)(b, {})
                             }),
                             (0, i.jsx)(s.Clickable, {
                                 onClick: () => {
@@ -71,17 +71,17 @@ function A() {
                     })
             }),
             (0, i.jsx)('div', {
-                className: N.center,
+                className: S.center,
                 children:
                     null != n &&
                     (0, i.jsxs)('div', {
-                        className: N.guild,
+                        className: S.guild,
                         children: [
                             (0, i.jsx)(d.Z, {
                                 guild: n,
                                 size: d.Z.Sizes.SMALLER,
                                 active: !0,
-                                className: N.icon
+                                className: S.icon
                             }),
                             (0, i.jsx)(s.Text, {
                                 variant: 'text-sm/medium',
@@ -91,17 +91,17 @@ function A() {
                     })
             }),
             (0, i.jsxs)('div', {
-                className: N.right,
-                onDoubleClick: S,
+                className: S.right,
+                onDoubleClick: T,
                 children: [(0, i.jsx)(p.Z, {}), A ? (0, i.jsx)(h.Z, {}) : (0, i.jsx)(u.Z, {}), (0, i.jsx)(m.Z, {})]
             })
         ]
     });
 }
-function x() {
+function b() {
     return (0, i.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
-        className: N.icon,
+        className: S.icon,
         width: '24',
         height: '24',
         viewBox: '0 0 24 24',

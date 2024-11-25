@@ -18,18 +18,18 @@ var i = n(200651),
     I = n(320149),
     C = n(82295),
     v = n(252618),
-    N = n(605236),
-    T = n(243778),
-    S = n(984370),
+    S = n(605236),
+    N = n(243778),
+    T = n(984370),
     A = n(797614),
-    x = n(359110),
-    b = n(6025),
+    b = n(359110),
+    x = n(6025),
     Z = n(897473),
     L = n(108427),
     y = n(970731),
     O = n(187819),
-    P = n(210887),
-    R = n(433355),
+    R = n(210887),
+    P = n(433355),
     j = n(592125),
     D = n(819640),
     M = n(626135),
@@ -38,12 +38,12 @@ var i = n(200651),
     U = n(610697),
     G = n(26373),
     B = n(486622),
-    H = n(922409),
-    V = n(899740),
+    V = n(922409),
+    H = n(899740),
     F = n(177033),
     z = n(355350),
-    W = n(307947),
-    Y = n(96479),
+    Y = n(307947),
+    W = n(96479),
     K = n(480874),
     q = n(687683),
     X = n(981631),
@@ -54,7 +54,7 @@ var i = n(200651),
     et = n(784237);
 function en() {
     let e = r.useRef(null),
-        t = (0, V.q)(),
+        t = (0, H.q)(),
         n = (0, F.Z)(),
         l = (0, G.K)(),
         c = (0, g.N)(),
@@ -63,7 +63,7 @@ function en() {
         }, []),
         { rejectAll: h } = (0, B.m)({ onError: d }),
         m = (0, _.Z)('message-requests-list'),
-        { channelId: p } = (0, H._)(),
+        { channelId: p } = (0, V._)(),
         f = r.useCallback(() => {
             h(n.map((e) => e.channel.id));
         }, [n, h]),
@@ -75,7 +75,7 @@ function en() {
                     c = null === (r = n[s + 1]) || void 0 === r ? void 0 : null === (t = r.channel) || void 0 === t ? void 0 : t.id,
                     d = o.channel.id;
                 return (0, i.jsx)(
-                    Y.Z,
+                    W.Z,
                     {
                         index: s,
                         className: a()({
@@ -128,7 +128,7 @@ function en() {
             [t, f, c]
         );
     return (n.length !== t && A.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
-        ? (0, i.jsx)(W.Z, { section: q.pS.REQUESTS })
+        ? (0, i.jsx)(Y.Z, { section: q.pS.REQUESTS })
         : (0, i.jsx)(s.bG, {
               navigator: m,
               children: (0, i.jsx)(s.SJ, {
@@ -163,7 +163,7 @@ function en() {
 }
 function ei(e) {
     let { pageWidth: t, onSidebarResize: n } = e,
-        r = (0, c.e7)([R.ZP], () => R.ZP.getSidebarState(R.uZ)),
+        r = (0, c.e7)([P.ZP], () => P.ZP.getSidebarState(P.uZ)),
         l = (0, c.e7)([j.Z], () => j.Z.getChannel(null == r ? void 0 : r.channelId));
     if (null == r || r.type !== Z.tI.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
     let a = t - X.R7I;
@@ -173,7 +173,7 @@ function ei(e) {
         onWidthChange: n,
         children: (0, i.jsx)(I.Z, {
             channel: l,
-            baseChannelId: R.uZ
+            baseChannelId: P.uZ
         })
     });
 }
@@ -197,9 +197,9 @@ let er = function (e) {
             a = (0, O._p)({ location: 'message-request-coachmark' });
         return (
             r.useEffect(() => {
-                (0, N.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
+                (0, S.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
             }, []),
-            (0, i.jsx)(T.ZP, {
+            (0, i.jsx)(N.ZP, {
                 contentTypes: [d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
                 children: (r) => {
                     let { visibleContent: s, markAsDismissed: o } = r;
@@ -239,15 +239,15 @@ function ea(e) {
 }
 let es = (0, p.Z)(function (e) {
     let { width: t } = e,
-        n = (0, V.q)();
+        n = (0, H.q)();
     r.useEffect(() => {
         h.Y(X.Z5c.MESSAGE_REQUESTS), (0, L.e)('message-requests'), M.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), A.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
     }, []);
-    let l = (0, c.e7)([P.Z], () => P.Z.theme),
+    let l = (0, c.e7)([R.Z], () => R.Z.theme),
         s = (0, z.w)(),
         [d, m] = r.useState(!1),
-        p = (0, c.e7)([R.ZP], () => {
-            let e = R.ZP.getSidebarState(R.uZ);
+        p = (0, c.e7)([P.ZP], () => {
+            let e = P.ZP.getSidebarState(P.uZ);
             return null != e && e.type === Z.tI.VIEW_MESSAGE_REQUEST ? e : null;
         }),
         g = null == p ? void 0 : p.channelId,
@@ -255,10 +255,10 @@ let es = (0, p.Z)(function (e) {
         _ = (0, k.T)(g),
         E = (0, w.J)(g);
     r.useEffect(() => {
-        null != g && !_ && E && f && ((0, x.Kh)(g), b.Z.closeChannelSidebar(R.uZ));
+        null != g && !_ && E && f && ((0, b.Kh)(g), x.Z.closeChannelSidebar(P.uZ));
     }, [g, E, f, _]);
     let [I, C] = r.useState(q.pS.REQUESTS),
-        N = (e) => {
+        S = (e) => {
             C(e);
         };
     return (
@@ -274,21 +274,21 @@ let es = (0, p.Z)(function (e) {
                         (0, i.jsx)(u.ThemeProvider, {
                             theme: l,
                             children: (e) =>
-                                (0, i.jsxs)(S.Z, {
+                                (0, i.jsxs)(T.Z, {
                                     className: e,
                                     toolbar: !0,
                                     children: [
-                                        (0, i.jsx)(S.Z.Icon, {
+                                        (0, i.jsx)(T.Z.Icon, {
                                             icon: u.EnvelopeIcon,
                                             'aria-hidden': !0
                                         }),
-                                        (0, i.jsx)(el, { children: (0, i.jsx)(S.Z.Title, { children: $.intl.string($.t.e7GWjY) }) }),
-                                        (0, i.jsx)(S.Z.Divider, {}),
+                                        (0, i.jsx)(el, { children: (0, i.jsx)(T.Z.Title, { children: $.intl.string($.t.e7GWjY) }) }),
+                                        (0, i.jsx)(T.Z.Divider, {}),
                                         (0, i.jsxs)(u.TabBar, {
                                             'aria-label': $.intl.string($.t.e7GWjY),
                                             selectedItem: I,
                                             type: 'top-pill',
-                                            onItemSelect: N,
+                                            onItemSelect: S,
                                             className: ee.__invalid_tabBar,
                                             children: [
                                                 (0, i.jsx)(u.TabBar.Item, {

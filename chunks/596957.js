@@ -18,20 +18,20 @@ var i = n(200651),
     I = n(451478),
     C = n(434184),
     v = n(701861),
-    N = n(437314),
-    T = n(696577),
-    S = n(163417),
+    S = n(437314),
+    N = n(696577),
+    T = n(163417),
     A = n(830880),
-    x = n(492347),
-    b = n(42575),
+    b = n(492347),
+    x = n(42575),
     Z = n(617015),
     L = n(981631),
     y = n(388032),
     O = n(522756);
 t.Z = function (e) {
     let { sectionFilter: t, titleId: l } = e,
-        { analyticsLocations: P } = (0, p.ZP)(m.Z.FRIENDS_LIST),
-        { rows: R, section: j } = (0, s.cj)([E.ZP], () => E.ZP.getState()),
+        { analyticsLocations: R } = (0, p.ZP)(m.Z.FRIENDS_LIST),
+        { rows: P, section: j } = (0, s.cj)([E.ZP], () => E.ZP.getState()),
         D = (0, s.e7)([I.Z], () => I.Z.isFocused()),
         M = (0, s.e7)([_.Z], () => _.Z.getRelationshipCount()),
         w = (0, f.Do)({ location: 'PeopleList' }),
@@ -55,14 +55,14 @@ t.Z = function (e) {
             },
             [k, t]
         ),
-        H = r.useCallback(() => {
+        V = r.useCallback(() => {
             U({
                 ...k,
                 [t]: ''
             });
         }, [k, t]),
-        V = t === L.pJs.PENDING && (R.filter(L.pJs.SPAM).length > 0 || R.filter(L.pJs.PENDING_IGNORED).length > 0),
-        F = R.filter(t, k[t]);
+        H = t === L.pJs.PENDING && (P.filter(L.pJs.SPAM).length > 0 || P.filter(L.pJs.PENDING_IGNORED).length > 0),
+        F = P.filter(t, k[t]);
     if (
         (r.useEffect(() => {
             t === L.pJs.ALL && (0, g.d$)();
@@ -72,10 +72,10 @@ t.Z = function (e) {
         return (0, i.jsx)('div', {
             className: O.emptyStateContainer,
             children: (0, i.jsx)(
-                N.Z,
+                S.Z,
                 {
                     type: t,
-                    onClick: V
+                    onClick: H
                         ? G
                         : t !== L.pJs.PENDING
                           ? () => {
@@ -87,26 +87,26 @@ t.Z = function (e) {
             )
         });
     let z = [F],
-        W = 0 === F.length && '' !== k[t],
-        Y = F.filter((e) => e.type === L.OGo.PENDING_INCOMING).length,
-        K = t === L.pJs.PENDING && Y > 0 && Y >= Z.yf;
+        Y = 0 === F.length && '' !== k[t],
+        W = F.filter((e) => e.type === L.OGo.PENDING_INCOMING).length,
+        K = t === L.pJs.PENDING && W > 0 && W >= Z.yf;
     return (0, i.jsx)(p.Gt, {
-        value: P,
+        value: R,
         children: (0, i.jsxs)(u.Z, {
             section: L.jXE.FRIENDS_LIST,
             children: [
                 w && (0, i.jsx)(A.R, {}),
                 (0, i.jsx)(o.SearchBar, {
-                    className: a()(O.searchBar, W ? O.searchEmptyState : null),
+                    className: a()(O.searchBar, Y ? O.searchEmptyState : null),
                     query: k[t],
                     onChange: B,
-                    onClear: H,
+                    onClear: V,
                     size: o.SearchBar.Sizes.MEDIUM
                 }),
                 (0, i.jsxs)('div', {
                     className: O.sectionTitle,
                     children: [
-                        (0, i.jsx)(x.Z, {
+                        (0, i.jsx)(b.Z, {
                             id: l,
                             title: (function (e, t) {
                                 switch (e) {
@@ -130,19 +130,19 @@ t.Z = function (e) {
                                 className: O.clearButton,
                                 size: o.Button.Sizes.TINY,
                                 onClick: (e) => {
-                                    e.stopPropagation(), d.Z.confirmClearPendingRelationships(Y);
+                                    e.stopPropagation(), d.Z.confirmClearPendingRelationships(W);
                                 },
                                 'aria-label': y.intl.string(y.t.T3uOb2),
                                 children: y.intl.string(y.t.T3uOb2)
                             })
                     ]
                 }),
-                W
+                Y
                     ? (0, i.jsx)('div', {
                           className: O.emptyStateContainer,
-                          children: (0, i.jsx)(N.Z, { type: N.j.SECTION_NO_RESULTS }, j)
+                          children: (0, i.jsx)(S.Z, { type: S.j.SECTION_NO_RESULTS }, j)
                       })
-                    : (0, i.jsx)(S.Z, {
+                    : (0, i.jsx)(T.Z, {
                           relationshipCount: M,
                           statusSections: z,
                           renderRow: function (e) {
@@ -153,12 +153,12 @@ t.Z = function (e) {
                                           isFocused: D
                                       });
                                   case L.pJs.PENDING:
-                                      return (0, i.jsx)(T.Z, {
+                                      return (0, i.jsx)(N.Z, {
                                           ...e,
                                           isFocused: D
                                       });
                                   case L.pJs.SUGGESTIONS:
-                                      return (0, i.jsx)(b.Z, {
+                                      return (0, i.jsx)(x.Z, {
                                           ...e,
                                           isFocused: D
                                       });
@@ -179,7 +179,7 @@ t.Z = function (e) {
                           sectionFilter: t,
                           searchQuery: k[t],
                           useReducedMotion: h.Z.useReducedMotion,
-                          footer: V
+                          footer: H
                               ? (0, i.jsx)(o.Button, {
                                     look: o.Button.Looks.LINK,
                                     color: O.viewSpamButtonColor,

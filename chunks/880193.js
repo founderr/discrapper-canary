@@ -32,8 +32,8 @@ function I(e) {
         [N, T] = g._T(n),
         [j, b] = g.mR(n),
         [S, E] = g.PK(n),
-        [R, Z] = g.d9(n, 1024),
-        { imageCTA: y, imageAriaLabel: A, setFilename: L } = (0, x.Z)(I),
+        [R, y] = g.d9(n, 1024),
+        { imageCTA: Z, imageAriaLabel: A, setFilename: L } = (0, x.Z)(I),
         D = r.useMemo(() => {
             var e;
             return null !==
@@ -48,7 +48,7 @@ function I(e) {
                 : [];
         }, [t]);
     function O(e, t) {
-        null != t && L(t.name), Z(e);
+        null != t && L(t.name), y(e);
     }
     let k = (0, m.mY)(),
         P = (0, a.Dt)(),
@@ -131,7 +131,7 @@ function I(e) {
                             }),
                             (0, i.jsx)(o.Z, {
                                 onChange: O,
-                                buttonCTA: y,
+                                buttonCTA: Z,
                                 'aria-label': A,
                                 disabled: k,
                                 look: s.Button.Looks.OUTLINED,
@@ -141,7 +141,7 @@ function I(e) {
                     }),
                     (0, i.jsx)(c.Z, {
                         image: R,
-                        hint: y,
+                        hint: Z,
                         showIcon: !0,
                         showRemoveButton: !1,
                         hideSize: !0,

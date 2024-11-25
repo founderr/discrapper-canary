@@ -25,7 +25,7 @@ function C(e) {
     let { application: t } = e;
     return (0, i.jsxs)('div', {
         className: I.storeContainer,
-        children: [(0, i.jsx)(v, { application: t }), (0, i.jsx)(T, { application: t })]
+        children: [(0, i.jsx)(v, { application: t }), (0, i.jsx)(N, { application: t })]
     });
 }
 function v(e) {
@@ -88,12 +88,12 @@ function v(e) {
             (0, i.jsx)(c.Z, {
                 path: _.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId'),
                 exact: !0,
-                render: (e) => (0, i.jsx)(N, { ...e })
+                render: (e) => (0, i.jsx)(S, { ...e })
             })
         ]
     });
 }
-function N(e) {
+function S(e) {
     let {
             match: {
                 params: { applicationId: t, skuId: l }
@@ -154,7 +154,7 @@ function N(e) {
         null
     );
 }
-function T(e) {
+function N(e) {
     let { application: t } = e,
         n = t.terms_of_service_url,
         r = t.privacy_policy_url;

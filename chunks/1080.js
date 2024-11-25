@@ -31,8 +31,8 @@ var i = n(200651),
     S = n(434404),
     E = n(999382),
     R = n(84613),
-    Z = n(740903),
-    y = n(981631),
+    y = n(740903),
+    Z = n(981631),
     A = n(388032),
     L = n(264112);
 function D(e, t, n) {
@@ -61,7 +61,7 @@ function O(e) {
             try {
                 await m.Z.unbanUser(l.id, s.id),
                     c(),
-                    T.default.track(y.rMx.GUILD_BAN_REMOVED, {
+                    T.default.track(Z.rMx.GUILD_BAN_REMOVED, {
                         ...(0, p.hH)(l.id),
                         target_user_id: s.id,
                         reason: a.reason,
@@ -257,7 +257,7 @@ function M(e) {
         [l, s] = r.useState(null != n ? n : ''),
         [a, o] = r.useState(!1),
         c = r.useCallback(() => {
-            S.Z.setSection(y.pNK.SAFETY), (0, R.K)(Z.u.DM_AND_SPAM_PROTECTION);
+            S.Z.setSection(Z.pNK.SAFETY), (0, R.K)(y.u.DM_AND_SPAM_PROTECTION);
         }, []),
         u = r.useCallback((e) => {
             s(e), 0 === e.trim().length && S.Z.setSearchQuery(e);
@@ -339,7 +339,7 @@ function w() {
         [C] = (0, c.e7)([E.Z], () => E.Z.getBans(), [], j.Q),
         v = null !== (e = null == C ? void 0 : C.size) && void 0 !== e ? e : 0,
         I = (0, x.ZP)(),
-        T = null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : y.lds,
+        T = null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : Z.lds,
         b = r.useRef(null),
         S = r.useCallback(
             (e) =>
@@ -364,10 +364,10 @@ function w() {
             },
             [S]
         ),
-        Z = r.useMemo(() => R(C, u, v), [C, R, u, v]),
+        y = r.useMemo(() => R(C, u, v), [C, R, u, v]),
         D = null != C,
-        O = Z.length % 1000 == 0 && Z.length > 0 && D,
-        k = 0 === Z.length,
+        O = y.length % 1000 == 0 && y.length > 0 && D,
+        k = 0 === y.length,
         [w, B] = r.useState({
             currentPage: 1,
             pageSize: 100
@@ -386,17 +386,17 @@ function w() {
             },
             [T]
         ),
-        G = r.useMemo(() => o().chunk(Z, w.pageSize), [w.pageSize, Z]),
+        G = r.useMemo(() => o().chunk(y, w.pageSize), [w.pageSize, y]),
         F = r.useCallback(
             (e) => {
                 var t, n, i;
-                if ((null === (t = b.current) || void 0 === t || t.scrollToSectionTop(0), (e + 1) * w.pageSize > Z.length && O && !h && ((H.current = null !== (i = null === (n = Z[Z.length - 1]) || void 0 === n ? void 0 : n.id) && void 0 !== i ? i : null), U(H.current)), null != G[e - 1] || !!O))
+                if ((null === (t = b.current) || void 0 === t || t.scrollToSectionTop(0), (e + 1) * w.pageSize > y.length && O && !h && ((H.current = null !== (i = null === (n = y[y.length - 1]) || void 0 === n ? void 0 : n.id) && void 0 !== i ? i : null), U(H.current)), null != G[e - 1] || !!O))
                     B((t) => ({
                         ...t,
                         currentPage: e
                     }));
             },
-            [w.pageSize, Z, O, G, U, h]
+            [w.pageSize, y, O, G, U, h]
         ),
         H = r.useRef(null);
     r.useEffect(() => {
@@ -450,7 +450,7 @@ function w() {
                       className: s()(L.__invalid_paginationContainer),
                       children: (0, i.jsx)(d.Paginator, {
                           className: s()(L.paginationInput),
-                          totalCount: Z.length + (O ? w.pageSize : 0),
+                          totalCount: y.length + (O ? w.pageSize : 0),
                           pageSize: w.pageSize,
                           currentPage: w.currentPage,
                           onPageChange: F,

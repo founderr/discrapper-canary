@@ -74,10 +74,10 @@ async function v() {
     }
     c.default.track(p.rMx.CLIENT_HEARTBEAT, r), i.K.set(g, Date.now().toString()), (0, l.Z)();
 }
-let N = null,
-    T = !0;
-function S() {
-    if (T || (null != N && N !== p.hes.DISCONNECTED && N !== p.hes.RTC_DISCONNECTED))
+let S = null,
+    N = !0;
+function T() {
+    if (N || (null != S && S !== p.hes.DISCONNECTED && S !== p.hes.RTC_DISCONNECTED))
         try {
             I();
         } catch (e) {
@@ -89,20 +89,20 @@ function S() {
         })();
 }
 function A() {
-    h.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), o.Z.addChangeListener(b), r.Z.subscribe('WINDOW_FOCUS', Z), r.Z.subscribe('APP_STATE_UPDATE', L), r.Z.subscribe('LOGIN_SUCCESS', x), S();
-}
-function x() {
-    v();
+    h.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), o.Z.addChangeListener(x), r.Z.subscribe('WINDOW_FOCUS', Z), r.Z.subscribe('APP_STATE_UPDATE', L), r.Z.subscribe('LOGIN_SUCCESS', b), T();
 }
 function b() {
+    v();
+}
+function x() {
     let e = o.Z.getState();
-    N !== e && ((N = e), S());
+    S !== e && ((S = e), T());
 }
 function Z(e) {
     let { focused: t } = e;
-    (T = t), S();
+    (N = t), T();
 }
 function L(e) {
     let { state: t } = e;
-    (T = t === p.$7l.ACTIVE), S();
+    (N = t === p.$7l.ACTIVE), T();
 }

@@ -30,8 +30,8 @@ var i = n(200651),
     S = n(981631),
     E = n(388032),
     R = n(465848),
-    Z = n(571621);
-async function y(e, t, n) {
+    y = n(571621);
+async function Z(e, t, n) {
     let r = e.roles.filter((e) => e !== n);
     try {
         await v.Z.updateMemberRoles(t, e.id, r, [], [n]);
@@ -58,7 +58,7 @@ function A(e) {
     function h(e) {
         if ((e.stopPropagation(), !d)) {
             if (e.shiftKey) {
-                y(t, l, a);
+                Z(t, l, a);
                 return;
             }
             !(function (e, t, n) {
@@ -69,7 +69,7 @@ function A(e) {
                         header: E.intl.string(E.t['7sFNfX']),
                         confirmText: E.intl.string(E.t.N86XcH),
                         cancelText: E.intl.string(E.t['ETE/oK']),
-                        onConfirm: () => y(e, t, n),
+                        onConfirm: () => Z(e, t, n),
                         children: [
                             (0, i.jsx)(o.Text, {
                                 color: 'text-normal',
@@ -108,7 +108,7 @@ function A(e) {
     return (
         (0, u.$)(m),
         (0, i.jsx)('div', {
-            className: Z.contentWidth,
+            className: y.contentWidth,
             children: (0, i.jsx)(o.Popout, {
                 renderPopout: (e) =>
                     (0, i.jsx)(x.Z, {
@@ -159,7 +159,7 @@ function A(e) {
 function L(e) {
     let { handleAddClick: t, locked: n } = e;
     return (0, i.jsx)('div', {
-        className: Z.contentWidth,
+        className: y.contentWidth,
         children: (0, i.jsxs)('div', {
             className: s()(R.memberRow, R.emptyRowContainer),
             children: [
@@ -268,7 +268,7 @@ function k(e) {
                 var e, n;
                 return null !== (n = null === (e = C.Z.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[l.id]) && void 0 !== n ? n : 0;
             }) > _.length,
-        y = () => {
+        Z = () => {
             f.default.track(S.rMx.OPEN_MODAL, {
                 type: 'Add Role Members',
                 location_page: 'Role Settings',
@@ -291,9 +291,9 @@ function k(e) {
                 className: R.headerContainer,
                 ref: g,
                 children: (0, i.jsx)('div', {
-                    className: Z.contentWidth,
+                    className: y.contentWidth,
                     children: (0, i.jsxs)('div', {
-                        className: s()(Z.header, { [Z.stickyHeaderElevated]: !x }),
+                        className: s()(y.header, { [y.stickyHeaderElevated]: !x }),
                         children: [
                             (0, i.jsx)(T.Z, {
                                 guild: t,
@@ -305,7 +305,7 @@ function k(e) {
                                 query: u,
                                 setQuery: m,
                                 locked: v,
-                                handleAddClick: y
+                                handleAddClick: Z
                             }),
                             j
                                 ? (0, i.jsx)(o.HelpMessage, {
@@ -326,7 +326,7 @@ function k(e) {
                 locked: v,
                 onScroll: p,
                 roleMembers: _,
-                handleAddClick: y
+                handleAddClick: Z
             })
         ]
     });

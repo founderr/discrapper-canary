@@ -18,12 +18,12 @@ var n = r(394798),
     u = r(396234);
 function I(e, t, r, I, N, A) {
     let { normalizeDepth: T = 3, normalizeMaxBreadth: d = 1000 } = e,
-        f = {
+        L = {
             ...t,
             event_id: t.event_id || r.event_id || (0, n.DM)(),
             timestamp: t.timestamp || (0, a.yW)()
         },
-        L = r.integrations || e.integrations.map((e) => e.name);
+        f = r.integrations || e.integrations.map((e) => e.name);
     (function (e, t) {
         let { environment: r, release: n, dist: a, maxValueLength: o = 250 } = t;
         !('environment' in e) && (e.environment = 'environment' in t ? r : E.J), void 0 === e.release && void 0 !== n && (e.release = n), void 0 === e.dist && void 0 !== a && (e.dist = a), e.message && (e.message = (0, _.$G)(e.message, o));
@@ -31,10 +31,10 @@ function I(e, t, r, I, N, A) {
         i && i.value && (i.value = (0, _.$G)(i.value, o));
         let c = e.request;
         c && c.url && (c.url = (0, _.$G)(c.url, o));
-    })(f, e),
+    })(L, e),
         (function (e, t) {
             t.length > 0 && ((e.sdk = e.sdk || {}), (e.sdk.integrations = [...(e.sdk.integrations || []), ...t]));
-        })(f, L),
+        })(L, f),
         N && N.emit('applyFrameMetadata', t),
         void 0 === t.type &&
             (function (e, t) {
@@ -63,13 +63,13 @@ function I(e, t, r, I, N, A) {
                         });
                     });
                 } catch (e) {}
-            })(f, e.stackParser);
+            })(L, e.stackParser);
     let O = (function (e, t) {
         if (!t) return e;
         let r = e ? e.clone() : new l.s();
         return r.update(t), r;
     })(I, r.captureContext);
-    r.mechanism && (0, n.EG)(f, r.mechanism);
+    r.mechanism && (0, n.EG)(L, r.mechanism);
     let p = N ? N.getEventProcessors() : [],
         h = (0, c.lW)().getScopeData();
     if (A) {
@@ -81,9 +81,9 @@ function I(e, t, r, I, N, A) {
         (0, u.yo)(h, e);
     }
     let S = [...(r.attachments || []), ...h.attachments];
-    S.length && (r.attachments = S), (0, u.gi)(f, h);
+    S.length && (r.attachments = S), (0, u.gi)(L, h);
     let D = [...p, ...h.eventProcessors];
-    return (0, s.R)(D, f, r).then((e) =>
+    return (0, s.R)(D, L, r).then((e) =>
         (e &&
             (function (e) {
                 let t = {};

@@ -1,6 +1,6 @@
 n.d(t, {
     X: function () {
-        return S;
+        return T;
     }
 });
 var i,
@@ -37,14 +37,14 @@ let g = {},
         id: null,
         justChanged: !1
     },
-    N = {
+    S = {
         id: null,
         justChanged: !1
     },
-    T = /\(([^)]+)\)/;
-function S(e) {
+    N = /\(([^)]+)\)/;
+function T(e) {
     if ((0, d.getPlatform)() === d.PlatformTypes.WINDOWS) {
-        let t = e.name.match(T);
+        let t = e.name.match(N);
         if (null != t) return t[1];
     }
     return e.name;
@@ -62,7 +62,7 @@ function A(e, t, n) {
             }
           : e;
 }
-class x extends (i = a.ZP.DeviceSettingsStore) {
+class b extends (i = a.ZP.DeviceSettingsStore) {
     initialize(e) {
         this.waitFor(u.Z, c.Z), (f = null != e ? e : g);
     }
@@ -85,18 +85,18 @@ class x extends (i = a.ZP.DeviceSettingsStore) {
         return I;
     }
     get lastOutputSystemDevice() {
-        return N;
+        return S;
     }
 }
-p(x, 'displayName', 'ConnectedDeviceStore'),
-    p(x, 'persistKey', 'ConnectedDeviceStore'),
-    (t.Z = new x(s.Z, {
+p(b, 'displayName', 'ConnectedDeviceStore'),
+    p(b, 'persistKey', 'ConnectedDeviceStore'),
+    (t.Z = new b(s.Z, {
         MEDIA_ENGINE_DEVICES: function (e) {
             let { inputDevices: t, outputDevices: n } = e,
                 i = {};
             (v.justChanged = !1),
                 t.forEach((e) => {
-                    if (((i[S(e)] = e.id), e.id === m.w5)) {
+                    if (((i[T(e)] = e.id), e.id === m.w5)) {
                         var t;
                         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
                         n !== v.id && (v.justChanged = !0), (v.id = n);
@@ -104,12 +104,12 @@ p(x, 'displayName', 'ConnectedDeviceStore'),
                 });
             let r = {};
             if (
-                ((N.justChanged = !1),
+                ((S.justChanged = !1),
                 n.forEach((e) => {
-                    if (((r[S(e)] = e.id), e.id === m.w5)) {
+                    if (((r[T(e)] = e.id), e.id === m.w5)) {
                         var t;
                         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-                        n !== N.id && (N.justChanged = !0), (N.id = n);
+                        n !== S.id && (S.justChanged = !0), (S.id = n);
                     }
                 }),
                 !_)

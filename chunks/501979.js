@@ -15,9 +15,9 @@ e.exports = function (e, t, r, o, i, E) {
     for (E.set(e, t), E.set(t, e); ++R < s; ) {
         var T = e[R],
             d = t[R];
-        if (o) var f = c ? o(d, T, R, t, e, E) : o(T, d, R, e, t, E);
-        if (void 0 !== f) {
-            if (f) continue;
+        if (o) var L = c ? o(d, T, R, t, e, E) : o(T, d, R, e, t, E);
+        if (void 0 !== L) {
+            if (L) continue;
             N = !1;
             break;
         }

@@ -30,8 +30,8 @@ var _ = r(696486),
     A = r(108185),
     T = r(896247),
     d = r(416987);
-let f = 0,
-    L = {};
+let L = 0,
+    f = {};
 function O() {
     let e = (0, A.QV)();
     if (e && c.Z1) {
@@ -43,11 +43,11 @@ function O() {
                     let r = (0, A.XL)(c.Z1),
                         n = (0, A.XL)(t.startTime);
                     I.X && l.kg.log('[Measurements] Adding FID'),
-                        (L.fid = {
+                        (f.fid = {
                             value: e.value,
                             unit: 'millisecond'
                         }),
-                        (L['mark.fid'] = {
+                        (f['mark.fid'] = {
                             value: r + n,
                             unit: 'second'
                         });
@@ -58,7 +58,7 @@ function O() {
                     let t = e.entries[e.entries.length - 1];
                     if (!!t)
                         I.X && l.kg.log('[Measurements] Adding CLS'),
-                            (L.cls = {
+                            (f.cls = {
                                 value: e.value,
                                 unit: ''
                             }),
@@ -70,7 +70,7 @@ function O() {
                     let t = e.entries[e.entries.length - 1];
                     if (!!t)
                         I.X && l.kg.log('[Measurements] Adding LCP'),
-                            (L.lcp = {
+                            (f.lcp = {
                                 value: e.value,
                                 unit: 'millisecond'
                             }),
@@ -81,7 +81,7 @@ function O() {
                 return (0, N._4)(({ metric: e }) => {
                     if (!!e.entries[e.entries.length - 1])
                         I.X && l.kg.log('[Measurements] Adding TTFB'),
-                            (L.ttfb = {
+                            (f.ttfb = {
                                 value: e.value,
                                 unit: 'millisecond'
                             });
@@ -163,7 +163,7 @@ function D(e) {
         o = t.getEntries(),
         { op: N, start_timestamp: O } = (0, _.XU)(e);
     if (
-        (o.slice(f).forEach((t) => {
+        (o.slice(L).forEach((t) => {
             let n = (0, A.XL)(t.startTime),
                 a = (0, A.XL)(Math.max(0, t.duration));
             if ('navigation' !== N || !O || !(r + n < O))
@@ -214,14 +214,14 @@ function D(e) {
                         'first-paint' === t.name &&
                             o &&
                             (I.X && l.kg.log('[Measurements] Adding FP'),
-                            (L.fp = {
+                            (f.fp = {
                                 value: t.startTime,
                                 unit: 'millisecond'
                             })),
                             'first-contentful-paint' === t.name &&
                                 o &&
                                 (I.X && l.kg.log('[Measurements] Adding FCP'),
-                                (L.fcp = {
+                                (f.fcp = {
                                     value: t.startTime,
                                     unit: 'millisecond'
                                 }));
@@ -242,7 +242,7 @@ function D(e) {
                         })(e, t, t.name, n, a, r);
                 }
         }),
-        (f = Math.max(o.length - 1, 0)),
+        (L = Math.max(o.length - 1, 0)),
         (function (e) {
             let t = R.m.navigator;
             if (!t) return;
@@ -251,7 +251,7 @@ function D(e) {
                 (r.effectiveType && e.setAttribute('effectiveConnectionType', r.effectiveType),
                 r.type && e.setAttribute('connectionType', r.type),
                 (0, A.nl)(r.rtt) &&
-                    (L['connection.rtt'] = {
+                    (f['connection.rtt'] = {
                         value: r.rtt,
                         unit: 'millisecond'
                     })),
@@ -270,33 +270,33 @@ function D(e) {
                     value: r - n,
                     unit: 'millisecond'
                 }));
-        })(L),
+        })(f),
             ['fcp', 'fp', 'lcp'].forEach((e) => {
-                let t = L[e];
+                let t = f[e];
                 if (!t || !O || r >= O) return;
                 let n = t.value,
                     a = Math.abs((r + (0, A.XL)(n) - O) * 1000),
                     _ = a - n;
                 I.X && l.kg.log(`[Measurements] Normalized ${e} from ${n} to ${a} (${_})`), (t.value = a);
             });
-        let t = L['mark.fid'];
+        let t = f['mark.fid'];
         t &&
-            L.fid &&
-            ((0, A.Y)(e, t.value, t.value + (0, A.XL)(L.fid.value), {
+            f.fid &&
+            ((0, A.Y)(e, t.value, t.value + (0, A.XL)(f.fid.value), {
                 name: 'first input delay',
                 op: 'ui.action',
                 attributes: { [i.S3]: 'auto.ui.browser.metrics' }
             }),
-            delete L['mark.fid']),
-            !('fcp' in L) && delete L.cls,
-            Object.entries(L).forEach(([e, t]) => {
+            delete f['mark.fid']),
+            !('fcp' in f) && delete f.cls,
+            Object.entries(f).forEach(([e, t]) => {
                 (0, E.o)(e, t.value, t.unit);
             }),
             (function (e) {
                 n && (I.X && l.kg.log('[Measurements] Adding LCP Data'), n.element && e.setAttribute('lcp.element', (0, s.Rt)(n.element)), n.id && e.setAttribute('lcp.id', n.id), n.url && e.setAttribute('lcp.url', n.url.trim().slice(0, 200)), e.setAttribute('lcp.size', n.size)), a && a.sources && (I.X && l.kg.log('[Measurements] Adding CLS Data'), a.sources.forEach((t, r) => e.setAttribute(`cls.source.${r + 1}`, (0, s.Rt)(t.node))));
             })(e);
     }
-    (n = void 0), (a = void 0), (L = {});
+    (n = void 0), (a = void 0), (f = {});
 }
 function C(e, t, r, n, a, _) {
     let o = _ ? t[_] : t[`${r}End`],

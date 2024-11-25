@@ -1,6 +1,6 @@
 n.d(t, {
     V: function () {
-        return T;
+        return N;
     },
     _: function () {
         return r;
@@ -26,16 +26,16 @@ var i,
     C = n(118441);
 ((i = r || (r = {})).BOOSTING = 'BOOSTING'), (i.NITRO = 'NITRO'), (i.BASH_OUT = 'BASH_OUT'), (i.GAME_NIGHT = 'GAME_NIGHT');
 let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4',
-    N = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png',
-    T = (e) => {
+    S = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png',
+    N = (e) => {
         let { channelId: t, markAsDismissed: n, tutorialType: i } = e,
             {
                 analyticsLocation: r,
-                analyticsType: T,
-                ctaText: S,
+                analyticsType: N,
+                ctaText: T,
                 dismissText: A,
-                description: x,
-                learnMore: b,
+                description: b,
+                learnMore: x,
                 title: Z,
                 videoPosterUrl: L,
                 videoUrl: y,
@@ -49,7 +49,7 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                             description: I.intl.string(I.t.eDjBOT),
                             learnMore: !0,
                             title: I.intl.string(I.t.wbiFFB),
-                            videoPosterUrl: N,
+                            videoPosterUrl: S,
                             videoUrl: v,
                             ctaText: I.intl.string(I.t['5SaQDw']),
                             dismissText: I.intl.string(I.t.WAI6xs)
@@ -61,7 +61,7 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                             description: I.intl.string(I.t.qJn0bW),
                             learnMore: !0,
                             title: I.intl.string(I.t.g8itmp),
-                            videoPosterUrl: N,
+                            videoPosterUrl: S,
                             videoUrl: v,
                             ctaText: I.intl.string(I.t['5SaQDw']),
                             dismissText: I.intl.string(I.t.WAI6xs)
@@ -104,14 +104,14 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                         };
                 }
             })(i),
-            { analyticsLocations: P } = (0, m.ZP)(r);
+            { analyticsLocations: R } = (0, m.ZP)(r);
         a.useEffect(() => {
-            f.default.track(_.rMx.TOOLTIP_VIEWED, { type: T });
-        }, [T]);
-        let R = (0, c.bp)() === _.IlC.POPOUT,
+            f.default.track(_.rMx.TOOLTIP_VIEWED, { type: N });
+        }, [N]);
+        let P = (0, c.bp)() === _.IlC.POPOUT,
             j = (0, s.e7)([g.Z], () => g.Z.getChannel(t), [t]);
         return (0, l.jsx)(m.Gt, {
-            value: P,
+            value: R,
             children: (0, l.jsx)('div', {
                 className: C.wrapper,
                 children: (0, l.jsx)('div', {
@@ -143,8 +143,8 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                 variant: 'text-xs/normal',
                                 color: 'always-white',
                                 children: [
-                                    x,
-                                    b
+                                    b,
+                                    x
                                         ? (0, l.jsxs)(l.Fragment, {
                                               children: [
                                                   ' ',
@@ -184,13 +184,13 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                                                   object: _.qAy.ACTIVITIES_COACH_MARK,
                                                                   objectType: _.Qqv.ACTIVITY
                                                               },
-                                                              openInPopout: R,
-                                                              analyticsLocations: P,
+                                                              openInPopout: P,
+                                                              analyticsLocations: R,
                                                               opensAppLauncherModal: !0
                                                           }),
                                                               (0, d.w1)({ guildId: j.guild_id });
                                                   },
-                                        children: S
+                                        children: T
                                     })
                                 ]
                             })

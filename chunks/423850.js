@@ -31,18 +31,18 @@ function N() {
                     N = A[l.name],
                     T = r.getOptions(),
                     d = (0, u.XL)(i.Z1 + l.startTime),
-                    f = (0, u.XL)(e.value),
-                    L = (0, n.nZ)(),
+                    L = (0, u.XL)(e.value),
+                    f = (0, n.nZ)(),
                     O = (0, a.HN)(),
                     p = O ? (0, a.Gx)(O) : void 0,
                     h = (null != I ? R.get(I) : void 0) || p,
-                    S = h ? (0, a.XU)(h).description : L.getScopeData().transactionName,
-                    D = L.getUser(),
+                    S = h ? (0, a.XU)(h).description : f.getScopeData().transactionName,
+                    D = f.getUser(),
                     C = r.getIntegrationByName('Replay'),
                     g = C && C.getReplayId(),
                     U = void 0 !== D ? D.email || D.id || D.ip_address : void 0;
                 try {
-                    t = L.getScopeData().contexts.profile.profile_id;
+                    t = f.getScopeData().contexts.profile.profile_id;
                 } catch (e) {}
                 let P = (0, E.Rt)(l.target),
                     M = (0, c.Jr)({
@@ -67,7 +67,7 @@ function N() {
                     [_.E1]: 'millisecond',
                     [_.Wb]: e.value
                 }),
-                    G.end(d + f);
+                    G.end(d + L);
             });
         })();
         return () => {

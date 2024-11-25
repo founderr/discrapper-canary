@@ -34,8 +34,8 @@ var n = r(370541),
     A = r(966497),
     T = r(787659),
     d = r(789112),
-    f = r(275689),
-    L = r(793373),
+    L = r(275689),
+    f = r(793373),
     O = r(881243);
 let p = '__SENTRY_SUPPRESS_TRACING__';
 function h(e, t) {
@@ -65,7 +65,7 @@ function h(e, t) {
                         o.isRecording() &&
                             (!e || 'ok' === e) &&
                             o.setStatus({
-                                code: L.jt,
+                                code: f.jt,
                                 message: 'internal_error'
                             });
                     },
@@ -105,7 +105,7 @@ function S(e, t) {
                         o.isRecording() &&
                             (!e || 'ok' === e) &&
                             o.setStatus({
-                                code: L.jt,
+                                code: f.jt,
                                 message: 'internal_error'
                             });
                     }
@@ -153,7 +153,7 @@ function P({ parentSpan: e, spanArguments: t, forceTransaction: r, scope: n }) {
             let { spanId: n, traceId: a } = e.spanContext(),
                 _ = !t.getScopeData().sdkProcessingMetadata[p] && (0, R.Tt)(e),
                 o = _
-                    ? new f.s({
+                    ? new L.s({
                           ...r,
                           parentSpanId: n,
                           traceId: a,
@@ -232,7 +232,7 @@ function m(e, t, r) {
                       parentSampled: r
                   }
               }),
-        l = new f.s({
+        l = new L.s({
             ...e,
             attributes: {
                 [s.Zj]: 'custom',

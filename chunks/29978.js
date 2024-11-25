@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(t, {
     Z: function () {
-        return s;
+        return u;
     }
 });
-var r = n(192379);
+var n = r(192379);
 function o(e, t) {
     return (o =
         Object.setPrototypeOf ||
@@ -11,15 +11,15 @@ function o(e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
-var i = function (e) {
+var a = function (e) {
         var t = document.createElement('script');
         (t.async = !0), (t.defer = !0), (t.src = e), document.head && document.head.appendChild(t);
     },
-    a = /(http|https):\/\/(www)?.+\/recaptcha/,
-    c = ['sitekey', 'theme', 'size', 'badge', 'tabindex', 'hl', 'isolated'],
-    s = (function (e) {
+    i = /(http|https):\/\/(www)?.+\/recaptcha/,
+    s = ['sitekey', 'theme', 'size', 'badge', 'tabindex', 'hl', 'isolated'],
+    u = (function (e) {
         function t() {
-            for (var t, n = arguments.length, o = Array(n), c = 0; c < n; c++) o[c] = arguments[c];
+            for (var t, r = arguments.length, o = Array(r), s = 0; s < r; s++) o[s] = arguments[s];
             return (
                 ((t = e.call.apply(e, [this].concat(o)) || this).container = void 0),
                 (t.timer = void 0),
@@ -36,19 +36,19 @@ var i = function (e) {
                 (t._inject = function () {
                     var e;
                     t.props.inject &&
-                        ((e = a),
-                        !Array.from(document.scripts).reduce(function (t, n) {
-                            return t || e.test(n.src);
+                        ((e = i),
+                        !Array.from(document.scripts).reduce(function (t, r) {
+                            return t || e.test(r.src);
                         }, !1)) &&
-                        i('https://recaptcha.net/recaptcha/api.js?render=explicit' + (t.props.hl ? '&hl=' + t.props.hl : ''));
+                        a('https://recaptcha.net/recaptcha/api.js?render=explicit' + (t.props.hl ? '&hl=' + t.props.hl : ''));
                 }),
                 (t._prepare = function () {
                     var e = t.props,
-                        n = e.explicit,
-                        r = e.onLoad;
+                        r = e.explicit,
+                        n = e.onLoad;
                     window.grecaptcha.ready(function () {
                         t.setState({ ready: !0 }, function () {
-                            n || t.renderExplicitly(), r && r();
+                            r || t.renderExplicitly(), n && n();
                         });
                     });
                 }),
@@ -88,10 +88,10 @@ var i = function (e) {
                     t._stopTimer();
                 }),
                 (t.renderExplicitly = function () {
-                    return new Promise(function (e, n) {
-                        if (t.state.rendered) return n(Error('This recaptcha instance has been already rendered.'));
-                        if (!t.state.ready || !t.container) return n(Error('Recaptcha is not ready for rendering yet.'));
-                        var r = t._renderRecaptcha(t.container, {
+                    return new Promise(function (e, r) {
+                        if (t.state.rendered) return r(Error('This recaptcha instance has been already rendered.'));
+                        if (!t.state.ready || !t.container) return r(Error('Recaptcha is not ready for rendering yet.'));
+                        var n = t._renderRecaptcha(t.container, {
                             sitekey: t.props.sitekey,
                             theme: t.props.theme,
                             size: t.props.size,
@@ -105,7 +105,7 @@ var i = function (e) {
                         });
                         t.setState(
                             {
-                                instanceId: r,
+                                instanceId: n,
                                 rendered: !0
                             },
                             function () {
@@ -115,24 +115,24 @@ var i = function (e) {
                     });
                 }),
                 (t.reset = function () {
-                    return new Promise(function (e, n) {
+                    return new Promise(function (e, r) {
                         if (t.state.rendered) return t._resetRecaptcha(), e();
-                        n(Error('This recaptcha instance did not render yet.'));
+                        r(Error('This recaptcha instance did not render yet.'));
                     });
                 }),
                 (t.execute = function () {
-                    return new Promise(function (e, n) {
-                        return t.state.invisible ? (t.state.rendered && (t._executeRecaptcha(), e()), n(Error('This recaptcha instance did not render yet.'))) : n(Error('Manual execution is only available for invisible size.'));
+                    return new Promise(function (e, r) {
+                        return t.state.invisible ? (t.state.rendered && (t._executeRecaptcha(), e()), r(Error('This recaptcha instance did not render yet.'))) : r(Error('Manual execution is only available for invisible size.'));
                     });
                 }),
                 (t.getResponse = function () {
-                    return new Promise(function (e, n) {
+                    return new Promise(function (e, r) {
                         if (t.state.rendered) return e(t._getResponseRecaptcha());
-                        n(Error('This recaptcha instance did not render yet.'));
+                        r(Error('This recaptcha instance did not render yet.'));
                     });
                 }),
                 (t.render = function () {
-                    var e = r.createElement('div', {
+                    var e = n.createElement('div', {
                         key: t.state.instanceKey,
                         id: t.props.id,
                         className: t.props.className,
@@ -158,13 +158,13 @@ var i = function (e) {
             (t.prototype.constructor = t),
             o(t, e),
             (t.getDerivedStateFromProps = function (e, t) {
-                var n = 'invisible' === e.size;
-                return n !== t.invisible ? { invisible: n } : null;
+                var r = 'invisible' === e.size;
+                return r !== t.invisible ? { invisible: r } : null;
             }),
             (t.prototype.componentDidUpdate = function (e) {
                 var t = this;
-                c.reduce(function (n, r) {
-                    return t.props[r] !== e[r] ? [].concat(n, [r]) : n;
+                s.reduce(function (r, n) {
+                    return t.props[n] !== e[n] ? [].concat(r, [n]) : r;
                 }, []).length > 0 &&
                     this.setState(
                         {
@@ -178,8 +178,8 @@ var i = function (e) {
             }),
             t
         );
-    })(r.Component);
-s.defaultProps = {
+    })(n.Component);
+u.defaultProps = {
     id: '',
     className: 'g-recaptcha',
     theme: 'light',

@@ -25,8 +25,8 @@ var n = r(650665),
     A = r(467510),
     T = r(454463),
     d = r(163162),
-    f = r(119128),
-    L = r(799033);
+    L = r(119128),
+    f = r(799033);
 let O = {
         ...o.A,
         instrumentNavigation: !0,
@@ -36,7 +36,7 @@ let O = {
         enableLongAnimationFrame: !1,
         enableInp: !0,
         _experiments: {},
-        ...L.k3
+        ...f.k3
     },
     p = (e = {}) => {
         (0, i.a)();
@@ -155,7 +155,7 @@ let O = {
                                         }
                                     }));
                             })),
-                    P && (0, f.j)(),
+                    P && (0, L.j)(),
                     A &&
                         (function (e, t, r, n) {
                             let a;
@@ -194,7 +194,7 @@ let O = {
                                 );
                         })(C, g, U, B),
                     t && (0, a.D)(),
-                    (0, L.L7)(e, {
+                    (0, f.L7)(e, {
                         traceFetch: M,
                         traceXHR: G,
                         tracePropagationTargets: e.getOptions().tracePropagationTargets,

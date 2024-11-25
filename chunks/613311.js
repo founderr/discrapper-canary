@@ -18,18 +18,18 @@ var i = n(200651),
     I = n(115130),
     C = n(812206),
     v = n(770146),
-    N = n(600164),
-    T = n(606081),
-    S = n(252618),
+    S = n(600164),
+    N = n(606081),
+    T = n(252618),
     A = n(100159),
-    x = n(646288),
-    b = n(984370),
+    b = n(646288),
+    x = n(984370),
     Z = n(706454),
     L = n(210887),
     y = n(430824),
     O = n(496675),
-    P = n(525395),
-    R = n(558314),
+    R = n(525395),
+    P = n(558314),
     j = n(580130),
     D = n(55563),
     M = n(551428),
@@ -38,12 +38,12 @@ var i = n(200651),
     U = n(626135),
     G = n(572004),
     B = n(630388),
-    H = n(937615),
-    V = n(73346),
+    V = n(937615),
+    H = n(73346),
     F = n(3570),
     z = n(689796),
-    W = n(15470),
-    Y = n(506648),
+    Y = n(15470),
+    W = n(506648),
     K = n(449275),
     q = n(445986),
     X = n(119520),
@@ -134,24 +134,24 @@ class ec extends r.PureComponent {
     }
     renderHeader(e, t) {
         let { channel: n, isAuthenticated: l } = this.props;
-        return (0, i.jsx)(b.Z, {
+        return (0, i.jsx)(x.Z, {
             isAuthenticated: l,
             toolbar: this.renderHeaderToolbar(e, t),
             children:
                 null != n
                     ? (0, i.jsxs)(r.Fragment, {
                           children: [
-                              (0, i.jsx)(b.Z.Icon, {
+                              (0, i.jsx)(x.Z.Icon, {
                                   icon: d.TagIcon,
                                   'aria-label': ea.intl.string(ea.t['P1/Erq'])
                               }),
-                              (0, i.jsx)(b.Z.Title, { children: n.name })
+                              (0, i.jsx)(x.Z.Title, { children: n.name })
                           ]
                       })
                     : null != t && t.premium
                       ? (0, i.jsxs)(r.Fragment, {
                             children: [
-                                (0, i.jsx)(b.Z.Icon, {
+                                (0, i.jsx)(x.Z.Icon, {
                                     icon: d.NitroWheelIcon,
                                     'aria-label': ea.intl.string(ea.t.Ipxkoq)
                                 }),
@@ -161,11 +161,11 @@ class ec extends r.PureComponent {
                       : null != t
                         ? (0, i.jsxs)(r.Fragment, {
                               children: [
-                                  (0, i.jsx)(b.Z.Icon, {
+                                  (0, i.jsx)(x.Z.Icon, {
                                       icon: d.TagIcon,
                                       'aria-label': ea.intl.string(ea.t['P1/Erq'])
                                   }),
-                                  (0, i.jsx)(b.Z.Title, { children: t.name })
+                                  (0, i.jsx)(x.Z.Title, { children: t.name })
                               ]
                           })
                         : null
@@ -181,14 +181,14 @@ class ec extends r.PureComponent {
                 return t.mimeType.startsWith('video/')
                     ? {
                           type: er.s9s.VIDEO,
-                          thumbnailSrc: (0, V._W)(e.id, t, 1024, 'webp'),
-                          src: (0, V._W)(e.id, t),
+                          thumbnailSrc: (0, H._W)(e.id, t, 1024, 'webp'),
+                          src: (0, H._W)(e.id, t),
                           height: i,
                           width: n
                       }
                     : {
                           type: er.s9s.IMG,
-                          src: (0, V._W)(e.id, t, 1024),
+                          src: (0, H._W)(e.id, t, 1024),
                           height: i,
                           width: n
                       };
@@ -212,11 +212,11 @@ class ec extends r.PureComponent {
                   children: [
                       (0, i.jsx)('div', {
                           className: es.headerBackground,
-                          style: { backgroundImage: 'url('.concat((0, V._W)(e.id, l, 1024, 'png'), ')') }
+                          style: { backgroundImage: 'url('.concat((0, H._W)(e.id, l, 1024, 'png'), ')') }
                       }),
                       (0, i.jsx)('img', {
                           className: es.headerLogo,
-                          src: (0, V._W)(e.id, a, 1024, 'png'),
+                          src: (0, H._W)(e.id, a, 1024, 'png'),
                           alt: n.name
                       })
                   ]
@@ -241,7 +241,7 @@ class ec extends r.PureComponent {
         });
     }
     renderFeatures(e) {
-        return (0, i.jsx)(Y.Z, { sku: e });
+        return (0, i.jsx)(W.Z, { sku: e });
     }
     renderSystemRequirements(e) {
         return null == e.systemRequirements || 0 === Object.keys(e.systemRequirements).length
@@ -262,7 +262,7 @@ class ec extends r.PureComponent {
                     children: ea.intl.format(ea.t.tluX4O, { name: n.name })
                 }),
                 (0, i.jsx)(f.Z, {}),
-                (0, i.jsx)(W.Z, {
+                (0, i.jsx)(Y.Z, {
                     applicationId: e.id,
                     blurb: t.summary,
                     description: l,
@@ -289,23 +289,23 @@ class ec extends r.PureComponent {
         if (null == e || null == t || null == n) return null;
         let r = [],
             l = n.getSplashURL(1024);
-        null != l && r.push(l), null != t.headerLogoLightTheme && r.unshift((0, V._W)(n.id, t.headerLogoLightTheme, 1024, 'jpg'));
-        let a = T.Z.Product({
+        null != l && r.push(l), null != t.headerLogoLightTheme && r.unshift((0, H._W)(n.id, t.headerLogoLightTheme, 1024, 'jpg'));
+        let a = N.Z.Product({
                 name: e.name,
                 description: null != e.summary && '' !== e.summary ? e.summary : t.tagline,
-                image: T.Z.Product.Image(r),
+                image: N.Z.Product.Image(r),
                 sku: e.id
             }),
             s = e.getPrice();
         if (null != s) {
             let { amount: e, currency: t } = s;
-            a.offers = T.Z.Offer({
+            a.offers = N.Z.Offer({
                 priceCurrency: t.toUpperCase(),
-                price: (0, H.T4)(e, t, { style: 'decimal' })
+                price: (0, V.T4)(e, t, { style: 'decimal' })
             });
         }
-        let o = T.Z.ItemPage({ mainEntity: a });
-        return (0, i.jsx)(T.Z, { data: o });
+        let o = N.Z.ItemPage({ mainEntity: a });
+        return (0, i.jsx)(N.Z, { data: o });
     }
     renderSmall(e, t, n) {
         return (0, i.jsxs)('div', {
@@ -344,9 +344,9 @@ class ec extends r.PureComponent {
             return (0, i.jsxs)(r.Fragment, {
                 children: [
                     this.renderHeader(e, t),
-                    (0, i.jsx)(N.Z, {
-                        align: N.Z.Align.CENTER,
-                        justify: N.Z.Justify.CENTER,
+                    (0, i.jsx)(S.Z, {
+                        align: S.Z.Align.CENTER,
+                        justify: S.Z.Justify.CENTER,
                         children: (0, i.jsx)(d.Spinner, { className: es.spinner })
                     })
                 ]
@@ -359,14 +359,14 @@ class ec extends r.PureComponent {
                       children: this.renderListing()
                   });
             return (0, i.jsxs)(r.Fragment, {
-                children: [(0, i.jsx)(S.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), (0, i.jsx)(X.Z, { game: e }), n]
+                children: [(0, i.jsx)(T.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), (0, i.jsx)(X.Z, { game: e }), n]
             });
         }
         return a
             ? (0, i.jsxs)('div', {
                   className: es.listingWrapper,
                   children: [
-                      (0, i.jsx)(S.yY, { location: e.name }),
+                      (0, i.jsx)(T.yY, { location: e.name }),
                       this.renderJsonLD(),
                       (0, i.jsx)(g.Z, {
                           section: er.jXE.NAVIGATION,
@@ -379,7 +379,7 @@ class ec extends r.PureComponent {
                   ]
               })
             : (0, i.jsxs)('div', {
-                  children: [(0, i.jsx)(S.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), this.renderListing()]
+                  children: [(0, i.jsx)(T.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), this.renderListing()]
               });
     }
     constructor(...e) {
@@ -513,7 +513,7 @@ class ec extends r.PureComponent {
                             children: (0, i.jsxs)('div', {
                                 className: a()(es.headerPurchase, { [es.active]: o }),
                                 children: [
-                                    null != t ? (0, x.Z)(t) : null,
+                                    null != t ? (0, b.Z)(t) : null,
                                     null != e && null != t ? (0, i.jsx)('div', { children: 'deprecated!' }) : null,
                                     (0, i.jsx)(Q.Z, {
                                         messageStyle: Q.G.SHORT,
@@ -543,9 +543,9 @@ class ec extends r.PureComponent {
             eo(this, 'renderListing', () => {
                 let { application: e, storeListing: t, sku: n, pageSize: r } = this.props;
                 return null == e || null == n || null == t || t.isSlimDirectoryVersion()
-                    ? (0, i.jsx)(N.Z, {
-                          align: N.Z.Align.CENTER,
-                          justify: N.Z.Justify.CENTER,
+                    ? (0, i.jsx)(S.Z, {
+                          align: S.Z.Align.CENTER,
+                          justify: S.Z.Justify.CENTER,
                           children: (0, i.jsx)(d.Spinner, {})
                       })
                     : r === ei.b.SMALL
@@ -556,7 +556,7 @@ class ec extends r.PureComponent {
 }
 t.Z = (0, _.Z)(
     (0, E.Z)(
-        s.ZP.connectStores([R.Z, L.Z, Z.default, k.Z, M.Z, D.Z, w.Z, I.Z, C.Z, P.Z, y.Z, j.Z], (e) => {
+        s.ZP.connectStores([P.Z, L.Z, Z.default, k.Z, M.Z, D.Z, w.Z, I.Z, C.Z, R.Z, y.Z, j.Z], (e) => {
             let t,
                 n,
                 i,
@@ -575,7 +575,7 @@ t.Z = (0, _.Z)(
                 application: null != l ? C.Z.getApplication(l) : null,
                 isFetchingEntitlements: null != l && j.Z.applicationIdsFetching.has(l),
                 didFetchEntitlements: null != l && j.Z.applicationIdsFetched.has(l),
-                shouldFetchStatistics: s && null != l && P.Z.shouldFetchStatisticsForApplication(l),
+                shouldFetchStatistics: s && null != l && R.Z.shouldFetchStatisticsForApplication(l),
                 sku: n,
                 isFocused: k.Z.isFocused(),
                 storeListing: M.Z.getStoreListing({
@@ -585,7 +585,7 @@ t.Z = (0, _.Z)(
                     isTestMode: c
                 }),
                 isInTestMode: null != l && c,
-                matureAgree: R.Z.didMatureAgree,
+                matureAgree: P.Z.didMatureAgree,
                 theme: L.Z.theme,
                 locale: Z.default.locale,
                 guild: null != o ? y.Z.getGuild(o.getGuildId()) : null

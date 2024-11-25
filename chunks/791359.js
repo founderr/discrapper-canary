@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return P;
     }
 }),
     n(47120);
@@ -23,18 +23,18 @@ var i = n(200651),
     I = n(70956),
     C = n(225559),
     v = n(910436),
-    N = n(203028),
-    T = n(358924),
-    S = n(292140),
+    S = n(203028),
+    N = n(358924),
+    T = n(292140),
     A = n(525296),
-    x = n(981631),
-    b = n(674563),
+    b = n(981631),
+    x = n(674563),
     Z = n(388032),
     L = n(888816);
 let y = 15 * I.Z.Millis.MINUTE,
     O = (0, A.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
-            s = (0, i.jsx)(N.Z, {
+            s = (0, i.jsx)(S.Z, {
                 party: t,
                 onUserContextMenu: n
             }),
@@ -52,10 +52,10 @@ let y = 15 * I.Z.Millis.MINUTE,
                 let e = m
                     .filter((e) => {
                         var t, n;
-                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === b.wW.GAME;
+                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === x.wW.GAME;
                     })
                     .map((e) => e.game.name);
-                E.default.track(x.rMx.NOW_PLAYING_CARD_HOVERED, {
+                E.default.track(b.rMx.NOW_PLAYING_CARD_HOVERED, {
                     num_users: g,
                     num_streams: f,
                     num_activities: _,
@@ -69,7 +69,7 @@ let y = 15 * I.Z.Millis.MINUTE,
                   position: 'left',
                   renderPopout: (e) => {
                       let { closePopout: n } = e;
-                      return (0, i.jsx)(S.Z, {
+                      return (0, i.jsx)(T.Z, {
                           party: t,
                           close: n
                       });
@@ -77,7 +77,7 @@ let y = 15 * I.Z.Millis.MINUTE,
                   spacing: 8,
                   children: (e, t) => {
                       let { isShown: n } = t;
-                      return (0, i.jsx)(T.Z, {
+                      return (0, i.jsx)(N.Z, {
                           ...e,
                           onMouseEnter: A,
                           'aria-haspopup': 'menu',
@@ -91,8 +91,8 @@ let y = 15 * I.Z.Millis.MINUTE,
               })
             : null;
     }),
-    P = a().throttle(() => p.W(!1), 300000);
-function R() {
+    R = a().throttle(() => p.W(!1), 300000);
+function P() {
     let {
             nowPlayingCards: e,
             loaded: t,
@@ -109,7 +109,7 @@ function R() {
         s = (0, c.e7)([h.Z], () => h.Z.quests);
     r.useEffect(() => (u.Z.wait(() => C.L()), () => u.Z.wait(() => C.v())), [null == a ? void 0 : a.id]),
         r.useEffect(() => {
-            n && !l && P();
+            n && !l && R();
         }, [n, l]);
     let o = r.useMemo(() => {
             let t = new Map(),

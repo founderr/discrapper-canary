@@ -64,7 +64,7 @@ let b = (e, t) => (e < (0, p.A3)(N.Eu4.NONE) ? N.Eu4.NONE : e < (0, p.A3)(N.Eu4.
                 src: n(872732)
             })
         }),
-    Z = (e) => {
+    y = (e) => {
         let { guild: t } = e,
             { location: n } = (0, d.O)(),
             { canCreateExpressions: r } = (0, g.XJ)(t);
@@ -95,7 +95,7 @@ t.Z = (e) => {
         ),
         { analyticsLocations: x } = (0, u.ZP)(),
         E = t.hasFeature(N.oNc.MORE_STICKERS) ? N.Eu4.TIER_3 : t.premiumTier,
-        y = t.hasFeature(N.oNc.MORE_STICKERS) ? (0, p.vn)(t.id)[N.Eu4.TIER_3] : t.premiumSubscriberCount;
+        Z = t.hasFeature(N.oNc.MORE_STICKERS) ? (0, p.vn)(t.id)[N.Eu4.TIER_3] : t.premiumSubscriberCount;
     if (
         (r.useEffect(() => {
             let e = !1;
@@ -206,11 +206,11 @@ t.Z = (e) => {
                               objectType: (0, p.ge)(c.tier)
                           }
                       }))
-                    : M && (r = (0, i.jsx)(Z, { guild: t })),
+                    : M && (r = (0, i.jsx)(y, { guild: t })),
                 (0, i.jsxs)(
                     _.Z,
                     {
-                        subscriptionCount: y,
+                        subscriptionCount: Z,
                         tier: c,
                         onSetRef: a,
                         isAnimatedTo: l,

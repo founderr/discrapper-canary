@@ -6,7 +6,7 @@ n.d(t, {
         return i;
     },
     gt: function () {
-        return H;
+        return V;
     }
 }),
     n(47120);
@@ -29,18 +29,18 @@ var i,
     I = n(192079),
     C = n(427679),
     v = n(448206),
-    N = n(496675),
-    T = n(938475),
-    S = n(626135),
+    S = n(496675),
+    N = n(938475),
+    T = n(626135),
     A = n(823379),
-    x = n(15274),
-    b = n(924301),
+    b = n(15274),
+    x = n(924301),
     Z = n(504160),
     L = n(151864),
     y = n(835184),
     O = n(725436),
-    P = n(497656),
-    R = n(79874),
+    R = n(497656),
+    P = n(79874),
     j = n(554747),
     D = n(230900),
     M = n(854698),
@@ -49,7 +49,7 @@ var i,
     U = n(981631),
     G = n(388032),
     B = n(257956);
-let H = a.memo(function (e) {
+let V = a.memo(function (e) {
     let { heading: t, location: n, locationIcon: i, details: r, detailsIcon: a, topic: s, onClickCloseIcon: c, onClickTopicText: u, children: h } = e,
         m = (0, l.jsx)(d.Text, {
             color: 'header-primary',
@@ -125,19 +125,19 @@ let H = a.memo(function (e) {
         ]
     });
 });
-function V(e) {
+function H(e) {
     let { guildEvent: t, channel: n } = e,
         i = (0, c.Wu)(
-            [T.ZP],
+            [N.ZP],
             () =>
-                T.ZP.getVoiceStatesForChannel(n).map((e) => {
+                N.ZP.getVoiceStatesForChannel(n).map((e) => {
                     let { user: t } = e;
                     return t;
                 }),
             [n]
         ),
         r = (0, h.KS)(n);
-    return (0, l.jsx)(H, {
+    return (0, l.jsx)(V, {
         onClickCloseIcon: () => (0, Z.ji)({ eventId: null == t ? void 0 : t.id }),
         heading: G.intl.string(G.t['X2K3//']),
         topic: t.name,
@@ -160,7 +160,7 @@ function V(e) {
 function F(e) {
     let { guildEvent: t, noticeType: n } = e,
         i = (0, M.DK)(t),
-        r = (0, c.e7)([b.ZP], () => b.ZP.isInterestedInEventRecurrence(t.id, i), [t.id, i]),
+        r = (0, c.e7)([x.ZP], () => x.ZP.isInterestedInEventRecurrence(t.id, i), [t.id, i]),
         a = (0, c.e7)([y.Z], () => y.Z.getUpcomingNoticeSeenTime(t.id), [t.id]);
     return (
         !r && null == a && (0, Z._6)(t.id),
@@ -170,7 +170,7 @@ function F(e) {
             innerClassName: B.rsvpButton,
             onClick: function () {
                 (0, w.Z)(t.id, null, t.guild_id, () => setTimeout(() => (0, Z.L_)(t.id), 1000)),
-                    S.default.track(U.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
+                    T.default.track(U.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
                         guild_id: t.guild_id,
                         notice_type: n
                     });
@@ -206,12 +206,12 @@ function z(e) {
         s = null != r ? (0, O.m)(r, !0) : null,
         c = (0, D.nE)(n),
         u = (0, h.KS)(c),
-        { startTime: m, endTime: p } = (0, R.ZP)(n),
+        { startTime: m, endTime: p } = (0, P.ZP)(n),
         { startDateTimeString: g, upcomingEvent: f, diffMinutes: _ } = (0, M.ub)(m.toISOString(), null == p ? void 0 : p.toISOString()),
         E = f ? (_ > 0 ? G.intl.formatToPlainString(G.t.PQlCWl, { minutes: _ }) : G.intl.string(G.t.WINqKS)) : G.intl.formatToPlainString(G.t.DC6h3N, { date: g });
     return (
         a.useEffect(() => {
-            S.default.track(U.rMx.CHANNEL_NOTICE_VIEWED, {
+            T.default.track(U.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: i,
                 guild_id: n.guild_id
             });
@@ -223,7 +223,7 @@ function z(e) {
                     className: B.textBlock,
                     children: [
                         (0, l.jsx)(d.Clickable, {
-                            onClick: () => (0, x.bO)({ eventId: n.id }),
+                            onClick: () => (0, b.bO)({ eventId: n.id }),
                             className: B.eventNameClickable,
                             children: (0, l.jsx)(d.Text, {
                                 color: 'header-primary',
@@ -234,7 +234,7 @@ function z(e) {
                         }),
                         (0, l.jsx)(d.Clickable, {
                             onClick: () => {
-                                S.default.track(U.rMx.CHANNEL_NOTICE_CLOSED, {
+                                T.default.track(U.rMx.CHANNEL_NOTICE_CLOSED, {
                                     notice_type: i,
                                     guild_id: n.guild_id
                                 }),
@@ -299,12 +299,12 @@ function z(e) {
         })
     );
 }
-function W(e) {
+function Y(e) {
     let { guildEvent: t } = e,
         n = (0, D.cS)(t);
     return null == n
         ? null
-        : (0, l.jsx)(H, {
+        : (0, l.jsx)(V, {
               onClickCloseIcon: () => (0, Z.ji)({ eventId: null == t ? void 0 : t.id }),
               heading: G.intl.string(G.t['1+boPj']),
               topic: t.name,
@@ -316,13 +316,13 @@ function W(e) {
                   height: 16,
                   className: B.stageIcon
               }),
-              children: (0, l.jsx)(Y, { guildEvent: t })
+              children: (0, l.jsx)(W, { guildEvent: t })
           });
 }
-function Y(e) {
+function W(e) {
     let { guildEvent: t } = e,
         n = a.useCallback(() => {
-            (0, x.bO)({ eventId: t.id });
+            (0, b.bO)({ eventId: t.id });
         }, [t]);
     return (0, l.jsx)(d.Button, {
         fullWidth: !0,
@@ -351,7 +351,7 @@ function q(e) {
         i = (0, c.Wu)([_.Z], () => [...new Set(_.Z.getMutableParticipants(n.id, E.pV.SPEAKER).map((e) => e.user))], [n.id]),
         r = (0, c.e7)([_.Z], () => _.Z.getParticipantCount(n.id, E.pV.AUDIENCE), [n.id]),
         a = G.intl.formatToPlainString(G.t['+v2pNz'], { count: ''.concat(r) });
-    return (0, l.jsx)(H, {
+    return (0, l.jsx)(V, {
         onClickCloseIcon: () => (0, Z.ji)({ stageId: null == t ? void 0 : t.id }),
         heading: G.intl.string(G.t['X2K3//']),
         location: n.name,
@@ -382,7 +382,7 @@ function X(e) {
     let { channel: t, speakers: n, voiceType: i } = e,
         r = t.getGuildId(),
         s = a.useMemo(() => n.slice(0, 3), [n]),
-        h = (0, c.e7)([N.Z], () => N.Z.can(U.Plq.CONNECT, t)),
+        h = (0, c.e7)([S.Z], () => S.Z.can(U.Plq.CONNECT, t)),
         m = (0, v.Z)(t.id),
         p = G.intl.string(G.t.VJlc0d);
     switch (i) {
@@ -436,7 +436,7 @@ function X(e) {
     (t.ZP = a.memo(function (e) {
         let { guild: t } = e,
             { showRedesignedLiveChannelNotice: n } = (0, m.o)(!0),
-            i = (0, P.y)(t.id),
+            i = (0, R.y)(t.id),
             r = (0, j.k5)(t.id),
             a = (0, j.Vm)(t.id),
             s = (0, c.e7)([C.Z], () => C.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
@@ -463,10 +463,10 @@ function X(e) {
                     channel: i
                 }))
               : r.entity_type === k.WX.EXTERNAL
-                ? (u = (0, l.jsx)(W, { guildEvent: r }))
+                ? (u = (0, l.jsx)(Y, { guildEvent: r }))
                 : r.entity_type === k.WX.VOICE &&
                   null != i &&
-                  (u = (0, l.jsx)(V, {
+                  (u = (0, l.jsx)(H, {
                       guildEvent: r,
                       channel: i
                   }));

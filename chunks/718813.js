@@ -23,7 +23,7 @@ var i,
     I = n(585483),
     C = n(981631),
     v = n(736366);
-function N(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,12 +36,12 @@ function N(e, t, n) {
         e
     );
 }
-let T = (0, g.Un)({
+let N = (0, g.Un)({
         createPromise: () => Promise.all([n.e('23217'), n.e('33053'), n.e('8016'), n.e('76540'), n.e('15669'), n.e('17938'), n.e('22646'), n.e('34842'), n.e('30419'), n.e('48923'), n.e('8821'), n.e('18824'), n.e('76447'), n.e('68692')]).then(n.bind(n, 989804)),
         webpackId: 989804,
         name: 'UserSettings'
     }),
-    S = (0, g.Un)({
+    T = (0, g.Un)({
         createPromise: () => Promise.all([n.e('33053'), n.e('7654'), n.e('44294'), n.e('75116')]).then(n.bind(n, 869779)),
         webpackId: 869779,
         name: 'ChannelSettings'
@@ -51,15 +51,15 @@ let T = (0, g.Un)({
         webpackId: 838819,
         name: 'CollectiblesShop'
     }),
-    x = (0, g.Un)({
+    b = (0, g.Un)({
         createPromise: () => Promise.all([n.e('33053'), n.e('15669'), n.e('7654'), n.e('44156'), n.e('44294'), n.e('85552'), n.e('58227'), n.e('16114'), n.e('28161')]).then(n.bind(n, 994763)),
         webpackId: 994763,
         name: 'GuildSettings'
     }),
-    b = {
-        [C.S9g.USER_SETTINGS]: () => (0, r.jsx)(T, {}),
-        [C.S9g.CHANNEL_SETTINGS]: () => (0, r.jsx)(S, {}),
-        [C.S9g.GUILD_SETTINGS]: () => (0, r.jsx)(x, {}),
+    x = {
+        [C.S9g.USER_SETTINGS]: () => (0, r.jsx)(N, {}),
+        [C.S9g.CHANNEL_SETTINGS]: () => (0, r.jsx)(T, {}),
+        [C.S9g.GUILD_SETTINGS]: () => (0, r.jsx)(b, {}),
         [C.S9g.COLLECTIBLES_SHOP]: () => (0, r.jsx)(A, {})
     },
     Z = 'SHOWN',
@@ -71,7 +71,7 @@ let T = (0, g.Un)({
 function O() {
     return l.useEffect(() => (p.Z.enable(), p.Z.enableTemp(m.u), () => p.Z.disableTemp()), []), null;
 }
-class P extends (i = l.PureComponent) {
+class R extends (i = l.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.mode
             ? {
@@ -172,7 +172,7 @@ class P extends (i = l.PureComponent) {
         };
     }
     constructor(e) {
-        super(e), N(this, 'containerRef', l.createRef());
+        super(e), S(this, 'containerRef', l.createRef());
         let t = 1,
             n = 1;
         e.mode === L && ((t = 0.93), (n = 0)),
@@ -184,8 +184,8 @@ class P extends (i = l.PureComponent) {
             });
     }
 }
-N(P, 'defaultProps', { baseLayer: !1 }), N(P, 'contextType', u.AccessibilityPreferencesContext);
-class R extends l.PureComponent {
+S(R, 'defaultProps', { baseLayer: !1 }), S(R, 'contextType', u.AccessibilityPreferencesContext);
+class P extends l.PureComponent {
     componentDidMount() {
         I.S.subscribe(C.CkL.LAYER_POP_ESCAPE_KEY, h.xf);
     }
@@ -199,7 +199,7 @@ class R extends l.PureComponent {
         return (
             l.push(
                 (0, r.jsx)(
-                    P,
+                    R,
                     {
                         mode: 0 !== i || n ? L : Z,
                         baseLayer: !0,
@@ -215,9 +215,9 @@ class R extends l.PureComponent {
     renderComponent(e, t, n) {
         let i;
         return (
-            (i = 'string' == typeof e ? b[e]() : (0, r.jsx)(e, {})),
+            (i = 'string' == typeof e ? x[e]() : (0, r.jsx)(e, {})),
             (0, r.jsxs)(
-                P,
+                R,
                 {
                     mode: t === n - 1 ? Z : L,
                     children: [(0, r.jsx)(O, {}), i]
@@ -249,7 +249,7 @@ function j(e) {
     let t = (0, c.e7)([_.Z], () => _.Z.darkSidebar) ? C.BRd.DARK : void 0,
         n = (0, c.e7)([E.Z], () => E.Z.getLayers()),
         i = (0, f.QP)((e) => e.fullScreenLayers.length > 0);
-    return (0, r.jsx)(R, {
+    return (0, r.jsx)(P, {
         ...e,
         sidebarTheme: t,
         layers: n,

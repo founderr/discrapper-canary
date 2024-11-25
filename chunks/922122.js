@@ -88,11 +88,11 @@ function f(e) {
             containerWidth: h
         }),
         v = r.useMemo(() => l.slice(0, _ + 1), [_, l]),
-        N = r.useMemo(() => l.slice(_ + 1), [_, l]),
-        T = r.useRef(null),
-        S = r.useCallback(() => {
+        S = r.useMemo(() => l.slice(_ + 1), [_, l]),
+        N = r.useRef(null),
+        T = r.useCallback(() => {
             var e;
-            let t = null === (e = T.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+            let t = null === (e = N.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
             if (null == t || f.current === t.width) return;
             m(t.width), (f.current = t.width);
             let n = C.current.reduce((e, t, n) => e + t + (0 === n ? 0 : 20)),
@@ -100,13 +100,13 @@ function f(e) {
             null == d || d(i);
         }, [C, d]);
     r.useEffect(() => {
-        let e = (0, u.pP)(S);
+        let e = (0, u.pP)(T);
         return (0, u.YP)(e, document.body), () => (0, u.UC)(e, document.body);
-    }, [S]);
+    }, [T]);
     let A = 0 !== h;
     return (0, i.jsxs)('div', {
         className: a()(p.container, t),
-        ref: T,
+        ref: N,
         children: [
             (0, i.jsxs)('div', {
                 className: p.measurements,
@@ -133,7 +133,7 @@ function f(e) {
                     (0, i.jsx)('div', {
                         ref: I,
                         children: (0, i.jsx)(g, {
-                            tabs: N,
+                            tabs: S,
                             onTabSelect: o,
                             selectedTab: n
                         })
@@ -160,9 +160,9 @@ function f(e) {
                                 e.id
                             )
                         ),
-                        0 !== N.length
+                        0 !== S.length
                             ? (0, i.jsx)(g, {
-                                  tabs: N,
+                                  tabs: S,
                                   onTabSelect: o,
                                   selectedTab: n
                               })

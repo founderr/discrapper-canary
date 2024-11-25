@@ -99,7 +99,7 @@ function b(e) {
         children: o
     });
 }
-function S(e) {
+function E(e) {
     let { activity: t, user: n, onOpenSpotifyArtist: l } = e,
         r = null == t ? void 0 : t.details,
         o = null == t ? void 0 : t.state,
@@ -128,7 +128,7 @@ function S(e) {
               children: s
           });
 }
-function E(e) {
+function S(e) {
     let { activity: t } = e,
         n = null == t ? void 0 : t.state;
     return null == n || '' === n || (0, c.Z)(t)
@@ -191,12 +191,12 @@ function N(e) {
                                       embeddedApp: n,
                                       onOpenSpotifyTrack: h
                                   }),
-                                  (0, i.jsx)(S, {
+                                  (0, i.jsx)(E, {
                                       activity: t,
                                       user: r,
                                       onOpenSpotifyArtist: p
                                   }),
-                                  (0, i.jsx)(E, { activity: t }),
+                                  (0, i.jsx)(S, { activity: t }),
                                   g.length > 0 &&
                                       (0, i.jsx)(d.Z, {
                                           className: v.usersSummary,

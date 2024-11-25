@@ -1,12 +1,12 @@
 n.d(t, {
     F0: function () {
-        return S;
+        return T;
     },
     HR: function () {
         return A;
     },
     ZP: function () {
-        return x;
+        return b;
     }
 }),
     n(47120);
@@ -29,29 +29,29 @@ var i = n(200651),
     I = n(1964),
     C = n(762756),
     v = n(981631),
-    N = n(815660),
-    T = n(388032);
-let S = 'Email Verification',
+    S = n(815660),
+    N = n(388032);
+let T = 'Email Verification',
     A = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
-function x() {
+function b() {
     let { action: e, theme: t } = (0, a.cj)([E.Z, _.Z], () => ({
             action: E.Z.getAction(),
             theme: _.Z.theme
         })),
-        x = I.Z.getVerificationTypes(e),
-        [b, Z] = r.useState(0),
-        L = (0, h.Z)(x);
+        b = I.Z.getVerificationTypes(e),
+        [x, Z] = r.useState(0),
+        L = (0, h.Z)(b);
     (0, p.Z)(
         {
             type: l.ImpressionTypes.MODAL,
             name: l.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
-                verification_type: x[0],
-                verification_types: x
+                verification_type: b[0],
+                verification_types: b
             }
         },
         {},
-        [x.toString()]
+        [b.toString()]
     );
     let y = () => {
             (0, u.FD)(),
@@ -61,7 +61,7 @@ function x() {
                         return (t) => (0, i.jsx)(e, { ...t });
                     },
                     {
-                        modalKey: S,
+                        modalKey: T,
                         Layer: g.ZP
                     }
                 );
@@ -77,7 +77,7 @@ function x() {
                         });
                 },
                 {
-                    modalKey: N.M,
+                    modalKey: S.M,
                     Layer: g.ZP
                 }
             );
@@ -94,16 +94,16 @@ function x() {
         ),
         r.useEffect(() => {
             (null == L ? void 0 : L[0]) === v.PUi.PHONE &&
-                (null == x ? void 0 : x[0]) === v.PUi.EMAIL &&
+                (null == b ? void 0 : b[0]) === v.PUi.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
-                                title: T.intl.string(T.t.KLnLIC),
-                                body: T.intl.string(T.t.XGbCq6),
-                                confirmText: T.intl.string(T.t['3oK4q6'])
+                                title: N.intl.string(N.t.KLnLIC),
+                                body: N.intl.string(N.t.XGbCq6),
+                                confirmText: N.intl.string(N.t['3oK4q6'])
                             });
                     },
                     {
@@ -112,10 +112,10 @@ function x() {
                         onCloseCallback: y
                     }
                 );
-        }, [x, L]),
+        }, [b, L]),
         (0, i.jsx)(C.Z, {
-            types: x,
-            captchaKey: b,
+            types: b,
+            captchaKey: x,
             onCaptchaVerify: (e) => {
                 s.tn
                     .post({
@@ -138,14 +138,14 @@ function x() {
                         let { ConfirmModal: e, Text: t } = await Promise.resolve().then(n.bind(n, 481060));
                         return (n) =>
                             (0, i.jsx)(e, {
-                                header: T.intl.string(T.t['2jxGen']),
-                                confirmText: T.intl.string(T.t['2jxGen']),
-                                cancelText: T.intl.string(T.t['ETE/oK']),
+                                header: N.intl.string(N.t['2jxGen']),
+                                confirmText: N.intl.string(N.t['2jxGen']),
+                                cancelText: N.intl.string(N.t['ETE/oK']),
                                 onConfirm: () => c.Z.logout(),
                                 ...n,
                                 children: (0, i.jsx)(t, {
                                     variant: 'text-md/normal',
-                                    children: T.intl.string(T.t.SUnWBA)
+                                    children: N.intl.string(N.t.SUnWBA)
                                 })
                             });
                     },

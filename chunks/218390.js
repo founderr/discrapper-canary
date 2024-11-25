@@ -34,16 +34,16 @@ var i = n(200651),
     P = n(78839),
     Z = n(483444),
     O = n(626135),
-    M = n(63063),
-    B = n(74538),
+    B = n(63063),
+    M = n(74538),
     w = n(140465),
     y = n(599659),
     k = n(91802),
     L = n(944345),
     U = n(197115),
     D = n(823188),
-    H = n(504865),
-    G = n(179984),
+    G = n(504865),
+    H = n(179984),
     V = n(938736),
     F = n(386733),
     W = n(474936),
@@ -62,7 +62,7 @@ function ee(e) {
         d = n || l,
         m = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), 'd') : 0,
         f = W.GP[t.planIdFromItems],
-        p = B.ZP.formatPriceString(B.ZP.getDefaultPrice(f.id), f.interval);
+        p = M.ZP.formatPriceString(M.ZP.getDefaultPrice(f.id), f.interval);
     return d
         ? (0, i.jsxs)(i.Fragment, {
               children: [
@@ -81,7 +81,7 @@ function ee(e) {
                           var e, n, i;
                           if (l) {
                               if (r) {
-                                  let e = B.ZP.getReverseTrialWeeks(t.trialId);
+                                  let e = M.ZP.getReverseTrialWeeks(t.trialId);
                                   return Y.intl.format(Y.t.jLglur, { weeks: e });
                               }
                               return Y.intl.format(Y.t['2CGBrq'], {
@@ -103,7 +103,7 @@ function ee(e) {
                   })
               ]
           })
-        : (0, i.jsx)(H.Z, {
+        : (0, i.jsx)(G.Z, {
               variant: void 0,
               subscriptionTier: W.Si.TIER_2,
               interval: f.interval
@@ -140,7 +140,7 @@ function et() {
                                       variant: 'heading-md/normal',
                                       color: 'always-white',
                                       className: K.fractionalPremiumSubheader,
-                                      children: Y.intl.format(Y.t.sK7fGh, { helpCenterLink: M.Z.getArticleURL(z.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+                                      children: Y.intl.format(Y.t.sK7fGh, { helpCenterLink: B.Z.getArticleURL(z.BhN.FRACTIONAL_PREMIUM_ABOUT) })
                                   })
                               ]
                           })
@@ -313,13 +313,13 @@ t.Z = function () {
         }),
         (0, L.B)('PremiumManagementSettings');
     let Z = (0, L.b)('PremiumManagementSettings'),
-        M = (0, V.pn)('PremiumManagementSettings');
+        B = (0, V.pn)('PremiumManagementSettings');
     r.useEffect(() => {
         m.Z.wait(async () => {
             !x && !e && (await Promise.all([f.jg(), f.tZ(), (0, _.Y2)(h, null, z.JjL.DISCOVERY)])), o(!1);
         });
     }, [h, x, e]);
-    let [B, w] = r.useState(!1);
+    let [M, w] = r.useState(!1);
     if (x) return (0, i.jsx)(E.Z, {});
     if (e) return (0, i.jsx)(S.c8, {});
     let y = a && null !== n && s,
@@ -339,9 +339,9 @@ t.Z = function () {
                     className: K.__invalid_container,
                     children: [
                         (0, i.jsx)(et, {}),
-                        (Z || M) && (0, i.jsx)(F.Z, { isInSettings: !0 }),
+                        (Z || B) && (0, i.jsx)(F.Z, { isInSettings: !0 }),
                         (0, i.jsx)(ei, {}),
-                        (0, i.jsx)(G.Z, {
+                        (0, i.jsx)(H.Z, {
                             className: K.__invalid_planComparisonTable,
                             hideCTAs: !0,
                             headingOverride: Y.intl.string(Y.t.dnVvQU),
@@ -353,7 +353,7 @@ t.Z = function () {
                 }),
                 (0, i.jsx)(d.$, {
                     onChange: (e) => {
-                        e && !B && (O.default.track(z.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), w(!0));
+                        e && !M && (O.default.track(z.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), w(!0));
                     },
                     children: (0, i.jsx)('div', { className: K.bottomOfPageVisibilitySensor })
                 })

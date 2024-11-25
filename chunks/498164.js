@@ -19,15 +19,15 @@ var a = n(756647),
     I = n(553795),
     C = n(594174),
     v = n(626135),
-    N = n(585483),
-    T = n(591759),
-    S = n(998502),
+    S = n(585483),
+    N = n(591759),
+    T = n(998502),
     A = n(996106),
-    x = n(186901),
-    b = n(981631);
+    b = n(186901),
+    x = n(981631);
 function Z(e, t) {
     if (null != e)
-        v.default.track(b.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
+        v.default.track(x.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
             invite_code: null,
             has_auth_token: null,
             is_backgrounded: null,
@@ -45,23 +45,23 @@ function Z(e, t) {
     (r.QUEST_HOME = 'quest_home'),
     (r.DISCOVERY_GAME = 'discovery_game'),
     (t.Z = {
-        [b.Etm.INVITE_BROWSER]: {
-            scope: x.cE,
+        [x.Etm.INVITE_BROWSER]: {
+            scope: b.cE,
             async handler(e) {
                 let {
                         args: { code: t }
                     } = e,
                     { invite: n } = await m.Z.resolveInvite(t, 'Desktop Modal');
-                if (null == n) throw new A.Z({ errorCode: b.lTL.INVALID_INVITE }, 'Invalid invite id: '.concat(t));
+                if (null == n) throw new A.Z({ errorCode: x.lTL.INVALID_INVITE }, 'Invalid invite id: '.concat(t));
                 return (
                     E.default.isAuthenticated()
                         ? o.Z.dispatch({
                               type: 'INVITE_MODAL_OPEN',
                               invite: n,
                               code: t,
-                              context: b.IlC.APP
+                              context: x.IlC.APP
                           })
-                        : (0, _.dL)(b.Z5c.INVITE(t)),
+                        : (0, _.dL)(x.Z5c.INVITE(t)),
                     {
                         invite: n,
                         code: t
@@ -69,17 +69,17 @@ function Z(e, t) {
                 );
             }
         },
-        [b.Etm.GUILD_TEMPLATE_BROWSER]: {
-            scope: x.cE,
+        [x.Etm.GUILD_TEMPLATE_BROWSER]: {
+            scope: b.cE,
             async handler(e) {
                 let {
                     args: { code: t }
                 } = e;
                 if (null == C.default.getCurrentUser()) return;
                 let { guildTemplate: i } = await g.Z.resolveGuildTemplate(t);
-                if (null == i) throw new A.Z({ errorCode: b.lTL.INVALID_GUILD_TEMPLATE }, 'Invalid guild template id: '.concat(t));
+                if (null == i) throw new A.Z({ errorCode: x.lTL.INVALID_GUILD_TEMPLATE }, 'Invalid guild template id: '.concat(t));
                 return (
-                    S.ZP.focus(),
+                    T.ZP.focus(),
                     (0, s.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([n.e('10778'), n.e('27815')]).then(n.bind(n, 766775));
                         return (t) =>
@@ -95,8 +95,8 @@ function Z(e, t) {
                 );
             }
         },
-        [b.Etm.GIFT_CODE_BROWSER]: {
-            scope: x.cE,
+        [x.Etm.GIFT_CODE_BROWSER]: {
+            scope: b.cE,
             handler(e) {
                 let {
                     args: { code: t }
@@ -106,10 +106,10 @@ function Z(e, t) {
                         h.Z.resolveGiftCode(t, !0, !0)
                             .then((i) => {
                                 let { giftCode: r } = i;
-                                S.ZP.focus(),
-                                    v.default.track(b.rMx.OPEN_MODAL, {
+                                T.ZP.focus(),
+                                    v.default.track(x.rMx.OPEN_MODAL, {
                                         type: 'gift_accept',
-                                        location: b.SaU
+                                        location: x.SaU
                                     }),
                                     (0, s.openModalLazy)(async () => {
                                         let { default: e } = await Promise.all([n.e('92446'), n.e('89793')]).then(n.bind(n, 409858));
@@ -121,68 +121,68 @@ function Z(e, t) {
                                     }),
                                     e({ giftCode: r });
                             })
-                            .catch(() => i(new A.Z({ errorCode: b.lTL.INVALID_GIFT_CODE }, 'Invalid gift code: '.concat(t))));
+                            .catch(() => i(new A.Z({ errorCode: x.lTL.INVALID_GIFT_CODE }, 'Invalid gift code: '.concat(t))));
                     });
                 });
             }
         },
-        [b.Etm.DEEP_LINK]: {
-            scope: x.cE,
+        [x.Etm.DEEP_LINK]: {
+            scope: b.cE,
             handler(e) {
                 let {
                     args: { type: t, params: n }
                 } = e;
-                switch ((S.ZP.focus(), t)) {
-                    case x.jE.USER_SETTINGS:
-                        null != n && ((0, _.dL)(b.Z5c.SETTINGS(n.section, n.subsection)), Z(n.fingerprint, 'settings'));
+                switch ((T.ZP.focus(), t)) {
+                    case b.jE.USER_SETTINGS:
+                        null != n && ((0, _.dL)(x.Z5c.SETTINGS(n.section, n.subsection)), Z(n.fingerprint, 'settings'));
                         break;
-                    case x.jE.CHANGELOG:
-                        null != n && ((0, _.dL)(T.Z.formatPathWithQuery(b.Z5c.CHANGELOGS(n.date), n.query)), Z(n.fingerprint, 'changelog'));
+                    case b.jE.CHANGELOG:
+                        null != n && ((0, _.dL)(N.Z.formatPathWithQuery(x.Z5c.CHANGELOGS(n.date), n.query)), Z(n.fingerprint, 'changelog'));
                         break;
-                    case x.jE.LIBRARY:
-                        (0, _.dL)(b.Z5c.APPLICATION_LIBRARY), null != n && Z(n.fingerprint, 'library');
+                    case b.jE.LIBRARY:
+                        (0, _.dL)(x.Z5c.APPLICATION_LIBRARY), null != n && Z(n.fingerprint, 'library');
                         break;
-                    case x.jE.STORE_HOME:
-                        (0, _.dL)(b.Z5c.APPLICATION_STORE), null != n && Z(n.fingerprint, 'store');
+                    case b.jE.STORE_HOME:
+                        (0, _.dL)(x.Z5c.APPLICATION_STORE), null != n && Z(n.fingerprint, 'store');
                         break;
-                    case x.jE.STORE_LISTING:
-                        null != n && ((0, _.dL)(b.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), Z(n.fingerprint, 'store'));
+                    case b.jE.STORE_LISTING:
+                        null != n && ((0, _.dL)(x.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), Z(n.fingerprint, 'store'));
                         break;
-                    case x.jE.PICK_GUILD_SETTINGS:
+                    case b.jE.PICK_GUILD_SETTINGS:
                         null != n &&
                             ((0, _.dL)({
-                                pathname: b.Z5c.PICK_GUILD_SETTINGS(n.section, n.subsection),
+                                pathname: x.Z5c.PICK_GUILD_SETTINGS(n.section, n.subsection),
                                 search: n.search
                             }),
                             Z(n.fingerprint, 'guild_settings'));
                         break;
-                    case x.jE.CHANNEL:
+                    case b.jE.CHANNEL:
                         null != n &&
                             ((0, _.dL)({
-                                pathname: b.Z5c.CHANNEL(n.guildId, n.channelId, n.messageId),
+                                pathname: x.Z5c.CHANNEL(n.guildId, n.channelId, n.messageId),
                                 search: n.search
                             }),
                             Z(n.fingerprint, 'channel'));
                         break;
-                    case x.jE.QUEST_HOME:
+                    case b.jE.QUEST_HOME:
                         null != n
                             ? ((0, _.dL)({
-                                  pathname: b.Z5c.QUEST_HOME,
+                                  pathname: x.Z5c.QUEST_HOME,
                                   hash: n.questId
                               }),
                               Z(n.fingerprint, 'quest_home'))
-                            : (0, _.dL)(b.Z5c.QUEST_HOME);
+                            : (0, _.dL)(x.Z5c.QUEST_HOME);
                         break;
-                    case x.jE.DISCOVERY_GAME_RESULTS:
+                    case b.jE.DISCOVERY_GAME_RESULTS:
                         null != n &&
                             ((0, _.dL)({
-                                pathname: b.Z5c.GLOBAL_DISCOVERY_SERVERS,
+                                pathname: x.Z5c.GLOBAL_DISCOVERY_SERVERS,
                                 search: '?game='.concat(n.gameId)
                             }),
                             Z(n.fingerprint, 'discovery_game'));
                         break;
-                    case x.jE.OAUTH2:
-                        let i = new URL(b.Z5c.OAUTH2_AUTHORIZE, window.location.origin);
+                    case b.jE.OAUTH2:
+                        let i = new URL(x.Z5c.OAUTH2_AUTHORIZE, window.location.origin);
                         i.search = n.search;
                         let r = (0, f.getOAuth2AuthorizeProps)(i.toString());
                         if (null != r) return (0, f.openOAuth2ModalWithCreateGuildModal)(r), !0;
@@ -190,22 +190,22 @@ function Z(e, t) {
                 }
             }
         },
-        [b.Etm.BROWSER_HANDOFF]: {
-            scope: x.CN,
+        [x.Etm.BROWSER_HANDOFF]: {
+            scope: b.CN,
             handler(e) {
                 let {
                     args: { handoffToken: t, fingerprint: n }
                 } = e;
-                S.ZP.focus(null, !0), (0, d.lx)(t, n);
+                T.ZP.focus(null, !0), (0, d.lx)(t, n);
             }
         },
-        [b.Etm.CONNECTIONS_CALLBACK]: {
-            scope: x.cE,
+        [x.Etm.CONNECTIONS_CALLBACK]: {
+            scope: b.cE,
             handler: async (e) => {
                 let {
                     args: { providerType: t, code: n, openid_params: i, state: r }
                 } = e;
-                if (!p.g.getCurrentConfig({ location: 'private.CONNECTIONS_CALLBACK' }).enabled && !I.Z.hasPendingAuthorizedState(r)) throw new A.Z({ errorCode: b.lTL.INVALID_CONNECTION_CALLBACK_STATE }, 'Provider authorization did not originate from this discord client');
+                if (!p.g.getCurrentConfig({ location: 'private.CONNECTIONS_CALLBACK' }).enabled && !I.Z.hasPendingAuthorizedState(r)) throw new A.Z({ errorCode: x.lTL.INVALID_CONNECTION_CALLBACK_STATE }, 'Provider authorization did not originate from this discord client');
                 try {
                     return (
                         I.Z.deletePendingAuthorizedState(r),
@@ -216,27 +216,27 @@ function Z(e, t) {
                         })
                     );
                 } catch (e) {
-                    if ((null == e ? void 0 : e.status) === 400) throw new A.Z({ errorCode: b.lTL.BAD_REQUEST_FOR_PROVIDER }, 'Bad request for provider');
-                    throw (N.S.dispatch(b.CkL.CONNECTIONS_CALLBACK_ERROR), e);
+                    if ((null == e ? void 0 : e.status) === 400) throw new A.Z({ errorCode: x.lTL.BAD_REQUEST_FOR_PROVIDER }, 'Bad request for provider');
+                    throw (S.S.dispatch(x.CkL.CONNECTIONS_CALLBACK_ERROR), e);
                 }
             }
         },
-        [b.Etm.BRAINTREE_POPUP_BRIDGE_CALLBACK]: {
-            scope: x.cE,
+        [x.Etm.BRAINTREE_POPUP_BRIDGE_CALLBACK]: {
+            scope: b.cE,
             handler(e) {
                 let {
                     args: { state: t, path: n, query: i }
                 } = e;
                 return (0, c.rt)({
-                    paymentSourceType: b.HeQ.PAYPAL,
+                    paymentSourceType: x.HeQ.PAYPAL,
                     state: t,
                     path: n,
                     query: i
                 });
             }
         },
-        [b.Etm.BILLING_POPUP_BRIDGE_CALLBACK]: {
-            scope: x.cE,
+        [x.Etm.BILLING_POPUP_BRIDGE_CALLBACK]: {
+            scope: b.cE,
             handler(e) {
                 let {
                     args: { state: t, path: n, query: i, payment_source_type: r }

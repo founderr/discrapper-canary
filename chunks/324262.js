@@ -12,18 +12,18 @@ var i = n(200651),
     p = n(768336);
 let g = a().debounce(o.ZP.trackWithMetadata, 500),
     f = (e) => {
-        let { guild: t, title: n, message: l, image: a, type: d, imageMarginX: u, imageMarginTop: f, trackingSource: _, undismissable: E, onDismissed: I, onClick: C, cta: v, ctaColor: N } = e;
+        let { guild: t, title: n, message: l, image: a, type: d, imageMarginX: u, imageMarginTop: f, trackingSource: _, undismissable: E, onDismissed: I, onClick: C, cta: v, ctaColor: S } = e;
         r.useEffect(() => {
             g(h.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: d,
                 guild_id: t.id
             });
         }, [t.id, d]);
-        let T = null;
+        let N = null;
         'function' == typeof v
-            ? (T = v())
+            ? (N = v())
             : null != v &&
-              (T = (0, i.jsx)(s.Button, {
+              (N = (0, i.jsx)(s.Button, {
                   className: p.btn,
                   size: s.Button.Sizes.SMALL,
                   onClick: () => {
@@ -36,10 +36,10 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
                           null == C || C();
                   },
                   fullWidth: !0,
-                  color: N,
+                  color: S,
                   children: v
               }));
-        let S = null != u ? ''.concat(u, 'px') : '16px';
+        let T = null != u ? ''.concat(u, 'px') : '16px';
         return (0, i.jsxs)('div', {
             className: p.channelNotice,
             children: [
@@ -61,8 +61,8 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
                     className: p.imageContainer,
                     style: {
                         marginTop: ''.concat(f, 'px'),
-                        marginLeft: S,
-                        marginRight: S
+                        marginLeft: T,
+                        marginRight: T
                     },
                     children: (0, i.jsx)('img', {
                         className: p.image,
@@ -84,7 +84,7 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
                             variant: 'text-sm/normal',
                             children: l
                         }),
-                        T
+                        N
                     ]
                 })
             ]

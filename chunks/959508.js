@@ -26,7 +26,7 @@ var i = n(200651),
 let N = { optionErrors: [] };
 function T(e) {
     var t;
-    let { guild: n, prompt: l, disableAutofocus: d, promptIndex: C, dragIndex: T, includeCount: S, singleColumn: E, onPromptDragComplete: R, onPromptDragStart: Z, onPromptDragReset: y } = e,
+    let { guild: n, prompt: l, disableAutofocus: d, promptIndex: C, dragIndex: T, includeCount: S, singleColumn: E, onPromptDragComplete: R, onPromptDragStart: y, onPromptDragReset: Z } = e,
         { dropdownsAllowed: A } = (0, m.Ug)(n.id),
         L = (0, a.e7)([x.Z], () => x.Z.editedDefaultChannelIds),
         D = A ? v.qm : v.M$,
@@ -39,9 +39,9 @@ function T(e) {
             type: 'ONBOARDING_PROMPT_CARD',
             index: T,
             optionId: l.id,
-            onDragStart: Z,
+            onDragStart: y,
             onDragComplete: R,
-            onDragReset: y
+            onDragReset: Z
         }),
         w = (0, a.cj)([f.Z], () => {
             var e;

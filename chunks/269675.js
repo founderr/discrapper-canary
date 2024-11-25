@@ -22,12 +22,12 @@ var i = n(200651),
     I = n(772021),
     C = n(396828),
     v = n(293423),
-    N = n(20967),
-    T = n(504762),
-    S = n(807152),
+    S = n(20967),
+    N = n(504762),
+    T = n(807152),
     A = n(176505),
-    x = n(388032),
-    b = n(752335);
+    b = n(388032),
+    x = n(752335);
 function Z(e) {
     let { guildId: t } = e,
         n = (0, a.e7)([f.Z], () => f.Z.getGuild(t), [t]),
@@ -35,15 +35,15 @@ function Z(e) {
         L = (0, h.Z)(t),
         y = (0, I.Z)(t),
         O = (0, a.e7)([_.Z], () => _.Z.isSubscriptionFetching),
-        P = (0, E.f)(),
-        { shouldHideGuildPurchaseEntryPoints: R, restrictionsLoading: j } = (0, m.uP)(t),
-        D = null == n || !P || O || j;
+        R = (0, E.f)(),
+        { shouldHideGuildPurchaseEntryPoints: P, restrictionsLoading: j } = (0, m.uP)(t),
+        D = null == n || !R || O || j;
     (0, d.Tt)({
-        subsection: x.intl.string(x.t['KzCF//']),
+        subsection: b.intl.string(b.t['KzCF//']),
         location: null == n ? void 0 : n.name
     }),
         (0, c.Z)(l.tq ? 'role-subscriptions-overview' : void 0);
-    let M = Z && (null == n || !(L || y) || (R && !j));
+    let M = Z && (null == n || !(L || y) || (P && !j));
     if (
         (r.useEffect(() => {
             o.jg();
@@ -53,35 +53,35 @@ function Z(e) {
         }, [t, M]),
         l.tq && M)
     ) {
-        let e = null == n ? N.J.NOT_GUILD_MEMBER : N.J.GUILD_NOT_ELIGIBLE;
-        return (0, i.jsx)(N.z, { errorType: e });
+        let e = null == n ? S.J.NOT_GUILD_MEMBER : S.J.GUILD_NOT_ELIGIBLE;
+        return (0, i.jsx)(S.z, { errorType: e });
     }
     return (0, i.jsxs)('div', {
-        className: b.container,
+        className: x.container,
         children: [
             (0, i.jsxs)(g.Z, {
                 toolbar: (0, i.jsx)(r.Fragment, {}),
-                className: b.headerBar,
+                className: x.headerBar,
                 children: [
                     (0, i.jsx)(g.Z.Icon, {
                         icon: (0, s.makeIconCompat)(C.Z),
                         'aria-hidden': !0
                     }),
-                    (0, i.jsx)(g.Z.Title, { children: x.intl.string(x.t['KzCF//']) })
+                    (0, i.jsx)(g.Z.Title, { children: b.intl.string(b.t['KzCF//']) })
                 ]
             }),
-            (0, i.jsx)('div', { id: S.v }),
+            (0, i.jsx)('div', { id: T.v }),
             (0, i.jsx)('div', {
-                className: b.content,
+                className: x.content,
                 children: L
                     ? (0, i.jsx)(s.ScrollerNone, {
-                          className: b.scroller,
+                          className: x.scroller,
                           children: (0, i.jsx)('div', {
-                              className: b.scrollerContent,
+                              className: x.scrollerContent,
                               children: D ? (0, i.jsx)(s.Spinner, {}) : (0, i.jsx)(v.Z, { guild: n })
                           })
                       })
-                    : (0, i.jsx)(T.Z, {})
+                    : (0, i.jsx)(N.Z, {})
             })
         ]
     });

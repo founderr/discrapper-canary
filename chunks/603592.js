@@ -10,7 +10,7 @@ var i = n(200651),
     d = n(662146),
     h = n(322459);
 let p = l.forwardRef(function (e, t) {
-    let { id: n, onClick: r, onContextMenu: p, icon: m, selected: f, tooltip: g, upperBadge: C, lowerBadge: _, lowerBadgeSize: v, showPill: x = !0, className: I, 'aria-label': b, children: S, onMouseEnter: E, onMouseLeave: Z, onMouseDown: N } = e,
+    let { id: n, onClick: r, onContextMenu: p, icon: m, selected: f, tooltip: g, upperBadge: C, lowerBadge: _, lowerBadgeSize: v, showPill: x = !0, className: I, 'aria-label': b, children: E, onMouseEnter: S, onMouseLeave: Z, onMouseDown: N } = e,
         y = (0, o.Ie)(n),
         [T, A] = l.useState(!1),
         P = 'string' == typeof g && null == b ? g : b;
@@ -37,7 +37,7 @@ let p = l.forwardRef(function (e, t) {
                     children: (0, i.jsx)(s.Clickable, {
                         innerRef: t,
                         onMouseEnter: () => {
-                            null == E || E(), A(!0);
+                            null == S || S(), A(!0);
                         },
                         onMouseLeave: () => {
                             null == Z || Z(), A(!1);
@@ -58,7 +58,7 @@ let p = l.forwardRef(function (e, t) {
                     })
                 })
             }),
-            S
+            E
         ]
     });
 });

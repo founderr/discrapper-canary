@@ -48,8 +48,7 @@ class _ extends s.Z {
                         reset: !0
                     });
                     try {
-                        let { guilds: e, total: t } = (
-                            await i.tn.get({
+                        let e = await i.tn.get({
                                 url: c.ANM.GUILD_DISCOVERY,
                                 query: r.stringify({
                                     offset: 0,
@@ -57,12 +56,13 @@ class _ extends s.Z {
                                 }),
                                 oldFormErrors: !0,
                                 rejectWithError: !1
-                            })
-                        ).body;
+                            }),
+                            t = e.body.total,
+                            n = e.body.guilds.map(u.Uv);
                         a.Z.dispatch({
                             type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS',
                             categoryId: d.Hk,
-                            guilds: e,
+                            guilds: n,
                             total: t
                         });
                     } catch (e) {
@@ -89,18 +89,18 @@ class _ extends s.Z {
                         reset: !0
                     });
                     try {
-                        let { guilds: e, total: n } = (
-                            await i.tn.get({
+                        let e = await i.tn.get({
                                 url: c.ANM.GUILD_DISCOVERY,
                                 query: r.stringify({ categories: [t] }),
                                 oldFormErrors: !0,
                                 rejectWithError: !1
-                            })
-                        ).body;
+                            }),
+                            n = e.body.total,
+                            s = e.body.guilds.map(u.Uv);
                         a.Z.dispatch({
                             type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS',
                             categoryId: t,
-                            guilds: e,
+                            guilds: s,
                             total: n
                         });
                     } catch (e) {

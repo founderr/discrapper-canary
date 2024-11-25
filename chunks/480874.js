@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return b;
     }
 });
 var i = n(200651),
@@ -22,29 +22,29 @@ var i = n(200651),
     I = n(355350),
     C = n(307947),
     v = n(125855),
-    N = n(687683),
-    T = n(981631),
-    S = n(388032),
+    S = n(687683),
+    N = n(981631),
+    T = n(388032),
     A = n(908120);
-function x() {
+function b() {
     let e = r.useRef(null),
         t = (0, E.Z)(),
         n = (0, I.w)(),
         l = (0, g.V)(),
-        x = (0, d.N)(),
-        b = (0, u.Z)('message-requests-spam-list'),
+        b = (0, d.N)(),
+        x = (0, u.Z)('message-requests-spam-list'),
         { channelId: Z } = (0, _._)(),
         L = r.useCallback(() => {
-            (0, c.showToast)((0, c.createToast)(S.intl.string(S.t.EDYbS0), c.ToastType.FAILURE));
+            (0, c.showToast)((0, c.createToast)(T.intl.string(T.t.EDYbS0), c.ToastType.FAILURE));
         }, []),
         { rejectAll: y } = (0, f.m)({ onError: L }),
         O = r.useCallback(() => {
             y(t.map((e) => e.channel.id));
         }, [t, y]);
     r.useEffect(() => {
-        p.default.track(T.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), m.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
+        p.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), m.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
     }, []);
-    let P = r.useCallback(
+    let R = r.useCallback(
             (e) => {
                 var n, r;
                 let { row: s } = e,
@@ -68,15 +68,15 @@ function x() {
             },
             [t, l, Z]
         ),
-        R = r.useCallback(
+        P = r.useCallback(
             () =>
                 (0, i.jsxs)(
                     h.Z,
                     {
                         className: A.sectionTitle,
                         children: [
-                            S.intl.format(S.t.C79Edn, { count: n }),
-                            x && n > 0
+                            T.intl.format(T.t.C79Edn, { count: n }),
+                            b && n > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(c.Text, {
@@ -92,8 +92,8 @@ function x() {
                                               color: c.ButtonColors.LINK,
                                               size: c.ButtonSizes.SMALL,
                                               className: A.clearAllButton,
-                                              'aria-label': S.intl.string(S.t.p6t7RE),
-                                              children: S.intl.string(S.t.p6t7RE)
+                                              'aria-label': T.intl.string(T.t.p6t7RE),
+                                              children: T.intl.string(T.t.p6t7RE)
                                           })
                                       ]
                                   })
@@ -102,12 +102,12 @@ function x() {
                     },
                     'message-requests-spam-title'
                 ),
-            [n, O, x]
+            [n, O, b]
         );
     return 0 === t.length
-        ? (0, i.jsx)(C.Z, { section: N.pS.SPAM })
+        ? (0, i.jsx)(C.Z, { section: S.pS.SPAM })
         : (0, i.jsx)(s.bG, {
-              navigator: b,
+              navigator: x,
               children: (0, i.jsx)(s.SJ, {
                   children: (n) => {
                       let { ref: r, role: l, ...a } = n;
@@ -116,17 +116,17 @@ function x() {
                           {
                               className: A.list,
                               innerRole: l,
-                              innerAriaLabel: S.intl.string(S.t.e7GWjY),
+                              innerAriaLabel: T.intl.string(T.t.e7GWjY),
                               ref: (t) => {
                                   var n;
                                   (e.current = t), (r.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null);
                               },
                               paddingTop: 24,
                               paddingBottom: 24,
-                              sectionHeight: N.oi,
-                              rowHeight: N.WN,
-                              renderSection: R,
-                              renderRow: P,
+                              sectionHeight: S.oi,
+                              rowHeight: S.WN,
+                              renderSection: P,
+                              renderRow: R,
                               sections: [t.length],
                               chunkSize: 30,
                               fade: !0,

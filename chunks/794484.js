@@ -56,21 +56,21 @@ t.Z = (e) => {
     (0, m.I2)();
     let Z = (0, u.HI)({ location: _.R0.PERKS_DISCOVERABILITY }),
         O = C === _.R0.WHATS_NEW,
-        M = (0, g.IY)(),
-        B = (0, p.x$)();
+        B = (0, g.IY)(),
+        M = (0, p.x$)();
     r.useEffect(() => {
-        O && !j && (M(), B());
-    }, [M, B, O, j]),
+        O && !j && (B(), M());
+    }, [B, M, O, j]),
         r.useEffect(() => {
             let e = R.current;
             if (null == e || !j || !O) return;
             let t = requestAnimationFrame(() => {
-                e.scrollIntoView({ behavior: 'smooth' }), O && M();
+                e.scrollIntoView({ behavior: 'smooth' }), O && B();
             });
             return () => {
-                cancelAnimationFrame(t), O && M();
+                cancelAnimationFrame(t), O && B();
             };
-        }, [R, j, O, M]);
+        }, [R, j, O, B]);
     let w = (0, h.Op)(O),
         y = (0, f.Z)(),
         k = (0, h.mN)(),
@@ -86,13 +86,13 @@ t.Z = (e) => {
             fractionalState: L
         }),
         D = U.some((e) => null != e.pillText),
-        [H, G] = r.useState(null),
+        [G, H] = r.useState(null),
         V = r.useRef(new l.qA());
     return (0, i.jsxs)(i.Fragment, {
         children: [
             ((null == y ? void 0 : null === (t = y.freeBoost) || void 0 === t ? void 0 : t.name) === f.u.FREE_BOOST || (null == y ? void 0 : null === (n = y.tenureRewardCollectible) || void 0 === n ? void 0 : n.name) === f.u.TENURE_REWARD_COLLECTIBLE) &&
                 (0, i.jsx)(l.O_, {
-                    ref: G,
+                    ref: H,
                     className: b.confettiCanvas,
                     environment: V.current
                 }),
@@ -141,7 +141,7 @@ t.Z = (e) => {
                             (0, i.jsx)(
                                 E.Z,
                                 {
-                                    confettiCanvas: e.name === f.u.FREE_BOOST || e.name === f.u.TENURE_REWARD_COLLECTIBLE ? H : void 0,
+                                    confettiCanvas: e.name === f.u.FREE_BOOST || e.name === f.u.TENURE_REWARD_COLLECTIBLE ? G : void 0,
                                     ...e,
                                     forceShadow: v
                                 },

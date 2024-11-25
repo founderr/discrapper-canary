@@ -18,50 +18,50 @@ var i = n(200651),
     I = n(213746),
     C = n(979007),
     v = n(981631),
-    N = n(388032),
-    T = n(850258);
+    S = n(388032),
+    N = n(850258);
 t.Z = function (e) {
-    let { applicationId: t, onSelectApplication: n, onScroll: S, initialTab: A } = e,
-        x = r.useRef(null),
-        b = (0, l.e7)([s.Z], () => s.Z.getApplication(t)),
+    let { applicationId: t, onSelectApplication: n, onScroll: T, initialTab: A } = e,
+        b = r.useRef(null),
+        x = (0, l.e7)([s.Z], () => s.Z.getApplication(t)),
         Z = (0, l.e7)([s.Z], () => s.Z.getApplicationFetchState(t));
     r.useEffect(() => {
-        null != t && null == b && a.i6(t);
-    }, [t, b]);
-    let L = null == b ? void 0 : b.storefront_available,
+        null != t && null == x && a.i6(t);
+    }, [t, x]);
+    let L = null == x ? void 0 : x.storefront_available,
         [y, O] = r.useState(null != A ? A : C.Wc.ABOUT),
-        P = r.useCallback(
+        R = r.useCallback(
             (e) => {
                 var t;
-                null === (t = x.current) || void 0 === t || t.scrollTo({ to: 0 }), O(C.Wc.ABOUT), n(e);
+                null === (t = b.current) || void 0 === t || t.scrollTo({ to: 0 }), O(C.Wc.ABOUT), n(e);
             },
             [n]
         );
     r.useEffect(() => {
-        (null == b ? void 0 : b.storefront_available) && null != t && (0, c.Z)(t);
-    }, [null == b ? void 0 : b.storefront_available, t]);
-    let R = r.useMemo(
+        (null == x ? void 0 : x.storefront_available) && null != t && (0, c.Z)(t);
+    }, [null == x ? void 0 : x.storefront_available, t]);
+    let P = r.useMemo(
             () => [
                 {
                     id: C.Wc.ABOUT,
-                    label: N.intl.string(N.t.JkjJBQ)
+                    label: S.intl.string(S.t.JkjJBQ)
                 },
                 {
                     id: C.Wc.STORE,
-                    label: N.intl.string(N.t.NfuihY)
+                    label: S.intl.string(S.t.NfuihY)
                 }
             ],
             []
         ),
         j = r.useMemo(() => {
-            if (null == b) return null;
+            if (null == x) return null;
             switch (y) {
                 case C.Wc.ABOUT:
-                    return (0, i.jsx)(g.Z, { application: b });
+                    return (0, i.jsx)(g.Z, { application: x });
                 case C.Wc.STORE:
-                    return (0, i.jsx)(I.Z, { application: b });
+                    return (0, i.jsx)(I.Z, { application: x });
             }
-        }, [y, b]),
+        }, [y, x]),
         D = r.useCallback(
             (e) => {
                 O(e), e === C.Wc.ABOUT ? (0, p.Gp)(v.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t)) : (0, p.Gp)(v.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, e));
@@ -71,51 +71,51 @@ t.Z = function (e) {
         M = r.useCallback((e) => {
             (0, p.pR)({ categoryId: e });
         }, []);
-    if (null == b)
+    if (null == x)
         return Z === s.M.FETCHING
             ? (0, i.jsx)('div', {
-                  className: T.centerContainer,
+                  className: N.centerContainer,
                   children: (0, i.jsx)(o.Z, { loading: !0 })
               })
             : (0, i.jsx)('div', {
-                  className: T.centerContainer,
-                  children: (0, i.jsx)(m.Z, { className: T.error })
+                  className: N.centerContainer,
+                  children: (0, i.jsx)(m.Z, { className: N.error })
               });
     let w = y === C.Wc.ABOUT;
     return (0, i.jsx)(h.Z, {
-        onScroll: S,
-        ref: x,
+        onScroll: T,
+        ref: b,
         children: (0, i.jsx)(d.Z, {
             children: (0, i.jsxs)('div', {
-                className: T.detailContainer,
+                className: N.detailContainer,
                 children: [
-                    (0, i.jsx)(f.Z, { application: b }),
+                    (0, i.jsx)(f.Z, { application: x }),
                     (0, i.jsxs)('div', {
-                        className: T.contentContainer,
+                        className: N.contentContainer,
                         children: [
                             (0, i.jsxs)('div', {
-                                className: T.contentTabsContainer,
+                                className: N.contentTabsContainer,
                                 children: [
                                     L &&
                                         (0, i.jsx)('div', {
-                                            className: T.contentTabs,
+                                            className: N.contentTabs,
                                             children: (0, i.jsx)(u.Z, {
-                                                tabs: R,
+                                                tabs: P,
                                                 onTabSelect: D,
                                                 selectedTab: y
                                             })
                                         }),
                                     j,
                                     (0, i.jsx)(E.Z, {
-                                        application: b,
-                                        onSelectApplication: P
+                                        application: x,
+                                        onSelectApplication: R
                                     })
                                 ]
                             }),
                             w &&
                                 (0, i.jsx)(_.Z, {
-                                    className: T.sidebar,
-                                    application: b,
+                                    className: N.sidebar,
+                                    application: x,
                                     onSelectCategory: M
                                 })
                         ]

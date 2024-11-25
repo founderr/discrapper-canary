@@ -1,10 +1,10 @@
 n.d(t, {
     x: function () {
-        return i;
+        return r;
     }
 });
-var r = n(231338);
-let i = function () {
+var i = n(231338);
+let r = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '';
-    return e.split(' ').some((e) => r.sL.includes(e.toLowerCase()));
+    return e.split(' ').some((e) => i.sL.includes(e.toLowerCase()));
 };

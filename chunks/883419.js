@@ -30,7 +30,7 @@ function k(e) {
     var n, t;
     let { backButtonEligible: o, prevStep: k, handleStepChange: y, trialFooterMessageOverride: T, reviewWarningMessage: P, planGroup: B, openInvoiceId: N, analyticsData: O, analyticsLocation: E, handleClose: I } = e,
         { activeSubscription: A, application: M, setUpdatedSubscription: w, contextMetadata: Z, currencies: R, paymentSources: H, priceOptions: L, purchaseError: F, purchaseTokenAuthState: D, selectedPlan: W, selectedSku: G, setCurrency: K, setPaymentSourceId: V, setPurchaseState: z, setPurchaseError: Y, purchaseState: U, subscriptionMetadataRequest: Q, setHasAcceptedTerms: q } = (0, m.usePaymentContext)();
-    a()(null != W, 'Expected plan to be selected'), a()(null != M, 'Expected application');
+    a()(null != W, 'Expected plan to be selected');
     let X = r.useRef(null),
         [J, $] = (0, c.Z)(!1, 500),
         ee = null == Q ? void 0 : Q.guild_id,
@@ -67,7 +67,7 @@ function k(e) {
                                       (0, i.jsx)(s.Text, {
                                           variant: 'text-xs/medium',
                                           color: 'interactive-normal',
-                                          children: S.intl.format(S.t.y4n0GR, { applicationName: M.name })
+                                          children: S.intl.format(S.t.y4n0GR, { applicationName: null == M ? void 0 : M.name })
                                       })
                                   ]
                               }),

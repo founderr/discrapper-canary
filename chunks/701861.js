@@ -18,9 +18,9 @@ var i = n(200651),
     I = n(825682),
     C = n(170245),
     v = n(981631),
-    N = n(65154),
-    T = n(388032),
-    S = n(642915);
+    S = n(65154),
+    N = n(388032),
+    T = n(642915);
 function A(e, t, n) {
     return (
         t in e
@@ -34,23 +34,23 @@ function A(e, t, n) {
         e
     );
 }
-function x(e) {
+function b(e) {
     let { user: t, onSelect: n } = e,
         r = () => {
             u.Z.removeFriend(t.id, { location: 'Friends' });
         },
-        l = (0, s.e7)([g.Z], () => g.Z.supports(N.AN.VIDEO)),
+        l = (0, s.e7)([g.Z], () => g.Z.supports(S.AN.VIDEO)),
         a = t.isProvisional;
     return (0, i.jsxs)(o.Menu, {
         navId: 'friend-row',
-        'aria-label': T.intl.string(T.t.liqwPD),
+        'aria-label': N.intl.string(N.t.liqwPD),
         onClose: d.Zy,
         onSelect: n,
         children: [
             !a && l
                 ? (0, i.jsx)(o.MenuItem, {
                       id: 'start-video-call',
-                      label: T.intl.string(T.t.oCqlGB),
+                      label: N.intl.string(N.t.oCqlGB),
                       action: function () {
                           c.Z.openPrivateChannel(t.id, !0, !0);
                       }
@@ -59,25 +59,25 @@ function x(e) {
             !a &&
                 (0, i.jsx)(o.MenuItem, {
                     id: 'start-voice-call',
-                    label: T.intl.string(T.t.focH1t),
+                    label: N.intl.string(N.t.focH1t),
                     action: () => {
                         c.Z.openPrivateChannel(t.id, !0);
                     }
                 }),
             (0, i.jsx)(o.MenuItem, {
                 id: 'remove-friend',
-                label: T.intl.string(T.t.cvSt1N),
+                label: N.intl.string(N.t.cvSt1N),
                 action: () => {
                     (0, o.openModal)((e) =>
                         (0, i.jsx)(o.ConfirmModal, {
-                            header: T.intl.formatToPlainString(T.t.fPLvZW, { name: f.ZP.getName(t) }),
-                            confirmText: T.intl.string(T.t.cvSt1N),
-                            cancelText: T.intl.string(T.t['ETE/oK']),
+                            header: N.intl.formatToPlainString(N.t.fPLvZW, { name: f.ZP.getName(t) }),
+                            confirmText: N.intl.string(N.t.cvSt1N),
+                            cancelText: N.intl.string(N.t['ETE/oK']),
                             onConfirm: r,
                             ...e,
                             children: (0, i.jsx)(o.Text, {
                                 variant: 'text-md/normal',
-                                children: T.intl.format(T.t.l5FFq6, { name: f.ZP.getName(t) })
+                                children: N.intl.format(N.t.l5FFq6, { name: f.ZP.getName(t) })
                             })
                         })
                     );
@@ -87,7 +87,7 @@ function x(e) {
         ]
     });
 }
-class b extends r.PureComponent {
+class x extends r.PureComponent {
     componentWillLeave(e) {
         null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillLeave(e);
     }
@@ -106,7 +106,7 @@ class b extends r.PureComponent {
             onClick: this.handleOpenPrivateChannel,
             children: (t) =>
                 (0, i.jsxs)('div', {
-                    className: S.listItemContents,
+                    className: T.listItemContents,
                     children: [
                         (0, i.jsx)(C.Z, {
                             user: e,
@@ -123,7 +123,7 @@ class b extends r.PureComponent {
                             showAccountIdentifier: !0
                         }),
                         (0, i.jsxs)('div', {
-                            className: S.actions,
+                            className: T.actions,
                             children: [
                                 null != s &&
                                     (0, i.jsx)(h.Z, {
@@ -134,13 +134,13 @@ class b extends r.PureComponent {
                                     }),
                                 (0, i.jsx)(_.Z, {
                                     icon: o.ChatIcon,
-                                    tooltip: T.intl.string(T.t['g33r/P']),
+                                    tooltip: N.intl.string(N.t['g33r/P']),
                                     onClick: this.handleOpenPrivateChannel,
                                     shouldHighlight: t
                                 }),
                                 (0, i.jsx)(_.Z, {
                                     icon: o.MoreVerticalIcon,
-                                    tooltip: T.intl.string(T.t.UKOtz8),
+                                    tooltip: N.intl.string(N.t.UKOtz8),
                                     onClick: this.handleOpenActionsMenu,
                                     shouldHighlight: t
                                 })
@@ -165,7 +165,7 @@ class b extends r.PureComponent {
                 (0, d.vq)(
                     e,
                     (e) =>
-                        (0, i.jsx)(x, {
+                        (0, i.jsx)(b, {
                             ...e,
                             user: t
                         }),
@@ -179,4 +179,4 @@ class b extends r.PureComponent {
             });
     }
 }
-t.Z = b;
+t.Z = x;

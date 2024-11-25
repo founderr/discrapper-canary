@@ -3,23 +3,23 @@ var i = n(200651),
     l = n(442837),
     a = n(481060),
     s = n(150192),
-    o = n(164991),
-    c = n(726115),
+    o = n(959165),
+    c = n(164991),
     d = n(731455),
     u = n(388032),
     h = n(501612),
     m = n(882008);
 t.Z = function (e) {
     let { loadId: t } = e,
-        n = o.Z.useField('categoryId'),
+        n = c.Z.useField('categoryId'),
         p = (0, l.e7)([s.Z], () => s.Z.getCategoryName(n)),
         g = r.useCallback(() => {
-            o.Z.setState({ categoryId: d.Hk }),
-                (0, c.oT)({
+            c.Z.setState({ categoryId: d.Hk }),
+                o.Z.loadCategoryResults({
                     loadId: t,
                     categoryId: d.Hk,
-                    query: o.Z.getField('fetchedQuery'),
-                    languageCode: o.Z.getField('languageCode')
+                    query: c.Z.getField('fetchedQuery'),
+                    languageCode: c.Z.getField('languageCode')
                 });
         }, [t]),
         f = n === d.Hk ? u.intl.string(u.t.Ivw1Ii) : u.intl.formatToPlainString(u.t['+1WAFR'], { categoryName: p }),

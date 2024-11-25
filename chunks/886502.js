@@ -12,18 +12,18 @@ var n = r(620014),
     R = Object.prototype.hasOwnProperty;
 e.exports = function (e, t, r, N, A, T) {
     var d = E(e),
-        f = E(t),
-        L = d ? u : i(e),
-        O = f ? u : i(t);
-    (L = L == l ? I : L), (O = O == l ? I : O);
-    var p = L == I,
+        L = E(t),
+        f = d ? u : i(e),
+        O = L ? u : i(t);
+    (f = f == l ? I : f), (O = O == l ? I : O);
+    var p = f == I,
         h = O == I,
-        S = L == O;
+        S = f == O;
     if (S && c(e)) {
         if (!c(t)) return !1;
         (d = !0), (p = !1);
     }
-    if (S && !p) return T || (T = new n()), d || s(e) ? a(e, t, r, N, A, T) : _(e, t, L, r, N, A, T);
+    if (S && !p) return T || (T = new n()), d || s(e) ? a(e, t, r, N, A, T) : _(e, t, f, r, N, A, T);
     if (!(1 & r)) {
         var D = p && R.call(e, '__wrapped__'),
             C = h && R.call(t, '__wrapped__');

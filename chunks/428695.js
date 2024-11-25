@@ -11,18 +11,18 @@ var i = n(200651),
     m = n(599293);
 let p = (0, s.debounce)(c.ZP.trackWithMetadata, 500);
 t.Z = function (e) {
-    let { guild: t, title: n, message: l, image: s, type: g, imageStyles: f, imageMarginX: _, imageMarginTop: E, trackingSource: I, undismissable: C, onDismissed: v, onClick: N, cta: T, ctaColor: S, centerText: A, className: x } = e;
+    let { guild: t, title: n, message: l, image: s, type: g, imageStyles: f, imageMarginX: _, imageMarginTop: E, trackingSource: I, undismissable: C, onDismissed: v, onClick: S, cta: N, ctaColor: T, centerText: A, className: b } = e;
     r.useEffect(() => {
         p(u.rMx.CHANNEL_NOTICE_VIEWED, {
             notice_type: g,
             guild_id: t.id
         });
     }, [t.id, g]);
-    let b = null;
-    'function' == typeof T
-        ? (b = T())
-        : null != T &&
-          (b = (0, i.jsx)(o.Button, {
+    let x = null;
+    'function' == typeof N
+        ? (x = N())
+        : null != N &&
+          (x = (0, i.jsx)(o.Button, {
               className: m.button,
               size: o.Button.Sizes.SMALL,
               onClick: () => {
@@ -32,11 +32,11 @@ t.Z = function (e) {
                           guild_id: t.id,
                           notice_type: g
                       }),
-                      null == N || N();
+                      null == S || S();
               },
               fullWidth: !0,
-              color: S,
-              children: T
+              color: T,
+              children: N
           }));
     let Z = null;
     'function' == typeof n
@@ -60,7 +60,7 @@ t.Z = function (e) {
           }));
     let y = null != _ ? ''.concat(_, 'px') : '16px';
     return (0, i.jsxs)('div', {
-        className: a()(m.container, x),
+        className: a()(m.container, b),
         children: [
             !0 === C
                 ? null
@@ -93,7 +93,7 @@ t.Z = function (e) {
                 }),
             (0, i.jsxs)('div', {
                 className: m.message,
-                children: [Z, L, b]
+                children: [Z, L, x]
             })
         ]
     });

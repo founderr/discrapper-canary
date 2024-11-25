@@ -36,7 +36,7 @@ n.d(t, {
         return E;
     },
     q6: function () {
-        return y;
+        return Z;
     },
     r2: function () {
         return N;
@@ -183,7 +183,7 @@ function E(e, t) {
           }),
           m.Z.addBreadcrumb({ message: 'Error saving home settings' }),
           Promise.reject())
-        : (!i && null != t && (t.enabled = !0), Z(e, t));
+        : (!i && null != t && (t.enabled = !0), y(e, t));
 }
 function R(e, t) {
     let n = o.Z.getSettings(e);
@@ -200,13 +200,13 @@ function R(e, t) {
             guildId: e,
             enabled: t
         }),
-        Z(e, {
+        y(e, {
             ...n,
             enabled: t
         })
     );
 }
-async function Z(e, t) {
+async function y(e, t) {
     var n, i, o, d, m, h, p, f, C;
     s.Z.dispatch({ type: 'GUILD_HOME_SETTINGS_UPDATE_START' });
     try {
@@ -243,7 +243,7 @@ async function Z(e, t) {
             });
     }
 }
-function y(e, t) {
+function Z(e, t) {
     null != e &&
         s.Z.dispatch({
             type: 'GUILD_SETTINGS_ONBOARDING_DISMISS_RESOURCE_CHANNEL_SUGGESTION',

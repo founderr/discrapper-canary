@@ -17,16 +17,16 @@ var i = n(200651),
     I = n(150560),
     C = n(558652),
     v = n(736683),
-    N = n(452081),
-    T = n(46140),
-    S = n(981631),
+    S = n(452081),
+    N = n(46140),
+    T = n(981631),
     A = n(388032),
-    x = n(431418);
+    b = n(431418);
 t.Z = function () {
-    let { tabs: e, selectedTab: t, onSelectTab: n } = (0, N.z)(),
-        { onScroll: b, scrollPosition: Z } = (0, c.M)(),
+    let { tabs: e, selectedTab: t, onSelectTab: n } = (0, S.z)(),
+        { onScroll: x, scrollPosition: Z } = (0, c.M)(),
         L = I.Z.getState().getUtmCurrentContext(),
-        y = (0, E._)({ location: T.dr.QUEST_HOME_DESKTOP }) ? v.Z : v.j;
+        y = (0, E._)({ location: N.dr.QUEST_HOME_DESKTOP }) ? v.Z : v.j;
     r.useEffect(() => {
         (0, s.h)({
             name: l.ImpressionNames.QUEST_HOME,
@@ -41,18 +41,18 @@ t.Z = function () {
         });
     }, [t]);
     let O = r.useCallback(() => {
-        window.open(f.Z.getArticleURL(S.BhN.QUESTS_LEARN_MORE));
+        window.open(f.Z.getArticleURL(T.BhN.QUESTS_LEARN_MORE));
     }, []);
     return (
         (0, o.Tt)({ location: A.intl.string(A.t.JALI2N) }),
         (0, i.jsxs)('div', {
-            className: x.container,
+            className: b.container,
             children: [
                 (0, i.jsxs)(p.ZP, {
-                    children: [(0, i.jsx)('div', { className: x.dragRegion }), (0, i.jsx)(p.z6, { scrollPosition: Z }), (0, i.jsx)(p.aV, { icon: a.QuestsIcon })]
+                    children: [(0, i.jsx)('div', { className: b.dragRegion }), (0, i.jsx)(p.z6, { scrollPosition: Z }), (0, i.jsx)(p.aV, { icon: a.QuestsIcon })]
                 }),
                 (0, i.jsxs)(g.Z, {
-                    onScroll: b,
+                    onScroll: x,
                     children: [
                         (0, i.jsx)(u.Z, {
                             title: A.intl.format(A.t.lmMBf3, {}),
@@ -61,10 +61,10 @@ t.Z = function () {
                                 text: A.intl.string(A.t.hvVgAQ),
                                 onClick: O
                             }),
-                            className: x.bannerContainer,
+                            className: b.bannerContainer,
                             children: (0, i.jsx)('div', {
-                                className: x.bannerImage,
-                                children: (0, i.jsx)('div', { className: x.bannerGradient })
+                                className: b.bannerImage,
+                                children: (0, i.jsx)('div', { className: b.bannerGradient })
                             })
                         }),
                         (0, i.jsxs)(h.Z, {
@@ -73,7 +73,7 @@ t.Z = function () {
                                     tabs: e,
                                     selectedTab: t,
                                     onTabSelect: n,
-                                    className: x.tabs
+                                    className: b.tabs
                                 }),
                                 t === _.e5.CLAIMED ? (0, i.jsx)(y, { onSelectTab: n }) : (0, i.jsx)(C.Z, {})
                             ]

@@ -147,8 +147,8 @@ t.Z = (e) => {
         v = (0, i.jsx)(A, { className: t }),
         S = N.intl.string(N.t.ifwQZW),
         R = !1,
-        { fractionalState: O, endsAt: M } = (0, u.Z)(),
-        B = (0, d.Z)(M, d.a.ENDS_IN);
+        { fractionalState: O, endsAt: B } = (0, u.Z)(),
+        M = (0, d.Z)(B, d.a.ENDS_IN);
     l ? ((S = N.intl.string(N.t.ifwQZW)), (v = (0, i.jsx)(P, {}))) : (E || x) && ((p = N.intl.string(N.t.qYKftb)), (S = N.intl.string(N.t.ifwQZW)), (v = (0, i.jsx)(j, { location: n })));
     let w = null;
     O !== T.a$.NONE &&
@@ -157,7 +157,7 @@ t.Z = (e) => {
         (R = !0),
         (w = (0, i.jsx)(_.Z, {
             className: I.fpCountdownPill,
-            countdownText: B
+            countdownText: M
         })));
     let y = {
             className: a()(I.trialPill, { [I.hidden]: !m }),

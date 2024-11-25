@@ -37,7 +37,7 @@ function R(e) {
         })
     });
 }
-function Z(e) {
+function y(e) {
     let { guild: t, eligibleTeams: n, isGuildOwner: l } = e,
         [a, o] = r.useState(),
         { enableGuildMonetizationForTeam: d, submitting: u, error: m } = (0, c.Z)(),
@@ -107,17 +107,17 @@ t.Z = (e) => {
                 }),
             [v, n]
         ),
-        y = j.length > 0,
+        Z = j.length > 0,
         A = r.useCallback(async () => {
             p.default.track(T.rMx.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
                 is_onboarding_v2: f,
-                has_eligible_team: y,
+                has_eligible_team: Z,
                 guild_id: t.id,
                 is_owner: c
             });
             let e = await (0, d.$)(T.E07.DEVELOPER_PORTAL_TEAMS);
             (0, a.Z)(e);
-        }, [t, c, f, y]),
+        }, [t, c, f, Z]),
         L = r.useCallback(
             (e) =>
                 c
@@ -147,8 +147,8 @@ t.Z = (e) => {
                               disabled: !c,
                               children: S.intl.format(S.t['5mfqpa'], { onCreateTeamHook: L })
                           }),
-                          y
-                              ? (0, i.jsx)(Z, {
+                          Z
+                              ? (0, i.jsx)(y, {
                                     guild: t,
                                     eligibleTeams: j,
                                     isGuildOwner: c

@@ -31,8 +31,8 @@ let c = _.n,
     A = 'Report a Bug',
     T = 'your.email@example.org',
     d = 'Email',
-    f = "What's the bug? What did you expect?",
-    L = 'Description',
+    L = "What's the bug? What did you expect?",
+    f = 'Description',
     O = 'Your Name',
     p = 'Name',
     h = 'Thank you for your report!',
@@ -164,8 +164,8 @@ let v =
         emailPlaceholder: $ = T,
         formTitle: q = A,
         isRequiredLabel: z = S,
-        messageLabel: J = L,
-        messagePlaceholder: Q = f,
+        messageLabel: J = f,
+        messagePlaceholder: Q = L,
         nameLabel: Z = p,
         namePlaceholder: ee = O,
         removeScreenshotButtonLabel: et = C,
@@ -706,8 +706,8 @@ function eE(e, t, r, n, a, _, o, i, E, c) {
         A,
         T,
         d,
-        f,
         L,
+        f,
         O,
         p,
         h,
@@ -717,9 +717,9 @@ function eE(e, t, r, n, a, _, o, i, E, c) {
     128 & r.__u && ((E = !!(32 & r.__u)), (_ = [(i = t.__e = r.__e)])), (s = W.__b) && s(t);
     t: if ('function' == typeof D)
         try {
-            if (((T = t.props), (d = (s = D.contextType) && n[s.__c]), (f = s ? (d ? d.props.value : s.__) : n), r.__c ? (A = (l = t.__c = r.__c).__ = l.__E) : ('prototype' in D && D.prototype.render ? (t.__c = l = new D(T, f)) : ((t.__c = l = new Z(T, f)), (l.constructor = D), (l.render = eu)), d && d.sub(l), (l.props = T), l.state || (l.state = {}), (l.context = f), (l.__n = n), (u = l.__d = !0), (l.__h = []), (l._sb = [])), null == l.__s && (l.__s = l.state), null != D.getDerivedStateFromProps && (l.__s == l.state && (l.__s = $({}, l.__s)), $(l.__s, D.getDerivedStateFromProps(T, l.__s))), (I = l.props), (R = l.state), (l.__v = t), u)) null == D.getDerivedStateFromProps && null != l.componentWillMount && l.componentWillMount(), null != l.componentDidMount && l.__h.push(l.componentDidMount);
+            if (((T = t.props), (d = (s = D.contextType) && n[s.__c]), (L = s ? (d ? d.props.value : s.__) : n), r.__c ? (A = (l = t.__c = r.__c).__ = l.__E) : ('prototype' in D && D.prototype.render ? (t.__c = l = new D(T, L)) : ((t.__c = l = new Z(T, L)), (l.constructor = D), (l.render = eu)), d && d.sub(l), (l.props = T), l.state || (l.state = {}), (l.context = L), (l.__n = n), (u = l.__d = !0), (l.__h = []), (l._sb = [])), null == l.__s && (l.__s = l.state), null != D.getDerivedStateFromProps && (l.__s == l.state && (l.__s = $({}, l.__s)), $(l.__s, D.getDerivedStateFromProps(T, l.__s))), (I = l.props), (R = l.state), (l.__v = t), u)) null == D.getDerivedStateFromProps && null != l.componentWillMount && l.componentWillMount(), null != l.componentDidMount && l.__h.push(l.componentDidMount);
             else {
-                if ((null == D.getDerivedStateFromProps && T !== I && null != l.componentWillReceiveProps && l.componentWillReceiveProps(T, f), !l.__e && ((null != l.shouldComponentUpdate && !1 === l.shouldComponentUpdate(T, l.__s, f)) || t.__v === r.__v))) {
+                if ((null == D.getDerivedStateFromProps && T !== I && null != l.componentWillReceiveProps && l.componentWillReceiveProps(T, L), !l.__e && ((null != l.shouldComponentUpdate && !1 === l.shouldComponentUpdate(T, l.__s, L)) || t.__v === r.__v))) {
                     for (
                         t.__v !== r.__v && ((l.props = T), (l.state = l.__s), (l.__d = !1)),
                             t.__e = r.__e,
@@ -727,21 +727,21 @@ function eE(e, t, r, n, a, _, o, i, E, c) {
                             t.__k.forEach(function (e) {
                                 e && (e.__ = t);
                             }),
-                            L = 0;
-                        L < l._sb.length;
-                        L++
+                            f = 0;
+                        f < l._sb.length;
+                        f++
                     )
-                        l.__h.push(l._sb[L]);
+                        l.__h.push(l._sb[f]);
                     (l._sb = []), l.__h.length && o.push(l);
                     break t;
                 }
-                null != l.componentWillUpdate && l.componentWillUpdate(T, l.__s, f),
+                null != l.componentWillUpdate && l.componentWillUpdate(T, l.__s, L),
                     null != l.componentDidUpdate &&
                         l.__h.push(function () {
                             l.componentDidUpdate(I, R, N);
                         });
             }
-            if (((l.context = f), (l.props = T), (l.__P = e), (l.__e = !1), (O = W.__r), (p = 0), 'prototype' in D && D.prototype.render)) {
+            if (((l.context = L), (l.props = T), (l.__P = e), (l.__e = !1), (O = W.__r), (p = 0), 'prototype' in D && D.prototype.render)) {
                 for (l.state = l.__s, l.__d = !1, O && O(t), s = l.render(l.props, l.state, l.context), h = 0; h < l._sb.length; h++) l.__h.push(l._sb[h]);
                 l._sb = [];
             } else
@@ -862,23 +862,23 @@ var eI,
     eA,
     eT = 0,
     ed = [],
-    ef = [],
-    eL = W,
-    eO = eL.__b,
-    ep = eL.__r,
-    eh = eL.diffed,
-    eS = eL.__c,
-    eD = eL.unmount,
-    eC = eL.__;
+    eL = [],
+    ef = W,
+    eO = ef.__b,
+    ep = ef.__r,
+    eh = ef.diffed,
+    eS = ef.__c,
+    eD = ef.unmount,
+    eC = ef.__;
 function eg(e, t) {
-    eL.__h && eL.__h(eR, e, eT || t), (eT = 0);
+    ef.__h && ef.__h(eR, e, eT || t), (eT = 0);
     var r =
         eR.__H ||
         (eR.__H = {
             __: [],
             __h: []
         });
-    return e >= r.__.length && r.__.push({ __V: ef }), r.__[e];
+    return e >= r.__.length && r.__.push({ __V: eL }), r.__[e];
 }
 function eU(e) {
     return (eT = 1), eP(eW, e);
@@ -937,7 +937,7 @@ function eP(e, t, r) {
 }
 function eM(e, t) {
     var r = eg(eI++, 4);
-    !eL.__s && eB(r.__H, t) && ((r.__ = e), (r.i = t), eR.__h.push(r));
+    !ef.__s && eB(r.__H, t) && ((r.__ = e), (r.i = t), eR.__h.push(r));
 }
 function eG(e, t) {
     var r = eg(eI++, 7);
@@ -957,16 +957,16 @@ function ey() {
             try {
                 e.__H.__h.forEach(ev), e.__H.__h.forEach(ew), (e.__H.__h = []);
             } catch (t) {
-                (e.__H.__h = []), eL.__e(t, e.__v);
+                (e.__H.__h = []), ef.__e(t, e.__v);
             }
 }
-(eL.__b = function (e) {
+(ef.__b = function (e) {
     (eR = null), eO && eO(e);
 }),
-    (eL.__ = function (e, t) {
+    (ef.__ = function (e, t) {
         t.__k && t.__k.__m && (e.__m = t.__k.__m), eC && eC(e, t);
     }),
-    (eL.__r = function (e) {
+    (ef.__r = function (e) {
         ep && ep(e), (eI = 0);
         var t = (eR = e.__c).__H;
         t &&
@@ -974,20 +974,20 @@ function ey() {
                 ? ((t.__h = []),
                   (eR.__h = []),
                   t.__.forEach(function (e) {
-                      e.__N && (e.__ = e.__N), (e.__V = ef), (e.__N = e.i = void 0);
+                      e.__N && (e.__ = e.__N), (e.__V = eL), (e.__N = e.i = void 0);
                   }))
                 : (t.__h.forEach(ev), t.__h.forEach(ew), (t.__h = []), (eI = 0))),
             (eN = eR);
     }),
-    (eL.diffed = function (e) {
+    (ef.diffed = function (e) {
         eh && eh(e);
         var t = e.__c;
         t &&
             t.__H &&
             (t.__H.__h.length &&
-                ((1 !== ed.push(t) && eA === eL.requestAnimationFrame) ||
+                ((1 !== ed.push(t) && eA === ef.requestAnimationFrame) ||
                     (
-                        (eA = eL.requestAnimationFrame) ||
+                        (eA = ef.requestAnimationFrame) ||
                         function (e) {
                             var t,
                                 r = function () {
@@ -998,11 +998,11 @@ function ey() {
                         }
                     )(ey)),
             t.__H.__.forEach(function (e) {
-                e.i && (e.__H = e.i), e.__V !== ef && (e.__ = e.__V), (e.i = void 0), (e.__V = ef);
+                e.i && (e.__H = e.i), e.__V !== eL && (e.__ = e.__V), (e.i = void 0), (e.__V = eL);
             })),
             (eN = eR = null);
     }),
-    (eL.__c = function (e, t) {
+    (ef.__c = function (e, t) {
         t.some(function (e) {
             try {
                 e.__h.forEach(ev),
@@ -1014,12 +1014,12 @@ function ey() {
                     e.__h && (e.__h = []);
                 }),
                     (t = []),
-                    eL.__e(r, e.__v);
+                    ef.__e(r, e.__v);
             }
         }),
             eS && eS(e, t);
     }),
-    (eL.unmount = function (e) {
+    (ef.unmount = function (e) {
         eD && eD(e);
         var t,
             r = e.__c;
@@ -1033,7 +1033,7 @@ function ey() {
                 }
             }),
             (r.__H = void 0),
-            t && eL.__e(t, r.__v));
+            t && ef.__e(t, r.__v));
     });
 var eb = 'function' == typeof requestAnimationFrame;
 function ev(e) {
@@ -1066,11 +1066,11 @@ let eH = {
             return (r.c = e), t ? (null == r.__ && ((r.__ = !0), t.sub(eR)), t.props.value) : e.__;
         },
         useDebugValue: function (e, t) {
-            eL.useDebugValue && eL.useDebugValue(t ? t(e) : e);
+            ef.useDebugValue && ef.useDebugValue(t ? t(e) : e);
         },
         useEffect: function (e, t) {
             var r = eg(eI++, 3);
-            !eL.__s && eB(r.__H, t) && ((r.__ = e), (r.i = t), eR.__H.__h.push(r));
+            !ef.__s && eB(r.__H, t) && ((r.__ = e), (r.i = t), eR.__H.__h.push(r));
         },
         useErrorBoundary: function (e) {
             var t = eg(eI++, 10),
@@ -1185,7 +1185,7 @@ function eV(e, t) {
     return 'string' == typeof r ? r.trim() : '';
 }
 function ek({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSubmit: a, onSubmitSuccess: _, onSubmitError: o, showEmail: E, showName: c, screenshotInput: s }) {
-    let { tags: l, addScreenshotButtonLabel: u, removeScreenshotButtonLabel: I, cancelButtonLabel: R, emailLabel: N, emailPlaceholder: A, isEmailRequired: T, isNameRequired: d, messageLabel: f, messagePlaceholder: L, nameLabel: O, namePlaceholder: p, submitButtonLabel: h, isRequiredLabel: S } = e,
+    let { tags: l, addScreenshotButtonLabel: u, removeScreenshotButtonLabel: I, cancelButtonLabel: R, emailLabel: N, emailPlaceholder: A, isEmailRequired: T, isNameRequired: d, messageLabel: L, messagePlaceholder: f, nameLabel: O, namePlaceholder: p, submitButtonLabel: h, isRequiredLabel: S } = e,
         [D, C] = eU(null),
         [g, P] = eU(!1),
         M = s && s.input,
@@ -1202,12 +1202,12 @@ function ek({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                     emailLabel: N,
                     isEmailRequired: T,
                     isNameRequired: d,
-                    messageLabel: f,
+                    messageLabel: L,
                     nameLabel: O
                 });
                 return t.length > 0 ? C(`Please enter in the following required fields: ${t.join(', ')}`) : C(null), 0 === t.length;
             },
-            [N, T, d, f, O]
+            [N, T, d, L, O]
         );
     return z(
         'form',
@@ -1404,7 +1404,7 @@ function ek({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                         }
                     },
                     z(eF, {
-                        label: f,
+                        label: L,
                         isRequiredLabel: S,
                         isRequired: !0,
                         __self: this,
@@ -1418,7 +1418,7 @@ function ek({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                         class: 'form__input form__input--textarea',
                         id: 'message',
                         name: 'message',
-                        placeholder: L,
+                        placeholder: f,
                         required: !0,
                         rows: 5,
                         __self: this,
@@ -2234,8 +2234,8 @@ ${eQ}
                                 endY: 0
                             }),
                             [A, T] = t.useState(!1),
-                            [d, f] = t.useState(!1);
-                        function L() {
+                            [d, L] = t.useState(!1);
+                        function f() {
                             let e = I.current,
                                 t = e3(e5(r));
                             if (e) {
@@ -2253,15 +2253,15 @@ ${eQ}
                                 });
                         }
                         function O(e, t) {
-                            T(!1), f(!0);
+                            T(!1), L(!0);
                             let r = p(t),
                                 n = () => {
-                                    s.removeEventListener('mousemove', r), s.removeEventListener('mouseup', n), T(!0), f(!1);
+                                    s.removeEventListener('mousemove', r), s.removeEventListener('mouseup', n), T(!0), L(!1);
                                 };
                             s.addEventListener('mouseup', n), s.addEventListener('mousemove', r);
                         }
                         t.useEffect(() => {
-                            c.addEventListener('resize', L, !1);
+                            c.addEventListener('resize', f, !1);
                         }, []),
                             t.useEffect(() => {
                                 let e = I.current;
@@ -2332,7 +2332,7 @@ ${eQ}
                                 onAfterScreenshot: t.useCallback(() => {
                                     n.el.style.display = 'block';
                                     let e = l.current;
-                                    e && e.appendChild(r), L();
+                                    e && e.appendChild(r), f();
                                 }, []),
                                 onError: t.useCallback((e) => {
                                     (n.el.style.display = 'block'), o(e);
@@ -2522,7 +2522,7 @@ ${eQ}
                                                                 let a = e.getContext('2d');
                                                                 a && r && a.drawImage(r, (n.x / t.width) * r.width, (n.y / t.height) * r.height, (n.width / t.width) * r.width, (n.height / t.height) * r.height, 0, 0, e.width, e.height);
                                                                 let _ = r.getContext('2d');
-                                                                _ && (_.clearRect(0, 0, r.width, r.height), (r.width = e.width), (r.height = e.height), (r.style.width = `${n.width}px`), (r.style.height = `${n.height}px`), _.drawImage(e, 0, 0), L());
+                                                                _ && (_.clearRect(0, 0, r.width, r.height), (r.width = e.width), (r.height = e.height), (r.style.width = `${n.width}px`), (r.style.height = `${n.height}px`), _.drawImage(e, 0, 0), f());
                                                             })(),
                                                             T(!1);
                                                     },

@@ -22,17 +22,17 @@ function E(e) {
     let { user: t, type: n, status: E, isFocused: I } = e,
         C = r.useContext(u.AnalyticsContext),
         { analyticsLocations: v } = (0, o.ZP)(),
-        N = (e) => {
+        S = (e) => {
             e.stopPropagation(), s.Z.cancelFriendRequest(t.id, { location: 'Friends' });
         },
-        T = (e) => {
+        N = (e) => {
             e.stopPropagation(),
                 s.Z.addRelationship({
                     userId: t.id,
                     context: { location: 'Friends' }
                 });
         },
-        S = E === g.Skl.OFFLINE ? g.Skl.UNKNOWN : E,
+        T = E === g.Skl.OFFLINE ? g.Skl.UNKNOWN : E,
         A = n === g.OGo.PENDING_INCOMING ? f.intl.string(f.t.ZOFd1N) : f.intl.string(f.t.zz2i8v);
     return (0, i.jsx)(m.Z, {
         isFocused: I,
@@ -62,14 +62,14 @@ function E(e) {
                                   icon: a.CheckmarkLargeIcon,
                                   actionType: h.Z.ActionTypes.ACCEPT,
                                   tooltip: f.intl.string(f.t.ZcibdX),
-                                  onClick: T,
+                                  onClick: N,
                                   shouldHighlight: e
                               }),
                               (0, i.jsx)(h.Z, {
                                   icon: a.XSmallIcon,
                                   actionType: h.Z.ActionTypes.DENY,
                                   tooltip: f.intl.string(f.t.xuio0N),
-                                  onClick: N,
+                                  onClick: S,
                                   shouldHighlight: e
                               })
                           ]
@@ -78,7 +78,7 @@ function E(e) {
                           icon: a.XSmallIcon,
                           actionType: h.Z.ActionTypes.DENY,
                           tooltip: f.intl.string(f.t.eaq81d),
-                          onClick: N,
+                          onClick: S,
                           shouldHighlight: e
                       });
             return (0, i.jsxs)('div', {
@@ -88,7 +88,7 @@ function E(e) {
                         user: t,
                         hovered: e,
                         showAccountIdentifier: !0,
-                        status: S,
+                        status: T,
                         subText: A
                     }),
                     (0, i.jsx)('div', {

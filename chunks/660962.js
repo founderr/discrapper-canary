@@ -30,8 +30,8 @@ var i = n(200651),
     S = n(981631),
     E = n(388032),
     R = n(281654),
-    Z = n(571621),
-    y = n(179517),
+    y = n(571621),
+    Z = n(179517),
     A = n(79829);
 let L = (0, m.Un)({
         createPromise: () => n.e('5609').then(n.bind(n, 336231)),
@@ -119,7 +119,7 @@ function P(e) {
             colorString: null !== (t = s.colorString) && void 0 !== t ? t : void 0
         },
         u = {
-            src: y,
+            src: Z,
             name: s.name
         },
         m = {
@@ -204,10 +204,10 @@ function w(e) {
         style: { scrollPaddingTop: h },
         onScroll: p,
         children: (0, i.jsxs)('div', {
-            className: Z.contentWidth,
+            className: y.contentWidth,
             children: [
                 (0, i.jsx)('div', {
-                    className: s()(Z.header, Z.stickyHeader, { [Z.stickyHeaderElevated]: !x }),
+                    className: s()(y.header, y.stickyHeader, { [y.stickyHeaderElevated]: !x }),
                     ref: g,
                     children: (0, i.jsx)(N.Z, {
                         guild: t,

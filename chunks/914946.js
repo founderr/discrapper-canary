@@ -30,13 +30,13 @@ n.d(t, {
         return B;
     },
     fy: function () {
-        return Y;
+        return W;
     },
     s9: function () {
-        return H;
+        return V;
     },
     t9: function () {
-        return W;
+        return Y;
     },
     tr: function () {
         return X;
@@ -45,7 +45,7 @@ n.d(t, {
         return K;
     },
     zM: function () {
-        return V;
+        return H;
     },
     zy: function () {
         return F;
@@ -75,12 +75,12 @@ var i,
     I = n(375954),
     C = n(158776),
     v = n(594174),
-    N = n(979651),
-    T = n(70956),
-    S = n(5192),
+    S = n(979651),
+    N = n(70956),
+    T = n(5192),
     A = n(226951),
-    x = n(996106),
-    b = n(863141),
+    b = n(996106),
+    x = n(863141),
     Z = n(186901),
     L = n(981631);
 let y = null !== (i = r.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== i ? i : 'localhost',
@@ -91,8 +91,8 @@ let y = null !== (i = r.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && v
             n = t[t.length - 1];
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
     })(),
-    P = new RegExp('^'.concat(A.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(A.Z.escape(O), '|discordapp.com|discord.com)$')),
-    R = 1 * T.Z.Millis.MINUTE,
+    R = new RegExp('^'.concat(A.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(A.Z.escape(O), '|discordapp.com|discord.com)$')),
+    P = 1 * N.Z.Millis.MINUTE,
     j = {};
 function D(e) {
     return 'customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = M(e.src)), Array.isArray(e.content) && (e.content = e.content.map(D)), e;
@@ -127,7 +127,7 @@ function k(e, t) {
         Promise.all(n).then(() => {
             var n;
             let r = (!e.isNSFW() || (null === (n = v.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? I.Z.getMessages(e.id).toArray().map(U) : [],
-                l = Object.values(N.Z.getVoiceStatesForChannel(e.id)).map((t) => G(i, e.id, t));
+                l = Object.values(S.Z.getVoiceStatesForChannel(e.id)).map((t) => G(i, e.id, t));
             return {
                 id: e.id,
                 name: e.name,
@@ -173,7 +173,7 @@ function G(e, t, n) {
         c = v.default.getUser(o);
     if (null == c) throw Error('Invalid user id: '.concat(o));
     return {
-        nick: S.ZP.getName(e, t, c),
+        nick: T.ZP.getName(e, t, c),
         mute: E.Z.isLocalMute(c.id),
         volume: E.Z.getLocalVolume(c.id),
         pan: E.Z.getLocalPan(c.id),
@@ -184,7 +184,7 @@ function G(e, t, n) {
             self_deaf: a,
             suppress: s
         },
-        user: (0, b.Z)(c)
+        user: (0, x.Z)(c)
     };
 }
 function B(e, t, n) {
@@ -192,7 +192,7 @@ function B(e, t, n) {
         a = v.default.getUser(t);
     return {
         type: e,
-        user: null != a ? (0, b.Z)(a) : null,
+        user: null != a ? (0, x.Z)(a) : null,
         presence: {
             status: C.Z.getStatus(t),
             activity: null != r ? C.Z.getApplicationActivity(t, r) : C.Z.getPrimaryActivity(t)
@@ -201,7 +201,7 @@ function B(e, t, n) {
         userIgnored: l
     };
 }
-function H(e) {
+function V(e) {
     let t;
     if (null == e) return !1;
     let n = window.location.origin;
@@ -211,9 +211,9 @@ function H(e) {
     } catch (e) {
         return !1;
     }
-    return (window.location.hostname === t && 'localhost' === t) || (null == e.match('staging') && (!!(P.test(e) && P.test(n)) || !1));
+    return (window.location.hostname === t && 'localhost' === t) || (null == e.match('staging') && (!!(R.test(e) && R.test(n)) || !1));
 }
-function V(e, t, n) {
+function H(e, t, n) {
     let i = _.Z.getGuild(e.getGuildId());
     return (null != i ? i.getApplicationId() : e.getApplicationId()) === t || n.indexOf(l.x.MESSAGES_READ) > -1;
 }
@@ -233,11 +233,11 @@ function z(e) {
         l = 0;
     return (n && (l |= L.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (l |= L.xjy.JOIN), t) ? ((l |= L.xjy.EMBEDDED), (l |= L.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) : (((null == r ? void 0 : r.privacy) === L.RYY.PUBLIC || o.K.get('ACTIVITIES_FORCE_PUBLIC')) && (m.cP.getSetting() && (l |= L.xjy.PARTY_PRIVACY_FRIENDS), m.Ou.getSetting() && (l |= L.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), l);
 }
-function W(e, t, n) {
+function Y(e, t, n) {
     if (e === L.mFx.JOIN) return null != t && null != t.id && null != n.join;
     return !1;
 }
-function Y(e, t, n) {
+function W(e, t, n) {
     return a.tn
         .get({
             url: L.ANM.APPLICATION_RPC(t),
@@ -253,8 +253,8 @@ function Y(e, t, n) {
                 if ('string' == typeof n) {
                     if (e.transport === Z.He.POST_MESSAGE) {
                         let e = (0, d.Z)(t);
-                        if (null == e || !w(n, [e])) throw new x.Z({ closeCode: L.$VG.INVALID_ORIGIN }, 'Invalid Origin');
-                    } else if (!w(n, r)) throw new x.Z({ closeCode: L.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+                        if (null == e || !w(n, [e])) throw new b.Z({ closeCode: L.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+                    } else if (!w(n, r)) throw new b.Z({ closeCode: L.$VG.INVALID_ORIGIN }, 'Invalid Origin');
                 }
                 e.application = {
                     id: l,
@@ -265,13 +265,13 @@ function Y(e, t, n) {
                 };
             },
             () => {
-                throw new x.Z({ closeCode: L.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
+                throw new b.Z({ closeCode: L.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
             }
         );
 }
 async function K(e, t) {
     let n = j[e];
-    null == n && ((n = new s.Z(t ? 2 : 60, R)), (j[e] = n)), await n.process();
+    null == n && ((n = new s.Z(t ? 2 : 60, P)), (j[e] = n)), await n.process();
 }
 function q(e, t) {
     null == t && (e.authorization.scopes = [Z.lH]);
@@ -328,9 +328,9 @@ function Q(e, t) {
     };
 }
 function J(e) {
-    if (e !== Z.He.POST_MESSAGE) throw new x.Z({ errorCode: L.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
+    if (e !== Z.He.POST_MESSAGE) throw new b.Z({ errorCode: L.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
 }
 function $(e) {
-    if (null == e.id) throw new x.Z({ errorCode: L.lTL.INVALID_COMMAND }, 'Invalid application');
+    if (null == e.id) throw new b.Z({ errorCode: L.lTL.INVALID_COMMAND }, 'Invalid application');
     return e.id;
 }

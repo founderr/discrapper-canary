@@ -95,7 +95,7 @@ let E = (e) => {
                               }))
                 ]
             }),
-        M = (e) => {
+        B = (e) => {
             let { isLeft: t } = e;
             return (0, i.jsx)('div', {
                 className: s()({
@@ -131,7 +131,7 @@ let E = (e) => {
               onFocus: P,
               onBlur: Z,
               onMouseLeave: Z,
-              children: [(0, i.jsx)(O, {}), (0, i.jsx)(M, { isLeft: !1 })]
+              children: [(0, i.jsx)(O, {}), (0, i.jsx)(B, { isLeft: !1 })]
           })
         : (0, i.jsxs)('div', {
               className: s()(A, {
@@ -143,7 +143,7 @@ let E = (e) => {
               onFocus: P,
               onBlur: Z,
               onMouseLeave: Z,
-              children: [(0, i.jsx)(M, { isLeft: !0 }), (0, i.jsx)(O, {})]
+              children: [(0, i.jsx)(B, { isLeft: !0 }), (0, i.jsx)(O, {})]
           });
 };
 t.Z = r.memo(function (e) {

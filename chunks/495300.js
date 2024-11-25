@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return y;
     }
 });
 var i = n(200651),
@@ -29,11 +29,11 @@ var i = n(200651),
     S = n(213956),
     E = n(388032),
     R = n(930261);
-function Z() {
+function y() {
     let e = (0, a.e7)([h.Z], () => h.Z.getGuildId());
-    return null == e ? null : (0, i.jsx)(y, { guildId: e });
+    return null == e ? null : (0, i.jsx)(Z, { guildId: e });
 }
-function y(e) {
+function Z(e) {
     let t,
         { guildId: n } = e,
         l = (0, a.e7)([C.Z], () => C.Z.getCurrentPage()),
@@ -42,8 +42,8 @@ function y(e) {
             return null != e && !C.Z.isEducationUpsellDismissed(e);
         }),
         f = (0, _.Z)(n),
-        Z = !f && h,
-        { homeSettingsEnabled: y } = (0, u.kZ)(n);
+        y = !f && h,
+        { homeSettingsEnabled: Z } = (0, u.kZ)(n);
     switch (
         (r.useEffect(() => {
             (0, d.EW)(o.z.COMMUNITY_ONBOARDING_NEW_BADGE);
@@ -77,14 +77,14 @@ function y(e) {
             });
     }
     return (0, i.jsxs)('div', {
-        className: s()(R.onboardingContainer, { [R.upsellOnTop]: Z }),
+        className: s()(R.onboardingContainer, { [R.upsellOnTop]: y }),
         children: [
             !f &&
                 l !== v.PG.LANDING &&
                 (0, i.jsx)(A, {
                     setOnboardingStep: x.$K,
                     page: l,
-                    homeSettingsEnabled: y
+                    homeSettingsEnabled: Z
                 }),
             f &&
                 l !== v.PG.LANDING &&

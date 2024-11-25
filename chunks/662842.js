@@ -23,18 +23,18 @@ var i,
     I = n(725436),
     C = n(497656),
     v = n(554747),
-    N = n(230900),
-    T = n(854698),
-    S = n(703656),
+    S = n(230900),
+    N = n(854698),
+    T = n(703656),
     A = n(922482),
-    x = n(565799),
-    b = n(501655),
+    b = n(565799),
+    x = n(501655),
     Z = n(427679),
     L = n(448206),
     y = n(184301),
     O = n(347475),
-    P = n(496675),
-    R = n(594174),
+    R = n(496675),
+    P = n(594174),
     j = n(662868),
     D = n(981631),
     M = n(765305),
@@ -55,15 +55,15 @@ function U(e) {
             [s, r]
         ),
         B = null == i ? void 0 : i.id,
-        H = (0, c.Wu)([x.Z], () => [...new Set(x.Z.getMutableParticipants(B, b.pV.SPEAKER).map((e) => e.user))], [B]),
-        V = (0, c.e7)([x.Z], () => (null != B ? x.Z.getParticipantCount(B, b.pV.AUDIENCE) : 0), [B]),
-        F = (0, c.e7)([P.Z], () => P.Z.can(D.Plq.CONNECT, i)),
+        V = (0, c.Wu)([b.Z], () => [...new Set(b.Z.getMutableParticipants(B, x.pV.SPEAKER).map((e) => e.user))], [B]),
+        H = (0, c.e7)([b.Z], () => (null != B ? b.Z.getParticipantCount(B, x.pV.AUDIENCE) : 0), [B]),
+        F = (0, c.e7)([R.Z], () => R.Z.can(D.Plq.CONNECT, i)),
         z = (0, L.Z)(null == i ? void 0 : i.id),
-        W = null == r ? void 0 : r.creator_id,
-        Y = (0, c.e7)([R.default], () => R.default.getUser(W), [W]);
+        Y = null == r ? void 0 : r.creator_id,
+        W = (0, c.e7)([P.default], () => P.default.getUser(Y), [Y]);
     a.useEffect(() => {
-        null != W && (0, h.PR)(W);
-    }, [W]);
+        null != Y && (0, h.PR)(Y);
+    }, [Y]);
     let {
         noticeType: K,
         title: q,
@@ -79,7 +79,7 @@ function U(e) {
             (function (e) {
                 let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: r, myRole: a, eventCreator: s, speakers: o, listenerCount: c, isEventNoticeHidden: d, isStageNoticeHidden: h, isStudyRoomNotice: m } = e,
                     g = null != n && null != i && !h,
-                    E = null != t ? (0, T.DK)(t) : null;
+                    E = null != t ? (0, N.DK)(t) : null;
                 if (m && null != i) {
                     let e = (0, p.KS)(i);
                     return {
@@ -189,7 +189,7 @@ function U(e) {
                         );
                     }
                     if (t.entity_type === M.WX.EXTERNAL) {
-                        let e = (0, N.cS)(t);
+                        let e = (0, S.cS)(t);
                         if (null == e) return { noticeType: null };
                         let n = f.ZP.getUserCount(t.id, E);
                         return {
@@ -279,14 +279,14 @@ function U(e) {
                 activeChannel: i,
                 canConnect: F,
                 myRole: z,
-                eventCreator: Y,
-                speakers: H,
-                listenerCount: V,
+                eventCreator: W,
+                speakers: V,
+                listenerCount: H,
                 isEventNoticeHidden: G,
                 isStageNoticeHidden: U,
                 isStudyRoomNotice: n
             }),
-        [r, s, i, F, z, Y, H, V, G, U, n]
+        [r, s, i, F, z, W, V, H, G, U, n]
     );
     return null == K
         ? null
@@ -375,7 +375,7 @@ function U(e) {
                             size: u.Button.Sizes.SMALL,
                             color: u.Button.Colors.GREEN,
                             onClick: () => {
-                                if (J) null != i && null != i.getGuildId() && ((0, A.Cq)(i), (0, S.XU)(i.getGuildId(), i.id));
+                                if (J) null != i && null != i.getGuildId() && ((0, A.Cq)(i), (0, T.XU)(i.getGuildId(), i.id));
                                 else {
                                     if (null == r) return;
                                     (0, g.bO)({ eventId: r.id });

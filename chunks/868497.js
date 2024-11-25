@@ -43,8 +43,8 @@ function N(e, t, r, N, A = 'auto.http.browser') {
         return;
     }
     let d = (0, i.nZ)(),
-        f = (0, i.s3)(),
-        { method: L, url: O } = e.fetchData,
+        L = (0, i.s3)(),
+        { method: f, url: O } = e.fetchData,
         p = (function (e) {
             try {
                 return new URL(e).href;
@@ -57,11 +57,11 @@ function N(e, t, r, N, A = 'auto.http.browser') {
         D =
             T && S
                 ? (0, I.qp)({
-                      name: `${L} ${O}`,
+                      name: `${f} ${O}`,
                       attributes: {
                           url: O,
                           type: 'fetch',
-                          'http.method': L,
+                          'http.method': f,
                           'http.url': p,
                           'server.address': h,
                           [E.S3]: A,
@@ -69,7 +69,7 @@ function N(e, t, r, N, A = 'auto.http.browser') {
                       }
                   })
                 : new l.b();
-    if (((e.fetchData.__span = D.spanContext().spanId), (N[D.spanContext().spanId] = D), r(e.fetchData.url) && f)) {
+    if (((e.fetchData.__span = D.spanContext().spanId), (N[D.spanContext().spanId] = D), r(e.fetchData.url) && L)) {
         let t = e.args[0];
         e.args[1] = e.args[1] || {};
         let r = e.args[1];
@@ -111,7 +111,7 @@ function N(e, t, r, N, A = 'auto.http.browser') {
                     }
                 );
             }
-        })(t, f, d, r, (0, c.z)() && S ? D : void 0);
+        })(t, L, d, r, (0, c.z)() && S ? D : void 0);
     }
     return D;
 }

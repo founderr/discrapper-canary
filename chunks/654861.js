@@ -117,7 +117,7 @@ var n = (function (e) {
             return new E(this.value + F(e).value);
         }),
         (E.prototype.plus = E.prototype.add);
-    function f(e, t, r) {
+    function L(e, t, r) {
         var n,
             a,
             _ = e.length,
@@ -126,7 +126,7 @@ var n = (function (e) {
         for (n = 0; n < _; n++) (c = Math.floor((a = e[n] + c) / 10000000)), (a %= 10000000), (E[n] = a < 0 ? a + 10000000 : a);
         return 'number' == typeof (E = l(E)) ? (r && (E = -E), new i(E)) : new o(E, r);
     }
-    function L(e, t) {
+    function f(e, t) {
         var r,
             n,
             a,
@@ -163,7 +163,7 @@ var n = (function (e) {
         if (this.sign !== _.sign) return this.add(_.negate());
         var E = this.value,
             c = _.value;
-        if (_.isSmall) return f(E, Math.abs(c), this.sign);
+        if (_.isSmall) return L(E, Math.abs(c), this.sign);
         return (t = E), (r = c), (n = this.sign), (g(t, r) >= 0 ? (a = d(t, r)) : ((a = d(r, t)), (n = !n)), 'number' == typeof (a = l(a))) ? (n && (a = -a), new i(a)) : new o(a, n);
     }),
         (o.prototype.minus = o.prototype.subtract),
@@ -172,7 +172,7 @@ var n = (function (e) {
                 r = this.value;
             if (r < 0 !== t.sign) return this.add(t.negate());
             var n = t.value;
-            return t.isSmall ? new i(r - n) : f(n, Math.abs(r), r >= 0);
+            return t.isSmall ? new i(r - n) : L(n, Math.abs(r), r >= 0);
         }),
         (i.prototype.minus = i.prototype.subtract),
         (E.prototype.subtract = function (e) {
@@ -200,7 +200,7 @@ var n = (function (e) {
             return new E(this.value >= 0 ? this.value : -this.value);
         });
     function h(e, t, r) {
-        return e < 10000000 ? new o(O(t, e), r) : new o(L(t, s(e)), r);
+        return e < 10000000 ? new o(O(t, e), r) : new o(f(t, s(e)), r);
     }
     function S(e) {
         var t,
@@ -235,7 +235,7 @@ var n = (function (e) {
             ? new o(
                   (function e(t, r) {
                       var n = Math.max(t.length, r.length);
-                      if (n <= 30) return L(t, r);
+                      if (n <= 30) return f(t, r);
                       n = Math.ceil(n / 2);
                       var a = t.slice(n),
                           _ = t.slice(0, n),
@@ -249,7 +249,7 @@ var n = (function (e) {
                   })(i, E),
                   c
               )
-            : new o(L(i, E), c);
+            : new o(f(i, E), c);
     }),
         (o.prototype.times = o.prototype.multiply),
         (i.prototype._multiplyBySmall = function (e) {
@@ -301,14 +301,14 @@ var n = (function (e) {
             var T = Math.abs(A);
             if (T < 10000000) {
                 r = l((n = D(N, T))[0]);
-                var f = n[1];
-                return (e.sign && (f = -f), 'number' == typeof r) ? (e.sign !== c.sign && (r = -r), [new i(r), new i(f)]) : [new o(r, e.sign !== c.sign), new i(f)];
+                var L = n[1];
+                return (e.sign && (L = -L), 'number' == typeof r) ? (e.sign !== c.sign && (r = -r), [new i(r), new i(L)]) : [new o(r, e.sign !== c.sign), new i(L)];
             }
             A = s(T);
         }
-        var L = g(N, A);
-        if (-1 === L) return [_[0], e];
-        if (0 === L) return [_[e.sign === c.sign ? 1 : -1], _[0]];
+        var f = g(N, A);
+        if (-1 === f) return [_[0], e];
+        if (0 === f) return [_[e.sign === c.sign ? 1 : -1], _[0]];
         r = (n =
             N.length + A.length <= 200
                 ? (function (e, t) {
@@ -598,7 +598,7 @@ var n = (function (e) {
         (E.prototype.modInv = i.prototype.modInv = o.prototype.modInv),
         (o.prototype.next = function () {
             var e = this.value;
-            return this.sign ? f(e, 1, this.sign) : new o(T(e, 1), this.sign);
+            return this.sign ? L(e, 1, this.sign) : new o(T(e, 1), this.sign);
         }),
         (i.prototype.next = function () {
             var e = this.value;
@@ -609,7 +609,7 @@ var n = (function (e) {
         }),
         (o.prototype.prev = function () {
             var e = this.value;
-            return this.sign ? new o(T(e, 1), !0) : f(e, 1, this.sign);
+            return this.sign ? new o(T(e, 1), !0) : L(e, 1, this.sign);
         }),
         (i.prototype.prev = function () {
             var e = this.value;

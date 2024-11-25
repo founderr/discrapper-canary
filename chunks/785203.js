@@ -3,7 +3,7 @@ n.d(t, {
         return r;
     },
     Z: function () {
-        return S;
+        return T;
     }
 });
 var i,
@@ -25,34 +25,34 @@ var i,
     I = n(192513),
     C = n(255791),
     v = n(70956),
-    N = n(267642),
-    T = n(981631);
-function S(e) {
+    S = n(267642),
+    N = n(981631);
+function T(e) {
     var t;
-    let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : T.lds,
+    let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : N.lds,
         { lastFetchedAt: i } = (0, a.cj)([f.Z], () => ({
             appliedGuildBoosts: f.Z.getAppliedGuildBoostsForGuild(n),
             lastFetchedAt: f.Z.getLastFetchedAtForGuild(n)
         })),
-        { lastDismissedGracePeriod: r, isGracePeriodVisible: S } = (0, a.cj)([E.Z], () => ({
+        { lastDismissedGracePeriod: r, isGracePeriodVisible: T } = (0, a.cj)([E.Z], () => ({
             lastDismissedGracePeriod: E.Z.getLastDismissedGracePeriodForGuild(n),
             isGracePeriodVisible: E.Z.isVisible(n)
         })),
         A = (0, a.e7)([p.Z], () => p.Z.isVisible(e)),
-        x = (0, a.e7)([C.Z], () => C.Z.isVisible(e)),
-        b = (0, a.e7)([_.Z], () => _.Z.can(T.Plq.ADMINISTRATOR, e)),
-        Z = null != r && Date.now() - r <= T.Dge,
+        b = (0, a.e7)([C.Z], () => C.Z.isVisible(e)),
+        x = (0, a.e7)([_.Z], () => _.Z.can(N.Plq.ADMINISTRATOR, e)),
+        Z = null != r && Date.now() - r <= N.Dge,
         L = null != e ? e.premiumSubscriberCount : 0,
-        y = (0, N.rF)(L, n) !== T.Eu4.NONE,
+        y = (0, S.rF)(L, n) !== N.Eu4.NONE,
         O = null != i && Date.now() - i <= 43200000,
-        P = !O && !Z && b && y,
-        R = (0, c.m)(n),
+        R = !O && !Z && x && y,
+        P = (0, c.m)(n),
         j = (0, a.e7)([I.Z], () => I.Z.isVisible(e)),
         D = h.Z.useShouldShowChannelNotice(n),
         M = (0, m.h6)(e),
         { enableStudyGroup: w } = (0, u.s)(e),
         k = M.length > 0,
-        U = w && !(null == e ? void 0 : e.hasFeature(T.oNc.HUB)),
+        U = w && !(null == e ? void 0 : e.hasFeature(N.oNc.HUB)),
         G = (0, d.Vm)(n),
         B = (0, a.e7)([g.Z], () => null != g.Z.getActiveGuildSignUp(n));
     if (
@@ -62,7 +62,7 @@ function S(e) {
         l.useEffect(() => {
             let e = -1;
             return (
-                P &&
+                R &&
                     (e = window.setTimeout(
                         () => {
                             null != n && (0, s.C0)(n);
@@ -73,13 +73,13 @@ function S(e) {
                     window.clearTimeout(e);
                 }
             );
-        }, [n, P]),
+        }, [n, R]),
         A)
     )
         return 0;
-    if (S) return 1;
-    if (x) return 2;
-    else if (R || null != G) return 3;
+    if (T) return 1;
+    if (b) return 2;
+    else if (P || null != G) return 3;
     else if (j) return 4;
     else if (D) return 5;
     else if (k) return 6;

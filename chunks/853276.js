@@ -103,16 +103,16 @@ function g(e) {
         { ref: j, width: b = 0 } = (0, c.Z)(N),
         { ref: S, width: E = 0 } = (0, c.Z)(N),
         R = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-        [Z, y] = r.useState(v),
+        [y, Z] = r.useState(v),
         A = r.useRef(null),
         L = b > E ? b : E;
     r.useEffect(() => {
         v
-            ? (y(!0),
+            ? (Z(!0),
               (A.current = setTimeout(() => {
-                  y(!1), (A.current = null);
+                  Z(!1), (A.current = null);
               }, u.I5)))
-            : y(!1);
+            : Z(!1);
     }, [v]),
         r.useEffect(
             () => () => {
@@ -174,8 +174,8 @@ function g(e) {
                     onBlur: () => O(!1),
                     onClick: P,
                     ignoreKeyPress: !0,
-                    onMouseEnter: () => y(!0),
-                    onMouseLeave: () => y(!1),
+                    onMouseEnter: () => Z(!0),
+                    onMouseLeave: () => Z(!1),
                     className: s()(m.chipletContainerInner, {
                         [m.isSelecting]: f,
                         [m.isEditing]: N
@@ -199,7 +199,7 @@ function g(e) {
                             isEditing: N,
                             isSelected: p,
                             error: C,
-                            forceShowErrorTooltip: Z || N
+                            forceShowErrorTooltip: y || N
                         })
                     ]
                 }),

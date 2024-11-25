@@ -31,8 +31,8 @@ var i = n(200651),
     S = n(768581),
     E = n(267642),
     R = n(358085),
-    Z = n(51144),
-    y = n(999382),
+    y = n(51144),
+    Z = n(999382),
     A = n(70409),
     L = n(981631),
     D = n(710111),
@@ -40,7 +40,7 @@ var i = n(200651),
     k = n(275715);
 let P = R.isPlatformEmbedded || ('Safari' !== o().name && 'Firefox' !== o().name);
 function M() {
-    let e = (0, c.e7)([y.Z], () => y.Z.getProps().guild);
+    let e = (0, c.e7)([Z.Z], () => Z.Z.getProps().guild);
     return null == e
         ? null
         : (0, i.jsx)(u.FormSection, {
@@ -271,10 +271,10 @@ function H(e) {
         { canManageGuildExpression: b } = (0, p.XJ)(o),
         E = r.useMemo(() => b(t), [t, b]),
         R = null != v || null != _,
-        [y, A] = r.useState(!1),
+        [Z, A] = r.useState(!1),
         D = (0, I.z)(t, o.id);
     async function P() {
-        if (!y) {
+        if (!Z) {
             A(!0);
             try {
                 await (0, f.AA)(o.id, d);
@@ -297,7 +297,7 @@ function H(e) {
                     analyticsLocation: { section: L.jXE.GUILD_SETTINGS_SOUNDBOARD }
                 });
         }, [T, o.id]),
-        w = Z.ZP.useUserTag(T);
+        w = y.ZP.useUserTag(T);
     return (0, i.jsxs)('div', {
         className: s()(k.row, { [k.active]: l }),
         children: [
@@ -314,7 +314,7 @@ function H(e) {
                   }),
             (0, i.jsx)(u.Clickable, {
                 onClick: () => {
-                    !y && a(t);
+                    !Z && a(t);
                 },
                 onContextMenu: D,
                 className: k.soundName,

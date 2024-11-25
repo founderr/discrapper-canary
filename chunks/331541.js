@@ -22,18 +22,18 @@ var i = n(200651),
     I = n(158238),
     C = n(300284),
     v = n(680295),
-    N = n(785717),
-    T = n(221292),
-    S = n(481046),
+    S = n(785717),
+    N = n(221292),
+    T = n(481046),
     A = n(816988),
-    x = n(687158),
-    b = n(899007),
+    b = n(687158),
+    x = n(899007),
     Z = n(648052),
     L = n(867176),
     y = n(438163),
     O = n(537006),
-    P = n(483424),
-    R = n(681837),
+    R = n(483424),
+    P = n(681837),
     j = n(502762),
     D = n(530),
     M = n(544989),
@@ -42,12 +42,12 @@ var i = n(200651),
     U = n(171368),
     G = n(420654),
     B = n(695346),
-    H = n(158776),
-    V = n(246946),
+    V = n(158776),
+    H = n(246946),
     F = n(572004),
     z = n(70956),
-    W = n(5192),
-    Y = n(74538),
+    Y = n(5192),
+    W = n(74538),
     K = n(51144),
     q = n(246133),
     X = n(474376),
@@ -168,10 +168,10 @@ function es(e) {
     var t;
     let { currentUser: z, onClose: q, setPopoutRef: es } = e,
         eo = __OVERLAY__,
-        ec = (0, x.ZP)(z.id),
+        ec = (0, b.ZP)(z.id),
         ed = (0, u.O)(),
         { analyticsLocations: eu } = (0, g.ZP)(p.Z.ACCOUNT_PROFILE_POPOUT),
-        eh = (0, N.ZB)({
+        eh = (0, S.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
             userId: z.id
         }),
@@ -180,8 +180,8 @@ function es(e) {
     r.useEffect(() => {
         null == es || es(em.current);
     }, [em, es]);
-    let eg = (0, o.e7)([H.Z], () => H.Z.getStatus(z.id)),
-        ef = (0, o.e7)([V.Z], () => V.Z.hidePersonalInformation),
+    let eg = (0, o.e7)([V.Z], () => V.Z.getStatus(z.id)),
+        ef = (0, o.e7)([H.Z], () => H.Z.hidePersonalInformation),
         e_ = (0, E.p)(),
         eE = B.Sb.useSetting(),
         eI = (0, f.a)(),
@@ -299,11 +299,11 @@ function es(e) {
             });
         })(eg),
         ev = (0, X.g)(q),
-        eN = (0, C.Z)({ analyticsLocations: eu }),
-        { customStatusBubbleEditEnabled: eT } = (0, S.K)({ location: 'AccountProfilePopout' }),
-        { dimissibleUpsellsEnabled: eS } = (0, A.u)({ location: 'AccountProfilePopout' }),
-        eA = (0, Y.I5)(z),
-        ex = (e) => {
+        eS = (0, C.Z)({ analyticsLocations: eu }),
+        { customStatusBubbleEditEnabled: eN } = (0, T.K)({ location: 'AccountProfilePopout' }),
+        { dimissibleUpsellsEnabled: eT } = (0, A.u)({ location: 'AccountProfilePopout' }),
+        eA = (0, W.I5)(z),
+        eb = (e) => {
             null == q || q(),
                 (0, U.openUserProfileModal)({
                     sourceAnalyticsLocations: eu,
@@ -311,7 +311,7 @@ function es(e) {
                     ...e
                 });
         },
-        eb = () => {
+        ex = () => {
             (0, c.openModalLazy)(async () => {
                 let { default: e } = await n.e('51714').then(n.bind(n, 211065));
                 return (t) =>
@@ -324,7 +324,7 @@ function es(e) {
         };
     return (0, i.jsx)(g.Gt, {
         value: eu,
-        children: (0, i.jsx)(N.Mt, {
+        children: (0, i.jsx)(S.Mt, {
             value: eh,
             children: (0, i.jsx)(c.Dialog, {
                 ref: em,
@@ -335,7 +335,7 @@ function es(e) {
                     displayProfile: ec,
                     profileType: ee.y0.BITE_SIZE,
                     children: [
-                        !eT &&
+                        !eN &&
                             (0, i.jsx)(M.Z, {
                                 profileType: ee.y0.BITE_SIZE,
                                 children: (0, i.jsx)(k.Z, {
@@ -351,11 +351,11 @@ function es(e) {
                                     displayProfile: ec,
                                     profileType: ee.y0.BITE_SIZE
                                 }),
-                                (0, i.jsx)(b.Z, {
+                                (0, i.jsx)(x.Z, {
                                     user: z,
                                     displayProfile: ec,
                                     profileType: ee.y0.BITE_SIZE,
-                                    onOpenProfile: eo ? void 0 : ex
+                                    onOpenProfile: eo ? void 0 : eb
                                 }),
                                 (0, i.jsx)(y.Z, {
                                     user: z,
@@ -376,8 +376,8 @@ function es(e) {
                                     user: z,
                                     className: en.username,
                                     profileType: ee.y0.BITE_SIZE,
-                                    nickname: W.ZP.getName(null, null, z),
-                                    onOpenProfile: eo ? void 0 : ex,
+                                    nickname: Y.ZP.getName(null, null, z),
+                                    onOpenProfile: eo ? void 0 : eb,
                                     pronouns: null == ec ? void 0 : ec.pronouns,
                                     tags: (0, i.jsx)(Z.Z, {
                                         displayProfile: ec,
@@ -386,7 +386,7 @@ function es(e) {
                                     }),
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, i.jsx)(R.Z, { userId: z.id }),
+                                            (0, i.jsx)(P.Z, { userId: z.id }),
                                             (0, i.jsx)(w.Z, {
                                                 user: z,
                                                 isHovering: ep
@@ -400,12 +400,12 @@ function es(e) {
                                     hidePersonalInformation: ef,
                                     onClose: q
                                 }),
-                                eS &&
+                                eT &&
                                     (0, i.jsx)(O.Z, {
                                         isPremiumUser: eA,
                                         onInteraction: q
                                     }),
-                                (0, i.jsx)(P.Z, {
+                                (0, i.jsx)(R.Z, {
                                     user: z,
                                     currentUser: z,
                                     onClose: q
@@ -418,7 +418,7 @@ function es(e) {
                                             children: (0, i.jsxs)(Q.PB, {
                                                 id: 'profile-'.concat(z.id),
                                                 children: [
-                                                    eT &&
+                                                    eN &&
                                                         (0, i.jsxs)(i.Fragment, {
                                                             children: [
                                                                 (0, i.jsx)(Q.Mv, {
@@ -427,7 +427,7 @@ function es(e) {
                                                                     label: et.intl.string(et.t.s5vZlZ),
                                                                     icon: c.PencilIcon,
                                                                     onClick: () => {
-                                                                        eN(), q();
+                                                                        eS(), q();
                                                                     }
                                                                 }),
                                                                 (0, i.jsx)('div', { className: en.menuDivider })
@@ -485,7 +485,7 @@ function es(e) {
                                                               }
                                                             : void 0
                                                     }),
-                                                    !eT &&
+                                                    !eN &&
                                                         (0, i.jsxs)(i.Fragment, {
                                                             children: [
                                                                 (0, i.jsx)('div', { className: en.menuDivider }),
@@ -496,7 +496,7 @@ function es(e) {
                                                                           label: et.intl.string(et.t.ezAcPz),
                                                                           icon: () => (0, i.jsx)('div', { className: en.customEmojiPlaceholder }),
                                                                           onClick: () => {
-                                                                              q(), eb();
+                                                                              q(), ex();
                                                                           }
                                                                       })
                                                                     : (0, i.jsx)(Q.Mv, {
@@ -516,7 +516,7 @@ function es(e) {
                                                                               className: en.clearCustomStatusHint,
                                                                               onClick: (e) => {
                                                                                   e.stopPropagation(),
-                                                                                      (0, T.pQ)({
+                                                                                      (0, N.pQ)({
                                                                                           action: 'PRESS_CLEAR_CUSTOM_STATUS',
                                                                                           analyticsLocations: eu
                                                                                       }),
@@ -528,7 +528,7 @@ function es(e) {
                                                                               })
                                                                           }),
                                                                           onClick: () => {
-                                                                              q(), eb();
+                                                                              q(), ex();
                                                                           }
                                                                       })
                                                             ]

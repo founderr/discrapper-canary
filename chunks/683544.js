@@ -27,7 +27,7 @@ t.Z = function (e) {
     r.useEffect(() => {
         C(1);
     }, [n]);
-    let N = r.useMemo(
+    let S = r.useMemo(
             () => ({
                 query: g.Mm,
                 page: I,
@@ -36,7 +36,7 @@ t.Z = function (e) {
             }),
             [I, n]
         ),
-        T = (0, a.e7)([u.Z], () =>
+        N = (0, a.e7)([u.Z], () =>
             u.Z.getFetchState({
                 query: g.Mm,
                 page: I,
@@ -44,13 +44,13 @@ t.Z = function (e) {
                 categoryId: n
             })
         ),
-        S = (0, a.cj)([u.Z], () => {
+        T = (0, a.cj)([u.Z], () => {
             var e;
-            return null !== (e = u.Z.getSearchResults(N)) && void 0 !== e ? e : _;
+            return null !== (e = u.Z.getSearchResults(S)) && void 0 !== e ? e : _;
         }),
-        A = null !== (t = (0, o.Z)(S)) && void 0 !== t ? t : _,
-        { results: x, totalPages: b } = r.useMemo(() => (T === d.M.FETCHING ? A : S), [T, A, S]),
-        Z = r.useMemo(() => (null == x ? void 0 : x.filter((e) => !(e.type !== l.s.APPLICATION))), [x]),
+        A = null !== (t = (0, o.Z)(T)) && void 0 !== t ? t : _,
+        { results: b, totalPages: x } = r.useMemo(() => (N === d.M.FETCHING ? A : T), [N, A, T]),
+        Z = r.useMemo(() => (null == b ? void 0 : b.filter((e) => !(e.type !== l.s.APPLICATION))), [b]),
         L = r.useCallback((e) => {
             let { page: t, activeCategoryId: n, onSuccessCallback: i, guildId: r, fetchCounts: l } = e;
             l &&
@@ -76,13 +76,13 @@ t.Z = function (e) {
             onSuccessCallback: () => {}
         });
     }, [n, L, I]),
-    T === d.M.ERROR)
+    N === d.M.ERROR)
         ? (0, i.jsx)('div', {
               className: f.errorContainer,
               children: (0, i.jsx)(p.Z, { className: f.error })
           })
         : (0, i.jsxs)(h.Z, {
-              loading: T === d.M.FETCHING,
+              loading: N === d.M.FETCHING,
               children: [
                   (0, i.jsx)('div', {
                       className: f.content,
@@ -106,7 +106,7 @@ t.Z = function (e) {
                   }),
                   (0, i.jsx)(s.Paginator, {
                       className: f.paginationInput,
-                      totalCount: Math.min(b * g.IV, g.Et * g.IV),
+                      totalCount: Math.min(x * g.IV, g.Et * g.IV),
                       pageSize: g.IV,
                       disablePaginationGap: !0,
                       hideMaxPage: !0,

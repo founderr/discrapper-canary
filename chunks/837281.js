@@ -1,86 +1,86 @@
-var t, n;
+var t, r;
 (t = 0),
-    (n = function () {
+    (r = function () {
         function e(e, t) {
-            var n = Object.keys(e);
+            var r = Object.keys(e);
             if (Object.getOwnPropertySymbols) {
-                var r = Object.getOwnPropertySymbols(e);
+                var n = Object.getOwnPropertySymbols(e);
                 t &&
-                    (r = r.filter(function (t) {
+                    (n = n.filter(function (t) {
                         return Object.getOwnPropertyDescriptor(e, t).enumerable;
                     })),
-                    n.push.apply(n, r);
+                    r.push.apply(r, n);
             }
-            return n;
+            return r;
         }
         function t(t) {
-            for (var n = 1; n < arguments.length; n++) {
-                var r = null != arguments[n] ? arguments[n] : {};
-                n % 2
-                    ? e(Object(r), !0).forEach(function (e) {
-                          var n, i, a;
-                          (n = t),
-                              (i = e),
-                              (a = r[e]),
-                              i in n
-                                  ? Object.defineProperty(n, i, {
+            for (var r = 1; r < arguments.length; r++) {
+                var n = null != arguments[r] ? arguments[r] : {};
+                r % 2
+                    ? e(Object(n), !0).forEach(function (e) {
+                          var r, o, a;
+                          (r = t),
+                              (o = e),
+                              (a = n[e]),
+                              o in r
+                                  ? Object.defineProperty(r, o, {
                                         value: a,
                                         enumerable: !0,
                                         configurable: !0,
                                         writable: !0
                                     })
-                                  : (n[i] = a);
+                                  : (r[o] = a);
                       })
                     : Object.getOwnPropertyDescriptors
-                      ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-                      : e(Object(r)).forEach(function (e) {
-                            Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                      ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                      : e(Object(n)).forEach(function (e) {
+                            Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                         });
             }
             return t;
         }
-        function n(e, t) {
+        function r(e, t) {
             if (null == e) return {};
-            var n,
-                r,
-                i = (function (e, t) {
+            var r,
+                n,
+                o = (function (e, t) {
                     if (null == e) return {};
-                    var n,
-                        r,
-                        i = {},
+                    var r,
+                        n,
+                        o = {},
                         a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                    return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]));
             }
-            return i;
+            return o;
         }
-        function r(e, t) {
+        function n(e, t) {
             return (
                 (function (e) {
                     if (Array.isArray(e)) return e;
                 })(e) ||
                 (function (e, t) {
                     if (Symbol.iterator in Object(e) || '[object Arguments]' === Object.prototype.toString.call(e)) {
-                        var n = [],
-                            r = !0,
-                            i = !1,
+                        var r = [],
+                            n = !0,
+                            o = !1,
                             a = void 0;
                         try {
-                            for (var s, o = e[Symbol.iterator](); !(r = (s = o.next()).done) && (n.push(s.value), !t || n.length !== t); r = !0);
+                            for (var i, s = e[Symbol.iterator](); !(n = (i = s.next()).done) && (r.push(i.value), !t || r.length !== t); n = !0);
                         } catch (e) {
-                            (i = !0), (a = e);
+                            (o = !0), (a = e);
                         } finally {
                             try {
-                                r || null == o.return || o.return();
+                                n || null == s.return || s.return();
                             } finally {
-                                if (i) throw a;
+                                if (o) throw a;
                             }
                         }
-                        return n;
+                        return r;
                     }
                 })(e, t) ||
                 (function () {
@@ -88,12 +88,12 @@ var t, n;
                 })()
             );
         }
-        function i(e) {
+        function o(e) {
             return (
                 (function (e) {
                     if (Array.isArray(e)) {
-                        for (var t = 0, n = Array(e.length); t < e.length; t++) n[t] = e[t];
-                        return n;
+                        for (var t = 0, r = Array(e.length); t < e.length; t++) r[t] = e[t];
+                        return r;
                     }
                 })(e) ||
                 (function (e) {
@@ -108,8 +108,8 @@ var t, n;
             var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : { serializable: !0 },
                 t = {};
             return {
-                get: function (n, r) {
-                    var i =
+                get: function (r, n) {
+                    var o =
                             arguments.length > 2 && void 0 !== arguments[2]
                                 ? arguments[2]
                                 : {
@@ -117,24 +117,24 @@ var t, n;
                                           return Promise.resolve();
                                       }
                                   },
-                        a = JSON.stringify(n);
+                        a = JSON.stringify(r);
                     if (a in t) return Promise.resolve(e.serializable ? JSON.parse(t[a]) : t[a]);
-                    var s = r(),
-                        o =
-                            (i && i.miss) ||
+                    var i = n(),
+                        s =
+                            (o && o.miss) ||
                             function () {
                                 return Promise.resolve();
                             };
-                    return s
+                    return i
                         .then(function (e) {
-                            return o(e);
+                            return s(e);
                         })
                         .then(function () {
-                            return s;
+                            return i;
                         });
                 },
-                set: function (n, r) {
-                    return (t[JSON.stringify(n)] = e.serializable ? JSON.stringify(r) : r), Promise.resolve(r);
+                set: function (r, n) {
+                    return (t[JSON.stringify(r)] = e.serializable ? JSON.stringify(n) : n), Promise.resolve(n);
                 },
                 delete: function (e) {
                     return delete t[JSON.stringify(e)], Promise.resolve();
@@ -144,29 +144,29 @@ var t, n;
                 }
             };
         }
-        function s(e, t, n) {
-            var r = {
-                'x-algolia-api-key': n,
+        function i(e, t, r) {
+            var n = {
+                'x-algolia-api-key': r,
                 'x-algolia-application-id': t
             };
             return {
                 headers: function () {
-                    return e === d.WithinHeaders ? r : {};
+                    return e === d.WithinHeaders ? n : {};
                 },
                 queryParameters: function () {
-                    return e === d.WithinQueryParameters ? r : {};
+                    return e === d.WithinQueryParameters ? n : {};
                 }
             };
         }
-        function o(e) {
+        function s(e) {
             var t = 0;
-            return e(function n() {
+            return e(function r() {
                 return (
                     t++,
-                    new Promise(function (r) {
+                    new Promise(function (n) {
                         setTimeout(
                             function () {
-                                r(e(n));
+                                n(e(r));
                             },
                             Math.min(100 * t, 1000)
                         );
@@ -174,7 +174,7 @@ var t, n;
                 );
             });
         }
-        function l(e) {
+        function u(e) {
             var t =
                 arguments.length > 1 && void 0 !== arguments[1]
                     ? arguments[1]
@@ -182,11 +182,11 @@ var t, n;
                           return Promise.resolve();
                       };
             return Object.assign(e, {
-                wait: function (n) {
-                    return l(
+                wait: function (r) {
+                    return u(
                         e
                             .then(function (e) {
-                                return Promise.all([t(e, n), e]);
+                                return Promise.all([t(e, r), e]);
                             })
                             .then(function (e) {
                                 return e[1];
@@ -195,139 +195,139 @@ var t, n;
                 }
             });
         }
-        function u(e, t) {
+        function c(e, t) {
             return (
                 t &&
-                    Object.keys(t).forEach(function (n) {
-                        e[n] = t[n](e);
+                    Object.keys(t).forEach(function (r) {
+                        e[r] = t[r](e);
                     }),
                 e
             );
         }
-        function c(e) {
-            for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
-            var i = 0;
+        function f(e) {
+            for (var t = arguments.length, r = Array(t > 1 ? t - 1 : 0), n = 1; n < t; n++) r[n - 1] = arguments[n];
+            var o = 0;
             return e.replace(/%s/g, function () {
-                return encodeURIComponent(n[i++]);
+                return encodeURIComponent(r[o++]);
             });
         }
         var d = {
             WithinQueryParameters: 0,
             WithinHeaders: 1
         };
-        function f(e, t) {
-            var n = e || {},
-                r = n.data || {};
+        function l(e, t) {
+            var r = e || {},
+                n = r.data || {};
             return (
-                Object.keys(n).forEach(function (e) {
-                    -1 === ['timeout', 'headers', 'queryParameters', 'data', 'cacheable'].indexOf(e) && (r[e] = n[e]);
+                Object.keys(r).forEach(function (e) {
+                    -1 === ['timeout', 'headers', 'queryParameters', 'data', 'cacheable'].indexOf(e) && (n[e] = r[e]);
                 }),
                 {
-                    data: Object.entries(r).length > 0 ? r : void 0,
-                    timeout: n.timeout || t,
-                    headers: n.headers || {},
-                    queryParameters: n.queryParameters || {},
-                    cacheable: n.cacheable
+                    data: Object.entries(n).length > 0 ? n : void 0,
+                    timeout: r.timeout || t,
+                    headers: r.headers || {},
+                    queryParameters: r.queryParameters || {},
+                    cacheable: r.cacheable
                 }
             );
         }
-        var _ = {
+        var p = {
             Read: 1,
             Write: 2,
             Any: 3
         };
-        function p(e) {
-            var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        function h(e) {
+            var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
             return t(
                 t({}, e),
                 {},
                 {
-                    status: n,
+                    status: r,
                     lastUpdate: Date.now()
                 }
             );
         }
-        function h(e) {
+        function m(e) {
             return 'string' == typeof e
                 ? {
                       protocol: 'https',
                       url: e,
-                      accept: _.Any
+                      accept: p.Any
                   }
                 : {
                       protocol: e.protocol || 'https',
                       url: e.url,
-                      accept: e.accept || _.Any
+                      accept: e.accept || p.Any
                   };
         }
-        var m = 'DELETE',
+        var y = 'DELETE',
             g = 'POST';
-        function E(e, n, r, a) {
-            var s,
-                o,
-                l,
+        function v(e, r, n, a) {
+            var i,
+                s,
                 u,
                 c,
+                f,
                 d,
-                f = [],
-                _ = (function (e, n) {
-                    if ('GET' !== e.method && (void 0 !== e.data || void 0 !== n.data)) return JSON.stringify(Array.isArray(e.data) ? e.data : t(t({}, e.data), n.data));
-                })(r, a),
-                m =
-                    ((s = e),
-                    (o = a),
-                    (l = t(t({}, s.headers), o.headers)),
-                    (u = {}),
-                    Object.keys(l).forEach(function (e) {
-                        var t = l[e];
-                        u[e.toLowerCase()] = t;
+                l = [],
+                p = (function (e, r) {
+                    if ('GET' !== e.method && (void 0 !== e.data || void 0 !== r.data)) return JSON.stringify(Array.isArray(e.data) ? e.data : t(t({}, e.data), r.data));
+                })(n, a),
+                y =
+                    ((i = e),
+                    (s = a),
+                    (u = t(t({}, i.headers), s.headers)),
+                    (c = {}),
+                    Object.keys(u).forEach(function (e) {
+                        var t = u[e];
+                        c[e.toLowerCase()] = t;
                     }),
-                    u),
-                g = r.method,
-                E = 'GET' !== r.method ? {} : t(t({}, r.data), a.data),
-                v = t(t(t({ 'x-algolia-agent': e.userAgent.value }, e.queryParameters), E), a.queryParameters),
-                S = 0,
-                y = function t(n, i) {
-                    var s = n.pop();
-                    if (void 0 === s)
+                    c),
+                g = n.method,
+                v = 'GET' !== n.method ? {} : t(t({}, n.data), a.data),
+                b = t(t(t({ 'x-algolia-agent': e.userAgent.value }, e.queryParameters), v), a.queryParameters),
+                P = 0,
+                T = function t(r, o) {
+                    var i = r.pop();
+                    if (void 0 === i)
                         throw {
                             name: 'RetryError',
                             message: 'Unreachable hosts - your application id may be incorrect. If the error persists, contact support@algolia.com.',
-                            transporterStackTrace: b(f)
+                            transporterStackTrace: x(l)
                         };
-                    var o = {
-                            data: _,
-                            headers: m,
+                    var s = {
+                            data: p,
+                            headers: y,
                             method: g,
-                            url: (function (e, t, n) {
-                                var r = I(n),
-                                    i = ''
+                            url: (function (e, t, r) {
+                                var n = w(r),
+                                    o = ''
                                         .concat(e.protocol, '://')
                                         .concat(e.url, '/')
                                         .concat('/' === t.charAt(0) ? t.substr(1) : t);
-                                return r.length && (i += '?'.concat(r)), i;
-                            })(s, r.path, v),
-                            connectTimeout: i(S, e.timeouts.connect),
-                            responseTimeout: i(S, a.timeout)
+                                return n.length && (o += '?'.concat(n)), o;
+                            })(i, n.path, b),
+                            connectTimeout: o(P, e.timeouts.connect),
+                            responseTimeout: o(P, a.timeout)
                         },
-                        l = function (e) {
+                        u = function (e) {
                             var t = {
-                                request: o,
+                                request: s,
                                 response: e,
-                                host: s,
-                                triesLeft: n.length
+                                host: i,
+                                triesLeft: r.length
                             };
-                            return f.push(t), t;
+                            return l.push(t), t;
                         },
-                        u = {
+                        c = {
                             onSuccess: function (e) {
                                 return (function (e) {
                                     try {
                                         return JSON.parse(e.content);
-                                    } catch (n) {
+                                    } catch (r) {
                                         var t;
                                         throw (
-                                            ((t = n.message),
+                                            ((t = r.message),
                                             {
                                                 name: 'DeserializationError',
                                                 message: t,
@@ -337,45 +337,45 @@ var t, n;
                                     }
                                 })(e);
                             },
-                            onRetry: function (r) {
-                                var a = l(r);
+                            onRetry: function (n) {
+                                var a = u(n);
                                 return (
-                                    r.isTimedOut && S++,
-                                    Promise.all([e.logger.info('Retryable failure', T(a)), e.hostsCache.set(s, p(s, r.isTimedOut ? 3 : 2))]).then(function () {
-                                        return t(n, i);
+                                    n.isTimedOut && P++,
+                                    Promise.all([e.logger.info('Retryable failure', I(a)), e.hostsCache.set(i, h(i, n.isTimedOut ? 3 : 2))]).then(function () {
+                                        return t(r, o);
                                     })
                                 );
                             },
                             onFail: function (e) {
                                 throw (
-                                    (l(e),
+                                    (u(e),
                                     (function (e, t) {
-                                        var n = e.content,
-                                            r = e.status,
-                                            i = n;
+                                        var r = e.content,
+                                            n = e.status,
+                                            o = r;
                                         try {
-                                            i = JSON.parse(n).message;
+                                            o = JSON.parse(r).message;
                                         } catch (e) {}
                                         return {
                                             name: 'ApiError',
-                                            message: i,
-                                            status: r,
+                                            message: o,
+                                            status: n,
                                             transporterStackTrace: t
                                         };
-                                    })(e, b(f)))
+                                    })(e, x(l)))
                                 );
                             }
                         };
-                    return e.requester.send(o).then(function (e) {
-                        var t, n, r, i, a, s, o;
-                        return (t = e), (n = u), ((i = (r = t).status), r.isTimedOut || ((s = (a = r).isTimedOut), (o = a.status), !s && 0 == ~~o) || (2 != ~~(i / 100) && 4 != ~~(i / 100))) ? n.onRetry(t) : 2 == ~~(t.status / 100) ? n.onSuccess(t) : n.onFail(t);
+                    return e.requester.send(s).then(function (e) {
+                        var t, r, n, o, a, i, s;
+                        return (t = e), (r = c), ((o = (n = t).status), n.isTimedOut || ((i = (a = n).isTimedOut), (s = a.status), !i && 0 == ~~s) || (2 != ~~(o / 100) && 4 != ~~(o / 100))) ? r.onRetry(t) : 2 == ~~(t.status / 100) ? r.onSuccess(t) : r.onFail(t);
                     });
                 };
-            return ((c = e.hostsCache),
+            return ((f = e.hostsCache),
             Promise.all(
-                (d = n).map(function (e) {
-                    return c.get(e, function () {
-                        return Promise.resolve(p(e));
+                (d = r).map(function (e) {
+                    return f.get(e, function () {
+                        return Promise.resolve(h(e));
                     });
                 })
             ).then(function (e) {
@@ -383,65 +383,65 @@ var t, n;
                         var t;
                         return 1 === (t = e).status || Date.now() - t.lastUpdate > 120000;
                     }),
-                    n = e.filter(function (e) {
+                    r = e.filter(function (e) {
                         var t;
                         return 3 === (t = e).status && Date.now() - t.lastUpdate <= 120000;
                     }),
-                    r = [].concat(i(t), i(n));
+                    n = [].concat(o(t), o(r));
                 return {
                     getTimeout: function (e, t) {
-                        return (0 === n.length && 0 === e ? 1 : n.length + 3 + e) * t;
+                        return (0 === r.length && 0 === e ? 1 : r.length + 3 + e) * t;
                     },
                     statelessHosts:
-                        r.length > 0
-                            ? r.map(function (e) {
-                                  return h(e);
+                        n.length > 0
+                            ? n.map(function (e) {
+                                  return m(e);
                               })
                             : d
                 };
             })).then(function (e) {
-                return y(i(e.statelessHosts).reverse(), e.getTimeout);
+                return T(o(e.statelessHosts).reverse(), e.getTimeout);
             });
         }
-        function v(e) {
+        function b(e) {
             var t = e.hostsCache,
-                n = e.logger,
-                i = e.requester,
+                r = e.logger,
+                o = e.requester,
                 a = e.requestsCache,
-                s = e.responsesCache,
-                o = e.timeouts,
-                l = e.userAgent,
-                u = e.hosts,
-                c = e.queryParameters,
+                i = e.responsesCache,
+                s = e.timeouts,
+                u = e.userAgent,
+                c = e.hosts,
+                f = e.queryParameters,
                 d = {
                     hostsCache: t,
-                    logger: n,
-                    requester: i,
+                    logger: r,
+                    requester: o,
                     requestsCache: a,
-                    responsesCache: s,
-                    timeouts: o,
-                    userAgent: l,
+                    responsesCache: i,
+                    timeouts: s,
+                    userAgent: u,
                     headers: e.headers,
-                    queryParameters: c,
-                    hosts: u.map(function (e) {
-                        return h(e);
+                    queryParameters: f,
+                    hosts: c.map(function (e) {
+                        return m(e);
                     }),
                     read: function (e, t) {
-                        var n = f(t, d.timeouts.read),
-                            i = function () {
-                                return E(
+                        var r = l(t, d.timeouts.read),
+                            o = function () {
+                                return v(
                                     d,
                                     d.hosts.filter(function (e) {
-                                        return 0 != (e.accept & _.Read);
+                                        return 0 != (e.accept & p.Read);
                                     }),
                                     e,
-                                    n
+                                    r
                                 );
                             };
-                        if (!0 !== (void 0 !== n.cacheable ? n.cacheable : e.cacheable)) return i();
+                        if (!0 !== (void 0 !== r.cacheable ? r.cacheable : e.cacheable)) return o();
                         var a = {
                             request: e,
-                            mappedRequestOptions: n,
+                            mappedRequestOptions: r,
                             transporter: {
                                 queryParameters: d.queryParameters,
                                 headers: d.headers
@@ -452,7 +452,7 @@ var t, n;
                             function () {
                                 return d.requestsCache.get(a, function () {
                                     return d.requestsCache
-                                        .set(a, i())
+                                        .set(a, o())
                                         .then(
                                             function (e) {
                                                 return Promise.all([d.requestsCache.delete(a), e]);
@@ -462,7 +462,7 @@ var t, n;
                                             }
                                         )
                                         .then(function (e) {
-                                            var t = r(e, 2);
+                                            var t = n(e, 2);
                                             return t[0], t[1];
                                         });
                                 });
@@ -475,70 +475,70 @@ var t, n;
                         );
                     },
                     write: function (e, t) {
-                        return E(
+                        return v(
                             d,
                             d.hosts.filter(function (e) {
-                                return 0 != (e.accept & _.Write);
+                                return 0 != (e.accept & p.Write);
                             }),
                             e,
-                            f(t, d.timeouts.write)
+                            l(t, d.timeouts.write)
                         );
                     }
                 };
             return d;
         }
-        function I(e) {
+        function w(e) {
             return Object.keys(e)
                 .map(function (t) {
-                    var n;
-                    return c('%s=%s', t, ((n = e[t]), '[object Object]' === Object.prototype.toString.call(n) || '[object Array]' === Object.prototype.toString.call(n) ? JSON.stringify(e[t]) : e[t]));
+                    var r;
+                    return f('%s=%s', t, ((r = e[t]), '[object Object]' === Object.prototype.toString.call(r) || '[object Array]' === Object.prototype.toString.call(r) ? JSON.stringify(e[t]) : e[t]));
                 })
                 .join('&');
         }
-        function b(e) {
+        function x(e) {
             return e.map(function (e) {
-                return T(e);
+                return I(e);
             });
         }
-        function T(e) {
-            var n = e.request.headers['x-algolia-api-key'] ? { 'x-algolia-api-key': '*****' } : {};
-            return t(t({}, e), {}, { request: t(t({}, e.request), {}, { headers: t(t({}, e.request.headers), n) }) });
+        function I(e) {
+            var r = e.request.headers['x-algolia-api-key'] ? { 'x-algolia-api-key': '*****' } : {};
+            return t(t({}, e), {}, { request: t(t({}, e.request), {}, { headers: t(t({}, e.request.headers), r) }) });
         }
-        var S = function (e) {
-                return function (t, n) {
+        var P = function (e) {
+                return function (t, r) {
                     return e.transporter.write(
                         {
                             method: g,
                             path: '2/abtests',
                             data: t
                         },
-                        n
+                        r
                     );
                 };
             },
-            y = function (e) {
-                return function (t, n) {
+            T = function (e) {
+                return function (t, r) {
                     return e.transporter.write(
                         {
-                            method: m,
-                            path: c('2/abtests/%s', t)
+                            method: y,
+                            path: f('2/abtests/%s', t)
                         },
-                        n
+                        r
                     );
                 };
             },
-            A = function (e) {
-                return function (t, n) {
+            O = function (e) {
+                return function (t, r) {
                     return e.transporter.read(
                         {
                             method: 'GET',
-                            path: c('2/abtests/%s', t)
+                            path: f('2/abtests/%s', t)
                         },
-                        n
+                        r
                     );
                 };
             },
-            N = function (e) {
+            E = function (e) {
                 return function (t) {
                     return e.transporter.read(
                         {
@@ -549,18 +549,18 @@ var t, n;
                     );
                 };
             },
-            C = function (e) {
-                return function (t, n) {
+            j = function (e) {
+                return function (t, r) {
                     return e.transporter.write(
                         {
                             method: g,
-                            path: c('2/abtests/%s/stop', t)
+                            path: f('2/abtests/%s/stop', t)
                         },
-                        n
+                        r
                     );
                 };
             },
-            R = function (e) {
+            D = function (e) {
                 return function (t) {
                     return e.transporter.read(
                         {
@@ -571,89 +571,89 @@ var t, n;
                     );
                 };
             },
-            O = function (e) {
-                return function (t, n) {
+            k = function (e) {
+                return function (t, r) {
                     return e.transporter.write(
                         {
                             method: g,
                             path: '1/strategies/personalization',
                             data: t
                         },
-                        n
+                        r
                     );
                 };
             };
-        function D(e) {
-            return (function t(n) {
-                return e.request(n).then(function (r) {
-                    if ((void 0 !== e.batch && e.batch(r.hits), !e.shouldStop(r))) return r.cursor ? t({ cursor: r.cursor }) : t({ page: (n.page || 0) + 1 });
+        function q(e) {
+            return (function t(r) {
+                return e.request(r).then(function (n) {
+                    if ((void 0 !== e.batch && e.batch(n.hits), !e.shouldStop(n))) return n.cursor ? t({ cursor: n.cursor }) : t({ page: (r.page || 0) + 1 });
                 });
             })({});
         }
-        var L = function (e) {
-                return function (r, i) {
-                    var a = i || {},
-                        s = a.queryParameters,
-                        u = n(a, ['queryParameters']),
-                        c = t({ acl: r }, void 0 !== s ? { queryParameters: s } : {});
-                    return l(
+        var S = function (e) {
+                return function (n, o) {
+                    var a = o || {},
+                        i = a.queryParameters,
+                        c = r(a, ['queryParameters']),
+                        f = t({ acl: n }, void 0 !== i ? { queryParameters: i } : {});
+                    return u(
                         e.transporter.write(
                             {
                                 method: g,
                                 path: '1/keys',
-                                data: c
+                                data: f
                             },
-                            u
+                            c
                         ),
-                        function (t, n) {
-                            return o(function (r) {
-                                return V(e)(t.key, n).catch(function (e) {
+                        function (t, r) {
+                            return s(function (n) {
+                                return L(e)(t.key, r).catch(function (e) {
                                     if (404 !== e.status) throw e;
-                                    return r();
+                                    return n();
                                 });
                             });
                         }
                     );
                 };
             },
-            x = function (e) {
-                return function (t, n, r) {
-                    var i = f(r);
+            R = function (e) {
+                return function (t, r, n) {
+                    var o = l(n);
                     return (
-                        (i.queryParameters['X-Algolia-User-ID'] = t),
+                        (o.queryParameters['X-Algolia-User-ID'] = t),
                         e.transporter.write(
                             {
                                 method: g,
                                 path: '1/clusters/mapping',
-                                data: { cluster: n }
+                                data: { cluster: r }
                             },
-                            i
+                            o
                         )
                     );
                 };
             },
-            w = function (e) {
-                return function (t, n, r) {
+            A = function (e) {
+                return function (t, r, n) {
                     return e.transporter.write(
                         {
                             method: g,
                             path: '1/clusters/mapping/batch',
                             data: {
                                 users: t,
-                                cluster: n
+                                cluster: r
                             }
                         },
-                        r
+                        n
                     );
                 };
             },
-            M = function (e) {
-                return function (t, n) {
-                    return l(
+            N = function (e) {
+                return function (t, r) {
+                    return u(
                         e.transporter.write(
                             {
                                 method: g,
-                                path: c('/1/dictionaries/%s/batch', t),
+                                path: f('/1/dictionaries/%s/batch', t),
                                 data: {
                                     clearExistingDictionaryEntries: !0,
                                     requests: {
@@ -662,68 +662,68 @@ var t, n;
                                     }
                                 }
                             },
-                            n
+                            r
                         ),
-                        function (t, n) {
-                            return e_(e)(t.taskID, n);
+                        function (t, r) {
+                            return ep(e)(t.taskID, r);
                         }
                     );
                 };
             },
-            P = function (e) {
-                return function (t, n, r) {
-                    return l(
+            C = function (e) {
+                return function (t, r, n) {
+                    return u(
                         e.transporter.write(
                             {
                                 method: g,
-                                path: c('1/indexes/%s/operation', t),
+                                path: f('1/indexes/%s/operation', t),
                                 data: {
                                     operation: 'copy',
-                                    destination: n
+                                    destination: r
                                 }
                             },
-                            r
+                            n
                         ),
-                        function (n, r) {
-                            return q(e)(t, { methods: { waitTask: e$ } }).waitTask(n.taskID, r);
+                        function (r, n) {
+                            return V(e)(t, { methods: { waitTask: eZ } }).waitTask(r.taskID, n);
                         }
                     );
                 };
             },
-            k = function (e) {
-                return function (n, r, i) {
-                    return P(e)(n, r, t(t({}, i), {}, { scope: [e1.Rules] }));
-                };
-            },
             U = function (e) {
-                return function (n, r, i) {
-                    return P(e)(n, r, t(t({}, i), {}, { scope: [e1.Settings] }));
+                return function (r, n, o) {
+                    return C(e)(r, n, t(t({}, o), {}, { scope: [e0.Rules] }));
                 };
             },
-            B = function (e) {
-                return function (n, r, i) {
-                    return P(e)(n, r, t(t({}, i), {}, { scope: [e1.Synonyms] }));
+            M = function (e) {
+                return function (r, n, o) {
+                    return C(e)(r, n, t(t({}, o), {}, { scope: [e0.Settings] }));
+                };
+            },
+            _ = function (e) {
+                return function (r, n, o) {
+                    return C(e)(r, n, t(t({}, o), {}, { scope: [e0.Synonyms] }));
                 };
             },
             G = function (e) {
-                return function (t, n) {
-                    return 'GET' === t.method ? e.transporter.read(t, n) : e.transporter.write(t, n);
+                return function (t, r) {
+                    return 'GET' === t.method ? e.transporter.read(t, r) : e.transporter.write(t, r);
                 };
             },
-            Z = function (e) {
-                return function (t, n) {
-                    return l(
+            z = function (e) {
+                return function (t, r) {
+                    return u(
                         e.transporter.write(
                             {
-                                method: m,
-                                path: c('1/keys/%s', t)
+                                method: y,
+                                path: f('1/keys/%s', t)
                             },
-                            n
+                            r
                         ),
-                        function (n, r) {
-                            return o(function (n) {
-                                return V(e)(t, r)
-                                    .then(n)
+                        function (r, n) {
+                            return s(function (r) {
+                                return L(e)(t, n)
+                                    .then(r)
                                     .catch(function (e) {
                                         if (404 !== e.status) throw e;
                                     });
@@ -733,54 +733,54 @@ var t, n;
                 };
             },
             F = function (e) {
-                return function (t, n, r) {
-                    var i = n.map(function (e) {
+                return function (t, r, n) {
+                    var o = r.map(function (e) {
                         return {
                             action: 'deleteEntry',
                             body: { objectID: e }
                         };
                     });
-                    return l(
+                    return u(
                         e.transporter.write(
                             {
                                 method: g,
-                                path: c('/1/dictionaries/%s/batch', t),
+                                path: f('/1/dictionaries/%s/batch', t),
                                 data: {
                                     clearExistingDictionaryEntries: !1,
-                                    requests: i
+                                    requests: o
                                 }
                             },
-                            r
+                            n
                         ),
-                        function (t, n) {
-                            return e_(e)(t.taskID, n);
+                        function (t, r) {
+                            return ep(e)(t.taskID, r);
                         }
                     );
                 };
             },
-            V = function (e) {
-                return function (t, n) {
+            L = function (e) {
+                return function (t, r) {
                     return e.transporter.read(
                         {
                             method: 'GET',
-                            path: c('1/keys/%s', t)
+                            path: f('1/keys/%s', t)
                         },
-                        n
+                        r
                     );
                 };
             },
-            j = function (e) {
-                return function (t, n) {
+            J = function (e) {
+                return function (t, r) {
                     return e.transporter.read(
                         {
                             method: 'GET',
-                            path: c('1/task/%s', t.toString())
+                            path: f('1/task/%s', t.toString())
                         },
-                        n
+                        r
                     );
                 };
             },
-            H = function (e) {
+            B = function (e) {
                 return function (t) {
                     return e.transporter.read(
                         {
@@ -791,7 +791,7 @@ var t, n;
                     );
                 };
             },
-            Y = function (e) {
+            H = function (e) {
                 return function (t) {
                     return e.transporter.read(
                         {
@@ -802,7 +802,7 @@ var t, n;
                     );
                 };
             },
-            W = function (e) {
+            K = function (e) {
                 return function (t) {
                     return e.transporter.read(
                         {
@@ -813,24 +813,24 @@ var t, n;
                     );
                 };
             },
-            K = function (e) {
-                return function (t, n) {
+            W = function (e) {
+                return function (t, r) {
                     return e.transporter.read(
                         {
                             method: 'GET',
-                            path: c('1/clusters/mapping/%s', t)
+                            path: f('1/clusters/mapping/%s', t)
                         },
-                        n
+                        r
                     );
                 };
             },
-            z = function (e) {
+            Q = function (e) {
                 return function (t) {
-                    var r = t || {},
-                        i = r.retrieveMappings,
-                        a = n(r, ['retrieveMappings']);
+                    var n = t || {},
+                        o = n.retrieveMappings,
+                        a = r(n, ['retrieveMappings']);
                     return (
-                        !0 === i && (a.getClusters = !0),
+                        !0 === o && (a.getClusters = !0),
                         e.transporter.read(
                             {
                                 method: 'GET',
@@ -841,20 +841,20 @@ var t, n;
                     );
                 };
             },
-            q = function (e) {
+            V = function (e) {
                 return function (t) {
-                    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                    return u(
+                    var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                    return c(
                         {
                             transporter: e.transporter,
                             appId: e.appId,
                             indexName: t
                         },
-                        n.methods
+                        r.methods
                     );
                 };
             },
-            Q = function (e) {
+            X = function (e) {
                 return function (t) {
                     return e.transporter.read(
                         {
@@ -865,7 +865,7 @@ var t, n;
                     );
                 };
             },
-            X = function (e) {
+            $ = function (e) {
                 return function (t) {
                     return e.transporter.read(
                         {
@@ -876,7 +876,7 @@ var t, n;
                     );
                 };
             },
-            J = function (e) {
+            Y = function (e) {
                 return function (t) {
                     return e.transporter.read(
                         {
@@ -887,7 +887,7 @@ var t, n;
                     );
                 };
             },
-            $ = function (e) {
+            Z = function (e) {
                 return function (t) {
                     return e.transporter.read(
                         {
@@ -899,291 +899,291 @@ var t, n;
                 };
             },
             ee = function (e) {
-                return function (t, n, r) {
-                    return l(
+                return function (t, r, n) {
+                    return u(
                         e.transporter.write(
                             {
                                 method: g,
-                                path: c('1/indexes/%s/operation', t),
+                                path: f('1/indexes/%s/operation', t),
                                 data: {
                                     operation: 'move',
-                                    destination: n
+                                    destination: r
                                 }
                             },
-                            r
+                            n
                         ),
-                        function (n, r) {
-                            return q(e)(t, { methods: { waitTask: e$ } }).waitTask(n.taskID, r);
+                        function (r, n) {
+                            return V(e)(t, { methods: { waitTask: eZ } }).waitTask(r.taskID, n);
                         }
                     );
                 };
             },
             et = function (e) {
-                return function (t, n) {
-                    return l(
+                return function (t, r) {
+                    return u(
                         e.transporter.write(
                             {
                                 method: g,
                                 path: '1/indexes/*/batch',
                                 data: { requests: t }
                             },
-                            n
+                            r
                         ),
-                        function (t, n) {
+                        function (t, r) {
                             return Promise.all(
-                                Object.keys(t.taskID).map(function (r) {
-                                    return q(e)(r, { methods: { waitTask: e$ } }).waitTask(t.taskID[r], n);
+                                Object.keys(t.taskID).map(function (n) {
+                                    return V(e)(n, { methods: { waitTask: eZ } }).waitTask(t.taskID[n], r);
                                 })
                             );
                         }
                     );
                 };
             },
-            en = function (e) {
-                return function (t, n) {
+            er = function (e) {
+                return function (t, r) {
                     return e.transporter.read(
                         {
                             method: g,
                             path: '1/indexes/*/objects',
                             data: { requests: t }
                         },
-                        n
+                        r
                     );
                 };
             },
-            er = function (e) {
-                return function (n, r) {
-                    var i = n.map(function (e) {
-                        return t(t({}, e), {}, { params: I(e.params || {}) });
+            en = function (e) {
+                return function (r, n) {
+                    var o = r.map(function (e) {
+                        return t(t({}, e), {}, { params: w(e.params || {}) });
                     });
                     return e.transporter.read(
                         {
                             method: g,
                             path: '1/indexes/*/queries',
-                            data: { requests: i },
+                            data: { requests: o },
                             cacheable: !0
                         },
-                        r
+                        n
                     );
                 };
             },
-            ei = function (e) {
-                return function (r, i) {
+            eo = function (e) {
+                return function (n, o) {
                     return Promise.all(
-                        r.map(function (r) {
-                            var a = r.params,
-                                s = a.facetName,
-                                o = a.facetQuery,
-                                l = n(a, ['facetName', 'facetQuery']);
-                            return q(e)(r.indexName, { methods: { searchForFacetValues: eq } }).searchForFacetValues(s, o, t(t({}, i), l));
+                        n.map(function (n) {
+                            var a = n.params,
+                                i = a.facetName,
+                                s = a.facetQuery,
+                                u = r(a, ['facetName', 'facetQuery']);
+                            return V(e)(n.indexName, { methods: { searchForFacetValues: eV } }).searchForFacetValues(i, s, t(t({}, o), u));
                         })
                     );
                 };
             },
             ea = function (e) {
-                return function (t, n) {
-                    var r = f(n);
+                return function (t, r) {
+                    var n = l(r);
                     return (
-                        (r.queryParameters['X-Algolia-User-ID'] = t),
+                        (n.queryParameters['X-Algolia-User-ID'] = t),
                         e.transporter.write(
                             {
-                                method: m,
+                                method: y,
                                 path: '1/clusters/mapping'
                             },
-                            r
+                            n
                         )
                     );
                 };
             },
-            es = function (e) {
-                return function (t, n, r) {
-                    var i = n.map(function (e) {
+            ei = function (e) {
+                return function (t, r, n) {
+                    var o = r.map(function (e) {
                         return {
                             action: 'addEntry',
                             body: e
                         };
                     });
-                    return l(
+                    return u(
                         e.transporter.write(
                             {
                                 method: g,
-                                path: c('/1/dictionaries/%s/batch', t),
+                                path: f('/1/dictionaries/%s/batch', t),
                                 data: {
                                     clearExistingDictionaryEntries: !0,
-                                    requests: i
+                                    requests: o
                                 }
                             },
-                            r
+                            n
                         ),
-                        function (t, n) {
-                            return e_(e)(t.taskID, n);
+                        function (t, r) {
+                            return ep(e)(t.taskID, r);
                         }
                     );
                 };
             },
-            eo = function (e) {
-                return function (t, n) {
-                    return l(
+            es = function (e) {
+                return function (t, r) {
+                    return u(
                         e.transporter.write(
                             {
                                 method: g,
-                                path: c('1/keys/%s/restore', t)
+                                path: f('1/keys/%s/restore', t)
                             },
-                            n
+                            r
                         ),
-                        function (n, r) {
-                            return o(function (n) {
-                                return V(e)(t, r).catch(function (e) {
+                        function (r, n) {
+                            return s(function (r) {
+                                return L(e)(t, n).catch(function (e) {
                                     if (404 !== e.status) throw e;
-                                    return n();
+                                    return r();
                                 });
                             });
                         }
                     );
                 };
             },
-            el = function (e) {
-                return function (t, n, r) {
-                    var i = n.map(function (e) {
+            eu = function (e) {
+                return function (t, r, n) {
+                    var o = r.map(function (e) {
                         return {
                             action: 'addEntry',
                             body: e
                         };
                     });
-                    return l(
+                    return u(
                         e.transporter.write(
                             {
                                 method: g,
-                                path: c('/1/dictionaries/%s/batch', t),
+                                path: f('/1/dictionaries/%s/batch', t),
                                 data: {
                                     clearExistingDictionaryEntries: !1,
-                                    requests: i
+                                    requests: o
                                 }
                             },
-                            r
+                            n
                         ),
-                        function (t, n) {
-                            return e_(e)(t.taskID, n);
+                        function (t, r) {
+                            return ep(e)(t.taskID, r);
                         }
                     );
                 };
             },
-            eu = function (e) {
-                return function (t, n, r) {
+            ec = function (e) {
+                return function (t, r, n) {
                     return e.transporter.read(
                         {
                             method: g,
-                            path: c('/1/dictionaries/%s/search', t),
-                            data: { query: n },
+                            path: f('/1/dictionaries/%s/search', t),
+                            data: { query: r },
                             cacheable: !0
                         },
-                        r
+                        n
                     );
                 };
             },
-            ec = function (e) {
-                return function (t, n) {
+            ef = function (e) {
+                return function (t, r) {
                     return e.transporter.read(
                         {
                             method: g,
                             path: '1/clusters/mapping/search',
                             data: { query: t }
                         },
-                        n
+                        r
                     );
                 };
             },
             ed = function (e) {
-                return function (t, n) {
-                    return l(
+                return function (t, r) {
+                    return u(
                         e.transporter.write(
                             {
                                 method: 'PUT',
                                 path: '/1/dictionaries/*/settings',
                                 data: t
                             },
-                            n
+                            r
                         ),
-                        function (t, n) {
-                            return e_(e)(t.taskID, n);
+                        function (t, r) {
+                            return ep(e)(t.taskID, r);
                         }
                     );
                 };
             },
-            ef = function (e) {
-                return function (t, r) {
-                    var i = Object.assign({}, r),
-                        a = r || {},
-                        s = a.queryParameters,
-                        u = n(a, ['queryParameters']),
+            el = function (e) {
+                return function (t, n) {
+                    var o = Object.assign({}, n),
+                        a = n || {},
+                        i = a.queryParameters,
+                        c = r(a, ['queryParameters']),
                         d = ['acl', 'indexes', 'referers', 'restrictSources', 'queryParameters', 'description', 'maxQueriesPerIPPerHour', 'maxHitsPerQuery'];
-                    return l(
+                    return u(
                         e.transporter.write(
                             {
                                 method: 'PUT',
-                                path: c('1/keys/%s', t),
-                                data: s ? { queryParameters: s } : {}
+                                path: f('1/keys/%s', t),
+                                data: i ? { queryParameters: i } : {}
                             },
-                            u
+                            c
                         ),
-                        function (n, r) {
-                            return o(function (n) {
-                                return V(e)(t, r).then(function (e) {
+                        function (r, n) {
+                            return s(function (r) {
+                                return L(e)(t, n).then(function (e) {
                                     var t;
                                     return ((t = e),
-                                    Object.keys(i)
+                                    Object.keys(o)
                                         .filter(function (e) {
                                             return -1 !== d.indexOf(e);
                                         })
                                         .every(function (e) {
-                                            if (Array.isArray(t[e]) && Array.isArray(i[e])) {
-                                                var n = t[e];
+                                            if (Array.isArray(t[e]) && Array.isArray(o[e])) {
+                                                var r = t[e];
                                                 return (
-                                                    n.length === i[e].length &&
-                                                    n.every(function (t, n) {
-                                                        return t === i[e][n];
+                                                    r.length === o[e].length &&
+                                                    r.every(function (t, r) {
+                                                        return t === o[e][r];
                                                     })
                                                 );
                                             }
-                                            return t[e] === i[e];
+                                            return t[e] === o[e];
                                         }))
                                         ? Promise.resolve()
-                                        : n();
+                                        : r();
                                 });
                             });
                         }
                     );
                 };
             },
-            e_ = function (e) {
-                return function (t, n) {
-                    return o(function (r) {
-                        return j(e)(t, n).then(function (e) {
-                            return 'published' !== e.status ? r() : void 0;
+            ep = function (e) {
+                return function (t, r) {
+                    return s(function (n) {
+                        return J(e)(t, r).then(function (e) {
+                            return 'published' !== e.status ? n() : void 0;
                         });
                     });
                 };
             },
-            ep = function (e) {
-                return function (t, n) {
-                    return l(
+            eh = function (e) {
+                return function (t, r) {
+                    return u(
                         e.transporter.write(
                             {
                                 method: g,
-                                path: c('1/indexes/%s/batch', e.indexName),
+                                path: f('1/indexes/%s/batch', e.indexName),
                                 data: { requests: t }
                             },
-                            n
+                            r
                         ),
-                        function (t, n) {
-                            return e$(e)(t.taskID, n);
+                        function (t, r) {
+                            return eZ(e)(t.taskID, r);
                         }
                     );
                 };
             },
-            eh = function (e) {
-                return function (n) {
-                    return D(
+            em = function (e) {
+                return function (r) {
+                    return q(
                         t(
                             t(
                                 {
@@ -1191,7 +1191,7 @@ var t, n;
                                         return void 0 === e.cursor;
                                     }
                                 },
-                                n
+                                r
                             ),
                             {},
                             {
@@ -1199,10 +1199,10 @@ var t, n;
                                     return e.transporter.read(
                                         {
                                             method: g,
-                                            path: c('1/indexes/%s/browse', e.indexName),
+                                            path: f('1/indexes/%s/browse', e.indexName),
                                             data: t
                                         },
-                                        n
+                                        r
                                     );
                                 }
                             }
@@ -1210,23 +1210,23 @@ var t, n;
                     );
                 };
             },
-            em = function (e) {
-                return function (n) {
-                    var r = t({ hitsPerPage: 1000 }, n);
-                    return D(
+            ey = function (e) {
+                return function (r) {
+                    var n = t({ hitsPerPage: 1000 }, r);
+                    return q(
                         t(
                             t(
                                 {
                                     shouldStop: function (e) {
-                                        return e.hits.length < r.hitsPerPage;
+                                        return e.hits.length < n.hitsPerPage;
                                     }
                                 },
-                                r
+                                n
                             ),
                             {},
                             {
-                                request: function (n) {
-                                    return eQ(e)('', t(t({}, r), n)).then(function (e) {
+                                request: function (r) {
+                                    return eX(e)('', t(t({}, n), r)).then(function (e) {
                                         return t(
                                             t({}, e),
                                             {},
@@ -1244,22 +1244,22 @@ var t, n;
                 };
             },
             eg = function (e) {
-                return function (n) {
-                    var r = t({ hitsPerPage: 1000 }, n);
-                    return D(
+                return function (r) {
+                    var n = t({ hitsPerPage: 1000 }, r);
+                    return q(
                         t(
                             t(
                                 {
                                     shouldStop: function (e) {
-                                        return e.hits.length < r.hitsPerPage;
+                                        return e.hits.length < n.hitsPerPage;
                                     }
                                 },
-                                r
+                                n
                             ),
                             {},
                             {
-                                request: function (n) {
-                                    return eX(e)('', t(t({}, r), n)).then(function (e) {
+                                request: function (r) {
+                                    return e$(e)('', t(t({}, n), r)).then(function (e) {
                                         return t(
                                             t({}, e),
                                             {},
@@ -1276,205 +1276,205 @@ var t, n;
                     );
                 };
             },
-            eE = function (e) {
-                return function (t, r, i) {
-                    var a = i || {},
-                        s = a.batchSize,
-                        o = n(a, ['batchSize']),
-                        u = {
+            ev = function (e) {
+                return function (t, n, o) {
+                    var a = o || {},
+                        i = a.batchSize,
+                        s = r(a, ['batchSize']),
+                        c = {
                             taskIDs: [],
                             objectIDs: []
                         };
-                    return l(
-                        (function n() {
-                            var i,
+                    return u(
+                        (function r() {
+                            var o,
                                 a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-                                l = [];
-                            for (i = a; i < t.length && (l.push(t[i]), l.length !== (s || 1000)); i++);
-                            return 0 === l.length
-                                ? Promise.resolve(u)
-                                : ep(e)(
-                                      l.map(function (e) {
+                                u = [];
+                            for (o = a; o < t.length && (u.push(t[o]), u.length !== (i || 1000)); o++);
+                            return 0 === u.length
+                                ? Promise.resolve(c)
+                                : eh(e)(
+                                      u.map(function (e) {
                                           return {
-                                              action: r,
+                                              action: n,
                                               body: e
                                           };
                                       }),
-                                      o
+                                      s
                                   ).then(function (e) {
-                                      return (u.objectIDs = u.objectIDs.concat(e.objectIDs)), u.taskIDs.push(e.taskID), n(++i);
+                                      return (c.objectIDs = c.objectIDs.concat(e.objectIDs)), c.taskIDs.push(e.taskID), r(++o);
                                   });
                         })(),
-                        function (t, n) {
+                        function (t, r) {
                             return Promise.all(
                                 t.taskIDs.map(function (t) {
-                                    return e$(e)(t, n);
+                                    return eZ(e)(t, r);
                                 })
                             );
                         }
                     );
                 };
             },
-            ev = function (e) {
+            eb = function (e) {
                 return function (t) {
-                    return l(
+                    return u(
                         e.transporter.write(
                             {
                                 method: g,
-                                path: c('1/indexes/%s/clear', e.indexName)
+                                path: f('1/indexes/%s/clear', e.indexName)
                             },
                             t
                         ),
-                        function (t, n) {
-                            return e$(e)(t.taskID, n);
+                        function (t, r) {
+                            return eZ(e)(t.taskID, r);
                         }
+                    );
+                };
+            },
+            ew = function (e) {
+                return function (t) {
+                    var n = t || {},
+                        o = n.forwardToReplicas,
+                        a = l(r(n, ['forwardToReplicas']));
+                    return (
+                        o && (a.queryParameters.forwardToReplicas = 1),
+                        u(
+                            e.transporter.write(
+                                {
+                                    method: g,
+                                    path: f('1/indexes/%s/rules/clear', e.indexName)
+                                },
+                                a
+                            ),
+                            function (t, r) {
+                                return eZ(e)(t.taskID, r);
+                            }
+                        )
+                    );
+                };
+            },
+            ex = function (e) {
+                return function (t) {
+                    var n = t || {},
+                        o = n.forwardToReplicas,
+                        a = l(r(n, ['forwardToReplicas']));
+                    return (
+                        o && (a.queryParameters.forwardToReplicas = 1),
+                        u(
+                            e.transporter.write(
+                                {
+                                    method: g,
+                                    path: f('1/indexes/%s/synonyms/clear', e.indexName)
+                                },
+                                a
+                            ),
+                            function (t, r) {
+                                return eZ(e)(t.taskID, r);
+                            }
+                        )
                     );
                 };
             },
             eI = function (e) {
-                return function (t) {
-                    var r = t || {},
-                        i = r.forwardToReplicas,
-                        a = f(n(r, ['forwardToReplicas']));
-                    return (
-                        i && (a.queryParameters.forwardToReplicas = 1),
-                        l(
-                            e.transporter.write(
-                                {
-                                    method: g,
-                                    path: c('1/indexes/%s/rules/clear', e.indexName)
-                                },
-                                a
-                            ),
-                            function (t, n) {
-                                return e$(e)(t.taskID, n);
-                            }
-                        )
+                return function (t, r) {
+                    return u(
+                        e.transporter.write(
+                            {
+                                method: g,
+                                path: f('1/indexes/%s/deleteByQuery', e.indexName),
+                                data: t
+                            },
+                            r
+                        ),
+                        function (t, r) {
+                            return eZ(e)(t.taskID, r);
+                        }
                     );
                 };
             },
-            eb = function (e) {
+            eP = function (e) {
                 return function (t) {
-                    var r = t || {},
-                        i = r.forwardToReplicas,
-                        a = f(n(r, ['forwardToReplicas']));
-                    return (
-                        i && (a.queryParameters.forwardToReplicas = 1),
-                        l(
-                            e.transporter.write(
-                                {
-                                    method: g,
-                                    path: c('1/indexes/%s/synonyms/clear', e.indexName)
-                                },
-                                a
-                            ),
-                            function (t, n) {
-                                return e$(e)(t.taskID, n);
-                            }
-                        )
+                    return u(
+                        e.transporter.write(
+                            {
+                                method: y,
+                                path: f('1/indexes/%s', e.indexName)
+                            },
+                            t
+                        ),
+                        function (t, r) {
+                            return eZ(e)(t.taskID, r);
+                        }
                     );
                 };
             },
             eT = function (e) {
-                return function (t, n) {
-                    return l(
-                        e.transporter.write(
-                            {
-                                method: g,
-                                path: c('1/indexes/%s/deleteByQuery', e.indexName),
-                                data: t
-                            },
-                            n
-                        ),
-                        function (t, n) {
-                            return e$(e)(t.taskID, n);
-                        }
-                    );
-                };
-            },
-            eS = function (e) {
-                return function (t) {
-                    return l(
-                        e.transporter.write(
-                            {
-                                method: m,
-                                path: c('1/indexes/%s', e.indexName)
-                            },
-                            t
-                        ),
-                        function (t, n) {
-                            return e$(e)(t.taskID, n);
-                        }
-                    );
-                };
-            },
-            ey = function (e) {
-                return function (t, n) {
-                    return l(
-                        eA(e)([t], n).then(function (e) {
+                return function (t, r) {
+                    return u(
+                        eO(e)([t], r).then(function (e) {
                             return { taskID: e.taskIDs[0] };
                         }),
-                        function (t, n) {
-                            return e$(e)(t.taskID, n);
+                        function (t, r) {
+                            return eZ(e)(t.taskID, r);
                         }
                     );
                 };
             },
-            eA = function (e) {
-                return function (t, n) {
-                    var r = t.map(function (e) {
+            eO = function (e) {
+                return function (t, r) {
+                    var n = t.map(function (e) {
                         return { objectID: e };
                     });
-                    return eE(e)(r, e0.DeleteObject, n);
+                    return ev(e)(n, e1.DeleteObject, r);
                 };
             },
-            eN = function (e) {
-                return function (t, r) {
-                    var i = r || {},
-                        a = i.forwardToReplicas,
-                        s = f(n(i, ['forwardToReplicas']));
+            eE = function (e) {
+                return function (t, n) {
+                    var o = n || {},
+                        a = o.forwardToReplicas,
+                        i = l(r(o, ['forwardToReplicas']));
                     return (
-                        a && (s.queryParameters.forwardToReplicas = 1),
-                        l(
+                        a && (i.queryParameters.forwardToReplicas = 1),
+                        u(
                             e.transporter.write(
                                 {
-                                    method: m,
-                                    path: c('1/indexes/%s/rules/%s', e.indexName, t)
+                                    method: y,
+                                    path: f('1/indexes/%s/rules/%s', e.indexName, t)
                                 },
-                                s
+                                i
                             ),
-                            function (t, n) {
-                                return e$(e)(t.taskID, n);
+                            function (t, r) {
+                                return eZ(e)(t.taskID, r);
                             }
                         )
                     );
                 };
             },
-            eC = function (e) {
-                return function (t, r) {
-                    var i = r || {},
-                        a = i.forwardToReplicas,
-                        s = f(n(i, ['forwardToReplicas']));
+            ej = function (e) {
+                return function (t, n) {
+                    var o = n || {},
+                        a = o.forwardToReplicas,
+                        i = l(r(o, ['forwardToReplicas']));
                     return (
-                        a && (s.queryParameters.forwardToReplicas = 1),
-                        l(
+                        a && (i.queryParameters.forwardToReplicas = 1),
+                        u(
                             e.transporter.write(
                                 {
-                                    method: m,
-                                    path: c('1/indexes/%s/synonyms/%s', e.indexName, t)
+                                    method: y,
+                                    path: f('1/indexes/%s/synonyms/%s', e.indexName, t)
                                 },
-                                s
+                                i
                             ),
-                            function (t, n) {
-                                return e$(e)(t.taskID, n);
+                            function (t, r) {
+                                return eZ(e)(t.taskID, r);
                             }
                         )
                     );
                 };
             },
-            eR = function (e) {
+            eD = function (e) {
                 return function (t) {
-                    return eP(e)(t)
+                    return eC(e)(t)
                         .then(function () {
                             return !0;
                         })
@@ -1484,194 +1484,194 @@ var t, n;
                         });
                 };
             },
-            eO = function (e) {
-                return function (t, n, r) {
+            ek = function (e) {
+                return function (t, r, n) {
                     return e.transporter.read(
                         {
                             method: g,
-                            path: c('1/answers/%s/prediction', e.indexName),
+                            path: f('1/answers/%s/prediction', e.indexName),
                             data: {
                                 query: t,
-                                queryLanguages: n
+                                queryLanguages: r
                             },
                             cacheable: !0
-                        },
-                        r
-                    );
-                };
-            },
-            eD = function (e) {
-                return function (i, a) {
-                    var s = a || {},
-                        o = s.query,
-                        l = s.paginate,
-                        u = n(s, ['query', 'paginate']),
-                        c = 0;
-                    return (function n() {
-                        return ez(e)(o || '', t(t({}, u), {}, { page: c })).then(function (e) {
-                            for (var t = 0, a = Object.entries(e.hits); t < a.length; t++) {
-                                var s = r(a[t], 2),
-                                    o = s[0],
-                                    u = s[1];
-                                if (i(u))
-                                    return {
-                                        object: u,
-                                        position: parseInt(o, 10),
-                                        page: c
-                                    };
-                            }
-                            if ((c++, !1 === l || c >= e.nbPages))
-                                throw {
-                                    name: 'ObjectNotFoundError',
-                                    message: 'Object not found.'
-                                };
-                            return n();
-                        });
-                    })();
-                };
-            },
-            eL = function (e) {
-                return function (t, n) {
-                    return e.transporter.read(
-                        {
-                            method: 'GET',
-                            path: c('1/indexes/%s/%s', e.indexName, t)
                         },
                         n
                     );
                 };
             },
-            ex = function () {
+            eq = function (e) {
+                return function (o, a) {
+                    var i = a || {},
+                        s = i.query,
+                        u = i.paginate,
+                        c = r(i, ['query', 'paginate']),
+                        f = 0;
+                    return (function r() {
+                        return eQ(e)(s || '', t(t({}, c), {}, { page: f })).then(function (e) {
+                            for (var t = 0, a = Object.entries(e.hits); t < a.length; t++) {
+                                var i = n(a[t], 2),
+                                    s = i[0],
+                                    c = i[1];
+                                if (o(c))
+                                    return {
+                                        object: c,
+                                        position: parseInt(s, 10),
+                                        page: f
+                                    };
+                            }
+                            if ((f++, !1 === u || f >= e.nbPages))
+                                throw {
+                                    name: 'ObjectNotFoundError',
+                                    message: 'Object not found.'
+                                };
+                            return r();
+                        });
+                    })();
+                };
+            },
+            eS = function (e) {
+                return function (t, r) {
+                    return e.transporter.read(
+                        {
+                            method: 'GET',
+                            path: f('1/indexes/%s/%s', e.indexName, t)
+                        },
+                        r
+                    );
+                };
+            },
+            eR = function () {
                 return function (e, t) {
-                    for (var n = 0, i = Object.entries(e.hits); n < i.length; n++) {
-                        var a = r(i[n], 2),
-                            s = a[0];
-                        if (a[1].objectID === t) return parseInt(s, 10);
+                    for (var r = 0, o = Object.entries(e.hits); r < o.length; r++) {
+                        var a = n(o[r], 2),
+                            i = a[0];
+                        if (a[1].objectID === t) return parseInt(i, 10);
                     }
                     return -1;
                 };
             },
-            ew = function (e) {
-                return function (r, i) {
-                    var a = i || {},
-                        s = a.attributesToRetrieve,
-                        o = n(a, ['attributesToRetrieve']),
-                        l = r.map(function (n) {
+            eA = function (e) {
+                return function (n, o) {
+                    var a = o || {},
+                        i = a.attributesToRetrieve,
+                        s = r(a, ['attributesToRetrieve']),
+                        u = n.map(function (r) {
                             return t(
                                 {
                                     indexName: e.indexName,
-                                    objectID: n
+                                    objectID: r
                                 },
-                                s ? { attributesToRetrieve: s } : {}
+                                i ? { attributesToRetrieve: i } : {}
                             );
                         });
                     return e.transporter.read(
                         {
                             method: g,
                             path: '1/indexes/*/objects',
-                            data: { requests: l }
+                            data: { requests: u }
                         },
-                        o
+                        s
                     );
                 };
             },
-            eM = function (e) {
-                return function (t, n) {
+            eN = function (e) {
+                return function (t, r) {
                     return e.transporter.read(
                         {
                             method: 'GET',
-                            path: c('1/indexes/%s/rules/%s', e.indexName, t)
+                            path: f('1/indexes/%s/rules/%s', e.indexName, t)
                         },
-                        n
+                        r
                     );
                 };
             },
-            eP = function (e) {
+            eC = function (e) {
                 return function (t) {
                     return e.transporter.read(
                         {
                             method: 'GET',
-                            path: c('1/indexes/%s/settings', e.indexName),
+                            path: f('1/indexes/%s/settings', e.indexName),
                             data: { getVersion: 2 }
                         },
                         t
                     );
                 };
             },
-            ek = function (e) {
-                return function (t, n) {
+            eU = function (e) {
+                return function (t, r) {
                     return e.transporter.read(
                         {
                             method: 'GET',
-                            path: c('1/indexes/%s/synonyms/%s', e.indexName, t)
+                            path: f('1/indexes/%s/synonyms/%s', e.indexName, t)
                         },
-                        n
+                        r
                     );
                 };
             },
-            eU = function (e) {
-                return function (t, n) {
-                    return l(
-                        eB(e)([t], n).then(function (e) {
+            eM = function (e) {
+                return function (t, r) {
+                    return u(
+                        e_(e)([t], r).then(function (e) {
                             return {
                                 objectID: e.objectIDs[0],
                                 taskID: e.taskIDs[0]
                             };
                         }),
-                        function (t, n) {
-                            return e$(e)(t.taskID, n);
+                        function (t, r) {
+                            return eZ(e)(t.taskID, r);
                         }
                     );
                 };
             },
-            eB = function (e) {
-                return function (t, r) {
-                    var i = r || {},
-                        a = i.createIfNotExists,
-                        s = n(i, ['createIfNotExists']),
-                        o = a ? e0.PartialUpdateObject : e0.PartialUpdateObjectNoCreate;
-                    return eE(e)(t, o, s);
+            e_ = function (e) {
+                return function (t, n) {
+                    var o = n || {},
+                        a = o.createIfNotExists,
+                        i = r(o, ['createIfNotExists']),
+                        s = a ? e1.PartialUpdateObject : e1.PartialUpdateObjectNoCreate;
+                    return ev(e)(t, s, i);
                 };
             },
             eG = function (e) {
-                return function (a, s) {
-                    var o = s || {},
-                        u = o.safe,
-                        d = o.autoGenerateObjectIDIfNotExist,
-                        f = o.batchSize,
-                        _ = n(o, ['safe', 'autoGenerateObjectIDIfNotExist', 'batchSize']),
-                        p = function (t, n, r, i) {
-                            return l(
+                return function (a, i) {
+                    var s = i || {},
+                        c = s.safe,
+                        d = s.autoGenerateObjectIDIfNotExist,
+                        l = s.batchSize,
+                        p = r(s, ['safe', 'autoGenerateObjectIDIfNotExist', 'batchSize']),
+                        h = function (t, r, n, o) {
+                            return u(
                                 e.transporter.write(
                                     {
                                         method: g,
-                                        path: c('1/indexes/%s/operation', t),
+                                        path: f('1/indexes/%s/operation', t),
                                         data: {
-                                            operation: r,
-                                            destination: n
+                                            operation: n,
+                                            destination: r
                                         }
                                     },
-                                    i
+                                    o
                                 ),
-                                function (t, n) {
-                                    return e$(e)(t.taskID, n);
+                                function (t, r) {
+                                    return eZ(e)(t.taskID, r);
                                 }
                             );
                         },
-                        h = Math.random().toString(36).substring(7),
-                        m = ''.concat(e.indexName, '_tmp_').concat(h),
-                        E = ej({
+                        m = Math.random().toString(36).substring(7),
+                        y = ''.concat(e.indexName, '_tmp_').concat(m),
+                        v = eJ({
                             appId: e.appId,
                             transporter: e.transporter,
-                            indexName: m
+                            indexName: y
                         }),
-                        v = [],
-                        I = p(
+                        b = [],
+                        w = h(
                             e.indexName,
-                            m,
+                            y,
                             'copy',
                             t(
-                                t({}, _),
+                                t({}, p),
                                 {},
                                 {
                                     scope: ['settings', 'synonyms', 'rules']
@@ -1679,43 +1679,43 @@ var t, n;
                             )
                         );
                     return (
-                        v.push(I),
-                        l(
-                            (u ? I.wait(_) : I)
+                        b.push(w),
+                        u(
+                            (c ? w.wait(p) : w)
                                 .then(function () {
-                                    var e = E(
+                                    var e = v(
                                         a,
                                         t(
-                                            t({}, _),
+                                            t({}, p),
                                             {},
                                             {
                                                 autoGenerateObjectIDIfNotExist: d,
-                                                batchSize: f
+                                                batchSize: l
                                             }
                                         )
                                     );
-                                    return v.push(e), u ? e.wait(_) : e;
+                                    return b.push(e), c ? e.wait(p) : e;
                                 })
                                 .then(function () {
-                                    var t = p(m, e.indexName, 'move', _);
-                                    return v.push(t), u ? t.wait(_) : t;
+                                    var t = h(y, e.indexName, 'move', p);
+                                    return b.push(t), c ? t.wait(p) : t;
                                 })
                                 .then(function () {
-                                    return Promise.all(v);
+                                    return Promise.all(b);
                                 })
                                 .then(function (e) {
-                                    var t = r(e, 3),
-                                        n = t[0],
+                                    var t = n(e, 3),
+                                        r = t[0],
                                         a = t[1],
-                                        s = t[2];
+                                        i = t[2];
                                     return {
                                         objectIDs: a.objectIDs,
-                                        taskIDs: [n.taskID].concat(i(a.taskIDs), [s.taskID])
+                                        taskIDs: [r.taskID].concat(o(a.taskIDs), [i.taskID])
                                     };
                                 }),
                             function (e, t) {
                                 return Promise.all(
-                                    v.map(function (e) {
+                                    b.map(function (e) {
                                         return e.wait(t);
                                     })
                                 );
@@ -1724,248 +1724,248 @@ var t, n;
                     );
                 };
             },
-            eZ = function (e) {
-                return function (n, r) {
-                    return eY(e)(n, t(t({}, r), {}, { clearExistingRules: !0 }));
+            ez = function (e) {
+                return function (r, n) {
+                    return eH(e)(r, t(t({}, n), {}, { clearExistingRules: !0 }));
                 };
             },
             eF = function (e) {
-                return function (n, r) {
-                    return eK(e)(n, t(t({}, r), {}, { clearExistingSynonyms: !0 }));
+                return function (r, n) {
+                    return eW(e)(r, t(t({}, n), {}, { clearExistingSynonyms: !0 }));
                 };
             },
-            eV = function (e) {
-                return function (t, n) {
-                    return l(
-                        ej(e)([t], n).then(function (e) {
+            eL = function (e) {
+                return function (t, r) {
+                    return u(
+                        eJ(e)([t], r).then(function (e) {
                             return {
                                 objectID: e.objectIDs[0],
                                 taskID: e.taskIDs[0]
                             };
                         }),
-                        function (t, n) {
-                            return e$(e)(t.taskID, n);
+                        function (t, r) {
+                            return eZ(e)(t.taskID, r);
                         }
                     );
                 };
             },
-            ej = function (e) {
-                return function (t, r) {
-                    var i = r || {},
-                        a = i.autoGenerateObjectIDIfNotExist,
-                        s = n(i, ['autoGenerateObjectIDIfNotExist']),
-                        o = a ? e0.AddObject : e0.UpdateObject;
-                    if (o === e0.UpdateObject) {
-                        var u = !0,
-                            c = !1,
+            eJ = function (e) {
+                return function (t, n) {
+                    var o = n || {},
+                        a = o.autoGenerateObjectIDIfNotExist,
+                        i = r(o, ['autoGenerateObjectIDIfNotExist']),
+                        s = a ? e1.AddObject : e1.UpdateObject;
+                    if (s === e1.UpdateObject) {
+                        var c = !0,
+                            f = !1,
                             d = void 0;
                         try {
-                            for (var f, _ = t[Symbol.iterator](); !(u = (f = _.next()).done); u = !0)
-                                if (void 0 === f.value.objectID)
-                                    return l(
+                            for (var l, p = t[Symbol.iterator](); !(c = (l = p.next()).done); c = !0)
+                                if (void 0 === l.value.objectID)
+                                    return u(
                                         Promise.reject({
                                             name: 'MissingObjectIDError',
                                             message: "All objects must have an unique objectID (like a primary key) to be valid. Algolia is also able to generate objectIDs automatically but *it's not recommended*. To do it, use the `{'autoGenerateObjectIDIfNotExist': true}` option."
                                         })
                                     );
                         } catch (e) {
-                            (c = !0), (d = e);
+                            (f = !0), (d = e);
                         } finally {
                             try {
-                                u || null == _.return || _.return();
+                                c || null == p.return || p.return();
                             } finally {
-                                if (c) throw d;
+                                if (f) throw d;
                             }
                         }
                     }
-                    return eE(e)(t, o, s);
+                    return ev(e)(t, s, i);
+                };
+            },
+            eB = function (e) {
+                return function (t, r) {
+                    return eH(e)([t], r);
                 };
             },
             eH = function (e) {
                 return function (t, n) {
-                    return eY(e)([t], n);
-                };
-            },
-            eY = function (e) {
-                return function (t, r) {
-                    var i = r || {},
-                        a = i.forwardToReplicas,
-                        s = i.clearExistingRules,
-                        o = f(n(i, ['forwardToReplicas', 'clearExistingRules']));
+                    var o = n || {},
+                        a = o.forwardToReplicas,
+                        i = o.clearExistingRules,
+                        s = l(r(o, ['forwardToReplicas', 'clearExistingRules']));
                     return (
-                        a && (o.queryParameters.forwardToReplicas = 1),
-                        s && (o.queryParameters.clearExistingRules = 1),
-                        l(
+                        a && (s.queryParameters.forwardToReplicas = 1),
+                        i && (s.queryParameters.clearExistingRules = 1),
+                        u(
                             e.transporter.write(
                                 {
                                     method: g,
-                                    path: c('1/indexes/%s/rules/batch', e.indexName),
+                                    path: f('1/indexes/%s/rules/batch', e.indexName),
                                     data: t
                                 },
-                                o
+                                s
                             ),
-                            function (t, n) {
-                                return e$(e)(t.taskID, n);
+                            function (t, r) {
+                                return eZ(e)(t.taskID, r);
                             }
                         )
                     );
-                };
-            },
-            eW = function (e) {
-                return function (t, n) {
-                    return eK(e)([t], n);
                 };
             },
             eK = function (e) {
                 return function (t, r) {
-                    var i = r || {},
-                        a = i.forwardToReplicas,
-                        s = i.clearExistingSynonyms,
-                        o = i.replaceExistingSynonyms,
-                        u = f(n(i, ['forwardToReplicas', 'clearExistingSynonyms', 'replaceExistingSynonyms']));
+                    return eW(e)([t], r);
+                };
+            },
+            eW = function (e) {
+                return function (t, n) {
+                    var o = n || {},
+                        a = o.forwardToReplicas,
+                        i = o.clearExistingSynonyms,
+                        s = o.replaceExistingSynonyms,
+                        c = l(r(o, ['forwardToReplicas', 'clearExistingSynonyms', 'replaceExistingSynonyms']));
                     return (
-                        a && (u.queryParameters.forwardToReplicas = 1),
-                        (o || s) && (u.queryParameters.replaceExistingSynonyms = 1),
-                        l(
+                        a && (c.queryParameters.forwardToReplicas = 1),
+                        (s || i) && (c.queryParameters.replaceExistingSynonyms = 1),
+                        u(
                             e.transporter.write(
                                 {
                                     method: g,
-                                    path: c('1/indexes/%s/synonyms/batch', e.indexName),
+                                    path: f('1/indexes/%s/synonyms/batch', e.indexName),
                                     data: t
                                 },
-                                u
+                                c
                             ),
-                            function (t, n) {
-                                return e$(e)(t.taskID, n);
+                            function (t, r) {
+                                return eZ(e)(t.taskID, r);
                             }
                         )
                     );
                 };
             },
-            ez = function (e) {
-                return function (t, n) {
+            eQ = function (e) {
+                return function (t, r) {
                     return e.transporter.read(
                         {
                             method: g,
-                            path: c('1/indexes/%s/query', e.indexName),
+                            path: f('1/indexes/%s/query', e.indexName),
                             data: { query: t },
-                            cacheable: !0
-                        },
-                        n
-                    );
-                };
-            },
-            eq = function (e) {
-                return function (t, n, r) {
-                    return e.transporter.read(
-                        {
-                            method: g,
-                            path: c('1/indexes/%s/facets/%s/query', e.indexName, t),
-                            data: { facetQuery: n },
                             cacheable: !0
                         },
                         r
                     );
                 };
             },
-            eQ = function (e) {
-                return function (t, n) {
+            eV = function (e) {
+                return function (t, r, n) {
                     return e.transporter.read(
                         {
                             method: g,
-                            path: c('1/indexes/%s/rules/search', e.indexName),
-                            data: { query: t }
+                            path: f('1/indexes/%s/facets/%s/query', e.indexName, t),
+                            data: { facetQuery: r },
+                            cacheable: !0
                         },
                         n
                     );
                 };
             },
             eX = function (e) {
-                return function (t, n) {
+                return function (t, r) {
                     return e.transporter.read(
                         {
                             method: g,
-                            path: c('1/indexes/%s/synonyms/search', e.indexName),
+                            path: f('1/indexes/%s/rules/search', e.indexName),
                             data: { query: t }
                         },
-                        n
+                        r
                     );
                 };
             },
-            eJ = function (e) {
+            e$ = function (e) {
                 return function (t, r) {
-                    var i = r || {},
-                        a = i.forwardToReplicas,
-                        s = f(n(i, ['forwardToReplicas']));
+                    return e.transporter.read(
+                        {
+                            method: g,
+                            path: f('1/indexes/%s/synonyms/search', e.indexName),
+                            data: { query: t }
+                        },
+                        r
+                    );
+                };
+            },
+            eY = function (e) {
+                return function (t, n) {
+                    var o = n || {},
+                        a = o.forwardToReplicas,
+                        i = l(r(o, ['forwardToReplicas']));
                     return (
-                        a && (s.queryParameters.forwardToReplicas = 1),
-                        l(
+                        a && (i.queryParameters.forwardToReplicas = 1),
+                        u(
                             e.transporter.write(
                                 {
                                     method: 'PUT',
-                                    path: c('1/indexes/%s/settings', e.indexName),
+                                    path: f('1/indexes/%s/settings', e.indexName),
                                     data: t
                                 },
-                                s
+                                i
                             ),
-                            function (t, n) {
-                                return e$(e)(t.taskID, n);
+                            function (t, r) {
+                                return eZ(e)(t.taskID, r);
                             }
                         )
                     );
                 };
             },
-            e$ = function (e) {
-                return function (t, n) {
-                    return o(function (r) {
-                        var i;
-                        return ((i = e),
+            eZ = function (e) {
+                return function (t, r) {
+                    return s(function (n) {
+                        var o;
+                        return ((o = e),
                         function (e, t) {
-                            return i.transporter.read(
+                            return o.transporter.read(
                                 {
                                     method: 'GET',
-                                    path: c('1/indexes/%s/task/%s', i.indexName, e.toString())
+                                    path: f('1/indexes/%s/task/%s', o.indexName, e.toString())
                                 },
                                 t
                             );
-                        })(t, n).then(function (e) {
-                            return 'published' !== e.status ? r() : void 0;
+                        })(t, r).then(function (e) {
+                            return 'published' !== e.status ? n() : void 0;
                         });
                     });
                 };
             },
-            e0 = {
+            e1 = {
                 AddObject: 'addObject',
                 UpdateObject: 'updateObject',
                 PartialUpdateObject: 'partialUpdateObject',
                 PartialUpdateObjectNoCreate: 'partialUpdateObjectNoCreate',
                 DeleteObject: 'deleteObject'
             },
-            e1 = {
+            e0 = {
                 Settings: 'settings',
                 Synonyms: 'synonyms',
                 Rules: 'rules'
             },
             e2 = function (e) {
-                return function (n, r) {
-                    var i = n.map(function (e) {
+                return function (r, n) {
+                    var o = r.map(function (e) {
                         return t(t({}, e), {}, { threshold: e.threshold || 0 });
                     });
                     return e.transporter.read(
                         {
                             method: g,
                             path: '1/indexes/*/recommendations',
-                            data: { requests: i },
+                            data: { requests: o },
                             cacheable: !0
                         },
-                        r
+                        n
                     );
                 };
             },
-            e3 = function (e) {
-                return function (n, r) {
+            e4 = function (e) {
+                return function (r, n) {
                     return e2(e)(
-                        n.map(function (e) {
+                        r.map(function (e) {
                             return t(
                                 t({}, e),
                                 {},
@@ -1975,23 +1975,23 @@ var t, n;
                                 }
                             );
                         }),
-                        r
-                    );
-                };
-            },
-            e4 = function (e) {
-                return function (n, r) {
-                    return e2(e)(
-                        n.map(function (e) {
-                            return t(t({}, e), {}, { model: 'related-products' });
-                        }),
-                        r
+                        n
                     );
                 };
             },
             e6 = function (e) {
-                return function (n, r) {
-                    var i = n.map(function (e) {
+                return function (r, n) {
+                    return e2(e)(
+                        r.map(function (e) {
+                            return t(t({}, e), {}, { model: 'related-products' });
+                        }),
+                        n
+                    );
+                };
+            },
+            e3 = function (e) {
+                return function (r, n) {
+                    var o = r.map(function (e) {
                         return t(
                             t({}, e),
                             {},
@@ -2005,16 +2005,16 @@ var t, n;
                         {
                             method: g,
                             path: '1/indexes/*/recommendations',
-                            data: { requests: i },
+                            data: { requests: o },
                             cacheable: !0
                         },
-                        r
+                        n
                     );
                 };
             },
-            e5 = function (e) {
-                return function (n, r) {
-                    var i = n.map(function (e) {
+            e9 = function (e) {
+                return function (r, n) {
+                    var o = r.map(function (e) {
                         return t(
                             t({}, e),
                             {},
@@ -2028,26 +2028,26 @@ var t, n;
                         {
                             method: g,
                             path: '1/indexes/*/recommendations',
-                            data: { requests: i },
+                            data: { requests: o },
                             cacheable: !0
                         },
-                        r
+                        n
+                    );
+                };
+            },
+            e5 = function (e) {
+                return function (r, n) {
+                    return e2(e)(
+                        r.map(function (e) {
+                            return t(t({}, e), {}, { model: 'looking-similar' });
+                        }),
+                        n
                     );
                 };
             },
             e7 = function (e) {
-                return function (n, r) {
-                    return e2(e)(
-                        n.map(function (e) {
-                            return t(t({}, e), {}, { model: 'looking-similar' });
-                        }),
-                        r
-                    );
-                };
-            },
-            e8 = function (e) {
-                return function (n, r) {
-                    var i = n.map(function (e) {
+                return function (r, n) {
+                    var o = r.map(function (e) {
                         return t(
                             t({}, e),
                             {},
@@ -2061,29 +2061,29 @@ var t, n;
                         {
                             method: g,
                             path: '1/indexes/*/recommendations',
-                            data: { requests: i },
+                            data: { requests: o },
                             cacheable: !0
                         },
-                        r
+                        n
                     );
                 };
             };
-        function e9(e, n, o) {
-            var l,
-                c,
+        function e8(e, r, s) {
+            var u,
                 f,
-                p,
+                l,
                 h,
                 m,
+                y,
                 g,
-                E,
+                v,
+                w,
+                x,
                 I,
-                b,
-                T,
-                D,
-                eE = {
+                q,
+                ev = {
                     appId: e,
-                    apiKey: n,
+                    apiKey: r,
                     timeouts: {
                         connect: 1,
                         read: 2,
@@ -2092,46 +2092,46 @@ var t, n;
                     requester: {
                         send: function (e) {
                             return new Promise(function (t) {
-                                var n = new XMLHttpRequest();
-                                n.open(e.method, e.url, !0),
+                                var r = new XMLHttpRequest();
+                                r.open(e.method, e.url, !0),
                                     Object.keys(e.headers).forEach(function (t) {
-                                        return n.setRequestHeader(t, e.headers[t]);
+                                        return r.setRequestHeader(t, e.headers[t]);
                                     });
-                                var r,
-                                    i = function (e, r) {
+                                var n,
+                                    o = function (e, n) {
                                         return setTimeout(function () {
-                                            n.abort(),
+                                            r.abort(),
                                                 t({
                                                     status: 0,
-                                                    content: r,
+                                                    content: n,
                                                     isTimedOut: !0
                                                 });
                                         }, 1000 * e);
                                     },
-                                    a = i(e.connectTimeout, 'Connection timeout');
-                                (n.onreadystatechange = function () {
-                                    n.readyState > n.OPENED && void 0 === r && (clearTimeout(a), (r = i(e.responseTimeout, 'Socket timeout')));
+                                    a = o(e.connectTimeout, 'Connection timeout');
+                                (r.onreadystatechange = function () {
+                                    r.readyState > r.OPENED && void 0 === n && (clearTimeout(a), (n = o(e.responseTimeout, 'Socket timeout')));
                                 }),
-                                    (n.onerror = function () {
-                                        0 === n.status &&
+                                    (r.onerror = function () {
+                                        0 === r.status &&
                                             (clearTimeout(a),
-                                            clearTimeout(r),
+                                            clearTimeout(n),
                                             t({
-                                                content: n.responseText || 'Network request failed',
-                                                status: n.status,
+                                                content: r.responseText || 'Network request failed',
+                                                status: r.status,
                                                 isTimedOut: !1
                                             }));
                                     }),
-                                    (n.onload = function () {
+                                    (r.onload = function () {
                                         clearTimeout(a),
-                                            clearTimeout(r),
+                                            clearTimeout(n),
                                             t({
-                                                content: n.responseText,
-                                                status: n.status,
+                                                content: r.responseText,
+                                                status: r.status,
                                                 isTimedOut: !1
                                             });
                                     }),
-                                    n.send(e.data);
+                                    r.send(e.data);
                             });
                         }
                     },
@@ -2149,12 +2149,12 @@ var t, n;
                     responsesCache: a(),
                     requestsCache: a({ serializable: !1 }),
                     hostsCache: (function e(t) {
-                        var n = i(t.caches),
-                            a = n.shift();
+                        var r = o(t.caches),
+                            a = r.shift();
                         return void 0 === a
                             ? {
                                   get: function (e, t) {
-                                      var n =
+                                      var r =
                                           arguments.length > 2 && void 0 !== arguments[2]
                                               ? arguments[2]
                                               : {
@@ -2164,10 +2164,10 @@ var t, n;
                                                 };
                                       return t()
                                           .then(function (e) {
-                                              return Promise.all([e, n.miss(e)]);
+                                              return Promise.all([e, r.miss(e)]);
                                           })
                                           .then(function (e) {
-                                              return r(e, 1)[0];
+                                              return n(e, 1)[0];
                                           });
                                   },
                                   set: function (e, t) {
@@ -2181,8 +2181,8 @@ var t, n;
                                   }
                               }
                             : {
-                                  get: function (t, r) {
-                                      var i =
+                                  get: function (t, n) {
+                                      var o =
                                           arguments.length > 2 && void 0 !== arguments[2]
                                               ? arguments[2]
                                               : {
@@ -2190,61 +2190,61 @@ var t, n;
                                                         return Promise.resolve();
                                                     }
                                                 };
-                                      return a.get(t, r, i).catch(function () {
-                                          return e({ caches: n }).get(t, r, i);
+                                      return a.get(t, n, o).catch(function () {
+                                          return e({ caches: r }).get(t, n, o);
                                       });
                                   },
-                                  set: function (t, r) {
-                                      return a.set(t, r).catch(function () {
-                                          return e({ caches: n }).set(t, r);
+                                  set: function (t, n) {
+                                      return a.set(t, n).catch(function () {
+                                          return e({ caches: r }).set(t, n);
                                       });
                                   },
                                   delete: function (t) {
                                       return a.delete(t).catch(function () {
-                                          return e({ caches: n }).delete(t);
+                                          return e({ caches: r }).delete(t);
                                       });
                                   },
                                   clear: function () {
                                       return a.clear().catch(function () {
-                                          return e({ caches: n }).clear();
+                                          return e({ caches: r }).clear();
                                       });
                                   }
                               };
                     })({
                         caches: [
-                            ((l = { key: ''.concat('4.23.3', '-').concat(e) }),
-                            (f = 'algoliasearch-client-js-'.concat(l.key)),
-                            (p = function () {
-                                return void 0 === c && (c = l.localStorage || window.localStorage), c;
-                            }),
+                            ((u = { key: ''.concat('4.23.3', '-').concat(e) }),
+                            (l = 'algoliasearch-client-js-'.concat(u.key)),
                             (h = function () {
-                                return JSON.parse(p().getItem(f) || '{}');
+                                return void 0 === f && (f = u.localStorage || window.localStorage), f;
                             }),
-                            (m = function (e) {
-                                p().setItem(f, JSON.stringify(e));
+                            (m = function () {
+                                return JSON.parse(h().getItem(l) || '{}');
+                            }),
+                            (y = function (e) {
+                                h().setItem(l, JSON.stringify(e));
                             }),
                             (g = function () {
-                                var e = l.timeToLive ? 1000 * l.timeToLive : null,
+                                var e = u.timeToLive ? 1000 * u.timeToLive : null,
                                     t = Object.fromEntries(
-                                        Object.entries(h()).filter(function (e) {
-                                            return void 0 !== r(e, 2)[1].timestamp;
+                                        Object.entries(m()).filter(function (e) {
+                                            return void 0 !== n(e, 2)[1].timestamp;
                                         })
                                     );
-                                m(t),
+                                y(t),
                                     e &&
-                                        m(
+                                        y(
                                             Object.fromEntries(
                                                 Object.entries(t).filter(function (t) {
-                                                    var n = r(t, 2)[1],
-                                                        i = new Date().getTime();
-                                                    return !(n.timestamp + e < i);
+                                                    var r = n(t, 2)[1],
+                                                        o = new Date().getTime();
+                                                    return !(r.timestamp + e < o);
                                                 })
                                             )
                                         );
                             }),
                             {
                                 get: function (e, t) {
-                                    var n =
+                                    var r =
                                         arguments.length > 2 && void 0 !== arguments[2]
                                             ? arguments[2]
                                             : {
@@ -2256,290 +2256,290 @@ var t, n;
                                         .then(function () {
                                             g();
                                             var t = JSON.stringify(e);
-                                            return h()[t];
+                                            return m()[t];
                                         })
                                         .then(function (e) {
                                             return Promise.all([e ? e.value : t(), void 0 !== e]);
                                         })
                                         .then(function (e) {
-                                            var t = r(e, 2),
-                                                i = t[0];
-                                            return Promise.all([i, t[1] || n.miss(i)]);
+                                            var t = n(e, 2),
+                                                o = t[0];
+                                            return Promise.all([o, t[1] || r.miss(o)]);
                                         })
                                         .then(function (e) {
-                                            return r(e, 1)[0];
+                                            return n(e, 1)[0];
                                         });
                                 },
                                 set: function (e, t) {
                                     return Promise.resolve().then(function () {
-                                        var n = h();
+                                        var r = m();
                                         return (
-                                            (n[JSON.stringify(e)] = {
+                                            (r[JSON.stringify(e)] = {
                                                 timestamp: new Date().getTime(),
                                                 value: t
                                             }),
-                                            p().setItem(f, JSON.stringify(n)),
+                                            h().setItem(l, JSON.stringify(r)),
                                             t
                                         );
                                     });
                                 },
                                 delete: function (e) {
                                     return Promise.resolve().then(function () {
-                                        var t = h();
-                                        delete t[JSON.stringify(e)], p().setItem(f, JSON.stringify(t));
+                                        var t = m();
+                                        delete t[JSON.stringify(e)], h().setItem(l, JSON.stringify(t));
                                     });
                                 },
                                 clear: function () {
                                     return Promise.resolve().then(function () {
-                                        p().removeItem(f);
+                                        h().removeItem(l);
                                     });
                                 }
                             }),
                             a()
                         ]
                     }),
-                    userAgent: (E = {
+                    userAgent: (v = {
                         value: 'Algolia for JavaScript ('.concat('4.23.3', ')'),
                         add: function (e) {
                             var t = '; '.concat(e.segment).concat(void 0 !== e.version ? ' ('.concat(e.version, ')') : '');
-                            return -1 === E.value.indexOf(t) && (E.value = ''.concat(E.value).concat(t)), E;
+                            return -1 === v.value.indexOf(t) && (v.value = ''.concat(v.value).concat(t)), v;
                         }
                     }).add({ segment: 'Browser' })
                 },
-                e0 = t(t({}, eE), o),
-                e1 = function () {
+                e1 = t(t({}, ev), s),
+                e0 = function () {
                     return function (e) {
-                        var n, r, i, a;
+                        var r, n, o, a;
                         return (
-                            (r =
-                                (n = t(
-                                    t(t({}, eE), e),
+                            (n =
+                                (r = t(
+                                    t(t({}, ev), e),
                                     {},
                                     {
                                         methods: {
-                                            getPersonalizationStrategy: R,
-                                            setPersonalizationStrategy: O
+                                            getPersonalizationStrategy: D,
+                                            setPersonalizationStrategy: k
                                         }
                                     }
                                 )).region || 'us'),
-                            (i = s(d.WithinHeaders, n.appId, n.apiKey)),
-                            (a = v(
+                            (o = i(d.WithinHeaders, r.appId, r.apiKey)),
+                            (a = b(
                                 t(
-                                    t({ hosts: [{ url: 'personalization.'.concat(r, '.algolia.com') }] }, n),
+                                    t({ hosts: [{ url: 'personalization.'.concat(n, '.algolia.com') }] }, r),
                                     {},
                                     {
-                                        headers: t(t(t({}, i.headers()), { 'content-type': 'application/json' }), n.headers),
-                                        queryParameters: t(t({}, i.queryParameters()), n.queryParameters)
+                                        headers: t(t(t({}, o.headers()), { 'content-type': 'application/json' }), r.headers),
+                                        queryParameters: t(t({}, o.queryParameters()), r.queryParameters)
                                     }
                                 )
                             )),
-                            u(
+                            c(
                                 {
-                                    appId: n.appId,
+                                    appId: r.appId,
                                     transporter: a
                                 },
-                                n.methods
+                                r.methods
                             )
                         );
                     };
                 };
             return (
-                (b = (I = t(
-                    t({}, e0),
+                (x = (w = t(
+                    t({}, e1),
                     {},
                     {
                         methods: {
-                            search: er,
-                            searchForFacetValues: ei,
+                            search: en,
+                            searchForFacetValues: eo,
                             multipleBatch: et,
-                            multipleGetObjects: en,
-                            multipleQueries: er,
-                            copyIndex: P,
-                            copySettings: U,
-                            copySynonyms: B,
-                            copyRules: k,
+                            multipleGetObjects: er,
+                            multipleQueries: en,
+                            copyIndex: C,
+                            copySettings: M,
+                            copySynonyms: _,
+                            copyRules: U,
                             moveIndex: ee,
-                            listIndices: J,
-                            getLogs: Y,
-                            listClusters: X,
-                            multipleSearchForFacetValues: ei,
-                            getApiKey: V,
-                            addApiKey: L,
-                            listApiKeys: Q,
-                            updateApiKey: ef,
-                            deleteApiKey: Z,
-                            restoreApiKey: eo,
-                            assignUserID: x,
-                            assignUserIDs: w,
-                            getUserID: K,
-                            searchUserIDs: ec,
-                            listUserIDs: $,
-                            getTopUserIDs: W,
+                            listIndices: Y,
+                            getLogs: H,
+                            listClusters: $,
+                            multipleSearchForFacetValues: eo,
+                            getApiKey: L,
+                            addApiKey: S,
+                            listApiKeys: X,
+                            updateApiKey: el,
+                            deleteApiKey: z,
+                            restoreApiKey: es,
+                            assignUserID: R,
+                            assignUserIDs: A,
+                            getUserID: W,
+                            searchUserIDs: ef,
+                            listUserIDs: Z,
+                            getTopUserIDs: K,
                             removeUserID: ea,
-                            hasPendingMappings: z,
-                            clearDictionaryEntries: M,
+                            hasPendingMappings: Q,
+                            clearDictionaryEntries: N,
                             deleteDictionaryEntries: F,
-                            getDictionarySettings: H,
-                            getAppTask: j,
-                            replaceDictionaryEntries: es,
-                            saveDictionaryEntries: el,
-                            searchDictionaryEntries: eu,
+                            getDictionarySettings: B,
+                            getAppTask: J,
+                            replaceDictionaryEntries: ei,
+                            saveDictionaryEntries: eu,
+                            searchDictionaryEntries: ec,
                             setDictionarySettings: ed,
-                            waitAppTask: e_,
+                            waitAppTask: ep,
                             customRequest: G,
                             initIndex: function (e) {
                                 return function (t) {
-                                    return q(e)(t, {
+                                    return V(e)(t, {
                                         methods: {
-                                            batch: ep,
-                                            delete: eS,
-                                            findAnswers: eO,
-                                            getObject: eL,
-                                            getObjects: ew,
-                                            saveObject: eV,
-                                            saveObjects: ej,
-                                            search: ez,
-                                            searchForFacetValues: eq,
-                                            waitTask: e$,
-                                            setSettings: eJ,
-                                            getSettings: eP,
-                                            partialUpdateObject: eU,
-                                            partialUpdateObjects: eB,
-                                            deleteObject: ey,
-                                            deleteObjects: eA,
-                                            deleteBy: eT,
-                                            clearObjects: ev,
-                                            browseObjects: eh,
-                                            getObjectPosition: ex,
-                                            findObject: eD,
-                                            exists: eR,
-                                            saveSynonym: eW,
-                                            saveSynonyms: eK,
-                                            getSynonym: ek,
-                                            searchSynonyms: eX,
+                                            batch: eh,
+                                            delete: eP,
+                                            findAnswers: ek,
+                                            getObject: eS,
+                                            getObjects: eA,
+                                            saveObject: eL,
+                                            saveObjects: eJ,
+                                            search: eQ,
+                                            searchForFacetValues: eV,
+                                            waitTask: eZ,
+                                            setSettings: eY,
+                                            getSettings: eC,
+                                            partialUpdateObject: eM,
+                                            partialUpdateObjects: e_,
+                                            deleteObject: eT,
+                                            deleteObjects: eO,
+                                            deleteBy: eI,
+                                            clearObjects: eb,
+                                            browseObjects: em,
+                                            getObjectPosition: eR,
+                                            findObject: eq,
+                                            exists: eD,
+                                            saveSynonym: eK,
+                                            saveSynonyms: eW,
+                                            getSynonym: eU,
+                                            searchSynonyms: e$,
                                             browseSynonyms: eg,
-                                            deleteSynonym: eC,
-                                            clearSynonyms: eb,
+                                            deleteSynonym: ej,
+                                            clearSynonyms: ex,
                                             replaceAllObjects: eG,
                                             replaceAllSynonyms: eF,
-                                            searchRules: eQ,
-                                            getRule: eM,
-                                            deleteRule: eN,
-                                            saveRule: eH,
-                                            saveRules: eY,
-                                            replaceAllRules: eZ,
-                                            browseRules: em,
-                                            clearRules: eI
+                                            searchRules: eX,
+                                            getRule: eN,
+                                            deleteRule: eE,
+                                            saveRule: eB,
+                                            saveRules: eH,
+                                            replaceAllRules: ez,
+                                            browseRules: ey,
+                                            clearRules: ew
                                         }
                                     });
                                 };
                             },
                             initAnalytics: function () {
                                 return function (e) {
-                                    var n, r, i, a;
+                                    var r, n, o, a;
                                     return (
-                                        (r =
-                                            (n = t(
-                                                t(t({}, eE), e),
+                                        (n =
+                                            (r = t(
+                                                t(t({}, ev), e),
                                                 {},
                                                 {
                                                     methods: {
-                                                        addABTest: S,
-                                                        getABTest: A,
-                                                        getABTests: N,
-                                                        stopABTest: C,
-                                                        deleteABTest: y
+                                                        addABTest: P,
+                                                        getABTest: O,
+                                                        getABTests: E,
+                                                        stopABTest: j,
+                                                        deleteABTest: T
                                                     }
                                                 }
                                             )).region || 'us'),
-                                        (i = s(d.WithinHeaders, n.appId, n.apiKey)),
-                                        (a = v(
+                                        (o = i(d.WithinHeaders, r.appId, r.apiKey)),
+                                        (a = b(
                                             t(
-                                                t({ hosts: [{ url: 'analytics.'.concat(r, '.algolia.com') }] }, n),
+                                                t({ hosts: [{ url: 'analytics.'.concat(n, '.algolia.com') }] }, r),
                                                 {},
                                                 {
-                                                    headers: t(t(t({}, i.headers()), { 'content-type': 'application/json' }), n.headers),
-                                                    queryParameters: t(t({}, i.queryParameters()), n.queryParameters)
+                                                    headers: t(t(t({}, o.headers()), { 'content-type': 'application/json' }), r.headers),
+                                                    queryParameters: t(t({}, o.queryParameters()), r.queryParameters)
                                                 }
                                             )
                                         )),
-                                        u(
+                                        c(
                                             {
-                                                appId: n.appId,
+                                                appId: r.appId,
                                                 transporter: a
                                             },
-                                            n.methods
+                                            r.methods
                                         )
                                     );
                                 };
                             },
-                            initPersonalization: e1,
+                            initPersonalization: e0,
                             initRecommendation: function () {
                                 return function (e) {
-                                    return e0.logger.info('The `initRecommendation` method is deprecated. Use `initPersonalization` instead.'), e1()(e);
+                                    return e1.logger.info('The `initRecommendation` method is deprecated. Use `initPersonalization` instead.'), e0()(e);
                                 };
                             },
                             getRecommendations: e2,
-                            getFrequentlyBoughtTogether: e3,
-                            getLookingSimilar: e7,
-                            getRecommendedForYou: e8,
-                            getRelatedProducts: e4,
-                            getTrendingFacets: e6,
-                            getTrendingItems: e5
+                            getFrequentlyBoughtTogether: e4,
+                            getLookingSimilar: e5,
+                            getRecommendedForYou: e7,
+                            getRelatedProducts: e6,
+                            getTrendingFacets: e3,
+                            getTrendingItems: e9
                         }
                     }
                 )).appId),
-                (T = s(void 0 !== I.authMode ? I.authMode : d.WithinHeaders, b, I.apiKey)),
-                u(
+                (I = i(void 0 !== w.authMode ? w.authMode : d.WithinHeaders, x, w.apiKey)),
+                c(
                     {
-                        transporter: (D = v(
+                        transporter: (q = b(
                             t(
                                 t(
                                     {
                                         hosts: [
                                             {
-                                                url: ''.concat(b, '-dsn.algolia.net'),
-                                                accept: _.Read
+                                                url: ''.concat(x, '-dsn.algolia.net'),
+                                                accept: p.Read
                                             },
                                             {
-                                                url: ''.concat(b, '.algolia.net'),
-                                                accept: _.Write
+                                                url: ''.concat(x, '.algolia.net'),
+                                                accept: p.Write
                                             }
                                         ].concat(
                                             (function (e) {
                                                 for (var t = e.length - 1; t > 0; t--) {
-                                                    var n = Math.floor(Math.random() * (t + 1)),
-                                                        r = e[t];
-                                                    (e[t] = e[n]), (e[n] = r);
+                                                    var r = Math.floor(Math.random() * (t + 1)),
+                                                        n = e[t];
+                                                    (e[t] = e[r]), (e[r] = n);
                                                 }
                                                 return e;
-                                            })([{ url: ''.concat(b, '-1.algolianet.com') }, { url: ''.concat(b, '-2.algolianet.com') }, { url: ''.concat(b, '-3.algolianet.com') }])
+                                            })([{ url: ''.concat(x, '-1.algolianet.com') }, { url: ''.concat(x, '-2.algolianet.com') }, { url: ''.concat(x, '-3.algolianet.com') }])
                                         )
                                     },
-                                    I
+                                    w
                                 ),
                                 {},
                                 {
-                                    headers: t(t(t({}, T.headers()), { 'content-type': 'application/x-www-form-urlencoded' }), I.headers),
-                                    queryParameters: t(t({}, T.queryParameters()), I.queryParameters)
+                                    headers: t(t(t({}, I.headers()), { 'content-type': 'application/x-www-form-urlencoded' }), w.headers),
+                                    queryParameters: t(t({}, I.queryParameters()), w.queryParameters)
                                 }
                             )
                         )),
-                        appId: b,
+                        appId: x,
                         addAlgoliaAgent: function (e, t) {
-                            D.userAgent.add({
+                            q.userAgent.add({
                                 segment: e,
                                 version: t
                             });
                         },
                         clearCache: function () {
-                            return Promise.all([D.requestsCache.clear(), D.responsesCache.clear()]).then(function () {});
+                            return Promise.all([q.requestsCache.clear(), q.responsesCache.clear()]).then(function () {});
                         }
                     },
-                    I.methods
+                    w.methods
                 )
             );
         }
-        return (e9.version = '4.23.3'), e9;
+        return (e8.version = '4.23.3'), e8;
     }),
-    (e.exports = n());
+    (e.exports = r());

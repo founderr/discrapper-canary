@@ -19,9 +19,9 @@ var r = n(873546),
     I = n(346497),
     C = n(278945),
     v = n(727310),
-    N = n(318199),
-    T = n(474936);
-function S(e, t, n) {
+    S = n(318199),
+    N = n(474936);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function S(e, t, n) {
     );
 }
 let A = 'PremiumServerDriveAnnouncementModal';
-class x extends o.Z {
+class b extends o.Z {
     _initialize() {
         s.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), s.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
     }
@@ -44,8 +44,8 @@ class x extends o.Z {
     }
     constructor(...e) {
         super(...e),
-            S(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
-                let r = (0, N.extractAnnouncementModalContent)({
+            T(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
+                let r = (0, S.extractAnnouncementModalContent)({
                     content: e,
                     isPreview: t
                 });
@@ -68,14 +68,14 @@ class x extends o.Z {
                     );
                 return !1;
             }),
-            S(this, 'handlePreview', (e) => {
+            T(this, 'handlePreview', (e) => {
                 let { properties: t } = e;
                 this.maybeOpenServerDriveAnnouncementModal(t, !0);
             }),
-            S(this, 'getOfferFromStore', () => {
+            T(this, 'getOfferFromStore', () => {
                 let e = d.default.getCurrentUser();
                 if ((0, h.I5)(e)) return {};
-                let t = [T.hs, T.RU, T.rB, T.ih]
+                let t = [N.hs, N.RU, N.rB, N.ih]
                     .map((e) => u.Z.getUserDiscountOffer(e))
                     .filter((e) => null != e && !(0, _.kA)(e))
                     .shift();
@@ -83,7 +83,7 @@ class x extends o.Z {
                 let n = (0, p.J0)();
                 return null != n ? { userTrialOffer: n } : {};
             }),
-            S(this, 'mayShowAnnouncementModal', async () => {
+            T(this, 'mayShowAnnouncementModal', async () => {
                 if ((await (0, I.l2)(), m.s.isDisallowPopupsSet())) return;
                 let e = this.getOfferFromStore(),
                     t = f.Z.getCurrentConfig({ location: 'announcementManager' }, { autoTrackExposure: !1 }).inExperiment || f.Z.isAAMode({ location: 'announcementManager' }),
@@ -101,4 +101,4 @@ class x extends o.Z {
             });
     }
 }
-t.Z = new x();
+t.Z = new b();

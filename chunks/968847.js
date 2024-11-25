@@ -24,8 +24,8 @@ var i,
     x = n(914010),
     I = n(9156),
     b = n(938475),
-    S = n(823379),
-    E = n(734307),
+    E = n(823379),
+    S = n(734307),
     Z = n(981631);
 ((r = i || (i = {})).HIDDEN = 'hidden'), (r.UNREAD = 'unread'), (r.MENTIONS = 'mentions'), (r.VOICE_CHANNELS = 'voice-channels');
 let N = {
@@ -57,7 +57,7 @@ function R(e) {
 }
 function M(e) {
     var t, n, i;
-    let { guildChannels: l } = E.Z.getGuildWithoutChangingGuildActionRows(e),
+    let { guildChannels: l } = S.Z.getGuildWithoutChangingGuildActionRows(e),
         r = l.getChannels(null !== (t = A[e]) && void 0 !== t ? t : []);
     if (null == r || 0 === r.length) return !1;
     let a = null,
@@ -77,7 +77,7 @@ function M(e) {
     let x = 0,
         I = !1,
         b = 0,
-        S = !1;
+        E = !1;
     if (h || d)
         for (let e = g.length - 1; e >= 0; e--) {
             let t = g[e];
@@ -87,7 +87,7 @@ function M(e) {
         for (let e = 0; e < _.length; e++) {
             let t = _[e];
             if (!h && !d) break;
-            (P(t.id) || u().some(t.threadIds, P)) && (null == c && (c = t.id), (S = !0)), (j(t.id) || u().some(t.threadIds, j)) && (null == s && (s = t.id), (b += v.ZP.getMentionCount(t.id) + u().sumBy(t.threadIds, v.ZP.getMentionCount)));
+            (P(t.id) || u().some(t.threadIds, P)) && (null == c && (c = t.id), (E = !0)), (j(t.id) || u().some(t.threadIds, j)) && (null == s && (s = t.id), (b += v.ZP.getMentionCount(t.id) + u().sumBy(t.threadIds, v.ZP.getMentionCount)));
         }
     let Z = null,
         y = null,
@@ -105,7 +105,7 @@ function M(e) {
                 targetChannelId: null
             })
           : h &&
-            S &&
+            E &&
             (Z = {
                 mode: 'unread',
                 mentionCount: 0,
@@ -167,7 +167,7 @@ function U(e) {
 }
 class G extends (l = d.ZP.Store) {
     initialize() {
-        this.waitFor(E.Z, v.ZP, I.ZP, g.Z, b.ZP, x.Z, _.Z);
+        this.waitFor(S.Z, v.ZP, I.ZP, g.Z, b.ZP, x.Z, _.Z);
     }
     getUnreadStateForGuildId(e) {
         var t;
@@ -199,7 +199,7 @@ class G extends (l = d.ZP.Store) {
                         let { channelId: n } = e;
                         return null === (t = C.Z.getChannel(n)) || void 0 === t ? void 0 : t.guild_id;
                     })
-                    .filter(S.lm)
+                    .filter(E.lm)
                     .uniq()
                     .forEach((e) => {
                         let t = _.Z.getGuild(e);

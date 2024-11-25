@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return S;
     }
 });
 var i = n(200651);
@@ -79,7 +79,7 @@ let v = {
         containerClass: l()(E.container, E.containerEnabled)
     }
 };
-function N() {
+function S() {
     var e;
     let { decoupledClipsEnabled: t, clipsError: n } = (0, a.cj)([h.Z], () => ({
         decoupledClipsEnabled: h.Z.getSettings().decoupledClipsEnabled,

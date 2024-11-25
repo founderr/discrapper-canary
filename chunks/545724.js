@@ -12,16 +12,16 @@ var i = n(200651),
 t.Z = function (e) {
     let { index: t, children: l, user: m, channel: p, onClick: g, isFocused: f, isActive: _, onOtherHover: E, className: I } = e,
         [C, v] = r.useState(!1),
-        [N, T] = r.useState(!1),
-        S = () => {
-            v(!0), f && !_ && !N && (null == E || E());
+        [S, N] = r.useState(!1),
+        T = () => {
+            v(!0), f && !_ && !S && (null == E || E());
         },
         A = () => {
             v(!1);
         },
-        x = (e, t) => {
+        b = (e, t) => {
             if (null != t)
-                T(!0),
+                N(!0),
                     (0, d.jW)(
                         e,
                         async () => {
@@ -34,7 +34,7 @@ t.Z = function (e) {
                         },
                         {
                             onClose: () => {
-                                T(!1);
+                                N(!1);
                             }
                         }
                     );
@@ -49,11 +49,11 @@ t.Z = function (e) {
                 },
                 children: (0, i.jsx)(s.Z.div, {
                     className: a()(h.messageRequestItem, I, {
-                        [h.active]: _ || N,
+                        [h.active]: _ || S,
                         [h.firstItem]: 0 === t
                     }),
-                    onContextMenu: (e) => x(e, m),
-                    onMouseEnter: S,
+                    onContextMenu: (e) => b(e, m),
+                    onMouseEnter: T,
                     onMouseLeave: A,
                     onClick: null != g ? g : void 0,
                     style: {
@@ -61,7 +61,7 @@ t.Z = function (e) {
                         opacity: 1
                     },
                     ...e,
-                    children: l(C || _ || N)
+                    children: l(C || _ || S)
                 })
             })
     });

@@ -259,7 +259,7 @@ function q(e) {
     let e4 = o.useCallback(
         (e) => {
             var t;
-            !eG && (null === (t = Y.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null && (0, S.FI)(Y.id, e),
+            !eG && (null === (t = Y.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null && (0, E.FI)(Y, e),
                 null != eU.current &&
                     (0, x.dA)({
                         questId: Y.id,

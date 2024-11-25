@@ -19,8 +19,8 @@ var n = r(967752),
     A = r(151122),
     T = r(112797),
     d = r(305625),
-    f = r(820754),
-    L = r(822578);
+    L = r(820754),
+    f = r(822578);
 let O = "Not capturing exception because it's already been captured.";
 class p {
     constructor(e) {
@@ -177,7 +177,7 @@ class p {
             !t.integrations && _.length > 0 && (t.integrations = _),
             this.emit('preprocessEvent', e, t),
             !e.type && n.setLastEventId(e.event_id || t.event_id),
-            (0, L.R)(a, e, t, r, this, n).then((e) => {
+            (0, f.R)(a, e, t, r, this, n).then((e) => {
                 if (null === e) return e;
                 let t = {
                     ...n.getPropagationContext(),
@@ -218,7 +218,7 @@ class p {
             E = h(e),
             c = e.type || 'error',
             l = `before send for type \`${c}\``,
-            u = void 0 === a ? void 0 : (0, f.o)(a);
+            u = void 0 === a ? void 0 : (0, L.o)(a);
         if (E && 'number' == typeof u && Math.random() > u) return this.recordDroppedEvent('sample_rate', 'error', e), (0, i.$2)(new s.b(`Discarding event because it's not included in the random sample (sampling rate = ${a})`, 'log'));
         let I = 'replay_event' === c ? 'replay' : c,
             R = (e.sdkProcessingMetadata || {}).capturedSpanIsolationScope;

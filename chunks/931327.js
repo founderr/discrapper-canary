@@ -76,7 +76,7 @@ r.r(t),
             return n.xv;
         },
         contextLinesIntegration: function () {
-            return f.S;
+            return L.S;
         },
         continueTrace: function () {
             return n.yn;
@@ -163,7 +163,7 @@ r.r(t),
             return n.aF;
         },
         getReplay: function () {
-            return L.T;
+            return f.T;
         },
         getRootSpan: function () {
             return n.Gx;
@@ -238,7 +238,7 @@ r.r(t),
             return O.m;
         },
         replayIntegration: function () {
-            return L.G;
+            return f.G;
         },
         reportingObserverIntegration: function () {
             return T.y;
@@ -347,8 +347,8 @@ var n = r(148503),
     A = r(27269),
     T = r(17411),
     d = r(453574),
-    f = r(386797),
-    L = r(616456),
+    L = r(386797),
+    f = r(616456),
     O = r(778600),
     p = r(780850),
     h = r(226483),

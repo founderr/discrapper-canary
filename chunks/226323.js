@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return N;
     }
 }),
     n(653041),
@@ -50,20 +50,20 @@ let C = { offset: 2 },
             getStatus: () => E.intl.string(E.t['9F+xJS'])
         }
     };
-function N(e) {
+function S(e) {
     var t, r;
-    let { channel: l, user: p, nick: N, mute: T, deaf: S, serverMute: A, serverDeaf: x } = e,
-        b = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
+    let { channel: l, user: p, nick: S, mute: N, deaf: T, serverMute: A, serverDeaf: b } = e,
+        x = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
         Z = (0, d.Z)({
             userId: p.id,
             checkSoundSharing: !0
         }),
         L = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0,
         y = p.getAvatarURL(l.guild_id, 24),
-        O = null != N ? N : f.ZP.getName(p),
+        O = null != S ? S : f.ZP.getName(p),
         {
-            icon: P,
-            colorize: R,
+            icon: R,
+            colorize: P,
             getStatus: j
         } = null !==
             (r = (function (e) {
@@ -74,11 +74,11 @@ function N(e) {
                 else if (l) return v.localMute;
                 else if (r) return v.mute;
             })({
-                serverDeaf: x,
-                deaf: S,
+                serverDeaf: b,
+                deaf: T,
                 serverMute: A,
-                mute: T,
-                localMute: b
+                mute: N,
+                localMute: x
             })) && void 0 !== r
             ? r
             : {},
@@ -143,9 +143,9 @@ function N(e) {
                                 className: a()(I.avatar, { [I.speaking]: Z }),
                                 style: { backgroundImage: 'url('.concat(y, ')') },
                                 children:
-                                    null != P
-                                        ? (0, i.jsx)(P, {
-                                              className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: R }),
+                                    null != R
+                                        ? (0, i.jsx)(R, {
+                                              className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: P }),
                                               color: 'currentColor',
                                               size: 'xs'
                                           })
@@ -156,7 +156,7 @@ function N(e) {
             })
     });
 }
-function T(e) {
+function N(e) {
     let { voiceStates: t, channel: n, className: l } = e,
         [c, d] = r.useState(!1),
         u = c ? o.MinusIcon : o.PlusSmallIcon,
@@ -198,7 +198,7 @@ function T(e) {
                           let { user: t, nick: r, voiceState: l } = e;
                           return t.id !== m
                               ? (0, i.jsx)(
-                                    N,
+                                    S,
                                     {
                                         channel: n,
                                         user: t,

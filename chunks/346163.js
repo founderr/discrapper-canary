@@ -28,11 +28,11 @@ function x(e) {
         { loading: N, error: T, refresh: j, eligibility: b } = (0, d.Z)(null == e ? void 0 : e.id),
         { isApplicationRejected: S, requestCooldownDuration: E } = (0, u.Z)(b),
         R = (null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
-        { isMonetizationReapplicationDisabled: Z } = (0, l.eC)(null == e ? void 0 : e.id),
-        y = I || (null == b ? void 0 : b.isApplicationPending) === !0,
+        { isMonetizationReapplicationDisabled: y } = (0, l.eC)(null == e ? void 0 : e.id),
+        Z = I || (null == b ? void 0 : b.isApplicationPending) === !0,
         A = (null == b ? void 0 : b.canApply) === !0,
         L = g.intl.format(g.t.aJUdOj, { faqUrl: a.Z.getArticleURL(h.BhN.CREATOR_FAQ) });
-    S && Z
+    S && y
         ? (t = !0 === x ? g.intl.format(g.t['0o1Q+v'], { communityGuidelineUrl: h.EYA.GUIDELINES }) : g.intl.format(g.t.b6h59v, { communityGuidelineUrl: h.EYA.GUIDELINES }))
         : S &&
           null != E &&
@@ -59,7 +59,7 @@ function x(e) {
             refreshEligibility: j,
             eligibility: b,
             eligibleForMonetization: A,
-            isApplicationPending: y,
+            isApplicationPending: Z,
             hasPreviousApplicationRejection: S,
             requestRejectedNoticeText: t,
             reapplyNoticeText: P,

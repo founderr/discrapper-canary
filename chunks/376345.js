@@ -14,7 +14,7 @@ let { Themes: I } = l.V,
     { Shadows: A } = c.V,
     { Spacing: T } = s.V,
     d = Symbol('semanticColor'),
-    f = {
+    L = {
         themes: I,
         colors: o()(R, (e, t) => ({ [d]: t })),
         unsafe_rawColors: N,
@@ -65,4 +65,4 @@ let { Themes: I } = l.V,
             adjustColorContrast: (e, t, r, n) => (0, u.pq)(e, r, n, t)
         }
     };
-t.ZP = f;
+t.ZP = L;

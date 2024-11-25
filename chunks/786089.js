@@ -18,38 +18,38 @@ var i = n(200651),
     I = n(113434),
     C = n(497505),
     v = n(475595),
-    N = n(685613),
-    T = n(981631),
-    S = n(388032),
+    S = n(685613),
+    N = n(981631),
+    T = n(388032),
     A = n(874976);
 t.Z = (0, r.memo)(function (e) {
-    var t, n, l, x, b;
+    var t, n, l, b, x;
     let { quest: Z } = e,
         [L, y] = (0, r.useState)(!1),
-        [O, P] = (0, r.useState)(24),
-        [R, j] = (0, r.useState)(!1),
+        [O, R] = (0, r.useState)(24),
+        [P, j] = (0, r.useState)(!1),
         D = (0, r.useRef)(null),
         M = (0, r.useRef)(null),
         w = (0, r.useRef)(null),
         k = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
         { ref: U, height: G = 0 } = (0, u.Z)(),
         B = (0, h.ZP)(),
-        H = (0, I.B6)(null === (t = Z.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
+        V = (0, I.B6)(null === (t = Z.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
             month: 'numeric',
             day: 'numeric'
         }),
-        V = null !== (x = null === (n = Z.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== x ? x : 0,
-        F = Z.config.rewards[V],
+        H = null !== (b = null === (n = Z.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== b ? b : 0,
+        F = Z.config.rewards[H],
         z = (null == F ? void 0 : F.type) === s.w.COLLECTIBLE,
-        { product: W } = (0, p.T)(z && null != F ? F.skuId : null),
-        Y = null == W ? void 0 : null === (l = W.items) || void 0 === l ? void 0 : l[0];
+        { product: Y } = (0, p.T)(z && null != F ? F.skuId : null),
+        W = null == Y ? void 0 : null === (l = Y.items) || void 0 === l ? void 0 : l[0];
     (0, u.P)(D, (e) => {
         let { height: t } = e;
         if (!z || null == t || null == M.current || null == D.current || null == w.current) return;
         let n = D.current.getBoundingClientRect(),
             i = M.current.getBoundingClientRect(),
             r = w.current.getBoundingClientRect();
-        P((i.top - n.top - r.height) / 2);
+        R((i.top - n.top - r.height) / 2);
     });
     let K = (0, c.wj)(B),
         q = (0, r.useMemo)(() => null != Z.config.cosponsorMetadata, [Z]),
@@ -57,7 +57,7 @@ t.Z = (0, r.memo)(function (e) {
         Q = L ? G + 8 : 0,
         J = () => {
             y(!0),
-                _.default.track(T.rMx.QUEST_HOVER, {
+                _.default.track(N.rMx.QUEST_HOVER, {
                     quest_id: Z.id,
                     ...(0, E.mH)(C.jn.TROPHY_CASE_CARD)
                 });
@@ -65,13 +65,13 @@ t.Z = (0, r.memo)(function (e) {
         $ = () => y(!1),
         ee = (e) => {
             j(!0),
-                _.default.track(T.rMx.QUEST_ASSET_LOADING_FAILURE, {
+                _.default.track(N.rMx.QUEST_ASSET_LOADING_FAILURE, {
                     source: e,
                     asset_id: e,
                     quest_id: Z.id
                 });
         };
-    return null == F || R
+    return null == F || P
         ? null
         : (0, i.jsx)(d.FocusRing, {
               children: (0, i.jsxs)('div', {
@@ -90,7 +90,7 @@ t.Z = (0, r.memo)(function (e) {
                               className: A.decoWrapper,
                               style: { top: O },
                               children: (0, i.jsx)(m.Z, {
-                                  avatarDecorationOverride: Y,
+                                  avatarDecorationOverride: W,
                                   user: k,
                                   guildId: null
                               })
@@ -102,7 +102,7 @@ t.Z = (0, r.memo)(function (e) {
                                     autoPlay: !1,
                                     children: (0, i.jsx)('source', {
                                         src: X.url,
-                                        type: null !== (b = X.mimetype) && void 0 !== b ? b : void 0,
+                                        type: null !== (x = X.mimetype) && void 0 !== x ? x : void 0,
                                         onError: () => ee(X.url)
                                     })
                                 })
@@ -123,7 +123,7 @@ t.Z = (0, r.memo)(function (e) {
                           ref: M,
                           className: A.logoContainer,
                           style: { transform: 'translateY(-'.concat(Q, 'px)') },
-                          children: (0, i.jsx)(N.ZP, {
+                          children: (0, i.jsx)(S.ZP, {
                               logotypeClassName: a()(A.logo, { [A.logoWithCosponsor]: q }),
                               quest: Z,
                               withGameTile: !1
@@ -137,15 +137,15 @@ t.Z = (0, r.memo)(function (e) {
                                   className: A.title,
                                   variant: 'heading-md/semibold',
                                   color: 'always-white',
-                                  children: S.intl.format(S.t.EAYZAg, { questName: Z.config.messages.questName })
+                                  children: T.intl.format(T.t.EAYZAg, { questName: Z.config.messages.questName })
                               }),
                               (0, i.jsx)(d.Text, {
                                   variant: 'text-sm/medium',
                                   color: K ? 'text-muted' : 'always-white',
                                   style: { opacity: K ? 1 : 0.75 },
-                                  children: S.intl.format(S.t.kXVcV1, {
+                                  children: T.intl.format(T.t.kXVcV1, {
                                       reward: F.name,
-                                      claimedDate: H
+                                      claimedDate: V
                                   })
                               })
                           ]

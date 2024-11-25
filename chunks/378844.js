@@ -23,11 +23,11 @@ var a = n(442837),
 t.Z = (e) => {
     let { type: t, guildId: i, closePopout: l } = e,
         _ = (0, u.Dt)(),
-        { notClaimed: v, notEmailVerified: x, notPhoneVerified: I, newAccount: b, newMember: S } = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]),
-        E = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
+        { notClaimed: v, notEmailVerified: x, notPhoneVerified: I, newAccount: b, newMember: E } = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]),
+        S = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
         Z = null,
         N = null;
-    return (0 === t && (v ? ((Z = g.intl.string(g.t.IRxUlJ)), (N = g.intl.string(g.t.fiNVio))) : I ? ((Z = g.intl.string(g.t.vW8iUF)), (N = g.intl.string(g.t['50gfOj']))) : x ? ((Z = g.intl.string(g.t.vdSOp6)), (N = g.intl.string(g.t.lm1UKi))) : S ? ((Z = g.intl.formatToPlainString(g.t.v1ktYW, { min: m.YeM.MEMBER_AGE })), (N = g.intl.string(g.t.BddRzc))) : b && ((Z = g.intl.formatToPlainString(g.t['sncw4+'], { min: m.YeM.ACCOUNT_AGE })), (N = g.intl.string(g.t.BddRzc)))), null == E || null == Z)
+    return (0 === t && (v ? ((Z = g.intl.string(g.t.IRxUlJ)), (N = g.intl.string(g.t.fiNVio))) : I ? ((Z = g.intl.string(g.t.vW8iUF)), (N = g.intl.string(g.t['50gfOj']))) : x ? ((Z = g.intl.string(g.t.vdSOp6)), (N = g.intl.string(g.t.lm1UKi))) : E ? ((Z = g.intl.formatToPlainString(g.t.v1ktYW, { min: m.YeM.MEMBER_AGE })), (N = g.intl.string(g.t.BddRzc))) : b && ((Z = g.intl.formatToPlainString(g.t['sncw4+'], { min: m.YeM.ACCOUNT_AGE })), (N = g.intl.string(g.t.BddRzc)))), null == S || null == Z)
         ? null
         : (0, r.jsxs)(o.Dialog, {
               className: C.container,
@@ -44,7 +44,7 @@ t.Z = (e) => {
                           (0, r.jsx)(o.Heading, {
                               variant: 'heading-md/semibold',
                               id: _,
-                              children: E
+                              children: S
                           }),
                           (0, r.jsx)(o.Text, {
                               color: 'header-secondary',

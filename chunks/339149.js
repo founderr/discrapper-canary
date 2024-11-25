@@ -26,7 +26,7 @@ var i,
     x = n(981631),
     I = n(388032),
     b = n(213169);
-function S(e, t, n) {
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +39,7 @@ function S(e, t, n) {
         e
     );
 }
-let E = {
+let S = {
     [x.vxO.INSTALLING]: {
         [m.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['p+2sEx'], { name: e }),
         [m.J6.SECONDS]: (e, t) =>
@@ -115,13 +115,13 @@ class Z extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            S(this, 'renderProgressBody', (e, t) => {
+            E(this, 'renderProgressBody', (e, t) => {
                 let { state: n, application: i } = this.props,
                     { stage: l, progress: r, total: a, type: o } = n;
                 if (null == r || null == a || null == l) return null;
                 let s = (e[e.length - 1] / t) * 1000,
                     c = 0 !== s ? Math.max(1, (a - r) / s) : null,
-                    u = E[o],
+                    u = S[o],
                     d = null != u ? Object.keys(u) : [],
                     { unit: h, time: p } = (0, m.CI)(null != c ? c / 60 : null, d);
                 if (null != u && null != h) {
@@ -186,14 +186,14 @@ class N extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            S(this, 'state', { animationScale: new s.Z.Value(0) }),
-            S(this, 'handleOnClick', (e) => {
+            E(this, 'state', { animationScale: new s.Z.Value(0) }),
+            E(this, 'handleOnClick', (e) => {
                 let { onClick: t } = this.props;
                 e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, f.uL)(x.Z5c.APPLICATION_LIBRARY);
             });
     }
 }
-S(N, 'defaultProps', { strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM });
+E(N, 'defaultProps', { strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM });
 function y(e, t) {
     return e.reduce((e, n) => {
         let { applicationId: i, branchId: l } = n,

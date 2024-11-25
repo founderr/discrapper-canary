@@ -31,8 +31,8 @@ var i = n(200651),
     S = n(496675),
     E = n(699516),
     R = n(594174),
-    Z = n(768581),
-    y = n(900849),
+    y = n(768581),
+    Z = n(900849),
     A = n(434404),
     L = n(999382),
     D = n(450474),
@@ -99,7 +99,7 @@ class H extends r.PureComponent {
             }),
                 x.le(),
                 x.aC(e.id);
-            let t = await (0, y.Eg)(e.id);
+            let t = await (0, Z.Eg)(e.id);
             null != t && this.setState({ discoverableGuild: t });
         }
     }
@@ -185,7 +185,7 @@ class H extends r.PureComponent {
                                 children: (0, i.jsx)(T.Z, {
                                     image: e.discoverySplash,
                                     makeURL: (t) =>
-                                        Z.ZP.getGuildDiscoverySplashURL({
+                                        y.ZP.getGuildDiscoverySplashURL({
                                             id: e.id,
                                             splash: t,
                                             size: 512 * (0, I.x_)()

@@ -30,9 +30,9 @@ function _(e) {
             c.Z.closeChannelSidebar(d.uZ), E && (0, o.Kh)(_.id);
         }, [_.id, E]),
         {
-            acceptMessageRequest: N,
-            isAcceptLoading: T,
-            isUserProfileLoading: S,
+            acceptMessageRequest: S,
+            isAcceptLoading: N,
+            isUserProfileLoading: T,
             isOptimisticAccepted: A
         } = (0, h.m)({
             user: n,
@@ -40,8 +40,8 @@ function _(e) {
             onRejectSuccess: C,
             onError: I
         }),
-        x = T || S,
-        b = x || A;
+        b = N || T,
+        x = b || A;
     return (0, i.jsxs)('div', {
         className: f.container,
         children: [
@@ -58,10 +58,10 @@ function _(e) {
                         color: a.ButtonColors.PRIMARY,
                         size: a.Button.Sizes.SMALL,
                         onClick: (e) => {
-                            N(_.id), e.stopPropagation();
+                            S(_.id), e.stopPropagation();
                         },
-                        disabled: b,
-                        submitting: x,
+                        disabled: x,
+                        submitting: b,
                         children: g.intl.string(g.t.vicfl5)
                     }),
                     (0, i.jsx)(p.Z, {

@@ -46,13 +46,13 @@ let R = String(0),
     A = '',
     T = '',
     d = (I.m9.navigator && I.m9.navigator.userAgent) || '',
-    f = '',
-    L = (I.m9.navigator && I.m9.navigator.language) || (I.m9.navigator && I.m9.navigator.languages && I.m9.navigator.languages['0']) || '',
+    L = '',
+    f = (I.m9.navigator && I.m9.navigator.language) || (I.m9.navigator && I.m9.navigator.languages && I.m9.navigator.languages['0']) || '',
     O = I.m9.navigator && I.m9.navigator.userAgentData;
 if ('object' == typeof (n = O) && null !== n && 'getHighEntropyValues' in n)
     O.getHighEntropyValues(['architecture', 'model', 'platform', 'platformVersion', 'fullVersionList'])
         .then((e) => {
-            if (((N = e.platform || ''), (T = e.architecture || ''), (f = e.model || ''), (A = e.platformVersion || ''), e.fullVersionList && e.fullVersionList.length > 0)) {
+            if (((N = e.platform || ''), (T = e.architecture || ''), (L = e.model || ''), (A = e.platformVersion || ''), e.fullVersionList && e.fullVersionList.length > 0)) {
                 let t = e.fullVersionList[e.fullVersionList.length - 1];
                 d = `${t.brand} ${t.version}`;
             }
@@ -191,8 +191,8 @@ function M(e, t, r, n) {
                       build_number: d
                   },
                   device: {
-                      locale: L,
-                      model: f,
+                      locale: f,
+                      model: L,
                       manufacturer: d,
                       architecture: T,
                       is_emulator: !1

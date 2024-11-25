@@ -76,11 +76,11 @@ t.Z = (e) => {
         P = (0, m._O)(),
         Z = (0, g.Nx)(),
         O = (0, _.Vi)(),
-        M = (0, s.e7)([u.Z], () => u.Z.affinities),
-        B = (0, p.Z)(),
+        B = (0, s.e7)([u.Z], () => u.Z.affinities),
+        M = (0, p.Z)(),
         { enabled: w } = f._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
-        y = A === v.EZ.ApplicationStoreHome && null != B && w,
-        k = M.length > 0;
+        y = A === v.EZ.ApplicationStoreHome && null != M && w,
+        k = B.length > 0;
     return (0, i.jsx)(c.Gt, {
         value: j,
         children: (0, i.jsxs)('div', {
@@ -99,7 +99,7 @@ t.Z = (e) => {
                             children: T.intl.string(T.t.YCZldH)
                         }),
                         y
-                            ? (0, i.jsx)(b.Z, { referrer: B })
+                            ? (0, i.jsx)(b.Z, { referrer: M })
                             : k
                               ? (0, i.jsx)('div', {
                                     className: a()(N.affinityDescription),

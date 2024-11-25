@@ -18,13 +18,13 @@ n.d(t, {
         return D;
     },
     Vp: function () {
-        return M;
+        return B;
     },
     bq: function () {
         return P;
     },
     rM: function () {
-        return B;
+        return M;
     },
     yQ: function () {
         return j;
@@ -64,7 +64,7 @@ function j() {
             let n = (0, s.cj)([N.Z], () => N.Z.getState());
             if (null != n) return null !== (t = null !== (e = n.userTenureRewardStatusByRewardId[R.Ft.FREE_AVATAR_DECO_1_MONTH]) && void 0 !== e ? e : n.userTenureRewardStatusByRewardId[R.Ft.FREE_GUILD_BOOST_1_MONTH]) && void 0 !== t ? t : n.userTenureRewardStatusByRewardId[R.Ft.FREE_GUILD_BOOST_3_MONTHS];
         })(),
-        r = M(),
+        r = B(),
         l = (function () {
             return O([R.Ft.FREE_AVATAR_DECO_1_MONTH]);
         })(),
@@ -179,10 +179,10 @@ function O(e) {
         });
     if (null != (0, I.kG)(t) || !!n) return (0, I.MR)(e, t);
 }
-function M() {
+function B() {
     return O([R.Ft.FREE_GUILD_BOOST_1_MONTH, R.Ft.FREE_GUILD_BOOST_3_MONTHS]);
 }
-let B = (e) => {
+let M = (e) => {
         if (null == e || (null == e ? void 0 : e.showNotification) === !1) return [];
         switch (e.nitroTenureStatus) {
             case R.EB.PENDING:
@@ -195,10 +195,10 @@ let B = (e) => {
     },
     w = () => {
         let e = j(),
-            [t, n] = i.useState(B(e)),
+            [t, n] = i.useState(M(e)),
             r = (0, v.cG)({ location: 'Home' });
         i.useEffect(() => {
-            if (!1 !== r) n(B(e));
+            if (!1 !== r) n(M(e));
         }, [e, r]);
         let [a] = (0, p.US)(r ? t : []);
         return r ? (null != e && !0 === e.showNotification && (a === l.z.TENURE_REWARD_REDEEMABLE || a === l.z.TENURE_REWARD_PENDING) ? (0, I.Wb)(e.nitroTenureStatus) : null) : null;
@@ -212,7 +212,7 @@ let B = (e) => {
     },
     k = () => {
         let e = j(),
-            t = i.useMemo(() => B(e), [e]),
+            t = i.useMemo(() => M(e), [e]),
             [n] = (0, f.cv)(t),
             r = i.useRef(!1);
         return i.useCallback(() => {

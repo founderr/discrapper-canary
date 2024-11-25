@@ -138,8 +138,8 @@ let S = () => {
                 return '';
         }
     },
-    M = () => O(S()),
-    B = () => {
+    B = () => O(S()),
+    M = () => {
         let e = S(),
             t = (0, s.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription());
         return null == e || null == t || null == t.premiumSince ? null : (0, d.RZ)(e, t.premiumSince);
@@ -148,8 +148,8 @@ let S = () => {
         badge: S(),
         image: j(),
         name: Z(),
-        earnedOnDate: B(),
-        tenureRequirement: M()
+        earnedOnDate: M(),
+        tenureRequirement: B()
     }),
     y = () => {
         let e = R(),

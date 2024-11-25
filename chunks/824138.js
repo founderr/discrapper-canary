@@ -18,7 +18,7 @@ var i = n(200651),
     I = n(981631),
     C = n(388032),
     v = n(129223);
-function N(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,11 +31,11 @@ function N(e, t, n) {
         e
     );
 }
-let T = {
+let N = {
     HOST: 5,
     LISTENER: 4
 };
-class S extends r.PureComponent {
+class T extends r.PureComponent {
     isHost() {
         let { currentUser: e, host: t } = this.props;
         return e.id === (null == t ? void 0 : t.id);
@@ -76,7 +76,7 @@ class S extends r.PureComponent {
                     className: v.party,
                     children: (0, i.jsx)(p.Z, {
                         users: this.props.party,
-                        max: this.isHost() ? T.HOST : T.LISTENER,
+                        max: this.isHost() ? N.HOST : N.LISTENER,
                         renderUser: this.renderPartyMember,
                         renderMoreUsers: this.renderPartyMemberOverflow
                     })
@@ -90,7 +90,7 @@ class S extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            N(this, 'renderPartyMember', (e, t) => {
+            S(this, 'renderPartyMember', (e, t) => {
                 let n;
                 if (null == e) return null;
                 let { host: l, onUserContextMenu: s } = this.props;
@@ -133,7 +133,7 @@ class S extends r.PureComponent {
                     )
                 );
             }),
-            N(this, 'renderPartyMemberOverflow', (e, t, n) => {
+            S(this, 'renderPartyMemberOverflow', (e, t, n) => {
                 let { renderOverflowPopout: r } = this.props;
                 return (0, i.jsx)(
                     c.Popout,
@@ -156,4 +156,4 @@ class S extends r.PureComponent {
             });
     }
 }
-t.Z = S;
+t.Z = T;

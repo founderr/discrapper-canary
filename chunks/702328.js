@@ -29,16 +29,16 @@ var i = n(200651),
     P = n(823188),
     Z = n(241158),
     O = n(135785),
-    M = n(498765),
-    B = n(635921),
+    B = n(498765),
+    M = n(635921),
     w = n(177839),
     y = n(794484),
     k = n(392521),
     L = n(349803),
     U = n(179984),
     D = n(409100),
-    H = n(391110),
-    G = n(71363),
+    G = n(391110),
+    H = n(71363),
     V = n(781800),
     F = n(474936),
     W = n(981631),
@@ -53,7 +53,7 @@ let q = (e) => {
     },
     X = (e) => {
         let { isFullscreen: t, inOfferExperience: n } = e;
-        return t || n ? (0, i.jsx)(M.Z, { lifted: !t && n }) : null;
+        return t || n ? (0, i.jsx)(B.Z, { lifted: !t && n }) : null;
     },
     $ = (e) => {
         let { isFullscreen: t, inOfferExperience: n, setIsAllPerksVisible: r, hasRenderedOnce: a, isMarketingPageV2Enabled: l } = e;
@@ -63,7 +63,7 @@ let q = (e) => {
                   children: [
                       !l &&
                           (0, i.jsx)(y.Z, {
-                              variant: H.R0.WHATS_NEW,
+                              variant: G.R0.WHATS_NEW,
                               isFullScreen: t
                           }),
                       l && (0, i.jsx)(Z.Z, { shouldLoadVideo: a }),
@@ -78,7 +78,7 @@ let q = (e) => {
                               showAllPerksButton: t
                                   ? (0, i.jsx)(V.Z, {
                                         setIsAllPerksVisible: r,
-                                        previousComponent: H.MQ.MARKETING
+                                        previousComponent: G.MQ.MARKETING
                                     })
                                   : void 0
                           }),
@@ -103,7 +103,7 @@ t.Z = (e) => {
     let { isFullscreen: n, entrypoint: a } = e;
     (0, f.z)(m.X);
     let Z = r.useRef(null),
-        M = (0, x.xP)('PremiumMarketingHome'),
+        B = (0, x.xP)('PremiumMarketingHome'),
         [w, y] = r.useState(!1),
         [k, V] = r.useState(!1),
         [ee, et] = r.useState(!1),
@@ -209,7 +209,7 @@ t.Z = (e) => {
                           onChange: (e) => y(e),
                           threshold: 0,
                           active: !0,
-                          children: (0, i.jsx)(B.Z, {
+                          children: (0, i.jsx)(M.Z, {
                               subscriptionTier: el,
                               isFullscreen: n || ep,
                               className: s()({
@@ -234,9 +234,9 @@ t.Z = (e) => {
                     inOfferExperience: ep,
                     setIsAllPerksVisible: eu,
                     hasRenderedOnce: en,
-                    isMarketingPageV2Enabled: M
+                    isMarketingPageV2Enabled: B
                 }),
-                !M && (0, i.jsx)(q, { isFullscreen: n }),
+                !B && (0, i.jsx)(q, { isFullscreen: n }),
                 (0, i.jsxs)('div', {
                     className: Y.planComparisonTableContainer,
                     children: [
@@ -295,8 +295,8 @@ t.Z = (e) => {
                       ref: Z,
                       children: ev
                   }),
-                  (0, i.jsx)(G.Z, {
-                      previousComponent: H.MQ.MARKETING,
+                  (0, i.jsx)(H.Z, {
+                      previousComponent: G.MQ.MARKETING,
                       isAllPerksVisible: ed,
                       setIsAllPerksVisible: eu,
                       isFullScreen: n

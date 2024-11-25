@@ -29,8 +29,8 @@ var i = n(200651),
     P = n(515846),
     Z = n(102655),
     O = n(768236),
-    M = n(314907),
-    B = n(826701);
+    B = n(314907),
+    M = n(826701);
 let w = () => {
         let e = (0, T.W1)();
         return (0, i.jsx)(N.Cy, {
@@ -52,7 +52,7 @@ let w = () => {
         let t,
             { premiumType: n } = e,
             r = (0, u.ZP)();
-        t = n === A.p9.TIER_0 ? ((0, o.wj)(r) ? Z : O) : (0, o.wj)(r) ? M : B;
+        t = n === A.p9.TIER_0 ? ((0, o.wj)(r) ? Z : O) : (0, o.wj)(r) ? B : M;
         let a = (0, E.Px)(n);
         return (0, i.jsx)('img', {
             src: t,
@@ -117,9 +117,9 @@ let w = () => {
 t.Z = (e) => {
     var t;
     let n,
-        { className: a, hideCTAs: Z = !1, headingOverride: O, hidePill: M = !1, selectedPlanColumnClassName: B, selectedPlanTier: D = A.p9.TIER_2 } = e,
-        { analyticsLocations: H } = (0, m.ZP)(g.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
-        G = (0, l.e7)([h.ZP], () => h.ZP.hasFetchedSubscriptions()),
+        { className: a, hideCTAs: Z = !1, headingOverride: O, hidePill: B = !1, selectedPlanColumnClassName: M, selectedPlanTier: D = A.p9.TIER_2 } = e,
+        { analyticsLocations: G } = (0, m.ZP)(g.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
+        H = (0, l.e7)([h.ZP], () => h.ZP.hasFetchedSubscriptions()),
         V = (0, p.V)(),
         F = 'PlanComparisonTable';
     (0, d.j)({
@@ -146,7 +146,7 @@ t.Z = (e) => {
         er = (0, f.Z)(),
         ea = (0, I.n)(en, ei, $, et, er.fractionalState),
         es = (0, T.Vi)();
-    if (!G || !V) return null;
+    if (!H || !V) return null;
     let el = {
         label: (0, i.jsx)(c.Heading, {
             className: P.__invalid_textColor,
@@ -221,7 +221,7 @@ t.Z = (e) => {
               withBottomBorderRadius: !0,
               buttonsRow: null == J
           }),
-        (n = M
+        (n = B
             ? null
             : null != J || null != q
               ? (0, i.jsx)(N.Cy, {
@@ -234,7 +234,7 @@ t.Z = (e) => {
                 : (0, i.jsx)(y, {}));
     let eo = J === A.Si.TIER_0 || q === A.p9.TIER_0 || D === A.p9.TIER_0;
     return (0, i.jsx)(m.Gt, {
-        value: H,
+        value: G,
         children: (0, i.jsxs)('div', {
             className: s()(P.root, a),
             'data-testid': 'v2-marketing-page-comparison-table',
@@ -248,7 +248,7 @@ t.Z = (e) => {
                     className: P.tableWrapper,
                     children: [
                         (0, i.jsx)('div', {
-                            className: s()(B, {
+                            className: s()(M, {
                                 [P.tier0ColumnOuter]: eo,
                                 [P.tier2ColumnOuter]: !eo
                             }),

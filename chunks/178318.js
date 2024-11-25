@@ -36,13 +36,13 @@ try {
     } catch (e) {}
 }
 let v = h.ZP.requireModule('discord_rpc').RPCWebSocket,
-    N = window.GLOBAL_ENV.MARKETING_ENDPOINT,
-    T = new d.Z('RPCServer:WSS'),
-    S = [];
+    S = window.GLOBAL_ENV.MARKETING_ENDPOINT,
+    N = new d.Z('RPCServer:WSS'),
+    T = [];
 function A(e) {
     return 'function' == typeof e ? e() : e;
 }
-function x() {
+function b() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
         t =
             e > 0
@@ -50,7 +50,7 @@ function x() {
                 : () => {
                       if (!A(r.listening)) return;
                       let e = r.address().port;
-                      T.info('Starting on '.concat(e)),
+                      N.info('Starting on '.concat(e)),
                           c.Z.dispatch({
                               type: 'RPC_SERVER_READY',
                               port: e
@@ -58,7 +58,7 @@ function x() {
                   };
     r.listen(E.V6Z + (e % E.frH), '127.0.0.1', t);
 }
-function b(e, t, n) {
+function x(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
         r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
         l =
@@ -82,7 +82,7 @@ function b(e, t, n) {
 }
 function Z(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-    b(
+    x(
         e,
         t,
         {
@@ -94,7 +94,7 @@ function Z(e, t, n, i) {
 }
 class L extends g.Z {
     send(e) {
-        (u.default.isLoggingOverlayEvents || (e.cmd !== E.Etm.OVERLAY && e.evt !== E.zMe.OVERLAY)) && T.info('Socket Emit: '.concat(this.id), (0, p.Z)(e)), null != i && 'etf' === this.encoding ? this._socket.send(i.pack(e), { binary: !0 }) : this._socket.send(JSON.stringify(e));
+        (u.default.isLoggingOverlayEvents || (e.cmd !== E.Etm.OVERLAY && e.evt !== E.zMe.OVERLAY)) && N.info('Socket Emit: '.concat(this.id), (0, p.Z)(e)), null != i && 'etf' === this.encoding ? this._socket.send(i.pack(e), { binary: !0 }) : this._socket.send(JSON.stringify(e));
     }
     close(e, t) {
         this._socket.close(e, t);
@@ -107,7 +107,7 @@ class L extends g.Z {
 }
 class y extends g.Z {
     send(e) {
-        (u.default.isLoggingOverlayEvents || e.cmd !== E.Etm.OVERLAY) && T.info('Socket Emit: '.concat(this.id), e), this._sendCallback(e);
+        (u.default.isLoggingOverlayEvents || e.cmd !== E.Etm.OVERLAY) && N.info('Socket Emit: '.concat(this.id), e), this._sendCallback(e);
     }
     close(e, t) {
         this._closeCallback(t, e);
@@ -122,7 +122,7 @@ class O extends l.EventEmitter {
         let [n, i] = A(e.url).split('?'),
             r = A(e.method);
         if ('/rpc' === n && 'OPTIONS' === r) {
-            b(e, t, { body: '' });
+            x(e, t, { body: '' });
             return;
         }
         let l = 'POST' === r;
@@ -132,9 +132,9 @@ class O extends l.EventEmitter {
                 s = function () {
                     var e;
                     let { protocol: i, host: r } = o.parse(null !== (e = n.get('callback')) && void 0 !== e ? e : '');
-                    i === location.protocol && r === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', N), t.writeHead(301), t.end();
+                    i === location.protocol && r === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', S), t.writeHead(301), t.end();
                 },
-                c = new y(l ? b.bind(null, e, t) : s, l ? Z.bind(null, e, t, 400) : s, Number(n.get('v')), r);
+                c = new y(l ? x.bind(null, e, t) : s, l ? Z.bind(null, e, t, 400) : s, Number(n.get('v')), r);
             if (l)
                 (0, f.em)(c, A(e.headers).origin, n.get('client_id'))
                     .then(() => {
@@ -164,14 +164,14 @@ class O extends l.EventEmitter {
             e.close(t.code, t.message);
             return;
         }
-        T.info('Socket Opened: '.concat(i.id)),
-            e.on('error', (e) => T.error('WS Error: '.concat(e.message))),
+        N.info('Socket Opened: '.concat(i.id)),
+            e.on('error', (e) => N.error('WS Error: '.concat(e.message))),
             e.on('close', (e, t) => {
-                T.info('Socket Closed: '.concat(i.id, ', code ').concat(e, ', message ').concat(t)), s().remove(S, (e) => e === i), this.emit('disconnect', i);
+                N.info('Socket Closed: '.concat(i.id, ', code ').concat(e, ', message ').concat(t)), s().remove(T, (e) => e === i), this.emit('disconnect', i);
             }),
             (0, f.em)(i, l, r.get('client_id'))
                 .then(() => {
-                    S.push(i), e.on('message', (e) => this.handleMessage(i, e)), this.emit('connect', i);
+                    T.push(i), e.on('message', (e) => this.handleMessage(i, e)), this.emit('connect', i);
                 })
                 .catch((e) => {
                     let { code: t, message: n } = e;
@@ -188,17 +188,17 @@ class O extends l.EventEmitter {
             e.close(E.$VG.CLOSE_UNSUPPORTED, 'Payload not '.concat(e.encoding));
             return;
         }
-        (u.default.isLoggingOverlayEvents || n.cmd !== E.Etm.OVERLAY) && T.info('Socket Message: '.concat(e.id), (0, p.Z)(n)), this.emit('request', e, n);
+        (u.default.isLoggingOverlayEvents || n.cmd !== E.Etm.OVERLAY) && N.info('Socket Message: '.concat(e.id), (0, p.Z)(n)), this.emit('request', e, n);
     }
     constructor() {
         var e;
         super();
         let t = 0;
         (r = v.http.createServer()).on('error', (e) => {
-            T.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => x(++t), 1000);
+            N.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => b(++t), 1000);
         }),
             r.on('request', this.handleRequest.bind(this)),
-            x(t);
+            b(t);
         let n = {
             instanceId: null !== (e = r.instanceId) && void 0 !== e ? e : 0,
             server: r

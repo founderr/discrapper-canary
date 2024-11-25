@@ -122,10 +122,10 @@ t.Z = (e) => {
         R = (0, C.uv)('ReferralProgramProgressBar'),
         j = (0, C.TW)('ReferralProgramProgressBar'),
         { referralSentUsers: P, hasSentAllReferrals: Z, refreshAt: O } = (0, E.G)(),
-        M = r.useMemo(() => P.map((e) => new g.Z(e)), [P]),
-        { subscriberHomeVariant: B } = h.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
+        B = r.useMemo(() => P.map((e) => new g.Z(e)), [P]),
+        { subscriberHomeVariant: M } = h.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
         w = R === v.g2L.UNAPPLIED || R === v.g2L.QUALIFIED,
-        y = B === h.p.VARIANT_2,
+        y = M === h.p.VARIANT_2,
         k = {
             redeemed: 0,
             converted: 0,
@@ -137,8 +137,8 @@ t.Z = (e) => {
     let L = k.sent === E.Q,
         U = f.Z.getArticleURL(v.BhN.REFERRAL_PROGRAM),
         { analyticsLocations: D } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
-        H = r.useRef(null),
-        G = (k.sent / E.Q) * 100,
+        G = r.useRef(null),
+        H = (k.sent / E.Q) * 100,
         V = !1;
     j && null != O && ((V = 0 < (t = Math.ceil((new Date(O).getTime() - new Date().getTime()) / 86400000)) && t < C.AV), (a = (100 * (C.AV - t)) / C.AV));
     let F = V && null != t,
@@ -146,7 +146,7 @@ t.Z = (e) => {
             className: N.referralInfoContent,
             children: [
                 (0, i.jsx)(x.ZP, {
-                    percentage: F ? 0 : G,
+                    percentage: F ? 0 : H,
                     progressCircleVariation: x.Qo.NITRO_LOGO,
                     iconClassName: s()({
                         [N.referralProgressBarIcon]: !u,
@@ -183,7 +183,7 @@ t.Z = (e) => {
                                   ]
                               })
                             : (0, i.jsx)(A, {
-                                  userRecords: M,
+                                  userRecords: B,
                                   recipientStatus: S
                               }),
                         (0, i.jsx)(o.Text, {
@@ -254,7 +254,7 @@ t.Z = (e) => {
                 [N.containerWithGlowOnSettingsPage]: !F && z && u
             }),
             children: (0, i.jsxs)('div', {
-                ref: H,
+                ref: G,
                 className: s()({
                     [N.expandedProgressBarContainer]: !u,
                     [N.expandedProgressBarContainerSettingsPage]: u,

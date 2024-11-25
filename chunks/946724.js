@@ -23,8 +23,8 @@ let T = new Set(),
     S = !1,
     E = [],
     R = [],
-    Z = !1,
-    y = new Set(),
+    y = !1,
+    Z = new Set(),
     A = new Map(),
     L = new Map();
 function D() {
@@ -77,7 +77,7 @@ function k() {
                           .value()
                     : [])
         ]),
-        (Z = !1),
+        (y = !1),
         e &&
             (L.clear(),
             A.forEach((e, t) => {
@@ -99,7 +99,7 @@ let P = u().debounce(() => {
             ) && (T.delete(t), (e = !0));
         }),
         0 === T.size && (b = !1),
-        Z && u().isEqual(A, L) && ((e = !0), (Z = !1)),
+        y && u().isEqual(A, L) && ((e = !0), (y = !1)),
         e && G.emitChange();
 }, 500);
 function M(e, t) {
@@ -151,7 +151,7 @@ class U extends (s = g.ZP.Store) {
         this.waitFor(I.Z, p.Z, f.Z);
     }
     hasChanges() {
-        return b || S || Z;
+        return b || S || y;
     }
     get errorMessage() {
         return l;
@@ -160,7 +160,7 @@ class U extends (s = g.ZP.Store) {
         return S;
     }
     get hasRoleConfigurationChanges() {
-        return Z;
+        return y;
     }
     get guild() {
         return i;
@@ -169,7 +169,7 @@ class U extends (s = g.ZP.Store) {
         return Array.from(T);
     }
     get editedRoleIdsForConfigurations() {
-        return y;
+        return Z;
     }
     get roles() {
         return E;
@@ -298,15 +298,15 @@ let G = new U(
                   let { roleId: t, roleConnectionConfigurations: n } = e,
                       i = w(t);
                   if (null == i) return !1;
-                  (Z = !0), y.add(i.id), L.set(i.id, n), P();
+                  (y = !0), Z.add(i.id), L.set(i.id, n), P();
               },
               GUILD_SETTINGS_CLOSE: function () {
-                  (i = null), (R = E = []), A.clear(), T.clear(), L.clear(), (y = new Set()), (b = !1), (S = !1), (Z = !1), (j = N.QZA.CLOSED);
+                  (i = null), (R = E = []), A.clear(), T.clear(), L.clear(), (Z = new Set()), (b = !1), (S = !1), (y = !1), (j = N.QZA.CLOSED);
               },
               GUILD_ROLE_CREATE: B,
               GUILD_ROLE_UPDATE: B,
               GUILD_ROLE_DELETE: function (e) {
-                  return y.has(e.roleId) && (y.delete(e.roleId), A.delete(e.roleId), L.delete(e.roleId), (Z = !1)), B(e);
+                  return Z.has(e.roleId) && (Z.delete(e.roleId), A.delete(e.roleId), L.delete(e.roleId), (y = !1)), B(e);
               },
               GUILD_SETTINGS_ROLES_SUBMITTING: function () {
                   j = N.QZA.SUBMITTING;

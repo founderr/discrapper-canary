@@ -18,12 +18,12 @@ var i = n(392711),
     I = n(238679),
     C = n(452426),
     v = n(295424),
-    N = n(222263),
-    T = n(863141),
-    S = n(186901),
+    S = n(222263),
+    N = n(863141),
+    T = n(186901),
     A = n(981631);
-let x = (e) => (0, C.Z)(e).required().keys({ channel_id: e.string().required() });
-function b(e) {
+let b = (e) => (0, C.Z)(e).required().keys({ channel_id: e.string().required() });
+function x(e) {
     var t;
     let {
             args: { channel_id: n },
@@ -68,7 +68,7 @@ let y = {
     },
     [A.zMe.VOICE_STATE_CREATE]: {
         scope: {
-            [S.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
+            [T.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
         },
         validation: (e) => (0, C.Z)(e).required().keys({ channel_id: e.string().required() }),
         handler(e) {
@@ -97,7 +97,7 @@ let y = {
     },
     [A.zMe.VOICE_STATE_DELETE]: {
         scope: {
-            [S.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
+            [T.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
         },
         validation: (e) => (0, C.Z)(e).required().keys({ channel_id: e.string().required() }),
         handler(e) {
@@ -125,7 +125,7 @@ let y = {
     },
     [A.zMe.VOICE_STATE_UPDATE]: {
         scope: {
-            [S.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
+            [T.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
         },
         validation: (e) => (0, C.Z)(e).required().keys({ channel_id: e.string().required() }),
         handler(e) {
@@ -150,7 +150,7 @@ let y = {
     },
     [A.zMe.VOICE_CONNECTION_STATUS]: {
         scope: {
-            [S.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
+            [T.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
         },
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
@@ -166,29 +166,29 @@ let y = {
     },
     [A.zMe.MESSAGE_CREATE]: {
         scope: l.x.RPC,
-        validation: x,
-        handler: b
+        validation: b,
+        handler: x
     },
     [A.zMe.MESSAGE_UPDATE]: {
         scope: l.x.RPC,
-        validation: x,
-        handler: b
+        validation: b,
+        handler: x
     },
     [A.zMe.MESSAGE_DELETE]: {
         scope: l.x.RPC,
-        validation: x,
-        handler: b
+        validation: b,
+        handler: x
     },
     [A.zMe.SPEAKING_START]: {
         scope: {
-            [S.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ, S.lH]
+            [T.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ, T.lH]
         },
         validation: Z,
         handler: L
     },
     [A.zMe.SPEAKING_STOP]: {
         scope: {
-            [S.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ, S.lH]
+            [T.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ, T.lH]
         },
         validation: Z,
         handler: L
@@ -203,59 +203,59 @@ let y = {
     },
     [A.zMe.GAME_JOIN]: {
         scope: {
-            [S.Gp.ANY]: [l.x.RPC, S.lH]
+            [T.Gp.ANY]: [l.x.RPC, T.lH]
         },
         handler() {}
     },
     [A.zMe.GAME_SPECTATE]: {
         scope: {
-            [S.Gp.ANY]: [l.x.RPC, S.lH]
+            [T.Gp.ANY]: [l.x.RPC, T.lH]
         },
         handler() {}
     },
     [A.zMe.ACTIVITY_JOIN]: {
         scope: {
-            [S.Gp.ANY]: [l.x.RPC, S.wE, S.lH]
+            [T.Gp.ANY]: [l.x.RPC, T.wE, T.lH]
         },
         handler() {}
     },
     [A.zMe.ACTIVITY_JOIN_REQUEST]: {
         scope: {
-            [S.Gp.ANY]: [l.x.RPC, S.lH]
+            [T.Gp.ANY]: [l.x.RPC, T.lH]
         },
         handler() {}
     },
     [A.zMe.ACTIVITY_SPECTATE]: {
         scope: {
-            [S.Gp.ANY]: [l.x.RPC, S.wE, S.lH]
+            [T.Gp.ANY]: [l.x.RPC, T.wE, T.lH]
         },
         handler() {}
     },
     [A.zMe.ACTIVITY_INVITE]: {
         scope: {
-            [S.Gp.ANY]: [l.x.RPC, S.lH]
+            [T.Gp.ANY]: [l.x.RPC, T.lH]
         },
         handler() {}
     },
     [A.zMe.ACTIVITY_PIP_MODE_UPDATE]: {
         scope: {
-            [S.Gp.ANY]: [l.x.RPC, S.wE, S.lH]
+            [T.Gp.ANY]: [l.x.RPC, T.wE, T.lH]
         },
         handler() {}
     },
     [A.zMe.ACTIVITY_LAYOUT_MODE_UPDATE]: {
         scope: {
-            [S.Gp.ANY]: [l.x.RPC, S.wE, S.lH]
+            [T.Gp.ANY]: [l.x.RPC, T.wE, T.lH]
         },
         handler() {}
     },
     [A.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: I.gQ,
     [A.zMe.THERMAL_STATE_UPDATE]: {
-        scope: { [S.Gp.ANY]: [S.wE] },
+        scope: { [T.Gp.ANY]: [T.wE] },
         handler() {}
     },
     [A.zMe.ORIENTATION_UPDATE]: {
-        scope: { [S.Gp.ANY]: [S.wE] },
+        scope: { [T.Gp.ANY]: [T.wE] },
         handler() {}
     },
     [A.zMe.VOICE_CHANNEL_SELECT]: {
@@ -264,7 +264,7 @@ let y = {
     },
     [A.zMe.NOTIFICATION_CREATE]: {
         scope: {
-            [S.Gp.ALL]: [l.x.RPC, l.x.RPC_NOTIFICATIONS_READ]
+            [T.Gp.ALL]: [l.x.RPC, l.x.RPC_NOTIFICATIONS_READ]
         },
         handler() {}
     },
@@ -274,17 +274,17 @@ let y = {
     },
     [A.zMe.CURRENT_USER_UPDATE]: {
         scope: {
-            [S.Gp.ANY]: [S.lH, l.x.IDENTIFY]
+            [T.Gp.ANY]: [T.lH, l.x.IDENTIFY]
         },
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 i = { currentUser: g.default.getCurrentUser() };
-            return null != i.currentUser && (null == t || !(0, a.Z)(i, t)) && n((0, T.Z)(i.currentUser)), i;
+            return null != i.currentUser && (null == t || !(0, a.Z)(i, t)) && n((0, N.Z)(i.currentUser)), i;
         }
     },
     [A.zMe.CURRENT_GUILD_MEMBER_UPDATE]: {
         scope: {
-            [S.Gp.ALL]: [l.x.IDENTIFY, l.x.GUILDS_MEMBERS_READ]
+            [T.Gp.ALL]: [l.x.IDENTIFY, l.x.GUILDS_MEMBERS_READ]
         },
         handler(e) {
             let {
@@ -293,25 +293,25 @@ let y = {
             return (e) => {
                 let { prevState: n, dispatch: i } = e,
                     r = { currentGuildMember: u.ZP.getSelfMember(t) };
-                return null != r.currentGuildMember && (null == n || !(0, a.Z)(r, n)) && i((0, N.Z)(r.currentGuildMember)), r;
+                return null != r.currentGuildMember && (null == n || !(0, a.Z)(r, n)) && i((0, S.Z)(r.currentGuildMember)), r;
             };
         }
     },
     [A.zMe.ENTITLEMENT_CREATE]: {
         scope: {
-            [S.Gp.ANY]: [S.lH, S.wE]
+            [T.Gp.ANY]: [T.lH, T.wE]
         },
         handler() {}
     },
     [A.zMe.ENTITLEMENT_DELETE]: {
         scope: {
-            [S.Gp.ANY]: [S.lH, S.wE]
+            [T.Gp.ANY]: [T.lH, T.wE]
         },
         handler() {}
     },
     [A.zMe.SCREENSHARE_STATE_UPDATE]: {
         scope: {
-            [S.Gp.ALL]: [S.lH, l.x.RPC_SCREENSHARE_READ]
+            [T.Gp.ALL]: [T.lH, l.x.RPC_SCREENSHARE_READ]
         },
         handler: () => (e) => {
             var t, n;
@@ -331,7 +331,7 @@ let y = {
     },
     [A.zMe.VIDEO_STATE_UPDATE]: {
         scope: {
-            [S.Gp.ALL]: [S.lH, l.x.RPC_VIDEO_READ]
+            [T.Gp.ALL]: [T.lH, l.x.RPC_VIDEO_READ]
         },
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,

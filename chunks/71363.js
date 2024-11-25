@@ -33,7 +33,7 @@ t.Z = (e) => {
         }, {}),
         Z = (0, _.HI)({ location: x.MQ.SEE_ALL }),
         { analyticsLocations: O } = (0, g.ZP)(u.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-        [M, B] = r.useState(!1),
+        [B, M] = r.useState(!1),
         w = (0, f.ZP)('perks-discoverability'),
         y = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         k = (0, C.mN)(),
@@ -127,7 +127,7 @@ t.Z = (e) => {
                         (0, i.jsx)('div', { className: N.footerSpacing }),
                         (0, i.jsx)(o.$, {
                             onChange: (e) => {
-                                e && !M && (p.default.track(v.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: O }), B(!0));
+                                e && !B && (p.default.track(v.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: O }), M(!0));
                             },
                             children: (0, i.jsx)('div', { className: N.bottomOfPageVisibilitySensor })
                         }),

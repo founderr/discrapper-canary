@@ -1,6 +1,6 @@
 n.d(t, {
     X: function () {
-        return Z;
+        return y;
     }
 }),
     n(47120),
@@ -31,7 +31,7 @@ var i = n(200651),
     S = n(105459),
     E = n(922905);
 let R = 'dismissedCommunityFeaturesUpsell',
-    Z = () => {
+    y = () => {
         let e;
         let {
                 guild: t,
@@ -65,7 +65,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
             errorMessage: e
         });
     },
-    y = (e) => {
+    Z = (e) => {
         let { discoveryEnabled: t, onboardingEnabled: n, guild: l } = e,
             [s, u] = r.useState(!0 === c.K.get(R)),
             m = (0, a.e7)([x.Z], () => {
@@ -226,7 +226,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
             E = (e) => {
                 _.Z.updateGuild({ safetyAlertsChannelId: e });
             },
-            Z = (e) => {
+            y = (e) => {
                 _.Z.updateGuild({ publicUpdatesChannelId: e });
             },
             A = (e) => {
@@ -300,7 +300,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
             tag: d.FormTitleTags.H1,
             children: [
                 u
-                    ? (0, i.jsx)(y, {
+                    ? (0, i.jsx)(Z, {
                           discoveryEnabled: e.features.has(T.oNc.DISCOVERABLE),
                           onboardingEnabled: e.features.has(T.oNc.GUILD_ONBOARDING),
                           guild: e
@@ -357,7 +357,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
                             children: (0, i.jsx)(d.SearchableSelect, {
                                 value: e.publicUpdatesChannelId,
                                 options: h,
-                                onChange: Z,
+                                onChange: y,
                                 isDisabled: !n
                             })
                         })

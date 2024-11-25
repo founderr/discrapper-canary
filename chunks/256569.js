@@ -75,8 +75,8 @@ function p(e) {
             handleRemoveTag: S,
             handleTagChangeEvent: E,
             handleSelectTag: R,
-            handleUnselectTag: Z,
-            handleResetTagSelections: y,
+            handleUnselectTag: y,
+            handleResetTagSelections: Z,
             handleInputBlurEvent: A
         } = (0, m.Q)(I, {
             scrollerRef: _,
@@ -90,8 +90,8 @@ function p(e) {
         [M, w] = r.useState(!1),
         B = r.useCallback(() => {
             var e;
-            w(!1), y(), null === (e = C.current) || void 0 === e || e.focus({ preventScroll: !0 });
-        }, [y]);
+            w(!1), Z(), null === (e = C.current) || void 0 === e || e.focus({ preventScroll: !0 });
+        }, [Z]);
     r.useEffect(() => {
         if (!M && P !== D) l(D);
     }, [l, P, D, M]),
@@ -112,7 +112,7 @@ function p(e) {
                     let t = O.includes(D[e]);
                     null === (n = C.current) || void 0 === n || n.focus(),
                         t
-                            ? Z(e)
+                            ? y(e)
                             : (R(e),
                               setImmediate(() => {
                                   var e;
@@ -122,9 +122,9 @@ function p(e) {
                                           return null === (e = v.current) || void 0 === e ? void 0 : e.focus();
                                       }, 16);
                               }));
-                } else Z(e, !0), w(!0);
+                } else y(e, !0), w(!0);
             },
-            [R, Z, O, D]
+            [R, y, O, D]
         );
     return (0, i.jsxs)('div', {
         className: s()(h.mainContainer, p),

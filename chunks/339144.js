@@ -31,7 +31,7 @@ let I = l.memo(function (e) {
         r,
         u,
         I,
-        { stream: b, canGoLive: S, guildId: E, isStreaming: Z, channel: N, canStream: y, runningGame: T, embeddedActivity: A, activity: P, application: j, analyticsContext: R } = e,
+        { stream: b, canGoLive: E, guildId: S, isStreaming: Z, channel: N, canStream: y, runningGame: T, embeddedActivity: A, activity: P, application: j, analyticsContext: R } = e,
         M = x(j, P, A),
         L = l.useCallback(() => {
             a()(null != P, 'Received null activity'),
@@ -57,7 +57,7 @@ let I = l.memo(function (e) {
         }, [b]),
         O = l.useCallback(() => {
             let e = null != N && (0, m.vd)(N.type) ? N : null,
-                t = null != e ? e.getGuildId() : E;
+                t = null != e ? e.getGuildId() : S;
             (0, o.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('46746'), n.e('33641')]).then(n.bind(n, 60594));
                 return (n) =>
@@ -68,10 +68,10 @@ let I = l.memo(function (e) {
                         analyticsLocation: C.Sbl.ACTIVITY_PANEL
                     });
             });
-        }, [N, E]);
+        }, [N, S]);
     let k =
-            (null != T || ((0, c.Z)() && null != A)) && (Z || S)
-                ? (Z ? ((t = !1), (r = D), (u = o.ScreenXIcon), (I = _.intl.string(_.t.S5anIS))) : y ? ((t = !1), (r = O), (u = o.ScreenArrowIcon), (I = null != T ? _.intl.formatToPlainString(_.t.AB5gT0, { game: T.name }) : _.intl.string(_.t.FeUKeH))) : ((t = !0), (r = null), (u = o.ScreenArrowIcon), (I = null != N && (0, m.vd)(N.type) ? _.intl.string(_.t.uQn9Bw) : null != E ? _.intl.string(_.t.fBXEoK) : _.intl.string(_.t.n3feND))),
+            (null != T || ((0, c.Z)() && null != A)) && (Z || E)
+                ? (Z ? ((t = !1), (r = D), (u = o.ScreenXIcon), (I = _.intl.string(_.t.S5anIS))) : y ? ((t = !1), (r = O), (u = o.ScreenArrowIcon), (I = null != T ? _.intl.formatToPlainString(_.t.AB5gT0, { game: T.name }) : _.intl.string(_.t.FeUKeH))) : ((t = !0), (r = null), (u = o.ScreenArrowIcon), (I = null != N && (0, m.vd)(N.type) ? _.intl.string(_.t.uQn9Bw) : null != S ? _.intl.string(_.t.fBXEoK) : _.intl.string(_.t.n3feND))),
                   (0, i.jsx)('div', {
                       className: v.panelButtonContainer,
                       children: (0, i.jsx)(g.Z, {
