@@ -233,6 +233,7 @@ class z extends (i = c.ZP.Store) {
         THREAD_DELETE: H,
         RELATIONSHIP_ADD: V,
         RELATIONSHIP_REMOVE: V,
+        RELATIONSHIP_UPDATE: V,
         MENTION_MODAL_OPEN: function () {
             M = !0;
         },
