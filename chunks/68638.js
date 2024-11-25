@@ -1,3 +1,4 @@
+n(47120);
 var i,
     r,
     l,
@@ -7,11 +8,27 @@ var i,
     c = n(442837),
     d = n(570140),
     u = n(314897),
-    m = n(823379),
-    h = n(891864);
+    m = n(823379);
+function h(e) {
+    return {
+        id: e.id,
+        name: e.name,
+        description: e.description,
+        splash: e.splash,
+        banner: e.banner,
+        icon: e.icon,
+        features: new Set(e.features),
+        presenceCount: e.approximate_presence_count,
+        memberCount: e.approximate_member_count,
+        premiumSubscriptionCount: e.premium_subscription_count,
+        preferredLocale: e.preferred_locale,
+        discoverySplash: e.discovery_splash,
+        emojis: e.emojis
+    };
+}
 let g = {},
     x = 0;
-class p extends (s = c.ZP.Store) {
+class p extends (i = c.ZP.Store) {
     initialize() {
         this.waitFor(u.default);
     }
@@ -25,15 +42,15 @@ class p extends (s = c.ZP.Store) {
         return e.map((e) => g[e]).filter(m.lm);
     }
 }
-(l = 'DiscoverGuildsStore'),
-    (r = 'displayName') in (i = p)
-        ? Object.defineProperty(i, r, {
-              value: l,
+(s = 'DiscoverGuildsStore'),
+    (l = 'displayName') in (r = p)
+        ? Object.defineProperty(r, l, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[r] = l),
+        : (r[l] = s),
     (t.Z = new p(d.Z, {
         DISCOVER_GUILDS_FETCH_START: function (e) {
             x += 1;
@@ -42,7 +59,7 @@ class p extends (s = c.ZP.Store) {
             let { guilds: t } = e;
             (x -= 1),
                 o()
-                    .map(t, h.Z)
+                    .map(t, h)
                     .forEach((e) => (g[e.id] = e));
         },
         DISCOVER_GUILDS_FETCH_FAILURE: function (e) {

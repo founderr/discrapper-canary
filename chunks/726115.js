@@ -1,163 +1,151 @@
 n.d(t, {
-    CD: function () {
-        return C;
-    },
     Ew: function () {
-        return S;
+        return g;
     },
-    Mf: function () {
+    Iv: function () {
         return v;
     },
-    NL: function () {
-        return D;
+    Mf: function () {
+        return _;
     },
     PM: function () {
-        return x;
-    },
-    QW: function () {
-        return b;
-    },
-    U0: function () {
-        return y;
-    },
-    Xp: function () {
-        return A;
-    },
-    a$: function () {
-        return I;
-    },
-    lg: function () {
         return T;
     },
-    oT: function () {
-        return R;
+    QW: function () {
+        return h;
+    },
+    Uv: function () {
+        return E;
+    },
+    Xp: function () {
+        return I;
+    },
+    a$: function () {
+        return p;
+    },
+    lg: function () {
+        return m;
     },
     vL: function () {
-        return L;
+        return b;
     },
     vb: function () {
-        return E;
+        return f;
     }
 }),
     n(411104),
     n(47120),
     n(757143);
 var r = n(772848),
-    i = n(544891),
-    a = n(401919),
-    s = n(706454),
-    o = n(626135),
-    l = n(823379),
-    u = n(900849),
-    c = n(762692);
-n(275131);
-var d = n(331114),
-    f = n(356164),
-    _ = n(164991),
-    p = n(128449),
-    h = n(981631),
-    m = n(731455),
-    g = n(388032);
-function E(e) {
+    i = n(706454),
+    a = n(626135),
+    s = n(823379),
+    o = n(900849);
+n(275131), n(356164);
+var l = n(128449),
+    u = n(981631),
+    c = n(731455),
+    d = n(388032);
+function f(e) {
     switch (e) {
-        case p.vf.FEATURED:
-            return g.intl.string(g.t['RU+DCQ']);
-        case p.vf.GAMING:
-            return g.intl.string(g.t['CD/USE']);
-        case p.vf.MUSIC:
-            return g.intl.string(g.t.nt9PLy);
-        case p.vf.ENTERTAINMENT:
-            return g.intl.string(g.t.gSbmdn);
-        case p.vf.TECH:
-            return g.intl.string(g.t['0A0By8']);
-        case p.vf.EDUCATION:
-            return g.intl.string(g.t.Gy9woq);
-        case p.vf.HUBS:
-            return g.intl.string(g.t['q469/f']);
+        case l.vf.FEATURED:
+            return d.intl.string(d.t['RU+DCQ']);
+        case l.vf.GAMING:
+            return d.intl.string(d.t['CD/USE']);
+        case l.vf.MUSIC:
+            return d.intl.string(d.t.nt9PLy);
+        case l.vf.ENTERTAINMENT:
+            return d.intl.string(d.t.gSbmdn);
+        case l.vf.TECH:
+            return d.intl.string(d.t['0A0By8']);
+        case l.vf.EDUCATION:
+            return d.intl.string(d.t.Gy9woq);
+        case l.vf.HUBS:
+            return d.intl.string(d.t['q469/f']);
     }
 }
-function v(e) {
+function _(e) {
     switch (e) {
-        case p.vf.FEATURED:
-            return g.intl.string(g.t.OlDfzM);
-        case p.vf.GAMING:
-            return g.intl.string(g.t['CD/USE']);
-        case p.vf.MUSIC:
-            return g.intl.string(g.t.nt9PLy);
-        case p.vf.ENTERTAINMENT:
-            return g.intl.string(g.t.gSbmdn);
-        case p.vf.TECH:
-            return g.intl.string(g.t['0A0By8']);
-        case p.vf.EDUCATION:
-            return g.intl.string(g.t.Gy9woq);
-        case p.vf.HUBS:
-            return g.intl.string(g.t.X5xPlZ);
+        case l.vf.FEATURED:
+            return d.intl.string(d.t.OlDfzM);
+        case l.vf.GAMING:
+            return d.intl.string(d.t['CD/USE']);
+        case l.vf.MUSIC:
+            return d.intl.string(d.t.nt9PLy);
+        case l.vf.ENTERTAINMENT:
+            return d.intl.string(d.t.gSbmdn);
+        case l.vf.TECH:
+            return d.intl.string(d.t['0A0By8']);
+        case l.vf.EDUCATION:
+            return d.intl.string(d.t.Gy9woq);
+        case l.vf.HUBS:
+            return d.intl.string(d.t.X5xPlZ);
         default:
             throw Error('[getGlobalDiscoveryServerTabTitle] Unsupported tab: '.concat(e));
     }
 }
-function I(e) {
+function p(e) {
     switch (e) {
-        case p.vf.FEATURED:
-            return g.intl.string(g.t.SdMhrq);
-        case p.vf.GAMING:
-            return g.intl.string(g.t.AAJ5oq);
-        case p.vf.MUSIC:
-            return g.intl.string(g.t['SOio+P']);
-        case p.vf.ENTERTAINMENT:
-            return g.intl.string(g.t.R09vf3);
-        case p.vf.TECH:
-            return g.intl.string(g.t['Ew4d5+']);
-        case p.vf.EDUCATION:
-            return g.intl.string(g.t.sasIWV);
-        case p.vf.HUBS:
-            return g.intl.string(g.t['F/IQCA']);
+        case l.vf.FEATURED:
+            return d.intl.string(d.t.SdMhrq);
+        case l.vf.GAMING:
+            return d.intl.string(d.t.AAJ5oq);
+        case l.vf.MUSIC:
+            return d.intl.string(d.t['SOio+P']);
+        case l.vf.ENTERTAINMENT:
+            return d.intl.string(d.t.R09vf3);
+        case l.vf.TECH:
+            return d.intl.string(d.t['Ew4d5+']);
+        case l.vf.EDUCATION:
+            return d.intl.string(d.t.sasIWV);
+        case l.vf.HUBS:
+            return d.intl.string(d.t['F/IQCA']);
         default:
             throw Error('[getGlobalDiscoveryServerTabTitle] Unsupported tab: '.concat(e));
     }
 }
-function b(e) {
+function h(e) {
     switch (e) {
-        case p.vf.FEATURED:
-            return g.intl.string(g.t.crt84e);
-        case p.vf.GAMING:
-            return g.intl.string(g.t.fWbIpa);
-        case p.vf.MUSIC:
-            return g.intl.string(g.t.nfgDz8);
-        case p.vf.ENTERTAINMENT:
-            return g.intl.string(g.t.k1CYxs);
-        case p.vf.TECH:
-            return g.intl.string(g.t['4dawpq']);
-        case p.vf.EDUCATION:
-            return g.intl.string(g.t.uexPgY);
+        case l.vf.FEATURED:
+            return d.intl.string(d.t.crt84e);
+        case l.vf.GAMING:
+            return d.intl.string(d.t.fWbIpa);
+        case l.vf.MUSIC:
+            return d.intl.string(d.t.nfgDz8);
+        case l.vf.ENTERTAINMENT:
+            return d.intl.string(d.t.k1CYxs);
+        case l.vf.TECH:
+            return d.intl.string(d.t['4dawpq']);
+        case l.vf.EDUCATION:
+            return d.intl.string(d.t.uexPgY);
         default:
             return null;
     }
 }
-function T(e) {
+function m(e) {
     switch (e) {
-        case p.vf.FEATURED:
-            return m.Hk;
-        case p.vf.GAMING:
-            return m.Gj.Activity;
-        case p.vf.MUSIC:
-            return m.Gj.Music;
-        case p.vf.ENTERTAINMENT:
-            return m.Gj.Television;
-        case p.vf.TECH:
-            return m.Gj.Science;
-        case p.vf.EDUCATION:
-            return m.Gj.Education;
-        case p.vf.HUBS:
-            return m.gU;
+        case l.vf.FEATURED:
+            return c.Hk;
+        case l.vf.GAMING:
+            return c.Gj.Activity;
+        case l.vf.MUSIC:
+            return c.Gj.Music;
+        case l.vf.ENTERTAINMENT:
+            return c.Gj.Television;
+        case l.vf.TECH:
+            return c.Gj.Science;
+        case l.vf.EDUCATION:
+            return c.Gj.Education;
+        case l.vf.HUBS:
+            return c.gU;
         default:
-            (0, l.vE)(e);
+            (0, s.vE)(e);
     }
 }
-function S(e) {
-    return null == e || Date.now() - e > p.AF;
+function g(e) {
+    return null == e || Date.now() - e > l.AF;
 }
-function y(e) {
+function E(e) {
     return {
         id: e.id,
         name: e.name,
@@ -175,128 +163,45 @@ function y(e) {
         emojiCount: e.emoji_count
     };
 }
-function A() {
+function v(e) {
+    return {
+        id: e.id,
+        name: e.name,
+        description: e.description,
+        splash: e.splash,
+        banner: e.banner,
+        icon: e.icon,
+        features: new Set(e.features),
+        presenceCount: e.approximate_presence_count,
+        memberCount: e.approximate_member_count,
+        premiumSubscriptionCount: void 0,
+        preferredLocale: void 0,
+        discoverySplash: e.discovery_splash,
+        emojis: []
+    };
+}
+function I() {
     var e;
-    let [t] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [s.default],
-        n = (0, m.Cf)(),
+    let [t] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [i.default],
+        n = (0, c.Cf)(),
         r = t.locale;
     return (null !== (e = n.find((e) => e.code === r)) && void 0 !== e ? e : n[0]).code;
 }
-function N(e) {
-    let { loadId: t, categoryId: n, offset: r, query: i, languageCode: a } = e;
-    '' !== i.trim() &&
-        (u.tI(t, n),
-        c.Z.fetchAlgoliaSearchResults(i, {
-            categoryId: n,
-            languageCode: a,
-            offset: r,
-            length: 12,
-            filters: { approximate_member_count: u.sq }
-        }));
-}
-function C(e) {
-    let { loadId: t, categoryId: n, query: r, languageCode: i, offset: a } = e;
-    if (
-        !f.Z.getIsFetching({
-            query: r,
-            categoryId: n,
-            languageCode: i
-        })
-    )
-        f.Z.getIsInitialFetchComplete({
-            query: r,
-            categoryId: n,
-            languageCode: i
-        }) &&
-            N({
-                loadId: t,
-                categoryId: n,
-                query: r,
-                languageCode: i,
-                offset: a
-            });
-}
-function R(e) {
-    let { loadId: t, categoryId: n, query: r, languageCode: i } = e,
-        a = f.Z.getIsFetching({
-            query: r,
-            categoryId: n,
-            languageCode: i
-        }),
-        s = f.Z.getIsInitialFetchComplete({
-            query: r,
-            categoryId: n,
-            languageCode: i
-        });
-    !a &&
-        !s &&
-        N({
-            loadId: t,
-            categoryId: n,
-            query: r,
-            languageCode: i,
-            offset: 0
-        });
-}
-async function O(e) {
-    return (
-        !(0, a.x)(e) &&
-        (
-            await i.tn.get({
-                url: h.ANM.GUILD_DISCOVERY_VALID_TERM,
-                query: { term: e },
-                oldFormErrors: !0,
-                rejectWithError: !1
-            })
-        ).body.valid
-    );
-}
-async function D(e) {
-    let { loadId: t, categoryId: n, query: r, languageCode: i } = e;
-    if ('' === r.trim()) return;
-    let a = d.Z.getIsFetchingCounts(r),
-        s = d.Z.getIsFetchingCounts(r);
-    if (!a && !s) {
-        if (
-            (_.Z.setState({
-                fetchedQuery: r,
-                resultsQuery: ''
-            }),
-            f.Z.getIsBlocked(r) || !(await O(r)))
-        ) {
-            c.Z.handleBlockedSearchQuery(r);
-            return;
-        }
-        c.Z.fetchAlgoliaSearchResultCounts({
-            query: r,
-            algoliaFilters: { approximate_member_count: u.sq },
-            onComplete: () => {
-                _.Z.setState({ resultsQuery: r });
-            }
-        }),
-            R({
-                loadId: t,
-                categoryId: n,
-                query: r,
-                languageCode: i
-            });
-    }
-}
-async function L(e) {
-    let { loadId: t, guildId: n, index: r, categoryId: i, analyticsLocation: a, options: s } = e,
-        l = {
-            ...s,
+async function b(e) {
+    let { loadId: t, guildId: n, index: r, categoryId: i, analyticsLocation: s, options: l } = e,
+        c = {
+            ...l,
             loadId: t
         };
-    await u.Ub(n, a, l),
-        o.default.track(h.rMx.GUILD_DISCOVERY_GUILD_SELECTED, {
+    await o.Ub(n, s, c),
+        a.default.track(u.rMx.GUILD_DISCOVERY_GUILD_SELECTED, {
             guild_id: n,
             load_id: t,
             card_index: r,
             category_id: i,
-            location: a
+            location: s
         });
 }
-function x() {
+function T() {
     return (0, r.Z)().replace(/-/g, '');
 }

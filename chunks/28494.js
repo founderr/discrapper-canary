@@ -11,17 +11,17 @@ var i = n(192379),
     l = n(296386),
     a = n(900849),
     s = n(762692),
-    o = n(356164),
-    c = n(164991),
-    d = n(726115),
+    o = n(959165),
+    c = n(356164),
+    d = n(164991),
     u = n(859921),
     h = n(128449),
     m = n(731455);
 function p(e) {
     let { loadId: t } = e,
-        n = c.Z.useField('fetchedQuery'),
-        l = c.Z.useField('categoryId'),
-        a = c.Z.useField('languageCode'),
+        n = d.Z.useField('fetchedQuery'),
+        l = d.Z.useField('categoryId'),
+        a = d.Z.useField('languageCode'),
         s = i.useMemo(
             () => ({
                 categoryId: l,
@@ -30,35 +30,35 @@ function p(e) {
             }),
             [l, a, n]
         ),
-        u = (0, r.e7)([o.Z], () => {
+        u = (0, r.e7)([c.Z], () => {
             var e;
-            return null !== (e = o.Z.getGuildIds(s)) && void 0 !== e ? e : h.q5;
+            return null !== (e = c.Z.getGuildIds(s)) && void 0 !== e ? e : h.q5;
         }),
-        m = (0, r.e7)([o.Z], () => {
+        m = (0, r.e7)([c.Z], () => {
             var e;
-            return null !== (e = o.Z.getIsFetching(s)) && void 0 !== e && e;
+            return null !== (e = c.Z.getIsFetching(s)) && void 0 !== e && e;
         }),
-        p = (0, r.e7)([o.Z], () => {
+        p = (0, r.e7)([c.Z], () => {
             var e;
-            return null === (e = o.Z.getIsBlocked(n)) || void 0 === e || e;
+            return null === (e = c.Z.getIsBlocked(n)) || void 0 === e || e;
         }),
-        g = c.Z.useField('resultsQuery'),
+        g = d.Z.useField('resultsQuery'),
         f = g !== n,
         _ = i.useCallback(() => {
-            let e = o.Z.getGuildIds(s),
-                n = o.Z.getTotal(s);
+            let e = c.Z.getGuildIds(s),
+                n = c.Z.getTotal(s);
             if (null == e || null == n) return;
-            let i = o.Z.getIsFetching(s),
-                r = o.Z.getIsInitialFetchComplete(s);
+            let i = c.Z.getIsFetching(s),
+                r = c.Z.getIsInitialFetchComplete(s);
             !i &&
                 r &&
                 !(e.length >= n) &&
-                (0, d.CD)({
+                o.Z.loadMoreCategoryResults({
                     loadId: t,
                     offset: e.length,
-                    categoryId: c.Z.getField('categoryId'),
-                    query: c.Z.getField('fetchedQuery'),
-                    languageCode: c.Z.getField('languageCode')
+                    categoryId: d.Z.getField('categoryId'),
+                    query: d.Z.getField('fetchedQuery'),
+                    languageCode: d.Z.getField('languageCode')
                 });
         }, [t, s]);
     return i.useMemo(
@@ -76,18 +76,22 @@ function p(e) {
 function g(e) {
     let { loadId: t } = e,
         n = u.Z.useField('isSearchVisible'),
-        r = c.Z.useField('query');
+        h = d.Z.useField('query'),
+        p = (0, r.e7)([c.Z], () => c.Z.getIsAlgoliaInitialized());
     i.useEffect(() => {
-        s.Z.createAlgoliaIndex(), (0, l.le)();
-    }, []);
-    let o = i.useCallback((e) => {
-            c.Z.setState({ query: e });
+        !p && s.Z.createAlgoliaIndex();
+    }, [p]),
+        i.useEffect(() => {
+            (0, l.le)();
+        }, []);
+    let g = i.useCallback((e) => {
+            d.Z.setState({ query: e });
         }, []),
-        h = i.useCallback(() => {
+        f = i.useCallback(() => {
             a.IZ(t),
                 s.Z.clearAlgoliaSearchResults(),
                 s.Z.resetSearchLayout(),
-                c.Z.setState({
+                d.Z.setState({
                     query: '',
                     fetchedQuery: '',
                     resultsQuery: '',
@@ -98,19 +102,19 @@ function g(e) {
                 u.Z.setState({ isSearchVisible: !1 });
         }, [t]);
     return {
-        searchQuery: r,
-        onSearchTextChange: o,
-        onClearSearch: h,
+        searchQuery: h,
+        onSearchTextChange: g,
+        onClearSearch: f,
         onSearchSubmit: i.useCallback(() => {
-            let e = c.Z.getField('query'),
-                n = c.Z.getField('fetchedQuery');
+            let e = d.Z.getField('query'),
+                n = d.Z.getField('fetchedQuery');
             if ('' === e.trim() || e === n) return;
             s.Z.clearAlgoliaSearchResults();
-            let i = c.Z.getField('languageCode'),
-                r = c.Z.getField('categoryId');
-            c.Z.setState({ resultsInitialCategoryId: r }),
+            let i = d.Z.getField('languageCode'),
+                r = d.Z.getField('categoryId');
+            d.Z.setState({ resultsInitialCategoryId: r }),
                 u.Z.setState({ isSearchVisible: !0 }),
-                (0, d.NL)({
+                o.Z.loadCategoryResultsAndCounts({
                     loadId: t,
                     categoryId: r,
                     query: e,
