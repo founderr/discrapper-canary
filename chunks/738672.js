@@ -21,9 +21,13 @@ function u(e) {
         _ = l.createRef(),
         v = l.useRef(0);
     l.useEffect(() => {
-        var e, t;
-        f(String(v.current)), C(void 0 !== x && x < (null !== (t = null === (e = _.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 300) + 24), (v.current += 1);
-    }, [x, _]);
+        let e = t.current;
+        if (null != e) return e.addEventListener('click', u), () => e.removeEventListener('click', u);
+    }),
+        l.useEffect(() => {
+            var e, t;
+            f(String(v.current)), C(void 0 !== x && x < (null !== (t = null === (e = _.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 300) + 24), (v.current += 1);
+        }, [x, _]);
     let { preventIdle: I, allowIdle: E } = (0, d.Y)('popup');
     return (null == t ? void 0 : t.current) == null
         ? null
