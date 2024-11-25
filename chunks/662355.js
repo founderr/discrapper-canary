@@ -1,9 +1,4 @@
-r.d(t, {
-    A: function () {
-        return a;
-    }
-});
-var n = r(395848);
-let a = (e) => {
-    n.m.document && n.m.document.prerendering ? addEventListener('prerenderingchange', () => e(), !0) : e();
+e.exports = {
+    icon: 'icon_a94328',
+    placeholder: 'placeholder_a94328'
 };

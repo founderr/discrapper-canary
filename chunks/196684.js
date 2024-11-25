@@ -1,10 +1,7 @@
 e.exports = {
-    buttonIcon: 'buttonIcon_b78763',
-    button: 'button_b78763',
-    allPaymentsToggleButton: 'allPaymentsToggleButton_b78763',
-    allPaymentsSection: 'allPaymentsSection_b78763',
-    hidden: 'hidden_b78763',
-    newPaymentBadge: 'newPaymentBadge_b78763',
-    SeparatorUpper: 'SeparatorUpper_b78763',
-    SeparatorLower: 'SeparatorLower_b78763'
+    categories: 'categories_d70b79',
+    category: 'category_d70b79',
+    name: 'name_d70b79',
+    count: 'count_d70b79',
+    selected: 'selected_d70b79'
 };
