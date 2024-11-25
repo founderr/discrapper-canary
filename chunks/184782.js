@@ -23,7 +23,7 @@ var i = n(200651),
     f = n(981631),
     v = n(231338),
     I = n(388032),
-    S = n(84011);
+    S = n(908145);
 let T = (e) => {
     var l;
     let { channelData: n, onClose: a, trackOptionClick: r } = e,

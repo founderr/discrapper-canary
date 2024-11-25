@@ -33,7 +33,7 @@ var r = n(200651),
     R = n(921944),
     O = n(474936),
     D = n(388032),
-    L = n(748020);
+    L = n(245392);
 let x = () =>
         (0, r.jsx)('div', {
             className: L.editorHeader,

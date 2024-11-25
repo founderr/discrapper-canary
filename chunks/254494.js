@@ -5,7 +5,7 @@ var r = n(200651),
     o = n(218867),
     l = n(28546),
     u = n(981631),
-    c = n(2544);
+    c = n(670638);
 let d = (e) => {
     let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: r } = e,
         a = i.useRef(u.xAR),

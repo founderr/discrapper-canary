@@ -29,7 +29,7 @@ var l = n(200651),
     b = n(646746),
     L = n(819727),
     x = n(388032),
-    N = n(463061),
+    N = n(190417),
     T = n(621054);
 function P(e) {
     let { channelId: t, messageId: P, message: y, initialSelectedDestinations: Z, forwardOptions: w, onClose: R, onRequestSent: O, ...D } = e,

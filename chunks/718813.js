@@ -22,7 +22,7 @@ var i,
     E = n(819640),
     I = n(585483),
     C = n(981631),
-    v = n(736366);
+    v = n(294981);
 function S(e, t, n) {
     return (
         t in e
@@ -37,12 +37,12 @@ function S(e, t, n) {
     );
 }
 let N = (0, g.Un)({
-        createPromise: () => Promise.all([n.e('23217'), n.e('33053'), n.e('8016'), n.e('76540'), n.e('15669'), n.e('17938'), n.e('22646'), n.e('34842'), n.e('30419'), n.e('48923'), n.e('8821'), n.e('18824'), n.e('76447'), n.e('68692')]).then(n.bind(n, 989804)),
+        createPromise: () => Promise.all([n.e('23217'), n.e('33053'), n.e('8016'), n.e('76540'), n.e('15669'), n.e('17938'), n.e('22646'), n.e('34842'), n.e('30419'), n.e('48923'), n.e('8821'), n.e('18824'), n.e('89985'), n.e('23796')]).then(n.bind(n, 989804)),
         webpackId: 989804,
         name: 'UserSettings'
     }),
     T = (0, g.Un)({
-        createPromise: () => Promise.all([n.e('33053'), n.e('7654'), n.e('44294'), n.e('75116')]).then(n.bind(n, 869779)),
+        createPromise: () => Promise.all([n.e('33053'), n.e('7654'), n.e('31113'), n.e('75116')]).then(n.bind(n, 869779)),
         webpackId: 869779,
         name: 'ChannelSettings'
     }),
@@ -52,7 +52,7 @@ let N = (0, g.Un)({
         name: 'CollectiblesShop'
     }),
     b = (0, g.Un)({
-        createPromise: () => Promise.all([n.e('33053'), n.e('15669'), n.e('7654'), n.e('44156'), n.e('44294'), n.e('85552'), n.e('58227'), n.e('16114'), n.e('28161')]).then(n.bind(n, 994763)),
+        createPromise: () => Promise.all([n.e('33053'), n.e('15669'), n.e('7654'), n.e('44156'), n.e('31113'), n.e('85552'), n.e('58227'), n.e('16114'), n.e('16221')]).then(n.bind(n, 994763)),
         webpackId: 994763,
         name: 'GuildSettings'
     }),

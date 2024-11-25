@@ -30,7 +30,7 @@ var i = n(200651),
     C = n(981631),
     y = n(65154),
     b = n(388032),
-    T = n(810190);
+    T = n(995544);
 let A = o.AvatarSizes.SIZE_80,
     N = o.AvatarSizes.SIZE_40;
 function w(e) {

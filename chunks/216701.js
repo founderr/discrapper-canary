@@ -10,7 +10,7 @@ var r = n(200651);
 n(192379);
 var i = n(596454),
     a = n(307707),
-    s = n(683090);
+    s = n(928797);
 let o = {
     SMALL: s.small,
     MEDIUM: s.medium,

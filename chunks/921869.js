@@ -11,7 +11,7 @@ var r = n(442837),
     s = n(553795),
     i = n(424071),
     c = n(388032),
-    d = n(879137);
+    d = n(38920);
 function u(e) {
     let { platformType: t, onContinue: n, onClose: u, img: x, headerConnect: h, headerReconnect: m, body: N, learnMoreLink: C, valueProps: j } = e,
         f = (0, r.e7)([s.Z], () => {

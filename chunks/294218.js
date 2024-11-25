@@ -5,8 +5,8 @@ var i = n(200651),
     o = n(91192),
     s = n(442837),
     c = n(518738),
-    u = n(628238),
-    d = n(869765),
+    d = n(628238),
+    u = n(869765),
     m = n(592125),
     h = n(496675),
     f = n(709054),
@@ -17,20 +17,20 @@ var i = n(200651),
     C = n(453687),
     I = n(25015),
     x = n(689674),
-    N = n(438075),
-    v = n(963550),
+    v = n(438075),
+    N = n(963550),
     T = n(845080),
     S = n(295790),
     A = n(145807),
     b = n(56744),
     j = n(981631),
-    Z = n(916315);
+    Z = n(46124);
 t.Z = r.memo(function (e) {
     var t, n;
     let { message: r, compact: l = !1, className: R, onContextMenu: P, onClick: L, hideSimpleEmbedContent: y = !0, channel: O, isGroupStart: M, animateAvatar: k, subscribeToComponentDispatch: D, renderThreadAccessory: B, trackAnnouncementViews: U = !1, ...w } = e,
         F = r.type === j.uaV.POLL_RESULT || (null !== (t = e.disableInteraction) && void 0 !== t && t),
         G = r.isFirstMessageInForumPost(O),
-        V = (0, u.A)((null !== (n = r.editedTimestamp) && void 0 !== n ? n : r.timestamp).valueOf()),
+        V = (0, d.A)((null !== (n = r.editedTimestamp) && void 0 !== n ? n : r.timestamp).valueOf()),
         { content: H, hasSpoilerEmbeds: z } = (0, I.Z)(r, {
             hideSimpleEmbedContent: y,
             allowList: G || V,
@@ -39,7 +39,7 @@ t.Z = r.memo(function (e) {
             previewLinkTarget: !0
         }),
         W = r.type === j.uaV.REPLY ? r.messageReference : void 0,
-        K = (0, s.e7)([d.Z], () => d.Z.getMessageByReference(W)),
+        K = (0, s.e7)([u.Z], () => u.Z.getMessageByReference(W)),
         Y = (0, o.JA)(r.id),
         X = (0, g.ZP)(r),
         Q = (0, s.e7)([m.Z], () => r.hasFlag(j.iLy.HAS_THREAD) && m.Z.getChannel(f.default.castMessageIdAsChannelId(r.id))),
@@ -71,8 +71,8 @@ t.Z = r.memo(function (e) {
             author: X,
             roleIcon: q
         }),
-        childrenAccessories: e.hideAccessories ? void 0 : (0, N.Q)(e, z),
-        childrenMessageContent: (0, v.Z)(e, H),
+        childrenAccessories: e.hideAccessories ? void 0 : (0, v.Q)(e, z),
+        childrenMessageContent: (0, N.Z)(e, H),
         childrenSystemMessage: (0, S.Z)({
             ...e,
             disableInteraction: F

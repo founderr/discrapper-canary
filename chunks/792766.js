@@ -15,7 +15,7 @@ var r = n(200651),
     _ = n(601964),
     E = n(598077),
     h = n(388032),
-    p = n(325929);
+    p = n(828573);
 let f = (e) => {
         var t;
         let { speaker: n, guildId: i, isEmbed: s } = e,

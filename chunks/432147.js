@@ -11,8 +11,8 @@ var r = n(120356),
     o = n(481060),
     s = n(239091),
     c = n(901461),
-    u = n(592125),
-    d = n(709054),
+    d = n(592125),
+    u = n(709054),
     m = n(723774),
     h = n(144140),
     f = n(91159),
@@ -20,10 +20,10 @@ var r = n(120356),
     _ = n(488131),
     g = n(981631),
     E = n(388032),
-    C = n(119487);
+    C = n(363059);
 function I(e) {
     let { message: t, compact: n } = e,
-        r = (0, a.e7)([u.Z], () => u.Z.getChannel(d.default.castMessageIdAsChannelId(t.id)));
+        r = (0, a.e7)([d.Z], () => d.Z.getChannel(u.default.castMessageIdAsChannelId(t.id)));
     return null == r
         ? null
         : (0, i.jsx)(x, {
@@ -34,8 +34,8 @@ function I(e) {
 }
 function x(e) {
     let { channel: t, compact: r, isSystemMessage: c } = e,
-        u = (0, a.e7)([h.Z], () => h.Z.getCount(t.id)),
-        d = (function (e) {
+        d = (0, a.e7)([h.Z], () => h.Z.getCount(t.id)),
+        u = (function (e) {
             var t;
             let n = (0, a.e7)([h.Z], () => h.Z.getMostRecentMessage(e.id)),
                 r = (0, a.e7)([h.Z], () => h.Z.getCount(e.id)),
@@ -67,7 +67,7 @@ function x(e) {
                           ]
                       });
         })(t),
-        I = null != u && u > 0;
+        I = null != d && d > 0;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
@@ -88,7 +88,7 @@ function x(e) {
                 },
                 onContextMenu: function (e) {
                     (0, s.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('38902'), n.e('77564'), n.e('13154')]).then(n.bind(n, 422200));
+                        let { default: e } = await Promise.all([n.e('38902'), n.e('77564'), n.e('75206')]).then(n.bind(n, 422200));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 channel: t,
@@ -111,14 +111,14 @@ function x(e) {
                                 (0, i.jsx)('span', {
                                     className: C.cta,
                                     'aria-hidden': !I,
-                                    children: (0, m.WE)(u, t.id)
+                                    children: (0, m.WE)(d, t.id)
                                 })
                             ]
                         }),
                         (0, i.jsx)('span', {
                             'aria-hidden': !0,
                             className: l()(C.bottomLine),
-                            children: d
+                            children: u
                         })
                     ]
                 })

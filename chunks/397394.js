@@ -45,7 +45,7 @@ var r = n(200651),
     S = n(787025),
     y = n(981631),
     A = n(388032),
-    N = n(193310);
+    N = n(553410);
 function C(e) {
     let { message: t, footer: n, headerClassName: i, showsCloseWindowText: a, spinner: o } = e;
     return (

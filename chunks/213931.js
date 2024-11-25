@@ -1,4 +1,4 @@
-t.d(n, {
+a.d(n, {
     M: function () {
         return l;
     },
@@ -6,34 +6,34 @@ t.d(n, {
         return d;
     }
 });
-var a = t(381499),
-    c = t(675478),
-    i = t(592125),
-    o = t(626135),
-    r = t(981631);
-function d(e, n, t, i) {
-    if (n !== t)
+var t = a(381499),
+    c = a(675478),
+    i = a(592125),
+    o = a(626135),
+    r = a(981631);
+function d(e, n, a, i) {
+    if (n !== a)
         (0, c.PS)(
             e,
             (e) => {
-                e.customNotificationSoundConfig = { notificationSoundPackId: a.Gm.create({ value: t }) };
+                e.customNotificationSoundConfig = { notificationSoundPackId: t.Gm.create({ value: a }) };
             },
             c.fy.INFREQUENT_USER_ACTION
         ),
             o.default.track(r.rMx.CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPDATED, {
                 guild_id: e,
                 location: i,
-                soundpack: t
+                soundpack: a
             });
 }
-function l(e, n, t, d, l) {
+function l(e, n, a, d, l) {
     var s;
-    if (t !== d)
+    if (a !== d)
         (0, c.BU)(
             e,
             n,
             (e) => {
-                e.customNotificationSoundConfig = { notificationSoundPackId: a.Gm.create({ value: d }) };
+                e.customNotificationSoundConfig = { notificationSoundPackId: t.Gm.create({ value: d }) };
             },
             c.fy.INFREQUENT_USER_ACTION
         ),

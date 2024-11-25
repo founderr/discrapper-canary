@@ -46,7 +46,7 @@ var i = n(481060),
 function I(e) {
     let { questId: t, location: a, questContentPosition: s, preview: o = !1 } = e;
     (0, i.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([n.e('48923'), n.e('99393'), n.e('28044'), n.e('71740')]).then(n.bind(n, 985866));
+        let { default: e } = await Promise.all([n.e('48923'), n.e('99393'), n.e('28044'), n.e('84120')]).then(n.bind(n, 985866));
         return (n) =>
             (0, r.jsx)(e, {
                 ...n,
@@ -59,7 +59,7 @@ function I(e) {
 }
 function b(e, t) {
     (0, i.openModalLazy)(async () => {
-        let { default: i } = await Promise.all([n.e('8016'), n.e('3858')]).then(n.bind(n, 824393));
+        let { default: i } = await Promise.all([n.e('8016'), n.e('36909')]).then(n.bind(n, 824393));
         return (n) =>
             (0, r.jsx)(i, {
                 ...n,

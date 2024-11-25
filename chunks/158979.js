@@ -11,7 +11,7 @@ var r = n(481060),
     o = n(981631),
     l = n(987650),
     c = n(388032),
-    d = n(57266);
+    d = n(114057);
 function u() {
     return (0, i.jsx)('div', {
         className: d.footer,

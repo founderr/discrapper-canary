@@ -8,7 +8,7 @@ n(192379);
 var i = n(120356),
     a = n.n(i),
     s = n(481060),
-    o = n(9636);
+    o = n(829820);
 function l(e) {
     let { icon: t, title: n, titleVariant: i = 'text-md/semibold', description: l, descriptionVariant: u = 'text-xs/medium', iconClassName: c, color: d, buttonText: f, buttonColor: _ = s.Button.Colors.PRIMARY, buttonSize: p = s.Button.Sizes.SMALL, buttonLook: h = s.Button.Looks.FILLED, buttonDisabled: m, onButtonPress: g } = e,
         E =

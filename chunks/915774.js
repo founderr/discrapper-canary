@@ -19,7 +19,7 @@ var o = t(200651),
     h = t(981631),
     v = t(185923),
     x = t(388032),
-    C = t(797057);
+    C = t(866878);
 function b(e) {
     var n;
     let { transitionState: t, onClose: b, channelId: p, guildId: g, tag: N } = e,

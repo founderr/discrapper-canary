@@ -3,7 +3,7 @@ n(192379);
 var i = n(120356),
     a = n.n(i),
     s = n(731994),
-    o = n(570486);
+    o = n(55720);
 t.Z = function (e) {
     let { icons: t, className: n } = e;
     return (0, r.jsxs)('div', {

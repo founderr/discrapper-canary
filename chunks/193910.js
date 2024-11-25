@@ -30,7 +30,7 @@ var i = n(200651),
     N = n(921944),
     S = n(489887),
     T = n(388032),
-    j = n(695527);
+    j = n(308183);
 let A = /(.*)```(\w+)\n(.*)```(.*)/s;
 function y() {
     let e = (0, a.e7)([C.Z], () => C.Z.hasCurrentUserSentMessageSinceAppStart()),

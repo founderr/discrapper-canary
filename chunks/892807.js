@@ -16,7 +16,7 @@ var i = n(200651),
     f = n(594174),
     p = n(981631),
     m = n(388032),
-    g = n(549584);
+    g = n(693215);
 function v(e) {
     let { recentVoiceChannels: t, currentVoiceChannel: n, onClose: v, onSelect: E } = e,
         Z = l.useCallback(

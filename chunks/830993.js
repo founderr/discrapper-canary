@@ -26,7 +26,7 @@ var i = n(200651),
     I = n(543432),
     b = n(981631),
     E = n(388032),
-    S = n(289223);
+    S = n(684393);
 function Z(e) {
     var t, d;
     let { channel: h, guild: p, onAction: f, voiceStates: C, isChannelSelected: v, shouldShowSettingNudge: x } = e;
@@ -127,7 +127,7 @@ function Z(e) {
                                       children: E.intl.format(E.t.ePyoY2, {
                                           onClick: () => {
                                               (0, a.openModalLazy)(async () => {
-                                                  let { default: e } = await Promise.all([n.e('23217'), n.e('33053'), n.e('8016'), n.e('76540'), n.e('15669'), n.e('17938'), n.e('22646'), n.e('34842'), n.e('30419'), n.e('48923'), n.e('8821'), n.e('18824'), n.e('76447'), n.e('42309'), n.e('37229'), n.e('25183'), n.e('28044'), n.e('85030'), n.e('15248')]).then(n.bind(n, 241420));
+                                                  let { default: e } = await Promise.all([n.e('23217'), n.e('33053'), n.e('8016'), n.e('76540'), n.e('15669'), n.e('17938'), n.e('22646'), n.e('34842'), n.e('30419'), n.e('48923'), n.e('8821'), n.e('18824'), n.e('89985'), n.e('42309'), n.e('37229'), n.e('25183'), n.e('28044'), n.e('19081'), n.e('8876')]).then(n.bind(n, 241420));
                                                   return (t) =>
                                                       (0, i.jsx)(e, {
                                                           ...t,

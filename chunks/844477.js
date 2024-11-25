@@ -8,7 +8,7 @@ var i = n(200651),
     r = n.n(s),
     l = n(84735),
     a = n(993365),
-    o = n(720035);
+    o = n(247368);
 let c = {
         xs: 'text-sm/semibold',
         sm: 'text-sm/semibold',

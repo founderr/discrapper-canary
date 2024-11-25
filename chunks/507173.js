@@ -13,7 +13,7 @@ var s = n(120356),
     l = n(392711),
     u = n.n(l),
     c = n(692547),
-    d = n(276500);
+    d = n(718217);
 function f(e) {
     let { className: t, percents: n, size: r = 'small', foregroundColors: i = [c.Z.unsafe_rawColors.BRAND_500.css], backgroundColor: s = 'var(--background-modifier-active)', animate: l = !0 } = e,
         f = u()

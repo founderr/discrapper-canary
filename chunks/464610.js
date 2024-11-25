@@ -15,7 +15,7 @@ var i = n(200651),
     u = n(740903),
     m = n(598622),
     h = n(388032),
-    g = n(579524);
+    g = n(20115);
 function x() {
     let e = '\u2022 ';
     return (0, i.jsxs)('div', {

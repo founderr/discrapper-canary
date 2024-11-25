@@ -17,7 +17,7 @@ var r = n(200651),
     v = n(341907),
     I = n(46140),
     b = n(388032),
-    T = n(141533);
+    T = n(66330);
 t.Z = function (e) {
     let t;
     let { className: n, quest: a, autoplay: S = !0, learnMoreStyle: y = null } = e,

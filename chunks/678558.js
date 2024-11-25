@@ -16,7 +16,7 @@ var r = n(200651),
     g = n(981631),
     E = n(474936),
     v = n(388032),
-    I = n(459671);
+    I = n(656634);
 t.Z = (e) => {
     let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: b, targetBoostedGuildTier: T, onClose: S = () => {}, closeLayer: y = () => {}, pauseAnimation: A = !1, applicationId: N, handleSubscribeModalClose: C, withHighlight: R = !1, ...O } = e,
         { analyticsLocations: D } = (0, c.ZP)(),

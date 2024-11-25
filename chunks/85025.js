@@ -1,18 +1,18 @@
-n.d(t, {
+t.d(n, {
     O: function () {
-        return s;
+        return o;
     }
 });
-var a = n(630388),
-    i = n(981631);
-function s(e) {
+var i = t(630388),
+    l = t(981631);
+function o(e) {
     if (null != e)
         return {
-            guildPresences: (0, a.yE)(e, i.udG.GATEWAY_PRESENCE),
-            guildMembers: (0, a.yE)(e, i.udG.GATEWAY_GUILD_MEMBERS),
-            messageContent: (0, a.yE)(e, i.udG.GATEWAY_MESSAGE_CONTENT),
-            guildPresencesLimited: (0, a.yE)(e, i.udG.GATEWAY_PRESENCE_LIMITED),
-            guildMembersLimited: (0, a.yE)(e, i.udG.GATEWAY_GUILD_MEMBERS_LIMITED),
-            messageContentLimited: (0, a.yE)(e, i.udG.GATEWAY_MESSAGE_CONTENT_LIMITED)
+            guildPresences: (0, i.yE)(e, l.udG.GATEWAY_PRESENCE),
+            guildMembers: (0, i.yE)(e, l.udG.GATEWAY_GUILD_MEMBERS),
+            messageContent: (0, i.yE)(e, l.udG.GATEWAY_MESSAGE_CONTENT),
+            guildPresencesLimited: (0, i.yE)(e, l.udG.GATEWAY_PRESENCE_LIMITED),
+            guildMembersLimited: (0, i.yE)(e, l.udG.GATEWAY_GUILD_MEMBERS_LIMITED),
+            messageContentLimited: (0, i.yE)(e, l.udG.GATEWAY_MESSAGE_CONTENT_LIMITED)
         };
 }

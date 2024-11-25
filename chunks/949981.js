@@ -13,12 +13,12 @@ var r = n(512722),
     o = n(955415),
     s = n(131704),
     c = n(592125),
-    u = n(594174),
-    d = n(823379),
+    d = n(594174),
+    u = n(823379),
     m = n(358595),
     h = n(981631),
     f = n(388032),
-    p = n(691784);
+    p = n(658412);
 function _(e) {
     let t,
         { invite: n, author: r, currentUserId: _, onTransitionToInviteChannel: g, onAcceptInstantInvite: E } = e,
@@ -26,31 +26,31 @@ function _(e) {
         I = n.state === h.r2o.ACCEPTING,
         x = (0, a.e7)([c.Z], () => (null != n.channel ? c.Z.getChannel(n.channel.id) : null), [n]);
     l()(null == x || x.isPrivate(), 'must be a private channel');
-    let N = null != x;
+    let v = null != x;
     if (null == x) {
         if (null == n.channel) return (0, i.jsx)(m.Z, {});
         (x = (0, s.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);
     } else {
         t = x.recipients.reduce((e, t) => {
-            let n = u.default.getUser(t);
+            let n = d.default.getUser(t);
             return null != n && e.push(n), e;
         }, []);
-        let e = u.default.getCurrentUser();
-        N && null != e && t.push(e);
+        let e = d.default.getCurrentUser();
+        v && null != e && t.push(e);
     }
-    let v = x.name;
-    (null == v || '' === v) &&
-        (v =
+    let N = x.name;
+    (null == N || '' === N) &&
+        (N =
             t.length > 0
                 ? t
-                      .filter(d.lm)
+                      .filter(u.lm)
                       .map((e) => e.username)
                       .join(', ')
                 : f.intl.string(f.t.LJpTRE));
-    let T = N ? g : E,
+    let T = v ? g : E,
         S = f.intl.string(f.t.XpeFYm),
         A = o.Z.Button.Colors.GREEN;
-    N && ((S = f.intl.string(f.t.cEnaW1)), (A = o.Z.Button.Colors.PRIMARY));
+    v && ((S = f.intl.string(f.t.cEnaW1)), (A = o.Z.Button.Colors.PRIMARY));
     let b = f.intl.string(f.t['3p3/BA']);
     return (
         C && (b = f.intl.string(f.t.qmtuXF)),
@@ -64,11 +64,11 @@ function _(e) {
                             children: [
                                 (0, i.jsx)(o.Z.Icon, {
                                     channel: x,
-                                    onClick: N ? T : void 0
+                                    onClick: v ? T : void 0
                                 }),
                                 (0, i.jsx)(o.Z.Info, {
-                                    title: v,
-                                    onClick: N ? T : void 0,
+                                    title: N,
+                                    onClick: v ? T : void 0,
                                     children: (0, i.jsx)(o.Z.Data, { members: t.length })
                                 })
                             ]
@@ -76,7 +76,7 @@ function _(e) {
                         (0, i.jsx)(o.Z.Button, {
                             onClick: T,
                             submitting: I,
-                            isDisabled: N,
+                            isDisabled: v,
                             color: A,
                             children: S
                         })

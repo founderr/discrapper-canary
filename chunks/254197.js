@@ -24,7 +24,7 @@ var o = n(200651),
     T = n(720293),
     B = n(644646),
     S = n(78826),
-    A = n(670638),
+    A = n(64141),
     y = n(341907),
     R = n(693900),
     w = n(164495),
@@ -37,7 +37,7 @@ var o = n(200651),
     W = n(46140),
     L = n(743294),
     Q = n(388032),
-    Z = n(160443);
+    Z = n(748628);
 function D(e) {
     var t;
     let { quest: n, onClick: s, containerClassName: i, imgClassName: l, reducedMotion: c } = e,

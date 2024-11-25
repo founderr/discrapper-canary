@@ -10,7 +10,7 @@ var r = n(192379),
     o = n(761910),
     l = n(981631),
     u = n(388032),
-    c = n(170714);
+    c = n(617768);
 function d(e, t) {
     let { hideSimpleEmbedContent: n, formatInline: d = !1, noStyleAndInteraction: f = !1, isInteracting: _ = !1, allowHeading: p = !1, allowList: h = !1, allowLinks: m = !1, allowDevLinks: g = !1, allowSubtext: E = !1, previewLinkTarget: v = !1, viewingChannelId: I } = t,
         b = (0, i.p)();

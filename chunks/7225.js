@@ -24,7 +24,7 @@ var i,
     b = n(981631),
     m = n(272242),
     N = n(388032),
-    L = n(213891);
+    L = n(671702);
 function E(t) {
     let { onClose: e, transitionState: n, appId: i, guildId: a } = t,
         E = (0, s.e7)([u.Z], () => u.Z.getApplication(i), [i]),

@@ -11,18 +11,18 @@ var r = n(399606),
     o = n(494404),
     s = n(377171),
     c = n(317632),
-    u = n(602478),
-    d = n(2818),
+    d = n(602478),
+    u = n(2818),
     m = n(768943),
     h = n(742989),
     f = n(818186),
     p = n(388032),
-    _ = n(811304);
+    _ = n(76334);
 function g(e) {
     let { tab: t, setTab: n, children: g, badgeState: E, closePopout: C } = e,
         { showReminders: I } = h.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
-        { enabled: x, inInbox: N } = d.Z.useExperiment({ location: 'RecentsPopout' }),
-        { enabled: v } = u.Z.useExperiment({ location: 'RecentsHeader' }),
+        { enabled: x, inInbox: v } = u.Z.useExperiment({ location: 'RecentsPopout' }),
+        { enabled: N } = d.Z.useExperiment({ location: 'RecentsHeader' }),
         T = (0, r.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
         S = (0, r.e7)([m.Z], () => m.Z.getOverdueMessageReminderCount());
     return (0, i.jsxs)(o.h4, {
@@ -82,7 +82,7 @@ function g(e) {
                             className: _.tab,
                             children: p.intl.string(p.t['GRZF9/'])
                         }),
-                        v
+                        N
                             ? (0, i.jsxs)(a.TabBar.Item, {
                                   'aria-label': 'game_invites',
                                   id: l.X.GAME_INVITES,
@@ -98,7 +98,7 @@ function g(e) {
                                   ]
                               })
                             : null,
-                        x && N
+                        x && v
                             ? (0, i.jsx)(a.TabBar.Item, {
                                   'aria-label': p.intl.string(p.t['2pAkDA']),
                                   id: l.X.BOOKMARKS,

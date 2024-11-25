@@ -14,7 +14,7 @@ var r = n(200651),
     c = n(960870),
     d = n(848966),
     f = n(388032),
-    _ = n(676411);
+    _ = n(249942);
 function p(e) {
     let { user: t, activity: n, entry: a, display: p, className: h, onSelect: m, onClose: g, onRequestOpen: E } = e,
         [v, I] = i.useState(!1),

@@ -16,7 +16,7 @@ var r = n(200651),
     N = n(527379),
     f = n(327999),
     R = n(388032),
-    O = n(406385);
+    O = n(106053);
 let S = l.memo(function () {
         return (0, r.jsx)(o.Tooltip, {
             text: R.intl.string(R.t['vu/MiY']),

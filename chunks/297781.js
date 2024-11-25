@@ -81,7 +81,7 @@ var r,
     y = n(371991),
     A = n(206583),
     N = n(388032),
-    C = n(793440);
+    C = n(455887);
 let R = {
     [d.s.TOP_ARTIST]: [V],
     [d.s.PLAYED_GAME]: [M, P, w, H, U, Z, j, G, B],

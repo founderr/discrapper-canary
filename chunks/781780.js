@@ -7,7 +7,7 @@ var i = t(200651),
     o = t(963614),
     a = t(208156),
     r = t(701488),
-    c = t(848556);
+    c = t(864096);
 function l(e) {
     var n, t, l;
     let { channelId: d, guildId: s, embeddedActivity: u, application: _ } = e,

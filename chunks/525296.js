@@ -28,7 +28,7 @@ function c(e) {
                 (0, a.jW)(
                     e,
                     async () => {
-                        let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('5901')]).then(n.bind(n, 881351));
+                        let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('95052')]).then(n.bind(n, 881351));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
@@ -40,7 +40,7 @@ function c(e) {
             }
             handleGuildContextMenu(e, t) {
                 (0, a.jW)(e, async () => {
-                    let { default: e } = await Promise.all([n.e('33053'), n.e('15669'), n.e('7654'), n.e('44156'), n.e('44294'), n.e('85552'), n.e('58227'), n.e('16114'), n.e('28161'), n.e('33213'), n.e('75658')]).then(n.bind(n, 545135));
+                    let { default: e } = await Promise.all([n.e('33053'), n.e('15669'), n.e('7654'), n.e('44156'), n.e('31113'), n.e('85552'), n.e('58227'), n.e('16114'), n.e('16221'), n.e('33213'), n.e('43954')]).then(n.bind(n, 545135));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,

@@ -11,7 +11,7 @@ var i = n(200651),
     h = n(594174),
     g = n(843200),
     p = n(388032),
-    x = n(903407);
+    x = n(906405);
 class S extends s.PureComponent {
     renderIntroHeader() {
         let { houseMembership: e } = this.props;

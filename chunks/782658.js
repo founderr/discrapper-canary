@@ -10,9 +10,9 @@ var i = n(200651),
     o = n(410575),
     s = n(758119),
     c = n(622822),
-    u = n(906732),
-    d = n(924301),
-    m = n(11868),
+    d = n(906732),
+    u = n(924301),
+    m = n(997321),
     h = n(413605),
     f = n(451603),
     p = n(885714),
@@ -22,8 +22,8 @@ var i = n(200651),
     C = n(411198),
     I = n(610699),
     x = n(313876),
-    N = n(778333),
-    v = n(949981),
+    v = n(778333),
+    N = n(949981),
     T = n(680668),
     S = n(143708),
     A = n(358595),
@@ -51,14 +51,14 @@ function P(e) {
                       state: Z.r2o.RESOLVING,
                       code: ''
                   },
-        { analyticsLocations: M } = (0, u.ZP)(),
+        { analyticsLocations: M } = (0, d.ZP)(),
         k = (0, l.e7)([g.Z], () => ((null == L ? void 0 : L.guild) != null ? g.Z.getGuild(L.guild.id) : null), [L]),
         D = (0, l.e7)([_.default], () => _.default.getId()),
         B = (0, l.e7)(
-            [d.ZP],
+            [u.ZP],
             () => {
                 var e;
-                return d.ZP.getGuildScheduledEvent(null === (e = O.guild_scheduled_event) || void 0 === e ? void 0 : e.id);
+                return u.ZP.getGuildScheduledEvent(null === (e = O.guild_scheduled_event) || void 0 === e ? void 0 : e.id);
             },
             [O]
         ),
@@ -115,7 +115,7 @@ function P(e) {
         default:
             switch ((0, h.VR)(O)) {
                 case h.wx.GROUP_DM:
-                    F = (0, i.jsx)(v.Z, {
+                    F = (0, i.jsx)(N.Z, {
                         onTransitionToInviteChannel: U,
                         onAcceptInstantInvite: w,
                         currentUserId: D,
@@ -124,7 +124,7 @@ function P(e) {
                     });
                     break;
                 case h.wx.FRIEND:
-                    F = (0, i.jsx)(N.Z, {
+                    F = (0, i.jsx)(v.Z, {
                         invite: O,
                         author: n,
                         getAcceptInviteContext: P

@@ -8,8 +8,8 @@ n(192379);
 var r = n(120356),
     l = n.n(r),
     a = n(481060),
-    o = n(506021),
-    s = n(482617);
+    o = n(535455),
+    s = n(24343);
 function c(e) {
     let { text: t } = e;
     return (0, i.jsxs)('div', {

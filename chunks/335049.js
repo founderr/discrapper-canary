@@ -26,7 +26,7 @@ var i = n(200651),
     j = n(51144),
     _ = n(981631),
     T = n(388032),
-    S = n(142208);
+    S = n(316983);
 function Z(e) {
     let { guild: t, id: r, type: a, isLocked: o, lockTooltipText: c } = e,
         d = !o || null != c;

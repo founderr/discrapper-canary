@@ -3,7 +3,7 @@ n.d(t, {
         return A;
     },
     VH: function () {
-        return v;
+        return N;
     },
     Vi: function () {
         return b;
@@ -22,8 +22,8 @@ var i,
     o = n(692547),
     s = n(497089),
     c = n(650473),
-    u = n(389765),
-    d = n(137492),
+    d = n(389765),
+    u = n(137492),
     m = n(387661),
     h = n(659953),
     f = n(319707),
@@ -35,22 +35,22 @@ var i,
     I = n(39863),
     x = n(130312);
 ((i = l || (l = {})).CHECKED = 'CHECKED'), (i.FRIENDS = 'FRIENDS'), (i.SHARE_SCREEN = 'SHARE_SCREEN'), (i.NEW_MESSAGE = 'NEW_MESSAGE');
-let N = {
+let v = {
     CHECKED: m,
     FRIENDS: f,
     SHARE_SCREEN: I,
     NEW_MESSAGE: E
 };
 ((r = a || (a = {})).MISSED_MESSAGES = 'MISSED_MESSAGES'), (r.FRIEND_REQUEST_REMINDER = 'FRIEND_REQUEST_REMINDER'), (r.SCHEDULED_GUILD_EVENT = 'SCHEDULED_GUILD_EVENT'), (r.TOP_MESSAGES = 'TOP_MESSAGES'), (r.NOTIFICATION_CENTER = 'NOTIFICATION_CENTER'), (r.UPDATE_PROFILE = 'UPDATE_PROFILE'), (r.FIND_FRIENDS = 'FIND_FRIENDS'), (r.ADD_FRIEND = 'ADD_FRIEND'), (r.FIRST_MESSAGE = 'FIRST_MESSAGE');
-let v = {
+let N = {
         MISSED_MESSAGES: g,
         FRIEND_REQUEST_REMINDER: p,
         SCHEDULED_GUILD_EVENT: h,
         TOP_MESSAGES: _,
-        NOTIFICATION_CENTER: d,
+        NOTIFICATION_CENTER: u,
         UPDATE_PROFILE: x,
-        FIND_FRIENDS: u,
-        ADD_FRIEND: u,
+        FIND_FRIENDS: d,
+        ADD_FRIEND: d,
         FIRST_MESSAGE: C
     },
     T = (e) => {
@@ -91,29 +91,29 @@ let v = {
         switch (e) {
             case s.DY.GO_LIVE_PUSH:
                 return {
-                    icon: N.SHARE_SCREEN,
+                    icon: v.SHARE_SCREEN,
                     color: o.Z.colors.BACKGROUND_ACCENT
                 };
             case s.DY.FRIEND_REQUEST_ACCEPTED:
                 return {
-                    icon: N.CHECKED,
+                    icon: v.CHECKED,
                     color: o.Z.colors.STATUS_POSITIVE_BACKGROUND
                 };
             case s.DY.FRIEND_REQUEST_PENDING:
             case s.DY.FRIEND_SUGGESTION_CREATED:
                 return {
-                    icon: N.FRIENDS,
+                    icon: v.FRIENDS,
                     color: o.Z.colors.BACKGROUND_ACCENT
                 };
             case s.DY.DM_FRIEND_NUDGE:
                 return {
-                    icon: N.NEW_MESSAGE,
+                    icon: v.NEW_MESSAGE,
                     color: o.Z.colors.BACKGROUND_ACCENT
                 };
             case s.O7.INCOMING_FRIEND_REQUESTS:
             case s.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED:
                 return {
-                    icon: N.FRIENDS,
+                    icon: v.FRIENDS,
                     color: o.Z.colors.BACKGROUND_ACCENT
                 };
             default:

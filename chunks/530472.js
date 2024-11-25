@@ -9,13 +9,13 @@ var r = n(481060),
     l = n(824203),
     a = n(981631),
     o = n(388032),
-    s = n(886748);
+    s = n(347436);
 function c(e) {
     var t;
     let n,
-        { message: c, onDeleteMessage: u, children: d } = e,
+        { message: c, onDeleteMessage: d, children: u } = e,
         m = null === (t = c.interactionMetadata) || void 0 === t ? void 0 : t.ephemerality_reason,
-        h = () => u(c, !0);
+        h = () => d(c, !0);
     if (null != m) {
         let e = (0, l.in)(m);
         n = (0, i.jsx)('div', {
@@ -44,7 +44,7 @@ function c(e) {
                 className: s.icon
             }),
             n,
-            d
+            u
         ]
     });
 }

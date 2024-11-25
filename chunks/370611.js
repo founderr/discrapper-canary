@@ -31,7 +31,7 @@ var r = n(200651),
     C = n(463031),
     R = n(206583),
     O = n(388032),
-    D = n(881894);
+    D = n(508806);
 function L(e) {
     let { leaderboard: t, previewMode: n = !1, trackRankingItemInteraction: a } = e,
         s = (0, o.e7)([_.default], () => _.default.getId()),

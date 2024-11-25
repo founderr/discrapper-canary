@@ -17,7 +17,7 @@ var n = e(200651),
     C = e(134612),
     k = e(981631),
     p = e(388032),
-    m = e(872612);
+    m = e(263856);
 function x(t) {
     let { userId: o, channelId: e, transitionState: x, onBlock: B, onBlockAndReport: M, onClose: g, onCancel: f } = t,
         j = (0, h.q)(e),

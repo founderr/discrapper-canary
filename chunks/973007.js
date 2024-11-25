@@ -3,7 +3,7 @@ n(192379);
 var l = n(481060),
     s = n(823188),
     r = n(474936),
-    C = n(377628);
+    C = n(101098);
 function a(e) {
     let { onClick: t, isGift: n, priceOptions: r, showHalloweenGift: a } = e;
     return (0, i.jsx)(l.Clickable, {

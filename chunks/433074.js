@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(399606),
     s = n(481060),
     c = n(434650),
-    u = n(955415),
-    d = n(706454),
+    d = n(955415),
+    u = n(706454),
     m = n(973616),
     h = n(914010),
     f = n(594174),
@@ -23,13 +23,13 @@ var i = n(200651),
     C = n(132871),
     I = n(147890),
     x = n(981631),
-    N = n(388032),
-    v = n(708262);
+    v = n(388032),
+    N = n(367118);
 function T(e) {
     var t, n, T;
     let { code: S, message: A } = e,
         [b, j, Z] = (0, o.Wu)([E.Z], () => [E.Z.getApplication(S), E.Z.isInvalidApplication(S), E.Z.getApplicationFetchState(S)], [S]),
-        R = (0, o.e7)([d.default], () => d.default.locale),
+        R = (0, o.e7)([u.default], () => u.default.locale),
         P = (0, o.e7)([h.Z], () => {
             var e;
             return null !== (e = h.Z.getGuildId()) && void 0 !== e ? e : void 0;
@@ -80,19 +80,19 @@ function T(e) {
             });
     };
     if (j)
-        return (0, i.jsxs)(u.Z, {
+        return (0, i.jsxs)(d.Z, {
             containerRef: k,
             children: [
-                (0, i.jsx)(u.Z.Header, { text: N.intl.string(N.t.j4KtLS) }),
-                (0, i.jsx)(u.Z.Body, {
+                (0, i.jsx)(d.Z.Header, { text: v.intl.string(v.t.j4KtLS) }),
+                (0, i.jsx)(d.Z.Body, {
                     children: (0, i.jsxs)('div', {
-                        className: v.invalidBody,
+                        className: N.invalidBody,
                         children: [
-                            (0, i.jsx)(u.Z.Icon, { expired: !0 }),
-                            (0, i.jsx)(u.Z.Info, {
+                            (0, i.jsx)(d.Z.Icon, { expired: !0 }),
+                            (0, i.jsx)(d.Z.Info, {
                                 expired: !0,
-                                title: N.intl.string(N.t.NaQLEx),
-                                children: N.intl.string(N.t['0H5OT0'])
+                                title: v.intl.string(v.t.NaQLEx),
+                                children: v.intl.string(v.t['0H5OT0'])
                             })
                         ]
                     })
@@ -100,9 +100,9 @@ function T(e) {
             ]
         });
     if (null == b || Z === E.M.FETCHING)
-        return (0, i.jsxs)(u.Z, {
+        return (0, i.jsxs)(d.Z, {
             containerRef: k,
-            children: [(0, i.jsx)(u.Z.Header, { text: N.intl.string(N.t.m9hXGR) }), (0, i.jsx)(u.Z.Body, { resolving: !0 })]
+            children: [(0, i.jsx)(d.Z.Header, { text: v.intl.string(v.t.m9hXGR) }), (0, i.jsx)(d.Z.Body, { resolving: !0 })]
         });
     let B = new Intl.NumberFormat(R, {
             notation: 'compact',
@@ -115,21 +115,21 @@ function T(e) {
             integrationTypesConfig: b.integration_types_config
         }),
         F = a.Y.GUILD_INSTALL in (null !== (T = b.integration_types_config) && void 0 !== T ? T : {}) && w;
-    return (0, i.jsxs)(u.Z, {
+    return (0, i.jsxs)(d.Z, {
         containerRef: k,
         children: [
-            (0, i.jsx)(u.Z.Header, { text: N.intl.string(N.t.KC1oZ2) }),
-            (0, i.jsxs)(u.Z.Body, {
+            (0, i.jsx)(d.Z.Header, { text: v.intl.string(v.t.KC1oZ2) }),
+            (0, i.jsxs)(d.Z.Body, {
                 children: [
                     (0, i.jsxs)('div', {
-                        className: v.applicationInfoContainer,
+                        className: N.applicationInfoContainer,
                         children: [
-                            (0, i.jsx)(u.Z.Icon, {
+                            (0, i.jsx)(d.Z.Icon, {
                                 application: m.Z.createFromServer(b),
-                                className: v.applicationIcon,
+                                className: N.applicationIcon,
                                 onClick: () => D('application_icon')
                             }),
-                            (0, i.jsx)(u.Z.Info, {
+                            (0, i.jsx)(d.Z.Info, {
                                 title: (0, i.jsx)(s.Clickable, {
                                     onClick: () => D('application_name'),
                                     children: b.name
@@ -138,7 +138,7 @@ function T(e) {
                                     U > 0 &&
                                     F &&
                                     (0, i.jsxs)(s.Clickable, {
-                                        className: v.guildCountContainer,
+                                        className: N.guildCountContainer,
                                         onClick: () => D('application_guild_count'),
                                         children: [
                                             (0, i.jsx)(s.CompassIcon, {
@@ -146,16 +146,16 @@ function T(e) {
                                                 color: 'currentColor',
                                                 width: 16,
                                                 height: 16,
-                                                className: v.guildCountIcon
+                                                className: N.guildCountIcon
                                             }),
-                                            N.intl.format(N.t['6IW6Wl'], { guildCount: B.format(U) })
+                                            v.intl.format(v.t['6IW6Wl'], { guildCount: B.format(U) })
                                         ]
                                     })
                             })
                         ]
                     }),
                     w &&
-                        (0, i.jsx)(u.Z.Button, {
+                        (0, i.jsx)(d.Z.Button, {
                             onClick: () => {
                                 if (null != b)
                                     (0, _.LO)({
@@ -167,8 +167,8 @@ function T(e) {
                                         source: 'app_directory_profile_embed'
                                     });
                             },
-                            color: u.Z.Button.Colors.GREEN,
-                            children: N.intl.string(N.t.NgXl3N)
+                            color: d.Z.Button.Colors.GREEN,
+                            children: v.intl.string(v.t.NgXl3N)
                         })
                 ]
             })

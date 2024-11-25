@@ -14,7 +14,7 @@ var r = n(200651),
     c = n(390507),
     d = n(679400),
     f = n(580747),
-    _ = n(657375);
+    _ = n(189954);
 let p = i.forwardRef(function (e, t) {
     let { color: a, src: o, size: p = 'md', width: h, height: m, className: g, initialAnimation: E, markers: v } = e,
         [I, b] = i.useState(null),

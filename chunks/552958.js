@@ -1,24 +1,24 @@
-t.d(n, {
+a.d(n, {
     Z: function () {
         return o;
     }
 }),
-    t(47120);
-var a = t(192379),
-    c = t(974180),
-    i = t(557177);
+    a(47120);
+var t = a(192379),
+    c = a(974180),
+    i = a(557177);
 function o() {
-    let [e, n] = a.useState(),
-        t = a.useRef(-1);
+    let [e, n] = t.useState(),
+        a = t.useRef(-1);
     return {
-        playSound: a.useCallback((e) => {
+        playSound: t.useCallback((e) => {
             n(e),
                 i.GN(
                     c.Ay,
                     c.yk,
                     () => {
-                        clearTimeout(t.current),
-                            (t.current = setTimeout(() => {
+                        clearTimeout(a.current),
+                            (a.current = setTimeout(() => {
                                 n(void 0);
                             }, 500));
                     },

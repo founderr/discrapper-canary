@@ -17,7 +17,7 @@ var s = n(481060),
     c = n(474936),
     d = n(981631),
     u = n(388032),
-    m = n(821774);
+    m = n(761346);
 function h(e) {
     let t = l.default.getCurrentUser();
     if (null != t)

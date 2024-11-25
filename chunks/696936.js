@@ -11,7 +11,7 @@ e(192379);
 var s = e(120356),
     l = e.n(s),
     o = e(481060),
-    r = e(915938);
+    r = e(759821);
 let a = {
     RED: r.redMessageBlock,
     YELLOW: r.yellowMessageBlock,

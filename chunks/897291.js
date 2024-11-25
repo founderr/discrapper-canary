@@ -10,7 +10,7 @@ var r = n(200651),
     f = n(443603),
     _ = n(981631),
     p = n(388032),
-    h = n(703130);
+    h = n(553796);
 t.Z = i.memo(function (e) {
     let { disabled: t, channel: i } = e,
         { analyticsLocations: m } = (0, l.ZP)(o.Z.GIFT_BUTTON),
@@ -22,7 +22,7 @@ t.Z = i.memo(function (e) {
     let S = () => {
         b && T && null != g
             ? (0, s.openModalLazy)(async () => {
-                  let { default: e } = await Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('99783'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('87624'), n.e('60691'), n.e('57674'), n.e('82296')]).then(n.bind(n, 435626));
+                  let { default: e } = await Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('68956'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('87624'), n.e('11318'), n.e('57674'), n.e('88886')]).then(n.bind(n, 435626));
                   return (t) =>
                       (0, r.jsx)(e, {
                           analyticsObject: {

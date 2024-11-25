@@ -10,8 +10,8 @@ var i = n(200651),
     o = n(565138),
     s = n(241559),
     c = n(527379),
-    u = n(430824),
-    d = n(944486),
+    d = n(430824),
+    u = n(944486),
     m = n(914010),
     h = n(626135),
     f = n(528011),
@@ -20,14 +20,14 @@ var i = n(200651),
     g = n(981631),
     E = n(176505),
     C = n(388032),
-    I = n(900547);
+    I = n(566751);
 function x(e) {
     var t, x;
-    let { onDismiss: N } = e,
-        v = (0, l.e7)([m.Z], () => m.Z.getGuildId()),
-        T = (0, l.e7)([d.Z], () => (null != v ? d.Z.getChannelId(v) : null), [v]),
-        S = null != v ? v : null,
-        A = (0, l.e7)([u.Z], () => (null != S ? u.Z.getGuild(S) : null), [S]),
+    let { onDismiss: v } = e,
+        N = (0, l.e7)([m.Z], () => m.Z.getGuildId()),
+        T = (0, l.e7)([u.Z], () => (null != N ? u.Z.getChannelId(N) : null), [N]),
+        S = null != N ? N : null,
+        A = (0, l.e7)([d.Z], () => (null != S ? d.Z.getGuild(S) : null), [S]),
         { shouldShowIncidentActions: b, incidentData: j, isUnderLockdown: Z } = (0, f.mI)(S),
         R = (0, s.n2)(null !== (t = null == A ? void 0 : A.id) && void 0 !== t ? t : g.lds),
         P = r.useCallback(() => null != A && (0, c._X)(A.id), [A]);
@@ -66,7 +66,7 @@ function x(e) {
             color: a.NoticeColors.NEUTRAL,
             children: [
                 (0, i.jsx)(a.NoticeCloseButton, {
-                    onClick: N,
+                    onClick: v,
                     noticeType: g.kVF.GUILD_RAID_NOTIFICATION
                 }),
                 y,
@@ -94,7 +94,7 @@ function x(e) {
         color: a.NoticeColors.WARNING,
         children: [
             (0, i.jsx)(a.NoticeCloseButton, {
-                onClick: N,
+                onClick: v,
                 noticeType: g.kVF.GUILD_RAID_NOTIFICATION
             }),
             y,

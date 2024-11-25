@@ -7,22 +7,22 @@ var i = e(200651);
 e(192379);
 var r = e(852229),
     a = e(399606),
-    l = e(481060),
-    o = e(228392),
-    u = e(592125),
+    u = e(481060),
+    l = e(228392),
+    o = e(592125),
     d = e(934415),
-    s = e(981631),
-    c = e(388032);
+    c = e(981631),
+    s = e(388032);
 function f(n, t, e) {
-    let f = (0, a.e7)([u.Z], () => u.Z.getChannel(n.parent_id));
-    return (0, i.jsx)(l.MenuItem, {
+    let f = (0, a.e7)([o.Z], () => o.Z.getChannel(n.parent_id));
+    return (0, i.jsx)(u.MenuItem, {
         id: 'channel-copy-link',
-        label: c.intl.string(c.t.WqhZsr),
+        label: s.intl.string(s.t.WqhZsr),
         action: () => {
             n.isForumPost() &&
-                (0, o.B)({
+                (0, l.B)({
                     postId: n.id,
-                    location: { section: s.jXE.CONTEXT_MENU }
+                    location: { section: c.jXE.CONTEXT_MENU }
                 }),
                 (0, r.J)((0, d.EO)(n, f, t, e));
         }

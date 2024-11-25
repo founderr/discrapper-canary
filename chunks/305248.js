@@ -11,15 +11,15 @@ var i = n(200651),
     o = n(442837),
     s = n(570140),
     c = n(45114),
-    u = n(404616),
-    d = n(470623),
+    d = n(404616),
+    u = n(470623),
     m = n(344185),
     h = n(488131),
     f = n(592125),
     p = n(823379),
     _ = n(709054),
     g = n(124368),
-    E = n(302762);
+    E = n(838503);
 function C(e) {
     let { channel: t, channelRecord: n, deleteChannel: l } = e,
         C = (0, o.Wu)(
@@ -58,10 +58,10 @@ function C(e) {
             className: E.container,
             children: C.map((e) =>
                 (0, i.jsx)(
-                    d.oL,
+                    u.oL,
                     {
                         channel: n,
-                        children: (0, i.jsx)(u.ZP, {
+                        children: (0, i.jsx)(d.ZP, {
                             className: E.forumPost,
                             threadId: e.id,
                             goToThread: I

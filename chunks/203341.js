@@ -25,7 +25,7 @@ var i = n(200651),
     v = n(981631),
     I = n(921944),
     E = n(388032),
-    b = n(798682);
+    b = n(151745);
 function Z(e) {
     let { onClose: t, channel: n } = e,
         l = (0, x.Z)(n);

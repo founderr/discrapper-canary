@@ -19,7 +19,7 @@ var r = n(200651),
     h = n(710867),
     m = n(312904),
     g = n(186917),
-    E = n(831748);
+    E = n(264275);
 let v = (e) => {
         let { bannerAdjustment: t = 0, maxLoops: n, resetOnHover: a = !1, isHovering: o = !1, useOpacityOnHover: l = !0, autoPlay: u = !0, restartMethod: h, urlQueryString: g, profileEffectConfig: v, noBorderRadius: I = !1, introDelay: b = c.lG } = e,
             T = i.useRef(null),

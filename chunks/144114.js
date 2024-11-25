@@ -1,129 +1,129 @@
-t.d(n, {
+n.d(t, {
     L: function () {
-        return r;
+        return o;
     }
 });
-var o,
-    r,
-    i = t(990547),
-    a = t(544891),
-    s = t(570140),
-    l = t(314897),
-    c = t(573261),
-    u = t(815660),
-    d = t(981631);
-((o = r || (r = {})).USER_ACTION_REQUIRED = 'user_action_required'),
-    (o.USER_SETTINGS_UPDATE = 'user_settings_update'),
-    (o.GUILD_PHONE_REQUIRED = 'guild_phone_required'),
-    (o.MFA_PHONE_UPDATE = 'mfa_phone_update'),
-    (o.CONTACT_SYNC = 'contact_sync'),
-    (n.Z = {
+var r,
+    o,
+    i = n(990547),
+    a = n(544891),
+    s = n(570140),
+    l = n(314897),
+    c = n(573261),
+    d = n(815660),
+    u = n(981631);
+((r = o || (o = {})).USER_ACTION_REQUIRED = 'user_action_required'),
+    (r.USER_SETTINGS_UPDATE = 'user_settings_update'),
+    (r.GUILD_PHONE_REQUIRED = 'guild_phone_required'),
+    (r.MFA_PHONE_UPDATE = 'mfa_phone_update'),
+    (r.CONTACT_SYNC = 'contact_sync'),
+    (t.Z = {
         setCountryCode(e) {
             s.Z.dispatch({
                 type: 'PHONE_SET_COUNTRY_CODE',
                 countryCode: e
             });
         },
-        removePhone: (e, n) =>
+        removePhone: (e, t) =>
             a.tn.del({
-                url: d.ANM.PHONE,
+                url: u.ANM.PHONE,
                 body: {
                     password: e,
-                    change_phone_reason: n
+                    change_phone_reason: t
                 },
                 oldFormErrors: !0,
                 rejectWithError: !1
             }),
         resendCode(e) {
-            let n = {},
-                t = l.default.getFingerprint();
+            let t = {},
+                n = l.default.getFingerprint();
             return (
-                null != t && '' !== t && (n['X-Fingerprint'] = t),
+                null != n && '' !== n && (t['X-Fingerprint'] = n),
                 a.tn.post({
-                    url: d.ANM.RESEND_PHONE,
-                    headers: n,
+                    url: u.ANM.RESEND_PHONE,
+                    headers: t,
                     body: { phone: e },
                     rejectWithError: !1
                 })
             );
         },
-        beginAddPhone: (e, n) =>
+        beginAddPhone: (e, t) =>
             a.tn.post({
-                url: d.ANM.PHONE,
+                url: u.ANM.PHONE,
                 body: {
                     phone: e,
-                    change_phone_reason: n
+                    change_phone_reason: t
                 },
                 rejectWithError: !1
             }),
-        addPhone: (e, n, t) =>
+        addPhone: (e, t, n) =>
             a.tn.post({
-                url: d.ANM.PHONE,
+                url: u.ANM.PHONE,
                 body: {
                     phone_token: e,
-                    password: n,
-                    change_phone_reason: t
+                    password: t,
+                    change_phone_reason: n
                 },
                 oldFormErrors: !0,
                 rejectWithError: !1
             }),
         addPhoneWithoutPassword: (e) =>
             a.tn.post({
-                url: d.ANM.PHONE_VERIFY_NO_PASSWORD,
+                url: u.ANM.PHONE_VERIFY_NO_PASSWORD,
                 body: { code: e },
                 rejectWithError: !1
             }),
-        beginReverifyPhone: (e, n) =>
+        beginReverifyPhone: (e, t) =>
             a.tn.post({
-                url: d.ANM.PHONE_REVERIFY,
+                url: u.ANM.PHONE_REVERIFY,
                 body: {
                     phone: e,
-                    change_phone_reason: n
+                    change_phone_reason: t
                 },
                 rejectWithError: !1
             }),
-        reverifyPhone: (e, n, t) =>
+        reverifyPhone: (e, t, n) =>
             a.tn.post({
-                url: d.ANM.PHONE_REVERIFY,
+                url: u.ANM.PHONE_REVERIFY,
                 body: {
                     phone_token: e,
-                    password: n,
-                    change_phone_reason: t
+                    password: t,
+                    change_phone_reason: n
                 },
                 oldFormErrors: !0,
                 rejectWithError: !1
             }),
         validatePhoneForSupport: (e) =>
             a.tn.post({
-                url: d.ANM.VERIFY_PHONE_FOR_TICKET,
+                url: u.ANM.VERIFY_PHONE_FOR_TICKET,
                 body: { token: e },
                 oldFormErrors: !0,
                 rejectWithError: !1
             }),
-        async verifyPhone(e, n) {
-            let t = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-                o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-                r = {},
+        async verifyPhone(e, t) {
+            let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+                r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+                o = {},
                 a = l.default.getFingerprint();
-            null != a && '' !== a && (r['X-Fingerprint'] = a), o && (r.authorization = '');
-            let f = await c.Z.post({
-                url: d.ANM.VERIFY_PHONE,
-                headers: r,
+            null != a && '' !== a && (o['X-Fingerprint'] = a), r && (o.authorization = '');
+            let E = await c.Z.post({
+                url: u.ANM.VERIFY_PHONE,
+                headers: o,
                 body: {
                     phone: e,
-                    code: n
+                    code: t
                 },
                 oldFormErrors: !0,
                 trackedActionData: { event: i.NetworkActionNames.USER_VERIFY_PHONE },
                 rejectWithError: !1
             });
             return (
-                t &&
+                n &&
                     s.Z.dispatch({
                         type: 'MODAL_POP',
-                        key: u.M
+                        key: d.M
                     }),
-                f.body
+                E.body
             );
         }
     });

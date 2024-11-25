@@ -26,7 +26,7 @@ var r = n(200651),
     b = n(981631),
     T = n(710111),
     S = n(388032),
-    y = n(629152);
+    y = n(89107);
 function A(e) {
     let { discoverableGuildId: t, closePopout: n, buttonType: a } = e,
         s = i.useCallback(async () => {

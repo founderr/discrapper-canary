@@ -6,7 +6,7 @@ var i = n(200651),
     a = n(153867),
     o = n(706454),
     c = n(388032),
-    d = n(807005),
+    d = n(808463),
     u = n(444675);
 t.Z = r.ZP.connectStores([o.default], () => ({ currentLocale: o.default.locale }))(function (e) {
     let [t, r] = s.useState(e.currentLocale),

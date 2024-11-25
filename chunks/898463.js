@@ -31,7 +31,7 @@ var r = n(200651),
     v = n(273031),
     I = n(859235),
     b = n(388032),
-    T = n(671292);
+    T = n(26577);
 let S = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'video/quicktime', 'video/mp4'];
 function y(e) {
     let { alt: t, spoiler: n, renderContent: a, size: s } = e,

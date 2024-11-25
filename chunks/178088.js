@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(524437),
     s = n(481060),
     c = n(100527),
-    u = n(906732),
-    d = n(602478),
+    d = n(906732),
+    u = n(602478),
     m = n(2818),
     h = n(768943),
     f = n(742989),
@@ -23,13 +23,13 @@ var i = n(200651),
     C = n(153209),
     I = n(956961),
     x = n(903672),
-    N = n(946443),
-    v = n(264233),
+    v = n(946443),
+    N = n(264233),
     T = n(981631),
     S = n(388032);
 function A(e) {
     let { onOpen: t, onClose: n, children: A, badgeState: b, popoutPosition: j, popoutAlign: Z } = e,
-        { analyticsLocations: R } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
+        { analyticsLocations: R } = (0, d.ZP)(c.Z.NOTIFICATION_CENTER),
         [P, L] = r.useState(!1),
         [y, O] = (function () {
             let e = (0, a.e7)([_.Z], () => {
@@ -79,7 +79,7 @@ function A(e) {
     let { showReminders: U } = f.Z.useExperiment({ location: 'RecentsPopout' }),
         { enabled: w, inInbox: F } = m.Z.useExperiment({ location: 'RecentsPopout' }),
         G = (0, a.e7)([h.Z], () => h.Z.hasOverdueReminder(), []) && w && F,
-        { enabled: V } = d.Z.useExperiment({ location: 'RecentsPopout' });
+        { enabled: V } = u.Z.useExperiment({ location: 'RecentsPopout' });
     r.useEffect(() => {
         (((!U || (w && F)) && y === o.X.TODOS) || (y === o.X.BOOKMARKS && !(w || F))) && O(o.X.MENTIONS);
     });
@@ -89,7 +89,7 @@ function A(e) {
         },
         [D]
     );
-    return (0, i.jsx)(u.Gt, {
+    return (0, i.jsx)(d.Gt, {
         value: R,
         children: (0, i.jsx)(s.Popout, {
             animation: s.Popout.Animation.NONE,
@@ -116,7 +116,7 @@ function A(e) {
                                     closePopout: D
                                 })
                               : V && y === o.X.GAME_INVITES
-                                ? (0, i.jsx)(v.Z, {
+                                ? (0, i.jsx)(N.Z, {
                                       setTab: O,
                                       badgeState: b,
                                       closePopout: D
@@ -134,12 +134,12 @@ function A(e) {
                                           closePopout: D
                                       })
                                     : (0, i.jsx)(l.SV, {
-                                          fallback: (0, i.jsx)(N.h, {
+                                          fallback: (0, i.jsx)(v.h, {
                                               setTab: O,
                                               closePopout: D,
                                               badgeState: b
                                           }),
-                                          children: (0, i.jsx)(N.Z, {
+                                          children: (0, i.jsx)(v.Z, {
                                               setTab: O,
                                               onJump: H,
                                               showTutorial: M,

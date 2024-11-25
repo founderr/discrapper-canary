@@ -19,7 +19,7 @@ var i = n(200651),
     f = n(918559),
     g = n(981631),
     C = n(388032),
-    x = n(800398);
+    x = n(636501);
 function _(e) {
     let { channelId: t, className: n, ..._ } = e,
         v = l.useRef(null),

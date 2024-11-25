@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(399606),
     s = n(481060),
     c = n(493683),
-    u = n(434650),
-    d = n(122613),
+    d = n(434650),
+    u = n(122613),
     m = n(778569),
     h = n(182906),
     f = n(367907),
@@ -23,8 +23,8 @@ var i = n(200651),
     C = n(132871),
     I = n(147890),
     x = n(220082),
-    N = n(240991),
-    v = n(592125),
+    v = n(240991),
+    N = n(592125),
     T = n(496675),
     S = n(944486),
     A = n(914010),
@@ -35,7 +35,7 @@ var i = n(200651),
     P = n(812206),
     L = n(981631),
     y = n(388032),
-    O = n(166272),
+    O = n(363637),
     M = n(413097),
     k = n(970952);
 function D(e) {
@@ -74,12 +74,12 @@ function B(e) {
                 }),
             [b]
         ),
-        G = r.useMemo(() => (null != F ? (0, N.parseBioReact)(F) : null), [F]),
+        G = r.useMemo(() => (null != F ? (0, v.parseBioReact)(F) : null), [F]),
         [V, H] = r.useState(!1),
         z = r.useCallback((e) => {
             e && H(!0);
         }, []),
-        W = (0, u.O)(z);
+        W = (0, d.O)(z);
     r.useEffect(() => {
         V &&
             (0, _.h)({
@@ -92,14 +92,14 @@ function B(e) {
         Y = b.id in (null !== (x = null === (m = (0, E.LD)(D, !1).result) || void 0 === m ? void 0 : m.sections) && void 0 !== x ? x : {}),
         X = K || Y,
         Q = b.isVerified && b.isDiscoverable,
-        q = (0, o.e7)([S.Z, v.Z], () => v.Z.getChannel(S.Z.getChannelId())),
+        q = (0, o.e7)([S.Z, N.Z], () => N.Z.getChannel(S.Z.getChannelId())),
         J = (0, o.e7)([T.Z], () => (null == q ? void 0 : q.isPrivate()) || T.Z.can(L.Plq.SEND_MESSAGES, q)),
         { analyticsLocations: $ } = (0, p.ZP)(),
         ee = async () => {
             if (null != R)
                 try {
                     let e = await c.Z.openPrivateChannel(R);
-                    await (0, d.Z)({
+                    await (0, u.Z)({
                         targetApplicationId: b.id,
                         channelId: e,
                         analyticsLocations: $

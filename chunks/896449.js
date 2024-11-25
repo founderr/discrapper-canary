@@ -13,7 +13,7 @@ var a = n(481060),
     u = n(37258),
     c = n(26033),
     d = n(388032),
-    m = n(301698);
+    m = n(607655);
 function h(e) {
     var t;
     let { user: n, guildId: h, channel: x, entry: C, onSelect: p, disableGameProfileLinks: v } = e,

@@ -11,7 +11,7 @@ var i = n(481060),
 function o(e) {
     a.Z.open(e, s.pNK.SOUNDBOARD),
         (0, i.openModalLazy)(async () => {
-            let { default: t } = await Promise.all([n.e('56035'), n.e('55876')]).then(n.bind(n, 758961));
+            let { default: t } = await Promise.all([n.e('56035'), n.e('28394')]).then(n.bind(n, 758961));
             return (n) =>
                 (0, r.jsx)(t, {
                     ...n,

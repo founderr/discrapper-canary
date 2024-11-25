@@ -11,11 +11,11 @@ var r = n(512722),
     o = n(245315),
     s = n(556041),
     c = n(347475),
-    u = n(592125),
-    d = n(368859);
+    d = n(592125),
+    u = n(368859);
 function m(e, t) {
     if ((0, o.cp)(t)) return (0, i.jsx)(s.Z, {});
-    if ((0, d.Z)(t)) {
+    if ((0, u.Z)(t)) {
         let { guild_id: e, channel_id: n, message_id: r } = t.messageReference;
         if (null != e)
             return (0, i.jsx)(a.ZP, {
@@ -25,7 +25,7 @@ function m(e, t) {
             });
     }
     if (null != t.interaction && 'SENDING' === t.state) return (0, i.jsx)(i.Fragment, {});
-    let n = u.Z.getChannel(t.channel_id);
+    let n = d.Z.getChannel(t.channel_id);
     return (
         l()(null != n, 'renderUserGuildPopout: channel should never be null'),
         (0, i.jsx)(c.Z, {

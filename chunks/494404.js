@@ -18,8 +18,8 @@ var i = n(200651),
     o = n(392711),
     s = n.n(o),
     c = n(91192),
-    u = n(442837),
-    d = n(481060),
+    d = n(442837),
+    u = n(481060),
     m = n(668781),
     h = n(904245),
     f = n(724757),
@@ -30,13 +30,13 @@ var i = n(200651),
     C = n(592125),
     I = n(375954),
     x = n(496675),
-    N = n(933429),
-    v = n(451478),
+    v = n(933429),
+    N = n(451478),
     T = n(626135),
     S = n(585483),
     A = n(981631),
     b = n(388032),
-    j = n(177387);
+    j = n(312422);
 function Z(e, t, n) {
     return (
         t in e
@@ -61,10 +61,10 @@ let P = (e) => {
                 (0, i.jsxs)('div', {
                     className: j.titleContainer,
                     children: [
-                        null != n ? (0, i.jsx)(n, { color: d.tokens.colors.INTERACTIVE_NORMAL }) : null,
+                        null != n ? (0, i.jsx)(n, { color: u.tokens.colors.INTERACTIVE_NORMAL }) : null,
                         null == t
                             ? null
-                            : (0, i.jsx)(d.Text, {
+                            : (0, i.jsx)(u.Text, {
                                   variant: 'text-lg/semibold',
                                   color: 'interactive-active',
                                   children: t
@@ -94,7 +94,7 @@ let P = (e) => {
 class y extends r.PureComponent {
     renderJumpButton() {
         let { jumping: e } = this.props;
-        return (0, i.jsxs)(d.Clickable, {
+        return (0, i.jsxs)(u.Clickable, {
             className: j.jumpButton,
             onClick: this.handleClickJump,
             children: [
@@ -102,8 +102,8 @@ class y extends r.PureComponent {
                     className: a()(j.__invalid_text, { hidden: e }),
                     children: b.intl.string(b.t.k5WiPT)
                 }),
-                (0, i.jsx)(d.Spinner, {
-                    type: d.Spinner.Type.PULSING_ELLIPSIS,
+                (0, i.jsx)(u.Spinner, {
+                    type: u.Spinner.Type.PULSING_ELLIPSIS,
                     className: a()(j.loading, { [j.visible]: e })
                 })
             ]
@@ -112,11 +112,11 @@ class y extends r.PureComponent {
     renderCloseButton() {
         let { onCloseMessage: e, canCloseAllMessages: t, canManageMessages: n, channel: r } = this.props;
         return null != e && (t || n || (null != r && r.isPrivate()))
-            ? (0, i.jsx)(d.Button, {
-                  look: d.Button.Looks.BLANK,
-                  size: d.Button.Sizes.NONE,
+            ? (0, i.jsx)(u.Button, {
+                  look: u.Button.Looks.BLANK,
+                  size: u.Button.Sizes.NONE,
                   onClick: this.handleClickClose,
-                  children: (0, i.jsx)(d.XSmallIcon, {
+                  children: (0, i.jsx)(u.XSmallIcon, {
                       size: 'md',
                       color: 'currentColor',
                       className: j.closeIcon
@@ -142,7 +142,7 @@ class y extends r.PureComponent {
             });
     }
 }
-let O = u.ZP.connectStores([x.Z], (e) => {
+let O = d.ZP.connectStores([x.Z], (e) => {
     let { channel: t } = e;
     return { canManageMessages: null != t && x.Z.can(A.Plq.MANAGE_MESSAGES, t) };
 })(y);
@@ -150,8 +150,8 @@ function M(e) {
     let { analyticsName: t, items: n, hasMore: l, loading: o, loadMore: m, renderHeader: h, renderEmptyState: _, renderItem: g, getProTip: C, scrollerClassName: I, className: x, listName: Z } = e,
         P = r.useRef(null),
         L = (0, f.Z)(Z, P),
-        y = (0, u.e7)([N.Z], () => N.Z.hasNotice()),
-        O = (0, u.e7)([v.Z], () => v.Z.windowSize());
+        y = (0, d.e7)([v.Z], () => v.Z.hasNotice()),
+        O = (0, d.e7)([N.Z], () => N.Z.windowSize());
     r.useEffect(() => {
         T.default.track(A.rMx.OPEN_POPOUT, { type: t });
     }, [t]),
@@ -185,7 +185,7 @@ function M(e) {
                   'div',
                   {
                       className: a()(j.emptyPlaceholder, j.loadingPlaceholder),
-                      children: (0, i.jsx)(d.Spinner, {})
+                      children: (0, i.jsx)(u.Spinner, {})
                   },
                   'spinner'
               )
@@ -206,17 +206,17 @@ function M(e) {
                   'div',
                   {
                       className: j.loadingMore,
-                      children: (0, i.jsx)(d.Spinner, {})
+                      children: (0, i.jsx)(u.Spinner, {})
                   },
                   'loading-more-after'
               )
             : l
               ? (0, i.jsx)('div', {
                     className: j.hasMore,
-                    children: (0, i.jsx)(d.Button, {
-                        look: d.Button.Looks.FILLED,
-                        color: d.Button.Colors.PRIMARY,
-                        size: d.Button.Sizes.MAX,
+                    children: (0, i.jsx)(u.Button, {
+                        look: u.Button.Looks.FILLED,
+                        color: u.Button.Colors.PRIMARY,
+                        size: u.Button.Sizes.MAX,
                         onClick: m,
                         children: b.intl.string(b.t.XBlaiI)
                     })
@@ -249,10 +249,10 @@ function M(e) {
         onClick: R,
         onDoubleClick: R,
         'aria-label': e['aria-label'],
-        children: (0, i.jsxs)(d.HeadingLevel, {
+        children: (0, i.jsxs)(u.HeadingLevel, {
             component: h(),
             children: [
-                (0, i.jsxs)(d.AdvancedScroller, {
+                (0, i.jsxs)(u.AdvancedScroller, {
                     className: a()(j.messagesPopout, I),
                     onScroll: G ? M : void 0,
                     ref: P,
@@ -279,8 +279,8 @@ function M(e) {
     });
 }
 function k(e) {
-    let { analyticsName: t, onFetch: n, channel: l, messages: a, hasMore: o, loading: s, loadMore: c, onJump: d, canCloseAllMessages: f = !1, renderHeader: p, renderEmptyState: E, renderMessage: x, getProTip: N, scrollerClassName: v, className: T, onCloseMessage: S, listName: Z } = e,
-        R = (0, u.e7)([I.Z], () => {
+    let { analyticsName: t, onFetch: n, channel: l, messages: a, hasMore: o, loading: s, loadMore: c, onJump: u, canCloseAllMessages: f = !1, renderHeader: p, renderEmptyState: E, renderMessage: x, getProTip: v, scrollerClassName: N, className: T, onCloseMessage: S, listName: Z } = e,
+        R = (0, d.e7)([I.Z], () => {
             let e = null != l ? I.Z.getMessages(l.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
         });
@@ -300,7 +300,7 @@ function k(e) {
             });
         else if (!R) {
             let e = C.Z.getChannel(o);
-            null != e && (h.Z.trackJump(o, i, t), (0, g.uL)(A.Z5c.CHANNEL(e.getGuildId(), o, i))), null == d || d(n);
+            null != e && (h.Z.trackJump(o, i, t), (0, g.uL)(A.Z5c.CHANNEL(e.getGuildId(), o, i))), null == u || u(n);
         }
     }
     r.useEffect(() => {
@@ -318,7 +318,7 @@ function k(e) {
     );
     return (0, i.jsx)(M, {
         className: T,
-        scrollerClassName: v,
+        scrollerClassName: N,
         items: L,
         loading: s,
         analyticsName: t,
@@ -326,7 +326,7 @@ function k(e) {
         renderHeader: p,
         hasMore: o,
         loadMore: c,
-        getProTip: N,
+        getProTip: v,
         renderItem: function (e) {
             let { message: t, channel: n } = e;
             if (null == t) return [];

@@ -9,7 +9,7 @@ var l = n(120356),
     o = n.n(l),
     r = n(481060),
     s = n(809357),
-    a = n(96685);
+    a = n(163752);
 function u(e) {
     let { onClick: t, keybind: n, className: l, IconComponent: u } = e,
         d = (0, s.o)();

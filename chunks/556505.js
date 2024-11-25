@@ -9,7 +9,7 @@ var i = n(200651),
     r = n(481060),
     a = n(911969),
     s = n(388032),
-    o = n(899207);
+    o = n(750628);
 function c(e) {
     let { name: t, labelType: n, collapsed: c = !1, showTooltip: d = !1 } = e,
         u = n === a.ww.NEW ? s.intl.string(s.t.y2b7CA) : s.intl.string(s.t['/qdhkp']),

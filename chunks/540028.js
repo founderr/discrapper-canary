@@ -15,7 +15,7 @@ var i = n(442837),
     h = n(981631),
     m = n(354459),
     g = n(388032),
-    E = n(497041);
+    E = n(880397);
 function v(e) {
     let { closePopout: t, idle: n, pipWindows: a, voiceChannelId: p, onSelect: E } = e;
     n && t();

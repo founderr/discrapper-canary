@@ -14,7 +14,7 @@ var r = n(200651),
     c = n(239091),
     d = n(751688),
     f = n(51144),
-    _ = n(711258);
+    _ = n(357498);
 function p(e) {
     let { users: t, maxUsers: a, guildId: o, channelId: p, className: h, avatarClassName: m, onClick: g, onFocus: E, size: v = u.AvatarSizes.SIZE_24, overflowCountVariant: I = 'text-xs/medium', overflowCountColor: b = 'interactive-normal', hideOverflowCount: T = !1, disableUsernameTooltip: S = !1, disableUserPopout: y = !1, onUserPopoutClosed: A } = e,
         [N, C] = i.useState(!1);
@@ -40,7 +40,7 @@ function p(e) {
                                 (0, c.jW)(
                                     t,
                                     async () => {
-                                        let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('50261')]).then(n.bind(n, 881351));
+                                        let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('351')]).then(n.bind(n, 881351));
                                         return (n) =>
                                             (0, r.jsx)(t, {
                                                 ...n,

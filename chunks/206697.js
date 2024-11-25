@@ -10,13 +10,13 @@ var i = n(200651),
     o = n(481060),
     s = n(100527),
     c = n(436774),
-    u = n(197115),
-    d = n(74538),
+    d = n(197115),
+    u = n(74538),
     m = n(175006),
     h = n(981631),
     f = n(474936),
     p = n(388032),
-    _ = n(169458),
+    _ = n(402031),
     g = n(492764),
     E = n(235810);
 function C() {
@@ -74,7 +74,7 @@ function C() {
           });
 }
 function I() {
-    let e = (0, d.Px)(f.p9.TIER_2),
+    let e = (0, u.Px)(f.p9.TIER_2),
         t = r.useCallback(
             () =>
                 (0, o.openModalLazy)(async () => {
@@ -104,7 +104,7 @@ function I() {
                 className: _.upsellText,
                 children: m
             }),
-            (0, i.jsx)(u.Z, {
+            (0, i.jsx)(d.Z, {
                 className: _.upsellButton,
                 size: o.ButtonSizes.TINY,
                 shinyButtonClassName: _.upsellButton,

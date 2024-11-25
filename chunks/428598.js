@@ -1,20 +1,20 @@
-let r;
-n(47120);
-var i,
-    o = n(442837),
-    a = n(570140),
-    l = n(699516),
-    s = n(496232);
-function c(e, t, n) {
+let n;
+r(47120);
+var o,
+    i = r(442837),
+    a = r(570140),
+    s = r(699516),
+    c = r(496232);
+function l(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[t] = r),
         e
     );
 }
@@ -25,14 +25,14 @@ let d = !1,
     }),
     f = { ...u };
 function p() {
-    r = new Map(f.userAffinities.filter((e) => !l.Z.isBlockedOrIgnored(e.otherUserId)).map((e) => [e.otherUserId, e]));
+    n = new Map(f.userAffinities.filter((e) => !s.Z.isBlockedOrIgnored(e.otherUserId)).map((e) => [e.otherUserId, e]));
 }
-class v extends (i = o.ZP.PersistedStore) {
+class h extends (o = i.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(l.Z), null != e && ((f.userAffinities = e.userAffinities), (f.lastFetched = e.lastFetched), p()), this.syncWith([l.Z], p);
+        this.waitFor(s.Z), null != e && ((f.userAffinities = e.userAffinities), (f.lastFetched = e.lastFetched), p()), this.syncWith([s.Z], p);
     }
     shouldFetch() {
-        if (!d) return Date.now() - f.lastFetched > s.K;
+        if (!d) return Date.now() - f.lastFetched > c.K;
     }
     isFetching() {
         return d;
@@ -41,15 +41,15 @@ class v extends (i = o.ZP.PersistedStore) {
         return f.userAffinities;
     }
     getUserAffinity(e) {
-        return r.get(e);
+        return n.get(e);
     }
     getState() {
         return f;
     }
 }
-c(v, 'displayName', 'UserAffinitiesStoreV2'),
-    c(v, 'persistKey', 'UserAffinitiesStoreV2'),
-    (t.Z = new v(a.Z, {
+l(h, 'displayName', 'UserAffinitiesStoreV2'),
+    l(h, 'persistKey', 'UserAffinitiesStoreV2'),
+    (t.Z = new h(a.Z, {
         LOAD_USER_AFFINITIES_V2: function () {
             d = !0;
         },
@@ -61,6 +61,6 @@ c(v, 'displayName', 'UserAffinitiesStoreV2'),
             d = !1;
         },
         LOGOUT: function () {
-            (f = { ...u }), (r = new Map()), (d = !1);
+            (f = { ...u }), (n = new Map()), (d = !1);
         }
     }));

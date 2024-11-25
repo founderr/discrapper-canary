@@ -20,7 +20,7 @@ var i = t(200651),
     f = t(703926),
     v = t(474936),
     g = t(388032),
-    S = t(522888);
+    S = t(461405);
 let j = (e) => {
     let { isShopGift: n, className: t, optionsContainerClassName: r } = e,
         { giftRecipient: j, selectedGiftStyle: E, setSelectedGiftStyle: y, emojiConfetti: I, soundEffect: P, setEmojiConfetti: T, setSoundEffect: N } = (0, c.wD)(),

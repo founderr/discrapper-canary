@@ -35,8 +35,8 @@ var i = t(200651),
     b = t(176505),
     k = t(50493),
     L = t(388032),
-    B = t(842100),
-    D = t(784237);
+    B = t(998810),
+    D = t(247627);
 function G(e) {
     let { guild: n, previousChannel: t } = e,
         r = L.intl.string(L.t.oclz3d),

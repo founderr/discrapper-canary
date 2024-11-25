@@ -1,20 +1,20 @@
-t.d(n, {
+e.d(t, {
     Z: function () {
-        return r;
+        return a;
     }
 });
-var i = t(442837),
-    a = t(430824),
-    l = t(981631);
-function r(e) {
+var i = e(442837),
+    r = e(430824),
+    l = e(981631);
+function a(n) {
     return (0, i.e7)(
-        [a.Z],
+        [r.Z],
         () => {
-            var n;
-            if (null == e) return !1;
-            let t = a.Z.getGuild(e);
-            return null !== (n = null == t ? void 0 : t.hasFeature(l.oNc.HUB)) && void 0 !== n && n;
+            var t;
+            if (null == n) return !1;
+            let e = r.Z.getGuild(n);
+            return null !== (t = null == e ? void 0 : e.hasFeature(l.oNc.HUB)) && void 0 !== t && t;
         },
-        [e]
+        [n]
     );
 }

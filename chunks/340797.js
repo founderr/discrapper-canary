@@ -9,7 +9,7 @@ var i = n(481060),
     a = n(946273),
     s = n(441110),
     o = n(388032),
-    l = n(779377);
+    l = n(673094);
 function u(e) {
     let { guild: t, message: n } = e;
     return (0, a.vV)(t.id, n.author.id)

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(200651);
@@ -11,8 +11,8 @@ var r = n(481060),
     o = n(776862),
     s = n(701488),
     c = n(981631);
-function u(e) {
-    let { channel: t, guildId: u, locationObject: d, openInPopout: m, initialSelectedApplicationId: h, initialSlide: f = s.ag.DIRECTORY, enableSelectedTextChannelInvite: p = !1, analyticsLocations: _, opensAppLauncherModal: g = !1 } = e,
+function d(e) {
+    let { channel: t, guildId: d, locationObject: u, openInPopout: m, initialSelectedApplicationId: h, initialSlide: f = s.ag.DIRECTORY, enableSelectedTextChannelInvite: p = !1, analyticsLocations: _, opensAppLauncherModal: g = !1 } = e,
         E = _.length > 0 ? _[_.length - 1] : 'open-activity-shelf',
         { enabled: C } = l.m1.getCurrentConfig({ location: E }, { autoTrackExposure: !1 });
     if (g && C) {
@@ -28,13 +28,13 @@ function u(e) {
     let I = m ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
     return (0, r.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('69057'), n.e('47593'), n.e('69673')]).then(n.bind(n, 471840));
+            let { default: e } = await Promise.all([n.e('69057'), n.e('47593'), n.e('10169')]).then(n.bind(n, 471840));
             return (n) =>
                 (0, i.jsx)(e, {
                     ...n,
                     channel: t,
-                    guildId: u,
-                    locationObject: d,
+                    guildId: d,
+                    locationObject: u,
                     initialSlide: f,
                     initialSelectedApplicationId: h,
                     enableSelectedTextChannelInvite: p,

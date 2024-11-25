@@ -7,7 +7,7 @@ var l = e(200651);
 e(192379);
 var i = e(794295),
     r = e(388032),
-    u = e(130685);
+    u = e(83909);
 function a(n) {
     let { termsOfServiceUrl: t, privacyPolicyUrl: e } = n;
     return null == t && null == e

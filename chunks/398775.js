@@ -23,7 +23,7 @@ var i = n(200651),
     p = n(798769),
     x = n(981631),
     S = n(388032),
-    T = n(689230);
+    T = n(612711);
 async function C(e) {
     let { premiumSubscription: t, pauseDuration: n, onClose: i, setHasError: s, setIsCancelling: r, analyticsLocations: l, analyticsLocation: a } = e;
     try {

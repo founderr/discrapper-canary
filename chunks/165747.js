@@ -8,7 +8,7 @@ t(192379);
 var i = t(475413),
     c = t(955418),
     o = t(388032),
-    s = t(451563);
+    s = t(591156);
 function r(e) {
     let { user: n, hideMessageInput: t, hideExampleButton: r } = e;
     return t

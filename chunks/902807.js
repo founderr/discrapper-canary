@@ -4,7 +4,7 @@ var i = n(200651),
     s = n.n(l),
     a = n(752877),
     o = n(481060),
-    c = n(286735);
+    c = n(86321);
 class d extends r.Component {
     render() {
         let { icon: e, ...t } = this.props;

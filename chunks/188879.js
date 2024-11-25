@@ -20,7 +20,7 @@ var n = t(200651),
     A = t(800530),
     C = t(981631),
     N = t(388032),
-    T = t(300106);
+    T = t(729779);
 let y = (e) => {
         let { classificationTypeText: i, guildMetadata: t } = e,
             l = (0, m.B)('classification_detail'),

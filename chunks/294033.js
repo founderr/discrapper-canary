@@ -7,7 +7,7 @@ var i = n(200651),
     r = n(192379),
     s = n(120356),
     a = n.n(s),
-    o = n(846337);
+    o = n(131478);
 function l(e) {
     let { keybind: t, separator: n = '+', className: s } = e;
     return (0, i.jsx)(i.Fragment, {

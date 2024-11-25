@@ -63,7 +63,7 @@ var l,
     el = n(921944),
     ei = n(761274),
     er = n(388032),
-    es = n(410894);
+    es = n(456963);
 ((i = l || (l = {}))[(i.GUILD = 0)] = 'GUILD'), (i[(i.NATIVE_PICKER_SOURCE = 1)] = 'NATIVE_PICKER_SOURCE'), (i[(i.SOURCE = 2)] = 'SOURCE'), (i[(i.CONFIRM = 3)] = 'CONFIRM');
 let ea = (e) => {
     let { visibleContent: t, markAsDismissed: n } = e;
@@ -209,17 +209,17 @@ function eo(e) {
             },
             [ev, eO, eI, eN, eJ, eY, ez]
         ),
-        [e8, e6] = s.useState(eR ? '' : void 0),
+        [e6, e8] = s.useState(eR ? '' : void 0),
         te = s.useCallback(
             (e) => {
-                (0, K.t)(), (0, K.T)(null != e ? e : e8);
+                (0, K.t)(), (0, K.T)(null != e ? e : e6);
             },
-            [e8]
+            [e6]
         );
     function tt(e) {
         if ((e.preventDefault(), 1 === eB)) return te();
         if (2 === eB) return eL(3);
-        if (null != e8) return eL(1);
+        if (null != e6) return eL(1);
         let t = (0, $.Z)(ej, eF, w.ZP.getRunningGames());
         W.ZP.supportsFeature(en.eRX.ELEVATED_HOOK) && (null == t ? void 0 : t.elevated)
             ? !(function () {
@@ -239,7 +239,7 @@ function eo(e) {
     }
     let tn = s.useCallback(
             (e) => {
-                eH(e), null != e && (ey && (null == e ? void 0 : e.id.startsWith('camera:')) !== !0 ? e6(e.id.split(':')[1]) : e6(void 0), eL(3), eD(!0));
+                eH(e), null != e && (ey && (null == e ? void 0 : e.id.startsWith('camera:')) !== !0 ? e8(e.id.split(':')[1]) : e8(void 0), eL(3), eD(!0));
             },
             [ey]
         ),
@@ -380,7 +380,7 @@ function eo(e) {
                                 children: (0, r.jsx)(Q.Hu, {
                                     onSourceSelect: e4,
                                     onCancel: th,
-                                    pickerType: e8
+                                    pickerType: e6
                                 })
                             })
                         })
@@ -389,7 +389,7 @@ function eo(e) {
                 td && (0, r.jsx)(P.Z, { channel: ev })
             ]
         }),
-        tx = 1 === eB || (eR && 3 === eB) ? er.intl.string(er.t.FiBjwc) : ey && (3 !== eB || null != e8) ? er.intl.string(er.t.PDTjLC) : er.intl.string(er.t['UE/rPz']),
+        tx = 1 === eB || (eR && 3 === eB) ? er.intl.string(er.t.FiBjwc) : ey && (3 !== eB || null != e6) ? er.intl.string(er.t.PDTjLC) : er.intl.string(er.t['UE/rPz']),
         tg = (0, r.jsxs)(m.ModalFooter, {
             justify: null == tu ? T.Z.Justify.START : T.Z.Justify.BETWEEN,
             children: [

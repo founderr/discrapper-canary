@@ -26,7 +26,7 @@ var r,
     I = n(768581),
     b = n(463396),
     T = n(981631),
-    S = n(825193);
+    S = n(507304);
 function y(e) {
     let { compact: t } = e;
     return (0, a.jsx)(h.Z, {

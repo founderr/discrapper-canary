@@ -8,7 +8,7 @@ var r = n(200651),
     u = n(268350),
     c = n(419922),
     d = n(388032),
-    f = n(961378);
+    f = n(573101);
 t.Z = i.memo(function (e) {
     var t;
     let { channelId: n, chatInputType: _ } = e,

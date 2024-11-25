@@ -21,12 +21,12 @@ var i = n(200651),
     E = n(906037),
     Z = n(501787),
     C = n(65154),
-    x = n(253653);
+    x = n(827202);
 function S(e) {
     let { context: t = C.Yn.DEFAULT, participants: o, locked: s, widget: u, channel: d, width: c, height: h, containerRef: m } = e,
         g = (e, l) => {
             (0, a.jW)(l, async () => {
-                let { default: l } = await Promise.all([n.e('79695'), n.e('69220'), n.e('50261')]).then(n.bind(n, 881351));
+                let { default: l } = await Promise.all([n.e('79695'), n.e('69220'), n.e('351')]).then(n.bind(n, 881351));
                 return (n) =>
                     (0, i.jsx)(l, {
                         ...n,

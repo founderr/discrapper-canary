@@ -26,7 +26,7 @@ var i = n(200651),
     v = n(188493),
     S = n(294330),
     N = n(981631),
-    T = n(179596);
+    T = n(841787);
 let A = Object.freeze({
         top: 0,
         bottom: 0,
@@ -62,11 +62,11 @@ function L(e) {
         H = r.useCallback(
             (e) => {
                 var t;
-                if (O) return;
+                if (O || R || m) return;
                 let n = null === (t = V.current) || void 0 === t ? void 0 : t.getScrollerState();
-                null != n && null != e && n.scrollHeight < e.height && L();
+                null != n && null != e && n.scrollHeight <= e.height && L();
             },
-            [O, L]
+            [O, L, m, R]
         ),
         F = (0, d.y)((e) => {
             let t = null == e ? void 0 : e.getBoundingClientRect();
@@ -224,7 +224,7 @@ function L(e) {
                         let t = null === (e = V.current) || void 0 === e ? void 0 : e.getScrollerState();
                         if (null == t) return;
                         let n = t.scrollTop + t.offsetHeight;
-                        t.scrollHeight - n < 300 && L();
+                        t.scrollHeight - n < 240 && L();
                     },
                     100,
                     { leading: !0 }

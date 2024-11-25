@@ -8,7 +8,7 @@ var r = n(200651),
     d = n(302221),
     u = n(884697),
     f = n(372654),
-    p = n(689380);
+    p = n(695935);
 e.Z = (t) => {
     let { asset: e, size: n = f.yV, className: i, style: g, children: v, categoryBannerOverride: h } = t,
         b = (0, s.e7)([c.Z], () => c.Z.saturation),

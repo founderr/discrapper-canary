@@ -10,8 +10,8 @@ var i = n(200651),
     o = n(481060),
     s = n(230711),
     c = n(2052),
-    u = n(906732),
-    d = n(963249),
+    d = n(906732),
+    u = n(963249),
     m = n(594174),
     h = n(626135),
     f = n(74538),
@@ -20,7 +20,7 @@ var i = n(200651),
     g = n(474936),
     E = n(981631),
     C = n(388032),
-    I = n(464780);
+    I = n(614990);
 function x() {
     let e = (0, a.e7)([m.default], () => f.ZP.isPremiumExactly(m.default.getCurrentUser(), g.p9.TIER_2)),
         { enabled: t, getNitroCTA: n } = p.g.useExperiment(
@@ -31,24 +31,24 @@ function x() {
             }
         ),
         { location: x } = (0, c.O)(),
-        { analyticsLocations: N } = (0, u.ZP)(),
-        v = r.useCallback(() => {
-            (0, d.Z)({
+        { analyticsLocations: v } = (0, d.ZP)(),
+        N = r.useCallback(() => {
+            (0, u.Z)({
                 subscriptionTier: f.ZP.getSkuIdForPremiumType(g.p9.TIER_2),
-                analyticsLocations: N,
+                analyticsLocations: v,
                 analyticsObject: {
                     ...x,
                     object: E.qAy.BUTTON_CTA,
                     objectType: E.Qqv.TIER_2
                 }
             });
-        }, [N, x]),
+        }, [v, x]),
         T = r.useCallback(() => {
             s.Z.open(E.oAB.INVENTORY), _.ZP.dismissOutboundPromotionNotice();
         }, []),
         S = r.useCallback(() => {
-            h.default.track(E.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), n ? v() : T();
-        }, [n, v, T]);
+            h.default.track(E.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), n ? N() : T();
+        }, [n, N, T]);
     return (0, i.jsxs)(o.Notice, {
         color: o.NoticeColors.PREMIUM_TIER_2,
         children: [

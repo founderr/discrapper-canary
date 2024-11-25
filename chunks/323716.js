@@ -120,7 +120,7 @@ let _ = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://
                   .catch(r),
               !0)
             : 401 === e.statusCode && (null === (l = e.body) || void 0 === l ? void 0 : l.code) === f.evJ.MFA_REQUIRED && (null === (u = e.body) || void 0 === u ? void 0 : u.mfa)
-              ? (Promise.all([n.e('52030'), n.e('78030')])
+              ? (Promise.all([n.e('52030'), n.e('85665')])
                     .then(n.bind(n, 24031))
                     .then((n) => {
                         let { openMFAModal: i } = n;

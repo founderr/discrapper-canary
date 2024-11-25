@@ -9,14 +9,14 @@ var r = n(481060),
     l = n(739566),
     a = n(834129),
     o = n(388032),
-    s = n(437814);
+    s = n(938530);
 function c(e) {
     let { message: t, compact: n, usernameHook: c } = e,
-        u = (0, l.ZP)(t),
-        d = c(u),
+        d = (0, l.ZP)(t),
+        u = c(d),
         m = o.intl.format(o.t['zla/u7'], {
-            username: u.nick,
-            usernameHook: d,
+            username: d.nick,
+            usernameHook: u,
             topic: t.content
         });
     return (0, i.jsx)(a.Z, {

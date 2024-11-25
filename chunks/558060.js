@@ -13,7 +13,7 @@ var a = n(120356),
     c = n(200615),
     d = n(981631),
     u = n(388032),
-    m = n(416806);
+    m = n(487667);
 function h(e) {
     let { product: t, isPremiumUser: n, discount: a, className: h, nitroUpsell: p = !1 } = e,
         f = (0, s.ql)(t, d.tuJ.DEFAULT);

@@ -6,8 +6,8 @@ var i = n(200651),
     o = n(442837),
     s = n(481060),
     c = n(911969),
-    u = n(906732),
-    d = n(778087),
+    d = n(906732),
+    u = n(778087),
     m = n(603721),
     h = n(124072),
     f = n(171368),
@@ -18,17 +18,17 @@ var i = n(200651),
     C = n(981631),
     I = n(665692),
     x = n(388032),
-    N = n(120584);
-let v = {
+    v = n(476521);
+let N = {
         tag: 'span',
         variant: 'text-md/normal',
         color: 'header-secondary'
     },
-    T = { className: a()('mention', N.mention) };
+    T = { className: a()('mention', v.mention) };
 function S(e) {
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(s.Text, {
-            ...v,
+            ...N,
             color: 'header-primary',
             children: e
         })
@@ -38,8 +38,8 @@ t.Z = r.memo(function (e) {
     var t, n, l, a, A, b;
     let j,
         { channel: Z, messageId: R, interactionData: P } = e,
-        { analyticsLocations: L } = (0, u.ZP)(),
-        { onCopy: y, copyRef: O } = (0, d.Z)(Z, null == P ? void 0 : null === (t = P.application_command) || void 0 === t ? void 0 : t.id),
+        { analyticsLocations: L } = (0, d.ZP)(),
+        { onCopy: y, copyRef: O } = (0, u.Z)(Z, null == P ? void 0 : null === (t = P.application_command) || void 0 === t ? void 0 : t.id),
         M = (0, o.e7)([_.Z], () => _.Z.getGuild(Z.guild_id), [Z.guild_id]);
     if (
         (r.useEffect(() => {
@@ -49,7 +49,7 @@ t.Z = r.memo(function (e) {
     )
         j = (0, i.jsx)(s.Spinner, {
             type: s.Spinner.Type.SPINNING_CIRCLE,
-            className: N.spinner
+            className: v.spinner
         });
     else {
         let e = [],
@@ -57,8 +57,8 @@ t.Z = r.memo(function (e) {
         for (let n of null !== (A = P.options) && void 0 !== A ? A : [])
             e = e.concat(
                 (function e(t) {
-                    var n, l, a, o, u, d, m;
-                    let N,
+                    var n, l, a, o, d, u, m;
+                    let v,
                         { option: A, channel: b, guild: j, messageId: Z, parentOptionKey: R, commandOptionSpec: P, sourceAnalyticsLocations: L } = t,
                         y = null != R ? R + ' ' + A.name : A.name;
                     if (A.type === c.jw.SUB_COMMAND || A.type === c.jw.SUB_COMMAND_GROUP) {
@@ -69,7 +69,7 @@ t.Z = r.memo(function (e) {
                                         children: [
                                             ' ',
                                             (0, i.jsx)(s.Text, {
-                                                ...v,
+                                                ...N,
                                                 children: null !== (l = null == P ? void 0 : P.name_localized) && void 0 !== l ? l : A.name
                                             })
                                         ]
@@ -100,7 +100,7 @@ t.Z = r.memo(function (e) {
                                     t = g.default.getUser(e);
                                 if (null != t) {
                                     let e = (0, E.ij)(t, b);
-                                    N = (0, i.jsxs)(h.Z, {
+                                    v = (0, i.jsxs)(h.Z, {
                                         ...T,
                                         onClick: () =>
                                             (0, f.openUserProfileModal)({
@@ -120,7 +120,7 @@ t.Z = r.memo(function (e) {
                                 let e = A.value.toString(),
                                     t = p.Z.getChannel(e);
                                 null != t &&
-                                    (N = (0, i.jsxs)(h.Z, {
+                                    (v = (0, i.jsxs)(h.Z, {
                                         ...T,
                                         children: [I.zy, t.name]
                                     }));
@@ -130,7 +130,7 @@ t.Z = r.memo(function (e) {
                                 let e = A.value.toString(),
                                     t = null != j ? _.Z.getRole(j.id, e) : void 0;
                                 null != t &&
-                                    (N = (0, i.jsxs)(h.Z, {
+                                    (v = (0, i.jsxs)(h.Z, {
                                         ...T,
                                         children: [I.ME, t.name]
                                     }));
@@ -140,14 +140,14 @@ t.Z = r.memo(function (e) {
                                 let e = A.value.toString(),
                                     t = null != j ? _.Z.getRole(j.id, e) : void 0;
                                 if (null != t)
-                                    N = (0, i.jsxs)(h.Z, {
+                                    v = (0, i.jsxs)(h.Z, {
                                         children: [I.ME, t.name]
                                     });
                                 else {
                                     let t = g.default.getUser(e);
                                     if (null != t) {
                                         let e = (0, E.ij)(t, b);
-                                        N = (0, i.jsxs)(h.Z, {
+                                        v = (0, i.jsxs)(h.Z, {
                                             ...T,
                                             onClick: () =>
                                                 (0, f.openUserProfileModal)({
@@ -162,25 +162,25 @@ t.Z = r.memo(function (e) {
                                 break;
                             }
                             case c.jw.ATTACHMENT:
-                                N = S(x.intl.string(x.t.nONJVV));
+                                v = S(x.intl.string(x.t.nONJVV));
                                 break;
                             default: {
-                                let e = null == P ? void 0 : null === (u = P.choices) || void 0 === u ? void 0 : u.find((e) => e.value === A.value);
-                                null != e && (O = null !== (d = e.name_localized) && void 0 !== d ? d : e.name);
+                                let e = null == P ? void 0 : null === (d = P.choices) || void 0 === d ? void 0 : d.find((e) => e.value === A.value);
+                                null != e && (O = null !== (u = e.name_localized) && void 0 !== u ? u : e.name);
                             }
                         }
                     return (
-                        null == N && (N = S(null == O ? void 0 : O.toString())),
+                        null == v && (v = S(null == O ? void 0 : O.toString())),
                         [
                             (0, i.jsxs)(
                                 r.Fragment,
                                 {
                                     children: [
                                         (0, i.jsxs)(s.Text, {
-                                            ...v,
+                                            ...N,
                                             children: [' ', null !== (m = null == P ? void 0 : P.name_localized) && void 0 !== m ? m : A.name, ': ']
                                         }),
-                                        N
+                                        v
                                     ]
                                 },
                                 y
@@ -200,7 +200,7 @@ t.Z = r.memo(function (e) {
         j = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(s.Text, {
-                    ...v,
+                    ...N,
                     children: ['/', null !== (b = null === (l = P.application_command) || void 0 === l ? void 0 : l.name_localized) && void 0 !== b ? b : P.name]
                 }),
                 e
@@ -208,7 +208,7 @@ t.Z = r.memo(function (e) {
         });
     }
     return (0, i.jsxs)('div', {
-        className: N.container,
+        className: v.container,
         onCopy: (e) => {
             var t, n, i;
             let r = null !== (i = null === (n = window) || void 0 === n ? void 0 : null === (t = n.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== i ? i : '';
@@ -216,11 +216,11 @@ t.Z = r.memo(function (e) {
         },
         children: [
             (0, i.jsx)('div', {
-                className: N.tooltip,
+                className: v.tooltip,
                 ref: O,
                 children: j
             }),
-            (0, i.jsx)('div', { className: N.tooltipPointer })
+            (0, i.jsx)('div', { className: v.tooltipPointer })
         ]
     });
 });

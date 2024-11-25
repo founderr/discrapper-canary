@@ -9,7 +9,7 @@ var r = n(481060),
     l = n(600164),
     o = n(424071),
     s = n(388032),
-    i = n(879137);
+    i = n(38920);
 function c(e) {
     let { onClose: t, img: n, title: c, body: d, content: u } = e;
     return (0, a.jsxs)(o.Z, {

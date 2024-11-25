@@ -1,59 +1,59 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return h;
     }
 }),
     n(47120),
     n(411104);
-var i = n(200651),
-    r = n(192379),
-    s = n(442837),
+var r = n(200651),
+    a = n(192379),
+    u = n(442837),
     l = n(481060),
-    a = n(607070),
-    o = n(409302),
+    i = n(607070),
+    d = n(409302),
     c = n(474936);
-function u(e) {
-    let { giftStyle: t, className: n, shouldAnimate: u = !0, defaultAnimationState: d, idleAnimationState: h } = e,
-        p = (0, s.e7)([a.Z], () => a.Z.useReducedMotion),
-        [g, m] = r.useState(d),
-        f = r.useRef((0, o._)(t, g)),
-        [x, _] = r.useState(null == h),
-        [E, v] = r.useState(!1),
-        [I, b] = r.useState(-1),
-        N = () => {
-            (f.current = (0, o._)(t, g)), b((e) => e + 1);
+function h(e) {
+    let { giftStyle: t, className: n, shouldAnimate: h = !0, defaultAnimationState: s, idleAnimationState: f } = e,
+        b = (0, u.e7)([i.Z], () => i.Z.useReducedMotion),
+        [o, E] = a.useState(s),
+        S = a.useRef((0, d._)(t, o)),
+        [R, k] = a.useState(null == f),
+        [I, O] = a.useState(!1),
+        [_, m] = a.useState(-1),
+        p = () => {
+            (S.current = (0, d._)(t, o)), m((e) => e + 1);
         },
-        C = () => {
-            _(!1), v(!0), b(-1), m(d);
+        A = () => {
+            k(!1), O(!0), m(-1), E(s);
         };
-    r.useEffect(() => {
-        null == h && m(d);
-    }, [h, d]),
-        r.useEffect(() => {
-            if (null != h && I >= 0) {
-                C();
+    a.useEffect(() => {
+        null == f && E(s);
+    }, [f, s]),
+        a.useEffect(() => {
+            if (null != f && _ >= 0) {
+                A();
                 return;
             }
-            N();
-        }, [t, h]),
-        r.useEffect(() => {
-            (!E || null == h) && N();
-        }, [g]),
-        r.useEffect(() => {
-            E && (_(null == h), v(!1), N());
-        }, [E]);
+            p();
+        }, [t, f]),
+        a.useEffect(() => {
+            (!I || null == f) && p();
+        }, [o]),
+        a.useEffect(() => {
+            I && (k(null == f), O(!1), p());
+        }, [I]);
     if (!c.Cj.hasOwnProperty(t)) throw Error('Unexpected giftStyle '.concat(t));
-    return (0, i.jsx)(l.LottieAnimation, {
-        importData: f.current,
-        shouldAnimate: !p && u,
+    return (0, r.jsx)(l.LottieAnimation, {
+        importData: S.current,
+        shouldAnimate: !b && h,
         className: n,
-        versionKey: I,
+        versionKey: _,
         onComplete:
-            null != h
+            null != f
                 ? () => {
-                      null != h && (m(h), _(!0));
+                      null != f && (E(f), k(!0));
                   }
                 : void 0,
-        loop: x
+        loop: R
     });
 }

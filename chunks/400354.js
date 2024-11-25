@@ -1,12 +1,12 @@
 n.d(t, {
     l: function () {
-        return l;
+        return s;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(709014);
-let o = {
+var i = n(200651),
+    r = n(192379),
+    l = n(709014);
+let a = {
         deafen: {
             name: 'deafen',
             start: 0,
@@ -28,41 +28,41 @@ let o = {
             duration: 70
         }
     },
-    l = (e) => {
-        let t = i.useRef(null),
-            l = i.useRef(e);
-        l.current = e;
-        let u = i.useMemo(
+    s = (e) => {
+        let t = r.useRef(null),
+            s = r.useRef(e);
+        s.current = e;
+        let o = r.useMemo(
                 () => () => {
                     null != t.current && t.current.play(e);
                 },
                 [e]
             ),
-            c = i.useCallback(() => {
+            c = r.useCallback(() => {
                 if (null == t.current) return;
                 let n = 'deafen' === e ? 'hover_undeafened' : 'hover_deafened';
                 t.current.play(n);
             }, [e]),
-            s = i.useCallback(() => {
+            d = r.useCallback(() => {
                 if (null == t.current) return;
                 let n = 'deafen' === e ? 'hover_undeafened' : 'hover_deafened';
                 t.current.stopIfPlaying(n);
             }, [e]);
         return {
             events: {
-                onClick: u,
+                onClick: o,
                 onMouseEnter: c,
-                onMouseLeave: s
+                onMouseLeave: d
             },
-            play: u,
-            Component: i.useCallback(
+            play: o,
+            Component: r.useCallback(
                 (e) =>
-                    (0, r.jsx)(a.L, {
+                    (0, i.jsx)(l.L, {
                         ...e,
                         src: () => n.e('68449').then(n.t.bind(n, 406785, 19)),
                         ref: t,
-                        initialAnimation: l.current,
-                        markers: o
+                        initialAnimation: s.current,
+                        markers: a
                     }),
                 []
             )

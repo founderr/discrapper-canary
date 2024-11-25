@@ -27,7 +27,7 @@ var s = t(442837),
     P = t(998502),
     g = t(981631),
     h = t(490897),
-    M = t(206197);
+    M = t(193877);
 let D = {
     SELECTED: M.modeSelected,
     CONNECTED: M.modeConnected,

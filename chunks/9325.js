@@ -18,7 +18,7 @@ var i = n(200651),
     m = n(981631),
     f = n(58346),
     x = n(388032),
-    _ = n(113207);
+    _ = n(232186);
 function E(e, t, n) {
     e.preventDefault(),
         p.default.track(m.rMx.GUILD_TEMPLATE_APP_OPENED, {

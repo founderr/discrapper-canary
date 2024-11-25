@@ -18,7 +18,7 @@ var r = n(120356),
     x = n(46140),
     g = n(981631),
     f = n(388032),
-    h = n(181284);
+    h = n(387029);
 function C(e) {
     let { quest: t, isConnected: n, consoleType: r } = e;
     return (0, o.jsx)(l.Clickable, {

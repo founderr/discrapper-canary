@@ -39,7 +39,7 @@ var i = n(200651),
     L = n(388627),
     R = n(981631),
     w = n(388032),
-    k = n(250145);
+    k = n(13663);
 function A(e) {
     let { entry: t, currentUserActivity: n, idx: o } = e,
         d = (0, s.e7)([N.default], () => N.default.getUser(t.author_id)),

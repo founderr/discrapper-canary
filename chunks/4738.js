@@ -14,7 +14,7 @@ var r = n(200651),
     c = n(481060),
     d = n(889963),
     f = n(388032),
-    _ = n(887603);
+    _ = n(695265);
 function p(e) {
     let { page: t, totalPageCount: n, disabled: a, onPageChange: o } = e,
         [d, f] = i.useState(!1),

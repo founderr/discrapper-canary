@@ -4,17 +4,17 @@ var i,
 n(192379);
 var a = n(481060),
     o = n(600164),
-    s = n(586383);
+    s = n(224379);
 ((i = r || (r = {})).SMALL = 'SMALL'), (i.MEDIUM = 'MEDIUM'), (i.LARGE = 'LARGE');
 let c = {
         SMALL: s.dropdownSmall,
         MEDIUM: s.dropdownMedium,
         LARGE: s.dropdownLarge
     },
-    u = (e) => {
-        let { onDropdownClick: t, children: n, contentClassName: i, dropdownSize: r = 'MEDIUM', ...u } = e;
+    d = (e) => {
+        let { onDropdownClick: t, children: n, contentClassName: i, dropdownSize: r = 'MEDIUM', ...d } = e;
         return (0, l.jsx)(a.Button, {
-            ...u,
+            ...d,
             children: (0, l.jsxs)(o.Z, {
                 align: o.Z.Align.CENTER,
                 children: [
@@ -42,4 +42,4 @@ let c = {
             })
         });
     };
-(u.DropdownSizes = r), (u.Sizes = a.Button.Sizes), (u.Colors = a.Button.Colors), (u.Looks = a.Button.Looks), (t.Z = u);
+(d.DropdownSizes = r), (d.Sizes = a.Button.Sizes), (d.Colors = a.Button.Colors), (d.Looks = a.Button.Looks), (t.Z = d);

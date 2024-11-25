@@ -17,8 +17,8 @@ var l = n(200651),
     m = n(678558),
     f = n(981631),
     h = n(388032),
-    x = n(797118),
-    N = n(113207);
+    x = n(316798),
+    N = n(232186);
 let _ = 'premium-guild-subscription-upsell-modal-header';
 function g(e) {
     let { title: r, subtitle: n, image: o } = e;

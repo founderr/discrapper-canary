@@ -25,7 +25,7 @@ var i = n(200651),
     C = n(981631),
     v = n(290511),
     _ = n(388032),
-    I = n(84877);
+    I = n(554205);
 function N(e) {
     let { guildId: t, prompts: n } = e,
         a = (0, l.e7)([m.Z], () => m.Z.editedDefaultChannelIds),

@@ -1,28 +1,28 @@
 t.d(n, {
     Z: function () {
-        return l;
+        return r;
     }
 }),
     t(47120);
 var i = t(192379),
     a = t(881052);
-function l(e, n) {
-    let [t, l] = i.useState(!1),
-        [r, d] = i.useState(null);
+function r(e, n) {
+    let [t, r] = i.useState(!1),
+        [c, o] = i.useState(null);
     return [
         async () => {
-            l(!0), d(null);
+            r(!0), o(null);
             try {
                 let n = await e();
-                return l(!1), d(null), n;
+                return r(!1), o(null), n;
             } catch (t) {
                 let e = new a.Hx(t);
-                return null == n || n(e), d(e), l(!1), null;
+                return null == n || n(e), o(e), r(!1), null;
             }
         },
         {
             loading: t,
-            error: r
+            error: c
         }
     ];
 }

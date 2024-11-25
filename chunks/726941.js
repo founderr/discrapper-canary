@@ -9,7 +9,7 @@ var i = n(200651),
     u = n(493646),
     h = n(292191),
     m = n(683544),
-    p = n(624849);
+    p = n(863375);
 t.Z = function (e) {
     var t;
     let { tabId: n, onSelectApplication: g, onScroll: f } = e,

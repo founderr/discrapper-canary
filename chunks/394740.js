@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(981631),
     I = n(474936),
     b = n(388032),
-    T = n(383052),
-    S = n(145834);
+    T = n(944634),
+    S = n(940675);
 function y(e) {
     var t;
     let { onClose: a, closePopout: y, sound: A, channel: N } = e,

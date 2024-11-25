@@ -1,10 +1,10 @@
 n(47120), n(733860);
-var r,
-    i = n(442837),
-    a = n(570140),
-    o = n(592125),
-    l = n(271383),
-    u = n(430824);
+var i,
+    r = n(442837),
+    l = n(570140),
+    a = n(592125),
+    s = n(271383),
+    o = n(430824);
 function c(e, t, n) {
     return (
         t in e
@@ -18,29 +18,29 @@ function c(e, t, n) {
         e
     );
 }
-let s = [],
-    d = new Set();
-class f extends (r = i.ZP.PersistedStore) {
+let d = [],
+    u = new Set();
+class h extends (i = r.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        this.waitFor(l.ZP, u.Z, o.Z), (d = new Set([...(s = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : [])]));
+        this.waitFor(s.ZP, o.Z, a.Z), (u = new Set([...(d = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : [])]));
     }
     getState() {
-        return { channelHistory: s };
+        return { channelHistory: d };
     }
     getChannelHistory() {
-        return s;
+        return d;
     }
 }
-c(f, 'displayName', 'RecentVoiceChannelStore'), c(f, 'persistKey', 'RecentVoiceChannelStore');
-let _ = new f(a.Z, {
+c(h, 'displayName', 'RecentVoiceChannelStore'), c(h, 'persistKey', 'RecentVoiceChannelStore');
+let m = new h(l.Z, {
     CONNECTION_OPEN: function () {
-        d = new Set([...s]);
+        u = new Set([...d]);
     },
     VOICE_CHANNEL_SELECT: function (e) {
         var t, n;
-        let { channelId: r } = e;
-        return !(null == r || !(null !== (n = null === (t = o.Z.getChannel(r)) || void 0 === t ? void 0 : t.isVocal()) && void 0 !== n && n) || d.has(r)) && (s.unshift(r), d.add(r), s.length > 10 && ((s.length = 10), (d = new Set([...s]))), !0);
+        let { channelId: i } = e;
+        return !(null == i || !(null !== (n = null === (t = a.Z.getChannel(i)) || void 0 === t ? void 0 : t.isVocal()) && void 0 !== n && n) || u.has(i)) && (d.unshift(i), u.add(i), d.length > 10 && ((d.length = 10), (u = new Set([...d]))), !0);
     }
 });
-t.Z = _;
+t.Z = m;

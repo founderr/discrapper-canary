@@ -7,7 +7,7 @@ var i = n(120356),
     l = n(543388),
     u = n(223021),
     c = n(388032),
-    d = n(825193);
+    d = n(507304);
 function f(e) {
     let { tooltipProps: t, timeFormatted: n, children: i, compact: a, timestamp: s, id: o } = e;
     return (0, r.jsx)('time', {

@@ -22,7 +22,7 @@ var i = n(200651),
     I = n(128449),
     C = n(49898),
     v = n(388032),
-    S = n(636872);
+    S = n(608576);
 function N() {
     let e = r.useRef((0, m.PM)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: N } = (0, a.M)(),
@@ -76,7 +76,7 @@ function N() {
             className: S.container,
             children: [
                 (0, i.jsxs)(o.ZP, {
-                    className: P ? S.search : void 0,
+                    variant: P ? o._6.RELATIVE : o._6.OVERLAY,
                     children: [
                         !P && (0, i.jsx)(o.z6, { scrollPosition: n }),
                         P

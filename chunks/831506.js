@@ -6,8 +6,8 @@ var i,
     o = n(392711),
     s = n.n(o),
     c = n(442837),
-    u = n(570140),
-    d = n(314897),
+    d = n(570140),
+    u = n(314897),
     m = n(699516),
     h = n(885110),
     f = n(981631);
@@ -57,12 +57,12 @@ function x(e, t) {
         n
     );
 }
-function N() {
-    let e = d.default.getId(),
+function v() {
+    let e = u.default.getId(),
         t = h.Z.getActivities();
     return C(f.ME, e, t);
 }
-function v(e) {
+function N(e) {
     let { relationship: t } = e;
     if (!m.Z.isBlocked(t.id) && !m.Z.isIgnored(t.id)) return !1;
     let n = p[t.id];
@@ -74,7 +74,7 @@ function v(e) {
 }
 class T extends (i = c.ZP.Store) {
     initialize() {
-        this.syncWith([h.Z], N), this.waitFor(h.Z, m.Z);
+        this.syncWith([h.Z], v), this.waitFor(h.Z, m.Z);
     }
     getParty(e) {
         return null != e && null != _[e] ? _[e] : null;
@@ -95,7 +95,7 @@ class T extends (i = c.ZP.Store) {
               writable: !0
           })
         : (r[l] = a),
-    (t.Z = new T(u.Z, {
+    (t.Z = new T(d.Z, {
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { guilds: t, presences: n } = e,
                 i = !1;
@@ -140,8 +140,8 @@ class T extends (i = c.ZP.Store) {
                 )
             );
         },
-        RELATIONSHIP_ADD: v,
-        RELATIONSHIP_UPDATE: v,
+        RELATIONSHIP_ADD: N,
+        RELATIONSHIP_UPDATE: N,
         RELATIONSHIP_REMOVE: function (e) {
             let { relationship: t } = e,
                 n = p[t.id];

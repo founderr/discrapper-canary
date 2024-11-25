@@ -18,8 +18,8 @@ var i = t(200651),
     f = t(755340),
     h = t(449226),
     g = t(388032),
-    v = t(176981),
-    j = t(13441);
+    v = t(232203),
+    j = t(713960);
 function C(e) {
     let { guild: n, isExpanded: a, emptyFormFields: r, hasTermsField: s } = e,
         c = n.hasVerificationGate(),

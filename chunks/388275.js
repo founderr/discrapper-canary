@@ -19,7 +19,7 @@ var l = n(200651),
     g = n(912332),
     m = n(646746),
     p = n(388032),
-    E = n(463061);
+    E = n(190417);
 function I(e) {
     let { message: t, forwardOptions: n, sendLabel: I, canSend: S, selectedDestinations: A, isSending: C, onSend: v, showPreview: b } = e,
         L = (0, d.Z)(),

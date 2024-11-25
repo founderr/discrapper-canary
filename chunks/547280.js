@@ -1,46 +1,46 @@
-i.d(t, {
+t.d(n, {
     b: function () {
-        return u;
+        return l;
     },
     o: function () {
-        return d;
+        return p;
     }
 });
-var n = i(570140),
-    s = i(605236),
-    c = i(626135),
-    l = i(445507),
-    a = i(981631),
-    o = i(921944);
-function d(e) {
-    let { targetKey: t, dismissibleContent: i, data: d, completed: u } = e;
-    null != d.selectedOptionKey &&
-        (!(0, s.un)(i) &&
-            c.default.track(a.rMx.SIGNUP_COMPLETED, {
-                target_key: t,
-                selected_option_key: d.selectedOptionKey,
-                email: d.email,
-                guild_id: d.guildId,
-                metadata: (0, l.mU)(d),
-                completed: u
+var o = t(570140),
+    c = t(605236),
+    i = t(626135),
+    a = t(445507),
+    r = t(981631),
+    f = t(921944);
+function p(e) {
+    let { targetKey: n, dismissibleContent: t, data: p, completed: l } = e;
+    null != p.selectedOptionKey &&
+        (!(0, c.un)(t) &&
+            i.default.track(r.rMx.SIGNUP_COMPLETED, {
+                target_key: n,
+                selected_option_key: p.selectedOptionKey,
+                email: p.email,
+                guild_id: p.guildId,
+                metadata: (0, a.mU)(p),
+                completed: l
             }),
-        (0, s.EW)(i, {
-            dismissAction: o.L.PRIMARY,
+        (0, c.EW)(t, {
+            dismissAction: f.L.PRIMARY,
             forceTrack: !0
         }),
-        n.Z.dispatch({
+        o.Z.dispatch({
             type: 'COMPLETE_SIGN_UP',
-            email: d.email,
-            targetKey: t,
-            selectedOptionKey: d.selectedOptionKey
+            email: p.email,
+            targetKey: n,
+            selectedOptionKey: p.selectedOptionKey
         }));
 }
-function u(e, t) {
-    (0, s.EW)(t, {
-        dismissAction: o.L.DISMISS,
+function l(e, n) {
+    (0, c.EW)(n, {
+        dismissAction: f.L.DISMISS,
         forceTrack: !0
     }),
-        n.Z.dispatch({
+        o.Z.dispatch({
             type: 'DISMISS_SIGN_UP',
             targetKey: e
         });

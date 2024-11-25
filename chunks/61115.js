@@ -23,7 +23,7 @@ var r,
     h = n(569984),
     m = n(981631),
     g = n(388032),
-    E = n(950542),
+    E = n(7302),
     v = n(677486);
 function I(e) {
     let { questId: t, survey: n, transitionState: r, onClose: i, onSubmit: o } = e,

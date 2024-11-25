@@ -16,8 +16,8 @@ var l = t(442837),
     m = t(533159),
     x = t(981631),
     f = t(388032),
-    h = t(213891),
-    p = t(566809);
+    h = t(671702),
+    p = t(689762);
 function v(e) {
     let { appId: n, skuId: t, transitionState: v, onClose: _, onHeaderTitleClick: j, children: I, footer: g } = e,
         k = (0, a.h)({

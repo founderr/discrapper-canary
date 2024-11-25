@@ -29,7 +29,7 @@ var r,
     D = n(278754),
     L = n(981631),
     x = n(388032),
-    w = n(238268);
+    w = n(304550);
 let M = (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
     P = (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
     k = 2 * P + (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * M,

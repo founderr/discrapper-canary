@@ -16,7 +16,7 @@ var r = n(704215),
     u = n(526761),
     h = n(726985),
     m = n(388032),
-    p = n(441092);
+    p = n(962479);
 function g() {
     let [e, t] = (0, s.US)([r.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE]),
         n = e === r.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE,

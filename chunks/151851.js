@@ -24,7 +24,7 @@ var i = n(120356),
     I = n(358085),
     b = n(998502),
     T = n(388032),
-    S = n(211149);
+    S = n(882165);
 let y = (e) => b.ZP.close(e),
     A = (e) => b.ZP.minimize(e),
     N = (e, t) => {

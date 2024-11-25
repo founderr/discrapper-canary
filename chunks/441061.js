@@ -1,21 +1,21 @@
-e.d(t, {
+t.d(e, {
     Z: function () {
-        return d;
+        return u;
     }
 });
-var r = e(200651);
-e(192379);
-var i = e(442837),
-    u = e(481060),
-    l = e(475179),
-    a = e(358221),
-    o = e(388032);
-function d(n) {
-    let t = (0, i.e7)([a.Z], () => a.Z.getVoiceParticipantsHidden(n));
-    return (0, r.jsx)(u.MenuCheckboxItem, {
+var i = t(200651);
+t(192379);
+var r = t(442837),
+    l = t(481060),
+    a = t(475179),
+    o = t(358221),
+    d = t(388032);
+function u(n) {
+    let e = (0, r.e7)([o.Z], () => o.Z.getVoiceParticipantsHidden(n));
+    return (0, i.jsx)(l.MenuCheckboxItem, {
         id: 'no-video-hide',
-        label: o.intl.string(o.t.BL8ss7),
-        checked: !t,
-        action: () => l.Z.toggleVoiceParticipantsHidden(n, !t)
+        label: d.intl.string(d.t.BL8ss7),
+        checked: !e,
+        action: () => a.Z.toggleVoiceParticipantsHidden(n, !e)
     });
 }

@@ -24,7 +24,7 @@ var s = n(200651),
     j = n(134612),
     p = n(981631),
     T = n(388032),
-    A = n(899014);
+    A = n(350035);
 function y(e) {
     let { transitionState: t, onClose: n, handleBlock: y, channelId: B, warningId: E, senderId: k } = e,
         R = (0, x.Do)({ location: 'web_stranger_danger_more' }),

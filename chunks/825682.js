@@ -3,7 +3,7 @@ n(192379);
 var r = n(788307),
     l = n(51144),
     a = n(388032),
-    s = n(126875);
+    s = n(542745);
 t.Z = function (e) {
     let { hovered: t, activities: n, applicationStream: o, status: c, user: d, userIgnored: u } = e;
     return u

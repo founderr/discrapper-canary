@@ -32,8 +32,8 @@ var i = n(200651),
     j = n(486199),
     _ = n(981631),
     T = n(388032),
-    S = n(101494),
-    Z = n(113207);
+    S = n(563949),
+    Z = n(232186);
 function E(e) {
     let t,
         { guild: n, integration: r, editedIntegration: o, isExpanded: E, onToggleExpand: y, onDisable: A, onEnable: R } = e,

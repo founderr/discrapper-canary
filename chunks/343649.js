@@ -56,7 +56,7 @@ var o,
     z = t(474936),
     K = t(231338),
     q = t(388032),
-    $ = t(312094);
+    $ = t(122959);
 (o || (o = {})).PREMIUM = 'discord://app/settings/nitro';
 let J = z.Xh.NONE_MONTH,
     Q = [T.h8.PLAN_SELECT, T.h8.REVIEW, T.h8.CONFIRM],
@@ -198,12 +198,12 @@ function et(e) {
     let e1 = i.useRef(null),
         [e8, e2] = (0, g.Z)(!1, 500),
         [e7, e9] = i.useState(null),
-        [e4, e3] = i.useState([]),
-        [e5, e6] = i.useState(!1);
+        [e3, e5] = i.useState([]),
+        [e4, e6] = i.useState(!1);
     i.useEffect(() => {
         let e;
-        if (!!eZ) null != Z.Z.get(z.Xh.PREMIUM_MONTH_GUILD) && e3((e = (0, W.DE)(z.Xh.PREMIUM_MONTH_GUILD, eC, !1))), null == eC && null != eu && null != eu.paymentSourceId ? e9(eu.currency) : null != e && e9(e[0]);
-    }, [eC, eu, eZ, JSON.stringify(e4)]);
+        if (!!eZ) null != Z.Z.get(z.Xh.PREMIUM_MONTH_GUILD) && e5((e = (0, W.DE)(z.Xh.PREMIUM_MONTH_GUILD, eC, !1))), null == eC && null != eu && null != eu.paymentSourceId ? e9(eu.currency) : null != e && e9(e[0]);
+    }, [eC, eu, eZ, JSON.stringify(e3)]);
     let ne = (0, M.vP)({
         paymentModalArgs: eb,
         initialStep: T.h8.PAYMENT_TYPE,
@@ -370,7 +370,7 @@ function et(e) {
                                                   guild_id: er,
                                                   application_id: ec
                                               }),
-                                              e5)
+                                              e4)
                                           )
                                               return;
                                           if (null == eu || null == em) {
@@ -405,7 +405,7 @@ function et(e) {
                                                   duration_ms: Date.now() - eU
                                               });
                                       } finally {
-                                          !e5 && eP(!1);
+                                          !e4 && eP(!1);
                                       }
                                   },
                                   children: q.intl.string(q.t.eUEeCg)
@@ -445,7 +445,7 @@ function et(e) {
                           currentStep: eH,
                           paymentError: u,
                           purchaseErrorBlockRef: eM,
-                          hasCurrencies: e4.length > 1,
+                          hasCurrencies: e3.length > 1,
                           body: e,
                           footer:
                               eH !== T.h8.CONFIRM

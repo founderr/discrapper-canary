@@ -14,7 +14,7 @@ var i = n(952265),
 function o(e) {
     (0, i.ZD)(
         async () => {
-            let { default: e } = await Promise.all([n.e('63288'), n.e('20727'), n.e('78701')]).then(n.bind(n, 298237));
+            let { default: e } = await Promise.all([n.e('63288'), n.e('20727'), n.e('55624')]).then(n.bind(n, 298237));
             return (t) => (0, r.jsx)(e, { ...t });
         },
         {
