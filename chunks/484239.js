@@ -51,17 +51,14 @@ t.Z = (e) => {
                         (0, i.jsx)('img', {
                             src: E,
                             alt: '',
-                            className: a()({
-                                [u.carouselCardImage]: b,
-                                [u.greyScaleFilter]: P
-                            })
+                            className: b ? (P ? u.carouselCardImageGrayscale : u.carouselCardImage) : ''
                         }),
                         P
                             ? (0, i.jsx)('div', {
                                   className: u.imageOverlayTextContainer,
                                   children: (0, i.jsx)(s.Text, {
                                       className: u.imageOverlayText,
-                                      variant: 'text-md/normal',
+                                      variant: 'text-md/bold',
                                       children: S
                                   })
                               })

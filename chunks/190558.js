@@ -5022,6 +5022,63 @@ let { Themes: n } = r(15202).V,
                 opacity: 1
             }
         },
+        REDESIGN_BUTTON_PREMIUM_PRIMARY_BLUE_FOR_GRADIENT: {
+            category: 'generic',
+            [n.DARK]: {
+                raw: 'PREMIUM_TIER_0_BLUE_FOR_GRADIENTS_2',
+                opacity: 1
+            },
+            [n.LIGHT]: {
+                raw: 'PREMIUM_TIER_0_BLUE_FOR_GRADIENTS_2',
+                opacity: 1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'PREMIUM_TIER_0_BLUE_FOR_GRADIENTS_2',
+                opacity: 1
+            },
+            [n.DARKER]: {
+                raw: 'PREMIUM_TIER_0_BLUE_FOR_GRADIENTS_2',
+                opacity: 1
+            }
+        },
+        REDESIGN_BUTTON_PREMIUM_PRIMARY_PRESSED_BACKGROUND: {
+            category: 'generic',
+            [n.DARK]: {
+                raw: 'BLACK',
+                opacity: 0.1
+            },
+            [n.LIGHT]: {
+                raw: 'BLACK',
+                opacity: 0.1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'BLACK',
+                opacity: 0.1
+            },
+            [n.DARKER]: {
+                raw: 'BLACK',
+                opacity: 0.1
+            }
+        },
+        REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT: {
+            category: 'generic',
+            [n.DARK]: {
+                raw: 'PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS',
+                opacity: 1
+            },
+            [n.LIGHT]: {
+                raw: 'PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS',
+                opacity: 1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS',
+                opacity: 1
+            },
+            [n.DARKER]: {
+                raw: 'PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS',
+                opacity: 1
+            }
+        },
         REDESIGN_BUTTON_PRIMARY_ALT_BACKGROUND: {
             category: 'generic',
             [n.DARK]: {

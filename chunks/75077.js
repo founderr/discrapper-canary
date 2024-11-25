@@ -168,8 +168,7 @@ let S = (e, t, n) => ((0, a.wj)(e) ? t : n),
     },
     j = (e) => {
         let { perksCards: t, variant: n, shopMarketingVariation: r, isFullScreen: a, showTenureCard: s, tileOrderVariant: l, isPremiumSubscriber: o, fractionalState: c } = e,
-            d = [],
-            u = p.a$.FP_ONLY;
+            d = [];
         switch (n) {
             case f.R0.PERKS_DISCOVERABILITY:
                 d = (0, i.EQ)({
@@ -228,7 +227,7 @@ let S = (e, t, n) => ((0, a.wj)(e) ? t : n),
                 d = (0, i.EQ)({
                     tileOrderVariant: l,
                     isPremiumSubscriber: o,
-                    fractionPremiumState: u
+                    fractionalState: c
                 })
                     .with(
                         {
@@ -244,11 +243,13 @@ let S = (e, t, n) => ((0, a.wj)(e) ? t : n),
                         },
                         () => [t.customSoundsEverywhere, t.specialStickerAccess]
                     )
-                    .with({ fractionPremiumState: p.a$.FP_ONLY }, () => [t.serverBoosts, t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions])
+                    .with({ fractionalState: p.a$.FP_ONLY }, () => [t.greyServerBoosts, t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions])
                     .otherwise(() => [t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions]);
                 break;
             case f.R0.CARD_CAROUSEL_THIRD_ROW:
-                d = [t.entranceSoundsSeeAllVariation, t.badge];
+                d = (0, i.EQ)({ fractionalState: c })
+                    .with({ fractionalState: p.a$.FP_ONLY }, () => [t.entranceSoundsSeeAllVariation, t.greyBadge])
+                    .otherwise(() => [t.entranceSoundsSeeAllVariation, t.badge]);
         }
         return !a && (d = d.filter((e) => !e.hideOnNarrowScreen)), d;
     },
