@@ -3,25 +3,25 @@ n.d(t, {
         return c;
     }
 });
-var o = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(481060),
-    r = n(267097),
+var r = n(481060),
+    o = n(267097),
     a = n(752053),
-    d = n(814335);
+    l = n(814335);
 function c(e) {
     let { onClose: t } = e,
-        { refreshCategories: n } = (0, r.Z)();
-    return (0, o.jsxs)(o.Fragment, {
+        { refreshCategories: n } = (0, o.Z)();
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, o.jsx)(i.ModalHeader, {
-                className: d.header,
-                children: (0, o.jsx)(i.ModalCloseButton, {
-                    className: d.closeButton,
+            (0, i.jsx)(r.ModalHeader, {
+                className: l.header,
+                children: (0, i.jsx)(r.ModalCloseButton, {
+                    className: l.closeButton,
                     onClick: t
                 })
             }),
-            (0, o.jsx)(a.Z, {
+            (0, i.jsx)(a.Z, {
                 onRetry: n,
                 errorOrigin: a.i.GIFT_MODAL
             })

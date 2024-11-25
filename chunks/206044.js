@@ -69,8 +69,8 @@ let I = (0, o.animated)(d.ChevronSmallDownIcon),
 t.Z = (e) => {
     var t, n;
     let { isFocused: l, isQuestExpired: c, quest: h, location: p, size: T, expansionSpring: y, isAnimating: P, isExpanded: B, isInConcurrentQuestExperiment: U, contentPosition: D, toggleExpanded: w } = e,
-        { ref: Q, height: k } = (0, m.Z)(),
-        { ref: O, width: H, scrollWidth: W } = (0, m.Z)(),
+        { ref: Q, height: O } = (0, m.Z)(),
+        { ref: k, width: H, scrollWidth: W } = (0, m.Z)(),
         G = (0, u.e7)([C.Z], () => C.Z.getState().theme),
         z = (0, u.e7)([x.Z], () => x.Z.useReducedMotion),
         F = s.useMemo(() => (0, f.fh)(h, f.eC.HERO), [h]),
@@ -120,7 +120,7 @@ t.Z = (e) => {
             [M.outerContainerXs]: 'xs' === T
         }),
         'aria-label': b.intl.string(b.t.dcl9MT),
-        style: { height: X ? k : void 0 },
+        style: { height: X ? O : void 0 },
         children: [
             (0, i.jsx)(L, {
                 style: {
@@ -233,7 +233,7 @@ t.Z = (e) => {
                                                         shouldShow: null != H && null != W && H < W,
                                                         children: (e) =>
                                                             (0, i.jsx)(d.Heading, {
-                                                                ref: O,
+                                                                ref: k,
                                                                 variant: 'lg' === T ? 'heading-xxl/bold' : 'sm' === T ? 'heading-xl/bold' : 'heading-lg/bold',
                                                                 className: M.heading,
                                                                 ...e,

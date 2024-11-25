@@ -26,7 +26,7 @@ function v(e) {
     let { channel: t, appContext: n, popoutOpen: a, popoutWindow: d, currentWindow: v } = e,
         I = n === C.IlC.POPOUT,
         E = l.useRef(null),
-        { currentLayout: b, mode: Z } = (0, r.cj)(
+        { currentLayout: b, mode: N } = (0, r.cj)(
             [c.Z],
             () => {
                 let e = c.Z.getMode(t.id),
@@ -43,9 +43,9 @@ function v(e) {
             },
             [t, n]
         ),
-        N = (0, r.e7)([h.Z], () => h.Z.getVoiceChannelId() === t.id, [t.id]);
+        Z = (0, r.e7)([h.Z], () => h.Z.getVoiceChannelId() === t.id, [t.id]);
     l.useEffect(() => {
-        E.current = Z;
+        E.current = N;
     });
     let S = l.useRef(b),
         { currentDocument: T, rootNode: j } = l.useMemo(() => {
@@ -58,7 +58,7 @@ function v(e) {
             };
         }, [d, I, v]),
         A = a && !I,
-        y = Z === C.WtW.VIDEO && N && !A,
+        y = N === C.WtW.VIDEO && Z && !A,
         P = l.useCallback(
             (e, i) => {
                 i !== e && (s.Z.updateLayout(t.id, i, n), i === C.AEg.FULL_SCREEN && t.isPrivate() && m.S.dispatch(C.CkL.TEXTAREA_BLUR));
@@ -106,11 +106,11 @@ function v(e) {
         [b, I]
     ),
     l.useEffect(() => {
-        null != j && E.current === C.WtW.VIDEO && Z === C.WtW.VOICE && (0, g.Pr)(j, T);
-    }, [T, Z, E, j]),
+        null != j && E.current === C.WtW.VIDEO && N === C.WtW.VOICE && (0, g.Pr)(j, T);
+    }, [T, N, E, j]),
     l.useEffect(() => {
-        !N && I && _();
-    }, [N, I]),
+        !Z && I && _();
+    }, [Z, I]),
     y)
         ? (0, i.jsx)(u.Z, {
               themeable: !1,

@@ -1,33 +1,33 @@
-t.d(n, {
+n.d(t, {
     h: function () {
-        return s;
+        return c;
     },
     m: function () {
-        return c;
+        return s;
     }
 });
-var i = t(200651);
-t(192379);
-var r = t(481060),
-    o = t(17894),
-    a = t(388032),
-    l = t(753031);
-let s = (e) => {
-    let { onConfirm: n, onCancel: t, title: s, subtitle: c, confirmCta: d, showOpenDiscord: u = !0 } = e;
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    o = n(17894),
+    a = n(388032),
+    l = n(753031);
+let c = (e) => {
+    let { onConfirm: t, onCancel: n, title: c, subtitle: s, confirmCta: d, showOpenDiscord: u = !0 } = e;
     return (0, i.jsxs)('div', {
         className: l.confirmationContainer,
         children: [
             (0, i.jsx)(r.Heading, {
                 className: l.confirmationHeader,
                 variant: 'heading-lg/extrabold',
-                children: s
+                children: c
             }),
-            null != c
+            null != s
                 ? (0, i.jsx)(r.Text, {
                       className: l.confirmationSubtitle,
                       variant: 'text-sm/normal',
                       color: 'header-secondary',
-                      children: c
+                      children: s
                   })
                 : null,
             (0, i.jsxs)('div', {
@@ -42,15 +42,15 @@ let s = (e) => {
                     (0, i.jsx)(r.Button, {
                         fullWidth: !0,
                         color: r.Button.Colors.PRIMARY,
-                        onClick: n,
+                        onClick: t,
                         children: d
                     }),
-                    null != t &&
+                    null != n &&
                         (0, i.jsx)(r.Button, {
                             fullWidth: !0,
                             color: r.Button.Colors.PRIMARY,
                             look: r.Button.Looks.LINK,
-                            onClick: t,
+                            onClick: n,
                             children: a.intl.string(a.t.iAfxo6)
                         })
                 ]
@@ -58,21 +58,21 @@ let s = (e) => {
         ]
     });
 };
-function c(e) {
-    let { onConfirm: n, tierName: t, subscription: s } = e;
+function s(e) {
+    let { onConfirm: t, tierName: n, subscription: c } = e;
     return (0, i.jsxs)('div', {
         className: l.confirmationContainer,
         children: [
             (0, i.jsx)(r.Heading, {
                 className: l.confirmationHeader,
                 variant: 'heading-lg/extrabold',
-                children: a.intl.format(a.t['wLFT6+'], { tier: t })
+                children: a.intl.format(a.t['wLFT6+'], { tier: n })
             }),
             (0, i.jsx)(r.Text, {
                 className: l.confirmationSubtitle,
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: a.intl.format(a.t.OsAK9v, { timestamp: null == s ? void 0 : s.currentPeriodEnd })
+                children: a.intl.format(a.t.OsAK9v, { timestamp: null == c ? void 0 : c.currentPeriodEnd })
             }),
             (0, i.jsxs)('div', {
                 className: l.buttonContainer,
@@ -85,7 +85,7 @@ function c(e) {
                     (0, i.jsx)(r.Button, {
                         className: l.__invalid_doneButton,
                         look: r.Button.Looks.BLANK,
-                        onClick: n,
+                        onClick: t,
                         children: a.intl.string(a.t.nlkyw8)
                     })
                 ]

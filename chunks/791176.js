@@ -81,7 +81,7 @@ t.Z = l.memo(function (e) {
         I = Object.keys(d).length,
         E = l.useMemo(() => (null != r ? h.Z.getGuildPermissionSpecMap(r) : null), [r]),
         b = l.useMemo(() => (null != r ? h.Z.generateGuildPermissionSpec(r) : null), [r]),
-        Z = l.useMemo(() => {
+        N = l.useMemo(() => {
             if (null == r || null == E) return null;
             if (0 === v)
                 return (0, i.jsx)('div', {
@@ -152,7 +152,7 @@ t.Z = l.memo(function (e) {
                   children: (0, i.jsx)(p._2, {
                       description: (0, i.jsx)('div', {
                           className: x.permissionsContainer,
-                          children: Z
+                          children: N
                       })
                   })
               })

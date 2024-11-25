@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(390322),
     E = n(616286),
     b = n(961048),
-    Z = n(430824),
-    N = n(496675),
+    N = n(430824),
+    Z = n(496675),
     S = n(626135),
     T = n(431328),
     j = n(501655),
@@ -45,7 +45,7 @@ function B(e) {
         g = (0, s.e7)([h.Z], () => h.Z.getChatOpen(n.id)),
         C = (0, A.B)(n.id),
         x = (0, T.Rk)(n.id, j.pV.REQUESTED_TO_SPEAK_ONLY),
-        { preventIdle: Z, allowIdle: N } = (0, v.Y)('popup');
+        { preventIdle: N, allowIdle: Z } = (0, v.Y)('popup');
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(f.Z, { channelId: n.id }, 'clips-enabled-indicator'),
@@ -81,8 +81,8 @@ function B(e) {
             (0, i.jsx)(
                 _.Z,
                 {
-                    onOpen: Z,
-                    onClose: N,
+                    onOpen: N,
+                    onClose: Z,
                     className: w.button
                 },
                 'recents'
@@ -119,11 +119,11 @@ function U(e) {
         f = (0, s.e7)([P.Z], () => P.Z.getStageInstanceByChannel(r.id)),
         _ = (0, T.Io)(r.id),
         v = (0, T.Rk)(r.id, j.pV.AUDIENCE),
-        I = (0, s.e7)([Z.Z], () => Z.Z.getGuild(r.guild_id), [r.guild_id]),
+        I = (0, s.e7)([N.Z], () => N.Z.getGuild(r.guild_id), [r.guild_id]),
         E = null !== (t = null == I ? void 0 : I.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
         b = (null == I ? void 0 : I.isCommunity()) ? E < k.TU7 : (null == I ? void 0 : I.premiumTier) !== k.Eu4.TIER_3 && E <= k.eez,
         A = (0, L.Z)(r),
-        M = (0, s.e7)([N.Z], () => N.Z.can(y.yP, r)),
+        M = (0, s.e7)([Z.Z], () => Z.Z.can(y.yP, r)),
         R = () => {
             d.Z.updateStageVideoLimitBoostUpsellDismissed(r.id, !0),
                 S.default.track(k.rMx.BOOSTING_UPSELL_CLICKED, {

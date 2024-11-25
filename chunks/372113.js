@@ -97,8 +97,8 @@ t.Z = (e) => {
         D = (0, p.Xv)(t.config),
         w = (0, S.uq)(n),
         Q = n === C.jn.QUESTS_EMBED,
-        k = T || L,
-        O = P && !U && w,
+        O = T || L,
+        k = P && !U && w,
         H = (0, x.t5)(t, q.dr.QUESTS_CARD, n),
         { xboxAndPlaystationAccounts: W } = (0, x.z6)(),
         G = (0, r.e7)([u.default], () => u.default.locale),
@@ -127,10 +127,10 @@ t.Z = (e) => {
                 className: l()(R.outerContainer, {
                     [R.outerContainerSm]: 'sm' === s,
                     [R.outerContainerXs]: 'xs' === s,
-                    [R.outerContainerNoProgress]: !O
+                    [R.outerContainerNoProgress]: !k
                 }),
-                style: { visibility: k ? 'inherit' : 'hidden' },
-                'aria-hidden': !k,
+                style: { visibility: O ? 'inherit' : 'hidden' },
+                'aria-hidden': !O,
                 children: [
                     (0, i.jsx)(o.Tooltip, {
                         text: V ? A.intl.string(A.t['04MTGR']) : null,
@@ -264,7 +264,7 @@ t.Z = (e) => {
                                   })
                         ]
                     }),
-                    O &&
+                    k &&
                         (0, i.jsx)(E.Z, {
                             className: R.gridProgressBar,
                             color: B ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.BG_BRAND,

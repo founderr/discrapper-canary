@@ -24,8 +24,8 @@ let p = l.memo(function (e) {
             }),
             [p]
         ),
-        Z = (0, r.e7)([o.Z], () => o.Z.getMessageByReference(null == p ? void 0 : p.messageReference)),
-        N = (0, u.wq)(null === (t = p.interaction) || void 0 === t ? void 0 : t.user.id, m.id),
+        N = (0, r.e7)([o.Z], () => o.Z.getMessageByReference(null == p ? void 0 : p.messageReference)),
+        Z = (0, u.wq)(null === (t = p.interaction) || void 0 === t ? void 0 : t.user.id, m.id),
         S = (0, u.Nk)(p.interaction, m, g, I),
         T = (0, u.NU)(C, I),
         j = (0, s.t0)(p),
@@ -55,11 +55,11 @@ let p = l.memo(function (e) {
                     referencedAvatarProfile: v,
                     referencedUsernameProfile: _,
                     replyReference: p.messageReference,
-                    replyMessage: Z,
+                    replyMessage: N,
                     isReplySpineClickable: !1,
                     showReplySpine: !1
                 }),
-            [m, f, p, v, Z, _, I]
+            [m, f, p, v, N, _, I]
         );
     return (0, i.jsx)(d.Z, {
         message: p,
@@ -75,7 +75,7 @@ let p = l.memo(function (e) {
         onClickAvatar: T,
         onClickUsername: S,
         onClickCommand: R,
-        onUserContextMenu: N,
+        onUserContextMenu: Z,
         onClickTargetAvatar: M,
         onClickTargetUsername: P,
         onTargetUserContextMenu: y,

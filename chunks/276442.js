@@ -18,7 +18,7 @@ var i = t(512722),
     h = t(474936);
 function f(e) {
     let { analyticsData: n, initialPlanId: t, breadcrumbSteps: i, handleStepChange: f, referralTrialOfferId: v, onReturn: g, continueSession: S = !1 } = e,
-        { contextMetadata: j, step: E, paymentSources: y, paymentSourceId: I, setPaymentSourceId: P, purchaseError: T, setPurchaseError: N, purchaseErrorBlockRef: b, paymentAuthenticationState: _, selectedSkuId: C, activeSubscription: A, previousStepRef: O, setPurchaseState: Z } = (0, u.usePaymentContext)(),
+        { contextMetadata: j, step: E, paymentSources: y, paymentSourceId: I, setPaymentSourceId: P, purchaseError: T, setPurchaseError: N, purchaseErrorBlockRef: b, paymentAuthenticationState: C, selectedSkuId: _, activeSubscription: O, previousStepRef: A, setPurchaseState: Z } = (0, u.usePaymentContext)(),
         { isGift: R } = (0, o.wD)(),
         M = {
             ...(0, a.fL)(),
@@ -28,29 +28,29 @@ function f(e) {
             purchaseError: T,
             setPurchaseError: N,
             purchaseErrorBlockRef: b,
-            paymentAuthenticationState: _,
-            selectedSkuId: C,
+            paymentAuthenticationState: C,
+            selectedSkuId: _,
             isGift: R
         },
         w = (0, s.N)(v),
-        D = !R && null != w && null != C && h.nG[w.trial_id].skus.includes(C),
-        F =
+        L = !R && null != w && null != _ && h.nG[w.trial_id].skus.includes(_),
+        k =
             null != g
                 ? g
                 : () => {
                       f(Object.values(y).length < 1 && null == t ? d.h8.PLAN_SELECT : d.h8.REVIEW, { trackedFromStep: d.h8.PAYMENT_TYPE });
                   };
     l()(E, 'Step should be set here');
-    let L = (0, r.Z)(() => Date.now(), [E]);
+    let D = (0, r.Z)(() => Date.now(), [E]);
     return (0, a.vP)({
         paymentModalArgs: M,
-        initialStep: S && null == O.current ? d.h8.CREDIT_CARD_INFORMATION : d.h8.PAYMENT_TYPE,
+        initialStep: S && null == A.current ? d.h8.CREDIT_CARD_INFORMATION : d.h8.PAYMENT_TYPE,
         prependSteps: [d.h8.PROMOTION_INFO],
         appendSteps: [d.h8.REVIEW, d.h8.CONFIRM],
         breadcrumpSteps: i,
         currentBreadcrumpStep: E,
         usePaymentModalStep: !0,
-        onReturn: F,
+        onReturn: k,
         onComplete: (e) => {
             e === d.h8.AWAITING_BROWSER_CHECKOUT ? (Z(m.A.COMPLETED), f(d.h8.CONFIRM, { trackedFromStep: e })) : f(d.h8.REVIEW, { trackedFromStep: e });
         },
@@ -61,11 +61,11 @@ function f(e) {
                 ...n,
                 from_step: t,
                 to_step: i,
-                step_duration_ms: l - L,
+                step_duration_ms: l - D,
                 flow_duration_ms: l - j.startTime
             });
         },
-        isEligibleForTrial: D,
-        allowDesktopRedirectPurchase: (0, p.t)(C, R, A)
+        isEligibleForTrial: L,
+        allowDesktopRedirectPurchase: (0, p.t)(_, R, O)
     });
 }

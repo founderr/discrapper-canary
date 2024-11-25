@@ -24,12 +24,12 @@ function f(e) {
         I = (0, c.Z)(),
         E = (0, o.Z)(t),
         b = (0, h.Z)(t),
-        Z = (0, d.Z)(x);
+        N = (0, d.Z)(x);
     return (0, i.jsxs)(r.Menu, {
         navId: 'channel-call-overflow-popout',
         onClose: n,
         'aria-label': m.intl.string(m.t.pkYeAw),
         onSelect: C,
-        children: [v, I, E, b, (0, u.Z)(_, f, g), Z]
+        children: [v, I, E, b, (0, u.Z)(_, f, g), N]
     });
 }

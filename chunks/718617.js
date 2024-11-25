@@ -30,18 +30,18 @@ function _(e, t) {
 }
 function v(e) {
     var t, n;
-    let { userId: v, guildId: I, onClose: E, analyticsLocation: b, className: Z } = e,
-        N = (0, a.e7)([h.ZP], () => h.ZP.getGuildSidebarState(I), [I]),
-        S = null !== (t = null == N ? void 0 : N.details.modViewPanel) && void 0 !== t ? t : C.k.INFO,
+    let { userId: v, guildId: I, onClose: E, analyticsLocation: b, className: N } = e,
+        Z = (0, a.e7)([h.ZP], () => h.ZP.getGuildSidebarState(I), [I]),
+        S = null !== (t = null == Z ? void 0 : Z.details.modViewPanel) && void 0 !== t ? t : C.k.INFO,
         T = (0, c.Z)(v);
     let j = null == (n = S) ? null : n === C.k.INFO ? 'backwards' : 'forwards',
         A = (0, u.Z)(j),
         { reducedMotion: y } = l.useContext(s.S),
         P = l.useCallback(
             (e) => {
-                null != N && (0, p.r)(I, v, N.baseChannelId, { modViewPanel: e });
+                null != Z && (0, p.r)(I, v, Z.baseChannelId, { modViewPanel: e });
             },
-            [N, I, v]
+            [Z, I, v]
         ),
         M = l.useMemo(
             () => ({
@@ -101,21 +101,21 @@ function v(e) {
                                     userId: v,
                                     guildId: I,
                                     onNavigate: P,
-                                    className: Z
+                                    className: N
                                 });
                             case C.k.MESSAGE_HISTORY:
                                 return (0, i.jsx)(f.Z, {
                                     userId: v,
                                     guildId: I,
                                     onNavigate: () => P(C.k.INFO),
-                                    className: Z
+                                    className: N
                                 });
                             case C.k.PERMISSIONS:
                                 return (0, i.jsx)(g.Z, {
                                     userId: v,
                                     guildId: I,
                                     onNavigate: () => P(C.k.INFO),
-                                    className: Z
+                                    className: N
                                 });
                             default:
                                 return null;

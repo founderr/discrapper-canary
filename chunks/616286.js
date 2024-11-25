@@ -55,8 +55,8 @@ function E(e) {
     let t,
         { channelId: n, className: r, showingClassName: s, onClick: u, inPopout: h, showRequestToSpeakSidebar: p, toggleRequestToSpeakSidebar: g, ...E } = e,
         { disabled: b } = E,
-        Z = l.useRef(null),
-        N = (0, o.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
+        N = l.useRef(null),
+        Z = (0, o.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
         {
             isShowing: S,
             unreadCount: T,
@@ -82,8 +82,8 @@ function E(e) {
             );
         })(n),
         A = l.useCallback(() => {
-            null == u || u(), !N && p && (null == g || g()), c.Z.updateChatOpen(n, !N);
-        }, [n, N, u, p, g]),
+            null == u || u(), !Z && p && (null == g || g()), c.Z.updateChatOpen(n, !Z);
+        }, [n, Z, u, p, g]),
         y = l.useCallback(
             (e) => {
                 let { className: t } = e;
@@ -96,7 +96,7 @@ function E(e) {
         ),
         P = l.useCallback(() => {
             var e;
-            null === (e = Z.current) || void 0 === e || e.focus();
+            null === (e = N.current) || void 0 === e || e.focus();
         }, []);
     (0, m.yp)({
         event: x.CkL.FOCUS_CHAT_BUTTON,
@@ -122,12 +122,12 @@ function E(e) {
                 }
             );
         }, [M]);
-    let k = [(t = h && b ? _.intl.string(_.t.DPgc5u) : N ? _.intl.string(_.t.nthdxM) : _.intl.string(_.t['5KxXrK']))];
+    let k = [(t = h && b ? _.intl.string(_.t.DPgc5u) : Z ? _.intl.string(_.t.nthdxM) : _.intl.string(_.t['5KxXrK']))];
     return (
         j > 0 && k.push(_.intl.formatToPlainString(_.t['3l1GOz'], { mentionCount: j })),
         T > 0 && k.push(_.intl.string(_.t.x5zAGR)),
         (0, i.jsx)(C.Z, {
-            buttonRef: Z,
+            buttonRef: N,
             onClick: A,
             label: t,
             'aria-label': k.join(', '),

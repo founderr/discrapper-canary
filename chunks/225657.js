@@ -11,8 +11,8 @@ var l = t(442837),
 n.Z = (e) => {
     let { selectedSkuId: n, validateSelectedGift: t, className: h } = e,
         m = (0, l.Wu)([o.Z], () => o.Z.getFriendIDs()),
-        f = (0, l.Wu)([d.default], () => d.default.filter((e) => m.includes(e.id) && !e.bot), [m]),
-        { giftRecipient: x, setGiftRecipient: v } = (0, s.wD)();
+        x = (0, l.Wu)([d.default], () => d.default.filter((e) => m.includes(e.id) && !e.bot), [m]),
+        { giftRecipient: f, setGiftRecipient: v } = (0, s.wD)();
     return null == n
         ? null
         : (0, i.jsxs)('div', {
@@ -28,11 +28,11 @@ n.Z = (e) => {
                                     user: e.value,
                                     size: r.AvatarSizes.SIZE_20
                                 }),
-                      value: x,
+                      value: f,
                       onChange: (e) => {
                           t(e, n), v(e);
                       },
-                      options: f.map((e) => ({
+                      options: x.map((e) => ({
                           value: e,
                           label: ''.concat(c.ZP.getUserTag(e))
                       }))

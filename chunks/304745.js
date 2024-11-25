@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(579185),
     E = n(301076),
     b = n(981631),
-    Z = n(921944),
-    N = n(388032),
+    N = n(921944),
+    Z = n(388032),
     S = n(812801);
 function T(e) {
     let { channel: t, idle: n } = e,
@@ -70,7 +70,7 @@ function T(e) {
             let { visibleContent: l, markAsDismissed: r } = e,
                 o = l === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !n && !P;
             return (
-                !0 === W.current && !1 === o && r(Z.L.AUTO_DISMISS),
+                !0 === W.current && !1 === o && r(N.L.AUTO_DISMISS),
                 W.current !== o && (W.current = o),
                 (0, i.jsx)(s.Popout, {
                     fixed: !0,
@@ -92,7 +92,7 @@ function T(e) {
                                   onMouseEnter: R,
                                   onMouseLeave: L,
                                   isHovered: P,
-                                  onClick: () => r(Z.L.UNKNOWN)
+                                  onClick: () => r(N.L.UNKNOWN)
                               })
                             : (0, i.jsx)(i.Fragment, {});
                     },
@@ -100,7 +100,7 @@ function T(e) {
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(s.Tooltip, {
-                                    text: N.intl.string(N.t.P8vmUl),
+                                    text: Z.intl.string(Z.t.P8vmUl),
                                     color: s.TooltipColors.BRAND,
                                     forceOpen: !0,
                                     shouldShow: o,
@@ -114,7 +114,7 @@ function T(e) {
                                                 isActivityActive: O || P,
                                                 className: S.controlButton,
                                                 onClick: () => {
-                                                    F(), (l === a.z.ACTIVITIES_MINI_SHELF_SPARKLES || l === a.z.ACTIVITY_GDM_ROCKET_SPARKLE || l === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || l === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || l === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && r(Z.L.TAKE_ACTION);
+                                                    F(), (l === a.z.ACTIVITIES_MINI_SHELF_SPARKLES || l === a.z.ACTIVITY_GDM_ROCKET_SPARKLE || l === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || l === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || l === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && r(N.L.TAKE_ACTION);
                                                 },
                                                 onMouseEnter: w,
                                                 onMouseLeave: L

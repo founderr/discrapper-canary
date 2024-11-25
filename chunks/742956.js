@@ -18,14 +18,14 @@ var l = t(120356),
 function m(e) {
     let { step: n, onClose: t, giftingOrigin: l } = e,
         { enabled: m } = o.G.useExperiment({ location: 'CollectiblesGiftPaymentModalHeader' }, { autoTrackExposure: !1 }),
-        f = (0, a.EQ)(n)
+        x = (0, a.EQ)(n)
             .with(d.h8.REVIEW, () => u.intl.string(u.t.JbRd5u))
             .with(d.h8.ADD_PAYMENT_STEPS, () => u.intl.string(u.t.QiGOam))
             .with(d.h8.GIFT_CUSTOMIZATION, () => (m && l === c.Wt.DM_CHANNEL ? u.intl.string(u.t['xU+d9P']) : u.intl.string(u.t['JCFN//'])))
             .with(d.h8.AWAITING_PURCHASE_TOKEN_AUTH, () => u.intl.string(u.t.lDbi6O))
             .with(d.h8.CONFIRM, () => '')
             .otherwise(() => null);
-    return null == f
+    return null == x
         ? null
         : (0, i.jsxs)(s.ModalHeader, {
               className: r()(h.headerContainerGift),
@@ -33,7 +33,7 @@ function m(e) {
               children: [
                   (0, i.jsx)(s.Heading, {
                       variant: 'heading-lg/semibold',
-                      children: f
+                      children: x
                   }),
                   (0, i.jsx)(s.ModalCloseButton, {
                       onClick: t,

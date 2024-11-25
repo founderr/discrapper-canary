@@ -19,7 +19,7 @@ var i = n(200651),
     f = n(546240),
     g = n(952009);
 function C(e) {
-    let { checked: t, labelText: n, tooltipText: r, canToggle: C, iconAltText: x, onChange: _, tooltipColor: v, className: I, id: E = 'fancybutton-toggle', collapseWhenChecked: b = !0, onClick: Z, disabled: N } = e,
+    let { checked: t, labelText: n, tooltipText: r, canToggle: C, iconAltText: x, onChange: _, tooltipColor: v, className: I, id: E = 'fancybutton-toggle', collapseWhenChecked: b = !0, onClick: N, disabled: Z } = e,
         S = (0, s.e7)([h.Z], () => h.Z.useReducedMotion),
         [T, j] = l.useState(!1),
         A = (0, u.ZP)(),
@@ -32,7 +32,7 @@ function C(e) {
             tooltipText: r
         }),
         position: 'top',
-        color: null != v ? v : N ? c.Tooltip.Colors.BLACK : c.Tooltip.Colors.BRAND,
+        color: null != v ? v : Z ? c.Tooltip.Colors.BLACK : c.Tooltip.Colors.BRAND,
         'aria-label': r,
         tooltipClassName: m.tooltip,
         className: m.tooltipContainer,
@@ -45,11 +45,11 @@ function C(e) {
                         let e = !t;
                         j(!0), null == _ || _(e);
                     }
-                    'function' == typeof Z && Z();
+                    'function' == typeof N && N();
                 },
                 id: E,
                 type: 'checkbox',
-                disabled: N
+                disabled: Z
             }),
             (0, i.jsxs)('label', {
                 htmlFor: E,

@@ -1,48 +1,48 @@
 n.d(t, {
     v: function () {
-        return b;
+        return m;
     }
 }),
     n(47120);
-var o = n(200651),
-    i = n(192379),
-    r = n(399606),
+var i = n(200651),
+    r = n(192379),
+    o = n(399606),
     a = n(89057),
-    d = n(597688),
+    l = n(597688),
     c = n(987209),
-    l = n(563132),
-    s = n(409813),
+    s = n(563132),
+    d = n(409813),
     u = n(48931),
     f = n(456251),
     p = n(981631);
-function b(e) {
+function m(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        { blockedPayments: b, hasFetchedSkus: _, paymentSources: g, hasFetchedPaymentSources: h, application: x, skusById: m, selectedSkuId: v } = (0, l.usePaymentContext)(),
+        { blockedPayments: m, hasFetchedSkus: b, paymentSources: h, hasFetchedPaymentSources: g, application: x, skusById: _, selectedSkuId: v } = (0, s.usePaymentContext)(),
         { isGift: C } = (0, c.wD)(),
-        [S, k] = i.useState(!0),
-        [B, O] = (0, r.Wu)([d.Z], () => [d.Z.isFetchingCategories, d.Z.error]);
+        [S, j] = r.useState(!0),
+        [k, y] = (0, o.Wu)([l.Z], () => [l.Z.isFetchingCategories, l.Z.error]);
     if (
-        (i.useEffect(() => {
+        (r.useEffect(() => {
             let e = null != x;
-            if (!!_ && !!h && !!e) k(B);
-        }, [_, h, x, B]),
-        i.useEffect(() => {
-            if (S || b || null == v) return;
-            let e = m[v];
+            if (!!b && !!g && !!e) j(k);
+        }, [b, g, x, k]),
+        r.useEffect(() => {
+            if (S || m || null == v) return;
+            let e = _[v];
             if (C && (null == e ? void 0 : e.productLine) === p.POd.COLLECTIBLES) {
-                t(s.h8.GIFT_CUSTOMIZATION);
+                t(d.h8.GIFT_CUSTOMIZATION);
                 return;
             }
-            if (0 === Object.keys(g).length) {
-                t(s.h8.ADD_PAYMENT_STEPS);
+            if (0 === Object.keys(h).length) {
+                t(d.h8.ADD_PAYMENT_STEPS);
                 return;
             }
-            t(s.h8.REVIEW);
-        }, [S, b, t, g, C, m, v]),
+            t(d.h8.REVIEW);
+        }, [S, m, t, h, C, _, v]),
         S)
     )
-        return (0, o.jsx)(f.Z, {});
-    if (b) return (0, o.jsx)(a.Vq, { onClose: n });
-    if (null != O) return (0, o.jsx)(u.Z, { onClose: n });
+        return (0, i.jsx)(f.Z, {});
+    if (m) return (0, i.jsx)(a.Vq, { onClose: n });
+    if (null != y) return (0, i.jsx)(u.Z, { onClose: n });
     return null;
 }

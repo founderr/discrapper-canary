@@ -1,45 +1,45 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return k;
     }
 }),
-    t(47120),
-    t(789020);
-var i = t(200651),
-    r = t(192379),
-    o = t(512722),
-    a = t.n(o),
-    l = t(442837),
-    s = t(481060),
-    c = t(330726),
-    d = t(716534),
-    u = t(664891),
-    p = t(171246),
-    f = t(430824),
-    m = t(563132),
-    b = t(409813),
-    h = t(45572),
-    g = t(51499),
-    x = t(678334),
-    _ = t(456251),
-    v = t(614277),
-    C = t(698708),
-    S = t(388032),
-    j = t(596054);
+    n(47120),
+    n(789020);
+var i = n(200651),
+    r = n(192379),
+    o = n(512722),
+    a = n.n(o),
+    l = n(442837),
+    c = n(481060),
+    s = n(330726),
+    d = n(716534),
+    u = n(664891),
+    f = n(171246),
+    p = n(430824),
+    m = n(563132),
+    b = n(409813),
+    h = n(45572),
+    g = n(51499),
+    x = n(678334),
+    _ = n(456251),
+    v = n(614277),
+    C = n(698708),
+    S = n(388032),
+    j = n(596054);
 function k(e) {
-    var n, t;
-    let { backButtonEligible: o, prevStep: k, handleStepChange: y, trialFooterMessageOverride: T, reviewWarningMessage: P, planGroup: B, openInvoiceId: N, analyticsData: O, analyticsLocation: E, handleClose: I } = e,
-        { activeSubscription: A, application: M, setUpdatedSubscription: w, contextMetadata: Z, currencies: R, paymentSources: H, priceOptions: L, purchaseError: F, purchaseTokenAuthState: D, selectedPlan: W, selectedSku: G, setCurrency: K, setPaymentSourceId: V, setPurchaseState: z, setPurchaseError: Y, purchaseState: U, subscriptionMetadataRequest: Q, setHasAcceptedTerms: q } = (0, m.usePaymentContext)();
+    var t, n;
+    let { backButtonEligible: o, prevStep: k, handleStepChange: y, trialFooterMessageOverride: T, reviewWarningMessage: P, planGroup: B, openInvoiceId: E, analyticsData: N, analyticsLocation: O, handleClose: I } = e,
+        { activeSubscription: A, application: M, setUpdatedSubscription: w, contextMetadata: Z, currencies: R, paymentSources: H, priceOptions: L, purchaseError: D, purchaseTokenAuthState: F, selectedPlan: W, selectedSku: G, setCurrency: K, setPaymentSourceId: V, setPurchaseState: z, setPurchaseError: Y, purchaseState: U, subscriptionMetadataRequest: Q, setHasAcceptedTerms: q } = (0, m.usePaymentContext)();
     a()(null != W, 'Expected plan to be selected');
     let X = r.useRef(null),
-        [J, $] = (0, c.Z)(!1, 500),
+        [J, $] = (0, s.Z)(!1, 500),
         ee = null == Q ? void 0 : Q.guild_id,
-        en = (0, l.e7)([f.Z], () => f.Z.getGuild(ee), [ee]),
-        [et, ei] = r.useState(null),
-        er = (0, p.KW)(null !== (n = null == G ? void 0 : G.flags) && void 0 !== n ? n : 0);
+        et = (0, l.e7)([p.Z], () => p.Z.getGuild(ee), [ee]),
+        [en, ei] = r.useState(null),
+        er = (0, f.KW)(null !== (t = null == G ? void 0 : G.flags) && void 0 !== t ? t : 0);
     r.useEffect(() => {
-        null != F && null != X.current && X.current.scrollIntoView({ behavior: 'smooth' });
-    }, [F]);
+        null != D && null != X.current && X.current.scrollIntoView({ behavior: 'smooth' });
+    }, [D]);
     let eo = r.useCallback(
             (e) => {
                 w(e), y(b.h8.CONFIRM);
@@ -59,12 +59,12 @@ function k(e) {
                               (0, i.jsxs)('div', {
                                   className: j.userSubscriptionDetailsContainer,
                                   children: [
-                                      (0, i.jsx)(s.Text, {
+                                      (0, i.jsx)(c.Text, {
                                           variant: 'eyebrow',
                                           color: 'header-secondary',
                                           children: S.intl.string(S.t.nf5LOT)
                                       }),
-                                      (0, i.jsx)(s.Text, {
+                                      (0, i.jsx)(c.Text, {
                                           variant: 'text-xs/medium',
                                           color: 'interactive-normal',
                                           children: S.intl.format(S.t.y4n0GR, { applicationName: null == M ? void 0 : M.name })
@@ -75,21 +75,21 @@ function k(e) {
                               (0, i.jsxs)('div', {
                                   className: j.guildPickerContainer,
                                   children: [
-                                      (0, i.jsx)(s.FormTitle, {
-                                          tag: s.FormTitleTags.H5,
+                                      (0, i.jsx)(c.FormTitle, {
+                                          tag: c.FormTitleTags.H5,
                                           children: S.intl.string(S.t['5qyruL'])
                                       }),
                                       (0, i.jsxs)('div', {
                                           className: j.guildNameContainer,
                                           children: [
-                                              (0, i.jsx)(s.Text, {
+                                              (0, i.jsx)(c.Text, {
                                                   variant: 'text-md/normal',
                                                   children: S.intl.string(S.t.dBih7e)
                                               }),
-                                              (0, i.jsx)(s.Text, {
+                                              (0, i.jsx)(c.Text, {
                                                   variant: 'text-md/normal',
                                                   lineClamp: 1,
-                                                  children: null !== (t = null == en ? void 0 : en.name) && void 0 !== t ? t : S.intl.string(S.t.dtwqPT)
+                                                  children: null !== (n = null == et ? void 0 : et.name) && void 0 !== n ? n : S.intl.string(S.t.dtwqPT)
                                               })
                                           ]
                                       })
@@ -132,7 +132,7 @@ function k(e) {
                                     planGroup: B,
                                     currencies: R,
                                     onCurrencyChange: (e) => K(e),
-                                    hasOpenInvoice: null != N,
+                                    hasOpenInvoice: null != E,
                                     purchaseState: U,
                                     handleClose: I
                                 })
@@ -147,15 +147,15 @@ function k(e) {
                           onPurchaseError: (e) => Y(e),
                           legalTermsNodeRef: ea,
                           flashLegalTerms: () => $(!0),
-                          analyticsLocation: E,
-                          baseAnalyticsData: O,
+                          analyticsLocation: O,
+                          baseAnalyticsData: N,
                           flowStartTime: Z.startTime,
                           planGroup: B,
-                          purchaseTokenAuthState: D,
-                          openInvoiceId: N,
+                          purchaseTokenAuthState: F,
+                          openInvoiceId: E,
                           metadata: er ? void 0 : Q,
                           backButtonEligible: o,
-                          invoiceError: et,
+                          invoiceError: en,
                           disablePurchase: (null == Q ? void 0 : Q.guild_id) == null && !er
                       })
                   })

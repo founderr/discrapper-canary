@@ -24,7 +24,7 @@ function T(e) {
     var t;
     let n = (0, l.e7)([x.Z], () => x.Z.questDeliveryOverride, []),
         u = (0, C.GN)(e.questContent),
-        T = (0, C.q8)(e.quest),
+        T = !(0, C.q8)(e.quest) && !(0, C.pO)(e.quest),
         f = [h.jn.QUEST_BAR_V2, h.jn.QUEST_BAR].includes(e.questContent),
         v = (0, C.zK)(e.quest, g.S7.DISMISSAL_SURVEY),
         { handleComplete: S, handleProgress: N, handleResetDismissibilityClick: q, handleResetStatusClick: _, handleOverrideDeliveryClick: A } = (0, m.kJ)(e.quest.id),
@@ -44,7 +44,7 @@ function T(e) {
         }, [e.quest, e.questContent, e.questContentPosition]),
         M = (e) => (0, r.showToast)((0, r.createToast)(new a.Z(e, e.status).message, r.ToastType.FAILURE)),
         I = () => (0, d.is)(e.quest.id).catch(M),
-        L = s.useMemo(() => (T ? j.t.hvVgAQ : j.t.lwQdjI), [T]);
+        L = s.useMemo(() => (T ? j.t.lwQdjI : j.t.hvVgAQ), [T]);
     return (0, i.jsxs)(r.Menu, {
         variant: 'fixed',
         onSelect: () => {

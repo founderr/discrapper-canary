@@ -29,8 +29,8 @@ function C(e) {
         })),
         E = s.Z.getSettings().clipsEnabled,
         b = (null == x ? void 0 : x.ownerId) === h.default.getId(),
-        Z = !E || !(b || v) || I || null == n,
-        N = l.useCallback(
+        N = !E || !(b || v) || I || null == n,
+        Z = l.useCallback(
             (e) =>
                 (0, i.jsx)(a.CameraIcon, {
                     ...e,
@@ -41,10 +41,10 @@ function C(e) {
     return (0, i.jsx)(d.Z, {
         className: g.actionBarButton,
         onClick: () => {
-            !Z && (b ? (0, o.C1)() : (0, o.C1)(n.id));
+            !N && (b ? (0, o.C1)() : (0, o.C1)(n.id));
         },
-        disabled: Z,
-        iconComponent: N,
+        disabled: N,
+        iconComponent: Z,
         label: null == x ? f.intl.string(f.t.eg5qtb) : b || v ? (E ? (I ? void 0 : f.intl.string(f.t.U4URzM)) : f.intl.string(f.t.wSS1yM)) : f.intl.string(f.t.aRifJS),
         grow: !1
     });

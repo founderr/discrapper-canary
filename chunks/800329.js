@@ -37,8 +37,8 @@ function h(e) {
         {
             tileStyle: E,
             tileWidth: b,
-            rows: Z,
-            columns: N
+            rows: N,
+            columns: Z
         } = l.useMemo(
             () =>
                 (function (e, t, n) {
@@ -84,17 +84,17 @@ function h(e) {
                 })(_, v, I),
             [_, v, I]
         ),
-        S = N + 1,
+        S = Z + 1,
         T = S * b + (S - 1) * 8 <= C,
         j = Math.floor(b / c) + 8,
-        A = Math.max(0, I - j * Z) / 2;
+        A = Math.max(0, I - j * N) / 2;
     return (0, i.jsx)(s.Z, {
         fade: !0,
         className: n,
         listPadding: [p + A, 0, m + A - 8, 8],
         renderRow: function (e) {
             var t;
-            let n = e * N;
+            let n = e * Z;
             return (0, i.jsx)(
                 'div',
                 {
@@ -102,7 +102,7 @@ function h(e) {
                     children:
                         null == r
                             ? void 0
-                            : null === (t = r.slice(n, n + N)) || void 0 === t
+                            : null === (t = r.slice(n, n + Z)) || void 0 === t
                               ? void 0
                               : t.map((e, t) => {
                                     var l;
@@ -113,8 +113,8 @@ function h(e) {
                                             style: E,
                                             className: a()(o.tile, {
                                                 [o.padColumn]: T,
-                                                [o.noVerticalMargin]: r >= (Z - 1) * N,
-                                                [o.noHorizontalMargin]: (r + 1) % N == 0 || r === _ - 1
+                                                [o.noVerticalMargin]: r >= (N - 1) * Z,
+                                                [o.noHorizontalMargin]: (r + 1) % Z == 0 || r === _ - 1
                                             }),
                                             children: (0, i.jsx)('div', {
                                                 className: o.tileSizer,
@@ -128,8 +128,8 @@ function h(e) {
                 e
             );
         },
-        rowCount: Z,
-        rowCountBySection: [Z],
+        rowCount: N,
+        rowCountBySection: [N],
         rowHeight: j,
         onResize: g
     });

@@ -44,7 +44,7 @@ let x = (e) => {
                     content: a.jn.QUEST_BAR_V2,
                     ctaContent: s.jZ.OPEN_GAME_LINK
                 }),
-            children: v.intl.string(v.t.lwQdjI)
+            children: (0, c.pO)(t) ? v.intl.string(v.t.hvVgAQ) : v.intl.string(v.t.lwQdjI)
         });
     },
     S = (e) => {

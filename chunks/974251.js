@@ -20,8 +20,8 @@ var i = n(200651),
     I = n(79390),
     E = n(665906),
     b = n(706454),
-    Z = n(695346),
-    N = n(433355),
+    N = n(695346),
+    Z = n(433355),
     S = n(819640),
     T = n(375954),
     j = n(496675),
@@ -49,7 +49,7 @@ t.Z = l.memo(function (e) {
         $ = (0, s.e7)([C.Z], () => C.Z.getSettings().clipsEnabled),
         ee = (0, s.e7)([C.Z], () => C.Z.getLastClipsSession()),
         et = (0, s.Wu)([C.Z], () => C.Z.getNewClipIds()),
-        en = (0, s.e7)([N.ZP], () => null == N.ZP.getCurrentSidebarChannelId(z.id)),
+        en = (0, s.e7)([Z.ZP], () => null == Z.ZP.getCurrentSidebarChannelId(z.id)),
         { showClipsHeaderEntrypoint: ei } = g.NV.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
         { enabled: el } = f.T.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
         er = (0, s.e7)([v.qc], () => v.qc.hasHotspot(v.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
@@ -102,10 +102,10 @@ t.Z = l.memo(function (e) {
     });
     let ev = (0, E.NE)(z),
         eI = (0, E.Xu)(z),
-        eE = !Z.dN.useSetting() && !(0, R.isAndroidWeb)() && null != window.ResizeObserver,
+        eE = !N.dN.useSetting() && !(0, R.isAndroidWeb)() && null != window.ResizeObserver,
         eb = (0, I.UI)(null != z ? z : void 0),
-        eZ = (0, c.useRedesignIconContext)().enabled,
-        eN = (0, p.qB)(z.id, 'ChannelAttachButton'),
+        eN = (0, c.useRedesignIconContext)().enabled,
+        eZ = (0, p.qB)(z.id, 'ChannelAttachButton'),
         eS = null !== (r = null == et ? void 0 : et.length) && void 0 !== r ? r : 0,
         eT = (0, D.Z)({
             canAttachFiles: ep,
@@ -117,13 +117,13 @@ t.Z = l.memo(function (e) {
             activities: Q,
             newClipsCount: eS,
             canPostPolls: eb,
-            canLaunchActivities: eN,
+            canLaunchActivities: eZ,
             appContext: X
         });
     if (0 === eT.length) return null;
     let ej = Q.some((e) => (0, m.Z)(e, w.xjy.SYNC)),
         eA = Q.some((e) => (0, m.Z)(e, w.xjy.JOIN) && !(0, m.Z)(e, w.xjy.EMBEDDED)) || ej;
-    F = eZ
+    F = eN
         ? (0, i.jsx)(c.CirclePlusIcon, {
               className: G.__invalid_attachButtonIcon,
               colorClass: G.attachButtonPlus
@@ -226,7 +226,7 @@ t.Z = l.memo(function (e) {
                     channel: z,
                     isOmniMenuOpen: 'attachMenu' === ec,
                     openOmniMenu: () => ed('attachMenu'),
-                    enabled: eN,
+                    enabled: eZ,
                     animationContainerClassName: G.buttonAnimation,
                     glowClassName: G.buttonAnimationGlow,
                     trinketsClassName: G.buttonAnimationTrinkets,

@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(933843),
     E = n(141321),
     b = n(2818),
-    Z = n(954551),
-    N = n(44136),
+    N = n(954551),
+    Z = n(44136),
     S = n(651183),
     T = n(618158),
     j = n(390322),
@@ -53,7 +53,7 @@ function W(e) {
             let e = Date.now();
             return o()(O.Z.getSpeakers())
                 .map((e) => w.Z.getParticipant(t, e))
-                .filter((e) => null != e && e.type === G.fO.USER && e.speaking && !(0, N.ZP)(e))
+                .filter((e) => null != e && e.type === G.fO.USER && e.speaking && !(0, Z.ZP)(e))
                 .sortBy((t) => -O.Z.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
                 .value();
@@ -85,7 +85,7 @@ function W(e) {
 }
 function K(e) {
     let { inPopout: t, channel: n, appContext: r, inCall: a, isChatOpen: s, exitFullScreen: o } = e,
-        N = n.id,
+        Z = n.id,
         {
             voiceParticipantsHidden: k,
             selectedParticipant: O,
@@ -93,11 +93,11 @@ function K(e) {
         } = (0, d.cj)(
             [w.Z],
             () => ({
-                selectedParticipant: w.Z.getSelectedParticipant(N),
-                voiceParticipantsHidden: w.Z.getVoiceParticipantsHidden(N),
-                userParticipantCount: w.Z.getUserParticipantCount(N)
+                selectedParticipant: w.Z.getSelectedParticipant(Z),
+                voiceParticipantsHidden: w.Z.getVoiceParticipantsHidden(Z),
+                userParticipantCount: w.Z.getUserParticipantCount(Z)
             }),
-            [N]
+            [Z]
         ),
         K = (0, d.e7)([D.default], () => D.default.getCurrentUser()),
         Y = (0, B.Z)(n),
@@ -132,7 +132,7 @@ function K(e) {
                 (0, i.jsx)(
                     W,
                     {
-                        channelId: N,
+                        channelId: Z,
                         guildId: n.guild_id
                     },
                     'current-speaker'
@@ -143,7 +143,7 @@ function K(e) {
                 m.Z,
                 {
                     className: z.button,
-                    channelId: N
+                    channelId: Z
                 },
                 'clips-enabled-indicator'
             )
@@ -200,7 +200,7 @@ function K(e) {
                           P.Z,
                           {
                               className: z.button,
-                              channelId: N
+                              channelId: Z
                           },
                           'deselect-participant'
                       )
@@ -208,7 +208,7 @@ function K(e) {
                           L.Z,
                           {
                               className: z.button,
-                              channelId: N,
+                              channelId: Z,
                               isHorizontal: !0
                           },
                           'select-participant'
@@ -227,7 +227,7 @@ function K(e) {
                     'recents'
                 )
             ),
-        Q && !$ && ei.push((0, i.jsx)(Z.Z, { className: z.button }, 'for-later')),
+        Q && !$ && ei.push((0, i.jsx)(N.Z, { className: z.button }, 'for-later')),
         ei.push(
             (0, i.jsx)(
                 u.Popout,
@@ -237,7 +237,7 @@ function K(e) {
                         let { closePopout: t } = e;
                         return (0, i.jsx)(j.Z, {
                             children: (0, i.jsx)(U.Z, {
-                                channelId: N,
+                                channelId: Z,
                                 onClose: t,
                                 appContext: r,
                                 exitFullScreen: o

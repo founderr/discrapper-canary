@@ -40,27 +40,27 @@ function x(e) {
             isIgnored: d.Z.isIgnored(_.id)
         })),
         b = (0, c.Do)({ location: 'UserProfilePanelWrapper' }),
-        [Z, N] = l.useState(I || (b && (E || I))),
+        [N, Z] = l.useState(I || (b && (E || I))),
         S = (0, h.sS)({ location: 'UserProfilePopoutWrapper' });
     return (l.useEffect(() => {
-        N(I || (b && (E || I)));
+        Z(I || (b && (E || I)));
     }, [I, E, b]),
     r)
         ? null
-        : Z && S && !b
+        : N && S && !b
           ? (0, i.jsx)(f.Z, {
                 user: _,
                 currentUser: v,
                 channel: t,
-                onViewBlockedProfileClick: () => N(!1),
+                onViewBlockedProfileClick: () => Z(!1),
                 ...n
             })
-          : b && Z
+          : b && N
             ? (0, i.jsx)(f.A, {
                   user: _,
                   currentUser: v,
                   channel: t,
-                  onViewBlockedProfileClick: () => N(!1),
+                  onViewBlockedProfileClick: () => Z(!1),
                   ...n
               })
             : _.isNonUserBot()

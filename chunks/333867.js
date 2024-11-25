@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return x;
+        return f;
     }
 }),
     t(47120);
@@ -16,11 +16,11 @@ var l = t(772848),
     u = t(608579),
     h = t(981631);
 let m = 'payment-modal',
-    f = new Set([c.h8.REVIEW, c.h8.CONFIRM, c.h8.GIFT_CUSTOMIZATION]);
-function x(e) {
+    x = new Set([c.h8.REVIEW, c.h8.CONFIRM, c.h8.GIFT_CUSTOMIZATION]);
+function f(e) {
     let n;
-    let { skuId: t, isGift: c = !1, giftMessage: x, giftingOrigin: v, onClose: p, onComplete: g, analyticsLocations: C, analyticsObject: j, giftRecipient: I, variantsReturnStyle: E } = e,
-        T = !1,
+    let { skuId: t, isGift: c = !1, giftMessage: f, giftingOrigin: v, onClose: p, onComplete: g, analyticsLocations: C, analyticsObject: j, giftRecipient: I, variantsReturnStyle: T } = e,
+        E = !1,
         N = (0, l.Z)(),
         S = (e) => {
             n = e;
@@ -33,7 +33,7 @@ function x(e) {
                 loadId: N,
                 skuId: t,
                 isGift: c,
-                giftMessage: x,
+                giftMessage: f,
                 giftingOrigin: v,
                 analyticsLocations: C,
                 giftRecipient: I,
@@ -41,7 +41,7 @@ function x(e) {
                     n(), null == p || p(e);
                 },
                 onComplete: () => {
-                    (T = !0), null == g || g();
+                    (E = !0), null == g || g();
                 },
                 returnRef: l,
                 onStepChange: S
@@ -50,7 +50,7 @@ function x(e) {
         {
             modalKey: m,
             onCloseCallback: () => {
-                !T &&
+                !E &&
                     d.default.track(h.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: N,
                         payment_type: h.Zuq[h.GZQ.ONE_TIME],
@@ -60,11 +60,11 @@ function x(e) {
                     }),
                     (0, a.fw)(),
                     (0, s.p)(),
-                    null == p || p(T),
-                    T && (0, o.qg)({ variantsReturnStyle: E });
+                    null == p || p(E),
+                    E && (0, o.qg)({ variantsReturnStyle: T });
             },
             onCloseRequest: () => {
-                null != n && f.has(n) && (0, r.closeModal)(m);
+                null != n && x.has(n) && (0, r.closeModal)(m);
             }
         }
     );

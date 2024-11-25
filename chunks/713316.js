@@ -3,45 +3,45 @@ n.d(t, {
         return f;
     }
 });
-var o = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(512722),
-    r = n.n(i),
+var r = n(512722),
+    o = n.n(r),
     a = n(481060),
-    d = n(563132),
+    l = n(563132),
     c = n(698708),
-    l = n(614277),
-    s = n(388032),
+    s = n(614277),
+    d = n(388032),
     u = n(786698);
 function f(e) {
     let { handleClose: t } = e,
-        { skusById: n, selectedSkuId: i, application: f } = (0, d.usePaymentContext)();
-    r()(null != i, 'Expected selectedSkuId'), r()(null != f, 'Expected application');
-    let p = n[i];
-    r()(null != p, 'Expected sku');
-    let b = s.intl.formatToPlainString(s.t.wK0IbG, {
+        { skusById: n, selectedSkuId: r, application: f } = (0, l.usePaymentContext)();
+    o()(null != r, 'Expected selectedSkuId'), o()(null != f, 'Expected application');
+    let p = n[r];
+    o()(null != p, 'Expected sku');
+    let m = d.intl.formatToPlainString(d.t.wK0IbG, {
         applicationName: f.name,
         itemName: p.name
     });
-    return (0, o.jsxs)(l.C3, {
+    return (0, i.jsxs)(s.C3, {
         children: [
-            (0, o.jsx)(c.Z, {}),
-            (0, o.jsxs)('div', {
+            (0, i.jsx)(c.Z, {}),
+            (0, i.jsxs)('div', {
                 className: u.confirmation,
                 children: [
-                    (0, o.jsx)(a.Heading, {
+                    (0, i.jsx)(a.Heading, {
                         variant: 'heading-xxl/bold',
                         className: u.confirmationHeader,
                         children: 'Success!'
                     }),
-                    (0, o.jsx)(a.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-md/normal',
-                        children: b
+                        children: m
                     }),
-                    (0, o.jsx)('div', { className: u.divider }),
-                    (0, o.jsx)(a.Button, {
+                    (0, i.jsx)('div', { className: u.divider }),
+                    (0, i.jsx)(a.Button, {
                         onClick: t,
-                        children: s.intl.string(s.t.cpT0Cg)
+                        children: d.intl.string(d.t.cpT0Cg)
                     })
                 ]
             })

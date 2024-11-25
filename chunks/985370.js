@@ -18,13 +18,13 @@ t.Z = (e) => {
         [v, I] = l.useState(!1),
         E = (0, s.e7)([h.Z], () => h.Z.effectCooldownEndTime),
         b = l.useMemo(() => (null != E ? (E.getTime() - Date.now()) / 1000 : 0), [E]),
-        { seconds: Z } = (0, c.Z)(null != E ? E : new Date()),
-        N = Z > 0,
+        { seconds: N } = (0, c.Z)(null != E ? E : new Date()),
+        Z = N > 0,
         S = l.useCallback(
             (e) => {
-                if ('focus' !== e.type) !v && !N && C();
+                if ('focus' !== e.type) !v && !Z && C();
             },
-            [v, N, C]
+            [v, Z, C]
         ),
         T = l.useCallback(() => {
             !v && x();
@@ -61,7 +61,7 @@ t.Z = (e) => {
             return (0, i.jsx)(u.Z, {
                 isCenterButton: !0,
                 totalCooldownSeconds: b,
-                remainingCooldownSeconds: Z,
+                remainingCooldownSeconds: N,
                 className: a()(f.controlButton, n),
                 onKeyDown: (e) => {
                     var t, n;

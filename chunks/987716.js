@@ -24,19 +24,19 @@ var i = t(200651),
 let j = (e) => {
     let { isShopGift: n, className: t, optionsContainerClassName: r } = e,
         { giftRecipient: j, selectedGiftStyle: E, setSelectedGiftStyle: y, emojiConfetti: I, soundEffect: P, setEmojiConfetti: T, setSoundEffect: N } = (0, c.wD)(),
-        [b, _] = l.useState(!1),
-        C = l.useRef(null),
-        A = (0, a.useRadioGroup)({ orientation: 'horizontal' }),
-        O = (0, u.MY)(j, n),
-        Z = O === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        R = O !== u.xr.DEFAULT,
+        [b, C] = l.useState(!1),
+        _ = l.useRef(null),
+        O = (0, a.useRadioGroup)({ orientation: 'horizontal' }),
+        A = (0, u.MY)(j, n),
+        Z = A === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        R = A !== u.xr.DEFAULT,
         M = (0, m.rK)(),
         { enabled: w } = m.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: M }),
-        { enabled: D } = p.O.useExperiment({ location: 'gift card' }),
-        F = null;
+        { enabled: L } = p.O.useExperiment({ location: 'gift card' }),
+        k = null;
     return (
-        R && (F = M && w ? v.kJ : v.QI),
-        D && (F = v.RQ),
+        R && (k = M && w ? v.kJ : v.QI),
+        L && (k = v.RQ),
         (0, i.jsxs)('div', {
             children: [
                 R &&
@@ -80,23 +80,23 @@ let j = (e) => {
                     tabIndex: null != E || b ? void 0 : 0,
                     onFocus: (e) => {
                         var n;
-                        e.target === e.currentTarget && (null === (n = C.current) || void 0 === n || n.focus());
+                        e.target === e.currentTarget && (null === (n = _.current) || void 0 === n || n.focus());
                     },
                     className: s()(S.giftBoxOptionContainer, r),
                     'aria-label': g.intl.string(g.t.v54NrK),
-                    ...A,
+                    ...O,
                     children:
-                        null != F &&
-                        F.map((e, n) =>
+                        null != k &&
+                        k.map((e, n) =>
                             (0, i.jsx)(
                                 f.m,
                                 {
                                     isSelected: E === e,
                                     giftStyle: e,
                                     setSelectedGiftStyle: y,
-                                    ref: 0 === n ? C : null,
-                                    onFocus: () => _(!0),
-                                    onBlur: () => _(!1)
+                                    ref: 0 === n ? _ : null,
+                                    onFocus: () => C(!0),
+                                    onBlur: () => C(!1)
                                 },
                                 e
                             )

@@ -19,8 +19,8 @@ var i = n(200651),
     v = n(388032);
 t.Z = function (e) {
     let { className: t, style: n, channel: I, draftType: E } = e,
-        [b, Z] = l.useState(!0),
-        N = (0, r.e7)([u.Z], () => u.Z.hasLayers()),
+        [b, N] = l.useState(!0),
+        Z = (0, r.e7)([u.Z], () => u.Z.hasLayers()),
         S = (0, r.e7)([h.Z], () => null != I && h.Z.can(_.Plq.ATTACH_FILES, I), [I]),
         T = null != (0, r.e7)([a.Z], () => a.Z.getActiveCommand(I.id)),
         j = I.getGuildId(),
@@ -30,7 +30,7 @@ t.Z = function (e) {
             return !0 == !(null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed);
         }),
         P = (0, r.e7)([c.Z], () => c.Z.didAgree(j)) && !y,
-        M = l.useMemo(() => !N && ((I.isPrivate() && !I.isManaged()) || (null != j && (!I.isNSFW() || P) && S && d.Z.canChatInGuild(j))), [S, P, I, j, N]),
+        M = l.useMemo(() => !Z && ((I.isPrivate() && !I.isManaged()) || (null != j && (!I.isNSFW() || P) && S && d.Z.canChatInGuild(j))), [S, P, I, j, Z]),
         R = A ? (_.TPd.GUILD_THREADS_ONLY.has(I.type) ? v.intl.string(v.t.RBBLhI) : v.intl.string(v.t.gUx4en)) : b ? v.intl.format(v.t.dYP2FR, { destination: (0, s.F6)(I, m.default, p.Z, !0) }) : v.intl.string(v.t.h76ulJ);
     return T || !M
         ? null
@@ -50,10 +50,10 @@ t.Z = function (e) {
                       }),
                       f.S.dispatchToLastSubscribed(_.CkL.TEXTAREA_FOCUS));
               },
-              onDragClear: () => Z(!0),
+              onDragClear: () => N(!0),
               onDragOver: (e) => {
                   if (T) return !1;
-                  !A && e.shiftKey === b && Z(!e.shiftKey);
+                  !A && e.shiftKey === b && N(!e.shiftKey);
               }
           });
 };

@@ -64,13 +64,13 @@ function x(e) {
                         warningId: x,
                         senderId: _,
                         handleBlock: () => {
-                            Z(p.NM.USER_MODAL_BLOCK_CONFIRM, p.NM.USER_MODAL_BLOCK_CANCEL, b);
+                            N(p.NM.USER_MODAL_BLOCK_CONFIRM, p.NM.USER_MODAL_BLOCK_CANCEL, b);
                         }
                     });
                 };
             });
         },
-        Z = (e, l, r) => {
+        N = (e, l, r) => {
             (0, s.openModalLazy)(async () => {
                 let { default: a } = await n.e('68747').then(n.bind(n, 744373));
                 return (n) =>
@@ -120,7 +120,7 @@ function x(e) {
                       {
                           text: C.intl.string(C.t.ie0QdH),
                           color: s.Button.Colors.RED,
-                          onclick: () => Z(p.NM.USER_BANNER_BLOCK_CONFIRM, p.NM.USER_BANNER_BLOCK_CANCEL)
+                          onclick: () => N(p.NM.USER_BANNER_BLOCK_CONFIRM, p.NM.USER_BANNER_BLOCK_CANCEL)
                       }
                   ])
         ]

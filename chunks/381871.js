@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(401062),
     E = n(696900),
     b = n(456631),
-    Z = n(963838),
-    N = n(535879),
+    N = n(963838),
+    Z = n(535879),
     S = n(310892),
     T = n(12168),
     j = n(353368),
@@ -64,7 +64,7 @@ function B(e) {
             .slice(0, y.e5),
         z = (null !== (t = b.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter((e) => !V.slice(0, y.e5 - 1).some((t) => t.name === e.name));
     z.length > 0 && V.splice(V.length - 1, 1, z[0]);
-    let W = (0, Z.Iu)(H),
+    let W = (0, N.Iu)(H),
         K = (e) => {
             c.Z.dispatch({
                 type: 'VOICE_CHANNEL_EFFECT_RECENT_EMOJI',
@@ -141,7 +141,7 @@ function B(e) {
                         onExpandedToggle: q,
                         analyticsOverride: D,
                         emojiSearchProps: {
-                            accessory: (0, i.jsx)(N.Z, {
+                            accessory: (0, i.jsx)(Z.Z, {
                                 labelText: L.intl.string(L.t['ktEv/v']),
                                 value: $,
                                 onChange: () => {

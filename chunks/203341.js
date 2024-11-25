@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return Z;
     }
 }),
     n(47120),
@@ -26,7 +26,7 @@ var i = n(200651),
     I = n(921944),
     E = n(388032),
     b = n(151745);
-function Z(e) {
+function N(e) {
     let { onClose: t, channel: n } = e,
         l = (0, x.Z)(n);
     return (0, i.jsx)(s.Menu, {
@@ -37,12 +37,12 @@ function Z(e) {
         children: l
     });
 }
-function N(e) {
+function Z(e) {
     let { channel: t, showLeftDivider: n = !1, ...x } = e,
-        N = (0, m.Z)(),
+        Z = (0, m.Z)(),
         S = (0, r.e7)([p.Z], () => {
             var e, t;
-            return null === (e = p.Z.getSessionById(null !== (t = null == N ? void 0 : N.sessionId) && void 0 !== t ? t : '')) || void 0 === e ? void 0 : e.clientInfo.os;
+            return null === (e = p.Z.getSessionById(null !== (t = null == Z ? void 0 : Z.sessionId) && void 0 !== t ? t : '')) || void 0 === e ? void 0 : e.clientInfo.os;
         }),
         T = (0, r.e7)([h.Z], () => h.Z.hasLayers()),
         [j, A] = (0, r.Wu)([o.Z], () => [o.Z.getMode(t.id), o.Z.getLayout(t.id)]),
@@ -50,7 +50,7 @@ function N(e) {
         P = (0, f.Z)(),
         M = P.filter((e) => e.twoWayLink),
         [R, L] = l.useState(!1);
-    if (null == N && 0 === P.length) return null;
+    if (null == Z && 0 === P.length) return null;
     let k = v.WtW.VOICE !== j && [v.AEg.NO_CHAT, v.AEg.FULL_SCREEN].includes(A) ? 'top' : 'bottom',
         O = [];
     return (
@@ -81,7 +81,7 @@ function N(e) {
                                               },
                                               gameConsoleAccounts: M
                                           })
-                                        : (0, i.jsx)(Z, {
+                                        : (0, i.jsx)(N, {
                                               onClose: () => {
                                                   n();
                                               },

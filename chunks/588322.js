@@ -26,11 +26,11 @@ function I(e) {
         I = (0, r.e7)([f.Z], () => f.Z.getChannel(t)),
         E = (0, r.e7)([f.Z], () => f.Z.getChannel(null == I ? void 0 : I.parent_id)),
         b = (0, r.e7)([C.Z], () => C.Z.getGuild(null == I ? void 0 : I.getGuildId())),
-        Z = (0, o.ZP)(I),
-        N = l.useRef(!1);
+        N = (0, o.ZP)(I),
+        Z = l.useRef(!1);
     if (
         (l.useEffect(() => {
-            null != I && !N.current && ((N.current = !0), (0, x.lN)(I));
+            null != I && !Z.current && ((Z.current = !0), (0, x.lN)(I));
         }, [I]),
         null == I || null == b)
     )
@@ -48,7 +48,7 @@ function I(e) {
                 children: (0, h.ud)({
                     channel: I,
                     parentChannel: E,
-                    channelName: Z,
+                    channelName: N,
                     guild: b,
                     inSidebar: !0,
                     handleContextMenu: function (e) {

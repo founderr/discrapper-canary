@@ -1,56 +1,56 @@
 n.d(t, {
     i: function () {
-        return i;
+        return r;
     }
 });
-var o,
-    i,
-    r = n(200651);
+var i,
+    r,
+    o = n(200651);
 n(192379);
 var a = n(442837),
-    d = n(780384),
+    l = n(780384),
     c = n(481060),
-    l = n(410030),
-    s = n(594174),
+    s = n(410030),
+    d = n(594174),
     u = n(388032),
     f = n(259319),
     p = n(982240),
-    b = n(533854);
-((o = i || (i = {}))[(o.SHOP_PAGE = 0)] = 'SHOP_PAGE'), (o[(o.GIFT_MODAL = 1)] = 'GIFT_MODAL');
+    m = n(533854);
+((i = r || (r = {}))[(i.SHOP_PAGE = 0)] = 'SHOP_PAGE'), (i[(i.GIFT_MODAL = 1)] = 'GIFT_MODAL');
 t.Z = (e) => {
-    let { onRetry: t, errorOrigin: n, errorMessage: o } = e,
-        i = (0, l.ZP)(),
-        _ = (0, a.e7)([s.default], () => {
-            let e = s.default.getCurrentUser();
+    let { onRetry: t, errorOrigin: n, errorMessage: i } = e,
+        r = (0, s.ZP)(),
+        b = (0, a.e7)([d.default], () => {
+            let e = d.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
-        g = 1 === n ? f.giftModalContainer : f.shopPageContainer,
-        h = 1 === n ? u.intl.string(u.t['+2QBZW']) : u.intl.string(u.t.LuhKs7);
-    return (0, r.jsxs)('div', {
-        className: g,
+        h = 1 === n ? f.giftModalContainer : f.shopPageContainer,
+        g = 1 === n ? u.intl.string(u.t['+2QBZW']) : u.intl.string(u.t.LuhKs7);
+    return (0, o.jsxs)('div', {
+        className: h,
         children: [
-            (0, r.jsx)('img', {
+            (0, o.jsx)('img', {
                 className: f.__invalid_loadIssueImg,
-                src: (0, d.wj)(i) ? p : b,
+                src: (0, l.wj)(r) ? p : m,
                 alt: ''
             }),
-            (0, r.jsx)(c.Heading, {
+            (0, o.jsx)(c.Heading, {
                 className: f.heading1,
                 variant: 'heading-xl/semibold',
                 children: u.intl.string(u.t['i5SQ7+'])
             }),
-            (0, r.jsx)(c.Text, {
+            (0, o.jsx)(c.Text, {
                 className: f.description,
                 variant: 'text-md/normal',
-                children: h
+                children: g
             }),
-            _ &&
-                null != o &&
-                (0, r.jsx)(c.Text, {
+            b &&
+                null != i &&
+                (0, o.jsx)(c.Text, {
                     variant: 'text-md/normal',
-                    children: 'staff-only debug: ' + o
+                    children: 'staff-only debug: ' + i
                 }),
-            (0, r.jsx)(c.Button, {
+            (0, o.jsx)(c.Button, {
                 className: f.reload,
                 size: c.Button.Sizes.MEDIUM,
                 color: c.Button.Colors.BRAND,

@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(169979),
     E = n(451834),
     b = n(502762),
-    Z = n(952124),
-    N = n(544989),
+    N = n(952124),
+    Z = n(544989),
     S = n(481932),
     T = n(272510),
     j = n(171368),
@@ -85,14 +85,14 @@ function k(e) {
                             }),
                         (0, i.jsxs)(a.u2, {
                             children: [
-                                (0, i.jsxs)(N.Z, {
+                                (0, i.jsxs)(Z.Z, {
                                     profileType: P.y0.PANEL,
                                     children: [
                                         (0, i.jsx)(S.Z, {
                                             user: t,
                                             profileType: P.y0.PANEL
                                         }),
-                                        t.bot ? (0, i.jsx)(Z.Z, { user: t }) : (0, i.jsx)(T.Z, { user: t })
+                                        t.bot ? (0, i.jsx)(N.Z, { user: t }) : (0, i.jsx)(T.Z, { user: t })
                                     ]
                                 }),
                                 (0, i.jsxs)('header', {

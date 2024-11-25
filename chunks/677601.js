@@ -20,8 +20,8 @@ var i = n(200651),
     I = n(393238),
     E = n(110924),
     b = n(40851),
-    Z = n(115130),
-    N = n(317381),
+    N = n(115130),
+    Z = n(317381),
     S = n(316253),
     T = n(596040),
     j = n(349619),
@@ -74,8 +74,8 @@ var i = n(200651),
     eI = n(358221),
     eE = n(414910),
     eb = n(887012),
-    eZ = n(909820),
-    eN = n(493010),
+    eN = n(909820),
+    eZ = n(493010),
     eS = n(742603),
     eT = n(221888),
     ej = n(900211),
@@ -305,7 +305,7 @@ class ew extends l.PureComponent {
                     children:
                         r &&
                         (!d || !this.popoutOpen || this.inPopout) &&
-                        (0, i.jsx)(eN.Z, {
+                        (0, i.jsx)(eZ.Z, {
                             channel: t,
                             guild: n,
                             maxWidth: o
@@ -382,7 +382,7 @@ class ew extends l.PureComponent {
                                     return (0, f.jW)(
                                         t,
                                         async () => {
-                                            let { default: e } = await Promise.all([n.e('79695'), n.e('70205'), n.e('92453'), n.e('56826'), n.e('95324')]).then(n.bind(n, 131404));
+                                            let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('70205'), n.e('56826'), n.e('95324')]).then(n.bind(n, 131404));
                                             return (t) =>
                                                 (0, i.jsx)(e, {
                                                     ...t,
@@ -625,7 +625,7 @@ class ew extends l.PureComponent {
                 let { showChatToasts: e, chatOpen: t, channel: n, inCall: l } = this.props;
                 return !e || t || (this.popoutOpen && !this.inPopout && l)
                     ? null
-                    : (0, i.jsx)(eZ.ZP, {
+                    : (0, i.jsx)(eN.ZP, {
                           children: (0, i.jsx)(q.Z, {
                               className: eL.chatToasts,
                               channelId: n.id
@@ -732,12 +732,12 @@ t.Z = function (e) {
         }, []),
         et = null !== (t = null == V ? void 0 : V.id) && void 0 !== t ? t : null,
         en = (0, T.Z)(et, n.id),
-        ei = (0, c.e7)([Z.Z], () => Z.Z.getFetchState(), []),
+        ei = (0, c.e7)([N.Z], () => N.Z.getFetchState(), []),
         el = (0, E.Z)(ei);
     l.useEffect(() => {
-        ei === Z.O.ERROR && el !== Z.O.ERROR && (0, h.showToast)((0, h.createToast)(eR.intl.string(eR.t.AlJyIy), h.ToastType.FAILURE));
+        ei === N.O.ERROR && el !== N.O.ERROR && (0, h.showToast)((0, h.createToast)(eR.intl.string(eR.t.AlJyIy), h.ToastType.FAILURE));
     }, [ei, el]);
-    let ep = (0, c.e7)([N.ZP], () => N.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
+    let ep = (0, c.e7)([Z.ZP], () => Z.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
     l.useEffect(() => {
         let e = !1,
             t = null;
@@ -753,12 +753,12 @@ t.Z = function (e) {
     let em = (0, eb.Z)(n, !0),
         ef = (0, L.bn)(d.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
         { analyticsLocations: eg } = (0, P.ZP)(A.Z.CHANNEL_CALL),
-        eC = N.ZP.getEmbeddedActivitiesForChannel(n.id);
+        eC = Z.ZP.getEmbeddedActivitiesForChannel(n.id);
     return (0, i.jsx)(P.Gt, {
         value: eg,
         children: (0, i.jsx)(v.Z, {
             page: eM.ZY5.CHANNEL_CALL,
-            children: (0, i.jsx)(eZ.B2, {
+            children: (0, i.jsx)(eN.B2, {
                 children: (0, i.jsxs)(eA._A, {
                     children: [
                         (0, i.jsx)(ew, {
@@ -804,7 +804,7 @@ t.Z = function (e) {
                             currentChannelActivities: eC
                         }),
                         !n.isPrivate() && (0, i.jsx)(eA.YR, {}),
-                        (0, i.jsx)(eZ.H_, {})
+                        (0, i.jsx)(eN.H_, {})
                     ]
                 })
             })

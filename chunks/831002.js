@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return N;
     }
 });
 var i = n(200651);
@@ -25,16 +25,16 @@ var l = n(512722),
     I = n(427679),
     E = n(354459),
     b = n(388032);
-function Z(e) {
-    let { channelId: t, closePopout: n, appContext: l, onSelect: Z } = e,
-        N = (0, a.e7)([c.Z], () => c.Z.getSelectedParticipant(t)),
-        S = (null == N ? void 0 : N.type) === E.fO.STREAM ? N.stream : null,
+function N(e) {
+    let { channelId: t, closePopout: n, appContext: l, onSelect: N } = e,
+        Z = (0, a.e7)([c.Z], () => c.Z.getSelectedParticipant(t)),
+        S = (null == Z ? void 0 : Z.type) === E.fO.STREAM ? Z.stream : null,
         T = (0, p.Z)(t);
     return (0, i.jsxs)(s.Menu, {
         navId: 'stage-channel-call-overflow-popout',
         onClose: n,
         'aria-label': b.intl.string(b.t.pkYeAw),
-        onSelect: Z,
+        onSelect: N,
         children: [
             (function (e) {
                 let t = (0, a.e7)([C.Z], () => C.Z.getChannel(e), [e]),

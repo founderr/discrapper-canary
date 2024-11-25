@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     },
     Z: function () {
-        return N;
+        return Z;
     }
 });
 var i = n(200651),
@@ -27,8 +27,8 @@ var i = n(200651),
     I = n(228168),
     E = n(388032),
     b = n(562296),
-    Z = n(321975);
-function N(e) {
+    N = n(321975);
+function Z(e) {
     let { user: t, channel: n, onViewBlockedProfileClick: r } = e,
         a = (0, C.ZP)(t.id),
         o = (0, d.ZP)(),
@@ -38,13 +38,13 @@ function N(e) {
             userId: t.id,
             channelId: n.id
         }),
-        N = l.useRef(null);
+        Z = l.useRef(null);
     return (0, i.jsx)(h.Gt, {
         value: p,
         children: (0, i.jsx)(f.Mt, {
             value: m,
             children: (0, i.jsx)(_.Z, {
-                ref: N,
+                ref: Z,
                 user: t,
                 displayProfile: a,
                 profileType: I.y0.PANEL,
@@ -55,7 +55,7 @@ function N(e) {
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: Z,
+                                src: N,
                                 className: b.previewForCollected,
                                 'aria-hidden': !0
                             }),
@@ -105,7 +105,7 @@ function N(e) {
 }
 function S(e) {
     let { user: t, channel: n, onViewBlockedProfileClick: r } = e,
-        N = (0, C.ZP)(t.id),
+        Z = (0, C.ZP)(t.id),
         S = (0, d.ZP)(),
         T = (0, o.e7)([p.Z], () => p.Z.isBlocked(t.id)),
         { analyticsLocations: j } = (0, h.ZP)(T ? u.Z.BLOCKED_PROFILE_PANEL : u.Z.IGNORED_PROFILE_PANEL),
@@ -122,7 +122,7 @@ function S(e) {
             children: (0, i.jsx)(_.Z, {
                 ref: y,
                 user: t,
-                displayProfile: N,
+                displayProfile: Z,
                 profileType: I.y0.PANEL,
                 themeOverride: S,
                 children: (0, i.jsx)(s.u2, {
@@ -131,7 +131,7 @@ function S(e) {
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: Z,
+                                src: N,
                                 className: b.previewForCollected,
                                 'aria-hidden': !0
                             }),

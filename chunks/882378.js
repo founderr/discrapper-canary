@@ -22,8 +22,8 @@ t.Z = l.memo(function (e) {
         I = (0, a.f9)(),
         E = (0, r.e7)([p.Z], () => p.Z.hasLayers()),
         b = l.useCallback(() => (_ ? g.intl.string(g.t['16QyDg']) : null != v ? g.intl.string(g.t.kCN9i4) : null), [_, v]),
-        Z = l.useMemo(() => (_ || null != v) && !I && !E, [_, v, I, E]),
-        [N, S] = l.useState(b());
+        N = l.useMemo(() => (_ || null != v) && !I && !E, [_, v, I, E]),
+        [Z, S] = l.useState(b());
     l.useEffect(() => {
         null != v &&
             null != x &&
@@ -91,8 +91,8 @@ t.Z = l.memo(function (e) {
     return null == x
         ? null
         : (0, i.jsx)(s.Tooltip, {
-              forceOpen: Z,
-              text: N,
+              forceOpen: N,
+              text: Z,
               color: s.TooltipColors.BRAND,
               position: 'bottom',
               tooltipClassName: C.tooltip,
