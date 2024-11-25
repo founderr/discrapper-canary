@@ -156,12 +156,14 @@ function P(e) {
         Y = (null === (o = c.userStatus) || void 0 === o ? void 0 : o.completedAt) != null,
         K = a.useCallback(() => {
             if (!!O)
-                (0, C.AH)(c.id, {
-                    questContent: j.jn.QUEST_HOME_DESKTOP,
-                    questContentCTA: h.jZ.ACCEPT_QUEST
-                }),
+                !(0, _.zi)(c) &&
+                    !G &&
+                    (0, C.AH)(c.id, {
+                        questContent: j.jn.QUEST_HOME_DESKTOP,
+                        questContentCTA: h.jZ.ACCEPT_QUEST
+                    }),
                     (0, A.openVideoQuestModal)(c);
-        }, [O, c]);
+        }, [O, c, G]);
     a.useEffect(() => {
         if (W.isAnimated && null != z.current)
             return (
@@ -252,7 +254,7 @@ function P(e) {
                                         }),
                                     O &&
                                         (0, s.jsx)(p.Tooltip, {
-                                            text: Y ? 'Watch again' : G ? 'Continue watching' : 'Start video quest',
+                                            text: Y ? w.intl.string(w.t.YsCuyM) : G ? w.intl.string(w.t['3PatS0']) : (0, _.zi)(c) ? w.intl.string(w.t['I6JG4+']) : w.intl.string(w.t.umdNio),
                                             children: (e) =>
                                                 (0, s.jsx)(p.Clickable, {
                                                     ...e,
