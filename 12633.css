@@ -30256,20 +30256,7 @@ div.popoutCloseButton_d523a2:hover {
 .upsellContent_b8bbd6 {
     position: relative;
     border-radius: inherit;
-    background-color: var(--profile-body-background-color);
-    animation: upsellExpand_b8bbd6 2s ease-out forwards
-}
-
-@keyframes upsellExpand_b8bbd6 {
-    0% {
-        max-height: 0;
-        overflow: hidden
-    }
-
-    to {
-        max-height: 100vh;
-        overflow: visible
-    }
+    background-color: var(--profile-body-background-color)
 }
 
 .upsellContent_b8bbd6:before,
