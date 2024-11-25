@@ -16179,6 +16179,12 @@ span.clanTag_a31c43 {
     border-radius: var(--radius-round)
 }
 
+.label_eb3c91 {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4)
+}
+
 .actionButton_f5dff0 {
     margin-left: auto
 }
