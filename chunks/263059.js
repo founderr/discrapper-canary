@@ -166,6 +166,7 @@ function k(e) {
                                     onRequestOpen: t,
                                     className: P.button
                                 }),
+                                onShowToolbar: () => Q({ action: 'HOVER_ACTIVITY_CARD' }),
                                 children: (0, r.jsxs)(b.Z.Overlay, {
                                     className: s()(M.card, G, { [M.hoisted]: er }),
                                     ref: X,

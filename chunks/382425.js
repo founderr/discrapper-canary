@@ -292,6 +292,7 @@ function $(e) {
                                     onRequestOpen: n,
                                     className: z.button
                                 }),
+                                onShowToolbar: () => ec({ action: 'HOVER_ACTIVITY_CARD' }),
                                 children: (0, r.jsxs)(k.Z.Overlay, {
                                     className: s()(q.card, $, { [q.hoisted]: eR }),
                                     ref: ed,
