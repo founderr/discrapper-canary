@@ -3435,7 +3435,10 @@ class e2 extends k.C {
 let e3 = new e2();
 class e4 extends k.C {
     create(e) {
-        let t = { safetySettingsPreset: 0 };
+        let t = {
+            safetySettingsPreset: 0,
+            ignoreProfileSpeedbumpDisabled: !1
+        };
         return (
             globalThis.Object.defineProperty(t, M.C, {
                 enumerable: !1,
@@ -3450,18 +3453,24 @@ class e4 extends k.C {
             a = e.pos + t;
         for (; e.pos < a; ) {
             let [t, r] = e.tag();
-            if (1 === t) i.safetySettingsPreset = e.int32();
-            else {
-                let a = n.readUnknownField;
-                if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-                let s = e.skip(r);
-                !1 !== a && (!0 === a ? w.z.onRead : a)(this.typeName, i, t, r, s);
+            switch (t) {
+                case 1:
+                    i.safetySettingsPreset = e.int32();
+                    break;
+                case 2:
+                    i.ignoreProfileSpeedbumpDisabled = e.bool();
+                    break;
+                default:
+                    let a = n.readUnknownField;
+                    if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
+                    let s = e.skip(r);
+                    !1 !== a && (!0 === a ? w.z.onRead : a)(this.typeName, i, t, r, s);
             }
         }
         return i;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.safetySettingsPreset && t.tag(1, w.TD.Varint).int32(e.safetySettingsPreset);
+        0 !== e.safetySettingsPreset && t.tag(1, w.TD.Varint).int32(e.safetySettingsPreset), !1 !== e.ignoreProfileSpeedbumpDisabled && t.tag(2, w.TD.Varint).bool(e.ignoreProfileSpeedbumpDisabled);
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? w.z.onWrite : r)(this.typeName, e, t), t;
     }
@@ -3472,6 +3481,12 @@ class e4 extends k.C {
                 name: 'safety_settings_preset',
                 kind: 'enum',
                 T: () => ['discord_protos.discord_users.v1.SafetySettingsPresetType', m]
+            },
+            {
+                no: 2,
+                name: 'ignore_profile_speedbump_disabled',
+                kind: 'scalar',
+                T: 8
             }
         ]);
     }
