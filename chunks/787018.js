@@ -1,9 +1,9 @@
 t.d(n, {
     W: function () {
-        return S;
+        return T;
     },
     Z: function () {
-        return N;
+        return S;
     }
 }),
     t(47120);
@@ -18,67 +18,68 @@ var i = t(200651),
     u = t(138201),
     f = t(699516),
     m = t(5192),
-    x = t(785717),
-    I = t(221292),
+    I = t(785717),
+    x = t(221292),
     p = t(687158),
     h = t(471879),
     v = t(502762),
-    g = t(475413),
-    Z = t(228168),
-    _ = t(981631),
-    j = t(388032),
-    b = t(409308),
-    E = t(161068);
-function N(e) {
-    let { user: n, guildId: t, channelId: o, messageId: r, roleId: s, transitionState: f, onViewBlockedProfileClick: m, showGuildProfile: N = !0, sourceAnalyticsLocations: S = [] } = e,
-        T = t === _.ME ? void 0 : t,
+    g = t(848780),
+    Z = t(475413),
+    _ = t(228168),
+    j = t(981631),
+    b = t(388032),
+    E = t(409308),
+    N = t(161068);
+function S(e) {
+    let { user: n, guildId: t, channelId: o, messageId: r, roleId: s, transitionState: f, onViewBlockedProfileClick: m, showGuildProfile: g = !0, sourceAnalyticsLocations: S = [] } = e,
+        T = t === j.ME ? void 0 : t,
         { analyticsLocations: y } = (0, d.ZP)([...S, a.Z.BLOCKED_PROFILE_MODAL]),
-        P = (0, x.ZB)({
+        P = (0, I.ZB)({
             layout: 'BLOCKED_PROFILE_MODAL',
             userId: n.id,
             guildId: T,
             channelId: o,
             messageId: r,
             roleId: s,
-            showGuildProfile: N
+            showGuildProfile: g
         }),
         C = [
             {
                 icon: c.BellSlashIcon,
-                description: j.intl.string(j.t.Kn2UDA)
+                description: b.intl.string(b.t.Kn2UDA)
             },
             {
                 icon: c.DenyIcon,
-                description: j.intl.string(j.t.QxrDY2)
+                description: b.intl.string(b.t.QxrDY2)
             }
         ],
-        L = (0, p.ZP)(n.id, N ? T : void 0),
+        L = (0, p.ZP)(n.id, g ? T : void 0),
         A = l.createRef();
     return (0, i.jsx)(d.Gt, {
         value: y,
-        children: (0, i.jsx)(x.Mt, {
+        children: (0, i.jsx)(I.Mt, {
             value: P,
             children: (0, i.jsx)(c.ModalRoot, {
                 transitionState: f,
-                className: b.root,
+                className: E.root,
                 hideShadow: !0,
-                'aria-label': j.intl.string(j.t['3N/J2t']),
+                'aria-label': b.intl.string(b.t['3N/J2t']),
                 children: (0, i.jsx)(v.Z, {
                     user: n,
                     displayProfile: L,
-                    profileType: Z.y0.FULL_SIZE,
+                    profileType: _.y0.FULL_SIZE,
                     ref: A,
                     children: (0, i.jsxs)('div', {
-                        className: b.container,
+                        className: E.container,
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: E,
-                                className: b.previewForCollected,
+                                src: N,
+                                className: E.previewForCollected,
                                 'aria-hidden': !0
                             }),
                             (0, i.jsxs)('div', {
-                                className: b.body,
+                                className: E.body,
                                 children: [
                                     (0, i.jsx)(h.Z, {
                                         user: n,
@@ -86,19 +87,19 @@ function N(e) {
                                     }),
                                     (0, i.jsx)(c.Heading, {
                                         variant: 'heading-xl/bold',
-                                        className: b.header,
-                                        children: j.intl.string(j.t.VNJ7UF)
+                                        className: E.header,
+                                        children: b.intl.string(b.t.VNJ7UF)
                                     }),
                                     (0, i.jsx)(c.Text, {
                                         variant: 'text-md/medium',
-                                        children: j.intl.format(j.t.LXbngo, { username: n.username })
+                                        children: b.intl.format(b.t.LXbngo, { username: n.username })
                                     }),
                                     (0, i.jsx)(c.Text, {
                                         variant: 'text-md/medium',
-                                        children: j.intl.string(j.t['uBvD//'])
+                                        children: b.intl.string(b.t['uBvD//'])
                                     }),
                                     (0, i.jsx)('div', {
-                                        className: b.safetyTable,
+                                        className: E.safetyTable,
                                         children: C.map((e, n) => {
                                             let { icon: t, description: l } = e;
                                             return (0, i.jsx)(
@@ -112,15 +113,15 @@ function N(e) {
                                             );
                                         })
                                     }),
-                                    (0, i.jsx)(g.tG, {
-                                        className: b.centeredButton,
+                                    (0, i.jsx)(Z.tG, {
+                                        className: E.centeredButton,
                                         action: 'VIEW_BLOCKED_PROFILE',
-                                        text: j.intl.string(j.t.iXAna2),
+                                        text: b.intl.string(b.t.iXAna2),
                                         autoFocus: !0,
                                         fullWidth: !1,
                                         onClick: () => {
                                             null == m || m(),
-                                                (0, I.pQ)({
+                                                (0, x.pQ)({
                                                     action: 'VIEW_BLOCKED_PROFILE',
                                                     analyticsLocations: y,
                                                     ...P
@@ -136,80 +137,80 @@ function N(e) {
         })
     });
 }
-function S(e) {
-    let { user: n, guildId: t, channelId: o, messageId: N, roleId: S, transitionState: T, onViewBlockedProfileClick: y, showGuildProfile: P = !0, sourceAnalyticsLocations: C = [] } = e,
-        L = t === _.ME ? void 0 : t,
-        A = (0, s.e7)([f.Z], () => f.Z.isBlocked(n.id)),
-        { analyticsLocations: O } = (0, d.ZP)([...C, A ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
-        M = (0, x.ZB)({
-            layout: A ? 'BLOCKED_PROFILE_MODAL' : 'IGNORED_PROFILE_MODAL',
+function T(e) {
+    let { user: n, guildId: t, channelId: o, messageId: S, roleId: T, transitionState: y, onViewBlockedProfileClick: P, showGuildProfile: C = !0, sourceAnalyticsLocations: L = [] } = e,
+        A = t === j.ME ? void 0 : t,
+        O = (0, s.e7)([f.Z], () => f.Z.isBlocked(n.id)),
+        { analyticsLocations: R } = (0, d.ZP)([...L, O ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
+        M = (0, I.ZB)({
+            layout: O ? 'BLOCKED_PROFILE_MODAL' : 'IGNORED_PROFILE_MODAL',
             userId: n.id,
-            guildId: L,
+            guildId: A,
             channelId: o,
-            messageId: N,
-            roleId: S,
-            showGuildProfile: P
+            messageId: S,
+            roleId: T,
+            showGuildProfile: C
         }),
-        R = [
+        U = [
             {
                 icon: c.CircleCheckIcon,
-                description: j.intl.string(j.t.kcuWvb)
+                description: b.intl.string(b.t.kcuWvb)
             },
             {
                 icon: c.CircleCheckIcon,
-                description: j.intl.string(A ? j.t.QxrDY2 : j.t.W6fjkZ)
+                description: b.intl.string(O ? b.t.QxrDY2 : b.t.W6fjkZ)
             }
         ],
-        U = (0, p.ZP)(n.id, P ? L : void 0),
-        B = l.createRef();
+        B = (0, p.ZP)(n.id, C ? A : void 0),
+        F = l.createRef();
     return (0, i.jsx)(d.Gt, {
-        value: O,
-        children: (0, i.jsx)(x.Mt, {
+        value: R,
+        children: (0, i.jsx)(I.Mt, {
             value: M,
             children: (0, i.jsx)(c.ModalRoot, {
-                transitionState: T,
-                className: b.root,
+                transitionState: y,
+                className: E.root,
                 hideShadow: !0,
-                'aria-label': j.intl.string(j.t['3N/J2t']),
+                'aria-label': b.intl.string(b.t['3N/J2t']),
                 children: (0, i.jsx)(v.Z, {
                     user: n,
-                    displayProfile: U,
-                    profileType: Z.y0.FULL_SIZE,
-                    ref: B,
+                    displayProfile: B,
+                    profileType: _.y0.FULL_SIZE,
+                    ref: F,
                     children: (0, i.jsxs)('div', {
-                        className: b.container,
+                        className: E.container,
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: E,
-                                className: b.previewForCollected,
+                                src: N,
+                                className: E.previewForCollected,
                                 'aria-hidden': !0
                             }),
                             (0, i.jsxs)('div', {
-                                className: r()(b.body, b.bodySpacing),
+                                className: r()(E.body, E.bodySpacing),
                                 children: [
                                     (0, i.jsx)(h.i, {
                                         user: n,
-                                        guildId: L
+                                        guildId: A
                                     }),
                                     (0, i.jsxs)('div', {
-                                        className: b.headerContainer,
+                                        className: E.headerContainer,
                                         children: [
                                             (0, i.jsx)(c.Heading, {
                                                 variant: 'heading-xl/bold',
                                                 color: 'header-primary',
-                                                children: j.intl.string(j.t.b33pLC)
+                                                children: b.intl.string(b.t.b33pLC)
                                             }),
                                             (0, i.jsx)(c.Text, {
                                                 variant: 'text-md/medium',
                                                 color: 'header-primary',
-                                                children: j.intl.format(A ? j.t['8F+WNz'] : j.t['/cZp5u'], { username: m.ZP.getName(L, o, n) })
+                                                children: b.intl.format(O ? b.t['8F+WNz'] : b.t['/cZp5u'], { username: m.ZP.getName(A, o, n) })
                                             })
                                         ]
                                     }),
                                     (0, i.jsx)('div', {
-                                        className: b.restrictedSafetyTable,
-                                        children: R.map((e, n) => {
+                                        className: E.restrictedSafetyTable,
+                                        children: U.map((e, n) => {
                                             let { icon: t, description: l } = e;
                                             return (0, i.jsx)(
                                                 u.Z,
@@ -222,19 +223,35 @@ function S(e) {
                                             );
                                         })
                                     }),
-                                    (0, i.jsx)(g.tG, {
-                                        action: A ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
-                                        text: j.intl.string(j.t['UJKH/v']),
-                                        autoFocus: !0,
-                                        fullWidth: !1,
-                                        onClick: () => {
-                                            null == y || y(),
-                                                (0, I.pQ)({
-                                                    action: 'VIEW_BLOCKED_PROFILE',
-                                                    analyticsLocations: O,
-                                                    ...M
-                                                });
-                                        }
+                                    (0, i.jsxs)(c.Stack, {
+                                        align: 'center',
+                                        children: [
+                                            (0, i.jsx)(Z.tG, {
+                                                action: O ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
+                                                text: b.intl.string(b.t['UJKH/v']),
+                                                autoFocus: !0,
+                                                fullWidth: !1,
+                                                onClick: () => {
+                                                    null == P || P(),
+                                                        (0, x.pQ)({
+                                                            action: O ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
+                                                            analyticsLocations: R,
+                                                            ...M
+                                                        });
+                                                }
+                                            }),
+                                            (0, i.jsx)(g.Z, {
+                                                userId: n.id,
+                                                onClick: () => {
+                                                    null == P || P(),
+                                                        (0, x.pQ)({
+                                                            action: 'DONT_SHOW_AGAIN_IGNORED_PROFILE',
+                                                            analyticsLocations: R,
+                                                            ...M
+                                                        });
+                                                }
+                                            })
+                                        ]
                                     })
                                 ]
                             })

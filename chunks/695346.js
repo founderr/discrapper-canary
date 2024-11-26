@@ -56,6 +56,9 @@ n.d(t, {
     R_: function () {
         return eA;
     },
+    Rt: function () {
+        return eD;
+    },
     SE: function () {
         return eI;
     },
@@ -910,8 +913,14 @@ let eR = (0, o.Zc)(
     (e) => e
 );
 let eO = (0, o.Zc)(
-    'userContent',
-    'lastReceivedChangelogId',
-    (e) => (null != e ? e : '0'),
-    (e) => e
-);
+        'userContent',
+        'lastReceivedChangelogId',
+        (e) => (null != e ? e : '0'),
+        (e) => e
+    ),
+    eD = (0, o.Zc)(
+        'safetySettings',
+        'ignoreProfileSpeedbumpDisabled',
+        (e) => null != e && e,
+        (e) => e
+    );
