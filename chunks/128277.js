@@ -99,17 +99,12 @@ function D(e) {
         H = () =>
             null == D || null == L
                 ? null
-                : (0, r.jsxs)(r.Fragment, {
-                      children: [
-                          (0, r.jsx)('div', { className: O.voiceChannelDivider }),
-                          (0, r.jsx)(S.Z, {
-                              user: t,
-                              guild: D,
-                              channel: L,
-                              onAction: Z,
-                              onClose: w
-                          })
-                      ]
+                : (0, r.jsx)(S.Z, {
+                      user: t,
+                      guild: D,
+                      channel: L,
+                      onAction: Z,
+                      onClose: w
                   }),
         Y = () =>
             t.id === n.id

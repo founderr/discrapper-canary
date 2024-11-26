@@ -243,17 +243,12 @@ function z(e) {
         eT = () =>
             null == Q || null == X
                 ? null
-                : (0, r.jsxs)(r.Fragment, {
-                      children: [
-                          (0, r.jsx)('div', { className: K.voiceChannelDivider }),
-                          (0, r.jsx)(k.Z, {
-                              user: n,
-                              guild: Q,
-                              channel: X,
-                              onAction: el,
-                              onClose: $
-                          })
-                      ]
+                : (0, r.jsx)(k.Z, {
+                      user: n,
+                      guild: Q,
+                      channel: X,
+                      onAction: el,
+                      onClose: $
                   }),
         eb = () =>
             n.id === i.id

@@ -237,17 +237,12 @@ function $(e) {
         eN = () =>
             en === Y.y0.FULL_SIZE
                 ? null
-                : (0, r.jsxs)(r.Fragment, {
-                      children: [
-                          (0, r.jsx)('div', { className: q.voiceChannelDivider }),
-                          (0, r.jsx)(F.Z, {
-                              user: t,
-                              guild: ef,
-                              channel: e_,
-                              onAction: ec,
-                              onClose: ee
-                          })
-                      ]
+                : (0, r.jsx)(F.Z, {
+                      user: t,
+                      guild: ef,
+                      channel: e_,
+                      onAction: ec,
+                      onClose: ee
                   }),
         eC = () =>
             t.id === n.id

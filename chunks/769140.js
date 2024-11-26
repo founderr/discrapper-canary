@@ -231,17 +231,12 @@ function z(e) {
         eE = () =>
             Q === F.y0.FULL_SIZE
                 ? null
-                : (0, r.jsxs)(r.Fragment, {
-                      children: [
-                          (0, r.jsx)('div', { className: H.voiceChannelDivider }),
-                          (0, r.jsx)(U.Z, {
-                              user: t,
-                              guild: ei,
-                              channel: ea,
-                              onAction: en,
-                              onClose: q
-                          })
-                      ]
+                : (0, r.jsx)(U.Z, {
+                      user: t,
+                      guild: ei,
+                      channel: ea,
+                      onAction: en,
+                      onClose: q
                   }),
         ev = () =>
             t.id === n.id
