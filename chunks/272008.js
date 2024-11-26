@@ -1,6 +1,6 @@
 n.d(t, {
     AH: function () {
-        return T;
+        return b;
     },
     Ag: function () {
         return x;
@@ -24,7 +24,7 @@ n.d(t, {
         return C;
     },
     cT: function () {
-        return P;
+        return M;
     },
     eT: function () {
         return R;
@@ -39,7 +39,7 @@ n.d(t, {
         return k;
     },
     m0: function () {
-        return b;
+        return T;
     },
     nE: function () {
         return N;
@@ -51,7 +51,7 @@ n.d(t, {
         return w;
     },
     w: function () {
-        return M;
+        return P;
     },
     xw: function () {
         return I;
@@ -154,7 +154,7 @@ async function I() {
         }
     }
 }
-async function b(e) {
+async function T(e) {
     let { questId: t, streamKey: n, terminal: i = !1 } = e;
     try {
         var l;
@@ -191,7 +191,7 @@ async function b(e) {
         });
     }
 }
-async function T(e, t) {
+async function b(e, t) {
     if (
         (null != t.questContentCTA &&
             (0, l._3)({
@@ -431,7 +431,7 @@ function w(e, t, n) {
         progress: n
     });
 }
-async function M(e) {
+async function P(e) {
     a.Z.dispatch({
         type: 'QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN',
         placement: e
@@ -454,10 +454,19 @@ async function M(e) {
         });
     }
 }
-async function P(e, t) {
-    await i.tn.post({
+async function M(e, t) {
+    var n;
+    await o.Z.post({
         url: m.ANM.QUESTS_VIDEO_PROGRESS(e),
         body: { timestamp: t },
+        trackedActionData: {
+            event: r.NetworkActionNames.QUEST_VIDEO_PROGRESS,
+            properties: {
+                quest_id: e,
+                timestamp_sec: t.toString(),
+                stack_trace: null !== (n = Error().stack) && void 0 !== n ? n : ''
+            }
+        },
         rejectWithError: !1
     });
 }

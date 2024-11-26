@@ -233,6 +233,7 @@ n.d(t, {
     (s.POMELO_ATTEMPT = 'network_action_pomelo_attempt'),
     (s.POMELO_CREATE = 'network_action_pomelo_create'),
     (s.QUEST_HEARTBEAT = 'network_action_quest_heartbeat'),
+    (s.QUEST_VIDEO_PROGRESS = 'network_action_quest_video_progress'),
     (s.STREAM_NOTIFY = 'network_action_stream_notify'),
     (s.USER_ACCEPT_AGREEMENTS = 'network_action_user_accept_agreements'),
     (s.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE = 'network_action_user_account_email_change_send_code'),
