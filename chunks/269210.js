@@ -132,7 +132,7 @@ function m(n) {
                 children: [
                     null != e &&
                         (0, l.jsx)(o.x, {
-                            variant: 'text-md/normal',
+                            variant: 'text-md/semibold',
                             color: 'header-primary',
                             children: e
                         }),
