@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return m;
     }
 });
 var r = n(200651);
@@ -10,52 +10,53 @@ var i = n(990547),
     s = n(194359),
     o = n(138201),
     l = n(626135),
-    u = n(5192),
-    c = n(478923),
-    d = n(981631),
-    f = n(388032),
-    _ = n(294794);
-function p() {
+    u = n(63063),
+    c = n(5192),
+    d = n(478923),
+    f = n(981631),
+    _ = n(388032),
+    p = n(294794);
+function h() {
     return (0, r.jsxs)('div', {
-        className: _.row,
+        className: p.row,
         children: [
             (0, r.jsx)(o.Z, {
-                title: f.intl.string(f.t.ruhGkp),
-                description: f.intl.string(f.t['/FWKKC']),
+                title: _.intl.string(_.t.ruhGkp),
+                description: _.intl.string(_.t['/FWKKC']),
                 icon: a.CircleCheckIcon
             }),
             (0, r.jsx)(o.Z, {
-                title: f.intl.string(f.t.N9v3en),
-                description: f.intl.string(f.t.ddpuJi),
+                title: _.intl.string(_.t.N9v3en),
+                description: _.intl.string(_.t.ddpuJi),
                 icon: a.CircleCheckIcon
             }),
             (0, r.jsx)(o.Z, {
-                title: f.intl.string(f.t['4ycGEx']),
-                description: f.intl.string(f.t['5yfN+v']),
+                title: _.intl.string(_.t['4ycGEx']),
+                description: _.intl.string(_.t['5yfN+v']),
                 icon: a.CircleInformationIcon
             })
         ]
     });
 }
-function h(e) {
-    let { user: t, guildId: n, channelId: h, onIgnore: m, onBlock: g, location: E = 'ContextMenu', ...v } = e;
+function m(e) {
+    let { user: t, guildId: n, channelId: m, onIgnore: g, onBlock: E, location: v = 'ContextMenu', ...I } = e;
     return (0, r.jsx)(a.ConfirmModal, {
-        confirmText: f.intl.string(f.t.ytCpKi),
-        cancelText: f.intl.string(f.t['ETE/oK']),
+        confirmText: _.intl.string(_.t.ytCpKi),
+        cancelText: _.intl.string(_.t['ETE/oK']),
         onConfirm: () => {
-            null == m || m(), s.Z.ignoreUser(t.id, E, null != h ? h : void 0), l.default.track(d.rMx.IGNORE_USER_CONFIRMED);
+            null == g || g(), s.Z.ignoreUser(t.id, v, null != m ? m : void 0), l.default.track(f.rMx.IGNORE_USER_CONFIRMED);
         },
         impression: { impressionName: i.ImpressionNames.IGNORE_USER_CONFIRMATION },
         confirmButtonColor: a.Button.Colors.BRAND,
-        ...v,
+        ...I,
         children: (0, r.jsxs)('div', {
-            className: _.container,
+            className: p.container,
             children: [
                 (0, r.jsxs)('div', {
-                    className: _.confirmationHeader,
+                    className: p.confirmationHeader,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: _.iconContainer,
+                            className: p.iconContainer,
                             children: [
                                 (0, r.jsx)(a.Avatar, {
                                     size: a.AvatarSizes.SIZE_56,
@@ -63,7 +64,7 @@ function h(e) {
                                     'aria-hidden': !0
                                 }),
                                 (0, r.jsx)('div', {
-                                    className: _.icon,
+                                    className: p.icon,
                                     children: (0, r.jsx)(a.EyeSlashIcon, { size: 'sm' })
                                 })
                             ]
@@ -73,46 +74,46 @@ function h(e) {
                                 (0, r.jsx)(a.Heading, {
                                     variant: 'heading-xl/bold',
                                     color: 'header-primary',
-                                    children: f.intl.format(f.t['WrQD/f'], { username: u.ZP.getName(n, h, t) })
+                                    children: _.intl.format(_.t['WrQD/f'], { username: c.ZP.getName(n, m, t) })
                                 }),
                                 (0, r.jsx)(a.Text, {
                                     variant: 'text-md/medium',
                                     color: 'header-secondary',
-                                    children: f.intl.string(f.t.JKL1u7)
+                                    children: _.intl.string(_.t.JKL1u7)
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, r.jsx)(p, {}),
+                (0, r.jsx)(h, {}),
                 (0, r.jsxs)('div', {
-                    className: _.otherOptions,
+                    className: p.otherOptions,
                     children: [
                         (0, r.jsx)(a.Text, {
                             variant: 'text-sm/semibold',
                             color: 'header-secondary',
-                            children: f.intl.string(f.t['1v01go'])
+                            children: _.intl.string(_.t['1v01go'])
                         }),
                         (0, r.jsx)('div', {
-                            className: _.row,
+                            className: p.row,
                             children: (0, r.jsx)(o.Z, {
-                                title: f.intl.string(f.t.bwxY39),
-                                description: f.intl.string(f.t.NTnf1d),
+                                title: _.intl.string(_.t.bwxY39),
+                                description: _.intl.string(_.t.NTnf1d),
                                 titleVariant: 'text-md/medium',
                                 descriptionVariant: 'text-xs/medium',
-                                buttonText: f.intl.string(f.t.QdfUHB),
+                                buttonText: _.intl.string(_.t.QdfUHB),
                                 buttonColor: a.ButtonColors.PRIMARY,
                                 onButtonPress: () => {
                                     (0, a.closeAllModals)(),
                                         (0, a.openModal)((e) =>
-                                            (0, r.jsx)(c.Z, {
+                                            (0, r.jsx)(d.Z, {
                                                 ...e,
                                                 user: t,
                                                 guildId: n,
-                                                channelId: h,
-                                                onBlock: g,
-                                                onIgnore: m,
-                                                location: E
+                                                channelId: m,
+                                                onBlock: E,
+                                                onIgnore: g,
+                                                location: v
                                             })
                                         );
                                 }
@@ -120,8 +121,8 @@ function h(e) {
                         }),
                         (0, r.jsx)(a.Text, {
                             variant: 'text-sm/medium',
-                            className: _.featureGuide,
-                            children: f.intl.format(f.t.Hjvqr6, { articleLink: '' })
+                            className: p.featureGuide,
+                            children: _.intl.format(_.t.Hjvqr6, { articleLink: u.Z.getArticleURL(f.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
                         })
                     ]
                 })

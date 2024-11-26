@@ -5556,6 +5556,7 @@ let os = Object.freeze({
     (aV.GUILD_LEADERBOARD = '27615657704983'),
     (aV.FRACTIONAL_PREMIUM_ABOUT = '26362805097623'),
     (aV.HD_STREAMING_POTION = '27343254089623'),
+    (aV.STEALTH_REMEDIATION_FEATURE_GUIDE = '28084948873623'),
     ((ta || (ta = {})).INVALID_BILLING_ADDRESS = '#docs-internal-guid-1731ba7c-7fff-87a1-c976-f62cc1cd2618'),
     ((ak = tn || (tn = {}))[(ak.HIDDEN = 1)] = 'HIDDEN'),
     (ak[(ak.PRIVATE = 2)] = 'PRIVATE'),
