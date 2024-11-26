@@ -33,7 +33,10 @@ let C = (e) => {
                     onClick: () => {
                         n(m.L.USER_DISMISS);
                     },
-                    children: (0, i.jsx)(a.XSmallIcon, {})
+                    children: (0, i.jsx)(a.XSmallIcon, {
+                        color: 'currentColor',
+                        size: 'sm'
+                    })
                 })
             ]
         });
@@ -52,7 +55,12 @@ let C = (e) => {
                 (0, s.Z)(u.Z.getArticleURL(p.BhN.GUILD_LEADERBOARD)), n(m.L.USER_DISMISS);
             },
             markAsDismissed: n,
-            caretPosition: c.DF.RIGHT_TOP
+            caretPosition: c.DF.RIGHT_TOP,
+            buttonProps: {
+                color: a.Button.Colors.WHITE,
+                look: a.Button.Looks.LINK,
+                size: a.Button.Sizes.MIN
+            }
         });
     };
 function _(e) {
