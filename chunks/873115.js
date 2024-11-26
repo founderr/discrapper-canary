@@ -17,11 +17,8 @@ n.d(t, {
     f6: function () {
         return p;
     },
-    gy: function () {
-        return f;
-    },
     i0: function () {
-        return b;
+        return f;
     },
     ib: function () {
         return d;
@@ -193,9 +190,6 @@ function N() {
     return A(l.Z.getVenmoClient(), { type: 'BRAINTREE_TEARDOWN_VENMO_CLIENT' });
 }
 function f() {
-    return Promise.all([E(), N()]);
-}
-function b() {
     let e = l.Z.getLastURL();
     null == e ? p() : (r.Z.dispatch({ type: 'BRAINTREE_TOKENIZE_PAYPAL_START' }), window.open(e));
 }
