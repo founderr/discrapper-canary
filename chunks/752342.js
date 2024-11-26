@@ -16,8 +16,8 @@ var l = t(481060),
     u = t(648052),
     f = t(867176),
     m = t(438163),
-    I = t(681837),
-    x = t(502762),
+    x = t(681837),
+    I = t(502762),
     p = t(530),
     h = t(871604),
     v = t(952124),
@@ -54,7 +54,7 @@ function y(e) {
                 className: T.root,
                 hideShadow: !0,
                 'aria-label': S.intl.string(S.t['3N/J2t']),
-                children: (0, i.jsxs)(x.Z, {
+                children: (0, i.jsxs)(I.Z, {
                     user: n,
                     displayProfile: D,
                     profileType: E.y0.FULL_SIZE,
@@ -122,14 +122,14 @@ function y(e) {
                                     nickname: s.ZP.getName(F, P, n),
                                     pronouns: null == D ? void 0 : D.pronouns,
                                     nicknameVariant: 'heading-xl/bold',
-                                    nicknameIcons: (0, i.jsx)(I.Z, { userId: n.id }),
+                                    nicknameIcons: (0, i.jsx)(x.Z, { userId: n.id }),
                                     tags: (0, i.jsx)(u.Z, {
                                         displayProfile: D,
                                         profileType: E.y0.FULL_SIZE,
                                         onClose: U
                                     })
                                 }),
-                                (0, i.jsx)(x.Z.Overlay, {
+                                (0, i.jsx)(I.Z.Overlay, {
                                     className: T.overlay,
                                     children: (0, i.jsx)(j.Z, {
                                         user: n,

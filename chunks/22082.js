@@ -11,8 +11,8 @@ var i,
     c = n(314897),
     C = n(592125),
     g = n(984933),
-    p = n(271383),
-    f = n(430824),
+    f = n(271383),
+    p = n(430824),
     v = n(306680),
     I = n(9156),
     E = n(70956),
@@ -32,7 +32,7 @@ function A(e) {
     var t;
     if (null != w[e]) return;
     let n = g.ZP.getChannels(e)[g.sH].map((e) => e.channel.id),
-        i = null === (t = p.ZP.getMember(e, c.default.getId())) || void 0 === t ? void 0 : t.joinedAt;
+        i = null === (t = f.ZP.getMember(e, c.default.getId())) || void 0 === t ? void 0 : t.joinedAt;
     if (null == i) return;
     w[e] = new Set();
     let s = new Date(i).getTime();
@@ -53,7 +53,7 @@ function L() {
 }
 class R extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(g.ZP, c.default, p.ZP, I.ZP, v.ZP, u.Z), this.syncWith([I.ZP], L);
+        this.waitFor(g.ZP, c.default, f.ZP, I.ZP, v.ZP, u.Z), this.syncWith([I.ZP], L);
     }
     getNewChannelIds(e) {
         var t;
@@ -62,7 +62,7 @@ class R extends (i = a.ZP.Store) {
     shouldIndicateNewChannel(e, t) {
         var n;
         if (null == e) return !1;
-        let i = f.Z.getGuild(e);
+        let i = p.Z.getGuild(e);
         return !!(null != i && i.hasFeature(_.oNc.COMMUNITY)) && (null != e && null == w[e] && A(e), (null === (n = w[e]) || void 0 === n ? void 0 : n.has(t)) && null == v.ZP.getTrackedAckMessageId(t));
     }
 }

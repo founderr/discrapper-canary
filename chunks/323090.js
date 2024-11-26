@@ -15,8 +15,8 @@ var l = t(442837),
     u = t(621853),
     f = t(172351),
     m = t(280885),
-    I = t(900927),
-    x = t(678738),
+    x = t(900927),
+    I = t(678738),
     p = t(179828),
     h = t(228168),
     v = t(388032),
@@ -57,15 +57,15 @@ function Z(e) {
                     guild: N,
                     scrollIntoView: j === h.Tb.ROLES
                 }),
-            (0, i.jsx)(x.Z, {
+            (0, i.jsx)(I.Z, {
                 heading: v.intl.string(v.t['A//N4u']),
-                children: (0, i.jsx)(I.Z, {
+                children: (0, i.jsx)(x.Z, {
                     userId: t.id,
                     guildId: null == _ ? void 0 : _.guildId,
                     tooltipDelay: h.vB
                 })
             }),
-            (0, i.jsx)(x.Z, {
+            (0, i.jsx)(I.Z, {
                 heading: v.intl.string(v.t.PbMNh4),
                 scrollIntoView: j === h.Tb.NOTE,
                 children: (0, i.jsx)(r.Z, {

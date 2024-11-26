@@ -16,8 +16,8 @@ var i = t(200651),
     u = t(594174),
     f = t(971393),
     m = t(787018),
-    I = t(752342),
-    x = t(886794),
+    x = t(752342),
+    I = t(886794),
     p = t(910364);
 let h = [c.Z.BITE_SIZE_PROFILE_POPOUT, c.Z.PROFILE_PANEL];
 function v(e) {
@@ -53,13 +53,13 @@ function v(e) {
                 ...t
             })
           : n.isNonUserBot()
-            ? (0, i.jsx)(x.Z, {
+            ? (0, i.jsx)(I.Z, {
                   ...t,
                   user: n,
                   currentUser: o
               })
             : n.bot
-              ? (0, i.jsx)(I.Z, {
+              ? (0, i.jsx)(x.Z, {
                     ...t,
                     user: n,
                     currentUser: o

@@ -15,7 +15,7 @@ function C() {
 function g(e) {
     u.delete(e.guild.id);
 }
-class p extends (i = d.ZP.Store) {
+class f extends (i = d.ZP.Store) {
     getChannelStatus(e) {
         var t;
         if (null != e && null != e.guild_id) {
@@ -24,7 +24,7 @@ class p extends (i = d.ZP.Store) {
     }
 }
 (r = 'ChannelStatusStore'),
-    (l = 'displayName') in (s = p)
+    (l = 'displayName') in (s = f)
         ? Object.defineProperty(s, l, {
               value: r,
               enumerable: !0,
@@ -32,7 +32,7 @@ class p extends (i = d.ZP.Store) {
               writable: !0
           })
         : (s[l] = r),
-    (t.Z = new p(o.Z, {
+    (t.Z = new f(o.Z, {
         GUILD_CREATE: g,
         GUILD_DELETE: g,
         CONNECTION_RESUMED: C,

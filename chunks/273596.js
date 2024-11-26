@@ -107,7 +107,7 @@ function L(e) {
                                     paddingLeft: n.left,
                                     width: n.width - 16
                                 },
-                                className: a()({ [T.heading]: !M || O }),
+                                className: a()(T.heading, { [T.headingTopbar]: !M }),
                                 children: [
                                     !M &&
                                         (0, i.jsxs)('div', {

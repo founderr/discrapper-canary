@@ -15,8 +15,8 @@ var i,
     u = t(246946),
     f = t(981631),
     m = t(388032),
-    I = t(120238);
-function x(e, n, t) {
+    x = t(120238);
+function I(e, n, t) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -44,7 +44,7 @@ class p extends (i = o.PureComponent) {
                   className: e,
                   children: (0, l.jsx)(c.TextAreaAutosize, {
                       ref: this.noteRef,
-                      className: I.textarea,
+                      className: x.textarea,
                       disabled: n,
                       placeholder: n ? m.intl.string(m.t['WLKx//']) : m.intl.string(m.t.VBhOe3),
                       'aria-label': m.intl.string(m.t.PbMNh4),
@@ -57,13 +57,13 @@ class p extends (i = o.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            x(this, 'noteRef', o.createRef()),
-            x(this, 'handleBlur', (e) => {
+            I(this, 'noteRef', o.createRef()),
+            I(this, 'handleBlur', (e) => {
                 let n = e.currentTarget.value,
                     { note: t, userId: i, onUpdate: l } = this.props;
                 if ((null != t ? t : '') !== n) null == l || l(), a.Z.updateNote(i, n);
             }),
-            x(this, 'handleKeyPress', (e) => {
+            I(this, 'handleKeyPress', (e) => {
                 if (13 === e.which) {
                     if (e.shiftKey) {
                         var n;
@@ -82,4 +82,4 @@ function h(e) {
         hideNote: n
     });
 }
-x(p, 'defaultProps', { autoFocus: !1 });
+I(p, 'defaultProps', { autoFocus: !1 });
