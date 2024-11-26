@@ -1,6 +1,6 @@
 n.d(t, {
     JY: function () {
-        return c;
+        return f;
     }
 });
 var r = n(704215),
@@ -9,8 +9,10 @@ var r = n(704215),
     s = n(981631),
     o = n(388032),
     l = n(955604),
-    u = n(865338);
-let c = 1;
+    u = n(865338),
+    c = n(692557),
+    d = n(430502);
+let f = 1;
 (0, a.YV)([
     {
         skuId: '1301993378484850769',
@@ -26,12 +28,8 @@ let c = 1;
     }
 ]),
     r.z.GIFTING_PROMOTION_MOBILE_FIRST_TIME_HALFSHEET,
-    u.Z,
-    l.Z,
     i.Z.SEASONAL_GIFTING_COACHMARK,
     s.ZY5.PREMIUM_UPSELL_SEASONAL_GIFTING_CAMPAIGN,
     r.z.GIFTING_PROMOTION_REMINDER,
-    u.Z,
-    l.Z,
     i.Z.SEASONAL_GIFTING_REMINDER_COACHMARK,
     s.ZY5.PREMIUM_UPSELL_SEASONAL_GIFTING_CAMPAIGN;
