@@ -17,8 +17,8 @@ function d(e) {
         [h, f] = i.useState(!1),
         [m, g] = i.useState(null),
         [S, x] = i.useState(''),
-        v = i.useRef(null),
-        p = a.intl.string(a.t['C/ZAw8']),
+        p = i.useRef(null),
+        v = a.intl.string(a.t['C/ZAw8']),
         j = a.intl.string(a.t.fZSi1N),
         C = i.useCallback(
             (e) => {
@@ -30,7 +30,7 @@ function d(e) {
         i.useEffect(() => {
             if (c) {
                 var e;
-                null === (e = v.current) || void 0 === e || e.focus();
+                null === (e = p.current) || void 0 === e || e.focus();
             }
         }, [c]),
         (0, l.jsxs)('form', {
@@ -43,7 +43,7 @@ function d(e) {
                     })
                         .catch((e) => {
                             var t, n;
-                            g(null !== (n = e.message) && void 0 !== n ? n : null === (t = e.body) || void 0 === t ? void 0 : t.message);
+                            g(null !== (n = null === (t = e.body) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : e.message);
                         })
                         .finally(() => {
                             f(!1);
@@ -53,10 +53,10 @@ function d(e) {
                 (0, l.jsx)(o.Z.SlideHeader, { onClose: u }),
                 (0, l.jsx)(o.Z.SlideContent, {
                     children: (0, l.jsxs)(s.FormItem, {
-                        title: p,
+                        title: v,
                         children: [
                             (0, l.jsx)(s.TextInput, {
-                                inputRef: v,
+                                inputRef: p,
                                 onChange: C,
                                 placeholder: j,
                                 maxLength: r.tL,

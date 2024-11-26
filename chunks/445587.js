@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     feedback: 'feedback_c12855',
     buttonsContainer: 'buttonsContainer_c12855',
     toast: 'toast_c12855',

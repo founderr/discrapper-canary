@@ -21,8 +21,8 @@ var l = n(200651),
 function f(e) {
     var t, n;
     let { mfaChallenge: h, mfaFinish: f, onEarlyClose: m, onClose: g, width: S = 440 } = e,
-        [x, v] = i.useState(null !== (n = null === (t = h.methods[0]) || void 0 === t ? void 0 : t.type) && void 0 !== n ? n : 'select'),
-        [p, j] = i.useState(x),
+        [x, p] = i.useState(null !== (n = null === (t = h.methods[0]) || void 0 === t ? void 0 : t.type) && void 0 !== n ? n : 'select'),
+        [v, j] = i.useState(x),
         C = async (e) => {
             let { mfaType: t, data: n } = e;
             await f({
@@ -35,7 +35,7 @@ function f(e) {
         b = {
             mfaChallenge: h,
             finish: C,
-            setSlide: v,
+            setSlide: p,
             onClose: m
         };
     return (0, l.jsxs)(r.Slides, {
@@ -55,28 +55,28 @@ function f(e) {
                 id: 'totp',
                 children: (0, l.jsx)(u.Z, {
                     ...b,
-                    isSlideReady: 'totp' === p
+                    isSlideReady: 'totp' === v
                 })
             }),
             (0, l.jsx)(r.Slide, {
                 id: 'sms',
                 children: (0, l.jsx)(d.Z, {
                     ...b,
-                    isSlideReady: 'sms' === p
+                    isSlideReady: 'sms' === v
                 })
             }),
             (0, l.jsx)(r.Slide, {
                 id: 'backup',
                 children: (0, l.jsx)(s.Z, {
                     ...b,
-                    isSlideReady: 'backup' === p
+                    isSlideReady: 'backup' === v
                 })
             }),
             (0, l.jsx)(r.Slide, {
                 id: 'password',
                 children: (0, l.jsx)(o.Z, {
                     ...b,
-                    isSlideReady: 'password' === p
+                    isSlideReady: 'password' === v
                 })
             })
         ]

@@ -24,7 +24,7 @@ n.d(t, {
 var r = n(192379),
     i = n(198453),
     a = n(133886),
-    s = n(387103),
+    s = n(495484),
     o = n(661763),
     l = n(881085);
 let u = new Set(['Arab', 'Syrc', 'Samr', 'Mand', 'Thaa', 'Mend', 'Nkoo', 'Adlm', 'Rohg', 'Hebr']),
@@ -96,7 +96,7 @@ function I(e, t) {
 function T(e) {
     e = (0, o.vE)(null != e ? e : {}, b);
     let { locale: t } = g();
-    return (0, r.useMemo)(() => new s.CN(t, e), [t, e]);
+    return (0, r.useMemo)(() => new s.C(t, e), [t, e]);
 }
 function b(e, t) {
     if (e === t) return !0;

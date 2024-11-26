@@ -17,8 +17,8 @@ var l = n(200651),
 function h(e) {
     let { mfaChallenge: t, finish: n, setSlide: h, onClose: f, isSlideReady: m } = e,
         [g, S] = i.useState(!1),
-        [x, v] = i.useState(null),
-        [p, j] = i.useState(!1),
+        [x, p] = i.useState(null),
+        [v, j] = i.useState(!1),
         [C, b] = i.useState(null),
         [y, Z] = i.useState(''),
         E = i.useRef(null);
@@ -32,11 +32,11 @@ function h(e) {
                     rejectWithError: !1
                 })
                 .then((e) => {
-                    v(e.body.phone);
+                    p(e.body.phone);
                 })
                 .catch((e) => {
-                    var t;
-                    b(e.message || (null === (t = e.body) || void 0 === t ? void 0 : t.message));
+                    var t, n;
+                    b(null !== (n = null === (t = e.body) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : e.message);
                 })
                 .finally(() => {
                     S(!1);
@@ -86,7 +86,7 @@ function h(e) {
                                     value: y,
                                     autoComplete: 'one-time-code',
                                     spellCheck: 'false',
-                                    disabled: p
+                                    disabled: v
                                 }),
                                 (0, l.jsx)(o.Button, {
                                     size: o.Button.Sizes.MEDIUM,
@@ -100,7 +100,7 @@ function h(e) {
                                                 rejectWithError: !1
                                             })
                                             .then((e) => {
-                                                v(e.body.phone);
+                                                p(e.body.phone);
                                             })
                                             .catch((e) => {
                                                 var t;
@@ -120,7 +120,7 @@ function h(e) {
                 setSlide: h,
                 showConfirm: !0,
                 disabled: y.length !== r.Gz,
-                submitting: p
+                submitting: v
             })
         ]
     });
