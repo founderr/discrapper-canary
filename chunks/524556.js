@@ -1,2 +1,2 @@
-var n = r(480751)(Object, 'create');
-e.exports = n;
+var a = r(480751)(Object, 'create');
+e.exports = a;
