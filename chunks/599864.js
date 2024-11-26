@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return h;
     }
 });
 var r = n(200651);
@@ -9,22 +9,27 @@ var i = n(442837),
     a = n(287734),
     s = n(359110),
     o = n(922482),
-    l = n(979651),
-    u = n(652853),
-    c = n(475413),
-    d = n(228168),
-    f = n(388032);
-function _(e) {
-    let { channel: t, onAction: n, onClose: _ } = e,
-        { profileType: p } = (0, u.z)(),
-        h = (0, i.e7)([l.Z], () => l.Z.isInChannel(t.id)),
-        m = t.isGuildStageVoice();
-    return (0, r.jsx)(c.tG, {
-        text: m ? (h && p === d.y0.FULL_SIZE ? f.intl.string(f.t['3xjX0d']) : h ? f.intl.string(f.t.g6pBAg) : p === d.y0.FULL_SIZE ? f.intl.string(f.t.VJlc0d) : f.intl.string(f.t['7vb2cX'])) : h && p === d.y0.FULL_SIZE ? f.intl.string(f.t['3xjX0d']) : h ? f.intl.string(f.t.iOqmAQ) : p === d.y0.FULL_SIZE ? f.intl.string(f.t.VJlc0d) : f.intl.string(f.t['96ANUF']),
-        themeColor: h ? 'secondary' : 'primary',
-        fullWidth: !0,
-        onClick: () => {
-            null == n || n({ action: 'PRESS_JOIN_CALL_BUTTON' }), m ? (0, o.Cq)(t) : (a.default.selectVoiceChannel(t.id), (0, s.Kh)(t.id)), null == _ || _();
-        }
-    });
+    l = n(496675),
+    u = n(979651),
+    c = n(652853),
+    d = n(475413),
+    f = n(228168),
+    _ = n(981631),
+    p = n(388032);
+function h(e) {
+    let { channel: t, onAction: n, onClose: h } = e,
+        { profileType: m } = (0, c.z)(),
+        g = (0, i.e7)([u.Z], () => u.Z.isInChannel(t.id)),
+        E = (0, i.e7)([l.Z], () => l.Z.canBasicChannel(_.S7T.CONNECT, t)),
+        v = t.isGuildStageVoice();
+    return E
+        ? (0, r.jsx)(d.tG, {
+              text: v ? (g && m === f.y0.FULL_SIZE ? p.intl.string(p.t['3xjX0d']) : g ? p.intl.string(p.t.g6pBAg) : m === f.y0.FULL_SIZE ? p.intl.string(p.t.VJlc0d) : p.intl.string(p.t['7vb2cX'])) : g && m === f.y0.FULL_SIZE ? p.intl.string(p.t['3xjX0d']) : g ? p.intl.string(p.t.iOqmAQ) : m === f.y0.FULL_SIZE ? p.intl.string(p.t.VJlc0d) : p.intl.string(p.t['96ANUF']),
+              themeColor: g ? 'secondary' : 'primary',
+              fullWidth: !0,
+              onClick: () => {
+                  null == n || n({ action: 'PRESS_JOIN_CALL_BUTTON' }), v ? (0, o.Cq)(t) : (a.default.selectVoiceChannel(t.id), (0, s.Kh)(t.id)), null == h || h();
+              }
+          })
+        : null;
 }
