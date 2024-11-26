@@ -5,7 +5,7 @@ n.d(t, {
 });
 var r = n(280551),
     i = n(706454),
-    a = n(388032);
+    a = n(689938);
 function s(e) {
     let t;
     let n = i.default.locale;
@@ -16,13 +16,11 @@ function s(e) {
     }
     if (null != r.s)
         try {
-            let i = n === a.initialLocale,
-                s = null != n && n.split('-')[0] === (null === a.systemLocale || void 0 === a.systemLocale ? void 0 : a.systemLocale.split('-')[0]),
-                o = (0, r.s)(i && s ? void 0 : n, e);
-            if (null != o)
+            let i = null === r.s || void 0 === r.s ? void 0 : (0, r.s)(n !== a.Z.getDefaultLocale() ? n : void 0, e);
+            if (null != i)
                 return function (e) {
                     try {
-                        return o(e);
+                        return i(e);
                     } catch (e) {}
                     return t(e);
                 };

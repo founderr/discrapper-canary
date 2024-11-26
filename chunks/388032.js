@@ -9,20 +9,14 @@ n.r(t),
         getSystemLocale: function () {
             return f;
         },
-        initialLocale: function () {
-            return p;
-        },
         international: function () {
             return c.Z;
         },
         intl: function () {
-            return h;
-        },
-        systemLocale: function () {
-            return _;
+            return p;
         },
         t: function () {
-            return m;
+            return h;
         }
     }),
     n(47120);
@@ -38,10 +32,9 @@ var r = n(200651),
 function f(e) {
     return [Array.isArray(navigator.languages) ? navigator.languages[0] : null, navigator.language, navigator.browserLanguage, navigator.userLanguage, e].find((e) => null != e && '' !== e);
 }
-let _ = f('en-US'),
-    p = (0, l.YI)(_, 'en-US'),
-    h = new a.IntlManager({
-        initialLocale: p,
+let _ = (0, l.YI)(f('en-US'), 'en-US'),
+    p = new a.IntlManager({
+        initialLocale: _,
         defaultLocale: 'en-US'
     }).withFormatters({
         format: (0, a.makeReactFormatter)({
@@ -81,7 +74,7 @@ let _ = f('en-US'),
         formatToMarkdownString: a.markdownFormatter,
         formatToParts: a.astFormatter
     }),
-    m = {
+    h = {
         ...u.Z,
         ...d.Z
     };
