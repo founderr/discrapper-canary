@@ -9,7 +9,7 @@ n.d(t, {
         return O;
     },
     ZI: function () {
-        return T;
+        return b;
     },
     _W: function () {
         return S;
@@ -43,8 +43,8 @@ n(358085);
 var v = n(709054),
     I = n(981631);
 n(388032), l().shim();
-let b = !u.tq && !u.Em && -1 !== (0, m.vu)();
-function T(e, t) {
+let T = !u.tq && !u.Em && -1 !== (0, m.vu)();
+function b(e, t) {
     let { analyticsSource: n, analyticsProperties: r, storeListingId: i, slug: a, channelId: s, guildId: o } = t;
     return {
         pathname: null != s && null != o ? I.Z5c.CHANNEL(o, s, e) : I.Z5c.APPLICATION_STORE_LISTING_SKU(e, a),
@@ -71,7 +71,7 @@ function S(e, t, n, r) {
             default:
                 r = 'webp';
         }
-    'webp' === r && !b && (r = 'png');
+    'webp' === r && !T && (r = 'png');
     let o = 'string' == typeof t ? t : t.id,
         l = ((i = 'https:'), 'https:');
     return (

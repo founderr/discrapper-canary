@@ -42,8 +42,8 @@ var r = n(425960),
     E = n(267864),
     v = n(610963),
     I = n(452801),
-    b = n(278891),
-    T = n(543705),
+    T = n(278891),
+    b = n(543705),
     S = n(2778),
     y = n(219907),
     A = n(56013),
@@ -55,8 +55,8 @@ var r = n(425960),
     L = n(428172),
     x = n(71448),
     w = n(846059),
-    M = n(815554),
-    P = n(500946),
+    P = n(815554),
+    M = n(500946),
     k = n(611333),
     U = n(989103),
     B = n(803069),
@@ -349,8 +349,8 @@ function $(e, t, n) {
             }),
             [v, h.onBlur]
         ),
-        b = (0, V.pu)(n, { isDisabled: 0 !== t.collection.size }),
-        T = (0, G.dG)(
+        T = (0, V.pu)(n, { isDisabled: 0 !== t.collection.size }),
+        b = (0, G.dG)(
             E,
             {
                 role: 'grid',
@@ -358,10 +358,10 @@ function $(e, t, n) {
                 'aria-multiselectable': 'multiple' === c.selectionMode ? 'true' : void 0
             },
             t.isKeyboardNavigationDisabled ? I : h,
-            0 === t.collection.size && { tabIndex: b ? -1 : 0 },
+            0 === t.collection.size && { tabIndex: T ? -1 : 0 },
             g
         );
-    return r && ((T['aria-rowcount'] = t.collection.size), (T['aria-colcount'] = t.collection.columnCount)), Q({ getRowText: o }, t), { gridProps: T };
+    return r && ((b['aria-rowcount'] = t.collection.size), (b['aria-colcount'] = t.collection.columnCount)), Q({ getRowText: o }, t), { gridProps: b };
 }
 function ee() {
     return { rowGroupProps: { role: 'rowgroup' } };
@@ -525,8 +525,8 @@ q = {
     'ja-JP': E.Z,
     'ko-KR': v.Z,
     'lt-LT': I.Z,
-    'lv-LV': b.Z,
-    'nb-NO': T.Z,
+    'lv-LV': T.Z,
+    'nb-NO': b.Z,
     'nl-NL': S.Z,
     'pl-PL': y.Z,
     'pt-BR': A.Z,
@@ -538,7 +538,7 @@ q = {
     'sr-SP': L.Z,
     'sv-SE': x.Z,
     'tr-TR': w.Z,
-    'uk-UA': M.Z,
-    'zh-CN': P.Z,
+    'uk-UA': P.Z,
+    'zh-CN': M.Z,
     'zh-TW': k.Z
 };

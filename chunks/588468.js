@@ -3,7 +3,7 @@ n.d(t, {
         return w;
     },
     rp: function () {
-        return M;
+        return P;
     }
 }),
     n(411104),
@@ -26,8 +26,8 @@ var r,
     E = n(511618),
     v = n(926491),
     I = n(378233),
-    b = n(695346),
-    T = n(430824),
+    T = n(695346),
+    b = n(430824),
     S = n(699516),
     y = n(594174),
     A = n(768581),
@@ -53,10 +53,10 @@ function x(e, t, n) {
 function w(e) {
     return null != e ? 'autocomplete-'.concat(e) : null;
 }
-function M(e) {
+function P(e) {
     return 'autocomplete-'.concat(e, '-title');
 }
-let P = a.createContext(null);
+let M = a.createContext(null);
 class k extends a.PureComponent {
     isSelectable() {
         return this.selectable;
@@ -119,7 +119,7 @@ class U extends (r = a.PureComponent) {
     render() {
         let { children: e, className: t, innerClassName: n, id: r, ...s } = this.props;
         return a.Children.count(e) > 0
-            ? (0, i.jsx)(P.Provider, {
+            ? (0, i.jsx)(M.Provider, {
                   value: { id: null != r ? r : '' },
                   children: (0, i.jsx)('div', {
                       className: o()(L.autocomplete, t),
@@ -164,11 +164,11 @@ x(
     }),
     x(U, 'Title', function (e) {
         let { title: t, className: n, children: r } = e,
-            s = a.useContext(P);
+            s = a.useContext(M);
         return (0, i.jsx)('div', {
             className: L.base,
             children: (0, i.jsxs)(d.Heading, {
-                id: M(s.id),
+                id: P(s.id),
                 className: o()(L.contentTitle, n),
                 variant: 'heading-deprecated-12/semibold',
                 children: [t, r]
@@ -325,7 +325,7 @@ x(
         class e extends k {
             renderContent() {
                 let { emoji: e, sentinel: t, guild: n } = this.props,
-                    r = b.Yk.getSetting(),
+                    r = T.Yk.getSetting(),
                     a =
                         null != e.id || '' !== e.url
                             ? (0, i.jsx)('img', {
@@ -390,7 +390,7 @@ x(
                 let { queryMatch: r, renderSticker: a, selected: s, sticker: o } = this.props,
                     { hovered: l } = this.state;
                 return (
-                    (0, I.jl)(o) ? (n = null === (e = v.Z.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name) : (0, I.J8)(o) && (n = null === (t = T.Z.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name),
+                    (0, I.jl)(o) ? (n = null === (e = v.Z.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name) : (0, I.J8)(o) && (n = null === (t = b.Z.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name),
                     (0, i.jsxs)(C.RX, {
                         children: [
                             (0, i.jsx)(C.Tw, { children: a(o, l || !0 === s) }),

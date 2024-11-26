@@ -17,8 +17,8 @@ var r,
     E = n(145597),
     v = n(830917),
     I = n(554174),
-    b = n(938038),
-    T = n(981631),
+    T = n(938038),
+    b = n(981631),
     S = n(987650);
 function y(e, t, n) {
     return (
@@ -157,9 +157,9 @@ class R {
     }
     getByWidget(e) {
         switch (e) {
-            case T.Odu.VOICE:
+            case b.Odu.VOICE:
                 return this.getByType(0);
-            case T.Odu.TEXT:
+            case b.Odu.TEXT:
                 return this.getByType(1);
             default:
                 return null;
@@ -215,8 +215,8 @@ class O {
             a = parseInt(i[0], 10),
             s = isNaN(a) ? l.Jx.UNKNOWN : a;
         isNaN(a) && A.error('ScreenTypeAnalytics: Unknown most used screen type: '.concat(i), r);
-        let o = b.c.getGameDisplayMode(null !== (e = this.game.name) && void 0 !== e ? e : this.game.id);
-        b.c.setGameDisplayMode(null !== (t = this.game.name) && void 0 !== t ? t : this.game.id, s);
+        let o = T.c.getGameDisplayMode(null !== (e = this.game.name) && void 0 !== e ? e : this.game.id);
+        T.c.setGameDisplayMode(null !== (t = this.game.name) && void 0 !== t ? t : this.game.id, s);
         let u = {
             screentype_unknown_duration: r[l.Jx.UNKNOWN],
             screentype_windowed_duration: r[l.Jx.WINDOWED],
@@ -294,7 +294,7 @@ class D {
         if (null != n) {
             n.screenAnalytics.destroy();
             let t = await n.getAnalytics();
-            for (let e of (m.default.track(T.rMx.OVERLAY_USAGE_STATS, t.usage), t.notifications)) m.default.track(T.rMx.OVERLAY_USAGE_NOTIFICATION_STATS, e);
+            for (let e of (m.default.track(b.rMx.OVERLAY_USAGE_STATS, t.usage), t.notifications)) m.default.track(b.rMx.OVERLAY_USAGE_NOTIFICATION_STATS, e);
             A.verbose('OVERLAY_USAGE_STATS: '.concat(e.name), t), delete D.gamesByPid[e.pid];
         }
         delete D.gamesByName[t];
@@ -419,7 +419,7 @@ function w(e) {
     }
     n.notificationAnalytics.increment(e.notificationType, e.action);
 }
-function M(e) {
+function P(e) {
     var t;
     if ((A.verbose('OVERLAY_WIDGET_CHANGED', e), null == e.gameName && null == e.gameId)) return;
     let n = D.getByName(null !== (t = e.gameName) && void 0 !== t ? t : e.gameId);
@@ -430,7 +430,7 @@ function M(e) {
     let r = n.widgetAnalytics.getByWidget(e.widgetType);
     if (null != r) !r.initialized && ((r.initialized = !0), (r.pinned = e.pinned)), r.pinned !== e.pinned && ++r.pinnedToggledCount, (r.pinned = e.pinned), r.visibleDuration.toggle(e.visible);
 }
-function P(e) {
+function M(e) {
     if ((A.verbose('OVERLAY_FOCUSED', e), D.gameSetAllUnfocused(), null == e.pid || e.pid === E.Js)) return;
     let t = D.getByPid(e.pid);
     if (null == t) {
@@ -469,7 +469,7 @@ function B(e) {
     A.verbose('MESSAGE_ACKED', e), D.desktopMessageEvent('ack');
 }
 function G(e) {
-    e.message.state === T.yb.SENDING && D.desktopMessageEvent('created');
+    e.message.state === b.yb.SENDING && D.desktopMessageEvent('created');
 }
 function Z(e) {
     let t = (0, I.Z)();
@@ -505,10 +505,10 @@ class j {
         var t;
         let n = (null !== (t = e.channelId) && void 0 !== t ? t : 'unknown') + e.context;
         switch (e.state) {
-            case T.hes.RTC_CONNECTED:
+            case b.hes.RTC_CONNECTED:
                 j.connections.add(n);
                 break;
-            case T.hes.DISCONNECTED:
+            case b.hes.DISCONNECTED:
                 j.connections.delete(n);
         }
         let r = j.hasConnection();
@@ -532,7 +532,7 @@ class H {
         });
     }
     static handleMessageCreate(e) {
-        if (e.message.state !== T.yb.SENDING) return;
+        if (e.message.state !== b.yb.SENDING) return;
         A.verbose('MESSAGE_CREATE', e, Error().stack);
         let t = _.Z.getGame();
         if (null == t) {
@@ -559,10 +559,10 @@ class Y extends u.Z {
                           MESSAGE_CREATE: H.handleMessageCreate
                       }
                     : {
-                          OVERLAY_FOCUSED: P,
+                          OVERLAY_FOCUSED: M,
                           OVERLAY_NOTIFICATION_EVENT: w,
                           OVERLAY_SET_INPUT_LOCKED: x,
-                          OVERLAY_WIDGET_CHANGED: M,
+                          OVERLAY_WIDGET_CHANGED: P,
                           OVERLAY_MESSAGE_EVENT_ACTION: U,
                           RUNNING_GAMES_CHANGE: L,
                           SOUNDBOARD_SET_OVERLAY_ENABLED: k,

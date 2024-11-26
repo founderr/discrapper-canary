@@ -17,8 +17,8 @@ var r,
     E = n(145597),
     v = n(451478),
     I = n(981631),
-    b = n(987650);
-function T(e, t, n) {
+    T = n(987650);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ let S = Object.freeze({
         disableExternalLinkAlert: !1,
         disablePinTutorial: !1,
         showKeybindIndicators: !0,
-        textWidgetOpacity: b.wF.LOWER
+        textWidgetOpacity: T.wF.LOWER
     }),
     y = null,
     A = {},
@@ -54,11 +54,11 @@ let S = Object.freeze({
     L = !1,
     x = new Set(),
     w = !1;
-function M(e) {
+function P(e) {
     let t = A[e];
     return null == t && (t = A[e] = { ...S }), t;
 }
-let P = { ...S },
+let M = { ...S },
     k = new Set(['AUDIO_SET_INPUT_DEVICE', 'AUDIO_SET_INPUT_VOLUME', 'AUDIO_SET_LOCAL_VIDEO_DISABLED', 'AUDIO_SET_LOCAL_VOLUME', 'AUDIO_SET_MODE', 'AUDIO_SET_NOISE_CANCELLATION', 'AUDIO_SET_NOISE_SUPPRESSION', 'AUDIO_SET_OUTPUT_DEVICE', 'AUDIO_SET_OUTPUT_VOLUME', 'AUDIO_TOGGLE_LOCAL_MUTE', 'AUDIO_TOGGLE_SELF_DEAF', 'AUDIO_TOGGLE_SELF_MUTE', 'BILLING_SUBSCRIPTION_UPDATE_SUCCESS', 'CATEGORY_COLLAPSE', 'CATEGORY_EXPAND', 'CHANNEL_ACK', 'CHANNEL_PRELOAD', 'GIFT_CODE_REDEEM', 'GIFT_CODE_REDEEM_FAILURE', 'GIFT_CODE_REDEEM_SUCCESS', 'HOTSPOT_HIDE', 'INVITE_MODAL_CLOSE', 'LAYOUT_CREATE', 'LAYOUT_CREATE_WIDGETS', 'LAYOUT_DELETE_ALL_WIDGETS', 'LAYOUT_DELETE_WIDGET', 'LAYOUT_SET_PINNED', 'LAYOUT_SET_TOP_WIDGET', 'LAYOUT_UPDATE_WIDGET', 'LOAD_MESSAGES', 'LOAD_MESSAGES_FAILURE', 'LOAD_MESSAGES_SUCCESS', 'MEDIA_ENGINE_SET_GO_LIVE_SOURCE', 'OVERLAY_ACTIVATE_REGION', 'OVERLAY_DEACTIVATE_ALL_REGIONS', 'OVERLAY_MESSAGE_EVENT_ACTION', 'OVERLAY_SET_AVATAR_SIZE_MODE', 'OVERLAY_SET_CLICK_ZONES', 'OVERLAY_SET_DISPLAY_NAME_MODE', 'OVERLAY_SET_DISPLAY_USER_MODE', 'OVERLAY_SET_INPUT_LOCKED', 'OVERLAY_SET_NOTIFICATION_POSITION_MODE', 'OVERLAY_SET_TEXT_CHAT_NOTIFICATION_MODE', 'OVERLAY_SET_SHOW_KEYBIND_INDICATORS', 'OVERLAY_SET_TEXT_WIDGET_OPACITY', 'OVERLAY_NOTIFY_READY_TO_SHOW', 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', 'PREMIUM_PAYMENT_ERROR_CLEAR', 'PREMIUM_PAYMENT_MODAL_CLOSE', 'PREMIUM_PAYMENT_MODAL_OPEN', 'PREMIUM_PAYMENT_SUBSCRIBE_FAIL', 'PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS', 'PREMIUM_PAYMENT_UPDATE_FAIL', 'PREMIUM_PAYMENT_UPDATE_SUCCESS', 'PREMIUM_REQUIRED_MODAL_CLOSE', 'PREMIUM_REQUIRED_MODAL_OPEN', 'PURCHASE_CONFIRMATION_MODAL_CLOSE', 'PURCHASE_CONFIRMATION_MODAL_OPEN', 'SKU_PURCHASE_CLEAR_ERROR', 'SKU_PURCHASE_FAIL', 'SKU_PURCHASE_MODAL_CLOSE', 'SKU_PURCHASE_MODAL_OPEN', 'SKU_PURCHASE_PREVIEW_FETCH_SUCCESS', 'SKU_PURCHASE_SHOW_CONFIRMATION_STEP', 'SKU_PURCHASE_START', 'SKU_PURCHASE_SUCCESS', 'STREAM_CLOSE', 'STREAM_START', 'VOICE_CHANNEL_SELECT', 'USER_SETTINGS_PROTO_ENQUEUE_UPDATE', 'USER_SETTINGS_PROTO_LOAD_IF_NECESSARY']),
     U = new Set([...k.values(), 'ACTIVITY_INVITE_MODAL_CLOSE', 'CALL_DELETE', 'CHANNEL_COLLAPSE', 'CHANNEL_SELECT', 'GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY', 'OVERLAY_CALL_PRIVATE_CHANNEL', 'OVERLAY_JOIN_GAME', 'OVERLAY_NOTIFICATION_EVENT', 'OVERLAY_SELECT_CALL', 'OVERLAY_SET_NOT_IDLE', 'OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', 'OVERLAY_WIDGET_CHANGED', 'SOUNDBOARD_SET_OVERLAY_ENABLED', 'STREAM_STOP']);
 function B() {
@@ -149,14 +149,14 @@ class F extends (r = i.ZP.PersistedStore) {
             (this.waitFor(d.default),
             this.syncWith([d.default], () => {
                 let e = d.default.getId();
-                P = null != e ? M(e) : { ...S };
+                M = null != e ? P(e) : { ...S };
             }),
             __OVERLAY__ && (m.isPlatformEmbedded && g.ZP.requireModule('discord_overlay2'), C.delete((0, E.QF)())),
             null != e)
         ) {
             A = e;
             let t = d.default.getId();
-            null != t && (null == (P = M(t)).textChatNotifications && (P.textChatNotifications = S.textChatNotifications), null == P.textWidgetOpacity && (P.textWidgetOpacity = S.textWidgetOpacity));
+            null != t && (null == (M = P(t)).textChatNotifications && (M.textChatNotifications = S.textChatNotifications), null == M.textWidgetOpacity && (M.textWidgetOpacity = S.textWidgetOpacity));
         }
     }
     getState() {
@@ -186,34 +186,34 @@ class F extends (r = i.ZP.PersistedStore) {
         );
     }
     getSelectedGuildId() {
-        return P.selectedGuildId;
+        return M.selectedGuildId;
     }
     getSelectedChannelId() {
-        return P.selectedChannelId;
+        return M.selectedChannelId;
     }
     getSelectedCallId() {
         return N;
     }
     getDisplayUserMode() {
-        return P.displayUserMode;
+        return M.displayUserMode;
     }
     getDisplayNameMode() {
-        return P.displayNameMode;
+        return M.displayNameMode;
     }
     getAvatarSizeMode() {
-        return P.avatarSizeMode;
+        return M.avatarSizeMode;
     }
     getNotificationPositionMode() {
-        return P.notificationPositionMode;
+        return M.notificationPositionMode;
     }
     getTextChatNotificationMode() {
-        return P.notificationPositionMode === I._vf.DISABLED ? I.Ypu.DISABLED : P.textChatNotifications;
+        return M.notificationPositionMode === I._vf.DISABLED ? I.Ypu.DISABLED : M.textChatNotifications;
     }
     get showKeybindIndicators() {
-        return null == P.showKeybindIndicators || P.showKeybindIndicators;
+        return null == M.showKeybindIndicators || M.showKeybindIndicators;
     }
     getDisableExternalLinkAlert() {
-        return P.disableExternalLinkAlert;
+        return M.disableExternalLinkAlert;
     }
     getFocusedPID() {
         return y;
@@ -228,15 +228,15 @@ class F extends (r = i.ZP.PersistedStore) {
         return x;
     }
     getTextWidgetOpacity() {
-        return P.textWidgetOpacity;
+        return M.textWidgetOpacity;
     }
     isPreviewingInGame() {
         return w;
     }
 }
-T(F, 'displayName', 'OverlayStore'),
-    T(F, 'persistKey', 'OverlayStoreV2'),
-    T(F, 'migrations', [
+b(F, 'displayName', 'OverlayStore'),
+    b(F, 'persistKey', 'OverlayStoreV2'),
+    b(F, 'migrations', [
         () => {
             let { pinnedWidgets: e, positions: t, sizes: n, v: r, ...i } = { ...a.K.get('OverlayStore') };
             return {
@@ -310,13 +310,13 @@ T(F, 'displayName', 'OverlayStore'),
             y = t;
         },
         OVERLAY_READY: function () {
-            let e = P.selectedGuildId,
-                t = P.selectedChannelId;
+            let e = M.selectedGuildId,
+                t = M.selectedChannelId;
             if ((null != e && (!_.ZP.hasChannels(e) || (null != t && !_.ZP.hasSelectableChannel(e, t))) && ((e = null), (t = null)), null != t && null == f.Z.getChannel(t) && ((e = null), (t = null)), null == e && null == t && (e = h.Z.getGuildId()), null != e && null == t)) {
                 let n = _.ZP.getDefaultChannel(e);
                 null != n && (t = n.id);
             }
-            (P.selectedGuildId = e), (P.selectedChannelId = t);
+            (M.selectedGuildId = e), (M.selectedChannelId = t);
         },
         OVERLAY_FOCUSED: function (e) {
             let { pid: t } = e;
@@ -324,7 +324,7 @@ T(F, 'displayName', 'OverlayStore'),
         },
         OVERLAY_SELECT_CHANNEL: function (e) {
             let { guildId: t, channelId: n } = e;
-            (P.selectedGuildId = t), (P.selectedChannelId = n);
+            (M.selectedGuildId = t), (M.selectedChannelId = n);
         },
         OVERLAY_SELECT_CALL: function (e) {
             let { callId: t } = e;
@@ -336,35 +336,35 @@ T(F, 'displayName', 'OverlayStore'),
         LAYOUT_CREATE: function () {},
         OVERLAY_SET_DISPLAY_NAME_MODE: function (e) {
             let { mode: t } = e;
-            P.displayNameMode = t;
+            M.displayNameMode = t;
         },
         OVERLAY_SET_DISPLAY_USER_MODE: function (e) {
             let { mode: t } = e;
-            P.displayUserMode = t;
+            M.displayUserMode = t;
         },
         OVERLAY_SET_AVATAR_SIZE_MODE: function (e) {
             let { mode: t } = e;
-            P.avatarSizeMode = t;
+            M.avatarSizeMode = t;
         },
         OVERLAY_SET_NOTIFICATION_POSITION_MODE: function (e) {
             let { mode: t } = e;
-            P.notificationPositionMode = t;
+            M.notificationPositionMode = t;
         },
         OVERLAY_SET_TEXT_CHAT_NOTIFICATION_MODE: function (e) {
             let { mode: t } = e;
-            P.textChatNotifications = t;
+            M.textChatNotifications = t;
         },
         OVERLAY_SET_SHOW_KEYBIND_INDICATORS: function (e) {
             let { shouldShow: t } = e;
-            P.showKeybindIndicators = t;
+            M.showKeybindIndicators = t;
         },
         OVERLAY_SET_TEXT_WIDGET_OPACITY: function (e) {
             let { opacity: t } = e,
-                n = P.textWidgetOpacity !== t;
-            return (P.textWidgetOpacity = t), n;
+                n = M.textWidgetOpacity !== t;
+            return (M.textWidgetOpacity = t), n;
         },
         OVERLAY_DISABLE_EXTERNAL_LINK_ALERT: function () {
-            P.disableExternalLinkAlert = !0;
+            M.disableExternalLinkAlert = !0;
         },
         OVERLAY_INCOMPATIBLE_APP: function () {
             R = !0;

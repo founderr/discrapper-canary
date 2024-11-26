@@ -8,7 +8,7 @@ var i,
     c = n(592125);
 let d = {},
     f = {};
-class p extends (o = u.ZP.Store) {
+class _ extends (o = u.ZP.Store) {
     getTemplates(e) {
         return d[e];
     }
@@ -21,7 +21,7 @@ class p extends (o = u.ZP.Store) {
     }
 }
 (l = 'GuildRoleSubscriptionTierTemplatesStore'),
-    (r = 'displayName') in (i = p)
+    (r = 'displayName') in (i = _)
         ? Object.defineProperty(i, r, {
               value: l,
               enumerable: !0,
@@ -29,7 +29,7 @@ class p extends (o = u.ZP.Store) {
               writable: !0
           })
         : (i[r] = l),
-    (t.Z = new p(a.Z, {
+    (t.Z = new _(a.Z, {
         GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS: function (e) {
             let { selectedTemplate: t, guildId: n } = e,
                 i = Object.values(c.Z.getMutableGuildChannelsForGuild(n));

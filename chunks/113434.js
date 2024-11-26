@@ -114,8 +114,8 @@ var r,
     E = n(706454),
     v = n(553795),
     I = n(78839),
-    b = n(70956),
-    T = n(63063),
+    T = n(70956),
+    b = n(63063),
     S = n(930153),
     y = n(358085),
     A = n(617136),
@@ -127,8 +127,8 @@ var r,
     L = n(665430),
     x = n(569743),
     w = n(585500),
-    M = n(475595),
-    P = n(566078),
+    P = n(475595),
+    M = n(566078),
     k = n(46140),
     U = n(981631),
     B = n(388032);
@@ -200,8 +200,8 @@ function F(e) {
                         var n, r;
                         let i = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.claimedAt) == null;
                         if (i !== ((null === (r = t.userStatus) || void 0 === r ? void 0 : r.claimedAt) == null)) return i ? -1 : 1;
-                        let a = P.r.build(e.config).rewardsExpireAt;
-                        return Z(a, P.r.build(t.config).rewardsExpireAt, 0);
+                        let a = M.r.build(e.config).rewardsExpireAt;
+                        return Z(a, M.r.build(t.config).rewardsExpireAt, 0);
                     })
                     .map((e) => e.id);
                 return (n.current = e), e;
@@ -301,7 +301,7 @@ let q = (e) => {
             }
             let s = window.setInterval(() => {
                 i();
-            }, 1 * b.Z.Millis.SECOND);
+            }, 1 * T.Z.Millis.SECOND);
             return () => {
                 clearInterval(s), i();
             };
@@ -344,13 +344,13 @@ function J(e, t, n) {
         return B.intl.format(B.t['l4S+cX'], {
             minutes: r,
             onClick: a,
-            gameTitle: P.r.build(e.config).application.name
+            gameTitle: M.r.build(e.config).application.name
         });
     if ((0, O.$J)(e))
         return B.intl.format(B.t.Ajlcd3, {
             minutes: r,
             onClick: a,
-            gameTitle: P.r.build(e.config).application.name
+            gameTitle: M.r.build(e.config).application.name
         });
     if ((0, O.q8)(e)) {
         var s;
@@ -399,7 +399,7 @@ function ee(e) {
 function et(e) {
     var t;
     let n = (0, O.Xv)(e),
-        { product: r, isFetching: i } = (0, g.T)(P.r.build(e).defaultReward.skuId);
+        { product: r, isFetching: i } = (0, g.T)(M.r.build(e).defaultReward.skuId);
     return {
         hasQuestCollectibles: n,
         avatarDecoration: null == r ? void 0 : null === (t = r.items) || void 0 === t ? void 0 : t[0],
@@ -482,8 +482,8 @@ let ei = (e) => {
         let { xboxAccounts: e, playstationAccounts: t } = er(),
             n = e.length > 0,
             r = t.length > 0,
-            i = T.Z.getArticleURL(U.BhN.QUEST_HOW_TO_PLAYSTATION),
-            a = T.Z.getArticleURL(U.BhN.QUEST_HOW_TO_XBOX),
+            i = b.Z.getArticleURL(U.BhN.QUEST_HOW_TO_PLAYSTATION),
+            a = b.Z.getArticleURL(U.BhN.QUEST_HOW_TO_XBOX),
             s = B.intl.format(B.t.beN4DA, {
                 psHelpdeskArticle: i,
                 xboxHelpdeskArticle: a
@@ -689,7 +689,7 @@ function eh(e) {
 }
 function em(e, t, n) {
     var r;
-    let i = Y(u.useMemo(() => P.r.build(e.config).rewardsExpireAt, [e.config])),
+    let i = Y(u.useMemo(() => M.r.build(e.config).rewardsExpireAt, [e.config])),
         a = q(e),
         s = (null === (r = e.userStatus) || void 0 === r ? void 0 : r.completedAt) != null,
         o = z(e),
@@ -720,7 +720,7 @@ function eg(e, t) {
         () =>
             (null == n ? void 0 : n.config.cosponsorMetadata) == null
                 ? null
-                : (0, M.Rt)(e, n.config.cosponsorMetadata.logotype, {
+                : (0, P.Rt)(e, n.config.cosponsorMetadata.logotype, {
                       theme: null != t ? t : (0, p.wj)(r) ? U.BRd.DARK : U.BRd.LIGHT,
                       newCdn: i
                   }),

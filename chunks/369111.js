@@ -28,7 +28,7 @@ function f(e) {
             pendingErrors: null != f ? s.Z.getErrors().avatarDecoration : u.Z.getErrors().avatarDecoration
         })),
         I = (0, r.useCallback)((e) => (0, o.Jw)(e, null == _ ? void 0 : _.avatar), [null == _ ? void 0 : _.avatar]),
-        b = (0, r.useCallback)(
+        T = (0, r.useCallback)(
             (e) => {
                 (0, o.PO)(f, e), null != e && m(e);
             },
@@ -38,7 +38,7 @@ function f(e) {
         pendingAvatar: g,
         pendingAvatarDecoration: E,
         setPendingAvatar: t ? d.c_ : I,
-        setPendingAvatarDecoration: t ? d.Xz : b,
+        setPendingAvatarDecoration: t ? d.Xz : T,
         savedAvatarDecoration: h,
         pendingErrors: v
     };

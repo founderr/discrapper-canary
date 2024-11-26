@@ -1,6 +1,6 @@
 n.d(t, {
     V: function () {
-        return N;
+        return S;
     },
     _: function () {
         return r;
@@ -26,20 +26,20 @@ var i,
     C = n(650510);
 ((i = r || (r = {})).BOOSTING = 'BOOSTING'), (i.NITRO = 'NITRO'), (i.BASH_OUT = 'BASH_OUT'), (i.GAME_NIGHT = 'GAME_NIGHT');
 let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4',
-    S = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png',
-    N = (e) => {
+    N = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png',
+    S = (e) => {
         let { channelId: t, markAsDismissed: n, tutorialType: i } = e,
             {
                 analyticsLocation: r,
-                analyticsType: N,
+                analyticsType: S,
                 ctaText: T,
-                dismissText: A,
+                dismissText: x,
                 description: b,
-                learnMore: x,
+                learnMore: A,
                 title: Z,
                 videoPosterUrl: L,
                 videoUrl: y,
-                ctaOnClick: O
+                ctaOnClick: P
             } = (function (e) {
                 switch (e) {
                     case 'BOOSTING':
@@ -49,7 +49,7 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                             description: I.intl.string(I.t.eDjBOT),
                             learnMore: !0,
                             title: I.intl.string(I.t.wbiFFB),
-                            videoPosterUrl: S,
+                            videoPosterUrl: N,
                             videoUrl: v,
                             ctaText: I.intl.string(I.t['5SaQDw']),
                             dismissText: I.intl.string(I.t.WAI6xs)
@@ -61,7 +61,7 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                             description: I.intl.string(I.t.qJn0bW),
                             learnMore: !0,
                             title: I.intl.string(I.t.g8itmp),
-                            videoPosterUrl: S,
+                            videoPosterUrl: N,
                             videoUrl: v,
                             ctaText: I.intl.string(I.t['5SaQDw']),
                             dismissText: I.intl.string(I.t.WAI6xs)
@@ -104,14 +104,14 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                         };
                 }
             })(i),
-            { analyticsLocations: R } = (0, m.ZP)(r);
+            { analyticsLocations: O } = (0, m.ZP)(r);
         a.useEffect(() => {
-            f.default.track(_.rMx.TOOLTIP_VIEWED, { type: N });
-        }, [N]);
-        let P = (0, c.bp)() === _.IlC.POPOUT,
+            f.default.track(_.rMx.TOOLTIP_VIEWED, { type: S });
+        }, [S]);
+        let R = (0, c.bp)() === _.IlC.POPOUT,
             j = (0, s.e7)([g.Z], () => g.Z.getChannel(t), [t]);
         return (0, l.jsx)(m.Gt, {
-            value: R,
+            value: O,
             children: (0, l.jsx)('div', {
                 className: C.wrapper,
                 children: (0, l.jsx)('div', {
@@ -144,7 +144,7 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                 color: 'always-white',
                                 children: [
                                     b,
-                                    x
+                                    A
                                         ? (0, l.jsxs)(l.Fragment, {
                                               children: [
                                                   ' ',
@@ -166,13 +166,13 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                         onClick: () => {
                                             n(E.L.UNKNOWN);
                                         },
-                                        children: A
+                                        children: x
                                     }),
                                     (0, l.jsx)(o.Button, {
                                         color: o.Button.Colors.BRAND_INVERTED,
                                         onClick:
-                                            null != O
-                                                ? O
+                                            null != P
+                                                ? P
                                                 : () => {
                                                       if ((n(E.L.UNKNOWN), null != j))
                                                           (0, u.Z)({
@@ -184,8 +184,8 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                                                   object: _.qAy.ACTIVITIES_COACH_MARK,
                                                                   objectType: _.Qqv.ACTIVITY
                                                               },
-                                                              openInPopout: P,
-                                                              analyticsLocations: R,
+                                                              openInPopout: R,
+                                                              analyticsLocations: O,
                                                               opensAppLauncherModal: !0
                                                           }),
                                                               (0, d.w1)({ guildId: j.guild_id });

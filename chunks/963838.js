@@ -15,7 +15,7 @@ n.d(t, {
         return B;
     },
     v: function () {
-        return M;
+        return P;
     }
 });
 var r = n(392711),
@@ -36,8 +36,8 @@ var r = n(392711),
     E = n(862666),
     v = n(252611),
     I = n(136144),
-    b = n(316137),
-    T = n(654123),
+    T = n(316137),
+    b = n(654123),
     S = n(660020),
     y = n(980084),
     A = n(24688),
@@ -49,14 +49,14 @@ var r = n(392711),
     L = n(176354),
     x = n(353368),
     w = n(388032);
-let M = {
+let P = {
         start: 10,
         end: 15
     },
-    P = [a],
-    k = [s, o, l, u, c, d, f, _, p, h, m, g, E, v, I, b, T, S, y, A, N],
+    M = [a],
+    k = [s, o, l, u, c, d, f, _, p, h, m, g, E, v, I, T, b, S, y, A, N],
     U = {
-        [x.q.BASIC]: P,
+        [x.q.BASIC]: M,
         [x.q.PREMIUM]: k
     },
     B = i().memoize(

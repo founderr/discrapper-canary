@@ -49,7 +49,7 @@ let v = (e) => {
                     shouldShow: !m,
                     onTooltipShow: () => {
                         o &&
-                            b({
+                            T({
                                 emojiNode: n,
                                 isCustomEmoji: !1
                             });
@@ -90,7 +90,7 @@ let v = (e) => {
     },
     I = (e) => {
         let { node: t, isInteracting: n, tooltipPosition: a = p.b_.position, enableClick: c = !0, channelId: g, messageId: v } = e,
-            [I, T] = i.useState(String(Date.now())),
+            [I, b] = i.useState(String(Date.now())),
             [S, y] = i.useState(!1),
             [A, N] = i.useState(!1),
             C = function () {
@@ -117,7 +117,7 @@ let v = (e) => {
                     onTooltipShow: () => {
                         y(!0),
                             c &&
-                                (b({
+                                (T({
                                     emojiNode: t,
                                     isCustomEmoji: !0,
                                     nonce: R
@@ -162,7 +162,7 @@ let v = (e) => {
                       (0, r.jsx)(_.vk, {
                           ...e,
                           node: t,
-                          refreshPositionKey: () => T(String(Date.now())),
+                          refreshPositionKey: () => b(String(Date.now())),
                           nonce: R
                       }),
                   positionKey: I,
@@ -170,7 +170,7 @@ let v = (e) => {
               })
             : O();
     },
-    b = (e) => {
+    T = (e) => {
         let { emojiNode: t, isCustomEmoji: n, nonce: r } = e;
         c.ZP.trackWithMetadata(h.rMx.EXPRESSION_TOOLTIP_VIEWED, {
             type: g.cd.EMOJI_IN_MESSAGE_HOVER,

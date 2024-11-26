@@ -10,7 +10,7 @@ var r = n(200651),
     a = n(231338);
 function o(e) {
     var t;
-    let { guildId: n, role: o, className: E, canRemove: c = !1, onRemove: u = a.dG } = e,
+    let { guildId: n, role: o, className: E, canRemove: u = !1, onRemove: c = a.dG } = e,
         d = (0, i.useToken)(i.tokens.unsafe_rawColors.PRIMARY_300).hex(),
         _ = null !== (t = null == o ? void 0 : o.colorString) && void 0 !== t ? t : d,
         A = l.useMemo(() => ({ backgroundColor: ''.concat(_, '27') }), [_]);
@@ -22,8 +22,8 @@ function o(e) {
                   style: A,
                   role: o,
                   guildId: n,
-                  canRemove: c,
-                  onRemove: u
+                  canRemove: u,
+                  onRemove: c
               })
           });
 }

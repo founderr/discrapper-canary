@@ -9,12 +9,12 @@ var i,
     u = n(129293),
     d = n(388905),
     h = n(108427),
-    p = n(598077),
-    g = n(896797),
+    g = n(598077),
+    p = n(896797),
     m = n(981631),
     f = n(930441),
-    x = n(388032),
-    _ = n(232186);
+    _ = n(388032),
+    x = n(232186);
 function E(e, t, n) {
     return (
         t in e
@@ -29,7 +29,7 @@ function E(e, t, n) {
     );
 }
 a.ZP.initialize();
-class v extends (i = s.PureComponent) {
+class I extends (i = s.PureComponent) {
     componentDidMount() {
         let e = (0, u.Z)(this.props.location),
             t = (0, l.parse)(this.props.location.search);
@@ -50,7 +50,7 @@ class v extends (i = s.PureComponent) {
                     let {
                             body: { user: n }
                         } = e,
-                        i = new p.Z(n);
+                        i = new g.Z(n);
                     this.setState({
                         success: !0,
                         busy: !1,
@@ -71,25 +71,25 @@ class v extends (i = s.PureComponent) {
     }
     renderCategorySuccess(e, t) {
         let { defaultRoute: n, transitionTo: i } = this.props,
-            s = x.intl.formatToPlainString(x.t.YDAohI, { category: t });
+            s = _.intl.formatToPlainString(_.t.YDAohI, { category: t });
         return (0, r.jsxs)(d.ZP, {
             children: [
                 (0, r.jsx)(d.Dx, {
-                    className: _.marginBottom8,
-                    children: x.intl.string(x.t.f6rdLi)
+                    className: x.marginBottom8,
+                    children: _.intl.string(_.t.f6rdLi)
                 }),
                 (0, r.jsx)(d.DK, { children: s }),
                 (0, r.jsx)(d.zx, {
-                    className: _.marginTop20,
+                    className: x.marginTop20,
                     onClick: () => i(n),
-                    children: x.intl.string(x.t.fIv16O)
+                    children: _.intl.string(_.t.fIv16O)
                 }),
                 (0, r.jsx)(d.zx, {
-                    className: _.marginTop8,
+                    className: x.marginTop8,
                     color: d.zx.Colors.LINK,
                     look: d.zx.Looks.LINK,
                     onClick: () => i(m.Z5c.SETTINGS('notifications', f.vG)),
-                    children: x.intl.string(x.t.YYTira)
+                    children: _.intl.string(_.t.YYTira)
                 })
             ]
         });
@@ -106,17 +106,17 @@ class v extends (i = s.PureComponent) {
                 (0, r.jsx)(d.qE, {
                     src: null == n ? void 0 : n.getAvatarURL(void 0, 100),
                     size: c.AvatarSizes.DEPRECATED_SIZE_100,
-                    className: _.marginBottom20
+                    className: x.marginBottom20
                 }),
                 (0, r.jsx)(d.Dx, {
-                    className: _.marginBottom8,
-                    children: x.intl.string(x.t['6U6OMT'])
+                    className: x.marginBottom8,
+                    children: _.intl.string(_.t['6U6OMT'])
                 }),
-                (0, r.jsx)(d.DK, { children: x.intl.string(x.t['yaDJ4+']) }),
+                (0, r.jsx)(d.DK, { children: _.intl.string(_.t['yaDJ4+']) }),
                 (0, r.jsx)(d.zx, {
-                    className: _.marginTop40,
+                    className: x.marginTop40,
                     onClick: () => t(e),
-                    children: x.intl.string(x.t.fIv16O)
+                    children: _.intl.string(_.t.fIv16O)
                 })
             ]
         });
@@ -127,17 +127,17 @@ class v extends (i = s.PureComponent) {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(105020),
-                    className: _.marginBottom20
+                    className: x.marginBottom20
                 }),
                 (0, r.jsx)(d.Dx, {
-                    className: _.marginBottom8,
-                    children: x.intl.string(x.t.ox9hIS)
+                    className: x.marginBottom8,
+                    children: _.intl.string(_.t.ox9hIS)
                 }),
-                (0, r.jsx)(d.DK, { children: x.intl.string(x.t['/dcuR0']) }),
+                (0, r.jsx)(d.DK, { children: _.intl.string(_.t['/dcuR0']) }),
                 (0, r.jsx)(d.zx, {
-                    className: _.marginTop40,
+                    className: x.marginTop40,
                     onClick: () => t(e),
-                    children: x.intl.string(x.t.fIv16O)
+                    children: _.intl.string(_.t.fIv16O)
                 })
             ]
         });
@@ -156,4 +156,4 @@ class v extends (i = s.PureComponent) {
             });
     }
 }
-E(v, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }), (t.Z = a.ZP.connectStores([g.Z], () => ({ defaultRoute: g.Z.defaultRoute }))(v));
+E(I, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }), (t.Z = a.ZP.connectStores([p.Z], () => ({ defaultRoute: p.Z.defaultRoute }))(I));

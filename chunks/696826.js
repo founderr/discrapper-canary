@@ -1,6 +1,6 @@
 n.d(t, {
     Dk: function () {
-        return b;
+        return T;
     },
     P5: function () {
         return S;
@@ -24,7 +24,7 @@ n.d(t, {
         return y;
     },
     vP: function () {
-        return T;
+        return b;
     },
     vj: function () {
         return m;
@@ -85,7 +85,7 @@ function v(e, t, n, r) {
 function I(e, t, n) {
     return ''.concat(0.5625 * e + n, 'px ').concat(0.75 * e + t, 'px');
 }
-function b(e) {
+function T(e) {
     let { size: t, status: n, isMobile: r, isTyping: i, topOffset: a = 0, leftOffset: s = 0 } = e,
         o = (a / 8) * t,
         l = (s / 8) * t;
@@ -221,7 +221,7 @@ function b(e) {
             };
     }
 }
-function T(e, t, n) {
+function b(e, t, n) {
     var i;
     let { bgRadius: a, bgY: s, bgX: l, bgHeight: u, bgWidth: c, cutoutX: d, cutoutY: f, cutoutWidth: _, cutoutHeight: p, cutoutRadius: h, polygonScale: m, polygonOrigin: g, dotY: E, dotX: v, dotRadius: I } = e;
     return (0, r.jsxs)('mask', {
@@ -273,7 +273,7 @@ function S(e) {
         E = t === f.Skl.ONLINE && n,
         v = i.useMemo(
             () =>
-                b({
+                T({
                     size: a,
                     status: t,
                     isMobile: E
@@ -304,7 +304,7 @@ function S(e) {
         className: s()(p.mask, c),
         style: d,
         children: [
-            T(I, a, g),
+            b(I, a, g),
             (0, r.jsx)(o.animated.rect, {
                 x: 0,
                 y: 0,

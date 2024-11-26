@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(165583),
     v = n(197115),
     I = n(631771),
-    b = n(609218),
-    T = n(210887),
+    T = n(609218),
+    b = n(210887),
     S = n(626135),
     y = n(176354),
     A = n(74538),
@@ -32,11 +32,11 @@ var r = n(200651),
 t.Z = (e) => {
     var t, a;
     let w,
-        { onLearnMore: M, onClose: P, channel: k, emojiDescriptor: U, pickerIntention: B, analyticsLocation: G, containerContext: Z } = e,
-        F = (0, o.e7)([T.Z], () => T.Z.theme) === R.BRd.LIGHT ? 'light' : 'dark',
+        { onLearnMore: P, onClose: M, channel: k, emojiDescriptor: U, pickerIntention: B, analyticsLocation: G, containerContext: Z } = e,
+        F = (0, o.e7)([b.Z], () => b.Z.theme) === R.BRd.LIGHT ? 'light' : 'dark',
         [V, j] = i.useState(!1),
         H = () => {
-            (0, N.A3)(k), (0, p.z)(), M();
+            (0, N.A3)(k), (0, p.z)(), P();
         },
         Y = n(577391)('./img_premium_emoji_'.concat(F, '.svg')),
         W = 'https://cdn.discordapp.com/assets/premium/roadblocks/emoji_'.concat(F, '.png'),
@@ -88,7 +88,7 @@ t.Z = (e) => {
     }, [eo]);
     let el = es.length > 1 && et;
     return ee
-        ? (0, r.jsx)(b.Z, {
+        ? (0, r.jsx)(T.Z, {
               containerContext: Z,
               image: {
                   url: W,
@@ -99,7 +99,7 @@ t.Z = (e) => {
               description: L.intl.string(L.t.dURIzc),
               enableSocialProof: el,
               analyticsLocationSection: R.jXE.EMOJI_UPSELL_POPOUT,
-              onClose: P,
+              onClose: M,
               upsellViewedTrackingData: {
                   type: w,
                   is_external: ei,
@@ -118,7 +118,7 @@ t.Z = (e) => {
               children: [
                   (0, r.jsx)(l.Clickable, {
                       className: x.premiumPromoClose,
-                      onClick: P,
+                      onClick: M,
                       children: L.intl.string(L.t.cpT0Cg)
                   }),
                   (0, r.jsxs)(r.Fragment, {
@@ -127,7 +127,7 @@ t.Z = (e) => {
                               ? (0, r.jsx)(E.ZP, {
                                     type: D.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
                                     subscriptionTier: null !== (a = null == K ? void 0 : null === (t = K.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== a ? a : D.Si.TIER_2,
-                                    onClose: P,
+                                    onClose: M,
                                     trialOffer: K,
                                     discountOffer: z,
                                     children: L.intl.format(L.t.se13Fh, { onClick: H })
@@ -163,7 +163,7 @@ t.Z = (e) => {
                                       j(!0);
                                   },
                                   onSubscribeModalClose: (e) => {
-                                      j(!1), e && P();
+                                      j(!1), e && M();
                                   },
                                   buttonText: q ? L.intl.string(L.t['Gd/XHB']) : L.intl.string(L.t.P3etAg)
                               })

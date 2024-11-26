@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     },
     ZP: function () {
-        return T;
+        return b;
     }
 }),
     n(47120),
@@ -52,7 +52,7 @@ function I(e) {
             items: c
         });
 }
-function b(e, t) {
+function T(e, t) {
     var n;
     let r = null !== (n = t.get(g.X8)) && void 0 !== n ? n : g.Hy;
     e.push({
@@ -61,12 +61,12 @@ function b(e, t) {
         items: v(r)
     });
 }
-function T(e) {
+function b(e) {
     let { filterOutEmptyCurrentGuild: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         d = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
         g = c.ZP.isPremium(d, E.p9.TIER_2),
-        [T, S, y] = (0, i.Wu)([p.Z], () => [p.Z.getSounds(), p.Z.getFavorites(), p.Z.isFetching()]),
+        [b, S, y] = (0, i.Wu)([p.Z], () => [p.Z.getSounds(), p.Z.getFavorites(), p.Z.isFetching()]),
         A = (0, m.h)(e, !1),
         N = (0, i.Wu)([o.Z], () => {
             let e = [];
@@ -104,7 +104,7 @@ function T(e) {
     return r.useMemo(() => {
         let e = [];
         return n
-            ? (b(e, T),
+            ? (T(e, b),
               {
                   categories: e,
                   isFetching: y
@@ -112,7 +112,7 @@ function T(e) {
             : (I({
                   sections: e,
                   guildIds: A,
-                  allSounds: T,
+                  allSounds: b,
                   potentialSoundIdsForSection: Array.from(S),
                   sectionType: h.bg.FAVORITES,
                   sortById: !0
@@ -121,7 +121,7 @@ function T(e) {
                   I({
                       sections: e,
                       guildIds: A,
-                      allSounds: T,
+                      allSounds: b,
                       potentialSoundIdsForSection: w,
                       sectionType: h.bg.RECENTLY_HEARD,
                       sortById: !1
@@ -130,7 +130,7 @@ function T(e) {
                   I({
                       sections: e,
                       guildIds: A,
-                      allSounds: T,
+                      allSounds: b,
                       potentialSoundIdsForSection: x.map((e) => e.soundId),
                       sectionType: h.bg.FREQUENTLY_USED,
                       sortById: !1
@@ -158,8 +158,8 @@ function T(e) {
                           key: t.id,
                           items: o
                       });
-              })(e, R, O, T, t),
-              !C && b(e, T),
+              })(e, R, O, b, t),
+              !C && T(e, b),
               !(function (e, t, n, r, i) {
                   for (let s of t) {
                       var a;
@@ -176,13 +176,13 @@ function T(e) {
                               items: t
                           });
                   }
-              })(e, N, null == R ? void 0 : R.id, T, g),
-              C && b(e, T),
+              })(e, N, null == R ? void 0 : R.id, b, g),
+              C && T(e, b),
               {
                   categories: e,
                   isFetching: y
               });
-    }, [A, T, S, w, x, L, D, R, O, t, C, N, n, y, g]);
+    }, [A, b, S, w, x, L, D, R, O, t, C, N, n, y, g]);
 }
 function S(e, t, n) {
     return r.useMemo(

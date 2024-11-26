@@ -3,10 +3,10 @@ n.d(t, {
         return E;
     },
     ML: function () {
-        return T;
+        return b;
     },
     ZJ: function () {
-        return b;
+        return T;
     },
     mF: function () {
         return r;
@@ -54,7 +54,7 @@ function E(e, t, n) {
     if (!y && C && (null == e.integration_types || e.integration_types.includes(o.Y.GUILD_INSTALL))) return 5;
     if (i instanceof d.Sf) {
         s()(void 0 !== N, 'missing applicationAllowedForChannel');
-        let t = b(e.permissions, i, L);
+        let t = T(e.permissions, i, L);
         if (
             (function (e) {
                 return !1 === e;
@@ -68,7 +68,7 @@ function E(e, t, n) {
         )
             return 6;
     }
-    let x = T(e.permissions, L, v, I, S);
+    let x = b(e.permissions, L, v, I, S);
     return (function (e) {
         return !0 === e;
     })(x)
@@ -90,7 +90,7 @@ function v(e) {
 function I(e) {
     return !1 === e;
 }
-function b(e, t, n) {
+function T(e, t, n) {
     if (null == e) return null;
     let r = t.id;
     if (t.isThread()) {
@@ -102,7 +102,7 @@ function b(e, t, n) {
     let s = e[(0, c.rE)((0, p.bD)(n), _.Kw.CHANNEL)];
     return null != s ? s.permission : null;
 }
-function T(e, t, n, r, i) {
+function b(e, t, n, r, i) {
     if (null == e) return null;
     if (!i) {
         let t = e[(0, c.rE)(n, _.Kw.USER)];

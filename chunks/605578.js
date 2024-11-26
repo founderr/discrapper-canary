@@ -9,9 +9,9 @@ var r = n(200651),
     s = n(104611);
 function o(e) {
     let { tag: t = 'div', children: n, className: o, style: l, focusProps: u, onClick: c, onDoubleClick: d, onContextMenu: f, onKeyDown: _, onFocus: p, onBlur: h, onMouseOver: m, onMouseDown: g, onMouseLeave: E, buttonProps: v, 'aria-label': I } = e,
-        b = i.useRef(null);
+        T = i.useRef(null);
     return (0, r.jsxs)(t, {
-        ref: b,
+        ref: T,
         className: o,
         style: l,
         onClick: c,
@@ -23,7 +23,7 @@ function o(e) {
             (0, r.jsx)(a.P, {
                 ...v,
                 focusProps: {
-                    ringTarget: b,
+                    ringTarget: T,
                     ...u
                 },
                 className: s.focusTarget,

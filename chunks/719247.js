@@ -52,7 +52,7 @@ function I(e) {
         matchedKeys: n
     };
 }
-function b() {
+function T() {
     let e = !1,
         t = Array.from(E.keys()),
         n = new Set(),
@@ -66,9 +66,9 @@ function b() {
     for (let n of a().difference(t, [...r])) E.delete(n), (e = !0);
     return e;
 }
-class T extends (r = l.ZP.Store) {
+class b extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z, c.Z), this.syncWith([c.Z], b);
+        this.waitFor(d.Z, c.Z), this.syncWith([c.Z], T);
     }
     getMatchingActivity(e) {
         return (0, p.n2)(e) ? null : E.get(v(e));
@@ -77,8 +77,8 @@ class T extends (r = l.ZP.Store) {
         super(...e), m(this, 'canRenderContent', (e) => !(0, p.n2)(e) && (!g.has(e.content_type) || null != this.getMatchingActivity(e)));
     }
 }
-m(T, 'displayName', 'ContentInventoryActivityStore'),
-    (t.Z = new T(u.Z, {
+m(b, 'displayName', 'ContentInventoryActivityStore'),
+    (t.Z = new b(u.Z, {
         CONNECTION_OPEN: function () {
             E.clear();
         },

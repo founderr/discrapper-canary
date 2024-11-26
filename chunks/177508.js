@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return f;
     }
 }),
     n(757143),
@@ -22,7 +22,7 @@ var i = n(200651),
     x = n(161309);
 let S = Object.keys(d.Button.Colors).filter((e) => 'CUSTOM' !== e),
     T = Object.keys(d.Button.Looks).filter((e) => 'BLANK' !== e),
-    C = Object.keys(d.Button.Sizes).filter((e) => 'NONE' !== e);
+    E = Object.keys(d.Button.Sizes).filter((e) => 'NONE' !== e);
 function _() {
     return (0, i.jsxs)('div', {
         children: [
@@ -48,9 +48,9 @@ function _() {
         ]
     });
 }
-let E = ['neutral', 'blue_new', 'blurple', 'green_new', 'red_new', 'teal_new', 'yellow_new', 'orange_new'];
-function f() {
-    return E.map((e) =>
+let C = ['neutral', 'blue_new', 'blurple', 'green_new', 'red_new', 'teal_new', 'yellow_new', 'orange_new'];
+function I() {
+    return C.map((e) =>
         (0, i.jsxs)(
             'div',
             {
@@ -88,7 +88,7 @@ function f() {
         )
     );
 }
-function I() {
+function f() {
     return (0, i.jsx)(m.Z, {
         parentSetting: h.s6.DESIGN_SYSTEMS,
         settingsSection: g.oAB.DESIGN_SYSTEMS,
@@ -100,7 +100,7 @@ function I() {
             },
             {
                 title: 'Colors',
-                component: () => (0, i.jsx)(f, {}),
+                component: () => (0, i.jsx)(I, {}),
                 setting: h.s6.DESIGN_SYSTEMS_COLORS
             }
         ]
@@ -124,7 +124,7 @@ function N() {
             ),
             (0, i.jsx)('hr', { className: x.sectionDivider }, e + 'divider')
         ]),
-        r = C.flatMap((e) =>
+        r = E.flatMap((e) =>
             (0, i.jsx)(d.Button, {
                 color: d.Button.Colors.BRAND,
                 look: d.Button.Looks.FILLED,

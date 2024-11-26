@@ -1,6 +1,6 @@
 n.d(t, {
     yw: function () {
-        return T;
+        return b;
     }
 }),
     n(47120),
@@ -39,19 +39,19 @@ let h = ['http:', 'https:', 'discord:'],
     E = [d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT],
     v = [d.b.TEXT],
     I = [d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP, d.b.EMOJI, d.b.CUSTOM_EMOJI, d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT];
-function b(e, t) {
+function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     for (let r of (!Array.isArray(e) && (e = [e]), e)) {
         if (void 0 === r || !t.includes(r.type)) return null;
         if (r.type === d.b.INLINE_CODE) {
             let e = [...t, ...n];
-            if (null == b(r.validationChildContent, e)) return null;
+            if (null == T(r.validationChildContent, e)) return null;
         }
-        if (Array.isArray(r.content) && null == b(r.content, t)) return null;
+        if (Array.isArray(r.content) && null == T(r.content, t)) return null;
     }
     return e;
 }
-function T(e) {
+function b(e) {
     try {
         var t;
         let n = new URL(e),
@@ -86,7 +86,7 @@ t.ZP = {
             N = S.fullySanitized,
             C = A.trim();
         if (0 === y.trim().length || 0 === C.length) return f();
-        let R = T(l().unescapeUrl(s)),
+        let R = b(l().unescapeUrl(s)),
             O = (0, u.ZP)(a).length > 0 || (0, u.ZP)(o).length > 0;
         if (null == R || O) return f();
         let D = {
@@ -97,11 +97,11 @@ t.ZP = {
             L = n.allowEmojiLinks ? g : m,
             x = [...L, ...E],
             w = [...v, ...I],
-            M = b(t(A, D), x, [d.b.EMOJI]),
-            P = b(t(N, D), w);
+            P = T(t(A, D), x, [d.b.EMOJI]),
+            M = T(t(N, D), w);
         if (
-            null == M ||
             null == P ||
+            null == M ||
             0 ===
                 (function e(t) {
                     let n = '';
@@ -140,7 +140,7 @@ t.ZP = {
                                 (0, c.vE)(r.type);
                         }
                     return n;
-                })(M).trim().length
+                })(P).trim().length
         )
             return f();
         let k = i().pick(t.rules, L),

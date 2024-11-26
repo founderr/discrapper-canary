@@ -8,8 +8,8 @@ n.r(t),
 var r = n(200651),
     l = n(192379),
     o = n(120356),
-    i = n.n(o),
-    s = n(752877),
+    s = n.n(o),
+    i = n(752877),
     a = n(442837),
     d = n(481060),
     c = n(749210),
@@ -63,19 +63,19 @@ function P(e) {
             },
             [t]
         ),
-        S = l.useCallback(() => {
+        M = l.useCallback(() => {
             C.Z.completeOnboarding(t, w);
         }, [t, w]),
-        M = (0, a.e7)([f.Z], () => f.Z.getGuild(t)),
+        S = (0, a.e7)([f.Z], () => f.Z.getGuild(t)),
         A = l.useMemo(
             () =>
-                null == M
+                null == S
                     ? null
                     : b.ZP.getGuildSplashURL({
-                          id: M.id,
-                          splash: M.splash
+                          id: S.id,
+                          splash: S.splash
                       }),
-            [M]
+            [S]
         ),
         F = (0, a.e7)([j.ZP], () => j.ZP.getCurrentOnboardingStep(t)),
         [U, q] = l.useState(null != A ? null : 'cover');
@@ -94,8 +94,8 @@ function P(e) {
         H = (0, a.e7)([j.ZP], () => j.ZP.getOnboardingStatus(t)),
         G = null != w && w.length > 0,
         z = l.useCallback(() => {
-            (0, j.kp)(H) && R && G ? V(0) : S();
-        }, [H, R, G, V, S]);
+            (0, j.kp)(H) && R && G ? V(0) : M();
+        }, [H, R, G, V, M]);
     l.useEffect(() => {
         if (!j.ZP.shouldShowOnboarding(t)) return c.Z.escapeToDefaultChannel(t);
         (0, h.E)(t);
@@ -103,7 +103,7 @@ function P(e) {
     let W = (0, d.useTransition)(
             F,
             {
-                config: s.config.default,
+                config: i.config.default,
                 from: {
                     scale: 0.8,
                     opacity: 0
@@ -116,7 +116,7 @@ function P(e) {
             'cover' !== U && null !== U ? 'animate-never' : 'respect-motion-settings'
         ),
         Y = j.ZP.shouldShowOnboarding(t),
-        X = null == M;
+        X = null == S;
     if (
         (l.useEffect(() => {
             if (!Y || X) {
@@ -126,14 +126,14 @@ function P(e) {
                 return () => clearTimeout(e);
             }
         }, [Y, X, t]),
-        !j.ZP.shouldShowOnboarding(t) || null == M)
+        !j.ZP.shouldShowOnboarding(t) || null == S)
     )
         return null;
     let K = () => {
         switch (F) {
             case 'cover':
                 return (0, r.jsx)(I.ZP, {
-                    guild: M,
+                    guild: S,
                     onboardingStatus: j.uX.READY,
                     onStart: z,
                     disableTracking: y
@@ -142,20 +142,20 @@ function P(e) {
                 return (0, r.jsx)(B.Z, {
                     setCurrentStep: V,
                     previousPromptIndex: w.length - 1,
-                    guild: M,
+                    guild: S,
                     prompts: w,
-                    completeOnboarding: S,
+                    completeOnboarding: M,
                     disableTracking: y
                 });
             case null:
                 return null;
             default:
                 return (0, r.jsx)(E.Z, {
-                    guild: M,
+                    guild: S,
                     prompts: w,
                     step: F,
                     selectOption: L,
-                    completeOnboarding: S,
+                    completeOnboarding: M,
                     setCurrentStep: V,
                     disableTracking: y
                 });
@@ -167,7 +167,7 @@ function P(e) {
         children: [
             null != A
                 ? (0, r.jsx)(p.Z, {
-                      className: i()(k.artwork),
+                      className: s()(k.artwork),
                       src: A,
                       width: o,
                       height: v,
@@ -186,7 +186,7 @@ function P(e) {
             W((e, t, n) => {
                 let { key: l } = n;
                 return (0, r.jsx)(
-                    s.animated.div,
+                    i.animated.div,
                     {
                         style: e,
                         children: K()

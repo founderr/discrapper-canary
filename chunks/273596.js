@@ -24,10 +24,10 @@ var i = n(200651),
     I = n(140700),
     C = n(665807),
     v = n(188493),
-    S = n(294330),
-    N = n(981631),
+    N = n(294330),
+    S = n(981631),
     T = n(841787);
-let A = Object.freeze({
+let x = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
@@ -39,10 +39,10 @@ let A = Object.freeze({
         left: 32,
         right: 32
     }),
-    x = {
-        page: N.ZY5.GUILD_DISCOVERY,
-        object: N.qAy.CARD,
-        section: N.jXE.DISCOVER_SEARCH
+    A = {
+        page: S.ZY5.GUILD_DISCOVERY,
+        object: S.qAy.CARD,
+        section: S.jXE.DISCOVER_SEARCH
     },
     Z = o().throttle(m.c6, 1000, {
         leading: !1,
@@ -50,23 +50,23 @@ let A = Object.freeze({
     });
 function L(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
-        { guildIds: o, loading: m, searchResultsQuery: N, loadMore: L, searchCategoryId: y, isBlockedSearchQuery: O } = (0, _.f)({ loadId: t }),
-        R = 0 === o.length && !m,
-        P = r.useContext(u.AnalyticsContext),
+        { guildIds: o, loading: m, searchResultsQuery: S, loadMore: L, searchCategoryId: y, isBlockedSearchQuery: P } = (0, _.f)({ loadId: t }),
+        O = 0 === o.length && !m,
+        R = r.useContext(u.AnalyticsContext),
         [j, D] = r.useState((0, f.PM)()),
         [M, w] = r.useState(!0),
         k = r.useRef(M),
         [U, G] = r.useState(3),
         B = r.useRef(U),
-        V = r.useRef(null),
-        H = r.useCallback(
+        H = r.useRef(null),
+        V = r.useCallback(
             (e) => {
                 var t;
-                if (O || R || m) return;
-                let n = null === (t = V.current) || void 0 === t ? void 0 : t.getScrollerState();
+                if (P || O || m) return;
+                let n = null === (t = H.current) || void 0 === t ? void 0 : t.getScrollerState();
                 null != n && null != e && n.scrollHeight <= e.height && L();
             },
-            [O, L, m, R]
+            [P, L, m, O]
         ),
         F = (0, d.y)((e) => {
             let t = null == e ? void 0 : e.getBoundingClientRect();
@@ -75,28 +75,28 @@ function L(e) {
             n < 1024 && k.current ? ((k.current = !1), w(!1)) : n > 1024 && !k.current && ((k.current = !0), w(!0));
             let i = 1;
             for (n -= M ? 450 : 0, n -= 280; n > 0; ) (n -= 264), (i += 1);
-            i !== B.current && ((B.current = i), G(i)), H(t);
+            i !== B.current && ((B.current = i), G(i)), V(t);
         });
     r.useLayoutEffect(() => {
         var e;
-        H(null === (e = F.current) || void 0 === e ? void 0 : e.getBoundingClientRect());
-    }, [F, o, H]),
+        V(null === (e = F.current) || void 0 === e ? void 0 : e.getBoundingClientRect());
+    }, [F, o, V]),
         r.useEffect(() => {
             D((0, f.PM)());
-        }, [N]),
+        }, [S]),
         r.useEffect(() => {
             Z({
                 loadId: t,
                 searchId: j,
-                query: N,
+                query: S,
                 guildResults: o.map(p.Z.getGuild).filter(h.lm),
-                analyticsContext: P,
+                analyticsContext: R,
                 categoryId: y
             });
-        }, [P, o, t, y, j, N]);
+        }, [R, o, t, y, j, S]);
     let z = r.useCallback((e) => n(e, y), [n, y]),
-        Y = r.useMemo(() => (m && !O ? [o.length, 0] : [o.length]), [o.length, O, m]),
-        W = r.useCallback(
+        W = r.useMemo(() => (m && !P ? [o.length, 0] : [o.length]), [o.length, P, m]),
+        Y = r.useCallback(
             (e, n, r) => {
                 switch (e) {
                     case 0:
@@ -107,14 +107,14 @@ function L(e) {
                                     paddingLeft: n.left,
                                     width: n.width - 16
                                 },
-                                className: a()({ [T.heading]: !M || R }),
+                                className: a()({ [T.heading]: !M || O }),
                                 children: [
                                     !M &&
                                         (0, i.jsxs)('div', {
                                             className: T.headingFilters,
                                             children: [(0, i.jsx)(I.Z, { loadId: t }), (0, i.jsx)(v.Z, { loadId: t })]
                                         }),
-                                    (R || O) && (0, i.jsx)(C.Z, { loadId: t })
+                                    (O || P) && (0, i.jsx)(C.Z, { loadId: t })
                                 ]
                             },
                             r
@@ -123,21 +123,21 @@ function L(e) {
                         return (0, i.jsx)(c.Spinner, { className: a()(T.spinner, { [T.spinnerWithSidebar]: M }) }, r);
                 }
             },
-            [O, R, M, t]
+            [P, O, M, t]
         ),
         K = r.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
                         let t = M ? 16 : 50;
-                        return R ? t + 448 : t;
+                        return O ? t + 448 : t;
                     case 1:
                         return 120;
                     default:
                         throw Error('[getSectionHeight] Failed for section: '.concat(e));
                 }
             },
-            [R, M]
+            [O, M]
         ),
         q = r.useCallback(
             (e, t) => {
@@ -166,7 +166,7 @@ function L(e) {
             async (e, t, n, i) => {
                 var r, a;
                 await l(e, t, n, i);
-                let s = null === (a = V.current) || void 0 === a ? void 0 : null === (r = a.getScrollerState()) || void 0 === r ? void 0 : r.scrollTop;
+                let s = null === (a = H.current) || void 0 === a ? void 0 : null === (r = a.getScrollerState()) || void 0 === r ? void 0 : r.scrollTop;
                 null != s && g.Z.setState({ scrollPosition: s });
             },
             [l]
@@ -179,9 +179,9 @@ function L(e) {
                         'div',
                         {
                             style: n,
-                            children: (0, i.jsx)(S.ZP, {
+                            children: (0, i.jsx)(N.ZP, {
                                 guildId: e,
-                                onClick: async (e) => await Q(e, t, y, x),
+                                onClick: async (e) => await Q(e, t, y, A),
                                 onView: (e) => z(e)
                             })
                         },
@@ -193,7 +193,7 @@ function L(e) {
             [o, Q, z, y]
         );
     r.useEffect(() => {
-        let e = V.current;
+        let e = H.current;
         return () => {
             var t;
             let n = null == e ? void 0 : null === (t = e.getScrollerState()) || void 0 === t ? void 0 : t.scrollTop;
@@ -205,7 +205,7 @@ function L(e) {
             null != e &&
                 setTimeout(() => {
                     var t;
-                    null === (t = V.current) ||
+                    null === (t = H.current) ||
                         void 0 === t ||
                         t.scrollTo({
                             to: e,
@@ -217,11 +217,11 @@ function L(e) {
                 });
         }, []);
     let $ = r.useMemo(() => {
-            if (!O)
+            if (!P)
                 return (0, s.debounce)(
                     () => {
                         var e;
-                        let t = null === (e = V.current) || void 0 === e ? void 0 : e.getScrollerState();
+                        let t = null === (e = H.current) || void 0 === e ? void 0 : e.getScrollerState();
                         if (null == t) return;
                         let n = t.scrollTop + t.offsetHeight;
                         t.scrollHeight - n < 240 && L();
@@ -229,20 +229,20 @@ function L(e) {
                     100,
                     { leading: !0 }
                 );
-        }, [O, L]),
-        ee = M ? A : b;
+        }, [P, L]),
+        ee = M ? x : b;
     return (0, i.jsx)('div', {
         className: T.container,
         ref: F,
         children: (0, i.jsx)(c.MasonryList, {
-            ref: V,
+            ref: H,
             className: T.masonryList,
-            sections: Y,
+            sections: W,
             columns: U,
             itemGutter: 16,
             padding: ee,
             renderItem: J,
-            renderSection: W,
+            renderSection: Y,
             getSectionHeight: K,
             getItemKey: q,
             getItemHeight: X,

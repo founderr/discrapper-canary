@@ -20,11 +20,11 @@ var i = n(200651),
     x = n(906732),
     S = n(475977),
     T = n(957730),
-    C = n(53691),
+    E = n(53691),
     _ = n(267717),
-    E = n(296810),
-    f = n(921813),
-    I = n(610794),
+    C = n(296810),
+    I = n(921813),
+    f = n(610794),
     N = n(935147),
     A = n(246946),
     b = n(25990),
@@ -72,8 +72,8 @@ function F() {
               value: w,
               children: [
                   (0, i.jsx)(S.Z, {}),
-                  (0, i.jsx)(E.Z, {
-                      profilePreview: (0, i.jsx)(f.Z, {
+                  (0, i.jsx)(C.Z, {
+                      profilePreview: (0, i.jsx)(I.Z, {
                           user: e,
                           canUsePremiumCustomization: k,
                           onUpsellClick: D.Z,
@@ -82,7 +82,7 @@ function F() {
                       }),
                       children: (0, i.jsx)(y.Z, {})
                   }),
-                  Y && (0, i.jsx)(I.Z, {}),
+                  Y && (0, i.jsx)(f.Z, {}),
                   (0, i.jsx)(o.$, {
                       onChange: (e) => G(e),
                       threshold: 0.25,
@@ -98,7 +98,7 @@ function F() {
                   }),
                   H &&
                       !F &&
-                      (0, i.jsx)(C.p, {
+                      (0, i.jsx)(E.p, {
                           className: Z.floatingNitroUpsell,
                           showUpsell: H && !V,
                           text: L.intl.format(L.t.TmfgIy, { onClick: () => (0, _.openPremiumTryItOutProfileUpsell)() }),

@@ -23,8 +23,8 @@ var r = n(200651),
     E = n(906732),
     v = n(385499),
     I = n(171368),
-    b = n(598077),
-    T = n(271383),
+    T = n(598077),
+    b = n(271383),
     S = n(626135),
     y = n(275759),
     A = n(107484),
@@ -36,8 +36,8 @@ var r = n(200651),
     L = n(981631),
     x = n(228168),
     w = n(388032),
-    M = n(383077);
-function P(e) {
+    P = n(383077);
+function M(e) {
     let t,
         { connectionType: n, connectionMetadataField: i, operator: a, value: s, description: o } = e;
     if (null != o)
@@ -67,12 +67,12 @@ function P(e) {
     return null == t
         ? null
         : (0, r.jsxs)('div', {
-              className: M.popoutCheck,
+              className: P.popoutCheck,
               children: [
                   (0, r.jsx)(f.CheckmarkLargeIcon, {
                       size: 'md',
                       color: 'currentColor',
-                      className: M.popoutCheckIcon
+                      className: P.popoutCheckIcon
                   }),
                   (0, r.jsx)(f.Text, {
                       variant: 'text-xs/medium',
@@ -96,39 +96,39 @@ function k(e) {
                 _ = u.find((e) => null != e.application),
                 h = m.Z.get(e),
                 g = null == _ ? void 0 : _.application,
-                E = (null == g ? void 0 : g.bot) != null ? new b.Z(g.bot) : null;
+                E = (null == g ? void 0 : g.bot) != null ? new T.Z(g.bot) : null;
             return (
                 y.SJ.includes(null !== (t = null == g ? void 0 : g.id) && void 0 !== t ? t : '')
                     ? (l = (0, r.jsx)(R.Z, {
-                          className: M.botTag,
+                          className: P.botTag,
                           color: i,
                           size: 16
                       }))
                     : null != E &&
                       (l = (0, r.jsx)(v.Z, {
-                          className: M.botTag,
+                          className: P.botTag,
                           verified: E.isVerifiedBot()
                       })),
                 (0, r.jsxs)(
                     'div',
                     {
-                        className: M.popoutChecksGroup,
+                        className: P.popoutChecksGroup,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: M.popoutCheckGroupName,
+                                className: P.popoutCheckGroupName,
                                 children: [
                                     null != h
                                         ? (0, r.jsx)('img', {
                                               src: (0, d.wj)(n) ? h.icon.darkSVG : h.icon.lightSVG,
                                               alt: '',
-                                              className: M.popoutCheckGroupPlatformIcon
+                                              className: P.popoutCheckGroupPlatformIcon
                                           })
                                         : null,
                                     null != E
                                         ? (0, r.jsx)(p.Z, {
                                               user: E,
                                               size: f.AvatarSizes.SIZE_20,
-                                              className: M.popoutCheckGroupPlatformIcon
+                                              className: P.popoutCheckGroupPlatformIcon
                                           })
                                         : null,
                                     (0, r.jsx)(f.Text, {
@@ -146,7 +146,7 @@ function k(e) {
                                     s()(null != i, 'operator is null'),
                                     s()(null != a, 'value is null'),
                                     (0, r.jsx)(
-                                        P,
+                                        M,
                                         {
                                             connectionType: t,
                                             connectionMetadataField: n,
@@ -178,43 +178,43 @@ function U(e) {
         });
     }, [o, l, c, d]);
     let _ = (0, u.e7)(
-        [T.ZP],
+        [b.ZP],
         () => {
             var e, t;
-            return null !== (t = null === (e = T.ZP.getSelfMember(d)) || void 0 === e ? void 0 : e.roles.includes(l)) && void 0 !== t && t;
+            return null !== (t = null === (e = b.ZP.getSelfMember(d)) || void 0 === e ? void 0 : e.roles.includes(l)) && void 0 !== t && t;
         },
         [d, l]
     );
     return (
         (t = 1 === s.length && 1 === s[0].length ? w.intl.string(w.t.jDym4O) : 1 === s.length ? w.intl.format(w.t['0eBj39'], {}) : w.intl.format(w.t.D7uftL, {})),
         (0, r.jsxs)('div', {
-            className: M.popout,
+            className: P.popout,
             children: [
                 (0, r.jsx)('div', {
-                    className: M.popoutHeaderContainer,
+                    className: P.popoutHeaderContainer,
                     children: (0, r.jsx)(f.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-normal',
-                        className: M.popoutHeaderText,
+                        className: P.popoutHeaderText,
                         children: t
                     })
                 }),
                 (0, r.jsx)('div', {
-                    className: M.popoutChecks,
+                    className: P.popoutChecks,
                     children: (0, r.jsx)(k, { eligibilityStates: s.flat() })
                 }),
                 (0, r.jsxs)('div', {
-                    className: M.buttonContainer,
+                    className: P.buttonContainer,
                     children: [
                         _
                             ? null
                             : (0, r.jsx)(f.Button, {
-                                  className: M.getRolesButton,
+                                  className: P.getRolesButton,
                                   onClick: n,
                                   children: w.intl.string(w.t.T1t1WV)
                               }),
                         (0, r.jsx)(f.Button, {
-                            className: M.viewConnectionsButton,
+                            className: P.viewConnectionsButton,
                             color: f.Button.Colors.PRIMARY,
                             onClick: a,
                             children: w.intl.string(w.t.hgKDnJ)
@@ -275,19 +275,19 @@ function B(e) {
                 text: w.intl.string(w.t.Wpsnam),
                 children: (t) =>
                     (0, r.jsxs)('div', {
-                        className: M.badge,
+                        className: P.badge,
                         ...t,
                         ...e,
                         children: [
                             (0, r.jsx)(C.Z, {
-                                className: M.badgeVerifiedIcon,
+                                className: P.badgeVerifiedIcon,
                                 size: 16,
                                 color: c.colorString
                             }),
                             (0, r.jsx)(f.Text, {
                                 variant: 'text-xs/bold',
                                 color: 'header-primary',
-                                className: M.roleName,
+                                className: P.roleName,
                                 children: c.name
                             })
                         ]

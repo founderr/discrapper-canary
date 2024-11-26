@@ -15,11 +15,11 @@ var i = n(200651),
     x = n(450468),
     S = n(98278),
     T = n(314684),
-    C = n(594174),
+    E = n(594174),
     _ = n(78839),
-    E = n(267642),
-    f = n(63063),
-    I = n(74538),
+    C = n(267642),
+    I = n(63063),
+    f = n(74538),
     N = n(283029),
     A = n(357956),
     b = n(275909),
@@ -31,9 +31,9 @@ var i = n(200651),
 function D(e) {
     let { guildBoostSlot: t, isCancellable: n, onCancel: r, onUncancel: l, premiumSubscription: a, useReducedMotion: o, fractionalPremiumState: d } = e,
         u = s.useMemo(() => (null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null), [t]),
-        h = (0, E.tl)(t),
+        h = (0, C.tl)(t),
         g = (null == a ? void 0 : a.isPaused) === !0 || d !== j.a$.NONE,
-        p = d !== j.a$.NONE ? R.intl.format(R.t.hshta2, { helpCenterLink: f.Z.getArticleURL(v.BhN.FRACTIONAL_PREMIUM_ABOUT) }) : R.intl.string(R.t.mOWsFx);
+        p = d !== j.a$.NONE ? R.intl.format(R.t.hshta2, { helpCenterLink: I.Z.getArticleURL(v.BhN.FRACTIONAL_PREMIUM_ABOUT) }) : R.intl.string(R.t.mOWsFx);
     return (0, i.jsxs)(
         'li',
         {
@@ -134,7 +134,7 @@ t.Z = function (e) {
         A = (null == x ? void 0 : x.isPausedOrPausePending) === !0,
         { fractionalState: b } = (0, u.Z)(),
         L = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
-        Z = (0, o.e7)([C.default], () => C.default.getCurrentUser()),
+        Z = (0, o.e7)([E.default], () => E.default.getCurrentUser()),
         F = (0, T.Vp)(),
         M = b === j.a$.FP_SUB_PAUSED,
         k = b !== j.a$.NONE,
@@ -153,7 +153,7 @@ t.Z = function (e) {
                 s = !0;
             return (
                 r.forEach((r) => {
-                    !(0, E.tl)(r) && n++, r.isOnCooldown() ? (i = !0) : (s = !1), null != r.premiumGuildSubscription ? e.push(r) : t.push(r);
+                    !(0, C.tl)(r) && n++, r.isOnCooldown() ? (i = !0) : (s = !1), null != r.premiumGuildSubscription ? e.push(r) : t.push(r);
                 }),
                 {
                     appliedGuildBoostSlots: e,
@@ -168,10 +168,10 @@ t.Z = function (e) {
         W = Math.max(0, z - U.length),
         K = G > z,
         q = z === r.length,
-        Q = q ? W : 1,
-        X = s.useMemo(() => {
+        X = q ? W : 1,
+        Q = s.useMemo(() => {
             let e = [];
-            for (let t = 0; t < Q; t++)
+            for (let t = 0; t < X; t++)
                 e.push(
                     (0, i.jsx)(
                         N.Z,
@@ -183,12 +183,12 @@ t.Z = function (e) {
                     )
                 );
             return e;
-        }, [Q, L]),
+        }, [X, L]),
         J = null != F,
         $ = s.useMemo(() => V.find((e) => e.isAvailable()), [V]);
     if (0 === V.length) return null;
     let ee = V.length;
-    if (((t = q ? (1 === ee && J ? R.intl.string(R.t['65r43N']) : R.intl.formatToPlainString(H ? R.t['3DW6DQ'] : R.t['/u15QU'], { numUnappliedGuildBoostSlots: ee })) : R.intl.formatToPlainString(H ? R.t['3DW6DQ'] : R.t.BPadnJ, { numUnappliedGuildBoostSlots: ee })), I.ZP.isPremium(Z))) {
+    if (((t = q ? (1 === ee && J ? R.intl.string(R.t['65r43N']) : R.intl.formatToPlainString(H ? R.t['3DW6DQ'] : R.t['/u15QU'], { numUnappliedGuildBoostSlots: ee })) : R.intl.formatToPlainString(H ? R.t['3DW6DQ'] : R.t.BPadnJ, { numUnappliedGuildBoostSlots: ee })), f.ZP.isPremium(Z))) {
         if (q && 1 === ee && J) n = F.skuId === O.Ft.FREE_GUILD_BOOST_1_MONTH ? R.intl.string(R.t.dm8r0t) : R.intl.string(R.t.VGJ9IC);
         else {
             let e = (e, t) =>
@@ -221,7 +221,7 @@ t.Z = function (e) {
                 subscriptionIsPausedOrPausePending: !0,
                 hasFractionPremium: !0
             },
-            () => R.intl.format(R.t['4RgA6O'], { helpCenterLink: f.Z.getArticleURL(v.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+            () => R.intl.format(R.t['4RgA6O'], { helpCenterLink: I.Z.getArticleURL(v.BhN.FRACTIONAL_PREMIUM_ABOUT) })
         )
         .with(
             {
@@ -264,7 +264,7 @@ t.Z = function (e) {
                                 children: [
                                     (0, i.jsx)('div', {
                                         className: P.headerBoostGems,
-                                        children: X
+                                        children: Q
                                     }),
                                     (0, i.jsxs)('div', {
                                         className: P.__invalid_headerCopy,

@@ -127,21 +127,21 @@ function g(e) {
     return t || r(18, e), t;
 }
 function E() {
-    return P;
+    return M;
 }
 function v(e, t) {
     t && (g('Patches'), (e.u = []), (e.s = []), (e.v = t));
 }
 function I(e) {
-    b(e), e.p.forEach(S), (e.p = null);
-}
-function b(e) {
-    e === P && (P = e.l);
+    T(e), e.p.forEach(S), (e.p = null);
 }
 function T(e) {
-    return (P = {
+    e === M && (M = e.l);
+}
+function b(e) {
+    return (M = {
         p: [],
-        l: P,
+        l: M,
         h: e,
         m: !0,
         _: 0
@@ -239,7 +239,7 @@ function x(e, t, n) {
                   (o = s =
                       {
                           i: (a = Array.isArray(r)) ? 1 : 0,
-                          A: i ? i.A : P,
+                          A: i ? i.A : M,
                           P: !1,
                           I: !1,
                           R: {},
@@ -258,7 +258,7 @@ function x(e, t, n) {
                   (s.j = f),
                   _)
                 : g('ES5').J(t, n);
-    return (n ? n.A : P).p.push(p), p;
+    return (n ? n.A : M).p.push(p), p;
 }
 function w(e, t) {
     switch (t) {
@@ -269,13 +269,13 @@ function w(e, t) {
     }
     return _(e);
 }
-var M,
-    P,
+var P,
+    M,
     k = 'undefined' != typeof Symbol && 'symbol' == typeof Symbol('x'),
     U = 'undefined' != typeof Map,
     B = 'undefined' != typeof Set,
     G = 'undefined' != typeof Proxy && void 0 !== Proxy.revocable && 'undefined' != typeof Reflect,
-    Z = k ? Symbol.for('immer-nothing') : (((M = {})['immer-nothing'] = !0), M),
+    Z = k ? Symbol.for('immer-nothing') : (((P = {})['immer-nothing'] = !0), P),
     F = k ? Symbol.for('immer-draftable') : '__$immer_draftable',
     V = k ? Symbol.for('immer-state') : '__$immer_state',
     j = '' + Object.prototype.constructor,
@@ -392,13 +392,13 @@ var q = new ((function () {
                         );
                     }
                     if (('function' != typeof n && r(6), void 0 !== i && 'function' != typeof i && r(7), a(e))) {
-                        var l = T(t),
+                        var l = b(t),
                             u = x(t, e, void 0),
                             c = !0;
                         try {
                             (s = n(u)), (c = !1);
                         } finally {
-                            c ? I(l) : b(l);
+                            c ? I(l) : T(l);
                         }
                         return 'undefined' != typeof Promise && s instanceof Promise
                             ? s.then(
@@ -467,9 +467,9 @@ var q = new ((function () {
                             );
                         })(t)));
                 var t,
-                    n = T(this),
+                    n = b(this),
                     l = x(this, e, void 0);
-                return (l[V].C = !0), b(n), l;
+                return (l[V].C = !0), T(n), l;
             }),
             (t.finishDraft = function (e, t) {
                 var n = (e && e[V]).A;

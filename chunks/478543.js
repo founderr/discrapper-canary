@@ -41,7 +41,7 @@ function I(e) {
             : null
     );
 }
-function b(e) {
+function T(e) {
     let { subHead: t, buildDetails: n, buttonColor: a, buttonClick: o, buttonText: l, disabled: c = !1, submitting: d = !1 } = e;
     return (0, r.jsxs)(i.Fragment, {
         children: [
@@ -73,7 +73,7 @@ function b(e) {
 }
 t.Z = (e) => {
     var t, n, a;
-    let { loading: o = !1, currentOverrides: _, linkMeta: T, url: S, applyBuildOverride: y, clearBuildOverride: A } = e,
+    let { loading: o = !1, currentOverrides: _, linkMeta: b, url: S, applyBuildOverride: y, clearBuildOverride: A } = e,
         [N, C] = i.useState(!1),
         R = i.useCallback(() => {
             if (!N) C(!0), y().catch(() => C(!1));
@@ -84,7 +84,7 @@ t.Z = (e) => {
     return (0, r.jsxs)('div', {
         className: v.wrapper,
         children: [
-            ((t = T),
+            ((t = b),
             (n = S),
             (a = o),
             (0, r.jsxs)(u.Text, {
@@ -133,7 +133,7 @@ t.Z = (e) => {
                               let v = (0, m.Z)(o, g);
                               if (!v.valid)
                                   return (function (e) {
-                                      return b({
+                                      return T({
                                           subHead: E.intl.string(E.t.ODXApK),
                                           buttonColor: u.Button.Colors.TRANSPARENT,
                                           buttonText: 'Invalid',
@@ -142,11 +142,11 @@ t.Z = (e) => {
                                       });
                                   })(v.reason);
                               l()(null != o, 'BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved');
-                              let { discord_web: I, discord_developers: T } = o.targetBuildOverride,
-                                  S = null != I ? I : T;
+                              let { discord_web: I, discord_developers: b } = o.targetBuildOverride,
+                                  S = null != I ? I : b;
                               if ((l()(null != S, 'BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved'), (t = S), null == (n = s) || null == n.discord_web ? 1 : t.id !== n.discord_web.id || t.type !== n.discord_web.type)) (i = E.intl.string(E.t.nOunHB)), (r = f), (a = u.Button.Colors.GREEN);
                               else (i = E.intl.string(E.t.tX4xrq)), (r = _), (a = u.Button.Colors.RED);
-                              return b({
+                              return T({
                                   subHead: E.intl.string(E.t.RCYGoq),
                                   buildDetails: S.id,
                                   buttonClick: () => {
@@ -166,7 +166,7 @@ t.Z = (e) => {
                               });
                           })({
                               currentOverrides: _,
-                              linkMeta: T,
+                              linkMeta: b,
                               applyBuildOverride: R,
                               clearBuildOverride: O,
                               submitting: N

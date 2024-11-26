@@ -74,6 +74,6 @@ let d = (e) => {
                 userDiscountOfferId: null == n ? void 0 : n.id
             }),
             I = null == E ? void 0 : null === (_ = E.invoiceItems) || void 0 === _ ? void 0 : null === (f = _.find((e) => e.subscriptionPlanId === t)) || void 0 === f ? void 0 : null === (d = f.discounts) || void 0 === d ? void 0 : null === (u = d.find((e) => e.type === r.eW.SUBSCRIPTION_PLAN)) || void 0 === u ? void 0 : u.amount,
-            b = (0, s.aS)(t, !1, !1, m);
-        return (0, o.T4)(b.amount - (null != I ? I : 0), b.currency);
+            T = (0, s.aS)(t, !1, !1, m);
+        return (0, o.T4)(T.amount - (null != I ? I : 0), T.currency);
     };

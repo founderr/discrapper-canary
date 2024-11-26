@@ -47,7 +47,7 @@ e.exports = function (e, t, n, r, i) {
         _.writeUInt32BE(g, t.length);
         for (var E = a.run(_, a.ipad1), v = E, I = 1; I < n; I++) {
             v = a.run(v, a.ipad2);
-            for (var b = 0; b < h; b++) E[b] ^= v[b];
+            for (var T = 0; T < h; T++) E[T] ^= v[T];
         }
         E.copy(c, p), (p += h);
     }

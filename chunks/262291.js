@@ -30,12 +30,12 @@ var p = !!String.prototype.startsWith && '_a'.startsWith('a', 1),
         : function (e) {
               return 'number' == typeof e && isFinite(e) && Math.floor(e) === e && 9007199254740991 >= Math.abs(e);
           },
-    b = !0;
+    T = !0;
 try {
-    var T = O('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
-    b = (null === (r = T.exec('a')) || void 0 === r ? void 0 : r[0]) === 'a';
+    var b = O('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
+    T = (null === (r = b.exec('a')) || void 0 === r ? void 0 : r[0]) === 'a';
 } catch (e) {
-    b = !1;
+    T = !1;
 }
 var S = p
         ? function (e, t, n) {
@@ -94,7 +94,7 @@ var S = p
 function O(e, t) {
     return new RegExp(e, t);
 }
-if (b) {
+if (T) {
     var D = O('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
     i = function (e, t) {
         var n;
@@ -626,13 +626,13 @@ var L = (function () {
                             };
                         }
                         if (0 === I.length) return this.error(s.o.EXPECT_DATE_TIME_SKELETON, v);
-                        var b = I;
-                        this.locale && (b = (0, c.T)(I, this.locale));
+                        var T = I;
+                        this.locale && (T = (0, c.T)(I, this.locale));
                         var g = {
                             type: o.aV.dateTime,
-                            pattern: b,
+                            pattern: T,
                             location: p.styleLocation,
-                            parsedOptions: this.shouldParseSkeletons ? (0, u.TE)(b) : {}
+                            parsedOptions: this.shouldParseSkeletons ? (0, u.TE)(T) : {}
                         };
                         return {
                             val: {
@@ -656,8 +656,8 @@ var L = (function () {
                 case 'plural':
                 case 'selectordinal':
                 case 'select':
-                    var T = this.clonePosition();
-                    if ((this.bumpSpace(), !this.bumpIf(','))) return this.error(s.o.EXPECT_SELECT_ARGUMENT_OPTIONS, _(T, (0, a.pi)({}, T)));
+                    var b = this.clonePosition();
+                    if ((this.bumpSpace(), !this.bumpIf(','))) return this.error(s.o.EXPECT_SELECT_ARGUMENT_OPTIONS, _(b, (0, a.pi)({}, b)));
                     this.bumpSpace();
                     var y = this.parseIdentifierIfPossible(),
                         N = 0;

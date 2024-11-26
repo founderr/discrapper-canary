@@ -25,11 +25,11 @@ function T() {
         n = h.fq.useSetting(),
         s = h.R$.useSetting(),
         T = h.cC.useSetting(),
-        C = h.vF.useSetting(),
+        E = h.vF.useSetting(),
         _ = h.H1.useSetting(),
-        E = h.ev.useSetting(),
-        f = h.x4.useSetting(),
-        I = h.RS.useSetting(),
+        C = h.ev.useSetting(),
+        I = h.x4.useSetting(),
+        f = h.RS.useSetting(),
         N = h.NA.useSetting(),
         A = h.nc.useSetting(),
         { analyticsLocations: b } = (0, o.ZP)(a.Z.TEXT_AND_IMAGES);
@@ -48,7 +48,7 @@ function T() {
                         setting: g.s6.CHAT_INLINE_MEDIA_LINKS,
                         children: (0, i.jsx)(l.FormSwitch, {
                             className: r()(S.marginTop8, S.marginBottom20),
-                            value: I,
+                            value: f,
                             onChange: h.RS.updateSetting,
                             children: x.intl.string(x.t.U47N1t)
                         })
@@ -57,7 +57,7 @@ function T() {
                         setting: g.s6.CHAT_INLINE_MEDIA_UPLOADS,
                         children: (0, i.jsx)(l.FormSwitch, {
                             className: r()(S.marginTop8, S.marginBottom20),
-                            value: f,
+                            value: I,
                             note: x.intl.formatToPlainString(x.t.qjjvqK, { maxSize: 10 }),
                             onChange: h.x4.updateSetting,
                             children: x.intl.string(x.t.VP11Nj)
@@ -113,7 +113,7 @@ function T() {
                         setting: g.s6.CHAT_EMOJI_EMOTICONS,
                         children: (0, i.jsx)(l.FormSwitch, {
                             className: S.marginBottom40,
-                            value: E,
+                            value: C,
                             note: d.Z.parse(x.intl.string(x.t['20dvub'])),
                             onChange: h.ev.updateSetting,
                             children: x.intl.string(x.t['79qal5'])
@@ -209,7 +209,7 @@ function T() {
                             setting: g.s6.CHAT_THREADS_SPLIT_VIEW,
                             children: (0, i.jsx)(l.FormSwitch, {
                                 className: S.marginTop8,
-                                value: C,
+                                value: E,
                                 onChange: h.vF.updateSetting,
                                 children: x.intl.string(x.t.AInv5u)
                             })

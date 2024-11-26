@@ -51,7 +51,7 @@ function x() {
                 e
             );
         }, [x, n, S, h]),
-        C = s.useCallback(
+        E = s.useCallback(
             (e) => {
                 let t = (null == e ? void 0 : e.label) === p.label() && (null == e ? void 0 : e.value) === p.value;
                 return null == e || '' === e.value || t
@@ -80,6 +80,6 @@ function x() {
         },
         value: e,
         options: T,
-        renderOptionPrefix: C
+        renderOptionPrefix: E
     });
 }

@@ -18,14 +18,14 @@ var r = n(200651),
 t.Z = (e) => {
     let { application: t, reportId: n } = e,
         [v, I] = i.useState(!1),
-        [b, T] = i.useState(!1),
+        [T, b] = i.useState(!1),
         S = (0, a.e7)([h.Z, f.Z], () => {
             var e;
             return null === (e = f.Z.getChannel(h.Z.getChannelId())) || void 0 === e ? void 0 : e.guild_id;
         }),
         [y, A] = i.useState(null);
     i.useEffect(() => {
-        null != y && (I(!0), T(!0));
+        null != y && (I(!0), b(!0));
     }, [y]),
         i.useEffect(() => {
             if (null == S) return;
@@ -46,7 +46,7 @@ t.Z = (e) => {
             );
         }, [S, t.id]);
     let N = i.useCallback(() => {
-            T(!1),
+            b(!1),
                 l.ZP.trackWithMetadata(g.rMx.IAR_REMOVE_APP_BUTTON_CLICKED, {
                     guild_id: S,
                     application_id: t.id,
@@ -74,10 +74,10 @@ t.Z = (e) => {
               children: (0, r.jsx)(d.Z, {
                   title: E.intl.string(E.t['WV/CsL']),
                   description: E.intl.string(E.t['FlcC+/']),
-                  buttonText: b ? E.intl.string(E.t.aCJlq6) : E.intl.string(E.t['6I1F3t']),
-                  buttonDisabled: !b,
-                  buttonColor: b ? s.Button.Colors.RED : s.Button.Colors.WHITE,
-                  buttonLook: b ? s.Button.Looks.FILLED : s.Button.Looks.LINK,
+                  buttonText: T ? E.intl.string(E.t.aCJlq6) : E.intl.string(E.t['6I1F3t']),
+                  buttonDisabled: !T,
+                  buttonColor: T ? s.Button.Colors.RED : s.Button.Colors.WHITE,
+                  buttonLook: T ? s.Button.Looks.FILLED : s.Button.Looks.LINK,
                   onButtonPress: N
               })
           })

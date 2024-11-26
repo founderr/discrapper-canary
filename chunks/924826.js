@@ -15,8 +15,8 @@ function u(e, t) {
     return Array.from((null !== (n = t.current) && void 0 !== n ? n : document).querySelectorAll('['.concat(l.ie, '^="').concat(e, '"]')));
 }
 function c(e) {
-    let { id: t, defaultFocused: n, isEnabled: c, scrollToStart: d, scrollToEnd: f, onNavigatePreviousAtStart: _, onNavigateNextAtEnd: p, setFocus: h, setFocusOnList: m, preserveFocusPosition: g = !0, useVirtualFocus: E = !1, wrap: v = !1, orientation: I = o.hy.VERTICAL, disableClickOnSpace: b = !1 } = e,
-        T = r.useRef(n ? (0, l.jb)(t, n) : null),
+    let { id: t, defaultFocused: n, isEnabled: c, scrollToStart: d, scrollToEnd: f, onNavigatePreviousAtStart: _, onNavigateNextAtEnd: p, setFocus: h, setFocusOnList: m, preserveFocusPosition: g = !0, useVirtualFocus: E = !1, wrap: v = !1, orientation: I = o.hy.VERTICAL, disableClickOnSpace: T = !1 } = e,
+        b = r.useRef(n ? (0, l.jb)(t, n) : null),
         S = r.useRef(!1),
         y = r.useRef(null),
         A = r.useRef(c);
@@ -45,7 +45,7 @@ function c(e) {
         ),
         D = r.useCallback(
             (e) => {
-                if (((T.current = e), null == e)) {
+                if (((b.current = e), null == e)) {
                     (0, a.h)(t, null, g);
                     return;
                 }
@@ -69,9 +69,9 @@ function c(e) {
             [t, d, f]
         ),
         [x, w] = r.useState(!1),
-        M = r.useRef(x);
+        P = r.useRef(x);
     r.useLayoutEffect(() => {
-        M.current = x;
+        P.current = x;
     }, [x]),
         r.useLayoutEffect(() => {
             let e = y.current;
@@ -94,14 +94,14 @@ function c(e) {
                 if (!e.currentTarget.contains(e.relatedTarget))
                     w(!1),
                         requestAnimationFrame(() => {
-                            let e = T.current;
+                            let e = b.current;
                             null !== e && null == N((0, l.P1)(e)) && O((0, l.P1)(t, l.kn));
                         });
             }
             async function i() {
                 let e = y.current;
-                if (M.current || null == e) return;
-                let n = T.current;
+                if (P.current || null == e) return;
+                let n = b.current;
                 if (g && null !== n) {
                     let t = (0, l.P1)(n),
                         r = N(t);
@@ -117,12 +117,12 @@ function c(e) {
                 S.current = !0;
             }
         }, [c, t, g, R, m, O, D]);
-    let P = r.useMemo(
+    let M = r.useMemo(
             () => ({
                 wrap: v,
                 get from() {
                     if (!E) return;
-                    let t = T.current;
+                    let t = b.current;
                     if (null != t) {
                         var e;
                         return null !== (e = N((0, l.P1)(t))) && void 0 !== e ? e : void 0;
@@ -133,18 +133,18 @@ function c(e) {
             [E, v]
         ),
         k = r.useCallback(async () => {
-            let e = await L.getNextFocusableElement(P),
+            let e = await L.getNextFocusableElement(M),
                 t = null == e ? void 0 : e.getAttribute(l.ie);
             null != t ? D(t) : null == e && null != p && p();
-        }, [L, P, p, D]),
+        }, [L, M, p, D]),
         U = r.useCallback(async () => {
-            let e = await L.getPreviousFocusableElement(P),
+            let e = await L.getPreviousFocusableElement(M),
                 t = null == e ? void 0 : e.getAttribute(l.ie);
             null != t ? D(t) : null == e && null != _ && _();
-        }, [L, P, _, D]),
+        }, [L, M, _, D]),
         B = r.useCallback(
             (e) => {
-                if (!A.current || (!E && !M.current)) return;
+                if (!A.current || (!E && !P.current)) return;
                 let n = I === o.hy.HORIZONTAL ? o.R8.RIGHT : o.R8.DOWN,
                     r = I === o.hy.HORIZONTAL ? o.R8.LEFT : o.R8.UP;
                 switch (e.key) {
@@ -175,8 +175,8 @@ function c(e) {
                         return;
                     case o.R8.SPACE:
                     case o.R8.ENTER: {
-                        if ((e.key === o.R8.SPACE && b) || e.repeat) return;
-                        let t = T.current;
+                        if ((e.key === o.R8.SPACE && T) || e.repeat) return;
+                        let t = b.current;
                         if (null != t) {
                             var i;
                             let n = N((0, l.P1)(t)),
@@ -192,7 +192,7 @@ function c(e) {
         G = r.useCallback(
             (e) => {
                 let n = null != e ? (0, l.jb)(t, e) : null;
-                (T.current = n), (0, a.h)(t, e, g);
+                (b.current = n), (0, a.h)(t, e, g);
             },
             [t, g]
         );
@@ -219,7 +219,7 @@ function c(e) {
             focusPreviousItem: U,
             focusNextItem: k,
             focusedItemId() {
-                let e = T.current;
+                let e = b.current;
                 return e ? (0, l.x3)(e) : null;
             }
         }),

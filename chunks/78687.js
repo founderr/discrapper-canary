@@ -98,17 +98,17 @@ e.exports = function (e) {
                 var e = v();
                 i(l).style = e;
             }
-            function b(e, t, n) {
+            function T(e, t, n) {
                 (i(e).lastWidth = t), (i(e).lastHeight = n);
             }
-            function T() {
+            function b() {
                 return 2 * s.width + 1;
             }
             function S() {
                 return 2 * s.height + 1;
             }
             function y(e) {
-                return e + 10 + T();
+                return e + 10 + b();
             }
             function A(e) {
                 return e + 10 + S();
@@ -116,9 +116,9 @@ e.exports = function (e) {
             function N(e, t, n) {
                 var r = f(e),
                     i = _(e),
-                    a = t + 10 + T(),
+                    a = t + 10 + b(),
                     s = n + 10 + S(),
-                    o = 2 * t + T(),
+                    o = 2 * t + b(),
                     l = 2 * n + S();
                 (r.scrollLeft = a), (r.scrollTop = s), (i.scrollLeft = o), (i.scrollTop = l);
             }
@@ -163,8 +163,8 @@ e.exports = function (e) {
                     E = u(['position: absolute', 'flex: none', 'overflow: scroll', 'z-index: -1', 'visibility: hidden', 'width: 100%', 'height: 100%']),
                     v = u(['position: absolute', 'flex: none', 'overflow: scroll', 'z-index: -1', 'visibility: hidden', 'width: 100%', 'height: 100%']),
                     I = u(['position: absolute', 'left: 0', 'top: 0']),
-                    b = u(['position: absolute', 'width: 200%', 'height: 200%']),
-                    T = document.createElement('div'),
+                    T = u(['position: absolute', 'width: 200%', 'height: 200%']),
+                    b = document.createElement('div'),
                     S = document.createElement('div'),
                     y = document.createElement('div'),
                     A = document.createElement('div'),
@@ -178,12 +178,12 @@ e.exports = function (e) {
                     var e = i(l);
                     e && e.onShrink ? e.onShrink() : g('Aborting shrink scroll handler: element has been uninstalled');
                 }
-                (T.dir = 'ltr'), (T.style.cssText = h), (T.className = o), (S.className = o), (S.style.cssText = m), (y.style.cssText = E), (A.style.cssText = I), (N.style.cssText = v), (R.style.cssText = b), y.appendChild(A), N.appendChild(R), S.appendChild(y), S.appendChild(N), T.appendChild(S), f.appendChild(T), c(y, 'scroll', O), c(N, 'scroll', D), (i(l).onExpandScroll = O), (i(l).onShrinkScroll = D);
+                (b.dir = 'ltr'), (b.style.cssText = h), (b.className = o), (S.className = o), (S.style.cssText = m), (y.style.cssText = E), (A.style.cssText = I), (N.style.cssText = v), (R.style.cssText = T), y.appendChild(A), N.appendChild(R), S.appendChild(y), S.appendChild(N), b.appendChild(S), f.appendChild(b), c(y, 'scroll', O), c(N, 'scroll', D), (i(l).onExpandScroll = O), (i(l).onShrinkScroll = D);
             }
             function O() {
                 function s(t, n, r) {
                     var i = f(t).childNodes[0],
-                        a = n + 10 + T(),
+                        a = n + 10 + b(),
                         s = r + 10 + S();
                     i.style.setProperty('width', a + 'px', e.important ? 'important' : ''), i.style.setProperty('height', s + 'px', e.important ? 'important' : '');
                 }
@@ -192,7 +192,7 @@ e.exports = function (e) {
                         c = l.offsetHeight,
                         d = o !== i(l).lastWidth || c !== i(l).lastHeight;
                     g('Storing current size', o, c),
-                        b(l, o, c),
+                        T(l, o, c),
                         n.add(0, function () {
                             if (!!d) {
                                 if (!i(l)) {
@@ -285,7 +285,7 @@ e.exports = function (e) {
                     return;
                 }
                 var e = i(l).style;
-                b(l, e.width, e.height), N(l, e.width, e.height);
+                T(l, e.width, e.height), N(l, e.width, e.height);
             }
             function L() {
                 d(l);

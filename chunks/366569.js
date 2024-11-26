@@ -1,18 +1,18 @@
 r.d(t, {
     i: function () {
-        return a;
+        return n;
     }
 });
-var n = r(573736);
-function a(e, t, r = () => {}) {
-    let a;
+var a = r(573736);
+function n(e, t, r = () => {}) {
+    let n;
     try {
-        a = e();
+        n = e();
     } catch (e) {
         throw (t(e), r(), e);
     }
     return (function (e, t, r) {
-        return (0, n.J8)(e)
+        return (0, a.J8)(e)
             ? e.then(
                   (e) => (r(), e),
                   (e) => {
@@ -20,5 +20,5 @@ function a(e, t, r = () => {}) {
                   }
               )
             : (r(), e);
-    })(a, t, r);
+    })(n, t, r);
 }

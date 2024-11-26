@@ -20,11 +20,11 @@ var i,
     x = n(585483),
     S = n(557177),
     T = n(57562),
-    C = n(955204),
+    E = n(955204),
     _ = n(64078),
-    E = n(351780),
-    f = n(954794),
-    I = n(112843),
+    C = n(351780),
+    I = n(954794),
+    f = n(112843),
     N = n(524484),
     A = n(981631),
     b = n(388032),
@@ -121,7 +121,7 @@ function F(e) {
         value: t,
         note: b.intl.string(b.t.KuYbWF),
         onChange: (e) => {
-            !e && (0, T.T)(C.hn.DISABLE_POGGERMODE),
+            !e && (0, T.T)(E.hn.DISABLE_POGGERMODE),
                 e && (!n || s)
                     ? (0, m.openModal)((e) =>
                           (0, a.jsx)(m.ConfirmModal, {
@@ -265,7 +265,7 @@ function w(e) {
         l = (0, d.e7)([g.Z], () => g.Z.useReducedMotion),
         o = !t || !n || l,
         c = (e, t) => {
-            null != e.shakeIntensity && e.shakeIntensity > i && (0, T.T)(C.hn.MORE), r(e, t);
+            null != e.shakeIntensity && e.shakeIntensity > i && (0, T.T)(E.hn.MORE), r(e, t);
         };
     return (0, a.jsxs)(m.FormSection, {
         tag: m.FormTitleTags.H1,
@@ -387,12 +387,12 @@ let G = () =>
         });
 function Y(e) {
     let { onChangePage: t, setShowEnableAnimation: n } = e,
-        i = (0, d.cj)([E.Z], () => E.Z.getState()),
+        i = (0, d.cj)([C.Z], () => C.Z.getState()),
         [s, r] = o.useState({
             x: 0,
             y: 0
         }),
-        l = (0, I.Z)();
+        l = (0, f.Z)();
     function c(e, t, n, i) {
         return (null != t ? t : e) && (null != i ? i : n);
     }
@@ -468,7 +468,7 @@ let H = (e, t, n) => {
                     setShowEnableAnimation: n
                 });
             case 1:
-                return (0, a.jsx)(f.Z, { onBackClick: i(0) });
+                return (0, a.jsx)(I.Z, { onBackClick: i(0) });
             default:
                 return null;
         }
@@ -488,7 +488,7 @@ function W() {
             return () => clearTimeout(t);
         }, [e]),
         o.useEffect(() => {
-            Math.random() > 0.99 && (0, T.T)(C.hn.VISITOR_100);
+            Math.random() > 0.99 && (0, T.T)(E.hn.VISITOR_100);
         }, []),
         (0, a.jsxs)(a.Fragment, {
             children: [

@@ -45,7 +45,7 @@ var p = function () {
             : null),
     v = {},
     I = 'undefined' != typeof Uint8Array && E ? E(Uint8Array) : r,
-    b = {
+    T = {
         __proto__: null,
         '%AggregateError%': 'undefined' == typeof AggregateError ? r : AggregateError,
         '%Array%': Array,
@@ -118,8 +118,8 @@ if (E)
     try {
         null.error;
     } catch (e) {
-        var T = E(E(e));
-        b['%Error.prototype%'] = T;
+        var b = E(E(e));
+        T['%Error.prototype%'] = b;
     }
 var S = function e(t) {
         var n;
@@ -133,7 +133,7 @@ var S = function e(t) {
             var i = e('%AsyncGenerator%');
             i && E && (n = E(i.prototype));
         }
-        return (b[t] = n), n;
+        return (T[t] = n), n;
     },
     y = {
         __proto__: null,
@@ -198,7 +198,7 @@ var S = function e(t) {
     L = A.call(Function.call, RegExp.prototype.exec),
     x = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
     w = /\\(\\)?/g,
-    M = function (e) {
+    P = function (e) {
         var t = D(e, 0, 1),
             n = D(e, -1);
         if ('%' === t && '%' !== n) throw new l('invalid intrinsic syntax, expected closing `%`');
@@ -211,11 +211,11 @@ var S = function e(t) {
             r
         );
     },
-    P = function (e, t) {
+    M = function (e, t) {
         var n,
             r = e;
-        if ((N(y, r) && (r = '%' + (n = y[r])[0] + '%'), N(b, r))) {
-            var i = b[r];
+        if ((N(y, r) && (r = '%' + (n = y[r])[0] + '%'), N(T, r))) {
+            var i = T[r];
             if ((i === v && (i = S(r)), void 0 === i && !t)) throw new u('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
             return {
                 alias: n,
@@ -229,9 +229,9 @@ e.exports = function (e, t) {
     if ('string' != typeof e || 0 === e.length) throw new u('intrinsic name must be a non-empty string');
     if (arguments.length > 1 && 'boolean' != typeof t) throw new u('"allowMissing" argument must be a boolean');
     if (null === L(/^%?[^%]*%?$/, e)) throw new l('`%` may not be present anywhere but at the beginning and end of the intrinsic name');
-    var n = M(e),
+    var n = P(e),
         r = n.length > 0 ? n[0] : '',
-        i = P('%' + r + '%', t),
+        i = M('%' + r + '%', t),
         a = i.name,
         s = i.value,
         o = !1,
@@ -242,7 +242,7 @@ e.exports = function (e, t) {
             h = D(p, 0, 1),
             m = D(p, -1);
         if (('"' === h || "'" === h || '`' === h || '"' === m || "'" === m || '`' === m) && h !== m) throw new l('property names with quotes must have matching quotes');
-        if ((('constructor' === p || !f) && (o = !0), (r += '.' + p), N(b, (a = '%' + r + '%')))) s = b[a];
+        if ((('constructor' === p || !f) && (o = !0), (r += '.' + p), N(T, (a = '%' + r + '%')))) s = T[a];
         else if (null != s) {
             if (!(p in s)) {
                 if (!t) throw new u('base intrinsic for ' + e + ' exists, but the property is not available.');
@@ -252,7 +252,7 @@ e.exports = function (e, t) {
                 var g = _(s, p);
                 s = (f = !!g) && 'get' in g && !('originalValue' in g.get) ? g.get : s[p];
             } else (f = N(s, p)), (s = s[p]);
-            f && !o && (b[a] = s);
+            f && !o && (T[a] = s);
         }
     }
     return s;

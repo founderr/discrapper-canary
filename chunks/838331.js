@@ -53,17 +53,17 @@ function I(e) {
         }, [])
     ];
 }
-function b(e) {
+function T(e) {
     return String(e);
 }
-let T = i.createContext({
+let b = i.createContext({
     activeDescendant: null,
     selected: new Set(),
     setSelected: () => null,
-    itemToString: b
+    itemToString: T
 });
 function S(e) {
-    let { placeholder: t, children: n, value: a, onChange: u, className: c, listClassName: E, 'aria-label': v, multiSelect: I = !1, autoFocus: S = !1, maxVisibleItems: y = 5, itemToString: A = b, showScrollbar: N = !1 } = e,
+    let { placeholder: t, children: n, value: a, onChange: u, className: c, listClassName: E, 'aria-label': v, multiSelect: I = !1, autoFocus: S = !1, maxVisibleItems: y = 5, itemToString: A = T, showScrollbar: N = !1 } = e,
         [C, R] = i.useState(''),
         [O] = i.useState(!0),
         [D, L] = i.useState(null),
@@ -79,8 +79,8 @@ function S(e) {
                 padding: 12
             });
     }, [D]);
-    let M = n(C),
-        P = 0 === M.length,
+    let P = n(C),
+        M = 0 === P.length,
         k = i.useId(),
         U = i.useCallback(
             () =>
@@ -148,7 +148,7 @@ function S(e) {
                         (0, r.jsx)('div', {
                             children:
                                 O &&
-                                (P
+                                (M
                                     ? (0, r.jsxs)('div', {
                                           className: m.empty,
                                           children: [
@@ -163,7 +163,7 @@ function S(e) {
                                               })
                                           ]
                                       })
-                                    : (0, r.jsx)(T.Provider, {
+                                    : (0, r.jsx)(b.Provider, {
                                           value: {
                                               activeDescendant: D,
                                               selected: a,
@@ -177,12 +177,12 @@ function S(e) {
                                               id: x,
                                               ref: w,
                                               className: s()(m.list, E, { [m.scroller]: N }),
-                                              sections: [M.length],
+                                              sections: [P.length],
                                               sectionHeight: 0,
                                               rowHeight: 40,
                                               renderRow: (e) => {
                                                   let { row: t } = e;
-                                                  return M[t];
+                                                  return P[t];
                                               },
                                               renderSection: () => null
                                           })
@@ -198,10 +198,10 @@ let y = i.createContext(null);
 function A(e) {
     var t;
     let { value: n, children: a, disabled: o = !1, selectedColor: u = E.STANDARD, ...d } = e,
-        { activeDescendant: f, selected: _, setSelected: p, itemToString: h } = i.useContext(T),
+        { activeDescendant: f, selected: _, setSelected: p, itemToString: h } = i.useContext(b),
         v = h(n),
         I = f === v,
-        b = null !== (t = null == d ? void 0 : d.selected) && void 0 !== t ? t : _.has(n),
+        T = null !== (t = null == d ? void 0 : d.selected) && void 0 !== t ? t : _.has(n),
         S = (0, l.JA)(v);
     return (0, r.jsx)(c.P, {
         tag: 'li',
@@ -210,12 +210,12 @@ function A(e) {
         [g]: n,
         className: s()(m.item, {
             [m.focused]: I,
-            [u]: b,
+            [u]: T,
             [m.disabled]: o
         }),
         ...S,
         role: 'option',
-        'aria-selected': b,
+        'aria-selected': T,
         'aria-disabled': o,
         children: (0, r.jsx)(y.Provider, {
             value: n,
@@ -240,7 +240,7 @@ function A(e) {
     }),
     (A.Checkbox = function (e) {
         let { checked: t } = e,
-            { selected: n } = i.useContext(T),
+            { selected: n } = i.useContext(b),
             a = i.useContext(y);
         return (0, r.jsx)('span', {
             className: m.itemCheckbox,
@@ -253,7 +253,7 @@ function A(e) {
         });
     }),
     (A.Checkmark = function () {
-        let { selected: e } = i.useContext(T),
+        let { selected: e } = i.useContext(b),
             t = i.useContext(y);
         return e.has(t)
             ? (0, r.jsx)('span', {

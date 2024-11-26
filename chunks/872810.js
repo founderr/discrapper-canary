@@ -3,7 +3,7 @@ n.d(t, {
         return U;
     },
     Rc: function () {
-        return P;
+        return M;
     },
     WH: function () {
         return A;
@@ -33,7 +33,7 @@ n.d(t, {
         return N;
     },
     xc: function () {
-        return M;
+        return P;
     }
 });
 var r = n(512722),
@@ -54,9 +54,9 @@ var r = n(512722),
     E = n(934415),
     v = n(70956),
     I = n(557457),
-    b = n(573261);
+    T = n(573261);
 n(26151), n(493683);
-var T = n(475179);
+var b = n(475179);
 n(287734);
 var S = n(981631),
     y = n(70722);
@@ -98,7 +98,7 @@ function R(e, t) {
         streamKey: i,
         allowMultiple: a
     }),
-        !a && (null == t || !t.noFocus) && T.Z.selectParticipant(e.channelId, i);
+        !a && (null == t || !t.noFocus) && b.Z.selectParticipant(e.channelId, i);
 }
 function O(e, t) {
     o.Z.dispatch({
@@ -165,9 +165,9 @@ async function w(e, t, n) {
             });
     }
 }
-async function M(e) {
+async function P(e) {
     try {
-        await b.Z.post({
+        await T.Z.post({
             url: S.ANM.STREAM_NOTIFY(e),
             oldFormErrors: !0,
             trackedActionData: { event: a.NetworkActionNames.STREAM_NOTIFY },
@@ -175,7 +175,7 @@ async function M(e) {
         });
     } catch (e) {}
 }
-function P(e) {
+function M(e) {
     (0, I.Ye)(e.preset, e.resolution, e.frameRate),
         o.Z.dispatch({
             type: 'STREAM_UPDATE_SETTINGS',

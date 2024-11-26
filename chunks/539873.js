@@ -22,8 +22,8 @@ var r = n(200651),
     E = n(401460),
     v = n(441319),
     I = n(981631),
-    b = n(526761),
-    T = n(388032),
+    T = n(526761),
+    b = n(388032),
     S = n(337910);
 function y(e) {
     let { className: t, disabled: a, isEditor: y, renderCTAButtons: A } = e,
@@ -36,7 +36,7 @@ function y(e) {
             }
         ),
         O = i.useRef(null);
-    (0, h.Z)(O, b.h1.CUSTOM_APP_ICONS);
+    (0, h.Z)(O, T.h1.CUSTOM_APP_ICONS);
     let D = (0, d.Dt)(),
         L = (0, l.useRadioGroup)({
             orientation: 'horizontal',
@@ -83,7 +83,7 @@ function y(e) {
                                             children: [
                                                 (0, r.jsx)(l.Heading, {
                                                     variant: 'text-md/medium',
-                                                    children: T.intl.string(T.t.NThqT0)
+                                                    children: b.intl.string(b.t.NThqT0)
                                                 }),
                                                 !R && (0, r.jsx)(p.Z, { className: S.premiumIcon })
                                             ]
@@ -101,7 +101,7 @@ function y(e) {
                                                       }),
                                                       (0, r.jsx)(l.Heading, {
                                                           variant: 'text-sm/normal',
-                                                          children: T.intl.format(T.t.x2dQxM, {
+                                                          children: b.intl.format(b.t.x2dQxM, {
                                                               onClick: () => {
                                                                   (0, f.$)();
                                                               }
@@ -111,7 +111,7 @@ function y(e) {
                                               })
                                         : (0, r.jsx)(l.Heading, {
                                               variant: 'text-sm/normal',
-                                              children: T.intl.string(T.t.IgENJi)
+                                              children: b.intl.string(b.t.IgENJi)
                                           })
                                 ]
                             }),

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return T;
     }
 }),
     n(653041),
@@ -27,7 +27,7 @@ function I(e, t) {
         null != d.Z.getChannel(e) && u.Z.sendInvite(e, t, 'context_menu', null);
     });
 }
-function b(e) {
+function T(e) {
     let { user: t, guildId: n, onAction: o } = e,
         u = (0, a.e7)([g.default], () => g.default.getCurrentUser(), []),
         d = (0, a.Wu)(
@@ -45,14 +45,14 @@ function b(e) {
             },
             [n]
         ),
-        [b, T] = i.useState({});
+        [T, b] = i.useState({});
     return (null == u ? void 0 : u.id) === t.id || t.bot || 0 === d.length || h.Z.isBlockedOrIgnored(t.id)
         ? null
         : (0, r.jsx)(s.MenuItem, {
               id: 'invite-to-server',
               label: v.intl.string(v.t.Sd8Ix8),
               children: d.map((e) =>
-                  b[e.id]
+                  T[e.id]
                       ? (0, r.jsx)(
                             s.MenuItem,
                             {
@@ -73,8 +73,8 @@ function b(e) {
                                             let n = f.ZP.getDefaultChannel(e.id, !0, E.Plq.CREATE_INSTANT_INVITE);
                                             if (null != n) {
                                                 if (
-                                                    (T({
-                                                        ...b,
+                                                    (b({
+                                                        ...T,
                                                         [e.id]: !0
                                                     }),
                                                     !p.Z.can(E.Plq.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode)

@@ -49,8 +49,8 @@ e.exports = function (e) {
     var v = g(e, 'batchProcessor', c({ reporter: E })),
         I = {};
     (I.callOnAdd = !!g(e, 'callOnAdd', !0)), (I.debug = !!g(e, 'debug', !1));
-    var b = a(t),
-        T = i({ stateHandler: d }),
+    var T = a(t),
+        b = i({ stateHandler: d }),
         S = g(e, 'strategy', 'object'),
         y = g(e, 'important', !1),
         A = {
@@ -67,12 +67,12 @@ e.exports = function (e) {
     return {
         listenTo: function (e, i, a) {
             function s(e) {
-                r(b.get(e), function (t) {
+                r(T.get(e), function (t) {
                     t(e);
                 });
             }
             function o(e, t, n) {
-                b.add(t, n), e && n(t);
+                T.add(t, n), e && n(t);
             }
             if ((!a && ((a = i), (i = e), (e = {})), !i)) throw Error('At least one element required.');
             if (!a) throw Error('Listener required.');
@@ -88,8 +88,8 @@ e.exports = function (e) {
             r(i, function (e) {
                 !d.getState(e) && (d.initState(e), t.set(e));
                 var _ = t.get(e);
-                if ((f && E.log('Attaching listener to element', _, e), !T.isDetectable(e))) {
-                    if ((f && E.log(_, 'Not detectable.'), T.isBusy(e))) {
+                if ((f && E.log('Attaching listener to element', _, e), !b.isDetectable(e))) {
+                    if ((f && E.log(_, 'Not detectable.'), b.isBusy(e))) {
                         f && E.log(_, 'System busy making it detectable'),
                             o(u, e, a),
                             (N[_] = N[_] || []),
@@ -100,7 +100,7 @@ e.exports = function (e) {
                     }
                     return (
                         f && E.log(_, 'Making detectable...'),
-                        T.markBusy(e, !0),
+                        b.markBusy(e, !0),
                         n.makeDetectable(
                             {
                                 debug: f,
@@ -109,7 +109,7 @@ e.exports = function (e) {
                             e,
                             function (e) {
                                 if ((f && E.log(_, 'onElementDetectable'), d.getState(e))) {
-                                    T.markAsDetectable(e), T.markBusy(e, !1), n.addListener(e, s), o(u, e, a);
+                                    b.markAsDetectable(e), b.markBusy(e, !1), n.addListener(e, s), o(u, e, a);
                                     var t = d.getState(e);
                                     if (t && t.startSize) {
                                         var p = e.offsetWidth,
@@ -130,8 +130,8 @@ e.exports = function (e) {
             }),
                 l === i.length && c();
         },
-        removeListener: b.removeListener,
-        removeAllListeners: b.removeAllListeners,
+        removeListener: T.removeListener,
+        removeAllListeners: T.removeAllListeners,
         uninstall: function (e) {
             if (!e) return E.error('At least one element is required.');
             if (m(e)) e = [e];
@@ -140,7 +140,7 @@ e.exports = function (e) {
                 e = h(e);
             }
             r(e, function (e) {
-                b.removeAllListeners(e), n.uninstall(e), d.cleanState(e);
+                T.removeAllListeners(e), n.uninstall(e), d.cleanState(e);
             });
         },
         initDocument: function (e) {

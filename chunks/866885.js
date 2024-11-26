@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(366050),
     v = n(944486),
     I = n(594174),
-    b = n(566620),
-    T = n(317381),
+    T = n(566620),
+    b = n(317381),
     S = n(531826),
     y = n(175894),
     A = n(246106),
@@ -30,15 +30,15 @@ var r = n(200651),
     L = n(918559),
     x = n(981631),
     w = n(354459),
-    M = n(38855),
-    P = n(880397),
+    P = n(38855),
+    M = n(880397),
     k = n(616926);
 function U(e) {
     var t, n, a;
     let { channel: y, isLoading: A } = e,
         [U, B] = i.useState(!1),
-        G = (0, o.e7)([T.ZP], () => T.ZP.getSelfEmbeddedActivityForChannel(y.id)),
-        Z = (0, o.e7)([T.ZP], () => T.ZP.getActivityPanelMode()),
+        G = (0, o.e7)([b.ZP], () => b.ZP.getSelfEmbeddedActivityForChannel(y.id)),
+        Z = (0, o.e7)([b.ZP], () => b.ZP.getActivityPanelMode()),
         F = (0, _.q)(null == G ? void 0 : G.applicationId),
         V = null == G ? void 0 : G.launchId,
         j = (0, o.e7)([v.Z], () => v.Z.getChannelId() === y.id),
@@ -102,14 +102,14 @@ function U(e) {
                 var t, n, i, a, o, u, c, d;
                 let { idle: f, onActive: _, onForceIdle: p } = e;
                 return (0, r.jsxs)(m.Z, {
-                    className: s()(M.root, {
-                        [M.pipMode]: ee,
+                    className: s()(P.root, {
+                        [P.pipMode]: ee,
                         [k.elevationHigh]: ee,
-                        [P.idle]: f && !(null === (t = G.config) || void 0 === t ? void 0 : t.useInteractivePIP),
-                        [M.pipModeShort]: ee && !U,
-                        [M.pipModeTall]: ee && U,
-                        [M.hidden]: Y,
-                        [M.multiPIPMode]: et
+                        [M.idle]: f && !(null === (t = G.config) || void 0 === t ? void 0 : t.useInteractivePIP),
+                        [P.pipModeShort]: ee && !U,
+                        [P.pipModeTall]: ee && U,
+                        [P.hidden]: Y,
+                        [P.multiPIPMode]: et
                     }),
                     noBorder: !ee,
                     children: [
@@ -143,7 +143,7 @@ function U(e) {
                                                     onMouseDown: i,
                                                     onMouseLeave: a,
                                                     onJumpToChannel: () => {
-                                                        en(), (0, b.tg)(L.Ez.PANEL);
+                                                        en(), (0, T.tg)(L.Ez.PANEL);
                                                     },
                                                     channel: y,
                                                     applicationId: G.applicationId,
@@ -158,7 +158,7 @@ function U(e) {
                                                           onMouseMove: i,
                                                           onMouseDown: i,
                                                           onMouseLeave: a,
-                                                          className: M.clickShield,
+                                                          className: P.clickShield,
                                                           onDoubleClick: en
                                                       }),
                                                       (0, r.jsx)(O.YB, {
@@ -177,9 +177,9 @@ function U(e) {
                         }),
                         A
                             ? (0, r.jsx)(l.Spinner, {
-                                  className: s()(M.iframe, {
-                                      [M.pipModeShort]: ee && !U,
-                                      [M.pipModeTall]: ee && U
+                                  className: s()(P.iframe, {
+                                      [P.pipModeShort]: ee && !U,
+                                      [P.pipModeTall]: ee && U
                                   })
                               })
                             : (0, r.jsx)(R.J, {
@@ -187,10 +187,10 @@ function U(e) {
                                   referrerPolicy: D.um.has(G.applicationId) ? 'no-referrer' : 'origin',
                                   url: G.url,
                                   queryParams: ea,
-                                  className: s()(M.iframe, {
-                                      [M.pipModeShort]: ee && !U,
-                                      [M.pipModeTall]: ee && U,
-                                      [M.pipNonInteractive]: ee && !(null === (n = G.config) || void 0 === n ? void 0 : n.useInteractivePIP)
+                                  className: s()(P.iframe, {
+                                      [P.pipModeShort]: ee && !U,
+                                      [P.pipModeTall]: ee && U,
+                                      [P.pipNonInteractive]: ee && !(null === (n = G.config) || void 0 === n ? void 0 : n.useInteractivePIP)
                                   }),
                                   shouldRefocus: !ee && j
                               }),

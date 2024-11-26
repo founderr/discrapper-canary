@@ -36,20 +36,20 @@ let T = (e) => {
             submitting: t
         };
     },
-    C = (e) => {
+    E = (e) => {
         var t;
-        let { transitionState: n, groupListing: s, guildId: r, listing: o, subscription: C, onClose: _ } = e,
-            E = (0, u.Dt)(),
-            f = (0, h.YB)(r),
-            I = (null == f ? void 0 : null === (t = f.cover_image_asset) || void 0 === t ? void 0 : t.application_id) != null ? (0, m._W)(f.cover_image_asset.application_id, f.cover_image_asset, 440) : void 0,
+        let { transitionState: n, groupListing: s, guildId: r, listing: o, subscription: E, onClose: _ } = e,
+            C = (0, u.Dt)(),
+            I = (0, h.YB)(r),
+            f = (null == I ? void 0 : null === (t = I.cover_image_asset) || void 0 === t ? void 0 : t.application_id) != null ? (0, m._W)(I.cover_image_asset.application_id, I.cover_image_asset, 440) : void 0,
             { analyticsLocations: N } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
             { cancelSubscription: A, error: b, submitting: v } = T(N),
             j = async () => {
-                (await A(C.id)) && _();
+                (await A(E.id)) && _();
             },
             O = o.role_benefits.benefits.filter((e) => e.ref_type === p.Qs.CHANNEL),
             R = o.role_benefits.benefits.filter((e) => e.ref_type === p.Qs.INTANGIBLE),
-            P = l()(C.currentPeriodEnd).format('MMMM Do, YYYY'),
+            P = l()(E.currentPeriodEnd).format('MMMM Do, YYYY'),
             D = x.intl.formatToPlainString(x.t.KsMRPz, {
                 numChannels: O.length,
                 numAdditionalBenefits: R.length,
@@ -58,12 +58,12 @@ let T = (e) => {
         return (0, i.jsxs)(a.ModalRoot, {
             transitionState: n,
             className: S.__invalid_modal,
-            'aria-labelledby': E,
+            'aria-labelledby': C,
             children: [
                 (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsx)('img', {
-                            src: I,
+                            src: f,
                             alt: '',
                             className: S.headerImage
                         }),
@@ -79,7 +79,7 @@ let T = (e) => {
                     className: S.content,
                     children: [
                         (0, i.jsx)(a.Heading, {
-                            id: E,
+                            id: C,
                             variant: 'text-md/medium',
                             className: S.title,
                             children: x.intl.string(x.t.O6l5tL)
@@ -119,7 +119,7 @@ let T = (e) => {
     },
     _ = (e) => {
         (0, a.openModal)((t) =>
-            (0, i.jsx)(C, {
+            (0, i.jsx)(E, {
                 ...t,
                 ...e
             })

@@ -25,13 +25,13 @@ var r = n(200651),
     g = n(37796);
 function E(e) {
     let { url: t, className: n, style: a, onLoad: s, shouldRefocus: g, queryParams: E, allowPopups: v = !1, referrerPolicy: I = 'origin' } = e,
-        b = (0, f.sU)({}),
-        T = (0, o.useMemoOne)(() => (0, l.Z)(), [t]),
+        T = (0, f.sU)({}),
+        b = (0, o.useMemoOne)(() => (0, l.Z)(), [t]),
         S = i.useRef(null),
-        y = (0, _.Z)(S, g, null == b ? window : b),
+        y = (0, _.Z)(S, g, null == T ? window : T),
         A = {
             ...E,
-            frame_id: T,
+            frame_id: b,
             platform: h.S4.DESKTOP
         },
         [N, C] = i.useState(!1),
@@ -41,12 +41,12 @@ function E(e) {
         R === m.BRd.LIGHT ? (O.colorScheme = 'light') : (O.colorScheme = 'dark'),
         i.useEffect(
             () => (
-                d.S.dispatch(m.CkL.IFRAME_MOUNT, { id: T }),
+                d.S.dispatch(m.CkL.IFRAME_MOUNT, { id: b }),
                 () => {
-                    d.S.dispatch(m.CkL.IFRAME_UNMOUNT, { id: T });
+                    d.S.dispatch(m.CkL.IFRAME_UNMOUNT, { id: b });
                 }
             ),
-            [T]
+            [b]
         ),
         i.useEffect(() => {
             let e = (e) => {

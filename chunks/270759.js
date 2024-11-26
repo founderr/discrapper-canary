@@ -18,12 +18,12 @@ var i = n(200651),
     I = n(199104),
     C = n(922611),
     v = n(108427),
-    S = n(210887),
-    N = n(974042),
+    N = n(210887),
+    S = n(974042),
     T = n(666286),
-    A = n(596957),
+    x = n(596957),
     b = n(981631),
-    x = n(723359),
+    A = n(723359),
     Z = n(388032),
     L = n(224602);
 function y() {
@@ -41,7 +41,7 @@ t.Z = function (e) {
         'true' === new URLSearchParams(l.search).get('confirm-age') &&
             u.Z.dispatch({
                 type: 'AGE_GATE_MODAL_OPEN',
-                source: x.L0.DEEP_LINK_PROMPT
+                source: A.L0.DEEP_LINK_PROMPT
             }).then(() => {
                 E.replace(b.Z5c.ME);
             });
@@ -52,8 +52,8 @@ t.Z = function (e) {
         r.useEffect(() => {
             null != t && m.Z.setInitialSection(t);
         }, [t]);
-    let O = (0, c.e7)([S.Z], () => S.Z.theme),
-        { section: R, pendingCount: P } = (0, c.cj)([N.ZP], () => N.ZP.getState()),
+    let P = (0, c.e7)([N.Z], () => N.Z.theme),
+        { section: O, pendingCount: R } = (0, c.cj)([S.ZP], () => S.ZP.getState()),
         j = (0, c.cj)([f.Z], () => f.Z.getSuggestionCount()),
         D = (e) => {
             m.Z.setSection(e);
@@ -66,7 +66,7 @@ t.Z = function (e) {
         children: [
             (0, i.jsx)(p.yY, { location: Z.intl.string(Z.t.TdEu5e) }),
             (0, i.jsx)(d.ThemeProvider, {
-                theme: O,
+                theme: P,
                 children: (e) =>
                     (0, i.jsxs)(_.Z, {
                         className: e,
@@ -86,7 +86,7 @@ t.Z = function (e) {
                             (0, i.jsx)(_.Z.Divider, {}),
                             (0, i.jsxs)(d.TabBar, {
                                 'aria-label': Z.intl.string(Z.t.TdEu5e),
-                                selectedItem: R,
+                                selectedItem: O,
                                 type: 'top-pill',
                                 onItemSelect: D,
                                 className: L.tabBar,
@@ -107,9 +107,9 @@ t.Z = function (e) {
                                         'aria-label': Z.intl.string(Z.t.p6IHGB),
                                         children: [
                                             Z.intl.string(Z.t.p6IHGB),
-                                            P > 0
+                                            R > 0
                                                 ? (0, i.jsx)(d.NumberBadge, {
-                                                      count: P,
+                                                      count: R,
                                                       className: L.badge
                                                   })
                                                 : null
@@ -151,15 +151,15 @@ t.Z = function (e) {
                 className: L.tabBody,
                 children: [
                     (0, i.jsx)(d.TabBar.Panel, {
-                        id: R,
+                        id: O,
                         className: L.peopleColumn,
                         'aria-labelledby': w,
                         children:
-                            R === b.pJs.ADD_FRIEND
+                            O === b.pJs.ADD_FRIEND
                                 ? (0, i.jsx)(T.Z, {})
-                                : (0, i.jsx)(A.Z, {
+                                : (0, i.jsx)(x.Z, {
                                       titleId: w,
-                                      sectionFilter: R
+                                      sectionFilter: O
                                   })
                     }),
                     (0, i.jsx)('div', {

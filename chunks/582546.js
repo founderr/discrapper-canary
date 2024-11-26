@@ -35,14 +35,14 @@ function h(e) {
             }
         });
     if (v) return null;
-    let b = (0, o.dU)(h) ? (null === (t = h.extra.entries[0]) || void 0 === t ? void 0 : t.media) : h.extra.media;
-    return null == b
+    let T = (0, o.dU)(h) ? (null === (t = h.extra.entries[0]) || void 0 === t ? void 0 : t.media) : h.extra.media;
+    return null == T
         ? null
         : (0, r.jsx)(a.MenuItem, {
               id: 'play-on-spotify',
               label: p.intl.string(p.t.rRffNz),
               action: () => {
-                  null == g || g({ action: 'PRESS_PLAY_ON_SPOTIFY_MENU_ITEM' }), (0, l.o)(_.Hw.TRACK, b.external_id);
+                  null == g || g({ action: 'PRESS_PLAY_ON_SPOTIFY_MENU_ITEM' }), (0, l.o)(_.Hw.TRACK, T.external_id);
               }
           });
 }

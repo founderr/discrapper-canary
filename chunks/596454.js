@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return T;
     }
 }),
     n(47120),
@@ -24,15 +24,15 @@ n(200960);
 let E = __OVERLAY__ ? () => (0, o.e7)([_.Z], () => _.Z.isInstanceFocused()) : m.n;
 function v(e) {
     var t, n;
-    let { src: a, alt: o, className: l, emojiId: d, emojiName: _, channelId: m, messageId: v, animated: I, size: b = 'default', isInteracting: T = !1, shouldAnimate: S, onMouseEnter: y, onMouseLeave: A, canSelect: N = !0, autoplay: C, registerAnimatedElementRef: R, ...O } = e,
+    let { src: a, alt: o, className: l, emojiId: d, emojiName: _, channelId: m, messageId: v, animated: I, size: T = 'default', isInteracting: b = !1, shouldAnimate: S, onMouseEnter: y, onMouseLeave: A, canSelect: N = !0, autoplay: C, registerAnimatedElementRef: R, ...O } = e,
         [D, L] = i.useState(!1),
         [x, w] = i.useState(void 0),
-        M = i.useRef(),
-        { triggerAnimation: P } = i.useContext(u.Rm),
+        P = i.useRef(),
+        { triggerAnimation: M } = i.useContext(u.Rm),
         k = f.Yk.useSetting(),
         U = E(),
         B = null == C ? k : C,
-        G = g.kV[b],
+        G = g.kV[T],
         Z = i.useRef(null),
         F = i.useMemo(() => {
             if (null != a) return a;
@@ -40,24 +40,24 @@ function v(e) {
                 let e = !0 === S && B;
                 return p.ZP.getEmojiURL({
                     id: d,
-                    animated: U && !0 === I && (e || D || !0 === T),
+                    animated: U && !0 === I && (e || D || !0 === b),
                     size: G
                 });
             }
             if (null != _) return h.ZP.getURL(_);
             throw Error('Unknown Src for Emoji');
-        }, [I, B, d, _, G, U, D, T, S, a]),
+        }, [I, B, d, _, G, U, D, b, S, a]),
         V = i.useCallback(() => {
             null != F &&
-                (M.current = (0, c.po)(F, (e) => {
+                (P.current = (0, c.po)(F, (e) => {
                     !e && w(Date.now());
                 }));
         }, [F]),
         j = i.useCallback(
             (e) => {
-                I && L(!0), null == d && P(_), null == y || y(e);
+                I && L(!0), null == d && M(_), null == y || y(e);
             },
-            [I, _, y, P, d]
+            [I, _, y, M, d]
         ),
         H = i.useCallback(
             (e) => {
@@ -70,8 +70,8 @@ function v(e) {
             return {
                 ...O,
                 className: s()('emoji', l, {
-                    jumboable: 'jumbo' === b,
-                    reactionLarge: 'reactionLarge' === b
+                    jumboable: 'jumbo' === T,
+                    reactionLarge: 'reactionLarge' === T
                 }),
                 onError: V,
                 onMouseEnter: j,
@@ -79,11 +79,11 @@ function v(e) {
                 'data-type': 'emoji',
                 ...e
             };
-        }, [l, d, _, j, H, V, O, b]);
+        }, [l, d, _, j, H, V, O, T]);
     i.useEffect(
         () => () => {
             var e;
-            return null === (e = M.current) || void 0 === e ? void 0 : e.call(M);
+            return null === (e = P.current) || void 0 === e ? void 0 : e.call(P);
         },
         []
     );
@@ -148,6 +148,6 @@ function I(e) {
         shouldAnimate: n && !s
     });
 }
-function b(e) {
+function T(e) {
     return null == e.emojiId && null == e.emojiName && null == e.src ? null : e.animated && void 0 === e.shouldAnimate ? (0, r.jsx)(I, { ...e }) : (0, r.jsx)(v, { ...e });
 }

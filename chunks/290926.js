@@ -1,17 +1,17 @@
 r.d(t, {
     A: function () {
-        return a;
+        return n;
     }
 }),
     r(47120);
-let n = Object.freeze({
+let a = Object.freeze({
         DARK: 'dark',
         LIGHT: 'light',
         MIDNIGHT: 'midnight',
         DARKER: 'darker'
     }),
-    a = new Map([
-        [n.MIDNIGHT, n.DARK],
-        [n.DARKER, n.DARK]
+    n = new Map([
+        [a.MIDNIGHT, a.DARK],
+        [a.DARKER, a.DARK]
     ]);
-t.Z = n;
+t.Z = a;

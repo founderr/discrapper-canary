@@ -23,18 +23,18 @@ var i = n(200651),
     I = n(143757),
     C = n(463119),
     v = n(377171),
-    S = n(243778),
-    N = n(922409),
+    N = n(243778),
+    S = n(922409),
     T = n(899740),
-    A = n(28476),
+    x = n(28476),
     b = n(880257),
-    x = n(631885),
+    A = n(631885),
     Z = n(522558),
     L = n(795448),
     y = n(441623),
-    O = n(457396),
-    R = n(108989),
-    P = n(51596),
+    P = n(457396),
+    O = n(108989),
+    R = n(51596),
     j = n(905423),
     D = n(155409),
     M = n(210887),
@@ -43,12 +43,12 @@ var i = n(200651),
     U = n(699516),
     G = n(923834),
     B = n(55563),
-    V = n(774343),
-    H = n(626135),
+    H = n(774343),
+    V = n(626135),
     F = n(814225),
     z = n(515753),
-    Y = n(831218),
-    W = n(339149),
+    W = n(831218),
+    Y = n(339149),
     K = n(981631),
     q = n(675654),
     X = n(474936),
@@ -76,7 +76,7 @@ let $ = (e) => {
             children: [
                 (0, i.jsx)(z.Qj, {
                     onClick: () => {
-                        m && (H.default.track(K.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: X.hX.FRIEND_ANNIVERSARY }), f.Z.setSection(K.pJs.ALL), (0, L.Gk)());
+                        m && (V.default.track(K.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: X.hX.FRIEND_ANNIVERSARY }), f.Z.setSection(K.pJs.ALL), (0, L.Gk)());
                     },
                     interactiveClassName: m ? J.friendsBadge : void 0,
                     selected: t,
@@ -95,7 +95,7 @@ let $ = (e) => {
                 }),
                 m &&
                     !d &&
-                    (0, i.jsx)(R.Z, {
+                    (0, i.jsx)(O.Z, {
                         className: J.confetti,
                         wind: 0,
                         sprites: q.CA,
@@ -128,7 +128,7 @@ let $ = (e) => {
             text: Q.intl.string(Q.t.cw57am),
             ...r,
             ...l,
-            children: (0, i.jsx)(W.Z, { className: a()(J.downloadProgressCircle, { [J.hideGameUpdateProgressIndicator]: n }) })
+            children: (0, i.jsx)(Y.Z, { className: a()(J.downloadProgressCircle, { [J.hideGameUpdateProgressIndicator]: n }) })
         });
     },
     et = () => {
@@ -138,8 +138,8 @@ let $ = (e) => {
     en = (e) => {
         let { selected: t } = e,
             n = (0, c.JA)('messageRequests'),
-            { channelId: r } = (0, N._)();
-        if (!(0, A.a)()) return null;
+            { channelId: r } = (0, S._)();
+        if (!(0, x.a)()) return null;
         let l = null == r ? void 0 : () => g.Z.preload(K.ME, r);
         return (0, i.jsx)(z.Qj, {
             selected: t,
@@ -178,7 +178,7 @@ let $ = (e) => {
     },
     er = (e) => {
         let { isParentHovered: t } = e,
-            r = (0, x.gU)();
+            r = (0, A.gU)();
         return t
             ? (0, i.jsx)(z.PZ, {
                   onClick: () => {
@@ -194,7 +194,7 @@ let $ = (e) => {
                     className: J.familyCenterPendingBadge,
                     children: (0, i.jsx)(p.NumberBadge, { count: r })
                 })
-              : (0, i.jsx)(S.ZP, {
+              : (0, i.jsx)(N.ZP, {
                     contentTypes: [h.z.FAMILY_CENTER_NEW_BADGE],
                     children: (e) => {
                         let { visibleContent: t } = e;
@@ -207,7 +207,7 @@ let $ = (e) => {
                     }
                 });
     },
-    el = () => (0, P.$Z)('DM_SEARCH');
+    el = () => (0, R.$Z)('DM_SEARCH');
 function ea(e) {
     switch (e) {
         case K.Z5c.APPLICATION_LIBRARY:
@@ -244,7 +244,7 @@ let es = (e) => {
                     })
                 })
             }),
-            (0, i.jsxs)(Y.Z, {
+            (0, i.jsxs)(W.Z, {
                 ...e,
                 version: c,
                 selectedChannelId: o,
@@ -262,7 +262,7 @@ let es = (e) => {
                           )
                         : null,
                     (0, i.jsx)(
-                        O.g,
+                        P.g,
                         {
                             selected: null == c ? l : c.startsWith(K.Z5c.APPLICATION_STORE),
                             route: K.Z5c.APPLICATION_STORE,
@@ -299,7 +299,7 @@ let es = (e) => {
     });
 };
 function eo() {
-    let e = (0, u.e7)([V.Z], () => V.Z.getHomeLink()),
+    let e = (0, u.e7)([H.Z], () => H.Z.getHomeLink()),
         t = (0, u.e7)(
             [B.Z],
             () => {

@@ -7,7 +7,7 @@ let r = Object.freeze({
         WEEK: 604800000,
         DAYS_30: 2592000000
     }),
-    n = Object.freeze({
+    a = Object.freeze({
         SECOND: 1,
         MINUTE: 60,
         HOUR: 3600,
@@ -17,5 +17,5 @@ let r = Object.freeze({
     });
 t.Z = {
     Millis: r,
-    Seconds: n
+    Seconds: a
 };

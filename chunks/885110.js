@@ -17,8 +17,8 @@ var r,
     E = n(77498),
     v = n(517100),
     I = n(283595),
-    b = n(293273),
-    T = n(158776),
+    T = n(293273),
+    b = n(158776),
     S = n(797258),
     y = n(981631);
 let A = !1,
@@ -30,26 +30,26 @@ let A = !1,
     L = !0,
     x = Object.freeze([]),
     w = [];
-function M(e) {
+function P(e) {
     return (0, g.OT)(e, I.Z);
 }
-function P(e) {
+function M(e) {
     switch (e.type) {
         case y.IIU.LISTENING:
             if ((0, _.Z)(e)) return p.Z.shouldShowActivity();
-            if (null != e.application_id) return M(e.application_id);
+            if (null != e.application_id) return P(e.application_id);
             return !1;
         case y.IIU.PLAYING:
             return null != e.application_id
-                ? M(e.application_id)
+                ? P(e.application_id)
                 : (function (e) {
                       let t = E.Z.getGameByName(e);
-                      return null != t ? M(t.id) : h.G6.getSetting();
+                      return null != t ? P(t.id) : h.G6.getSetting();
                   })(e.name);
         case y.IIU.STREAMING:
         case y.IIU.WATCHING:
         default:
-            return null == e.application_id || M(e.application_id);
+            return null == e.application_id || P(e.application_id);
     }
 }
 function k() {
@@ -62,7 +62,7 @@ function k() {
     }
     N === y.Skl.ONLINE && R > 0 && (N = y.Skl.IDLE);
     let t = !1,
-        n = L || N === y.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(P);
+        n = L || N === y.Skl.INVISIBLE ? [] : T.Z.getActivities().filter(M);
     !l()(O, n) && ((O = n), (t = !0));
     let r = S.Z.getRemoteActivities();
     if ((x !== r && ((x = r), (t = !0)), t)) {
@@ -82,11 +82,11 @@ function k() {
     }
 }
 function U() {
-    (L = !1), (C = y.Skl.UNKNOWN), k(), T.Z.setCurrentUserOnConnectionOpen(N, w);
+    (L = !1), (C = y.Skl.UNKNOWN), k(), b.Z.setCurrentUserOnConnectionOpen(N, w);
 }
 class B extends (r = d.ZP.Store) {
     initialize() {
-        this.waitFor(v.Z, m.Z, b.Z, S.Z, I.Z, E.Z), this.syncWith([b.Z], k);
+        this.waitFor(v.Z, m.Z, T.Z, S.Z, I.Z, E.Z), this.syncWith([T.Z], k);
     }
     getLocalPresence() {
         return {

@@ -21,7 +21,7 @@ let d = (e) => {
             })
         ),
         [v, I] = i.useState(''),
-        [b, T] = i.useState('');
+        [T, b] = i.useState('');
     i.useEffect(() => {
         var e;
         I(null !== (e = null == m ? void 0 : m.value) && void 0 !== e ? e : '');
@@ -30,13 +30,13 @@ let d = (e) => {
         (e) => {
             let t = null != p ? new RegExp(p) : null;
             null != t && null == t.exec(e)
-                ? (T(l.intl.string(l.t['24xrGR'])),
+                ? (b(l.intl.string(l.t['24xrGR'])),
                   h({
                       value: e,
                       isValid: !1
                   }))
                 : null != e &&
-                  (T(''),
+                  (b(''),
                   I(e),
                   h({
                       value: e,
@@ -67,7 +67,7 @@ let d = (e) => {
                 maxLength: _,
                 onChange: S,
                 value: v,
-                error: b,
+                error: T,
                 rows: f,
                 placeholder: d,
                 autoFocus: !0

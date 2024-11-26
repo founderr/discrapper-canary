@@ -21,8 +21,8 @@ var r = n(513394),
     E = n(321531),
     v = n(685995),
     I = n(478638),
-    b = n(578163),
-    T = n(595048),
+    T = n(578163),
+    b = n(595048),
     S = n(762120),
     y = n(670598),
     A = n(102315),
@@ -34,8 +34,8 @@ var r = n(513394),
     L = n(147341),
     x = n(689845),
     w = n(365498),
-    M = n(949739),
-    P = n(683384),
+    P = n(949739),
+    M = n(683384),
     k = n(373141),
     U = n(770003),
     B = n(726983),
@@ -73,9 +73,9 @@ function q(e, t) {
             isVirtualized: !0
         }),
         E = (0, Z.tv)(),
-        { isInvalid: v, validationErrors: I, validationDetails: b } = t.displayValidation,
+        { isInvalid: v, validationErrors: I, validationDetails: T } = t.displayValidation,
         {
-            labelProps: T,
+            labelProps: b,
             inputProps: S,
             descriptionProps: y,
             errorMessageProps: A
@@ -132,12 +132,12 @@ function q(e, t) {
         N = (0, Z.bE)({
             id: p.id,
             'aria-label': _.format('buttonLabel'),
-            'aria-labelledby': e['aria-labelledby'] || T.id
+            'aria-labelledby': e['aria-labelledby'] || b.id
         }),
         C = (0, Z.bE)({
             id: h.id,
             'aria-label': _.format('listboxLabel'),
-            'aria-labelledby': e['aria-labelledby'] || T.id
+            'aria-labelledby': e['aria-labelledby'] || b.id
         }),
         R = (0, F.useRef)(0),
         O = null != t.selectionManager.focusedKey && t.isOpen ? t.collection.getItem(t.selectionManager.focusedKey) : void 0,
@@ -161,16 +161,16 @@ function q(e, t) {
         }
         (x.current = D), (w.current = L);
     });
-    let M = (0, V.is)(t.collection),
-        P = (0, F.useRef)(M),
+    let P = (0, V.is)(t.collection),
+        M = (0, F.useRef)(P),
         k = (0, F.useRef)(t.isOpen);
     (0, F.useEffect)(() => {
         let e = t.isOpen !== k.current && (null == t.selectionManager.focusedKey || (0, Z.ad)());
-        if (t.isOpen && (e || M !== P.current)) {
-            let e = _.format('countAnnouncement', { optionCount: M });
+        if (t.isOpen && (e || P !== M.current)) {
+            let e = _.format('countAnnouncement', { optionCount: P });
             (0, U.xQ)(e);
         }
-        (P.current = M), (k.current = t.isOpen);
+        (M.current = P), (k.current = t.isOpen);
     });
     let q = (0, F.useRef)(t.selectedKey);
     return (
@@ -186,7 +186,7 @@ function q(e, t) {
             if (t.isOpen) return (0, B.RP)([o.current, s.current]);
         }, [t.isOpen, o, s]),
         {
-            labelProps: T,
+            labelProps: b,
             buttonProps: {
                 ...p,
                 ...N,
@@ -231,7 +231,7 @@ function q(e, t) {
             errorMessageProps: A,
             isInvalid: v,
             validationErrors: I,
-            validationDetails: b
+            validationDetails: T
         }
     );
 }
@@ -254,8 +254,8 @@ z = {
     'ja-JP': E.Z,
     'ko-KR': v.Z,
     'lt-LT': I.Z,
-    'lv-LV': b.Z,
-    'nb-NO': T.Z,
+    'lv-LV': T.Z,
+    'nb-NO': b.Z,
     'nl-NL': S.Z,
     'pl-PL': y.Z,
     'pt-BR': A.Z,
@@ -267,7 +267,7 @@ z = {
     'sr-SP': L.Z,
     'sv-SE': x.Z,
     'tr-TR': w.Z,
-    'uk-UA': M.Z,
-    'zh-CN': P.Z,
+    'uk-UA': P.Z,
+    'zh-CN': M.Z,
     'zh-TW': k.Z
 };

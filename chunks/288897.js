@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(704875),
     v = n(653309),
     I = n(846644),
-    b = n(665162);
-function T(e, t, n) {
+    T = n(665162);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -294,7 +294,7 @@ class S extends i.PureComponent {
                     value: [...this.state.initialValue],
                     children: (0, r.jsx)(o.CX, {
                         ...v,
-                        className: s()(b.markup, I.editor, t),
+                        className: s()(T.markup, I.editor, t),
                         decorate: this.decorate,
                         renderElement: this.renderElement,
                         renderLeaf: this.renderLeaf,
@@ -319,8 +319,8 @@ class S extends i.PureComponent {
     }
     constructor(e) {
         super(e),
-            T(this, 'containerRef', i.createRef()),
-            T(this, 'state', void 0),
+            b(this, 'containerRef', i.createRef()),
+            b(this, 'state', void 0),
             (this.decorate = this.decorate.bind(this)),
             (this.renderElement = this.renderElement.bind(this)),
             (this.renderLeaf = this.renderLeaf.bind(this)),

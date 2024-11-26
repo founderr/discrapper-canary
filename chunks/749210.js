@@ -23,8 +23,8 @@ var r = n(990547),
     E = n(914010),
     v = n(594174),
     I = n(626135),
-    b = n(700785),
-    T = n(74538),
+    T = n(700785),
+    b = n(74538),
     S = n(573261),
     y = n(668781),
     A = n(981631),
@@ -52,8 +52,8 @@ async function D(e) {
     let u = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { source: d, loadId: p, lurkLocation: h } = u,
         I = null !== (t = u.lurker) && void 0 !== t && t,
-        b = v.default.getCurrentUser();
-    if (null !== (r = null == b ? void 0 : b.hasFlag(A.xW$.QUARANTINED)) && void 0 !== r && r) return (0, c.default)(), new Promise((e, t) => t(Error()));
+        T = v.default.getCurrentUser();
+    if (null !== (r = null == T ? void 0 : T.hasFlag(A.xW$.QUARANTINED)) && void 0 !== r && r) return (0, c.default)(), new Promise((e, t) => t(Error()));
     s.Z.wait(() =>
         s.Z.dispatch({
             type: 'GUILD_JOIN',
@@ -114,7 +114,7 @@ async function D(e) {
     } catch (t) {
         if ((null === (i = t.body) || void 0 === i ? void 0 : i.code) === A.evJ.TOO_MANY_USER_GUILDS) {
             let e = v.default.getCurrentUser();
-            T.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? C(A.tHP) : C(A.DZw);
+            b.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? C(A.tHP) : C(A.DZw);
         }
         throw ((null === (o = t.body) || void 0 === o ? void 0 : o.code) === A.evJ.GUILD_AT_CAPACITY && O(), I && (null === (l = t.body) || void 0 === l ? void 0 : l.code) === A.evJ.UNKNOWN_GUILD && R(e), t);
     }
@@ -240,7 +240,7 @@ t.Z = {
         let r = {
             name: null != t && '' !== t ? t : N.intl.string(N.t.QBMHvL),
             color: null != n ? n : 0,
-            permissions: b.Hn
+            permissions: T.Hn
         };
         try {
             let t = await a.tn.post({

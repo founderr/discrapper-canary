@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(819640),
     v = n(594174),
     I = n(70956),
-    b = n(709054),
-    T = n(51144),
+    T = n(709054),
+    b = n(51144),
     S = n(443603),
     y = n(981631),
     A = n(921944),
@@ -62,13 +62,13 @@ t.Z = i.memo(function (e) {
         [s, c] = i.useState(!1),
         I = (0, o.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
         L = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
-        x = null != L ? b.default.age(L.id) : 0,
+        x = null != L ? T.default.age(L.id) : 0,
         { enabled: w } = m.O.useExperiment({ location: 'gift-button' }),
-        M = [];
-    w && !t && I && x >= O && M.push(l.z.NITROWEEN_COACHMARKS);
-    let [P, k] = (0, p.US)(M),
-        U = null != P,
-        B = (0, T.Ft)(n),
+        P = [];
+    w && !t && I && x >= O && P.push(l.z.NITROWEEN_COACHMARKS);
+    let [M, k] = (0, p.US)(P),
+        U = null != M,
+        B = (0, b.Ft)(n),
         { Component: G, events: Z, play: F } = (0, u.$)();
     if (t) return null;
     let V = () => {

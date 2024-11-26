@@ -21,7 +21,7 @@ n.d(t, {
         return c;
     },
     lP: function () {
-        return b;
+        return T;
     },
     q: function () {
         return f;
@@ -371,7 +371,7 @@ let c = {
             }
         return n[o];
     },
-    b = {
+    T = {
         getLineStart(e, t, n) {
             let r;
             let i = c.getParentElement(e, t);
@@ -420,7 +420,7 @@ let c = {
             let n = m.toPoint(e.selection);
             if (null == n) return null;
             if (t) {
-                let t = b.getLineStart(e, n, !1);
+                let t = T.getLineStart(e, n, !1);
                 return null == t
                     ? null
                     : {
@@ -429,7 +429,7 @@ let c = {
                       };
             }
             {
-                let t = b.getLineEnd(e, n, !0);
+                let t = T.getLineEnd(e, n, !0);
                 return null == t
                     ? null
                     : {

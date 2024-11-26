@@ -1,8 +1,8 @@
-var n, a;
+var a, n;
 r.d(t, {
     Wc: function () {
-        return n;
+        return a;
     }
 }),
-    ((a = n || (n = {})).ABOUT = 'about'),
-    (a.STORE = 'store');
+    ((n = a || (a = {})).ABOUT = 'about'),
+    (n.STORE = 'store');

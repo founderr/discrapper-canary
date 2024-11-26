@@ -93,15 +93,15 @@ function g(e, t) {
 var E = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g,
     v = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g,
     I = /^'([^]*?)'?$/,
-    b = /''/g,
-    T = /\S/,
+    T = /''/g,
+    b = /\S/,
     S = /[a-zA-Z]/;
 function y(e, t, n, g) {
     (0, d.Z)(3, arguments);
     var y = String(e),
         A = String(t),
         N = (0, p.j)(),
-        C = null !== (M = null !== (P = null == g ? void 0 : g.locale) && void 0 !== P ? P : N.locale) && void 0 !== M ? M : r.Z;
+        C = null !== (P = null !== (M = null == g ? void 0 : g.locale) && void 0 !== M ? M : N.locale) && void 0 !== P ? P : r.Z;
     if (!C.match) throw RangeError('locale must contain match property');
     var R = (0, c.Z)(null !== (k = null !== (U = null !== (B = null !== (G = null == g ? void 0 : g.firstWeekContainsDate) && void 0 !== G ? G : null == g ? void 0 : null === (Z = g.locale) || void 0 === Z ? void 0 : null === (F = Z.options) || void 0 === F ? void 0 : F.firstWeekContainsDate) && void 0 !== B ? B : N.firstWeekContainsDate) && void 0 !== U ? U : null === (V = N.locale) || void 0 === V ? void 0 : null === (j = V.options) || void 0 === j ? void 0 : j.firstWeekContainsDate) && void 0 !== k ? k : 1);
     if (!(R >= 1 && R <= 7)) throw RangeError('firstWeekContainsDate must be between 1 and 7 inclusively');
@@ -122,8 +122,8 @@ function y(e, t, n, g) {
             .join('')
             .match(E),
         w = [],
-        M,
         P,
+        M,
         k,
         U,
         B,
@@ -171,7 +171,7 @@ function y(e, t, n, g) {
                             ? (t = "'")
                             : "'" === n &&
                               (t = (function (e) {
-                                  return e.match(I)[1].replace(b, "'");
+                                  return e.match(I)[1].replace(T, "'");
                               })(t)),
                         0 !== y.indexOf(t))
                     )
@@ -186,7 +186,7 @@ function y(e, t, n, g) {
     } finally {
         $.f();
     }
-    if (y.length > 0 && T.test(y)) return new Date(NaN);
+    if (y.length > 0 && b.test(y)) return new Date(NaN);
     var et = L.map(function (e) {
             return e.priority;
         })

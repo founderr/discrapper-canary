@@ -3,7 +3,7 @@ r.d(t, {
         return _;
     },
     E1: function () {
-        return E;
+        return i;
     },
     JQ: function () {
         return l;
@@ -12,27 +12,27 @@ r.d(t, {
         return o;
     },
     TE: function () {
-        return a;
+        return n;
     },
     Wb: function () {
         return c;
     },
     Zj: function () {
-        return n;
+        return a;
     },
     ju: function () {
-        return i;
+        return E;
     },
     p6: function () {
         return s;
     }
 });
-let n = 'sentry.source',
-    a = 'sentry.sample_rate',
+let a = 'sentry.source',
+    n = 'sentry.sample_rate',
     _ = 'sentry.op',
     o = 'sentry.origin',
-    i = 'sentry.idle_span_finish_reason',
-    E = 'sentry.measurement_unit',
+    E = 'sentry.idle_span_finish_reason',
+    i = 'sentry.measurement_unit',
     c = 'sentry.measurement_value',
     s = 'sentry.profile_id',
     l = 'sentry.exclusive_time';

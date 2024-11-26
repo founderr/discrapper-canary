@@ -33,13 +33,13 @@ n.d(t, {
         return D;
     },
     qE: function () {
-        return T;
+        return b;
     },
     v6: function () {
         return L;
     },
     zx: function () {
-        return b;
+        return T;
     }
 }),
     n(536091);
@@ -87,7 +87,7 @@ let E = (e) => {
             className: a()(m.image, t)
         });
     },
-    b = (e) => {
+    T = (e) => {
         let { className: t, ...n } = e,
             i = n.look === s.Button.Looks.LINK;
         return (0, r.jsx)(s.Button, {
@@ -100,8 +100,8 @@ let E = (e) => {
             ...n
         });
     };
-(b.Looks = s.Button.Looks), (b.Colors = s.Button.Colors), (b.Sizes = s.Button.Sizes);
-let T = (e) => {
+(T.Looks = s.Button.Looks), (T.Colors = s.Button.Colors), (T.Sizes = s.Button.Sizes);
+let b = (e) => {
         let { className: t, src: n, size: i } = e;
         return (0, r.jsx)(g, {
             src: n,
@@ -132,13 +132,13 @@ let y = (e) => {
 };
 y.Sizes = s.AvatarSizes;
 let A = (e) => {
-        let { label: t, error: n, placeholder: i, value: o, className: l, inputClassName: u, setRef: d, type: f = 'text', onChange: _, autoComplete: p, autoFocus: h, maxLength: g, spellCheck: E, name: v, description: I, required: b, onFocus: T, onBlur: S } = e,
+        let { label: t, error: n, placeholder: i, value: o, className: l, inputClassName: u, setRef: d, type: f = 'text', onChange: _, autoComplete: p, autoFocus: h, maxLength: g, spellCheck: E, name: v, description: I, required: T, onFocus: b, onBlur: S } = e,
             y = (0, c.Dt)();
         return (0, r.jsxs)(s.FormItem, {
             title: t,
             error: n,
             className: l,
-            required: b,
+            required: T,
             tag: 'label',
             htmlFor: y,
             children: [
@@ -156,7 +156,7 @@ let A = (e) => {
                     maxLength: g,
                     spellCheck: E,
                     id: y,
-                    onFocus: T,
+                    onFocus: b,
                     onBlur: S
                 }),
                 null != I
@@ -245,7 +245,7 @@ let A = (e) => {
                           color: 'header-secondary',
                           children: h.intl.string(h.t['/8WWvL'])
                       }),
-                      (0, r.jsx)(T, {
+                      (0, r.jsx)(b, {
                           className: m.joiningAsAvatar,
                           src: t.getAvatarURL(void 0, 24),
                           size: s.AvatarSizes.SIZE_24,
@@ -266,7 +266,7 @@ let A = (e) => {
         return (0, r.jsxs)(N, {
             className: t,
             children: [
-                (0, r.jsx)(b, {
+                (0, r.jsx)(T, {
                     onClick: () => window.open((0, f.t3)()),
                     children: h.intl.format(h.t.JoS1i4, { platform: (0, f.DW)() })
                 }),

@@ -61,7 +61,7 @@ function T(e) {
             })
     });
 }
-function C(e) {
+function E(e) {
     let { sound: t } = e,
         { previewSound: n } = (0, m.Z)(t, null),
         s =
@@ -121,7 +121,7 @@ function _(e) {
                                   : t.name
                     }),
                     r
-                        ? (0, i.jsx)(C, { sound: t })
+                        ? (0, i.jsx)(E, { sound: t })
                         : (0, i.jsx)(a.VoiceNormalIcon, {
                               size: 'md',
                               color: 'currentColor',

@@ -17,8 +17,8 @@ var i = n(512722),
     E = n(314897),
     v = n(358085),
     I = n(998502),
-    b = n(569545),
-    T = n(70722),
+    T = n(569545),
+    b = n(70722),
     S = n(981631),
     y = n(65154);
 let A = {},
@@ -33,8 +33,8 @@ function D() {
 let L = o().debounce((e, t, n, r) => {
     x(
         e,
-        (0, b.V9)({
-            streamType: null != t ? T.lo.GUILD : T.lo.CALL,
+        (0, T.V9)({
+            streamType: null != t ? b.lo.GUILD : b.lo.CALL,
             guildId: t,
             channelId: n,
             ownerId: r

@@ -37,8 +37,8 @@ let v = new f.h(
         (e) => [g(e.application_id), E(e.subscription_plans[0].id)],
         (e) => e.id
     ),
-    b = {},
-    T = new Set(),
+    T = {},
+    b = new Set(),
     S = {},
     y = {},
     A = {},
@@ -58,10 +58,10 @@ let L = [];
 class x extends (i = d.ZP.Store) {
     getSubscriptionGroupListingsForGuildFetchState(e) {
         var t;
-        return null !== (t = b[e]) && void 0 !== t ? t : 0;
+        return null !== (t = T[e]) && void 0 !== t ? t : 0;
     }
     getDidFetchListingForSubscriptionPlanId(e) {
-        return T.has(e);
+        return b.has(e);
     }
     getSubscriptionGroupListing(e) {
         return v.get(e);
@@ -113,7 +113,7 @@ class x extends (i = d.ZP.Store) {
         : (s[o] = l),
     (t.Z = new x(_.Z, {
         CONNECTION_OPEN: function () {
-            v.clear(), I.clear(), (b = {}), T.clear(), (S = {}), (y = {}), (A = {}), (N = {}), C.clear();
+            v.clear(), I.clear(), (T = {}), b.clear(), (S = {}), (y = {}), (A = {}), (N = {}), C.clear();
         },
         GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS: function (e) {
             let { settings: t } = e;
@@ -121,16 +121,16 @@ class x extends (i = d.ZP.Store) {
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS: function (e) {
             let { guildId: t } = e;
-            for (let e of ((b[t] = 1), R(t))) for (let t of (v.delete(e.id), e.subscription_listings_ids)) I.delete(t);
+            for (let e of ((T[t] = 1), R(t))) for (let t of (v.delete(e.id), e.subscription_listings_ids)) I.delete(t);
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function (e) {
             let { guildId: t, groupListings: n, settings: r, subscriptionTrials: i } = e;
-            for (let e of ((b[t] = 2), n)) O(e);
+            for (let e of ((T[t] = 2), n)) O(e);
             for (let e of ((S[t] = r), i)) y[e.id] = e;
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: function (e) {
             let { guildId: t } = e;
-            b[t] = 2;
+            T[t] = 2;
         },
         GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING: function (e) {
             let { listing: t } = e;
@@ -142,7 +142,7 @@ class x extends (i = d.ZP.Store) {
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN: function (e) {
             let { planId: t } = e;
-            T.add(t);
+            b.add(t);
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS: function (e) {
             let { groupListing: t } = e;

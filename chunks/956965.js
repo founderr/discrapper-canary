@@ -130,34 +130,34 @@ t.Z = function (e) {
         }, []),
         C = r.useCallback(() => d(!1), []),
         v = (0, u.ye)(t),
-        S = (0, p.u)(l),
-        N = t.bot,
-        { botBannerUrl: T, botBannerUrlAnimated: A } = r.useMemo(
+        N = (0, p.u)(l),
+        S = t.bot,
+        { botBannerUrl: T, botBannerUrlAnimated: x } = r.useMemo(
             () =>
-                (null == N ? void 0 : N.id) == null || (null == N ? void 0 : N.banner) == null
+                (null == S ? void 0 : S.id) == null || (null == S ? void 0 : S.banner) == null
                     ? {}
                     : {
                           botBannerUrl: (0, m.aN)({
-                              id: N.id,
-                              banner: N.banner,
+                              id: S.id,
+                              banner: S.banner,
                               canAnimate: !1,
                               size: 600
                           }),
                           botBannerUrlAnimated: a
                               ? void 0
                               : (0, m.aN)({
-                                    id: N.id,
-                                    banner: N.banner,
+                                    id: S.id,
+                                    banner: S.banner,
                                     canAnimate: !0,
                                     size: 600
                                 })
                       },
-            [null == N ? void 0 : N.id, null == N ? void 0 : N.banner, a]
+            [null == S ? void 0 : S.id, null == S ? void 0 : S.banner, a]
         );
     return (0, i.jsx)('div', {
         className: g.banner,
         style: {
-            backgroundImage: S,
+            backgroundImage: N,
             aspectRatio: 'card' === n ? f : _
         },
         onMouseEnter: h,
@@ -170,13 +170,13 @@ t.Z = function (e) {
                       application: t,
                       isHovered: c,
                       botBannerUrl: null == T ? void 0 : T,
-                      botBannerUrlAnimated: null == A ? void 0 : A
+                      botBannerUrlAnimated: null == x ? void 0 : x
                   })
                 : null != T
                   ? (0, i.jsx)(I, {
                         isHovered: c,
                         url: T,
-                        animatedUrl: A
+                        animatedUrl: x
                     })
                   : null
     });

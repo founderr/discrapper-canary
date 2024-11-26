@@ -22,21 +22,21 @@ var i = n(120356),
     E = n(454816);
 function v(e) {
     var t, n, i, v;
-    let { type: I, textValue: b, maxCharacterCount: T, showRemainingCharsAfterCount: S, className: y } = e,
+    let { type: I, textValue: T, maxCharacterCount: b, showRemainingCharsAfterCount: S, className: y } = e,
         A = (0, s.e7)([f.default], () => _.ZP.canUseIncreasedMessageLength(f.default.getCurrentUser())),
         N = (0, c.Z)(),
-        C = null != T ? T : N,
-        R = null !== (v = null != S ? S : T) && void 0 !== v ? v : N / 10,
-        O = b.length,
+        C = null != b ? b : N,
+        R = null !== (v = null != S ? S : b) && void 0 !== v ? v : N / 10,
+        O = T.length,
         D = null != I.upsellLongMessages && (null != O ? O : 0) > h.J6R && A,
         L = null != I.upsellLongMessages && !A,
         x = (null === (n = (0, d.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === m.Si.TIER_2,
         w = C - O,
-        M = w > R,
-        P = w < 0 && x,
+        P = w > R,
+        M = w < 0 && x,
         k = 0 === w ? g.intl.string(g.t.tU6YQ0) : w > 0 ? g.intl.formatToPlainString(g.t.qH8uFR, { count: w }) : g.intl.string(g.t.YSRIqa),
         { analyticsLocations: U } = (0, u.ZP)(l.Z.CHARACTER_COUNT);
-    return (D && w >= 0) || !M || (L && !M)
+    return (D && w >= 0) || !P || (L && !P)
         ? (0, r.jsx)(u.Gt, {
               value: U,
               children: (0, r.jsxs)('div', {
@@ -58,7 +58,7 @@ function v(e) {
                                             })
                                     })
                                   : null,
-                              M || P
+                              P || M
                                   ? null
                                   : (0, r.jsx)(o.Tooltip, {
                                         text: k,
@@ -73,7 +73,7 @@ function v(e) {
                           ]
                       }),
                       (0, r.jsx)(o.HiddenVisually, { children: g.intl.format(g.t.qH8uFR, { count: w }) }),
-                      L && !M
+                      L && !P
                           ? (0, r.jsx)(p.Z, {
                                 className: E.upsell,
                                 iconOnly: (null === (i = I.upsellLongMessages) || void 0 === i ? void 0 : i.iconOnly) || !1,

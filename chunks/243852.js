@@ -18,32 +18,32 @@ var i,
     I = n(77498),
     C = n(283595),
     v = n(19780),
-    S = n(944486),
-    N = n(981631);
+    N = n(944486),
+    S = n(981631);
 let T = 'ActivityTrackingStore',
-    A = 30 * f.Z.Millis.MINUTE,
+    x = 30 * f.Z.Millis.MINUTE,
     b = 5 * f.Z.Millis.MINUTE,
-    x = null !== (i = c.K.get(T)) && void 0 !== i ? i : {},
+    A = null !== (i = c.K.get(T)) && void 0 !== i ? i : {},
     Z = {},
     L = !1;
 function y(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    t && O(e, !0);
+    t && P(e, !0);
     let n = Z[e.applicationId];
-    null != n && (n.stop(), delete Z[e.applicationId]), delete x[e.applicationId], c.K.set(T, x);
+    null != n && (n.stop(), delete Z[e.applicationId]), delete A[e.applicationId], c.K.set(T, A);
 }
-function O(e) {
+function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = Date.now(),
         i = null != e.updatedAt ? n - e.updatedAt : 0;
-    i > A + b && (i = 0);
+    i > x + b && (i = 0);
     let r = (0, _.OT)(e.applicationId, C.Z),
-        l = S.Z.getVoiceChannelId(),
+        l = N.Z.getVoiceChannelId(),
         a = E.default.getSessionId(),
         s = v.Z.getMediaSessionId();
     h.Z.updateActivity({
         applicationId: e.applicationId,
-        distributor: e.isDiscordApplication ? N.GQo.DISCORD : e.distributor,
+        distributor: e.isDiscordApplication ? S.GQo.DISCORD : e.distributor,
         shareActivity: r,
         token: e.token,
         duration: Math.floor(i / 1000),
@@ -55,9 +55,9 @@ function O(e) {
     }),
         (e.updatedAt = n);
     let o = Z[e.applicationId];
-    null == o && (o = Z[e.applicationId] = new d.Xp()).start(A, () => O(e)), !t && ((x[e.applicationId] = e), c.K.set(T, x));
+    null == o && (o = Z[e.applicationId] = new d.Xp()).start(x, () => P(e)), !t && ((A[e.applicationId] = e), c.K.set(T, A));
 }
-function R() {
+function O() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = p.ZP.getVisibleRunningGames(),
         n = new Set();
@@ -65,26 +65,26 @@ function R() {
         let t = I.Z.getGameByName(e);
         if (null != t)
             n.add(t.id),
-                !(t.id in x) &&
-                    O({
+                !(t.id in A) &&
+                    P({
                         applicationId: t.id,
                         updatedAt: Date.now(),
                         distributor: i,
                         exePath: (0, m.N6)(null != r ? r : '')
                     });
     }
-    for (let t of Object.keys(x)) !n.has(t) && y(x[t], e);
+    for (let t of Object.keys(A)) !n.has(t) && y(A[t], e);
 }
-function P() {
-    for (let e of Object.keys(x)) y(x[e]);
+function R() {
+    for (let e of Object.keys(A)) y(A[e]);
     L = !1;
 }
 class j extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(p.ZP, g.Z, C.Z), this.syncWith([g.Z], R);
+        this.waitFor(p.ZP, g.Z, C.Z), this.syncWith([g.Z], O);
     }
     getActivities() {
-        return x;
+        return A;
     }
 }
 (s = 'ActivityTrackingStore'),
@@ -97,27 +97,27 @@ class j extends (r = o.ZP.Store) {
           })
         : (l[a] = s),
     new j(u.Z, {
-        RUNNING_GAMES_CHANGE: () => R(),
+        RUNNING_GAMES_CHANGE: () => O(),
         CONNECTION_OPEN: function () {
             if (L) return !1;
-            for (let e of Object.keys(x)) O(x[e]);
-            R(!1), (L = !0);
+            for (let e of Object.keys(A)) P(A[e]);
+            O(!1), (L = !0);
         },
         CONNECTION_CLOSED: function (e) {
             let { code: t } = e;
-            4004 === t && P();
+            4004 === t && R();
         },
-        LOGOUT: P,
+        LOGOUT: R,
         ACTIVITY_UPDATE_SUCCESS: function (e) {
             let { applicationId: t, token: n } = e,
-                i = x[t];
+                i = A[t];
             if (null == i) return !1;
-            (i.token = n), c.K.set(T, x);
+            (i.token = n), c.K.set(T, A);
         },
         ACTIVITY_UPDATE_FAIL: function (e) {
             let { applicationId: t } = e,
-                n = x[t];
+                n = A[t];
             if (null == n) return !1;
-            (n.token = null), (n.updatedAt = null), c.K.set(T, x);
+            (n.token = null), (n.updatedAt = null), c.K.set(T, A);
         }
     });

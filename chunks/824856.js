@@ -19,15 +19,15 @@ var i = n(200651),
     x = n(525981);
 function S(e) {
     let { cta: t, storeListing: n, className: r } = e,
-        { applicationId: S, benefits: T, description: C } = n,
+        { applicationId: S, benefits: T, description: E } = n,
         _ = s.useMemo(() => (null == n.thumbnail ? null : (0, g.q)(S, n.thumbnail, 256)), [S, n.thumbnail]),
-        { data: E } = (0, d.X)(n.skuId),
-        f = s.useMemo(() => {
-            if (null == E || 0 === E.length) return null;
-            let e = E[0];
+        { data: C } = (0, d.X)(n.skuId),
+        I = s.useMemo(() => {
+            if (null == C || 0 === C.length) return null;
+            let e = C[0];
             return (0, m.xg)(e);
-        }, [E]);
-    return null == f
+        }, [C]);
+    return null == I
         ? null
         : (0, i.jsxs)(a.l, {
               className: l()(x.wrapper, r),
@@ -51,7 +51,7 @@ function S(e) {
                                       }),
                                       (0, i.jsx)(c.Text, {
                                           variant: 'text-md/medium',
-                                          children: f
+                                          children: I
                                       })
                                   ]
                               })
@@ -61,12 +61,12 @@ function S(e) {
                   ]
               }),
               children: [
-                  !(0, h.Ew)(C) &&
+                  !(0, h.Ew)(E) &&
                       (0, i.jsx)('div', {
                           className: x.description,
                           children: (0, i.jsx)(p.Z, {
                               variant: 'text-sm/medium',
-                              children: C
+                              children: E
                           })
                       }),
                   null != T &&

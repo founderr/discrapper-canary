@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(597952),
     v = n(252618),
     I = n(80006),
-    b = n(587061),
-    T = n(392358),
+    T = n(587061),
+    b = n(392358),
     S = n(981631);
 n(702955);
 let y = new Set([S.Z5c.LOGIN, S.Z5c.REGISTER]);
@@ -38,11 +38,11 @@ t.Z = i.memo(function (e) {
                     { fontScale: S, fontScaleClass: A, saturation: N, desaturateUserColors: C, useForcedColors: R, systemForcedColors: O } = _,
                     D = (0, l.TH)(),
                     L = i.useMemo(() => y.has(D.pathname), [D.pathname]);
-                (0, b.Z)(window, L);
-                let x = (0, T.Z)(window, __OVERLAY__ || n),
+                (0, T.Z)(window, L);
+                let x = (0, b.Z)(window, __OVERLAY__ || n),
                     w = (0, c.e7)([h.Z], () => h.Z.sidebarWidth),
-                    M = (0, f.useRedesignIconContext)().enabled,
-                    P = (0, p.Q)('AppHelmet');
+                    P = (0, f.useRedesignIconContext)().enabled,
+                    M = (0, p.Q)('AppHelmet');
                 return (0, r.jsx)('html', {
                     lang: t,
                     style: 'font-size: '.concat(S, '%; --saturation-factor: ').concat(N, '; --devtools-sidebar-width: ').concat(w, 'px;'),
@@ -59,8 +59,8 @@ t.Z = i.memo(function (e) {
                             'desaturate-user-colors': C,
                             'disable-forced-colors': !R && 'active' === O,
                             'enable-forced-colors': R,
-                            'show-redesigned-icons': M,
-                            'visual-refresh': P
+                            'show-redesigned-icons': P,
+                            'visual-refresh': M
                         },
                         (0, f.getThemeClass)(a),
                         'density-'.concat(o),

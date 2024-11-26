@@ -22,7 +22,7 @@ function h(e) {
             id: h.id,
             icon: h.icon
         }),
-        b = l.ZP.getUserAvatarURL(n);
+        T = l.ZP.getUserAvatarURL(n);
     return (0, r.jsxs)('header', {
         id: t,
         className: p.header,
@@ -40,7 +40,7 @@ function h(e) {
                         children: [(0, r.jsx)('div', { className: p.ellipse }), (0, r.jsx)('div', { className: p.ellipse }), (0, r.jsx)('div', { className: p.ellipse })]
                     }),
                     (0, r.jsx)(i.qE, {
-                        src: b,
+                        src: T,
                         size: f.EF.SIZE_56,
                         'aria-label': n.username
                     })

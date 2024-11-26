@@ -18,7 +18,7 @@ n.d(t, {
         return y;
     },
     Je: function () {
-        return T;
+        return b;
     },
     Js: function () {
         return h;
@@ -27,13 +27,13 @@ n.d(t, {
         return N;
     },
     MO: function () {
-        return M;
+        return P;
     },
     N3: function () {
         return w;
     },
     Oq: function () {
-        return b;
+        return T;
     },
     P_: function () {
         return E;
@@ -54,7 +54,7 @@ n.d(t, {
         return k;
     },
     nE: function () {
-        return P;
+        return M;
     },
     nH: function () {
         return v;
@@ -164,7 +164,7 @@ function I(e) {
             num_attachments: (0, f.RR)(u)
         });
 }
-function b(e) {
+function T(e) {
     let { guildId: t, channelId: n } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_NEW_POST_DRAFT_CLEARED, {
         ...(0, f.xl)({ channelId: n }),
@@ -172,7 +172,7 @@ function b(e) {
         channel_id: n
     });
 }
-function T(e) {
+function b(e) {
     let { guildId: t, channelId: n, postId: i } = e;
     function a() {
         r.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_POST_CREATED, {
@@ -263,10 +263,10 @@ function w(e) {
     let { isMobile: t } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_MEDIA_UPLOADER_CLICKED, { is_mobile: t });
 }
-function M() {
+function P() {
     r.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_ENABLE_AUTOMOD_CLICKED);
 }
-function P() {
+function M() {
     r.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_ENABLE_PREVIEW_CLICKED);
 }
 function k(e) {

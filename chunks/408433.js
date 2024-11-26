@@ -9,13 +9,13 @@ n.d(t, {
         return N;
     },
     kC: function () {
-        return b;
+        return T;
     },
     l3: function () {
         return y;
     },
     o3: function () {
-        return T;
+        return b;
     },
     vP: function () {
         return A;
@@ -63,7 +63,7 @@ function I(e) {
         flags: d ? (null != o ? o : 0) : (0, c.Ge)(null != o ? o : 0, f.FoC.IS_ANIMATED)
     };
 }
-function b(e, t, n) {
+function T(e, t, n) {
     let r = {
         id: i().uniqueId('embed_'),
         url: n.url,
@@ -149,7 +149,7 @@ function b(e, t, n) {
     } else r.fields = [];
     return r;
 }
-function T(e) {
+function b(e) {
     let t = new Map(),
         n = [];
     return (

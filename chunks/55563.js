@@ -31,10 +31,10 @@ function v(e) {
 function I(e) {
     v(e);
 }
-function b(e) {
+function T(e) {
     v(e.sku), null != e.child_skus && e.child_skus.forEach((e) => v(e)), null != e.alternative_skus && e.alternative_skus.forEach((e) => v(e));
 }
-function T(e) {
+function b(e) {
     let { entitlements: t } = e;
     for (let e of t) null != e.sku && v(e.sku);
 }
@@ -90,11 +90,11 @@ class A extends (i = l.yh) {
         },
         STORE_LISTINGS_FETCH_SUCCESS: function (e) {
             let { storeListings: t } = e;
-            for (let e of t) b(e);
+            for (let e of t) T(e);
         },
         STORE_LISTING_FETCH_SUCCESS: function (e) {
             let { storeListing: t } = e;
-            b(t);
+            T(t);
         },
         GIFT_CODE_RESOLVE_SUCCESS: function (e) {
             let { giftCode: t } = e;
@@ -118,8 +118,8 @@ class A extends (i = l.yh) {
             for (let e of n) v(e);
             null != t && E.set(t, new Set(n.map((e) => e.id)));
         },
-        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: T,
+        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: b,
         APPLICATION_STORE_CLEAR_DATA: S,
-        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: T,
-        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: T
+        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: b,
+        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: b
     }));

@@ -86,7 +86,7 @@ function I(e) {
             for (l = e.strstart - e.insert, e.ins_h = e.window[l], e.ins_h = ((e.ins_h << e.hash_shift) ^ e.window[l + 1]) & e.hash_mask; e.insert && ((e.ins_h = ((e.ins_h << e.hash_shift) ^ e.window[l + 3 - 1]) & e.hash_mask), (e.prev[l & e.w_mask] = e.head[e.ins_h]), (e.head[e.ins_h] = l), l++, e.insert--, !(e.lookahead + e.insert < 3)); );
     } while (e.lookahead < d && 0 !== e.strm.avail_in);
 }
-function b(e, t) {
+function T(e, t) {
     for (var n, r; ; ) {
         if (e.lookahead < d) {
             if ((I(e), e.lookahead < d && 0 === t)) return 1;
@@ -105,7 +105,7 @@ function b(e, t) {
     if (((e.insert = e.strstart < 2 ? e.strstart : 2), 4 === t)) return (m(e, !0), 0 === e.strm.avail_out) ? 3 : 4;
     return e.last_lit && (m(e, !1), 0 === e.strm.avail_out) ? 1 : 2;
 }
-function T(e, t) {
+function b(e, t) {
     for (var n, r, i; ; ) {
         if (e.lookahead < d) {
             if ((I(e), e.lookahead < d && 0 === t)) return 1;
@@ -141,15 +141,15 @@ r = [
         if (((e.insert = 0), 4 === t)) return (m(e, !0), 0 === e.strm.avail_out) ? 3 : 4;
         return e.strstart > e.block_start && (m(e, !1), e.strm.avail_out), 1;
     }),
-    new S(4, 4, 8, 4, b),
-    new S(4, 5, 16, 8, b),
-    new S(4, 6, 32, 32, b),
-    new S(4, 4, 16, 16, T),
-    new S(8, 16, 32, 32, T),
-    new S(8, 16, 128, 128, T),
-    new S(8, 32, 128, 256, T),
-    new S(32, 128, 258, 1024, T),
-    new S(32, 258, 258, 4096, T)
+    new S(4, 4, 8, 4, T),
+    new S(4, 5, 16, 8, T),
+    new S(4, 6, 32, 32, T),
+    new S(4, 4, 16, 16, b),
+    new S(8, 16, 32, 32, b),
+    new S(8, 16, 128, 128, b),
+    new S(8, 32, 128, 256, b),
+    new S(32, 128, 258, 1024, b),
+    new S(32, 258, 258, 4096, b)
 ];
 function y() {
     (this.strm = null), (this.status = 0), (this.pending_buf = null), (this.pending_buf_size = 0), (this.pending_out = 0), (this.pending = 0), (this.wrap = 0), (this.gzhead = null), (this.gzindex = 0), (this.method = 8), (this.last_flush = -1), (this.w_size = 0), (this.w_bits = 0), (this.w_mask = 0), (this.window = null), (this.window_size = 0), (this.prev = null), (this.head = null), (this.ins_h = 0), (this.hash_size = 0), (this.hash_bits = 0), (this.hash_mask = 0), (this.hash_shift = 0), (this.block_start = 0), (this.match_length = 0), (this.prev_match = 0), (this.match_available = 0), (this.strstart = 0), (this.match_start = 0), (this.lookahead = 0), (this.prev_length = 0), (this.max_chain_length = 0), (this.max_lazy_match = 0), (this.level = 0), (this.strategy = 0), (this.good_match = 0), (this.nice_match = 0), (this.dyn_ltree = new i.Buf16(2 * c)), (this.dyn_dtree = new i.Buf16(122)), (this.bl_tree = new i.Buf16(78)), p(this.dyn_ltree), p(this.dyn_dtree), p(this.bl_tree), (this.l_desc = null), (this.d_desc = null), (this.bl_desc = null), (this.bl_count = new i.Buf16(16)), (this.heap = new i.Buf16(2 * u + 1)), p(this.heap), (this.heap_len = 0), (this.heap_max = 0), (this.depth = new i.Buf16(2 * u + 1)), p(this.depth), (this.l_buf = 0), (this.lit_bufsize = 0), (this.last_lit = 0), (this.d_buf = 0), (this.opt_len = 0), (this.static_len = 0), (this.matches = 0), (this.insert = 0), (this.bi_buf = 0), (this.bi_valid = 0);

@@ -1,6 +1,6 @@
 n.d(t, {
     C1: function () {
-        return T;
+        return b;
     },
     Mo: function () {
         return S;
@@ -98,7 +98,7 @@ function I(e, t, n, r) {
             location: r
         });
 }
-async function b(e, t) {
+async function T(e, t) {
     if (!(null == e || u.Z.isFullServerPreview(e)))
         await c.Z.saveUserGuildSettingsBulk({ [e]: { channel_overrides: t } }),
             a.Z.dispatch({
@@ -107,7 +107,7 @@ async function b(e, t) {
                 updates: t
             });
 }
-let T = (0, r.debounce)((e, t) => b(e, t), 1000);
+let b = (0, r.debounce)((e, t) => T(e, t), 1000);
 function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 ? arguments[3] : void 0;

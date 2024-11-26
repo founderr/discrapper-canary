@@ -3,8 +3,8 @@ r.d(t, {
         return _;
     }
 });
-var n = r(747677),
-    a = r(444675);
+var a = r(747677),
+    n = r(444675);
 function _() {
-    return !(0, n.n)() && '[object process]' === Object.prototype.toString.call(void 0 !== a ? a : 0);
+    return !(0, a.n)() && '[object process]' === Object.prototype.toString.call(void 0 !== n ? n : 0);
 }

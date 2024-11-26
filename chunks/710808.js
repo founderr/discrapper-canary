@@ -20,26 +20,26 @@ var i = n(200651),
     x = n(226961),
     S = n(12647),
     T = n(726985),
-    C = n(981631),
+    E = n(981631),
     _ = n(65154),
-    E = n(388032),
-    f = n(232186);
-async function I() {
+    C = n(388032),
+    I = n(232186);
+async function f() {
     let e = await d.Z.fileManager.getLogPath();
     d.Z.fileManager.showItemInFolder(e);
 }
 function N(e) {
     (0, l.openModal)((t) =>
         (0, i.jsx)(l.ConfirmModal, {
-            header: E.intl.string(E.t['7UXEFx']),
-            confirmText: E.intl.string(E.t.BddRzc),
-            cancelText: E.intl.string(E.t['ETE/oK']),
+            header: C.intl.string(C.t['7UXEFx']),
+            confirmText: C.intl.string(C.t.BddRzc),
+            cancelText: C.intl.string(C.t['ETE/oK']),
             onCancel: t.onClose,
             onConfirm: () => a.Z.setDebugLogging(e),
             ...t,
             children: (0, i.jsx)(l.Text, {
                 variant: 'text-md/normal',
-                children: E.intl.string(E.t.IYPrRk)
+                children: C.intl.string(C.t.IYPrRk)
             })
         })
     );
@@ -59,15 +59,15 @@ function A() {
         try {
             await p.Z.getMediaEngine().writeAudioDebugState(),
                 await S.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }),
-                await (0, m.E)(C.GU0.RTC),
+                await (0, m.E)(E.GU0.RTC),
                 !(function () {
-                    let e = E.intl.string(E.t['fKBB8/']),
-                        t = E.intl.string(E.t.BvyxEx);
+                    let e = C.intl.string(C.t['fKBB8/']),
+                        t = C.intl.string(C.t.BvyxEx);
                     (0, l.openModal)((n) =>
                         (0, i.jsx)(l.ConfirmModal, {
                             header: e,
                             confirmButtonColor: l.Button.Colors.BRAND,
-                            confirmText: E.intl.string(E.t.BddRzc),
+                            confirmText: C.intl.string(C.t.BddRzc),
                             ...n,
                             children: (0, i.jsx)(l.Text, {
                                 variant: 'text-md/normal',
@@ -78,13 +78,13 @@ function A() {
                 })();
         } catch (e) {
             !(function (e) {
-                let t = E.intl.string(E.t.QZg0Jy),
-                    n = null != e ? e : E.intl.string(E.t.VzHcSk);
+                let t = C.intl.string(C.t.QZg0Jy),
+                    n = null != e ? e : C.intl.string(C.t.VzHcSk);
                 (0, l.openModal)((e) =>
                     (0, i.jsx)(l.ConfirmModal, {
                         header: t,
                         confirmButtonColor: l.Button.Colors.BRAND,
-                        confirmText: E.intl.string(E.t.BddRzc),
+                        confirmText: C.intl.string(C.t.BddRzc),
                         ...e,
                         children: (0, i.jsx)(l.Text, {
                             variant: 'text-md/normal',
@@ -96,16 +96,16 @@ function A() {
         }
     }
     return (0, i.jsxs)(l.FormSection, {
-        className: f.marginBottom40,
-        title: E.intl.string(E.t.OFpL3d),
+        className: I.marginBottom40,
+        title: C.intl.string(C.t.OFpL3d),
         children: [
             (0, i.jsx)(h.F, {
                 setting: T.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
                 children: (0, i.jsx)(l.FormSwitch, {
                     value: A,
                     onChange: (e) => (0, o.y)({ isStreamInfoOverlayEnabled: e }),
-                    note: E.intl.string(E.t.kBXuW1),
-                    children: E.intl.string(E.t['0CEP6e'])
+                    note: C.intl.string(C.t.kBXuW1),
+                    children: C.intl.string(C.t['0CEP6e'])
                 })
             }),
             (0, i.jsx)(h.F, {
@@ -113,8 +113,8 @@ function A() {
                 children: (0, i.jsx)(l.FormSwitch, {
                     value: d,
                     onChange: (e) => a.Z.setAecDump(e),
-                    note: E.intl.string(E.t['xl9+Iy']),
-                    children: E.intl.string(E.t['r6K+TE'])
+                    note: C.intl.string(C.t['xl9+Iy']),
+                    children: C.intl.string(C.t['r6K+TE'])
                 })
             }),
             (0, i.jsxs)(h.F, {
@@ -124,24 +124,24 @@ function A() {
                         hideBorder: !0,
                         value: b,
                         onChange: (e) => c.TC(e),
-                        note: E.intl.string(E.t.Lm72RU),
-                        children: E.intl.string(E.t.U4FgFB)
+                        note: C.intl.string(C.t.Lm72RU),
+                        children: C.intl.string(C.t.U4FgFB)
                     }),
                     (0, i.jsx)(l.FormItem, {
                         children: (0, i.jsx)(u.Z, {
-                            className: f.marginBottom20,
+                            className: I.marginBottom20,
                             children: (0, i.jsx)(u.Z.Child, {
                                 grow: 0,
                                 shrink: 0,
                                 children: (0, i.jsx)(l.Button, {
                                     size: l.Button.Sizes.SMALL,
                                     onClick: () => c.z4(),
-                                    children: E.intl.string(E.t.nJnOHB)
+                                    children: C.intl.string(C.t.nJnOHB)
                                 })
                             })
                         })
                     }),
-                    (0, i.jsx)(l.FormDivider, { className: f.marginBottom20 })
+                    (0, i.jsx)(l.FormDivider, { className: I.marginBottom20 })
                 ]
             }),
             (0, i.jsxs)(h.F, {
@@ -151,8 +151,8 @@ function A() {
                         hideBorder: !0,
                         value: n,
                         onChange: N,
-                        note: E.intl.string(E.t['/7ak9f']),
-                        children: E.intl.string(E.t['726JHB'])
+                        note: C.intl.string(C.t['/7ak9f']),
+                        children: C.intl.string(C.t['726JHB'])
                     }),
                     (0, i.jsx)(l.FormItem, {
                         children: (0, i.jsxs)(u.Z, {
@@ -164,7 +164,7 @@ function A() {
                                         disabled: e,
                                         size: l.Button.Sizes.SMALL,
                                         onClick: v,
-                                        children: E.intl.string(E.t['3UB9aW'])
+                                        children: C.intl.string(C.t['3UB9aW'])
                                     })
                                 }),
                                 (0, i.jsx)(u.Z.Child, {
@@ -172,8 +172,8 @@ function A() {
                                     shrink: 0,
                                     children: (0, i.jsx)(l.Button, {
                                         size: l.Button.Sizes.SMALL,
-                                        onClick: I,
-                                        children: E.intl.string(E.t.nuPtYm)
+                                        onClick: f,
+                                        children: C.intl.string(C.t.nuPtYm)
                                     })
                                 })
                             ]

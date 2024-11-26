@@ -36,7 +36,7 @@ let g = {
         trackToggleSelfMute(e) {},
         trackToggleSelfDeaf(e) {}
     },
-    { enable: E, isNotSupported: v, trackToggleSelfMute: I, trackToggleSelfDeaf: b } = (g = n(929782));
+    { enable: E, isNotSupported: v, trackToggleSelfMute: I, trackToggleSelfDeaf: T } = (g = n(929782));
 t.Z = {
     enable: E,
     toggleSelfMute() {
@@ -74,7 +74,7 @@ t.Z = {
     toggleSelfDeaf() {
         let { context: e = p.Yn.DEFAULT, syncRemote: t = !0, usedKeybind: n = !1, location: i } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         !v() &&
-            (b({
+            (T({
                 usedKeybind: n,
                 location: i
             }),

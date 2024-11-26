@@ -46,7 +46,7 @@ function I(e) {
               }) && ((p[e].muted = !1), (m = new Set(m)).delete(e)))
             : (m = new Set(m)).delete(e);
 }
-function b(e) {
+function T(e) {
     let { guildId: t, members: n } = e;
     null != t &&
         null != n &&
@@ -62,7 +62,7 @@ function b(e) {
                 I(e.id);
         });
 }
-class T extends (r = u.ZP.Store) {
+class b extends (r = u.ZP.Store) {
     hasJoined(e) {
         return e in p;
     }
@@ -89,7 +89,7 @@ class T extends (r = u.ZP.Store) {
     }
 }
 (s = 'JoinedThreadsStore'),
-    (a = 'displayName') in (i = T)
+    (a = 'displayName') in (i = b)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -97,7 +97,7 @@ class T extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s);
-let S = new T(c.Z, {
+let S = new b(c.Z, {
     CONNECTION_OPEN: function (e) {
         h.reset(),
             (m = new Set()),
@@ -128,11 +128,11 @@ let S = new T(c.Z, {
         let { channel: t } = e;
         v(t);
     },
-    THREAD_LIST_SYNC: b,
-    SEARCH_FINISH: b,
-    MOD_VIEW_SEARCH_FINISH: b,
-    LOAD_THREADS_SUCCESS: b,
-    LOAD_ARCHIVED_THREADS_SUCCESS: b,
+    THREAD_LIST_SYNC: T,
+    SEARCH_FINISH: T,
+    MOD_VIEW_SEARCH_FINISH: T,
+    LOAD_THREADS_SUCCESS: T,
+    LOAD_ARCHIVED_THREADS_SUCCESS: T,
     THREAD_DELETE: function (e) {
         let { channel: t } = e;
         if (!(t.id in p)) return !1;

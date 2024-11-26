@@ -39,15 +39,15 @@ function p(e) {
         onComponentMount: E,
         asset: v,
         markAsDismissed: I,
-        caretPosition: b = 'caretTopCenter',
-        buttonLayout: T = 0
+        caretPosition: T = 'caretTopCenter',
+        buttonLayout: b = 0
     } = e;
     l.useEffect(() => {
         null == E || E();
     }, []);
     let S = null != u;
     return (0, o.jsxs)('div', {
-        className: c()(t, _.upsellTooltipWrapper, _[b]),
+        className: c()(t, _.upsellTooltipWrapper, _[T]),
         children: [
             v,
             null == n
@@ -66,14 +66,14 @@ function p(e) {
             null != s || S
                 ? (0, o.jsxs)('div', {
                       className: c()(_.upsellButtonsContainer, {
-                          [_.upsellButtonsAdjacent]: 0 === T,
-                          [_.upsellButtonsStacked]: 1 === T
+                          [_.upsellButtonsAdjacent]: 0 === b,
+                          [_.upsellButtonsStacked]: 1 === b
                       }),
                       children: [
                           S
                               ? (0, o.jsx)(d.Button, {
                                     ...g,
-                                    fullWidth: 1 === T,
+                                    fullWidth: 1 === b,
                                     onClick: () => {
                                         null == h || h(), null == I || I(f.L.SECONDARY);
                                     },
@@ -84,7 +84,7 @@ function p(e) {
                               ? null
                               : (0, o.jsx)(d.Button, {
                                     ...m,
-                                    fullWidth: !S || 1 === T,
+                                    fullWidth: !S || 1 === b,
                                     onClick: (e) => {
                                         p(e), null == I || I(f.L.PRIMARY);
                                     },

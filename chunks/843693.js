@@ -1,6 +1,6 @@
 n.d(t, {
     wU: function () {
-        return T;
+        return b;
     }
 }),
     n(47120);
@@ -48,11 +48,11 @@ let E = new Set(),
             return ''.concat(n, '-').concat(r, '-').concat(t);
         }
     ),
-    b = (e) => {
+    T = (e) => {
         let { userId: t, channelId: n } = e;
         return ''.concat(t, '-').concat(n);
     };
-function T(e, t, n, r) {
+function b(e, t, n, r) {
     return !(e !== t || null == n || r.has(n)) && (r.add(n), !0);
 }
 class S extends (r = o.ZP.Store) {
@@ -61,7 +61,7 @@ class S extends (r = o.ZP.Store) {
     }
     getComboScore(e, t) {
         let n = v.get(
-            b({
+            T({
                 userId: e,
                 channelId: t
             })
@@ -70,7 +70,7 @@ class S extends (r = o.ZP.Store) {
     }
     getUserCombo(e, t) {
         return v.get(
-            b({
+            T({
                 userId: e,
                 channelId: t
             })
@@ -111,7 +111,7 @@ let y = new S(c.Z, {
         !(function e(t) {
             var n, r, i, a, s, o;
             let l = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                c = v.get(b(t)),
+                c = v.get(T(t)),
                 d = {
                     ...c,
                     ...t,
@@ -119,12 +119,12 @@ let y = new S(c.Z, {
                     multiplier: Math.min(null !== (a = null !== (i = t.multiplier) && void 0 !== i ? i : null == c ? void 0 : c.multiplier) && void 0 !== a ? a : 1, 7),
                     decayInterval: null !== (s = null == c ? void 0 : c.decayInterval) && void 0 !== s ? s : new u.Xp()
                 };
-            v.set(b(t), d),
+            v.set(T(t), d),
                 l &&
                     (null === (o = d.decayInterval) ||
                         void 0 === o ||
                         o.start(1000, () => {
-                            let t = v.get(b(d));
+                            let t = v.get(T(d));
                             if (null != t) {
                                 let r = d.multiplier !== t.multiplier && d.value !== t.value;
                                 if (t.value <= 0 || r) {
@@ -161,9 +161,9 @@ let y = new S(c.Z, {
         } = e;
         if (!p.Z.isEnabled()) return !1;
         let o = d.default.getId();
-        if (!T(null == a ? void 0 : a.id, o, s, E)) return !1;
+        if (!b(null == a ? void 0 : a.id, o, s, E)) return !1;
         let l = v.get(
-            b({
+            T({
                 userId: null !== (t = null == a ? void 0 : a.id) && void 0 !== t ? t : '???',
                 channelId: r
             })

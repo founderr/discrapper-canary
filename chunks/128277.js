@@ -21,8 +21,8 @@ var r = n(200651),
     E = n(502762),
     v = n(652853),
     I = n(448980),
-    b = n(194811),
-    T = n(373826),
+    T = n(194811),
+    b = n(373826),
     S = n(315324),
     y = n(582123),
     A = n(262210),
@@ -32,8 +32,8 @@ var r = n(200651),
     O = n(249942);
 function D(e) {
     let { user: t, currentUser: n, activity: a, guild: D, channel: L, className: x, onClose: w } = e,
-        { profileType: M } = (0, v.z)(),
-        P = { [O.fullSize]: M === R.y0.FULL_SIZE },
+        { profileType: P } = (0, v.z)(),
+        M = { [O.fullSize]: P === R.y0.FULL_SIZE },
         k = (0, _.Bq)({
             activity: a,
             user: t
@@ -59,11 +59,11 @@ function D(e) {
             return 0 === l.length
                 ? null
                 : null == a.sync_id
-                  ? (0, r.jsx)(T.Z, {
+                  ? (0, r.jsx)(b.Z, {
                         variant: 'text-xs/normal',
                         text: l.join(', ')
                     })
-                  : (0, r.jsx)(T.Z, {
+                  : (0, r.jsx)(b.Z, {
                         variant: 'text-xs/normal',
                         text: l.map((e, n) =>
                             (0, r.jsxs)(
@@ -115,7 +115,7 @@ function D(e) {
             t.id === n.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: s()(O.actions, P),
+                      className: s()(O.actions, M),
                       children: (0, r.jsx)(N.Z, {
                           user: t,
                           activity: a,
@@ -133,7 +133,7 @@ function D(e) {
                     className: s()(O.card, x),
                     ref: F,
                     children: [
-                        (0, r.jsx)(b.Z, {
+                        (0, r.jsx)(T.Z, {
                             ...U,
                             contextMenu: (0, r.jsx)(C.Z, {
                                 display: 'live',
@@ -148,7 +148,7 @@ function D(e) {
                             className: O.body,
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: s()(O.content, P),
+                                    className: s()(O.content, M),
                                     children: [
                                         (0, r.jsx)(f.E, {
                                             image: B,
@@ -162,7 +162,7 @@ function D(e) {
                                             children: [
                                                 (0, r.jsxs)('div', {
                                                     children: [
-                                                        (0, r.jsx)(T.Z, {
+                                                        (0, r.jsx)(b.Z, {
                                                             variant: 'heading-sm/semibold',
                                                             text: a.details,
                                                             onClick: () => {
@@ -180,13 +180,13 @@ function D(e) {
                                                 j()
                                             ]
                                         }),
-                                        M === R.y0.FULL_SIZE && Y()
+                                        P === R.y0.FULL_SIZE && Y()
                                     ]
                                 }),
                                 H()
                             ]
                         }),
-                        M !== R.y0.FULL_SIZE && Y()
+                        P !== R.y0.FULL_SIZE && Y()
                     ]
                 });
             }

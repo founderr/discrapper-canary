@@ -3,7 +3,7 @@ n.d(t, {
         return T;
     },
     HR: function () {
-        return A;
+        return x;
     },
     ZP: function () {
         return b;
@@ -29,17 +29,17 @@ var i = n(200651),
     I = n(1964),
     C = n(762756),
     v = n(981631),
-    S = n(815660),
-    N = n(388032);
+    N = n(815660),
+    S = n(388032);
 let T = 'Email Verification',
-    A = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
+    x = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
 function b() {
     let { action: e, theme: t } = (0, a.cj)([E.Z, _.Z], () => ({
             action: E.Z.getAction(),
             theme: _.Z.theme
         })),
         b = I.Z.getVerificationTypes(e),
-        [x, Z] = r.useState(0),
+        [A, Z] = r.useState(0),
         L = (0, h.Z)(b);
     (0, p.Z)(
         {
@@ -66,7 +66,7 @@ function b() {
                     }
                 );
         },
-        O = () => {
+        P = () => {
             (0, o.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e('76540'), n.e('93399')]).then(n.bind(n, 607018));
@@ -77,7 +77,7 @@ function b() {
                         });
                 },
                 {
-                    modalKey: S.M,
+                    modalKey: N.M,
                     Layer: g.ZP
                 }
             );
@@ -101,13 +101,13 @@ function b() {
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
-                                title: N.intl.string(N.t.KLnLIC),
-                                body: N.intl.string(N.t.XGbCq6),
-                                confirmText: N.intl.string(N.t['3oK4q6'])
+                                title: S.intl.string(S.t.KLnLIC),
+                                body: S.intl.string(S.t.XGbCq6),
+                                confirmText: S.intl.string(S.t['3oK4q6'])
                             });
                     },
                     {
-                        modalKey: A,
+                        modalKey: x,
                         Layer: g.ZP,
                         onCloseCallback: y
                     }
@@ -115,7 +115,7 @@ function b() {
         }, [b, L]),
         (0, i.jsx)(C.Z, {
             types: b,
-            captchaKey: x,
+            captchaKey: A,
             onCaptchaVerify: (e) => {
                 s.tn
                     .post({
@@ -130,7 +130,7 @@ function b() {
             },
             theme: t,
             onClick: (e) => {
-                e === v.PUi.EMAIL_OR_PHONE || e === v.PUi.EMAIL || e === v.PUi.REVERIFY_EMAIL ? y() : O();
+                e === v.PUi.EMAIL_OR_PHONE || e === v.PUi.EMAIL || e === v.PUi.REVERIFY_EMAIL ? y() : P();
             },
             onLogout: () => {
                 (0, o.openModalLazy)(
@@ -138,14 +138,14 @@ function b() {
                         let { ConfirmModal: e, Text: t } = await Promise.resolve().then(n.bind(n, 481060));
                         return (n) =>
                             (0, i.jsx)(e, {
-                                header: N.intl.string(N.t['2jxGen']),
-                                confirmText: N.intl.string(N.t['2jxGen']),
-                                cancelText: N.intl.string(N.t['ETE/oK']),
+                                header: S.intl.string(S.t['2jxGen']),
+                                confirmText: S.intl.string(S.t['2jxGen']),
+                                cancelText: S.intl.string(S.t['ETE/oK']),
                                 onConfirm: () => c.Z.logout(),
                                 ...n,
                                 children: (0, i.jsx)(t, {
                                     variant: 'text-md/normal',
-                                    children: N.intl.string(N.t.SUnWBA)
+                                    children: S.intl.string(S.t.SUnWBA)
                                 })
                             });
                     },

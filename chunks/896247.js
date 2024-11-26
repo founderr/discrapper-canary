@@ -1,7 +1,7 @@
 r.d(t, {
     W: function () {
-        return a;
+        return n;
     }
 });
-var n = r(395848);
-let a = () => n.m.performance && performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+var a = r(395848);
+let n = () => a.m.performance && performance.getEntriesByType && performance.getEntriesByType('navigation')[0];

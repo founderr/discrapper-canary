@@ -14,18 +14,18 @@ e.exports = function (e, t, n, h, m, g) {
     var E = l(e),
         v = l(t),
         I = E ? f : o(e),
-        b = v ? f : o(t);
-    (I = I == d ? _ : I), (b = b == d ? _ : b);
-    var T = I == _,
-        S = b == _,
-        y = I == b;
+        T = v ? f : o(t);
+    (I = I == d ? _ : I), (T = T == d ? _ : T);
+    var b = I == _,
+        S = T == _,
+        y = I == T;
     if (y && u(e)) {
         if (!u(t)) return !1;
-        (E = !0), (T = !1);
+        (E = !0), (b = !1);
     }
-    if (y && !T) return g || (g = new r()), E || c(e) ? i(e, t, n, h, m, g) : a(e, t, I, n, h, m, g);
+    if (y && !b) return g || (g = new r()), E || c(e) ? i(e, t, n, h, m, g) : a(e, t, I, n, h, m, g);
     if (!(1 & n)) {
-        var A = T && p.call(e, '__wrapped__'),
+        var A = b && p.call(e, '__wrapped__'),
             N = S && p.call(t, '__wrapped__');
         if (A || N) {
             var C = A ? e.value() : e,

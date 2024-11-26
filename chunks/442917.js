@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(414910),
     v = n(221888),
     I = n(933557),
-    b = n(569545),
-    T = n(74299),
+    T = n(569545),
+    b = n(74299),
     S = n(863908),
     y = n(803647),
     A = n(266910),
@@ -30,8 +30,8 @@ var r = n(200651),
     L = n(197016),
     x = n(800965),
     w = n(445062),
-    M = n(7188),
-    P = n(199902),
+    P = n(7188),
+    M = n(199902),
     k = n(314897),
     U = n(131951),
     B = n(699516),
@@ -83,11 +83,11 @@ class ei extends i.PureComponent {
     }
     get streamerPaused() {
         let { isMainWindowFocused: e, activeSelfStream: t, participantOnScreen: n } = this.props;
-        return null != t && (null == n ? void 0 : n.id) === (0, b.V9)(t) && !e;
+        return null != t && (null == n ? void 0 : n.id) === (0, T.V9)(t) && !e;
     }
     get activeStreamForSelectedParticipant() {
         let { participantOnScreen: e, activeStreams: t } = this.props;
-        return (0, ee._5)(e) ? t.find((t) => (0, b.V9)(t) === e.id) : null;
+        return (0, ee._5)(e) ? t.find((t) => (0, T.V9)(t) === e.id) : null;
     }
     getScreenMessage() {
         let { participantOnScreen: e, currentUserId: t } = this.props;
@@ -206,7 +206,7 @@ class ei extends i.PureComponent {
                 let n = null !== (e = t.getGuildId()) && void 0 !== e ? e : $.ME;
                 (0, C.XU)(n, t.id), _.Z.channelListScrollTo(n, t.id);
                 let r = this.activeStreamForSelectedParticipant;
-                null != r && f.Z.selectParticipant(r.channelId, (0, b.V9)(r));
+                null != r && f.Z.selectParticipant(r.channelId, (0, T.V9)(r));
             }),
             er(this, 'handleStartStream', () => {
                 let { canGoLive: e, channel: t } = this.props,
@@ -271,10 +271,10 @@ class ei extends i.PureComponent {
             er(this, 'renderSettingsIcon', () => {
                 let { participantOnScreen: e, activeStreams: t } = this.props;
                 s()((0, ee._5)(e), 'Cannot render settings for non stream participant');
-                let n = t.find((t) => (0, b.V9)(t) === e.id);
+                let n = t.find((t) => (0, T.V9)(t) === e.id);
                 return null == n || n.state === $.jm8.ENDED
                     ? null
-                    : (0, r.jsx)(M.Z, {
+                    : (0, r.jsx)(P.Z, {
                           stream: n,
                           className: et.rightTrayIcon,
                           appContext: $.IlC.APP
@@ -282,7 +282,7 @@ class ei extends i.PureComponent {
             });
     }
 }
-t.Z = u.ZP.connectStores([U.Z, g.Z, k.default, Z.Z, F.Z, P.Z, V.Z], (e) => {
+t.Z = u.ZP.connectStores([U.Z, g.Z, k.default, Z.Z, F.Z, M.Z, V.Z], (e) => {
     let { channel: t } = e,
         n = Z.Z.getSpeaker(t.id),
         r = g.Z.getParticipant(t.id, n),
@@ -290,9 +290,9 @@ t.Z = u.ZP.connectStores([U.Z, g.Z, k.default, Z.Z, F.Z, P.Z, V.Z], (e) => {
         a = null == i || i.disabled,
         s = null != r && r.type !== ee.fO.ACTIVITY && r.type !== ee.fO.HIDDEN_STREAM ? F.Z.getStreamId(r.user.id, t.getGuildId(), (0, E.Z)(r.type)) : null,
         o = !a && U.Z.isVideoEnabled(),
-        u = (0, T.Z)(U.Z),
+        u = (0, b.Z)(U.Z),
         c = k.default.getId(),
-        d = P.Z.getCurrentUserActiveStream();
+        d = M.Z.getCurrentUserActiveStream();
     return {
         channel: t,
         streamId: s,
@@ -301,7 +301,7 @@ t.Z = u.ZP.connectStores([U.Z, g.Z, k.default, Z.Z, F.Z, P.Z, V.Z], (e) => {
         isVideoEnabled: o,
         canGoLive: u,
         currentUserId: c,
-        activeStreams: P.Z.getAllActiveStreams(),
+        activeStreams: M.Z.getAllActiveStreams(),
         activeSelfStream: d,
         isMainWindowFocused: V.Z.isFocused()
     };

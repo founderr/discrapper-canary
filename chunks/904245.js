@@ -17,8 +17,8 @@ var r = n(278074),
     E = n(710845),
     v = n(247206),
     I = n(38618),
-    b = n(687516),
-    T = n(539573),
+    T = n(687516),
+    b = n(539573),
     S = n(826581),
     y = n(409059),
     A = n(264229),
@@ -30,8 +30,8 @@ var r = n(278074),
     L = n(3148),
     x = n(48854),
     w = n(785359),
-    M = n(646504),
-    P = n(64078),
+    P = n(646504),
+    M = n(64078),
     k = n(351780),
     U = n(79390),
     B = n(643266),
@@ -102,7 +102,7 @@ function em(e) {
             let r = Y.Z.getLastActiveStream();
             if (null != r && r.channelId === t.id) {
                 (e = el.dAT.STREAM), (n.destination_user_id = r.ownerId);
-                let t = (0, b.L2)(r, X.Z);
+                let t = (0, T.L2)(r, X.Z);
                 n.application_id = null != t ? t.id : null;
             }
         }
@@ -745,12 +745,12 @@ let eg = {
                 );
             let c = t.content,
                 { invalidEmojis: d, validNonShortcutEmojis: f, tts: E = !1 } = t,
-                { activityAction: v, location: I, suggestedInvite: b, stickerIds: A, messageReference: N, allowedMentions: C, poll: R, contentInventoryEntry: M } = n,
+                { activityAction: v, location: I, suggestedInvite: T, stickerIds: A, messageReference: N, allowedMentions: C, poll: R, contentInventoryEntry: P } = n,
                 Z = null !== (i = n.flags) && void 0 !== i ? i : 0,
                 [j, H] = (0, V.Z)(c);
             j && ((c = H), (Z = (0, en.pj)(Z, el.iLy.SUPPRESS_NOTIFICATIONS)));
             let Y = (null === (r = n.messageReference) || void 0 === r ? void 0 : r.type) === el.Uvt.FORWARD;
-            if ('' === c && null == v && null == A && null == R && null == M && !Y) return Promise.resolve();
+            if ('' === c && null == v && null == A && null == R && null == P && !Y) return Promise.resolve();
             let z = null != N ? el.uaV.REPLY : el.uaV.DEFAULT,
                 q = null !== (a = n.nonce) && void 0 !== a ? a : (0, x.r)();
             if (!1 !== n.eagerDispatch) {
@@ -765,7 +765,7 @@ let eg = {
                     nonce: q,
                     poll: (0, U.x9)(R)
                 });
-                (0, P.EL)(e, t.id), null != A && (t.sticker_items = A.map((e) => F.Z.getStickerById(e)).filter((e) => null != e)), eE.receiveMessage(e, t, !0, n);
+                (0, M.EL)(e, t.id), null != A && (t.sticker_items = A.map((e) => F.Z.getStickerById(e)).filter((e) => null != e)), eE.receiveMessage(e, t, !0, n);
             }
             if (!ep && null != d && d.length > 0) {
                 let t, n;
@@ -801,7 +801,7 @@ let eg = {
                 null != R && (X.message.poll = R),
                 null != A && (X.message.sticker_ids = A),
                 k.Z.isEnabled() && (X.message.has_poggermode_enabled = !0),
-                null != M && (X.message.content_inventory_entry = M),
+                null != P && (X.message.content_inventory_entry = P),
                 new Promise((t, r) => {
                     let i = Date.now(),
                         a = l.ZP.length,
@@ -903,7 +903,7 @@ let eg = {
                                             channelId: e,
                                             messageId: o.body.id,
                                             location: null != I ? I : 'chat_input',
-                                            suggested: b
+                                            suggested: T
                                         }),
                                         !(function (e, t, n, r, i) {
                                             (0, er.Q_)(e).forEach((e) => {
@@ -943,7 +943,7 @@ let eg = {
                                                     cooldownMs: t * et.Z.Millis.SECOND
                                                 });
                                         } else
-                                            T.U8.has(o.body.code)
+                                            b.U8.has(o.body.code)
                                                 ? s.Z.dispatch({
                                                       type: 'MESSAGE_SEND_FAILED_AUTOMOD',
                                                       messageData: X,
@@ -954,7 +954,7 @@ let eg = {
                                                   })
                                                 : o.body.code === el.evJ.POGGERMODE_TEMPORARILY_DISABLED
                                                   ? s.Z.dispatch({ type: 'POGGERMODE_TEMPORARILY_DISABLED' })
-                                                  : null != R || Y || null != M || eE.sendClydeError(e, o.body.code);
+                                                  : null != R || Y || null != P || eE.sendClydeError(e, o.body.code);
                                     }
                                     t
                                         ? eE.deleteMessage(e, q, !0)
@@ -1033,7 +1033,7 @@ let eg = {
                     message: o
                 },
                 (n) => {
-                    let r = !n.hasErr && T.U8.has(n.body.code);
+                    let r = !n.hasErr && b.U8.has(n.body.code);
                     if (r) {
                         let e = {
                             type: l.$V.EDIT,
@@ -1099,7 +1099,7 @@ let eg = {
                           r();
                       }));
             let o = q.Z.getMessage(e, t);
-            (null == o ? void 0 : o.type) === el.uaV.GUILD_INVITE_REMINDER && (0, M.O)();
+            (null == o ? void 0 : o.type) === el.uaV.GUILD_INVITE_REMINDER && (0, P.O)();
         },
         dismissAutomatedMessage(e) {
             null != e.loggingName &&

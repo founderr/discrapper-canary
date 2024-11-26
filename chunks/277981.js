@@ -16,14 +16,14 @@ var r = n(200651),
     E = n(981631),
     v = n(388032),
     I = n(781010);
-let b = {
+let T = {
     results: {
         command: null,
         integrations: [],
         isLoading: !1
     }
 };
-function T(e, t, n) {
+function b(e, t, n) {
     var r, i;
     let a;
     return (
@@ -41,13 +41,13 @@ let S = {
         return i.commands !== m.L8.DISABLED && (i.commands === m.L8.OLD_BUILT_INS ? n.startsWith(g.GI + 'gif') || n.startsWith(g.GI + 'tenor') : (null === (a = d.Z.getActiveCommand(e.id)) || void 0 === a ? void 0 : a.integrationType) === E.q9n.GIF && d.Z.getOptionStates(e.id).query.hasValue);
     },
     queryResults(e, t, n, r, i) {
-        let { command: a, query: o } = T(e, n, r);
-        if (null == a) return b;
+        let { command: a, query: o } = b(e, n, r);
+        if (null == a) return T;
         let l = s().findKey(E.nkL, (e) => e.command === a);
         i && null != l && o.length > 0 && u.Z.search(l, o);
         let c = h.Z.getResults(l, o);
         return null == c
-            ? b
+            ? T
             : {
                   results: {
                       command: a,
@@ -66,7 +66,7 @@ let S = {
                 onHover: c,
                 onClick: f
             } = e,
-            { command: h, query: g } = T(s, l, u);
+            { command: h, query: g } = b(s, l, u);
         if (null == h || 0 === g.length) return null;
         if (n)
             return (0, r.jsx)(o.Spinner, {
@@ -74,7 +74,7 @@ let S = {
                 type: o.Spinner.Type.SPINNING_CIRCLE
             });
         if (null != t) {
-            var b, S;
+            var T, S;
             let e = !1,
                 n = t.map((t, n) => {
                     if (t.type === E.q9n.GIF) {
@@ -99,7 +99,7 @@ let S = {
                         );
                     }
                 }),
-                o = u.commands === m.L8.OLD_BUILT_INS ? h : null !== (S = null === (b = d.Z.getActiveCommand(s.id)) || void 0 === b ? void 0 : b.integrationTitle) && void 0 !== S ? S : h,
+                o = u.commands === m.L8.OLD_BUILT_INS ? h : null !== (S = null === (T = d.Z.getActiveCommand(s.id)) || void 0 === T ? void 0 : T.integrationTitle) && void 0 !== S ? S : h,
                 l =
                     g.length > 0 && null != o
                         ? v.intl.format(v.t['3njXz8'], {

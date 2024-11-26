@@ -18,18 +18,18 @@ var i = n(200651),
     I = n(812206),
     C = n(44315),
     v = n(600164),
-    S = n(167533),
-    N = n(925329),
+    N = n(167533),
+    S = n(925329),
     T = n(707409),
-    A = n(210887),
+    x = n(210887),
     b = n(283595),
-    x = n(417363),
+    A = n(417363),
     Z = n(941128),
     L = n(451478),
     y = n(424218),
-    O = n(780570),
-    R = n(353042),
-    P = n(86826),
+    P = n(780570),
+    O = n(353042),
+    R = n(86826),
     j = n(981631),
     D = n(388032),
     M = n(96852);
@@ -86,7 +86,7 @@ function B(e, t) {
             return (0, y.BU)(e, { useKibibytes: !0 });
     }
 }
-let V = {
+let H = {
     [j.vxO.INSTALLING]: {
         [T.J6.NONE]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t.JfJt9f, {
@@ -175,8 +175,8 @@ let V = {
             })
     }
 };
-function H(e, t, n, i, r) {
-    let l = V[t],
+function V(e, t, n, i, r) {
+    let l = H[t],
         a = null != l ? Object.keys(l) : [],
         { unit: s, time: o } = (0, T.CI)(null != e ? e / 60 : null, a);
     if (null != l && null != s) {
@@ -202,7 +202,7 @@ function F(e) {
         case j.f07.ALLOCATING_DISK:
             return D.intl.formatToPlainString(D.t.XigoJy, { percent: i });
         case j.f07.PATCHING:
-            return H(a, t, i, o, s);
+            return V(a, t, i, o, s);
         case j.f07.FINALIZING:
             return D.intl.formatToPlainString(D.t['6PHDUF'], { percent: i });
         case j.f07.PAUSING:
@@ -224,7 +224,7 @@ function F(e) {
                 total: s
             });
         case j.f07.REPAIRING:
-            if (t === j.vxO.REPAIRING) return H(a, t, i, o, s);
+            if (t === j.vxO.REPAIRING) return V(a, t, i, o, s);
             return D.intl.formatToPlainString(D.t.OCzETU, {
                 percent: i,
                 progress: o,
@@ -234,8 +234,8 @@ function F(e) {
     throw Error('Invalid Dispatch stage');
 }
 let z = 'name',
-    Y = 'progress',
-    W = 'actions';
+    W = 'progress',
+    Y = 'actions';
 class K extends r.PureComponent {
     get isFocused() {
         let { cellProps: e } = this.props;
@@ -296,7 +296,7 @@ class K extends r.PureComponent {
             if (null != i && null != r) {
                 let n = B(r, l),
                     a = B(i, l),
-                    s = Math.floor((t = O.xI(i, r)));
+                    s = Math.floor((t = P.xI(i, r)));
                 e =
                     l === j.f07.PAUSING
                         ? D.intl.formatToPlainString(D.t.vjxhWl, {
@@ -327,7 +327,7 @@ class K extends r.PureComponent {
         if (null == e) return null;
         let { progress: n, total: i } = e;
         if (null == n || null == i) return null;
-        let r = O.xI(n, i),
+        let r = P.xI(n, i),
             l = Math.floor(r),
             a =
                 0 === n && 1 === i
@@ -344,8 +344,8 @@ class K extends r.PureComponent {
         });
     }
     renderProgressPatching() {
-        return (0, i.jsx)(R.Z, {
-            getHistoricalTotalBytes: x.Z.getHistoricalTotalBytesWritten,
+        return (0, i.jsx)(O.Z, {
+            getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesWritten,
             updateInterval: 5000,
             children: this.renderProgressPatchingBody
         });
@@ -355,7 +355,7 @@ class K extends r.PureComponent {
         if (null == e) return null;
         let { total: t, progress: n, stage: i, type: r } = e;
         if (null == t || null == n || null == i) return null;
-        let l = O.xI(n, t),
+        let l = P.xI(n, t),
             a = Math.floor(l);
         return this.renderBody({
             percent: l,
@@ -395,8 +395,8 @@ class K extends r.PureComponent {
                 if (null == n) return null;
                 let { stage: i, progress: r, total: l, type: a, readerProgress: s } = n;
                 if (null == r || null == l || null == i) return null;
-                let o = O.xI(r, l),
-                    c = O.xI(null != s ? s : 0, l),
+                let o = P.xI(r, l),
+                    c = P.xI(null != s ? s : 0, l),
                     d = (e[e.length - 1] / t) * 1000,
                     u = l - r,
                     h = F({
@@ -450,10 +450,10 @@ let q = () =>
                 (0, i.jsxs)(v.Z, {
                     align: v.Z.Align.CENTER,
                     children: [
-                        (0, i.jsx)(N.Z, {
+                        (0, i.jsx)(S.Z, {
                             game: e.application,
                             className: M.__invalid_gameIcon,
-                            size: N.Z.Sizes.SMALL
+                            size: S.Z.Sizes.SMALL
                         }),
                         (0, i.jsx)('div', {
                             className: M.nameCellText,
@@ -463,7 +463,7 @@ let q = () =>
                 })
         },
         {
-            key: Y,
+            key: W,
             cellClassName: M.progressCell,
             headerCellClassName: M.progressCellHeader,
             bodyCellClassName: M.progressCellBody,
@@ -474,7 +474,7 @@ let q = () =>
                 })
         },
         {
-            key: W,
+            key: Y,
             cellClassName: M.actionsCell,
             render(e, t) {
                 let n, r;
@@ -528,23 +528,23 @@ class ee extends r.PureComponent {
                       (0, i.jsxs)('div', {
                           className: M.headerRow,
                           children: [
-                              (0, i.jsx)(P.Z, {
+                              (0, i.jsx)(R.Z, {
                                   className: a()(M.headerCell, M.networkProgress),
                                   title: D.intl.string(D.t.ytoXKi),
-                                  getHistoricalTotalBytes: x.Z.getHistoricalTotalBytesDownloaded,
+                                  getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesDownloaded,
                                   color: j.Ilk.GREEN_360,
                                   animate: r
                               }),
-                              (0, i.jsx)(P.Z, {
+                              (0, i.jsx)(R.Z, {
                                   className: a()(M.headerCell, M.diskProgress),
                                   title: D.intl.string(D.t.SjohhI),
-                                  getHistoricalTotalBytes: x.Z.getHistoricalTotalBytesWritten,
+                                  getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesWritten,
                                   color: j.Ilk.BLUE_345,
                                   animate: r
                               })
                           ]
                       }),
-                      (0, i.jsx)(S.Z, {
+                      (0, i.jsx)(N.Z, {
                           hasHeader: !1,
                           columns: $,
                           data: e,
@@ -619,13 +619,13 @@ function et(e, t, n, i) {
     }, []);
 }
 t.Z = (0, E.Z)(
-    c.ZP.connectStores([I.Z, x.Z, Z.Z, A.Z, L.Z], () => {
-        let e = et(Z.Z.activeItems, !1, I.Z, x.Z);
+    c.ZP.connectStores([I.Z, A.Z, Z.Z, x.Z, L.Z], () => {
+        let e = et(Z.Z.activeItems, !1, I.Z, A.Z);
         return {
-            applications: [...e, ...et(Z.Z.finishedItems, !0, I.Z, x.Z)],
+            applications: [...e, ...et(Z.Z.finishedItems, !0, I.Z, A.Z)],
             paused: Z.Z.paused,
             isFocused: L.Z.isFocused(),
-            theme: A.Z.theme
+            theme: x.Z.theme
         };
     })((0, _.Z)(ee))
 );

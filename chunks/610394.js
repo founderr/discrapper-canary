@@ -17,8 +17,8 @@ var r,
     E = n(454991),
     v = n(32300),
     I = n(388627),
-    b = n(987650),
-    T = n(501787);
+    T = n(987650),
+    b = n(501787);
 let S = new d.Z('OverlayStore'),
     y = new Set(),
     A = new Set(),
@@ -33,7 +33,7 @@ function w() {
     let { useOverlayV3: e } = v.Z.getCurrentConfig({ location: 'overlay_store_v3' });
     return e;
 }
-function M() {
+function P() {
     if (!C) {
         for (let e of y) null == N || N.untrackGame(e);
         y.clear();
@@ -50,21 +50,21 @@ function M() {
     for (let t of y.difference(e)) null == N || N.untrackGame(t), y.delete(t);
     for (let t of e.difference(y)) null == N || N.trackGame(t), y.add(t);
 }
-function P(e) {
+function M(e) {
     null == N || N.setInteractionEnabled(!e);
 }
 async function k(e) {
     var t, n;
-    return await (0, I.fK)(), c.Z.window.setBackgroundThrottling(!1), (O = e), (0, g.tB)(O), null !== (n = await (null === c.Z || void 0 === c.Z ? void 0 : null === (t = c.Z.window) || void 0 === t ? void 0 : t.getNativeHandle(T.OVERLAY_V3_KEY))) && void 0 !== n ? n : '';
+    return await (0, I.fK)(), c.Z.window.setBackgroundThrottling(!1), (O = e), (0, g.tB)(O), null !== (n = await (null === c.Z || void 0 === c.Z ? void 0 : null === (t = c.Z.window) || void 0 === t ? void 0 : t.getNativeHandle(b.OVERLAY_V3_KEY))) && void 0 !== n ? n : '';
 }
 function U() {
     var e;
-    null === c.Z || void 0 === c.Z || null === (e = c.Z.window) || void 0 === e || e.close(T.OVERLAY_V3_KEY), (O = null), (0, g.tB)(null != O ? O : -1), c.Z.window.setBackgroundThrottling(!0);
+    null === c.Z || void 0 === c.Z || null === (e = c.Z.window) || void 0 === e || e.close(b.OVERLAY_V3_KEY), (O = null), (0, g.tB)(null != O ? O : -1), c.Z.window.setBackgroundThrottling(!0);
 }
 function B(e) {
     let t = _.ZP.getGameForPID(e);
     u.Z.setAssociatedGame(null != O ? O : -1, e, t), A.delete(null != O ? O : -1), (O = e), (0, g.tB)(null != O ? O : -1);
-    let n = p.Z.getWindow(T.OVERLAY_V3_KEY),
+    let n = p.Z.getWindow(b.OVERLAY_V3_KEY),
         r = () =>
             new Promise((e) => {
                 null == n ||
@@ -83,7 +83,7 @@ function B(e) {
     a();
 }
 function G(e, t, n, r) {
-    let i = p.Z.getWindow(T.OVERLAY_V3_KEY);
+    let i = p.Z.getWindow(b.OVERLAY_V3_KEY);
     if (null == i) return;
     let a = Math.ceil(n * i.innerWidth),
         s = Math.ceil(r * i.innerHeight),
@@ -111,12 +111,12 @@ function V(e) {
 let j = (() => {
     let e = null;
     async function t() {
-        if (!b.iP) throw (S.error('Attempted to load overlay on an unsupported platform.'), Error('Overlay v3 is not supported on this platform.'));
+        if (!T.iP) throw (S.error('Attempted to load overlay on an unsupported platform.'), Error('Overlay v3 is not supported on this platform.'));
         try {
             var e, t, n;
             await m.ZP.ensureModule('discord_desktop_overlay');
             let r = m.ZP.requireModule('discord_desktop_overlay');
-            null == r || null === (e = r.init) || void 0 === e || e.call(r), r.setCaptureZoneCallback(G), r.setHostWindowCallbacks(k, U, B), r.setFocusCallback(Z), null === (t = r.setFocusLostCallback) || void 0 === t || t.call(r, F), null === (n = r.setSuccessfullyShownCallback) || void 0 === n || n.call(r, V), (N = r), M();
+            null == r || null === (e = r.init) || void 0 === e || e.call(r), r.setCaptureZoneCallback(G), r.setHostWindowCallbacks(k, U, B), r.setFocusCallback(Z), null === (t = r.setFocusLostCallback) || void 0 === t || t.call(r, F), null === (n = r.setSuccessfullyShownCallback) || void 0 === n || n.call(r, V), (N = r), P();
         } catch (e) {
             throw (S.error('failed loading overlay module', e), e);
         }
@@ -124,7 +124,7 @@ let j = (() => {
     return () => (null == e && (e = t()), e);
 })();
 function H(e, t) {
-    if (!!b.iP && !!w()) {
+    if (!!T.iP && !!w()) {
         if (
             ((C = e),
             E.v.update({
@@ -137,11 +137,11 @@ function H(e, t) {
             j();
             return;
         }
-        M();
+        P();
     }
 }
 function Y() {
-    w() ? H(E.v.enabled, E.v.global) : C && ((C = !1), (0, g.vR)(!1), M());
+    w() ? H(E.v.enabled, E.v.global) : C && ((C = !1), (0, g.vR)(!1), P());
 }
 class W extends (r = o.ZP.Store) {
     initialize() {
@@ -151,7 +151,7 @@ class W extends (r = o.ZP.Store) {
         return !A.has(e);
     }
     isSupported() {
-        return b.iP;
+        return T.iP;
     }
     isOverlayV3Enabled() {
         return w();
@@ -189,7 +189,7 @@ class W extends (r = o.ZP.Store) {
             H(t, n);
         },
         RUNNING_GAMES_CHANGE: function (e) {
-            M();
+            P();
         },
         RUNNING_GAME_TOGGLE_OVERLAY: function (e) {
             if (!!C && 'pid' in e.game) e.newEnabledValue ? (null == N || N.trackGame(e.game.pid), y.add(e.game.pid)) : (null == N || N.untrackGame(e.game.pid), y.delete(e.game.pid));
@@ -213,17 +213,17 @@ class W extends (r = o.ZP.Store) {
             if (!t && !y.has(n)) return;
             if ((t ? A.delete(n) : A.add(n), null == x || (clearTimeout(x), (x = null), !t)))
                 t
-                    ? P(t)
+                    ? M(t)
                     : (x = setTimeout(() => {
-                          P(t), (x = null);
+                          M(t), (x = null);
                       }, 100));
         },
         OVERLAY_ACTIVATE_REGION: function (e) {
             let { region: t } = e;
-            P(!1);
+            M(!1);
         },
         OVERLAY_DEACTIVATE_ALL_REGIONS: function () {
-            P(!0);
+            M(!0);
         },
         OVERLAY_CLICK_ZONE_DEBUG_MODE: function (e) {
             let { enabled: t } = e;

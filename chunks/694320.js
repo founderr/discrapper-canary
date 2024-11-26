@@ -21,8 +21,8 @@ var r = n(200651),
     E = n(981631),
     v = n(474936),
     I = n(388032),
-    b = n(830885);
-function T() {
+    T = n(830885);
+function b() {
     (0, l.openModalLazy)(async () => {
         let { default: e } = await n.e('3289').then(n.bind(n, 682609));
         return (t) =>
@@ -61,12 +61,12 @@ function S(e) {
               context: S,
               discountOffer: N,
               trialOffer: C,
-              children: I.intl.format(I.t.BNAIBQ, { onLearnMore: T })
+              children: I.intl.format(I.t.BNAIBQ, { onLearnMore: b })
           })
         : a
           ? (0, r.jsx)(l.Clickable, {
-                className: b.iconOnly,
-                onClick: () => T(),
+                className: T.iconOnly,
+                onClick: () => b(),
                 children: (0, r.jsx)(l.Tooltip, {
                     text: I.intl.string(I.t['+eFIjY']),
                     position: 'top',
@@ -74,23 +74,23 @@ function S(e) {
                         (0, r.jsx)(l.NitroWheelIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: b.premium,
+                            className: T.premium,
                             ...e
                         })
                 })
             })
           : (0, r.jsxs)('div', {
-                className: s()(b.root, n),
+                className: s()(T.root, n),
                 children: [
                     (0, r.jsx)(l.NitroWheelIcon, {
                         size: 'md',
-                        className: b.premium,
+                        className: T.premium,
                         color: d.JX.PREMIUM_TIER_2
                     }),
                     (0, r.jsx)(l.Text, {
-                        className: b.text,
+                        className: T.text,
                         variant: 'text-sm/normal',
-                        children: I.intl.format(I.t.BNAIBQ, { onLearnMore: T })
+                        children: I.intl.format(I.t.BNAIBQ, { onLearnMore: b })
                     })
                 ]
             });

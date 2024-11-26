@@ -16,10 +16,10 @@ var r = n(200651),
 function _(e) {
     let { value: t, disabled: n = !1, hideBorder: a = !1, tooltipNote: _, onChange: p, className: h, style: m, note: g, children: E, disabledText: v } = e,
         I = i.useRef(null),
-        b = i.useRef(null),
-        T = i.useId(),
+        T = i.useRef(null),
+        b = i.useId(),
         S = (0, r.jsx)(l.r, {
-            id: T,
+            id: b,
             checked: t,
             onChange: p,
             disabled: n,
@@ -34,13 +34,13 @@ function _(e) {
                 within: !0,
                 offset: -4,
                 focusTarget: I,
-                ringTarget: b,
+                ringTarget: T,
                 children: (0, r.jsxs)('div', {
                     className: f.labelRow,
-                    ref: b,
+                    ref: T,
                     children: [
                         (0, r.jsx)('label', {
-                            htmlFor: T,
+                            htmlFor: b,
                             className: f.title,
                             children: E
                         }),

@@ -118,7 +118,7 @@ function I(e) {
         children: i
     });
 }
-function b(e) {
+function T(e) {
     var t;
     let { slateEditor: n } = e,
         [r, a] = null !== (t = h.bN.getSelectedVoid(n)) && void 0 !== t ? t : [null, null],
@@ -144,7 +144,7 @@ t.Z = i.forwardRef(function (e, t) {
         I = i.useCallback(() => {
             p(!1), clearTimeout(m.current);
         }, []),
-        T = i.useCallback(
+        b = i.useCallback(
             (e) => {
                 var t;
                 let n = v.renderWindow;
@@ -177,15 +177,15 @@ t.Z = i.forwardRef(function (e, t) {
             let e = v.renderWindow;
             return (
                 e.document.addEventListener('keydown', I),
-                e.document.addEventListener('mousedown', T),
+                e.document.addEventListener('mousedown', b),
                 e.document.addEventListener('mouseup', S),
                 e.addEventListener('focus', I),
                 e.addEventListener('blur', I),
                 () => {
-                    e.document.removeEventListener('keydown', I), e.document.removeEventListener('mousedown', T), e.document.removeEventListener('mouseup', S), e.removeEventListener('focus', I), e.removeEventListener('blur', I), clearTimeout(m.current);
+                    e.document.removeEventListener('keydown', I), e.document.removeEventListener('mousedown', b), e.document.removeEventListener('mouseup', S), e.removeEventListener('focus', I), e.removeEventListener('blur', I), clearTimeout(m.current);
                 }
             );
-        }, [v, I, T, S]);
+        }, [v, I, b, S]);
     let { x: y, y: A } = i.useMemo(() => {
             var e, t, n, r;
             let i = null === (e = a.current) || void 0 === e ? void 0 : e.getSlateEditor();
@@ -213,10 +213,10 @@ t.Z = i.forwardRef(function (e, t) {
                 E = d.x === p.x,
                 v = E ? g.x : Math.min(d.x, p.x),
                 I = E ? g.x + g.width : Math.max(d.x, p.x),
-                b = null !== (r = null === (n = s.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.y) && void 0 !== r ? r : 0;
+                T = null !== (r = null === (n = s.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.y) && void 0 !== r ? r : 0;
             return {
                 x: v + (I - v) / 2,
-                y: Math.max(b, Math.min(p.y, d.y))
+                y: Math.max(T, Math.min(p.y, d.y))
             };
         }, [s, _, a]),
         [N, C] = i.useState(0),
@@ -249,7 +249,7 @@ t.Z = i.forwardRef(function (e, t) {
                       e.stopPropagation();
                   },
                   children: [
-                      (0, r.jsx)(b, { slateEditor: D }),
+                      (0, r.jsx)(T, { slateEditor: D }),
                       (0, r.jsx)(E, {
                           editorRef: a,
                           options: l

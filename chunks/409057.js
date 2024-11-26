@@ -22,8 +22,8 @@ var i = n(120356),
     E = n(358696),
     v = n(180335),
     I = n(810568),
-    b = n(168524),
-    T = n(833858),
+    T = n(168524),
+    b = n(833858),
     S = n(769654),
     y = n(960870),
     A = n(139793),
@@ -35,8 +35,8 @@ var i = n(120356),
     L = n(448980),
     x = n(194811),
     w = n(373826),
-    M = n(315324),
-    P = n(582123),
+    P = n(315324),
+    M = n(582123),
     k = n(262210),
     U = n(103479),
     B = n(290274),
@@ -55,7 +55,7 @@ function Y(e) {
             activity: i,
             user: t
         }),
-        ee = (0, b.Z)({
+        ee = (0, T.Z)({
             location: 'UserProfileActivityCard',
             source: I.m1.UserProfile,
             trackEntryPointImpression: !0,
@@ -118,7 +118,7 @@ function Y(e) {
             return i.type === F.IIU.HANG_STATUS
                 ? (0, r.jsx)(w.Z, {
                       variant: 'heading-sm/semibold',
-                      text: (0, T.O8)(i)
+                      text: (0, b.O8)(i)
                   })
                 : (0, d.Z)(i) && null != K
                   ? (0, r.jsxs)('div', {
@@ -245,7 +245,7 @@ function Y(e) {
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)('div', { className: H.voiceChannelDivider }),
-                          (0, r.jsx)(M.Z, {
+                          (0, r.jsx)(P.Z, {
                               user: t,
                               guild: W,
                               channel: K,
@@ -269,7 +269,7 @@ function Y(e) {
                   });
     return (0, r.jsx)(_.Gt, {
         value: Q,
-        children: (0, r.jsx)(P.Z, {
+        children: (0, r.jsx)(M.Z, {
             user: t,
             onClose: q,
             children: (e) => {

@@ -3,7 +3,7 @@ n.d(t, {
         return k;
     },
     iR: function () {
-        return M;
+        return P;
     }
 }),
     n(47120);
@@ -25,8 +25,8 @@ var r = n(200651),
     E = n(198620),
     v = n(29909),
     I = n(591759),
-    b = n(132748),
-    T = n(981631),
+    T = n(132748),
+    b = n(981631),
     S = n(388032),
     y = n(561644);
 function A(e, t, n) {
@@ -79,7 +79,7 @@ function x(e, t) {
 function w(e) {
     return e === c.EO.VIDEO;
 }
-class M extends i.PureComponent {
+class P extends i.PureComponent {
     componentDidMount() {
         let {
             props: {
@@ -164,10 +164,10 @@ class M extends i.PureComponent {
             !w(t) && ((this._image = r.getElement()), (this._image.onload = () => this.setState({ loaded: !0 })), (this._image.src = e.src));
     }
 }
-class P extends i.PureComponent {
+class M extends i.PureComponent {
     componentDidMount() {
         let { resultType: e, data: t } = this.props;
-        e === T.wI2.FAVORITES && ((0, _.t1)(T.wI2.FAVORITES), (0, _.hM)(t, T.wI2.FAVORITES, { limit: null }));
+        e === b.wI2.FAVORITES && ((0, _.t1)(b.wI2.FAVORITES), (0, _.hM)(t, b.wI2.FAVORITES, { limit: null }));
     }
     selectItem(e, t) {
         let { onSelectGIF: n, resultType: r, data: i, resultQuery: a } = this.props;
@@ -223,8 +223,8 @@ class P extends i.PureComponent {
     }
     render() {
         let { data: e, resultQuery: t, query: n, resultType: i } = this.props;
-        return 0 === e.length && t === n && i !== T.wI2.TRENDING_GIFS
-            ? i === T.wI2.FAVORITES
+        return 0 === e.length && t === n && i !== b.wI2.TRENDING_GIFS
+            ? i === b.wI2.FAVORITES
                 ? this.renderEmptyFavorites()
                 : (0, r.jsx)(h.Z, {
                       message: S.intl.string(S.t['5dX4UF']),
@@ -237,7 +237,7 @@ class P extends i.PureComponent {
                       getCoordsMap: this.getCoordsMap,
                       onFocus: this.handleFocus,
                       onSelect: this.handleSelect,
-                      children: (0, r.jsx)(b.Z, {
+                      children: (0, r.jsx)(T.Z, {
                           desiredItemWidth: 200,
                           maxColumns: 8,
                           children: this.renderContent
@@ -285,7 +285,7 @@ class P extends i.PureComponent {
                 return null == s
                     ? null
                     : (0, r.jsx)(
-                          M,
+                          P,
                           {
                               item: s,
                               index: t,
@@ -361,7 +361,7 @@ class P extends i.PureComponent {
             }),
             A(this, 'renderContent', (e, t, n) => {
                 let { className: i, data: a, resultQuery: o, query: l, resultType: u } = this.props;
-                return 0 === a.length && (o !== l || u === T.wI2.TRENDING_GIFS)
+                return 0 === a.length && (o !== l || u === b.wI2.TRENDING_GIFS)
                     ? (0, r.jsx)(
                           f.MasonryList,
                           {
@@ -440,7 +440,7 @@ function k() {
 }
 t.ZP = function (e) {
     let t = k();
-    return (0, r.jsx)(P, {
+    return (0, r.jsx)(M, {
         ...e,
         ...t
     });

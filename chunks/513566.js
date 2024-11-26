@@ -17,8 +17,8 @@ var r = n(348327),
     E = n(358085),
     v = n(998502),
     I = n(981631),
-    b = n(388032);
-function T(e, t, n) {
+    T = n(388032);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ class S extends c.Z {
     }
     constructor(...e) {
         super(...e),
-            T(this, 'callbackActions', {
+            b(this, 'callbackActions', {
                 [v.tS.VIDEO]: () => {
                     m.Z.isVideoEnabled() ? l.Z.setVideoEnabled(!1) : (0, p.Z)(() => l.Z.setVideoEnabled(!0), I.IlC.APP);
                 },
@@ -51,16 +51,16 @@ class S extends c.Z {
                 [v.tS.DEAFEN]: () => l.Z.toggleSelfDeaf({ location: 'Thumbar' }),
                 [v.tS.DISCONNECT]: () => u.default.disconnect()
             }),
-            T(this, 'isSupported', (0, E.isMac)() || (0, E.isWindows)()),
-            T(this, 'prevButtons', []),
-            T(this, 'buttonClicked', (e) => {
+            b(this, 'isSupported', (0, E.isMac)() || (0, E.isWindows)()),
+            b(this, 'prevButtons', []),
+            b(this, 'buttonClicked', (e) => {
                 if (!(e.buttonName in this.callbackActions)) {
                     console.error('ThumbarButtonsManager: Unknown callback eventName: "'.concat(e.buttonName, '"'), e);
                     return;
                 }
                 this.callbackActions[e.buttonName]();
             }),
-            T(
+            b(
                 this,
                 'handleViewUpdate',
                 s().debounce(() => {
@@ -101,17 +101,17 @@ class S extends c.Z {
                         {
                             name: v.tS.MUTE,
                             active: t,
-                            tooltip: t ? b.intl.string(b.t.YqAjX1) : b.intl.string(b.t['w4m94+'])
+                            tooltip: t ? T.intl.string(T.t.YqAjX1) : T.intl.string(T.t['w4m94+'])
                         },
                         {
                             name: v.tS.DEAFEN,
                             active: n,
-                            tooltip: n ? b.intl.string(b.t['2US87+']) : b.intl.string(b.t.wjcRFR)
+                            tooltip: n ? T.intl.string(T.t['2US87+']) : T.intl.string(T.t.wjcRFR)
                         },
                         {
                             name: v.tS.DISCONNECT,
                             active: !0,
-                            tooltip: b.intl.string(b.t['6vrfgo'])
+                            tooltip: T.intl.string(T.t['6vrfgo'])
                         }
                     ]);
                 }, 100)

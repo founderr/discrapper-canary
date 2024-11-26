@@ -1,4 +1,4 @@
-function n() {
+function a() {
     let e = 'function' == typeof WeakSet,
         t = e ? new WeakSet() : [];
     return [
@@ -20,6 +20,6 @@ function n() {
 }
 r.d(t, {
     i: function () {
-        return n;
+        return a;
     }
 });

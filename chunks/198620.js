@@ -64,21 +64,21 @@ function I(e) {
     })(e);
     return null == t || t <= Date.now() + p;
 }
-function b(e) {
+function T(e) {
     let t = l.Z.toURLSafe(e.url);
     return null != t && I(t);
 }
-function T(e) {
+function b(e) {
     if (null == e) return !1;
     let t = l.Z.toURLSafe(e.url);
     return !!(null != t && g(t)) && I(t);
 }
 function S(e) {
     var t;
-    return T(e.image) || (null === (t = e.images) || void 0 === t ? void 0 : t.some(T)) || T(e.video);
+    return b(e.image) || (null === (t = e.images) || void 0 === t ? void 0 : t.some(b)) || b(e.video);
 }
 function y(e) {
-    return e.attachments.some(b) || e.embeds.some(S);
+    return e.attachments.some(T) || e.embeds.some(S);
 }
 async function A(e) {
     let t = await s.tn.post({

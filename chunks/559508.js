@@ -1,6 +1,6 @@
 r.d(t, {
     J: function () {
-        return n;
+        return a;
     }
 });
-let n = 'production';
+let a = 'production';

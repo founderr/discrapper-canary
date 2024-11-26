@@ -20,8 +20,8 @@ function E() {
 }
 let v = !1,
     I = {},
-    b = {},
-    T = new Set(),
+    T = {},
+    b = new Set(),
     S = {},
     y = {},
     A = !1;
@@ -47,16 +47,16 @@ function O(e) {
     let { libraryApplication: t } = e,
         n = f.Z.createFromServer(t),
         r = (0, p.Tu)(n.id, n.branchId);
-    (I[r] = n), T.delete(r);
+    (I[r] = n), b.delete(r);
 }
 function D(e, t) {
     var n;
     let r = (0, p.Tu)(e, t);
-    return null !== (n = I[r]) && void 0 !== n ? n : b[r];
+    return null !== (n = I[r]) && void 0 !== n ? n : T[r];
 }
 function L() {
     return {
-        ...b,
+        ...T,
         ...I
     };
 }
@@ -99,7 +99,7 @@ class x extends (r = u.ZP.Store) {
         if (null != n) {
             var r;
             let i = (0, p.Tu)(e, n),
-                a = null !== (r = I[i]) && void 0 !== r ? r : b[i];
+                a = null !== (r = I[i]) && void 0 !== r ? r : T[i];
             if (null != a && (0, p.Je)(a) && (t || !a.isHidden())) return a;
         }
         let i = L();
@@ -110,7 +110,7 @@ class x extends (r = u.ZP.Store) {
             }
     }
     isUpdatingFlags(e, t) {
-        return T.has((0, p.Tu)(e, t));
+        return b.has((0, p.Tu)(e, t));
     }
     getActiveLaunchOptionId(e, t) {
         return y[(0, p.Tu)(e, t)];
@@ -159,7 +159,7 @@ class x extends (r = u.ZP.Store) {
             let { applicationId: t, branchId: n, flags: r } = e,
                 i = (0, p.Tu)(t, n),
                 a = D(t, n);
-            null != a && !a.isHidden() && _.yE(r, m.eHb.HIDDEN) && (A = !0), T.add(i);
+            null != a && !a.isHidden() && _.yE(r, m.eHb.HIDDEN) && (A = !0), b.add(i);
         },
         LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: O,
         LIBRARY_APPLICATION_UPDATE: O,
@@ -174,9 +174,9 @@ class x extends (r = u.ZP.Store) {
         },
         LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: function (e) {
             let { libraryApplications: t } = e;
-            for (let e of t) b[(0, p.Tu)(e.id, e.branchId)] = e;
+            for (let e of t) T[(0, p.Tu)(e.id, e.branchId)] = e;
         },
         DEVELOPER_TEST_MODE_RESET: function () {
-            b = {};
+            T = {};
         }
     }));

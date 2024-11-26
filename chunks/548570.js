@@ -29,8 +29,8 @@ var r = n(512722),
     E = n(218543),
     v = n(857192),
     I = n(626135),
-    b = n(12647),
-    T = n(70956),
+    T = n(12647),
+    b = n(70956),
     S = n(358085),
     y = n(960048),
     A = n(138859),
@@ -42,8 +42,8 @@ var r = n(512722),
     L = n(183139),
     x = n(645436),
     w = n(833508),
-    M = n(981631);
-function P(e, t, n) {
+    P = n(981631);
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -59,9 +59,9 @@ function P(e, t, n) {
 let k = new m.Z('GatewaySocket'),
     U = new R.Z();
 function B() {}
-let G = 30 * T.Z.Millis.SECOND,
-    Z = 3 * T.Z.Millis.MINUTE,
-    F = 1 * T.Z.Millis.MINUTE;
+let G = 30 * b.Z.Millis.SECOND,
+    Z = 3 * b.Z.Millis.MINUTE,
+    F = 1 * b.Z.Millis.MINUTE;
 function V(e) {
     return null == e ? 0 : 'string' == typeof e ? e.length : e.byteLength;
 }
@@ -216,7 +216,7 @@ class H extends L.Z {
                     this._sendHeartbeatIfDue();
                 }),
                 onError: () => {
-                    this.setResumeUrl(null), b.Z.flushDNSCache(), this._handleClose(!1, 0, 'An error with the websocket occurred');
+                    this.setResumeUrl(null), T.Z.flushDNSCache(), this._handleClose(!1, 0, 'An error with the websocket occurred');
                 },
                 onClose: (e) => {
                     let { wasClean: t, code: n, reason: r } = e;
@@ -299,18 +299,18 @@ class H extends L.Z {
             3 === this.iosGoingAwayEventCount &&
                 c.tn
                     .get({
-                        url: M.ANM.ME,
+                        url: P.ANM.ME,
                         headers: { authorization: this.token },
                         rejectWithError: !1
                     })
                     .then(
                         (e) => {
                             let { status: t } = e;
-                            I.default.track(M.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                            I.default.track(P.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                         },
                         (e) => {
                             let { status: t } = e;
-                            401 === t && ((this.connectionState = A.Z.CLOSED), k.warn('[WS CLOSED] because of manual authentication failure, marking as closed.'), this._reset(n, 4004, 'invalid token manually detected')), I.default.track(M.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                            401 === t && ((this.connectionState = A.Z.CLOSED), k.warn('[WS CLOSED] because of manual authentication failure, marking as closed.'), this._reset(n, 4004, 'invalid token manually detected')), I.default.track(P.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                         }
                     ));
     }
@@ -459,7 +459,7 @@ class H extends L.Z {
                 !0
             ),
             !1 !== e.sentry && y.Z.captureException(n, { tags: { socketCrashedAction: t } }),
-            I.default.track(M.rMx.GATEWAY_SOCKET_RESET, {
+            I.default.track(P.rMx.GATEWAY_SOCKET_RESET, {
                 error_message: n.message,
                 error_stack: n.stack,
                 action: t
@@ -532,38 +532,38 @@ class H extends L.Z {
     }
     constructor() {
         super(),
-            P(this, 'gatewayBackoff', void 0),
-            P(this, 'handleIdentify', void 0),
-            P(this, 'dispatchExceptionBackoff', new s.Z(1000, F)),
-            P(this, 'dispatchSuccessTimer', 0),
-            P(this, 'connectionState_', void 0),
-            P(this, 'webSocket', void 0),
-            P(this, 'seq', void 0),
-            P(this, 'sessionId', void 0),
-            P(this, 'token', void 0),
-            P(this, 'initialHeartbeatTimeout', void 0),
-            P(this, 'expeditedHeartbeatTimeout', void 0),
-            P(this, 'heartbeatInterval', void 0),
-            P(this, 'helloTimeout', void 0),
-            P(this, 'heartbeater', void 0),
-            P(this, 'lastHeartbeatTime', void 0),
-            P(this, 'lastHeartbeatAckTime', void 0),
-            P(this, 'heartbeatAck', void 0),
-            P(this, 'connectionStartTime', void 0),
-            P(this, 'identifyStartTime', void 0),
-            P(this, 'nextReconnectIsImmediate', void 0),
-            P(this, 'compressionHandler', void 0),
-            P(this, 'hasConnectedOnce', void 0),
-            P(this, 'isFastConnect', void 0),
-            P(this, 'didForceClearGuildHashes', !1),
-            P(this, 'identifyUncompressedByteSize', 0),
-            P(this, 'identifyCompressedByteSize', 0),
-            P(this, 'analytics', {}),
-            P(this, 'identifyCount', 0),
-            P(this, 'resumeUrl', null),
-            P(this, 'iosGoingAwayEventCount', 0),
-            P(this, 'dispatcher', void 0),
-            P(this, 'send', (e, t, n) => {
+            M(this, 'gatewayBackoff', void 0),
+            M(this, 'handleIdentify', void 0),
+            M(this, 'dispatchExceptionBackoff', new s.Z(1000, F)),
+            M(this, 'dispatchSuccessTimer', 0),
+            M(this, 'connectionState_', void 0),
+            M(this, 'webSocket', void 0),
+            M(this, 'seq', void 0),
+            M(this, 'sessionId', void 0),
+            M(this, 'token', void 0),
+            M(this, 'initialHeartbeatTimeout', void 0),
+            M(this, 'expeditedHeartbeatTimeout', void 0),
+            M(this, 'heartbeatInterval', void 0),
+            M(this, 'helloTimeout', void 0),
+            M(this, 'heartbeater', void 0),
+            M(this, 'lastHeartbeatTime', void 0),
+            M(this, 'lastHeartbeatAckTime', void 0),
+            M(this, 'heartbeatAck', void 0),
+            M(this, 'connectionStartTime', void 0),
+            M(this, 'identifyStartTime', void 0),
+            M(this, 'nextReconnectIsImmediate', void 0),
+            M(this, 'compressionHandler', void 0),
+            M(this, 'hasConnectedOnce', void 0),
+            M(this, 'isFastConnect', void 0),
+            M(this, 'didForceClearGuildHashes', !1),
+            M(this, 'identifyUncompressedByteSize', 0),
+            M(this, 'identifyCompressedByteSize', 0),
+            M(this, 'analytics', {}),
+            M(this, 'identifyCount', 0),
+            M(this, 'resumeUrl', null),
+            M(this, 'iosGoingAwayEventCount', 0),
+            M(this, 'dispatcher', void 0),
+            M(this, 'send', (e, t, n) => {
                 v.default.isLoggingGatewayEvents && k.verboseDangerously('~>', e, t);
                 let r = U.pack({
                     op: e,

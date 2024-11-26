@@ -41,7 +41,7 @@ function S() {
             }),
             l.length > 0
                 ? l.map((t) => {
-                      let n = t.experiment.type === g.xY.GUILD ? C : T;
+                      let n = t.experiment.type === g.xY.GUILD ? E : T;
                       return (0, i.jsx)(
                           n,
                           {
@@ -67,12 +67,12 @@ function T(e) {
     let { experiment: n, experimentId: r, overrideDescriptor: u } = e,
         [m, h] = s.useState(null != u),
         [S, T] = s.useState(!1),
-        C = s.useCallback(() => {
+        E = s.useCallback(() => {
             h((e) => !e);
         }, []),
         _ = (0, a.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(r)),
-        E = (0, a.e7)([d.Z], () => d.Z.getLoadedUserExperiment(r)),
-        f = (0, a.Wu)([d.Z], () =>
+        C = (0, a.e7)([d.Z], () => d.Z.getLoadedUserExperiment(r)),
+        I = (0, a.Wu)([d.Z], () =>
             l()
                 .sortBy(d.Z.getRecentExposures(g.xY.USER, r), (e) => {
                     let [t, n] = e;
@@ -83,8 +83,8 @@ function T(e) {
                     return ''.concat(new Date(n).toLocaleString(), ' (').concat(t, ')');
                 })
         ),
-        I = (0, i.jsx)(o.Clickable, {
-            onClick: C,
+        f = (0, i.jsx)(o.Clickable, {
+            onClick: E,
             children: (0, i.jsxs)(o.FormTitle, {
                 tag: o.FormTitleTags.H3,
                 className: p.title,
@@ -112,7 +112,7 @@ function T(e) {
               children: [
                   (0, i.jsxs)(o.FormSection, {
                       children: [
-                          I,
+                          f,
                           (0, i.jsxs)('div', {
                               children: [
                                   (0, i.jsx)(o.FormItem, {
@@ -144,7 +144,7 @@ function T(e) {
                                       type: o.FormTextTypes.DESCRIPTION,
                                       children: ['Current assigned to bucket ', null !== (t = null == _ ? void 0 : _.bucket) && void 0 !== t ? t : g.NZ.NOT_ELIGIBLE]
                                   }),
-                                  null == E
+                                  null == C
                                       ? (0, i.jsx)(o.FormText, {
                                             type: o.FormTextTypes.DESCRIPTION,
                                             children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
@@ -163,7 +163,7 @@ function T(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: p.pre,
-                                            children: null == E ? 'None' : JSON.stringify(E, void 0, 2)
+                                            children: null == C ? 'None' : JSON.stringify(C, void 0, 2)
                                         }),
                                         (0, i.jsx)(o.FormTitle, {
                                             tag: 'h5',
@@ -183,7 +183,7 @@ function T(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: p.pre,
-                                            children: 0 === f.length ? 'None' : f.join('\n')
+                                            children: 0 === I.length ? 'None' : I.join('\n')
                                         })
                                     ]
                                 })
@@ -201,18 +201,18 @@ function T(e) {
           })
         : (0, i.jsx)('div', {
               className: p.group,
-              children: (0, i.jsx)(o.FormSection, { children: I })
+              children: (0, i.jsx)(o.FormSection, { children: f })
           });
 }
-function C(e) {
+function E(e) {
     let { experiment: t, experimentId: n, overrideDescriptor: r } = e,
         [m, h] = s.useState(null != r),
         [S, T] = s.useState(!1),
-        C = s.useCallback(() => {
+        E = s.useCallback(() => {
             h((e) => !e);
         }, []),
         _ = (0, a.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(n)),
-        E = (0, a.Wu)([d.Z], () =>
+        C = (0, a.Wu)([d.Z], () =>
             l()
                 .sortBy(d.Z.getRecentExposures(g.xY.GUILD, n), (e) => {
                     let [t, n] = e;
@@ -223,7 +223,7 @@ function C(e) {
                     return ''.concat(new Date(n).toLocaleString(), ' (').concat(t, ')');
                 })
         ),
-        [f, I] = (0, a.Wu)([u.Z, d.Z], () => {
+        [I, f] = (0, a.Wu)([u.Z, d.Z], () => {
             let e = l().sortBy(l().values(u.Z.getGuilds()), (e) => e.name.toLowerCase()),
                 t = {},
                 i = [];
@@ -242,7 +242,7 @@ function C(e) {
             return [i.join('\n'), r];
         }),
         N = (0, i.jsx)(o.Clickable, {
-            onClick: C,
+            onClick: E,
             children: (0, i.jsxs)(o.FormTitle, {
                 tag: o.FormTitleTags.H3,
                 className: p.title,
@@ -300,7 +300,7 @@ function C(e) {
                               children: [
                                   (0, i.jsxs)(o.FormText, {
                                       type: o.FormTextTypes.DESCRIPTION,
-                                      children: ['Current Assignments: ', I]
+                                      children: ['Current Assignments: ', f]
                                   }),
                                   null == _
                                       ? (0, i.jsx)(o.FormText, {
@@ -321,7 +321,7 @@ function C(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: p.pre,
-                                            children: f
+                                            children: I
                                         }),
                                         (0, i.jsx)(o.FormTitle, {
                                             tag: 'h5',
@@ -351,7 +351,7 @@ function C(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: p.pre,
-                                            children: 0 === E.length ? 'None' : E.join('\n')
+                                            children: 0 === C.length ? 'None' : C.join('\n')
                                         })
                                     ]
                                 })

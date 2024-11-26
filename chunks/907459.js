@@ -21,8 +21,8 @@ var r = n(200651),
     E = n(626135),
     v = n(74538),
     I = n(94795),
-    b = n(327943),
-    T = n(539873),
+    T = n(327943),
+    b = n(539873),
     S = n(981631),
     y = n(921944),
     A = n(474936),
@@ -78,7 +78,7 @@ let R = () => {
     },
     D = (e) => {
         let { isCoachmark: t, markAsDismissed: n } = e,
-            i = (0, o.e7)([b.Z], () => b.Z.isUpsellPreview);
+            i = (0, o.e7)([T.Z], () => T.Z.isUpsellPreview);
         return (0, r.jsxs)('div', {
             className: C.editorFooter,
             children: [
@@ -103,9 +103,9 @@ function L(e) {
             isUpsellPreview: p,
             isEditorOpen: h,
             shouldEditorAnimate: m
-        } = (0, o.cj)([b.Z, d.Z], () => ({
-            isUpsellPreview: b.Z.isUpsellPreview,
-            isEditorOpen: b.Z.isEditorOpen,
+        } = (0, o.cj)([T.Z, d.Z], () => ({
+            isUpsellPreview: T.Z.isUpsellPreview,
+            isEditorOpen: T.Z.isEditorOpen,
             shouldEditorAnimate: t && !d.Z.useReducedMotion
         }));
     i.useEffect(() => {
@@ -131,7 +131,7 @@ function L(e) {
                           (0, r.jsx)(O, { markAsDismissed: n }),
                           (0, r.jsx)(l.Scroller, {
                               className: C.editorBody,
-                              children: (0, r.jsx)(T.Z, {
+                              children: (0, r.jsx)(b.Z, {
                                   className: C.selectionGroup,
                                   isEditor: !0
                               })

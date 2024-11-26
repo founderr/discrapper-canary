@@ -40,20 +40,20 @@ t.Z = (e) => {
                         l = 1 === u(f) ? 'width' : 'height';
                     (n.current.style[l] = ''.concat(a, 'px')), !E.current && ((E.current = !0), null == s || s(a)), o(a, i);
                 },
-                b = (n) => {
+                T = (n) => {
                     m(!1);
                     let r = e(n),
                         i = t(r);
                     a(i, r), null == c || c(i), (E.current = !1);
                 },
-                T = _ ? 'pointerup' : 'mouseup',
+                b = _ ? 'pointerup' : 'mouseup',
                 S = _ ? 'pointermove' : 'mousemove',
                 y = n.current.ownerDocument;
             return (
-                y.addEventListener(T, b),
+                y.addEventListener(b, T),
                 y.addEventListener(S, I),
                 () => {
-                    y.removeEventListener(T, b), y.removeEventListener(S, I), o.cancel();
+                    y.removeEventListener(b, T), y.removeEventListener(S, I), o.cancel();
                 }
             );
         }, [h, a, i, r, f, n, d, c, _, p, s]),

@@ -15,11 +15,11 @@ var i = n(200651),
     x = n(468026),
     S = n(410030),
     T = n(726542),
-    C = n(122021),
+    E = n(122021),
     _ = n(275759),
-    E = n(231757),
-    f = n(888496),
-    I = n(605236),
+    C = n(231757),
+    I = n(888496),
+    f = n(605236),
     N = n(565138),
     A = n(297700),
     b = n(553795),
@@ -116,7 +116,7 @@ function Y(e) {
         a,
         o,
         { onDisconnect: m, account: g, theme: p, locale: S } = e,
-        [I, N] = s.useState(g.friendSync),
+        [f, N] = s.useState(g.friendSync),
         [b, v] = s.useState(g.visibility),
         [j, O] = s.useState(g.metadataVisibility),
         [R, D] = s.useState(g.showActivity),
@@ -124,8 +124,8 @@ function Y(e) {
         [Y, H] = s.useState(null),
         [z, W] = s.useState(!1),
         [K, q] = s.useState([]),
-        Q = (0, C.rR)(g.type),
-        X = T.Z.get(Q);
+        X = (0, E.rR)(g.type),
+        Q = T.Z.get(X);
     s.useEffect(() => {
         N(g.friendSync), v(g.visibility), O(g.metadataVisibility), D(g.showActivity);
     }, [g]),
@@ -133,7 +133,7 @@ function Y(e) {
             if (!1 !== g.verified) null != k && (v(k), h.Z.setVisibility(g.type, g.id, k), V(null)), null != Y && (O(Y), h.Z.setMetadataVisibility(g.type, g.id, Y), H(null));
         }, [g]);
     function J() {
-        (0, E.Z)({
+        (0, C.Z)({
             platformType: g.type,
             location: 'User Settings'
         });
@@ -167,7 +167,7 @@ function Y(e) {
             n = e ? 1 : 0;
         if (e && !t) {
             V(n),
-                (0, E.Z)({
+                (0, C.Z)({
                     platformType: g.type,
                     location: 'User Settings'
                 });
@@ -180,7 +180,7 @@ function Y(e) {
             n = e ? 1 : 0;
         if (e && !t) {
             H(n),
-                (0, E.Z)({
+                (0, C.Z)({
                     platformType: g.type,
                     location: 'User Settings'
                 });
@@ -200,7 +200,7 @@ function Y(e) {
             (function (e) {
                 var t;
                 let n = T.Z.get(e.type),
-                    s = T.Z.get(Q),
+                    s = T.Z.get(X),
                     r = '1' === (null !== (t = e.metadata) && void 0 !== t ? t : {})[M.PC.TWITTER_VERIFIED],
                     l = null;
                 return (
@@ -292,24 +292,24 @@ function Y(e) {
                     r = (0, _.FI)(n[M.PC.CREATED_AT], S);
                 switch (e.type) {
                     case F.ABu.REDDIT:
-                        s = (0, f.oP)(n, U.metadataItem);
+                        s = (0, I.oP)(n, U.metadataItem);
                         break;
                     case F.ABu.STEAM:
-                        s = (0, f.Dq)(n, U.metadataItem);
+                        s = (0, I.Dq)(n, U.metadataItem);
                         break;
                     case F.ABu.BLUESKY:
                     case F.ABu.TWITTER:
                     case F.ABu.MASTODON:
-                        s = (0, f.rJ)(n, U.metadataItem);
+                        s = (0, I.rJ)(n, U.metadataItem);
                         break;
                     case F.ABu.EBAY:
-                        s = (0, f.ul)(n, U.metadataItem);
+                        s = (0, I.ul)(n, U.metadataItem);
                         break;
                     case F.ABu.PAYPAL:
-                        s = (0, f.li)(n, U.metadataItem);
+                        s = (0, I.li)(n, U.metadataItem);
                         break;
                     case F.ABu.TIKTOK:
-                        s = (0, f.hf)(n, U.metadataItem);
+                        s = (0, I.hf)(n, U.metadataItem);
                 }
                 null !== r &&
                     (null == s && (s = []),
@@ -384,12 +384,12 @@ function Y(e) {
                     })
                 );
             })(g),
-            ((n = X),
+            ((n = Q),
             F.BFP.has(g.type) &&
                 (l = (0, i.jsx)(u.FormSwitch, {
                     className: U.connectionOptionSwitch,
                     hideBorder: !0,
-                    value: I,
+                    value: f,
                     onChange: en,
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
@@ -473,7 +473,7 @@ function H() {
     return (
         s.useEffect(
             () => () => {
-                (0, I.EW)(o.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: k.L.AUTO });
+                (0, f.EW)(o.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: k.L.AUTO });
             },
             []
         ),
@@ -498,7 +498,7 @@ function H() {
 }
 function z(e) {
     let t = T.Z.get(e);
-    (0, E.Z)({ platformType: t.type }),
+    (0, C.Z)({ platformType: t.type }),
         R.default.track(F.rMx.ACCOUNT_LINK_STEP, {
             previous_step: 'desktop connections',
             current_step: 'desktop oauth',
@@ -512,7 +512,7 @@ function W() {
             onComplete: z
         });
     }
-    let t = (0, C.fq)(),
+    let t = (0, E.fq)(),
         n = (0, u.useRedesignIconContext)().enabled ? 24 : 18;
     return (0, i.jsxs)('div', {
         className: U.connectionsContainer,

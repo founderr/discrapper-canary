@@ -15,7 +15,7 @@ var i,
     x = n(981631),
     S = n(388032),
     T = n(912891);
-function C(e, t, n) {
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -76,17 +76,17 @@ class _ extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            C(this, 'handleEditClick', () => {
+            E(this, 'handleEditClick', () => {
                 this.props.onEditClick(this.props.paymentSource.id);
             });
     }
 }
-C(_, 'defaultProps', {
+E(_, 'defaultProps', {
     isEditing: !1,
     hideDivider: !1,
     onEditClick: () => {}
 });
-class E extends r.PureComponent {
+class C extends r.PureComponent {
     renderFooter() {
         let { paymentSources: e } = this.props;
         return (0, s.jsxs)(u.Z, {
@@ -172,30 +172,30 @@ class E extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            C(this, 'state', { editingPayment: null }),
-            C(this, 'handleEditClick', async (e) => {
+            E(this, 'state', { editingPayment: null }),
+            E(this, 'handleEditClick', async (e) => {
                 try {
                     await c.lO(e), this.setState({ editingPayment: e });
                 } catch (e) {}
             }),
-            C(this, 'handleCancel', () => {
+            E(this, 'handleCancel', () => {
                 this.setState({ editingPayment: null });
             }),
-            C(this, 'handleDelete', async (e) => {
+            E(this, 'handleDelete', async (e) => {
                 try {
                     await c.xt(e), this.setState({ editingPayment: null });
                 } catch (e) {}
             }),
-            C(this, 'handleSubmit', async (e, t) => {
+            E(this, 'handleSubmit', async (e, t) => {
                 if (null != e)
                     try {
                         await c.LI(e, t), this.setState({ editingPayment: null });
                     } catch (e) {}
             }),
-            C(this, 'handlePaymentSourceAdded', async (e) => {
+            E(this, 'handlePaymentSourceAdded', async (e) => {
                 await (0, m.i1)(e.id);
             }),
-            C(this, 'handleAddPaymentMethod', () => {
+            E(this, 'handleAddPaymentMethod', () => {
                 (0, o.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 623573));
@@ -215,4 +215,4 @@ class E extends r.PureComponent {
             });
     }
 }
-t.Z = E;
+t.Z = C;

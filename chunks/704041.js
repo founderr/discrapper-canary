@@ -66,8 +66,8 @@ function I(e) {
 t.Z = (e) => {
     let { guildId: t, previewMode: n = !1, source: o, trackRankingItemInteraction: l } = e,
         d = p._,
-        [m, b] = i.useState(n),
-        T = i.useRef(null),
+        [m, T] = i.useState(n),
+        b = i.useRef(null),
         S = (0, u.Z)({
             guildId: t,
             leaderboardId: p._,
@@ -78,7 +78,7 @@ t.Z = (e) => {
             leaderboardId: p._,
             intervalOffset: -1
         });
-    return ((0, a.useFocusLock)(T),
+    return ((0, a.useFocusLock)(b),
     !(function (e) {
         let { guildId: t, leaderboardId: n, source: r } = e,
             a = (0, u.Z)({
@@ -128,7 +128,7 @@ t.Z = (e) => {
         : (0, r.jsx)(v, {
               children: (0, r.jsxs)('div', {
                   className: E.popout,
-                  ref: T,
+                  ref: b,
                   children: [
                       (0, r.jsxs)('div', {
                           className: E.content,
@@ -160,7 +160,7 @@ t.Z = (e) => {
                       m
                           ? (0, r.jsx)(r.Fragment, {
                                 children: (0, r.jsx)(a.Clickable, {
-                                    onClick: () => b(!1),
+                                    onClick: () => T(!1),
                                     children: (0, r.jsx)('div', {
                                         className: E.exitPreviewModeButton,
                                         children: (0, r.jsx)(a.Text, {

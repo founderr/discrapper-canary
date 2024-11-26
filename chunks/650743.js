@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return b;
     }
 });
 var r = n(200651);
@@ -22,9 +22,9 @@ var i = n(399606),
     E = n(763296),
     v = n(981631),
     I = n(388032),
-    b = n(705340);
-function T(e) {
-    let { soundboardSound: t, closePicker: T } = e,
+    T = n(705340);
+function b(e) {
+    let { soundboardSound: t, closePicker: b } = e,
         S = (0, d.Iu)((e) => e.searchQuery),
         y = (0, i.e7)([E.Z], () => null != t && E.Z.isFavoriteSound(t.soundId)),
         A = (0, i.e7)([_.Z], () => _.Z.getGuild(null == t ? void 0 : t.guildId)),
@@ -38,12 +38,12 @@ function T(e) {
                     ? (0, r.jsx)(o.Z, {
                           emojiId: t.emojiId,
                           emojiName: t.emojiName,
-                          className: b.emoji
+                          className: T.emoji
                       })
                     : (0, r.jsx)(s.ImageIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: b.emoji
+                          className: T.emoji
                       }),
             graphicSecondary:
                 null != A
@@ -57,7 +57,7 @@ function T(e) {
             isFavorite: y
         });
     let O = () => {
-            T(),
+            b(),
                 (0, s.openModalLazy)(async () => {
                     let { default: e } = await n.e('58120').then(n.bind(n, 355453));
                     return (t) => (0, r.jsx)(e, { ...t });
@@ -82,23 +82,23 @@ function T(e) {
     return null == L
         ? null
         : (0, r.jsxs)('div', {
-              className: b.keybindHint,
+              className: T.keybindHint,
               children: [
                   (0, r.jsx)(s.CircleWarningIcon, {
                       size: 'custom',
                       width: 20,
                       height: 20,
                       color: 'currentColor',
-                      className: b.warningIcon
+                      className: T.warningIcon
                   }),
                   (0, r.jsx)(s.Text, {
                       variant: 'text-sm/medium',
                       color: 'text-normal',
-                      className: b.keybindHintText,
+                      className: T.keybindHintText,
                       children: L
                   }),
                   (0, r.jsx)(s.Clickable, {
-                      className: b.closeButton,
+                      className: T.closeButton,
                       onClick: () => (0, u.EW)(a.z.SOUNDBOARD_KEYBIND_TIP),
                       children: (0, r.jsx)(s.XSmallIcon, {
                           size: 'xs',

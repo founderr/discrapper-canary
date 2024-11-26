@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return f;
     }
 }),
     n(47120),
@@ -21,15 +21,15 @@ var i = n(200651),
     x = n(63063),
     S = n(981631),
     T = n(856651),
-    C = n(388032),
+    E = n(388032),
     _ = n(429779);
-function E(e) {
+function C(e) {
     var t;
     let { account: n, refreshed: l, handleRefresh: o } = e,
         [c, d] = s.useState(!1),
         m = null !== (t = n.metadata) && void 0 !== t ? t : {},
         p = (0, r.e7)([g.default], () => g.default.locale),
-        E = s.useCallback(async () => {
+        C = s.useCallback(async () => {
             d(!0);
             try {
                 await o(n);
@@ -37,62 +37,62 @@ function E(e) {
                 d(!1);
             }
         }, [n, o]),
-        f = null;
+        I = null;
     switch (n.type) {
         case S.ABu.REDDIT:
-            f = (0, h.oP)(m, _.metadataItem);
+            I = (0, h.oP)(m, _.metadataItem);
             break;
         case S.ABu.STEAM:
-            f = (0, h.Dq)(m, _.metadataItem);
+            I = (0, h.Dq)(m, _.metadataItem);
             break;
         case S.ABu.TWITTER:
-            f = (0, h.rJ)(m, _.metadataItem);
+            I = (0, h.rJ)(m, _.metadataItem);
             break;
         case S.ABu.EBAY:
-            f = (0, h.ul)(m, _.metadataItem);
+            I = (0, h.ul)(m, _.metadataItem);
             break;
         case S.ABu.PAYPAL:
-            f = (0, h.li)(m, _.metadataItem);
+            I = (0, h.li)(m, _.metadataItem);
             break;
         case S.ABu.TIKTOK:
-            f = (0, h.hf)(m, _.metadataItem);
+            I = (0, h.hf)(m, _.metadataItem);
     }
-    let I = (0, u.FI)(m[T.PC.CREATED_AT], p),
+    let f = (0, u.FI)(m[T.PC.CREATED_AT], p),
         N = null,
-        A = C.intl.string(C.t.wzzjk5);
+        A = E.intl.string(E.t.wzzjk5);
     return (
-        (null == f || 0 === f.length) &&
-            null == I &&
+        (null == I || 0 === I.length) &&
+            null == f &&
             ((N = (0, i.jsx)(
                 a.Text,
                 {
                     variant: 'text-xs/normal',
                     color: 'header-secondary',
-                    children: C.intl.format(C.t.Up2ni4, { helpdeskUrl: x.Z.getArticleURL(S.BhN.CONNECTION_DETAILS) })
+                    children: E.intl.format(E.t.Up2ni4, { helpdeskUrl: x.Z.getArticleURL(S.BhN.CONNECTION_DETAILS) })
                 },
                 'label'
             )),
-            (A = C.intl.string(C.t['LVh3//']))),
-        l && (A = C.intl.string(C.t.i4jeWV)),
+            (A = E.intl.string(E.t['LVh3//']))),
+        l && (A = E.intl.string(E.t.i4jeWV)),
         (0, i.jsxs)('div', {
             className: _.metadataContainer,
             children: [
                 N,
-                null == f
+                null == I
                     ? void 0
-                    : f.map((e, t) =>
+                    : I.map((e, t) =>
                           (0, i.jsxs)(i.Fragment, {
-                              children: [e, t < f.length - 1 ? (0, i.jsx)('span', { className: _.dot }) : null]
+                              children: [e, t < I.length - 1 ? (0, i.jsx)('span', { className: _.dot }) : null]
                           })
                       ),
-                null != f && f.length > 0 && null != I ? (0, i.jsx)('div', { className: _.dot }) : null,
-                null != I
+                null != I && I.length > 0 && null != f ? (0, i.jsx)('div', { className: _.dot }) : null,
+                null != f
                     ? (0, i.jsx)(
                           a.Text,
                           {
                               variant: 'text-xs/normal',
                               color: 'header-secondary',
-                              children: C.intl.format(C.t['9rfonp'], { date: I })
+                              children: E.intl.format(E.t['9rfonp'], { date: f })
                           },
                           'member-since'
                       )
@@ -106,8 +106,8 @@ function E(e) {
                         size: a.Button.Sizes.MIN,
                         submitting: c,
                         disabled: l,
-                        'aria-label': C.intl.string(C.t.sCkLYG),
-                        onClick: l ? void 0 : E,
+                        'aria-label': E.intl.string(E.t.sCkLYG),
+                        onClick: l ? void 0 : C,
                         children: A
                     },
                     'refresh-button'
@@ -116,7 +116,7 @@ function E(e) {
         })
     );
 }
-function f(e) {
+function I(e) {
     let { account: t, handleRefresh: n, refreshedAccountIds: r } = e,
         [u, h] = s.useState(t.visibility),
         [g, p] = s.useState(t.metadataVisibility),
@@ -163,7 +163,7 @@ function f(e) {
                                         children: S.name
                                     }),
                                     T &&
-                                        (0, i.jsx)(E, {
+                                        (0, i.jsx)(C, {
                                             account: t,
                                             refreshed: r.includes(t.id),
                                             handleRefresh: n
@@ -192,7 +192,7 @@ function f(e) {
                                     children: (0, i.jsx)(a.Text, {
                                         variant: 'text-md/normal',
                                         color: 'header-secondary',
-                                        children: C.intl.string(C.t['3l78ws'])
+                                        children: E.intl.string(E.t['3l78ws'])
                                     })
                                 })
                         ]
@@ -203,7 +203,7 @@ function f(e) {
         ]
     });
 }
-function I() {
+function f() {
     let e = (0, r.e7)([p.Z], () => p.Z.getAccounts()),
         t = s.useMemo(() => e.filter((e) => d.Z.isSupported(e.type)), [e]),
         [n, l] = s.useState([]),
@@ -222,11 +222,11 @@ function I() {
                   (0, i.jsx)(a.FormTitle, {
                       tag: a.FormTitleTags.H5,
                       className: _.title,
-                      children: C.intl.string(C.t.aw0GVV)
+                      children: E.intl.string(E.t.aw0GVV)
                   }),
                   t.map((e) =>
                       (0, i.jsx)(
-                          f,
+                          I,
                           {
                               account: e,
                               handleRefresh: c,

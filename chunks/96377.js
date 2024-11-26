@@ -23,8 +23,8 @@ t.Z = {
             E = n.rootBoundary,
             v = n.altBoundary,
             I = n.padding,
-            b = n.tether,
-            T = void 0 === b || b,
+            T = n.tether,
+            b = void 0 === T || T,
             S = n.tetherOffset,
             y = void 0 === S ? 0 : S,
             A = (0, c.Z)(t, {
@@ -41,19 +41,19 @@ t.Z = {
             L = t.modifiersData.popperOffsets,
             x = t.rects.reference,
             w = t.rects.popper,
-            M = 'function' == typeof y ? y(Object.assign({}, t.rects, { placement: t.placement })) : y,
-            P =
-                'number' == typeof M
+            P = 'function' == typeof y ? y(Object.assign({}, t.rects, { placement: t.placement })) : y,
+            M =
+                'number' == typeof P
                     ? {
-                          mainAxis: M,
-                          altAxis: M
+                          mainAxis: P,
+                          altAxis: P
                       }
                     : Object.assign(
                           {
                               mainAxis: 0,
                               altAxis: 0
                           },
-                          M
+                          P
                       ),
             k = t.modifiersData.offset ? t.modifiersData.offset[t.placement] : null,
             U = {
@@ -69,12 +69,12 @@ t.Z = {
                     V = L[O],
                     j = V + A[G],
                     H = V - A[Z],
-                    Y = T ? -w[F] / 2 : 0,
+                    Y = b ? -w[F] / 2 : 0,
                     W = C === r.BL ? x[F] : w[F],
                     K = C === r.BL ? -w[F] : -x[F],
                     z = t.elements.arrow,
                     q =
-                        T && z
+                        b && z
                             ? (0, l.Z)(z)
                             : {
                                   width: 0,
@@ -84,12 +84,12 @@ t.Z = {
                     X = Q[G],
                     J = Q[Z],
                     $ = (0, o.u)(0, x[F], q[F]),
-                    ee = R ? x[F] / 2 - Y - $ - X - P.mainAxis : W - $ - X - P.mainAxis,
-                    et = R ? -x[F] / 2 + Y + $ + J + P.mainAxis : K + $ + J + P.mainAxis,
+                    ee = R ? x[F] / 2 - Y - $ - X - M.mainAxis : W - $ - X - M.mainAxis,
+                    et = R ? -x[F] / 2 + Y + $ + J + M.mainAxis : K + $ + J + M.mainAxis,
                     en = t.elements.arrow && (0, u.Z)(t.elements.arrow),
                     er = en ? ('y' === O ? en.clientTop || 0 : en.clientLeft || 0) : 0,
                     ei = null != (B = null == k ? void 0 : k[O]) ? B : 0,
-                    ea = (0, o.u)(T ? (0, _.VV)(j, V + ee - ei - er) : j, V, T ? (0, _.Fp)(H, V + et - ei) : H);
+                    ea = (0, o.u)(b ? (0, _.VV)(j, V + ee - ei - er) : j, V, b ? (0, _.Fp)(H, V + et - ei) : H);
                 (L[O] = ea), (U[O] = ea - V);
             }
             if (void 0 !== m && m) {
@@ -102,9 +102,9 @@ t.Z = {
                     ef = eu - A[el],
                     e_ = -1 !== [r.we, r.t$].indexOf(N),
                     ep = null != (es = null == k ? void 0 : k[D]) ? es : 0,
-                    eh = e_ ? ed : eu - x[ec] - w[ec] - ep + P.altAxis,
-                    em = e_ ? eu + x[ec] + w[ec] - ep - P.altAxis : ef,
-                    eg = T && e_ ? (0, o.q)(eh, eu, em) : (0, o.u)(T ? eh : ed, eu, T ? em : ef);
+                    eh = e_ ? ed : eu - x[ec] - w[ec] - ep + M.altAxis,
+                    em = e_ ? eu + x[ec] + w[ec] - ep - M.altAxis : ef,
+                    eg = b && e_ ? (0, o.q)(eh, eu, em) : (0, o.u)(b ? eh : ed, eu, b ? em : ef);
                 (L[D] = eg), (U[D] = eg - eu);
             }
             t.modifiersData[p] = U;

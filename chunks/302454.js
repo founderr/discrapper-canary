@@ -62,11 +62,11 @@ var t, n;
                                             v = e[E],
                                             I = v.order;
                                         if (I > _) break;
-                                        var b = null == s.prevCapture ? '' : s.prevCapture[0],
-                                            T = v.match(t, s, b);
-                                        if (T) {
-                                            var S = v.quality ? v.quality(T, s, b) : 0;
-                                            (I < _ || S > f) && ((l = E), (c = v), (d = T), (f = S), (_ = I));
+                                        var T = null == s.prevCapture ? '' : s.prevCapture[0],
+                                            b = v.match(t, s, T);
+                                        if (b) {
+                                            var S = v.quality ? v.quality(b, s, T) : 0;
+                                            (I < _ || S > f) && ((l = E), (c = v), (d = b), (f = S), (_ = I));
                                         }
                                     }
                             }
@@ -122,7 +122,7 @@ var t, n;
                 return r ? o + t + '</' + e + '>' : o;
             },
             I = {},
-            b = function (e) {
+            T = function (e) {
                 if (null == e) return null;
                 try {
                     var t = new URL(e, 'https://localhost').protocol;
@@ -132,7 +132,7 @@ var t, n;
                 }
                 return e;
             },
-            T = /[<>&"']/g,
+            b = /[<>&"']/g,
             S = {
                 '<': '&lt;',
                 '>': '&gt;',
@@ -143,7 +143,7 @@ var t, n;
                 '`': '&#96;'
             },
             y = function (e) {
-                return String(e).replace(T, function (e) {
+                return String(e).replace(b, function (e) {
                     return S[e];
                 });
             },
@@ -167,8 +167,8 @@ var t, n;
             L = '( *)(' + D + ') +',
             x = RegExp('^' + L),
             w = RegExp(L + '[^\\n]*(?:\\n(?!\\1' + D + ' )[^\\n]*)*(\n|$)', 'gm'),
-            M = /\n{2,}$/,
-            P = /^ (?= *`)|(` *) $/g,
+            P = /\n{2,}$/,
+            M = /^ (?= *`)|(` *) $/g,
             k = / *\n+$/,
             U = RegExp('^( *)(' + D + ') [\\s\\S]+?(?:\n{2,}(?! )(?!\\1' + D + ' )\\n*|\\s*\n*$)'),
             B = /(?:^|\n)( *)$/;
@@ -399,7 +399,7 @@ var t, n;
                         var r = e[2],
                             i = r.length > 1,
                             a = i ? +r : void 0,
-                            s = e[0].replace(M, '\n').match(w),
+                            s = e[0].replace(P, '\n').match(w),
                             o = !1;
                         return {
                             ordered: i,
@@ -654,14 +654,14 @@ var t, n;
                     },
                     react: function (e, t, n) {
                         return E('a', n.key, {
-                            href: b(e.target),
+                            href: T(e.target),
                             title: e.title,
                             children: t(e.content, n)
                         });
                     },
                     html: function (e, t, n) {
                         var r = {
-                            href: b(e.target),
+                            href: T(e.target),
                             title: e.title
                         };
                         return v('a', t(e.content, n), r);
@@ -679,7 +679,7 @@ var t, n;
                     },
                     react: function (e, t, n) {
                         return E('img', n.key, {
-                            src: b(e.target),
+                            src: T(e.target),
                             alt: e.alt,
                             title: e.title
                         });
@@ -689,7 +689,7 @@ var t, n;
                             'img',
                             '',
                             {
-                                src: b(e.target),
+                                src: T(e.target),
                                 alt: e.alt,
                                 title: e.title
                             },
@@ -784,7 +784,7 @@ var t, n;
                     requiredFirstCharacters: ['`'],
                     match: p(/^(`+)([\s\S]*?[^`])\1(?!`)/),
                     parse: function (e, t, n) {
-                        return { content: e[2].replace(P, '$1') };
+                        return { content: e[2].replace(M, '$1') };
                     },
                     react: function (e, t, n) {
                         return E('code', n.key, { children: e.content });
@@ -836,7 +836,7 @@ var t, n;
                 return ((t = t || {}).inline = !1), z(e, t);
             },
             Q = function (e, t) {
-                var n = M.test(e);
+                var n = P.test(e);
                 return ((t = t || {}).inline = !n), z(e, t);
             },
             X = K(W, 'react'),
@@ -876,7 +876,7 @@ var t, n;
             defaultHtmlOutput: J,
             preprocess: d,
             sanitizeText: y,
-            sanitizeUrl: b,
+            sanitizeUrl: T,
             unescapeUrl: N,
             htmlTag: v,
             reactElement: E,

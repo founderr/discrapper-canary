@@ -1,33 +1,33 @@
-var n = r(990393),
-    a = Object.prototype.hasOwnProperty;
-e.exports = function (e, t, r, _, o, i) {
-    var E = 1 & r,
-        c = n(e),
+var a = r(990393),
+    n = Object.prototype.hasOwnProperty;
+e.exports = function (e, t, r, _, o, E) {
+    var i = 1 & r,
+        c = a(e),
         s = c.length;
-    if (s != n(t).length && !E) return !1;
+    if (s != a(t).length && !i) return !1;
     for (var l = s; l--; ) {
-        var u = c[l];
-        if (!(E ? u in t : a.call(t, u))) return !1;
+        var I = c[l];
+        if (!(i ? I in t : n.call(t, I))) return !1;
     }
-    var I = i.get(e),
-        R = i.get(t);
-    if (I && R) return I == t && R == e;
-    var N = !0;
-    i.set(e, t), i.set(t, e);
-    for (var A = E; ++l < s; ) {
-        var T = e[(u = c[l])],
-            d = t[u];
-        if (_) var L = E ? _(d, T, u, t, e, i) : _(T, d, u, e, t, i);
-        if (!(void 0 === L ? T === d || o(T, d, r, _, i) : L)) {
-            N = !1;
+    var u = E.get(e),
+        R = E.get(t);
+    if (u && R) return u == t && R == e;
+    var A = !0;
+    E.set(e, t), E.set(t, e);
+    for (var T = i; ++l < s; ) {
+        var N = e[(I = c[l])],
+            d = t[I];
+        if (_) var f = i ? _(d, N, I, t, e, E) : _(N, d, I, e, t, E);
+        if (!(void 0 === f ? N === d || o(N, d, r, _, E) : f)) {
+            A = !1;
             break;
         }
-        A || (A = 'constructor' == u);
+        T || (T = 'constructor' == I);
     }
-    if (N && !A) {
-        var f = e.constructor,
-            O = t.constructor;
-        f != O && 'constructor' in e && 'constructor' in t && !('function' == typeof f && f instanceof f && 'function' == typeof O && O instanceof O) && (N = !1);
+    if (A && !T) {
+        var O = e.constructor,
+            L = t.constructor;
+        O != L && 'constructor' in e && 'constructor' in t && !('function' == typeof O && O instanceof O && 'function' == typeof L && L instanceof L) && (A = !1);
     }
-    return i.delete(e), i.delete(t), N;
+    return E.delete(e), E.delete(t), A;
 };

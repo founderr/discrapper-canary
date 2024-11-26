@@ -70,7 +70,7 @@ let b = {
 function v(e) {
     var t, n, l;
     let { subscription: v, onUpdated: C } = e,
-        [_, j] = a.useState(!1),
+        [j, _] = a.useState(!1),
         [T, S] = a.useState(!1),
         y = (e) => ((null == e && (e = v.status), e in b) ? b[e] : 'Unknown status '.concat(e)),
         N = (e) => {
@@ -129,7 +129,7 @@ function v(e) {
                         children: [
                             (0, r.jsxs)(c.Clickable, {
                                 onClick: () => {
-                                    j(!_);
+                                    _(!j);
                                 },
                                 className: f.collapsablePaneHeader,
                                 children: [
@@ -139,10 +139,10 @@ function v(e) {
                                             children: 'Metadata'
                                         })
                                     }),
-                                    (0, r.jsx)(s.Z, { direction: _ ? s.Z.Directions.UP : s.Z.Directions.DOWN })
+                                    (0, r.jsx)(s.Z, { direction: j ? s.Z.Directions.UP : s.Z.Directions.DOWN })
                                 ]
                             }),
-                            _ &&
+                            j &&
                                 (0, r.jsx)('ul', {
                                     style: { marginBottom: '15px' },
                                     children: Object.entries(v.metadata).map((e) => {

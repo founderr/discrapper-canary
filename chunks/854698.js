@@ -24,10 +24,10 @@ n.d(t, {
         return G;
     },
     Uq: function () {
-        return M;
+        return P;
     },
     Y4: function () {
-        return P;
+        return M;
     },
     hn: function () {
         return h;
@@ -77,8 +77,8 @@ let _ = 365,
     E = [s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
     v = [s.Ci.SA.weekday, s.Ci.SU.weekday],
     I = [s.Ci.FR.weekday, s.Ci.SA.weekday],
-    b = [s.Ci.SU.weekday, s.Ci.MO.weekday],
-    T = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
+    T = [s.Ci.SU.weekday, s.Ci.MO.weekday],
+    b = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
     S = new Set([0, 6]);
 function y(e) {
     var t;
@@ -151,7 +151,7 @@ function R(e, t, n) {
     };
 }
 function O(e) {
-    return new s.OG(T[e]);
+    return new s.OG(b[e]);
 }
 function D(e, t) {
     let n;
@@ -188,11 +188,11 @@ function x(e, t) {
 function w(e) {
     return D(e.scheduledStartTime, e.scheduledEndTime);
 }
-function M(e, t) {
+function P(e, t) {
     return null == e || null == t ? null == e && null == t : e.isSame(t);
 }
-function P(e, t) {
-    return null == e || null == t ? null == e && null == t : M(e.startDate, t.startDate) && M(e.endDate, t.endDate);
+function M(e, t) {
+    return null == e || null == t ? null == e && null == t : P(e.startDate, t.startDate) && P(e.endDate, t.endDate);
 }
 function k(e) {
     var t;
@@ -256,7 +256,7 @@ function Z(e) {
 function F(e) {
     let t = O(e.toDate().getDay()),
         n = O(e.toDate().getUTCDay());
-    return n.weekday - t.weekday > 0 ? b : n.weekday - t.weekday < 0 ? I : v;
+    return n.weekday - t.weekday > 0 ? T : n.weekday - t.weekday < 0 ? I : v;
 }
 function V(e, t) {
     let n = (function (e, t) {

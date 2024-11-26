@@ -6,7 +6,7 @@ n.d(t, {
         return w;
     },
     J8: function () {
-        return M;
+        return P;
     },
     Q6: function () {
         return C;
@@ -36,7 +36,7 @@ n.d(t, {
         return G;
     },
     jl: function () {
-        return P;
+        return M;
     },
     sM: function () {
         return R;
@@ -60,8 +60,8 @@ var r = n(606301),
 let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: g, CDN_HOST: E } = window.GLOBAL_ENV,
     v = Object.values(d.og),
     I = decodeURIComponent(_.ANM.STICKER_ASSET('[\\d]+', '('.concat(v.join('|'), ')'))),
-    b = RegExp('('.concat(location.protocol).concat(g, '|').concat(location.protocol).concat(h, ')(').concat(I, ')'), 'ig'),
-    T = RegExp(''.concat(location.protocol).concat(p, '(').concat(I, ')'), 'ig'),
+    T = RegExp('('.concat(location.protocol).concat(g, '|').concat(location.protocol).concat(h, ')(').concat(I, ')'), 'ig'),
+    b = RegExp(''.concat(location.protocol).concat(p, '(').concat(I, ')'), 'ig'),
     S = (e) => {
         if (null != e.cover_sticker_id) {
             let t = e.stickers.find((t) => t.id === e.cover_sticker_id);
@@ -138,7 +138,7 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
             n
         );
     },
-    O = (e) => null != e.match('development' !== m ? b : T),
+    O = (e) => null != e.match('development' !== m ? T : b),
     D = (e) =>
         e.stickers.some((e) => {
             let { format_type: t } = e;
@@ -167,8 +167,8 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
                 return !1;
         }
     },
-    M = (e) => e.type === d.n0.GUILD,
-    P = (e) => e.type === d.n0.STANDARD,
+    P = (e) => e.type === d.n0.GUILD,
+    M = (e) => e.type === d.n0.STANDARD,
     k = (e) => (e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : []),
     U = (e) => {
         if (null === e) return !1;

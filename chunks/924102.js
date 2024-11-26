@@ -32,13 +32,13 @@ t.Z = function (e, t, n) {
             r,
             a,
             s = (0, i.Z)();
-        if (v(s)) return b(s);
+        if (v(s)) return T(s);
         f = setTimeout(I, ((n = (e = s) - _), (r = e - p), (a = t - n), m ? o(a, c - r) : a));
     }
-    function b(e) {
+    function T(e) {
         return ((f = void 0), g && l) ? E(e) : ((l = u = void 0), d);
     }
-    function T() {
+    function b() {
         var e,
             n = (0, i.Z)(),
             r = v(n);
@@ -51,12 +51,12 @@ t.Z = function (e, t, n) {
         return void 0 === f && (f = setTimeout(I, t)), d;
     }
     return (
-        (T.cancel = function () {
+        (b.cancel = function () {
             void 0 !== f && clearTimeout(f), (p = 0), (l = _ = u = f = void 0);
         }),
-        (T.flush = function () {
-            return void 0 === f ? d : b((0, i.Z)());
+        (b.flush = function () {
+            return void 0 === f ? d : T((0, i.Z)());
         }),
-        T
+        b
     );
 };

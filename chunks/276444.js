@@ -17,8 +17,8 @@ let _ = null,
     E = !1,
     v = new Set(),
     I = new Set(),
-    b = {},
-    T = 0,
+    T = {},
+    b = 0,
     S = null,
     y = [],
     A = !1,
@@ -30,10 +30,10 @@ let _ = null,
     L = !1,
     x = f.g2L.NOT_ELIGIBLE,
     w = () => !0;
-function M(e) {
+function P(e) {
     v.add(e);
 }
-function P(e) {
+function M(e) {
     let { messages: t } = e;
     t.forEach((e) => k(e));
 }
@@ -50,7 +50,7 @@ class U extends (r = l.ZP.Store) {
         this.waitFor(c.default), this.syncWith([c.default], w);
     }
     checkAndFetchReferralsRemaining() {
-        null == _ && !E && T < 5 && (null == S || S < Date.now()) && (0, d.C$)();
+        null == _ && !E && b < 5 && (null == S || S < Date.now()) && (0, d.C$)();
     }
     getReferralsRemaining() {
         return this.checkAndFetchReferralsRemaining(), _;
@@ -68,7 +68,7 @@ class U extends (r = l.ZP.Store) {
         return void 0 === p[e] && !g.has(e) && (0, d.Ve)(e), p[e];
     }
     getRelevantUserTrialOffer(e) {
-        return b[e];
+        return T[e];
     }
     isResolving(e) {
         return v.has(e);
@@ -89,7 +89,7 @@ class U extends (r = l.ZP.Store) {
         return R;
     }
     getRelevantReferralTrialOffers() {
-        return b;
+        return T;
     }
     getRecipientStatus() {
         return m;
@@ -134,7 +134,7 @@ class U extends (r = l.ZP.Store) {
         },
         BILLING_REFERRALS_REMAINING_FETCH_FAIL: function (e) {
             let {} = e;
-            (C = !1), (R = null), (E = !1), (T += 1), (S = Date.now() + 1000 * Math.pow(2, T));
+            (C = !1), (R = null), (E = !1), (b += 1), (S = Date.now() + 1000 * Math.pow(2, b));
         },
         BILLING_CREATE_REFERRAL_PREVIEW_START: function (e) {
             let { recipientId: t } = e;
@@ -160,15 +160,15 @@ class U extends (r = l.ZP.Store) {
         },
         BILLING_CREATE_REFERRAL_SUCCESS: function (e) {
             let { userTrialOffer: t } = e;
-            (0, d.C$)(), (b[t.id] = t), (h = [...h, t.user_id]);
+            (0, d.C$)(), (T[t.id] = t), (h = [...h, t.user_id]);
         },
         CREATE_REFERRALS_SUCCESS: function (e) {
             let { userTrialOffers: t } = e;
-            for (let e of ((0, d.C$)(), t)) (b[e.id] = e), (h = [...h, e.user_id]);
+            for (let e of ((0, d.C$)(), t)) (T[e.id] = e), (h = [...h, e.user_id]);
         },
         BILLING_REFERRAL_RESOLVE_SUCCESS: function (e) {
             let { userTrialOffer: t } = e;
-            null != t && (v.delete(t.id), I.add(t.id), (b[t.id] = t));
+            null != t && (v.delete(t.id), I.add(t.id), (T[t.id] = t));
         },
         BILLING_REFERRAL_RESOLVE_FAIL: function (e) {
             let { userTrialOfferId: t } = e;
@@ -184,13 +184,13 @@ class U extends (r = l.ZP.Store) {
         REFERRALS_FETCH_ELIGIBLE_USER_FAIL: function () {
             A = !1;
         },
-        LOAD_MESSAGES_SUCCESS: P,
+        LOAD_MESSAGES_SUCCESS: M,
         MESSAGE_CREATE: function (e) {
             let { message: t } = e;
             k(t);
         },
-        LOAD_MESSAGES_AROUND_SUCCESS: P,
+        LOAD_MESSAGES_AROUND_SUCCESS: M,
         LOGOUT: function () {
-            (_ = null), (p = {}), (h = []), (g = new Set()), (E = !1), (v = new Set()), (I = new Set()), (b = {}), (T = 0), (S = null), (y = []), (A = !1), (N = 0), (C = !1), (R = null), (m = new Map()), (O = !1), (D = !1), (L = !1), (x = f.g2L.NOT_ELIGIBLE);
+            (_ = null), (p = {}), (h = []), (g = new Set()), (E = !1), (v = new Set()), (I = new Set()), (T = {}), (b = 0), (S = null), (y = []), (A = !1), (N = 0), (C = !1), (R = null), (m = new Map()), (O = !1), (D = !1), (L = !1), (x = f.g2L.NOT_ELIGIBLE);
         }
     }));

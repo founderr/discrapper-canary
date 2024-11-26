@@ -246,14 +246,14 @@ function I(e, t, n) {
         null != a ? (f.verbose('makeRequest: queueing request for ', t.url), a.queue.push(h.bind(null, e, t, r, i, n))) : h(e, t, r, i, n);
     });
 }
-let b = I.bind(null, 'get'),
-    T = I.bind(null, 'post'),
+let T = I.bind(null, 'get'),
+    b = I.bind(null, 'post'),
     S = I.bind(null, 'put'),
     y = I.bind(null, 'patch'),
     A = I.bind(null, 'del'),
     N = {
-        get: b,
-        post: T,
+        get: T,
+        post: b,
         put: S,
         patch: y,
         del: A
@@ -267,7 +267,7 @@ if (n.g.isServerRendering) {
             body: null,
             text: ''
         });
-    (b = e), (T = e), (S = e), (y = e), (A = e);
+    (T = e), (b = e), (S = e), (y = e), (A = e);
 }
 function C() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];

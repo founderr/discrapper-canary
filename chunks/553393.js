@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(592125),
     v = n(430824),
     I = n(496675),
-    b = n(979651),
-    T = n(617136),
+    T = n(979651),
+    b = n(617136),
     S = n(113434),
     y = n(497505),
     A = n(475595),
@@ -30,14 +30,14 @@ var r = n(200651),
     L = n(981631),
     x = n(231338),
     w = n(388032),
-    M = n(763054);
-let P = '11px';
+    P = n(763054);
+let M = '11px';
 function k(e, t) {
-    return null != e && null != t && (0, m.p9)(t, b.Z, v.Z, I.Z, h.Z)[0];
+    return null != e && null != t && (0, m.p9)(t, T.Z, v.Z, I.Z, h.Z)[0];
 }
 t.Z = function (e) {
     var t, n, h;
-    let { quest: m, memberListItemRef: v, applicationStream: I, position: b, closePopout: U, updatePosition: B } = e,
+    let { quest: m, memberListItemRef: v, applicationStream: I, position: T, closePopout: U, updatePosition: B } = e,
         G = (0, o.e7)([E.Z], () => {
             var e;
             return null !== (e = E.Z.getChannel(null == I ? void 0 : I.channelId)) && void 0 !== e ? e : null;
@@ -103,25 +103,25 @@ t.Z = function (e) {
         en = () => {
             J.dispatch(L.CkL.POPOUT_CLOSE);
         },
-        er = 'top' === b ? ''.concat('4px', ' ').concat('4px', ' 0 0') : '0 0 '.concat('4px', ' ').concat('4px');
+        er = 'top' === T ? ''.concat('4px', ' ').concat('4px', ' 0 0') : '0 0 '.concat('4px', ' ').concat('4px');
     if (null == m || F || (V && !k(I, G))) return null;
     let ei = () => {
-            (0, T._3)({
+            (0, b._3)({
                 questId: m.id,
                 questContent: y.jn.MEMBERS_LIST,
-                questContentCTA: T.jZ.OPEN_DISCLOSURE,
+                questContentCTA: b.jZ.OPEN_DISCLOSURE,
                 trackGuildAndChannelMetadata: !0
             }),
                 (0, O.openDisclosureModal)(m, {
                     content: y.jn.MEMBERS_LIST,
-                    ctaContent: T.jZ.OPEN_DISCLOSURE
+                    ctaContent: b.jZ.OPEN_DISCLOSURE
                 });
         },
         ea = () => {
-            (0, T._3)({
+            (0, b._3)({
                 questId: m.id,
                 questContent: y.jn.MEMBERS_LIST,
-                questContentCTA: T.jZ.LEARN_MORE,
+                questContentCTA: b.jZ.LEARN_MORE,
                 trackGuildAndChannelMetadata: !0
             }),
                 (0, O.navigateToQuestHome)(D.dr.MEMBERS_LIST, y.jn.MEMBERS_LIST, m.id);
@@ -132,10 +132,10 @@ t.Z = function (e) {
         eo = () => {
             if (k(I, G) && null != G)
                 return (
-                    (0, T._3)({
+                    (0, b._3)({
                         questId: m.id,
                         questContent: y.jn.MEMBERS_LIST,
-                        questContentCTA: T.jZ.WATCH_STREAM,
+                        questContentCTA: b.jZ.WATCH_STREAM,
                         trackGuildAndChannelMetadata: !0
                     }),
                     c.default.selectVoiceChannel(G.id),
@@ -182,7 +182,7 @@ t.Z = function (e) {
                     e.current = t;
                 },
                 'aria-expanded': Q,
-                className: M.wrapper,
+                className: P.wrapper,
                 style: {
                     width: null !== (n = null === (t = v.current) || void 0 === t ? void 0 : t.clientWidth) && void 0 !== n ? n : 222,
                     height: ee.height,
@@ -193,21 +193,21 @@ t.Z = function (e) {
                     ref: (e) => {
                         z.current = e;
                     },
-                    className: M.container,
+                    className: P.container,
                     style: { borderRadius: er },
                     children: [
                         (0, r.jsxs)('div', {
-                            className: M.top,
+                            className: P.top,
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: M.left,
+                                    className: P.left,
                                     children: [
                                         (0, r.jsx)(u.Heading, {
                                             variant: 'heading-sm/semibold',
                                             children: el.headerText
                                         }),
                                         (0, r.jsxs)(u.Clickable, {
-                                            className: M.help,
+                                            className: P.help,
                                             onClick: (e) => {
                                                 en(), es(e);
                                             },
@@ -215,14 +215,14 @@ t.Z = function (e) {
                                                 (0, r.jsx)(u.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-muted',
-                                                    className: M.helpText,
+                                                    className: P.helpText,
                                                     children: w.intl.format(w.t['Lm8/mJ'], { gamePublisher: m.config.messages.gamePublisher })
                                                 }),
                                                 (0, r.jsx)(u.CircleQuestionIcon, {
                                                     size: 'custom',
-                                                    className: M.helpIcon,
-                                                    width: P,
-                                                    height: P,
+                                                    className: P.helpIcon,
+                                                    width: M,
+                                                    height: M,
                                                     color: u.tokens.colors.INTERACTIVE_NORMAL
                                                 })
                                             ]
@@ -230,16 +230,16 @@ t.Z = function (e) {
                                     ]
                                 }),
                                 (0, r.jsx)('div', {
-                                    className: M.right,
+                                    className: P.right,
                                     children: (0, r.jsxs)('div', {
-                                        className: M.imgWrapper,
+                                        className: P.imgWrapper,
                                         children: [
                                             et(
                                                 (e, t) =>
                                                     t &&
                                                     (0, r.jsx)(a.animated.div, {
                                                         style: e,
-                                                        className: M.imgUnderlay
+                                                        className: P.imgUnderlay
                                                     })
                                             ),
                                             'game' === el.tileAssetType &&
@@ -248,12 +248,12 @@ t.Z = function (e) {
                                                         gameTitle: m.config.messages.gameTitle,
                                                         gamePublisher: m.config.messages.gamePublisher
                                                     }),
-                                                    className: M.assetTile,
+                                                    className: P.assetTile,
                                                     src: (0, A.fh)(m, A.eC.GAME_TILE, W).url
                                                 }),
                                             'reward' === el.tileAssetType &&
                                                 (0, r.jsx)(C.Z, {
-                                                    className: M.assetTile,
+                                                    className: P.assetTile,
                                                     quest: m,
                                                     questContent: y.jn.MEMBERS_LIST,
                                                     learnMoreStyle: 'icon',
@@ -270,7 +270,7 @@ t.Z = function (e) {
                                 en(), el.handleClickCta();
                             },
                             color: u.Button.Colors.CUSTOM,
-                            className: M.ctaButton,
+                            className: P.ctaButton,
                             children: el.ctaText
                         })
                     ]

@@ -21,8 +21,8 @@ var r = n(200651),
     E = n(474936),
     v = n(388032),
     I = n(843282);
-let b = [8, 8, 8, 8];
-function T(e) {
+let T = [8, 8, 8, 8];
+function b(e) {
     let { icon: t, isSelected: n, onClick: i, listItemProps: a, ...o } = e;
     return (0, r.jsx)(u.Clickable, {
         ...a,
@@ -76,7 +76,7 @@ function S(e) {
                 switch (e.categoryInfo.type) {
                     case m.bg.FAVORITES:
                         return (0, r.jsx)(
-                            T,
+                            b,
                             {
                                 ...i,
                                 icon: u.StarIcon,
@@ -88,7 +88,7 @@ function S(e) {
                         );
                     case m.bg.RECENTLY_HEARD:
                         return (0, r.jsx)(
-                            T,
+                            b,
                             {
                                 ...i,
                                 icon: u.ClockIcon,
@@ -100,7 +100,7 @@ function S(e) {
                         );
                     case m.bg.FREQUENTLY_USED:
                         return (0, r.jsx)(
-                            T,
+                            b,
                             {
                                 ...i,
                                 icon: u.AnalyticsIcon,
@@ -128,7 +128,7 @@ function S(e) {
                         );
                     case m.bg.DEFAULTS:
                         return (0, r.jsx)(
-                            T,
+                            b,
                             {
                                 ...i,
                                 icon: u.ClydeIcon,
@@ -145,7 +145,7 @@ function S(e) {
     });
 }
 function y(e) {
-    let { soundboardListRef: t, categories: n, shouldUpsellLockedCategories: a, listPadding: s = b, guildId: o, inExpressionPicker: u } = e,
+    let { soundboardListRef: t, categories: n, shouldUpsellLockedCategories: a, listPadding: s = T, guildId: o, inExpressionPicker: u } = e,
         c = i.useRef(null),
         _ = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         m = (0, h.I5)(_, E.p9.TIER_2),

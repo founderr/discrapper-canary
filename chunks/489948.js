@@ -307,8 +307,8 @@ class v {
 }
 let I = new v();
 'u' > typeof window && I.setContainer(document.body);
-let b = o.createContext(I);
-var T = function (e, t, n, r) {
+let T = o.createContext(I);
+var b = function (e, t, n, r) {
     var i = n ? n.call(r, e, t) : void 0;
     if (void 0 !== i) return !!i;
     if (e === t) return !0;
@@ -331,7 +331,7 @@ let S = !1,
 function N() {
     if (!S) return;
     let e = null == r ? void 0 : r.getStyle();
-    null == e || T(e, A) ? null != y && cancelAnimationFrame(y) : ((A = e), null == r || r.invalidate()), (y = requestAnimationFrame(N));
+    null == e || b(e, A) ? null != y && cancelAnimationFrame(y) : ((A = e), null == r || r.invalidate()), (y = requestAnimationFrame(N));
 }
 let C = !1,
     R = {
@@ -390,14 +390,14 @@ function w(e) {
         o.useEffect(() => {
             i.current.setContainer(t.current), i.current.setThemeOptions(r);
         }, [t.current]),
-        x(b.Provider, {
+        x(T.Provider, {
             value: i.current,
-            children: [n, L(M, {})]
+            children: [n, L(P, {})]
         })
     );
 }
-function M() {
-    let e = o.useContext(b),
+function P() {
+    let e = o.useContext(T),
         [, t] = o.useState({});
     return (
         o.useEffect(
@@ -417,15 +417,15 @@ function M() {
             : null
     );
 }
-let P = 'u' > typeof window && (null == (s = window.document) ? void 0 : s.createElement) != null ? o.useLayoutEffect : o.useEffect;
+let M = 'u' > typeof window && (null == (s = window.document) ? void 0 : s.createElement) != null ? o.useLayoutEffect : o.useEffect;
 function k(e) {
     let { within: t = !1, enabled: n = !0, focused: r, offset: i = 0, focusTarget: a, ringTarget: s, ringClassName: l, focusClassName: u, focusWithinClassName: c, children: d } = e;
     null != a && _(null != s, 'FocusRing was given a focusTarget but the required ringTarget was not provided. A ringTarget is required to avoid ambiguity of where the ring will be applied.'), null != r && _(null != s, 'FocusRing was given a controlled focused prop but no ringTarget to apply the ring to. A ringTarget is required since it cannot be inferred through regular focus events.');
     let p = o.useRef(!1),
         [h, m] = o.useState(!1),
-        g = o.useContext(b),
+        g = o.useContext(T),
         E = o.Children.only(d),
-        { onBlur: v, onFocus: I, ...T } = E.props,
+        { onBlur: v, onFocus: I, ...b } = E.props,
         S = o.useMemo(
             () => ({
                 className: l,
@@ -433,7 +433,7 @@ function k(e) {
             }),
             [l, i]
         );
-    P(() => {
+    M(() => {
         n && g.invalidate();
     }),
         o.useEffect(() => {
@@ -449,7 +449,7 @@ function k(e) {
             let e = null == s ? void 0 : s.current;
             null == r || null == e || ((p.current = r), r ? g.showElement(e, S) : !1 === r && g.hide());
         }, [r, S, g, s]),
-        P(() => {
+        M(() => {
             if (null != r) return;
             let e = null == a ? void 0 : a.current,
                 n = null == s ? void 0 : s.current;
@@ -489,8 +489,8 @@ function k(e) {
         );
     return n && null == a && null == r
         ? o.cloneElement(E, {
-              ...T,
-              className: f(T.className, p.current ? u : void 0, h ? c : void 0),
+              ...b,
+              className: f(b.className, p.current ? u : void 0, h ? c : void 0),
               onBlur: y,
               onFocus: A
           })

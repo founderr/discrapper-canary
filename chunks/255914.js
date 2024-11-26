@@ -9,7 +9,7 @@ n.d(t, {
         return a;
     },
     lG: function () {
-        return b;
+        return T;
     },
     m7: function () {
         return y;
@@ -72,13 +72,13 @@ let v = Object.freeze({
         ffmpeg: 'ffmpeg',
         dav1d: 'dav1d'
     });
-function b(e) {
+function T(e) {
     if (null == e) return 'unknown';
     for (let t of Object.keys(v)) if (e.includes(t)) return v[t];
     return 'uncategorized';
 }
 ((c = s || (s = {}))[(c.None = 0)] = 'None'), (c[(c.ClientSideDisableVideo = 1)] = 'ClientSideDisableVideo'), (c[(c.SenderStopped = 2)] = 'SenderStopped');
-function T(e) {
+function b(e) {
     if (null == e) return 'UNKNOWN';
     if ('H264' === (e = e.toUpperCase())) return 'H264';
     if ('H265' === e) return 'H265';
@@ -111,7 +111,7 @@ class S {
                   for (let t of Object.keys(I)) if (e.includes(t)) return I[t];
                   return 'uncategorized';
               })(e.decoderImplementationName)),
-              (c.codecType = T(e.codec.name)),
+              (c.codecType = b(e.codec.name)),
               (c.qpSum = 0),
               (c.freezeCount = e.freezeCount),
               (c.pauseCount = e.pauseCount),
@@ -144,9 +144,9 @@ class S {
                   minorResolution: null != e.resolution ? Math.min(e.resolution.height, e.resolution.width) : 0,
                   majorResolution: null != e.resolution ? Math.max(e.resolution.height, e.resolution.width) : 0,
                   timestamp: t,
-                  encoder: b(e.encoderImplementationName),
+                  encoder: T(e.encoderImplementationName),
                   decoder: null,
-                  codecType: T(e.codec.name),
+                  codecType: b(e.codec.name),
                   nackCount: e.nackCount,
                   pliCount: e.pliCount,
                   qpSum: e.qpSum,
@@ -219,17 +219,17 @@ class y {
         g.forEach((e) => {
             s <= e && (this.resolutionBuckets[e] += p);
         });
-        let b = (a - I) / 1000,
-            T = ((r - E) * 8) / b,
-            S = (i - v) / b;
+        let T = (a - I) / 1000,
+            b = ((r - E) * 8) / T,
+            S = (i - v) / T;
         h.forEach((e) => {
-            T <= e && (this.bitrateBuckets[e] += p);
+            b <= e && (this.bitrateBuckets[e] += p);
         }),
             m.forEach((e) => {
                 S <= e && (this.fpsBuckets[e] += p);
             }),
             this.resolutionHistogram.addSample(s),
-            this.bitrateHistogram.addSample(T),
+            this.bitrateHistogram.addSample(b),
             this.fpsHistogram.addSample(S),
             this.localWantHistogram.addSample(f),
             this.statsWindow.shift();

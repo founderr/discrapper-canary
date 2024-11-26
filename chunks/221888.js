@@ -23,14 +23,14 @@ var r = n(200651),
     E = n(5192),
     v = n(354459),
     I = n(981631),
-    b = n(388032),
-    T = n(140369);
+    T = n(388032),
+    b = n(140369);
 function S(e, t) {
     switch (e) {
         case v.fO.ACTIVITY:
-            return b.intl.formatToPlainString(b.t.TCM94e, { numUsers: t });
+            return T.intl.formatToPlainString(T.t.TCM94e, { numUsers: t });
         case v.fO.STREAM:
-            return b.intl.formatToPlainString(b.t.BR7Tnp, { numViewers: t });
+            return T.intl.formatToPlainString(T.t.BR7Tnp, { numViewers: t });
         default:
             throw Error('Unknown participant type.');
     }
@@ -40,13 +40,13 @@ function y(e) {
         u = S(a, t.length);
     return (0, r.jsx)(d.Dialog, {
         'aria-label': u,
-        className: T.popoutWrapper,
+        className: b.popoutWrapper,
         children: (0, r.jsxs)(d.Scroller, {
-            className: T.scroller,
+            className: b.scroller,
             children: [
                 (0, r.jsx)(d.Heading, {
                     variant: 'heading-deprecated-12/semibold',
-                    className: T.memberListHeader,
+                    className: b.memberListHeader,
                     children: u
                 }),
                 (0, r.jsx)('div', {
@@ -55,8 +55,8 @@ function y(e) {
                             p.Z,
                             {
                                 guildId: null != i ? i : void 0,
-                                className: s()(T.memberListItem, { [T.popoutDisabled]: n }),
-                                textClassName: T.memberListItemText,
+                                className: s()(b.memberListItem, { [b.popoutDisabled]: n }),
+                                textClassName: b.memberListItemText,
                                 user: e,
                                 disablePopout: n,
                                 nick: E.ZP.getNickname(i, o, e),
@@ -79,7 +79,7 @@ function A(e) {
                       (0, r.jsx)(
                           'div',
                           {
-                              className: T.viewersTooltipItem,
+                              className: b.viewersTooltipItem,
                               children: E.ZP.getName(n, i, e)
                           },
                           e.id
@@ -90,12 +90,12 @@ function A(e) {
         text: c,
         'aria-label': u,
         children: (0, r.jsxs)('div', {
-            className: s()(T.viewers, o),
+            className: s()(b.viewers, o),
             children: [
                 (0, r.jsx)(d.EyeIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: T.viewersIcon
+                    className: b.viewersIcon
                 }),
                 (0, r.jsx)('span', {
                     'aria-hidden': 'true',
@@ -107,7 +107,7 @@ function A(e) {
 }
 let N = [];
 function C(e) {
-    let { channelId: t, guildId: a, participant: o, className: p, compact: E = !1, disableInteraction: b = !1, maxVisibleUsers: S = 3 } = e,
+    let { channelId: t, guildId: a, participant: o, className: p, compact: E = !1, disableInteraction: T = !1, maxVisibleUsers: S = 3 } = e,
         [C, R] = i.useState(!1),
         O = i.useRef(new c.sW(150, () => R(!1))),
         D = (0, u.Wu)(
@@ -161,7 +161,7 @@ function C(e) {
             className: p,
             participantType: o.type
         });
-    let M = l()(D)
+    let P = l()(D)
         .take(S)
         .map((e) =>
             (0, r.jsx)(
@@ -170,7 +170,7 @@ function C(e) {
                     src: e.getAvatarURL(a, 24),
                     'aria-label': e.username,
                     size: d.AvatarSizes.SIZE_24,
-                    className: T.viewer
+                    className: b.viewer
                 },
                 e.id
             )
@@ -178,10 +178,10 @@ function C(e) {
         .value();
     return (
         D.length > S &&
-            (M[M.length - 1] = (0, r.jsxs)(
+            (P[P.length - 1] = (0, r.jsxs)(
                 'div',
                 {
-                    className: T.overflow,
+                    className: b.overflow,
                     children: ['+', D.length - S + 1]
                 },
                 'overflow'
@@ -199,14 +199,14 @@ function C(e) {
                             guildId: a,
                             channelId: t,
                             users: D,
-                            disableInteraction: b
+                            disableInteraction: T
                         }),
                     shouldShow: C,
                     position: 'top',
                     children: () =>
                         (0, r.jsx)('div', {
-                            className: s()(T.viewers, p),
-                            children: M
+                            className: s()(b.viewers, p),
+                            children: P
                         })
                 })
             })

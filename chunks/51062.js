@@ -21,7 +21,7 @@ var r = n(192379),
     g = n(377668),
     E = n(185923);
 function v(e, t, n) {
-    var v, I, b, T, S, y, A;
+    var v, I, T, b, S, y, A;
     let { channel: N, type: C } = e,
         [R, O] = r.useState(() => (0, p.P)()),
         D = (0, i.Z)(),
@@ -38,7 +38,7 @@ function v(e, t, n) {
             let n = _.default.getCurrentUser();
             return null !== (t = null != N.guild_id && null != n ? (null === (e = c.ZP.getMember(N.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending) : null) && void 0 !== t && t;
         }),
-        { canMentionEveryone: M, hidePersonalInformation: P } = (0, a.cj)(
+        { canMentionEveryone: P, hidePersonalInformation: M } = (0, a.cj)(
             [d.Z, f.Z],
             () => ({
                 canMentionEveryone: N.isPrivate() || w || C === l.I.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, N),
@@ -63,14 +63,14 @@ function v(e, t, n) {
             activeCommand: k,
             activeCommandOption: U,
             canMentionUsers: null !== (S = null === (I = C.users) || void 0 === I ? void 0 : I.allowMentioning) && void 0 !== S && S,
-            canMentionEveryone: M,
+            canMentionEveryone: P,
             canMentionClyde: x,
-            hidePersonalInformation: P,
+            hidePersonalInformation: M,
             hideMentionDescription: C === l.I.RULES_INPUT,
             emojiIntention: C === l.I.RULES_INPUT ? E.Hz.COMMUNITY_CONTENT : E.Hz.CHAT,
             currentWord: null !== (y = null == G ? void 0 : G.word) && void 0 !== y ? y : '',
             currentWordIsAtStart: (null == G ? void 0 : G.isAtStart) === !0,
-            optionText: null != U ? (0, s.KF)({ [U.name]: null !== (A = null === (b = e.editorRef.current) || void 0 === b ? void 0 : b.getCurrentCommandOptionValue()) && void 0 !== A ? A : [] }, U.name) : ''
+            optionText: null != U ? (0, s.KF)({ [U.name]: null !== (A = null === (T = e.editorRef.current) || void 0 === T ? void 0 : T.getCurrentCommandOptionValue()) && void 0 !== A ? A : [] }, U.name) : ''
         },
         [F] = r.useState(() => new p.Z(Z));
     return (
@@ -98,7 +98,7 @@ function v(e, t, n) {
                     for (let n of t) n.removeChangeListener(e);
                 };
             }
-        }, [F, null === (T = R.query) || void 0 === T ? void 0 : T.typeInfo]),
+        }, [F, null === (b = R.query) || void 0 === b ? void 0 : b.typeInfo]),
         [R, F, B]
     );
 }

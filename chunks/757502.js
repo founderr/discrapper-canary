@@ -3,31 +3,31 @@ r.d(t, {
         return o;
     }
 });
-var n = r(899517),
-    a = r(679179),
+var a = r(899517),
+    n = r(679179),
     _ = r(151122);
 let o = (0, _._I)((e = {}) => {
     let t = e.root,
         r = e.prefix || 'app:///',
-        _ = 'window' in n.n && void 0 !== n.n.window,
+        _ = 'window' in a.n && void 0 !== a.n.window,
         o =
             e.iteratee ||
             (function ({ isBrowser: e, root: t, prefix: r }) {
-                return (n) => {
-                    if (!n.filename) return n;
-                    let _ = /^[a-zA-Z]:\\/.test(n.filename) || (n.filename.includes('\\') && !n.filename.includes('/')),
-                        o = /^\//.test(n.filename);
+                return (a) => {
+                    if (!a.filename) return a;
+                    let _ = /^[a-zA-Z]:\\/.test(a.filename) || (a.filename.includes('\\') && !a.filename.includes('/')),
+                        o = /^\//.test(a.filename);
                     if (e) {
                         if (t) {
-                            let e = n.filename;
-                            0 === e.indexOf(t) && (n.filename = e.replace(t, r));
+                            let e = a.filename;
+                            0 === e.indexOf(t) && (a.filename = e.replace(t, r));
                         }
                     } else if (_ || o) {
-                        let e = _ ? n.filename.replace(/^[a-zA-Z]:/, '').replace(/\\/g, '/') : n.filename,
-                            o = t ? (0, a.Gf)(t, e) : (0, a.EZ)(e);
-                        n.filename = `${r}${o}`;
+                        let e = _ ? a.filename.replace(/^[a-zA-Z]:/, '').replace(/\\/g, '/') : a.filename,
+                            o = t ? (0, n.Gf)(t, e) : (0, n.EZ)(e);
+                        a.filename = `${r}${o}`;
                     }
-                    return n;
+                    return a;
                 };
             })({
                 isBrowser: _,

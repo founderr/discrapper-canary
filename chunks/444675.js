@@ -1,14 +1,14 @@
 var t,
     r,
-    n,
-    a = (e.exports = {});
+    a,
+    n = (e.exports = {});
 function _() {
     throw Error('setTimeout has not been defined');
 }
 function o() {
     throw Error('clearTimeout has not been defined');
 }
-function i(e) {
+function E(e) {
     if (t === setTimeout) return setTimeout(e, 0);
     if ((t === _ || !t) && setTimeout) return (t = setTimeout), setTimeout(e, 0);
     try {
@@ -33,21 +33,21 @@ function i(e) {
         r = o;
     }
 })();
-var E = [],
+var i = [],
     c = !1,
     s = -1;
 function l() {
-    if (!!c && !!n) (c = !1), n.length ? (E = n.concat(E)) : (s = -1), E.length && u();
+    if (!!c && !!a) (c = !1), a.length ? (i = a.concat(i)) : (s = -1), i.length && I();
 }
-function u() {
+function I() {
     if (!c) {
-        var e = i(l);
+        var e = E(l);
         c = !0;
-        for (var t = E.length; t; ) {
-            for (n = E, E = []; ++s < t; ) n && n[s].run();
-            (s = -1), (t = E.length);
+        for (var t = i.length; t; ) {
+            for (a = i, i = []; ++s < t; ) a && a[s].run();
+            (s = -1), (t = i.length);
         }
-        (n = null),
+        (a = null),
             (c = !1),
             !(function (e) {
                 if (r === clearTimeout) return clearTimeout(e);
@@ -64,45 +64,45 @@ function u() {
             })(e);
     }
 }
-function I(e, t) {
+function u(e, t) {
     (this.fun = e), (this.array = t);
 }
 function R() {}
-(a.nextTick = function (e) {
+(n.nextTick = function (e) {
     var t = Array(arguments.length - 1);
     if (arguments.length > 1) for (var r = 1; r < arguments.length; r++) t[r - 1] = arguments[r];
-    E.push(new I(e, t)), 1 === E.length && !c && i(u);
+    i.push(new u(e, t)), 1 === i.length && !c && E(I);
 }),
-    (I.prototype.run = function () {
+    (u.prototype.run = function () {
         this.fun.apply(null, this.array);
     }),
-    (a.title = 'browser'),
-    (a.browser = !0),
-    (a.env = {}),
-    (a.argv = []),
-    (a.version = ''),
-    (a.versions = {}),
-    (a.on = R),
-    (a.addListener = R),
-    (a.once = R),
-    (a.off = R),
-    (a.removeListener = R),
-    (a.removeAllListeners = R),
-    (a.emit = R),
-    (a.prependListener = R),
-    (a.prependOnceListener = R),
-    (a.listeners = function (e) {
+    (n.title = 'browser'),
+    (n.browser = !0),
+    (n.env = {}),
+    (n.argv = []),
+    (n.version = ''),
+    (n.versions = {}),
+    (n.on = R),
+    (n.addListener = R),
+    (n.once = R),
+    (n.off = R),
+    (n.removeListener = R),
+    (n.removeAllListeners = R),
+    (n.emit = R),
+    (n.prependListener = R),
+    (n.prependOnceListener = R),
+    (n.listeners = function (e) {
         return [];
     }),
-    (a.binding = function (e) {
+    (n.binding = function (e) {
         throw Error('process.binding is not supported');
     }),
-    (a.cwd = function () {
+    (n.cwd = function () {
         return '/';
     }),
-    (a.chdir = function (e) {
+    (n.chdir = function (e) {
         throw Error('process.chdir is not supported');
     }),
-    (a.umask = function () {
+    (n.umask = function () {
         return 0;
     });

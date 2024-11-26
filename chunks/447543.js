@@ -23,8 +23,8 @@ var r = n(525654),
     E = n(972830),
     v = n(305325),
     I = n(281956),
-    b = n(931261),
-    T = n(15274),
+    T = n(931261),
+    b = n(15274),
     S = n(924301),
     y = n(82085),
     A = n(264229),
@@ -36,8 +36,8 @@ var r = n(525654),
     L = n(131704),
     x = n(314897),
     w = n(592125),
-    M = n(984933),
-    P = n(271383),
+    P = n(984933),
+    M = n(271383),
     k = n(430824),
     U = n(607744),
     B = n(341165),
@@ -84,11 +84,11 @@ function er(e) {
         g = (function (e, t, n) {
             var r, i;
             if ((null == n ? void 0 : n.targetType) === J.Iq.ROLE_SUBSCRIPTIONS_PURCHASE) return Q.oC.ROLE_SUBSCRIPTIONS;
-            if ((null == n ? void 0 : n.targetType) == null && !L.tx.has(t.type) && (0, b.s)(e)) return Q.oC.GUILD_HOME;
+            if ((null == n ? void 0 : n.targetType) == null && !L.tx.has(t.type) && (0, T.s)(e)) return Q.oC.GUILD_HOME;
             let a = w.Z.getChannel(t.id);
-            return G.Z.can(q.Plq.VIEW_CHANNEL, a) ? t.id : null !== (i = null === (r = M.ZP.getDefaultChannel(e, !0, q.Plq.CREATE_INSTANT_INVITE)) || void 0 === r ? void 0 : r.id) && void 0 !== i ? i : t.id;
+            return G.Z.can(q.Plq.VIEW_CHANNEL, a) ? t.id : null !== (i = null === (r = P.ZP.getDefaultChannel(e, !0, q.Plq.CREATE_INSTANT_INVITE)) || void 0 === r ? void 0 : r.id) && void 0 !== i ? i : t.id;
         })(t, r, i),
-        T = f === q.d4z.GUILD_STAGE_VOICE,
+        b = f === q.d4z.GUILD_STAGE_VOICE,
         S = q.Z5c.CHANNEL(t, g);
     L.tx.has(f)
         ? (0, E.h)(() => {
@@ -97,7 +97,7 @@ function er(e) {
                   .then((e) => {
                       let { default: n } = e,
                           s = () => {
-                              if (T) {
+                              if (b) {
                                   (0, D.Cq)(r instanceof L.Sf ? r : (0, L.kt)(r)), (0, O.uL)(S);
                                   return;
                               }
@@ -112,7 +112,7 @@ function er(e) {
                                       }),
                                   u === J.Iq.EMBEDDED_APPLICATION && null != c && ((0, O.uL)(q.Z5c.CHANNEL(null != t ? t : q.ME, g)), (0, h.Z)(g, c, a, null == i ? void 0 : i.intent, m.bB.CHAT));
                           };
-                      !d && (0, I.n)(t, [k.Z, U.Z, F.default, P.ZP]) ? (0, v.hk)(t, s) : s();
+                      !d && (0, I.n)(t, [k.Z, U.Z, F.default, M.ZP]) ? (0, v.hk)(t, s) : s();
                   });
           })
         : (0, p.l5)(_) && u === J.Iq.EMBEDDED_APPLICATION && null != c && ((0, O.uL)(q.Z5c.CHANNEL(null != t ? t : q.ME, g)), (0, h.Z)(g, c, a, null == i ? void 0 : i.intent, m.bB.CHAT)),
@@ -146,7 +146,7 @@ let ei = function (e, t) {
                               if (null != t)
                                   (0, E.h)(() => {
                                       let e = { guildScheduledEventId: t.id };
-                                      null != n && (e.welcomeModalChannelId = n), (0, T.P3)(t, e);
+                                      null != n && (e.welcomeModalChannelId = n), (0, b.P3)(t, e);
                                   });
                           })(t),
                           !1)

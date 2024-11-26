@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return C;
     }
 }),
     n(47120);
@@ -20,15 +20,15 @@ var i = n(200651),
     x = n(526761),
     S = n(726985),
     T = n(736530),
-    C = n(981631),
+    E = n(981631),
     _ = n(388032);
-function E() {
+function C() {
     let e = (0, m.is)(),
         t = (0, m.c_)(),
         n = u.iG.useSetting(),
-        E = u.h2.useSetting().includes(e),
-        f = u.mX.useSetting(),
-        I = u.zA.useSetting().includes(e),
+        C = u.h2.useSetting().includes(e),
+        I = u.mX.useSetting(),
+        f = u.zA.useSetting().includes(e),
         N = s.useCallback(
             (t) => {
                 let n = new Set((0, d.gl)());
@@ -37,7 +37,7 @@ function E() {
             [e]
         );
     function A(e, t) {
-        a.default.track(C.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
+        a.default.track(E.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
             default_guilds_restricted: e,
             applied_to_existing_guilds: t
         });
@@ -49,11 +49,11 @@ function E() {
             e === T.T
                 ? (0, i.jsx)(g.Z, {
                       title: _.intl.string(_.t['3o2ojo']),
-                      value: !n && !f,
+                      value: !n && !I,
                       onChange: () => {
                           var e;
                           return (
-                              (e = !f),
+                              (e = !I),
                               void (0, p.V)({
                                   header: _.intl.string(_.t.yAfu1t),
                                   body: _.intl.string(_.t['Ry2z7+']),
@@ -70,14 +70,14 @@ function E() {
                           );
                       },
                       disabled: n,
-                      note: _.intl.format(_.t.wkm9a2, { helpdeskArticle: o.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) })
+                      note: _.intl.format(_.t.wkm9a2, { helpdeskArticle: o.Z.getArticleURL(E.BhN.MESSAGE_REQUESTS) })
                   })
                 : (0, i.jsx)(g.Z, {
                       title: _.intl.string(_.t['3o2ojo']),
-                      value: !I,
+                      value: !f,
                       onChange: N,
-                      disabled: E,
-                      note: t ? _.intl.format(_.t.WpnWLS, { helpdeskArticle: o.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) }) : _.intl.format(_.t.wkm9a2, { helpdeskArticle: o.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) })
+                      disabled: C,
+                      note: t ? _.intl.format(_.t.WpnWLS, { helpdeskArticle: o.Z.getArticleURL(E.BhN.MESSAGE_REQUESTS) }) : _.intl.format(_.t.wkm9a2, { helpdeskArticle: o.Z.getArticleURL(E.BhN.MESSAGE_REQUESTS) })
                   })
     });
 }

@@ -96,25 +96,25 @@ e.exports = function (e) {
                 }
             ]
         },
-        b = {
+        T = {
             scope: 'attr',
             match: t.concat(r, t.lookahead(':'), t.lookahead(/(?!::)/))
         },
-        T = {
+        b = {
             relevance: 0,
             begin: /\(/,
             end: /\)/,
             keywords: m,
-            contains: [b, a, I, e.C_BLOCK_COMMENT_MODE, d, f, E]
+            contains: [T, a, I, e.C_BLOCK_COMMENT_MODE, d, f, E]
         },
         S = {
             relevance: 0,
             match: [/\b/, t.concat('(?!fn\\b|function\\b|', g(p).join('\\b|'), '|', g(h).join('\\b|'), '\\b)'), r, t.concat(c, '*'), t.lookahead(/(?=\()/)],
             scope: { 3: 'title.function.invoke' },
-            contains: [T]
+            contains: [b]
         };
-    T.contains.push(S);
-    let y = [b, I, e.C_BLOCK_COMMENT_MODE, d, f, E];
+    b.contains.push(S);
+    let y = [T, I, e.C_BLOCK_COMMENT_MODE, d, f, E];
     return {
         case_insensitive: !1,
         keywords: m,

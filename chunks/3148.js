@@ -31,10 +31,10 @@ function c(e) {
 }
 function d(e) {
     let { channelId: t, content: n, tts: r = !1, type: d = u.uaV.DEFAULT, messageReference: f, allowedMentions: _, author: p, flags: h, nonce: m, poll: g, changelogId: E, giftingPrompt: v, state: I } = e,
-        b = [];
+        T = [];
     if (d === u.uaV.REPLY && (i()(null != f, 'Replies must have a message reference'), null == _ || _.replied_user)) {
         let e = a.Z.getMessageByReference(f);
-        (null == e ? void 0 : e.state) === a.Y.LOADED && b.push(c(e.message.author));
+        (null == e ? void 0 : e.state) === a.Y.LOADED && T.push(c(e.message.author));
     }
     return (
         null == p && (p = o.default.getCurrentUser()),
@@ -49,7 +49,7 @@ function d(e) {
             attachments: [],
             embeds: [],
             pinned: !1,
-            mentions: b,
+            mentions: T,
             mention_channels: [],
             mention_roles: [],
             mention_everyone: !1,

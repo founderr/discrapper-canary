@@ -25,7 +25,7 @@ function I(e, t) {
     let i = (0, _.V9)(r);
     return i !== v && ((v = i), (0, a.rn)(r, { noFocus: !0 }), !0);
 }
-function b(e, t) {
+function T(e, t) {
     let n = null != t ? t : u.Z.getPreferredRegion();
     null != n && n !== u.Z.getRegion(d.Z.getHostname(d.Z.getActiveStreamKey())) && (0, a.dV)(e, n);
 }
@@ -100,12 +100,12 @@ t.Z = {
             i.Z.subscribe('CALL_UPDATE', (e) => {
                 let { channelId: t, region: n } = e,
                     r = s.Z.getCurrentUserActiveStream();
-                (null == r ? void 0 : r.channelId) === t && b((0, _.V9)(r), n);
+                (null == r ? void 0 : r.channelId) === t && T((0, _.V9)(r), n);
             }),
             i.Z.subscribe('CHANNEL_UPDATES', (e) => {
                 let { channels: t } = e,
                     n = s.Z.getCurrentUserActiveStream();
-                if (null != n) for (let e of t) n.channelId === e.id && b((0, _.V9)(n), e.rtcRegion);
+                if (null != n) for (let e of t) n.channelId === e.id && T((0, _.V9)(n), e.rtcRegion);
             });
     }
 };

@@ -17,7 +17,7 @@ let h = new Set(),
     E = new Map(),
     v = new Map(),
     I = null;
-function b(e) {
+function T(e) {
     let t = f.default.getCurrentUser(),
         n = d.Z.getGuild(e);
     if (null == n || null == t) return !1;
@@ -36,7 +36,7 @@ function b(e) {
     }
     return m.set(e, r), E.set(e, a), g.set(e, i), !0;
 }
-function T() {
+function b() {
     m.clear(), E.clear(), g.clear(), v.clear(), (I = null);
 }
 function S(e) {
@@ -59,7 +59,7 @@ function S(e) {
 }
 function y(e) {
     let { guildId: t } = e;
-    return !!m.has(t) && b(t);
+    return !!m.has(t) && T(t);
 }
 class A extends (r = l.ZP.Store) {
     initialize() {
@@ -76,7 +76,7 @@ class A extends (r = l.ZP.Store) {
             : I;
     }
     buildRoles(e) {
-        !m.has(e) && b(e);
+        !m.has(e) && T(e);
     }
     getSubscriptionRoles(e) {
         var t;
@@ -105,8 +105,8 @@ class A extends (r = l.ZP.Store) {
           })
         : (i[a] = s),
     (t.Z = new A(u.Z, {
-        CONNECTION_OPEN: T,
-        LOGOUT: T,
+        CONNECTION_OPEN: b,
+        LOGOUT: b,
         GUILD_CREATE: S,
         GUILD_DELETE: function (e) {
             let {
@@ -123,6 +123,6 @@ class A extends (r = l.ZP.Store) {
         GUILD_MEMBER_UPDATE: function (e) {
             let { guildId: t, user: n } = e,
                 r = f.default.getCurrentUser();
-            return !!(n.id === (null == r ? void 0 : r.id) && m.has(t)) && b(t);
+            return !!(n.id === (null == r ? void 0 : r.id) && m.has(t)) && T(t);
         }
     }));

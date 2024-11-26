@@ -4,118 +4,118 @@ r.r(t),
             return _.R;
         },
         SDK_VERSION: function () {
-            return n.Jn;
+            return a.Jn;
         },
         SEMANTIC_ATTRIBUTE_SENTRY_OP: function () {
-            return n.$J;
+            return a.$J;
         },
         SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN: function () {
-            return n.S3;
+            return a.S3;
         },
         SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE: function () {
-            return n.TE;
+            return a.TE;
         },
         SEMANTIC_ATTRIBUTE_SENTRY_SOURCE: function () {
-            return n.Zj;
+            return a.Zj;
         },
         Scope: function () {
-            return n.sX;
+            return a.sX;
         },
         WINDOW: function () {
-            return a.m9;
+            return n.m9;
         },
         addBreadcrumb: function () {
-            return n.n_;
+            return a.n_;
         },
         addEventProcessor: function () {
-            return n.Qy;
+            return a.Qy;
         },
         addIntegration: function () {
-            return n.M5;
+            return a.M5;
         },
         addTracingExtensions: function () {
-            return n.Ts;
+            return a.Ts;
         },
         breadcrumbsIntegration: function () {
             return l.f;
         },
         browserApiErrorsIntegration: function () {
-            return N.t;
+            return A.t;
         },
         browserProfilingIntegration: function () {
-            return P.x;
+            return U.x;
         },
         browserTracingIntegration: function () {
-            return g.E8;
+            return P.E8;
         },
         captureConsoleIntegration: function () {
-            return n.Xs;
+            return a.Xs;
         },
         captureEvent: function () {
-            return n.eN;
+            return a.eN;
         },
         captureException: function () {
-            return n.Tb;
+            return a.Tb;
         },
         captureFeedback: function () {
-            return n.N$;
+            return a.N$;
         },
         captureMessage: function () {
-            return n.uT;
+            return a.uT;
         },
         captureSession: function () {
-            return n.cg;
+            return a.cg;
         },
         captureUserFeedback: function () {
             return s.Jd;
         },
         chromeStackLineParser: function () {
-            return i.$3;
+            return E.$3;
         },
         close: function () {
-            return n.xv;
+            return a.xv;
         },
         contextLinesIntegration: function () {
-            return L.S;
+            return f.S;
         },
         continueTrace: function () {
-            return n.yn;
+            return a.yn;
         },
         createTransport: function () {
-            return n.qv;
+            return a.qv;
         },
         createUserFeedbackEnvelope: function () {
             return c.r;
         },
         debugIntegration: function () {
-            return n.sC;
+            return a.sC;
         },
         dedupeIntegration: function () {
-            return n.RH;
+            return a.RH;
         },
         defaultRequestInstrumentationOptions: function () {
             return C.k3;
         },
         defaultStackLineParsers: function () {
-            return i.d8;
+            return E.d8;
         },
         defaultStackParser: function () {
-            return i.Dt;
+            return E.Dt;
         },
         endSession: function () {
-            return n.TM;
+            return a.TM;
         },
         eventFromException: function () {
-            return E.dr;
+            return i.dr;
         },
         eventFromMessage: function () {
-            return E.aB;
+            return i.aB;
         },
         exceptionFromError: function () {
-            return E.GJ;
+            return i.GJ;
         },
         extraErrorDataIntegration: function () {
-            return n.EY;
+            return a.EY;
         },
         feedbackAsyncIntegration: function () {
             return p.Q;
@@ -127,64 +127,64 @@ r.r(t),
             return h.r;
         },
         flush: function () {
-            return n.yl;
+            return a.yl;
         },
         forceLoad: function () {
             return s.Eg;
         },
         functionToStringIntegration: function () {
-            return n.CP;
+            return a.CP;
         },
         geckoStackLineParser: function () {
-            return i.$Q;
+            return E.$Q;
         },
         getActiveSpan: function () {
-            return n.HN;
+            return a.HN;
         },
         getClient: function () {
-            return n.s3;
+            return a.s3;
         },
         getCurrentHub: function () {
-            return n.Gd;
+            return a.Gd;
         },
         getCurrentScope: function () {
-            return n.nZ;
+            return a.nZ;
         },
         getDefaultIntegrations: function () {
             return s.nV;
         },
         getFeedback: function () {
-            return S.qm;
+            return D.qm;
         },
         getGlobalScope: function () {
-            return n.lW;
+            return a.lW;
         },
         getIsolationScope: function () {
-            return n.aF;
+            return a.aF;
         },
         getReplay: function () {
-            return f.T;
+            return O.T;
         },
         getRootSpan: function () {
-            return n.Gx;
+            return a.Gx;
         },
         getSpanDescendants: function () {
-            return n.Dp;
+            return a.Dp;
         },
         getSpanStatusFromHttpCode: function () {
-            return n.ix;
+            return a.ix;
         },
         globalHandlersIntegration: function () {
-            return u.k;
+            return I.k;
         },
         httpClientIntegration: function () {
             return d.l;
         },
         httpContextIntegration: function () {
-            return I.s;
+            return u.s;
         },
         inboundFiltersIntegration: function () {
-            return n.SG;
+            return a.SG;
         },
         init: function () {
             return s.S1;
@@ -193,168 +193,168 @@ r.r(t),
             return C.L7;
         },
         isInitialized: function () {
-            return n.dk;
+            return a.dk;
         },
         lastEventId: function () {
-            return n.eW;
+            return a.eW;
         },
         lazyLoadIntegration: function () {
-            return A.R;
+            return T.R;
         },
         linkedErrorsIntegration: function () {
             return R.O;
         },
         makeBrowserOfflineTransport: function () {
-            return U.O1;
+            return g.O1;
         },
         makeFetchTransport: function () {
             return o.f;
         },
         makeMultiplexedTransport: function () {
-            return n.Wq;
+            return a.Wq;
         },
         metrics: function () {
-            return D.q;
+            return S.q;
         },
         moduleMetadataIntegration: function () {
-            return n.wo;
+            return a.wo;
         },
         onLoad: function () {
             return s.lA;
         },
         opera10StackLineParser: function () {
-            return i.NP;
+            return E.NP;
         },
         opera11StackLineParser: function () {
-            return i.HH;
+            return E.HH;
         },
         parameterize: function () {
-            return n.XB;
+            return a.XB;
         },
         registerSpanErrorInstrumentation: function () {
-            return n.ar;
+            return a.ar;
         },
         replayCanvasIntegration: function () {
-            return O.m;
+            return L.m;
         },
         replayIntegration: function () {
-            return f.G;
+            return O.G;
         },
         reportingObserverIntegration: function () {
-            return T.y;
+            return N.y;
         },
         rewriteFramesIntegration: function () {
-            return n.vU;
+            return a.vU;
         },
         sendFeedback: function () {
-            return S.fA;
+            return D.fA;
         },
         sessionTimingIntegration: function () {
-            return n.rE;
+            return a.rE;
         },
         setContext: function () {
-            return n.v;
+            return a.v;
         },
         setCurrentClient: function () {
-            return n.KW;
+            return a.KW;
         },
         setExtra: function () {
-            return n.sU;
+            return a.sU;
         },
         setExtras: function () {
-            return n.rJ;
+            return a.rJ;
         },
         setHttpStatus: function () {
-            return n.Q0;
+            return a.Q0;
         },
         setMeasurement: function () {
-            return n.oi;
+            return a.oi;
         },
         setTag: function () {
-            return n.YA;
+            return a.YA;
         },
         setTags: function () {
-            return n.mG;
+            return a.mG;
         },
         setUser: function () {
-            return n.av;
+            return a.av;
         },
         showReportDialog: function () {
             return s.jp;
         },
         spanToBaggageHeader: function () {
-            return n.uc;
+            return a.uc;
         },
         spanToJSON: function () {
-            return n.XU;
+            return a.XU;
         },
         spanToTraceHeader: function () {
-            return n.Hb;
+            return a.Hb;
         },
         startBrowserTracingNavigationSpan: function () {
-            return g.og;
+            return P.og;
         },
         startBrowserTracingPageLoadSpan: function () {
-            return g.Wo;
+            return P.Wo;
         },
         startInactiveSpan: function () {
-            return n.qp;
+            return a.qp;
         },
         startNewTrace: function () {
-            return n.Iw;
+            return a.Iw;
         },
         startSession: function () {
-            return n.yj;
+            return a.yj;
         },
         startSpan: function () {
-            return n.GK;
+            return a.GK;
         },
         startSpanManual: function () {
-            return n.V0;
+            return a.V0;
         },
         thirdPartyErrorFilterIntegration: function () {
-            return n.Lw;
+            return a.Lw;
         },
         winjsStackLineParser: function () {
-            return i.R2;
+            return E.R2;
         },
         withActiveSpan: function () {
-            return n._d;
+            return a._d;
         },
         withIsolationScope: function () {
-            return n.wi;
+            return a.wi;
         },
         withScope: function () {
-            return n.$e;
+            return a.$e;
         },
         zodErrorsIntegration: function () {
-            return n.id;
+            return a.id;
         }
     });
-var n = r(148503),
-    a = r(163162),
+var a = r(148503),
+    n = r(163162),
     _ = r(833772),
     o = r(387486),
-    i = r(297117),
-    E = r(878719),
+    E = r(297117),
+    i = r(878719),
     c = r(463461),
     s = r(509068),
     l = r(408720),
-    u = r(804410),
-    I = r(376457),
+    I = r(804410),
+    u = r(376457),
     R = r(42367),
-    N = r(515737),
-    A = r(27269),
-    T = r(17411),
+    A = r(515737),
+    T = r(27269),
+    N = r(17411),
     d = r(453574),
-    L = r(386797),
-    f = r(616456),
-    O = r(778600),
+    f = r(386797),
+    O = r(616456),
+    L = r(778600),
     p = r(780850),
     h = r(226483),
-    S = r(185461),
-    D = r(166800),
+    D = r(185461),
+    S = r(166800),
     C = r(799033),
-    g = r(325124),
-    U = r(281894),
-    P = r(130260);
+    P = r(325124),
+    g = r(281894),
+    U = r(130260);

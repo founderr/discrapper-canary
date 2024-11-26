@@ -1,12 +1,12 @@
 r.d(t, {
     u: function () {
-        return a;
+        return n;
     }
 });
-var n = r(395848);
-let a = (e) => {
+var a = r(395848);
+let n = (e) => {
     let t = (t) => {
-        ('pagehide' === t.type || (n.m.document && 'hidden' === n.m.document.visibilityState)) && e(t);
+        ('pagehide' === t.type || (a.m.document && 'hidden' === a.m.document.visibilityState)) && e(t);
     };
-    n.m.document && (addEventListener('visibilitychange', t, !0), addEventListener('pagehide', t, !0));
+    a.m.document && (addEventListener('visibilitychange', t, !0), addEventListener('pagehide', t, !0));
 };

@@ -114,11 +114,11 @@ let v = [
         for (let [t, n] of v) if (t === e.toUpperCase()) return n;
         return e;
     },
-    b = (e) => {
+    T = (e) => {
         for (let [t, n] of v) if (n === e.toUpperCase()) return t.toLowerCase();
         return e;
     },
-    T = /shift|meta|ctrl|alt$/;
+    b = /shift|meta|ctrl|alt$/;
 function S(e) {
     let t = {
         keyCode: 0,
@@ -140,7 +140,7 @@ function S(e) {
                       }),
                       e
                   );
-              if (T.test(r)) return (t[r + 'Key'] = !0), e.map((e) => ((e[r + 'Key'] = !0), e));
+              if (b.test(r)) return (t[r + 'Key'] = !0), e.map((e) => ((e[r + 'Key'] = !0), e));
               {
                   let t = E(r, c.CgE.BROWSER);
                   return null != t && (i.keyCode = t), e.push(i), e;
@@ -157,7 +157,7 @@ function y(e) {
         .split('+')
         .map((e) => e.trim().replace('plus', '+'))
         .reduce((e, r) => {
-            let i = E(b(r), t, n);
+            let i = E(T(r), t, n);
             return null != i && e.push([n, i, t]), e;
         }, []);
 }

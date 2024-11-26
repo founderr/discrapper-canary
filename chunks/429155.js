@@ -7,7 +7,7 @@ var r = n(200651),
     l = n(98528),
     u = n(695606);
 let c = i.forwardRef(function (e, t) {
-    let { categories: n, store: c, hasSearchResults: d, listPadding: f, renderRow: _, renderSection: p, renderSectionHeader: h, renderSectionFooter: m, renderInspector: g, renderEmptySearchState: E, rowCount: v, rowCountBySection: I, rowHeight: b, sectionHeaderHeight: T, sectionFooterHeight: S, renderUpsell: y, setShowUpsell: A } = e,
+    let { categories: n, store: c, hasSearchResults: d, listPadding: f, renderRow: _, renderSection: p, renderSectionHeader: h, renderSectionFooter: m, renderInspector: g, renderEmptySearchState: E, rowCount: v, rowCountBySection: I, rowHeight: T, sectionHeaderHeight: b, sectionFooterHeight: S, renderUpsell: y, setShowUpsell: A } = e,
         N = i.useRef(!1),
         C = i.useRef(null),
         R = (0, o.Iu)((e) => e.searchQuery),
@@ -97,8 +97,8 @@ let c = i.forwardRef(function (e, t) {
                           renderSectionFooter: m,
                           rowCount: v,
                           rowCountBySection: I,
-                          rowHeight: b,
-                          sectionHeaderHeight: T,
+                          rowHeight: T,
+                          sectionHeaderHeight: b,
                           sectionFooterHeight: S,
                           stickyHeaders: !0,
                           ref: C

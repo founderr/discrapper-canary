@@ -1,6 +1,6 @@
 n.d(t, {
     c: function () {
-        return f;
+        return I;
     }
 });
 var i = n(200651),
@@ -19,12 +19,12 @@ var i = n(200651),
     x = n(981631),
     S = n(474936),
     T = n(388032),
-    C = n(352545),
+    E = n(352545),
     _ = n(232186);
-let E = () => {
+let C = () => {
         (0, d.nJ)(), (0, a.xf)();
     },
-    f = () => {
+    I = () => {
         let { analyticsLocations: e } = (0, c.ZP)(o.Z.USER_SETTINGS),
             t = (0, r.e7)([u.Z], () => u.Z.isUpsellPreview),
             { enabled: n } = h.Z.getCurrentConfig(
@@ -43,17 +43,17 @@ let E = () => {
                     });
             }, []),
             (0, i.jsxs)('div', {
-                className: C.selectionGroup,
+                className: E.selectionGroup,
                 children: [
                     (0, i.jsx)(m.Z, {
                         disabled: t && !n,
                         renderCTAButtons: () =>
                             (0, i.jsxs)('div', {
-                                className: C.tryItOutButtons,
+                                className: E.tryItOutButtons,
                                 children: [
                                     (0, i.jsx)(l.Button, {
                                         color: !n && t ? l.Button.Colors.PRIMARY : l.Button.Colors.BRAND,
-                                        onClick: () => E(),
+                                        onClick: () => C(),
                                         children: n ? T.intl.string(T.t.SKNnqq) : T.intl.string(T.t['hb/wEx'])
                                     }),
                                     t

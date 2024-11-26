@@ -50,10 +50,10 @@ n.r(t),
             return R;
         },
         getSuperProperties: function () {
-            return M;
+            return P;
         },
         getSuperPropertiesBase64: function () {
-            return P;
+            return M;
         },
         isThrottled: function () {
             return L;
@@ -81,8 +81,8 @@ var f = n(627420),
     E = n(20281),
     v = n(525769);
 let I = 'deviceProperties',
-    b = 'referralProperties',
-    T = {},
+    T = 'referralProperties',
+    b = {},
     S = {},
     y = window.DiscordNative;
 if (null != y) {
@@ -194,7 +194,7 @@ function D() {
     );
 }
 function L(e) {
-    return null != T[e] && T[e] > Date.now();
+    return null != b[e] && b[e] > Date.now();
 }
 if (null == r)
     try {
@@ -229,15 +229,15 @@ if (null == r)
                     );
                 })()),
                 _.K.set(I, e)),
-            (t = _.K.get(b)),
-            null == t && ((t = D()), _.K.set(b, t)),
-            (n = p.x.get(b)),
+            (t = _.K.get(T)),
+            null == t && ((t = D()), _.K.set(T, t)),
+            (n = p.x.get(T)),
             null == n &&
                 ((n = (function (e, t) {
                     let n = {};
                     return Object.keys(e).map((r) => (n[''.concat(r).concat(t)] = e[r])), n;
                 })(D(), '_current')),
-                p.x.set(b, n)),
+                p.x.set(T, n)),
             (r = {
                 ...e,
                 ...(function () {
@@ -270,7 +270,7 @@ x(
         let r = {},
             i = window.GLOBAL_ENV.RELEASE_CHANNEL;
         i && (r.release_channel = i.split('-')[0]);
-        let a = parseInt(((n = '348163'), '348163'), 10);
+        let a = parseInt(((n = '348231'), '348231'), 10);
         !isNaN(a) && (r.client_build_number = a);
         let s = null == y ? void 0 : null === (e = (t = y.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
         return (
@@ -303,7 +303,7 @@ let w = (e) => {
                     if (o()(e, s)) return Promise.resolve();
                     S[t] = s;
                 }
-                T[t] = Date.now() + l.throttlePeriod;
+                b[t] = Date.now() + l.throttlePeriod;
             } else if ('throttlePercent' in l) {
                 if (Math.random() > l.throttlePercent) return Promise.resolve();
             } else u()(!1, 'Unsupported analytics event config: '.concat(l));
@@ -311,9 +311,9 @@ let w = (e) => {
         return a(e, r, i);
     };
 };
-function M() {
+function P() {
     return r;
 }
-function P() {
+function M() {
     return i;
 }

@@ -3,8 +3,8 @@ r.d(t, {
         return _;
     }
 });
-var n = r(967752),
-    a = r(617726);
+var a = r(967752),
+    n = r(617726);
 function _(e, { metadata: t, tunnel: r, dsn: _ }) {
     let o = {
             event_id: e.event_id,
@@ -16,10 +16,10 @@ function _(e, { metadata: t, tunnel: r, dsn: _ }) {
                         version: t.sdk.version
                     }
                 }),
-            ...(!!r && !!_ && { dsn: (0, n.RA)(_) })
+            ...(!!r && !!_ && { dsn: (0, a.RA)(_) })
         },
-        i = (function (e) {
+        E = (function (e) {
             return [{ type: 'user_report' }, e];
         })(e);
-    return (0, a.Jd)(o, [i]);
+    return (0, n.Jd)(o, [E]);
 }

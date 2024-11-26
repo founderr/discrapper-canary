@@ -22,11 +22,11 @@ function I(e, t) {
     let r = n.delete(t);
     return 0 === n.size && m.delete(e), r;
 }
-function b(e, t, n) {
+function T(e, t, n) {
     var r, i, a;
     return ((null !== (a = null === (i = m.get(e)) || void 0 === i ? void 0 : null === (r = i.get(t)) || void 0 === r ? void 0 : r.flags) && void 0 !== a ? a : h.Dg.NONE) & n) === n;
 }
-function T(e, t) {
+function b(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = m.get(e);
     if (null == r) return !1;
@@ -54,23 +54,23 @@ class y extends (r = o.ZP.Store) {
     getSpeakers() {
         var e, t;
         let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.Yn.DEFAULT;
-        return Array.from(null !== (t = null === (e = m.get(n)) || void 0 === e ? void 0 : e.keys()) && void 0 !== t ? t : []).filter((e) => b(n, e, h.Dg.VOICE));
+        return Array.from(null !== (t = null === (e = m.get(n)) || void 0 === e ? void 0 : e.keys()) && void 0 !== t ? t : []).filter((e) => T(n, e, h.Dg.VOICE));
     }
     isSpeaking(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h.Yn.DEFAULT;
-        return b(t, e, h.Dg.VOICE);
+        return T(t, e, h.Dg.VOICE);
     }
     isPrioritySpeaker(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h.Yn.DEFAULT;
-        return b(t, e, h.Dg.PRIORITY);
+        return T(t, e, h.Dg.PRIORITY);
     }
     isSoundSharing(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h.Yn.DEFAULT;
-        return b(t, e, h.Dg.SOUNDSHARE);
+        return T(t, e, h.Dg.SOUNDSHARE);
     }
     isAnyoneElseSpeaking() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.Yn.DEFAULT;
-        return T(e, h.Dg.VOICE, !0);
+        return b(e, h.Dg.VOICE, !0);
     }
     isCurrentUserSpeaking() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.Yn.DEFAULT;
@@ -78,7 +78,7 @@ class y extends (r = o.ZP.Store) {
     }
     isAnyonePrioritySpeaking() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.Yn.DEFAULT;
-        return T(e, h.Dg.VOICE | h.Dg.PRIORITY);
+        return b(e, h.Dg.VOICE | h.Dg.PRIORITY);
     }
     isCurrentUserPrioritySpeaking() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.Yn.DEFAULT;

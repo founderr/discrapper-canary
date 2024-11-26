@@ -36,8 +36,8 @@ let a = (e) => r(/\b/, e, /\w$/.test(e) ? /\b/ : /\B/),
     E = i(g, /\d/, /[\u0300-\u036F\u1DC0-\u1DFF\u20D0-\u20FF\uFE20-\uFE2F]/),
     v = r(g, E, '*'),
     I = r(/[A-Z]/, E, '*'),
-    b = ['autoclosure', r(/convention\(/, i('swift', 'block', 'c'), /\)/), 'discardableResult', 'dynamicCallable', 'dynamicMemberLookup', 'escaping', 'frozen', 'GKInspectable', 'IBAction', 'IBDesignable', 'IBInspectable', 'IBOutlet', 'IBSegueAction', 'inlinable', 'main', 'nonobjc', 'NSApplicationMain', 'NSCopying', 'NSManaged', r(/objc\(/, v, /\)/), 'objc', 'objcMembers', 'propertyWrapper', 'requires_stored_property_inits', 'resultBuilder', 'testable', 'UIApplicationMain', 'unknown', 'usableFromInline'],
-    T = ['iOS', 'iOSApplicationExtension', 'macOS', 'macOSApplicationExtension', 'macCatalyst', 'macCatalystApplicationExtension', 'watchOS', 'watchOSApplicationExtension', 'tvOS', 'tvOSApplicationExtension', 'swift'];
+    T = ['autoclosure', r(/convention\(/, i('swift', 'block', 'c'), /\)/), 'discardableResult', 'dynamicCallable', 'dynamicMemberLookup', 'escaping', 'frozen', 'GKInspectable', 'IBAction', 'IBDesignable', 'IBInspectable', 'IBOutlet', 'IBSegueAction', 'inlinable', 'main', 'nonobjc', 'NSApplicationMain', 'NSCopying', 'NSManaged', r(/objc\(/, v, /\)/), 'objc', 'objcMembers', 'propertyWrapper', 'requires_stored_property_inits', 'resultBuilder', 'testable', 'UIApplicationMain', 'unknown', 'usableFromInline'],
+    b = ['iOS', 'iOSApplicationExtension', 'macOS', 'macOSApplicationExtension', 'macCatalyst', 'macCatalystApplicationExtension', 'watchOS', 'watchOSApplicationExtension', 'tvOS', 'tvOSApplicationExtension', 'swift'];
 e.exports = function (e) {
     let t = {
             match: /\s+/,
@@ -98,11 +98,11 @@ e.exports = function (e) {
             }
         ],
         w = '([0-9]_*)+',
-        M = '([0-9a-fA-F]_*)+',
-        P = {
+        P = '([0-9a-fA-F]_*)+',
+        M = {
             className: 'number',
             relevance: 0,
-            variants: [{ match: `\\b(${w})(\\.(${w}))?([eE][+-]?(${w}))?\\b` }, { match: `\\b0x(${M})(\\.(${M}))?([pP][+-]?(${w}))?\\b` }, { match: /\b0o([0-7]_*)+\b/ }, { match: /\b0b([01]_*)+\b/ }]
+            variants: [{ match: `\\b(${w})(\\.(${w}))?([eE][+-]?(${w}))?\\b` }, { match: `\\b0x(${P})(\\.(${P}))?([pP][+-]?(${w}))?\\b` }, { match: /\b0o([0-7]_*)+\b/ }, { match: /\b0b([01]_*)+\b/ }]
         },
         k = (e = '') => ({
             className: 'subst',
@@ -152,15 +152,15 @@ e.exports = function (e) {
                     {
                         begin: /\(/,
                         end: /\)/,
-                        keywords: T,
-                        contains: [...x, P, F]
+                        keywords: b,
+                        contains: [...x, M, F]
                     }
                 ]
             }
         },
         Y = {
             className: 'keyword',
-            match: r(/@/, i(...b))
+            match: r(/@/, i(...T))
         },
         W = [
             H,
@@ -220,7 +220,7 @@ e.exports = function (e) {
                 ...R,
                 ...D,
                 ...x,
-                P,
+                M,
                 F,
                 ...j,
                 ...W,
@@ -255,7 +255,7 @@ e.exports = function (e) {
                 ...g,
                 ...R,
                 ...x,
-                P,
+                M,
                 F,
                 ...W,
                 K,
@@ -286,7 +286,7 @@ e.exports = function (e) {
     for (let e of F.variants) {
         let t = e.contains.find((e) => 'interpol' === e.label);
         t.keywords = C;
-        let n = [...R, ...D, ...x, P, F, ...j];
+        let n = [...R, ...D, ...x, M, F, ...j];
         t.contains = [
             ...n,
             {
@@ -338,7 +338,7 @@ e.exports = function (e) {
             ...R,
             ...D,
             ...x,
-            P,
+            M,
             F,
             ...j,
             ...W,

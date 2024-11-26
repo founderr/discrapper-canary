@@ -20,11 +20,11 @@ function u(e) {
             pendingBanner: x,
             pendingThemeColors: S,
             pendingPronouns: T,
-            pendingBio: C,
+            pendingBio: E,
             tryItOutThemeColors: _,
-            tryItOutAvatar: E,
-            tryItOutBanner: f,
-            tryItOutAvatarDecoration: I,
+            tryItOutAvatar: C,
+            tryItOutBanner: I,
+            tryItOutAvatarDecoration: f,
             tryItOutProfileEffectId: N
         } = (0, r.cj)([o.Z], () => {
             let e = o.Z.getAllPending(),
@@ -34,18 +34,18 @@ function u(e) {
                 ...t
             };
         }),
-        A = (0, a.Z)(I, !1);
+        A = (0, a.Z)(f, !1);
     return (0, i.jsx)(c.Z, {
         containerClassName: h,
         user: u,
         pendingPronouns: T,
-        pendingBio: C,
-        pendingBanner: null !== (t = null != f ? f : x) && void 0 !== t ? t : n(466045),
-        pendingAvatar: null != E ? E : p,
+        pendingBio: E,
+        pendingBanner: null !== (t = null != I ? I : x) && void 0 !== t ? t : n(466045),
+        pendingAvatar: null != C ? C : p,
         pendingThemeColors: null != _ ? _ : S,
         pendingAvatarDecoration: A,
         pendingProfileEffectId: N,
-        avatarClassName: null != E || null != p || g.enabled ? void 0 : d.spinningAvatar,
+        avatarClassName: null != C || null != p || g.enabled ? void 0 : d.spinningAvatar,
         canUsePremiumCustomization: !0,
         isTryItOutFlow: !0,
         hideExampleButton: !0,

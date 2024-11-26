@@ -3,7 +3,7 @@ n.d(t, {
         return v;
     },
     eL: function () {
-        return b;
+        return T;
     },
     tq: function () {
         return I;
@@ -29,4 +29,4 @@ let m = new Set(['iPad', 'Kindle', 'Kindle Fire', 'Nook', 'PlayBook']),
     v = m.has(null !== (f = h().product) && void 0 !== f ? f : '') || E,
     I = !v && g.has(null !== (_ = null === h() || void 0 === h() ? void 0 : null === (u = h().os) || void 0 === u ? void 0 : u.family) && void 0 !== _ ? _ : '');
 null === h() || void 0 === h() || null === (c = h().os) || void 0 === c || c.family;
-let b = (null === h() || void 0 === h() ? void 0 : null === (d = h().os) || void 0 === d ? void 0 : d.family) === 'Android';
+let T = (null === h() || void 0 === h() ? void 0 : null === (d = h().os) || void 0 === d ? void 0 : d.family) === 'Android';

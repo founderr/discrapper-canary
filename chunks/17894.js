@@ -1,48 +1,48 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return h;
+        return _;
     }
 });
-var i = n(525654),
-    r = n.n(i),
-    o = n(39612),
-    a = n(271579),
-    l = n(756647),
-    c = n(232567),
-    s = n(703656),
-    d = n(314897),
-    u = n(896797),
-    f = n(626135),
-    p = n(954824),
-    m = n(981631);
+var i = t(525654),
+    r = t.n(i),
+    o = t(39612),
+    a = t(271579),
+    l = t(756647),
+    c = t(232567),
+    d = t(703656),
+    s = t(314897),
+    u = t(896797),
+    f = t(626135),
+    p = t(954824),
+    m = t(981631);
 async function b(e) {
-    var t, n;
-    let i = null === (t = r().os) || void 0 === t ? void 0 : t.family;
+    var n, t;
+    let i = null === (n = r().os) || void 0 === n ? void 0 : n.family;
     if ('Android' === i || 'iOS' === i) {
-        let t = null !== (n = d.default.getFingerprint()) && void 0 !== n ? n : d.default.getId(),
+        let n = null !== (t = s.default.getFingerprint()) && void 0 !== t ? t : s.default.getId(),
             i = (0, a.WS)();
-        if (null == t && d.default.isAuthenticated())
+        if (null == n && s.default.isAuthenticated())
             try {
-                await (0, c.k)(), (t = d.default.getId());
+                await (0, c.k)(), (n = s.default.getId());
             } catch {}
         return (0, a.ZP)((0, o.Gk)(), {
             utmSource: e,
-            fingerprint: t,
+            fingerprint: n,
             attemptId: i
         });
     }
     return 'discord://';
 }
-async function h(e) {
-    let t = await b(e),
-        n = (0, a.zS)(t);
-    null != n &&
+async function _(e) {
+    let n = await b(e),
+        t = (0, a.zS)(n);
+    null != t &&
         f.default.track(m.rMx.DEEP_LINK_CLICKED, {
-            fingerprint: (0, l.K)(n.fingerprint),
-            attempt_id: n.attemptId,
-            source: n.utmSource
+            fingerprint: (0, l.K)(t.fingerprint),
+            attempt_id: t.attemptId,
+            source: t.utmSource
         }),
-        p.Z.launch(t, (e) => {
-            !e && (0, s.dL)(u.Z.fallbackRoute);
+        p.Z.launch(n, (e) => {
+            !e && (0, d.dL)(u.Z.fallbackRoute);
         });
 }

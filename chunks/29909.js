@@ -15,7 +15,7 @@ t.Z = i.memo(function (e) {
         [g, E] = i.useState(!1),
         v = (0, u.hb)((0, l.iy)(p)),
         I = v ? f.intl.string(f.t['5/NS7+']) : f.intl.string(f.t.nIH0v7),
-        b = v ? o.StarIcon : o.StarOutlineIcon;
+        T = v ? o.StarIcon : o.StarOutlineIcon;
     i.useEffect(() => {
         if (!g) return;
         let e = setTimeout(() => {
@@ -23,7 +23,7 @@ t.Z = i.memo(function (e) {
         }, 500);
         return () => clearTimeout(e);
     }, [g]);
-    let T = (e) => {
+    let b = (e) => {
         e.preventDefault(),
             e.stopPropagation(),
             E(!0),
@@ -48,9 +48,9 @@ t.Z = i.memo(function (e) {
                     [_.showPulse]: g
                 }),
                 onMouseDown: (e) => e.preventDefault(),
-                onClick: T,
+                onClick: b,
                 onDoubleClick: (e) => e.preventDefault(),
-                children: (0, r.jsx)(b, {
+                children: (0, r.jsx)(T, {
                     color: 'currentColor',
                     className: _.icon
                 })

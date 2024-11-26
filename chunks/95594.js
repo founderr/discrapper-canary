@@ -19,8 +19,8 @@ let o = Object.freeze({
 });
 function l(e) {
     let { sections: t, columns: n, getItemKey: l, getItemHeight: u, getSectionHeight: c, chunkSize: d = 250, getScrollerState: f, maxBufferWidth: _, itemGutter: p, removeEdgeItemGutters: h, sectionGutter: m, padding: g, paddingVertical: E, paddingHorizontal: v, dir: I } = e,
-        b = (0, a.Z)(),
-        T = (0, r.useRef)(o),
+        T = (0, a.Z)(),
+        b = (0, r.useRef)(o),
         [S] = (0, r.useState)(() => new i.ZP()),
         y = f(),
         A = Math.min(null != _ ? _ : 1 / 0, y.offsetWidth),
@@ -33,13 +33,13 @@ function l(e) {
         } = (0, s.Z)({
             chunkSize: d,
             getScrollerState: f,
-            forceUpdate: b
+            forceUpdate: T
         });
     return (
-        (T.current = (0, r.useMemo)(
+        (b.current = (0, r.useMemo)(
             () =>
                 C > 0
-                    ? T.current
+                    ? b.current
                     : (S.mergeProps({
                           sections: t,
                           columns: n,
@@ -61,10 +61,10 @@ function l(e) {
             [C, S, t, n, l, u, c, R, O, d, p, h, m, g, E, v, A, I]
         )),
         {
-            ...T.current,
+            ...b.current,
             masonryComputer: S,
             forceUpdateOnChunkChange: D,
-            forceUpdate: b
+            forceUpdate: T
         }
     );
 }

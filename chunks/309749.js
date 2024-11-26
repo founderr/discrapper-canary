@@ -1,6 +1,6 @@
-var n = r(147018),
-    a = r(926515);
-n(
+var a = r(147018),
+    n = r(926515);
+a(
     {
         target: 'URL',
         proto: !0,
@@ -8,7 +8,7 @@ n(
     },
     {
         toJSON: function () {
-            return a(URL.prototype.toString, this);
+            return n(URL.prototype.toString, this);
         }
     }
 );

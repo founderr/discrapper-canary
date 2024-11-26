@@ -17,8 +17,8 @@ var r = n(200651),
     _ = n(189954);
 let p = i.forwardRef(function (e, t) {
     let { color: a, src: o, size: p = 'md', width: h, height: m, className: g, initialAnimation: E, markers: v } = e,
-        [I, b] = i.useState(null),
-        T = i.useRef(null),
+        [I, T] = i.useState(null),
+        b = i.useRef(null),
         S = i.useRef(null),
         y = i.useRef(null),
         A =
@@ -55,7 +55,7 @@ let p = i.forwardRef(function (e, t) {
             [O, N, v]
         ),
         i.useEffect(() => {
-            null == I && o().then((e) => b(e.default));
+            null == I && o().then((e) => T(e.default));
         }, [I, o]),
         i.useEffect(
             () => (
@@ -71,9 +71,9 @@ let p = i.forwardRef(function (e, t) {
                             let e = v[i];
                             n = [e.start, e.start + e.duration];
                         }
-                        null != T.current &&
+                        null != b.current &&
                             (y.current = r.loadAnimation({
-                                container: T.current,
+                                container: b.current,
                                 renderer: 'svg',
                                 loop: !1,
                                 autoplay: !1,
@@ -95,7 +95,7 @@ let p = i.forwardRef(function (e, t) {
                 ...A
             },
             className: s()(_.lottieIcon, g),
-            ref: T
+            ref: b
         })
     );
 });

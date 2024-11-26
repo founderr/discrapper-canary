@@ -17,23 +17,23 @@ let _ = i.forwardRef(function (e, t) {
     var n, a, _;
     let { query: p, onChange: h, loading: m = !1, disabled: g = !1, placeholder: E = d.intl.string(d.t['5h0QOD']), 'aria-label': v } = e,
         I = i.useRef(null),
-        b = i.useRef(null);
+        T = i.useRef(null);
     i.useImperativeHandle(
         t,
         () => ({
             focus: () => {
                 var e;
-                return null === (e = b.current) || void 0 === e ? void 0 : e.focus();
+                return null === (e = T.current) || void 0 === e ? void 0 : e.focus();
             },
             blur: () => {
                 var e;
-                return null === (e = b.current) || void 0 === e ? void 0 : e.blur();
+                return null === (e = T.current) || void 0 === e ? void 0 : e.blur();
             },
             activate: () => !1
         }),
         []
     );
-    let T =
+    let b =
         ((n = p),
         (a = m),
         (_ = h),
@@ -84,7 +84,7 @@ let _ = i.forwardRef(function (e, t) {
                     })
                 }));
     return (0, r.jsx)(l.t, {
-        focusTarget: b,
+        focusTarget: T,
         ringTarget: I,
         offset: {
             top: 2,
@@ -99,7 +99,7 @@ let _ = i.forwardRef(function (e, t) {
                 (0, r.jsx)('input', {
                     role: 'searchbox',
                     'aria-busy': m,
-                    ref: b,
+                    ref: T,
                     className: f.input,
                     value: p,
                     onChange: (e) => h(e.currentTarget.value),
@@ -107,7 +107,7 @@ let _ = i.forwardRef(function (e, t) {
                     placeholder: E,
                     disabled: g
                 }),
-                T
+                b
             ]
         })
     });

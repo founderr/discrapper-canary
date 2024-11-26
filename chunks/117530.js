@@ -23,11 +23,11 @@ function I(e) {
     var t;
     return null !== (t = g.get(e)) && void 0 !== t ? t : new Map();
 }
-function b(e, t, n) {
+function T(e, t, n) {
     let r = I(e);
     r.set(t, n), g.set(e, r);
 }
-class T extends (r = u.ZP.Store) {
+class b extends (r = u.ZP.Store) {
     getFirstUpload(e, t) {
         let n = v(e, t);
         return n.length > 0 ? n[0] : null;
@@ -51,7 +51,7 @@ class T extends (r = u.ZP.Store) {
     }
 }
 (s = 'UploadAttachmentStore'),
-    (a = 'displayName') in (i = T)
+    (a = 'displayName') in (i = b)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -59,11 +59,11 @@ class T extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new T(c.Z, {
+    (t.Z = new b(c.Z, {
         UPLOAD_ATTACHMENT_POP_FILE: function (e) {
             let { channelId: t } = e,
                 n = [...v(t, p.d.ChannelMessage)];
-            n.shift(), b(t, p.d.ChannelMessage, n);
+            n.shift(), T(t, p.d.ChannelMessage, n);
         },
         UPLOAD_ATTACHMENT_ADD_FILES: (e) => {
             let { files: t, channelId: n, showLargeMessageDialog: r, draftType: i } = e,
@@ -79,12 +79,12 @@ class T extends (r = u.ZP.Store) {
                 let t = new f.n(e, n, r, a.length);
                 t.upload(), a.push(t);
             }),
-                b(n, i, a);
+                T(n, i, a);
         },
         UPLOAD_ATTACHMENT_UPDATE_FILE: function (e) {
             let { channelId: t, id: n, filename: r, description: i, spoiler: a, thumbnail: s, draftType: o } = e,
                 l = [...v(t, o)].map((e) => (e.id === n && (void 0 !== r && (e.filename = r), void 0 !== a && (e.spoiler = a), void 0 !== i && (e.description = i), void 0 !== s && (e.isThumbnail = s)), e));
-            b(t, o, l);
+            T(t, o, l);
         },
         UPLOAD_ATTACHMENT_REMOVE_FILE: function (e) {
             let { channelId: t, id: n, draftType: r } = e,
@@ -98,7 +98,7 @@ class T extends (r = u.ZP.Store) {
                         e
                     )
                 );
-            a > -1 && (i.splice(a, 1)[0].cancel(), b(t, r, i));
+            a > -1 && (i.splice(a, 1)[0].cancel(), T(t, r, i));
         },
         UPLOAD_ATTACHMENT_REMOVE_FILES: function (e) {
             let { channelId: t, attachmentIds: n, draftType: r } = e,
@@ -107,24 +107,24 @@ class T extends (r = u.ZP.Store) {
                 let t = i.findIndex((t) => e === t.id);
                 t > -1 && i.splice(t, 1)[0].cancel();
             }),
-                b(t, r, i);
+                T(t, r, i);
         },
         UPLOAD_ATTACHMENT_CLEAR_ALL_FILES: function (e) {
             let { channelId: t, draftType: n } = e;
-            b(t, n, []);
+            T(t, n, []);
         },
         UPLOAD_ATTACHMENT_SET_UPLOADS: function (e) {
             let { channelId: t, uploads: n, draftType: r } = e;
-            b(t, r, n);
+            T(t, r, n);
         },
         UPLOAD_ATTACHMENT_SET_FILE: function (e) {
             let { channelId: t, id: n, file: r, draftType: i } = e,
                 a = [...v(t, i)].filter((e) => e.id !== n),
                 s = new f.n(r, t);
-            s.upload(), a.push(s), b(t, i, a);
+            s.upload(), a.push(s), T(t, i, a);
         },
         SIDEBAR_CLOSE: function (e) {
             let { baseChannelId: t } = e;
-            b(t, p.d.FirstThreadMessage, []);
+            T(t, p.d.FirstThreadMessage, []);
         }
     }));

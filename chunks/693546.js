@@ -160,7 +160,7 @@ let p = async (e) => {
             throw e;
         }
     },
-    b = async () => {
+    T = async () => {
         let e = await r.tn.get({
             url: f.ANM.USER_JOIN_REQUEST_GUILDS,
             rejectWithError: !1
@@ -170,7 +170,7 @@ let p = async (e) => {
             guilds: e.body
         });
     },
-    T = async function (e) {
+    b = async function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = await r.tn.post({
                 url: f.ANM.GUILD_JOIN_REQUEST_INTERVIEW(e),
@@ -219,7 +219,7 @@ t.Z = {
     updateGuildJoinRequest: E,
     actionAllPendingJoinRequests: v,
     resetGuildJoinRequest: I,
-    fetchRequestToJoinGuilds: b,
+    fetchRequestToJoinGuilds: T,
     setSelectedApplicationTab: (e, t) => {
         i.Z.dispatch({
             type: 'GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB',
@@ -247,6 +247,6 @@ t.Z = {
                 request: t
             });
     },
-    createOrEnterJoinRequestInterview: T,
+    createOrEnterJoinRequestInterview: b,
     fetchJoinRequestCooldown: S
 };

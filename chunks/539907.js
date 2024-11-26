@@ -48,11 +48,11 @@ function I(e, t) {
     }
     return !1;
 }
-function b(e) {
+function T(e) {
     let { positionKey: t, position: n, align: r } = e;
     return null != t ? t : ''.concat(n, ':').concat(r);
 }
-function T(e, t, n, r) {
+function b(e, t, n, r) {
     switch (e) {
         case 'top':
             return u()(null != t.bottom, 'Missing bottom'), r.offsetHeight - (t.bottom + n.offsetHeight);
@@ -238,7 +238,7 @@ class A extends (r = a.Component) {
             { style: i, nudge: a } = this.calculatePositionStyle(e, n, r),
             s = null,
             o = null;
-        if (t && (s = T(e, i, n, r)) < 0) {
+        if (t && (s = b(e, i, n, r)) < 0) {
             let t = (function (e) {
                     switch (e) {
                         case 'top':
@@ -258,7 +258,7 @@ class A extends (r = a.Component) {
                     }
                 })(e),
                 { style: i, nudge: a } = this.calculatePositionStyle(t, n, r);
-            if ((o = T(t, i, n, r)) > s)
+            if ((o = b(t, i, n, r)) > s)
                 return S(o, n, {
                     position: t,
                     nudge: a,
@@ -283,7 +283,7 @@ class A extends (r = a.Component) {
     }
     componentDidUpdate(e, t) {
         if (
-            ((b(e) !== b(this.props) ||
+            ((T(e) !== T(this.props) ||
                 !(function (e, t) {
                     let n = y(e),
                         r = y(t);

@@ -26,7 +26,7 @@ t.Z = (e) => {
     let { activeSubscription: I } = (0, s.Z)(null == E ? void 0 : E.id),
         C = (0, l.YB)(_.id),
         v = null == C ? void 0 : C.description,
-        { editStateIds: S } = a.B7(null !== (t = null == E ? void 0 : E.id) && void 0 !== t ? t : null, _.id);
+        { editStateIds: N } = a.B7(null !== (t = null == E ? void 0 : E.id) && void 0 !== t ? t : null, _.id);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(m.Z, {
@@ -48,7 +48,7 @@ t.Z = (e) => {
             (0, i.jsx)(r.HeadingLevel, {
                 children: (0, i.jsx)(u.Z, {
                     guildId: _.id,
-                    children: S.map((e) => {
+                    children: N.map((e) => {
                         var t;
                         return (0, i.jsx)(
                             h.Z,

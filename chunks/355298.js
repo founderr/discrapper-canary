@@ -63,17 +63,17 @@ function I(e) {
     let { countryCode: t } = e;
     _(t);
 }
-class b extends a.Z {
+class T extends a.Z {
     initialize() {
         this.waitFor(i.Z);
     }
     loadCache() {
-        let e = this.readSnapshot(b.LATEST_SNAPSHOT_VERSION);
+        let e = this.readSnapshot(T.LATEST_SNAPSHOT_VERSION);
         null != e && (o = new Set(e));
     }
     takeSnapshot() {
         return {
-            version: b.LATEST_SNAPSHOT_VERSION,
+            version: T.LATEST_SNAPSHOT_VERSION,
             data: Array.from(o)
         };
     }
@@ -109,4 +109,4 @@ class b extends a.Z {
         });
     }
 }
-s(b, 'displayName', 'MessageRequestStore'), s(b, 'LATEST_SNAPSHOT_VERSION', 1), (t.Z = new b());
+s(T, 'displayName', 'MessageRequestStore'), s(T, 'LATEST_SNAPSHOT_VERSION', 1), (t.Z = new T());

@@ -47,7 +47,7 @@ let g = 100,
     }),
     v = null,
     I = null;
-function b(e) {
+function T(e) {
     let { guildId: t, channelId: n } = e,
         r = !1;
     return (
@@ -74,7 +74,7 @@ function b(e) {
         r
     );
 }
-function T() {
+function b() {
     var e;
     let t = null === (e = u.Z.frecencyWithoutFetchingLatest.guildAndChannelFrecency) || void 0 === e ? void 0 : e.guildAndChannels;
     if (null == t) return !1;
@@ -89,7 +89,7 @@ function T() {
 let S = { pendingUsages: [] };
 class y extends (r = s.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(_.Z, f.Z), null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && p.Xyh.test(e.key))), (S = e)), this.syncWith([u.Z], T);
+        this.waitFor(_.Z, f.Z), null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && p.Xyh.test(e.key))), (S = e)), this.syncWith([u.Z], b);
     }
     getState() {
         return S;
@@ -121,8 +121,8 @@ class y extends (r = s.ZP.PersistedStore) {
 m(y, 'displayName', 'FrecencyStore'),
     m(y, 'persistKey', 'FrecencyStore'),
     (t.Z = new y(o.Z, {
-        CHANNEL_SELECT: b,
-        VOICE_CHANNEL_SELECT: b,
+        CHANNEL_SELECT: T,
+        VOICE_CHANNEL_SELECT: T,
         USER_SETTINGS_PROTO_UPDATE: function (e) {
             let {
                 settings: { type: t },

@@ -3,14 +3,14 @@ r.d(t, {
         return _;
     }
 });
-var n = r(102733),
-    a = r(899517);
+var a = r(102733),
+    n = r(899517);
 function _() {
     return (
         'undefined' != typeof window &&
-        (!(0, n.KV)() ||
+        (!(0, a.KV)() ||
             (function () {
-                return void 0 !== a.n.process && 'renderer' === a.n.process.type;
+                return void 0 !== n.n.process && 'renderer' === n.n.process.type;
             })())
     );
 }

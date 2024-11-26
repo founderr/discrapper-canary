@@ -3,14 +3,14 @@ r.d(t, {
         return _;
     }
 });
-var n = r(101284),
-    a = r(151122);
-let _ = (0, a._I)(() => {
-    let e = 1000 * (0, n.ph)();
+var a = r(101284),
+    n = r(151122);
+let _ = (0, n._I)(() => {
+    let e = 1000 * (0, a.ph)();
     return {
         name: 'SessionTiming',
         processEvent(t) {
-            let r = 1000 * (0, n.ph)();
+            let r = 1000 * (0, a.ph)();
             return {
                 ...t,
                 extra: {

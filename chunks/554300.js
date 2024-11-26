@@ -7,10 +7,10 @@ var r = n(200651),
     u = n(317767);
 let c = i.forwardRef(function (e, t) {
     var n;
-    let { avatar: i, name: a, children: c, subText: d, decorators: f, onClick: _, selected: p, muted: h, to: m, avatarClassName: g, selectedClassName: E, innerClassName: v, wrapContent: I, highlighted: b, focusProps: T, ...S } = e;
+    let { avatar: i, name: a, children: c, subText: d, decorators: f, onClick: _, selected: p, muted: h, to: m, avatarClassName: g, selectedClassName: E, innerClassName: v, wrapContent: I, highlighted: T, focusProps: b, ...S } = e;
     (S.className = s()(S.className, u.container, {
         [u.selected]: p,
-        [u.highlighted]: b,
+        [u.highlighted]: T,
         [null != E ? E : '']: p,
         [u.clickable]: !p && (null != m || null != _)
     })),
@@ -56,7 +56,7 @@ let c = i.forwardRef(function (e, t) {
     });
     return null != m
         ? (0, r.jsx)(l.FocusRing, {
-              ...T,
+              ...b,
               children: (0, r.jsx)(o.rU, {
                   to: m,
                   onClick: _,
@@ -69,14 +69,14 @@ let c = i.forwardRef(function (e, t) {
         : null != _
           ? (0, r.jsx)(l.Clickable, {
                 onClick: _,
-                focusProps: T,
+                focusProps: b,
                 ...S,
                 role: 'listitem',
                 innerRef: t,
                 children: y
             })
           : (0, r.jsx)(l.FocusRing, {
-                ...T,
+                ...b,
                 children: (0, r.jsx)('div', {
                     ...S,
                     role: 'listitem',

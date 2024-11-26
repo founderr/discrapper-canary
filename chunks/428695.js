@@ -11,18 +11,18 @@ var i = n(200651),
     m = n(173549);
 let p = (0, s.debounce)(c.ZP.trackWithMetadata, 500);
 t.Z = function (e) {
-    let { guild: t, title: n, message: l, image: s, type: g, imageStyles: f, imageMarginX: _, imageMarginTop: E, trackingSource: I, undismissable: C, onDismissed: v, onClick: S, cta: N, ctaColor: T, centerText: A, className: b } = e;
+    let { guild: t, title: n, message: l, image: s, type: g, imageStyles: f, imageMarginX: _, imageMarginTop: E, trackingSource: I, undismissable: C, onDismissed: v, onClick: N, cta: S, ctaColor: T, centerText: x, className: b } = e;
     r.useEffect(() => {
         p(u.rMx.CHANNEL_NOTICE_VIEWED, {
             notice_type: g,
             guild_id: t.id
         });
     }, [t.id, g]);
-    let x = null;
-    'function' == typeof N
-        ? (x = N())
-        : null != N &&
-          (x = (0, i.jsx)(o.Button, {
+    let A = null;
+    'function' == typeof S
+        ? (A = S())
+        : null != S &&
+          (A = (0, i.jsx)(o.Button, {
               className: m.button,
               size: o.Button.Sizes.SMALL,
               onClick: () => {
@@ -32,11 +32,11 @@ t.Z = function (e) {
                           guild_id: t.id,
                           notice_type: g
                       }),
-                      null == S || S();
+                      null == N || N();
               },
               fullWidth: !0,
               color: T,
-              children: N
+              children: S
           }));
     let Z = null;
     'function' == typeof n
@@ -45,7 +45,7 @@ t.Z = function (e) {
           (Z = (0, i.jsx)(o.Text, {
               variant: 'text-md/medium',
               color: 'header-primary',
-              className: a()(m.title, { [m.noImageTitle]: null == s }, { [m.center]: A }),
+              className: a()(m.title, { [m.noImageTitle]: null == s }, { [m.center]: x }),
               children: n
           }));
     let L = null;
@@ -53,7 +53,7 @@ t.Z = function (e) {
         ? (L = l())
         : null != l &&
           (L = (0, i.jsx)(o.Text, {
-              className: a()({ [m.center]: A }),
+              className: a()({ [m.center]: x }),
               variant: 'text-sm/normal',
               color: 'text-muted',
               children: l
@@ -93,7 +93,7 @@ t.Z = function (e) {
                 }),
             (0, i.jsxs)('div', {
                 className: m.message,
-                children: [Z, L, x]
+                children: [Z, L, A]
             })
         ]
     });

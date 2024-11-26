@@ -39,7 +39,7 @@ function _(e) {
             },
             [null == m ? void 0 : null === (t = m.rootCommand) || void 0 === t ? void 0 : t.id]
         ),
-        b = i.useCallback(() => {
+        T = i.useCallback(() => {
             u.Po({
                 channelId: v,
                 command: null,
@@ -75,7 +75,7 @@ function _(e) {
             }),
             (0, r.jsx)('div', {
                 className: f.actions,
-                children: (0, r.jsx)(l.B, { onClick: b })
+                children: (0, r.jsx)(l.B, { onClick: T })
             })
         ]
     });

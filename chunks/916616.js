@@ -1,6 +1,6 @@
 n.d(t, {
     E: function () {
-        return T;
+        return b;
     }
 }),
     n(47120);
@@ -22,7 +22,7 @@ var r,
     E = n(319378),
     v = n(167969),
     I = n(557256);
-function b(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,17 +35,17 @@ function b(e, t, n) {
         e
     );
 }
-class T extends (r = a.PureComponent) {
+class b extends (r = a.PureComponent) {
     render() {
         let e;
-        let { className: t, imageClassName: n, readyState: r, src: a, placeholder: s, placeholderVersion: l, alt: c, width: _, height: v, maxWidth: I = _, maxHeight: b = v, minWidth: T, minHeight: A, mediaLayoutType: N, limitResponsiveWidth: C = !0, accessory: R, zoomable: O, original: D, children: L, renderAccessory: x, onClick: w, tabIndex: M, dataSafeSrc: P, useFullWidth: k = !1, ...U } = this.props;
+        let { className: t, imageClassName: n, readyState: r, src: a, placeholder: s, placeholderVersion: l, alt: c, width: _, height: v, maxWidth: I = _, maxHeight: T = v, minWidth: b, minHeight: A, mediaLayoutType: N, limitResponsiveWidth: C = !0, accessory: R, zoomable: O, original: D, children: L, renderAccessory: x, onClick: w, tabIndex: P, dataSafeSrc: M, useFullWidth: k = !1, ...U } = this.props;
         if (1 === _ && 1 === v) return null;
         let B = (0, f.Tj)({
                 width: _,
                 height: v,
                 maxWidth: I,
-                maxHeight: b,
-                minWidth: T,
+                maxHeight: T,
+                minWidth: b,
                 minHeight: A
             }),
             G = 0 !== B.width ? B.width / B.height : 1;
@@ -115,12 +115,12 @@ class T extends (r = a.PureComponent) {
                                 href: D,
                                 ref: this._containerRef,
                                 'data-role': 'img',
-                                'data-safe-src': null != P ? P : a
+                                'data-safe-src': null != M ? M : a
                             }),
                         null != w
                             ? (0, i.jsx)(u.Clickable, {
                                   className: E.clickableWrapper,
-                                  tabIndex: null != M ? M : 0,
+                                  tabIndex: null != P ? P : 0,
                                   onClick: w,
                                   'aria-label': null != c ? c : g.intl.string(g.t.X4IxWF),
                                   'aria-describedby': d.r5,
@@ -141,7 +141,7 @@ class T extends (r = a.PureComponent) {
         );
     }
     constructor(...e) {
-        super(...e), b(this, '_containerRef', a.createRef()), b(this, '_clickableRef', a.createRef());
+        super(...e), T(this, '_containerRef', a.createRef()), T(this, '_clickableRef', a.createRef());
     }
 }
 function S(e) {
@@ -175,7 +175,7 @@ function S(e) {
         })
     });
 }
-b(T, 'defaultProps', {
+T(b, 'defaultProps', {
     readyState: h.zo9.READY,
     zoomable: !0,
     children: (e) => {

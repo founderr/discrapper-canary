@@ -24,8 +24,8 @@ var i,
     E = n(761122),
     v = n(917107),
     I = n(701488),
-    b = n(918559),
-    T = n(981631);
+    T = n(918559),
+    b = n(981631);
 function S(e, t, n) {
     return (
         t in e
@@ -54,12 +54,12 @@ let y = {
     L = new Map(),
     x = new Map(),
     w = new Map(),
-    M = new Map(),
     P = new Map(),
+    M = new Map(),
     k = new Map(),
     U = new Map();
-let B = b.Ez.DISCONNECTED,
-    G = b.MI.RESIZABLE,
+let B = T.Ez.DISCONNECTED,
+    G = T.MI.RESIZABLE,
     Z = I.GM.NORMAL;
 function F(e) {
     return null != e ? e : '0';
@@ -73,9 +73,9 @@ function V(e) {
         L = 0 === D.length,
         x = D.find((e) => e.applicationId === E),
         w = y.map((e) => e.userId),
-        M = u.default.getId(),
-        P = w.some((e) => e === M),
-        k = null === (t = y.find((e) => e.userId === M)) || void 0 === t ? void 0 : t.sessionId,
+        P = u.default.getId(),
+        M = w.some((e) => e === P),
+        k = null === (t = y.find((e) => e.userId === P)) || void 0 === t ? void 0 : t.sessionId,
         G = y.some((e) => (0, m.J)(e)),
         Z = C.get(E),
         V = {
@@ -89,15 +89,15 @@ function V(e) {
             userIds: new Set(w),
             participants: y
         };
-    P &&
+    M &&
         null != Z &&
         C.set(Z.applicationId, {
             ...Z,
             ...V
         });
-    null != Z && l === Z.channelId && E === (null == Z ? void 0 : Z.applicationId) && ((!P && Array.from(Z.userIds).some((e) => e === M)) || !G)
-        ? (C.delete(E), _.S.dispatch(T.CkL.RELEASE_ACTIVITY_WEB_VIEW))
-        : P &&
+    null != Z && l === Z.channelId && E === (null == Z ? void 0 : Z.applicationId) && ((!M && Array.from(Z.userIds).some((e) => e === P)) || !G)
+        ? (C.delete(E), _.S.dispatch(b.CkL.RELEASE_ACTIVITY_WEB_VIEW))
+        : M &&
           (null == Z || Z.applicationId !== E || Z.channelId !== l) &&
           k === u.default.getSessionId() &&
           (function (e) {
@@ -124,7 +124,7 @@ function V(e) {
                   location: p
               };
               C.set(a, O),
-                  _.S.dispatch(T.CkL.OPEN_EMBEDDED_ACTIVITY, {
+                  _.S.dispatch(b.CkL.OPEN_EMBEDDED_ACTIVITY, {
                       channelId: i,
                       applicationId: a,
                       isFirstActivityInChannel: E,
@@ -133,11 +133,11 @@ function V(e) {
                       embeddedActivity: O
                   }),
                   (0, g.Z)()
-                      ? ((B = b.Ez.ACTIVITY_POPOUT_WINDOW),
+                      ? ((B = T.Ez.ACTIVITY_POPOUT_WINDOW),
                         s.Z.wait(() => {
                             s.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' });
                         }))
-                      : (B = r !== d.Z.getChannelId() || (0, v.Z)(i) ? b.Ez.PIP : b.Ez.PANEL),
+                      : (B = r !== d.Z.getChannelId() || (0, v.Z)(i) ? T.Ez.PIP : T.Ez.PANEL),
                   U.set(W(i, a), Date.now());
           })({
               channelId: l,
@@ -252,11 +252,11 @@ class K extends (i = a.ZP.PersistedStore) {
     }
     getPipOrientationLockStateForApp(e) {
         var t;
-        return null !== (t = M.get(e)) && void 0 !== t ? t : this.getOrientationLockStateForApp(e);
+        return null !== (t = P.get(e)) && void 0 !== t ? t : this.getOrientationLockStateForApp(e);
     }
     getGridOrientationLockStateForApp(e) {
         var t, n;
-        return null !== (n = null !== (t = P.get(e)) && void 0 !== t ? t : M.get(e)) && void 0 !== n ? n : this.getOrientationLockStateForApp(e);
+        return null !== (n = null !== (t = M.get(e)) && void 0 !== t ? t : P.get(e)) && void 0 !== n ? n : this.getOrientationLockStateForApp(e);
     }
     getLayoutModeForApp(e) {
         return k.get(e);
@@ -356,7 +356,7 @@ let z = new K(s.Z, {
             isLaunching: !0,
             componentId: r
         }),
-            (G = i === l.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON ? b.MI.NO_CHAT : b.MI.RESIZABLE);
+            (G = i === l.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON ? T.MI.NO_CHAT : T.MI.RESIZABLE);
     },
     EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: function (e) {
         let { applicationId: t, channelId: n } = e;
@@ -471,7 +471,7 @@ let z = new K(s.Z, {
     },
     EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE: function (e) {
         let { applicationId: t, lockState: n, pictureInPictureLockState: r, gridLockState: i } = e;
-        null == n ? w.delete(t) : w.set(t, n), null === r ? M.delete(t) : void 0 !== r && M.set(t, r), null === i ? P.delete(t) : void 0 !== i && P.set(t, i);
+        null == n ? w.delete(t) : w.set(t, n), null === r ? P.delete(t) : void 0 !== r && P.set(t, r), null === i ? M.delete(t) : void 0 !== i && M.set(t, i);
     },
     EMBEDDED_ACTIVITY_SET_PANEL_MODE: function (e) {
         let { activityPanelMode: t } = e;
@@ -483,11 +483,11 @@ let z = new K(s.Z, {
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        r !== t && B === b.Ez.PANEL && (B = b.Ez.PIP);
+        r !== t && B === T.Ez.PANEL && (B = T.Ez.PIP);
     },
     POPOUT_WINDOW_CLOSE: function (e) {
         let { key: t } = e;
-        t === T.KJ3.ACTIVITY_POPOUT && (B = b.Ez.PIP);
+        t === b.KJ3.ACTIVITY_POPOUT && (B = T.Ez.PIP);
     }
 });
 t.ZP = z;

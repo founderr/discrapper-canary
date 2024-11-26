@@ -17,8 +17,8 @@ var r,
     E = n(314897),
     v = n(592125),
     I = n(375954),
-    b = n(306680),
-    T = n(699516),
+    T = n(306680),
+    b = n(699516),
     S = n(914010),
     y = n(9156),
     A = n(594174),
@@ -34,8 +34,8 @@ let C = 'recentMentionFilterSettings',
         everyoneFilter: !0,
         roleFilter: !0
     }),
-    M = !1,
-    P = 0,
+    P = !1,
+    M = 0,
     k = !1,
     U = !1;
 function B(e) {
@@ -61,7 +61,7 @@ function Z(e) {
     let n = v.Z.getChannel(t);
     if (null == n || n.type === N.d4z.DM || (w.guildFilter === N.NgX.THIS_SERVER && n.getGuildId() !== S.Z.getGuildId())) return null;
     let r = E.default.getId();
-    if (T.Z.isBlockedOrIgnoredForMessage(e) || (0, m.Z)(e, r)) return null;
+    if (b.Z.isBlockedOrIgnoredForMessage(e) || (0, m.Z)(e, r)) return null;
     e = G(e);
     let i = !w.everyoneFilter,
         a = !w.roleFilter;
@@ -72,7 +72,7 @@ function Z(e) {
         suppressRoles: a
     })
         ? (U &&
-              b.ZP.ackMessageId(n.id) !== e.id &&
+              T.ZP.ackMessageId(n.id) !== e.id &&
               (0, p.ZP)({
                   message: e,
                   userId: r,
@@ -117,13 +117,13 @@ function j(e) {
         (R = i).forEach((e) => {
             null == O[e.getChannelId()] && (O[e.getChannelId()] = 0), O[e.getChannelId()]++;
         }),
-        0 === R.length && (M = !1);
+        0 === R.length && (P = !1);
 }
 function H() {
-    (R = []), (D = {}), (M = !1), (U = !1), (O = {});
+    (R = []), (D = {}), (P = !1), (U = !1), (O = {});
 }
 function Y() {
-    B({ deletedMessages: l().filter(R, (e) => T.Z.isBlockedOrIgnoredForMessage(e)) }), (R = R.filter((e) => !T.Z.isBlockedOrIgnoredForMessage(e)));
+    B({ deletedMessages: l().filter(R, (e) => b.Z.isBlockedOrIgnoredForMessage(e)) }), (R = R.filter((e) => !b.Z.isBlockedOrIgnoredForMessage(e)));
 }
 function W(e) {
     let { channel: t } = e,
@@ -132,19 +132,19 @@ function W(e) {
 }
 class K extends (r = u.ZP.Store) {
     initialize() {
-        this.waitFor(A.default, v.Z, I.Z, b.ZP);
+        this.waitFor(A.default, v.Z, I.Z, T.ZP);
     }
     isOpen() {
         return k;
     }
     get hasLoadedEver() {
-        return M;
-    }
-    get lastLoaded() {
         return P;
     }
+    get lastLoaded() {
+        return M;
+    }
     getMentions() {
-        return M || R.length > 0 ? R : null;
+        return P || R.length > 0 ? R : null;
     }
     hasMention(e) {
         return D[e];
@@ -199,8 +199,8 @@ class K extends (r = u.ZP.Store) {
                 }),
                 (L = !1),
                 (x = t),
-                (P = (0, d.zO)()),
-                (M = !0);
+                (M = (0, d.zO)()),
+                (P = !0);
         },
         LOAD_RECENT_MENTIONS_FAILURE: function () {
             L = !1;
@@ -218,7 +218,7 @@ class K extends (r = u.ZP.Store) {
         },
         CHANNEL_SELECT: function () {
             if (w.guildFilter !== N.NgX.THIS_SERVER) return !1;
-            M = !1;
+            P = !1;
         },
         CONNECTION_OPEN: H,
         GUILD_DELETE: function (e) {

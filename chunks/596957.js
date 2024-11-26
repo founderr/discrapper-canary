@@ -18,20 +18,20 @@ var i = n(200651),
     I = n(451478),
     C = n(434184),
     v = n(701861),
-    S = n(437314),
-    N = n(696577),
+    N = n(437314),
+    S = n(696577),
     T = n(163417),
-    A = n(830880),
+    x = n(830880),
     b = n(492347),
-    x = n(42575),
+    A = n(42575),
     Z = n(617015),
     L = n(981631),
     y = n(388032),
-    O = n(732144);
+    P = n(732144);
 t.Z = function (e) {
     let { sectionFilter: t, titleId: l } = e,
-        { analyticsLocations: R } = (0, p.ZP)(m.Z.FRIENDS_LIST),
-        { rows: P, section: j } = (0, s.cj)([E.ZP], () => E.ZP.getState()),
+        { analyticsLocations: O } = (0, p.ZP)(m.Z.FRIENDS_LIST),
+        { rows: R, section: j } = (0, s.cj)([E.ZP], () => E.ZP.getState()),
         D = (0, s.e7)([I.Z], () => I.Z.isFocused()),
         M = (0, s.e7)([_.Z], () => _.Z.getRelationshipCount()),
         w = (0, f.Do)({ location: 'PeopleList' }),
@@ -55,14 +55,14 @@ t.Z = function (e) {
             },
             [k, t]
         ),
-        V = r.useCallback(() => {
+        H = r.useCallback(() => {
             U({
                 ...k,
                 [t]: ''
             });
         }, [k, t]),
-        H = t === L.pJs.PENDING && (P.filter(L.pJs.SPAM).length > 0 || P.filter(L.pJs.PENDING_IGNORED).length > 0),
-        F = P.filter(t, k[t]);
+        V = t === L.pJs.PENDING && (R.filter(L.pJs.SPAM).length > 0 || R.filter(L.pJs.PENDING_IGNORED).length > 0),
+        F = R.filter(t, k[t]);
     if (
         (r.useEffect(() => {
             t === L.pJs.ALL && (0, g.d$)();
@@ -70,12 +70,12 @@ t.Z = function (e) {
         0 === F.length && '' === k[t])
     )
         return (0, i.jsx)('div', {
-            className: O.emptyStateContainer,
+            className: P.emptyStateContainer,
             children: (0, i.jsx)(
-                S.Z,
+                N.Z,
                 {
                     type: t,
-                    onClick: H
+                    onClick: V
                         ? G
                         : t !== L.pJs.PENDING
                           ? () => {
@@ -87,24 +87,24 @@ t.Z = function (e) {
             )
         });
     let z = [F],
-        Y = 0 === F.length && '' !== k[t],
-        W = F.filter((e) => e.type === L.OGo.PENDING_INCOMING).length,
-        K = t === L.pJs.PENDING && W > 0 && W >= Z.yf;
+        W = 0 === F.length && '' !== k[t],
+        Y = F.filter((e) => e.type === L.OGo.PENDING_INCOMING).length,
+        K = t === L.pJs.PENDING && Y > 0 && Y >= Z.yf;
     return (0, i.jsx)(p.Gt, {
-        value: R,
+        value: O,
         children: (0, i.jsxs)(u.Z, {
             section: L.jXE.FRIENDS_LIST,
             children: [
-                w && (0, i.jsx)(A.R, {}),
+                w && (0, i.jsx)(x.R, {}),
                 (0, i.jsx)(o.SearchBar, {
-                    className: a()(O.searchBar, Y ? O.searchEmptyState : null),
+                    className: a()(P.searchBar, W ? P.searchEmptyState : null),
                     query: k[t],
                     onChange: B,
-                    onClear: V,
+                    onClear: H,
                     size: o.SearchBar.Sizes.MEDIUM
                 }),
                 (0, i.jsxs)('div', {
-                    className: O.sectionTitle,
+                    className: P.sectionTitle,
                     children: [
                         (0, i.jsx)(b.Z, {
                             id: l,
@@ -127,20 +127,20 @@ t.Z = function (e) {
                             (0, i.jsx)(o.Button, {
                                 look: o.ButtonLooks.LINK,
                                 color: o.ButtonColors.LINK,
-                                className: O.clearButton,
+                                className: P.clearButton,
                                 size: o.Button.Sizes.TINY,
                                 onClick: (e) => {
-                                    e.stopPropagation(), d.Z.confirmClearPendingRelationships(W);
+                                    e.stopPropagation(), d.Z.confirmClearPendingRelationships(Y);
                                 },
                                 'aria-label': y.intl.string(y.t.T3uOb2),
                                 children: y.intl.string(y.t.T3uOb2)
                             })
                     ]
                 }),
-                Y
+                W
                     ? (0, i.jsx)('div', {
-                          className: O.emptyStateContainer,
-                          children: (0, i.jsx)(S.Z, { type: S.j.SECTION_NO_RESULTS }, j)
+                          className: P.emptyStateContainer,
+                          children: (0, i.jsx)(N.Z, { type: N.j.SECTION_NO_RESULTS }, j)
                       })
                     : (0, i.jsx)(T.Z, {
                           relationshipCount: M,
@@ -153,12 +153,12 @@ t.Z = function (e) {
                                           isFocused: D
                                       });
                                   case L.pJs.PENDING:
-                                      return (0, i.jsx)(N.Z, {
+                                      return (0, i.jsx)(S.Z, {
                                           ...e,
                                           isFocused: D
                                       });
                                   case L.pJs.SUGGESTIONS:
-                                      return (0, i.jsx)(x.Z, {
+                                      return (0, i.jsx)(A.Z, {
                                           ...e,
                                           isFocused: D
                                       });
@@ -179,11 +179,11 @@ t.Z = function (e) {
                           sectionFilter: t,
                           searchQuery: k[t],
                           useReducedMotion: h.Z.useReducedMotion,
-                          footer: H
+                          footer: V
                               ? (0, i.jsx)(o.Button, {
                                     look: o.Button.Looks.LINK,
-                                    color: O.viewSpamButtonColor,
-                                    className: O.viewSpamButton,
+                                    color: P.viewSpamButtonColor,
+                                    className: P.viewSpamButton,
                                     onClick: () => G(),
                                     size: o.ButtonSizes.TINY,
                                     children: (0, i.jsx)(o.Text, {

@@ -13,16 +13,16 @@ function u(e, t, n) {
     let a = (0, l.G6)(e);
     return i.forwardRef(function (u, c) {
         let { children: d, className: f, dir: _ = 'ltr', orientation: p = 'vertical', fade: h = !1, customTheme: m = !1, paddingFix: g = !0, style: E, ...v } = u,
-            { scrollerRef: I, getScrollerState: b } = (0, l.Ke)(),
-            T = (0, l.t2)(I, p);
+            { scrollerRef: I, getScrollerState: T } = (0, l.Ke)(),
+            b = (0, l.t2)(I, p);
         i.useImperativeHandle(
             c,
             () => ({
                 getScrollerNode: () => I.current,
-                getScrollerState: b,
-                ...(0, l.Ue)(I, b, T, p)
+                getScrollerState: T,
+                ...(0, l.Ue)(I, T, b, p)
             }),
-            [I, b, p, T]
+            [I, T, p, b]
         );
         let S = (0, l.tT)({
             paddingFix: g,

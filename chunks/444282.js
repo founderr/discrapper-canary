@@ -23,8 +23,8 @@ function E(e) {
     let { channelId: t, option: n, keyboardModeEnabled: a } = e,
         E = i.useRef(null),
         [v, I] = i.useState(!1),
-        b = f.Z.getUpload(t, n.name, d.d.SlashCommand),
-        T = i.useRef(null),
+        T = f.Z.getUpload(t, n.name, d.d.SlashCommand),
+        b = i.useRef(null),
         S = i.useCallback(() => {
             I(!0);
         }, []),
@@ -50,18 +50,18 @@ function E(e) {
             [t, n]
         );
     return (i.useEffect(() => {
-        let e = T.current;
+        let e = b.current;
         return (
-            null == b && (null == e || e.addEventListener('dragover', S, !1), null == e || e.addEventListener('dragleave', y, !1), null == e || e.addEventListener('drop', A, !1)),
+            null == T && (null == e || e.addEventListener('dragover', S, !1), null == e || e.addEventListener('dragleave', y, !1), null == e || e.addEventListener('drop', A, !1)),
             () => {
                 null == e || e.removeEventListener('dragover', S, !1), null == e || e.removeEventListener('dragleave', y, !1), null == e || e.removeEventListener('drop', A, !1);
             }
         );
-    }, [b, S, y, A]),
-    null != b)
+    }, [T, S, y, A]),
+    null != T)
         ? (0, r.jsx)(p.Z, {
               channelId: t,
-              upload: b,
+              upload: T,
               keyboardModeEnabled: a,
               draftType: d.d.SlashCommand,
               label: (0, r.jsxs)(i.Fragment, {
@@ -75,7 +75,7 @@ function E(e) {
                           tag: 'span',
                           variant: 'text-md/normal',
                           color: 'text-brand',
-                          children: b.filename
+                          children: T.filename
                       })
                   ]
               }),
@@ -93,7 +93,7 @@ function E(e) {
               },
               className: s()(m.emptyOption, { [m.emptyOptionActive]: v }),
               draftType: d.d.SlashCommand,
-              ref: T,
+              ref: b,
               children: [
                   (0, r.jsx)('span', {
                       className: s()(m.optionName, { [m.optionNameActive]: v }),

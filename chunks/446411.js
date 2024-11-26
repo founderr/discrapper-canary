@@ -900,7 +900,7 @@ class G extends (n = r.PureComponent) {
                     }),
                     'aria-hidden': e,
                     style: {
-                        borderColor: l.getEmbedColor(e),
+                        borderLeftColor: l.getEmbedColor(e),
                         maxWidth: l.getMaxWidth(!1)
                     },
                     children: (0, i.jsx)('div', {

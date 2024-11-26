@@ -20,11 +20,11 @@ var i = n(200651),
     x = n(607070),
     S = n(627845),
     T = n(514361),
-    C = n(600164),
+    E = n(600164),
     _ = n(313201),
-    E = n(605236),
-    f = n(786761),
-    I = n(3148),
+    C = n(605236),
+    I = n(786761),
+    f = n(3148),
     N = n(739566),
     A = n(753206),
     b = n(311476),
@@ -67,40 +67,40 @@ let G = {
     K = (e) => {
         let t = 0;
         return [
-            (0, f.e5)({
-                ...(0, I.ZP)({
+            (0, I.e5)({
+                ...(0, f.ZP)({
                     channelId: W,
                     content: k.intl.string(k.t.oZxkEh)
                 }),
                 state: Z.yb.SENT,
                 id: ''.concat(t++)
             }),
-            (0, f.e5)({
-                ...(0, I.ZP)({
+            (0, I.e5)({
+                ...(0, f.ZP)({
                     channelId: W,
                     content: (0, d.wj)(e) ? k.intl.string(k.t['WGb/v7']) : k.intl.string(k.t['62m4m5'])
                 }),
                 state: Z.yb.SENT,
                 id: ''.concat(t++)
             }),
-            (0, f.e5)({
-                ...(0, I.ZP)({
+            (0, I.e5)({
+                ...(0, f.ZP)({
                     channelId: W,
                     content: k.intl.string(k.t.a0Byo6)
                 }),
                 state: Z.yb.SENT,
                 id: ''.concat(t++)
             }),
-            (0, f.e5)({
-                ...(0, I.ZP)({
+            (0, I.e5)({
+                ...(0, f.ZP)({
                     channelId: W,
                     content: k.intl.string(k.t.bmwEWF)
                 }),
                 state: Z.yb.SENT,
                 id: ''.concat(t++)
             }),
-            (0, f.e5)({
-                ...(0, I.ZP)({
+            (0, I.e5)({
+                ...(0, f.ZP)({
                     channelId: W,
                     content: k.intl.string(k.t.hK9QW1)
                 }),
@@ -131,7 +131,7 @@ let G = {
                   ]
               });
     };
-class Q extends s.Component {
+class X extends s.Component {
     renderZoomSlider() {
         return O.isPlatformEmbedded
             ? (0, i.jsxs)(u.FormItem, {
@@ -171,8 +171,8 @@ class Q extends s.Component {
                     className: U.marginBottom8,
                     children: k.intl.string(k.t.qPOqoK)
                 }),
-                (0, i.jsx)(C.Z, {
-                    align: C.Z.Align.CENTER,
+                (0, i.jsx)(E.Z, {
+                    align: E.Z.Align.CENTER,
                     children: (0, i.jsx)(u.Slider, {
                         className: l()(U.marginTop20, U.marginBottom4),
                         initialValue: this.props.fontSize,
@@ -421,9 +421,9 @@ class Q extends s.Component {
             });
     }
 }
-let X = (e) => {
-    !(0, E.un)(e) &&
-        (0, E.EW)(e, {
+let Q = (e) => {
+    !(0, C.un)(e) &&
+        (0, C.EW)(e, {
             dismissAction: F.L.AUTO,
             forceTrack: !0
         });
@@ -435,7 +435,7 @@ function J() {
         r = D.L1.useSetting(),
         l = D.hg.useSetting();
     s.useEffect(() => {
-        X(o.z.CLIENT_THEMES_SETTINGS_BADGE), X(o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), X(o.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
+        Q(o.z.CLIENT_THEMES_SETTINGS_BADGE), Q(o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), Q(o.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
     }, []);
     let c = (0, a.cj)([R.Z, P.ZP, x.Z, j.default, T.Z], () => {
         var e, t;
@@ -452,7 +452,7 @@ function J() {
             gradientPreset: T.Z.gradientPreset
         };
     });
-    return (0, i.jsx)(Q, {
+    return (0, i.jsx)(X, {
         messageDisplayCompact: e,
         hideSimpleEmbedContent: t && n,
         clientTheme: r,

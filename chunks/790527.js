@@ -21,15 +21,15 @@ var r = n(200651),
     E = n(165583),
     v = n(197115),
     I = n(302945),
-    b = n(631771),
-    T = n(474936),
+    T = n(631771),
+    b = n(474936),
     S = n(981631),
     y = n(388032),
     A = n(913197),
     N = n(769860);
 function C(e) {
     var t, n, a;
-    let { title: C, type: R, guildBoostProps: O, analyticsSource: D, analyticsLocation: L, body: x, context: w, glowUp: M, modalClassName: P, modalContentClassName: k, artContainerClassName: U, headerClassName: B, bodyClassName: G, transitionState: Z, onClose: F, onSubscribeClick: V, onSubscribeFinish: j, onSecondaryClick: H, secondaryCTA: Y, subscribeButtonText: W, showNewBadge: K = !1, enableArtBoxShadow: z = !0, subscriptionTier: q = T.Si.TIER_2, isLoading: Q = !1, hideBackButton: X, backButtonText: J, showEnhancedUpsell: $, useSubscribeButtonGradient: ee, subscribeButtonClassname: et, hidePremiumOfferUpsell: en, children: er, LeadingComponent: ei, ...ea } = e,
+    let { title: C, type: R, guildBoostProps: O, analyticsSource: D, analyticsLocation: L, body: x, context: w, glowUp: P, modalClassName: M, modalContentClassName: k, artContainerClassName: U, headerClassName: B, bodyClassName: G, transitionState: Z, onClose: F, onSubscribeClick: V, onSubscribeFinish: j, onSecondaryClick: H, secondaryCTA: Y, subscribeButtonText: W, showNewBadge: K = !1, enableArtBoxShadow: z = !0, subscriptionTier: q = b.Si.TIER_2, isLoading: Q = !1, hideBackButton: X, backButtonText: J, showEnhancedUpsell: $, useSubscribeButtonGradient: ee, subscribeButtonClassname: et, hidePremiumOfferUpsell: en, children: er, LeadingComponent: ei, ...ea } = e,
         es = null != O,
         eo = (0, g.N)(),
         el = (0, m.Ng)(),
@@ -54,7 +54,7 @@ function C(e) {
                   }));
     }, [es, q, Q]);
     let ed = (0, o.e7)([h.Z], () => h.Z.affinities),
-        ef = ed.length > 1 && (0, b.YN)(R),
+        ef = ed.length > 1 && (0, T.YN)(R),
         e_ = (0, o.e7)([h.Z], () => h.Z.hasFetched);
     i.useEffect(() => {
         !e_ && u.MH();
@@ -70,7 +70,7 @@ function C(e) {
               }))
             : null != ea.artElement && (eh = ea.artElement),
         (0, r.jsxs)(l.ModalRoot, {
-            className: s()(A.root, !eu && P),
+            className: s()(A.root, !eu && M),
             'aria-label': C,
             transitionState: Z,
             children: [
@@ -99,13 +99,13 @@ function C(e) {
                                         children: (0, r.jsx)(E.ZP, {
                                             onClose: F,
                                             type: R,
-                                            subscriptionTier: null !== (a = null == eo ? void 0 : null === (n = eo.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : T.Si.TIER_2,
+                                            subscriptionTier: null !== (a = null == eo ? void 0 : null === (n = eo.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : b.Si.TIER_2,
                                             headingText: C,
                                             context: w,
                                             analyticsLocationObject: L,
                                             discountOffer: el,
                                             trialOffer: eo,
-                                            children: M
+                                            children: P
                                         })
                                     })
                                   : (0, r.jsxs)('div', {

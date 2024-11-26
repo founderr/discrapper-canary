@@ -38,11 +38,11 @@ function f(e) {
 t.Z = function (e) {
     let { children: t, className: n, compact: i = !1, timestamp: _, isVisibleOnlyOnHover: p = !1, cozyAlt: h = !1, isInline: m = !0, id: g, isEdited: E = !1, application: v } = e,
         I = (0, o.Hg)(_),
-        b = i ? (0, o.vc)(_, 'LT') : (0, o.Y4)(_),
-        T = i ? (0, u.Z)(b) : null,
+        T = i ? (0, o.vc)(_, 'LT') : (0, o.Y4)(_),
+        b = i ? (0, u.Z)(T) : null,
         S = E ? c.intl.formatToPlainString(c.t.CDzOFR, { timeFormatted: I }) : I;
     return (0, r.jsx)('span', {
-        className: a()(n, T, {
+        className: a()(n, b, {
             [d.timestamp]: !0,
             [d.timestampVisibleOnHover]: p,
             [d.timestampInline]: m,
@@ -58,7 +58,7 @@ t.Z = function (e) {
                       children: (e) =>
                           (0, r.jsx)(f, {
                               tooltipProps: e,
-                              timeFormatted: b,
+                              timeFormatted: T,
                               timestamp: _,
                               id: g,
                               compact: i,
@@ -70,7 +70,7 @@ t.Z = function (e) {
                       timestamp: _,
                       compact: i,
                       children: (0, r.jsx)(f, {
-                          timeFormatted: b,
+                          timeFormatted: T,
                           timestamp: _,
                           id: g,
                           compact: i,

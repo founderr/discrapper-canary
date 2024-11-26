@@ -161,8 +161,8 @@ var n = (function () {
                     E,
                     v,
                     I,
-                    b,
                     T,
+                    b,
                     S,
                     y =
                         ((l = s),
@@ -181,13 +181,13 @@ var n = (function () {
                         (E = 1000000),
                         (v = 0),
                         (I = 1000000),
-                        (b = 0),
-                        (T = 1000000),
+                        (T = 0),
+                        (b = 1000000),
                         (S = 0),
                         _.forEach(function (t) {
-                            (h = t[0] >> e), (m = t[1] >> e), (g = t[2] >> e), h < E ? (E = h) : h > v && (v = h), m < I ? (I = m) : m > b && (b = m), g < T ? (T = g) : g > S && (S = g);
+                            (h = t[0] >> e), (m = t[1] >> e), (g = t[2] >> e), h < E ? (E = h) : h > v && (v = h), m < I ? (I = m) : m > T && (T = m), g < b ? (b = g) : g > S && (S = g);
                         }),
-                        new i(E, v, I, b, T, S, p)),
+                        new i(E, v, I, T, b, S, p)),
                     C = new r(function (e, n) {
                         return t.naturalOrder(e.count(), n.count());
                     });

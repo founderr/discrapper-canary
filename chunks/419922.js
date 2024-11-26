@@ -22,8 +22,8 @@ var r = n(200651),
     E = n(373228),
     v = n(378233),
     I = n(388032),
-    b = n(739031);
-let T = (e) => e.preventDefault(),
+    T = n(739031);
+let b = (e) => e.preventDefault(),
     S = {
         tension: 1100,
         friction: 40
@@ -46,7 +46,7 @@ let C = (e) => {
         let { children: t, hasError: n, isLoading: i, maskAsset: a, size: o, withLoadingIndicator: l = !0 } = e,
             u = o >= 33;
         return (0, r.jsxs)('div', {
-            className: s()(b.assetWrapper, { [b.assetWrapperMasked]: n || a }),
+            className: s()(T.assetWrapper, { [T.assetWrapperMasked]: n || a }),
             style: {
                 height: o,
                 width: o
@@ -54,18 +54,18 @@ let C = (e) => {
             children: [
                 n
                     ? (0, r.jsxs)('div', {
-                          className: b.error,
+                          className: T.error,
                           children: [
                               (0, r.jsx)(f.StickerSadIcon, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,
                                   color: 'currentColor',
-                                  className: b.errorIcon
+                                  className: T.errorIcon
                               }),
                               u &&
                                   (0, r.jsx)(f.Text, {
-                                      className: b.errorText,
+                                      className: T.errorText,
                                       color: 'header-secondary',
                                       variant: 'text-sm/normal',
                                       children: I.intl.string(I.t.tWYWJy)
@@ -73,7 +73,7 @@ let C = (e) => {
                           ]
                       })
                     : t,
-                l && i && (0, r.jsx)('div', { className: b.loadingIndicator })
+                l && i && (0, r.jsx)('div', { className: T.loadingIndicator })
             ]
         });
     },
@@ -81,7 +81,7 @@ let C = (e) => {
         let { shouldAnimate: t, size: a, sticker: s, fileUri: o, assetData: u, isFocused: c, className: d, maskAsset: f, positionRef: _, withLoadingIndicator: h, onError: m } = e,
             g = i.useRef(null),
             E = i.useRef(null),
-            [T, S] = i.useState(!0),
+            [b, S] = i.useState(!0),
             [y, R] = i.useState(!1),
             O = i.useRef(!1);
         O.current = t && c;
@@ -130,13 +130,13 @@ let C = (e) => {
                   ref: _,
                   children: (0, r.jsx)(C, {
                       hasError: y,
-                      isLoading: T,
+                      isLoading: b,
                       maskAsset: f,
                       size: a,
                       withLoadingIndicator: h,
                       children: A(
                           (0, r.jsx)('canvas', {
-                              className: b.lottieCanvas,
+                              className: T.lottieCanvas,
                               ref: g
                           }),
                           s.id
@@ -181,7 +181,7 @@ let C = (e) => {
                   onChange: h,
                   threshold: 0.7,
                   children: (0, r.jsx)('div', {
-                      className: s()(l, b.__invalid_pngImageWrapper),
+                      className: s()(l, T.__invalid_pngImageWrapper),
                       ref: c,
                       children: (0, r.jsx)(C, {
                           hasError: E,
@@ -191,13 +191,13 @@ let C = (e) => {
                           withLoadingIndicator: f,
                           children: A(
                               (0, r.jsx)('img', {
-                                  className: b.pngImage,
+                                  className: T.pngImage,
                                   alt: N(n),
                                   src: R,
                                   draggable: !1,
                                   onError: D,
                                   onLoad: O,
-                                  onContextMenu: T,
+                                  onContextMenu: b,
                                   ref: y
                               }),
                               n.id
@@ -240,20 +240,20 @@ let C = (e) => {
                 (e, i) =>
                     i &&
                     (0, r.jsx)(h.W5, {
-                        className: b.positionedLayer,
+                        className: T.positionedLayer,
                         fixed: !0,
                         align: 'center',
                         position: 'center',
                         targetRef: o,
                         children: () =>
                             (0, r.jsxs)('div', {
-                                className: b.overlayWrapper,
+                                className: T.overlayWrapper,
                                 children: [
                                     (0, r.jsx)(u.animated.div, {
-                                        className: b.overlayStickerWrapper,
+                                        className: T.overlayStickerWrapper,
                                         style: e,
                                         children: (0, r.jsx)(L, {
-                                            className: b.__invalid_overlaySticker,
+                                            className: T.__invalid_overlaySticker,
                                             disableAnimation: t,
                                             enlargeOnInteraction: !1,
                                             isInteracting: s,
@@ -265,11 +265,11 @@ let C = (e) => {
                                     }),
                                     a &&
                                         (0, r.jsx)(u.animated.div, {
-                                            className: b.overlayLabelWrapper,
+                                            className: T.overlayLabelWrapper,
                                             style: I,
                                             children: (0, r.jsx)(f.Text, {
                                                 variant: 'text-sm/medium',
-                                                className: b.overlayLabel,
+                                                className: T.overlayLabel,
                                                 children: d.name
                                             })
                                         })
@@ -283,21 +283,21 @@ let C = (e) => {
         let { isInteracting: t = !1, disableAnimation: n = !1, enlargeOnInteraction: a = !1, enlargeWithName: s = !0, enlargeScaleFactor: o = 1.55, maskAsset: l = !1, size: u, sticker: c, className: d, withLoadingIndicator: f, assetData: _, fileUri: p, onError: h } = e,
             v = (0, m.n)(),
             I = (0, g.t$)(t) && !n,
-            b = i.useRef(null);
+            T = i.useRef(null);
         if (null == c) return null;
-        let T = c.format_type === E.u3.LOTTIE ? R : O;
+        let b = c.format_type === E.u3.LOTTIE ? R : O;
         return (0, r.jsxs)(
             i.Fragment,
             {
                 children: [
-                    (0, r.jsx)(T, {
+                    (0, r.jsx)(b, {
                         shouldAnimate: I,
                         isFocused: v,
                         size: u,
                         sticker: c,
                         className: d,
                         maskAsset: l,
-                        positionRef: b,
+                        positionRef: T,
                         withLoadingIndicator: f,
                         assetData: _,
                         fileUri: p,
@@ -309,7 +309,7 @@ let C = (e) => {
                             enlargeScaleFactor: o,
                             enlargeWithName: s,
                             isInteracting: t,
-                            positionRef: b,
+                            positionRef: T,
                             size: u,
                             sticker: c
                         })

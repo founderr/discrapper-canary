@@ -21,8 +21,8 @@ var r = n(526167),
     E = n(307244),
     v = n(669730),
     I = n(666828),
-    b = n(131999),
-    T = n(649272),
+    T = n(131999),
+    b = n(649272),
     S = n(241372),
     y = n(538387),
     A = n(213921),
@@ -36,12 +36,12 @@ function D() {
 }
 t.Z = {
     DEFAULT_AVATARS: [a, s, o, l, u, c],
-    DEFAULT_PROVISIONAL_AVATARS: [T, S, y, A, N, C],
+    DEFAULT_PROVISIONAL_AVATARS: [b, S, y, A, N, C],
     DEFAULT_GROUP_DM_AVATARS: [d, f, _, p, h, m, g, E],
     BOT_AVATARS: {
         clyde: R,
         nitro: I,
-        nitro_wumpus: b
+        nitro_wumpus: T
     },
     DEFAULT_CHANNEL_ICON: v,
     canUseWebp: function () {

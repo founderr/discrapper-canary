@@ -20,9 +20,9 @@ var p = n(443551),
     E = g.ERR_INVALID_ARG_TYPE,
     v = g.ERR_STREAM_PUSH_AFTER_EOF,
     I = g.ERR_METHOD_NOT_IMPLEMENTED,
-    b = g.ERR_STREAM_UNSHIFT_AFTER_END_EVENT;
+    T = g.ERR_STREAM_UNSHIFT_AFTER_END_EVENT;
 n(689118)(A, c);
-var T = h.errorOrDestroy,
+var b = h.errorOrDestroy,
     S = ['error', 'close', 'destroy', 'pause', 'resume'];
 function y(e, t, i) {
     (r = r || n(827664)), (e = e || {}), 'boolean' != typeof i && (i = t instanceof r), (this.objectMode = !!e.objectMode), i && (this.objectMode = this.objectMode || !!e.readableObjectMode), (this.highWaterMark = m(this, e, 'readableHighWaterMark', i)), (this.buffer = new p()), (this.length = 0), (this.pipes = null), (this.pipesCount = 0), (this.flowing = null), (this.ended = !1), (this.endEmitted = !1), (this.reading = !1), (this.sync = !0), (this.needReadable = !1), (this.emittedReadable = !1), (this.readableListening = !1), (this.resumeScheduled = !1), (this.paused = !0), (this.emitClose = !1 !== e.emitClose), (this.autoDestroy = !!e.autoDestroy), (this.destroyed = !1), (this.defaultEncoding = e.defaultEncoding || 'utf8'), (this.awaitDrain = 0), (this.readingMore = !1), (this.decoder = null), (this.encoding = null), e.encoding && (!a && (a = n(2682).StringDecoder), (this.decoder = new a(e.encoding)), (this.encoding = e.encoding));
@@ -57,13 +57,13 @@ function N(e, t, n, r, a) {
             })(l, t)),
         o)
     )
-        T(e, o);
+        b(e, o);
     else if (l.objectMode || (t && t.length > 0)) {
         if ('string' != typeof t && !l.objectMode && Object.getPrototypeOf(t) !== d.prototype) {
             (s = t), (t = d.from(s));
         }
-        if (r) l.endEmitted ? T(e, new b()) : C(e, l, t, !0);
-        else if (l.ended) T(e, new v());
+        if (r) l.endEmitted ? b(e, new T()) : C(e, l, t, !0);
+        else if (l.ended) b(e, new v());
         else {
             if (l.destroyed) return !1;
             (l.reading = !1), l.decoder && !n ? ((t = l.decoder.write(t)), l.objectMode || 0 !== t.length ? C(e, l, t, !1) : L(e, l)) : C(e, l, t, !1);
@@ -145,7 +145,7 @@ function x(e, t) {
     t.readingMore = !1;
 }
 (A.prototype._read = function (e) {
-    T(this, new I('_read()'));
+    b(this, new I('_read()'));
 }),
     (A.prototype.pipe = function (e, t) {
         var n = this,
@@ -190,7 +190,7 @@ function x(e, t) {
             i('dest.write', a), !1 === a && (((1 === r.pipesCount && r.pipes === e) || (r.pipesCount > 1 && -1 !== Z(r.pipes, e))) && !d && (i('false write response, pause', r.awaitDrain), r.awaitDrain++), n.pause());
         }
         function _(t) {
-            i('onerror', t), m(), e.removeListener('error', _), 0 === u(e, 'error') && T(e, t);
+            i('onerror', t), m(), e.removeListener('error', _), 0 === u(e, 'error') && b(e, t);
         }
         function p() {
             e.removeListener('finish', h), m();
@@ -218,7 +218,7 @@ function w(e) {
     var t = e._readableState;
     (t.readableListening = e.listenerCount('readable') > 0), t.resumeScheduled && !t.paused ? (t.flowing = !0) : e.listenerCount('data') > 0 && e.resume();
 }
-function M(e) {
+function P(e) {
     i('readable nexttick read 0'), e.read(0);
 }
 (A.prototype.unpipe = function (e) {
@@ -239,7 +239,7 @@ function M(e) {
     (A.prototype.on = function (e, t) {
         var n = c.prototype.on.call(this, e, t),
             r = this._readableState;
-        return 'data' === e ? ((r.readableListening = this.listenerCount('readable') > 0), !1 !== r.flowing && this.resume()) : 'readable' === e && !r.endEmitted && !r.readableListening && ((r.readableListening = r.needReadable = !0), (r.flowing = !1), (r.emittedReadable = !1), i('on readable', r.length, r.reading), r.length ? O(this) : !r.reading && l.nextTick(M, this)), n;
+        return 'data' === e ? ((r.readableListening = this.listenerCount('readable') > 0), !1 !== r.flowing && this.resume()) : 'readable' === e && !r.endEmitted && !r.readableListening && ((r.readableListening = r.needReadable = !0), (r.flowing = !1), (r.emittedReadable = !1), i('on readable', r.length, r.reading), r.length ? O(this) : !r.reading && l.nextTick(P, this)), n;
     }),
     (A.prototype.addListener = A.prototype.on),
     (A.prototype.removeListener = function (e, t) {
@@ -257,13 +257,13 @@ function M(e) {
                 (i('resume'),
                 (e.flowing = !e.readableListening),
                 (function (e, t) {
-                    !t.resumeScheduled && ((t.resumeScheduled = !0), l.nextTick(P, e, t));
+                    !t.resumeScheduled && ((t.resumeScheduled = !0), l.nextTick(M, e, t));
                 })(this, e)),
             (e.paused = !1),
             this
         );
     });
-function P(e, t) {
+function M(e, t) {
     i('resume', t.reading), !t.reading && e.read(0), (t.resumeScheduled = !1), e.emit('resume'), k(e), t.flowing && !t.reading && e.read(0);
 }
 function k(e) {

@@ -17,8 +17,8 @@ var r = n(664751),
     E = n(626135),
     v = n(630388),
     I = n(877481),
-    b = n(358085),
-    T = n(573261),
+    T = n(358085),
+    b = n(573261),
     S = n(278323),
     y = n(58642),
     A = n(254854),
@@ -75,18 +75,18 @@ async function D(e) {
         n = null != e ? e.branchId : t;
     }
     if (g.Z.isLaunchable(t, n)) {
-        var b;
+        var T;
         let e = g.Z.getState(t, n),
             i = m.Z.getActiveLaunchOptionId(t, n);
         if (null == e) throw Error('Missing dispatch game when launching');
         let o = m.Z.getLibraryApplication(t, n);
         if (null == o) throw Error('Missing library application when launching');
-        v = ((b = t),
+        v = ((T = t),
         s.tn
             .post({
                 url: N.ANM.OAUTH2_AUTHORIZE,
                 query: {
-                    client_id: b,
+                    client_id: T,
                     response_type: 'token',
                     scope: [a.x.IDENTIFY].join(' ')
                 },
@@ -115,7 +115,7 @@ async function D(e) {
         let e = c.Z.getApplication(t);
         v = null != e ? I.Z.launch(e) : I.Z.launchGame(t);
     }
-    let T = Error('game not found');
+    let b = Error('game not found');
     return null != v
         ? (l.Z.dispatch({
               type: 'LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE',
@@ -139,15 +139,15 @@ async function D(e) {
                       l.Z.dispatch({
                           type: 'GAME_LAUNCH_FAIL',
                           applicationId: t,
-                          error: T
+                          error: b
                       });
               }))
         : (l.Z.dispatch({
               type: 'GAME_LAUNCH_FAIL',
               applicationId: t,
-              error: T
+              error: b
           }),
-          Promise.reject(T));
+          Promise.reject(b));
 }
 t.Z = {
     addGame(e, t) {
@@ -246,7 +246,7 @@ t.Z = {
         let e = h.Z.detectableGamesEtag;
         l.Z.wait(() => {
             l.Z.dispatch({ type: 'GAMES_DATABASE_FETCH' }),
-                T.Z.get({
+                b.Z.get({
                     url: N.ANM.APPLICATIONS_DETECTABLE,
                     headers: { 'If-None-Match': e },
                     retries: 1,
@@ -297,7 +297,7 @@ t.Z = {
                     url: N.ANM.UNVERIFIED_APPLICATIONS,
                     body: {
                         name: r,
-                        os: (0, b.getPlatformName)(),
+                        os: (0, T.getPlatformName)(),
                         icon: i,
                         distributor_application:
                             ((t = o),

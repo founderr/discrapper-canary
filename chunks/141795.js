@@ -26,8 +26,8 @@ var r,
     E = n(960048),
     v = n(861990),
     I = n(476326),
-    b = n(983544),
-    T = n(981631);
+    T = n(983544),
+    b = n(981631);
 function S(e, t, n) {
     return (
         t in e
@@ -250,13 +250,13 @@ class C extends I.ZP {
             return;
         }
         let r = await A.getUploadPayload(this),
-            i = (0, b.F)(this.item.target);
+            i = (0, T.F)(this.item.target);
         if (null == r.filename || '' === r.filename || 0 === this.currentSize) {
-            y.error('File does not have a filename or size is 0.', JSON.stringify(r)), this.handleError(T.evJ.INVALID_FILE_ASSET);
+            y.error('File does not have a filename or size is 0.', JSON.stringify(r)), this.handleError(b.evJ.INVALID_FILE_ASSET);
             return;
         }
         if ((null !== (e = this.currentSize) && void 0 !== e ? e : 0) > i.getMaxFileSize(this.channelId)) {
-            this.handleError(T.evJ.ENTITY_TOO_LARGE);
+            this.handleError(b.evJ.ENTITY_TOO_LARGE);
             return;
         }
         if (c.ZP.get('upload_fail_50') && 0.5 > Math.random()) {
@@ -280,7 +280,7 @@ class C extends I.ZP {
             this.setResponseUrl(e.body.attachments[0].upload_url), this.setUploadedFilename(e.body.attachments[0].upload_filename);
         } catch (r) {
             let e = null !== (n = null == r ? void 0 : null === (t = r.body) || void 0 === t ? void 0 : t.code) && void 0 !== n ? n : r.status;
-            e !== T.evJ.ENTITY_TOO_LARGE && (y.error('Requesting upload url failed with code '.concat(null != e ? e : JSON.stringify(r.body), ' for ').concat(this.id)), E.Z.captureException(r)), this.handleError(e);
+            e !== b.evJ.ENTITY_TOO_LARGE && (y.error('Requesting upload url failed with code '.concat(null != e ? e : JSON.stringify(r.body), ' for ').concat(this.id)), E.Z.captureException(r)), this.handleError(e);
             return;
         }
         try {
@@ -293,7 +293,7 @@ class C extends I.ZP {
     }
     async reactNativeCompressAndExtractData() {
         var e;
-        if (!(0, b.F)(this.item.target).shouldReactNativeCompressUploads) return (this.uploadAnalytics.compressAndExtractDisabled = !0), y.log('reactNativeCompressAndExtractData() disabled by upload target'), this;
+        if (!(0, T.F)(this.item.target).shouldReactNativeCompressUploads) return (this.uploadAnalytics.compressAndExtractDisabled = !0), y.log('reactNativeCompressAndExtractData() disabled by upload target'), this;
         if (!0 === this.reactNativeFilePrepped) return (this.uploadAnalytics.fileAlreadyPrepped = !0), y.log('reactNativeCompressAndExtractData() file already prepped - '.concat(this.id)), this;
         y.log('Starting compression/conversion for '.concat(this.id));
         let t = await this.trackTime('compressTimeMs', async () => {
@@ -358,7 +358,7 @@ class C extends I.ZP {
     }
     async delete() {
         if (null == this.uploadedFilename) return;
-        let e = (0, b.F)(this.item.target).getDeleteUploadURL(this.uploadedFilename);
+        let e = (0, T.F)(this.item.target).getDeleteUploadURL(this.uploadedFilename);
         try {
             await l.tn.del(e);
         } catch {}
@@ -377,7 +377,7 @@ class C extends I.ZP {
     }
     trackUploadStart() {
         var e;
-        h.default.track(T.rMx.ATTACHMENT_UPLOAD_STARTED, {
+        h.default.track(b.rMx.ATTACHMENT_UPLOAD_STARTED, {
             file_size: this.currentSize,
             mime_type: null !== (e = this.mimeType) && void 0 !== e ? e : 'unknown',
             video_upload_quality: _.ZP.videoUploadQuality,
@@ -392,7 +392,7 @@ class C extends I.ZP {
     trackUploadFinished(e) {
         var t, n, r, i, a;
         let s = null != this.startTime ? performance.now() - this.startTime : -1;
-        h.default.track(T.rMx.ATTACHMENT_UPLOAD_FINISHED, {
+        h.default.track(b.rMx.ATTACHMENT_UPLOAD_FINISHED, {
             duration_ms: s,
             file_size: this.currentSize,
             pre_compression_file_size: this.preCompressionSize,

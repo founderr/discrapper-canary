@@ -6,10 +6,10 @@ n.d(t, {
         return d;
     },
     Zu: function () {
-        return u;
+        return c;
     },
     gA: function () {
-        return c;
+        return u;
     },
     x8: function () {
         return f;
@@ -62,7 +62,7 @@ let s = async (e) => {
             );
         }
     },
-    c = async (e) => {
+    u = async (e) => {
         o.Z.dispatch({
             type: 'CONSUMABLES_ENTITLEMENT_FETCH_STARTED',
             skuId: e
@@ -91,7 +91,7 @@ let s = async (e) => {
             );
         }
     },
-    u = async (e, t) => {
+    c = async (e, t) => {
         try {
             await r.tn.post({
                 url: l.ANM.CONSUME_HD_STREAMING_POTION,

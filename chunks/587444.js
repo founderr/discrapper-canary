@@ -17,19 +17,19 @@ var r = n(120356),
     u = n(981631),
     d = n(388032),
     h = n(897927),
-    p = n(652849),
-    g = n(232186);
+    g = n(652849),
+    p = n(232186);
 function m(e) {
     let { text: t, buttonCta: r, onClick: u } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.Ee, { src: n(689411) }),
             (0, i.jsx)(o.Dx, {
-                className: s()(g.marginTop20, g.marginBottom8, p.flexCenter),
+                className: s()(p.marginTop20, p.marginBottom8, g.flexCenter),
                 children: d.intl.string(d.t.eL5z0t)
             }),
             (0, i.jsx)(o.DK, {
-                className: g.marginBottom40,
+                className: p.marginBottom40,
                 children: d.intl.string(d.t['poAv6+'])
             }),
             (0, i.jsxs)(a.Card, {

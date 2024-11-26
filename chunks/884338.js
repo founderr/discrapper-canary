@@ -43,7 +43,7 @@ function I(e, t) {
     let n = e instanceof p.Z ? e : null != e ? e.user : null;
     return null != n ? n.id : 'user-'.concat(t);
 }
-class b extends (r = a.PureComponent) {
+class T extends (r = a.PureComponent) {
     renderUsers() {
         let { users: e, max: t, renderUser: n = this.defaultRenderUser, size: r, extraDetail: a } = this.props,
             s = [],
@@ -198,7 +198,7 @@ class b extends (r = a.PureComponent) {
             });
     }
 }
-E(b, 'defaultProps', {
+E(T, 'defaultProps', {
     max: 10,
     renderMoreUsers: function (e) {
         return (0, i.jsx)('div', {
@@ -210,4 +210,4 @@ E(b, 'defaultProps', {
     showDefaultAvatarsForNullUsers: !1,
     size: v.SIZE_24
 }),
-    (t.Z = b);
+    (t.Z = T);

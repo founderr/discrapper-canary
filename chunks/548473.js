@@ -12,8 +12,8 @@ x.d(i, {
         return g;
     }
 });
-var k = x(200651),
-    r = x(192379),
+var r = x(200651),
+    k = x(192379),
     t = x(120356),
     s = x.n(t),
     o = x(500923),
@@ -37,13 +37,13 @@ var k = x(200651),
     b = x(490266);
 function F(a) {
     let i = (0, m.e7)([p.Z], () => p.Z.useReducedMotion),
-        x = r.useRef(null);
+        x = k.useRef(null);
     return (
-        r.useEffect(() => {
-            let k;
+        k.useEffect(() => {
+            let r;
             return (
                 null != x.current &&
-                    (k = n().loadAnimation({
+                    (r = n().loadAnimation({
                         container: x.current,
                         renderer: 'svg',
                         loop: !0,
@@ -51,7 +51,7 @@ function F(a) {
                         animationData: JSON.parse(JSON.stringify(a))
                     })),
                 () => {
-                    null == k || k.destroy();
+                    null == r || r.destroy();
                 }
             );
         }, [x, i, a]),
@@ -60,9 +60,9 @@ function F(a) {
 }
 function g() {
     let a = F(A);
-    return (0, k.jsx)('div', {
+    return (0, r.jsx)('div', {
         className: s()(b.leftArt, b.altFloat),
-        children: (0, k.jsx)('div', {
+        children: (0, r.jsx)('div', {
             ref: a,
             className: b.grillingIsland
         })
@@ -70,9 +70,9 @@ function g() {
 }
 function S() {
     let a = F(E);
-    return (0, k.jsx)('div', {
+    return (0, r.jsx)('div', {
         className: s()(b.rightArt, b.altFloat),
-        children: (0, k.jsx)('div', {
+        children: (0, r.jsx)('div', {
             ref: a,
             className: b.waffleIsland
         })
@@ -81,7 +81,7 @@ function S() {
 function v(a) {
     let { guild: i, mainIslandClassName: x, balloonDogClassName: t } = a,
         o = (0, m.e7)([p.Z], () => p.Z.useReducedMotion),
-        e = r.useRef(null),
+        e = k.useRef(null),
         l = F(G),
         h = d.ZP.getGuildIconURL({
             id: i.id,
@@ -89,7 +89,7 @@ function v(a) {
             size: 96
         });
     return (
-        r.useEffect(() => {
+        k.useEffect(() => {
             let a;
             return (
                 null != e.current && null != h
@@ -116,14 +116,14 @@ function v(a) {
                 }
             );
         }, [h, e, o]),
-        (0, k.jsxs)('div', {
+        (0, r.jsxs)('div', {
             className: s()(b.centerArt, b.float),
             children: [
-                (0, k.jsx)('div', {
+                (0, r.jsx)('div', {
                     className: s()(b.balloonDog, t),
                     ref: l
                 }),
-                (0, k.jsx)('div', {
+                (0, r.jsx)('div', {
                     className: s()(b.mainIsland, x),
                     ref: e
                 })
@@ -134,8 +134,8 @@ function v(a) {
 function T(a) {
     let { guild: i, onStart: x, onboardingStatus: t, headerId: s, disableTracking: o } = a,
         n = (0, m.e7)([y.Z], () => y.Z.isLoading()),
-        p = r.useRef(!1);
-    r.useEffect(() => {
+        p = k.useRef(!1);
+    k.useEffect(() => {
         if (!o)
             return (
                 h.default.track(B.rMx.GUILD_ONBOARDING_STEP_VIEWED, {
@@ -158,22 +158,22 @@ function T(a) {
         (p.current = !0), x();
     };
     return (
-        r.useEffect(() => {
+        k.useEffect(() => {
             setTimeout(() => {
                 d();
             }, 3000);
         }, []),
-        (0, k.jsx)(k.Fragment, {
-            children: (0, k.jsx)('div', {
+        (0, r.jsx)(r.Fragment, {
+            children: (0, r.jsx)('div', {
                 className: b.coverContainer,
-                children: (0, k.jsxs)('div', {
+                children: (0, r.jsxs)('div', {
                     className: b.centerContent,
                     children: [
-                        (0, k.jsx)(v, { guild: i }),
-                        (0, k.jsxs)('div', {
+                        (0, r.jsx)(v, { guild: i }),
+                        (0, r.jsxs)('div', {
                             className: b.coverContent,
                             children: [
-                                (0, k.jsx)(e.Text, {
+                                (0, r.jsx)(e.Text, {
                                     className: b.coverTitle,
                                     variant: 'text-md/medium',
                                     color: 'always-white',
@@ -181,15 +181,15 @@ function T(a) {
                                     children: V.intl.format(V.t['j59F/f'], { guildName: null == i ? void 0 : i.name })
                                 }),
                                 n
-                                    ? (0, k.jsx)(e.Spinner, { className: b.__invalid_subtitle })
+                                    ? (0, r.jsx)(e.Spinner, { className: b.__invalid_subtitle })
                                     : t === f.uX.NOT_APPLICABLE
-                                      ? (0, k.jsx)(e.Heading, {
+                                      ? (0, r.jsx)(e.Heading, {
                                             className: b.__invalid_subtitle,
                                             variant: 'heading-xl/semibold',
                                             color: 'always-white',
                                             children: V.intl.string(V.t.Q5ibtb)
                                         })
-                                      : (0, k.jsx)(e.Heading, {
+                                      : (0, r.jsx)(e.Heading, {
                                             className: b.__invalid_subtitle,
                                             variant: 'heading-xl/semibold',
                                             color: 'always-white',

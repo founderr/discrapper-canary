@@ -20,7 +20,7 @@ var r = n(911969),
     u = n(185923);
 function c(e) {
     var t;
-    let { activeCommandOption: n, canMentionUsers: s = !0, canMentionRoles: o = !0, canMentionChannels: u = !0, canMentionEveryone: c, canMentionClyde: d = !1, useNewSlashCommands: f, canOnlyUseTextCommands: _, canSendStickers: p, hideMentionDescription: h, hidePersonalInformation: m, type: g, emojiIntention: E, editorRef: v, onSendMessage: I, onSendSticker: b, setValue: T } = e,
+    let { activeCommandOption: n, canMentionUsers: s = !0, canMentionRoles: o = !0, canMentionChannels: u = !0, canMentionEveryone: c, canMentionClyde: d = !1, useNewSlashCommands: f, canOnlyUseTextCommands: _, canSendStickers: p, hideMentionDescription: h, hidePersonalInformation: m, type: g, emojiIntention: E, editorRef: v, onSendMessage: I, onSendSticker: T, setValue: b } = e,
         S = {
             mentions: {
                 channel: l.nS.DENY,
@@ -37,13 +37,13 @@ function c(e) {
             chatInputType: g,
             emojiIntention: E,
             sendMessage: I,
-            sendSticker: b,
+            sendSticker: T,
             insertText: (e, t) => {
                 var n;
                 null === (n = v.current) || void 0 === n || n.insertAutocomplete(e, null != t ? t : e);
             },
             replaceText: (e, t) => {
-                T(e, null != t ? t : (0, a.JM)(e));
+                b(e, null != t ? t : (0, a.JM)(e));
             },
             getCommandOptionValues: () => {
                 var e;

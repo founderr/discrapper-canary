@@ -23,22 +23,22 @@ r.inherits(c, u),
     (c.hmacStrength = 192),
     (c.padLength = 64),
     (c.prototype._update = function (e, t) {
-        for (var n = this.h[0], r = this.h[1], i = this.h[2], u = this.h[3], c = this.h[4], m = n, g = r, E = i, v = u, I = c, b = 0; b < 80; b++) {
-            var T = s(
+        for (var n = this.h[0], r = this.h[1], i = this.h[2], u = this.h[3], c = this.h[4], m = n, g = r, E = i, v = u, I = c, T = 0; T < 80; T++) {
+            var b = s(
                 a(
                     l(
                         n,
-                        d(b, r, i, u),
-                        e[f[b] + t],
+                        d(T, r, i, u),
+                        e[f[T] + t],
                         (function (e) {
                             if (e <= 15) return 0;
                             if (e <= 31) return 1518500249;
                             if (e <= 47) return 1859775393;
                             else if (e <= 63) return 2400959708;
                             else return 2840853838;
-                        })(b)
+                        })(T)
                     ),
-                    p[b]
+                    p[T]
                 ),
                 c
             );
@@ -46,22 +46,22 @@ r.inherits(c, u),
                 (c = u),
                 (u = a(i, 10)),
                 (i = r),
-                (r = T),
-                (T = s(
+                (r = b),
+                (b = s(
                     a(
                         l(
                             m,
-                            d(79 - b, g, E, v),
-                            e[_[b] + t],
+                            d(79 - T, g, E, v),
+                            e[_[T] + t],
                             (function (e) {
                                 if (e <= 15) return 1352829926;
                                 if (e <= 31) return 1548603684;
                                 if (e <= 47) return 1836072691;
                                 else if (e <= 63) return 2053994217;
                                 else return 0;
-                            })(b)
+                            })(T)
                         ),
-                        h[b]
+                        h[T]
                     ),
                     I
                 )),
@@ -69,9 +69,9 @@ r.inherits(c, u),
                 (I = v),
                 (v = a(E, 10)),
                 (E = g),
-                (g = T);
+                (g = b);
         }
-        (T = o(this.h[1], i, v)), (this.h[1] = o(this.h[2], u, I)), (this.h[2] = o(this.h[3], c, m)), (this.h[3] = o(this.h[4], n, g)), (this.h[4] = o(this.h[0], r, E)), (this.h[0] = T);
+        (b = o(this.h[1], i, v)), (this.h[1] = o(this.h[2], u, I)), (this.h[2] = o(this.h[3], c, m)), (this.h[3] = o(this.h[4], n, g)), (this.h[4] = o(this.h[0], r, E)), (this.h[0] = b);
     }),
     (c.prototype._digest = function (e) {
         return 'hex' === e ? r.toHex32(this.h, 'little') : r.split32(this.h, 'little');

@@ -41,12 +41,12 @@ let v = {
         duration: 150,
         friction: 3
     },
-    b = {
+    T = {
         friction: 30,
         tension: 900,
         mass: 1
     },
-    T = {
+    b = {
         duration: 150,
         friction: 10,
         tension: 100,
@@ -162,7 +162,7 @@ class N extends (i = s.Component) {
                       .update({
                           spring: 1,
                           immediate: !document.hasFocus(),
-                          config: b
+                          config: T
                       })
                       .start()
                 : null == n &&
@@ -172,7 +172,7 @@ class N extends (i = s.Component) {
                           .update({
                               spring: 0,
                               immediate: !document.hasFocus(),
-                              config: T
+                              config: b
                           })
                           .start()),
             null != r && null == e.upperBadge
@@ -181,7 +181,7 @@ class N extends (i = s.Component) {
                       .update({
                           spring: 1,
                           immediate: !document.hasFocus(),
-                          config: b
+                          config: T
                       })
                       .start()
                 : null == r &&
@@ -191,7 +191,7 @@ class N extends (i = s.Component) {
                           .update({
                               spring: 0,
                               immediate: !document.hasFocus(),
-                              config: T
+                              config: b
                           })
                           .start()),
             !o || A(this.props) || this.timeout.isStarted() ? A(this.props) && this.timeout.isStarted() && this.timeout.stop() : this.timeout.start(d()(10800000, 18000000), this.handleTimeout);
@@ -268,8 +268,8 @@ class N extends (i = s.Component) {
                 },
                 'wrapper'
             );
-        let b = ''.concat(d, '-upper_badge_masks'),
-            T = ''.concat(d, '-lower_badge_masks'),
+        let T = ''.concat(d, '-upper_badge_masks'),
+            b = ''.concat(d, '-lower_badge_masks'),
             S = ''.concat(d, '-blob_mask'),
             A = ''.concat(d, '-stroke_mask'),
             N = ''.concat(d, '-highlight_mask'),
@@ -305,7 +305,7 @@ class N extends (i = s.Component) {
                                         }),
                                         v
                                             ? (0, a.jsx)(f.animated.rect, {
-                                                  id: b,
+                                                  id: T,
                                                   x: 28,
                                                   y: -4,
                                                   width: 24,
@@ -317,7 +317,7 @@ class N extends (i = s.Component) {
                                             : null,
                                         v
                                             ? (0, a.jsx)(f.animated.rect, {
-                                                  id: T,
+                                                  id: b,
                                                   x: 48 - (C + 8) + 4,
                                                   y: 48 - (R + 8) + 4,
                                                   width: C + 8,
@@ -351,11 +351,11 @@ class N extends (i = s.Component) {
                                             ? (0, a.jsxs)(a.Fragment, {
                                                   children: [
                                                       (0, a.jsx)('use', {
-                                                          href: '#'.concat(b),
+                                                          href: '#'.concat(T),
                                                           fill: 'black'
                                                       }),
                                                       (0, a.jsx)('use', {
-                                                          href: '#'.concat(T),
+                                                          href: '#'.concat(b),
                                                           fill: 'black'
                                                       })
                                                   ]
@@ -375,11 +375,11 @@ class N extends (i = s.Component) {
                                                   fill: 'white'
                                               }),
                                               (0, a.jsx)('use', {
-                                                  href: '#'.concat(b),
+                                                  href: '#'.concat(T),
                                                   fill: 'black'
                                               }),
                                               (0, a.jsx)('use', {
-                                                  href: '#'.concat(T),
+                                                  href: '#'.concat(b),
                                                   fill: 'black'
                                               })
                                           ]
@@ -395,7 +395,7 @@ class N extends (i = s.Component) {
                                               }),
                                               (0, a.jsxs)('g', {
                                                   className: g.focusFill,
-                                                  children: [null != u ? (0, a.jsx)('use', { href: '#'.concat(b) }) : null, null != r ? (0, a.jsx)('use', { href: '#'.concat(T) }) : null]
+                                                  children: [null != u ? (0, a.jsx)('use', { href: '#'.concat(T) }) : null, null != r ? (0, a.jsx)('use', { href: '#'.concat(b) }) : null]
                                               })
                                           ]
                                       })

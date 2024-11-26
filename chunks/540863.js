@@ -14,8 +14,8 @@ let l = i.forwardRef(function (e, t) {
     let { children: u, disabled: c = !1, className: d, titleClassName: f, tag: _ = 'h5', required: p = !1, style: h, title: m, error: g, ...E } = e,
         v = i.useId(),
         I = i.useId(),
-        b = null !== (n = E.titleId) && void 0 !== n ? n : v,
-        T = null != g ? (null !== (l = E.errorId) && void 0 !== l ? l : I) : void 0,
+        T = null !== (n = E.titleId) && void 0 !== n ? n : v,
+        b = null != g ? (null !== (l = E.errorId) && void 0 !== l ? l : I) : void 0,
         [S, y] = i.useState(void 0),
         [A, N] = i.useState(void 0),
         C = void 0 !== A;
@@ -24,8 +24,8 @@ let l = i.forwardRef(function (e, t) {
         className: null != d ? d : void 0,
         style: null != h ? h : void 0,
         children: (0, r.jsx)(a.ol, {
-            titleId: b,
-            errorId: T,
+            titleId: T,
+            errorId: b,
             error: null != g ? g : void 0,
             isFocused: S,
             setIsFocused: y,
@@ -41,8 +41,8 @@ let l = i.forwardRef(function (e, t) {
                               required: p,
                               error: g,
                               className: f,
-                              id: b,
-                              errorId: T,
+                              id: T,
+                              errorId: b,
                               ...E,
                               children: m
                           })

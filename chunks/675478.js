@@ -12,7 +12,7 @@ n.d(t, {
         return C;
     },
     T6: function () {
-        return T;
+        return b;
     },
     Z1: function () {
         return w;
@@ -21,7 +21,7 @@ n.d(t, {
         return N;
     },
     bE: function () {
-        return P;
+        return M;
     },
     fy: function () {
         return g.fy;
@@ -33,7 +33,7 @@ n.d(t, {
         return O;
     },
     sr: function () {
-        return M;
+        return P;
     },
     w9: function () {
         return x;
@@ -84,8 +84,8 @@ function v(e, t, n) {
     );
 }
 let I = 'UserSettingsProtoLastWriteTimes',
-    b = Date.now();
-function T() {}
+    T = Date.now();
+function b() {}
 d.Z.subscribe('CONNECTION_OPEN', () => {
     Date.now();
 }),
@@ -386,7 +386,7 @@ function w(e) {
         g.fy.INFREQUENT_USER_ACTION
     );
 }
-function M() {
+function P() {
     return y.updateAsync(
         'userContent',
         (e) => {
@@ -395,7 +395,7 @@ function M() {
         g.fy.INFREQUENT_USER_ACTION
     );
 }
-function P() {
+function M() {
     return y.updateAsync(
         'userContent',
         (e) => {

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return I;
     }
 }),
     n(47120);
@@ -20,9 +20,9 @@ var i = n(200651),
     x = n(358085),
     S = n(210887),
     T = n(981631),
-    C = n(388032),
+    E = n(388032),
     _ = n(823879);
-let E = [
+let C = [
     {
         label: 'Latin alphabet',
         value: 'aBcDeFgHiJkLmNoPqRsTuVwXyZ'
@@ -52,13 +52,13 @@ let E = [
         value: 'custom'
     }
 ];
-function f() {
+function I() {
     let [e, t] = s.useState(Math.round((window.outerWidth / window.innerWidth) * 100)),
         { platformZoom: n, theme: r } = (0, a.cj)([S.Z, h.Z], () => ({
             theme: S.Z.theme,
             platformZoom: h.Z.zoom
         })),
-        [f, I] = s.useState('upright'),
+        [I, f] = s.useState('upright'),
         N = ['normal', 'medium', 'semibold', 'bold', 'extrabold'],
         A = new Map([
             ['normal', 400],
@@ -79,22 +79,22 @@ function f() {
             return (0, p.fD)() ? (null === (t = g.C.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
         [j, O] = (0, m.R)('playground-overrideText', null),
-        [R, P] = (0, m.R)('playground-defaultText', E[0].value),
+        [R, P] = (0, m.R)('playground-defaultText', C[0].value),
         D = s.useCallback(
             (e) => {
-                let t = E.find((t) => {
+                let t = C.find((t) => {
                     let { value: n } = t;
                     return n === e;
                 });
-                '' === e || null == e ? (P(E[0].value), O(null)) : null != t ? P(t.value) : (P('custom'), O(e));
+                '' === e || null == e ? (P(C[0].value), O(null)) : null != t ? P(t.value) : (P('custom'), O(e));
             },
             [O, P]
         );
     return (0, i.jsx)('div', {
         className: _.fullscreen,
         style: {
-            '--playground-font-family': 'mono' === f ? 'gg mono' : 'gg sans',
-            '--playground-font-style': 'italic' === f ? 'italic' : 'normal'
+            '--playground-font-family': 'mono' === I ? 'gg mono' : 'gg sans',
+            '--playground-font-style': 'italic' === I ? 'italic' : 'normal'
         },
         children: (0, i.jsxs)(o.FormSection, {
             tag: o.FormTitleTags.H1,
@@ -127,7 +127,7 @@ function f() {
                         (0, i.jsx)(o.FormItem, {
                             children: (0, i.jsx)(o.SingleSelect, {
                                 className: _.select,
-                                options: E,
+                                options: C,
                                 onChange: (e) => D(e),
                                 value: R
                             })
@@ -149,11 +149,11 @@ function f() {
                                 orientation: 'horizontal',
                                 options: [
                                     {
-                                        name: C.intl.string(C.t.b8Cei4),
+                                        name: E.intl.string(E.t.b8Cei4),
                                         value: T.BRd.DARK
                                     },
                                     {
-                                        name: C.intl.string(C.t.K2sFfn),
+                                        name: E.intl.string(E.t.K2sFfn),
                                         value: T.BRd.LIGHT
                                     }
                                 ],
@@ -183,9 +183,9 @@ function f() {
                                     }
                                 ],
                                 onChange: (e) => {
-                                    I(e.value);
+                                    f(e.value);
                                 },
-                                value: f
+                                value: I
                             })
                         }),
                         (0, i.jsx)(u.Z, {

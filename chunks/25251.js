@@ -27,7 +27,7 @@ let E = 0,
     I = () => {
         v(f), (g = null), (i = void 0), (p = !1);
     };
-class b extends (l = c.ZP.Store) {
+class T extends (l = c.ZP.Store) {
     get isFetching() {
         return p;
     }
@@ -51,7 +51,7 @@ class b extends (l = c.ZP.Store) {
     }
 }
 (o = 'ProfileEffectStore'),
-    (s = 'displayName') in (a = b)
+    (s = 'displayName') in (a = T)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -59,7 +59,7 @@ class b extends (l = c.ZP.Store) {
               writable: !0
           })
         : (a[s] = o),
-    (t.Z = new b(d.Z, {
+    (t.Z = new T(d.Z, {
         USER_PROFILE_EFFECTS_FETCH: () => {
             p = !0;
         },

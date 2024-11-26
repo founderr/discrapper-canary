@@ -134,18 +134,18 @@ function I(e) {
     }
     return t;
 }
-function b(e, t) {
+function T(e, t) {
     let n = !1;
     for (let r of e) n = !1 !== t(r) || n;
     return n;
 }
-function T(e) {
+function b(e) {
     let { messages: t } = e;
-    return b(t, (e) => I(e));
+    return T(t, (e) => I(e));
 }
 function S(e) {
     let { messages: t } = e;
-    return b(t, (e) => b(e, (e) => I(e)));
+    return T(t, (e) => T(e, (e) => I(e)));
 }
 function y(e) {
     return v.deleteChannelCache(e.channel.id);
@@ -159,7 +159,7 @@ function N() {
 }
 function C(e) {
     let { firstMessages: t } = e;
-    return null != t && b(t, (e) => I(e));
+    return null != t && T(t, (e) => I(e));
 }
 class R extends (i = l.ZP.Store) {
     initialize() {
@@ -182,11 +182,11 @@ h(R, 'displayName', 'ReferencedMessageStore'),
     (t.Z = new R(u.Z, {
         CACHE_LOADED: function (e) {
             let { messages: t } = e;
-            return b(Object.values(t), (e) => b(Object.values(e), (e) => I(e)));
+            return T(Object.values(t), (e) => T(Object.values(e), (e) => I(e)));
         },
-        LOCAL_MESSAGES_LOADED: T,
-        LOAD_MESSAGES_SUCCESS: T,
-        LOAD_MESSAGES_AROUND_SUCCESS: T,
+        LOCAL_MESSAGES_LOADED: b,
+        LOAD_MESSAGES_SUCCESS: b,
+        LOAD_MESSAGES_AROUND_SUCCESS: b,
         SEARCH_FINISH: S,
         MOD_VIEW_SEARCH_FINISH: S,
         LOAD_THREADS_SUCCESS: C,
@@ -203,7 +203,7 @@ h(R, 'displayName', 'ReferencedMessageStore'),
         },
         LOAD_FORUM_POSTS: function (e) {
             let { threads: t } = e;
-            return b(Object.values(t), (e) => {
+            return T(Object.values(t), (e) => {
                 let { first_message: t } = e;
                 return null != t && I(t);
             });
@@ -230,7 +230,7 @@ h(R, 'displayName', 'ReferencedMessageStore'),
         },
         MESSAGE_DELETE_BULK: function (e) {
             let { ids: t, channelId: n } = e;
-            return b(t, (e) => A(n, e));
+            return T(t, (e) => A(n, e));
         },
         CREATE_PENDING_REPLY: function (e) {
             let { message: t } = e;

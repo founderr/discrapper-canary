@@ -15,7 +15,7 @@ var i,
 let d = new Map(),
     f = new Map();
 ((l = i || (i = {}))[(l.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (l[(l.FETCHING = 1)] = 'FETCHING'), (l[(l.FETCHED = 2)] = 'FETCHED');
-class p extends (r = s.ZP.Store) {
+class _ extends (r = s.ZP.Store) {
     getPriceTiersFetchStateForGuildAndType(e, t) {
         var n, i;
         return null !== (i = null === (n = f.get(e)) || void 0 === n ? void 0 : n.get(t)) && void 0 !== i ? i : 0;
@@ -26,7 +26,7 @@ class p extends (r = s.ZP.Store) {
     }
 }
 (a = 'CreatorMonetizationStore'),
-    (u = 'displayName') in (o = p)
+    (u = 'displayName') in (o = _)
         ? Object.defineProperty(o, u, {
               value: a,
               enumerable: !0,
@@ -34,7 +34,7 @@ class p extends (r = s.ZP.Store) {
               writable: !0
           })
         : (o[u] = a),
-    (t.Z = new p(c.Z, {
+    (t.Z = new _(c.Z, {
         CONNECTION_OPEN: function () {
             d.clear(), f.clear();
         },

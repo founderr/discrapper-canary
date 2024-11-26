@@ -1,5 +1,5 @@
-var n = r(657398),
-    a = r(389109);
+var a = r(657398),
+    n = r(389109);
 e.exports = function (e) {
-    return a(e) && '[object Arguments]' == n(e);
+    return n(e) && '[object Arguments]' == a(e);
 };

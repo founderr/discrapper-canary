@@ -86,11 +86,11 @@ function I(e) {
     return 'undefined' != typeof WeakMap && (v.working ? v(e) : e instanceof WeakMap);
 }),
     (I.working = 'undefined' != typeof WeakSet && I(new WeakSet()));
-function b(e) {
+function T(e) {
     return '[object ArrayBuffer]' === c(e);
 }
-function T(e) {
-    return 'undefined' != typeof ArrayBuffer && (b.working ? b(e) : e instanceof ArrayBuffer);
+function b(e) {
+    return 'undefined' != typeof ArrayBuffer && (T.working ? T(e) : e instanceof ArrayBuffer);
 }
 function S(e) {
     return '[object DataView]' === c(e);
@@ -101,8 +101,8 @@ function y(e) {
 (t.isWeakSet = function (e) {
     return I(e);
 }),
-    (b.working = 'undefined' != typeof ArrayBuffer && b(new ArrayBuffer())),
-    (t.isArrayBuffer = T),
+    (T.working = 'undefined' != typeof ArrayBuffer && T(new ArrayBuffer())),
+    (t.isArrayBuffer = b),
     (S.working = 'undefined' != typeof ArrayBuffer && 'undefined' != typeof DataView && S(new DataView(new ArrayBuffer(1), 0, 1))),
     (t.isDataView = y);
 var A = 'undefined' != typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
@@ -152,7 +152,7 @@ t.isBoxedPrimitive = function (e) {
     return R(e) || O(e) || D(e) || L(e) || x(e);
 };
 (t.isAnyArrayBuffer = function (e) {
-    return 'undefined' != typeof Uint8Array && (T(e) || C(e));
+    return 'undefined' != typeof Uint8Array && (b(e) || C(e));
 }),
     ['isProxy', 'isExternal', 'isModuleNamespaceObject'].forEach(function (e) {
         Object.defineProperty(t, e, {

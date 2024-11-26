@@ -23,8 +23,8 @@ var r = n(200651),
     E = n(197115),
     v = n(587446),
     I = n(594174),
-    b = n(626135),
-    T = n(74538),
+    T = n(626135),
+    b = n(74538),
     S = n(238302),
     y = n(514361),
     A = n(572397),
@@ -73,13 +73,13 @@ let x = () =>
             ]
         });
     },
-    M = (e) => {
+    P = (e) => {
         var t, n, i;
         let { onSubscribeSuccess: a, markAsDismissed: s } = e,
             { analyticsLocations: o } = (0, m.ZP)(h.Z.CLIENT_THEMES_EDITOR),
-            [f, _] = (0, l.Wu)([I.default, y.Z], () => [y.Z.gradientPreset, T.ZP.isPremium(I.default.getCurrentUser())]),
+            [f, _] = (0, l.Wu)([I.default, y.Z], () => [y.Z.gradientPreset, b.ZP.isPremium(I.default.getCurrentUser())]),
             p = (0, g.N)(),
-            v = (0, T.Rt)({
+            v = (0, b.Rt)({
                 intervalType: null == p ? void 0 : null === (t = p.subscription_trial) || void 0 === t ? void 0 : t.interval,
                 intervalCount: null == p ? void 0 : null === (n = p.subscription_trial) || void 0 === n ? void 0 : n.interval_count
             });
@@ -102,7 +102,7 @@ let x = () =>
             }
         });
     },
-    P = (e) => {
+    M = (e) => {
         let { markAsDismissed: t } = e,
             { isPreview: n, isCoachmark: a } = (0, l.cj)([y.Z], () => ({
                 isPreview: y.Z.isPreview,
@@ -122,7 +122,7 @@ let x = () =>
             className: L.editorFooter,
             children: [
                 n &&
-                    (0, r.jsx)(M, {
+                    (0, r.jsx)(P, {
                         onSubscribeSuccess: () => {
                             u(!0);
                         },
@@ -158,7 +158,7 @@ function k(e) {
     i.useEffect(() => f(C.rMx.CLIENT_THEME_PREVIEW_VIEWED), [f]),
         i.useEffect(() => {
             if (!!a)
-                b.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
+                T.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: O.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                     location_stack: n
                 });
@@ -184,7 +184,7 @@ function k(e) {
                                 children: [!a && (0, r.jsx)(N.ZP.Basic, { className: L.selectionGroup }), (0, r.jsx)(N.ZP.Gradient, { className: L.selectionGroup })]
                             })
                         }),
-                        (0, r.jsx)(P, { markAsDismissed: t })
+                        (0, r.jsx)(M, { markAsDismissed: t })
                     ]
                 })
             })

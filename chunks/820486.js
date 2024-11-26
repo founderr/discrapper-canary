@@ -37,19 +37,19 @@ let g = {},
         id: null,
         justChanged: !1
     },
-    S = {
+    N = {
         id: null,
         justChanged: !1
     },
-    N = /\(([^)]+)\)/;
+    S = /\(([^)]+)\)/;
 function T(e) {
     if ((0, d.getPlatform)() === d.PlatformTypes.WINDOWS) {
-        let t = e.name.match(N);
+        let t = e.name.match(S);
         if (null != t) return t[1];
     }
     return e.name;
 }
-function A(e, t, n) {
+function x(e, t, n) {
     return null == e || e.displayName !== t
         ? {
               displayName: t,
@@ -85,7 +85,7 @@ class b extends (i = a.ZP.DeviceSettingsStore) {
         return I;
     }
     get lastOutputSystemDevice() {
-        return S;
+        return N;
     }
 }
 p(b, 'displayName', 'ConnectedDeviceStore'),
@@ -104,12 +104,12 @@ p(b, 'displayName', 'ConnectedDeviceStore'),
                 });
             let r = {};
             if (
-                ((S.justChanged = !1),
+                ((N.justChanged = !1),
                 n.forEach((e) => {
                     if (((r[T(e)] = e.id), e.id === m.w5)) {
                         var t;
                         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-                        n !== S.id && (S.justChanged = !0), (S.id = n);
+                        n !== N.id && (N.justChanged = !0), (N.id = n);
                     }
                 }),
                 !_)
@@ -129,12 +129,12 @@ p(b, 'displayName', 'ConnectedDeviceStore'),
                     : (l()
                           .difference(s, a)
                           .forEach((e) => {
-                              C[e] = A(C[e], e, h.QyF.INPUT);
+                              C[e] = x(C[e], e, h.QyF.INPUT);
                           }),
                       l()
                           .difference(c, o)
                           .forEach((e) => {
-                              C[e] = A(C[e], e, h.QyF.OUTPUT);
+                              C[e] = x(C[e], e, h.QyF.OUTPUT);
                           })),
                 !(l().isEqual(a, s) && l().isEqual(o, c)) && ((E = i), (I = r), !0)
             );

@@ -17,8 +17,8 @@ let g = h.YN.GLOBAL_FEED,
     E = new Map(),
     v = new Set(),
     I = new Map(),
-    b = null,
-    T = (0, r.debounce)(f.yK, 3000, { trailing: !0 });
+    T = null,
+    b = (0, r.debounce)(f.yK, 3000, { trailing: !0 });
 function S(e, t) {
     i.Z.dispatch({
         type: 'CONTENT_INVENTORY_SET_FEED_STATE',
@@ -46,9 +46,9 @@ function N(e) {
 function C() {
     if ((N(g), !A(g))) return;
     let e = p.Z.getFeed(g);
-    if ((null == e ? void 0 : e.refresh_stale_inbox_after_ms) != null && null == b) return;
+    if ((null == e ? void 0 : e.refresh_stale_inbox_after_ms) != null && null == T) return;
     let t = (null == e ? void 0 : e.expired_at) == null ? 0 : new Date(e.expired_at).getTime() - Date.now(),
-        n = Math.max(0, null == b ? 0 : new Date(b).getTime() - Date.now(), t);
+        n = Math.max(0, null == T ? 0 : new Date(T).getTime() - Date.now(), t);
     S(g, {
         loading: !1,
         nextFetchDate: new Date(Date.now() + n)
@@ -76,7 +76,7 @@ async function R(e) {
                 I.set(e, 0),
                 v.delete(e),
                 S(e, { loading: !1 }),
-                e === g && ((b = null), C());
+                e === g && ((T = null), C());
         } catch (a) {
             var n;
             let r = null !== (n = I.get(e)) && void 0 !== n ? n : 0;
@@ -105,17 +105,17 @@ function D(e) {
 function L(e) {
     let { refreshAfterMs: t } = e,
         n = p.Z.getFeed(g);
-    if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null) (b = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString()), C();
+    if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null) (T = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString()), C();
 }
 function x(e) {
     var t;
     let { connectionId: n, track: r } = e;
-    if (null != n && !!(0, d.Dy)('ContentInventoryManager.handleSpotifyNewTrack')) (null === (t = l.Z.getAccount(n, m.ABu.SPOTIFY)) || void 0 === t ? void 0 : t.showActivity) && T(n, r);
+    if (null != n && !!(0, d.Dy)('ContentInventoryManager.handleSpotifyNewTrack')) (null === (t = l.Z.getAccount(n, m.ABu.SPOTIFY)) || void 0 === t ? void 0 : t.showActivity) && b(n, r);
 }
 function w() {
     R(h.YN.GAME_PROFILE_FEED);
 }
-class M extends a.Z {
+class P extends a.Z {
     constructor(...e) {
         var t, n, r;
         super(...e),
@@ -143,4 +143,4 @@ class M extends a.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new M();
+t.Z = new P();

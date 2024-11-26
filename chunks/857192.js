@@ -68,7 +68,7 @@ let g = (() => {
         isStreamInfoOverlayEnabled: !1
     },
     I = { ...v };
-function b(e) {
+function T(e) {
     (I = {
         ...v,
         ...I,
@@ -77,7 +77,7 @@ function b(e) {
         g.set(I.sourceMapsEnabled),
         d.K.set(E, I);
 }
-class T extends (r = u.ZP.Store) {
+class b extends (r = u.ZP.Store) {
     initialize() {
         let e = d.K.get(E);
         null != e &&
@@ -138,7 +138,7 @@ class T extends (r = u.ZP.Store) {
     }
 }
 (s = 'DeveloperOptionsStore'),
-    (a = 'displayName') in (i = T)
+    (a = 'displayName') in (i = b)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -146,9 +146,9 @@ class T extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.default = new T(f.Z, {
+    (t.default = new b(f.Z, {
         LOGOUT: function (e) {
-            b(v);
+            T(v);
         },
         CONNECTION_OPEN: function (e) {
             var t;
@@ -158,6 +158,6 @@ class T extends (r = u.ZP.Store) {
         },
         DEVELOPER_OPTIONS_UPDATE_SETTINGS: function (e) {
             let { settings: t } = e;
-            b(t);
+            T(t);
         }
     }));

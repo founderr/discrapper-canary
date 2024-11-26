@@ -1,6 +1,6 @@
 n.d(t, {
     z6: function () {
-        return b;
+        return T;
     }
 }),
     n(789020),
@@ -36,7 +36,7 @@ let E = function (e, t) {
         return null == e || null == t ? ['no match'] : ((0, h.yE)(t.flags, g.udG.GAME_PROFILE_DISABLED) && n.push('profile disabled'), e.themes.includes(l.i.EROTIC) && n.push('nsfw'), (null == e.summary || 0 === e.summary.length) && n.push('no summary'), (null == e.summary || 0 === e.summary.length) && n.push('no summary'), n);
     },
     I = (e, t) => 0 === v(e, t).length,
-    b = (e) => {
+    T = (e) => {
         let t = _.Z.getGame(e);
         return I(t, d.Z.getApplication(e));
     };

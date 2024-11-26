@@ -43,12 +43,12 @@ e.exports = function (e) {
                 E = '[0-9](_?[0-9])*',
                 v = `\\.(${E})`,
                 I = '0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*',
-                b = {
+                T = {
                     className: 'number',
                     variants: [{ begin: `(\\b(${I})((${v})|\\.)?|(${v}))[eE][+-]?(${E})\\b` }, { begin: `\\b(${I})\\b((${v})\\b|\\.)?|(${v})\\b` }, { begin: '\\b(0|[1-9](_?[0-9])*)n\\b' }, { begin: '\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b' }, { begin: '\\b0[bB][0-1](_?[0-1])*n?\\b' }, { begin: '\\b0[oO][0-7](_?[0-7])*n?\\b' }, { begin: '\\b0[0-7]+n?\\b' }],
                     relevance: 0
                 },
-                T = {
+                b = {
                     className: 'subst',
                     begin: '\\$\\{',
                     end: '\\}',
@@ -61,7 +61,7 @@ e.exports = function (e) {
                     starts: {
                         end: '`',
                         returnEnd: !1,
-                        contains: [e.BACKSLASH_ESCAPE, T],
+                        contains: [e.BACKSLASH_ESCAPE, b],
                         subLanguage: 'xml'
                     }
                 },
@@ -71,7 +71,7 @@ e.exports = function (e) {
                     starts: {
                         end: '`',
                         returnEnd: !1,
-                        contains: [e.BACKSLASH_ESCAPE, T],
+                        contains: [e.BACKSLASH_ESCAPE, b],
                         subLanguage: 'css'
                     }
                 },
@@ -79,7 +79,7 @@ e.exports = function (e) {
                     className: 'string',
                     begin: '`',
                     end: '`',
-                    contains: [e.BACKSLASH_ESCAPE, T]
+                    contains: [e.BACKSLASH_ESCAPE, b]
                 },
                 N = {
                     className: 'comment',
@@ -121,14 +121,14 @@ e.exports = function (e) {
                         e.C_LINE_COMMENT_MODE
                     ]
                 },
-                C = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, S, y, A, { match: /\$\d+/ }, b];
-            T.contains = C.concat({
+                C = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, S, y, A, { match: /\$\d+/ }, T];
+            b.contains = C.concat({
                 begin: /\{/,
                 end: /\}/,
                 keywords: g,
                 contains: ['self'].concat(C)
             });
-            let R = [].concat(N, T.contains),
+            let R = [].concat(N, b.contains),
                 O = R.concat([
                     {
                         begin: /\(/,
@@ -179,7 +179,7 @@ e.exports = function (e) {
                     className: 'title.function',
                     relevance: 0
                 },
-                M = {
+                P = {
                     begin: c.concat(/\./, c.lookahead(c.concat(t, /(?![0-9A-Za-z$_(])/))),
                     end: t,
                     excludeBegin: !0,
@@ -187,9 +187,9 @@ e.exports = function (e) {
                     className: 'property',
                     relevance: 0
                 },
-                P = '(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|' + e.UNDERSCORE_IDENT_RE + ')\\s*=>',
+                M = '(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|' + e.UNDERSCORE_IDENT_RE + ')\\s*=>',
                 k = {
-                    match: [/const|var|let/, /\s+/, t, /\s*/, /=\s*/, /(async\s*)?/, c.lookahead(P)],
+                    match: [/const|var|let/, /\s+/, t, /\s*/, /=\s*/, /(async\s*)?/, c.lookahead(M)],
                     keywords: 'async',
                     className: {
                         1: 'keyword',
@@ -225,7 +225,7 @@ e.exports = function (e) {
                     A,
                     N,
                     { match: /\$\d+/ },
-                    b,
+                    T,
                     x,
                     {
                         className: 'attr',
@@ -242,7 +242,7 @@ e.exports = function (e) {
                             e.REGEXP_MODE,
                             {
                                 className: 'function',
-                                begin: P,
+                                begin: M,
                                 returnBegin: !0,
                                 end: '\\s*=>',
                                 contains: [
@@ -337,7 +337,7 @@ e.exports = function (e) {
                         match: /\.\.\./,
                         relevance: 0
                     },
-                    M,
+                    P,
                     {
                         match: '\\$' + t,
                         relevance: 0

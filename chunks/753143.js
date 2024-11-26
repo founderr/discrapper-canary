@@ -25,8 +25,8 @@ function l(e) {
         [v] = (0, r.useState)(() => new i.Z()),
         {
             dirty: I,
-            chunkStart: b,
-            chunkEnd: T,
+            chunkStart: T,
+            chunkEnd: b,
             forceUpdateOnChunkChange: S
         } = (0, s.Z)({
             chunkSize: f,
@@ -51,9 +51,9 @@ function l(e) {
         }
     }
     let C = (0, r.useMemo)(() => {
-            let e = Math.max(0, b * f);
+            let e = Math.max(0, T * f);
             return null != c && e < c;
-        }, [f, b, c]),
+        }, [f, T, c]),
         R = (0, r.useMemo)(
             () =>
                 I > 0
@@ -68,8 +68,8 @@ function l(e) {
                           sections: t,
                           getAnchorId: m
                       }),
-                      v.compute(Math.max(0, b * f), T * f)),
-            [I, b, T, n, l, u, d, p, _, t, v, f, m]
+                      v.compute(Math.max(0, T * f), b * f)),
+            [I, T, b, n, l, u, d, p, _, t, v, f, m]
         );
     return (
         (0, r.useLayoutEffect)(() => void (E.current = R)),

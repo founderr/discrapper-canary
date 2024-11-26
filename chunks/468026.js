@@ -17,7 +17,7 @@ t.default = (e) => {
     let t,
         n,
         i,
-        { body: m, cancelText: g, className: E, confirmColor: v, confirmText: I = p.intl.string(p.t.BddRzc), secondaryConfirmText: b, onCancel: T, onClose: S, onConfirm: y, onConfirmSecondary: A, title: N, transitionState: C, titleClassName: R } = e,
+        { body: m, cancelText: g, className: E, confirmColor: v, confirmText: I = p.intl.string(p.t.BddRzc), secondaryConfirmText: T, onCancel: b, onClose: S, onConfirm: y, onConfirmSecondary: A, title: N, transitionState: C, titleClassName: R } = e,
         O = (0, _.Q)('ConfirmModal'),
         D = O ? s.zx.Sizes.MEDIUM : s.zx.Sizes.LARGE;
     return (
@@ -28,7 +28,7 @@ t.default = (e) => {
                 size: D,
                 color: s.zx.Colors.PRIMARY,
                 onClick: () => {
-                    null == S || S(), null == T || T();
+                    null == S || S(), null == b || b();
                 },
                 className: h.secondaryButton,
                 grow: !O,
@@ -45,8 +45,8 @@ t.default = (e) => {
                 grow: !O,
                 children: I
             })),
-        null != b &&
-            '' !== b &&
+        null != T &&
+            '' !== T &&
             (i = (0, r.jsx)(o.P, {
                 onClick: () => {
                     null == S || S(), null == A || A();
@@ -55,7 +55,7 @@ t.default = (e) => {
                 children: (0, r.jsx)(c.x, {
                     className: h.secondaryAction,
                     variant: 'text-xs/normal',
-                    children: b
+                    children: T
                 })
             })),
         (0, r.jsx)(u.Y0, {

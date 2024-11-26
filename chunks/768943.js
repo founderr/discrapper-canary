@@ -33,7 +33,7 @@ function I(e) {
     let { channelId: t, messageId: n } = e;
     return ''.concat(t, '-').concat(n);
 }
-function b(e) {
+function T(e) {
     var t;
     let n = I(e.saveData);
     null == _.get(n) && (h = Date.now()), _.set(n, e);
@@ -42,7 +42,7 @@ function b(e) {
         a = null !== (t = E.get(i)) && void 0 !== t ? t : new Set();
     a.add(r), E.set(i, a), null == e.message && g.add(r), null != e.saveData.dueAt && new Date() > e.saveData.dueAt ? m.add(r) : m.delete(r);
 }
-function T(e) {
+function b(e) {
     let { messageId: t, channelId: n } = e,
         r = I({
             messageId: t,
@@ -128,11 +128,11 @@ class y extends (r = o.ZP.Store) {
         },
         SAVED_MESSAGES_UPDATE: function (e) {
             let { savedMessages: t } = e;
-            for (let e of ((p = !1), _.clear(), E.clear(), g.clear(), t)) b(e);
+            for (let e of ((p = !1), _.clear(), E.clear(), g.clear(), t)) T(e);
         },
         SAVED_MESSAGE_CREATE: function (e) {
             let { savedMessage: t } = e;
-            b(t);
+            T(t);
         },
         SAVED_MESSAGE_DELETE: function (e) {
             let { savedMessageData: t } = e;
@@ -148,7 +148,7 @@ class y extends (r = o.ZP.Store) {
         },
         MESSAGE_DELETE: function (e) {
             let { id: t, channelId: n } = e;
-            return T({
+            return b({
                 messageId: t,
                 channelId: n
             });
@@ -156,7 +156,7 @@ class y extends (r = o.ZP.Store) {
         MESSAGE_DELETE_BULK: function (e) {
             let { ids: t, channelId: n } = e;
             for (let e of t)
-                T({
+                b({
                     messageId: e,
                     channelId: n
                 });

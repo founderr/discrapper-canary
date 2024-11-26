@@ -17,8 +17,8 @@ var r,
     E = n(391690),
     v = n(70956),
     I = n(780570),
-    b = n(804739);
-let T = new Set(),
+    T = n(804739);
+let b = new Set(),
     S = {},
     y = new Set(),
     A = {},
@@ -32,14 +32,14 @@ function x(e) {
     L.start(e + Math.random() * R, f.o);
 }
 function w() {
-    if (!(0, b.Q)()) return !1;
+    if (!(0, T.Q)()) return !1;
     let e = m.Z.entitledBranchIds,
         t = [];
     for (let n of e) !C.hasOwnProperty(n) && ((C[n] = null), t.push(n));
     if (0 === t.length) return !1;
     d.Z.wait(() => f.o(t));
 }
-function M(e, t) {
+function P(e, t) {
     if (null != S[t] && E.Z.shouldBeInstalled(e, t)) {
         let n = S[t],
             r = n.manifestIds,
@@ -53,7 +53,7 @@ function M(e, t) {
             });
     }
 }
-function P() {
+function M() {
     L.stop();
 }
 class k extends (r = u.ZP.Store) {
@@ -70,7 +70,7 @@ class k extends (r = u.ZP.Store) {
         return y.has(t);
     }
     isFetching(e, t) {
-        return T.has(t);
+        return b.has(t);
     }
     needsToFetchBuildSize(e) {
         return !A.hasOwnProperty(e);
@@ -93,19 +93,19 @@ class k extends (r = u.ZP.Store) {
             return x(O), w();
         },
         GAMES_DATABASE_UPDATE: function () {
-            if (!(0, b.Q)()) return !1;
+            if (!(0, T.Q)()) return !1;
             for (let e of N) {
                 let { applicationId: t, branchId: n } = (0, I.CP)(e);
-                null != h.Z.getApplication(t) && (N.delete(e), M(t, n));
+                null != h.Z.getApplication(t) && (N.delete(e), P(t, n));
             }
         },
         APPLICATION_BUILD_FETCH_START: function (e) {
             let { branchId: t } = e;
-            T.add(t);
+            b.add(t);
         },
         APPLICATION_BUILD_FETCH_SUCCESS: function (e) {
             let { applicationId: t, branchId: n, locale: r, build: i } = e;
-            T.delete(n);
+            b.delete(n);
             let a = i.manifests.map((e) => {
                     let { id: t } = e;
                     return t;
@@ -119,11 +119,11 @@ class k extends (r = u.ZP.Store) {
                     locale: r,
                     manifestIds: a
                 }),
-                M(t, n);
+                P(t, n);
         },
         APPLICATION_BUILD_NOT_FOUND: function (e) {
             let { branchId: t } = e;
-            T.delete(t), y.add(t);
+            b.delete(t), y.add(t);
         },
         APPLICATION_BUILD_SIZE_FETCH_START: function (e) {
             let { buildId: t } = e;
@@ -157,11 +157,11 @@ class k extends (r = u.ZP.Store) {
         APPLICATION_BRANCHES_FETCH_FAIL: function () {
             x(D);
         },
-        CONNECTION_CLOSED: P,
-        LOGOUT: P,
+        CONNECTION_CLOSED: M,
+        LOGOUT: M,
         SKU_PURCHASE_SUCCESS: function (e) {
             let { entitlements: t } = e;
-            if (!(0, b.Q)()) return !1;
+            if (!(0, T.Q)()) return !1;
             let n = new Set();
             for (let e of t) n.add(e.application_id);
             for (let e in m.Z.libraryApplications) {

@@ -1,6 +1,6 @@
-var n = r(815869);
+var a = r(815869);
 e.exports = function (e, t) {
     var r = this.__data__,
-        a = n(r, e);
-    return a < 0 ? (++this.size, r.push([e, t])) : (r[a][1] = t), this;
+        n = a(r, e);
+    return n < 0 ? (++this.size, r.push([e, t])) : (r[n][1] = t), this;
 };

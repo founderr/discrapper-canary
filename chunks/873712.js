@@ -1,9 +1,9 @@
 r.d(t, {
     A: function () {
-        return a;
+        return n;
     }
 });
-var n = r(395848);
-let a = (e) => {
-    n.m.document && n.m.document.prerendering ? addEventListener('prerenderingchange', () => e(), !0) : e();
+var a = r(395848);
+let n = (e) => {
+    a.m.document && a.m.document.prerendering ? addEventListener('prerenderingchange', () => e(), !0) : e();
 };

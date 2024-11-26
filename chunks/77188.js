@@ -23,8 +23,8 @@ var r = n(192379),
 n(209073);
 var v = n(814011),
     I = n(50607),
-    b = n(618136),
-    T = n(247765),
+    T = n(618136),
+    b = n(247765),
     S = n(15559),
     y = n(42530);
 function A(e) {
@@ -59,10 +59,10 @@ function A(e) {
                         (O = (0, g.ZP)(O, o.guild_id, o.id)),
                         !(null === (n = s.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) && (O = (0, f.Z)(O)),
                         !(null === (r = s.markdown) || void 0 === r ? void 0 : r.disableCodeBlocks) && (O = (0, _.ZP)(O)),
-                        A && (O = (0, T.Z)(O)),
+                        A && (O = (0, b.Z)(O)),
                         (O = (0, m.Z)(O)),
                         (O = (0, p.Z)(O)),
-                        (O = (0, b.Z)(O)),
+                        (O = (0, T.Z)(O)),
                         (O = (0, S.Z)(O, N, C)),
                         (O = (0, h.Z)(O, (e) => {
                             let { newValue: t, newSelection: n } = e;

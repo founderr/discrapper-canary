@@ -21,21 +21,21 @@ var i = n(200651),
     x = n(365007),
     S = n(15980),
     T = n(755733),
-    C = n(981631),
+    E = n(981631),
     _ = n(388032),
-    E = n(421333);
-function f(e) {
+    C = n(421333);
+function I(e) {
     let { transitionState: t, onClose: l, ticket: o, challenge: c } = e,
         m = (0, d.Dt)(),
-        [S, f] = s.useState(''),
-        [I, N] = s.useState(!0),
+        [S, I] = s.useState(''),
+        [f, N] = s.useState(!0),
         [A, b] = s.useState(T.x.INIT),
         [v, j] = s.useState(''),
         [O, R] = s.useState(null),
         P = async () => {
             let e;
             b(T.x.REGISTER);
-            let t = h.isPlatformEmbedded && p.ZP.supportsFeature(C.eRX.WEBAUTHN) ? p.ZP.webAuthnRegister(c) : r.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
+            let t = h.isPlatformEmbedded && p.ZP.supportsFeature(E.eRX.WEBAUTHN) ? p.ZP.webAuthnRegister(c) : r.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
             try {
                 e = await t;
             } catch (e) {
@@ -49,7 +49,7 @@ function f(e) {
         'aria-labelledby': m,
         children: [
             (0, i.jsxs)(a.ModalHeader, {
-                className: E.header,
+                className: C.header,
                 separator: !1,
                 children: [
                     (0, i.jsxs)(a.Heading, {
@@ -59,7 +59,7 @@ function f(e) {
                     }),
                     (0, i.jsx)(a.ModalCloseButton, {
                         onClick: l,
-                        className: E.modalCloseButton
+                        className: C.modalCloseButton
                     })
                 ]
             }),
@@ -71,10 +71,10 @@ function f(e) {
                         id: T.x.INIT,
                         children: [
                             (0, i.jsxs)(a.ModalContent, {
-                                className: E.content,
+                                className: C.content,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: E.icon,
+                                        className: C.icon,
                                         children: (0, i.jsx)('img', {
                                             alt: '',
                                             src: n(773072)
@@ -109,10 +109,10 @@ function f(e) {
                         id: T.x.REGISTER,
                         children: [
                             (0, i.jsxs)(a.ModalContent, {
-                                className: E.content,
+                                className: C.content,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: E.icon,
+                                        className: C.icon,
                                         children: (0, i.jsx)('img', {
                                             alt: '',
                                             src: n(773072)
@@ -145,10 +145,10 @@ function f(e) {
                             },
                             children: [
                                 (0, i.jsxs)(a.ModalContent, {
-                                    className: E.content,
+                                    className: C.content,
                                     children: [
                                         (0, i.jsx)('div', {
-                                            className: E.icon,
+                                            className: C.icon,
                                             children: (0, i.jsx)('img', {
                                                 alt: '',
                                                 src: n(637163)
@@ -161,10 +161,10 @@ function f(e) {
                                                     children: _.intl.string(_.t['Jzd+z8'])
                                                 }),
                                                 (0, i.jsx)(a.TextInput, {
-                                                    className: E.input,
+                                                    className: C.input,
                                                     value: S,
                                                     onChange: (e) => {
-                                                        f(e), N(0 === e.length);
+                                                        I(e), N(0 === e.length);
                                                     },
                                                     autoFocus: !0,
                                                     minLength: 1
@@ -174,11 +174,11 @@ function f(e) {
                                     ]
                                 }),
                                 (0, i.jsxs)(a.ModalFooter, {
-                                    className: E.footer,
+                                    className: C.footer,
                                     children: [
                                         (0, i.jsx)(a.Button, {
                                             type: 'submit',
-                                            disabled: I,
+                                            disabled: f,
                                             children: _.intl.string(_.t['5dyZ1d'])
                                         }),
                                         (0, i.jsx)(a.Button, {
@@ -199,7 +199,7 @@ function f(e) {
         ]
     });
 }
-function I(e) {
+function f(e) {
     let { onSelect: t, credential: s } = e;
     return (0, i.jsxs)(a.Menu, {
         navId: 'webauthn-credential-actions',
@@ -243,26 +243,26 @@ function N() {
     let [n, r] = s.useState(!1);
     return (0, i.jsxs)(a.FormSection, {
         title: _.intl.string(_.t.y7SXYW),
-        className: E.settings,
+        className: C.settings,
         children: [
             (0, i.jsx)(a.FormText, {
                 type: a.FormText.Types.DESCRIPTION,
-                className: E.description,
+                className: C.description,
                 children: _.intl.string(_.t.TMukAA)
             }),
             e.length > 0 &&
                 (0, i.jsx)('div', {
-                    className: E.credentialList,
+                    className: C.credentialList,
                     children: e.map((e) =>
                         (0, i.jsx)(
                             c.Z,
                             {
                                 avatar: null,
                                 name: e.name,
-                                className: E.credentialItem,
+                                className: C.credentialItem,
                                 onContextMenu: (t) => {
                                     (0, o.vq)(t, (t) =>
-                                        (0, i.jsx)(I, {
+                                        (0, i.jsx)(f, {
                                             ...t,
                                             credential: e
                                         })
@@ -274,19 +274,19 @@ function N() {
                                     size: a.Button.Sizes.ICON,
                                     onClick: (t) => {
                                         (0, o.vq)(t, (t) =>
-                                            (0, i.jsx)(I, {
+                                            (0, i.jsx)(f, {
                                                 ...t,
                                                 credential: e
                                             })
                                         );
                                     },
                                     'aria-label': _.intl.string(_.t['+nrTbG']),
-                                    innerClassName: E.credentialOptions,
+                                    innerClassName: C.credentialOptions,
                                     children: (0, i.jsx)(a.MoreVerticalIcon, {
                                         size: 'md',
                                         color: 'currentColor',
-                                        className: E.__invalid_overflowIcon,
-                                        colorClass: E.__invalid_overflowIconFg,
+                                        className: C.__invalid_overflowIcon,
+                                        colorClass: C.__invalid_overflowIconFg,
                                         'aria-hidden': !0
                                     })
                                 })
@@ -303,7 +303,7 @@ function N() {
                                 .then((e) => {
                                     let { ticket: t, challenge: n } = e;
                                     (0, a.openModal)((e) =>
-                                        (0, i.jsx)(f, {
+                                        (0, i.jsx)(I, {
                                             ...e,
                                             ticket: t,
                                             challenge: n

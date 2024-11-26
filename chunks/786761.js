@@ -40,11 +40,11 @@ n(739566);
 var v = n(959517),
     I = n(981631);
 n(388032);
-let b = new d.Z({
+let T = new d.Z({
     id: '???',
     username: '???'
 });
-function T(e) {
+function b(e) {
     var t;
     return new c.pi({
         ...e,
@@ -60,12 +60,12 @@ function S(e) {
     var t, n, r, i, a, s, l, h, v, S;
     let y;
     let { reactions: A, interactionData: N } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        R = T(e),
+        R = b(e),
         L = null !== (i = null === (t = e.mentions) || void 0 === t ? void 0 : t.map((e) => e.id)) && void 0 !== i ? i : [],
         x = null !== (a = e.mention_roles) && void 0 !== a ? a : [],
         w = null !== (s = e.mention_channels) && void 0 !== s ? s : [],
-        M = e.message_reference;
-    let P = null == (h = e).author ? b : null != h.webhook_id ? new d.Z(h.author) : null !== (v = p.default.getUser(h.author.id)) && void 0 !== v ? v : new d.Z(h.author),
+        P = e.message_reference;
+    let M = null == (h = e).author ? T : null != h.webhook_id ? new d.Z(h.author) : null !== (v = p.default.getUser(h.author.id)) && void 0 !== v ? v : new d.Z(h.author),
         k = null == e ? void 0 : e.gift_info,
         U = e.gifting_prompt,
         B = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
@@ -77,7 +77,7 @@ function S(e) {
         new c.ZP({
             ...e,
             ...R.toJS(),
-            author: P,
+            author: M,
             webhookId: e.webhook_id,
             blocked: _.Z.isBlockedForMessage(e) || (null != G && _.Z.isBlocked(G)),
             ignored: _.Z.isIgnoredForMessage(e) || (null != G && _.Z.isIgnored(G)),
@@ -85,7 +85,7 @@ function S(e) {
             mentions: L,
             mentionRoles: x,
             mentionChannels: w,
-            messageReference: M,
+            messageReference: P,
             mentioned: (0, E.Sz)({
                 userId: f.default.getId(),
                 channelId: e.channel_id,
@@ -215,7 +215,7 @@ function D(e) {
         ? []
         : e.message_snapshots.map((e) => {
               let { message: t } = e;
-              return new c.Hx({ message: T(t) });
+              return new c.Hx({ message: b(t) });
           });
 }
 let L = (e) => 0 === (0, l.cv)(e).length || '' !== e.content;

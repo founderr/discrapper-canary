@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(200651),
     l = n(192379),
     o = n(399606),
-    i = n(481060),
-    s = n(367907),
+    s = n(481060),
+    i = n(367907),
     a = n(863249),
     d = n(944163),
     c = n(14263),
@@ -38,7 +38,7 @@ function E(e) {
     return null != e && h.Z.getCurrentConfig({ location: 'ba216b_1' }, { autoTrackExposure: !0 }).includeRules;
 }
 function B(e) {
-    let { headerId: t, guild: n, step: l, lastPrompt: s, questionCount: a, currentPrompt: d, selectOption: m, gotoPrevPrompt: p, gotoNextPrompt: h, completeOnboarding: b } = e,
+    let { headerId: t, guild: n, step: l, lastPrompt: i, questionCount: a, currentPrompt: d, selectOption: m, gotoPrevPrompt: p, gotoNextPrompt: h, completeOnboarding: b } = e,
         v = (0, o.Wu)([x.Z], () => x.Z.getOnboardingResponsesForPrompt(n.id, d.id)),
         C = 0 === v.length && (null == d ? void 0 : d.required),
         E = null == d ? void 0 : d.options.filter((e) => v.includes(e.id)),
@@ -63,13 +63,13 @@ function B(e) {
         children: (0, r.jsxs)('div', {
             className: j.promptContent,
             children: [
-                (0, r.jsxs)(i.ScrollerThin, {
+                (0, r.jsxs)(s.ScrollerThin, {
                     className: j.scrollerContent,
                     children: [
                         (0, r.jsxs)('div', {
                             className: j.questionHeader,
                             children: [
-                                (0, r.jsx)(i.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'text-muted',
                                     children: N.intl.format(N.t.isV0NT, {
@@ -80,12 +80,12 @@ function B(e) {
                                 d.required
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, r.jsx)(i.Text, {
+                                              (0, r.jsx)(s.Text, {
                                                   variant: 'text-xs/normal',
                                                   className: j.headerSeparator,
                                                   children: '\xB7'
                                               }),
-                                              (0, r.jsx)(i.Text, {
+                                              (0, r.jsx)(s.Text, {
                                                   variant: 'text-sm/medium',
                                                   color: 'text-brand',
                                                   children: N.intl.string(N.t.Ur8Vrq)
@@ -95,7 +95,7 @@ function B(e) {
                                     : null
                             ]
                         }),
-                        (0, r.jsx)(i.Heading, {
+                        (0, r.jsx)(s.Heading, {
                             className: j.title,
                             variant: 'heading-xl/semibold',
                             color: 'header-primary',
@@ -129,14 +129,14 @@ function B(e) {
                             className: j.leftButtons,
                             children:
                                 l > 0 &&
-                                (0, r.jsxs)(i.Button, {
+                                (0, r.jsxs)(s.Button, {
                                     className: j.button,
                                     innerClassName: j.buttonInner,
                                     onClick: () => p(v.length),
-                                    size: i.Button.Sizes.MEDIUM,
-                                    look: i.Button.Looks.OUTLINED,
+                                    size: s.Button.Sizes.MEDIUM,
+                                    look: s.Button.Looks.OUTLINED,
                                     grow: !1,
-                                    color: i.Button.Colors.PRIMARY,
+                                    color: s.Button.Colors.PRIMARY,
                                     children: [
                                         (0, r.jsx)(u.Z, {
                                             className: j.arrow,
@@ -149,28 +149,28 @@ function B(e) {
                         (0, r.jsxs)('div', {
                             className: j.rightButtons,
                             children: [
-                                (0, r.jsxs)(i.Text, {
+                                (0, r.jsxs)(s.Text, {
                                     className: j.helpText,
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
                                     children: [k, ' ', D]
                                 }),
-                                (0, r.jsx)(i.Tooltip, {
+                                (0, r.jsx)(s.Tooltip, {
                                     text: C ? N.intl.string(N.t.dA1dSU) : null,
                                     children: (e) => {
                                         let { onMouseEnter: t, onMouseLeave: n } = e;
-                                        return (0, r.jsx)(i.Button, {
+                                        return (0, r.jsx)(s.Button, {
                                             className: j.button,
                                             innerClassName: j.buttonInner,
                                             onMouseEnter: t,
                                             onMouseLeave: n,
-                                            onClick: () => (s ? b() : h(v.length)),
+                                            onClick: () => (i ? b() : h(v.length)),
                                             disabled: C,
-                                            size: i.Button.Sizes.MEDIUM,
-                                            look: i.Button.Looks.FILLED,
+                                            size: s.Button.Sizes.MEDIUM,
+                                            look: s.Button.Looks.FILLED,
                                             grow: !1,
-                                            color: T ? i.Button.Colors.PRIMARY : i.Button.Colors.BRAND,
-                                            children: s
+                                            color: T ? s.Button.Colors.PRIMARY : s.Button.Colors.BRAND,
+                                            children: i
                                                 ? (0, r.jsxs)(r.Fragment, {
                                                       children: [
                                                           N.intl.string(N.t['8SuVoK']),
@@ -203,7 +203,7 @@ function B(e) {
     });
 }
 function Z(e) {
-    let { headerId: t, guild: n, step: l, lastPrompt: s, questionCount: a, currentPrompt: d, selectOption: c, gotoPrevPrompt: m, gotoNextPrompt: p, completeOnboarding: h } = e,
+    let { headerId: t, guild: n, step: l, lastPrompt: i, questionCount: a, currentPrompt: d, selectOption: c, gotoPrevPrompt: m, gotoNextPrompt: p, completeOnboarding: h } = e,
         _ = (0, o.Wu)([x.Z], () => x.Z.getOnboardingResponsesForPrompt(n.id, d.id)),
         v = 0 === _.length && (null == d ? void 0 : d.required),
         C = null == d ? void 0 : d.options.filter((e) => _.includes(e.id)),
@@ -222,13 +222,13 @@ function Z(e) {
         children: (0, r.jsxs)('div', {
             className: j.promptContent,
             children: [
-                (0, r.jsxs)(i.ScrollerThin, {
+                (0, r.jsxs)(s.ScrollerThin, {
                     className: j.scrollerContent,
                     children: [
                         (0, r.jsxs)('div', {
                             className: j.questionHeader,
                             children: [
-                                (0, r.jsx)(i.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'text-muted',
                                     children: N.intl.format(N.t.isV0NT, {
@@ -239,12 +239,12 @@ function Z(e) {
                                 d.required
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, r.jsx)(i.Text, {
+                                              (0, r.jsx)(s.Text, {
                                                   variant: 'text-xs/normal',
                                                   className: j.headerSeparator,
                                                   children: '\xB7'
                                               }),
-                                              (0, r.jsx)(i.Text, {
+                                              (0, r.jsx)(s.Text, {
                                                   variant: 'text-sm/medium',
                                                   color: 'text-brand',
                                                   children: N.intl.string(N.t.Ur8Vrq)
@@ -254,7 +254,7 @@ function Z(e) {
                                     : null
                             ]
                         }),
-                        (0, r.jsx)(i.Heading, {
+                        (0, r.jsx)(s.Heading, {
                             className: j.title,
                             variant: 'heading-xl/semibold',
                             color: 'header-primary',
@@ -285,14 +285,14 @@ function Z(e) {
                             className: j.leftButtons,
                             children:
                                 l > 0 &&
-                                (0, r.jsxs)(i.Button, {
+                                (0, r.jsxs)(s.Button, {
                                     className: j.button,
                                     innerClassName: j.buttonInner,
                                     onClick: () => m(_.length),
-                                    size: i.Button.Sizes.MEDIUM,
-                                    look: i.Button.Looks.OUTLINED,
+                                    size: s.Button.Sizes.MEDIUM,
+                                    look: s.Button.Looks.OUTLINED,
                                     grow: !1,
-                                    color: i.Button.Colors.PRIMARY,
+                                    color: s.Button.Colors.PRIMARY,
                                     children: [
                                         (0, r.jsx)(u.Z, {
                                             className: j.arrow,
@@ -305,28 +305,28 @@ function Z(e) {
                         (0, r.jsxs)('div', {
                             className: j.rightButtons,
                             children: [
-                                (0, r.jsxs)(i.Text, {
+                                (0, r.jsxs)(s.Text, {
                                     className: j.helpText,
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
                                     children: [T, ' ', k]
                                 }),
-                                (0, r.jsx)(i.Tooltip, {
+                                (0, r.jsx)(s.Tooltip, {
                                     text: v ? N.intl.string(N.t.dA1dSU) : null,
                                     children: (e) => {
                                         let { onMouseEnter: t, onMouseLeave: n } = e;
-                                        return (0, r.jsx)(i.Button, {
+                                        return (0, r.jsx)(s.Button, {
                                             className: j.button,
                                             innerClassName: j.buttonInner,
                                             onMouseEnter: t,
                                             onMouseLeave: n,
-                                            onClick: () => (s ? h() : p(_.length)),
+                                            onClick: () => (i ? h() : p(_.length)),
                                             disabled: v,
-                                            size: i.Button.Sizes.MEDIUM,
-                                            look: i.Button.Looks.FILLED,
+                                            size: s.Button.Sizes.MEDIUM,
+                                            look: s.Button.Looks.FILLED,
                                             grow: !1,
-                                            color: Z ? i.Button.Colors.PRIMARY : i.Button.Colors.BRAND,
-                                            children: s
+                                            color: Z ? s.Button.Colors.PRIMARY : s.Button.Colors.BRAND,
+                                            children: i
                                                 ? (0, r.jsxs)(r.Fragment, {
                                                       children: [
                                                           N.intl.string(N.t['8SuVoK']),
@@ -359,18 +359,18 @@ function Z(e) {
     });
 }
 function T(e) {
-    let { guild: t, prompts: n, step: i, selectOption: c, completeOnboarding: u, setCurrentStep: h, headerId: x, disableTracking: g } = e,
+    let { guild: t, prompts: n, step: s, selectOption: c, completeOnboarding: u, setCurrentStep: h, headerId: x, disableTracking: g } = e,
         f = (0, o.e7)([d.Z], () => d.Z.getRulesPrompt(t.id));
     l.useEffect(() => {
         a.ZP.fetchVerificationForm(t.id);
     }, [t.id]);
-    let b = n[i],
-        _ = i + 1 >= n.length && !E(f),
+    let b = n[s],
+        _ = s + 1 >= n.length && !E(f),
         N = n[0].required;
     l.useEffect(() => {
         if (!g)
             m.default.track(C.rMx.GUILD_ONBOARDING_STEP_VIEWED, {
-                ...(0, s.hH)(t.id),
+                ...(0, i.hH)(t.id),
                 step: 0,
                 required: N
             });
@@ -378,40 +378,40 @@ function T(e) {
     let j = (e) => {
             !g &&
                 (m.default.track(C.rMx.GUILD_ONBOARDING_STEP_COMPLETED, {
-                    ...(0, s.hH)(t.id),
-                    step: i,
+                    ...(0, i.hH)(t.id),
+                    step: s,
                     options_selected: e,
                     skipped: 0 === e,
                     back: !1,
                     in_onboarding: !0,
                     is_final_step: !1
                 }),
-                i < n.length - 1 &&
+                s < n.length - 1 &&
                     m.default.track(C.rMx.GUILD_ONBOARDING_STEP_VIEWED, {
-                        ...(0, s.hH)(t.id),
-                        step: i,
-                        required: n[i + 1].required
+                        ...(0, i.hH)(t.id),
+                        step: s,
+                        required: n[s + 1].required
                     })),
-                i + 1 < n.length ? h(i + 1) : E(f) && h('rules');
+                s + 1 < n.length ? h(s + 1) : E(f) && h('rules');
         },
         I = (e) => {
             !g &&
                 (m.default.track(C.rMx.GUILD_ONBOARDING_STEP_COMPLETED, {
-                    ...(0, s.hH)(t.id),
-                    step: i,
+                    ...(0, i.hH)(t.id),
+                    step: s,
                     skipped: !1,
                     back: !0,
                     options_selected: e,
                     in_onboarding: !0,
                     is_final_step: !1
                 }),
-                i > 0 &&
+                s > 0 &&
                     m.default.track(C.rMx.GUILD_ONBOARDING_STEP_VIEWED, {
-                        ...(0, s.hH)(t.id),
-                        step: i - 1,
-                        required: n[i - 1].required
+                        ...(0, i.hH)(t.id),
+                        step: s - 1,
+                        required: n[s - 1].required
                     })),
-                h(Math.max(0, i - 1));
+                h(Math.max(0, s - 1));
         };
     if (null == b) return null;
     switch (b.type) {
@@ -419,7 +419,7 @@ function T(e) {
             return (0, r.jsx)(Z, {
                 guild: t,
                 headerId: x,
-                step: i,
+                step: s,
                 questionCount: n.length,
                 currentPrompt: b,
                 lastPrompt: _,
@@ -432,7 +432,7 @@ function T(e) {
             return (0, r.jsx)(B, {
                 guild: t,
                 headerId: x,
-                step: i,
+                step: s,
                 questionCount: n.length,
                 currentPrompt: b,
                 lastPrompt: _,

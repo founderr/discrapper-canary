@@ -3,129 +3,129 @@ r.d(t, {
         return R;
     },
     R: function () {
-        return N;
+        return A;
     }
 });
-var n = r(101284),
-    a = r(622916),
+var a = r(101284),
+    n = r(622916),
     _ = r(263449),
     o = r(255768),
-    i = r(988097),
-    E = r(73453),
+    E = r(988097),
+    i = r(73453),
     c = r(99342),
     s = r(696486),
     l = r(789112),
-    u = r(793373),
-    I = r(152228);
+    I = r(793373),
+    u = r(152228);
 let R = {
     idleTimeout: 1000,
     finalTimeout: 30000,
     childSpanTimeout: 15000
 };
-function N(e, t = {}) {
+function A(e, t = {}) {
     let r;
-    let N = new Map(),
-        A = !1,
-        T = 'externalFinish',
+    let A = new Map(),
+        T = !1,
+        N = 'externalFinish',
         d = !t.disableAutoFinish,
-        L = [],
-        { idleTimeout: f = R.idleTimeout, finalTimeout: O = R.finalTimeout, childSpanTimeout: p = R.childSpanTimeout, beforeSpanEnd: h } = t,
-        S = (0, _.s3)();
-    if (!S || !(0, E.z)()) return new l.b();
-    let D = (0, _.nZ)(),
+        f = [],
+        { idleTimeout: O = R.idleTimeout, finalTimeout: L = R.finalTimeout, childSpanTimeout: p = R.childSpanTimeout, beforeSpanEnd: h } = t,
+        D = (0, _.s3)();
+    if (!D || !(0, i.z)()) return new l.b();
+    let S = (0, _.nZ)(),
         C = (0, s.HN)(),
-        g = (function (e) {
-            let t = (0, I.qp)(e);
-            return (0, c.D)((0, _.nZ)(), t), o.X && a.kg.log('[Tracing] Started span is an idle span'), t;
+        P = (function (e) {
+            let t = (0, u.qp)(e);
+            return (0, c.D)((0, _.nZ)(), t), o.X && n.kg.log('[Tracing] Started span is an idle span'), t;
         })(e);
-    function U() {
+    function g() {
         r && (clearTimeout(r), (r = void 0));
     }
-    function P(e) {
-        U(),
+    function U(e) {
+        g(),
             (r = setTimeout(() => {
-                !A && 0 === N.size && d && ((T = 'idleTimeout'), g.end(e));
-            }, f));
+                !T && 0 === A.size && d && ((N = 'idleTimeout'), P.end(e));
+            }, O));
     }
     function M(e) {
         r = setTimeout(() => {
-            !A && d && ((T = 'heartbeatFailed'), g.end(e));
+            !T && d && ((N = 'heartbeatFailed'), P.end(e));
         }, p);
     }
-    g.end = new Proxy(g.end, {
+    P.end = new Proxy(P.end, {
         apply(e, t, r) {
-            h && h(g);
-            let [a, ..._] = r,
-                o = a || (0, n.ph)(),
-                i = (0, s.$k)(o),
-                E = (0, s.Dp)(g).filter((e) => e !== g);
-            if (!E.length) return G(i), Reflect.apply(e, t, [i, ..._]);
-            let c = E.map((e) => (0, s.XU)(e).timestamp).filter((e) => !!e),
+            h && h(P);
+            let [n, ..._] = r,
+                o = n || (0, a.ph)(),
+                E = (0, s.$k)(o),
+                i = (0, s.Dp)(P).filter((e) => e !== P);
+            if (!i.length) return G(E), Reflect.apply(e, t, [E, ..._]);
+            let c = i.map((e) => (0, s.XU)(e).timestamp).filter((e) => !!e),
                 l = c.length ? Math.max(...c) : void 0,
-                u = (0, s.XU)(g).start_timestamp,
-                I = Math.min(u ? u + O / 1000 : 1 / 0, Math.max(u || -1 / 0, Math.min(i, l || 1 / 0)));
-            return G(I), Reflect.apply(e, t, [I, ..._]);
+                I = (0, s.XU)(P).start_timestamp,
+                u = Math.min(I ? I + L / 1000 : 1 / 0, Math.max(I || -1 / 0, Math.min(E, l || 1 / 0)));
+            return G(u), Reflect.apply(e, t, [u, ..._]);
         }
     });
     function G(e) {
-        (A = !0), N.clear(), L.forEach((e) => e()), (0, c.D)(D, C);
-        let t = (0, s.XU)(g),
+        (T = !0), A.clear(), f.forEach((e) => e()), (0, c.D)(S, C);
+        let t = (0, s.XU)(P),
             { start_timestamp: r } = t;
         if (!r) return;
-        !(t.data || {})[i.ju] && g.setAttribute(i.ju, T), a.kg.log(`[Tracing] Idle span "${t.op}" finished`);
-        let n = (0, s.Dp)(g).filter((e) => e !== g),
+        !(t.data || {})[E.ju] && P.setAttribute(E.ju, N), n.kg.log(`[Tracing] Idle span "${t.op}" finished`);
+        let a = (0, s.Dp)(P).filter((e) => e !== P),
             _ = 0;
-        n.forEach((t) => {
+        a.forEach((t) => {
             t.isRecording() &&
                 (t.setStatus({
-                    code: u.jt,
+                    code: I.jt,
                     message: 'cancelled'
                 }),
                 t.end(e),
-                o.X && a.kg.log('[Tracing] Cancelling span since span ended early', JSON.stringify(t, void 0, 2)));
-            let { timestamp: r = 0, start_timestamp: n = 0 } = (0, s.XU)(t),
-                i = n <= e,
-                E = r - n <= (O + f) / 1000;
+                o.X && n.kg.log('[Tracing] Cancelling span since span ended early', JSON.stringify(t, void 0, 2)));
+            let { timestamp: r = 0, start_timestamp: a = 0 } = (0, s.XU)(t),
+                E = a <= e,
+                i = r - a <= (L + O) / 1000;
             if (o.X) {
                 let e = JSON.stringify(t, void 0, 2);
-                i ? !E && a.kg.log('[Tracing] Discarding span since it finished after idle span final timeout', e) : a.kg.log('[Tracing] Discarding span since it happened after idle span was finished', e);
+                E ? !i && n.kg.log('[Tracing] Discarding span since it finished after idle span final timeout', e) : n.kg.log('[Tracing] Discarding span since it happened after idle span was finished', e);
             }
-            (!E || !i) && ((0, s.ed)(g, t), _++);
+            (!i || !E) && ((0, s.ed)(P, t), _++);
         }),
-            _ > 0 && g.setAttribute('sentry.idle_span_discarded_spans', _);
+            _ > 0 && P.setAttribute('sentry.idle_span_discarded_spans', _);
     }
     return (
-        L.push(
-            S.on('spanStart', (e) => {
-                if (!A && e !== g && !(0, s.XU)(e).timestamp) {
-                    if ((0, s.Dp)(g).includes(e)) {
+        f.push(
+            D.on('spanStart', (e) => {
+                if (!T && e !== P && !(0, s.XU)(e).timestamp) {
+                    if ((0, s.Dp)(P).includes(e)) {
                         var t;
-                        (t = e.spanContext().spanId), U(), N.set(t, !0), M((0, n.ph)() + p / 1000);
+                        (t = e.spanContext().spanId), g(), A.set(t, !0), M((0, a.ph)() + p / 1000);
                     }
                 }
             })
         ),
-        L.push(
-            S.on('spanEnd', (e) => {
+        f.push(
+            D.on('spanEnd', (e) => {
                 var t;
-                if (!A) (t = e.spanContext().spanId), N.has(t) && N.delete(t), 0 === N.size && P((0, n.ph)() + f / 1000);
+                if (!T) (t = e.spanContext().spanId), A.has(t) && A.delete(t), 0 === A.size && U((0, a.ph)() + O / 1000);
             })
         ),
-        L.push(
-            S.on('idleSpanEnableAutoFinish', (e) => {
-                e === g && ((d = !0), P(), N.size && M());
+        f.push(
+            D.on('idleSpanEnableAutoFinish', (e) => {
+                e === P && ((d = !0), U(), A.size && M());
             })
         ),
-        !t.disableAutoFinish && P(),
+        !t.disableAutoFinish && U(),
         setTimeout(() => {
-            !A &&
-                (g.setStatus({
-                    code: u.jt,
+            !T &&
+                (P.setStatus({
+                    code: I.jt,
                     message: 'deadline_exceeded'
                 }),
-                (T = 'finalTimeout'),
-                g.end());
-        }, O),
-        g
+                (N = 'finalTimeout'),
+                P.end());
+        }, L),
+        P
     );
 }

@@ -22,13 +22,13 @@ var r = n(46973),
     E = n(435064),
     v = n(894694),
     I = n(779618),
-    b = n(356659),
-    T = n(981631),
+    T = n(356659),
+    b = n(981631),
     S = n(70722);
 class y extends a.Z {
     handleRTCConnectionState(e) {
         let { context: t, state: n, streamKey: i } = e;
-        if (!(0, g.ln)() || n !== T.hes.RTC_CONNECTED) return;
+        if (!(0, g.ln)() || n !== b.hes.RTC_CONNECTED) return;
         let a = c.default.getId();
         if (t === r.Yn.DEFAULT) return this.applyUserVoiceRecording(a);
         if (t === r.Yn.STREAM && null != i) {
@@ -58,7 +58,7 @@ class y extends a.Z {
     }
     handleClipsInitFailure(e) {
         let { applicationName: t, errMsg: n } = e;
-        h.default.track(T.rMx.CLIPS_INIT_FAILURE, {
+        h.default.track(b.rMx.CLIPS_INIT_FAILURE, {
             application_name: t,
             error_message: n
         });
@@ -83,7 +83,7 @@ class y extends a.Z {
                 E.Z.getSettings().clipsEnabled && this.disableClips();
                 return;
             }
-            (null == E.Z.getHardwareClassification() || null == E.Z.getHardwareClassificationForDecoupled() || E.Z.getHardwareClassificationVersion() !== b.WM) &&
+            (null == E.Z.getHardwareClassification() || null == E.Z.getHardwareClassificationForDecoupled() || E.Z.getHardwareClassificationVersion() !== T.WM) &&
                 this.classifyHardwareAndTrack().then((e) => {
                     i.Z.dispatch({
                         type: 'CLIPS_CLASSIFY_HARDWARE',
@@ -130,9 +130,9 @@ class y extends a.Z {
                 }
             })();
             return (
-                h.default.track(T.rMx.CLIPS_HARDWARE_CLASSIFICATION, {
+                h.default.track(b.rMx.CLIPS_HARDWARE_CLASSIFICATION, {
                     classification: t,
-                    version: b.WM,
+                    version: T.WM,
                     gpu_models: e
                 }),
                 t
@@ -143,8 +143,8 @@ class y extends a.Z {
     }
     classifyHardware(e) {
         if ((0, m.isWindows)()) {
-            let t = e.some((e) => b.mg.test(e)),
-                n = e.some((e) => b.nU.test(e));
+            let t = e.some((e) => T.mg.test(e)),
+                n = e.some((e) => T.nU.test(e));
             return t ? v.x.MEETS_AUTO_ENABLE : n ? v.x.MEETS_MINIMUM : v.x.BELOW_MINIMUM;
         }
         if ((0, m.isMac)()) {

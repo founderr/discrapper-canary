@@ -1,12 +1,12 @@
 n.d(t, {
     B6: function () {
-        return T;
+        return b;
     },
     qc: function () {
         return S;
     },
     sp: function () {
-        return b;
+        return T;
     }
 }),
     n(47120),
@@ -52,7 +52,7 @@ function I(e) {
     if ((0, a.Fv)(t, null != i ? i : void 0)) return (0, r.Ol)(t.guildId) ? p.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE : p.Z5.ROLE_SUBSCRIPTION_LOCKED;
     return !t.animated || f.ZP.canUseAnimatedEmojis(I) || (0, a.yH)(t) ? null : p.Z5.PREMIUM_LOCKED;
 }
-function b(e, t) {
+function T(e, t) {
     let n = 0,
         r = 0,
         a = 0,
@@ -73,7 +73,7 @@ function b(e, t) {
         }
     );
 }
-async function T(e) {
+async function b(e) {
     return await c.Z.getEmojiColors(e);
 }
 function S(e) {

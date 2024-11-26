@@ -144,14 +144,14 @@ class E extends (i = o.Component) {
     render() {
         let { autoFocus: e, query: t, placeholder: n = _.intl.string(_.t.LzcpeX), themeOverride: r, disabled: i, onClear: a, size: o, maxHeight: l, tags: f, onActivate: h, className: m, inputProps: E, focusAfterReady: v } = this.props,
             I = null != t && t.length > 0,
-            b = !1,
-            T = [];
+            T = !1,
+            b = [];
         return (
             null != f &&
                 f.length > 0 &&
                 ('string' == typeof f[0]
                     ? f.forEach((e, t) =>
-                          T.push(
+                          b.push(
                               (0, s.jsxs)(
                                   c.Anchor,
                                   {
@@ -172,9 +172,9 @@ class E extends (i = o.Component) {
                               )
                           )
                       )
-                    : ((b = !0),
+                    : ((T = !0),
                       f.forEach((e, t) =>
-                          T.push(
+                          b.push(
                               (0, s.jsxs)(
                                   c.Anchor,
                                   {
@@ -230,9 +230,9 @@ class E extends (i = o.Component) {
                                 className: p.inner,
                                 style: { maxHeight: l },
                                 children: [
-                                    T,
+                                    b,
                                     (0, s.jsx)('input', {
-                                        className: u()(p.input, { [p.richTagInput]: b }),
+                                        className: u()(p.input, { [p.richTagInput]: T }),
                                         type: 'text',
                                         ref: this.ref,
                                         spellCheck: 'false',

@@ -16,8 +16,8 @@ var r,
     E = n(391673),
     v = o.setImmediate,
     I = o.clearImmediate,
-    b = o.process,
-    T = o.Dispatch,
+    T = o.process,
+    b = o.Dispatch,
     S = o.Function,
     y = o.MessageChannel,
     A = o.String,
@@ -62,11 +62,11 @@ var O = function (e) {
     }),
     E
         ? (i = function (e) {
-              b.nextTick(D(e));
+              T.nextTick(D(e));
           })
-        : T && T.now
+        : b && b.now
           ? (i = function (e) {
-                T.now(D(e));
+                b.now(D(e));
             })
           : y && !g
             ? ((s = (a = new y()).port2), (a.port1.onmessage = L), (i = u(s.postMessage, s)))

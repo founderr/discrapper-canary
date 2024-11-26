@@ -1,6 +1,6 @@
 n.d(t, {
     As: function () {
-        return T;
+        return b;
     },
     BP: function () {
         return I;
@@ -15,7 +15,7 @@ n.d(t, {
         return S;
     },
     lK: function () {
-        return b;
+        return T;
     },
     wk: function () {
         return r;
@@ -58,7 +58,7 @@ let v = (e, t) => {
         }
         return r ? 'spoiler' : null;
     },
-    b = function (e, t) {
+    T = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             { contentScanMetadata: r } = e;
         if (t) {
@@ -68,7 +68,7 @@ let v = (e, t) => {
         }
         return n ? 'spoiler' : null;
     };
-function T(e, t, n) {
+function b(e, t, n) {
     if (null == e) return [!1, void 0];
     if (n && (0, l.Sv)(e.contentScanVersion)) return [!0, 'potential_explicit_content'];
     let r = (function (e) {
@@ -99,7 +99,7 @@ function S(e) {
         r = (0, s.e7)([p.Z], () => null != t && p.Z.can(g.Plq.MANAGE_MESSAGES, t)),
         i = f.cC.useSetting(),
         a = (0, u.m)();
-    return T(n, !(0, m.Z)(i, r), a);
+    return b(n, !(0, m.Z)(i, r), a);
 }
 let y = (e) =>
     (0, a.EQ)(e)

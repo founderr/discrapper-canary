@@ -292,13 +292,13 @@ let v = 'migrated',
             version: 1
         }
     };
-function b(e, t) {
+function T(e, t) {
     let n = i[e];
     if (null == n) return !1;
     let a = r[n.layoutId];
     return null != a && t(n, a);
 }
-function T(e) {
+function b(e) {
     var t;
     return null === (t = I[e]) || void 0 === t ? void 0 : t.defaultSettings;
 }
@@ -400,7 +400,7 @@ class S extends (s = d.ZP.PersistedStore) {
         return I[e];
     }
     getWidgetDefaultSettings(e) {
-        return T(e);
+        return b(e);
     }
     getWidgetType(e) {
         let t = i[e];
@@ -510,7 +510,7 @@ E(S, 'displayName', 'LayoutStore'),
                         i.push([
                             s,
                             {
-                                ...T(g.Odu.GUILDS_TEXT),
+                                ...b(g.Odu.GUILDS_TEXT),
                                 type: g.Odu.GUILDS_TEXT,
                                 id: s,
                                 layoutId: t,
@@ -592,7 +592,7 @@ E(S, 'displayName', 'LayoutStore'),
         },
         LAYOUT_SET_PINNED: function (e) {
             let { widgetId: t } = e;
-            return b(t, (e, t) => {
+            return T(t, (e, t) => {
                 (function (e) {
                     i = {
                         ...i,
@@ -603,7 +603,7 @@ E(S, 'displayName', 'LayoutStore'),
         },
         LAYOUT_UPDATE_WIDGET: function (e) {
             let { widgetId: t, anchor: n, size: r, opacity: a } = e;
-            return b(t, (e, t) =>
+            return T(t, (e, t) =>
                 (function (e, t, n, r) {
                     i = {
                         ...i,
@@ -618,7 +618,7 @@ E(S, 'displayName', 'LayoutStore'),
         },
         LAYOUT_SET_TOP_WIDGET: function (e) {
             let { widgetId: t } = e;
-            return b(t, (e, t) =>
+            return T(t, (e, t) =>
                 (function (e, t) {
                     let n = (function (e) {
                         let t = [];
@@ -694,7 +694,7 @@ E(S, 'displayName', 'LayoutStore'),
         },
         LAYOUT_SET_WIDGET_META: function (e) {
             let { widgetId: t, meta: n } = e;
-            return b(t, (e, t) => {
+            return T(t, (e, t) => {
                 (function (e, t) {
                     i = {
                         ...i,

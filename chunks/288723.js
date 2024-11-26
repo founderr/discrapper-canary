@@ -25,13 +25,13 @@ t.Z = {
                     E = n.rootBoundary,
                     v = n.altBoundary,
                     I = n.flipVariations,
-                    b = void 0 === I || I,
-                    T = n.allowedAutoPlacements,
+                    T = void 0 === I || I,
+                    b = n.allowedAutoPlacements,
                     S = t.options.placement,
                     y = (0, i.Z)(S) === S,
                     A =
                         h ||
-                        (y || !b
+                        (y || !T
                             ? [(0, r.Z)(S)]
                             : (function (e) {
                                   if ((0, i.Z)(e) === l.d7) return [];
@@ -46,8 +46,8 @@ t.Z = {
                                       boundary: g,
                                       rootBoundary: E,
                                       padding: m,
-                                      flipVariations: b,
-                                      allowedAutoPlacements: T
+                                      flipVariations: T,
+                                      allowedAutoPlacements: b
                                   })
                                 : n
                         );
@@ -62,9 +62,9 @@ t.Z = {
                 x++
             ) {
                 var w = N[x],
-                    M = (0, i.Z)(w),
-                    P = (0, u.Z)(w) === l.BL,
-                    k = [l.we, l.I].indexOf(M) >= 0,
+                    P = (0, i.Z)(w),
+                    M = (0, u.Z)(w) === l.BL,
+                    k = [l.we, l.I].indexOf(P) >= 0,
                     U = k ? 'width' : 'height',
                     B = (0, s.Z)(t, {
                         placement: w,
@@ -73,12 +73,12 @@ t.Z = {
                         altBoundary: v,
                         padding: m
                     }),
-                    G = k ? (P ? l.F2 : l.t$) : P ? l.I : l.we;
+                    G = k ? (M ? l.F2 : l.t$) : M ? l.I : l.we;
                 C[U] > R[U] && (G = (0, r.Z)(G));
                 var Z = (0, r.Z)(G),
                     F = [];
                 if (
-                    (f && F.push(B[M] <= 0),
+                    (f && F.push(B[P] <= 0),
                     p && F.push(B[G] <= 0, B[Z] <= 0),
                     F.every(function (e) {
                         return e;
@@ -91,7 +91,7 @@ t.Z = {
             }
             if (D) {
                 for (
-                    var V = b ? 3 : 1,
+                    var V = T ? 3 : 1,
                         j = function (e) {
                             var t = N.find(function (t) {
                                 var n = O.get(t);

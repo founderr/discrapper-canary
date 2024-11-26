@@ -19,7 +19,7 @@ function d(e, t, n, d) {
         E = a.Z.getRTCConnectionId(),
         v = null === (f = r.ZP.getCurrentGameForAnalytics()) || void 0 === f ? void 0 : f.name,
         I = m !== n.guildId && n.guildId !== l.X8;
-    let b = ((_ = n), (p = I), _.guildId === l.X8 ? 'default' : p ? 'custom-external' : 'custom');
+    let T = ((_ = n), (p = I), _.guildId === l.X8 ? 'default' : p ? 'custom-external' : 'custom');
     o.default.track(u.rMx.PREMIUM_FEATURE_USAGE, {
         feature_name: c.QP.SOUNDBOARD_PLAY,
         feature_tier: I ? c.h1.PREMIUM_STANDARD : c.h1.FREE,
@@ -30,7 +30,7 @@ function d(e, t, n, d) {
         in_overlay: t,
         application_name: v,
         emoji_count: null != n.emojiId || null != n.emojiName ? 1 : 0,
-        feature_selection: b,
+        feature_selection: T,
         feature_selection_id: n.soundId,
         sound_type: d
     });

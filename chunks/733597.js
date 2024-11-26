@@ -1,12 +1,12 @@
 n.d(t, {
     Fe: function () {
-        return b;
+        return T;
     },
     Ih: function () {
         return I;
     },
     Lz: function () {
-        return T;
+        return b;
     }
 }),
     n(47120);
@@ -67,12 +67,12 @@ function I(e, t, n) {
         spotifyData: i
     };
 }
-function b(e, t, n, i) {
+function T(e, t, n, i) {
     let a = null != i ? i : u.ZP.getName(t),
         s = v(e, t),
         { notPlayable: o, syncingWithUser: l, syncingWithParty: c, isCurrentUser: _ } = s,
         { loading: h, startLoading: g, clearLoading: I } = E(s),
-        b = r.useCallback(() => {
+        T = r.useCallback(() => {
             g(), (0, p.Z)(s, m.kG.USER_ACTIVITY_SYNC, n).catch(I);
         }, [s, n, g, I]);
     return {
@@ -80,11 +80,11 @@ function b(e, t, n, i) {
         tooltip: (0, f.Z)(s, m.kG.USER_ACTIVITY_SYNC, a),
         disabled: !h && (o || _ || l || c),
         loading: h,
-        onClick: b,
+        onClick: T,
         spotifyData: s
     };
 }
-function T(e, t, n) {
+function b(e, t, n) {
     let i = v(e, t),
         { notPlayable: a, syncingWithUser: s, syncingWithParty: o, isCurrentUser: l } = i,
         { loading: u, startLoading: c, clearLoading: _ } = E(i),

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return b;
     }
 }),
     n(47120);
@@ -22,8 +22,8 @@ var r = n(200651),
     E = n(151851),
     v = n(981631),
     I = n(388032);
-let b = l.ZP.connectStores([_.Z], () => ({ focused: _.Z.isFocused() }))(E.Z);
-class T extends i.PureComponent {
+let T = l.ZP.connectStores([_.Z], () => ({ focused: _.Z.isFocused() }))(E.Z);
+class b extends i.PureComponent {
     getPlatform() {
         var e;
         let t = null === (e = s().os) || void 0 === e ? void 0 : e.family;
@@ -61,7 +61,7 @@ class T extends i.PureComponent {
         return (0, r.jsxs)(i.Fragment, {
             children: [
                 (0, r.jsx)(o.ql, { children: (0, r.jsx)('html', { className: (0, c.getThemeClass)(v.BRd.DARK) }) }),
-                (0, r.jsx)(b, { type: this.getPlatform() }),
+                (0, r.jsx)(T, { type: this.getPlatform() }),
                 (0, r.jsx)(f.Z, {
                     title: I.intl.string(I.t['3h+n+/']),
                     note: e,

@@ -23,7 +23,7 @@ function E(e) {
 }
 ((r = i || (i = {}))[(r.SMALL = 0)] = 'SMALL'), (r[(r.MEDIUM = 1)] = 'MEDIUM'), (r[(r.CLIP = 2)] = 'CLIP');
 t.Z = s.forwardRef(function (e, t) {
-    let { id: n, channelId: r, className: i, children: s, actions: o, handleEditModal: v, keyboardModeEnabled: I, onKeyDown: b, draftType: T, size: S = 1 } = e,
+    let { id: n, channelId: r, className: i, children: s, actions: o, handleEditModal: v, keyboardModeEnabled: I, onKeyDown: T, draftType: b, size: S = 1 } = e,
         { onFocus: y, ...A } = (0, u.JA)(n),
         { handleFocus: N, handleBlur: C } = (0, p.b)(y),
         R = 0 === S,
@@ -37,19 +37,19 @@ t.Z = s.forwardRef(function (e, t) {
                 if (!!I) {
                     switch (e.which) {
                         case h.yXg.D:
-                            e.preventDefault(), d.Z.remove(r, n, T);
+                            e.preventDefault(), d.Z.remove(r, n, b);
                             return;
                         case h.yXg.E:
                             null != v && (e.preventDefault(), v(e));
                             return;
                         case h.yXg.BACKSPACE:
-                            e.ctrlKey ? (e.preventDefault(), d.Z.clearAll(r, T)) : (e.preventDefault(), d.Z.remove(r, n, T));
+                            e.ctrlKey ? (e.preventDefault(), d.Z.clearAll(r, b)) : (e.preventDefault(), d.Z.remove(r, n, b));
                             return;
                         case h.yXg.ARROW_UP:
                             if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
                             e.preventDefault(), _.S.dispatchToLastSubscribed(h.CkL.FOCUS_MESSAGES, { atEnd: !0 });
                     }
-                    null == b || b(e);
+                    null == T || T(e);
                 }
             },
             className: l()(g.upload, i, { [g.sizeClip]: 2 === S }),

@@ -39,10 +39,10 @@
                 return e > 65535 && ((e -= 65536), (t += h(((e >>> 10) & 1023) | 55296)), (e = 56320 | (1023 & e))), (t += h(e));
             }).join('');
         }
-        function b(e, t) {
+        function T(e, t) {
             return e + 22 + 75 * (e < 26) - ((0 != t) << 5);
         }
-        function T(e, t, n) {
+        function b(e, t, n) {
             var r = 0;
             for (e = n ? p(e / 700) : e >> 1, e += p(e / t); e > (26 * _) >> 1; r += 36) e = p(e / _);
             return p(r + ((_ + 1) * e) / (e + 38));
@@ -70,7 +70,7 @@
                     if ((a >= _ && m('invalid-input'), ((u = (t = e.charCodeAt(a++)) - 48 < 10 ? t - 22 : t - 65 < 26 ? t - 65 : t - 97 < 26 ? t - 97 : 36) >= 36 || u > p((2147483647 - h) / o)) && m('overflow'), (h += u * o), u < (c = l <= E ? 1 : l >= E + 26 ? 26 : l - E))) break;
                     o > p(2147483647 / (d = 36 - c)) && m('overflow'), (o *= d);
                 }
-                (E = T(h - s, (n = f.length + 1), 0 == s)), p(h / n) > 2147483647 - g && m('overflow'), (g += p(h / n)), (h %= n), f.splice(h++, 0, g);
+                (E = b(h - s, (n = f.length + 1), 0 == s)), p(h / n) > 2147483647 - g && m('overflow'), (g += p(h / n)), (h %= n), f.splice(h++, 0, g);
             }
             return I(f);
         }
@@ -97,9 +97,9 @@
                 for (o - t > p((2147483647 - n) / (_ = r + 1)) && m('overflow'), n += (o - t) * _, t = o, s = 0; s < f; ++s)
                     if (((d = e[s]) < t && ++n > 2147483647 && m('overflow'), d == t)) {
                         for (l = n, u = 36; !(l < (c = u <= a ? 1 : u >= a + 26 ? 26 : u - a)); u += 36) {
-                            (E = l - c), (g = 36 - c), I.push(h(b(c + (E % g), 0))), (l = p(E / g));
+                            (E = l - c), (g = 36 - c), I.push(h(T(c + (E % g), 0))), (l = p(E / g));
                         }
-                        I.push(h(b(l, 0))), (a = T(n, _, r == i)), (n = 0), ++r;
+                        I.push(h(T(l, 0))), (a = b(n, _, r == i)), (n = 0), ++r;
                     }
                 ++n, ++t;
             }

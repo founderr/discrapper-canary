@@ -23,15 +23,15 @@ function g(e, t) {
 }
 async function E(e) {
     var t, a, s, E;
-    let { userId: v, section: I, subsection: b, guildId: T, channelId: S, friendToken: y, analyticsLocation: A, showGuildProfile: N = !0, ...C } = e,
+    let { userId: v, section: I, subsection: T, guildId: b, channelId: S, friendToken: y, analyticsLocation: A, showGuildProfile: N = !0, ...C } = e,
         R = d.default.getUser(v);
     if (null == R) return;
     let O = _.Z.getUserProfile(v),
         D = u.Z.getPrimaryActivity(v),
         L = u.Z.getStatus(v),
         x = u.Z.isMobileOnline(v),
-        { party: w, assets: M, application_id: P } = null != D ? D : {},
-        k = null != P ? l.Z.getApplication(P) : null,
+        { party: w, assets: P, application_id: M } = null != D ? D : {},
+        k = null != M ? l.Z.getApplication(M) : null,
         U = x ? p.j28.ONLINE_MOBILE : p.j28.ONLINE_DESKTOP,
         B = L === p.Skl.ONLINE ? U : L;
     (m = await (0, i.openModalLazy)(
@@ -40,28 +40,28 @@ async function E(e) {
             return (t) =>
                 (0, r.jsx)(e, {
                     user: R,
-                    guildId: T,
+                    guildId: b,
                     friendToken: y,
                     initialSection: I,
-                    initialSubsection: b,
+                    initialSubsection: T,
                     channelId: S,
                     showGuildProfile: N,
                     ...t,
                     ...C
                 });
         },
-        { modalKey: g(v, N ? T : void 0) }
+        { modalKey: g(v, N ? b : void 0) }
     )),
         f.default.track(p.rMx.OPEN_MODAL, {
             type: 'Profile Modal',
-            guild_id: T,
+            guild_id: b,
             channel_id: S,
             other_user_id: v,
             application_id: null !== (a = null == D ? void 0 : D.application_id) && void 0 !== a ? a : null,
             application_name: null == D ? void 0 : D.name,
             sku_id: null !== (s = null == k ? void 0 : k.primarySkuId) && void 0 !== s ? s : null,
             is_friend: c.Z.isFriend(v),
-            has_images: !!(null !== (E = null == M ? void 0 : M.large_image) && void 0 !== E ? E : null == M ? void 0 : M.small_image),
+            has_images: !!(null !== (E = null == P ? void 0 : P.large_image) && void 0 !== E ? E : null == P ? void 0 : P.small_image),
             party_max: null == w ? void 0 : null === (t = w.size) || void 0 === t ? void 0 : t[1],
             party_id: null == w ? void 0 : w.id,
             party_platform: (0, h.Ps)(null == w ? void 0 : w.id) ? p.ABu.SPOTIFY : null,

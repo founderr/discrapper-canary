@@ -20,7 +20,7 @@ let _ = i.forwardRef(function (e, t) {
                 pendingThemeColors: p,
                 isPreview: g
             }),
-            { profileThemeStyle: b, profileThemeClassName: T } = (0, u.Z)({
+            { profileThemeStyle: T, profileThemeClassName: b } = (0, u.Z)({
                 theme: null != h ? h : E,
                 primaryColor: v,
                 secondaryColor: I
@@ -31,8 +31,8 @@ let _ = i.forwardRef(function (e, t) {
                 [f.panel]: a === d.y0.PANEL
             };
         return (0, r.jsx)('div', {
-            className: s()(f.outer, T, S, _),
-            style: b,
+            className: s()(f.outer, b, S, _),
+            style: T,
             ref: t,
             children: (0, r.jsx)('div', {
                 className: s()(f.inner, S),

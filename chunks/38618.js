@@ -17,8 +17,8 @@ var r,
     E = n(131951),
     v = n(19780),
     I = n(936349),
-    b = n(944486),
-    T = n(885110),
+    T = n(944486),
+    b = n(885110),
     S = n(959457),
     y = n(358085),
     A = n(138859),
@@ -31,16 +31,16 @@ let L = window.DiscordNative;
 N.Wb.dispatcher.getDispatchHandler = R.Z;
 let x = new f.Z('ConnectionStore'),
     w = 0,
-    M = null,
-    P = !0,
+    P = null,
+    M = !0,
     k = null;
 async function U(e) {
-    (w = Date.now()), (M = e.sessionId), N.RR.handleConnectionOpen();
+    (w = Date.now()), (P = e.sessionId), N.RR.handleConnectionOpen();
     let t = {},
-        n = b.Z.getVoiceChannelId();
+        n = T.Z.getVoiceChannelId();
     if (null != n) {
         var r, i, a, s, o, l, u, c;
-        if ((null === (o = window) || void 0 === o ? void 0 : null === (s = o.performance) || void 0 === s ? void 0 : null === (a = s.getEntriesByType) || void 0 === a ? void 0 : null === (i = a.call(s, 'navigation')) || void 0 === i ? void 0 : null === (r = i[0]) || void 0 === r ? void 0 : r.type) === 'reload' || (null === (l = await (null == L ? void 0 : null === (c = L.processUtils) || void 0 === c ? void 0 : null === (u = c.getLastCrash) || void 0 === u ? void 0 : u.call(c))) || void 0 === l ? void 0 : l.rendererCrashReason) != null || !P) {
+        if ((null === (o = window) || void 0 === o ? void 0 : null === (s = o.performance) || void 0 === s ? void 0 : null === (a = s.getEntriesByType) || void 0 === a ? void 0 : null === (i = a.call(s, 'navigation')) || void 0 === i ? void 0 : null === (r = i[0]) || void 0 === r ? void 0 : r.type) === 'reload' || (null === (l = await (null == L ? void 0 : null === (c = L.processUtils) || void 0 === c ? void 0 : null === (u = c.getLastCrash) || void 0 === u ? void 0 : u.call(c))) || void 0 === l ? void 0 : l.rendererCrashReason) != null || !M) {
             let e = g.Z.getChannel(n);
             null != e &&
                 (t = {
@@ -49,7 +49,7 @@ async function U(e) {
                 });
         } else v.Z.setLastSessionVoiceChannelId(null != n ? n : null), d.default.selectVoiceChannel(null);
     }
-    N.GC.update(t, !0), (P = !1);
+    N.GC.update(t, !0), (M = !1);
 }
 function B() {
     N.GC.update();
@@ -65,7 +65,7 @@ function F(e) {
 }
 class V extends (r = u.ZP.Store) {
     initialize() {
-        this.waitFor(h.default, b.Z, g.Z, m.Z, p.Z), this.syncWith([E.Z], G), this.syncWith([T.Z], Z);
+        this.waitFor(h.default, T.Z, g.Z, m.Z, p.Z), this.syncWith([E.Z], G), this.syncWith([b.Z], Z);
     }
     getSocket() {
         return N.Wb;
@@ -129,7 +129,7 @@ class V extends (r = u.ZP.Store) {
             let { voiceStates: t } = e;
             return t.reduce((e, t) => {
                 if (h.default.getId() !== t.userId) return e;
-                if (t.sessionId === M)
+                if (t.sessionId === P)
                     N.GC.setState({
                         guildId: t.guildId,
                         channelId: t.channelId

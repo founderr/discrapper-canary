@@ -15,10 +15,10 @@ var r = n(200651),
     f = n(939350),
     _ = n(450793);
 function p(e) {
-    let { color: t = 'default', label: n, icon: a, iconLeft: p, iconLeftSize: h = 'md', hint: m, subtext: g, subtextLineClamp: E, hasSubmenu: v, disabled: I, isFocused: b, menuItemProps: T, action: S, onClose: y, onFocus: A, className: N, focusedClassName: C, subMenuIconClassName: R, dontCloseOnActionIfHoldingShiftKey: O, dontCloseOnAction: D, iconProps: L, sparkle: x } = e,
+    let { color: t = 'default', label: n, icon: a, iconLeft: p, iconLeftSize: h = 'md', hint: m, subtext: g, subtextLineClamp: E, hasSubmenu: v, disabled: I, isFocused: T, menuItemProps: b, action: S, onClose: y, onFocus: A, className: N, focusedClassName: C, subMenuIconClassName: R, dontCloseOnActionIfHoldingShiftKey: O, dontCloseOnAction: D, iconProps: L, sparkle: x } = e,
         w = i.useContext(u.r),
-        M = i.useRef(null),
-        P = i.useCallback(
+        P = i.useRef(null),
+        M = i.useCallback(
             (e) => {
                 if (null == S) return !1;
                 !(e.shiftKey && O) && !D && y(), e.persist(), null == w || w(), requestAnimationFrame(() => S(e));
@@ -27,18 +27,18 @@ function p(e) {
         );
     return (
         i.useEffect(() => {
-            b && ((0, c.F)(M), null == A || A());
-        }, [b, A]),
+            T && ((0, c.F)(P), null == A || A());
+        }, [T, A]),
         (0, r.jsxs)(o.P, {
-            innerRef: M,
+            innerRef: P,
             className: s()(_.item, _.labelContainer, f._[t], N, {
                 [_.disabled]: I,
-                [_.focused]: b,
-                [null != C ? C : '']: b
+                [_.focused]: T,
+                [null != C ? C : '']: T
             }),
-            onClick: I ? void 0 : P,
+            onClick: I ? void 0 : M,
             'aria-disabled': I,
-            ...T,
+            ...b,
             'data-menu-item': 'true',
             children: [
                 null != p &&
@@ -48,7 +48,7 @@ function p(e) {
                             color: 'currentColor',
                             ...L,
                             className: s()(_.icon, null == L ? void 0 : L.className),
-                            isFocused: b
+                            isFocused: T
                         })
                     }),
                 (0, r.jsxs)('div', {
@@ -76,7 +76,7 @@ function p(e) {
                             color: 'currentColor',
                             ...L,
                             className: s()(_.icon, null == L ? void 0 : L.className),
-                            isFocused: b
+                            isFocused: T
                         })
                     }),
                 v &&

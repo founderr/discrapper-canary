@@ -22,8 +22,8 @@ var r = n(200651),
     E = n(931261),
     v = n(216701),
     I = n(388032),
-    b = n(210759);
-function T(e) {
+    T = n(210759);
+function b(e) {
     let { action: t } = e,
         n = (0, l.e7)([_.Z], () => _.Z.getChannel(t.channelId)),
         i = (0, d.ZP)(n, !0);
@@ -49,7 +49,7 @@ function S(e) {
         emojiId: i,
         emojiName: a,
         size: v.R.MEDIUM,
-        defaultComponent: (0, r.jsx)(o, { className: b.channelIcon })
+        defaultComponent: (0, r.jsx)(o, { className: T.channelIcon })
     });
 }
 function y(e) {
@@ -94,7 +94,7 @@ function y(e) {
     return null == E || (N && !R)
         ? null
         : (0, r.jsx)('div', {
-              className: s()(b.container, p),
+              className: s()(T.container, p),
               children:
                   R && null != y
                       ? (0, r.jsx)(o.Z.div, {
@@ -105,7 +105,7 @@ function y(e) {
                                 })
                             },
                             children: (0, r.jsxs)(u.Clickable, {
-                                className: s()(b.banner, b.clickable),
+                                className: s()(T.banner, T.clickable),
                                 onClick: x,
                                 children: [
                                     (0, r.jsx)(S, {
@@ -114,29 +114,29 @@ function y(e) {
                                         emojiName: null == y ? void 0 : null === (n = y.emoji) || void 0 === n ? void 0 : n.name
                                     }),
                                     (0, r.jsxs)('div', {
-                                        className: b.text,
+                                        className: T.text,
                                         children: [
                                             (0, r.jsx)(u.Text, {
                                                 variant: 'text-md/semibold',
                                                 color: 'header-primary',
                                                 children: I.intl.format(I.t['/beONz'], { step: y.title })
                                             }),
-                                            (0, r.jsx)(T, { action: y })
+                                            (0, r.jsx)(b, { action: y })
                                         ]
                                     }),
                                     (0, r.jsx)('div', {
-                                        className: b.iconCircle,
+                                        className: T.iconCircle,
                                         children: (0, r.jsx)(u.ArrowSmallRightIcon, {
                                             size: 'xs',
                                             color: C.hex(),
-                                            className: b.nextIcon
+                                            className: T.nextIcon
                                         })
                                     })
                                 ]
                             })
                         })
                       : (0, r.jsxs)(o.Z.div, {
-                            className: b.banner,
+                            className: T.banner,
                             style: {
                                 marginBottom: D.interpolate({
                                     inputRange: [0, 1],
@@ -150,7 +150,7 @@ function y(e) {
                                     emojiName: null == E ? void 0 : null === (d = E.emoji) || void 0 === d ? void 0 : d.name
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: b.text,
+                                    className: T.text,
                                     children: [
                                         (0, r.jsx)(u.Text, {
                                             variant: 'text-md/semibold',
@@ -168,7 +168,7 @@ function y(e) {
                                     ? (0, r.jsx)(u.CircleCheckIcon, {
                                           size: 'custom',
                                           color: 'currentColor',
-                                          className: b.completed,
+                                          className: T.completed,
                                           secondaryColor: C.hex(),
                                           width: 20,
                                           height: 20

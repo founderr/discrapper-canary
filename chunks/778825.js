@@ -6,10 +6,10 @@ var p,
     E = n(442837),
     v = n(570140),
     I = n(981631);
-let b = I.QZA.CLOSED,
-    T = {};
+let T = I.QZA.CLOSED,
+    b = {};
 function S() {
-    y(), A(), (T = {}), (b = I.QZA.OPEN);
+    y(), A(), (b = {}), (T = I.QZA.OPEN);
 }
 function y() {
     (r = void 0), (u = void 0), (i = void 0);
@@ -19,10 +19,10 @@ function A() {
 }
 class N extends (g = E.ZP.Store) {
     getFormState() {
-        return b;
+        return T;
     }
     getErrors() {
-        return T;
+        return b;
     }
     showNotice() {
         return void 0 !== r || void 0 !== i || void 0 !== a || void 0 !== s || void 0 !== o || void 0 !== l || void 0 !== u || void 0 !== c;
@@ -90,24 +90,24 @@ class N extends (g = E.ZP.Store) {
         : (p[h] = m),
     (t.Z = new N(v.Z, {
         GUILD_IDENTITY_SETTINGS_INIT: function (e) {
-            (d = e.guild), (b = I.QZA.OPEN), (T = {}), (f = e.source), (_ = e.analyticsLocations);
+            (d = e.guild), (T = I.QZA.OPEN), (b = {}), (f = e.source), (_ = e.analyticsLocations);
         },
         GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: function () {
-            S(), (b = I.QZA.CLOSED), (T = {}), (f = void 0), (_ = []);
+            S(), (T = I.QZA.CLOSED), (b = {}), (f = void 0), (_ = []);
         },
         GUILD_IDENTITY_SETTINGS_SET_GUILD: function (e) {
-            (d = e.guild), (T = {});
+            (d = e.guild), (b = {});
         },
         GUILD_IDENTITY_SETTINGS_SUBMIT: function () {
-            (b = I.QZA.SUBMITTING), (T = {});
+            (T = I.QZA.SUBMITTING), (b = {});
         },
         GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE: function (e) {
             var t;
-            if (b !== I.QZA.SUBMITTING) return !1;
-            (b = I.QZA.OPEN), (T = null !== (t = e.errors) && void 0 !== t ? t : {});
+            if (T !== I.QZA.SUBMITTING) return !1;
+            (T = I.QZA.OPEN), (b = null !== (t = e.errors) && void 0 !== t ? t : {});
         },
         USER_PROFILE_UPDATE_FAILURE: function (e) {
-            (b = I.QZA.OPEN), (T = e.errors);
+            (T = I.QZA.OPEN), (b = e.errors);
         },
         GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: function (e) {
             let { avatar: t } = e;
@@ -146,6 +146,6 @@ class N extends (g = E.ZP.Store) {
         GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: S,
         GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: S,
         GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: function () {
-            T = {};
+            b = {};
         }
     }));

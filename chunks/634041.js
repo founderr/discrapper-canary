@@ -25,7 +25,7 @@ function v(e) {
 function I() {
     m !== f.Z.getVoiceChannelId() && (g = !1), v() && (g = !0), (m = f.Z.getVoiceChannelId());
 }
-class b extends (r = o.ZP.Store) {
+class T extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, f.Z, d.Z), this.syncWith([f.Z, d.Z], I);
     }
@@ -40,7 +40,7 @@ class b extends (r = o.ZP.Store) {
     }
 }
 (s = 'VideoBackgroundStore'),
-    (a = 'displayName') in (i = b)
+    (a = 'displayName') in (i = T)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -48,7 +48,7 @@ class b extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new b(u.Z, {
+    (t.Z = new T(u.Z, {
         VIDEO_FILTER_ASSETS_FETCH_SUCCESS: function (e) {
             let { assets: t } = e;
             E = t.reduce(

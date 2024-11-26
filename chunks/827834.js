@@ -60,8 +60,8 @@ t.default = (function () {
                         value: 'number',
                         description: '"number"'
                     },
-                    b = 'date',
-                    T = {
+                    T = 'date',
+                    b = {
                         type: 'literal',
                         value: 'date',
                         description: '"date"'
@@ -101,11 +101,11 @@ t.default = (function () {
                         value: 'offset:',
                         description: '"offset:"'
                     },
-                    M = {
+                    P = {
                         type: 'other',
                         description: 'whitespace'
                     },
-                    P = /^[ \t\n\r]/,
+                    M = /^[ \t\n\r]/,
                     k = {
                         type: 'class',
                         value: '[ \\t\\n\\r]',
@@ -245,7 +245,7 @@ t.default = (function () {
                                                         return (
                                                             (e = (function () {
                                                                 var e, n, r, i, a, s, o;
-                                                                if (((e = J), t.substr(J, 6) === v ? ((n = v), (J += 6)) : ((n = c), 0 === er && ei(I)), n === c && (t.substr(J, 4) === b ? ((n = b), (J += 4)) : ((n = c), 0 === er && ei(T)), n === c && (t.substr(J, 4) === S ? ((n = S), (J += 4)) : ((n = c), 0 === er && ei(y)))), n !== c)) {
+                                                                if (((e = J), t.substr(J, 6) === v ? ((n = v), (J += 6)) : ((n = c), 0 === er && ei(I)), n === c && (t.substr(J, 4) === T ? ((n = T), (J += 4)) : ((n = c), 0 === er && ei(b)), n === c && (t.substr(J, 4) === S ? ((n = S), (J += 4)) : ((n = c), 0 === er && ei(y)))), n !== c)) {
                                                                     if (ed() !== c) {
                                                                         if (((r = J), 44 === t.charCodeAt(J) ? ((i = ','), J++) : ((i = c), 0 === er && ei(g)), i !== c && (a = ed()) !== c && (s = em()) !== c ? (r = i = [i, a, s]) : ((J = r), (r = c)), r === c && (r = null), r !== c)) {
                                                                             e = n = {
@@ -401,9 +401,9 @@ t.default = (function () {
                 }
                 function ec() {
                     var e, n;
-                    if ((er++, (e = []), P.test(t.charAt(J)) ? ((n = t.charAt(J)), J++) : ((n = c), 0 === er && ei(k)), n !== c)) for (; n !== c; ) e.push(n), P.test(t.charAt(J)) ? ((n = t.charAt(J)), J++) : ((n = c), 0 === er && ei(k));
+                    if ((er++, (e = []), M.test(t.charAt(J)) ? ((n = t.charAt(J)), J++) : ((n = c), 0 === er && ei(k)), n !== c)) for (; n !== c; ) e.push(n), M.test(t.charAt(J)) ? ((n = t.charAt(J)), J++) : ((n = c), 0 === er && ei(k));
                     else e = c;
-                    return er--, e === c && ((n = c), 0 === er && ei(M)), e;
+                    return er--, e === c && ((n = c), 0 === er && ei(P)), e;
                 }
                 function ed() {
                     var e, n, r;

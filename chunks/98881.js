@@ -21,8 +21,8 @@ var r = n(288377),
     E = n(175486),
     v = n(629053),
     I = n(890521),
-    b = n(891873),
-    T = n(695848),
+    T = n(891873),
+    b = n(695848),
     S = n(261978),
     y = n(917322),
     A = n(108901),
@@ -34,8 +34,8 @@ var r = n(288377),
     L = n(30728),
     x = n(384762),
     w = n(290731),
-    M = n(341348),
-    P = n(882645),
+    P = n(341348),
+    M = n(882645),
     k = n(788654),
     U = n(770003),
     B = n(192379),
@@ -60,18 +60,18 @@ function V(e) {
         (0, B.useEffect)(() => {
             E.current && ((0, U.gb)('assertive'), (0, U.xQ)(i, 'assertive'));
         }, [i]);
-    let b = (0, G.iW)((e) => {
+    let T = (0, G.iW)((e) => {
             g(),
                 c(),
                 (n.current = window.setTimeout(() => {
-                    (isNaN(s) || isNaN(r) || r < s) && b(60);
+                    (isNaN(s) || isNaN(r) || r < s) && T(60);
                 }, e));
         }),
-        T = (0, G.iW)((e) => {
+        b = (0, G.iW)((e) => {
             g(),
                 f(),
                 (n.current = window.setTimeout(() => {
-                    (isNaN(a) || isNaN(r) || r > a) && T(60);
+                    (isNaN(a) || isNaN(r) || r > a) && b(60);
                 }, e));
         }),
         S = (e) => {
@@ -121,7 +121,7 @@ function V(e) {
         },
         incrementButtonProps: {
             onPressStart: () => {
-                b(400), y(window, 'contextmenu', S);
+                T(400), y(window, 'contextmenu', S);
             },
             onPressEnd: () => {
                 g(), A();
@@ -131,7 +131,7 @@ function V(e) {
         },
         decrementButtonProps: {
             onPressStart: () => {
-                T(400), y(window, 'contextmenu', S);
+                b(400), y(window, 'contextmenu', S);
             },
             onPressEnd: () => {
                 g(), A();
@@ -160,8 +160,8 @@ F = {
     'ja-JP': E.Z,
     'ko-KR': v.Z,
     'lt-LT': I.Z,
-    'lv-LV': b.Z,
-    'nb-NO': T.Z,
+    'lv-LV': T.Z,
+    'nb-NO': b.Z,
     'nl-NL': S.Z,
     'pl-PL': y.Z,
     'pt-BR': A.Z,
@@ -173,7 +173,7 @@ F = {
     'sr-SP': L.Z,
     'sv-SE': x.Z,
     'tr-TR': w.Z,
-    'uk-UA': M.Z,
-    'zh-CN': P.Z,
+    'uk-UA': P.Z,
+    'zh-CN': M.Z,
     'zh-TW': k.Z
 };

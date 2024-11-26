@@ -7,7 +7,7 @@ n.r(t),
             return y;
         },
         transformUser: function () {
-            return T;
+            return b;
         },
         users: function () {
             return g;
@@ -55,11 +55,11 @@ function I(e, t, n) {
     let a = r !== i;
     return a && E++, a;
 }
-function b(e, t) {
+function T(e, t) {
     let n = g[e];
     return !(null == n || (0, p.Dd)(n.clan, t.clan)) && (null == n.clan || null != t.clan) && ((n.clan = (0, p.yi)(t.clan)), (g[n.id] = n), E++, !0);
 }
-function T(e) {
+function b(e) {
     let t = e.mfa_enabled;
     null != t && ((e.mfaEnabled = t), delete e.mfa_enabled);
     let n = (0, o.G)(e.premium_type);
@@ -90,7 +90,7 @@ function y(e) {
     if (null == r) void 0 !== (t = (r = new l.Z(e)).premiumType) && i && (r.premiumType = A((0, o.QI)(r), r.premiumType));
     else if (n) {
         var a;
-        let n = T(e);
+        let n = b(e);
         void 0 !== (t = null !== (a = n.premium_type) && void 0 !== a ? a : n.premiumType) &&
             i &&
             (0, o.VR)(n) &&
@@ -162,7 +162,7 @@ function C(e) {
         }),
         r.forEach((e) => {
             e.members.forEach((t) => {
-                I(t.user.id, e.id, t.avatar), b(t.user.id, t.user);
+                I(t.user.id, e.id, t.avatar), T(t.user.id, t.user);
             });
         }),
         null != g[d.default.getId()] &&
@@ -178,7 +178,7 @@ function R(e) {
     let { guilds: t, lazyPrivateChannels: n } = e;
     t.forEach((e) => {
         e.members.forEach((t) => {
-            I(t.user.id, e.id, t.avatar), b(t.user.id, t.user);
+            I(t.user.id, e.id, t.avatar), T(t.user.id, t.user);
         });
     }),
         null == n ||
@@ -212,17 +212,17 @@ function w(e) {
     let { user: t } = e;
     y(t);
 }
-function M(e) {
+function P(e) {
     let { messages: t } = e;
     return t.forEach((e) => N(e, !0)), !1;
 }
-function P(e) {
+function M(e) {
     let { mostRecentMessages: t } = e;
     return null == t || t.forEach((e) => N(e, !1)), !1;
 }
 function k(e) {
     let { messages: t } = e;
-    return t.forEach((e) => M({ messages: e })), !1;
+    return t.forEach((e) => P({ messages: e })), !1;
 }
 function U(e) {
     let { firstMessages: t, owners: n } = e;
@@ -324,7 +324,7 @@ function $(e) {
             var n;
             let t = null === (n = e.item.member) || void 0 === n ? void 0 : n.user;
             if (null == t) continue;
-            b(t.id, t);
+            T(t.id, t);
         }
     return !1;
 }
@@ -461,23 +461,23 @@ function eI(e) {
         null != e.message && N(e.message, !0);
     }, !1);
 }
-function eb(e) {
+function eT(e) {
     let { participants: t } = e;
     return t.reduce((e, t) => ((0, i.Z)(t) && y(t.member.user)) || e, !1);
 }
-class eT extends f.Z {
+class eb extends f.Z {
     initialize() {
         this.waitFor(d.default, s.Z);
     }
     takeSnapshot() {
         let e = this.getCurrentUser();
         return {
-            version: eT.LATEST_SNAPSHOT_VERSION,
+            version: eb.LATEST_SNAPSHOT_VERSION,
             data: { users: [e].filter(c.lm) }
         };
     }
     handleLoadCache(e) {
-        let t = this.readSnapshot(eT.LATEST_SNAPSHOT_VERSION);
+        let t = this.readSnapshot(eb.LATEST_SNAPSHOT_VERSION);
         if (null != t) for (let e of t.users) g[e.id] = new l.Z(e);
         if (null != e.users)
             for (let t of e.users) {
@@ -532,11 +532,11 @@ class eT extends f.Z {
             PRESENCE_UPDATES: K,
             SEARCH_FINISH: k,
             MOD_VIEW_SEARCH_FINISH: k,
-            LOAD_MESSAGES_SUCCESS: M,
-            LOAD_MESSAGES_AROUND_SUCCESS: M,
-            LOAD_PINNED_MESSAGES_SUCCESS: M,
-            LOAD_RECENT_MENTIONS_SUCCESS: M,
-            THREAD_LIST_SYNC: P,
+            LOAD_MESSAGES_SUCCESS: P,
+            LOAD_MESSAGES_AROUND_SUCCESS: P,
+            LOAD_PINNED_MESSAGES_SUCCESS: P,
+            LOAD_RECENT_MENTIONS_SUCCESS: P,
+            THREAD_LIST_SYNC: M,
             MESSAGE_CREATE: j,
             MESSAGE_UPDATE: j,
             GUILD_SETTINGS_LOADED_BANS: z,
@@ -580,8 +580,8 @@ class eT extends f.Z {
             FAMILY_CENTER_REQUEST_LINK_SUCCESS: em,
             MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: ev,
             LOAD_GRAVITY_HYDRATED: eI,
-            EMBEDDED_ACTIVITY_UPDATE_V2: eb
+            EMBEDDED_ACTIVITY_UPDATE_V2: eT
         });
     }
 }
-m(eT, 'displayName', 'UserStore'), m(eT, 'LATEST_SNAPSHOT_VERSION', 1), (t.default = new eT());
+m(eb, 'displayName', 'UserStore'), m(eb, 'LATEST_SNAPSHOT_VERSION', 1), (t.default = new eb());

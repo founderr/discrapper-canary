@@ -107,8 +107,8 @@ function m(e) {
 function g(e) {
     var t, n, a;
     let o,
-        { command: u, activeOptionName: c, channel: _, showOptions: h, showImage: g, optionStates: E, onOptionClick: v, section: I, isSelectable: b = !0 } = e,
-        T = i.useMemo(() => {
+        { command: u, activeOptionName: c, channel: _, showOptions: h, showImage: g, optionStates: E, onOptionClick: v, section: I, isSelectable: T = !0 } = e,
+        b = i.useMemo(() => {
             var e;
             return null == u ? void 0 : null === (e = u.options) || void 0 === e ? void 0 : e.find((e) => e.name === c);
         }, [c, u]),
@@ -116,7 +116,7 @@ function g(e) {
     o = null != S && (null === (t = S.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? (null !== (n = S.lastValidationResult.error) && void 0 !== n ? n : '') : null;
     let y = g && null != I ? (0, d.ky)(I) : null;
     return (0, r.jsxs)('div', {
-        className: s()(p.wrapper, b ? null : p.disabled),
+        className: s()(p.wrapper, T ? null : p.disabled),
         children: [
             null != y
                 ? (0, r.jsx)(y, {
@@ -148,7 +148,7 @@ function g(e) {
                     }),
                     (0, r.jsx)(l.wL, {
                         className: s()(p.description, null != o ? p.error : null),
-                        children: null !== (a = null != o ? o : null == T ? void 0 : T.displayDescription) && void 0 !== a ? a : u.displayDescription
+                        children: null !== (a = null != o ? o : null == b ? void 0 : b.displayDescription) && void 0 !== a ? a : u.displayDescription
                     })
                 ]
             }),

@@ -12,20 +12,20 @@ var r = n(200651),
 t.Z = (e) => {
     let { reportType: t, menu: n, modalProps: _, onSubmit: p, onNavigate: h, emailToken: m, isAuthenticated: g = !0 } = e,
         E = (0, o.Dt)(),
-        { nodes: v, root_node_id: I, success_node_id: b, fail_node_id: T } = n,
+        { nodes: v, root_node_id: I, success_node_id: T, fail_node_id: b } = n,
         [S, y] = i.useState(I),
         [A, N] = i.useState(void 0),
         [C, R] = i.useState(void 0),
         [O, D] = i.useState([]),
         [L, x] = i.useState(void 0),
-        [w, M] = i.useState(void 0),
-        P = (e) => {
+        [w, P] = i.useState(void 0),
+        M = (e) => {
             var n;
             let { destination: r } = e,
                 [, i] = r,
                 a = v[i];
             if (a.elements.some((e) => 'skip' === e.type) && (null === (n = a.button) || void 0 === n ? void 0 : n.type) === 'next')
-                return P({
+                return M({
                     ...e,
                     destination: ['', a.button.target]
                 });
@@ -45,7 +45,7 @@ t.Z = (e) => {
             var r;
             let i = g ? await (0, u.ZD)(n, t, [...O, e]) : await (0, u.fw)(n, t, [...O, e], m),
                 a = null == i ? void 0 : null === (r = i.body) || void 0 === r ? void 0 : r.report_id;
-            null != a && x(a), M(v[e.nodeRef].report_type), null == p || p(a);
+            null != a && x(a), P(v[e.nodeRef].report_type), null == p || p(a);
         },
         U = () => {
             var e, n;
@@ -71,7 +71,7 @@ t.Z = (e) => {
             for (let a in v) {
                 var n, r, i;
                 let s = v[a];
-                if (s.id !== b && s.id !== T && s.id !== I) {
+                if (s.id !== T && s.id !== b && s.id !== I) {
                     if (s.key.endsWith('_SUBMIT') || (null === (n = s.button) || void 0 === n ? void 0 : n.type) === 'submit') {
                         t.push(s);
                         continue;
@@ -83,8 +83,8 @@ t.Z = (e) => {
                     }
                 }
             }
-            return [v[I], ...e, ...t, v[b], v[T]];
-        }, [v, I, T, b]);
+            return [v[I], ...e, ...t, v[T], v[b]];
+        }, [v, I, b, T]);
     return (0, r.jsx)(a.ModalRoot, {
         transitionState: _.transitionState,
         'aria-labelledby': E,
@@ -105,12 +105,12 @@ t.Z = (e) => {
                                 reportSubType: w,
                                 history: O,
                                 onModalClose: _.onClose,
-                                onSelectChild: P,
+                                onSelectChild: M,
                                 onNavigateBack: U,
                                 multiSelect: A,
                                 textInput: C,
-                                successNodeId: b,
-                                failNodeId: T,
+                                successNodeId: T,
+                                failNodeId: b,
                                 onSubmit: k,
                                 reportId: L
                             })

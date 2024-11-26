@@ -22,8 +22,8 @@ var r = n(200651),
     E = n(478758),
     v = n(789707),
     I = n(981631),
-    b = n(531578),
-    T = n(359337);
+    T = n(531578),
+    b = n(359337);
 function S(e) {
     let { summary: t, channel: f, members: v, guildId: S, unread: y, onClick: A } = e,
         [N, C] = i.useState(!1),
@@ -39,7 +39,7 @@ function S(e) {
         },
         L = d.Z.can(I.Plq.MANAGE_MESSAGES, f);
     return (0, r.jsxs)(s.Clickable, {
-        className: T.container,
+        className: b.container,
         onClick: A,
         onContextMenu: (e) => {
             L &&
@@ -58,15 +58,15 @@ function S(e) {
             (0, r.jsx)(u.Z, {
                 hovered: N,
                 unread: y,
-                className: T.unreadPill
+                className: b.unreadPill
             }),
             (0, r.jsx)('div', {
-                className: T.rowHeader,
+                className: b.rowHeader,
                 children: (0, r.jsxs)('div', {
-                    className: T.rowHeaderLeft,
+                    className: b.rowHeaderLeft,
                     children: [
                         (0, r.jsx)(s.Text, {
-                            className: T.timestamp,
+                            className: b.timestamp,
                             color: 'interactive-normal',
                             variant: 'text-xs/normal',
                             children: R
@@ -75,15 +75,15 @@ function S(e) {
                             height: 4,
                             width: 4,
                             'aria-hidden': 'true',
-                            className: T.dot
+                            className: b.dot
                         }),
                         (0, r.jsx)(s.ChatIcon, {
                             size: 'xxs',
                             color: 'currentColor',
-                            className: T.icon
+                            className: b.icon
                         }),
                         (0, r.jsx)(s.Text, {
-                            className: T.count,
+                            className: b.count,
                             color: 'interactive-normal',
                             variant: 'text-xs/normal',
                             children: t.count
@@ -95,7 +95,7 @@ function S(e) {
                                         height: 4,
                                         width: 4,
                                         'aria-hidden': 'true',
-                                        className: T.dot
+                                        className: b.dot
                                     }),
                                     (0, r.jsx)(E.Z, {
                                         partySize: {
@@ -114,20 +114,20 @@ function S(e) {
             N &&
                 !O &&
                 (0, r.jsxs)('div', {
-                    className: T.feedbackContainer,
+                    className: b.feedbackContainer,
                     children: [
                         (0, r.jsx)(s.Clickable, {
-                            onClick: (e) => D(e, b.aZ.GOOD),
+                            onClick: (e) => D(e, T.aZ.GOOD),
                             children: (0, r.jsx)(p.Z, {
-                                className: T.thumbIcon,
+                                className: b.thumbIcon,
                                 width: 12,
                                 height: 12
                             })
                         }),
                         (0, r.jsx)(s.Clickable, {
-                            onClick: (e) => D(e, b.aZ.BAD),
+                            onClick: (e) => D(e, T.aZ.BAD),
                             children: (0, r.jsx)(_.Z, {
-                                className: T.thumbIcon,
+                                className: b.thumbIcon,
                                 width: 12,
                                 height: 12
                             })
@@ -137,13 +137,13 @@ function S(e) {
             (0, r.jsx)(s.Text, {
                 color: 'header-primary',
                 variant: 'text-sm/semibold',
-                className: T.title,
+                className: b.title,
                 children: t.topic
             }),
             (0, r.jsx)(s.Text, {
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                className: T.subtitle,
+                className: b.subtitle,
                 children: t.summShort
             })
         ]

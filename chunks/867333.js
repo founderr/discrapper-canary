@@ -18,14 +18,14 @@ var r = n(200651),
     h = n(450793);
 function m(e) {
     let { color: t = 'default', label: n, checked: a, subtext: m, disabled: g, isFocused: E, menuItemProps: v, action: I } = e,
-        b = i.useRef(null),
-        T = (0, d.Q)('MenuRadioItem');
+        T = i.useRef(null),
+        b = (0, d.Q)('MenuRadioItem');
     return (
         i.useEffect(() => {
-            E && (0, u.F)(b);
+            E && (0, u.F)(T);
         }, [E]),
         (0, r.jsxs)(o.P, {
-            innerRef: b,
+            innerRef: T,
             className: s()(h.item, h.labelContainer, p._[t], {
                 [h.disabled]: g,
                 [h.focused]: E
@@ -48,7 +48,7 @@ function m(e) {
                 }),
                 (0, r.jsx)('div', {
                     className: h.iconContainer,
-                    children: T
+                    children: b
                         ? (0, r.jsx)(c.RadioIndicator, {
                               checked: a,
                               radioItemIconClassName: h.radioIcon

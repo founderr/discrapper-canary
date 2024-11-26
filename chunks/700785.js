@@ -74,7 +74,7 @@ n.d(t, {
         return x;
     },
     TP: function () {
-        return T;
+        return b;
     },
     Uu: function () {
         return Z;
@@ -83,7 +83,7 @@ n.d(t, {
         return k;
     },
     iJ: function () {
-        return M;
+        return P;
     },
     o4: function () {
         return w;
@@ -92,7 +92,7 @@ n.d(t, {
         return F;
     },
     r6: function () {
-        return P;
+        return M;
     },
     uB: function () {
         return L;
@@ -123,8 +123,8 @@ var r = n(392711),
     E = n(709054),
     v = n(981631);
 let I = a.vB(0),
-    b = a.$e(...i().values(v.Plq)),
-    T = a.$e(v.Plq.CREATE_INSTANT_INVITE, v.Plq.CHANGE_NICKNAME, v.Plq.VIEW_CHANNEL, v.Plq.SEND_MESSAGES, v.Plq.EMBED_LINKS, v.Plq.ATTACH_FILES, v.Plq.READ_MESSAGE_HISTORY, v.Plq.MENTION_EVERYONE, v.Plq.USE_EXTERNAL_EMOJIS, v.Plq.USE_EXTERNAL_STICKERS, v.Plq.ADD_REACTIONS, v.Plq.CREATE_PUBLIC_THREADS, v.Plq.CREATE_PRIVATE_THREADS, v.Plq.SEND_MESSAGES_IN_THREADS, v.Plq.SEND_POLLS, v.Plq.CONNECT, v.Plq.SPEAK, v.Plq.USE_VAD, v.Plq.STREAM, v.Plq.USE_EMBEDDED_ACTIVITIES, v.Plq.USE_SOUNDBOARD, v.Plq.REQUEST_TO_SPEAK, v.Plq.USE_APPLICATION_COMMANDS, v.Plq.CREATE_GUILD_EXPRESSIONS, v.Plq.CREATE_EVENTS, v.Plq.USE_EXTERNAL_APPS),
+    T = a.$e(...i().values(v.Plq)),
+    b = a.$e(v.Plq.CREATE_INSTANT_INVITE, v.Plq.CHANGE_NICKNAME, v.Plq.VIEW_CHANNEL, v.Plq.SEND_MESSAGES, v.Plq.EMBED_LINKS, v.Plq.ATTACH_FILES, v.Plq.READ_MESSAGE_HISTORY, v.Plq.MENTION_EVERYONE, v.Plq.USE_EXTERNAL_EMOJIS, v.Plq.USE_EXTERNAL_STICKERS, v.Plq.ADD_REACTIONS, v.Plq.CREATE_PUBLIC_THREADS, v.Plq.CREATE_PRIVATE_THREADS, v.Plq.SEND_MESSAGES_IN_THREADS, v.Plq.SEND_POLLS, v.Plq.CONNECT, v.Plq.SPEAK, v.Plq.USE_VAD, v.Plq.STREAM, v.Plq.USE_EMBEDDED_ACTIVITIES, v.Plq.USE_SOUNDBOARD, v.Plq.REQUEST_TO_SPEAK, v.Plq.USE_APPLICATION_COMMANDS, v.Plq.CREATE_GUILD_EXPRESSIONS, v.Plq.CREATE_EVENTS, v.Plq.USE_EXTERNAL_APPS),
     S = a.$e(v.Plq.VIEW_CHANNEL, v.Plq.READ_MESSAGE_HISTORY),
     y = a.$e(v.Plq.VIEW_CHANNEL, v.Plq.SEND_MESSAGES, v.Plq.CONNECT, v.Plq.SPEAK, v.Plq.STREAM, v.Plq.USE_EMBEDDED_ACTIVITIES, v.Plq.USE_EXTERNAL_APPS, v.Plq.USE_EXTERNAL_EMOJIS, v.Plq.USE_EXTERNAL_SOUNDS, v.Plq.USE_EXTERNAL_STICKERS, v.Plq.USE_SOUNDBOARD, v.Plq.USE_VAD),
     A = a.$e(v.Plq.VIEW_CHANNEL, v.Plq.READ_MESSAGE_HISTORY),
@@ -165,13 +165,13 @@ function D(e) {
                       ...s
                   }
                 : m.Z.getRoles(r.id))[r.getEveryoneRoleId()],
-        f = null != d ? d.permissions : T;
+        f = null != d ? d.permissions : b;
     if (null != n)
         for (let e = 0; e < n.roles.length; e++) {
             let t = s[n.roles[e]];
             void 0 !== t && (f = a.IH(f, t.permissions));
         }
-    return (f = a.e$(f, v.Plq.ADMINISTRATOR) ? b : O(r.id, n, f, i)), (c.Z.isLurking(r.id) || (null == n ? void 0 : n.isPending)) && (f = a.hX(f, u)), h.ZP.isCurrentUserGuest(r.id) && (f = a.hX(f, y)), R(f, r, t, o);
+    return (f = a.e$(f, v.Plq.ADMINISTRATOR) ? T : O(r.id, n, f, i)), (c.Z.isLurking(r.id) || (null == n ? void 0 : n.isPending)) && (f = a.hX(f, u)), h.ZP.isCurrentUserGuest(r.id) && (f = a.hX(f, y)), R(f, r, t, o);
 }
 function L(e) {
     var t, n, r;
@@ -211,11 +211,11 @@ function L(e) {
         i = null != e ? m.Z.getGuild(e) : null;
     } else (o = null != o ? o : {}), (i = s);
     if (null == i) return I;
-    if (!(E === (null === (t = g.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && u.Z.isViewingRoles(i.id)) && i.isOwner(E)) return R(b, i, E, c);
-    let T = h.ZP.getMember(i.id, E);
+    if (!(E === (null === (t = g.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && u.Z.isViewingRoles(i.id)) && i.isOwner(E)) return R(T, i, E, c);
+    let b = h.ZP.getMember(i.id, E);
     return D({
         userId: E,
-        member: T,
+        member: b,
         guild: i,
         overwrites: o,
         roles: l,
@@ -244,11 +244,11 @@ function w(e, t) {
             })
     );
 }
-function M(e) {
+function P(e) {
     var t;
     return i().some(m.Z.getRoles(e.id), (e) => e.hoist && a.e$(e.permissions, v.Plq.ADMINISTRATOR)) ? void 0 : null !== (t = e.ownerId) && void 0 !== t ? t : void 0;
 }
-function P(e, t, n, r) {
+function M(e, t, n, r) {
     if (null != t && e.isOwner(t)) return !0;
     if (null == n) return !1;
     let a = i()(m.Z.getRoles(e.id))

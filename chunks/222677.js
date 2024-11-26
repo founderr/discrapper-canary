@@ -9,7 +9,7 @@ n.d(t, {
         return i;
     },
     U0: function () {
-        return T;
+        return b;
     },
     WO: function () {
         return C;
@@ -74,13 +74,13 @@ function I(e, t, n, r, i) {
         reactionType: (null == i ? void 0 : i.burst) ? u.O.BURST : u.O.NORMAL
     });
 }
-function b(e) {
+function T(e) {
     let { channelId: t, messageId: n, emoji: r, userId: i, useTypeEndpoint: a = !1, type: s = u.O.NORMAL } = e,
         o = null != r.id ? ''.concat(r.name, ':').concat(r.id) : r.name;
     return null == i ? g.ANM.REACTIONS(t, n, o) : a ? g.ANM.REACTION_WITH_TYPE(t, n, o, i, s) : g.ANM.REACTION(t, n, o, i);
 }
 ((r = i || (i = {})).MESSAGE = 'Message'), (r.FORUM_TOOLBAR = 'Forum Toolbar'), (r.MOBILE_MEDIA_VIEWER = 'Mobile Media Viewer'), (r.MESSAGE_HOVER_BAR = 'Message Hover Bar'), (r.MESSAGE_INLINE_BUTTON = 'Message Inline Button'), (r.MESSAGE_CONTEXT_MENU = 'Message Context Menu'), (r.MESSAGE_REACTION_PICKER = 'Message Reaction Picker');
-async function T(e) {
+async function b(e) {
     let { channelId: t, messageId: n, emoji: r, limit: i, after: s, type: l } = e,
         c =
             l === u.O.VOTE
@@ -89,7 +89,7 @@ async function T(e) {
                       let i = null !== (r = n.id) && void 0 !== r ? r : n.name;
                       return g.ANM.POLL_ANSWER_VOTERS(e, t, i);
                   })(t, n, r)
-                : b({
+                : T({
                       channelId: t,
                       messageId: n,
                       emoji: r
@@ -145,7 +145,7 @@ async function S(e, t, n) {
         await c.Z.unarchiveThreadIfNecessary(e),
         a.tn
             .put({
-                url: b({
+                url: T({
                     channelId: e,
                     messageId: t,
                     emoji: n,
@@ -232,7 +232,7 @@ async function C(e) {
         await c.Z.unarchiveThreadIfNecessary(t),
         a.tn
             .del({
-                url: b({
+                url: T({
                     channelId: t,
                     messageId: n,
                     emoji: r,

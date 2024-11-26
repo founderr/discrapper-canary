@@ -145,7 +145,7 @@ function I(e) {
             })
     });
 }
-function b(e) {
+function T(e) {
     return (0, r.jsx)(l.Tooltip, {
         text: p.intl.string(p.t['0PQYk5']),
         children: (t) =>
@@ -167,15 +167,15 @@ function b(e) {
             })
     });
 }
-function T(e) {
+function b(e) {
     var t;
-    let { url: n, fileName: i, fileSize: a, fileContents: o, expanded: u, setExpanded: d, language: f, setLanguage: m, bytesLeft: T, className: S } = e,
+    let { url: n, fileName: i, fileSize: a, fileContents: o, expanded: u, setExpanded: d, language: f, setLanguage: m, bytesLeft: b, className: S } = e,
         y = null == o ? void 0 : o.split('\n'),
         A = null !== (t = null == y ? void 0 : y.length) && void 0 !== t ? t : 0,
         N = u ? 100 : 6,
-        C = 0 === T,
+        C = 0 === b,
         R = '';
-    C && u && A > N ? (R = '\n...') : !C && (R = '...'), '' !== R && (C ? (R += ' ' + p.intl.formatToPlainString(p.t.DQnFp6, { lines: A - N })) : (R += ' ' + p.intl.formatToPlainString(p.t['1+gGcH'], { formattedBytes: (0, _.IC)(T) })));
+    C && u && A > N ? (R = '\n...') : !C && (R = '...'), '' !== R && (C ? (R += ' ' + p.intl.formatToPlainString(p.t.DQnFp6, { lines: A - N })) : (R += ' ' + p.intl.formatToPlainString(p.t['1+gGcH'], { formattedBytes: (0, _.IC)(b) })));
     let O = (null == y ? void 0 : y.slice(0, N).join('\n')) + R,
         D = (0, c.yx)(O),
         L = u || N < A;
@@ -206,13 +206,13 @@ function T(e) {
                                       isWholeFile: C,
                                       numLines: A
                                   }),
-                                  (0, r.jsx)(b, {
+                                  (0, r.jsx)(T, {
                                       url: n,
                                       fileName: i,
                                       fileSize: a,
                                       language: f,
                                       fileContents: o,
-                                      bytesLeft: T
+                                      bytesLeft: b
                                   })
                               ]
                           })
@@ -338,7 +338,7 @@ t.Z = i.memo(
                   onContextMenu: d,
                   className: l
               })
-            : (0, r.jsx)(T, {
+            : (0, r.jsx)(b, {
                   url: t,
                   fileName: n,
                   fileSize: a,

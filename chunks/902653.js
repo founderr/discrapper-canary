@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         WebAudioAPISound: function () {
-            return b;
+            return T;
         },
         WebAudioSound: function () {
             return I;
@@ -133,7 +133,7 @@ class I {
         f(this, 'name', void 0), f(this, '_volume', void 0), f(this, '_audio', void 0), (this.name = e), (this._volume = n);
     }
 }
-class b {
+class T {
     get volume() {
         return this._volume;
     }

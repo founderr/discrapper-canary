@@ -32,10 +32,10 @@ let d = (e) => {
     );
 };
 t.Z = function (e) {
-    let { categoryListRef: t, expressionsListRef: n, categories: a, store: u, children: f, className: _, listPadding: p, rowCount: h, getScrollOffsetForIndex: m, categoryHeight: g, onScroll: E, renderCategoryListItem: v, rowCountBySection: I, renderSection: b } = e,
-        T = u.useStore((e) => e.activeCategoryIndex);
+    let { categoryListRef: t, expressionsListRef: n, categories: a, store: u, children: f, className: _, listPadding: p, rowCount: h, getScrollOffsetForIndex: m, categoryHeight: g, onScroll: E, renderCategoryListItem: v, rowCountBySection: I, renderSection: T } = e,
+        b = u.useStore((e) => e.activeCategoryIndex);
     d({
-        activeIndex: T,
+        activeIndex: b,
         categoryListRef: t,
         getScrollOffsetForIndex: m
     });
@@ -50,7 +50,7 @@ t.Z = function (e) {
             },
             [n, u]
         ),
-        y = i.useCallback((e) => v(a[e], e, () => S(e), T === e), [T, a, S, v]),
+        y = i.useCallback((e) => v(a[e], e, () => S(e), b === e), [b, a, S, v]),
         A = i.useMemo(() => ('function' == typeof g ? (e) => g(a[e], e) : g), [a, g]);
     return (0, r.jsxs)('div', {
         className: s()(c.wrapper, _),
@@ -64,7 +64,7 @@ t.Z = function (e) {
                 rowHeight: A,
                 hideScrollbar: !0,
                 rowCountBySection: I,
-                renderSection: b
+                renderSection: T
             }),
             null == f ? void 0 : f(S)
         ]

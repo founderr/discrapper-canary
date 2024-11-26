@@ -1,6 +1,6 @@
 n.d(t, {
     Ds: function () {
-        return P;
+        return M;
     },
     YB: function () {
         return w;
@@ -9,7 +9,7 @@ n.d(t, {
         return k;
     },
     q5: function () {
-        return M;
+        return P;
     }
 });
 var r = n(200651);
@@ -31,8 +31,8 @@ var i = n(120356),
     E = n(871499),
     v = n(402113),
     I = n(800965),
-    b = n(157813),
-    T = n(25827),
+    T = n(157813),
+    b = n(25827),
     S = n(131951),
     y = n(316253),
     A = n(884338),
@@ -53,11 +53,11 @@ function x(e) {
 }
 function w(e) {
     var t, n;
-    let { channel: i, applicationId: a, onMouseDown: o, onMouseMove: E, onMouseLeave: b, onJumpToChannel: A, idle: O, selectedParticipant: x } = e,
+    let { channel: i, applicationId: a, onMouseDown: o, onMouseMove: E, onMouseLeave: T, onJumpToChannel: A, idle: O, selectedParticipant: x } = e,
         w = (0, u.bp)() === C.IlC.POPOUT,
-        M = (0, s.e7)([S.Z], () => S.Z.isVideoEnabled()),
-        P = (0, s.e7)([S.Z], () => Object.values(S.Z.getVideoDevices())[0]),
-        k = !1 === (null === (t = null == P ? void 0 : P.disabled) || void 0 === t || t),
+        P = (0, s.e7)([S.Z], () => S.Z.isVideoEnabled()),
+        M = (0, s.e7)([S.Z], () => Object.values(S.Z.getVideoDevices())[0]),
+        k = !1 === (null === (t = null == M ? void 0 : M.disabled) || void 0 === t || t),
         U = (0, c.Z)([a])[0],
         B = (0, p.Z)(i),
         G = (e) => {
@@ -67,7 +67,7 @@ function w(e) {
         className: L.videoControls,
         onMouseMove: E,
         onMouseDown: o,
-        onMouseLeave: b,
+        onMouseLeave: T,
         children: [
             (0, r.jsx)('div', {
                 className: L.topControls,
@@ -87,9 +87,9 @@ function w(e) {
                         basis: '50%',
                         align: f.Z.Align.CENTER,
                         children: [
-                            (0, r.jsx)(T.C, {
+                            (0, r.jsx)(b.C, {
                                 className: D.leftPipIcon,
-                                enabled: M,
+                                enabled: P,
                                 cameraUnavailable: !k,
                                 hasPermission: B,
                                 onChange: G,
@@ -137,7 +137,7 @@ function w(e) {
         ]
     });
 }
-function M(e) {
+function P(e) {
     var t;
     let { channel: n, applicationId: i, onMouseDown: s, onMouseMove: l, onMouseLeave: u, onJumpToChannel: d, idle: f, users: _ } = e,
         p = (0, c.Z)([i])[0];
@@ -178,10 +178,10 @@ function M(e) {
         ]
     });
 }
-function P(e) {
+function M(e) {
     let { channelId: t, participantsOpen: n, showToggleParticipants: i } = e;
     return i
-        ? (0, r.jsx)(b.Z, {
+        ? (0, r.jsx)(T.Z, {
               channelId: t,
               isParticipantsOpen: n,
               className: D.participantsButton

@@ -23,17 +23,17 @@ let p = (0, c.hQ)(),
     }),
     S = (0, c.hQ)();
 function T(e) {
-    let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: T, currentBio: C, disabled: _ = !1 } = e,
-        [E, f] = s.useState(null != d ? d : C),
-        [I, N] = s.useState((0, a.JM)(E)),
+    let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: T, currentBio: E, disabled: _ = !1 } = e,
+        [C, I] = s.useState(null != d ? d : E),
+        [f, N] = s.useState((0, a.JM)(C)),
         A = s.useRef(!1);
     return (
         s.useEffect(() => {
             if (void 0 === d) {
-                let e = (0, a.JM)(C);
-                f(C), N(e);
+                let e = (0, a.JM)(E);
+                I(E), N(e);
             }
-        }, [d, C]),
+        }, [d, E]),
         (0, i.jsxs)(u.Z, {
             title: t,
             titleId: p,
@@ -47,12 +47,12 @@ function T(e) {
                     innerClassName: g.bioTextArea,
                     maxCharacterCount: m.tPV,
                     onChange: function (e, t, n) {
-                        t !== E && (f(t), N(n), c(t));
+                        t !== C && (I(t), N(n), c(t));
                     },
                     placeholder: T,
                     channel: x,
-                    textValue: E,
-                    richValue: I,
+                    textValue: C,
+                    richValue: f,
                     type: l.I.PROFILE_BIO_INPUT,
                     onBlur: () => {
                         A.current = !1;

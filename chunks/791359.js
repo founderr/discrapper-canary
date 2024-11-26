@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return R;
     }
 }),
     n(47120);
@@ -23,18 +23,18 @@ var i = n(200651),
     I = n(70956),
     C = n(225559),
     v = n(910436),
-    S = n(203028),
-    N = n(358924),
+    N = n(203028),
+    S = n(358924),
     T = n(292140),
-    A = n(525296),
+    x = n(525296),
     b = n(981631),
-    x = n(674563),
+    A = n(674563),
     Z = n(388032),
     L = n(721925);
 let y = 15 * I.Z.Millis.MINUTE,
-    O = (0, A.Z)(function (e) {
+    P = (0, x.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
-            s = (0, i.jsx)(S.Z, {
+            s = (0, i.jsx)(N.Z, {
                 party: t,
                 onUserContextMenu: n
             }),
@@ -52,7 +52,7 @@ let y = 15 * I.Z.Millis.MINUTE,
                 let e = m
                     .filter((e) => {
                         var t, n;
-                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === x.wW.GAME;
+                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === A.wW.GAME;
                     })
                     .map((e) => e.game.name);
                 E.default.track(b.rMx.NOW_PLAYING_CARD_HOVERED, {
@@ -63,7 +63,7 @@ let y = 15 * I.Z.Millis.MINUTE,
                     games_detected: e
                 });
             }, [g, f, _, I, m]),
-            A = o()(C, y);
+            x = o()(C, y);
         return null != s || null != c
             ? (0, i.jsx)(d.Popout, {
                   position: 'left',
@@ -77,9 +77,9 @@ let y = 15 * I.Z.Millis.MINUTE,
                   spacing: 8,
                   children: (e, t) => {
                       let { isShown: n } = t;
-                      return (0, i.jsx)(N.Z, {
+                      return (0, i.jsx)(S.Z, {
                           ...e,
-                          onMouseEnter: A,
+                          onMouseEnter: x,
                           'aria-haspopup': 'menu',
                           className: L.itemCard,
                           active: n,
@@ -91,8 +91,8 @@ let y = 15 * I.Z.Millis.MINUTE,
               })
             : null;
     }),
-    R = a().throttle(() => p.W(!1), 300000);
-function P() {
+    O = a().throttle(() => p.W(!1), 300000);
+function R() {
     let {
             nowPlayingCards: e,
             loaded: t,
@@ -109,7 +109,7 @@ function P() {
         s = (0, c.e7)([h.Z], () => h.Z.quests);
     r.useEffect(() => (u.Z.wait(() => C.L()), () => u.Z.wait(() => C.v())), [null == a ? void 0 : a.id]),
         r.useEffect(() => {
-            n && !l && R();
+            n && !l && O();
         }, [n, l]);
     let o = r.useMemo(() => {
             let t = new Map(),
@@ -131,7 +131,7 @@ function P() {
                   ? e.map((e) => {
                         let { party: t } = e;
                         return (0, i.jsx)(
-                            O,
+                            P,
                             {
                                 party: t,
                                 quest: o.get(t.id)

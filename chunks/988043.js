@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return E;
     }
 }),
     n(47120);
@@ -20,11 +20,11 @@ var i = n(200651),
     x = n(736530),
     S = n(981631),
     T = n(388032);
-function C() {
+function E() {
     let e = (0, u.is)(),
         t = (0, u.c_)(),
         n = d.h2.useSetting().includes(e),
-        C = d.iG.useSetting(),
+        E = d.iG.useSetting(),
         _ = s.useCallback(
             (t) => {
                 let n = new Set((0, c.YK)());
@@ -32,13 +32,13 @@ function C() {
             },
             [e]
         );
-    function E(e, t) {
+    function C(e, t) {
         a.default.track(S.rMx.GUILD_DEFAULT_DMS_UPDATED, {
             default_guilds_restricted: e,
             applied_to_existing_guilds: t
         });
     }
-    let f = (e) => {
+    let I = (e) => {
         (0, g.V)({
             header: T.intl.string(T.t['uUr+GR']),
             body: T.intl.string(T.t.hjGJBg),
@@ -46,10 +46,10 @@ function C() {
             cancelText: T.intl.string(T.t.p89ACg),
             confirmButtonColor: r.Button.Colors.BRAND,
             onConfirm: () => {
-                d.iG.updateSetting(e), E(e, !1);
+                d.iG.updateSetting(e), C(e, !1);
             },
             onCancel: () => {
-                d.iG.updateSetting(e), d.h2.updateSetting(e ? o.default.keys(l.Z.getGuilds()) : []), E(e, !0);
+                d.iG.updateSetting(e), d.h2.updateSetting(e ? o.default.keys(l.Z.getGuilds()) : []), C(e, !0);
             }
         });
     };
@@ -60,9 +60,9 @@ function C() {
                 ? (0, i.jsx)(h.Z, {
                       title: T.intl.string(T.t.RAQUSE),
                       note: T.intl.string(T.t.wbYDfX),
-                      value: !C,
+                      value: !E,
                       onChange: (e) => {
-                          f(!e);
+                          I(!e);
                       }
                   })
                 : (0, i.jsx)(h.Z, {

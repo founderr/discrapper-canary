@@ -15,8 +15,8 @@ var s,
     E = n(524331),
     v = n(710845),
     I = n(594190),
-    b = n(314897),
-    T = n(553795),
+    T = n(314897),
+    b = n(553795),
     S = n(517100),
     y = n(158776),
     A = n(606304),
@@ -28,7 +28,7 @@ var s,
     L = n(781518),
     x = n(616922),
     w = n(981631);
-function M(e, t, n) {
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function M(e, t, n) {
         e
     );
 }
-let P = g.Z.get(w.ABu.SPOTIFY),
+let M = g.Z.get(w.ABu.SPOTIFY),
     k = 'hm://pusher/v1/connections/',
     U = 30 * O.Z.Millis.SECOND,
     B = 30 * O.Z.Millis.SECOND,
@@ -161,16 +161,16 @@ class eo {
         }
     }
     constructor(e, t) {
-        M(this, 'accessToken', void 0),
-            M(this, 'accountId', void 0),
-            M(this, 'connectionId', void 0),
-            M(this, 'isPremium', void 0),
-            M(this, 'pingInterval', void 0),
-            M(this, 'backoff', void 0),
-            M(this, 'socket', void 0),
-            M(this, '_requestedDisconnect', !1),
-            M(this, '_requestedConnect', !1),
-            M(
+        P(this, 'accessToken', void 0),
+            P(this, 'accountId', void 0),
+            P(this, 'connectionId', void 0),
+            P(this, 'isPremium', void 0),
+            P(this, 'pingInterval', void 0),
+            P(this, 'backoff', void 0),
+            P(this, 'socket', void 0),
+            P(this, '_requestedDisconnect', !1),
+            P(this, '_requestedConnect', !1),
+            P(
                 this,
                 'handleDeviceStateChange',
                 c().throttle(() => {
@@ -245,7 +245,7 @@ function ef() {
 }
 function e_() {
     let e = Object.keys(J),
-        t = T.Z.getAccounts().filter((e) => {
+        t = b.Z.getAccounts().filter((e) => {
             let { type: t } = e;
             return t === w.ABu.SPOTIFY;
         });
@@ -277,7 +277,7 @@ function ep() {
     (et = !0), (0, L.wO)(t.accountId, t.accessToken), C.default.track(w.rMx.SPOTIFY_AUTO_PAUSED), W.info('Playback auto paused');
 }
 function eh(e) {
-    if (e === b.default.getId()) {
+    if (e === T.default.getId()) {
         let t = N.Z.isCurrentClientInVoiceChannel(),
             n = (0, m.O)({
                 userId: e,
@@ -292,7 +292,7 @@ function em(e, t, n) {
     var r, i, a, s, o, l, u, c, d, f, _, p, m, g;
     let E,
         v,
-        { device: I, progress_ms: b, is_playing: T, repeat_state: S, item: y, context: A } = n;
+        { device: I, progress_ms: T, is_playing: b, repeat_state: S, item: y, context: A } = n;
     if (null != y && y.type === x.Hw.TRACK) {
         let e = y.id;
         null != y.linked_from && null != y.linked_from.id && (e = y.linked_from.id),
@@ -360,9 +360,9 @@ function em(e, t, n) {
                 accountId: e,
                 track: E,
                 volumePercent: null != I ? I.volume_percent : 0,
-                isPlaying: T,
+                isPlaying: b,
                 repeat: 'off' !== S,
-                position: b,
+                position: T,
                 context: t,
                 device: I
             });
@@ -383,7 +383,7 @@ function eg(e, t) {
 }
 class eE extends (o = f.ZP.Store) {
     initialize() {
-        this.waitFor(T.Z, A.Z),
+        this.waitFor(b.Z, A.Z),
             this.syncWith([y.Z], () =>
                 (function () {
                     if (null == i || null == er()) return !1;
@@ -465,7 +465,7 @@ class eE extends (o = f.ZP.Store) {
                 .join('; '));
         let h = {},
             m = null != s.image ? (0, R.getAssetFromImageURL)(w.ABu.SPOTIFY, s.image.url) : null;
-        null != s.image && null != m && (h.large_image = m), s.type !== Y && (h.large_text = s.name), null != _ && (t = _.uri), (n = null != i && null != i.partyId ? i.partyId : ''.concat(x.lS).concat(b.default.getId()));
+        null != s.image && null != m && (h.large_image = m), s.type !== Y && (h.large_text = s.name), null != _ && (t = _.uri), (n = null != i && null != i.partyId ? i.partyId : ''.concat(x.lS).concat(T.default.getId()));
         let g = o.length > 128 ? o.substring(0, 125) + '...' : o,
             E = {
                 context_uri: t,
@@ -478,7 +478,7 @@ class eE extends (o = f.ZP.Store) {
                 button_urls: []
             },
             v = {
-                name: P.name,
+                name: M.name,
                 assets: h,
                 details: g,
                 state: e,
@@ -491,7 +491,7 @@ class eE extends (o = f.ZP.Store) {
         return !c && ((v.sync_id = l), (v.flags = w.xjy.PLAY | w.xjy.SYNC), (v.metadata = E)), v;
     }
 }
-M(eE, 'displayName', 'SpotifyStore');
+P(eE, 'displayName', 'SpotifyStore');
 let ev = new eE(h.Z, {
     USER_CONNECTIONS_UPDATE: e_,
     CONNECTION_OPEN: e_,
@@ -522,7 +522,7 @@ let ev = new eE(h.Z, {
             } else ($[t] = [l]), (d = !0);
         }
         n ? null == en || en.start(B, ep) : ((s = null), null == en || en.stop());
-        let f = T.Z.getAccount(t, w.ABu.SPOTIFY);
+        let f = b.Z.getAccount(t, w.ABu.SPOTIFY);
         if (null == f) return d;
         let p = ee[t],
             m =
@@ -547,7 +547,7 @@ let ev = new eE(h.Z, {
             ((r = c()
                 .values(ee)
                 .find((e) => null != e)),
-            eh(b.default.getId()),
+            eh(T.default.getId()),
             null == s || g ? Q.stop() : Q.start(s.duration - o + Z, () => ei(f.id)),
             null != i && ((!n && o > 0) || null == l || (null != m && i.trackId !== m.track.id))
                 ? (W.info('Listen along active but playback stopped or track changed. Stopping listen along in '.concat(Z, 'ms')),
@@ -628,7 +628,7 @@ let ev = new eE(h.Z, {
         if ((null == t ? void 0 : t.desktopSettings) != null) {
             null == en || en.stop();
             let { sourceId: e, sound: n } = null == t ? void 0 : t.desktopSettings;
-            null != e && I.ZP.getObservedAppNameForWindow(e) === P.name && n ? (en = new p.Xp()).start(B, ep) : (null == en || en.stop(), (en = null));
+            null != e && I.ZP.getObservedAppNameForWindow(e) === M.name && n ? (en = new p.Xp()).start(B, ep) : (null == en || en.stop(), (en = null));
         } else null == t && (null == en || en.stop(), (en = null));
     }
 });

@@ -18,7 +18,7 @@ n.d(t, {
         return S;
     },
     PJ: function () {
-        return b;
+        return T;
     },
     T_: function () {
         return g;
@@ -39,19 +39,19 @@ n.d(t, {
         return U;
     },
     kr: function () {
-        return T;
+        return b;
     },
     n2: function () {
         return y;
     },
     q_: function () {
-        return P;
+        return M;
     },
     qy: function () {
         return B;
     },
     vU: function () {
-        return M;
+        return P;
     },
     yA: function () {
         return N;
@@ -141,39 +141,39 @@ let h = (e) => {
     I = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
             r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        return T(e) ? g(e, n) : v(e, t, n, r);
+        return b(e) ? g(e, n) : v(e, t, n, r);
     };
-function b(e, t) {
+function T(e, t) {
     return e.traits.find((e) => e.type === t);
 }
-function T(e) {
+function b(e) {
     var t, n;
-    return null !== (n = null === (t = b(e, s.N.IS_LIVE)) || void 0 === t ? void 0 : t.is_live) && void 0 !== n && n;
+    return null !== (n = null === (t = T(e, s.N.IS_LIVE)) || void 0 === t ? void 0 : t.is_live) && void 0 !== n && n;
 }
 function S(e) {
     var t, n;
-    return null !== (n = null === (t = b(e, s.N.FIRST_TIME)) || void 0 === t ? void 0 : t.first_time) && void 0 !== n && n;
+    return null !== (n = null === (t = T(e, s.N.FIRST_TIME)) || void 0 === t ? void 0 : t.first_time) && void 0 !== n && n;
 }
 function y(e) {
     return null != e.expires_at && new Date(e.expires_at) < new Date();
 }
 function A(e) {
-    return T(e) && !y(e);
+    return b(e) && !y(e);
 }
 function N(e) {
     var t;
-    return null === (t = b(e, s.N.DURATION_SECONDS)) || void 0 === t ? void 0 : t.duration_seconds;
+    return null === (t = T(e, s.N.DURATION_SECONDS)) || void 0 === t ? void 0 : t.duration_seconds;
 }
 function C(e) {
     var t;
-    return null === (t = b(e, s.N.AGGREGATE_RANGE)) || void 0 === t ? void 0 : t.range;
+    return null === (t = T(e, s.N.AGGREGATE_RANGE)) || void 0 === t ? void 0 : t.range;
 }
 function R(e) {
     var t;
-    return null === (t = b(e, s.N.MARATHON)) || void 0 === t ? void 0 : t.marathon;
+    return null === (t = T(e, s.N.MARATHON)) || void 0 === t ? void 0 : t.marathon;
 }
 function O(e) {
-    let t = b(e, s.N.RESURRECTED);
+    let t = T(e, s.N.RESURRECTED);
     return (null == t ? void 0 : t.resurrected_last_played) != null ? new Date(t.resurrected_last_played) : void 0;
 }
 function D(e) {
@@ -217,12 +217,12 @@ function x(e, t) {
 function w(e) {
     return e.content_type === l.s.TOP_GAME;
 }
-function M(e) {
-    var t;
-    return null === (t = b(e, s.N.STREAK_DAYS)) || void 0 === t ? void 0 : t.streak_count_days;
-}
 function P(e) {
-    let t = M(e);
+    var t;
+    return null === (t = T(e, s.N.STREAK_DAYS)) || void 0 === t ? void 0 : t.streak_count_days;
+}
+function M(e) {
+    let t = P(e);
     if (null == t || t < 3) return !1;
     let n = f.default.extractTimestamp(e.id);
     return !(Date.now() - n > 48 * d.Z.Millis.HOUR) && !0;
@@ -247,7 +247,7 @@ function k(e) {
 }
 function U(e) {
     var t;
-    return null === (t = b(e, s.N.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending;
+    return null === (t = T(e, s.N.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending;
 }
 function B(e) {
     let t = (0, o.e7)([_.Z], () => _.Z.getMatchingActivity(e)),

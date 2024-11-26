@@ -23,8 +23,8 @@ var r,
     E = n(2052),
     v = n(100527),
     I = n(906732),
-    b = n(243778),
-    T = n(339085),
+    T = n(243778),
+    b = n(339085),
     S = n(438332),
     y = n(664437),
     A = n(806966),
@@ -36,8 +36,8 @@ var r,
     L = n(536442),
     x = n(609218),
     w = n(695346),
-    M = n(984933),
-    P = n(594174),
+    P = n(984933),
+    M = n(594174),
     k = n(626135),
     U = n(111361),
     B = n(624138),
@@ -67,7 +67,7 @@ let ea = (e, t) => {
     },
     es = (e) => {
         let { analyticsLocation: t, pickerIntention: n, columnCounts: r, onSelectEmoji: i, emojiGrid: a, emojiList: o, channelGuildId: l, isBurstReaction: u } = e,
-            c = (0, f.e7)([T.ZP], () => T.ZP.getDisambiguatedEmojiContext(l), [l]),
+            c = (0, f.e7)([b.ZP], () => b.ZP.getDisambiguatedEmojiContext(l), [l]),
             _ = s.useCallback(
                 (e, r) => {
                     switch (e.type) {
@@ -185,19 +185,19 @@ t.Z = s.memo(
     s.forwardRef(function (e, t) {
         var n, r;
         let i,
-            { pickerIntention: o, channel: u, guildId: c, closePopout: d, emojiSize: p = X.Su.MEDIUM, hasTabWrapper: m = !1, containerContext: C = 0, includeCreateEmojiButton: D, onSelectEmoji: B, containerWidth: ea, onNavigateAway: ef, persistSearch: e_, className: ep, headerClassName: eh, analyticsOverride: em = ed, searchProps: eg = {}, wrapper: eE, shouldHidePickerActions: ev = !1, messageId: eI, renderHeader: eb, listHeaderClassName: eT, categoryListClassName: eS } = e,
+            { pickerIntention: o, channel: u, guildId: c, closePopout: d, emojiSize: p = X.Su.MEDIUM, hasTabWrapper: m = !1, containerContext: C = 0, includeCreateEmojiButton: D, onSelectEmoji: B, containerWidth: ea, onNavigateAway: ef, persistSearch: e_, className: ep, headerClassName: eh, analyticsOverride: em = ed, searchProps: eg = {}, wrapper: eE, shouldHidePickerActions: ev = !1, messageId: eI, renderHeader: eT, listHeaderClassName: eb, categoryListClassName: eS } = e,
             { onFocus: ey, onKeyDown: eA, autoFocus: eN = !0, accessory: eC } = eg,
-            eR = (0, f.e7)([M.ZP], () => (null != c ? M.ZP.getDefaultChannel(c) : null), [c]),
+            eR = (0, f.e7)([P.ZP], () => (null != c ? P.ZP.getDefaultChannel(c) : null), [c]),
             [eO, eD] = s.useState(null),
             eL = s.useRef(''),
             ex = (0, N.Iu)((e) => e.searchQuery),
             ew = s.useRef(null),
-            eM = s.useRef(null),
-            eP = s.useRef(null);
+            eP = s.useRef(null),
+            eM = s.useRef(null);
         null == u && null != eR && (u = eR);
         let ek = null !== (r = null !== (n = null == u ? void 0 : u.getGuildId()) && void 0 !== n ? n : c) && void 0 !== r ? r : null,
             [eU, eB] = s.useState(!1),
-            eG = P.default.getCurrentUser(),
+            eG = M.default.getCurrentUser(),
             eZ = (0, U.I5)(eG);
         s.useImperativeHandle(t, () => ({ onPickerOpen: e5 }));
         let { location: eF } = (0, E.O)(),
@@ -210,7 +210,7 @@ t.Z = s.memo(
                 [eF, ej]
             ),
             { analyticsLocations: eK } = (0, I.ZP)(v.Z.EMOJI_PICKER),
-            { diversitySurrogate: ez } = (0, f.cj)([T.ZP], () => ({ diversitySurrogate: T.ZP.diversitySurrogate })),
+            { diversitySurrogate: ez } = (0, f.cj)([b.ZP], () => ({ diversitySurrogate: b.ZP.diversitySurrogate })),
             eq = (0, G.DV)(ex, u, o),
             eQ = null == eq ? 0 : eq.locked.length + eq.unlocked.length,
             eX = w.d4.useSetting(),
@@ -311,12 +311,12 @@ t.Z = s.memo(
                 columnCounts: e4,
                 onSelectEmoji: B,
                 emojiGrid: e3,
-                emojiList: eM,
+                emojiList: eP,
                 channelGuildId: ek,
                 isBurstReaction: eU
             });
-        eo(ea, eM),
-            el(ea, ez, eP, eN),
+        eo(ea, eP),
+            el(ea, ez, eM, eN),
             s.useEffect(() => {
                 !e_ && (0, N.ql)('');
             }, [e_]),
@@ -368,11 +368,11 @@ t.Z = s.memo(
                 : eU && !eZ && (i = (0, a.jsx)(V.Z, { onDismiss: () => eB(!1) }));
         let ts = (0, a.jsx)(Y.Z, {
                 pickerIntention: o,
-                emojiListRef: eM,
+                emojiListRef: eP,
                 onKeyDown: (e) => {
                     null == tn || tn(e), null == eA || eA(e);
                 },
-                searchBarRef: eP,
+                searchBarRef: eM,
                 onFocus: ey,
                 autoFocus: eN,
                 accessory: eC,
@@ -382,12 +382,12 @@ t.Z = s.memo(
                 isBurstReaction: eU,
                 onBurstReactionToggle: () => {
                     var e;
-                    eB(!eU), null === (e = eP.current) || void 0 === e || e.focus();
+                    eB(!eU), null === (e = eM.current) || void 0 === e || e.focus();
                 },
-                renderHeader: eb
+                renderHeader: eT
             }),
             to = [];
-        o === ee.Hz.REACTION && to.push(_.z.SUPER_REACTIONS_NITRO_MARKETING), !T.ZP.hasFavoriteEmojis(ek) && to.push(_.z.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
+        o === ee.Hz.REACTION && to.push(_.z.SUPER_REACTIONS_NITRO_MARKETING), !b.ZP.hasFavoriteEmojis(ek) && to.push(_.z.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
         let tl = (0, a.jsx)(g.Z, {
             ...eW,
             children: (0, a.jsxs)(ti, {
@@ -413,7 +413,7 @@ t.Z = s.memo(
                                         channel: u,
                                         closePopout: d
                                     }),
-                                    (0, a.jsx)(b.ZP, {
+                                    (0, a.jsx)(T.ZP, {
                                         contentTypes: to,
                                         children: (e) => {
                                             let { visibleContent: t, markAsDismissed: n } = e;
@@ -431,7 +431,7 @@ t.Z = s.memo(
                                                         collapsedSections: eJ,
                                                         diversitySurrogate: ez,
                                                         emojiGrid: e3,
-                                                        emojiListRef: eM,
+                                                        emojiListRef: eP,
                                                         emojiSize: p,
                                                         getEmojiItemProps: e9,
                                                         getEmojiRowProps: te,
@@ -451,7 +451,7 @@ t.Z = s.memo(
                                                         channelGuildId: ek,
                                                         messageId: eI,
                                                         isBurstReaction: eU,
-                                                        listHeaderClassName: eT
+                                                        listHeaderClassName: eb
                                                     })
                                                   : null
                                           })
@@ -471,7 +471,7 @@ t.Z = s.memo(
                         ? null
                         : (0, a.jsx)(j.Z, {
                               className: l()(et.categoryList, eS),
-                              emojiListRef: eM,
+                              emojiListRef: eP,
                               sectionDescriptors: e2,
                               intention: o,
                               channel: u

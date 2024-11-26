@@ -25,7 +25,7 @@ var r,
     E = n(540059),
     v = n(981631),
     I = n(592901);
-function b(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +39,7 @@ function b(e, t, n) {
     );
 }
 ((s = r || (r = {})).DEFAULT = 'default'), (s.INVERTED = 'inverted'), (s.GHOST = 'ghost'), (s.ROW = 'row'), ((o = i || (i = {})).TOP = 'top'), (o.CENTER = 'center');
-let T = {
+let b = {
         BOX: I.box,
         ROUND: I.round,
         SMALL_BOX: I.smallBox
@@ -88,23 +88,23 @@ class y extends (a = u.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'handleChange', (e) => {
+            T(this, 'handleChange', (e) => {
                 let { onChange: t } = this.props;
                 null == t || t(e, e.currentTarget.checked);
             });
     }
 }
-b(y, 'Types', r),
-    b(y, 'Shapes', T),
-    b(y, 'Aligns', i),
-    b(y, 'defaultProps', {
+T(y, 'Types', r),
+    T(y, 'Shapes', b),
+    T(y, 'Aligns', i),
+    T(y, 'defaultProps', {
         size: 24,
         disabled: !1,
         readOnly: !1,
         displayOnly: !1,
         value: !1,
         type: 'default',
-        shape: T.BOX,
+        shape: b.BOX,
         align: 'center',
         onChange: v.dG4,
         reverse: !1

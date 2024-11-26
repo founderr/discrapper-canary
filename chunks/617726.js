@@ -1,15 +1,15 @@
 r.d(t, {
     BO: function () {
-        return E;
+        return i;
     },
     Cd: function () {
-        return L;
+        return f;
     },
     HY: function () {
         return d;
     },
     Jd: function () {
-        return i;
+        return E;
     },
     KQ: function () {
         return R;
@@ -18,31 +18,31 @@ r.d(t, {
         return s;
     },
     V$: function () {
-        return u;
+        return I;
     },
     f4: function () {
-        return I;
+        return u;
     },
     gv: function () {
         return c;
     },
     mL: function () {
-        return T;
+        return N;
     },
     zQ: function () {
-        return N;
+        return A;
     }
 });
-var n = r(967752),
-    a = r(202811),
+var a = r(967752),
+    n = r(202811),
     _ = r(370336),
     o = r(899517);
-function i(e, t = []) {
+function E(e, t = []) {
     return [e, t];
 }
-function E(e, t) {
-    let [r, n] = e;
-    return [r, [...n, t]];
+function i(e, t) {
+    let [r, a] = e;
+    return [r, [...a, t]];
 }
 function c(e, t) {
     for (let r of e[1]) {
@@ -57,11 +57,11 @@ function s(e, t) {
 function l(e) {
     return o.n.__SENTRY__ && o.n.__SENTRY__.encodePolyfill ? o.n.__SENTRY__.encodePolyfill(e) : new TextEncoder().encode(e);
 }
-function u(e) {
+function I(e) {
     let [t, r] = e,
-        n = JSON.stringify(t);
+        a = JSON.stringify(t);
     function _(e) {
-        'string' == typeof n ? (n = 'string' == typeof e ? n + e : [l(n), e]) : n.push('string' == typeof e ? l(e) : e);
+        'string' == typeof a ? (a = 'string' == typeof e ? a + e : [l(a), e]) : a.push('string' == typeof e ? l(e) : e);
     }
     for (let e of r) {
         let [t, r] = e;
@@ -77,44 +77,44 @@ ${JSON.stringify(t)}
             try {
                 e = JSON.stringify(r);
             } catch (t) {
-                e = JSON.stringify((0, a.Fv)(r));
+                e = JSON.stringify((0, n.Fv)(r));
             }
             _(e);
         }
     }
-    return 'string' == typeof n
-        ? n
+    return 'string' == typeof a
+        ? a
         : (function (e) {
               let t = new Uint8Array(e.reduce((e, t) => e + t.length, 0)),
                   r = 0;
-              for (let n of e) t.set(n, r), (r += n.length);
+              for (let a of e) t.set(a, r), (r += a.length);
               return t;
-          })(n);
+          })(a);
 }
-function I(e) {
+function u(e) {
     let t = 'string' == typeof e ? l(e) : e;
     function r(e) {
         let r = t.subarray(0, e);
         return (t = t.subarray(e + 1)), r;
     }
-    function n() {
+    function a() {
         var e;
-        let n = t.indexOf(10);
-        return n < 0 && (n = t.length), JSON.parse(((e = r(n)), o.n.__SENTRY__ && o.n.__SENTRY__.decodePolyfill ? o.n.__SENTRY__.decodePolyfill(e) : new TextDecoder().decode(e)));
+        let a = t.indexOf(10);
+        return a < 0 && (a = t.length), JSON.parse(((e = r(a)), o.n.__SENTRY__ && o.n.__SENTRY__.decodePolyfill ? o.n.__SENTRY__.decodePolyfill(e) : new TextDecoder().decode(e)));
     }
-    let a = n(),
+    let n = a(),
         _ = [];
     for (; t.length; ) {
-        let e = n(),
+        let e = a(),
             t = 'number' == typeof e.length ? e.length : void 0;
-        _.push([e, t ? r(t) : n()]);
+        _.push([e, t ? r(t) : a()]);
     }
-    return [a, _];
+    return [n, _];
 }
 function R(e) {
     return [{ type: 'span' }, e];
 }
-function N(e) {
+function A(e) {
     let t = 'string' == typeof e.data ? l(e.data) : e.data;
     return [
         (0, _.Jr)({
@@ -127,7 +127,7 @@ function N(e) {
         t
     ];
 }
-let A = {
+let T = {
     session: 'session',
     sessions: 'session',
     attachment: 'attachment',
@@ -144,8 +144,8 @@ let A = {
     span: 'span',
     statsd: 'metric_bucket'
 };
-function T(e) {
-    return A[e];
+function N(e) {
+    return T[e];
 }
 function d(e) {
     if (!e || !e.sdk) return;
@@ -155,13 +155,13 @@ function d(e) {
         version: r
     };
 }
-function L(e, t, r, a) {
+function f(e, t, r, n) {
     let o = e.sdkProcessingMetadata && e.sdkProcessingMetadata.dynamicSamplingContext;
     return {
         event_id: e.event_id,
         sent_at: new Date().toISOString(),
         ...(t && { sdk: t }),
-        ...(!!r && a && { dsn: (0, n.RA)(a) }),
+        ...(!!r && n && { dsn: (0, a.RA)(n) }),
         ...(o && { trace: (0, _.Jr)({ ...o }) })
     };
 }

@@ -35,8 +35,8 @@ function c(e, t, n) {
         )
             return !1;
     }
-    let b = null === (d = _.result) || void 0 === d ? void 0 : null === (c = d.sections[e.applicationId]) || void 0 === c ? void 0 : c.commands;
-    return null != b && e.id in b;
+    let T = null === (d = _.result) || void 0 === d ? void 0 : null === (c = d.sections[e.applicationId]) || void 0 === c ? void 0 : c.commands;
+    return null != T && e.id in T;
 }
 function d(e) {
     switch (e) {

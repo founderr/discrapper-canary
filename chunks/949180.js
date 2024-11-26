@@ -1,9 +1,9 @@
 r.d(t, {
     w: function () {
-        return n;
+        return a;
     }
 });
-let n = {
+let a = {
     none: 0,
     xs: 4,
     sm: 8,

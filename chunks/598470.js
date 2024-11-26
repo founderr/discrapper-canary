@@ -3,8 +3,8 @@ r.d(t, {
         return _;
     }
 });
-var n = r(116698),
-    a = r(928541);
+var a = r(116698),
+    n = r(928541);
 function _(e) {
     let t = [];
     function r(e) {
@@ -13,21 +13,21 @@ function _(e) {
     return {
         $: t,
         add: function (_) {
-            if (!(void 0 === e || t.length < e)) return (0, a.$2)(new n.b('Not adding Promise because buffer limit was reached.'));
+            if (!(void 0 === e || t.length < e)) return (0, n.$2)(new a.b('Not adding Promise because buffer limit was reached.'));
             let o = _();
             return -1 === t.indexOf(o) && t.push(o), o.then(() => r(o)).then(null, () => r(o).then(null, () => {})), o;
         },
         drain: function (e) {
-            return new a.cW((r, n) => {
+            return new n.cW((r, a) => {
                 let _ = t.length;
                 if (!_) return r(!0);
                 let o = setTimeout(() => {
                     e && e > 0 && r(!1);
                 }, e);
                 t.forEach((e) => {
-                    (0, a.WD)(e).then(() => {
+                    (0, n.WD)(e).then(() => {
                         !--_ && (clearTimeout(o), r(!0));
-                    }, n);
+                    }, a);
                 });
             });
         }

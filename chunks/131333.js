@@ -48,8 +48,8 @@ function I(e) {
     );
 }
 ((a = r || (r = {})).JACK_O_LANTERN = 'jack_o_lantern'), (a.NOSE = 'nose');
-let b = new Set(['jack_o_lantern', 'nose']),
-    T = {
+let T = new Set(['jack_o_lantern', 'nose']),
+    b = {
         jack_o_lantern: {
             sprites: I(['chocolate_bar', 'lollipop', 'candy'])
         },
@@ -159,7 +159,7 @@ function N(e) {
                 if (!u) {
                     let t = (function (e) {
                         if (null == e) return null;
-                        for (let t of b) if (null != e.match(new RegExp(':'.concat(t, '(_tone[1-9])?')))) return t;
+                        for (let t of T) if (null != e.match(new RegExp(':'.concat(t, '(_tone[1-9])?')))) return t;
                         return null;
                     })(e);
                     null != t && ((_.current = t), f(!0), i(null));
@@ -193,8 +193,8 @@ function N(e) {
               value: I,
               children: [
                   t,
-                  Object.keys(T).map((e) => {
-                      let t = T[e];
+                  Object.keys(b).map((e) => {
+                      let t = b[e];
                       return (0, o.jsx)(
                           A,
                           {

@@ -16,13 +16,13 @@ t.Z = i.memo(function (e) {
         { analyticsLocations: m } = (0, l.ZP)(o.Z.GIFT_BUTTON),
         g = (0, d.Ft)(i),
         { Component: E, events: v, play: I } = (0, a.$)(),
-        { enabled: b } = c.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
-        T = i.type === _.d4z.DM;
+        { enabled: T } = c.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
+        b = i.type === _.d4z.DM;
     if (t) return null;
     let S = () => {
-        b && T && null != g
+        T && b && null != g
             ? (0, s.openModalLazy)(async () => {
-                  let { default: e } = await Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('68956'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('87624'), n.e('2181'), n.e('57674'), n.e('88886')]).then(n.bind(n, 435626));
+                  let { default: e } = await Promise.all([n.e('77298'), n.e('23357'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('68956'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('87624'), n.e('2181'), n.e('57674'), n.e('2679')]).then(n.bind(n, 435626));
                   return (t) =>
                       (0, r.jsx)(e, {
                           analyticsObject: {

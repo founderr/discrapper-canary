@@ -17,14 +17,14 @@ var r = n(200651),
     E = n(626135),
     v = n(111846),
     I = n(392552),
-    b = n(784222),
-    T = n(926243),
+    T = n(784222),
+    b = n(926243),
     S = n(149203),
     y = n(981631),
     A = n(388032),
     N = n(538891);
 t.Z = (e) => {
-    let { emojiDescriptors: t, emojiSize: a, onSelect: C, onInspect: R, surrogateCodePoint: O, getEmojiItemProps: D, getEmojiRowProps: L, isScrolling: x, isUsingKeyboardNavigation: w, rowIndex: M, allowAnimatedEmoji: P, showEmojiFavoriteTooltip: k, channelGuildId: U, category: B, selectedItemClassName: G, messageId: Z, isBurstReaction: F, inNitroLockedSection: V, handleScrollUpOnSectionCollapse: j } = e,
+    let { emojiDescriptors: t, emojiSize: a, onSelect: C, onInspect: R, surrogateCodePoint: O, getEmojiItemProps: D, getEmojiRowProps: L, isScrolling: x, isUsingKeyboardNavigation: w, rowIndex: P, allowAnimatedEmoji: M, showEmojiFavoriteTooltip: k, channelGuildId: U, category: B, selectedItemClassName: G, messageId: Z, isBurstReaction: F, inNitroLockedSection: V, handleScrollUpOnSectionCollapse: j } = e,
         { enabled: H } = I.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
         { useTransparentIcons: Y } = v.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
         W = Y ? n(187119) : n(137321),
@@ -59,7 +59,7 @@ t.Z = (e) => {
                     var n;
                     let { onMouseEnter: a, onMouseLeave: o, handleSelect: u, icon: c, ariaLabel: d, shouldShowRoundHighlight: f } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         { visibleRowIndex: _, columnIndex: p } = e,
-                        { ref: h, tabIndex: m, onFocus: g, ...E } = null !== (n = D(p, M)) && void 0 !== n ? n : {},
+                        { ref: h, tabIndex: m, onFocus: g, ...E } = null !== (n = D(p, P)) && void 0 !== n ? n : {},
                         v = en.rowIndex === _ && en.columnIndex === p,
                         I = () => {
                             !x.current && !w.current && R(e);
@@ -94,7 +94,7 @@ t.Z = (e) => {
                     );
                 };
             switch (e.type) {
-                case b.ld.EXPAND_OR_COLLAPSE_EMOJIS: {
+                case T.ld.EXPAND_OR_COLLAPSE_EMOJIS: {
                     let t, i;
                     let { visibleRowIndex: a, columnIndex: s } = e,
                         l = en.rowIndex === a && en.columnIndex === s;
@@ -148,7 +148,7 @@ t.Z = (e) => {
                         })
                     );
                 }
-                case b.ld.CREATE_EMOJI: {
+                case T.ld.CREATE_EMOJI: {
                     let t = (0, r.jsx)(l.CirclePlusIcon, {
                         size: 'md',
                         color: 'currentColor',
@@ -171,21 +171,21 @@ t.Z = (e) => {
                         shouldShowRoundHighlight: !1
                     });
                 }
-                case b.ld.EMOJI: {
+                case T.ld.EMOJI: {
                     var a;
                     let { columnIndex: n, visibleRowIndex: i } = e,
                         s = en.rowIndex === i && en.columnIndex === n;
                     return (0, r.jsx)(
-                        T.Z,
+                        b.Z,
                         {
-                            rowIndex: M,
+                            rowIndex: P,
                             descriptor: e,
                             emojiItemKey: t,
                             isInspected: s,
                             isScrolling: x,
                             isUsingKeyboardNavigation: w,
                             surrogateCodePoint: O,
-                            allowAnimatedEmoji: P,
+                            allowAnimatedEmoji: M,
                             selectedItemClassName: G,
                             onSelect: C,
                             onInspect: R,
@@ -208,7 +208,7 @@ t.Z = (e) => {
         },
         ec = (e) =>
             (0, r.jsx)('ul', {
-                ...L(M),
+                ...L(P),
                 className: s()(N.emojiListRow, {
                     [N.emojiListRowLargeSize]: eo,
                     [N.emojiListRowMediumSize]: el
@@ -217,7 +217,7 @@ t.Z = (e) => {
                 children: e.map(eu)
             });
     if (B !== S.En.TOP_GUILD_EMOJI) return ec(t);
-    let ed = t.filter((e) => (!!H && e.type === b.ld.CREATE_EMOJI) || e.subCategory === S.t0.TOP_GUILD_EMOJI || (e.subCategory === S.t0.NEWLY_ADDED_EMOJI && e.emoji.type === f.B.GUILD && !_.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id))),
+    let ed = t.filter((e) => (!!H && e.type === T.ld.CREATE_EMOJI) || e.subCategory === S.t0.TOP_GUILD_EMOJI || (e.subCategory === S.t0.NEWLY_ADDED_EMOJI && e.emoji.type === f.B.GUILD && !_.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id))),
         ef = t.filter((e) => e.subCategory === S.t0.NEWLY_ADDED_EMOJI && e.emoji.type === f.B.GUILD && _.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
     return 0 === ef.length
         ? ec(t)

@@ -17,7 +17,7 @@ var r = n(200651),
     E = n(388032),
     v = n(438922);
 let I = i.lazy(() => Promise.all([n.e('26460'), n.e('89792')]).then(n.bind(n, 711635)));
-function b(e) {
+function T(e) {
     let { played: t, duration: n, currentTime: i } = e,
         a = null == n ? '--:--' : t ? (0, d.yv)(Math.ceil(n - i)) : (0, d.yv)(Math.ceil(n));
     return (0, r.jsx)(l.Text, {
@@ -28,9 +28,9 @@ function b(e) {
     });
 }
 t.Z = i.memo(function (e) {
-    var t, n, a, d, T, S;
+    var t, n, a, d, b, S;
     let y,
-        { src: A, volume: N = 1, onVolumeChange: C, onMute: R, waveform: O, durationSecs: D, onVolumeShow: L, onVolumeHide: x, onPlay: w, onPause: M, onError: P } = e,
+        { src: A, volume: N = 1, onVolumeChange: C, onMute: R, waveform: O, durationSecs: D, onVolumeShow: L, onVolumeHide: x, onPlay: w, onPause: P, onError: M } = e,
         k = i.useRef(null),
         [U, B] = i.useState(0),
         [G, Z] = i.useState(D),
@@ -64,8 +64,8 @@ t.Z = i.memo(function (e) {
             let e = k.current;
             if (null == e) return;
             let t = e.error;
-            null == P || P(t);
-        }, [P]),
+            null == M || M(t);
+        }, [M]),
         es = i.useCallback(
             (e) => {
                 let t = (0, h.A)(e, 1);
@@ -103,7 +103,7 @@ t.Z = i.memo(function (e) {
             } else {
                 let e = performance.now(),
                     t = ed.current;
-                null == M || M(U, null != t ? (e - t) / 1000 : 0), (ed.current = null);
+                null == P || P(U, null != t ? (e - t) / 1000 : 0), (ed.current = null);
             }
         }
     }, [j]),
@@ -124,10 +124,10 @@ t.Z = i.memo(function (e) {
             );
         }, [t, n, a]),
         (d = A),
-        (T = j),
+        (b = j),
         (S = H),
         i.useEffect(() => {
-            if (!!T)
+            if (!!b)
                 return (
                     _.S.dispatch(g.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, { src: d }),
                     _.S.subscribe(g.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, e),
@@ -139,7 +139,7 @@ t.Z = i.memo(function (e) {
                 let { src: t } = e;
                 if (d !== t) S(!1);
             }
-        }, [d, T, S]);
+        }, [d, b, S]);
     let ef = j ? l.PauseIcon : l.PlayIcon,
         e_ = j ? E.intl.string(E.t.ZcgDJS) : E.intl.string(E.t.RscU7O);
     'Safari' === platform.name
@@ -203,7 +203,7 @@ t.Z = i.memo(function (e) {
                 onDragStart: el,
                 onDragEnd: eu
             }),
-            (0, r.jsx)(b, {
+            (0, r.jsx)(T, {
                 played: K,
                 currentTime: U,
                 duration: G

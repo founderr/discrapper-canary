@@ -36,7 +36,7 @@ function I(e, t, n) {
         e
     );
 }
-function b(e, t) {
+function T(e, t) {
     let n = 0;
     for (let r = 0; r < t.length; r++) {
         let i = t[r];
@@ -50,7 +50,7 @@ function b(e, t) {
     return null;
 }
 ((a = r || (r = {}))[(a.ABOVE = 0)] = 'ABOVE'), (a[(a.BELOW = 1)] = 'BELOW');
-function T(e) {
+function b(e) {
     return {
         value: Math.min(Math.max(e.initialValue, e.minValue), e.maxValue),
         initialValueProp: e.initialValue,
@@ -67,7 +67,7 @@ function T(e) {
                     sortedMarkers: s,
                     markerPositions: o
                 };
-            let l = b(n, (s = t.sort((e, t) => e - t))),
+            let l = T(n, (s = t.sort((e, t) => e - t))),
                 u = s[0],
                 c = s[s.length - 1],
                 d = c - u;
@@ -93,7 +93,7 @@ class S extends (i = o.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         return e.initialValue !== t.initialValueProp
             ? {
-                  ...T(e),
+                  ...b(e),
                   active: t.active
               }
             : null;
@@ -108,7 +108,7 @@ class S extends (i = o.PureComponent) {
     render() {
         var e;
         let { value: t, active: n, focused: r, sortedMarkers: i, markerPositions: a, closestMarkerIndex: o, newClosestIndex: l, min: c, max: d } = this.state,
-            { disabled: _, stickToMarkers: p, className: E, children: I, barStyles: b, fillStyles: T, mini: S, hideBubble: A, defaultValue: N, orientation: C, onValueRender: R, renderMarker: O, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: w = {}, markerPosition: M = 0, 'aria-hidden': P, 'aria-label': k, 'aria-labelledby': U, 'aria-describedby': B } = this.props,
+            { disabled: _, stickToMarkers: p, className: E, children: I, barStyles: T, fillStyles: b, mini: S, hideBubble: A, defaultValue: N, orientation: C, onValueRender: R, renderMarker: O, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: w = {}, markerPosition: P = 0, 'aria-hidden': M, 'aria-label': k, 'aria-labelledby': U, 'aria-describedby': B } = this.props,
             G = 0;
         p ? null != a && (null != l ? (G = a[l]) : null != o && (G = a[o])) : (G = this.scaleValue(t));
         let Z = ''.concat(G, '%'),
@@ -123,8 +123,8 @@ class S extends (i = o.PureComponent) {
                               {
                                   className: u()(v.mark, {
                                       [v.defaultValue]: r,
-                                      [v.markAbove]: 0 === M,
-                                      [v.markBelow]: 1 === M
+                                      [v.markAbove]: 0 === P,
+                                      [v.markBelow]: 1 === P
                                   }),
                                   style: { left: ''.concat(e, '%') },
                                   children:
@@ -166,7 +166,7 @@ class S extends (i = o.PureComponent) {
                         'aria-valuenow': t,
                         'aria-disabled': _,
                         'aria-orientation': C,
-                        'aria-hidden': P,
+                        'aria-hidden': M,
                         'aria-label': k,
                         'aria-labelledby': U,
                         'aria-describedby': B,
@@ -191,11 +191,11 @@ class S extends (i = o.PureComponent) {
                             }),
                             (0, s.jsx)('div', {
                                 className: u()(v.bar, L),
-                                style: b,
+                                style: T,
                                 children: (0, s.jsx)('div', {
                                     className: v.barFill,
                                     style: {
-                                        ...T,
+                                        ...b,
                                         width: Z
                                     }
                                 })
@@ -254,7 +254,7 @@ class S extends (i = o.PureComponent) {
         if (e.clientX <= l || e.clientX >= u) return;
         let c = e.clientX - r,
             d = a[i] + (c / (u - l)) * 100;
-        null != (t = this.props.equidistant ? b(d, a) : b(this.unscaleValue(d), s)) && (null == o || o(s[t])), this.setState({ newClosestIndex: t });
+        null != (t = this.props.equidistant ? T(d, a) : T(this.unscaleValue(d), s)) && (null == o || o(s[t])), this.setState({ newClosestIndex: t });
     }
     constructor(e) {
         super(e),
@@ -369,7 +369,7 @@ class S extends (i = o.PureComponent) {
             (this.state = {
                 active: !1,
                 focused: !1,
-                ...T(e)
+                ...b(e)
             });
     }
 }

@@ -18,9 +18,9 @@ var i = n(200651),
     h = n(998976);
 function g(e) {
     var t, n, g, p;
-    let { transitionState: x, onSuccess: S, onClose: T, requirementsUpdated: C, noSkip: _ = !1 } = e,
-        [E, f] = s.useState(''),
-        [I, N] = s.useState(''),
+    let { transitionState: x, onSuccess: S, onClose: T, requirementsUpdated: E, noSkip: _ = !1 } = e,
+        [C, I] = s.useState(''),
+        [f, N] = s.useState(''),
         [A, b] = s.useState(''),
         [v, j] = s.useState(null),
         [O, R] = s.useState(null),
@@ -30,10 +30,10 @@ function g(e) {
     async function B(e) {
         e.preventDefault(), (0, a.b9)();
         let t = !1;
-        if (('' === I ? (j(m.intl.string(m.t['/7/oPT'])), (t = !0)) : j(null), I !== A ? (R(m.intl.string(m.t.IEKYZ2)), (t = !0)) : R(null), t)) return;
+        if (('' === f ? (j(m.intl.string(m.t['/7/oPT'])), (t = !0)) : j(null), f !== A ? (R(m.intl.string(m.t.IEKYZ2)), (t = !0)) : R(null), t)) return;
         let n = await (0, a.Mn)({
-            password: E,
-            newPassword: I
+            password: C,
+            newPassword: f
         });
         if (null == n ? void 0 : n.ok) S();
         else {
@@ -65,7 +65,7 @@ function g(e) {
                             color: 'header-secondary',
                             variant: 'text-md/normal',
                             className: h.subtitle,
-                            children: C ? m.intl.string(m.t['37iHbW']) : m.intl.string(m.t.iOurYm)
+                            children: E ? m.intl.string(m.t['37iHbW']) : m.intl.string(m.t.iOurYm)
                         }),
                         !0 !== _ &&
                             (0, i.jsx)(l.ModalCloseButton, {
@@ -85,8 +85,8 @@ function g(e) {
                                     error: null == P ? void 0 : null === (t = P.password) || void 0 === t ? void 0 : t[0],
                                     children: (0, i.jsx)(l.TextInput, {
                                         type: 'password',
-                                        value: E,
-                                        onChange: f,
+                                        value: C,
+                                        onChange: I,
                                         inputRef: y
                                     })
                                 }),
@@ -96,7 +96,7 @@ function g(e) {
                                     error: null !== (p = null !== (g = null == P ? void 0 : null === (n = P.new_password) || void 0 === n ? void 0 : n[0]) && void 0 !== g ? g : v) && void 0 !== p ? p : void 0,
                                     children: (0, i.jsx)(l.TextInput, {
                                         type: 'password',
-                                        value: I,
+                                        value: f,
                                         onChange: N
                                     })
                                 }),

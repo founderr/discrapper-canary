@@ -23,8 +23,8 @@ let m = null,
     E = null,
     v = null,
     I = null,
-    b = !1,
     T = !1,
+    b = !1,
     S = null,
     y = !1,
     A = new u.Z('SubscriptionStore');
@@ -38,7 +38,7 @@ function N(e) {
     }
 }
 function C() {
-    (m = null), (g = null), (E = null), (v = null), (I = null), (b = !1), (T = !1), (S = null), (y = !1);
+    (m = null), (g = null), (E = null), (v = null), (I = null), (T = !1), (b = !1), (S = null), (y = !1);
 }
 function R(e) {
     return e.status !== p.O0b.UNPAID;
@@ -54,7 +54,7 @@ function D(e, t) {
     for (let n in r) {
         let i = r[n];
         if (!O(i)) {
-            if (!T) {
+            if (!b) {
                 let e = f.default.getId();
                 A.log('user id mismatch between logged in user and SubscriptionStore user'),
                     (0, _.g9)('user id mismatch between logged in user and SubscriptionStore user', {
@@ -64,7 +64,7 @@ function D(e, t) {
                             subscriptionUserId: i.userId
                         }
                     }),
-                    (T = !0);
+                    (b = !0);
             }
             break;
         }
@@ -77,7 +77,7 @@ class L extends (r = o.ZP.Store) {
         return null != m;
     }
     hasFetchedMostRecentPremiumTypeSubscription() {
-        return b;
+        return T;
     }
     hasFetchedPreviousPremiumTypeSubscription() {
         return y;
@@ -140,7 +140,7 @@ class L extends (r = o.ZP.Store) {
                 a = [],
                 s = f.default.getId();
             t.forEach((e) => {
-                if (e.user_id !== s && !T) {
+                if (e.user_id !== s && !b) {
                     A.log('[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
                         (0, _.g9)('[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch', {
                             extra: {
@@ -149,7 +149,7 @@ class L extends (r = o.ZP.Store) {
                                 subscriptionUserId: e.user_id
                             }
                         }),
-                        (T = !0);
+                        (b = !0);
                     return;
                 }
                 let t = d.Q.createFromServer(e);
@@ -187,9 +187,9 @@ class L extends (r = o.ZP.Store) {
         },
         BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: function (e) {
             let { subscription: t } = e;
-            if (((b = !0), null != t)) {
+            if (((T = !0), null != t)) {
                 let e = f.default.getId();
-                if (t.user_id !== e && !T) {
+                if (t.user_id !== e && !b) {
                     A.log('[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
                         (0, _.g9)('[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch', {
                             extra: {
@@ -198,8 +198,8 @@ class L extends (r = o.ZP.Store) {
                                 subscriptionUserId: t.user_id
                             }
                         }),
-                        (b = !1),
-                        (T = !0);
+                        (T = !1),
+                        (b = !0);
                     return;
                 }
                 E = d.Q.createFromServer(t);
@@ -209,7 +209,7 @@ class L extends (r = o.ZP.Store) {
             let { subscription: t } = e;
             if (((y = !0), null != t)) {
                 let e = f.default.getId();
-                if (t.user_id !== e && !T) {
+                if (t.user_id !== e && !b) {
                     A.log('[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
                         (0, _.g9)('[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch', {
                             extra: {
@@ -219,7 +219,7 @@ class L extends (r = o.ZP.Store) {
                             }
                         }),
                         (y = !1),
-                        (T = !0);
+                        (b = !0);
                     return;
                 }
                 S = d.Q.createFromServer(t);

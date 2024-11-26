@@ -27,7 +27,7 @@ function v(e) {
     let { id: t, className: n, onSelect: a, isSelected: o = !1, tabIndex: l, children: f, locked: h = !1 } = e,
         [g, v] = i.useState((0, _.aW)(t).name),
         I = t === d.Ru.PIRATE,
-        b = (0, u.useRadioItem)({
+        T = (0, u.useRadioItem)({
             label: g,
             isSelected: o
         });
@@ -40,8 +40,8 @@ function v(e) {
                 children: [
                     (0, r.jsx)(u.Clickable, {
                         ...e,
-                        ...b,
-                        tabIndex: null != l ? l : b.tabIndex,
+                        ...T,
+                        tabIndex: null != l ? l : T.tabIndex,
                         className: s()(m.appIconSelection, { [m.selected]: o }, n),
                         onClick: o ? p.dG4 : () => (null == a ? void 0 : a(t)),
                         children: f

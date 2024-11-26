@@ -1,13 +1,13 @@
 r.d(t, {
     R: function () {
-        return i;
+        return E;
     }
 });
-var n = r(622916),
-    a = r(688838),
+var a = r(622916),
+    n = r(688838),
     _ = r(151122),
     o = r(255768);
-let i = (0, _._I)(() => {
+let E = (0, _._I)(() => {
     let e;
     return {
         name: 'Dedupe',
@@ -21,45 +21,45 @@ let i = (0, _._I)(() => {
                             (!!(
                                 (function (e, t) {
                                     let r = e.message,
-                                        n = t.message;
-                                    return !!((r || n) && (!r || n) && (r || !n) && r === n && c(e, t) && E(e, t)) || !1;
+                                        a = t.message;
+                                    return !!((r || a) && (!r || a) && (r || !a) && r === a && c(e, t) && i(e, t)) || !1;
                                 })(e, t) ||
                                 (function (e, t) {
                                     let r = s(t),
-                                        n = s(e);
-                                    return !!(r && n && r.type === n.type && r.value === n.value && c(e, t) && E(e, t)) || !1;
+                                        a = s(e);
+                                    return !!(r && a && r.type === a.type && r.value === a.value && c(e, t) && i(e, t)) || !1;
                                 })(e, t)
                             ) ||
                                 !1)
                         );
                     })(t, e)
                 )
-                    return o.X && n.kg.warn('Event dropped due to being a duplicate of previously captured event.'), null;
+                    return o.X && a.kg.warn('Event dropped due to being a duplicate of previously captured event.'), null;
             } catch (e) {}
             return (e = t);
         }
     };
 });
-function E(e, t) {
-    let r = (0, a.Fr)(e),
-        n = (0, a.Fr)(t);
-    if (!r && !n) return !0;
-    if ((r && !n) || (!r && n)) return !1;
-    if (n.length !== r.length) return !1;
-    for (let e = 0; e < n.length; e++) {
-        let t = n[e],
-            a = r[e];
-        if (t.filename !== a.filename || t.lineno !== a.lineno || t.colno !== a.colno || t.function !== a.function) return !1;
+function i(e, t) {
+    let r = (0, n.Fr)(e),
+        a = (0, n.Fr)(t);
+    if (!r && !a) return !0;
+    if ((r && !a) || (!r && a)) return !1;
+    if (a.length !== r.length) return !1;
+    for (let e = 0; e < a.length; e++) {
+        let t = a[e],
+            n = r[e];
+        if (t.filename !== n.filename || t.lineno !== n.lineno || t.colno !== n.colno || t.function !== n.function) return !1;
     }
     return !0;
 }
 function c(e, t) {
     let r = e.fingerprint,
-        n = t.fingerprint;
-    if (!r && !n) return !0;
-    if ((r && !n) || (!r && n)) return !1;
+        a = t.fingerprint;
+    if (!r && !a) return !0;
+    if ((r && !a) || (!r && a)) return !1;
     try {
-        return !(r.join('') !== n.join(''));
+        return !(r.join('') !== a.join(''));
     } catch (e) {
         return !1;
     }

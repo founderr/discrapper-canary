@@ -1,12 +1,12 @@
-var n, a;
+var a, n;
 r.r(t),
     r.d(t, {
         ApplicationDirectoryProfileSections: function () {
-            return n;
+            return a;
         }
     }),
-    ((a = n || (n = {})).GENERAL = 'general'),
-    (a.IMAGES = 'images'),
-    (a.PREMIUM_DEPRECATED = 'premium'),
-    (a.STORE = 'store'),
-    (a.PRIVACY = 'privacy');
+    ((n = a || (a = {})).GENERAL = 'general'),
+    (n.IMAGES = 'images'),
+    (n.PREMIUM_DEPRECATED = 'premium'),
+    (n.STORE = 'store'),
+    (n.PRIVACY = 'privacy');

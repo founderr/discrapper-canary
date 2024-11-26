@@ -21,11 +21,11 @@ var i = n(200651),
     x = n(818083),
     S = n(688465),
     T = n(487419),
-    C = n(197344),
+    E = n(197344),
     _ = n(476756),
-    E = n(734934),
-    f = n(223683),
-    I = n(312400),
+    C = n(734934),
+    I = n(223683),
+    f = n(312400),
     N = n(115345),
     A = n(392888),
     b = n(106371),
@@ -92,7 +92,7 @@ function H(e) {
 function z(e) {
     let { disabledSounds: t, disableAllSounds: n, notifyMessagesInSelectedChannel: r } = e,
         a = s.useRef(),
-        o = (0, E.p)(),
+        o = (0, C.p)(),
         c = s.useCallback((e, t) => {
             t.stopPropagation(), t.preventDefault(), null != a.current && a.current.stop(), (a.current = B.GN(e));
         }, []),
@@ -198,7 +198,7 @@ function z(e) {
                 sound: 'reconnect'
             }
         ],
-        g = null != C.Z.useHolidaySoundpack();
+        g = null != E.Z.useHolidaySoundpack();
     return (0, i.jsx)(j.F, {
         setting: M.s6.NOTIFICATIONS_SOUNDS,
         children: (0, i.jsxs)(u.FormSection, {
@@ -383,7 +383,7 @@ class K extends s.PureComponent {
                         children: U.intl.string(U.t['/0WClp'])
                     })
                 }),
-                (0, i.jsx)(Q, {}),
+                (0, i.jsx)(X, {}),
                 (0, i.jsx)(j.F, {
                     setting: M.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
                     children: (0, i.jsx)(u.FormSwitch, {
@@ -404,7 +404,7 @@ class K extends s.PureComponent {
                         children: U.intl.string(U.t.xSmFQE)
                     })
                 }),
-                (0, i.jsx)(X, {}),
+                (0, i.jsx)(Q, {}),
                 (0, i.jsx)(et, {}),
                 (0, i.jsx)(j.F, {
                     setting: M.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT,
@@ -499,7 +499,7 @@ let q = (0, x.B)({
         }
     ]
 });
-function Q() {
+function X() {
     let e = q.useExperiment({ location: 'settings' }, { autoTrackExposure: !1 }).enabled,
         t = (0, c.e7)([R.ZP], () => R.ZP.mentionOnAllMessages);
     return e
@@ -517,9 +517,9 @@ function Q() {
           })
         : null;
 }
-function X() {
-    let e = I.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
-        { manuallyOpen: t } = I.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
+function Q() {
+    let e = f.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
+        { manuallyOpen: t } = f.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
         n = (0, c.e7)([R.ZP], () => R.ZP.useNewNotifications),
         [r, a] = s.useState(!1);
     return e && (n || t)
@@ -565,7 +565,7 @@ function X() {
                                       (0, i.jsx)(j.F, {
                                           setting: M.s6.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT,
                                           children: (0, i.jsx)(u.Button, {
-                                              onClick: f.KP,
+                                              onClick: I.KP,
                                               children: 'Restore most recent snapshot'
                                           })
                                       }),
@@ -601,7 +601,7 @@ function X() {
 }
 async function J(e) {
     e(!0);
-    let t = await (0, f.Tn)();
+    let t = await (0, I.Tn)();
     0 === t.length
         ? await (0, N.oL)()
         : m.Z.show({
@@ -614,7 +614,7 @@ async function J(e) {
         e(!1);
 }
 function $(e) {
-    let t = (0, E.p)();
+    let t = (0, C.p)();
     return (0, i.jsx)(K, {
         ...e,
         focusMode: t

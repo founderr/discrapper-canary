@@ -29,8 +29,8 @@ function g(e, t, n) {
 let E = 'default',
     v = [],
     I = [],
-    b = [],
-    T = 0,
+    T = [],
+    b = 0,
     S = null,
     y = null,
     A = {},
@@ -77,7 +77,7 @@ class x extends (r = i.ZP.DeviceSettingsStore) {
         return I;
     }
     getPendingClips() {
-        return b;
+        return T;
     }
     getUserAgnosticState() {
         return D;
@@ -111,7 +111,7 @@ class x extends (r = i.ZP.DeviceSettingsStore) {
         return D.hardwareClassificationVersion;
     }
     getIsAtMaxSaveClipOperations() {
-        return T >= p.Kw;
+        return b >= p.Kw;
     }
     getLastClipsError() {
         return N;
@@ -256,7 +256,7 @@ let w = new x(a.Z, {
     CLIPS_SAVE_CLIP: function (e) {
         var t, n;
         let { clip: r } = e;
-        (T = Math.max(T - 1, 0)),
+        (b = Math.max(b - 1, 0)),
             (y = {
                 applicationName: r.applicationName,
                 ended: !1,
@@ -267,7 +267,7 @@ let w = new x(a.Z, {
                 ...D,
                 newClipIds: [...(null !== (n = D.newClipIds) && void 0 !== n ? n : []), r.id]
             }),
-            (b = b.filter((e) => {
+            (T = T.filter((e) => {
                 let { id: t } = e;
                 return t !== r.id;
             })),
@@ -276,18 +276,18 @@ let w = new x(a.Z, {
     },
     CLIPS_SAVE_CLIP_PLACEHOLDER: function (e) {
         let { clip: t } = e;
-        b = [t, ...b];
+        T = [t, ...T];
     },
     CLIPS_SAVE_CLIP_PLACEHOLDER_ERROR: function (e) {
         let { clipId: t } = e;
-        b = b.filter((e) => {
+        T = T.filter((e) => {
             let { id: n } = e;
             return n !== t;
         });
     },
     CLIPS_SAVE_CLIP_START: function (e) {
         let { clipType: t, streamKey: n, thumbnail: r } = e;
-        if (((T += 1), (D.hasTakenDecoupledClip = D.hasTakenDecoupledClip || t === p.X9.DECOUPLED), null != n && null != r)) {
+        if (((b += 1), (D.hasTakenDecoupledClip = D.hasTakenDecoupledClip || t === p.X9.DECOUPLED), null != n && null != r)) {
             var i;
             let e = Date.now();
             (C = null != C ? C : e),
@@ -301,7 +301,7 @@ let w = new x(a.Z, {
         }
     },
     CLIPS_SAVE_CLIP_ERROR: function () {
-        T = Math.max(T - 1, 0);
+        b = Math.max(b - 1, 0);
     },
     CLIPS_SAVE_ANIMATION_END: function (e) {
         let { streamKey: t, timestamp: n } = e;

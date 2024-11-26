@@ -21,7 +21,7 @@ function m(e) {
     let { guild: t, guildMember: n, numRoles: m, highestRole: g, onAddRole: E, buttonRef: v } = e,
         I = (0, i.e7)([u.Z], () => u.Z.roleStyle);
     if (!(0, i.e7)([d.Z], () => d.Z.can(_.Plq.MANAGE_ROLES, t))) return null;
-    let b = (e) => (0, c.Gy)(t.id, e.id) && !e.managed && d.Z.isRoleHigher(t, g, e) && -1 === n.roles.indexOf(e.id);
+    let T = (e) => (0, c.Gy)(t.id, e.id) && !e.managed && d.Z.isRoleHigher(t, g, e) && -1 === n.roles.indexOf(e.id);
     return (0, r.jsx)(s.y, {
         position: 'bottom',
         align: 'center',
@@ -30,7 +30,7 @@ function m(e) {
             return (0, r.jsx)(l.Z, {
                 guild: t,
                 roleStyle: I,
-                roleFilter: b,
+                roleFilter: T,
                 onSelect: E,
                 onClose: n
             });

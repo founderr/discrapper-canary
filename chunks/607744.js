@@ -46,12 +46,12 @@ function v(e) {
         c = n.verificationLevel >= p.sFg.LOW && !r.isClaimed(),
         m = !1,
         v = !1,
-        b = !1,
-        T = !1;
-    !r.isPhoneVerified() && !r.isStaff() && ((m = n.verificationLevel >= p.sFg.LOW && !r.verified), (v = n.verificationLevel >= p.sFg.VERY_HIGH), (b = n.verificationLevel >= p.sFg.MEDIUM && s > 0), (T = n.verificationLevel >= p.sFg.HIGH && o > 0));
+        T = !1,
+        b = !1;
+    !r.isPhoneVerified() && !r.isStaff() && ((m = n.verificationLevel >= p.sFg.LOW && !r.verified), (v = n.verificationLevel >= p.sFg.VERY_HIGH), (T = n.verificationLevel >= p.sFg.MEDIUM && s > 0), (b = n.verificationLevel >= p.sFg.HIGH && o > 0));
     let S = [];
-    T && S.push(o),
-        b && S.push(s),
+    b && S.push(o),
+        T && S.push(s),
         S.length > 0 &&
             (t = setTimeout(
                 () =>
@@ -65,9 +65,9 @@ function v(e) {
             notClaimed: c,
             notEmailVerified: m,
             notPhoneVerified: v,
-            newAccount: b,
-            newMember: T,
-            canChat: !(c || m || v || b || T),
+            newAccount: T,
+            newMember: b,
+            canChat: !(c || m || v || T || b),
             accountDeadline: new Date(Date.now() + s),
             memberDeadline: new Date(Date.now() + o),
             timeoutRef: t
@@ -77,10 +77,10 @@ function I(e) {
     let t = E[e];
     null != t && clearTimeout(t.timeoutRef), delete E[e];
 }
-function b(e) {
+function T(e) {
     g.delete(e.guild.id), v(e.guild.id);
 }
-class T extends (r = o.ZP.Store) {
+class b extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(f.Z, _.default);
     }
@@ -93,7 +93,7 @@ class T extends (r = o.ZP.Store) {
     }
 }
 (s = 'GuildVerificationStore'),
-    (a = 'displayName') in (i = T)
+    (a = 'displayName') in (i = b)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -101,7 +101,7 @@ class T extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new T(l.Z, {
+    (t.Z = new b(l.Z, {
         CONNECTION_OPEN: function () {
             for (let e in (g.clear(), E)) I(e);
         },
@@ -111,8 +111,8 @@ class T extends (r = o.ZP.Store) {
         CURRENT_USER_UPDATE: function () {
             g.clear();
         },
-        GUILD_CREATE: b,
-        GUILD_UPDATE: b,
+        GUILD_CREATE: T,
+        GUILD_UPDATE: T,
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
             I(t.id);

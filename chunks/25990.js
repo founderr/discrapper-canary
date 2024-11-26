@@ -3,8 +3,8 @@ var g,
     E,
     v,
     I,
-    b = n(979554),
-    T = n(442837),
+    T = n(979554),
+    b = n(442837),
     S = n(570140),
     y = n(981631);
 let A = y.QZA.CLOSED,
@@ -27,7 +27,7 @@ function L() {
 function x() {
     (_ = void 0), (p = void 0), (h = void 0), (m = void 0), (f = void 0);
 }
-class w extends (I = T.ZP.Store) {
+class w extends (I = b.ZP.Store) {
     getFormState() {
         return A;
     }
@@ -148,7 +148,7 @@ class w extends (I = T.ZP.Store) {
         },
         USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM: function (e) {
             let { item: t } = e;
-            (null == t ? void 0 : t.type) === b.Z.PROFILE_EFFECT ? ((p = null), (h = null == t ? void 0 : t.id)) : ((h = null), (p = t));
+            (null == t ? void 0 : t.type) === T.Z.PROFILE_EFFECT ? ((p = null), (h = null == t ? void 0 : t.id)) : ((h = null), (p = t));
         },
         USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: function (e) {
             let { profileEffectId: t } = e;

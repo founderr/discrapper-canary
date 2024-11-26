@@ -1,19 +1,19 @@
 n.d(e, {
     I: function () {
-        return o;
+        return S;
     }
 });
 var r,
     E,
     i,
     u,
-    o,
     S,
+    o,
     l = n(442837),
     _ = n(570140),
     A = n(128069),
     a = n(38618);
-((r = o || (o = {}))[(r.UNKNOWN = 0)] = 'UNKNOWN'), (r[(r.PENDING = 1)] = 'PENDING'), (r[(r.SUCCESS = 2)] = 'SUCCESS'), (r[(r.ERROR = 3)] = 'ERROR');
+((r = S || (S = {}))[(r.UNKNOWN = 0)] = 'UNKNOWN'), (r[(r.PENDING = 1)] = 'PENDING'), (r[(r.SUCCESS = 2)] = 'SUCCESS'), (r[(r.ERROR = 3)] = 'ERROR');
 let T = 0,
     I = null,
     c = null;
@@ -25,7 +25,7 @@ function R(t) {
 function C() {
     (T = 0), (I = null), (c = null);
 }
-class N extends (S = l.ZP.Store) {
+class N extends (o = l.ZP.Store) {
     get purchaseTokenAuthState() {
         return T;
     }

@@ -24,7 +24,7 @@ function d(e, t, n) {
         });
     return (0, i.forwardRef)(function (n, _) {
         var p;
-        let { onScroll: h, dir: m = 'ltr', sections: g, columns: E, getItemKey: v, getItemHeight: I, getSectionHeight: b, chunkSize: T, renderSection: S, renderItem: y, getSectionProps: A, itemGutter: N, removeEdgeItemGutters: C, sectionGutter: R, padding: O, paddingVertical: D, paddingHorizontal: L, fade: x = !1, className: w, style: M, maxContentWidth: P, renderAccessory: k, onItemVisibilityChange: U, ...B } = n,
+        let { onScroll: h, dir: m = 'ltr', sections: g, columns: E, getItemKey: v, getItemHeight: I, getSectionHeight: T, chunkSize: b, renderSection: S, renderItem: y, getSectionProps: A, itemGutter: N, removeEdgeItemGutters: C, sectionGutter: R, padding: O, paddingVertical: D, paddingHorizontal: L, fade: x = !1, className: w, style: P, maxContentWidth: M, renderAccessory: k, onItemVisibilityChange: U, ...B } = n,
             G = i.useRef(null),
             Z = i.useRef(null),
             F = i.useRef({}),
@@ -50,8 +50,8 @@ function d(e, t, n) {
             columns: E,
             getItemKey: v,
             getItemHeight: I,
-            getSectionHeight: b,
-            chunkSize: T,
+            getSectionHeight: T,
+            chunkSize: b,
             itemGutter: N,
             removeEdgeItemGutters: C,
             sectionGutter: R,
@@ -60,7 +60,7 @@ function d(e, t, n) {
             paddingHorizontal: L,
             getScrollerState: W,
             dir: m,
-            maxBufferWidth: P
+            maxBufferWidth: M
         });
         i.useEffect(() => {
             null != U && (0, o.ZI)(Q, F.current, U), (F.current = Q);
@@ -117,7 +117,7 @@ function d(e, t, n) {
                     [t]: x,
                     [c.scrolling]: V
                 }),
-                style: (0, u.uT)(M),
+                style: (0, u.uT)(P),
                 ...B,
                 children: [
                     null !== (p = null == k ? void 0 : k(X)) && void 0 !== p ? p : null,

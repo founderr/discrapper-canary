@@ -19,7 +19,7 @@ t.Z = function (e) {
     if (null != g && null != E && !m) return null;
     let v = o.Z.get(f.ABu.RIOT_GAMES),
         I = null == g && null == E,
-        b = (null != g && null == E) || (null == g && null != E);
+        T = (null != g && null == E) || (null == g && null != E);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(u.Z, { className: p.divider }),
@@ -48,7 +48,7 @@ t.Z = function (e) {
                 className: p.joinLeaderboardButton,
                 innerClassName: p.joinLeaderboardButtonInner,
                 onClick: function () {
-                    return I || b
+                    return I || T
                         ? (0, l.Z)({ platformType: f.ABu.RIOT_GAMES })
                         : void (0, s.openModalLazy)(async () => {
                               let { default: e } = await n.e('73217').then(n.bind(n, 139964));
@@ -66,7 +66,7 @@ t.Z = function (e) {
                             src: v.icon.whiteSVG,
                             className: p.riotIcon
                         }),
-                    I ? _.intl.string(_.t.w6VSSE) : b ? _.intl.string(_.t.CHNBdn) : _.intl.string(_.t['0yRXHx'])
+                    I ? _.intl.string(_.t.w6VSSE) : T ? _.intl.string(_.t.CHNBdn) : _.intl.string(_.t['0yRXHx'])
                 ]
             })
         ]

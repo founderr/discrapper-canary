@@ -160,22 +160,22 @@ function I() {
         height: (null == E ? void 0 : E.height) || window.innerHeight
     };
 }
-function b(e) {
+function T(e) {
     var t;
     return 'undefined' != typeof window && null != window.navigator && ((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.brands.some((t) => e.test(t.brand))) || e.test(window.navigator.userAgent));
 }
-function T(e) {
+function b(e) {
     var t;
     return 'undefined' != typeof window && null != window.navigator && e.test((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.platform) || window.navigator.platform);
 }
 function S() {
-    return T(/^iPhone/i) || T(/^iPad/i) || (T(/^Mac/i) && navigator.maxTouchPoints > 1);
+    return b(/^iPhone/i) || b(/^iPad/i) || (b(/^Mac/i) && navigator.maxTouchPoints > 1);
 }
 function y() {
     return (
-        b(/AppleWebKit/i) &&
+        T(/AppleWebKit/i) &&
         !(function () {
-            return b(/Chrome/i);
+            return T(/Chrome/i);
         })()
     );
 }

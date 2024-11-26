@@ -3,17 +3,17 @@ r.d(t, {
         return o;
     }
 });
-var n = r(899517),
-    a = r(578346);
+var a = r(899517),
+    n = r(578346);
 let _ = null;
 function o(e) {
     let t = 'unhandledrejection';
-    (0, a.Hj)(t, e), (0, a.D2)(t, i);
+    (0, n.Hj)(t, e), (0, n.D2)(t, E);
 }
-function i() {
-    (_ = n.n.onunhandledrejection),
-        (n.n.onunhandledrejection = function (e) {
-            return (0, a.rK)('unhandledrejection', e), !_ || !!_.__SENTRY_LOADER__ || _.apply(this, arguments);
+function E() {
+    (_ = a.n.onunhandledrejection),
+        (a.n.onunhandledrejection = function (e) {
+            return (0, n.rK)('unhandledrejection', e), !_ || !!_.__SENTRY_LOADER__ || _.apply(this, arguments);
         }),
-        (n.n.onunhandledrejection.__SENTRY_INSTRUMENTED__ = !0);
+        (a.n.onunhandledrejection.__SENTRY_INSTRUMENTED__ = !0);
 }

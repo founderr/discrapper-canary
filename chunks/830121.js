@@ -41,8 +41,8 @@ var _ = n(807675),
     E = n(981631);
 let v = /^\/([a-zA-Z0-9-]+)$/,
     I = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
-    b = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?$/,
-    T = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'),
+    T = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?$/,
+    b = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'),
     S = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/?$/,
     y = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/,
     A = /^\/activities\/([0-9-]+)\/?$/,
@@ -54,12 +54,12 @@ let v = /^\/([a-zA-Z0-9-]+)$/,
     L = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
     x = F(window.GLOBAL_ENV.INVITE_HOST),
     w = F(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
-    M = F(null !== (r = window.GLOBAL_ENV.WEBAPP_ENDPOINT) && void 0 !== r ? r : '//canary.'.concat(E.$R1)),
-    P = F('//canary.'.concat(E.$R1)),
+    P = F(null !== (r = window.GLOBAL_ENV.WEBAPP_ENDPOINT) && void 0 !== r ? r : '//canary.'.concat(E.$R1)),
+    M = F('//canary.'.concat(E.$R1)),
     k = F('//ptb.'.concat(E.$R1)),
     U = F('discordapp.com'),
     B = F('discord.com'),
-    G = [h.Z.escape(null !== (i = x.host) && void 0 !== i ? i : ''), h.Z.escape(null !== (a = w.host) && void 0 !== a ? a : ''), h.Z.escape(null !== (s = M.host) && void 0 !== s ? s : ''), h.Z.escape(null !== (o = U.host) && void 0 !== o ? o : ''), h.Z.escape(null !== (l = B.host) && void 0 !== l ? l : '')].filter(Boolean),
+    G = [h.Z.escape(null !== (i = x.host) && void 0 !== i ? i : ''), h.Z.escape(null !== (a = w.host) && void 0 !== a ? a : ''), h.Z.escape(null !== (s = P.host) && void 0 !== s ? s : ''), h.Z.escape(null !== (o = U.host) && void 0 !== o ? o : ''), h.Z.escape(null !== (l = B.host) && void 0 !== l ? l : '')].filter(Boolean),
     Z = RegExp('((https?://[^ ]*)|^|[^/][^/.])('.concat(G.join('|'), ')'), 'g');
 function F(e) {
     if (null == e)
@@ -90,7 +90,7 @@ function V(e, t) {
 }
 function j(e) {
     var t, n, r, i;
-    return null !== (i = null !== (r = null !== (n = null !== (t = V(M, e)) && void 0 !== t ? t : V(P, e)) && void 0 !== n ? n : V(k, e)) && void 0 !== r ? r : V(U, e)) && void 0 !== i ? i : V(B, e);
+    return null !== (i = null !== (r = null !== (n = null !== (t = V(P, e)) && void 0 !== t ? t : V(M, e)) && void 0 !== n ? n : V(k, e)) && void 0 !== r ? r : V(U, e)) && void 0 !== i ? i : V(B, e);
 }
 function H(e) {
     var t, n, r, i;
@@ -104,7 +104,7 @@ function H(e) {
         };
     let s = V(x, a),
         o = V(w, a),
-        l = null !== (i = null !== (r = null !== (n = null !== (t = V(M, a)) && void 0 !== t ? t : V(P, a)) && void 0 !== n ? n : V(k, a)) && void 0 !== r ? r : V(U, a)) && void 0 !== i ? i : V(B, a);
+        l = null !== (i = null !== (r = null !== (n = null !== (t = V(P, a)) && void 0 !== t ? t : V(M, a)) && void 0 !== n ? n : V(k, a)) && void 0 !== r ? r : V(U, a)) && void 0 !== i ? i : V(B, a);
     return {
         url: a,
         inviteHostRemainingPath: s,
@@ -138,7 +138,7 @@ function Y(e) {
             h(g.g.INVITE, e);
         }
         (null == l ? void 0 : l.match(v)) != null && h(g.g.TEMPLATE, l.substring(1));
-        let m = null == u ? void 0 : u.match(b);
+        let m = null == u ? void 0 : u.match(T);
         if (null != m) {
             let e = m[1].toUpperCase();
             if (e === g.g.INVITE) {
@@ -149,7 +149,7 @@ function Y(e) {
         (null == u ? void 0 : u.match(I)) != null && h(g.g.CHANNEL_LINK, u.replace('/channels/', ''));
         let E = (function (e) {
             if (null == e) return null;
-            let t = e.match(T);
+            let t = e.match(b);
             return null != t && t.length >= 4
                 ? {
                       guildId: t[1],
@@ -184,10 +184,10 @@ function Y(e) {
         }
         let w = null == u ? void 0 : u.match(N);
         null != w && h(g.g.GUILD_PRODUCT, ''.concat(w[1], '-').concat(w[2]));
-        let M = null == u ? void 0 : u.match(C);
-        null != M && h(g.g.SERVER_SHOP, M[1]);
-        let P = W(e);
-        if ((null != P && h(g.g.QUESTS_EMBED, P), '/shop' === u)) {
+        let P = null == u ? void 0 : u.match(C);
+        null != P && h(g.g.SERVER_SHOP, P[1]);
+        let M = W(e);
+        if ((null != M && h(g.g.QUESTS_EMBED, M), '/shop' === u)) {
             let e = null === (s = r.hash) || void 0 === s ? void 0 : s.match(D);
             h(g.g.COLLECTIBLES_SHOP, null !== (o = null == e ? void 0 : e[1]) && void 0 !== o ? o : '');
         }

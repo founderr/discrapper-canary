@@ -7,7 +7,7 @@ n.d(t, {
         return S;
     },
     Vf: function () {
-        return b;
+        return T;
     },
     YR: function () {
         return ek;
@@ -200,10 +200,10 @@ function v() {
 function I(e) {
     return e.subtract({ days: e.day - 1 });
 }
-function b(e) {
+function T(e) {
     return e.add({ days: e.calendar.getDaysInMonth(e) - e.day });
 }
-let T = new Map();
+let b = new Map();
 function S(e, t) {
     var n, r;
     let i,
@@ -220,8 +220,8 @@ function S(e, t) {
                             _[
                                 (function (e) {
                                     if (Intl.Locale) {
-                                        let t = T.get(e);
-                                        return !t && ((t = new Intl.Locale(e).maximize().region), T.set(e, t)), t;
+                                        let t = b.get(e);
+                                        return !t && ((t = new Intl.Locale(e).maximize().region), b.set(e, t)), t;
                                     }
                                     let t = e.split('-')[1];
                                     return 'u' === t ? null : t;
@@ -350,14 +350,14 @@ function x(e, t) {
     w(n, t.years || 0),
         n.calendar.balanceYearMonth && n.calendar.balanceYearMonth(n, e),
         (n.month += t.months || 0),
-        M(n),
         P(n),
+        M(n),
         (n.day += 7 * (t.weeks || 0)),
         (n.day += t.days || 0),
         (n.day += r),
         (function (e) {
-            for (; e.day < 1; ) e.month--, M(e), (e.day += e.calendar.getDaysInMonth(e));
-            for (; e.day > e.calendar.getDaysInMonth(e); ) (e.day -= e.calendar.getDaysInMonth(e)), e.month++, M(e);
+            for (; e.day < 1; ) e.month--, P(e), (e.day += e.calendar.getDaysInMonth(e));
+            for (; e.day > e.calendar.getDaysInMonth(e); ) (e.day -= e.calendar.getDaysInMonth(e)), e.month++, P(e);
         })(n),
         n.calendar.balanceDate && n.calendar.balanceDate(n),
         n.year < 1 && ((n.year = 1), (n.month = 1), (n.day = 1));
@@ -375,16 +375,16 @@ function w(e, t) {
     var n, r;
     (null === (r = (n = e.calendar).isInverseEra) || void 0 === r ? void 0 : r.call(n, e)) && (t = -t), (e.year += t);
 }
-function M(e) {
+function P(e) {
     for (; e.month < 1; ) w(e, -1), (e.month += e.calendar.getMonthsInYear(e));
     let t = 0;
     for (; e.month > (t = e.calendar.getMonthsInYear(e)); ) (e.month -= t), w(e, 1);
 }
-function P(e) {
+function M(e) {
     (e.month = Math.max(1, Math.min(e.calendar.getMonthsInYear(e), e.month))), (e.day = Math.max(1, Math.min(e.calendar.getDaysInMonth(e), e.day)));
 }
 function k(e) {
-    e.calendar.constrainDate && e.calendar.constrainDate(e), (e.year = Math.max(1, Math.min(e.calendar.getYearsInEra(e), e.year))), P(e);
+    e.calendar.constrainDate && e.calendar.constrainDate(e), (e.year = Math.max(1, Math.min(e.calendar.getYearsInEra(e), e.year))), M(e);
 }
 function U(e, t) {
     return x(
@@ -904,8 +904,8 @@ class eI extends ep {
         }
     }
 }
-let eb = 25920,
-    eT = 29 * eb + 13753;
+let eT = 25920,
+    eb = 29 * eT + 13753;
 function eS(e) {
     return 7 > s(7 * e + 1, 19);
 }
@@ -940,7 +940,7 @@ function eC(e, t) {
 class eR {
     fromJulianDay(e) {
         let t = e - 347997,
-            n = Math.floor((((t * eb) / eT) * 19 + 234) / 235) + 1,
+            n = Math.floor((((t * eT) / eb) * 19 + 234) / 235) + 1,
             r = eA(n),
             i = Math.floor(t - r);
         for (; i < 1; ) i = Math.floor(t - (r = eA(--n)));
@@ -1021,7 +1021,7 @@ class ew {
         this.identifier = 'ethiopic';
     }
 }
-class eM extends ew {
+class eP extends ew {
     fromJulianDay(e) {
         let [t, n, r] = eD(1723856, e);
         return new Y(this, 'AA', (t += 5500), n, r);
@@ -1036,7 +1036,7 @@ class eM extends ew {
         super(...e), (this.identifier = 'ethioaa');
     }
 }
-class eP extends ew {
+class eM extends ew {
     fromJulianDay(e) {
         let [t, n, r] = eD(1824665, e),
             i = 'CE';
@@ -1073,9 +1073,9 @@ function ek(e) {
         case 'ethiopic':
             return new ew();
         case 'ethioaa':
-            return new eM();
-        case 'coptic':
             return new eP();
+        case 'coptic':
+            return new eM();
         case 'hebrew':
             return new eR();
         case 'indian':

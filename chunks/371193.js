@@ -95,7 +95,7 @@ var p = n(549639),
             };
         return a;
     },
-    b = function (e) {
+    T = function (e) {
         return E(new s(0), {
             toValue: 0,
             delay: e,
@@ -143,13 +143,13 @@ e.exports = {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
         return new d(e, n);
     },
-    delay: b,
+    delay: T,
     sequence: v,
     parallel: I,
     stagger: function (e, t) {
         return I(
             t.map(function (t, n) {
-                return v([b(e * n), t]);
+                return v([T(e * n), t]);
             })
         );
     },

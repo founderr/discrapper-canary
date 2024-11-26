@@ -144,7 +144,7 @@ function _(e) {
             maxLines: p,
             containerWidth: g
         }),
-        b = i.useCallback(
+        T = i.useCallback(
             (e) =>
                 (0, r.jsx)(d, {
                     items: e,
@@ -152,7 +152,7 @@ function _(e) {
                 }),
             [a]
         ),
-        T = i.useMemo(() => n.slice(0, E + 1), [n, E]),
+        b = i.useMemo(() => n.slice(0, E + 1), [n, E]),
         S = i.useMemo(() => n.slice(E + 1), [n, E]);
     return (0, r.jsxs)('div', {
         className: s()(t, u.items),
@@ -183,8 +183,8 @@ function _(e) {
                     })
                 ]
             }),
-            T.map(a),
-            S.length > 0 && (null != h ? h : b)(S)
+            b.map(a),
+            S.length > 0 && (null != h ? h : T)(S)
         ]
     });
 }

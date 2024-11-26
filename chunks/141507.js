@@ -21,8 +21,8 @@ var r = n(200651),
     E = n(451478),
     v = n(768581),
     I = n(111846),
-    b = n(392552),
-    T = n(543241),
+    T = n(392552),
+    b = n(543241),
     S = n(199257),
     y = n(880949),
     A = n(784222),
@@ -41,14 +41,14 @@ let D = (e) => {
         let t,
             L,
             x,
-            { className: w, emojiGrid: M, guildId: P, pickerIntention: k, channel: U } = e,
-            { enabled: B } = b.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
+            { className: w, emojiGrid: P, guildId: M, pickerIntention: k, channel: U } = e,
+            { enabled: B } = T.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
             G = _.kJ.useStore((e) => e.inspectedExpressionPosition),
             Z = i.useMemo(() => {
                 var e;
                 let { rowIndex: t, columnIndex: n } = G;
-                return null === (e = M[t]) || void 0 === e ? void 0 : e[n];
-            }, [M, G]);
+                return null === (e = P[t]) || void 0 === e ? void 0 : e[n];
+            }, [P, G]);
         switch (null == Z ? void 0 : Z.type) {
             case A.ld.EMOJI:
                 t = null == Z ? void 0 : Z.emoji;
@@ -73,9 +73,9 @@ let D = (e) => {
             j = (0, a.e7)([E.Z], () => E.Z.isFocused()),
             H = (0, a.e7)([l.Z], () => l.Z.useReducedMotion, []),
             Y = m.Yk.useSetting(),
-            W = (0, T.C1)(P, O(t) ? t : null),
+            W = (0, b.C1)(M, O(t) ? t : null),
             K = (0, a.e7)([u.ZP], () => u.ZP.expandedSectionsByGuildIds),
-            { newlyAddedEmojis: z } = (0, S.Z)(P, k),
+            { newlyAddedEmojis: z } = (0, S.Z)(M, k),
             q = t.id,
             Q = (null == Z ? void 0 : Z.type) === A.ld.EMOJI ? Z.subCategory : N.t0.NONE;
         if (
@@ -87,11 +87,11 @@ let D = (e) => {
                         Q !== N.t0.NONE &&
                         (Q === N.t0.NEWLY_ADDED_EMOJI && null !== t && t.type === c.B.GUILD && (0, f.Zg)(t.guildId, z[0].id),
                         null != G.source &&
-                            (0, T.Gn)({
+                            (0, b.Gn)({
                                 emoji: t,
                                 subCategory: Q,
                                 position: Z.columnIndex + 1,
-                                newlyAddedHighlight: Q === N.t0.NEWLY_ADDED_EMOJI && d.Z.isNewerThanLastSeen(P, q)
+                                newlyAddedHighlight: Q === N.t0.NEWLY_ADDED_EMOJI && d.Z.isNewerThanLastSeen(M, q)
                             }));
                 };
             }),
@@ -160,7 +160,7 @@ let D = (e) => {
                 : D({
                       inspectedEmoji: t,
                       channel: U,
-                      guildId: P,
+                      guildId: M,
                       intention: k,
                       guild: F
                   });

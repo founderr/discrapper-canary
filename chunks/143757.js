@@ -23,37 +23,37 @@ var i = n(200651),
     I = n(82295),
     C = n(740492),
     v = n(973616),
-    S = n(592125),
-    N = n(626135),
+    N = n(592125),
+    S = n(626135),
     T = n(823379),
-    A = n(404295),
+    x = n(404295),
     b = n(728345),
-    x = n(812206),
+    A = n(812206),
     Z = n(981631),
     L = n(388032),
     y = n(914333),
-    O = n(312565);
-async function R(e, t, n) {
+    P = n(312565);
+async function O(e, t, n) {
     t(e.id);
     let i = e.bot;
     if (null == i)
         try {
             var r, l, a;
-            i = null !== (a = null === (r = x.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = v.Z.createFromServer(await (0, b.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
+            i = null !== (a = null === (r = A.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = v.Z.createFromServer(await (0, b.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
         } catch (e) {
             t(void 0);
             return;
         }
     if (null != i) {
         let r,
-            l = null == S.Z.getDMFromUserId(i.id);
+            l = null == N.Z.getDMFromUserId(i.id);
         try {
             r = await c.Z.openPrivateChannel([i.id], !1, !1, m.Z.APP_DMS_QUICK_LAUNCHER);
         } catch (e) {
             t(void 0);
         }
         if (
-            (N.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
+            (S.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
                 application_id: e.id,
                 is_new_dm: l,
                 channel_id: r
@@ -82,16 +82,16 @@ async function R(e, t, n) {
         });
     } else t(void 0);
 }
-function P(e) {
+function R(e) {
     let { application: t, loadingAppId: n, setLoadingAppId: r, botUserId: l, analyticsLocations: c } = e,
-        d = (0, s.e7)([S.Z], () => S.Z.getDMFromUserId(l)),
+        d = (0, s.e7)([N.Z], () => N.Z.getDMFromUserId(l)),
         h = (0, s.e7)([u.ZP], () => u.ZP.getCurrentEmbeddedActivity()),
         m = null != h && h.applicationId === t.id && h.channelId === d,
         p = n === t.id,
         g = null != n;
     return (0, i.jsx)(o.Clickable, {
         className: a()(y.clickable, { [y.disabledClickable]: g }),
-        onClick: () => (m || g ? null : R(t, r, c)),
+        onClick: () => (m || g ? null : O(t, r, c)),
         'aria-label': L.intl.formatToPlainString(L.t['zLhr9/'], {
             applicationName: t.name,
             applicationDescription: t.description
@@ -131,7 +131,7 @@ function j(e) {
         children: t.map((e) => {
             var t;
             return (0, i.jsx)(
-                P,
+                R,
                 {
                     application: e,
                     loadingAppId: n,
@@ -151,7 +151,7 @@ let D = (e) => {
     });
 };
 function M() {
-    let e = (0, A.en)(m.Z.APP_DMS_QUICK_LAUNCHER),
+    let e = (0, x.en)(m.Z.APP_DMS_QUICK_LAUNCHER),
         { frecentApps: t } = (0, g.f)({
             channel: void 0,
             onlyActivityApps: !0,
@@ -172,11 +172,11 @@ function M() {
         );
     return (r.useLayoutEffect(() => {
         var e;
-        if (!d && !!c) u(!0), N.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = h.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
+        if (!d && !!c) u(!0), S.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = h.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
     }, [c, h, d]),
     c)
         ? (0, i.jsx)(I.Z, {
-              className: a()(y.headerContainer, O.privateChannelsHeaderContainer),
+              className: a()(y.headerContainer, P.privateChannelsHeaderContainer),
               children: (0, i.jsxs)('div', {
                   className: y.container,
                   onContextMenu: D,
@@ -184,7 +184,7 @@ function M() {
                       (0, i.jsx)('div', {
                           className: y.textContainer,
                           children: (0, i.jsx)('span', {
-                              className: O.headerText,
+                              className: P.headerText,
                               children: L.intl.string(L.t.vayAzs)
                           })
                       }),

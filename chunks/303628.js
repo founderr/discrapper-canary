@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(117530),
     v = n(459273),
     I = n(444282),
-    b = n(898463),
-    T = n(981631),
+    T = n(898463),
+    b = n(981631),
     S = n(995987),
     y = n(763971);
 let A = [];
@@ -66,12 +66,12 @@ function N(e) {
         };
         return c.Z.subscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e), () => c.Z.unsubscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e);
     }, [t, n]);
-    let M = i.useCallback(() => {
+    let P = i.useCallback(() => {
         N.focusFirstVisibleItem();
     }, [N]);
     return ((0, v.yp)({
-        event: T.CkL.FOCUS_ATTACHMENT_AREA,
-        handler: M
+        event: b.CkL.FOCUS_ATTACHMENT_AREA,
+        handler: P
     }),
     i.useEffect(() => {
         if (R) {
@@ -112,7 +112,7 @@ function N(e) {
                                         )
                                       : C.map((e) =>
                                             (0, r.jsx)(
-                                                b.Z,
+                                                T.Z,
                                                 {
                                                     channelId: t,
                                                     draftType: n.drafts.type,

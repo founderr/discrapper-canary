@@ -17,8 +17,8 @@ var r = n(512722),
     E = n(258609),
     v = n(565473),
     I = n(444092),
-    b = n(927923),
-    T = n(65154),
+    T = n(927923),
+    b = n(65154),
     S = n(388032);
 function y(e, t, n) {
     return (
@@ -58,7 +58,7 @@ class C extends l.Z {
                 let t = (function (e) {
                     let t = E.Z.getAwaitingRemoteSessionInfo();
                     return e.find((e) => {
-                        let n = b.al.has(e.clientInfo.os),
+                        let n = T.al.has(e.clientInfo.os),
                             r = null != p.Z.getVoiceStateForSession(c.default.getId(), e.sessionId),
                             i = null == t || (0, v.y)(t.type) === e.clientInfo.os;
                         return n && i && r;
@@ -71,7 +71,7 @@ class C extends l.Z {
             }),
             y(this, 'handleAudioStateToggle', (e) => {
                 let { syncRemote: t, context: n } = e;
-                if (!t || n !== T.Yn.DEFAULT) return;
+                if (!t || n !== b.Yn.DEFAULT) return;
                 let r = d.Z.isSelfDeaf(),
                     i = d.Z.isSelfMute(),
                     a = c.default.getId(),
@@ -145,7 +145,7 @@ class C extends l.Z {
                         errorCodeMessage: o.errorCodeMessage,
                         reconnectPlatformType: o.isAccountLinkError ? a.type : void 0
                     }),
-                    b.e8.has(i.code) && this.awaitRemoteTimeout.isStarted() ? this.awaitRemoteTimeout.start(180000, () => (0, m.s6)(), !0) : 'failed' === r && (0, m.s6)();
+                    T.e8.has(i.code) && this.awaitRemoteTimeout.isStarted() ? this.awaitRemoteTimeout.start(180000, () => (0, m.s6)(), !0) : 'failed' === r && (0, m.s6)();
             }),
             y(this, 'handleRemoteSessionDisconnect', () => {
                 this.awaitRemoteTimeout.stop();

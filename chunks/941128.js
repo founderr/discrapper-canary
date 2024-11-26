@@ -17,8 +17,8 @@ var r,
     E = n(314897),
     v = n(173747),
     I = n(780570),
-    b = n(830168),
-    T = n(358085),
+    T = n(830168),
+    b = n(358085),
     S = n(417363),
     y = n(981631),
     A = n(186901);
@@ -31,14 +31,14 @@ let N = [A.ff.AUTHENTICATION_FAILED, A.ff.NOT_ENTITLED],
     L = null,
     x = null,
     w = !1,
-    M = new Map(),
-    P = !1,
+    P = new Map(),
+    M = !1,
     k = null;
 function U() {
     let e = {
         queue: R,
         paused: D,
-        userActions: Array.from(M)
+        userActions: Array.from(P)
     };
     p.K.set(C, e);
 }
@@ -52,7 +52,7 @@ function B() {
             let e = E.default.getToken(),
                 t = E.default.getId();
             if (null == e) throw Error('missing user token');
-            P = !b.Z.setCurrentTask(a, s, i, t, e);
+            M = !T.Z.setCurrentTask(a, s, i, t, e);
         }
     }
 }
@@ -69,7 +69,7 @@ function Z(e, t, n, r) {
         s = O.indexOf(i);
     -1 !== s && O.splice(s, 1);
     let o = G(e, t);
-    0 !== o && (n ? -1 === o && (R.push(a), B()) : (o > 0 && R.splice(o, 1), R.unshift(a), B())), !n && D && b.Z.resume(), U();
+    0 !== o && (n ? -1 === o && (R.push(a), B()) : (o > 0 && R.splice(o, 1), R.unshift(a), B())), !n && D && T.Z.resume(), U();
 }
 function F(e, t) {
     let n = (0, I.Tu)(e, t),
@@ -91,7 +91,7 @@ function j(e) {
 function H() {
     let e = E.default.getToken(),
         t = E.default.getId();
-    if (null != e) b.Z.setCredentials(t, e);
+    if (null != e) T.Z.setCredentials(t, e);
 }
 function Y() {
     for (let e of g.ZP.getRunningDiscordApplicationIds()) m.al(e, e);
@@ -118,7 +118,7 @@ class W extends (a = _.ZP.Store) {
                       }
                     : e
             );
-        null != t.paused && (D = t.paused), null != t.userActions && (M = new Map(Array.from(t.userActions))), this.waitFor(S.Z, g.ZP), this.syncWith([g.ZP], Y), this.waitFor(S.Z);
+        null != t.paused && (D = t.paused), null != t.userActions && (P = new Map(Array.from(t.userActions))), this.waitFor(S.Z, g.ZP), this.syncWith([g.ZP], Y), this.waitFor(S.Z);
     }
     get activeItems() {
         return R.map((e) => {
@@ -136,7 +136,7 @@ class W extends (a = _.ZP.Store) {
         return G(e, t);
     }
     isCorruptInstallation() {
-        return P;
+        return M;
     }
 }
 (c = 'DispatchManagerStore'),
@@ -151,7 +151,7 @@ class W extends (a = _.ZP.Store) {
     (t.Z = new W(h.Z, {
         DISPATCH_APPLICATION_INSTALL: function (e) {
             let { applicationId: t, branchId: n } = e;
-            M.set((0, I.Tu)(t, n), 'Install'), Z(t, n, !1, 'Patch');
+            P.set((0, I.Tu)(t, n), 'Install'), Z(t, n, !1, 'Patch');
         },
         DISPATCH_APPLICATION_UPDATE: function (e) {
             let { applicationId: t, branchId: n, automatic: r } = e;
@@ -163,18 +163,18 @@ class W extends (a = _.ZP.Store) {
         DISPATCH_APPLICATION_CANCEL: V,
         DISPATCH_APPLICATION_REPAIR: function (e) {
             let { applicationId: t, branchId: n } = e;
-            M.set((0, I.Tu)(t, n), 'Repair'), Z(t, n, !1, 'Repair');
+            P.set((0, I.Tu)(t, n), 'Repair'), Z(t, n, !1, 'Repair');
         },
         DISPATCH_APPLICATION_MOVE_UP: function (e) {
             let { applicationId: t, branchId: n } = e,
                 r = G(t, n);
             if (r < 1) return !1;
-            R.splice(0, 0, R.splice(r, 1)[0]), B(), D && b.Z.resume(), U();
+            R.splice(0, 0, R.splice(r, 1)[0]), B(), D && T.Z.resume(), U();
         },
         DISPATCH_APPLICATION_REMOVE_FINISHED: j,
         DISPATCH_APPLICATION_STATE_UPDATE: function (e) {
             let { state: t } = e;
-            !w && ((w = !0), B(), !D && b.Z.resume());
+            !w && ((w = !0), B(), !D && T.Z.resume());
             let n = D;
             (D = t.paused), (L = t.currentTask), (x = t.nextTask);
             let r = !1;
@@ -185,15 +185,15 @@ class W extends (a = _.ZP.Store) {
                     s = v.Z.getTargetBuildId(n, i),
                     o = v.Z.getTargetManifests(n, i);
                 if (null != a && a.type === y.vxO.UP_TO_DATE && a.buildId === a.targetBuildId && a.buildId === s && f().isEqual(a.manifestIds, a.targetManifestIds) && f().isEqual(a.manifestIds, o)) {
-                    if ((O.push(t), M.has(t))) {
-                        switch (M.get(t)) {
+                    if ((O.push(t), P.has(t))) {
+                        switch (P.get(t)) {
                             case 'Install':
                                 m.XT(n, a);
                                 break;
                             case 'Repair':
                                 m.Wx(n, a);
                         }
-                        M.delete(t);
+                        P.delete(t);
                     }
                     return (r = !0), !1;
                 }
@@ -217,9 +217,9 @@ class W extends (a = _.ZP.Store) {
             }
         },
         CONNECTION_OPEN: function () {
-            (0, T.isDesktop)() && H();
+            (0, b.isDesktop)() && H();
         },
         LOGOUT: function () {
-            p.K.remove(C), (0, T.isDesktop)() && b.Z.pause();
+            p.K.remove(C), (0, b.isDesktop)() && T.Z.pause();
         }
     }));

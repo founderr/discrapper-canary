@@ -9,7 +9,7 @@ n.d(t, {
         return S;
     },
     Om: function () {
-        return T;
+        return b;
     },
     Sf: function () {
         return f;
@@ -21,7 +21,7 @@ n.d(t, {
         return p;
     },
     Xc: function () {
-        return b;
+        return T;
     },
     ZP: function () {
         return u;
@@ -111,7 +111,7 @@ class u extends r.Z {
                     email: e.email
                 });
             case o.HeQ.VENMO:
-                return new b({
+                return new T({
                     ...r,
                     username: e.username
                 });
@@ -143,7 +143,7 @@ class u extends r.Z {
             case o.HeQ.MOMO_WALLET:
                 return new I({ ...r });
             case o.HeQ.KAKAOPAY:
-                return new T({ ...r });
+                return new b({ ...r });
             case o.HeQ.GOPAY_WALLET:
                 return new S({ ...r });
             case o.HeQ.BANCONTACT:
@@ -185,9 +185,9 @@ class u extends r.Z {
             case o.HeQ.MOMO_WALLET:
                 return new I(e);
             case o.HeQ.VENMO:
-                return new b(e);
-            case o.HeQ.KAKAOPAY:
                 return new T(e);
+            case o.HeQ.KAKAOPAY:
+                return new b(e);
             case o.HeQ.GOPAY_WALLET:
                 return new S(e);
             case o.HeQ.BANCONTACT:
@@ -280,13 +280,13 @@ class I extends u {
         if ((super(e), e.type !== o.HeQ.MOMO_WALLET)) throw Error('Cannot instantiate MomoWalletSourceRecord with type: '.concat(e.type, ', must be ').concat(o.HeQ.MOMO_WALLET));
     }
 }
-class b extends u {
+class T extends u {
     constructor(e) {
         if ((super(e), l(this, 'username', void 0), e.type !== o.HeQ.VENMO)) throw Error('Cannot instantiate VenmoSourceRecord with type: '.concat(e.type, ', must be ').concat(o.HeQ.VENMO));
         this.username = e.username || '';
     }
 }
-class T extends u {
+class b extends u {
     constructor(e) {
         if ((super(e), e.type !== o.HeQ.KAKAOPAY)) throw Error('Cannot instantiate KaKaoPaySourceRecord with type: '.concat(e.type, ', must be ').concat(o.HeQ.KAKAOPAY));
     }

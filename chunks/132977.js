@@ -3,7 +3,7 @@ n.d(t, {
         return I;
     },
     gt: function () {
-        return b;
+        return T;
     },
     rH: function () {
         return o;
@@ -57,7 +57,7 @@ class I extends (l = c.PureComponent) {
               writable: !0
           })
         : (i[a] = s);
-let b = (e) => {
+let T = (e) => {
     let { children: t, className: n, disabled: r, submitting: i, pauseAnimation: a, shineSize: s = 'default', shinePaused: o, buttonShineClassName: l, onlyShineOnHover: d, ..._ } = e,
         m = c.createRef(),
         E = (0, h.Z)(m),
@@ -80,4 +80,4 @@ let b = (e) => {
         ]
     });
 };
-b.ShineSizes = o;
+T.ShineSizes = o;

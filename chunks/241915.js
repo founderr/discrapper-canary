@@ -39,13 +39,13 @@ let g = 80,
         [_.VD2.BOTTOM_LEFT]: h.resizeHandleBottomLeft,
         [_.VD2.BOTTOM_RIGHT]: h.resizeHandleBottomRight
     },
-    b = {
+    T = {
         [_.VD2.TOP_RIGHT]: c.y.HORIZONTAL_LEFT,
         [_.VD2.TOP_LEFT]: c.y.HORIZONTAL_RIGHT,
         [_.VD2.BOTTOM_LEFT]: c.y.HORIZONTAL_RIGHT,
         [_.VD2.BOTTOM_RIGHT]: c.y.HORIZONTAL_LEFT
     };
-function T(e, t) {
+function b(e, t) {
     let n = 40 * Math.round(e / 40);
     return (0, l.clamp)(n, t.minWidth, t.maxWidth);
 }
@@ -57,7 +57,7 @@ function S(e) {
             resizableDomNodeRef: t,
             onElementResize: n,
             onElementResizeEnd: r,
-            orientation: b[l],
+            orientation: T[l],
             usePointerEvents: !0
         }),
         d = a.useCallback(
@@ -241,7 +241,7 @@ class y extends (r = a.PureComponent) {
             m(this, 'ensureWidth', () => {
                 let { onResize: e, edgeOffsetLeft: t, edgeOffsetRight: n, maxX: r, resizeConfig: i } = this.props;
                 if (null == i) return;
-                let a = T(r - (t + n), i);
+                let a = b(r - (t + n), i);
                 this.getWidth() > a && ((this._width = a), null == e || e(a));
             }),
             m(this, 'handleSetInnerDivRef', (e) => {
@@ -261,7 +261,7 @@ class y extends (r = a.PureComponent) {
             m(this, 'handleResizeEnd', (e) => {
                 let { onResize: t, resizeConfig: n } = this.props;
                 if (null == n) return;
-                let r = T(e, n);
+                let r = b(e, n);
                 (this._width = r), null == t || t(r), this.setState({ isResizing: !1 }), this.ensureWidth();
             }),
             m(this, 'handleDragStart', (e, t) => {

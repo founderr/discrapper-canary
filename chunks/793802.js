@@ -17,7 +17,7 @@ var n = 'function' == typeof Symbol && Symbol.for,
     E = n ? Symbol.for('react.fundamental') : 60117,
     v = n ? Symbol.for('react.responder') : 60118,
     I = n ? Symbol.for('react.scope') : 60119;
-function b(e) {
+function T(e) {
     if ('object' == typeof e && null !== e) {
         var t = e.$$typeof;
         switch (t) {
@@ -47,8 +47,8 @@ function b(e) {
         }
     }
 }
-function T(e) {
-    return b(e) === d;
+function b(e) {
+    return T(e) === d;
 }
 (t.AsyncMode = c),
     (t.ConcurrentMode = d),
@@ -64,43 +64,43 @@ function T(e) {
     (t.StrictMode = s),
     (t.Suspense = _),
     (t.isAsyncMode = function (e) {
-        return T(e) || b(e) === c;
+        return b(e) || T(e) === c;
     }),
-    (t.isConcurrentMode = T),
+    (t.isConcurrentMode = b),
     (t.isContextConsumer = function (e) {
-        return b(e) === u;
+        return T(e) === u;
     }),
     (t.isContextProvider = function (e) {
-        return b(e) === l;
+        return T(e) === l;
     }),
     (t.isElement = function (e) {
         return 'object' == typeof e && null !== e && e.$$typeof === r;
     }),
     (t.isForwardRef = function (e) {
-        return b(e) === f;
+        return T(e) === f;
     }),
     (t.isFragment = function (e) {
-        return b(e) === a;
+        return T(e) === a;
     }),
     (t.isLazy = function (e) {
-        return b(e) === m;
+        return T(e) === m;
     }),
     (t.isMemo = function (e) {
-        return b(e) === h;
+        return T(e) === h;
     }),
     (t.isPortal = function (e) {
-        return b(e) === i;
+        return T(e) === i;
     }),
     (t.isProfiler = function (e) {
-        return b(e) === o;
+        return T(e) === o;
     }),
     (t.isStrictMode = function (e) {
-        return b(e) === s;
+        return T(e) === s;
     }),
     (t.isSuspense = function (e) {
-        return b(e) === _;
+        return T(e) === _;
     }),
     (t.isValidElementType = function (e) {
         return 'string' == typeof e || 'function' == typeof e || e === a || e === d || e === o || e === s || e === _ || e === p || ('object' == typeof e && null !== e && (e.$$typeof === m || e.$$typeof === h || e.$$typeof === l || e.$$typeof === u || e.$$typeof === f || e.$$typeof === E || e.$$typeof === v || e.$$typeof === I || e.$$typeof === g));
     }),
-    (t.typeOf = b);
+    (t.typeOf = T);

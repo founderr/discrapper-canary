@@ -17,7 +17,7 @@ var r = n(200651),
     E = n(388032),
     v = n(274495);
 let I = () => 80,
-    b = (e) => {
+    T = (e) => {
         let { children: t, className: n, onSelect: i, isSelected: a = !1, ...o } = e;
         return (0, r.jsx)(c.Clickable, {
             className: s()(v.decorationGridItem, a ? v.selected : void 0, n),
@@ -26,13 +26,13 @@ let I = () => 80,
             children: t
         });
     },
-    T = (e) => {
+    b = (e) => {
         let { user: t, avatarDecoration: n, innerRef: a, section: s, isSelected: o = !1, ...h } = e,
             I = (0, u.e7)([f.Z], () => {
                 let e = f.Z.getProduct(n.skuId);
                 return (0, _.G1)(e);
             }),
-            T = (0, _.Yq)(n.skuId),
+            b = (0, _.Yq)(n.skuId),
             S = p.ZP.canUseCollectibles(t),
             y = s === m.$0.PREMIUM_PURCHASE && !S,
             A = i.useRef(null),
@@ -43,7 +43,7 @@ let I = () => 80,
                 size: 80,
                 onlyAnimateOnHover: !N
             });
-        return (0, r.jsxs)(b, {
+        return (0, r.jsxs)(T, {
             className: y ? v.decorationGridItemChurned : void 0,
             innerRef: null != a ? a : A,
             isSelected: o,
@@ -56,7 +56,7 @@ let I = () => 80,
                 }),
                 s === m.$0.PURCHASE || (s === m.$0.PREMIUM_PURCHASE && S)
                     ? null
-                    : T
+                    : b
                       ? (0, r.jsx)(c.PremiumBadge, {
                             className: v.newBadge,
                             text: (0, r.jsxs)('div', {
@@ -114,7 +114,7 @@ t.Z = (e) => {
             return (0, o.EQ)(g[i])
                 .with(m.Tm, () =>
                     (0, r.jsxs)(
-                        b,
+                        T,
                         {
                             style: { ...u },
                             isSelected: null === a,
@@ -137,7 +137,7 @@ t.Z = (e) => {
                 )
                 .with(m.oT, () =>
                     (0, r.jsxs)(
-                        b,
+                        T,
                         {
                             style: u,
                             onSelect: f,
@@ -162,7 +162,7 @@ t.Z = (e) => {
                 .otherwise((e) => {
                     let n = (null == a ? void 0 : a.id) === e.id;
                     return (0, r.jsx)(
-                        T,
+                        b,
                         {
                             style: { ...u },
                             user: t,

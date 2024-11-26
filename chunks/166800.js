@@ -3,22 +3,22 @@ r.d(t, {
         return _;
     }
 });
-var n = r(226377),
-    a = r(91647);
+var a = r(226377),
+    n = r(91647);
 let _ = {
     increment: function (e, t = 1, r) {
-        n.q.increment(a.P, e, t, r);
+        a.q.increment(n.P, e, t, r);
     },
     distribution: function (e, t, r) {
-        n.q.distribution(a.P, e, t, r);
+        a.q.distribution(n.P, e, t, r);
     },
     set: function (e, t, r) {
-        n.q.set(a.P, e, t, r);
+        a.q.set(n.P, e, t, r);
     },
     gauge: function (e, t, r) {
-        n.q.gauge(a.P, e, t, r);
+        a.q.gauge(n.P, e, t, r);
     },
     timing: function (e, t, r = 'second', _) {
-        return n.q.timing(a.P, e, t, r, _);
+        return a.q.timing(n.P, e, t, r, _);
     }
 };

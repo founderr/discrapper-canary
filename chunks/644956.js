@@ -22,8 +22,8 @@ var i = n(120356),
     E = n(818083),
     v = n(480608),
     I = n(124072),
-    b = n(184301),
-    T = n(347475),
+    T = n(184301),
+    b = n(347475),
     S = n(592125),
     y = n(271383),
     A = n(430824),
@@ -46,14 +46,14 @@ let D = (0, E.B)({
 });
 function L(e) {
     let { roleColor: t, roleId: i, channelId: s, roleName: E, guildId: L, children: x, inlinePreview: w = !1 } = e,
-        { analyticsLocations: M } = (0, h.ZP)(p.Z.ROLE_MENTION),
-        P = (0, u.e7)([_.Z], () => _.Z.roleStyle),
+        { analyticsLocations: P } = (0, h.ZP)(p.Z.ROLE_MENTION),
+        M = (0, u.e7)([_.Z], () => _.Z.roleStyle),
         k = null != t && 0 !== t && !w,
-        U = k && 'dot' === P,
+        U = k && 'dot' === M,
         B = (e) =>
             (0, r.jsxs)(I.Z, {
                 className: a()(R.roleMention),
-                color: 'username' === P && k ? t : null,
+                color: 'username' === M && k ? t : null,
                 ...e,
                 children: [
                     U &&
@@ -69,11 +69,11 @@ function L(e) {
         { enabled: G } = D.getCurrentConfig({ location: '2ec235_1' }, { autoTrackExposure: !1 });
     return !G || w || null == s || null == L || (null == i && '@everyone' !== E)
         ? (0, r.jsx)(h.Gt, {
-              value: M,
+              value: P,
               children: B()
           })
         : (0, r.jsx)(h.Gt, {
-              value: M,
+              value: P,
               children: (0, r.jsx)(c.Popout, {
                   preload: async () => {
                       null != i && (await (0, v.H)(L, i));
@@ -96,12 +96,12 @@ function L(e) {
                                       c.Popout,
                                       {
                                           preload: () =>
-                                              (0, b.Z)(i.id, i.getAvatarURL(t.guild_id, 80), {
+                                              (0, T.Z)(i.id, i.getAvatarURL(t.guild_id, 80), {
                                                   guildId: t.guild_id,
                                                   channelId: t.id
                                               }),
                                           renderPopout: (n) =>
-                                              (0, r.jsx)(T.Z, {
+                                              (0, r.jsx)(b.Z, {
                                                   ...n,
                                                   userId: e.userId,
                                                   guildId: a.id,

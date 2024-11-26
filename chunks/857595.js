@@ -1,6 +1,6 @@
 n.d(t, {
     Ej: function () {
-        return T;
+        return b;
     },
     Nc: function () {
         return E;
@@ -45,7 +45,7 @@ n.d(t, {
         return c;
     },
     qz: function () {
-        return b;
+        return T;
     },
     r_: function () {
         return g;
@@ -134,13 +134,13 @@ function I(e) {
           })
         : t && !n && i.ZP.clearSettingsOverride('gifAutoPlay', 'animateEmoji', 'animateStickers');
 }
-function b(e) {
+function T(e) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SET_SYNC_FORCED_COLORS',
         syncForcedColors: e
     });
 }
-function T(e, t) {
+function b(e, t) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED',
         systemPrefersColorScheme: e,

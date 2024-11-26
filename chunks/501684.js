@@ -1,10 +1,10 @@
-let n, a, _, o, i;
+let a, n, _, o, E;
 r.d(t, {
     $A: function () {
-        return f;
+        return O;
     },
     PR: function () {
-        return L;
+        return f;
     },
     YF: function () {
         return h;
@@ -13,52 +13,52 @@ r.d(t, {
         return p;
     },
     _j: function () {
-        return S;
+        return D;
     },
     cN: function () {
         return b;
     },
     to: function () {
-        return O;
+        return L;
     }
 });
-var E = r(622916),
+var i = r(622916),
     c = r(688838),
     s = r(665909),
     l = r(795927),
-    u = r(661129),
-    I = r(231550),
+    I = r(661129),
+    u = r(231550),
     R = r(428983),
-    N = r(622574),
-    A = r(288570);
-let T = {},
+    A = r(622574),
+    T = r(288570);
+let N = {},
     d = {};
-function L(e, t = !1) {
-    return G('cls', e, C, n, t);
-}
 function f(e, t = !1) {
-    return G('lcp', e, U, _, t);
+    return G('cls', e, C, a, t);
 }
-function O(e) {
-    return G('fid', e, g, a);
+function O(e, t = !1) {
+    return G('lcp', e, g, _, t);
+}
+function L(e) {
+    return G('fid', e, P, n);
 }
 function p(e) {
-    return G('ttfb', e, P, o);
+    return G('ttfb', e, U, o);
 }
 function h(e) {
-    return G('inp', e, M, i);
+    return G('inp', e, M, E);
 }
-function S(e, t) {
+function D(e, t) {
     return (
         m(e, t),
         !d[e] &&
             ((function (e) {
                 let t = {};
                 'event' === e && (t.durationThreshold = 0),
-                    (0, N.N)(
+                    (0, A.N)(
                         e,
                         (t) => {
-                            D(e, { entries: t });
+                            S(e, { entries: t });
                         },
                         t
                     );
@@ -67,18 +67,18 @@ function S(e, t) {
         y(e, t)
     );
 }
-function D(e, t) {
-    let r = T[e];
+function S(e, t) {
+    let r = N[e];
     if (!!r && !!r.length)
-        for (let n of r)
+        for (let a of r)
             try {
-                n(t);
+                a(t);
             } catch (t) {
                 s.X &&
-                    E.kg.error(
+                    i.kg.error(
                         `Error while triggering instrumentation handler.
 Type: ${e}
-Name: ${(0, c.$P)(n)}
+Name: ${(0, c.$P)(a)}
 Error:`,
                         t
                     );
@@ -87,48 +87,48 @@ Error:`,
 function C() {
     return (0, l.m)(
         (e) => {
-            D('cls', { metric: e }), (n = e);
-        },
-        { reportAllChanges: !0 }
-    );
-}
-function g() {
-    return (0, u.F)((e) => {
-        D('fid', { metric: e }), (a = e);
-    });
-}
-function U() {
-    return (0, R.N)(
-        (e) => {
-            D('lcp', { metric: e }), (_ = e);
+            S('cls', { metric: e }), (a = e);
         },
         { reportAllChanges: !0 }
     );
 }
 function P() {
-    return (0, A.m)((e) => {
-        D('ttfb', { metric: e }), (o = e);
+    return (0, I.F)((e) => {
+        S('fid', { metric: e }), (n = e);
+    });
+}
+function g() {
+    return (0, R.N)(
+        (e) => {
+            S('lcp', { metric: e }), (_ = e);
+        },
+        { reportAllChanges: !0 }
+    );
+}
+function U() {
+    return (0, T.m)((e) => {
+        S('ttfb', { metric: e }), (o = e);
     });
 }
 function M() {
-    return (0, I.Y)((e) => {
-        D('inp', { metric: e }), (i = e);
+    return (0, u.Y)((e) => {
+        S('inp', { metric: e }), (E = e);
     });
 }
-function G(e, t, r, n, a = !1) {
+function G(e, t, r, a, n = !1) {
     let _;
-    return m(e, t), !d[e] && ((_ = r()), (d[e] = !0)), n && t({ metric: n }), y(e, t, a ? _ : void 0);
+    return m(e, t), !d[e] && ((_ = r()), (d[e] = !0)), a && t({ metric: a }), y(e, t, n ? _ : void 0);
 }
 function m(e, t) {
-    (T[e] = T[e] || []), T[e].push(t);
+    (N[e] = N[e] || []), N[e].push(t);
 }
 function y(e, t, r) {
     return () => {
         r && r();
-        let n = T[e];
-        if (!n) return;
-        let a = n.indexOf(t);
-        -1 !== a && n.splice(a, 1);
+        let a = N[e];
+        if (!a) return;
+        let n = a.indexOf(t);
+        -1 !== n && a.splice(n, 1);
     };
 }
 function b(e) {

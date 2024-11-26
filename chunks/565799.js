@@ -17,8 +17,8 @@ var r,
     E = n(430824),
     v = n(496675),
     I = n(699516),
-    b = n(606304),
-    T = n(594174),
+    T = n(606304),
+    b = n(594174),
     S = n(979651),
     y = n(938475),
     A = n(501655),
@@ -51,13 +51,13 @@ function w(e) {
                 k(e) && O.set(e.id, e);
             }));
 }
-function M(e) {
+function P(e) {
     let t = L[e];
     if (null != t) return t;
     let n = g.Z.getChannel(e);
-    return null != n && n.isGuildStageVoice() ? ((w(n.guild_id), k(n)) ? P(e) : null) : null;
+    return null != n && n.isGuildStageVoice() ? ((w(n.guild_id), k(n)) ? M(e) : null) : null;
 }
-function P(e) {
+function M(e) {
     let t = L[e];
     return null == t && ((t = new A.ZP(e)), (L[e] = t), t.rebuild()), t;
 }
@@ -67,7 +67,7 @@ function k(e) {
 function U(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x();
     return t.reduce((t, n) => {
-        let r = P(n);
+        let r = M(n);
         return e(r)
             ? (!(function (e, t) {
                   let n = g.Z.getChannel(e);
@@ -115,27 +115,27 @@ function Y(e) {
 let W = [];
 class K extends (r = d.ZP.Store) {
     initialize() {
-        this.waitFor(m.default, T.default, g.Z, b.Z, S.Z, v.Z, y.ZP, E.Z, N.ZP, I.Z, C.Z, h.Z);
+        this.waitFor(m.default, b.default, g.Z, T.Z, S.Z, v.Z, y.ZP, E.Z, N.ZP, I.Z, C.Z, h.Z);
     }
     getParticipantsVersion(e) {
         var t, n;
-        return null == e ? -1 : null !== (n = null === (t = M(e)) || void 0 === t ? void 0 : t.version) && void 0 !== n ? n : -1;
+        return null == e ? -1 : null !== (n = null === (t = P(e)) || void 0 === t ? void 0 : t.version) && void 0 !== n ? n : -1;
     }
     getMutableParticipants(e, t) {
         var n, r;
-        return null == e ? W : null !== (r = null === (n = M(e)) || void 0 === n ? void 0 : n.toArray(t)) && void 0 !== r ? r : W;
+        return null == e ? W : null !== (r = null === (n = P(e)) || void 0 === n ? void 0 : n.toArray(t)) && void 0 !== r ? r : W;
     }
     getMutableRequestToSpeakParticipants(e) {
         var t, n;
-        return null !== (n = null === (t = M(e)) || void 0 === t ? void 0 : t.getRequestToSpeakParticipants()) && void 0 !== n ? n : W;
+        return null !== (n = null === (t = P(e)) || void 0 === t ? void 0 : t.getRequestToSpeakParticipants()) && void 0 !== n ? n : W;
     }
     getRequestToSpeakParticipantsVersion(e) {
         var t, n;
-        return null !== (n = null === (t = M(e)) || void 0 === t ? void 0 : t.requestToSpeakVersion) && void 0 !== n ? n : -1;
+        return null !== (n = null === (t = P(e)) || void 0 === t ? void 0 : t.requestToSpeakVersion) && void 0 !== n ? n : -1;
     }
     getParticipantCount(e, t) {
         var n, r;
-        return null !== (r = null === (n = M(e)) || void 0 === n ? void 0 : n.size(t)) && void 0 !== r ? r : 0;
+        return null !== (r = null === (n = P(e)) || void 0 === n ? void 0 : n.size(t)) && void 0 !== r ? r : 0;
     }
     getChannels(e) {
         return w(null != e ? e : R), O.values(null != e ? e : R);
@@ -145,7 +145,7 @@ class K extends (r = d.ZP.Store) {
     }
     getParticipant(e, t) {
         var n, r;
-        return null !== (r = null === (n = M(e)) || void 0 === n ? void 0 : n.getParticipant(t)) && void 0 !== r ? r : null;
+        return null !== (r = null === (n = P(e)) || void 0 === n ? void 0 : n.getParticipant(t)) && void 0 !== r ? r : null;
     }
 }
 (s = 'StageChannelParticipantStore'),
@@ -210,7 +210,7 @@ class K extends (r = d.ZP.Store) {
         GUILD_DELETE: H,
         PASSIVE_UPDATE_V2: function (e) {
             let t = !1;
-            for (let n of x(e.guildId)) t = P(n).rebuild() || t;
+            for (let n of x(e.guildId)) t = M(n).rebuild() || t;
             return t;
         }
     }));

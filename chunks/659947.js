@@ -21,19 +21,19 @@ var i = n(200651),
     x = n(388032),
     S = n(198491);
 function T() {}
-let C = [p.h8.VOICE_CHANNEL];
+let E = [p.h8.VOICE_CHANNEL];
 function _(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
-function E(e) {
+function C(e) {
     let { height: t } = e;
     return (0, i.jsx)('div', { style: { height: t } });
 }
-function f() {
-    return (0, i.jsx)(E, { height: 16 }, 'footer');
-}
 function I() {
-    return (0, i.jsx)(E, { height: 8 }, 'header');
+    return (0, i.jsx)(C, { height: 16 }, 'footer');
+}
+function f() {
+    return (0, i.jsx)(C, { height: 8 }, 'header');
 }
 function N() {
     return (0, i.jsx)('div', {
@@ -94,7 +94,7 @@ function b(e) {
         c = s.useId(),
         T = s.useRef(null),
         {
-            mouseFocusEnabled: E,
+            mouseFocusEnabled: C,
             enableMouseFocus: A,
             disableMouseFocus: b
         } = (function () {
@@ -117,7 +117,7 @@ function b(e) {
             queryResults: O
         } = (0, o.Z)({
             visible: !0,
-            autocompleterResultTypes: C,
+            autocompleterResultTypes: E,
             autocompleterBeforeCreateSearchContext: _
         }),
         R = (function (e) {
@@ -238,7 +238,7 @@ function b(e) {
                                     channel: s,
                                     category: r,
                                     focused: P === t,
-                                    onMouseEnter: () => E.current && D(t),
+                                    onMouseEnter: () => C.current && D(t),
                                     onClick: () => {
                                         a(s.id), n();
                                     },
@@ -254,8 +254,8 @@ function b(e) {
                                 s.id
                             );
                         },
-                        renderListHeader: I,
-                        renderFooter: f,
+                        renderListHeader: f,
+                        renderFooter: I,
                         sectionHeight: 0,
                         rowHeight: 34,
                         className: S.voiceChannelList,

@@ -30,8 +30,8 @@ var r = n(200651),
     E = n(709054),
     v = n(273031),
     I = n(859235),
-    b = n(388032),
-    T = n(26577);
+    T = n(388032),
+    b = n(26577);
 let S = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'video/quicktime', 'video/mp4'];
 function y(e) {
     let { alt: t, spoiler: n, renderContent: a, size: s } = e,
@@ -49,25 +49,25 @@ function y(e) {
                     : void 0,
             type: p.Z.Types.ATTACHMENT,
             onReveal: () => l(!0),
-            className: T.spoilerContainer,
+            className: b.spoilerContainer,
             children: (e) =>
                 (0, r.jsxs)('div', {
-                    className: T.spoilerWrapper,
+                    className: b.spoilerWrapper,
                     children: [
                         a(e),
                         (0, r.jsxs)('div', {
-                            className: T.tags,
+                            className: b.tags,
                             children: [
                                 null != t && '' !== t
                                     ? (0, r.jsx)('span', {
-                                          className: T.altTag,
-                                          children: b.intl.string(b.t.QEW819)
+                                          className: b.altTag,
+                                          children: T.intl.string(T.t.QEW819)
                                       })
                                     : null,
                                 o && n
                                     ? (0, r.jsx)('span', {
-                                          className: T.altTag,
-                                          children: b.intl.string(b.t['F+x38P'])
+                                          className: b.altTag,
+                                          children: T.intl.string(T.t['F+x38P'])
                                       })
                                     : null
                             ]
@@ -116,9 +116,9 @@ function A(e) {
                     ? (0, r.jsx)(r.Fragment, {})
                     : (0, r.jsx)('img', {
                           src: c,
-                          className: s()(T.media, {
-                              [T.spoiler]: e,
-                              [T.imageSmall]: p
+                          className: s()(b.media, {
+                              [b.spoiler]: e,
+                              [b.imageSmall]: p
                           }),
                           'aria-hidden': !0,
                           alt: null != n ? n : '',
@@ -131,20 +131,20 @@ function A(e) {
             if (null != c)
                 (0, l.openModal)((e) =>
                     (0, r.jsx)(l.ModalRoot, {
-                        className: T.__invalid_modal,
+                        className: b.__invalid_modal,
                         ...e,
                         size: l.ModalSize.DYNAMIC,
-                        'aria-label': b.intl.string(b.t.X4IxWF),
+                        'aria-label': T.intl.string(T.t.X4IxWF),
                         children: h(!1, !0)
                     })
                 );
         }, [c, h]);
     return (0, r.jsx)('div', {
         onMouseEnter: u,
-        className: s()(T.mediaContainer, { [T.imageSmall]: p }),
+        className: s()(b.mediaContainer, { [b.imageSmall]: p }),
         children: (0, r.jsx)(l.Clickable, {
             onClick: m,
-            className: T.clickableMedia,
+            className: b.clickableMedia,
             children: (0, r.jsx)(y, {
                 size: o,
                 alt: n,
@@ -171,7 +171,7 @@ function N(e) {
         }, [t]),
         (0, r.jsx)('div', {
             onMouseEnter: l,
-            className: T.mediaContainer,
+            className: b.mediaContainer,
             children: (0, r.jsx)(y, {
                 size: o,
                 alt: n,
@@ -180,9 +180,9 @@ function N(e) {
                     (0, r.jsx)(h.Z, {
                         ref: f,
                         src: c,
-                        className: s()(T.media, {
-                            [T.spoiler]: e,
-                            [T.sizeClip]: o === I.q.CLIP
+                        className: s()(b.media, {
+                            [b.spoiler]: e,
+                            [b.sizeClip]: o === I.q.CLIP
                         }),
                         onError: u,
                         preload: 'none',
@@ -216,16 +216,16 @@ function C(e) {
             })
           : (0, r.jsx)('div', {
                 onMouseEnter: o,
-                className: s()(T.icon, T.__invalid_imageContainer, {
-                    [T[null !== (t = n.classification) && void 0 !== t ? t : '']]: !0,
-                    [T.imageSmall]: c
+                className: s()(b.icon, b.__invalid_imageContainer, {
+                    [b[null !== (t = n.classification) && void 0 !== t ? t : '']]: !0,
+                    [b.imageSmall]: c
                 }),
                 children: (0, r.jsx)('div', {
-                    className: T.tags,
+                    className: b.tags,
                     children: n.spoiler
                         ? (0, r.jsx)('span', {
-                              className: T.altTag,
-                              children: b.intl.string(b.t['F+x38P'])
+                              className: b.altTag,
+                              children: T.intl.string(T.t['F+x38P'])
                           })
                         : null
                 })
@@ -263,43 +263,43 @@ function R(e) {
             children: [
                 g
                     ? (0, r.jsx)(v.Z, {
-                          className: s()({ [T.action]: N }),
-                          tooltip: A ? b.intl.string(b.t.MYgdY2) : b.intl.string(b.t.cuurzM),
+                          className: s()({ [b.action]: N }),
+                          tooltip: A ? T.intl.string(T.t.MYgdY2) : T.intl.string(T.t.cuurzM),
                           onClick: () => u.Z.update(t, a.id, n, { spoiler: !a.spoiler }),
                           children: a.spoiler
                               ? (0, r.jsx)(l.EyeSlashIcon, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: s()({ [T.actionBarIcon]: N })
+                                    className: s()({ [b.actionBarIcon]: N })
                                 })
                               : (0, r.jsx)(l.EyeIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: s()({ [T.actionBarIcon]: N })
+                                    className: s()({ [b.actionBarIcon]: N })
                                 })
                       })
                     : null,
                 g && !A
                     ? (0, r.jsx)(v.Z, {
-                          className: s()({ [T.action]: N }),
-                          tooltip: b.intl.string(b.t.Y8ujqq),
+                          className: s()({ [b.action]: N }),
+                          tooltip: T.intl.string(T.t.Y8ujqq),
                           onClick: O,
                           children: (0, r.jsx)(l.PencilIcon, {
                               size: 'xs',
                               color: 'currentColor',
-                              className: s()({ [T.actionBarIcon]: N })
+                              className: s()({ [b.actionBarIcon]: N })
                           })
                       })
                     : null,
                 (0, r.jsx)(v.Z, {
-                    className: s()({ [T.action]: N }),
-                    tooltip: A ? b.intl.string(b.t.MskAXV) : b.intl.string(b.t.vN7REx),
+                    className: s()({ [b.action]: N }),
+                    tooltip: A ? T.intl.string(T.t.MskAXV) : T.intl.string(T.t.vN7REx),
                     onClick: () => u.Z.remove(t, a.id, n),
                     dangerous: !0,
                     children: (0, r.jsx)(l.TrashIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: s()({ [T.actionBarIcon]: N })
+                        className: s()({ [b.actionBarIcon]: N })
                     })
                 })
             ]
@@ -310,7 +310,7 @@ function R(e) {
         handleEditModal: O,
         keyboardModeEnabled: d,
         size: h,
-        className: s()({ [T.attachmentItemSmall]: N }),
+        className: s()({ [b.attachmentItemSmall]: N }),
         children: [
             (0, r.jsx)(C, {
                 upload: a,
@@ -319,9 +319,9 @@ function R(e) {
             !S &&
                 !A &&
                 (0, r.jsx)('div', {
-                    className: T.filenameContainer,
+                    className: b.filenameContainer,
                     children: (0, r.jsx)(l.Text, {
-                        className: T.filename,
+                        className: b.filename,
                         variant: 'text-sm/normal',
                         children: null != p ? p : a.filename
                     })
@@ -330,7 +330,7 @@ function R(e) {
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(f.Z, {
-                            className: T.clipsFooter,
+                            className: b.clipsFooter,
                             createdAt: E.default.extractTimestamp(y.id),
                             participantIds: y.users,
                             applicationId: y.applicationId,
@@ -339,8 +339,8 @@ function R(e) {
                         }),
                         (0, r.jsx)(l.TextBadge, {
                             color: _.Z.BG_BRAND,
-                            className: T.clipsBadge,
-                            text: b.intl.string(b.t.oA4afH)
+                            className: b.clipsBadge,
+                            text: T.intl.string(T.t.oA4afH)
                         })
                     ]
                 })

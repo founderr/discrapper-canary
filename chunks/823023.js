@@ -61,7 +61,7 @@ function p(e) {
             clearTimeout(e);
         };
     }, [g]);
-    let b = (0, s.useTransition)(m && E, f);
+    let T = (0, s.useTransition)(m && E, f);
     return (0, r.jsxs)('div', {
         className: u.loadingOverlay,
         style: { aspectRatio: n },
@@ -73,7 +73,7 @@ function p(e) {
                     placeholderImg: I,
                     placeholderStyle: p
                 }),
-            b(
+            T(
                 (e, t) =>
                     t &&
                     (0, r.jsx)(a.animated.div, {

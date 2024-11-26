@@ -43,16 +43,16 @@ let f = 1500,
     g = () => Promise.resolve({ sessionId: void 0 }),
     E = (e) => {
         var t;
-        let { dispatcher: n, actionHandler: s, getFingerprint: c, getSessionId: E = g, TRACKING_URL: v, drainTimeoutOverride: I, waitFor: b } = e;
+        let { dispatcher: n, actionHandler: s, getFingerprint: c, getSessionId: E = g, TRACKING_URL: v, drainTimeoutOverride: I, waitFor: T } = e;
         f = null != I ? I : 1500;
-        function T() {
+        function b() {
             return 0 !== m.length && (null != i ? null != r : null != c());
         }
         function S() {
-            null == a && T() && (a = _(y, { timeout: f }));
+            null == a && b() && (a = _(y, { timeout: f }));
         }
         function y() {
-            if (((a = null), !T())) return;
+            if (((a = null), !b())) return;
             let e = m.slice();
             (m = []),
                 A(e).then(
@@ -126,7 +126,7 @@ let f = 1500,
             });
         class N extends (t = l.ZP.Store) {
             initialize() {
-                null != b && this.waitFor(...b);
+                null != T && this.waitFor(...T);
             }
             constructor(...e) {
                 super(...e), d(this, 'submitEventsImmediately', A);

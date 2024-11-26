@@ -19,11 +19,11 @@ var i = n(481060),
     p = n(388032);
 function h(e) {
     let { openWarningPopout: t, type: n, content: h, stickers: m, uploads: g, channel: E, restrictMentions: v = !0, respectCooldown: I = !0 } = e,
-        b = f.ZP.canUseIncreasedMessageLength(u.default.getCurrentUser());
+        T = f.ZP.canUseIncreasedMessageLength(u.default.getCurrentUser());
     return new Promise((e) =>
         (function (e) {
             var t, n, u;
-            let { openWarningPopout: f, type: h, content: m, stickers: g, uploads: E, channel: v, restrictMentions: I, respectCooldown: b, userCanUsePremiumMessageLength: T, resolve: S } = e;
+            let { openWarningPopout: f, type: h, content: m, stickers: g, uploads: E, channel: v, restrictMentions: I, respectCooldown: T, userCanUsePremiumMessageLength: b, resolve: S } = e;
             if (0 === m.length && !(null === (t = h.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == g || 0 === g.length) && (null == E || 0 === E.length)) {
                 S({
                     valid: !1,
@@ -31,9 +31,9 @@ function h(e) {
                 });
                 return;
             }
-            let y = T ? _.en1 : _.J6R;
+            let y = b ? _.en1 : _.J6R;
             if (m.length > y) {
-                if (T || null == v) {
+                if (b || null == v) {
                     (n = m.length),
                         (u = y),
                         (0, i.openModal)((e) =>
@@ -64,7 +64,7 @@ function h(e) {
                 return;
             }
             if (null != v) {
-                if (null != v.getGuildId() && b && l.Z.getSlowmodeCooldownGuess(v.id) > 0) {
+                if (null != v.getGuildId() && T && l.Z.getSlowmodeCooldownGuess(v.id) > 0) {
                     S({
                         valid: !1,
                         failureReason: _.zYc.SLOWMODE_COOLDOWN
@@ -118,7 +118,7 @@ function h(e) {
             channel: E,
             restrictMentions: v,
             respectCooldown: I,
-            userCanUsePremiumMessageLength: b,
+            userCanUsePremiumMessageLength: T,
             resolve: e
         })
     );

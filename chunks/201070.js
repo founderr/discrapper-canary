@@ -3,7 +3,7 @@ n.d(t, {
         return w;
     },
     M3: function () {
-        return M;
+        return P;
     }
 }),
     n(47120),
@@ -26,8 +26,8 @@ var r,
     E = n(733026),
     v = n(588215),
     I = n(496135),
-    b = n(893966);
-let T = new d.Yd('MemberSafetySearchManager');
+    T = n(893966);
+let b = new d.Yd('MemberSafetySearchManager');
 function S(e) {
     return 'guild_'.concat(e);
 }
@@ -93,8 +93,8 @@ function L(e, t) {
 ((s = i || (i = {}))[(s.FIRST_PAGE_CHUNK = 0)] = 'FIRST_PAGE_CHUNK'), (s[(s.CURRENT_SEARCH_CHUNK = 1)] = 'CURRENT_SEARCH_CHUNK'), (s[(s.NEXT_SEARCH_CHUNK = 2)] = 'NEXT_SEARCH_CHUNK'), (s[(s.PREVIOUS_SEARCH_CHUNK = 3)] = 'PREVIOUS_SEARCH_CHUNK');
 async function x(e) {
     var t, n, r, i, a;
-    let s = b.Z.getSearchStateByGuildId(e),
-        o = b.Z.getPaginationStateByGuildId(e),
+    let s = T.Z.getSearchStateByGuildId(e),
+        o = T.Z.getPaginationStateByGuildId(e),
         c = S(e),
         d = R(c),
         [f, _] = (function (e, t, n) {
@@ -119,7 +119,7 @@ async function x(e) {
                         { previousPagination: s } = R(S(e)),
                         o = t.currentPage,
                         l = null !== (n = null == s ? void 0 : s.currentPage) && void 0 !== n ? n : 0,
-                        u = b.Z.getElasticSearchPaginationByGuildId(e);
+                        u = T.Z.getElasticSearchPaginationByGuildId(e);
                     switch (!0) {
                         case null == u:
                         case r === a && 0 === r:
@@ -135,7 +135,7 @@ async function x(e) {
                             return 1;
                     }
                 })(e, n),
-                c = b.Z.getElasticSearchPaginationByGuildId(e),
+                c = T.Z.getElasticSearchPaginationByGuildId(e),
                 d = (0, g.t3)(n);
             switch (u) {
                 case 0:
@@ -247,7 +247,7 @@ async function x(e) {
     })(c, p, f, o, y);
     try {
         if (
-            (T.info('Making member search request', {
+            (b.info('Making member search request', {
                 query: A.query,
                 guildId: e
             }),
@@ -275,13 +275,13 @@ function w(e) {
         return (null === (n = t[S(e)]) || void 0 === n ? void 0 : n.requestState) === 2;
     });
 }
-function M(e) {
+function P(e) {
     return A((t) => {
         var n;
         return (null === (n = t[S(e)]) || void 0 === n ? void 0 : n.requestState) === 4;
     });
 }
-class P extends p.Z {
+class M extends p.Z {
     handleInitialize(e) {
         let { guildId: t } = e;
         return D(t), x(t);
@@ -338,4 +338,4 @@ class P extends p.Z {
                 : (t[n] = r);
     }
 }
-t.ZP = new P();
+t.ZP = new M();

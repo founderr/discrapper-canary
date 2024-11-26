@@ -9,7 +9,7 @@ n.d(t, {
         return m;
     },
     Qm: function () {
-        return T;
+        return b;
     },
     VB: function () {
         return g;
@@ -18,7 +18,7 @@ n.d(t, {
         return p;
     },
     YZ: function () {
-        return b;
+        return T;
     },
     wi: function () {
         return v;
@@ -140,7 +140,7 @@ function v(e) {
         [E, v] = r.useState(null),
         I = r.useRef(!1);
     I.current = g;
-    let b = r.useMemo(() => {
+    let T = r.useMemo(() => {
         var e;
         return y(null !== (e = s.placeholderCount) && void 0 !== e ? e : 0, n.commandTypes[0]);
     }, [n.commandTypes, s.placeholderCount]);
@@ -152,7 +152,7 @@ function v(e) {
             commandsByActiveSection: m,
             filteredSectionId: E,
             hasMoreAfter: !1,
-            placeholders: g ? b : [],
+            placeholders: g ? T : [],
             sectionDescriptors: p,
             filterSection: (e) => {
                 v(e);
@@ -169,7 +169,7 @@ function v(e) {
                 e.commandsByActiveSection = [
                     {
                         section: t.section,
-                        data: [...t.data, ...b]
+                        data: [...t.data, ...T]
                     },
                     ...m.slice(1)
                 ];
@@ -179,14 +179,14 @@ function v(e) {
                     (e.commandsByActiveSection = [
                         {
                             section: t,
-                            data: b
+                            data: T
                         }
                     ]);
             }
-            e.commands = [...h, ...b];
+            e.commands = [...h, ...T];
         }
         return e;
-    }, [h, p, E, m, g, b]);
+    }, [h, p, E, m, g, T]);
 }
 function I(e, t, n) {
     var r;
@@ -197,7 +197,7 @@ function I(e, t, n) {
         sections: s && 0 === i.length ? [o.Tm[f.bi.BUILT_IN]] : i
     };
 }
-function b(e, t) {
+function T(e, t) {
     let n = (0, l.PL)(!0, !0),
         i = (0, l.em)(e, !0, !0);
     return r.useMemo(() => {
@@ -218,7 +218,7 @@ function b(e, t) {
         };
     }, [i.result, n.result, t]);
 }
-function T(e, t, n) {
+function b(e, t, n) {
     let i = (0, l.PL)(!0, !0),
         a = (0, l.em)(e, !0, !0);
     return r.useMemo(() => {

@@ -21,8 +21,8 @@ var r = n(200651),
     E = n(135431),
     v = n(621853),
     I = n(429974),
-    b = n(475413),
-    T = n(981631),
+    T = n(475413),
+    b = n(981631),
     S = n(388032);
 function y(e) {
     let { user: t, closePopout: n, ...y } = e,
@@ -43,7 +43,7 @@ function y(e) {
                     let e = p.Z.getCurrentlySelectedChannelId(),
                         t = _.Z.getChannel(e),
                         r = null != f.ZP.getSidebarState(e) || (null == t ? void 0 : t.isGuildVocal()) ? d.I.SIDEBAR : d.I.NORMAL;
-                    l.__(u._b.TEXT, r, { applicationId: A.id }), (0, s.closeModal)((0, I.z)(O, C)), null == n || n(), h.default.track(T.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: A.id });
+                    l.__(u._b.TEXT, r, { applicationId: A.id }), (0, s.closeModal)((0, I.z)(O, C)), null == n || n(), h.default.track(b.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: A.id });
                 } else
                     (0, E.LO)({
                         applicationId: A.id,
@@ -55,7 +55,7 @@ function y(e) {
     if (null == A || !(0, E.Eb)(A)) return null;
     let { customInstallUrl: x } = A,
         w = null == x || g.Z.isDiscordUrl(x) ? s.PlusSmallIcon : s.LinkExternalSmallIcon,
-        M = R ? void 0 : w;
+        P = R ? void 0 : w;
     return m.wS
         ? (0, r.jsx)(s.Popout, {
               renderPopout: (e) => {
@@ -76,10 +76,10 @@ function y(e) {
               },
               children: (e) => {
                   let { onClick: t, ...n } = e;
-                  return (0, r.jsx)(b.tG, {
+                  return (0, r.jsx)(T.tG, {
                       action: 'PRESS_ADD_APP',
                       text: L,
-                      icon: M,
+                      icon: P,
                       onContextMenu: t,
                       onClick: D,
                       ...n,
@@ -87,10 +87,10 @@ function y(e) {
                   });
               }
           })
-        : (0, r.jsx)(b.tG, {
+        : (0, r.jsx)(T.tG, {
               action: 'PRESS_ADD_APP',
               text: L,
-              icon: M,
+              icon: P,
               onClick: D,
               ...y
           });

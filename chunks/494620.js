@@ -13,11 +13,11 @@ n(192379);
 var a = n(120356),
     l = n.n(a),
     s = n(481060),
-    c = n(312403);
+    u = n(312403);
 ((r = i || (i = {})).INFO = 'info'), (r.WARNING = 'warning');
-let u = {
-        info: c.info,
-        warning: c.warning
+let c = {
+        info: u.info,
+        warning: u.warning
     },
     d = {
         info: s.CircleInformationIcon,
@@ -27,14 +27,14 @@ function f(e) {
     let { children: t, className: n, look: r = 'info' } = e,
         i = d[r];
     return (0, o.jsxs)('div', {
-        className: l()(c.root, n, u[r]),
+        className: l()(u.root, n, c[r]),
         children: [
             (0, o.jsx)(i, {
-                className: c.icon,
+                className: u.icon,
                 color: 'currentColor'
             }),
             (0, o.jsx)(s.Text, {
-                className: c.text,
+                className: u.text,
                 variant: 'text-sm/medium',
                 color: 'text-normal',
                 children: t

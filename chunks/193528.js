@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(388032),
     x = n(602750);
 function S(e) {
-    let { onChange: t, onClose: n, color: r, suggestedColors: S, disabled: T, label: C, colorPickerMiddle: _, colorPickerFooter: E, showEyeDropper: f } = e,
-        I = s.useRef(null),
+    let { onChange: t, onClose: n, color: r, suggestedColors: S, disabled: T, label: E, colorPickerMiddle: _, colorPickerFooter: C, showEyeDropper: I } = e,
+        f = s.useRef(null),
         N = (0, d.useToken)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
         A = c.Z.colors.BACKGROUND_ACCENT.css,
         b = (0, h.DP)(r),
@@ -28,12 +28,12 @@ function S(e) {
         j = v === N ? A : v,
         O = (0, m.Lq)(b ? g.Ilk.WHITE_500 : g.Ilk.PRIMARY_530),
         R = (0, u.Z)(_),
-        P = (0, u.Z)(E),
+        P = (0, u.Z)(C),
         [D, y] = s.useState((0, a.Z)());
     return (
         s.useEffect(() => {
-            (R !== _ || P !== E) && y((0, a.Z)());
-        }, [E, _, P, R]),
+            (R !== _ || P !== C) && y((0, a.Z)());
+        }, [C, _, P, R]),
         (0, i.jsx)(d.Popout, {
             positionKey: D,
             renderPopout: (e) =>
@@ -43,14 +43,14 @@ function S(e) {
                     onChange: t,
                     suggestedColors: S,
                     middle: _,
-                    footer: E,
-                    showEyeDropper: f
+                    footer: C,
+                    showEyeDropper: I
                 }),
             onRequestClose: n,
             children: (e) => {
                 let { onClick: t, ...n } = e;
                 return (0, i.jsxs)('div', {
-                    ref: I,
+                    ref: f,
                     className: l()(x.colorSwatch, { [x.disabled]: T }),
                     children: [
                         (0, i.jsx)(d.Clickable, {
@@ -63,7 +63,7 @@ function S(e) {
                             },
                             className: x.swatch,
                             'aria-label': p.intl.string(p.t.Qp04hI),
-                            focusProps: { ringTarget: I },
+                            focusProps: { ringTarget: f },
                             children: (0, i.jsx)(d.PencilIcon, {
                                 size: 'custom',
                                 className: x.editPencilIcon,
@@ -72,7 +72,7 @@ function S(e) {
                                 color: O
                             })
                         }),
-                        C
+                        E
                     ]
                 });
             }

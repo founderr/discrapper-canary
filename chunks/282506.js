@@ -49,7 +49,7 @@ function v() {
                   r.Z.wait(() => l.bA(n.id, E.NYg.VIDEO, { channel: n })), null === (t = p.Z.getRTCConnection()) || void 0 === t || t.setPipOpen(!0), (i = e);
               })(e));
 }
-class S extends a.Z {
+class N extends a.Z {
     _initialize() {
         g.Z.addChangeListener(v), f.Z.addChangeListener(v), p.Z.addChangeListener(v), _.Z.addChangeListener(v), u.Z.addChangeListener(v), c.Z.addChangeListener(v), o.Z.addChangeListener(v), h.Z.addChangeListener(v), s.ZP.addChangeListener(v);
     }
@@ -57,4 +57,4 @@ class S extends a.Z {
         g.Z.removeChangeListener(v), f.Z.removeChangeListener(v), p.Z.removeChangeListener(v), _.Z.removeChangeListener(v), u.Z.removeChangeListener(v), c.Z.removeChangeListener(v), o.Z.removeChangeListener(v), h.Z.removeChangeListener(v), s.ZP.removeChangeListener(v);
     }
 }
-t.Z = new S();
+t.Z = new N();

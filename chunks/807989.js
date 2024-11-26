@@ -36,8 +36,8 @@ let h = (e) => {
 function m(e) {
     var t;
     let n,
-        { application: a, scopes: m, redirectUri: E, approximateGuildCount: v, isEmbeddedFlow: I, disclosures: b } = e,
-        T = new Date(u.default.extractTimestamp(a.id)),
+        { application: a, scopes: m, redirectUri: E, approximateGuildCount: v, isEmbeddedFlow: I, disclosures: T } = e,
+        b = new Date(u.default.extractTimestamp(a.id)),
         S = (0, d.W3)(m),
         y = (0, l.yE)(null !== (t = a.flags) && void 0 !== t ? t : 0, f.udG.EMBEDDED);
     if (null != E && !y && !I)
@@ -62,7 +62,7 @@ function m(e) {
             }),
             (0, r.jsx)(g, {
                 icon: s.ClockIcon,
-                text: _.intl.formatToPlainString(_.t['+1bjc3'], { date: T })
+                text: _.intl.formatToPlainString(_.t['+1bjc3'], { date: b })
             }),
             m.includes(i.x.BOT) && null != v
                 ? (0, r.jsx)(g, {
@@ -74,8 +74,8 @@ function m(e) {
                 icon: s.ShieldIcon,
                 text: S
             }),
-            null != b
-                ? b.map((e) => {
+            null != T
+                ? T.map((e) => {
                       let t = (0, o.PM)(e),
                           n = h(e);
                       return null != n && null != t

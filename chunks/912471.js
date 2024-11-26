@@ -1,6 +1,6 @@
 n.d(t, {
     D: function () {
-        return A;
+        return x;
     }
 }),
     n(411104);
@@ -74,10 +74,10 @@ async function v() {
     }
     c.default.track(p.rMx.CLIENT_HEARTBEAT, r), i.K.set(g, Date.now().toString()), (0, l.Z)();
 }
-let S = null,
-    N = !0;
+let N = null,
+    S = !0;
 function T() {
-    if (N || (null != S && S !== p.hes.DISCONNECTED && S !== p.hes.RTC_DISCONNECTED))
+    if (S || (null != N && N !== p.hes.DISCONNECTED && N !== p.hes.RTC_DISCONNECTED))
         try {
             I();
         } catch (e) {
@@ -88,21 +88,21 @@ function T() {
             if (!!E) (E = !1), h.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, m.fr)(!1), C(), (0, l.Z)();
         })();
 }
-function A() {
-    h.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), o.Z.addChangeListener(x), r.Z.subscribe('WINDOW_FOCUS', Z), r.Z.subscribe('APP_STATE_UPDATE', L), r.Z.subscribe('LOGIN_SUCCESS', b), T();
+function x() {
+    h.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), o.Z.addChangeListener(A), r.Z.subscribe('WINDOW_FOCUS', Z), r.Z.subscribe('APP_STATE_UPDATE', L), r.Z.subscribe('LOGIN_SUCCESS', b), T();
 }
 function b() {
     v();
 }
-function x() {
+function A() {
     let e = o.Z.getState();
-    S !== e && ((S = e), T());
+    N !== e && ((N = e), T());
 }
 function Z(e) {
     let { focused: t } = e;
-    (N = t), T();
+    (S = t), T();
 }
 function L(e) {
     let { state: t } = e;
-    (N = t === p.$7l.ACTIVE), T();
+    (S = t === p.$7l.ACTIVE), T();
 }

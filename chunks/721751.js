@@ -9,19 +9,19 @@ var r = n(200651),
     u = n(481060),
     d = n(980591),
     h = n(605782),
-    p = n(133853),
-    g = n(568154),
+    g = n(133853),
+    p = n(568154),
     m = n(353926),
     f = n(703656),
-    x = n(981631),
-    _ = n(687000);
+    _ = n(981631),
+    x = n(687000);
 let E = n(575703),
-    v = n(2984),
-    I = [x.Z5c.LOGIN, x.Z5c.LOGIN_HANDOFF, x.Z5c.REGISTER, x.Z5c.INVITE(''), x.Z5c.GIFT_CODE(''), x.Z5c.GUILD_TEMPLATE_LOGIN(''), x.Z5c.GUILD_TEMPLATE(''), x.Z5c.DISABLE_EMAIL_NOTIFICATIONS, x.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, x.Z5c.BILLING_PREMIUM_SUBSCRIBE, x.Z5c.BILLING_PAYMENT_SOURCES_CREATE, x.Z5c.BILLING_PAYMENTS, x.Z5c.BILLING_PREMIUM_SWITCH_PLAN, x.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, x.Z5c.VERIFY, x.Z5c.VERIFY_HUB_EMAIL, x.Z5c.REJECT_IP, x.Z5c.REJECT_MFA, x.Z5c.AUTHORIZE_IP, x.Z5c.AUTHORIZE_PAYMENT, x.Z5c.RESET, x.Z5c.HANDOFF, x.Z5c.REPORT, x.Z5c.REPORT_SECOND_LOOK, x.Z5c.ACCOUNT_REVERT('')];
-function b(e) {
-    return I.some((t) => e.startsWith(t));
+    I = n(2984),
+    v = [_.Z5c.LOGIN, _.Z5c.LOGIN_HANDOFF, _.Z5c.REGISTER, _.Z5c.INVITE(''), _.Z5c.GIFT_CODE(''), _.Z5c.GUILD_TEMPLATE_LOGIN(''), _.Z5c.GUILD_TEMPLATE(''), _.Z5c.DISABLE_EMAIL_NOTIFICATIONS, _.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, _.Z5c.BILLING_PREMIUM_SUBSCRIBE, _.Z5c.BILLING_PAYMENT_SOURCES_CREATE, _.Z5c.BILLING_PAYMENTS, _.Z5c.BILLING_PREMIUM_SWITCH_PLAN, _.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, _.Z5c.VERIFY, _.Z5c.VERIFY_HUB_EMAIL, _.Z5c.REJECT_IP, _.Z5c.REJECT_MFA, _.Z5c.AUTHORIZE_IP, _.Z5c.AUTHORIZE_PAYMENT, _.Z5c.RESET, _.Z5c.HANDOFF, _.Z5c.REPORT, _.Z5c.REPORT_SECOND_LOOK, _.Z5c.ACCOUNT_REVERT('')];
+function N(e) {
+    return v.some((t) => e.startsWith(t));
 }
-let N = (e) => ((i = e), e);
+let b = (e) => ((i = e), e);
 function C(e) {
     let { children: t } = e;
     switch (
@@ -36,13 +36,13 @@ function C(e) {
                 ? i
                 : !n && a
                   ? (!e && t(!0),
-                    N(
+                    b(
                         (function (e) {
                             return 'default';
                         })(l)
                     ))
                   : n
-                    ? N('default')
+                    ? b('default')
                     : 'loading';
         })()
     ) {
@@ -50,13 +50,13 @@ function C(e) {
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)('img', {
-                        className: _.artwork,
+                        className: x.artwork,
                         src: E,
                         alt: ''
                     }),
                     (0, r.jsx)('img', {
-                        className: _.logoWithText,
-                        src: v,
+                        className: x.logoWithText,
+                        src: I,
                         alt: ''
                     }),
                     t
@@ -75,14 +75,14 @@ class S extends s.Component {
         window.removeEventListener('resize', this.handleResize);
     }
     mobileTransitionTo(e, t) {
-        if (b(e)) (0, f.uL)(e, t);
+        if (N(e)) (0, f.uL)(e, t);
         else {
             let n = null != t && null != t.search ? t.search : null;
             window.location = null == n ? e : ''.concat(e, '?').concat(n);
         }
     }
     mobileReplaceWith(e) {
-        b(e) ? (0, f.dL)(e) : (window.location = e);
+        N(e) ? (0, f.dL)(e) : (window.location = e);
     }
     renderDefault() {
         let { splash: e } = this.props,
@@ -96,18 +96,18 @@ class S extends s.Component {
                 )
             });
         return (0, r.jsx)('div', {
-            className: _.characterBackground,
+            className: x.characterBackground,
             children: (0, r.jsx)(u.HeadingLevel, {
                 forceLevel: 1,
                 children:
                     null != e
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(p.Z, {
+                                  (0, r.jsx)(g.Z, {
                                       show: !0,
-                                      className: a()(_.logo)
+                                      className: a()(x.logo)
                                   }),
-                                  (0, r.jsx)(g.h, {
+                                  (0, r.jsx)(p.h, {
                                       splash: e,
                                       children: t
                                   })

@@ -32,7 +32,7 @@ var r,
     E = n(607070),
     v = n(314910),
     I = n(676937);
-function b(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -46,7 +46,7 @@ function b(e, t, n) {
     );
 }
 ((a = r || (r = {})).PRIMARY = 'primary'), (a.NESTED = 'nested'), (a.BLACK = 'black'), (a.GREY = 'grey'), (a.BRAND = 'brand'), (a.GREEN = 'green'), (a.YELLOW = 'yellow'), (a.RED = 'red'), (a.PREMIUM = 'premium');
-let T = Object.freeze({}),
+let b = Object.freeze({}),
     S = Object.freeze({
         top: I.tooltipTop,
         bottom: I.tooltipBottom,
@@ -169,7 +169,7 @@ class D extends (i = o.Component) {
     render() {
         let e;
         let { children: t, text: n, 'aria-label': r } = this.props;
-        if (null == n) return t(T);
+        if (null == n) return t(b);
         'string' == typeof r ? (e = r) : 'string' == typeof n && !1 !== r && (e = n);
         let i = {
             onClick: this.handleClick,
@@ -238,33 +238,33 @@ class D extends (i = o.Component) {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'showTimeout', new p.V7()),
-            b(this, 'domElementRef', o.createRef()),
-            b(this, 'hasDomElement', !1),
-            b(this, 'state', { shouldShowTooltip: !1 }),
-            b(this, 'handleMouseEnter', () => {
+            T(this, 'showTimeout', new p.V7()),
+            T(this, 'domElementRef', o.createRef()),
+            T(this, 'hasDomElement', !1),
+            T(this, 'state', { shouldShowTooltip: !1 }),
+            T(this, 'handleMouseEnter', () => {
                 !((f.tq || f.Em) && !0 === this.props.clickableOnMobile) && this.show();
             }),
-            b(this, 'handleMouseLeave', () => {
+            T(this, 'handleMouseLeave', () => {
                 !((f.tq || f.Em) && !0 === this.props.clickableOnMobile) && this.hide();
             }),
-            b(this, 'handleFocus', () => {
+            T(this, 'handleFocus', () => {
                 E.Z.keyboardModeEnabled && this.show();
             }),
-            b(this, 'handleBlur', () => {
+            T(this, 'handleBlur', () => {
                 this.hide();
             }),
-            b(this, 'handleClick', () => {
+            T(this, 'handleClick', () => {
                 let e = this.hasDomElement;
                 e && this.props.hideOnClick ? this.hide() : !e && (f.tq || f.Em) && !0 === this.props.clickableOnMobile && this.show();
             }),
-            b(this, 'handleContextMenu', () => {
+            T(this, 'handleContextMenu', () => {
                 this.hide();
             });
     }
 }
-b(D, 'Colors', r),
-    b(D, 'defaultProps', {
+T(D, 'Colors', r),
+    T(D, 'defaultProps', {
         hideOnClick: !0,
         position: 'top',
         color: 'primary',

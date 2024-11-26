@@ -9,13 +9,13 @@ n.d(t, {
         return N;
     },
     bE: function () {
-        return T;
+        return b;
     },
     gq: function () {
         return i;
     },
     nf: function () {
-        return b;
+        return T;
     }
 }),
     n(653041);
@@ -48,7 +48,7 @@ function I(e, t) {
         m[e] = t;
     });
 }
-function b(e, t) {
+function T(e, t) {
     t.forEach((t) =>
         (function (e, t, n) {
             m[e + t] = 3;
@@ -56,7 +56,7 @@ function b(e, t) {
     );
 }
 ((o = i || (i = {}))[(o.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (o[(o.BOT = 1)] = 'BOT'), (o[(o.INTEGRATION = 2)] = 'INTEGRATION'), (o[(o.DISCOVERY = 3)] = 'DISCOVERY'), (o[(o.HUB = 4)] = 'HUB'), (o[(o.INVITE = 5)] = 'INVITE'), (o[(o.VANITY_URL = 6)] = 'VANITY_URL'), (o[(o.MANUAL_MEMBER_VERIFICATION = 7)] = 'MANUAL_MEMBER_VERIFICATION');
-let T = function (e) {
+let b = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     switch (e) {

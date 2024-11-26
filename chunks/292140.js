@@ -23,7 +23,7 @@ function f(e) {
         I = (0, u.Z)(t),
         C = (0, d.Z)(t),
         v = (0, s.Z)(t),
-        S = (0, o.Z)(t);
+        N = (0, o.Z)(t);
     return (
         r.useEffect(() => {
             let e = t.currentActivities
@@ -49,7 +49,7 @@ function f(e) {
                 }),
                 (0, i.jsx)(l.MenuGroup, { children: C }),
                 (0, i.jsx)(l.MenuGroup, { children: v }),
-                S
+                N
             ]
         })
     );

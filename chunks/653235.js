@@ -22,8 +22,8 @@ var r = n(200651),
     E = n(132748),
     v = n(353903),
     I = n(215016),
-    b = n(981631),
-    T = n(388032),
+    T = n(981631),
+    b = n(388032),
     S = n(337602);
 function y(e, t, n) {
     return (
@@ -50,7 +50,7 @@ class N extends i.PureComponent {
         let { name: t, icon: n, type: a } = e;
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)('div', { className: a === b.wI2.FAVORITES ? S.categoryFadeBlurple : S.categoryFade }),
+                (0, r.jsx)('div', { className: a === T.wI2.FAVORITES ? S.categoryFadeBlurple : S.categoryFade }),
                 (0, r.jsxs)('div', {
                     className: S.categoryText,
                     children: [
@@ -90,8 +90,8 @@ class N extends i.PureComponent {
                     var t;
                     let n = l().sample(l().values(e));
                     return {
-                        type: b.wI2.FAVORITES,
-                        name: T.intl.string(T.t.y3LQCA),
+                        type: T.wI2.FAVORITES,
+                        name: b.intl.string(b.t.y3LQCA),
                         icon: f.StarIcon,
                         src: null != n ? n.src : 'https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif',
                         format: null !== (t = null == n ? void 0 : n.format) && void 0 !== t ? t : c.EO.IMAGE

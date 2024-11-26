@@ -24,7 +24,7 @@ n.d(t, {
         return d;
     },
     r4: function () {
-        return T;
+        return b;
     }
 }),
     n(642549),
@@ -119,15 +119,15 @@ function v(e) {
     return null != e && E.test(e);
 }
 let I = new Set(['canary.discord.com', 'ptb.discord.com', 'discord.com', 'canary.discordapp.com', 'ptb.discordapp.com', 'discordapp.com']),
-    b = new Set(['/__development/link', '/__development/link/']);
-function T(e) {
+    T = new Set(['/__development/link', '/__development/link/']);
+function b(e) {
     if (v(e))
         return {
             payload: null,
             url: e
         };
     let t = o.Z.safeParseWithQuery(e);
-    if (null == t || !I.has(t.hostname) || !('s' in t.query) || !b.has(t.pathname)) return null;
+    if (null == t || !I.has(t.hostname) || !('s' in t.query) || !T.has(t.pathname)) return null;
     for (let e in t.query) 's' !== e && delete t.query[e];
     return {
         payload: t.query.s,

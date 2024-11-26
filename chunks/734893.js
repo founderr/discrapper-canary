@@ -51,13 +51,13 @@ n.d(t, {
         return y;
     },
     tB: function () {
-        return T;
+        return b;
     },
     uo: function () {
         return C;
     },
     vD: function () {
-        return b;
+        return T;
     },
     x3: function () {
         return v;
@@ -98,7 +98,7 @@ function I(e) {
         icon: null !== (t = e.icon) && void 0 !== t ? t : null
     };
 }
-function b(e) {
+function T(e) {
     var t, n;
     return {
         channelId: e.channel_id,
@@ -115,7 +115,7 @@ function b(e) {
         icon: null !== (n = e.icon) && void 0 !== n ? n : null
     };
 }
-function T(e) {
+function b(e) {
     if (null == e) return null;
     let { welcome_message: t, new_member_actions: n, resource_channels: r, enabled: i } = e,
         a = {
@@ -126,7 +126,7 @@ function T(e) {
     return {
         welcomeMessage: a,
         newMemberActions: s,
-        resourceChannels: r.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(b),
+        resourceChannels: r.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(T),
         enabled: i
     };
 }

@@ -40,7 +40,7 @@ function u(e) {
                 })
             }),
         [S, T] = s.useState(null),
-        C = s.useCallback(() => {
+        E = s.useCallback(() => {
             if (null == S) return;
             let { scrollHeight: e, clientHeight: t } = S;
             e > t &&
@@ -50,8 +50,8 @@ function u(e) {
                 });
         }, [S]);
     s.useEffect(() => {
-        requestAnimationFrame(C);
-    }, [C, t, n]);
+        requestAnimationFrame(E);
+    }, [E, t, n]);
     let _ = 'auto';
     return (
         null != g && (_ = m ? ''.concat(g.expandedHeight, 'px') : ''.concat(g.truncatedHeight, 'px')),

@@ -77,7 +77,7 @@ let _ = {
                     e.text
                 )
             ),
-            b = l.map((e, t) =>
+            T = l.map((e, t) =>
                 (0, r.jsx)(
                     a.ZP.Role,
                     {
@@ -107,7 +107,7 @@ let _ = {
                         s.length > 0 && o.length > 0 ? (0, r.jsx)(a.ZP.Divider, {}) : null,
                         I,
                         (s.length > 0 && l.length > 0) || (o.length > 0 && l.length > 0) ? (0, r.jsx)(a.ZP.Divider, {}) : null,
-                        b
+                        T
                     ]
                 },
                 'mentions'

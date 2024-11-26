@@ -1,6 +1,6 @@
 n.d(t, {
     Vq: function () {
-        return T;
+        return b;
     },
     Xo: function () {
         return O;
@@ -32,7 +32,7 @@ let I = {
     tension: 1200,
     friction: 70
 };
-function b(e) {
+function T(e) {
     let { size: t, isMobile: n, isTyping: i, ...a } = e,
         s = (0, h.UC)(t),
         o = s.status * (n && !i ? h.EW : 1),
@@ -50,7 +50,7 @@ function b(e) {
         ...a
     });
 }
-function T(e, t, n) {
+function b(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = (0, c.W5)(e.status, t, n, r),
         a = (r ? e.size - (i.width / 2 + e.status / 2) : e.size - i.width) - e.offset;
@@ -61,7 +61,7 @@ function T(e, t, n) {
     };
 }
 function S(e, t, n, i) {
-    let a = T(n, i, t, !1),
+    let a = b(n, i, t, !1),
         s = (0, c.lm)(i, e);
     if (!t) {
         let t = a.height / 2 + n.stroke,
@@ -116,13 +116,13 @@ function y(e) {
     };
 }
 function A(e) {
-    let { children: t, size: n, onClick: i, onMouseDown: a, onKeyDown: o, onContextMenu: u, onMouseEnter: c, onMouseLeave: d, className: f, tabIndex: m, ariaLabel: I, ariaHidden: b, status: T, isMobile: S = !1, isTyping: y = !1, avatarDecoration: A, typingOffset: N, specs: C } = e,
+    let { children: t, size: n, onClick: i, onMouseDown: a, onKeyDown: o, onContextMenu: u, onMouseEnter: c, onMouseLeave: d, className: f, tabIndex: m, ariaLabel: I, ariaHidden: T, status: b, isMobile: S = !1, isTyping: y = !1, avatarDecoration: A, typingOffset: N, specs: C } = e,
         R = {
             width: (0, h.px)(n),
             height: (0, h.px)(n)
         },
         O =
-            null == I || b
+            null == I || T
                 ? void 0
                 : (function (e, t) {
                       let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -132,7 +132,7 @@ function A(e) {
                                 status: (0, p.u5)(t, n)
                             })
                           : e;
-                  })(I, T, S),
+                  })(I, b, S),
         D = C.size * g.hs,
         L = (function (e, t, n, r) {
             if (null == e) return null;
@@ -193,7 +193,7 @@ function A(e) {
                     return _.QS.AVATAR_DECORATION_STATUS_ROUND_120;
             }
             return null;
-        })(T, n, S, y),
+        })(b, n, S, y),
         x =
             null != A &&
             (0, r.jsx)('svg', {
@@ -231,7 +231,7 @@ function A(e) {
               onMouseEnter: null != c ? c : void 0,
               onMouseLeave: null != d ? d : void 0,
               'aria-label': O,
-              'aria-hidden': b,
+              'aria-hidden': T,
               children: [t, x]
           })
         : (0, r.jsxs)('div', {
@@ -242,7 +242,7 @@ function A(e) {
               onMouseLeave: null != d ? d : void 0,
               role: 'img',
               'aria-label': O,
-              'aria-hidden': b,
+              'aria-hidden': T,
               children: [t, x]
           });
 }
@@ -266,7 +266,7 @@ function N(e) {
     );
 }
 function C(e) {
-    let { src: t, status: n, size: i, statusColor: a, isMobile: o = !1, isTyping: l = !1, typingIndicatorRef: f, isSpeaking: g = !1, statusTooltip: E = !1, statusTooltipDelay: I, statusBackdropColor: b, 'aria-hidden': y = !1, 'aria-label': C, imageClassName: R } = e,
+    let { src: t, status: n, size: i, statusColor: a, isMobile: o = !1, isTyping: l = !1, typingIndicatorRef: f, isSpeaking: g = !1, statusTooltip: E = !1, statusTooltipDelay: I, statusBackdropColor: T, 'aria-hidden': y = !1, 'aria-label': C, imageClassName: R } = e,
         O = n !== m.Skl.UNKNOWN ? n : null,
         D = (0, h.UC)(i),
         L = null != O ? Math.ceil((D.status * h.D6 - D.status) / 2) : 0,
@@ -371,7 +371,7 @@ function C(e) {
                         className: R
                     })
                 }),
-                null != O && null != b ? S(b, o, D, O) : null,
+                null != O && null != T ? S(T, o, D, O) : null,
                 null != O
                     ? (0, r.jsx)(d.u, {
                           text: E ? (0, p.u5)(O) : null,
@@ -384,7 +384,7 @@ function C(e) {
                                   children: [
                                       (0, r.jsx)('rect', {
                                           ...e,
-                                          ...T(D, O, o, l),
+                                          ...b(D, O, o, l),
                                           fill: w,
                                           mask: 'url(#'.concat((0, c.rs)(O, o, l), ')'),
                                           className: v.pointerEvents
@@ -406,8 +406,8 @@ function C(e) {
     });
 }
 function R(e) {
-    let { fromIsMobile: t = !0, fromStatus: n, fromColor: a, isMobile: l = !1, isTyping: _ = !1, typingIndicatorRef: m, isSpeaking: g = !1, size: E, src: T, status: C, statusColor: R, statusTooltip: O = !1, statusTooltipDelay: D, statusBackdropColor: L, 'aria-hidden': x = !1, 'aria-label': w, imageClassName: M } = e,
-        P = (0, c.vj)(C, R),
+    let { fromIsMobile: t = !0, fromStatus: n, fromColor: a, isMobile: l = !1, isTyping: _ = !1, typingIndicatorRef: m, isSpeaking: g = !1, size: E, src: b, status: C, statusColor: R, statusTooltip: O = !1, statusTooltipDelay: D, statusBackdropColor: L, 'aria-hidden': x = !1, 'aria-label': w, imageClassName: P } = e,
+        M = (0, c.vj)(C, R),
         k = i.useId(),
         U = i.useId(),
         [B] = i.useState(() => ({
@@ -421,7 +421,7 @@ function R(e) {
         })),
         G = i.useMemo(
             () => ({
-                fill: P,
+                fill: M,
                 ...y({
                     size: E,
                     status: C,
@@ -429,7 +429,7 @@ function R(e) {
                     isTyping: _
                 })
             }),
-            [P, E, C, l, _]
+            [M, E, C, l, _]
         ),
         {
             avatarCutoutX: Z,
@@ -498,9 +498,9 @@ function R(e) {
                     height: K,
                     mask: 'url(#'.concat(k, ')'),
                     children: (0, r.jsx)(N, {
-                        src: T,
+                        src: b,
                         isSpeaking: g,
-                        className: M
+                        className: P
                     })
                 }),
                 null != L && S(L, l, z, C),
@@ -540,7 +540,7 @@ function R(e) {
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)(b, {
+                                (0, r.jsx)(T, {
                                     size: E,
                                     isMobile: l,
                                     isTyping: _,

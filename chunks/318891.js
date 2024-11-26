@@ -4,7 +4,7 @@ n.d(t, {
         return I;
     },
     jy: function () {
-        return b;
+        return T;
     }
 });
 var i = n(570140),
@@ -27,11 +27,11 @@ function I(e) {
     let t = null != e ? e : r;
     null != t && c.Z.isOpen(t) && i.Z.wait(() => a.Cp(t));
 }
-function b(e) {
+function T(e) {
     let t = null != e ? e : r;
     null != t && c.Z.isOpen(t) && i.Z.wait(() => a.$Z(t));
 }
-function T() {
+function b() {
     let e = h.ZP.getConnectedActivityChannelId(),
         t = h.ZP.getSelfEmbeddedActivityForChannel(null != e ? e : v.lds),
         n = l.Z.getChannel(e);
@@ -55,14 +55,14 @@ function S() {
         PopoutWindowStore: o.Z
     })
         ? I()
-        : b();
+        : T();
 }
 class y extends s.Z {
     _initialize() {
-        f.Z.addChangeListener(T), _.Z.addChangeListener(T), d.Z.addChangeListener(T), p.Z.addChangeListener(T), o.Z.addChangeListener(T), h.ZP.addChangeListener(T), u.Z.addChangeListener(S);
+        f.Z.addChangeListener(b), _.Z.addChangeListener(b), d.Z.addChangeListener(b), p.Z.addChangeListener(b), o.Z.addChangeListener(b), h.ZP.addChangeListener(b), u.Z.addChangeListener(S);
     }
     _terminate() {
-        f.Z.removeChangeListener(T), _.Z.removeChangeListener(T), d.Z.removeChangeListener(T), p.Z.removeChangeListener(T), o.Z.removeChangeListener(T), h.ZP.removeChangeListener(T), u.Z.removeChangeListener(S);
+        f.Z.removeChangeListener(b), _.Z.removeChangeListener(b), d.Z.removeChangeListener(b), p.Z.removeChangeListener(b), o.Z.removeChangeListener(b), h.ZP.removeChangeListener(b), u.Z.removeChangeListener(S);
     }
 }
 t.ZP = new y();

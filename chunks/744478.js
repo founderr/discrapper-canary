@@ -1,9 +1,9 @@
 r.d(t, {
     T: function () {
-        return a;
+        return n;
     }
 });
-var n = r(859502);
-function a() {
-    (0, n.a)();
+var a = r(859502);
+function n() {
+    (0, a.a)();
 }

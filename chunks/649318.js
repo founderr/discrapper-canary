@@ -6,7 +6,7 @@ n.d(t, {
         return A;
     },
     Mg: function () {
-        return b;
+        return T;
     },
     Nl: function () {
         return R;
@@ -49,7 +49,7 @@ var r,
 let v = new m.Yd('SDP');
 ((a = r || (r = {})).AUDIO = 'a'), (a.VIDEO = 'v'), ((s = i || (i = {})).SENDRECV = 'sendrecv'), (s.SENDONLY = 'sendonly'), (s.RECVONLY = 'recvonly'), (s.INACTIVE = 'inactive');
 let I = 'UDP/TLS/RTP/SAVPF';
-function b(e) {
+function T(e) {
     switch (e) {
         case 'recvonly':
             return 'sendonly';
@@ -61,7 +61,7 @@ function b(e) {
             return 'inactive';
     }
 }
-function T(e, t, n) {
+function b(e, t, n) {
     let r = ''.concat(e, '-').concat(t),
         i = ''.concat(n).concat(r);
     return [
@@ -268,7 +268,7 @@ function A(e) {
                         codec: 'audio' === p ? i : o,
                         payload: 'audio' === p ? a : l,
                         bitrate: 'audio' === p ? s : u,
-                        ssrcs: T(d, r, 'audio' === p ? 'a' : 'v'),
+                        ssrcs: b(d, r, 'audio' === p ? 'a' : 'v'),
                         extensions: f
                     })
                 );
@@ -282,7 +282,7 @@ function A(e) {
                 })
                 .map((e) => {
                     let [t, n] = e;
-                    return T(n, t, 'a');
+                    return b(n, t, 'a');
                 });
         if (
             (_.push(
@@ -308,7 +308,7 @@ function A(e) {
                 })
                 .map((e) => {
                     let [t, n] = e;
-                    return T(n, t, 'v');
+                    return b(n, t, 'v');
                 });
             _.push(
                 y({
@@ -340,7 +340,7 @@ function N(e) {
         d.forEach((e) => {
             let t,
                 { ssrc: d, cname: h, type: m, direction: g, mid: E } = e;
-            '' !== h ? (t = T(h, d, 'audio' === m ? 'a' : 'v')) : ((t = []), 'sendonly' === g ? (g = 'inactive') : 'sendrecv' === g && (g = 'recvonly'));
+            '' !== h ? (t = b(h, d, 'audio' === m ? 'a' : 'v')) : ((t = []), 'sendonly' === g ? (g = 'inactive') : 'sendrecv' === g && (g = 'recvonly'));
             _.push(
                 y({
                     mid: E,

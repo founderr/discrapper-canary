@@ -19,7 +19,7 @@ var r = n(200651),
 function f(e) {
     let t,
         n,
-        { header: a, children: f, confirmText: _, cancelText: p, className: h, onConfirm: m, onCancel: g, onClose: E, onCloseCallback: v, bodyClassName: I, transitionState: b, loading: T = !1, confirmButtonColor: S = o.zx.Colors.RED, focusCancel: y = !1, impression: A } = e,
+        { header: a, children: f, confirmText: _, cancelText: p, className: h, onConfirm: m, onCancel: g, onClose: E, onCloseCallback: v, bodyClassName: I, transitionState: T, loading: b = !1, confirmButtonColor: S = o.zx.Colors.RED, focusCancel: y = !1, impression: A } = e,
         N = i.useRef(null),
         C = (0, u.Q)('ConfirmModal');
     return (
@@ -38,7 +38,7 @@ function f(e) {
                 color: o.zx.Colors.PRIMARY,
                 className: d.cancelButton,
                 size: o.zx.Sizes.MEDIUM,
-                disabled: T,
+                disabled: b,
                 onClick: () => {
                     null == g || g(), E();
                 },
@@ -51,7 +51,7 @@ function f(e) {
                 type: 'submit',
                 size: o.zx.Sizes.MEDIUM,
                 color: S,
-                submitting: T,
+                submitting: b,
                 onClick: async () => {
                     try {
                         await (null == m ? void 0 : m()), E();
@@ -64,7 +64,7 @@ function f(e) {
             })),
         (0, r.jsxs)(c.Y0, {
             className: h,
-            transitionState: b,
+            transitionState: T,
             impression: A,
             children: [
                 null != a

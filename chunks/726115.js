@@ -9,7 +9,7 @@ n.d(t, {
         return _;
     },
     PM: function () {
-        return T;
+        return b;
     },
     QW: function () {
         return h;
@@ -27,7 +27,7 @@ n.d(t, {
         return m;
     },
     vL: function () {
-        return b;
+        return T;
     },
     vb: function () {
         return f;
@@ -187,7 +187,7 @@ function I() {
         r = t.locale;
     return (null !== (e = n.find((e) => e.code === r)) && void 0 !== e ? e : n[0]).code;
 }
-async function b(e) {
+async function T(e) {
     let { loadId: t, guildId: n, index: r, categoryId: i, analyticsLocation: s, options: l } = e,
         c = {
             ...l,
@@ -202,6 +202,6 @@ async function b(e) {
             location: s
         });
 }
-function T() {
+function b() {
     return (0, r.Z)().replace(/-/g, '');
 }

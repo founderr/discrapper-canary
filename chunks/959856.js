@@ -25,8 +25,8 @@ var r = n(512722),
     E = n(740197),
     v = n(548820),
     I = n(579237),
-    b = n(582168),
-    T = n(825040),
+    T = n(582168),
+    b = n(825040),
     S = n(65154),
     y = n(436620);
 function A(e, t, n) {
@@ -274,8 +274,8 @@ class C extends l.Z {
     releaseNativeDesktopVideoSourcePickerStream() {}
     constructor() {
         super(),
-            A(this, 'Video', T.Z),
-            A(this, 'Camera', b.Z),
+            A(this, 'Video', b.Z),
+            A(this, 'Camera', T.Z),
             A(this, '_audioContext', null),
             A(this, 'outputVolume', S.Qx),
             A(this, 'sourceId', S.w5),

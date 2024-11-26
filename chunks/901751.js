@@ -17,8 +17,8 @@ var r,
     E = n(432945),
     v = n(5881),
     I = n(566078),
-    b = n(46140),
-    T = n(70722);
+    T = n(46140),
+    b = n(70722);
 function S(e, t, n) {
     return (
         t in e
@@ -34,10 +34,10 @@ function S(e, t, n) {
 }
 let y = 1 * p.Z.Millis.MINUTE,
     A = 1 * p.Z.Millis.SECOND,
-    N = (0, v.T)({ location: b.dr.QUESTS_MANAGER }),
+    N = (0, v.T)({ location: T.dr.QUESTS_MANAGER }),
     C = (e) =>
         (0, u.V9)({
-            streamType: T.lo.CALL,
+            streamType: b.lo.CALL,
             channelId: e,
             ownerId: '1'
         });
@@ -63,7 +63,7 @@ function L(e) {
     };
     if (
         !(0, E.S)({
-            location: b.dr.QUESTS_MANAGER,
+            location: T.dr.QUESTS_MANAGER,
             autoTrackExposure: !1
         })
     )

@@ -20,8 +20,8 @@ let _ = 15 * l.Z.Millis.SECOND,
     E = new a.V7(),
     v = [],
     I = {},
-    b = (0, u.tu)('highfive_whistle', 'highfive_whistle', 0.6),
-    T = (0, u.tu)('highfive_clap', 'highfive_clap', 0.6);
+    T = (0, u.tu)('highfive_whistle', 'highfive_whistle', 0.6),
+    b = (0, u.tu)('highfive_clap', 'highfive_clap', 0.6);
 function S(e) {
     let { emoji: t, channelId: n, userId: r } = e,
         s = o.default.getId(),
@@ -40,16 +40,16 @@ function S(e) {
                         })) && void 0 !== r
                         ? r
                         : [];
-                if (null != s && null != o) o.cancel(), T.play(), delete I[s], (0, c.Ym)(s.split(':')[0], t, n, e);
+                if (null != s && null != o) o.cancel(), b.play(), delete I[s], (0, c.Ym)(s.split(':')[0], t, n, e);
                 else {
-                    (0, c._g)(e, t, n), b.play();
+                    (0, c._g)(e, t, n), T.play();
                     let r = new a.sW(p, () => {
                         delete I[t], (0, c.Gd)(t, n);
                     });
                     (I[t] = r), r.delay();
                 }
             })(t.name, r, n);
-        r === s && ((v = [...v, t.name].slice(-1 * m)), i().isEqual(v, h) ? (b.play(), E.stop(), (v = []), (0, c.ME)(!l)) : E.start(_, () => (v = [])));
+        r === s && ((v = [...v, t.name].slice(-1 * m)), i().isEqual(v, h) ? (T.play(), E.stop(), (v = []), (0, c.ME)(!l)) : E.start(_, () => (v = [])));
     }
 }
 function y(e) {

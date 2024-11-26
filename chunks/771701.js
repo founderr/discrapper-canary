@@ -1,5 +1,5 @@
-var n = r(807419),
-    a = r(406705);
+var a = r(807419),
+    n = r(406705);
 e.exports = function (e) {
-    return null != e && a(e.length) && !n(e);
+    return null != e && n(e.length) && !a(e);
 };

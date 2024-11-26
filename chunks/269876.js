@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return I;
     }
 }),
     n(47120);
@@ -20,13 +20,13 @@ var i = n(200651),
     x = n(388032),
     S = n(897237),
     T = n(587987),
-    C = n(652849),
+    E = n(652849),
     _ = n(232186);
-let E = (0, h.hQ)();
-function f() {
+let C = (0, h.hQ)();
+function I() {
     let [e, t] = s.useState(-100),
         [n, r] = s.useState(!1),
-        { threshold: f, autoThreshold: I } = (0, a.cj)([g.Z], () => g.Z.getModeOptions()),
+        { threshold: I, autoThreshold: f } = (0, a.cj)([g.Z], () => g.Z.getModeOptions()),
         {
             inputMode: N,
             automaticVADSupported: A,
@@ -59,12 +59,12 @@ function f() {
     let O = (0, i.jsx)('section', {
         className: l()(S.inputSensitivityToggle, S.manual),
         children: (0, i.jsx)(u.Slider, {
-            initialValue: f + 100,
+            initialValue: I + 100,
             onValueRender: (e) => ''.concat((-((100 - e) * 1)).toFixed(0), 'dB'),
-            onValueChange: (e) => j(-((100 - e) * 1), I),
+            onValueChange: (e) => j(-((100 - e) * 1), f),
             barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
-            'aria-labelledby': E,
+            'aria-labelledby': C,
             children: (0, i.jsxs)('div', {
                 className: l()(S.sliderBar, S.microphone, S.inputSensitivityBar, T.bar),
                 children: [
@@ -78,7 +78,7 @@ function f() {
         })
     });
     return (
-        I &&
+        f &&
             (O = (0, i.jsxs)('section', {
                 className: S.inputSensitivityToggle,
                 children: [
@@ -97,7 +97,7 @@ function f() {
             className: S.sensitivity,
             children: [
                 (0, i.jsx)(u.FormTitle, {
-                    id: E,
+                    id: C,
                     tag: u.FormTitleTags.H5,
                     className: _.marginBottom8,
                     children: x.intl.string(x.t['sqUm+v'])
@@ -108,7 +108,7 @@ function f() {
                             (0, i.jsx)(h.FG, {
                                 children: (e) =>
                                     (0, i.jsxs)('div', {
-                                        className: l()(C.horizontal, _.marginBottom4),
+                                        className: l()(E.horizontal, _.marginBottom4),
                                         children: [
                                             (0, i.jsx)(u.FormTitle, {
                                                 tag: u.FormTitleTags.H3,
@@ -120,8 +120,8 @@ function f() {
                                             }),
                                             (0, i.jsx)(u.Switch, {
                                                 id: e,
-                                                checked: I,
-                                                onChange: (e) => j(f, e)
+                                                checked: f,
+                                                onChange: (e) => j(I, e)
                                             })
                                         ]
                                     })

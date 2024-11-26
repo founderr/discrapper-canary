@@ -19,11 +19,11 @@ var i = n(200651),
     x = n(358085),
     S = n(962100),
     T = n(981631),
-    C = n(388032),
+    E = n(388032),
     _ = n(973936),
-    E = n(232186);
-let f = !x.isPlatformEmbedded,
-    I = (0, g.hQ)();
+    C = n(232186);
+let I = !x.isPlatformEmbedded,
+    f = (0, g.hQ)();
 function N(e) {
     return e >= 1000 ? ((e /= 1000), ''.concat(e.toFixed(2), 's')) : ''.concat(e.toFixed(0), ' ms');
 }
@@ -36,13 +36,13 @@ function A(e) {
             x.isPlatformEmbedded || n !== T.pM4.PUSH_TO_TALK
                 ? (0, i.jsx)(o.FormText, {
                       type: o.FormText.Types.DESCRIPTION,
-                      className: l()(_.pttToolsMessage, E.marginBottom8),
-                      children: C.intl.format(C.t.HVvn5e, { onClick: () => d.Z.setSection(T.oAB.KEYBINDS) })
+                      className: l()(_.pttToolsMessage, C.marginBottom8),
+                      children: E.intl.format(E.t.HVvn5e, { onClick: () => d.Z.setSection(T.oAB.KEYBINDS) })
                   })
                 : (0, i.jsx)(o.FormText, {
                       type: o.FormText.Types.DESCRIPTION,
-                      className: l()(_.pttToolsMessage, _.pttToolsWarning, E.marginBottom8),
-                      children: C.intl.format(C.t.zvMPOT, { onDownloadClick: () => (0, S.y)('Help Text PTT') })
+                      className: l()(_.pttToolsMessage, _.pttToolsWarning, C.marginBottom8),
+                      children: E.intl.format(E.t.zvMPOT, { onDownloadClick: () => (0, S.y)('Help Text PTT') })
                   })),
         (0, i.jsxs)('div', {
             className: _.pttTools,
@@ -52,7 +52,7 @@ function A(e) {
                         (0, i.jsx)(h.Z.Child, {
                             basis: '50%',
                             children: (0, i.jsx)(o.FormItem, {
-                                title: C.intl.string(C.t.YkDjVF),
+                                title: E.intl.string(E.t.YkDjVF),
                                 children: (0, i.jsx)(u.Z, {
                                     defaultValue: s,
                                     onChange: (e) => c.Z.setMode(n, { shortcut: e })
@@ -64,17 +64,17 @@ function A(e) {
                             children: (0, i.jsxs)(o.FormItem, {
                                 children: [
                                     (0, i.jsx)(o.FormTitle, {
-                                        id: I,
+                                        id: f,
                                         tag: o.FormTitleTags.H5,
-                                        className: E.marginBottom8,
-                                        children: C.intl.string(C.t.y0ShVl)
+                                        className: C.marginBottom8,
+                                        children: E.intl.string(E.t.y0ShVl)
                                     }),
                                     (0, i.jsx)(o.Slider, {
                                         initialValue: r,
                                         onValueChange: (e) => c.Z.setMode(n, { delay: e }),
                                         onValueRender: N,
                                         maxValue: T.qhL,
-                                        'aria-labelledby': I
+                                        'aria-labelledby': f
                                     })
                                 ]
                             })
@@ -92,27 +92,27 @@ function b() {
         r = [
             {
                 value: T.pM4.VOICE_ACTIVITY,
-                name: C.intl.string(C.t.cHCEOD)
+                name: E.intl.string(E.t.cHCEOD)
             },
             {
                 value: T.pM4.PUSH_TO_TALK,
-                name: f ? C.intl.string(C.t['1AINrK']) : C.intl.string(C.t.Q8gkVF)
+                name: I ? E.intl.string(E.t['1AINrK']) : E.intl.string(E.t.Q8gkVF)
             }
         ],
         l = s.useCallback(
             (t) => {
                 let { value: s } = t;
                 s === T.pM4.PUSH_TO_TALK &&
-                    f &&
+                    I &&
                     (0, o.openModalLazy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
                         return (t) =>
                             (0, i.jsx)(e, {
-                                title: C.intl.string(C.t.Kdt0GR),
-                                confirmText: C.intl.string(C.t['1WjMbG']),
-                                cancelText: C.intl.string(C.t.BddRzc),
+                                title: E.intl.string(E.t.Kdt0GR),
+                                confirmText: E.intl.string(E.t['1WjMbG']),
+                                cancelText: E.intl.string(E.t.BddRzc),
                                 onConfirm: () => (0, S.y)('PTT Limited Modal'),
-                                body: C.intl.string(C.t.NIozvr),
+                                body: E.intl.string(E.t.NIozvr),
                                 ...t
                             });
                     }),
@@ -123,8 +123,8 @@ function b() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.FormItem, {
-                title: C.intl.string(C.t['pS+K2N']),
-                className: E.marginBottom20,
+                title: E.intl.string(E.t['pS+K2N']),
+                className: C.marginBottom20,
                 children: (0, i.jsx)(o.RadioGroup, {
                     onChange: l,
                     options: r,

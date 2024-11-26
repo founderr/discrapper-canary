@@ -22,8 +22,8 @@ var i = n(442837),
     E = n(530),
     v = n(827313),
     I = n(420654),
-    b = n(116854),
-    T = n(166584),
+    T = n(116854),
+    b = n(166584),
     S = n(915014),
     y = n(228168),
     A = n(981631),
@@ -31,8 +31,8 @@ var i = n(442837),
 function C(e) {
     let { user: t, currentUser: n, displayProfile: C, guild: R, isHovering: O, onOpenProfile: D, channelId: L, onClose: x } = e,
         w = u.ZP.getName(null == R ? void 0 : R.id, L, t),
-        M = (0, i.e7)([o.Z], () => o.Z.getRelationshipType(t.id)),
-        P = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation),
+        P = (0, i.e7)([o.Z], () => o.Z.getRelationshipType(t.id)),
+        M = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation),
         k = t.id === n.id,
         { dimissibleUpsellsEnabled: U } = (0, d.u)({ location: 'UserProfilePopoutBody' }),
         B = (0, c.I5)(n);
@@ -46,7 +46,7 @@ function C(e) {
                 onOpenProfile: D,
                 usernameIcon:
                     t.hasAvatarForGuild(null == R ? void 0 : R.id) &&
-                    (0, r.jsx)(b.Z, {
+                    (0, r.jsx)(T.Z, {
                         user: t,
                         nickname: w
                     }),
@@ -60,7 +60,7 @@ function C(e) {
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(h.Z, { userId: t.id }),
-                        !P &&
+                        !M &&
                             (0, r.jsx)(v.Z, {
                                 userId: t.id,
                                 isHovering: O,
@@ -69,7 +69,7 @@ function C(e) {
                     ]
                 })
             }),
-            M === A.OGo.PENDING_INCOMING &&
+            P === A.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(g.Z.Overlay, {
                     children: (0, r.jsx)(m.Z, {
                         user: t,
@@ -87,7 +87,7 @@ function C(e) {
                 : (0, r.jsx)(I.Z, {
                       user: t,
                       bio: null == C ? void 0 : C.bio,
-                      hidePersonalInformation: P,
+                      hidePersonalInformation: M,
                       onClose: x
                   }),
             U &&
@@ -104,7 +104,7 @@ function C(e) {
                 className: N.activity
             }),
             null != R &&
-                (0, r.jsx)(T.Z, {
+                (0, r.jsx)(b.Z, {
                     user: t,
                     currentUser: n,
                     guild: R

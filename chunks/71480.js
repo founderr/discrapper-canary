@@ -19,8 +19,8 @@ e.exports = function (e, t, n) {
         E,
         v,
         I,
-        b,
         T,
+        b,
         S = n && n.that,
         y = !!(n && n.AS_ENTRIES),
         A = !!(n && n.IS_RECORD),
@@ -43,9 +43,9 @@ e.exports = function (e, t, n) {
         }
         m = c(e, g);
     }
-    for (b = A ? e.next : m.next; !(T = i(b, m)).done; ) {
+    for (T = A ? e.next : m.next; !(b = i(T, m)).done; ) {
         try {
-            I = D(T.value);
+            I = D(b.value);
         } catch (e) {
             f(m, 'throw', e);
         }

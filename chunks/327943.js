@@ -52,7 +52,7 @@ function I() {
             coachmarkImpressions: 2
         });
 }
-class b extends (r = i.ZP.PersistedStore) {
+class T extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         null != e && (p = e), this.waitFor(s.default), this.syncWith([s.default], g);
     }
@@ -70,9 +70,9 @@ class b extends (r = i.ZP.PersistedStore) {
         return null == p ? void 0 : null === (e = p.client) || void 0 === e ? void 0 : e.desktop;
     }
 }
-_(b, 'displayName', 'AppIconPersistedStoreState'),
-    _(b, 'persistKey', 'AppIconPersistedStoreState'),
-    (t.Z = new b(a.Z, {
+_(T, 'displayName', 'AppIconPersistedStoreState'),
+    _(T, 'persistKey', 'AppIconPersistedStoreState'),
+    (t.Z = new T(a.Z, {
         APP_ICON_UPDATED: function (e) {
             let { id: t } = e;
             null != t && E(t);

@@ -26,7 +26,7 @@ function u(e) {
                 null === (e = g.current) || void 0 === e || e.scrollRowIntoView(v);
             }
         }, [n, E, v]);
-    let b = i.useCallback((e) => c[e], [c]);
+    let T = i.useCallback((e) => c[e], [c]);
     return (0, r.jsxs)('div', {
         ref: p,
         className: l.__invalid_submenuContainer,
@@ -55,7 +55,7 @@ function u(e) {
                                       className: _,
                                       listPadding: [6, 0, 6, 8],
                                       onScroll: f,
-                                      renderRow: b,
+                                      renderRow: T,
                                       rowCount: c.length,
                                       rowHeight: d
                                   })

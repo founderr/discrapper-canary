@@ -17,8 +17,8 @@ var i,
     E = n(984933),
     v = n(271383),
     I = n(430824),
-    b = n(496675),
-    T = n(306680),
+    T = n(496675),
+    b = n(306680),
     S = n(944486),
     y = n(914010),
     A = n(9156),
@@ -42,8 +42,8 @@ function D(e, t, n) {
 let L = 'seenQSTutorial',
     x = [c.h8.USER, c.h8.GROUP_DM, c.h8.TEXT_CHANNEL, c.h8.GUILD, c.h8.APPLICATION, c.h8.LINK, c.h8.IN_APP_NAVIGATION],
     w = 0,
-    M = !1,
     P = !1,
+    M = !1,
     k = null,
     U = [],
     B = null,
@@ -51,7 +51,7 @@ let L = 'seenQSTutorial',
     Z = [],
     F = [];
 function V() {
-    (P = I.Z.getGuildCount() >= 3 || s().size(m.Z.getMutablePrivateChannels()) >= 20), (Z = []);
+    (M = I.Z.getGuildCount() >= 3 || s().size(m.Z.getMutablePrivateChannels()) >= 20), (Z = []);
 }
 function j(e) {
     let t = (0, d.Z)(e);
@@ -133,7 +133,7 @@ function Y(e, t) {
                               a = [];
                           for (let e = 1; e < F.length; e += 1) {
                               let t = j(F[e]);
-                              if (null != t) ((t.type !== c.h8.TEXT_CHANNEL && t.type !== c.h8.VOICE_CHANNEL) || b.Z.can(R.Plq.VIEW_CHANNEL, t.record)) && a.push(t);
+                              if (null != t) ((t.type !== c.h8.TEXT_CHANNEL && t.type !== c.h8.VOICE_CHANNEL) || T.Z.can(R.Plq.VIEW_CHANNEL, t.record)) && a.push(t);
                           }
                           a.length > 0 && i.push((0, c.o6)(O.intl.string(O.t['80lOZ2'])), ...a);
                           let o = (function (e) {
@@ -149,7 +149,7 @@ function Y(e, t) {
                               );
                           })((e) => e === r || F.includes(e));
                           o.length > 0 && i.push((0, c.o6)(O.intl.string(O.t['4B63jY'])), ...o);
-                          let l = T.ZP.getMentionChannelIds()
+                          let l = b.ZP.getMentionChannelIds()
                               .filter((e) => e !== r && !F.includes(e))
                               .map((e) => j(e))
                               .filter(C.lm)
@@ -215,7 +215,7 @@ function W() {
 class K extends (i = o.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        this.waitFor(v.ZP, I.Z, m.Z), this.syncWith([p.Z], () => !0), (M = l.K.get(L) || !1), (F = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : []);
+        this.waitFor(v.ZP, I.Z, m.Z), this.syncWith([p.Z], () => !0), (P = l.K.get(L) || !1), (F = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : []);
     }
     getState() {
         return { channelHistory: F };
@@ -228,7 +228,7 @@ class K extends (i = o.ZP.PersistedStore) {
     }
     channelNoticePredicate(e, t) {
         let n = Date.now() - t >= R.Hqc;
-        return P && n;
+        return M && n;
     }
     getFrequentGuilds() {
         return null != r ? r.queryGuilds('', 100) : null;
@@ -246,7 +246,7 @@ class K extends (i = o.ZP.PersistedStore) {
             queryMode: k,
             results: U,
             selectedIndex: w,
-            seenTutorial: M,
+            seenTutorial: P,
             maxQueryLength: G
         };
     }
@@ -294,8 +294,8 @@ let z = new K(u.Z, {
         w = e.selectedIndex;
     },
     QUICKSWITCHER_SWITCH_TO: function () {
-        if (M) return !1;
-        (M = !0), l.K.set(L, !0);
+        if (P) return !1;
+        (P = !0), l.K.set(L, !0);
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;

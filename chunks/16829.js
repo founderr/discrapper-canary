@@ -5,8 +5,8 @@ var r = n(200651),
     a = n(442837),
     o = n(481060),
     E = n(749210),
-    c = n(700582),
-    u = n(484459),
+    u = n(700582),
+    c = n(484459),
     d = n(271383),
     _ = n(246946),
     A = n(594174),
@@ -129,7 +129,7 @@ let S = l.memo(function () {
     };
 function U(e) {
     var t;
-    let { guildId: n, inviterUser: i, joinSourceType: E, className: u, onClickInviter: _ } = e,
+    let { guildId: n, inviterUser: i, joinSourceType: E, className: c, onClickInviter: _ } = e,
         A = (0, a.e7)([d.ZP], () => (null == i ? null : d.ZP.getMember(n, i.id)), [i, n]),
         T = l.useCallback(
             (e) => {
@@ -140,7 +140,7 @@ function U(e) {
     return null == i
         ? null
         : (0, r.jsxs)('div', {
-              className: s()(O.inviterTooltipContainer, u),
+              className: s()(O.inviterTooltipContainer, c),
               children: [
                   (0, r.jsx)(o.Text, {
                       variant: 'text-xs/medium',
@@ -150,7 +150,7 @@ function U(e) {
                       className: s()(O.inviterUserContainer, null != _ && O.clickable),
                       onClick: T,
                       children: [
-                          (0, r.jsx)(c.Z, {
+                          (0, r.jsx)(u.Z, {
                               user: i,
                               size: o.AvatarSizes.SIZE_16
                           }),
@@ -196,7 +196,7 @@ function C(e) {
           });
 }
 function L(e) {
-    let { sourceInviteCode: t, joinSourceType: n, integrationType: i, showInviterAsFooter: a, guildId: E, inviterUser: c, onClickInviter: u, ...d } = e,
+    let { sourceInviteCode: t, joinSourceType: n, integrationType: i, showInviterAsFooter: a, guildId: E, inviterUser: u, onClickInviter: c, ...d } = e,
         _ = null != n ? D[n] : null,
         A = n === f.gq.INTEGRATION && null != i,
         T = l.useCallback(
@@ -265,10 +265,10 @@ function L(e) {
                     a &&
                         (0, r.jsx)(U, {
                             guildId: E,
-                            inviterUser: c,
+                            inviterUser: u,
                             joinSourceType: n,
                             className: O.inviterFooter,
-                            onClickInviter: u
+                            onClickInviter: c
                         })
                 ]
             });
@@ -278,12 +278,12 @@ function L(e) {
 }
 t.ZP = l.memo(function (e) {
     var t, n;
-    let { userId: i, guildId: s, showInviterAsFooter: o, onClickInviter: c } = e,
+    let { userId: i, guildId: s, showInviterAsFooter: o, onClickInviter: u } = e,
         d = (0, a.e7)([g.Z], () => g.Z.getEnhancedMember(s, i), [s, i]),
         T = null !== (t = null == d ? void 0 : d.inviterId) && void 0 !== t ? t : null,
         I = (0, a.e7)([A.default], () => A.default.getUser(T), [T]);
     l.useEffect(() => {
-        null != T && (E.Z.requestMembersById(s, [T]), (0, u.Z)(T, void 0, { guildId: s }));
+        null != T && (E.Z.requestMembersById(s, [T]), (0, c.Z)(T, void 0, { guildId: s }));
     }, [s, T]);
     let N = (0, a.e7)([_.Z], () => _.Z.hideInstantInvites, []);
     if (null == d) return (0, r.jsx)(S, {});
@@ -305,7 +305,7 @@ t.ZP = l.memo(function (e) {
                       showInviterAsFooter: o,
                       inviterUser: null != I ? I : null,
                       guildId: s,
-                      onClickInviter: c,
+                      onClickInviter: u,
                       ...e
                   })
           });

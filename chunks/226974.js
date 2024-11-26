@@ -56,7 +56,7 @@ var c = [],
     E = 'function' == typeof setTimeout ? setTimeout : null,
     v = 'function' == typeof clearTimeout ? clearTimeout : null,
     I = 'undefined' != typeof setImmediate ? setImmediate : null;
-function b(e) {
+function T(e) {
     for (var t = r(d); null !== t; ) {
         if (null === t.callback) i(d);
         else if (t.startTime <= e) i(d), (t.sortIndex = t.expirationTime), n(c, t);
@@ -64,12 +64,12 @@ function b(e) {
         t = r(d);
     }
 }
-function T(e) {
-    if (((g = !1), b(e), !m)) {
+function b(e) {
+    if (((g = !1), T(e), !m)) {
         if (null !== r(c)) (m = !0), w(S);
         else {
             var t = r(d);
-            null !== t && M(T, t.startTime - e);
+            null !== t && P(b, t.startTime - e);
         }
     }
 }
@@ -77,19 +77,19 @@ function S(e, n) {
     (m = !1), g && ((g = !1), v(N), (N = -1)), (h = !0);
     var a = p;
     try {
-        for (b(n), _ = r(c); null !== _ && (!(_.expirationTime > n) || (e && !O())); ) {
+        for (T(n), _ = r(c); null !== _ && (!(_.expirationTime > n) || (e && !O())); ) {
             var s = _.callback;
             if ('function' == typeof s) {
                 (_.callback = null), (p = _.priorityLevel);
                 var o = s(_.expirationTime <= n);
-                (n = t.unstable_now()), 'function' == typeof o ? (_.callback = o) : _ === r(c) && i(c), b(n);
+                (n = t.unstable_now()), 'function' == typeof o ? (_.callback = o) : _ === r(c) && i(c), T(n);
             } else i(c);
             _ = r(c);
         }
         if (null !== _) var l = !0;
         else {
             var u = r(d);
-            null !== u && M(T, u.startTime - n), (l = !1);
+            null !== u && P(b, u.startTime - n), (l = !1);
         }
         return l;
     } finally {
@@ -135,7 +135,7 @@ else if ('undefined' != typeof MessageChannel) {
 function w(e) {
     (A = e), y || ((y = !0), s());
 }
-function M(e, n) {
+function P(e, n) {
     N = E(function () {
         e(t.unstable_now());
     }, n);
@@ -228,7 +228,7 @@ function M(e, n) {
                 expirationTime: o,
                 sortIndex: -1
             }),
-            a > s ? ((e.sortIndex = a), n(d, e), null === r(c) && e === r(d) && (g ? (v(N), (N = -1)) : (g = !0), M(T, a - s))) : ((e.sortIndex = o), n(c, e), m || h || ((m = !0), w(S))),
+            a > s ? ((e.sortIndex = a), n(d, e), null === r(c) && e === r(d) && (g ? (v(N), (N = -1)) : (g = !0), P(b, a - s))) : ((e.sortIndex = o), n(c, e), m || h || ((m = !0), w(S))),
             e
         );
     }),

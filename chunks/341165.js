@@ -16,8 +16,8 @@ var i,
 let E = {},
     v = {},
     I = {},
-    b = {},
-    T = !1,
+    T = {},
+    b = !1,
     S = !1,
     y = !1;
 class A extends (o = p.ZP.Store) {
@@ -30,7 +30,7 @@ class A extends (o = p.ZP.Store) {
         return r;
     }
     getFriendInvitesFetching() {
-        return T;
+        return b;
     }
     canRevokeFriendInvite() {
         return null != r && !S && !y;
@@ -47,7 +47,7 @@ class A extends (o = p.ZP.Store) {
         : (i[a] = s),
     (t.Z = new A(h.Z, {
         CONNECTION_OPEN: function () {
-            (E = {}), (v = {}), (I = {}), (b = {}), (r = null), (S = !1), (y = !1), (T = !1);
+            (E = {}), (v = {}), (I = {}), (T = {}), (r = null), (S = !1), (y = !1), (b = !1);
         },
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e;
@@ -55,7 +55,7 @@ class A extends (o = p.ZP.Store) {
         },
         FRIEND_INVITE_CREATE_SUCCESS: function (e) {
             var t;
-            (b[e.invite.code] = m.Z.createFromServer(e.invite)), (r = null !== (t = u()(d()(_()(Object.values(b), 'createdAt')))) && void 0 !== t ? t : null), (y = !1);
+            (T[e.invite.code] = m.Z.createFromServer(e.invite)), (r = null !== (t = u()(d()(_()(Object.values(T), 'createdAt')))) && void 0 !== t ? t : null), (y = !1);
         },
         FRIEND_INVITE_CREATE_FAILURE: function () {
             y = !1;
@@ -64,9 +64,9 @@ class A extends (o = p.ZP.Store) {
             var t;
             null != e.invites &&
                 e.invites.forEach((e) => {
-                    null != b[e.code] && delete b[e.code];
+                    null != T[e.code] && delete T[e.code];
                 }),
-                (r = null !== (t = u()(d()(_()(Object.values(b), 'createdAt')))) && void 0 !== t ? t : null),
+                (r = null !== (t = u()(d()(_()(Object.values(T), 'createdAt')))) && void 0 !== t ? t : null),
                 (S = !1);
         },
         INSTANT_INVITE_CREATE_SUCCESS: function (e) {
@@ -89,16 +89,16 @@ class A extends (o = p.ZP.Store) {
             y = !0;
         },
         FRIEND_INVITES_FETCH_REQUEST: function () {
-            T = !0;
+            b = !0;
         },
         FRIEND_INVITES_FETCH_RESPONSE: function (e) {
             var t;
-            (b = {}),
+            (T = {}),
                 e.invites.forEach((e) => {
-                    b[e.code] = m.Z.createFromServer(e);
+                    T[e.code] = m.Z.createFromServer(e);
                 }),
-                (r = null !== (t = u()(d()(_()(Object.values(b), 'createdAt')))) && void 0 !== t ? t : null),
-                (T = !1);
+                (r = null !== (t = u()(d()(_()(Object.values(T), 'createdAt')))) && void 0 !== t ? t : null),
+                (b = !1);
         },
         INSTANT_INVITE_CLEAR: function (e) {
             delete E[e.channelId];

@@ -98,8 +98,8 @@ E(function (e, t) {
         h = e.exact,
         v = e.isActive,
         I = e.location,
-        b = e.sensitive,
-        T = e.strict,
+        T = e.sensitive,
+        b = e.strict,
         S = e.style,
         y = e.to,
         A = e.innerRef,
@@ -114,8 +114,8 @@ E(function (e, t) {
                 ? (0, r.LX)(n.pathname, {
                       path: C,
                       exact: h,
-                      sensitive: b,
-                      strict: T
+                      sensitive: T,
+                      strict: b
                   })
                 : null,
             O = !!(v ? v(R, n) : R),

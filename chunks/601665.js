@@ -22,15 +22,15 @@ var r = n(200651),
     E = n(502762),
     v = n(952124),
     I = n(544989),
-    b = n(171368),
-    T = n(895697),
+    T = n(171368),
+    b = n(895697),
     S = n(161572),
     y = n(228168),
     A = n(388032),
     N = n(591156);
 function C(e) {
-    let { user: t, currentUser: n, guildId: C, channelId: R, messageId: O, roleId: D, closePopout: L, setPopoutRef: x, disableUserProfileLink: w = __OVERLAY__, newAnalyticsLocations: M = [] } = e,
-        { analyticsLocations: P } = (0, u.ZP)([...M, l.Z.BITE_SIZE_PROFILE_POPOUT]),
+    let { user: t, currentUser: n, guildId: C, channelId: R, messageId: O, roleId: D, closePopout: L, setPopoutRef: x, disableUserProfileLink: w = __OVERLAY__, newAnalyticsLocations: P = [] } = e,
+        { analyticsLocations: M } = (0, u.ZP)([...P, l.Z.BITE_SIZE_PROFILE_POPOUT]),
         k = (0, f.ZB)({
             layout: 'BITE_SIZE_POPOUT',
             userId: t.id,
@@ -49,14 +49,14 @@ function C(e) {
     }, [Z, x]);
     let V = (e) => {
         null == L || L(),
-            (0, b.openUserProfileModal)({
-                sourceAnalyticsLocations: P,
+            (0, T.openUserProfileModal)({
+                sourceAnalyticsLocations: M,
                 ...k,
                 ...e
             });
     };
     return (0, r.jsx)(u.Gt, {
-        value: P,
+        value: M,
         children: (0, r.jsx)(f.Mt, {
             value: k,
             shouldTrackViewOnMount: null == G || null != G.fullProfileLoadedTimestamp,
@@ -82,7 +82,7 @@ function C(e) {
                                               V(),
                                                   (0, _.pQ)({
                                                       action: 'PRESS_VIEW_PROFILE',
-                                                      analyticsLocations: P,
+                                                      analyticsLocations: M,
                                                       ...k
                                                   });
                                           }
@@ -113,7 +113,7 @@ function C(e) {
                                 })
                             ]
                         }),
-                        (0, r.jsx)(T.Z, {
+                        (0, r.jsx)(b.Z, {
                             user: t,
                             currentUser: n,
                             displayProfile: U,

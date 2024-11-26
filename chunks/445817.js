@@ -20,26 +20,26 @@ var i = n(200651),
     x = n(388032),
     S = n(31181);
 let T = 387,
-    C = 218;
+    E = 218;
 function _(e) {
     let { previewEnabled: t, onEnablePreview: n } = e,
         _ = h.Z.getCameraComponent(),
-        [E, f] = s.useState((0, c.P)(g.default.getCurrentUser())),
-        I = s.useRef(!1),
-        N = s.useRef(E),
+        [C, I] = s.useState((0, c.P)(g.default.getCurrentUser())),
+        f = s.useRef(!1),
+        N = s.useRef(C),
         A = (0, o.O)(),
         b = (0, r.e7)([h.Z], () => Object.values(h.Z.getVideoDevices()).length > 0);
     return (
         s.useEffect(
             () => () => {
-                I.current && a.Z.wait(() => (0, d.Up)(N.current));
+                f.current && a.Z.wait(() => (0, d.Up)(N.current));
             },
             []
         ),
         (0, i.jsx)(m.Z, {
-            selectedBackgroundOption: E,
+            selectedBackgroundOption: C,
             onSelectBackgroundOption: (e) => {
-                (I.current = !0), (N.current = e), f(e), (0, u.wG)(e, { location: A.location }).catch(p.dG4);
+                (f.current = !0), (N.current = e), I(e), (0, u.wG)(e, { location: A.location }).catch(p.dG4);
             },
             renderCamera: (e) =>
                 t
@@ -51,7 +51,7 @@ function _(e) {
                                   (0, i.jsx)(_, {
                                       deviceId: e,
                                       width: T,
-                                      height: C,
+                                      height: E,
                                       disabled: !t
                                   }),
                                   (0, i.jsx)(m.S, {})

@@ -1,6 +1,6 @@
 n.d(t, {
     H: function () {
-        return b;
+        return T;
     }
 }),
     n(47120),
@@ -35,7 +35,7 @@ function v(e, t, n) {
     );
 }
 let I = new Set(['Spacebar', ' ', 'Enter']);
-class b extends (r = a.Component) {
+class T extends (r = a.Component) {
     shouldShowPopout(e, t) {
         return null != e.shouldShow ? e.shouldShow : t.shouldShowPopout;
     }
@@ -227,10 +227,10 @@ class b extends (r = a.Component) {
             });
     }
 }
-v(b, 'defaultProps', {
+v(T, 'defaultProps', {
     autoInvert: !1,
     nudgeAlignIntoViewport: !1,
     spacing: 0,
     loadingComponent: (0, i.jsx)(g.x, {})
 }),
-    v(b, 'contextType', h.ZP);
+    v(T, 'contextType', h.ZP);

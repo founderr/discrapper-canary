@@ -58,7 +58,7 @@ function I() {
     }
     return !1;
 }
-class b extends (r = i.ZP.PersistedStore) {
+class T extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         (h = null != e ? e : p), this.waitFor(u.default), this.syncWith([u.default], g), this.syncWith([d.ZP], E), this.syncWith([s.Z], I);
     }
@@ -120,9 +120,9 @@ class b extends (r = i.ZP.PersistedStore) {
         m();
     }
 }
-_(b, 'displayName', 'UserOfferStore'),
-    _(b, 'persistKey', 'UserOfferStore'),
-    _(b, 'migrations', [
+_(T, 'displayName', 'UserOfferStore'),
+    _(T, 'persistKey', 'UserOfferStore'),
+    _(T, 'migrations', [
         (e) => {
             let t = null == e ? void 0 : e.userDiscounts;
             if (null != t)
@@ -150,7 +150,7 @@ _(b, 'displayName', 'UserOfferStore'),
                     : e;
         }
     ]),
-    (t.Z = new b(a.Z, {
+    (t.Z = new T(a.Z, {
         BILLING_USER_OFFER_FETCH_START: function () {
             h.isFetching = !0;
         },

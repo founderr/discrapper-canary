@@ -26,8 +26,8 @@ var r,
     E = n(540059),
     v = n(98278),
     I = n(639119),
-    b = n(311476),
-    T = n(165583),
+    T = n(311476),
+    b = n(165583),
     S = n(587446),
     y = n(210887),
     A = n(740492),
@@ -39,14 +39,14 @@ var r,
     L = n(981631),
     x = n(474936),
     w = n(874893),
-    M = n(526761),
-    P = n(231338),
+    P = n(526761),
+    M = n(231338),
     k = n(388032),
     U = n(392971);
 ((i = r || (r = {})).EDITOR = 'EDITOR'), (i.SETTINGS = 'SETTINGS');
 let B = Object.freeze({
-        EDITOR: M.fy.SLOW_USER_ACTION,
-        SETTINGS: M.fy.INFREQUENT_USER_ACTION
+        EDITOR: P.fy.SLOW_USER_ACTION,
+        SETTINGS: P.fy.INFREQUENT_USER_ACTION
     }),
     G = s.createContext({}),
     Z = (e) => {
@@ -60,7 +60,7 @@ let B = Object.freeze({
     },
     F = (e) => {
         let { type: t, isPreview: n, isCoachmark: r } = e,
-            { enabled: i } = b.Z.useExperiment(
+            { enabled: i } = T.Z.useExperiment(
                 { location: 'GradientSelectorsTitle' },
                 {
                     autoTrackExposure: !1,
@@ -106,7 +106,7 @@ let B = Object.freeze({
         var t, n;
         let { type: r, isPreview: i, isCoachmark: s } = e,
             o = (null === (n = (0, I.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === x.Si.TIER_2,
-            { enabled: l } = b.Z.useExperiment(
+            { enabled: l } = T.Z.useExperiment(
                 { location: 'GradientSelectorsTitle' },
                 {
                     autoTrackExposure: !1,
@@ -175,7 +175,7 @@ let B = Object.freeze({
         return (0, a.jsx)(a.Fragment, {
             children:
                 'EDITOR' === i && o && u
-                    ? (0, a.jsx)(T.ZP, {
+                    ? (0, a.jsx)(b.ZP, {
                           type: x.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                           subscriptionTier: x.Si.TIER_2,
                           children: k.intl.format(k.t.G8yQXl, { onPremiumClick: () => v.z })
@@ -213,11 +213,11 @@ let B = Object.freeze({
             }),
             [g, E] = s.useState(!1),
             [v, I] = s.useState(-1),
-            T = (0, c.e7)([p.Z], () => p.Z.useReducedMotion);
+            b = (0, c.e7)([p.Z], () => p.Z.useReducedMotion);
         s.useEffect(() => {
             ((v === D.XV.length - 2 && 'EDITOR' === r) || u === d.Us.EASTER_EGG) && E(!0);
         }, [v, r, u]);
-        let { enabled: S } = b.Z.useExperiment({ location: 'useGradientSelectors' }, { autoTrackExposure: !1 }),
+        let { enabled: S } = T.Z.useExperiment({ location: 'useGradientSelectors' }, { autoTrackExposure: !1 }),
             y = (e, t) => {
                 if (
                     ((0, C.zO)(e.id),
@@ -302,7 +302,7 @@ let B = Object.freeze({
                             }),
                             (0, a.jsx)(f.LottieAnimation, {
                                 importData: t,
-                                shouldAnimate: !T,
+                                shouldAnimate: !b,
                                 className: U.sparkles
                             })
                         ]
@@ -336,27 +336,27 @@ let B = Object.freeze({
                         onSelect: () => d('system')
                     }),
                 (0, a.jsx)(O.bD, {
-                    theme: P.BR.LIGHT,
-                    isSelected: l && !u && o === P.BR.LIGHT,
-                    onSelect: () => d(P.BR.LIGHT)
+                    theme: M.BR.LIGHT,
+                    isSelected: l && !u && o === M.BR.LIGHT,
+                    onSelect: () => d(M.BR.LIGHT)
                 }),
                 (0, a.jsx)(O.bD, {
-                    theme: P.BR.DARK,
-                    isSelected: l && !u && o === P.BR.DARK,
-                    onSelect: () => d(P.BR.DARK)
+                    theme: M.BR.DARK,
+                    isSelected: l && !u && o === M.BR.DARK,
+                    onSelect: () => d(M.BR.DARK)
                 }),
                 f &&
                     (0, a.jsxs)(a.Fragment, {
                         children: [
                             (0, a.jsx)(O.bD, {
-                                theme: P.BR.DARKER,
-                                isSelected: l && !u && o === P.BR.DARKER,
-                                onSelect: () => d(P.BR.DARKER)
+                                theme: M.BR.DARKER,
+                                isSelected: l && !u && o === M.BR.DARKER,
+                                onSelect: () => d(M.BR.DARKER)
                             }),
                             (0, a.jsx)(O.bD, {
-                                theme: P.BR.MIDNIGHT,
-                                isSelected: l && !u && o === P.BR.MIDNIGHT,
-                                onSelect: () => d(P.BR.MIDNIGHT)
+                                theme: M.BR.MIDNIGHT,
+                                isSelected: l && !u && o === M.BR.MIDNIGHT,
+                                onSelect: () => d(M.BR.MIDNIGHT)
                             })
                         ]
                     }),

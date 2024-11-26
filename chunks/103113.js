@@ -22,17 +22,17 @@ var r = n(200651),
     E = n(867176),
     v = n(280885),
     I = n(502762),
-    b = n(530),
-    T = n(679332),
+    T = n(530),
+    b = n(679332),
     S = n(544989),
     y = n(171368),
     A = n(228168),
     N = n(388032),
     C = n(591156);
 function R(e) {
-    let { user: t, guildId: n, channelId: R, messageId: O, roleId: D, setPopoutRef: L, closePopout: x, disableUserProfileLink: w = __OVERLAY__, newAnalyticsLocations: M = [] } = e,
-        P = (0, h.ZP)(t.id, n),
-        { analyticsLocations: k } = (0, l.ZP)([...M, o.Z.BITE_SIZE_PROFILE_POPOUT]),
+    let { user: t, guildId: n, channelId: R, messageId: O, roleId: D, setPopoutRef: L, closePopout: x, disableUserProfileLink: w = __OVERLAY__, newAnalyticsLocations: P = [] } = e,
+        M = (0, h.ZP)(t.id, n),
+        { analyticsLocations: k } = (0, l.ZP)([...P, o.Z.BITE_SIZE_PROFILE_POPOUT]),
         U = (0, _.ZB)({
             layout: 'BITE_SIZE_POPOUT',
             userId: t.id,
@@ -64,12 +64,12 @@ function R(e) {
                 children: [
                     (0, r.jsxs)(I.Z, {
                         user: t,
-                        displayProfile: P,
+                        displayProfile: M,
                         profileType: A.y0.BITE_SIZE,
                         children: [
                             (0, r.jsx)(S.Z, {
                                 profileType: A.y0.BITE_SIZE,
-                                children: (0, r.jsx)(T.Z, {
+                                children: (0, r.jsx)(b.Z, {
                                     user: t,
                                     viewProfileItem: F
                                         ? (0, r.jsx)(a.MenuItem, {
@@ -92,13 +92,13 @@ function R(e) {
                                 children: [
                                     (0, r.jsx)(E.Z, {
                                         user: t,
-                                        displayProfile: P,
+                                        displayProfile: M,
                                         guildId: n,
                                         profileType: A.y0.BITE_SIZE
                                     }),
                                     (0, r.jsx)(m.Z, {
                                         user: t,
-                                        displayProfile: P,
+                                        displayProfile: M,
                                         guildId: n,
                                         channelId: R,
                                         profileType: A.y0.BITE_SIZE,
@@ -111,20 +111,20 @@ function R(e) {
                                 fade: !0,
                                 className: C.body,
                                 children: [
-                                    (0, r.jsx)(b.Z, {
+                                    (0, r.jsx)(T.Z, {
                                         user: t,
                                         profileType: A.y0.BITE_SIZE,
                                         nickname: f.ZP.getName(n, R, t),
                                         onOpenProfile: F ? Z : void 0,
                                         tags: (0, r.jsx)(g.Z, {
-                                            displayProfile: P,
+                                            displayProfile: M,
                                             profileType: A.y0.BITE_SIZE,
                                             onClose: x
                                         })
                                     }),
                                     (0, r.jsx)(v.Z, {
                                         userId: t.id,
-                                        userBio: null == P ? void 0 : P.bio,
+                                        userBio: null == M ? void 0 : M.bio,
                                         setLineClamp: !1,
                                         textColor: 'header-primary'
                                     })
@@ -133,9 +133,9 @@ function R(e) {
                             (0, r.jsx)('footer', { className: C.footer })
                         ]
                     }),
-                    (null == P ? void 0 : P.profileEffectId) != null &&
+                    (null == M ? void 0 : M.profileEffectId) != null &&
                         (0, r.jsx)(d.Z, {
-                            profileEffectId: null == P ? void 0 : P.profileEffectId,
+                            profileEffectId: null == M ? void 0 : M.profileEffectId,
                             isHovering: G
                         })
                 ]

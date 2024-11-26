@@ -364,7 +364,7 @@ class m extends s.Z {
                 duration_decoder_unknown: p(e.decoderBuckets[f.gr.UNKNOWN]),
                 ...c
             },
-            { bytes: _, framesDropped: h, framesCodecError: m, framesCodec: g, framesNetwork: E, packets: v, packetsLost: I, nackCount: b, pliCount: T, qpSum: S, pauseCount: y, freezeCount: A, totalPausesDuration: N, totalFreezesDuration: C, totalFramesDuration: R, keyframes: O, passthroughCount: D, cryptorSuccessCount: L, cryptorFailureCount: x, cryptorDuration: w, cryptorAttempts: M, qualityDecodeErrors: P, qualityDecoderReboots: k, qualityScoreErrors: U, qualityFrameDrops: B, qualitySizeMismatches: G } = e.aggregatedProperties;
+            { bytes: _, framesDropped: h, framesCodecError: m, framesCodec: g, framesNetwork: E, packets: v, packetsLost: I, nackCount: T, pliCount: b, qpSum: S, pauseCount: y, freezeCount: A, totalPausesDuration: N, totalFreezesDuration: C, totalFramesDuration: R, keyframes: O, passthroughCount: D, cryptorSuccessCount: L, cryptorFailureCount: x, cryptorDuration: w, cryptorAttempts: P, qualityDecodeErrors: M, qualityDecoderReboots: k, qualityScoreErrors: U, qualityFrameDrops: B, qualitySizeMismatches: G } = e.aggregatedProperties;
         return (
             e instanceof f.nt ? ((d.sender_freeze_count = A), (d.sender_total_freezes_duration = C), (d.sender_total_frames_duration = R)) : ((d.receiver_freeze_count = A), (d.receiver_total_freezes_duration = C), (d.receiver_total_frames_duration = R), (d.receiver_pause_count = y), (d.receiver_total_pauses_duration = N)),
             {
@@ -378,16 +378,16 @@ class m extends s.Z {
                 num_frames_codec_error: m,
                 time_to_first_frame_ms: e.timeToFirstFrame,
                 num_frames_dropped: h,
-                num_nacks: b,
-                num_plis: T,
+                num_nacks: T,
+                num_plis: b,
                 qp_sum: S,
                 num_keyframes: O,
                 cryptor_passthrough_count: D,
                 cryptor_success_count: L,
                 cryptor_failure_count: x,
                 cryptor_duration: w,
-                cryptor_attempts: M,
-                encoder_quality_decode_errors: P,
+                cryptor_attempts: P,
+                encoder_quality_decode_errors: M,
                 encoder_quality_decoder_reboots: k,
                 encoder_quality_score_errors: U,
                 encoder_quality_frame_drops: B,
@@ -408,10 +408,10 @@ class m extends s.Z {
                 .filter((e) => 'video' === e.type)
                 .forEach((t) => {
                     if (null != t) {
-                        let T = t.ssrc,
-                            S = this.outboundStats[T];
-                        null == S && (console.warn('Unknown outbound video stream with SSRC: '.concat(T)), (S = new f.nt(this.timestampProducer)), (this.outboundStats[T] = S)), null == S.timeToFirstFrame && (t.framesEncoded > 0 || (null !== (r = t.frameRateInput) && void 0 !== r ? r : 0) > 0) && (S.timeToFirstFrame = Math.max(0, e - S.startTime));
-                        let y = n.find((e) => e.ssrc === T);
+                        let b = t.ssrc,
+                            S = this.outboundStats[b];
+                        null == S && (console.warn('Unknown outbound video stream with SSRC: '.concat(b)), (S = new f.nt(this.timestampProducer)), (this.outboundStats[b] = S)), null == S.timeToFirstFrame && (t.framesEncoded > 0 || (null !== (r = t.frameRateInput) && void 0 !== r ? r : 0) > 0) && (S.timeToFirstFrame = Math.max(0, e - S.startTime));
+                        let y = n.find((e) => e.ssrc === b);
                         var r,
                             i,
                             a,
@@ -426,8 +426,8 @@ class m extends s.Z {
                             v,
                             I = !0;
                         if (this.connection.context === o.Yn.STREAM) {
-                            var b = this.connection.getRemoteVideoSinkWants(T);
-                            (null == b || 0 === b) && (null == y ? void 0 : y.quality) === h && (b = this.connection.getRemoteVideoSinkWants('any')), (I = (null != b ? b : 0) > 0);
+                            var T = this.connection.getRemoteVideoSinkWants(b);
+                            (null == T || 0 === T) && (null == y ? void 0 : y.quality) === h && (T = this.connection.getRemoteVideoSinkWants('any')), (I = (null != T ? T : 0) > 0);
                         }
                         let A = this.videoStopped.value || !I;
                         if ((A !== S.isVideoStopped && S.setVideoStopped(A, f.Mq.SenderStopped), !A)) {

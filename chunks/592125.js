@@ -24,8 +24,8 @@ var r,
     E = n(710845),
     v = n(853856),
     I = n(131704),
-    b = n(823379),
-    T = n(709054),
+    T = n(823379),
+    b = n(709054),
     S = n(314897),
     y = n(430824),
     A = n(594174),
@@ -37,8 +37,8 @@ let C = new E.Z('ChannelStore'),
     L = {},
     x = null,
     w = {},
-    M = {},
-    P = 0,
+    P = {},
+    M = 0,
     k = {},
     U = {},
     B = new Set(),
@@ -57,7 +57,7 @@ class H {
         return null == e ? null : H.loadGuildIds([null === (t = z(e)) || void 0 === t ? void 0 : t.guild_id]);
     }
     static loadGuildIds(e) {
-        let t = e.filter(b.lm);
+        let t = e.filter(T.lm);
         if (0 === t.length) return null;
         let n = f.Z.database();
         if (null == n || !t.some((e) => !B.has(e))) return null;
@@ -84,7 +84,7 @@ class H {
                             }
                         );
                     })
-                    .filter(b.lm),
+                    .filter(T.lm),
                 i = e.map((e) => e.promise);
             try {
                 let t = await Promise.all(i);
@@ -124,7 +124,7 @@ function W(e, t, n) {
 }
 function K(e) {
     if ((C.fileOnly('Deleting guild channels for '.concat(e)), null != D[e])) {
-        for (let t of T.default.keys(D[e])) delete O[t];
+        for (let t of b.default.keys(D[e])) delete O[t];
         delete D[e];
     }
 }
@@ -148,7 +148,7 @@ function Q(e) {
 }
 function X(e) {
     if (null != e.recipients.find((e) => (0, g.Z)(e))) return !1;
-    (L[e.id] = e), e.type === N.d4z.DM && (M[e.getRecipientId()] = e.id), (P += 1);
+    (L[e.id] = e), e.type === N.d4z.DM && (P[e.getRecipientId()] = e.id), (M += 1);
 }
 function J(e) {
     let t = O[e.parent_id];
@@ -203,7 +203,7 @@ function er(e) {
         e.id in w && delete w[e.id],
         null != t && null != D[t] && e.id in D[t] && delete D[t][e.id],
         !(function (e) {
-            if (null == e.guild_id || I.Ec.has(e.type)) (0, I.hv)(e.type) && (P += 1);
+            if (null == e.guild_id || I.Ec.has(e.type)) (0, I.hv)(e.type) && (M += 1);
             else {
                 var t;
                 k[e.guild_id] = (null !== (t = k[e.guild_id]) && void 0 !== t ? t : 0) + 1;
@@ -219,7 +219,7 @@ function ei(e) {
         !(function (e) {
             if ('basicPermissions' in e || e.type !== N.d4z.DM) return;
             let t = e.getRecipientId();
-            if (M[t] === e.id) delete M[t];
+            if (P[t] === e.id) delete P[t];
         })(i);
 }
 function ea(e) {
@@ -269,7 +269,7 @@ class eu extends (r = c.ZP.Store) {
     }
     getChannelIds(e) {
         var t, n;
-        return (Y(e, 0, 'getChannelIds'), null == e) ? T.default.keys(L) : T.default.keys(null !== (n = null !== (t = h.Z.getGuildBasicChannels(e)) && void 0 !== t ? t : D[e]) && void 0 !== n ? n : R);
+        return (Y(e, 0, 'getChannelIds'), null == e) ? b.default.keys(L) : b.default.keys(null !== (n = null !== (t = h.Z.getGuildBasicChannels(e)) && void 0 !== t ? t : D[e]) && void 0 !== n ? n : R);
     }
     getMutablePrivateChannels() {
         return L;
@@ -285,24 +285,24 @@ class eu extends (r = c.ZP.Store) {
     getSortedPrivateChannels() {
         return l()(L)
             .values()
-            .sort((e, t) => T.default.compare(e.lastMessageId, t.lastMessageId))
+            .sort((e, t) => b.default.compare(e.lastMessageId, t.lastMessageId))
             .reverse()
             .value();
     }
     getDMFromUserId(e) {
-        if (null != e) return M[e];
+        if (null != e) return P[e];
     }
     getDMChannelFromUserId(e) {
-        if (null != e) return this.getChannel(M[e]);
+        if (null != e) return this.getChannel(P[e]);
     }
     getMutableDMsByUserIds() {
-        return M;
+        return P;
     }
     getDMUserIds() {
-        return T.default.keys(M);
+        return b.default.keys(P);
     }
     getPrivateChannelsVersion() {
-        return P;
+        return M;
     }
     getGuildChannelsVersion(e) {
         var t;
@@ -322,10 +322,10 @@ class eu extends (r = c.ZP.Store) {
     }
     getDebugInfo() {
         return {
-            loadedGuildIds: Array.from(B).sort(T.default.compare),
-            pendingGuildLoads: Object.keys(G).sort(T.default.compare),
+            loadedGuildIds: Array.from(B).sort(b.default.compare),
+            pendingGuildLoads: Object.keys(G).sort(b.default.compare),
             guildSizes: Object.keys(D)
-                .sort(T.default.compare)
+                .sort(b.default.compare)
                 .map((e) => ''.concat(e, ': ').concat(ec(e)))
         };
     }
@@ -397,7 +397,7 @@ function ec(e) {
         },
         CONNECTION_OPEN: function (e) {
             let t = D;
-            for (let n of ((M = {}), (O = {}), (D = {}), (w = {}), (k = {}), (F = {}), (G = {}), (Z = Date.now()), (x = e.initialPrivateChannels), e.initialPrivateChannels.forEach(X), e.guilds)) 'partial' === n.dataMode && (l().forEach(t[n.id], $), C.fileOnly('Restoring guild channels for '.concat(n.id, ' #:').concat(ec(n.id)))), ee(n);
+            for (let n of ((P = {}), (O = {}), (D = {}), (w = {}), (k = {}), (F = {}), (G = {}), (Z = Date.now()), (x = e.initialPrivateChannels), e.initialPrivateChannels.forEach(X), e.guilds)) 'partial' === n.dataMode && (l().forEach(t[n.id], $), C.fileOnly('Restoring guild channels for '.concat(n.id, ' #:').concat(ec(n.id)))), ee(n);
             el();
         },
         CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: function (e) {
@@ -433,7 +433,7 @@ function ec(e) {
         LOAD_MESSAGES_SUCCESS: ea,
         LOAD_THREADS_SUCCESS: en,
         LOGOUT: function () {
-            C.fileOnly('initializeClear()'), (M = {}), (O = {}), (D = {}), (k = {}), (L = {}), (F = {}), (w = {}), (B = new Set()), (G = {}), (Z = Date.now());
+            C.fileOnly('initializeClear()'), (P = {}), (O = {}), (D = {}), (k = {}), (L = {}), (F = {}), (w = {}), (B = new Set()), (G = {}), (Z = Date.now());
         },
         OVERLAY_INITIALIZE: function (e) {
             for (let t of (e.guilds.length, e.channels)) Q((0, m.d7)((0, I._H)(t)));

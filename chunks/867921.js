@@ -3,40 +3,40 @@ r.d(t, {
         return s;
     }
 });
-var n = r(598470),
-    a = r(617726),
+var a = r(598470),
+    n = r(617726),
     _ = r(14588),
     o = r(928541),
-    i = r(622916),
-    E = r(116698),
+    E = r(622916),
+    i = r(116698),
     c = r(255768);
-function s(e, t, r = (0, n.x)(e.bufferSize || 64)) {
+function s(e, t, r = (0, a.x)(e.bufferSize || 64)) {
     let s = {};
     return {
-        send: function (n) {
-            let u = [];
+        send: function (a) {
+            let I = [];
             if (
-                ((0, a.gv)(n, (t, r) => {
-                    let n = (0, a.mL)(r);
-                    if ((0, _.Q)(s, n)) {
-                        let a = l(t, r);
-                        e.recordDroppedEvent('ratelimit_backoff', n, a);
-                    } else u.push(t);
+                ((0, n.gv)(a, (t, r) => {
+                    let a = (0, n.mL)(r);
+                    if ((0, _.Q)(s, a)) {
+                        let n = l(t, r);
+                        e.recordDroppedEvent('ratelimit_backoff', a, n);
+                    } else I.push(t);
                 }),
-                0 === u.length)
+                0 === I.length)
             )
                 return (0, o.WD)({});
-            let I = (0, a.Jd)(n[0], u),
+            let u = (0, n.Jd)(a[0], I),
                 R = (t) => {
-                    (0, a.gv)(I, (r, n) => {
-                        let _ = l(r, n);
-                        e.recordDroppedEvent(t, (0, a.mL)(n), _);
+                    (0, n.gv)(u, (r, a) => {
+                        let _ = l(r, a);
+                        e.recordDroppedEvent(t, (0, n.mL)(a), _);
                     });
                 };
             return r
                 .add(() =>
-                    t({ body: (0, a.V$)(I) }).then(
-                        (e) => (void 0 !== e.statusCode && (e.statusCode < 200 || e.statusCode >= 300) && c.X && i.kg.warn(`Sentry responded with status code ${e.statusCode} to sent event.`), (s = (0, _.WG)(s, e)), e),
+                    t({ body: (0, n.V$)(u) }).then(
+                        (e) => (void 0 !== e.statusCode && (e.statusCode < 200 || e.statusCode >= 300) && c.X && E.kg.warn(`Sentry responded with status code ${e.statusCode} to sent event.`), (s = (0, _.WG)(s, e)), e),
                         (e) => {
                             throw (R('network_error'), e);
                         }
@@ -45,7 +45,7 @@ function s(e, t, r = (0, n.x)(e.bufferSize || 64)) {
                 .then(
                     (e) => e,
                     (e) => {
-                        if (e instanceof E.b) return c.X && i.kg.error('Skipped sending event because buffer is full.'), R('queue_overflow'), (0, o.WD)({});
+                        if (e instanceof i.b) return c.X && E.kg.error('Skipped sending event because buffer is full.'), R('queue_overflow'), (0, o.WD)({});
                         throw e;
                     }
                 );

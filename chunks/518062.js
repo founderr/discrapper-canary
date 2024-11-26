@@ -1,45 +1,45 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return u;
+        return d;
     }
 }),
-    n(47120);
-var i = n(200651);
-n(192379);
-var s = n(442837),
-    r = n(481060),
-    l = n(607070),
-    a = n(600164),
-    o = n(122890),
-    c = n(110818),
-    d = n(346007);
-function u(e) {
-    let { purchaseState: t, currentStep: n, onClose: u } = e,
-        [m, h] = (0, o.z)({
-            purchaseState: t,
-            currentStep: n,
-            initialScene: c.fe.Scenes.ENTRY,
-            purchaseScene: c.fe.Scenes.STARS,
-            errorScene: c.fe.Scenes.ERROR,
-            successScene: c.fe.Scenes.SUCCESS
+    t(47120);
+var o = t(200651);
+t(192379);
+var l = t(442837),
+    i = t(481060),
+    r = t(607070),
+    a = t(600164),
+    s = t(122890),
+    u = t(110818),
+    c = t(346007);
+function d(e) {
+    let { purchaseState: n, currentStep: t, onClose: d } = e,
+        [p, f] = (0, s.z)({
+            purchaseState: n,
+            currentStep: t,
+            initialScene: u.fe.Scenes.ENTRY,
+            purchaseScene: u.fe.Scenes.STARS,
+            errorScene: u.fe.Scenes.ERROR,
+            successScene: u.fe.Scenes.SUCCESS
         }),
-        g = (0, s.e7)([l.Z], () => l.Z.useReducedMotion);
-    return (0, i.jsxs)(r.ModalHeader, {
+        m = (0, l.e7)([r.Z], () => r.Z.useReducedMotion);
+    return (0, o.jsxs)(i.ModalHeader, {
         align: a.Z.Align.START,
-        className: d.header,
+        className: c.header,
         separator: !1,
         children: [
-            (0, i.jsx)(c.fe, {
-                className: d.animation,
-                nextScene: m,
-                onScenePlay: (e) => h(c.fe.getNextScene(e)),
+            (0, o.jsx)(u.fe, {
+                className: c.animation,
+                nextScene: p,
+                onScenePlay: (e) => f(u.fe.getNextScene(e)),
                 pauseWhileUnfocused: !1,
-                pause: g
+                pause: m
             }),
-            (0, i.jsx)('div', { className: d.headerTitle }),
-            (0, i.jsx)(r.ModalCloseButton, {
-                onClick: u,
-                className: d.closeButton
+            (0, o.jsx)('div', { className: c.headerTitle }),
+            (0, o.jsx)(i.ModalCloseButton, {
+                onClick: d,
+                className: c.closeButton
             })
         ]
     });

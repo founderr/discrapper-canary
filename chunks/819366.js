@@ -21,8 +21,8 @@ var r = n(200651),
     E = n(592125),
     v = n(271383),
     I = n(430824),
-    b = n(699516),
-    T = n(594174),
+    T = n(699516),
+    b = n(594174),
     S = n(5192),
     y = n(51144),
     A = n(377668);
@@ -55,10 +55,10 @@ function N(e) {
 function C(e) {
     let { className: t, userId: i, channelId: a, parsedUserId: p, content: C, inlinePreview: R = !1, viewingChannelId: O } = e,
         { analyticsLocations: D } = (0, f.ZP)(d.Z.USER_MENTION),
-        L = (0, l.e7)([T.default], () => T.default.getUser(i)),
+        L = (0, l.e7)([b.default], () => b.default.getUser(i)),
         x = (0, l.e7)([E.Z], () => E.Z.getChannel(a)),
         w = null != x ? x.getGuildId() : null,
-        M =
+        P =
             R || null == L || null == w || null == a
                 ? void 0
                 : (e) => {
@@ -75,8 +75,8 @@ function C(e) {
                                   });
                           });
                   },
-        P = y.ZP.useName(L),
-        k = (0, l.e7)([E.Z, v.ZP, b.Z], () => S.ZP.getNickname(w, a, L)),
+        M = y.ZP.useName(L),
+        k = (0, l.e7)([E.Z, v.ZP, T.Z], () => S.ZP.getNickname(w, a, L)),
         U = I.Z.getGuild(w),
         B = (0, _.Ib)(U, x) && i === A.fL ? A.jM : null;
     if (null == L)
@@ -88,10 +88,10 @@ function C(e) {
     let G = (e) =>
         (0, r.jsx)(h.Z, {
             className: t,
-            onContextMenu: M,
+            onContextMenu: P,
             color: B,
             ...e,
-            children: '@'.concat(null != k ? k : P)
+            children: '@'.concat(null != k ? k : M)
         });
     return R
         ? (0, r.jsx)(f.Gt, {

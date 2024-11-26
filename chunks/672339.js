@@ -3,7 +3,7 @@ n.d(t, {
         return I;
     },
     eH: function () {
-        return b;
+        return T;
     },
     wG: function () {
         return v;
@@ -119,7 +119,7 @@ async function I(e, t, n) {
         ),
         r && (0, d.Bh)(e, i, 'Preview');
 }
-function b() {
+function T() {
     let e = s.default.getCurrentUser();
     if (null == e) return;
     let t = (0, l.P)(e);

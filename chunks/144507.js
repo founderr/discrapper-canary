@@ -1,15 +1,15 @@
 n.d(t, {
     $D: function () {
-        return E;
+        return p;
     },
     H2: function () {
-        return g;
+        return m;
     },
     MO: function () {
-        return _;
+        return E;
     },
     X$: function () {
-        return p;
+        return _;
     },
     d5: function () {
         return r;
@@ -37,20 +37,20 @@ function f(e) {
     let { guild: t, isOwner: n, isUserInCreatorMonetizationEligibleCountry: i, isMonetizationWaitlistEnabledForGuild: r, isGuildEligibleForRoleSubscriptions: l, isExpeditedMonetizationOnboardingGuild: o } = e;
     return n && !i && r ? 1 : n && r && (l || o) && !t.hasFeature(d.oNc.COMMUNITY) ? 2 : 0;
 }
-function p(e) {
+function _(e) {
     return 0 !== f(e);
 }
-function _(e) {
+function E(e) {
     let t = (0, c.Bt)(null == e ? void 0 : e.id),
         n = (0, o.Ob)(e),
         i = (0, o.gS)(null == e ? void 0 : e.id),
-        r = E(e),
+        r = p(e),
         a = (0, l.e7)([s.default], () => {
             let t = s.default.getCurrentUser();
             return null != t && (null == e ? void 0 : e.isOwner(t)) === !0;
         }),
         d = (0, o.Sd)(),
-        { shouldRestrictUpdatingCreatorMonetizationSettings: p } = (0, u.gX)(null == e ? void 0 : e.id);
+        { shouldRestrictUpdatingCreatorMonetizationSettings: _ } = (0, u.gX)(null == e ? void 0 : e.id);
     return null == e
         ? 0
         : f({
@@ -61,12 +61,12 @@ function _(e) {
               isMonetizationWaitlistEnabledForGuild: i,
               isExpeditedMonetizationOnboardingGuild: n,
               isUserInCreatorMonetizationEligibleCountry: d,
-              shouldRestrictUpdatingRoleSubscriptionSettings: p
+              shouldRestrictUpdatingRoleSubscriptionSettings: _
           });
 }
-function E(e) {
-    return (0, l.e7)([a.Z], () => g(e), [e]);
+function p(e) {
+    return (0, l.e7)([a.Z], () => m(e), [e]);
 }
-function g(e) {
+function m(e) {
     return null != e && a.Z.can(d.Plq.ADMINISTRATOR, e);
 }

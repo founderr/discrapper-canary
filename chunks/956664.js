@@ -18,13 +18,13 @@ n.d(t, {
         return h;
     },
     c0: function () {
-        return T;
+        return b;
     },
     fD: function () {
         return E;
     },
     kD: function () {
-        return b;
+        return T;
     },
     rn: function () {
         return f;
@@ -137,10 +137,10 @@ function v(e) {
     return i()(2 === t.length, 'Input data is not a valid image.'), atob(t[1]).length;
 }
 async function I(e, t, n) {
-    let r = b(e);
+    let r = T(e);
     return new File([await r.arrayBuffer()], t, { type: n });
 }
-function b(e) {
+function T(e) {
     let t;
     t = e.split(',')[0].indexOf('base64') >= 0 ? atob(e.split(',')[1]) : btoa(e.split(',')[1]);
     let n = e.split(',')[0].split(':')[1].split(';')[0],
@@ -148,7 +148,7 @@ function b(e) {
     for (var i = 0; i < t.length; i++) r[i] = t.charCodeAt(i);
     return new Blob([r], { type: n });
 }
-async function T(e) {
+async function b(e) {
     var t;
     if ('image/png' !== (null === (t = e.type) || void 0 === t ? void 0 : t.split(';')[0])) throw Error('File is not a PNG');
     let n = await e.text(),

@@ -16,7 +16,7 @@ var r = n(200651),
     f = n(51144),
     _ = n(357498);
 function p(e) {
-    let { users: t, maxUsers: a, guildId: o, channelId: p, className: h, avatarClassName: m, onClick: g, onFocus: E, size: v = u.AvatarSizes.SIZE_24, overflowCountVariant: I = 'text-xs/medium', overflowCountColor: b = 'interactive-normal', hideOverflowCount: T = !1, disableUsernameTooltip: S = !1, disableUserPopout: y = !1, onUserPopoutClosed: A } = e,
+    let { users: t, maxUsers: a, guildId: o, channelId: p, className: h, avatarClassName: m, onClick: g, onFocus: E, size: v = u.AvatarSizes.SIZE_24, overflowCountVariant: I = 'text-xs/medium', overflowCountColor: T = 'interactive-normal', hideOverflowCount: b = !1, disableUsernameTooltip: S = !1, disableUserPopout: y = !1, onUserPopoutClosed: A } = e,
         [N, C] = i.useState(!1);
     function R() {
         return (0, r.jsx)(u.Dialog, {
@@ -98,7 +98,7 @@ function p(e) {
                       n = t.length - a;
                   return (
                       n > 0 &&
-                          !T &&
+                          !b &&
                           (e[e.length - 1] = (0, r.jsx)(
                               u.Popout,
                               {
@@ -117,7 +117,7 @@ function p(e) {
                                           size: u.Button.Sizes.NONE,
                                           children: (0, r.jsxs)(u.Text, {
                                               variant: I,
-                                              color: b,
+                                              color: T,
                                               children: ['+', n + 1]
                                           })
                                       })

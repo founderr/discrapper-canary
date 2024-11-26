@@ -21,8 +21,8 @@ var r = n(200651),
     E = n(27733),
     v = n(611480),
     I = n(981631),
-    b = n(474936),
-    T = n(388032),
+    T = n(474936),
+    b = n(388032),
     S = n(464545);
 function y(e) {
     var t, n, a;
@@ -32,7 +32,7 @@ function y(e) {
         C = (0, o.Wu)([m.Z], () => v.Wt.map((e) => m.Z.getStickerById(e)));
     i.useEffect(() => {
         p.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
-            type: b.cd.EMPTY_STICKER_PICKER_UPSELL,
+            type: T.cd.EMPTY_STICKER_PICKER_UPSELL,
             source: { section: I.jXE.EMPTY_STICKER_PICKER_UPSELL },
             location_stack: N
         });
@@ -40,7 +40,7 @@ function y(e) {
     let R = (0, f.N)(),
         O = (0, d.Ng)(),
         D = null != R || null != O,
-        L = (null == R ? void 0 : null === (t = R.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === b.Si.TIER_0;
+        L = (null == R ? void 0 : null === (t = R.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === T.Si.TIER_0;
     return (0, r.jsxs)('div', {
         className: s()(S.emptyState, y, { [S.unifyTrialUpsell]: D }),
         children: [
@@ -49,22 +49,22 @@ function y(e) {
                       discountOffer: O,
                       trialOffer: R,
                       onClose: A,
-                      type: b.cd.EMPTY_STICKER_PICKER_UPSELL,
-                      subscriptionTier: null !== (a = null == R ? void 0 : null === (n = R.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : b.Si.TIER_2,
-                      children: T.intl.string(T.t.FnNud3)
+                      type: T.cd.EMPTY_STICKER_PICKER_UPSELL,
+                      subscriptionTier: null !== (a = null == R ? void 0 : null === (n = R.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : T.Si.TIER_2,
+                      children: b.intl.string(b.t.FnNud3)
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(l.Heading, {
                               className: S.header,
                               variant: 'heading-xl/semibold',
-                              children: T.intl.string(T.t.HEm04O)
+                              children: b.intl.string(b.t.HEm04O)
                           }),
                           (0, r.jsx)(l.Text, {
                               className: S.subtitle,
                               color: 'header-secondary',
                               variant: 'text-md/normal',
-                              children: T.intl.string(T.t.FnNud3)
+                              children: b.intl.string(b.t.FnNud3)
                           }),
                           (0, r.jsx)('div', {
                               className: S.stickersRow,
@@ -85,7 +85,7 @@ function y(e) {
             !D &&
                 (0, r.jsx)(E.Z, {
                     analyticsSection: I.jXE.EXPRESSION_PICKER,
-                    buttonText: D ? (L ? T.intl.string(T.t.hz78hI) : T.intl.string(T.t['Gd/XHB'])) : void 0
+                    buttonText: D ? (L ? b.intl.string(b.t.hz78hI) : b.intl.string(b.t['Gd/XHB'])) : void 0
                 })
         ]
     });

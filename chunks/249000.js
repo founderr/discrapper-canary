@@ -182,7 +182,7 @@ class E extends (a = u.PureComponent) {
                     { current: r } = this.draggableRef,
                     { maxX: i, maxY: a, flipVertical: s, flipHorizontal: o, onDragStart: l, onDrag: u, onFlip: c, snapOrientation: d } = this.props,
                     { dragging: g, dragging: E, verticalOrientation: v, horizontalOrientation: I } = this.state,
-                    b = !1;
+                    T = !1;
                 if (
                     null == r ||
                     (!g &&
@@ -194,7 +194,7 @@ class E extends (a = u.PureComponent) {
                 )
                     return;
                 g = !0;
-                let { clientWidth: T, clientHeight: S } = r,
+                let { clientWidth: b, clientHeight: S } = r,
                     y = n - this._offsetY,
                     A = m(
                         _(
@@ -204,7 +204,7 @@ class E extends (a = u.PureComponent) {
                             },
                             i,
                             a,
-                            T,
+                            b,
                             S
                         )
                     );
@@ -216,12 +216,12 @@ class E extends (a = u.PureComponent) {
                         top: A.top,
                         left: A.left
                     };
-                2 === o && I !== this.state.horizontalOrientation && ((this._offsetX = T - this._offsetX), (b = !0)),
-                    2 === s && v !== this.state.verticalOrientation && ((this._offsetY = S - this._offsetY), (b = !0)),
+                2 === o && I !== this.state.horizontalOrientation && ((this._offsetX = b - this._offsetX), (T = !0)),
+                    2 === s && v !== this.state.verticalOrientation && ((this._offsetY = S - this._offsetY), (T = !0)),
                     this.setDOMPositions(A),
                     !E && (null == l || l(A, r)),
                     null == u || u(A, r),
-                    b && (null == c || c([v, I])),
+                    T && (null == c || c([v, I])),
                     this.setState({
                         dragging: g,
                         verticalOrientation: v,

@@ -15,18 +15,18 @@ var r = n(200651),
     d = n(970952);
 function f(e) {
     let { section: t, isSelected: n, width: a, height: f, className: _, selectable: p = !1, isSquircle: h, onFocus: m, onBlur: g, onMouseOver: E, onMouseLeave: v, ...I } = e,
-        [b, T] = i.useState(!1),
+        [T, b] = i.useState(!1),
         S = i.useCallback(() => {
-            T(!0), null == m || m();
+            b(!0), null == m || m();
         }, [m]),
         y = i.useCallback(() => {
-            T(!1), null == g || g();
+            b(!1), null == g || g();
         }, [g]),
         A = i.useCallback(() => {
-            T(!0), null == E || E();
+            b(!0), null == E || E();
         }, [E]),
         N = i.useCallback(() => {
-            T(!1), null == v || v();
+            b(!1), null == v || v();
         }, [v]),
         C = i.useMemo(() => {
             if (t.type === u.Qi.APPLICATION) {
@@ -53,7 +53,7 @@ function f(e) {
         onMouseLeave: N,
         children: (0, r.jsx)(o.ZP, {
             className: c.mask,
-            mask: h || (p && (n || b)) ? o.QS.SQUIRCLE : o.QS.AVATAR_DEFAULT,
+            mask: h || (p && (n || T)) ? o.QS.SQUIRCLE : o.QS.AVATAR_DEFAULT,
             width: a,
             height: f,
             children: (0, r.jsx)('img', {

@@ -1,6 +1,6 @@
 n.d(t, {
     cS: function () {
-        return b;
+        return T;
     },
     xV: function () {
         return A;
@@ -29,7 +29,7 @@ var f = n(603368),
 n(981631);
 var v = n(388032),
     I = n(319653);
-function b(e) {
+function T(e) {
     let { wildcardDescriptors: t, primaryColor: n } = e,
         a = t.filter((e) => e !== E.U6).join(', '),
         s = (0, o.useToken)(o.tokens.colors.BACKGROUND_FLOATING),
@@ -69,7 +69,7 @@ function b(e) {
         ]
     });
 }
-function T(e) {
+function b(e) {
     let { description: t, expanded: n } = e;
     return null == t
         ? null
@@ -172,9 +172,9 @@ function y(e) {
 }
 function A(e) {
     var t;
-    let { clan: n, bannerComponent: a, expanded: f, isMember: m = !1, traitsToHighlight: A, prioritizedGameIds: N, className: C, position: R, showBrandingFooter: O = !1, bannerUrl: D, onlyAnimateIconOnHover: L = !1, hasPendingJoinRequest: x = !1, atMaxMemberCapacity: w = !1, footer: M = null } = e,
+    let { clan: n, bannerComponent: a, expanded: f, isMember: m = !1, traitsToHighlight: A, prioritizedGameIds: N, className: C, position: R, showBrandingFooter: O = !1, bannerUrl: D, onlyAnimateIconOnHover: L = !1, hasPendingJoinRequest: x = !1, atMaxMemberCapacity: w = !1, footer: P = null } = e,
         {
-            tag: P,
+            tag: M,
             badge: k,
             branding: { primaryColor: U, secondaryColor: B },
             bannerHash: G,
@@ -283,7 +283,7 @@ function A(e) {
                                                         (0, r.jsx)(o.Text, {
                                                             variant: 'text-xs/medium',
                                                             color: 'text-primary',
-                                                            children: P
+                                                            children: M
                                                         })
                                                     ]
                                                 })
@@ -326,7 +326,7 @@ function A(e) {
                                         className: I.clanInfoItem,
                                         children: null !== (t = (0, E.mv)(n.playstyle)) && void 0 !== t ? t : v.intl.string(v.t.JijC4O)
                                     }),
-                                    (0, r.jsx)(b, {
+                                    (0, r.jsx)(T, {
                                         wildcardDescriptors: n.wildcardDescriptors,
                                         primaryColor: n.branding.primaryColor
                                     })
@@ -334,7 +334,7 @@ function A(e) {
                             })
                         ]
                     }),
-                    (0, r.jsx)(T, {
+                    (0, r.jsx)(b, {
                         description: n.description,
                         expanded: f
                     }),
@@ -375,7 +375,7 @@ function A(e) {
                     className: I.cardBrandingFooter,
                     style: { background: 'linear-gradient(90deg, '.concat(U, ', ').concat(B, ')') }
                 }),
-            M
+            P
         ]
     });
 }

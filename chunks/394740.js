@@ -22,8 +22,8 @@ var r = n(200651),
     E = n(409673),
     v = n(981631),
     I = n(474936),
-    b = n(388032),
-    T = n(944634),
+    T = n(388032),
+    b = n(944634),
     S = n(940675);
 function y(e) {
     var t;
@@ -40,12 +40,12 @@ function y(e) {
         ),
         { analyticsLocations: x } = (0, f.ZP)(d.Z.PREMIUM_UPSELL),
         { previewSound: w } = (0, g.Z)(A, null !== (t = null == N ? void 0 : N.id) && void 0 !== t ? t : null),
-        M = (0, E.K_)({
+        P = (0, E.K_)({
             sound: A,
             previewSound: w,
             tooltipPosition: 'left'
         }),
-        P = (0, o.ap)(C) ? n(537381) : n(341048);
+        M = (0, o.ap)(C) ? n(537381) : n(341048);
     i.useEffect(() => {
         h.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
             type: I.cd.SOUND_PICKER_SOUND_CLICKED,
@@ -62,37 +62,37 @@ function y(e) {
         h.default.track(v.rMx.PREMIUM_PROMOTION_OPENED, { location_section: v.jXE.SOUNDBOARD_SOUND_PICKER_UPSELL }), (0, _.z)(), y();
     }, [y]);
     return (0, r.jsxs)('div', {
-        className: s()(S.premiumPromo, T.container),
+        className: s()(S.premiumPromo, b.container),
         children: [
             (0, r.jsx)(l.Clickable, {
                 className: S.premiumPromoClose,
                 onClick: a,
-                children: b.intl.string(b.t.cpT0Cg)
+                children: T.intl.string(T.t.cpT0Cg)
             }),
             (0, r.jsx)('img', {
                 'aria-hidden': !0,
                 alt: '',
-                className: s()(S.premiumPromoImage, S.premiumPromoImageSmaller, T.image),
-                src: P
+                className: s()(S.premiumPromoImage, S.premiumPromoImageSmaller, b.image),
+                src: M
             }),
             (0, r.jsx)(l.Heading, {
                 variant: 'heading-lg/normal',
                 color: 'header-primary',
                 className: S.premiumPromoTitle,
-                children: b.intl.string(b.t['/a5qY2'])
+                children: T.intl.string(T.t['/a5qY2'])
             }),
             (0, r.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 className: S.premiumPromoDescription,
-                children: b.intl.format(b.t.lcSxhI, { onClick: k })
+                children: T.intl.format(T.t.lcSxhI, { onClick: k })
             }),
             (0, r.jsxs)('div', {
-                className: T.buttonContainer,
+                className: b.buttonContainer,
                 children: [
                     (0, r.jsx)('div', {
-                        className: T.previewButtonContainer,
-                        children: M
+                        className: b.previewButtonContainer,
+                        children: P
                     }),
                     (0, r.jsx)(p.Z, {
                         subscriptionTier: I.Si.TIER_2,

@@ -50,8 +50,8 @@ function g(e, t, n, r) {
             E,
             v,
             I,
-            b,
             T,
+            b,
             S,
             y,
             A,
@@ -63,13 +63,13 @@ function g(e, t, n, r) {
             L,
             x,
             w,
-            M,
             P,
+            M,
             k = 0,
             U = new a.Buf8(4),
             B = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
         if (!e || !e.state || !e.output || (!e.input && 0 !== e.avail_in)) return -2;
-        12 === (n = e.state).mode && (n.mode = 13), (p = e.next_out), (f = e.output), (E = e.avail_out), (_ = e.next_in), (d = e.input), (h = e.avail_in), (v = n.hold), (I = n.bits), (b = h), (T = E), (w = 0);
+        12 === (n = e.state).mode && (n.mode = 13), (p = e.next_out), (f = e.output), (E = e.avail_out), (_ = e.next_in), (d = e.input), (h = e.avail_in), (v = n.hold), (I = n.bits), (T = h), (b = E), (w = 0);
         r: for (;;)
             switch (n.mode) {
                 case 1:
@@ -262,7 +262,7 @@ function g(e, t, n, r) {
                         (n.lens[B[n.have++]] = 7 & v), (v >>>= 3), (I -= 3);
                     }
                     for (; n.have < 19; ) n.lens[B[n.have++]] = 0;
-                    if (((n.lencode = n.lendyn), (n.lenbits = 7), (M = { bits: n.lenbits }), (w = u(0, n.lens, 0, 19, n.lencode, 0, n.work, M)), (n.lenbits = M.bits), w)) {
+                    if (((n.lencode = n.lendyn), (n.lenbits = 7), (P = { bits: n.lenbits }), (w = u(0, n.lens, 0, 19, n.lencode, 0, n.work, P)), (n.lenbits = P.bits), w)) {
                         (e.msg = 'invalid code lengths set'), (n.mode = 30);
                         break;
                     }
@@ -276,7 +276,7 @@ function g(e, t, n, r) {
                         if (R < 16) (v >>>= N), (I -= N), (n.lens[n.have++] = R);
                         else {
                             if (16 === R) {
-                                for (P = N + 2; I < P; ) {
+                                for (M = N + 2; I < M; ) {
                                     if (0 === h) break r;
                                     h--, (v += d[_++] << I), (I += 8);
                                 }
@@ -286,13 +286,13 @@ function g(e, t, n, r) {
                                 }
                                 (x = n.lens[n.have - 1]), (S = 3 + (3 & v)), (v >>>= 2), (I -= 2);
                             } else if (17 === R) {
-                                for (P = N + 3; I < P; ) {
+                                for (M = N + 3; I < M; ) {
                                     if (0 === h) break r;
                                     h--, (v += d[_++] << I), (I += 8);
                                 }
                                 (v >>>= N), (I -= N), (x = 0), (S = 3 + (7 & v)), (v >>>= 3), (I -= 3);
                             } else {
-                                for (P = N + 7; I < P; ) {
+                                for (M = N + 7; I < M; ) {
                                     if (0 === h) break r;
                                     h--, (v += d[_++] << I), (I += 8);
                                 }
@@ -310,11 +310,11 @@ function g(e, t, n, r) {
                         (e.msg = 'invalid code -- missing end-of-block'), (n.mode = 30);
                         break;
                     }
-                    if (((n.lenbits = 9), (M = { bits: n.lenbits }), (w = u(1, n.lens, 0, n.nlen, n.lencode, 0, n.work, M)), (n.lenbits = M.bits), w)) {
+                    if (((n.lenbits = 9), (P = { bits: n.lenbits }), (w = u(1, n.lens, 0, n.nlen, n.lencode, 0, n.work, P)), (n.lenbits = P.bits), w)) {
                         (e.msg = 'invalid literal/lengths set'), (n.mode = 30);
                         break;
                     }
-                    if (((n.distbits = 6), (n.distcode = n.distdyn), (M = { bits: n.distbits }), (w = u(2, n.lens, n.nlen, n.ndist, n.distcode, 0, n.work, M)), (n.distbits = M.bits), w)) {
+                    if (((n.distbits = 6), (n.distcode = n.distdyn), (P = { bits: n.distbits }), (w = u(2, n.lens, n.nlen, n.ndist, n.distcode, 0, n.work, P)), (n.distbits = P.bits), w)) {
                         (e.msg = 'invalid distances set'), (n.mode = 30);
                         break;
                     }
@@ -323,7 +323,7 @@ function g(e, t, n, r) {
                     n.mode = 21;
                 case 21:
                     if (h >= 6 && E >= 258) {
-                        (e.next_out = p), (e.avail_out = E), (e.next_in = _), (e.avail_in = h), (n.hold = v), (n.bits = I), l(e, T), (p = e.next_out), (f = e.output), (E = e.avail_out), (_ = e.next_in), (d = e.input), (h = e.avail_in), (v = n.hold), (I = n.bits), 12 === n.mode && (n.back = -1);
+                        (e.next_out = p), (e.avail_out = E), (e.next_in = _), (e.avail_in = h), (n.hold = v), (n.bits = I), l(e, b), (p = e.next_out), (f = e.output), (E = e.avail_out), (_ = e.next_in), (d = e.input), (h = e.avail_in), (v = n.hold), (I = n.bits), 12 === n.mode && (n.back = -1);
                         break;
                     }
                     for (n.back = 0; (N = (k = n.lencode[v & ((1 << n.lenbits) - 1)]) >>> 24), (C = (k >>> 16) & 255), (R = 65535 & k), !(N <= I); ) {
@@ -352,7 +352,7 @@ function g(e, t, n, r) {
                     (n.extra = 15 & C), (n.mode = 22);
                 case 22:
                     if (n.extra) {
-                        for (P = n.extra; I < P; ) {
+                        for (M = n.extra; I < M; ) {
                             if (0 === h) break r;
                             h--, (v += d[_++] << I), (I += 8);
                         }
@@ -378,7 +378,7 @@ function g(e, t, n, r) {
                     (n.offset = R), (n.extra = 15 & C), (n.mode = 24);
                 case 24:
                     if (n.extra) {
-                        for (P = n.extra; I < P; ) {
+                        for (M = n.extra; I < M; ) {
                             if (0 === h) break r;
                             h--, (v += d[_++] << I), (I += 8);
                         }
@@ -391,7 +391,7 @@ function g(e, t, n, r) {
                     n.mode = 25;
                 case 25:
                     if (0 === E) break r;
-                    if (((S = T - E), n.offset > S)) {
+                    if (((S = b - E), n.offset > S)) {
                         if ((S = n.offset - S) > n.whave && n.sane) {
                             (e.msg = 'invalid distance too far back'), (n.mode = 30);
                             break;
@@ -413,7 +413,7 @@ function g(e, t, n, r) {
                             if (0 === h) break r;
                             h--, (v |= d[_++] << I), (I += 8);
                         }
-                        if (((T -= E), (e.total_out += T), (n.total += T), T && (e.adler = n.check = n.flags ? o(n.check, f, T, p - T) : s(n.check, f, T, p - T)), (T = E), (n.flags ? v : c(v)) !== n.check)) {
+                        if (((b -= E), (e.total_out += b), (n.total += b), b && (e.adler = n.check = n.flags ? o(n.check, f, b, p - b) : s(n.check, f, b, p - b)), (b = E), (n.flags ? v : c(v)) !== n.check)) {
                             (e.msg = 'incorrect data check'), (n.mode = 30);
                             break;
                         }
@@ -444,7 +444,7 @@ function g(e, t, n, r) {
                 default:
                     return -2;
             }
-        return ((e.next_out = p), (e.avail_out = E), (e.next_in = _), (e.avail_in = h), (n.hold = v), (n.bits = I), (n.wsize || (T !== e.avail_out && n.mode < 30 && (n.mode < 27 || 4 !== t))) && g(e, e.output, e.next_out, T - e.avail_out)) ? ((n.mode = 31), -4) : ((b -= e.avail_in), (T -= e.avail_out), (e.total_in += b), (e.total_out += T), (n.total += T), n.wrap && T && (e.adler = n.check = n.flags ? o(n.check, f, T, e.next_out - T) : s(n.check, f, T, e.next_out - T)), (e.data_type = n.bits + (n.last ? 64 : 0) + (12 === n.mode ? 128 : 0) + (20 === n.mode || 15 === n.mode ? 256 : 0)), ((0 === b && 0 === T) || 4 === t) && 0 === w && (w = -5), w);
+        return ((e.next_out = p), (e.avail_out = E), (e.next_in = _), (e.avail_in = h), (n.hold = v), (n.bits = I), (n.wsize || (b !== e.avail_out && n.mode < 30 && (n.mode < 27 || 4 !== t))) && g(e, e.output, e.next_out, b - e.avail_out)) ? ((n.mode = 31), -4) : ((T -= e.avail_in), (b -= e.avail_out), (e.total_in += T), (e.total_out += b), (n.total += b), n.wrap && b && (e.adler = n.check = n.flags ? o(n.check, f, b, e.next_out - b) : s(n.check, f, b, e.next_out - b)), (e.data_type = n.bits + (n.last ? 64 : 0) + (12 === n.mode ? 128 : 0) + (20 === n.mode || 15 === n.mode ? 256 : 0)), ((0 === T && 0 === b) || 4 === t) && 0 === w && (w = -5), w);
     }),
     (t.inflateEnd = function (e) {
         if (!e || !e.state) return -2;

@@ -3,17 +3,17 @@ r.d(t, {
         return _;
     }
 });
-var n = r(394798),
-    a = r(696486);
+var a = r(394798),
+    n = r(696486);
 class _ {
     constructor(e = {}) {
-        (this._traceId = e.traceId || (0, n.DM)()), (this._spanId = e.spanId || (0, n.DM)().substring(16));
+        (this._traceId = e.traceId || (0, a.DM)()), (this._spanId = e.spanId || (0, a.DM)().substring(16));
     }
     spanContext() {
         return {
             spanId: this._spanId,
             traceId: this._traceId,
-            traceFlags: a.ve
+            traceFlags: n.ve
         };
     }
     end(e) {}

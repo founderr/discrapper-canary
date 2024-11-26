@@ -15,12 +15,12 @@ var r = n(120356),
 function d(e) {
     var t;
     let { guildId: n, emojiId: r, emojiName: d, className: f } = e,
-        p = (0, a.Z)(n, r);
-    return null != p || null != d
+        _ = (0, a.Z)(n, r);
+    return null != _ || null != d
         ? (0, i.jsx)(o.Z, {
-              emojiId: null == p ? void 0 : p.id,
-              emojiName: null != d ? d : null == p ? void 0 : p.name,
-              animated: null !== (t = null == p ? void 0 : p.animated) && void 0 !== t && t,
+              emojiId: null == _ ? void 0 : _.id,
+              emojiName: null != d ? d : null == _ ? void 0 : _.name,
+              animated: null !== (t = null == _ ? void 0 : _.animated) && void 0 !== t && t,
               className: l()(c.emojiIcon, f)
           })
         : (0, i.jsx)(s.Z, {

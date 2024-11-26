@@ -30,8 +30,8 @@ var r = n(806853),
     E = n(873396),
     v = n(218465),
     I = n(238824),
-    b = n(772629),
-    T = n(435178),
+    T = n(772629),
+    b = n(435178),
     S = n(473626),
     y = n(667916),
     A = n(935259),
@@ -43,8 +43,8 @@ var r = n(806853),
     L = n(606737),
     x = n(667490),
     w = n(97794),
-    M = n(208874),
-    P = n(769491),
+    P = n(208874),
+    M = n(769491),
     k = n(697892),
     U = n(770003),
     B = n(661763),
@@ -75,8 +75,8 @@ H = {
     'ja-JP': E.Z,
     'ko-KR': v.Z,
     'lt-LT': I.Z,
-    'lv-LV': b.Z,
-    'nb-NO': T.Z,
+    'lv-LV': T.Z,
+    'nb-NO': b.Z,
     'nl-NL': S.Z,
     'pl-PL': y.Z,
     'pt-BR': A.Z,
@@ -88,8 +88,8 @@ H = {
     'sr-SP': L.Z,
     'sv-SE': x.Z,
     'tr-TR': w.Z,
-    'uk-UA': M.Z,
-    'zh-CN': P.Z,
+    'uk-UA': P.Z,
+    'zh-CN': M.Z,
     'zh-TW': k.Z
 };
 let Y = new WeakMap();
@@ -358,8 +358,8 @@ function $(e, t, n) {
     let E = (0, B.PK)(g),
         v = (0, Z.useRef)(!1),
         I = (0, Z.useRef)(!1),
-        b = (0, Z.useRef)(null),
-        { pressProps: T, isPressed: S } = (0, V.r7)({
+        T = (0, Z.useRef)(null),
+        { pressProps: b, isPressed: S } = (0, V.r7)({
             shouldCancelOnPointerExit: 'anchorDate' in t && !!t.anchorDate,
             preventFocusOnPress: !0,
             isDisabled: !f || t.isReadOnly,
@@ -380,19 +380,19 @@ function $(e, t, n) {
                         }
                     }
                     let n = () => {
-                        t.setDragging(!0), (b.current = null), t.selectDate(r), t.setFocusedDate(r), (v.current = !0);
+                        t.setDragging(!0), (T.current = null), t.selectDate(r), t.setFocusedDate(r), (v.current = !0);
                     };
-                    'touch' === e.pointerType ? (b.current = setTimeout(n, 200)) : n();
+                    'touch' === e.pointerType ? (T.current = setTimeout(n, 200)) : n();
                 }
             },
             onPressEnd() {
-                (I.current = !1), (v.current = !1), clearTimeout(b.current), (b.current = null);
+                (I.current = !1), (v.current = !1), clearTimeout(T.current), (T.current = null);
             },
             onPress() {
                 !('anchorDate' in t) && !t.isReadOnly && (t.selectDate(r), t.setFocusedDate(r));
             },
             onPressUp(e) {
-                if (!t.isReadOnly && ('anchorDate' in t && b.current && (t.selectDate(r), t.setFocusedDate(r)), 'anchorDate' in t)) {
+                if (!t.isReadOnly && ('anchorDate' in t && T.current && (t.selectDate(r), t.setFocusedDate(r)), 'anchorDate' in t)) {
                     if (I.current) t.setAnchorDate(r);
                     else if (t.anchorDate && !v.current) t.selectDate(r), t.setFocusedDate(r);
                     else if ('keyboard' !== e.pointerType || t.anchorDate) 'virtual' === e.pointerType && (t.selectDate(r), t.setFocusedDate(r));
@@ -422,7 +422,7 @@ function $(e, t, n) {
             'aria-selected': u || null,
             'aria-invalid': _ || null
         },
-        buttonProps: (0, B.dG)(T, {
+        buttonProps: (0, B.dG)(b, {
             onFocus() {
                 !i && t.setFocusedDate(r);
             },

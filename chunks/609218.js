@@ -24,8 +24,8 @@ var r,
     E = n(639119),
     v = n(197115),
     I = n(302945),
-    b = n(474936),
-    T = n(981631),
+    T = n(474936),
+    b = n(981631),
     S = n(388032),
     y = n(638916);
 function A(e) {
@@ -36,11 +36,11 @@ function A(e) {
         !L && o && d.MH();
     }, [L, o]),
         s.useEffect(() => {
-            h.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, N), null == R || R();
+            h.default.track(b.rMx.PREMIUM_UPSELL_VIEWED, N), null == R || R();
         }, [R, N]);
     let x = D.length > 1 && o,
         w = (0, E.N)(),
-        M = s.useCallback(() => {
+        P = s.useCallback(() => {
             var e;
             return null !== (e = (0, m.fr)(w)) && void 0 !== e ? e : S.intl.string(S.t.pj0XBA);
         }, [w]);
@@ -91,15 +91,15 @@ function A(e) {
                                 color: c.Button.Colors.CUSTOM,
                                 look: c.Button.Looks.LINK,
                                 onClick: () => {
-                                    h.default.track(T.rMx.PREMIUM_PROMOTION_OPENED, {
+                                    h.default.track(b.rMx.PREMIUM_PROMOTION_OPENED, {
                                         location_section: A,
-                                        location_object: T.qAy.NAVIGATION_LINK
+                                        location_object: b.qAy.NAVIGATION_LINK
                                     }),
                                         null == O || O(),
                                         (0, _.Z)(),
                                         C(),
                                         (0, f.xf)(),
-                                        (0, p.uL)(T.Z5c.APPLICATION_STORE);
+                                        (0, p.uL)(b.Z5c.APPLICATION_STORE);
                                 },
                                 children: S.intl.string(S.t.ZnqyZ2)
                             }),
@@ -107,15 +107,15 @@ function A(e) {
                                 showGradient: !0,
                                 premiumModalAnalyticsLocation: {
                                     section: A,
-                                    object: T.qAy.BUTTON_CTA
+                                    object: b.qAy.BUTTON_CTA
                                 },
-                                subscriptionTier: b.Si.TIER_2,
+                                subscriptionTier: T.Si.TIER_2,
                                 size: c.Button.Sizes.SMALL,
                                 color: c.Button.Colors.CUSTOM,
                                 onClick: () => {
                                     C();
                                 },
-                                buttonText: M()
+                                buttonText: P()
                             })
                         ]
                     })

@@ -58,9 +58,9 @@ function v(e) {
 function I(e) {
     let { checked: t, onClick: n, id: a = 'burst-reaction-toggle-button' } = e,
         I = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        b = _.default.getCurrentUser(),
-        T = null == b || (0, p.I5)(b) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
-        [S, y] = (0, f.US)(T),
+        T = _.default.getCurrentUser(),
+        b = null == T || (0, p.I5)(T) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
+        [S, y] = (0, f.US)(b),
         [A, N] = i.useState(!1),
         [C, R] = (0, c.useSpring)(() => ({})),
         O = (0, o.animated)(c.SuperReactionIcon);

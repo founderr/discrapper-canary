@@ -24,8 +24,8 @@ var r = n(302454),
     E = n(592125),
     v = n(430824),
     I = n(20303),
-    b = n(902676),
-    T = n(375954),
+    T = n(902676),
+    b = n(375954),
     S = n(699516),
     y = n(944486),
     A = n(626135),
@@ -40,8 +40,8 @@ function O(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         S = arguments.length > 3 ? arguments[3] : void 0,
         { trusted: y, onClick: R, onConfirm: O, onCancel: D, shouldConfirm: L, messageId: x, channelId: w } = e,
-        M = i().sanitizeUrl(e.href);
-    if (null == M) {
+        P = i().sanitizeUrl(e.href);
+    if (null == P) {
         null != t && t.preventDefault(),
             a.Z.show({
                 title: C.intl.string(C.t.x87gam),
@@ -51,11 +51,11 @@ function O(e, t) {
             });
         return;
     }
-    let P = M;
+    let M = P;
     try {
-        decodeURI(M);
+        decodeURI(P);
     } catch (e) {
-        P = encodeURI(M);
+        M = encodeURI(P);
     }
     let k = null,
         U = !1,
@@ -64,7 +64,7 @@ function O(e, t) {
         Z = null;
     if (null != x && null != w) {
         var F, V, j;
-        let e = T.Z.getMessage(w, x),
+        let e = b.Z.getMessage(w, x),
             t = E.Z.getBasicChannel(w);
         k = null !== (j = null == t ? void 0 : t.guild_id) && void 0 !== j ? j : null;
         let n = v.Z.getGuild(k),
@@ -81,21 +81,21 @@ function O(e, t) {
             null != t &&
             t.hasFeature(N.oNc.DISCOVERABLE) &&
             A.default.track(N.rMx.URL_CLICKED, {
-                url_domain: (0, b.F)(P),
+                url_domain: (0, T.F)(M),
                 guild_id: t.id,
                 channel_id: e.id
             }),
             (0, c.Z)(w) &&
                 A.default.track(N.rMx.CHANGE_LOG_CTA_CLICKED, {
                     cta_type: 'inline_link',
-                    target: P
+                    target: M
                 });
     }
-    if ((_.Z.trackLinkClicked(P), null != R)) {
+    if ((_.Z.trackLinkClicked(M), null != R)) {
         if (R(t)) return;
     } else {
         let { default: e } = n(315263),
-            i = e(P, {
+            i = e(M, {
                 skipExtensionCheck: void 0,
                 analyticsLocations: r
             });
@@ -116,25 +116,25 @@ function O(e, t) {
                 O();
                 return;
             }
-            (0, o.Z)(P);
+            (0, o.Z)(M);
         },
         Y = null != D ? D : () => {};
-    if (null !== u.Z.isBlockedDomain(P)) {
-        null == t || t.preventDefault(), l.Z.show(P);
+    if (null !== u.Z.isBlockedDomain(M)) {
+        null == t || t.preventDefault(), l.Z.show(M);
         return;
     }
-    if (null != (0, g.v)(P)) {
-        null == t || t.preventDefault(), m.Z.show(P);
+    if (null != (0, g.v)(M)) {
+        null == t || t.preventDefault(), m.Z.show(M);
         return;
     }
-    if ((0, f.I)(P)) {
-        null == t || t.preventDefault(), d.Z.show(P);
+    if ((0, f.I)(M)) {
+        null == t || t.preventDefault(), d.Z.show(M);
         return;
     }
     let W = 'function' == typeof y ? y() : y,
-        K = (0, b.E)(P),
+        K = (0, T.E)(M),
         z = !('http:' === K || 'https:' === K);
-    if ((!z && (W || I.Z.isTrustedDomain(P))) || (z && I.Z.isTrustedProtocol(P))) {
+    if ((!z && (W || I.Z.isTrustedDomain(M))) || (z && I.Z.isTrustedProtocol(M))) {
         null == t || (null != L && L)
             ? H()
             : U &&
@@ -149,7 +149,7 @@ function O(e, t) {
     }
     if ((null != t && t.preventDefault(), z))
         h.Z.show({
-            url: P,
+            url: M,
             trustUrl: s.u,
             onConfirm: H,
             onCancel: Y,
@@ -157,8 +157,8 @@ function O(e, t) {
             contextKey: S
         });
     else {
-        let e = (0, p.yw)(P),
-            t = null != e ? e.displayTarget : P;
+        let e = (0, p.yw)(M),
+            t = null != e ? e.displayTarget : M;
         h.Z.show({
             url: t,
             trustUrl: s.o,

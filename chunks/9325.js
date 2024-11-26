@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return I;
     }
 });
 var i = n(200651),
@@ -13,15 +13,15 @@ var i = n(200651),
     u = n(306453),
     d = n(108427),
     h = n(314897),
-    p = n(626135),
-    g = n(587444),
+    g = n(626135),
+    p = n(587444),
     m = n(981631),
     f = n(58346),
-    x = n(388032),
-    _ = n(232186);
+    _ = n(388032),
+    x = n(232186);
 function E(e, t, n) {
     e.preventDefault(),
-        p.default.track(m.rMx.GUILD_TEMPLATE_APP_OPENED, {
+        g.default.track(m.rMx.GUILD_TEMPLATE_APP_OPENED, {
             guild_template_code: t,
             guild_template_name: n.name,
             guild_template_description: n.description,
@@ -31,7 +31,7 @@ function E(e, t, n) {
         r = null != i ? i : h.default.getId();
     c.Z.openMobileApp(n.state === f.Rj.RESOLVED ? t : void 0, r);
 }
-function v(e) {
+function I(e) {
     let { code: t } = e,
         n = (0, s.e7)([o.Z], () => o.Z.getGuildTemplate(t));
     return (r.useEffect(() => {
@@ -48,14 +48,14 @@ function v(e) {
                     }),
                     (0, i.jsx)(a.zx, {
                         onClick: (e) => E(e, t, n),
-                        className: _.marginTop20,
-                        children: x.intl.string(x.t['a3Gl+f'])
+                        className: x.marginTop20,
+                        children: _.intl.string(_.t['a3Gl+f'])
                     })
                 ]
             })
-          : (0, i.jsx)(g.Z, {
-                text: x.intl.string(x.t['e/rZ2t']),
-                buttonCta: x.intl.string(x.t.HAvYn5),
+          : (0, i.jsx)(p.Z, {
+                text: _.intl.string(_.t['e/rZ2t']),
+                buttonCta: _.intl.string(_.t.HAvYn5),
                 onClick: (e) => E(e, t, n)
             });
 }

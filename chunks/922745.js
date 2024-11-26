@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return T;
     },
     r: function () {
         return I;
@@ -68,8 +68,8 @@ function I(e) {
         ]
     });
 }
-function b(e) {
-    let { children: t, idle: n, onJumpToChannel: i, onHide: s, backgroundKey: o, onActive: u, onForceIdle: d, renderBottomLeftControls: f, renderBottomRightControls: p, screenMessage: h, hideControls: g = !1, className: E, innerClassName: b, ...T } = e;
+function T(e) {
+    let { children: t, idle: n, onJumpToChannel: i, onHide: s, backgroundKey: o, onActive: u, onForceIdle: d, renderBottomLeftControls: f, renderBottomRightControls: p, screenMessage: h, hideControls: g = !1, className: E, innerClassName: T, ...b } = e;
     return (0, r.jsxs)('div', {
         onMouseMove: u,
         onMouseDown: u,
@@ -81,7 +81,7 @@ function b(e) {
                 children: (0, r.jsx)(
                     _.B,
                     {
-                        className: b,
+                        className: T,
                         children: t
                     },
                     o
@@ -103,7 +103,7 @@ function b(e) {
                                 idle: n,
                                 onJumpToChannel: i,
                                 onHide: s,
-                                ...T
+                                ...b
                             })
                         }),
                         (0, r.jsxs)('div', {

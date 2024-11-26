@@ -14,8 +14,8 @@ var o,
     E = n(430824),
     v = n(131951),
     I = n(496675),
-    b = n(19780),
-    T = n(944486),
+    T = n(19780),
+    b = n(944486),
     S = n(979651),
     y = n(981631),
     A = n(70722);
@@ -62,12 +62,12 @@ function w(e) {
             viewerIds: i
         });
 }
-function M(e, t) {
+function P(e, t) {
     let n = g.Z.getBasicChannel(t);
     return e === A.lo.CALL || (null != n && I.Z.canBasicChannel(y.S7T.VIEW_CHANNEL, n));
 }
-function P(e) {
-    if (M(e.streamType, e.channelId)) return !0;
+function M(e) {
+    if (P(e.streamType, e.channelId)) return !0;
     let t = g.Z.getBasicChannel(e.channelId);
     return null != t && (0, _.p9)(t, S.Z, E.Z, I.Z, c.Z)[0];
 }
@@ -103,7 +103,7 @@ class k extends (o = l.ZP.PersistedStore) {
         return null !== (t = this.getActiveStreamForStreamKey(n)) && void 0 !== t ? t : null;
     }
     getCurrentUserActiveStream() {
-        let e = T.Z.getVoiceChannelId(),
+        let e = b.Z.getVoiceChannelId(),
             t = g.Z.getChannel(e);
         return null == t ? null : this.getActiveStreamForUser(m.default.getId(), t.getGuildId());
     }
@@ -114,7 +114,7 @@ class k extends (o = l.ZP.PersistedStore) {
     }
     getStreamerActiveStreamMetadata() {
         var e;
-        let t = T.Z.getVoiceChannelId(),
+        let t = b.Z.getVoiceChannelId(),
             n = g.Z.getChannel(t);
         if (null == n) return null;
         let r = this.getActiveStreamForUser(m.default.getId(), n.getGuildId());
@@ -133,29 +133,29 @@ class k extends (o = l.ZP.PersistedStore) {
         var t;
         if (!(0, p.Z)(v.Z)) return null;
         let n = i[e];
-        return null == n ? null : null !== (t = Object.values(n).find((e) => P(e))) && void 0 !== t ? t : null;
+        return null == n ? null : null !== (t = Object.values(n).find((e) => M(e))) && void 0 !== t ? t : null;
     }
     getAnyDiscoverableStreamForUser(e) {
         var t;
         if (!(0, p.Z)(v.Z)) return null;
         let n = i[e];
-        return null == n ? null : null !== (t = Object.values(n).find((e) => P(e) && !1 !== e.discoverable)) && void 0 !== t ? t : null;
+        return null == n ? null : null !== (t = Object.values(n).find((e) => M(e) && !1 !== e.discoverable)) && void 0 !== t ? t : null;
     }
     getStreamForUser(e, t) {
         var n;
         if (!(0, p.Z)(v.Z)) return null;
         let r = null === (n = i[e]) || void 0 === n ? void 0 : n[null != t ? t : y.kod];
-        return null != r && P(r) ? r : null;
+        return null != r && M(r) ? r : null;
     }
     getRTCStream(e) {
         var t;
         return (0, p.Z)(v.Z) ? (null !== (t = a[e]) && void 0 !== t ? t : null) : null;
     }
     getAllApplicationStreams() {
-        return (0, p.Z)(v.Z) ? x().filter((e) => null != e && M(e.streamType, e.channelId)) : [];
+        return (0, p.Z)(v.Z) ? x().filter((e) => null != e && P(e.streamType, e.channelId)) : [];
     }
     getAllApplicationStreamsForChannel(e) {
-        return (0, p.Z)(v.Z) ? x().filter((t) => null != t && t.channelId === e && M(t.streamType, t.channelId)) : [];
+        return (0, p.Z)(v.Z) ? x().filter((t) => null != t && t.channelId === e && P(t.streamType, t.channelId)) : [];
     }
     getViewerIds(e) {
         if (!(0, p.Z)(v.Z)) return [];
@@ -212,7 +212,7 @@ N(k, 'displayName', 'ApplicationStreamingStore'),
                 }
                 {
                     let t = m.default.getSessionId();
-                    return n === m.default.getId() && s !== t && null != b.Z.getChannelId()
+                    return n === m.default.getId() && s !== t && null != T.Z.getChannelId()
                         ? e
                         : (function (e, t) {
                               var n;

@@ -61,13 +61,13 @@ function I(e, t) {
     if (null == i) return !1;
     delete i[t], o().isEmpty(i) && delete r[e];
 }
-function b() {
+function T() {
     let e = f.default.getId();
     if (null == e || p.Z.totalUnavailableGuilds > 0) return;
     let t = E(e);
     for (let e in t) null == _.Z.getChannel(e) && delete t[e];
 }
-function T(e) {
+function b(e) {
     let {
             channel: { id: t }
         } = e,
@@ -160,7 +160,7 @@ h(S, 'displayName', 'DraftStore'),
     (t.Z = new S(u.Z, {
         CONNECTION_OPEN: function () {
             let e = f.default.getId();
-            return !(e in g) && (g[e] = {}), b(), !1;
+            return !(e in g) && (g[e] = {}), T(), !1;
         },
         LOGOUT: function (e) {
             !e.isSwitchingAccount && (g = {});
@@ -169,10 +169,10 @@ h(S, 'displayName', 'DraftStore'),
             e.userId in g && delete g[e.userId];
         },
         GUILD_DELETE: function () {
-            return b(), !1;
+            return T(), !1;
         },
-        CHANNEL_DELETE: T,
-        THREAD_DELETE: T,
+        CHANNEL_DELETE: b,
+        THREAD_DELETE: b,
         THREAD_CREATE: function (e) {
             let { channel: t } = e,
                 n = f.default.getId();

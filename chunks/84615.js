@@ -43,7 +43,7 @@ let I = (0, d.U)((e) => ({
             });
         })
 }));
-function b(e) {
+function T(e) {
     let { item: t } = e,
         n = s.useRef(null);
     return (
@@ -85,7 +85,7 @@ function b(e) {
         })
     );
 }
-let T = {
+let b = {
         enter: E.enter,
         enterActive: E.enterActive,
         enterDone: E.enterDone,
@@ -103,7 +103,7 @@ let T = {
     };
 function y() {
     let { reducedMotion: e } = s.useContext(p.AccessibilityPreferencesContext),
-        t = e.enabled ? S : T,
+        t = e.enabled ? S : b,
         n = I((e) => e.fullScreenLayers);
     return (0, a.jsx)(u.Z, {
         children: n.map((e) =>
@@ -127,7 +127,7 @@ function y() {
                         });
                     },
                     unmountOnExit: !0,
-                    children: (0, a.jsx)(b, { item: e })
+                    children: (0, a.jsx)(T, { item: e })
                 },
                 e.key
             )

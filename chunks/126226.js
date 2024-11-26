@@ -22,8 +22,8 @@ var i = n(693789),
     E = n(226951),
     v = n(877565),
     I = n(590921),
-    b = n(665692),
-    T = n(689079),
+    T = n(665692),
+    b = n(689079),
     S = n(388032),
     y = n(858567);
 let A = { results: { entries: [] } };
@@ -34,7 +34,7 @@ function N() {
     });
 }
 let C = {
-    sentinel: b.GI,
+    sentinel: T.GI,
     stores: [f.Z, u.ZP, g.Z],
     matches: (e, t, n, r, i) => i.commands !== I.L8.DISABLED && null == f.Z.getActiveCommand(e.id) && (r || i.commands !== I.L8.OLD_BUILT_INS),
     queryResults(e, t, n, r, i) {
@@ -51,7 +51,7 @@ let C = {
                     },
                     I.AQ
                 ),
-                o = l.Tm[T.bi.BUILT_IN];
+                o = l.Tm[b.bi.BUILT_IN];
             return 0 === a.length
                 ? A
                 : {
@@ -115,7 +115,7 @@ let C = {
             onClick: u,
             titleWithQuery: S.t.HFRoZW,
             titleWithoutQuery: S.intl.string(S.t['0hKkS0']),
-            getQuery: (e) => ''.concat(b.GI).concat(e),
+            getQuery: (e) => ''.concat(T.GI).concat(e),
             Component: d ? m.ZP.Command : m.ZP.NewCommand,
             getProps: (e) => {
                 let { command: t, section: n } = e;
@@ -157,7 +157,7 @@ let C = {
         if (i.commands === I.L8.OLD_BUILT_INS)
             i.insertText(
                 (function (e) {
-                    return ''.concat(b.GI).concat(e.displayName);
+                    return ''.concat(T.GI).concat(e.displayName);
                 })(u)
             );
         else {

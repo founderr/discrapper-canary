@@ -30,14 +30,14 @@ function v(e, t, n) {
         e
     );
 }
-function S(e) {
+function N(e) {
     let t = E.default.getUser(e);
     return {
         user: t,
         usernameLower: null != t ? t.username.toLowerCase() : null
     };
 }
-function N(e) {
+function S(e) {
     return {
         status: f.Z.getStatus(e),
         isMobile: f.Z.isMobileOnline(e),
@@ -60,7 +60,7 @@ function T(e) {
         }
     );
 }
-class A extends c.Z {
+class x extends c.Z {
     get comparator() {
         var e, t, n, i, r;
         return [this.type, null != this.giftIntentType ? 0 : 1, null !== (r = null !== (i = null === (e = this.nickname) || void 0 === e ? void 0 : e.toLowerCase()) && void 0 !== i ? i : null === (n = this.user) || void 0 === n ? void 0 : null === (t = n.globalName) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== r ? r : this.usernameLower];
@@ -74,12 +74,12 @@ class b {
         let e = l().map(
                 _.Z.getRelationships(),
                 (e, t) =>
-                    new A({
+                    new x({
                         key: t,
                         type: e,
                         nickname: _.Z.getNickname(t),
-                        ...S(t),
                         ...N(t),
+                        ...S(t),
                         ...T(t),
                         spam: (0, h.A)({ location: 'friend-store' }) && _.Z.isSpam(t),
                         ignoredUser: _.Z.isIgnored(t),
@@ -89,12 +89,12 @@ class b {
             t = l().map(
                 d.Z.getSuggestions(),
                 (e) =>
-                    new A({
+                    new x({
                         key: e.key,
                         type: 99,
                         nickname: e.name,
-                        ...S(e.key),
                         ...N(e.key),
+                        ...S(e.key),
                         ...T(e.key)
                     })
             );
@@ -163,32 +163,32 @@ class b {
         v(this, '_rows', void 0), (this._rows = e);
     }
 }
-let x = !0,
+let A = !0,
     Z = !1,
     L = I.pJs.ONLINE,
     y = new b(),
-    O = !0,
-    R = !1;
-function P() {
+    P = !0,
+    O = !1;
+function R() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    x && (e || (L !== I.pJs.ONLINE && L !== I.pJs.ADD_FRIEND)) && !Z && ((x = !1), (Z = !0), o.Z.fetchRelationships());
+    A && (e || (L !== I.pJs.ONLINE && L !== I.pJs.ADD_FRIEND)) && !Z && ((A = !1), (Z = !0), o.Z.fetchRelationships());
 }
 function j() {
-    if (((x = !0), O ? (Z = !1) : P(), (y = y.reset()), R)) return;
+    if (((A = !0), P ? (Z = !1) : R(), (y = y.reset()), O)) return;
     let e = y.getRelationshipCounts();
     L = 0 === e[I.OGo.FRIEND] ? (0 !== e[I.OGo.PENDING_INCOMING] ? I.pJs.PENDING : I.pJs.ADD_FRIEND) : I.pJs.ONLINE;
 }
 function D() {
-    y = O ? new b() : y.reset();
+    y = P ? new b() : y.reset();
 }
 function M(e) {
     return function () {
-        return !O && !!y.update(e) && ((y = y.clone()), !0);
+        return !P && !!y.update(e) && ((y = y.clone()), !0);
     };
 }
 class w extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, f.Z, E.default, g.Z, p.ZP, m.Z, d.Z), this.syncWith([_.Z], D), this.syncWith([d.Z], D), this.syncWith([u.Z], D), this.syncWith([E.default], M(S)), this.syncWith([f.Z, m.Z], M(N)), j();
+        this.waitFor(_.Z, f.Z, E.default, g.Z, p.ZP, m.Z, d.Z), this.syncWith([_.Z], D), this.syncWith([d.Z], D), this.syncWith([u.Z], D), this.syncWith([E.default], M(N)), this.syncWith([f.Z, m.Z], M(S)), j();
     }
     getState() {
         return {
@@ -205,23 +205,23 @@ v(w, 'displayName', 'FriendsStore'),
             j();
         },
         FRIENDS_SET_SECTION: function (e) {
-            (L = e.section), P();
+            (L = e.section), R();
         },
         CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
-            return (O = null != t), D(), !O;
+            return (P = null != t), D(), !P;
         },
         LOAD_RELATIONSHIPS_SUCCESS: function () {
             Z = !1;
         },
         LOAD_RELATIONSHIPS_FAILURE: function () {
-            (x = !0), (Z = !0);
+            (A = !0), (Z = !0);
         },
         DRAWER_SELECT_TAB: function (e) {
             let { tab: t } = e;
-            return (O = t !== I.cII.FRIENDS), D(), !O;
+            return (P = t !== I.cII.FRIENDS), D(), !P;
         },
         FRIENDS_SET_INITIAL_SECTION: function (e) {
-            (L = e.section), (R = !0);
+            (L = e.section), (O = !0);
         }
     }));

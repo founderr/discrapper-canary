@@ -220,7 +220,7 @@ t.Z = function (e) {
     let t = (0, u.ZP)(),
         [n, a] = i.useState(null),
         { className: c, guild: d, hideHeading: _, hideTier0: I } = e;
-    function b() {
+    function T() {
         a(null);
     }
     return (0, r.jsxs)('div', {
@@ -288,9 +288,9 @@ t.Z = function (e) {
                                                           children: (0, r.jsx)(l.Clickable, {
                                                               className: s()(h.tableRowHeading, h.tableCell, h.tableCellInner),
                                                               onFocus: c,
-                                                              onBlur: b,
+                                                              onBlur: T,
                                                               onMouseEnter: c,
-                                                              onMouseLeave: b,
+                                                              onMouseLeave: T,
                                                               children: (0, r.jsx)(l.Popout, {
                                                                   align: 'center',
                                                                   disablePointerEvents: !0,

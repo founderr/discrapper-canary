@@ -14,7 +14,7 @@ function r(e) {
 }
 n.d(t, {
     U2: function () {
-        return x;
+        return _;
     },
     wz: function () {
         return f;
@@ -75,7 +75,7 @@ var d = {
         appidExclude: u(s),
         credProps: u(s)
     },
-    p = {
+    g = {
         appid: u(s),
         appidExclude: u(s),
         credProps: u(s)
@@ -108,8 +108,8 @@ c({
             return (null == (t = e.getTransports) ? void 0 : t.call(e)) || [];
         })
     }),
-    o(p, (e) => e.getClientExtensionResults());
-var g = {
+    o(g, (e) => e.getClientExtensionResults());
+var p = {
         mediation: u(s),
         publicKey: c({
             challenge: c(l),
@@ -132,12 +132,12 @@ var g = {
             signature: c(l),
             userHandle: c(l)
         }),
-        clientExtensionResults: o(p, (e) => e.getClientExtensionResults())
+        clientExtensionResults: o(g, (e) => e.getClientExtensionResults())
     };
 function f(e) {
-    return a(i, g, e);
+    return a(i, p, e);
 }
-async function x(e) {
+async function _(e) {
     let t = await navigator.credentials.get(e);
     return (t.toJSON = () => a(r, m, t)), t;
 }

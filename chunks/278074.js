@@ -157,10 +157,10 @@ function v(e) {
 function I(e) {
     return 'string' == typeof e;
 }
-function b(e) {
+function T(e) {
     return 'bigint' == typeof e;
 }
-let T = d(
+let b = d(
         g(function (e) {
             return !0;
         })
@@ -214,26 +214,26 @@ let T = d(
     L = () => g((e) => v(e) && Number.isFinite(e)),
     x = () => g((e) => v(e) && e > 0),
     w = () => g((e) => v(e) && e < 0),
-    M = (e) =>
+    P = (e) =>
         Object.assign(d(e), {
-            between: (t, n) => M(h(e, A(t, n))),
-            lt: (t) => M(h(e, N(t))),
-            gt: (t) => M(h(e, C(t))),
-            lte: (t) => M(h(e, R(t))),
-            gte: (t) => M(h(e, O(t))),
-            int: () => M(h(e, D())),
-            finite: () => M(h(e, L())),
-            positive: () => M(h(e, x())),
-            negative: () => M(h(e, w()))
+            between: (t, n) => P(h(e, A(t, n))),
+            lt: (t) => P(h(e, N(t))),
+            gt: (t) => P(h(e, C(t))),
+            lte: (t) => P(h(e, R(t))),
+            gte: (t) => P(h(e, O(t))),
+            int: () => P(h(e, D())),
+            finite: () => P(h(e, L())),
+            positive: () => P(h(e, x())),
+            negative: () => P(h(e, w()))
         }),
-    P = M(g(v)),
-    k = (e, t) => g((n) => b(n) && e <= n && t >= n),
-    U = (e) => g((t) => b(t) && t < e),
-    B = (e) => g((t) => b(t) && t > e),
-    G = (e) => g((t) => b(t) && t <= e),
-    Z = (e) => g((t) => b(t) && t >= e),
-    F = () => g((e) => b(e) && e > 0),
-    V = () => g((e) => b(e) && e < 0),
+    M = P(g(v)),
+    k = (e, t) => g((n) => T(n) && e <= n && t >= n),
+    U = (e) => g((t) => T(t) && t < e),
+    B = (e) => g((t) => T(t) && t > e),
+    G = (e) => g((t) => T(t) && t <= e),
+    Z = (e) => g((t) => T(t) && t >= e),
+    F = () => g((e) => T(e) && e > 0),
+    V = () => g((e) => T(e) && e < 0),
     j = (e) =>
         Object.assign(d(e), {
             between: (t, n) => j(h(e, k(t, n))),
@@ -244,7 +244,7 @@ let T = d(
             positive: () => j(h(e, F())),
             negative: () => j(h(e, V()))
         }),
-    H = j(g(b)),
+    H = j(g(T)),
     Y = d(
         g(function (e) {
             return 'boolean' == typeof e;
@@ -378,8 +378,8 @@ var z = {
     },
     when: g,
     select: E,
-    any: T,
-    _: T,
+    any: b,
+    _: b,
     string: y,
     between: A,
     lt: N,
@@ -390,7 +390,7 @@ var z = {
     finite: L,
     positive: x,
     negative: w,
-    number: P,
+    number: M,
     betweenBigInt: k,
     ltBigInt: U,
     gtBigInt: B,

@@ -194,8 +194,8 @@ function I(e, { joinWith: t }) {
         .map((e) => `(${e})`)
         .join(t);
 }
-let b = '[a-zA-Z]\\w*',
-    T = '[a-zA-Z_]\\w*',
+let T = '[a-zA-Z]\\w*',
+    b = '[a-zA-Z_]\\w*',
     S = '\\b\\d+(\\.\\d+)?',
     y = '(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)',
     A = '\\b(0b[01]+)',
@@ -229,8 +229,8 @@ let b = '[a-zA-Z]\\w*',
 var L = Object.freeze({
     __proto__: null,
     MATCH_NOTHING_RE: /\b\B/,
-    IDENT_RE: b,
-    UNDERSCORE_IDENT_RE: T,
+    IDENT_RE: T,
+    UNDERSCORE_IDENT_RE: b,
     NUMBER_RE: S,
     C_NUMBER_RE: y,
     BINARY_NUMBER_RE: A,
@@ -310,16 +310,16 @@ var L = Object.freeze({
     },
     TITLE_MODE: {
         scope: 'title',
-        begin: b,
+        begin: T,
         relevance: 0
     },
     UNDERSCORE_TITLE_MODE: {
         scope: 'title',
-        begin: T,
+        begin: b,
         relevance: 0
     },
     METHOD_GUARD: {
-        begin: '\\.\\s*' + T,
+        begin: '\\.\\s*' + b,
         relevance: 0
     },
     END_SAME_AS_BEGIN: function (e) {
@@ -339,10 +339,10 @@ function x(e, t) {
 function w(e, t) {
     void 0 !== e.className && ((e.scope = e.className), delete e.className);
 }
-function M(e, t) {
+function P(e, t) {
     if (!!t) e.beginKeywords && ((e.begin = '\\b(' + e.beginKeywords.split(' ').join('|') + ')(?!\\.)(?=\\b|\\s)'), (e.__beforeBegin = x), (e.keywords = e.keywords || e.beginKeywords), delete e.beginKeywords, void 0 === e.relevance && (e.relevance = 0));
 }
-function P(e, t) {
+function M(e, t) {
     Array.isArray(e.illegal) && (e.illegal = g(...e.illegal));
 }
 function k(e, t) {
@@ -437,10 +437,10 @@ var q = (function (e) {
             languages: null,
             __emitter: d
         };
-    function b(e) {
+    function T(e) {
         return v.noHighlightRe.test(e);
     }
-    function T(e, t, n) {
+    function b(e, t, n) {
         let r = '',
             i = '';
         'object' == typeof t ? ((r = e), (n = t.ignoreIllegals), (i = t.language)) : (j('10.7.0', 'highlight(lang, code, ...args) has been deprecated.'), j('10.7.0', 'Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277'), (i = e), (r = t)), void 0 === n && (n = !0);
@@ -466,13 +466,13 @@ var q = (function (e) {
             for (; t; ) {
                 var r, i;
                 n += D.substring(e, t.index);
-                let a = b.case_insensitive ? t[0].toLowerCase() : t[0];
+                let a = T.case_insensitive ? t[0].toLowerCase() : t[0];
                 let s = ((r = N), (i = a), r.keywords[i]);
                 if (s) {
                     let [e, r] = s;
                     if ((O.addText(n), (n = ''), (c[a] = (c[a] || 0) + 1), c[a] <= 7 && (L += r), e.startsWith('_'))) n += t[0];
                     else {
-                        let n = b.classNameAliases[e] || e;
+                        let n = T.classNameAliases[e] || e;
                         O.addKeyword(t[0], n);
                     }
                 } else n += t[0];
@@ -505,13 +505,13 @@ var q = (function (e) {
                     n++;
                     continue;
                 }
-                let r = b.classNameAliases[e[n]] || e[n],
+                let r = T.classNameAliases[e[n]] || e[n],
                     i = t[n];
                 r ? O.addKeyword(i, r) : ((D = i), d(), (D = '')), n++;
             }
         }
         function h(e, t) {
-            return e.scope && 'string' == typeof e.scope && O.openNode(b.classNameAliases[e.scope] || e.scope), e.beginScope && (e.beginScope._wrap ? (O.addKeyword(D, b.classNameAliases[e.beginScope._wrap] || e.beginScope._wrap), (D = '')) : e.beginScope._multi && (p(e.beginScope, t), (D = ''))), (N = Object.create(e, { parent: { value: N } }));
+            return e.scope && 'string' == typeof e.scope && O.openNode(T.classNameAliases[e.scope] || e.scope), e.beginScope && (e.beginScope._wrap ? (O.addKeyword(D, T.classNameAliases[e.beginScope._wrap] || e.beginScope._wrap), (D = '')) : e.beginScope._multi && (p(e.beginScope, t), (D = ''))), (N = Object.create(e, { parent: { value: N } }));
         }
         let m = {};
         function g(n, i) {
@@ -575,9 +575,9 @@ var q = (function (e) {
             if (Z > 100000 && Z > 3 * i.index) throw Error('potential infinite loop, way more iterations than matches');
             return (D += a), a.length;
         }
-        let b = R(e);
-        if (!b) throw (F(u.replace('{}', e)), Error('Unknown language: "' + e + '"'));
-        let T = (function (e) {
+        let T = R(e);
+        if (!T) throw (F(u.replace('{}', e)), Error('Unknown language: "' + e + '"'));
+        let b = (function (e) {
                 function t(t, n) {
                     return RegExp(f(t), 'm' + (e.case_insensitive ? 'i' : '') + (e.unicodeRegex ? 'u' : '') + (n ? 'g' : ''));
                 }
@@ -639,7 +639,7 @@ var q = (function (e) {
                     (e.classNameAliases = a(e.classNameAliases || {})),
                     (function n(i, s) {
                         if (i.isCompiled) return i;
-                        [w, k, W, B].forEach((e) => e(i, s)), e.compilerExtensions.forEach((e) => e(i, s)), (i.__beforeBegin = null), [M, P, U].forEach((e) => e(i, s)), (i.isCompiled = !0);
+                        [w, k, W, B].forEach((e) => e(i, s)), e.compilerExtensions.forEach((e) => e(i, s)), (i.__beforeBegin = null), [P, M, U].forEach((e) => e(i, s)), (i.isCompiled = !0);
                         let o = null;
                         return (
                             'object' == typeof i.keywords && i.keywords.$pattern && ((i.keywords = Object.assign({}, i.keywords)), (o = i.keywords.$pattern), delete i.keywords.$pattern),
@@ -722,14 +722,14 @@ var q = (function (e) {
                         );
                     })(e)
                 );
-            })(b),
+            })(T),
             A = '',
-            N = o || T,
+            N = o || b,
             C = {},
             O = new v.__emitter(v);
         !(function () {
             let e = [];
-            for (let t = N; t !== b; t = t.parent) t.scope && e.unshift(t.scope);
+            for (let t = N; t !== T; t = t.parent) t.scope && e.unshift(t.scope);
             e.forEach((e) => O.openNode(e));
         })();
         let D = '',
@@ -826,9 +826,9 @@ var q = (function (e) {
                     let t = R(n[1]);
                     return !t && (V(u.replace('{}', n[1])), V('Falling back to no-highlight mode for this block.', e)), t ? n[1] : 'no-highlight';
                 }
-                return t.split(/\s+/).find((e) => b(e) || R(e));
+                return t.split(/\s+/).find((e) => T(e) || R(e));
             })(e);
-        if (b(n)) return;
+        if (T(n)) return;
         if (
             (x('before:highlightElement', {
                 el: e,
@@ -839,7 +839,7 @@ var q = (function (e) {
             throw new K('One of your code blocks includes unescaped HTML.', e.innerHTML);
         let r = (t = e).textContent,
             i = n
-                ? T(r, {
+                ? b(r, {
                       language: n,
                       ignoreIllegals: !0
                   })
@@ -901,7 +901,7 @@ var q = (function (e) {
         });
     }
     for (let r in (Object.assign(e, {
-        highlight: T,
+        highlight: b,
         highlightAuto: y,
         highlightAll: C,
         highlightElement: A,

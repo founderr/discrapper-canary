@@ -33,8 +33,8 @@ t.ZP = i.memo(function (e) {
     let { className: n, message: a, children: o, content: u, onUpdate: g, contentRef: E } = e,
         v = a.isEdited(),
         I = a.state === f.yb.SEND_FAILED,
-        b = a.state === f.yb.SENDING,
-        T = a.isCommandType(),
+        T = a.state === f.yb.SENDING,
+        b = a.isCommandType(),
         S = null === (t = a.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
         y = i.useRef(!1);
     return (
@@ -46,7 +46,7 @@ t.ZP = i.memo(function (e) {
             ref: E,
             className: s()(n, h.markup, {
                 [p.messageContent]: !0,
-                [p.isSending]: b && !T,
+                [p.isSending]: T && !b,
                 [p.markupRtl]: 'rtl' === l()(a.content),
                 [p.isFailed]: I,
                 [p.isUnsupported]: a.isUnsupported

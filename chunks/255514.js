@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(356110),
     v = n(730719),
     I = n(996701),
-    b = n(320596),
-    T = n(273514),
+    T = n(320596),
+    b = n(273514),
     S = n(995712),
     y = n(234937),
     A = n(473121),
@@ -30,8 +30,8 @@ var r = n(200651),
     L = n(189472),
     x = n(749534),
     w = n(157759),
-    M = n(521332),
-    P = n(905434),
+    P = n(521332),
+    M = n(905434),
     k = n(196627),
     U = n(739319),
     B = n(842401),
@@ -125,10 +125,10 @@ t.Z = (e) => {
                 destination: ['', t.id]
             }));
     }, [t.is_auto_submit, es, q, t.id]);
-    let eb = (0, l.fW)(Y),
-        eT = (0, u.A)({
+    let eT = (0, l.fW)(Y),
+        eb = (0, u.A)({
             location: 'web_iar_node_view',
-            settingsUpsells: null != eb ? eb : [],
+            settingsUpsells: null != eT ? eT : [],
             channelId: em
         }),
         eS = (0, o.Do)({ location: 'web_iar_node_view' }) && null != j(t, 'ignore_users') && ('message' === n.name || 'first_dm' === n.name || 'user' === n.name);
@@ -210,19 +210,19 @@ t.Z = (e) => {
                         }),
                     null != j(t, 'settings_upsells') &&
                         'message' === n.name &&
-                        null != eb &&
-                        eT &&
-                        (0, r.jsx)(M.Z, {
-                            settingsUpsells: eb,
+                        null != eT &&
+                        eb &&
+                        (0, r.jsx)(P.Z, {
+                            settingsUpsells: eT,
                             channelId: n.record.channel_id,
                             onModalClose: z,
                             reportId: X,
                             reportType: n,
                             reportSubType: Y
                         }),
-                    null != j(t, 'channel_preview') && 'stage_channel' === n.name && (0, r.jsx)(P.Z, { stageInstance: n.record }),
+                    null != j(t, 'channel_preview') && 'stage_channel' === n.name && (0, r.jsx)(M.Z, { stageInstance: n.record }),
                     null != j(t, 'guild_scheduled_event_preview') && 'guild_scheduled_event' === n.name && (0, r.jsx)(y.Z, { event: n.record }),
-                    null != j(t, 'guild_directory_entry_preview') && 'guild_directory_entry' === n.name && (0, r.jsx)(T.Z, { entry: n.record }),
+                    null != j(t, 'guild_directory_entry_preview') && 'guild_directory_entry' === n.name && (0, r.jsx)(b.Z, { entry: n.record }),
                     null != j(t, 'guild_discovery_preview') && 'guild_discovery' === n.name && (0, r.jsx)(S.Z, { entry: n.record }),
                     null != j(t, 'app_preview') && 'application' === n.name && (0, r.jsx)(f.Z, { entry: n.record }),
                     null != $ &&
@@ -245,7 +245,7 @@ t.Z = (e) => {
                     ('user_urf' === n.name || 'message_urf' === n.name) &&
                         null != en &&
                         en.length > 0 &&
-                        (0, r.jsx)(b.Z, {
+                        (0, r.jsx)(T.Z, {
                             elements: en,
                             onChange: eg,
                             state: ef

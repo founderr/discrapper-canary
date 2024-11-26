@@ -21,9 +21,9 @@ function c(e, t) {
             ...e,
             value: h
         }),
-        { isInvalid: v, validationErrors: I, validationDetails: b } = E.displayValidation,
+        { isInvalid: v, validationErrors: I, validationDetails: T } = E.displayValidation,
         {
-            labelProps: T,
+            labelProps: b,
             fieldProps: S,
             descriptionProps: y,
             errorMessageProps: A
@@ -51,7 +51,7 @@ function c(e, t) {
             }
         }, [t]),
         {
-            labelProps: T,
+            labelProps: b,
             inputProps: (0, i.dG)(N, 'input' === n && C, {
                 disabled: c,
                 readOnly: f,
@@ -87,7 +87,7 @@ function c(e, t) {
             errorMessageProps: A,
             isInvalid: v,
             validationErrors: I,
-            validationDetails: b
+            validationDetails: T
         }
     );
 }

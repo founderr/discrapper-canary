@@ -16,17 +16,17 @@ var i = n(200651),
     c = n(442837),
     d = n(481060),
     f = n(271383),
-    p = n(430824),
-    _ = n(594174),
-    E = n(700785),
-    g = n(709054),
-    h = n(962086),
-    m = n(160404),
-    S = n(225675),
-    I = n(981631),
-    v = n(388032),
-    C = n(22314);
-function T(e) {
+    _ = n(430824),
+    E = n(594174),
+    p = n(700785),
+    m = n(709054),
+    g = n(962086),
+    h = n(160404),
+    I = n(225675),
+    S = n(981631),
+    C = n(388032),
+    T = n(22314);
+function v(e) {
     var t;
     return (0, i.jsx)('span', {
         style: { color: null !== (t = e.colorString) && void 0 !== t ? t : 'currentColor' },
@@ -35,73 +35,73 @@ function T(e) {
 }
 function N(e) {
     let { guildId: t } = e,
-        n = (0, c.e7)([_.default], () => _.default.getCurrentUser()),
-        l = (0, c.e7)([p.Z], () => p.Z.getGuild(t)),
-        u = (0, c.e7)([p.Z], () => p.Z.getRoles(t)),
-        { impersonateType: N, viewingRoles: b } = (0, c.cj)([m.Z], () => ({
-            impersonateType: m.Z.getImpersonateType(t),
-            viewingRoles: m.Z.getViewingRoles(t)
+        n = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
+        l = (0, c.e7)([_.Z], () => _.Z.getGuild(t)),
+        u = (0, c.e7)([_.Z], () => _.Z.getRoles(t)),
+        { impersonateType: N, viewingRoles: A } = (0, c.cj)([h.Z], () => ({
+            impersonateType: h.Z.getImpersonateType(t),
+            viewingRoles: h.Z.getViewingRoles(t)
         })),
-        A = N === S.z.SERVER_SHOP,
-        O = (0, c.e7)([f.ZP], () => (null != n ? f.ZP.getTrueMember(t, n.id) : null)),
-        [L, R] = (0, d.useMultiSelect)(null == b ? [] : g.default.keys(b)),
+        b = N === I.z.SERVER_SHOP,
+        L = (0, c.e7)([f.ZP], () => (null != n ? f.ZP.getTrueMember(t, n.id) : null)),
+        [O, R] = (0, d.useMultiSelect)(null == A ? [] : m.default.keys(A)),
         P = r.useRef(l);
     r.useEffect(() => {
         let e = {},
             t = P.current;
         if (null != t && null != N) {
-            for (let t of L) {
+            for (let t of O) {
                 let n = u[t];
                 null != n && (e[t] = n);
             }
-            (0, h.Zm)(t.id, {
+            (0, g.Zm)(t.id, {
                 type: N,
                 roles: e
             });
         }
-    }, [L, N, u]);
+    }, [O, N, u]);
     let y =
-            null != l && null != n && null != O
+            null != l && null != n && null != L
                 ? a()(u)
-                      .filter((e) => -1 !== O.roles.indexOf(e.id))
+                      .filter((e) => -1 !== L.roles.indexOf(e.id))
                       .sortBy((e) => -e.position)
                       .first()
                 : void 0,
-        M = r.useMemo(
+        Z = r.useMemo(
             () =>
                 null != l && null != n
                     ? Object.values(u)
                           .filter((e) => e.id !== l.id)
                           .filter((e) => {
                               var t;
-                              return !A || (null === (t = e.tags) || void 0 === t ? void 0 : t.subscription_listing_id) != null;
+                              return !b || (null === (t = e.tags) || void 0 === t ? void 0 : t.subscription_listing_id) != null;
                           })
-                          .filter((e) => (null == y ? void 0 : y.id) === e.id || E.r6(l, n.id, y, e))
+                          .filter((e) => (null == y ? void 0 : y.id) === e.id || p.r6(l, n.id, y, e))
                     : [],
-            [l, n, A, y, u]
+            [l, n, b, y, u]
         );
-    if (null == n || null == l || null == O) return null;
-    let x = {};
-    return (O.roles.forEach((e) => {
+    if (null == n || null == l || null == L) return null;
+    let M = {};
+    return (L.roles.forEach((e) => {
         let t = u[e];
-        null != t && (x[t.id] = t);
+        null != t && (M[t.id] = t);
     }),
     s.e$(
-        E.I0({
-            forceRoles: x,
+        p.I0({
+            forceRoles: M,
             context: l
         }),
-        s.$e(I.Plq.MANAGE_GUILD, I.Plq.MANAGE_ROLES)
+        s.$e(S.Plq.MANAGE_GUILD, S.Plq.MANAGE_ROLES)
     ) || l.isOwner(n.id))
         ? (0, i.jsx)('div', {
-              className: C.container,
+              className: T.container,
               children: (0, i.jsx)(d.Combobox, {
-                  placeholder: v.intl.string(v.t.Sojqsr),
-                  value: L,
+                  placeholder: C.intl.string(C.t.Sojqsr),
+                  value: O,
                   onChange: R,
                   autoFocus: !0,
                   children: (e) => {
-                      let t = M.reduce(
+                      let t = Z.reduce(
                               (t, n) => (
                                   o()(e.toLowerCase(), n.name.toLowerCase()) &&
                                       t.push(
@@ -109,7 +109,7 @@ function N(e) {
                                               d.ComboboxItem,
                                               {
                                                   value: n.id,
-                                                  children: [(0, i.jsx)(d.ComboboxItem.Label, { children: T(n) }), (0, i.jsx)(d.ComboboxItem.Checkbox, {})]
+                                                  children: [(0, i.jsx)(d.ComboboxItem.Label, { children: v(n) }), (0, i.jsx)(d.ComboboxItem.Checkbox, {})]
                                               },
                                               n.id
                                           )
@@ -127,7 +127,7 @@ function N(e) {
                                       {
                                           value: n.id,
                                           disabled: !0,
-                                          children: [(0, i.jsx)(d.ComboboxItem.Label, { children: T(n) }), (0, i.jsx)(d.ComboboxItem.Checkbox, { checked: !0 })]
+                                          children: [(0, i.jsx)(d.ComboboxItem.Label, { children: v(n) }), (0, i.jsx)(d.ComboboxItem.Checkbox, { checked: !0 })]
                                       },
                                       n.id
                                   )
@@ -139,6 +139,6 @@ function N(e) {
           })
         : (0, i.jsx)(d.Text, {
               variant: 'text-md/medium',
-              children: v.intl.string(v.t.MNSTbW)
+              children: C.intl.string(C.t.MNSTbW)
           });
 }

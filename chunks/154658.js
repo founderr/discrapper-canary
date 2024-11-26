@@ -19,22 +19,22 @@ var i = n(120356),
     h = n(828980);
 function m(e) {
     var t, i, m, g, E;
-    let { guildId: v, leaderboard: I, className: b } = e,
-        T = null == I ? void 0 : null === (t = I.users) || void 0 === t ? void 0 : t[0],
+    let { guildId: v, leaderboard: I, className: T } = e,
+        b = null == I ? void 0 : null === (t = I.users) || void 0 === t ? void 0 : t[0],
         { sort_by_statistic_id: S } = I.guild_settings,
-        y = null !== (E = null == T ? void 0 : null === (m = T.statistics) || void 0 === m ? void 0 : null === (i = m[S]) || void 0 === i ? void 0 : i.value) && void 0 !== E ? E : 0,
+        y = null !== (E = null == b ? void 0 : null === (m = b.statistics) || void 0 === m ? void 0 : null === (i = m[S]) || void 0 === i ? void 0 : i.value) && void 0 !== E ? E : 0,
         A = p.intl.formatToPlainString(p.t.yhdo8v, {
             value: y,
             statisticName: (0, _.C)(S)
         }),
-        N = null == T ? void 0 : null === (g = T.statistics[o.E.LOL_MOST_PLAYED_CHAMPION_ID]) || void 0 === g ? void 0 : g.value,
+        N = null == b ? void 0 : null === (g = b.statistics[o.E.LOL_MOST_PLAYED_CHAMPION_ID]) || void 0 === g ? void 0 : g.value,
         C = null != N ? n(692425)('./champion_'.concat(N, '.jpg')).default : null,
         { primaryColor: R, secondaryColor: O } = (0, c.Z)(''.concat(C, '?forColors')),
-        D = (0, l.e7)([d.default], () => d.default.getUser(null == T ? void 0 : T.user_id));
+        D = (0, l.e7)([d.default], () => d.default.getUser(null == b ? void 0 : b.user_id));
     if (null == D) return null;
     let L = f.ZP.getName(v, void 0, D);
     return (0, r.jsxs)('div', {
-        className: a()(h.container, b),
+        className: a()(h.container, T),
         style: { backgroundImage: 'linear-gradient(90deg, '.concat(O, ' 0%, ').concat(R, ' 100%)') },
         children: [
             (0, r.jsx)(u.Text, {

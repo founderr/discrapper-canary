@@ -13,8 +13,8 @@ var r,
     E,
     i = n(192379),
     u = n(442837),
-    o = n(846519),
-    S = n(355467),
+    S = n(846519),
+    o = n(355467),
     l = n(38618),
     _ = n(409813),
     A = n(45572),
@@ -30,8 +30,8 @@ function T(t, e, n, r) {
 function I(t) {
     let e = (0, u.e7)([a.Z], () => a.Z.awaitingPaymentId),
         n = (0, u.e7)([l.Z], () => l.Z.isConnected()),
-        r = i.useRef(new o.Xp());
+        r = i.useRef(new S.Xp());
     i.useEffect(() => {
-        n || null == e || 1 !== t ? r.current.stop() : r.current.start(5000, () => (0, S.O1)(e));
+        n || null == e || 1 !== t ? r.current.stop() : r.current.start(5000, () => (0, o.O1)(e));
     }, [e, t, n]);
 }

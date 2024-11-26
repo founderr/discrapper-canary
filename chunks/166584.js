@@ -23,8 +23,8 @@ var r = n(200651),
     E = n(256226),
     v = n(314172),
     I = n(981631),
-    b = n(388032),
-    T = n(730479);
+    T = n(388032),
+    b = n(730479);
 let S = (e) => {
     if (null == e) return 0;
     let { width: t } = e.getBoundingClientRect();
@@ -40,15 +40,15 @@ function y(e) {
         [O, D] = i.useState(268),
         [L, x] = i.useState(!1),
         w = i.useRef(null),
-        M = i.useRef(null),
-        P = i.useRef(0);
+        P = i.useRef(null),
+        M = i.useRef(0);
     i.useLayoutEffect(() => {
-        P.current = 0;
+        M.current = 0;
     }, [d]),
         i.useLayoutEffect(() => {
             if (L) return;
             let e = S(w.current),
-                t = S(M.current),
+                t = S(P.current),
                 n = [],
                 r = 268 - e - t;
             for (let e = 0; e < 2; e++) {
@@ -57,7 +57,7 @@ function y(e) {
                     let i = d[r],
                         a = A.current[i.id];
                     if (null == a) {
-                        0 === P.current && n.push(i);
+                        0 === M.current && n.push(i);
                         continue;
                     }
                     let s = Math.min(a.getBoundingClientRect().width, t);
@@ -65,7 +65,7 @@ function y(e) {
                     (e += s + 4), n.push(i);
                 }
             }
-            R(n.length === C.length ? C : n), D(r), P.current++;
+            R(n.length === C.length ? C : n), D(r), M.current++;
         }, [d, C, L]);
     let k = i.useMemo(() => 'roles-'.concat((0, a.Z)()), []),
         U = (0, s.ZP)({
@@ -76,7 +76,7 @@ function y(e) {
             wrap: !0
         }),
         B = d.length,
-        G = 0 === B ? b.intl.string(b.t['vR7M+/']) : b.intl.formatToPlainString(b.t.PCs0oq, { numRoles: B }),
+        G = 0 === B ? T.intl.string(T.t['vR7M+/']) : T.intl.formatToPlainString(T.t.PCs0oq, { numRoles: B }),
         Z = (L ? d : C).map((e, i) => {
             var a;
             return (0, r.jsx)(
@@ -106,7 +106,7 @@ function y(e) {
             children: (e) => {
                 let { ref: t, ...n } = e;
                 return (0, r.jsxs)('div', {
-                    className: T.root,
+                    className: b.root,
                     'aria-label': G,
                     ref: t,
                     ...n,
@@ -115,10 +115,10 @@ function y(e) {
                         C.length < d.length
                             ? L
                                 ? (0, r.jsx)(u.TooltipContainer, {
-                                      text: b.intl.string(b.t.XnXtCg),
+                                      text: T.intl.string(T.t.XnXtCg),
                                       children: (0, r.jsx)(u.Clickable, {
                                           onClick: j,
-                                          className: T.collapseButton,
+                                          className: b.collapseButton,
                                           children: (0, r.jsx)(h.Z, {
                                               direction: h.Z.Directions.LEFT,
                                               width: 12,
@@ -127,11 +127,11 @@ function y(e) {
                                       })
                                   })
                                 : (0, r.jsx)(u.TooltipContainer, {
-                                      text: b.intl.string(b.t.DY6n4u),
+                                      text: T.intl.string(T.t.DY6n4u),
                                       children: (0, r.jsx)(u.Clickable, {
                                           innerRef: w,
                                           onClick: V,
-                                          className: T.expandButton,
+                                          className: b.expandButton,
                                           children: (0, r.jsx)(u.Text, {
                                               variant: 'text-xs/medium',
                                               children: '+'.concat(d.length - C.length)
@@ -141,7 +141,7 @@ function y(e) {
                             : null,
                         _ && null != c
                             ? (0, r.jsx)(v.Z, {
-                                  buttonRef: M,
+                                  buttonRef: P,
                                   guild: l,
                                   guildMember: c,
                                   numRoles: B,
@@ -176,8 +176,8 @@ function A(e) {
             [u, h]
         ),
         v = m.e9(a, n.id),
-        [b] = (0, l.Wu)([p.Z], () => [p.Z.can(I.Plq.MANAGE_ROLES, a), null != a ? p.Z.getGuildVersion(a.id) : null]),
-        T = i.useCallback(
+        [T] = (0, l.Wu)([p.Z], () => [p.Z.can(I.Plq.MANAGE_ROLES, a), null != a ? p.Z.getGuildVersion(a.id) : null]),
+        b = i.useCallback(
             (e) => {
                 var n, r;
                 s({ action: 'REMOVE_ROLE' });
@@ -194,7 +194,7 @@ function A(e) {
             },
             [h, a.id, t.id, s]
         ),
-        A = b && null != o;
+        A = T && null != o;
     return 0 !== E.length || A
         ? (0, r.jsx)(y, {
               user: t,
@@ -203,9 +203,9 @@ function A(e) {
               guildMember: o,
               roles: E,
               highestRole: v,
-              canManageRoles: b,
+              canManageRoles: T,
               onAddRole: S,
-              onRemoveRole: T
+              onRemoveRole: b
           })
         : null;
 }

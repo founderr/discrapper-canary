@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return T;
     }
 });
 var r = n(200651);
@@ -25,22 +25,22 @@ let I = () => {
     let e = (0, l.ZP)();
     return (0, s.ap)(e) ? n(537381) : n(341048);
 };
-function b(e) {
+function T(e) {
     let { onClose: t, guildId: n, emojiId: s } = e,
         l = I(),
-        { analyticsLocations: b } = (0, c.ZP)(u.Z.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL);
+        { analyticsLocations: T } = (0, c.ZP)(u.Z.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL);
     (0, d.Z)({
         type: i.ImpressionTypes.MODAL,
         name: i.ImpressionNames.ROLE_SUBSCRIPTION_EMOJI_UPSELL,
         properties: {
-            location_stack: b,
+            location_stack: T,
             emoji_guild_id: n,
             emoji_id: null != s ? s : null
         }
     });
-    let T = (0, a.e7)([_.Z], () => _.Z.getGuild(n)),
+    let b = (0, a.e7)([_.Z], () => _.Z.getGuild(n)),
         S = (0, a.e7)([p.Z], () => null != n && p.Z.getUserSubscriptionRoles(n).size > 0),
-        y = S ? E.intl.string(E.t['GoLM9/']) : E.intl.formatToPlainString(E.t['h0u/Hh'], { serverName: null == T ? void 0 : T.name }),
+        y = S ? E.intl.string(E.t['GoLM9/']) : E.intl.formatToPlainString(E.t['h0u/Hh'], { serverName: null == b ? void 0 : b.name }),
         A = S ? E.intl.string(E.t.PjZ7DQ) : E.intl.string(E.t.p8FG1N);
     return (0, r.jsxs)('div', {
         className: v.container,
@@ -83,7 +83,7 @@ function b(e) {
                     (0, r.jsx)(o.Spacer, { size: 24 }),
                     (0, r.jsx)(h.Z, {
                         onClick: () => {
-                            (0, f.uL)(m.Z5c.CHANNEL(n, g.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: b });
+                            (0, f.uL)(m.Z5c.CHANNEL(n, g.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: T });
                         },
                         children: A
                     })

@@ -38,8 +38,8 @@ function v(e, t, n) {
     (E.prototype = g.prototype);
 var I = (v.prototype = new E());
 (I.constructor = v), h(I, g.prototype), (I.isPureReactComponent = !0);
-var b = Array.isArray,
-    T = Object.prototype.hasOwnProperty,
+var T = Array.isArray,
+    b = Object.prototype.hasOwnProperty,
     S = { current: null },
     y = {
         key: !0,
@@ -52,7 +52,7 @@ function A(e, t, r) {
         a = {},
         s = null,
         o = null;
-    if (null != t) for (i in (void 0 !== t.ref && (o = t.ref), void 0 !== t.key && (s = '' + t.key), t)) T.call(t, i) && !y.hasOwnProperty(i) && (a[i] = t[i]);
+    if (null != t) for (i in (void 0 !== t.ref && (o = t.ref), void 0 !== t.key && (s = '' + t.key), t)) b.call(t, i) && !y.hasOwnProperty(i) && (a[i] = t[i]);
     var l = arguments.length - 2;
     if (1 === l) a.children = r;
     else if (1 < l) {
@@ -117,7 +117,7 @@ function O(e, t, i) {
                 return (
                     (o = o((f = t))),
                     (t = '' === s ? '.' + R(f, 0) : s),
-                    b(o)
+                    T(o)
                         ? ((a = ''),
                           null != t && (a = t.replace(C, '$&/') + '/'),
                           e(o, i, a, '', function (e) {
@@ -139,7 +139,7 @@ function O(e, t, i) {
                     1
                 );
             }
-            if (((f = 0), (s = '' === s ? '.' : s + ':'), b(t)))
+            if (((f = 0), (s = '' === s ? '.' : s + ':'), T(t)))
                 for (var p = 0; p < t.length; p++) {
                     var h = s + R((d = t[p]), p);
                     f += e(d, i, a, h, o);
@@ -228,7 +228,7 @@ function w() {
             o = e._owner;
         if (null != t) {
             if ((void 0 !== t.ref && ((s = t.ref), (o = S.current)), void 0 !== t.key && (a = '' + t.key), e.type && e.type.defaultProps)) var l = e.type.defaultProps;
-            for (u in t) T.call(t, u) && !y.hasOwnProperty(u) && (i[u] = void 0 === t[u] && void 0 !== l ? l[u] : t[u]);
+            for (u in t) b.call(t, u) && !y.hasOwnProperty(u) && (i[u] = void 0 === t[u] && void 0 !== l ? l[u] : t[u]);
         }
         var u = arguments.length - 2;
         if (1 === u) i.children = r;

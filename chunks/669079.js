@@ -27,7 +27,7 @@ n.d(t, {
         return F;
     },
     Z0: function () {
-        return M;
+        return P;
     },
     bT: function () {
         return G;
@@ -75,8 +75,8 @@ var r,
     E = n(474936),
     v = n(388032);
 let I = h.Z.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
-    b = [I, ...['discordapp.com/gifts', 'discord.com/gifts'].map((e) => h.Z.escape(e))].join('|'),
-    T = RegExp('(?: |^|https?://)(?:'.concat(b, ')/([a-z0-9-]+)'), 'gi'),
+    T = [I, ...['discordapp.com/gifts', 'discord.com/gifts'].map((e) => h.Z.escape(e))].join('|'),
+    b = RegExp('(?: |^|https?://)(?:'.concat(T, ')/([a-z0-9-]+)'), 'gi'),
     S = [...['discord.com/billing/promotions', 'promos.discord.gg'].map((e) => h.Z.escape(e))].join('|'),
     y = RegExp('(?: |^|https?://)(?:'.concat(S, ')(/|(/)?\\?code=)([a-z0-9-]+)'), 'gi'),
     A = (e, t) =>
@@ -100,7 +100,7 @@ function w(e) {
         .concat(null != t ? t : '', ':')
         .concat(null != n ? n : '');
 }
-function M(e) {
+function P(e) {
     let [t, n, r] = e.split(':');
     return {
         skuId: t,
@@ -108,7 +108,7 @@ function M(e) {
         giftStyle: '' !== r && null != r ? Number.parseInt(r) : void 0
     };
 }
-function P(e) {
+function M(e) {
     return e.replace(/[^A-Za-z0-9]/g, '');
 }
 let k = (e) => (null == e ? void 0 : e.type) === g.uaV.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === g.hBH.GIFT,
@@ -116,8 +116,8 @@ let k = (e) => (null == e ? void 0 : e.type) === g.uaV.CUSTOM_GIFT && (null == e
         let t;
         if (null == e) return [];
         let n = new Set();
-        for (; null != (t = T.exec(e)) && n.size < 3; ) n.add(P(t[1]));
-        for (; null != (t = y.exec(e)) && n.size < 3; ) n.add(P(t[t.length - 1]));
+        for (; null != (t = b.exec(e)) && n.size < 3; ) n.add(M(t[1]));
+        for (; null != (t = y.exec(e)) && n.size < 3; ) n.add(M(t[t.length - 1]));
         return Array.from(n);
     };
 function B() {

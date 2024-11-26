@@ -1,17 +1,17 @@
-let n;
+let a;
 r.d(t, {
     m: function () {
         return b;
     }
 });
-var a,
+var n,
     _,
     o,
-    i = r(507690),
-    E = r(151122);
-((a = o || (o = {}))[(a.Document = 0)] = 'Document'), (a[(a.DocumentType = 1)] = 'DocumentType'), (a[(a.Element = 2)] = 'Element'), (a[(a.Text = 3)] = 'Text'), (a[(a.CDATA = 4)] = 'CDATA'), (a[(a.Comment = 5)] = 'Comment');
-function c(e, t, r = 1 / 0, n = 0) {
-    return !e || e.nodeType !== e.ELEMENT_NODE || n > r ? -1 : t(e) ? n : c(e.parentNode, t, r, n + 1);
+    E = r(507690),
+    i = r(151122);
+((n = o || (o = {}))[(n.Document = 0)] = 'Document'), (n[(n.DocumentType = 1)] = 'DocumentType'), (n[(n.Element = 2)] = 'Element'), (n[(n.Text = 3)] = 'Text'), (n[(n.CDATA = 4)] = 'CDATA'), (n[(n.Comment = 5)] = 'Comment');
+function c(e, t, r = 1 / 0, a = 0) {
+    return !e || e.nodeType !== e.ELEMENT_NODE || a > r ? -1 : t(e) ? a : c(e.parentNode, t, r, a + 1);
 }
 function s(e, t) {
     return (r) => {
@@ -23,8 +23,8 @@ function s(e, t) {
                 } else if (
                     (function (e, t) {
                         for (let r = e.classList.length; r--; ) {
-                            let n = e.classList[r];
-                            if (t.test(n)) return !0;
+                            let a = e.classList[r];
+                            if (t.test(a)) return !0;
                         }
                         return !1;
                     })(r, e)
@@ -39,7 +39,7 @@ function s(e, t) {
     };
 }
 let l = 'Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.',
-    u = {
+    I = {
         map: {},
         getId: () => (console.error(l), -1),
         getNode: () => (console.error(l), null),
@@ -51,120 +51,120 @@ let l = 'Please stop import mirror directly. Instead of that,\r\nnow you can use
             console.error(l);
         }
     };
-function I(e, t, r, n, a = window) {
-    let _ = a.Object.getOwnPropertyDescriptor(e, t);
+function u(e, t, r, a, n = window) {
+    let _ = n.Object.getOwnPropertyDescriptor(e, t);
     return (
-        a.Object.defineProperty(
+        n.Object.defineProperty(
             e,
             t,
-            n
+            a
                 ? r
                 : {
                       set(e) {
-                          L(() => {
+                          f(() => {
                               r.set.call(this, e);
                           }, 0),
                               _ && _.set && _.set.call(this, e);
                       }
                   }
         ),
-        () => I(e, t, _ || {}, !0)
+        () => u(e, t, _ || {}, !0)
     );
 }
 function R(e, t, r) {
     try {
         if (!(t in e)) return () => {};
-        let n = e[t],
-            a = r(n);
+        let a = e[t],
+            n = r(a);
         return (
-            'function' == typeof a &&
-                ((a.prototype = a.prototype || {}),
-                Object.defineProperties(a, {
+            'function' == typeof n &&
+                ((n.prototype = n.prototype || {}),
+                Object.defineProperties(n, {
                     __rrweb_original__: {
                         enumerable: !1,
-                        value: n
+                        value: a
                     }
                 })),
-            (e[t] = a),
+            (e[t] = n),
             () => {
-                e[t] = n;
+                e[t] = a;
             }
         );
     } catch (e) {
         return () => {};
     }
 }
-'undefined' != typeof window && window.Proxy && window.Reflect && (u = new Proxy(u, { get: (e, t, r) => ('map' === t && console.error(l), Reflect.get(e, t, r)) })), /[1-9][0-9]{12}/.test(Date.now().toString());
-function N(e, t, r, n, a) {
+'undefined' != typeof window && window.Proxy && window.Reflect && (I = new Proxy(I, { get: (e, t, r) => ('map' === t && console.error(l), Reflect.get(e, t, r)) })), /[1-9][0-9]{12}/.test(Date.now().toString());
+function A(e, t, r, a, n) {
     var _;
     if (!e) return !1;
     let o = (_ = e) ? (_.nodeType === _.ELEMENT_NODE ? _ : _.parentElement) : null;
     if (!o) return !1;
-    let i = s(t, r);
-    if (!a) {
-        let e = n && o.matches(n);
-        return i(o) && !e;
+    let E = s(t, r);
+    if (!n) {
+        let e = a && o.matches(a);
+        return E(o) && !e;
     }
-    let E = c(o, i),
+    let i = c(o, E),
         l = -1;
-    return !(E < 0) && (n && (l = c(o, s(null, n))), (!!(E > -1) && !!(l < 0)) || E < l);
+    return !(i < 0) && (a && (l = c(o, s(null, a))), (!!(i > -1) && !!(l < 0)) || i < l);
 }
-let A = {};
-function T(e) {
-    let t = A[e];
+let T = {};
+function N(e) {
+    let t = T[e];
     if (t) return t;
     let r = window.document,
-        n = window[e];
+        a = window[e];
     if (r && 'function' == typeof r.createElement)
         try {
             let t = r.createElement('iframe');
             (t.hidden = !0), r.head.appendChild(t);
-            let a = t.contentWindow;
-            a && a[e] && (n = a[e]), r.head.removeChild(t);
+            let n = t.contentWindow;
+            n && n[e] && (a = n[e]), r.head.removeChild(t);
         } catch (e) {}
-    return (A[e] = n.bind(window));
+    return (T[e] = a.bind(window));
 }
 function d(...e) {
-    return T('requestAnimationFrame')(...e);
+    return N('requestAnimationFrame')(...e);
 }
-function L(...e) {
-    return T('setTimeout')(...e);
+function f(...e) {
+    return N('setTimeout')(...e);
 }
-var f = (((_ = f || {})[(_['2D'] = 0)] = '2D'), (_[(_.WebGL = 1)] = 'WebGL'), (_[(_.WebGL2 = 2)] = 'WebGL2'), _);
-let O = (e) =>
-    n
+var O = (((_ = O || {})[(_['2D'] = 0)] = '2D'), (_[(_.WebGL = 1)] = 'WebGL'), (_[(_.WebGL2 = 2)] = 'WebGL2'), _);
+let L = (e) =>
+    a
         ? (...t) => {
               try {
                   return e(...t);
               } catch (e) {
-                  if (n && !0 === n(e)) return () => {};
+                  if (a && !0 === a(e)) return () => {};
                   throw e;
               }
           }
         : e;
-for (var p = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/', h = 'undefined' == typeof Uint8Array ? [] : new Uint8Array(256), S = 0; S < p.length; S++) h[p.charCodeAt(S)] = S;
-var D = function (e) {
+for (var p = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/', h = 'undefined' == typeof Uint8Array ? [] : new Uint8Array(256), D = 0; D < p.length; D++) h[p.charCodeAt(D)] = D;
+var S = function (e) {
     var t,
         r = new Uint8Array(e),
-        n = r.length,
-        a = '';
-    for (t = 0; t < n; t += 3) a += p[r[t] >> 2] + p[((3 & r[t]) << 4) | (r[t + 1] >> 4)] + p[((15 & r[t + 1]) << 2) | (r[t + 2] >> 6)] + p[63 & r[t + 2]];
-    return n % 3 == 2 ? (a = a.substring(0, a.length - 1) + '=') : n % 3 == 1 && (a = a.substring(0, a.length - 2) + '=='), a;
+        a = r.length,
+        n = '';
+    for (t = 0; t < a; t += 3) n += p[r[t] >> 2] + p[((3 & r[t]) << 4) | (r[t + 1] >> 4)] + p[((15 & r[t + 1]) << 2) | (r[t + 2] >> 6)] + p[63 & r[t + 2]];
+    return a % 3 == 2 ? (n = n.substring(0, n.length - 1) + '=') : a % 3 == 1 && (n = n.substring(0, n.length - 2) + '=='), n;
 };
 let C = new Map(),
-    g = (e, t, r) => {
-        var n, a;
+    P = (e, t, r) => {
+        var a, n;
         let _;
-        if (!e || !(P(e, t) || 'object' == typeof e)) return;
+        if (!e || !(U(e, t) || 'object' == typeof e)) return;
         let o = e.constructor.name;
-        let i = ((n = r), (a = o), !(_ = C.get(n)) && ((_ = new Map()), C.set(n, _)), !_.has(a) && _.set(a, []), _.get(a)),
-            E = i.indexOf(e);
-        return -1 === E && ((E = i.length), i.push(e)), E;
+        let E = ((a = r), (n = o), !(_ = C.get(a)) && ((_ = new Map()), C.set(a, _)), !_.has(n) && _.set(n, []), _.get(n)),
+            i = E.indexOf(e);
+        return -1 === i && ((i = E.length), E.push(e)), i;
     },
-    U = (e, t, r) =>
+    g = (e, t, r) =>
         e.map((e) =>
-            (function e(t, r, n) {
-                if (t instanceof Array) return t.map((t) => e(t, r, n));
+            (function e(t, r, a) {
+                if (t instanceof Array) return t.map((t) => e(t, r, a));
                 if (null === t);
                 else if (t instanceof Float32Array || t instanceof Float64Array || t instanceof Int32Array || t instanceof Uint32Array || t instanceof Uint8Array || t instanceof Uint16Array || t instanceof Int16Array || t instanceof Int8Array || t instanceof Uint8ClampedArray)
                     return {
@@ -175,12 +175,12 @@ let C = new Map(),
                     let e = t.constructor.name;
                     return {
                         rr_type: e,
-                        base64: D(t)
+                        base64: S(t)
                     };
                 } else if (t instanceof DataView)
                     return {
                         rr_type: t.constructor.name,
-                        args: [e(t.buffer, r, n), t.byteOffset, t.byteLength]
+                        args: [e(t.buffer, r, a), t.byteOffset, t.byteLength]
                     };
                 else if (t instanceof HTMLImageElement) {
                     let e = t.constructor.name,
@@ -197,28 +197,28 @@ let C = new Map(),
                 else if (t instanceof ImageData)
                     return {
                         rr_type: t.constructor.name,
-                        args: [e(t.data, r, n), t.width, t.height]
+                        args: [e(t.data, r, a), t.width, t.height]
                     };
-                else if (P(t, r) || 'object' == typeof t) {
+                else if (U(t, r) || 'object' == typeof t) {
                     let e = t.constructor.name;
                     return {
                         rr_type: e,
-                        index: g(t, r, n)
+                        index: P(t, r, a)
                     };
                 }
                 return t;
             })(e, t, r)
         ),
-    P = (e, t) => !!['WebGLActiveInfo', 'WebGLBuffer', 'WebGLFramebuffer', 'WebGLProgram', 'WebGLRenderbuffer', 'WebGLShader', 'WebGLShaderPrecisionFormat', 'WebGLTexture', 'WebGLUniformLocation', 'WebGLVertexArrayObject', 'WebGLVertexArrayObjectOES'].filter((e) => 'function' == typeof t[e]).find((r) => e instanceof t[r]);
-function M(e, t, r, n, a) {
+    U = (e, t) => !!['WebGLActiveInfo', 'WebGLBuffer', 'WebGLFramebuffer', 'WebGLProgram', 'WebGLRenderbuffer', 'WebGLShader', 'WebGLShaderPrecisionFormat', 'WebGLTexture', 'WebGLUniformLocation', 'WebGLVertexArrayObject', 'WebGLVertexArrayObjectOES'].filter((e) => 'function' == typeof t[e]).find((r) => e instanceof t[r]);
+function M(e, t, r, a, n) {
     let _ = [];
     try {
         let o = R(e.HTMLCanvasElement.prototype, 'getContext', function (e) {
             return function (_, ...o) {
-                if (!N(this, t, r, n, !0)) {
-                    var i;
-                    let e = ((i = _), 'experimental-webgl' === i ? 'webgl' : i);
-                    if ((!('__context' in this) && (this.__context = e), a && ['webgl', 'webgl2'].includes(e))) {
+                if (!A(this, t, r, a, !0)) {
+                    var E;
+                    let e = ((E = _), 'experimental-webgl' === E ? 'webgl' : E);
+                    if ((!('__context' in this) && (this.__context = e), n && ['webgl', 'webgl2'].includes(e))) {
                         if (o[0] && 'object' == typeof o[0]) {
                             let e = o[0];
                             !e.preserveDrawingBuffer && (e.preserveDrawingBuffer = !0);
@@ -236,30 +236,30 @@ function M(e, t, r, n, a) {
         _.forEach((e) => e());
     };
 }
-function G(e, t, r, n, a, _, o, i) {
-    let E = [];
+function G(e, t, r, a, n, _, o, E) {
+    let i = [];
     for (let o of Object.getOwnPropertyNames(e)) {
         if (!['isContextLost', 'canvas', 'drawingBufferWidth', 'drawingBufferHeight'].includes(o))
             try {
                 if ('function' != typeof e[o]) continue;
                 let c = R(e, o, function (e) {
-                    return function (...E) {
-                        let c = e.apply(this, E);
-                        if ((g(c, i, this), 'tagName' in this.canvas && !N(this.canvas, n, a, _, !0))) {
-                            let e = U(E, i, this),
-                                n = {
+                    return function (...i) {
+                        let c = e.apply(this, i);
+                        if ((P(c, E, this), 'tagName' in this.canvas && !A(this.canvas, a, n, _, !0))) {
+                            let e = g(i, E, this),
+                                a = {
                                     type: t,
                                     property: o,
                                     args: e
                                 };
-                            r(this.canvas, n);
+                            r(this.canvas, a);
                         }
                         return c;
                     };
                 });
-                E.push(c);
-            } catch (a) {
-                let n = I(e, o, {
+                i.push(c);
+            } catch (n) {
+                let a = u(e, o, {
                     set(e) {
                         r(this.canvas, {
                             type: t,
@@ -269,10 +269,10 @@ function G(e, t, r, n, a, _, o, i) {
                         });
                     }
                 });
-                E.push(n);
+                i.push(a);
             }
     }
-    return E;
+    return i;
 }
 class m {
     reset() {
@@ -286,7 +286,7 @@ class m {
             (this.windowsSet = new WeakSet()),
             (this.windows = []),
             (this.shadowDoms = new Set()),
-            (0, i.x)([this, 'access', (e) => e.worker, 'optionalAccess', (e) => e.terminate, 'call', (e) => e()]),
+            (0, E.x)([this, 'access', (e) => e.worker, 'optionalAccess', (e) => e.terminate, 'call', (e) => e()]),
             (this.worker = null),
             (this.snapshotInProgressMap = new Map()),
             ((this.options.recordCanvas && 'number' == typeof this.options.sampling) || this.options.enableManualSnapshot) && (this.worker = this.initFPSWorker());
@@ -320,23 +320,23 @@ class m {
             (this.processMutation = (e, t) => {
                 ((this.rafStamps.invokeId && this.rafStamps.latestId !== this.rafStamps.invokeId) || !this.rafStamps.invokeId) && (this.rafStamps.invokeId = this.rafStamps.latestId), !this.pendingCanvasMutations.has(e) && this.pendingCanvasMutations.set(e, []), this.pendingCanvasMutations.get(e).push(t);
             });
-        let { sampling: t = 'all', win: r, blockClass: a, blockSelector: _, unblockSelector: o, maxCanvasSize: i, recordCanvas: E, dataURLOptions: c, errorHandler: s } = e;
-        if (((this.mutationCb = e.mutationCb), (this.mirror = e.mirror), (this.options = e), s)) n = s;
-        if ((((E && 'number' == typeof t) || e.enableManualSnapshot) && (this.worker = this.initFPSWorker()), this.addWindow(r), e.enableManualSnapshot)) return;
-        O(() => {
-            E && 'all' === t && (this.startRAFTimestamping(), this.startPendingCanvasMutationFlusher()), E && 'number' == typeof t && this.initCanvasFPSObserver(t, a, _, o, i, { dataURLOptions: c });
+        let { sampling: t = 'all', win: r, blockClass: n, blockSelector: _, unblockSelector: o, maxCanvasSize: E, recordCanvas: i, dataURLOptions: c, errorHandler: s } = e;
+        if (((this.mutationCb = e.mutationCb), (this.mirror = e.mirror), (this.options = e), s)) a = s;
+        if ((((i && 'number' == typeof t) || e.enableManualSnapshot) && (this.worker = this.initFPSWorker()), this.addWindow(r), e.enableManualSnapshot)) return;
+        L(() => {
+            i && 'all' === t && (this.startRAFTimestamping(), this.startPendingCanvasMutationFlusher()), i && 'number' == typeof t && this.initCanvasFPSObserver(t, n, _, o, E, { dataURLOptions: c });
         })();
     }
     addWindow(e) {
-        let { sampling: t = 'all', blockClass: r, blockSelector: n, unblockSelector: a, recordCanvas: _, enableManualSnapshot: o } = this.options;
+        let { sampling: t = 'all', blockClass: r, blockSelector: a, unblockSelector: n, recordCanvas: _, enableManualSnapshot: o } = this.options;
         if (!this.windowsSet.has(e)) {
             if (o) {
                 this.windowsSet.add(e), this.windows.push(new WeakRef(e));
                 return;
             }
-            O(() => {
-                if ((_ && 'all' === t && this.initCanvasMutationObserver(e, r, n, a), _ && 'number' == typeof t)) {
-                    let t = M(e, r, n, a, !0);
+            L(() => {
+                if ((_ && 'all' === t && this.initCanvasMutationObserver(e, r, a, n), _ && 'number' == typeof t)) {
+                    let t = M(e, r, a, n, !0);
                     this.restoreHandlers.push(() => {
                         t();
                     });
@@ -364,10 +364,10 @@ class m {
                 let t = e.data,
                     { id: r } = t;
                 if ((this.snapshotInProgressMap.set(r, !1), !('base64' in t))) return;
-                let { base64: n, type: a, width: _, height: o } = t;
+                let { base64: a, type: n, width: _, height: o } = t;
                 this.mutationCb({
                     id: r,
-                    type: f['2D'],
+                    type: O['2D'],
                     commands: [
                         {
                             property: 'clearRect',
@@ -384,10 +384,10 @@ class m {
                                             data: [
                                                 {
                                                     rr_type: 'ArrayBuffer',
-                                                    base64: n
+                                                    base64: a
                                                 }
                                             ],
-                                            type: a
+                                            type: n
                                         }
                                     ]
                                 },
@@ -403,41 +403,41 @@ class m {
             e
         );
     }
-    initCanvasFPSObserver(e, t, r, n, a, _) {
-        let o = this.takeSnapshot(!1, e, t, r, n, a, _.dataURLOptions);
+    initCanvasFPSObserver(e, t, r, a, n, _) {
+        let o = this.takeSnapshot(!1, e, t, r, a, n, _.dataURLOptions);
         this.restoreHandlers.push(() => {
             cancelAnimationFrame(o);
         });
     }
-    initCanvasMutationObserver(e, t, r, n) {
-        let a = M(e, t, r, n, !1),
-            _ = (function (e, t, r, n, a) {
+    initCanvasMutationObserver(e, t, r, a) {
+        let n = M(e, t, r, a, !1),
+            _ = (function (e, t, r, a, n) {
                 let _ = [];
                 for (let o of Object.getOwnPropertyNames(t.CanvasRenderingContext2D.prototype))
                     try {
                         if ('function' != typeof t.CanvasRenderingContext2D.prototype[o]) continue;
-                        let i = R(t.CanvasRenderingContext2D.prototype, o, function (_) {
-                            return function (...i) {
+                        let E = R(t.CanvasRenderingContext2D.prototype, o, function (_) {
+                            return function (...E) {
                                 return (
-                                    !N(this.canvas, r, n, a, !0) &&
-                                        L(() => {
-                                            let r = U(i, t, this);
+                                    !A(this.canvas, r, a, n, !0) &&
+                                        f(() => {
+                                            let r = g(E, t, this);
                                             e(this.canvas, {
-                                                type: f['2D'],
+                                                type: O['2D'],
                                                 property: o,
                                                 args: r
                                             });
                                         }, 0),
-                                    _.apply(this, i)
+                                    _.apply(this, E)
                                 );
                             };
                         });
-                        _.push(i);
-                    } catch (n) {
-                        let r = I(t.CanvasRenderingContext2D.prototype, o, {
+                        _.push(E);
+                    } catch (a) {
+                        let r = u(t.CanvasRenderingContext2D.prototype, o, {
                             set(t) {
                                 e(this.canvas, {
-                                    type: f['2D'],
+                                    type: O['2D'],
                                     property: o,
                                     args: [t],
                                     setter: !0
@@ -449,19 +449,19 @@ class m {
                 return () => {
                     _.forEach((e) => e());
                 };
-            })(this.processMutation.bind(this), e, t, r, n),
-            o = (function (e, t, r, n, a, _) {
+            })(this.processMutation.bind(this), e, t, r, a),
+            o = (function (e, t, r, a, n, _) {
                 let o = [];
                 return (
-                    o.push(...G(t.WebGLRenderingContext.prototype, f.WebGL, e, r, n, a, _, t)),
-                    void 0 !== t.WebGL2RenderingContext && o.push(...G(t.WebGL2RenderingContext.prototype, f.WebGL2, e, r, n, a, _, t)),
+                    o.push(...G(t.WebGLRenderingContext.prototype, O.WebGL, e, r, a, n, _, t)),
+                    void 0 !== t.WebGL2RenderingContext && o.push(...G(t.WebGL2RenderingContext.prototype, O.WebGL2, e, r, a, n, _, t)),
                     () => {
                         o.forEach((e) => e());
                     }
                 );
-            })(this.processMutation.bind(this), e, t, r, n, this.mirror);
+            })(this.processMutation.bind(this), e, t, r, a, this.mirror);
         this.restoreHandlers.push(() => {
-            a(), _(), o();
+            n(), _(), o();
         });
     }
     snapshot(e) {
@@ -471,16 +471,16 @@ class m {
             cancelAnimationFrame(r);
         });
     }
-    takeSnapshot(e, t, r, n, a, _, o, E) {
+    takeSnapshot(e, t, r, a, n, _, o, i) {
         let c;
         let s = 1000 / t,
             l = 0,
-            u = (e) => {
+            I = (e) => {
                 if (e) return [e];
                 let t = [],
                     _ = (e) => {
                         e.querySelectorAll('canvas').forEach((e) => {
-                            !N(e, r, n, a, !0) && t.push(e);
+                            !A(e, r, a, n, !0) && t.push(e);
                         });
                     };
                 for (let e of this.windows) {
@@ -493,33 +493,33 @@ class m {
                 }
                 return t;
             },
-            I = (t) => {
+            u = (t) => {
                 if (!!this.windows.length) {
                     if (l && t - l < s) {
-                        c = d(I);
+                        c = d(u);
                         return;
                     }
                     (l = t),
-                        u(E).forEach((t) => {
+                        I(i).forEach((t) => {
                             if (!this.mirror.hasNode(t)) return;
                             let r = this.mirror.getId(t);
                             if (!this.snapshotInProgressMap.get(r)) {
                                 if (t.width && t.height) {
                                     if ((this.snapshotInProgressMap.set(r, !0), !e && ['webgl', 'webgl2'].includes(t.__context))) {
                                         let e = t.getContext(t.__context);
-                                        !1 === (0, i.x)([e, 'optionalAccess', (e) => e.getContextAttributes, 'call', (e) => e(), 'optionalAccess', (e) => e.preserveDrawingBuffer]) && e.clear(e.COLOR_BUFFER_BIT);
+                                        !1 === (0, E.x)([e, 'optionalAccess', (e) => e.getContextAttributes, 'call', (e) => e(), 'optionalAccess', (e) => e.preserveDrawingBuffer]) && e.clear(e.COLOR_BUFFER_BIT);
                                     }
                                     createImageBitmap(t)
                                         .then((e) => {
-                                            (0, i.x)([
+                                            (0, E.x)([
                                                 this,
                                                 'access',
                                                 (e) => e.worker,
                                                 'optionalAccess',
                                                 (e) => e.postMessage,
                                                 'call',
-                                                (n) =>
-                                                    n(
+                                                (a) =>
+                                                    a(
                                                         {
                                                             id: r,
                                                             bitmap: e,
@@ -533,17 +533,17 @@ class m {
                                             ]);
                                         })
                                         .catch((e) => {
-                                            O(() => {
+                                            L(() => {
                                                 throw e;
                                             })();
                                         });
                                 }
                             }
                         }),
-                        (c = d(I));
+                        (c = d(u));
                 }
             };
-        return (c = d(I));
+        return (c = d(u));
     }
     startPendingCanvasMutationFlusher() {
         d(() => this.flushPendingCanvasMutations());
@@ -565,15 +565,15 @@ class m {
         if (this.frozen || this.locked) return;
         let r = this.pendingCanvasMutations.get(e);
         if (!r || -1 === t) return;
-        let n = r.map((e) => {
+        let a = r.map((e) => {
                 let { type: t, ...r } = e;
                 return r;
             }),
-            { type: a } = r[0];
+            { type: n } = r[0];
         this.mutationCb({
             id: t,
-            type: a,
-            commands: n
+            type: n,
+            commands: a
         }),
             this.pendingCanvasMutations.delete(e);
     }
@@ -601,34 +601,34 @@ let y = {
             }
         }
     },
-    b = (0, E._I)((e = {}) => {
+    b = (0, i._I)((e = {}) => {
         let t;
-        let [r, n] = e.maxCanvasSize || [],
-            a = {
+        let [r, a] = e.maxCanvasSize || [],
+            n = {
                 quality: e.quality || 'medium',
                 enableManualSnapshot: e.enableManualSnapshot,
-                maxCanvasSize: [r ? Math.min(r, 1280) : 1280, n ? Math.min(n, 1280) : 1280]
+                maxCanvasSize: [r ? Math.min(r, 1280) : 1280, a ? Math.min(a, 1280) : 1280]
             },
             _ = new Promise((e) => (t = e));
         return {
             name: 'ReplayCanvas',
             getOptions() {
-                let { quality: e, enableManualSnapshot: r, maxCanvasSize: n } = a;
+                let { quality: e, enableManualSnapshot: r, maxCanvasSize: a } = n;
                 return {
                     enableManualSnapshot: r,
                     recordCanvas: !0,
                     getCanvasManager: (e) => {
-                        let a = new m({
+                        let n = new m({
                             ...e,
                             enableManualSnapshot: r,
-                            maxCanvasSize: n,
+                            maxCanvasSize: a,
                             errorHandler: (e) => {
                                 try {
                                     'object' == typeof e && (e.__rrweb__ = !0);
                                 } catch (e) {}
                             }
                         });
-                        return t(a), a;
+                        return t(n), n;
                     },
                     ...(y[e || 'medium'] || y.medium)
                 };

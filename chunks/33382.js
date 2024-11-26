@@ -25,16 +25,16 @@ function a(e, t) {
             v = n[7];
         o && (r.push(o), (o = ''));
         var I = null != p && null != _ && _ !== p,
-            b = '+' === E || '*' === E,
-            T = '?' === E || '*' === E,
+            T = '+' === E || '*' === E,
+            b = '?' === E || '*' === E,
             S = n[2] || u,
             y = m || g;
         r.push({
             name: h || a++,
             prefix: p || '',
             delimiter: S,
-            optional: T,
-            repeat: b,
+            optional: b,
+            repeat: T,
             partial: I,
             asterisk: !!v,
             pattern: y

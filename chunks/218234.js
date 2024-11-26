@@ -1,26 +1,26 @@
 r.d(t, {
     o: function () {
-        return i;
+        return E;
     }
 });
-var n = r(622916),
-    a = r(967752),
+var a = r(622916),
+    n = r(967752),
     _ = r(617726),
     o = r(939747);
-function i(e, t) {
-    n.kg.log(`Flushing aggregated metrics, number of metrics: ${t.length}`);
+function E(e, t) {
+    a.kg.log(`Flushing aggregated metrics, number of metrics: ${t.length}`);
     let r = e.getDsn(),
-        i = e.getSdkMetadata(),
-        E = (function (e, t, r, n) {
-            let i = { sent_at: new Date().toISOString() };
+        E = e.getSdkMetadata(),
+        i = (function (e, t, r, a) {
+            let E = { sent_at: new Date().toISOString() };
             r &&
                 r.sdk &&
-                (i.sdk = {
+                (E.sdk = {
                     name: r.sdk.name,
                     version: r.sdk.version
                 }),
-                n && t && (i.dsn = (0, a.RA)(t));
-            let E = (function (e) {
+                a && t && (E.dsn = (0, n.RA)(t));
+            let i = (function (e) {
                 let t = (0, o.uv)(e);
                 return [
                     {
@@ -30,7 +30,7 @@ function i(e, t) {
                     t
                 ];
             })(e);
-            return (0, _.Jd)(i, [E]);
-        })(t, r, i, e.getOptions().tunnel);
-    e.sendEnvelope(E);
+            return (0, _.Jd)(E, [i]);
+        })(t, r, E, e.getOptions().tunnel);
+    e.sendEnvelope(i);
 }

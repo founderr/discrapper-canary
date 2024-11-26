@@ -24,7 +24,7 @@ n.d(t, {
         return V;
     },
     eU: function () {
-        return P;
+        return M;
     },
     em: function () {
         return D;
@@ -42,7 +42,7 @@ n.d(t, {
         return O;
     },
     yi: function () {
-        return M;
+        return P;
     },
     yl: function () {
         return k;
@@ -71,8 +71,8 @@ var r = n(46973),
     E = n(626135),
     v = n(358085),
     I = n(557177),
-    b = n(435064),
-    T = n(61994),
+    T = n(435064),
+    b = n(61994),
     S = n(550351),
     y = n(659487),
     A = n(711644),
@@ -127,13 +127,13 @@ function w(e) {
         settings: { storageLocation: e }
     });
 }
-function M(e) {
+function P(e) {
     a.Z.dispatch({
         type: 'CLIPS_SETTINGS_UPDATE',
         settings: { clipsQuality: e }
     });
 }
-function P(e) {
+function M(e) {
     a.Z.dispatch({
         type: 'CLIPS_SETTINGS_UPDATE',
         settings: { clipsLength: e }
@@ -173,7 +173,7 @@ function U(e, t) {
         frames_encoded_during_clip: t.framesEncodedDuringClip,
         frames_dropped: t.framesDropped,
         frames_dropped_during_clip: t.framesDroppedDuringClip,
-        clip_duration_setting: b.Z.getSettings().clipsLength,
+        clip_duration_setting: T.Z.getSettings().clipsLength,
         clip_duration: t.clipDuration,
         clip_resolution_width: t.clipResolutionWidth,
         clip_resolution_height: t.clipResolutionHeight,
@@ -186,9 +186,9 @@ function U(e, t) {
     };
 }
 async function B(e) {
-    let t = b.Z.getSettings().storageLocation,
+    let t = T.Z.getSettings().storageLocation,
         n = (0, S.Z)(e),
-        r = ''.concat((0, T.Z)(n.applicationName.substring(0, 20)), '_').concat(n.id, '.mp4'),
+        r = ''.concat((0, b.Z)(n.applicationName.substring(0, 20)), '_').concat(n.id, '.mp4'),
         i = s.Z.fileManager.join(t, r),
         o = h.Z.getMediaEngine(),
         l = JSON.stringify(n),
@@ -256,17 +256,17 @@ async function B(e) {
 }
 async function G(e) {
     var t;
-    let n = b.Z.isDecoupledGameClippingEnabled(),
+    let n = T.Z.isDecoupledGameClippingEnabled(),
         { enableViewerClipping: s } = c.Z.getCurrentConfig({ location: 'SaveClip' }, { autoTrackExposure: !1 });
-    if (b.Z.getIsAtMaxSaveClipOperations()) return;
-    let o = b.Z.getSettings().clipsEnabled && null != _.Z.getCurrentUserActiveStream(),
-        d = n && b.Z.getSettings().decoupledClipsEnabled && (null === (t = l.ZP.getVisibleGame()) || void 0 === t ? void 0 : t.windowHandle) != null && h.Z.hasClipsSource(),
+    if (T.Z.getIsAtMaxSaveClipOperations()) return;
+    let o = T.Z.getSettings().clipsEnabled && null != _.Z.getCurrentUserActiveStream(),
+        d = n && T.Z.getSettings().decoupledClipsEnabled && (null === (t = l.ZP.getVisibleGame()) || void 0 === t ? void 0 : t.windowHandle) != null && h.Z.hasClipsSource(),
         f = null != e && null != _.Z.getActiveStreamForStreamKey(e) && s;
     if (!o && !d && !f) return;
     let m = _.Z.getCurrentUserActiveStream(),
         E = null != m ? (0, u.V9)(m) : void 0,
         v = null != e ? e : E,
-        T = (() => {
+        b = (() => {
             let e = null != v ? (0, u.my)(v).ownerId : void 0;
             return e === p.default.getId() ? C.X9.STREAMER : null != e ? C.X9.VIEWER : C.X9.DECOUPLED;
         })(),
@@ -285,7 +285,7 @@ async function G(e) {
         })();
     a.Z.dispatch({
         type: 'CLIPS_SAVE_CLIP_START',
-        clipType: T,
+        clipType: b,
         streamKey: v,
         thumbnail: S
     });
@@ -300,7 +300,7 @@ async function G(e) {
     } catch (e) {
         C.jF.error('Clip Failed to Save', e), null == y || y.stop(), (0, I.GN)('clip_error', 0.5), a.Z.dispatch({ type: 'CLIPS_SAVE_CLIP_ERROR' });
     }
-    C.jF.info(''.concat(b.Z.getSettings().clipsLength / 1000, 's clip save took ').concat(Math.round(performance.now() - A), 'ms'));
+    C.jF.info(''.concat(T.Z.getSettings().clipsLength / 1000, 's clip save took ').concat(Math.round(performance.now() - A), 'ms'));
 }
 function Z(e, t) {
     a.Z.dispatch({
@@ -310,7 +310,7 @@ function Z(e, t) {
     });
 }
 async function F(e, t) {
-    let n = b.Z.getClips().find((t) => t.id === e);
+    let n = T.Z.getClips().find((t) => t.id === e);
     if (null == n) return;
     let r = {
         ...n,

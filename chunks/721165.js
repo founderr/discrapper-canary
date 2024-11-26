@@ -1,60 +1,60 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return g;
+        return x;
     }
 }),
-    n(789020);
-var i = n(200651),
-    r = n(192379),
-    o = n(442837),
-    a = n(131388),
-    l = n(171246),
-    c = n(689011),
-    s = n(931905),
-    d = n(430824),
-    u = n(563132),
-    f = n(409813),
-    p = n(586585),
-    m = n(614277),
-    b = n(750143),
-    h = n(388032);
-function g(e) {
-    let { handleStepChange: t, handleClose: n } = e,
-        { subscriptionMetadataRequest: g, selectedSku: x, selectedStoreListing: _, application: v } = (0, u.usePaymentContext)(),
-        C = (0, a.Z)(b.i),
-        S = (0, o.e7)([d.Z], () => d.Z.getGuild(null == g ? void 0 : g.guild_id)),
-        j = r.useCallback(() => t(f.h8.REVIEW), [t]);
-    if (null == x) return null;
-    let k = (0, l.KW)(x.flags);
+    t(789020);
+var i = t(200651),
+    r = t(192379),
+    o = t(442837),
+    a = t(131388),
+    l = t(171246),
+    c = t(689011),
+    d = t(931905),
+    s = t(430824),
+    u = t(563132),
+    f = t(409813),
+    p = t(586585),
+    m = t(614277),
+    b = t(750143),
+    _ = t(388032);
+function x(e) {
+    let { handleStepChange: n, handleClose: t } = e,
+        { subscriptionMetadataRequest: x, selectedSku: g, selectedStoreListing: h, application: C } = (0, u.usePaymentContext)(),
+        v = (0, a.Z)(b.i),
+        S = (0, o.e7)([s.Z], () => s.Z.getGuild(null == x ? void 0 : x.guild_id)),
+        j = r.useCallback(() => n(f.h8.REVIEW), [n]);
+    if (null == g) return null;
+    let k = (0, l.KW)(g.flags);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(m.C3, {
-                children: C
-                    ? (0, i.jsx)(s.h, {
-                          confirmCta: h.intl.string(h.t.PBHFSk),
+                children: v
+                    ? (0, i.jsx)(d.h, {
+                          confirmCta: _.intl.string(_.t.PBHFSk),
                           onConfirm: j,
-                          onCancel: n,
-                          title: h.intl.format(h.t['6n6oXF'], { tier: x.name }),
-                          subtitle: k ? h.intl.string(h.t.lzAoKC) : h.intl.formatToPlainString(h.t['GqaY/v'], { guildName: null == S ? void 0 : S.name }),
+                          onCancel: t,
+                          title: _.intl.format(_.t['6n6oXF'], { tier: g.name }),
+                          subtitle: k ? _.intl.string(_.t.lzAoKC) : _.intl.formatToPlainString(_.t['GqaY/v'], { guildName: null == S ? void 0 : S.name }),
                           showOpenDiscord: !1
                       })
                     : (0, i.jsx)(c.Oc, {
-                          icon: null == _ ? void 0 : _.thumbnail,
-                          storeListingBenefits: null == _ ? void 0 : _.benefits,
-                          application: null != v ? v : void 0,
-                          title: h.intl.format(h.t.haiCxc, { tier: x.name }),
-                          subtitle: k ? h.intl.string(h.t.RvtbPz) : h.intl.string(h.t.zY39Zm),
-                          description: k ? h.intl.formatToPlainString(h.t.QCe4ra, { applicationName: null == v ? void 0 : v.name }) : h.intl.string(h.t.n1Pu8P)
+                          icon: null == h ? void 0 : h.thumbnail,
+                          storeListingBenefits: null == h ? void 0 : h.benefits,
+                          application: null != C ? C : void 0,
+                          title: _.intl.format(_.t.haiCxc, { tier: g.name }),
+                          subtitle: k ? _.intl.string(_.t.RvtbPz) : _.intl.string(_.t.zY39Zm),
+                          description: k ? _.intl.formatToPlainString(_.t.QCe4ra, { applicationName: null == C ? void 0 : C.name }) : _.intl.string(_.t.n1Pu8P)
                       })
             }),
-            !C &&
+            !v &&
                 (0, i.jsx)(m.O3, {
                     children: (0, i.jsx)(p.Z, {
-                        onBack: n,
-                        backText: h.intl.string(h.t.TQBY1N),
+                        onBack: t,
+                        backText: _.intl.string(_.t.TQBY1N),
                         onPrimary: j,
                         primaryCTA: p.g.CONTINUE,
-                        primaryText: h.intl.string(h.t['gZhF+/'])
+                        primaryText: _.intl.string(_.t['gZhF+/'])
                     })
                 })
         ]

@@ -1,6 +1,6 @@
 n.d(t, {
     FW: function () {
-        return p;
+        return g;
     },
     Pk: function () {
         return o;
@@ -15,7 +15,7 @@ n.d(t, {
         return a;
     },
     qd: function () {
-        return g;
+        return p;
     }
 }),
     n(518263),
@@ -79,16 +79,16 @@ function h(e, t) {
         )
     );
 }
-async function p(e, t) {
+async function g(e, t) {
     let n = new TextDecoder(),
         i = await h(e, u(t));
     return n.decode(i);
 }
-async function g(e, t) {
+async function p(e, t) {
     return c(await h(e, u(t)));
 }
 async function m(e, t) {
-    t = await p(e, t);
+    t = await g(e, t);
     let n = t.match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
     if (null == n) throw Error('Invalid encoded user record.');
     let [, i, r, l, a] = n;

@@ -19,11 +19,11 @@ var i = n(200651),
     x = n(39604),
     S = n(703288),
     T = n(491758),
-    C = n(233685),
+    E = n(233685),
     _ = n(388032),
-    E = n(644517),
-    f = n(277253),
-    I = n(232186);
+    C = n(644517),
+    I = n(277253),
+    f = n(232186);
 function N(e) {
     let { className: t, showHeader: n = !0 } = e,
         N = u.tU.useSetting(),
@@ -45,7 +45,7 @@ function N(e) {
                         tag: a.FormTitleTags.H1,
                         title: n
                             ? (0, i.jsxs)('div', {
-                                  className: E.headerContainer,
+                                  className: C.headerContainer,
                                   children: [_.intl.string(_.t.z2jK6e), (0, i.jsx)(S.Z, {})]
                               })
                             : null,
@@ -53,16 +53,16 @@ function N(e) {
                             v &&
                             (0, i.jsxs)('form', {
                                 onSubmit: (e) => e.preventDefault(),
-                                children: [(0, i.jsx)(T.Z, {}), (0, i.jsx)(C.Z, {})]
+                                children: [(0, i.jsx)(T.Z, {}), (0, i.jsx)(E.Z, {})]
                             })
                     }),
                 v && (0, i.jsx)(a.FormDivider, {}),
                 (0, i.jsxs)(a.FormSection, {
-                    className: n || v ? I.marginTop20 : t,
+                    className: n || v ? f.marginTop20 : t,
                     children: [
                         (0, i.jsx)(a.FormSwitch, {
                             hideBorder: !0,
-                            className: f.formItem,
+                            className: I.formItem,
                             value: N,
                             note: _.intl.string(_.t['wW9/zc']),
                             onChange: (e) => x.yg({ allowVoiceRecording: e }),
@@ -72,7 +72,7 @@ function N(e) {
                             O &&
                             (0, i.jsx)(a.FormSwitch, {
                                 hideBorder: !0,
-                                className: f.formItem,
+                                className: I.formItem,
                                 value: j,
                                 note: _.intl.string(_.t['0vjy8P']),
                                 onChange: (e) =>

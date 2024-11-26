@@ -1,48 +1,48 @@
-n.d(t, {
+t.d(n, {
     v: function () {
-        return m;
+        return x;
     }
 }),
-    n(47120);
-var i = n(200651),
-    r = n(192379),
-    o = n(399606),
-    a = n(89057),
-    l = n(597688),
-    c = n(987209),
-    s = n(563132),
-    d = n(409813),
-    u = n(48931),
-    f = n(456251),
-    p = n(981631);
-function m(e) {
-    let { handleStepChange: t, handleClose: n } = e,
-        { blockedPayments: m, hasFetchedSkus: b, paymentSources: h, hasFetchedPaymentSources: g, application: x, skusById: _, selectedSkuId: v } = (0, s.usePaymentContext)(),
-        { isGift: C } = (0, c.wD)(),
-        [S, j] = r.useState(!0),
-        [k, y] = (0, o.Wu)([l.Z], () => [l.Z.isFetchingCategories, l.Z.error]);
+    t(47120);
+var i = t(200651),
+    l = t(192379),
+    r = t(399606),
+    a = t(89057),
+    s = t(597688),
+    o = t(987209),
+    d = t(563132),
+    c = t(409813),
+    u = t(48931),
+    h = t(456251),
+    m = t(981631);
+function x(e) {
+    let { handleStepChange: n, handleClose: t } = e,
+        { blockedPayments: x, hasFetchedSkus: f, paymentSources: v, hasFetchedPaymentSources: p, application: g, skusById: C, selectedSkuId: j } = (0, d.usePaymentContext)(),
+        { isGift: I } = (0, o.wD)(),
+        [T, E] = l.useState(!0),
+        [N, S] = (0, r.Wu)([s.Z], () => [s.Z.isFetchingCategories, s.Z.error]);
     if (
-        (r.useEffect(() => {
-            let e = null != x;
-            if (!!b && !!g && !!e) j(k);
-        }, [b, g, x, k]),
-        r.useEffect(() => {
-            if (S || m || null == v) return;
-            let e = _[v];
-            if (C && (null == e ? void 0 : e.productLine) === p.POd.COLLECTIBLES) {
-                t(d.h8.GIFT_CUSTOMIZATION);
+        (l.useEffect(() => {
+            let e = null != g;
+            if (!!f && !!p && !!e) E(N);
+        }, [f, p, g, N]),
+        l.useEffect(() => {
+            if (T || x || null == j) return;
+            let e = C[j];
+            if (I && (null == e ? void 0 : e.productLine) === m.POd.COLLECTIBLES) {
+                n(c.h8.GIFT_CUSTOMIZATION);
                 return;
             }
-            if (0 === Object.keys(h).length) {
-                t(d.h8.ADD_PAYMENT_STEPS);
+            if (0 === Object.keys(v).length) {
+                n(c.h8.ADD_PAYMENT_STEPS);
                 return;
             }
-            t(d.h8.REVIEW);
-        }, [S, m, t, h, C, _, v]),
-        S)
+            n(c.h8.REVIEW);
+        }, [T, x, n, v, I, C, j]),
+        T)
     )
-        return (0, i.jsx)(f.Z, {});
-    if (m) return (0, i.jsx)(a.Vq, { onClose: n });
-    if (null != y) return (0, i.jsx)(u.Z, { onClose: n });
+        return (0, i.jsx)(h.Z, {});
+    if (x) return (0, i.jsx)(a.Vq, { onClose: t });
+    if (null != S) return (0, i.jsx)(u.Z, { onClose: t });
     return null;
 }

@@ -13,8 +13,8 @@ var r = n(200651),
 t.Z = function (e) {
     let { style: t, src: n, backgroundSrc: h, userId: m, pulseSpeakingIndicator: g = !1, speaking: E = !1, ...v } = e,
         I = null != h ? h : n,
-        b = (0, o.ZP)(I, a.Z.unsafe_rawColors.PRIMARY_800.css),
-        T = (0, l.c)(!0, 'VideoBackground-web').enabled,
+        T = (0, o.ZP)(I, a.Z.unsafe_rawColors.PRIMARY_800.css),
+        b = (0, l.c)(!0, 'VideoBackground-web').enabled,
         S = (0, c.ZP)(null != m ? m : _.lds),
         y =
             null == S
@@ -25,8 +25,8 @@ t.Z = function (e) {
                   });
     if (
         (i.useEffect(() => {
-            null != m && T && (0, d.Z)(m, void 0, { dispatchWait: !0 });
-        }, [T, m]),
+            null != m && b && (0, d.Z)(m, void 0, { dispatchWait: !0 });
+        }, [b, m]),
         null == n)
     )
         return null;
@@ -37,10 +37,10 @@ t.Z = function (e) {
         }),
         N = {
             ...t,
-            backgroundColor: b
+            backgroundColor: T
         };
     return (
-        null != y && E && T && ((N.backgroundImage = 'url('.concat(y, ')')), (N.backgroundSize = 'cover')),
+        null != y && E && b && ((N.backgroundImage = 'url('.concat(y, ')')), (N.backgroundSize = 'cover')),
         (0, r.jsx)('div', {
             style: N,
             className: p.background,

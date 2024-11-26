@@ -1,9 +1,9 @@
 n.d(t, {
     g: function () {
-        return g;
+        return m;
     },
     mI: function () {
-        return E;
+        return p;
     }
 }),
     n(47120);
@@ -17,17 +17,17 @@ var i = n(149765),
     c = n(700785),
     d = n(709054),
     f = n(533244),
-    p = n(487419),
-    _ = n(676770);
+    _ = n(487419),
+    E = n(676770);
 n(981631);
-function E(e) {
+function p(e) {
     let t = (0, r.e7)([o.Z, u.Z], () => {
             let t = o.Z.getGuild(e);
             if (null == t) return !1;
             let n = u.Z.getGuildPermissions(t);
-            return null != n && i.Db(n, _.cv);
+            return null != n && i.Db(n, E.cv);
         }),
-        n = (0, r.e7)([p.Z], () => (null != e ? p.Z.getGuildIncident(e) : null)),
+        n = (0, r.e7)([_.Z], () => (null != e ? _.Z.getGuildIncident(e) : null)),
         l = null != n && (0, f.ur)(n);
     return {
         shouldShowIncidentActions: t,
@@ -35,11 +35,11 @@ function E(e) {
         isUnderLockdown: l
     };
 }
-function g() {
+function m() {
     var e;
     let t = (function (e) {
             let t = s.default.getCurrentUser(),
-                n = p.Z.getIncidentsByGuild();
+                n = _.Z.getIncidentsByGuild();
             for (let r of d.default.keys(n).map((e) => o.Z.getGuild(e))) {
                 if (null == r) continue;
                 let l = n[r.id];
@@ -51,7 +51,7 @@ function g() {
                                 context: r,
                                 checkElevated: !1
                             }),
-                            _.cv
+                            E.cv
                         )
                     )
                         return r.id;

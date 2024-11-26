@@ -7,8 +7,8 @@ n.d(t, {
 var r = n(200651),
     l = n(192379),
     o = n(399606),
-    i = n(780384),
-    s = n(481060),
+    s = n(780384),
+    i = n(481060),
     a = n(410030),
     d = n(367907),
     c = n(863249),
@@ -29,7 +29,7 @@ function b(e) {
         T = (0, a.ZP)(),
         k = l.useRef(null),
         D = l.useRef(null),
-        P = (0, i.wj)(T) ? 'linear-gradient(to top, rgba(54, 57, 63, 1), rgba(54, 57, 63, 0))' : 'linear-gradient(to top, rgba(242, 243, 245, 1), rgba(242, 243, 245, 0))',
+        P = (0, s.wj)(T) ? 'linear-gradient(to top, rgba(54, 57, 63, 1), rgba(54, 57, 63, 0))' : 'linear-gradient(to top, rgba(242, 243, 245, 1), rgba(242, 243, 245, 0))',
         O = l.useCallback(async () => {
             if (null != Z && null != I) {
                 try {
@@ -72,16 +72,16 @@ function b(e) {
                   className: f.promptContent,
                   ref: k,
                   children: [
-                      (0, r.jsxs)(s.AdvancedScrollerThin, {
+                      (0, r.jsxs)(i.AdvancedScrollerThin, {
                           className: f.scrollerContent,
                           ref: j,
                           children: [
-                              (0, r.jsx)(s.Text, {
+                              (0, r.jsx)(i.Text, {
                                   variant: 'text-sm/medium',
                                   color: 'text-muted',
                                   children: g.intl.string(g.t['b1JC+v'])
                               }),
-                              (0, r.jsx)(s.Heading, {
+                              (0, r.jsx)(i.Heading, {
                                   variant: 'heading-xl/semibold',
                                   children: g.intl.string(g.t.prJqwc)
                               }),
@@ -94,12 +94,12 @@ function b(e) {
                                           {
                                               className: f.termsRow,
                                               children: [
-                                                  (0, r.jsx)(s.Text, {
+                                                  (0, r.jsx)(i.Text, {
                                                       variant: 'text-sm/normal',
                                                       color: 'text-muted',
                                                       children: ''.concat(t + 1, '.')
                                                   }),
-                                                  (0, r.jsx)(s.Text, {
+                                                  (0, r.jsx)(i.Text, {
                                                       variant: 'text-sm/normal',
                                                       className: f.termsRowContent,
                                                       children: p.Z.parseGuildVerificationFormRule(e, !0, { channelId: n.rulesChannelId })
@@ -123,7 +123,7 @@ function b(e) {
                                   className: f.leftButtons,
                                   children:
                                       -1 !== N &&
-                                      (0, r.jsxs)(s.Button, {
+                                      (0, r.jsxs)(i.Button, {
                                           innerClassName: f.buttonInner,
                                           onClick: () => {
                                               !C &&
@@ -144,10 +144,10 @@ function b(e) {
                                                       })),
                                                   v(N);
                                           },
-                                          size: s.Button.Sizes.MEDIUM,
-                                          look: s.Button.Looks.OUTLINED,
+                                          size: i.Button.Sizes.MEDIUM,
+                                          look: i.Button.Looks.OUTLINED,
                                           grow: !1,
-                                          color: s.Button.Colors.PRIMARY,
+                                          color: i.Button.Colors.PRIMARY,
                                           children: [
                                               (0, r.jsx)(m.Z, {
                                                   className: f.arrow,
@@ -160,20 +160,20 @@ function b(e) {
                               (0, r.jsxs)('div', {
                                   className: f.rightButtons,
                                   children: [
-                                      (0, r.jsx)(s.Text, {
+                                      (0, r.jsx)(i.Text, {
                                           className: f.helpText,
                                           variant: 'text-xs/normal',
                                           color: 'text-muted',
                                           children: E ? g.intl.string(g.t.arAe3N) : g.intl.string(g.t.D0CVAQ)
                                       }),
-                                      (0, r.jsxs)(s.Button, {
+                                      (0, r.jsxs)(i.Button, {
                                           innerClassName: f.buttonInner,
                                           onClick: O,
                                           disabled: !E,
-                                          size: s.Button.Sizes.MEDIUM,
-                                          look: s.Button.Looks.FILLED,
+                                          size: i.Button.Sizes.MEDIUM,
+                                          look: i.Button.Looks.FILLED,
                                           grow: !1,
-                                          color: s.Button.Colors.BRAND,
+                                          color: i.Button.Colors.BRAND,
                                           children: [
                                               g.intl.string(g.t['8SuVoK']),
                                               (0, r.jsx)('span', {

@@ -16,10 +16,10 @@ let g = Date.now(),
     E = !1,
     v = !1,
     I = !1,
-    b = !1,
-    T = !1;
+    T = !1,
+    b = !1;
 function S() {
-    return I || b || ((0, _.isAndroid)() && T);
+    return I || T || ((0, _.isAndroid)() && b);
 }
 function y() {
     Date.now() - g > h.OSm || S()
@@ -65,10 +65,10 @@ function y() {
               (I = !0), A({}), u.default.disconnect();
           }),
           c.Z.remotePowerMonitor.on('lock-screen', () => {
-              (b = !0), A({});
+              (T = !0), A({});
           }),
           c.Z.remotePowerMonitor.on('unlock-screen', () => {
-              (b = !1), A({});
+              (T = !1), A({});
           }))
         : setInterval(y, 0.25 * h.OSm));
 function A(e) {
@@ -119,7 +119,7 @@ class N extends (s = o.ZP.Store) {
         },
         APP_STATE_UPDATE: function (e) {
             let { state: t } = e;
-            return (T = t === h.$7l.BACKGROUND), (g = Date.now()), y(), !1;
+            return (b = t === h.$7l.BACKGROUND), (g = Date.now()), y(), !1;
         },
         OVERLAY_SET_NOT_IDLE: A,
         CHANNEL_SELECT: A,

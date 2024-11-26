@@ -1,64 +1,64 @@
 r.d(t, {
     D: function () {
-        return T;
+        return N;
     },
     N: function () {
-        return N;
+        return A;
     }
 });
-var n = r(263449),
-    a = r(696486),
+var a = r(263449),
+    n = r(696486),
     _ = r(988097),
     o = r(152228),
-    i = r(101284),
-    E = r(467510),
+    E = r(101284),
+    i = r(467510),
     c = r(370336),
     s = r(395848),
     l = r(501684),
-    u = r(108185);
-let I = [],
+    I = r(108185);
+let u = [],
     R = new Map();
-function N() {
-    if ((0, u.QV)() && i.Z1) {
+function A() {
+    if ((0, I.QV)() && E.Z1) {
         let e = (function () {
             return (0, l.YF)(({ metric: e }) => {
                 let t,
-                    r = (0, n.s3)();
+                    r = (0, a.s3)();
                 if (!r || void 0 == e.value) return;
-                let l = e.entries.find((t) => t.duration === e.value && A[t.name]);
+                let l = e.entries.find((t) => t.duration === e.value && T[t.name]);
                 if (!l) return;
-                let { interactionId: I } = l,
-                    N = A[l.name],
-                    T = r.getOptions(),
-                    d = (0, u.XL)(i.Z1 + l.startTime),
-                    L = (0, u.XL)(e.value),
-                    f = (0, n.nZ)(),
-                    O = (0, a.HN)(),
-                    p = O ? (0, a.Gx)(O) : void 0,
-                    h = (null != I ? R.get(I) : void 0) || p,
-                    S = h ? (0, a.XU)(h).description : f.getScopeData().transactionName,
-                    D = f.getUser(),
+                let { interactionId: u } = l,
+                    A = T[l.name],
+                    N = r.getOptions(),
+                    d = (0, I.XL)(E.Z1 + l.startTime),
+                    f = (0, I.XL)(e.value),
+                    O = (0, a.nZ)(),
+                    L = (0, n.HN)(),
+                    p = L ? (0, n.Gx)(L) : void 0,
+                    h = (null != u ? R.get(u) : void 0) || p,
+                    D = h ? (0, n.XU)(h).description : O.getScopeData().transactionName,
+                    S = O.getUser(),
                     C = r.getIntegrationByName('Replay'),
-                    g = C && C.getReplayId(),
-                    U = void 0 !== D ? D.email || D.id || D.ip_address : void 0;
+                    P = C && C.getReplayId(),
+                    g = void 0 !== S ? S.email || S.id || S.ip_address : void 0;
                 try {
-                    t = f.getScopeData().contexts.profile.profile_id;
+                    t = O.getScopeData().contexts.profile.profile_id;
                 } catch (e) {}
-                let P = (0, E.Rt)(l.target),
+                let U = (0, i.Rt)(l.target),
                     M = (0, c.Jr)({
-                        release: T.release,
-                        environment: T.environment,
-                        transaction: S,
+                        release: N.release,
+                        environment: N.environment,
+                        transaction: D,
                         [_.JQ]: e.value,
                         [_.S3]: 'auto.http.browser.inp',
-                        user: U || void 0,
+                        user: g || void 0,
                         profile_id: t || void 0,
-                        replay_id: g || void 0,
+                        replay_id: P || void 0,
                         'user_agent.original': s.m.navigator && s.m.navigator.userAgent
                     }),
                     G = (0, o.qp)({
-                        name: P,
-                        op: `ui.interaction.${N}`,
+                        name: U,
+                        op: `ui.interaction.${A}`,
                         attributes: M,
                         startTime: d,
                         experimental: { standalone: !0 }
@@ -67,7 +67,7 @@ function N() {
                     [_.E1]: 'millisecond',
                     [_.Wb]: e.value
                 }),
-                    G.end(d + L);
+                    G.end(d + f);
             });
         })();
         return () => {
@@ -76,7 +76,7 @@ function N() {
     }
     return () => void 0;
 }
-let A = {
+let T = {
     click: 'click',
     pointerdown: 'click',
     pointerup: 'click',
@@ -104,19 +104,19 @@ let A = {
     keypress: 'press',
     input: 'press'
 };
-function T(e) {
+function N(e) {
     let t = ({ entries: e }) => {
-        let t = (0, a.HN)(),
-            r = t && (0, a.Gx)(t);
+        let t = (0, n.HN)(),
+            r = t && (0, n.Gx)(t);
         e.forEach((e) => {
             if (!(0, l.cN)(e) || !r) return;
             let t = e.interactionId;
             if (!(null == t || R.has(t))) {
-                if (I.length > 10) {
-                    let e = I.shift();
+                if (u.length > 10) {
+                    let e = u.shift();
                     R.delete(e);
                 }
-                I.push(t), R.set(t, r);
+                u.push(t), R.set(t, r);
             }
         });
     };

@@ -21,8 +21,8 @@ let p = i.forwardRef(function (e, t) {
             a.X
         ),
         I = l.ZN.useStore((e) => e.searchPlaceholder),
-        b = l.ZN.useStore((e) => e.inspectedExpressionPosition, a.X),
-        T = i.useCallback(
+        T = l.ZN.useStore((e) => e.inspectedExpressionPosition, a.X),
+        b = i.useCallback(
             (e) => {
                 var t;
                 l.ZN.setActiveCategoryIndex('' === e ? 0 : d.c), l.ZN.setInspectedExpressionPosition(0, 0), l.ZN.setSearchPlaceholder(null), (0, u.ql)(e), null === (t = p.current) || void 0 === t || t.scrollTo(0);
@@ -56,7 +56,7 @@ let p = i.forwardRef(function (e, t) {
                 placeholder: null != I ? I : m ? f.intl.string(f.t.dt5h1N) : f.intl.string(f.t['Pck/4e']),
                 onClear: S,
                 onKeyDown: n,
-                onQueryChange: T,
+                onQueryChange: b,
                 className: _.__invalid_searchBar,
                 preventEscapePropagation: !1,
                 useKeyboardNavigation: !1,
@@ -64,7 +64,7 @@ let p = i.forwardRef(function (e, t) {
                     'aria-haspopup': 'grid',
                     'aria-controls': d.Vr,
                     'aria-expanded': !0,
-                    'aria-activedescendant': (0, s.NE)(d.Vr, b.columnIndex, b.rowIndex)
+                    'aria-activedescendant': (0, s.NE)(d.Vr, T.columnIndex, T.rowIndex)
                 }
             })
         })

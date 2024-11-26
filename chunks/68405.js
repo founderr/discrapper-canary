@@ -1,6 +1,6 @@
 n.d(t, {
     PF: function () {
-        return P;
+        return M;
     },
     R7: function () {
         return O;
@@ -24,10 +24,10 @@ n.d(t, {
         return C;
     },
     t1: function () {
-        return T;
+        return b;
     },
     uL: function () {
-        return M;
+        return P;
     },
     v2: function () {
         return R;
@@ -55,8 +55,8 @@ var r = n(392711),
     E = n(981631),
     v = n(526761),
     I = n(388032);
-let b = /-/g;
-function T(e) {
+let T = /-/g;
+function b(e) {
     let t = null != e ? { [e]: 1 } : {};
     u.ZP.trackWithMetadata(E.rMx.SEARCH_STARTED, {
         search_type: E.aib.GIF,
@@ -85,7 +85,7 @@ function S(e, t) {
 }
 function y(e, t, n) {
     let r = Date.now();
-    T(t),
+    b(t),
         s.tn
             .get({
                 url: E.ANM.GIFS_SEARCH,
@@ -186,7 +186,7 @@ function O(e) {
             });
 }
 function D() {
-    let e = (0, a.Z)().replace(b, '');
+    let e = (0, a.Z)().replace(T, '');
     u.ZP.trackWithMetadata(E.rMx.SEARCH_OPENED, {
         search_type: E.aib.GIF,
         load_id: e
@@ -222,7 +222,7 @@ function L() {
 }
 function x(e) {
     let t = Date.now();
-    T(E.wI2.TRENDING_GIFS),
+    b(E.wI2.TRENDING_GIFS),
         s.tn
             .get({
                 url: E.ANM.GIFS_TRENDING_GIFS,
@@ -256,7 +256,7 @@ function w(e) {
     let t = m.Z.toURLSafe(e);
     return null == t ? e : (0, c.MO)(t) ? (0, c.q5)(t).toString() : e;
 }
-function M(e) {
+function P(e) {
     f.DZ.updateAsync(
         'favoriteGifs',
         (t) => {
@@ -282,7 +282,7 @@ function M(e) {
         v.fy.INFREQUENT_USER_ACTION
     );
 }
-function P(e) {
+function M(e) {
     f.DZ.updateAsync(
         'favoriteGifs',
         (t) => {

@@ -17,8 +17,8 @@ var r,
     E = n(786761),
     v = n(418476),
     I = n(739566),
-    b = n(995774),
-    T = n(706454),
+    T = n(995774),
+    b = n(706454),
     S = n(630388),
     y = n(709054),
     A = n(314897),
@@ -30,8 +30,8 @@ var r,
     L = n(496675),
     x = n(699516),
     w = n(944486),
-    M = n(914010),
-    P = n(594174),
+    P = n(914010),
+    M = n(594174),
     k = n(981631);
 let U = new Set(),
     B = new p.Z('MessageStore'),
@@ -61,7 +61,7 @@ function V() {
 function j(e) {
     let { type: t, channelId: n, messageId: r, userId: i, emoji: a, reactionType: s } = e,
         o = f.Z.get(n);
-    if (null == o || !(0, b.sm)(e)) return !1;
+    if (null == o || !(0, T.sm)(e)) return !1;
     let l = A.default.getId() === i;
     (o = o.update(r, (n) => ('MESSAGE_REACTION_ADD' === t ? n.addReaction(a, l, e.colors, s) : n.removeReaction(a, l, s)))), f.Z.commit(o);
 }
@@ -80,7 +80,7 @@ function H(e) {
 }
 class Y extends (r = u.ZP.Store) {
     initialize() {
-        this.waitFor(P.default, N.Z, C.Z, O.ZP, T.default, w.Z, M.Z, D.Z, x.Z, R.ZP), this.syncWith([g.Z], () => {});
+        this.waitFor(M.default, N.Z, C.Z, O.ZP, b.default, w.Z, P.Z, D.Z, x.Z, R.ZP), this.syncWith([g.Z], () => {});
     }
     getMessages(e) {
         if (g.Z.hasViewingRoles()) {
@@ -94,13 +94,13 @@ class Y extends (r = u.ZP.Store) {
         return f.Z.getOrCreate(e).get(t);
     }
     getLastEditableMessage(e) {
-        let t = P.default.getCurrentUser();
+        let t = M.default.getCurrentUser();
         return l()(this.getMessages(e).toArray())
             .reverse()
             .find((e) => (0, v.Z)(e, null == t ? void 0 : t.id));
     }
     getLastChatCommandMessage(e) {
-        let t = P.default.getCurrentUser();
+        let t = M.default.getCurrentUser();
         return this.getMessages(e)
             .toArray()
             .reverse()
@@ -113,7 +113,7 @@ class Y extends (r = u.ZP.Store) {
         return l()(this.getMessages(e).toArray()).reverse().get(0);
     }
     getLastNonCurrentUserMessage(e) {
-        let t = P.default.getCurrentUser();
+        let t = M.default.getCurrentUser();
         return l()(this.getMessages(e).toArray())
             .reverse()
             .find((e) => e.author.id !== (null == t ? void 0 : t.id));
@@ -142,7 +142,7 @@ class Y extends (r = u.ZP.Store) {
         return f.Z.getOrCreate(e).loadingMore;
     }
     hasCurrentUserSentMessage(e) {
-        let t = P.default.getCurrentUser();
+        let t = M.default.getCurrentUser();
         return null != this.getMessages(e).findNewest((e) => e.author.id === (null == t ? void 0 : t.id));
     }
     hasCurrentUserSentMessageSinceAppStart() {
@@ -319,7 +319,7 @@ class Y extends (r = u.ZP.Store) {
             if (null == i) return !1;
             (i = i.update(n, (e) => {
                 var t;
-                return e.addReactionBatch(r, null === (t = P.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
+                return e.addReactionBatch(r, null === (t = M.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
             })),
                 f.Z.commit(i);
         },
@@ -358,7 +358,7 @@ class Y extends (r = u.ZP.Store) {
         },
         LOCAL_MESSAGE_CREATE: function (e) {
             let { message: t } = e,
-                n = P.default.getCurrentUser();
+                n = M.default.getCurrentUser();
             null != t && null != t.author && null != n && t.author.id === n.id && (G = !0);
         }
     }));

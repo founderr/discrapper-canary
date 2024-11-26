@@ -3,7 +3,7 @@ n.d(t, {
         return y;
     },
     QN: function () {
-        return b;
+        return T;
     },
     Qf: function () {
         return A;
@@ -12,7 +12,7 @@ n.d(t, {
         return N;
     },
     pQ: function () {
-        return T;
+        return b;
     },
     z7: function () {
         return S;
@@ -95,7 +95,7 @@ let g = (e) => {
             is_bot_profile: f.bot
         };
     },
-    b = (e) => {
+    T = (e) => {
         var t, n;
         let { userId: r } = e;
         return null == r
@@ -109,13 +109,13 @@ let g = (e) => {
                   affinity: null === (n = i.Z.getUserAffinity(r)) || void 0 === n ? void 0 : n.affinity
               };
     },
-    T = (e) => {
+    b = (e) => {
         let { guildId: t, channelId: n, messageId: i, roleId: a, analyticsLocations: s, action: o, section: l } = e;
         c.default.track(h.rMx.USER_PROFILE_ACTION, {
             ...(0, r.hH)(t),
             ...(0, r.JS)(n),
             ...I(e),
-            ...b(e),
+            ...T(e),
             location_stack: s,
             profile_action: o,
             profile_section: l,
@@ -129,7 +129,7 @@ let g = (e) => {
             ...(0, r.hH)(t),
             ...(0, r.JS)(n),
             ...I(e),
-            ...b(e),
+            ...T(e),
             location_stack: i,
             activity_action: a,
             activity_display: s,
@@ -162,7 +162,7 @@ let g = (e) => {
             ...(0, r.hH)(t),
             ...(0, r.JS)(n),
             ...I(e),
-            ...b(e),
+            ...T(e),
             location_stack: i,
             badge: a
         });
@@ -173,7 +173,7 @@ let g = (e) => {
             ...(0, r.hH)(t),
             ...(0, r.JS)(n),
             ...I(e),
-            ...b(e),
+            ...T(e),
             location_stack: i,
             badge: a
         });

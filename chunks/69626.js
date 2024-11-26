@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(981631),
     v = n(689079),
     I = n(665692),
-    b = n(388032),
-    T = n(170686);
+    T = n(388032),
+    b = n(170686);
 function S(e, t, n, i, a) {
     if (null == e) return;
     let c = () => {
@@ -61,9 +61,9 @@ function S(e, t, n, i, a) {
     '' !== p.Z.getDraft(e, p.d.ChannelMessage)
         ? (0, s.openModal)((t) =>
               (0, r.jsx)(s.ConfirmModal, {
-                  header: b.intl.string(b.t.pe26Cg),
-                  confirmText: b.intl.string(b.t.VkKicX),
-                  cancelText: b.intl.string(b.t['ETE/oK']),
+                  header: T.intl.string(T.t.pe26Cg),
+                  confirmText: T.intl.string(T.t.VkKicX),
+                  cancelText: T.intl.string(T.t['ETE/oK']),
                   onConfirm: () => c(),
                   confirmButtonColor: s.Button.Colors.BRAND,
                   onCloseCallback: () => {
@@ -72,7 +72,7 @@ function S(e, t, n, i, a) {
                   ...t,
                   children: (0, r.jsx)(s.Text, {
                       variant: 'text-md/normal',
-                      children: b.intl.string(b.t['+awCIy'])
+                      children: T.intl.string(T.t['+awCIy'])
                   })
               })
           )
@@ -89,7 +89,7 @@ function y(e) {
             },
             [n.channelId]
         ),
-        { hasSendMessagePerm: b, hasUseAppCommandsPerm: T } = (0, a.cj)([h.Z], () => {
+        { hasSendMessagePerm: T, hasUseAppCommandsPerm: b } = (0, a.cj)([h.Z], () => {
             let e = h.Z.can(E.Plq.SEND_MESSAGES, g);
             return {
                 hasSendMessagePerm: e,
@@ -101,10 +101,10 @@ function y(e) {
         N = i.useMemo(() => {
             if (null == y || null == g || y.untranslatedName !== n.commandName || A) return !1;
             let e = g.isPrivate();
-            if ((0, d.xl)(g) || (!e && !b)) return !1;
+            if ((0, d.xl)(g) || (!e && !T)) return !1;
             let t = (null == y ? void 0 : y.applicationId) === v.bi.BUILT_IN;
-            return !!e || !!t || !!T || !1;
-        }, [g, y, b, T, n.commandName, A]),
+            return !!e || !!t || !!b || !1;
+        }, [g, y, T, b, n.commandName, A]),
         C = i.useCallback(
             (e) => {
                 null == e || e.stopPropagation(), null != g && null != n.commandName && null != n.commandKey && S(g.id, n.commandName, n.commandKey, u.Vh.MENTION);
@@ -147,7 +147,7 @@ function A(e) {
     return (0, r.jsx)(s.Tooltip, {
         text: i,
         position: 'top',
-        tooltipContentClassName: T.tooltip,
+        tooltipContentClassName: b.tooltip,
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: i } = e;
             return (0, r.jsxs)(s.Button, {

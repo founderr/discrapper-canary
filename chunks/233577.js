@@ -28,7 +28,7 @@ function I(e, t) {
         size: 40
     });
 }
-let b = {
+let T = {
     stores: [d.Z],
     matches(e, t, n, r, i) {
         var a;
@@ -133,4 +133,4 @@ let b = {
         );
     }
 };
-t.Z = b;
+t.Z = T;

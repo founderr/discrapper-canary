@@ -18,7 +18,7 @@ var i = n(120356),
     E = n(204418),
     v = n(388032),
     I = n(622952);
-let b = [
+let T = [
         {
             avatarSize: l.AvatarSizes.SIZE_40,
             showStatus: !1
@@ -36,7 +36,7 @@ let b = [
             showStatus: !0
         }
     ],
-    T = (e) => {
+    b = (e) => {
         let { purchase: t } = e,
             n = (0, o.e7)([p.default], () => p.default.locale),
             i = (0, u.qS)(t),
@@ -155,7 +155,7 @@ t.Z = (e) => {
                           }),
                           (0, r.jsx)('div', {
                               className: I.smallDecorationPreviewsContainer,
-                              children: b.map((e) => {
+                              children: T.map((e) => {
                                   let { avatarSize: a, showStatus: s } = e;
                                   return (0, r.jsx)(
                                       'div',
@@ -176,7 +176,7 @@ t.Z = (e) => {
                           })
                       ]
                   }),
-                  null != S && (0, r.jsx)(T, { purchase: S })
+                  null != S && (0, r.jsx)(b, { purchase: S })
               ]
           });
 };

@@ -39,7 +39,7 @@ function I(e) {
     }
     return t;
 }
-class b extends (r = a.ZP.PersistedStore) {
+class T extends (r = a.ZP.PersistedStore) {
     initialize(e) {
         var t, n, r, a;
         this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(f.Z, c.default, d.Z), (g = null !== (n = null == e ? void 0 : e.selectedGuildTimestampMillis) && void 0 !== n ? n : {}), (h = null !== (r = null == e ? void 0 : e.selectedGuildId) && void 0 !== r ? r : null), (m = null !== (a = null == e ? void 0 : e.lastSelectedGuildId) && void 0 !== a ? a : null);
@@ -64,9 +64,9 @@ class b extends (r = a.ZP.PersistedStore) {
         return h === e ? -1 : g[e];
     }
 }
-p(b, 'displayName', 'SelectedGuildStore'),
-    p(b, 'persistKey', 'SelectedGuildStore'),
-    (t.Z = new b(s.Z, {
+p(T, 'displayName', 'SelectedGuildStore'),
+    p(T, 'persistKey', 'SelectedGuildStore'),
+    (t.Z = new T(s.Z, {
         CONNECTION_OPEN: E,
         OVERLAY_INITIALIZE: function (e) {
             (h = e.selectedGuildId), (m = void 0), E();

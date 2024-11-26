@@ -17,10 +17,10 @@ var r = n(200651),
     E = n(388032),
     v = n(553796);
 t.Z = i.memo(function (e) {
-    let { disabled: t, referralsRemaining: n, channel: I, isResending: b } = e,
-        { enabled: T } = d.Z.useExperiment({ location: 'ec41f5_1' }, { autoTrackExposure: !0 }),
-        S = T ? E.intl.format(E.t.z5AIsr, {}) : b ? E.intl.string(E.t.zzfBQk) : E.intl.string(E.t.ziPEBg),
-        y = T ? E.intl.string(E.t.nKUZur) : void 0,
+    let { disabled: t, referralsRemaining: n, channel: I, isResending: T } = e,
+        { enabled: b } = d.Z.useExperiment({ location: 'ec41f5_1' }, { autoTrackExposure: !0 }),
+        S = b ? E.intl.format(E.t.z5AIsr, {}) : T ? E.intl.string(E.t.zzfBQk) : E.intl.string(E.t.ziPEBg),
+        y = b ? E.intl.string(E.t.nKUZur) : void 0,
         [A, N] = i.useState(!1),
         [C, R] = i.useState(!1),
         O = (0, o.Z)(null, () => R(!1)),
@@ -38,7 +38,7 @@ t.Z = i.memo(function (e) {
                       referralsRemaining: n,
                       channel: I,
                       onClose: () => R(!1),
-                      isResending: b
+                      isResending: T
                   }),
                   (0, r.jsx)(a.u, {
                       text: S,
@@ -76,8 +76,8 @@ t.Z = i.memo(function (e) {
                                   children: (0, r.jsx)(_.Z, {
                                       referralsRemaining: n,
                                       hovered: A,
-                                      isResending: b,
-                                      shouldShowBirthdayUX: T,
+                                      isResending: T,
+                                      shouldShowBirthdayUX: b,
                                       isLightTheme: (0, s.ap)(x)
                                   })
                               })

@@ -31,8 +31,8 @@ let _ = {
     E = '',
     v = [],
     I = [],
-    b = [],
-    T = [];
+    T = [],
+    b = [];
 function S(e) {
     return e.replace(/^https?:/, '');
 }
@@ -56,10 +56,10 @@ class y extends (r = o.ZP.Store) {
         return h;
     }
     getSuggestions() {
-        return b;
+        return T;
     }
     getTrendingSearchTerms() {
-        return T;
+        return b;
     }
 }
 (s = 'GIFPickerViewStore'),
@@ -76,7 +76,7 @@ class y extends (r = o.ZP.Store) {
             m = e.analyticsID;
         },
         GIF_PICKER_QUERY: function (e) {
-            '' === (g = e.query) && ((E = ''), (v = []), (b = []));
+            '' === (g = e.query) && ((E = ''), (v = []), (T = []));
         },
         GIF_PICKER_QUERY_SUCCESS: function (e) {
             if (null != e.query && g === E) return !1;
@@ -143,10 +143,10 @@ class y extends (r = o.ZP.Store) {
         },
         GIF_PICKER_SUGGESTIONS_SUCCESS: function (e) {
             let { items: t } = e;
-            b = t;
+            T = t;
         },
         GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS: function (e) {
             let { items: t } = e;
-            T = t;
+            b = t;
         }
     }));

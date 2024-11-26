@@ -285,7 +285,7 @@ function I(e, t) {
         ]
     });
 }
-function b(e, t) {
+function T(e, t) {
     let n = (0, u.UC)(t),
         r = g(n),
         i = r.totalSize,
@@ -310,7 +310,7 @@ function b(e, t) {
         ]
     });
 }
-function T(e) {
+function b(e) {
     return (0, a.jsx)('mask', {
         id: e,
         maskContentUnits: 'objectBoundingBox',
@@ -533,7 +533,7 @@ function D(e) {
 (D.Masks = i), (t.ZP = D);
 let L = s.memo(
     function () {
-        var e, t, n, r, i, s, o, l, c, d, f, _, g, E, D, L, x, w, M, P, k, U;
+        var e, t, n, r, i, s, o, l, c, d, f, _, g, E, D, L, x, w, P, M, k, U;
         return (0, a.jsxs)('svg', {
             viewBox: '0 0 1 1',
             style: {
@@ -656,7 +656,7 @@ let L = s.memo(
                 h('svg-mask-channel-call-control-button-badge-16', 16),
                 h('svg-mask-channel-call-control-button-badge-22', 22),
                 h('svg-mask-channel-call-control-button-badge-29', 29),
-                T('svg-mask-avatar-default'),
+                b('svg-mask-avatar-default'),
                 S('svg-mask-avatar-status-round-16', u.EF.SIZE_16),
                 y('svg-mask-avatar-decoration-status-round-16', u.EF.SIZE_16),
                 C('svg-mask-avatar-status-mobile-16', u.EF.SIZE_16),
@@ -713,31 +713,31 @@ let L = s.memo(
                 N('svg-mask-avatar-decoration-status-typing-120', u.EF.SIZE_120),
                 v('svg-mask-diagonal-facepile-16', u.EF.SIZE_16),
                 I('svg-mask-diagonal-facepile-status-16', u.EF.SIZE_16),
-                b('svg-mask-diagonal-facepile-typing-16', u.EF.SIZE_16),
+                T('svg-mask-diagonal-facepile-typing-16', u.EF.SIZE_16),
                 v('svg-mask-diagonal-facepile-20', u.EF.SIZE_20),
                 I('svg-mask-diagonal-facepile-status-20', u.EF.SIZE_20),
-                b('svg-mask-diagonal-facepile-typing-20', u.EF.SIZE_20),
+                T('svg-mask-diagonal-facepile-typing-20', u.EF.SIZE_20),
                 v('svg-mask-diagonal-facepile-24', u.EF.SIZE_24),
                 I('svg-mask-diagonal-facepile-status-24', u.EF.SIZE_24),
-                b('svg-mask-diagonal-facepile-typing-24', u.EF.SIZE_24),
+                T('svg-mask-diagonal-facepile-typing-24', u.EF.SIZE_24),
                 v('svg-mask-diagonal-facepile-32', u.EF.SIZE_32),
                 I('svg-mask-diagonal-facepile-status-32', u.EF.SIZE_32),
-                b('svg-mask-diagonal-facepile-typing-32', u.EF.SIZE_32),
+                T('svg-mask-diagonal-facepile-typing-32', u.EF.SIZE_32),
                 v('svg-mask-diagonal-facepile-40', u.EF.SIZE_40),
                 I('svg-mask-diagonal-facepile-status-40', u.EF.SIZE_40),
-                b('svg-mask-diagonal-facepile-typing-40', u.EF.SIZE_40),
+                T('svg-mask-diagonal-facepile-typing-40', u.EF.SIZE_40),
                 v('svg-mask-diagonal-facepile-48', u.EF.SIZE_48),
                 I('svg-mask-diagonal-facepile-status-48', u.EF.SIZE_48),
-                b('svg-mask-diagonal-facepile-typing-48', u.EF.SIZE_48),
+                T('svg-mask-diagonal-facepile-typing-48', u.EF.SIZE_48),
                 v('svg-mask-diagonal-facepile-56', u.EF.SIZE_56),
                 I('svg-mask-diagonal-facepile-status-56', u.EF.SIZE_56),
-                b('svg-mask-diagonal-facepile-typing-56', u.EF.SIZE_56),
+                T('svg-mask-diagonal-facepile-typing-56', u.EF.SIZE_56),
                 v('svg-mask-diagonal-facepile-80', u.EF.SIZE_80),
                 I('svg-mask-diagonal-facepile-status-80', u.EF.SIZE_80),
-                b('svg-mask-diagonal-facepile-typing-80', u.EF.SIZE_80),
+                T('svg-mask-diagonal-facepile-typing-80', u.EF.SIZE_80),
                 v('svg-mask-diagonal-facepile-120', u.EF.SIZE_120),
                 I('svg-mask-diagonal-facepile-status-120', u.EF.SIZE_120),
-                b('svg-mask-diagonal-facepile-typing-120', u.EF.SIZE_120),
+                T('svg-mask-diagonal-facepile-typing-120', u.EF.SIZE_120),
                 (function (e) {
                     let t = 8 * u.EW;
                     return (0, a.jsxs)('mask', {
@@ -771,7 +771,7 @@ let L = s.memo(
                         ]
                     });
                 })('svg-mask-status-online-mobile'),
-                T('svg-mask-status-online'),
+                b('svg-mask-status-online'),
                 ((i = 'svg-mask-status-idle'),
                 (0, a.jsxs)('mask', {
                     id: i,
@@ -1021,9 +1021,9 @@ let L = s.memo(
                         })
                     ]
                 })),
-                ((M = 'svg-mask-guild-popout-activity-icon'),
+                ((P = 'svg-mask-guild-popout-activity-icon'),
                 (0, a.jsxs)('mask', {
-                    id: M,
+                    id: P,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: [
@@ -1042,9 +1042,9 @@ let L = s.memo(
                         })
                     ]
                 })),
-                ((P = 'svg-mask-clan-icon'),
+                ((M = 'svg-mask-clan-icon'),
                 (0, a.jsx)('mask', {
-                    id: P,
+                    id: M,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: (0, a.jsx)('rect', {

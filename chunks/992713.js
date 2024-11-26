@@ -101,30 +101,30 @@ function E(e) {
 }
 function v() {
     l.Z.getAll().then((e) => {
-        e.forEach((e) => b(e));
+        e.forEach((e) => T(e));
     });
 }
 function I(e) {
     let { guild: t } = e;
-    t.unableToSyncDeletes && b(t.id);
+    t.unableToSyncDeletes && T(t.id);
 }
-function b(e) {
+function T(e) {
     setTimeout(
         () =>
             (function (e) {
                 var t, n, r;
                 let i = null === (t = _.Z.getGuild(e)) || void 0 === t ? void 0 : t.name;
                 m.fileOnly('requesting deleted guild entities (id: '.concat(e, ', name: ').concat(i, ')'));
-                let a = T(Object.keys(f.Z.getMutableBasicGuildChannelsForGuild(e))),
-                    s = T(Object.keys(_.Z.getRoles(e))),
-                    o = T(c.ZP.getGuildEmoji(e).map((e) => e.id)),
-                    l = T(null !== (r = null === (n = d.Z.getStickersByGuildId(e)) || void 0 === n ? void 0 : n.map((e) => e.id)) && void 0 !== r ? r : []);
+                let a = b(Object.keys(f.Z.getMutableBasicGuildChannelsForGuild(e))),
+                    s = b(Object.keys(_.Z.getRoles(e))),
+                    o = b(c.ZP.getGuildEmoji(e).map((e) => e.id)),
+                    l = b(null !== (r = null === (n = d.Z.getStickersByGuildId(e)) || void 0 === n ? void 0 : n.map((e) => e.id)) && void 0 !== r ? r : []);
                 h.Z.getSocket().getDeletedEntityIdsNotMatchingHash(e, a, s, o, l);
             })(e),
         Math.ceil(2000 * Math.random())
     );
 }
-function T(e) {
+function b(e) {
     return i().v3(e.sort().join(',')).toString();
 }
 t.Z = new g();

@@ -53,12 +53,12 @@ let E = (e) => {
             }
         );
     }, [n]);
-    let b = i.useRef(o);
-    i.useEffect(() => void (b.current = o)),
+    let T = i.useRef(o);
+    i.useEffect(() => void (T.current = o)),
         i.useEffect(
             () => () => {
                 var e;
-                return null === (e = b.current) || void 0 === e ? void 0 : e.call(b);
+                return null === (e = T.current) || void 0 === e ? void 0 : e.call(T);
             },
             []
         ),
@@ -71,13 +71,13 @@ let E = (e) => {
             name: g,
             properties: E
         });
-    let T = (0, c.Aq)(),
+    let b = (0, c.Aq)(),
         S = i.useCallback(() => {
-            T.dispatch(m.CkL.POPOUT_SHOW);
-        }, [T]),
+            b.dispatch(m.CkL.POPOUT_SHOW);
+        }, [b]),
         y = i.useCallback(() => {
-            T.dispatch(m.CkL.POPOUT_HIDE);
-        }, [T]);
+            b.dispatch(m.CkL.POPOUT_HIDE);
+        }, [b]);
     return (0, r.jsx)(f.W5, {
         onMount: S,
         onUnmount: y,

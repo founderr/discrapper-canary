@@ -3,61 +3,61 @@ r.d(t, {
         return h;
     },
     Iw: function () {
-        return U;
-    },
-    V0: function () {
-        return S;
-    },
-    _d: function () {
         return g;
     },
-    qp: function () {
+    V0: function () {
         return D;
+    },
+    _d: function () {
+        return P;
+    },
+    qp: function () {
+        return S;
     },
     yn: function () {
         return C;
     }
 });
-var n = r(370541),
-    a = r(731889),
+var a = r(370541),
+    n = r(731889),
     _ = r(622916),
     o = r(356442),
-    i = r(263449),
-    E = r(833873),
+    E = r(263449),
+    i = r(833873),
     c = r(255768),
     s = r(988097),
     l = r(366569),
-    u = r(73453),
-    I = r(99342),
+    I = r(73453),
+    u = r(99342),
     R = r(696486),
-    N = r(305625),
-    A = r(966497),
-    T = r(787659),
+    A = r(305625),
+    T = r(966497),
+    N = r(787659),
     d = r(789112),
-    L = r(275689),
-    f = r(793373),
-    O = r(881243);
+    f = r(275689),
+    O = r(793373),
+    L = r(881243);
 let p = '__SENTRY_SUPPRESS_TRACING__';
 function h(e, t) {
     let r = G();
     if (r.startSpan) return r.startSpan(e, t);
-    let n = M(e),
-        { forceTransaction: a, parentSpan: _ } = e;
-    return (0, i.$e)(e.scope, () =>
+    let a = M(e),
+        { forceTransaction: n, parentSpan: _ } = e;
+    return (0, E.$e)(e.scope, () =>
         b(_)(() => {
-            let r = (0, i.nZ)(),
+            let r = (0, E.nZ)(),
                 _ = y(r),
                 o =
                     e.onlyIfParent && !_
                         ? new d.b()
-                        : P({
+                        : U({
                               parentSpan: _,
-                              spanArguments: n,
-                              forceTransaction: a,
+                              spanArguments: a,
+                              forceTransaction: n,
                               scope: r
                           });
             return (
-                (0, I.D)(r, o),
+                (0, u.D)(r, o),
                 (0, l.i)(
                     () => t(o),
                     () => {
@@ -65,7 +65,7 @@ function h(e, t) {
                         o.isRecording() &&
                             (!e || 'ok' === e) &&
                             o.setStatus({
-                                code: f.jt,
+                                code: O.jt,
                                 message: 'internal_error'
                             });
                     },
@@ -75,37 +75,37 @@ function h(e, t) {
         })
     );
 }
-function S(e, t) {
+function D(e, t) {
     let r = G();
     if (r.startSpanManual) return r.startSpanManual(e, t);
-    let n = M(e),
-        { forceTransaction: a, parentSpan: _ } = e;
-    return (0, i.$e)(e.scope, () =>
+    let a = M(e),
+        { forceTransaction: n, parentSpan: _ } = e;
+    return (0, E.$e)(e.scope, () =>
         b(_)(() => {
-            let r = (0, i.nZ)(),
+            let r = (0, E.nZ)(),
                 _ = y(r),
                 o =
                     e.onlyIfParent && !_
                         ? new d.b()
-                        : P({
+                        : U({
                               parentSpan: _,
-                              spanArguments: n,
-                              forceTransaction: a,
+                              spanArguments: a,
+                              forceTransaction: n,
                               scope: r
                           });
-            function E() {
+            function i() {
                 o.end();
             }
             return (
-                (0, I.D)(r, o),
+                (0, u.D)(r, o),
                 (0, l.i)(
-                    () => t(o, E),
+                    () => t(o, i),
                     () => {
                         let { status: e } = (0, R.XU)(o);
                         o.isRecording() &&
                             (!e || 'ok' === e) &&
                             o.setStatus({
-                                code: f.jt,
+                                code: O.jt,
                                 message: 'internal_error'
                             });
                     }
@@ -114,93 +114,93 @@ function S(e, t) {
         })
     );
 }
-function D(e) {
+function S(e) {
     let t = G();
     if (t.startInactiveSpan) return t.startInactiveSpan(e);
     let r = M(e),
-        { forceTransaction: n, parentSpan: a } = e;
-    return (e.scope ? (t) => (0, i.$e)(e.scope, t) : void 0 !== a ? (e) => g(a, e) : (e) => e())(() => {
-        let t = (0, i.nZ)(),
-            a = y(t);
-        return e.onlyIfParent && !a
+        { forceTransaction: a, parentSpan: n } = e;
+    return (e.scope ? (t) => (0, E.$e)(e.scope, t) : void 0 !== n ? (e) => P(n, e) : (e) => e())(() => {
+        let t = (0, E.nZ)(),
+            n = y(t);
+        return e.onlyIfParent && !n
             ? new d.b()
-            : P({
-                  parentSpan: a,
+            : U({
+                  parentSpan: n,
                   spanArguments: r,
-                  forceTransaction: n,
+                  forceTransaction: a,
                   scope: t
               });
     });
 }
 let C = ({ sentryTrace: e, baggage: t }, r) =>
-    (0, i.$e)((a) => {
-        let _ = (0, n.pT)(e, t);
-        return a.setPropagationContext(_), r();
+    (0, E.$e)((n) => {
+        let _ = (0, a.pT)(e, t);
+        return n.setPropagationContext(_), r();
     });
-function g(e, t) {
+function P(e, t) {
     let r = G();
-    return r.withActiveSpan ? r.withActiveSpan(e, t) : (0, i.$e)((r) => ((0, I.D)(r, e || void 0), t(r)));
+    return r.withActiveSpan ? r.withActiveSpan(e, t) : (0, E.$e)((r) => ((0, u.D)(r, e || void 0), t(r)));
 }
-function U(e) {
-    return (0, i.$e)((t) => (t.setPropagationContext((0, a.Q)()), c.X && _.kg.info(`Starting a new trace with id ${t.getPropagationContext().traceId}`), g(null, e)));
+function g(e) {
+    return (0, E.$e)((t) => (t.setPropagationContext((0, n.Q)()), c.X && _.kg.info(`Starting a new trace with id ${t.getPropagationContext().traceId}`), P(null, e)));
 }
-function P({ parentSpan: e, spanArguments: t, forceTransaction: r, scope: n }) {
-    let a;
-    if (!(0, u.z)()) return new d.b();
-    let _ = (0, i.aF)();
+function U({ parentSpan: e, spanArguments: t, forceTransaction: r, scope: a }) {
+    let n;
+    if (!(0, I.z)()) return new d.b();
+    let _ = (0, E.aF)();
     if (e && !r)
-        (a = (function (e, t, r) {
-            let { spanId: n, traceId: a } = e.spanContext(),
+        (n = (function (e, t, r) {
+            let { spanId: a, traceId: n } = e.spanContext(),
                 _ = !t.getScopeData().sdkProcessingMetadata[p] && (0, R.Tt)(e),
                 o = _
-                    ? new L.s({
+                    ? new f.s({
                           ...r,
-                          parentSpanId: n,
-                          traceId: a,
+                          parentSpanId: a,
+                          traceId: n,
                           sampled: _
                       })
-                    : new d.b({ traceId: a });
+                    : new d.b({ traceId: n });
             (0, R.j5)(e, o);
-            let E = (0, i.s3)();
-            return E && (E.emit('spanStart', o), r.endTimestamp && E.emit('spanEnd', o)), o;
-        })(e, n, t)),
-            (0, R.j5)(e, a);
+            let i = (0, E.s3)();
+            return i && (i.emit('spanStart', o), r.endTimestamp && i.emit('spanEnd', o)), o;
+        })(e, a, t)),
+            (0, R.j5)(e, n);
     else if (e) {
-        let r = (0, N.jC)(e),
+        let r = (0, A.jC)(e),
             { traceId: _, spanId: o } = e.spanContext(),
-            i = (0, R.Tt)(e);
-        (a = m(
+            E = (0, R.Tt)(e);
+        (n = m(
             {
                 traceId: _,
                 parentSpanId: o,
                 ...t
             },
-            n,
-            i
+            a,
+            E
         )),
-            (0, N.Lh)(a, r);
+            (0, A.Lh)(n, r);
     } else {
         let {
             traceId: e,
             dsc: r,
             parentSpanId: o,
-            sampled: i
+            sampled: E
         } = {
             ..._.getPropagationContext(),
-            ...n.getPropagationContext()
+            ...a.getPropagationContext()
         };
-        (a = m(
+        (n = m(
             {
                 traceId: e,
                 parentSpanId: o,
                 ...t
             },
-            n,
-            i
+            a,
+            E
         )),
-            r && (0, N.Lh)(a, r);
+            r && (0, A.Lh)(n, r);
     }
-    return (0, A.Z)(a), (0, O.YJ)(a, n, _), a;
+    return (0, T.Z)(n), (0, L.YJ)(n, a, _), n;
 }
 function M(e) {
     let t = {
@@ -215,15 +215,15 @@ function M(e) {
 }
 function G() {
     let e = (0, o.c)();
-    return (0, E.G)(e);
+    return (0, i.G)(e);
 }
 function m(e, t, r) {
-    let n = (0, i.s3)(),
-        a = (n && n.getOptions()) || {},
+    let a = (0, E.s3)(),
+        n = (a && a.getOptions()) || {},
         { name: _ = '', attributes: o } = e,
-        [E, c] = t.getScopeData().sdkProcessingMetadata[p]
+        [i, c] = t.getScopeData().sdkProcessingMetadata[p]
             ? [!1]
-            : (0, T.R)(a, {
+            : (0, N.R)(n, {
                   name: _,
                   parentSampled: r,
                   attributes: o,
@@ -232,22 +232,22 @@ function m(e, t, r) {
                       parentSampled: r
                   }
               }),
-        l = new L.s({
+        l = new f.s({
             ...e,
             attributes: {
                 [s.Zj]: 'custom',
                 ...e.attributes
             },
-            sampled: E
+            sampled: i
         });
-    return void 0 !== c && l.setAttribute(s.TE, c), n && n.emit('spanStart', l), l;
+    return void 0 !== c && l.setAttribute(s.TE, c), a && a.emit('spanStart', l), l;
 }
 function y(e) {
-    let t = (0, I.Y)(e);
+    let t = (0, u.Y)(e);
     if (!t) return;
-    let r = (0, i.s3)();
+    let r = (0, E.s3)();
     return (r ? r.getOptions() : {}).parentSpanIsAlwaysRootSpan ? (0, R.Gx)(t) : t;
 }
 function b(e) {
-    return void 0 !== e ? (t) => g(e, t) : (e) => e();
+    return void 0 !== e ? (t) => P(e, t) : (e) => e();
 }

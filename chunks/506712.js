@@ -42,22 +42,22 @@ function d(e, t, n, r, i) {
             }),
             g
         ],
-        b = 0,
-        T = 0;
+        T = 0,
+        b = 0;
     p.forEach((e) => {
         var t;
-        b++, (T += null !== (t = Number(e.num_messages)) && void 0 !== t ? t : 0);
+        T++, (b += null !== (t = Number(e.num_messages)) && void 0 !== t ? t : 0);
     });
     let S = '\n**Pain**:\n- Everyones: '
             .concat(c.XR[null !== (o = h.everyones) && void 0 !== o ? o : 0], '\n- Messages: ')
             .concat(c.XR[null !== (u = h.messages) && void 0 !== u ? u : 0], '\n- Size: ')
             .concat(m, '\n**Remote**:\n- Channels: ')
-            .concat(b, '\n- AllVisits: ')
+            .concat(T, '\n- AllVisits: ')
             .concat(I.map((e) => e.totalOpensAcrossAllServers).join(' / '), '\n- GuildVisits: ')
             .concat(I.map((e) => e.guildOpens).join(' / '), '\n- Biggest Channel (abs): ')
             .concat(I.map((e) => e.biggestChannel).join(' / '), '\n- Biggest Channel (%): ')
             .concat(I.map((e) => e.biggestChannelFormatted).join(' / '), '\n- Sent Msgs: ')
-            .concat(T, '\n'),
+            .concat(b, '\n'),
         y = v.guildOpens >= 0.02 * v.totalOpensAcrossAllServers,
         A = (null !== (d = g.guildOpens) && void 0 !== d ? d : 0) > 0;
     if (h.messages === c.XR.High) {

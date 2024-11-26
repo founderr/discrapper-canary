@@ -1,10 +1,10 @@
 r.d(t, {
     R: function () {
-        return E;
+        return i;
     }
 });
-var n = r(263449),
-    a = r(452896),
+var a = r(263449),
+    n = r(452896),
     _ = r(163162);
 let o = {
         replayIntegration: 'replay',
@@ -24,18 +24,18 @@ let o = {
         sessionTimingIntegration: 'sessiontiming',
         browserProfilingIntegration: 'browserprofiling'
     },
-    i = _.m9;
-async function E(e) {
+    E = _.m9;
+async function i(e) {
     let t = o[e],
-        r = (i.Sentry = i.Sentry || {});
+        r = (E.Sentry = E.Sentry || {});
     if (!t) throw Error(`Cannot lazy load integration: ${e}`);
-    let E = r[e];
-    if ('function' == typeof E) return E;
+    let i = r[e];
+    if ('function' == typeof i) return i;
     let c = (function (e) {
-            let t = (0, n.s3)(),
+            let t = (0, a.s3)(),
                 r = t && t.getOptions(),
                 _ = (r && r.cdnBaseUrl) || 'https://browser.sentry-cdn.com';
-            return new URL(`/${a.J}/${e}.min.js`, _).toString();
+            return new URL(`/${n.J}/${e}.min.js`, _).toString();
         })(t),
         s = _.m9.document.createElement('script');
     (s.src = c), (s.crossOrigin = 'anonymous'), (s.referrerPolicy = 'origin');
@@ -48,7 +48,7 @@ async function E(e) {
     } catch (t) {
         throw Error(`Error when loading integration: ${e}`);
     }
-    let u = r[e];
-    if ('function' != typeof u) throw Error(`Could not load integration: ${e}`);
-    return u;
+    let I = r[e];
+    if ('function' != typeof I) throw Error(`Could not load integration: ${e}`);
+    return I;
 }

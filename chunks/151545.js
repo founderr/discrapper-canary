@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return b;
     }
 });
 var r = n(200651),
@@ -21,9 +21,9 @@ var r = n(200651),
     E = n(443375),
     v = n(128277),
     I = n(263059),
-    b = n(981631);
-function T(e) {
-    let { user: t, currentUser: n, activity: T, className: S, onClose: y, profileGuildId: A } = e,
+    T = n(981631);
+function b(e) {
+    let { user: t, currentUser: n, activity: b, className: S, onClose: y, profileGuildId: A } = e,
         N = (0, a.e7)([p.Z, d.Z], () => {
             var e;
             return d.Z.getChannel(null === (e = p.Z.getVoiceStateForUser(t.id)) || void 0 === e ? void 0 : e.channelId);
@@ -35,39 +35,39 @@ function T(e) {
             },
             { autoTrackExposure: !1 }
         ),
-        R = C && _.Z.can(b.Plq.CONNECT, N),
-        O = (null == T ? void 0 : T.type) === b.IIU.HANG_STATUS && R ? N : null,
+        R = C && _.Z.can(T.Plq.CONNECT, N),
+        O = (null == b ? void 0 : b.type) === T.IIU.HANG_STATUS && R ? N : null,
         { activityReactReplyEnabled: D } = (0, m.F)({ location: 'UserProfileActivityCardWrapper' }),
         L = t.id === n.id,
         x = (0, a.e7)([f.Z, p.Z, d.Z], () => {
-            if ((0, s.Z)(T)) {
+            if ((0, s.Z)(b)) {
                 var e, n;
-                let r = null === (e = p.Z.getVoiceStateForSession(t.id, null == T ? void 0 : T.session_id)) || void 0 === e ? void 0 : e.channelId;
+                let r = null === (e = p.Z.getVoiceStateForSession(t.id, null == b ? void 0 : b.session_id)) || void 0 === e ? void 0 : e.channelId;
                 return f.Z.getGuild(null === (n = d.Z.getChannel(r)) || void 0 === n ? void 0 : n.getGuildId());
             }
             return null != O ? f.Z.getGuild(O.getGuildId()) : null;
         });
-    (0, u.q)(null == T ? void 0 : T.application_id);
-    let w = (0, a.e7)([l.Z], () => ((null == T ? void 0 : T.application_id) != null ? l.Z.getApplication(T.application_id) : (null == T ? void 0 : T.name) != null ? l.Z.getApplicationByName(T.name) : null));
+    (0, u.q)(null == b ? void 0 : b.application_id);
+    let w = (0, a.e7)([l.Z], () => ((null == b ? void 0 : b.application_id) != null ? l.Z.getApplication(b.application_id) : (null == b ? void 0 : b.name) != null ? l.Z.getApplicationByName(b.name) : null));
     if (
         (i.useEffect(() => {
-            (null == T ? void 0 : T.type) === b.IIU.HANG_STATUS &&
+            (null == b ? void 0 : b.type) === T.IIU.HANG_STATUS &&
                 R &&
-                h.default.track(b.rMx.VIEW_HANG_STATUS, {
+                h.default.track(T.rMx.VIEW_HANG_STATUS, {
                     source: 'UserProfilePopout',
                     guild_id: null == O ? void 0 : O.guild_id,
                     channel_id: null == O ? void 0 : O.id
                 });
-        }, [null == T ? void 0 : T.type, R, O]),
-        (null == T ? void 0 : T.type) === b.IIU.HANG_STATUS && !R)
+        }, [null == b ? void 0 : b.type, R, O]),
+        (null == b ? void 0 : b.type) === T.IIU.HANG_STATUS && !R)
     )
         return null;
-    if ((0, o.Z)(T))
+    if ((0, o.Z)(b))
         return !D || L || t.bot
             ? (0, r.jsx)(v.Z, {
                   user: t,
                   currentUser: n,
-                  activity: T,
+                  activity: b,
                   guild: x,
                   channel: N,
                   className: S,
@@ -76,7 +76,7 @@ function T(e) {
             : (0, r.jsx)(I.Z, {
                   user: t,
                   currentUser: n,
-                  activity: T,
+                  activity: b,
                   guild: x,
                   profileGuildId: A,
                   channel: N,
@@ -87,7 +87,7 @@ function T(e) {
         ? (0, r.jsx)(g.Z, {
               user: t,
               currentUser: n,
-              activity: T,
+              activity: b,
               application: w,
               guild: x,
               channel: N,
@@ -97,7 +97,7 @@ function T(e) {
         : (0, r.jsx)(E.Z, {
               user: t,
               currentUser: n,
-              activity: T,
+              activity: b,
               application: w,
               guild: x,
               profileGuildId: A,

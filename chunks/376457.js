@@ -3,19 +3,19 @@ r.d(t, {
         return _;
     }
 });
-var n = r(151122),
-    a = r(163162);
-let _ = (0, n._I)(() => ({
+var a = r(151122),
+    n = r(163162);
+let _ = (0, a._I)(() => ({
     name: 'HttpContext',
     preprocessEvent(e) {
-        if (!a.m9.navigator && !a.m9.location && !a.m9.document) return;
-        let t = (e.request && e.request.url) || (a.m9.location && a.m9.location.href),
-            { referrer: r } = a.m9.document || {},
-            { userAgent: n } = a.m9.navigator || {},
+        if (!n.m9.navigator && !n.m9.location && !n.m9.document) return;
+        let t = (e.request && e.request.url) || (n.m9.location && n.m9.location.href),
+            { referrer: r } = n.m9.document || {},
+            { userAgent: a } = n.m9.navigator || {},
             _ = {
                 ...(e.request && e.request.headers),
                 ...(r && { Referer: r }),
-                ...(n && { 'User-Agent': n })
+                ...(a && { 'User-Agent': a })
             },
             o = {
                 ...e.request,

@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     },
     OQ: function () {
-        return b;
+        return T;
     },
     RE: function () {
         return S;
@@ -15,7 +15,7 @@ n.d(t, {
         return y;
     },
     rS: function () {
-        return T;
+        return b;
     },
     t0: function () {
         return I;
@@ -49,7 +49,7 @@ function I(e) {
         E.fy.FREQUENT_USER_ACTION
     );
 }
-function b(e) {
+function T(e) {
     o.Z.dispatch({
         type: 'EMOJI_FETCH',
         guildId: e
@@ -74,7 +74,7 @@ function b(e) {
                     })
             );
 }
-function T(e) {
+function b(e) {
     let { guildId: t, image: n, name: r, roles: i } = e;
     return (
         o.Z.dispatch({

@@ -64,17 +64,17 @@ n.d(t, {
                 if ((0, a.HI)(h)) {
                     var v = h.children,
                         I = h.value,
-                        b = u[I];
-                    if (!o(b)) throw new s.YR(I, 'function', d);
-                    var T = b(
+                        T = u[I];
+                    if (!o(T)) throw new s.YR(I, 'function', d);
+                    var b = T(
                         e(v, n, r, l, u, c).map(function (e) {
                             return e.value;
                         })
                     );
-                    !Array.isArray(T) && (T = [T]),
+                    !Array.isArray(b) && (b = [b]),
                         _.push.apply(
                             _,
-                            T.map(function (e) {
+                            b.map(function (e) {
                                 return {
                                     type: 'string' == typeof e ? i.literal : i.object,
                                     value: e

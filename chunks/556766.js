@@ -19,7 +19,7 @@ let I = {
         transform: 'scale(0.7)',
         opacity: 0
     },
-    b = {
+    T = {
         transform: 'scale(1)',
         opacity: 1
     };
@@ -34,9 +34,9 @@ t.Z = i.memo(function () {
         t = (0, l.e7)([m.Z], () => m.Z.hasIncomingCalls()),
         n = (0, l.e7)([_.Z], () => _.Z.isSoundDisabled('call_ringing')),
         a = (0, l.e7)([h.Z], () => h.Z.disableSounds),
-        T = (0, l.e7)([f.Z], () => f.Z.getSoundpack()),
+        b = (0, l.e7)([f.Z], () => f.Z.getSoundpack()),
         S = i.useRef(!1),
-        y = (0, o.Z)(() => (T === v.YC.CLASSIC ? (0, g.tu)(500 !== s().random(1, 1000) ? 'call_ringing' : s().sample(['call_ringing_beat', 'call_ringing_snow_halation']), 'call_ringing') : (0, g.uk)('call_ringing', T)), [T]);
+        y = (0, o.Z)(() => (b === v.YC.CLASSIC ? (0, g.tu)(500 !== s().random(1, 1000) ? 'call_ringing' : s().sample(['call_ringing_beat', 'call_ringing_snow_halation']), 'call_ringing') : (0, g.uk)('call_ringing', b)), [b]);
     return (
         i.useEffect(
             () => () => {
@@ -58,7 +58,7 @@ t.Z = i.memo(function () {
             },
             enter: {
                 from: I,
-                to: b
+                to: T
             },
             leave: I,
             config: {

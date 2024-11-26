@@ -24,16 +24,16 @@ function c(e) {
             },
             [g]
         ),
-        [b, T] = r.useReducer(I, {
+        [T, b] = r.useReducer(I, {
             focusedX: c,
             focusedY: d,
             columnCounts: n
         }),
-        { columnCounts: S, focusedX: y, focusedY: A } = b,
-        [N] = r.useState(() => (0, s.P2)(T, 16));
+        { columnCounts: S, focusedX: y, focusedY: A } = T,
+        [N] = r.useState(() => (0, s.P2)(b, 16));
     return (
         r.useEffect(() => {
-            T({
+            b({
                 type: i.s.UPDATE_COLUMN_COUNTS,
                 columnCounts: n
             });
@@ -42,8 +42,8 @@ function c(e) {
             let { navId: t, columnCounts: n, focusedX: c, focusedY: d, onSelect: f, prepareFocus: _, getNewFocusPosition: p, dispatch: h, maintainFocusPosition: m, enabled: g, autoFocusElement: E, useVirtualFocus: v } = e,
                 I = r.useRef();
             I.current = g;
-            let b = u(l(t, c, d)),
-                [T, S] = r.useState(!1),
+            let T = u(l(t, c, d)),
+                [b, S] = r.useState(!1),
                 [y, A] = r.useState(!1),
                 [N, C] = r.useState(!1),
                 [R] = r.useState(
@@ -101,7 +101,7 @@ function c(e) {
                 ),
                 [x, w] = r.useState(!1);
             r.useEffect(() => {
-                if (!x || !T) return;
+                if (!x || !b) return;
                 w(!1);
                 let e = u(l(t, c, d));
                 if (null != e) {
@@ -111,17 +111,17 @@ function c(e) {
                 S(!1);
                 let n = u(l(t));
                 null != n && O(n);
-            }, [t, x, T, O, c, d]);
-            let M = r.useCallback((e) => {
+            }, [t, x, b, O, c, d]);
+            let P = r.useCallback((e) => {
                 I.current && null == e && w(!0);
             }, []);
             r.useEffect(() => {
-                T && y && null != b && (O(b), A(!1));
-            }, [y, b]),
+                b && y && null != T && (O(T), A(!1));
+            }, [y, T]),
                 r.useEffect(() => {
-                    T && (!N && D(c, d), C(!1));
+                    b && (!N && D(c, d), C(!1));
                 }, [c, d]);
-            let P = r.useCallback(
+            let M = r.useCallback(
                     (e) => {
                         if (!I.current) return;
                         if (!v && o.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
@@ -161,13 +161,13 @@ function c(e) {
                                 return;
                             case a.Us.SELECT_FOCUSED_ITEM:
                                 var r;
-                                if ((E && (null == (r = b) ? void 0 : r.ownerDocument.activeElement) !== r) || e.repeat) return;
-                                e.preventDefault(), e.stopPropagation(), h({ type: t }), null != f ? f(c, d, e) : null != b && b.click();
+                                if ((E && (null == (r = T) ? void 0 : r.ownerDocument.activeElement) !== r) || e.repeat) return;
+                                e.preventDefault(), e.stopPropagation(), h({ type: t }), null != f ? f(c, d, e) : null != T && T.click();
                         }
                     },
-                    [L, h, E, b, f, c, d]
+                    [L, h, E, T, f, c, d]
                 ),
-                k = r.useCallback((e) => (e.currentTarget !== e.target ? (!T && (S(!0), C(!0)), !1) : T ? (L(!1), !1) : void (m && null != b ? D(c, d) : L(!0))), [T, m, b, L, D, c, d]),
+                k = r.useCallback((e) => (e.currentTarget !== e.target ? (!b && (S(!0), C(!0)), !1) : b ? (L(!1), !1) : void (m && null != T ? D(c, d) : L(!0))), [b, m, T, L, D, c, d]),
                 U = r.useCallback((e) => {
                     if (e.target !== e.currentTarget) {
                         if (e.currentTarget.contains(e.relatedTarget)) return !1;
@@ -180,13 +180,13 @@ function c(e) {
                         role: 'grid',
                         'aria-rowcount': n.length,
                         'aria-colcount': B,
-                        tabIndex: T && m ? -1 : 0,
+                        tabIndex: b && m ? -1 : 0,
                         'data-ref-id': t,
-                        onKeyDown: P,
+                        onKeyDown: M,
                         onFocus: k,
                         onBlur: U
                     }),
-                    [n.length, B, T, m, t, P, k, U]
+                    [n.length, B, b, m, t, M, k, U]
                 ),
                 Z = r.useCallback(
                     (e, n) => {
@@ -198,9 +198,9 @@ function c(e) {
                             tabIndex: m && e === c && n === d ? 0 : -1,
                             onFocus: R.get(''.concat(e, ',').concat(n))
                         };
-                        return e === c && n === d && (r.ref = M), r;
+                        return e === c && n === d && (r.ref = P), r;
                     },
-                    [t, m, c, d, R, M]
+                    [t, m, c, d, R, P]
                 ),
                 F = r.useCallback(
                     (e) => ({

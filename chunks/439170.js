@@ -30,8 +30,8 @@ var r,
     E = n(650774),
     v = n(271383),
     I = n(430824),
-    b = n(158776),
-    T = n(885110),
+    T = n(158776),
+    b = n(885110),
     S = n(594174),
     y = n(981631),
     A = n(388032);
@@ -87,9 +87,9 @@ function O(e, t, n, r) {
 }
 function D(e, t, n) {
     let r = n === m.default.getId(),
-        i = b.Z.isMobileOnline(n),
-        a = r ? T.Z.getStatus() : b.Z.getStatus(n, e),
-        s = r ? T.Z.getActivities() : b.Z.getActivities(n, e),
+        i = T.Z.isMobileOnline(n),
+        a = r ? b.Z.getStatus() : T.Z.getStatus(n, e),
+        s = r ? b.Z.getActivities() : T.Z.getActivities(n, e),
         o = h.Z.getStreamForUser(n, e),
         l = S.default.getUser(n);
     return null == l
@@ -235,14 +235,14 @@ let w = new (class e {
         N(this, '_guildLists', {});
     }
 })();
-function M() {
+function P() {
     w.reset();
 }
-let P = [];
+let M = [];
 function k() {
     let e = h.Z.getAllApplicationStreams(),
-        t = P.concat(e);
-    (P = e),
+        t = M.concat(e);
+    (M = e),
         t.forEach((e) => {
             w.forEach(null, (t) => t.rebuildMember(e.ownerId));
         });
@@ -253,7 +253,7 @@ function U() {
 }
 class B extends (i = d.ZP.Store) {
     initialize() {
-        this.waitFor(S.default, I.Z, g.Z, v.ZP, b.Z, T.Z, m.default, E.Z, h.Z, _.Z), this.syncWith([T.Z], U), this.syncWith([h.Z], k);
+        this.waitFor(S.default, I.Z, g.Z, v.ZP, T.Z, b.Z, m.default, E.Z, h.Z, _.Z), this.syncWith([b.Z], U), this.syncWith([h.Z], k);
     }
     getProps(e, t) {
         let n = w.get(e, L(t));
@@ -270,8 +270,8 @@ class B extends (i = d.ZP.Store) {
 }
 N(B, 'displayName', 'ChannelMemberStore'),
     (t.ZP = new B(f.Z, {
-        CONNECTION_OPEN: M,
-        OVERLAY_INITIALIZE: M,
+        CONNECTION_OPEN: P,
+        OVERLAY_INITIALIZE: P,
         GUILD_MEMBER_LIST_UPDATE: function (e) {
             let t = w.get(e.guildId, e.id);
             e.ops.forEach((e) => {

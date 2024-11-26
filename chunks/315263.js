@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return M;
+            return P;
         }
     }),
     n(47120);
@@ -23,8 +23,8 @@ var r = n(729594),
     E = n(336197),
     v = n(977156),
     I = n(341907),
-    b = n(540709),
-    T = n(881706),
+    T = n(540709),
+    b = n(881706),
     S = n(701190),
     y = n(944486),
     A = n(914010),
@@ -62,7 +62,7 @@ let w = {
     skipExtensionCheck: void 0,
     analyticsLocations: []
 };
-function M(e) {
+function P(e) {
     let { skipExtensionCheck: t, analyticsLocations: s } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : w,
         o = (0, _.zO)(e);
     if (null != o && (o.type === f.g.INVITE || o.type === f.g.EMBEDDED_ACTIVITY_INVITE)) return (e) => (null == e || e.preventDefault(), x(o), !0);
@@ -121,7 +121,7 @@ function M(e) {
                 }),
             !0
         );
-    let { pathname: S, hostname: N = '', host: L, query: M, hash: P } = r.parse(e),
+    let { pathname: S, hostname: N = '', host: L, query: P, hash: M } = r.parse(e),
         k = R.Z.isDiscordHostname(N) || R.Z.isDiscordLocalhost(L, N);
     if (k && (null == S ? void 0 : S.startsWith('/application-directory'))) {
         let e;
@@ -169,7 +169,7 @@ function M(e) {
             navigationReplace: !1,
             openChannel: !0
         };
-        return null != M && (e.search = M), null != P && (e.hash = P), (t) => (null == t || t.preventDefault(), (0, E.Z)(S, e), !0);
+        return null != P && (e.search = P), null != M && (e.hash = M), (t) => (null == t || t.preventDefault(), (0, E.Z)(S, e), !0);
     }
     if (null != S && k) {
         let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: r } = n(69580),
@@ -199,5 +199,5 @@ function M(e) {
                 !0
             );
     }
-    return k && (null == S ? void 0 : S.startsWith('/discovery/quests')) ? (e) => (null == e || e.preventDefault(), (0, I.navigateToQuestHome)(D.dr.BADGE, a.j.QUEST_BADGE), !0) : t || null == (0, T.v)(e) ? void 0 : (t) => (null == t || t.preventDefault(), b.Z.show(e), !0);
+    return k && (null == S ? void 0 : S.startsWith('/discovery/quests')) ? (e) => (null == e || e.preventDefault(), (0, I.navigateToQuestHome)(D.dr.BADGE, a.j.QUEST_BADGE), !0) : t || null == (0, b.v)(e) ? void 0 : (t) => (null == t || t.preventDefault(), T.Z.show(e), !0);
 }

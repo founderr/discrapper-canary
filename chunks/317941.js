@@ -15,11 +15,11 @@ var i = n(200651),
     x = n(314897),
     S = n(82142),
     T = n(246946),
-    C = n(509545),
+    E = n(509545),
     _ = n(55563),
-    E = n(259580),
-    f = n(572004),
-    I = n(669079),
+    C = n(259580),
+    I = n(572004),
+    f = n(669079),
     N = n(296848),
     A = n(474936),
     b = n(388032),
@@ -63,10 +63,10 @@ class O extends s.PureComponent {
             children: [
                 (0, i.jsx)(c.CopyInput, {
                     className: v.codeText,
-                    value: (0, I.Nz)(t.code),
+                    value: (0, f.Nz)(t.code),
                     text: this.copyButtonText,
                     mode: n,
-                    supportsCopy: f.wS,
+                    supportsCopy: I.wS,
                     hideMessage: e ? b.intl.string(b.t['0RLn4+']) : null,
                     onCopy: this.handleCopy,
                     buttonColor: c.ButtonColors.BRAND,
@@ -96,9 +96,9 @@ class O extends s.PureComponent {
             j(this, 'state', { copyMode: c.CopyInputModes.DEFAULT }),
             j(this, 'handleCopy', (e) => {
                 let { giftCode: t, sku: n } = this.props;
-                (0, I.dM)(t, n);
+                (0, f.dM)(t, n);
                 try {
-                    (0, f.JG)(e), this.setState({ copyMode: c.CopyInputModes.SUCCESS });
+                    (0, I.JG)(e), this.setState({ copyMode: c.CopyInputModes.SUCCESS });
                 } catch (e) {
                     this.setState({ copyMode: c.CopyInputModes.ERROR });
                 }
@@ -201,8 +201,8 @@ class R extends s.PureComponent {
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(E.Z, {
-                                    direction: m ? E.Z.Directions.UP : E.Z.Directions.DOWN,
+                                (0, i.jsx)(C.Z, {
+                                    direction: m ? C.Z.Directions.UP : C.Z.Directions.DOWN,
                                     className: v.expandIcon
                                 })
                             ]
@@ -259,7 +259,7 @@ class R extends s.PureComponent {
             });
     }
 }
-t.Z = a.ZP.connectStores([_.Z, T.Z, S.Z, m.Z, C.Z, x.default], (e) => {
+t.Z = a.ZP.connectStores([_.Z, T.Z, S.Z, m.Z, E.Z, x.default], (e) => {
     let { skuId: t, subscriptionPlanId: n, giftStyle: i } = e,
         s = _.Z.get(t);
     if (null == s) throw Error('SKU was unavailable while rendering gift.');

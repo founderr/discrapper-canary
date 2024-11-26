@@ -22,8 +22,8 @@ var r = n(200651),
     E = n(326094),
     v = n(510659),
     I = n(113557),
-    b = n(867176),
-    T = n(169979),
+    T = n(867176),
+    b = n(169979),
     S = n(451834),
     y = n(502762),
     A = n(544989),
@@ -35,8 +35,8 @@ var r = n(200651),
     L = n(161572),
     x = n(228168),
     w = n(981631),
-    M = n(388032),
-    P = n(591156);
+    P = n(388032),
+    M = n(591156);
 function k(e) {
     let { user: t, currentUser: n, guildId: k, channelId: U, messageId: B, roleId: G, closePopout: Z, setPopoutRef: F, disableUserProfileLink: V = __OVERLAY__, newAnalyticsLocations: j = [] } = e,
         { analyticsLocations: H } = (0, d.ZP)([...j, c.Z.BITE_SIZE_PROFILE_POPOUT]),
@@ -95,7 +95,7 @@ function k(e) {
                                 null != $.interactionType &&
                                     (0, r.jsx)(a.animated.div, {
                                         style: ee,
-                                        className: P.backdrop
+                                        className: M.backdrop
                                     }),
                                 (0, r.jsxs)(A.Z, {
                                     profileType: x.y0.BITE_SIZE,
@@ -120,7 +120,7 @@ function k(e) {
                                                     ? null
                                                     : (0, r.jsx)(o.MenuItem, {
                                                           id: 'view-profile',
-                                                          label: M.intl.string(M.t['+Xp3ho']),
+                                                          label: P.intl.string(P.t['+Xp3ho']),
                                                           action: () => {
                                                               et(),
                                                                   (0, m.pQ)({
@@ -134,9 +134,9 @@ function k(e) {
                                     ]
                                 }),
                                 (0, r.jsxs)('header', {
-                                    className: P.header,
+                                    className: M.header,
                                     children: [
-                                        (0, r.jsx)(b.Z, {
+                                        (0, r.jsx)(T.Z, {
                                             user: t,
                                             displayProfile: X,
                                             guildId: k,
@@ -144,7 +144,7 @@ function k(e) {
                                         }),
                                         (0, r.jsx)(S.Z, {
                                             userId: t.id,
-                                            className: P.toast,
+                                            className: M.toast,
                                             onClose: Z
                                         }),
                                         (0, r.jsx)(I.Z, {
@@ -156,7 +156,7 @@ function k(e) {
                                             profileType: x.y0.BITE_SIZE,
                                             onOpenProfile: V ? void 0 : et
                                         }),
-                                        (0, r.jsx)(T.Z, {
+                                        (0, r.jsx)(b.Z, {
                                             location: 'UserProfilePopout',
                                             user: t,
                                             guildId: k,

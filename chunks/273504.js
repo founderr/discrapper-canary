@@ -3,13 +3,13 @@ n.d(t, {
         return c;
     },
     Ic: function () {
-        return S;
+        return I;
     },
     Lg: function () {
-        return m;
+        return h;
     },
     OU: function () {
-        return g;
+        return m;
     },
     RH: function () {
         return a;
@@ -21,19 +21,19 @@ n.d(t, {
         return d;
     },
     Vg: function () {
-        return h;
+        return g;
     },
     Vk: function () {
-        return p;
+        return _;
     },
     _6: function () {
-        return I;
+        return S;
     },
     aj: function () {
-        return E;
+        return p;
     },
     dc: function () {
-        return v;
+        return C;
     },
     fX: function () {
         return u.f;
@@ -51,7 +51,7 @@ n.d(t, {
         return o.q;
     },
     uE: function () {
-        return _;
+        return E;
     }
 });
 var i,
@@ -65,12 +65,12 @@ let a = 1000,
     c = 1000,
     d = 10,
     f = 60,
-    p = 1,
     _ = 1,
-    E = 260,
-    g = 100,
-    h = 1,
-    m = 50,
-    S = 20,
-    I = 150,
-    v = 'automod-profile-quarantine-alert';
+    E = 1,
+    p = 260,
+    m = 100,
+    g = 1,
+    h = 50,
+    I = 20,
+    S = 150,
+    C = 'automod-profile-quarantine-alert';

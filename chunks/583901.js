@@ -99,7 +99,7 @@ function v(e) {
             .with(p.BRd.MIDNIGHT, () => h.intl.string(h.t.pQwSpa))
             .with('system', () => h.intl.string(h.t['7rOU6u']))
             .exhaustive(),
-        b = (0, c.useRedesignIconContext)().enabled;
+        T = (0, c.useRedesignIconContext)().enabled;
     return (0, r.jsx)(E, {
         onSelect: i,
         isSelected: n,
@@ -109,7 +109,7 @@ function v(e) {
             'system' === t &&
             (0, r.jsx)('div', {
                 className: m.iconWrapper,
-                children: b ? (0, r.jsx)(c.RefreshIcon, { color: g(f) }) : (0, r.jsx)(_.Z, { fill: g(f) })
+                children: T ? (0, r.jsx)(c.RefreshIcon, { color: g(f) }) : (0, r.jsx)(_.Z, { fill: g(f) })
             })
     });
 }

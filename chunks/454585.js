@@ -35,16 +35,16 @@ let d = {
     E = c(o.Z.GUILD_VERIFICATION_FORM_RULES, [(0, s.Z)(d)]),
     v = c(o.Z.GUILD_EVENT_RULES, [(0, s.Z)(d)]),
     I = c(o.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, s.Z)(d)]),
-    b = i().omit(c(o.Z.RULES, [(0, s.Z)(d)]), 'paragraph', 'newline', 'strong', 'codeBlock', 'inlineCode', 'u', 'link', 'url', 'autolink', 'list', 'heading', 'subtext'),
-    T = { text: o.Z.RULES.text };
+    T = i().omit(c(o.Z.RULES, [(0, s.Z)(d)]), 'paragraph', 'newline', 'strong', 'codeBlock', 'inlineCode', 'u', 'link', 'url', 'autolink', 'list', 'heading', 'subtext'),
+    b = { text: o.Z.RULES.text };
 t.Z = {
     combineAndInjectMentionRule: c,
     createReactRules: s.Z,
     defaultReactRuleOptions: d,
     defaultRules: f,
     guildEventRules: v,
-    notifCenterV2MessagePreviewRules: b,
-    lockscreenWidgetMessageRules: T,
+    notifCenterV2MessagePreviewRules: T,
+    lockscreenWidgetMessageRules: b,
     astParserFor: a._p,
     reactParserFor: a.w4,
     parse: a.w4(f),

@@ -25,8 +25,8 @@ var r = n(200651),
 n(381996);
 var v = n(392750),
     C = n(926976),
-    _ = n(592197),
-    j = n(806240),
+    j = n(592197),
+    _ = n(806240),
     T = n(789654),
     S = n(691867),
     y = n(916790),
@@ -112,7 +112,7 @@ function X() {
                     e.push({
                         id: 'clans',
                         name: 'Clans',
-                        render: () => (0, r.jsx)(j.Z, {})
+                        render: () => (0, r.jsx)(_.Z, {})
                     }),
                     e.push({
                         id: 'performance',
@@ -199,7 +199,7 @@ function X() {
                     e.push({
                         id: 'billing',
                         name: 'Billing',
-                        render: () => (0, r.jsx)(_.Z, {})
+                        render: () => (0, r.jsx)(j.Z, {})
                     })),
                 e.push({
                     id: 'gifting_intent',

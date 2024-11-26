@@ -1,18 +1,18 @@
 r.d(t, {
     N: function () {
-        return n;
+        return a;
     }
 });
-let n = (e, t, r) => {
+let a = (e, t, r) => {
     try {
         if (PerformanceObserver.supportedEntryTypes.includes(e)) {
-            let n = new PerformanceObserver((e) => {
+            let a = new PerformanceObserver((e) => {
                 Promise.resolve().then(() => {
                     t(e.getEntries());
                 });
             });
             return (
-                n.observe(
+                a.observe(
                     Object.assign(
                         {
                             type: e,
@@ -21,7 +21,7 @@ let n = (e, t, r) => {
                         r || {}
                     )
                 ),
-                n
+                a
             );
         }
     } catch (e) {}

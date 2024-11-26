@@ -52,8 +52,8 @@ function m(e) {
                     }));
         }
     }, [t]);
-    let { loadState: C } = (0, a.qz)(),
-        _ = C !== a.jd.LOADED;
+    let { loadState: E } = (0, a.qz)(),
+        _ = E !== a.jd.LOADED;
     switch (g) {
         case c.j.HOME:
             return (0, i.jsx)(i.Fragment, {
@@ -71,9 +71,9 @@ function m(e) {
                 })
             });
         case c.j.SWITCH_APP_PLANS:
-            let { route: E, ...f } = m;
+            let { route: C, ...I } = m;
             return (0, i.jsx)(d.Z, {
-                ...f,
+                ...I,
                 navigateToHome: p
             });
         default:

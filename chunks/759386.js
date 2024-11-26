@@ -1,29 +1,29 @@
-n.r(t),
-    n.d(t, {
+t.r(n),
+    t.d(n, {
         getApplicationPaymentSteps: function () {
             return f;
         }
     }),
-    n(47120);
-var i = n(200651);
-n(192379);
-var r = n(409813),
-    o = n(276442),
-    a = n(961830),
-    l = n(721165),
-    c = n(519801),
-    s = n(589771),
-    d = n(883419),
-    u = n(388032);
+    t(47120);
+var i = t(200651);
+t(192379);
+var r = t(409813),
+    o = t(276442),
+    a = t(961830),
+    l = t(721165),
+    c = t(519801),
+    d = t(589771),
+    s = t(883419),
+    u = t(388032);
 function f(e) {
-    let { guildId: t, showBenefitsFirst: n } = e;
+    let { guildId: n, showBenefitsFirst: t } = e;
     return [
         {
             key: null,
             renderStep: (e) =>
-                (0, i.jsx)(s.Z, {
-                    initialStep: n ? r.h8.BENEFITS : r.h8.REVIEW,
-                    guildId: t,
+                (0, i.jsx)(d.Z, {
+                    initialStep: t ? r.h8.BENEFITS : r.h8.REVIEW,
+                    guildId: n,
                     ...e
                 })
         },
@@ -47,9 +47,9 @@ function f(e) {
         {
             key: r.h8.REVIEW,
             renderStep: (e) =>
-                (0, i.jsx)(d.Z, {
-                    backButtonEligible: !!n || void 0,
-                    prevStep: n ? r.h8.BENEFITS : void 0,
+                (0, i.jsx)(s.Z, {
+                    backButtonEligible: !!t || void 0,
+                    prevStep: t ? r.h8.BENEFITS : void 0,
                     ...e
                 }),
             options: {
@@ -61,7 +61,7 @@ function f(e) {
             key: r.h8.CONFIRM,
             renderStep: (e) =>
                 (0, i.jsx)(c.Z, {
-                    showBenefits: !n,
+                    showBenefits: !t,
                     ...e
                 })
         }

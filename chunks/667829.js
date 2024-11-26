@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return M;
+        return P;
     }
 }),
     n(47120),
@@ -23,8 +23,8 @@ var r = n(200651),
     E = n(710845),
     v = n(117530),
     I = n(459273),
-    b = n(403182),
-    T = n(541716),
+    T = n(403182),
+    b = n(541716),
     S = n(752305),
     y = n(30465),
     A = n(140963),
@@ -59,7 +59,7 @@ let x = function () {
         20: D.fontSize20Padding,
         24: D.fontSize24Padding
     };
-class M extends i.Component {
+class P extends i.Component {
     componentDidMount() {
         this.props.focused && requestAnimationFrame(() => this.focus()), document.addEventListener('selectionchange', this.handleSelectionChange), window.addEventListener('beforeunload', this.handleBeforeUnload);
     }
@@ -162,7 +162,7 @@ class M extends i.Component {
     }
     render() {
         var e, t, n, i, a, o;
-        let { textValue: l, richValue: u, disabled: c, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: v, spellcheckEnabled: b, useNewSlashCommands: y, canOnlyUseTextCommands: C, className: O, id: L, required: x, maxCharacterCount: M, allowNewLines: P, 'aria-describedby': k, 'aria-labelledby': U, accessibilityLabel: B } = this.props,
+        let { textValue: l, richValue: u, disabled: c, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: v, spellcheckEnabled: T, useNewSlashCommands: y, canOnlyUseTextCommands: C, className: O, id: L, required: x, maxCharacterCount: P, allowNewLines: M, 'aria-describedby': k, 'aria-labelledby': U, accessibilityLabel: B } = this.props,
             { submitting: G, popup: Z } = this.state,
             F = {
                 channel: m,
@@ -176,7 +176,7 @@ class M extends i.Component {
                 accessibilityLabel: B,
                 disabled: c || !1,
                 submitting: G,
-                isEdit: g === T.I.EDIT,
+                isEdit: g === b.I.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
                 onPaste: this.handlePaste,
@@ -185,19 +185,19 @@ class M extends i.Component {
                 moveSelection: this.handleMoveSelection,
                 maybeShowAutocomplete: this.maybeShowAutocomplete,
                 hideAutocomplete: this.hideAutocomplete,
-                allowNewLines: P,
+                allowNewLines: M,
                 onChange: d,
                 onResize: p,
                 onKeyDown: _,
                 onSubmit: h,
                 textAreaPaddingClassName: s()(w[E], {
-                    [D.textAreaWithoutAttachmentButton]: g !== T.I.NORMAL && g !== T.I.OVERLAY && g !== T.I.THREAD_CREATION && g !== T.I.SIDEBAR,
-                    [D.textAreaForPostCreation]: g === T.I.CREATE_FORUM_POST,
-                    [D.textAreaCustomGift]: g === T.I.CUSTOM_GIFT,
-                    [D.textAreaForUserProfile]: g === T.I.USER_PROFILE,
-                    [D.textAreaForOverlayInlineReply]: g === T.I.OVERLAY_INLINE_REPLY
+                    [D.textAreaWithoutAttachmentButton]: g !== b.I.NORMAL && g !== b.I.OVERLAY && g !== b.I.THREAD_CREATION && g !== b.I.SIDEBAR,
+                    [D.textAreaForPostCreation]: g === b.I.CREATE_FORUM_POST,
+                    [D.textAreaCustomGift]: g === b.I.CUSTOM_GIFT,
+                    [D.textAreaForUserProfile]: g === b.I.USER_PROFILE,
+                    [D.textAreaForOverlayInlineReply]: g === b.I.OVERLAY_INLINE_REPLY
                 }),
-                spellcheckEnabled: b,
+                spellcheckEnabled: T,
                 useNewSlashCommands: y,
                 disableAutoFocus: f.tq || (null !== (n = g.disableAutoFocus) && void 0 !== n && n),
                 disableEnterToSubmit: null !== (i = null === (e = g.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== i && i,
@@ -205,7 +205,7 @@ class M extends i.Component {
                 'aria-haspopup': 'listbox',
                 'aria-expanded': null !== Z.id || void 0,
                 'aria-activedescendant': null !== (o = Z.activeDescendant) && void 0 !== o ? o : void 0,
-                'aria-invalid': l.length > M,
+                'aria-invalid': l.length > P,
                 'aria-describedby': k,
                 'aria-labelledby': U,
                 'aria-autocomplete': 'list'
@@ -344,7 +344,7 @@ class M extends i.Component {
                                         })(e.getData(a.type))) && void 0 !== s
                                         ? s
                                         : t.name;
-                            return { files: [(0, b.dp)(t, n, t.type)] };
+                            return { files: [(0, T.dp)(t, n, t.type)] };
                         }
                         return { files: r };
                     }
@@ -353,7 +353,7 @@ class M extends i.Component {
                         if (n.length > t) {
                             let e = new Blob([n], { type: 'text/plain' });
                             return {
-                                files: [(0, b.dp)(e, 'message.txt')],
+                                files: [(0, T.dp)(e, 'message.txt')],
                                 convertedStringToFile: !0
                             };
                         }

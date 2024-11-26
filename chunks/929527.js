@@ -80,7 +80,7 @@ var m = /^(matrix|translate|scale|rotate|skew)/,
               ? t === n
               : parseFloat(t) === n;
     },
-    b = (function (e) {
+    T = (function (e) {
         function t(t) {
             var n = t.x,
                 r = t.y,
@@ -138,13 +138,13 @@ var m = /^(matrix|translate|scale|rotate|skew)/,
                             );
                     }
                 }),
-                o.length && (s.transform = new T(o, l)),
+                o.length && (s.transform = new b(o, l)),
                 e.call(this, s) || this
             );
         }
         return d(t, e), t;
     })(u.AnimatedObject),
-    T = (function (e) {
+    b = (function (e) {
         function t(t, n) {
             var r;
             return ((r = e.call(this) || this).inputs = t), (r.transforms = n), (r._value = null), (r._children = new Set()), r;
@@ -240,7 +240,7 @@ var S = u.createHost(['a', 'abbr', 'address', 'area', 'article', 'aside', 'audio
         });
     },
     createAnimatedStyle: function (e) {
-        return new b(e);
+        return new T(e);
     },
     getComponentProps: function (e) {
         return e.scrollTop, e.scrollLeft, i(e, ['scrollTop', 'scrollLeft']);

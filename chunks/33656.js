@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return E;
     }
 }),
     n(724458);
@@ -28,7 +28,7 @@ function T(e) {
         children: t
     });
 }
-function C() {
+function E() {
     let e = (0, a.e7)([d.Z], () => d.Z.getSubsection()),
         t = s.createRef(),
         { categories: n, initialized: r } = (0, a.cj)([m.Z], () => m.Z.getEmailSettings());
@@ -39,7 +39,7 @@ function C() {
             null == t || null === (n = t.current) || void 0 === n || n.scrollIntoView(!0);
         }
     }, [r, t, e]);
-    let C = h.M0.reduce((e, t) => e || !!n[t], !1),
+    let E = h.M0.reduce((e, t) => e || !!n[t], !1),
         _ = {
             [h.$Z.COMMUNICATION]: g.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
             [h.$Z.SOCIAL]: g.s6.NOTIFICATIONS_EMAILS_SOCIAL,
@@ -89,7 +89,7 @@ function C() {
                               children: [
                                   (0, i.jsx)(o.Button, {
                                       className: x.marketingUnsubscribeButton,
-                                      disabled: !C,
+                                      disabled: !E,
                                       look: o.ButtonLooks.LINK,
                                       color: o.ButtonColors.LINK,
                                       onClick: u.oc,

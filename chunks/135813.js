@@ -1,9 +1,9 @@
 r.d(t, {
     R: function () {
-        return n;
+        return a;
     }
 });
-let n = (e) => {
+let a = (e) => {
     let t = !1;
     return (r) => {
         !t && (e(r), (t = !0));

@@ -24,7 +24,7 @@ n.d(t, {
         return C;
     },
     w: function () {
-        return T;
+        return b;
     },
     xR: function () {
         return D;
@@ -83,7 +83,7 @@ let E = async (e) => {
         let t = v('SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS');
         return E(e), t;
     },
-    b = () => {
+    T = () => {
         let e = (0, _.D)();
         if (0 === e.length) return Promise.resolve();
         let t = v('SOUNDBOARD_SOUNDS_RECEIVED');
@@ -96,7 +96,7 @@ let E = async (e) => {
             t
         );
     },
-    T = () => (__OVERLAY__ ? (s.Z.dispatch({ type: 'OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST' }), Promise.all([])) : Promise.all([I(), b()]));
+    b = () => (__OVERLAY__ ? (s.Z.dispatch({ type: 'OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST' }), Promise.all([])) : Promise.all([I(), T()]));
 async function S(e) {
     let { guildId: t, name: n, sound: r, volume: i, emojiId: s, emojiName: o } = e,
         l = await a.tn.post({

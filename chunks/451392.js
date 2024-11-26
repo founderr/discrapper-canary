@@ -20,8 +20,8 @@ var s = n(120356),
     x = n(388032),
     S = n(139019);
 function T(e) {
-    let { user: t, pendingAvatar: n, pendingColors: s, onThemeColorsChange: l, preventDisabled: T, guildId: C, className: _, showPremiumIcon: E = !0, showResetThemeButton: f = !1, forcedDivider: I } = e,
-        N = (0, u.ZP)(t.id, C),
+    let { user: t, pendingAvatar: n, pendingColors: s, onThemeColorsChange: l, preventDisabled: T, guildId: E, className: _, showPremiumIcon: C = !0, showResetThemeButton: I = !1, forcedDivider: f } = e,
+        N = (0, u.ZP)(t.id, E),
         { primaryColor: A, secondaryColor: b } = (0, m.Z)({
             user: t,
             displayProfile: N,
@@ -29,7 +29,7 @@ function T(e) {
             isPreview: !0
         }),
         v = h.ZP.canUsePremiumProfileCustomization(t),
-        j = null != n ? n : t.getAvatarURL(C, 80),
+        j = null != n ? n : t.getAvatarURL(E, 80),
         O = (0, c.useToken)(o.Z.unsafe_rawColors.PRIMARY_530).hex(),
         R = (0, d.Cf)(j, O, !1);
     if (null == A || null == b) return null;
@@ -40,8 +40,8 @@ function T(e) {
         title: x.intl.string(x.t.DMeO2d),
         disabled: !v && !T,
         className: r()(S.__invalid_profileThemesSection, _),
-        showPremiumIcon: E,
-        forcedDivider: I,
+        showPremiumIcon: C,
+        forcedDivider: f,
         children: (0, i.jsxs)('div', {
             className: S.sectionContainer,
             children: [
@@ -77,8 +77,8 @@ function T(e) {
                         })
                     })
                 }),
-                f &&
-                    null != C &&
+                I &&
+                    null != E &&
                     (0, i.jsx)(c.Button, {
                         className: S.resetButton,
                         color: c.Button.Colors.PRIMARY,

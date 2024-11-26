@@ -1,44 +1,44 @@
 r.d(t, {
     CC: function () {
-        return i;
+        return E;
     },
     GY: function () {
         return o;
     }
 });
-var n = r(899517);
-let a = new Map(),
+var a = r(899517);
+let n = new Map(),
     _ = new Set();
 function o(e, t) {
     try {
         t.exception.values.forEach((t) => {
             if (!!t.stacktrace)
-                for (let i of t.stacktrace.frames || []) {
+                for (let E of t.stacktrace.frames || []) {
                     var r, o;
-                    if (!i.filename || i.module_metadata) continue;
+                    if (!E.filename || E.module_metadata) continue;
                     let t =
                         ((r = e),
-                        (o = i.filename),
+                        (o = E.filename),
                         !(function (e) {
-                            if (!!n.n._sentryModuleMetadata)
-                                for (let t of Object.keys(n.n._sentryModuleMetadata)) {
-                                    let r = n.n._sentryModuleMetadata[t];
+                            if (!!a.n._sentryModuleMetadata)
+                                for (let t of Object.keys(a.n._sentryModuleMetadata)) {
+                                    let r = a.n._sentryModuleMetadata[t];
                                     if (!_.has(t)) {
-                                        for (let n of (_.add(t), e(t).reverse()))
-                                            if (n.filename) {
-                                                a.set(n.filename, r);
+                                        for (let a of (_.add(t), e(t).reverse()))
+                                            if (a.filename) {
+                                                n.set(a.filename, r);
                                                 break;
                                             }
                                     }
                                 }
                         })(r),
-                        a.get(o));
-                    t && (i.module_metadata = t);
+                        n.get(o));
+                    t && (E.module_metadata = t);
                 }
         });
     } catch (e) {}
 }
-function i(e) {
+function E(e) {
     try {
         e.exception.values.forEach((e) => {
             if (!!e.stacktrace) for (let t of e.stacktrace.frames || []) delete t.module_metadata;

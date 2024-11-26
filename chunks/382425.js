@@ -22,8 +22,8 @@ var r = n(200651),
     E = n(318374),
     v = n(102172),
     I = n(359110),
-    b = n(769654),
-    T = n(922482),
+    T = n(769654),
+    b = n(922482),
     S = n(543882),
     y = n(592125),
     A = n(430824),
@@ -35,8 +35,8 @@ var r = n(200651),
     L = n(960870),
     x = n(139793),
     w = n(510659),
-    M = n(287954),
-    P = n(660579),
+    P = n(287954),
+    M = n(660579),
     k = n(502762),
     U = n(652853),
     B = n(64621),
@@ -104,7 +104,7 @@ function $(e) {
                       canSeePreview: e
                   };
         }),
-        eb = (0, o.e7)([R.Z], () => R.Z.getRelationshipType(t.id));
+        eT = (0, o.e7)([R.Z], () => R.Z.getRelationshipType(t.id));
     i.useEffect(() => {
         if (el) {
             var e;
@@ -112,13 +112,13 @@ function $(e) {
                 activity_user_id: t.id,
                 discoverable: null === (e = a.discoverable) || void 0 === e || e,
                 surface: 'user-profile-stream-activity-card',
-                relationship_type: eb,
+                relationship_type: eT,
                 treatment: eo && !1 === a.discoverable ? m.h9.HIDE : m.h9.SHOW
             });
         }
-    }, [t, eb, eo, el, a]);
-    let eT = (0, d.Z)(ev ? null : eE),
-        eS = ev || null == eE ? eT : eE;
+    }, [t, eT, eo, el, a]);
+    let eb = (0, d.Z)(ev ? null : eE),
+        eS = ev || null == eE ? eb : eE;
     if (null == ef || null == e_ || (eo && !1 === a.discoverable) || null === en) return null;
     let ey = () => {
             let e = s()(Q.preview, es),
@@ -206,7 +206,7 @@ function $(e) {
                                     (0, r.jsx)(l.Clickable, {
                                         className: s()(q.clickable, q.inline),
                                         onClick: () => {
-                                            null == ec || ec({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, T.Cq)(e_) : (u.default.selectVoiceChannel(e_.id), (0, I.Kh)(e_.id)), null == ee || ee();
+                                            null == ec || ec({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, b.Cq)(e_) : (u.default.selectVoiceChannel(e_.id), (0, I.Kh)(e_.id)), null == ee || ee();
                                         },
                                         children: e_.name
                                     })
@@ -216,7 +216,7 @@ function $(e) {
                                 variant: 'text-xs/normal',
                                 text: K.intl.formatToPlainString(K.t['hq/Qzc'], { guildName: ef.name }),
                                 onClick: () => {
-                                    ec({ action: 'OPEN_VOICE_GUILD' }), (0, b.X)(ef.id), null == ee || ee();
+                                    ec({ action: 'OPEN_VOICE_GUILD' }), (0, T.X)(ef.id), null == ee || ee();
                                 }
                             })
                         ]
@@ -272,7 +272,7 @@ function $(e) {
                 onClose: ee,
                 children: (e) => {
                     let { onAutoDismiss: n } = e;
-                    return (0, r.jsx)(M.Z, {
+                    return (0, r.jsx)(P.Z, {
                         user: t,
                         guildId: et,
                         profileType: en,
@@ -280,7 +280,7 @@ function $(e) {
                         sourceDetails: eO,
                         sourceType: Y.n_.ACTIVITY,
                         children: () =>
-                            (0, r.jsx)(P.Z, {
+                            (0, r.jsx)(M.Z, {
                                 user: t,
                                 className: q.toolbarContainer,
                                 interactionSourceId: eE,

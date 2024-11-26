@@ -12,7 +12,7 @@ var r = n(200651),
     u = n(388032);
 class c extends i.Component {
     render() {
-        let { src: e, fileSize: t, className: n, mediaPlayerClassName: i, poster: c, fileName: d, naturalWidth: f, naturalHeight: _, playable: p, downloadable: h = !0, volume: m, autoPlay: g, autoMute: E, responsive: v, mediaLayoutType: I, mimeType: b, renderOverlayContent: T, renderLinkComponent: S, onClick: y, onPlay: A, onPause: N, onEnded: C, onControlsShow: R, onControlsHide: O, onVolumeChange: D, onMute: L, alt: x = u.intl.string(u.t.FlNoSU), ...w } = this.props;
+        let { src: e, fileSize: t, className: n, mediaPlayerClassName: i, poster: c, fileName: d, naturalWidth: f, naturalHeight: _, playable: p, downloadable: h = !0, volume: m, autoPlay: g, autoMute: E, responsive: v, mediaLayoutType: I, mimeType: T, renderOverlayContent: b, renderLinkComponent: S, onClick: y, onPlay: A, onPause: N, onEnded: C, onControlsShow: R, onControlsHide: O, onVolumeChange: D, onMute: L, alt: x = u.intl.string(u.t.FlNoSU), ...w } = this.props;
         return (0, r.jsx)(s.ZP, {
             alt: x,
             className: n,
@@ -48,7 +48,7 @@ class c extends i.Component {
                     fileSizeBytes: null == t ? void 0 : t,
                     playable: p,
                     renderLinkComponent: S,
-                    renderOverlayContent: T,
+                    renderOverlayContent: b,
                     onClick: y,
                     onPlay: A,
                     onPause: N,
@@ -57,7 +57,7 @@ class c extends i.Component {
                     onMute: L,
                     onControlsShow: R,
                     onControlsHide: O,
-                    mimeType: b,
+                    mimeType: T,
                     downloadable: h
                 });
             }

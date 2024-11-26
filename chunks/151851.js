@@ -22,34 +22,34 @@ var i = n(120356),
     E = n(939039),
     v = n(117795),
     I = n(358085),
-    b = n(998502),
-    T = n(388032),
+    T = n(998502),
+    b = n(388032),
     S = n(882165);
-let y = (e) => b.ZP.close(e),
-    A = (e) => b.ZP.minimize(e),
+let y = (e) => T.ZP.close(e),
+    A = (e) => T.ZP.minimize(e),
     N = (e, t) => {
-        (0, I.isMac)() && !t.altKey ? b.ZP.fullscreen(e) : b.ZP.maximize(e);
+        (0, I.isMac)() && !t.altKey ? T.ZP.fullscreen(e) : T.ZP.maximize(e);
     },
     C = (e) => {
         let { children: t, windowKey: n, themeOverride: i, hasOpenLayer: s, isRefreshEnabled: l } = e,
             u = (0, r.jsx)(o.Clickable, {
                 className: S.winButtonClose,
                 onClick: () => y(n),
-                'aria-label': T.intl.string(T.t.ZdNUj4),
+                'aria-label': b.intl.string(b.t.ZdNUj4),
                 tabIndex: -1,
                 children: (0, r.jsx)(p.Z, {})
             }),
             c = (0, r.jsx)(o.Clickable, {
                 className: S.winButtonMinMax,
                 onClick: (e) => N(n, e),
-                'aria-label': T.intl.string(T.t.G1u0hI),
+                'aria-label': b.intl.string(b.t.G1u0hI),
                 tabIndex: -1,
                 children: (0, r.jsx)(m.Z, {})
             }),
             d = (0, r.jsx)(o.Clickable, {
                 className: S.winButtonMinMax,
                 onClick: () => A(n),
-                'aria-label': T.intl.string(T.t.CxOC4e),
+                'aria-label': b.intl.string(b.t.CxOC4e),
                 tabIndex: -1,
                 children: (0, r.jsx)(E.Z, {})
             }),
@@ -84,7 +84,7 @@ let y = (e) => b.ZP.close(e),
             children: (e) =>
                 (0, r.jsxs)(o.Clickable, {
                     className: a()(i ? S.typeMacOSWithFrame : S.typeMacOS, t ? S.focused : S.unfocused, e, { [S.withBackgroundOverride]: !l }),
-                    onDoubleClick: () => b.ZP.maximize(n),
+                    onDoubleClick: () => T.ZP.maximize(n),
                     tabIndex: -1,
                     children: [
                         u.Z.window.USE_OSX_NATIVE_TRAFFIC_LIGHTS
@@ -95,21 +95,21 @@ let y = (e) => b.ZP.close(e),
                                       (0, r.jsx)(o.Clickable, {
                                           className: S.macButtonClose,
                                           onClick: () => y(n),
-                                          'aria-label': T.intl.string(T.t.ZdNUj4),
+                                          'aria-label': b.intl.string(b.t.ZdNUj4),
                                           tabIndex: -1,
                                           children: (0, r.jsx)(h.Z, { color: '#4c0000' })
                                       }),
                                       (0, r.jsx)(o.Clickable, {
                                           className: S.macButtonMinimize,
                                           onClick: () => A(n),
-                                          'aria-label': T.intl.string(T.t.CxOC4e),
+                                          'aria-label': b.intl.string(b.t.CxOC4e),
                                           tabIndex: -1,
                                           children: (0, r.jsx)(v.Z, { color: '#975500' })
                                       }),
                                       (0, r.jsx)(o.Clickable, {
                                           className: S.macButtonMaximize,
                                           onClick: (e) => N(n, e),
-                                          'aria-label': T.intl.string(T.t['2nM3Pj']),
+                                          'aria-label': b.intl.string(b.t['2nM3Pj']),
                                           tabIndex: -1,
                                           children: (0, r.jsx)(g.Z, { color: '#006500' })
                                       })

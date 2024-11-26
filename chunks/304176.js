@@ -16,8 +16,8 @@ var r = n(200651),
     E = n(626135),
     v = n(524444),
     I = n(981631),
-    b = n(176505),
-    T = n(388032),
+    T = n(176505),
+    b = n(388032),
     S = n(623105);
 t.Z = (e) => {
     let { roleIcon: t, guild: n } = e,
@@ -31,7 +31,7 @@ t.Z = (e) => {
     }, []);
     let A = (0, a.e7)([h.Z], () => (null != t.roleId ? h.Z.getRole(n.id, t.roleId) : void 0)),
         N = (0, f.Z)(A),
-        C = N ? T.intl.formatToPlainString(T.t.t0928f, { name: y }) : T.intl.formatToPlainString(T.t.UDDkGx, { name: y }),
+        C = N ? b.intl.formatToPlainString(b.t.t0928f, { name: y }) : b.intl.formatToPlainString(b.t.UDDkGx, { name: y }),
         R = {
             ...t,
             src: null == t.src ? t.src : (0, c.o)(t.src, 40),
@@ -39,7 +39,7 @@ t.Z = (e) => {
         },
         O = N
             ? () => {
-                  (0, _.uL)(I.Z5c.CHANNEL(n.id, b.oC.ROLE_SUBSCRIPTIONS));
+                  (0, _.uL)(I.Z5c.CHANNEL(n.id, T.oC.ROLE_SUBSCRIPTIONS));
               }
             : () => {
                   (0, d.f)({
@@ -94,7 +94,7 @@ t.Z = (e) => {
                                 height: 14,
                                 className: S.boosterBadge
                             }),
-                            T.intl.string(T.t['H930+P'])
+                            b.intl.string(b.t['H930+P'])
                         ]
                     })
                 ]

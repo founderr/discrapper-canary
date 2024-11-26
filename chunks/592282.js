@@ -17,7 +17,7 @@ var r = n(200651),
     p = n(939350),
     h = n(450793);
 function m(e) {
-    let { color: t = 'default', label: n, checked: a, subtext: m, disabled: g, isFocused: E, menuItemProps: v, action: I, className: b, focusedClassName: T } = e,
+    let { color: t = 'default', label: n, checked: a, subtext: m, disabled: g, isFocused: E, menuItemProps: v, action: I, className: T, focusedClassName: b } = e,
         S = i.useRef(null),
         y = (0, d.Q)('MenuCheckboxItem');
     return (
@@ -26,10 +26,10 @@ function m(e) {
         }, [E]),
         (0, r.jsxs)(o.P, {
             innerRef: S,
-            className: s()(h.item, h.checkboxContainer, h.labelContainer, p._[t], b, {
+            className: s()(h.item, h.checkboxContainer, h.labelContainer, p._[t], T, {
                 [h.disabled]: g,
                 [h.focused]: E,
-                [null != T ? T : '']: E
+                [null != b ? b : '']: E
             }),
             onClick: g ? void 0 : I,
             ...v,

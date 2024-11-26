@@ -20,7 +20,7 @@ var i = n(200651),
     S = n(820350);
 function T(e) {
     let { user: t, showOverlay: n, children: T } = e,
-        C = (0, l.ZP)(),
+        E = (0, l.ZP)(),
         { analyticsLocations: _ } = (0, o.ZP)(a.Z.PREMIUM_UPSELL_OVERLAY);
     return (s.useEffect(() => {
         n &&
@@ -47,7 +47,7 @@ function T(e) {
                                       case m.BRd.LIGHT:
                                           return S;
                                   }
-                              })(C)
+                              })(E)
                           }),
                           (0, i.jsxs)('div', {
                               className: p.upsellTextContainer,

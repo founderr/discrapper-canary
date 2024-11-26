@@ -22,8 +22,8 @@ var i = n(442837),
     E = n(53558),
     v = n(827313),
     I = n(420654),
-    b = n(166584),
-    T = n(915014),
+    T = n(166584),
+    b = n(915014),
     S = n(228168),
     y = n(388032),
     A = n(410344),
@@ -31,11 +31,11 @@ var i = n(442837),
 function C(e) {
     let { user: t, currentUser: n, displayProfile: C, guild: R, isHovering: O, onOpenProfile: D, channelId: L, onClose: x } = e,
         w = u.ZP.getName(null == R ? void 0 : R.id, L, t),
-        M = (0, i.e7)([c.Z], () => {
+        P = (0, i.e7)([c.Z], () => {
             var e;
             return null === (e = c.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         }),
-        P = (0, i.e7)([s.Z, o.Z], () => s.Z.getChannel(o.Z.getChannelId())),
+        M = (0, i.e7)([s.Z, o.Z], () => s.Z.getChannel(o.Z.getChannelId())),
         k = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation);
     return (0, r.jsxs)(a.Scroller, {
         fade: !0,
@@ -64,7 +64,7 @@ function C(e) {
                     ]
                 })
             }),
-            (0, r.jsx)(T.Z, {
+            (0, r.jsx)(b.Z, {
                 user: t,
                 onOpenProfile: (e) => (null == D ? void 0 : D({ section: e }))
             }),
@@ -95,19 +95,19 @@ function C(e) {
                 onClose: x,
                 className: N.activity
             }),
-            (null == M ? void 0 : M.popularApplicationCommandIds) != null &&
-                null != P &&
+            (null == P ? void 0 : P.popularApplicationCommandIds) != null &&
+                null != M &&
                 (0, r.jsx)(d.Z, {
-                    applicationId: M.id,
-                    commandIds: M.popularApplicationCommandIds,
-                    channel: P,
+                    applicationId: P.id,
+                    commandIds: P.popularApplicationCommandIds,
+                    channel: M,
                     guildId: null == R ? void 0 : R.id,
                     onClick: x
                 }),
             null != R &&
                 (0, r.jsx)(h.Z, {
                     heading: y.intl.string(y.t.LPJmLy),
-                    children: (0, r.jsx)(b.Z, {
+                    children: (0, r.jsx)(T.Z, {
                         user: t,
                         currentUser: n,
                         guild: R

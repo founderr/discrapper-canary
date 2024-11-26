@@ -3,7 +3,7 @@ n.d(t, {
         return E;
     },
     Ok: function () {
-        return T;
+        return b;
     },
     U4: function () {
         return v;
@@ -12,7 +12,7 @@ n.d(t, {
         return h.Z;
     },
     ZJ: function () {
-        return b;
+        return T;
     },
     q: function () {
         return I;
@@ -47,7 +47,7 @@ function v() {
 function I() {
     c.default.track(g.rMx.OPEN_POPOUT, { type: 'Active Threads Popout' });
 }
-function b(e, t) {
+function T(e, t) {
     var n, r;
     let i = (0, o.K)(e);
     if (null == i) return;
@@ -64,9 +64,9 @@ function b(e, t) {
         E = _(h),
         v = p.Z.isMuted(e.id),
         I = (0, f.sK)(p.Z.getMuteConfig(e.id)),
-        { can_send_message: b, ...T } = i,
+        { can_send_message: T, ...b } = i,
         S = {
-            ...T,
+            ...b,
             channel_id: e.id,
             guild_id: a,
             parent_id: s,
@@ -84,7 +84,7 @@ function b(e, t) {
     c.default.track(g.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, S);
 }
 n(388032);
-let T = (e) => {
+let b = (e) => {
     var t, n;
     let r = (0, a.e7)([l.ZP], () => l.ZP.lastMessageId(e.id)),
         s = null != r ? _.default.extractTimestamp(r) : null,

@@ -12,16 +12,16 @@ var i = n(200651),
 t.Z = function (e) {
     let { index: t, children: l, user: m, channel: p, onClick: g, isFocused: f, isActive: _, onOtherHover: E, className: I } = e,
         [C, v] = r.useState(!1),
-        [S, N] = r.useState(!1),
+        [N, S] = r.useState(!1),
         T = () => {
-            v(!0), f && !_ && !S && (null == E || E());
+            v(!0), f && !_ && !N && (null == E || E());
         },
-        A = () => {
+        x = () => {
             v(!1);
         },
         b = (e, t) => {
             if (null != t)
-                N(!0),
+                S(!0),
                     (0, d.jW)(
                         e,
                         async () => {
@@ -34,7 +34,7 @@ t.Z = function (e) {
                         },
                         {
                             onClose: () => {
-                                N(!1);
+                                S(!1);
                             }
                         }
                     );
@@ -49,19 +49,19 @@ t.Z = function (e) {
                 },
                 children: (0, i.jsx)(s.Z.div, {
                     className: a()(h.messageRequestItem, I, {
-                        [h.active]: _ || S,
+                        [h.active]: _ || N,
                         [h.firstItem]: 0 === t
                     }),
                     onContextMenu: (e) => b(e, m),
                     onMouseEnter: T,
-                    onMouseLeave: A,
+                    onMouseLeave: x,
                     onClick: null != g ? g : void 0,
                     style: {
                         LIST_ROW_HEIGHT: u.WN,
                         opacity: 1
                     },
                     ...e,
-                    children: l(C || _ || S)
+                    children: l(C || _ || N)
                 })
             })
     });

@@ -33,7 +33,7 @@ function T(e, t, n) {
     );
 }
 ((s = i || (i = {})).DEFAULT = 'DEFAULT'), (s.RECORDING = 'RECORDING');
-let C = {
+let E = {
     DEFAULT: S.__invalid_default,
     RECORDING: S.recording
 };
@@ -63,7 +63,7 @@ class _ extends l.PureComponent {
                 onClick: this.handleClick,
                 onMouseDown: this.handleMouseDown,
                 ref: this._containerRef,
-                className: o()(S.recorderContainer, C[t], {
+                className: o()(S.recorderContainer, E[t], {
                     [S.hasValue]: l,
                     [S.containerDisabled]: i
                 }),

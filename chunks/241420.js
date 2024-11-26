@@ -10,7 +10,7 @@ n.r(t),
             return T;
         },
         default: function () {
-            return C;
+            return E;
         }
     }),
     n(47120);
@@ -110,7 +110,7 @@ function T(e) {
         ]
     });
 }
-function C(e) {
+function E(e) {
     let { guild: t, transitionState: n, onClose: i } = e,
         s = ''.concat(x.intl.string(x.t.BayiAg), '\u2014').concat(null != t ? t.toString() : '??');
     return (0, r.jsxs)(a.ModalRoot, {
@@ -186,7 +186,7 @@ function _(e) {
             },
             [i, n]
         ),
-        C = l.useCallback(
+        E = l.useCallback(
             (e) => {
                 let t = new Set((0, m.gl)());
                 e ? t.delete(i) : t.add(i),
@@ -207,7 +207,7 @@ function _(e) {
         isGuildActivityJoiningRestricted: u,
         handleActivityJoiningRestrictedGuildChange: S,
         isGuildMessageRequestRestricted: a,
-        handleMessageRequestRestrictedGuildChange: C,
+        handleMessageRequestRestrictedGuildChange: E,
         guild: t
     });
 }

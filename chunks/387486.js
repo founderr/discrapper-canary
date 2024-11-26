@@ -3,28 +3,28 @@ r.d(t, {
         return o;
     }
 });
-var n = r(650093),
-    a = r(867921),
+var a = r(650093),
+    n = r(867921),
     _ = r(928541);
-function o(e, t = (0, n.L2)('fetch')) {
+function o(e, t = (0, a.L2)('fetch')) {
     let r = 0,
         o = 0;
-    return (0, a.q)(e, function (a) {
-        let i = a.body.length;
-        (r += i), o++;
-        let E = {
-            body: a.body,
+    return (0, n.q)(e, function (n) {
+        let E = n.body.length;
+        (r += E), o++;
+        let i = {
+            body: n.body,
             method: 'POST',
             referrerPolicy: 'origin',
             headers: e.headers,
             keepalive: r <= 60000 && o < 15,
             ...e.fetchOptions
         };
-        if (!t) return (0, n._6)('fetch'), (0, _.$2)('No fetch implementation available');
+        if (!t) return (0, a._6)('fetch'), (0, _.$2)('No fetch implementation available');
         try {
-            return t(e.url, E).then(
+            return t(e.url, i).then(
                 (e) => (
-                    (r -= i),
+                    (r -= E),
                     o--,
                     {
                         statusCode: e.status,
@@ -36,7 +36,7 @@ function o(e, t = (0, n.L2)('fetch')) {
                 )
             );
         } catch (e) {
-            return (0, n._6)('fetch'), (r -= i), o--, (0, _.$2)(e);
+            return (0, a._6)('fetch'), (r -= E), o--, (0, _.$2)(e);
         }
     });
 }

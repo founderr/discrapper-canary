@@ -8,7 +8,7 @@ n.r(t),
             return I;
         },
         getOS: function () {
-            return b;
+            return T;
         },
         getPlatform: function () {
             return E;
@@ -104,7 +104,7 @@ function I() {
             return 'web';
     }
 }
-function b() {
+function T() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? 'windows mobile' : 'windows';
     if (/(iPhone|iPad|iPod)/.test(e)) return 'ios';

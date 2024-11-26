@@ -29,8 +29,8 @@ let g = 1 * f.Z.Millis.MINUTE,
     E = (e) => 'https://youtube.com/watch?v='.concat(e),
     v = 5 * f.Z.Millis.MINUTE,
     I = /live_user_(.*)-\{width\}/,
-    b = null,
-    T = 0,
+    T = null,
+    b = 0,
     S = null,
     y = new Set(),
     A = {};
@@ -62,7 +62,7 @@ let R = new (class e {
     stop() {
         (this._started = !1),
             (S = null),
-            (T = 0),
+            (b = 0),
             null != this._nextCheck && clearTimeout(this._nextCheck),
             l.Z.dispatch({
                 type: 'STREAMING_UPDATE',
@@ -92,7 +92,7 @@ let R = new (class e {
                 g = c.Z.get(h.ABu.TWITCH);
             let E = null !== ((a = u), (i = null === (s = I.exec(a)) || void 0 === s ? void 0 : s[1])) && void 0 !== i ? i : e.name,
                 v = null != _ && '' !== _ ? _.slice(0, 128) : void 0,
-                b = null != m && '' !== m ? m.slice(0, 128) : void 0;
+                T = null != m && '' !== m ? m.slice(0, 128) : void 0;
             return {
                 url:
                     null === (n = g.getPlatformUserUrl) || void 0 === n
@@ -104,7 +104,7 @@ let R = new (class e {
                 name: g.name,
                 assets: p,
                 details: v,
-                state: b
+                state: T
             };
         } catch (n) {
             if (401 === n.status && null == t)
@@ -160,7 +160,7 @@ let R = new (class e {
         null != this._nextCheck && clearTimeout(this._nextCheck);
         let t = [h.ABu.TWITCH],
             n = Date.now();
-        T <= n && (t.push(h.ABu.YOUTUBE), (T = n + v)),
+        b <= n && (t.push(h.ABu.YOUTUBE), (b = n + v)),
             Promise.allSettled(e.filter((e) => t.includes(e.type)).map((e) => (e.type === h.ABu.TWITCH ? this._checkTwitch(e) : this._checkYouTube(e)))).then((e) => {
                 if (this._started) {
                     var t;
@@ -189,15 +189,15 @@ class D extends (r = s.ZP.Store) {
         O(), this.waitFor(_.Z), this.syncWith([p.Z], O);
     }
     getStream() {
-        return b;
+        return T;
     }
 }
 m(D, 'displayName', 'ExternalStreamingStore'),
     (t.Z = new D(l.Z, {
         STREAMING_UPDATE: function (e) {
             var t;
-            if (a()(e.stream, b)) return !1;
-            b = null !== (t = e.stream) && void 0 !== t ? t : null;
+            if (a()(e.stream, T)) return !1;
+            T = null !== (t = e.stream) && void 0 !== t ? t : null;
         },
         USER_CONNECTIONS_UPDATE: () => R._check()
     }));

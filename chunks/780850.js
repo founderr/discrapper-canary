@@ -3,6 +3,6 @@ r.d(t, {
         return _;
     }
 });
-var n = r(185461),
-    a = r(27269);
-let _ = (0, n.rp)({ lazyLoadIntegration: a.R });
+var a = r(185461),
+    n = r(27269);
+let _ = (0, a.rp)({ lazyLoadIntegration: n.R });

@@ -66,11 +66,11 @@ function o(e, t) {
         var I = void 0;
         if ((0, a.q9)(t.byweekno, -1)) I = -1;
         else {
-            var b = (0, i.FO)((0, i.t2)(e - 1, 1, 1)),
-                T = (0, a.Vy)(7 - b.valueOf() + t.wkst, 7),
+            var T = (0, i.FO)((0, i.t2)(e - 1, 1, 1)),
+                b = (0, a.Vy)(7 - T.valueOf() + t.wkst, 7),
                 S = (0, i.Eg)(e - 1) ? 366 : 365,
                 y = void 0;
-            T >= 4 ? ((T = 0), (y = S + (0, a.Vy)(b - t.wkst, 7))) : (y = u - p), (I = Math.floor(52 + (0, a.Vy)(y, 7) / 4));
+            b >= 4 ? ((b = 0), (y = S + (0, a.Vy)(T - t.wkst, 7))) : (y = u - p), (I = Math.floor(52 + (0, a.Vy)(y, 7) / 4));
         }
         if ((0, a.q9)(t.byweekno, I)) for (var E = 0; E < p; E++) _.wnomask[E] = 1;
     }

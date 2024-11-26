@@ -51,7 +51,7 @@ n.d(t, {
         return y;
     },
     cG: function () {
-        return b;
+        return T;
     },
     cm: function () {
         return S;
@@ -72,13 +72,13 @@ n.d(t, {
         return Z;
     },
     jK: function () {
-        return P;
+        return M;
     },
     mv: function () {
         return L;
     },
     q2: function () {
-        return T;
+        return b;
     },
     qC: function () {
         return i;
@@ -117,8 +117,8 @@ var r,
     E = n(137920),
     v = n(388032);
 let I = 200,
-    b = 4,
-    T = 'ClanSettingsModal',
+    T = 4,
+    b = 'ClanSettingsModal',
     S = 20,
     y = 30,
     A = 24,
@@ -175,10 +175,10 @@ function x() {
 }
 if ((((l = r || (r = {}))[(l.GAMES = 0)] = 'GAMES'), (l[(l.PLAYSTYLE = 1)] = 'PLAYSTYLE'), (l[(l.UTILITY_TRAITS = 2)] = 'UTILITY_TRAITS'), (l[(l.INTERESTS = 3)] = 'INTERESTS'), (l[(l.DESCRIPTION = 4)] = 'DESCRIPTION'), (l[(l.CUSTOMIZE_TAG_BADGE = 5)] = 'CUSTOMIZE_TAG_BADGE'), (l[(l.CUSTOMIZE_BANNER = 6)] = 'CUSTOMIZE_BANNER'), (l[(l.MEMBER_APPLICATION = 7)] = 'MEMBER_APPLICATION'), isNaN(Number(Object.values(r).pop())))) throw Error('Failed to get the last step in the ClanSetupSteps enum');
 let w = ['Server: NA', 'Server: EU', 'Server: LATAM', 'Server: KR', 'Server: AP', 'Voice ON', 'Voice OFF', 'Unrated', 'All Ranks', 'Bronze+', 'Silver+', 'Gold+', 'Platinum+', 'Diamond+'],
-    M = new Set([...w, 'Server: NA', 'Server: EU', 'Server: Asia', 'Server: TW/HK/MO', 'Mondstadt', 'Liyue', 'Inazuma', 'Sumeru', 'Fontaine', 'F2P', 'Spenders', 'Co-op', 'Support']),
-    P = ['20+', '30+', '40+', 'All Ages'],
+    P = new Set([...w, 'Server: NA', 'Server: EU', 'Server: Asia', 'Server: TW/HK/MO', 'Mondstadt', 'Liyue', 'Inazuma', 'Sumeru', 'Fontaine', 'F2P', 'Spenders', 'Co-op', 'Support']),
+    M = ['20+', '30+', '40+', 'All Ages'],
     k = ['Recurring Events', 'Beginner Friendly', 'PUGs', 'Inclusive', 'Parent Friendly', 'Work-life Balance', 'Competitive', 'Streamer', 'Esports'],
-    U = new Set([...w, ...P, ...k]),
+    U = new Set([...w, ...M, ...k]),
     B = new Set(['Bulgarian', 'Chinese (Simplified)', 'Chinese (Traditional)', 'Croatian', 'Czech', 'Danish', 'Dutch', 'English', 'Finnish', 'French', 'German', 'Greek', 'Hindi', 'Hungarian', 'Italian', 'Japanese', 'Korean', 'Lithuanian', 'Norwegian', 'Polish', 'Portuguese', 'Romanian', 'Russian', 'Spanish', 'Swedish', 'Thai', 'Turkish', 'Ukrainian', 'Vietnamese']);
 function G(e, t) {
     var n;
@@ -187,7 +187,7 @@ function G(e, t) {
         ((n = t),
         (e) => {
             var t;
-            return -((((null == n ? void 0 : n.includes(e)) ? 1 : 0) << 4) | ((((t = e), U.has(t) || Z.has(t) || B.has(t)) ? 0 : 1) << 3) | ((M.has(e) ? 1 : 0) << 2) | ((P.includes(e) ? 1 : 0) << 1) | ((k.includes(e) ? 1 : 0) << 0));
+            return -((((null == n ? void 0 : n.includes(e)) ? 1 : 0) << 4) | ((((t = e), U.has(t) || Z.has(t) || B.has(t)) ? 0 : 1) << 3) | ((P.has(e) ? 1 : 0) << 2) | ((M.includes(e) ? 1 : 0) << 1) | ((k.includes(e) ? 1 : 0) << 0));
         })
     );
 }

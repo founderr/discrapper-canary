@@ -6,39 +6,39 @@ r.d(t, {
         return _;
     }
 });
-var n = r(370336);
-let a = '_sentryMetrics';
+var a = r(370336);
+let n = '_sentryMetrics';
 function _(e) {
-    let t = e[a];
+    let t = e[n];
     if (!t) return;
     let r = {};
-    for (let [, [e, a]] of t) (r[e] || (r[e] = [])).push((0, n.Jr)(a));
+    for (let [, [e, n]] of t) (r[e] || (r[e] = [])).push((0, a.Jr)(n));
     return r;
 }
-function o(e, t, r, n, _, o, i) {
-    let E = e[a] || (e[a] = new Map()),
+function o(e, t, r, a, _, o, E) {
+    let i = e[n] || (e[n] = new Map()),
         c = `${t}:${r}@${_}`,
-        s = E.get(i);
+        s = i.get(E);
     if (s) {
         let [, e] = s;
-        E.set(i, [
+        i.set(E, [
             c,
             {
-                min: Math.min(e.min, n),
-                max: Math.max(e.max, n),
+                min: Math.min(e.min, a),
+                max: Math.max(e.max, a),
                 count: (e.count += 1),
-                sum: (e.sum += n),
+                sum: (e.sum += a),
                 tags: e.tags
             }
         ]);
     } else
-        E.set(i, [
+        i.set(E, [
             c,
             {
-                min: n,
-                max: n,
+                min: a,
+                max: a,
                 count: 1,
-                sum: n,
+                sum: a,
                 tags: o
             }
         ]);

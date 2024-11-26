@@ -19,7 +19,7 @@ function c(e) {
         { pendingAvatar: E } = (0, u.Z)({}),
         v = void 0 !== _ ? _ : d ? E : void 0,
         I = (0, i.e7)([o.ZP], () => (null != n && null != t ? o.ZP.getMember(n, t.id) : null)),
-        b = r.useMemo(
+        T = r.useMemo(
             () =>
                 null != t
                     ? (0, s.SG)(v, I, t, {
@@ -29,12 +29,12 @@ function c(e) {
                     : void 0,
             [v, I, t, g, c]
         ),
-        T = r.useCallback(() => h(!0), []);
+        b = r.useCallback(() => h(!0), []);
     return {
-        avatarSrc: b,
+        avatarSrc: T,
         isAvatarAnimating: g,
         eventHandlers: {
-            onMouseEnter: T,
+            onMouseEnter: b,
             onMouseLeave: r.useCallback(() => h(!1), [])
         }
     };

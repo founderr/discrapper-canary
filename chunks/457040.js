@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(639119),
     v = n(695346),
     I = n(594174),
-    b = n(626135),
-    T = n(624138),
+    T = n(626135),
+    b = n(624138),
     S = n(45521),
     y = n(285651),
     A = n(217590),
@@ -30,26 +30,26 @@ var r = n(200651),
     L = n(657795),
     x = n(489762),
     w = n(31543),
-    M = n(814042),
-    P = n(15350),
+    P = n(814042),
+    M = n(15350),
     k = n(611480),
     U = n(981631),
     B = n(974939);
-let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
-    Z = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
-    F = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
-    V = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
-    j = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
-    H = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
-    Y = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
-    W = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
+let G = (0, b.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
+    Z = (0, b.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
+    F = (0, b.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
+    V = (0, b.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
+    j = (0, b.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
+    H = (0, b.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
+    Y = (0, b.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
+    W = (0, b.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
     K = H + 2 * W,
     z = Y + 2 * W,
     q = s()(A.Iw, 200),
     Q = s()(A.m1, 200),
     X = i.forwardRef(function (e, t) {
         var a;
-        let { containerWidth: s, channel: u, onSelectSticker: T, closePopout: H } = e,
+        let { containerWidth: s, channel: u, onSelectSticker: b, closePopout: H } = e,
             { location: Y } = (0, d.O)(),
             { analyticsLocations: W } = (0, _.ZP)(f.Z.STICKER_PICKER),
             X = (null === (a = (0, E.N)()) || void 0 === a ? void 0 : a.subscription_trial) != null,
@@ -72,7 +72,7 @@ let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             el = v._O.useSetting(),
             eu = i.useMemo(() => new Set(el), [el]),
             ec = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
-            ed = i.useMemo(() => (0, P.S)(en, ec, u), [en, ec, u]),
+            ed = i.useMemo(() => (0, M.S)(en, ec, u), [en, ec, u]),
             ef = (0, N.RJ)(),
             e_ = (0, N.LZ)(),
             ep = (0, l.cj)([C.Z], () => C.Z.getAllGuildStickers()),
@@ -80,15 +80,15 @@ let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             eg = eh.length + em.length,
             eE = i.useCallback(
                 (e) => {
-                    '' === en ? (0, A.On)(e) : (0, A.Yk)(e, en, eg), T(e.sticker, R.V0.STICKER_PICKER);
+                    '' === en ? (0, A.On)(e) : (0, A.Yk)(e, en, eg), b(e.sticker, R.V0.STICKER_PICKER);
                 },
-                [T, en, eg]
+                [b, en, eg]
             ),
             ev = null != eo && eo > G,
             {
                 rowCount: eI,
-                rowCountBySection: eb,
-                stickersGrid: eT,
+                rowCountBySection: eT,
+                stickersGrid: eb,
                 gutterWidth: eS,
                 columnCounts: ey
             } = (0, N.el)({
@@ -105,7 +105,7 @@ let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     let { location: i } = t;
                     switch (e.type) {
                         case R.al.CREATE_STICKER:
-                            b.default.track(U.rMx.OPEN_MODAL, {
+                            T.default.track(U.rMx.OPEN_MODAL, {
                                 type: U.jXE.CREATE_STICKER_MODAL,
                                 location: Y
                             }),
@@ -133,7 +133,7 @@ let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             } = (0, O.t)({
                 columnCounts: ey,
                 stickersListRef: $,
-                stickersGrid: eT,
+                stickersGrid: eb,
                 onGridItemSelect: eA,
                 store: p.ZN,
                 setInspectedStickerPosition: p.ZN.setInspectedExpressionPosition,
@@ -171,7 +171,7 @@ let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 null === (e = ee.current) || void 0 === e || e.focus();
             }, []);
         let ex = i.useCallback(() => {
-            H(), b.default.track(U.rMx.PREMIUM_PROMOTION_OPENED, { location_section: U.jXE.STICKER_PICKER_UPSELL }), (0, g.z)();
+            H(), T.default.track(U.rMx.PREMIUM_PROMOTION_OPENED, { location_section: U.jXE.STICKER_PICKER_UPSELL }), (0, g.z)();
         }, [H]);
         return (0, r.jsxs)(_.Gt, {
             value: W,
@@ -211,9 +211,9 @@ let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                                 isUsingKeyboardNavigation: eD,
                                                 onSelectSticker: eE,
                                                 rowCount: eI,
-                                                rowCountBySection: eb,
+                                                rowCountBySection: eT,
                                                 stickersCategories: ea,
-                                                stickersGrid: eT,
+                                                stickersGrid: eb,
                                                 channel: u
                                             })
                                           : null
@@ -224,7 +224,7 @@ let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                               })
                           ]
                       }),
-                et && (0, r.jsx)(M.C, { onLearnMore: ex })
+                et && (0, r.jsx)(P.C, { onLearnMore: ex })
             ]
         });
     });

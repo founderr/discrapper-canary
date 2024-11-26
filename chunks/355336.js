@@ -22,8 +22,8 @@ function c(e, t) {
         });
     return i.forwardRef(function (t, c) {
         let { children: d, className: f, onResize: _, contentClassName: p, onScroll: h, dir: m = 'ltr', fade: g = !1, customTheme: E = !1, style: v, ...I } = t,
-            b = i.useRef(null),
             T = i.useRef(null),
+            b = i.useRef(null),
             [S, y] = i.useState(!1),
             { scrollerRef: A, getScrollerState: N } = (0, l.Ke)(),
             C = (0, l.t2)(A);
@@ -31,7 +31,7 @@ function c(e, t) {
             c,
             () => ({
                 getScrollerNode: () => A.current,
-                isScrolling: () => null != b.current,
+                isScrolling: () => null != T.current,
                 getScrollerState: N,
                 ...(0, l.Ue)(A, N, C)
             }),
@@ -39,16 +39,16 @@ function c(e, t) {
         );
         let R = i.useCallback(
             (e) => {
-                null == b.current ? y(!0) : clearTimeout(b.current),
-                    (b.current = setTimeout(() => {
-                        (b.current = null), y(!1);
+                null == T.current ? y(!0) : clearTimeout(T.current),
+                    (T.current = setTimeout(() => {
+                        (T.current = null), y(!1);
                     }, 200)),
                     null != h && h(e);
             },
             [h]
         );
         return (
-            i.useEffect(() => () => clearTimeout(b.current), []),
+            i.useEffect(() => () => clearTimeout(T.current), []),
             (0, l.zn)({
                 ref: A,
                 key: 'container',
@@ -57,7 +57,7 @@ function c(e, t) {
                 listenerMap: n
             }),
             (0, l.zn)({
-                ref: T,
+                ref: b,
                 key: 'content',
                 onUpdate: _,
                 resizeObserver: a,
@@ -77,9 +77,9 @@ function c(e, t) {
                 onScroll: R,
                 ...I,
                 children: (0, r.jsx)(o.J, {
-                    containerRef: T,
+                    containerRef: b,
                     children: (0, r.jsxs)('div', {
-                        ref: T,
+                        ref: b,
                         className: s()(p, u.content),
                         children: [d, S && (0, r.jsx)('div', { className: u.pointerCover })]
                     })

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return M;
+        return P;
     },
     f: function () {
         return w;
@@ -25,8 +25,8 @@ var r = n(200651),
     E = n(403132),
     v = n(378233),
     I = n(768581),
-    b = n(55935),
-    T = n(823379),
+    T = n(55935),
+    b = n(823379),
     S = n(453687),
     y = n(930282),
     A = n(123145),
@@ -67,8 +67,8 @@ function w(e, t, n, i, a, s) {
     let o, l, c, d;
     let f = (0, p.Z)(e),
         { trailingIconClass: g, leadingIconClass: E, iconSize: I } = s,
-        b = null == t || '' === t || (Array.isArray(t) && 0 === t.length),
-        T = (0, v.cv)(f).length > 0,
+        T = null == t || '' === t || (Array.isArray(t) && 0 === t.length),
+        b = (0, v.cv)(f).length > 0,
         S = null != f.interaction,
         A = f.hasFlag(R.iLy.IS_VOICE_MESSAGE),
         N = f.isPoll(),
@@ -86,14 +86,14 @@ function w(e, t, n, i, a, s) {
         o = O.intl.string(O.t.XAkOo6);
     else if (i) o = O.intl.string(O.t.G7p6v7);
     else if (f.type === R.uaV.CHANNEL_PINNED_MESSAGE) o = O.intl.string(O.t.sCfDDg);
-    else if (b) {
+    else if (T) {
         if (N) {
             var D, L;
             l = null == f ? void 0 : null === (L = f.poll) || void 0 === L ? void 0 : null === (D = L.question) || void 0 === D ? void 0 : D.text;
         } else
             C
                 ? (o = (0, m.N4)(f))
-                : T
+                : b
                   ? (o = O.intl.string(O.t.kHdYCQ))
                   : S
                     ? (o = O.intl.string(O.t['E+6SSU']))
@@ -114,7 +114,7 @@ function w(e, t, n, i, a, s) {
             className: a
         });
     return (
-        T
+        b
             ? (c = (0, r.jsx)(u.StickerSmallIcon, {
                   size: 'custom',
                   color: 'currentColor',
@@ -155,13 +155,13 @@ function w(e, t, n, i, a, s) {
         }
     );
 }
-function M(e) {
+function P(e) {
     let t;
     let { repliedAuthor: n, baseAuthor: a, baseMessage: o, referencedMessage: _, renderPopout: p, isReplySpineClickable: h, showReplySpine: m } = e,
         { canShowReactionsOnMessageHover: v } = f.ZP.useExperiment({ location: 'RepliedMessage' }, { autoTrackExposure: !1 }),
-        [y, M] = i.useState(!1),
-        P = i.useMemo(() => (null != p && _.state === g.Y.LOADED ? (e) => p(e, _.message) : void 0), [_, p]),
-        k = i.useCallback(() => M((e) => !e), []),
+        [y, P] = i.useState(!1),
+        M = i.useMemo(() => (null != p && _.state === g.Y.LOADED ? (e) => p(e, _.message) : void 0), [_, p]),
+        k = i.useCallback(() => P((e) => !e), []),
         U = (function (e, t, n) {
             let { referencedMessage: i, channel: a, compact: o, isReplyAuthorBlocked: l, repliedAuthor: f, showAvatarPopout: _, onClickAvatar: p, onContextMenu: h, onPopoutRequestClose: m } = e,
                 { analyticsLocations: E } = (0, d.ZP)(c.Z.AVATAR);
@@ -231,7 +231,7 @@ function M(e) {
                       value: E,
                       children: v()
                   });
-        })(e, P, o.type),
+        })(e, M, o.type),
         B = (function (e, t) {
             let { baseMessage: n, channel: i, referencedMessage: a, showUsernamePopout: s, onClickUsername: o, onContextMenu: l, onPopoutRequestClose: u } = e,
                 c = (null == a ? void 0 : a.state) === g.Y.LOADED ? a.message : void 0;
@@ -249,7 +249,7 @@ function M(e) {
                       onPopoutRequestClose: u,
                       isRepliedMessage: !0
                   });
-        })(e, P),
+        })(e, M),
         G = (function (e, t, n) {
             let { content: i, referencedMessage: a, isReplyAuthorBlocked: o, isReplyAuthorIgnored: l, onClickReply: c } = e,
                 d = a.state !== g.Y.DELETED ? c : void 0;
@@ -305,10 +305,10 @@ function M(e) {
                         })
                     });
                 default:
-                    (0, T.vE)(a);
+                    (0, b.vE)(a);
             }
         })(e, y, k),
-        Z = i.useMemo(() => (e.compact ? (0, N.Z)((0, b.vc)(l()(), 'LT')) : null), [e.compact]);
+        Z = i.useMemo(() => (e.compact ? (0, N.Z)((0, T.vc)(l()(), 'LT')) : null), [e.compact]);
     null != n &&
         null != a &&
         (t = O.intl.formatToPlainString(O.t.RhbQ2N, {

@@ -17,21 +17,21 @@ var r,
     E = n(981631);
 let v = new Map(),
     I = {};
-function b(e) {
+function T(e) {
     return I[e];
 }
-function T(e, t) {
+function b(e, t) {
     (I[e] = t), v.set(e, l()());
 }
 function S(e, t, n) {
     if (t !== n && null != t) {
         if (t === m.wB.SUBMITTED) {
             let t = I[e];
-            T(e, t + 1);
+            b(e, t + 1);
         }
         if (n === m.wB.SUBMITTED) {
             let t = I[e];
-            T(e, Math.max(0, t - 1));
+            b(e, Math.max(0, t - 1));
         }
     }
 }
@@ -60,8 +60,8 @@ function w(e) {
     let o = null === ((n = a.joinRequestId), (t = R.get(n))) || void 0 === t ? void 0 : t.applicationStatus;
     return S(r, a.applicationStatus, o), x(a), !0;
 }
-let M = {},
-    P = {},
+let P = {},
+    M = {},
     k = {},
     U = {},
     B = 10 * p.Z.Seconds.MINUTE;
@@ -89,11 +89,11 @@ class G extends (r = u.ZP.Store) {
         let n = f.Z.getGuild(e),
             r = this.getRequests(e, m.wB.SUBMITTED).length > 0,
             i = (null == n ? void 0 : n.hasFeature(E.oNc.CLAN)) && !r ? 'REVIEW_APPLICATION' : m.wB.SUBMITTED;
-        return null !== (t = M[e]) && void 0 !== t ? t : i;
+        return null !== (t = P[e]) && void 0 !== t ? t : i;
     }
     getSelectedSortOrder(e) {
         var t;
-        return null !== (t = P[e]) && void 0 !== t ? t : m.Nw.TIMESTAMP_DESC;
+        return null !== (t = M[e]) && void 0 !== t ? t : m.Nw.TIMESTAMP_DESC;
     }
     getSelectedGuildJoinRequest(e) {
         var t;
@@ -118,7 +118,7 @@ class G extends (r = u.ZP.Store) {
         GUILD_JOIN_REQUESTS_FETCH_SUCCESS: function (e) {
             let { status: t, requests: n, total: r, guildId: i } = e;
             (y = !1),
-                t === m.wB.SUBMITTED && T(i, r),
+                t === m.wB.SUBMITTED && b(i, r),
                 n.forEach((e) => {
                     x(e);
                 });
@@ -137,7 +137,7 @@ class G extends (r = u.ZP.Store) {
                     applicationStatus: n
                 });
             }),
-                T(t, 0);
+                b(t, 0);
         },
         GUILD_JOIN_REQUEST_CREATE: w,
         GUILD_JOIN_REQUEST_UPDATE: w,
@@ -151,14 +151,14 @@ class G extends (r = u.ZP.Store) {
         },
         GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB: function (e) {
             let { guildId: t, applicationTab: n } = e;
-            n !== M[t] && (M[t] = n);
+            n !== P[t] && (P[t] = n);
         },
         GUILD_JOIN_REQUESTS_SET_SORT_ORDER: function (e) {
             var t;
             let { guildId: n, sortOrder: r } = e;
-            if (r === P[n]) return;
-            P[n] = r;
-            let i = null !== (t = M[n]) && void 0 !== t ? t : m.wB.SUBMITTED;
+            if (r === M[n]) return;
+            M[n] = r;
+            let i = null !== (t = P[n]) && void 0 !== t ? t : m.wB.SUBMITTED;
             'REVIEW_APPLICATION' !== i && ((0, h.bk)(i) && D.clear(), (0, h.Nd)(i) && O.clear());
         },
         GUILD_JOIN_REQUESTS_SET_SELECTED: function (e) {

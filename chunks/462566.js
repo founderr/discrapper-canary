@@ -19,17 +19,17 @@ t.Z = function (e) {
     let { onCardInfoChange: n, error: a } = e,
         r = i.useRef(n),
         [s, N] = i.useState(!1),
-        [f, b] = i.useState({}),
-        [_, y] = i.useState({
+        [f, _] = i.useState({}),
+        [y, b] = i.useState({
             name: '',
             country: '',
             postalCode: ''
         }),
-        [P, g] = i.useState({}),
-        [C, I] = i.useState({});
+        [P, C] = i.useState({}),
+        [g, I] = i.useState({});
     function T(e, t) {
         !!f[e] !== t &&
-            b((n) => ({
+            _((n) => ({
                 ...n,
                 [e]: t
             }));
@@ -38,14 +38,14 @@ t.Z = function (e) {
         function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 t = {};
-            return (e || P.name) && '' === _.name && (t.name = h.intl.string(h.t.lIkVsr)), t;
+            return (e || P.name) && '' === y.name && (t.name = h.intl.string(h.t.lIkVsr)), t;
         },
-        [P, _]
+        [P, y]
     );
     i.useEffect(() => {
         let e = f.cardNumber && f.cardExpiry && f.cardCvc && 0 === Object.keys(S(!0)).length;
-        r.current({ name: _.name }, !!e);
-    }, [f, _, S]);
+        r.current({ name: y.name }, !!e);
+    }, [f, y, S]);
     let v = {
             name: 'cardNumber',
             title: () => h.intl.string(h.t.cVyJ3t),
@@ -111,15 +111,15 @@ t.Z = function (e) {
                     },
                     { fields: [R] }
                 ],
-                errors: C,
+                errors: g,
                 formError: a,
-                values: _,
+                values: y,
                 onFieldChange: function (e, t) {
                     if ('name' !== t && 'country' !== t && 'postalCode' !== t) return;
-                    let n = { ..._ },
+                    let n = { ...y },
                         a = { ...P },
-                        r = { name: C.name };
-                    !P[t] && '' !== e && (a[t] = !0), (n[t] = e), a[t] && '' === e ? 'name' === t && (r.name = h.intl.string(h.t.lIkVsr)) : delete r[t], y(n), g(a), I(r);
+                        r = { name: g.name };
+                    !P[t] && '' !== e && (a[t] = !0), (n[t] = e), a[t] && '' === e ? 'name' === t && (r.name = h.intl.string(h.t.lIkVsr)) : delete r[t], b(n), C(a), I(r);
                 },
                 onFieldBlur: function () {
                     I(S());

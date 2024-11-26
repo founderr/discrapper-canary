@@ -29,11 +29,11 @@ let h = [],
     },
     v = [],
     I = 10 * f.Z.Millis.SECOND,
-    b = (0, l.debounce)(() => {
+    T = (0, l.debounce)(() => {
         let e = (0, _.cX)(g);
         c.uv.announce(e, 'polite'), (g = []);
     }, 500);
-class T extends (i = u.ZP.Store) {
+class b extends (i = u.ZP.Store) {
     get recentlyUsedEmojis() {
         return h;
     }
@@ -48,7 +48,7 @@ class T extends (i = u.ZP.Store) {
     }
 }
 (o = 'VoiceChannelEffectsStore'),
-    (s = 'displayName') in (a = T)
+    (s = 'displayName') in (a = b)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -56,7 +56,7 @@ class T extends (i = u.ZP.Store) {
               writable: !0
           })
         : (a[s] = o),
-    (t.Z = new T(d.Z, {
+    (t.Z = new b(d.Z, {
         VOICE_CHANNEL_EFFECT_CLEAR: (e) => {
             let { userId: t } = e;
             null != m[t] && delete m[t];
@@ -81,7 +81,7 @@ class T extends (i = u.ZP.Store) {
                         userId: n
                     }
                 ]),
-                b());
+                T());
         },
         VOICE_CHANNEL_EFFECT_SENT_LOCAL: () => {
             let e = new Date();

@@ -10,7 +10,7 @@ var i = n(200651),
     h = n(232186);
 t.Z = (e) => {
     let { location: t } = e,
-        { verifyFailed: p, verifySucceeded: g } = (0, s.cj)([u.default], () => ({
+        { verifyFailed: g, verifySucceeded: p } = (0, s.cj)([u.default], () => ({
             verifyFailed: u.default.didVerifyFail(),
             verifySucceeded: u.default.didVerifySucceed()
         }));
@@ -18,7 +18,7 @@ t.Z = (e) => {
         let e = (0, a.Z)(t);
         null != e && l.Z.authorizePayment(e), (0, c.e)('authorize_payment');
     }, [t]),
-    p)
+    g)
         ? (0, i.jsxs)(o.ZP, {
               children: [
                   (0, i.jsx)('img', {
@@ -36,7 +36,7 @@ t.Z = (e) => {
                   })
               ]
           })
-        : g
+        : p
           ? (0, i.jsxs)(o.ZP, {
                 children: [
                     (0, i.jsx)('img', {

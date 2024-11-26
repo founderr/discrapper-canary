@@ -19,8 +19,8 @@ var r = n(873546),
     I = n(346497),
     C = n(278945),
     v = n(727310),
-    S = n(318199),
-    N = n(474936);
+    N = n(318199),
+    S = n(474936);
 function T(e, t, n) {
     return (
         t in e
@@ -34,7 +34,7 @@ function T(e, t, n) {
         e
     );
 }
-let A = 'PremiumServerDriveAnnouncementModal';
+let x = 'PremiumServerDriveAnnouncementModal';
 class b extends o.Z {
     _initialize() {
         s.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), s.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
@@ -45,14 +45,14 @@ class b extends o.Z {
     constructor(...e) {
         super(...e),
             T(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
-                let r = (0, S.extractAnnouncementModalContent)({
+                let r = (0, N.extractAnnouncementModalContent)({
                     content: e,
                     isPreview: t
                 });
                 if (null != r)
                     return (
                         !!(!1 !== t || (null == r ? void 0 : r.contentIdentifier) !== 'summer_bogo_content' || (await (0, I.k)())) &&
-                        ((0, a.closeModal)(A),
+                        ((0, a.closeModal)(x),
                         (0, a.openModalLazy)(
                             async () => {
                                 let { default: e } = await Promise.resolve().then(n.bind(n, 318199));
@@ -62,7 +62,7 @@ class b extends o.Z {
                                         properties: r
                                     });
                             },
-                            { modalKey: A }
+                            { modalKey: x }
                         ),
                         !0)
                     );
@@ -75,7 +75,7 @@ class b extends o.Z {
             T(this, 'getOfferFromStore', () => {
                 let e = d.default.getCurrentUser();
                 if ((0, h.I5)(e)) return {};
-                let t = [N.hs, N.RU, N.rB, N.ih]
+                let t = [S.hs, S.RU, S.rB, S.ih]
                     .map((e) => u.Z.getUserDiscountOffer(e))
                     .filter((e) => null != e && !(0, _.kA)(e))
                     .shift();

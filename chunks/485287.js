@@ -60,7 +60,7 @@ function I(e) {
         r = _.Z.getStageInstanceByChannel(e);
     return t && null == r && !n;
 }
-class b extends i.Z {
+class T extends i.Z {
     handleVoiceChannelSelect(e) {
         let { channelId: t } = e;
         if (null != t) {
@@ -113,4 +113,4 @@ class b extends i.Z {
                 : (t[n] = r);
     }
 }
-t.ZP = new b();
+t.ZP = new T();

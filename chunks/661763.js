@@ -1,6 +1,6 @@
 n.d(t, {
     Ao: function () {
-        return b;
+        return T;
     },
     B3: function () {
         return j;
@@ -39,7 +39,7 @@ n.d(t, {
         return O;
     },
     b0: function () {
-        return M;
+        return P;
     },
     bE: function () {
         return V;
@@ -72,7 +72,7 @@ n.d(t, {
         return d;
     },
     nG: function () {
-        return P;
+        return M;
     },
     r3: function () {
         return _;
@@ -220,20 +220,20 @@ function I(e, t = {}) {
     for (let t in e) Object.prototype.hasOwnProperty.call(e, t) && (m.has(t) || (n && g.has(t)) || (r && E.has(t)) || (null == i ? void 0 : i.has(t)) || v.test(t)) && (a[t] = e[t]);
     return a;
 }
-function b(e) {
+function T(e) {
     if (
         (function () {
-            if (null == T) {
-                T = !1;
+            if (null == b) {
+                b = !1;
                 try {
                     document.createElement('div').focus({
                         get preventScroll() {
-                            return (T = !0), !0;
+                            return (b = !0), !0;
                         }
                     });
                 } catch (e) {}
             }
-            return T;
+            return b;
         })()
     )
         e.focus({ preventScroll: !0 });
@@ -263,7 +263,7 @@ function b(e) {
             })(t);
     }
 }
-let T = null;
+let b = null;
 function S(e) {
     var t;
     return 'undefined' != typeof window && null != window.navigator && ((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.brands.some((t) => e.test(t.brand))) || e.test(window.navigator.userAgent));
@@ -307,17 +307,17 @@ let x = (0, r.createContext)({
                 let n = document.createElement('a');
                 (n.href = e.getAttribute('data-href')), e.hasAttribute('data-target') && (n.target = e.getAttribute('data-target')), e.hasAttribute('data-rel') && (n.rel = e.getAttribute('data-rel')), e.hasAttribute('data-download') && (n.download = e.getAttribute('data-download')), e.hasAttribute('data-ping') && (n.ping = e.getAttribute('data-ping')), e.hasAttribute('data-referrer-policy') && (n.referrerPolicy = e.getAttribute('data-referrer-policy')), e.appendChild(n), t(n), e.removeChild(n);
             }
-        })(e, (e) => P(e, t));
+        })(e, (e) => M(e, t));
     }
 });
 function w() {
     return (0, r.useContext)(x);
 }
-function M(e, t) {
+function P(e, t) {
     let n = e.getAttribute('target');
     return (!n || '_self' === n) && e.origin === location.origin && !e.hasAttribute('download') && !t.metaKey && !t.ctrlKey && !t.altKey && !t.shiftKey;
 }
-function P(e, t, n = !0) {
+function M(e, t, n = !0) {
     var r, i;
     let { metaKey: a, ctrlKey: s, altKey: o, shiftKey: l } = t;
     S(/Firefox/i) && (null === (i = window.event) || void 0 === i ? void 0 : null === (r = i.type) || void 0 === r ? void 0 : r.startsWith('key')) && '_blank' === e.target && (A() ? (a = !0) : (s = !0));
@@ -338,9 +338,9 @@ function P(e, t, n = !0) {
                   bubbles: !0,
                   cancelable: !0
               });
-    (P.isOpening = n), b(e), e.dispatchEvent(u), (P.isOpening = !1);
+    (M.isOpening = n), T(e), e.dispatchEvent(u), (M.isOpening = !1);
 }
-P.isOpening = !1;
+M.isOpening = !1;
 function k(e) {
     return {
         'data-href': e.href,

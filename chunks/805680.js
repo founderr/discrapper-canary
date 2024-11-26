@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(367907),
     v = n(907040),
     I = n(455708),
-    b = n(314910),
-    T = n(125900),
+    T = n(314910),
+    b = n(125900),
     S = n(603074),
     y = n(453070),
     A = n(926491),
@@ -30,8 +30,8 @@ var r = n(200651),
     L = n(957825),
     x = n(981631),
     w = n(149203),
-    M = n(185923),
-    P = n(611480),
+    P = n(185923),
+    M = n(611480),
     k = n(388032),
     U = n(662689);
 let B = L.Om + w.Su.MEDIUM,
@@ -127,7 +127,7 @@ t.Z = i.memo(function (e) {
         ei = (0, y.fQ)(H),
         { renderWindow: ea, windowDispatch: es } = i.useContext(g.ZP),
         eo = (0, d.e7)([A.Z], () => !A.Z.hasLoadedStickerPacks),
-        el = (0, T.V)({ location: 'expression_picker' }),
+        el = (0, b.V)({ location: 'expression_picker' }),
         eu = null != Q,
         ec = (0, f.Jw)(null != Q ? Q : ''),
         ed = i.useCallback(
@@ -192,7 +192,7 @@ t.Z = i.memo(function (e) {
         eg = null != z ? z : 'left' === K ? U.positionLayerDefaultAlignLeft : U.positionLayerDefaultAlignRight;
     return (0, r.jsx)(h.Z, {
         section: x.jXE.EXPRESSION_PICKER,
-        children: (0, r.jsx)(b.W5, {
+        children: (0, r.jsx)(T.W5, {
             className: s()(U.positionLayer, eg),
             targetRef: o,
             position: W,
@@ -243,8 +243,8 @@ t.Z = i.memo(function (e) {
                                                                 : null,
                                                             ep
                                                                 ? (0, r.jsx)(G, {
-                                                                      id: P.ED,
-                                                                      'aria-controls': P.nZ,
+                                                                      id: M.ED,
+                                                                      'aria-controls': M.nZ,
                                                                       'aria-selected': er === L.X1.STICKER,
                                                                       isActive: er === L.X1.STICKER,
                                                                       autoFocus: !ei,
@@ -305,7 +305,7 @@ t.Z = i.memo(function (e) {
                                                     containerWidth: et,
                                                     includeCreateEmojiButton: p,
                                                     emojiSize: null != et && et < B ? w.Su.MEDIUM : w.Su.LARGE,
-                                                    pickerIntention: M.Hz.CHAT,
+                                                    pickerIntention: P.Hz.CHAT,
                                                     closePopout: ef,
                                                     onSelectEmoji: F,
                                                     ref: (e) => {

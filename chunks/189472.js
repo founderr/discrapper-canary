@@ -18,10 +18,10 @@ t.Z = (e) => {
         E = (0, a.e7)([c.Z], () => c.Z.getChannel(n), [n]),
         v = i.useMemo(() => f.ZP.getName(null == E ? void 0 : E.guild_id, null == E ? void 0 : E.id, t), [E, t]),
         I = (0, a.e7)([d.ZP], () => (null == g ? null : d.ZP.isChannelMuted(null, g))),
-        [b, T] = i.useState(null != I && I),
+        [T, b] = i.useState(null != I && I),
         S = i.useCallback(() => {
             null != g &&
-                (T(!0),
+                (b(!0),
                 o.ZP.trackWithMetadata(p.rMx.IAR_MUTE_USER_BUTTON_CLICKED, {
                     other_user_id: t.id,
                     report_id: m
@@ -32,8 +32,8 @@ t.Z = (e) => {
     return (0, r.jsx)(u.Z, {
         title: h.intl.formatToPlainString(h.t.TRp5wc, { username: v }),
         description: h.intl.string(h.t['yM/+AA']),
-        buttonText: b ? h.intl.string(h.t.E8x4Nj) : h.intl.string(h.t.HITUcX),
-        buttonDisabled: b,
+        buttonText: T ? h.intl.string(h.t.E8x4Nj) : h.intl.string(h.t.HITUcX),
+        buttonDisabled: T,
         onButtonPress: S
     });
 };

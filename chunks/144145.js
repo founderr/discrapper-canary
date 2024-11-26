@@ -24,16 +24,16 @@ var i = n(200651),
     I = n(417363),
     C = n(626135),
     v = n(804739),
-    S = n(346329),
-    N = n(981631),
+    N = n(346329),
+    S = n(981631),
     T = n(388032);
-let A = d.Z.get(N.ABu.XBOX).name;
+let x = d.Z.get(S.ABu.XBOX).name;
 function b(e) {
     let { currentActivities: t } = e,
         n = t.length > 1,
         b = (function (e) {
             let { currentActivities: t } = e,
-                n = (0, l.e7)([f.Z], () => f.Z.getAccounts().some((e) => e.type === d.Z.get(N.ABu.XBOX).type)),
+                n = (0, l.e7)([f.Z], () => f.Z.getAccounts().some((e) => e.type === d.Z.get(S.ABu.XBOX).type)),
                 r = t.some((e) => {
                     let { activity: t } = e;
                     return (0, m.Z)(t);
@@ -42,11 +42,11 @@ function b(e) {
                 ? null
                 : (0, i.jsx)(a.MenuItem, {
                       id: 'xbox-connect',
-                      action: () => c.Z.open(N.oAB.CONNECTIONS),
-                      label: T.intl.formatToPlainString(T.t.XWSHTU, { platform: A })
+                      action: () => c.Z.open(S.oAB.CONNECTIONS),
+                      label: T.intl.formatToPlainString(T.t.XWSHTU, { platform: x })
                   });
         })(e),
-        x = (function (e) {
+        A = (function (e) {
             let { currentActivities: t } = e,
                 n = r.useContext(C.AnalyticsContext);
             return (0, l.Wu)(
@@ -60,7 +60,7 @@ function b(e) {
                             return {
                                 ...e,
                                 libraryApplication: r,
-                                canJoin: null != t && (0, u.Z)(t, N.xjy.JOIN) && t.type === N.IIU.PLAYING,
+                                canJoin: null != t && (0, u.Z)(t, S.xjy.JOIN) && t.type === S.IIU.PLAYING,
                                 canPlay: (0, v.t)({
                                     LibraryApplicationStore: E.Z,
                                     LaunchableGameStore: g.Z,
@@ -78,7 +78,7 @@ function b(e) {
             );
         })(e),
         Z = [];
-    for (let e of x) {
+    for (let e of A) {
         let { activity: t } = e;
         null != t &&
             null != t.type &&
@@ -89,10 +89,10 @@ function b(e) {
                     async function c() {
                         if (null == r) return;
                         let e = await s.Z.sendActivityInviteUser({
-                            type: N.mFx.JOIN_REQUEST,
+                            type: S.mFx.JOIN_REQUEST,
                             userId: l.id,
                             activity: r,
-                            location: N.Sbl.PROFILE_POPOUT
+                            location: S.Sbl.PROFILE_POPOUT
                         });
                         null != e && o.default.selectPrivateChannel(e.id);
                     }
@@ -109,11 +109,11 @@ function b(e) {
                     return (0, i.jsx)(a.MenuItem, {
                         id: 'play-'.concat(n.session_id),
                         action: function () {
-                            (0, S.playApplication)(r.id, l, {
+                            (0, N.playApplication)(r.id, l, {
                                 analyticsParams: {
                                     location: {
                                         ...s,
-                                        object: N.qAy.LIST_ITEM
+                                        object: S.qAy.LIST_ITEM
                                     }
                                 }
                             });

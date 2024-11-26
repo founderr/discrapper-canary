@@ -18,25 +18,25 @@ var r = n(668781),
     h = n(527805),
     m = n(388032);
 async function g(e) {
-    let { channelId: t, applicationId: n, launchId: g, inputApplication: E, analyticsLocations: v, launchingComponentId: I, sectionName: b } = e,
-        T = f.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == g || e.launchId === g)),
+    let { channelId: t, applicationId: n, launchId: g, inputApplication: E, analyticsLocations: v, launchingComponentId: I, sectionName: T } = e,
+        b = f.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == g || e.launchId === g)),
         S = E;
     if (null == S) {
         let e = await i.ZP.fetchApplication(n);
         S = s.Z.createFromServer(e);
     }
-    if (null == T || null == S) return;
+    if (null == b || null == S) return;
     let y = c.default.getCurrentUser(),
         A = o.Z.getChannel(t);
     async function N() {
-        if (null != T)
+        if (null != b)
             await (0, _.Z)({
-                applicationId: T.applicationId,
+                applicationId: b.applicationId,
                 activityChannelId: t,
                 locationObject: {},
                 analyticsLocations: v,
                 componentId: I,
-                sectionName: b
+                sectionName: T
             });
     }
     !(function (e) {

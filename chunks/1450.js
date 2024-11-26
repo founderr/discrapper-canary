@@ -16,9 +16,9 @@ var r = n(200651),
     E = n(981631),
     v = n(30513),
     I = n(388032),
-    b = n(395399);
+    T = n(395399);
 t.Z = (e) => {
-    let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: T, setTrackedUpsellViewed: S } = e,
+    let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: b, setTrackedUpsellViewed: S } = e,
         { location: y } = (0, u.O)(),
         { analyticsLocations: A } = (0, d.ZP)(),
         N = (0, o.e7)([m.Z], () => m.Z.getGuild(n)),
@@ -27,7 +27,7 @@ t.Z = (e) => {
     return (i.useEffect(() => {
         C &&
             R &&
-            T &&
+            b &&
             ((0, c.yw)(E.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
                 location: y,
                 guild_id: null == N ? void 0 : N.id,
@@ -36,20 +36,20 @@ t.Z = (e) => {
                 location_stack: A
             }),
             S(!0));
-    }, [R, N, a, y, T, S, A, C]),
+    }, [R, N, a, y, b, S, A, C]),
     null != N && C)
         ? R
             ? (0, r.jsxs)('div', {
-                  className: s()(b.upsell, t),
+                  className: s()(T.upsell, t),
                   children: [
                       (0, r.jsx)(l.BoostTier2SimpleIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: b.icon
+                          className: T.icon
                       }),
                       (0, r.jsx)(l.Text, {
                           color: 'interactive-normal',
-                          className: b.body,
+                          className: T.body,
                           variant: 'text-sm/normal',
                           children: I.intl.format(I.t.AXWla2, { count: (0, g.A3)(E.Eu4.TIER_1) })
                       }),
@@ -69,18 +69,18 @@ t.Z = (e) => {
                   ]
               })
             : (0, r.jsxs)('div', {
-                  className: s()(b.upsell, t),
+                  className: s()(T.upsell, t),
                   children: [
                       (0, r.jsx)(l.StickerIcon, {
                           size: 'custom',
                           color: 'currentColor',
-                          className: b.icon,
+                          className: T.icon,
                           width: 20,
                           height: 20
                       }),
                       (0, r.jsx)(l.Text, {
                           color: 'interactive-normal',
-                          className: b.body,
+                          className: T.body,
                           variant: 'text-sm/normal',
                           children: I.intl.string(I.t.S83wgo)
                       }),

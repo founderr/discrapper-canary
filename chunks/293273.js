@@ -17,8 +17,8 @@ var r,
     E = n(768419),
     v = n(695346),
     I = n(581883),
-    b = n(199902),
-    T = n(272053),
+    T = n(199902),
+    b = n(272053),
     S = n(77498),
     y = n(981631);
 let A = [],
@@ -29,7 +29,7 @@ function C() {
     null != t && ('0' === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, p.I)(t));
     let n = g.Z.getActivities();
     e.push(...n);
-    let r = T.Z.getStream();
+    let r = b.Z.getStream();
     null != r &&
         e.push({
             type: y.IIU.STREAMING,
@@ -43,7 +43,7 @@ function C() {
     let a = h.ZP.getVisibleGame(),
         s = null != a && null != a.name && i.has(a.name),
         o = null != a && a.isLauncher,
-        u = b.Z.getCurrentUserActiveStream();
+        u = T.Z.getCurrentUserActiveStream();
     if (null != a && null != a.name && !(s || (o && !(null != u)))) {
         var d, f;
         e.push({
@@ -74,7 +74,7 @@ function C() {
 }
 class R extends (r = d.ZP.Store) {
     initialize() {
-        this.waitFor(h.ZP, _.ZP, T.Z, b.Z, E.Z, I.Z, m.Z, S.Z), this.syncWith([g.Z, m.Z], () => C());
+        this.waitFor(h.ZP, _.ZP, b.Z, T.Z, E.Z, I.Z, m.Z, S.Z), this.syncWith([g.Z, m.Z], () => C());
     }
     getActivities() {
         return A;

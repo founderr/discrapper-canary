@@ -29,7 +29,7 @@ function E(e, t, n) {
 }
 let v = [],
     I = new (o())({ max: m.zb }),
-    b = new c.ZP({
+    T = new c.ZP({
         computeBonus: () => 100,
         computeWeight: (e) => {
             let t = 1;
@@ -39,11 +39,11 @@ let v = [],
         afterCompute: () => {},
         numFrequentlyItems: m.O6
     });
-function T() {
+function b() {
     var e, t;
     if (!S()) return;
     let n = null === (e = d.Z.frecencyWithoutFetchingLatest.playedSoundFrecency) || void 0 === e ? void 0 : e.playedSounds;
-    b.overwriteHistory(
+    T.overwriteHistory(
         ((t = null != n ? n : {}),
         a().mapValues(t, (e) => ({
             ...e,
@@ -60,7 +60,7 @@ function S() {
 }
 class y extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(f.default, p.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && I.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (v = e.playedEventsPendingFlush), this.syncWith([d.Z], T);
+        this.waitFor(f.default, p.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && I.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (v = e.playedEventsPendingFlush), this.syncWith([d.Z], b);
     }
     getState() {
         return {
@@ -72,13 +72,13 @@ class y extends (r = l.ZP.PersistedStore) {
         return v.length > 0;
     }
     get playedSoundHistory() {
-        return b.usageHistory;
+        return T.usageHistory;
     }
     get recentlyHeardSoundIds() {
         return I.values();
     }
     get frecentlyPlayedSounds() {
-        return b.frequently;
+        return T.frequently;
     }
 }
 E(y, 'displayName', 'SoundboardEventStore'),
@@ -90,12 +90,12 @@ E(y, 'displayName', 'SoundboardEventStore'),
             let r = t.soundId.toString();
             n === h.YQ.SOUNDBOARD &&
                 (function (e) {
-                    b.track(e),
+                    T.track(e),
                         v.push({
                             key: e,
                             timestamp: Date.now()
                         }),
-                        b.compute();
+                        T.compute();
                 })(r);
         },
         GUILD_SOUNDBOARD_SOUND_PLAY_START: function (e) {

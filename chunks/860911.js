@@ -3,61 +3,61 @@ r.d(t, {
         return _;
     },
     Ui: function () {
-        return n;
+        return a;
     },
     Zn: function () {
-        return a;
+        return n;
     }
 }),
     r(47120);
-function n(e) {
+function a(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : '',
-        n = null != window.GLOBAL_ENV.WEBAPP_ENDPOINT ? window.GLOBAL_ENV.WEBAPP_ENDPOINT : '',
-        a = null != e ? '?redirect_to='.concat(encodeURIComponent(e)) : '';
+        a = null != window.GLOBAL_ENV.WEBAPP_ENDPOINT ? window.GLOBAL_ENV.WEBAPP_ENDPOINT : '',
+        n = null != e ? '?redirect_to='.concat(encodeURIComponent(e)) : '';
     return (
-        0 !== r.length && (r = 0 === a.length ? '?'.concat(r) : '&'.concat(r)),
+        0 !== r.length && (r = 0 === n.length ? '?'.concat(r) : '&'.concat(r)),
         ''
-            .concat(t ? n : '', '/login')
-            .concat(a)
+            .concat(t ? a : '', '/login')
+            .concat(n)
             .concat(r)
     );
 }
-class a {
+class n {
     toString() {
         return this.value;
     }
     constructor(e) {
-        var t, r, n;
+        var t, r, a;
         (t = this),
-            (n = void 0),
+            (a = void 0),
             (r = 'value') in t
                 ? Object.defineProperty(t, r, {
-                      value: n,
+                      value: a,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[r] = n),
+                : (t[r] = a),
             (this.value = e);
     }
 }
 function _(e, t) {
     let r = {};
-    for (let n of Object.keys(e)) {
-        let _ = e[n];
+    for (let a of Object.keys(e)) {
+        let _ = e[a];
         if ('function' != typeof _) {
-            r[n] = _;
+            r[a] = _;
             continue;
         }
-        r[n] = function () {
-            for (var e = arguments.length, r = Array(e), n = 0; n < e; n++) r[n] = arguments[n];
+        r[a] = function () {
+            for (var e = arguments.length, r = Array(e), a = 0; a < e; a++) r[a] = arguments[a];
             return _(
                 ...(function (e, t) {
                     return e.map((e) =>
                         null == e
                             ? e
-                            : e instanceof a
+                            : e instanceof n
                               ? e.toString()
                               : null == t
                                 ? encodeURIComponent(e)

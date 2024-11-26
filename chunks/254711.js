@@ -1,6 +1,6 @@
 n.d(t, {
     Kh: function () {
-        return P;
+        return M;
     },
     Tm: function () {
         return L;
@@ -26,8 +26,8 @@ var r = n(512722),
     E = n(695346),
     v = n(592125),
     I = n(496675),
-    b = n(594174),
-    T = n(70956),
+    T = n(594174),
+    b = n(70956),
     S = n(51144),
     y = n(895924),
     A = n(689079),
@@ -402,7 +402,7 @@ let O = n(227419).Z,
                 }
                 (async () => {
                     var t;
-                    let n = b.default.getUser(a);
+                    let n = T.default.getUser(a);
                     if (null == n) throw Error();
                     await c.Z.kickUser(r.id, a, null !== (t = D(e, 'reason')) && void 0 !== t ? t : ''), d.Z.sendBotMessage(i.id, R.intl.formatToPlainString(R.t['9wzHDQ'], { user: S.ZP.getUserTag(n) }));
                 })().catch(() => {
@@ -457,32 +457,32 @@ let O = n(227419).Z,
                             {
                                 name: R.intl.string(R.t.RKpitb),
                                 displayName: R.intl.string(R.t.RKpitb),
-                                value: T.Z.Seconds.HOUR
+                                value: b.Z.Seconds.HOUR
                             },
                             {
                                 name: R.intl.string(R.t['8WfJZ2']),
                                 displayName: R.intl.string(R.t['8WfJZ2']),
-                                value: 6 * T.Z.Seconds.HOUR
+                                value: 6 * b.Z.Seconds.HOUR
                             },
                             {
                                 name: R.intl.string(R.t.p1up7u),
                                 displayName: R.intl.string(R.t.p1up7u),
-                                value: 12 * T.Z.Seconds.HOUR
+                                value: 12 * b.Z.Seconds.HOUR
                             },
                             {
                                 name: R.intl.string(R.t.XuVkkJ),
                                 displayName: R.intl.string(R.t.XuVkkJ),
-                                value: T.Z.Seconds.DAY
+                                value: b.Z.Seconds.DAY
                             },
                             {
                                 name: R.intl.string(R.t.gMcDS0),
                                 displayName: R.intl.string(R.t.gMcDS0),
-                                value: 3 * T.Z.Seconds.DAY
+                                value: 3 * b.Z.Seconds.DAY
                             },
                             {
                                 name: R.intl.string(R.t.FA7IUl),
                                 displayName: R.intl.string(R.t.FA7IUl),
-                                value: 7 * T.Z.Seconds.DAY
+                                value: 7 * b.Z.Seconds.DAY
                             }
                         ];
                     }
@@ -518,7 +518,7 @@ let O = n(227419).Z,
                     if ('' === a) throw Error();
                     let s = null !== (t = D(e, 'delete_messages')) && void 0 !== t ? t : 0,
                         o = null !== (n = D(e, 'reason')) && void 0 !== n ? n : '',
-                        l = b.default.getUser(a);
+                        l = T.default.getUser(a);
                     await c.Z.banUser(r.id, a, s, o), d.Z.sendBotMessage(i.id, R.intl.formatToPlainString(R.t.YflWdH, { user: null != l ? S.ZP.getUserTag(l) : a }));
                 })().catch(() => {
                     d.Z.sendBotMessage(i.id, R.intl.string(R.t.w2J6Qk));
@@ -599,7 +599,7 @@ let O = n(227419).Z,
                     var t, a;
                     let o = null !== (t = D(e, 'duration')) && void 0 !== t ? t : '',
                         l = null !== (a = D(e, 'reason')) && void 0 !== a ? a : '',
-                        u = b.default.getUser(i);
+                        u = T.default.getUser(i);
                     if (null == u) throw Error();
                     await c.Z.setCommunicationDisabledUntil({
                         guildId: n.id,
@@ -659,7 +659,7 @@ let O = n(227419).Z,
                     required: !0,
                     get maxLength() {
                         var w;
-                        return (null === (w = b.default.getCurrentUser()) || void 0 === w ? void 0 : w.premiumType) ? N.en1 : N.J6R;
+                        return (null === (w = T.default.getCurrentUser()) || void 0 === w ? void 0 : w.premiumType) ? N.en1 : N.J6R;
                     }
                 }
             ],
@@ -679,8 +679,8 @@ let O = n(227419).Z,
             }
         }
     ],
-    M = x.filter((e) => ['gif', 'tenor', 'tts', 'me', 'tableflip', 'unflip', 'shrug', 'spoiler', 'nick'].includes(e.untranslatedName)),
-    P = (e, t, n) => {
-        let r = t ? x : M;
+    P = x.filter((e) => ['gif', 'tenor', 'tts', 'me', 'tableflip', 'unflip', 'shrug', 'spoiler', 'nick'].includes(e.untranslatedName)),
+    M = (e, t, n) => {
+        let r = t ? x : P;
         return (r = r.filter((t) => e.includes(t.type) && (!n || t.inputType === y.iw.BUILT_IN_TEXT || t.inputType === y.iw.BUILT_IN_INTEGRATION)));
     };

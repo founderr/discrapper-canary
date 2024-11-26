@@ -106,19 +106,19 @@ function v(e, t) {
         let { loaded: a, firstMessage: s } = d.Z.getMessage(t);
         if (((r = a), (i = s), !r && null == i)) h.request(e.id, t), (n = !0);
     }),
-        n && null == m && (m = setTimeout(b, 0));
+        n && null == m && (m = setTimeout(T, 0));
 }
 function I(e) {
     v(e, (0, c.U)(e.id).slice(0, 10));
 }
-async function b() {
+async function T() {
     try {
-        for (; h.hasNext(); ) await T(h.next());
+        for (; h.hasNext(); ) await b(h.next());
     } finally {
         m = null;
     }
 }
-async function T(e) {
+async function b(e) {
     let t = h.getNextBatch(e, 10);
     try {
         var n;

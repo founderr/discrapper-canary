@@ -21,8 +21,8 @@ var r = n(443704),
     E = n(324600),
     v = n(112741),
     I = n(421607),
-    b = n(595938),
-    T = n(154072),
+    T = n(595938),
+    b = n(154072),
     S = n(999209),
     y = n(374705),
     A = n(868055),
@@ -34,8 +34,8 @@ var r = n(443704),
     L = n(713933),
     x = n(445879),
     w = n(114946),
-    M = n(434054),
-    P = n(40889),
+    P = n(434054),
+    M = n(40889),
     k = n(686949),
     U = n(661763),
     B = n(192379),
@@ -48,17 +48,17 @@ var r = n(443704),
 function Y(e, t, n) {
     var r;
     let i,
-        { id: a, decrementAriaLabel: s, incrementAriaLabel: o, isDisabled: l, isReadOnly: u, isRequired: c, minValue: d, maxValue: f, autoFocus: _, label: p, formatOptions: h, onBlur: m = () => {}, onFocus: g, onFocusChange: E, onKeyDown: v, onKeyUp: I, description: b, errorMessage: T, ...S } = e,
+        { id: a, decrementAriaLabel: s, incrementAriaLabel: o, isDisabled: l, isReadOnly: u, isRequired: c, minValue: d, maxValue: f, autoFocus: _, label: p, formatOptions: h, onBlur: m = () => {}, onFocus: g, onFocusChange: E, onKeyDown: v, onKeyUp: I, description: T, errorMessage: b, ...S } = e,
         { increment: y, incrementToMax: A, decrement: N, decrementToMin: C, numberValue: R, inputValue: O, commit: D, commitValidation: L } = t;
     let x = (0, V.qb)((r = H) && r.__esModule ? r.default : r, '@react-aria/numberfield'),
         w = (0, U.Me)(a),
-        { focusProps: M } = (0, Z.KK)({
+        { focusProps: P } = (0, Z.KK)({
             onBlur() {
                 D();
             }
         }),
-        P = (0, V.Ux)(h),
-        k = (0, B.useMemo)(() => P.resolvedOptions(), [P]),
+        M = (0, V.Ux)(h),
+        k = (0, B.useMemo)(() => M.resolvedOptions(), [M]),
         Y = (0, V.Ux)({
             ...h,
             currencySign: void 0
@@ -145,14 +145,14 @@ function Y(e, t, n) {
                 onFocusChange: E,
                 onKeyDown: (0, B.useMemo)(() => (0, U.tS)(ea, v), [ea, v]),
                 onKeyUp: I,
-                description: b,
-                errorMessage: T
+                description: T,
+                errorMessage: b
             },
             t,
             n
         );
     (0, U.y$)(n, t.numberValue, t.setNumberValue);
-    let e_ = (0, U.dG)(K, M, ec, {
+    let e_ = (0, U.dG)(K, P, ec, {
         role: null,
         'aria-roledescription': (0, U.gn)() ? null : x.format('numberField'),
         'aria-valuemax': null,
@@ -229,8 +229,8 @@ H = {
     'ja-JP': E.Z,
     'ko-KR': v.Z,
     'lt-LT': I.Z,
-    'lv-LV': b.Z,
-    'nb-NO': T.Z,
+    'lv-LV': T.Z,
+    'nb-NO': b.Z,
     'nl-NL': S.Z,
     'pl-PL': y.Z,
     'pt-BR': A.Z,
@@ -242,7 +242,7 @@ H = {
     'sr-SP': L.Z,
     'sv-SE': x.Z,
     'tr-TR': w.Z,
-    'uk-UA': M.Z,
-    'zh-CN': P.Z,
+    'uk-UA': P.Z,
+    'zh-CN': M.Z,
     'zh-TW': k.Z
 };

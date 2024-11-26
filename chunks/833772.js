@@ -3,22 +3,22 @@ r.d(t, {
         return l;
     }
 });
-var n = r(448171),
-    a = r(78355),
+var a = r(448171),
+    n = r(78355),
     _ = r(747677),
     o = r(622916),
-    i = r(454463),
-    E = r(878719),
+    E = r(454463),
+    i = r(878719),
     c = r(163162),
     s = r(463461);
-class l extends n.W {
+class l extends a.W {
     constructor(e) {
         let t = {
                 parentSpanIsAlwaysRootSpan: !0,
                 ...e
             },
             r = c.m9.SENTRY_SDK_SOURCE || (0, _.S)();
-        (0, a.V)(t, 'browser', ['browser'], r),
+        (0, n.V)(t, 'browser', ['browser'], r),
             super(t),
             t.sendClientReports &&
                 c.m9.document &&
@@ -27,14 +27,14 @@ class l extends n.W {
                 });
     }
     eventFromException(e, t) {
-        return (0, E.dr)(this._options.stackParser, e, t, this._options.attachStacktrace);
+        return (0, i.dr)(this._options.stackParser, e, t, this._options.attachStacktrace);
     }
     eventFromMessage(e, t = 'info', r) {
-        return (0, E.aB)(this._options.stackParser, e, t, r, this._options.attachStacktrace);
+        return (0, i.aB)(this._options.stackParser, e, t, r, this._options.attachStacktrace);
     }
     captureUserFeedback(e) {
         if (!this._isEnabled()) {
-            i.X && o.kg.warn('SDK not enabled, will not capture user feedback.');
+            E.X && o.kg.warn('SDK not enabled, will not capture user feedback.');
             return;
         }
         let t = (0, s.r)(e, {

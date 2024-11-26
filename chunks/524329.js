@@ -1,12 +1,12 @@
 n.d(t, {
     Es: function () {
-        return u;
+        return c;
     },
     RM: function () {
         return a;
     },
     VP: function () {
-        return c;
+        return u;
     },
     Xb: function () {
         return o;
@@ -55,13 +55,13 @@ let s = function (e) {
     E = () => {
         l.Z.dispatch({ type: 'WELCOME_SCREEN_SETTINGS_CLEAR' });
     },
-    c = (e) => {
+    u = (e) => {
         l.Z.dispatch({
             type: 'WELCOME_SCREEN_SETTINGS_UPDATE',
             settings: e
         });
     },
-    u = async (e, t) => {
+    c = async (e, t) => {
         l.Z.dispatch({ type: 'WELCOME_SCREEN_SUBMIT' });
         try {
             let n = await r.tn.patch({

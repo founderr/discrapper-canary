@@ -36,8 +36,8 @@ let h = {
     },
     g = function (e) {
         let { id: t, onChange: n, checked: a, disabled: g, className: E, focusProps: v, innerRef: I } = e,
-            { reducedMotion: b } = i.useContext(u.S),
-            T = i.useRef(null),
+            { reducedMotion: T } = i.useContext(u.S),
+            b = i.useRef(null),
             [S, y] = i.useState(!1),
             A = (0, _.Q)('Switch'),
             N = (0, d.d)(A ? l.Z.colors.INTERACTIVE_MUTED : l.Z.unsafe_rawColors.PRIMARY_400).spring(),
@@ -127,14 +127,14 @@ let h = {
                                         })
                                     ]
                                 });
-                            })(R, N, C, b.enabled)
+                            })(R, N, C, T.enabled)
                         ]
                     }),
                     (0, r.jsx)('input', {
                         id: t,
                         type: 'checkbox',
                         ref: (e) => {
-                            (T.current = e), null != I && (I.current = e);
+                            (b.current = e), null != I && (I.current = e);
                         },
                         className: p.input,
                         tabIndex: g ? -1 : 0,
@@ -143,7 +143,7 @@ let h = {
                         },
                         onKeyUp: function (e) {
                             var t;
-                            if (!g && !!S && !e.repeat) y(!1), 'Enter' === e.key && (null === (t = T.current) || void 0 === t || t.click());
+                            if (!g && !!S && !e.repeat) y(!1), 'Enter' === e.key && (null === (t = b.current) || void 0 === t || t.click());
                         },
                         onChange: function (e) {
                             y(!1), null == n || n(e.currentTarget.checked, e);

@@ -18,10 +18,10 @@ n.d(t, {
         return p;
     },
     HW: function () {
-        return T;
+        return b;
     },
     Hp: function () {
-        return b;
+        return T;
     },
     JO: function () {
         return O;
@@ -60,7 +60,7 @@ n.d(t, {
         return C;
     },
     i$: function () {
-        return M;
+        return P;
     },
     jF: function () {
         return h;
@@ -84,7 +84,7 @@ n.d(t, {
         return U;
     },
     xx: function () {
-        return P;
+        return M;
     },
     yl: function () {
         return D;
@@ -109,8 +109,8 @@ let _ = 'alt+c',
     E = 1,
     v = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
     I = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
-    b = 0.1,
-    T = 25,
+    T = 0.1,
+    b = 25,
     S = 0,
     y = 200,
     A = 'clips-edit',
@@ -122,8 +122,8 @@ let _ = 'alt+c',
     L = 15,
     x = 30000,
     w = 30,
-    M = 10,
-    P = 14 * f.Z.Millis.DAY,
+    P = 10,
+    M = 14 * f.Z.Millis.DAY,
     k = 5,
     U = 5,
     B = 1;

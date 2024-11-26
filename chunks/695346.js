@@ -36,7 +36,7 @@ n.d(t, {
         return ea;
     },
     Ou: function () {
-        return P;
+        return M;
     },
     Pe: function () {
         return w;
@@ -102,7 +102,7 @@ n.d(t, {
         return m;
     },
     cP: function () {
-        return M;
+        return P;
     },
     co: function () {
         return er;
@@ -111,7 +111,7 @@ n.d(t, {
         return L;
     },
     d4: function () {
-        return T;
+        return b;
     },
     dN: function () {
         return f;
@@ -144,7 +144,7 @@ n.d(t, {
         return Z;
     },
     iH: function () {
-        return eT;
+        return eb;
     },
     jU: function () {
         return Y;
@@ -289,23 +289,23 @@ let E = (0, o.Zc)(
         (e) => (null != e ? e : '0'),
         (e) => e
     ),
-    b = [],
-    T = (0, o.Zc)(
+    T = [],
+    b = (0, o.Zc)(
         'textAndImages',
         'emojiPickerCollapsedSections',
-        (e) => (null != e ? e : b),
+        (e) => (null != e ? e : T),
         (e) => e
     ),
     S = (0, o.Zc)(
         'textAndImages',
         'stickerPickerCollapsedSections',
-        (e) => (null != e ? e : b),
+        (e) => (null != e ? e : T),
         (e) => e
     ),
     y = (0, o.Zc)(
         'textAndImages',
         'soundboardPickerCollapsedSections',
-        (e) => (null != e ? e : b),
+        (e) => (null != e ? e : T),
         (e) => e
     ),
     A = (0, o.Zc)(
@@ -372,7 +372,7 @@ let E = (0, o.Zc)(
         },
         (e) => a.D5.create({ value: e })
     ),
-    M = (0, o.Zc)(
+    P = (0, o.Zc)(
         'privacy',
         'allowActivityPartyPrivacyFriends',
         (e) => {
@@ -381,7 +381,7 @@ let E = (0, o.Zc)(
         },
         (e) => a.D5.create({ value: e })
     ),
-    P = (0, o.Zc)(
+    M = (0, o.Zc)(
         'privacy',
         'allowActivityPartyPrivacyVoiceChannel',
         (e) => {
@@ -811,11 +811,11 @@ let ep = (0, o.KM)(
         (e) => (null != e ? e : ev),
         (e) => e
     ),
-    eb = [],
-    eT = (0, o.Zc)(
+    eT = [],
+    eb = (0, o.Zc)(
         'privacy',
         'activityJoiningRestrictedGuildIds',
-        (e) => (null != e ? e : eb),
+        (e) => (null != e ? e : eT),
         (e) => e
     ),
     eS = (0, o.Zc)(

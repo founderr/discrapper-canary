@@ -6,10 +6,10 @@ n.d(t, {
         return S;
     },
     Vv: function () {
-        return b;
+        return T;
     },
     _: function () {
-        return T;
+        return b;
     },
     bp: function () {
         return N;
@@ -78,7 +78,7 @@ function I(e) {
         sessionId: e
     });
 }
-function b(e, t) {
+function T(e, t) {
     let { selfMute: n, selfDeaf: r } = t;
     s.Z.dispatch({
         type: 'REMOTE_COMMAND',
@@ -91,7 +91,7 @@ function b(e, t) {
     }),
         E('VOICE_STATE_UPDATE', e);
 }
-function T(e) {
+function b(e) {
     s.Z.dispatch({
         type: 'REMOTE_COMMAND',
         sessionId: e,

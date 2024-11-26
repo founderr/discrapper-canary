@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(436896),
     v = n(590921),
     I = n(606992),
-    b = n(51062),
-    T = n(918559),
+    T = n(51062),
+    b = n(918559),
     S = n(144685);
 t.Z = i.forwardRef(function (e, t) {
     var n, a, y, A, N;
@@ -33,7 +33,7 @@ t.Z = i.forwardRef(function (e, t) {
             [C.guild_id]
         ),
         w = i.useRef(),
-        [M, P, k] = (0, b.Z)(
+        [P, M, k] = (0, T.Z)(
             {
                 ...e,
                 guild: x
@@ -42,13 +42,13 @@ t.Z = i.forwardRef(function (e, t) {
             w
         ),
         U = (null === (n = R.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? m.ZP : h.ZP,
-        B = (0, f.DJ)(M.selectedIndex);
-    (0, _.KR)(L, M.isVisible, B), E.Z.trackExposure({ location: '6e9811_1' });
+        B = (0, f.DJ)(P.selectedIndex);
+    (0, _.KR)(L, P.isVisible, B), E.Z.trackExposure({ location: '6e9811_1' });
     let { usePopoutAutocomplete: G } = E.Z.useExperiment({ location: '6e9811_2' }, { autoTrackExposure: !1 }),
         Z = (0, I.Z)({
             editorHeight: O,
             type: R,
-            state: M,
+            state: P,
             isInPopoutExperiment: G
         }),
         F = (0, l.e7)(
@@ -56,29 +56,29 @@ t.Z = i.forwardRef(function (e, t) {
             () => {
                 let e = d.ZP.getSelfEmbeddedActivityForChannel(C.id),
                     t = d.ZP.getActivityPanelMode();
-                return (0, c.l5)(C) && null != e && e.channelId === C.id && t === T.Ez.PANEL;
+                return (0, c.l5)(C) && null != e && e.channelId === C.id && t === b.Ez.PANEL;
             },
             [C]
         ),
         V = i.useMemo(() => (null == Z ? '' : String(Date.now())), [null == Z ? void 0 : Z.top, null == Z ? void 0 : Z.left, null == Z ? void 0 : Z.bottom, null == Z ? void 0 : Z.right]);
     if (
         (i.useEffect(() => {
-            D(M.isVisible);
-        }, [D, M.isVisible]),
-        !M.isVisible || null == M.query || void 0 === Z)
+            D(P.isVisible);
+        }, [D, P.isVisible]),
+        !P.isVisible || null == P.query || void 0 === Z)
     )
         return null;
     let j =
         null !==
-            (a = M.query.typeInfo.renderResults({
-                results: M.query.results,
-                selectedIndex: M.selectedIndex,
+            (a = P.query.typeInfo.renderResults({
+                results: P.query.results,
+                selectedIndex: P.selectedIndex,
                 channel: C,
                 guild: x,
-                query: M.query.queryText,
-                options: M.query.options,
-                onHover: (e) => P.onResultHover(e),
-                onClick: (e) => P.onResultClick(e)
+                query: P.query.queryText,
+                options: P.query.options,
+                onHover: (e) => M.onResultHover(e),
+                onClick: (e) => M.onResultClick(e)
             })) && void 0 !== a
             ? a
             : null;
@@ -90,7 +90,7 @@ t.Z = i.forwardRef(function (e, t) {
             [S.autocompleteTop]: F
         },
         Y = 490;
-    null != Z && (Y = (null === (y = R.autocomplete) || void 0 === y ? void 0 : y.small) ? 200 : (null === (A = M.query) || void 0 === A ? void 0 : A.type) === v.eq.EMOJIS_AND_STICKERS ? 490 : 245), (Y = Math.min(window.innerHeight - 175, Y));
+    null != Z && (Y = (null === (y = R.autocomplete) || void 0 === y ? void 0 : y.small) ? 200 : (null === (A = P.query) || void 0 === A ? void 0 : A.type) === v.eq.EMOJIS_AND_STICKERS ? 490 : 245), (Y = Math.min(window.innerHeight - 175, Y));
     let W = (0, r.jsx)(f.ZP, {
         id: L,
         className: s()(S.autocomplete, H),

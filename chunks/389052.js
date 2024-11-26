@@ -19,7 +19,7 @@ var i = n(278074),
 function p(e) {
     let { user: t, color: n, guildId: p, channelId: h, onBlock: m, onIgnore: g, onUnblock: E, location: v = 'ContextMenu' } = e,
         { id: I } = t,
-        b = (0, a.e7)(
+        T = (0, a.e7)(
             [f.default],
             () => {
                 var e;
@@ -27,11 +27,11 @@ function p(e) {
             },
             [I]
         ),
-        T = (0, a.e7)([d.Z], () => d.Z.isBlocked(I), [I]),
+        b = (0, a.e7)([d.Z], () => d.Z.isBlocked(I), [I]),
         S = (0, l.Do)({ location: 'use-block-user-item-web' }),
         y = (0, i.EQ)({
             isStealthRemediationEnabled: S,
-            isBlocked: T
+            isBlocked: b
         })
             .with(
                 {
@@ -48,13 +48,13 @@ function p(e) {
                 () => 'danger'
             )
             .otherwise(() => n);
-    return b
+    return T
         ? null
         : (0, r.jsx)(s.MenuItem, {
               id: 'block',
               color: null != y ? y : 'default',
-              label: T ? _.intl.string(_.t.XyHpKC) : _.intl.string(_.t.l4EmaW),
-              action: T
+              label: b ? _.intl.string(_.t.XyHpKC) : _.intl.string(_.t.l4EmaW),
+              action: b
                   ? () => {
                         null == E || E(), o.Z.unblockUser(I, { location: v }), c.Z.showUnblockSuccessToast(I, null != h ? h : void 0);
                     }

@@ -17,8 +17,8 @@ var r,
     E = n(592125),
     v = n(271383),
     I = n(430824),
-    b = n(594174),
-    T = n(981631);
+    T = n(594174),
+    b = n(981631);
 let S = {},
     y = new Set();
 function A(e) {
@@ -30,7 +30,7 @@ function A(e) {
             (0, p.h)(null != n ? n : void 0) ||
             (function (e, t) {
                 if (null == e) return !1;
-                let n = b.default.getCurrentUser();
+                let n = T.default.getCurrentUser();
                 if (null == n) return !1;
                 let r = v.ZP.getMember(t, n.id);
                 return null != r && r.roles.includes(e.id);
@@ -40,7 +40,7 @@ function A(e) {
     );
 }
 function N(e, t) {
-    if (!t.hasFeature(T.oNc.CREATOR_MONETIZABLE) && !t.hasFeature(T.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) return !1;
+    if (!t.hasFeature(b.oNc.CREATOR_MONETIZABLE) && !t.hasFeature(b.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) return !1;
     let n = m.Z.isViewingServerShop(t.id);
     for (let r of Object.keys(e.permissionOverwrites)) {
         let i = I.Z.getRole(t.id, r);
@@ -56,7 +56,7 @@ function N(e, t) {
         if ((0, h.TG)(e, a)) return !0;
     }
     let r = I.Z.getRole(t.id, t.getEveryoneRoleId()),
-        i = null != r && !o.e$(r.permissions, T.Plq.VIEW_CHANNEL),
+        i = null != r && !o.e$(r.permissions, b.Plq.VIEW_CHANNEL),
         a = (0, h.wB)(e, e.permissionOverwrites[t.id]);
     if (i && !a) {
         for (let e of Object.values(I.Z.getRoles(t.id)))
@@ -111,7 +111,7 @@ class x extends (r = l.ZP.Store) {
                     let t = I.Z.getGuild(e);
                     if (null == t) return;
                     let n = (S[e] = new Set());
-                    if (!t.hasFeature(T.oNc.ROLE_SUBSCRIPTIONS_ENABLED) || (!(0, _.kT)(e) && !(0, c.Rw)(t))) return;
+                    if (!t.hasFeature(b.oNc.ROLE_SUBSCRIPTIONS_ENABLED) || (!(0, _.kT)(e) && !(0, c.Rw)(t))) return;
                     let r = E.Z.getMutableGuildChannelsForGuild(e);
                     for (let e in r) {
                         let i = r[e];

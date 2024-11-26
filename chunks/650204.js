@@ -18,8 +18,8 @@ var d = n(616254),
     E = n(395727),
     v = n(471638),
     I = n(585275),
-    b = n(960048),
-    T = n(63063),
+    T = n(960048),
+    b = n(63063),
     S = n(240849),
     y = n(998502),
     A = n(513566),
@@ -31,37 +31,37 @@ var d = n(616254),
     L = n(846519),
     x = n(579806),
     w = n(896361),
-    M = n(892254);
+    P = n(892254);
 n(390524);
-var P = n(857192),
+var M = n(857192),
     k = n(395188),
     U = n(44163),
     B = n(710845),
     G = n(70956);
-P.default.cssDebuggingEnabled && n.e('57779').then(n.bind(n, 953758));
+M.default.cssDebuggingEnabled && n.e('57779').then(n.bind(n, 953758));
 let Z = 5 * G.Z.Millis.MINUTE,
     F = document.getElementById('app-mount');
 _()(null != F, 'Could not find app-mount'), (F.className = __OVERLAY__ ? '' : k.appMount);
 let V = (0, d.createRoot)(F),
     j = { '/oauth2/authorize': N.Z },
-    H = (e) => V.render((0, c.jsx)(M.Z, { children: (0, c.jsx)(w.Z, { children: (0, c.jsx)(e, {}) }) }));
+    H = (e) => V.render((0, c.jsx)(P.Z, { children: (0, c.jsx)(w.Z, { children: (0, c.jsx)(e, {}) }) }));
 if (null != x.Z) {
     null === (r = x.Z.setUncaughtExceptionHandler) ||
         void 0 === r ||
         r.call(x.Z, (e, t) => {
             setImmediate(() => {
-                throw (b.Z.captureCrash(e), e);
+                throw (T.Z.captureCrash(e), e);
             });
         });
     let e = null === (i = (a = x.Z.remoteApp).getVersion) || void 0 === i ? void 0 : i.call(a),
         t = null === (s = (o = x.Z.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(o),
         n = {};
     null != x.Z.remoteApp.getModuleVersions && (n = x.Z.remoteApp.getModuleVersions()),
-        b.Z.setExtra({
+        T.Z.setExtra({
             hostVersion: e,
             moduleVersions: n
         }),
-        b.Z.setTags({ nativeBuildNumber: null == t ? void 0 : t.toString() });
+        T.Z.setTags({ nativeBuildNumber: null == t ? void 0 : t.toString() });
     let c = Object.keys(n)
         .filter((e) => null != n[e])
         .map((e) => ''.concat(e, ': ').concat(n[e]))
@@ -74,7 +74,7 @@ if (((0, D.O)(window), __OVERLAY__)) H(p.Z.Overlay);
 else if (null != window.require && null == window.DiscordNative) H(p.Z.OutdatedClient);
 else {
     if ((document.addEventListener('scroll', (e) => e.preventDefault()), C.isPlatformEmbedded)) {
-        (window.onbeforeunload = () => y.ZP.beforeUnload()), y.ZP.on('HELP_OPEN', () => window.open(T.Z.getCommunityURL()));
+        (window.onbeforeunload = () => y.ZP.beforeUnload()), y.ZP.on('HELP_OPEN', () => window.open(b.Z.getCommunityURL()));
         let e = new L.sW(Z, () => y.ZP.purgeMemory());
         y.ZP.on('MAIN_WINDOW_BLUR', () => {
             e.delay(), y.ZP.setFocused(!1), (0, O.T_)(window, !1);

@@ -27,8 +27,8 @@ var r,
     E = n(944486),
     v = n(102172),
     I = n(74299),
-    b = n(299570),
-    T = n(65154);
+    T = n(299570),
+    b = n(65154);
 ((r = o || (o = {}))[(r.Present = 0)] = 'Present'), (r[(r.Update = 1)] = 'Update'), (r[(r.Cancel = 2)] = 'Cancel'), (r[(r.Error = 3)] = 'Error');
 let S = !1,
     y = 0,
@@ -78,13 +78,13 @@ class w extends (l = c.ZP.Store) {
         this.syncWith([m.Z, E.Z, p.Z, h.Z, g.Z], x), _.Z.subscribe({ location: 'NativeScreenSharePickerStore_initialize' }, O), x();
     }
     supported() {
-        return m.Z.supports(T.AN.NATIVE_SCREENSHARE_PICKER);
+        return m.Z.supports(b.AN.NATIVE_SCREENSHARE_PICKER);
     }
     enabled() {
         return R();
     }
     releasePickerStream() {
-        (0, b.t)();
+        (0, T.t)();
     }
     getPickerState() {
         return C;

@@ -32,7 +32,7 @@ function x() {
                 label: g.intl.string(g.t['D/157e'])
             }
         ],
-        C = [
+        E = [
             {
                 value: s.Q4.BLUR,
                 label: g.intl.string(g.t.S49UaW)
@@ -43,7 +43,7 @@ function x() {
             label: g.intl.string(g.t['5k5OFh'])
         };
     return (
-        t && (T.unshift(_), C.unshift(_)),
+        t && (T.unshift(_), E.unshift(_)),
         (0, i.jsxs)(d.U, {
             setting: m.s6.PRIVACY_SENSITIVE_MEDIA_V2,
             scrollPosition: u.to.EXPLICIT_MEDIA_REDACTION_V2,
@@ -78,7 +78,7 @@ function x() {
                         title: g.intl.string(g.t['FP+a4+']),
                         titleClassName: p.selectItemTitle,
                         children: (0, i.jsx)(r.SingleSelect, {
-                            options: C,
+                            options: E,
                             value: n,
                             onChange: (e) => (0, l.zj)({ explicitContentGuilds: e })
                         })

@@ -26,7 +26,7 @@ function I() {
             })
           : Promise.reject(Error('not desktop client'));
 }
-function b(e) {
+function T(e) {
     let t = {
             id: e.id,
             name: e.name,
@@ -39,7 +39,7 @@ function b(e) {
         }));
     return [t, ...n];
 }
-function T(e) {
+function b(e) {
     return { id: e };
 }
 async function S(e) {
@@ -93,10 +93,10 @@ t.Z = {
         return new Promise(y.bind(this, () => l.Z.isConnected(e)));
     },
     isLaunchable: (e) =>
-        S(b(e))
+        S(T(e))
             .then((e) => null != e)
             .catch(() => !1),
-    launch: (e) => S(b(e)).then(A),
+    launch: (e) => S(T(e)).then(A),
     launchDispatchApplication(e, t, n, i, s) {
         let { launchOptions: l, defaultLaunchOptionId: u, installPath: f, applicationId: _, branchId: p, buildId: m, shouldPatch: g } = e;
         if (null == l || null == u || null == f) throw Error("Couldn't construct launchable for ".concat(e.applicationId));

@@ -6,7 +6,7 @@ n.d(t, {
         return E;
     },
     iF: function () {
-        return T;
+        return b;
     }
 }),
     n(47120),
@@ -114,12 +114,12 @@ function E(e) {
                                                 if (null != n && null != r.Z.getLanguage(n)) {
                                                     let r = (function (e, t) {
                                                         let n = ''.concat(e, '-').concat(t),
-                                                            r = b.get(n);
+                                                            r = T.get(n);
                                                         if (null != r) return r;
                                                         let i = o.default.highlight(t, e, !1);
                                                         if (null == i || i.illegal) return null;
                                                         let a = i.value.split('\n');
-                                                        return b.set(n, a), a;
+                                                        return T.set(n, a), a;
                                                     })(e, n);
                                                     if (null != r && r.length === t.length) {
                                                         let e = [];
@@ -200,8 +200,8 @@ let v = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
         maxAge: 1 * s.Z.Millis.MINUTE,
         updateAgeOnGet: !0
     },
-    b = new (a())(I);
-function T(e, t) {
+    T = new (a())(I);
+function b(e, t) {
     let n = 0;
     for (let i of d.bN.nodes(e, {
         at: {
@@ -225,5 +225,5 @@ function T(e, t) {
 function S(e) {
     if (null == e.selection) return !1;
     let t = d.M8.start(e.selection);
-    return T(e, t);
+    return b(e, t);
 }

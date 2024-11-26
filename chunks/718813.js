@@ -23,7 +23,7 @@ var i,
     I = n(585483),
     C = n(981631),
     v = n(294981);
-function S(e, t, n) {
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function S(e, t, n) {
         e
     );
 }
-let N = (0, g.Un)({
+let S = (0, g.Un)({
         createPromise: () => Promise.all([n.e('23217'), n.e('33053'), n.e('8016'), n.e('76540'), n.e('15669'), n.e('17938'), n.e('22646'), n.e('34842'), n.e('30419'), n.e('48923'), n.e('8821'), n.e('18824'), n.e('89985'), n.e('23796')]).then(n.bind(n, 989804)),
         webpackId: 989804,
         name: 'UserSettings'
@@ -46,21 +46,21 @@ let N = (0, g.Un)({
         webpackId: 869779,
         name: 'ChannelSettings'
     }),
-    A = (0, g.Un)({
+    x = (0, g.Un)({
         createPromise: () => n.e('18249').then(n.bind(n, 838819)),
         webpackId: 838819,
         name: 'CollectiblesShop'
     }),
     b = (0, g.Un)({
-        createPromise: () => Promise.all([n.e('33053'), n.e('15669'), n.e('7654'), n.e('44156'), n.e('31113'), n.e('85552'), n.e('58227'), n.e('16114'), n.e('16221')]).then(n.bind(n, 994763)),
+        createPromise: () => Promise.all([n.e('63288'), n.e('33053'), n.e('15669'), n.e('7654'), n.e('98479'), n.e('31113'), n.e('85552'), n.e('58227'), n.e('16114'), n.e('61720')]).then(n.bind(n, 994763)),
         webpackId: 994763,
         name: 'GuildSettings'
     }),
-    x = {
-        [C.S9g.USER_SETTINGS]: () => (0, r.jsx)(N, {}),
+    A = {
+        [C.S9g.USER_SETTINGS]: () => (0, r.jsx)(S, {}),
         [C.S9g.CHANNEL_SETTINGS]: () => (0, r.jsx)(T, {}),
         [C.S9g.GUILD_SETTINGS]: () => (0, r.jsx)(b, {}),
-        [C.S9g.COLLECTIBLES_SHOP]: () => (0, r.jsx)(A, {})
+        [C.S9g.COLLECTIBLES_SHOP]: () => (0, r.jsx)(x, {})
     },
     Z = 'SHOWN',
     L = 'HIDDEN',
@@ -68,10 +68,10 @@ let N = (0, g.Un)({
         friction: 10,
         tension: 100
     };
-function O() {
+function P() {
     return l.useEffect(() => (p.Z.enable(), p.Z.enableTemp(m.u), () => p.Z.disableTemp()), []), null;
 }
-class R extends (i = l.PureComponent) {
+class O extends (i = l.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.mode
             ? {
@@ -172,7 +172,7 @@ class R extends (i = l.PureComponent) {
         };
     }
     constructor(e) {
-        super(e), S(this, 'containerRef', l.createRef());
+        super(e), N(this, 'containerRef', l.createRef());
         let t = 1,
             n = 1;
         e.mode === L && ((t = 0.93), (n = 0)),
@@ -184,8 +184,8 @@ class R extends (i = l.PureComponent) {
             });
     }
 }
-S(R, 'defaultProps', { baseLayer: !1 }), S(R, 'contextType', u.AccessibilityPreferencesContext);
-class P extends l.PureComponent {
+N(O, 'defaultProps', { baseLayer: !1 }), N(O, 'contextType', u.AccessibilityPreferencesContext);
+class R extends l.PureComponent {
     componentDidMount() {
         I.S.subscribe(C.CkL.LAYER_POP_ESCAPE_KEY, h.xf);
     }
@@ -199,7 +199,7 @@ class P extends l.PureComponent {
         return (
             l.push(
                 (0, r.jsx)(
-                    R,
+                    O,
                     {
                         mode: 0 !== i || n ? L : Z,
                         baseLayer: !0,
@@ -215,12 +215,12 @@ class P extends l.PureComponent {
     renderComponent(e, t, n) {
         let i;
         return (
-            (i = 'string' == typeof e ? x[e]() : (0, r.jsx)(e, {})),
+            (i = 'string' == typeof e ? A[e]() : (0, r.jsx)(e, {})),
             (0, r.jsxs)(
-                R,
+                O,
                 {
                     mode: t === n - 1 ? Z : L,
-                    children: [(0, r.jsx)(O, {}), i]
+                    children: [(0, r.jsx)(P, {}), i]
                 },
                 'layer-'.concat(t)
             )
@@ -249,7 +249,7 @@ function j(e) {
     let t = (0, c.e7)([_.Z], () => _.Z.darkSidebar) ? C.BRd.DARK : void 0,
         n = (0, c.e7)([E.Z], () => E.Z.getLayers()),
         i = (0, f.QP)((e) => e.fullScreenLayers.length > 0);
-    return (0, r.jsx)(P, {
+    return (0, r.jsx)(R, {
         ...e,
         sidebarTheme: t,
         layers: n,

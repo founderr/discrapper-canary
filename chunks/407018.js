@@ -33,7 +33,7 @@ function f(e, t, n) {
         E = (0, a.useRef)(null),
         v = 'rtl' === h,
         I = (0, a.useRef)(null),
-        { moveProps: b } = (0, s.r_)({
+        { moveProps: T } = (0, s.r_)({
             onMoveStart() {
                 I.current = null;
             },
@@ -51,7 +51,7 @@ function f(e, t, n) {
                 null != E.current && (t.setThumbDragging(E.current, !1), (E.current = null));
             }
         }),
-        T = (0, a.useRef)(void 0),
+        b = (0, a.useRef)(void 0),
         S = (r, i, a, s) => {
             if (n.current && !e.isDisabled && t.values.every((e, n) => !t.isThumbDragging(n))) {
                 let e,
@@ -60,12 +60,12 @@ function f(e, t, n) {
                 ('rtl' === h || p) && (d = 1 - d);
                 let f = t.getPercentValue(d),
                     _ = t.values.findIndex((e) => f - e < 0);
-                (e = 0 === _ ? _ : -1 === _ ? t.values.length - 1 : Math.abs(t.values[_ - 1] - f) < Math.abs(t.values[_] - f) ? _ - 1 : _) >= 0 && t.isThumbEditable(e) ? (r.preventDefault(), (E.current = e), t.setFocusedThumb(e), (T.current = i), t.setThumbDragging(E.current, !0), t.setThumbValue(e, f), m(window, 'mouseup', y, !1), m(window, 'touchend', y, !1), m(window, 'pointerup', y, !1)) : (E.current = null);
+                (e = 0 === _ ? _ : -1 === _ ? t.values.length - 1 : Math.abs(t.values[_ - 1] - f) < Math.abs(t.values[_] - f) ? _ - 1 : _) >= 0 && t.isThumbEditable(e) ? (r.preventDefault(), (E.current = e), t.setFocusedThumb(e), (b.current = i), t.setThumbDragging(E.current, !0), t.setThumbValue(e, f), m(window, 'mouseup', y, !1), m(window, 'touchend', y, !1), m(window, 'pointerup', y, !1)) : (E.current = null);
             }
         },
         y = (e) => {
             var n, r;
-            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === T.current && (null != E.current && (t.setThumbDragging(E.current, !1), (E.current = null)), g(window, 'mouseup', y, !1), g(window, 'touchend', y, !1), g(window, 'pointerup', y, !1));
+            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === b.current && (null != E.current && (t.setThumbDragging(E.current, !1), (E.current = null)), g(window, 'mouseup', y, !1), g(window, 'touchend', y, !1), g(window, 'pointerup', y, !1));
         };
     return (
         'htmlFor' in f &&
@@ -97,7 +97,7 @@ function f(e, t, n) {
                         touchAction: 'none'
                     }
                 },
-                b
+                T
             ),
             outputProps: {
                 htmlFor: t.values.map((e, n) => d(t, n)).join(' '),
@@ -110,8 +110,8 @@ function _(e, t) {
     var n;
     let { index: f = 0, isRequired: _, validationState: p, isInvalid: h, trackRef: m, inputRef: g, orientation: E = t.orientation, name: v } = e,
         I = e.isDisabled || t.isDisabled,
-        b = 'vertical' === E,
-        { direction: T } = (0, l.bU)(),
+        T = 'vertical' === E,
+        { direction: b } = (0, l.bU)(),
         { addGlobalListener: S, removeGlobalListener: y } = (0, r.xi)(),
         A = c.get(t),
         { labelProps: N, fieldProps: C } = (0, o.N)({
@@ -127,7 +127,7 @@ function _(e, t) {
     (0, a.useEffect)(() => {
         D && O();
     }, [D, O]);
-    let L = 'rtl' === T,
+    let L = 'rtl' === b,
         x = (0, a.useRef)(null),
         { keyboardProps: w } = (0, s.v5)({
             onKeyDown(e) {
@@ -152,18 +152,18 @@ function _(e, t) {
                 o(f, !1);
             }
         }),
-        { moveProps: M } = (0, s.r_)({
+        { moveProps: P } = (0, s.r_)({
             onMoveStart() {
                 (x.current = null), t.setThumbDragging(f, !0);
             },
             onMove({ deltaX: e, deltaY: n, pointerType: r, shiftKey: a }) {
                 let { getThumbPercent: s, setThumbPercent: o, decrementThumb: l, incrementThumb: u, step: c, pageSize: d } = t,
                     { width: _, height: p } = m.current.getBoundingClientRect(),
-                    h = b ? p : _;
+                    h = T ? p : _;
                 if ((null == x.current && (x.current = s(f) * h), 'keyboard' === r)) (e > 0 && L) || (e < 0 && !L) || n > 0 ? l(f, a ? d : c) : u(f, a ? d : c);
                 else {
-                    let t = b ? n : e;
-                    (b || L) && (t = -t), (x.current += t), o(f, (0, i.uZ)(x.current / h, 0, 1));
+                    let t = T ? n : e;
+                    (T || L) && (t = -t), (x.current += t), o(f, (0, i.uZ)(x.current / h, 0, 1));
                 }
             },
             onMoveEnd() {
@@ -171,7 +171,7 @@ function _(e, t) {
             }
         });
     t.setThumbEditable(f, !I);
-    let { focusableProps: P } = (0, u.kc)(
+    let { focusableProps: M } = (0, u.kc)(
             (0, r.dG)(e, {
                 onFocus: () => t.setFocusedThumb(f),
                 onBlur: () => t.setFocusedThumb(void 0)
@@ -187,10 +187,10 @@ function _(e, t) {
             (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === k.current && (O(), t.setThumbDragging(f, !1), y(window, 'mouseup', B, !1), y(window, 'touchend', B, !1), y(window, 'pointerup', B, !1));
         },
         G = t.getThumbPercent(f);
-    (b || 'rtl' === T) && (G = 1 - G);
+    (T || 'rtl' === b) && (G = 1 - G);
     let Z = I
         ? {}
-        : (0, r.dG)(w, M, {
+        : (0, r.dG)(w, P, {
               onMouseDown: (e) => {
                   0 === e.button && !e.altKey && !e.ctrlKey && !e.metaKey && U();
               },
@@ -206,7 +206,7 @@ function _(e, t) {
             t.setThumbValue(f, e);
         }),
         {
-            inputProps: (0, r.dG)(P, C, {
+            inputProps: (0, r.dG)(M, C, {
                 type: 'range',
                 tabIndex: I ? void 0 : 0,
                 min: t.getThumbMinValue(f),
@@ -230,7 +230,7 @@ function _(e, t) {
                 ...Z,
                 style: {
                     position: 'absolute',
-                    [b ? 'top' : 'left']: `${100 * G}%`,
+                    [T ? 'top' : 'left']: `${100 * G}%`,
                     transform: 'translate(-50%, -50%)',
                     touchAction: 'none'
                 }

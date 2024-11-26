@@ -74,8 +74,8 @@ t.Z = function (e) {
         l = (0, o.e7)([m.ZP], () => m.ZP.getPremiumSubscription()),
         u = (0, o.e7)([m.ZP], () => null == m.ZP.getPremiumTypeSubscription()),
         h = Object.keys(s).some((e) => e === p.Xh.PREMIUM_MONTH_TIER_1),
-        C = (0, o.e7)([d.default], () => d.default.getCurrentUser());
-    return null == C
+        E = (0, o.e7)([d.default], () => d.default.getCurrentUser());
+    return null == E
         ? null
         : (0, i.jsxs)('div', {
               children: [
@@ -88,7 +88,7 @@ t.Z = function (e) {
                                   planId: e,
                                   count: s[e].length,
                                   userPremiumSubscription: l,
-                                  user: C
+                                  user: E
                               },
                               e
                           )

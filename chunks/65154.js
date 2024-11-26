@@ -75,7 +75,7 @@ n.d(t, {
         return V;
     },
     Yn: function () {
-        return b;
+        return T;
     },
     Z: function () {
         return C;
@@ -99,7 +99,7 @@ n.d(t, {
         return N;
     },
     h7: function () {
-        return T;
+        return b;
     },
     iA: function () {
         return D;
@@ -132,7 +132,7 @@ n.d(t, {
         return en;
     },
     uA: function () {
-        return P;
+        return M;
     },
     ux: function () {
         return eg;
@@ -171,8 +171,8 @@ var r,
     E,
     v,
     I,
-    b,
     T,
+    b,
     S,
     y,
     A,
@@ -184,14 +184,14 @@ var r,
     L,
     x,
     w,
-    M,
     P,
+    M,
     k,
     U,
     B,
     G,
     Z = n(268146);
-((r = b || (b = {})).DEFAULT = 'default'), (r.STREAM = 'stream'), ((i = T || (T = {})).AUDIO_INPUT = 'audioinput'), (i.AUDIO_OUTPUT = 'audiooutput'), (i.VIDEO_INPUT = 'videoinput'), ((a = S || (S = {})).PUSH_TO_TALK = 'PUSH_TO_TALK'), (a.VOICE_ACTIVITY = 'VOICE_ACTIVITY'), ((s = y || (y = {})).DISCONNECTED = 'DISCONNECTED'), (s.CONNECTING = 'CONNECTING'), (s.CONNECTED = 'CONNECTED'), (s.NO_ROUTE = 'NO_ROUTE'), (s.ICE_CHECKING = 'ICE_CHECKING'), (s.DTLS_CONNECTING = 'DTLS_CONNECTING'), ((o = A || (A = {}))[(o.TRANSPORT = 1)] = 'TRANSPORT'), (o[(o.OUTBOUND = 2)] = 'OUTBOUND'), (o[(o.INBOUND = 4)] = 'INBOUND'), (o[(o.ALL = 7)] = 'ALL'), ((l = N || (N = {})).MANUAL_DISABLE = 'video_manual_disable'), (l.MANUAL_ENABLE = 'video_manual_enable'), (l.MANUAL_REENABLE = 'video_manual_reenable'), (l.AUTO_DISABLE = 'video_auto_disable'), (l.AUTO_ENABLE = 'video_auto_enable'), (l.AUTO_DOWNGRADE = 'video_auto_downgrade'), (l.AUTO_UPGRADE = 'video_auto_upgrade,'), ((u = C || (C = {})).NO_OVERRIDE = 'no_override'), (u.HIGH = 'high'), (u.LOW = 'low');
+((r = T || (T = {})).DEFAULT = 'default'), (r.STREAM = 'stream'), ((i = b || (b = {})).AUDIO_INPUT = 'audioinput'), (i.AUDIO_OUTPUT = 'audiooutput'), (i.VIDEO_INPUT = 'videoinput'), ((a = S || (S = {})).PUSH_TO_TALK = 'PUSH_TO_TALK'), (a.VOICE_ACTIVITY = 'VOICE_ACTIVITY'), ((s = y || (y = {})).DISCONNECTED = 'DISCONNECTED'), (s.CONNECTING = 'CONNECTING'), (s.CONNECTED = 'CONNECTED'), (s.NO_ROUTE = 'NO_ROUTE'), (s.ICE_CHECKING = 'ICE_CHECKING'), (s.DTLS_CONNECTING = 'DTLS_CONNECTING'), ((o = A || (A = {}))[(o.TRANSPORT = 1)] = 'TRANSPORT'), (o[(o.OUTBOUND = 2)] = 'OUTBOUND'), (o[(o.INBOUND = 4)] = 'INBOUND'), (o[(o.ALL = 7)] = 'ALL'), ((l = N || (N = {})).MANUAL_DISABLE = 'video_manual_disable'), (l.MANUAL_ENABLE = 'video_manual_enable'), (l.MANUAL_REENABLE = 'video_manual_reenable'), (l.AUTO_DISABLE = 'video_auto_disable'), (l.AUTO_ENABLE = 'video_auto_enable'), (l.AUTO_DOWNGRADE = 'video_auto_downgrade'), (l.AUTO_UPGRADE = 'video_auto_upgrade,'), ((u = C || (C = {})).NO_OVERRIDE = 'no_override'), (u.HIGH = 'high'), (u.LOW = 'low');
 let F = 100,
     V = 18,
     j = 64000,
@@ -323,9 +323,9 @@ let F = 100,
     (h.VIDEO = 'video'),
     (h.SCREEN = 'screen'),
     (h.TEST = 'test'),
-    ((m = M || (M = {})).PLAYING = 'playing'),
+    ((m = P || (P = {})).PLAYING = 'playing'),
     (m.PAUSED = 'paused'),
-    ((g = P || (P = {})).FIXED = 'fixed'),
+    ((g = M || (M = {})).FIXED = 'fixed'),
     (g.SOURCE = 'source'),
     ((k || (k = {})).REMB = 'remb'),
     ((E = U || (U = {})).VIDEOTOOLBOX_RATE_CONTROL = 'videotoolbox_rate_control'),

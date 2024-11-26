@@ -186,7 +186,7 @@ var i = n(698091),
             t
         );
     })(v),
-    b = (function (e) {
+    T = (function (e) {
         function t(t) {
             var n;
             return ((n = e.call(this, null) || this).update = t), (n.dirty = !1), n;
@@ -216,12 +216,12 @@ var i = n(698091),
             t
         );
     })(v),
-    T = function (e, t) {
+    b = function (e, t) {
         return u.forwardRef(function (n, r) {
             var a = u.useRef(null),
                 s = !i.is.fun(e) || (e.prototype && e.prototype.isReactComponent),
                 l = i.useForceUpdate(),
-                d = new b(function () {
+                d = new T(function () {
                     var e = a.current;
                     if (!s || !!e) !1 === (!!e && t.applyAnimatedValues(e, d.getValue(!0))) && l();
                 }),
@@ -265,7 +265,7 @@ var i = n(698091),
 (t.Animated = h),
     (t.AnimatedArray = I),
     (t.AnimatedObject = v),
-    (t.AnimatedProps = b),
+    (t.AnimatedProps = T),
     (t.AnimatedString = g),
     (t.AnimatedValue = m),
     (t.createHost = function (e, t) {
@@ -296,7 +296,7 @@ var i = n(698091),
             },
             u = function (e) {
                 var t = y(e) || 'Anonymous';
-                return ((e = i.is.str(e) ? T(e, l) : e[S] || (e[S] = T(e, l))).displayName = 'Animated(' + t + ')'), e;
+                return ((e = i.is.str(e) ? b(e, l) : e[S] || (e[S] = b(e, l))).displayName = 'Animated(' + t + ')'), e;
             };
         return (
             i.each(e, function (e, t) {

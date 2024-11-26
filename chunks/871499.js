@@ -21,16 +21,16 @@ var r = n(200651),
     h = n(388032),
     m = n(32390);
 function g(e) {
-    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: a, onMouseLeave: l, onContextMenu: u, className: c, wrapperClassName: d, iconClassName: f, iconColor: p = 'currentColor', iconComponent: h, themeable: g = !1, disabled: E = !1, isActive: v = !1, tooltipPosition: I = 'top', shouldShowTooltip: b = !0, forceTooltipOpen: T = !1, buttonRef: S, grow: y, 'aria-label': A } = e;
+    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: a, onMouseLeave: l, onContextMenu: u, className: c, wrapperClassName: d, iconClassName: f, iconColor: p = 'currentColor', iconComponent: h, themeable: g = !1, disabled: E = !1, isActive: v = !1, tooltipPosition: I = 'top', shouldShowTooltip: T = !0, forceTooltipOpen: b = !1, buttonRef: S, grow: y, 'aria-label': A } = e;
     return (0, r.jsx)(_.Z, {
         children: (0, r.jsx)(o.Tooltip, {
             position: I,
             text: t,
             'aria-label': A,
-            shouldShow: b,
-            forceOpen: T,
+            shouldShow: T,
+            forceOpen: b,
             children: (e) => {
-                let { onClick: t, onContextMenu: _, onMouseEnter: I, onMouseLeave: b, ...T } = e;
+                let { onClick: t, onContextMenu: _, onMouseEnter: I, onMouseLeave: T, ...b } = e;
                 return (0, r.jsx)(o.Button, {
                     look: o.Button.Looks.BLANK,
                     size: o.Button.Sizes.NONE,
@@ -44,7 +44,7 @@ function g(e) {
                         null == I || I(), null == a || a(e);
                     },
                     onMouseLeave: (e) => {
-                        null == b || b(), null == l || l(e);
+                        null == T || T(), null == l || l(e);
                     },
                     onContextMenu: (e) => {
                         null == _ || _(), null == u || u(e);
@@ -53,7 +53,7 @@ function g(e) {
                         null == I || I(), null == a || a(e);
                     },
                     onBlur: (e) => {
-                        null == b || b(), null == l || l(e);
+                        null == T || T(), null == l || l(e);
                     },
                     disabled: E,
                     innerClassName: m.lineHeightReset,
@@ -62,7 +62,7 @@ function g(e) {
                     buttonRef: S,
                     grow: y,
                     'aria-label': A,
-                    ...T,
+                    ...b,
                     children: (0, r.jsx)(h, {
                         className: s()(m.controlIcon, f, {
                             [m.themeable]: g,
@@ -85,7 +85,7 @@ let E = {
     activeLight: m.activeLight
 };
 function v(e) {
-    let { color: t, isActive: n = !1, className: a, iconClassName: v, onPopoutClick: I, popoutOpen: b = !1, premiumGlow: T = !1, ...S } = e,
+    let { color: t, isActive: n = !1, className: a, iconClassName: v, onPopoutClick: I, popoutOpen: T = !1, premiumGlow: b = !1, ...S } = e,
         y = (0, p.Z)(t, n),
         A = (0, l.Z)('(max-width: 456px)'),
         N = i.useRef(null),
@@ -114,7 +114,7 @@ function v(e) {
                               height: 56,
                               children: R
                           }),
-                          T &&
+                          b &&
                               (0, r.jsx)('div', {
                                   className: m.glow,
                                   children: (0, r.jsx)(c.Z, {
@@ -136,8 +136,8 @@ function v(e) {
                                 'aria-label': h.intl.string(h.t.PdRCRk),
                                 onClick: I,
                                 onContextMenu: I,
-                                className: s()(m.contextMenuNub, E[y], { [m.active]: b }),
-                                children: (0, r.jsx)(d.Z, { className: s()(m.contextMenuCaret, { [m.open]: b }) })
+                                className: s()(m.contextMenuNub, E[y], { [m.active]: T }),
+                                children: (0, r.jsx)(d.Z, { className: s()(m.contextMenuCaret, { [m.open]: T }) })
                             })
                         })
                       : null

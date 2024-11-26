@@ -52,7 +52,7 @@ let d = (e) => {
                 })
         })),
         (t = i === l.Hb.AI ? c.botTagAI : n ? c.botTagInvert : c.botTagRegular);
-    let b = (e) =>
+    let T = (e) =>
         (0, r.jsxs)('span', {
             ...e,
             className: a()(d, t, p ? c.rem : c.px, {
@@ -73,16 +73,16 @@ let d = (e) => {
             return (0, r.jsx)(s.u, {
                 text: u.intl.string(u.t.xb0str),
                 position: 'top',
-                children: (e) => b(e)
+                children: (e) => T(e)
             });
         case l.Hb.ORIGINAL_POSTER:
             return (0, r.jsx)(s.u, {
                 text: u.intl.string(u.t.uN6Emp),
                 position: 'top',
-                children: (e) => b(e)
+                children: (e) => T(e)
             });
         default:
-            return b();
+            return T();
     }
 };
 (d.Types = l.Hb), (t.Z = d);

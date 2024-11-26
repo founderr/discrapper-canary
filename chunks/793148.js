@@ -36,9 +36,9 @@ class _ extends (r = a.PureComponent) {
     render() {
         let { iconClassName: e, iconColor: t, className: n, sliderWrapperClassName: r, sliderClassName: a, currentWindow: s, muted: f, minValue: _, maxValue: p, value: h, onVolumeShow: m, onVolumeHide: g } = this.props,
             { hovered: E, focused: v, dragging: I } = this.state,
-            b = l.VoiceNormalIcon;
+            T = l.VoiceNormalIcon;
         return (
-            f || h === _ ? (b = l.VoiceXIcon) : h < p / 2 && (b = l.VoiceLowIcon),
+            f || h === _ ? (T = l.VoiceXIcon) : h < p / 2 && (T = l.VoiceLowIcon),
             (0, i.jsxs)('div', {
                 className: o()(n, d.container),
                 onMouseEnter: () => {
@@ -79,7 +79,7 @@ class _ extends (r = a.PureComponent) {
                         size: l.Button.Sizes.NONE,
                         look: l.Button.Looks.BLANK,
                         onClick: this.handleToggleMute,
-                        children: (0, i.jsx)(b, {
+                        children: (0, i.jsx)(T, {
                             color: t,
                             className: e
                         })

@@ -30,8 +30,8 @@ var r,
     E = n(963838),
     v = n(353368),
     I = n(981631),
-    b = n(710111);
-function T(e) {
+    T = n(710111);
+function b(e) {
     let t = new AbortController(),
         n = (0, a.throttle)((n) => {
             _.Z.getVoiceChannelId() !== e && t.abort();
@@ -43,7 +43,7 @@ function T(e) {
 }
 function S(e, t, n) {
     var r;
-    let { abortController: i, onRequestProgress: a } = T(e),
+    let { abortController: i, onRequestProgress: a } = b(e),
         o = null !== (r = m.Z.getState().animationType) && void 0 !== r ? r : v.q.BASIC,
         u = {
             animation_type: o,
@@ -65,13 +65,13 @@ function S(e, t, n) {
 function y(e, t, n, r) {
     var i, a;
     let o = c.ZP.getCustomEmojiById(null !== (i = t.emojiId) && void 0 !== i ? i : ''),
-        { abortController: l, onRequestProgress: u } = T(e),
+        { abortController: l, onRequestProgress: u } = b(e),
         _ = {
             sound_id: t.soundId,
             emoji_id: t.emojiId,
             emoji_name: null !== (a = t.emojiName) && void 0 !== a ? a : null == o ? void 0 : o.name
         };
-    t.guildId !== b.X8 && (_.source_guild_id = t.guildId),
+    t.guildId !== T.X8 && (_.source_guild_id = t.guildId),
         s.tn
             .post({
                 url: I.ANM.SEND_SOUNDBOARD_SOUND(e),

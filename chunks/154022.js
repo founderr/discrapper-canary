@@ -20,11 +20,11 @@ var i = n(200651),
     x = n(600164),
     S = n(313201),
     T = n(786761),
-    C = n(3148),
+    E = n(3148),
     _ = n(739566),
-    E = n(753206),
-    f = n(440849),
-    I = n(921801),
+    C = n(753206),
+    I = n(440849),
+    f = n(921801),
     N = n(196051),
     A = n(441729),
     b = n(626135),
@@ -59,46 +59,46 @@ function H(e) {
                 className: M.marginBottom20,
                 children: (0, i.jsx)(z, {})
             }),
-            (0, i.jsxs)(I.F, {
+            (0, i.jsxs)(f.F, {
                 setting: D.s6.ACCESSIBILITY_SATURATION,
                 children: [(0, i.jsx)(W, {}), (0, i.jsx)(d.FormDivider, {})]
             }),
-            (0, i.jsx)(I.F, {
+            (0, i.jsx)(f.F, {
                 setting: D.s6.ACCESSIBILITY_LINK_DECORATIONS,
                 children: (0, i.jsx)(K, {})
             }),
-            (0, i.jsx)(I.F, {
+            (0, i.jsx)(f.F, {
                 setting: D.s6.ACCESSIBILITY_ROLE_STYLE,
                 children: (0, i.jsx)(q, {})
             }),
-            (0, i.jsx)(I.F, {
+            (0, i.jsx)(f.F, {
                 setting: D.s6.ACCESSIBILITY_TAGS,
-                children: (0, i.jsx)(Q, {})
-            }),
-            (0, i.jsx)(I.F, {
-                setting: D.s6.ACCESSIBILITY_PROFILE_COLORS,
                 children: (0, i.jsx)(X, {})
             }),
+            (0, i.jsx)(f.F, {
+                setting: D.s6.ACCESSIBILITY_PROFILE_COLORS,
+                children: (0, i.jsx)(Q, {})
+            }),
             (0, p.b)()
-                ? (0, i.jsxs)(I.F, {
+                ? (0, i.jsxs)(f.F, {
                       setting: D.s6.ACCESSIBILITY_CONTRAST,
                       children: [(0, i.jsx)(J, {}), ' ']
                   })
                 : null,
-            (0, i.jsx)(I.F, {
+            (0, i.jsx)(f.F, {
                 setting: D.s6.ACCESSIBILITY_REDUCED_MOTION,
                 children: (0, i.jsx)($, {})
             }),
-            (0, i.jsx)(I.F, {
+            (0, i.jsx)(f.F, {
                 setting: D.s6.ACCESSIBILITY_STICKERS,
                 children: (0, i.jsx)(ee, {})
             }),
-            (0, i.jsx)(I.F, {
+            (0, i.jsx)(f.F, {
                 setting: D.s6.ACCESSIBILITY_MESSAGES,
                 children: (0, i.jsx)(et, {})
             }),
             (0, i.jsx)(en, {}),
-            (0, i.jsxs)(I.F, {
+            (0, i.jsxs)(f.F, {
                 setting: D.s6.ACCESSIBILITY_APPEARANCE_UPSELL,
                 children: [
                     (0, i.jsx)(d.FormDivider, { className: M.marginTop20 }),
@@ -120,7 +120,7 @@ function z() {
     let e = j.jU.useSetting(),
         [t] = s.useState(() => {
             let e = (0, T.e5)({
-                ...(0, C.ZP)({
+                ...(0, E.ZP)({
                     channelId: '1337',
                     content: Z.intl.formatToPlainString(Z.t.bB80LC, { previewLink: 'https://discord.com/accessibility' })
                 }),
@@ -161,7 +161,7 @@ function z() {
                 }),
                 (0, i.jsx)('div', {
                     className: F.previewMessage,
-                    children: (0, i.jsx)(E.Z, {
+                    children: (0, i.jsx)(C.Z, {
                         compact: e,
                         author: {
                             ...(0, _.ZH)(t),
@@ -205,7 +205,7 @@ function W() {
                 onValueChange: G,
                 onMarkerRender: (e) => ((100 * e) % 2 == 0 ? ''.concat(100 * e, '%') : void 0)
             }),
-            (0, i.jsx)(I.F, {
+            (0, i.jsx)(f.F, {
                 setting: D.s6.ACCESSIBILITY_SATURATION_CUSTOM_COLOR,
                 children: (0, i.jsx)(d.FormSwitch, {
                     hideBorder: !0,
@@ -272,12 +272,12 @@ function q() {
         ]
     });
 }
-function Q() {
+function X() {
     let e = (0, c.e7)([g.Z], () => g.Z.hideTags);
     return (0, i.jsx)(d.FormItem, {
         title: Z.intl.string(Z.t.UQt6dX),
         className: M.marginTop20,
-        children: (0, i.jsx)(I.F, {
+        children: (0, i.jsx)(f.F, {
             setting: D.s6.ACCESSIBILITY_TAGS_NAMES,
             children: (0, i.jsx)(d.FormSwitch, {
                 value: !e,
@@ -287,7 +287,7 @@ function Q() {
         })
     });
 }
-function X() {
+function Q() {
     let e = (0, c.e7)([g.Z], () => g.Z.syncProfileThemeWithUserTheme),
         t = s.useRef(null);
     return (
@@ -296,7 +296,7 @@ function X() {
             ref: t,
             title: Z.intl.string(Z.t.BT8Bmp),
             className: l()(M.marginTop20, F.syncProfileThemeWithUserTheme),
-            children: (0, i.jsx)(I.F, {
+            children: (0, i.jsx)(f.F, {
                 setting: D.s6.ACCESSIBILITY_PROFILE_COLORS_SYNC_THEMES,
                 children: (0, i.jsx)(d.FormSwitch, {
                     note: Z.intl.format(Z.t.u6UjrK, {
@@ -327,7 +327,7 @@ function J() {
     return (0, i.jsx)(d.FormItem, {
         title: Z.intl.string(Z.t.TYyfOz),
         className: M.marginTop20,
-        children: (0, i.jsx)(I.F, {
+        children: (0, i.jsx)(f.F, {
             setting: D.s6.ACCESSIBILITY_CONTRAST_SYNC_FORCED_COLORS,
             children: (0, i.jsx)(d.FormSwitch, {
                 value: t,
@@ -386,7 +386,7 @@ function $() {
                     children: Z.intl.string(Z.t['+Dx+HB'])
                 })
             }),
-            (0, i.jsx)(I.F, {
+            (0, i.jsx)(f.F, {
                 setting: D.s6.ACCESSIBILITY_REDUCED_MOTION_ENABLE,
                 children: (0, i.jsx)(d.FormSwitch, {
                     value: n,
@@ -394,22 +394,22 @@ function $() {
                     children: Z.intl.string(Z.t.b3XBzs)
                 })
             }),
-            (0, i.jsx)(I.F, {
+            (0, i.jsx)(f.F, {
                 setting: D.s6.ACCESSIBILITY_REDUCED_MOTION_AUTO_PLAY_GIFS,
                 children: (0, i.jsx)(d.FormSwitch, {
                     className: M.marginBottom20,
                     value: e,
-                    note: null != o ? (0, f.Z)(o) : void 0,
+                    note: null != o ? (0, I.Z)(o) : void 0,
                     onChange: j.QK.updateSetting,
                     children: Z.intl.string(Z.t.Iayoh4)
                 })
             }),
-            (0, i.jsx)(I.F, {
+            (0, i.jsx)(f.F, {
                 setting: D.s6.ACCESSIBILITY_REDUCED_MOTION_PLAY_ANIMATED_EMOJI,
                 children: (0, i.jsx)(d.FormSwitch, {
                     className: M.marginBottom20,
                     value: t,
-                    note: null != u ? (0, f.Z)(u) : void 0,
+                    note: null != u ? (0, I.Z)(u) : void 0,
                     onChange: j.Yk.updateSetting,
                     children: Z.intl.string(Z.t.iIaOlZ)
                 })
@@ -430,7 +430,7 @@ function ee() {
             (0, i.jsx)(d.FormText, {
                 type: d.FormText.Types.DESCRIPTION,
                 className: M.marginBottom8,
-                children: null != t ? (0, f.Z)(t) : Z.intl.string(Z.t.GRa6U1)
+                children: null != t ? (0, I.Z)(t) : Z.intl.string(Z.t.GRa6U1)
             }),
             (0, i.jsx)(d.RadioGroup, {
                 options: [
@@ -468,7 +468,7 @@ function et() {
                     className: M.marginBottom8,
                     children: Z.intl.string(Z.t.onqU6u)
                 }),
-                (0, i.jsx)(I.F, {
+                (0, i.jsx)(f.F, {
                     setting: D.s6.ACCESSIBILITY_MESSAGES_SEND_MESSAGE_BUTTON,
                     children: (0, i.jsx)(d.FormSwitch, {
                         className: M.marginTop20,
@@ -477,7 +477,7 @@ function et() {
                         children: Z.intl.string(Z.t['3Fztn5'])
                     })
                 }),
-                (0, i.jsx)(I.F, {
+                (0, i.jsx)(f.F, {
                     setting: D.s6.ACCESSIBILITY_MESSAGES_LEGACY_CHAT_INPUT,
                     children: (0, i.jsx)(d.FormSwitch, {
                         className: M.marginTop8,
@@ -504,7 +504,7 @@ function en() {
     return m.Zh
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(I.F, {
+                  (0, i.jsx)(f.F, {
                       setting: D.s6.ACCESSIBILITY_TEXT_TO_SPEECH,
                       children: (0, i.jsxs)(d.FormItem, {
                           className: M.marginTop20,
@@ -513,7 +513,7 @@ function en() {
                                   className: M.marginBottom8,
                                   children: Z.intl.string(Z.t.VpSKeH)
                               }),
-                              (0, i.jsx)(I.F, {
+                              (0, i.jsx)(f.F, {
                                   setting: D.s6.ACCESSIBILITY_TEXT_TO_SPEECH_TTS_COMMAND,
                                   children: (0, i.jsx)(d.FormSwitch, {
                                       className: M.marginTop20,
@@ -525,7 +525,7 @@ function en() {
                           ]
                       })
                   }),
-                  (0, i.jsx)(I.F, {
+                  (0, i.jsx)(f.F, {
                       setting: D.s6.ACCESSIBILITY_TEXT_TO_SPEECH_RATE,
                       children: (0, i.jsxs)(d.FormItem, {
                           className: M.marginTop20,

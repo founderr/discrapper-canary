@@ -19,11 +19,11 @@ t.Z = i.memo(
     i.forwardRef(function (e, t) {
         let { disabled: n, type: a } = e,
             [v, I] = i.useState(!1),
-            b = (0, l.e7)([f.Z], () => {
+            T = (0, l.e7)([f.Z], () => {
                 var e, t;
                 return v && Object.values(null !== (t = null === (e = f.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2;
             }),
-            [T, S, y] = (0, d.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.X),
+            [b, S, y] = (0, d.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.X),
             A = i.useRef(0),
             N = i.useCallback(() => {
                 I(!0),
@@ -41,9 +41,9 @@ t.Z = i.memo(
             }, [a]),
             { Component: R, events: O, play: D } = (0, u.V)();
         if (n) return null;
-        let L = T === m.X1.GIF && S === a;
+        let L = b === m.X1.GIF && S === a;
         return (0, r.jsx)(c.Tooltip, {
-            text: b ? g.intl.string(g.t.mE2e8P) : null,
+            text: T ? g.intl.string(g.t.mE2e8P) : null,
             forceOpen: !0,
             children: (e) =>
                 (0, r.jsx)('div', {

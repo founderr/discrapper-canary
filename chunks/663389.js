@@ -16,8 +16,8 @@ let _ = f.QZA.CLOSED,
     E = {},
     v = null,
     I = null,
-    b = !1,
     T = !1,
+    b = !1,
     S = null,
     y = null,
     A = null,
@@ -32,7 +32,7 @@ function O(e) {
         (C = null !== (n = e.section) && void 0 !== n ? n : h),
         null != e.subsection && null != h && (m[h] = e.subsection),
         null != e.scrollPosition && null != h && (g[h] = e.scrollPosition),
-        (T = !!e.openWithoutBackstack),
+        (b = !!e.openWithoutBackstack),
         (_ = f.QZA.OPEN),
         (E = {}),
         (I = {
@@ -55,7 +55,7 @@ function O(e) {
         (R = null !== (s = e.impressionSource) && void 0 !== s ? s : null);
 }
 function D() {
-    (_ = f.QZA.CLOSED), (b = !1), (v = null), (C = null), (I = null), (p = null), (h = null), (m = {}), (g = {}), (y = null), (A = null), (N = []), (R = null);
+    (_ = f.QZA.CLOSED), (T = !1), (v = null), (C = null), (I = null), (p = null), (h = null), (m = {}), (g = {}), (y = null), (A = null), (N = []), (R = null);
 }
 function L() {
     (_ = f.QZA.OPEN), (E = {});
@@ -68,7 +68,7 @@ class x extends (s = u.ZP.Store) {
         return null != I && null != v && (!!this.isOpen() || S === f.cII.USER_SETTINGS) && !l().isEqual(I, v);
     }
     isOpen() {
-        return b;
+        return T;
     }
     getPreviousSection() {
         return p;
@@ -83,7 +83,7 @@ class x extends (s = u.ZP.Store) {
         return null != h ? g[h] : null;
     }
     shouldOpenWithoutBackstack() {
-        return T;
+        return b;
     }
     getProps() {
         return {
@@ -94,7 +94,7 @@ class x extends (s = u.ZP.Store) {
             settings: I,
             errors: E,
             hasChanges: this.hasChanges(),
-            openWithoutBackstack: T,
+            openWithoutBackstack: b,
             analyticsLocation: A,
             analyticsLocations: N,
             initialSection: C,
@@ -116,7 +116,7 @@ class x extends (s = u.ZP.Store) {
         : (r[i] = a),
     (t.Z = new x(c.Z, {
         USER_SETTINGS_MODAL_OPEN: function (e) {
-            (b = !0), O(e);
+            (T = !0), O(e);
         },
         USER_SETTINGS_MODAL_INIT: O,
         USER_SETTINGS_MODAL_CLOSE: D,

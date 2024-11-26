@@ -3,10 +3,10 @@ n.d(t, {
         return y;
     },
     _1: function () {
-        return b;
+        return T;
     },
     jd: function () {
-        return T;
+        return b;
     }
 }),
     n(627341);
@@ -29,8 +29,8 @@ var i = n(120356),
     E = n(228168),
     v = n(388032),
     I = n(518919);
-let b = 2700,
-    T = '> -# *',
+let T = 2700,
+    b = '> -# *',
     S = (e, t) =>
         (0, s.EQ)({
             interactionType: e,
@@ -80,7 +80,7 @@ let b = 2700,
             )
             .exhaustive();
 function y(e) {
-    let { user: t, sourceType: n, isVisible: i, isExpandable: s, interactionSourceId: b, moreButton: T } = e,
+    let { user: t, sourceType: n, isVisible: i, isExpandable: s, interactionSourceId: T, moreButton: b } = e,
         { trackUserProfileAction: y } = (0, _.KZ)(),
         { pressReact: A, pressReply: N } = (0, h.Q)(n),
         C = (0, o.e7)([f.default], () => f.default.getId() === t.id),
@@ -110,7 +110,7 @@ function y(e) {
                                       D({
                                           interactionType: E.P.REACT,
                                           interactionSource: n,
-                                          interactionSourceId: b
+                                          interactionSourceId: T
                                       }),
                                   O === E.y0.BITE_SIZE && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
                           },
@@ -135,7 +135,7 @@ function y(e) {
                                       D({
                                           interactionType: E.P.REPLY,
                                           interactionSource: n,
-                                          interactionSourceId: b
+                                          interactionSourceId: T
                                       }),
                                   O === E.y0.BITE_SIZE && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
                           },
@@ -148,13 +148,13 @@ function y(e) {
                           })
                       })
                   }),
-                  null != T &&
+                  null != b &&
                       (0, r.jsx)(u.TooltipContainer, {
                           text: v.intl.string(v.t.UKOtz8),
                           shouldShow: i,
                           delay: 0,
                           'aria-label': !1,
-                          children: T
+                          children: b
                       })
               ]
           });

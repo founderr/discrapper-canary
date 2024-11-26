@@ -16,8 +16,8 @@ var a,
     E = n(65154);
 let v = [],
     I = null,
-    b = null,
     T = null,
+    b = null,
     S = null,
     y = !1,
     A = !1;
@@ -72,7 +72,7 @@ function N(e, t) {
             );
         }),
         a.on(d.z.Speaking, (e, t) => {
-            null == T || T.setSpeaking(e, t);
+            null == b || b.setSpeaking(e, t);
         }),
         a.on(d.z.Flags, (e, t) => {
             c.Z.wait(() => {
@@ -131,7 +131,7 @@ function N(e, t) {
                 });
             });
         }),
-        (T = new f.Z(h.default.getId(), t)),
+        (b = new f.Z(h.default.getId(), t)),
         (S = null),
         (y = !1),
         (A = !1),
@@ -140,7 +140,7 @@ function N(e, t) {
 }
 function C() {
     if (null == r) return !1;
-    (S = r.getDuration()), r.destroy(), (r = null), (T = null);
+    (S = r.getDuration()), r.destroy(), (r = null), (b = null);
 }
 function R() {
     I = null;
@@ -173,10 +173,10 @@ class L extends (a = u.ZP.Store) {
         return I;
     }
     getLastSessionVoiceChannelId() {
-        return b;
+        return T;
     }
     setLastSessionVoiceChannelId(e) {
-        b = e;
+        T = e;
     }
     getGuildId() {
         return null == r ? void 0 : r.guildId;
@@ -216,7 +216,7 @@ class L extends (a = u.ZP.Store) {
         return null == r ? void 0 : r.getPacketStats();
     }
     getVoiceStateStats() {
-        return null == T ? void 0 : T.getStats();
+        return null == b ? void 0 : b.getStats();
     }
     getWasEverMultiParticipant() {
         return y;
@@ -253,10 +253,10 @@ let x = new L(
         ? {}
         : {
               CONNECTION_OPEN: function (e) {
-                  return (i = e.sessionId), (I = null), (b = null), C(), !1;
+                  return (i = e.sessionId), (I = null), (T = null), C(), !1;
               },
               CONNECTION_CLOSED: function () {
-                  (i = null), (I = null), (b = null), C();
+                  (i = null), (I = null), (T = null), C();
               },
               RTC_CONNECTION_STATE: function (e) {
                   return e.state === g.hes.RTC_CONNECTED && (A = !0), !0;
@@ -277,11 +277,11 @@ let x = new L(
                   let { voiceStates: t } = e;
                   return t.reduce((e, t) => {
                       var n, a, s;
-                      if ((null == T || T.updateVoiceStates(t.userId, t.channelId), (y = y || (null !== (n = null == T ? void 0 : T.getStats().max_voice_state_count) && void 0 !== n ? n : 0) > 1), h.default.getId() !== t.userId)) return !1;
-                      if (null != r) t.sessionId === i ? ((null != t.guildId && t.guildId === r.guildId) || (null == t.guildId && t.channelId === r.channelId) ? (null == t.channelId ? C() : (r.channelId = t.channelId)) : ((t.guildId !== r.guildId && null == t.channelId) || C(), null != t.channelId && ((I = null), (b = null), (r = N(t.guildId, t.channelId)), (y = (null !== (a = null == T ? void 0 : T.getStats().max_voice_state_count) && void 0 !== a ? a : 0) > 1)))) : t.guildId === r.guildId && (!(null != _.Z.getAwaitingRemoteSessionInfo() && null != _.Z.getRemoteSessionId()) && (I = r.channelId), C());
+                      if ((null == b || b.updateVoiceStates(t.userId, t.channelId), (y = y || (null !== (n = null == b ? void 0 : b.getStats().max_voice_state_count) && void 0 !== n ? n : 0) > 1), h.default.getId() !== t.userId)) return !1;
+                      if (null != r) t.sessionId === i ? ((null != t.guildId && t.guildId === r.guildId) || (null == t.guildId && t.channelId === r.channelId) ? (null == t.channelId ? C() : (r.channelId = t.channelId)) : ((t.guildId !== r.guildId && null == t.channelId) || C(), null != t.channelId && ((I = null), (T = null), (r = N(t.guildId, t.channelId)), (y = (null !== (a = null == b ? void 0 : b.getStats().max_voice_state_count) && void 0 !== a ? a : 0) > 1)))) : t.guildId === r.guildId && (!(null != _.Z.getAwaitingRemoteSessionInfo() && null != _.Z.getRemoteSessionId()) && (I = r.channelId), C());
                       else {
                           if (t.sessionId !== i || null == t.channelId) return e;
-                          (I = null), (b = null), (r = N(t.guildId, t.channelId)), (y = (null !== (s = null == T ? void 0 : T.getStats().max_voice_state_count) && void 0 !== s ? s : 0) > 1);
+                          (I = null), (T = null), (r = N(t.guildId, t.channelId)), (y = (null !== (s = null == b ? void 0 : b.getStats().max_voice_state_count) && void 0 !== s ? s : 0) > 1);
                       }
                       return !0;
                   }, !1);
@@ -298,7 +298,7 @@ let x = new L(
               CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: R,
               REMOTE_SESSION_CONNECT: R,
               CLEAR_LAST_SESSION_VOICE_CHANNEL_ID: function () {
-                  b = null;
+                  T = null;
               },
               GUILD_DELETE: function (e) {
                   let { guild: t } = e;

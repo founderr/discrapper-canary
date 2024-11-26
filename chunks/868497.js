@@ -1,31 +1,31 @@
 r.d(t, {
     m: function () {
-        return N;
+        return A;
     }
 });
-var n = r(873567),
-    a = r(370541),
+var a = r(873567),
+    n = r(370541),
     _ = r(285883),
     o = r(573736),
-    i = r(263449),
-    E = r(988097),
+    E = r(263449),
+    i = r(988097),
     c = r(73453),
     s = r(696486),
     l = r(789112),
-    u = r(793373),
-    I = r(152228),
+    I = r(793373),
+    u = r(152228),
     R = r(305625);
-function N(e, t, r, N, A = 'auto.http.browser') {
+function A(e, t, r, A, T = 'auto.http.browser') {
     if (!e.fetchData) return;
-    let T = (0, c.z)() && t(e.fetchData.url);
-    if (e.endTimestamp && T) {
+    let N = (0, c.z)() && t(e.fetchData.url);
+    if (e.endTimestamp && N) {
         let t = e.fetchData.__span;
         if (!t) return;
-        let r = N[t];
+        let r = A[t];
         r &&
             ((function (e, t) {
                 if (t.response) {
-                    (0, u.Q0)(e, t.response.status);
+                    (0, I.Q0)(e, t.response.status);
                     let r = t.response && t.response.headers && t.response.headers.get('content-length');
                     if (r) {
                         let t = parseInt(r);
@@ -34,84 +34,84 @@ function N(e, t, r, N, A = 'auto.http.browser') {
                 } else
                     t.error &&
                         e.setStatus({
-                            code: u.jt,
+                            code: I.jt,
                             message: 'internal_error'
                         });
                 e.end();
             })(r, e),
-            delete N[t]);
+            delete A[t]);
         return;
     }
-    let d = (0, i.nZ)(),
-        L = (0, i.s3)(),
-        { method: f, url: O } = e.fetchData,
+    let d = (0, E.nZ)(),
+        f = (0, E.s3)(),
+        { method: O, url: L } = e.fetchData,
         p = (function (e) {
             try {
                 return new URL(e).href;
             } catch (e) {
                 return;
             }
-        })(O),
-        h = p ? (0, n.en)(p).host : void 0,
-        S = !!(0, s.HN)(),
-        D =
-            T && S
-                ? (0, I.qp)({
-                      name: `${f} ${O}`,
+        })(L),
+        h = p ? (0, a.en)(p).host : void 0,
+        D = !!(0, s.HN)(),
+        S =
+            N && D
+                ? (0, u.qp)({
+                      name: `${O} ${L}`,
                       attributes: {
-                          url: O,
+                          url: L,
                           type: 'fetch',
-                          'http.method': f,
+                          'http.method': O,
                           'http.url': p,
                           'server.address': h,
-                          [E.S3]: A,
-                          [E.$J]: 'http.client'
+                          [i.S3]: T,
+                          [i.$J]: 'http.client'
                       }
                   })
                 : new l.b();
-    if (((e.fetchData.__span = D.spanContext().spanId), (N[D.spanContext().spanId] = D), r(e.fetchData.url) && L)) {
+    if (((e.fetchData.__span = S.spanContext().spanId), (A[S.spanContext().spanId] = S), r(e.fetchData.url) && f)) {
         let t = e.args[0];
         e.args[1] = e.args[1] || {};
         let r = e.args[1];
-        r.headers = (function (e, t, r, n, E) {
+        r.headers = (function (e, t, r, a, i) {
             let {
                     traceId: c,
                     spanId: l,
-                    sampled: u,
-                    dsc: I
+                    sampled: I,
+                    dsc: u
                 } = {
-                    ...(0, i.aF)().getPropagationContext(),
+                    ...(0, E.aF)().getPropagationContext(),
                     ...r.getPropagationContext()
                 },
-                N = E ? (0, s.Hb)(E) : (0, a.$p)(c, l, u),
-                A = (0, _.IQ)(I || (E ? (0, R.jC)(E) : (0, R._l)(c, t))),
-                T = n.headers || ('undefined' != typeof Request && (0, o.V9)(e, Request) ? e.headers : void 0);
-            if (!T)
+                A = i ? (0, s.Hb)(i) : (0, n.$p)(c, l, I),
+                T = (0, _.IQ)(u || (i ? (0, R.jC)(i) : (0, R._l)(c, t))),
+                N = a.headers || ('undefined' != typeof Request && (0, o.V9)(e, Request) ? e.headers : void 0);
+            if (!N)
                 return {
-                    'sentry-trace': N,
-                    baggage: A
+                    'sentry-trace': A,
+                    baggage: T
                 };
-            if ('undefined' != typeof Headers && (0, o.V9)(T, Headers)) {
-                let e = new Headers(T);
-                return e.append('sentry-trace', N), A && e.append(_.bU, A), e;
+            if ('undefined' != typeof Headers && (0, o.V9)(N, Headers)) {
+                let e = new Headers(N);
+                return e.append('sentry-trace', A), T && e.append(_.bU, T), e;
             }
-            if (Array.isArray(T)) {
-                let e = [...T, ['sentry-trace', N]];
-                return A && e.push([_.bU, A]), e;
+            if (Array.isArray(N)) {
+                let e = [...N, ['sentry-trace', A]];
+                return T && e.push([_.bU, T]), e;
             } else {
-                let e = 'baggage' in T ? T.baggage : void 0,
+                let e = 'baggage' in N ? N.baggage : void 0,
                     t = [];
                 return (
                     Array.isArray(e) ? t.push(...e) : e && t.push(e),
-                    A && t.push(A),
+                    T && t.push(T),
                     {
-                        ...T,
-                        'sentry-trace': N,
+                        ...N,
+                        'sentry-trace': A,
                         baggage: t.length > 0 ? t.join(',') : void 0
                     }
                 );
             }
-        })(t, L, d, r, (0, c.z)() && S ? D : void 0);
+        })(t, f, d, r, (0, c.z)() && D ? S : void 0);
     }
-    return D;
+    return S;
 }

@@ -17,8 +17,8 @@ var r,
     E = n(780570),
     v = n(358085),
     I = n(804739),
-    b = n(941128),
-    T = n(391690),
+    T = n(941128),
+    b = n(391690),
     S = n(981631);
 let y = 1 * g.Z.Millis.MINUTE;
 (r || (r = {})).DISPATCH_APPLICATION_PROGRESS = 'dispatch_application_progress';
@@ -31,8 +31,8 @@ let A = {},
     L = [],
     x = [],
     w = [],
-    M = !1;
-function P(e) {
+    P = !1;
+function M(e) {
     return e.type === S.vxO.INSTALLING || e.type === S.vxO.UPDATING || e.type === S.vxO.REPAIRING ? e.networkProgress : null;
 }
 function k(e) {
@@ -97,7 +97,7 @@ class V extends (i = c.ZP.Store) {
     }
     isInstalled(e, t) {
         let n = A[(0, E.Tu)(e, t)];
-        return null != n ? n.type !== S.vxO.UNINSTALLING : T.Z.shouldBeInstalled(e, t);
+        return null != n ? n.type !== S.vxO.UNINSTALLING : b.Z.shouldBeInstalled(e, t);
     }
     supportsCloudSync(e, t) {
         null == t && (t = e);
@@ -253,7 +253,7 @@ class V extends (i = c.ZP.Store) {
                         })(r[e][t])),
                         null != A[s])
                     ) {
-                        let e = F(n, s, P);
+                        let e = F(n, s, M);
                         e > 0 && B((R += e));
                         let r = F(n, s, k);
                         r > 0 && Z((O += r));
@@ -271,9 +271,9 @@ class V extends (i = c.ZP.Store) {
                                 }
                         }
                     }
-                    if (!M) {
+                    if (!P) {
                         let r = f.Z.fileManager.dirname(n[s].installPath);
-                        T.Z.getInstallationPath(e, t) !== r &&
+                        b.Z.getInstallationPath(e, t) !== r &&
                             d.Z.wait(() => {
                                 d.Z.dispatch({
                                     type: 'DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS',
@@ -282,10 +282,10 @@ class V extends (i = c.ZP.Store) {
                                     installationPath: r
                                 });
                             }),
-                            -1 === b.Z.getQueuePosition(e, t) &&
+                            -1 === T.Z.getQueuePosition(e, t) &&
                                 (n[s].type === S.vxO.INSTALLING || n[s].type === S.vxO.UPDATING) &&
                                 h.Z.hasApplication(e, t) &&
-                                T.Z.shouldBeInstalled(e, t) &&
+                                b.Z.shouldBeInstalled(e, t) &&
                                 d.Z.wait(() => {
                                     d.Z.dispatch({
                                         type: 'DISPATCH_APPLICATION_UPDATE',
@@ -296,6 +296,6 @@ class V extends (i = c.ZP.Store) {
                                 });
                     }
                 }
-            !a && 'dispatch_application_progress' === _.Z.taskID && _.Z.clearProgress('dispatch_application_progress'), (A = n), (M = !0);
+            !a && 'dispatch_application_progress' === _.Z.taskID && _.Z.clearProgress('dispatch_application_progress'), (A = n), (P = !0);
         }
     }));

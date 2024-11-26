@@ -29,7 +29,7 @@ let p = 'GameStoreReportedGames',
     E = null !== (i = o.K.get(p)) && void 0 !== i ? i : {},
     v = '';
 let I = null;
-function b(e) {
+function T(e) {
     return {
         id: e.id,
         name: e.name,
@@ -42,15 +42,15 @@ function b(e) {
         supportsOutOfProcessOverlay: e.supportsOutOfProcessOverlay
     };
 }
-function T(e) {
-    let t = e instanceof d.Z ? b(e) : e;
+function b(e) {
+    let t = e instanceof d.Z ? T(e) : e;
     for (let n of (h.set(e.id, t), (m[e.name.toLowerCase()] = t), e.aliases)) m[n.toLowerCase()] = t;
     if ((0, f.isDesktop)()) for (let n of e.executables) g[n.name] = t;
 }
 class S extends (a = s.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        null != e && (null != e.detectableGamesEtag && (v = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach((e) => T(e)));
+        null != e && (null != e.detectableGamesEtag && (v = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach((e) => b(e)));
     }
     getState() {
         return (0, f.isDesktop)()
@@ -124,7 +124,7 @@ _(S, 'displayName', 'GameStore'),
                 };
             return {
                 detectableGamesEtag: e.detectableGamesEtag,
-                detectableGames: null !== (n = null === (t = e.detectableGames) || void 0 === t ? void 0 : t.map((e) => b(new d.Z(e)))) && void 0 !== n ? n : []
+                detectableGames: null !== (n = null === (t = e.detectableGames) || void 0 === t ? void 0 : t.map((e) => T(new d.Z(e)))) && void 0 !== n ? n : []
             };
         },
         (e) =>
@@ -138,7 +138,7 @@ _(S, 'displayName', 'GameStore'),
     (t.Z = new S(l.Z, {
         OVERLAY_INITIALIZE: function (e) {
             let { detectableApplications: t } = e;
-            for (let e of t) T(e);
+            for (let e of t) b(e);
         },
         GAMES_DATABASE_FETCH: function () {
             r = !0;
@@ -149,7 +149,7 @@ _(S, 'displayName', 'GameStore'),
         GAMES_DATABASE_UPDATE: function (e) {
             let { games: t, etag: n } = e;
             for (let e of (null != n && v !== n && (v = n), t))
-                T(
+                b(
                     (function (e) {
                         var t, n, r, i, a, s;
                         return {

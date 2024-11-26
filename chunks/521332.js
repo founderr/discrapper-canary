@@ -39,10 +39,10 @@ function g(e) {
 function E(e) {
     let { settingsUpsells: t, channelId: n, onModalClose: i, reportId: u, reportType: E, reportSubType: v } = e,
         I = (0, a.e7)([d.Z], () => d.Z.getChannel(n)),
-        b = (0, f.jc)(t, null == I ? void 0 : I.type),
-        T = (0, _.i_)(E, v, u),
+        T = (0, f.jc)(t, null == I ? void 0 : I.type),
+        b = (0, _.i_)(E, v, u),
         S = (0, c._p)({ location: 'settings-upsells-element' });
-    return 0 === b.length
+    return 0 === T.length
         ? null
         : (0, r.jsxs)('div', {
               className: m.container,
@@ -54,7 +54,7 @@ function E(e) {
                   }),
                   (0, r.jsx)('div', {
                       className: m.upsellsContainer,
-                      children: b.map((e, n) => {
+                      children: T.map((e, n) => {
                           let { getTitle: i, getDescription: a, onApply: s } = e;
                           return (0, r.jsx)(
                               g,
@@ -62,7 +62,7 @@ function E(e) {
                                   title: i(),
                                   description: a(),
                                   onButtonClick: s,
-                                  trackSettingsUpsellsAction: T(t[n])
+                                  trackSettingsUpsellsAction: b(t[n])
                               },
                               n
                           );

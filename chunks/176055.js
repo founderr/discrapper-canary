@@ -18,10 +18,10 @@ var i = n(200651),
     I = n(601964),
     C = n(430824),
     v = n(843445),
-    S = n(981631),
-    N = n(388032),
+    N = n(981631),
+    S = n(388032),
     T = n(106269);
-function A(e, t, n) {
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -46,12 +46,12 @@ class b extends r.PureComponent {
                       (0, i.jsx)('div', { className: T.dotOnline }),
                       (0, i.jsx)('span', {
                           className: T.memberText,
-                          children: N.intl.format(N.t['LC+S+v'], { membersOnline: t })
+                          children: S.intl.format(S.t['LC+S+v'], { membersOnline: t })
                       }),
                       (0, i.jsx)('div', { className: T.dotOffline }),
                       (0, i.jsx)('span', {
                           className: T.memberText,
-                          children: N.intl.format(N.t.zRl6XV, { count: e })
+                          children: S.intl.format(S.t.zRl6XV, { count: e })
                       })
                   ]
               });
@@ -60,7 +60,7 @@ class b extends r.PureComponent {
         let { guild: e, inChannel: t, isInGuild: n, isLurking: r, isAuthenticated: l, className: s, pageSize: o } = this.props;
         if (t && n) return null;
         let d = new I.ZP(e),
-            u = N.intl.string(N.t.pxwdrK),
+            u = S.intl.string(S.t.pxwdrK),
             h = this.handleJoinOrView,
             f = c.Button.Looks.FILLED,
             _ = c.Button.Colors.PRIMARY;
@@ -72,7 +72,7 @@ class b extends r.PureComponent {
                       (u = (0, i.jsxs)(p.Z, {
                           align: p.Z.Align.CENTER,
                           children: [
-                              (0, i.jsx)('div', { children: N.intl.string(N.t.cEnaW1) }),
+                              (0, i.jsx)('div', { children: S.intl.string(S.t.cEnaW1) }),
                               (0, i.jsx)(c.CheckmarkLargeIcon, {
                                   size: 'md',
                                   color: 'currentColor',
@@ -80,12 +80,12 @@ class b extends r.PureComponent {
                               })
                           ]
                       })))
-                    : r && t && (u = N.intl.string(N.t.XpeFYm))
-                : ((u = N.intl.string(N.t.dKhVQE)), (h = this.handleLogin)),
+                    : r && t && (u = S.intl.string(S.t.XpeFYm))
+                : ((u = S.intl.string(S.t.dKhVQE)), (h = this.handleLogin)),
             (0, i.jsxs)('div', {
                 className: a()(s, o === v.b.SMALL ? T.inviteSmall : T.inviteLarge),
                 children: [
-                    (0, i.jsx)(m.Z, { children: N.intl.string(N.t.s1KcLi) }),
+                    (0, i.jsx)(m.Z, { children: S.intl.string(S.t.s1KcLi) }),
                     (0, i.jsxs)('div', {
                         className: T.content,
                         children: [
@@ -127,7 +127,7 @@ class b extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            A(this, 'handleJoinOrView', async () => {
+            x(this, 'handleJoinOrView', async () => {
                 let { guild: e, skuId: t, isInGuild: n, isLurking: i } = this.props,
                     r = () => (0, E.X)(e.id);
                 if (i) (0, u.Oj)(t).then(r);
@@ -136,14 +136,14 @@ class b extends r.PureComponent {
                     try {
                         await d.Z.joinGuild(e.id, {
                             lurker: !0,
-                            source: S.vtS.APPLICATION_STORE
+                            source: N.vtS.APPLICATION_STORE
                         }),
                             r();
                     } catch {}
             }),
-            A(this, 'handleLogin', () => {
-                let e = { redirect_to: S.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId) };
-                (0, _.uL)(S.Z5c.LOGIN, { search: (0, s.stringify)(e) });
+            x(this, 'handleLogin', () => {
+                let e = { redirect_to: N.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId) };
+                (0, _.uL)(N.Z5c.LOGIN, { search: (0, s.stringify)(e) });
             });
     }
 }

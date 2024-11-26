@@ -17,8 +17,8 @@ let f = {},
     E = (0, c.isMac)() || (0, c.isMacWeb)() ? 'return' : 'enter',
     v = [...o.u.binds, 'mod+shift+[', 'mod+shift+]', 'mod+[', 'mod+]', 'alt+[', 'alt+]', 'ctrl+shift+tab', 'ctrl+tab', 'mod+n', 'mod+t', 'mod+shift+t', 'mod+plus', 'mod+minus', 'mod+0'].map((e) => e.replace('mod', m)),
     I = () => [],
-    b = [];
-function T(e) {
+    T = [];
+function b(e) {
     let t = [];
     for (let n of Object.values(e)) null != n && t.push(...n.binds);
     return t.map((e) => e.replace('mod', m));
@@ -39,7 +39,7 @@ function y(e) {
             -1 !== e &&
                 (!(function (e, t) {
                     let n = (e) => t(e, e.key);
-                    document.addEventListener(e, n), b.push(() => document.removeEventListener(e, n));
+                    document.addEventListener(e, n), T.push(() => document.removeEventListener(e, n));
                 })('keydown', n.keydown),
                 r.splice(e, 1)),
                 r.length > 0 && i.call(h, r, S(t, n.keydown), 'keydown');
@@ -59,7 +59,7 @@ function y(e) {
         checkDupes(e) {
             let t = new Set(),
                 n = [];
-            for (let r of T(e)) t.has(r) && n.push(r), t.add(r);
+            for (let r of b(e)) t.has(r) && n.push(r), t.add(r);
             n.length > 0 && new l.Z('Keybinds').warn('Duplicate keyboard shortcuts defined:', n);
         },
         setLayout(e) {
@@ -76,13 +76,13 @@ function y(e) {
             null != e && (f = e), this.disable(), this.enable();
         },
         disable() {
-            if (!!p) (p = !1), b.forEach((e) => e()), (b = []), h.reset();
+            if (!!p) (p = !1), T.forEach((e) => e()), (T = []), h.reset();
         },
         validateKeybind(e) {
             if (!!p && !!this.hasBind(e)) h.unbind(e);
         },
         hasBind(e) {
-            let t = T(f);
+            let t = b(f);
             return (e = (e = e.replace('meta', 'cmd')).replace(/right |left /i, '').trim()), t.includes(e);
         }
     });

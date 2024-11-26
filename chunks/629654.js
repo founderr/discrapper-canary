@@ -32,21 +32,21 @@ function p(e) {
         });
     }, [p, S]);
     let T = (0, r.e7)([a.Z], () => a.Z.useReducedMotion),
-        C = (0, c.g2)({ useReducedMotion: T });
+        E = (0, c.g2)({ useReducedMotion: T });
     return (0, i.jsxs)('div', {
         className: g.container,
         children: [
             (0, i.jsx)(l.Clickable, {
                 onClick: () => {
-                    x(), C.startAnimation(!1);
+                    x(), E.startAnimation(!1);
                 },
                 className: g.button,
                 'aria-label': 'Shuffle Preset',
-                children: C.render()
+                children: E.render()
             }),
             (0, i.jsxs)(l.Clickable, {
                 onClick: () => {
-                    x(), C.startAnimation(!1);
+                    x(), E.startAnimation(!1);
                 },
                 'aria-label': ''.concat((0, m._h)(p.presetName), ' - Click to Shuffle Preset'),
                 className: g.select,

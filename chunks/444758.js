@@ -16,11 +16,11 @@ var r = n(302454),
     E = n(594199),
     v = n(981631),
     I = n(388032);
-let b = (e) => {
+let T = (e) => {
     let t = u.Z.getChannel(e);
     return null == t ? void 0 : t.getGuildId();
 };
-function T(e) {
+function b(e) {
     return {
         type: 'guild',
         guildId: e.id,
@@ -123,7 +123,7 @@ function R(e, t, n, r, i) {
         channelId: t,
         messageId: n,
         originalLink: i,
-        inContent: null == a || s ? null : [T(a)],
+        inContent: null == a || s ? null : [b(a)],
         content: [
             S(
                 {
@@ -178,7 +178,7 @@ function O(e, t, n, r) {
     return {
         ...i,
         ...(function (e, t, n, r) {
-            let i = T(e),
+            let i = b(e),
                 a = S(t),
                 s = y(t.isForumPost);
             if (n && r) {
@@ -233,7 +233,7 @@ let D = {
                     id: r
                 };
             let i = A(r, n.mentionChannels);
-            return null == i ? R(null, r, null, b(n.channelId)) : O(i, null, b(n.channelId));
+            return null == i ? R(null, r, null, T(n.channelId)) : O(i, null, T(n.channelId));
         }
     },
     L = {
@@ -250,7 +250,7 @@ let D = {
                 s = e[3];
             if (null == a) return N(r);
             let o = A(a, null);
-            return null == o ? R(i, a, s, b(n.channelId), r) : O(o, s, b(n.channelId), r);
+            return null == o ? R(i, a, s, T(n.channelId), r) : O(o, s, T(n.channelId), r);
         }
     },
     x = {
@@ -265,9 +265,9 @@ let D = {
                 o = e[4];
             if (null == a || null == s) return N(r);
             let l = A(s, null);
-            if (null != l) return O(l, o, b(n.channelId), r);
+            if (null != l) return O(l, o, T(n.channelId), r);
             let u = A(a, null);
-            return null != u ? O(u, o, b(n.channelId), r) : R(i, a, o, b(n.channelId), r);
+            return null != u ? O(u, o, T(n.channelId), r) : R(i, a, o, T(n.channelId), r);
         }
     };
 t.Z = {

@@ -40,7 +40,7 @@ function I(e, t, n) {
         e
     );
 }
-function b(e) {
+function T(e) {
     var t, n, a, o;
     let { file: l } = e,
         [u, c] = i.useState(),
@@ -95,11 +95,11 @@ function b(e) {
         }
     });
 }
-class T extends i.Component {
+class b extends i.Component {
     render() {
         var e;
         if (this.props.upload.item.platform !== u.ow.WEB) return null;
-        if (this.props.upload.isImage) return (0, r.jsx)(b, { file: this.props.upload.item.file });
+        if (this.props.upload.isImage) return (0, r.jsx)(T, { file: this.props.upload.item.file });
         return (0, r.jsx)('div', { className: s()(E.icon, { [E[null !== (e = this.props.upload.classification) && void 0 !== e ? e : '']]: !0 }) });
     }
 }
@@ -136,7 +136,7 @@ class S extends i.Component {
                         (0, r.jsxs)('div', {
                             className: s()(E.file, { [E.expandable]: e.isImage }),
                             children: [
-                                (0, r.jsx)(T, { upload: e }),
+                                (0, r.jsx)(b, { upload: e }),
                                 (0, r.jsxs)('div', {
                                     className: E.description,
                                     children: [

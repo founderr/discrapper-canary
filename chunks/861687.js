@@ -25,8 +25,8 @@ var r,
     E = n(846027),
     v = n(304680),
     I = n(547727),
-    b = n(710845),
-    T = n(631053),
+    T = n(710845),
+    b = n(631053),
     S = n(42352),
     y = n(148959),
     A = n(926951),
@@ -39,8 +39,8 @@ n(527702);
 var L = n(615830),
     x = n(314897),
     w = n(592125),
-    M = n(131951),
-    P = n(19780),
+    P = n(131951),
+    M = n(19780),
     k = n(226961),
     U = n(936349),
     B = n(594174),
@@ -143,7 +143,7 @@ class es extends _.Z {
     sendSpeaking(e, t) {
         let n = this._socket;
         if (null == n || !this.shouldSendSpeaking(e, t)) return;
-        let r = M.Z.getPacketDelay();
+        let r = P.Z.getPacketDelay();
         n.speaking(e, r, t);
     }
     sendVideo(e, t, n, r) {
@@ -285,7 +285,7 @@ class es extends _.Z {
             );
             e && (n ? t.push('force_krisp_enabled') : t.push('force_krisp_disabled'));
         }
-        if ((M.Z.supports(en.AN.FIXED_KEYFRAME_INTERVAL) && t.push('fixed_keyframe_interval'), 0 !== this._supportedBandwidthEstimationExperiments.length)) {
+        if ((P.Z.supports(en.AN.FIXED_KEYFRAME_INTERVAL) && t.push('fixed_keyframe_interval'), 0 !== this._supportedBandwidthEstimationExperiments.length)) {
             let { enabled: e, fullname: n } = A.Z.getConfig(!0, this._supportedBandwidthEstimationExperiments);
             e && t.push(n);
         }
@@ -304,9 +304,9 @@ class es extends _.Z {
                 userId: this.userId,
                 sessionId: this.sessionId,
                 token: r,
-                maxDaveProtocolVersion: M.Z.getSupportedSecureFramesProtocolVersion(this.guildId),
-                video: M.Z.supports(en.AN.VIDEO),
-                streamParameters: M.Z.getVideoStreamParameters(this.context)
+                maxDaveProtocolVersion: P.Z.getSupportedSecureFramesProtocolVersion(this.guildId),
+                video: P.Z.supports(en.AN.VIDEO),
+                streamParameters: P.Z.getVideoStreamParameters(this.context)
             }),
             this.setState(et.hes.AUTHENTICATING);
     }
@@ -324,7 +324,7 @@ class es extends _.Z {
                     reason: r
                 }),
                 (this._encountered_socket_failure = !0)),
-            P.Z.getRemoteDisconnectVoiceChannelId() === this.channelId && (null === (l = this._connection) || void 0 === l || l.wasRemoteDisconnected());
+            M.Z.getRemoteDisconnectVoiceChannelId() === this.channelId && (null === (l = this._connection) || void 0 === l || l.wasRemoteDisconnected());
         let c = 'Force Close' !== r;
         if (c) {
             let e = this._backoff.fail(this.reconnect);
@@ -347,12 +347,12 @@ class es extends _.Z {
                                 participant_type: 'sender',
                                 guild_region: U.Z.getRegion(this.hostname),
                                 hostname: this.hostname,
-                                hardware_enabled: M.Z.getHardwareEncoding(),
+                                hardware_enabled: P.Z.getHardwareEncoding(),
                                 ...t,
                                 ...e.getNetworkStats(),
                                 ...e.getCodecUsageStats('sender', this.userId),
                                 ...this._soundshareStats.getStats(),
-                                device_performance_class: (0, T.Z)()
+                                device_performance_class: (0, b.Z)()
                             });
                     }),
                 e.getInboundParticipants().forEach((t) => {
@@ -367,14 +367,14 @@ class es extends _.Z {
                             participant_type: 'receiver',
                             guild_region: U.Z.getRegion(this.hostname),
                             hostname: this.hostname,
-                            hardware_enabled: M.Z.getHardwareEncoding(),
+                            hardware_enabled: P.Z.getHardwareEncoding(),
                             ...i,
                             ...e.getNetworkStats(),
                             ...e.getCodecUsageStats('receiver', t)
                         });
                 }));
             let t = U.Z.shouldIncludePreferredRegion() ? U.Z.getPreferredRegion() : null,
-                n = M.Z.getSettings(),
+                n = P.Z.getSettings(),
                 i = w.Z.getChannel(this.channelId);
             G.default.track(et.rMx.VOICE_DISCONNECT, {
                 ...this._getAnalyticsProperties(),
@@ -403,7 +403,7 @@ class es extends _.Z {
                 ping_bad_count: this._pingBadCount,
                 ping_timeout: this._pingTimeouts.length,
                 input_detected: this._inputDetected,
-                no_input_detected_notice: M.Z.getNoInputDetectedNotice(),
+                no_input_detected_notice: P.Z.getNoInputDetectedNotice(),
                 audio_input_mode: n.mode,
                 automatic_audio_input_sensitivity_enabled: n.modeOptions.autoThreshold,
                 audio_input_sensitivity: n.modeOptions.threshold,
@@ -417,18 +417,18 @@ class es extends _.Z {
                 encryption_mode: this._encryptionMode,
                 channel_count: this.channelIds.size,
                 input_device: this.getInputDeviceName(),
-                input_device_count: Object.keys(M.Z.getInputDevices()).length,
+                input_device_count: Object.keys(P.Z.getInputDevices()).length,
                 output_device: this.getOutputDeviceName(),
-                output_device_count: Object.keys(M.Z.getOutputDevices()).length,
-                device_performance_class: (0, T.Z)(),
+                output_device_count: Object.keys(P.Z.getOutputDevices()).length,
+                device_performance_class: (0, b.Z)(),
                 num_fast_udp_reconnects: null != this._connection ? (null === (u = this._connection) || void 0 === u ? void 0 : u.getNumFastUdpReconnects()) : null,
                 parent_media_session_id: this.parentMediaSessionId,
-                audio_subsystem: M.Z.getMediaEngine().getAudioSubsystem(),
-                audio_layer: M.Z.getMediaEngine().getAudioLayer(),
+                audio_subsystem: P.Z.getMediaEngine().getAudioSubsystem(),
+                audio_layer: P.Z.getMediaEngine().getAudioLayer(),
                 automatic_audio_subsystem: n.automaticAudioSubsystem
             });
             let a = this.getMediaSessionId();
-            M.Z.getMediaEngine()
+            P.Z.getMediaEngine()
                 .getCodecSurvey()
                 .then((e) => {
                     let t = JSON.parse(e);
@@ -468,7 +468,7 @@ class es extends _.Z {
                     quality: 100,
                     active: !1
                 });
-        let l = M.Z.getMediaEngine(),
+        let l = P.Z.getMediaEngine(),
             u = L.Z.getPersistentCodesEnabled(),
             c = null !== (o = x.default.getStaticAuthSessionId()) && void 0 !== o ? o : void 0,
             d = l.connect(this.context, this.userId, {
@@ -478,13 +478,13 @@ class es extends _.Z {
                 modes: r,
                 experiments: this._selectedExperiments,
                 streamParameters: a,
-                qosEnabled: M.Z.getQoS(),
+                qosEnabled: P.Z.getQoS(),
                 signingKeyId: u ? c : void 0,
                 ...this._getExtraConnectionOptions()
             });
-        d.setUseElectronVideo(l.supports(en.AN.ELECTRON_VIDEO)), M.Z.supports(en.AN.IMAGE_QUALITY_MEASUREMENT) && d.setVideoQualityMeasurement('imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec');
+        d.setUseElectronVideo(l.supports(en.AN.ELECTRON_VIDEO)), P.Z.supports(en.AN.IMAGE_QUALITY_MEASUREMENT) && d.setVideoQualityMeasurement('imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec');
         let f = ['unk'];
-        if ((M.Z.supports(en.AN.AMD_EXPERIMENTAL_RATE_CONTROL) && f.push('amdRelaxRc'), this.context === en.Yn.STREAM)) {
+        if ((P.Z.supports(en.AN.AMD_EXPERIMENTAL_RATE_CONTROL) && f.push('amdRelaxRc'), this.context === en.Yn.STREAM)) {
             let { nvMediumVbvSizeMs: e } = O.Z.getCurrentConfig({ location: 'handleReady' }, { autoTrackExposure: !0 });
             if (e > 0) {
                 f.push('nvRelaxRc=' + e);
@@ -604,7 +604,7 @@ class es extends _.Z {
                     var r, i;
                     let e = U.Z.shouldIncludePreferredRegion() ? U.Z.getPreferredRegion() : null;
                     if (this._connecting) {
-                        let t = M.Z.getSettings();
+                        let t = P.Z.getSettings();
                         G.default.track(et.rMx.VOICE_CONNECTION_SUCCESS, {
                             ...this._getAnalyticsProperties(),
                             hostname: this.hostname,
@@ -613,8 +613,8 @@ class es extends _.Z {
                             cloudflare_best_region: e,
                             connect_time: (0, h.zO)() - (this._connected ? this._connectStartTime : this._createdTime),
                             connect_count: this._connectCount,
-                            audio_subsystem: M.Z.getMediaEngine().getAudioSubsystem(),
-                            audio_layer: M.Z.getMediaEngine().getAudioLayer(),
+                            audio_subsystem: P.Z.getMediaEngine().getAudioSubsystem(),
+                            audio_layer: P.Z.getMediaEngine().getAudioLayer(),
                             automatic_audio_subsystem: t.automaticAudioSubsystem,
                             media_session_id: this.getMediaSessionId(),
                             ...this.stateHistory.getVoiceConnectionSuccessStats()
@@ -754,7 +754,7 @@ class es extends _.Z {
         }
     }
     _handleControlPing(e) {
-        !M.Z.supports(en.AN.NATIVE_PING) && this._handlePing(e);
+        !P.Z.supports(en.AN.NATIVE_PING) && this._handlePing(e);
     }
     _handlePing(e) {
         if (void 0 !== e) {
@@ -820,7 +820,7 @@ class es extends _.Z {
                     participant_type: 'receiver',
                     guild_region: U.Z.getRegion(this.hostname),
                     hostname: this.hostname,
-                    hardware_enabled: M.Z.getHardwareEncoding(),
+                    hardware_enabled: P.Z.getHardwareEncoding(),
                     ...t,
                     ...s.getNetworkStats(),
                     ...s.getCodecUsageStats('receiver', e)
@@ -1030,16 +1030,16 @@ class es extends _.Z {
     }
     getInputDeviceName() {
         var e;
-        let t = M.Z.getInputDeviceId();
-        return null === (e = M.Z.getInputDevices()[t]) || void 0 === e ? void 0 : e.name;
+        let t = P.Z.getInputDeviceId();
+        return null === (e = P.Z.getInputDevices()[t]) || void 0 === e ? void 0 : e.name;
     }
     getOutputDeviceName() {
         var e;
-        let t = M.Z.getOutputDeviceId();
-        return null === (e = M.Z.getOutputDevices()[t]) || void 0 === e ? void 0 : e.name;
+        let t = P.Z.getOutputDeviceId();
+        return null === (e = P.Z.getOutputDevices()[t]) || void 0 === e ? void 0 : e.name;
     }
     getGoLiveSource() {
-        return M.Z.getGoLiveSource();
+        return P.Z.getGoLiveSource();
     }
     constructor({ userId: e, sessionId: t, guildId: n, channelId: r, context: i = en.Yn.DEFAULT, rtcServerId: a, parentMediaSessionId: s }) {
         var l, u;
@@ -1177,7 +1177,7 @@ class es extends _.Z {
                 null === (t = this.getOrCreateVideoQuality()) || void 0 === t || t.setWindowOcclusionState(!e);
             }),
             (this.context = i),
-            (this.logger = new b.Z('RTCConnection('.concat(null !== (l = null != a ? a : n) && void 0 !== l ? l : r, ', ').concat(this.context, ')'))),
+            (this.logger = new T.Z('RTCConnection('.concat(null !== (l = null != a ? a : n) && void 0 !== l ? l : r, ', ').concat(this.context, ')'))),
             this.logger.enableNativeLogger(!0),
             (this.userId = e),
             (this.sessionId = t),
@@ -1227,7 +1227,7 @@ class es extends _.Z {
             (this._mlsFailures = {}),
             (this._lastSentSpeakingStatus = 0),
             (this._lastSentSSRC = void 0);
-        let c = M.Z.supports(en.AN.FIRST_FRAME_CALLBACK) && M.Z.supports(en.AN.REMOTE_USER_MULTI_STREAM);
+        let c = P.Z.supports(en.AN.FIRST_FRAME_CALLBACK) && P.Z.supports(en.AN.REMOTE_USER_MULTI_STREAM);
         if (i === en.Yn.DEFAULT) {
             let t = (null === (u = w.Z.getChannel(this.channelId)) || void 0 === u ? void 0 : u.type) === et.d4z.GUILD_STAGE_VOICE;
             (this._localMediaSinkWantsManager = new z.ZP(e, t, c)),
@@ -1264,7 +1264,7 @@ class es extends _.Z {
             (0, V.isDesktop)() && (this.powerMonitorListener = j.Z.remotePowerMonitor.on('resume', this._handlePowerResume)),
             (this._supportedBandwidthEstimationExperiments = []),
             (this._bandwidthEstimationExperiment = null),
-            M.Z.getMediaEngine().getSupportedBandwidthEstimationExperiments((e) => {
+            P.Z.getMediaEngine().getSupportedBandwidthEstimationExperiments((e) => {
                 this._supportedBandwidthEstimationExperiments = e;
             });
     }

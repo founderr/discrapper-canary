@@ -24,7 +24,7 @@ n.d(t, {
         return I;
     },
     b9: function () {
-        return b;
+        return T;
     },
     cV: function () {
         return d;
@@ -164,6 +164,6 @@ function v() {
 function I() {
     i.Z.dispatch({ type: 'GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING' });
 }
-function b() {
+function T() {
     i.Z.dispatch({ type: 'GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS' });
 }

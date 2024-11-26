@@ -3,7 +3,7 @@ n.d(t, {
         return U;
     },
     AB: function () {
-        return P;
+        return M;
     },
     JS: function () {
         return w;
@@ -18,7 +18,7 @@ n.d(t, {
         return G;
     },
     v_: function () {
-        return M;
+        return P;
     },
     yw: function () {
         return k;
@@ -42,8 +42,8 @@ var r = n(392711),
     E = n(19780),
     v = n(306680),
     I = n(944486),
-    b = n(914010),
-    T = n(9156),
+    T = n(914010),
+    b = n(9156),
     S = n(594174),
     y = n(979651),
     A = n(626135),
@@ -86,9 +86,9 @@ function x(e) {
 function w(e) {
     if (null == e) return null;
     let t = c.Z.getChannel(e);
-    return null == t ? null : M(t);
+    return null == t ? null : P(t);
 }
-function M(e) {
+function P(e) {
     var t;
     if (null == e) return null;
     let n = !1,
@@ -109,7 +109,7 @@ function M(e) {
         channel_hidden: n
     };
 }
-function P(e) {
+function M(e) {
     if (null == e) return null;
     let t = c.Z.getChannel(e);
     if (null == t) return null;
@@ -130,7 +130,7 @@ function k(e) {
         o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (A.default.isThrottled(e)) return;
     let l = !('location' in s) || s.location !== O.Sbl.GUILD_CREATE_INVITE_SUGGESTION,
-        u = 'guild_id' in s ? s.guild_id : l ? b.Z.getGuildId() : null,
+        u = 'guild_id' in s ? s.guild_id : l ? T.Z.getGuildId() : null,
         d = 'channel_id' in s ? s.channel_id : l ? I.Z.getChannelId(u) : null,
         f = c.Z.getChannel(d);
     let _ = ((t = f), (n = u), null == t ? (null != n ? n : null) : t.isPrivate() ? null : null !== (i = null !== (r = t.getGuildId()) && void 0 !== r ? r : n) && void 0 !== i ? i : null);
@@ -143,7 +143,7 @@ function k(e) {
                   channel_static_route: d,
                   channel_hidden: !1
               })
-            : M(f))
+            : P(f))
     };
     A.default.track(e, p, { flush: o });
 }
@@ -167,16 +167,16 @@ function U(e) {
         channel_id: e,
         channel_was_unread: r.unread,
         channel_mention_count: r.mentionCount,
-        channel_is_muted: T.ZP.isChannelMuted(t.guild_id, t.id),
+        channel_is_muted: b.ZP.isChannelMuted(t.guild_id, t.id),
         channel_is_nsfw: t.isNSFW(),
-        channel_resolved_unread_setting: T.ZP.resolveUnreadSetting(t),
-        channel_preset: (0, o.gs)(T.ZP.resolveUnreadSetting(t), T.ZP.resolvedMessageNotifications(t)),
+        channel_resolved_unread_setting: b.ZP.resolveUnreadSetting(t),
+        channel_preset: (0, o.gs)(b.ZP.resolveUnreadSetting(t), b.ZP.resolvedMessageNotifications(t)),
         guild_id: t.guild_id,
         guild_was_unread: r.guildUnread,
         guild_mention_count: r.guildMentionCount,
-        guild_is_muted: T.ZP.isMuted(t.guild_id),
-        guild_resolved_unread_setting: T.ZP.resolveGuildUnreadSetting(n),
-        guild_preset: (0, o.gs)(T.ZP.resolveGuildUnreadSetting(n), T.ZP.getMessageNotifications(t.guild_id)),
+        guild_is_muted: b.ZP.isMuted(t.guild_id),
+        guild_resolved_unread_setting: b.ZP.resolveGuildUnreadSetting(n),
+        guild_preset: (0, o.gs)(b.ZP.resolveGuildUnreadSetting(n), b.ZP.getMessageNotifications(t.guild_id)),
         parent_id: t.parent_id,
         parent_channel_type: t.parentChannelThreadType,
         has_pending_member_action: (0, s.P)(t.guild_id, e),

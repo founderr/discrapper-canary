@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return T;
     }
 });
 var r = n(200651),
@@ -59,10 +59,10 @@ function I(e) {
         })
     );
 }
-function b(e) {
+function T(e) {
     let { reply: t, chatInputType: n } = e,
         { channel: i, message: a, shouldMention: u, showMentionToggle: p } = t,
-        { nick: b, colorString: T, colorRoleName: S } = (0, c.ZP)(a),
+        { nick: T, colorString: b, colorRoleName: S } = (0, c.ZP)(a),
         y = (function (e, t) {
             let n = e.id,
                 r = t.id;
@@ -113,8 +113,8 @@ function b(e) {
                                             l.NameWithRole,
                                             {
                                                 className: v.name,
-                                                name: b,
-                                                color: T,
+                                                name: T,
+                                                color: b,
                                                 roleName: S
                                             },
                                             t

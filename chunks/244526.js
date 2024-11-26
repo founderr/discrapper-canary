@@ -19,7 +19,7 @@ var i,
     x = n(122289),
     S = n(624138),
     T = n(388032),
-    C = n(506850);
+    E = n(506850);
 class _ extends (l = o.PureComponent) {
     get typeString() {
         let { paymentSource: e } = this.props;
@@ -85,7 +85,7 @@ class _ extends (l = o.PureComponent) {
     renderDescription() {
         let { paymentSource: e, descriptionClassName: t } = this.props;
         return (0, a.jsx)(u.Text, {
-            className: d()(C.description, t),
+            className: d()(E.description, t),
             variant: 'text-md/semibold',
             children: this.getLabel(e)
         });
@@ -119,7 +119,7 @@ class _ extends (l = o.PureComponent) {
                 s && (0, a.jsx)(g.ZP, { type: this.typeString }),
                 (0, a.jsxs)(h.Z, {
                     direction: h.Z.Direction.VERTICAL,
-                    className: C.descriptionWrapper,
+                    className: E.descriptionWrapper,
                     children: [
                         (0, a.jsxs)(h.Z, {
                             align: h.Z.Align.CENTER,
@@ -127,19 +127,19 @@ class _ extends (l = o.PureComponent) {
                                 this.renderDescription(),
                                 r && e
                                     ? (0, a.jsx)('div', {
-                                          className: C.defaultIndicator,
+                                          className: E.defaultIndicator,
                                           children: T.intl.string(T.t.bBvAEB)
                                       })
                                     : null,
                                 i
                                     ? (0, a.jsx)('div', {
-                                          className: C.premiumIndicator,
+                                          className: E.premiumIndicator,
                                           children: T.intl.string(T.t.YCrcPD)
                                       })
                                     : null,
                                 r && t.invalid
                                     ? (0, a.jsx)('div', {
-                                          className: C.invalidIndicator,
+                                          className: E.invalidIndicator,
                                           children: T.intl.string(T.t['851k9/'])
                                       })
                                     : null
@@ -147,7 +147,7 @@ class _ extends (l = o.PureComponent) {
                         }),
                         n && null != l
                             ? (0, a.jsx)('div', {
-                                  className: C.subText,
+                                  className: E.subText,
                                   children: l
                               })
                             : null

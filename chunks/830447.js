@@ -29,7 +29,7 @@ var r = n(200651),
     E = n(450793);
 function v(e) {
     var t;
-    let { navId: n, variant: a = 'flexible', hideScroller: o = !1, className: f, children: v, onClose: I, onSelect: T } = e,
+    let { navId: n, variant: a = 'flexible', hideScroller: o = !1, className: f, children: v, onClose: I, onSelect: b } = e,
         S = (function e(t) {
             return (function e(t) {
                 return null == t
@@ -166,7 +166,7 @@ function v(e) {
     (0, c.T)(R);
     let O = o ? d.u2 : d.zJ;
     return (0, r.jsx)(m.r.Provider, {
-        value: T,
+        value: b,
         children: (0, r.jsx)('div', {
             className: s()(E.menu, E[a], f),
             ...C.getContainerProps(),
@@ -178,7 +178,7 @@ function v(e) {
                     0 === S.length &&
                         (0, r.jsx)(g.ck, {
                             disabled: !0,
-                            label: () => (0, r.jsx)(b, {}),
+                            label: () => (0, r.jsx)(T, {}),
                             menuItemProps: C.getItemProps({ path: ['empty'] }),
                             isFocused: !1,
                             onFocus: () => {},
@@ -377,7 +377,7 @@ function I() {
         children: (0, r.jsx)(f.$, {})
     });
 }
-function b() {
+function T() {
     let e = '\u266B (つ\uFF61\u25D5‿‿\u25D5\uFF61)つ \u266A',
         [t, n] = i.useState(e);
     return (

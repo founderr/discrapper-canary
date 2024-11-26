@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return I;
     }
 });
 var i = n(200651),
@@ -19,10 +19,10 @@ var i = n(200651),
     x = n(341907),
     S = n(46140),
     T = n(981631),
-    C = n(388032),
+    E = n(388032),
     _ = n(839905),
-    E = n(66094);
-function f() {
+    C = n(66094);
+function I() {
     let e = (0, o.wj)((0, u.ZP)()),
         t = s.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []),
         n = s.useCallback(() => {
@@ -51,20 +51,20 @@ function f() {
                             children: [
                                 (0, i.jsx)('img', {
                                     alt: '',
-                                    src: E,
+                                    src: C,
                                     className: _.icon
                                 }),
                                 (0, i.jsx)(c.Heading, {
                                     variant: 'heading-lg/bold',
                                     color: 'always-white',
-                                    children: C.intl.string(C.t.z8YP2N)
+                                    children: E.intl.string(E.t.z8YP2N)
                                 })
                             ]
                         }),
                         (0, i.jsx)(c.Text, {
                             variant: 'text-md/medium',
                             color: 'text-muted',
-                            children: C.intl.string(C.t.IqmRZ2)
+                            children: E.intl.string(E.t.IqmRZ2)
                         }),
                         (0, i.jsx)(c.Button, {
                             size: 'large',
@@ -75,7 +75,7 @@ function f() {
                             children: (0, i.jsx)(c.Text, {
                                 variant: 'text-md/medium',
                                 color: e ? 'always-white' : 'text-normal',
-                                children: C.intl.string(C.t.GURBQk)
+                                children: E.intl.string(E.t.GURBQk)
                             })
                         })
                     ]

@@ -40,8 +40,8 @@ var r = n(200651),
     E = n(592125),
     v = n(496675),
     I = n(944486),
-    b = n(626135),
-    T = n(585483),
+    T = n(626135),
+    b = n(585483),
     S = n(787025),
     y = n(981631),
     A = n(388032),
@@ -83,7 +83,7 @@ function O(e) {
     let { guild: t, application: n, ...a } = e,
         s = A.intl.string(A.t.se5gLi);
     i.useEffect(() => {
-        b.default.track(y.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: null == n ? void 0 : n.id });
+        T.default.track(y.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: null == n ? void 0 : n.id });
     }, [null == n ? void 0 : n.id]);
     let o = i.useMemo(() => {
             if (null != n)
@@ -116,14 +116,14 @@ function D(e) {
             if ((null == t ? void 0 : t.id) != null)
                 (0, g.X)(null == t ? void 0 : t.id),
                     null == s || s(),
-                    b.default.track(y.rMx.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
+                    T.default.track(y.rMx.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
                         application_id: null == n ? void 0 : n.id,
                         guild_id: null == t ? void 0 : t.id
                     });
         }, [s, null == n ? void 0 : n.id, null == t ? void 0 : t.id]),
         l = (0, p.useApplicationDirectoryHistory)((e) => e.entrypoint),
         u = i.useCallback(() => {
-            null == s || s(), b.default.track(y.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: null == n ? void 0 : n.id });
+            null == s || s(), T.default.track(y.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: null == n ? void 0 : n.id });
         }, [s, null == n ? void 0 : n.id]),
         d = window.location.pathname.startsWith(y.Z5c.APPLICATION_DIRECTORY),
         f = i.useCallback(() => {
@@ -132,7 +132,7 @@ function D(e) {
                 null == s || s(),
                     null != l && (0, m.uL)(null !== (e = l.pathname) && void 0 !== e ? e : ''),
                     setImmediate(() => {
-                        T.S.dispatchToLastSubscribed(y.CkL.OPEN_APP_LAUNCHER, { applicationId: n.id }), b.default.track(y.rMx.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id });
+                        b.S.dispatchToLastSubscribed(y.CkL.OPEN_APP_LAUNCHER, { applicationId: n.id }), T.default.track(y.rMx.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id });
                     });
         }, [null == n ? void 0 : n.id, s, l]),
         h = (0, c.e7)([I.Z, E.Z], () => E.Z.getChannel(I.Z.getChannelId())),

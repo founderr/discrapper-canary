@@ -41,10 +41,10 @@ let g = {
         [h.yP.FRECENCY_AND_FAVORITES_SETTINGS]: E
     },
     I = !1;
-function b() {
-    T();
-}
 function T() {
+    b();
+}
+function b() {
     Object.values(v).forEach((e) => {
         if (null != e.editInfo.timeout) {
             var t, n;
@@ -178,16 +178,16 @@ m(N, 'displayName', 'UserSettingsProtoStore'),
                 Object.values(v).forEach((e) => {
                     e.lazyLoaded && ((e.editInfo.loaded = !1), (e.editInfo.loading = !1));
                 }),
-                T();
+                b();
         },
-        CONNECTION_CLOSED: b,
-        CONNECTION_RESUMED: b,
+        CONNECTION_CLOSED: T,
+        CONNECTION_RESUMED: T,
         OVERLAY_INITIALIZE: function (e) {
             let { userSettingsProto: t } = e;
             (g.proto = (0, p.ac)(t)), a()('string' != typeof g.proto, 'UserSettingsProto cannot be a string');
         },
         LOGOUT: function () {
-            T(),
+            b(),
                 Object.values(v).forEach((e) => {
                     (e.proto = e.ProtoClass.create()), (e.editInfo = (0, h.JC)());
                 });

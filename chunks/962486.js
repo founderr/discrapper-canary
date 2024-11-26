@@ -26,7 +26,7 @@ function g(e) {
         I = (0, d.a$)(t),
         C = (0, d.QW)(t),
         v = (0, d.lg)(t),
-        S = r.useMemo(() => {
+        N = r.useMemo(() => {
             let e = h ? 30 : n.length,
                 t = [];
             for (let a = 0; a < e; a++) {
@@ -64,7 +64,7 @@ function g(e) {
                     }),
                     (0, i.jsx)('div', {
                         className: m.content,
-                        children: S
+                        children: N
                     })
                 ]
             })

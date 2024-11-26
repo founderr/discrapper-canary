@@ -27,7 +27,7 @@ function f(e) {
         E = i.useMemo(() => (null == n ? void 0 : n.toDate()), [n]),
         v = (0, u.e7)([c.default], () => c.default.locale),
         I = i.useRef(null),
-        b = i.useCallback((e) => {
+        T = i.useCallback((e) => {
             let t = e.currentTarget;
             if (!!t.classList.contains('react-datepicker__day'))
                 setTimeout(() => {
@@ -50,7 +50,7 @@ function f(e) {
             locale: v,
             maxDate: g,
             minDate: E,
-            onKeyDown: b,
+            onKeyDown: T,
             onClickOutside: p
         })
     });

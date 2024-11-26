@@ -20,30 +20,30 @@ var s = n(512722),
     x = n(32300),
     S = n(809357),
     T = n(556296),
-    C = n(808506),
+    E = n(808506),
     _ = n(237997),
-    E = n(626135);
+    C = n(626135);
 n(63063);
-var f = n(13140),
-    I = n(981631),
+var I = n(13140),
+    f = n(981631),
     N = n(388032),
     A = n(893946);
 let b = v(null);
 function v(e) {
     var t;
     let n = _.Z.getNotificationPositionMode(),
-        i = n !== I._vf.DISABLED,
+        i = n !== f._vf.DISABLED,
         s = T.Z.getOverlayKeybind(),
         r = T.Z.getOverlayChatKeybind();
     return {
-        enabled: C.Z.enabled,
+        enabled: E.Z.enabled,
         notifications_enabled: i,
         notifications_position: i ? n : null,
         text_notifications_mode: _.Z.getTextChatNotificationMode(),
-        hotkey: null != s ? (0, f.BB)(s.shortcut) : null,
-        text_activation_hotkey: null != r ? (0, f.BB)(r.shortcut) : null,
+        hotkey: null != s ? (0, I.BB)(s.shortcut) : null,
+        text_activation_hotkey: null != r ? (0, I.BB)(r.shortcut) : null,
         text_opacity_slider: _.Z.getTextWidgetOpacity(),
-        old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : C.Z.enabled
+        old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : E.Z.enabled
     };
 }
 function j(e) {
@@ -56,12 +56,12 @@ function j(e) {
 }
 function O(e) {
     let { className: t, showHeader: n = !0 } = e,
-        { enabled: s, legacyEnabled: l } = (0, o.cj)([C.Z], () => ({
-            enabled: C.Z.enabled,
-            legacyEnabled: C.Z.legacyEnabled
+        { enabled: s, legacyEnabled: l } = (0, o.cj)([E.Z], () => ({
+            enabled: E.Z.enabled,
+            legacyEnabled: E.Z.legacyEnabled
         })),
         {
-            avatarSizeMode: f,
+            avatarSizeMode: I,
             displayNameMode: O,
             displayUserMode: R,
             notificationPositionMode: P,
@@ -81,14 +81,14 @@ function O(e) {
         { useOverlayV3: F } = x.Z.useExperiment({ location: 'overlay_user_settings' });
     function M(e) {
         u.Z.setEnabled(e, l, !1),
-            E.default.track(I.rMx.OVERLAY_TOGGLED, {
+            C.default.track(f.rMx.OVERLAY_TOGGLED, {
                 enabled: e,
                 setting_type: 'overlay toggled - global'
             });
     }
     function k(e) {
         u.Z.setEnabled(s, e, !1),
-            E.default.track(I.rMx.OVERLAY_TOGGLED, {
+            C.default.track(f.rMx.OVERLAY_TOGGLED, {
                 enabled: e,
                 setting_type: 'overlay toggled - legacy'
             });
@@ -96,7 +96,7 @@ function O(e) {
     return (
         !(function () {
             let e = v(b);
-            !a().isEqual(e, b) && (E.default.track(I.rMx.OVERLAY_SETTINGS_UPDATED, e), (b = e));
+            !a().isEqual(e, b) && (C.default.track(f.rMx.OVERLAY_SETTINGS_UPDATED, e), (b = e));
         })(),
         (0, i.jsxs)(i.Fragment, {
             children: [
@@ -168,18 +168,18 @@ function O(e) {
                                 options: [
                                     {
                                         name: N.intl.string(N.t.YcOxtr),
-                                        value: I.ipw.LARGE
+                                        value: f.ipw.LARGE
                                     },
                                     {
                                         name: N.intl.string(N.t.BKIKq6),
-                                        value: I.ipw.SMALL
+                                        value: f.ipw.SMALL
                                     }
                                 ],
                                 onChange: (e) => {
                                     let { value: t } = e;
                                     return u.Z.setAvatarSizeMode(t);
                                 },
-                                value: f
+                                value: I
                             })
                         }),
                         (0, i.jsx)(j, {
@@ -188,15 +188,15 @@ function O(e) {
                                 options: [
                                     {
                                         name: N.intl.string(N.t.nBmDra),
-                                        value: I.wC$.ALWAYS
+                                        value: f.wC$.ALWAYS
                                     },
                                     {
                                         name: N.intl.string(N.t['2OvIZW']),
-                                        value: I.wC$.ONLY_WHILE_SPEAKING
+                                        value: f.wC$.ONLY_WHILE_SPEAKING
                                     },
                                     {
                                         name: N.intl.string(N.t.ekjlPD),
-                                        value: I.wC$.NEVER
+                                        value: f.wC$.NEVER
                                     }
                                 ],
                                 onChange: (e) => {
@@ -212,11 +212,11 @@ function O(e) {
                                 options: [
                                     {
                                         name: N.intl.string(N.t.nBmDra),
-                                        value: I.OYC.ALWAYS
+                                        value: f.OYC.ALWAYS
                                     },
                                     {
                                         name: N.intl.string(N.t['2OvIZW']),
-                                        value: I.OYC.ONLY_WHILE_SPEAKING
+                                        value: f.OYC.ONLY_WHILE_SPEAKING
                                     }
                                 ],
                                 onChange: (e) => {
@@ -256,10 +256,10 @@ function O(e) {
                               }),
                         (0, i.jsx)(j, {
                             children: (0, i.jsx)(c.FormSwitch, {
-                                value: P !== I._vf.DISABLED && D === I.Ypu.ENABLED,
-                                disabled: P === I._vf.DISABLED,
+                                value: P !== f._vf.DISABLED && D === f.Ypu.ENABLED,
+                                disabled: P === f._vf.DISABLED,
                                 onChange: function () {
-                                    let { ENABLED: e, DISABLED: t } = I.Ypu;
+                                    let { ENABLED: e, DISABLED: t } = f.Ypu;
                                     u.Z.setTextChatNotificationMode(D === e ? t : e);
                                 },
                                 hideBorder: !0,

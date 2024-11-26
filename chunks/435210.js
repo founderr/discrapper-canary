@@ -37,7 +37,7 @@ var r = n(444675),
         n < i;
         o = r[++n]
     )
-        g(o) || !T(o) ? (s += ' ' + o) : (s += ' ' + u(o));
+        g(o) || !b(o) ? (s += ' ' + o) : (s += ' ' + u(o));
     return s;
 }),
     (t.deprecate = function (e, n) {
@@ -152,18 +152,18 @@ function f(e, n, r) {
             var c = n.name ? ': ' + n.name : '';
             return e.stylize('[Function' + c + ']', 'special');
         }
-        if (b(n)) return e.stylize(RegExp.prototype.toString.call(n), 'regexp');
+        if (T(n)) return e.stylize(RegExp.prototype.toString.call(n), 'regexp');
         if (S(n)) return e.stylize(Date.prototype.toString.call(n), 'date');
         if (y(n)) return _(n);
     }
     var d = '',
-        T = !1,
+        b = !1,
         N = ['{', '}'];
-    if ((h(n) && ((T = !0), (N = ['[', ']'])), A(n) && (d = ' [Function' + (n.name ? ': ' + n.name : '') + ']'), b(n) && (d = ' ' + RegExp.prototype.toString.call(n)), S(n) && (d = ' ' + Date.prototype.toUTCString.call(n)), y(n) && (d = ' ' + _(n)), 0 === l.length && (!T || 0 == n.length))) return N[0] + d + N[1];
-    if (r < 0) return b(n) ? e.stylize(RegExp.prototype.toString.call(n), 'regexp') : e.stylize('[Object]', 'special');
+    if ((h(n) && ((b = !0), (N = ['[', ']'])), A(n) && (d = ' [Function' + (n.name ? ': ' + n.name : '') + ']'), T(n) && (d = ' ' + RegExp.prototype.toString.call(n)), S(n) && (d = ' ' + Date.prototype.toUTCString.call(n)), y(n) && (d = ' ' + _(n)), 0 === l.length && (!b || 0 == n.length))) return N[0] + d + N[1];
+    if (r < 0) return T(n) ? e.stylize(RegExp.prototype.toString.call(n), 'regexp') : e.stylize('[Object]', 'special');
     return (
         e.seen.push(n),
-        (a = T
+        (a = b
             ? (function (e, t, n, r, i) {
                   for (var a = [], s = 0, o = t.length; s < o; ++s) O(t, String(s)) ? a.push(p(e, t, n, r, String(s), !0)) : a.push('');
                   return (
@@ -174,7 +174,7 @@ function f(e, n, r) {
                   );
               })(e, n, r, u, l)
             : l.map(function (t) {
-                  return p(e, n, r, u, t, T);
+                  return p(e, n, r, u, t, b);
               })),
         e.seen.pop(),
         (function (e, t, n) {
@@ -251,17 +251,17 @@ function v(e) {
 function I(e) {
     return void 0 === e;
 }
-function b(e) {
-    return T(e) && '[object RegExp]' === N(e);
-}
 function T(e) {
+    return b(e) && '[object RegExp]' === N(e);
+}
+function b(e) {
     return 'object' == typeof e && null !== e;
 }
 function S(e) {
-    return T(e) && '[object Date]' === N(e);
+    return b(e) && '[object Date]' === N(e);
 }
 function y(e) {
-    return T(e) && ('[object Error]' === N(e) || e instanceof Error);
+    return b(e) && ('[object Error]' === N(e) || e instanceof Error);
 }
 function A(e) {
     return 'function' == typeof e;
@@ -270,9 +270,9 @@ function A(e) {
     return 'symbol' == typeof e;
 }),
     (t.isUndefined = I),
-    (t.isRegExp = b),
-    (t.types.isRegExp = b),
-    (t.isObject = T),
+    (t.isRegExp = T),
+    (t.types.isRegExp = T),
+    (t.isObject = b),
     (t.isDate = S),
     (t.types.isDate = S),
     (t.isError = y),
@@ -298,7 +298,7 @@ function O(e, t) {
 }),
     (t.inherits = n(689118)),
     (t._extend = function (e, t) {
-        if (!t || !T(t)) return e;
+        if (!t || !b(t)) return e;
         for (var n = Object.keys(t), r = n.length; r--; ) e[n[r]] = t[n[r]];
         return e;
     });

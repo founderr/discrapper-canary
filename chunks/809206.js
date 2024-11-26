@@ -3,7 +3,7 @@ n.d(t, {
         return h;
     },
     I5: function () {
-        return T;
+        return b;
     },
     Mn: function () {
         return v;
@@ -18,7 +18,7 @@ n.d(t, {
         return S;
     },
     V3: function () {
-        return b;
+        return T;
     },
     W3: function () {
         return R;
@@ -173,7 +173,7 @@ function I() {
         rejectWithError: !1
     });
 }
-function b(e) {
+function T(e) {
     return r.tn.post({
         url: f.ANM.USER_HARVEST,
         body: { backends: e },
@@ -181,7 +181,7 @@ function b(e) {
         rejectWithError: !1
     });
 }
-function T(e) {
+function b(e) {
     s.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR',
         avatar: e

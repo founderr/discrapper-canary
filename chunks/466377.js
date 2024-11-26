@@ -39,8 +39,8 @@ var r,
     E = n(742746),
     v = n(147479),
     I = n(481060),
-    b = n(600164),
-    T = n(602091),
+    T = n(600164),
+    b = n(602091),
     S = n(231338),
     y = n(388032),
     A = n(564952);
@@ -53,8 +53,8 @@ let N = Object.freeze({
 });
 function C(e) {
     var t;
-    let { transitionState: n, children: r, size: i = 'small', role: o = 'dialog', className: p, fullscreenOnMobile: g = !0, hideShadow: E = !1, onAnimationEnd: v = S.dG, returnRef: I, ...b } = e,
-        y = n === T.Dv.ENTERING || n === T.Dv.ENTERED,
+    let { transitionState: n, children: r, size: i = 'small', role: o = 'dialog', className: p, fullscreenOnMobile: g = !0, hideShadow: E = !1, onAnimationEnd: v = S.dG, returnRef: I, ...T } = e,
+        y = n === b.Dv.ENTERING || n === b.Dv.ENTERED,
         { reducedMotion: C } = s.useContext(_.S),
         R = (0, f.q)(
             {
@@ -70,26 +70,26 @@ function C(e) {
             'animate-always'
         ),
         O = s.useRef(null),
-        D = null != b['aria-label'],
-        L = null != b['aria-labelledby'],
+        D = null != T['aria-label'],
+        L = null != T['aria-labelledby'],
         x = s.useId(),
-        w = null !== (t = b['aria-labelledby']) && void 0 !== t ? t : x,
-        M = s.useMemo(
+        w = null !== (t = T['aria-labelledby']) && void 0 !== t ? t : x,
+        P = s.useMemo(
             () => ({
                 headerId: w,
                 headerIdIsManaged: L
             }),
             [w, L]
         );
-    return (0, a.jsx)(T.zM.Provider, {
-        value: M,
+    return (0, a.jsx)(b.zM.Provider, {
+        value: P,
         children: (0, a.jsx)(h.V, {
             className: A.focusLock,
             role: o,
             returnRef: I,
             impressionType: c.ImpressionTypes.MODAL,
-            'aria-labelledby': D ? void 0 : M.headerId,
-            ...b,
+            'aria-labelledby': D ? void 0 : P.headerId,
+            ...T,
             children: (0, a.jsx)(u.animated.div, {
                 className: l()(p, A.root, N[i], {
                     [A.fullscreenOnMobile]: g,
@@ -107,14 +107,14 @@ function C(e) {
 }
 function R(e) {
     var t, n, r, i, o;
-    let { headerId: u, headerIdIsManaged: c } = s.useContext(T.zM);
-    return (0, a.jsx)(b.Z, {
+    let { headerId: u, headerIdIsManaged: c } = s.useContext(b.zM);
+    return (0, a.jsx)(T.Z, {
         grow: 0,
         shrink: 0,
-        direction: null !== (t = e.direction) && void 0 !== t ? t : b.Z.Direction.HORIZONTAL,
-        justify: null !== (n = e.justify) && void 0 !== n ? n : b.Z.Justify.START,
-        align: null !== (r = e.align) && void 0 !== r ? r : b.Z.Align.CENTER,
-        wrap: null !== (i = e.wrap) && void 0 !== i ? i : b.Z.Wrap.NO_WRAP,
+        direction: null !== (t = e.direction) && void 0 !== t ? t : T.Z.Direction.HORIZONTAL,
+        justify: null !== (n = e.justify) && void 0 !== n ? n : T.Z.Justify.START,
+        align: null !== (r = e.align) && void 0 !== r ? r : T.Z.Align.CENTER,
+        wrap: null !== (i = e.wrap) && void 0 !== i ? i : T.Z.Wrap.NO_WRAP,
         className: l()(A.header, e.className, { [A.separator]: null === (o = e.separator) || void 0 === o || o }),
         id: c ? void 0 : u,
         children: e.children
@@ -141,13 +141,13 @@ function O(e) {
 }
 function D(e) {
     var t, n, r, i, s;
-    return (0, a.jsx)(b.Z, {
+    return (0, a.jsx)(T.Z, {
         grow: 0,
         shrink: 0,
-        direction: null !== (t = e.direction) && void 0 !== t ? t : b.Z.Direction.HORIZONTAL_REVERSE,
-        justify: null !== (n = e.justify) && void 0 !== n ? n : b.Z.Justify.START,
-        align: null !== (r = e.align) && void 0 !== r ? r : b.Z.Align.STRETCH,
-        wrap: null !== (i = e.wrap) && void 0 !== i ? i : b.Z.Wrap.NO_WRAP,
+        direction: null !== (t = e.direction) && void 0 !== t ? t : T.Z.Direction.HORIZONTAL_REVERSE,
+        justify: null !== (n = e.justify) && void 0 !== n ? n : T.Z.Justify.START,
+        align: null !== (r = e.align) && void 0 !== r ? r : T.Z.Align.STRETCH,
+        wrap: null !== (i = e.wrap) && void 0 !== i ? i : T.Z.Wrap.NO_WRAP,
         className: l()(A.footer, e.className, { [A.footerSeparator]: null === (s = e.separator) || void 0 === s || s }),
         children: (0, a.jsx)(I.HeadingLevel, { children: e.children })
     });

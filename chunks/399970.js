@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return E;
     }
 }),
     n(47120);
@@ -21,19 +21,19 @@ var i,
     S = n(232186);
 let T = /^\d+$|^$/;
 ((s = i || (i = {})).LOCALHOST = 'localhost'), (s.PROXY = 'proxy');
-function C(e) {
+function E(e) {
     let { onClose: t, transitionState: n } = e,
         {
             authorizedApplicationId: i,
             authorizationError: s,
-            authorizing: C
+            authorizing: E
         } = (0, a.cj)([g.Z], () => ({
             authorizedApplicationId: g.Z.testModeApplicationId,
             authorizationError: g.Z.error,
             authorizing: g.Z.isFetchingAuthorization
         })),
-        [_, E] = l.useState(null != i ? i : ''),
-        [f, I] = l.useState('8080'),
+        [_, C] = l.useState(null != i ? i : ''),
+        [I, f] = l.useState('8080'),
         [N, A] = l.useState('localhost'),
         b = (0, h.Dt)(),
         v = T.test(_);
@@ -47,14 +47,14 @@ function C(e) {
                 case 'proxy':
                     return (0, u.Z)(n);
             }
-        })(N, f, _);
+        })(N, I, _);
         null != (await d.Wt(_, e)) && t();
     }
     l.useEffect(() => () => c.Z.wait(() => d.q$()), []);
     let O = null != i && i === _,
         R = O
             ? function () {
-                  d.mc(), E(''), A(null);
+                  d.mc(), C(''), A(null);
               }
             : j;
     return (0, r.jsxs)(o.ModalRoot, {
@@ -105,9 +105,9 @@ function C(e) {
                                         maxLength: 19,
                                         error: v ? null : p.intl.string(p.t.gPNgKC),
                                         onChange: function (e) {
-                                            E(e);
+                                            C(e);
                                         },
-                                        disabled: C
+                                        disabled: E
                                     })
                                 }),
                                 (0, r.jsx)(o.FormItem, {
@@ -141,16 +141,16 @@ function C(e) {
                                           title: p.intl.string(p.t.fF4zxs),
                                           required: !0,
                                           children: (0, r.jsx)(o.TextInput, {
-                                              value: f,
+                                              value: I,
                                               maxLength: 5,
-                                              onChange: (e) => I(e),
-                                              disabled: C
+                                              onChange: (e) => f(e),
+                                              disabled: E
                                           })
                                       }),
                                 (0, r.jsx)(o.Button, {
-                                    submitting: C,
+                                    submitting: E,
                                     type: 'submit',
-                                    disabled: !v || 0 === _.length || ('localhost' === N && 0 === f.length),
+                                    disabled: !v || 0 === _.length || ('localhost' === N && 0 === I.length),
                                     color: O ? o.Button.Colors.RED : o.Button.Colors.GREEN,
                                     children: O ? p.intl.string(p.t.d6TR3N) : p.intl.string(p.t.qwuK5O)
                                 })

@@ -63,9 +63,9 @@ a(l, s),
             (l = u), (_ = f), (f = u), (m = p), (p = c), (g = h), (h = I);
         }
         (s = u.neg()), (o = c);
-        var b = r.sqr().add(a.sqr());
+        var T = r.sqr().add(a.sqr());
         return (
-            s.sqr().add(o.sqr()).cmp(b) >= 0 && ((s = t), (o = n)),
+            s.sqr().add(o.sqr()).cmp(T) >= 0 && ((s = t), (o = n)),
             r.negative && ((r = r.neg()), (a = a.neg())),
             s.negative && ((s = s.neg()), (o = o.neg())),
             [

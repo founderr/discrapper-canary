@@ -1,6 +1,6 @@
 n.d(t, {
     A3: function () {
-        return b;
+        return T;
     },
     FZ: function () {
         return I;
@@ -21,7 +21,7 @@ n.d(t, {
         return S;
     },
     Vx: function () {
-        return P;
+        return M;
     },
     _k: function () {
         return k;
@@ -30,7 +30,7 @@ n.d(t, {
         return R;
     },
     aq: function () {
-        return M;
+        return P;
     },
     cP: function () {
         return A;
@@ -48,7 +48,7 @@ n.d(t, {
         return O;
     },
     ig: function () {
-        return T;
+        return b;
     },
     nW: function () {
         return N;
@@ -110,8 +110,8 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
         var n;
         return e === m.Eu4.NONE ? m.Eu4.TIER_1 : null === (n = B(t).find((t) => t.tier === e)) || void 0 === n ? void 0 : n.nextTier;
     },
-    b = (e, t) => (null != t && t.hasFeature(m.oNc.MORE_STICKERS) && e === m.Eu4.TIER_3 ? l.D.MAX_STICKER_SLOTS : g.$8[e]),
-    T = (e) => g.pH[e],
+    T = (e, t) => (null != t && t.hasFeature(m.oNc.MORE_STICKERS) && e === m.Eu4.TIER_3 ? l.D.MAX_STICKER_SLOTS : g.$8[e]),
+    b = (e) => g.pH[e],
     S = (e, t) => (null != t && t.hasFeature(m.oNc.MORE_SOUNDBOARD) ? 96 : g._k[e]),
     y = (e) => {
         if (e === m.Eu4.NONE) return g._k[e];
@@ -133,8 +133,8 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 },
                 {
                     title: E.intl.formatToPlainString(E.t['/9p2/v'], {
-                        adding: T(m.Eu4.TIER_1),
-                        total: b(m.Eu4.TIER_1)
+                        adding: b(m.Eu4.TIER_1),
+                        total: T(m.Eu4.TIER_1)
                     }),
                     description: E.intl.string(E.t.JfsnDQ),
                     icon: 8
@@ -183,8 +183,8 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 },
                 {
                     title: E.intl.formatToPlainString(E.t['/9p2/v'], {
-                        adding: T(m.Eu4.TIER_2),
-                        total: b(m.Eu4.TIER_2)
+                        adding: b(m.Eu4.TIER_2),
+                        total: T(m.Eu4.TIER_2)
                     }),
                     description: E.intl.string(E.t.t4TM29),
                     icon: 8
@@ -245,8 +245,8 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 },
                 {
                     title: E.intl.formatToPlainString(E.t['/9p2/v'], {
-                        adding: T(m.Eu4.TIER_3),
-                        total: b(m.Eu4.TIER_3)
+                        adding: b(m.Eu4.TIER_3),
+                        total: T(m.Eu4.TIER_3)
                     }),
                     description: E.intl.string(E.t['+ZI4QU']),
                     icon: 8
@@ -342,7 +342,7 @@ function w(e) {
         .values(e)
         .filter((e) => e.isAvailable());
 }
-function M(e) {
+function P(e) {
     let { fractionalState: t } = e,
         n = d.ZP.getPremiumTypeSubscription();
     !c.Z.hasFetched && (0, u.X8)();
@@ -398,7 +398,7 @@ function M(e) {
     let v = h.uV(n.renewalMutations.additionalPlans);
     return h.uV(n.additionalPlans) > v ? E.intl.string(E.t.x25mZW) : E.intl.string(E.t['W/bb8f']);
 }
-function P(e, t) {
+function M(e, t) {
     return k(e, t) > 0;
 }
 function k(e, t) {
@@ -439,12 +439,12 @@ function G(e, t) {
     return null;
 }
 function Z(e, t) {
-    let n = T(t),
+    let n = b(t),
         r = v.indexOf(t);
     if (-1 === r) return 0;
     let i = v[r - 1],
-        a = null != i ? b(i) : 0,
-        s = b(t);
+        a = null != i ? T(i) : 0,
+        s = T(t);
     return Math.max(0, n - e.slice(a, s).length);
 }
 function F(e, t, n) {

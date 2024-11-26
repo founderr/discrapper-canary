@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return S;
     }
 });
 var i = n(200651),
@@ -22,14 +22,14 @@ var i = n(200651),
     I = n(128449),
     C = n(49898),
     v = n(388032),
-    S = n(608576);
-function N() {
+    N = n(608576);
+function S() {
     let e = r.useRef((0, m.PM)()),
-        { onScroll: t, scrollPosition: n, resetScrollPosition: N } = (0, a.M)(),
-        { tabs: T, selectedTab: A, setSelectedTab: b } = (0, f.Y)(),
-        x = (0, m.lg)(A),
-        Z = !I.MU.has(A),
-        { searchQuery: L, onSearchTextChange: y, onClearSearch: O, onSearchSubmit: R, isSearchVisible: P } = (0, g.H)({ loadId: e.current }),
+        { onScroll: t, scrollPosition: n, resetScrollPosition: S } = (0, a.M)(),
+        { tabs: T, selectedTab: x, setSelectedTab: b } = (0, f.Y)(),
+        A = (0, m.lg)(x),
+        Z = !I.MU.has(x),
+        { searchQuery: L, onSearchTextChange: y, onClearSearch: P, onSearchSubmit: O, isSearchVisible: R } = (0, g.H)({ loadId: e.current }),
         {
             searchBarState: j,
             onTabsAvailableWidthChange: D,
@@ -43,61 +43,61 @@ function N() {
         U = u.Z.useField('fetchedQuery'),
         G = r.useCallback(
             (e) => {
-                b(e), P && O();
+                b(e), R && P();
             },
-            [P, O, b]
+            [R, P, b]
         ),
         B = r.useMemo(
             () =>
-                P
+                R
                     ? T.filter((e) => {
                           let { id: t } = e;
                           return !I.MU.has(t);
                       })
                     : T,
-            [T, P]
+            [T, R]
         ),
-        V = r.useRef(new h.Z(x)),
-        { onGuildCardSeen: H, onGuildCardClick: F } = (0, p.H)({
-            guildDiscoveryCardSeenManager: V.current,
+        H = r.useRef(new h.Z(A)),
+        { onGuildCardSeen: V, onGuildCardClick: F } = (0, p.H)({
+            guildDiscoveryCardSeenManager: H.current,
             loadId: e.current
         });
     return (
         r.useEffect(() => {
-            V.current.flushSeenGuilds(e.current);
-        }, [x]),
+            H.current.flushSeenGuilds(e.current);
+        }, [A]),
         r.useEffect(() => {
-            N();
-        }, [A, N]),
+            S();
+        }, [x, S]),
         r.useEffect(() => {
-            !P && u.Z.setState({ scrollPosition: null });
-        }, [P]),
+            !R && u.Z.setState({ scrollPosition: null });
+        }, [R]),
         (0, i.jsxs)('div', {
-            className: S.container,
+            className: N.container,
             children: [
                 (0, i.jsxs)(o.ZP, {
-                    variant: P ? o._6.RELATIVE : o._6.OVERLAY,
+                    variant: R ? o._6.RELATIVE : o._6.OVERLAY,
                     children: [
-                        !P && (0, i.jsx)(o.z6, { scrollPosition: n }),
-                        P
+                        !R && (0, i.jsx)(o.z6, { scrollPosition: n }),
+                        R
                             ? (0, i.jsx)(o.Cm, {
                                   icon: l.ArrowLargeLeftIcon,
-                                  onClick: O
+                                  onClick: P
                               })
                             : (0, i.jsx)(o.aV, { icon: l.ServerIcon }),
-                        !P &&
+                        !R &&
                             (0, i.jsx)(c.Z, {
                                 className: k,
                                 tabs: B,
-                                selectedTab: P ? null : A,
+                                selectedTab: R ? null : x,
                                 onTabSelect: G,
                                 onAvailableWidthChange: D
                             }),
-                        P &&
+                        R &&
                             (0, i.jsx)(l.Heading, {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
-                                className: S.searchResultsHeader,
+                                className: N.searchResultsHeader,
                                 children: v.intl.format(v.t.zHdzqa, { query: U })
                             }),
                         Z &&
@@ -105,25 +105,25 @@ function N() {
                                 query: L,
                                 placeholder: v.intl.string(v.t['5h0QOD']),
                                 onTextChange: y,
-                                onClear: O,
-                                onSubmit: R,
+                                onClear: P,
+                                onSubmit: O,
                                 onCollapsedClick: M,
-                                state: P ? C.WB.DEFAULT : j,
+                                state: R ? C.WB.DEFAULT : j,
                                 onBlur: w
                             })
                     ]
                 }),
-                P
+                R
                     ? (0, i.jsx)(E.Z, {
                           loadId: e.current,
                           onGuildCardClick: F,
-                          onGuildCardSeen: H
+                          onGuildCardSeen: V
                       })
                     : (0, i.jsx)(_.Z, {
-                          selectedTab: A,
+                          selectedTab: x,
                           onScroll: t,
                           onGuildCardClick: F,
-                          onGuildCardSeen: H
+                          onGuildCardSeen: V
                       })
             ]
         })

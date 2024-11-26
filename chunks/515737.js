@@ -1,14 +1,14 @@
 r.d(t, {
     t: function () {
-        return E;
+        return i;
     }
 });
-var n = r(151122),
-    a = r(370336),
+var a = r(151122),
+    n = r(370336),
     _ = r(688838),
     o = r(163162);
-let i = ['EventTarget', 'Window', 'Node', 'ApplicationCache', 'AudioTrackList', 'BroadcastChannel', 'ChannelMergerNode', 'CryptoOperation', 'EventSource', 'FileReader', 'HTMLUnknownElement', 'IDBDatabase', 'IDBRequest', 'IDBTransaction', 'KeyOperation', 'MediaController', 'MessagePort', 'ModalWindow', 'Notification', 'SVGElementInstance', 'Screen', 'SharedWorker', 'TextTrack', 'TextTrackCue', 'TextTrackList', 'WebSocket', 'WebSocketWorker', 'Worker', 'XMLHttpRequest', 'XMLHttpRequestEventTarget', 'XMLHttpRequestUpload'],
-    E = (0, n._I)((e = {}) => {
+let E = ['EventTarget', 'Window', 'Node', 'ApplicationCache', 'AudioTrackList', 'BroadcastChannel', 'ChannelMergerNode', 'CryptoOperation', 'EventSource', 'FileReader', 'HTMLUnknownElement', 'IDBDatabase', 'IDBRequest', 'IDBTransaction', 'KeyOperation', 'MediaController', 'MessagePort', 'ModalWindow', 'Notification', 'SVGElementInstance', 'Screen', 'SharedWorker', 'TextTrack', 'TextTrackCue', 'TextTrackList', 'WebSocket', 'WebSocketWorker', 'Worker', 'XMLHttpRequest', 'XMLHttpRequestEventTarget', 'XMLHttpRequestUpload'],
+    i = (0, a._I)((e = {}) => {
         let t = {
             XMLHttpRequest: !0,
             eventTarget: !0,
@@ -20,9 +20,9 @@ let i = ['EventTarget', 'Window', 'Node', 'ApplicationCache', 'AudioTrackList', 
         return {
             name: 'BrowserApiErrors',
             setupOnce() {
-                t.setTimeout && (0, a.hl)(o.m9, 'setTimeout', c), t.setInterval && (0, a.hl)(o.m9, 'setInterval', c), t.requestAnimationFrame && (0, a.hl)(o.m9, 'requestAnimationFrame', s), t.XMLHttpRequest && 'XMLHttpRequest' in o.m9 && (0, a.hl)(XMLHttpRequest.prototype, 'send', l);
+                t.setTimeout && (0, n.hl)(o.m9, 'setTimeout', c), t.setInterval && (0, n.hl)(o.m9, 'setInterval', c), t.requestAnimationFrame && (0, n.hl)(o.m9, 'requestAnimationFrame', s), t.XMLHttpRequest && 'XMLHttpRequest' in o.m9 && (0, n.hl)(XMLHttpRequest.prototype, 'send', l);
                 let e = t.eventTarget;
-                e && (Array.isArray(e) ? e : i).forEach(u);
+                e && (Array.isArray(e) ? e : E).forEach(I);
             }
         };
     });
@@ -64,7 +64,7 @@ function l(e) {
             ['onload', 'onerror', 'onprogress', 'onreadystatechange'].forEach((e) => {
                 e in r &&
                     'function' == typeof r[e] &&
-                    (0, a.hl)(r, e, function (t) {
+                    (0, n.hl)(r, e, function (t) {
                         let r = {
                                 mechanism: {
                                     data: {
@@ -75,27 +75,27 @@ function l(e) {
                                     type: 'instrument'
                                 }
                             },
-                            n = (0, a.HK)(t);
-                        return n && (r.mechanism.data.handler = (0, _.$P)(n)), (0, o.re)(t, r);
+                            a = (0, n.HK)(t);
+                        return a && (r.mechanism.data.handler = (0, _.$P)(a)), (0, o.re)(t, r);
                     });
             }),
             e.apply(this, t)
         );
     };
 }
-function u(e) {
+function I(e) {
     let t = o.m9,
         r = t[e] && t[e].prototype;
     if (!!r && !!r.hasOwnProperty && !!r.hasOwnProperty('addEventListener'))
-        (0, a.hl)(r, 'addEventListener', function (t) {
-            return function (r, n, a) {
+        (0, n.hl)(r, 'addEventListener', function (t) {
+            return function (r, a, n) {
                 try {
-                    'function' == typeof n.handleEvent &&
-                        (n.handleEvent = (0, o.re)(n.handleEvent, {
+                    'function' == typeof a.handleEvent &&
+                        (a.handleEvent = (0, o.re)(a.handleEvent, {
                             mechanism: {
                                 data: {
                                     function: 'handleEvent',
-                                    handler: (0, _.$P)(n),
+                                    handler: (0, _.$P)(a),
                                     target: e
                                 },
                                 handled: !1,
@@ -105,28 +105,28 @@ function u(e) {
                 } catch (e) {}
                 return t.apply(this, [
                     r,
-                    (0, o.re)(n, {
+                    (0, o.re)(a, {
                         mechanism: {
                             data: {
                                 function: 'addEventListener',
-                                handler: (0, _.$P)(n),
+                                handler: (0, _.$P)(a),
                                 target: e
                             },
                             handled: !1,
                             type: 'instrument'
                         }
                     }),
-                    a
+                    n
                 ]);
             };
         }),
-            (0, a.hl)(r, 'removeEventListener', function (e) {
-                return function (t, r, n) {
+            (0, n.hl)(r, 'removeEventListener', function (e) {
+                return function (t, r, a) {
                     try {
-                        let a = r && r.__sentry_wrapped__;
-                        a && e.call(this, t, a, n);
+                        let n = r && r.__sentry_wrapped__;
+                        n && e.call(this, t, n, a);
                     } catch (e) {}
-                    return e.call(this, t, r, n);
+                    return e.call(this, t, r, a);
                 };
             });
 }

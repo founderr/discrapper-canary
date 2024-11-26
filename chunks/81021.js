@@ -183,8 +183,8 @@ var E = function e(t) {
         '%WeakSetPrototype%': ['WeakSet', 'prototype']
     },
     I = n(390976),
-    b = n(706165),
-    T = I.call(Function.call, Array.prototype.concat),
+    T = n(706165),
+    b = I.call(Function.call, Array.prototype.concat),
     S = I.call(Function.apply, Array.prototype.splice),
     y = I.call(Function.call, String.prototype.replace),
     A = I.call(Function.call, String.prototype.slice),
@@ -207,7 +207,7 @@ var E = function e(t) {
     D = function (e, t) {
         var n,
             r = e;
-        if ((b(v, r) && (r = '%' + (n = v[r])[0] + '%'), b(m, r))) {
+        if ((T(v, r) && (r = '%' + (n = v[r])[0] + '%'), T(m, r))) {
             var a = m[r];
             if ((a === p && (a = E(r)), void 0 === a && !t)) throw new s('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
             return {
@@ -229,13 +229,13 @@ e.exports = function (e, t) {
         u = a.value,
         c = !1,
         d = a.alias;
-    d && ((r = d[0]), S(n, T([0, 1], d)));
+    d && ((r = d[0]), S(n, b([0, 1], d)));
     for (var f = 1, _ = !0; f < n.length; f += 1) {
         var p = n[f],
             h = A(p, 0, 1),
             g = A(p, -1);
         if (('"' === h || "'" === h || '`' === h || '"' === g || "'" === g || '`' === g) && h !== g) throw new i('property names with quotes must have matching quotes');
-        if ((('constructor' === p || !_) && (c = !0), (r += '.' + p), b(m, (o = '%' + r + '%')))) u = m[o];
+        if ((('constructor' === p || !_) && (c = !0), (r += '.' + p), T(m, (o = '%' + r + '%')))) u = m[o];
         else if (null != u) {
             if (!(p in u)) {
                 if (!t) throw new s('base intrinsic for ' + e + ' exists, but the property is not available.');
@@ -244,7 +244,7 @@ e.exports = function (e, t) {
             if (l && f + 1 >= n.length) {
                 var E = l(u, p);
                 u = (_ = !!E) && 'get' in E && !('originalValue' in E.get) ? E.get : u[p];
-            } else (_ = b(u, p)), (u = u[p]);
+            } else (_ = T(u, p)), (u = u[p]);
             _ && !c && (m[o] = u);
         }
     }

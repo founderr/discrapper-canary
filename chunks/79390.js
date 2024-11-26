@@ -9,7 +9,7 @@ n.d(t, {
         return y;
     },
     Uu: function () {
-        return b;
+        return T;
     },
     _N: function () {
         return A;
@@ -27,7 +27,7 @@ n.d(t, {
         return S;
     },
     fw: function () {
-        return T;
+        return b;
     },
     uY: function () {
         return R;
@@ -57,7 +57,7 @@ var r = n(392711),
     E = n(489887),
     v = n(981631),
     I = n(388032);
-function b() {
+function T() {
     return {
         text: void 0,
         image: void 0,
@@ -66,7 +66,7 @@ function b() {
         })()
     };
 }
-function T(e) {
+function b(e) {
     return e.replace(/\b[a-f\d]{8}-(?:[a-f\d]{4}-){3}[a-f\d]{12}-\b/i, '');
 }
 function S(e) {

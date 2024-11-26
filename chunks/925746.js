@@ -1,17 +1,17 @@
 r.d(t, {
     L: function () {
-        return i;
+        return E;
     }
 });
-var n = r(617726),
-    a = r(688838),
+var a = r(617726),
+    n = r(688838),
     _ = r(151122),
     o = r(166394);
-let i = (0, _._I)((e) => ({
+let E = (0, _._I)((e) => ({
         name: 'ThirdPartyErrorsFilter',
         setup(e) {
             e.on('beforeEnvelope', (e) => {
-                (0, n.gv)(e, (e, t) => {
+                (0, a.gv)(e, (e, t) => {
                     if ('event' === t) {
                         let t = Array.isArray(e) ? e[1] : void 0;
                         t && ((0, o.CC)(t), (e[1] = t));
@@ -26,15 +26,15 @@ let i = (0, _._I)((e) => ({
         },
         processEvent(t) {
             let r = (function (e) {
-                let t = (0, a.Fr)(e);
+                let t = (0, n.Fr)(e);
                 if (!!t)
                     return t
                         .filter((e) => !!e.filename)
                         .map((e) =>
                             e.module_metadata
                                 ? Object.keys(e.module_metadata)
-                                      .filter((e) => e.startsWith(E))
-                                      .map((e) => e.slice(E.length))
+                                      .filter((e) => e.startsWith(i))
+                                      .map((e) => e.slice(i.length))
                                 : []
                         );
             })(t);
@@ -48,4 +48,4 @@ let i = (0, _._I)((e) => ({
             return t;
         }
     })),
-    E = '_sentryBundlerPluginAppKey:';
+    i = '_sentryBundlerPluginAppKey:';

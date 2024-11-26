@@ -25,8 +25,8 @@ function E(e) {
         E = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
         v = m.intl.string(m.t['eikz4+']),
         I = (0, d.N)(),
-        b = (0, c.Ng)(),
-        T = (null == I ? void 0 : I.subscription_trial) != null || null != b,
+        T = (0, c.Ng)(),
+        b = (null == I ? void 0 : I.subscription_trial) != null || null != T,
         S = {
             object: p.qAy.BUTTON_CTA,
             section: p.jXE.SUPER_REACTION_PICKER
@@ -49,7 +49,7 @@ function E(e) {
                     (0, r.jsx)('div', {
                         className: g.contentFill,
                         children: (0, r.jsx)(u.Z, {
-                            className: a()(g.banner, { [g.hasTrialOffer]: T }),
+                            className: a()(g.banner, { [g.hasTrialOffer]: b }),
                             src: 'https://cdn.discordapp.com/assets/22_211_SuperReactions_GTM_Hero_v09.mp4',
                             loop: !0,
                             autoPlay: !E,
@@ -57,13 +57,13 @@ function E(e) {
                             controls: !0
                         })
                     }),
-                    T
+                    b
                         ? (0, r.jsx)(f.ZP, {
                               type: h.cd.BURST_REACTION_QUICK_ACTION_UPSELL,
                               subscriptionTier: null !== (n = null == I ? void 0 : null === (t = I.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : h.Si.TIER_2,
                               headingText: m.intl.string(m.t.Wfl5zs),
                               analyticsLocationObject: S,
-                              discountOffer: b,
+                              discountOffer: T,
                               trialOffer: I,
                               children: v
                           })

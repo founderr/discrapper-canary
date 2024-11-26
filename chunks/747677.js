@@ -1,14 +1,14 @@
-function n() {
+function a() {
     return 'undefined' != typeof __SENTRY_BROWSER_BUNDLE__ && !!__SENTRY_BROWSER_BUNDLE__;
 }
-function a() {
+function n() {
     return 'npm';
 }
 r.d(t, {
     S: function () {
-        return a;
+        return n;
     },
     n: function () {
-        return n;
+        return a;
     }
 });

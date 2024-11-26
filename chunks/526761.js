@@ -1,25 +1,25 @@
-var n, a, _, o, i, E, c, s, l, u, I, R, N, A, T, d, L, f;
+var a, n, _, o, E, i, c, s, l, I, u, R, A, T, N, d, f, O;
 r.d(t, {
     Ax: function () {
-        return u;
+        return I;
     },
     FY: function () {
         return c;
     },
     GA: function () {
-        return D;
+        return S;
     },
     JC: function () {
-        return g;
+        return P;
     },
     KQ: function () {
         return C;
     },
     NB: function () {
-        return n;
+        return a;
     },
     XZ: function () {
-        return S;
+        return D;
     },
     Y_: function () {
         return _;
@@ -31,48 +31,48 @@ r.d(t, {
         return l;
     },
     h1: function () {
-        return a;
+        return n;
     },
     ic: function () {
-        return U;
+        return g;
     },
     oX: function () {
-        return O;
+        return L;
     },
     rP: function () {
         return o;
     },
     to: function () {
-        return E;
+        return i;
     },
     u0: function () {
-        return I;
+        return u;
     },
     vY: function () {
         return p;
     },
     vc: function () {
-        return P;
+        return U;
     },
     yP: function () {
         return s;
     }
 });
-let O = 250,
+let L = 250,
     p = 762880,
     h = 'ROLE_SUBSCRIPTIONS',
-    S = 'APPLICATION_SUBSCRIPTION_SUBSECTION',
-    D = 'SOUNDBOARD_SUBSECTION';
-((R = n || (n = {})).USER_PROFILE = 'user_profile'), (R.GUILD = 'guild'), (R.TRY_IT_OUT = 'try_it_out'), ((a || (a = {})).CUSTOM_APP_ICONS = 'custom_app_icon'), ((_ || (_ = {})).TRY_IT_OUT = 'try_it_out'), ((N = o || (o = {})).REDUCED_MOTION = 'reduced_motion'), (N.SYNC_PROFILE_THEME_WITH_USER_THEME = 'sync_profile_theme_with_user_theme'), (N.LEGACY_CHAT_INPUT = 'legacy_chat_input'), ((i || (i = {})).HARDWARE_ACCELERATION = 'hardware_acceleration'), ((A = E || (E = {})).DM_SAFETY_ALERTS = 'dm_safety_alerts'), (A.DM_SAFETY_ALERTS_V2 = 'dm_safety_alerts_v2'), (A.MESSAGE_REQUESTS = 'message_requests'), (A.MESSAGE_REQUESTS_V2 = 'message_requests_v2'), (A.EXPLICIT_MEDIA_REDACTION = 'explicit_media_redaction'), (A.EXPLICIT_MEDIA_REDACTION_V2 = 'explicit_media_redaction_v2'), ((c || (c = {})).RESTRICTED_ACCOUNTS = 'restricted_accounts');
+    D = 'APPLICATION_SUBSCRIPTION_SUBSECTION',
+    S = 'SOUNDBOARD_SUBSECTION';
+((R = a || (a = {})).USER_PROFILE = 'user_profile'), (R.GUILD = 'guild'), (R.TRY_IT_OUT = 'try_it_out'), ((n || (n = {})).CUSTOM_APP_ICONS = 'custom_app_icon'), ((_ || (_ = {})).TRY_IT_OUT = 'try_it_out'), ((A = o || (o = {})).REDUCED_MOTION = 'reduced_motion'), (A.SYNC_PROFILE_THEME_WITH_USER_THEME = 'sync_profile_theme_with_user_theme'), (A.LEGACY_CHAT_INPUT = 'legacy_chat_input'), ((E || (E = {})).HARDWARE_ACCELERATION = 'hardware_acceleration'), ((T = i || (i = {})).DM_SAFETY_ALERTS = 'dm_safety_alerts'), (T.DM_SAFETY_ALERTS_V2 = 'dm_safety_alerts_v2'), (T.MESSAGE_REQUESTS = 'message_requests'), (T.MESSAGE_REQUESTS_V2 = 'message_requests_v2'), (T.EXPLICIT_MEDIA_REDACTION = 'explicit_media_redaction'), (T.EXPLICIT_MEDIA_REDACTION_V2 = 'explicit_media_redaction_v2'), ((c || (c = {})).RESTRICTED_ACCOUNTS = 'restricted_accounts');
 let C = {
     ProfileCustomizationScrollPositions: _,
     AccessibilityScrollPositions: o,
-    VoiceAndVideoScrollPositions: i,
-    AppearanceScrollPositions: a,
-    PrivacyAndSafetyScrollPositions: E,
+    VoiceAndVideoScrollPositions: E,
+    AppearanceScrollPositions: n,
+    PrivacyAndSafetyScrollPositions: i,
     ContentAndSocialScrollPositions: c
 };
-function g() {
+function P() {
     return {
         protoToSave: void 0,
         timeout: void 0,
@@ -85,8 +85,8 @@ function g() {
         offlineEditDataVersion: void 0
     };
 }
-((T = s || (s = {}))[(T.PRELOADED_USER_SETTINGS = 1)] = 'PRELOADED_USER_SETTINGS'), (T[(T.FRECENCY_AND_FAVORITES_SETTINGS = 2)] = 'FRECENCY_AND_FAVORITES_SETTINGS'), (T[(T.TEST_SETTINGS = 3)] = 'TEST_SETTINGS'), ((d = l || (l = {}))[(d.INFREQUENT_USER_ACTION = 0)] = 'INFREQUENT_USER_ACTION'), (d[(d.FREQUENT_USER_ACTION = 10)] = 'FREQUENT_USER_ACTION'), (d[(d.SLOW_USER_ACTION = 20)] = 'SLOW_USER_ACTION'), (d[(d.AUTOMATED = 30)] = 'AUTOMATED'), (d[(d.DAILY = 86400)] = 'DAILY'), ((L = u || (u = {}))[(L.CONFIRM_START = 0)] = 'CONFIRM_START'), (L[(L.CONFIRM_CODE = 1)] = 'CONFIRM_CODE'), (L[(L.CHANGE_EMAIL_REASONS = 2)] = 'CHANGE_EMAIL_REASONS'), (L[(L.CHANGE_EMAIL_WARNING = 3)] = 'CHANGE_EMAIL_WARNING'), (L[(L.EMAIL_AND_PASSWORD = 4)] = 'EMAIL_AND_PASSWORD'), (L[(L.COMPLETE = 5)] = 'COMPLETE');
-let U = {
+((N = s || (s = {}))[(N.PRELOADED_USER_SETTINGS = 1)] = 'PRELOADED_USER_SETTINGS'), (N[(N.FRECENCY_AND_FAVORITES_SETTINGS = 2)] = 'FRECENCY_AND_FAVORITES_SETTINGS'), (N[(N.TEST_SETTINGS = 3)] = 'TEST_SETTINGS'), ((d = l || (l = {}))[(d.INFREQUENT_USER_ACTION = 0)] = 'INFREQUENT_USER_ACTION'), (d[(d.FREQUENT_USER_ACTION = 10)] = 'FREQUENT_USER_ACTION'), (d[(d.SLOW_USER_ACTION = 20)] = 'SLOW_USER_ACTION'), (d[(d.AUTOMATED = 30)] = 'AUTOMATED'), (d[(d.DAILY = 86400)] = 'DAILY'), ((f = I || (I = {}))[(f.CONFIRM_START = 0)] = 'CONFIRM_START'), (f[(f.CONFIRM_CODE = 1)] = 'CONFIRM_CODE'), (f[(f.CHANGE_EMAIL_REASONS = 2)] = 'CHANGE_EMAIL_REASONS'), (f[(f.CHANGE_EMAIL_WARNING = 3)] = 'CHANGE_EMAIL_WARNING'), (f[(f.EMAIL_AND_PASSWORD = 4)] = 'EMAIL_AND_PASSWORD'), (f[(f.COMPLETE = 5)] = 'COMPLETE');
+let g = {
         NEW_FORUM_THREADS_ON: 16384,
         NEW_FORUM_THREADS_OFF: 8192,
         OPT_IN_ENABLED: 4096,
@@ -94,10 +94,10 @@ let U = {
         UNREADS_ALL_MESSAGES: 1024,
         UNREADS_ONLY_MENTIONS: 512
     },
-    P = {
+    U = {
         OPT_IN_CHANNELS_ON: 16384,
         OPT_IN_CHANNELS_OFF: 8192,
         UNREADS_ONLY_MENTIONS: 4096,
         UNREADS_ALL_MESSAGES: 2048
     };
-((f = I || (I = {})).USER = 'user'), (f.STREAM = 'stream');
+((O = u || (u = {})).USER = 'user'), (O.STREAM = 'stream');

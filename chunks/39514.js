@@ -9,17 +9,17 @@ var i,
     u = n(570140),
     d = n(893776),
     h = n(533307),
-    p = n(978085),
-    g = n(232567),
+    g = n(978085),
+    p = n(232567),
     m = n(388905),
     f = n(362762),
-    x = n(108427),
-    _ = n(314897),
+    _ = n(108427),
+    x = n(314897),
     E = n(896797),
-    v = n(82142),
-    I = n(283595),
-    b = n(55563),
-    N = n(669079),
+    I = n(82142),
+    v = n(283595),
+    N = n(55563),
+    b = n(669079),
     C = n(63063),
     S = n(51144),
     A = n(481153),
@@ -45,7 +45,7 @@ c.ZP.initialize(), ((r = i || (i = {})).REGISTER = 'register'), (r.LOGIN = 'logi
 class O extends l.PureComponent {
     componentDidMount() {
         let { authenticated: e, isResolved: t } = this.props;
-        e && this.handleAuthenticated(), !t && this.resolveGiftCode(), (0, x.e)('gift_code');
+        e && this.handleAuthenticated(), !t && this.resolveGiftCode(), (0, _.e)('gift_code');
     }
     componentDidUpdate(e) {
         let { authenticated: t, isResolved: n } = this.props;
@@ -58,7 +58,7 @@ class O extends l.PureComponent {
     }
     handleAuthenticated() {
         let { currentUser: e } = this.state;
-        p.b8(), null == e && this.refreshUser();
+        g.b8(), null == e && this.refreshUser();
     }
     get requiresVerification() {
         let { currentUser: e } = this.state;
@@ -220,7 +220,7 @@ class O extends l.PureComponent {
             }),
             P(this, 'refreshUser', () => {
                 this.setState({ fetchingUser: !0 }),
-                    g
+                    p
                         .k({ withAnalyticsToken: !0 })
                         .then((e) =>
                             this.setState({
@@ -256,19 +256,19 @@ class O extends l.PureComponent {
             });
     }
 }
-t.Z = c.ZP.connectStores([v.Z, I.Z, _.default, b.Z, E.Z, f.Z], (e) => {
+t.Z = c.ZP.connectStores([I.Z, v.Z, x.default, N.Z, E.Z, f.Z], (e) => {
     let t = e.match.params.giftCode,
-        n = v.Z.get(t),
-        i = null != n ? b.Z.get(n.skuId) : null;
+        n = I.Z.get(t),
+        i = null != n ? N.Z.get(n.skuId) : null;
     return {
         giftCode: n,
         sku: i,
-        libraryApplication: null != i && (null == n ? void 0 : n.entitlementBranches) != null ? N.z2(n.entitlementBranches, i, I.Z) : null,
-        authenticated: _.default.isAuthenticated(),
+        libraryApplication: null != i && (null == n ? void 0 : n.entitlementBranches) != null ? b.z2(n.entitlementBranches, i, v.Z) : null,
+        authenticated: x.default.isAuthenticated(),
         defaultRoute: E.Z.defaultRoute,
-        isResolved: v.Z.getIsResolved(t),
-        isAccepting: v.Z.getIsAccepting(t),
-        libraryApplicationsFetched: I.Z.fetched,
+        isResolved: I.Z.getIsResolved(t),
+        isAccepting: I.Z.getIsAccepting(t),
+        libraryApplicationsFetched: v.Z.fetched,
         nativeAppState: f.Z.getState(t)
     };
 })(O);

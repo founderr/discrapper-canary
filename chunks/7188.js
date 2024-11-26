@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return b;
     }
 });
 var r = n(200651),
@@ -28,7 +28,7 @@ function I(e) {
         className: t
     });
 }
-function b(e) {
+function T(e) {
     let { className: t } = e;
     return (0, r.jsxs)(i.Fragment, {
         children: [
@@ -41,18 +41,18 @@ function b(e) {
         ]
     });
 }
-function T(e) {
+function b(e) {
     let { hideBadges: t = !1, stream: n, ...o } = e,
         f = (0, a.e7)([d.default], () => _.ZP.isPremium(d.default.getCurrentUser(), g.p9.TIER_1)),
         v = (0, a.e7)([c.Z], () => c.Z.getChannel(null == n ? void 0 : n.channelId)),
-        T = i.useMemo(() => (null != n ? [n] : []), [n]),
+        b = i.useMemo(() => (null != n ? [n] : []), [n]),
         S = i.useCallback(() => {
             null != v && (0, u.Z)(v.getGuildId(), v.id, m.jXE.STREAM_SETTINGS);
         }, [v]);
     if (null == n || null == v) return null;
     let y = I;
     return (
-        !t && !f && (y = b),
+        !t && !f && (y = T),
         (0, r.jsx)(s.Popout, {
             position: 'top',
             renderPopout: (e) => {
@@ -61,7 +61,7 @@ function T(e) {
                     children: (0, r.jsx)(l.Z, {
                         channel: v,
                         currentUser: d.default.getCurrentUser(),
-                        activeStreams: T,
+                        activeStreams: b,
                         onClose: t,
                         showReportOption: !0,
                         handleGoLive: S

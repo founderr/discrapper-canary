@@ -16,8 +16,8 @@ var r = 'function' == typeof Map && Map.prototype,
     E = String.prototype.slice,
     v = String.prototype.replace,
     I = String.prototype.toUpperCase,
-    b = String.prototype.toLowerCase,
-    T = RegExp.prototype.test,
+    T = String.prototype.toLowerCase,
+    b = RegExp.prototype.test,
     S = Array.prototype.concat,
     y = Array.prototype.join,
     A = Array.prototype.slice,
@@ -35,8 +35,8 @@ var r = 'function' == typeof Map && Map.prototype,
                   return e.__proto__;
               }
             : null);
-function M(e, t) {
-    if (e === 1 / 0 || e === -1 / 0 || e != e || (e && e > -1000 && e < 1000) || T.call(/e/, t)) return t;
+function P(e, t) {
+    if (e === 1 / 0 || e === -1 / 0 || e != e || (e && e > -1000 && e < 1000) || b.call(/e/, t)) return t;
     var n = /[0-9](?=(?:[0-9]{3})+(?![0-9]))/g;
     if ('number' == typeof e) {
         var r = e < 0 ? -N(-e) : N(e);
@@ -48,8 +48,8 @@ function M(e, t) {
     }
     return v.call(t, n, '$&_');
 }
-var P = n(771673),
-    k = P.custom,
+var M = n(771673),
+    k = M.custom,
     U = F(k) ? k : null;
 function B(e, t, n) {
     var r = 'double' === (n.quoteStyle || t) ? '"' : "'";
@@ -77,12 +77,12 @@ e.exports = function e(t, r, i, o) {
         })(t, l);
     if ('number' == typeof t) {
         if (0 === t) return 1 / 0 / t > 0 ? '0' : '-0';
-        var T = String(t);
-        return I ? M(t, T) : T;
+        var b = String(t);
+        return I ? P(t, b) : b;
     }
     if ('bigint' == typeof t) {
         var N = String(t) + 'n';
-        return I ? M(t, N) : N;
+        return I ? P(t, N) : N;
     }
     var R = void 0 === l.depth ? 5 : l.depth;
     if ((void 0 === i && (i = 0), i >= R && R > 0 && 'object' == typeof t)) return G(t) ? '[Array]' : '[Object]';
@@ -125,7 +125,7 @@ e.exports = function e(t, r, i, o) {
             return !!e && 'object' == typeof e && (!!('undefined' != typeof HTMLElement && e instanceof HTMLElement) || ('string' == typeof e.nodeName && 'function' == typeof e.getAttribute));
         })(t)
     ) {
-        for (var et = '<' + b.call(String(t.nodeName)), en = t.attributes || [], er = 0; er < en.length; er++)
+        for (var et = '<' + T.call(String(t.nodeName)), en = t.attributes || [], er = 0; er < en.length; er++)
             et +=
                 ' ' +
                 en[er].name +
@@ -137,7 +137,7 @@ e.exports = function e(t, r, i, o) {
                     'double',
                     l
                 );
-        return (et += '>'), t.childNodes && t.childNodes.length && (et += '...'), (et += '</' + b.call(String(t.nodeName)) + '>');
+        return (et += '>'), t.childNodes && t.childNodes.length && (et += '...'), (et += '</' + T.call(String(t.nodeName)) + '>');
     }
     if (G(t)) {
         if (0 === t.length) return '[]';
@@ -159,7 +159,7 @@ e.exports = function e(t, r, i, o) {
         return 'cause' in Error.prototype || !('cause' in t) || x.call(t, 'cause') ? (0 === ea.length ? '[' + String(t) + ']' : '{ [' + String(t) + '] ' + y.call(ea, ', ') + ' }') : '{ [' + String(t) + '] ' + y.call(S.call('[cause]: ' + V(t.cause), ea), ', ') + ' }';
     }
     if ('object' == typeof t && h) {
-        if (U && 'function' == typeof t[U] && P) return P(t, { depth: R - i });
+        if (U && 'function' == typeof t[U] && M) return M(t, { depth: R - i });
         if ('symbol' !== h && 'function' == typeof t.inspect) return t.inspect();
     }
     if (
@@ -368,7 +368,7 @@ function X(e, t) {
     }
     for (var l in e) {
         if (!j(e, l) || (r && String(Number(l)) === l && l < e.length)) continue;
-        if (!(D && n['$' + l] instanceof Symbol)) T.call(/[^\w$]/, l) ? i.push(t(l, e) + ': ' + t(e[l], e)) : i.push(l + ': ' + t(e[l], e));
+        if (!(D && n['$' + l] instanceof Symbol)) b.call(/[^\w$]/, l) ? i.push(t(l, e) + ': ' + t(e[l], e)) : i.push(l + ': ' + t(e[l], e));
     }
     if ('function' == typeof R) for (var u = 0; u < s.length; u++) x.call(e, s[u]) && i.push('[' + t(s[u]) + ']: ' + t(e[s[u]], e));
     return i;

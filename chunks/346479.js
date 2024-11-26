@@ -17,8 +17,8 @@ var r = n(697988),
     E = n(952537),
     v = n(981631),
     I = n(176505),
-    b = n(388032);
-function T(e, t) {
+    T = n(388032);
+function b(e, t) {
     return i.tn
         .patch({
             url: v.ANM.CHANNEL(e.id),
@@ -53,13 +53,13 @@ function S(e, t) {
 t.Z = {
     archiveThread(e, t) {
         let n = { archived: !0 };
-        return t && (n.locked = !0), T(e, n);
+        return t && (n.locked = !0), b(e, n);
     },
     async lockThread(e) {
         let t = e.isArchivedThread();
         return (
             t && (await this.unarchiveThread(e, !1)),
-            T(e, {
+            b(e, {
                 locked: !0,
                 archived: t
             })
@@ -69,7 +69,7 @@ t.Z = {
         let t = e.isArchivedThread();
         return (
             t && (await this.unarchiveThread(e, !0)),
-            T(e, {
+            b(e, {
                 locked: !1,
                 archived: t
             })
@@ -80,28 +80,28 @@ t.Z = {
             r = e.isForumPost();
         t && (n.locked = !1);
         try {
-            return await T(e, n);
+            return await b(e, n);
         } catch (e) {
             var i, a;
             throw (
                 ((null === (i = e.body) || void 0 === i ? void 0 : i.code) === v.evJ.TOO_MANY_THREADS
                     ? s.Z.show({
-                          title: r ? b.intl.string(b.t.kwyWNT) : b.intl.string(b.t['PeIE/v']),
-                          body: r ? b.intl.string(b.t.KGaiEB) : b.intl.string(b.t.P0wT5e)
+                          title: r ? T.intl.string(T.t.kwyWNT) : T.intl.string(T.t['PeIE/v']),
+                          body: r ? T.intl.string(T.t.KGaiEB) : T.intl.string(T.t.P0wT5e)
                       })
                     : (null === (a = e.body) || void 0 === a ? void 0 : a.code) === v.evJ.TOO_MANY_ANNOUNCEMENT_THREADS
                       ? s.Z.show({
-                            title: b.intl.string(b.t['PeIE/v']),
-                            body: b.intl.string(b.t.jDMxz8)
+                            title: T.intl.string(T.t['PeIE/v']),
+                            body: T.intl.string(T.t.jDMxz8)
                         })
                       : 429 === e.status
                         ? s.Z.show({
-                              title: r ? b.intl.string(b.t.kwyWNT) : b.intl.string(b.t['PeIE/v']),
-                              body: b.intl.string(b.t['Whhv4+'])
+                              title: r ? T.intl.string(T.t.kwyWNT) : T.intl.string(T.t['PeIE/v']),
+                              body: T.intl.string(T.t['Whhv4+'])
                           })
                         : s.Z.show({
-                              title: b.intl.string(b.t.j2d6Ki),
-                              body: b.intl.string(b.t.fEptJC)
+                              title: T.intl.string(T.t.j2d6Ki),
+                              body: T.intl.string(T.t.fEptJC)
                           }),
                 e)
             );
@@ -113,7 +113,7 @@ t.Z = {
             r = _.Z.can(v.Plq.MANAGE_THREADS, n);
         null != n && n.isArchivedThread() && (r || (null === (t = n.threadMetadata) || void 0 === t ? void 0 : t.locked) !== !0) && (await this.unarchiveThread(n, !1));
     },
-    setInvitable: (e, t) => T(e, { invitable: t }),
+    setInvitable: (e, t) => b(e, { invitable: t }),
     async joinThread(e, t) {
         e.isForumPost() && S(e, !0);
         try {
@@ -127,13 +127,13 @@ t.Z = {
             if ((null === (n = t.body) || void 0 === n ? void 0 : n.code) === v.evJ.TOO_MANY_THREAD_MEMBERS) {
                 let t = e.isForumPost();
                 s.Z.show({
-                    title: t ? b.intl.string(b.t.EMYJFh) : b.intl.string(b.t.gtdVcn),
-                    body: t ? b.intl.string(b.t.QYyad3) : b.intl.string(b.t.abMwgo)
+                    title: t ? T.intl.string(T.t.EMYJFh) : T.intl.string(T.t.gtdVcn),
+                    body: t ? T.intl.string(T.t.QYyad3) : T.intl.string(T.t.abMwgo)
                 });
             } else
                 s.Z.show({
-                    title: b.intl.string(b.t.j2d6Ki),
-                    body: b.intl.string(b.t.fEptJC)
+                    title: T.intl.string(T.t.j2d6Ki),
+                    body: T.intl.string(T.t.fEptJC)
                 });
             e.isForumPost() && S(e, !1);
         }
@@ -150,13 +150,13 @@ t.Z = {
             if ((null === (r = t.body) || void 0 === r ? void 0 : r.code) === v.evJ.TOO_MANY_THREAD_MEMBERS) {
                 let t = e.isForumPost();
                 s.Z.show({
-                    title: t ? b.intl.string(b.t['0yAqqK']) : b.intl.string(b.t.YErysL),
-                    body: t ? b.intl.string(b.t.QYyad3) : b.intl.string(b.t.abMwgo)
+                    title: t ? T.intl.string(T.t['0yAqqK']) : T.intl.string(T.t.YErysL),
+                    body: t ? T.intl.string(T.t.QYyad3) : T.intl.string(T.t.abMwgo)
                 });
             } else
                 s.Z.show({
-                    title: b.intl.string(b.t.j2d6Ki),
-                    body: b.intl.string(b.t.fEptJC)
+                    title: T.intl.string(T.t.j2d6Ki),
+                    body: T.intl.string(T.t.fEptJC)
                 });
         }
     },

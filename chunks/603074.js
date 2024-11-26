@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return T;
     }
 });
 var r = n(200651),
@@ -21,18 +21,18 @@ var r = n(200651),
     E = n(763296),
     v = n(526617),
     I = n(620492);
-function b(e) {
-    let { guildId: t, channel: n, containerWidth: a, onClose: b, onSelect: T, analyticsSource: S, suppressPlaySound: y, shouldValidateSelectedSound: A, shouldShowUpsell: N = !0, gridNotice: C, inExpressionPicker: R, soundButtonOverlay: O, listPadding: D, renderHeader: L, defaultSoundsOnly: x } = e,
+function T(e) {
+    let { guildId: t, channel: n, containerWidth: a, onClose: T, onSelect: b, analyticsSource: S, suppressPlaySound: y, shouldValidateSelectedSound: A, shouldShowUpsell: N = !0, gridNotice: C, inExpressionPicker: R, soundButtonOverlay: O, listPadding: D, renderHeader: L, defaultSoundsOnly: x } = e,
         w = (0, l.e7)([E.Z], () => E.Z.isFetchingSounds() || E.Z.isFetchingDefaultSounds()),
-        M = (0, l.e7)([h.Z], () => h.Z.getMediaSessionId()),
-        { analyticsLocations: P } = (0, d.ZP)(c.Z.SOUNDBOARD_POPOUT);
+        P = (0, l.e7)([h.Z], () => h.Z.getMediaSessionId()),
+        { analyticsLocations: M } = (0, d.ZP)(c.Z.SOUNDBOARD_POPOUT);
     (0, f.Z)({
         type: o.ImpressionTypes.POPOUT,
         name: o.ImpressionNames.SOUNDBOARD_POPOUT,
         properties: {
             source: S,
             guild_id: t,
-            media_session_id: M
+            media_session_id: P
         }
     }),
         i.useEffect(() => {
@@ -40,7 +40,7 @@ function b(e) {
         }, []);
     let { refreshEnabled: k } = (0, g.Z)({ location: 'SoundboardSoundPicker' });
     return (0, r.jsx)(d.Gt, {
-        value: P,
+        value: M,
         children: (0, r.jsx)(u.Dialog, {
             className: s()(I.picker, {
                 [I.fetching]: w,
@@ -52,8 +52,8 @@ function b(e) {
                 : (0, r.jsx)(v.Z, {
                       guildId: t,
                       channel: n,
-                      onClose: b,
-                      onSelect: T,
+                      onClose: T,
+                      onSelect: b,
                       shouldValidateSelectedSound: A,
                       containerWidth: a,
                       suppressPlaySound: y,

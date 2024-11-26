@@ -36,7 +36,7 @@ class f extends (r = a.PureComponent) {
                           })
                       })
                     : null,
-            b =
+            T =
                 null != h
                     ? (0, i.jsxs)(l.Text, {
                           className: o()(c.__invalid_submitText, c.spacing),
@@ -51,7 +51,7 @@ class f extends (r = a.PureComponent) {
                           ]
                       })
                     : null,
-            T = v
+            b = v
                 ? (0, i.jsx)(l.Card, {
                       type: l.Card.Types.SUCCESS,
                       className: c.card,
@@ -84,7 +84,7 @@ class f extends (r = a.PureComponent) {
                                   })
                                 : null,
                             I,
-                            T,
+                            b,
                             (0, i.jsxs)(l.FormItem, {
                                 title: this.getLabelText(),
                                 className: c.spacing,
@@ -106,7 +106,7 @@ class f extends (r = a.PureComponent) {
                                               children: null != s ? s : E
                                           })
                                         : null,
-                                    b
+                                    T
                                 ]
                             })
                         ]

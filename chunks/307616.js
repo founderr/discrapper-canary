@@ -3,7 +3,7 @@ n.d(t, {
         return y;
     },
     v: function () {
-        return T;
+        return b;
     }
 }),
     n(47120),
@@ -39,7 +39,7 @@ function v(e, t, n) {
     );
 }
 let I = [f.ZP, _.ZP];
-class b extends i.PureComponent {
+class T extends i.PureComponent {
     render() {
         let { render: e, LayerComponent: t, isTopModal: n, instant: i } = this.props,
             { transitionState: a } = this.state;
@@ -93,12 +93,12 @@ class b extends i.PureComponent {
             );
     }
 }
-function T() {
+function b() {
     return (0, h.Vn)((0, d.bp)());
 }
 let S = [];
 function y() {
-    let e = T(),
+    let e = b(),
         t = (0, h.s9)((t) => (void 0 !== t[e] ? t[e] : S)),
         n = i.useRef();
     i.useLayoutEffect(() => {
@@ -150,7 +150,7 @@ function y() {
             t.map((e, n) => {
                 let { key: i, Layer: a, render: s, instant: l } = e;
                 return (0, r.jsx)(
-                    b,
+                    T,
                     {
                         modalKey: i,
                         LayerComponent: null != a ? a : f.ZP,

@@ -4,7 +4,7 @@ n.r(t),
             return I;
         },
         customRules: function () {
-            return b;
+            return T;
         }
     }),
     n(47120);
@@ -33,7 +33,7 @@ let g = l().defaultRules.link,
         return i.createElement('h'.concat(c + f - 1), { className: s()(...((t = l), null == (n = o) ? [] : n.split(' ').map((e) => t[e]))) }, a);
     },
     I = null != f.Z ? f.Z.defaultRules : null,
-    b = {
+    T = {
         link: {
             parse(e, t, n) {
                 let r;

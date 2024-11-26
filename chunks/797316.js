@@ -17,14 +17,14 @@ var i,
     E = n(592125),
     v = n(486472),
     I = n(271383),
-    b = n(430824),
-    T = n(19780),
+    T = n(430824),
+    b = n(19780),
     S = n(699516),
     y = n(944486),
     A = n(914010),
     N = n(981631);
 let C = new f.ZP((e) => {
-    for (let t in e) null == b.Z.getGuild(t) && !v.Z.isUnavailable(t) && delete e[t];
+    for (let t in e) null == T.Z.getGuild(t) && !v.Z.isUnavailable(t) && delete e[t];
     d.Z.dispatch({
         type: 'GUILD_SUBSCRIPTIONS_FLUSH',
         subscriptions: e
@@ -34,7 +34,7 @@ function R(e, t) {
     let n = {};
     C.forEach((i) => {
         var a;
-        i !== A.Z.getGuildId() && i !== T.Z.getGuildId() && i !== (null === (a = E.Z.getChannel(y.Z.getChannelId())) || void 0 === a ? void 0 : a.getGuildId()) && (null == r || r.guildId !== i) && (C.clearWithoutFlushing(i, e), t && (n[i] = C.get(i)));
+        i !== A.Z.getGuildId() && i !== b.Z.getGuildId() && i !== (null === (a = E.Z.getChannel(y.Z.getChannelId())) || void 0 === a ? void 0 : a.getGuildId()) && (null == r || r.guildId !== i) && (C.clearWithoutFlushing(i, e), t && (n[i] = C.get(i)));
     }),
         !u().isEmpty(n) &&
             d.Z.dispatch({
@@ -59,7 +59,7 @@ function L(e) {
     null != n && O(n, y.Z.getChannelId(n));
     let r = {};
     C.forEach((e) => {
-        null == b.Z.getGuild(e) ? C.clearWithoutFlushing(e, !0) : (r[e] = C.get(e));
+        null == T.Z.getGuild(e) ? C.clearWithoutFlushing(e, !0) : (r[e] = C.get(e));
     }),
         !u().isEmpty(r) &&
             d.Z.dispatch({
@@ -74,7 +74,7 @@ function x(e) {
 function w() {
     return O(A.Z.getGuildId(), y.Z.getChannelId());
 }
-function M() {
+function P() {
     let e = p.Z.getSyncingWith();
     if (null == e) null != r && (C.unsubscribeUser(r.guildId, r.userId), (r = null));
     else {
@@ -91,9 +91,9 @@ function M() {
     }
     return !1;
 }
-class P extends (i = c.ZP.Store) {
+class M extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(E.Z, b.Z, A.Z, y.Z, T.Z, h.default, g.ZP, _.Z), this.syncWith([p.Z], M), this.syncWith([g.ZP], w);
+        this.waitFor(E.Z, T.Z, A.Z, y.Z, b.Z, h.default, g.ZP, _.Z), this.syncWith([p.Z], P), this.syncWith([g.ZP], w);
     }
     getSubscribedThreadIds() {
         return C.getSubscribedThreadIds();
@@ -113,7 +113,7 @@ class P extends (i = c.ZP.Store) {
     }
 }
 (o = 'GuildSubscriptionsStore'),
-    (s = 'displayName') in (a = P)
+    (s = 'displayName') in (a = M)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -121,7 +121,7 @@ class P extends (i = c.ZP.Store) {
               writable: !0
           })
         : (a[s] = o),
-    (t.Z = new P(d.Z, {
+    (t.Z = new M(d.Z, {
         CONNECTION_OPEN: L,
         CONNECTION_RESUMED: L,
         CONNECTION_CLOSED: function () {

@@ -3,7 +3,7 @@ n.d(t, {
         return N;
     },
     q: function () {
-        return f;
+        return I;
     }
 });
 var i = n(200651),
@@ -22,7 +22,7 @@ var i = n(200651),
     x = n(51144),
     S = n(388032),
     T = n(47074),
-    C = n(232186);
+    E = n(232186);
 function _(e) {
     let { userId: t, count: n } = e,
         c = (0, r.e7)([p.default], () => p.default.getUser(t)),
@@ -72,7 +72,7 @@ function _(e) {
         })
     );
 }
-function E(e) {
+function C(e) {
     let { className: t, userId: n, verification: r, index: a } = e,
         o = (0, u.bo)(r.timestamp),
         c = s.useCallback(() => {
@@ -107,7 +107,7 @@ function E(e) {
         ]
     });
 }
-function f(e) {
+function I(e) {
     let { userId: t } = e,
         n = (0, m._)(t);
     return (0, i.jsxs)(i.Fragment, {
@@ -121,7 +121,7 @@ function f(e) {
                     s.Fragment,
                     {
                         children: [
-                            (0, i.jsx)(E, {
+                            (0, i.jsx)(C, {
                                 className: T.row,
                                 userId: t,
                                 index: r,
@@ -136,18 +136,18 @@ function f(e) {
         ]
     });
 }
-function I(e) {
+function f(e) {
     let { userIds: t } = e;
     return 0 === t.length
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsxs)(l.FormItem, {
-                      className: C.marginBottom20,
+                      className: E.marginBottom20,
                       children: [
                           (0, i.jsx)(l.FormTitle, {
                               tag: l.FormTitleTags.H5,
-                              className: C.marginBottom8,
+                              className: E.marginBottom8,
                               children: S.intl.string(S.t['5b3FND'])
                           }),
                           (0, i.jsx)(l.FormText, {
@@ -161,7 +161,7 @@ function I(e) {
                           'div',
                           {
                               className: T.item,
-                              children: (0, i.jsx)(f, { userId: e })
+                              children: (0, i.jsx)(I, { userId: e })
                           },
                           e
                       )
@@ -180,14 +180,14 @@ function N() {
                 children: [
                     (0, i.jsx)(l.FormText, {
                         type: l.FormTextTypes.DESCRIPTION,
-                        className: C.marginBottom20,
+                        className: E.marginBottom20,
                         children: S.intl.format(S.t['8IwQfH'], { helpArticle: (0, u.uV)() })
                     }),
                     (0, i.jsxs)(l.FormItem, {
                         children: [
                             (0, i.jsx)(l.FormTitle, {
                                 tag: l.FormTitleTags.H5,
-                                className: C.marginBottom8,
+                                className: E.marginBottom8,
                                 children: S.intl.string(S.t['2Ap8sr'])
                             }),
                             (0, i.jsx)(l.FormSwitch, {
@@ -201,7 +201,7 @@ function N() {
                     })
                 ]
             }),
-            (0, i.jsx)(I, { userIds: t })
+            (0, i.jsx)(f, { userIds: t })
         ]
     });
 }

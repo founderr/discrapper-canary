@@ -22,14 +22,14 @@ function h(e) {
         { name: h, description: g, hideDescriptionUntilUnlock: p, onAction: x } = s,
         S = p && !l,
         T = l ? 'header-primary' : 'text-muted',
-        C = l ? 'header-secondary' : 'text-muted',
+        E = l ? 'header-secondary' : 'text-muted',
         _ = a()(n),
-        E = null != x && l,
-        f = E ? o.Clickable : 'div';
-    return (0, i.jsxs)(f, {
-        className: r()(m.container, E && m.actionable),
+        C = null != x && l,
+        I = C ? o.Clickable : 'div';
+    return (0, i.jsxs)(I, {
+        className: r()(m.container, C && m.actionable),
         onClick: () => {
-            E && x();
+            C && x();
         },
         children: [
             (0, i.jsx)('div', {
@@ -57,7 +57,7 @@ function h(e) {
                     }),
                     (0, i.jsx)(o.Text, {
                         variant: 'text-xs/normal',
-                        color: C,
+                        color: E,
                         children: S ? '?????' : g()
                     })
                 ]

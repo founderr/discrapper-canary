@@ -37,15 +37,15 @@ function h(e) {
         E = (0, _.wu)(t, n, m),
         v = (0, _.lM)(t, n),
         I = (0, _.e4)(t, i),
-        b = m ? (null == g ? void 0 : g.overlaySyncedWithUserTheme) : null == g ? void 0 : g.overlay;
+        T = m ? (null == g ? void 0 : g.overlaySyncedWithUserTheme) : null == g ? void 0 : g.overlay;
     return {
         profileThemeStyle: (0, r.useMemo)(() => {
-            if (null == n || null == i || null == g || null == E || null == v || null == I || null == b) return p;
+            if (null == n || null == i || null == g || null == E || null == v || null == I || null == T) return p;
             let e = (e, t) => (0, s.ho)(e, h, null, t);
             return {
                 '--profile-gradient-primary-color': e(n),
                 '--profile-gradient-secondary-color': e(i),
-                '--profile-gradient-overlay-color': b,
+                '--profile-gradient-overlay-color': T,
                 '--profile-gradient-button-color': e((0, _.ZB)(n)),
                 '--profile-avatar-border-color': e(E),
                 '--profile-body-background-color': g.sectionBox,
@@ -64,7 +64,7 @@ function h(e) {
                     textMixAmount: 25
                 })
             };
-        }, [n, i, g, E, v, I, b, t, h]),
+        }, [n, i, g, E, v, I, T, t, h]),
         profileThemeClassName: a()((0, u.getThemeClass)(t), {
             [f.e3]: null != n,
             'custom-profile-theme': null != n

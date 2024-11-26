@@ -1,17 +1,17 @@
-function n(e) {
+function a(e) {
     let t;
     let r = e[0],
-        n = 1;
-    for (; n < e.length; ) {
-        let a = e[n],
-            _ = e[n + 1];
-        if (((n += 2), ('optionalAccess' === a || 'optionalCall' === a) && null == r)) return;
-        'access' === a || 'optionalAccess' === a ? ((t = r), (r = _(r))) : ('call' === a || 'optionalCall' === a) && ((r = _((...e) => r.call(t, ...e))), (t = void 0));
+        a = 1;
+    for (; a < e.length; ) {
+        let n = e[a],
+            _ = e[a + 1];
+        if (((a += 2), ('optionalAccess' === n || 'optionalCall' === n) && null == r)) return;
+        'access' === n || 'optionalAccess' === n ? ((t = r), (r = _(r))) : ('call' === n || 'optionalCall' === n) && ((r = _((...e) => r.call(t, ...e))), (t = void 0));
     }
     return r;
 }
 r.d(t, {
     x: function () {
-        return n;
+        return a;
     }
 });

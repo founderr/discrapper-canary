@@ -40,8 +40,8 @@ var r = n(728804),
         strictNullHandling: !1
     },
     p = {},
-    h = function e(t, n, a, s, o, u, d, f, h, m, g, E, v, I, b, T) {
-        for (var S, y, A = t, N = T, C = 0, R = !1; void 0 !== (N = N.get(p)) && !R; ) {
+    h = function e(t, n, a, s, o, u, d, f, h, m, g, E, v, I, T, b) {
+        for (var S, y, A = t, N = b, C = 0, R = !1; void 0 !== (N = N.get(p)) && !R; ) {
             var O = N.get(t);
             if (((C += 1), void 0 !== O)) {
                 if (O === C) throw RangeError('Cyclic object value');
@@ -61,10 +61,10 @@ var r = n(728804),
                     })),
             null === A)
         ) {
-            if (o) return d && !I ? d(n, _.encoder, b, 'key', E) : n;
+            if (o) return d && !I ? d(n, _.encoder, T, 'key', E) : n;
             A = '';
         }
-        if ('string' == typeof (S = A) || 'number' == typeof S || 'boolean' == typeof S || 'symbol' == typeof S || 'bigint' == typeof S || i.isBuffer(A)) return d ? [v(I ? n : d(n, _.encoder, b, 'key', E)) + '=' + v(d(A, _.encoder, b, 'value', E))] : [v(n) + '=' + v(String(A))];
+        if ('string' == typeof (S = A) || 'number' == typeof S || 'boolean' == typeof S || 'symbol' == typeof S || 'bigint' == typeof S || i.isBuffer(A)) return d ? [v(I ? n : d(n, _.encoder, T, 'key', E)) + '=' + v(d(A, _.encoder, T, 'value', E))] : [v(n) + '=' + v(String(A))];
         var D = [];
         if (void 0 === A) return D;
         if ('comma' === a && l(A)) I && d && (A = i.maybeMap(A, d)), (y = [{ value: A.length > 0 ? A.join(',') || null : void 0 }]);
@@ -74,13 +74,13 @@ var r = n(728804),
             y = h ? L.sort(h) : L;
         }
         for (var x = s && l(A) && 1 === A.length ? n + '[]' : n, w = 0; w < y.length; ++w) {
-            var M = y[w],
-                P = 'object' == typeof M && void 0 !== M.value ? M.value : A[M];
-            if (!u || null !== P) {
-                var k = l(A) ? ('function' == typeof a ? a(x, M) : x) : x + (m ? '.' + M : '[' + M + ']');
-                T.set(t, C);
+            var P = y[w],
+                M = 'object' == typeof P && void 0 !== P.value ? P.value : A[P];
+            if (!u || null !== M) {
+                var k = l(A) ? ('function' == typeof a ? a(x, P) : x) : x + (m ? '.' + P : '[' + P + ']');
+                b.set(t, C);
                 var U = r();
-                U.set(p, T), c(D, e(P, k, a, s, o, u, 'comma' === a && I && l(A) ? null : d, f, h, m, g, E, v, I, b, U));
+                U.set(p, b), c(D, e(M, k, a, s, o, u, 'comma' === a && I && l(A) ? null : d, f, h, m, g, E, v, I, T, U));
             }
         }
         return D;

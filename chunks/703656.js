@@ -1,7 +1,7 @@
 let r, i, a;
 n.d(t, {
     At: function () {
-        return T;
+        return b;
     },
     DB: function () {
         return N;
@@ -28,7 +28,7 @@ n.d(t, {
         return C;
     },
     s1: function () {
-        return b;
+        return T;
     },
     uL: function () {
         return g;
@@ -91,10 +91,10 @@ function v() {
 function I(e, t, n) {
     !m(e, 'replace') && (d.log('Replacing route with '.concat(e)), 'string' == typeof e ? r.replace(e, t) : r.replace(e), (i = n));
 }
-function b() {
+function T() {
     return r;
 }
-function T() {
+function b() {
     return i;
 }
 function S() {

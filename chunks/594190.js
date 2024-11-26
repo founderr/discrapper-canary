@@ -35,8 +35,8 @@ var i,
     E = n(710845),
     v = n(630699),
     I = n(855403),
-    b = n(454991),
-    T = n(32300),
+    T = n(454991),
+    b = n(32300),
     S = n(77498),
     y = n(283595),
     A = n(417363),
@@ -48,8 +48,8 @@ var i,
     L = n(998502),
     x = n(145597),
     w = n(370862),
-    M = n(981631),
-    P = n(987650);
+    P = n(981631),
+    M = n(987650);
 let k = new E.Z('RunningGameStore'),
     U = 'RunningGameStore',
     B = [
@@ -154,7 +154,7 @@ let k = new E.Z('RunningGameStore'),
                     name: 'spotify'
                 }
             ],
-            name: m.Z.get(M.ABu.SPOTIFY).name
+            name: m.Z.get(P.ABu.SPOTIFY).name
         }
     ],
     G = [],
@@ -224,7 +224,7 @@ function ed(e) {
         return {
             source: w.d.LAUNCHER,
             enabled: !1,
-            overlayMethod: P.gl.Disabled
+            overlayMethod: M.gl.Disabled
         };
     let t = S.Z.getGameByName(e.name);
     if (null != t) {
@@ -233,11 +233,11 @@ function ed(e) {
             return {
                 source: w.d.LIBRARY_APPLICATION,
                 enabled: e.isOverlayEnabled(),
-                overlayMethod: P.gl.Disabled
+                overlayMethod: M.gl.Disabled
             };
     }
-    let n = (v.H() || (0, T.R)()) && (0, x.VS)() && !b.v.legacyEnabled,
-        r = n ? P.gl.OutOfProcess : P.gl.Hook,
+    let n = (v.H() || (0, b.R)()) && (0, x.VS)() && !T.v.legacyEnabled,
+        r = n ? M.gl.OutOfProcess : M.gl.Hook,
         i = q.enableOverlay[ec(e)];
     if (null != i)
         return {
@@ -255,7 +255,7 @@ function ed(e) {
         : {
               source: w.d.DEFAULT,
               enabled: !1,
-              overlayMethod: P.gl.Hook
+              overlayMethod: M.gl.Hook
           };
 }
 function ef(e) {
@@ -396,9 +396,9 @@ function ev() {
                 e = e.filter(
                     (e) => (
                         (e.distributor = (function (e) {
-                            if (null != K[e.exePath]) return M.GQo.DISCORD;
-                            if (/steamapps/.test(e.cmdLine)) return M.GQo.STEAM;
-                            if (/-epicapp/.test(e.cmdLine)) return M.GQo.EPIC;
+                            if (null != K[e.exePath]) return P.GQo.DISCORD;
+                            if (/steamapps/.test(e.cmdLine)) return P.GQo.STEAM;
+                            if (/-epicapp/.test(e.cmdLine)) return P.GQo.EPIC;
                             return e.distributor;
                         })(e)),
                         (e.isLauncher = t.has(e.exeName)),
@@ -605,7 +605,7 @@ class eI extends (i = f.ZP.Store) {
             if (((q.enableOverlay[ec(e.game)] = e.newEnabledValue), ep(), !__OVERLAY__)) {
                 let t = null != e.game.id ? S.Z.getDetectableGame(e.game.id) : null;
                 null != t &&
-                    N.default.track(M.rMx.OVERLAY_TOGGLED, {
+                    N.default.track(P.rMx.OVERLAY_TOGGLED, {
                         enabled: e.newEnabledValue,
                         setting_type: 'overlay toggled - game',
                         application_id: t.id,
@@ -616,7 +616,7 @@ class eI extends (i = f.ZP.Store) {
         RUNNING_GAME_TOGGLE_DETECTION: function (e) {
             let { game: t } = e,
                 n = ef(t);
-            (q.enableDetection[ec(t)] = !n), ep(), N.default.track(M.rMx.USER_SETTINGS_GAME_DETECTION_TOGGLE, { enabled: !n });
+            (q.enableDetection[ec(t)] = !n), ep(), N.default.track(P.rMx.USER_SETTINGS_GAME_DETECTION_TOGGLE, { enabled: !n });
         },
         RUNNING_GAME_EDIT_NAME: function (e) {
             let t = ec(e.game),
@@ -697,7 +697,7 @@ class eI extends (i = f.ZP.Store) {
                 })
                 .map((e) => e.cleanedExePath);
             t.length > 0 &&
-                N.default.track(M.rMx.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
+                N.default.track(P.rMx.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
                     keywords: G,
                     paths: t,
                     debugging_level: ei,

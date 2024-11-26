@@ -75,8 +75,8 @@ function d(e, t, n) {
         E = null !== (c = e.isDisabled) && void 0 !== c ? c : t.disabledKeys.has(m),
         v = null !== (d = e.isSelected) && void 0 !== d ? d : t.selectionManager.isSelected(m),
         I = null !== (f = e.shouldSelectOnPressUp) && void 0 !== f ? f : null == g ? void 0 : g.shouldSelectOnPressUp,
-        b = null !== (_ = e.shouldFocusOnHover) && void 0 !== _ ? _ : null == g ? void 0 : g.shouldFocusOnHover,
-        T = null !== (p = e.shouldUseVirtualFocus) && void 0 !== p ? p : null == g ? void 0 : g.shouldUseVirtualFocus,
+        T = null !== (_ = e.shouldFocusOnHover) && void 0 !== _ ? _ : null == g ? void 0 : g.shouldFocusOnHover,
+        b = null !== (p = e.shouldUseVirtualFocus) && void 0 !== p ? p : null == g ? void 0 : g.shouldUseVirtualFocus,
         S = null !== (h = e.isVirtualized) && void 0 !== h ? h : null == g ? void 0 : g.isVirtualized,
         y = (0, r.mp)(),
         A = (0, r.mp)(),
@@ -102,9 +102,9 @@ function d(e, t, n) {
             key: m,
             ref: n,
             shouldSelectOnPressUp: I,
-            allowsDifferentPressOrigin: I && b,
+            allowsDifferentPressOrigin: I && T,
             isVirtualized: S,
-            shouldUseVirtualFocus: T,
+            shouldUseVirtualFocus: b,
             isDisabled: E,
             onAction: (null == g ? void 0 : g.onAction)
                 ? () => {
@@ -115,18 +115,18 @@ function d(e, t, n) {
             linkBehavior: null == g ? void 0 : g.linkBehavior
         }),
         { hoverProps: w } = (0, i.XI)({
-            isDisabled: E || !b,
+            isDisabled: E || !T,
             onHoverStart() {
                 !(0, i.E)() && (t.selectionManager.setFocused(!0), t.selectionManager.setFocusedKey(m));
             }
         }),
-        M = (0, r.zL)(null == C ? void 0 : C.props, { isLink: !!(null == C ? void 0 : null === (a = C.props) || void 0 === a ? void 0 : a.href) });
+        P = (0, r.zL)(null == C ? void 0 : C.props, { isLink: !!(null == C ? void 0 : null === (a = C.props) || void 0 === a ? void 0 : a.href) });
     return (
-        delete M.id,
+        delete P.id,
         {
             optionProps: {
                 ...N,
-                ...(0, r.dG)(M, R, w),
+                ...(0, r.dG)(P, R, w),
                 id: u(t, m)
             },
             labelProps: { id: y },

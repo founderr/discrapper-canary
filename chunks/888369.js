@@ -18,8 +18,8 @@ var s = n(398758),
     E = n(944486),
     v = n(412788),
     I = n(9156),
-    b = n(594174),
-    T = n(981631),
+    T = n(594174),
+    b = n(981631),
     S = n(176505),
     y = n(490897);
 function A(e, t, n) {
@@ -35,7 +35,7 @@ function A(e, t, n) {
         e
     );
 }
-let N = T.kod,
+let N = b.kod,
     C = {},
     R = new Set(),
     O = 0;
@@ -63,12 +63,12 @@ function x(e) {
 function w(e, t, n) {
     return null != e.guild_id && n && !((0, d.Q5)(e.type) || I.ZP.isChannelRecordOrParentOptedIn(e)) && 0 === t;
 }
-function M(e) {
+function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return !(null == e || (e.isGuildVocal() && 0 === t) || e.hasFlag(S.zZ.IS_GUILD_RESOURCE_CHANNEL) || ((0 === t || n) && (e.isThread() ? u.Z.isMuted(e.id) || I.ZP.isGuildOrCategoryOrChannelMuted(e.guild_id, e.parent_id) : I.ZP.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id))) || (!e.isPrivate() && (w(e, t, (0, s.r1)(e.guild_id)) || !m.Z.can(e.accessPermissions, e)))) && (t > 0 || I.ZP.resolveUnreadSetting(e) === y.i.ALL_MESSAGES);
 }
-function P(e) {
+function M(e) {
     switch (e) {
         case N:
         case null:
@@ -95,7 +95,7 @@ function Z(e, t, n) {
     return B(t), (t.mentionCount = i()(t.mentionCounts).values().sum()), (t.unread !== n.unread || t.mentionCount !== n.mentionCount) && ((C[null != e ? e : N] = t), null != e && (t.unread ? R.add(e) : R.delete(e)), O++, x(null != e ? e : N), G(t, n), !0);
 }
 function F(e, t) {
-    let n = P(e),
+    let n = M(e),
         r = L(n),
         i = U(n, r),
         { enabled: s, variant: l } = (0, a.XN)({ location: 'GuildReadStateStore.recountGuild' }),
@@ -111,13 +111,13 @@ function F(e, t) {
             if (t.getGuildId() !== n) return;
             let r = u ? o.Z.getMentionCountForChannel(e) : 0,
                 a = g.ZP.getMentionCount(e) - r;
-            null !== n && !c && g.ZP.hasUnread(t.id) && M(t, a, !0) && ((c = !0), (i.unreadChannelId = t.id)), a > 0 && M(t, a) ? (i.mentionCounts[t.id] = a) : delete i.mentionCounts[t.id];
+            null !== n && !c && g.ZP.hasUnread(t.id) && P(t, a, !0) && ((c = !0), (i.unreadChannelId = t.id)), a > 0 && P(t, a) ? (i.mentionCounts[t.id] = a) : delete i.mentionCounts[t.id];
         }),
         (i.unreadByType[y.W.CHANNEL] = c),
         i.unreadByType[y.W.CHANNEL] !== r.unreadByType[y.W.CHANNEL] && !i.unreadByType[y.W.CHANNEL])
     ) {
         let e = p.Z.getChannel(r.unreadChannelId);
-        if (!(null != e && !t.includes(e.id) && g.ZP.hasUnread(e.id) && M(e))) return j(n);
+        if (!(null != e && !t.includes(e.id) && g.ZP.hasUnread(e.id) && P(e))) return j(n);
         null != n && R.add(n), (i.unreadByType[y.W.CHANNEL] = !0);
     }
     return Z(n, i, r);
@@ -129,7 +129,7 @@ function V(e, t) {
     return (r.unreadByType[y.W.GUILD_EVENT] = k(e, t)), Z(e, r, n);
 }
 function j(e, t) {
-    let n = P(e),
+    let n = M(e),
         r = D(n),
         { enabled: i, variant: c } = (0, a.XN)({ location: 'GuildReadStateStore.recountGuild' }),
         f = i && c === a.jH.UNREADS_AT_TOP;
@@ -138,7 +138,7 @@ function j(e, t) {
         for (let t in e) {
             let n = e[t],
                 i = g.ZP.getMentionCount(t);
-            i > 0 && M(n, i) && ((r.mentionCount += i), (r.mentionCounts[n.id] = i));
+            i > 0 && P(n, i) && ((r.mentionCount += i), (r.mentionCounts[n.id] = i));
         }
     } else {
         let e = I.ZP.isMuted(n);
@@ -249,7 +249,7 @@ function $(e) {
 }
 function ee(e) {
     let { channelId: t, guildId: n } = e;
-    return n !== T.I_8 && null != t && F(n, [t]);
+    return n !== b.I_8 && null != t && F(n, [t]);
 }
 function et(e) {
     let { channel: t } = e;
@@ -355,7 +355,7 @@ function eg(e) {
 }
 class eE extends v.Z {
     initialize() {
-        this.waitFor(p.Z, E.Z, g.ZP, m.Z, _.default, b.default, I.ZP, l.Z, u.Z, o.Z);
+        this.waitFor(p.Z, E.Z, g.ZP, m.Z, _.default, T.default, I.ZP, l.Z, u.Z, o.Z);
     }
     loadCache() {
         let e = this.readSnapshot(eE.LATEST_SNAPSHOT_VERSION);

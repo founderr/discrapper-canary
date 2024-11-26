@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     },
     GA: function () {
-        return b;
+        return T;
     },
     I: function () {
         return S;
@@ -21,7 +21,7 @@ n.d(t, {
         return I;
     },
     rU: function () {
-        return T;
+        return b;
     },
     sK: function () {
         return v;
@@ -85,11 +85,11 @@ function g(e, t, n, r, i) {
             };
         },
         _ = u(n),
-        h = u(b(e), t),
+        h = u(T(e), t),
         g = E(_, h, 'RETURN_PREVIOUS_WHEN_CHANGED'),
         v = null !== (o = g('guild_flags')) && void 0 !== o ? o : 0,
         I = (null !== (l = h.guild_flags) && void 0 !== l ? l : 0) ^ v,
-        T = 0 === (0, c.M1)(I, p.vc.OPT_IN_CHANNELS_OFF, p.vc.OPT_IN_CHANNELS_ON);
+        b = 0 === (0, c.M1)(I, p.vc.OPT_IN_CHANNELS_OFF, p.vc.OPT_IN_CHANNELS_ON);
     a.ZP.trackWithMetadata(d.rMx.NOTIFICATION_SETTINGS_UPDATED, {
         ...h,
         ...s.Z.getStats(e),
@@ -105,7 +105,7 @@ function g(e, t, n, r, i) {
         guild_receive_mobile_push_old: g('guild_receive_mobile_push'),
         guild_scheduled_events_muted_old: g('guild_scheduled_events_muted'),
         guild_message_notification_settings_old: g('guild_message_notification_settings'),
-        is_opt_in_only_change: T
+        is_opt_in_only_change: b
     });
 }
 function E(e, t, n) {
@@ -118,7 +118,7 @@ function v(e) {
 }
 function I(e, t, n, r, i, u) {
     var _, h, g, I;
-    let b = function (t) {
+    let T = function (t) {
             var n, r;
             let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 a = null !== (n = i.muted) && void 0 !== n ? n : null == t ? void 0 : t.channel_is_muted,
@@ -132,9 +132,9 @@ function I(e, t, n, r, i, u) {
                 channel_muted_until: v(i.mute_config)
             };
         },
-        T = b(r),
-        y = b(S(e, t), n),
-        A = E(T, y, 'RETURN_PREVIOUS_WHEN_CHANGED'),
+        b = T(r),
+        y = T(S(e, t), n),
+        A = E(b, y, 'RETURN_PREVIOUS_WHEN_CHANGED'),
         N = o.Z.getChannel(t),
         C = null !== (h = A('channel_flags')) && void 0 !== h ? h : 0,
         R = (null !== (g = y.channel_flags) && void 0 !== g ? g : 0) ^ C,
@@ -158,7 +158,7 @@ function I(e, t, n, r, i, u) {
         last_message_type: D
     });
 }
-function b(e) {
+function T(e) {
     let t = u.ZP.isMuted(e),
         n = u.ZP.getMuteConfig(e);
     return {
@@ -173,9 +173,9 @@ function b(e) {
         guild_flags: u.ZP.getGuildFlags(e)
     };
 }
-function T(e) {
+function b(e) {
     let t = new Map();
-    return e.forEach((e) => t.set(e, b(e))), t;
+    return e.forEach((e) => t.set(e, T(e))), t;
 }
 function S(e, t) {
     let n = u.ZP.isChannelMuted(e, t),

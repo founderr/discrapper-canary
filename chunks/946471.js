@@ -1,20 +1,20 @@
-function n(e, t) {
+function a(e, t) {
     let r = t && t.getDsn(),
-        n = t && t.getOptions().tunnel;
+        a = t && t.getOptions().tunnel;
     return (
         (function (e, t) {
             return !!t && e.includes(t.host);
         })(e, r) ||
         (function (e, t) {
-            return !!t && a(e) === a(t);
-        })(e, n)
+            return !!t && n(e) === n(t);
+        })(e, a)
     );
 }
 r.d(t, {
     W: function () {
-        return n;
+        return a;
     }
 });
-function a(e) {
+function n(e) {
     return '/' === e[e.length - 1] ? e.slice(0, -1) : e;
 }

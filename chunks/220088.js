@@ -22,8 +22,8 @@ var r = n(200651),
     E = n(785717),
     v = n(481046),
     I = n(510659),
-    b = n(277085),
-    T = n(287954),
+    T = n(277085),
+    b = n(287954),
     S = n(810097),
     y = n(64621),
     A = n(228168),
@@ -33,8 +33,8 @@ let R = 'text-sm/medium',
     O = 36,
     D = 144;
 function L(e) {
-    let { statusActivity: t, user: a, guildId: h, channelId: g, profileType: v, hasEntered: L = !0, animate: x = !0, editEnabled: w, onCloseProfile: M } = e,
-        { analyticsLocations: P } = (0, p.ZP)(_.Z.PROFILE_CUSTOM_STATUS),
+    let { statusActivity: t, user: a, guildId: h, channelId: g, profileType: v, hasEntered: L = !0, animate: x = !0, editEnabled: w, onCloseProfile: P } = e,
+        { analyticsLocations: M } = (0, p.ZP)(_.Z.PROFILE_CUSTOM_STATUS),
         { trackUserProfileAction: k } = (0, E.KZ)(),
         U = (0, l.e7)([f.Z], () => f.Z.useReducedMotion),
         [B] = i.useState(() => new u.V7()),
@@ -118,7 +118,7 @@ function L(e) {
                 });
             }
         },
-        eb = () =>
+        eT = () =>
             q
                 ? (0, r.jsx)(d.Iv, {
                       className: z ? C.statusEmojiInline : C.statusEmojiOnly,
@@ -128,7 +128,7 @@ function L(e) {
                       tooltipDelay: A.vB
                   })
                 : null,
-        eT = () =>
+        eb = () =>
             z
                 ? (0, r.jsx)(c.Text, {
                       variant: R,
@@ -145,30 +145,30 @@ function L(e) {
             return (0, r.jsxs)(o.animated.div, {
                 style: eg,
                 className: e,
-                children: [eb(), eT()]
+                children: [eT(), eb()]
             });
         },
         ey = () =>
             (0, r.jsxs)('div', {
                 className: s()(C.content, C.clamp, C.placeholderWidth, { [C.panel]: v === A.y0.PANEL }),
                 ref: j,
-                children: [eb(), eT()]
+                children: [eT(), eb()]
             }),
         eA = () =>
             (0, r.jsxs)('div', {
                 className: s()(C.content, C.unclamp, C.placeholderWidth, C.incorporeal, { [C.panel]: v === A.y0.PANEL }),
                 ref: F,
-                children: [eb(), eT()]
+                children: [eT(), eb()]
             }),
         eN = () => {
             k({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
-                null == M || M(),
+                null == P || P(),
                 (0, c.openModalLazy)(async () => {
                     let { default: e } = await n.e('51714').then(n.bind(n, 211065));
                     return (t) =>
                         (0, r.jsx)(e, {
                             ...t,
-                            sourceAnalyticsLocations: P
+                            sourceAnalyticsLocations: M
                         });
                 });
         },
@@ -225,10 +225,10 @@ function L(e) {
                             })
                         }),
                         eu
-                            ? (0, r.jsx)(b.Z, {
+                            ? (0, r.jsx)(T.Z, {
                                   isVisible: ep,
                                   isExpandable: ef,
-                                  onCloseProfile: M
+                                  onCloseProfile: P
                               })
                             : (0, r.jsx)(S.ZP, {
                                   user: a,
@@ -290,7 +290,7 @@ function L(e) {
                               ]
                           });
                       })(),
-                      (0, r.jsx)(T.Z, {
+                      (0, r.jsx)(b.Z, {
                           user: a,
                           guildId: h,
                           channelId: g,

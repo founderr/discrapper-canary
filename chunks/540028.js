@@ -21,8 +21,8 @@ function v(e) {
     n && t();
     let v = (0, i.e7)([u.ZP], () => u.ZP.getSelfEmbeddedActivityForChannel(p)),
         I = (0, i.e7)([_.Z], () => _.Z.pipWindow),
-        b = (0, i.e7)([d.Z], () => d.Z.getSelectedParticipant(p)),
-        T = (0, i.e7)([d.Z], () => d.Z.getStreamParticipants(p));
+        T = (0, i.e7)([d.Z], () => d.Z.getSelectedParticipant(p)),
+        b = (0, i.e7)([d.Z], () => d.Z.getStreamParticipants(p));
     return (0, r.jsx)(s.Menu, {
         navId: 'pip-menu',
         'aria-label': 'switch PIP',
@@ -33,9 +33,9 @@ function v(e) {
                 t = a.find((e) => e.component === h.NYg.VIDEO);
             return (
                 null != t &&
-                    T.forEach((n) => {
+                    b.forEach((n) => {
                         let r = f.Z.getActiveStreamForApplicationStream(n.stream),
-                            i = n.id === (null == b ? void 0 : b.id) && (null == I ? void 0 : I.id) === t.id;
+                            i = n.id === (null == T ? void 0 : T.id) && (null == I ? void 0 : I.id) === t.id;
                         null != r &&
                             !i &&
                             e.push({

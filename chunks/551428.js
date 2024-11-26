@@ -27,13 +27,13 @@ function v(e, t) {
 function I() {
     (_ = {}), (m = {}), (h = {}), (p = {}), (g = new Set());
 }
-function b() {
+function T() {
     if (r === c.default.locale) return !1;
     I(), (r = c.default.locale);
 }
-class T extends (i = l.ZP.Store) {
+class b extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(c.default), this.syncWith([c.default], b), (r = c.default.locale);
+        this.waitFor(c.default), this.syncWith([c.default], T), (r = c.default.locale);
     }
     get(e) {
         return _[e];
@@ -72,7 +72,7 @@ class T extends (i = l.ZP.Store) {
     }
 }
 (o = 'StoreListingStore'),
-    (s = 'displayName') in (a = T)
+    (s = 'displayName') in (a = b)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -80,7 +80,7 @@ class T extends (i = l.ZP.Store) {
               writable: !0
           })
         : (a[s] = o),
-    (t.Z = new T(u.Z, {
+    (t.Z = new b(u.Z, {
         STORE_LISTINGS_FETCH_START: function (e) {
             let { skuId: t } = e;
             g.add(t);
@@ -100,7 +100,7 @@ class T extends (i = l.ZP.Store) {
                 (p[v(n, e.skuId)] = e), (m[e.skuId] = e.id);
             } else E(t);
         },
-        USER_SETTINGS_PROTO_UPDATE: b,
+        USER_SETTINGS_PROTO_UPDATE: T,
         APPLICATION_STORE_CLEAR_DATA: I,
         GIFT_CODE_RESOLVE_SUCCESS: function (e) {
             let { giftCode: t } = e;

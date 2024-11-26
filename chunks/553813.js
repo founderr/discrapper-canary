@@ -233,10 +233,10 @@ function v(e, t, n) {
 function I(e, t, n) {
     return 0 !== m(e, t, n);
 }
-function b(e, t, n) {
+function T(e, t, n) {
     return m(e, t, n) >= 0;
 }
-function T(e, t, n) {
+function b(e, t, n) {
     return 0 >= m(e, t, n);
 }
 function S(e, t, n, r) {
@@ -254,11 +254,11 @@ function S(e, t, n, r) {
         case '>':
             return g(e, n, r);
         case '>=':
-            return b(e, n, r);
+            return T(e, n, r);
         case '<':
             return E(e, n, r);
         case '<=':
-            return T(e, n, r);
+            return b(e, n, r);
         default:
             throw TypeError('Invalid operator: ' + t);
     }
@@ -278,7 +278,7 @@ function y(e, t) {
     if (!(this instanceof y)) return new y(e, t);
     r('comparator', e, t), (this.options = t), (this.loose = !!t.loose), this.parse(e), this.semver === A ? (this.value = '') : (this.value = this.operator + this.semver.version), r('comp', this);
 }
-(t.gt = g), (t.lt = E), (t.eq = v), (t.neq = I), (t.gte = b), (t.lte = T), (t.cmp = S), (t.Comparator = y);
+(t.gt = g), (t.lt = E), (t.eq = v), (t.neq = I), (t.gte = T), (t.lte = b), (t.cmp = S), (t.Comparator = y);
 var A = {};
 function N(e, t) {
     if (
@@ -604,10 +604,10 @@ t.gtr = function (e, t, n) {
 function L(e, t, n, r) {
     switch (((e = new _(e, r)), (t = new N(t, r)), n)) {
         case '>':
-            (i = g), (a = T), (s = E), (o = '>'), (l = '>=');
+            (i = g), (a = b), (s = E), (o = '>'), (l = '>=');
             break;
         case '<':
-            (i = E), (a = b), (s = g), (o = '<'), (l = '<=');
+            (i = E), (a = T), (s = g), (o = '<'), (l = '<=');
             break;
         default:
             throw TypeError('Must provide a hilo val of "<" or ">"');

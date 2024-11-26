@@ -22,20 +22,20 @@ var r = n(200651),
     E = n(518950),
     v = n(594174),
     I = n(709586),
-    b = n(624138),
-    T = n(51144),
+    T = n(624138),
+    b = n(51144),
     S = n(788307),
     y = n(981631),
     A = n(674563),
     N = n(524484),
     C = n(388032),
     R = n(182605);
-let O = (0, b.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
+let O = (0, T.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
 t.Z = function (e) {
     var t;
-    let { selected: n = !1, colorString: a, colorRoleName: o, isOwner: b, ownerTooltipText: O, lostPermissionTooltipText: D, isTyping: L = !1, nick: x, user: w, currentUser: M, activities: P, applicationStream: k, status: U, shouldAnimateStatus: B = !1, isMobile: G, premiumSince: Z, channel: F, guildId: V, className: j, onMouseDown: H, onKeyDown: Y, onClick: W, onContextMenu: K, onClickPremiumGuildIcon: z, onFocus: q, 'aria-controls': Q, 'aria-expanded': X, 'aria-posinset': J, 'aria-setsize': $, id: ee, tabIndex: et, itemProps: en } = e,
+    let { selected: n = !1, colorString: a, colorRoleName: o, isOwner: T, ownerTooltipText: O, lostPermissionTooltipText: D, isTyping: L = !1, nick: x, user: w, currentUser: P, activities: M, applicationStream: k, status: U, shouldAnimateStatus: B = !1, isMobile: G, premiumSince: Z, channel: F, guildId: V, className: j, onMouseDown: H, onKeyDown: Y, onClick: W, onContextMenu: K, onClickPremiumGuildIcon: z, onFocus: q, 'aria-controls': Q, 'aria-expanded': X, 'aria-posinset': J, 'aria-setsize': $, id: ee, tabIndex: et, itemProps: en } = e,
         er = null == w ? void 0 : w.id,
-        ei = T.ZP.useName(w),
+        ei = b.ZP.useName(w),
         ea = (null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === er,
         es = i.useRef(null),
         [eo, el] = i.useState(!1),
@@ -54,7 +54,7 @@ t.Z = function (e) {
     i.useEffect(() => {
         n && eh(!1);
     }, [n]);
-    let em = (0, m.Fr)(P),
+    let em = (0, m.Fr)(M),
         eg = null != em && !ea && n && !ep,
         eE = () => {
             el(!0);
@@ -65,14 +65,14 @@ t.Z = function (e) {
         eI = (e) => {
             ec(e);
         },
-        eb = () => {
-            let e = null != P ? P.find((e) => e.type === y.IIU.CUSTOM_STATUS) : null,
+        eT = () => {
+            let e = null != M ? M.find((e) => e.type === y.IIU.CUSTOM_STATUS) : null,
                 t = null != e && null != w && (0, p.Z)(e, w, F);
             return (0, r.jsx)(S.ZP, {
                 className: R.activity,
                 textClassName: R.activityText,
                 emojiClassName: R.activityEmoji,
-                activities: P,
+                activities: M,
                 applicationStream: k,
                 animate: eo,
                 hideEmoji: !t,
@@ -81,8 +81,8 @@ t.Z = function (e) {
                 hasQuest: null != em
             });
         },
-        eT = () =>
-            null != b && b && null == D
+        eb = () =>
+            null != T && T && null == D
                 ? (0, r.jsx)(l.Tooltip, {
                       text: null != O ? O : C.intl.string(C.t.pclUFB),
                       children: (e) =>
@@ -121,11 +121,11 @@ t.Z = function (e) {
         },
         eA = () =>
             (0, r.jsxs)(r.Fragment, {
-                children: [ey(), eT(), eS()]
+                children: [ey(), eb(), eS()]
             }),
         eN = (e, t) => {
             let n = B ? l.AnimatedAvatar : l.Avatar,
-                i = (0, u.Z)(P) ? y.Skl.STREAMING : U;
+                i = (0, u.Z)(M) ? y.Skl.STREAMING : U;
             return (
                 (i = t ? void 0 : i),
                 (0, r.jsxs)(r.Fragment, {
@@ -144,7 +144,7 @@ t.Z = function (e) {
                         }),
                         (0, r.jsx)(h.Z, {
                             confettiSpawnRef: eu,
-                            shouldFire: L && null != M && e.id !== M.id,
+                            shouldFire: L && null != P && e.id !== P.id,
                             confettiLocation: N.Hn.MEMBER_USER
                         })
                     ]
@@ -220,7 +220,7 @@ t.Z = function (e) {
                                         })
                                 }),
                       avatar: eN(w, eO),
-                      subText: eb(),
+                      subText: eT(),
                       decorators: eA(),
                       'aria-controls': Q,
                       'aria-expanded': X,

@@ -20,7 +20,7 @@ var i = n(97613),
     m = n(981631),
     g = n(474936);
 function E(e) {
-    let { initialPlanId: t, followupSKUInfo: i, onClose: E, onComplete: v, onSubscriptionConfirmation: I, analyticsLocations: b, analyticsObject: T, analyticsLocation: S, analyticsSourceLocation: y, isGift: A = !1, giftMessage: N, giftStyle: C, giftingOrigin: R, subscriptionTier: O, trialId: D, postSuccessGuild: L, openInvoiceId: x, applicationId: w, referralTrialOfferId: M, giftRecipient: P, returnRef: k, subscription: U, skipConfirm: B, repeatPurchase: G } = null != e ? e : {},
+    let { initialPlanId: t, followupSKUInfo: i, onClose: E, onComplete: v, onSubscriptionConfirmation: I, analyticsLocations: T, analyticsObject: b, analyticsLocation: S, analyticsSourceLocation: y, isGift: A = !1, giftMessage: N, giftStyle: C, giftingOrigin: R, subscriptionTier: O, trialId: D, postSuccessGuild: L, openInvoiceId: x, applicationId: w, referralTrialOfferId: P, giftRecipient: M, returnRef: k, subscription: U, skipConfirm: B, repeatPurchase: G } = null != e ? e : {},
         Z = !1,
         F = (0, s.Z)(),
         V = f.default.getCurrentUser(),
@@ -28,7 +28,7 @@ function E(e) {
         H = a()('payment-modal');
     return (0, o.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('68956'), n.e('31605'), n.e('8016'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('17938'), n.e('2181'), n.e('54433'), n.e('37186')]).then(n.bind(n, 7305));
+            let { default: e } = await Promise.all([n.e('77298'), n.e('23357'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('68956'), n.e('31605'), n.e('8016'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('17938'), n.e('2181'), n.e('54433'), n.e('37017')]).then(n.bind(n, 7305));
             return (n) => {
                 let { onClose: a, ...s } = n;
                 return (0, r.jsx)(e, {
@@ -40,7 +40,7 @@ function E(e) {
                     giftMessage: N,
                     giftStyle: C,
                     giftingOrigin: R,
-                    giftRecipient: P,
+                    giftRecipient: M,
                     initialPlanId: t,
                     followupSKUInfo: i,
                     onClose: (e, t) => {
@@ -56,8 +56,8 @@ function E(e) {
                         (Z = !0), null == v || v(), !A && (0, d.H)(!0);
                     },
                     onSubscriptionConfirmation: I,
-                    analyticsLocations: b,
-                    analyticsObject: T,
+                    analyticsLocations: T,
+                    analyticsObject: b,
                     analyticsLocation: S,
                     analyticsSourceLocation: y,
                     trialId: D,
@@ -65,7 +65,7 @@ function E(e) {
                     planGroup: g.Y1,
                     openInvoiceId: x,
                     applicationId: w,
-                    referralTrialOfferId: M,
+                    referralTrialOfferId: P,
                     returnRef: k,
                     subscription: U,
                     skipConfirm: !!B,
@@ -80,13 +80,13 @@ function E(e) {
                     _.default.track(m.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: F,
                         payment_type: m.Zuq[m.GZQ.SUBSCRIPTION],
-                        location: null != S ? S : T,
+                        location: null != S ? S : b,
                         source: y,
                         subscription_type: m.NYc.PREMIUM,
                         is_gift: A,
                         eligible_for_trial: null != D,
                         application_id: w,
-                        location_stack: b
+                        location_stack: T
                     }),
                     (0, u.fw)(),
                     (0, c.p)(),

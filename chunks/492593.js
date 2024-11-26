@@ -27,8 +27,8 @@ t.Z = function (e) {
             },
             hasThread: v,
             isSystemMessage: I,
-            hasReply: b,
-            ...T
+            hasReply: T,
+            ...b
         } = e,
         S = (0, r.jsx)(s.FocusRing, {
             ...E,
@@ -41,10 +41,10 @@ t.Z = function (e) {
                     [o.zalgo]: l,
                     [o.hasThread]: v,
                     [o.isSystemMessage]: I,
-                    [o.hasReply]: b
+                    [o.hasReply]: T
                 }),
                 ref: g,
-                ...T,
+                ...b,
                 role: 'article',
                 children: [
                     c,

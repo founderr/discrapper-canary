@@ -25,8 +25,8 @@ var r = n(595182),
     E = n(916057),
     v = n(992774),
     I = n(158466),
-    b = n(650886),
-    T = n(65154),
+    T = n(650886),
+    b = n(65154),
     S = n(149396);
 function y(e, t, n) {
     return (
@@ -55,7 +55,7 @@ class C extends _.Z {
             r = (0, v.zS)();
         n.initializeStreamParameters([
             {
-                type: T.Tr.VIDEO,
+                type: b.Tr.VIDEO,
                 rid: '100',
                 ssrc: 0,
                 rtxSsrc: 0,
@@ -107,7 +107,7 @@ class C extends _.Z {
             this.initializeStreamParameters(e.streamParameters),
             (e.streamParameters = [
                 {
-                    type: T.Tr.AUDIO,
+                    type: b.Tr.AUDIO,
                     ssrc: this.audioSSRC,
                     rid: '',
                     maxBitrate: 64000,
@@ -196,8 +196,8 @@ class C extends _.Z {
                                             codecs: this.codecs
                                         }),
                                         this.on(m.Sh.Stats, this.handleStats);
-                                    let b = this.getUserOptions();
-                                    for (let e of (b.forEach((e) => {
+                                    let T = this.getUserOptions();
+                                    for (let e of (T.forEach((e) => {
                                         var t, n;
                                         return this.logger.info(
                                             'Creating user: '
@@ -206,8 +206,8 @@ class C extends _.Z {
                                                 .concat(null !== (n = null === (t = e.videoSsrcs) || void 0 === t ? void 0 : t.join(',')) && void 0 !== n ? n : 0)
                                         );
                                     }),
-                                    t.mergeUsers(b),
-                                    this.emit(m.Sh.RemoteStreamsReady, b.length),
+                                    t.mergeUsers(T),
+                                    this.emit(m.Sh.RemoteStreamsReady, T.length),
                                     Object.keys(this.localSpeakingFlags)))
                                         e !== this.userId && this.setSpeakingFlags(e, this.localSpeakingFlags[e]);
                                 });
@@ -246,7 +246,7 @@ class C extends _.Z {
             ? Promise.resolve(null)
             : (0, d.timeout)(
                   new Promise((e) => {
-                      null != this.conn.getFilteredStats ? this.conn.getFilteredStats(T.QP.ALL, (t) => e((0, I.Z)(this.mediaEngineConnectionId, t, this.remoteVideoSinkWants, this.localVideoSinkWants))) : null != this.conn.getStats ? this.conn.getStats((t) => e((0, I.Z)(this.mediaEngineConnectionId, t, this.remoteVideoSinkWants, this.localVideoSinkWants))) : (0, v.zS)().getStats((t) => e((0, I.Z)(this.mediaEngineConnectionId, t, this.remoteVideoSinkWants, this.localVideoSinkWants)));
+                      null != this.conn.getFilteredStats ? this.conn.getFilteredStats(b.QP.ALL, (t) => e((0, I.Z)(this.mediaEngineConnectionId, t, this.remoteVideoSinkWants, this.localVideoSinkWants))) : null != this.conn.getStats ? this.conn.getStats((t) => e((0, I.Z)(this.mediaEngineConnectionId, t, this.remoteVideoSinkWants, this.localVideoSinkWants))) : (0, v.zS)().getStats((t) => e((0, I.Z)(this.mediaEngineConnectionId, t, this.remoteVideoSinkWants, this.localVideoSinkWants)));
                   }),
                   p.T
               ).catch((e) => {
@@ -552,7 +552,7 @@ class C extends _.Z {
     }
     setDesktopEncodingOptions(e, t, n) {
         if (this.destroyed) return;
-        let r = (0 === t && n >= 10) || t > 720 || n > 30 ? T.yf : T.YE,
+        let r = (0 === t && n >= 10) || t > 720 || n > 30 ? b.yf : b.YE,
             i = {
                 width: e,
                 height: t,
@@ -560,7 +560,7 @@ class C extends _.Z {
             },
             a = this.videoQualityManager.getQuality(),
             s = !h.SF.equals(i, a.capture) || a.bitrateMax !== r,
-            o = this.videoStreamParameters.findIndex((e) => e.quality === T.y7);
+            o = this.videoStreamParameters.findIndex((e) => e.quality === b.y7);
         -1 === o && (o = 0),
             s &&
                 (this.videoQualityManager.setGoliveQuality({
@@ -576,7 +576,7 @@ class C extends _.Z {
                     }),
                     (this.videoStreamParameters[o].maxFrameRate = n),
                     (this.videoStreamParameters[o].maxBitrate = r)));
-        let l = this.videoStreamParameters.findIndex((e) => e.quality === T.LD),
+        let l = this.videoStreamParameters.findIndex((e) => e.quality === b.LD),
             u = -1 !== l && this.videoStreamParameters.length > l,
             c = this.videoQualityManager.shouldEnableGoliveSimulcastForHqQuality(i),
             d = u && this.videoStreamParameters[l].active !== c;
@@ -584,7 +584,7 @@ class C extends _.Z {
     }
     setSDP(e) {}
     setRemoteVideoSinkWants(e) {
-        (this.remoteVideoSinkWants = e), this.updateVideoQuality(T.XR);
+        (this.remoteVideoSinkWants = e), this.updateVideoQuality(b.XR);
     }
     setLocalVideoSinkWants(e) {
         let t = this.localVideoSinkWants;
@@ -701,13 +701,13 @@ class C extends _.Z {
                     'level-asymmetry-allowed': '1',
                     'packetization-mode': '1',
                     'profile-level-id': '42e034',
-                    'hardware-h264': this.hardwareH264 && this.useElectronVideo && b.Z.useDirectVideo ? '1' : '0'
+                    'hardware-h264': this.hardwareH264 && this.useElectronVideo && T.Z.useDirectVideo ? '1' : '0'
                 }
               : {
                     'level-asymmetry-allowed': '1',
                     'packetization-mode': '1',
                     'profile-level-id': 'android' === (0, v.zS)().platform ? '42e01f' : '4d0033',
-                    'hardware-h264': this.hardwareH264 && this.useElectronVideo && b.Z.useDirectVideo ? '1' : '0',
+                    'hardware-h264': this.hardwareH264 && this.useElectronVideo && T.Z.useDirectVideo ? '1' : '0',
                     'software-h264': this.softwareH264 ? '1' : '0'
                 };
     }
@@ -747,17 +747,17 @@ class C extends _.Z {
                 rtxType: null !== (s = null == o ? void 0 : o.rtxPayloadType) && void 0 !== s ? s : 0,
                 params: this.getCodecParams(o.name, !0)
             };
-            this.experimentFlags.has(T.V8.RESET_DECODER_ON_ERRORS) && (n.params['reset-on-errors'] = '1'),
-                this.experimentFlags.has(T.V8.SOFTWARE_FALLBACK_ON_ERRORS) && (n.params['fallback-after-errors'] = '3'),
-                this.experimentFlags.has(T.V8.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS) && (n.params['fallback-on-consecutive-errors'] = '1'),
-                this.experimentFlags.has(T.V8.SIGNAL_AV1_HARDWARE_DECODE) && (n.params['hardware-av1-decode'] = '1'),
+            this.experimentFlags.has(b.V8.RESET_DECODER_ON_ERRORS) && (n.params['reset-on-errors'] = '1'),
+                this.experimentFlags.has(b.V8.SOFTWARE_FALLBACK_ON_ERRORS) && (n.params['fallback-after-errors'] = '3'),
+                this.experimentFlags.has(b.V8.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS) && (n.params['fallback-on-consecutive-errors'] = '1'),
+                this.experimentFlags.has(b.V8.SIGNAL_AV1_HARDWARE_DECODE) && (n.params['hardware-av1-decode'] = '1'),
                 c.push(n),
                 o.name === t &&
                     ((d = {
                         ...n,
                         params: this.getCodecParams(o.name, !1)
                     }),
-                    this.experimentFlags.has(T.V8.VIDEOTOOLBOX_RATE_CONTROL) && (d.params['fixed-rate-presentation-timestamps'] = '1'));
+                    this.experimentFlags.has(b.V8.VIDEOTOOLBOX_RATE_CONTROL) && (d.params['fixed-rate-presentation-timestamps'] = '1'));
         }
         return {
             videoEncoder: d,
@@ -791,7 +791,7 @@ class C extends _.Z {
             softwareH264: this.softwareH264,
             reconnectInterval: this.reconnectInterval
         };
-        return (0, v.eJ)(S.eR.VIDEO_EFFECTS) && this.context === S.Yn.STREAM && (e.enableVideoEffects = !0), this.experimentFlags.has(T.V8.MUTE_BEFORE_PROCESSING) && (e.muteBeforeProcessing = !0), this.experimentFlags.has(T.V8.PTT_BEFORE_PROCESSING) && (e.pttBeforeProcessing = !0), this.experimentFlags.has(T.V8.SKIP_ENCODE) && (e.skipEncode = !0), e;
+        return (0, v.eJ)(S.eR.VIDEO_EFFECTS) && this.context === S.Yn.STREAM && (e.enableVideoEffects = !0), this.experimentFlags.has(b.V8.MUTE_BEFORE_PROCESSING) && (e.muteBeforeProcessing = !0), this.experimentFlags.has(b.V8.PTT_BEFORE_PROCESSING) && (e.pttBeforeProcessing = !0), this.experimentFlags.has(b.V8.SKIP_ENCODE) && (e.skipEncode = !0), e;
     }
     setStream(e) {
         throw Error('Method not implemented.');
@@ -913,7 +913,7 @@ class C extends _.Z {
                 if (!this.videoEncoderFallbackPending) this.logger.info('Falling back from current video encoder: '.concat(e)), (this.codecs = this.codecs.map((t) => ((e === t.name || ('AV1' === t.name && 'AV1X' === e)) && (t.encode = !1), t)).filter((e) => !('video' === e.type && !1 === e.encode && !1 === e.decode))), this.emit(m.Sh.VideoEncoderFallback, this.codecs), (this.videoEncoderFallbackPending = !0);
             }),
             y(this, 'handleRTCPMessage', (e, t) => {
-                if (e === T.ym.REMB && this.context === S.Yn.STREAM) {
+                if (e === b.ym.REMB && this.context === S.Yn.STREAM) {
                     let e = JSON.parse(t);
                     e.ssrcs.forEach((t) => {
                         var n, r, a, s;

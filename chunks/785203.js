@@ -25,11 +25,11 @@ var i,
     I = n(192513),
     C = n(255791),
     v = n(70956),
-    S = n(267642),
-    N = n(981631);
+    N = n(267642),
+    S = n(981631);
 function T(e) {
     var t;
-    let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : N.lds,
+    let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : S.lds,
         { lastFetchedAt: i } = (0, a.cj)([f.Z], () => ({
             appliedGuildBoosts: f.Z.getAppliedGuildBoostsForGuild(n),
             lastFetchedAt: f.Z.getLastFetchedAtForGuild(n)
@@ -38,21 +38,21 @@ function T(e) {
             lastDismissedGracePeriod: E.Z.getLastDismissedGracePeriodForGuild(n),
             isGracePeriodVisible: E.Z.isVisible(n)
         })),
-        A = (0, a.e7)([p.Z], () => p.Z.isVisible(e)),
+        x = (0, a.e7)([p.Z], () => p.Z.isVisible(e)),
         b = (0, a.e7)([C.Z], () => C.Z.isVisible(e)),
-        x = (0, a.e7)([_.Z], () => _.Z.can(N.Plq.ADMINISTRATOR, e)),
-        Z = null != r && Date.now() - r <= N.Dge,
+        A = (0, a.e7)([_.Z], () => _.Z.can(S.Plq.ADMINISTRATOR, e)),
+        Z = null != r && Date.now() - r <= S.Dge,
         L = null != e ? e.premiumSubscriberCount : 0,
-        y = (0, S.rF)(L, n) !== N.Eu4.NONE,
-        O = null != i && Date.now() - i <= 43200000,
-        R = !O && !Z && x && y,
-        P = (0, c.m)(n),
+        y = (0, N.rF)(L, n) !== S.Eu4.NONE,
+        P = null != i && Date.now() - i <= 43200000,
+        O = !P && !Z && A && y,
+        R = (0, c.m)(n),
         j = (0, a.e7)([I.Z], () => I.Z.isVisible(e)),
         D = h.Z.useShouldShowChannelNotice(n),
         M = (0, m.h6)(e),
         { enableStudyGroup: w } = (0, u.s)(e),
         k = M.length > 0,
-        U = w && !(null == e ? void 0 : e.hasFeature(N.oNc.HUB)),
+        U = w && !(null == e ? void 0 : e.hasFeature(S.oNc.HUB)),
         G = (0, d.Vm)(n),
         B = (0, a.e7)([g.Z], () => null != g.Z.getActiveGuildSignUp(n));
     if (
@@ -62,7 +62,7 @@ function T(e) {
         l.useEffect(() => {
             let e = -1;
             return (
-                R &&
+                O &&
                     (e = window.setTimeout(
                         () => {
                             null != n && (0, s.C0)(n);
@@ -73,13 +73,13 @@ function T(e) {
                     window.clearTimeout(e);
                 }
             );
-        }, [n, R]),
-        A)
+        }, [n, O]),
+        x)
     )
         return 0;
     if (T) return 1;
     if (b) return 2;
-    else if (P || null != G) return 3;
+    else if (R || null != G) return 3;
     else if (j) return 4;
     else if (D) return 5;
     else if (k) return 6;

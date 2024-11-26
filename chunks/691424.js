@@ -22,8 +22,8 @@ var r = n(200651),
     E = n(695503),
     v = n(628692),
     I = n(590956),
-    b = n(703656),
-    T = n(271383),
+    T = n(703656),
+    b = n(271383),
     S = n(430824),
     y = n(572004),
     A = n(746878),
@@ -35,8 +35,8 @@ var r = n(200651),
     L = n(532901),
     x = n(981631),
     w = n(176505),
-    M = n(665162),
-    P = n(763971);
+    P = n(665162),
+    M = n(763971);
 n(896715);
 function k(e) {
     let { text: t } = e,
@@ -66,8 +66,8 @@ let U = {
             (0, r.jsxs)(
                 'div',
                 {
-                    className: M.blockquoteContainer,
-                    children: [(0, r.jsx)('div', { className: M.blockquoteDivider }), (0, r.jsx)('blockquote', { children: t(e.content, n) })]
+                    className: P.blockquoteContainer,
+                    children: [(0, r.jsx)('div', { className: P.blockquoteDivider }), (0, r.jsx)('blockquote', { children: t(e.content, n) })]
                 },
                 n.key
             )
@@ -100,18 +100,18 @@ let U = {
         react(e, t, i) {
             let a = () =>
                 (0, r.jsx)('code', {
-                    className: s()(P.scrollbarGhostHairline, 'hljs'),
+                    className: s()(M.scrollbarGhostHairline, 'hljs'),
                     children: (0, A.S)(e, t, i)
                 });
             return (0, r.jsx)(
                 'pre',
                 {
                     children: (0, r.jsxs)('div', {
-                        className: M.codeContainer,
+                        className: P.codeContainer,
                         children: [
                             y.wS
                                 ? (0, r.jsx)('div', {
-                                      className: M.codeActions,
+                                      className: P.codeActions,
                                       children: (0, r.jsx)(k, { text: e.content })
                                   })
                                 : null,
@@ -126,7 +126,7 @@ let U = {
                                         return null == n
                                             ? a()
                                             : (0, r.jsx)('code', {
-                                                  className: s()(P.scrollbarGhostHairline, 'hljs', n.language),
+                                                  className: s()(M.scrollbarGhostHairline, 'hljs', n.language),
                                                   dangerouslySetInnerHTML: { __html: n.value }
                                               });
                                     }
@@ -174,7 +174,7 @@ let U = {
                                   let r = S.Z.getGuild(e);
                                   if (null == e || null == r) return;
                                   let i = (t) => {
-                                      r.hasFeature(x.oNc.COMMUNITY) && (0, b.uL)(x.Z5c.CHANNEL(e, t));
+                                      r.hasFeature(x.oNc.COMMUNITY) && (0, T.uL)(x.Z5c.CHANNEL(e, t));
                                   };
                                   switch (t) {
                                       case 'home':
@@ -189,7 +189,7 @@ let U = {
                                           break;
                                       case 'linked-roles':
                                           if (null != n) {
-                                              let t = T.ZP.getSelfMember(e);
+                                              let t = b.ZP.getSelfMember(e);
                                               if (null == t) return;
                                               let r = S.Z.getRoles(e)[n];
                                               null == r || t.roles.includes(r.id)
@@ -225,7 +225,7 @@ let U = {
                 i = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
             return (0, o.reactElement)(r, ''.concat(n.key), {
                 start: e.start,
-                className: n.formatInline ? M.inlineFormat : null,
+                className: n.formatInline ? P.inlineFormat : null,
                 style: { '--totalCharacters': i },
                 children: e.items.map((e, r) => {
                     let i = (0, o.reactElement)('span', ''.concat(n.key, '-').concat(r, '-innerSpan'), { children: t(e, n) });
@@ -239,7 +239,7 @@ let U = {
             let r = (0, o.reactElement)('span', ''.concat(n.key, '-innerSpan'), { children: t(e.content, n) });
             return (0, o.reactElement)('h' + e.level, (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
                 children: r,
-                className: n.formatInline ? M.inlineFormat : null
+                className: n.formatInline ? P.inlineFormat : null
             });
         }
     },
@@ -273,7 +273,7 @@ let U = {
             let r = (0, o.reactElement)('span', ''.concat(n.key, '-innerSpan'), { children: t(e.content, n) });
             return (0, o.reactElement)('small', (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
                 children: r,
-                className: n.formatInline ? M.inlineFormat : null
+                className: n.formatInline ? P.inlineFormat : null
             });
         }
     },

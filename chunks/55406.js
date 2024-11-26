@@ -86,7 +86,7 @@ let E = (e) => {
             ...('function' == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading)
         }
     }),
-    b = (e) => ({
+    T = (e) => ({
         ...v(e),
         newline: { ...a().defaultRules.newline },
         text: l.ZP,
@@ -99,5 +99,5 @@ t.Z = {
         ...v(e),
         ...I(e)
     }),
-    getMessageRules: (e) => ({ ...b(e) })
+    getMessageRules: (e) => ({ ...T(e) })
 };

@@ -12,7 +12,7 @@ n.d(t, {
         return h;
     },
     i7: function () {
-        return b;
+        return T;
     },
     kI: function () {
         return p;
@@ -27,7 +27,7 @@ n.d(t, {
         return I;
     },
     uL: function () {
-        return T;
+        return b;
     },
     xU: function () {
         return E;
@@ -81,11 +81,11 @@ function v(e, t, n) {
 function I(e, t, n) {
     return (null == t || 'null' === t) && (t = d.aIL), !(t in e.guilds) && (e.guilds[t] = l.C4.create()), n(e.guilds[t]);
 }
-function b(e, t, n, r) {
+function T(e, t, n, r) {
     var i, a, s;
-    return (i = e), (a = t), (s = (e) => T(e, n, r)), null == i.guilds && (i.guilds = l.os.create()), I(i.guilds, a, s);
+    return (i = e), (a = t), (s = (e) => b(e, n, r)), null == i.guilds && (i.guilds = l.os.create()), I(i.guilds, a, s);
 }
-function T(e, t, n) {
+function b(e, t, n) {
     return !(t in e.channels) && (e.channels[t] = l.p5.create()), n(e.channels[t]);
 }
 function S(e, t) {

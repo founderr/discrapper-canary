@@ -18,53 +18,53 @@ var i = n(200651),
     I = n(113434),
     C = n(497505),
     v = n(475595),
-    S = n(352084),
-    N = n(685613),
+    N = n(352084),
+    S = n(685613),
     T = n(981631),
-    A = n(388032),
+    x = n(388032),
     b = n(625844);
 t.Z = (0, r.memo)(function (e) {
-    var t, n, l, x, Z;
+    var t, n, l, A, Z;
     let { quest: L } = e,
-        [y, O] = (0, r.useState)(!1),
-        [R, P] = (0, r.useState)(24),
+        [y, P] = (0, r.useState)(!1),
+        [O, R] = (0, r.useState)(24),
         [j, D] = (0, r.useState)(!1),
         M = (0, r.useRef)(null),
         w = (0, r.useRef)(null),
         k = (0, r.useRef)(null),
         U = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
         { ref: G, height: B = 0 } = (0, u.Z)(),
-        V = (0, h.ZP)(),
-        H = (0, I.B6)(null === (t = L.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
+        H = (0, h.ZP)(),
+        V = (0, I.B6)(null === (t = L.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
             month: 'numeric',
             day: 'numeric'
         }),
-        F = null !== (x = null === (n = L.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== x ? x : 0,
+        F = null !== (A = null === (n = L.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== A ? A : 0,
         z = L.config.rewards[F],
-        Y = (null == z ? void 0 : z.type) === s.w.COLLECTIBLE,
-        W = (null == z ? void 0 : z.type) === s.w.FRACTIONAL_PREMIUM,
-        { product: K } = (0, p.T)(Y && null != z ? z.skuId : null),
+        W = (null == z ? void 0 : z.type) === s.w.COLLECTIBLE,
+        Y = (null == z ? void 0 : z.type) === s.w.FRACTIONAL_PREMIUM,
+        { product: K } = (0, p.T)(W && null != z ? z.skuId : null),
         q = null == K ? void 0 : null === (l = K.items) || void 0 === l ? void 0 : l[0];
     (0, u.P)(M, (e) => {
         let { height: t } = e;
-        if (!Y || null == t || null == w.current || null == M.current || null == k.current) return;
+        if (!W || null == t || null == w.current || null == M.current || null == k.current) return;
         let n = M.current.getBoundingClientRect(),
             i = w.current.getBoundingClientRect(),
             r = k.current.getBoundingClientRect();
-        P((i.top - n.top - r.height) / 2);
+        R((i.top - n.top - r.height) / 2);
     });
-    let X = (0, c.wj)(V),
+    let X = (0, c.wj)(H),
         Q = (0, r.useMemo)(() => null != L.config.cosponsorMetadata, [L]),
         J = (0, r.useMemo)(() => (0, v.fh)(L, v.eC.REWARD), [L]),
         $ = y ? B + 8 : 0,
         ee = () => {
-            O(!0),
+            P(!0),
                 _.default.track(T.rMx.QUEST_HOVER, {
                     quest_id: L.id,
                     ...(0, E.mH)(C.jn.TROPHY_CASE_CARD)
                 });
         },
-        et = () => O(!1),
+        et = () => P(!1),
         en = (e) => {
             D(!0),
                 _.default.track(T.rMx.QUEST_ASSET_LOADING_FAILURE, {
@@ -86,19 +86,19 @@ t.Z = (0, r.memo)(function (e) {
                   className: a()(b.container, { [b.hovered]: y }),
                   children: [
                       null != U &&
-                          Y &&
+                          W &&
                           (0, i.jsx)('div', {
                               ref: k,
                               className: b.decoWrapper,
-                              style: { top: R },
+                              style: { top: O },
                               children: (0, i.jsx)(m.Z, {
                                   avatarDecorationOverride: q,
                                   user: U,
                                   guildId: null
                               })
                           }),
-                      W
-                          ? (0, i.jsx)(S.Z, { className: b.image })
+                      Y
+                          ? (0, i.jsx)(N.Z, { className: b.image })
                           : J.isAnimated
                             ? (0, i.jsx)(i.Fragment, {
                                   children: (0, i.jsx)(g.Z, {
@@ -127,7 +127,7 @@ t.Z = (0, r.memo)(function (e) {
                           ref: w,
                           className: b.logoContainer,
                           style: { transform: 'translateY(-'.concat($, 'px)') },
-                          children: (0, i.jsx)(N.ZP, {
+                          children: (0, i.jsx)(S.ZP, {
                               logotypeClassName: a()(b.logo, { [b.logoWithCosponsor]: Q }),
                               quest: L,
                               withGameTile: !1
@@ -141,15 +141,15 @@ t.Z = (0, r.memo)(function (e) {
                                   className: b.title,
                                   variant: 'heading-md/semibold',
                                   color: 'always-white',
-                                  children: A.intl.format(A.t.EAYZAg, { questName: L.config.messages.questName })
+                                  children: x.intl.format(x.t.EAYZAg, { questName: L.config.messages.questName })
                               }),
                               (0, i.jsx)(d.Text, {
                                   variant: 'text-sm/medium',
                                   color: X ? 'text-muted' : 'always-white',
                                   style: { opacity: X ? 1 : 0.75 },
-                                  children: A.intl.format(A.t.kXVcV1, {
+                                  children: x.intl.format(x.t.kXVcV1, {
                                       reward: z.name,
-                                      claimedDate: H
+                                      claimedDate: V
                                   })
                               })
                           ]

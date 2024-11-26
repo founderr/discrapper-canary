@@ -1,12 +1,12 @@
 n.d(t, {
     GF: function () {
-        return f;
+        return I;
     },
     ZP: function () {
         return N;
     },
     yo: function () {
-        return I;
+        return f;
     }
 }),
     n(47120);
@@ -26,7 +26,7 @@ var i = n(200651),
     x = n(726985),
     S = n(388032),
     T = n(599764);
-function C(e) {
+function E(e) {
     let { listType: t, numberOfUsers: n } = e,
         s = 'blocked' === t;
     return (0, i.jsxs)('div', {
@@ -59,15 +59,15 @@ function _(e) {
     let { userId: n, last: r } = e,
         g = (0, a.e7)([m.Z], () => m.Z.isBlocked(n)),
         p = (0, a.e7)([h.default], () => h.default.getUser(n)),
-        [x, C] = s.useState(!1),
+        [x, E] = s.useState(!1),
         _ = s.useCallback(() => {
-            C(!0),
+            E(!0),
                 g
                     ? c.Z.unblockUser(n).catch(() => {
-                          C(!1);
+                          E(!1);
                       })
                     : c.Z.unignoreUser(n, u.Z.USER_SETTINGS).catch(() => {
-                          C(!1);
+                          E(!1);
                       });
         }, [g, n]);
     return null == p
@@ -110,7 +110,7 @@ function _(e) {
               })
           });
 }
-function E(e) {
+function C(e) {
     let { setting: t, userIds: n, listType: r } = e,
         [l, a] = s.useState(5);
     return (0, i.jsx)(g.U, {
@@ -118,7 +118,7 @@ function E(e) {
         children: (0, i.jsxs)('div', {
             className: T.card,
             children: [
-                (0, i.jsx)(C, {
+                (0, i.jsx)(E, {
                     listType: r,
                     numberOfUsers: n.length
                 }),
@@ -155,17 +155,17 @@ function E(e) {
         })
     });
 }
-function f() {
+function I() {
     let e = (0, a.e7)([m.Z], () => m.Z.getBlockedIDs());
-    return (0, i.jsx)(E, {
+    return (0, i.jsx)(C, {
         setting: x.s6.BLOCKED_USERS,
         userIds: e,
         listType: 'blocked'
     });
 }
-function I() {
+function f() {
     let e = (0, a.e7)([m.Z], () => m.Z.getIgnoredIDs());
-    return (0, i.jsx)(E, {
+    return (0, i.jsx)(C, {
         setting: x.s6.IGNORED_USERS,
         userIds: e,
         listType: 'ignored'
@@ -180,8 +180,8 @@ function N() {
                 header: S.intl.string(S.t['3wRorq']),
                 description: S.intl.format(S.t['0aNQo6'], { helpArticle: '' })
             }),
-            (0, i.jsx)(f, {}),
-            (0, i.jsx)(I, {})
+            (0, i.jsx)(I, {}),
+            (0, i.jsx)(f, {})
         ]
     });
 }

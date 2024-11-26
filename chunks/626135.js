@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         AnalyticEventConfigs: function () {
-            return T;
+            return b;
         },
         AnalyticsContext: function () {
             return g;
@@ -10,10 +10,10 @@ n.r(t),
             return d;
         },
         addExtraAnalyticsDecorator: function () {
-            return b;
+            return T;
         },
         clearAnalyticsEventsRecording: function () {
-            return M;
+            return P;
         },
         debugLogEvent: function () {
             return R;
@@ -63,10 +63,10 @@ let g = r.createContext({ location: {} }),
     E = {},
     v = performance.now(),
     I = [];
-function b(e) {
+function T(e) {
     I.push(e);
 }
-let T = {
+let b = {
     [p.rMx.APP_OPENED]: {
         throttlePeriod: 300000,
         throttleKeys: () => []
@@ -270,7 +270,7 @@ function S(e) {
 }
 let y = () => h.E.NONE,
     A = (0, a.trackMaker)({
-        analyticEventConfigs: T,
+        analyticEventConfigs: b,
         dispatcher: s.Z,
         TRACK_ACTION_NAME: 'TRACK'
     });
@@ -323,13 +323,13 @@ function x() {
 function w() {
     return D;
 }
-function M() {
+function P() {
     Object.keys(D).forEach((e) => {
         delete D[e];
     });
 }
-let P = (0, a.trackMaker)({
-    analyticEventConfigs: T,
+let M = (0, a.trackMaker)({
+    analyticEventConfigs: b,
     dispatcher: s.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });
@@ -343,7 +343,7 @@ function k(e, t) {
         ...t
     }),
         R(e, n),
-        P(e, n);
+        M(e, n);
 }
 function U() {
     return (0, i.Z)();

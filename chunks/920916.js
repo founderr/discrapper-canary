@@ -27,8 +27,8 @@ var r = n(200651),
     E = n(454585),
     v = n(164946),
     I = n(369111),
-    b = n(25990),
-    T = n(594174),
+    T = n(25990),
+    b = n(594174),
     S = n(960048),
     y = n(272008),
     A = n(497505),
@@ -40,45 +40,45 @@ var r = n(200651),
     L = n(675654),
     x = n(388032),
     w = n(144143);
-function M() {
-    let e = b.Z.getAllPending(),
+function P() {
+    let e = T.Z.getAllPending(),
         t = (0, v.ED)(e);
     return (0, d.Mn)(t).finally(d.si);
 }
-function P(e) {
+function M(e) {
     var t;
     let { transitionState: n, onClose: a, quest: l, location: d, reward: _, decoration: p, onUseNow: h, preview: g } = e,
         E = i.useRef(null),
         [v, I] = i.useState(null),
-        b = i.useRef(new o.qA()),
+        T = i.useRef(new o.qA()),
         S = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
-        N = (0, u.e7)([T.default], () => T.default.getCurrentUser()),
+        N = (0, u.e7)([b.default], () => b.default.getCurrentUser()),
         R = i.useMemo(() => (0, C.fh)(l, C.eC.HERO), [l]),
         D = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
-        [x, M] = i.useState(!0 === g || D ? 'claimed' : 'loading');
+        [x, P] = i.useState(!0 === g || D ? 'claimed' : 'loading');
     i.useEffect(() => {
         !D &&
             !0 !== g &&
             (0, y.QB)(l.id, A.y$.CROSS_PLATFORM, d)
-                .then(() => M('claimed'))
-                .catch(() => M('error'));
+                .then(() => P('claimed'))
+                .catch(() => P('error'));
     }, [l, d, D, g]);
-    let P = null == N || null == p || 'loading' === x;
+    let M = null == N || null == p || 'loading' === x;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(o.O_, {
                 ref: I,
                 className: w.confettiCanvas,
-                environment: b.current
+                environment: T.current
             }),
             (0, r.jsx)('div', {
                 ref: E,
                 children: (0, r.jsx)(c.ModalRoot, {
                     transitionState: n,
                     size: c.ModalSize.DYNAMIC,
-                    className: s()(w.rootContainer, { [w.rootContainerLoading]: P }),
+                    className: s()(w.rootContainer, { [w.rootContainerLoading]: M }),
                     hideShadow: !0,
-                    children: P
+                    children: M
                         ? (0, r.jsx)(c.Spinner, { type: c.Spinner.Type.SPINNING_CIRCLE })
                         : 'error' === x
                           ? (0, r.jsx)(O.Z, { onClose: a })
@@ -91,7 +91,7 @@ function P(e) {
                                 isSaving: 'applying' === x,
                                 onClose: a,
                                 onConfirm: () => {
-                                    M('applying'), h().finally(a);
+                                    P('applying'), h().finally(a);
                                 }
                             })
                 })
@@ -215,19 +215,19 @@ function B(e) {
                     let e = t.items.find((e) => e.type === l.Z.AVATAR_DECORATION);
                     return null == e ? null : e;
                 }, [t, n]);
-            return [r, () => (null == r ? (S.Z.addBreadcrumb({ message: 'Error saving avatar decoration; it is null' }), Promise.reject()) : ((0, d.cV)(r), M()))];
+            return [r, () => (null == r ? (S.Z.addBreadcrumb({ message: 'Error saving avatar decoration; it is null' }), Promise.reject()) : ((0, d.cV)(r), P()))];
         })(null !== (n = null == f ? void 0 : f.skuId) && void 0 !== n ? n : null);
     return null == f
         ? null
         : (null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null
           ? (0, r.jsx)(_.default, {
                 transitionState: u,
-                onCloseModal: M,
+                onCloseModal: P,
                 onClose: o,
                 analyticsLocations: [],
                 initialSelectedDecoration: p
             })
-          : (0, r.jsx)(P, {
+          : (0, r.jsx)(M, {
                 onClose: o,
                 transitionState: u,
                 quest: a,

@@ -19,17 +19,17 @@ var i = n(200651),
     x = n(25990),
     S = n(594174),
     T = n(585483),
-    C = n(16703),
+    E = n(16703),
     _ = n(785145),
-    E = n(981631),
-    f = n(526761),
-    I = n(726985),
+    C = n(981631),
+    I = n(526761),
+    f = n(726985),
     N = n(388032),
     A = n(228615);
 function b() {
     c.Z.useExperiment({ location: 'profile_customization_auto' });
     let e = (0, r.e7)([u.Z], () => u.Z.getGuild()),
-        t = (0, C.Z)(),
+        t = (0, E.Z)(),
         n = (0, r.e7)([u.Z, x.Z], () => u.Z.showNotice() || x.Z.showNotice()),
         b = null != e ? e : t,
         v = (0, r.e7)([S.default], () => S.default.getCurrentUser()),
@@ -39,14 +39,14 @@ function b() {
     function y(t) {
         if (j !== t) {
             if (n) {
-                T.S.dispatch(E.CkL.SHAKE_APP, {
+                T.S.dispatch(C.CkL.SHAKE_APP, {
                     duration: 300,
                     intensity: a.$x
                 }),
-                    T.S.dispatch(E.CkL.EMPHASIZE_NOTICE);
+                    T.S.dispatch(C.CkL.EMPHASIZE_NOTICE);
                 return;
             }
-            t === f.NB.GUILD && null == e && null != b && (0, d.Fq)(b, R), O(t);
+            t === I.NB.GUILD && null == e && null != b && (0, d.Fq)(b, R), O(t);
         }
     }
     s.useEffect(() => {
@@ -55,7 +55,7 @@ function b() {
     let B = !0,
         L = !0;
     return (
-        P && 1 === D.length && (D.includes(I.s6.PROFILE_SERVER_PROFILES) ? (y(f.NB.GUILD), (L = !1)) : D.includes(I.s6.PROFILE_USER_PROFILE) && (y(f.NB.USER_PROFILE), (B = !1))),
+        P && 1 === D.length && (D.includes(f.s6.PROFILE_SERVER_PROFILES) ? (y(I.NB.GUILD), (L = !1)) : D.includes(f.s6.PROFILE_USER_PROFILE) && (y(I.NB.USER_PROFILE), (B = !1))),
         (0, i.jsx)(o.Gt, {
             value: R,
             children: (0, i.jsxs)(l.HeadingLevel, {
@@ -76,10 +76,10 @@ function b() {
                                       l.TabBar.Item,
                                       {
                                           className: A.tabBarItem,
-                                          id: f.NB.USER_PROFILE,
+                                          id: I.NB.USER_PROFILE,
                                           children: N.intl.string(N.t['OU3/Pj'])
                                       },
-                                      f.NB.USER_PROFILE
+                                      I.NB.USER_PROFILE
                                   )
                                 : null,
                             B
@@ -87,15 +87,15 @@ function b() {
                                       l.TabBar.Item,
                                       {
                                           className: A.tabBarItem,
-                                          id: f.NB.GUILD,
+                                          id: I.NB.GUILD,
                                           children: N.intl.string(N.t.kPHroa)
                                       },
-                                      f.NB.GUILD
+                                      I.NB.GUILD
                                   )
                                 : null
                         ]
                     }),
-                    j === f.NB.GUILD ? (0, i.jsx)(m.Z, { selectedGuild: b }) : (0, i.jsx)(g.Z, {})
+                    j === I.NB.GUILD ? (0, i.jsx)(m.Z, { selectedGuild: b }) : (0, i.jsx)(g.Z, {})
                 ]
             })
         })

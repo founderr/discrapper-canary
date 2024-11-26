@@ -6,10 +6,10 @@ n.d(t, {
         return E;
     },
     Ft: function () {
-        return T;
+        return b;
     },
     W5: function () {
-        return b;
+        return T;
     },
     _T: function () {
         return p;
@@ -111,7 +111,7 @@ function I(e, t, n) {
     let i = r ? l(e.username) : e.username;
     return 'never' !== t.decoration ? u(i) : i;
 }
-function b(e, t) {
+function T(e, t) {
     let n = {
             ...c,
             ...t
@@ -119,7 +119,7 @@ function b(e, t) {
         r = 'auto' !== n.identifiable || i.Z.hidePersonalInformation;
     return I(e, n, r);
 }
-function T(e) {
+function b(e) {
     return (0, r.e7)([a.default], () => {
         if (null != e) return e.isPrivate() && e.isDM() ? a.default.getUser(e.getRecipientId()) : null;
     });
@@ -128,7 +128,7 @@ t.ZP = {
     getName: _,
     useName: p,
     isNameConcealed: (e) => 4 === e.length && e.endsWith('...'),
-    getUserTag: b,
+    getUserTag: T,
     useUserTag: function (e, t) {
         let n = {
             ...c,
@@ -145,10 +145,10 @@ t.ZP = {
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (null == e) return '???';
         let r = h(e),
-            i = n ? b(e) : null !== (t = e.username) && void 0 !== t ? t : '???';
+            i = n ? T(e) : null !== (t = e.username) && void 0 !== t ? t : '???';
         return r === i ? r : null != r ? ''.concat(r, ' (').concat(i, ')') : i;
     },
     getGlobalName: h,
     humanizeStatus: m,
-    useDirectMessageRecipient: T
+    useDirectMessageRecipient: b
 };

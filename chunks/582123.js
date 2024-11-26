@@ -22,8 +22,8 @@ var r = n(200651),
     E = n(921944),
     v = n(388032),
     I = n(121087),
-    b = n(881828);
-let T = 32;
+    T = n(881828);
+let b = 32;
 function S(e) {
     let { user: t, children: n, onClose: S } = e,
         { analyticsLocations: y } = (0, c.ZP)(u.Z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP),
@@ -38,7 +38,7 @@ function S(e) {
     (0, l.Z)(() => D(!0), R ? 200 : null);
     let L = O ? [s.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP] : [],
         [x, w] = (0, d.US)(L),
-        M = () => {
+        P = () => {
             (0, m.openUserProfileModal)({
                 userId: t.id,
                 section: g.oh.ACTIVITY,
@@ -49,7 +49,7 @@ function S(e) {
         };
     return (0, r.jsx)(o.Popout, {
         shouldShow: null != x,
-        spacing: null != C ? T : 28,
+        spacing: null != C ? b : 28,
         renderPopout: (e) => {
             let { position: t, closePopout: n, setPopoutRef: i } = e;
             return (0, r.jsx)(o.Dialog, {
@@ -60,7 +60,7 @@ function S(e) {
                     className: I.tooltip,
                     asset: (0, r.jsx)('img', {
                         alt: '',
-                        src: b,
+                        src: T,
                         className: I.asset
                     }),
                     buttonCTA: v.intl.string(v.t.RzWDqa),
@@ -75,7 +75,7 @@ function S(e) {
                     },
                     buttonLayout: f._F.STACKED,
                     caretPosition: 'right' === t ? f.DF.LEFT_TOP : f.DF.RIGHT_TOP,
-                    onClick: M,
+                    onClick: P,
                     onSecondaryClick: n,
                     markAsDismissed: w
                 })

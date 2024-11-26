@@ -22,8 +22,8 @@ var r = n(200651),
     E = n(518950),
     v = n(652853),
     I = n(228168),
-    b = n(981631),
-    T = n(474936),
+    T = n(981631),
+    b = n(474936),
     S = n(882636);
 let y = h.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 function A(e) {
@@ -31,12 +31,12 @@ function A(e) {
         { theme: O } = (0, v.z)(),
         { analyticsLocations: D } = (0, d.ZP)(c.Z.AVATAR),
         { trackUserProfileAction: L } = (0, m.KZ)(),
-        x = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, T.p9.TIER_2),
+        x = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, b.p9.TIER_2),
         w = i.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
-        { live: M } = (0, g.Z)(t.id),
-        [P] = M,
+        { live: P } = (0, g.Z)(t.id),
+        [M] = P,
         { status: k, isMobileOnline: U } = (0, o.cj)([_.Z], () => ({
-            status: (0, u.Z)(P) ? b.Skl.STREAMING : _.Z.getStatus(t.id),
+            status: (0, u.Z)(M) ? T.Skl.STREAMING : _.Z.getStatus(t.id),
             isMobileOnline: _.Z.isMobileOnline(t.id)
         })),
         B = A === I.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80,
@@ -65,7 +65,7 @@ function A(e) {
             size: B,
             'aria-label': t.username,
             imageClassName: null != C ? S.overlay : void 0,
-            status: w ? b.Skl.UNKNOWN : k,
+            status: w ? T.Skl.UNKNOWN : k,
             statusBackdropColor: x && !w ? (0, l.getStatusBackdropColor)(O) : void 0,
             isMobile: U,
             statusTooltip: !0,

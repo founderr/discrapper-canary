@@ -23,7 +23,7 @@ var r = n(442837),
     I = n(81471),
     C = n(388032),
     v = n(993595);
-let S = (e) => {
+let N = (e) => {
         let { userId: t } = e,
             n = (0, E.O)(t);
         return null == n || 0 === n.length
@@ -51,14 +51,14 @@ let S = (e) => {
                   ]
               });
     },
-    N = f.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+    S = f.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 function T(e) {
     var t;
     let { channel: n, otherUser: c, active: m } = e,
         f = (0, r.e7)([s.Z], () => s.Z.useReducedMotion),
         E = (0, r.e7)([p.Z], () => (null == c ? null : p.Z.getNickname(c.id))),
         T = !f && m,
-        A = (0, _.c)(n),
+        x = (0, _.c)(n),
         { avatarDecorationSrc: b } = (0, u.Z)({
             user: c,
             size: (0, d.y9)(l.AvatarSizes.SIZE_40),
@@ -66,7 +66,7 @@ function T(e) {
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(N, {
+            (0, i.jsx)(S, {
                 className: v.avatar,
                 src: (0, h.x)(n, 40, T),
                 avatarDecoration: b,
@@ -91,14 +91,14 @@ function T(e) {
                                 className: v.timestampWithPreview,
                                 color: 'text-muted',
                                 variant: 'text-xs/normal',
-                                children: A
+                                children: x
                             })
                         ]
                     }),
                     (0, i.jsx)(o.Z, {
                         hoverText: (0, i.jsx)(I.Z, { channel: n }),
                         forceHover: m,
-                        children: (0, i.jsx)(S, { userId: c.id })
+                        children: (0, i.jsx)(N, { userId: c.id })
                     })
                 ]
             })

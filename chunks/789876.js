@@ -39,16 +39,16 @@ var r;
             (d = 22), (_ = 66), (f = 0);
         });
     function v() {
-        125 != _ && ((d = 7), (_ = 125), (f = 35), c && (c && (i && o(i), r && clearTimeout(r), (c = !1)), T())), E();
+        125 != _ && ((d = 7), (_ = 125), (f = 35), c && (c && (i && o(i), r && clearTimeout(r), (c = !1)), b())), E();
     }
     function I() {
         (i = null), (r = setTimeout(S, 0));
     }
-    function b() {
+    function T() {
         (r = null), s(I);
     }
-    function T() {
-        if (!c) (t = _ - (Date.now() - h)), (e = Date.now()), (c = !0), f && t < f && (t = f), t > 9 ? (r = setTimeout(b, t)) : ((t = 0), b());
+    function b() {
+        if (!c) (t = _ - (Date.now() - h)), (e = Date.now()), (c = !0), f && t < f && (t = f), t > 9 ? (r = setTimeout(T, t)) : ((t = 0), T());
     }
     function S() {
         var n,
@@ -56,10 +56,10 @@ var r;
             a,
             s = d > 9 ? 9 : 1;
         if (((h = Date.now()), (c = !1), (r = null), u > 2 || h - t - 50 < e)) for (i = 0, a = l.length; i < a && g.timeRemaining() > s; i++) (n = l.shift()), m++, n && n(g);
-        l.length ? T() : (u = 0);
+        l.length ? b() : (u = 0);
     }
     function y(e) {
-        return p++, l.push(e), T(), p;
+        return p++, l.push(e), b(), p;
     }
     function A(e) {
         var t = e - 1 - m;

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return S;
     }
 }),
     n(47120);
@@ -28,7 +28,7 @@ let E = {
     I = (0, u.hQ)(),
     C = ''.concat(I, '-decription'),
     v = ''.concat(I, '-error');
-function S(e, t) {
+function N(e, t) {
     switch (t.type) {
         case 'RESET':
             return E;
@@ -51,15 +51,15 @@ function S(e, t) {
             };
     }
 }
-function N() {
+function S() {
     let e = r.createRef(),
         t = r.createRef(),
-        [n, l] = r.useReducer(S, E),
-        { canSend: s, hint: u, success: N, error: T } = n;
+        [n, l] = r.useReducer(N, E),
+        { canSend: s, hint: u, success: S, error: T } = n;
     return (
         r.useEffect(() => {
-            null != N && (o()(null != e.current, 'Input is submitting when not mounted'), (e.current.value = ''), e.current.focus());
-        }, [N, e]),
+            null != S && (o()(null != e.current, 'Input is submitting when not mounted'), (e.current.value = ''), e.current.focus());
+        }, [S, e]),
         (0, i.jsxs)('form', {
             onSubmit: (t) => {
                 t.preventDefault(), o()(null != e.current, 'Input is submitted when not mounted');
@@ -105,7 +105,7 @@ function N() {
                     children: (0, i.jsxs)('div', {
                         ref: t,
                         className: a()(f.addFriendInputWrapper, {
-                            [f.success]: N,
+                            [f.success]: S,
                             [f.error]: T
                         }),
                         children: [
@@ -175,12 +175,12 @@ function N() {
                         className: _.marginTop8,
                         children: T
                     }),
-                null != N &&
+                null != S &&
                     (0, i.jsx)(c.FormText, {
                         role: 'status',
                         type: c.FormText.Types.SUCCESS,
                         className: _.marginTop8,
-                        children: N
+                        children: S
                     })
             ]
         })

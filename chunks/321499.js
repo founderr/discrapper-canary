@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return f;
     }
 });
 var i = n(200651),
@@ -19,15 +19,15 @@ var i = n(200651),
     x = n(526761),
     S = n(726985),
     T = n(388032),
-    C = n(232186);
+    E = n(232186);
 let _ = n(651714),
-    E = n(297166);
-function f() {
+    C = n(297166);
+function I() {
     let { experimentalEncoders: e } = (0, a.cj)([h.Z], () => ({ experimentalEncoders: h.Z.getExperimentalEncoders() }));
     return (0, i.jsx)(m.F, {
         setting: S.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_EXPERIMENTAL_ENCODERS,
         children: (0, i.jsx)(c.FormSwitch, {
-            className: l()(C.marginTop8, C.marginBottom20),
+            className: l()(E.marginTop8, E.marginBottom20),
             value: e,
             onChange: (e) => d.Z.setExperimentalEncoders(e),
             disabled: !1,
@@ -35,7 +35,7 @@ function f() {
         })
     });
 }
-function I() {
+function f() {
     let e = (0, a.e7)([g.Z], () => g.Z.theme),
         { openH264: t, hardwareEncoding: n } = (0, a.cj)([h.Z], () => ({
             openH264: h.Z.getOpenH264(),
@@ -49,13 +49,13 @@ function I() {
                 (0, i.jsx)(m.F, {
                     setting: S.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_AUDIO,
                     children: (0, i.jsx)(c.FormSection, {
-                        className: C.marginBottom20,
+                        className: E.marginBottom20,
                         title: T.intl.string(T.t.DSGme3),
                         children: (0, i.jsx)(c.FormNotice, {
-                            className: C.marginBottom20,
+                            className: E.marginBottom20,
                             type: c.FormNoticeTypes.PRIMARY,
                             imageData: {
-                                src: (0, o.ap)(e) ? _ : E,
+                                src: (0, o.ap)(e) ? _ : C,
                                 width: 70,
                                 height: 40
                             },
@@ -67,13 +67,13 @@ function I() {
                 (0, i.jsx)(m.F, {
                     setting: S.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
                     children: (0, i.jsxs)(c.FormSection, {
-                        className: C.marginBottom20,
+                        className: E.marginBottom20,
                         title: T.intl.string(T.t.Tceiq6),
                         children: [
                             (0, i.jsx)(m.F, {
                                 setting: S.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_OPENH264,
                                 children: (0, i.jsx)(c.FormSwitch, {
-                                    className: l()(C.marginTop8, C.marginBottom20),
+                                    className: l()(E.marginTop8, E.marginBottom20),
                                     value: t,
                                     onChange: (e) => d.Z.setOpenH264(e),
                                     disabled: !1,
@@ -87,14 +87,14 @@ function I() {
                             (0, i.jsx)(m.F, {
                                 setting: S.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_HARDWARE_ACCELERATION,
                                 children: (0, i.jsx)(c.FormSwitch, {
-                                    className: l()(C.marginTop8, C.marginBottom20),
+                                    className: l()(E.marginTop8, E.marginBottom20),
                                     value: n,
                                     onChange: (e) => d.Z.setHardwareEncoding(e),
                                     note: T.intl.string(T.t.P1UKqq),
                                     children: T.intl.string(T.t.Sln58f)
                                 })
                             }),
-                            (0, i.jsx)(f, {})
+                            (0, i.jsx)(I, {})
                         ]
                     })
                 })

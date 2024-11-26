@@ -33,7 +33,7 @@ function p(e) {
             },
             [a]
         ),
-        b = i.useCallback(
+        T = i.useCallback(
             (e, t) => {
                 let i = a[t];
                 if (null == i) return;
@@ -88,7 +88,7 @@ function p(e) {
                   store: l.Xn,
                   categories: a,
                   className: f.list,
-                  renderCategoryListItem: b,
+                  renderCategoryListItem: T,
                   rowCount: a.length,
                   categoryHeight: v,
                   listPadding: _,

@@ -24,7 +24,7 @@ n.d(t, {
         return m;
     },
     yM: function () {
-        return b;
+        return T;
     }
 });
 var r,
@@ -45,8 +45,8 @@ var r,
     E,
     v,
     I,
-    b,
     T,
+    b,
     S,
     y,
     A = n(981631);
@@ -101,7 +101,7 @@ function C(e) {
     (u[(u.THEME = 7)] = 'THEME'),
     (u[(u.AVATAR_DECORATION = 8)] = 'AVATAR_DECORATION'),
     (u[(u.PROFILE_EFFECT = 9)] = 'PROFILE_EFFECT'),
-    ((c = b || (b = {})).VIEW = 'VIEW'),
+    ((c = T || (T = {})).VIEW = 'VIEW'),
     (c.SEND_MESSAGE = 'SEND_MESSAGE'),
     (c.SEND_DIRECT_MESSAGE = 'SEND_DIRECT_MESSAGE'),
     (c.SEND_FRIEND_REQUEST = 'SEND_FRIEND_REQUEST'),
@@ -191,7 +191,7 @@ function C(e) {
     (c.VISIT_SHOP = 'VISIT_SHOP'),
     (c.GET_PREMIUM = 'GET_NITRO'),
     (c.VIEW_PREMIUM_PERKS = 'VIEW_NITRO_PERKS'),
-    ((d = T || (T = {})).VIEW = 'VIEW'),
+    ((d = b || (b = {})).VIEW = 'VIEW'),
     (d.PRESS_TEXT = 'PRESS_TEXT'),
     (d.PRESS_IMAGE = 'PRESS_IMAGE'),
     (d.PRESS_JOIN_BUTTON = 'PRESS_JOIN_BUTTON'),

@@ -9,10 +9,10 @@ n.d(t, {
         return x;
     },
     Wj: function () {
-        return P;
+        return M;
     },
     gK: function () {
-        return M;
+        return P;
     },
     oD: function () {
         return D;
@@ -42,8 +42,8 @@ var r,
     E = n(375954),
     v = n(300429),
     I = n(70956),
-    b = n(630388),
-    T = n(709054),
+    T = n(630388),
+    b = n(709054),
     S = n(968437),
     y = n(665906),
     A = n(456077),
@@ -98,19 +98,19 @@ function w(e) {
             var E;
             let v = null == n,
                 I = D(r, i),
-                b = null !== (E = r.name) && void 0 !== E ? E : '';
-            if ('' === b && f) {
+                T = null !== (E = r.name) && void 0 !== E ? E : '';
+            if ('' === T && f) {
                 let e = x(t, n);
-                b = '' !== e ? e : R.intl.string(R.t['7Xm5QE']);
+                T = '' !== e ? e : R.intl.string(R.t['7Xm5QE']);
             }
             let y = (0, S.WD)(t),
-                A = m.Z.getChannel(T.default.castMessageIdAsChannelId(n)),
+                A = m.Z.getChannel(b.default.castMessageIdAsChannelId(n)),
                 N = await k(t, () => {
                     let e = null != n ? C.ANM.CHANNEL_MESSAGE_THREADS(t.id, n) : C.ANM.CHANNEL_THREADS(t.id);
                     return s.tn.post({
                         url: e,
                         body: {
-                            name: b,
+                            name: T,
                             type: I ? C.d4z.PRIVATE_THREAD : t.type === C.d4z.GUILD_ANNOUNCEMENT ? C.d4z.ANNOUNCEMENT_THREAD : C.d4z.PUBLIC_THREAD,
                             auto_archive_duration: y,
                             location: o
@@ -133,7 +133,7 @@ function w(e) {
         [t, n, r, l, i, o, f, _]
     );
 }
-function M(e, t, n, r, i) {
+function P(e, t, n, r, i) {
     return k(e, () =>
         s.tn.post({
             url: C.ANM.CHANNEL_THREADS(e.id),
@@ -147,13 +147,13 @@ function M(e, t, n, r, i) {
         })
     );
 }
-function P(e) {
+function M(e) {
     let { parentChannel: t, name: n, appliedTags: r, onThreadCreated: i, upload: o } = e;
     return a.useCallback(
         async (e, a, l) => {
             let c = 0,
                 [f, p] = (0, h.Z)(e);
-            f && ((e = p), (c = (0, b.pj)(c, C.iLy.SUPPRESS_NOTIFICATIONS)));
+            f && ((e = p), (c = (0, T.pj)(c, C.iLy.SUPPRESS_NOTIFICATIONS)));
             let m = (0, S.WD)(t, null),
                 E = C.ANM.CHANNEL_THREADS(t.id) + '?use_nested_fields=true',
                 v = {

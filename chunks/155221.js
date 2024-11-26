@@ -22,8 +22,8 @@ var r = n(200651),
     E = n(83949),
     v = n(137412),
     I = n(893607),
-    b = n(314897),
-    T = n(626135),
+    T = n(314897),
+    b = n(626135),
     S = n(361207),
     y = n(690032),
     A = n(358085),
@@ -52,12 +52,12 @@ let D = (0, h.Un)({
         webpackId: 675207,
         name: 'VerifyConnectedAccount'
     }),
-    M = (0, h.Un)({
+    P = (0, h.Un)({
         createPromise: () => n.e('56357').then(n.bind(n, 301001)),
         webpackId: 301001,
         name: 'VerifyConnectedAccountSuccess'
     }),
-    P = (0, h.Un)({
+    M = (0, h.Un)({
         createPromise: () => n.e('68326').then(n.bind(n, 926665)),
         webpackId: 926665,
         name: 'VerifyConnectedAccountError'
@@ -78,14 +78,14 @@ let D = (0, h.Un)({
         name: 'ActivateDevice'
     }),
     G = (0, h.Un)({
-        createPromise: () => Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('50506'), n.e('23755'), n.e('96211'), n.e('48835'), n.e('99152'), n.e('35535'), n.e('97858'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('68956'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('6380'), n.e('18543'), n.e('87624'), n.e('51269'), n.e('2181'), n.e('90508'), n.e('72181'), n.e('13351'), n.e('57674'), n.e('65840'), n.e('74891'), n.e('95393'), n.e('50050'), n.e('38902'), n.e('18101'), n.e('21628'), n.e('25788'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('18895'), n.e('42309'), n.e('82147'), n.e('99393'), n.e('37229'), n.e('99008'), n.e('7590'), n.e('39701'), n.e('25183'), n.e('39368'), n.e('42471'), n.e('28044'), n.e('70205'), n.e('1187'), n.e('60178'), n.e('89943'), n.e('19081'), n.e('9540'), n.e('93375'), n.e('64679'), n.e('69057'), n.e('77564'), n.e('93936'), n.e('62880'), n.e('62172'), n.e('27702'), n.e('90225'), n.e('20011'), n.e('84804'), n.e('92905'), n.e('37220'), n.e('61447'), n.e('80026'), n.e('82158'), n.e('91315'), n.e('11794'), n.e('77803'), n.e('46212'), n.e('54109'), n.e('60673'), n.e('61351'), n.e('39650'), n.e('95468'), n.e('5822')]).then(n.bind(n, 457094)),
+        createPromise: () => Promise.all([n.e('77298'), n.e('23357'), n.e('50506'), n.e('23755'), n.e('96211'), n.e('48835'), n.e('99152'), n.e('35535'), n.e('97858'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('68956'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('6380'), n.e('18543'), n.e('87624'), n.e('51269'), n.e('2181'), n.e('90508'), n.e('72181'), n.e('13351'), n.e('57674'), n.e('65840'), n.e('74891'), n.e('95393'), n.e('50050'), n.e('38902'), n.e('18101'), n.e('21628'), n.e('25788'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('18895'), n.e('42309'), n.e('82147'), n.e('99393'), n.e('37229'), n.e('99008'), n.e('7590'), n.e('39701'), n.e('25183'), n.e('39368'), n.e('70989'), n.e('28044'), n.e('70205'), n.e('1187'), n.e('60178'), n.e('89943'), n.e('19081'), n.e('9540'), n.e('93375'), n.e('64679'), n.e('69057'), n.e('77564'), n.e('93936'), n.e('62880'), n.e('10490'), n.e('27702'), n.e('90225'), n.e('20011'), n.e('84804'), n.e('92905'), n.e('37220'), n.e('61447'), n.e('80026'), n.e('82158'), n.e('91315'), n.e('11794'), n.e('77803'), n.e('46212'), n.e('54109'), n.e('60673'), n.e('61351'), n.e('39650'), n.e('95468'), n.e('5822')]).then(n.bind(n, 457094)),
         webpackId: 457094,
         name: 'ViewsWithMainInterface',
         memo: !0,
         id: 457094
     }),
     Z = (0, h.Un)({
-        createPromise: () => Promise.all([n.e('63288'), n.e('98647'), n.e('75492'), n.e('18543'), n.e('95393'), n.e('25788'), n.e('52030'), n.e('20011'), n.e('10778'), n.e('11260'), n.e('60673'), n.e('84956'), n.e('20621')]).then(n.bind(n, 822699)),
+        createPromise: () => Promise.all([n.e('63288'), n.e('98647'), n.e('75492'), n.e('18543'), n.e('95393'), n.e('25788'), n.e('52030'), n.e('1337'), n.e('20011'), n.e('10778'), n.e('11260'), n.e('60673'), n.e('84956'), n.e('56999')]).then(n.bind(n, 822699)),
         webpackId: 822699,
         name: 'ViewsWithAuth'
     }),
@@ -105,7 +105,7 @@ let D = (0, h.Un)({
         name: 'MobileWebHandoffFallback'
     }),
     H = (0, h.Un)({
-        createPromise: () => Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('50506'), n.e('23755'), n.e('96211'), n.e('48835'), n.e('99152'), n.e('35535'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('68956'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('6380'), n.e('18543'), n.e('87624'), n.e('51269'), n.e('2181'), n.e('90508'), n.e('72181'), n.e('13351'), n.e('57674'), n.e('65840'), n.e('74891'), n.e('95393'), n.e('50050'), n.e('38902'), n.e('18101'), n.e('21628'), n.e('25788'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('18895'), n.e('82147'), n.e('99393'), n.e('99008'), n.e('7590'), n.e('39701'), n.e('39368'), n.e('42471'), n.e('70205'), n.e('1187'), n.e('60178'), n.e('89943'), n.e('9540'), n.e('93375'), n.e('64679'), n.e('69057'), n.e('77564'), n.e('93936'), n.e('62880'), n.e('62172'), n.e('27702'), n.e('90225'), n.e('84804'), n.e('37220'), n.e('61447'), n.e('82158'), n.e('91315'), n.e('46212'), n.e('54109'), n.e('61351'), n.e('93197')]).then(n.bind(n, 290161)),
+        createPromise: () => Promise.all([n.e('77298'), n.e('23357'), n.e('50506'), n.e('23755'), n.e('96211'), n.e('48835'), n.e('99152'), n.e('35535'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('68956'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('6380'), n.e('18543'), n.e('87624'), n.e('51269'), n.e('2181'), n.e('90508'), n.e('72181'), n.e('13351'), n.e('57674'), n.e('65840'), n.e('74891'), n.e('95393'), n.e('50050'), n.e('38902'), n.e('18101'), n.e('21628'), n.e('25788'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('18895'), n.e('82147'), n.e('99393'), n.e('99008'), n.e('7590'), n.e('39701'), n.e('39368'), n.e('70989'), n.e('70205'), n.e('1187'), n.e('60178'), n.e('89943'), n.e('9540'), n.e('93375'), n.e('64679'), n.e('69057'), n.e('77564'), n.e('93936'), n.e('62880'), n.e('10490'), n.e('27702'), n.e('90225'), n.e('84804'), n.e('37220'), n.e('61447'), n.e('82158'), n.e('91315'), n.e('46212'), n.e('54109'), n.e('61351'), n.e('93197')]).then(n.bind(n, 290161)),
         webpackId: 290161,
         name: 'Overlay'
     }),
@@ -256,11 +256,11 @@ class $ extends i.Component {
                                     }),
                                     (0, r.jsx)(p.Z, {
                                         path: C.Z5c.CONNECTIONS_SUCCESS(':type'),
-                                        component: M
+                                        component: P
                                     }),
                                     (0, r.jsx)(p.Z, {
                                         path: C.Z5c.CONNECTIONS_ERROR(':type'),
-                                        component: P
+                                        component: M
                                     }),
                                     (0, r.jsx)(p.Z, {
                                         path: C.Z5c.CONNECTIONS(':type'),
@@ -270,12 +270,12 @@ class $ extends i.Component {
                                         path: C.Z5c.DOWNLOAD_QR_CODE_REDIRECT,
                                         render: () => {
                                             var e, t, n;
-                                            let r = null === (e = T.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
+                                            let r = null === (e = b.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
                                                 i = (0, a.parse)((null !== (n = window.location.search) && void 0 !== n ? n : '').substr(1)),
                                                 s = null === (t = i.referring_location) || void 0 === t ? void 0 : t.toString();
                                             return (
                                                 ('iOS' === r || 'Android' === r) &&
-                                                    T.default.track(C.rMx.DOWNLOAD_APP, {
+                                                    b.default.track(C.rMx.DOWNLOAD_APP, {
                                                         platform: r,
                                                         ptb: !1,
                                                         released: !0,
@@ -292,14 +292,14 @@ class $ extends i.Component {
                                         path: C.Z5c.OPEN_APP_FROM_EMAIL,
                                         render: () => {
                                             var e, t;
-                                            let n = null === (e = T.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
+                                            let n = null === (e = b.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
                                                 i = (0, y.o)(null !== (t = window.location.search) && void 0 !== t ? t : '');
                                             if ('iOS' !== n && 'Android' !== n) return (0, r.jsx)(s.l_, { to: null != i.desktop ? ''.concat(i.desktop.pathname).concat(i.desktop.search) : C.Z5c.APP });
                                             {
                                                 let e = (0, S.Gn)('app_open_from_email', n, i.mobile),
                                                     t = (0, u.zS)(e);
                                                 null != t &&
-                                                    T.default.track(C.rMx.DEEP_LINK_CLICKED, {
+                                                    b.default.track(C.rMx.DEEP_LINK_CLICKED, {
                                                         fingerprint: (0, c.K)(t.fingerprint),
                                                         attempt_id: t.attemptId,
                                                         source: t.utmSource,
@@ -354,9 +354,9 @@ class $ extends i.Component {
     }
 }
 t.Z = d.ZP.connectStores(
-    [b.default, g.Z],
+    [T.default, g.Z],
     () => ({
-        isAuthenticated: b.default.isAuthenticated(),
+        isAuthenticated: T.default.isAuthenticated(),
         migrationStatus: g.Z.getMigrationStatus()
     }),
     { forwardRef: !0 }

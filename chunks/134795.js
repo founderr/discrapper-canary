@@ -15,7 +15,7 @@ var s = n(120356),
     u = n(25836);
 function m(e) {
     let { showRemoveBannerButton: t, errors: n, onBannerChange: s, guildId: m, className: h, disabled: g = !1, showPremiumIcon: p = !0, isTryItOutFlow: x = !1, forcedDivider: S, withHighlight: T = !1 } = e,
-        C = T ? l.ShinyButton : l.Button;
+        E = T ? l.ShinyButton : l.Button;
     return (0, i.jsx)(o.Z, {
         className: h,
         title: d.intl.string(d.t.Vgdusr),
@@ -26,7 +26,7 @@ function m(e) {
         children: (0, i.jsxs)('div', {
             className: u.buttonsContainer,
             children: [
-                (0, i.jsx)(C, {
+                (0, i.jsx)(E, {
                     className: r()({ [u.buttonHighlighted]: T }),
                     size: l.Button.Sizes.SMALL,
                     onClick: () => (0, a.$r)(c.pC.BANNER, m, x, void 0),

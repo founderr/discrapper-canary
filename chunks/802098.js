@@ -17,8 +17,8 @@ let p = {},
     E = null,
     v = 'lastChangeLogDate',
     I = null,
-    b = null,
-    T = new Set();
+    T = null,
+    b = new Set();
 function S() {
     I = d.l4.getSetting();
 }
@@ -28,7 +28,7 @@ class y extends (r = o.ZP.Store) {
         let e = l.K.get(v);
         if (null != e)
             try {
-                b = new Date(e);
+                T = new Date(e);
             } catch {
                 l.K.remove(v);
             }
@@ -57,18 +57,18 @@ class y extends (r = o.ZP.Store) {
         return I;
     }
     lastSeenChangelogDate() {
-        return b;
+        return T;
     }
     getStateForDebugging() {
         return {
             changelogConfig: E,
             loadedChangelogs: h,
             lastSeenChangelogId: I,
-            lastSeenChangelogDate: b
+            lastSeenChangelogDate: T
         };
     }
     isLocked() {
-        return T.size > 0;
+        return b.size > 0;
     }
 }
 (s = 'ChangelogStore'),
@@ -83,13 +83,13 @@ class y extends (r = o.ZP.Store) {
     (t.Z = new y(u.Z, {
         CHANGE_LOG_LOCK: function (e) {
             let { key: t } = e;
-            if (T.has(t)) return !1;
-            (T = new Set(T)).add(t);
+            if (b.has(t)) return !1;
+            (b = new Set(b)).add(t);
         },
         CHANGE_LOG_UNLOCK: function (e) {
             let { key: t } = e;
-            if (!T.has(t)) return !1;
-            (T = new Set(T)).delete(t);
+            if (!b.has(t)) return !1;
+            (b = new Set(b)).delete(t);
         },
         CHANGE_LOG_SET_CONFIG: function (e) {
             let { config: t, latestChangelogId: n } = e;
@@ -120,6 +120,6 @@ class y extends (r = o.ZP.Store) {
         },
         CHANGE_LOG_MARK_SEEN: function (e) {
             let { changelogDate: t } = e;
-            (b = new Date(t)), l.K.set(v, t);
+            (T = new Date(t)), l.K.set(v, t);
         }
     }));

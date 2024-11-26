@@ -22,29 +22,29 @@ var i = n(200651),
     I = n(355350),
     C = n(307947),
     v = n(125855),
-    S = n(687683),
-    N = n(981631),
+    N = n(687683),
+    S = n(981631),
     T = n(388032),
-    A = n(300755);
+    x = n(300755);
 function b() {
     let e = r.useRef(null),
         t = (0, E.Z)(),
         n = (0, I.w)(),
         l = (0, g.V)(),
         b = (0, d.N)(),
-        x = (0, u.Z)('message-requests-spam-list'),
+        A = (0, u.Z)('message-requests-spam-list'),
         { channelId: Z } = (0, _._)(),
         L = r.useCallback(() => {
             (0, c.showToast)((0, c.createToast)(T.intl.string(T.t.EDYbS0), c.ToastType.FAILURE));
         }, []),
         { rejectAll: y } = (0, f.m)({ onError: L }),
-        O = r.useCallback(() => {
+        P = r.useCallback(() => {
             y(t.map((e) => e.channel.id));
         }, [t, y]);
     r.useEffect(() => {
-        p.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), m.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
+        p.default.track(S.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), m.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
     }, []);
-    let R = r.useCallback(
+    let O = r.useCallback(
             (e) => {
                 var n, r;
                 let { row: s } = e,
@@ -56,8 +56,8 @@ function b() {
                     {
                         index: s,
                         className: a()({
-                            [A.selected]: null != Z && Z === d,
-                            [A.siblingSelected]: null != Z && Z === c
+                            [x.selected]: null != Z && Z === d,
+                            [x.siblingSelected]: null != Z && Z === c
                         }),
                         channel: o.channel,
                         user: o.user,
@@ -68,30 +68,30 @@ function b() {
             },
             [t, l, Z]
         ),
-        P = r.useCallback(
+        R = r.useCallback(
             () =>
                 (0, i.jsxs)(
                     h.Z,
                     {
-                        className: A.sectionTitle,
+                        className: x.sectionTitle,
                         children: [
                             T.intl.format(T.t.C79Edn, { count: n }),
                             b && n > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(c.Text, {
-                                              className: A.titleDivider,
+                                              className: x.titleDivider,
                                               variant: 'eyebrow',
                                               color: 'header-secondary',
                                               tag: 'span',
                                               children: '\u2022'
                                           }),
                                           (0, i.jsx)(c.Button, {
-                                              onClick: O,
+                                              onClick: P,
                                               look: c.ButtonLooks.LINK,
                                               color: c.ButtonColors.LINK,
                                               size: c.ButtonSizes.SMALL,
-                                              className: A.clearAllButton,
+                                              className: x.clearAllButton,
                                               'aria-label': T.intl.string(T.t.p6t7RE),
                                               children: T.intl.string(T.t.p6t7RE)
                                           })
@@ -102,19 +102,19 @@ function b() {
                     },
                     'message-requests-spam-title'
                 ),
-            [n, O, b]
+            [n, P, b]
         );
     return 0 === t.length
-        ? (0, i.jsx)(C.Z, { section: S.pS.SPAM })
+        ? (0, i.jsx)(C.Z, { section: N.pS.SPAM })
         : (0, i.jsx)(s.bG, {
-              navigator: x,
+              navigator: A,
               children: (0, i.jsx)(s.SJ, {
                   children: (n) => {
                       let { ref: r, role: l, ...a } = n;
                       return (0, i.jsx)(
                           c.List,
                           {
-                              className: A.list,
+                              className: x.list,
                               innerRole: l,
                               innerAriaLabel: T.intl.string(T.t.e7GWjY),
                               ref: (t) => {
@@ -123,10 +123,10 @@ function b() {
                               },
                               paddingTop: 24,
                               paddingBottom: 24,
-                              sectionHeight: S.oi,
-                              rowHeight: S.WN,
-                              renderSection: P,
-                              renderRow: R,
+                              sectionHeight: N.oi,
+                              rowHeight: N.WN,
+                              renderSection: R,
+                              renderRow: O,
                               sections: [t.length],
                               chunkSize: 30,
                               fade: !0,

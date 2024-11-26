@@ -76,9 +76,9 @@ function u(e) {
         let g = (0, r.useContext)(o),
             E = (0, r.useMemo)(() => (i ? (Array.isArray(i) ? i.flatMap((e) => c(g[e])) : c(g[i])) : []), [g, i]),
             [v, I] = (0, r.useState)(g),
-            [b, T] = (0, r.useState)(!1);
-        g !== v && (I(g), T(!1));
-        let S = (0, r.useMemo)(() => d(b ? [] : E), [b, E]),
+            [T, b] = (0, r.useState)(!1);
+        g !== v && (I(g), b(!1));
+        let S = (0, r.useMemo)(() => d(T ? [] : E), [T, E]),
             y = (0, r.useRef)(s),
             [A, N] = (0, r.useState)(s),
             C = (0, r.useRef)(s),
@@ -97,10 +97,10 @@ function u(e) {
                     'aria' !== p || f(A, e) ? (y.current = e) : N(e);
                 },
                 resetValidation() {
-                    !f(s, C.current) && ((C.current = s), N(s)), 'native' === p && O(!1), T(!0);
+                    !f(s, C.current) && ((C.current = s), N(s)), 'native' === p && O(!1), b(!0);
                 },
                 commitValidation() {
-                    'native' === p && O(!0), T(!0);
+                    'native' === p && O(!0), b(!0);
                 }
             }
         );

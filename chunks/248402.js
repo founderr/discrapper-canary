@@ -48,13 +48,13 @@ function I() {
     }
     i !== e && ((i = e), t && y.emitChange());
 }
-let b = c().debounce(I, 300);
-function T() {
-    return b(), !1;
+let T = c().debounce(I, 300);
+function b() {
+    return T(), !1;
 }
 class S extends (a = d.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, m.default, E.Z, h.Z, g.Z), this.syncWith([_.Z, h.Z], T);
+        this.waitFor(_.Z, m.default, E.Z, h.Z, g.Z), this.syncWith([_.Z, h.Z], b);
     }
     getSpeaker(e) {
         return r !== e && ((r = e), I(!1)), null != i ? i : m.default.getId();
@@ -69,5 +69,5 @@ class S extends (a = d.ZP.Store) {
               writable: !0
           })
         : (s[o] = l);
-let y = new S(f.Z, { AUDIO_SET_LOCAL_VIDEO_DISABLED: T });
+let y = new S(f.Z, { AUDIO_SET_LOCAL_VIDEO_DISABLED: b });
 t.Z = y;

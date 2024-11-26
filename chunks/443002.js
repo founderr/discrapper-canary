@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(245004),
     v = n(383881),
     I = n(981631),
-    b = n(388032),
-    T = n(483843);
+    T = n(388032),
+    b = n(483843);
 t.Z = function (e) {
     let { analyticsLocation: t, guild: n, onClose: S } = e,
         [y, A] = i.useState(!0),
@@ -75,28 +75,28 @@ t.Z = function (e) {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('div', {
-                    className: T.closeIconWrapper,
+                    className: b.closeIconWrapper,
                     children: (0, r.jsx)(l.Z, {
-                        className: T.closeIcon,
+                        className: b.closeIcon,
                         closeAction: O,
                         keybind: 'ESC',
                         variant: l.Z.Variants.SOLID
                     })
                 }),
                 (0, r.jsxs)(o.AdvancedScrollerAuto, {
-                    className: T.scroller,
+                    className: b.scroller,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: T.header,
+                            className: b.header,
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: T.headerContentWrapper,
+                                    className: b.headerContentWrapper,
                                     children: [
                                         (0, r.jsx)(o.Heading, {
-                                            className: T.heading,
+                                            className: b.heading,
                                             color: 'always-white',
                                             variant: 'display-lg',
-                                            children: b.intl.string(b.t.N4sqzM)
+                                            children: T.intl.string(T.t.N4sqzM)
                                         }),
                                         (0, r.jsx)(f.Z, {
                                             guild: n,
@@ -111,17 +111,17 @@ t.Z = function (e) {
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: T.middleBodyContentWrapper,
+                            className: b.middleBodyContentWrapper,
                             children: (0, r.jsx)(E.Z, {})
                         }),
                         (0, r.jsxs)('div', {
-                            className: T.lowerBody,
+                            className: b.lowerBody,
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: T.lowerBodyContentWrapper,
+                                    className: b.lowerBodyContentWrapper,
                                     children: [
                                         (0, r.jsx)(g.Z, {
-                                            className: T.tierComparisonTable,
+                                            className: b.tierComparisonTable,
                                             guild: n
                                         }),
                                         (0, r.jsx)(d.Z, {}),
@@ -129,12 +129,12 @@ t.Z = function (e) {
                                     ]
                                 }),
                                 (0, r.jsx)(v.A, {}),
-                                (0, r.jsx)('div', { className: T.lowerBodyBackgroundImage })
+                                (0, r.jsx)('div', { className: b.lowerBodyBackgroundImage })
                             ]
                         }),
                         (0, r.jsx)(s.$, {
                             onChange: D,
-                            children: (0, r.jsx)('div', { className: T.persistentCtaSpacer })
+                            children: (0, r.jsx)('div', { className: b.persistentCtaSpacer })
                         })
                     ]
                 }),

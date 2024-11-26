@@ -90,7 +90,7 @@ n.d(t, {
         return es;
     },
     ZZ: function () {
-        return M;
+        return P;
     },
     _: function () {
         return X;
@@ -105,7 +105,7 @@ n.d(t, {
         return eL;
     },
     f2: function () {
-        return eb;
+        return eT;
     },
     fY: function () {
         return eZ;
@@ -138,7 +138,7 @@ n.d(t, {
         return F;
     },
     q8: function () {
-        return eP;
+        return eM;
     },
     si: function () {
         return ew;
@@ -206,8 +206,8 @@ var p = n(572004),
     E = n(49012),
     v = n(960048),
     I = n(617136),
-    b = n(272008),
-    T = n(569984),
+    T = n(272008),
+    b = n(569984),
     S = n(497505),
     y = n(566078),
     A = n(312046),
@@ -231,18 +231,18 @@ function w(e, t) {
     if (null == e) return !1;
     let n = e.name.toLowerCase(),
         r = y.r.build(t.config).application.name.toLowerCase();
-    return L(e) || x(e) ? n === r : null != e.application_id && P(e.application_id, t);
-}
-function M(e, t) {
-    for (let [n, r] of e) if (w(t, r) && !G(r)) return r;
+    return L(e) || x(e) ? n === r : null != e.application_id && M(e.application_id, t);
 }
 function P(e, t) {
+    for (let [n, r] of e) if (w(t, r) && !G(r)) return r;
+}
+function M(e, t) {
     return null != y.r.build(t.config).application.ids.find((t) => t === e);
 }
 function k(e, t) {
     let n;
     for (let [r, i] of e)
-        if (P(t, i) && !G(i)) {
+        if (M(t, i) && !G(i)) {
             n = i;
             break;
         }
@@ -254,7 +254,7 @@ function U(e, t) {
     for (let [t, n] of e) if (!G(n) && eg(n)) return n;
 }
 function B(e, t) {
-    return Array.from(e.values()).find((e) => P(t, e) && !G(e) && e_({ quest: e }));
+    return Array.from(e.values()).find((e) => M(t, e) && !G(e) && e_({ quest: e }));
 }
 function G(e) {
     return new Date(e.config.expiresAt).valueOf() <= Date.now();
@@ -497,7 +497,7 @@ function ec(e, t) {
 function ed(e, t) {
     if (null == t || null == e) return null;
     for (let n of t) {
-        let t = M(e, n);
+        let t = P(e, n);
         if (null != t) return t;
     }
     return null;
@@ -551,7 +551,7 @@ function eI(e, t) {
         }
     });
 }
-let eb = (e, t) => {
+let eT = (e, t) => {
         (0, I._3)({
             questId: e,
             questContent: t.content,
@@ -560,8 +560,8 @@ let eb = (e, t) => {
         }),
             (0, p.JG)(q(e));
     },
-    eT = (e, t) => (e > 0 ? (0, i.floor)(Math.min(t / e, 1), 4) : 0),
-    eS = (e) => eB(e) || T.Z.isProgressingOnDesktop(e.id),
+    eb = (e, t) => (e > 0 ? (0, i.floor)(Math.min(t / e, 1), 4) : 0),
+    eS = (e) => eB(e) || b.Z.isProgressingOnDesktop(e.id),
     ey = (e, t) => {
         var n, r, a, s;
         let o = null === (s = e.userStatus) || void 0 === s ? void 0 : null === (a = s.progress) || void 0 === a ? void 0 : null === (r = a[t.eventName]) || void 0 === r ? void 0 : null === (n = r.heartbeat) || void 0 === n ? void 0 : n.lastBeatAt;
@@ -573,8 +573,8 @@ let eb = (e, t) => {
         var n, r, i, a, s;
         let o = null === (r = e.userStatus) || void 0 === r ? void 0 : null === (n = r.progress) || void 0 === n ? void 0 : n[t.eventName],
             l = null !== (s = null !== (a = null == o ? void 0 : o.value) && void 0 !== a ? a : null === (i = e.userStatus) || void 0 === i ? void 0 : i.streamProgressSeconds) && void 0 !== s ? s : 0;
-        if (eP(e)) {
-            let n = T.Z.getOptimisticProgress(e.id, t.eventName);
+        if (eM(e)) {
+            let n = b.Z.getOptimisticProgress(e.id, t.eventName);
             return null == n || n < l ? l : n;
         }
         return l + ey(e, t);
@@ -600,7 +600,7 @@ let eb = (e, t) => {
             progressSeconds: f,
             targetSeconds: d,
             targetMinutes: Math.round(d / h.Z.Seconds.MINUTE),
-            percentComplete: eT(d, f),
+            percentComplete: eb(d, f),
             taskType: l
         };
     },
@@ -643,12 +643,12 @@ let eb = (e, t) => {
                 percentComplete: 0,
                 taskType: s.X.STREAM_ON_DESKTOP
             };
-        if (eM(e))
+        if (eP(e))
             return eO({
                 quest: e,
                 includeTaskTypes: null != t ? t : eB(e) ? s.T.CONSOLE : s.T.ALL
             });
-        if (eP(e))
+        if (eM(e))
             return eC({
                 quest: e,
                 taskType: s.X.WATCH_VIDEO
@@ -675,7 +675,7 @@ function eL(e) {
     let a = Object.keys(e.config.taskConfig.tasks)[0],
         s = e.config.taskConfig.tasks[a],
         o = null !== (i = null === (r = e.userStatus) || void 0 === r ? void 0 : null === (n = r.progress) || void 0 === n ? void 0 : null === (t = n[a]) || void 0 === t ? void 0 : t.value) && void 0 !== i ? i : 0,
-        l = eT(s.target, o);
+        l = eb(s.target, o);
     return {
         title: s.title,
         description: s.description,
@@ -692,10 +692,10 @@ function ew(e) {
         seconds: Math.floor(t % 60)
     };
 }
-let eM = ex([s.X.PLAY_ON_XBOX, s.X.PLAY_ON_PLAYSTATION]),
-    eP = ex([s.X.WATCH_VIDEO]);
+let eP = ex([s.X.PLAY_ON_XBOX, s.X.PLAY_ON_PLAYSTATION]),
+    eM = ex([s.X.WATCH_VIDEO]);
 function ek(e) {
-    return eM(e);
+    return eP(e);
 }
 let eU = (e, t) => {
     var n, r;
@@ -708,7 +708,7 @@ function eB(e) {
     return null != e.userStatus && (eU(e.userStatus, s.X.PLAY_ON_XBOX) || eU(e.userStatus, s.X.PLAY_ON_PLAYSTATION));
 }
 function eG(e) {
-    return !!eP(e) && (0, n(952265).nf)(eq(e.id));
+    return !!eM(e) && (0, n(952265).nf)(eq(e.id));
 }
 function eZ(e, t) {
     let { platformType: n, quest: r } = e;
@@ -805,7 +805,7 @@ function ez(e) {
                 let { quest: t } = e;
                 return t.config.taskConfig.type === u.L.FIRST_PARTY && null != t.config.taskConfig.tasks[s.X.STREAM_ON_DESKTOP];
             })({ quest: e }),
-        n = eM(e),
+        n = eP(e),
         r = [];
     return t && r.push(N.cd.DESKTOP), n && r.push(N.cd.CONSOLE), r;
 }
@@ -813,11 +813,11 @@ function eq(e) {
     return 'VIDEO-QUEST-'.concat(e);
 }
 function eQ(e) {
-    let t = eP(e),
+    let t = eM(e),
         n = ep(e);
     return t || n;
 }
 function eX(e, t) {
     var n, r;
-    if (!G(e) && (null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null && (null === (r = e.userStatus) || void 0 === r ? void 0 : r.completedAt) == null) (0, b.cT)(e.id, t);
+    if (!G(e) && (null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null && (null === (r = e.userStatus) || void 0 === r ? void 0 : r.completedAt) == null) (0, T.cT)(e.id, t);
 }

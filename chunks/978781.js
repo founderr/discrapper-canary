@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return M;
     },
     _: function () {
         return r;
@@ -26,8 +26,8 @@ var r,
     E = n(207164),
     v = n(238302),
     I = n(514361),
-    b = n(572397),
-    T = n(705262),
+    T = n(572397),
+    b = n(705262),
     S = n(436774),
     y = n(768762),
     A = n(197115),
@@ -38,12 +38,12 @@ var r,
     D = n(388032),
     L = n(860768);
 function x() {
-    let e = (0, b.q)();
+    let e = (0, T.q)();
     return (
         s.useEffect(() => ((0, v.Kq)(), e(C.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => e(C.rMx.CLIENT_THEME_PREVIEW_CLOSED)), [e]),
-        (0, a.jsx)(T.ZP, {
-            type: T.yH.EDITOR,
-            children: (0, a.jsx)(T.ZP.BasicAndGradient, { isEditor: !0 })
+        (0, a.jsx)(b.ZP, {
+            type: b.yH.EDITOR,
+            children: (0, a.jsx)(b.ZP.BasicAndGradient, { isEditor: !0 })
         })
     );
 }
@@ -56,7 +56,7 @@ function w() {
         (0, a.jsx)(g.Z, { isEditor: !0 })
     );
 }
-function M(e) {
+function P(e) {
     let { tab: t, isPreview: r, isCoachmark: i, onClose: o } = e,
         c = s.useCallback(() => {
             o(), !i && f.Z.open();
@@ -139,7 +139,7 @@ function M(e) {
         ]
     });
 }
-function P(e) {
+function M(e) {
     let { initialTab: t, markAsDismissed: n } = e,
         [r, i] = s.useState(t),
         o = s.useMemo(
@@ -158,12 +158,12 @@ function P(e) {
         l = (0, c.e7)([I.Z], () => I.Z.isPreview),
         u = (0, c.e7)([m.Z], () => m.Z.isUpsellPreview),
         f = l || u,
-        p = (0, b.J)(),
+        p = (0, T.J)(),
         g = s.useCallback(() => {
             l && p(), u && (0, h.O7)();
         }, [l, u, p]),
         E = (0, _.Z)(null, f ? g : C.dG4),
-        T = s.useCallback(() => {
+        b = s.useCallback(() => {
             (0, h.G8)(), (0, v.Mo)(), g(), null == n || n(R.L.DISMISS);
         }, [g, n]);
     return (0, a.jsx)(N.Z, {
@@ -186,7 +186,7 @@ function P(e) {
                                     className: L.closeContainer,
                                     innerClassName: L.closeInner,
                                     withCircleBackground: !0,
-                                    onClick: T
+                                    onClick: b
                                 })
                             ]
                         }),
@@ -205,10 +205,10 @@ function P(e) {
                     className: L.scrollContainer,
                     children: [0 === r && (0, a.jsx)(x, {}), 1 === r && (0, a.jsx)(w, {})]
                 }),
-                (0, a.jsx)(M, {
+                (0, a.jsx)(P, {
                     tab: r,
                     isPreview: f,
-                    onClose: T,
+                    onClose: b,
                     isCoachmark: !1
                 })
             ]

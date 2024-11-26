@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return f;
     }
 }),
     n(47120),
@@ -31,9 +31,9 @@ var i = n(200651),
     x = n(68985),
     S = n(211644),
     T = n(804501),
-    C = n(518378),
+    E = n(518378),
     _ = n(232186);
-function E(e) {
+function C(e) {
     let { contents: t, content: n, onChange: s } = e,
         r = o.z[n],
         { isDismissed: l, handleToggleDismissState: a, recurringDismissibleContentInfo: c } = (0, T.x)(r, t),
@@ -58,14 +58,14 @@ function E(e) {
         })
     });
 }
-function f(e) {
+function I(e) {
     let { items: t, dismissedContents: n, handleChange: s } = e;
     return (0, i.jsx)(i.Fragment, {
         children: t
             .filter((e) => isNaN(Number(e)))
             .map((e) =>
                 (0, i.jsx)(
-                    E,
+                    C,
                     {
                         contents: n,
                         content: e,
@@ -76,7 +76,7 @@ function f(e) {
             )
     });
 }
-function I() {
+function f() {
     var e;
     let t = (0, S.ZP)((e) => e.recentlyShown),
         {
@@ -88,8 +88,8 @@ function I() {
             dailyCapOverridden: x.Z.dailyCapOverridden,
             newUserMinAgeRequiredOverridden: x.Z.newUserMinAgeRequiredOverridden
         })),
-        [T, E] = s.useState(''),
-        I =
+        [T, C] = s.useState(''),
+        f =
             null !==
                 (e = (0, a.e7)([g.Z], () => {
                     var e;
@@ -169,11 +169,11 @@ function I() {
                         className: _.marginBottom20,
                         size: d.SearchBar.Sizes.LARGE,
                         query: T,
-                        onChange: E,
-                        onClear: () => E('')
+                        onChange: C,
+                        onClear: () => C('')
                     }),
                     (0, i.jsxs)(d.FormItem, {
-                        className: C.buttonsContainer,
+                        className: E.buttonsContainer,
                         children: [
                             (0, i.jsx)(d.Button, {
                                 onClick: h.sr,
@@ -193,9 +193,9 @@ function I() {
                                       className: _.marginBottom20,
                                       children: (0, i.jsx)(d.FormTitle, { children: 'Recently Shown' })
                                   }),
-                                  (0, i.jsx)(f, {
+                                  (0, i.jsx)(I, {
                                       items: v,
-                                      dismissedContents: I,
+                                      dismissedContents: f,
                                       handleChange: b
                                   })
                               ]
@@ -208,9 +208,9 @@ function I() {
                                       className: _.marginBottom20,
                                       children: (0, i.jsx)(d.FormTitle, { children: 'Recent Overrides' })
                                   }),
-                                  (0, i.jsx)(f, {
+                                  (0, i.jsx)(I, {
                                       items: j,
-                                      dismissedContents: I,
+                                      dismissedContents: f,
                                       handleChange: b
                                   })
                               ]
@@ -220,9 +220,9 @@ function I() {
                         className: l()(_.marginBottom20, _.marginTop20),
                         children: (0, i.jsx)(d.FormTitle, { children: 'Available Dismissible Contents' })
                     }),
-                    (0, i.jsx)(f, {
+                    (0, i.jsx)(I, {
                         items: O,
-                        dismissedContents: I,
+                        dismissedContents: f,
                         handleChange: b
                     })
                 ]

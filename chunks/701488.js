@@ -75,7 +75,7 @@ n.d(t, {
         return l;
     },
     am: function () {
-        return P;
+        return M;
     },
     cE: function () {
         return c;
@@ -93,7 +93,7 @@ n.d(t, {
         return B;
     },
     jT: function () {
-        return M;
+        return P;
     },
     js: function () {
         return D;
@@ -142,8 +142,8 @@ var r,
     E,
     v,
     I,
-    b = n(911969),
-    T = n(981631);
+    T = n(911969),
+    b = n(981631);
 let S = 160,
     y = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
     A = '438122941302046720',
@@ -155,8 +155,8 @@ let S = 160,
     L = '1039835161136746497',
     x = '852509694341283871',
     w = '903769130790969345',
-    M = '880218394199220334',
-    P = '1078728822972764312',
+    P = '880218394199220334',
+    M = '1078728822972764312',
     k = '947957217959759964',
     U = '832013003968348200',
     B = '832012774040141894',
@@ -179,11 +179,11 @@ let S = 160,
     J = ['1247266306231898122', '1257458870390099989', '1276239071764680926'];
 ((f = r || (r = {})).ADS = 'ADS'), (f.FAILED_LOAD = 'FAILED_LOAD'), (f.LAGGING = 'LAGGING'), (f.CONFUSING = 'CONFUSING'), (f.NOT_FUN = 'NOT_FUN'), (f.OTHER = 'OTHER'), ((_ = i || (i = {}))[(_.PLAY = 0)] = 'PLAY'), (_[(_.SPECTATE = 1)] = 'SPECTATE'), ((p = a || (a = {})).DESKTOP = 'desktop'), (p.MOBILE = 'mobile'), ((h = s || (s = {})).BETRAYAL_MARKETING_TOOLTIP = 'BETRAYAL_MARKETING_TOOLTIP'), (h.FISHINGTON_MARKETING_TOOLTIP = 'FISHINGTON_MARKETING_TOOLTIP'), (h.POKER_MARKETING_TOOLTIP = 'POKER_MARKETING_TOOLTIP'), (h.YOUTUBE_MARKETING_TOOLTIP = 'YOUTUBE_MARKETING_TOOLTIP'), ((m = o || (o = {}))[(m.UNLOCKED = 1)] = 'UNLOCKED'), (m[(m.PORTRAIT = 2)] = 'PORTRAIT'), (m[(m.LANDSCAPE = 3)] = 'LANDSCAPE'), ((g = l || (l = {}))[(g.DIRECTORY = 0)] = 'DIRECTORY'), (g[(g.SELECT_CHANNEL = 1)] = 'SELECT_CHANNEL'), (g[(g.DETAIL_PAGE = 2)] = 'DETAIL_PAGE');
 let $ = 'activity-shelf',
-    ee = new Set(['755600276941176913', C, R, M]),
-    et = new Set([C, R, M]);
+    ee = new Set(['755600276941176913', C, R, P]),
+    et = new Set([C, R, P]);
 ((E = u || (u = {}))[(E.PORTRAIT = 0)] = 'PORTRAIT'), (E[(E.LANDSCAPE = 1)] = 'LANDSCAPE'), ((v = c || (c = {}))[(v.FOCUSED = 0)] = 'FOCUSED'), (v[(v.PIP = 1)] = 'PIP'), (v[(v.GRID = 2)] = 'GRID');
 let en = {
-        label_type: b.ww.NONE,
+        label_type: T.ww.NONE,
         release_phase: '',
         label_until: null
     },
@@ -193,15 +193,15 @@ let en = {
         legacy_responsive_aspect_ratio: !1,
         default_orientation_lock_state: 1,
         tablet_default_orientation_lock_state: 1,
-        supported_platforms: [b.C3.WEB],
+        supported_platforms: [T.C3.WEB],
         client_platform_config: {
-            [b.C3.WEB]: en,
-            [b.C3.IOS]: en,
-            [b.C3.ANDROID]: en
+            [T.C3.WEB]: en,
+            [T.C3.IOS]: en,
+            [T.C3.ANDROID]: en
         },
         has_csp_exception: !1,
         displays_advertisements: !1
     },
-    ei = [T.d4z.GUILD_TEXT, T.d4z.DM, T.d4z.GROUP_DM],
+    ei = [b.d4z.GUILD_TEXT, b.d4z.DM, b.d4z.GROUP_DM],
     ea = 'https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety';
 ((I = d || (d = {})).NORMAL = 'normal'), (I.FULL_SCREEN = 'full-screen');

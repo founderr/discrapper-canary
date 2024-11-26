@@ -19,7 +19,7 @@ var r = n(812206),
     m = n(701488);
 async function g(e) {
     let t,
-        { applicationId: n, activityChannelId: g, locationObject: E, analyticsLocations: v, componentId: I, sectionName: b, source: T, partyId: S } = e,
+        { applicationId: n, activityChannelId: g, locationObject: E, analyticsLocations: v, componentId: I, sectionName: T, source: b, partyId: S } = e,
         y = (0, f.Z)(),
         A = i.Z.getChannel(g),
         N = null == A ? void 0 : A.getGuildId(),
@@ -60,8 +60,8 @@ async function g(e) {
             analyticsLocations: v,
             locationObject: E,
             componentId: I,
-            sectionName: b,
-            source: T,
+            sectionName: T,
+            source: b,
             partyId: S
         })
     );

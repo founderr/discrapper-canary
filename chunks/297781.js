@@ -9,7 +9,7 @@ n.d(t, {
         return F;
     },
     EE: function () {
-        return P;
+        return M;
     },
     Gk: function () {
         return K;
@@ -18,7 +18,7 @@ n.d(t, {
         return i;
     },
     OV: function () {
-        return M;
+        return P;
     },
     PZ: function () {
         return z;
@@ -75,8 +75,8 @@ var r,
     E = n(709054),
     v = n(719247),
     I = n(26033),
-    b = n(22211),
-    T = n(561308),
+    T = n(22211),
+    b = n(561308),
     S = n(797342),
     y = n(371991),
     A = n(206583),
@@ -84,10 +84,10 @@ var r,
     C = n(455887);
 let R = {
     [d.s.TOP_ARTIST]: [V],
-    [d.s.PLAYED_GAME]: [M, P, w, H, U, Z, j, G, B],
+    [d.s.PLAYED_GAME]: [P, M, w, H, U, Z, j, G, B],
     [d.s.TOP_GAME]: [F],
     [d.s.WATCHED_MEDIA]: [Y, W],
-    [d.s.LAUNCHED_ACTIVITY]: [M, P, w, H, j, B]
+    [d.s.LAUNCHED_ACTIVITY]: [P, M, w, H, j, B]
 };
 ((r = i || (i = {}))[(r.CARD = 0)] = 'CARD'), (r[(r.POPOUT = 1)] = 'POPOUT'), (r[(r.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (r[(r.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (r[(r.USER_PROFILE = 4)] = 'USER_PROFILE'), (r[(r.EMBED = 5)] = 'EMBED'), (r[(r.LEADERBOARD_POPOUT = 6)] = 'LEADERBOARD_POPOUT'), (r[(r.OVERLAY = 7)] = 'OVERLAY');
 let O = s.createContext({});
@@ -129,7 +129,7 @@ function x(e) {
 }
 function w(e) {
     let { entry: t } = e,
-        { channel: n } = (0, b.Z)(t),
+        { channel: n } = (0, T.Z)(t),
         { location: r } = D();
     return null == n || (0, g.Hi)(r, [1, 2, 3, 4])
         ? null
@@ -138,12 +138,12 @@ function w(e) {
               text: n.name
           });
 }
-function M(e) {
+function P(e) {
     let { entry: t, hovered: n } = e,
         { defaultTextColor: r, defaultIconColor: i, location: s } = D(),
-        o = (0, T.Jg)(t) && (0, g.Hi)(s, [0, 4, 7]),
+        o = (0, b.Jg)(t) && (0, g.Hi)(s, [0, 4, 7]),
         l = o ? h.tokens.colors.TEXT_POSITIVE : i,
-        { streamPreviewUrl: u } = (0, b.Z)(t),
+        { streamPreviewUrl: u } = (0, T.Z)(t),
         c = null != u ? h.ScreenArrowIcon : (0, I.Mq)(t) ? h.AppsIcon : h.GameControllerIcon;
     return (0, a.jsxs)(L, {
         children: [
@@ -161,11 +161,11 @@ function M(e) {
         ]
     });
 }
-function P(e) {
+function M(e) {
     let { entry: t } = e,
         { defaultTextColor: n, defaultIconColor: r } = D(),
         { state: i, party: s } = (0, S.n)(t),
-        o = (0, T.bT)(i, s);
+        o = (0, b.bT)(i, s);
     return null == o
         ? null
         : (0, a.jsxs)(L, {
@@ -187,7 +187,7 @@ function k(e) {
     var t;
     let { entry: n, hovered: r } = e,
         { defaultTextColor: i, defaultIconColor: s, location: o } = D(),
-        l = (0, T.Jg)(n) && (0, g.Hi)(o, [0, 4]),
+        l = (0, b.Jg)(n) && (0, g.Hi)(o, [0, 4]),
         u = l ? h.tokens.colors.TEXT_POSITIVE : s,
         c = l ? 'text-positive' : i,
         d = (0, p.e7)([v.Z], () => v.Z.getMatchingActivity(n)),
@@ -228,7 +228,7 @@ function U(e) {
     let { entry: t } = e,
         { location: n } = D(),
         r = (0, g.Hi)(n, [0, 3]) ? h.tokens.colors.STATUS_POSITIVE : void 0;
-    return (0, T.Ol)(t)
+    return (0, b.Ol)(t)
         ? (0, a.jsx)(x, {
               Icon: h.NewUserSimpleIcon,
               text: N.intl.string(N.t.keY6mZ),
@@ -239,9 +239,9 @@ function U(e) {
 function B(e) {
     let { entry: t } = e,
         { location: n } = D();
-    if (!(0, T.V5)(t)) return null;
-    let r = (0, T.kr)(t),
-        { text: i, tooltipText: s } = (0, T.zo)(t);
+    if (!(0, b.V5)(t)) return null;
+    let r = (0, b.kr)(t),
+        { text: i, tooltipText: s } = (0, b.zo)(t);
     return null == i
         ? null
         : (0, a.jsx)(x, {
@@ -255,9 +255,9 @@ function G(e) {
     let { entry: t } = e,
         { location: n } = D(),
         r = 0 !== n,
-        i = (0, T.dw)(t);
+        i = (0, b.dw)(t);
     if (null == i) return null;
-    let s = (0, T.GE)(i);
+    let s = (0, b.GE)(i);
     return (0, a.jsx)(x, {
         Icon: h.RetryIcon,
         showTooltip: !r,
@@ -268,8 +268,8 @@ function G(e) {
 function Z(e) {
     let { entry: t } = e,
         { location: n } = D(),
-        r = (0, T.vU)(t);
-    return (0, T.q_)(t)
+        r = (0, b.vU)(t);
+    return (0, b.q_)(t)
         ? (0, a.jsx)(x, {
               Icon: h.FlashIcon,
               showTooltip: 0 === n,
@@ -282,7 +282,7 @@ function F(e) {
     let { entry: t } = e,
         { location: n } = D(),
         r = 0 !== n,
-        i = (0, T.yA)(t);
+        i = (0, b.yA)(t);
     if (null == i) return null;
     let s = r ? N.t.C0Axoa : N.t.SDRHgo;
     return (0, a.jsx)(x, {
@@ -296,7 +296,7 @@ function V(e) {
     var t;
     let { entry: n } = e,
         { location: r } = D(),
-        i = null === (t = (0, T.PJ)(n, f.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
+        i = null === (t = (0, b.PJ)(n, f.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
     if (null == i) return null;
     let s = (0, g.Hi)(r, [1, 2, 5]) ? N.intl.formatToPlainString(N.t.HtifnJ, { count: i }) : N.intl.formatToPlainString(N.t['jq/Bmp'], { count: i });
     return (0, a.jsx)(x, {
@@ -308,7 +308,7 @@ function j(e) {
     let { entry: t } = e,
         { location: n } = D();
     if (3 === n) return null;
-    let r = (0, T.ig)(t);
+    let r = (0, b.ig)(t);
     return null == r || r === _.o.TRENDING_TYPE_UNSPECIFIED
         ? null
         : (0, a.jsx)(x, {
@@ -331,7 +331,7 @@ function H(e) {
 function Y(e) {
     let { entry: t, hovered: n } = e,
         { defaultTextColor: r, defaultIconColor: i, location: s } = D(),
-        o = (0, T.Jg)(t) && 4 === s,
+        o = (0, b.Jg)(t) && 4 === s,
         l = o ? h.tokens.colors.TEXT_POSITIVE : i;
     return (0, a.jsxs)('div', {
         className: C.badgeContainer,
@@ -351,7 +351,7 @@ function Y(e) {
 }
 function W(e) {
     let { entry: t } = e,
-        n = (0, T.ap)(t.extra.media_assets_large_text);
+        n = (0, b.ap)(t.extra.media_assets_large_text);
     return null == n
         ? null
         : (0, a.jsx)(x, {

@@ -1,6 +1,6 @@
 n.d(t, {
     RR: function () {
-        return T;
+        return b;
     },
     WW: function () {
         return I;
@@ -15,7 +15,7 @@ n.d(t, {
         return S;
     },
     t$: function () {
-        return b;
+        return T;
     },
     xl: function () {
         return N;
@@ -44,7 +44,7 @@ var r = n(683860),
 function I(e) {
     return m.Z.getForumChannelSessionId(e);
 }
-function b(e) {
+function T(e) {
     switch (e) {
         case r.z.CREATION_DATE:
             return v.SX.CREATION_DATE;
@@ -54,7 +54,7 @@ function b(e) {
             throw Error('Unexpected sort order '.concat(e));
     }
 }
-function T(e) {
+function b(e) {
     return d.Z.getUploads(e, u.d.FirstThreadMessage).length;
 }
 function S(e) {

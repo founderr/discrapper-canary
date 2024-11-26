@@ -1,39 +1,39 @@
-var n = r(135839),
-    a = r(117973),
+var a = r(135839),
+    n = r(117973),
     _ = r(780712),
     o = r(400353),
-    i = r(653180),
-    E = r(657398),
+    E = r(653180),
+    i = r(657398),
     c = r(19235),
     s = '[object Map]',
     l = '[object Promise]',
-    u = '[object Set]',
-    I = '[object WeakMap]',
+    I = '[object Set]',
+    u = '[object WeakMap]',
     R = '[object DataView]',
-    N = c(n),
     A = c(a),
-    T = c(_),
+    T = c(n),
+    N = c(_),
     d = c(o),
-    L = c(i),
-    f = E;
-((n && f(new n(new ArrayBuffer(1))) != R) || (a && f(new a()) != s) || (_ && f(_.resolve()) != l) || (o && f(new o()) != u) || (i && f(new i()) != I)) &&
-    (f = function (e) {
-        var t = E(e),
+    f = c(E),
+    O = i;
+((a && O(new a(new ArrayBuffer(1))) != R) || (n && O(new n()) != s) || (_ && O(_.resolve()) != l) || (o && O(new o()) != I) || (E && O(new E()) != u)) &&
+    (O = function (e) {
+        var t = i(e),
             r = '[object Object]' == t ? e.constructor : void 0,
-            n = r ? c(r) : '';
-        if (n)
-            switch (n) {
-                case N:
-                    return R;
+            a = r ? c(r) : '';
+        if (a)
+            switch (a) {
                 case A:
-                    return s;
+                    return R;
                 case T:
+                    return s;
+                case N:
                     return l;
                 case d:
-                    return u;
-                case L:
                     return I;
+                case f:
+                    return u;
             }
         return t;
     }),
-    (e.exports = f);
+    (e.exports = O);

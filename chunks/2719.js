@@ -20,11 +20,11 @@ var i = n(200651),
     x = n(299206),
     S = n(295474),
     T = n(144114),
-    C = n(918505),
+    E = n(918505),
     _ = n(332473),
-    E = n(921801),
-    f = n(485341),
-    I = n(687158),
+    C = n(921801),
+    I = n(485341),
+    f = n(687158),
     N = n(518950),
     A = n(184325),
     b = n(867176),
@@ -46,7 +46,7 @@ function U(e) {
     var t, r;
     let { className: a, user: o } = e,
         c = s.useRef(null),
-        m = (0, C.o9)(),
+        m = (0, E.o9)(),
         h = (0, _.b)(),
         g = (0, S.gS)(),
         p = null !== (r = null == g ? void 0 : null === (t = g.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== r ? r : null,
@@ -54,9 +54,9 @@ function U(e) {
     s.useEffect(() => {
         T(null != c.current && c.current.scrollWidth > c.current.clientWidth);
     }, [o.username]);
-    let E = !o.isClaimed(),
-        f = (m && !o.isPomelo() && !o.hasVerifiedEmailOrPhone()) || E,
-        I = f ? M.intl.string(M.t['7Ngnys']) : void 0;
+    let C = !o.isClaimed(),
+        I = (m && !o.isPomelo() && !o.hasVerifiedEmailOrPhone()) || C,
+        f = I ? M.intl.string(M.t['7Ngnys']) : void 0;
     return (0, i.jsxs)('div', {
         className: l()(k.field, a),
         children: [
@@ -123,11 +123,11 @@ function U(e) {
                     })
                 }),
             (0, i.jsx)(u.Tooltip, {
-                text: I,
+                text: f,
                 children: (e) =>
                     (0, i.jsx)(u.Button, {
                         ...e,
-                        disabled: f,
+                        disabled: I,
                         size: u.Button.Sizes.SMALL,
                         className: k.fieldButton,
                         color: u.Button.Colors.PRIMARY,
@@ -440,8 +440,8 @@ function K() {
             let e = j.default.getCurrentUser();
             return o()(null != e, 'UserSettingsAccountProfileCard: currentUser cannot be undefined'), e;
         }),
-        n = (0, I.ZP)(t.id),
-        s = (0, f.Z)(n),
+        n = (0, f.ZP)(t.id),
+        s = (0, I.Z)(n),
         r = D.co.useSetting(),
         l = (0, c.e7)([v.Z], () => v.Z.getErrors()),
         a = null == l ? void 0 : null === (e = l.avatar) || void 0 === e ? void 0 : e[0],
@@ -514,25 +514,25 @@ function K() {
                     (0, i.jsxs)('div', {
                         className: k.fieldList,
                         children: [
-                            (0, i.jsx)(E.F, {
+                            (0, i.jsx)(C.F, {
                                 setting: B.s6.ACCOUNT_DISPLAY_NAME,
                                 children: (0, i.jsx)(V, {
                                     className: k.fieldSpacerBottom,
                                     user: t
                                 })
                             }),
-                            (0, i.jsx)(E.F, {
+                            (0, i.jsx)(C.F, {
                                 setting: B.s6.ACCOUNT_USERNAME,
                                 children: (0, i.jsx)(U, { user: t })
                             }),
-                            (0, i.jsx)(E.F, {
+                            (0, i.jsx)(C.F, {
                                 setting: B.s6.ACCOUNT_EMAIL,
                                 children: (0, i.jsx)(Y, {
                                     className: k.fieldSpacer,
                                     user: t
                                 })
                             }),
-                            (0, i.jsx)(E.F, {
+                            (0, i.jsx)(C.F, {
                                 setting: B.s6.ACCOUNT_PHONE_NUMBER,
                                 children: (0, i.jsx)(H, {
                                     className: k.fieldSpacer,

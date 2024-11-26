@@ -17,7 +17,7 @@ var r = n(544891),
     E = n(26151),
     v = n(287734),
     I = n(981631),
-    b = n(388032);
+    T = n(388032);
 t.Z = {
     async openPrivateChannel(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -129,10 +129,10 @@ t.Z = {
                     rejectWithError: !1
                 })
                 .then(() => {
-                    i.uv.announce(b.intl.string(b.t.nRbucn));
+                    i.uv.announce(T.intl.string(T.t.nRbucn));
                 })
                 .catch(() => {
-                    i.uv.announce(b.intl.string(b.t.ndXVIy));
+                    i.uv.announce(T.intl.string(T.t.ndXVIy));
                 })
         );
     },
@@ -175,8 +175,8 @@ t.Z = {
                 oldFormErrors: !0,
                 rejectWithError: !0
             })
-            .then((t) => ((i.uv.announce(b.intl.string(b.t.cU0t1N)), null == a || a(), 201 === t.status) ? this._openPrivateChannel(t.body).id : e))
-            .catch(() => (i.uv.announce(b.intl.string(b.t['8GEden'])), e));
+            .then((t) => ((i.uv.announce(T.intl.string(T.t.cU0t1N)), null == a || a(), 201 === t.status) ? this._openPrivateChannel(t.body).id : e))
+            .catch(() => (i.uv.announce(T.intl.string(T.t['8GEden'])), e));
     },
     addRecipients(e, t, n, r) {
         return this.addRecipient(e, t[0], n, r).then((e) => Promise.all(t.slice(1).map((t) => this.addRecipient(e, t, n))).then(() => e));

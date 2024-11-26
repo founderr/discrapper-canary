@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return _;
     }
 });
 var i = n(200651);
@@ -35,7 +35,7 @@ function f(e) {
         ]
     });
 }
-function p(e) {
+function _(e) {
     switch (e.ref_type) {
         case s.Qs.CHANNEL:
             return (0, i.jsx)(f, { channelId: e.ref_id });

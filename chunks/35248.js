@@ -1,9 +1,9 @@
 n.d(t, {
     M: function () {
-        return _;
+        return y;
     },
     a: function () {
-        return y;
+        return b;
     }
 }),
     n(315314),
@@ -28,20 +28,20 @@ var a = n(200651),
     E = n(981631),
     N = n(474936),
     f = n(388032),
-    b = n(13926);
-let _ = (e) => {
+    _ = n(13926);
+let y = (e) => {
         let { onPurchaseComplete: t, onHandoffFailure: n } = e,
-            { selectedPlan: c, browserCheckoutState: u, browserCheckoutStateLoadId: _, contextMetadata: y } = (0, p.usePaymentContext)(),
+            { selectedPlan: c, browserCheckoutState: u, browserCheckoutStateLoadId: y, contextMetadata: b } = (0, p.usePaymentContext)(),
             { isGift: P } = (0, m.wD)(),
-            [g, C] = r.useState(!1);
+            [C, g] = r.useState(!1);
         return (
             r.useEffect(() => {
                 let e = setTimeout(
                     () => {
                         var e;
-                        if (!g)
-                            C(!0),
-                                (0, o.r5)(y.loadId),
+                        if (!C)
+                            g(!0),
+                                (0, o.r5)(b.loadId),
                                 !(function (e, t, n, a) {
                                     let r = E.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n),
                                         s = new URL(d.Z.makeUrl(E.Z5c.BILLING_LOGIN_HANDOFF)),
@@ -63,17 +63,17 @@ let _ = (e) => {
                                                     a();
                                                 }
                                             );
-                                })(null !== (e = null == c ? void 0 : c.id) && void 0 !== e ? e : N.Xh.PREMIUM_MONTH_TIER_2, P, y.loadId, n);
+                                })(null !== (e = null == c ? void 0 : c.id) && void 0 !== e ? e : N.Xh.PREMIUM_MONTH_TIER_2, P, b.loadId, n);
                     },
                     (0, h.q)().delay ? 1000 : 0
                 );
                 return () => clearTimeout(e);
-            }, [c, P, y, n, C, g]),
+            }, [c, P, b, n, g, C]),
             r.useEffect(() => {
-                _ === y.loadId && u === A.Y.DONE && t();
-            }, [u, _, y, t]),
+                y === b.loadId && u === A.Y.DONE && t();
+            }, [u, y, b, t]),
             (0, a.jsxs)('div', {
-                className: b.body,
+                className: _.body,
                 children: [
                     (0, a.jsx)(s.Heading, {
                         variant: 'heading-xl/bold',
@@ -81,14 +81,14 @@ let _ = (e) => {
                     }),
                     (0, a.jsx)(s.Text, {
                         variant: 'text-md/normal',
-                        className: b.description,
+                        className: _.description,
                         children: f.intl.string(f.t.xfG7Ji)
                     })
                 ]
             })
         );
     },
-    y = (e) => {
+    b = (e) => {
         let { onPrimaryClick: t, onBackClick: n } = e;
         return (0, a.jsx)('div', {
             children: (0, a.jsxs)(s.ModalFooter, {

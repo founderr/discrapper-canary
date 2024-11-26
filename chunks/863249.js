@@ -1,6 +1,6 @@
 n.d(t, {
     q0: function () {
-        return T;
+        return b;
     },
     xo: function () {
         return y;
@@ -91,7 +91,7 @@ let E = async (e, t) => {
             }
         });
     },
-    b = async (e, t) => {
+    T = async (e, t) => {
         await r.tn.patch({
             url: m.ANM.GUILD_MEMBER_VERIFICATION(e),
             body: { enabled: t },
@@ -99,7 +99,7 @@ let E = async (e, t) => {
             rejectWithError: !1
         });
     },
-    T = -1,
+    b = -1,
     S = async function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 200;
         if (u.Z.isFullServerPreview(e)) {
@@ -121,7 +121,7 @@ let E = async (e, t) => {
                     guildId: e,
                     request: a
                 }),
-                (0, h.YG)(t.formFields) && n !== T && setTimeout(y, n),
+                (0, h.YG)(t.formFields) && n !== b && setTimeout(y, n),
                 a
             );
         } catch (t) {
@@ -177,7 +177,7 @@ t.ZP = {
             isLocalUpdate: !0
         });
     },
-    enableVerificationForm: b,
+    enableVerificationForm: T,
     submitVerificationForm: S,
     clearCoachmark: function () {
         i.Z.dispatch({ type: 'USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR' });

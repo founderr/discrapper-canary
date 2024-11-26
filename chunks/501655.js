@@ -29,8 +29,8 @@ var r,
     E = n(88751),
     v = n(427679),
     I = n(590415),
-    b = n(974609);
-function T(e, t, n) {
+    T = n(974609);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -86,7 +86,7 @@ class C {
                 user: o,
                 userNick: g.ZP.getName(this.guildId, this.channelId, o),
                 voiceState: s,
-                role: (0, b.H)(this.guildId, e),
+                role: (0, T.H)(this.guildId, e),
                 speaker: E.ZP.isSpeaker(e, this.channelId),
                 member: null != this.guildId ? _.ZP.getMember(this.guildId, e) : null,
                 blocked: p.Z.isBlocked(o.id),
@@ -94,13 +94,13 @@ class C {
                 isFriend: p.Z.isFriend(o.id),
                 connectedOn: null !== (n = null == l ? void 0 : l.connectedOn) && void 0 !== n ? n : Date.now()
             },
-            T = {
+            b = {
                 ...d,
                 type: 'VOICE',
                 id: o.id,
                 rtsState: (0, I.gf)(s)
             };
-        a.push(T);
+        a.push(b);
         let S = null !== (r = c.Z.getStreamForUser(e, this.guildId)) && void 0 !== r ? r : c.Z.getActiveStreamForUser(e, this.guildId);
         if (null != S && S.channelId === this.channelId) {
             let e = (0, u.V9)(S);
@@ -157,6 +157,6 @@ class C {
     }
     constructor(e) {
         var t;
-        T(this, 'channelId', void 0), T(this, 'guildId', void 0), T(this, 'participants', {}), T(this, '_participantsIndex', new o.h(N, S)), T(this, '_requestToSpeakIndex', new o.h(() => [], y)), (this.channelId = e), (this.guildId = null === (t = d.Z.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId());
+        b(this, 'channelId', void 0), b(this, 'guildId', void 0), b(this, 'participants', {}), b(this, '_participantsIndex', new o.h(N, S)), b(this, '_requestToSpeakIndex', new o.h(() => [], y)), (this.channelId = e), (this.guildId = null === (t = d.Z.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId());
     }
 }

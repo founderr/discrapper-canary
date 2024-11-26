@@ -22,8 +22,8 @@ var r = n(200651),
     E = n(318374),
     v = n(102172),
     I = n(359110),
-    b = n(769654),
-    T = n(922482),
+    T = n(769654),
+    b = n(922482),
     S = n(543882),
     y = n(592125),
     A = n(430824),
@@ -35,8 +35,8 @@ var r = n(200651),
     L = n(960870),
     x = n(139793),
     w = n(502762),
-    M = n(652853),
-    P = n(194811),
+    P = n(652853),
+    M = n(194811),
     k = n(373826),
     U = n(315324),
     B = n(582123),
@@ -51,7 +51,7 @@ var r = n(200651),
     K = n(774797);
 function z(e) {
     let { user: t, currentUser: n, stream: a, className: z, onClose: q } = e,
-        { profileType: Q, theme: X } = (0, M.z)(),
+        { profileType: Q, theme: X } = (0, P.z)(),
         J = {
             [Y.fullSize]: Q === F.y0.FULL_SIZE,
             [H.fullSize]: Q === F.y0.FULL_SIZE
@@ -200,7 +200,7 @@ function z(e) {
                                     (0, r.jsx)(l.Clickable, {
                                         className: s()(H.clickable, H.inline),
                                         onClick: () => {
-                                            null == en || en({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, T.Cq)(ea) : (u.default.selectVoiceChannel(ea.id), (0, I.Kh)(ea.id)), null == q || q();
+                                            null == en || en({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, b.Cq)(ea) : (u.default.selectVoiceChannel(ea.id), (0, I.Kh)(ea.id)), null == q || q();
                                         },
                                         children: ea.name
                                     })
@@ -210,7 +210,7 @@ function z(e) {
                                 variant: 'text-xs/normal',
                                 text: j.intl.formatToPlainString(j.t['hq/Qzc'], { guildName: ei.name }),
                                 onClick: () => {
-                                    en({ action: 'OPEN_VOICE_GUILD' }), (0, b.X)(ei.id), null == q || q();
+                                    en({ action: 'OPEN_VOICE_GUILD' }), (0, T.X)(ei.id), null == q || q();
                                 }
                             })
                         ]
@@ -265,7 +265,7 @@ function z(e) {
                     className: s()(H.card, z),
                     ref: er,
                     children: [
-                        (0, r.jsx)(P.Z, {
+                        (0, r.jsx)(M.Z, {
                             text: null != eo ? j.intl.formatToPlainString(j.t['4CQq9f'], { name: eo.name }) : j.intl.string(j.t['Jpkr/v']),
                             tags: (0, r.jsx)(g.ZP, { size: g.OH.SMALL }),
                             contextMenu: (0, r.jsx)(Z.Z, {

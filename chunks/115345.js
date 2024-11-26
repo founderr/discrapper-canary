@@ -1,12 +1,12 @@
 n.d(t, {
     F6: function () {
-        return M;
+        return P;
     },
     _Y: function () {
         return j;
     },
     cG: function () {
-        return P;
+        return M;
     },
     ly: function () {
         return k;
@@ -40,8 +40,8 @@ var r = n(192379),
     E = n(771845),
     v = n(9156),
     I = n(626135),
-    b = n(630388),
-    T = n(823379),
+    T = n(630388),
+    b = n(823379),
     S = n(960048),
     y = n(709054),
     A = n(223683),
@@ -53,7 +53,7 @@ var r = n(192379),
     L = n(490897),
     x = n(526761),
     w = n(388032);
-function M(e, t) {
+function P(e, t) {
     let [n, i] = r.useState(O.nf),
         [o, l] = r.useState({});
     (0, _.D)();
@@ -133,7 +133,7 @@ function M(e, t) {
         }
     );
 }
-function P(e, t) {
+function M(e, t) {
     return Object.values(g.Z.getGuilds()).some((n) => {
         let [r] = p.Z.hasConsented(D.pjP.PERSONALIZATION) ? (0, C.q)(n, O.nf, e, t, !1) : (0, C.A)(n, e);
         return r === O.AR.UseGreyDot;
@@ -145,7 +145,7 @@ function k() {
     for (let i of e) {
         var n, r;
         let e = null !== (r = (null !== (n = v.ZP.getAllSettings().userGuildSettings[i.id]) && void 0 !== n ? n : {}).flags) && void 0 !== r ? r : 0;
-        (e = (0, b.mB)(e, x.vc.UNREADS_ALL_MESSAGES, !0)), (e = (0, b.mB)(e, x.vc.UNREADS_ONLY_MENTIONS, !1)), (t[i.id] = { flags: e });
+        (e = (0, T.mB)(e, x.vc.UNREADS_ALL_MESSAGES, !0)), (e = (0, T.mB)(e, x.vc.UNREADS_ONLY_MENTIONS, !1)), (t[i.id] = { flags: e });
     }
     G(t),
         I.default.track(D.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
@@ -324,5 +324,5 @@ function j(e) {
                 num_six_month_voice_joins: Number(null !== (_ = null == p ? void 0 : p.six_month_opens) && void 0 !== _ ? _ : 0)
             };
         })
-        .filter(T.lm);
+        .filter(b.lm);
 }

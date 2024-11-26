@@ -25,8 +25,8 @@ var r = n(200651),
     E = n(468954),
     v = n(53691),
     I = n(75145),
-    b = n(631771),
-    T = n(609218),
+    T = n(631771),
+    b = n(609218),
     S = n(695346),
     y = n(594174),
     A = n(979651),
@@ -38,8 +38,8 @@ var r = n(200651),
     L = n(697426),
     x = n(242291),
     w = n(22382),
-    M = n(747071),
-    P = n(421673),
+    P = n(747071),
+    M = n(421673),
     k = n(663215),
     U = n(409673),
     B = n(347072),
@@ -216,18 +216,18 @@ function $(e) {
         eg = null != em && '' !== em,
         eE = (0, p.Dt)(),
         { categories: ev } = (0, k.ZP)(a, void 0, en),
-        [eI, eb] = i.useState([]),
-        [eT, eS] = i.useState(!1),
+        [eI, eT] = i.useState([]),
+        [eb, eS] = i.useState(!1),
         ey = (0, k.FS)(ev, eI, em).filter((e) => e.items.length > 0),
         eA = ey.some((e) => !!(0, R._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
         eN = !e_ && U && eA,
-        { enableInlineUpsell: eC, enableRoadblock: eR, enableRoadblockWithSocialProof: eO } = b.Qs.useExperiment({ location: 'Soundboard Picker' }, { autoTrackExposure: eN }),
+        { enableInlineUpsell: eC, enableRoadblock: eR, enableRoadblockWithSocialProof: eO } = T.Qs.useExperiment({ location: 'Soundboard Picker' }, { autoTrackExposure: eN }),
         eD = eN && eC,
         eL = S.T4.useSetting(),
         ex = i.useMemo(() => new Set(eL), [eL]),
         ew = null == a,
-        eM = R.ZP.canUseCustomCallSounds(ef),
-        eP = i.useCallback(
+        eP = R.ZP.canUseCustomCallSounds(ef),
+        eM = i.useCallback(
             (e) => {
                 ex.has(e) ? ex.delete(e) : ex.add(e), S.T4.updateSetting(Array.from(ex));
             },
@@ -285,7 +285,7 @@ function $(e) {
                         onSelectItem: eU,
                         soundButtonProps: {
                             channel: a,
-                            interactive: ew ? eM : !eh,
+                            interactive: ew ? eP : !eh,
                             forceSecondaryActions: ew || eC,
                             analyticsLocations: es
                         },
@@ -297,7 +297,7 @@ function $(e) {
                     'row-'.concat(n['aria-rowindex'])
                 );
             },
-            [ey, U, e_, t, N, eU, a, ew, eM, eh, eC, es, $, eD, ei]
+            [ey, U, e_, t, N, eU, a, ew, eP, eh, eC, es, $, eD, ei]
         ),
         eG = i.useCallback(
             (e, t) => {
@@ -327,7 +327,7 @@ function $(e) {
                     Q,
                     {
                         categoryInfo: e.categoryInfo,
-                        toggleCollapsed: () => eP(i),
+                        toggleCollapsed: () => eM(i),
                         collapsed: ex.has(i),
                         index: n,
                         isSectionNitroLocked: a && eD,
@@ -336,7 +336,7 @@ function $(e) {
                     'header-'.concat(i)
                 );
             },
-            [ex, eP, t, eG, U, e_, eD]
+            [ex, eM, t, eG, U, e_, eD]
         ),
         ej = i.useCallback(
             (e, t) => {
@@ -345,7 +345,7 @@ function $(e) {
             },
             [ey, eD]
         ),
-        eH = i.useCallback((e) => eb((0, P.ZP)(e, ev, ef, a, es)), [a, ef, ev, es]),
+        eH = i.useCallback((e) => eT((0, M.ZP)(e, ev, ef, a, es)), [a, ef, ev, es]),
         eY = i.useCallback((e) => {
             (0, u.jW)(e, async () => {
                 let { default: e } = await n.e('56049').then(n.bind(n, 338991));
@@ -394,13 +394,13 @@ function $(e) {
             () =>
                 eD
                     ? (0, r.jsx)(v.p, {
-                          showUpsell: eT,
+                          showUpsell: eb,
                           text: eq(),
                           button: Y.intl.string(Y.t.pj0XBA),
                           buttonAnalyticsObject: { section: j.jXE.SOUND_PICKER_FLOATING_UPSELL }
                       })
                     : null,
-            [eq, eT, eD]
+            [eq, eb, eD]
         ),
         eX = i.useCallback(
             (e) => {
@@ -419,14 +419,14 @@ function $(e) {
             var e;
             let t = D.Z.getSoundById('3'),
                 n = new Audio((0, w.Z)('3'));
-            null != ea.current && ea.current.pause(), (ea.current = n), (n.currentTime = 0), (n.volume = (0, M.Z)(null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 1)), n.play();
+            null != ea.current && ea.current.pause(), (ea.current = n), (n.currentTime = 0), (n.volume = (0, P.Z)(null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 1)), n.play();
         }, [ea]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null != ec
                 ? eR
-                    ? (0, r.jsx)(T.Z, {
-                          containerContext: T.p.NONE,
+                    ? (0, r.jsx)(b.Z, {
+                          containerContext: b.p.NONE,
                           image: {
                               url: 'https://cdn.discordapp.com/assets/premium/roadblocks/soundboard_dark.png',
                               width: 220,

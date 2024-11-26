@@ -22,8 +22,8 @@ var r = n(200651),
     E = n(493248),
     v = n(425637),
     I = n(895982),
-    b = n(685741),
-    T = n(20818);
+    T = n(685741),
+    b = n(20818);
 function S(e) {
     var t, n, S;
     let { sourceType: y, children: A, user: N } = e,
@@ -35,10 +35,10 @@ function S(e) {
             return (null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === N.id;
         }),
         w = y === m.n_.AVATAR && R,
-        M = y === m.n_.STATUS && !R && O,
-        P = y === m.n_.AVATAR && L,
+        P = y === m.n_.STATUS && !R && O,
+        M = y === m.n_.AVATAR && L,
         k = y === m.n_.ACTIVITY && D && !L,
-        U = !x && C === m.y0.BITE_SIZE && (w || M || P || k),
+        U = !x && C === m.y0.BITE_SIZE && (w || P || M || k),
         [B, G] = i.useState(!1);
     (0, l.Z)(() => G(!0), U ? 200 : null);
     let {
@@ -54,7 +54,7 @@ function S(e) {
         (S = D),
         L
             ? {
-                  asset: b,
+                  asset: T,
                   assetClassName: E.profileImage,
                   className: E.profileCoachmark,
                   content: g.intl.string(g.t.HEGlIC),
@@ -74,7 +74,7 @@ function S(e) {
                 }
               : t && n
                 ? {
-                      asset: b,
+                      asset: T,
                       assetClassName: E.profileImage,
                       className: E.profileCoachmark,
                       content: g.intl.string(g.t['yzj+dn']),
@@ -84,7 +84,7 @@ function S(e) {
                   }
                 : t
                   ? {
-                        asset: T,
+                        asset: b,
                         assetClassName: void 0,
                         className: E.statusCoachmark,
                         content: g.intl.string(g.t.MYYTWV),

@@ -19,12 +19,12 @@ var l = n(481060),
     I = n(823379),
     C = n(358085),
     v = n(929809),
-    S = n(179645),
-    N = n(701476),
+    N = n(179645),
+    S = n(701476),
     T = n(785997),
-    A = n(981631),
+    x = n(981631),
     b = n(188785),
-    x = n(630724);
+    A = n(630724);
 function Z() {
     null != i && (0, l.closeModal)(i);
 }
@@ -38,21 +38,21 @@ class L extends s.Z {
     handleConnectionOpen() {
         var e;
         let t,
-            a = S.Z.getType();
+            a = N.Z.getType();
         if (null == a) return;
         switch (a) {
-            case N.M5.INVITE_UNCLAIMED:
-                h.Z.flowStart(x.MK.INVITE, x.EW.NUF_STARTED);
+            case S.M5.INVITE_UNCLAIMED:
+                h.Z.flowStart(A.MK.INVITE, A.EW.NUF_STARTED);
                 break;
-            case N.M5.ORGANIC_REGISTERED:
-                h.Z.flowStart(x.MK.ORGANIC, x.EW.NUF_STARTED);
+            case S.M5.ORGANIC_REGISTERED:
+                h.Z.flowStart(A.MK.ORGANIC, A.EW.NUF_STARTED);
                 break;
-            case N.M5.MARKETING_UNCLAIMED:
-                h.Z.flowStart(x.MK.ORGANIC_MARKETING, x.EW.NUF_STARTED);
+            case S.M5.MARKETING_UNCLAIMED:
+                h.Z.flowStart(A.MK.ORGANIC_MARKETING, A.EW.NUF_STARTED);
         }
         let s = !1,
             Z = _.Z.getGuildId();
-        if (a === N.M5.INVITE_UNCLAIMED) {
+        if (a === S.M5.INVITE_UNCLAIMED) {
             let e = f.Z.getGuild(Z);
             (null == e ? void 0 : e.hasVerificationGate()) && ((s = !0), (0, m.RM)(e.id));
         }
@@ -65,25 +65,25 @@ class L extends s.Z {
                     let t = (e) => {
                         switch (e) {
                             case T.F.AGE_GATE:
-                                h.Z.flowStep(x.MK.ANY, x.EW.AGE_GATE);
+                                h.Z.flowStep(A.MK.ANY, A.EW.AGE_GATE);
                                 break;
                             case T.F.CHOOSE_TEMPLATE:
-                                h.Z.flowStep(x.MK.ANY, x.X2.GUILD_TEMPLATES);
+                                h.Z.flowStep(A.MK.ANY, A.X2.GUILD_TEMPLATES);
                                 break;
                             case T.F.CUSTOMIZE_GUILD:
-                                h.Z.flowStep(x.MK.ANY, x.X2.GUILD_CREATE);
+                                h.Z.flowStep(A.MK.ANY, A.X2.GUILD_CREATE);
                                 break;
                             case T.F.CHANNEL_PROMPT:
-                                h.Z.flowStep(x.MK.ANY, x.X2.CHANNEL_PROMPT);
+                                h.Z.flowStep(A.MK.ANY, A.X2.CHANNEL_PROMPT);
                                 break;
                             case T.F.JOIN_GUILD:
-                                h.Z.flowStep(x.MK.ANY, x.X2.JOIN_GUILD);
+                                h.Z.flowStep(A.MK.ANY, A.X2.JOIN_GUILD);
                                 break;
                             case T.F.CREATION_INTENT:
-                                h.Z.flowStep(x.MK.ANY, x.X2.CREATION_INTENT);
+                                h.Z.flowStep(A.MK.ANY, A.X2.CREATION_INTENT);
                                 break;
                             case T.F.COMPLETE:
-                                h.Z.flowStep(x.MK.ANY, x.X2.SUCCESS);
+                                h.Z.flowStep(A.MK.ANY, A.X2.SUCCESS);
                                 break;
                             case null:
                                 break;
@@ -93,7 +93,7 @@ class L extends s.Z {
                     };
                     i = await (0, l.openModalLazy)(
                         async () => {
-                            let { default: e } = await Promise.all([n.e('42483'), n.e('72436')]).then(n.bind(n, 599219));
+                            let { default: e } = await Promise.all([n.e('63288'), n.e('1337'), n.e('42483'), n.e('62245')]).then(n.bind(n, 599219));
                             return (n) =>
                                 (0, r.jsx)(e, {
                                     ...n,
@@ -101,7 +101,7 @@ class L extends s.Z {
                                 });
                         },
                         {
-                            onCloseRequest: A.dG4,
+                            onCloseRequest: x.dG4,
                             onCloseCallback: e,
                             modalKey: i
                         }
@@ -148,7 +148,7 @@ class L extends s.Z {
             }
         ]),
             (t = () => {
-                v.H(), h.Z.flowStep(x.MK.ANY, x.EW.NUF_COMPLETE, !0);
+                v.H(), h.Z.flowStep(A.MK.ANY, A.EW.NUF_COMPLETE, !0);
             }),
             [...e].reverse().forEach((e) => {
                 let n = t;

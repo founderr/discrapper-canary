@@ -18,12 +18,12 @@ var i = n(200651),
     I = n(849688),
     C = n(374023),
     v = n(661599),
-    S = n(617899),
-    N = n(8521),
+    N = n(617899),
+    S = n(8521),
     T = n(760326),
-    A = n(785203),
+    x = n(785203),
     b = n(652785),
-    x = n(921944);
+    A = n(921944);
 function Z(e) {
     e.stopPropagation();
 }
@@ -42,11 +42,11 @@ function L(e) {
         );
     return (0, i.jsx)(c.ZP, {
         contentTypes: f,
-        groupName: x.R.CHANNEL_NOTICES,
+        groupName: A.R.CHANNEL_NOTICES,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: r } = e,
                 l = () => {
-                    g(Date.now()), r(x.L.UNKNOWN);
+                    g(Date.now()), r(A.L.UNKNOWN);
                 },
                 s = (() => {
                     switch (t) {
@@ -56,7 +56,7 @@ function L(e) {
                                 markAsDismissed: l
                             });
                         case a.z.CHANNEL_NOTICE_INVITE:
-                            return (0, i.jsx)(S.Z, {
+                            return (0, i.jsx)(N.Z, {
                                 guild: n,
                                 markAsDismissed: l
                             });
@@ -78,7 +78,7 @@ function L(e) {
                         case a.z.LINKED_ROLE_ADMIN_GUILD:
                             return (0, i.jsx)(o.Z, {
                                 guild: n,
-                                markAsDismissed: () => r(x.L.UNKNOWN)
+                                markAsDismissed: () => r(A.L.UNKNOWN)
                             });
                         default:
                             return null;
@@ -95,24 +95,24 @@ function L(e) {
 }
 t.Z = (e) => {
     let { guild: t } = e;
-    switch ((0, A.Z)(t)) {
-        case A.R.ENABLE_PUBLIC_GUILD:
+    switch ((0, x.Z)(t)) {
+        case x.R.ENABLE_PUBLIC_GUILD:
             return (0, i.jsx)(E.Z, { guild: t });
-        case A.R.APPLIED_GUILD_BOOST_GRACE_PERIOD:
+        case x.R.APPLIED_GUILD_BOOST_GRACE_PERIOD:
             return (0, i.jsx)(d.Z, { guild: t });
-        case A.R.MAX_MEMBER_COUNT:
-            return (0, i.jsx)(N.Z, { guild: t });
-        case A.R.GUILD_LIVE_CHANNEL:
+        case x.R.MAX_MEMBER_COUNT:
+            return (0, i.jsx)(S.Z, { guild: t });
+        case x.R.GUILD_LIVE_CHANNEL:
             return (0, i.jsx)(m.ZP, { guild: t });
-        case A.R.GUILD_MFA_WARNING:
+        case x.R.GUILD_MFA_WARNING:
             return (0, i.jsx)(v.Z, { guild: t });
-        case A.R.COMMANDS_MIGRATION:
+        case x.R.COMMANDS_MIGRATION:
             return (0, i.jsx)(f.Z, { guild: t });
-        case A.R.APPLICATION_SUBSCRIPTION_EXPIRATION:
+        case x.R.APPLICATION_SUBSCRIPTION_EXPIRATION:
             return (0, i.jsx)(_.Z, { guild: t });
-        case A.R.HUB_STUDY_ROOM:
+        case x.R.HUB_STUDY_ROOM:
             return (0, i.jsx)(g.Z, { guild: t });
-        case A.R.SIGNUP:
+        case x.R.SIGNUP:
             return (0, i.jsx)(I.Z, { guild: t });
     }
     return C.s.isDisallowPopupsSet() ? null : (0, i.jsx)(L, { guild: e.guild });

@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(594174),
     v = n(74538),
     I = n(94161),
-    b = n(9277),
-    T = n(58995),
+    T = n(9277),
+    b = n(58995),
     S = n(897291),
     y = n(764794),
     A = n(241553),
@@ -36,7 +36,7 @@ function D(e) {
     let { enabled: o } = p.O.useExperiment({ location: 'gift-button' }),
         l = a && s;
     return o
-        ? (0, r.jsx)(T.Z, {
+        ? (0, r.jsx)(b.Z, {
               disabled: t,
               channel: n
           })
@@ -51,8 +51,8 @@ function D(e) {
             });
 }
 t.Z = i.memo(function (e) {
-    var t, n, i, _, p, T, S, A;
-    let { type: L, disabled: x, channel: w, handleSubmit: M, isEmpty: P, showAllButtons: k } = e,
+    var t, n, i, _, p, b, S, A;
+    let { type: L, disabled: x, channel: w, handleSubmit: P, isEmpty: M, showAllButtons: k } = e,
         U = (0, s.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
         B = (0, s.e7)([m.Z], () => m.Z.getStickerPreview(w.id, L.drafts.type)),
         G = null != B && B.length > 0,
@@ -98,7 +98,7 @@ t.Z = i.memo(function (e) {
                         'referral'
                     )
                 )),
-        (null === (T = L.gifts) || void 0 === T ? void 0 : T.button) != null &&
+        (null === (b = L.gifts) || void 0 === b ? void 0 : b.button) != null &&
             null == F &&
             !j &&
             (null == q || v.ZP.isPremiumEligible(q)) &&
@@ -117,7 +117,7 @@ t.Z = i.memo(function (e) {
             k &&
             H.push(
                 (0, r.jsx)(
-                    b.Z,
+                    T.Z,
                     {
                         disabled: x,
                         type: L
@@ -156,8 +156,8 @@ t.Z = i.memo(function (e) {
             (0, r.jsx)(
                 N.Z,
                 {
-                    onClick: M,
-                    disabled: x || (0 === Z.length && P && !G)
+                    onClick: P,
+                    disabled: x || (0 === Z.length && M && !G)
                 },
                 'submit'
             )

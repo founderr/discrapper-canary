@@ -1,18 +1,18 @@
 r.d(t, {
     $X: function () {
-        return P;
+        return U;
     },
     AJ: function () {
-        return S;
+        return D;
     },
     Ei: function () {
-        return U;
+        return g;
     },
     GC: function () {
         return y;
     },
     WU: function () {
-        return g;
+        return P;
     },
     db: function () {
         return h;
@@ -30,29 +30,29 @@ r.d(t, {
         return p;
     }
 });
-var n,
-    a = r(559508),
+var a,
+    n = r(559508),
     _ = r(696486),
     o = r(263449),
-    i = r(622916),
-    E = r(101284),
+    E = r(622916),
+    i = r(101284),
     c = r(394798),
     s = r(617726),
     l = r(899517),
-    u = r(454463),
-    I = r(163162);
+    I = r(454463),
+    u = r(163162);
 let R = String(0),
-    N = '',
     A = '',
     T = '',
-    d = (I.m9.navigator && I.m9.navigator.userAgent) || '',
-    L = '',
-    f = (I.m9.navigator && I.m9.navigator.language) || (I.m9.navigator && I.m9.navigator.languages && I.m9.navigator.languages['0']) || '',
-    O = I.m9.navigator && I.m9.navigator.userAgentData;
-if ('object' == typeof (n = O) && null !== n && 'getHighEntropyValues' in n)
-    O.getHighEntropyValues(['architecture', 'model', 'platform', 'platformVersion', 'fullVersionList'])
+    N = '',
+    d = (u.m9.navigator && u.m9.navigator.userAgent) || '',
+    f = '',
+    O = (u.m9.navigator && u.m9.navigator.language) || (u.m9.navigator && u.m9.navigator.languages && u.m9.navigator.languages['0']) || '',
+    L = u.m9.navigator && u.m9.navigator.userAgentData;
+if ('object' == typeof (a = L) && null !== a && 'getHighEntropyValues' in a)
+    L.getHighEntropyValues(['architecture', 'model', 'platform', 'platformVersion', 'fullVersionList'])
         .then((e) => {
-            if (((N = e.platform || ''), (T = e.architecture || ''), (L = e.model || ''), (A = e.platformVersion || ''), e.fullVersionList && e.fullVersionList.length > 0)) {
+            if (((A = e.platform || ''), (N = e.architecture || ''), (f = e.model || ''), (T = e.platformVersion || ''), e.fullVersionList && e.fullVersionList.length > 0)) {
                 let t = e.fullVersionList[e.fullVersionList.length - 1];
                 d = `${t.brand} ${t.version}`;
             }
@@ -66,135 +66,135 @@ function h(e, t) {
     for (let r of t) e[1].push([{ type: 'profile' }, r]);
     return e;
 }
-function S(e) {
+function D(e) {
     let t = [];
     return (
         (0, s.gv)(e, (e, r) => {
             if ('transaction' === r)
                 for (let r = 1; r < e.length; r++) {
-                    let n = e[r];
-                    n && n.contexts && n.contexts.profile && n.contexts.profile.profile_id && t.push(e[r]);
+                    let a = e[r];
+                    a && a.contexts && a.contexts.profile && a.contexts.profile.profile_id && t.push(e[r]);
                 }
         }),
         t
     );
 }
-let D = new WeakMap(),
+let S = new WeakMap(),
     C = !1,
-    g = 30000;
-function U() {
-    let e = I.m9.Profiler;
+    P = 30000;
+function g() {
+    let e = u.m9.Profiler;
     if ('function' != typeof e) {
-        u.X && i.kg.log('[Profiling] Profiling is not supported by this browser, Profiler interface missing on window object.');
+        I.X && E.kg.log('[Profiling] Profiling is not supported by this browser, Profiler interface missing on window object.');
         return;
     }
-    let t = Math.floor(g / 10);
+    let t = Math.floor(P / 10);
     try {
         return new e({
             sampleInterval: 10,
             maxBufferSize: t
         });
     } catch (e) {
-        u.X && (i.kg.log("[Profiling] Failed to initialize the Profiling constructor, this is likely due to a missing 'Document-Policy': 'js-profiling' header."), i.kg.log('[Profiling] Disabling profiling for current user session.')), (C = !0);
+        I.X && (E.kg.log("[Profiling] Failed to initialize the Profiling constructor, this is likely due to a missing 'Document-Policy': 'js-profiling' header."), E.kg.log('[Profiling] Disabling profiling for current user session.')), (C = !0);
     }
 }
-function P(e) {
+function U(e) {
     var t;
-    if (C) return u.X && i.kg.log('[Profiling] Profiling has been disabled for the duration of the current user session.'), !1;
-    if (!e.isRecording()) return u.X && i.kg.log('[Profiling] Discarding profile because transaction was not sampled.'), !1;
+    if (C) return I.X && E.kg.log('[Profiling] Profiling has been disabled for the duration of the current user session.'), !1;
+    if (!e.isRecording()) return I.X && E.kg.log('[Profiling] Discarding profile because transaction was not sampled.'), !1;
     let r = (0, o.s3)(),
-        n = r && r.getOptions();
-    if (!n) return u.X && i.kg.log('[Profiling] Profiling disabled, no options found.'), !1;
-    let a = n.profilesSampleRate;
-    return (('number' != typeof (t = a) && 'boolean' != typeof t) || ('number' == typeof t && isNaN(t)) ? (u.X && i.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be a boolean or a number between 0 and 1. Got ${JSON.stringify(t)} of type ${JSON.stringify(typeof t)}.`), !1) : !0 === t || !1 === t || (!(t < 0) && !(t > 1)) || (u.X && i.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be between 0 and 1. Got ${t}.`), !1)) ? (a ? !!(!0 === a || Math.random() < a) || (u.X && i.kg.log(`[Profiling] Discarding profile because it's not included in the random sample (sampling rate = ${Number(a)})`), !1) : (u.X && i.kg.log('[Profiling] Discarding profile because a negative sampling decision was inherited or profileSampleRate is set to 0'), !1)) : (u.X && i.kg.warn('[Profiling] Discarding profile because of invalid sample rate.'), !1);
+        a = r && r.getOptions();
+    if (!a) return I.X && E.kg.log('[Profiling] Profiling disabled, no options found.'), !1;
+    let n = a.profilesSampleRate;
+    return (('number' != typeof (t = n) && 'boolean' != typeof t) || ('number' == typeof t && isNaN(t)) ? (I.X && E.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be a boolean or a number between 0 and 1. Got ${JSON.stringify(t)} of type ${JSON.stringify(typeof t)}.`), !1) : !0 === t || !1 === t || (!(t < 0) && !(t > 1)) || (I.X && E.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be between 0 and 1. Got ${t}.`), !1)) ? (n ? !!(!0 === n || Math.random() < n) || (I.X && E.kg.log(`[Profiling] Discarding profile because it's not included in the random sample (sampling rate = ${Number(n)})`), !1) : (I.X && E.kg.log('[Profiling] Discarding profile because a negative sampling decision was inherited or profileSampleRate is set to 0'), !1)) : (I.X && E.kg.warn('[Profiling] Discarding profile because of invalid sample rate.'), !1);
 }
-function M(e, t, r, n) {
+function M(e, t, r, a) {
     var _;
-    return ((_ = r).samples.length < 2 ? (u.X && i.kg.log('[Profiling] Discarding profile because it contains less than 2 samples'), !1) : !!_.frames.length || (u.X && i.kg.log('[Profiling] Discarding profile because it contains no frames'), !1))
-        ? (function (e, t, r, n) {
-              if ('transaction' !== n.type) throw TypeError('Profiling events may only be attached to transactions, this should never occur.');
+    return ((_ = r).samples.length < 2 ? (I.X && E.kg.log('[Profiling] Discarding profile because it contains less than 2 samples'), !1) : !!_.frames.length || (I.X && E.kg.log('[Profiling] Discarding profile because it contains no frames'), !1))
+        ? (function (e, t, r, a) {
+              if ('transaction' !== a.type) throw TypeError('Profiling events may only be attached to transactions, this should never occur.');
               if (null == r) throw TypeError(`Cannot construct profiling event envelope without a valid profile. Got ${r} instead.`);
               let _ = (function (e) {
                       let t = e && e.contexts && e.contexts.trace && e.contexts.trace.trace_id;
-                      return ('string' == typeof t && 32 !== t.length && u.X && i.kg.log(`[Profiling] Invalid traceId: ${t} on profiled event`), 'string' != typeof t) ? '' : t;
-                  })(n),
+                      return ('string' == typeof t && 32 !== t.length && I.X && E.kg.log(`[Profiling] Invalid traceId: ${t} on profiled event`), 'string' != typeof t) ? '' : t;
+                  })(a),
                   s = (function (e) {
                       return 'thread_metadata' in e
                           ? e
                           : (function (e) {
                                 let t;
                                 let r = 0,
-                                    n = {
+                                    a = {
                                         samples: [],
                                         stacks: [],
                                         frames: [],
                                         thread_metadata: { [R]: { name: 'main' } }
                                     },
-                                    a = e.samples[0];
-                                if (!a) return n;
-                                let _ = a.timestamp,
-                                    o = 'number' == typeof performance.timeOrigin ? performance.timeOrigin : E.Z1 || 0,
-                                    i = o - (E.Z1 || o);
+                                    n = e.samples[0];
+                                if (!n) return a;
+                                let _ = n.timestamp,
+                                    o = 'number' == typeof performance.timeOrigin ? performance.timeOrigin : i.Z1 || 0,
+                                    E = o - (i.Z1 || o);
                                 return (
-                                    e.samples.forEach((a, o) => {
-                                        if (void 0 === a.stackId) {
-                                            void 0 === t && ((t = r), (n.stacks[t] = []), r++),
-                                                (n.samples[o] = {
-                                                    elapsed_since_start_ns: ((a.timestamp + i - _) * 1000000).toFixed(0),
+                                    e.samples.forEach((n, o) => {
+                                        if (void 0 === n.stackId) {
+                                            void 0 === t && ((t = r), (a.stacks[t] = []), r++),
+                                                (a.samples[o] = {
+                                                    elapsed_since_start_ns: ((n.timestamp + E - _) * 1000000).toFixed(0),
                                                     stack_id: t,
                                                     thread_id: R
                                                 });
                                             return;
                                         }
-                                        let E = e.stacks[a.stackId],
+                                        let i = e.stacks[n.stackId],
                                             c = [];
-                                        for (; E; ) {
-                                            c.push(E.frameId);
-                                            let t = e.frames[E.frameId];
+                                        for (; i; ) {
+                                            c.push(i.frameId);
+                                            let t = e.frames[i.frameId];
                                             t &&
-                                                void 0 === n.frames[E.frameId] &&
-                                                (n.frames[E.frameId] = {
+                                                void 0 === a.frames[i.frameId] &&
+                                                (a.frames[i.frameId] = {
                                                     function: t.name,
                                                     abs_path: 'number' == typeof t.resourceId ? e.resources[t.resourceId] : void 0,
                                                     lineno: t.line,
                                                     colno: t.column
                                                 }),
-                                                (E = void 0 === E.parentId ? void 0 : e.stacks[E.parentId]);
+                                                (i = void 0 === i.parentId ? void 0 : e.stacks[i.parentId]);
                                         }
                                         let s = {
-                                            elapsed_since_start_ns: ((a.timestamp + i - _) * 1000000).toFixed(0),
+                                            elapsed_since_start_ns: ((n.timestamp + E - _) * 1000000).toFixed(0),
                                             stack_id: r,
                                             thread_id: R
                                         };
-                                        (n.stacks[r] = c), (n.samples[o] = s), r++;
+                                        (a.stacks[r] = c), (a.samples[o] = s), r++;
                                     }),
-                                    n
+                                    a
                                 );
                             })(e);
                   })(r),
-                  O = t || ('number' == typeof n.start_timestamp ? 1000 * n.start_timestamp : 1000 * (0, E.ph)()),
-                  p = 'number' == typeof n.timestamp ? 1000 * n.timestamp : 1000 * (0, E.ph)();
+                  L = t || ('number' == typeof a.start_timestamp ? 1000 * a.start_timestamp : 1000 * (0, i.ph)()),
+                  p = 'number' == typeof a.timestamp ? 1000 * a.timestamp : 1000 * (0, i.ph)();
               return {
                   event_id: e,
-                  timestamp: new Date(O).toISOString(),
+                  timestamp: new Date(L).toISOString(),
                   platform: 'javascript',
                   version: '1',
-                  release: n.release || '',
-                  environment: n.environment || a.J,
+                  release: a.release || '',
+                  environment: a.environment || n.J,
                   runtime: {
                       name: 'javascript',
-                      version: I.m9.navigator.userAgent
+                      version: u.m9.navigator.userAgent
                   },
                   os: {
-                      name: N,
-                      version: A,
+                      name: A,
+                      version: T,
                       build_number: d
                   },
                   device: {
-                      locale: f,
-                      model: L,
+                      locale: O,
+                      model: f,
                       manufacturer: d,
-                      architecture: T,
+                      architecture: N,
                       is_emulator: !1
                   },
                   debug_meta: {
@@ -202,21 +202,21 @@ function M(e, t, r, n) {
                           let t;
                           let r = l.n._sentryDebugIds;
                           if (!r) return [];
-                          let n = (0, o.s3)(),
-                              a = n && n.getOptions(),
-                              _ = a && a.stackParser;
+                          let a = (0, o.s3)(),
+                              n = a && a.getOptions(),
+                              _ = n && n.stackParser;
                           if (!_) return [];
-                          let i = D.get(_);
-                          i ? (t = i) : ((t = new Map()), D.set(_, t));
-                          let E = Object.keys(r).reduce((e, n) => {
-                                  let a;
-                                  let o = t.get(n);
-                                  o ? (a = o) : ((a = _(n)), t.set(n, a));
-                                  for (let t = a.length - 1; t >= 0; t--) {
-                                      let _ = a[t],
+                          let E = S.get(_);
+                          E ? (t = E) : ((t = new Map()), S.set(_, t));
+                          let i = Object.keys(r).reduce((e, a) => {
+                                  let n;
+                                  let o = t.get(a);
+                                  o ? (n = o) : ((n = _(a)), t.set(a, n));
+                                  for (let t = n.length - 1; t >= 0; t--) {
+                                      let _ = n[t],
                                           o = _ && _.filename;
                                       if (_ && o) {
-                                          e[o] = r[n];
+                                          e[o] = r[a];
                                           break;
                                       }
                                   }
@@ -225,11 +225,11 @@ function M(e, t, r, n) {
                               c = [];
                           for (let t of e)
                               t &&
-                                  E[t] &&
+                                  i[t] &&
                                   c.push({
                                       type: 'sourcemap',
                                       code_file: t,
-                                      debug_id: E[t]
+                                      debug_id: i[t]
                                   });
                           return c;
                       })(r.resources)
@@ -237,16 +237,16 @@ function M(e, t, r, n) {
                   profile: s,
                   transactions: [
                       {
-                          name: n.transaction || '',
-                          id: n.event_id || (0, c.DM)(),
+                          name: a.transaction || '',
+                          id: a.event_id || (0, c.DM)(),
                           trace_id: _,
                           active_thread_id: R,
                           relative_start_ns: '0',
-                          relative_end_ns: ((p - O) * 1000000).toFixed(0)
+                          relative_end_ns: ((p - L) * 1000000).toFixed(0)
                       }
                   ]
               };
-          })(e, t, r, n)
+          })(e, t, r, a)
         : null;
 }
 let G = new Map();

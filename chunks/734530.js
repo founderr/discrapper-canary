@@ -217,24 +217,24 @@ var r;
                       }, null)
                     : null;
             },
-            b = 'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
-            T = function (e) {
+            T = 'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
+            b = function (e) {
                 var t,
-                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b;
+                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T;
                 if (null === e || (g((t = e)) && 'function' == typeof t.elements && 'function' == typeof t.createToken && 'function' == typeof t.createPaymentMethod && 'function' == typeof t.confirmCardPayment)) return e;
                 throw Error(n);
             },
             S = function (e) {
                 var t,
-                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b;
+                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T;
                 if (g((t = e)) && 'function' == typeof t.then)
                     return {
                         tag: 'async',
                         stripePromise: Promise.resolve(e).then(function (e) {
-                            return T(e, n);
+                            return b(e, n);
                         })
                     };
-                var r = T(e, n);
+                var r = b(e, n);
                 return null === r
                     ? { tag: 'empty' }
                     : {
@@ -354,7 +354,7 @@ var r;
             },
             w = t.createContext(null);
         w.displayName = 'CustomCheckoutContext';
-        var M = function (e, t) {
+        var P = function (e, t) {
                 if (!e) return null;
                 e.on, e.session;
                 var n = (function (e, t) {
@@ -380,7 +380,7 @@ var r;
                 })(e, D);
                 return t ? r(r({}, n), t) : r(r({}, n), e.session());
             },
-            P = function (e) {
+            M = function (e) {
                 var n = e.stripe,
                     r = e.options,
                     i = e.children,
@@ -472,13 +472,13 @@ var r;
                     );
                 var I = t.useMemo(
                     function () {
-                        return M(d.customCheckoutSdk, l);
+                        return P(d.customCheckoutSdk, l);
                     },
                     [d.customCheckoutSdk, l]
                 );
                 return d.customCheckoutSdk ? t.createElement(L.Provider, { value: d }, t.createElement(w.Provider, { value: I }, i)) : null;
             };
-        P.propTypes = {
+        M.propTypes = {
             stripe: p.any,
             options: p.shape({
                 clientSecret: p.string.isRequired,
@@ -518,8 +518,8 @@ var r;
                                   g = n.onClick,
                                   E = n.onLoadError,
                                   v = n.onLoaderStart,
-                                  b = n.onNetworksChange,
-                                  T = n.onConfirm,
+                                  T = n.onNetworksChange,
+                                  b = n.onConfirm,
                                   S = n.onCancel,
                                   y = n.onShippingAddressChange,
                                   A = n.onShippingRateChange,
@@ -537,8 +537,8 @@ var r;
                                   h(D, 'click', g),
                                   h(D, 'loaderror', E),
                                   h(D, 'loaderstart', v),
-                                  h(D, 'networkschange', b),
-                                  h(D, 'confirm', T),
+                                  h(D, 'networkschange', T),
+                                  h(D, 'confirm', b),
                                   h(D, 'cancel', S),
                                   h(D, 'shippingaddresschange', y),
                                   h(D, 'shippingratechange', A),
@@ -560,16 +560,16 @@ var r;
                                       },
                                       [C, R, u]
                                   );
-                              var M = m(u);
+                              var P = m(u);
                               return (
                                   t.useEffect(
                                       function () {
                                           if (!!x.current) {
-                                              var e = I(u, M, ['paymentRequest']);
+                                              var e = I(u, P, ['paymentRequest']);
                                               e && x.current.update(e);
                                           }
                                       },
-                                      [u, M]
+                                      [u, P]
                                   ),
                                   t.useLayoutEffect(function () {
                                       return function () {
@@ -685,7 +685,7 @@ var r;
             (e.CardElement = j),
             (e.CardExpiryElement = Y),
             (e.CardNumberElement = H),
-            (e.CustomCheckoutProvider = P),
+            (e.CustomCheckoutProvider = M),
             (e.Elements = C),
             (e.ElementsConsumer = O),
             (e.EmbeddedCheckout = F),

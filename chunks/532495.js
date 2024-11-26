@@ -20,11 +20,11 @@ var s = n(512722),
     x = n(349177),
     S = n(872736),
     T = n(134795),
-    C = n(610966),
+    E = n(610966),
     _ = n(513901),
-    E = n(451392),
-    f = n(906364),
-    I = n(350327),
+    C = n(451392),
+    I = n(906364),
+    f = n(350327),
     N = n(621853),
     A = n(687158),
     b = n(25990),
@@ -69,8 +69,8 @@ function P() {
             location: q + ' auto off',
             autoTrackExposure: !1
         });
-    let Q = (0, A.ZP)(L.id),
-        X = null == Q ? void 0 : Q.getLegacyUsername(),
+    let X = (0, A.ZP)(L.id),
+        Q = null == X ? void 0 : X.getLegacyUsername(),
         J = (null !== (n = null === (e = Y.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== n ? n : 0) > 0 ? Y.global_name : null !== (s = null == H ? void 0 : H.nick) && void 0 !== s ? s : [],
         $ = (null !== (P = null === (t = Y.bio) || void 0 === t ? void 0 : t.length) && void 0 !== P ? P : 0) > 0 ? Y.bio : null !== (D = null == H ? void 0 : H.bio) && void 0 !== D ? D : [],
         ee = (0, c.V)();
@@ -85,11 +85,11 @@ function P() {
                 onGlobalNameChange: a.UZ
             }),
             (0, i.jsx)(
-                f.Z,
+                I.Z,
                 {
                     sectionTitle: O.intl.string(O.t['+T3RIy']),
                     errors: Y.pronouns,
-                    onPronounsChange: I.ID,
+                    onPronounsChange: f.ID,
                     pendingPronouns: U,
                     currentPronouns: null !== (y = null == Z ? void 0 : Z.pronouns) && void 0 !== y ? y : ''
                 },
@@ -130,27 +130,27 @@ function P() {
                               {
                                   showRemoveBannerButton: K,
                                   errors: Y.banner,
-                                  onBannerChange: I.g_,
+                                  onBannerChange: f.g_,
                                   forcedDivider: !0
                               },
                               'banner'
                           ),
-                          (0, i.jsx)(E.Z, {
+                          (0, i.jsx)(C.Z, {
                               user: L,
                               pendingAvatar: F,
                               pendingColors: G,
-                              onThemeColorsChange: I.z5,
+                              onThemeColorsChange: f.z5,
                               forcedDivider: !0
                           })
                       ]
                   })
                 : (0, i.jsx)(
-                      C.Z,
+                      E.Z,
                       {
                           user: L,
                           savedUserColor: null == Z ? void 0 : Z.accentColor,
                           pendingColor: V,
-                          setPendingAccentColor: I.CM
+                          setPendingAccentColor: f.CM
                       },
                       'color'
                   ),
@@ -166,7 +166,7 @@ function P() {
                 'bio'
             ),
             ee.length > 0 && (0, i.jsx)(d.Z, { availableClans: ee }),
-            null != X && (0, i.jsx)(S.Z, { legacyUsername: X }, 'legacy_username')
+            null != Q && (0, i.jsx)(S.Z, { legacyUsername: Q }, 'legacy_username')
         ]
     });
 }

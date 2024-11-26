@@ -20,8 +20,8 @@ t.Z = function (e) {
             var e;
             return null !== (e = n.map((e) => _.default.getUser(e)).filter(p.lm)) && void 0 !== e ? e : [];
         }),
-        b = null == v ? void 0 : v.name,
-        T = o()(t).fromNow();
+        T = null == v ? void 0 : v.name,
+        b = o()(t).fromNow();
     return null == t
         ? null
         : (0, r.jsxs)('div', {
@@ -46,7 +46,7 @@ t.Z = function (e) {
                               variant: 'text-xs/medium',
                               color: 'text-muted',
                               className: m.__invalid_subtitle,
-                              children: [null != b ? ''.concat(b, ' \u2022 ') : null, T]
+                              children: [null != T ? ''.concat(T, ' \u2022 ') : null, b]
                           }),
                           (0, r.jsx)(u.Text, {
                               variant: 'text-xs/medium',

@@ -3,15 +3,15 @@ r.d(t, {
         return c;
     }
 });
-var n = r(622916),
-    a = r(394798),
+var a = r(622916),
+    n = r(394798),
     _ = r(886115),
     o = r(255768),
-    i = r(151122);
-let E = [/^Script error\.?$/, /^Javascript error: Script error\.? on line 0$/, /^ResizeObserver loop completed with undelivered notifications.$/, /^Cannot redefine property: googletag$/, "undefined is not an object (evaluating 'a.L')", 'can\'t redefine non-configurable property "solana"', "vv().getRestrictions is not a function. (In 'vv().getRestrictions(1,a)', 'vv().getRestrictions' is undefined)", "Can't find variable: _AutofillCallbackHandler"],
-    c = (0, i._I)((e = {}) => ({
+    E = r(151122);
+let i = [/^Script error\.?$/, /^Javascript error: Script error\.? on line 0$/, /^ResizeObserver loop completed with undelivered notifications.$/, /^Cannot redefine property: googletag$/, "undefined is not an object (evaluating 'a.L')", 'can\'t redefine non-configurable property "solana"', "vv().getRestrictions is not a function. (In 'vv().getRestrictions(1,a)', 'vv().getRestrictions' is undefined)", "Can't find variable: _AutofillCallbackHandler"],
+    c = (0, E._I)((e = {}) => ({
         name: 'InboundFilters',
-        processEvent: (t, r, i) =>
+        processEvent: (t, r, E) =>
             (function (e, t) {
                 return t.ignoreInternal &&
                     (function (e) {
@@ -21,8 +21,8 @@ let E = [/^Script error\.?$/, /^Javascript error: Script error\.? on line 0$/, /
                         return !1;
                     })(e)
                     ? (o.X &&
-                          n.kg.warn(`Event dropped due to being internal Sentry Error.
-Event: ${(0, a.jH)(e)}`),
+                          a.kg.warn(`Event dropped due to being internal Sentry Error.
+Event: ${(0, n.jH)(e)}`),
                       !0)
                     : (function (e, t) {
                             return (
@@ -41,15 +41,15 @@ Event: ${(0, a.jH)(e)}`),
                             );
                         })(e, t.ignoreErrors)
                       ? (o.X &&
-                            n.kg.warn(`Event dropped due to being matched by \`ignoreErrors\` option.
-Event: ${(0, a.jH)(e)}`),
+                            a.kg.warn(`Event dropped due to being matched by \`ignoreErrors\` option.
+Event: ${(0, n.jH)(e)}`),
                         !0)
                       : (function (e) {
                               return !e.type && !!e.exception && !!e.exception.values && 0 !== e.exception.values.length && !e.message && !e.exception.values.some((e) => e.stacktrace || (e.type && 'Error' !== e.type) || e.value);
                           })(e)
                         ? (o.X &&
-                              n.kg.warn(`Event dropped due to not having an error message, error type or stacktrace.
-Event: ${(0, a.jH)(e)}`),
+                              a.kg.warn(`Event dropped due to not having an error message, error type or stacktrace.
+Event: ${(0, n.jH)(e)}`),
                           !0)
                         : (function (e, t) {
                                 if ('transaction' !== e.type || !t || !t.length) return !1;
@@ -57,8 +57,8 @@ Event: ${(0, a.jH)(e)}`),
                                 return !!r && (0, _.U0)(r, t);
                             })(e, t.ignoreTransactions)
                           ? (o.X &&
-                                n.kg.warn(`Event dropped due to being matched by \`ignoreTransactions\` option.
-Event: ${(0, a.jH)(e)}`),
+                                a.kg.warn(`Event dropped due to being matched by \`ignoreTransactions\` option.
+Event: ${(0, n.jH)(e)}`),
                             !0)
                           : (function (e, t) {
                                   if (!t || !t.length) return !1;
@@ -66,8 +66,8 @@ Event: ${(0, a.jH)(e)}`),
                                   return !!r && (0, _.U0)(r, t);
                               })(e, t.denyUrls)
                             ? (o.X &&
-                                  n.kg.warn(`Event dropped due to being matched by \`denyUrls\` option.
-Event: ${(0, a.jH)(e)}.
+                                  a.kg.warn(`Event dropped due to being matched by \`denyUrls\` option.
+Event: ${(0, n.jH)(e)}.
 Url: ${s(e)}`),
                               !0)
                             : !(function (e, t) {
@@ -76,8 +76,8 @@ Url: ${s(e)}`),
                                   return !r || (0, _.U0)(r, t);
                               })(e, t.allowUrls) &&
                               (o.X &&
-                                  n.kg.warn(`Event dropped due to not being matched by \`allowUrls\` option.
-Event: ${(0, a.jH)(e)}.
+                                  a.kg.warn(`Event dropped due to not being matched by \`allowUrls\` option.
+Event: ${(0, n.jH)(e)}.
 Url: ${s(e)}`),
                               !0);
             })(
@@ -86,11 +86,11 @@ Url: ${s(e)}`),
                     return {
                         allowUrls: [...(e.allowUrls || []), ...(t.allowUrls || [])],
                         denyUrls: [...(e.denyUrls || []), ...(t.denyUrls || [])],
-                        ignoreErrors: [...(e.ignoreErrors || []), ...(t.ignoreErrors || []), ...(e.disableErrorDefaults ? [] : E)],
+                        ignoreErrors: [...(e.ignoreErrors || []), ...(t.ignoreErrors || []), ...(e.disableErrorDefaults ? [] : i)],
                         ignoreTransactions: [...(e.ignoreTransactions || []), ...(t.ignoreTransactions || [])],
                         ignoreInternal: void 0 === e.ignoreInternal || e.ignoreInternal
                     };
-                })(e, i.getOptions())
+                })(e, E.getOptions())
             )
                 ? null
                 : t
@@ -111,6 +111,6 @@ function s(e) {
               })(t)
             : null;
     } catch (t) {
-        return o.X && n.kg.error(`Cannot extract url for event ${(0, a.jH)(e)}`), null;
+        return o.X && a.kg.error(`Cannot extract url for event ${(0, n.jH)(e)}`), null;
     }
 }

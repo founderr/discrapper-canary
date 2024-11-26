@@ -30,7 +30,7 @@ function I(e) {
     let i = h[t];
     null != i ? i.add(e.id) : (h[t] = new Set([e.id]));
 }
-function b() {
+function T() {
     [_.GP[_.Xh.NONE_MONTH], _.GP[_.Xh.NONE_YEAR], _.GP[_.Xh.NONE_3_MONTH], _.GP[_.Xh.NONE_6_MONTH]].forEach((e) =>
         I(
             u.ZP.createFromServer({
@@ -48,12 +48,12 @@ function b() {
         )
     );
 }
-function T(e) {
+function b(e) {
     I(u.ZP.createFromServer(e));
 }
-b();
+T();
 function S() {
-    (0, c.Ti)(p), (0, c.Ti)(h), m.clear(), g.clear(), (0, c.Ti)(E), (0, c.Ti)(v), b();
+    (0, c.Ti)(p), (0, c.Ti)(h), m.clear(), g.clear(), (0, c.Ti)(E), (0, c.Ti)(v), T();
 }
 let y = [_.rV.DAY, _.rV.MONTH, _.rV.YEAR];
 class A extends (r = o.ZP.Store) {
@@ -136,7 +136,7 @@ class A extends (r = o.ZP.Store) {
         },
         SUBSCRIPTION_PLANS_FETCH_SUCCESS: function (e) {
             let { skuId: t, subscriptionPlans: n } = e;
-            (h[t] = new Set()), (v[t] = new Set()), n.forEach(T), m.delete(t), g.delete(t);
+            (h[t] = new Set()), (v[t] = new Set()), n.forEach(b), m.delete(t), g.delete(t);
         },
         SUBSCRIPTION_PLANS_FETCH_FAILURE: function (e) {
             let { skuId: t } = e;
@@ -145,11 +145,11 @@ class A extends (r = o.ZP.Store) {
         SUBSCRIPTION_PLANS_RESET: S,
         GIFT_CODE_RESOLVE_SUCCESS: function (e) {
             let { giftCode: t } = e;
-            null != t.subscription_plan && T(t.subscription_plan);
+            null != t.subscription_plan && b(t.subscription_plan);
         },
         ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: function (e) {
             let { entitlements: t } = e;
-            for (let e of t) null != e.subscription_plan && T(e.subscription_plan);
+            for (let e of t) null != e.subscription_plan && b(e.subscription_plan);
         },
         LOGOUT: S
     }));

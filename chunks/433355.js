@@ -36,8 +36,8 @@ function v(e, t, n) {
     );
 }
 let I = 'message_requests',
-    b = !1,
     T = !1,
+    b = !1,
     S = !0,
     y = !1,
     A = {},
@@ -78,14 +78,14 @@ class x extends (r = a.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var t, n, r, i, a;
-            (b = null !== (t = e.isMembersOpen) && void 0 !== t && t), (T = null !== (n = e.isSummariesOpen) && void 0 !== n && n), (S = null === (r = e.isProfileOpen) || void 0 === r || r), (A = null !== (i = e.sidebars) && void 0 !== i ? i : {}), (N = null !== (a = e.guildSidebars) && void 0 !== a ? a : {});
+            (T = null !== (t = e.isMembersOpen) && void 0 !== t && t), (b = null !== (n = e.isSummariesOpen) && void 0 !== n && n), (S = null === (r = e.isProfileOpen) || void 0 === r || r), (A = null !== (i = e.sidebars) && void 0 !== i ? i : {}), (N = null !== (a = e.guildSidebars) && void 0 !== a ? a : {});
         }
         this.syncWith([f.Z], L), this.syncWith([d.Z], D);
     }
     getState() {
         return {
-            isMembersOpen: b,
-            isSummariesOpen: T,
+            isMembersOpen: T,
+            isSummariesOpen: b,
             isProfileOpen: S,
             sidebars: A,
             guildSidebars: N
@@ -94,7 +94,7 @@ class x extends (r = a.ZP.PersistedStore) {
     getSection(e, t) {
         if (y) return m.ULH.SEARCH;
         let n = C(e);
-        return null != n && null != A[n] ? m.ULH.SIDEBAR_CHAT : t && S ? m.ULH.PROFILE : T ? m.ULH.SUMMARIES : b ? m.ULH.MEMBERS : m.ULH.NONE;
+        return null != n && null != A[n] ? m.ULH.SIDEBAR_CHAT : t && S ? m.ULH.PROFILE : b ? m.ULH.SUMMARIES : T ? m.ULH.MEMBERS : m.ULH.NONE;
     }
     getSidebarState(e) {
         let t = C(e);
@@ -121,13 +121,13 @@ v(x, 'displayName', 'ChannelSectionStore'),
     v(x, 'persistKey', 'ChannelSectionStore2'),
     (t.ZP = new x(s.Z, {
         CHANNEL_TOGGLE_MEMBERS_SECTION: function () {
-            T && (T = O(T)), (b = O(b));
+            b && (b = O(b)), (T = O(T));
         },
         PROFILE_PANEL_TOGGLE_SECTION: function () {
             !S && l.S.dispatch(m.CkL.SEARCH_RESULTS_CLOSE), (S = O(S));
         },
         CHANNEL_TOGGLE_SUMMARIES_SECTION: function () {
-            b && (b = O(b)), (T = O(T));
+            T && (T = O(T)), (b = O(b));
         },
         SIDEBAR_VIEW_CHANNEL: function (e) {
             let { sidebarType: t, baseChannelId: n, channelId: r, details: i } = e;
@@ -190,7 +190,7 @@ v(x, 'displayName', 'ChannelSectionStore'),
             return n;
         },
         CHANNEL_SELECT: function () {
-            i.tq && b && ((b = !1), (T = !1));
+            i.tq && T && ((T = !1), (b = !1));
         },
         THREAD_CREATE: function (e) {
             var t;

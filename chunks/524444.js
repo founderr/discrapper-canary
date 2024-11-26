@@ -70,8 +70,8 @@ var r,
     E = n(593472),
     v = n(110924),
     I = n(858644),
-    b = n(249458),
-    T = n(313201),
+    T = n(249458),
+    b = n(313201),
     S = n(688465),
     y = n(425886),
     A = n(80966),
@@ -83,8 +83,8 @@ var r,
     L = n(201542),
     x = n(306680),
     w = n(594174),
-    M = n(259580),
-    P = n(626135),
+    P = n(259580),
+    M = n(626135),
     k = n(823379),
     U = n(589530),
     B = n(709054),
@@ -247,7 +247,7 @@ function ee(e) {
 ((i = r || (r = {}))[(i.OLD_MESSAGES = 0)] = 'OLD_MESSAGES'), (i[(i.REPLY = 1)] = 'REPLY');
 let et = (e) => {
         let { type: t = 0, onClick: n, className: r } = e;
-        return (0, a.jsx)(b.G.Consumer, {
+        return (0, a.jsx)(T.G.Consumer, {
             children: (e) =>
                 e.disableInteractions
                     ? null
@@ -290,7 +290,7 @@ let et = (e) => {
                                                             return (0, k.vE)(e);
                                                     }
                                                 })(t),
-                                                (0, a.jsx)(M.Z, { className: H.barButtonIcon })
+                                                (0, a.jsx)(P.Z, { className: H.barButtonIcon })
                                             ]
                                         })
                                     })
@@ -305,7 +305,7 @@ let et = (e) => {
     },
     en = (e) => {
         let { onClick: t, loading: n, className: r } = e;
-        return (0, a.jsx)(b.G.Consumer, {
+        return (0, a.jsx)(T.G.Consumer, {
             children: (e) =>
                 e.disableInteractions
                     ? null
@@ -341,7 +341,7 @@ let et = (e) => {
     };
 function er(e) {
     let { content: t, channelId: n } = e,
-        [r] = s.useState(() => (0, T.hQ)('NewMessagesBarJumpToNewMessages_')),
+        [r] = s.useState(() => (0, b.hQ)('NewMessagesBarJumpToNewMessages_')),
         i = s.useCallback(() => {
             let e = x.ZP.ackMessageId(n);
             null != e
@@ -361,7 +361,7 @@ function er(e) {
         o = s.useCallback(() => {
             (0, h.In)(n);
         }, [n]),
-        { disableInteractions: u } = s.useContext(b.G);
+        { disableInteractions: u } = s.useContext(T.G);
     return u
         ? null
         : (0, a.jsxs)('div', {
@@ -404,9 +404,9 @@ function er(e) {
 function ei(e) {
     var t, n, r;
     let { channel: i, content: o, scrollManager: u } = e,
-        { disableInteractions: m } = s.useContext(b.G),
+        { disableInteractions: m } = s.useContext(T.G),
         [g, I] = s.useState(null),
-        T = s.useRef(null),
+        b = s.useRef(null),
         [y, A] = s.useState(null),
         N = s.useRef(null),
         D = (0, f.Wu)(
@@ -420,7 +420,7 @@ function ei(e) {
         L = (0, v.Z)(D);
     s.useEffect(() => {
         !c().isEqual(L, D) &&
-            P.default.track(Z.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
+            M.default.track(Z.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: D.length,
                 message_counts: D.map((e) => e.count),
                 start_message_ids: D.map((e) => e.startId),
@@ -486,7 +486,7 @@ function ei(e) {
         ),
         [z, q] = s.useState(!1),
         Q = s.useCallback(() => {
-            P.default.track(Z.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+            M.default.track(Z.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !z,
                 num_summaries: D.length,
                 message_counts: D.map((e) => e.count),
@@ -513,7 +513,7 @@ function ei(e) {
                 };
                 u.removeAutomaticAnchorCallback(K),
                     u.addScrollCompleteCallback(r),
-                    P.default.track(Z.rMx.SUMMARIES_TOPIC_CLICKED, {
+                    M.default.track(Z.rMx.SUMMARIES_TOPIC_CLICKED, {
                         source: t,
                         message_id: n.startId,
                         guild_id: i.guild_id,
@@ -546,9 +546,9 @@ function ei(e) {
     let $ = s.useCallback(
         (e) => {
             var t;
-            if (!((0, d.k)(e.target) && (null === (t = T.current) || void 0 === t ? void 0 : t.contains(e.target))))
+            if (!((0, d.k)(e.target) && (null === (t = b.current) || void 0 === t ? void 0 : t.contains(e.target))))
                 z &&
-                    P.default.track(Z.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+                    M.default.track(Z.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                         topics_dropdown_open: !1,
                         num_summaries: D.length,
                         message_counts: D.map((e) => e.count),
@@ -620,7 +620,7 @@ function ei(e) {
         m
             ? null
             : (0, a.jsxs)('div', {
-                  ref: T,
+                  ref: b,
                   className: l()(H.newTopicsBarContainer, H.containerMarginTop),
                   children: [
                       (0, a.jsx)('div', {
@@ -645,10 +645,10 @@ function ei(e) {
                                           className: l()(H.newTopicsBarCompact, H.newTopicsBarText),
                                           children: er
                                       }),
-                                      (0, a.jsx)(M.Z, {
+                                      (0, a.jsx)(P.Z, {
                                           width: 16,
                                           height: 16,
-                                          direction: M.Z.Directions.DOWN,
+                                          direction: P.Z.Directions.DOWN,
                                           className: H.newTopicsBarCaret
                                       })
                                   ]
@@ -737,10 +737,10 @@ function ea(e, t) {
 function es(e) {
     var t, n, r;
     let { channel: i, scrollManager: o } = e,
-        { disableInteractions: u } = s.useContext(b.G),
+        { disableInteractions: u } = s.useContext(T.G),
         [h, m] = s.useState(null),
         g = s.useRef(null),
-        [I, T] = s.useState(null),
+        [I, b] = s.useState(null),
         y = s.useRef(null),
         A = (0, f.Wu)(
             [R.Z],
@@ -753,7 +753,7 @@ function es(e) {
         N = (0, v.Z)(A);
     s.useEffect(() => {
         !c().isEqual(N, A) &&
-            P.default.track(Z.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
+            M.default.track(Z.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: A.length,
                 message_counts: A.map((e) => e.count),
                 start_message_ids: A.map((e) => e.startId),
@@ -821,7 +821,7 @@ function es(e) {
         ),
         [W, K] = s.useState(!1),
         z = s.useCallback(() => {
-            P.default.track(Z.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+            M.default.track(Z.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !W,
                 num_summaries: A.length,
                 message_counts: A.map((e) => e.count),
@@ -848,7 +848,7 @@ function es(e) {
                 };
                 o.removeAutomaticAnchorCallback(Y),
                     o.addScrollCompleteCallback(r),
-                    P.default.track(Z.rMx.SUMMARIES_TOPIC_CLICKED, {
+                    M.default.track(Z.rMx.SUMMARIES_TOPIC_CLICKED, {
                         source: t,
                         message_id: n.startId,
                         guild_id: i.guild_id,
@@ -876,7 +876,7 @@ function es(e) {
             var t;
             K(e);
             let n = null === (t = y.current) || void 0 === t ? void 0 : t.scrollTop;
-            null != n && T(n);
+            null != n && b(n);
         }, []);
     s.useEffect(() => {
         if (null != I && W) {
@@ -889,7 +889,7 @@ function es(e) {
             var t;
             if (!((0, d.k)(e.target) && (null === (t = g.current) || void 0 === t ? void 0 : t.contains(e.target))))
                 W &&
-                    P.default.track(Z.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
+                    M.default.track(Z.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                         topics_dropdown_open: !1,
                         num_summaries: A.length,
                         message_counts: A.map((e) => e.count),
@@ -969,10 +969,10 @@ function es(e) {
                                               variant: 'text-sm/medium',
                                               children: et
                                           }),
-                                          (0, a.jsx)(M.Z, {
+                                          (0, a.jsx)(P.Z, {
                                               width: 16,
                                               height: 16,
-                                              direction: M.Z.Directions.DOWN,
+                                              direction: P.Z.Directions.DOWN,
                                               className: H.topicsPillDropdownCaret
                                           })
                                       ]
@@ -985,20 +985,20 @@ function es(e) {
                                           'aria-label': j.intl.string(j.t['4huCnJ']),
                                           onClick: X,
                                           className: l()(H.topicsPillCaret, H.topicsCaretLeft, { [H.topicsPillCaretDisabled]: null == B }),
-                                          children: (0, a.jsx)(M.Z, {
+                                          children: (0, a.jsx)(P.Z, {
                                               width: 16,
                                               height: 16,
-                                              direction: M.Z.Directions.UP
+                                              direction: P.Z.Directions.UP
                                           })
                                       }),
                                       (0, a.jsx)(_.Clickable, {
                                           'aria-label': j.intl.string(j.t['58KOoK']),
                                           onClick: Q,
                                           className: l()(H.topicsPillCaret, H.topicsCaretRight, { [H.topicsPillCaretDisabled]: null == U }),
-                                          children: (0, a.jsx)(M.Z, {
+                                          children: (0, a.jsx)(P.Z, {
                                               width: 16,
                                               height: 16,
-                                              direction: M.Z.Directions.DOWN
+                                              direction: P.Z.Directions.DOWN
                                           })
                                       })
                                   ]

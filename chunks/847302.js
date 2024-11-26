@@ -1,6 +1,6 @@
 n.d(t, {
     Gg: function () {
-        return b;
+        return T;
     },
     KH: function () {
         return E;
@@ -65,7 +65,7 @@ function v(e, t, n, r) {
         l = f.q.markdown(t[0], n);
     I(e, t, s, l) && ((t = f.q.updateElement(e, t)), (l = f.q.markdown(t[0], n))),
         !s &&
-            (b(e, t, r, l) && ((t = f.q.updateElement(e, t)), (l = f.q.markdown(t[0], n))),
+            (T(e, t, r, l) && ((t = f.q.updateElement(e, t)), (l = f.q.markdown(t[0], n))),
             (function (e, t, n, r, a) {
                 let [s, l] = t,
                     u = !1;
@@ -81,7 +81,7 @@ function v(e, t, n, r) {
                             continue;
                         }
                         if (
-                            T(
+                            b(
                                 e,
                                 l,
                                 {
@@ -160,7 +160,7 @@ function I(e, t, n, r) {
                     path: f.C0.child(i, 0),
                     offset: 0
                 };
-            (n || (null != r && T(e, a, l, r))) &&
+            (n || (null != r && b(e, a, l, r))) &&
                 (d.Q.voidToText(
                     e,
                     (0, c.sg)(o, {
@@ -174,7 +174,7 @@ function I(e, t, n, r) {
     }
     return s;
 }
-function b(e, t, n, r) {
+function T(e, t, n, r) {
     let i = t[1],
         a = !1,
         s = [...r.entries].reverse();
@@ -273,7 +273,7 @@ function b(e, t, n, r) {
     }
     return a;
 }
-function T(e, t, n, r) {
+function b(e, t, n, r) {
     let i = 0;
     for (let [r, a] of f.bN.nodes(e, {
         at: {

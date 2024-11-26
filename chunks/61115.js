@@ -4,7 +4,7 @@ n.r(t),
             return I;
         },
         openQuestSurveyModal: function () {
-            return T;
+            return b;
         }
     }),
     n(47120);
@@ -29,7 +29,7 @@ function I(e) {
     let { questId: t, survey: n, transitionState: r, onClose: i, onSubmit: o } = e,
         l = (0, p.B4)(t),
         [_, h] = s.useState(0),
-        [I, T] = (0, c.useSpring)(() => ({
+        [I, b] = (0, c.useSpring)(() => ({
             from: { width: '0%' },
             config: { duration: 2500 }
         })),
@@ -44,7 +44,7 @@ function I(e) {
                     });
         },
         A = async (e) => {
-            1 === e && (await T({ width: '100%' }), i());
+            1 === e && (await b({ width: '100%' }), i());
         };
     return (
         s.useEffect(() => {
@@ -92,7 +92,7 @@ function I(e) {
                                 className: E.modalContent,
                                 children: n.choices.map((e) =>
                                     (0, a.jsx)(
-                                        b,
+                                        T,
                                         {
                                             choice: e,
                                             onClick: y
@@ -147,7 +147,7 @@ function I(e) {
         })
     );
 }
-function b(e) {
+function T(e) {
     let { className: t, choice: n, onClick: r } = e;
     return (0, a.jsxs)(c.Clickable, {
         className: l()(E.choiceContainer, t),
@@ -161,7 +161,7 @@ function b(e) {
         ]
     });
 }
-function T(e) {
+function b(e) {
     let t = !1;
     (0, c.openModalLazy)(
         async () => {

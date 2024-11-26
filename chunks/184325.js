@@ -22,40 +22,40 @@ var r = n(200651),
     E = n(797321),
     v = n(228168),
     I = n(981631),
-    b = n(474936),
-    T = n(388032),
+    T = n(474936),
+    b = n(388032),
     S = n(153225);
 let y = (e) => {
     if (null != e)
         switch (e) {
-            case b.VU.PREMIUM_TENURE_1_MONTH:
+            case T.VU.PREMIUM_TENURE_1_MONTH:
                 return S.tieredTenureBadgeBronzeGlow;
-            case b.VU.PREMIUM_TENURE_3_MONTH:
+            case T.VU.PREMIUM_TENURE_3_MONTH:
                 return S.tieredTenureBadgeSilverGlow;
-            case b.VU.PREMIUM_TENURE_6_MONTH:
+            case T.VU.PREMIUM_TENURE_6_MONTH:
                 return S.tieredTenureBadgeGoldGlow;
-            case b.VU.PREMIUM_TENURE_12_MONTH:
+            case T.VU.PREMIUM_TENURE_12_MONTH:
                 return S.tieredTenureBadgePlatinumGlow;
-            case b.VU.PREMIUM_TENURE_24_MONTH:
+            case T.VU.PREMIUM_TENURE_24_MONTH:
                 return S.tieredTenureBadgeDiamondGlow;
-            case b.VU.PREMIUM_TENURE_36_MONTH:
+            case T.VU.PREMIUM_TENURE_36_MONTH:
                 return S.tieredTenureBadgeEmeraldGlow;
-            case b.VU.PREMIUM_TENURE_60_MONTH:
+            case T.VU.PREMIUM_TENURE_60_MONTH:
                 return S.tieredTenureBadgeRubyGlow;
-            case b.VU.PREMIUM_TENURE_72_MONTH:
+            case T.VU.PREMIUM_TENURE_72_MONTH:
                 return S.tieredTenureBadgeFireGlow;
             default:
                 return;
         }
 };
 function A(e) {
-    let { badges: t, className: n, badgeClassName: a, onClose: b } = e,
+    let { badges: t, className: n, badgeClassName: a, onClose: T } = e,
         { analyticsLocations: A } = (0, c.ZP)(u.Z.BADGE),
         { context: N, trackUserProfileAction: C } = (0, h.KZ)(),
         [R, O] = i.useState(!1);
     return (0, r.jsx)('div', {
         className: s()(S.container, n),
-        'aria-label': T.intl.string(T.t.VWV0y8),
+        'aria-label': b.intl.string(b.t.VWV0y8),
         role: 'group',
         children: t.map((e) => {
             let t = (0, p.gn)(e.id),
@@ -78,7 +78,7 @@ function A(e) {
                                     ...N
                                 });
                             let n = null != e.link ? (0, l.default)(e.link, { analyticsLocations: A }) : null;
-                            if (null != n) return null == b || b(), n(t);
+                            if (null != n) return null == T || T(), n(t);
                         },
                         onMouseEnter: () => {
                             e.id === g.i && _.default.track(I.rMx.QUEST_CONTENT_VIEWED, { ...(0, d.mH)(f.jn.QUEST_BADGE) }),

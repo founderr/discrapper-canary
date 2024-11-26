@@ -18,13 +18,13 @@ var r = n(200651),
 function p(e) {
     let { user: t, activity: n, entry: a, display: p, className: h, onSelect: m, onClose: g, onRequestOpen: E } = e,
         [v, I] = i.useState(!1),
-        { analyticsLocations: b } = (0, u.ZP)(l.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        T = (0, c.Z)({
+        { analyticsLocations: T } = (0, u.ZP)(l.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
+        b = (0, c.Z)({
             display: p,
             user: t,
             activity: n,
             entry: a,
-            analyticsLocations: b
+            analyticsLocations: T
         }),
         S = (0, d.Z)({
             entry: a,
@@ -32,7 +32,7 @@ function p(e) {
             user: t,
             display: p,
             onClose: g,
-            onAction: T,
+            onAction: b,
             isMenuOpen: v
         });
     return 0 === S.length || t.bot
@@ -42,7 +42,7 @@ function p(e) {
               position: 'right',
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  T({ action: 'OPEN_MENU' }), I(!0), null == E || E();
+                  b({ action: 'OPEN_MENU' }), I(!0), null == E || E();
               },
               renderPopout: (e) => {
                   let { closePopout: t } = e;

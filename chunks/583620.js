@@ -28,9 +28,9 @@ function c(e, t, n) {
         { focusableProps: E } = (0, i.kc)((0, r.dG)(e, { onFocus: () => t.setLastFocusedValue(o) }), n),
         v = (0, r.dG)(p, E),
         I = (0, r.zL)(e, { labelable: !0 }),
-        b = -1;
-    null != t.selectedValue ? t.selectedValue === o && (b = 0) : (t.lastFocusedValue === o || null == t.lastFocusedValue) && (b = 0), f && (b = void 0);
-    let { name: T, descriptionId: S, errorMessageId: y, validationBehavior: A } = u.get(t);
+        T = -1;
+    null != t.selectedValue ? t.selectedValue === o && (T = 0) : (t.lastFocusedValue === o || null == t.lastFocusedValue) && (T = 0), f && (T = void 0);
+    let { name: b, descriptionId: S, errorMessageId: y, validationBehavior: A } = u.get(t);
     return (
         (0, r.y$)(n, t.selectedValue, t.setSelectedValue),
         (0, a.Q)({ validationBehavior: A }, t, n),
@@ -39,8 +39,8 @@ function c(e, t, n) {
             inputProps: (0, r.dG)(I, {
                 ...v,
                 type: 'radio',
-                name: T,
-                tabIndex: b,
+                name: b,
+                tabIndex: T,
                 disabled: f,
                 required: t.isRequired && 'native' === A,
                 checked: _,
@@ -64,14 +64,14 @@ function d(e, t) {
             labelProps: E,
             fieldProps: v,
             descriptionProps: I,
-            errorMessageProps: b
+            errorMessageProps: T
         } = (0, o.U)({
             ...e,
             labelElementType: 'span',
             isInvalid: t.isInvalid,
             errorMessage: e.errorMessage || m
         }),
-        T = (0, r.zL)(e, { labelable: !0 }),
+        b = (0, r.zL)(e, { labelable: !0 }),
         { focusWithinProps: S } = (0, s.L_)({
             onBlurWithin(n) {
                 var r;
@@ -85,11 +85,11 @@ function d(e, t) {
         u.set(t, {
             name: y,
             descriptionId: I.id,
-            errorMessageId: b.id,
+            errorMessageId: T.id,
             validationBehavior: _
         }),
         {
-            radioGroupProps: (0, r.dG)(T, {
+            radioGroupProps: (0, r.dG)(b, {
                 role: 'radiogroup',
                 onKeyDown: (e) => {
                     let n, r;
@@ -124,7 +124,7 @@ function d(e, t) {
             }),
             labelProps: E,
             descriptionProps: I,
-            errorMessageProps: b,
+            errorMessageProps: T,
             isInvalid: h,
             validationErrors: m,
             validationDetails: g

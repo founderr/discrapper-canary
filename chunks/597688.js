@@ -15,18 +15,18 @@ var s,
 let E = new Map(),
     v = new Map(),
     I = new Map(),
-    b = [],
-    T = E,
+    T = [],
+    b = E,
     S = v,
     y = I,
-    A = b,
+    A = T,
     N = null,
     C = !1,
     R = new Set();
 let O = {},
     D = (e, t) => {
         if (0 === e.length) {
-            A = b;
+            A = T;
             return;
         }
         switch (N) {
@@ -38,11 +38,11 @@ let O = {},
                 break;
             case p.u.NONE:
             default:
-                A = b;
+                A = T;
         }
     },
     L = () => {
-        (T = E), (S = v), (A = b), (i = void 0), (C = !1), (R = new Set()), (r = void 0), (a = void 0), (O = {});
+        (b = E), (S = v), (A = T), (i = void 0), (C = !1), (R = new Set()), (r = void 0), (a = void 0), (O = {});
     },
     x = () => {
         if (!_.Z.hasLoadedExperiments) return;
@@ -72,7 +72,7 @@ class w extends (s = d.ZP.Store) {
         return O;
     }
     get categories() {
-        return T;
+        return b;
     }
     get products() {
         return S;
@@ -81,7 +81,7 @@ class w extends (s = d.ZP.Store) {
         return A;
     }
     getCategory(e) {
-        return null != e ? T.get(e) : void 0;
+        return null != e ? b.get(e) : void 0;
     }
     getProduct(e) {
         return null != e ? S.get(e) : void 0;
@@ -108,11 +108,11 @@ class w extends (s = d.ZP.Store) {
             (C = !0), (r = void 0), (a = void 0), (O = e.options);
         },
         COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: (e) => {
-            0 === e.categories.length ? ((T = E), (S = v)) : !(0, c.isEqual)([...T.values()], e.categories) && ((T = new Map(e.categories.map((e) => [e.skuId, e]))), (S = new Map((0, m.Cs)(T, !0).map((e) => [e.skuId, e]))), (y = new Map((0, m.Cs)(T, !1).map((e) => [e.storeListingId, e])))), D(e.categories, S), (i = Date.now()), (C = !1), (r = void 0), (a = void 0);
+            0 === e.categories.length ? ((b = E), (S = v)) : !(0, c.isEqual)([...b.values()], e.categories) && ((b = new Map(e.categories.map((e) => [e.skuId, e]))), (S = new Map((0, m.Cs)(b, !0).map((e) => [e.skuId, e]))), (y = new Map((0, m.Cs)(b, !1).map((e) => [e.storeListingId, e])))), D(e.categories, S), (i = Date.now()), (C = !1), (r = void 0), (a = void 0);
         },
         COLLECTIBLES_CATEGORIES_FETCH_FAILURE: (e) => {
             let { error: t } = e;
-            (T = E), (S = v), (A = b), (C = !1), (R = new Set()), (r = t), (a = Date.now());
+            (b = E), (S = v), (A = T), (C = !1), (R = new Set()), (r = t), (a = Date.now());
         },
         COLLECTIBLES_PRODUCT_FETCH: (e) => {
             let { skuId: t } = e;

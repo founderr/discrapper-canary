@@ -21,8 +21,8 @@ var r = n(200651),
     E = n(104494),
     v = n(639119),
     I = n(631771),
-    b = n(790527),
-    T = n(474936),
+    T = n(790527),
+    b = n(474936),
     S = n(981631),
     y = n(731994),
     A = n(388032),
@@ -42,10 +42,10 @@ function C(e) {
                 disable: x
             }
         ),
-        M = (0, h.XS)(),
-        P = w || M,
+        P = (0, h.XS)(),
+        M = w || P,
         k = R === S.BRd.LIGHT ? 'light' : 'dark',
-        U = P
+        U = M
             ? (0, r.jsx)('img', {
                   className: N.updatedArt,
                   alt: 'File Upload Nitro Perk',
@@ -59,18 +59,18 @@ function C(e) {
         G = i.useMemo(() => {
             let e = A.intl.formatToPlainString(A.t.q5fTZm, { maxSize: B });
             switch (O) {
-                case T.p9.TIER_0:
+                case b.p9.TIER_0:
                     e = A.intl.formatToPlainString(A.t['/DXKen'], { maxSize: B });
                     break;
-                case T.p9.TIER_1:
+                case b.p9.TIER_1:
                     e = A.intl.formatToPlainString(A.t['Kf/MPD'], { maxSize: B });
             }
             return e;
         }, [O, B]),
-        Z = (0, _.BU)(T.Uq / 1024, { useKibibytes: !0 }),
-        F = M ? A.intl.string(A.t['9C+41t']) : A.intl.string(A.t['/tGlcn']),
-        V = P
-            ? M
+        Z = (0, _.BU)(b.Uq / 1024, { useKibibytes: !0 }),
+        F = P ? A.intl.string(A.t['9C+41t']) : A.intl.string(A.t['/tGlcn']),
+        V = M
+            ? P
                 ? (0, g.T)({
                       user: C,
                       onClick: () => {
@@ -79,7 +79,7 @@ function C(e) {
                   })
                 : A.intl.string(A.t.ZcYwgY)
             : A.intl.formatToPlainString(A.t.htbuIS, { premiumMaxSize: Z }),
-        j = P
+        j = M
             ? (0, r.jsx)('div', {
                   className: N.body,
                   children: (0, r.jsx)(s.Text, {
@@ -97,20 +97,20 @@ function C(e) {
                       })
                   ]
               });
-    return (0, r.jsx)(b.Z, {
+    return (0, r.jsx)(T.Z, {
         artElement: U,
-        artContainerClassName: P ? N.updatedArtContainer : N.artContainer,
+        artContainerClassName: M ? N.updatedArtContainer : N.artContainer,
         enableArtBoxShadow: !1,
-        type: T.cd.UPLOAD_ERROR_UPSELL,
+        type: b.cd.UPLOAD_ERROR_UPSELL,
         title: F,
         body: j,
         context: A.intl.formatToPlainString(A.t.q5fTZm, { maxSize: B }),
         glowUp: V,
         analyticsLocation: { section: S.jXE.FILE_UPLOAD_POPOUT },
         onClose: t,
-        subscriptionTier: T.Si.TIER_2,
-        secondaryCTA: P ? A.intl.string(A.t.ZnqyZ2) : void 0,
-        onSecondaryClick: P
+        subscriptionTier: b.Si.TIER_2,
+        secondaryCTA: M ? A.intl.string(A.t.ZnqyZ2) : void 0,
+        onSecondaryClick: M
             ? function () {
                   (0, l.Z)(),
                       t(),
@@ -121,7 +121,7 @@ function C(e) {
                       (0, u.uL)(S.Z5c.APPLICATION_STORE);
               }
             : void 0,
-        showEnhancedUpsell: P,
+        showEnhancedUpsell: M,
         ...n
     });
 }

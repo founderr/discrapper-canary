@@ -22,8 +22,8 @@ var r = n(200651),
     E = n(906732),
     v = n(835473),
     I = n(592745),
-    b = n(592125),
-    T = n(757266),
+    T = n(592125),
+    b = n(757266),
     S = n(650774),
     y = n(430824),
     A = n(283595),
@@ -35,8 +35,8 @@ var r = n(200651),
     L = n(417363),
     x = n(358085),
     w = n(804739),
-    M = n(475413),
-    P = n(981631),
+    P = n(475413),
+    M = n(981631),
     k = n(701488),
     U = n(388032);
 function B(e) {
@@ -53,7 +53,7 @@ function B(e) {
         }),
         z =
             (0, a.e7)(
-                [A.Z, I.Z, L.Z, T.Z],
+                [A.Z, I.Z, L.Z, b.Z],
                 () =>
                     null != Y &&
                     (0, w.t)({
@@ -61,7 +61,7 @@ function B(e) {
                         LibraryApplicationStore: A.Z,
                         LaunchableGameStore: I.Z,
                         DispatchApplicationStore: L.Z,
-                        ConnectedAppsStore: T.Z
+                        ConnectedAppsStore: b.Z
                     })
             ) || H,
         q = (0, a.e7)([d.ZP], () =>
@@ -70,8 +70,8 @@ function B(e) {
                 return t === Y && n === K;
             })
         ),
-        Q = (0, a.e7)([D.Z], () => null != Y && D.Z.getState(Y, P.mFx.JOIN) === P.OcF.LOADING),
-        X = (0, a.e7)([b.Z, y.Z, S.Z, C.Z, R.Z, O.Z, N.Z], () =>
+        Q = (0, a.e7)([D.Z], () => null != Y && D.Z.getState(Y, M.mFx.JOIN) === M.OcF.LOADING),
+        X = (0, a.e7)([T.Z, y.Z, S.Z, C.Z, R.Z, O.Z, N.Z], () =>
             (0, _.Z)({
                 user: t,
                 activity: B,
@@ -79,7 +79,7 @@ function B(e) {
                 channelId: K,
                 currentUser: n,
                 isEmbedded: H,
-                ChannelStore: b.Z,
+                ChannelStore: T.Z,
                 GuildStore: y.Z,
                 GuildMemberCountStore: S.Z,
                 RelationshipStore: C.Z,
@@ -90,7 +90,7 @@ function B(e) {
         ),
         [J, $] = i.useState(!1),
         ee = J || q || (x.isPlatformEmbedded && !z);
-    if (null == Y || !X || (!(0, h.Z)(B, P.xjy.JOIN) && !H)) return null;
+    if (null == Y || !X || (!(0, h.Z)(B, M.xjy.JOIN) && !H)) return null;
     let et = async () => {
             if (
                 H &&
@@ -100,7 +100,7 @@ function B(e) {
                 (await (0, f.Z)({
                     applicationId: Y,
                     activityChannelId: K,
-                    locationObject: { page: P.ZY5.USER_PROFILE },
+                    locationObject: { page: M.ZY5.USER_PROFILE },
                     analyticsLocations: F
                 }))
             ) {
@@ -110,7 +110,7 @@ function B(e) {
             if (X && null != Y && null != W) {
                 var e, n;
                 let r = R.Z.getVoiceChannelId(),
-                    i = b.Z.getChannel(r);
+                    i = T.Z.getChannel(r);
                 await l.Z.join({
                     userId: t.id,
                     sessionId: W,
@@ -120,12 +120,12 @@ function B(e) {
                     intent: k.Ws.PLAY,
                     embedded: H,
                     partyId: null == B ? void 0 : null === (e = B.party) || void 0 === e ? void 0 : e.id,
-                    locationObject: { page: P.ZY5.USER_PROFILE },
+                    locationObject: { page: M.ZY5.USER_PROFILE },
                     analyticsLocations: F
                 }),
                     !H &&
                         (0, g.Z)({
-                            type: P.q5t.JOIN,
+                            type: M.q5t.JOIN,
                             userId: t.id,
                             guildId: null == i ? void 0 : i.guild_id,
                             channelId: r,
@@ -144,10 +144,10 @@ function B(e) {
                 });
             if (null != B) {
                 let e = await o.Z.sendActivityInviteUser({
-                    type: P.mFx.JOIN_REQUEST,
+                    type: M.mFx.JOIN_REQUEST,
                     userId: t.id,
                     activity: B,
-                    location: P.Sbl.PROFILE_POPOUT
+                    location: M.Sbl.PROFILE_POPOUT
                 });
                 null != e && u.default.selectPrivateChannel(e.id);
             }
@@ -157,7 +157,7 @@ function B(e) {
         ? (0, r.jsx)(s.Tooltip, {
               text: en(),
               children: (e) =>
-                  (0, r.jsx)(M.tG, {
+                  (0, r.jsx)(P.tG, {
                       ...e,
                       icon: s.ActivitiesIcon,
                       text: U.intl.string(U.t['4i2vj4']),
@@ -172,7 +172,7 @@ function B(e) {
         : (0, r.jsx)(s.Tooltip, {
               text: en(),
               children: (e) =>
-                  (0, r.jsx)(M.tG, {
+                  (0, r.jsx)(P.tG, {
                       ...e,
                       icon: s.GameControllerIcon,
                       text: X ? U.intl.string(U.t.VJlc0d) : U.intl.string(U.t.OKsSCQ),

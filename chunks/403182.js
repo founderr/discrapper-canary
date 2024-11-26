@@ -6,7 +6,7 @@ n.d(t, {
         return y;
     },
     dg: function () {
-        return b;
+        return T;
     },
     dp: function () {
         return m;
@@ -15,7 +15,7 @@ n.d(t, {
         return E;
     },
     nA: function () {
-        return T;
+        return b;
     },
     qF: function () {
         return h;
@@ -121,7 +121,7 @@ function v(e, t) {
 function I(e) {
     return i().filesize(e);
 }
-function b(e) {
+function T(e) {
     let t = c.default.getCurrentUser();
     o.Z.trackExposure({ location: 'de18ec_1' }), l.Z.trackExposure({ location: 'de18ec_2' });
     let n = f.ZP.getUserMaxFileSize(t);
@@ -130,8 +130,8 @@ function b(e) {
         i = null != r ? p.HO[r.premiumTier].limits.fileSize : _.mBz;
     return (0, d.XS)() && null != r && r.premiumTier < 2 && n < i ? n : Math.max(i, n);
 }
-function T(e, t) {
-    let n = b(t);
+function b(e, t) {
+    let n = T(t);
     return Array.from(e).some((e) => e.size > n);
 }
 function S(e) {

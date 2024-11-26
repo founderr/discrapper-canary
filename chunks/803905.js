@@ -12,7 +12,7 @@ n.d(t, {
         return U;
     },
     Ej: function () {
-        return b;
+        return T;
     },
     ME: function () {
         return p;
@@ -36,13 +36,13 @@ n.d(t, {
         return E;
     },
     _O: function () {
-        return T;
+        return b;
     },
     _y: function () {
         return h;
     },
     do: function () {
-        return M;
+        return P;
     },
     g7: function () {
         return C;
@@ -75,7 +75,7 @@ n.d(t, {
         return k;
     },
     zZ: function () {
-        return P;
+        return M;
     },
     zm: function () {
         return L;
@@ -125,8 +125,8 @@ let f = new d(r.q.ANIMATED_EMOJIS),
     E = new d(r.q.CUSTOM_DISCRIMINATOR),
     v = new d(r.q.PREMIUM_GUILD_MEMBER_PROFILE),
     I = new d('profileBadges'),
-    b = new d(r.q.PROFILE_PREMIUM_FEATURES, 'custom banner and avatar decoration'),
-    T = new d('collectibles'),
+    T = new d(r.q.PROFILE_PREMIUM_FEATURES, 'custom banner and avatar decoration'),
+    b = new d('collectibles'),
     S = new d('appIcons'),
     y = new d(r.q.CLIENT_THEMES),
     A = new d('boostDiscount'),
@@ -139,14 +139,14 @@ let f = new d(r.q.ANIMATED_EMOJIS),
     x = new d('redeemPremiumPerks'),
     w = new d(r.q.VIDEO_FILTER_ASSETS);
 new s.Z(r.q.INCREASED_FILE_UPLOAD_SIZE, a.h6);
-let M = new d(r.q.INCREASED_GUILD_LIMIT),
-    P = new d(r.q.INCREASED_MESSAGE_LENGTH),
+let P = new d(r.q.INCREASED_GUILD_LIMIT),
+    M = new d(r.q.INCREASED_MESSAGE_LENGTH),
     k = new d('increasedVideoUploadQuality'),
     U = new d('uploadLargeFiles'),
     B = Object.freeze({
         [l.Si.TIER_0]: new o.Z(l.Si.TIER_0, [f, _, p, I, w, k, U, S]),
         [l.Si.TIER_1]: new o.Z(l.Si.TIER_1, [f, _, g, E, I, A, C, D, k, U, S]),
-        [l.Si.TIER_2]: new o.Z(l.Si.TIER_2, [f, _, p, h, m, g, E, v, I, b, y, A, N, C, R, D, L, x, w, M, P, k, U, S, T, O])
+        [l.Si.TIER_2]: new o.Z(l.Si.TIER_2, [f, _, p, h, m, g, E, v, I, T, y, A, N, C, R, D, L, x, w, P, M, k, U, S, b, O])
     });
 function G(e, t) {
     return e.getFeatureValue(t);

@@ -1,4 +1,4 @@
-var r, i, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, I, b, T, S, y, A, N, C, R, O, D, L, x, w, M, P, k;
+var r, i, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, I, T, b, S, y, A, N, C, R, O, D, L, x, w, P, M, k;
 n.d(t, {
     B8: function () {
         return d;
@@ -54,12 +54,12 @@ n.d(t, {
 }),
     ((I = r || (r = {}))[(I.ROLE = 0)] = 'ROLE'),
     (I[(I.MEMBER = 1)] = 'MEMBER'),
-    ((b = i || (i = {})).IOS = 'ios'),
-    (b.ANDROID = 'android'),
-    (b.WEB = 'web'),
-    ((T = a || (a = {}))[(T.NONE = 0)] = 'NONE'),
-    (T[(T.NEW = 1)] = 'NEW'),
-    (T[(T.UPDATED = 2)] = 'UPDATED'),
+    ((T = i || (i = {})).IOS = 'ios'),
+    (T.ANDROID = 'android'),
+    (T.WEB = 'web'),
+    ((b = a || (a = {}))[(b.NONE = 0)] = 'NONE'),
+    (b[(b.NEW = 1)] = 'NEW'),
+    (b[(b.UPDATED = 2)] = 'UPDATED'),
     ((S = s || (s = {}))[(S.MEDIA_PROXY = 1)] = 'MEDIA_PROXY'),
     (S[(S.YOUTUBE = 2)] = 'YOUTUBE'),
     ((y = o || (o = {}))[(y.GUILD = 0)] = 'GUILD'),
@@ -112,11 +112,11 @@ n.d(t, {
     (x[(x.PARAGRAPH = 2)] = 'PARAGRAPH'),
     ((w = m || (m = {}))[(w.SMALL = 1)] = 'SMALL'),
     (w[(w.LARGE = 2)] = 'LARGE'),
-    ((M = g || (g = {}))[(M.SUBSCRIPTION_PLAN = 1)] = 'SUBSCRIPTION_PLAN'),
-    (M[(M.ENTITLEMENT = 2)] = 'ENTITLEMENT'),
-    (M[(M.PREMIUM_LEGACY_UPGRADE_PROMOTION = 3)] = 'PREMIUM_LEGACY_UPGRADE_PROMOTION'),
-    (M[(M.PREMIUM_TRIAL = 4)] = 'PREMIUM_TRIAL'),
-    ((P = E || (E = {}))[(P.GUILD_PRODUCT = 0)] = 'GUILD_PRODUCT'),
+    ((P = g || (g = {}))[(P.SUBSCRIPTION_PLAN = 1)] = 'SUBSCRIPTION_PLAN'),
+    (P[(P.ENTITLEMENT = 2)] = 'ENTITLEMENT'),
+    (P[(P.PREMIUM_LEGACY_UPGRADE_PROMOTION = 3)] = 'PREMIUM_LEGACY_UPGRADE_PROMOTION'),
+    (P[(P.PREMIUM_TRIAL = 4)] = 'PREMIUM_TRIAL'),
+    ((M = E || (E = {}))[(M.GUILD_PRODUCT = 0)] = 'GUILD_PRODUCT'),
     ((k = v || (v = {}))[(k.WEBAUTHN = 1)] = 'WEBAUTHN'),
     (k[(k.TOTP = 2)] = 'TOTP'),
     (k[(k.SMS = 3)] = 'SMS');

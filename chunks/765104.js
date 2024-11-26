@@ -14,8 +14,8 @@ var o,
     E = n(212819),
     v = n(353926),
     I = n(823385),
-    b = n(592125),
-    T = n(430824),
+    T = n(592125),
+    b = n(430824),
     S = n(306680),
     y = n(944486),
     A = n(9156),
@@ -28,8 +28,8 @@ var o,
 let L = {},
     x = {},
     w = {},
-    M = [],
-    P = {},
+    P = [],
+    M = {},
     k = {
         status: 'ok',
         lastRequest: null,
@@ -48,7 +48,7 @@ class Z extends (l = h.ZP.PersistedStore) {
     }
     initialize(e) {
         var t;
-        (r = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t), this.waitFor(b.Z, N.default, y.Z, T.Z, v.Z), this.syncWith([I.Z], G);
+        (r = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t), this.waitFor(T.Z, N.default, y.Z, b.Z, v.Z), this.syncWith([I.Z], G);
     }
     allSummaries() {
         return L;
@@ -86,7 +86,7 @@ class Z extends (l = h.ZP.PersistedStore) {
     shouldFetch(e, t) {
         var n, r;
         let i = x[e],
-            a = b.Z.getChannel(e);
+            a = T.Z.getChannel(e);
         if (!(0, g.Lp)(a)) return !1;
         if (null != t) {
             let e = null !== (n = null == i ? void 0 : i.summaryIdLastRequestedAt) && void 0 !== n ? n : 0,
@@ -97,10 +97,10 @@ class Z extends (l = h.ZP.PersistedStore) {
         return !(null == i ? void 0 : i.fetching) && 0 === s;
     }
     channelAffinities() {
-        return M;
+        return P;
     }
     channelAffinitiesById(e) {
-        return null == e ? P : P[e];
+        return null == e ? M : M[e];
     }
     channelAffinitiesStatus() {
         return k;
@@ -113,14 +113,14 @@ class Z extends (l = h.ZP.PersistedStore) {
             a = [];
         return (
             t && (a = a.concat(U)),
-            n && (a = a.concat(M.map((e) => e.channel_id))),
+            n && (a = a.concat(P.map((e) => e.channel_id))),
             r &&
                 (a = a.filter((e) => {
-                    let t = b.Z.getChannel(e);
+                    let t = T.Z.getChannel(e);
                     return null != t && !A.ZP.isChannelMuted(t.guild_id, e) && S.ZP.hasUnread(e);
                 })),
             (a = a.filter((e) => {
-                let t = b.Z.getChannel(e);
+                let t = T.Z.getChannel(e);
                 return (0, g.Lp)(t, !1, !1);
             })).slice(0, i)
         );
@@ -261,8 +261,8 @@ let F = new Z(m.Z, {
         var t;
         let { affinities: n, error: r } = e;
         if (null != r) {
-            (M = []),
-                (P = {}),
+            (P = []),
+                (M = {}),
                 (k = {
                     ...k,
                     status: 'error',
@@ -270,8 +270,8 @@ let F = new Z(m.Z, {
                 });
             return;
         }
-        (M = null != n ? n : []),
-            (P = null !== (t = null == n ? void 0 : n.reduce((e, t) => ((e[t.channel_id] = t.affinity), e), {})) && void 0 !== t ? t : {}),
+        (P = null != n ? n : []),
+            (M = null !== (t = null == n ? void 0 : n.reduce((e, t) => ((e[t.channel_id] = t.affinity), e), {})) && void 0 !== t ? t : {}),
             (k = {
                 ...k,
                 status: 'ok',

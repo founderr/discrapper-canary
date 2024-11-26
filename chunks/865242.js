@@ -12,7 +12,7 @@ function s(e) {
         [g, E] = (0, a.useState)(() => (isNaN(h) ? '' : new (0, i.e)(f, l).format(h))),
         v = (0, a.useMemo)(() => new i.d(f, l), [f, l]),
         I = (0, a.useMemo)(() => v.getNumberingSystem(g), [v, g]),
-        b = (0, a.useMemo)(
+        T = (0, a.useMemo)(
             () =>
                 new i.e(f, {
                     ...l,
@@ -20,10 +20,10 @@ function s(e) {
                 }),
             [f, l, I]
         ),
-        T = (0, a.useMemo)(() => b.resolvedOptions(), [b]),
-        S = (0, a.useCallback)((e) => (isNaN(e) || null === e ? '' : b.format(e)), [b]),
+        b = (0, a.useMemo)(() => T.resolvedOptions(), [T]),
+        S = (0, a.useCallback)((e) => (isNaN(e) || null === e ? '' : T.format(e)), [T]),
         y = isNaN(s) ? 1 : s;
-    'percent' === T.style && isNaN(s) && (y = 0.01);
+    'percent' === b.style && isNaN(s) && (y = 0.01);
     let [A, N] = (0, a.useState)(h),
         [C, R] = (0, a.useState)(f),
         [O, D] = (0, a.useState)(l);
@@ -40,7 +40,7 @@ function s(e) {
             }
         },
         w = (0, a.useMemo)(() => !_ && !p && (isNaN(L) || isNaN(n) || (0, r.N4)(L, t, n, y) > L || o('+', L, y) <= n), [_, p, t, n, y, L]),
-        M = (0, a.useMemo)(() => !_ && !p && (isNaN(L) || isNaN(t) || (0, r.N4)(L, t, n, y) < L || o('-', L, y) >= t), [_, p, t, n, y, L]);
+        P = (0, a.useMemo)(() => !_ && !p && (isNaN(L) || isNaN(t) || (0, r.N4)(L, t, n, y) < L || o('-', L, y) >= t), [_, p, t, n, y, L]);
     return {
         validate: (e) => v.isValidPartialNumber(e, t, n),
         increment: () => {
@@ -58,7 +58,7 @@ function s(e) {
             null != t && m(t);
         },
         canIncrement: w,
-        canDecrement: M,
+        canDecrement: P,
         minValue: t,
         maxValue: n,
         numberValue: L,

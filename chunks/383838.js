@@ -41,9 +41,9 @@ function _(e) {
         })),
             e === f.RIGHT && (I = o.Z.Direction.HORIZONTAL_REVERSE);
     } else null != _ && (n = _);
-    let b = !0;
+    let T = !0;
     return (
-        i === s.Z.Types.PRIMARY && (b = !1),
+        i === s.Z.Types.PRIMARY && (T = !1),
         (0, r.jsx)(s.Z, {
             className: a()(c.formNotice, p),
             type: i,
@@ -58,13 +58,13 @@ function _(e) {
                             null != m && '' !== m
                                 ? (0, r.jsx)(u.v, {
                                       tag: u.R.H5,
-                                      className: a()(c.formNoticeTitle, { [c.whiteText]: b }),
+                                      className: a()(c.formNoticeTitle, { [c.whiteText]: T }),
                                       faded: !0,
                                       children: m
                                   })
                                 : null,
                             (0, r.jsx)(l.R, {
-                                className: a()(c.formNoticeBody, { [c.whiteText]: b }),
+                                className: a()(c.formNoticeBody, { [c.whiteText]: T }),
                                 children: g
                             }),
                             n

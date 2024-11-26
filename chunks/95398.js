@@ -1,6 +1,6 @@
 n.d(t, {
     a: function () {
-        return b;
+        return T;
     }
 }),
     n(47120);
@@ -103,8 +103,8 @@ let g = (e) => {
                   })
               });
     },
-    b = o.createContext(!1);
-class T extends (i = o.PureComponent) {
+    T = o.createContext(!1);
+class b extends (i = o.PureComponent) {
     renderWithTooltip(e) {
         return (0, s.jsx)(d.Tooltip, {
             position: 'left',
@@ -121,7 +121,7 @@ class T extends (i = o.PureComponent) {
     renderObscuredAttachment() {
         let { children: e, inline: t, className: n, containerStyles: r, obscured: i = !0, reason: a = f.wk.SPOILER, isSingleMosaicItem: o = !1, obscurityControlClassName: l } = this.props,
             { visible: c } = this.state,
-            _ = (0, s.jsx)(b.Consumer, {
+            _ = (0, s.jsx)(T.Consumer, {
                 children: (_) => {
                     let p = _ || c || !i;
                     return [f.wk.EXPLICIT_CONTENT, f.wk.POTENTIAL_EXPLICIT_CONTENT].includes(a) && !t
@@ -187,7 +187,7 @@ class T extends (i = o.PureComponent) {
     renderObscuredEmbed() {
         let { children: e, className: t, containerStyles: n, isSingleMosaicItem: r, obscurityControlClassName: i, reason: a = f.wk.SPOILER } = this.props,
             { visible: o } = this.state;
-        return (0, s.jsx)(b.Consumer, {
+        return (0, s.jsx)(T.Consumer, {
             children: (l) => {
                 let c = l || o;
                 return [f.wk.EXPLICIT_CONTENT, f.wk.POTENTIAL_EXPLICIT_CONTENT].includes(a)
@@ -245,7 +245,7 @@ class T extends (i = o.PureComponent) {
     renderObscuredText() {
         let { children: e, renderTextElement: t, className: n } = this.props,
             { visible: r } = this.state,
-            i = (0, s.jsx)(b.Consumer, {
+            i = (0, s.jsx)(T.Consumer, {
                 children: (i) => {
                     let a = i || r,
                         l = o.Children.toArray(e(a)),
@@ -331,4 +331,4 @@ class T extends (i = o.PureComponent) {
             });
     }
 }
-m(T, 'Types', r), m(T, 'Reasons', f.wk), (t.Z = T);
+m(b, 'Types', r), m(b, 'Reasons', f.wk), (t.Z = b);

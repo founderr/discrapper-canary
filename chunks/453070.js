@@ -6,13 +6,13 @@ n.d(t, {
         return L;
     },
     Pq: function () {
-        return T;
+        return b;
     },
     RJ: function () {
         return D;
     },
     Sd: function () {
-        return M;
+        return P;
     },
     XW: function () {
         return w;
@@ -51,8 +51,8 @@ var r = n(192379),
     E = n(373228),
     v = n(378233),
     I = n(981631),
-    b = n(388032);
-let T = (e) => {
+    T = n(388032);
+let b = (e) => {
         N();
         let t = (0, i.e7)([g.Z], () => g.Z.hasLoadedStickerPacks);
         r.useEffect(() => {
@@ -81,7 +81,7 @@ let T = (e) => {
                         { canCreateExpressions: s } = (0, a.Gw)(i),
                         o = u.Z.getGuildId(),
                         c = d.findIndex((e) => e.type === E.Ih.FAVORITE),
-                        T = d.findIndex((e) => e.type === E.Ih.RECENT),
+                        b = d.findIndex((e) => e.type === E.Ih.RECENT),
                         S = t.length;
                     null != i && o === i.id && s && t.length < (0, f.A3)(i.premiumTier) && S++;
                     let y = Math.ceil(S / e);
@@ -99,14 +99,14 @@ let T = (e) => {
                                 visibleRowIndex: I,
                                 category: n
                             }));
-                        g > T &&
+                        g > b &&
                             g > c &&
                             null != i &&
                             S > t.length &&
                             l.push({
                                 type: E.al.CREATE_STICKER,
                                 guild_id: i.id,
-                                name: b.intl.string(b.t['UwF+Cw']),
+                                name: T.intl.string(T.t['UwF+Cw']),
                                 gridSectionIndex: g,
                                 rowIndex: m,
                                 columnIndex: l.length,
@@ -237,7 +237,7 @@ let x = (e) => {
                 l = {
                     type: E.Ih.FAVORITE,
                     id: E.Ih.FAVORITE,
-                    name: b.intl.string(b.t.y3LQCA),
+                    name: T.intl.string(T.t.y3LQCA),
                     stickers: t
                 };
             return [
@@ -245,7 +245,7 @@ let x = (e) => {
                 {
                     type: E.Ih.RECENT,
                     id: E.Ih.RECENT,
-                    name: b.intl.string(b.t['6hjpXV']),
+                    name: T.intl.string(T.t['6hjpXV']),
                     stickers:
                         null !==
                             (r =
@@ -287,7 +287,7 @@ let x = (e) => {
             ? [e, o]
             : [null != n ? n : null, o];
     },
-    M = (e) => {
+    P = (e) => {
         let t = x(e);
         return r.useMemo(() => t.filter((e) => e.type === E.Ih.EMPTY_GUILD_UPSELL || e.stickers.length > 0, []), [t]);
     };

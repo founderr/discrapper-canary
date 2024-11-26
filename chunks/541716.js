@@ -276,7 +276,7 @@ let o = {
         disableAutoFocus: !0,
         showCharacterCount: !0
     },
-    b = {
+    T = {
         analyticsName: 'rules_input',
         drafts: { type: s.d.ChannelMessage },
         permissions: { requireSendMessages: !0 },
@@ -286,7 +286,7 @@ let o = {
         },
         showCharacterCount: !0
     },
-    T = {
+    b = {
         analyticsName: 'forum_channel_guidelines',
         drafts: { type: s.d.ChannelMessage },
         permissions: { requireSendMessages: !1 },
@@ -326,10 +326,10 @@ let o = {
         USER_PROFILE_REPLY: E,
         PROFILE_BIO_INPUT: v,
         CUSTOM_GIFT: I,
-        RULES_INPUT: b,
+        RULES_INPUT: T,
         CREATE_FORUM_POST: p,
         CREATE_POLL: h,
-        FORUM_CHANNEL_GUIDELINES: T,
+        FORUM_CHANNEL_GUIDELINES: b,
         ATOMIC_REACTOR_REPLY_INPUT: S,
         FORWARD_MESSAGE_INPUT: {
             analyticsName: 'forward_message_input',

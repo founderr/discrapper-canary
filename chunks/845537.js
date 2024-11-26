@@ -1,6 +1,6 @@
 n.d(t, {
     EK: function () {
-        return M;
+        return P;
     },
     Io: function () {
         return L;
@@ -47,8 +47,8 @@ var h = n(592125),
     E = n(594174),
     v = n(934415),
     I = n(5192),
-    b = n(51144),
-    T = n(377668),
+    T = n(51144),
+    b = n(377668),
     S = n(388032),
     y = n(832226),
     A = n(665162);
@@ -86,7 +86,7 @@ function R(e) {
     let { text: t, channelId: n, guildId: i } = e,
         a = m.Z.getGuild(i),
         s = h.Z.getChannel(n),
-        o = (0, u.Ib)(a, s) && '@Clyde' === t ? T.jM : null;
+        o = (0, u.Ib)(a, s) && '@Clyde' === t ? b.jM : null;
     return (0, r.jsx)(_.Z, {
         color: o,
         children: t
@@ -110,7 +110,7 @@ function O(e) {
                         size: a.AvatarSizes.SIZE_16,
                         className: y.avatar
                     }),
-                    b.ZP.getUserTag(l, {
+                    T.ZP.getUserTag(l, {
                         mode: 'username',
                         identifiable: u ? 'never' : 'always'
                     }),
@@ -122,7 +122,7 @@ function O(e) {
             }),
             delay: 750,
             position: 'top',
-            'aria-label': b.ZP.getUserTag(l, { decoration: 'never' }),
+            'aria-label': T.ZP.getUserTag(l, { decoration: 'never' }),
             children: (e) =>
                 (0, r.jsx)(a.Clickable, {
                     tag: 'span',
@@ -188,7 +188,7 @@ function w(e) {
         children: [t, '(', n, ')']
     });
 }
-function M(e) {
+function P(e) {
     let { timestamp: t } = e;
     return (0, r.jsx)('span', {
         className: A.timestamp,

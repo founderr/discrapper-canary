@@ -16,8 +16,8 @@ var r = n(200651),
     E = n(74538),
     v = n(678558),
     I = n(981631),
-    b = n(474936),
-    T = n(388032),
+    T = n(474936),
+    b = n(388032),
     S = n(892804);
 t.Z = function (e) {
     let { closeLayer: t, guild: n, onCtaVisibilityChange: a } = e,
@@ -57,7 +57,7 @@ t.Z = function (e) {
                             (0, r.jsx)(u.Text, {
                                 className: S.guildStatusCopy,
                                 variant: 'text-md/bold',
-                                children: T.intl.format(T.t['pob/cH'], { subscriptions: n.premiumSubscriberCount })
+                                children: b.intl.format(b.t['pob/cH'], { subscriptions: n.premiumSubscriberCount })
                             })
                         ]
                     }),
@@ -65,7 +65,7 @@ t.Z = function (e) {
                         ? (0, r.jsx)(u.Text, {
                               className: S.guildBoostCountCurrentUser,
                               variant: 'text-sm/normal',
-                              children: T.intl.format(T.t.Jeto2t, { numSubscriptions: C.length })
+                              children: b.intl.format(b.t.Jeto2t, { numSubscriptions: C.length })
                           })
                         : null
                 ]
@@ -100,7 +100,7 @@ t.Z = function (e) {
                             })
                         })
                     }),
-                    E.ZP.hasFreeBoosts(y) || E.ZP.isPremium(y, b.p9.TIER_2)
+                    E.ZP.hasFreeBoosts(y) || E.ZP.isPremium(y, T.p9.TIER_2)
                         ? (0, r.jsxs)(u.Button, {
                               className: s()(S.guildBoostCta, S.guildBoostCtaSecondary),
                               innerClassName: s()(S.__invalid_guildBoostCtaContent, S.guildBoostCtaGiftContent),
@@ -109,7 +109,7 @@ t.Z = function (e) {
                               onClick: function () {
                                   (0, f.Z)({
                                       initialPlanId: null,
-                                      subscriptionTier: b.Si.TIER_2,
+                                      subscriptionTier: T.Si.TIER_2,
                                       isGift: !0,
                                       analyticsLocations: N,
                                       analyticsObject: {
@@ -128,7 +128,7 @@ t.Z = function (e) {
                                       color: 'currentColor',
                                       className: S.guildBoostCtaGiftIcon
                                   }),
-                                  T.intl.string(T.t['8MYSQ0'])
+                                  b.intl.string(b.t['8MYSQ0'])
                               ]
                           })
                         : (0, r.jsx)(u.Button, {
@@ -139,7 +139,7 @@ t.Z = function (e) {
                               onClick: function () {
                                   (0, f.Z)({
                                       initialPlanId: null,
-                                      subscriptionTier: b.Si.TIER_2,
+                                      subscriptionTier: T.Si.TIER_2,
                                       analyticsLocations: N,
                                       analyticsObject: {
                                           page: I.ZY5.PREMIUM_GUILD_USER_MODAL,
@@ -151,7 +151,7 @@ t.Z = function (e) {
                                   });
                               },
                               size: u.Button.Sizes.LARGE,
-                              children: T.intl.string(T.t.Q43TvL)
+                              children: b.intl.string(b.t.Q43TvL)
                           })
                 ]
             })

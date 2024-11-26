@@ -29,8 +29,8 @@ var r = n(512722),
     E = n(188597),
     v = n(3148),
     I = n(48854),
-    b = n(346479),
-    T = n(706454),
+    T = n(346479),
+    b = n(706454),
     S = n(430824),
     y = n(117530),
     A = n(594174),
@@ -42,8 +42,8 @@ var r = n(512722),
     L = n(456007),
     x = n(10718),
     w = n(998698),
-    M = n(895924),
-    P = n(581364),
+    P = n(895924),
+    M = n(581364),
     k = n(689079),
     U = n(981631),
     B = n(959517),
@@ -67,7 +67,7 @@ let Z = (e, t) => {
     };
 async function j(e) {
     var t, n, r, s, l, c, d, p, h, m, g, E, v, I, S, A, N;
-    let { command: C, optionValues: R, context: D, commandTargetId: x, maxSizeCallback: k, commandOrigin: B = M.bB.CHAT, sectionName: G, interactionLifecycleOptionsFactory: j = z, source: Y } = e,
+    let { command: C, optionValues: R, context: D, commandTargetId: x, maxSizeCallback: k, commandOrigin: B = P.bB.CHAT, sectionName: G, interactionLifecycleOptionsFactory: j = z, source: Y } = e,
         K = null !== (r = w.Z.getSource(D.channel.id)) && void 0 !== r ? r : Y,
         Q = null !== (s = w.Z.getCommandOrigin(D.channel.id)) && void 0 !== s ? s : B;
     null == D.autocomplete &&
@@ -77,10 +77,10 @@ async function j(e) {
             command: C,
             commandOrigin: Q
         }),
-        await b.Z.unarchiveThreadIfNecessary(D.channel.id);
+        await T.Z.unarchiveThreadIfNecessary(D.channel.id);
     let X = [],
         J = [],
-        $ = (0, P.D7)(Q);
+        $ = (0, M.D7)(Q);
     if (null != C.options)
         for (let e of C.options) {
             if (e.type === u.jw.SUB_COMMAND || e.type === u.jw.SUB_COMMAND_GROUP || !(e.name in R)) continue;
@@ -126,7 +126,7 @@ async function j(e) {
                 case u.jw.CHANNEL:
                     if ('channelMention' === a.type) n = a.channelId;
                     else if ('text' === a.type) {
-                        if ((0, P.BH)(a.text)) n = a.text.trim();
+                        if ((0, M.BH)(a.text)) n = a.text.trim();
                         else {
                             let e = (0, _.K)(a.text, null === (h = D.guild) || void 0 === h ? void 0 : h.id, D.channel.id);
                             i()((null == e ? void 0 : e.type) === 'channelMention', 'Failed to resolve '.concat(a.text)), (n = e.channelId);
@@ -136,7 +136,7 @@ async function j(e) {
                 case u.jw.ROLE:
                     if ('roleMention' === a.type) n = a.roleId;
                     else if ('text' === a.type) {
-                        if ((0, P.BH)(a.text)) n = a.text.trim();
+                        if ((0, M.BH)(a.text)) n = a.text.trim();
                         else {
                             let e = (0, _.K)(a.text, null === (m = D.guild) || void 0 === m ? void 0 : m.id, D.channel.id, { allowUsers: !1 });
                             i()((null == e ? void 0 : e.type) === 'roleMention', 'Failed to resolve '.concat(a.text)), (n = e.roleId);
@@ -146,7 +146,7 @@ async function j(e) {
                 case u.jw.USER:
                     if ('userMention' === a.type) n = a.userId;
                     else if ('text' === a.type) {
-                        if ((0, P.BH)(a.text)) n = a.text.trim();
+                        if ((0, M.BH)(a.text)) n = a.text.trim();
                         else {
                             let e = (0, _.K)(a.text, null === (E = D.guild) || void 0 === E ? void 0 : E.id, D.channel.id, { allowRoles: !1 });
                             i()((null == e ? void 0 : e.type) === 'userMention', 'Failed to resolve '.concat(a.text)), (n = e.userId);
@@ -158,7 +158,7 @@ async function j(e) {
                     else if ('roleMention' === a.type) n = a.roleId;
                     else if ('textMention' === a.type && '@everyone' === a.text) n = null === (v = D.guild) || void 0 === v ? void 0 : v.id;
                     else if ('text' === a.type) {
-                        if ((0, P.BH)(a.text)) n = a.text.trim();
+                        if ((0, M.BH)(a.text)) n = a.text.trim();
                         else {
                             let e = (0, _.K)(a.text, null === (I = D.guild) || void 0 === I ? void 0 : I.id, D.channel.id);
                             (null == e ? void 0 : e.type) === 'userMention' ? (n = e.userId) : (null == e ? void 0 : e.type) === 'roleMention' ? (n = e.roleId) : (null == e ? void 0 : e.type) === 'textMention' && '@everyone' === e.text ? (n = null === (S = D.guild) || void 0 === S ? void 0 : S.id) : i()(!1, 'Failed to resolve '.concat(a.text));
@@ -171,13 +171,13 @@ async function j(e) {
                 case u.jw.INTEGER:
                     if ('text' === a.type) {
                         let t = a.text.trim();
-                        n = null != e.choices ? Number(Z(e.choices, t)) : e.autocomplete ? F(e, t, D, Number) : Number(L.AS(T.default.locale, t));
+                        n = null != e.choices ? Number(Z(e.choices, t)) : e.autocomplete ? F(e, t, D, Number) : Number(L.AS(b.default.locale, t));
                     }
                     break;
                 case u.jw.NUMBER:
                     if ('text' === a.type) {
                         let t = a.text.trim();
-                        n = null != e.choices ? Number(Z(e.choices, t)) : e.autocomplete ? F(e, t, D, Number) : Number(L.AS(T.default.locale, t));
+                        n = null != e.choices ? Number(Z(e.choices, t)) : e.autocomplete ? F(e, t, D, Number) : Number(L.AS(b.default.locale, t));
                     }
                     break;
                 default:
@@ -215,7 +215,7 @@ async function j(e) {
             }),
             C.execute(X, D)
         );
-    if (C.inputType === M.iw.BUILT_IN || C.inputType === M.iw.BUILT_IN_TEXT || C.inputType === M.iw.BUILT_IN_INTEGRATION) return;
+    if (C.inputType === P.iw.BUILT_IN || C.inputType === P.iw.BUILT_IN_TEXT || C.inputType === P.iw.BUILT_IN_INTEGRATION) return;
     let ee = {
         version: C.version,
         id: null !== (A = null === (t = C.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== A ? A : C.id,
@@ -393,26 +393,26 @@ async function z(e, t, n) {
 }
 function q(e) {
     switch (e) {
-        case M.bB.APPLICATION_LAUNCHER:
-            return M.Vh.APP_LAUNCHER;
-        case M.bB.APP_LAUNCHER_APPLICATION_VIEW:
-            return M.Vh.APP_LAUNCHER_APPLICATION_VIEW;
-        case M.bB.IMAGE_RECS_MENU:
-            return M.Vh.IMAGE_RECS_MENU;
-        case M.bB.IMAGE_RECS_SUBMENU:
-            return M.Vh.IMAGE_RECS_SUBMENU;
-        case M.bB.ACTIVITY_INSTANCE_EMBED:
-            return M.Vh.ACTIVITY_INSTANCE_EMBED;
-        case M.bB.ACTIVITY_BOOKMARK_EMBED:
-            return M.Vh.ACTIVITY_BOOKMARK_EMBED;
-        case M.bB.MINI_SHELF:
-            return M.Vh.ACTIVITIES_MINI_SHELF;
-        case M.bB.VOICE_TILE_ACTIVITY_SUGGESTIONS:
-            return M.Vh.VC_TILE_ACTIVITY_SUGGESTION;
-        case M.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON:
-            return M.Vh.APP_DMS_ENTRY_POINT_COMMAND_BUTTON;
+        case P.bB.APPLICATION_LAUNCHER:
+            return P.Vh.APP_LAUNCHER;
+        case P.bB.APP_LAUNCHER_APPLICATION_VIEW:
+            return P.Vh.APP_LAUNCHER_APPLICATION_VIEW;
+        case P.bB.IMAGE_RECS_MENU:
+            return P.Vh.IMAGE_RECS_MENU;
+        case P.bB.IMAGE_RECS_SUBMENU:
+            return P.Vh.IMAGE_RECS_SUBMENU;
+        case P.bB.ACTIVITY_INSTANCE_EMBED:
+            return P.Vh.ACTIVITY_INSTANCE_EMBED;
+        case P.bB.ACTIVITY_BOOKMARK_EMBED:
+            return P.Vh.ACTIVITY_BOOKMARK_EMBED;
+        case P.bB.MINI_SHELF:
+            return P.Vh.ACTIVITIES_MINI_SHELF;
+        case P.bB.VOICE_TILE_ACTIVITY_SUGGESTIONS:
+            return P.Vh.VC_TILE_ACTIVITY_SUGGESTION;
+        case P.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON:
+            return P.Vh.APP_DMS_ENTRY_POINT_COMMAND_BUTTON;
         default:
-            return M.Vh.SLASH_UI;
+            return P.Vh.SLASH_UI;
     }
 }
 async function Q(e, t) {

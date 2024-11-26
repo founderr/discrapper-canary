@@ -17,8 +17,8 @@ var r,
 let E = {},
     v = {},
     I = {},
-    b = !1;
-function T(e, t, n) {
+    T = !1;
+function b(e, t, n) {
     return e.map((e) =>
         (function (e, t, n) {
             let r = !1,
@@ -46,7 +46,7 @@ function S(e) {
     let { guildId: c, updates: d } = e,
         f = null !== (a = null !== (i = d.onboardingPromptsSeen) && void 0 !== i ? i : null === (t = E[c]) || void 0 === t ? void 0 : t.onboardingPromptsSeen) && void 0 !== a ? a : {},
         _ = null !== (o = null !== (s = d.onboardingResponsesSeen) && void 0 !== s ? s : null === (n = E[c]) || void 0 === n ? void 0 : n.onboardingResponsesSeen) && void 0 !== o ? o : {},
-        p = T(null !== (u = null !== (l = d.prompts) && void 0 !== l ? l : null === (r = E[c]) || void 0 === r ? void 0 : r.prompts) && void 0 !== u ? u : [], f, _);
+        p = b(null !== (u = null !== (l = d.prompts) && void 0 !== l ? l : null === (r = E[c]) || void 0 === r ? void 0 : r.prompts) && void 0 !== u ? u : [], f, _);
     E[c] = {
         ...E[c],
         ...d,
@@ -126,11 +126,11 @@ class R extends (r = u.ZP.Store) {
             .find((t) => t.id === e);
     }
     isLoading() {
-        return b;
+        return T;
     }
     shouldFetchPrompts(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.Z.Millis.HOUR;
-        if (b) return !1;
+        if (T) return !1;
         let n = I[e];
         return null == n || Date.now() - n > t;
     }
@@ -169,16 +169,16 @@ class R extends (r = u.ZP.Store) {
         : (i[a] = s),
     (t.Z = new R(c.Z, {
         CONNECTION_OPEN: function () {
-            (b = !1), (E = {});
+            (T = !1), (E = {});
         },
         GUILD_ONBOARDING_PROMPTS_FETCH_START: function () {
-            b = !0;
+            T = !0;
         },
         GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: function (e) {
             let { guildId: t, prompts: n, defaultChannelIds: r, enabled: i, responses: a, onboardingPromptsSeen: s, onboardingResponsesSeen: o, mode: l, belowRequirements: u } = e;
-            b = !1;
+            T = !1;
             let c = m.ZP.getOnboardingStatus(t) === m.uX.READY,
-                d = T(n, s, o);
+                d = b(n, s, o);
             (E[t] = {
                 enabled: i,
                 mode: l,
@@ -194,7 +194,7 @@ class R extends (r = u.ZP.Store) {
                 (I[t] = Date.now());
         },
         GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: function () {
-            b = !1;
+            T = !1;
         },
         GUILD_ONBOARDING_SELECT_OPTION: function (e) {
             let { guildId: t, optionId: n, selected: r, removedOptionIds: i } = e;
@@ -205,7 +205,7 @@ class R extends (r = u.ZP.Store) {
             y(t, n);
             let a = E[t];
             if (null == a) return !1;
-            let s = T(a.prompts, r, i);
+            let s = b(a.prompts, r, i);
             E[t] = {
                 ...a,
                 prompts: s,

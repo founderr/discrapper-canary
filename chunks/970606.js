@@ -30,7 +30,7 @@ n.d(t, {
         return E;
     },
     bH: function () {
-        return b;
+        return T;
     },
     hM: function () {
         return m;
@@ -39,7 +39,7 @@ n.d(t, {
         return f;
     },
     r: function () {
-        return T;
+        return b;
     },
     r2: function () {
         return I;
@@ -165,7 +165,7 @@ function I(e) {
         viewing_user_id: a.default.getId()
     });
 }
-function b(e) {
+function T(e) {
     let { guildId: t, applicationUserId: n, applicationStatus: r } = e;
     o.default.track(u.rMx.CLAN_APPLICATION_VIEWED, {
         guild_id: t,
@@ -174,7 +174,7 @@ function b(e) {
         application_status: r
     });
 }
-function T(e) {
+function b(e) {
     let { guildId: t, position: n } = e;
     o.default.track(u.rMx.GUILD_APPLICATION_INTENDS_TO_JOIN, {
         guild_id: t,

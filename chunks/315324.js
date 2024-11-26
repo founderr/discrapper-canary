@@ -29,8 +29,8 @@ function m(e) {
                 return t;
             })
         ),
-        b = m.isGuildStageVoice() ? a.StageIcon : a.VoiceNormalIcon,
-        T = v === _.y0.FULL_SIZE,
+        T = m.isGuildStageVoice() ? a.StageIcon : a.VoiceNormalIcon,
+        b = v === _.y0.FULL_SIZE,
         S = v === _.y0.PANEL;
     return (0, r.jsxs)('div', {
         className: p.voiceChannel,
@@ -48,7 +48,7 @@ function m(e) {
             (0, r.jsxs)('div', {
                 className: p.voiceChannelText,
                 children: [
-                    (0, r.jsx)(b, {
+                    (0, r.jsx)(T, {
                         size: 'xxs',
                         color: a.tokens.colors.INTERACTIVE_NORMAL,
                         className: p.voiceIcon
@@ -74,7 +74,7 @@ function m(e) {
                 maxUsers: h,
                 size: a.AvatarSizes.SIZE_16,
                 onClick: () => (null == g ? void 0 : g({ action: 'PRESS_VOICE_CHANNEL_AVATARS' })),
-                disableUserPopout: !!(!T && !S) || ((e) => e === t.id),
+                disableUserPopout: !!(!b && !S) || ((e) => e === t.id),
                 overflowCountVariant: 'text-xs/normal'
             })
         ]

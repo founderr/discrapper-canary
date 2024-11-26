@@ -9,7 +9,7 @@ var i = n(200651),
     u = n(481060),
     d = n(624138),
     h = n(610385);
-function p(e, t, n) {
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function p(e, t, n) {
         e
     );
 }
-let g = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
+let p = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
     m = {
         START: 0,
         END: 1
@@ -94,14 +94,14 @@ t.Z = function (e) {
         }
         constructor(...e) {
             super(...e),
-                p(this, 'timeout', void 0),
-                p(this, 'anim', new a.Z.Value(m.START)),
-                p(this, 'state', { shouldAnimate: !o.tq }),
-                p(this, 'handleResize', () => {
-                    let e = window.innerWidth > g;
+                g(this, 'timeout', void 0),
+                g(this, 'anim', new a.Z.Value(m.START)),
+                g(this, 'state', { shouldAnimate: !o.tq }),
+                g(this, 'handleResize', () => {
+                    let e = window.innerWidth > p;
                     !this.state.shouldAnimate && e && this.anim.setValue(m.END), this.setState({ shouldAnimate: e });
                 }),
-                p(this, 'handleResizeDebounced', l()(this.handleResize, 60));
+                g(this, 'handleResizeDebounced', l()(this.handleResize, 60));
         }
     };
 };

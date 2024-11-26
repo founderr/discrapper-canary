@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(551058),
     v = n(555573),
     I = n(10718),
-    b = n(367790),
-    T = n(895924),
+    T = n(367790),
+    b = n(895924),
     S = n(581364),
     y = n(56801),
     A = n(342687),
@@ -32,14 +32,14 @@ let x = [8, 8, 0, 8],
     w = l().debounce(() => {
         (0, d.yw)(R.rMx.APPLICATION_COMMAND_BROWSER_SCROLLED);
     }, 300);
-function M(e) {
+function P(e) {
     e.preventDefault();
 }
 t.Z = i.forwardRef(function (e, t) {
     let { channel: n, canOnlyUseTextCommands: a } = e,
         o = i.useRef(!1),
         l = i.useRef(0),
-        [P, k] = i.useState(0),
+        [M, k] = i.useState(0),
         U = i.useRef(null),
         [B, G] = i.useState(!1),
         Z = m.Xn.useStore((e) => e.activeCategoryIndex);
@@ -59,7 +59,7 @@ t.Z = i.forwardRef(function (e, t) {
             channel: n,
             filters: {
                 commandTypes: [c.yU.CHAT],
-                builtIns: a ? b.D.ONLY_TEXT : b.D.ALLOW,
+                builtIns: a ? T.D.ONLY_TEXT : T.D.ALLOW,
                 applicationCommands: !a
             },
             options: {
@@ -94,8 +94,8 @@ t.Z = i.forwardRef(function (e, t) {
     let X = i.useCallback((e) => (e !== V.length - 1 || H ? 16 : 0), [V.length, H]),
         J = j.map((e) => e.data.length);
     i.useEffect(() => {
-        null != U.current && B && null != P && U.current.scrollRowIntoView(P);
-    }, [B, P]),
+        null != U.current && B && null != M && U.current.scrollRowIntoView(M);
+    }, [B, M]),
         i.useLayoutEffect(() => {
             if (null != W) {
                 var e;
@@ -117,7 +117,7 @@ t.Z = i.forwardRef(function (e, t) {
                     channelId: n.id,
                     command: e,
                     section: t,
-                    location: T.Vh.DISCOVERY,
+                    location: b.Vh.DISCOVERY,
                     triggerSection: r
                 });
             },
@@ -127,13 +127,13 @@ t.Z = i.forwardRef(function (e, t) {
         t,
         () => ({
             onTabOrEnter: (e) => {
-                if (null == P) return !e && (k(0), !0);
-                if (null == P) return !1;
+                if (null == M) return !e && (k(0), !0);
+                if (null == M) return !1;
                 let t = 0,
                     n = 0;
                 for (let e of j)
-                    if (((t = n), P < (n += e.data.length))) {
-                        let n = e.data[P - t],
+                    if (((t = n), M < (n += e.data.length))) {
+                        let n = e.data[M - t],
                             r = F.find((e) => e.id === n.applicationId);
                         ee(n, r, (0, S.tI)(e.section));
                         break;
@@ -144,11 +144,11 @@ t.Z = i.forwardRef(function (e, t) {
                 if (0 === Y.length) return !0;
                 let t = H ? 7 : 0,
                     n = Y.length + t,
-                    r = null == P ? 0 : P + e;
+                    r = null == M ? 0 : M + e;
                 return r >= n ? (r = n - 1) : r < 0 && (r = 0), k(r), G(!0), !0;
             }
         }),
-        [Y.length, j, H, F, ee, P]
+        [Y.length, j, H, F, ee, M]
     );
     let et = i.useCallback(
             (e) => {
@@ -206,7 +206,7 @@ t.Z = i.forwardRef(function (e, t) {
                 let a = j[t.sectionIndex],
                     s = a.data[t.sectionRowIndex],
                     o = ''.concat(a.section.id, ':').concat(null !== (i = null == s ? void 0 : s.id) && void 0 !== i ? i : e);
-                if (null == s || (a.section.id !== s.applicationId && a.section.id !== C.bi.FRECENCY) || s.inputType === T.iw.PLACEHOLDER) return (0, r.jsx)(A.Z, {}, o);
+                if (null == s || (a.section.id !== s.applicationId && a.section.id !== C.bi.FRECENCY) || s.inputType === b.iw.PLACEHOLDER) return (0, r.jsx)(A.Z, {}, o);
                 let l = F.find((e) => e.id === s.applicationId);
                 return (0, r.jsx)(
                     f.ZP.NewCommand,
@@ -215,7 +215,7 @@ t.Z = i.forwardRef(function (e, t) {
                         command: s,
                         channel: n,
                         className: D.itemWrapper,
-                        selected: P === e,
+                        selected: M === e,
                         showImage: a.section.id !== s.applicationId,
                         section: l,
                         onClick: () => ee(s, l, (0, S.tI)(a.section)),
@@ -226,11 +226,11 @@ t.Z = i.forwardRef(function (e, t) {
                     o
                 );
             },
-            [n, j, ee, F, P]
+            [n, j, ee, F, M]
         ),
         ei = (0, h.Dt)();
     return (
-        (0, _.KR)(ei, !0, (0, f.DJ)(P)),
+        (0, _.KR)(ei, !0, (0, f.DJ)(M)),
         i.useEffect(
             () => () => {
                 (0, _.sJ)();
@@ -241,7 +241,7 @@ t.Z = i.forwardRef(function (e, t) {
             id: ei,
             className: D.outerWrapper,
             innerClassName: D.wrapper,
-            onMouseDown: M,
+            onMouseDown: P,
             children: [
                 (0, r.jsx)(y.Z, {
                     className: D.rail,

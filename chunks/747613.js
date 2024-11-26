@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(633302),
     v = n(176354),
     I = n(624138),
-    b = n(981631),
-    T = n(388032),
+    T = n(981631),
+    b = n(388032),
     S = n(61788);
 let y = (0, g.hQ)(),
     A = d.Z.convert.fromCodePoint('1f44f'),
@@ -46,17 +46,17 @@ let y = (0, g.hQ)(),
                 'aria-label': (function (e) {
                     switch (d.Z.convert.toCodePoint(e)) {
                         case '1f3fb':
-                            return T.intl.string(T.t.BVK5b2);
+                            return b.intl.string(b.t.BVK5b2);
                         case '1f3fc':
-                            return T.intl.string(T.t.xJWOKy);
+                            return b.intl.string(b.t.xJWOKy);
                         case '1f3fd':
-                            return T.intl.string(T.t['MB+T5u']);
+                            return b.intl.string(b.t['MB+T5u']);
                         case '1f3fe':
-                            return T.intl.string(T.t.MODud3);
+                            return b.intl.string(b.t.MODud3);
                         case '1f3ff':
-                            return T.intl.string(T.t['0uzqsb']);
+                            return b.intl.string(b.t['0uzqsb']);
                         default:
-                            return T.intl.string(T.t.bGN1o6);
+                            return b.intl.string(b.t.bGN1o6);
                     }
                 })(n),
                 className: S.diversityEmojiItemImage,
@@ -129,7 +129,7 @@ t.Z = (e) => {
                 onClick: () => {
                     u(!0);
                 },
-                'aria-label': T.intl.string(T.t.pAVHxc),
+                'aria-label': b.intl.string(b.t.pAVHxc),
                 'aria-haspopup': !0,
                 'aria-expanded': l,
                 'aria-controls': y,
@@ -142,7 +142,7 @@ t.Z = (e) => {
             l
                 ? (0, r.jsx)('div', {
                       onKeyDown: (e) => {
-                          e.keyCode === b.yXg.ESCAPE && (e.stopPropagation(), u(!1), null != d.current && d.current.focus());
+                          e.keyCode === T.yXg.ESCAPE && (e.stopPropagation(), u(!1), null != d.current && d.current.focus());
                       },
                       children: (0, r.jsx)(O, {
                           id: y,

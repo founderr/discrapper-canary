@@ -37,8 +37,8 @@ function g(e, t, n) {
 let E = 'scientist:triggered',
     v = 'exerimentOverrides',
     I = 'userExperimentOverrides',
-    b = 'guildExperimentOverrides',
-    T = new c.Z('ExperimentStore'),
+    T = 'guildExperimentOverrides',
+    b = new c.Z('ExperimentStore'),
     S = !1,
     y = {},
     A = {},
@@ -53,7 +53,7 @@ let E = 'scientist:triggered',
     L = {},
     x = 'staging' === window.GLOBAL_ENV.RELEASE_CHANNEL,
     w = {};
-function M(e) {
+function P(e) {
     let t = w[e];
     if (void 0 !== t) return t;
     {
@@ -61,9 +61,9 @@ function M(e) {
         return (w[e] = t), t;
     }
 }
-let P = h.qO.map((e) => M(e));
+let M = h.qO.map((e) => P(e));
 function k(e, t) {
-    return e || P.includes(t);
+    return e || M.includes(t);
 }
 function U(e) {
     var t;
@@ -77,8 +77,8 @@ function B(e, t, n, r) {
     throw Error();
 }
 function G(e) {
-    if (e.type === h.xY.USER) return M(''.concat(e.bucket, '|').concat(e.revision));
-    if (e.type === h.xY.GUILD) return M(''.concat(e.bucket, '|').concat(e.revision, '|').concat(e.guildId));
+    if (e.type === h.xY.USER) return P(''.concat(e.bucket, '|').concat(e.revision));
+    if (e.type === h.xY.GUILD) return P(''.concat(e.bucket, '|').concat(e.revision, '|').concat(e.guildId));
     throw Error();
 }
 let Z = Date.now();
@@ -346,7 +346,7 @@ function Q() {
 function X(e) {
     let { isSwitchingAccount: t } = e;
     o.K.remove(E),
-        !t && (o.K.remove(v), o.K.remove(I), o.K.remove(b), (D = {}), (L = {})),
+        !t && (o.K.remove(v), o.K.remove(I), o.K.remove(T), (D = {}), (L = {})),
         (C = {}),
         (N = {
             ...N,
@@ -362,16 +362,16 @@ function $() {
     try {
         o.K.set(I, D);
     } catch (e) {
-        T.error('Error saving user experiment overrides, unsaved data will be lost', e),
+        b.error('Error saving user experiment overrides, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: 'discord_app',
                 call: 'ExperimentStore.saveExperimentOverrides'
             });
     }
     try {
-        o.K.set(b, L);
+        o.K.set(T, L);
     } catch (e) {
-        T.error('Error saving guild experiment overrides, unsaved data will be lost', e),
+        b.error('Error saving guild experiment overrides, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: 'discord_app',
                 call: 'ExperimentStore.saveExperimentOverrides'
@@ -385,7 +385,7 @@ function ee(e) {
             e: e
         });
     } catch (e) {
-        T.error('Error saving tracked exposure experiments, unsaved data will be lost', e),
+        b.error('Error saving tracked exposure experiments, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: 'discord_app',
                 call: 'ExperimentStore.saveTrackedExposureExperiments'
@@ -455,7 +455,7 @@ class ei extends f.Z {
         })()),
             !(function () {
                 var e, t, n;
-                let r = [null !== (e = o.K.get(v)) && void 0 !== e ? e : {}, null !== (t = o.K.get(I)) && void 0 !== t ? t : {}, null !== (n = o.K.get(b)) && void 0 !== n ? n : {}];
+                let r = [null !== (e = o.K.get(v)) && void 0 !== e ? e : {}, null !== (t = o.K.get(I)) && void 0 !== t ? t : {}, null !== (n = o.K.get(T)) && void 0 !== n ? n : {}];
                 (D = {}), (L = {});
                 let a = !i().isEmpty(r[0]);
                 for (let e of r)
@@ -509,7 +509,7 @@ class ei extends f.Z {
             let t = D[e];
             if (null != t) return t;
         }
-        let t = M(e);
+        let t = P(e);
         return C[''.concat(t)];
     }
     getGuildExperimentDescriptor(e, t) {
@@ -520,7 +520,7 @@ class ei extends f.Z {
         if (i in O) return O[i];
         let a = (function e(t, n) {
             var r, i;
-            let a = M(n),
+            let a = P(n),
                 s = R[''.concat(a)];
             if (null == s) return null;
             let { revision: o, aaMode: l } = s,
@@ -538,7 +538,7 @@ class ei extends f.Z {
                           hashResult: -1,
                           triggerDebuggingEnabled: c
                       };
-            let d = M(''.concat(null !== (r = s.hashKey) && void 0 !== r ? r : n, ':').concat(t)) % 10000,
+            let d = P(''.concat(null !== (r = s.hashKey) && void 0 !== r ? r : n, ':').concat(t)) % 10000,
                 f = null;
             for (let e of null !== (i = s.overridesFormatted) && void 0 !== i ? i : [])
                 if (null !== (f = K(t, e, d)))
@@ -598,10 +598,10 @@ class ei extends f.Z {
         return R;
     }
     getLoadedUserExperiment(e) {
-        return C[M(e)];
+        return C[P(e)];
     }
     getLoadedGuildExperiment(e) {
-        return R[M(e)];
+        return R[P(e)];
     }
     getRecentExposures(e, t) {
         let n = ''.concat(e, '|').concat(t, '|');
@@ -634,7 +634,7 @@ class ei extends f.Z {
         let e = {},
             t = {};
         for (let n in (Object.keys(A).forEach((e) => {
-            t[M(''.concat(e))] = e;
+            t[P(''.concat(e))] = e;
         }),
         C)) {
             let r = t[n];

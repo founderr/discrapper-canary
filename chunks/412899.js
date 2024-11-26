@@ -15,8 +15,8 @@ var r = n(200651),
     a = n(512722),
     o = n.n(a),
     E = n(772848),
-    c = n(91192),
-    u = n(924826),
+    u = n(91192),
+    c = n(924826),
     d = n(866442),
     _ = n(442837),
     A = n(692547),
@@ -83,8 +83,8 @@ function j(e) {
 let y = l.forwardRef(function (e, t) {
     var i, a, o;
     let E;
-    let { canRemove: u, className: g, role: N, onRemove: R, guildId: S, disableBorderColor: D, onMouseDown: h } = e,
-        { tabIndex: C, ...L } = (0, c.JA)(N.id),
+    let { canRemove: c, className: g, role: N, onRemove: R, guildId: S, disableBorderColor: D, onMouseDown: h } = e,
+        { tabIndex: C, ...L } = (0, u.JA)(N.id),
         M = (0, U.p9)({
             roleId: N.id,
             size: 16,
@@ -115,7 +115,7 @@ let y = l.forwardRef(function (e, t) {
         (E = v
             ? (0, r.jsx)(O.Z, {
                   className: G.roleFlowerStar,
-                  iconClassName: u ? G.roleVerifiedIcon : void 0,
+                  iconClassName: c ? G.roleVerifiedIcon : void 0,
                   color: F,
                   size: 14
               })
@@ -146,15 +146,15 @@ let y = l.forwardRef(function (e, t) {
             ...L,
             children: [
                 (0, r.jsxs)(T.Clickable, {
-                    className: s()(u && G.roleRemoveButtonCanRemove, G.roleRemoveButton),
-                    onClick: u ? R : void 0,
-                    tabIndex: u ? C : -1,
+                    className: s()(c && G.roleRemoveButtonCanRemove, G.roleRemoveButton),
+                    onClick: c ? R : void 0,
+                    tabIndex: c ? C : -1,
                     focusProps: { focusClassName: G.roleRemoveIconFocused },
-                    'aria-hidden': !u,
+                    'aria-hidden': !c,
                     'aria-label': x.intl.formatToPlainString(x.t.QrxwhY, { roleName: N.name }),
                     children: [
                         E,
-                        u
+                        c
                             ? (0, r.jsx)(T.XSmallIcon, {
                                   size: 'md',
                                   color: y,
@@ -186,7 +186,7 @@ let y = l.forwardRef(function (e, t) {
 });
 function B(e) {
     let { user: t, numRolesHidden: n, roleClassName: l } = e,
-        i = (0, c.JA)('overflow-more-roles-'.concat(t.id));
+        i = (0, u.JA)('overflow-more-roles-'.concat(t.id));
     return (0, r.jsx)(T.Popout, {
         renderPopout: (t) => {
             let { position: n } = t;
@@ -210,8 +210,8 @@ function B(e) {
 }
 function z(e) {
     let { guild: t, user: n, handleAddRole: l, roleClassName: i, addButtonClassName: a, addButtonIconClassName: o } = e,
-        E = (0, c.JA)('overflow-add-roles-'.concat(n.id)),
-        u = (0, _.e7)([f.Z], () => f.Z.roleStyle),
+        E = (0, u.JA)('overflow-add-roles-'.concat(n.id)),
+        c = (0, _.e7)([f.Z], () => f.Z.roleStyle),
         d = M.Z.getHighestRole(t),
         A = C.ZP.getMember(t.id, n.id),
         I = (e) => (0, R.Gy)(t.id, e.id) && !e.managed && M.Z.isRoleHigher(t, d, e) && (null == A || -1 === A.roles.indexOf(e.id));
@@ -220,7 +220,7 @@ function z(e) {
             let { closePopout: n } = e;
             return (0, r.jsx)(b.Z, {
                 guild: t,
-                roleStyle: u,
+                roleStyle: c,
                 roleFilter: I,
                 onSelect: l,
                 onClose: n
@@ -300,7 +300,7 @@ function k(e) {
     let k = !I && M.Z.can(P.Plq.MANAGE_ROLES, i),
         H = v.e9(i, j.id),
         V = l.useMemo(() => 'roles-'.concat((0, E.Z)()), []),
-        w = (0, u.ZP)({
+        w = (0, c.ZP)({
             id: V,
             isEnabled: !0,
             scrollToStart: F,
@@ -337,9 +337,9 @@ function k(e) {
                   ...e,
                   handleAddRole: S
               })),
-        (0, r.jsx)(c.bG, {
+        (0, r.jsx)(u.bG, {
             navigator: w,
-            children: (0, r.jsx)(c.SJ, {
+            children: (0, r.jsx)(u.SJ, {
                 children: (e) => {
                     let { ref: n, ...l } = e;
                     return (0, r.jsxs)('div', {

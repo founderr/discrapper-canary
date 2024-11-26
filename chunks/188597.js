@@ -18,7 +18,7 @@ n.d(t, {
         return y;
     },
     tM: function () {
-        return b;
+        return T;
     }
 }),
     n(47120);
@@ -42,7 +42,7 @@ var r,
 function I(e) {
     return null == e || '' === e || Number.isNaN(e) ? Date.now() : _.default.extractTimestamp(e) + 900000;
 }
-let b = async (e) => {
+let T = async (e) => {
         let { componentType: t, messageId: n, messageFlags: r, customId: i, componentId: s, applicationId: o, channelId: u, guildId: c, localState: m } = e,
             g = _.default.fromTimestamp(Date.now());
         if (!h.ZP.canQueueInteraction(n, g)) return;
@@ -54,7 +54,7 @@ let b = async (e) => {
                     customId: i,
                     componentId: s
                 },
-                onFailure: (e, t) => T(u, e, t)
+                onFailure: (e, t) => b(u, e, t)
             }),
             null != m && (0, p.B0)(n, g, m, s);
         let v = {
@@ -92,7 +92,7 @@ let b = async (e) => {
             }
         );
     },
-    T = (e, t, n) => {
+    b = (e, t, n) => {
         null == n && null != t && o.Z.sendClydeError(e, t);
     },
     S = (e, t, n, r, i) => {

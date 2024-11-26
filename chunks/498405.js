@@ -29,7 +29,7 @@ function o(e) {
     let { focusPath: h } = f,
         [m, g] = r.useState(!1),
         [E, v] = r.useState(!1),
-        [{ onItemFocusMemoizer: I, onItemMouseEnterMemoizer: b }] = r.useState(() => ({
+        [{ onItemFocusMemoizer: I, onItemMouseEnterMemoizer: T }] = r.useState(() => ({
             onItemFocusMemoizer: new s.$o((e) => () => {
                 g(!0),
                     _({
@@ -45,7 +45,7 @@ function o(e) {
                     });
             })
         })),
-        T = r.useCallback(
+        b = r.useCallback(
             (e) => {
                 if (!d.current) return;
                 e.key === a.R8.ESCAPE && null != c && (e.stopPropagation(), e.preventDefault(), c());
@@ -109,13 +109,13 @@ function o(e) {
                 role: 'menu',
                 id: t,
                 tabIndex: -1,
-                onKeyDown: T,
+                onKeyDown: b,
                 onFocus: S,
                 onBlur: y,
                 onMouseLeave: A,
                 'aria-activedescendant': h.length > 0 ? (0, s.qR)(t, h.join('--')) : void 0
             }),
-            [t, T, S, y, A, h]
+            [t, b, S, y, A, h]
         ),
         R = r.useCallback(
             (e) => {
@@ -145,10 +145,10 @@ function o(e) {
                     id: (0, s.qR)(t, o),
                     tabIndex: -1,
                     onFocus: i ? I.get(o) : () => {},
-                    onMouseEnter: i ? b.get(o) : () => {}
+                    onMouseEnter: i ? T.get(o) : () => {}
                 };
             },
-            [t, N, I, b]
+            [t, N, I, T]
         );
     return r.useMemo(
         () => ({

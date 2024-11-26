@@ -1,25 +1,25 @@
 r.d(t, {
     f: function () {
-        return L;
+        return f;
     }
 });
-var n = r(469359),
-    a = r(157079),
+var a = r(469359),
+    n = r(157079),
     _ = r(393523),
     o = r(151122),
-    i = r(263449),
-    E = r(572299),
+    E = r(263449),
+    i = r(572299),
     c = r(910731),
     s = r(64685),
     l = r(394798),
-    u = r(622916),
-    I = r(467510),
+    I = r(622916),
+    u = r(467510),
     R = r(954211),
-    N = r(886115),
-    A = r(873567),
-    T = r(454463),
+    A = r(886115),
+    T = r(873567),
+    N = r(454463),
     d = r(163162);
-let L = (0, o._I)((e = {}) => {
+let f = (0, o._I)((e = {}) => {
     let t = {
         console: !0,
         dom: !0,
@@ -36,7 +36,7 @@ let L = (0, o._I)((e = {}) => {
                 (0, c.e)(
                     (function (e) {
                         return function (t) {
-                            if ((0, i.s3)() !== e) return;
+                            if ((0, E.s3)() !== e) return;
                             let r = {
                                 category: 'console',
                                 data: {
@@ -44,13 +44,13 @@ let L = (0, o._I)((e = {}) => {
                                     logger: 'console'
                                 },
                                 level: (0, R.V)(t.level),
-                                message: (0, N.nK)(t.args, ' ')
+                                message: (0, A.nK)(t.args, ' ')
                             };
                             if ('assert' === t.level) {
                                 if (!1 !== t.args[0]) return;
-                                (r.message = `Assertion failed: ${(0, N.nK)(t.args.slice(1), ' ') || 'console.assert'}`), (r.data.arguments = t.args.slice(1));
+                                (r.message = `Assertion failed: ${(0, A.nK)(t.args.slice(1), ' ') || 'console.assert'}`), (r.data.arguments = t.args.slice(1));
                             }
-                            (0, E.n)(r, {
+                            (0, i.n)(r, {
                                 input: t.args,
                                 level: t.level
                             });
@@ -58,14 +58,14 @@ let L = (0, o._I)((e = {}) => {
                     })(e)
                 ),
                 t.dom &&
-                    (0, n.O)(
+                    (0, a.O)(
                         (function (e, t) {
                             return function (r) {
-                                let n, a;
-                                if ((0, i.s3)() !== e) return;
+                                let a, n;
+                                if ((0, E.s3)() !== e) return;
                                 let _ = 'object' == typeof t ? t.serializeAttribute : void 0,
                                     o = 'object' == typeof t && 'number' == typeof t.maxStringLength ? t.maxStringLength : void 0;
-                                o && o > 1024 && (T.X && u.kg.warn(`\`dom.maxStringLength\` cannot exceed 1024, but a value of ${o} was configured. Sentry will use 1024 instead.`), (o = 1024)), 'string' == typeof _ && (_ = [_]);
+                                o && o > 1024 && (N.X && I.kg.warn(`\`dom.maxStringLength\` cannot exceed 1024, but a value of ${o} was configured. Sentry will use 1024 instead.`), (o = 1024)), 'string' == typeof _ && (_ = [_]);
                                 try {
                                     let e = r.event,
                                         t = (function (e) {
@@ -73,21 +73,21 @@ let L = (0, o._I)((e = {}) => {
                                         })(e)
                                             ? e.target
                                             : e;
-                                    (n = (0, I.Rt)(t, {
+                                    (a = (0, u.Rt)(t, {
                                         keyAttrs: _,
                                         maxStringLength: o
                                     })),
-                                        (a = (0, I.iY)(t));
+                                        (n = (0, u.iY)(t));
                                 } catch (e) {
-                                    n = '<unknown>';
+                                    a = '<unknown>';
                                 }
-                                if (0 === n.length) return;
+                                if (0 === a.length) return;
                                 let c = {
                                     category: `ui.${r.name}`,
-                                    message: n
+                                    message: a
                                 };
-                                a && (c.data = { 'ui.component_name': a }),
-                                    (0, E.n)(c, {
+                                n && (c.data = { 'ui.component_name': n }),
+                                    (0, i.n)(c, {
                                         event: r.event,
                                         name: r.name,
                                         global: r.global
@@ -96,21 +96,21 @@ let L = (0, o._I)((e = {}) => {
                         })(e, t.dom)
                     ),
                 t.xhr &&
-                    (0, a.UK)(
+                    (0, n.UK)(
                         (function (e) {
                             return function (t) {
-                                if ((0, i.s3)() !== e) return;
-                                let { startTimestamp: r, endTimestamp: n } = t,
-                                    _ = t.xhr[a.xU];
-                                if (!r || !n || !_) return;
+                                if ((0, E.s3)() !== e) return;
+                                let { startTimestamp: r, endTimestamp: a } = t,
+                                    _ = t.xhr[n.xU];
+                                if (!r || !a || !_) return;
                                 let { method: o, url: c, status_code: s, body: l } = _,
-                                    u = {
+                                    I = {
                                         xhr: t.xhr,
                                         input: l,
                                         startTimestamp: r,
-                                        endTimestamp: n
+                                        endTimestamp: a
                                     };
-                                (0, E.n)(
+                                (0, i.n)(
                                     {
                                         category: 'xhr',
                                         data: {
@@ -120,7 +120,7 @@ let L = (0, o._I)((e = {}) => {
                                         },
                                         type: 'http'
                                     },
-                                    u
+                                    I
                                 );
                             };
                         })(e)
@@ -129,29 +129,29 @@ let L = (0, o._I)((e = {}) => {
                     (0, s.Uf)(
                         (function (e) {
                             return function (t) {
-                                if ((0, i.s3)() !== e) return;
-                                let { startTimestamp: r, endTimestamp: n } = t;
-                                if (!(!n || (t.fetchData.url.match(/sentry_key/) && 'POST' === t.fetchData.method)))
+                                if ((0, E.s3)() !== e) return;
+                                let { startTimestamp: r, endTimestamp: a } = t;
+                                if (!(!a || (t.fetchData.url.match(/sentry_key/) && 'POST' === t.fetchData.method)))
                                     if (t.error) {
                                         let e = t.fetchData,
-                                            a = {
+                                            n = {
                                                 data: t.error,
                                                 input: t.args,
                                                 startTimestamp: r,
-                                                endTimestamp: n
+                                                endTimestamp: a
                                             };
-                                        (0, E.n)(
+                                        (0, i.n)(
                                             {
                                                 category: 'fetch',
                                                 data: e,
                                                 level: 'error',
                                                 type: 'http'
                                             },
-                                            a
+                                            n
                                         );
                                     } else {
                                         let e = t.response,
-                                            a = {
+                                            n = {
                                                 ...t.fetchData,
                                                 status_code: e && e.status
                                             },
@@ -159,12 +159,12 @@ let L = (0, o._I)((e = {}) => {
                                                 input: t.args,
                                                 response: e,
                                                 startTimestamp: r,
-                                                endTimestamp: n
+                                                endTimestamp: a
                                             };
-                                        (0, E.n)(
+                                        (0, i.n)(
                                             {
                                                 category: 'fetch',
-                                                data: a,
+                                                data: n,
                                                 type: 'http'
                                             },
                                             _
@@ -177,20 +177,20 @@ let L = (0, o._I)((e = {}) => {
                     (0, _.a)(
                         (function (e) {
                             return function (t) {
-                                if ((0, i.s3)() !== e) return;
+                                if ((0, E.s3)() !== e) return;
                                 let r = t.from,
-                                    n = t.to,
-                                    a = (0, A.en)(d.m9.location.href),
-                                    _ = r ? (0, A.en)(r) : void 0,
-                                    o = (0, A.en)(n);
-                                (!_ || !_.path) && (_ = a),
-                                    a.protocol === o.protocol && a.host === o.host && (n = o.relative),
-                                    a.protocol === _.protocol && a.host === _.host && (r = _.relative),
-                                    (0, E.n)({
+                                    a = t.to,
+                                    n = (0, T.en)(d.m9.location.href),
+                                    _ = r ? (0, T.en)(r) : void 0,
+                                    o = (0, T.en)(a);
+                                (!_ || !_.path) && (_ = n),
+                                    n.protocol === o.protocol && n.host === o.host && (a = o.relative),
+                                    n.protocol === _.protocol && n.host === _.host && (r = _.relative),
+                                    (0, i.n)({
                                         category: 'navigation',
                                         data: {
                                             from: r,
-                                            to: n
+                                            to: a
                                         }
                                     });
                             };
@@ -201,8 +201,8 @@ let L = (0, o._I)((e = {}) => {
                         'beforeSendEvent',
                         (function (e) {
                             return function (t) {
-                                if ((0, i.s3)() === e)
-                                    (0, E.n)(
+                                if ((0, E.s3)() === e)
+                                    (0, i.n)(
                                         {
                                             category: `sentry.${'transaction' === t.type ? 'transaction' : 'event'}`,
                                             event_id: t.event_id,

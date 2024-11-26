@@ -3,8 +3,8 @@ var r,
     E,
     i,
     u,
-    o = n(442837),
-    S = n(570140),
+    S = n(442837),
+    o = n(570140),
     l = n(366939),
     _ = n(16084),
     A = n(128069),
@@ -28,7 +28,7 @@ async function P(t) {
     if (null == t) return;
     let { error: e } = await (0, T.oe)(t);
     if (null != e) {
-        S.Z.dispatch({
+        o.Z.dispatch({
             type: 'PAYMENT_AUTHENTICATION_ERROR',
             error: new A.ZP(c.intl.string(c.t.khEaRE))
         });
@@ -40,9 +40,9 @@ function U(t) {
     let { payment: e } = t,
         n = [I.PyE.COMPLETED, I.PyE.FAILED, I.PyE.CANCELED];
     if (!R || e.id !== C || !n.includes(e.status)) return !1;
-    (R = !1), (C = null), e.status === I.PyE.FAILED ? (N = new A.ZP(c.intl.string(c.t.khEaRE))) : ((N = null), S.Z.wait(l.fw), S.Z.wait(_.pB));
+    (R = !1), (C = null), e.status === I.PyE.FAILED ? (N = new A.ZP(c.intl.string(c.t.khEaRE))) : ((N = null), o.Z.wait(l.fw), o.Z.wait(_.pB));
 }
-class d extends (r = o.ZP.Store) {
+class d extends (r = S.ZP.Store) {
     get isAwaitingAuthentication() {
         return R;
     }
@@ -62,7 +62,7 @@ class d extends (r = o.ZP.Store) {
               writable: !0
           })
         : (E[i] = u),
-    (e.Z = new d(S.Z, {
+    (e.Z = new d(o.Z, {
         BILLING_SUBSCRIPTION_UPDATE_START: s,
         PAYMENT_AUTHENTICATION_CLEAR_ERROR: s,
         PREMIUM_PAYMENT_ERROR_CLEAR: s,

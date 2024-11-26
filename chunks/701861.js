@@ -18,10 +18,10 @@ var i = n(200651),
     I = n(417183),
     C = n(825682),
     v = n(170245),
-    S = n(981631),
-    N = n(65154),
+    N = n(981631),
+    S = n(65154),
     T = n(388032),
-    A = n(401207);
+    x = n(401207);
 function b(e, t, n) {
     return (
         t in e
@@ -35,12 +35,12 @@ function b(e, t, n) {
         e
     );
 }
-function x(e) {
+function A(e) {
     let { user: t, onSelect: n } = e,
         r = () => {
             u.Z.removeFriend(t.id, { location: 'Friends' });
         },
-        l = (0, s.e7)([g.Z], () => g.Z.supports(N.AN.VIDEO)),
+        l = (0, s.e7)([g.Z], () => g.Z.supports(S.AN.VIDEO)),
         a = t.isProvisional;
     return (0, i.jsxs)(o.Menu, {
         navId: 'friend-row',
@@ -107,7 +107,7 @@ class Z extends r.PureComponent {
             onClick: this.handleOpenPrivateChannel,
             children: (t) =>
                 (0, i.jsxs)('div', {
-                    className: A.listItemContents,
+                    className: x.listItemContents,
                     children: [
                         (0, i.jsx)(v.Z, {
                             user: e,
@@ -125,13 +125,13 @@ class Z extends r.PureComponent {
                             showAccountIdentifier: !0
                         }),
                         (0, i.jsxs)('div', {
-                            className: A.actions,
+                            className: x.actions,
                             children: [
                                 null != s &&
                                     (0, i.jsx)(h.Z, {
                                         recipientUser: e,
                                         giftIntentType: s,
-                                        analyticsPage: S.ZY5.FRIENDS_LIST,
+                                        analyticsPage: N.ZY5.FRIENDS_LIST,
                                         shouldHighlight: t
                                     }),
                                 (0, i.jsx)(E.Z, {
@@ -159,15 +159,15 @@ class Z extends r.PureComponent {
             b(this, 'handleOpenPrivateChannel', (e) => {
                 let { user: t } = this.props;
                 e.stopPropagation();
-                let n = a().find(p.Z.getMutablePrivateChannels(), (e) => e.type === S.d4z.DM && e.getRecipientId() === t.id);
-                null != n ? (0, m.uL)(S.Z5c.CHANNEL(S.ME, n.id)) : c.Z.openPrivateChannel(t.id);
+                let n = a().find(p.Z.getMutablePrivateChannels(), (e) => e.type === N.d4z.DM && e.getRecipientId() === t.id);
+                null != n ? (0, m.uL)(N.Z5c.CHANNEL(N.ME, n.id)) : c.Z.openPrivateChannel(t.id);
             }),
             b(this, 'handleOpenActionsMenu', (e) => {
                 let { user: t } = this.props;
                 (0, d.vq)(
                     e,
                     (e) =>
-                        (0, i.jsx)(x, {
+                        (0, i.jsx)(A, {
                             ...e,
                             user: t
                         }),

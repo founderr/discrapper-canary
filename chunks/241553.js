@@ -23,8 +23,8 @@ var r = n(200651),
     E = n(819640),
     v = n(594174),
     I = n(965645),
-    b = n(362061),
-    T = n(70956),
+    T = n(362061),
+    b = n(70956),
     S = n(709054),
     y = n(51144),
     A = n(443603),
@@ -94,10 +94,10 @@ let x = [
             ribbon: '#81C29F'
         }
     ],
-    M = 1 / 300,
-    P = T.Z.Millis.DAYS_30,
+    P = 1 / 300,
+    M = b.Z.Millis.DAYS_30,
     k = (0, a.animated)(I.Z),
-    U = (0, a.animated)(b.Z),
+    U = (0, a.animated)(T.Z),
     B = (0, a.animated)(u.GiftIcon);
 function G(e) {
     let {
@@ -116,7 +116,7 @@ function G(e) {
             return (
                 i.useEffect(() => {
                     if (e) return;
-                    let t = Math.random() <= M;
+                    let t = Math.random() <= P;
                     if ((n(t), !t)) {
                         let e;
                         do e = Math.floor(7 * Math.random());
@@ -157,13 +157,13 @@ t.Z = i.memo(function (e) {
         { analyticsLocations: a } = (0, _.ZP)(f.Z.GIFT_BUTTON),
         [l, d] = i.useState(!1),
         I = (0, s.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
-        b = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
-        T = null != b ? S.default.age(b.id) : 0,
-        x = !t && I && T >= P,
+        T = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
+        b = null != T ? S.default.age(T.id) : 0,
+        x = !t && I && b >= M,
         { enabled: w } = g.RO.useExperiment({ location: 'ChannelPremiumGiftButton' }, { autoTrackExposure: x }),
-        M = [];
-    w && x && M.push(o.z.SEASONAL_GIFTING_COACHMARK_2023);
-    let [k, U] = (0, h.US)(M),
+        P = [];
+    w && x && P.push(o.z.SEASONAL_GIFTING_COACHMARK_2023);
+    let [k, U] = (0, h.US)(P),
         B = null != k,
         Z = (0, y.Ft)(n),
         F = null != Z;

@@ -18,7 +18,7 @@ var r = n(200651),
 function v(e) {
     let { movDark: t = d, movLight: n = h, mp4Dark: i = f, mp4Light: a = m, pngDark: s = _, pngLight: o = g, webmDark: u = p, webmLight: v = E } = e,
         I = (0, l.vu)(),
-        b = [
+        T = [
             (0, r.jsx)(
                 'source',
                 {
@@ -36,7 +36,7 @@ function v(e) {
                 'png'
             )
         ],
-        T = [
+        b = [
             (0, r.jsx)(
                 'source',
                 {
@@ -56,7 +56,7 @@ function v(e) {
         ];
     return (
         (I > 52 || -1 === I) &&
-            (b.unshift(
+            (T.unshift(
                 (0, r.jsx)(
                     'source',
                     {
@@ -66,7 +66,7 @@ function v(e) {
                     'webm'
                 )
             ),
-            T.unshift(
+            b.unshift(
                 (0, r.jsx)(
                     'source',
                     {
@@ -77,7 +77,7 @@ function v(e) {
                 )
             )),
         (0, l.rO)() &&
-            (b.unshift(
+            (T.unshift(
                 (0, r.jsx)(
                     'source',
                     {
@@ -87,7 +87,7 @@ function v(e) {
                     'hevc'
                 )
             ),
-            T.unshift(
+            b.unshift(
                 (0, r.jsx)(
                     'source',
                     {
@@ -98,21 +98,21 @@ function v(e) {
                 )
             )),
         {
-            [c.BRd.DARK]: b,
-            [c.BRd.LIGHT]: T
+            [c.BRd.DARK]: T,
+            [c.BRd.LIGHT]: b
         }
     );
 }
 let I = o.Z.getAppSpinnerSources(),
-    b = null != I ? v(I) : null,
-    T = v({});
+    T = null != I ? v(I) : null,
+    b = v({});
 t.Z = (e) => {
     var t;
     let { loop: n = !0, autoPlay: o = !0, setRef: l, className: d, onReady: f } = e,
         { theme: _ } = (0, s.useThemeContext)(),
         { reducedMotion: p } = i.useContext(s.AccessibilityPreferencesContext),
-        h = T;
-    null != b && (h = b);
+        h = b;
+    null != T && (h = T);
     let m = null !== (t = h[(0, a.wj)(_) ? c.BRd.DARK : c.BRd.LIGHT]) && void 0 !== t ? t : h[c.BRd.DARK];
     return (0, r.jsx)(
         u.Z,

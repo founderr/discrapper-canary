@@ -44,7 +44,7 @@ function I() {
     let n = d.Z.getLeaderboardResponse(t, _),
         r = setTimeout(
             () =>
-                b({
+                T({
                     guildId: t,
                     leaderboardId: _
                 }),
@@ -53,7 +53,7 @@ function I() {
         i = g(t, _);
     p.set(i, r);
 }
-async function b(e) {
+async function T(e) {
     let { guildId: t, leaderboardId: n, force: r = !1 } = e;
     if (!(E(t, n) || r)) return;
     let a = g(t, n);
@@ -97,7 +97,7 @@ async function b(e) {
                 a,
                 setTimeout(
                     () =>
-                        b({
+                        T({
                             guildId: t,
                             leaderboardId: n,
                             force: !0
@@ -107,15 +107,15 @@ async function b(e) {
             );
         }
 }
-function T() {
+function b() {
     I();
 }
 function S() {
-    v(), (p = new Map()), (h = new Set()), (m = new Map()), T();
+    v(), (p = new Map()), (h = new Set()), (m = new Map()), b();
 }
 class y extends a.Z {
     fetchLeaderboard(e) {
-        return b(e);
+        return T(e);
     }
     constructor(...e) {
         var t, n, r;
@@ -124,10 +124,10 @@ class y extends a.Z {
             (n = 'actions'),
             (r = {
                 POST_CONNECTION_OPEN: S,
-                CONNECTION_CLOSED: T,
-                WINDOW_FOCUS: T,
-                IDLE: T,
-                CHANNEL_SELECT: T
+                CONNECTION_CLOSED: b,
+                WINDOW_FOCUS: b,
+                IDLE: b,
+                CHANNEL_SELECT: b
             }),
             n in t
                 ? Object.defineProperty(t, n, {

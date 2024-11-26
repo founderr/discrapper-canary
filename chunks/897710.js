@@ -1,9 +1,9 @@
 r.d(t, {
     V: function () {
-        return n;
+        return a;
     }
 });
-let n = {
+let a = {
     Spacing: {
         PX_4: 4,
         PX_8: 8,

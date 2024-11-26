@@ -234,16 +234,16 @@ class p {
                             : s.value,
                     v = null === (o = c.find((e) => 'group' === e.type)) || void 0 === o ? void 0 : o.value,
                     I = [...new Set([...c.filter((e) => !h.has(e.type)).map((e) => E(e.value)), ...f.flatMap((e) => e.filter((e) => !h.has(e.type)).map((e) => E(e.value)))])].sort((e, t) => t.length - e.length),
-                    b = 0 === I.length ? RegExp('[\\p{White_Space}]', 'gu') : RegExp(`${I.join('|')}|[\\p{White_Space}]`, 'gu'),
-                    T = [...new Intl.NumberFormat(n.locale, { useGrouping: !1 }).format(9876543210)].reverse(),
-                    S = new Map(T.map((e, t) => [e, t])),
-                    y = RegExp(`[${T.join('')}]`, 'g');
+                    T = 0 === I.length ? RegExp('[\\p{White_Space}]', 'gu') : RegExp(`${I.join('|')}|[\\p{White_Space}]`, 'gu'),
+                    b = [...new Intl.NumberFormat(n.locale, { useGrouping: !1 }).format(9876543210)].reverse(),
+                    S = new Map(b.map((e, t) => [e, t])),
+                    y = RegExp(`[${b.join('')}]`, 'g');
                 return {
                     minusSign: _,
                     plusSign: p,
                     decimal: g,
                     group: v,
-                    literals: b,
+                    literals: T,
                     numeral: y,
                     index: (e) => String(S.get(e))
                 };

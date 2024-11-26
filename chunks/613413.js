@@ -30,13 +30,13 @@ function g() {
         a = (0, l.e7)([d.Z], () => d.Z.isDeveloper),
         [g, E] = i.useState(!1),
         { name: v, ...I } = null != e ? e : {},
-        b = null != v;
+        T = null != v;
     return a && n
         ? (0, r.jsx)(c.ZP, {
               children: (0, r.jsxs)('div', {
                   className: s()(m.container, {
                       [m.containerMinimized]: g,
-                      [m.notTracked]: !b
+                      [m.notTracked]: !T
                   }),
                   children: [
                       (0, r.jsx)(u.Clickable, {
@@ -50,10 +50,10 @@ function g() {
                           className: s()(m.content, { [m.contentMinimized]: g }),
                           children: [
                               (0, r.jsxs)(u.Text, {
-                                  className: s()(m.label, { [m.notTracked]: !b }),
+                                  className: s()(m.label, { [m.notTracked]: !T }),
                                   variant: 'text-xxs/normal',
                                   children: [
-                                      b
+                                      T
                                           ? (0, r.jsx)(u.CircleCheckIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
@@ -72,7 +72,7 @@ function g() {
                                   children: JSON.stringify(I, void 0, 2)
                               }),
                               (0, r.jsx)(u.Text, {
-                                  className: s()(m.label, { [m.notTracked]: !b }),
+                                  className: s()(m.label, { [m.notTracked]: !T }),
                                   variant: 'text-xxs/normal',
                                   children: 'impressions stack'
                               }),

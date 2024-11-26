@@ -3,61 +3,61 @@ r.d(t, {
         return s;
     },
     Fi: function () {
-        return n;
+        return a;
     },
     Fr: function () {
         return l;
     },
     Sq: function () {
-        return i;
+        return E;
     },
     pE: function () {
         return o;
     }
 });
-let n = '?',
-    a = /\(error: (.*)\)/,
+let a = '?',
+    n = /\(error: (.*)\)/,
     _ = /captureMessage|captureException/;
 function o(...e) {
     let t = e.sort((e, t) => e[0] - t[0]).map((e) => e[1]);
     return (e, r = 0, o = 0) => {
-        let i = [],
+        let E = [],
             c = e.split('\n');
         for (let e = r; e < c.length; e++) {
             let r = c[e];
             if (r.length > 1024) continue;
-            let n = a.test(r) ? r.replace(a, '$1') : r;
-            if (!n.match(/\S*Error: /)) {
+            let a = n.test(r) ? r.replace(n, '$1') : r;
+            if (!a.match(/\S*Error: /)) {
                 for (let e of t) {
-                    let t = e(n);
+                    let t = e(a);
                     if (t) {
-                        i.push(t);
+                        E.push(t);
                         break;
                     }
                 }
-                if (i.length >= 50 + o) break;
+                if (E.length >= 50 + o) break;
             }
         }
         return (function (e) {
             if (!e.length) return [];
             let t = Array.from(e);
             return (
-                /sentryWrapped/.test(E(t).function || '') && t.pop(),
+                /sentryWrapped/.test(i(t).function || '') && t.pop(),
                 t.reverse(),
-                _.test(E(t).function || '') && (t.pop(), _.test(E(t).function || '') && t.pop()),
+                _.test(i(t).function || '') && (t.pop(), _.test(i(t).function || '') && t.pop()),
                 t.slice(0, 50).map((e) => ({
                     ...e,
-                    filename: e.filename || E(t).filename,
-                    function: e.function || n
+                    filename: e.filename || i(t).filename,
+                    function: e.function || a
                 }))
             );
-        })(i.slice(o));
+        })(E.slice(o));
     };
 }
-function i(e) {
+function E(e) {
     return Array.isArray(e) ? o(...e) : e;
 }
-function E(e) {
+function i(e) {
     return e[e.length - 1] || {};
 }
 let c = '<anonymous>';

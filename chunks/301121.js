@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return eE;
+        return eC;
     }
 }),
     n(47120),
@@ -22,11 +22,11 @@ var i,
     x = n(570140),
     S = n(668781),
     T = n(924628),
-    C = n(809206),
+    E = n(809206),
     _ = n(230711),
-    E = n(241420),
-    f = n(600164),
-    I = n(651530),
+    C = n(241420),
+    I = n(600164),
+    f = n(651530),
     N = n(247206),
     A = n(294602),
     b = n(778825),
@@ -53,8 +53,8 @@ var i,
     W = n(709054),
     K = n(88658),
     q = n(695346),
-    Q = n(3957),
-    X = n(279743),
+    X = n(3957),
+    Q = n(279743),
     J = n(526156),
     $ = n(76793),
     ee = n(839469),
@@ -110,9 +110,9 @@ function em() {
                       guildId: n.id,
                       onChange: i
                   }),
-                  (0, r.jsx)(E.ConnectedPrivacySettings, {
+                  (0, r.jsx)(C.ConnectedPrivacySettings, {
                       guild: n,
-                      ingress: E.PrivacySettingSurfaces.USER_SETTINGS_PRIVACY_SAFETY
+                      ingress: C.PrivacySettingSurfaces.USER_SETTINGS_PRIVACY_SAFETY
                   })
               ]
           });
@@ -122,7 +122,7 @@ function eh() {
     let t = null === (e = (0, R.Z)()) || void 0 === e || e,
         n = (0, L.y0)({ location: 'user_settings_web' }),
         i = (0, Z.c)(),
-        s = (0, Q.a)(ei.to.DM_SAFETY_ALERTS);
+        s = (0, X.a)(ei.to.DM_SAFETY_ALERTS);
     return t || !n
         ? null
         : (0, r.jsxs)(M.F, {
@@ -146,7 +146,7 @@ function eh() {
                                   hideBorder: !0,
                                   children: ea.intl.string(ea.t.qFsx5u)
                               }),
-                              (0, r.jsx)(X.Z, {
+                              (0, r.jsx)(Q.Z, {
                                   animationDelay: 1000,
                                   scrollPosition: ei.to.DM_SAFETY_ALERTS
                               })
@@ -166,7 +166,7 @@ function eg(e, t) {
 function ep() {
     let e = q.iG.useSetting(),
         t = q.mX.useSetting(),
-        n = (0, Q.a)(ei.to.MESSAGE_REQUESTS);
+        n = (0, X.a)(ei.to.MESSAGE_REQUESTS);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
@@ -201,7 +201,7 @@ function ep() {
                             children: ea.intl.string(ea.t.kOa6yM)
                         })
                     }),
-                    (0, r.jsx)(X.Z, {
+                    (0, r.jsx)(Q.Z, {
                         animationDelay: 700,
                         scrollPosition: ei.to.MESSAGE_REQUESTS
                     })
@@ -215,7 +215,7 @@ function ex() {
     var e;
     let t = null === (e = (0, R.Z)()) || void 0 === e || e,
         { explicitContentGuilds: n, explicitContentFriendDm: i, explicitContentNonFriendDm: s } = (0, A.B)(),
-        l = (0, Q.a)(ei.to.EXPLICIT_MEDIA_REDACTION),
+        l = (0, X.a)(ei.to.EXPLICIT_MEDIA_REDACTION),
         a = [
             {
                 value: g.Q4.BLUR,
@@ -286,7 +286,7 @@ function ex() {
                                     onChange: (e) => (0, N.zj)({ explicitContentGuilds: e })
                                 })
                             }),
-                        (0, r.jsx)(X.Z, { scrollPosition: ei.to.EXPLICIT_MEDIA_REDACTION })
+                        (0, r.jsx)(Q.Z, { scrollPosition: ei.to.EXPLICIT_MEDIA_REDACTION })
                     ]
                 }),
                 (0, r.jsx)(p.FormDivider, { className: ed.marginBottom20 })
@@ -389,7 +389,7 @@ function eT(e) {
         })
     );
 }
-function eC(e) {
+function eE(e) {
     let { message: t } = e;
     eT({
         header: ea.intl.string(ea.t.OjbtDg),
@@ -400,7 +400,7 @@ function eC(e) {
 class e_ extends l.PureComponent {
     componentDidMount() {
         (0, T.I)(),
-            (0, C.ol)().then(
+            (0, E.ol)().then(
                 (e) => {
                     let t = {
                         requestingHarvest: !1,
@@ -737,7 +737,7 @@ class e_ extends l.PureComponent {
                     })
                 })),
                 (a = null)),
-            null != a && (a = (0, r.jsx)(f.Z, { children: a })),
+            null != a && (a = (0, r.jsx)(I.Z, { children: a })),
             (0, r.jsxs)(l.Fragment, {
                 children: [
                     (0, r.jsx)(p.FormTitle, {
@@ -880,9 +880,9 @@ class e_ extends l.PureComponent {
                           body: ea.intl.string(ea.t.MGWabG),
                           confirmText: ea.intl.string(ea.t['D3+rU1']),
                           cancelText: ea.intl.string(ea.t.kYpG0t),
-                          onConfirm: () => (0, T.g)([], [er.pjP.USAGE_STATISTICS]).catch(eC)
+                          onConfirm: () => (0, T.g)([], [er.pjP.USAGE_STATISTICS]).catch(eE)
                       })
-                    : (0, T.g)([er.pjP.USAGE_STATISTICS], []).catch(eC);
+                    : (0, T.g)([er.pjP.USAGE_STATISTICS], []).catch(eE);
             }),
             eu(this, 'handlePersonalizationChange', () => {
                 this.props.personalization
@@ -891,11 +891,11 @@ class e_ extends l.PureComponent {
                           confirmText: ea.intl.string(ea.t['9g5UGx']),
                           cancelText: ea.intl.string(ea.t['+ZLPw8']),
                           onConfirm: () => {
-                              (0, T.g)([], [er.pjP.PERSONALIZATION]).catch(eC);
+                              (0, T.g)([], [er.pjP.PERSONALIZATION]).catch(eE);
                           },
                           body: ea.intl.string(ea.t.gJvDDg)
                       })
-                    : (0, T.g)([er.pjP.PERSONALIZATION], []).catch(eC);
+                    : (0, T.g)([er.pjP.PERSONALIZATION], []).catch(eE);
             }),
             eu(this, 'handleDataDownloadRequest', () => {
                 var e;
@@ -907,7 +907,7 @@ class e_ extends l.PureComponent {
                     confirmButtonColor: p.Button.Colors.BRAND,
                     onConfirm: (e) => {
                         this.setState({ requestingHarvest: !0 }, () => {
-                            (0, C.V3)(e)
+                            (0, E.V3)(e)
                                 .then(
                                     (e) => {
                                         null != e && null != e.body
@@ -943,7 +943,7 @@ class e_ extends l.PureComponent {
         };
     }
 }
-function eE() {
+function eC() {
     let e = (0, h.e7)([V.default], () => {
             let e = V.default.getCurrentUser();
             return d()(null != e, 'ConnectedUserSettingsPrivacySafety: currentUser cannot be undefined'), e;
@@ -955,7 +955,7 @@ function eE() {
         })),
         n = (0, h.e7)([y.Z], () => y.Z.getFetchError()),
         i = (0, h.e7)([U.Z], () => U.Z.getSubsection()),
-        s = (0, I.yh)(),
+        s = (0, f.yh)(),
         l = (0, j.Xo)({ location: 'web_user_privacy_and_safety_settings' }),
         { hasSearchResults: a, searchResults: o } = (0, ee.E)(),
         c = (0, O.p)(),

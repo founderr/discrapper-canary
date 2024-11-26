@@ -1,6 +1,6 @@
 n.d(t, {
     Yy: function () {
-        return b;
+        return T;
     },
     ZP: function () {
         return A;
@@ -41,8 +41,8 @@ function I(e, t, n) {
         e
     );
 }
-let b = { any: 100 },
-    T = 30 * h.Z.Millis.SECOND,
+let T = { any: 100 },
+    b = 30 * h.Z.Millis.SECOND,
     S = 120 * h.Z.Millis.SECOND,
     y = -1 !== (0, p.hY)();
 ((i = r || (r = {})).UserSSRCUpdate = 'user-ssrc-update'), (i.Update = 'update');
@@ -107,7 +107,7 @@ class A extends o.Z {
         return delete this.audioSsrcs[e], delete this.videoSsrcs[e], this.participants.delete(e), delete this.streamPixelCounts[this.streamIds[e]], delete this.streamIds[e], this.update(Array.from(this.participants));
     }
     reset() {
-        this.setConnection(null, !1), (this.audioSsrcs = {}), (this.videoSsrcs = {}), (this.remoteVideoSsrcs = {}), (this.framesReceived = {}), (this.streamIds = {}), (this.streamPixelCounts = {}), (this.latestWants = b), g.w.off(g.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged);
+        this.setConnection(null, !1), (this.audioSsrcs = {}), (this.videoSsrcs = {}), (this.remoteVideoSsrcs = {}), (this.framesReceived = {}), (this.streamIds = {}), (this.streamPixelCounts = {}), (this.latestWants = T), g.w.off(g.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged);
     }
     setSelectedParticipant(e) {
         if (e === this.selectedParticipantId) return this.latestWants;
@@ -147,7 +147,7 @@ class A extends o.Z {
         return e;
     }
     getOffscreenTimeoutMs() {
-        return this.isStageChannel ? S : T;
+        return this.isStageChannel ? S : b;
     }
     getSimulcastOverrideQuality(e) {
         return this.simulcastDebugOverrides.has(e) ? this.simulcastDebugOverrides.get(e) : v.Z.NO_OVERRIDE;
@@ -198,7 +198,7 @@ class A extends o.Z {
             (this.offscreenUsers = {}),
             (this.offscreenDisabledUsers = {}),
             (this.streamPixelCounts = {}),
-            (this.latestWants = b),
+            (this.latestWants = T),
             (this.participants = new Set()),
             (this.selectedParticipantId = null),
             (this.pipOpen = !1),

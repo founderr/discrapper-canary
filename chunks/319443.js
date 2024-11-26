@@ -18,20 +18,20 @@ var i = n(200651),
     I = n(258971),
     C = n(133743),
     v = n(726941),
-    S = n(666697),
-    N = n(370648),
+    N = n(666697),
+    S = n(370648),
     T = n(569527),
-    A = n(979007),
+    x = n(979007),
     b = n(388032),
-    x = n(544973);
+    A = n(544973);
 function Z(e) {
     let { applicationId: t, onClickBack: n } = e,
         r = (0, l.e7)([o.Z], () => o.Z.getApplication(t));
     return (0, i.jsxs)('div', {
-        className: x.detailHeaderContainer,
+        className: A.detailHeaderContainer,
         children: [
             (0, i.jsx)('div', {
-                className: x.detailHeaderSection,
+                className: A.detailHeaderSection,
                 children: (0, i.jsx)(m.Cm, {
                     icon: a.ArrowLargeLeftIcon,
                     onClick: n
@@ -40,11 +40,11 @@ function Z(e) {
             (0, i.jsx)(a.Heading, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                className: x.detailHeader,
+                className: A.detailHeader,
                 lineClamp: 1,
                 children: null == r ? void 0 : r.name
             }),
-            (0, i.jsx)('div', { className: x.detailHeaderSection })
+            (0, i.jsx)('div', { className: A.detailHeaderSection })
         ]
     });
 }
@@ -53,8 +53,8 @@ t.Z = function () {
     let { onScroll: t, scrollPosition: n, resetScrollPosition: o } = (0, u.M)(),
         L = (0, I.Xh)(),
         y = (null == L ? void 0 : L.type) === I.m_.CATEGORY ? L.categoryId : void 0,
-        { applicationId: O, section: R } = (null == L ? void 0 : L.type) === I.m_.APPLICATION ? L : {},
-        { query: P, categoryId: j } = (null == L ? void 0 : L.type) === I.m_.SEARCH ? L : {},
+        { applicationId: P, section: O } = (null == L ? void 0 : L.type) === I.m_.APPLICATION ? L : {},
+        { query: R, categoryId: j } = (null == L ? void 0 : L.type) === I.m_.SEARCH ? L : {},
         D = (0, l.e7)([c.Z], () => c.Z.getCategories()),
         M = r.useMemo(() => [(0, d.KQ)(), ...D], [D]),
         w = r.useMemo(() => M.find((e) => e.id === Number(j)), [M, j]),
@@ -66,31 +66,31 @@ t.Z = function () {
             s.g5();
         }, []),
         r.useEffect(() => I.aQ.setState({ lastItem: L }), [L]);
-    let B = null != O,
-        V = (null == L ? void 0 : L.type) === I.m_.SEARCH,
-        { searchQuery: H, onSearchTextChange: F, onClearSearch: z, onSearchSubmit: Y } = (0, _.M)({ initialQuery: null != P ? P : '' }),
+    let B = null != P,
+        H = (null == L ? void 0 : L.type) === I.m_.SEARCH,
+        { searchQuery: V, onSearchTextChange: F, onClearSearch: z, onSearchSubmit: W } = (0, _.M)({ initialQuery: null != R ? R : '' }),
         {
-            searchBarState: W,
+            searchBarState: Y,
             onTabsAvailableWidthChange: K,
             onCollapsedSearchBarClick: q,
             onSearchBarBlur: X
         } = (0, h.U)({
             isSearchBarVisible: !0,
-            isSearchBarEmpty: '' === H.trim()
+            isSearchBarEmpty: '' === V.trim()
         }),
         Q = r.useCallback(
             (e) => {
-                G(e), V && z(), o();
+                G(e), H && z(), o();
             },
-            [V, z, G, o]
+            [H, z, G, o]
         ),
         J = r.useCallback((e) => (0, C.ph)({ applicationId: e }), []),
-        $ = B || V,
+        $ = B || H,
         ee = r.useCallback(() => {
             null != (0, I.Uc)() ? (0, f.op)() : (0, C.Yp)();
         }, []);
     return (0, i.jsxs)('div', {
-        className: x.container,
+        className: A.container,
         children: [
             (0, i.jsxs)(m.ZP, {
                 variant: $ ? m._6.RELATIVE : m._6.OVERLAY,
@@ -98,23 +98,23 @@ t.Z = function () {
                     !$ && (0, i.jsx)(m.z6, { scrollPosition: n }),
                     B
                         ? (0, i.jsx)(Z, {
-                              applicationId: O,
+                              applicationId: P,
                               onClickBack: ee
                           })
                         : (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  V
+                                  H
                                       ? (0, i.jsx)(m.Cm, {
                                             icon: a.ArrowLargeLeftIcon,
                                             onClick: ee
                                         })
                                       : (0, i.jsx)(m.aV, { icon: a.AppsIcon }),
-                                  V
+                                  H
                                       ? (0, i.jsx)(a.Heading, {
                                             variant: 'heading-lg/semibold',
                                             color: 'header-primary',
-                                            className: x.searchHeader,
-                                            children: null != P && '' !== P ? b.intl.formatToPlainString(b.t.zHdzqa, { query: P }) : b.intl.formatToPlainString(b.t.Qhj5Bg, { categoryName: null !== (e = null == w ? void 0 : w.name) && void 0 !== e ? e : b.intl.string(b.t.E407b2) })
+                                            className: A.searchHeader,
+                                            children: null != R && '' !== R ? b.intl.formatToPlainString(b.t.zHdzqa, { query: R }) : b.intl.formatToPlainString(b.t.Qhj5Bg, { categoryName: null !== (e = null == w ? void 0 : w.name) && void 0 !== e ? e : b.intl.string(b.t.E407b2) })
                                         })
                                       : (0, i.jsx)(p.Z, {
                                             tabs: k,
@@ -123,13 +123,13 @@ t.Z = function () {
                                             onAvailableWidthChange: K
                                         }),
                                   (0, i.jsx)(g.Z, {
-                                      query: H,
+                                      query: V,
                                       placeholder: b.intl.string(b.t['7J5i+/']),
                                       onTextChange: F,
                                       onClear: z,
-                                      onSubmit: Y,
+                                      onSubmit: W,
                                       onCollapsedClick: q,
-                                      state: W,
+                                      state: Y,
                                       onBlur: X
                                   })
                               ]
@@ -137,16 +137,16 @@ t.Z = function () {
                 ]
             }),
             B
-                ? (0, i.jsx)(S.Z, {
+                ? (0, i.jsx)(N.Z, {
                       onScroll: t,
                       onSelectApplication: J,
-                      applicationId: O,
-                      initialTab: R
+                      applicationId: P,
+                      initialTab: O
                   })
-                : V
+                : H
                   ? (0, i.jsx)(T.Z, { onSelectApplication: J })
-                  : U === A.kK
-                    ? (0, i.jsx)(N.Z, {
+                  : U === x.kK
+                    ? (0, i.jsx)(S.Z, {
                           onScroll: t,
                           onSelectApplication: J
                       })

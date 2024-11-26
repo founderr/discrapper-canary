@@ -19,11 +19,11 @@ var i = n(200651),
     x = n(74538),
     S = n(199778),
     T = n(296533),
-    C = n(901750),
+    E = n(901750),
     _ = n(112863),
-    E = n(701157),
-    f = n(912152),
-    I = n(615603),
+    C = n(701157),
+    I = n(912152),
+    f = n(615603),
     N = n(474936),
     A = n(734943);
 function b(e) {
@@ -47,14 +47,14 @@ function b(e) {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(a.oQ, { className: A.blockedPaymentsWarning }),
-            (0, i.jsx)(C.Z, {
+            (0, i.jsx)(E.Z, {
                 hasGuildBoostSlots: D,
                 hasAppliedGuildBoosts: B,
                 hasBoostPerk: w,
                 canAddBoosts: k
             }),
             F === N.a$.NONE &&
-                (0, i.jsx)(f.Z, {
+                (0, i.jsx)(I.Z, {
                     hasAppliedGuildBoosts: B,
                     hasBoostPerk: w,
                     hasGuildAffinitiesOrInGuild: P,
@@ -75,11 +75,11 @@ function b(e) {
                       guildBoostSlots: n,
                       premiumSubscription: t
                   }),
-            (0, i.jsx)(I.Z, {
+            (0, i.jsx)(f.Z, {
                 guildBoostSlots: b,
                 fractionalPremiumState: F
             }),
-            (0, i.jsx)(E.Z, {
+            (0, i.jsx)(C.Z, {
                 canAddBoosts: B && k,
                 canApplyBoosts: L
             }),

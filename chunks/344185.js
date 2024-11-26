@@ -33,7 +33,7 @@ function I(e) {
     var t, n;
     let { channel: r } = e;
     if (!d.AW.has(r.type)) return !1;
-    if ((null === (t = r.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0) return b(r);
+    if ((null === (t = r.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0) return T(r);
     {
         let e = null !== (n = p[r.guild_id]) && void 0 !== n ? n : {};
         p[r.guild_id] = {
@@ -45,7 +45,7 @@ function I(e) {
         };
     }
 }
-function b(e) {
+function T(e) {
     let { guild_id: t, parent_id: n, id: r } = e;
     if (null == t || null == n || !(t in p) || !(n in p[t]) || !(r in p[t][n])) return !1;
     (p[t] = {
@@ -55,7 +55,7 @@ function b(e) {
         delete p[t][n][r],
         l().isEmpty(p[t][n]) && delete p[t][n];
 }
-let T = {};
+let b = {};
 class S extends (r = u.ZP.Store) {
     initialize() {
         this.waitFor(f.Z);
@@ -65,11 +65,11 @@ class S extends (r = u.ZP.Store) {
     }
     getThreadsForGuild(e) {
         var t;
-        return null !== (t = p[e]) && void 0 !== t ? t : T;
+        return null !== (t = p[e]) && void 0 !== t ? t : b;
     }
     getThreadsForParent(e, t) {
         var n;
-        return null !== (n = this.getThreadsForGuild(e)[t]) && void 0 !== n ? n : T;
+        return null !== (n = this.getThreadsForGuild(e)[t]) && void 0 !== n ? n : b;
     }
     hasThreadsForChannel(e, t) {
         return !l().isEmpty(this.getThreadsForParent(e, t));
@@ -127,7 +127,7 @@ class S extends (r = u.ZP.Store) {
         },
         THREAD_DELETE: function (e) {
             let { channel: t } = e;
-            return b(t);
+            return T(t);
         },
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e;

@@ -46,7 +46,7 @@ function u(e, t) {
                   premiumSubscriberCount: I
               });
     }
-    let b = {
+    let T = {
         id: e.id,
         joinedAt: v,
         premiumSubscriberCount: I,
@@ -83,7 +83,7 @@ function u(e, t) {
         latestOnboardingQuestionId: e.properties.latest_onboarding_question_id,
         clan: e.properties.clan
     };
-    return null == t ? (0, a.gh)(b, s.ZP) : t.merge(b);
+    return null == t ? (0, a.gh)(T, s.ZP) : t.merge(T);
 }
 function c(e, t) {
     return new s.Bg({

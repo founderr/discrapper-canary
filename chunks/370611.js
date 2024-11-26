@@ -22,8 +22,8 @@ var r = n(200651),
     E = n(358085),
     v = n(998502),
     I = n(528567),
-    b = n(371583),
-    T = n(246627),
+    T = n(371583),
+    b = n(246627),
     S = n(249268),
     y = n(864138),
     A = n(473188),
@@ -36,7 +36,7 @@ function L(e) {
     let { leaderboard: t, previewMode: n = !1, trackRankingItemInteraction: a } = e,
         s = (0, o.e7)([_.default], () => _.default.getId()),
         u = (0, o.e7)([f.default], () => f.default.locale),
-        { rankChanges: p } = (0, T.Z)({
+        { rankChanges: p } = (0, b.Z)({
             guildId: t.guild_id,
             leaderboardId: t.leaderboard_id,
             intervalStart: t.interval_start
@@ -58,7 +58,7 @@ function L(e) {
                 };
             });
         }, [t, p]),
-        g = (0, b.K)(t),
+        g = (0, T.K)(t),
         { primaryColor: E } = (0, c.Z)(g),
         v = i.useMemo(() => {
             let e = (0, m.oo)(E),
@@ -129,7 +129,7 @@ function L(e) {
                                               trackRankingItemInteraction: a
                                           })
                                       ),
-                                      y ? (0, r.jsx)(M, {}) : null
+                                      y ? (0, r.jsx)(P, {}) : null
                                   ]
                               })
                           ]
@@ -140,7 +140,7 @@ function L(e) {
 }
 function x(e) {
     let { leaderboard: t } = e,
-        n = (0, b.K)(t);
+        n = (0, T.K)(t);
     return (0, r.jsx)(y.z, {
         imageUrl: n,
         children: (0, r.jsxs)('span', {
@@ -166,8 +166,8 @@ function w(e) {
     let { userId: t, rank: n, value: a, guildId: s, previousRank: c, locale: d, leaderboard: f, trackRankingItemInteraction: _ } = e,
         m = (0, o.e7)([h.default], () => h.default.getUser(t)),
         I = g.ZP.getName(s, void 0, m),
-        b = null != c && c > n,
-        [T, S] = i.useState('default'),
+        T = null != c && c > n,
+        [b, S] = i.useState('default'),
         y = (0, o.e7)([p.Z], () => {
             let e = p.Z.getPrimaryActivity(t);
             return (null == e ? void 0 : e.application_id) != null && C.T.includes(e.application_id);
@@ -190,11 +190,11 @@ function w(e) {
                 S('error');
             }
         },
-        M = (0, r.jsx)(l.Text, {
+        P = (0, r.jsx)(l.Text, {
             className: D.tooltip,
             variant: 'text-sm/medium',
             children:
-                'copied' === T
+                'copied' === b
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(l.CheckmarkSmallBoldIcon, {
@@ -204,7 +204,7 @@ function w(e) {
                               O.intl.string(O.t.ZO0ku7)
                           ]
                       })
-                    : 'error' === T
+                    : 'error' === b
                       ? (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(l.XSmallBoldIcon, {
@@ -219,7 +219,7 @@ function w(e) {
     return (0, r.jsxs)('div', {
         className: D.userRow,
         children: [
-            b ? (0, r.jsx)('div', { className: D.rankChangeIndicator }) : null,
+            T ? (0, r.jsx)('div', { className: D.rankChangeIndicator }) : null,
             (0, r.jsx)('div', {
                 className: D.userRank,
                 children:
@@ -264,7 +264,7 @@ function w(e) {
                               ]
                           })
                         : null,
-                    b ? (0, r.jsx)(P, { rankChange: c - n }) : null
+                    T ? (0, r.jsx)(M, { rankChange: c - n }) : null
                 ]
             }),
             (0, r.jsxs)('div', {
@@ -278,7 +278,7 @@ function w(e) {
                         }),
                     E.isPlatformEmbedded &&
                         (0, r.jsx)(l.Tooltip, {
-                            text: M,
+                            text: P,
                             'aria-label': !1,
                             shouldShow: !L,
                             onTooltipHide: () => S('default'),
@@ -310,7 +310,7 @@ function w(e) {
         ]
     });
 }
-function M() {
+function P() {
     return (0, r.jsxs)('div', {
         className: D.joinLeaderboardCTAContainer,
         children: [
@@ -328,7 +328,7 @@ function M() {
         ]
     });
 }
-function P(e) {
+function M(e) {
     let { rankChange: t } = e;
     return (0, r.jsxs)('div', {
         className: D.rankChangeBadge,

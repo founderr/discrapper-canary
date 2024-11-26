@@ -30,43 +30,43 @@ function S(e) {
             analyticsLocation: a.Z.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
         });
     if (null == T) return null;
-    let C = s ? x.finePrintWithOverheadSeparator : x.finePrint,
+    let E = s ? x.finePrintWithOverheadSeparator : x.finePrint,
         _ = T.invoiceItems.find((e) => {
             let { subscriptionPlanId: t } = e;
             return (0, d.uZ)(t);
         });
     if (null == _) return null;
-    let E = _.subscriptionPlanId,
-        f = c.Z.get(E);
-    r()(null != f, 'Missing plan');
-    let I = (0, u.T4)(T.total, T.currency);
+    let C = _.subscriptionPlanId,
+        I = c.Z.get(C);
+    r()(null != I, 'Missing plan');
+    let f = (0, u.T4)(T.total, T.currency);
     return (
-        f.interval === h.rV.YEAR
+        I.interval === h.rV.YEAR
             ? (t = p.intl.format(p.t['jPz/39'], {
-                  price: I,
+                  price: f,
                   termsUrl: g.EYA.TERMS,
                   paidURL: g.EYA.PAID_TERMS,
                   privacyUrl: g.EYA.PRIVACY
               }))
-            : f.interval === h.rV.MONTH &&
+            : I.interval === h.rV.MONTH &&
               (t =
-                  1 === f.intervalCount
+                  1 === I.intervalCount
                       ? p.intl.format(p.t.m27GpK, {
-                            price: I,
+                            price: f,
                             termsUrl: g.EYA.TERMS,
                             paidURL: g.EYA.PAID_TERMS,
                             privacyUrl: g.EYA.PRIVACY
                         })
                       : p.intl.format(p.t['9xf5V1'], {
-                            price: I,
+                            price: f,
                             termsUrl: g.EYA.TERMS,
                             paidURL: g.EYA.PAID_TERMS,
                             privacyUrl: g.EYA.PRIVACY,
-                            intervalCount: f.intervalCount
+                            intervalCount: I.intervalCount
                         })),
         (0, i.jsx)(l.Text, {
             color: 'text-muted',
-            className: C,
+            className: E,
             variant: 'text-xs/normal',
             children: t
         })

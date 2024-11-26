@@ -14,10 +14,10 @@ var i = n(200651),
     u = n(720196);
 function d(e) {
     let { transitionTo: t, token: n, width: d } = e,
-        [h, p] = r.useState(u.n.START),
-        [g, m] = r.useState(null),
-        [f, x] = r.useState(''),
-        _ = { impression_group: s.ImpressionGroups.ACCOUNT_REVERT_FLOW };
+        [h, g] = r.useState(u.n.START),
+        [p, m] = r.useState(null),
+        [f, _] = r.useState(''),
+        x = { impression_group: s.ImpressionGroups.ACCOUNT_REVERT_FLOW };
     return (0, i.jsx)('div', {
         style: { margin: '8px' },
         children: (0, i.jsxs)(l.Slides, {
@@ -27,28 +27,28 @@ function d(e) {
             children: [
                 (0, i.jsx)(l.Slide, {
                     id: u.n.START,
-                    impressionProperties: _,
+                    impressionProperties: x,
                     impressionName: s.ImpressionNames.ACCOUNT_REVERT_EXPLAINER,
                     children: (0, i.jsx)(o.Z, {
-                        setSlide: p,
+                        setSlide: g,
                         transitionTo: t
                     })
                 }),
                 (0, i.jsx)(l.Slide, {
                     id: u.n.PASSWORD,
-                    impressionProperties: _,
+                    impressionProperties: x,
                     impressionName: s.ImpressionNames.ACCOUNT_REVERT_CHANGE_PASSWORD,
                     children: (0, i.jsx)(a.Z, {
-                        setOriginalEmail: x,
-                        setSlide: p,
+                        setOriginalEmail: _,
+                        setSlide: g,
                         transitionTo: t,
-                        ready: g === u.n.PASSWORD,
+                        ready: p === u.n.PASSWORD,
                         token: n
                     })
                 }),
                 (0, i.jsx)(l.Slide, {
                     id: u.n.SUCCESS,
-                    impressionProperties: _,
+                    impressionProperties: x,
                     impressionName: s.ImpressionNames.ACCOUNT_REVERT_SUCCESS,
                     children: (0, i.jsx)(c.Z, { email: f })
                 })

@@ -21,8 +21,8 @@ var r = n(200651),
     E = n(944486),
     v = n(594174),
     I = n(981631),
-    b = n(37113),
-    T = n(65154),
+    T = n(37113),
+    b = n(65154),
     S = n(388032);
 function y(e, t) {
     let { preset: y, resolution: A, fps: N } = (0, s.cj)([p.Z], () => p.Z.getState()),
@@ -35,17 +35,17 @@ function y(e, t) {
         { location: D } = (0, u.O)(),
         { available: L, activated: x } = (0, d.k)(a.q.STREAM_HIGH_QUALITY),
         w = (0, s.e7)([E.Z, h.Z], () => h.Z.getChannel(E.Z.getVoiceChannelId())),
-        M = i.useCallback(
+        P = i.useCallback(
             (e, i, a, s) => {
                 if (e) {
                     if (null != C) {
                         let e = {
                             qualityOptions: {
-                                preset: b.tI.PRESET_CUSTOM,
+                                preset: T.tI.PRESET_CUSTOM,
                                 resolution: i,
                                 frameRate: a
                             },
-                            context: T.Yn.STREAM
+                            context: b.Yn.STREAM
                         };
                         null != C.desktopSource
                             ? (e.desktopSettings = {
@@ -84,10 +84,10 @@ function y(e, t) {
             [t, D, C, L]
         );
     if (null == e) return null;
-    let P = y === b.tI.PRESET_DOCUMENTS ? b.ws.FPS_30 : N,
-        k = b.af.map((e) => {
+    let M = y === T.tI.PRESET_DOCUMENTS ? T.ws.FPS_30 : N,
+        k = T.af.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(b.tI.PRESET_CUSTOM, A, t, R, O, w);
+                i = (0, c.Z)(T.tI.PRESET_CUSTOM, A, t, R, O, w);
             return (0, r.jsx)(
                 o.MenuRadioItem,
                 {
@@ -95,14 +95,14 @@ function y(e, t) {
                     id: 'stream-settings-fps-'.concat(t),
                     label: n,
                     checked: t === N,
-                    action: () => M(i, A, t, I.Qqv.RESOLUTION)
+                    action: () => P(i, A, t, I.Qqv.RESOLUTION)
                 },
                 'stream-settings-fps-'.concat(t)
             );
         }),
-        U = b.km.map((e) => {
+        U = T.km.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(b.tI.PRESET_CUSTOM, t, P, R, O, w);
+                i = (0, c.Z)(T.tI.PRESET_CUSTOM, t, M, R, O, w);
             return (
                 L && !x && (i = !1),
                 (0, r.jsx)(
@@ -112,7 +112,7 @@ function y(e, t) {
                         id: 'stream-settings-resolution-'.concat(t),
                         label: n,
                         checked: t === A,
-                        action: () => M(i, t, P, I.Qqv.RESOLUTION)
+                        action: () => P(i, t, M, I.Qqv.RESOLUTION)
                     },
                     'stream-settings-resolution-'.concat(t)
                 )

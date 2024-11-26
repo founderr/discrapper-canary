@@ -30,8 +30,8 @@ var r = n(200651),
     E = n(98278),
     v = n(869765),
     I = n(243317),
-    b = n(621853),
-    T = n(518950),
+    T = n(621853),
+    b = n(518950),
     S = n(484459),
     y = n(184301),
     A = n(740492),
@@ -43,8 +43,8 @@ var r = n(200651),
     L = n(630388),
     x = n(74538),
     w = n(276554),
-    M = n(421399),
-    P = n(453687),
+    P = n(421399),
+    M = n(453687),
     k = n(318713),
     U = n(304176),
     B = n(47930),
@@ -87,7 +87,7 @@ function H(e, t, n) {
     let { message: i, channel: a, author: s, compact: o = !1, onContextMenu: l, showUsernamePopout: u, roleIcon: c, onClickUsername: d, onPopoutRequestClose: f } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(M.Z, {
+            (0, r.jsx)(P.Z, {
                 message: i,
                 channel: a,
                 author: s,
@@ -130,7 +130,7 @@ function Y(e) {
                         c &&
                             l &&
                             (0, r.jsx)(k.Z, {
-                                id: (0, P.Dv)(t),
+                                id: (0, M.Dv)(t),
                                 compact: !0,
                                 timestamp: t.timestamp,
                                 isVisibleOnlyOnHover: d,
@@ -147,7 +147,7 @@ function Y(e) {
                         c &&
                             !l &&
                             (0, r.jsx)(k.Z, {
-                                id: (0, P.Dv)(t),
+                                id: (0, M.Dv)(t),
                                 timestamp: t.timestamp,
                                 className: m,
                                 application: E
@@ -169,9 +169,9 @@ let W = (e) => {
 };
 function K(e) {
     let { currentUserIsPremium: t, author: n } = e,
-        i = (0, l.e7)([b.Z], () => {
+        i = (0, l.e7)([T.Z], () => {
             var e;
-            return null === (e = b.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.premiumSince;
+            return null === (e = T.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.premiumSince;
         });
     return (0, r.jsx)(u.Tooltip, {
         tooltipClassName: F.nitroAuthorBadgeTootip,
@@ -193,7 +193,7 @@ function K(e) {
     });
 }
 function z(e) {
-    let { message: t, repliedMessage: n, compact: a = !1, renderPopout: f, showTimestampOnHover: E, roleIcon: b, subscribeToGroupId: S, hideTimestamp: k, className: V, channel: W } = e,
+    let { message: t, repliedMessage: n, compact: a = !1, renderPopout: f, showTimestampOnHover: E, roleIcon: T, subscribeToGroupId: S, hideTimestamp: k, className: V, channel: W } = e,
         z = i.useMemo(() => (null != f ? (e) => f(e, t) : void 0), [f, t]),
         [, q] = (0, h.ZP)(t.author.id, e.guildId),
         Q = (0, l.e7)([N.Z], () => N.Z.getGuild(e.guildId), [e.guildId]),
@@ -202,7 +202,7 @@ function z(e) {
         $ = (function (e) {
             var t, n;
             let { props: a, guildId: s, handleRenderPopout: f, showCommunicationDisabledStyles: _ = !1, className: p } = e,
-                { message: h, author: m, compact: g = !1, subscribeToGroupId: E, animate: v = !0, onContextMenu: I, onClickAvatar: b, onPopoutRequestClose: S, showAvatarPopout: N } = a,
+                { message: h, author: m, compact: g = !1, subscribeToGroupId: E, animate: v = !0, onContextMenu: I, onClickAvatar: T, onPopoutRequestClose: S, showAvatarPopout: N } = a,
                 [C, R] = i.useState(!1),
                 { analyticsLocations: L } = (0, d.ZP)(c.Z.AVATAR),
                 x = (0, l.e7)([A.ZP], () => {
@@ -210,15 +210,15 @@ function z(e) {
                     return null !== (e = a.displayCompactAvatars) && void 0 !== e ? e : A.ZP.displayCompactAvatars;
                 }),
                 w = null != h.messageReference && null != h.webhookId && h.hasFlag(G.iLy.IS_CROSSPOST),
-                M = h.author,
-                { id: P } = M,
+                P = h.author,
+                { id: M } = P,
                 k = g ? 32 : 80,
                 {
                     avatarSrc: U,
                     avatarDecorationSrc: B,
                     eventHandlers: Z
-                } = (0, T.Z)({
-                    user: M,
+                } = (0, b.Z)({
+                    user: P,
                     guildId: s,
                     size: k,
                     animateOnHover: null != E ? !C : !v,
@@ -227,7 +227,7 @@ function z(e) {
                 F = h.isInteractionPlaceholder(),
                 V = i.useMemo(() => {
                     var e, t;
-                    return F && null == M.avatar && (null === (e = h.application) || void 0 === e ? void 0 : e.icon) != null
+                    return F && null == P.avatar && (null === (e = h.application) || void 0 === e ? void 0 : e.icon) != null
                         ? null !==
                               (t = O.ZP.getApplicationIconURL({
                                   id: h.application.id,
@@ -238,10 +238,10 @@ function z(e) {
                             ? t
                             : U
                         : U;
-                }, [F, null === (t = h.application) || void 0 === t ? void 0 : t.icon, null === (n = h.application) || void 0 === n ? void 0 : n.id, M.avatar, k, U]);
+                }, [F, null === (t = h.application) || void 0 === t ? void 0 : t.icon, null === (n = h.application) || void 0 === n ? void 0 : n.id, P.avatar, k, U]);
             return (i.useEffect(() => {
-                if (null != E) return D.S.subscribeKeyed(G.LPv.ANIMATE_CHAT_AVATAR, ''.concat(E, ':').concat(P), R), () => void D.S.unsubscribeKeyed(G.LPv.ANIMATE_CHAT_AVATAR, ''.concat(E, ':').concat(P), R);
-            }, [P, E]),
+                if (null != E) return D.S.subscribeKeyed(G.LPv.ANIMATE_CHAT_AVATAR, ''.concat(E, ':').concat(M), R), () => void D.S.unsubscribeKeyed(G.LPv.ANIMATE_CHAT_AVATAR, ''.concat(E, ':').concat(M), R);
+            }, [M, E]),
             g && !x)
                 ? void 0
                 : null != f && null != N
@@ -277,7 +277,7 @@ function z(e) {
                                     avatarSrc: V,
                                     avatarDecorationSrc: B,
                                     compact: g,
-                                    onClick: b,
+                                    onClick: T,
                                     onContextMenu: I,
                                     onMouseDown: e.onMouseDown,
                                     onKeyDown: e.onKeyDown,
@@ -293,7 +293,7 @@ function z(e) {
                             avatarSrc: V,
                             avatarDecorationSrc: B,
                             compact: g,
-                            onClick: b,
+                            onClick: T,
                             onContextMenu: I,
                             onMouseDown: void 0,
                             onKeyDown: void 0,
@@ -312,7 +312,7 @@ function z(e) {
             return null !== (t = e.displayCompactAvatars) && void 0 !== t ? t : A.ZP.displayCompactAvatars;
         }),
         et =
-            (!a || ee) && null != b && null != Q
+            (!a || ee) && null != T && null != Q
                 ? (0, r.jsx)(
                       u.Popout,
                       {
@@ -323,13 +323,13 @@ function z(e) {
                           position: 'right',
                           renderPopout: () =>
                               (0, r.jsx)(U.Z, {
-                                  roleIcon: b,
+                                  roleIcon: T,
                                   guild: Q
                               }),
                           children: (e) => {
                               let { onClick: t } = e;
                               return (0, r.jsx)(p.Z, {
-                                  ...b,
+                                  ...T,
                                   className: F.roleIcon,
                                   onClick: t
                               });
@@ -337,11 +337,11 @@ function z(e) {
                       },
                       'role-icon-children'
                   )
-                : (!a || ee) && null != b
+                : (!a || ee) && null != T
                   ? (0, r.jsx)(
                         p.Z,
                         {
-                            ...b,
+                            ...T,
                             className: F.roleIcon
                         },
                         'role-icon-children'
@@ -359,7 +359,7 @@ function z(e) {
         ea = x.ZP.isPremium(t.author),
         es = x.ZP.isPremium(ei),
         eo = null == W ? void 0 : W.isPrivate();
-    (0, w.R)(null != b, 'Message Username') &&
+    (0, w.R)(null != T, 'Message Username') &&
         ea &&
         !a &&
         !eo &&
@@ -412,12 +412,12 @@ function z(e) {
     let el = [];
     (0, L.yE)(t.flags, G.iLy.SUPPRESS_NOTIFICATIONS) && el.push((0, r.jsx)(I.Z, {}, 'suppress-notifications'));
     let eu = {};
-    (eu[M.a.SYSTEM_TAG] = en), (eu[M.a.BADGES] = er);
+    (eu[P.a.SYSTEM_TAG] = en), (eu[P.a.BADGES] = er);
     let ec = H(e, z, eu),
-        ed = (0, P.XX)(t, S),
-        ef = (0, P.Dv)(t),
+        ed = (0, M.XX)(t, S),
+        ef = (0, M.Dv)(t),
         e_ = k ? ''.concat(ed) : ''.concat(ed, ' ').concat(ef),
-        ep = (null == n ? void 0 : n.state) === v.Y.LOADED ? (0, P.Gq)(t) : void 0;
+        ep = (null == n ? void 0 : n.state) === v.Y.LOADED ? (0, M.Gq)(t) : void 0;
     return (0, r.jsx)(Y, {
         message: t,
         avatar: $,
@@ -442,7 +442,7 @@ function z(e) {
                 ec
             ]
         }),
-        usernameSpanId: (0, P.XX)(t, S),
+        usernameSpanId: (0, M.XX)(t, S),
         usernameClassName: s()(F.headerText, {
             [F.hasRoleIcon]: null != et,
             [F.hasBadges]: null != en || el.length > 0

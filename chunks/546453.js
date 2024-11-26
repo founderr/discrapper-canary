@@ -3,14 +3,14 @@ r.d(t, {
         return o;
     }
 });
-var n = r(617726),
-    a = r(151122),
+var a = r(617726),
+    n = r(151122),
     _ = r(166394);
-let o = (0, a._I)(() => ({
+let o = (0, n._I)(() => ({
     name: 'ModuleMetadata',
     setup(e) {
         e.on('beforeEnvelope', (e) => {
-            (0, n.gv)(e, (e, t) => {
+            (0, a.gv)(e, (e, t) => {
                 if ('event' === t) {
                     let t = Array.isArray(e) ? e[1] : void 0;
                     t && ((0, _.CC)(t), (e[1] = t));

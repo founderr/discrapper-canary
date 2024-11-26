@@ -1,4 +1,4 @@
-let n, a, _, o, i, E;
+let a, n, _, o, E, i;
 r.d(t, {
     G: function () {
         return rK;
@@ -10,24 +10,24 @@ r.d(t, {
 var c,
     s,
     l,
-    u,
     I,
+    u,
     R,
-    N,
     A,
-    T = r(505676),
+    T,
+    N = r(505676),
     d = r(507690),
-    L = r(572299),
-    f = r(263449),
-    O = r(946471),
+    f = r(572299),
+    O = r(263449),
+    L = r(946471),
     p = r(233517),
     h = r(822578),
-    S = r(696486),
-    D = r(988097),
+    D = r(696486),
+    S = r(988097),
     C = r(820754),
-    g = r(899517),
-    U = r(202811),
-    P = r(370336),
+    P = r(899517),
+    g = r(202811),
+    U = r(370336),
     M = r(467510),
     G = r(101284),
     m = r(622916),
@@ -37,12 +37,12 @@ var c,
     w = r(928541),
     B = r(14588),
     W = r(26506),
-    H = r(650093),
-    x = r(501684),
-    Y = r(157079),
+    Y = r(650093),
+    H = r(501684),
+    x = r(157079),
     K = r(469359),
     V = r(393523);
-let k = g.n,
+let k = P.n,
     F = 'sentryReplaySession',
     X = 'Unable to send Replay';
 function j(e, t) {
@@ -51,16 +51,16 @@ function j(e, t) {
 function $(e) {
     let t;
     let r = e[0],
-        n = 1;
-    for (; n < e.length; ) {
-        let a = e[n],
-            _ = e[n + 1];
-        if (((n += 2), ('optionalAccess' === a || 'optionalCall' === a) && null == r)) return;
-        'access' === a || 'optionalAccess' === a ? ((t = r), (r = _(r))) : ('call' === a || 'optionalCall' === a) && ((r = _((...e) => r.call(t, ...e))), (t = void 0));
+        a = 1;
+    for (; a < e.length; ) {
+        let n = e[a],
+            _ = e[a + 1];
+        if (((a += 2), ('optionalAccess' === n || 'optionalCall' === n) && null == r)) return;
+        'access' === n || 'optionalAccess' === n ? ((t = r), (r = _(r))) : ('call' === n || 'optionalCall' === n) && ((r = _((...e) => r.call(t, ...e))), (t = void 0));
     }
     return r;
 }
-((c = N || (N = {}))[(c.Document = 0)] = 'Document'), (c[(c.DocumentType = 1)] = 'DocumentType'), (c[(c.Element = 2)] = 'Element'), (c[(c.Text = 3)] = 'Text'), (c[(c.CDATA = 4)] = 'CDATA'), (c[(c.Comment = 5)] = 'Comment');
+((c = A || (A = {}))[(c.Document = 0)] = 'Document'), (c[(c.DocumentType = 1)] = 'DocumentType'), (c[(c.Element = 2)] = 'Element'), (c[(c.Text = 3)] = 'Text'), (c[(c.CDATA = 4)] = 'CDATA'), (c[(c.Comment = 5)] = 'Comment');
 function q(e) {
     let t = $([e, 'optionalAccess', (e) => e.host]);
     return $([t, 'optionalAccess', (e) => e.shadowRoot]) === e;
@@ -150,17 +150,17 @@ class Z {
 function ee({ maskInputOptions: e, tagName: t, type: r }) {
     return 'OPTION' === t && (t = 'SELECT'), !!(e[t.toLowerCase()] || (r && e[r]) || 'password' === r || ('INPUT' === t && !r && e.text));
 }
-function et({ isMasked: e, element: t, value: r, maskInputFn: n }) {
-    let a = r || '';
-    return e ? (n && (a = n(a, t)), '*'.repeat(a.length)) : a;
+function et({ isMasked: e, element: t, value: r, maskInputFn: a }) {
+    let n = r || '';
+    return e ? (a && (n = a(n, t)), '*'.repeat(n.length)) : n;
 }
 function er(e) {
     return e.toLowerCase();
 }
-function en(e) {
+function ea(e) {
     return e.toUpperCase();
 }
-let ea = '__rrweb_original__';
+let en = '__rrweb_original__';
 function e_(e) {
     let t = e.type;
     return e.hasAttribute('data-rr-is-password') ? 'password' : t ? er(t) : null;
@@ -168,7 +168,7 @@ function e_(e) {
 function eo(e, t, r) {
     return 'INPUT' === t && ('radio' === r || 'checkbox' === r) ? e.getAttribute('value') || '' : e.value;
 }
-function ei(e, t) {
+function eE(e, t) {
     let r;
     try {
         r = new URL(
@@ -180,20 +180,20 @@ function ei(e, t) {
     }
     return j($([r.pathname.match(/\.([0-9a-z]+)(?:$)/i), 'optionalAccess', (e) => e[1]]), () => null);
 }
-let eE = {};
+let ei = {};
 function ec(e) {
-    let t = eE[e];
+    let t = ei[e];
     if (t) return t;
     let r = window.document,
-        n = window[e];
+        a = window[e];
     if (r && 'function' == typeof r.createElement)
         try {
             let t = r.createElement('iframe');
             (t.hidden = !0), r.head.appendChild(t);
-            let a = t.contentWindow;
-            a && a[e] && (n = a[e]), r.head.removeChild(t);
+            let n = t.contentWindow;
+            n && n[e] && (a = n[e]), r.head.removeChild(t);
         } catch (e) {}
-    return (eE[e] = n.bind(window));
+    return (ei[e] = a.bind(window));
 }
 function es(...e) {
     return ec('setTimeout')(...e);
@@ -201,36 +201,36 @@ function es(...e) {
 function el(...e) {
     return ec('clearTimeout')(...e);
 }
-let eu = 1,
-    eI = RegExp('[^a-z0-9-_:]');
+let eI = 1,
+    eu = RegExp('[^a-z0-9-_:]');
 function eR() {
-    return eu++;
+    return eI++;
 }
-let eN = /url\((?:(')([^']*)'|(")(.*?)"|([^)]*))\)/gm,
-    eA = /^(?:[a-z+]+:)?\/\//i,
-    eT = /^www\..*/i,
+let eA = /url\((?:(')([^']*)'|(")(.*?)"|([^)]*))\)/gm,
+    eT = /^(?:[a-z+]+:)?\/\//i,
+    eN = /^www\..*/i,
     ed = /^(data:)([^,]*),(.*)/i;
-function eL(e, t) {
-    return (e || '').replace(eN, (e, r, n, a, _, o) => {
-        let i = n || _ || o,
-            E = r || a || '';
-        if (!i) return e;
-        if (eA.test(i) || eT.test(i) || ed.test(i)) return `url(${E}${i}${E})`;
-        if ('/' === i[0]) {
+function ef(e, t) {
+    return (e || '').replace(eA, (e, r, a, n, _, o) => {
+        let E = a || _ || o,
+            i = r || n || '';
+        if (!E) return e;
+        if (eT.test(E) || eN.test(E) || ed.test(E)) return `url(${i}${E}${i})`;
+        if ('/' === E[0]) {
             var c;
             let e;
-            return `url(${E}${((e = ''), (e = (e = (c = t).indexOf('//') > -1 ? c.split('/').slice(0, 3).join('/') : c.split('/')[0]).split('?')[0]) + i)}${E})`;
+            return `url(${i}${((e = ''), (e = (e = (c = t).indexOf('//') > -1 ? c.split('/').slice(0, 3).join('/') : c.split('/')[0]).split('?')[0]) + E)}${i})`;
         }
         let s = t.split('/'),
-            l = i.split('/');
+            l = E.split('/');
         for (let e of (s.pop(), l)) {
             if ('.' !== e) '..' === e ? s.pop() : s.push(e);
         }
-        return `url(${E}${s.join('/')}${E})`;
+        return `url(${i}${s.join('/')}${i})`;
     });
 }
-let ef = /^[^ \t\n\r\u000c]+/,
-    eO = /^[, \t\n\r\u000c]+/;
+let eO = /^[^ \t\n\r\u000c]+/,
+    eL = /^[, \t\n\r\u000c]+/;
 function ep(e, t) {
     if (!t || '' === t.trim()) return t;
     let r = e.createElement('a');
@@ -240,59 +240,59 @@ function eh() {
     let e = document.createElement('a');
     return (e.href = ''), e.href;
 }
-function eS(e, t, r, n, a, _) {
-    if (!n) return n;
-    if ('src' === r || ('href' === r && !('use' === t && '#' === n[0]))) return ep(e, n);
-    if ('xlink:href' === r && '#' !== n[0]) return ep(e, n);
-    if ('background' === r && ('table' === t || 'td' === t || 'th' === t)) return ep(e, n);
+function eD(e, t, r, a, n, _) {
+    if (!a) return a;
+    if ('src' === r || ('href' === r && !('use' === t && '#' === a[0]))) return ep(e, a);
+    if ('xlink:href' === r && '#' !== a[0]) return ep(e, a);
+    if ('background' === r && ('table' === t || 'td' === t || 'th' === t)) return ep(e, a);
     else if ('srcset' === r)
         return (function (e, t) {
             if ('' === t.trim()) return t;
             let r = 0;
-            function n(e) {
-                let n;
-                let a = e.exec(t.substring(r));
-                return a ? ((n = a[0]), (r += n.length), n) : '';
+            function a(e) {
+                let a;
+                let n = e.exec(t.substring(r));
+                return n ? ((a = n[0]), (r += a.length), a) : '';
             }
-            let a = [];
-            for (; n(eO), !(r >= t.length); ) {
-                let _ = n(ef);
-                if (',' === _.slice(-1)) (_ = ep(e, _.substring(0, _.length - 1))), a.push(_);
+            let n = [];
+            for (; a(eL), !(r >= t.length); ) {
+                let _ = a(eO);
+                if (',' === _.slice(-1)) (_ = ep(e, _.substring(0, _.length - 1))), n.push(_);
                 else {
-                    let n = '';
+                    let a = '';
                     _ = ep(e, _);
                     let o = !1;
                     for (;;) {
                         let e = t.charAt(r);
                         if ('' === e) {
-                            a.push((_ + n).trim());
+                            n.push((_ + a).trim());
                             break;
                         }
                         if (o) ')' === e && (o = !1);
                         else {
                             if (',' === e) {
-                                (r += 1), a.push((_ + n).trim());
+                                (r += 1), n.push((_ + a).trim());
                                 break;
                             }
                             '(' === e && (o = !0);
                         }
-                        (n += e), (r += 1);
+                        (a += e), (r += 1);
                     }
                 }
             }
-            return a.join(', ');
-        })(e, n);
-    else if ('style' === r) return eL(n, eh());
-    else if ('object' === t && 'data' === r) return ep(e, n);
-    return 'function' == typeof _ ? _(r, n, a) : n;
+            return n.join(', ');
+        })(e, a);
+    else if ('style' === r) return ef(a, eh());
+    else if ('object' === t && 'data' === r) return ep(e, a);
+    return 'function' == typeof _ ? _(r, a, n) : a;
 }
-function eD(e, t, r) {
+function eS(e, t, r) {
     return ('video' === e || 'audio' === e) && 'autoplay' === t;
 }
-function eC(e, t, r = 1 / 0, n = 0) {
-    return !e || e.nodeType !== e.ELEMENT_NODE || n > r ? -1 : t(e) ? n : eC(e.parentNode, t, r, n + 1);
+function eC(e, t, r = 1 / 0, a = 0) {
+    return !e || e.nodeType !== e.ELEMENT_NODE || a > r ? -1 : t(e) ? a : eC(e.parentNode, t, r, a + 1);
 }
-function eg(e, t) {
+function eP(e, t) {
     return (r) => {
         if (null === r) return !1;
         try {
@@ -302,8 +302,8 @@ function eg(e, t) {
                 } else if (
                     (function (e, t) {
                         for (let r = e.classList.length; r--; ) {
-                            let n = e.classList[r];
-                            if (t.test(n)) return !0;
+                            let a = e.classList[r];
+                            if (t.test(a)) return !0;
                         }
                         return !1;
                     })(r, e)
@@ -317,7 +317,7 @@ function eg(e, t) {
         }
     };
 }
-function eU(e, t, r, n, a, _) {
+function eg(e, t, r, a, n, _) {
     try {
         let o = e.nodeType === e.ELEMENT_NODE ? e : e.parentElement;
         if (null === o) return !1;
@@ -325,29 +325,29 @@ function eU(e, t, r, n, a, _) {
             let e = o.getAttribute('autocomplete');
             if (['current-password', 'new-password', 'cc-number', 'cc-exp', 'cc-exp-month', 'cc-exp-year', 'cc-csc'].includes(e)) return !0;
         }
-        let i = -1,
-            E = -1;
+        let E = -1,
+            i = -1;
         if (_) {
-            if ((E = eC(o, eg(n, a))) < 0) return !0;
-            i = eC(o, eg(t, r), E >= 0 ? E : 1 / 0);
+            if ((i = eC(o, eP(a, n))) < 0) return !0;
+            E = eC(o, eP(t, r), i >= 0 ? i : 1 / 0);
         } else {
-            if ((i = eC(o, eg(t, r))) < 0) return !1;
-            E = eC(o, eg(n, a), i >= 0 ? i : 1 / 0);
+            if ((E = eC(o, eP(t, r))) < 0) return !1;
+            i = eC(o, eP(a, n), E >= 0 ? E : 1 / 0);
         }
-        return i >= 0 ? !(E >= 0) || i <= E : !(E >= 0) && !!_;
+        return E >= 0 ? !(i >= 0) || E <= i : !(i >= 0) && !!_;
     } catch (e) {}
     return !!_;
 }
-function eP(e) {
+function eU(e) {
     return null == e ? '' : e.toLowerCase();
 }
 function eM(e, t) {
     let r;
-    let { doc: _, mirror: o, blockClass: i, blockSelector: E, unblockSelector: c, maskAllText: s, maskTextClass: l, unmaskTextClass: u, maskTextSelector: I, unmaskTextSelector: R, skipChild: A = !1, inlineStylesheet: T = !0, maskInputOptions: d = {}, maskAttributeFn: L, maskTextFn: f, maskInputFn: O, slimDOMOptions: p, dataURLOptions: h = {}, inlineImages: S = !1, recordCanvas: D = !1, onSerialize: C, onIframeLoad: g, iframeLoadTimeout: U = 5000, onStylesheetLoad: P, stylesheetLoadTimeout: M = 5000, keepIframeSrcFn: G = () => !1, newlyAddedElement: m = !1 } = t,
+    let { doc: _, mirror: o, blockClass: E, blockSelector: i, unblockSelector: c, maskAllText: s, maskTextClass: l, unmaskTextClass: I, maskTextSelector: u, unmaskTextSelector: R, skipChild: T = !1, inlineStylesheet: N = !0, maskInputOptions: d = {}, maskAttributeFn: f, maskTextFn: O, maskInputFn: L, slimDOMOptions: p, dataURLOptions: h = {}, inlineImages: D = !1, recordCanvas: S = !1, onSerialize: C, onIframeLoad: P, iframeLoadTimeout: g = 5000, onStylesheetLoad: U, stylesheetLoadTimeout: M = 5000, keepIframeSrcFn: G = () => !1, newlyAddedElement: m = !1 } = t,
         { preserveWhiteSpace: y = !0 } = t,
         b = (function (e, t) {
-            let { doc: r, mirror: _, blockClass: o, blockSelector: i, unblockSelector: E, maskAllText: c, maskAttributeFn: s, maskTextClass: l, unmaskTextClass: u, maskTextSelector: I, unmaskTextSelector: R, inlineStylesheet: A, maskInputOptions: T = {}, maskTextFn: d, maskInputFn: L, dataURLOptions: f = {}, inlineImages: O, recordCanvas: p, keepIframeSrcFn: h, newlyAddedElement: S = !1 } = t,
-                D = (function (e, t) {
+            let { doc: r, mirror: _, blockClass: o, blockSelector: E, unblockSelector: i, maskAllText: c, maskAttributeFn: s, maskTextClass: l, unmaskTextClass: I, maskTextSelector: u, unmaskTextSelector: R, inlineStylesheet: T, maskInputOptions: N = {}, maskTextFn: d, maskInputFn: f, dataURLOptions: O = {}, inlineImages: L, recordCanvas: p, keepIframeSrcFn: h, newlyAddedElement: D = !1 } = t,
+                S = (function (e, t) {
                     if (!t.hasNode(e)) return;
                     let r = t.getId(e);
                     return 1 === r ? void 0 : r;
@@ -356,232 +356,232 @@ function eM(e, t) {
                 case e.DOCUMENT_NODE:
                     if ('CSS1Compat' !== e.compatMode)
                         return {
-                            type: N.Document,
+                            type: A.Document,
                             childNodes: [],
                             compatMode: e.compatMode
                         };
                     return {
-                        type: N.Document,
+                        type: A.Document,
                         childNodes: []
                     };
                 case e.DOCUMENT_TYPE_NODE:
                     return {
-                        type: N.DocumentType,
+                        type: A.DocumentType,
                         name: e.name,
                         publicId: e.publicId,
                         systemId: e.systemId,
-                        rootId: D
+                        rootId: S
                     };
                 case e.ELEMENT_NODE:
                     return (function (e, t) {
                         var r;
                         let _;
-                        let { doc: o, blockClass: i, blockSelector: E, unblockSelector: c, inlineStylesheet: s, maskInputOptions: l = {}, maskAttributeFn: u, maskInputFn: I, dataURLOptions: R = {}, inlineImages: A, recordCanvas: T, keepIframeSrcFn: d, newlyAddedElement: L = !1, rootId: f, maskAllText: O, maskTextClass: p, unmaskTextClass: h, maskTextSelector: S, unmaskTextSelector: D } = t,
-                            C = (function (e, t, r, n) {
+                        let { doc: o, blockClass: E, blockSelector: i, unblockSelector: c, inlineStylesheet: s, maskInputOptions: l = {}, maskAttributeFn: I, maskInputFn: u, dataURLOptions: R = {}, inlineImages: T, recordCanvas: N, keepIframeSrcFn: d, newlyAddedElement: f = !1, rootId: O, maskAllText: L, maskTextClass: p, unmaskTextClass: h, maskTextSelector: D, unmaskTextSelector: S } = t,
+                            C = (function (e, t, r, a) {
                                 try {
-                                    if (n && e.matches(n)) return !1;
+                                    if (a && e.matches(a)) return !1;
                                     if ('string' == typeof t) {
                                         if (e.classList.contains(t)) return !0;
                                     } else
                                         for (let r = e.classList.length; r--; ) {
-                                            let n = e.classList[r];
-                                            if (t.test(n)) return !0;
+                                            let a = e.classList[r];
+                                            if (t.test(a)) return !0;
                                         }
                                     if (r) return e.matches(r);
                                 } catch (e) {}
                                 return !1;
-                            })(e, i, E, c),
-                            g = (function (e) {
+                            })(e, E, i, c),
+                            P = (function (e) {
                                 if (e instanceof HTMLFormElement) return 'form';
                                 let t = er(e.tagName);
-                                return eI.test(t) ? 'div' : t;
+                                return eu.test(t) ? 'div' : t;
                             })(e),
-                            U = {},
-                            P = e.attributes.length;
-                        for (let t = 0; t < P; t++) {
+                            g = {},
+                            U = e.attributes.length;
+                        for (let t = 0; t < U; t++) {
                             let r = e.attributes[t];
-                            r.name && !eD(g, r.name, r.value) && (U[r.name] = eS(o, g, er(r.name), r.value, e, u));
+                            r.name && !eS(P, r.name, r.value) && (g[r.name] = eD(o, P, er(r.name), r.value, e, I));
                         }
-                        if ('link' === g && s) {
+                        if ('link' === P && s) {
                             let t = Array.from(o.styleSheets).find((t) => t.href === e.href),
                                 r = null;
-                            t && (r = J(t)), r && (delete U.rel, delete U.href, (U._cssText = eL(r, t.href)));
+                            t && (r = J(t)), r && (delete g.rel, delete g.href, (g._cssText = ef(r, t.href)));
                         }
-                        if ('style' === g && e.sheet && !(e.innerText || e.textContent || '').trim().length) {
+                        if ('style' === P && e.sheet && !(e.innerText || e.textContent || '').trim().length) {
                             let t = J(e.sheet);
-                            t && (U._cssText = eL(t, eh()));
+                            t && (g._cssText = ef(t, eh()));
                         }
-                        if ('input' === g || 'textarea' === g || 'select' === g || 'option' === g) {
+                        if ('input' === P || 'textarea' === P || 'select' === P || 'option' === P) {
                             let t = e_(e),
-                                r = eo(e, en(g), t),
-                                n = e.checked;
+                                r = eo(e, ea(P), t),
+                                a = e.checked;
                             if ('submit' !== t && 'button' !== t && r) {
-                                let n = eU(
+                                let a = eg(
                                     e,
                                     p,
-                                    S,
-                                    h,
                                     D,
+                                    h,
+                                    S,
                                     ee({
                                         type: t,
-                                        tagName: en(g),
+                                        tagName: ea(P),
                                         maskInputOptions: l
                                     })
                                 );
-                                U.value = et({
-                                    isMasked: n,
+                                g.value = et({
+                                    isMasked: a,
                                     element: e,
                                     value: r,
-                                    maskInputFn: I
+                                    maskInputFn: u
                                 });
                             }
-                            n && (U.checked = n);
+                            a && (g.checked = a);
                         }
-                        if (('option' === g && (e.selected && !l.select ? (U.selected = !0) : delete U.selected), 'canvas' === g && T)) {
+                        if (('option' === P && (e.selected && !l.select ? (g.selected = !0) : delete g.selected), 'canvas' === P && N)) {
                             if ('2d' === e.__context)
                                 !(function (e) {
                                     let t = e.getContext('2d');
                                     if (!t) return !0;
                                     for (let r = 0; r < e.width; r += 50)
-                                        for (let n = 0; n < e.height; n += 50) {
-                                            let a = t.getImageData;
-                                            if (new Uint32Array((ea in a ? a[ea] : a).call(t, r, n, Math.min(50, e.width - r), Math.min(50, e.height - n)).data.buffer).some((e) => 0 !== e)) return !1;
+                                        for (let a = 0; a < e.height; a += 50) {
+                                            let n = t.getImageData;
+                                            if (new Uint32Array((en in n ? n[en] : n).call(t, r, a, Math.min(50, e.width - r), Math.min(50, e.height - a)).data.buffer).some((e) => 0 !== e)) return !1;
                                         }
                                     return !0;
-                                })(e) && (U.rr_dataURL = e.toDataURL(R.type, R.quality));
+                                })(e) && (g.rr_dataURL = e.toDataURL(R.type, R.quality));
                             else if (!('__context' in e)) {
                                 let t = e.toDataURL(R.type, R.quality),
                                     r = document.createElement('canvas');
-                                (r.width = e.width), (r.height = e.height), t !== r.toDataURL(R.type, R.quality) && (U.rr_dataURL = t);
+                                (r.width = e.width), (r.height = e.height), t !== r.toDataURL(R.type, R.quality) && (g.rr_dataURL = t);
                             }
                         }
-                        if ('img' === g && A) {
-                            !n && (a = (n = o.createElement('canvas')).getContext('2d'));
+                        if ('img' === P && T) {
+                            !a && (n = (a = o.createElement('canvas')).getContext('2d'));
                             let t = e.crossOrigin;
                             e.crossOrigin = 'anonymous';
                             let r = () => {
                                 e.removeEventListener('load', r);
                                 try {
-                                    (n.width = e.naturalWidth), (n.height = e.naturalHeight), a.drawImage(e, 0, 0), (U.rr_dataURL = n.toDataURL(R.type, R.quality));
+                                    (a.width = e.naturalWidth), (a.height = e.naturalHeight), n.drawImage(e, 0, 0), (g.rr_dataURL = a.toDataURL(R.type, R.quality));
                                 } catch (t) {
                                     console.warn(`Cannot inline img src=${e.currentSrc}! Error: ${t}`);
                                 }
-                                t ? (U.crossOrigin = t) : e.removeAttribute('crossorigin');
+                                t ? (g.crossOrigin = t) : e.removeAttribute('crossorigin');
                             };
                             e.complete && 0 !== e.naturalWidth ? r() : e.addEventListener('load', r);
                         }
-                        if ((('audio' === g || 'video' === g) && ((U.rr_mediaState = e.paused ? 'paused' : 'played'), (U.rr_mediaCurrentTime = e.currentTime)), !L && (e.scrollLeft && (U.rr_scrollLeft = e.scrollLeft), e.scrollTop && (U.rr_scrollTop = e.scrollTop)), C)) {
+                        if ((('audio' === P || 'video' === P) && ((g.rr_mediaState = e.paused ? 'paused' : 'played'), (g.rr_mediaCurrentTime = e.currentTime)), !f && (e.scrollLeft && (g.rr_scrollLeft = e.scrollLeft), e.scrollTop && (g.rr_scrollTop = e.scrollTop)), C)) {
                             let { width: t, height: r } = e.getBoundingClientRect();
-                            U = {
-                                class: U.class,
+                            g = {
+                                class: g.class,
                                 rr_width: `${t}px`,
                                 rr_height: `${r}px`
                             };
                         }
-                        'iframe' === g && !d(U.src) && (!C && !e.contentDocument && (U.rr_src = U.src), delete U.src);
+                        'iframe' === P && !d(g.src) && (!C && !e.contentDocument && (g.rr_src = g.src), delete g.src);
                         try {
-                            customElements.get(g) && (_ = !0);
+                            customElements.get(P) && (_ = !0);
                         } catch (e) {}
                         return {
-                            type: N.Element,
-                            tagName: g,
-                            attributes: U,
+                            type: A.Element,
+                            tagName: P,
+                            attributes: g,
                             childNodes: [],
                             isSVG: !!('svg' === (r = e).tagName || r.ownerSVGElement) || void 0,
                             needBlock: C,
-                            rootId: f,
+                            rootId: O,
                             isCustom: _
                         };
                     })(e, {
                         doc: r,
                         blockClass: o,
-                        blockSelector: i,
-                        unblockSelector: E,
-                        inlineStylesheet: A,
+                        blockSelector: E,
+                        unblockSelector: i,
+                        inlineStylesheet: T,
                         maskAttributeFn: s,
-                        maskInputOptions: T,
-                        maskInputFn: L,
-                        dataURLOptions: f,
-                        inlineImages: O,
+                        maskInputOptions: N,
+                        maskInputFn: f,
+                        dataURLOptions: O,
+                        inlineImages: L,
                         recordCanvas: p,
                         keepIframeSrcFn: h,
-                        newlyAddedElement: S,
-                        rootId: D,
+                        newlyAddedElement: D,
+                        rootId: S,
                         maskAllText: c,
                         maskTextClass: l,
-                        unmaskTextClass: u,
-                        maskTextSelector: I,
+                        unmaskTextClass: I,
+                        maskTextSelector: u,
                         unmaskTextSelector: R
                     });
                 case e.TEXT_NODE:
                     return (function (e, t) {
-                        let { maskAllText: r, maskTextClass: n, unmaskTextClass: a, maskTextSelector: _, unmaskTextSelector: o, maskTextFn: i, maskInputOptions: E, maskInputFn: c, rootId: s } = t,
+                        let { maskAllText: r, maskTextClass: a, unmaskTextClass: n, maskTextSelector: _, unmaskTextSelector: o, maskTextFn: E, maskInputOptions: i, maskInputFn: c, rootId: s } = t,
                             l = e.parentNode && e.parentNode.tagName,
-                            u = e.textContent,
-                            I = 'STYLE' === l || void 0,
+                            I = e.textContent,
+                            u = 'STYLE' === l || void 0,
                             R = 'SCRIPT' === l || void 0,
-                            A = 'TEXTAREA' === l || void 0;
-                        if (I && u) {
+                            T = 'TEXTAREA' === l || void 0;
+                        if (u && I) {
                             try {
-                                e.nextSibling || e.previousSibling || ($([e, 'access', (e) => e.parentNode, 'access', (e) => e.sheet, 'optionalAccess', (e) => e.cssRules]) && (u = J(e.parentNode.sheet)));
+                                e.nextSibling || e.previousSibling || ($([e, 'access', (e) => e.parentNode, 'access', (e) => e.sheet, 'optionalAccess', (e) => e.cssRules]) && (I = J(e.parentNode.sheet)));
                             } catch (t) {
                                 console.warn(`Cannot get CSS styles from text's parentNode. Error: ${t}`, e);
                             }
-                            u = eL(u, eh());
+                            I = ef(I, eh());
                         }
-                        R && (u = 'SCRIPT_PLACEHOLDER');
-                        let T = eU(e, n, _, a, o, r);
+                        R && (I = 'SCRIPT_PLACEHOLDER');
+                        let N = eg(e, a, _, n, o, r);
                         return (
-                            !I && !R && !A && u && T && (u = i ? i(u, e.parentElement) : u.replace(/[\S]/g, '*')),
-                            A && u && (E.textarea || T) && (u = c ? c(u, e.parentNode) : u.replace(/[\S]/g, '*')),
+                            !u && !R && !T && I && N && (I = E ? E(I, e.parentElement) : I.replace(/[\S]/g, '*')),
+                            T && I && (i.textarea || N) && (I = c ? c(I, e.parentNode) : I.replace(/[\S]/g, '*')),
                             'OPTION' === l &&
-                                u &&
-                                (u = et({
-                                    isMasked: eU(
+                                I &&
+                                (I = et({
+                                    isMasked: eg(
                                         e,
-                                        n,
-                                        _,
                                         a,
+                                        _,
+                                        n,
                                         o,
                                         ee({
                                             type: null,
                                             tagName: l,
-                                            maskInputOptions: E
+                                            maskInputOptions: i
                                         })
                                     ),
                                     element: e,
-                                    value: u,
+                                    value: I,
                                     maskInputFn: c
                                 })),
                             {
-                                type: N.Text,
-                                textContent: u || '',
-                                isStyle: I,
+                                type: A.Text,
+                                textContent: I || '',
+                                isStyle: u,
                                 rootId: s
                             }
                         );
                     })(e, {
                         maskAllText: c,
                         maskTextClass: l,
-                        unmaskTextClass: u,
-                        maskTextSelector: I,
+                        unmaskTextClass: I,
+                        maskTextSelector: u,
                         unmaskTextSelector: R,
                         maskTextFn: d,
-                        maskInputOptions: T,
-                        maskInputFn: L,
-                        rootId: D
+                        maskInputOptions: N,
+                        maskInputFn: f,
+                        rootId: S
                     });
                 case e.CDATA_SECTION_NODE:
                     return {
-                        type: N.CDATA,
+                        type: A.CDATA,
                         textContent: '',
-                        rootId: D
+                        rootId: S
                     };
                 case e.COMMENT_NODE:
                     return {
-                        type: N.Comment,
+                        type: A.Comment,
                         textContent: e.textContent || '',
-                        rootId: D
+                        rootId: S
                     };
                 default:
                     return !1;
@@ -589,22 +589,22 @@ function eM(e, t) {
         })(e, {
             doc: _,
             mirror: o,
-            blockClass: i,
-            blockSelector: E,
+            blockClass: E,
+            blockSelector: i,
             maskAllText: s,
             unblockSelector: c,
             maskTextClass: l,
-            unmaskTextClass: u,
-            maskTextSelector: I,
+            unmaskTextClass: I,
+            maskTextSelector: u,
             unmaskTextSelector: R,
-            inlineStylesheet: T,
+            inlineStylesheet: N,
             maskInputOptions: d,
-            maskAttributeFn: L,
-            maskTextFn: f,
-            maskInputFn: O,
+            maskAttributeFn: f,
+            maskTextFn: O,
+            maskInputFn: L,
             dataURLOptions: h,
-            inlineImages: S,
-            recordCanvas: D,
+            inlineImages: D,
+            recordCanvas: S,
             keepIframeSrcFn: G,
             newlyAddedElement: m
         });
@@ -612,62 +612,62 @@ function eM(e, t) {
     r = o.hasNode(e)
         ? o.getId(e)
         : !(function (e, t) {
-                if (t.comment && e.type === N.Comment) return !0;
-                if (e.type === N.Element) {
-                    if (t.script && ('script' === e.tagName || ('link' === e.tagName && ('preload' === e.attributes.rel || 'modulepreload' === e.attributes.rel) && 'script' === e.attributes.as) || ('link' === e.tagName && 'prefetch' === e.attributes.rel && 'string' == typeof e.attributes.href && 'js' === ei(e.attributes.href)))) return !0;
-                    if (t.headFavicon && (('link' === e.tagName && 'shortcut icon' === e.attributes.rel) || ('meta' === e.tagName && (eP(e.attributes.name).match(/^msapplication-tile(image|color)$/) || 'application-name' === eP(e.attributes.name) || 'icon' === eP(e.attributes.rel) || 'apple-touch-icon' === eP(e.attributes.rel) || 'shortcut icon' === eP(e.attributes.rel))))) return !0;
+                if (t.comment && e.type === A.Comment) return !0;
+                if (e.type === A.Element) {
+                    if (t.script && ('script' === e.tagName || ('link' === e.tagName && ('preload' === e.attributes.rel || 'modulepreload' === e.attributes.rel) && 'script' === e.attributes.as) || ('link' === e.tagName && 'prefetch' === e.attributes.rel && 'string' == typeof e.attributes.href && 'js' === eE(e.attributes.href)))) return !0;
+                    if (t.headFavicon && (('link' === e.tagName && 'shortcut icon' === e.attributes.rel) || ('meta' === e.tagName && (eU(e.attributes.name).match(/^msapplication-tile(image|color)$/) || 'application-name' === eU(e.attributes.name) || 'icon' === eU(e.attributes.rel) || 'apple-touch-icon' === eU(e.attributes.rel) || 'shortcut icon' === eU(e.attributes.rel))))) return !0;
                     else if ('meta' === e.tagName) {
-                        if (t.headMetaDescKeywords && eP(e.attributes.name).match(/^description|keywords$/)) return !0;
-                        if (t.headMetaSocial && (eP(e.attributes.property).match(/^(og|twitter|fb):/) || eP(e.attributes.name).match(/^(og|twitter):/) || 'pinterest' === eP(e.attributes.name))) return !0;
-                        else if (t.headMetaRobots && ('robots' === eP(e.attributes.name) || 'googlebot' === eP(e.attributes.name) || 'bingbot' === eP(e.attributes.name))) return !0;
+                        if (t.headMetaDescKeywords && eU(e.attributes.name).match(/^description|keywords$/)) return !0;
+                        if (t.headMetaSocial && (eU(e.attributes.property).match(/^(og|twitter|fb):/) || eU(e.attributes.name).match(/^(og|twitter):/) || 'pinterest' === eU(e.attributes.name))) return !0;
+                        else if (t.headMetaRobots && ('robots' === eU(e.attributes.name) || 'googlebot' === eU(e.attributes.name) || 'bingbot' === eU(e.attributes.name))) return !0;
                         else if (t.headMetaHttpEquiv && void 0 !== e.attributes['http-equiv']) return !0;
-                        else if (t.headMetaAuthorship && ('author' === eP(e.attributes.name) || 'generator' === eP(e.attributes.name) || 'framework' === eP(e.attributes.name) || 'publisher' === eP(e.attributes.name) || 'progid' === eP(e.attributes.name) || eP(e.attributes.property).match(/^article:/) || eP(e.attributes.property).match(/^product:/))) return !0;
-                        else if (t.headMetaVerification && ('google-site-verification' === eP(e.attributes.name) || 'yandex-verification' === eP(e.attributes.name) || 'csrf-token' === eP(e.attributes.name) || 'p:domain_verify' === eP(e.attributes.name) || 'verify-v1' === eP(e.attributes.name) || 'verification' === eP(e.attributes.name) || 'shopify-checkout-api-token' === eP(e.attributes.name))) return !0;
+                        else if (t.headMetaAuthorship && ('author' === eU(e.attributes.name) || 'generator' === eU(e.attributes.name) || 'framework' === eU(e.attributes.name) || 'publisher' === eU(e.attributes.name) || 'progid' === eU(e.attributes.name) || eU(e.attributes.property).match(/^article:/) || eU(e.attributes.property).match(/^product:/))) return !0;
+                        else if (t.headMetaVerification && ('google-site-verification' === eU(e.attributes.name) || 'yandex-verification' === eU(e.attributes.name) || 'csrf-token' === eU(e.attributes.name) || 'p:domain_verify' === eU(e.attributes.name) || 'verify-v1' === eU(e.attributes.name) || 'verification' === eU(e.attributes.name) || 'shopify-checkout-api-token' === eU(e.attributes.name))) return !0;
                     }
                 }
                 return !1;
             })(b, p) &&
-            (y || b.type !== N.Text || b.isStyle || b.textContent.replace(/^\s+|\s+$/gm, '').length)
+            (y || b.type !== A.Text || b.isStyle || b.textContent.replace(/^\s+|\s+$/gm, '').length)
           ? eR()
           : -2;
     let v = Object.assign(b, { id: r });
     if ((o.add(e, v), -2 === r)) return null;
     C && C(e);
-    let w = !A;
-    if (v.type === N.Element) {
+    let w = !T;
+    if (v.type === A.Element) {
         (w = w && !v.needBlock), delete v.needBlock;
         let t = e.shadowRoot;
         t && z(t) && (v.isShadowHost = !0);
     }
-    if ((v.type === N.Document || v.type === N.Element) && w) {
+    if ((v.type === A.Document || v.type === A.Element) && w) {
         var B;
-        p.headWhitespace && v.type === N.Element && 'head' === v.tagName && (y = !1);
+        p.headWhitespace && v.type === A.Element && 'head' === v.tagName && (y = !1);
         let t = {
             doc: _,
             mirror: o,
-            blockClass: i,
-            blockSelector: E,
+            blockClass: E,
+            blockSelector: i,
             maskAllText: s,
             unblockSelector: c,
             maskTextClass: l,
-            unmaskTextClass: u,
-            maskTextSelector: I,
+            unmaskTextClass: I,
+            maskTextSelector: u,
             unmaskTextSelector: R,
-            skipChild: A,
-            inlineStylesheet: T,
+            skipChild: T,
+            inlineStylesheet: N,
             maskInputOptions: d,
-            maskAttributeFn: L,
-            maskTextFn: f,
-            maskInputFn: O,
+            maskAttributeFn: f,
+            maskTextFn: O,
+            maskInputFn: L,
             slimDOMOptions: p,
             dataURLOptions: h,
-            inlineImages: S,
-            recordCanvas: D,
+            inlineImages: D,
+            recordCanvas: S,
             preserveWhiteSpace: y,
             onSerialize: C,
-            onIframeLoad: g,
-            iframeLoadTimeout: U,
-            onStylesheetLoad: P,
+            onIframeLoad: P,
+            iframeLoadTimeout: g,
+            onStylesheetLoad: U,
             stylesheetLoadTimeout: M,
             keepIframeSrcFn: G
         };
@@ -677,128 +677,128 @@ function eM(e, t) {
         }
         if ((B = e).nodeType === B.ELEMENT_NODE && e.shadowRoot)
             for (let r of Array.from(e.shadowRoot.childNodes)) {
-                let n = eM(r, t);
-                n && (z(e.shadowRoot) && (n.isShadow = !0), v.childNodes.push(n));
+                let a = eM(r, t);
+                a && (z(e.shadowRoot) && (a.isShadow = !0), v.childNodes.push(a));
             }
     }
     return (
         e.parentNode && q(e.parentNode) && z(e.parentNode) && (v.isShadow = !0),
-        v.type === N.Element &&
+        v.type === A.Element &&
             'iframe' === v.tagName &&
             !(function (e, t, r) {
-                let n;
-                let a = e.contentWindow;
-                if (!a) return;
+                let a;
+                let n = e.contentWindow;
+                if (!n) return;
                 let _ = !1;
                 try {
-                    n = a.document.readyState;
+                    a = n.document.readyState;
                 } catch (e) {
                     return;
                 }
-                if ('complete' !== n) {
-                    let n = es(() => {
+                if ('complete' !== a) {
+                    let a = es(() => {
                         !_ && (t(), (_ = !0));
                     }, r);
                     e.addEventListener('load', () => {
-                        el(n), (_ = !0), t();
+                        el(a), (_ = !0), t();
                     });
                     return;
                 }
                 let o = 'about:blank';
-                if (a.location.href !== o || e.src === o || '' === e.src) return es(t, 0), e.addEventListener('load', t);
+                if (n.location.href !== o || e.src === o || '' === e.src) return es(t, 0), e.addEventListener('load', t);
                 e.addEventListener('load', t);
             })(
                 e,
                 () => {
                     let t = e.contentDocument;
-                    if (t && g) {
+                    if (t && P) {
                         let r = eM(t, {
                             doc: t,
                             mirror: o,
-                            blockClass: i,
-                            blockSelector: E,
+                            blockClass: E,
+                            blockSelector: i,
                             unblockSelector: c,
                             maskAllText: s,
                             maskTextClass: l,
-                            unmaskTextClass: u,
-                            maskTextSelector: I,
+                            unmaskTextClass: I,
+                            maskTextSelector: u,
                             unmaskTextSelector: R,
                             skipChild: !1,
-                            inlineStylesheet: T,
+                            inlineStylesheet: N,
                             maskInputOptions: d,
-                            maskAttributeFn: L,
-                            maskTextFn: f,
-                            maskInputFn: O,
+                            maskAttributeFn: f,
+                            maskTextFn: O,
+                            maskInputFn: L,
                             slimDOMOptions: p,
                             dataURLOptions: h,
-                            inlineImages: S,
-                            recordCanvas: D,
+                            inlineImages: D,
+                            recordCanvas: S,
                             preserveWhiteSpace: y,
                             onSerialize: C,
-                            onIframeLoad: g,
-                            iframeLoadTimeout: U,
-                            onStylesheetLoad: P,
+                            onIframeLoad: P,
+                            iframeLoadTimeout: g,
+                            onStylesheetLoad: U,
                             stylesheetLoadTimeout: M,
                             keepIframeSrcFn: G
                         });
-                        r && g(e, r);
+                        r && P(e, r);
                     }
                 },
-                U
+                g
             ),
-        v.type === N.Element &&
+        v.type === A.Element &&
             'link' === v.tagName &&
             'string' == typeof v.attributes.rel &&
-            ('stylesheet' === v.attributes.rel || ('preload' === v.attributes.rel && 'string' == typeof v.attributes.href && 'css' === ei(v.attributes.href))) &&
+            ('stylesheet' === v.attributes.rel || ('preload' === v.attributes.rel && 'string' == typeof v.attributes.href && 'css' === eE(v.attributes.href))) &&
             !(function (e, t, r) {
-                let n,
-                    a = !1;
+                let a,
+                    n = !1;
                 try {
-                    n = e.sheet;
+                    a = e.sheet;
                 } catch (e) {
                     return;
                 }
-                if (n) return;
+                if (a) return;
                 let _ = es(() => {
-                    !a && (t(), (a = !0));
+                    !n && (t(), (n = !0));
                 }, r);
                 e.addEventListener('load', () => {
-                    el(_), (a = !0), t();
+                    el(_), (n = !0), t();
                 });
             })(
                 e,
                 () => {
-                    if (P) {
+                    if (U) {
                         let t = eM(e, {
                             doc: _,
                             mirror: o,
-                            blockClass: i,
-                            blockSelector: E,
+                            blockClass: E,
+                            blockSelector: i,
                             unblockSelector: c,
                             maskAllText: s,
                             maskTextClass: l,
-                            unmaskTextClass: u,
-                            maskTextSelector: I,
+                            unmaskTextClass: I,
+                            maskTextSelector: u,
                             unmaskTextSelector: R,
                             skipChild: !1,
-                            inlineStylesheet: T,
+                            inlineStylesheet: N,
                             maskInputOptions: d,
-                            maskAttributeFn: L,
-                            maskTextFn: f,
-                            maskInputFn: O,
+                            maskAttributeFn: f,
+                            maskTextFn: O,
+                            maskInputFn: L,
                             slimDOMOptions: p,
                             dataURLOptions: h,
-                            inlineImages: S,
-                            recordCanvas: D,
+                            inlineImages: D,
+                            recordCanvas: S,
                             preserveWhiteSpace: y,
                             onSerialize: C,
-                            onIframeLoad: g,
-                            iframeLoadTimeout: U,
-                            onStylesheetLoad: P,
+                            onIframeLoad: P,
+                            iframeLoadTimeout: g,
+                            onStylesheetLoad: U,
                             stylesheetLoadTimeout: M,
                             keepIframeSrcFn: G
                         });
-                        t && P(e, t);
+                        t && U(e, t);
                     }
                 },
                 M
@@ -809,21 +809,21 @@ function eM(e, t) {
 function eG(e) {
     let t;
     let r = e[0],
-        n = 1;
-    for (; n < e.length; ) {
-        let a = e[n],
-            _ = e[n + 1];
-        if (((n += 2), ('optionalAccess' === a || 'optionalCall' === a) && null == r)) return;
-        'access' === a || 'optionalAccess' === a ? ((t = r), (r = _(r))) : ('call' === a || 'optionalCall' === a) && ((r = _((...e) => r.call(t, ...e))), (t = void 0));
+        a = 1;
+    for (; a < e.length; ) {
+        let n = e[a],
+            _ = e[a + 1];
+        if (((a += 2), ('optionalAccess' === n || 'optionalCall' === n) && null == r)) return;
+        'access' === n || 'optionalAccess' === n ? ((t = r), (r = _(r))) : ('call' === n || 'optionalCall' === n) && ((r = _((...e) => r.call(t, ...e))), (t = void 0));
     }
     return r;
 }
 function em(e, t, r = document) {
-    let n = {
+    let a = {
         capture: !0,
         passive: !0
     };
-    return r.addEventListener(e, t, n), () => r.removeEventListener(e, t, n);
+    return r.addEventListener(e, t, a), () => r.removeEventListener(e, t, a);
 }
 let ey = 'Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.',
     eb = {
@@ -839,46 +839,46 @@ let ey = 'Please stop import mirror directly. Instead of that,\r\nnow you can us
         }
     };
 function ev(e, t, r = {}) {
-    let n = null,
-        a = 0;
+    let a = null,
+        n = 0;
     return function (..._) {
         let o = Date.now();
-        !a && !1 === r.leading && (a = o);
-        let i = t - (o - a),
-            E = this;
-        i <= 0 || i > t
-            ? (n &&
+        !n && !1 === r.leading && (n = o);
+        let E = t - (o - n),
+            i = this;
+        E <= 0 || E > t
+            ? (a &&
                   ((function (...e) {
                       eQ('clearTimeout')(...e);
-                  })(n),
-                  (n = null)),
-              (a = o),
-              e.apply(E, _))
-            : !n &&
+                  })(a),
+                  (a = null)),
+              (n = o),
+              e.apply(i, _))
+            : !a &&
               !1 !== r.trailing &&
-              (n = eZ(() => {
-                  (a = !1 === r.leading ? 0 : Date.now()), (n = null), e.apply(E, _);
-              }, i));
+              (a = eZ(() => {
+                  (n = !1 === r.leading ? 0 : Date.now()), (a = null), e.apply(i, _);
+              }, E));
     };
 }
 'undefined' != typeof window && window.Proxy && window.Reflect && (eb = new Proxy(eb, { get: (e, t, r) => ('map' === t && console.error(ey), Reflect.get(e, t, r)) }));
 function ew(e, t, r) {
     try {
         if (!(t in e)) return () => {};
-        let n = e[t],
-            a = r(n);
+        let a = e[t],
+            n = r(a);
         return (
-            'function' == typeof a &&
-                ((a.prototype = a.prototype || {}),
-                Object.defineProperties(a, {
+            'function' == typeof n &&
+                ((n.prototype = n.prototype || {}),
+                Object.defineProperties(n, {
                     __rrweb_original__: {
                         enumerable: !1,
-                        value: n
+                        value: a
                     }
                 })),
-            (e[t] = a),
+            (e[t] = n),
             () => {
-                e[t] = n;
+                e[t] = a;
             }
         );
     } catch (e) {
@@ -893,27 +893,27 @@ function eW(e) {
         top: t.scrollingElement ? t.scrollingElement.scrollTop : void 0 !== e.pageYOffset ? e.pageYOffset : eG([t, 'optionalAccess', (e) => e.documentElement, 'access', (e) => e.scrollTop]) || eG([t, 'optionalAccess', (e) => e.body, 'optionalAccess', (e) => e.parentElement, 'optionalAccess', (e) => e.scrollTop]) || eG([t, 'optionalAccess', (e) => e.body, 'optionalAccess', (e) => e.scrollTop]) || 0
     };
 }
-function eH() {
+function eY() {
     return window.innerHeight || (document.documentElement && document.documentElement.clientHeight) || (document.body && document.body.clientHeight);
 }
-function ex() {
+function eH() {
     return window.innerWidth || (document.documentElement && document.documentElement.clientWidth) || (document.body && document.body.clientWidth);
 }
-function eY(e) {
+function ex(e) {
     return e ? (e.nodeType === e.ELEMENT_NODE ? e : e.parentElement) : null;
 }
-function eK(e, t, r, n, a) {
+function eK(e, t, r, a, n) {
     if (!e) return !1;
-    let _ = eY(e);
+    let _ = ex(e);
     if (!_) return !1;
-    let o = eg(t, r);
-    if (!a) {
-        let e = n && _.matches(n);
+    let o = eP(t, r);
+    if (!n) {
+        let e = a && _.matches(a);
         return o(_) && !e;
     }
-    let i = eC(_, o),
-        E = -1;
-    return !(i < 0) && (n && (E = eC(_, eg(null, n))), (!!(i > -1) && !!(E < 0)) || i < E);
+    let E = eC(_, o),
+        i = -1;
+    return !(E < 0) && (a && (i = eC(_, eP(null, a))), (!!(E > -1) && !!(i < 0)) || E < i);
 }
 !/[1-9][0-9]{12}/.test(Date.now().toString()) && (eB = () => new Date().getTime());
 function eV(e, t) {
@@ -936,7 +936,7 @@ class e$ {
         (this.id = 1), (this.styleIDMap = new WeakMap()), (this.idStyleMap = new Map());
     }
     getId(e) {
-        return (0, T.h)(this.styleIDMap.get(e), () => -1);
+        return (0, N.h)(this.styleIDMap.get(e), () => -1);
     }
     has(e) {
         return this.styleIDMap.has(e);
@@ -982,27 +982,27 @@ function eQ(e) {
     let t = eJ[e];
     if (t) return t;
     let r = window.document,
-        n = window[e];
+        a = window[e];
     if (r && 'function' == typeof r.createElement)
         try {
             let t = r.createElement('iframe');
             (t.hidden = !0), r.head.appendChild(t);
-            let a = t.contentWindow;
-            a && a[e] && (n = a[e]), r.head.removeChild(t);
+            let n = t.contentWindow;
+            n && n[e] && (a = n[e]), r.head.removeChild(t);
         } catch (e) {}
-    return (eJ[e] = n.bind(window));
+    return (eJ[e] = a.bind(window));
 }
 function eZ(...e) {
     return eQ('setTimeout')(...e);
 }
 var e0 = (((s = e0 || {})[(s.DomContentLoaded = 0)] = 'DomContentLoaded'), (s[(s.Load = 1)] = 'Load'), (s[(s.FullSnapshot = 2)] = 'FullSnapshot'), (s[(s.IncrementalSnapshot = 3)] = 'IncrementalSnapshot'), (s[(s.Meta = 4)] = 'Meta'), (s[(s.Custom = 5)] = 'Custom'), (s[(s.Plugin = 6)] = 'Plugin'), s);
 var e1 = (((l = e1 || {})[(l.Mutation = 0)] = 'Mutation'), (l[(l.MouseMove = 1)] = 'MouseMove'), (l[(l.MouseInteraction = 2)] = 'MouseInteraction'), (l[(l.Scroll = 3)] = 'Scroll'), (l[(l.ViewportResize = 4)] = 'ViewportResize'), (l[(l.Input = 5)] = 'Input'), (l[(l.TouchMove = 6)] = 'TouchMove'), (l[(l.MediaInteraction = 7)] = 'MediaInteraction'), (l[(l.StyleSheetRule = 8)] = 'StyleSheetRule'), (l[(l.CanvasMutation = 9)] = 'CanvasMutation'), (l[(l.Font = 10)] = 'Font'), (l[(l.Log = 11)] = 'Log'), (l[(l.Drag = 12)] = 'Drag'), (l[(l.StyleDeclaration = 13)] = 'StyleDeclaration'), (l[(l.Selection = 14)] = 'Selection'), (l[(l.AdoptedStyleSheet = 15)] = 'AdoptedStyleSheet'), (l[(l.CustomElement = 16)] = 'CustomElement'), l);
-var e2 = (((u = e2 || {})[(u.MouseUp = 0)] = 'MouseUp'), (u[(u.MouseDown = 1)] = 'MouseDown'), (u[(u.Click = 2)] = 'Click'), (u[(u.ContextMenu = 3)] = 'ContextMenu'), (u[(u.DblClick = 4)] = 'DblClick'), (u[(u.Focus = 5)] = 'Focus'), (u[(u.Blur = 6)] = 'Blur'), (u[(u.TouchStart = 7)] = 'TouchStart'), (u[(u.TouchMove_Departed = 8)] = 'TouchMove_Departed'), (u[(u.TouchEnd = 9)] = 'TouchEnd'), (u[(u.TouchCancel = 10)] = 'TouchCancel'), u);
-var e3 = (((I = e3 || {})[(I.Mouse = 0)] = 'Mouse'), (I[(I.Pen = 1)] = 'Pen'), (I[(I.Touch = 2)] = 'Touch'), I);
-function e5(e) {
+var e2 = (((I = e2 || {})[(I.MouseUp = 0)] = 'MouseUp'), (I[(I.MouseDown = 1)] = 'MouseDown'), (I[(I.Click = 2)] = 'Click'), (I[(I.ContextMenu = 3)] = 'ContextMenu'), (I[(I.DblClick = 4)] = 'DblClick'), (I[(I.Focus = 5)] = 'Focus'), (I[(I.Blur = 6)] = 'Blur'), (I[(I.TouchStart = 7)] = 'TouchStart'), (I[(I.TouchMove_Departed = 8)] = 'TouchMove_Departed'), (I[(I.TouchEnd = 9)] = 'TouchEnd'), (I[(I.TouchCancel = 10)] = 'TouchCancel'), I);
+var e3 = (((u = e3 || {})[(u.Mouse = 0)] = 'Mouse'), (u[(u.Pen = 1)] = 'Pen'), (u[(u.Touch = 2)] = 'Touch'), u);
+function e6(e) {
     return '__ln' in e;
 }
-class e6 {
+class e4 {
     constructor() {
         (this.length = 0), (this.head = null), (this.tail = null);
     }
@@ -1014,12 +1014,12 @@ class e6 {
                 (function (e) {
                     let t;
                     let r = e[0],
-                        n = 1;
-                    for (; n < e.length; ) {
-                        let a = e[n],
-                            _ = e[n + 1];
-                        if (((n += 2), ('optionalAccess' === a || 'optionalCall' === a) && null == r)) return;
-                        'access' === a || 'optionalAccess' === a ? ((t = r), (r = _(r))) : ('call' === a || 'optionalCall' === a) && ((r = _((...e) => r.call(t, ...e))), (t = void 0));
+                        a = 1;
+                    for (; a < e.length; ) {
+                        let n = e[a],
+                            _ = e[a + 1];
+                        if (((a += 2), ('optionalAccess' === n || 'optionalCall' === n) && null == r)) return;
+                        'access' === n || 'optionalAccess' === n ? ((t = r), (r = _(r))) : ('call' === n || 'optionalCall' === n) && ((r = _((...e) => r.call(t, ...e))), (t = void 0));
                     }
                     return r;
                 })([t, 'optionalAccess', (e) => e.next]) || null;
@@ -1045,7 +1045,7 @@ class e6 {
         if (!!this.head) t.previous ? ((t.previous.next = t.next), t.next ? (t.next.previous = t.previous) : (this.tail = t.previous)) : ((this.head = t.next), this.head ? (this.head.previous = null) : (this.tail = null)), e.__ln && delete e.__ln, this.length--;
     }
 }
-let e4 = (e, t) => `${e}@${t}`;
+let e5 = (e, t) => `${e}@${t}`;
 class e8 {
     constructor() {
         (this.frozen = !1),
@@ -1066,19 +1066,19 @@ class e8 {
                 if (this.frozen || this.locked) return;
                 let e = [],
                     t = new Set(),
-                    r = new e6(),
-                    n = (e) => {
+                    r = new e4(),
+                    a = (e) => {
                         let t = e,
                             r = -2;
                         for (; -2 === r; ) r = (t = t && t.nextSibling) && this.mirror.getId(t);
                         return r;
                     },
-                    a = (a) => {
-                        if (!a.parentNode || !ez(a)) return;
-                        let _ = q(a.parentNode) ? this.mirror.getId(eq(a)) : this.mirror.getId(a.parentNode),
-                            o = n(a);
-                        if (-1 === _ || -1 === o) return r.addNode(a);
-                        let i = eM(a, {
+                    n = (n) => {
+                        if (!n.parentNode || !ez(n)) return;
+                        let _ = q(n.parentNode) ? this.mirror.getId(eq(n)) : this.mirror.getId(n.parentNode),
+                            o = a(n);
+                        if (-1 === _ || -1 === o) return r.addNode(n);
+                        let E = eM(n, {
                             doc: this.doc,
                             mirror: this.mirror,
                             blockClass: this.blockClass,
@@ -1101,7 +1101,7 @@ class e8 {
                             recordCanvas: this.recordCanvas,
                             inlineImages: this.inlineImages,
                             onSerialize: (e) => {
-                                eF(e, this.mirror) && this.iframeManager.addIframe(e), eX(e, this.mirror) && this.stylesheetManager.trackLinkElement(e), ej(a) && this.shadowDomManager.addShadowRoot(a.shadowRoot, this.doc);
+                                eF(e, this.mirror) && this.iframeManager.addIframe(e), eX(e, this.mirror) && this.stylesheetManager.trackLinkElement(e), ej(n) && this.shadowDomManager.addShadowRoot(n.shadowRoot, this.doc);
                             },
                             onIframeLoad: (e, t) => {
                                 this.iframeManager.attachIframe(e, t), e.contentWindow && this.canvasManager.addWindow(e.contentWindow), this.shadowDomManager.observeAttachShadow(e);
@@ -1110,25 +1110,25 @@ class e8 {
                                 this.stylesheetManager.attachLinkElement(e, t);
                             }
                         });
-                        i &&
+                        E &&
                             (e.push({
                                 parentId: _,
                                 nextId: o,
-                                node: i
+                                node: E
                             }),
-                            t.add(i.id));
+                            t.add(E.id));
                     };
                 for (; this.mapRemoves.length; ) this.mirror.removeNodeFromMap(this.mapRemoves.shift());
                 for (let e of this.movedSet) {
-                    if (!e9(this.removes, e, this.mirror) || !!this.movedSet.has(e.parentNode)) a(e);
+                    if (!e9(this.removes, e, this.mirror) || !!this.movedSet.has(e.parentNode)) n(e);
                 }
-                for (let e of this.addedSet) te(this.droppedSet, e) || e9(this.removes, e, this.mirror) ? (te(this.movedSet, e) ? a(e) : this.droppedSet.add(e)) : a(e);
+                for (let e of this.addedSet) te(this.droppedSet, e) || e9(this.removes, e, this.mirror) ? (te(this.movedSet, e) ? n(e) : this.droppedSet.add(e)) : n(e);
                 let _ = null;
                 for (; r.length; ) {
                     let e = null;
                     if (_) {
                         let t = this.mirror.getId(_.value.parentNode),
-                            r = n(_.value);
+                            r = a(_.value);
                         -1 !== t && -1 !== r && (e = _);
                     }
                     if (!e) {
@@ -1137,15 +1137,15 @@ class e8 {
                             let r = t;
                             if (((t = t.previous), r)) {
                                 let t = this.mirror.getId(r.value.parentNode);
-                                if (-1 === n(r.value)) continue;
+                                if (-1 === a(r.value)) continue;
                                 if (-1 !== t) {
                                     e = r;
                                     break;
                                 } else {
                                     let t = r.value;
                                     if (t.parentNode && t.parentNode.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
-                                        let n = t.parentNode.host;
-                                        if (-1 !== this.mirror.getId(n)) {
+                                        let a = t.parentNode.host;
+                                        if (-1 !== this.mirror.getId(a)) {
                                             e = r;
                                             break;
                                         }
@@ -1158,7 +1158,7 @@ class e8 {
                         for (; r.head; ) r.removeNode(r.head.value);
                         break;
                     }
-                    (_ = e.previous), r.removeNode(e.value), a(e.value);
+                    (_ = e.previous), r.removeNode(e.value), n(e.value);
                 }
                 let o = {
                     texts: this.texts
@@ -1173,8 +1173,8 @@ class e8 {
                             let { attributes: t } = e;
                             if ('string' == typeof t.style) {
                                 let r = JSON.stringify(e.styleDiff),
-                                    n = JSON.stringify(e._unchangedStyles);
-                                r.length < t.style.length && (r + n).split('var(').length === t.style.split('var(').length && (t.style = e.styleDiff);
+                                    a = JSON.stringify(e._unchangedStyles);
+                                r.length < t.style.length && (r + a).split('var(').length === t.style.split('var(').length && (t.style = e.styleDiff);
                             }
                             return {
                                 id: this.mirror.getId(e.node),
@@ -1196,7 +1196,7 @@ class e8 {
                             !eK(e.target, this.blockClass, this.blockSelector, this.unblockSelector, !1) &&
                                 t !== e.oldValue &&
                                 this.texts.push({
-                                    value: eU(e.target, this.maskTextClass, this.maskTextSelector, this.unmaskTextClass, this.unmaskTextSelector, this.maskAllText) && t ? (this.maskTextFn ? this.maskTextFn(t, eY(e.target)) : t.replace(/[\S]/g, '*')) : t,
+                                    value: eg(e.target, this.maskTextClass, this.maskTextSelector, this.unmaskTextClass, this.unmaskTextSelector, this.maskAllText) && t ? (this.maskTextFn ? this.maskTextFn(t, ex(e.target)) : t.replace(/[\S]/g, '*')) : t,
                                     node: e.target
                                 });
                             break;
@@ -1204,41 +1204,41 @@ class e8 {
                         case 'attributes': {
                             let t = e.target,
                                 r = e.attributeName,
-                                n = e.target.getAttribute(r);
+                                a = e.target.getAttribute(r);
                             if ('value' === r) {
                                 let r = e_(t),
-                                    a = t.tagName;
-                                n = eo(t, a, r);
+                                    n = t.tagName;
+                                a = eo(t, n, r);
                                 let _ = ee({
                                     maskInputOptions: this.maskInputOptions,
-                                    tagName: a,
+                                    tagName: n,
                                     type: r
                                 });
-                                n = et({
-                                    isMasked: eU(e.target, this.maskTextClass, this.maskTextSelector, this.unmaskTextClass, this.unmaskTextSelector, _),
+                                a = et({
+                                    isMasked: eg(e.target, this.maskTextClass, this.maskTextSelector, this.unmaskTextClass, this.unmaskTextSelector, _),
                                     element: t,
-                                    value: n,
+                                    value: a,
                                     maskInputFn: this.maskInputFn
                                 });
                             }
-                            if (eK(e.target, this.blockClass, this.blockSelector, this.unblockSelector, !1) || n === e.oldValue) return;
-                            let a = this.attributeMap.get(e.target);
-                            if ('IFRAME' === t.tagName && 'src' === r && !this.keepIframeSrcFn(n)) {
+                            if (eK(e.target, this.blockClass, this.blockSelector, this.unblockSelector, !1) || a === e.oldValue) return;
+                            let n = this.attributeMap.get(e.target);
+                            if ('IFRAME' === t.tagName && 'src' === r && !this.keepIframeSrcFn(a)) {
                                 if (t.contentDocument) return;
                                 r = 'rr_src';
                             }
                             if (
-                                (!a &&
-                                    ((a = {
+                                (!n &&
+                                    ((n = {
                                         node: e.target,
                                         attributes: {},
                                         styleDiff: {},
                                         _unchangedStyles: {}
                                     }),
-                                    this.attributes.push(a),
-                                    this.attributeMap.set(e.target, a)),
+                                    this.attributes.push(n),
+                                    this.attributeMap.set(e.target, n)),
                                 'type' === r && 'INPUT' === t.tagName && 'password' === (e.oldValue || '').toLowerCase() && t.setAttribute('data-rr-is-password', 'true'),
-                                !eD(t.tagName, r) && ((a.attributes[r] = eS(this.doc, er(t.tagName), er(r), n, t, this.maskAttributeFn)), 'style' === r))
+                                !eS(t.tagName, r) && ((n.attributes[r] = eD(this.doc, er(t.tagName), er(r), a, t, this.maskAttributeFn)), 'style' === r))
                             ) {
                                 if (!this.unattachedDoc)
                                     try {
@@ -1247,12 +1247,12 @@ class e8 {
                                         this.unattachedDoc = this.doc;
                                     }
                                 let r = this.unattachedDoc.createElement('span');
-                                for (let n of (e.oldValue && r.setAttribute('style', e.oldValue), Array.from(t.style))) {
-                                    let e = t.style.getPropertyValue(n),
-                                        _ = t.style.getPropertyPriority(n);
-                                    e !== r.style.getPropertyValue(n) || _ !== r.style.getPropertyPriority(n) ? ('' === _ ? (a.styleDiff[n] = e) : (a.styleDiff[n] = [e, _])) : (a._unchangedStyles[n] = [e, _]);
+                                for (let a of (e.oldValue && r.setAttribute('style', e.oldValue), Array.from(t.style))) {
+                                    let e = t.style.getPropertyValue(a),
+                                        _ = t.style.getPropertyPriority(a);
+                                    e !== r.style.getPropertyValue(a) || _ !== r.style.getPropertyPriority(a) ? ('' === _ ? (n.styleDiff[a] = e) : (n.styleDiff[a] = [e, _])) : (n._unchangedStyles[a] = [e, _]);
                                 }
-                                for (let e of Array.from(r.style)) '' === t.style.getPropertyValue(e) && (a.styleDiff[e] = !1);
+                                for (let e of Array.from(r.style)) '' === t.style.getPropertyValue(e) && (n.styleDiff[e] = !1);
                             }
                             break;
                         }
@@ -1261,22 +1261,22 @@ class e8 {
                             e.addedNodes.forEach((t) => this.genAdds(t, e.target)),
                                 e.removedNodes.forEach((t) => {
                                     var r;
-                                    let n = this.mirror.getId(t),
-                                        a = q(e.target) ? this.mirror.getId(e.target.host) : this.mirror.getId(e.target);
+                                    let a = this.mirror.getId(t),
+                                        n = q(e.target) ? this.mirror.getId(e.target.host) : this.mirror.getId(e.target);
                                     if (!(eK(e.target, this.blockClass, this.blockSelector, this.unblockSelector, !1) || eV(t, this.mirror)) && ((r = t), -1 !== this.mirror.getId(r)))
                                         this.addedSet.has(t)
                                             ? (e7(this.addedSet, t), this.droppedSet.add(t))
-                                            : (this.addedSet.has(e.target) && -1 === n) ||
+                                            : (this.addedSet.has(e.target) && -1 === a) ||
                                               (function e(t, r) {
                                                   if (q(t)) return !1;
-                                                  let n = r.getId(t);
-                                                  return !r.has(n) || ((!t.parentNode || t.parentNode.nodeType !== t.DOCUMENT_NODE) && (!t.parentNode || e(t.parentNode, r)));
+                                                  let a = r.getId(t);
+                                                  return !r.has(a) || ((!t.parentNode || t.parentNode.nodeType !== t.DOCUMENT_NODE) && (!t.parentNode || e(t.parentNode, r)));
                                               })(e.target, this.mirror) ||
-                                              (this.movedSet.has(t) && this.movedMap[e4(n, a)]
+                                              (this.movedSet.has(t) && this.movedMap[e5(a, n)]
                                                   ? e7(this.movedSet, t)
                                                   : this.removes.push({
-                                                        parentId: a,
-                                                        id: n,
+                                                        parentId: n,
+                                                        id: a,
                                                         isShadow: !!(q(e.target) && z(e.target)) || void 0
                                                     })),
                                             this.mapRemoves.push(t);
@@ -1290,7 +1290,7 @@ class e8 {
                             if (eV(e, this.mirror)) return;
                             this.movedSet.add(e);
                             let r = null;
-                            t && this.mirror.hasNode(t) && (r = this.mirror.getId(t)), r && -1 !== r && (this.movedMap[e4(this.mirror.getId(e), r)] = !0);
+                            t && this.mirror.hasNode(t) && (r = this.mirror.getId(t)), r && -1 !== r && (this.movedMap[e5(this.mirror.getId(e), r)] = !0);
                         } else this.addedSet.add(e), this.droppedSet.delete(e);
                         !eK(e, this.blockClass, this.blockSelector, this.unblockSelector, !1) &&
                             (e.childNodes.forEach((e) => this.genAdds(e)),
@@ -1332,11 +1332,11 @@ function e7(e, t) {
 function e9(e, t, r) {
     return (
         0 !== e.length &&
-        (function e(t, r, n) {
-            let { parentNode: a } = r;
-            if (!a) return !1;
-            let _ = n.getId(a);
-            return !!t.some((e) => e.id === _) || e(t, a, n);
+        (function e(t, r, a) {
+            let { parentNode: n } = r;
+            if (!n) return !1;
+            let _ = a.getId(n);
+            return !!t.some((e) => e.id === _) || e(t, n, a);
         })(e, t, r)
     );
 }
@@ -1344,8 +1344,8 @@ function te(e, t) {
     return (
         0 !== e.size &&
         (function e(t, r) {
-            let { parentNode: n } = r;
-            return !!n && (!!t.has(n) || e(t, n));
+            let { parentNode: a } = r;
+            return !!a && (!!t.has(a) || e(t, a));
         })(e, t)
     );
 }
@@ -1363,17 +1363,17 @@ let tt = (e) =>
 function tr(e) {
     let t;
     let r = e[0],
-        n = 1;
-    for (; n < e.length; ) {
-        let a = e[n],
-            _ = e[n + 1];
-        if (((n += 2), ('optionalAccess' === a || 'optionalCall' === a) && null == r)) return;
-        'access' === a || 'optionalAccess' === a ? ((t = r), (r = _(r))) : ('call' === a || 'optionalCall' === a) && ((r = _((...e) => r.call(t, ...e))), (t = void 0));
+        a = 1;
+    for (; a < e.length; ) {
+        let n = e[a],
+            _ = e[a + 1];
+        if (((a += 2), ('optionalAccess' === n || 'optionalCall' === n) && null == r)) return;
+        'access' === n || 'optionalAccess' === n ? ((t = r), (r = _(r))) : ('call' === n || 'optionalCall' === n) && ((r = _((...e) => r.call(t, ...e))), (t = void 0));
     }
     return r;
 }
-let tn = [];
-function ta(e) {
+let ta = [];
+function tn(e) {
     try {
         if ('composedPath' in e) {
             let t = e.composedPath();
@@ -1384,11 +1384,11 @@ function ta(e) {
 }
 function t_(e, t) {
     let r = new e8();
-    tn.push(r), r.init(e);
-    let n = window.MutationObserver || window.__rrMutationObserver,
-        a = tr([window, 'optionalAccess', (e) => e.Zone, 'optionalAccess', (e) => e.__symbol__, 'optionalCall', (e) => e('MutationObserver')]);
-    a && window[a] && (n = window[a]);
-    let _ = new n(
+    ta.push(r), r.init(e);
+    let a = window.MutationObserver || window.__rrMutationObserver,
+        n = tr([window, 'optionalAccess', (e) => e.Zone, 'optionalAccess', (e) => e.__symbol__, 'optionalCall', (e) => e('MutationObserver')]);
+    n && window[n] && (a = window[n]);
+    let _ = new a(
         tt((t) => {
             if (!e.onMutation || !1 !== e.onMutation(t)) r.processMutations.bind(r)(t);
         })
@@ -1405,27 +1405,27 @@ function t_(e, t) {
         _
     );
 }
-function to({ scrollCb: e, doc: t, mirror: r, blockClass: n, blockSelector: a, unblockSelector: _, sampling: o }) {
+function to({ scrollCb: e, doc: t, mirror: r, blockClass: a, blockSelector: n, unblockSelector: _, sampling: o }) {
     return em(
         'scroll',
         tt(
             ev(
                 tt((o) => {
-                    let i = ta(o);
-                    if (!i || eK(i, n, a, _, !0)) return;
-                    let E = r.getId(i);
-                    if (i === t && t.defaultView) {
+                    let E = tn(o);
+                    if (!E || eK(E, a, n, _, !0)) return;
+                    let i = r.getId(E);
+                    if (E === t && t.defaultView) {
                         let r = eW(t.defaultView);
                         e({
-                            id: E,
+                            id: i,
                             x: r.left,
                             y: r.top
                         });
                     } else
                         e({
-                            id: E,
-                            x: i.scrollLeft,
-                            y: i.scrollTop
+                            id: i,
+                            x: E.scrollLeft,
+                            y: E.scrollTop
                         });
                 }),
                 o.scroll || 100
@@ -1434,11 +1434,11 @@ function to({ scrollCb: e, doc: t, mirror: r, blockClass: n, blockSelector: a, u
         t
     );
 }
-let ti = ['INPUT', 'TEXTAREA', 'SELECT'],
-    tE = new WeakMap();
+let tE = ['INPUT', 'TEXTAREA', 'SELECT'],
+    ti = new WeakMap();
 function tc(e) {
     return (function (e, t) {
-        if ((tI('CSSGroupingRule') && e.parentRule instanceof CSSGroupingRule) || (tI('CSSMediaRule') && e.parentRule instanceof CSSMediaRule) || (tI('CSSSupportsRule') && e.parentRule instanceof CSSSupportsRule) || (tI('CSSConditionRule') && e.parentRule instanceof CSSConditionRule)) {
+        if ((tu('CSSGroupingRule') && e.parentRule instanceof CSSGroupingRule) || (tu('CSSMediaRule') && e.parentRule instanceof CSSMediaRule) || (tu('CSSSupportsRule') && e.parentRule instanceof CSSSupportsRule) || (tu('CSSConditionRule') && e.parentRule instanceof CSSConditionRule)) {
             let r = Array.from(e.parentRule.cssRules).indexOf(e);
             t.unshift(r);
         } else if (e.parentStyleSheet) {
@@ -1449,21 +1449,21 @@ function tc(e) {
     })(e, []);
 }
 function ts(e, t, r) {
-    let n, a;
+    let a, n;
     return e
-        ? (e.ownerNode ? (n = t.getId(e.ownerNode)) : (a = r.getId(e)),
+        ? (e.ownerNode ? (a = t.getId(e.ownerNode)) : (n = r.getId(e)),
           {
-              styleId: a,
-              id: n
+              styleId: n,
+              id: a
           })
         : {};
 }
 function tl({ mirror: e, stylesheetManager: t }, r) {
-    let n = null;
-    n = '#document' === r.nodeName ? e.getId(r) : e.getId(r.host);
-    let a = '#document' === r.nodeName ? tr([r, 'access', (e) => e.defaultView, 'optionalAccess', (e) => e.Document]) : tr([r, 'access', (e) => e.ownerDocument, 'optionalAccess', (e) => e.defaultView, 'optionalAccess', (e) => e.ShadowRoot]),
-        _ = tr([a, 'optionalAccess', (e) => e.prototype]) ? Object.getOwnPropertyDescriptor(tr([a, 'optionalAccess', (e) => e.prototype]), 'adoptedStyleSheets') : void 0;
-    return null !== n && -1 !== n && a && _
+    let a = null;
+    a = '#document' === r.nodeName ? e.getId(r) : e.getId(r.host);
+    let n = '#document' === r.nodeName ? tr([r, 'access', (e) => e.defaultView, 'optionalAccess', (e) => e.Document]) : tr([r, 'access', (e) => e.ownerDocument, 'optionalAccess', (e) => e.defaultView, 'optionalAccess', (e) => e.ShadowRoot]),
+        _ = tr([n, 'optionalAccess', (e) => e.prototype]) ? Object.getOwnPropertyDescriptor(tr([n, 'optionalAccess', (e) => e.prototype]), 'adoptedStyleSheets') : void 0;
+    return null !== a && -1 !== a && n && _
         ? (Object.defineProperty(r, 'adoptedStyleSheets', {
               configurable: _.configurable,
               enumerable: _.enumerable,
@@ -1472,9 +1472,9 @@ function tl({ mirror: e, stylesheetManager: t }, r) {
               },
               set(e) {
                   let r = tr([_, 'access', (e) => e.set, 'optionalAccess', (e) => e.call, 'call', (t) => t(this, e)]);
-                  if (null !== n && -1 !== n)
+                  if (null !== a && -1 !== a)
                       try {
-                          t.adoptStyleSheets(e, n);
+                          t.adoptStyleSheets(e, a);
                       } catch (e) {}
                   return r;
               }
@@ -1489,42 +1489,42 @@ function tl({ mirror: e, stylesheetManager: t }, r) {
           }))
         : () => {};
 }
-function tu(e, t = {}) {
+function tI(e, t = {}) {
     let r;
-    let n = e.doc.defaultView;
-    if (!n) return () => {};
+    let a = e.doc.defaultView;
+    if (!a) return () => {};
     e.recordDOM && (r = t_(e, e.doc));
-    let a = (function ({ mousemoveCb: e, sampling: t, doc: r, mirror: n }) {
-            let a;
+    let n = (function ({ mousemoveCb: e, sampling: t, doc: r, mirror: a }) {
+            let n;
             if (!1 === t.mousemove) return () => {};
             let _ = 'number' == typeof t.mousemove ? t.mousemove : 50,
                 o = 'number' == typeof t.mousemoveCallback ? t.mousemoveCallback : 500,
-                i = [],
-                E = ev(
+                E = [],
+                i = ev(
                     tt((t) => {
-                        let r = Date.now() - a;
+                        let r = Date.now() - n;
                         e(
-                            i.map((e) => ((e.timeOffset -= r), e)),
+                            E.map((e) => ((e.timeOffset -= r), e)),
                             t
                         ),
-                            (i = []),
-                            (a = null);
+                            (E = []),
+                            (n = null);
                     }),
                     o
                 ),
                 c = tt(
                     ev(
                         tt((e) => {
-                            let t = ta(e),
+                            let t = tn(e),
                                 { clientX: r, clientY: _ } = ek(e) ? e.changedTouches[0] : e;
-                            !a && (a = eB()),
-                                i.push({
+                            !n && (n = eB()),
+                                E.push({
                                     x: r,
                                     y: _,
-                                    id: n.getId(t),
-                                    timeOffset: eB() - a
+                                    id: a.getId(t),
+                                    timeOffset: eB() - n
                                 }),
-                                E('undefined' != typeof DragEvent && e instanceof DragEvent ? e1.Drag : e instanceof MouseEvent ? e1.MouseMove : e1.TouchMove);
+                                i('undefined' != typeof DragEvent && e instanceof DragEvent ? e1.Drag : e instanceof MouseEvent ? e1.MouseMove : e1.TouchMove);
                         }),
                         _,
                         { trailing: !1 }
@@ -1535,48 +1535,48 @@ function tu(e, t = {}) {
                 s.forEach((e) => e());
             });
         })(e),
-        _ = (function ({ mouseInteractionCb: e, doc: t, mirror: r, blockClass: n, blockSelector: a, unblockSelector: _, sampling: o }) {
+        _ = (function ({ mouseInteractionCb: e, doc: t, mirror: r, blockClass: a, blockSelector: n, unblockSelector: _, sampling: o }) {
             if (!1 === o.mouseInteraction) return () => {};
-            let i = !0 === o.mouseInteraction || void 0 === o.mouseInteraction ? {} : o.mouseInteraction,
-                E = [],
+            let E = !0 === o.mouseInteraction || void 0 === o.mouseInteraction ? {} : o.mouseInteraction,
+                i = [],
                 c = null,
                 s = (t) => (o) => {
-                    let i = ta(o);
-                    if (eK(i, n, a, _, !0)) return;
-                    let E = null,
+                    let E = tn(o);
+                    if (eK(E, a, n, _, !0)) return;
+                    let i = null,
                         s = t;
                     if ('pointerType' in o) {
                         switch (o.pointerType) {
                             case 'mouse':
-                                E = e3.Mouse;
+                                i = e3.Mouse;
                                 break;
                             case 'touch':
-                                E = e3.Touch;
+                                i = e3.Touch;
                                 break;
                             case 'pen':
-                                E = e3.Pen;
+                                i = e3.Pen;
                         }
-                        E === e3.Touch ? (e2[t] === e2.MouseDown ? (s = 'TouchStart') : e2[t] === e2.MouseUp && (s = 'TouchEnd')) : e3.Pen;
-                    } else ek(o) && (E = e3.Touch);
-                    null !== E ? ((c = E), ((s.startsWith('Touch') && E === e3.Touch) || (s.startsWith('Mouse') && E === e3.Mouse)) && (E = null)) : e2[t] === e2.Click && ((E = c), (c = null));
+                        i === e3.Touch ? (e2[t] === e2.MouseDown ? (s = 'TouchStart') : e2[t] === e2.MouseUp && (s = 'TouchEnd')) : e3.Pen;
+                    } else ek(o) && (i = e3.Touch);
+                    null !== i ? ((c = i), ((s.startsWith('Touch') && i === e3.Touch) || (s.startsWith('Mouse') && i === e3.Mouse)) && (i = null)) : e2[t] === e2.Click && ((i = c), (c = null));
                     let l = ek(o) ? o.changedTouches[0] : o;
                     if (!l) return;
-                    let u = r.getId(i),
-                        { clientX: I, clientY: R } = l;
+                    let I = r.getId(E),
+                        { clientX: u, clientY: R } = l;
                     tt(e)({
                         type: e2[s],
-                        id: u,
-                        x: I,
+                        id: I,
+                        x: u,
                         y: R,
-                        ...(null !== E && { pointerType: E })
+                        ...(null !== i && { pointerType: i })
                     });
                 };
             return (
                 Object.keys(e2)
-                    .filter((e) => Number.isNaN(Number(e)) && !e.endsWith('_Departed') && !1 !== i[e])
+                    .filter((e) => Number.isNaN(Number(e)) && !e.endsWith('_Departed') && !1 !== E[e])
                     .forEach((e) => {
                         let r = er(e),
-                            n = s(e);
+                            a = s(e);
                         if (window.PointerEvent)
                             switch (e2[e]) {
                                 case e2.MouseDown:
@@ -1587,146 +1587,146 @@ function tu(e, t = {}) {
                                 case e2.TouchEnd:
                                     return;
                             }
-                        E.push(em(r, n, t));
+                        i.push(em(r, a, t));
                     }),
                 tt(() => {
-                    E.forEach((e) => e());
+                    i.forEach((e) => e());
                 })
             );
         })(e),
         o = to(e),
-        i = (function ({ viewportResizeCb: e }, { win: t }) {
+        E = (function ({ viewportResizeCb: e }, { win: t }) {
             let r = -1,
-                n = -1;
+                a = -1;
             return em(
                 'resize',
                 tt(
                     ev(
                         tt(() => {
-                            let t = eH(),
-                                a = ex();
-                            (r !== t || n !== a) &&
+                            let t = eY(),
+                                n = eH();
+                            (r !== t || a !== n) &&
                                 (e({
-                                    width: Number(a),
+                                    width: Number(n),
                                     height: Number(t)
                                 }),
                                 (r = t),
-                                (n = a));
+                                (a = n));
                         }),
                         200
                     )
                 ),
                 t
             );
-        })(e, { win: n }),
-        E = (function ({ inputCb: e, doc: t, mirror: r, blockClass: n, blockSelector: a, unblockSelector: _, ignoreClass: o, ignoreSelector: i, maskInputOptions: E, maskInputFn: c, sampling: s, userTriggeredOnInput: l, maskTextClass: u, unmaskTextClass: I, maskTextSelector: R, unmaskTextSelector: N }) {
-            function A(e) {
-                let r = ta(e),
+        })(e, { win: a }),
+        i = (function ({ inputCb: e, doc: t, mirror: r, blockClass: a, blockSelector: n, unblockSelector: _, ignoreClass: o, ignoreSelector: E, maskInputOptions: i, maskInputFn: c, sampling: s, userTriggeredOnInput: l, maskTextClass: I, unmaskTextClass: u, maskTextSelector: R, unmaskTextSelector: A }) {
+            function T(e) {
+                let r = tn(e),
                     s = e.isTrusted,
-                    A = r && en(r.tagName);
-                if (('OPTION' === A && (r = r.parentElement), !r || !A || 0 > ti.indexOf(A) || eK(r, n, a, _, !0))) return;
+                    T = r && ea(r.tagName);
+                if (('OPTION' === T && (r = r.parentElement), !r || !T || 0 > tE.indexOf(T) || eK(r, a, n, _, !0))) return;
                 let d = r;
-                if (d.classList.contains(o) || (i && d.matches(i))) return;
-                let L = e_(r),
-                    f = eo(d, A, L),
-                    O = !1,
+                if (d.classList.contains(o) || (E && d.matches(E))) return;
+                let f = e_(r),
+                    O = eo(d, T, f),
+                    L = !1,
                     p = ee({
-                        maskInputOptions: E,
-                        tagName: A,
-                        type: L
+                        maskInputOptions: i,
+                        tagName: T,
+                        type: f
                     }),
-                    h = eU(r, u, R, I, N, p);
-                ('radio' === L || 'checkbox' === L) && (O = r.checked),
-                    (f = et({
+                    h = eg(r, I, R, u, A, p);
+                ('radio' === f || 'checkbox' === f) && (L = r.checked),
+                    (O = et({
                         isMasked: h,
                         element: r,
-                        value: f,
+                        value: O,
                         maskInputFn: c
                     })),
-                    T(
+                    N(
                         r,
                         l
                             ? {
-                                  text: f,
-                                  isChecked: O,
+                                  text: O,
+                                  isChecked: L,
                                   userTriggered: s
                               }
                             : {
-                                  text: f,
-                                  isChecked: O
+                                  text: O,
+                                  isChecked: L
                               }
                     );
-                let S = r.name;
-                'radio' === L &&
-                    S &&
-                    O &&
-                    t.querySelectorAll(`input[type="radio"][name="${S}"]`).forEach((e) => {
+                let D = r.name;
+                'radio' === f &&
+                    D &&
+                    L &&
+                    t.querySelectorAll(`input[type="radio"][name="${D}"]`).forEach((e) => {
                         if (e !== r) {
                             let t = et({
                                 isMasked: h,
                                 element: e,
-                                value: eo(e, A, L),
+                                value: eo(e, T, f),
                                 maskInputFn: c
                             });
-                            T(
+                            N(
                                 e,
                                 l
                                     ? {
                                           text: t,
-                                          isChecked: !O,
+                                          isChecked: !L,
                                           userTriggered: !1
                                       }
                                     : {
                                           text: t,
-                                          isChecked: !O
+                                          isChecked: !L
                                       }
                             );
                         }
                     });
             }
-            function T(t, n) {
-                let a = tE.get(t);
-                if (!a || a.text !== n.text || a.isChecked !== n.isChecked) {
-                    tE.set(t, n);
-                    let a = r.getId(t);
+            function N(t, a) {
+                let n = ti.get(t);
+                if (!n || n.text !== a.text || n.isChecked !== a.isChecked) {
+                    ti.set(t, a);
+                    let n = r.getId(t);
                     tt(e)({
-                        ...n,
-                        id: a
+                        ...a,
+                        id: n
                     });
                 }
             }
-            let d = ('last' === s.input ? ['change'] : ['input', 'change']).map((e) => em(e, tt(A), t)),
-                L = t.defaultView;
-            if (!L)
+            let d = ('last' === s.input ? ['change'] : ['input', 'change']).map((e) => em(e, tt(T), t)),
+                f = t.defaultView;
+            if (!f)
                 return () => {
                     d.forEach((e) => e());
                 };
-            let f = L.Object.getOwnPropertyDescriptor(L.HTMLInputElement.prototype, 'value'),
-                O = [
-                    [L.HTMLInputElement.prototype, 'value'],
-                    [L.HTMLInputElement.prototype, 'checked'],
-                    [L.HTMLSelectElement.prototype, 'value'],
-                    [L.HTMLTextAreaElement.prototype, 'value'],
-                    [L.HTMLSelectElement.prototype, 'selectedIndex'],
-                    [L.HTMLOptionElement.prototype, 'selected']
+            let O = f.Object.getOwnPropertyDescriptor(f.HTMLInputElement.prototype, 'value'),
+                L = [
+                    [f.HTMLInputElement.prototype, 'value'],
+                    [f.HTMLInputElement.prototype, 'checked'],
+                    [f.HTMLSelectElement.prototype, 'value'],
+                    [f.HTMLTextAreaElement.prototype, 'value'],
+                    [f.HTMLSelectElement.prototype, 'selectedIndex'],
+                    [f.HTMLOptionElement.prototype, 'selected']
                 ];
             return (
-                f &&
-                    f.set &&
+                O &&
+                    O.set &&
                     d.push(
-                        ...O.map((e) =>
-                            (function e(t, r, n, a, _ = window) {
+                        ...L.map((e) =>
+                            (function e(t, r, a, n, _ = window) {
                                 let o = _.Object.getOwnPropertyDescriptor(t, r);
                                 return (
                                     _.Object.defineProperty(
                                         t,
                                         r,
-                                        a
-                                            ? n
+                                        n
+                                            ? a
                                             : {
                                                   set(e) {
                                                       eZ(() => {
-                                                          n.set.call(this, e);
+                                                          a.set.call(this, e);
                                                       }, 0),
                                                           o && o.set && o.set.call(this, e);
                                                   }
@@ -1739,14 +1739,14 @@ function tu(e, t = {}) {
                                 e[1],
                                 {
                                     set() {
-                                        tt(A)({
+                                        tt(T)({
                                             target: this,
                                             isTrusted: !1
                                         });
                                     }
                                 },
                                 !1,
-                                L
+                                f
                             )
                         )
                     ),
@@ -1755,17 +1755,17 @@ function tu(e, t = {}) {
                 })
             );
         })(e),
-        c = (function ({ mediaInteractionCb: e, blockClass: t, blockSelector: r, unblockSelector: n, mirror: a, sampling: _, doc: o }) {
-            let i = tt((o) =>
+        c = (function ({ mediaInteractionCb: e, blockClass: t, blockSelector: r, unblockSelector: a, mirror: n, sampling: _, doc: o }) {
+            let E = tt((o) =>
                     ev(
                         tt((_) => {
-                            let i = ta(_);
-                            if (!i || eK(i, t, r, n, !0)) return;
-                            let { currentTime: E, volume: c, muted: s, playbackRate: l } = i;
+                            let E = tn(_);
+                            if (!E || eK(E, t, r, a, !0)) return;
+                            let { currentTime: i, volume: c, muted: s, playbackRate: l } = E;
                             e({
                                 type: o,
-                                id: a.getId(i),
-                                currentTime: E,
+                                id: n.getId(E),
+                                currentTime: i,
                                 volume: c,
                                 muted: s,
                                 playbackRate: l
@@ -1774,215 +1774,215 @@ function tu(e, t = {}) {
                         _.media || 500
                     )
                 ),
-                E = [em('play', i(0), o), em('pause', i(1), o), em('seeked', i(2), o), em('volumechange', i(3), o), em('ratechange', i(4), o)];
+                i = [em('play', E(0), o), em('pause', E(1), o), em('seeked', E(2), o), em('volumechange', E(3), o), em('ratechange', E(4), o)];
             return tt(() => {
-                E.forEach((e) => e());
+                i.forEach((e) => e());
             });
         })(e),
         s = () => {},
         l = () => {},
-        u = () => {},
-        I = () => {};
+        I = () => {},
+        u = () => {};
     e.recordDOM &&
-        ((s = (function ({ styleSheetRuleCb: e, mirror: t, stylesheetManager: r }, { win: n }) {
-            let a, _;
-            if (!n.CSSStyleSheet || !n.CSSStyleSheet.prototype) return () => {};
-            let o = n.CSSStyleSheet.prototype.insertRule;
-            n.CSSStyleSheet.prototype.insertRule = new Proxy(o, {
-                apply: tt((n, a, _) => {
-                    let [o, i] = _,
-                        { id: E, styleId: c } = ts(a, t, r.styleMirror);
+        ((s = (function ({ styleSheetRuleCb: e, mirror: t, stylesheetManager: r }, { win: a }) {
+            let n, _;
+            if (!a.CSSStyleSheet || !a.CSSStyleSheet.prototype) return () => {};
+            let o = a.CSSStyleSheet.prototype.insertRule;
+            a.CSSStyleSheet.prototype.insertRule = new Proxy(o, {
+                apply: tt((a, n, _) => {
+                    let [o, E] = _,
+                        { id: i, styleId: c } = ts(n, t, r.styleMirror);
                     return (
-                        ((E && -1 !== E) || (c && -1 !== c)) &&
+                        ((i && -1 !== i) || (c && -1 !== c)) &&
                             e({
-                                id: E,
+                                id: i,
                                 styleId: c,
                                 adds: [
                                     {
                                         rule: o,
-                                        index: i
+                                        index: E
                                     }
                                 ]
                             }),
-                        n.apply(a, _)
+                        a.apply(n, _)
                     );
                 })
             });
-            let i = n.CSSStyleSheet.prototype.deleteRule;
-            (n.CSSStyleSheet.prototype.deleteRule = new Proxy(i, {
-                apply: tt((n, a, _) => {
+            let E = a.CSSStyleSheet.prototype.deleteRule;
+            (a.CSSStyleSheet.prototype.deleteRule = new Proxy(E, {
+                apply: tt((a, n, _) => {
                     let [o] = _,
-                        { id: i, styleId: E } = ts(a, t, r.styleMirror);
+                        { id: E, styleId: i } = ts(n, t, r.styleMirror);
                     return (
-                        ((i && -1 !== i) || (E && -1 !== E)) &&
+                        ((E && -1 !== E) || (i && -1 !== i)) &&
                             e({
-                                id: i,
-                                styleId: E,
+                                id: E,
+                                styleId: i,
                                 removes: [{ index: o }]
                             }),
-                        n.apply(a, _)
+                        a.apply(n, _)
                     );
                 })
             })),
-                n.CSSStyleSheet.prototype.replace &&
-                    ((a = n.CSSStyleSheet.prototype.replace),
-                    (n.CSSStyleSheet.prototype.replace = new Proxy(a, {
-                        apply: tt((n, a, _) => {
+                a.CSSStyleSheet.prototype.replace &&
+                    ((n = a.CSSStyleSheet.prototype.replace),
+                    (a.CSSStyleSheet.prototype.replace = new Proxy(n, {
+                        apply: tt((a, n, _) => {
                             let [o] = _,
-                                { id: i, styleId: E } = ts(a, t, r.styleMirror);
+                                { id: E, styleId: i } = ts(n, t, r.styleMirror);
                             return (
-                                ((i && -1 !== i) || (E && -1 !== E)) &&
+                                ((E && -1 !== E) || (i && -1 !== i)) &&
                                     e({
-                                        id: i,
-                                        styleId: E,
+                                        id: E,
+                                        styleId: i,
                                         replace: o
                                     }),
-                                n.apply(a, _)
+                                a.apply(n, _)
                             );
                         })
                     }))),
-                n.CSSStyleSheet.prototype.replaceSync &&
-                    ((_ = n.CSSStyleSheet.prototype.replaceSync),
-                    (n.CSSStyleSheet.prototype.replaceSync = new Proxy(_, {
-                        apply: tt((n, a, _) => {
+                a.CSSStyleSheet.prototype.replaceSync &&
+                    ((_ = a.CSSStyleSheet.prototype.replaceSync),
+                    (a.CSSStyleSheet.prototype.replaceSync = new Proxy(_, {
+                        apply: tt((a, n, _) => {
                             let [o] = _,
-                                { id: i, styleId: E } = ts(a, t, r.styleMirror);
+                                { id: E, styleId: i } = ts(n, t, r.styleMirror);
                             return (
-                                ((i && -1 !== i) || (E && -1 !== E)) &&
+                                ((E && -1 !== E) || (i && -1 !== i)) &&
                                     e({
-                                        id: i,
-                                        styleId: E,
+                                        id: E,
+                                        styleId: i,
                                         replaceSync: o
                                     }),
-                                n.apply(a, _)
+                                a.apply(n, _)
                             );
                         })
                     })));
-            let E = {};
-            tR('CSSGroupingRule') ? (E.CSSGroupingRule = n.CSSGroupingRule) : (tR('CSSMediaRule') && (E.CSSMediaRule = n.CSSMediaRule), tR('CSSConditionRule') && (E.CSSConditionRule = n.CSSConditionRule), tR('CSSSupportsRule') && (E.CSSSupportsRule = n.CSSSupportsRule));
+            let i = {};
+            tR('CSSGroupingRule') ? (i.CSSGroupingRule = a.CSSGroupingRule) : (tR('CSSMediaRule') && (i.CSSMediaRule = a.CSSMediaRule), tR('CSSConditionRule') && (i.CSSConditionRule = a.CSSConditionRule), tR('CSSSupportsRule') && (i.CSSSupportsRule = a.CSSSupportsRule));
             let c = {};
             return (
-                Object.entries(E).forEach(([n, a]) => {
-                    (c[n] = {
-                        insertRule: a.prototype.insertRule,
-                        deleteRule: a.prototype.deleteRule
+                Object.entries(i).forEach(([a, n]) => {
+                    (c[a] = {
+                        insertRule: n.prototype.insertRule,
+                        deleteRule: n.prototype.deleteRule
                     }),
-                        (a.prototype.insertRule = new Proxy(c[n].insertRule, {
-                            apply: tt((n, a, _) => {
-                                let [o, i] = _,
-                                    { id: E, styleId: c } = ts(a.parentStyleSheet, t, r.styleMirror);
+                        (n.prototype.insertRule = new Proxy(c[a].insertRule, {
+                            apply: tt((a, n, _) => {
+                                let [o, E] = _,
+                                    { id: i, styleId: c } = ts(n.parentStyleSheet, t, r.styleMirror);
                                 return (
-                                    ((E && -1 !== E) || (c && -1 !== c)) &&
+                                    ((i && -1 !== i) || (c && -1 !== c)) &&
                                         e({
-                                            id: E,
+                                            id: i,
                                             styleId: c,
                                             adds: [
                                                 {
                                                     rule: o,
-                                                    index: [...tc(a), i || 0]
+                                                    index: [...tc(n), E || 0]
                                                 }
                                             ]
                                         }),
-                                    n.apply(a, _)
+                                    a.apply(n, _)
                                 );
                             })
                         })),
-                        (a.prototype.deleteRule = new Proxy(c[n].deleteRule, {
-                            apply: tt((n, a, _) => {
+                        (n.prototype.deleteRule = new Proxy(c[a].deleteRule, {
+                            apply: tt((a, n, _) => {
                                 let [o] = _,
-                                    { id: i, styleId: E } = ts(a.parentStyleSheet, t, r.styleMirror);
+                                    { id: E, styleId: i } = ts(n.parentStyleSheet, t, r.styleMirror);
                                 return (
-                                    ((i && -1 !== i) || (E && -1 !== E)) &&
+                                    ((E && -1 !== E) || (i && -1 !== i)) &&
                                         e({
-                                            id: i,
-                                            styleId: E,
+                                            id: E,
+                                            styleId: i,
                                             removes: [
                                                 {
-                                                    index: [...tc(a), o]
+                                                    index: [...tc(n), o]
                                                 }
                                             ]
                                         }),
-                                    n.apply(a, _)
+                                    a.apply(n, _)
                                 );
                             })
                         }));
                 }),
                 tt(() => {
-                    (n.CSSStyleSheet.prototype.insertRule = o),
-                        (n.CSSStyleSheet.prototype.deleteRule = i),
-                        a && (n.CSSStyleSheet.prototype.replace = a),
-                        _ && (n.CSSStyleSheet.prototype.replaceSync = _),
-                        Object.entries(E).forEach(([e, t]) => {
+                    (a.CSSStyleSheet.prototype.insertRule = o),
+                        (a.CSSStyleSheet.prototype.deleteRule = E),
+                        n && (a.CSSStyleSheet.prototype.replace = n),
+                        _ && (a.CSSStyleSheet.prototype.replaceSync = _),
+                        Object.entries(i).forEach(([e, t]) => {
                             (t.prototype.insertRule = c[e].insertRule), (t.prototype.deleteRule = c[e].deleteRule);
                         });
                 })
             );
-        })(e, { win: n })),
+        })(e, { win: a })),
         (l = tl(e, e.doc)),
-        (u = (function ({ styleDeclarationCb: e, mirror: t, ignoreCSSAttributes: r, stylesheetManager: n }, { win: a }) {
-            let _ = a.CSSStyleDeclaration.prototype.setProperty;
-            a.CSSStyleDeclaration.prototype.setProperty = new Proxy(_, {
-                apply: tt((a, o, i) => {
-                    let [E, c, s] = i;
-                    if (r.has(E)) return _.apply(o, [E, c, s]);
-                    let { id: l, styleId: u } = ts(tr([o, 'access', (e) => e.parentRule, 'optionalAccess', (e) => e.parentStyleSheet]), t, n.styleMirror);
+        (I = (function ({ styleDeclarationCb: e, mirror: t, ignoreCSSAttributes: r, stylesheetManager: a }, { win: n }) {
+            let _ = n.CSSStyleDeclaration.prototype.setProperty;
+            n.CSSStyleDeclaration.prototype.setProperty = new Proxy(_, {
+                apply: tt((n, o, E) => {
+                    let [i, c, s] = E;
+                    if (r.has(i)) return _.apply(o, [i, c, s]);
+                    let { id: l, styleId: I } = ts(tr([o, 'access', (e) => e.parentRule, 'optionalAccess', (e) => e.parentStyleSheet]), t, a.styleMirror);
                     return (
-                        ((l && -1 !== l) || (u && -1 !== u)) &&
+                        ((l && -1 !== l) || (I && -1 !== I)) &&
                             e({
                                 id: l,
-                                styleId: u,
+                                styleId: I,
                                 set: {
-                                    property: E,
+                                    property: i,
                                     value: c,
                                     priority: s
                                 },
                                 index: tc(o.parentRule)
                             }),
-                        a.apply(o, i)
+                        n.apply(o, E)
                     );
                 })
             });
-            let o = a.CSSStyleDeclaration.prototype.removeProperty;
+            let o = n.CSSStyleDeclaration.prototype.removeProperty;
             return (
-                (a.CSSStyleDeclaration.prototype.removeProperty = new Proxy(o, {
-                    apply: tt((a, _, i) => {
-                        let [E] = i;
-                        if (r.has(E)) return o.apply(_, [E]);
-                        let { id: c, styleId: s } = ts(tr([_, 'access', (e) => e.parentRule, 'optionalAccess', (e) => e.parentStyleSheet]), t, n.styleMirror);
+                (n.CSSStyleDeclaration.prototype.removeProperty = new Proxy(o, {
+                    apply: tt((n, _, E) => {
+                        let [i] = E;
+                        if (r.has(i)) return o.apply(_, [i]);
+                        let { id: c, styleId: s } = ts(tr([_, 'access', (e) => e.parentRule, 'optionalAccess', (e) => e.parentStyleSheet]), t, a.styleMirror);
                         return (
                             ((c && -1 !== c) || (s && -1 !== s)) &&
                                 e({
                                     id: c,
                                     styleId: s,
-                                    remove: { property: E },
+                                    remove: { property: i },
                                     index: tc(_.parentRule)
                                 }),
-                            a.apply(_, i)
+                            n.apply(_, E)
                         );
                     })
                 })),
                 tt(() => {
-                    (a.CSSStyleDeclaration.prototype.setProperty = _), (a.CSSStyleDeclaration.prototype.removeProperty = o);
+                    (n.CSSStyleDeclaration.prototype.setProperty = _), (n.CSSStyleDeclaration.prototype.removeProperty = o);
                 })
             );
-        })(e, { win: n })),
+        })(e, { win: a })),
         e.collectFonts &&
-            (I = (function ({ fontCb: e, doc: t }) {
+            (u = (function ({ fontCb: e, doc: t }) {
                 let r = t.defaultView;
                 if (!r) return () => {};
-                let n = [],
-                    a = new WeakMap(),
+                let a = [],
+                    n = new WeakMap(),
                     _ = r.FontFace;
                 r.FontFace = function (e, t, r) {
-                    let n = new _(e, t, r);
+                    let a = new _(e, t, r);
                     return (
-                        a.set(n, {
+                        n.set(a, {
                             family: e,
                             buffer: 'string' != typeof t,
                             descriptors: r,
                             fontSource: 'string' == typeof t ? t : JSON.stringify(Array.from(new Uint8Array(t)))
                         }),
-                        n
+                        a
                     );
                 };
                 let o = ew(t.fonts, 'add', function (t) {
@@ -1990,8 +1990,8 @@ function tu(e, t = {}) {
                         return (
                             eZ(
                                 tt(() => {
-                                    let t = a.get(r);
-                                    t && (e(t), a.delete(r));
+                                    let t = n.get(r);
+                                    t && (e(t), n.delete(r));
                                 }),
                                 0
                             ),
@@ -2000,83 +2000,83 @@ function tu(e, t = {}) {
                     };
                 });
                 return (
-                    n.push(() => {
+                    a.push(() => {
                         r.FontFace = _;
                     }),
-                    n.push(o),
+                    a.push(o),
                     tt(() => {
-                        n.forEach((e) => e());
+                        a.forEach((e) => e());
                     })
                 );
             })(e)));
     let R = (function (e) {
-            let { doc: t, mirror: r, blockClass: n, blockSelector: a, unblockSelector: _, selectionCb: o } = e,
-                i = !0,
-                E = tt(() => {
+            let { doc: t, mirror: r, blockClass: a, blockSelector: n, unblockSelector: _, selectionCb: o } = e,
+                E = !0,
+                i = tt(() => {
                     let e = t.getSelection();
-                    if (!e || (i && tr([e, 'optionalAccess', (e) => e.isCollapsed]))) return;
-                    i = e.isCollapsed || !1;
-                    let E = [],
+                    if (!e || (E && tr([e, 'optionalAccess', (e) => e.isCollapsed]))) return;
+                    E = e.isCollapsed || !1;
+                    let i = [],
                         c = e.rangeCount || 0;
                     for (let t = 0; t < c; t++) {
-                        let { startContainer: o, startOffset: i, endContainer: c, endOffset: s } = e.getRangeAt(t);
-                        !(eK(o, n, a, _, !0) || eK(c, n, a, _, !0)) &&
-                            E.push({
+                        let { startContainer: o, startOffset: E, endContainer: c, endOffset: s } = e.getRangeAt(t);
+                        !(eK(o, a, n, _, !0) || eK(c, a, n, _, !0)) &&
+                            i.push({
                                 start: r.getId(o),
-                                startOffset: i,
+                                startOffset: E,
                                 end: r.getId(c),
                                 endOffset: s
                             });
                     }
-                    o({ ranges: E });
+                    o({ ranges: i });
                 });
-            return E(), em('selectionchange', E);
+            return i(), em('selectionchange', i);
         })(e),
-        N = (function ({ doc: e, customElementCb: t }) {
+        A = (function ({ doc: e, customElementCb: t }) {
             let r = e.defaultView;
             return r && r.customElements
                 ? ew(r.customElements, 'define', function (e) {
-                      return function (r, n, a) {
+                      return function (r, a, n) {
                           try {
                               t({ define: { name: r } });
                           } catch (e) {}
-                          return e.apply(this, [r, n, a]);
+                          return e.apply(this, [r, a, n]);
                       };
                   })
                 : () => {};
         })(e),
-        A = [];
-    for (let t of e.plugins) A.push(t.observer(t.callback, n, t.options));
+        T = [];
+    for (let t of e.plugins) T.push(t.observer(t.callback, a, t.options));
     return tt(() => {
-        tn.forEach((e) => e.reset()), tr([r, 'optionalAccess', (e) => e.disconnect, 'call', (e) => e()]), a(), _(), o(), i(), E(), c(), s(), l(), u(), I(), R(), N(), A.forEach((e) => e());
+        ta.forEach((e) => e.reset()), tr([r, 'optionalAccess', (e) => e.disconnect, 'call', (e) => e()]), n(), _(), o(), E(), i(), c(), s(), l(), I(), u(), R(), A(), T.forEach((e) => e());
     });
 }
-function tI(e) {
+function tu(e) {
     return void 0 !== window[e];
 }
 function tR(e) {
     return !!(void 0 !== window[e] && window[e].prototype && 'insertRule' in window[e].prototype && 'deleteRule' in window[e].prototype);
 }
-class tN {
+class tA {
     constructor(e) {
         (this.generateIdFn = e), (this.iframeIdToRemoteIdMap = new WeakMap()), (this.iframeRemoteIdToIdMap = new WeakMap());
     }
-    getId(e, t, r, n) {
-        let a = r || this.getIdToRemoteIdMap(e),
-            _ = n || this.getRemoteIdToIdMap(e),
-            o = a.get(t);
-        return !o && ((o = this.generateIdFn()), a.set(t, o), _.set(o, t)), o;
+    getId(e, t, r, a) {
+        let n = r || this.getIdToRemoteIdMap(e),
+            _ = a || this.getRemoteIdToIdMap(e),
+            o = n.get(t);
+        return !o && ((o = this.generateIdFn()), n.set(t, o), _.set(o, t)), o;
     }
     getIds(e, t) {
         let r = this.getIdToRemoteIdMap(e),
-            n = this.getRemoteIdToIdMap(e);
-        return t.map((t) => this.getId(e, t, r, n));
+            a = this.getRemoteIdToIdMap(e);
+        return t.map((t) => this.getId(e, t, r, a));
     }
     getRemoteId(e, t, r) {
-        let n = r || this.getRemoteIdToIdMap(e);
+        let a = r || this.getRemoteIdToIdMap(e);
         if ('number' != typeof t) return t;
-        let a = n.get(t);
-        return a ? a : -1;
+        let n = a.get(t);
+        return n ? n : -1;
     }
     getRemoteIds(e, t) {
         let r = this.getRemoteIdToIdMap(e);
@@ -2098,21 +2098,21 @@ class tN {
         return !t && ((t = new Map()), this.iframeRemoteIdToIdMap.set(e, t)), t;
     }
 }
-function tA(e) {
+function tT(e) {
     let t;
     let r = e[0],
-        n = 1;
-    for (; n < e.length; ) {
-        let a = e[n],
-            _ = e[n + 1];
-        if (((n += 2), ('optionalAccess' === a || 'optionalCall' === a) && null == r)) return;
-        'access' === a || 'optionalAccess' === a ? ((t = r), (r = _(r))) : ('call' === a || 'optionalCall' === a) && ((r = _((...e) => r.call(t, ...e))), (t = void 0));
+        a = 1;
+    for (; a < e.length; ) {
+        let n = e[a],
+            _ = e[a + 1];
+        if (((a += 2), ('optionalAccess' === n || 'optionalCall' === n) && null == r)) return;
+        'access' === n || 'optionalAccess' === n ? ((t = r), (r = _(r))) : ('call' === n || 'optionalCall' === n) && ((r = _((...e) => r.call(t, ...e))), (t = void 0));
     }
     return r;
 }
-class tT {
+class tN {
     constructor() {
-        (this.crossOriginIframeMirror = new tN(eR)), (this.crossOriginIframeRootIdMap = new WeakMap());
+        (this.crossOriginIframeMirror = new tA(eR)), (this.crossOriginIframeRootIdMap = new WeakMap());
     }
     addIframe() {}
     addLoadListener() {}
@@ -2120,7 +2120,7 @@ class tT {
 }
 class td {
     constructor(e) {
-        (this.iframes = new WeakMap()), (this.crossOriginIframeMap = new WeakMap()), (this.crossOriginIframeMirror = new tN(eR)), (this.crossOriginIframeRootIdMap = new WeakMap()), (this.mutationCb = e.mutationCb), (this.wrappedEmit = e.wrappedEmit), (this.stylesheetManager = e.stylesheetManager), (this.recordCrossOriginIframes = e.recordCrossOriginIframes), (this.crossOriginIframeStyleMirror = new tN(this.stylesheetManager.styleMirror.generateId.bind(this.stylesheetManager.styleMirror))), (this.mirror = e.mirror), this.recordCrossOriginIframes && window.addEventListener('message', this.handleMessage.bind(this));
+        (this.iframes = new WeakMap()), (this.crossOriginIframeMap = new WeakMap()), (this.crossOriginIframeMirror = new tA(eR)), (this.crossOriginIframeRootIdMap = new WeakMap()), (this.mutationCb = e.mutationCb), (this.wrappedEmit = e.wrappedEmit), (this.stylesheetManager = e.stylesheetManager), (this.recordCrossOriginIframes = e.recordCrossOriginIframes), (this.crossOriginIframeStyleMirror = new tA(this.stylesheetManager.styleMirror.generateId.bind(this.stylesheetManager.styleMirror))), (this.mirror = e.mirror), this.recordCrossOriginIframes && window.addEventListener('message', this.handleMessage.bind(this));
     }
     addIframe(e) {
         this.iframes.set(e, !0), e.contentWindow && this.crossOriginIframeMap.set(e.contentWindow, e);
@@ -2142,7 +2142,7 @@ class td {
             attributes: [],
             isAttachIframe: !0
         }),
-            tA([this, 'access', (e) => e.loadListener, 'optionalCall', (t) => t(e)]),
+            tT([this, 'access', (e) => e.loadListener, 'optionalCall', (t) => t(e)]),
             e.contentDocument && e.contentDocument.adoptedStyleSheets && e.contentDocument.adoptedStyleSheets.length > 0 && this.stylesheetManager.adoptStyleSheets(e.contentDocument.adoptedStyleSheets, this.mirror.getId(e.contentDocument));
     }
     handleMessage(e) {
@@ -2241,7 +2241,7 @@ class td {
                         return (
                             this.replaceIds(t.data, e, ['id']),
                             this.replaceStyleIds(t.data, e, ['styleIds']),
-                            tA([
+                            tT([
                                 t,
                                 'access',
                                 (e) => e.data,
@@ -2261,8 +2261,8 @@ class td {
         }
         return !1;
     }
-    replace(e, t, r, n) {
-        for (let a of n) (Array.isArray(t[a]) || 'number' == typeof t[a]) && (Array.isArray(t[a]) ? (t[a] = e.getIds(r, t[a])) : (t[a] = e.getId(r, t[a])));
+    replace(e, t, r, a) {
+        for (let n of a) (Array.isArray(t[n]) || 'number' == typeof t[n]) && (Array.isArray(t[n]) ? (t[n] = e.getIds(r, t[n])) : (t[n] = e.getId(r, t[n])));
         return t;
     }
     replaceIds(e, t, r) {
@@ -2279,20 +2279,20 @@ class td {
                 });
     }
     patchRootIdOnNode(e, t) {
-        e.type !== N.Document && !e.rootId && (e.rootId = t),
+        e.type !== A.Document && !e.rootId && (e.rootId = t),
             'childNodes' in e &&
                 e.childNodes.forEach((e) => {
                     this.patchRootIdOnNode(e, t);
                 });
     }
 }
-class tL {
+class tf {
     init() {}
     addShadowRoot() {}
     observeAttachShadow() {}
     reset() {}
 }
-class tf {
+class tO {
     constructor(e) {
         (this.shadowDoms = new WeakSet()), (this.restoreHandlers = []), (this.mutationCb = e.mutationCb), (this.scrollCb = e.scrollCb), (this.bypassOptions = e.bypassOptions), (this.mirror = e.mirror), this.init();
     }
@@ -2341,9 +2341,9 @@ class tf {
         let r = this;
         this.restoreHandlers.push(
             ew(e.prototype, 'attachShadow', function (e) {
-                return function (n) {
-                    let a = e.call(this, n);
-                    return this.shadowRoot && ez(this) && r.addShadowRoot(this.shadowRoot, t), a;
+                return function (a) {
+                    let n = e.call(this, a);
+                    return this.shadowRoot && ez(this) && r.addShadowRoot(this.shadowRoot, t), n;
                 };
             })
         );
@@ -2359,7 +2359,7 @@ class tf {
             this.bypassOptions.canvasManager.resetShadowRoots();
     }
 }
-class tO {
+class tL {
     reset() {}
     freeze() {}
     unfreeze() {}
@@ -2398,13 +2398,13 @@ class tp {
                 id: t,
                 styleIds: []
             },
-            n = [];
+            a = [];
         for (let t of e) {
             let e;
             this.styleMirror.has(t)
                 ? (e = this.styleMirror.getId(t))
                 : ((e = this.styleMirror.add(t)),
-                  n.push({
+                  a.push({
                       styleId: e,
                       rules: Array.from(t.rules || CSSRule, (e, t) => ({
                           rule: Q(e),
@@ -2413,7 +2413,7 @@ class tp {
                   })),
                 r.styleIds.push(e);
         }
-        n.length > 0 && (r.styles = n), this.adoptedStyleSheetCb(r);
+        a.length > 0 && (r.styles = a), this.adoptedStyleSheetCb(r);
     }
     reset() {
         this.styleMirror.reset(), (this.trackedLinkElements = new WeakSet());
@@ -2453,11 +2453,11 @@ try {
 } catch (e) {
     console.debug('Unable to override Array.from', e);
 }
-let tS = new Z();
-function tD(e = {}) {
+let tD = new Z();
+function tS(e = {}) {
     let t;
-    let { emit: r, checkoutEveryNms: n, checkoutEveryNth: a, blockClass: E = 'rr-block', blockSelector: c = null, unblockSelector: s = null, ignoreClass: l = 'rr-ignore', ignoreSelector: u = null, maskAllText: I = !1, maskTextClass: R = 'rr-mask', unmaskTextClass: N = null, maskTextSelector: A = null, unmaskTextSelector: T = null, inlineStylesheet: L = !0, maskAllInputs: f, maskInputOptions: O, slimDOMOptions: p, maskAttributeFn: h, maskInputFn: S, maskTextFn: D, maxCanvasSize: C = null, packFn: g, sampling: U = {}, dataURLOptions: P = {}, mousemoveWait: M, recordDOM: G = !0, recordCanvas: m = !1, recordCrossOriginIframes: y = !1, recordAfter: b = 'DOMContentLoaded' === e.recordAfter ? e.recordAfter : 'load', userTriggeredOnInput: v = !1, collectFonts: w = !1, inlineImages: B = !1, plugins: W, keepIframeSrcFn: H = () => !1, ignoreCSSAttributes: x = new Set([]), errorHandler: Y, onMutation: K, getCanvasManager: V } = e;
-    _ = Y;
+    let { emit: r, checkoutEveryNms: a, checkoutEveryNth: n, blockClass: i = 'rr-block', blockSelector: c = null, unblockSelector: s = null, ignoreClass: l = 'rr-ignore', ignoreSelector: I = null, maskAllText: u = !1, maskTextClass: R = 'rr-mask', unmaskTextClass: A = null, maskTextSelector: T = null, unmaskTextSelector: N = null, inlineStylesheet: f = !0, maskAllInputs: O, maskInputOptions: L, slimDOMOptions: p, maskAttributeFn: h, maskInputFn: D, maskTextFn: S, maxCanvasSize: C = null, packFn: P, sampling: g = {}, dataURLOptions: U = {}, mousemoveWait: M, recordDOM: G = !0, recordCanvas: m = !1, recordCrossOriginIframes: y = !1, recordAfter: b = 'DOMContentLoaded' === e.recordAfter ? e.recordAfter : 'load', userTriggeredOnInput: v = !1, collectFonts: w = !1, inlineImages: B = !1, plugins: W, keepIframeSrcFn: Y = () => !1, ignoreCSSAttributes: H = new Set([]), errorHandler: x, onMutation: K, getCanvasManager: V } = e;
+    _ = x;
     let k = !y || window.parent === window,
         F = !1;
     if (!k)
@@ -2467,9 +2467,9 @@ function tD(e = {}) {
             F = !0;
         }
     if (k && !r) throw Error('emit function is required');
-    void 0 !== M && void 0 === U.mousemove && (U.mousemove = M), tS.reset();
+    void 0 !== M && void 0 === g.mousemove && (g.mousemove = M), tD.reset();
     let X =
-            !0 === f
+            !0 === O
                 ? {
                       color: !0,
                       date: !0,
@@ -2489,8 +2489,8 @@ function tD(e = {}) {
                       radio: !0,
                       checkbox: !0
                   }
-                : void 0 !== O
-                  ? O
+                : void 0 !== L
+                  ? L
                   : {},
         j =
             !0 === p || 'all' === p
@@ -2522,10 +2522,10 @@ function tD(e = {}) {
     let $ = 0,
         q = (e) => {
             for (let t of W || []) t.eventProcessor && (e = t.eventProcessor(e));
-            return g && !F && (e = g(e)), e;
+            return P && !F && (e = P(e)), e;
         };
     o = (e, _) => {
-        if (((e.timestamp = eB()), (0, d.x)([tn, 'access', (e) => e[0], 'optionalAccess', (e) => e.isFrozen, 'call', (e) => e()]) && e.type !== e0.FullSnapshot && !(e.type === e0.IncrementalSnapshot && e.data.source === e1.Mutation) && tn.forEach((e) => e.unfreeze()), k)) (0, d.x)([r, 'optionalCall', (t) => t(q(e), _)]);
+        if (((e.timestamp = eB()), (0, d.x)([ta, 'access', (e) => e[0], 'optionalAccess', (e) => e.isFrozen, 'call', (e) => e()]) && e.type !== e0.FullSnapshot && !(e.type === e0.IncrementalSnapshot && e.data.source === e1.Mutation) && ta.forEach((e) => e.unfreeze()), k)) (0, d.x)([r, 'optionalCall', (t) => t(q(e), _)]);
         else if (F) {
             let t = {
                 type: 'rrweb',
@@ -2539,8 +2539,8 @@ function tD(e = {}) {
         else if (e.type === e0.IncrementalSnapshot) {
             if (e.data.source === e1.Mutation && e.data.isAttachIframe) return;
             $++;
-            let r = a && $ >= a,
-                _ = n && t && e.timestamp - t.timestamp > n;
+            let r = n && $ >= n,
+                _ = a && t && e.timestamp - t.timestamp > a;
             (r || _) && e_(!0);
         }
     };
@@ -2582,9 +2582,9 @@ function tD(e = {}) {
         }),
         et =
             'boolean' == typeof __RRWEB_EXCLUDE_IFRAME__ && __RRWEB_EXCLUDE_IFRAME__
-                ? new tT()
+                ? new tN()
                 : new td({
-                      mirror: tS,
+                      mirror: tD,
                       mutationCb: z,
                       stylesheetManager: ee,
                       recordCrossOriginIframes: y,
@@ -2593,19 +2593,19 @@ function tD(e = {}) {
     for (let e of W || [])
         e.getMirror &&
             e.getMirror({
-                nodeMirror: tS,
+                nodeMirror: tD,
                 crossOriginIframeMirror: et.crossOriginIframeMirror,
                 crossOriginIframeStyleMirror: et.crossOriginIframeStyleMirror
             });
     let er = new th(),
-        en = (function (e, t) {
+        ea = (function (e, t) {
             try {
-                return e ? e(t) : new tO();
+                return e ? e(t) : new tL();
             } catch (e) {
-                return console.warn('Unable to initialize CanvasManager'), new tO();
+                return console.warn('Unable to initialize CanvasManager'), new tL();
             }
         })(V, {
-            mirror: tS,
+            mirror: tD,
             win: window,
             mutationCb: (e) =>
                 o({
@@ -2616,47 +2616,47 @@ function tD(e = {}) {
                     }
                 }),
             recordCanvas: m,
-            blockClass: E,
+            blockClass: i,
             blockSelector: c,
             unblockSelector: s,
             maxCanvasSize: C,
-            sampling: U.canvas,
-            dataURLOptions: P,
-            errorHandler: Y
+            sampling: g.canvas,
+            dataURLOptions: U,
+            errorHandler: x
         }),
-        ea =
+        en =
             'boolean' == typeof __RRWEB_EXCLUDE_SHADOW_DOM__ && __RRWEB_EXCLUDE_SHADOW_DOM__
-                ? new tL()
-                : new tf({
+                ? new tf()
+                : new tO({
                       mutationCb: z,
                       scrollCb: J,
                       bypassOptions: {
                           onMutation: K,
-                          blockClass: E,
+                          blockClass: i,
                           blockSelector: c,
                           unblockSelector: s,
-                          maskAllText: I,
+                          maskAllText: u,
                           maskTextClass: R,
-                          unmaskTextClass: N,
-                          maskTextSelector: A,
-                          unmaskTextSelector: T,
-                          inlineStylesheet: L,
+                          unmaskTextClass: A,
+                          maskTextSelector: T,
+                          unmaskTextSelector: N,
+                          inlineStylesheet: f,
                           maskInputOptions: X,
-                          dataURLOptions: P,
+                          dataURLOptions: U,
                           maskAttributeFn: h,
-                          maskTextFn: D,
-                          maskInputFn: S,
+                          maskTextFn: S,
+                          maskInputFn: D,
                           recordCanvas: m,
                           inlineImages: B,
-                          sampling: U,
+                          sampling: g,
                           slimDOMOptions: j,
                           iframeManager: et,
                           stylesheetManager: ee,
-                          canvasManager: en,
-                          keepIframeSrcFn: H,
+                          canvasManager: ea,
+                          keepIframeSrcFn: Y,
                           processedNodeManager: er
                       },
-                      mirror: tS
+                      mirror: tD
                   }),
         e_ = (e = !1) => {
             if (!G) return;
@@ -2665,26 +2665,26 @@ function tD(e = {}) {
                     type: e0.Meta,
                     data: {
                         href: window.location.href,
-                        width: ex(),
-                        height: eH()
+                        width: eH(),
+                        height: eY()
                     }
                 },
                 e
             ),
                 ee.reset(),
-                ea.init(),
-                tn.forEach((e) => e.lock());
+                en.init(),
+                ta.forEach((e) => e.lock());
             let t = (function (e, t) {
-                let { mirror: r = new Z(), blockClass: n = 'rr-block', blockSelector: a = null, unblockSelector: _ = null, maskAllText: o = !1, maskTextClass: i = 'rr-mask', unmaskTextClass: E = null, maskTextSelector: c = null, unmaskTextSelector: s = null, inlineStylesheet: l = !0, inlineImages: u = !1, recordCanvas: I = !1, maskAllInputs: R = !1, maskAttributeFn: N, maskTextFn: A, maskInputFn: T, slimDOM: d = !1, dataURLOptions: L, preserveWhiteSpace: f, onSerialize: O, onIframeLoad: p, iframeLoadTimeout: h, onStylesheetLoad: S, stylesheetLoadTimeout: D, keepIframeSrcFn: C = () => !1 } = t || {};
+                let { mirror: r = new Z(), blockClass: a = 'rr-block', blockSelector: n = null, unblockSelector: _ = null, maskAllText: o = !1, maskTextClass: E = 'rr-mask', unmaskTextClass: i = null, maskTextSelector: c = null, unmaskTextSelector: s = null, inlineStylesheet: l = !0, inlineImages: I = !1, recordCanvas: u = !1, maskAllInputs: R = !1, maskAttributeFn: A, maskTextFn: T, maskInputFn: N, slimDOM: d = !1, dataURLOptions: f, preserveWhiteSpace: O, onSerialize: L, onIframeLoad: p, iframeLoadTimeout: h, onStylesheetLoad: D, stylesheetLoadTimeout: S, keepIframeSrcFn: C = () => !1 } = t || {};
                 return eM(e, {
                     doc: e,
                     mirror: r,
-                    blockClass: n,
-                    blockSelector: a,
+                    blockClass: a,
+                    blockSelector: n,
                     unblockSelector: _,
                     maskAllText: o,
-                    maskTextClass: i,
-                    unmaskTextClass: E,
+                    maskTextClass: E,
+                    unmaskTextClass: i,
                     maskTextSelector: c,
                     unmaskTextSelector: s,
                     skipChild: !1,
@@ -2711,9 +2711,9 @@ function tD(e = {}) {
                             : !1 === R
                               ? {}
                               : R,
-                    maskAttributeFn: N,
-                    maskTextFn: A,
-                    maskInputFn: T,
+                    maskAttributeFn: A,
+                    maskTextFn: T,
+                    maskInputFn: N,
                     slimDOMOptions:
                         !0 === d || 'all' === d
                             ? {
@@ -2731,47 +2731,47 @@ function tD(e = {}) {
                             : !1 === d
                               ? {}
                               : d,
-                    dataURLOptions: L,
-                    inlineImages: u,
-                    recordCanvas: I,
-                    preserveWhiteSpace: f,
-                    onSerialize: O,
+                    dataURLOptions: f,
+                    inlineImages: I,
+                    recordCanvas: u,
+                    preserveWhiteSpace: O,
+                    onSerialize: L,
                     onIframeLoad: p,
                     iframeLoadTimeout: h,
-                    onStylesheetLoad: S,
-                    stylesheetLoadTimeout: D,
+                    onStylesheetLoad: D,
+                    stylesheetLoadTimeout: S,
                     keepIframeSrcFn: C,
                     newlyAddedElement: !1
                 });
             })(document, {
-                mirror: tS,
-                blockClass: E,
+                mirror: tD,
+                blockClass: i,
                 blockSelector: c,
                 unblockSelector: s,
-                maskAllText: I,
+                maskAllText: u,
                 maskTextClass: R,
-                unmaskTextClass: N,
-                maskTextSelector: A,
-                unmaskTextSelector: T,
-                inlineStylesheet: L,
+                unmaskTextClass: A,
+                maskTextSelector: T,
+                unmaskTextSelector: N,
+                inlineStylesheet: f,
                 maskAllInputs: X,
                 maskAttributeFn: h,
-                maskInputFn: S,
-                maskTextFn: D,
+                maskInputFn: D,
+                maskTextFn: S,
                 slimDOM: j,
-                dataURLOptions: P,
+                dataURLOptions: U,
                 recordCanvas: m,
                 inlineImages: B,
                 onSerialize: (e) => {
-                    eF(e, tS) && et.addIframe(e), eX(e, tS) && ee.trackLinkElement(e), ej(e) && ea.addShadowRoot(e.shadowRoot, document);
+                    eF(e, tD) && et.addIframe(e), eX(e, tD) && ee.trackLinkElement(e), ej(e) && en.addShadowRoot(e.shadowRoot, document);
                 },
                 onIframeLoad: (e, t) => {
-                    et.attachIframe(e, t), e.contentWindow && en.addWindow(e.contentWindow), ea.observeAttachShadow(e);
+                    et.attachIframe(e, t), e.contentWindow && ea.addWindow(e.contentWindow), en.observeAttachShadow(e);
                 },
                 onStylesheetLoad: (e, t) => {
                     ee.attachLinkElement(e, t);
                 },
-                keepIframeSrcFn: H
+                keepIframeSrcFn: Y
             });
             if (!t) return console.warn('Failed to snapshot the document');
             o({
@@ -2781,14 +2781,14 @@ function tD(e = {}) {
                     initialOffset: eW(window)
                 }
             }),
-                tn.forEach((e) => e.unlock()),
-                document.adoptedStyleSheets && document.adoptedStyleSheets.length > 0 && ee.adoptStyleSheets(document.adoptedStyleSheets, tS.getId(document));
+                ta.forEach((e) => e.unlock()),
+                document.adoptedStyleSheets && document.adoptedStyleSheets.length > 0 && ee.adoptStyleSheets(document.adoptedStyleSheets, tD.getId(document));
         };
-    i = e_;
+    E = e_;
     try {
         let e = [],
             t = (e) =>
-                tt(tu)(
+                tt(tI)(
                     {
                         onMutation: K,
                         mutationCb: z,
@@ -2876,17 +2876,17 @@ function tD(e = {}) {
                                 }
                             });
                         },
-                        blockClass: E,
+                        blockClass: i,
                         ignoreClass: l,
-                        ignoreSelector: u,
-                        maskAllText: I,
+                        ignoreSelector: I,
+                        maskAllText: u,
                         maskTextClass: R,
-                        unmaskTextClass: N,
-                        maskTextSelector: A,
-                        unmaskTextSelector: T,
+                        unmaskTextClass: A,
+                        maskTextSelector: T,
+                        unmaskTextSelector: N,
                         maskInputOptions: X,
-                        inlineStylesheet: L,
-                        sampling: U,
+                        inlineStylesheet: f,
+                        sampling: g,
                         recordDOM: G,
                         recordCanvas: m,
                         inlineImages: B,
@@ -2894,20 +2894,20 @@ function tD(e = {}) {
                         collectFonts: w,
                         doc: e,
                         maskAttributeFn: h,
-                        maskInputFn: S,
-                        maskTextFn: D,
-                        keepIframeSrcFn: H,
+                        maskInputFn: D,
+                        maskTextFn: S,
+                        keepIframeSrcFn: Y,
                         blockSelector: c,
                         unblockSelector: s,
                         slimDOMOptions: j,
-                        dataURLOptions: P,
-                        mirror: tS,
+                        dataURLOptions: U,
+                        mirror: tD,
                         iframeManager: et,
                         stylesheetManager: ee,
-                        shadowDomManager: ea,
+                        shadowDomManager: en,
                         processedNodeManager: er,
-                        canvasManager: en,
-                        ignoreCSSAttributes: x,
+                        canvasManager: ea,
+                        ignoreCSSAttributes: H,
                         plugins:
                             (0, d.x)([
                                 W,
@@ -2971,25 +2971,25 @@ function tD(e = {}) {
                       )
                   )),
             () => {
-                e.forEach((e) => e()), er.destroy(), (i = void 0), (_ = void 0);
+                e.forEach((e) => e()), er.destroy(), (E = void 0), (_ = void 0);
             }
         );
     } catch (e) {
         console.warn(e);
     }
 }
-(tD.mirror = tS),
-    (tD.takeFullSnapshot = function (e) {
-        if (!i) throw Error('please take full snapshot after start recording');
-        i(e);
+(tS.mirror = tD),
+    (tS.takeFullSnapshot = function (e) {
+        if (!E) throw Error('please take full snapshot after start recording');
+        E(e);
     });
 function tC(e) {
     return e > 9999999999 ? e : 1000 * e;
 }
-function tg(e) {
+function tP(e) {
     return e > 9999999999 ? e / 1000 : e;
 }
-function tU(e, t) {
+function tg(e, t) {
     if ('sentry.transaction' !== t.category)
         ['ui.click', 'ui.input'].includes(t.category) ? e.triggerUserActivity() : e.checkAndHandleExpiredSession(),
             e.addUpdate(
@@ -2999,19 +2999,19 @@ function tU(e, t) {
                         timestamp: 1000 * (t.timestamp || 0),
                         data: {
                             tag: 'breadcrumb',
-                            payload: (0, U.Fv)(t, 10, 1000)
+                            payload: (0, g.Fv)(t, 10, 1000)
                         }
                     }),
                     'console' === t.category
                 )
             );
 }
-function tP(e) {
+function tU(e) {
     return e.closest('button,a') || e;
 }
 function tM(e) {
     let t = tG(e);
-    return t && t instanceof Element ? tP(t) : t;
+    return t && t instanceof Element ? tU(t) : t;
 }
 function tG(e) {
     return (function (e) {
@@ -3021,7 +3021,7 @@ function tG(e) {
         : e;
 }
 class tm {
-    constructor(e, t, r = tU) {
+    constructor(e, t, r = tg) {
         (this._lastMutation = 0), (this._lastScroll = 0), (this._clicks = []), (this._timeout = t.timeout / 1000), (this._threshold = t.threshold / 1000), (this._scollTimeout = t.scrollTimeout / 1000), (this._replay = e), (this._ignoreSelector = t.ignoreSelector), (this._addBreadcrumbEvent = r);
     }
     addListeners() {
@@ -3030,23 +3030,23 @@ class tm {
             ((e = () => {
                 this._lastMutation = tb();
             }),
-            !E &&
-                ((E = []),
+            !i &&
+                ((i = []),
                 (function () {
-                    (0, P.hl)(k, 'open', function (e) {
+                    (0, U.hl)(k, 'open', function (e) {
                         return function (...t) {
-                            if (E)
+                            if (i)
                                 try {
-                                    E.forEach((e) => e());
+                                    i.forEach((e) => e());
                                 } catch (e) {}
                             return e.apply(k, t);
                         };
                     });
                 })()),
-            E.push(e),
+            i.push(e),
             () => {
-                let t = E ? E.indexOf(e) : -1;
-                t > -1 && E.splice(t, 1);
+                let t = i ? i.indexOf(e) : -1;
+                t > -1 && i.splice(t, 1);
             });
         this._teardown = () => {
             t(), (this._clicks = []), (this._lastMutation = 0), (this._lastScroll = 0);
@@ -3066,7 +3066,7 @@ class tm {
         )
             return;
         let r = {
-            timestamp: tg(e.timestamp),
+            timestamp: tP(e.timestamp),
             clickBreadcrumb: e,
             clickCount: 0,
             node: t
@@ -3074,13 +3074,13 @@ class tm {
         if (!this._clicks.some((e) => e.node === r.node && 1 > Math.abs(e.timestamp - r.timestamp))) this._clicks.push(r), 1 === this._clicks.length && this._scheduleCheckClicks();
     }
     registerMutation(e = Date.now()) {
-        this._lastMutation = tg(e);
+        this._lastMutation = tP(e);
     }
     registerScroll(e = Date.now()) {
-        this._lastScroll = tg(e);
+        this._lastScroll = tP(e);
     }
     registerClick(e) {
-        let t = tP(e);
+        let t = tU(e);
         this._handleMultiClick(t);
     }
     _handleMultiClick(e) {
@@ -3106,11 +3106,11 @@ class tm {
     _generateBreadcrumbs(e) {
         let t = this._replay,
             r = e.scrollAfter && e.scrollAfter <= this._scollTimeout,
-            n = e.mutationAfter && e.mutationAfter <= this._threshold,
-            { clickCount: a, clickBreadcrumb: _ } = e;
-        if (!r && !n) {
+            a = e.mutationAfter && e.mutationAfter <= this._threshold,
+            { clickCount: n, clickBreadcrumb: _ } = e;
+        if (!r && !a) {
             let r = 1000 * Math.min(e.mutationAfter || this._timeout, this._timeout),
-                n = r < 1000 * this._timeout ? 'mutation' : 'timeout',
+                a = r < 1000 * this._timeout ? 'mutation' : 'timeout',
                 o = {
                     type: 'default',
                     message: _.message,
@@ -3121,14 +3121,14 @@ class tm {
                         url: k.location.href,
                         route: t.getCurrentRoute(),
                         timeAfterClickMs: r,
-                        endReason: n,
-                        clickCount: a || 1
+                        endReason: a,
+                        clickCount: n || 1
                     }
                 };
             this._addBreadcrumbEvent(t, o);
             return;
         }
-        if (a > 1) {
+        if (n > 1) {
             let e = {
                 type: 'default',
                 message: _.message,
@@ -3138,7 +3138,7 @@ class tm {
                     ..._.data,
                     url: k.location.href,
                     route: t.getCurrentRoute(),
-                    clickCount: a,
+                    clickCount: n,
                     metric: !0
                 }
             };
@@ -3146,7 +3146,7 @@ class tm {
         }
     }
     _scheduleCheckClicks() {
-        this._checkClickTimeout && clearTimeout(this._checkClickTimeout), (this._checkClickTimeout = (0, H.iK)(() => this._checkClicks(), 1000));
+        this._checkClickTimeout && clearTimeout(this._checkClickTimeout), (this._checkClickTimeout = (0, Y.iK)(() => this._checkClicks(), 1000));
     }
 }
 let ty = ['A', 'BUTTON', 'INPUT'];
@@ -3160,7 +3160,7 @@ function tv(e) {
         ...e
     };
 }
-((R = A || (A = {}))[(R.Document = 0)] = 'Document'), (R[(R.DocumentType = 1)] = 'DocumentType'), (R[(R.Element = 2)] = 'Element'), (R[(R.Text = 3)] = 'Text'), (R[(R.CDATA = 4)] = 'CDATA'), (R[(R.Comment = 5)] = 'Comment');
+((R = T || (T = {}))[(R.Document = 0)] = 'Document'), (R[(R.DocumentType = 1)] = 'DocumentType'), (R[(R.Element = 2)] = 'Element'), (R[(R.Text = 3)] = 'Text'), (R[(R.CDATA = 4)] = 'CDATA'), (R[(R.Comment = 5)] = 'Comment');
 let tw = new Set(['id', 'class', 'aria-label', 'role', 'name', 'alt', 'title', 'data-test-id', 'data-testid', 'disabled', 'aria-disabled', 'data-sentry-component']),
     tB = (e) => (t) => {
         if (!e.isEnabled()) return;
@@ -3168,14 +3168,14 @@ let tw = new Set(['id', 'class', 'aria-label', 'role', 'name', 'alt', 'title', '
             let { target: t, message: r } = (function (e) {
                 let t;
                 let r = 'click' === e.name,
-                    n = null;
+                    a = null;
                 try {
-                    (n = r ? tM(e.event) : tG(e.event)), (t = (0, M.Rt)(n, { maxStringLength: 200 }) || '<unknown>');
+                    (a = r ? tM(e.event) : tG(e.event)), (t = (0, M.Rt)(a, { maxStringLength: 200 }) || '<unknown>');
                 } catch (e) {
                     t = '<unknown>';
                 }
                 return {
-                    target: n,
+                    target: a,
                     message: t
                 };
             })(e);
@@ -3185,31 +3185,31 @@ let tw = new Set(['id', 'class', 'aria-label', 'role', 'name', 'alt', 'title', '
             });
         })(t);
         if (!r) return;
-        let n = 'click' === t.name,
-            a = n ? t.event : void 0;
-        n &&
+        let a = 'click' === t.name,
+            n = a ? t.event : void 0;
+        a &&
             e.clickDetector &&
-            a &&
-            a.target &&
-            !a.altKey &&
-            !a.metaKey &&
-            !a.ctrlKey &&
-            !a.shiftKey &&
+            n &&
+            n.target &&
+            !n.altKey &&
+            !n.metaKey &&
+            !n.ctrlKey &&
+            !n.shiftKey &&
             !(function (e, t, r) {
                 e.handleClick(t, r);
             })(e.clickDetector, r, tM(t.event)),
-            tU(e, r);
+            tg(e, r);
     };
 function tW(e, t) {
-    let r = tD.mirror.getId(e),
-        n = r && tD.mirror.getNode(r),
-        a = n && tD.mirror.getMeta(n),
+    let r = tS.mirror.getId(e),
+        a = r && tS.mirror.getNode(r),
+        n = a && tS.mirror.getMeta(a),
         _ =
-            a &&
+            n &&
             (function (e) {
-                return e.type === A.Element;
-            })(a)
-                ? a
+                return e.type === T.Element;
+            })(n)
+                ? n
                 : null;
     return {
         message: t,
@@ -3220,7 +3220,7 @@ function tW(e, t) {
                       id: r,
                       tagName: _.tagName,
                       textContent: Array.from(_.childNodes)
-                          .map((e) => e.type === A.Text && e.textContent)
+                          .map((e) => e.type === T.Text && e.textContent)
                           .filter(Boolean)
                           .map((e) => e.trim())
                           .join(''),
@@ -3228,8 +3228,8 @@ function tW(e, t) {
                           let t = {};
                           for (let r in (!e['data-sentry-component'] && e['data-sentry-element'] && (e['data-sentry-component'] = e['data-sentry-element']), e))
                               if (tw.has(r)) {
-                                  let n = r;
-                                  ('data-testid' === r || 'data-test-id' === r) && (n = 'testId'), (t[n] = e[r]);
+                                  let a = r;
+                                  ('data-testid' === r || 'data-test-id' === r) && (a = 'testId'), (t[a] = e[r]);
                               }
                           return t;
                       })(_.attributes)
@@ -3238,65 +3238,65 @@ function tW(e, t) {
             : {}
     };
 }
-let tH = {
+let tY = {
     resource: function (e) {
-        let { entryType: t, initiatorType: r, name: n, responseEnd: a, startTime: _, decodedBodySize: o, encodedBodySize: i, responseStatus: E, transferSize: c } = e;
+        let { entryType: t, initiatorType: r, name: a, responseEnd: n, startTime: _, decodedBodySize: o, encodedBodySize: E, responseStatus: i, transferSize: c } = e;
         return ['fetch', 'xmlhttprequest'].includes(r)
             ? null
             : {
                   type: `${t}.${r}`,
                   start: tK(_),
-                  end: tK(a),
-                  name: n,
+                  end: tK(n),
+                  name: a,
                   data: {
                       size: c,
-                      statusCode: E,
+                      statusCode: i,
                       decodedBodySize: o,
-                      encodedBodySize: i
+                      encodedBodySize: E
                   }
               };
     },
     paint: function (e) {
-        let { duration: t, entryType: r, name: n, startTime: a } = e,
-            _ = tK(a);
+        let { duration: t, entryType: r, name: a, startTime: n } = e,
+            _ = tK(n);
         return {
             type: r,
-            name: n,
+            name: a,
             start: _,
             end: _ + t,
             data: void 0
         };
     },
     navigation: function (e) {
-        let { entryType: t, name: r, decodedBodySize: n, duration: a, domComplete: _, encodedBodySize: o, domContentLoadedEventStart: i, domContentLoadedEventEnd: E, domInteractive: c, loadEventStart: s, loadEventEnd: l, redirectCount: u, startTime: I, transferSize: R, type: N } = e;
-        return 0 === a
+        let { entryType: t, name: r, decodedBodySize: a, duration: n, domComplete: _, encodedBodySize: o, domContentLoadedEventStart: E, domContentLoadedEventEnd: i, domInteractive: c, loadEventStart: s, loadEventEnd: l, redirectCount: I, startTime: u, transferSize: R, type: A } = e;
+        return 0 === n
             ? null
             : {
-                  type: `${t}.${N}`,
-                  start: tK(I),
+                  type: `${t}.${A}`,
+                  start: tK(u),
                   end: tK(_),
                   name: r,
                   data: {
                       size: R,
-                      decodedBodySize: n,
+                      decodedBodySize: a,
                       encodedBodySize: o,
-                      duration: a,
+                      duration: n,
                       domInteractive: c,
-                      domContentLoadedEventStart: i,
-                      domContentLoadedEventEnd: E,
+                      domContentLoadedEventStart: E,
+                      domContentLoadedEventEnd: i,
                       loadEventStart: s,
                       loadEventEnd: l,
                       domComplete: _,
-                      redirectCount: u
+                      redirectCount: I
                   }
               };
     }
 };
-function tx(e, t) {
+function tH(e, t) {
     return ({ metric: r }) => void t.replayPerformanceEntries.push(e(r));
 }
-function tY(e) {
-    let t = tH[e.entryType];
+function tx(e) {
+    let t = tY[e.entryType];
     return t ? t(e) : null;
 }
 function tK(e) {
@@ -3321,19 +3321,19 @@ function tX(e) {
     return tj(e, 'interaction-to-next-paint', t && t.target ? [t.target] : void 0);
 }
 function tj(e, t, r) {
-    let n = e.value,
-        a = e.rating,
-        _ = tK(n);
+    let a = e.value,
+        n = e.rating,
+        _ = tK(a);
     return {
         type: 'web-vital',
         name: t,
         start: _,
         end: _,
         data: {
-            value: n,
-            size: n,
-            rating: a,
-            nodeIds: r ? r.map((e) => tD.mirror.getId(e)) : void 0
+            value: a,
+            size: a,
+            rating: n,
+            nodeIds: r ? r.map((e) => tS.mirror.getId(e)) : void 0
         }
     };
 }
@@ -3345,12 +3345,12 @@ function tz(e, t) {
     if (!!t$)
         m.kg.info(e),
             t &&
-                (0, H.iK)(() => {
+                (0, Y.iK)(() => {
                     tJ(e);
                 }, 0);
 }
 function tJ(e) {
-    (0, L.n)(
+    (0, f.n)(
         {
             category: 'console',
             data: { logger: 'replay' },
@@ -3427,14 +3427,14 @@ class t0 {
     }
     postMessage(e, t) {
         let r = this._getAndIncrementId();
-        return new Promise((n, a) => {
+        return new Promise((a, n) => {
             let _ = ({ data: t }) => {
                 if (t.method === e && t.id === r) {
                     if ((this._worker.removeEventListener('message', _), !t.success)) {
-                        t$ && m.kg.error('[Replay]', t.response), a(Error('Error in compression worker'));
+                        t$ && m.kg.error('[Replay]', t.response), n(Error('Error in compression worker'));
                         return;
                     }
-                    n(t.response);
+                    a(t.response);
                 }
             };
             this._worker.addEventListener('message', _),
@@ -3555,44 +3555,44 @@ function t3() {
         return !1;
     }
 }
-function t5(e) {
+function t6(e) {
     return void 0 !== e && Math.random() < e;
 }
-function t6(e) {
+function t4(e) {
     let t = Date.now(),
         r = e.id || (0, y.DM)(),
-        n = e.started || t,
-        a = e.lastActivity || t,
+        a = e.started || t,
+        n = e.lastActivity || t,
         _ = e.segmentId || 0,
         o = e.sampled;
     return {
         id: r,
-        started: n,
-        lastActivity: a,
+        started: a,
+        lastActivity: n,
         segmentId: _,
         sampled: o,
         previousSessionId: e.previousSessionId
     };
 }
-function t4(e) {
+function t5(e) {
     if (!!t3())
         try {
             k.sessionStorage.setItem(F, JSON.stringify(e));
         } catch (e) {}
 }
-function t8({ sessionSampleRate: e, allowBuffering: t, stickySession: r = !1 }, { previousSessionId: n } = {}) {
-    var a, _;
-    let o = t6({
-        sampled: ((a = e), (_ = t), t5(a) ? 'session' : !!_ && 'buffer'),
-        previousSessionId: n
+function t8({ sessionSampleRate: e, allowBuffering: t, stickySession: r = !1 }, { previousSessionId: a } = {}) {
+    var n, _;
+    let o = t4({
+        sampled: ((n = e), (_ = t), t6(n) ? 'session' : !!_ && 'buffer'),
+        previousSessionId: a
     });
-    return r && t4(o), o;
+    return r && t5(o), o;
 }
 function t7(e, t, r = +new Date()) {
     return null === e || void 0 === t || !!(t < 0) || (0 !== t && e + t <= r);
 }
-function t9(e, { maxReplayDuration: t, sessionIdleExpire: r, targetTime: n = Date.now() }) {
-    return t7(e.started, t, n) || t7(e.lastActivity, r, n);
+function t9(e, { maxReplayDuration: t, sessionIdleExpire: r, targetTime: a = Date.now() }) {
+    return t7(e.started, t, a) || t7(e.lastActivity, r, a);
 }
 function re(e, { sessionIdleExpire: t, maxReplayDuration: r }) {
     return (
@@ -3604,16 +3604,16 @@ function re(e, { sessionIdleExpire: t, maxReplayDuration: r }) {
         !1
     );
 }
-function rt({ traceInternals: e, sessionIdleExpire: t, maxReplayDuration: r, previousSessionId: n }, a) {
+function rt({ traceInternals: e, sessionIdleExpire: t, maxReplayDuration: r, previousSessionId: a }, n) {
     let _ =
-        a.stickySession &&
+        n.stickySession &&
         (function (e) {
             if (!t3()) return null;
             try {
                 let t = k.sessionStorage.getItem(F);
                 if (!t) return null;
                 let r = JSON.parse(t);
-                return tz('[Replay] Loading existing session', e), t6(r);
+                return tz('[Replay] Loading existing session', e), t4(r);
             } catch (e) {
                 return null;
             }
@@ -3623,36 +3623,36 @@ function rt({ traceInternals: e, sessionIdleExpire: t, maxReplayDuration: r, pre
               sessionIdleExpire: t,
               maxReplayDuration: r
           })
-            ? (tz('[Replay] Session in sessionStorage is expired, creating new one...'), t8(a, { previousSessionId: _.id }))
+            ? (tz('[Replay] Session in sessionStorage is expired, creating new one...'), t8(n, { previousSessionId: _.id }))
             : _
-        : (tz('[Replay] Creating new session', e), t8(a, { previousSessionId: n }));
+        : (tz('[Replay] Creating new session', e), t8(n, { previousSessionId: a }));
 }
 function rr(e, t, r) {
-    return !!ra(e, t) && (rn(e, t, r), !0);
+    return !!rn(e, t) && (ra(e, t, r), !0);
 }
-async function rn(e, t, r) {
+async function ra(e, t, r) {
     if (!e.eventBuffer) return null;
     try {
         r && 'buffer' === e.recordingMode && e.eventBuffer.clear(), r && (e.eventBuffer.hasCheckout = !0);
-        let n = e.getOptions(),
-            a = (function (e, t) {
+        let a = e.getOptions(),
+            n = (function (e, t) {
                 try {
                     if ('function' == typeof t && e.type === e0.Custom) return t(e);
                 } catch (e) {
                     return t$ && m.kg.error('[Replay] An error occured in the `beforeAddRecordingEvent` callback, skipping the event...', e), null;
                 }
                 return e;
-            })(t, n.beforeAddRecordingEvent);
-        if (!a) return;
-        return await e.eventBuffer.addEvent(a);
-    } catch (n) {
-        let t = n && n instanceof tQ ? 'addEventSizeExceeded' : 'addEvent';
-        e.handleException(n), await e.stop({ reason: t });
-        let r = (0, f.s3)();
+            })(t, a.beforeAddRecordingEvent);
+        if (!n) return;
+        return await e.eventBuffer.addEvent(n);
+    } catch (a) {
+        let t = a && a instanceof tQ ? 'addEventSizeExceeded' : 'addEvent';
+        e.handleException(a), await e.stop({ reason: t });
+        let r = (0, O.s3)();
         r && r.recordDroppedEvent('internal_sdk_error', 'replay');
     }
 }
-function ra(e, t) {
+function rn(e, t) {
     if (!e.eventBuffer || e.isPaused() || !e.isEnabled()) return !1;
     let r = tC(t.timestamp);
     return !(r + e.timeouts.sessionIdlePause < Date.now()) && (!(r > e.getContext().initialTimestamp + e.getOptions().maxReplayDuration) || (tz(`[Replay] Skipping event with timestamp ${r} because it is after maxReplayDuration`, e.getOptions()._experiments.traceInternals), !1));
@@ -3663,14 +3663,14 @@ function r_(e) {
 function ro(e) {
     return 'transaction' === e.type;
 }
-function ri(e) {
+function rE(e) {
     return 'feedback' === e.type;
 }
-function rE(e) {
+function ri(e) {
     return !!e.category;
 }
 function rc(e, t) {
-    return t.map(({ type: t, start: r, end: n, name: a, data: _ }) => {
+    return t.map(({ type: t, start: r, end: a, name: n, data: _ }) => {
         let o = e.throttledAddEvent({
             type: e0.Custom,
             timestamp: r,
@@ -3678,9 +3678,9 @@ function rc(e, t) {
                 tag: 'performanceSpan',
                 payload: {
                     op: t,
-                    description: a,
+                    description: n,
                     startTimestamp: r,
-                    endTimestamp: n,
+                    endTimestamp: a,
                     data: _
                 }
             }
@@ -3689,9 +3689,9 @@ function rc(e, t) {
     });
 }
 function rs(e, t) {
-    var r, n;
+    var r, a;
     if (!e.isEnabled() || null === t) return;
-    if (((r = e), (n = t.name), !((!t$ || !r.getOptions()._experiments.traceInternals) && (0, O.W)(n, (0, f.s3)())))) e.addUpdate(() => (rc(e, [t]), !0));
+    if (((r = e), (a = t.name), !((!t$ || !r.getOptions()._experiments.traceInternals) && (0, L.W)(a, (0, O.s3)())))) e.addUpdate(() => (rc(e, [t]), !0));
 }
 function rl(e) {
     if (!e) return;
@@ -3700,23 +3700,23 @@ function rl(e) {
         if ('string' == typeof e) return t.encode(e).length;
         if (e instanceof URLSearchParams) return t.encode(e.toString()).length;
         if (e instanceof FormData) {
-            let r = rL(e);
+            let r = rf(e);
             return t.encode(r).length;
         }
         if (e instanceof Blob) return e.size;
         if (e instanceof ArrayBuffer) return e.byteLength;
     } catch (e) {}
 }
-function ru(e) {
+function rI(e) {
     if (!e) return;
     let t = parseInt(e, 10);
     return isNaN(t) ? void 0 : t;
 }
-function rI(e) {
+function ru(e) {
     try {
         if ('string' == typeof e) return [e];
         if (e instanceof URLSearchParams) return [e.toString()];
-        if (e instanceof FormData) return [rL(e)];
+        if (e instanceof FormData) return [rf(e)];
         if (!e) return [void 0];
     } catch (t) {
         return t$ && m.kg.warn('[Replay] Failed to serialize body', e), [void 0, 'BODY_PARSE_ERROR'];
@@ -3731,33 +3731,33 @@ function rR(e, t) {
             _meta: { warnings: [t] }
         };
     let r = { ...e._meta },
-        n = r.warnings || [];
-    return (r.warnings = [...n, t]), (e._meta = r), e;
+        a = r.warnings || [];
+    return (r.warnings = [...a, t]), (e._meta = r), e;
 }
-function rN(e, t) {
+function rA(e, t) {
     if (!t) return null;
-    let { startTimestamp: r, endTimestamp: n, url: a, method: _, statusCode: o, request: i, response: E } = t;
+    let { startTimestamp: r, endTimestamp: a, url: n, method: _, statusCode: o, request: E, response: i } = t;
     return {
         type: e,
         start: r / 1000,
-        end: n / 1000,
-        name: a,
-        data: (0, P.Jr)({
+        end: a / 1000,
+        name: n,
+        data: (0, U.Jr)({
             method: _,
             statusCode: o,
-            request: i,
-            response: E
+            request: E,
+            response: i
         })
     };
 }
-function rA(e) {
+function rT(e) {
     return {
         headers: {},
         size: e,
         _meta: { warnings: ['URL_SKIPPED'] }
     };
 }
-function rT(e, t, r) {
+function rN(e, t, r) {
     if (!t && 0 === Object.keys(e).length) return;
     if (!t) return { headers: e };
     if (!r)
@@ -3765,11 +3765,11 @@ function rT(e, t, r) {
             headers: e,
             size: t
         };
-    let n = {
+    let a = {
             headers: e,
             size: t
         },
-        { body: a, warnings: _ } = (function (e) {
+        { body: n, warnings: _ } = (function (e) {
             if (!e || 'string' != typeof e) return { body: e };
             let t = e.length > 150000,
                 r = (function (e) {
@@ -3795,87 +3795,87 @@ function rT(e, t, r) {
                 } catch (e) {}
             return { body: e };
         })(r);
-    return (n.body = a), _ && _.length > 0 && (n._meta = { warnings: _ }), n;
+    return (a.body = n), _ && _.length > 0 && (a._meta = { warnings: _ }), a;
 }
 function rd(e, t) {
-    return Object.entries(e).reduce((r, [n, a]) => {
-        let _ = n.toLowerCase();
-        return t.includes(_) && e[n] && (r[_] = a), r;
+    return Object.entries(e).reduce((r, [a, n]) => {
+        let _ = a.toLowerCase();
+        return t.includes(_) && e[a] && (r[_] = n), r;
     }, {});
 }
-function rL(e) {
+function rf(e) {
     return new URLSearchParams(e).toString();
 }
-function rf(e, t) {
+function rO(e, t) {
     let r = (function (e, t = k.document.baseURI) {
         if (e.startsWith('http://') || e.startsWith('https://') || e.startsWith(k.location.origin)) return e;
         let r = new URL(e, t);
         if (r.origin !== new URL(t).origin) return e;
-        let n = r.href;
-        return !e.endsWith('/') && n.endsWith('/') ? n.slice(0, -1) : n;
+        let a = r.href;
+        return !e.endsWith('/') && a.endsWith('/') ? a.slice(0, -1) : a;
     })(e);
     return (0, b.U0)(r, t);
 }
-async function rO(e, t, r) {
+async function rL(e, t, r) {
     try {
-        let n = await rp(e, t, r),
-            a = rN('resource.fetch', n);
-        rs(r.replay, a);
+        let a = await rp(e, t, r),
+            n = rA('resource.fetch', a);
+        rs(r.replay, n);
     } catch (e) {
         t$ && m.kg.error('[Replay] Failed to capture fetch breadcrumb', e);
     }
 }
 async function rp(e, t, r) {
-    let n = Date.now(),
-        { startTimestamp: a = n, endTimestamp: _ = n } = t,
-        { url: o, method: i, status_code: E = 0, request_body_size: c, response_body_size: s } = e.data,
-        l = rf(o, r.networkDetailAllowUrls) && !rf(o, r.networkDetailDenyUrls),
-        u = l
-            ? (function ({ networkCaptureBodies: e, networkRequestHeaders: t }, r, n) {
-                  let a = r
+    let a = Date.now(),
+        { startTimestamp: n = a, endTimestamp: _ = a } = t,
+        { url: o, method: E, status_code: i = 0, request_body_size: c, response_body_size: s } = e.data,
+        l = rO(o, r.networkDetailAllowUrls) && !rO(o, r.networkDetailDenyUrls),
+        I = l
+            ? (function ({ networkCaptureBodies: e, networkRequestHeaders: t }, r, a) {
+                  let n = r
                       ? (function (e, t) {
-                            return 1 === e.length && 'string' != typeof e[0] ? rg(e[0], t) : 2 === e.length ? rg(e[1], t) : {};
+                            return 1 === e.length && 'string' != typeof e[0] ? rP(e[0], t) : 2 === e.length ? rP(e[1], t) : {};
                         })(r, t)
                       : {};
-                  if (!e) return rT(a, n, void 0);
-                  let [_, o] = rI(rD(r)),
-                      i = rT(a, n, _);
-                  return o ? rR(i, o) : i;
+                  if (!e) return rN(n, a, void 0);
+                  let [_, o] = ru(rS(r)),
+                      E = rN(n, a, _);
+                  return o ? rR(E, o) : E;
               })(r, t.input, c)
-            : rA(c);
+            : rT(c);
     return {
-        startTimestamp: a,
+        startTimestamp: n,
         endTimestamp: _,
         url: o,
-        method: i,
-        statusCode: E,
-        request: u,
+        method: E,
+        statusCode: i,
+        request: I,
         response: await rh(l, r, t.response, s)
     };
 }
-async function rh(e, { networkCaptureBodies: t, networkResponseHeaders: r }, n, a) {
-    if (!e && void 0 !== a) return rA(a);
-    let _ = n ? rC(n.headers, r) : {};
-    if (!n || (!t && void 0 !== a)) return rT(_, a, void 0);
-    let [o, i] = await rS(n),
-        E = (function (e, { networkCaptureBodies: t, responseBodySize: r, captureDetails: n, headers: a }) {
+async function rh(e, { networkCaptureBodies: t, networkResponseHeaders: r }, a, n) {
+    if (!e && void 0 !== n) return rT(n);
+    let _ = a ? rC(a.headers, r) : {};
+    if (!a || (!t && void 0 !== n)) return rN(_, n, void 0);
+    let [o, E] = await rD(a),
+        i = (function (e, { networkCaptureBodies: t, responseBodySize: r, captureDetails: a, headers: n }) {
             try {
                 let _ = e && e.length && void 0 === r ? rl(e) : r;
-                if (!n) return rA(_);
-                if (t) return rT(a, _, e);
-                return rT(a, _, void 0);
+                if (!a) return rT(_);
+                if (t) return rN(n, _, e);
+                return rN(n, _, void 0);
             } catch (e) {
-                return t$ && m.kg.warn('[Replay] Failed to serialize response body', e), rT(a, r, void 0);
+                return t$ && m.kg.warn('[Replay] Failed to serialize response body', e), rN(n, r, void 0);
             }
         })(o, {
             networkCaptureBodies: t,
-            responseBodySize: a,
+            responseBodySize: n,
             captureDetails: e,
             headers: _
         });
-    return i ? rR(E, i) : E;
+    return E ? rR(i, E) : i;
 }
-async function rS(e) {
+async function rD(e) {
     let t = (function (e) {
         try {
             return e.clone();
@@ -3888,13 +3888,13 @@ async function rS(e) {
         return [
             await (function (e) {
                 return new Promise((t, r) => {
-                    let n = (0, H.iK)(() => r(Error('Timeout while trying to read response body')), 500);
-                    rU(e)
+                    let a = (0, Y.iK)(() => r(Error('Timeout while trying to read response body')), 500);
+                    rg(e)
                         .then(
                             (e) => t(e),
                             (e) => r(e)
                         )
-                        .finally(() => clearTimeout(n));
+                        .finally(() => clearTimeout(a));
                 });
             })(t)
         ];
@@ -3902,7 +3902,7 @@ async function rS(e) {
         return t$ && m.kg.warn('[Replay] Failed to get text body from response', e), [void 0, 'BODY_PARSE_ERROR'];
     }
 }
-function rD(e = []) {
+function rS(e = []) {
     if (2 === e.length && 'object' == typeof e[1]) return e[1].body;
 }
 function rC(e, t) {
@@ -3914,49 +3914,49 @@ function rC(e, t) {
         r
     );
 }
-function rg(e, t) {
+function rP(e, t) {
     if (!e) return {};
     let r = e.headers;
     return r ? (r instanceof Headers ? rC(r, t) : Array.isArray(r) ? {} : rd(r, t)) : {};
 }
-async function rU(e) {
+async function rg(e) {
     return await e.text();
 }
-async function rP(e, t, r) {
+async function rU(e, t, r) {
     try {
-        let n = (function (e, t, r) {
-                let n = Date.now(),
-                    { startTimestamp: a = n, endTimestamp: _ = n, input: o, xhr: i } = t,
-                    { url: E, method: c, status_code: s = 0, request_body_size: l, response_body_size: u } = e.data;
-                if (!E) return null;
-                if (!i || !rf(E, r.networkDetailAllowUrls) || rf(E, r.networkDetailDenyUrls)) {
-                    let e = rA(l);
+        let a = (function (e, t, r) {
+                let a = Date.now(),
+                    { startTimestamp: n = a, endTimestamp: _ = a, input: o, xhr: E } = t,
+                    { url: i, method: c, status_code: s = 0, request_body_size: l, response_body_size: I } = e.data;
+                if (!i) return null;
+                if (!E || !rO(i, r.networkDetailAllowUrls) || rO(i, r.networkDetailDenyUrls)) {
+                    let e = rT(l);
                     return {
-                        startTimestamp: a,
+                        startTimestamp: n,
                         endTimestamp: _,
-                        url: E,
+                        url: i,
                         method: c,
                         statusCode: s,
                         request: e,
-                        response: rA(u)
+                        response: rT(I)
                     };
                 }
-                let I = i[Y.xU],
-                    R = I ? rd(I.request_headers, r.networkRequestHeaders) : {},
-                    N = rd(
+                let u = E[x.xU],
+                    R = u ? rd(u.request_headers, r.networkRequestHeaders) : {},
+                    A = rd(
                         (function (e) {
                             let t = e.getAllResponseHeaders();
                             return t
                                 ? t.split('\r\n').reduce((e, t) => {
-                                      let [r, n] = t.split(': ');
-                                      return n && (e[r.toLowerCase()] = n), e;
+                                      let [r, a] = t.split(': ');
+                                      return a && (e[r.toLowerCase()] = a), e;
                                   }, {})
                                 : {};
-                        })(i),
+                        })(E),
                         r.networkResponseHeaders
                     ),
-                    [A, T] = r.networkCaptureBodies ? rI(o) : [void 0],
-                    [d, L] = r.networkCaptureBodies
+                    [T, N] = r.networkCaptureBodies ? ru(o) : [void 0],
+                    [d, f] = r.networkCaptureBodies
                         ? (function (e) {
                               let t = [];
                               try {
@@ -3980,22 +3980,22 @@ async function rP(e, t, r) {
                                   t.push(e);
                               }
                               return t$ && m.kg.warn('[Replay] Failed to get xhr response body', ...t), [void 0];
-                          })(i)
+                          })(E)
                         : [void 0],
-                    f = rT(R, l, A),
-                    O = rT(N, u, d);
+                    O = rN(R, l, T),
+                    L = rN(A, I, d);
                 return {
-                    startTimestamp: a,
+                    startTimestamp: n,
                     endTimestamp: _,
-                    url: E,
+                    url: i,
                     method: c,
                     statusCode: s,
-                    request: T ? rR(f, T) : f,
-                    response: L ? rR(O, L) : O
+                    request: N ? rR(O, N) : O,
+                    response: f ? rR(L, f) : L
                 };
             })(e, t, r),
-            a = rN('resource.xhr', n);
-        rs(r.replay, a);
+            n = rA('resource.xhr', a);
+        rs(r.replay, n);
     } catch (e) {
         t$ && m.kg.error('[Replay] Failed to capture xhr breadcrumb', e);
     }
@@ -4005,18 +4005,18 @@ async function rM(e) {
         return Promise.all(
             rc(e, [
                 (function (e) {
-                    let { jsHeapSizeLimit: t, totalJSHeapSize: r, usedJSHeapSize: n } = e,
-                        a = Date.now() / 1000;
+                    let { jsHeapSizeLimit: t, totalJSHeapSize: r, usedJSHeapSize: a } = e,
+                        n = Date.now() / 1000;
                     return {
                         type: 'memory',
                         name: 'memory',
-                        start: a,
-                        end: a,
+                        start: n,
+                        end: n,
                         data: {
                             memory: {
                                 jsHeapSizeLimit: t,
                                 totalJSHeapSize: r,
-                                usedJSHeapSize: n
+                                usedJSHeapSize: a
                             }
                         }
                     };
@@ -4027,36 +4027,36 @@ async function rM(e) {
         return [];
     }
 }
-async function rG({ client: e, scope: t, replayId: r, event: n }) {
-    let a = {
+async function rG({ client: e, scope: t, replayId: r, event: a }) {
+    let n = {
         event_id: r,
         integrations: 'object' != typeof e._integrations || null === e._integrations || Array.isArray(e._integrations) ? void 0 : Object.keys(e._integrations)
     };
-    e.emit('preprocessEvent', n, a);
-    let _ = await (0, h.R)(e.getOptions(), n, a, t, e, (0, f.aF)());
+    e.emit('preprocessEvent', a, n);
+    let _ = await (0, h.R)(e.getOptions(), a, n, t, e, (0, O.aF)());
     if (!_) return null;
     _.platform = _.platform || 'javascript';
     let o = e.getSdkMetadata(),
-        { name: i, version: E } = (o && o.sdk) || {};
+        { name: E, version: i } = (o && o.sdk) || {};
     return (
         (_.sdk = {
             ..._.sdk,
-            name: i || 'sentry.javascript.unknown',
-            version: E || '0.0.0'
+            name: E || 'sentry.javascript.unknown',
+            version: i || '0.0.0'
         }),
         _
     );
 }
-async function rm({ recordingData: e, replayId: t, segmentId: r, eventContext: n, timestamp: a, session: _ }) {
-    var o, i, E, c;
+async function rm({ recordingData: e, replayId: t, segmentId: r, eventContext: a, timestamp: n, session: _ }) {
+    var o, E, i, c;
     let s;
     let l = (function ({ recordingData: e, headers: t }) {
             let r;
-            let n = `${JSON.stringify(t)}
+            let a = `${JSON.stringify(t)}
 `;
-            if ('string' == typeof e) r = `${n}${e}`;
+            if ('string' == typeof e) r = `${a}${e}`;
             else {
-                let t = new TextEncoder().encode(n);
+                let t = new TextEncoder().encode(a);
                 (r = new Uint8Array(t.length + e.length)).set(t), r.set(e, t.length);
             }
             return r;
@@ -4064,44 +4064,44 @@ async function rm({ recordingData: e, replayId: t, segmentId: r, eventContext: n
             recordingData: e,
             headers: { segment_id: r }
         }),
-        { urls: u, errorIds: I, traceIds: R, initialTimestamp: N } = n,
-        A = (0, f.s3)(),
-        T = (0, f.nZ)(),
-        d = A && A.getTransport(),
-        L = A && A.getDsn();
-    if (!A || !d || !L || !_.sampled) return (0, w.WD)({});
-    let O = {
+        { urls: I, errorIds: u, traceIds: R, initialTimestamp: A } = a,
+        T = (0, O.s3)(),
+        N = (0, O.nZ)(),
+        d = T && T.getTransport(),
+        f = T && T.getDsn();
+    if (!T || !d || !f || !_.sampled) return (0, w.WD)({});
+    let L = {
             type: 'replay_event',
-            replay_start_timestamp: N / 1000,
-            timestamp: a / 1000,
-            error_ids: I,
+            replay_start_timestamp: A / 1000,
+            timestamp: n / 1000,
+            error_ids: u,
             trace_ids: R,
-            urls: u,
+            urls: I,
             replay_id: t,
             segment_id: r,
             replay_type: _.sampled
         },
         p = await rG({
-            scope: T,
-            client: A,
+            scope: N,
+            client: T,
             replayId: t,
-            event: O
+            event: L
         });
-    if (!p) return A.recordDroppedEvent('event_processor', 'replay', O), tq('An event processor returned `null`, will not send event.'), (0, w.WD)({});
+    if (!p) return T.recordDroppedEvent('event_processor', 'replay', L), tq('An event processor returned `null`, will not send event.'), (0, w.WD)({});
     delete p.sdkProcessingMetadata;
     let h =
         ((o = p),
-        (i = l),
-        (E = L),
-        (c = A.getOptions().tunnel),
-        (0, v.Jd)((0, v.Cd)(o, (0, v.HY)(o), c, E), [
+        (E = l),
+        (i = f),
+        (c = T.getOptions().tunnel),
+        (0, v.Jd)((0, v.Cd)(o, (0, v.HY)(o), c, i), [
             [{ type: 'replay_event' }, o],
             [
                 {
                     type: 'replay_recording',
-                    length: 'string' == typeof i ? new TextEncoder().encode(i).length : i.length
+                    length: 'string' == typeof E ? new TextEncoder().encode(E).length : E.length
                 },
-                i
+                E
             ]
         ]));
     try {
@@ -4114,8 +4114,8 @@ async function rm({ recordingData: e, replayId: t, segmentId: r, eventContext: n
         throw e;
     }
     if ('number' == typeof s.statusCode && (s.statusCode < 200 || s.statusCode >= 300)) throw new ry(s.statusCode);
-    let S = (0, B.WG)({}, s);
-    if ((0, B.Q)(S, 'replay')) throw new rb(S);
+    let D = (0, B.WG)({}, s);
+    if ((0, B.Q)(D, 'replay')) throw new rb(D);
     return s;
 }
 class ry extends Error {
@@ -4135,13 +4135,13 @@ async function rv(
         interval: 5000
     }
 ) {
-    let { recordingData: r, options: n } = e;
+    let { recordingData: r, options: a } = e;
     if (!!r.length)
         try {
             return await rm(e), !0;
         } catch (r) {
             if (r instanceof ry || r instanceof rb) throw r;
-            if (((0, p.v)('Replays', { _retryCount: t.count }), t$ && n._experiments && n._experiments.captureExceptions && (0, p.Tb)(r), t.count >= 3)) {
+            if (((0, p.v)('Replays', { _retryCount: t.count }), t$ && a._experiments && a._experiments.captureExceptions && (0, p.Tb)(r), t.count >= 3)) {
                 let e = Error(`${X} - max retries exceeded`);
                 try {
                     e.cause = r;
@@ -4150,12 +4150,12 @@ async function rv(
             }
             return (
                 (t.interval *= ++t.count),
-                new Promise((r, n) => {
-                    (0, H.iK)(async () => {
+                new Promise((r, a) => {
+                    (0, Y.iK)(async () => {
                         try {
                             await rv(e, t), r(!0);
                         } catch (e) {
-                            n(e);
+                            a(e);
                         }
                     }, t.interval);
                 })
@@ -4194,63 +4194,63 @@ class rB {
             (this._recordingOptions = t),
             (this._options = e),
             (this._debouncedFlush = (function (e, t, r) {
-                let n, a, _;
+                let a, n, _;
                 let o = r && r.maxWait ? Math.max(r.maxWait, t) : 0;
-                function i() {
-                    return E(), (n = e());
-                }
                 function E() {
-                    void 0 !== a && clearTimeout(a), void 0 !== _ && clearTimeout(_), (a = _ = void 0);
+                    return i(), (a = e());
+                }
+                function i() {
+                    void 0 !== n && clearTimeout(n), void 0 !== _ && clearTimeout(_), (n = _ = void 0);
                 }
                 function c() {
-                    return a && clearTimeout(a), (a = (0, H.iK)(i, t)), o && void 0 === _ && (_ = (0, H.iK)(i, o)), n;
+                    return n && clearTimeout(n), (n = (0, Y.iK)(E, t)), o && void 0 === _ && (_ = (0, Y.iK)(E, o)), a;
                 }
                 return (
-                    (c.cancel = E),
+                    (c.cancel = i),
                     (c.flush = function () {
-                        return void 0 !== a || void 0 !== _ ? i() : n;
+                        return void 0 !== n || void 0 !== _ ? E() : a;
                     }),
                     c
                 );
             })(() => this._flush(), this._options.flushMinDelay, { maxWait: this._options.flushMaxDelay })),
             (this._throttledAddEvent = (function (e, t, r) {
-                let n = new Map(),
-                    a = (e) => {
+                let a = new Map(),
+                    n = (e) => {
                         let t = e - 5;
-                        n.forEach((e, r) => {
-                            r < t && n.delete(r);
+                        a.forEach((e, r) => {
+                            r < t && a.delete(r);
                         });
                     },
-                    _ = () => [...n.values()].reduce((e, t) => e + t, 0),
+                    _ = () => [...a.values()].reduce((e, t) => e + t, 0),
                     o = !1;
                 return (...t) => {
                     let r = Math.floor(Date.now() / 1000);
-                    if ((a(r), _() >= 300)) {
+                    if ((n(r), _() >= 300)) {
                         let e = o;
                         return (o = !0), e ? '__SKIPPED' : rw;
                     }
                     o = !1;
-                    let i = n.get(r) || 0;
-                    return n.set(r, i + 1), e(...t);
+                    let E = a.get(r) || 0;
+                    return a.set(r, E + 1), e(...t);
                 };
             })(
                 (e, t) => {
-                    var r, n, a;
-                    return (r = this), (n = e), (a = t), ra(r, n) ? rn(r, n, a) : Promise.resolve(null);
+                    var r, a, n;
+                    return (r = this), (a = e), (n = t), rn(r, a) ? ra(r, a, n) : Promise.resolve(null);
                 },
                 300,
                 5
             ));
-        let { slowClickTimeout: r, slowClickIgnoreSelectors: n } = this.getOptions(),
-            a = r
+        let { slowClickTimeout: r, slowClickIgnoreSelectors: a } = this.getOptions(),
+            n = r
                 ? {
                       threshold: Math.min(3000, r),
                       timeout: r,
                       scrollTimeout: 300,
-                      ignoreSelector: n ? n.join(',') : ''
+                      ignoreSelector: a ? a.join(',') : ''
                   }
                 : void 0;
-        a && (this.clickDetector = new tm(this, a));
+        n && (this.clickDetector = new tm(this, n));
     }
     getContext() {
         return this._context;
@@ -4272,8 +4272,8 @@ class rB {
     }
     initializeSampling(e) {
         let { errorSampleRate: t, sessionSampleRate: r } = this._options,
-            n = t <= 0 && r <= 0;
-        if (((this._requiresManualStart = n), n)) return;
+            a = t <= 0 && r <= 0;
+        if (((this._requiresManualStart = a), a)) return;
         if ((this._initializeSessionForSampling(e), !this.session)) {
             this.handleException(Error('Unable to initialize and create session'));
             return;
@@ -4329,18 +4329,18 @@ class rB {
             var e;
             let t,
                 r = this._canvas;
-            this._stopRecording = tD({
+            this._stopRecording = tS({
                 ...this._recordingOptions,
                 ...('buffer' === this.recordingMode && { checkoutEveryNms: 60000 }),
                 emit:
                     ((e = this),
                     (t = !1),
-                    (r, n) => {
+                    (r, a) => {
                         if (!e.checkAndHandleExpiredSession()) {
                             t$ && m.kg.warn('[Replay] Received replay event after session expired.');
                             return;
                         }
-                        let a = n || !t;
+                        let n = a || !t;
                         (t = !0),
                             e.clickDetector &&
                                 !(function (e, t) {
@@ -4359,15 +4359,15 @@ class rB {
                                                 return e.data.source === e1.MouseInteraction;
                                             })(t))
                                         ) {
-                                            let { type: r, id: n } = t.data,
-                                                a = tD.mirror.getNode(n);
-                                            a instanceof HTMLElement && r === e2.Click && e.registerClick(a);
+                                            let { type: r, id: a } = t.data,
+                                                n = tS.mirror.getNode(a);
+                                            n instanceof HTMLElement && r === e2.Click && e.registerClick(n);
                                         }
                                     } catch (e) {}
                                 })(e.clickDetector, r),
                             e.addUpdate(() => {
-                                if (('buffer' === e.recordingMode && a && e.setInitialState(), !rr(e, r, a))) return !0;
-                                if (!a) return !1;
+                                if (('buffer' === e.recordingMode && n && e.setInitialState(), !rr(e, r, n))) return !0;
+                                if (!n) return !1;
                                 if (
                                     ((function (e, t) {
                                         if (!!t && !!e.session && 0 === e.session.segmentId)
@@ -4399,13 +4399,13 @@ class rB {
                                                 })(e),
                                                 !1
                                             );
-                                    })(e, a),
+                                    })(e, n),
                                     e.session && e.session.previousSessionId)
                                 )
                                     return !0;
                                 if ('buffer' === e.recordingMode && e.session && e.eventBuffer) {
                                     let t = e.eventBuffer.getEarliestTimestamp();
-                                    t && (tq(`[Replay] Updating session start time to earliest event in buffer to ${new Date(t)}`, e.getOptions()._experiments.traceInternals), (e.session.started = t), e.getOptions().stickySession && t4(e.session));
+                                    t && (tq(`[Replay] Updating session start time to earliest event in buffer to ${new Date(t)}`, e.getOptions()._experiments.traceInternals), (e.session.started = t), e.getOptions().stickySession && t5(e.session));
                                 }
                                 return 'session' === e.recordingMode && e.flush(), !0;
                             });
@@ -4531,10 +4531,10 @@ class rB {
         return r;
     }
     getCurrentRoute() {
-        let e = this.lastActiveSpan || (0, S.HN)(),
-            t = e && (0, S.Gx)(e),
-            r = ((t && (0, S.XU)(t).data) || {})[D.Zj];
-        if (!!t && !!r && !!['route', 'custom'].includes(r)) return (0, S.XU)(t).description;
+        let e = this.lastActiveSpan || (0, D.HN)(),
+            t = e && (0, D.Gx)(e),
+            r = ((t && (0, D.XU)(t).data) || {})[S.Zj];
+        if (!!t && !!r && !!['route', 'custom'].includes(r)) return (0, D.XU)(t).description;
     }
     _initializeRecording() {
         this.setInitialState(),
@@ -4615,8 +4615,8 @@ class rB {
                 this.clickDetector && this.clickDetector.addListeners(),
                 !this._hasInitializedCoreListeners &&
                     (!(function (e) {
-                        var t, r, n, a;
-                        let _ = (0, f.s3)();
+                        var t, r, a, n;
+                        let _ = (0, O.s3)();
                         (0, K.O)(tB(e)),
                             (0, V.a)(
                                 ((t = e),
@@ -4624,11 +4624,11 @@ class rB {
                                     if (!t.isEnabled()) return;
                                     let r = (function (e) {
                                         let { from: t, to: r } = e,
-                                            n = Date.now() / 1000;
+                                            a = Date.now() / 1000;
                                         return {
                                             type: 'navigation.push',
-                                            start: n,
-                                            end: n,
+                                            start: a,
+                                            end: a,
                                             name: r,
                                             data: { previous: t }
                                         };
@@ -4637,25 +4637,25 @@ class rB {
                                 })
                             ),
                             !(function (e) {
-                                let t = (0, f.s3)();
+                                let t = (0, O.s3)();
                                 if (!!t)
                                     t.on('beforeAddBreadcrumb', (t) =>
                                         (function (e, t) {
-                                            if (!e.isEnabled() || !rE(t)) return;
+                                            if (!e.isEnabled() || !ri(t)) return;
                                             let r = (function (e) {
-                                                return !rE(e) || ['fetch', 'xhr', 'sentry.event', 'sentry.transaction'].includes(e.category) || e.category.startsWith('ui.')
+                                                return !ri(e) || ['fetch', 'xhr', 'sentry.event', 'sentry.transaction'].includes(e.category) || e.category.startsWith('ui.')
                                                     ? null
                                                     : 'console' === e.category
                                                       ? (function (e) {
                                                             let t = e.data && e.data.arguments;
                                                             if (!Array.isArray(t) || 0 === t.length) return tv(e);
                                                             let r = !1,
-                                                                n = t.map((e) => {
+                                                                a = t.map((e) => {
                                                                     if (!e) return e;
                                                                     if ('string' == typeof e) return e.length > 5000 ? ((r = !0), `${e.slice(0, 5000)}…`) : e;
                                                                     if ('object' == typeof e)
                                                                         try {
-                                                                            let t = (0, U.Fv)(e, 7);
+                                                                            let t = (0, g.Fv)(e, 7);
                                                                             if (JSON.stringify(t).length > 5000) return (r = !0), `${JSON.stringify(t, null, 2).slice(0, 5000)}…`;
                                                                             return t;
                                                                         } catch (e) {}
@@ -4665,26 +4665,26 @@ class rB {
                                                                 ...e,
                                                                 data: {
                                                                     ...e.data,
-                                                                    arguments: n,
+                                                                    arguments: a,
                                                                     ...(r ? { _meta: { warnings: ['CONSOLE_ARG_TRUNCATED'] } } : {})
                                                                 }
                                                             });
                                                         })(e)
                                                       : tv(e);
                                             })(t);
-                                            r && tU(e, r);
+                                            r && tg(e, r);
                                         })(e, t)
                                     );
                             })(e),
                             !(function (e) {
-                                let t = (0, f.s3)();
+                                let t = (0, O.s3)();
                                 try {
-                                    let { networkDetailAllowUrls: r, networkDetailDenyUrls: n, networkCaptureBodies: a, networkRequestHeaders: _, networkResponseHeaders: o } = e.getOptions(),
-                                        i = {
+                                    let { networkDetailAllowUrls: r, networkDetailDenyUrls: a, networkCaptureBodies: n, networkRequestHeaders: _, networkResponseHeaders: o } = e.getOptions(),
+                                        E = {
                                             replay: e,
                                             networkDetailAllowUrls: r,
-                                            networkDetailDenyUrls: n,
-                                            networkCaptureBodies: a,
+                                            networkDetailDenyUrls: a,
+                                            networkCaptureBodies: n,
                                             networkRequestHeaders: _,
                                             networkResponseHeaders: o
                                         };
@@ -4700,11 +4700,11 @@ class rB {
                                                                 return e && e.xhr;
                                                             })(r) &&
                                                             (!(function (e, t) {
-                                                                let { xhr: r, input: n } = t;
+                                                                let { xhr: r, input: a } = t;
                                                                 if (!r) return;
-                                                                let a = rl(n),
+                                                                let n = rl(a),
                                                                     _ = r.getResponseHeader('content-length')
-                                                                        ? ru(r.getResponseHeader('content-length'))
+                                                                        ? rI(r.getResponseHeader('content-length'))
                                                                         : (function (e, t) {
                                                                               try {
                                                                                   let r = 'json' === t && e && 'object' == typeof e ? JSON.stringify(e) : e;
@@ -4713,9 +4713,9 @@ class rB {
                                                                                   return;
                                                                               }
                                                                           })(r.response, r.responseType);
-                                                                void 0 !== a && (e.data.request_body_size = a), void 0 !== _ && (e.data.response_body_size = _);
+                                                                void 0 !== n && (e.data.request_body_size = n), void 0 !== _ && (e.data.response_body_size = _);
                                                             })(t, r),
-                                                            rP(t, r, e)),
+                                                            rU(t, r, e)),
                                                             (function (e) {
                                                                 return 'fetch' === e.category;
                                                             })(t) &&
@@ -4723,16 +4723,16 @@ class rB {
                                                                     return e && e.response;
                                                                 })(r) &&
                                                                 (!(function (e, t) {
-                                                                    let { input: r, response: n } = t,
-                                                                        a = rl(r ? rD(r) : void 0),
-                                                                        _ = n ? ru(n.headers.get('content-length')) : void 0;
-                                                                    void 0 !== a && (e.data.request_body_size = a), void 0 !== _ && (e.data.response_body_size = _);
+                                                                    let { input: r, response: a } = t,
+                                                                        n = rl(r ? rS(r) : void 0),
+                                                                        _ = a ? rI(a.headers.get('content-length')) : void 0;
+                                                                    void 0 !== n && (e.data.request_body_size = n), void 0 !== _ && (e.data.response_body_size = _);
                                                                 })(t, r),
-                                                                rO(t, r, e));
+                                                                rL(t, r, e));
                                                     } catch (e) {
                                                         t$ && m.kg.warn('Error when enriching network breadcrumb');
                                                     }
-                                            })(i, e, t)
+                                            })(E, e, t)
                                         );
                                 } catch (e) {}
                             })(e);
@@ -4740,30 +4740,30 @@ class rB {
                             ((r = e),
                             Object.assign(
                                 (e, t) => {
-                                    var n, a, _, o, i, E;
+                                    var a, n, _, o, E, i;
                                     if (!r.isEnabled()) return e;
                                     if ('replay_event' === e.type) return delete e.breadcrumbs, e;
-                                    if ((e.type && !ro(e) && !ri(e)) || !r.checkAndHandleExpiredSession()) return e;
-                                    if (ri(e)) {
+                                    if ((e.type && !ro(e) && !rE(e)) || !r.checkAndHandleExpiredSession()) return e;
+                                    if (rE(e)) {
                                         return (
                                             r.flush(),
                                             (e.contexts.feedback.replay_id = r.getSessionId()),
-                                            (n = r),
-                                            (a = e),
-                                            n.triggerUserActivity(),
-                                            n.addUpdate(
+                                            (a = r),
+                                            (n = e),
+                                            a.triggerUserActivity(),
+                                            a.addUpdate(
                                                 () =>
-                                                    !a.timestamp ||
-                                                    (n.throttledAddEvent({
+                                                    !n.timestamp ||
+                                                    (a.throttledAddEvent({
                                                         type: e0.Custom,
-                                                        timestamp: 1000 * a.timestamp,
+                                                        timestamp: 1000 * n.timestamp,
                                                         data: {
                                                             tag: 'breadcrumb',
                                                             payload: {
-                                                                timestamp: a.timestamp,
+                                                                timestamp: n.timestamp,
                                                                 type: 'default',
                                                                 category: 'sentry.feedback',
-                                                                data: { feedbackId: a.event_id }
+                                                                data: { feedbackId: n.event_id }
                                                             }
                                                         }
                                                     }),
@@ -4774,9 +4774,9 @@ class rB {
                                     }
                                     if (((_ = e), (o = t), !_.type && _.exception && _.exception.values && _.exception.values.length && o.originalException && o.originalException.__rrweb__ && !r.getOptions()._experiments.captureExceptions)) return t$ && m.kg.log('[Replay] Ignoring error from rrweb internals', e), null;
                                     return (
-                                        (i = r),
-                                        (E = e),
-                                        (('buffer' === i.recordingMode && E.message !== X && E.exception && !E.type && t5(i.getOptions().errorSampleRate)) || 'session' === r.recordingMode) &&
+                                        (E = r),
+                                        (i = e),
+                                        (('buffer' === E.recordingMode && i.message !== X && i.exception && !i.type && t6(E.getOptions().errorSampleRate)) || 'session' === r.recordingMode) &&
                                             (e.tags = {
                                                 ...e.tags,
                                                 replayId: r.getSessionId()
@@ -4789,46 +4789,46 @@ class rB {
                         if (((0, p.Qy)(o), _)) {
                             _.on(
                                 'beforeSendEvent',
-                                ((n = e),
+                                ((a = e),
                                 (e) => {
-                                    if (!!n.isEnabled() && !e.type)
+                                    if (!!a.isEnabled() && !e.type)
                                         (function (e, t) {
                                             let r = t.exception && t.exception.values && t.exception.values[0] && t.exception.values[0].value;
                                             if ('string' == typeof r)
                                                 (r.match(/(reactjs\.org\/docs\/error-decoder\.html\?invariant=|react\.dev\/errors\/)(418|419|422|423|425)/) || r.match(/(does not match server-rendered HTML|Hydration failed because)/i)) &&
-                                                    tU(
+                                                    tg(
                                                         e,
                                                         tv({
                                                             category: 'replay.hydrate-error',
                                                             data: { url: (0, M.l4)() }
                                                         })
                                                     );
-                                        })(n, e);
+                                        })(a, e);
                                 })
                             ),
                                 _.on(
                                     'afterSendEvent',
-                                    ((a = e),
+                                    ((n = e),
                                     (e, t) => {
-                                        if (!a.isEnabled() || (e.type && !ro(e))) return;
+                                        if (!n.isEnabled() || (e.type && !ro(e))) return;
                                         let r = t && t.statusCode;
                                         if (!!r && !(r < 200) && !(r >= 300)) {
                                             if (ro(e)) {
                                                 (function (e, t) {
                                                     let r = e.getContext();
                                                     t.contexts && t.contexts.trace && t.contexts.trace.trace_id && r.traceIds.size < 100 && r.traceIds.add(t.contexts.trace.trace_id);
-                                                })(a, e);
+                                                })(n, e);
                                                 return;
                                             }
                                             (function (e, t) {
                                                 let r = e.getContext();
                                                 if ((t.event_id && r.errorIds.size < 100 && r.errorIds.add(t.event_id), 'buffer' !== e.recordingMode || !t.tags || !t.tags.replayId)) return;
-                                                let { beforeErrorSampling: n } = e.getOptions();
-                                                if ('function' != typeof n || !!n(t))
-                                                    (0, H.iK)(() => {
+                                                let { beforeErrorSampling: a } = e.getOptions();
+                                                if ('function' != typeof a || !!a(t))
+                                                    (0, Y.iK)(() => {
                                                         e.sendBufferedReplayOrFlush();
                                                     });
-                                            })(a, e);
+                                            })(n, e);
                                         }
                                     })
                                 ),
@@ -4843,8 +4843,8 @@ class rB {
                                     e.lastActiveSpan = t;
                                 }),
                                 _.on('beforeSendFeedback', (t, r) => {
-                                    let n = e.getSessionId();
-                                    r && r.includeReplay && e.isEnabled() && n && t.contexts && t.contexts.feedback && (t.contexts.feedback.replay_id = n);
+                                    let a = e.getSessionId();
+                                    r && r.includeReplay && e.isEnabled() && a && t.contexts && t.contexts.feedback && (t.contexts.feedback.replay_id = a);
                                 });
                         }
                     })(this),
@@ -4859,14 +4859,14 @@ class rB {
             function r({ entries: e }) {
                 e.forEach(t);
             }
-            let n = [];
+            let a = [];
             return (
                 ['navigation', 'paint', 'resource'].forEach((e) => {
-                    n.push((0, x._j)(e, r));
+                    a.push((0, H._j)(e, r));
                 }),
-                n.push((0, x.$A)(tx(tV, e)), (0, x.PR)(tx(tk, e)), (0, x.to)(tx(tF, e)), (0, x.YF)(tx(tX, e))),
+                a.push((0, H.$A)(tH(tV, e)), (0, H.PR)(tH(tk, e)), (0, H.to)(tH(tF, e)), (0, H.YF)(tH(tX, e))),
                 () => {
-                    n.forEach((e) => e());
+                    a.forEach((e) => e());
                 }
             );
         })(this);
@@ -4901,7 +4901,7 @@ class rB {
                 if (!e.isEnabled()) return;
                 e.updateUserActivity();
                 let r = (function (e) {
-                    let { metaKey: t, shiftKey: r, ctrlKey: n, altKey: a, key: _, target: o } = e;
+                    let { metaKey: t, shiftKey: r, ctrlKey: a, altKey: n, key: _, target: o } = e;
                     if (
                         !o ||
                         (function (e) {
@@ -4910,9 +4910,9 @@ class rB {
                         !_
                     )
                         return null;
-                    let i = t || n || a,
-                        E = 1 === _.length;
-                    if (!i && E) return null;
+                    let E = t || a || n,
+                        i = 1 === _.length;
+                    if (!E && i) return null;
                     let c = (0, M.Rt)(o, { maxStringLength: 200 }) || '<unknown>',
                         s = tW(o, c);
                     return tv({
@@ -4922,13 +4922,13 @@ class rB {
                             ...s.data,
                             metaKey: t,
                             shiftKey: r,
-                            ctrlKey: n,
-                            altKey: a,
+                            ctrlKey: a,
+                            altKey: n,
                             key: _
                         }
                     });
                 })(t);
-                if (!!r) tU(e, r);
+                if (!!r) tg(e, r);
             })(this, e);
         };
     }
@@ -4972,7 +4972,7 @@ class rB {
         });
     }
     _addPerformanceEntries() {
-        let e = this.performanceEntries.map(tY).filter(Boolean).concat(this.replayPerformanceEntries);
+        let e = this.performanceEntries.map(tx).filter(Boolean).concat(this.replayPerformanceEntries);
         return (this.performanceEntries = []), (this.replayPerformanceEntries = []), Promise.all(rc(this, e));
     }
     _clearContext() {
@@ -5007,13 +5007,13 @@ class rB {
                 let t = Date.now();
                 if (t - this._context.initialTimestamp > this._options.maxReplayDuration + 30000) throw Error('Session is too long, not sending replay');
                 let r = this._popEventContext(),
-                    n = this.session.segmentId++;
+                    a = this.session.segmentId++;
                 this._maybeSaveSession();
-                let a = await this.eventBuffer.finish();
+                let n = await this.eventBuffer.finish();
                 await rv({
                     replayId: e,
-                    recordingData: a,
-                    segmentId: n,
+                    recordingData: n,
+                    segmentId: a,
                     eventContext: r,
                     session: this.session,
                     options: this.getOptions(),
@@ -5021,7 +5021,7 @@ class rB {
                 });
             } catch (t) {
                 this.handleException(t), this.stop({ reason: 'sendReplay' });
-                let e = (0, f.s3)();
+                let e = (0, O.s3)();
                 e && e.recordDroppedEvent('send_error', 'replay');
             }
     }
@@ -5036,10 +5036,10 @@ class rB {
             let t = this.session.started,
                 r = Date.now() - t;
             this._debouncedFlush.cancel();
-            let n = r < this._options.minReplayDuration,
-                a = r > this._options.maxReplayDuration + 5000;
-            if (n || a) {
-                tq(`[Replay] Session duration (${Math.floor(r / 1000)}s) is too ${n ? 'short' : 'long'}, not sending replay.`, this._options._experiments.traceInternals), n && this._debouncedFlush();
+            let a = r < this._options.minReplayDuration,
+                n = r > this._options.maxReplayDuration + 5000;
+            if (a || n) {
+                tq(`[Replay] Session duration (${Math.floor(r / 1000)}s) is too ${a ? 'short' : 'long'}, not sending replay.`, this._options._experiments.traceInternals), a && this._debouncedFlush();
                 return;
             }
             let _ = this.eventBuffer;
@@ -5057,26 +5057,26 @@ class rB {
         };
     }
     _maybeSaveSession() {
-        this.session && this._options.stickySession && t4(this.session);
+        this.session && this._options.stickySession && t5(this.session);
     }
     __init6() {
         this._onMutationHandler = (e) => {
             let t = e.length,
                 r = this._options.mutationLimit,
-                n = this._options.mutationBreadcrumbLimit,
-                a = r && t > r;
-            if (t > n || a) {
+                a = this._options.mutationBreadcrumbLimit,
+                n = r && t > r;
+            if (t > a || n) {
                 let e = tv({
                     category: 'replay.mutations',
                     data: {
                         count: t,
-                        limit: a
+                        limit: n
                     }
                 });
                 this._createCustomBreadcrumb(e);
             }
             return (
-                !a ||
+                !n ||
                 (this.stop({
                     reason: 'mutationLimit',
                     forceFlush: 'session' === this.recordingMode
@@ -5089,51 +5089,51 @@ class rB {
 function rW(e, t) {
     return [...e, ...t].join(',');
 }
-let rH = 'img,image,svg,video,object,picture,embed,map,audio,link[rel="icon"],link[rel="apple-touch-icon"]',
-    rx = ['content-length', 'content-type', 'accept'],
-    rY = !1,
+let rY = 'img,image,svg,video,object,picture,embed,map,audio,link[rel="icon"],link[rel="apple-touch-icon"]',
+    rH = ['content-length', 'content-type', 'accept'],
+    rx = !1,
     rK = (e) => new rV(e);
 class rV {
     static __initStatic() {
         this.id = 'Replay';
     }
-    constructor({ flushMinDelay: e = 5000, flushMaxDelay: t = 5500, minReplayDuration: r = 4999, maxReplayDuration: n = 3600000, stickySession: a = !0, useCompression: _ = !0, workerUrl: o, _experiments: i = {}, maskAllText: E = !0, maskAllInputs: c = !0, blockAllMedia: s = !0, mutationBreadcrumbLimit: l = 750, mutationLimit: u = 10000, slowClickTimeout: I = 7000, slowClickIgnoreSelectors: R = [], networkDetailAllowUrls: N = [], networkDetailDenyUrls: A = [], networkCaptureBodies: T = !0, networkRequestHeaders: d = [], networkResponseHeaders: L = [], mask: f = [], maskAttributes: O = ['title', 'placeholder'], unmask: p = [], block: h = [], unblock: S = [], ignore: D = [], maskFn: C, beforeAddRecordingEvent: g, beforeErrorSampling: U } = {}) {
+    constructor({ flushMinDelay: e = 5000, flushMaxDelay: t = 5500, minReplayDuration: r = 4999, maxReplayDuration: a = 3600000, stickySession: n = !0, useCompression: _ = !0, workerUrl: o, _experiments: E = {}, maskAllText: i = !0, maskAllInputs: c = !0, blockAllMedia: s = !0, mutationBreadcrumbLimit: l = 750, mutationLimit: I = 10000, slowClickTimeout: u = 7000, slowClickIgnoreSelectors: R = [], networkDetailAllowUrls: A = [], networkDetailDenyUrls: T = [], networkCaptureBodies: N = !0, networkRequestHeaders: d = [], networkResponseHeaders: f = [], mask: O = [], maskAttributes: L = ['title', 'placeholder'], unmask: p = [], block: h = [], unblock: D = [], ignore: S = [], maskFn: C, beforeAddRecordingEvent: P, beforeErrorSampling: g } = {}) {
         this.name = rV.id;
-        let P = (function ({ mask: e, unmask: t, block: r, unblock: n, ignore: a }) {
+        let U = (function ({ mask: e, unmask: t, block: r, unblock: a, ignore: n }) {
             let _ = rW(e, ['.sentry-mask', '[data-sentry-mask]']);
             return {
                 maskTextSelector: _,
                 unmaskTextSelector: rW(t, []),
                 blockSelector: rW(r, ['.sentry-block', '[data-sentry-block]', 'base[href="/"]']),
-                unblockSelector: rW(n, []),
-                ignoreSelector: rW(a, ['.sentry-ignore', '[data-sentry-ignore]', 'input[type="file"]'])
+                unblockSelector: rW(a, []),
+                ignoreSelector: rW(n, ['.sentry-ignore', '[data-sentry-ignore]', 'input[type="file"]'])
             };
         })({
-            mask: f,
+            mask: O,
             unmask: p,
             block: h,
-            unblock: S,
-            ignore: D
+            unblock: D,
+            ignore: S
         });
         if (
             ((this._recordingOptions = {
                 maskAllInputs: c,
-                maskAllText: E,
+                maskAllText: i,
                 maskInputOptions: { password: !0 },
                 maskTextFn: C,
                 maskInputFn: C,
                 maskAttributeFn: (e, t, r) =>
-                    (function ({ el: e, key: t, maskAttributes: r, maskAllText: n, privacyOptions: a, value: _ }) {
-                        return !n || (a.unmaskTextSelector && e.matches(a.unmaskTextSelector)) ? _ : r.includes(t) || ('value' === t && 'INPUT' === e.tagName && ['submit', 'button'].includes(e.getAttribute('type') || '')) ? _.replace(/[\S]/g, '*') : _;
+                    (function ({ el: e, key: t, maskAttributes: r, maskAllText: a, privacyOptions: n, value: _ }) {
+                        return !a || (n.unmaskTextSelector && e.matches(n.unmaskTextSelector)) ? _ : r.includes(t) || ('value' === t && 'INPUT' === e.tagName && ['submit', 'button'].includes(e.getAttribute('type') || '')) ? _.replace(/[\S]/g, '*') : _;
                     })({
-                        maskAttributes: O,
-                        maskAllText: E,
-                        privacyOptions: P,
+                        maskAttributes: L,
+                        maskAllText: i,
+                        privacyOptions: U,
                         key: e,
                         value: t,
                         el: r
                     }),
-                ...P,
+                ...U,
                 slimDOMOptions: 'all',
                 inlineStylesheet: !0,
                 inlineImages: !1,
@@ -5148,37 +5148,37 @@ class rV {
                 flushMinDelay: e,
                 flushMaxDelay: t,
                 minReplayDuration: Math.min(r, 15000),
-                maxReplayDuration: Math.min(n, 3600000),
-                stickySession: a,
+                maxReplayDuration: Math.min(a, 3600000),
+                stickySession: n,
                 useCompression: _,
                 workerUrl: o,
                 blockAllMedia: s,
                 maskAllInputs: c,
-                maskAllText: E,
+                maskAllText: i,
                 mutationBreadcrumbLimit: l,
-                mutationLimit: u,
-                slowClickTimeout: I,
+                mutationLimit: I,
+                slowClickTimeout: u,
                 slowClickIgnoreSelectors: R,
-                networkDetailAllowUrls: N,
-                networkDetailDenyUrls: A,
-                networkCaptureBodies: T,
+                networkDetailAllowUrls: A,
+                networkDetailDenyUrls: T,
+                networkCaptureBodies: N,
                 networkRequestHeaders: rk(d),
-                networkResponseHeaders: rk(L),
-                beforeAddRecordingEvent: g,
-                beforeErrorSampling: U,
-                _experiments: i
+                networkResponseHeaders: rk(f),
+                beforeAddRecordingEvent: P,
+                beforeErrorSampling: g,
+                _experiments: E
             }),
-            this._initialOptions.blockAllMedia && (this._recordingOptions.blockSelector = this._recordingOptions.blockSelector ? `${this._recordingOptions.blockSelector},${rH}` : rH),
+            this._initialOptions.blockAllMedia && (this._recordingOptions.blockSelector = this._recordingOptions.blockSelector ? `${this._recordingOptions.blockSelector},${rY}` : rY),
             this._isInitialized && (0, W.j)())
         )
             throw Error('Multiple Sentry Session Replay instances are not supported');
         this._isInitialized = !0;
     }
     get _isInitialized() {
-        return rY;
+        return rx;
     }
     set _isInitialized(e) {
-        rY = e;
+        rx = e;
     }
     afterAllSetup(e) {
         if (!!(0, W.j)() && !this._replay) this._setup(e), this._initialize(e);
@@ -5204,22 +5204,22 @@ class rV {
     _setup(e) {
         let t = (function (e, t) {
             let r = t.getOptions(),
-                n = {
+                a = {
                     sessionSampleRate: 0,
                     errorSampleRate: 0,
-                    ...(0, P.Jr)(e)
+                    ...(0, U.Jr)(e)
                 },
-                a = (0, C.o)(r.replaysSessionSampleRate),
+                n = (0, C.o)(r.replaysSessionSampleRate),
                 _ = (0, C.o)(r.replaysOnErrorSampleRate);
             return (
-                null == a &&
+                null == n &&
                     null == _ &&
                     (0, m.Cf)(() => {
                         console.warn('Replay is disabled because neither `replaysSessionSampleRate` nor `replaysOnErrorSampleRate` are set.');
                     }),
-                null != a && (n.sessionSampleRate = a),
-                null != _ && (n.errorSampleRate = _),
-                n
+                null != n && (a.sessionSampleRate = n),
+                null != _ && (a.errorSampleRate = _),
+                a
             );
         })(this._initialOptions, e);
         this._replay = new rB({
@@ -5237,9 +5237,9 @@ class rV {
 }
 rV.__initStatic();
 function rk(e) {
-    return [...rx, ...e.map((e) => e.toLowerCase())];
+    return [...rH, ...e.map((e) => e.toLowerCase())];
 }
 function rF() {
-    let e = (0, f.s3)();
+    let e = (0, O.s3)();
     return e && e.getIntegrationByName('Replay');
 }

@@ -18,7 +18,7 @@ t.Z = i.memo(
             g = i.useContext(u.ZP),
             [E, v] = i.useState(!1),
             I = h === f.X1.STICKER,
-            b = i.useCallback(() => {
+            T = i.useCallback(() => {
                 (0, c.RO)(f.X1.STICKER, a);
             }, [a]);
         i.useEffect(() => {
@@ -40,7 +40,7 @@ t.Z = i.memo(
                 }
             );
         }, [g]);
-        let { Component: T, events: S, play: y } = (0, l.z)();
+        let { Component: b, events: S, play: y } = (0, l.z)();
         return n
             ? null
             : (0, r.jsx)('div', {
@@ -50,7 +50,7 @@ t.Z = i.memo(
                       innerClassName: s()(p.button, p.stickerButton, { [p.stickerButtonTilted]: E && !I }),
                       ...S,
                       onClick: () => {
-                          b(), y();
+                          T(), y();
                       },
                       isActive: I,
                       'aria-label': _.intl.string(_.t.rZpidX),
@@ -59,7 +59,7 @@ t.Z = i.memo(
                       'aria-controls': m,
                       sparkle: !1,
                       notification: null,
-                      children: (0, r.jsx)(T, { color: 'currentColor' })
+                      children: (0, r.jsx)(b, { color: 'currentColor' })
                   })
               });
     })

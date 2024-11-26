@@ -17,8 +17,8 @@ var r,
     E = n(686546),
     v = n(28546),
     I = n(285651),
-    b = n(926491),
-    T = n(373228),
+    T = n(926491),
+    b = n(373228),
     S = n(378233),
     y = n(419922),
     A = n(490095),
@@ -30,9 +30,9 @@ var r,
     L = n(981631),
     x = n(388032),
     w = n(304550);
-let M = (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
-    P = (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
-    k = 2 * P + (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * M,
+let P = (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
+    M = (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
+    k = 2 * M + (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * P,
     U = () => Promise.resolve();
 function B(e) {
     let { isFocused: t, isHidden: n, sendability: r, listIndex: i, sticker: s, onMouseOver: o, onSelectSticker: c } = e,
@@ -47,14 +47,14 @@ function B(e) {
         children: [
             (0, a.jsx)(E.ZP, {
                 mask: E.ZP.Masks.STICKER_ROUNDED_RECT,
-                width: P + 4,
-                height: P + 4,
+                width: M + 4,
+                height: M + 4,
                 className: w.mask,
                 children: (0, a.jsx)('div', { className: w.maskBackground })
             }),
             (0, a.jsx)(y.ZP, {
                 maskAsset: !0,
-                size: P,
+                size: M,
                 sticker: s,
                 className: w.__invalid_sticker
             }),
@@ -68,7 +68,7 @@ t.Z = s.memo(function (e) {
     let { editorRef: n, channel: r, isEditorFocused: i, onSelectSticker: o, stickerIconVisible: f = !1, submitButtonVisible: _ = !1 } = e,
         E = s.useContext(g.ZP),
         [y, A] = s.useState(null),
-        [M, P] = s.useState(!1),
+        [P, M] = s.useState(!1),
         [G, Z] = s.useState(null),
         F = (0, v.Iu)((e) => null != e.activeView),
         V = s.useRef(null),
@@ -76,11 +76,11 @@ t.Z = s.memo(function (e) {
         [Y, W] = s.useState(''),
         [K, z] = s.useState(!1),
         [q, Q] = s.useState(!1),
-        X = (0, R.Z)(j, M, r),
+        X = (0, R.Z)(j, P, r),
         { analyticsLocations: J } = (0, m.ZP)(h.Z.EXPRESSION_SUGGESTIONS),
         { handleTextChange: $, debouncedSetTextInputValue: ee } = (0, R.m)({
             setTextInputValue: H,
-            setHasDismissed: P,
+            setHasDismissed: M,
             setHasSelection: Q,
             setFocusedSuggestionType: A
         });
@@ -115,7 +115,7 @@ t.Z = s.memo(function (e) {
         });
     }, [i]);
     let er = X.length > 0,
-        ei = et && !F && !K && !M && !q && er,
+        ei = et && !F && !K && !P && !q && er,
         { stickersNavigator: ea } = (function (e) {
             let { editorRef: t, hasStickerResults: n, shouldRenderSuggestions: r, focusedSuggestionType: i, setFocusedStickerListItem: a, setFocusedSuggestionType: o, setHasDismissed: l, setTextInputValue: u } = e,
                 f = s.useCallback(
@@ -161,7 +161,7 @@ t.Z = s.memo(function (e) {
             shouldRenderSuggestions: ei,
             focusedSuggestionType: y,
             setFocusedSuggestionType: A,
-            setHasDismissed: P,
+            setHasDismissed: M,
             setFocusedStickerListItem: Z,
             setTextInputValue: H
         }),
@@ -174,9 +174,9 @@ t.Z = s.memo(function (e) {
                     }),
                     t === I.eb.SENDABLE)
                 )
-                    P(!0), o(e, T.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), H('');
+                    M(!0), o(e, b.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), H('');
                 else if ((0, S.jl)(e)) {
-                    let t = b.Z.getStickerPack(e.pack_id);
+                    let t = T.Z.getStickerPack(e.pack_id);
                     null != t &&
                         (0, N.Z)({
                             stickerPack: t,

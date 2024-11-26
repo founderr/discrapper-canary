@@ -17,15 +17,15 @@ var r,
     E = n(124368),
     v = n(981631);
 let I = new Set(),
-    b = {},
-    T = {};
+    T = {},
+    b = {};
 function S(e, t) {
     f.AW.has(e.type) &&
         y(
             (function (e) {
-                if (!(e.id in b)) {
+                if (!(e.id in T)) {
                     var t;
-                    b[e.id] = {
+                    T[e.id] = {
                         guildId: e.guild_id,
                         parentId: e.parent_id,
                         count: null !== (t = e.messageCount) && void 0 !== t ? t : 0,
@@ -33,15 +33,15 @@ function S(e, t) {
                         mostRecentMessage: null
                     };
                 }
-                return b[e.id];
+                return T[e.id];
             })(e),
             t
         );
 }
 function y(e, t) {
     var n;
-    let r = (null !== (n = T[e.parentId]) && void 0 !== n ? n : 0) + 1;
-    (T[e.parentId] = r), t(e);
+    let r = (null !== (n = b[e.parentId]) && void 0 !== n ? n : 0) + 1;
+    (b[e.parentId] = r), t(e);
 }
 function A(e) {
     var t;
@@ -56,7 +56,7 @@ function N(e) {
     });
 }
 function C(e) {
-    if (null != e && !(e.id in b)) {
+    if (null != e && !(e.id in T)) {
         let t = h.Z.getChannel(e.id);
         if (null != t) return N(t), !0;
     }
@@ -81,18 +81,18 @@ class L extends (r = u.ZP.Store) {
     }
     getCount(e) {
         var t, n;
-        return null !== (n = null === (t = b[e]) || void 0 === t ? void 0 : t.count) && void 0 !== n ? n : null;
+        return null !== (n = null === (t = T[e]) || void 0 === t ? void 0 : t.count) && void 0 !== n ? n : null;
     }
     getMostRecentMessage(e) {
         var t, n;
-        let r = b[e];
+        let r = T[e];
         return null == r ? null : (null == r.mostRecentMessage && null != r.mostRecentRawMessage && ((r.mostRecentMessage = null !== (t = m.Z.getMessage(e, r.mostRecentRawMessage.id)) && void 0 !== t ? t : (0, d.e5)(r.mostRecentRawMessage)), (r.mostRecentRawMessage = null)), null !== (n = r.mostRecentMessage) && void 0 !== n ? n : null);
     }
     getChannelThreadsVersion(e) {
-        return T[e];
+        return b[e];
     }
     getInitialOverlayState() {
-        return b;
+        return T;
     }
 }
 (s = 'ThreadMessageStore'),
@@ -106,11 +106,11 @@ class L extends (r = u.ZP.Store) {
         : (i[a] = s),
     (t.Z = new L(c.Z, {
         CONNECTION_OPEN: function (e) {
-            (T = {}), I.clear(), e.guilds.forEach(A);
+            (b = {}), I.clear(), e.guilds.forEach(A);
         },
         OVERLAY_INITIALIZE: function (e) {
             let { threadMessages: t } = e;
-            for (let e in (b = { ...t })) {
+            for (let e in (T = { ...t })) {
                 let n = t[e].mostRecentMessage;
                 null != n &&
                     (t[e].mostRecentMessage = new _.ZP({
@@ -127,9 +127,9 @@ class L extends (r = u.ZP.Store) {
             var t;
             let { guild: n } = e;
             (t = n.id),
-                (b = l().omitBy(b, (e) => {
+                (T = l().omitBy(T, (e) => {
                     let n = e.guildId === t;
-                    return n && delete T[e.parentId], n;
+                    return n && delete b[e.parentId], n;
                 }));
         },
         THREAD_CREATE: R,
@@ -153,12 +153,12 @@ class L extends (r = u.ZP.Store) {
         MOD_VIEW_SEARCH_FINISH: D,
         THREAD_DELETE: function (e) {
             let { channel: t } = e;
-            delete b[t.id];
+            delete T[t.id];
         },
         CHANNEL_DELETE: function (e) {
             var t;
             let { channel: n } = e;
-            (t = n.id), (b = l().omitBy(b, (e) => e.parentId === t)), delete T[t];
+            (t = n.id), (T = l().omitBy(T, (e) => e.parentId === t)), delete b[t];
         },
         MESSAGE_CREATE: function (e) {
             let { message: t, optimistic: n, isPushNotification: r, sendMessageOptions: i } = e;
@@ -179,7 +179,7 @@ class L extends (r = u.ZP.Store) {
         MESSAGE_UPDATE: function (e) {
             var t;
             let { message: n } = e,
-                r = b[n.channel_id],
+                r = T[n.channel_id],
                 i = null !== (t = null == r ? void 0 : r.mostRecentRawMessage) && void 0 !== t ? t : null == r ? void 0 : r.mostRecentMessage;
             if (null == r || null == i || i.id !== n.id) return !1;
             y(r, (e) => {
@@ -188,7 +188,7 @@ class L extends (r = u.ZP.Store) {
         },
         MESSAGE_DELETE: function (e) {
             let { id: t, channelId: n } = e,
-                r = b[n];
+                r = T[n];
             if (null == r) return !1;
             let i = g.default.castChannelIdAsMessageId(n) !== t,
                 a = !I.has(t);
@@ -200,7 +200,7 @@ class L extends (r = u.ZP.Store) {
         },
         MESSAGE_DELETE_BULK: function (e) {
             let { ids: t, channelId: n } = e,
-                r = b[n];
+                r = T[n];
             if (null == r) return !1;
             let i = t.filter((e) => {
                 let t = g.default.castChannelIdAsMessageId(n) !== e,

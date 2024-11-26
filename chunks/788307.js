@@ -25,8 +25,8 @@ var r = n(200651),
     E = n(695346),
     v = n(314897),
     I = n(592125),
-    b = n(496675),
-    T = n(699516),
+    T = n(496675),
+    b = n(699516),
     S = n(979651),
     y = n(6074),
     A = n(626135),
@@ -93,9 +93,9 @@ let D = (e) => {
 };
 t.ZP = (e) => {
     let { activities: t, applicationStream: n, className: a, textClassName: s, emojiClassName: u, animate: p = !0, hideTooltip: E = !1, hideEmoji: L = !1, user: x, hasQuest: w } = e,
-        M = null != t ? t.find((e) => e.type === N.IIU.CUSTOM_STATUS) : null,
-        P = (0, o.e7)([v.default], () => v.default.getId() === (null == x ? void 0 : x.id)),
-        k = (0, o.e7)([m.Z], () => (P ? m.Z.getHangStatusActivity() : null != t ? t.find((e) => e.type === N.IIU.HANG_STATUS) : null)),
+        P = null != t ? t.find((e) => e.type === N.IIU.CUSTOM_STATUS) : null,
+        M = (0, o.e7)([v.default], () => v.default.getId() === (null == x ? void 0 : x.id)),
+        k = (0, o.e7)([m.Z], () => (M ? m.Z.getHangStatusActivity() : null != t ? t.find((e) => e.type === N.IIU.HANG_STATUS) : null)),
         U = (0, o.e7)([S.Z, I.Z], () => {
             var e;
             return null != k && null != x ? I.Z.getChannel(null === (e = S.Z.getVoiceStateForUser(x.id)) || void 0 === e ? void 0 : e.channelId) : null;
@@ -109,23 +109,23 @@ t.ZP = (e) => {
         ),
         G = (0, _.Sl)(N.Ilk.BRAND_345),
         Z = null,
-        F = B && null != k && b.Z.can(N.Plq.CONNECT, U);
+        F = B && null != k && T.Z.can(N.Plq.CONNECT, U);
     F
         ? (Z = (0, r.jsx)(g.Z, {
               className: u,
               hangStatusActivity: k
           }))
-        : null != M &&
-          null != M.emoji &&
+        : null != P &&
+          null != P.emoji &&
           !L &&
           (Z = (0, r.jsx)(O, {
-              emoji: M.emoji,
+              emoji: P.emoji,
               animate: p,
               hideTooltip: E,
               className: u
           }));
     let { blockeeExperimentEnabled: V, blockerExperimentEnabled: j, analyticsEligible: H } = (0, f.NR)('activity-status-web'),
-        Y = (0, o.e7)([T.Z], () => (null != x ? T.Z.getRelationshipType(x.id) : N.OGo.NONE)),
+        Y = (0, o.e7)([b.Z], () => (null != x ? b.Z.getRelationshipType(x.id) : N.OGo.NONE)),
         W = (0, d.Z)(t, n, void 0, F, V),
         K = (0, d.Z)(t, n, void 0, F, !1);
     i.useEffect(() => {

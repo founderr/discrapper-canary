@@ -79,7 +79,7 @@ function _(e) {
     var t;
     let { width: n = 31, height: u = 22, referralsRemaining: _, isResending: p, hovered: h, shouldShowBirthdayUX: m, isLightTheme: g, ...E } = e,
         [v, I] = i.useState(o),
-        b = null !== (t = l.get(v)) && void 0 !== t ? t : null;
+        T = null !== (t = l.get(v)) && void 0 !== t ? t : null;
     return (
         i.useEffect(() => {
             h ? I((e) => f(h, m, g, p, e)) : p && I(o);
@@ -95,7 +95,7 @@ function _(e) {
                     : (0, r.jsx)(c, {
                           referralsRemaining: _,
                           fillColor: h ? v : o,
-                          secondaryFillColor: h ? b : null
+                          secondaryFillColor: h ? T : null
                       }),
                 (0, r.jsxs)('defs', {
                     children: [

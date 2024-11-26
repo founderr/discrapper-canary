@@ -21,8 +21,8 @@ var r = n(200651),
     E = n(273284),
     v = n(510659),
     I = n(287954),
-    b = n(660579),
-    T = n(502762),
+    T = n(660579),
+    b = n(502762),
     S = n(652853),
     y = n(64621),
     A = n(448980),
@@ -34,13 +34,13 @@ var r = n(200651),
     L = n(666984),
     x = n(290274),
     w = n(228168),
-    M = n(518919),
-    P = n(249942);
+    P = n(518919),
+    M = n(249942);
 function k(e) {
     var t;
     let { user: n, currentUser: a, activity: k, guild: U, channel: B, className: G, onClose: Z, profileGuildId: F } = e,
         { profileType: V } = (0, S.z)(),
-        j = { [P.fullSize]: V === w.y0.FULL_SIZE },
+        j = { [M.fullSize]: V === w.y0.FULL_SIZE },
         { interactionSource: H, interactionSourceId: Y } = (0, v.Xo)(),
         W = (0, _.Bq)({
             activity: k,
@@ -79,7 +79,7 @@ function k(e) {
                                 {
                                     children: [
                                         (0, r.jsx)(o.Clickable, {
-                                            className: s()(P.clickable, P.inline),
+                                            className: s()(M.clickable, M.inline),
                                             onClick: () => {
                                                 Q({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, p.d$)(k, n.id, t);
                                             },
@@ -109,7 +109,7 @@ function k(e) {
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)('div', { className: P.voiceChannelDivider }),
+                          (0, r.jsx)('div', { className: M.voiceChannelDivider }),
                           (0, r.jsx)(R.Z, {
                               user: n,
                               guild: U,
@@ -123,7 +123,7 @@ function k(e) {
             n.id === a.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: s()(P.actions, j),
+                      className: s()(M.actions, j),
                       children: (0, r.jsx)(L.Z, {
                           user: n,
                           activity: k,
@@ -152,9 +152,9 @@ function k(e) {
                         entry: W,
                         sourceType: w.n_.ACTIVITY,
                         children: () =>
-                            (0, r.jsx)(b.Z, {
+                            (0, r.jsx)(T.Z, {
                                 user: n,
-                                className: P.toolbarContainer,
+                                className: M.toolbarContainer,
                                 sourceType: w.n_.ACTIVITY,
                                 interactionSourceId: en,
                                 moreButton: (0, r.jsx)(x.Z, {
@@ -164,18 +164,18 @@ function k(e) {
                                     entry: W,
                                     onClose: Z,
                                     onRequestOpen: t,
-                                    className: M.button
+                                    className: P.button
                                 }),
-                                children: (0, r.jsxs)(T.Z.Overlay, {
-                                    className: s()(P.card, G, { [P.hoisted]: er }),
+                                children: (0, r.jsxs)(b.Z.Overlay, {
+                                    className: s()(M.card, G, { [M.hoisted]: er }),
                                     ref: X,
                                     children: [
                                         (0, r.jsx)(N.Z, { ...K }),
                                         (0, r.jsxs)('div', {
-                                            className: P.body,
+                                            className: M.body,
                                             children: [
                                                 (0, r.jsxs)('div', {
-                                                    className: s()(P.content, j),
+                                                    className: s()(M.content, j),
                                                     children: [
                                                         (0, r.jsx)(f.E, {
                                                             image: z,
@@ -185,7 +185,7 @@ function k(e) {
                                                             size: f.J.SIZE_60
                                                         }),
                                                         (0, r.jsxs)('div', {
-                                                            className: P.details,
+                                                            className: M.details,
                                                             children: [
                                                                 (0, r.jsxs)('div', {
                                                                     children: [
@@ -202,7 +202,7 @@ function k(e) {
                                                                 (0, r.jsx)(A.Z, {
                                                                     user: n,
                                                                     activity: k,
-                                                                    className: P.badges
+                                                                    className: M.badges
                                                                 }),
                                                                 $()
                                                             ]

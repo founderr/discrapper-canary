@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(451478),
     v = n(626135),
     I = n(624138),
-    b = n(543241),
-    T = n(883661),
+    T = n(543241),
+    b = n(883661),
     S = n(880949),
     y = n(784222),
     A = n(149203),
@@ -30,14 +30,14 @@ let D = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
     L = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
     x = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
     w = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
-    M = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING),
-    P = (0, I.Mg)(O.__invalid_unicodeCategoryShortcutHeight),
+    P = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING),
+    M = (0, I.Mg)(O.__invalid_unicodeCategoryShortcutHeight),
     k = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
     U = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-    B = x + L + 2 * M,
+    B = x + L + 2 * P,
     G = D + L,
     Z = G + (k + 2 * U),
-    F = x + w + 2 * M;
+    F = x + w + 2 * P;
 function V(e) {
     let { activeIndex: t, categoryIndex: n, analyticsContext: a, categories: o, category: l, handleCategorySelect: c, isWindowFocused: d, useReducedMotion: _ } = e,
         p = (0, u.JA)('expression-guild-'.concat(n)),
@@ -46,7 +46,7 @@ function V(e) {
         E = l.type === A.En.GUILD ? l.guild : null,
         I = (0, r.jsxs)(f.Clickable, {
             ...p,
-            'aria-label': (0, b.Nf)(l, E),
+            'aria-label': (0, T.Nf)(l, E),
             className: s()({
                 [O.categoryItemGuildCategory]: null != E,
                 [O.categoryItemDefaultCategory]: null == E,
@@ -72,7 +72,7 @@ function V(e) {
                       })
                     : null,
                 null == E && null != h
-                    ? (0, r.jsx)(T.Z, {
+                    ? (0, r.jsx)(b.Z, {
                           categoryId: h,
                           className: O.categoryIcon,
                           height: x,
@@ -105,8 +105,8 @@ t.Z = (e) => {
             emojiListRef: n
         }),
         v = (0, _.O)(),
-        I = (0, b.kI)(o, u),
-        T = i.useRef(null),
+        I = (0, T.kI)(o, u),
+        b = i.useRef(null),
         S = (0, c.e7)([E.Z], () => E.Z.isFocused()),
         N = (0, c.e7)([p.Z], () => p.Z.useReducedMotion, []),
         C = i.useMemo(
@@ -132,7 +132,7 @@ t.Z = (e) => {
             [d, v, I, g, S, N]
         ),
         D = i.useMemo(() => [8, 8, 0, 8], []),
-        M = i.useCallback(
+        P = i.useCallback(
             (e, t) => {
                 let n = I[t];
                 if (n.type === A.En.RECENT) return B;
@@ -172,7 +172,7 @@ t.Z = (e) => {
     let q = i.useCallback(
             (e) => {
                 var t;
-                let n = null === (t = T.current) || void 0 === t ? void 0 : t.getListDimensions();
+                let n = null === (t = b.current) || void 0 === t ? void 0 : t.getListDimensions();
                 if (null != n) e + n.height - k >= Y ? z(!1) : z(!0);
             },
             [Y]
@@ -180,7 +180,7 @@ t.Z = (e) => {
         Q = i.useCallback(
             (e) => {
                 var t;
-                e(H), null === (t = T.current) || void 0 === t || t.scrollTo(Y);
+                e(H), null === (t = b.current) || void 0 === t || t.scrollTo(Y);
             },
             [Y, H]
         ),
@@ -188,7 +188,7 @@ t.Z = (e) => {
             (e, t) => {
                 let n = I[e];
                 if (null == n) return 0;
-                let r = K ? P : 0;
+                let r = K ? M : 0;
                 if (n.type === A.En.RECENT) return t ? 0 : w;
                 if (n.type === A.En.GUILD) {
                     let n = I[e + 1];
@@ -207,7 +207,7 @@ t.Z = (e) => {
         ),
         $ = K ? 'shortcut' : 'hiddenshortcut';
     return (0, r.jsx)(m.Z, {
-        categoryListRef: T,
+        categoryListRef: b,
         expressionsListRef: n,
         className: t,
         store: h.kJ,
@@ -217,7 +217,7 @@ t.Z = (e) => {
         renderCategoryListItem: C,
         renderSection: J,
         rowCount: I.length,
-        categoryHeight: M,
+        categoryHeight: P,
         getScrollOffsetForIndex: X,
         rowCountBySection: W,
         children: (e) =>

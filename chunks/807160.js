@@ -22,11 +22,11 @@ var i,
     x = n(37234),
     S = n(782568),
     T = n(812206),
-    C = n(593061),
+    E = n(593061),
     _ = n(600164),
-    E = n(925329),
-    f = n(267101),
-    I = n(240864),
+    C = n(925329),
+    I = n(267101),
+    f = n(240864),
     N = n(942833),
     A = n(400916),
     b = n(916001),
@@ -53,8 +53,8 @@ var i,
     W = n(362786),
     K = n(981631),
     q = n(474936),
-    Q = n(231338),
-    X = n(388032),
+    X = n(231338),
+    Q = n(388032),
     J = n(943857);
 function $(e, t, n) {
     return (
@@ -73,7 +73,7 @@ let ee = (e) => 'https://'.concat(K.xr4, '/hc/').concat(e.toLowerCase(), '/reque
     et = [K.epS.DURABLE_PRIMARY, K.epS.DURABLE, K.epS.CONSUMABLE];
 ((r = i || (i = {})).PURCHASE_DATE = 'PURCHASE_DATE'), (r.SKU_TYPE = 'SKU_TYPE'), (r.ALREADY_REFUNDED = 'ALREADY_REFUNDED'), (r.PAYMENT_STATUS = 'PAYMENT_STATUS'), (r.PAYMENT_GATEWAY = 'PAYMENT_GATEWAY'), (r.SKU_STICKER_PACK = 'SKU_STICKER_PACK'), (r.SUBSCRIPTION_TYPE = 'SUBSCRIPTION_TYPE'), (r.GUILD_PRODUCT = 'GUILD_PRODUCT'), (r.COLLECTIBLE = 'COLLECTIBLE');
 let en = [K.PyE.FAILED, K.PyE.REVERSED, K.PyE.CANCELED],
-    ei = [Q.gg.APPLE],
+    ei = [X.gg.APPLE],
     es = (e) => {
         let { description: t, cost: n } = e;
         return (0, l.jsx)('li', {
@@ -125,10 +125,10 @@ let el = (e) => {
 };
 function ea(e) {
     let { guildId: t, guildProductListingId: n } = e,
-        i = (0, f.hO)(t, n, { requireCurrentGuild: !1 }),
+        i = (0, I.hO)(t, n, { requireCurrentGuild: !1 }),
         s = (0, N.C)(i),
         r = (0, g.e7)([L.Z], () => L.Z.getGuild(t)),
-        o = (null == i ? void 0 : i.role_id) != null && (null == i ? void 0 : i.attachments_count) === 0 ? X.intl.string(X.t.H11qcX) : s,
+        o = (null == i ? void 0 : i.role_id) != null && (null == i ? void 0 : i.attachments_count) === 0 ? Q.intl.string(Q.t.H11qcX) : s,
         c = a.useCallback(async () => {
             (null == r ? void 0 : r.hasFeature(K.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, j.Z)(K.Z5c.GUILD_PRODUCT(t, n)) : await (0, j.Z)(K.Z5c.CHANNEL(t)), (0, x.xf)();
         }, [r, t, n]);
@@ -136,12 +136,12 @@ function ea(e) {
         children: [
             null != o &&
                 (0, l.jsx)(el, {
-                    description: X.intl.string(X.t.lXPbJS),
+                    description: Q.intl.string(Q.t.lXPbJS),
                     detail: o
                 }),
             null != r &&
                 (0, l.jsx)(el, {
-                    description: X.intl.string(X.t.Wpn8z8),
+                    description: Q.intl.string(Q.t.Wpn8z8),
                     detail: (0, l.jsx)(O.Z, {
                         onClick: c,
                         children: r.name
@@ -153,8 +153,8 @@ function ea(e) {
 function eo(e) {
     var t, n;
     let { guildId: i, guildProductListingId: s } = e,
-        r = (0, f.hO)(i, s, { requireCurrentGuild: !1 }),
-        a = (0, g.e7)([I.Z], () => I.Z.getGuildProductFetchState(s) === I.M.FETCHING),
+        r = (0, I.hO)(i, s, { requireCurrentGuild: !1 }),
+        a = (0, g.e7)([f.Z], () => f.Z.getGuildProductFetchState(s) === f.M.FETCHING),
         o = null == r ? void 0 : r.role_id,
         c = (0, g.e7)([L.Z], () => (null != o ? L.Z.getRole(i, o) : void 0), [i, o]),
         d = (null !== (n = null == r ? void 0 : null === (t = r.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0) > 0,
@@ -175,7 +175,7 @@ function eo(e) {
                                     variant: 'text-xs/semibold',
                                     color: 'header-secondary',
                                     className: J.guildProductBenefitLabel,
-                                    children: X.intl.string(X.t.hxawo6)
+                                    children: Q.intl.string(Q.t.hxawo6)
                                 }),
                                 (0, l.jsx)(A.Z, {
                                     guildId: i,
@@ -191,7 +191,7 @@ function eo(e) {
                                     variant: 'text-xs/semibold',
                                     color: 'header-secondary',
                                     className: J.guildProductBenefitLabel,
-                                    children: X.intl.string(X.t.gWBNen)
+                                    children: Q.intl.string(Q.t.gWBNen)
                                 }),
                                 (0, l.jsx)(b.Z, { role: c })
                             ]
@@ -234,32 +234,32 @@ class ec extends (s = a.PureComponent) {
             case K.PyE.PENDING:
                 return (0, l.jsx)('span', {
                     className: J.statusTagGrey,
-                    children: X.intl.string(X.t.y7F0RU)
+                    children: Q.intl.string(Q.t.y7F0RU)
                 });
             case K.PyE.FAILED:
                 return (0, l.jsx)('span', {
                     className: J.statusTagRed,
-                    children: X.intl.string(X.t.Yo4ru7)
+                    children: Q.intl.string(Q.t.Yo4ru7)
                 });
             case K.PyE.REFUNDED:
                 if (e.amountRefunded !== e.amount)
                     return (0, l.jsx)('span', {
                         className: J.statusTagGreen,
-                        children: X.intl.string(X.t.lYbZz8)
+                        children: Q.intl.string(Q.t.lYbZz8)
                     });
                 return (0, l.jsx)('span', {
                     className: J.statusTagGreen,
-                    children: X.intl.string(X.t.ZBb6ND)
+                    children: Q.intl.string(Q.t.ZBb6ND)
                 });
             case K.PyE.REVERSED:
                 return (0, l.jsx)('span', {
                     className: J.statusTagRed,
-                    children: X.intl.string(X.t.YQv9Li)
+                    children: Q.intl.string(Q.t.YQv9Li)
                 });
             case K.PyE.CANCELED:
                 return (0, l.jsx)('span', {
                     className: J.statusTagRed,
-                    children: X.intl.string(X.t.ttkBh4)
+                    children: Q.intl.string(Q.t.ttkBh4)
                 });
             default:
                 return null;
@@ -280,11 +280,11 @@ class ec extends (s = a.PureComponent) {
             children: (0, l.jsxs)('div', {
                 className: J.paymentInfo,
                 children: [
-                    (0, l.jsx)('div', { children: X.intl.string(X.t['UQim+v']) }),
+                    (0, l.jsx)('div', { children: Q.intl.string(Q.t['UQim+v']) }),
                     (0, l.jsx)(er, {
                         value: e.id,
-                        copyText: X.intl.string(X.t['Mdk9+P']),
-                        copyFeedbackText: X.intl.string(X.t['7eIrAw'])
+                        copyText: Q.intl.string(Q.t['Mdk9+P']),
+                        copyFeedbackText: Q.intl.string(Q.t['7eIrAw'])
                     })
                 ]
             })
@@ -305,7 +305,7 @@ class ec extends (s = a.PureComponent) {
                           showLabels: !0,
                           showPaymentSourceIcon: !0
                       })
-                    : e.paymentGateway === Q.gg.APPLE_PARTNER
+                    : e.paymentGateway === X.gg.APPLE_PARTNER
                       ? (0, l.jsx)(H.Z, {
                             paymentSource: new B.$z({}),
                             locale: t,
@@ -325,14 +325,14 @@ class ec extends (s = a.PureComponent) {
                                           cost: (0, Y.T4)(r - s, d)
                                       }),
                                       (0, l.jsx)(es, {
-                                          description: X.intl.string(X.t.QgWXho),
+                                          description: Q.intl.string(Q.t.QgWXho),
                                           cost: (0, Y.T4)(s, d)
                                       })
                                   ]
                               })
                             : null,
                         (0, l.jsx)(es, {
-                            description: X.intl.string(X.t.txajQE),
+                            description: Q.intl.string(Q.t.txajQE),
                             cost: (0, Y.T4)(r, d)
                         }),
                         e.isGuildProductPurchase &&
@@ -346,11 +346,11 @@ class ec extends (s = a.PureComponent) {
                             (0, l.jsxs)(l.Fragment, {
                                 children: [
                                     (0, l.jsx)(es, {
-                                        description: X.intl.string(X.t['A+I0AA']),
+                                        description: Q.intl.string(Q.t['A+I0AA']),
                                         cost: (0, Y.T4)(o, d)
                                     }),
                                     (0, l.jsx)(es, {
-                                        description: X.intl.string(X.t.xER6Wl),
+                                        description: Q.intl.string(Q.t.xER6Wl),
                                         cost: (0, Y.T4)(r - o, d)
                                     })
                                 ]
@@ -362,7 +362,7 @@ class ec extends (s = a.PureComponent) {
     }
     renderInvoiceDownload() {
         let { payment: e } = this.props;
-        return (0, l.jsx)(C.Z, { payment: e });
+        return (0, l.jsx)(E.Z, { payment: e });
     }
     renderRefundDetails() {
         let e;
@@ -374,30 +374,30 @@ class ec extends (s = a.PureComponent) {
             o = this.isPremium ? 5 : 14;
         return (
             (e = i.includes('SKU_TYPE')
-                ? X.intl.format(X.t['5lvoVV'], { supportURL: r })
+                ? Q.intl.format(Q.t['5lvoVV'], { supportURL: r })
                 : s
                   ? n.isPremiumSubscription || n.isPremiumGuildSubscription
-                      ? X.intl.format(X.t.EPYteX, {
+                      ? Q.intl.format(Q.t.EPYteX, {
                             dateLimit: o,
                             supportURL: r
                         })
                       : n.isGift
-                        ? X.intl.format(X.t['16eP/P'], {
+                        ? Q.intl.format(Q.t['16eP/P'], {
                               dateLimit: o,
                               supportURL: r
                           })
-                        : X.intl.format(X.t['1LDI4O'], {
+                        : Q.intl.format(Q.t['1LDI4O'], {
                               dateLimit: o,
                               playtimeLimit: 2,
                               supportURL: r
                           })
                   : n.isCollectible
-                    ? X.intl.string(X.t.s9TZMz)
+                    ? Q.intl.string(Q.t.s9TZMz)
                     : n.isGift
-                      ? X.intl.formatToPlainString(X.t.owlOWV, { dateLimit: o })
+                      ? Q.intl.formatToPlainString(Q.t.owlOWV, { dateLimit: o })
                       : n.isPremiumSubscription || n.isPremiumGuildSubscription
-                        ? X.intl.formatToPlainString(X.t.dk7vyM, { dateLimit: o })
-                        : X.intl.formatToPlainString(X.t.s4Kk0N, {
+                        ? Q.intl.formatToPlainString(Q.t.dk7vyM, { dateLimit: o })
+                        : Q.intl.formatToPlainString(Q.t.s4Kk0N, {
                               dateLimit: o,
                               playtimeLimit: 2
                           })),
@@ -406,7 +406,7 @@ class ec extends (s = a.PureComponent) {
                 children: [
                     (0, l.jsx)(p.H, {
                         className: J.paymentHeader,
-                        children: X.intl.string(X.t['n/27pq'])
+                        children: Q.intl.string(Q.t['n/27pq'])
                     }),
                     (0, l.jsxs)('div', {
                         className: J.paymentText,
@@ -452,11 +452,11 @@ class ec extends (s = a.PureComponent) {
                 children: [
                     (0, l.jsx)('div', {
                         className: J.refundRules,
-                        children: !s.isCollectible && this.renderRefundCriteria(X.intl.string(X.t.H0RNz8), r, X.intl.formatToPlainString(X.t['7dtXa2'], { daysSincePurchase: this.daysSincePurchase }))
+                        children: !s.isCollectible && this.renderRefundCriteria(Q.intl.string(Q.t.H0RNz8), r, Q.intl.formatToPlainString(Q.t['7dtXa2'], { daysSincePurchase: this.daysSincePurchase }))
                     }),
                     (0, l.jsx)(p.Anchor, {
                         href: ee(i),
-                        children: X.intl.string(X.t.re5nOD)
+                        children: Q.intl.string(Q.t.re5nOD)
                     })
                 ]
             });
@@ -470,13 +470,13 @@ class ec extends (s = a.PureComponent) {
                     text: (function (e) {
                         switch (e) {
                             case W.d$.ALREADY_REFUNDED_PREMIUM:
-                                return X.intl.string(X.t['GBu+VV']);
+                                return Q.intl.string(Q.t['GBu+VV']);
                             case W.d$.ALREADY_REFUNDED_PREMIUM_GUILD:
-                                return X.intl.string(X.t['7bNM5+']);
+                                return Q.intl.string(Q.t['7bNM5+']);
                             case W.d$.ENTITLEMENT_ALREADY_CONSUMED:
-                                return X.intl.string(X.t['2yOjur']);
+                                return Q.intl.string(Q.t['2yOjur']);
                             default:
-                                return X.intl.string(X.t.iFF3T0);
+                                return Q.intl.string(Q.t.iFF3T0);
                         }
                     })(a),
                     children: (e) =>
@@ -494,12 +494,12 @@ class ec extends (s = a.PureComponent) {
                                             ...t
                                         });
                                 }),
-                            children: X.intl.string(X.t.qC9V9P)
+                            children: Q.intl.string(Q.t.qC9V9P)
                         })
                 }),
                 (0, l.jsx)(p.Anchor, {
                     href: ee(i),
-                    children: X.intl.string(X.t.re5nOD)
+                    children: Q.intl.string(Q.t.re5nOD)
                 })
             ]
         });
@@ -521,22 +521,22 @@ class ec extends (s = a.PureComponent) {
                 });
             else if (h.type === K.NYc.GUILD) {
                 if (null != c) {
-                    let e = c.interval === q.rV.YEAR ? X.t.V6UFQE : X.t['6oq129'];
-                    n.push(X.intl.format(e, { planName: c.name })), (a = c.skuId);
+                    let e = c.interval === q.rV.YEAR ? Q.t.V6UFQE : Q.t['6oq129'];
+                    n.push(Q.intl.format(e, { planName: c.name })), (a = c.skuId);
                 }
-            } else h.type === K.NYc.APPLICATION && (null != c && (a = c.skuId), null != s ? n.push(X.intl.formatToPlainString(X.t['0wL/VF'], { tier: null == m ? void 0 : m.name })) : n.push(X.intl.string(X.t['9czSYm'])));
+            } else h.type === K.NYc.APPLICATION && (null != c && (a = c.skuId), null != s ? n.push(Q.intl.formatToPlainString(Q.t['0wL/VF'], { tier: null == m ? void 0 : m.name })) : n.push(Q.intl.string(Q.t['9czSYm'])));
             (t = 0 !== n.length ? n.join(', ') : i.description),
-                (e = (0, l.jsx)(E.Z, {
+                (e = (0, l.jsx)(C.Z, {
                     className: J.descriptionIcon,
                     guildClassName: J.guildDescriptionIcon,
                     game: s,
                     guild: r,
-                    size: E.Z.Sizes.XSMALL,
+                    size: C.Z.Sizes.XSMALL,
                     skuId: null != a ? a : null == m ? void 0 : m.id
                 }));
         } else if (null != m) {
             var x;
-            if (((t = i.isGuildProductPurchase && i.isSoftDeletedProduct ? X.intl.string(X.t.O7uLm5) : m.name), null != o)) {
+            if (((t = i.isGuildProductPurchase && i.isSoftDeletedProduct ? Q.intl.string(Q.t.O7uLm5) : m.name), null != o)) {
                 let t = (0, D.Zt)(o);
                 e = (0, l.jsx)(y.ZP, {
                     disableAnimation: !d,
@@ -555,12 +555,12 @@ class ec extends (s = a.PureComponent) {
                               color: 'currentColor',
                               className: J.shopIcon
                           })
-                        : (0, l.jsx)(E.Z, {
+                        : (0, l.jsx)(C.Z, {
                               className: J.descriptionIcon,
                               guildClassName: J.guildDescriptionIcon,
                               game: s,
                               guild: r,
-                              size: E.Z.Sizes.XSMALL,
+                              size: C.Z.Sizes.XSMALL,
                               skuId: m.id
                           });
         } else
@@ -576,7 +576,7 @@ class ec extends (s = a.PureComponent) {
             }),
             T = i.isGift
                 ? (0, l.jsx)(p.Tooltip, {
-                      text: X.intl.string(X.t.QddTpq),
+                      text: Q.intl.string(Q.t.QddTpq),
                       children: (e) =>
                           (0, l.jsx)(p.GiftIcon, {
                               size: 'md',
@@ -618,8 +618,8 @@ class ec extends (s = a.PureComponent) {
                           ? (0, l.jsx)(v.Z, {
                                 className: J.warningBlock,
                                 buttonPosition: v.E.RIGHT,
-                                notice: X.intl.string(X.t['3AvulJ']),
-                                ctaLabel: X.intl.string(X.t.zoztQE),
+                                notice: Q.intl.string(Q.t['3AvulJ']),
+                                ctaLabel: Q.intl.string(Q.t.zoztQE),
                                 onClick: () => (0, S.Z)(ee(n))
                             })
                           : null != i &&
@@ -640,7 +640,7 @@ class ec extends (s = a.PureComponent) {
                 children: [
                     (0, l.jsx)(p.H, {
                         className: J.paymentHeader,
-                        children: X.intl.string(X.t.nyzoFR)
+                        children: Q.intl.string(Q.t.nyzoFR)
                     }),
                     this.renderPaymentBreakdown(),
                     this.renderGuildProductBenefits(),
@@ -780,21 +780,21 @@ function ed(e) {
     a.useEffect(() => {
         m && null != u && (0, P.UM)(u);
     }, [u, m]);
-    let C = (0, g.e7)([L.Z], () => L.Z.getGuild(null == p ? void 0 : p.guildId)),
+    let E = (0, g.e7)([L.Z], () => L.Z.getGuild(null == p ? void 0 : p.guildId)),
         _ = c ? p : void 0,
-        E = i.subscription,
-        f = (0, g.e7)([F.Z], () => (null != E && E.type !== K.NYc.PREMIUM ? F.Z.get(E.items[0].planId) : null));
+        C = i.subscription,
+        I = (0, g.e7)([F.Z], () => (null != C && C.type !== K.NYc.PREMIUM ? F.Z.get(C.items[0].planId) : null));
     return (0, l.jsx)(ec, {
         applicationStatistics: h,
         application: m ? S : _,
-        guild: C,
+        guild: E,
         stickerPack: null,
         paymentSources: x,
         locale: s,
         compactMode: r,
         className: o,
         payment: i,
-        plan: f
+        plan: I
     });
 }
 $(ec, 'defaultProps', { compactMode: !1 });

@@ -1,36 +1,36 @@
-n.d(t, {
+s.d(t, {
     Z: function () {
         return d;
     }
 });
-var s = n(200651);
-n(192379);
-var a = n(120356),
-    o = n.n(a),
-    i = n(481060),
-    l = n(118012),
-    r = n(388032),
-    c = n(431093);
+var n = s(200651);
+s(192379);
+var o = s(120356),
+    a = s.n(o),
+    i = s(481060),
+    r = s(118012),
+    l = s(388032),
+    c = s(431093);
 function d(e) {
     let { onComplete: t } = e;
-    return (0, s.jsxs)(i.Clickable, {
+    return (0, n.jsxs)(i.Clickable, {
         className: c.container,
         onClick: t,
         children: [
-            (0, s.jsx)(l.Z, {
-                size: l.Z.Sizes.SIZE_24,
+            (0, n.jsx)(r.Z, {
+                size: r.Z.Sizes.SIZE_24,
                 className: c.title,
-                children: r.intl.string(r.t['Deps4+'])
+                children: l.intl.string(l.t['Deps4+'])
             }),
-            (0, s.jsx)(l.Z, {
-                size: l.Z.Sizes.SIZE_24,
-                className: o()(c.title, c.subtitle),
-                children: r.intl.string(r.t.xv5g7O)
+            (0, n.jsx)(r.Z, {
+                size: r.Z.Sizes.SIZE_24,
+                className: a()(c.title, c.subtitle),
+                children: l.intl.string(l.t.xv5g7O)
             }),
-            (0, s.jsx)(i.Button, {
+            (0, n.jsx)(i.Button, {
                 color: i.Button.Colors.WHITE,
                 onClick: t,
-                children: r.intl.string(r.t['6X9YKC'])
+                children: l.intl.string(l.t['6X9YKC'])
             })
         ]
     });

@@ -58,8 +58,8 @@ let v = (e) => {
         { channelId: n, element: a, attributes: _, children: E } = e,
         v = (0, o.vt)(),
         I = (0, o.UE)(),
-        b = (0, o._7)(),
-        { optionType: T, errored: S } = (0, l.cj)(
+        T = (0, o._7)(),
+        { optionType: b, errored: S } = (0, l.cj)(
             [c.Z],
             () => {
                 var e, t, r;
@@ -78,11 +78,11 @@ let v = (e) => {
             [g.erroredPill]: (!I || !v) && S
         }),
         R = i.useCallback(() => {
-            !h.bN.isVoid(b, a) && p.Q.selectCommandOption(b, a.optionName, !0);
-        }, [b, a]);
+            !h.bN.isVoid(T, a) && p.Q.selectCommandOption(T, a.optionName, !0);
+        }, [T, a]);
     return (
         (t =
-            T === u.jw.ATTACHMENT
+            b === u.jw.ATTACHMENT
                 ? (null == y ? void 0 : y.filename) != null
                     ? (0, r.jsxs)('span', {
                           className: s()(g.optionPillValue, g.attachmentFilename),

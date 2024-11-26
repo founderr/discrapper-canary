@@ -21,8 +21,8 @@ var r = n(200651),
     E = n(474936),
     v = n(388032),
     I = n(812126),
-    b = n(867250);
-let T = () => (0, h.f)(!1),
+    T = n(867250);
+let b = () => (0, h.f)(!1),
     S = (e) => {
         var t, n, a;
         let { onLearnMore: h } = e,
@@ -45,7 +45,7 @@ let T = () => (0, h.f)(!1),
                     ? (0, r.jsx)(f.ZP, {
                           trialOffer: y,
                           discountOffer: A,
-                          onClose: T,
+                          onClose: b,
                           type: E.cd.STICKER_PICKER_UPSELL,
                           subscriptionTier: null !== (a = null == y ? void 0 : null === (n = y.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : E.Si.TIER_2,
                           children: N
@@ -59,7 +59,7 @@ let T = () => (0, h.f)(!1),
                           children: [
                               (0, r.jsx)('img', {
                                   className: I.upsellImage,
-                                  src: b,
+                                  src: T,
                                   alt: v.intl.string(v.t.do7AoK)
                               }),
                               (0, r.jsx)(o.Text, {
@@ -82,7 +82,7 @@ let T = () => (0, h.f)(!1),
                     }),
                 (0, r.jsx)(o.Clickable, {
                     className: I.upsellClose,
-                    onClick: T,
+                    onClick: b,
                     children: (0, r.jsx)(o.XSmallIcon, {
                         size: 'md',
                         color: 'currentColor'

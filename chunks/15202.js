@@ -1,9 +1,9 @@
 r.d(t, {
     V: function () {
-        return n;
+        return a;
     }
 });
-let n = {
+let a = {
     Themes: {
         DARK: 'dark',
         LIGHT: 'light',

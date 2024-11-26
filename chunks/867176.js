@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     },
     b: function () {
-        return T;
+        return b;
     }
 }),
     n(47120);
@@ -25,28 +25,28 @@ var r = n(200651),
     E = n(28660),
     v = n(462997),
     I = n(409728);
-let b = (e) => {
+let T = (e) => {
     let { size: t, stroke: n } = (0, c.getAvatarSpecs)(e);
     return t / 2 + n;
 };
-function T(e) {
+function b(e) {
     var t;
-    let { user: n, displayProfile: a, guildId: v, pendingBanner: T, children: S, className: y, avatarSize: A, avatarOffsetX: N, avatarOffsetY: C, bannerWidth: R, bannerHeight: O, themePadding: D, animateOnHover: L = !1 } = e,
+    let { user: n, displayProfile: a, guildId: v, pendingBanner: b, children: S, className: y, avatarSize: A, avatarOffsetX: N, avatarOffsetY: C, bannerWidth: R, bannerHeight: O, themePadding: D, animateOnHover: L = !1 } = e,
         x = (0, _.Dt)(),
-        [w, M] = i.useState(!1),
-        P = (0, l.e7)([m.Z], () => m.Z.isFocused()),
+        [w, P] = i.useState(!1),
+        M = (0, l.e7)([m.Z], () => m.Z.isFocused()),
         k = h.QK.getSetting(),
         { bannerSrc: U, status: B } = (0, E.Z)({
             displayProfile: a,
-            pendingBanner: T,
+            pendingBanner: b,
             size: R,
-            canAnimate: L || !k ? w : P
+            canAnimate: L || !k ? w : M
         }),
         G = (0, c.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(),
         Z = n.getAvatarURL(v, (0, c.getAvatarSize)(A)),
         F = (0, o._i)((0, d.ZP)(Z, G, !1)),
         V = (0, f.Z)(null !== (t = null == a ? void 0 : a.primaryColor) && void 0 !== t ? t : F).hex,
-        j = b(A),
+        j = T(A),
         H = O - C - D;
     return (0, r.jsxs)('svg', {
         className: I.mask,
@@ -85,8 +85,8 @@ function T(e) {
                     S,
                     (0, r.jsxs)('div', {
                         className: s()(I.banner, y),
-                        onMouseMove: () => M(!0),
-                        onMouseLeave: () => M(!1),
+                        onMouseMove: () => P(!0),
+                        onMouseLeave: () => P(!1),
                         style: {
                             height: O,
                             minHeight: O,
@@ -104,7 +104,7 @@ function S(e) {
     let { profileType: t, displayProfile: n, canUsePremiumProfileCustomization: i = !1, ...a } = e,
         s = v.q[t],
         o = i || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1;
-    return (0, r.jsx)(T, {
+    return (0, r.jsx)(b, {
         ...a,
         ...s,
         displayProfile: n,

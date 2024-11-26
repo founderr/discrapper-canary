@@ -3,19 +3,19 @@ r.d(t, {
         return o;
     }
 });
-var n = r(899517),
-    a = r(578346);
+var a = r(899517),
+    n = r(578346);
 let _ = null;
 function o(e) {
     let t = 'error';
-    (0, a.Hj)(t, e), (0, a.D2)(t, i);
+    (0, n.Hj)(t, e), (0, n.D2)(t, E);
 }
-function i() {
-    (_ = n.n.onerror),
-        (n.n.onerror = function (e, t, r, n, o) {
+function E() {
+    (_ = a.n.onerror),
+        (a.n.onerror = function (e, t, r, a, o) {
             return (
-                (0, a.rK)('error', {
-                    column: n,
+                (0, n.rK)('error', {
+                    column: a,
                     error: o,
                     line: r,
                     msg: e,
@@ -24,5 +24,5 @@ function i() {
                 !!_ && !_.__SENTRY_LOADER__ && _.apply(this, arguments)
             );
         }),
-        (n.n.onerror.__SENTRY_INSTRUMENTED__ = !0);
+        (a.n.onerror.__SENTRY_INSTRUMENTED__ = !0);
 }

@@ -18,22 +18,22 @@ var i = n(200651),
     p = n(388032),
     x = n(887669);
 function S(e) {
-    let { user: t, guild: n, className: r, sectionTitle: m, forcedDivider: S = !1, withTutorial: C = !1, isTryItOutFlow: _ = !1 } = e,
-        { analyticsLocations: E } = (0, o.ZP)(),
-        f = null != n,
-        { userAvatarDecoration: I, guildAvatarDecoration: N, pendingAvatarDecoration: A, pendingErrors: b } = (0, h.$U)(t, n),
+    let { user: t, guild: n, className: r, sectionTitle: m, forcedDivider: S = !1, withTutorial: E = !1, isTryItOutFlow: _ = !1 } = e,
+        { analyticsLocations: C } = (0, o.ZP)(),
+        I = null != n,
+        { userAvatarDecoration: f, guildAvatarDecoration: N, pendingAvatarDecoration: A, pendingErrors: b } = (0, h.$U)(t, n),
         v = (0, u.Z)('enable_avatar_decoration_uploads'),
         j = s.useCallback(
             () =>
                 (0, d.ps)({
-                    analyticsLocations: E,
+                    analyticsLocations: C,
                     isTryItOutFlow: _,
                     guild: n
                 }),
-            [E, _, n]
+            [C, _, n]
         ),
-        O = _ || void 0 !== A ? null != A : (f ? N : I) != null,
-        R = C ? a.ShinyButton : a.Button;
+        O = _ || void 0 !== A ? null != A : (I ? N : f) != null,
+        R = E ? a.ShinyButton : a.Button;
     return (0, i.jsxs)(g.Z, {
         className: r,
         forcedDivider: S,
@@ -47,7 +47,7 @@ function S(e) {
                     (0, i.jsx)(R, {
                         size: a.Button.Sizes.SMALL,
                         onClick: j,
-                        className: l()({ [x.buttonHighlighted]: C }),
+                        className: l()({ [x.buttonHighlighted]: E }),
                         children: p.intl.string(p.t['Tna/TU'])
                     }),
                     O &&

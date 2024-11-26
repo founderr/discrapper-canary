@@ -1,6 +1,6 @@
 n.d(t, {
     Sz: function () {
-        return E;
+        return C;
     },
     of: function () {
         return _;
@@ -24,7 +24,7 @@ var i = n(200651),
     x = n(981631),
     S = n(388032),
     T = n(612711);
-async function C(e) {
+async function E(e) {
     let { premiumSubscription: t, pauseDuration: n, onClose: i, setHasError: s, setIsCancelling: r, analyticsLocations: l, analyticsLocation: a } = e;
     try {
         r(!0), s(!1), await (0, d.Mg)(t, { pauseDuration: n }, l, a), i();
@@ -42,7 +42,7 @@ function _(e) {
             [l]
         ),
         m = d.status === x.O0b.PAUSED ? S.intl.string(S.t.Lp9WoK) : S.intl.string(S.t.eSR83d),
-        C = (function (e) {
+        E = (function (e) {
             let t = e.status === x.O0b.PAUSED ? S.t.o3upfX : S.t.dBXZEh,
                 { durations: n, currentDaysPaused: i } = (0, g.AT)(e),
                 s = [];
@@ -67,7 +67,7 @@ function _(e) {
         })(d);
     return (
         s.useEffect(() => {
-            if (!(C.length < 1)) l(C[0].value);
+            if (!(E.length < 1)) l(E[0].value);
         }, []),
         (0, i.jsxs)(i.Fragment, {
             children: [
@@ -96,7 +96,7 @@ function _(e) {
                 (0, i.jsx)(c.ModalContent, {
                     className: T.body,
                     children: (0, i.jsx)(c.RadioGroup, {
-                        options: C,
+                        options: E,
                         onChange: u,
                         value: r
                     })
@@ -109,11 +109,11 @@ function _(e) {
         })
     );
 }
-function E(e) {
+function C(e) {
     let { premiumSubscription: t, premiumType: n, onClose: r, pauseDuration: a, analyticsLocation: d } = e,
         [g, _] = s.useState(!1),
-        { analyticsLocations: E } = (0, m.ZP)(),
-        [f, I] = s.useState(!1),
+        { analyticsLocations: C } = (0, m.ZP)(),
+        [I, f] = s.useState(!1),
         N = (0, u.ZP)(),
         A = null,
         b = null,
@@ -177,15 +177,15 @@ function E(e) {
                         children: [
                             (0, i.jsx)(c.Button, {
                                 color: c.Button.Colors.RED,
-                                disabled: f || null == a,
+                                disabled: I || null == a,
                                 onClick: async () => {
-                                    await C({
+                                    await E({
                                         premiumSubscription: t,
                                         pauseDuration: a,
-                                        setIsCancelling: I,
+                                        setIsCancelling: f,
                                         setHasError: _,
                                         onClose: r,
-                                        analyticsLocations: E,
+                                        analyticsLocations: C,
                                         analyticsLocation: d
                                     });
                                 },

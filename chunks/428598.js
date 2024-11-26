@@ -1,11 +1,11 @@
-let r;
+let i;
 n(47120);
-var o,
-    i = n(442837),
-    a = n(570140),
-    s = n(699516),
-    l = n(496232);
-function c(e, t, n) {
+var r,
+    l = n(442837),
+    o = n(570140),
+    u = n(699516),
+    a = n(496232);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,49 +18,49 @@ function c(e, t, n) {
         e
     );
 }
-let d = !1,
-    u = Object.freeze({
+let c = !1,
+    d = Object.freeze({
         userAffinities: [],
         lastFetched: 0
     }),
-    p = { ...u };
-function f() {
-    r = new Map(p.userAffinities.filter((e) => !s.Z.isBlockedOrIgnored(e.otherUserId)).map((e) => [e.otherUserId, e]));
+    f = { ...d };
+function _() {
+    i = new Map(f.userAffinities.filter((e) => !u.Z.isBlockedOrIgnored(e.otherUserId)).map((e) => [e.otherUserId, e]));
 }
-class h extends (o = i.ZP.PersistedStore) {
+class E extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(s.Z), null != e && ((p.userAffinities = e.userAffinities), (p.lastFetched = e.lastFetched), f()), this.syncWith([s.Z], f);
+        this.waitFor(u.Z), null != e && ((f.userAffinities = e.userAffinities), (f.lastFetched = e.lastFetched), _()), this.syncWith([u.Z], _);
     }
     shouldFetch() {
-        if (!d) return Date.now() - p.lastFetched > l.K;
+        if (!c) return Date.now() - f.lastFetched > a.K;
     }
     isFetching() {
-        return d;
+        return c;
     }
     getUserAffinities() {
-        return p.userAffinities;
+        return f.userAffinities;
     }
     getUserAffinity(e) {
-        return r.get(e);
+        return i.get(e);
     }
     getState() {
-        return p;
+        return f;
     }
 }
-c(h, 'displayName', 'UserAffinitiesStoreV2'),
-    c(h, 'persistKey', 'UserAffinitiesStoreV2'),
-    (t.Z = new h(a.Z, {
+s(E, 'displayName', 'UserAffinitiesStoreV2'),
+    s(E, 'persistKey', 'UserAffinitiesStoreV2'),
+    (t.Z = new E(o.Z, {
         LOAD_USER_AFFINITIES_V2: function () {
-            d = !0;
+            c = !0;
         },
         LOAD_USER_AFFINITIES_V2_SUCCESS: function (e) {
             let { affineUsers: t } = e;
-            (p.lastFetched = Date.now()), (d = !1), (p.userAffinities = t), f();
+            (f.lastFetched = Date.now()), (c = !1), (f.userAffinities = t), _();
         },
         LOAD_USER_AFFINITIES_V2_FAILURE: function () {
-            d = !1;
+            c = !1;
         },
         LOGOUT: function () {
-            (p = { ...u }), (r = new Map()), (d = !1);
+            (f = { ...d }), (i = new Map()), (c = !1);
         }
     }));

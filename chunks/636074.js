@@ -26,10 +26,10 @@ function c(e) {
         E = r.useContext(i.C8),
         v = r.useState(null),
         I = v[0],
-        b = v[1],
-        T = r.useState(null),
-        S = T[0],
-        y = T[1];
+        T = v[1],
+        b = r.useState(null),
+        S = b[0],
+        y = b[1];
     r.useEffect(
         function () {
             (0, a.k$)(m, I);
@@ -61,7 +61,7 @@ function c(e) {
         L = r.useMemo(
             function () {
                 return {
-                    ref: b,
+                    ref: T,
                     style: R.popper,
                     placement: C ? C.placement : n,
                     hasPopperEscaped: C && C.modifiersData.hide ? C.modifiersData.hide.hasPopperEscaped : null,
@@ -74,7 +74,7 @@ function c(e) {
                     update: D || l
                 };
             },
-            [b, y, n, C, R, D, O]
+            [T, y, n, C, R, D, O]
         );
     return (0, a.$p)(g)(L);
 }

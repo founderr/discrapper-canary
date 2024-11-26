@@ -17,8 +17,8 @@ var r,
     E = n(944486),
     v = n(606304),
     I = n(594174),
-    b = n(33039),
-    T = n(979651),
+    T = n(33039),
+    b = n(979651),
     S = n(413523),
     y = n(354459),
     A = n(981631);
@@ -42,8 +42,8 @@ let C = new d.Z('ChannelRTCStore'),
     L = {},
     x = {},
     w = {},
-    M = {},
     P = {},
+    M = {},
     k = {},
     U = {},
     B = {},
@@ -61,7 +61,7 @@ function F(e) {
                       let t = Z(e);
                       if (0 === t.size()) return;
                       let n = en(e) || K(t) ? A.WtW.VIDEO : A.WtW.VOICE;
-                      n === A.WtW.VOICE ? (delete w[e], delete M[e]) : (w[e] = n);
+                      n === A.WtW.VOICE ? (delete w[e], delete P[e]) : (w[e] = n);
                   })(n),
                   (function (e) {
                       let t = h.default.getId(),
@@ -135,7 +135,7 @@ function K(e) {
     return e.size(S.sI.STREAM) > 0 || e.size(S.sI.VIDEO) > 0 || e.hasEmbeddedActivity();
 }
 function z(e) {
-    delete D[e], delete L[e], delete w[e], delete M[e];
+    delete D[e], delete L[e], delete w[e], delete P[e];
 }
 function q() {
     return F(
@@ -147,7 +147,7 @@ function q() {
             let n = E.Z.getVoiceChannelId();
             null != n && !e.includes(n) && e.push(n);
             let r = f.Z.getRemoteSessionId(),
-                i = T.Z.getVoiceStateForSession(h.default.getId(), r);
+                i = b.Z.getVoiceStateForSession(h.default.getId(), r);
             (null == i ? void 0 : i.channelId) != null && e.push(null == i ? void 0 : i.channelId), o().difference(O, e).forEach(z);
             let a = o().difference(e, O);
             return (O = e), a;
@@ -186,7 +186,7 @@ function en(e) {
 }
 class er extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(p.Z, h.default, m.Z, g.Z, c.ZP, E.Z, v.Z, I.default, b.Z, T.Z), this.syncWith([c.ZP], Q), this.syncWith([f.Z], q), (null == e ? void 0 : e.voiceParticipantsHidden) !== void 0 && Object.assign(k, null == e ? void 0 : e.voiceParticipantsHidden);
+        this.waitFor(p.Z, h.default, m.Z, g.Z, c.ZP, E.Z, v.Z, I.default, T.Z, b.Z), this.syncWith([c.ZP], Q), this.syncWith([f.Z], q), (null == e ? void 0 : e.voiceParticipantsHidden) !== void 0 && Object.assign(k, null == e ? void 0 : e.voiceParticipantsHidden);
     }
     getState() {
         return { voiceParticipantsHidden: k };
@@ -226,7 +226,7 @@ class er extends (r = l.ZP.PersistedStore) {
     }
     getParticipantsOpen(e) {
         var t;
-        return null === (t = P[e]) || void 0 === t || t;
+        return null === (t = M[e]) || void 0 === t || t;
     }
     getVoiceParticipantsHidden(e) {
         var t;
@@ -259,7 +259,7 @@ class er extends (r = l.ZP.PersistedStore) {
         let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : A.IlC.APP;
         if (__OVERLAY__) return A.AEg.NORMAL;
         let i = en(e);
-        return null !== (n = null === (t = M[e]) || void 0 === t ? void 0 : t[r]) && void 0 !== n ? n : i ? A.AEg.NO_CHAT : A.AEg.NORMAL;
+        return null !== (n = null === (t = P[e]) || void 0 === t ? void 0 : t[r]) && void 0 !== n ? n : i ? A.AEg.NO_CHAT : A.AEg.NORMAL;
     }
     getChatOpen(e) {
         var t;
@@ -270,7 +270,7 @@ class er extends (r = l.ZP.PersistedStore) {
     }
     isFullscreenInContext() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : A.IlC.APP;
-        return Object.values(M).some((t) => t[e] === A.AEg.FULL_SCREEN);
+        return Object.values(P).some((t) => t[e] === A.AEg.FULL_SCREEN);
     }
     getStageStreamSize(e) {
         return B[e];
@@ -313,7 +313,7 @@ N(er, 'displayName', 'ChannelRTCStore'),
                 let e = t.originChannelId;
                 if (null != e) {
                     var n, r;
-                    return (M[t.id] = { [A.IlC.APP]: null !== (r = null === (n = M[e]) || void 0 === n ? void 0 : n[A.IlC.APP]) && void 0 !== r ? r : A.AEg.NORMAL }), !0;
+                    return (P[t.id] = { [A.IlC.APP]: null !== (r = null === (n = P[e]) || void 0 === n ? void 0 : n[A.IlC.APP]) && void 0 !== r ? r : A.AEg.NORMAL }), !0;
                 }
             }
             return !1;
@@ -341,19 +341,19 @@ N(er, 'displayName', 'ChannelRTCStore'),
                 } catch (e) {
                     C.warn('INVALID STREAM KEY FORMAT '.concat(n), e);
                 }
-                !K(r) && (P[t] = !1);
+                !K(r) && (M[t] = !1);
             }
         },
         CHANNEL_RTC_UPDATE_LAYOUT: function (e) {
             let { channelId: t, layout: n, appContext: r } = e;
-            M[t] = {
-                ...M[t],
+            P[t] = {
+                ...P[t],
                 [r]: n
             };
         },
         CHANNEL_RTC_UPDATE_PARTICIPANTS_OPEN: function (e) {
             let { channelId: t, participantsOpen: n } = e;
-            P[t] = n;
+            M[t] = n;
         },
         CHANNEL_RTC_UPDATE_VOICE_PARTICIPANTS_HIDDEN: function (e) {
             let { channelId: t, voiceParticipantsHidden: n } = e;
