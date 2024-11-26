@@ -1,7 +1,7 @@
-n.r(e),
-    n.d(e, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return v;
+            return _;
         }
     });
 var a = n(200651),
@@ -9,144 +9,109 @@ var a = n(200651),
     s = n(286379),
     i = n(399606),
     c = n(481060),
-    l = n(661824),
-    r = n(797614),
-    d = n(359119),
-    u = n(473092),
-    m = n(636749),
-    x = n(981631),
-    b = n(388032),
-    h = n(636370);
-function v(t) {
-    let { transitionState: e, onClose: n, channelId: v, warningId: _, senderId: g, description: p, safetyTips: N, actions: j } = t,
-        k = (0, i.e7)([d.ZP], () => d.ZP.getChannelSafetyWarning(v, _));
+    l = n(797614),
+    r = n(359119),
+    d = n(473092),
+    u = n(636749),
+    m = n(981631),
+    x = n(388032),
+    b = n(636370);
+function _(e) {
+    let { transitionState: t, onClose: n, channelId: _, warningId: v, senderId: g, description: h, safetyTips: p, actions: N } = e,
+        k = (0, i.e7)([r.ZP], () => r.ZP.getChannelSafetyWarning(_, v));
     return (
         o.useEffect(() => {
-            (0, u.MC)(x.rMx.SAFETY_WARNING_MODAL_VIEWED, {
-                channelId: v,
-                warningId: _,
+            (0, d.MC)(m.rMx.SAFETY_WARNING_MODAL_VIEWED, {
+                channelId: _,
+                warningId: v,
                 senderId: g,
                 warningType: null == k ? void 0 : k.type
             }),
-                r.Z.increment({ name: s.V.SAFETY_WARNING_MODAL_VIEW });
-        }, [v, _, g, k]),
+                l.Z.increment({ name: s.V.SAFETY_WARNING_MODAL_VIEW });
+        }, [_, v, g, k]),
         (0, a.jsx)(c.ModalRoot, {
-            transitionState: e,
+            transitionState: t,
             children: (0, a.jsxs)(c.Scroller, {
                 style: { overflow: 'hidden auto' },
                 children: [
                     (0, a.jsxs)(c.ModalHeader, {
-                        className: h.modalHeader,
+                        className: b.modalHeader,
                         children: [
                             (0, a.jsxs)('div', {
-                                className: h.modalHeaderText,
+                                className: b.modalHeaderText,
                                 children: [
                                     (0, a.jsx)(c.Text, {
                                         variant: 'eyebrow',
                                         color: 'status-positive-text',
-                                        children: b.intl.string(b.t.lyt43N)
+                                        children: x.intl.string(x.t.lyt43N)
                                     }),
                                     (0, a.jsx)(c.Heading, {
                                         variant: 'heading-xl/bold',
                                         color: 'status-positive-text',
-                                        children: p
+                                        children: h
                                     })
                                 ]
                             }),
                             (0, a.jsx)(c.Button, {
-                                'aria-label': b.intl.string(b.t.cpT0Cg),
+                                'aria-label': x.intl.string(x.t.cpT0Cg),
                                 look: c.Button.Looks.BLANK,
                                 size: c.Button.Sizes.NONE,
                                 onClick: n,
-                                innerClassName: h.closeButtonInner,
-                                className: h.closeButton,
+                                innerClassName: b.closeButtonInner,
+                                className: b.closeButton,
                                 children: (0, a.jsx)(c.XSmallIcon, {
                                     size: 'sm',
                                     color: 'currentColor',
-                                    className: h.closeIcon
+                                    className: b.closeIcon
                                 })
                             })
                         ]
                     }),
                     (0, a.jsxs)(c.ModalContent, {
-                        className: h.modalContent,
+                        className: b.modalContent,
                         children: [
                             (0, a.jsx)('div', {
-                                className: h.tipsSection,
-                                children: N.map((t, e) =>
+                                className: b.tipsSection,
+                                children: p.map((e, t) =>
                                     (0, a.jsxs)(
                                         'div',
                                         {
-                                            className: h.tipRow,
+                                            className: b.tipRow,
                                             children: [
                                                 (0, a.jsx)(c.Heading, {
                                                     variant: 'heading-md/semibold',
                                                     color: 'text-brand',
-                                                    className: h.tipNumber,
-                                                    children: e + 1
+                                                    className: b.tipNumber,
+                                                    children: t + 1
                                                 }),
                                                 (0, a.jsx)(c.Text, {
                                                     variant: 'text-sm/medium',
                                                     color: 'header-secondary',
-                                                    children: t
+                                                    children: e
                                                 })
                                             ]
                                         },
-                                        e
+                                        t
                                     )
                                 )
                             }),
                             (0, a.jsxs)('div', {
                                 children: [
                                     (0, a.jsx)(c.Text, {
-                                        className: h.moreHeading,
+                                        className: b.moreHeading,
                                         variant: 'eyebrow',
                                         color: 'header-secondary',
-                                        children: b.intl.string(b.t.K5FKtb)
+                                        children: x.intl.string(x.t.K5FKtb)
                                     }),
                                     (0, a.jsx)('div', {
-                                        className: h.tipsSection,
-                                        children: j.map((t, e) => {
-                                            var n;
-                                            return (0, a.jsxs)(a.Fragment, {
-                                                children: [
-                                                    (0, a.jsxs)('div', {
-                                                        className: h.safetyAction,
-                                                        children: [
-                                                            (0, a.jsxs)('div', {
-                                                                className: h.safetyActionText,
-                                                                children: [
-                                                                    (0, a.jsx)(c.Text, {
-                                                                        variant: 'text-md/semibold',
-                                                                        color: 'header-primary',
-                                                                        children: t.title
-                                                                    }),
-                                                                    (0, a.jsx)(c.Text, {
-                                                                        variant: 'text-xs/medium',
-                                                                        color: 'header-secondary',
-                                                                        children: t.description
-                                                                    })
-                                                                ]
-                                                            }),
-                                                            (0, a.jsx)(c.Button, {
-                                                                size: c.Button.Sizes.SMALL,
-                                                                color: null !== (n = t.button.color) && void 0 !== n ? n : c.Button.Colors.PRIMARY,
-                                                                'aria-label': t.button.title,
-                                                                onClick: t.button.onClick,
-                                                                children: t.button.title
-                                                            })
-                                                        ]
-                                                    }),
-                                                    e < j.length - 1 ? (0, a.jsx)(l.Z, {}) : null
-                                                ]
-                                            });
-                                        })
+                                        className: b.tipsSection,
+                                        children: N
                                     })
                                 ]
                             }),
-                            (0, a.jsx)(m.Z, {
-                                channelId: v,
-                                warningId: _,
+                            (0, a.jsx)(u.Z, {
+                                channelId: _,
+                                warningId: v,
                                 senderId: g,
                                 safetyWarning: k
                             })
