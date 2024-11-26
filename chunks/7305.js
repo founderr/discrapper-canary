@@ -41,16 +41,16 @@ var i = n(200651),
     T = n(388032);
 let v = [_.h8.PLAN_SELECT, _.h8.ADD_PAYMENT_STEPS, _.h8.REVIEW, _.h8.CONFIRM];
 function A(e) {
-    let { analyticsLocation: t, analyticsObject: n, analyticsSourceLocation: s, onComplete: a, transitionState: u, initialPlanId: f, subscriptionTier: j, onClose: L, trialId: m, trialFooterMessageOverride: g, reviewWarningMessage: E, openInvoiceId: S, onSubscriptionConfirmation: y, renderPurchaseConfirmation: M, postSuccessGuild: Z, followupSKUInfo: T, renderHeader: v, applicationId: A, guildId: U, referralTrialOfferId: N, skuId: k, returnRef: b, skipConfirm: w = !1, continueSession: O = !1 } = e,
-        { analyticsLocations: H } = (0, o.ZP)();
+    let { analyticsLocation: t, analyticsObject: n, analyticsSourceLocation: s, onComplete: a, transitionState: u, initialPlanId: f, subscriptionTier: j, onClose: L, trialId: m, trialFooterMessageOverride: g, reviewWarningMessage: E, openInvoiceId: S, onSubscriptionConfirmation: y, renderPurchaseConfirmation: M, postSuccessGuild: Z, followupSKUInfo: T, renderHeader: v, applicationId: A, guildId: U, referralTrialOfferId: N, skuId: k, returnRef: b, skipConfirm: w = !1, continueSession: O = !1, continueSessionInitialStep: H } = e,
+        { analyticsLocations: R } = (0, o.ZP)();
     l.useEffect(() => {
         !d.Z.isLoadedForPremiumSKUs() && r.Z.wait(() => (0, C.Y2)());
     }, []);
-    let { step: R } = (0, x.usePaymentContext)(),
-        { isGift: B, giftMessage: F, giftRecipient: G } = (0, p.wD)(),
-        W = B && (0, c.pO)(G) && R === _.h8.PLAN_SELECT;
+    let { step: B } = (0, x.usePaymentContext)(),
+        { isGift: F, giftMessage: G, giftRecipient: W } = (0, p.wD)(),
+        Y = F && (0, c.pO)(W) && B === _.h8.PLAN_SELECT;
     return (0, i.jsx)(h.PaymentModal, {
-        analyticsLocations: H,
+        analyticsLocations: R,
         analyticsLocation: t,
         analyticsObject: n,
         analyticsSourceLocation: s,
@@ -58,11 +58,11 @@ function A(e) {
         onComplete: a,
         transitionState: u,
         initialPlanId: f,
-        giftMessage: F,
+        giftMessage: G,
         subscriptionTier: j,
         onClose: L,
         trialId: m,
-        isGift: B,
+        isGift: F,
         trialFooterMessageOverride: g,
         reviewWarningMessage: E,
         planGroup: P.Y1,
@@ -77,10 +77,11 @@ function A(e) {
         referralTrialOfferId: N,
         skuId: k,
         shakeWhilePurchasing: !0,
-        isLargeModal: W,
+        isLargeModal: Y,
         returnRef: b,
         skipConfirm: w,
-        continueSession: O
+        continueSession: O,
+        continueSessionInitialStep: H
     });
 }
 function U(e) {

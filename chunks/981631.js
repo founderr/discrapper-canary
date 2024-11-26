@@ -647,6 +647,9 @@ r.d(t, {
     hes: function () {
         return P;
     },
+    i$l: function () {
+        return nj.i$;
+    },
     iC$: function () {
         return of;
     },
@@ -2073,7 +2076,12 @@ let nQ = '@me',
         BILLING_INVOICE_BREAKDOWN: '/users/@me/billing/invoice/breakdown',
         BILLING_STRIPE_PAYMENT_INTENTS: (e) => '/users/@me/billing/stripe/payment-intents/payments/'.concat(e),
         BILLING_STRIPE_PAYMENT_INTENTS_VIA_ID: (e) => '/users/@me/billing/stripe/payment-intents/'.concat(e),
-        BILLING_STANDALONE_CHECKOUT_PAGE: (e, t, r) => '/billing/premium/subscribe?plan_id='.concat(e, '&gift=').concat(t, '&load_id=').concat(r),
+        BILLING_STANDALONE_CHECKOUT_PAGE: (e, t, r, a) =>
+            '/billing/premium/subscribe?plan_id='
+                .concat(e, '&gift=')
+                .concat(t, '&load_id=')
+                .concat(r)
+                .concat(a ? '&payment_method_type='.concat(a) : ''),
         BILLING_STANDALONE_CHECKOUT_LOGIN_HANDOFF: (e, t, r) => ''.concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT, '/billing/premium/subscribe/login-handoff?handoff_key=').concat(e, '&handoff_token=').concat(t, '&destination=').concat(r),
         BILLING_PAYPAL_BILLING_AGREEMENT_TOKENS: '/users/@me/billing/paypal/billing-agreement-tokens',
         BILLING_POPUP_BRIDGE: (e) => '/billing/popup-bridge/'.concat(e),
