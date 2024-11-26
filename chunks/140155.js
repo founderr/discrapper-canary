@@ -65,12 +65,12 @@ function I(e) {
         message: null != e.message ? (0, o.e5)(e.message) : void 0
     };
 }
-function b(e) {
+function T(e) {
     let t = 'NOTIFICATION_CENTER_ITEM_CREATE' === e.type ? I(e.item) : e.item;
     if (!g.initialized || !E(t) || g.notifCenterIds.has(t.id)) return !1;
     g.notifCenterIds.add(t.id), (g.notifCenterItems = [t, ...g.notifCenterItems]), g.notifCenterItems.sort((e, t) => f.default.compare(t.id, e.id));
 }
-function T(e, t) {
+function b(e, t) {
     g.notifCenterItems = g.notifCenterItems
         .map((n) =>
             e.includes(n.id)
@@ -91,9 +91,10 @@ function y(e) {
         { id: n, type: r, isSpamRequest: i, userIgnored: a, user: s, since: o } = t;
     if (r === h.OGo.PENDING_INCOMING && (!(0, l.A)({ location: 'notification-center' }) || !i) && !((0, u.JX)({ location: 'notification-center' }) && a)) {
         if (null == o) return null;
-        let e = d.default.getUser(s.id);
-        if (null == e) return null;
-        g.notifCenterLocalItems = [...g.notifCenterLocalItems, (0, p.mH)(e, o)];
+        if (null != s) {
+            let e = d.default.getUser(s.id);
+            null != e && (g.notifCenterLocalItems = [...g.notifCenterLocalItems, (0, p.mH)(e, o)]);
+        }
     }
     r === h.OGo.FRIEND &&
         (g.notifCenterLocalItems = g.notifCenterLocalItems.map((e) =>
@@ -198,23 +199,23 @@ let C = new N(a.Z, {
     LOGOUT: v,
     NOTIFICATION_CENTER_ITEMS_ACK: function (e) {
         let { ids: t } = e;
-        T(t, !0);
+        b(t, !0);
     },
     NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: function (e) {
         let { ids: t } = e;
-        T(t, !1);
+        b(t, !1);
     },
     GUILD_SCHEDULED_EVENT_UPDATE: function (e) {
         let { guildScheduledEvent: t } = e;
         A(t);
     },
-    NOTIFICATION_CENTER_ITEM_CREATE: b,
+    NOTIFICATION_CENTER_ITEM_CREATE: T,
     NOTIFICATION_CENTER_ITEM_DELETE: function (e) {
         let { id: t } = e;
         if (!g.notifCenterIds.has(t)) return !1;
         g.notifCenterIds.delete(t), (g.notifCenterItems = g.notifCenterItems.filter((e) => e.id !== t));
     },
-    NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: b,
+    NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: T,
     LOAD_NOTIFICATION_CENTER_ITEMS: function () {
         g.loading = !0;
     },
