@@ -70,58 +70,59 @@ t.Z = function (e) {
         ),
         M = r.useCallback((e) => {
             (0, p.pR)({ categoryId: e });
-        }, []);
-    if (null == A)
-        return Z === s.M.FETCHING
-            ? (0, i.jsx)('div', {
-                  className: S.centerContainer,
-                  children: (0, i.jsx)(o.Z, { loading: !0 })
-              })
-            : (0, i.jsx)('div', {
-                  className: S.centerContainer,
-                  children: (0, i.jsx)(m.Z, { className: S.error })
-              });
-    let w = y === C.Wc.ABOUT;
+        }, []),
+        w = y === C.Wc.ABOUT;
     return (0, i.jsx)(h.Z, {
         onScroll: T,
         ref: b,
         children: (0, i.jsx)(d.Z, {
-            children: (0, i.jsxs)('div', {
-                className: S.detailContainer,
-                children: [
-                    (0, i.jsx)(f.Z, { application: A }),
-                    (0, i.jsxs)('div', {
-                        className: S.contentContainer,
-                        children: [
-                            (0, i.jsxs)('div', {
-                                className: S.contentTabsContainer,
-                                children: [
-                                    L &&
-                                        (0, i.jsx)('div', {
-                                            className: S.contentTabs,
-                                            children: (0, i.jsx)(u.Z, {
-                                                tabs: R,
-                                                onTabSelect: D,
-                                                selectedTab: y
-                                            })
-                                        }),
-                                    j,
-                                    (0, i.jsx)(E.Z, {
-                                        application: A,
-                                        onSelectApplication: O
-                                    })
-                                ]
-                            }),
-                            w &&
-                                (0, i.jsx)(_.Z, {
-                                    className: S.sidebar,
-                                    application: A,
-                                    onSelectCategory: M
-                                })
-                        ]
-                    })
-                ]
-            })
+            children:
+                null == A
+                    ? null == Z || Z === s.M.FETCHING
+                        ? (0, i.jsx)('div', {
+                              className: S.centerContainer,
+                              children: (0, i.jsx)(o.Z, { loading: !0 })
+                          })
+                        : (0, i.jsx)('div', {
+                              className: S.centerContainer,
+                              children: (0, i.jsx)(m.Z, { className: S.error })
+                          })
+                    : (0, i.jsxs)('div', {
+                          className: S.detailContainer,
+                          children: [
+                              (0, i.jsx)(f.Z, { application: A }),
+                              (0, i.jsxs)('div', {
+                                  className: S.contentContainer,
+                                  children: [
+                                      (0, i.jsxs)('div', {
+                                          className: S.contentTabsContainer,
+                                          children: [
+                                              L &&
+                                                  (0, i.jsx)('div', {
+                                                      className: S.contentTabs,
+                                                      children: (0, i.jsx)(u.Z, {
+                                                          tabs: R,
+                                                          onTabSelect: D,
+                                                          selectedTab: y
+                                                      })
+                                                  }),
+                                              j,
+                                              (0, i.jsx)(E.Z, {
+                                                  application: A,
+                                                  onSelectApplication: O
+                                              })
+                                          ]
+                                      }),
+                                      w &&
+                                          (0, i.jsx)(_.Z, {
+                                              className: S.sidebar,
+                                              application: A,
+                                              onSelectCategory: M
+                                          })
+                                  ]
+                              })
+                          ]
+                      })
         })
     });
 };
