@@ -68,7 +68,7 @@ let l = [
                 darkSVG: n(387793),
                 whiteSVG: n(148052)
             },
-            enabled: !1,
+            enabled: !0,
             getPlatformUserUrl: (e) => {
                 let { id: t } = e;
                 return 'https://bsky.app/profile/'.concat(encodeURIComponent(t).replaceAll('%3A', ':'));

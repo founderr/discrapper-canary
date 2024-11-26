@@ -17,9 +17,6 @@ n.d(t, {
     Ev: function () {
         return A;
     },
-    Fr: function () {
-        return y;
-    },
     Fu: function () {
         return K;
     },
@@ -82,6 +79,9 @@ n.d(t, {
     },
     cc: function () {
         return S;
+    },
+    d: function () {
+        return y;
     },
     eB: function () {
         return Q;

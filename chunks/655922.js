@@ -5,5 +5,5 @@ n.d(t, {
 });
 var r = n(701488);
 function i(e) {
-    if (null != e && null != e.url && r.Fr.test(e.url)) return e.url;
+    if (null != e && null != e.url && r.d.test(e.url)) return e.url;
 }
