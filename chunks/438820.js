@@ -51,12 +51,14 @@ o(d, 'displayName', 'PurchasedItemsFestivityStore'),
             let { value: t } = e;
             s.canPlayWowMoment = t;
         },
-        PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA: function (e) {
-            let { value: t } = e;
-            s.isFetchingWowMomentMedia = t;
+        PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA: function () {
+            s.isFetchingWowMomentMedia = !0;
         },
         PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_SUCCESS: function (e) {
             let { wumpusMedia: t } = e;
             (s.wowMomentWumpusMediaUrl = t), (s.isFetchingWowMomentMedia = !1);
+        },
+        PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE: function () {
+            (s.isFetchingWowMomentMedia = !1), (s.canPlayWowMoment = !1);
         }
     }));

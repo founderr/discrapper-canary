@@ -5,7 +5,7 @@ n.r(t),
             return a;
         },
         prefetch: function () {
-            return v;
+            return U;
         }
     }),
     n(315314),
@@ -22,8 +22,8 @@ var a,
     r = n.n(d),
     u = n(752877),
     p = n(442837),
-    m = n(481060),
-    M = n(570140),
+    M = n(481060),
+    m = n(570140),
     w = n(607070),
     l = n(70097),
     _ = n(626135),
@@ -34,32 +34,26 @@ var a,
     T = n(981631),
     I = n(236029),
     S = n(233975),
-    b = n(656402),
-    g = n(683984),
+    g = n(656402),
+    b = n(683984),
     P = n(347010),
     y = n(713669),
-    Z = n(471517);
-async function v(e) {
+    F = n(471517);
+async function U(e) {
     try {
-        M.Z.dispatch({
-            type: 'PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA',
-            value: !0
-        });
-        let t = e ? S.Z : b.Z;
-        window.matchMedia('(min-width: 1012px) and (max-width: 1980px)').matches || window.matchMedia('(min-height: 720px) and (max-height: 1408px)').matches ? (t = e ? g.Z : P.Z) : (window.matchMedia('(min-width: 1980px)').matches || window.matchMedia('(min-height: 1408px)').matches) && (t = e ? y.Z : Z.Z);
+        m.Z.dispatch({ type: 'PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA' });
+        let t = e ? S.Z : g.Z;
+        window.matchMedia('(min-width: 1012px) and (max-width: 1980px)').matches || window.matchMedia('(min-height: 720px) and (max-height: 1408px)').matches ? (t = e ? b.Z : P.Z) : (window.matchMedia('(min-width: 1980px)').matches || window.matchMedia('(min-height: 1408px)').matches) && (t = e ? y.Z : F.Z);
         let n = await fetch(t).then(async (e) => {
             let t = await e.blob();
             return window.URL.createObjectURL(t);
         });
-        M.Z.dispatch({
+        m.Z.dispatch({
             type: 'PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_SUCCESS',
             wumpusMedia: n
         });
     } catch (e) {
-        M.Z.dispatch({
-            type: 'PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA',
-            value: !1
-        });
+        m.Z.dispatch({ type: 'PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE' });
     }
 }
 ((c = a || (a = {})).WUMPUS_FLIGHT = 'wumpus_flight'), (c.GRADIENT_HIGHLIGHT = 'gradient_highlight');
@@ -75,18 +69,18 @@ t.default = function () {
             canPlayWowMoment: W.Z.canPlayWowMoment
         })),
         [c, d] = s.useState(!1),
-        M = (0, h.vu)(),
+        m = (0, h.vu)(),
         S = (0, h.rO)(),
-        b = M > 52 || -1 === M || S,
-        g = S ? 'video/mp4' : 'video/webm';
-    b && !e && a && null === t && !1 === n && v(S),
+        g = m > 52 || -1 === m || S,
+        b = S ? 'video/mp4' : 'video/webm';
+    g && !e && a && null === t && !1 === n && U(S),
         s.useEffect(() => {
             function t() {
                 !e &&
                     W.Z.canPlayWowMoment &&
                     (d(!0),
                     (i = setTimeout(() => {
-                        d(!1), y(!0), _.default.track(T.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'gradient_highlight' });
+                        d(!1), y(!0), _.default.track(T.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'gradient_highlight' }), (0, E.H)(!1);
                     }, 2000)));
             }
             return (
@@ -95,26 +89,26 @@ t.default = function () {
                     f.S.unsubscribe(T.CkL.PREMIUM_SUBSCRIPTION_CREATED, t);
                 }
             );
-        }, [e, b]);
+        }, [e, g]);
     let [P, y] = s.useState(!1),
-        [Z, U] = s.useState(!1),
-        C = (0, m.useSpring)({
+        [F, Z] = s.useState(!1),
+        H = (0, M.useSpring)({
             opacity: P ? 0.2 : 0,
             config: { duration: 100 }
         }),
-        F = (0, m.useSpring)(
+        C = (0, M.useSpring)(
             {
-                x: Z ? '100%' : '-100%',
+                x: F ? '100%' : '-100%',
                 config: { duration: 500 }
             },
-            Z ? 'respect-motion-settings' : 'animate-never'
+            F ? 'respect-motion-settings' : 'animate-never'
         );
     s.useEffect(() => {
         let e = -1;
         return (
             P &&
                 (e = window.setTimeout(() => {
-                    U(!0);
+                    Z(!0);
                 }, 1000)),
             () => {
                 window.clearTimeout(e);
@@ -124,24 +118,24 @@ t.default = function () {
         s.useEffect(() => {
             let e = -1;
             return (
-                Z &&
+                F &&
                     (e = window.setTimeout(() => {
-                        U(!1), y(!1);
+                        Z(!1), y(!1);
                     }, 1000)),
                 () => {
                     window.clearTimeout(e);
                 }
             );
-        }, [Z]);
-    let H = c && null !== t,
-        O = H || P;
+        }, [F]);
+    let O = c && null !== t,
+        v = O || P;
     return (0, o.jsxs)('div', {
         className: r()({
-            [I.wrapper]: !O,
-            [I.activeWrapper]: O
+            [I.wrapper]: !v,
+            [I.activeWrapper]: v
         }),
         children: [
-            H &&
+            O &&
                 (0, o.jsx)(l.Z, {
                     autoPlay: !0,
                     className: I.videoWrapper,
@@ -152,20 +146,20 @@ t.default = function () {
                         e.currentTarget.currentTime > 4 && (0, E.H)(!0);
                     },
                     onEnded: () => {
-                        d(!1);
+                        d(!1), (0, E.H)(!1);
                     },
                     children: (0, o.jsx)('source', {
                         src: t,
-                        type: g
+                        type: b
                     })
                 }),
             (0, o.jsx)(u.animated.div, {
                 className: I.gadientHighlight,
-                style: C
+                style: H
             }),
             (0, o.jsx)(u.animated.div, {
                 className: I.swipeWrapper,
-                style: F,
+                style: C,
                 children: (0, o.jsxs)('svg', {
                     className: I.swipe,
                     viewBox: '0 0 848 1024',
