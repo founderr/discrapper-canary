@@ -13,14 +13,13 @@ var r = n(913527),
     p = n(595878),
     h = n(513785),
     m = n(106255),
-    g = n(474936),
-    E = n(735825);
-let v = null,
-    I = !1;
-function T(e) {
+    g = n(474936);
+let E = null,
+    v = !1;
+function I(e) {
     let t = u.Z.createFromServer(e.entitlement);
     (0, m._k)(t)
-        ? b({ forceRefresh: !0 })
+        ? T({ forceRefresh: !0 })
         : (0, m.YE)(t)
           ? null != h.Z.getTenureRewardStatusForRewardId(t.skuId) &&
             a.Z.dispatch({
@@ -29,38 +28,36 @@ function T(e) {
             })
           : (0, m.km)(t) && (0, o.qg)({ variantsReturnStyle: (0, l.oj)('TenureRewardManager') });
 }
-function b() {
+function T() {
     let { forceRefresh: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    y();
+    S();
     let t = d.Z.getForApplication(g.CL),
         n = (0, m.kG)(t),
-        r = (0, m.MR)(Array.from(E.uv), t),
-        s = c.default.getCurrentUser();
-    if (!(0, f.M5)(s, g.p9.TIER_2) && null == n) {
-        null != s && a.Z.dispatch({ type: 'USER_TENURE_REWARD_STATUS_RESET' });
+        r = c.default.getCurrentUser();
+    if (!(0, f.M5)(r, g.p9.TIER_2) && null == n) {
+        null != r && a.Z.dispatch({ type: 'USER_TENURE_REWARD_STATUS_RESET' });
         return;
     }
     if (!!(0, p.dR)({ location: 'tenure_reward_manager' }))
         if (
-            (!0 === e ||
-                (function (e) {
-                    if (h.Z.getFetchState() !== h.M.FETCHED) return !0;
-                    let t = (0, m.GT)();
-                    return (
-                        (null != t && null != e && e.id !== t.user_id) ||
-                        (function () {
-                            let e = h.Z.getState();
-                            return null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 1209600000;
-                        })() ||
-                        (function () {
-                            let e = (0, m.GT)();
-                            return null != e && null != e.redeemable_at && 0 >= i()(e.redeemable_at).diff(i().utc(), 'seconds');
-                        })()
-                    );
-                })(s)) &&
-            null == r
+            !0 === e ||
+            (function (e) {
+                if (h.Z.getFetchState() !== h.M.FETCHED) return !0;
+                let t = (0, m.GT)();
+                return (
+                    (null != t && null != e && e.id !== t.user_id) ||
+                    (function () {
+                        let e = h.Z.getState();
+                        return null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 1209600000;
+                    })() ||
+                    (function () {
+                        let e = (0, m.GT)();
+                        return null != e && null != e.redeemable_at && 0 >= i()(e.redeemable_at).diff(i().utc(), 'seconds');
+                    })()
+                );
+            })(r)
         )
-            S();
+            b();
         else {
             let e = d.Z.getForApplication(g.CL);
             if (null == e) return;
@@ -74,34 +71,34 @@ function b() {
                 });
         }
 }
-async function S() {
-    if (!I)
-        (I = !0),
+async function b() {
+    if (!v)
+        (v = !0),
             await _.V(),
-            (I = !1),
+            (v = !1),
             a.Z.wait(() =>
                 (function () {
-                    if ((y(), h.Z.getFetchState() !== h.M.FETCHED || I)) return;
+                    if ((S(), h.Z.getFetchState() !== h.M.FETCHED || v)) return;
                     let e = (0, m.GT)();
                     if ((null == e ? void 0 : e.redeemable_at) == null) return;
                     let t = (null == e ? void 0 : e.redeemable_at) != null ? new Date(e.redeemable_at).getTime() - Date.now() : null;
-                    null != t && t > 0 && (v = setTimeout(b, t));
+                    null != t && t > 0 && (E = setTimeout(T, t));
                 })()
             );
 }
+function S() {
+    clearTimeout(E), (E = null);
+}
 function y() {
-    clearTimeout(v), (v = null);
+    S();
 }
 function A() {
-    y();
+    T();
 }
-function N() {
-    b();
-}
-class C extends s.Z {
+class N extends s.Z {
     forceRefreshIfOutdated() {
         let e = h.Z.getState();
-        null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 86400000 && b({ forceRefresh: !0 });
+        null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 86400000 && T({ forceRefresh: !0 });
     }
     constructor(...e) {
         var t, n, r;
@@ -109,13 +106,13 @@ class C extends s.Z {
             (t = this),
             (n = 'actions'),
             (r = {
-                POST_CONNECTION_OPEN: N,
-                CONNECTION_CLOSED: A,
-                ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => b(),
-                ENTITLEMENT_CREATE: T,
-                ENTITLEMENT_UPDATE: () => b(),
-                ENTITLEMENT_DELETE: () => b(),
-                LOGOUT: y
+                POST_CONNECTION_OPEN: A,
+                CONNECTION_CLOSED: y,
+                ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => T(),
+                ENTITLEMENT_CREATE: I,
+                ENTITLEMENT_UPDATE: () => T(),
+                ENTITLEMENT_DELETE: () => T(),
+                LOGOUT: S
             }),
             n in t
                 ? Object.defineProperty(t, n, {
@@ -127,4 +124,4 @@ class C extends s.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new C();
+t.Z = new N();
