@@ -2,9 +2,9 @@ n(47120);
 var a,
     r,
     l = n(200651),
-    i = n(192379),
-    s = n(120356),
-    o = n.n(s),
+    s = n(192379),
+    i = n(120356),
+    o = n.n(i),
     c = n(481060),
     u = n(219929),
     d = n(594174),
@@ -17,35 +17,35 @@ var a,
 t.Z = function (e) {
     var t;
     let { onCardInfoChange: n, error: a } = e,
-        r = i.useRef(n),
-        [s, N] = i.useState(!1),
-        [f, _] = i.useState({}),
-        [y, b] = i.useState({
+        r = s.useRef(n),
+        [i, N] = s.useState(!1),
+        [f, y] = s.useState({}),
+        [P, _] = s.useState({
             name: '',
             country: '',
             postalCode: ''
         }),
-        [P, C] = i.useState({}),
-        [g, I] = i.useState({});
+        [b, g] = s.useState({}),
+        [C, I] = s.useState({});
     function T(e, t) {
         !!f[e] !== t &&
-            _((n) => ({
+            y((n) => ({
                 ...n,
                 [e]: t
             }));
     }
-    let S = i.useCallback(
+    let S = s.useCallback(
         function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 t = {};
-            return (e || P.name) && '' === y.name && (t.name = h.intl.string(h.t.lIkVsr)), t;
+            return (e || b.name) && '' === P.name && (t.name = h.intl.string(h.t.lIkVsr)), t;
         },
-        [P, y]
+        [b, P]
     );
-    i.useEffect(() => {
+    s.useEffect(() => {
         let e = f.cardNumber && f.cardExpiry && f.cardCvc && 0 === Object.keys(S(!0)).length;
-        r.current({ name: y.name }, !!e);
-    }, [f, y, S]);
+        r.current({ name: P.name }, !!e);
+    }, [f, P, S]);
     let v = {
             name: 'cardNumber',
             title: () => h.intl.string(h.t.cVyJ3t),
@@ -53,7 +53,7 @@ t.Z = function (e) {
             renderInput: () =>
                 (0, l.jsx)(p.Z, {
                     stripeType: 'cardNumber',
-                    flipped: s,
+                    flipped: i,
                     updateCompleted: (e) => T('cardNumber', e)
                 })
         },
@@ -67,7 +67,7 @@ t.Z = function (e) {
                     updateCompleted: (e) => T('cardExpiry', e)
                 })
         },
-        L = {
+        R = {
             name: 'cardCvc',
             title: () => h.intl.string(h.t.Fd3rOz),
             getClassNameForLayout: () => E.width50,
@@ -83,7 +83,7 @@ t.Z = function (e) {
                     }
                 })
         },
-        R = {
+        L = {
             id: 'card-name',
             name: 'name',
             title: () => h.intl.string(h.t.VUlFdX),
@@ -107,19 +107,19 @@ t.Z = function (e) {
                 form: [
                     { fields: [v] },
                     {
-                        fields: [x, L]
+                        fields: [x, R]
                     },
-                    { fields: [R] }
+                    { fields: [L] }
                 ],
-                errors: g,
+                errors: C,
                 formError: a,
-                values: y,
+                values: P,
                 onFieldChange: function (e, t) {
                     if ('name' !== t && 'country' !== t && 'postalCode' !== t) return;
-                    let n = { ...y },
-                        a = { ...P },
-                        r = { name: g.name };
-                    !P[t] && '' !== e && (a[t] = !0), (n[t] = e), a[t] && '' === e ? 'name' === t && (r.name = h.intl.string(h.t.lIkVsr)) : delete r[t], b(n), C(a), I(r);
+                    let n = { ...P },
+                        a = { ...b },
+                        r = { name: C.name };
+                    !b[t] && '' !== e && (a[t] = !0), (n[t] = e), a[t] && '' === e ? 'name' === t && (r.name = h.intl.string(h.t.lIkVsr)) : delete r[t], _(n), g(a), I(r);
                 },
                 onFieldBlur: function () {
                     I(S());

@@ -424,7 +424,7 @@ class H extends r.PureComponent {
             G(this, 'handleEnableDiscovery', async () => {
                 let e = await (0, a.openModalLazy)(
                     async () => {
-                        let { default: e } = await n.e('18634').then(n.bind(n, 993382));
+                        let { default: e } = await n.e('50721').then(n.bind(n, 210172));
                         return (t) => {
                             let { ...n } = t;
                             return (0, i.jsx)(e, { ...n });

@@ -11,8 +11,8 @@ var i = n(200651),
     m = n(967916),
     h = n(68638),
     g = n(816817),
-    x = n(219369),
-    p = n(650774),
+    x = n(650774),
+    p = n(259674),
     f = n(845377),
     C = n(981631),
     v = n(388032),
@@ -35,7 +35,7 @@ t.Z = (e) => {
             }),
             [t.id]
         ),
-        [Z, A] = (0, o.Wu)([p.Z], () => [null, p.Z.getMemberCount(t.id)], [t.id]),
+        [Z, A] = (0, o.Wu)([x.Z], () => [null, x.Z.getMemberCount(t.id)], [t.id]),
         L = r.useCallback(() => {
             null != n && n();
         }, [n]),
@@ -87,7 +87,7 @@ t.Z = (e) => {
                     color: 'header-secondary',
                     children: v.intl.format(v.t.BhkgBg, {
                         onLinkClick: () =>
-                            (0, x.lW)({
+                            (0, p.lW)({
                                 articleId: C.BhN.SERVER_DISCOVERY,
                                 guildId: t.id,
                                 pageView: u.d5.INTRO
@@ -100,7 +100,7 @@ t.Z = (e) => {
                     color: 'header-secondary',
                     children: v.intl.format(v.t.ALSi8v, {
                         onGuidelinesClick: () =>
-                            (0, x.lW)({
+                            (0, p.lW)({
                                 articleId: C.BhN.SERVER_DISCOVERY_GUIDELINES,
                                 guildId: t.id,
                                 pageView: u.d5.INTRO

@@ -2,8 +2,8 @@ n(47120);
 var a = n(200651),
     r = n(192379),
     l = n(120356),
-    i = n.n(l),
-    s = n(481060),
+    s = n.n(l),
+    i = n(481060),
     o = n(600164),
     c = n(498918);
 function u(e, t, n) {
@@ -63,9 +63,9 @@ class d extends r.PureComponent {
                         onBlur: l
                     };
                 return (0, a.jsx)(
-                    s.FormSection,
+                    i.FormSection,
                     {
-                        className: i()(null == u ? void 0 : u(o)),
+                        className: s()(null == u ? void 0 : u(o)),
                         title: m(),
                         titleId: h,
                         children: d(N, c)
@@ -78,7 +78,7 @@ class d extends r.PureComponent {
                 return (0, a.jsx)(
                     o.Z,
                     {
-                        className: i()(c.row, e.className),
+                        className: s()(c.row, e.className),
                         children: t
                     },
                     e.fields.map((e) => e.name).join('')

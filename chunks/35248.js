@@ -1,9 +1,9 @@
 n.d(t, {
     M: function () {
-        return y;
+        return P;
     },
     a: function () {
-        return b;
+        return _;
     }
 }),
     n(315314),
@@ -15,8 +15,8 @@ n.d(t, {
 var a = n(200651),
     r = n(192379),
     l = n(772848),
-    i = n(544891),
-    s = n(481060),
+    s = n(544891),
+    i = n(481060),
     o = n(355467),
     c = n(600164),
     u = n(311821),
@@ -28,27 +28,27 @@ var a = n(200651),
     E = n(981631),
     N = n(474936),
     f = n(388032),
-    _ = n(13926);
-let y = (e) => {
+    y = n(13926);
+let P = (e) => {
         let { onPurchaseComplete: t, onHandoffFailure: n } = e,
-            { selectedPlan: c, browserCheckoutState: u, browserCheckoutStateLoadId: y, contextMetadata: b } = (0, p.usePaymentContext)(),
-            { isGift: P } = (0, m.wD)(),
-            [C, g] = r.useState(!1);
+            { selectedPlan: c, browserCheckoutState: u, browserCheckoutStateLoadId: P, contextMetadata: _ } = (0, p.usePaymentContext)(),
+            { isGift: b } = (0, m.wD)(),
+            [g, C] = r.useState(!1);
         return (
             r.useEffect(() => {
                 let e = setTimeout(
                     () => {
                         var e;
-                        if (!C)
-                            g(!0),
-                                (0, o.r5)(b.loadId),
+                        if (!g)
+                            C(!0),
+                                (0, o.r5)(_.loadId),
                                 !(function (e, t, n, a) {
                                     let r = E.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n),
-                                        s = new URL(d.Z.makeUrl(E.Z5c.BILLING_LOGIN_HANDOFF)),
+                                        i = new URL(d.Z.makeUrl(E.Z5c.BILLING_LOGIN_HANDOFF)),
                                         o = (0, l.Z)();
-                                    s.searchParams.append('handoff_key', o),
-                                        s.searchParams.append('redirect_to', r),
-                                        i.tn
+                                    i.searchParams.append('handoff_key', o),
+                                        i.searchParams.append('redirect_to', r),
+                                        s.tn
                                             .post({
                                                 url: E.ANM.HANDOFF,
                                                 body: { key: o },
@@ -57,41 +57,41 @@ let y = (e) => {
                                             })
                                             .then(
                                                 (e) => {
-                                                    s.searchParams.append('handoff_token', e.body.handoff_token), window.open(s.href);
+                                                    i.searchParams.append('handoff_token', e.body.handoff_token), window.open(i.href);
                                                 },
                                                 () => {
                                                     a();
                                                 }
                                             );
-                                })(null !== (e = null == c ? void 0 : c.id) && void 0 !== e ? e : N.Xh.PREMIUM_MONTH_TIER_2, P, b.loadId, n);
+                                })(null !== (e = null == c ? void 0 : c.id) && void 0 !== e ? e : N.Xh.PREMIUM_MONTH_TIER_2, b, _.loadId, n);
                     },
                     (0, h.q)().delay ? 1000 : 0
                 );
                 return () => clearTimeout(e);
-            }, [c, P, b, n, g, C]),
+            }, [c, b, _, n, C, g]),
             r.useEffect(() => {
-                y === b.loadId && u === A.Y.DONE && t();
-            }, [u, y, b, t]),
+                P === _.loadId && u === A.Y.DONE && t();
+            }, [u, P, _, t]),
             (0, a.jsxs)('div', {
-                className: _.body,
+                className: y.body,
                 children: [
-                    (0, a.jsx)(s.Heading, {
+                    (0, a.jsx)(i.Heading, {
                         variant: 'heading-xl/bold',
                         children: f.intl.string(f.t.C4HYf3)
                     }),
-                    (0, a.jsx)(s.Text, {
+                    (0, a.jsx)(i.Text, {
                         variant: 'text-md/normal',
-                        className: _.description,
+                        className: y.description,
                         children: f.intl.string(f.t.xfG7Ji)
                     })
                 ]
             })
         );
     },
-    b = (e) => {
+    _ = (e) => {
         let { onPrimaryClick: t, onBackClick: n } = e;
         return (0, a.jsx)('div', {
-            children: (0, a.jsxs)(s.ModalFooter, {
+            children: (0, a.jsxs)(i.ModalFooter, {
                 justify: c.Z.Justify.BETWEEN,
                 align: c.Z.Align.CENTER,
                 children: [
