@@ -1,5 +1,6 @@
 e.exports = {
     heading: 'heading_b120dc',
+    headingTopbar: 'headingTopbar_b120dc',
     headingFilters: 'headingFilters_b120dc',
     masonryList: 'masonryList_b120dc',
     container: 'container_b120dc',

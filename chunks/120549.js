@@ -48,11 +48,13 @@ function f(e) {
     let { countsByCategory: t, onSelectCategory: n, selectedCategoryId: l } = e,
         a = (0, s.e7)([c.Z], () => c.Z.getCategories()),
         o = r.useMemo(
-            () =>
-                [(0, d.KQ)(), ...a].filter((e) => {
+            () => [
+                (0, d.KQ)(),
+                ...a.filter((e) => {
                     var n;
                     return (null !== (n = t[e.id]) && void 0 !== n ? n : 0) !== 0;
-                }),
+                })
+            ],
             [a, t]
         );
     return 0 === o.length
@@ -63,18 +65,16 @@ function f(e) {
                   var r;
                   let a = e.id,
                       s = null !== (r = t[a]) && void 0 !== r ? r : 0;
-                  return 0 !== s
-                      ? (0, i.jsx)(
-                            g,
-                            {
-                                category: e,
-                                count: s,
-                                selected: a === l,
-                                onSelectCategory: n
-                            },
-                            a
-                        )
-                      : null;
+                  return (0, i.jsx)(
+                      g,
+                      {
+                          category: e,
+                          count: s,
+                          selected: a === l,
+                          onSelectCategory: n
+                      },
+                      a
+                  );
               })
           });
 }
@@ -83,11 +83,13 @@ function _(e) {
     let { countsByCategory: n, onSelectCategory: l, selectedCategoryId: a } = e,
         h = (0, s.e7)([c.Z], () => c.Z.getCategories()),
         g = r.useMemo(
-            () =>
-                [(0, d.KQ)(), ...h].filter((e) => {
+            () => [
+                (0, d.KQ)(),
+                ...h.filter((e) => {
                     var t;
                     return (null !== (t = n[e.id]) && void 0 !== t ? t : 0) !== 0;
-                }),
+                })
+            ],
             [h, n]
         ),
         f = r.useMemo(
