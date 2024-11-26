@@ -10,9 +10,9 @@ n.d(t, {
 var a = n(175145),
     r = n(544891),
     l = n(570140),
-    s = n(355467),
-    i = n(987032),
-    o = n(559407),
+    i = n(355467),
+    o = n(987032),
+    s = n(559407),
     c = n(122289),
     u = n(439041),
     d = n(981631),
@@ -26,7 +26,7 @@ async function p() {
 }
 async function h() {
     try {
-        let { enabledPaymentTypes: e } = i.ZP.getCurrentConfig({ location: '40c266_2' }, { autoTrackExposure: !1 });
+        let { enabledPaymentTypes: e } = o.ZP.getCurrentConfig({ location: '40c266_2' }, { autoTrackExposure: !1 });
         if (!e.includes(d.HeQ.CASH_APP)) return;
         let t = await p(),
             n = await (0, a.Z)({
@@ -48,7 +48,7 @@ async function h() {
                         (function () {
                             var e;
                             if (null == u.Z.cashAppPayComponent) throw Error('Adyen CashAppPay component must be created before mounting.');
-                            null === (e = u.Z.cashAppPayComponent) || void 0 === e || e.mount('#'.concat(o.F));
+                            null === (e = u.Z.cashAppPayComponent) || void 0 === e || e.mount('#'.concat(s.F));
                         })();
                     return;
                 }
@@ -65,7 +65,7 @@ async function h() {
                                     type: 'ADYEN_CASH_APP_PAY_SUBMIT_SUCCESS',
                                     data: t
                                 });
-                            else throw (0, s.SQ)('Cash App Pay setup attempt is not valid.');
+                            else throw (0, i.SQ)('Cash App Pay setup attempt is not valid.');
                         },
                         onError: (e) => {
                             let t;
@@ -78,11 +78,11 @@ async function h() {
                                     case 'Something went wrong during customerRequest creation':
                                         (n = !1), (t = m.intl.string(m.t.TJ8dDA));
                                 }
-                                (0, s.SQ)(e.message, n, t);
+                                (0, i.SQ)(e.message, n, t);
                             }
                         }
                     })
-                    .mount('#'.concat(o.F));
+                    .mount('#'.concat(s.F));
                 l.Z.dispatch({
                     type: 'ADYEN_CREATE_CASH_APP_PAY_COMPONENT_SUCCESS',
                     component: t

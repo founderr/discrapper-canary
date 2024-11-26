@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(34305),
     f = n(981631),
     _ = n(388032),
-    E = n(330580);
-function I(e) {
+    I = n(330580);
+function E(e) {
     let { applicationViewItems: t, restoreApplication: n } = e;
     if (0 === t.length) return null;
     let r = t.map((e) => {
@@ -28,31 +28,31 @@ function I(e) {
         return (0, i.jsxs)(
             'div',
             {
-                className: E.hiddenLibraryApplication,
+                className: I.hiddenLibraryApplication,
                 children: [
                     (0, i.jsxs)(o.Z, {
                         direction: o.Z.Direction.VERTICAL,
-                        className: E.hiddenLibraryApplicationContent,
+                        className: I.hiddenLibraryApplicationContent,
                         children: [
                             (0, i.jsx)('div', {
-                                className: E.applicationName,
+                                className: I.applicationName,
                                 children: e.libraryApplication.getBranchedName(e.application)
                             }),
                             null != t
                                 ? (0, i.jsx)('div', {
-                                      className: E.applicationSubText,
+                                      className: I.applicationSubText,
                                       children: f.EOG[t]
                                   })
                                 : null
                         ]
                     }),
                     (0, i.jsx)(a.Clickable, {
-                        className: E.restoreButton,
+                        className: I.restoreButton,
                         onClick: () => n(e.libraryApplication),
                         children: (0, i.jsx)(a.XSmallIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: E.restoreIcon
+                            className: I.restoreIcon
                         })
                     })
                 ]
@@ -61,10 +61,10 @@ function I(e) {
         );
     });
     return (0, i.jsxs)(a.FormSection, {
-        className: E.hiddenLibraryApplications,
+        className: I.hiddenLibraryApplications,
         children: [
             (0, i.jsx)(a.FormTitle, {
-                className: E.hiddenLibraryApplicationsTitle,
+                className: I.hiddenLibraryApplicationsTitle,
                 children: _.intl.string(_.t['5PJtrK'])
             }),
             r
@@ -87,7 +87,7 @@ class C extends r.PureComponent {
     renderBody() {
         let { hiddenLibraryApplicationViewItems: e, installShortcutDesktop: t, installShortcutStartMenu: n } = this.props;
         return (0, i.jsxs)('div', {
-            className: E.body,
+            className: I.body,
             children: [
                 (0, m.Q)()
                     ? (0, i.jsxs)(r.Fragment, {
@@ -108,7 +108,7 @@ class C extends r.PureComponent {
                           ]
                       })
                     : null,
-                (0, i.jsx)(I, {
+                (0, i.jsx)(E, {
                     restoreApplication: this.handleRestoreHiddenLibraryApplication,
                     applicationViewItems: e
                 })
@@ -120,7 +120,7 @@ class C extends r.PureComponent {
             children: [
                 (0, i.jsx)(p.Z, { currentRoute: f.Z5c.APPLICATION_LIBRARY_SETTINGS }),
                 (0, i.jsx)(a.ScrollerAuto, {
-                    className: E.scroller,
+                    className: I.scroller,
                     children: this.renderBody()
                 })
             ]

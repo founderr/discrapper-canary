@@ -14,12 +14,12 @@ var i = n(807034),
     g = n(731455);
 let f = window.GLOBAL_ENV.ALGOLIA_KEY,
     _ = 'production' === window.GLOBAL_ENV.PROJECT_ENV ? 'prod_discoverable_guilds' : 'staging' === window.GLOBAL_ENV.PROJECT_ENV ? 'stg_discoverable_guilds' : 'dev_discoverable_guilds',
-    E = {
+    I = {
         'auto_removed:': !1,
         approximate_presence_count: '> 0',
         approximate_member_count: '> 0'
     };
-async function I(e, t) {
+async function E(e, t) {
     let { categoryId: n, languageCode: i, offset: r, limit: l, withCounts: a } = t;
     c.Z.dispatch({
         type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_START',
@@ -99,18 +99,18 @@ async function C(e, t, n) {
         categoryId: i,
         languageCode: r
     });
-    let p = Object.assign({}, E, t.filters),
+    let p = Object.assign({}, I, t.filters),
         f = Object.keys(p).map((e) => ''.concat(e).concat(p[e]));
     i !== g.Hk && f.push('(primary_category_id='.concat(i, ' OR categories.id=').concat(i, ')'));
     let _ = f.join(' AND '),
-        I = null != r ? r : (0, m.Xp)();
+        E = null != r ? r : (0, m.Xp)();
     try {
         let { hits: t, nbHits: n } = await s.search(e, {
                 filters: _,
-                optionalFilters: ['preferred_locale: '.concat(I)],
+                optionalFilters: ['preferred_locale: '.concat(E)],
                 length: a,
                 offset: l,
-                restrictSearchableAttributes: ['name', 'description', 'keywords', 'categories.name', 'categories.name_localizations.'.concat(I), 'primary_category.name', 'primary_category.name_localizations.'.concat(I), 'vanity_url_code']
+                restrictSearchableAttributes: ['name', 'description', 'keywords', 'categories.name', 'categories.name_localizations.'.concat(E), 'primary_category.name', 'primary_category.name_localizations.'.concat(E), 'vanity_url_code']
             }),
             o = t.map((e) =>
                 (0, m.Uv)({
@@ -157,7 +157,7 @@ async function v(e) {
     let { query: t, algoliaFilters: n, onComplete: i } = e,
         r = h.Z.getAlgoliaSearchIndex();
     if (null == r || h.Z.getIsBlocked(t)) return;
-    let l = Object.assign({}, E, n),
+    let l = Object.assign({}, I, n),
         s = Object.keys(l).map((e) => ''.concat(e).concat(l[e]));
     try {
         var o;
@@ -210,7 +210,7 @@ t.Z = {
     },
     fetchAlgoliaSearchResults: C,
     fetchAlgoliaSearchResultCounts: v,
-    fetchSearchResults: I,
+    fetchSearchResults: E,
     clearAlgoliaSearchResults: function (e) {
         var t;
         c.Z.dispatch({

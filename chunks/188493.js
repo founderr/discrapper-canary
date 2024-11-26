@@ -41,14 +41,14 @@ function p(e) {
                 })),
             []
         ),
-        E = r.useMemo(() => {
+        I = r.useMemo(() => {
             var e;
             let t = (0, h.Cf)().find((e) => e.code === g);
             return null !== (e = null == t ? void 0 : t.name) && void 0 !== e ? e : m.intl.string(m.t.LQLMGB);
         }, [g]);
     return (0, i.jsx)(a.ZP, {
         items: _,
-        title: E,
+        title: I,
         onSelect: f,
         selected: g,
         'aria-label': m.intl.string(m.t.Ng5cTE)

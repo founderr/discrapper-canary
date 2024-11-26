@@ -15,18 +15,18 @@ var r = n(243814),
     g = n(452426),
     f = n(736045),
     _ = n(186901),
-    E = n(981631);
+    I = n(981631);
 t.Z = {
-    [E.Etm.TOGGLE_VIDEO]: {
+    [I.Etm.TOGGLE_VIDEO]: {
         scope: {
             [_.Gp.ALL]: [r.x.RPC, r.x.RPC_VIDEO_WRITE]
         },
         handler() {
             let e = h.Z.isVideoEnabled();
-            if (null != (0, f.Z)()) e ? a.Z.setVideoEnabled(!1) : (0, d.Z)(() => a.Z.setVideoEnabled(!0), E.IlC.APP);
+            if (null != (0, f.Z)()) e ? a.Z.setVideoEnabled(!1) : (0, d.Z)(() => a.Z.setVideoEnabled(!0), I.IlC.APP);
         }
     },
-    [E.Etm.TOGGLE_SCREENSHARE]: {
+    [I.Etm.TOGGLE_SCREENSHARE]: {
         scope: {
             [_.Gp.ALL]: [r.x.RPC, r.x.RPC_SCREENSHARE_WRITE]
         },
@@ -57,7 +57,7 @@ t.Z = {
                                     (0, i.jsx)(e, {
                                         ...t,
                                         guildId: h.guild_id,
-                                        analyticsLocation: E.Sbl.ACTIVITY_RPC
+                                        analyticsLocation: I.Sbl.ACTIVITY_RPC
                                     });
                             });
         }

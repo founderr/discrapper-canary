@@ -2,9 +2,9 @@ n(47120);
 var a = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    i = n(481060),
-    o = n(600164),
+    i = n.n(l),
+    o = n(481060),
+    s = n(600164),
     c = n(498918);
 function u(e, t, n) {
     return (
@@ -48,12 +48,12 @@ class d extends r.PureComponent {
         super(...e),
             u(this, 'state', { changedSinceError: new Set() }),
             u(this, 'renderFormSection', (e) => {
-                let { values: t, onFieldChange: n, onFieldFocus: r, onFieldBlur: l, layout: o, ...c } = this.props,
+                let { values: t, onFieldChange: n, onFieldFocus: r, onFieldBlur: l, layout: s, ...c } = this.props,
                     { getClassNameForLayout: u, renderInput: d, title: m, name: p, id: h, placeholder: A, ...E } = e,
                     N = {
                         ...E,
                         placeholder: null == A ? void 0 : A(),
-                        layout: o,
+                        layout: s,
                         error: this.getError(p),
                         value: t[p],
                         name: p,
@@ -63,9 +63,9 @@ class d extends r.PureComponent {
                         onBlur: l
                     };
                 return (0, a.jsx)(
-                    i.FormSection,
+                    o.FormSection,
                     {
-                        className: s()(null == u ? void 0 : u(o)),
+                        className: i()(null == u ? void 0 : u(s)),
                         title: m(),
                         titleId: h,
                         children: d(N, c)
@@ -76,9 +76,9 @@ class d extends r.PureComponent {
             u(this, 'renderFormRow', (e) => {
                 let t = e.fields.map(this.renderFormSection);
                 return (0, a.jsx)(
-                    o.Z,
+                    s.Z,
                     {
-                        className: s()(c.row, e.className),
+                        className: i()(c.row, e.className),
                         children: t
                     },
                     e.fields.map((e) => e.name).join('')

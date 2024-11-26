@@ -15,8 +15,8 @@ var i,
     f = n(998502),
     _ = n(981631);
 ((r = i || (i = {})).DEFAULT = 'DEFAULT'), (r.UNREAD = 'UNREAD'), (r.CONNECTED = 'CONNECTED'), (r.SPEAKING = 'SPEAKING'), (r.MUTED = 'MUTED'), (r.DEAFENED = 'DEAFENED');
-let E = (0, g.isMac)() ? null : 'DEFAULT';
-class I extends l.PureComponent {
+let I = (0, g.isMac)() ? null : 'DEFAULT';
+class E extends l.PureComponent {
     componentDidMount() {
         f.ZP.setSystemTrayIcon(this.getIcon());
     }
@@ -24,7 +24,7 @@ class I extends l.PureComponent {
         f.ZP.setSystemTrayIcon(this.getIcon());
     }
     componentWillUnmount() {
-        f.ZP.setSystemTrayIcon(E);
+        f.ZP.setSystemTrayIcon(I);
     }
     render() {
         return null;
@@ -36,7 +36,7 @@ class I extends l.PureComponent {
             (n = 'getIcon'),
             (i = () => {
                 let { deafened: e, muted: t, speaking: n, connected: i, unread: r } = this.props,
-                    l = E;
+                    l = I;
                 return (0, g.isMac)() && !i ? l : (0, g.isLinux)() || !i ? (r && (l = 'UNREAD'), l) : (l = e ? 'DEAFENED' : t ? 'MUTED' : n ? 'SPEAKING' : 'CONNECTED');
             }),
             n in t
@@ -68,5 +68,5 @@ g.isPlatformEmbedded &&
             deafened: d.Z.isSelfDeaf(),
             unread: !i && !!(t || e + n > 0)
         };
-    })(I))),
+    })(E))),
     (t.Z = C);

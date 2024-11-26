@@ -20,8 +20,8 @@ function g(e) {
     let { transitionState: t } = e,
         g = (0, a.e7)([u.Z], () => u.Z.getAction()),
         [f, _] = r.useState(!1),
-        E = (0, d.Dt)();
-    async function I() {
+        I = (0, d.Dt)();
+    async function E() {
         return _(!0), g === h.c2C.AGREEMENTS && _(await (0, o.Lr)()), null;
     }
     return (
@@ -35,10 +35,10 @@ function g(e) {
             []
         ),
         (0, i.jsxs)(s.ModalRoot, {
-            'aria-labelledby': E,
+            'aria-labelledby': I,
             transitionState: t,
             children: [
-                (0, i.jsx)('div', { id: E }),
+                (0, i.jsx)('div', { id: I }),
                 (0, i.jsx)(s.ModalHeader, {
                     separator: !1,
                     children: (0, i.jsx)(s.Heading, {
@@ -76,7 +76,7 @@ function g(e) {
                 (0, i.jsx)(s.ModalFooter, {
                     children: (0, i.jsx)(s.Button, {
                         submitting: f,
-                        onClick: I,
+                        onClick: E,
                         color: s.Button.Colors.GREEN,
                         children: m.intl.string(m.t['+TBKLy'])
                     })

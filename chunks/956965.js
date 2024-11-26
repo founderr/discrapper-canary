@@ -14,7 +14,7 @@ var i = n(200651),
     g = n(226944);
 let f = 16 / 9,
     _ = 325 / 72;
-function E(e) {
+function I(e) {
     let { application: t, isHovered: n, botBannerUrl: l, botBannerUrlAnimated: s } = e,
         o = (0, d.Z)({
             applicationId: t.id,
@@ -36,13 +36,13 @@ function E(e) {
             [o.state, o.url, l, s]
         ),
         _ = null != p,
-        E = null != m;
+        I = null != m;
     if ('loading' !== o.state) {
-        if (E)
+        if (I)
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     _
-                        ? (0, i.jsx)(I, {
+                        ? (0, i.jsx)(E, {
                               isHovered: n,
                               url: p,
                               animatedUrl: void 0
@@ -60,7 +60,7 @@ function E(e) {
                 ]
             });
         if (_)
-            return (0, i.jsx)(I, {
+            return (0, i.jsx)(E, {
                 isHovered: n,
                 url: p,
                 animatedUrl: f
@@ -68,7 +68,7 @@ function E(e) {
     }
     return null;
 }
-function I(e) {
+function E(e) {
     let { isHovered: t, url: n, animatedUrl: l } = e,
         [s, o] = r.useState(!1);
     return (0, i.jsxs)(i.Fragment, {
@@ -166,14 +166,14 @@ t.Z = function (e) {
         onBlur: C,
         children:
             'card' === n && v
-                ? (0, i.jsx)(E, {
+                ? (0, i.jsx)(I, {
                       application: t,
                       isHovered: c,
                       botBannerUrl: null == T ? void 0 : T,
                       botBannerUrlAnimated: null == x ? void 0 : x
                   })
                 : null != T
-                  ? (0, i.jsx)(I, {
+                  ? (0, i.jsx)(E, {
                         isHovered: c,
                         url: T,
                         animatedUrl: x

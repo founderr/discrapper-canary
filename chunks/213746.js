@@ -19,12 +19,12 @@ var i = n(200651),
     g = n(133743),
     f = n(979007),
     _ = n(981631),
-    E = n(388032),
-    I = n(272680);
+    I = n(388032),
+    E = n(272680);
 function C(e) {
     let { application: t } = e;
     return (0, i.jsxs)('div', {
-        className: I.storeContainer,
+        className: E.storeContainer,
         children: [(0, i.jsx)(v, { application: t }), (0, i.jsx)(S, { application: t })]
     });
 }
@@ -32,18 +32,18 @@ function v(e) {
     let { application: t } = e,
         { subscriptions: n, otps: r } = (0, d.q)(t.id);
     return (0, i.jsxs)('div', {
-        className: I.storeContainer,
+        className: E.storeContainer,
         children: [
             n.length > 0 &&
                 (0, i.jsxs)('div', {
-                    className: I.productSection,
+                    className: E.productSection,
                     children: [
                         (0, i.jsx)(h.r, {
                             subscriptions: n,
                             color: 'header-primary'
                         }),
                         (0, i.jsx)('div', {
-                            className: I.products,
+                            className: E.products,
                             children: n.map((e) => {
                                 let n = (0, m.KW)(e.skuFlags) ? 'user' : 'guild';
                                 return (0, i.jsx)(
@@ -62,15 +62,15 @@ function v(e) {
                 }),
             r.length > 0 &&
                 (0, i.jsxs)('div', {
-                    className: I.productSection,
+                    className: E.productSection,
                     children: [
                         (0, i.jsx)(l.X6, {
                             variant: 'heading-lg/semibold',
                             color: 'header-primary',
-                            children: E.intl.string(E.t.yUGTs7)
+                            children: I.intl.string(I.t.yUGTs7)
                         }),
                         (0, i.jsx)('div', {
-                            className: I.products,
+                            className: E.products,
                             children: r.map((e) =>
                                 (0, i.jsx)(
                                     u.hd,
@@ -165,20 +165,20 @@ function S(e) {
             children: e
         });
     return (0, i.jsx)('div', {
-        className: I.legalContainer,
+        className: E.legalContainer,
         children: (0, i.jsx)(l.xv, {
             color: 'header-primary',
             variant: 'text-sm/normal',
             children:
                 null != n && null != r
-                    ? E.intl.format(E.t.zjYypa, {
+                    ? I.intl.format(I.t.zjYypa, {
                           termsHook: (e) => a(e, n),
                           privacyHook: (e) => a(e, r)
                       })
                     : null != n
-                      ? E.intl.format(E.t.YA1hw8, { termsHook: (e) => a(e, n) })
+                      ? I.intl.format(I.t.YA1hw8, { termsHook: (e) => a(e, n) })
                       : null != r
-                        ? E.intl.format(E.t['0LMe/P'], { privacyHook: (e) => a(e, r) })
+                        ? I.intl.format(I.t['0LMe/P'], { privacyHook: (e) => a(e, r) })
                         : null
         })
     });

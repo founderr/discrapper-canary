@@ -9,8 +9,8 @@ var i,
     u,
     S,
     o,
-    l = n(442837),
-    _ = n(570140),
+    _ = n(442837),
+    l = n(570140),
     A = n(981631);
 let a = 'no_payment_source',
     T = null,
@@ -25,19 +25,19 @@ let a = 'no_payment_source',
     U = !1,
     d = !1,
     f = !1,
-    L = !1,
-    O = null,
+    O = !1,
+    L = null,
     p = new Set();
 function D(t) {
     null != r && null != s ? r(s) : null != E && E(t), (r = null), (E = null);
 }
-class G extends (i = l.ZP.Store) {
+class G extends (i = _.ZP.Store) {
     getPricesForSku(t) {
         return N[t];
     }
     isOpen() {
         let t = __OVERLAY__ ? A.IlC.OVERLAY : A.IlC.APP;
-        return O === t && f;
+        return L === t && f;
     }
     get isPurchasingSKU() {
         return M;
@@ -67,7 +67,7 @@ class G extends (i = l.ZP.Store) {
         return I;
     }
     get isGift() {
-        return L;
+        return O;
     }
     isFetchingSKU(t) {
         return p.has(t);
@@ -82,13 +82,13 @@ class G extends (i = l.ZP.Store) {
               writable: !0
           })
         : (u[S] = o),
-    (e.Z = new G(_.Z, {
+    (e.Z = new G(l.Z, {
         SKU_PURCHASE_MODAL_OPEN: function (t) {
-            D(), (T = t.skuId), (c = t.applicationId), (d = t.isIAP), (R = t.analyticsLocation), (O = t.context), (L = t.isGift), (f = !0), (U = !1), (r = t.resolve), (E = t.reject), (P = null), (s = null), (C = t.promotionId);
+            D(), (T = t.skuId), (c = t.applicationId), (d = t.isIAP), (R = t.analyticsLocation), (L = t.context), (O = t.isGift), (f = !0), (U = !1), (r = t.resolve), (E = t.reject), (P = null), (s = null), (C = t.promotionId);
         },
         SKU_PURCHASE_MODAL_CLOSE: function (t) {
             let { error: e } = t;
-            (f = !1), (O = null), D(e);
+            (f = !1), (L = null), D(e);
         },
         SKU_PURCHASE_PREVIEW_FETCH: function (t) {
             let { skuId: e } = t;
@@ -127,12 +127,12 @@ class G extends (i = l.ZP.Store) {
             P = null;
         },
         SKU_PURCHASE_UPDATE_IS_GIFT: function (t) {
-            L = t.isGift;
+            O = t.isGift;
         },
         OVERLAY_SET_INPUT_LOCKED: function (t) {
             let { locked: e } = t;
-            if (!e || null == O) return !1;
-            (f = !1), (O = null), D();
+            if (!e || null == L) return !1;
+            (f = !1), (L = null), D();
         },
         GIFT_CODE_CREATE: function (t) {
             let { giftCode: e } = t;

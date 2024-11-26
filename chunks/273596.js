@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(164991),
     f = n(726115),
     _ = n(28494),
-    E = n(746728),
-    I = n(140700),
+    I = n(746728),
+    E = n(140700),
     C = n(665807),
     v = n(188493),
     N = n(294330),
@@ -112,7 +112,7 @@ function L(e) {
                                     !M &&
                                         (0, i.jsxs)('div', {
                                             className: T.headingFilters,
-                                            children: [(0, i.jsx)(I.Z, { loadId: t }), (0, i.jsx)(v.Z, { loadId: t })]
+                                            children: [(0, i.jsx)(E.Z, { loadId: t }), (0, i.jsx)(v.Z, { loadId: t })]
                                         }),
                                     (O || P) && (0, i.jsx)(C.Z, { loadId: t })
                                 ]
@@ -260,7 +260,7 @@ function L(e) {
                                       className: T.sidebarLanguageSelect,
                                       children: (0, i.jsx)(v.Z, { loadId: t })
                                   }),
-                                  (0, i.jsx)(E.Z, { loadId: t })
+                                  (0, i.jsx)(I.Z, { loadId: t })
                               ]
                           })
                       })

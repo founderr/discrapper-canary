@@ -15,7 +15,7 @@ let p = {},
     g = {},
     f = {},
     _ = {};
-function E(e) {
+function I(e) {
     let t = g[e];
     if (null == t) return;
     let n = h.default.fromTimestamp(Date.now() - 900000),
@@ -27,10 +27,10 @@ function E(e) {
     }
     f[e] = Date.now();
 }
-function I(e, t, n, i) {
+function E(e, t, n, i) {
     p[e].add(t);
     let r = f[t];
-    (null == r || r + 300000 > Date.now()) && E(t),
+    (null == r || r + 300000 > Date.now()) && I(t),
         null == g[t] && (g[t] = []),
         g[t].push({
             id: n,
@@ -73,7 +73,7 @@ class v extends (i = c.ZP.Store) {
             if (null == i) return !1;
             i.forEach((e) => {
                 var t;
-                E(e), (null === (t = g[e]) || void 0 === t ? void 0 : t.length) === 0 && delete g[e];
+                I(e), (null === (t = g[e]) || void 0 === t ? void 0 : t.length) === 0 && delete g[e];
             });
             let r = o()
                 .chain(Array.from(i))
@@ -93,7 +93,7 @@ class v extends (i = c.ZP.Store) {
             if (null == a) return !1;
             let s = a.guild_id;
             if (null == s || null == p[s]) return !1;
-            I(s, n, i.id, null === (t = i.author) || void 0 === t ? void 0 : t.id);
+            E(s, n, i.id, null === (t = i.author) || void 0 === t ? void 0 : t.id);
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
@@ -120,7 +120,7 @@ class v extends (i = c.ZP.Store) {
                 n.forEach((e) => {
                     let { channel_id: n, messages: i } = e;
                     i.forEach((e) => {
-                        I(t, n, e.message_id, e.user_id);
+                        E(t, n, e.message_id, e.user_id);
                     });
                 });
         },

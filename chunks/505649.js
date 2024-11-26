@@ -5,8 +5,8 @@ var r,
     u,
     S = n(442837),
     o = n(570140),
-    l = n(366939),
-    _ = n(16084),
+    _ = n(366939),
+    l = n(16084),
     A = n(128069),
     a = n(122289),
     T = n(622999),
@@ -40,7 +40,7 @@ function U(t) {
     let { payment: e } = t,
         n = [I.PyE.COMPLETED, I.PyE.FAILED, I.PyE.CANCELED];
     if (!R || e.id !== C || !n.includes(e.status)) return !1;
-    (R = !1), (C = null), e.status === I.PyE.FAILED ? (N = new A.ZP(c.intl.string(c.t.khEaRE))) : ((N = null), o.Z.wait(l.fw), o.Z.wait(_.pB));
+    (R = !1), (C = null), e.status === I.PyE.FAILED ? (N = new A.ZP(c.intl.string(c.t.khEaRE))) : ((N = null), o.Z.wait(_.fw), o.Z.wait(l.pB));
 }
 class d extends (r = S.ZP.Store) {
     get isAwaitingAuthentication() {

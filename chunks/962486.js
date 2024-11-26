@@ -22,8 +22,8 @@ let p = {
 };
 function g(e) {
     let { tab: t, guildIds: n, loading: h, onScroll: g, onGuildCardClick: f, onGuildCardSeen: _ } = e,
-        E = (0, d.Mf)(t),
-        I = (0, d.a$)(t),
+        I = (0, d.Mf)(t),
+        E = (0, d.a$)(t),
         C = (0, d.QW)(t),
         v = (0, d.lg)(t),
         N = r.useMemo(() => {
@@ -50,8 +50,8 @@ function g(e) {
         onScroll: g,
         children: [
             (0, i.jsx)(s.Z, {
-                title: E,
-                description: I,
+                title: I,
+                description: E,
                 children: (0, i.jsx)(a.Z, {})
             }),
             (0, i.jsxs)(o.Z, {

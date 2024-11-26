@@ -15,8 +15,8 @@ var r = n(873546),
     g = n(913976),
     f = n(533990),
     _ = n(104494),
-    E = n(29920),
-    I = n(346497),
+    I = n(29920),
+    E = n(346497),
     C = n(278945),
     v = n(727310),
     N = n(318199),
@@ -51,7 +51,7 @@ class b extends o.Z {
                 });
                 if (null != r)
                     return (
-                        !!(!1 !== t || (null == r ? void 0 : r.contentIdentifier) !== 'summer_bogo_content' || (await (0, I.k)())) &&
+                        !!(!1 !== t || (null == r ? void 0 : r.contentIdentifier) !== 'summer_bogo_content' || (await (0, E.k)())) &&
                         ((0, a.closeModal)(x),
                         (0, a.openModalLazy)(
                             async () => {
@@ -84,7 +84,7 @@ class b extends o.Z {
                 return null != n ? { userTrialOffer: n } : {};
             }),
             T(this, 'mayShowAnnouncementModal', async () => {
-                if ((await (0, I.l2)(), m.s.isDisallowPopupsSet())) return;
+                if ((await (0, E.l2)(), m.s.isDisallowPopupsSet())) return;
                 let e = this.getOfferFromStore(),
                     t = f.Z.getCurrentConfig({ location: 'announcementManager' }, { autoTrackExposure: !1 }).inExperiment || f.Z.isAAMode({ location: 'announcementManager' }),
                     n = (0, c.un)(l.z.REVERSE_TRIAL_ENDED_UPSELL),
@@ -95,7 +95,7 @@ class b extends o.Z {
                 }
                 if (null == i || !!i.verified) {
                     if (!(0, a.hasAnyModalOpen)() && g.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !r.tq) {
-                        for (let t of await (0, E.H)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
+                        for (let t of await (0, I.H)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
                     }
                 }
             });

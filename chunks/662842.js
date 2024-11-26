@@ -19,8 +19,8 @@ var i,
     g = n(15274),
     f = n(924301),
     _ = n(504160),
-    E = n(151864),
-    I = n(725436),
+    I = n(151864),
+    E = n(725436),
     C = n(497656),
     v = n(554747),
     N = n(230900),
@@ -47,10 +47,10 @@ function U(e) {
         r = (0, v.k5)(t.id),
         s = (0, c.e7)([Z.Z], () => Z.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
         { isStageNoticeHidden: U, isEventNoticeHidden: G } = (0, c.cj)(
-            [E.Z],
+            [I.Z],
             () => ({
-                isStageNoticeHidden: E.Z.isLiveChannelNoticeHidden({ stageId: null == s ? void 0 : s.id }),
-                isEventNoticeHidden: E.Z.isLiveChannelNoticeHidden({ eventId: null == r ? void 0 : r.id })
+                isStageNoticeHidden: I.Z.isLiveChannelNoticeHidden({ stageId: null == s ? void 0 : s.id }),
+                isEventNoticeHidden: I.Z.isLiveChannelNoticeHidden({ eventId: null == r ? void 0 : r.id })
             }),
             [s, r]
         ),
@@ -79,7 +79,7 @@ function U(e) {
             (function (e) {
                 let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: r, myRole: a, eventCreator: s, speakers: o, listenerCount: c, isEventNoticeHidden: d, isStageNoticeHidden: h, isStudyRoomNotice: m } = e,
                     g = null != n && null != i && !h,
-                    E = null != t ? (0, S.DK)(t) : null;
+                    I = null != t ? (0, S.DK)(t) : null;
                 if (m && null != i) {
                     let e = (0, p.KS)(i);
                     return {
@@ -191,11 +191,11 @@ function U(e) {
                     if (t.entity_type === M.WX.EXTERNAL) {
                         let e = (0, N.cS)(t);
                         if (null == e) return { noticeType: null };
-                        let n = f.ZP.getUserCount(t.id, E);
+                        let n = f.ZP.getUserCount(t.id, I);
                         return {
                             noticeType: 1,
                             title: t.name,
-                            location: (0, I.m)(e, !0),
+                            location: (0, E.m)(e, !0),
                             locationIcon: (0, l.jsx)(u.LocationIcon, {
                                 size: 'custom',
                                 color: 'currentColor',
@@ -231,7 +231,7 @@ function U(e) {
                         };
                     } else if (t.entity_type === M.WX.VOICE && null != i) {
                         let e = (0, p.KS)(i),
-                            n = f.ZP.getUserCount(t.id, E);
+                            n = f.ZP.getUserCount(t.id, I);
                         return {
                             noticeType: 2,
                             title: t.name,

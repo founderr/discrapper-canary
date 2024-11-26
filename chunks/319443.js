@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(680180),
     f = n(703656),
     _ = n(975907),
-    E = n(119014),
-    I = n(258971),
+    I = n(119014),
+    E = n(258971),
     C = n(133743),
     v = n(726941),
     N = n(666697),
@@ -51,23 +51,23 @@ function Z(e) {
 t.Z = function () {
     var e;
     let { onScroll: t, scrollPosition: n, resetScrollPosition: o } = (0, u.M)(),
-        L = (0, I.Xh)(),
-        y = (null == L ? void 0 : L.type) === I.m_.CATEGORY ? L.categoryId : void 0,
-        { applicationId: P, section: O } = (null == L ? void 0 : L.type) === I.m_.APPLICATION ? L : {},
-        { query: R, categoryId: j } = (null == L ? void 0 : L.type) === I.m_.SEARCH ? L : {},
+        L = (0, E.Xh)(),
+        y = (null == L ? void 0 : L.type) === E.m_.CATEGORY ? L.categoryId : void 0,
+        { applicationId: P, section: O } = (null == L ? void 0 : L.type) === E.m_.APPLICATION ? L : {},
+        { query: R, categoryId: j } = (null == L ? void 0 : L.type) === E.m_.SEARCH ? L : {},
         D = (0, l.e7)([c.Z], () => c.Z.getCategories()),
         M = r.useMemo(() => [(0, d.KQ)(), ...D], [D]),
         w = r.useMemo(() => M.find((e) => e.id === Number(j)), [M, j]),
-        { tabs: k, selectedTab: U, onSelectTab: G } = (0, E.i)(null == y ? void 0 : y.toString());
+        { tabs: k, selectedTab: U, onSelectTab: G } = (0, I.i)(null == y ? void 0 : y.toString());
     r.useEffect(() => {
         s.CP();
     }, []),
         r.useEffect(() => {
             s.g5();
         }, []),
-        r.useEffect(() => I.aQ.setState({ lastItem: L }), [L]);
+        r.useEffect(() => E.aQ.setState({ lastItem: L }), [L]);
     let B = null != P,
-        H = (null == L ? void 0 : L.type) === I.m_.SEARCH,
+        H = (null == L ? void 0 : L.type) === E.m_.SEARCH,
         { searchQuery: V, onSearchTextChange: F, onClearSearch: z, onSearchSubmit: W } = (0, _.M)({ initialQuery: null != R ? R : '' }),
         {
             searchBarState: Y,
@@ -87,7 +87,7 @@ t.Z = function () {
         J = r.useCallback((e) => (0, C.ph)({ applicationId: e }), []),
         $ = B || H,
         ee = r.useCallback(() => {
-            null != (0, I.Uc)() ? (0, f.op)() : (0, C.Yp)();
+            null != (0, E.Uc)() ? (0, f.op)() : (0, C.Yp)();
         }, []);
     return (0, i.jsxs)('div', {
         className: A.container,

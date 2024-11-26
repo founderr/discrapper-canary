@@ -13,8 +13,8 @@ var i = n(200651),
     g = n(283293),
     f = n(63063),
     _ = n(113434),
-    E = n(833435),
-    I = n(150560),
+    I = n(833435),
+    E = n(150560),
     C = n(558652),
     v = n(736683),
     N = n(452081),
@@ -25,8 +25,8 @@ var i = n(200651),
 t.Z = function () {
     let { tabs: e, selectedTab: t, onSelectTab: n } = (0, N.z)(),
         { onScroll: A, scrollPosition: Z } = (0, c.M)(),
-        L = I.Z.getState().getUtmCurrentContext(),
-        y = (0, E._)({ location: S.dr.QUEST_HOME_DESKTOP }) ? v.Z : v.j;
+        L = E.Z.getState().getUtmCurrentContext(),
+        y = (0, I._)({ location: S.dr.QUEST_HOME_DESKTOP }) ? v.Z : v.j;
     r.useEffect(() => {
         (0, s.h)({
             name: l.ImpressionNames.QUEST_HOME,

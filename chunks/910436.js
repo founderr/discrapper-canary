@@ -21,8 +21,8 @@ var r = n(287734),
     g = n(761282),
     f = n(358924),
     _ = n(868854),
-    E = n(817915),
-    I = n(981631);
+    I = n(817915),
+    E = n(981631);
 function C(e) {
     let { party: t, onChannelContextMenu: n, quest: C } = e,
         v = (0, _.L)(),
@@ -104,12 +104,12 @@ function C(e) {
             var n, r, l, m, g, _, v, x, A;
             let { activity: L, game: y, playingMembers: P, activityUser: O } = e;
             if (null == L || null == L.type) return null;
-            if (S.length > 1 && L.type === I.IIU.PLAYING && !(0, a.Z)(L) && null != y)
+            if (S.length > 1 && L.type === E.IIU.PLAYING && !(0, a.Z)(L) && null != y)
                 Z(
                     (0, i.jsx)(
                         f.Z.GameSection,
                         {
-                            icon: y.getIconURL(E.Z),
+                            icon: y.getIconURL(I.Z),
                             name: y.name,
                             partySize: {
                                 knownSize: P.length,
@@ -137,7 +137,7 @@ function C(e) {
                             'embedded-activity-'.concat(L.application_id)
                         )
                     );
-            } else if ((null != L.assets || (0, a.Z)(L)) && L.type === I.IIU.PLAYING)
+            } else if ((null != L.assets || (0, a.Z)(L)) && L.type === E.IIU.PLAYING)
                 Z(
                     (0, i.jsx)(
                         f.Z.RichPresenceSection,
@@ -182,7 +182,7 @@ function C(e) {
                               'spotify-'.concat(null !== (_ = L.session_id) && void 0 !== _ ? _ : t, '-').concat(O.id)
                           )
                       )
-                    : (null != L.assets || (0, a.Z)(L)) && L.type === I.IIU.LISTENING
+                    : (null != L.assets || (0, a.Z)(L)) && L.type === E.IIU.LISTENING
                       ? Z(
                             (0, i.jsx)(
                                 f.Z.RichPresenceSection,

@@ -19,8 +19,8 @@ var i,
     g = n(663993),
     f = n(84615),
     _ = n(210887),
-    E = n(819640),
-    I = n(585483),
+    I = n(819640),
+    E = n(585483),
     C = n(981631),
     v = n(294981);
 function N(e, t, n) {
@@ -109,7 +109,7 @@ class O extends (i = l.PureComponent) {
     animateOut(e) {
         c.ZP.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
-        I.S.dispatch(C.CkL.LAYER_POP_START),
+        E.S.dispatch(C.CkL.LAYER_POP_START),
             o.Z.parallel([
                 o.Z.spring(t, {
                     toValue: 0,
@@ -120,7 +120,7 @@ class O extends (i = l.PureComponent) {
                     ...y
                 })
             ]).start(() => {
-                e(), I.S.dispatch(C.CkL.LAYER_POP_COMPLETE);
+                e(), E.S.dispatch(C.CkL.LAYER_POP_COMPLETE);
             });
     }
     animateUnder() {
@@ -187,10 +187,10 @@ class O extends (i = l.PureComponent) {
 N(O, 'defaultProps', { baseLayer: !1 }), N(O, 'contextType', u.AccessibilityPreferencesContext);
 class R extends l.PureComponent {
     componentDidMount() {
-        I.S.subscribe(C.CkL.LAYER_POP_ESCAPE_KEY, h.xf);
+        E.S.subscribe(C.CkL.LAYER_POP_ESCAPE_KEY, h.xf);
     }
     componentWillUnmount() {
-        I.S.unsubscribe(C.CkL.LAYER_POP_ESCAPE_KEY, h.xf);
+        E.S.unsubscribe(C.CkL.LAYER_POP_ESCAPE_KEY, h.xf);
     }
     renderLayers() {
         let { children: e, layers: t, hasFullScreenLayer: n } = this.props,
@@ -247,7 +247,7 @@ class R extends l.PureComponent {
 }
 function j(e) {
     let t = (0, c.e7)([_.Z], () => _.Z.darkSidebar) ? C.BRd.DARK : void 0,
-        n = (0, c.e7)([E.Z], () => E.Z.getLayers()),
+        n = (0, c.e7)([I.Z], () => I.Z.getLayers()),
         i = (0, f.QP)((e) => e.fullScreenLayers.length > 0);
     return (0, r.jsx)(R, {
         ...e,

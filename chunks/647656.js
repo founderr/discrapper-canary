@@ -84,9 +84,9 @@ t.Z = {
                 );
             (h.name = i.application.name), (h.application_id = i.application.id);
             let _ = i.transport === m.He.POST_MESSAGE,
-                E = (0, u.S5)(h, _);
-            E > 0 && (h.flags = E), delete h.instance, null === (t = h.party) || void 0 === t || delete t.privacy;
-            let { assets: I, party: C, secrets: v, timestamps: N, buttons: S, type: T } = h;
+                I = (0, u.S5)(h, _);
+            I > 0 && (h.flags = I), delete h.instance, null === (t = h.party) || void 0 === t || delete t.privacy;
+            let { assets: E, party: C, secrets: v, timestamps: N, buttons: S, type: T } = h;
             if ((null == T && (h.type = p.IIU.PLAYING), null != v)) {
                 let e = r()
                     .values(v)
@@ -96,15 +96,15 @@ t.Z = {
                 if (null != S) throw new d.Z({ errorCode: p.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot currently be sent with buttons');
             }
             if ((null != S && ((h.metadata = { button_urls: S.map((e) => e.url) }), (h.buttons = S.map((e) => e.label))), null != N)) for (let e of Object.keys(N)) Date.now().toString().length - N[e].toString().length > 2 && (N[e] = Math.floor(N[e] * c.Z.Millis.SECOND));
-            if (null == I) n = Promise.resolve([]);
+            if (null == E) n = Promise.resolve([]);
             else {
                 if (null == i.application || null == i.application.id) throw Error();
-                n = (0, o.fetchAssetIds)(i.application.id, [I.large_image, I.small_image]);
+                n = (0, o.fetchAssetIds)(i.application.id, [E.large_image, E.small_image]);
             }
             return n.then((e) => {
                 var t, n;
                 let [r, o] = e;
-                if ((null != I && (null != r ? (I.large_image = r) : delete I.large_image, null != o ? (I.small_image = o) : delete I.small_image), !f())) return;
+                if ((null != E && (null != r ? (E.large_image = r) : delete E.large_image, null != o ? (E.small_image = o) : delete E.small_image), !f())) return;
                 a.Z.dispatch({
                     type: 'LOCAL_ACTIVITY_UPDATE',
                     socketId: i.id,
@@ -119,7 +119,7 @@ t.Z = {
                         details: null !== (t = h.details) && void 0 !== t ? t : '',
                         state: null !== (n = h.state) && void 0 !== n ? n : ''
                     };
-                return null != c && ((u.has_match_secret = !!c.match), (u.has_join_secret = !!c.join)), null != I && (u.has_images = !!(I.large_image || I.small_image)), null != d && ((u.party_max = null != d.size ? d.size[1] : void 0), (u.party_id = d.id)), s.default.track(p.rMx.ACTIVITY_UPDATED, u), h;
+                return null != c && ((u.has_match_secret = !!c.match), (u.has_join_secret = !!c.join)), null != E && (u.has_images = !!(E.large_image || E.small_image)), null != d && ((u.party_max = null != d.size ? d.size[1] : void 0), (u.party_id = d.id)), s.default.track(p.rMx.ACTIVITY_UPDATED, u), h;
             });
         }
     }

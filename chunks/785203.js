@@ -21,8 +21,8 @@ var i,
     g = n(678513),
     f = n(899667),
     _ = n(496675),
-    E = n(541566),
-    I = n(192513),
+    I = n(541566),
+    E = n(192513),
     C = n(255791),
     v = n(70956),
     N = n(267642),
@@ -34,9 +34,9 @@ function T(e) {
             appliedGuildBoosts: f.Z.getAppliedGuildBoostsForGuild(n),
             lastFetchedAt: f.Z.getLastFetchedAtForGuild(n)
         })),
-        { lastDismissedGracePeriod: r, isGracePeriodVisible: T } = (0, a.cj)([E.Z], () => ({
-            lastDismissedGracePeriod: E.Z.getLastDismissedGracePeriodForGuild(n),
-            isGracePeriodVisible: E.Z.isVisible(n)
+        { lastDismissedGracePeriod: r, isGracePeriodVisible: T } = (0, a.cj)([I.Z], () => ({
+            lastDismissedGracePeriod: I.Z.getLastDismissedGracePeriodForGuild(n),
+            isGracePeriodVisible: I.Z.isVisible(n)
         })),
         x = (0, a.e7)([p.Z], () => p.Z.isVisible(e)),
         b = (0, a.e7)([C.Z], () => C.Z.isVisible(e)),
@@ -47,7 +47,7 @@ function T(e) {
         P = null != i && Date.now() - i <= 43200000,
         O = !P && !Z && A && y,
         R = (0, c.m)(n),
-        j = (0, a.e7)([I.Z], () => I.Z.isVisible(e)),
+        j = (0, a.e7)([E.Z], () => E.Z.isVisible(e)),
         D = h.Z.useShouldShowChannelNotice(n),
         M = (0, m.h6)(e),
         { enableStudyGroup: w } = (0, u.s)(e),

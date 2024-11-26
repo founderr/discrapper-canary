@@ -2,9 +2,9 @@ n(47120);
 var a,
     r,
     l,
-    s,
-    i = n(200651),
-    o = n(192379),
+    i,
+    o = n(200651),
+    s = n(192379),
     c = n(734530),
     u = n(120356),
     d = n.n(u),
@@ -14,18 +14,18 @@ var a,
     A = n(388032),
     E = n(919616),
     N = n(716722);
-((l = a || (a = {})).CardNumber = 'cardNumber'), (l.CardExpiry = 'cardExpiry'), (l.CardCvc = 'cardCvc'), ((s = r || (r = {})).Change = 'change'), (s.Focus = 'focus'), (s.Blur = 'blur');
+((l = a || (a = {})).CardNumber = 'cardNumber'), (l.CardExpiry = 'cardExpiry'), (l.CardCvc = 'cardCvc'), ((i = r || (r = {})).Change = 'change'), (i.Focus = 'focus'), (i.Blur = 'blur');
 t.Z = function (e) {
-    let t = o.useRef(null),
-        { stripeType: n, flipped: a, updateCompleted: r, onFocus: l, onBlur: s } = e,
-        [u, f] = o.useState(h.Qy.UNKNOWN),
-        [y, P] = o.useState(!1),
-        [_, b] = o.useState(!1),
-        [g, C] = o.useState(null),
-        [I, T] = o.useState({}),
+    let t = s.useRef(null),
+        { stripeType: n, flipped: a, updateCompleted: r, onFocus: l, onBlur: i } = e,
+        [u, f] = s.useState(h.Qy.UNKNOWN),
+        [y, _] = s.useState(!1),
+        [P, b] = s.useState(!1),
+        [g, C] = s.useState(null),
+        [T, I] = s.useState({}),
         S = (0, c.useElements)(),
         { theme: v } = (0, p.useThemeContext)(),
-        x = o.useCallback(() => {
+        x = s.useCallback(() => {
             if (null != S)
                 switch (n) {
                     case 'cardNumber': {
@@ -47,26 +47,26 @@ t.Z = function (e) {
                     }
                 }
         }, [S, n]),
-        R = o.useCallback(
+        R = s.useCallback(
             (e) => {
-                !_ && !e.empty && b(!0), null != r && r(e.complete), null != e.error && P(!1);
+                !P && !e.empty && b(!0), null != r && r(e.complete), null != e.error && _(!1);
             },
-            [_, r]
+            [P, r]
         ),
-        L = o.useCallback(() => {
-            P(!0), null == l || l();
+        L = s.useCallback(() => {
+            _(!0), null == l || l();
         }, [l]),
-        M = o.useCallback(() => {
-            P(!1), null == s || s();
-        }, [s]),
-        O = o.useCallback(() => {
+        M = s.useCallback(() => {
+            _(!1), null == i || i();
+        }, [i]),
+        O = s.useCallback(() => {
             if (null != S)
                 switch (n) {
                     case 'cardNumber': {
                         let e = S.getElement(c.CardNumberElement);
                         if (null == e) return;
                         e.on('change', (e) => {
-                            u !== e.brand && f(e.brand), e.empty && _ ? C(A.intl.string(A.t.eOIfu7)) : null != e.error ? C(A.intl.string(A.t.x4pWtL)) : C(null), R(e);
+                            u !== e.brand && f(e.brand), e.empty && P ? C(A.intl.string(A.t.eOIfu7)) : null != e.error ? C(A.intl.string(A.t.x4pWtL)) : C(null), R(e);
                         }),
                             e.on('focus', L),
                             e.on('blur', M);
@@ -76,7 +76,7 @@ t.Z = function (e) {
                         let e = S.getElement(c.CardExpiryElement);
                         if (null == e) return;
                         e.on('change', (e) => {
-                            null != e.error || (e.empty && _) ? C(A.intl.string(A.t['9/zZdn'])) : C(null), R(e);
+                            null != e.error || (e.empty && P) ? C(A.intl.string(A.t['9/zZdn'])) : C(null), R(e);
                         }),
                             e.on('focus', L),
                             e.on('blur', M);
@@ -86,13 +86,13 @@ t.Z = function (e) {
                         let e = S.getElement(c.CardCvcElement);
                         if (null == e) return;
                         e.on('change', (e) => {
-                            null != e.error || (e.empty && _) ? C(A.intl.string(A.t.ro4isb)) : C(null), R(e);
+                            null != e.error || (e.empty && P) ? C(A.intl.string(A.t.ro4isb)) : C(null), R(e);
                         }),
                             e.on('focus', L),
                             e.on('blur', M);
                     }
                 }
-        }, [M, R, L, u, S, _, n]);
+        }, [M, R, L, u, S, P, n]);
     function D() {
         return d()(E.cardInput, {
             [E.cardInputError]: null !== g,
@@ -101,7 +101,7 @@ t.Z = function (e) {
         });
     }
     return (
-        o.useEffect(
+        s.useEffect(
             () => (
                 O(),
                 () => {
@@ -110,48 +110,48 @@ t.Z = function (e) {
             ),
             [O, x]
         ),
-        o.useLayoutEffect(() => {
+        s.useLayoutEffect(() => {
             let { current: e } = t;
             if (null == e) return;
             let n = window.getComputedStyle(e),
                 a = window.getComputedStyle(e, '::placeholder'),
                 r = n.getPropertyValue('font-family'),
                 l = n.getPropertyValue('font-weight'),
-                s = m.Z.colors.TEXT_PRIMARY.resolve({
+                i = m.Z.colors.TEXT_PRIMARY.resolve({
                     theme: v,
                     saturation: 1
                 }).hex();
-            T({
+            I({
                 base: {
                     fontFamily: r,
                     fontWeight: l,
-                    color: s,
+                    color: i,
                     fontSize: n.getPropertyValue('font-size'),
                     '::placeholder': { color: a.getPropertyValue('color') }
                 }
             });
         }, [t, v]),
-        (0, i.jsxs)('div', {
+        (0, o.jsxs)('div', {
             className: d()(E.cardNumberWrapper),
             'data-stripe-type': n,
             children: [
-                (0, i.jsx)('div', {
+                (0, o.jsx)('div', {
                     ref: t,
                     className: d()(E.hiddenDiv, N.input)
                 }),
                 (function () {
                     switch (n) {
                         case 'cardNumber':
-                            return (0, i.jsxs)('div', {
+                            return (0, o.jsxs)('div', {
                                 children: [
-                                    (0, i.jsx)(h.ZP, {
+                                    (0, o.jsx)(h.ZP, {
                                         className: E.cardIcon,
                                         type: u,
                                         flipped: a
                                     }),
-                                    (0, i.jsx)(c.CardNumberElement, {
+                                    (0, o.jsx)(c.CardNumberElement, {
                                         options: {
-                                            style: I,
+                                            style: T,
                                             placeholder: A.intl.string(A.t.gPRHf3),
                                             disableLink: !1
                                         },
@@ -160,24 +160,24 @@ t.Z = function (e) {
                                 ]
                             });
                         case 'cardExpiry':
-                            return (0, i.jsx)(c.CardExpiryElement, {
+                            return (0, o.jsx)(c.CardExpiryElement, {
                                 options: {
-                                    style: I,
+                                    style: T,
                                     placeholder: A.intl.string(A.t.xeEWQ0)
                                 },
                                 className: D()
                             });
                         case 'cardCvc':
-                            return (0, i.jsx)(c.CardCvcElement, {
+                            return (0, o.jsx)(c.CardCvcElement, {
                                 options: {
-                                    style: I,
+                                    style: T,
                                     placeholder: A.intl.string(A.t.wZz04O)
                                 },
                                 className: D()
                             });
                     }
                 })(),
-                (0, i.jsx)(p.InputError, { error: g })
+                (0, o.jsx)(p.InputError, { error: g })
             ]
         })
     );

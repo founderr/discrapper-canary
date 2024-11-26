@@ -7,9 +7,9 @@ n.d(t, {
 var a = n(200651),
     r = n(192379),
     l = n(481060),
-    s = n(710845),
-    i = n(219929),
-    o = n(526167),
+    i = n(710845),
+    o = n(219929),
+    s = n(526167),
     c = n(358085),
     u = n(622999),
     d = n(981631),
@@ -28,7 +28,7 @@ function h(e, t, n) {
         e
     );
 }
-let A = new s.Z('PaymentRequest');
+let A = new i.Z('PaymentRequest');
 class E extends r.Component {
     initPaymentRequestCallback(e) {}
     onPaymentRequestFailure() {
@@ -56,22 +56,22 @@ class E extends r.Component {
     }
     renderButton(e) {
         var t, n;
-        let { iconType: r, buttonText: s, ...o } = e;
+        let { iconType: r, buttonText: i, ...s } = e;
         return (0, a.jsx)(
             l.Button,
             {
                 onClick: this.attemptPaymentRequest,
                 className: null !== (t = this.props.className) && void 0 !== t ? t : p.button,
                 submitting: this.state.submitting,
-                ...o,
+                ...s,
                 children: (0, a.jsxs)('div', {
                     className: p.centerContainer,
                     children: [
-                        (0, a.jsx)(i.ZP, {
+                        (0, a.jsx)(o.ZP, {
                             className: null !== (n = this.props.iconClassName) && void 0 !== n ? n : p.buttonIcon,
                             type: r
                         }),
-                        s
+                        i
                     ]
                 })
             },
@@ -89,18 +89,18 @@ class E extends r.Component {
             });
         let t = (0, c.isAndroidChrome)(),
             n = t ? m.intl.string(m.t.p2jr2N) : m.intl.string(m.t.f19PPT),
-            r = t ? i.ZP.Types.G_PAY : i.ZP.Types.PAYMENT_REQUEST,
-            { className: s, iconClassName: o } = this.props;
+            r = t ? o.ZP.Types.G_PAY : o.ZP.Types.PAYMENT_REQUEST,
+            { className: i, iconClassName: s } = this.props;
         return (0, a.jsx)(
             l.Button,
             {
                 onClick: this.attemptPaymentRequest,
-                className: null != s ? s : p.button,
+                className: null != i ? i : p.button,
                 children: (0, a.jsxs)('div', {
                     className: p.centerContainer,
                     children: [
-                        (0, a.jsx)(i.ZP, {
-                            className: null != o ? o : p.buttonIcon,
+                        (0, a.jsx)(o.ZP, {
+                            className: null != s ? s : p.buttonIcon,
                             type: r
                         }),
                         n
@@ -178,11 +178,11 @@ class N extends E {
         void 0 !== this.props.onValidGooglePay && this.props.onValidGooglePay();
     }
     isBrowserCompatible() {
-        return (0, o.vu)() >= 61;
+        return (0, s.vu)() >= 61;
     }
     renderGooglePayButton(e) {
         return this.renderButton({
-            iconType: i.ZP.Types.G_PAY,
+            iconType: o.ZP.Types.G_PAY,
             buttonText: m.intl.string(m.t.p2jr2N),
             ...e
         });
@@ -191,9 +191,9 @@ class N extends E {
         return (0, a.jsxs)('div', {
             className: this.props.className,
             children: [
-                (0, a.jsx)(i.ZP, {
-                    type: i.ZP.Types.G_PAY,
-                    size: i.Uy.MEDIUM,
+                (0, a.jsx)(o.ZP, {
+                    type: o.ZP.Types.G_PAY,
+                    size: o.Uy.MEDIUM,
                     className: p.googlePayIcon
                 }),
                 (0, a.jsx)(l.Text, {

@@ -19,27 +19,27 @@ var i = n(200651),
     g = n(388032),
     f = n(333483),
     _ = n(232186);
-let E = {
+let I = {
         canSend: !1,
         hint: null,
         success: null,
         error: null
     },
-    I = (0, u.hQ)(),
-    C = ''.concat(I, '-decription'),
-    v = ''.concat(I, '-error');
+    E = (0, u.hQ)(),
+    C = ''.concat(E, '-decription'),
+    v = ''.concat(E, '-error');
 function N(e, t) {
     switch (t.type) {
         case 'RESET':
-            return E;
+            return I;
         case 'SUCCESS':
             return {
-                ...E,
+                ...I,
                 success: t.text
             };
         case 'HINT':
             return {
-                ...E,
+                ...I,
                 canSend: !0,
                 hint: t.text
             };
@@ -54,7 +54,7 @@ function N(e, t) {
 function S() {
     let e = r.createRef(),
         t = r.createRef(),
-        [n, l] = r.useReducer(N, E),
+        [n, l] = r.useReducer(N, I),
         { canSend: s, hint: u, success: S, error: T } = n;
     return (
         r.useEffect(() => {
@@ -110,7 +110,7 @@ function S() {
                         }),
                         children: [
                             (0, i.jsx)(c.TextInput, {
-                                id: I,
+                                id: E,
                                 inputRef: e,
                                 className: f.addFriendInput,
                                 inputClassName: f.input,

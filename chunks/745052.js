@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(183126),
     f = n(607070),
     _ = n(209613),
-    E = n(325708),
-    I = n(320149),
+    I = n(325708),
+    E = n(320149),
     C = n(82295),
     v = n(252618),
     N = n(605236),
@@ -67,7 +67,7 @@ function en() {
         f = r.useCallback(() => {
             h(n.map((e) => e.channel.id));
         }, [n, h]),
-        E = r.useCallback(
+        I = r.useCallback(
             (e) => {
                 var t, r;
                 let { row: s } = e,
@@ -91,7 +91,7 @@ function en() {
             },
             [l, n, p]
         ),
-        I = r.useCallback(
+        E = r.useCallback(
             () =>
                 (0, i.jsxs)(
                     C.Z,
@@ -148,8 +148,8 @@ function en() {
                               paddingBottom: 24,
                               sectionHeight: q.oi,
                               rowHeight: q.WN,
-                              renderSection: I,
-                              renderRow: E,
+                              renderSection: E,
+                              renderRow: I,
                               sections: [n.length],
                               chunkSize: 30,
                               fade: !0,
@@ -167,11 +167,11 @@ function ei(e) {
         l = (0, c.e7)([j.Z], () => j.Z.getChannel(null == r ? void 0 : r.channelId));
     if (null == r || r.type !== Z.tI.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
     let a = t - X.R7I;
-    return (0, i.jsx)(E.Z, {
-        sidebarType: E.y.MessageRequestSidebar,
+    return (0, i.jsx)(I.Z, {
+        sidebarType: I.y.MessageRequestSidebar,
         maxWidth: a,
         onWidthChange: n,
-        children: (0, i.jsx)(I.Z, {
+        children: (0, i.jsx)(E.Z, {
             channel: l,
             baseChannelId: R.uZ
         })
@@ -253,11 +253,11 @@ let es = (0, p.Z)(function (e) {
         g = null == p ? void 0 : p.channelId,
         f = null != p,
         _ = (0, k.T)(g),
-        E = (0, w.J)(g);
+        I = (0, w.J)(g);
     r.useEffect(() => {
-        null != g && !_ && E && f && ((0, b.Kh)(g), A.Z.closeChannelSidebar(R.uZ));
-    }, [g, E, f, _]);
-    let [I, C] = r.useState(q.pS.REQUESTS),
+        null != g && !_ && I && f && ((0, b.Kh)(g), A.Z.closeChannelSidebar(R.uZ));
+    }, [g, I, f, _]);
+    let [E, C] = r.useState(q.pS.REQUESTS),
         N = (e) => {
             C(e);
         };
@@ -286,7 +286,7 @@ let es = (0, p.Z)(function (e) {
                                         (0, i.jsx)(T.Z.Divider, {}),
                                         (0, i.jsxs)(u.TabBar, {
                                             'aria-label': $.intl.string($.t.e7GWjY),
-                                            selectedItem: I,
+                                            selectedItem: E,
                                             type: 'top-pill',
                                             onItemSelect: N,
                                             className: ee.__invalid_tabBar,
@@ -308,7 +308,7 @@ let es = (0, p.Z)(function (e) {
                         }),
                         (0, i.jsx)('div', {
                             className: et.content,
-                            children: (0, i.jsx)(ea, { section: I })
+                            children: (0, i.jsx)(ea, { section: E })
                         })
                     ]
                 }),

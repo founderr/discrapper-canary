@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return I;
     }
 });
 var i = n(200651),
@@ -18,8 +18,8 @@ var i = n(200651),
     g = n(981631),
     f = n(388032),
     _ = n(55945);
-function E(e) {
-    let { user: t, type: n, status: E, isFocused: I } = e,
+function I(e) {
+    let { user: t, type: n, status: I, isFocused: E } = e,
         C = r.useContext(u.AnalyticsContext),
         { analyticsLocations: v } = (0, o.ZP)(),
         N = (e) => {
@@ -32,10 +32,10 @@ function E(e) {
                     context: { location: 'Friends' }
                 });
         },
-        T = E === g.Skl.OFFLINE ? g.Skl.UNKNOWN : E,
+        T = I === g.Skl.OFFLINE ? g.Skl.UNKNOWN : I,
         x = n === g.OGo.PENDING_INCOMING ? f.intl.string(f.t.ZOFd1N) : f.intl.string(f.t.zz2i8v);
     return (0, i.jsx)(m.Z, {
-        isFocused: I,
+        isFocused: E,
         user: t,
         onClick: () =>
             (0, c.openUserProfileModal)({

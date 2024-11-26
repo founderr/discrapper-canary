@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     },
     xY: function () {
-        return E;
+        return I;
     }
 }),
     n(47120),
@@ -558,4 +558,4 @@ class _ extends o.C {
         ]);
     }
 }
-let E = new _();
+let I = new _();

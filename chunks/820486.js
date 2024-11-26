@@ -30,8 +30,8 @@ function p(e, t, n) {
 let g = {},
     f = g,
     _ = !1,
-    E = {},
     I = {},
+    E = {},
     C = {},
     v = {
         id: null,
@@ -76,13 +76,13 @@ class b extends (i = a.ZP.DeviceSettingsStore) {
         return C;
     }
     get inputDevices() {
-        return E;
+        return I;
     }
     get lastInputSystemDevice() {
         return v;
     }
     get outputDevices() {
-        return I;
+        return E;
     }
     get lastOutputSystemDevice() {
         return N;
@@ -114,12 +114,12 @@ p(b, 'displayName', 'ConnectedDeviceStore'),
                 }),
                 !_)
             ) {
-                (E = i), (I = r), (_ = !0);
+                (I = i), (E = r), (_ = !0);
                 return;
             }
-            let a = Object.keys(E),
+            let a = Object.keys(I),
                 s = Object.keys(i),
-                o = Object.keys(I),
+                o = Object.keys(E),
                 c = Object.keys(r),
                 d = l().difference(a, s),
                 u = l().difference(o, c);
@@ -136,18 +136,18 @@ p(b, 'displayName', 'ConnectedDeviceStore'),
                           .forEach((e) => {
                               C[e] = x(C[e], e, h.QyF.OUTPUT);
                           })),
-                !(l().isEqual(a, s) && l().isEqual(o, c)) && ((E = i), (I = r), !0)
+                !(l().isEqual(a, s) && l().isEqual(o, c)) && ((I = i), (E = r), !0)
             );
         },
         CONNECTED_DEVICE_SET: function (e) {
             let { displayName: t, connectedDevicePreference: n, location: i } = e;
             !(function (e, t, n) {
                 if (t === h.aVf.INPUT || t === h.aVf.INPUT_AND_OUTPUT) {
-                    let t = E[e];
+                    let t = I[e];
                     null != t && s.Z.wait(() => o.Z.setInputDevice(t, { location: n }));
                 }
                 if (t === h.aVf.OUTPUT || t === h.aVf.INPUT_AND_OUTPUT) {
-                    let t = I[e];
+                    let t = E[e];
                     s.Z.wait(() => o.Z.setOutputDevice(t, { location: n }));
                 }
             })(t, n, i),

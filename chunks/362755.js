@@ -9,12 +9,12 @@ var r,
     u,
     S,
     o,
-    l = n(442837),
-    _ = n(570140);
+    _ = n(442837),
+    l = n(570140);
 ((r = S || (S = {}))[(r.UNKNOWN = 0)] = 'UNKNOWN'), (r[(r.PENDING = 1)] = 'PENDING'), (r[(r.DONE = 2)] = 'DONE');
 let A = 0,
     a = null;
-class T extends (o = l.ZP.Store) {
+class T extends (o = _.ZP.Store) {
     get browserCheckoutState() {
         return A;
     }
@@ -31,7 +31,7 @@ class T extends (o = l.ZP.Store) {
               writable: !0
           })
         : (E[i] = u),
-    (e.Z = new T(_.Z, {
+    (e.Z = new T(l.Z, {
         USER_PAYMENT_BROWSER_CHECKOUT_STARTED: function (t) {
             (A = 1), (a = t.loadId);
         },

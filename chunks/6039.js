@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(246364),
     f = n(937111),
     _ = n(523924),
-    E = n(390500),
-    I = n(200305),
+    I = n(390500),
+    E = n(200305),
     C = n(981631),
     v = n(898625),
     N = n(388032),
@@ -91,7 +91,7 @@ t.Z = (e) => {
                     children: (() => {
                         switch (null == y ? void 0 : y.applicationStatus) {
                             case g.wB.SUBMITTED:
-                                return (0, i.jsx)(E.Z, {
+                                return (0, i.jsx)(I.Z, {
                                     onWithdrawApplication: w,
                                     guild: R
                                 });
@@ -105,7 +105,7 @@ t.Z = (e) => {
                                     guild: R
                                 });
                             default:
-                                return (0, i.jsx)(I.Z, {
+                                return (0, i.jsx)(E.Z, {
                                     guildId: x,
                                     inviteCode: b,
                                     onComplete: D,

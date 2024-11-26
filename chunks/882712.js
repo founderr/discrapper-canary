@@ -9,8 +9,8 @@ var r,
     u,
     S,
     o,
-    l = n(442837),
-    _ = n(570140),
+    _ = n(442837),
+    l = n(570140),
     A = n(128069),
     a = n(38618);
 ((r = S || (S = {}))[(r.UNKNOWN = 0)] = 'UNKNOWN'), (r[(r.PENDING = 1)] = 'PENDING'), (r[(r.SUCCESS = 2)] = 'SUCCESS'), (r[(r.ERROR = 3)] = 'ERROR');
@@ -25,7 +25,7 @@ function R(t) {
 function C() {
     (T = 0), (I = null), (c = null);
 }
-class N extends (o = l.ZP.Store) {
+class N extends (o = _.ZP.Store) {
     get purchaseTokenAuthState() {
         return T;
     }
@@ -45,7 +45,7 @@ class N extends (o = l.ZP.Store) {
               writable: !0
           })
         : (E[i] = u),
-    (e.Z = new N(_.Z, {
+    (e.Z = new N(l.Z, {
         SKU_PURCHASE_FAIL: R,
         PREMIUM_PAYMENT_SUBSCRIBE_FAIL: R,
         USER_PAYMENT_CLIENT_ADD: function (t) {

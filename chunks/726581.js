@@ -13,22 +13,22 @@ var i = n(200651),
     g = n(73346),
     f = n(733789),
     _ = n(4962),
-    E = n(388032),
-    I = n(846523);
+    I = n(388032),
+    E = n(846523);
 class C extends r.Component {
     renderReasons(e, t, n) {
         return 0 === e.length && 0 === t.length
             ? null
             : (0, i.jsx)('div', {
-                  className: I.section,
+                  className: E.section,
                   children: (0, i.jsxs)('div', {
-                      className: I.sectionContent,
+                      className: E.sectionContent,
                       children: [
                           e.map((e) =>
                               (0, i.jsx)(
                                   'div',
                                   {
-                                      className: I.unit,
+                                      className: E.unit,
                                       children: (0, i.jsx)(f.Z, {
                                           reason: e,
                                           hidePersonalInformation: n
@@ -41,7 +41,7 @@ class C extends r.Component {
                               (0, i.jsx)(
                                   'div',
                                   {
-                                      className: I.unit,
+                                      className: E.unit,
                                       children: (0, i.jsx)(o.Z, { reason: e })
                                   },
                                   e.type
@@ -65,17 +65,17 @@ class C extends r.Component {
         if (0 === e.length && 0 === t.length && null == n.staffNotes) return null;
         let s = this.getReviewToRender();
         return (0, i.jsxs)('div', {
-            className: a()(I.root, l),
+            className: a()(E.root, l),
             children: [
                 (0, i.jsx)('div', {
-                    className: I.header,
-                    children: E.intl.string(E.t.qABFpa)
+                    className: E.header,
+                    children: I.intl.string(I.t.qABFpa)
                 }),
                 this.renderReasons(e, t, r),
                 null != s
                     ? (0, i.jsx)(_.Z, {
                           data: s,
-                          className: I.review
+                          className: E.review
                       })
                     : null
             ]

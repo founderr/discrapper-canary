@@ -47,7 +47,7 @@ class g extends a.Z {
                     f = null == m ? void 0 : null === (e = m.avatarDecoration) || void 0 === e ? void 0 : e.skuId,
                     _ = null == m ? void 0 : null === (t = m.avatarDecoration) || void 0 === t ? void 0 : t.expiresAt;
                 if ((('1251324401459265537' === f || '1252353273256480818' === f) && (_ = 1726106879), null == m)) return !1;
-                let E = c.Z.getVoiceStateForUser(m.id);
+                let I = c.Z.getVoiceStateForUser(m.id);
                 return null != _ && 1000 * _ < Date.now() && g !== h.hes.RTC_CONNECTED
                     ? ((0, r.closeModal)(p),
                       (0, r.openModalLazy)(
@@ -69,8 +69,8 @@ class g extends a.Z {
                                   isExpired: (null != _ && 1000 * _ < Date.now()).toString(),
                                   rtcConnected: (g === h.hes.RTC_CONNECTED).toString(),
                                   decoExpiresAt: null !== (a = null == _ ? void 0 : _.toString()) && void 0 !== a ? a : 'N/A',
-                                  voiceStateAvailable: (null != E).toString(),
-                                  selfStream: null !== (u = null == E ? void 0 : null === (l = E.selfStream) || void 0 === l ? void 0 : l.toString()) && void 0 !== u ? u : 'N/A'
+                                  voiceStateAvailable: (null != I).toString(),
+                                  selfStream: null !== (u = null == I ? void 0 : null === (l = I.selfStream) || void 0 === l ? void 0 : l.toString()) && void 0 !== u ? u : 'N/A'
                               }
                           }),
                       !1);

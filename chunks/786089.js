@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(70097),
     f = n(594174),
     _ = n(626135),
-    E = n(617136),
-    I = n(113434),
+    I = n(617136),
+    E = n(113434),
     C = n(497505),
     v = n(475595),
     N = n(352084),
@@ -35,7 +35,7 @@ t.Z = (0, r.memo)(function (e) {
         U = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
         { ref: G, height: B = 0 } = (0, u.Z)(),
         H = (0, h.ZP)(),
-        V = (0, I.B6)(null === (t = L.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
+        V = (0, E.B6)(null === (t = L.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
             month: 'numeric',
             day: 'numeric'
         }),
@@ -61,7 +61,7 @@ t.Z = (0, r.memo)(function (e) {
             P(!0),
                 _.default.track(T.rMx.QUEST_HOVER, {
                     quest_id: L.id,
-                    ...(0, E.mH)(C.jn.TROPHY_CASE_CARD)
+                    ...(0, I.mH)(C.jn.TROPHY_CASE_CARD)
                 });
         },
         et = () => P(!1),

@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(87005),
     f = n(753972),
     _ = n(895924),
-    E = n(812236),
-    I = n(82295),
+    I = n(812236),
+    E = n(82295),
     C = n(740492),
     v = n(973616),
     N = n(592125),
@@ -64,9 +64,9 @@ async function O(e, t, n) {
             return;
         }
         try {
-            await (0, E.ZP)(r, e.id);
+            await (0, I.ZP)(r, e.id);
         } catch (e) {
-            if (e.message === E.sV) {
+            if (e.message === I.sV) {
                 t(void 0);
                 return;
             }
@@ -175,7 +175,7 @@ function M() {
         if (!d && !!c) u(!0), S.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = h.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
     }, [c, h, d]),
     c)
-        ? (0, i.jsx)(I.Z, {
+        ? (0, i.jsx)(E.Z, {
               className: a()(y.headerContainer, P.privateChannelsHeaderContainer),
               children: (0, i.jsxs)('div', {
                   className: y.container,

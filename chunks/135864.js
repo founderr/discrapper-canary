@@ -13,7 +13,7 @@ var i = n(200651),
     g = n(46140),
     f = n(388032),
     _ = n(729922);
-function E(e) {
+function I(e) {
     let { tab: t } = e,
         n = u.Z.useField('selectedTab'),
         l = r.useMemo(
@@ -32,7 +32,7 @@ function E(e) {
         ),
         c = r.useMemo(() => (0, h.s)(t), [t]),
         f = n === t,
-        E = r.useCallback(() => {
+        I = r.useCallback(() => {
             switch (t) {
                 case p.F$.QUESTS:
                     return (0, m.u)({
@@ -47,7 +47,7 @@ function E(e) {
             }
         }, [t]);
     return (0, i.jsxs)(o.Clickable, {
-        onClick: E,
+        onClick: I,
         className: a()(_.navItem, { [_.selected]: f }),
         children: [
             (0, i.jsx)('div', {
@@ -76,7 +76,7 @@ t.Z = function () {
             }),
             (0, i.jsx)('nav', {
                 className: _.nav,
-                children: p.mc.map((t) => (t !== p.F$.APPS || e ? (0, i.jsx)(E, { tab: t }, t) : null))
+                children: p.mc.map((t) => (t !== p.F$.APPS || e ? (0, i.jsx)(I, { tab: t }, t) : null))
             })
         ]
     });

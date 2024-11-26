@@ -16,31 +16,31 @@ function _(e) {
     let t = !1;
     return (
         e.forEach((e) => {
-            t = !1 !== I(e) || t;
+            t = !1 !== E(e) || t;
         }),
         t
     );
 }
-function E(e) {
+function I(e) {
     let t = f[e];
     if (null == t) return !1;
     let n = t.gameId;
     return null != g[n] && ((g = { ...g }), delete g[n][e], 0 === Object.values(g[n]).length && delete g[n]), (f = { ...f }), delete f[e], !0;
 }
-function I(e) {
+function E(e) {
     let { user: t, activities: n } = e;
     if (null == t) return !1;
     let i = n.filter((e) => e.type !== m.IIU.CUSTOM_STATUS);
-    if (0 === i.length) return E(t.id);
+    if (0 === i.length) return I(t.id);
     let r = !1;
     return (
         i.forEach((e) => {
             (function (e, t) {
                 var n, i, r, l;
                 let a = (0, c.Z)(e);
-                if (null == a) return E(t.id);
+                if (null == a) return I(t.id);
                 let s = f[t.id];
-                null != s && s.gameId !== a && E(t.id);
+                null != s && s.gameId !== a && I(t.id);
                 let o = null !== (i = null === (n = e.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== i ? i : Date.now(),
                     d = {
                         userId: t.id,
@@ -82,7 +82,7 @@ function C() {
                 let n = h.default.getUser(e);
                 null != n &&
                     (t =
-                        I({
+                        E({
                             user: n,
                             activities: u.Z.getActivities(e)
                         }) || t);
@@ -140,7 +140,7 @@ class v extends (a = s.ZP.Store) {
         },
         PRESENCE_UPDATES: function (e) {
             let { updates: t } = e;
-            return t.map((e) => I(e)).some((e) => e);
+            return t.map((e) => E(e)).some((e) => e);
         },
         PRESENCES_REPLACE: function (e) {
             let { presences: t } = e;

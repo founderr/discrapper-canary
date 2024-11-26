@@ -511,7 +511,7 @@ async function U(e, t, n, r) {
     if (null == e) throw O('Stripe not loaded');
     let i = await C(t),
         { name: s, line1: o, line2: l, city: u, state: c, postalCode: d, country: f } = t,
-        _ = I.i$.get(n);
+        _ = I.aV.get(n);
     a()(null != _, 'unsupported payment method type');
     let { paymentMethod: p, error: h } = await e.createPaymentMethod({
         type: _,

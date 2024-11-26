@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(680474),
     f = n(571737),
     _ = n(101400),
-    E = n(946542),
-    I = n(213746),
+    I = n(946542),
+    E = n(213746),
     C = n(979007),
     v = n(981631),
     N = n(388032),
@@ -59,7 +59,7 @@ t.Z = function (e) {
                 case C.Wc.ABOUT:
                     return (0, i.jsx)(g.Z, { application: A });
                 case C.Wc.STORE:
-                    return (0, i.jsx)(I.Z, { application: A });
+                    return (0, i.jsx)(E.Z, { application: A });
             }
         }, [y, A]),
         D = r.useCallback(
@@ -107,7 +107,7 @@ t.Z = function (e) {
                                                       })
                                                   }),
                                               j,
-                                              (0, i.jsx)(E.Z, {
+                                              (0, i.jsx)(I.Z, {
                                                   application: A,
                                                   onSelectApplication: O
                                               })

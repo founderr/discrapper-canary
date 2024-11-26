@@ -1,6 +1,6 @@
 n.d(t, {
     q: function () {
-        return o;
+        return s;
     },
     t: function () {
         return c;
@@ -9,7 +9,7 @@ n.d(t, {
 var a = n(818083),
     r = n(358085),
     l = n(474936);
-let s = (0, a.B)({
+let i = (0, a.B)({
         id: '2023-07_checkout_optimization_browser_autofill',
         label: 'Checkout Optimization Browser Autofill',
         kind: 'user',
@@ -36,7 +36,7 @@ let s = (0, a.B)({
             }
         ]
     }),
-    i = (0, a.B)({
+    o = (0, a.B)({
         id: '2024-11_checkout_optimization_browser_autofill_global',
         label: 'Checkout Optimization Browser Autofill Global',
         kind: 'user',
@@ -63,9 +63,9 @@ let s = (0, a.B)({
             }
         ]
     });
-function o() {
-    let e = s.getCurrentConfig({ location: '5f89bb_3' }, { autoTrackExposure: !0 });
-    return e.enabled ? e : i.getCurrentConfig({ location: '5f89bb_3' }, { autoTrackExposure: !0 });
+function s() {
+    let e = i.getCurrentConfig({ location: '5f89bb_3' }, { autoTrackExposure: !0 });
+    return e.enabled ? e : o.getCurrentConfig({ location: '5f89bb_3' }, { autoTrackExposure: !0 });
 }
 function c(e, t, n) {
     return (0, r.isDesktop)() && null != e && [l.Si.TIER_0, l.Si.TIER_2].includes(e) && !t && null == n;

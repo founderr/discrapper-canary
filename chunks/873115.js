@@ -32,12 +32,12 @@ n.d(t, {
 var a = n(544891),
     r = n(570140),
     l = n(618541),
-    s = n(751767),
-    i = n(358085),
-    o = n(355467),
+    i = n(751767),
+    o = n(358085),
+    s = n(355467),
     c = n(981631);
 function u() {
-    (0, s.S)().then((e) => {
+    (0, i.S)().then((e) => {
         e.client
             .create({ authorization: c.Ai1.BRAINTREE.KEY })
             .then((e) => {
@@ -54,7 +54,7 @@ function u() {
 function d() {
     let e = l.Z.getClient();
     if (null == e) throw Error('Braintree client must be initialized before creating Venmo client.');
-    (0, s.S)().then((t) => {
+    (0, i.S)().then((t) => {
         t.venmo
             .create({
                 client: e,
@@ -75,7 +75,7 @@ function d() {
 function m() {
     let e = l.Z.getClient();
     if (null == e) throw Error('braintree client must be initialized before calling this');
-    (0, s.S)().then((t) => {
+    (0, i.S)().then((t) => {
         t.paypal
             .create({ client: e })
             .then((e) => {
@@ -118,7 +118,7 @@ function p() {
     if (null == e) throw Error('braintree paypal client must be initialized before calling this');
     r.Z.dispatch({ type: 'BRAINTREE_TOKENIZE_PAYPAL_START' });
     let t = Promise.resolve('');
-    (0, i.isDesktop)() && (t = (0, o.EH)(c.HeQ.PAYPAL)),
+    (0, o.isDesktop)() && (t = (0, s.EH)(c.HeQ.PAYPAL)),
         t
             .then(() => e.tokenize({ flow: 'vault' }))
             .then((e) => {

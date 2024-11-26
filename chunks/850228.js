@@ -1,9 +1,9 @@
 var a = n(200651),
     r = n(192379),
     l = n(442837),
-    s = n(481060),
-    i = n(219929),
-    o = n(975060),
+    i = n(481060),
+    o = n(219929),
+    s = n(975060),
     c = n(559725),
     u = n(439041),
     d = n(388032),
@@ -16,32 +16,32 @@ class p extends r.PureComponent {
         var e, t;
         let { className: n, cashAppPayComponent: r } = this.props,
             l = this.props.adyenPaymentData,
-            o = null !== (t = null == l ? void 0 : null === (e = l.paymentMethod) || void 0 === e ? void 0 : e.cashtag) && void 0 !== t ? t : '',
-            c = null != l && '' !== o;
+            s = null !== (t = null == l ? void 0 : null === (e = l.paymentMethod) || void 0 === e ? void 0 : e.cashtag) && void 0 !== t ? t : '',
+            c = null != l && '' !== s;
         return (0, a.jsxs)('div', {
             className: n,
             children: [
-                (0, a.jsx)(i.ZP, {
-                    type: i.ZP.Types.CASH_APP,
-                    size: i.Uy.MEDIUM,
+                (0, a.jsx)(o.ZP, {
+                    type: o.ZP.Types.CASH_APP,
+                    size: o.Uy.MEDIUM,
                     className: m.icon
                 }),
                 c
                     ? (0, a.jsxs)(a.Fragment, {
                           children: [
-                              (0, a.jsx)(s.Heading, {
-                                  variant: o.length < 25 ? 'heading-xl/bold' : 'heading-lg/bold',
+                              (0, a.jsx)(i.Heading, {
+                                  variant: s.length < 25 ? 'heading-xl/bold' : 'heading-lg/bold',
                                   className: m.connectionInstructions,
-                                  children: d.intl.format(d.t['ze/1yM'], { cashtag: o })
+                                  children: d.intl.format(d.t['ze/1yM'], { cashtag: s })
                               }),
-                              (0, a.jsx)(s.Text, {
+                              (0, a.jsx)(i.Text, {
                                   variant: 'text-md/medium',
                                   className: m.connectionInstructions,
                                   children: d.intl.string(d.t.VPOx7O)
                               })
                           ]
                       })
-                    : (0, a.jsx)(s.Text, {
+                    : (0, a.jsx)(i.Text, {
                           variant: 'text-md/medium',
                           className: m.connectionInstructions,
                           children: null == r ? d.intl.string(d.t['CgVe//']) : d.intl.string(d.t['1MqcjI'])
@@ -50,7 +50,7 @@ class p extends r.PureComponent {
         });
     }
 }
-t.Z = l.ZP.connectStores([u.Z, o.Z], () => ({
+t.Z = l.ZP.connectStores([u.Z, s.Z], () => ({
     cashAppPayComponent: u.Z.cashAppPayComponent,
-    adyenPaymentData: o.Z.adyenPaymentData
+    adyenPaymentData: s.Z.adyenPaymentData
 }))(p);

@@ -14,8 +14,8 @@ var i,
     g = n(430824),
     f = n(158776),
     _ = n(699516),
-    E = n(594174),
-    I = n(981631),
+    I = n(594174),
+    E = n(981631),
     C = n(474936);
 function v(e, t, n) {
     return (
@@ -31,7 +31,7 @@ function v(e, t, n) {
     );
 }
 function N(e) {
-    let t = E.default.getUser(e);
+    let t = I.default.getUser(e);
     return {
         user: t,
         usernameLower: null != t ? t.username.toLowerCase() : null
@@ -83,7 +83,7 @@ class b {
                         ...T(t),
                         spam: (0, h.A)({ location: 'friend-store' }) && _.Z.isSpam(t),
                         ignoredUser: _.Z.isIgnored(t),
-                        giftIntentType: e === I.OGo.FRIEND && u.Z.isTopAffinityFriendAnniversary({ userId: t }) ? C.hX.FRIEND_ANNIVERSARY : void 0
+                        giftIntentType: e === E.OGo.FRIEND && u.Z.isTopAffinityFriendAnniversary({ userId: t }) ? C.hX.FRIEND_ANNIVERSARY : void 0
                     })
             ),
             t = l().map(
@@ -124,21 +124,21 @@ class b {
             })
             .filter((t) => {
                 switch (e) {
-                    case I.pJs.ONLINE:
-                        return t.type === I.OGo.FRIEND && t.status !== I.Skl.OFFLINE;
-                    case I.pJs.PENDING:
-                        return (t.type === I.OGo.PENDING_INCOMING && (!(0, h.A)({ location: 'friends-store' }) || !t.spam) && !t.ignoredUser) || t.type === I.OGo.PENDING_OUTGOING;
-                    case I.pJs.SPAM:
-                        return t.type === I.OGo.PENDING_INCOMING && t.spam;
-                    case I.pJs.PENDING_IGNORED:
-                        return t.type === I.OGo.PENDING_INCOMING && t.ignoredUser;
-                    case I.pJs.SUGGESTIONS:
+                    case E.pJs.ONLINE:
+                        return t.type === E.OGo.FRIEND && t.status !== E.Skl.OFFLINE;
+                    case E.pJs.PENDING:
+                        return (t.type === E.OGo.PENDING_INCOMING && (!(0, h.A)({ location: 'friends-store' }) || !t.spam) && !t.ignoredUser) || t.type === E.OGo.PENDING_OUTGOING;
+                    case E.pJs.SPAM:
+                        return t.type === E.OGo.PENDING_INCOMING && t.spam;
+                    case E.pJs.PENDING_IGNORED:
+                        return t.type === E.OGo.PENDING_INCOMING && t.ignoredUser;
+                    case E.pJs.SUGGESTIONS:
                         return 99 === t.type;
-                    case I.pJs.BLOCKED:
-                        return t.type === I.OGo.BLOCKED;
-                    case I.pJs.ALL:
+                    case E.pJs.BLOCKED:
+                        return t.type === E.OGo.BLOCKED;
+                    case E.pJs.ALL:
                     default:
-                        return t.type === I.OGo.FRIEND;
+                        return t.type === E.OGo.FRIEND;
                 }
             })
             .sortBy((e) => e.comparator)
@@ -146,11 +146,11 @@ class b {
     }
     getRelationshipCounts() {
         let e = {
-            [I.OGo.FRIEND]: 0,
-            [I.OGo.PENDING_INCOMING]: 0,
-            [I.OGo.PENDING_OUTGOING]: 0,
+            [E.OGo.FRIEND]: 0,
+            [E.OGo.PENDING_INCOMING]: 0,
+            [E.OGo.PENDING_OUTGOING]: 0,
             99: 0,
-            [I.OGo.BLOCKED]: 0
+            [E.OGo.BLOCKED]: 0
         };
         return (
             this._rows.forEach((t) => {
@@ -165,18 +165,18 @@ class b {
 }
 let A = !0,
     Z = !1,
-    L = I.pJs.ONLINE,
+    L = E.pJs.ONLINE,
     y = new b(),
     P = !0,
     O = !1;
 function R() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    A && (e || (L !== I.pJs.ONLINE && L !== I.pJs.ADD_FRIEND)) && !Z && ((A = !1), (Z = !0), o.Z.fetchRelationships());
+    A && (e || (L !== E.pJs.ONLINE && L !== E.pJs.ADD_FRIEND)) && !Z && ((A = !1), (Z = !0), o.Z.fetchRelationships());
 }
 function j() {
     if (((A = !0), P ? (Z = !1) : R(), (y = y.reset()), O)) return;
     let e = y.getRelationshipCounts();
-    L = 0 === e[I.OGo.FRIEND] ? (0 !== e[I.OGo.PENDING_INCOMING] ? I.pJs.PENDING : I.pJs.ADD_FRIEND) : I.pJs.ONLINE;
+    L = 0 === e[E.OGo.FRIEND] ? (0 !== e[E.OGo.PENDING_INCOMING] ? E.pJs.PENDING : E.pJs.ADD_FRIEND) : E.pJs.ONLINE;
 }
 function D() {
     y = P ? new b() : y.reset();
@@ -188,7 +188,7 @@ function M(e) {
 }
 class w extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, f.Z, E.default, g.Z, p.ZP, m.Z, d.Z), this.syncWith([_.Z], D), this.syncWith([d.Z], D), this.syncWith([u.Z], D), this.syncWith([E.default], M(N)), this.syncWith([f.Z, m.Z], M(S)), j();
+        this.waitFor(_.Z, f.Z, I.default, g.Z, p.ZP, m.Z, d.Z), this.syncWith([_.Z], D), this.syncWith([d.Z], D), this.syncWith([u.Z], D), this.syncWith([I.default], M(N)), this.syncWith([f.Z, m.Z], M(S)), j();
     }
     getState() {
         return {
@@ -219,7 +219,7 @@ v(w, 'displayName', 'FriendsStore'),
         },
         DRAWER_SELECT_TAB: function (e) {
             let { tab: t } = e;
-            return (P = t !== I.cII.FRIENDS), D(), !P;
+            return (P = t !== E.cII.FRIENDS), D(), !P;
         },
         FRIENDS_SET_INITIAL_SECTION: function (e) {
             (L = e.section), (O = !0);

@@ -19,16 +19,16 @@ var i = n(200651),
     f = n(48829);
 function _(e) {
     let { active: t, user: n, channel: _ } = e,
-        E = (0, u.V)(),
-        I = r.useCallback(() => {
+        I = (0, u.V)(),
+        E = r.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(g.intl.string(g.t.pIQ3h4), a.ToastType.FAILURE)), s.Z.increment({ name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
         }, []),
         C = r.useCallback(() => {
             c.Z.closeChannelSidebar(d.uZ);
         }, []),
         v = r.useCallback(() => {
-            c.Z.closeChannelSidebar(d.uZ), E && (0, o.Kh)(_.id);
-        }, [_.id, E]),
+            c.Z.closeChannelSidebar(d.uZ), I && (0, o.Kh)(_.id);
+        }, [_.id, I]),
         {
             acceptMessageRequest: N,
             isAcceptLoading: S,
@@ -38,7 +38,7 @@ function _(e) {
             user: n,
             onAcceptSuccess: v,
             onRejectSuccess: C,
-            onError: I
+            onError: E
         }),
         b = S || T,
         A = b || x;

@@ -3,8 +3,8 @@ var r = n(200651),
     i = n(481060),
     l = n(727637),
     s = n(906732),
-    o = n(241553),
-    c = n(333867),
+    o = n(333867),
+    c = n(685311),
     d = n(884697),
     u = n(228624),
     m = n(67409),
@@ -98,7 +98,7 @@ t.Z = (e) => {
                       'aria-label': f.intl.string(f.t.PEjaCw),
                       onClick: (e) => {
                           e.stopPropagation(),
-                              (0, c.Z)({
+                              (0, o.Z)({
                                   skuId: (0, m.S)({
                                       product: t,
                                       selectedVariantIndex: n
@@ -117,7 +117,7 @@ t.Z = (e) => {
                               });
                       },
                       children: _
-                          ? (0, r.jsx)(o.e, {
+                          ? (0, r.jsx)(c.e, {
                                 hovered: S,
                                 isContentDismissed: !0,
                                 themeOverride: E,

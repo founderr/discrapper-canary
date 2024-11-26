@@ -25,8 +25,8 @@ var i = n(200651),
     g = n(429142),
     f = n(144114),
     _ = n(210887),
-    E = n(23434),
-    I = n(1964),
+    I = n(23434),
+    E = n(1964),
     C = n(762756),
     v = n(981631),
     N = n(815660),
@@ -34,11 +34,11 @@ var i = n(200651),
 let T = 'Email Verification',
     x = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
 function b() {
-    let { action: e, theme: t } = (0, a.cj)([E.Z, _.Z], () => ({
-            action: E.Z.getAction(),
+    let { action: e, theme: t } = (0, a.cj)([I.Z, _.Z], () => ({
+            action: I.Z.getAction(),
             theme: _.Z.theme
         })),
-        b = I.Z.getVerificationTypes(e),
+        b = E.Z.getVerificationTypes(e),
         [A, Z] = r.useState(0),
         L = (0, h.Z)(b);
     (0, p.Z)(
