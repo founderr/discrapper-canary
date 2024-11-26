@@ -452,7 +452,7 @@ class ew extends l.PureComponent {
                         let t = e.getGuildId();
                         null != t && (0, G.uL)((0, eg.LY)(t)), U.hP(e);
                     };
-                t ? !(0, S.Z)() && (0, j.Z)(n) : n();
+                !t || (0, S.Z)() ? n() : (0, j.Z)(n);
             }),
             ek(this, 'handleStayOnTop', (e) => {
                 U.hY(eM.KJ3.CHANNEL_CALL_POPOUT, e);
