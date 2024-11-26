@@ -6,42 +6,42 @@ var r = n(200651),
     l = n(442837),
     u = n(481060),
     c = n(607070),
-    d = n(436774),
-    f = n(70097),
-    _ = n(617136),
-    p = n(918701),
-    h = n(302245),
-    m = n(475595),
-    g = n(566078),
+    d = n(70097),
+    f = n(617136),
+    _ = n(918701),
+    p = n(302245),
+    h = n(475595),
+    m = n(566078),
+    g = n(352084),
     E = n(78826),
     v = n(341907),
     I = n(46140),
-    b = n(388032),
-    T = n(66330);
+    T = n(388032),
+    b = n(66330);
 t.Z = function (e) {
     let t;
     let { className: n, quest: a, autoplay: S = !0, learnMoreStyle: y = null } = e,
         A = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        N = i.useMemo(() => (0, m.fh)(a, m.eC.REWARD), [a]),
+        N = i.useMemo(() => (0, h.fh)(a, h.eC.REWARD), [a]),
         C = i.useCallback(
             (t) => {
                 var n;
                 (0, o.k)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
-                    (0, _._3)({
+                    (0, f._3)({
                         questId: a.id,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,
-                        questContentCTA: _.jZ.REWARD_LEARN_MORE
+                        questContentCTA: f.jZ.REWARD_LEARN_MORE
                     }),
                     (0, v.navigateToQuestHome)(e.location, e.questContent, a.id),
                     null === (n = e.onClick) || void 0 === n || n.call(e, t);
             },
             [a.id, e]
         ),
-        R = (0, h.vI)(a, I.dr.QUESTS_BAR),
+        R = (0, p.vI)(a, I.dr.QUESTS_BAR),
         O = i.useRef(null),
         D = i.useRef(S),
-        L = (0, p.Bg)(a.config);
+        L = (0, _.Bg)(a.config);
     return (
         i.useEffect(() => {
             if (null != O.current) {
@@ -56,14 +56,9 @@ t.Z = function (e) {
             ? (0, r.jsx)(E.Fl, {
                   id: 'QuestRewardTile_rewardTileNitro',
                   children: (e) =>
-                      (0, r.jsx)('div', {
+                      (0, r.jsx)(g.Z, {
                           ref: e,
-                          className: s()(T.questRewardTileAsset, T.nitroRewardTileAssetContainer),
-                          children: (0, r.jsx)(u.NitroWheelIcon, {
-                              size: 'lg',
-                              className: T.nitroRewardTileAsset,
-                              color: d.JX.PREMIUM_GUILD_BADGE_V2_BACKGROUND
-                          })
+                          className: b.questRewardTileAsset
                       })
               })
             : N.isAnimated
@@ -71,7 +66,7 @@ t.Z = function (e) {
                     id: 'QuestRewardTile_rewardTileAnimated',
                     children: (e) => {
                         var t;
-                        return (0, r.jsx)(f.Z, {
+                        return (0, r.jsx)(d.Z, {
                             ref: (t) => {
                                 (e.current = t), (O.current = t);
                             },
@@ -79,7 +74,7 @@ t.Z = function (e) {
                             loop: !0,
                             muted: !0,
                             playsInline: !0,
-                            className: T.questRewardTileAsset,
+                            className: b.questRewardTileAsset,
                             controls: !1,
                             children: (0, r.jsx)('source', {
                                 src: N.url,
@@ -93,23 +88,23 @@ t.Z = function (e) {
                     children: (e) =>
                         (0, r.jsx)('img', {
                             ref: e,
-                            alt: g.r.build(a.config).defaultReward.messages.name,
-                            className: s()(T.questRewardTileAsset, T.questRewardTileAssetStatic),
+                            alt: m.r.build(a.config).defaultReward.messages.name,
+                            className: s()(b.questRewardTileAsset, b.questRewardTileAssetStatic),
                             src: N.url
                         })
                 })),
         null == y
             ? (0, r.jsx)('div', {
-                  className: s()(T.questRewardTile, n),
+                  className: s()(b.questRewardTile, n),
                   children: t
               })
             : (0, r.jsxs)(u.Clickable, {
                   className: s()(
-                      T.questRewardTileInteractive,
-                      T.questRewardTile,
+                      b.questRewardTileInteractive,
+                      b.questRewardTile,
                       {
-                          [T.rewardHighlight]: R,
-                          [T.borderOverlay]: !R
+                          [b.rewardHighlight]: R,
+                          [b.borderOverlay]: !R
                       },
                       n
                   ),
@@ -118,19 +113,19 @@ t.Z = function (e) {
                       t,
                       R &&
                           (0, r.jsx)(u.Shine, {
-                              className: T.shine,
+                              className: b.shine,
                               shineSize: u.ShineSizes.SMALL
                           }),
                       'text' === y &&
                           (0, r.jsx)(u.Text, {
                               color: 'always-white',
                               variant: 'text-xs/normal',
-                              className: T.questRewardTileDetailsLearnMore,
-                              children: b.intl.format(b.t.DYAleX, {})
+                              className: b.questRewardTileDetailsLearnMore,
+                              children: T.intl.format(T.t.DYAleX, {})
                           }),
                       'icon' === y &&
                           (0, r.jsx)('div', {
-                              className: T.questRewardTileDetailsLearnMore,
+                              className: b.questRewardTileDetailsLearnMore,
                               children: (0, r.jsx)(u.CircleInformationIcon, {
                                   size: 'xxs',
                                   color: u.tokens.colors.WHITE.css

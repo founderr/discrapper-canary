@@ -6,7 +6,5 @@ e.exports = {
     questRewardTileAsset: 'questRewardTileAsset_cc6d33',
     questRewardTileAssetStatic: 'questRewardTileAssetStatic_cc6d33',
     questRewardTileDetailsLearnMore: 'questRewardTileDetailsLearnMore_cc6d33',
-    shine: 'shine_cc6d33',
-    nitroRewardTileAssetContainer: 'nitroRewardTileAssetContainer_cc6d33',
-    nitroRewardTileAsset: 'nitroRewardTileAsset_cc6d33'
+    shine: 'shine_cc6d33'
 };
