@@ -1,9 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
-    },
-    i: function () {
-        return f;
+        return _;
     }
 });
 var r = n(200651),
@@ -16,23 +13,20 @@ var r = n(200651),
     c = n(388032),
     d = n(866351);
 function f(e) {
-    return e || !(a.tq || a.Em) ? c.intl.string(c.t.gV5p7O) : c.intl.string(c.t['WNk//v']);
-}
-function _(e) {
-    let { onComplete: t, onDMCheckItOutClick: u, isDM: _ } = e;
+    let { onComplete: t, onDMCheckItOutClick: u, isDM: f } = e;
     i.useEffect(() => {
         o.default.track(l.rMx.PREMIUM_GIFT_UPSELL_VIEWED, { type: 'holiday_gifting_tip' });
     }, []);
-    let p = i.useMemo(() => [() => n.e('36278').then(n.t.bind(n, 268147, 19)), () => n.e('66902').then(n.t.bind(n, 7171, 19)), () => n.e('99694').then(n.t.bind(n, 55562, 19))], []),
-        h = _ || !(a.tq || a.Em),
-        m = h ? c.intl.string(c.t.IYHmjI) : c.intl.string(c.t.kgJi9P),
-        g = h ? c.intl.string(c.t.aKD15e) : c.intl.string(c.t.g2V4X1);
+    let _ = i.useMemo(() => [() => n.e('36278').then(n.t.bind(n, 268147, 19)), () => n.e('66902').then(n.t.bind(n, 7171, 19)), () => n.e('99694').then(n.t.bind(n, 55562, 19))], []),
+        p = f || !(a.tq || a.Em),
+        h = p ? c.intl.string(c.t.IYHmjI) : c.intl.string(c.t.kgJi9P),
+        m = p ? c.intl.string(c.t.aKD15e) : c.intl.string(c.t.g2V4X1);
     return (0, r.jsxs)('div', {
         className: d.container,
         children: [
             (0, r.jsx)(s.ChainedLottieAnimation, {
                 className: d.image,
-                animationData: p
+                animationData: _
             }),
             (0, r.jsxs)('div', {
                 className: d.body,
@@ -40,12 +34,12 @@ function _(e) {
                     (0, r.jsx)(s.Heading, {
                         className: d.text,
                         variant: 'heading-sm/semibold',
-                        children: m
+                        children: h
                     }),
                     (0, r.jsx)(s.Text, {
                         className: d.text,
                         variant: 'text-sm/normal',
-                        children: f(_)
+                        children: f || !(a.tq || a.Em) ? c.intl.string(c.t.gV5p7O) : c.intl.string(c.t['WNk//v'])
                     })
                 ]
             }),
@@ -63,7 +57,7 @@ function _(e) {
                         className: d.dmButton,
                         color: s.Button.Colors.BRAND_INVERTED,
                         onClick: () => u(),
-                        children: g
+                        children: m
                     })
                 ]
             }),
@@ -71,7 +65,7 @@ function _(e) {
         ]
     });
 }
-function p(e) {
+function _(e) {
     let { onComplete: t, onDMCheckItOutClick: n, markAsDismissed: i, isDM: a } = e;
     return (0, r.jsx)(s.Popout, {
         spacing: 0,
@@ -79,7 +73,7 @@ function p(e) {
         position: 'top',
         align: 'center',
         renderPopout: (e) =>
-            (0, r.jsx)(_, {
+            (0, r.jsx)(f, {
                 ...e,
                 onComplete: () => {
                     t(), i(u.L.USER_DISMISS);

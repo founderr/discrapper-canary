@@ -2,6 +2,9 @@ n.d(t, {
     RO: function () {
         return f;
     },
+    TX: function () {
+        return h;
+    },
     Ys: function () {
         return _;
     },
@@ -75,5 +78,10 @@ function p() {
         }),
         e
     );
+}
+function h() {
+    let e = p(),
+        { enabled: t } = d.useExperiment({ location: 'useIsInSeasonalGiftingXPAndSeasonalGiftingActive' }, { autoTrackExposure: !1 });
+    return e && t;
 }
 t.ZP = d;

@@ -9,9 +9,9 @@ var r = n(200651),
     c = n(211242),
     d = n(540059),
     f = n(276444),
-    _ = n(646476),
-    p = n(599659),
-    h = n(963198),
+    _ = n(599659),
+    p = n(963198),
+    h = n(286961),
     m = n(913663),
     g = n(117530),
     E = n(594174),
@@ -20,28 +20,24 @@ var r = n(200651),
     T = n(9277),
     b = n(58995),
     S = n(897291),
-    y = n(764794),
-    A = n(241553),
+    y = n(466711),
+    A = n(764794),
     N = n(319417),
     C = n(728386),
     R = n(474936),
     O = n(553796);
 function D(e) {
     let { disabled: t, channel: n } = e,
-        { enabled: a } = _.ZP.useExperiment({ location: 'dc120b_1' }, { autoTrackExposure: !1 }),
-        s = (0, _.rK)();
-    i.useEffect(() => {
-        s && _.ZP.trackExposure({ location: 'dc120b_2' });
-    }, [s]);
-    let { enabled: o } = p.O.useExperiment({ location: 'gift-button' }),
-        l = a && s;
-    return o
+        { enabled: i } = _.O.useExperiment({ location: 'gift-button' }),
+        a = (0, h.Z)();
+    return i
         ? (0, r.jsx)(b.Z, {
               disabled: t,
               channel: n
           })
-        : l
-          ? (0, r.jsx)(A.Z, {
+        : null != a
+          ? (0, r.jsx)(y.Z, {
+                giftingPromotionConfig: a,
                 disabled: t,
                 channel: n
             })
@@ -51,7 +47,7 @@ function D(e) {
             });
 }
 t.Z = i.memo(function (e) {
-    var t, n, i, _, p, b, S, A;
+    var t, n, i, _, h, b, S, y;
     let { type: L, disabled: x, channel: w, handleSubmit: P, isEmpty: M, showAllButtons: k } = e,
         U = (0, s.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
         B = (0, s.e7)([m.Z], () => m.Z.getStickerPreview(w.id, L.drafts.type)),
@@ -63,7 +59,7 @@ t.Z = i.memo(function (e) {
         })),
         { paymentsBlocked: j } = c.Z.useExperiment({ location: 'dc120b_3' }, { autoTrackExposure: !1 }),
         H = [],
-        { enabled: Y } = h.Z.getCurrentConfig({ location: 'dc120b_4' }, { autoTrackExposure: !1 }),
+        { enabled: Y } = p.Z.getCurrentConfig({ location: 'dc120b_4' }, { autoTrackExposure: !1 }),
         W = E.default.getCurrentUser(),
         K = null !== (_ = (0, s.e7)([f.Z], () => (Y && v.ZP.isPremiumExactly(W, R.p9.TIER_2) ? f.Z.getReferralsRemaining() : 0))) && void 0 !== _ ? _ : 0,
         z = (0, s.e7)([f.Z], () => {
@@ -82,13 +78,13 @@ t.Z = i.memo(function (e) {
         J = (0, d.Q)('ChannelTextAreaButtons');
     return (!a.tq &&
         (w.isDM() &&
-            (null === (p = L.gifts) || void 0 === p ? void 0 : p.button) != null &&
+            (null === (h = L.gifts) || void 0 === h ? void 0 : h.button) != null &&
             null == F &&
-            (v.ZP.isPremiumExactly(W, R.p9.TIER_2) && X && h.Z.trackExposure({ location: 'dc120b_5' }),
+            (v.ZP.isPremiumExactly(W, R.p9.TIER_2) && X && p.Z.trackExposure({ location: 'dc120b_5' }),
             Q &&
                 H.push(
                     (0, r.jsx)(
-                        y.Z,
+                        A.Z,
                         {
                             disabled: x,
                             referralsRemaining: K,
@@ -125,7 +121,7 @@ t.Z = i.memo(function (e) {
                     'gif'
                 )
             ),
-        (null === (A = L.stickers) || void 0 === A ? void 0 : A.button) != null &&
+        (null === (y = L.stickers) || void 0 === y ? void 0 : y.button) != null &&
             null == F &&
             k &&
             H.push(

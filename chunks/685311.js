@@ -1,82 +1,148 @@
-n(47120);
-var i,
-    r,
-    s = n(200651),
-    l = n(192379),
-    a = n(120356),
-    o = n.n(a),
-    c = n(536285),
-    u = n(857458),
-    d = n(388905),
-    h = n(703656),
-    g = n(388032),
-    p = n(232186);
-((r = i || (i = {}))[(r.INITIAL = 0)] = 'INITIAL'), (r[(r.RPC_CONNECTED = 1)] = 'RPC_CONNECTED'), (r[(r.APP_OPENING = 2)] = 'APP_OPENING'), (r[(r.APP_OPENED = 3)] = 'APP_OPENED');
-t.Z = function (e) {
-    let { match: t, location: n, attemptDeepLink: i } = e,
-        [r, a] = l.useState(0);
-    l.useEffect(() => {
-        c.default.once('connected', () => {
-            a(1);
-        }),
-            c.default.once('disconnected', () => {
-                (0, h.uL)((0, u.M)());
-            }),
-            c.default.connect();
-    }, []),
-        l.useEffect(() => {
-            if (0 !== r) return;
-            let e = setTimeout(() => (0, h.uL)((0, u.M)()), 3000);
-            return () => clearTimeout(e);
-        }, [r]);
-    let m = l.useCallback(
-        async (e, t) => {
-            try {
-                a(2), await i(e, t), a(3);
-            } catch (e) {
-                console.error('Error opening deeplink', e);
-            }
-        },
-        [i]
-    );
-    if ((0, h.DB)()) return null;
-    switch (r) {
-        case 1:
-            return (0, s.jsxs)(d.ZP, {
-                children: [
-                    (0, s.jsx)(d.Dx, {
-                        className: p.marginBottom8,
-                        children: g.intl.string(g.t.qllnGh)
-                    }),
-                    (0, s.jsx)(d.DK, { children: g.intl.string(g.t.SXCxyc) }),
-                    (0, s.jsx)(d.zx, {
-                        className: p.marginTop40,
-                        onClick: () => m(t, n),
-                        children: g.intl.string(g.t.UQvCf3)
-                    }),
-                    (0, s.jsx)(d.zx, {
-                        className: o()(p.marginTop8, p.marginCenterHorz),
-                        color: d.zx.Colors.LINK,
-                        look: d.zx.Looks.LINK,
-                        onClick: () => (0, h.uL)((0, u.M)()),
-                        children: g.intl.string(g.t['2ixEBg'])
-                    })
-                ]
-            });
-        case 0:
-        case 2:
-            return (0, s.jsxs)(d.ZP, {
-                children: [(0, s.jsx)(d.Dx, { children: g.intl.string(g.t['Z+hCVV']) }), (0, s.jsx)(d.Hh, {})]
-            });
-        case 3:
-            return (0, s.jsxs)(d.ZP, {
-                children: [
-                    (0, s.jsx)(d.Dx, {
-                        className: p.marginBottom8,
-                        children: g.intl.string(g.t.csrAMD)
-                    }),
-                    (0, s.jsx)(d.DK, { children: g.intl.string(g.t.ghBJz8) })
-                ]
-            });
+n.d(t, {
+    e: function () {
+        return I;
     }
-};
+}),
+    n(47120);
+var r = n(200651),
+    i = n(192379),
+    a = n(752877),
+    s = n(442837),
+    o = n(780384),
+    l = n(481060),
+    u = n(410030),
+    c = n(607070),
+    d = n(965645),
+    f = n(362061),
+    _ = n(424496);
+let p = [
+        {
+            box: '#FFD89E',
+            ribbon: '#FF7476'
+        },
+        {
+            box: '#17B5E2',
+            ribbon: '#FFFFFF'
+        },
+        {
+            box: '#EED169',
+            ribbon: '#51A1EB'
+        },
+        {
+            box: '#509C65',
+            ribbon: '#FFC96E'
+        },
+        {
+            box: '#E4578A',
+            ribbon: '#BEC4FF'
+        },
+        {
+            box: '#AFE0FC',
+            ribbon: '#FF9356'
+        },
+        {
+            box: '#DB6D6D',
+            ribbon: '#67DA9C'
+        }
+    ],
+    h = [
+        {
+            box: '#EABB75',
+            ribbon: '#E4595C'
+        },
+        {
+            box: '#2D7AA5',
+            ribbon: '#64C7C2'
+        },
+        {
+            box: '#ECBF21',
+            ribbon: '#51A1EB'
+        },
+        {
+            box: '#439359',
+            ribbon: '#D5A24C'
+        },
+        {
+            box: '#FC90C4',
+            ribbon: '#777FCE'
+        },
+        {
+            box: '#549DC6',
+            ribbon: '#FF9356'
+        },
+        {
+            box: '#DB6F6F',
+            ribbon: '#81C29F'
+        }
+    ],
+    m = 1 / 300,
+    g = (0, a.animated)(d.Z),
+    E = (0, a.animated)(f.Z),
+    v = (0, a.animated)(l.GiftIcon);
+function I(e) {
+    let {
+            themeOverride: t,
+            hovered: n,
+            isContentDismissed: a,
+            boxColors: s = {
+                dark: p,
+                light: h
+            }
+        } = e,
+        c = (0, u.ZP)(),
+        [d, f] = (function (e) {
+            let [t, n] = i.useState(!1),
+                [r, a] = i.useState(Math.floor(7 * Math.random()));
+            return (
+                i.useEffect(() => {
+                    if (e) return;
+                    let t = Math.random() <= m;
+                    if ((n(t), !t)) {
+                        let e;
+                        do e = Math.floor(7 * Math.random());
+                        while (e === r);
+                        a(e);
+                    }
+                }, [e]),
+                [t, r]
+            );
+        })(n),
+        _ = (0, l.useSpring)({
+            reverse: !n,
+            reset: !0,
+            from: { scale: 1 },
+            to: { scale: 1.14 },
+            config: {
+                tension: 800,
+                friction: 24
+            }
+        }),
+        I = a ? f : 0,
+        T = (0, o.wj)(null != t ? t : c) ? s.dark[I] : s.light[I];
+    return !n && a
+        ? (0, r.jsx)(v, {})
+        : a && d
+          ? (0, r.jsx)(E, {
+                isDark: (0, o.wj)(c),
+                style: _
+            })
+          : (0, r.jsx)(g, {
+                boxColor: T.box,
+                ribbonColor: T.ribbon,
+                style: _
+            });
+}
+t.Z = i.memo(function (e) {
+    let { hovered: t } = e,
+        a = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
+        o = i.useMemo(() => [() => n.e('31496').then(n.t.bind(n, 347381, 19)), () => n.e('37711').then(n.t.bind(n, 891220, 19))], []);
+    return !a && t
+        ? (0, r.jsx)(l.ChainedLottieAnimation, {
+              className: _.icon,
+              animationData: o
+          })
+        : (0, r.jsx)(I, {
+              hovered: t,
+              isContentDismissed: !0
+          });
+});
