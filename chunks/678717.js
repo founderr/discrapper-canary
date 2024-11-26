@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return Q;
+            return J;
         }
     }),
     n(653041),
@@ -28,31 +28,32 @@ var v = n(392750),
     j = n(592197),
     _ = n(806240),
     T = n(789654),
-    S = n(691867),
-    y = n(916790),
-    N = n(645973),
-    I = n(903502),
-    k = n(912072),
-    E = n(272193),
-    w = n(735959),
-    Z = n(246992),
-    R = n(496025),
-    O = n(442954),
-    A = n(633001),
-    B = n(702904),
-    P = n(178821),
-    L = n(248526),
-    D = n(958328),
-    F = n(514866),
-    M = n(678639),
-    H = n(351930),
-    G = n(771751),
-    U = n(596768),
-    z = n(621060),
-    V = n(388032),
-    W = n(771466),
-    Y = n(941469);
-function K(e) {
+    S = n(719672),
+    y = n(691867),
+    N = n(916790),
+    I = n(645973),
+    k = n(903502),
+    E = n(912072),
+    w = n(272193),
+    Z = n(735959),
+    R = n(246992),
+    O = n(496025),
+    A = n(442954),
+    B = n(633001),
+    P = n(702904),
+    L = n(178821),
+    D = n(248526),
+    F = n(958328),
+    M = n(514866),
+    H = n(678639),
+    G = n(351930),
+    U = n(771751),
+    z = n(596768),
+    V = n(621060),
+    W = n(388032),
+    Y = n(771466),
+    K = n(941469);
+function X(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: a } = e,
         l = (0, d.Z)({
             minDimension: b.h,
@@ -63,10 +64,10 @@ function K(e) {
         });
     return (0, r.jsx)('div', {
         onMouseDown: l,
-        className: W.resizeHandle
+        className: Y.resizeHandle
     });
 }
-function X() {
+function q() {
     var e;
     let t = a.useMemo(() => {
             let e = [
@@ -78,17 +79,17 @@ function X() {
                 {
                     id: 'triggers',
                     name: 'Triggers',
-                    render: () => (0, r.jsx)(U.Z, {})
+                    render: () => (0, r.jsx)(z.Z, {})
                 },
                 {
                     id: 'stores',
                     name: 'Stores',
-                    render: () => (0, r.jsx)(M.Z, {})
+                    render: () => (0, r.jsx)(H.Z, {})
                 },
                 {
                     id: 'dispatcher',
                     name: 'Dispatcher',
-                    render: () => (0, r.jsx)(y.Z, {})
+                    render: () => (0, r.jsx)(N.Z, {})
                 }
             ];
             return (
@@ -96,18 +97,18 @@ function X() {
                     (e.push({
                         id: 'quick_actions',
                         name: 'Quick Actions',
-                        render: () => (0, r.jsx)(F.Z, {})
+                        render: () => (0, r.jsx)(M.Z, {})
                     }),
                     e.push({
                         id: 'perks_demos',
                         name: 'Perks Demos',
-                        render: () => (0, r.jsx)(L.Z, {})
+                        render: () => (0, r.jsx)(D.Z, {})
                     })),
                 x.Z.isDeveloper &&
                     (e.push({
                         id: 'end_to_end_encryption',
                         name: 'E2EE',
-                        render: () => (0, r.jsx)(N.Z, {})
+                        render: () => (0, r.jsx)(I.Z, {})
                     }),
                     e.push({
                         id: 'clans',
@@ -117,22 +118,22 @@ function X() {
                     e.push({
                         id: 'performance',
                         name: 'Performance',
-                        render: () => (0, r.jsx)(P.Z, {})
+                        render: () => (0, r.jsx)(L.Z, {})
                     }),
                     e.push({
                         id: 'feedback',
                         name: 'Feedback',
-                        render: () => (0, r.jsx)(I.Z, {})
+                        render: () => (0, r.jsx)(k.Z, {})
                     }),
                     e.push({
                         id: 'overlay',
                         name: 'Overlay v3',
-                        render: () => (0, r.jsx)(A.Z, {})
+                        render: () => (0, r.jsx)(B.Z, {})
                     })),
                 e.push({
                     id: 'intl',
                     name: 'Intl',
-                    render: () => (0, r.jsx)(w.Z, {})
+                    render: () => (0, r.jsx)(Z.Z, {})
                 }),
                 e.push({
                     id: 'colors',
@@ -142,32 +143,32 @@ function X() {
                 e.push({
                     id: 'design_toggles',
                     name: 'Design Toggles',
-                    render: () => (0, r.jsx)(S.Z, {})
+                    render: () => (0, r.jsx)(y.Z, {})
                 }),
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
-                    render: () => (0, r.jsx)(k.Z, { devSettingsCategory: g.zU.OVERLAYS })
+                    render: () => (0, r.jsx)(E.Z, { devSettingsCategory: g.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
                     name: 'Messaging',
-                    render: () => (0, r.jsx)(R.Z, {})
+                    render: () => (0, r.jsx)(O.Z, {})
                 }),
                 e.push({
                     id: 'reporting',
                     name: 'Reporting',
-                    render: () => (0, r.jsx)(k.Z, { devSettingsCategory: g.zU.REPORTING })
+                    render: () => (0, r.jsx)(E.Z, { devSettingsCategory: g.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
                     name: 'Permissions',
-                    render: () => (0, r.jsx)(D.Z, {})
+                    render: () => (0, r.jsx)(F.Z, {})
                 }),
                 e.push({
                     id: 'modals',
                     name: 'Modals',
-                    render: () => (0, r.jsx)(O.Z, {})
+                    render: () => (0, r.jsx)(A.Z, {})
                 }),
                 e.push({
                     id: 'affinity',
@@ -184,27 +185,32 @@ function X() {
                     (e.push({
                         id: 'trials',
                         name: 'Trials',
-                        render: () => (0, r.jsx)(G.Z, {})
+                        render: () => (0, r.jsx)(U.Z, {})
                     }),
                     e.push({
                         id: 'payments',
                         name: 'Payments',
-                        render: () => (0, r.jsx)(B.Z, {})
+                        render: () => (0, r.jsx)(P.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',
                         name: 'Subscriptions',
-                        render: () => (0, r.jsx)(H.Z, {})
+                        render: () => (0, r.jsx)(G.Z, {})
                     }),
                     e.push({
                         id: 'billing',
                         name: 'Billing',
                         render: () => (0, r.jsx)(j.Z, {})
+                    }),
+                    e.push({
+                        id: 'dcf',
+                        name: 'DCF',
+                        render: () => (0, r.jsx)(S.Z, {})
                     })),
                 e.push({
                     id: 'gifting_intent',
                     name: 'Gifting Intent',
-                    render: () => (0, r.jsx)(E.Z, {})
+                    render: () => (0, r.jsx)(w.Z, {})
                 }),
                 e
             );
@@ -213,7 +219,7 @@ function X() {
             TabBar: n,
             renderSelectedTab: l,
             selectedTabId: i
-        } = (0, z.Z)(
+        } = (0, V.Z)(
             {
                 tabs: t,
                 initialSelectedTabId: null !== (e = b.Z.lastOpenTabId) && void 0 !== e ? e : void 0,
@@ -229,13 +235,13 @@ function X() {
             name: o.ImpressionNames.VIEW_PANEL_DEVTOOLS,
             properties: { panel: i }
         }),
-        (0, r.jsxs)(Z.Gk, {
+        (0, r.jsxs)(R.Gk, {
             children: [
                 (0, r.jsxs)(m.ZP, {
-                    className: Y.headerBar,
+                    className: K.headerBar,
                     toolbar: (0, r.jsx)(m.ZP.Icon, {
                         icon: s.XSmallIcon,
-                        tooltip: V.intl.string(V.t.cpT0Cg),
+                        tooltip: W.intl.string(W.t.cpT0Cg),
                         onClick: p.SO
                     }),
                     children: [
@@ -248,12 +254,12 @@ function X() {
                 }),
                 (0, r.jsx)(n, {}),
                 l(),
-                (0, r.jsx)(Z.Br, { className: W.layerContainer })
+                (0, r.jsx)(R.Br, { className: Y.layerContainer })
             ]
         })
     );
 }
-function q() {
+function $() {
     let e = a.useRef(null),
         t = (0, c.e7)([b.Z], () => b.Z.sidebarWidth),
         [n, l] = a.useState(null),
@@ -265,40 +271,40 @@ function q() {
         ? null
         : (0, r.jsxs)('div', {
               ref: e,
-              className: i()(W.container),
+              className: i()(Y.container),
               style: {
                   minWidth: b.h,
                   width: n
               },
               children: [
-                  (0, r.jsx)(K, {
+                  (0, r.jsx)(X, {
                       resizableNode: e,
                       onResize: l,
                       onResizeEnd: o
                   }),
                   (0, r.jsx)('div', {
-                      className: W.sidebarContent,
-                      children: (0, r.jsx)(X, {})
+                      className: Y.sidebarContent,
+                      children: (0, r.jsx)(q, {})
                   })
               ]
           });
 }
-function $() {
+function Q() {
     let e = (0, c.e7)([b.Z], () => b.Z.displayTools);
     return e
         ? (0, r.jsx)('div', {
-              className: i()(W.container, W.mobileContainerExpanded),
+              className: i()(Y.container, Y.mobileContainerExpanded),
               children: (0, r.jsx)('div', {
-                  className: W.sidebarContent,
-                  children: (0, r.jsx)(X, {})
+                  className: Y.sidebarContent,
+                  children: (0, r.jsx)(q, {})
               })
           })
         : (0, r.jsx)('div', {
-              className: W.container,
+              className: Y.container,
               children: (0, r.jsx)(s.Clickable, {
                   onClick: p.SO,
                   children: (0, r.jsxs)(m.ZP, {
-                      className: i()(Y.headerBar, W.mobileHeaderCollapsed),
+                      className: i()(K.headerBar, Y.mobileHeaderCollapsed),
                       toolbar: (0, r.jsx)(f.Z, { direction: f.Z.Directions.UP }),
                       children: [
                           (0, r.jsx)(m.ZP.Icon, {
@@ -311,7 +317,7 @@ function $() {
               })
           });
 }
-function Q(e) {
+function J(e) {
     let { mobile: t } = e;
-    return t ? (0, r.jsx)($, {}) : (0, r.jsx)(q, {});
+    return t ? (0, r.jsx)(Q, {}) : (0, r.jsx)($, {});
 }
