@@ -17,7 +17,6 @@ function r(e, t, n) {
 }
 let a = {
         enable_recently_active: 'Enable recently active channels',
-        happening_main_tab: 'Enable Happening tab containing summaries',
         theme_setting_in_account_sheet: 'Show theme settings in the Account action sheet',
         cozy_header: 'Cozy header',
         mobile_profile_effect_debug_controls: 'mobile_profile_effect_debug_controls',
