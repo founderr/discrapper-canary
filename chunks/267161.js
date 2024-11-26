@@ -22,8 +22,8 @@ var i = n(200651),
     g = n(592125),
     f = n(430824),
     _ = n(944486),
-    E = n(998502),
-    I = n(950796),
+    I = n(998502),
+    E = n(950796),
     C = n(981631),
     v = n(741764),
     N = n(553512);
@@ -41,7 +41,7 @@ function T() {
                     guild: n,
                     size: d.Z.Sizes.SMALLER,
                     active: !0,
-                    className: N.icon
+                    className: N.guildIcon
                 }),
                 (0, i.jsx)(s.Text, {
                     variant: 'text-sm/medium',
@@ -53,36 +53,41 @@ function T() {
 }
 function x() {
     r.useLayoutEffect(() => {
-        E.ZP.setMinimumSize(v.J, v.N);
+        I.ZP.setMinimumSize(v.J, v.N);
     }, []);
     let e = S((e) => e.isOpen),
         { hasBugReporterAccess: t } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     return (
         r.useLayoutEffect(() => {
-            E.ZP.setMinimumSize(v.J, v.N);
+            I.ZP.setMinimumSize(v.J, v.N);
         }, []),
-        (0, i.jsx)(I.T, {
+        (0, i.jsx)(E.T, {
             leading:
                 !e &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Clickable, {
+                            className: N.button,
                             onClick: () => {
                                 S.setState({ isOpen: !S.getState().isOpen });
                             },
                             children: (0, i.jsx)(b, {})
                         }),
                         (0, i.jsx)(s.Clickable, {
+                            className: N.button,
                             onClick: () => {
                                 o.Z.open(C.oAB.ACCOUNT);
                             },
-                            children: (0, i.jsx)(s.SettingsIcon, { size: 'xs' })
+                            children: (0, i.jsx)(s.SettingsIcon, {
+                                size: 'xs',
+                                color: 'currentColor'
+                            })
                         })
                     ]
                 }),
             title: !1,
             trailing: (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(p.Z, {}), t ? (0, i.jsx)(h.Z, {}) : (0, i.jsx)(u.Z, {}), (0, i.jsx)(m.Z, {})]
+                children: [(0, i.jsx)(p.Z, { className: N.button }), t ? (0, i.jsx)(h.Z, { className: N.button }) : (0, i.jsx)(u.Z, { className: N.button }), (0, i.jsx)(m.Z, { className: N.button })]
             })
         })
     );
@@ -95,7 +100,7 @@ function b() {
         height: '24',
         viewBox: '0 0 24 24',
         fill: 'none',
-        stroke: 'var(--interactive-normal)',
+        stroke: 'currentColor',
         'stroke-width': '2',
         'stroke-linecap': 'round',
         'stroke-linejoin': 'round',

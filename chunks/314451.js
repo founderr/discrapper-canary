@@ -14,29 +14,30 @@ var i = n(200651),
     d = n(63063),
     u = n(665149),
     m = n(388032);
-function h() {
-    let e = (0, l.e7)([c.Z], () => c.Z.isDeveloper),
-        [t, h] = r.useState(!1),
-        [f, p] = r.useState(0),
-        _ = (e) => {
-            clearTimeout(f),
-                p(
+function h(e) {
+    let { className: t } = e,
+        h = (0, l.e7)([c.Z], () => c.Z.isDeveloper),
+        [f, p] = r.useState(!1),
+        [_, g] = r.useState(0),
+        E = (e) => {
+            clearTimeout(_),
+                g(
                     setTimeout(() => {
-                        h(e);
+                        p(e);
                     }, 100)
                 );
         };
     return (0, i.jsx)('div', {
-        onMouseEnter: () => _(!0),
-        onMouseLeave: () => _(!1),
+        onMouseEnter: () => E(!0),
+        onMouseLeave: () => E(!1),
         children: (0, i.jsx)(a.Popout, {
-            shouldShow: t,
+            shouldShow: f,
             animation: a.Popout.Animation.NONE,
             position: 'bottom',
             align: 'right',
             autoInvert: !1,
-            onRequestOpen: () => h(!0),
-            onRequestClose: () => h(!1),
+            onRequestOpen: () => p(!0),
+            onRequestClose: () => p(!1),
             renderPopout: () =>
                 (function (e) {
                     let { onClose: t, isDiscordDeveloper: r } = e;
@@ -75,16 +76,17 @@ function h() {
                         })
                     });
                 })({
-                    onClose: () => h(!1),
-                    isDiscordDeveloper: e
+                    onClose: () => p(!1),
+                    isDiscordDeveloper: h
                 }),
-            children: (e, t) => {
-                let { isShown: n } = t;
+            children: (e, n) => {
+                let { isShown: r } = n;
                 return (0, i.jsx)(u.JO, {
                     ...e,
                     icon: a.BugIcon,
                     'aria-label': m.intl.string(m.t.cqEoj4),
-                    selected: n
+                    selected: r,
+                    className: t
                 });
             }
         })

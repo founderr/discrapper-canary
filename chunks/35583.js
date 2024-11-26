@@ -49,7 +49,8 @@ class _ extends r.PureComponent {
                     tooltip: h.intl.string(h.t['zp9d//']),
                     foreground: f.downloadArrow,
                     background: f.cloud,
-                    icon: a.DownloadIcon
+                    icon: a.DownloadIcon,
+                    className: this.props.className
                 });
             case 'UPDATE_MANUALLY':
             case 'UPDATE_DOWNLOADED':
@@ -57,7 +58,8 @@ class _ extends r.PureComponent {
                     tooltip: h.intl.string(h.t.u18OXF),
                     foreground: f.updateIconForeground,
                     onClick: this.handleInstallDownload,
-                    icon: a.DownloadIcon
+                    icon: a.DownloadIcon,
+                    className: this.props.className
                 });
             default:
                 return null;
