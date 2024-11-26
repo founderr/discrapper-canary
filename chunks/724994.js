@@ -12,26 +12,28 @@ var r = n(24217),
     l = n(442837),
     s = n(1870);
 let o = (e, t) => {
-        var n, r, l, s, o;
-        let c = null != e.getPurchase(t.skuId),
-            d = null !== (n = t.items) && void 0 !== n ? n : [],
-            u = a()(d.map((t) => e.getPurchase(t.skuId)));
+        var n, r, l;
+        let s = null != e.getPurchase(t.skuId),
+            o = null !== (n = t.items) && void 0 !== n ? n : [],
+            c = a()(o.map((t) => e.getPurchase(t.skuId)));
         switch (null == t ? void 0 : t.type) {
             case i.Z.BUNDLE:
                 return {
-                    isPurchased: c || (d.length > 0 && u.length === d.length),
-                    isPartiallyOwnedBundle: u.length > 0 && u.length < d.length,
+                    isPurchased: s || (o.length > 0 && c.length === o.length),
+                    isPartiallyOwnedBundle: c.length > 0 && c.length < o.length,
                     isPartiallyOwnedVariantsGroup: !1
                 };
             case i.Z.VARIANTS_GROUP:
+                let d = null === (r = t.variants) || void 0 === r ? void 0 : r.every((t) => null != e.getPurchase(t.skuId)),
+                    u = (null === (l = t.variants) || void 0 === l ? void 0 : l.some((t) => null != e.getPurchase(t.skuId))) && !d;
                 return {
-                    isPurchased: null !== (s = null === (r = t.variants) || void 0 === r ? void 0 : r.every((t) => null != e.getPurchase(t.skuId))) && void 0 !== s && s,
+                    isPurchased: null != d && d,
                     isPartiallyOwnedBundle: !1,
-                    isPartiallyOwnedVariantsGroup: null !== (o = null === (l = t.variants) || void 0 === l ? void 0 : l.some((t) => null != e.getPurchase(t.skuId))) && void 0 !== o && o
+                    isPartiallyOwnedVariantsGroup: null != u && u
                 };
             default:
                 return {
-                    isPurchased: c,
+                    isPurchased: s,
                     isPartiallyOwnedBundle: !1,
                     isPartiallyOwnedVariantsGroup: !1
                 };
