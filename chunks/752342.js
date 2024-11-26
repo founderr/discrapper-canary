@@ -15,15 +15,15 @@ var l = t(481060),
     d = t(899007),
     u = t(648052),
     f = t(867176),
-    m = t(438163),
-    x = t(681837),
+    m = t(681837),
     I = t(502762),
-    p = t(530),
-    h = t(871604),
-    v = t(952124),
-    g = t(53558),
-    Z = t(544989),
-    _ = t(934861),
+    x = t(530),
+    p = t(871604),
+    h = t(952124),
+    v = t(53558),
+    g = t(544989),
+    Z = t(934861),
+    _ = t(4517),
     j = t(740628),
     b = t(398145),
     E = t(228168),
@@ -31,7 +31,7 @@ var l = t(481060),
     S = t(388032),
     T = t(171865);
 function y(e) {
-    let { user: n, currentUser: t, guildId: y, channelId: P, messageId: C, roleId: L, sessionId: A, initialSection: O, initialSubsection: M, transitionState: R, onClose: U, sourceAnalyticsLocations: B = [] } = e,
+    let { user: n, currentUser: t, guildId: y, channelId: P, messageId: C, roleId: L, sessionId: A, initialSection: O, initialSubsection: R, transitionState: M, onClose: U, sourceAnalyticsLocations: B = [] } = e,
         F = y === N.ME ? void 0 : y,
         D = (0, a.ZP)(n.id, F),
         { analyticsLocations: G } = (0, r.ZP)([...B, o.Z.SIMPLIFIED_PROFILE_MODAL]),
@@ -50,7 +50,7 @@ function y(e) {
         children: (0, i.jsx)(c.Mt, {
             value: w,
             children: (0, i.jsx)(l.ModalRoot, {
-                transitionState: R,
+                transitionState: M,
                 className: T.root,
                 hideShadow: !0,
                 'aria-label': S.intl.string(S.t['3N/J2t']),
@@ -59,9 +59,9 @@ function y(e) {
                     displayProfile: D,
                     profileType: E.y0.FULL_SIZE,
                     children: [
-                        (0, i.jsx)(Z.Z, {
+                        (0, i.jsx)(g.Z, {
                             profileType: E.y0.FULL_SIZE,
-                            children: (0, i.jsx)(v.Z, {
+                            children: (0, i.jsx)(h.Z, {
                                 user: n,
                                 guildId: F
                             })
@@ -83,30 +83,30 @@ function y(e) {
                                             channelId: P,
                                             profileType: E.y0.FULL_SIZE
                                         }),
-                                        (0, i.jsx)(m.Z, {
+                                        (0, i.jsx)(_.Z, {
                                             user: n,
                                             profileType: E.y0.FULL_SIZE,
-                                            hasEntered: R === l.ModalTransitionState.ENTERED,
+                                            hasEntered: M === l.ModalTransitionState.ENTERED,
                                             onCloseProfile: U
                                         }),
                                         (0, i.jsxs)('div', {
                                             className: T.headerButtons,
                                             children: [
-                                                (0, i.jsx)(_.c, {
+                                                (0, i.jsx)(Z.c, {
                                                     userId: n.id,
                                                     onClose: U,
                                                     className: T.messageTextButton
                                                 }),
-                                                (0, i.jsx)(_.v, {
+                                                (0, i.jsx)(Z.v, {
                                                     userId: n.id,
                                                     onClose: U,
                                                     tooltipContainerClassName: T.messageIconButton
                                                 }),
-                                                (0, i.jsx)(g.Z, {
+                                                (0, i.jsx)(v.Z, {
                                                     user: n,
                                                     guildId: F
                                                 }),
-                                                (0, i.jsx)(h.Z, { user: n })
+                                                (0, i.jsx)(p.Z, { user: n })
                                             ]
                                         })
                                     ]
@@ -116,13 +116,13 @@ function y(e) {
                         (0, i.jsxs)('div', {
                             className: T.body,
                             children: [
-                                (0, i.jsx)(p.Z, {
+                                (0, i.jsx)(x.Z, {
                                     user: n,
                                     profileType: E.y0.FULL_SIZE,
                                     nickname: s.ZP.getName(F, P, n),
                                     pronouns: null == D ? void 0 : D.pronouns,
                                     nicknameVariant: 'heading-xl/bold',
-                                    nicknameIcons: (0, i.jsx)(x.Z, { userId: n.id }),
+                                    nicknameIcons: (0, i.jsx)(m.Z, { userId: n.id }),
                                     tags: (0, i.jsx)(u.Z, {
                                         displayProfile: D,
                                         profileType: E.y0.FULL_SIZE,
@@ -137,7 +137,7 @@ function y(e) {
                                         displayProfile: D,
                                         items: k,
                                         initialSection: null != O ? O : E.oh.BOT_INFO,
-                                        initialSubsection: M,
+                                        initialSubsection: R,
                                         onClose: U
                                     })
                                 })

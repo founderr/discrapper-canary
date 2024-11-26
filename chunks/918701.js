@@ -23,9 +23,6 @@ n.d(t, {
     C9: function () {
         return eY;
     },
-    CE: function () {
-        return B;
-    },
     FE: function () {
         return eI;
     },
@@ -103,6 +100,9 @@ n.d(t, {
     },
     b7: function () {
         return eL;
+    },
+    dh: function () {
+        return B;
     },
     f2: function () {
         return eT;
@@ -254,7 +254,7 @@ function U(e, t) {
     for (let [t, n] of e) if (!G(n) && eg(n)) return n;
 }
 function B(e, t) {
-    return Array.from(e.values()).find((e) => M(t, e) && !G(e) && e_({ quest: e }));
+    return Array.from(e.values()).filter((e) => M(t, e) && !G(e) && e_({ quest: e }));
 }
 function G(e) {
     return new Date(e.config.expiresAt).valueOf() <= Date.now();

@@ -12,8 +12,8 @@ var i = t(120356),
     r = t(687158),
     d = t(576635),
     l = t(518950),
-    u = t(438163),
-    f = t(502762),
+    u = t(502762),
+    f = t(4517),
     p = t(150039),
     A = t(450734),
     b = t(225089),
@@ -43,7 +43,7 @@ function C(e) {
             pendingThemeColors: L,
             isPreview: i
         });
-    return (0, a.jsxs)(f.Z, {
+    return (0, a.jsxs)(u.Z, {
         user: n,
         displayProfile: U,
         profileType: h.y0.BITE_SIZE,
@@ -79,7 +79,7 @@ function C(e) {
                         onUpsellClick: () => (null == C ? void 0 : C({ object: Z.qAy.AVATAR }))
                     }),
                     !S &&
-                        (0, a.jsx)(u.Z, {
+                        (0, a.jsx)(f.Z, {
                             user: n,
                             profileType: h.y0.BITE_SIZE
                         })

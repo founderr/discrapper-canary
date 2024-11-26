@@ -32,7 +32,7 @@ function g() {
                   (0, i.jsx)(l.Text, {
                       variant: 'text-sm/medium',
                       color: 'interactive-active',
-                      children: m.intl.format(m.t.cM4WaG, {
+                      children: m.intl.format(m.t.zqv4nZ, {
                           hook: (e, t) =>
                               (0, i.jsx)(
                                   l.Anchor,

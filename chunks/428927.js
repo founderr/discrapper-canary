@@ -18,8 +18,8 @@ var l = t(120356),
     u = t(44315),
     f = t(565138),
     m = t(769654),
-    x = t(51144),
-    I = t(785717),
+    I = t(51144),
+    x = t(785717),
     p = t(200634),
     h = t(228168),
     v = t(981631),
@@ -29,7 +29,7 @@ var l = t(120356),
 let j = (0, s.getAvatarSize)(s.AvatarSizes.SIZE_16);
 function b(e) {
     let { user: n, guild: l, nick: a, theme: d, onSelect: m } = e,
-        I = n.hasAvatarForGuild(l.id);
+        x = n.hasAvatarForGuild(l.id);
     return (0, i.jsxs)(s.Clickable, {
         focusProps: { offset: { right: 8 } },
         className: Z.listRow,
@@ -63,18 +63,18 @@ function b(e) {
                         className: Z.listName,
                         children: l.toString()
                     }),
-                    I || null != a
+                    x || null != a
                         ? (0, i.jsxs)('div', {
                               className: _.guildNick,
                               children: [
-                                  I &&
+                                  x &&
                                       (0, i.jsx)(s.Avatar, {
                                           src: n.getAvatarURL(l.id, j),
                                           size: s.AvatarSizes.SIZE_16,
                                           className: _.guildAvatar,
                                           'aria-hidden': !0
                                       }),
-                                  null != a ? a : x.ZP.getName(n)
+                                  null != a ? a : I.ZP.getName(n)
                               ]
                           })
                         : null
@@ -85,7 +85,7 @@ function b(e) {
 }
 function E(e) {
     let { user: n, onClose: t } = e,
-        { trackUserProfileAction: l } = (0, I.KZ)(),
+        { trackUserProfileAction: l } = (0, x.KZ)(),
         { mutualGuilds: o } = (0, p.Z)(n.id),
         r = (0, d.ZP)(),
         c = (e) => {

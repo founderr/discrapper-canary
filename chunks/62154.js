@@ -15,8 +15,8 @@ var l = t(442837),
     u = t(681837),
     f = t(91433),
     m = t(944043),
-    x = t(502762),
-    I = t(530),
+    I = t(502762),
+    x = t(530),
     p = t(740628),
     h = t(643518),
     v = t(228168),
@@ -37,7 +37,7 @@ function _(e) {
     return (0, i.jsxs)('div', {
         className: Z.body,
         children: [
-            (0, i.jsx)(I.Z, {
+            (0, i.jsx)(x.Z, {
                 user: t,
                 profileType: v.y0.FULL_SIZE,
                 nickname: C,
@@ -51,7 +51,7 @@ function _(e) {
                 })
             }),
             y === g.OGo.PENDING_INCOMING &&
-                (0, i.jsx)(x.Z.Overlay, {
+                (0, i.jsx)(I.Z.Overlay, {
                     className: Z.friendRequestBannerOverlay,
                     children: (0, i.jsx)(f.Z, {
                         user: t,
@@ -71,7 +71,7 @@ function _(e) {
                     isPremiumUser: O,
                     onInteraction: T
                 }),
-            (0, i.jsx)(x.Z.Overlay, {
+            (0, i.jsx)(I.Z.Overlay, {
                 className: Z.overlay,
                 children: (0, i.jsx)(p.Z, {
                     user: t,

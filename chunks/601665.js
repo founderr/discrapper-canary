@@ -18,10 +18,10 @@ var r = n(200651),
     p = n(687158),
     h = n(899007),
     m = n(867176),
-    g = n(438163),
-    E = n(502762),
-    v = n(952124),
-    I = n(544989),
+    g = n(502762),
+    E = n(952124),
+    v = n(544989),
+    I = n(4517),
     T = n(171368),
     b = n(895697),
     S = n(161572),
@@ -63,14 +63,14 @@ function C(e) {
             children: (0, r.jsx)(s.Dialog, {
                 ref: Z,
                 'aria-label': t.username,
-                children: (0, r.jsxs)(E.Z, {
+                children: (0, r.jsxs)(g.Z, {
                     user: t,
                     displayProfile: U,
                     profileType: y.y0.BITE_SIZE,
                     children: [
-                        (0, r.jsx)(I.Z, {
+                        (0, r.jsx)(v.Z, {
                             profileType: y.y0.BITE_SIZE,
-                            children: (0, r.jsx)(v.Z, {
+                            children: (0, r.jsx)(E.Z, {
                                 user: t,
                                 guildId: C,
                                 viewProfileItem: w
@@ -106,7 +106,7 @@ function C(e) {
                                     profileType: y.y0.BITE_SIZE,
                                     onOpenProfile: w ? void 0 : V
                                 }),
-                                (0, r.jsx)(g.Z, {
+                                (0, r.jsx)(I.Z, {
                                     user: t,
                                     profileType: y.y0.BITE_SIZE,
                                     onCloseProfile: L

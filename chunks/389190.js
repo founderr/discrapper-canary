@@ -18,15 +18,15 @@ var l = t(442837),
     u = t(697927),
     f = t(171368),
     m = t(981631),
-    x = t(388032),
-    I = t(731218);
+    I = t(388032),
+    x = t(731218);
 let p = (0, o.getAvatarSize)(o.AvatarSizes.SIZE_40);
 function h(e) {
     let { user: n, status: c, onSelect: d } = e,
         u = (0, l.e7)([a.Z], () => a.Z.isMobileOnline(n.id));
     return (0, i.jsxs)(o.Clickable, {
         focusProps: { offset: { right: 8 } },
-        className: I.listRow,
+        className: x.listRow,
         onClick: d,
         onContextMenu: (e) => {
             (0, r.jW)(e, async () => {
@@ -45,12 +45,12 @@ function h(e) {
                 size: o.AvatarSizes.SIZE_40,
                 status: c,
                 isMobile: u,
-                className: I.listAvatar
+                className: x.listAvatar
             }),
             (0, i.jsx)(s.Z, {
                 user: n,
-                className: I.listName,
-                discriminatorClass: I.listDiscriminator
+                className: x.listName,
+                discriminatorClass: x.listDiscriminator
             })
         ]
     });
@@ -70,22 +70,22 @@ function v(e) {
                 });
         };
     return (0, i.jsx)(o.ScrollerThin, {
-        className: I.listScroller,
+        className: x.listScroller,
         fade: !0,
         children:
             null == l
                 ? (0, i.jsx)('div', {
-                      className: I.empty,
+                      className: x.empty,
                       children: (0, i.jsx)(o.Spinner, {})
                   })
                 : 0 === l.length
                   ? (0, i.jsxs)('div', {
-                        className: I.empty,
+                        className: x.empty,
                         children: [
-                            (0, i.jsx)('div', { className: I.emptyIconFriends }),
+                            (0, i.jsx)('div', { className: x.emptyIconFriends }),
                             (0, i.jsx)('div', {
-                                className: I.emptyText,
-                                children: x.intl.string(x.t['/5p4g4'])
+                                className: x.emptyText,
+                                children: I.intl.string(I.t['/5p4g4'])
                             })
                         ]
                     })

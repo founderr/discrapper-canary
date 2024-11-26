@@ -23,13 +23,13 @@ var r = n(200651),
     v = n(510659),
     I = n(113557),
     T = n(867176),
-    b = n(169979),
-    S = n(451834),
-    y = n(502762),
-    A = n(544989),
-    N = n(481932),
-    C = n(195387),
-    R = n(272510),
+    b = n(451834),
+    S = n(502762),
+    y = n(544989),
+    A = n(481932),
+    N = n(195387),
+    C = n(272510),
+    R = n(495804),
     O = n(171368),
     D = n(978395),
     L = n(161572),
@@ -87,7 +87,7 @@ function k(e) {
                     ref: Q,
                     'aria-label': t.username,
                     children: [
-                        (0, r.jsxs)(y.Z, {
+                        (0, r.jsxs)(S.Z, {
                             user: t,
                             displayProfile: X,
                             profileType: x.y0.BITE_SIZE,
@@ -97,23 +97,23 @@ function k(e) {
                                         style: ee,
                                         className: M.backdrop
                                     }),
-                                (0, r.jsxs)(A.Z, {
+                                (0, r.jsxs)(y.Z, {
                                     profileType: x.y0.BITE_SIZE,
                                     children: [
-                                        (0, r.jsx)(C.Z, {
+                                        (0, r.jsx)(N.Z, {
                                             shouldShowTooltip: null === $.interactionType,
                                             user: t,
                                             guildId: k,
                                             channelId: U,
                                             onClose: Z
                                         }),
-                                        (0, r.jsx)(N.Z, {
+                                        (0, r.jsx)(A.Z, {
                                             shouldShowTooltip: null === $.interactionType,
                                             profileType: x.y0.BITE_SIZE,
                                             user: t
                                         }),
                                         t.id !== n.id &&
-                                            (0, r.jsx)(R.Z, {
+                                            (0, r.jsx)(C.Z, {
                                                 user: t,
                                                 guildId: k,
                                                 viewProfileItem: V
@@ -142,7 +142,7 @@ function k(e) {
                                             guildId: k,
                                             profileType: x.y0.BITE_SIZE
                                         }),
-                                        (0, r.jsx)(S.Z, {
+                                        (0, r.jsx)(b.Z, {
                                             userId: t.id,
                                             className: M.toast,
                                             onClose: Z
@@ -156,7 +156,7 @@ function k(e) {
                                             profileType: x.y0.BITE_SIZE,
                                             onOpenProfile: V ? void 0 : et
                                         }),
-                                        (0, r.jsx)(b.Z, {
+                                        (0, r.jsx)(R.Z, {
                                             location: 'UserProfilePopout',
                                             user: t,
                                             guildId: k,

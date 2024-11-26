@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return x;
+        return I;
     }
 });
 var i = t(200651);
@@ -15,8 +15,8 @@ var l = t(399606),
     u = t(709054),
     f = t(388032),
     m = t(181402);
-function x(e) {
-    let { userId: n, guildId: t, textClassName: x, tooltipDelay: I } = e,
+function I(e) {
+    let { userId: n, guildId: t, textClassName: I, tooltipDelay: x } = e,
         p = (0, l.e7)([c.default], () => c.default.locale),
         h = (0, l.e7)([d.Z], () => (null != t ? d.Z.getGuild(t) : null)),
         v = (0, l.e7)([a.ZP], () => (null != t ? a.ZP.getMember(t, n) : null)),
@@ -25,7 +25,7 @@ function x(e) {
     return null == h || null == v
         ? (0, i.jsx)(o.Text, {
               variant: 'text-sm/normal',
-              className: x,
+              className: I,
               children: g
           })
         : (0, i.jsxs)('div', {
@@ -36,7 +36,7 @@ function x(e) {
                       children: [
                           (0, i.jsx)(o.Tooltip, {
                               text: f.intl.string(f.t.uvGmCw),
-                              delay: I,
+                              delay: x,
                               children: (e) =>
                                   (0, i.jsx)(o.ClydeIcon, {
                                       size: 'custom',
@@ -49,7 +49,7 @@ function x(e) {
                           }),
                           (0, i.jsx)(o.Text, {
                               variant: 'text-sm/normal',
-                              className: x,
+                              className: I,
                               children: g
                           })
                       ]
@@ -60,7 +60,7 @@ function x(e) {
                       children: [
                           (0, i.jsx)(o.Tooltip, {
                               text: h.name,
-                              delay: I,
+                              delay: x,
                               children: (e) =>
                                   (0, i.jsx)(s.Z, {
                                       ...e,
@@ -70,7 +70,7 @@ function x(e) {
                           }),
                           (0, i.jsx)(o.Text, {
                               variant: 'text-sm/normal',
-                              className: x,
+                              className: I,
                               children: Z
                           })
                       ]

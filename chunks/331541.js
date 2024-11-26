@@ -30,15 +30,15 @@ var i = n(200651),
     A = n(899007),
     Z = n(648052),
     L = n(867176),
-    y = n(438163),
-    P = n(537006),
-    O = n(483424),
-    R = n(681837),
-    j = n(502762),
-    D = n(530),
-    M = n(544989),
-    w = n(309494),
-    k = n(969205),
+    y = n(537006),
+    P = n(483424),
+    O = n(681837),
+    R = n(502762),
+    j = n(530),
+    D = n(544989),
+    M = n(309494),
+    w = n(969205),
+    k = n(4517),
     U = n(171368),
     G = n(420654),
     B = n(695346),
@@ -329,16 +329,16 @@ function es(e) {
             children: (0, i.jsx)(c.Dialog, {
                 ref: em,
                 'aria-label': z.username,
-                children: (0, i.jsxs)(j.Z, {
+                children: (0, i.jsxs)(R.Z, {
                     className: en.themeContainer,
                     user: z,
                     displayProfile: ec,
                     profileType: ee.y0.BITE_SIZE,
                     children: [
                         !eS &&
-                            (0, i.jsx)(M.Z, {
+                            (0, i.jsx)(D.Z, {
                                 profileType: ee.y0.BITE_SIZE,
-                                children: (0, i.jsx)(k.Z, {
+                                children: (0, i.jsx)(w.Z, {
                                     userId: z.id,
                                     onClose: q
                                 })
@@ -357,7 +357,7 @@ function es(e) {
                                     profileType: ee.y0.BITE_SIZE,
                                     onOpenProfile: eo ? void 0 : eb
                                 }),
-                                (0, i.jsx)(y.Z, {
+                                (0, i.jsx)(k.Z, {
                                     user: z,
                                     profileType: ee.y0.BITE_SIZE,
                                     onCloseProfile: q
@@ -372,7 +372,7 @@ function es(e) {
                         (0, i.jsxs)(c.Scroller, {
                             className: en.body,
                             children: [
-                                (0, i.jsx)(D.Z, {
+                                (0, i.jsx)(j.Z, {
                                     user: z,
                                     className: en.username,
                                     profileType: ee.y0.BITE_SIZE,
@@ -386,8 +386,8 @@ function es(e) {
                                     }),
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, i.jsx)(R.Z, { userId: z.id }),
-                                            (0, i.jsx)(w.Z, {
+                                            (0, i.jsx)(O.Z, { userId: z.id }),
+                                            (0, i.jsx)(M.Z, {
                                                 user: z,
                                                 isHovering: ep
                                             })
@@ -401,11 +401,11 @@ function es(e) {
                                     onClose: q
                                 }),
                                 eT &&
-                                    (0, i.jsx)(P.Z, {
+                                    (0, i.jsx)(y.Z, {
                                         isPremiumUser: ex,
                                         onInteraction: q
                                     }),
-                                (0, i.jsx)(O.Z, {
+                                (0, i.jsx)(P.Z, {
                                     user: z,
                                     currentUser: z,
                                     onClose: q
@@ -413,7 +413,7 @@ function es(e) {
                                 (0, i.jsxs)('div', {
                                     className: en.menus,
                                     children: [
-                                        (0, i.jsx)(j.Z.Overlay, {
+                                        (0, i.jsx)(R.Z.Overlay, {
                                             className: en.menuOverlay,
                                             children: (0, i.jsxs)(Q.PB, {
                                                 id: 'profile-'.concat(z.id),
@@ -536,7 +536,7 @@ function es(e) {
                                                 ]
                                             })
                                         }),
-                                        (0, i.jsx)(j.Z.Overlay, {
+                                        (0, i.jsx)(R.Z.Overlay, {
                                             className: en.menuOverlay,
                                             children: (0, i.jsxs)(Q.PB, {
                                                 id: 'account-'.concat(z.id),

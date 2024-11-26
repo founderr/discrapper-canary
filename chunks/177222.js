@@ -21,13 +21,13 @@ var i = n(200651),
     x = n(510659),
     _ = n(113557),
     v = n(867176),
-    I = n(169979),
-    E = n(451834),
-    b = n(502762),
-    N = n(952124),
-    Z = n(544989),
-    S = n(481932),
-    T = n(272510),
+    I = n(451834),
+    E = n(502762),
+    b = n(952124),
+    N = n(544989),
+    Z = n(481932),
+    S = n(272510),
+    T = n(495804),
     j = n(171368),
     A = n(348540),
     y = n(179142),
@@ -71,7 +71,7 @@ function k(e) {
             value: U,
             children: (0, i.jsx)(x.NJ, {
                 value: V,
-                children: (0, i.jsxs)(b.Z, {
+                children: (0, i.jsxs)(E.Z, {
                     ref: G,
                     user: t,
                     displayProfile: D,
@@ -85,14 +85,14 @@ function k(e) {
                             }),
                         (0, i.jsxs)(a.u2, {
                             children: [
-                                (0, i.jsxs)(Z.Z, {
+                                (0, i.jsxs)(N.Z, {
                                     profileType: P.y0.PANEL,
                                     children: [
-                                        (0, i.jsx)(S.Z, {
+                                        (0, i.jsx)(Z.Z, {
                                             user: t,
                                             profileType: P.y0.PANEL
                                         }),
-                                        t.bot ? (0, i.jsx)(N.Z, { user: t }) : (0, i.jsx)(T.Z, { user: t })
+                                        t.bot ? (0, i.jsx)(b.Z, { user: t }) : (0, i.jsx)(S.Z, { user: t })
                                     ]
                                 }),
                                 (0, i.jsxs)('header', {
@@ -105,7 +105,7 @@ function k(e) {
                                             animateOnHover: !F,
                                             className: L.banner
                                         }),
-                                        (0, i.jsx)(E.Z, {
+                                        (0, i.jsx)(I.Z, {
                                             userId: t.id,
                                             className: L.toast
                                         }),
@@ -117,7 +117,7 @@ function k(e) {
                                             profileType: P.y0.PANEL,
                                             onOpenProfile: O ? void 0 : W
                                         }),
-                                        (0, i.jsx)(I.Z, {
+                                        (0, i.jsx)(T.Z, {
                                             location: 'UserProfilePanel',
                                             user: t,
                                             channelId: k.id,
