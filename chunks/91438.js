@@ -31,67 +31,53 @@ var t;
         {
             1: [
                 function (e, t, n) {
-                    var r =
-                        (this && this.__importDefault) ||
-                        function (e) {
-                            return e && e.__esModule ? e : { default: e };
-                        };
-                    Object.defineProperty(n, '__esModule', { value: !0 }), (n.PromiseGlobal = void 0);
-                    var i = r(e('promise-polyfill')),
-                        o = 'undefined' != typeof Promise ? Promise : i.default;
-                    n.PromiseGlobal = o;
-                },
-                { 'promise-polyfill': 68 }
-            ],
-            2: [
-                function (e, t, n) {
-                    var r = e('./lib/promise'),
-                        i = {};
-                    function o(e) {
+                    var r = {};
+                    function i(e) {
                         var t,
                             n = JSON.stringify(e);
-                        if (!e.forceScriptReload && (t = i[n])) return t;
-                        var o = document.createElement('script'),
-                            a = e.dataAttributes || {},
-                            s = e.container || document.head;
+                        if (!e.forceScriptReload && (t = r[n])) return t;
+                        var i = document.createElement('script'),
+                            o = e.dataAttributes || {},
+                            a = e.container || document.head;
                         return (
-                            (o.src = e.src),
-                            (o.id = e.id || ''),
-                            (o.async = !0),
-                            e.crossorigin && o.setAttribute('crossorigin', '' + e.crossorigin),
-                            Object.keys(a).forEach(function (e) {
-                                o.setAttribute('data-' + e, '' + a[e]);
+                            (i.src = e.src),
+                            (i.id = e.id || ''),
+                            (i.async = !0),
+                            e.type && i.setAttribute('type', ''.concat(e.type)),
+                            e.crossorigin && i.setAttribute('crossorigin', ''.concat(e.crossorigin)),
+                            Object.keys(o).forEach(function (e) {
+                                i.setAttribute('data-'.concat(e), ''.concat(o[e]));
                             }),
-                            (t = new r.PromiseGlobal(function (t, n) {
-                                o.addEventListener('load', function () {
-                                    t(o);
+                            (t = new Promise(function (t, n) {
+                                i.addEventListener('load', function () {
+                                    t(i);
                                 }),
-                                    o.addEventListener('error', function () {
-                                        n(Error(e.src + ' failed to load.'));
+                                    i.addEventListener('error', function () {
+                                        n(Error(''.concat(e.src, ' failed to load.')));
                                     }),
-                                    o.addEventListener('abort', function () {
-                                        n(Error(e.src + ' has aborted.'));
+                                    i.addEventListener('abort', function () {
+                                        n(Error(''.concat(e.src, ' has aborted.')));
                                     }),
-                                    s.appendChild(o);
+                                    a.appendChild(i);
                             })),
-                            (i[n] = t),
+                            (r[n] = t),
                             t
                         );
                     }
-                    (o.clearCache = function () {
-                        i = {};
+                    (i.clearCache = function () {
+                        r = {};
                     }),
-                        (t.exports = o);
+                        (t.exports = i);
                 },
-                { './lib/promise': 1 }
+                {}
             ],
-            3: [
+            2: [
                 function (e, t, n) {
                     t.exports = e('./dist/load-script');
                 },
-                { './dist/load-script': 2 }
+                { './dist/load-script': 1 }
             ],
-            4: [
+            3: [
                 function (e, t, n) {
                     t.exports = function (e) {
                         return (e = e || window.navigator.userAgent), /Android/i.test(e);
@@ -99,7 +85,7 @@ var t;
                 },
                 {}
             ],
-            5: [
+            4: [
                 function (e, t, n) {
                     t.exports = function (e) {
                         return (e = e || window.navigator.userAgent), /CrOS/i.test(e);
@@ -107,7 +93,7 @@ var t;
                 },
                 {}
             ],
-            6: [
+            5: [
                 function (e, t, n) {
                     var r = e('./is-edge'),
                         i = e('./is-samsung'),
@@ -119,14 +105,14 @@ var t;
                     };
                 },
                 {
-                    './is-duckduckgo': 7,
-                    './is-edge': 8,
-                    './is-opera': 18,
-                    './is-samsung': 19,
-                    './is-silk': 20
+                    './is-duckduckgo': 6,
+                    './is-edge': 7,
+                    './is-opera': 16,
+                    './is-samsung': 17,
+                    './is-silk': 18
                 }
             ],
-            7: [
+            6: [
                 function (e, t, n) {
                     t.exports = function (e) {
                         return -1 !== (e = e || window.navigator.userAgent).indexOf('DuckDuckGo/');
@@ -134,15 +120,15 @@ var t;
                 },
                 {}
             ],
-            8: [
+            7: [
                 function (e, t, n) {
                     t.exports = function (e) {
-                        return -1 !== (e = e || window.navigator.userAgent).indexOf('Edge/');
+                        return -1 !== (e = e || window.navigator.userAgent).indexOf('Edge/') || -1 !== e.indexOf('Edg/');
                     };
                 },
                 {}
             ],
-            9: [
+            8: [
                 function (e, t, n) {
                     t.exports = function (e) {
                         return (e = e || window.navigator.userAgent), /Firefox/i.test(e);
@@ -150,15 +136,7 @@ var t;
                 },
                 {}
             ],
-            10: [
-                function (e, t, n) {
-                    t.exports = function (e) {
-                        return -1 !== (e = e || window.navigator.userAgent).indexOf('MSIE 9');
-                    };
-                },
-                {}
-            ],
-            11: [
+            9: [
                 function (e, t, n) {
                     t.exports = function (e) {
                         return (e = e || window.navigator.userAgent), /FxiOS/i.test(e);
@@ -166,7 +144,7 @@ var t;
                 },
                 {}
             ],
-            12: [
+            10: [
                 function (e, t, n) {
                     var r = e('./is-ios');
                     t.exports = function (e) {
@@ -174,9 +152,9 @@ var t;
                         return r((e = e || window.navigator.userAgent)) && ((t = e), /\bGSA\b/.test(t));
                     };
                 },
-                { './is-ios': 16 }
+                { './is-ios': 14 }
             ],
-            13: [
+            11: [
                 function (e, t, n) {
                     var r = e('./is-ios'),
                         i = e('./is-ios-firefox'),
@@ -187,11 +165,11 @@ var t;
                     };
                 },
                 {
-                    './is-ios': 16,
-                    './is-ios-firefox': 11
+                    './is-ios': 14,
+                    './is-ios-firefox': 9
                 }
             ],
-            14: [
+            12: [
                 function (e, t, n) {
                     var r = e('./is-ios'),
                         i = e('./is-ios-google-search-app');
@@ -201,20 +179,20 @@ var t;
                     };
                 },
                 {
-                    './is-ios': 16,
-                    './is-ios-google-search-app': 12
+                    './is-ios': 14,
+                    './is-ios-google-search-app': 10
                 }
             ],
-            15: [
+            13: [
                 function (e, t, n) {
                     var r = e('./is-ios-webview');
                     t.exports = function (e, t) {
                         return (t = void 0 !== t ? t : window.statusbar.visible), r(e) && t;
                     };
                 },
-                { './is-ios-webview': 14 }
+                { './is-ios-webview': 12 }
             ],
-            16: [
+            14: [
                 function (e, t, n) {
                     var r = e('./is-ipados');
                     t.exports = function (e, t, n) {
@@ -223,9 +201,9 @@ var t;
                         return t ? i || r(e, n) : i;
                     };
                 },
-                { './is-ipados': 17 }
+                { './is-ipados': 15 }
             ],
-            17: [
+            15: [
                 function (e, t, n) {
                     t.exports = function (e, t) {
                         return (e = e || window.navigator.userAgent), (t = t || window.document), /Mac|iPad/i.test(e) && 'ontouchend' in t;
@@ -233,7 +211,7 @@ var t;
                 },
                 {}
             ],
-            18: [
+            16: [
                 function (e, t, n) {
                     t.exports = function (e) {
                         return -1 !== (e = e || window.navigator.userAgent).indexOf('OPR/') || -1 !== e.indexOf('Opera/') || -1 !== e.indexOf('OPT/');
@@ -241,7 +219,7 @@ var t;
                 },
                 {}
             ],
-            19: [
+            17: [
                 function (e, t, n) {
                     t.exports = function (e) {
                         return (e = e || window.navigator.userAgent), /SamsungBrowser/i.test(e);
@@ -249,7 +227,7 @@ var t;
                 },
                 {}
             ],
-            20: [
+            18: [
                 function (e, t, n) {
                     t.exports = function (e) {
                         return -1 !== (e = e || window.navigator.userAgent).indexOf('Silk/');
@@ -257,7 +235,7 @@ var t;
                 },
                 {}
             ],
-            21: [
+            19: [
                 function (e, t, n) {
                     var r = e('./is-android'),
                         i = e('./is-ios-firefox'),
@@ -274,81 +252,75 @@ var t;
                     };
                 },
                 {
-                    './is-android': 4,
-                    './is-chrome': 6,
-                    './is-duckduckgo': 7,
-                    './is-ios-firefox': 11,
-                    './is-ios-webview': 14,
-                    './is-samsung': 19
+                    './is-android': 3,
+                    './is-chrome': 5,
+                    './is-duckduckgo': 6,
+                    './is-ios-firefox': 9,
+                    './is-ios-webview': 12,
+                    './is-samsung': 17
                 }
             ],
-            22: [
+            20: [
                 function (e, t, n) {
                     t.exports = e('./dist/is-android');
                 },
-                { './dist/is-android': 4 }
+                { './dist/is-android': 3 }
             ],
-            23: [
+            21: [
                 function (e, t, n) {
                     t.exports = e('./dist/is-chrome-os');
                 },
-                { './dist/is-chrome-os': 5 }
+                { './dist/is-chrome-os': 4 }
             ],
-            24: [
+            22: [
                 function (e, t, n) {
                     t.exports = e('./dist/is-chrome');
                 },
-                { './dist/is-chrome': 6 }
+                { './dist/is-chrome': 5 }
             ],
-            25: [
+            23: [
                 function (e, t, n) {
                     t.exports = e('./dist/is-firefox');
                 },
-                { './dist/is-firefox': 9 }
+                { './dist/is-firefox': 8 }
             ],
-            26: [
-                function (e, t, n) {
-                    t.exports = e('./dist/is-ie9');
-                },
-                { './dist/is-ie9': 10 }
-            ],
-            27: [
+            24: [
                 function (e, t, n) {
                     t.exports = e('./dist/is-ios-safari');
                 },
-                { './dist/is-ios-safari': 13 }
+                { './dist/is-ios-safari': 11 }
             ],
-            28: [
+            25: [
                 function (e, t, n) {
                     t.exports = e('./dist/is-ios-webview');
                 },
-                { './dist/is-ios-webview': 14 }
+                { './dist/is-ios-webview': 12 }
             ],
-            29: [
+            26: [
                 function (e, t, n) {
                     t.exports = e('./dist/is-ios-wkwebview');
                 },
-                { './dist/is-ios-wkwebview': 15 }
+                { './dist/is-ios-wkwebview': 13 }
             ],
-            30: [
+            27: [
                 function (e, t, n) {
                     t.exports = e('./dist/is-ios');
                 },
-                { './dist/is-ios': 16 }
+                { './dist/is-ios': 14 }
             ],
-            31: [
+            28: [
                 function (e, t, n) {
                     t.exports = e('./dist/is-samsung');
                 },
-                { './dist/is-samsung': 19 }
+                { './dist/is-samsung': 17 }
             ],
-            32: [
+            29: [
                 function (e, t, n) {
                     t.exports = e('./dist/supports-popups');
                 },
-                { './dist/supports-popups': 21 }
+                { './dist/supports-popups': 19 }
             ],
-            33: [
+            30: [
                 function (e, t, n) {
                     var r = (function () {
                         function e() {
@@ -387,7 +359,7 @@ var t;
                 },
                 {}
             ],
-            34: [
+            31: [
                 function (e, t, n) {
                     var r = 'undefined' != typeof Promise ? Promise : null,
                         i = (function () {
@@ -493,7 +465,7 @@ var t;
                 },
                 {}
             ],
-            35: [
+            32: [
                 function (e, t, n) {
                     var r = e('./lib/set-attributes'),
                         i = e('./lib/default-attributes'),
@@ -501,17 +473,17 @@ var t;
                     t.exports = function (e) {
                         void 0 === e && (e = {});
                         var t = document.createElement('iframe'),
-                            n = o.assign({}, i.defaultAttributes, e);
-                        return n.style && 'string' != typeof n.style && (o.assign(t.style, n.style), delete n.style), r.setAttributes(t, n), !t.getAttribute('id') && (t.id = t.name), t;
+                            n = (0, o.assign)({}, i.defaultAttributes, e);
+                        return n.style && 'string' != typeof n.style && ((0, o.assign)(t.style, n.style), delete n.style), (0, r.setAttributes)(t, n), !t.getAttribute('id') && (t.id = t.name), t;
                     };
                 },
                 {
-                    './lib/assign': 36,
-                    './lib/default-attributes': 37,
-                    './lib/set-attributes': 38
+                    './lib/assign': 33,
+                    './lib/default-attributes': 34,
+                    './lib/set-attributes': 35
                 }
             ],
-            36: [
+            33: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.assign = void 0);
                     n.assign = function (e) {
@@ -529,7 +501,7 @@ var t;
                 },
                 {}
             ],
-            37: [
+            34: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }),
                         (n.defaultAttributes = void 0),
@@ -542,7 +514,7 @@ var t;
                 },
                 {}
             ],
-            38: [
+            35: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.setAttributes = void 0);
                     n.setAttributes = function (e, t) {
@@ -555,7 +527,7 @@ var t;
                 },
                 {}
             ],
-            39: [
+            36: [
                 function (e, t, n) {
                     t.exports = function () {
                         return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (e) {
@@ -566,7 +538,7 @@ var t;
                 },
                 {}
             ],
-            40: [
+            37: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 });
                     n.deferred = function (e) {
@@ -584,7 +556,7 @@ var t;
                 },
                 {}
             ],
-            41: [
+            38: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 });
                     n.once = function (e) {
@@ -597,7 +569,7 @@ var t;
                 },
                 {}
             ],
-            42: [
+            39: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 });
                     n.promiseOrCallback = function (e, t) {
@@ -611,7 +583,7 @@ var t;
                 },
                 {}
             ],
-            43: [
+            40: [
                 function (e, t, n) {
                     var r = e('./lib/deferred'),
                         i = e('./lib/once'),
@@ -644,12 +616,336 @@ var t;
                         (t.exports = a);
                 },
                 {
-                    './lib/deferred': 40,
-                    './lib/once': 41,
-                    './lib/promise-or-callback': 42
+                    './lib/deferred': 37,
+                    './lib/once': 38,
+                    './lib/promise-or-callback': 39
                 }
             ],
-            44: [
+            41: [
+                function (t, n, r) {
+                    var i, o;
+                    (i = this),
+                        (o = function (e) {
+                            function t(e, t, n, r) {
+                                return new (n || (n = Promise))(function (i, o) {
+                                    function a(e) {
+                                        try {
+                                            c(r.next(e));
+                                        } catch (e) {
+                                            o(e);
+                                        }
+                                    }
+                                    function s(e) {
+                                        try {
+                                            c(r.throw(e));
+                                        } catch (e) {
+                                            o(e);
+                                        }
+                                    }
+                                    function c(e) {
+                                        var t;
+                                        e.done
+                                            ? i(e.value)
+                                            : ((t = e.value) instanceof n
+                                                  ? t
+                                                  : new n(function (e) {
+                                                        e(t);
+                                                    })
+                                              ).then(a, s);
+                                    }
+                                    c((r = r.apply(e, t || [])).next());
+                                });
+                            }
+                            function n(e, t) {
+                                var n,
+                                    r,
+                                    i,
+                                    o,
+                                    a = {
+                                        label: 0,
+                                        sent: function () {
+                                            if (1 & i[0]) throw i[1];
+                                            return i[1];
+                                        },
+                                        trys: [],
+                                        ops: []
+                                    };
+                                return (
+                                    (o = {
+                                        next: s(0),
+                                        throw: s(1),
+                                        return: s(2)
+                                    }),
+                                    'function' == typeof Symbol &&
+                                        (o[Symbol.iterator] = function () {
+                                            return this;
+                                        }),
+                                    o
+                                );
+                                function s(o) {
+                                    return function (s) {
+                                        return (function (o) {
+                                            if (n) throw TypeError('Generator is already executing.');
+                                            for (; a; )
+                                                try {
+                                                    if (((n = 1), r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done)) return i;
+                                                    switch (((r = 0), i && (o = [2 & o[0], i.value]), o[0])) {
+                                                        case 0:
+                                                        case 1:
+                                                            i = o;
+                                                            break;
+                                                        case 4:
+                                                            return (
+                                                                a.label++,
+                                                                {
+                                                                    value: o[1],
+                                                                    done: !1
+                                                                }
+                                                            );
+                                                        case 5:
+                                                            a.label++, (r = o[1]), (o = [0]);
+                                                            continue;
+                                                        case 7:
+                                                            (o = a.ops.pop()), a.trys.pop();
+                                                            continue;
+                                                        default:
+                                                            if (!(i = (i = a.trys).length > 0 && i[i.length - 1]) && (6 === o[0] || 2 === o[0])) {
+                                                                a = 0;
+                                                                continue;
+                                                            }
+                                                            if (3 === o[0] && (!i || (o[1] > i[0] && o[1] < i[3]))) {
+                                                                a.label = o[1];
+                                                                break;
+                                                            }
+                                                            if (6 === o[0] && a.label < i[1]) {
+                                                                (a.label = i[1]), (i = o);
+                                                                break;
+                                                            }
+                                                            if (i && a.label < i[2]) {
+                                                                (a.label = i[2]), a.ops.push(o);
+                                                                break;
+                                                            }
+                                                            i[2] && a.ops.pop(), a.trys.pop();
+                                                            continue;
+                                                    }
+                                                    o = t.call(e, a);
+                                                } catch (e) {
+                                                    (o = [6, e]), (r = 0);
+                                                } finally {
+                                                    n = i = 0;
+                                                }
+                                            if (5 & o[0]) throw o[1];
+                                            return {
+                                                value: o[0] ? o[1] : void 0,
+                                                done: !0
+                                            };
+                                        })([o, s]);
+                                    };
+                                }
+                            }
+                            var r,
+                                i,
+                                o = {},
+                                a = {};
+                            function s(e) {
+                                var t,
+                                    n = JSON.stringify(e);
+                                if (!e.forceScriptReload && (t = a[n])) return t;
+                                var r = document.createElement('script'),
+                                    i = e.dataAttributes || {},
+                                    o = e.container || document.head;
+                                return (
+                                    (r.src = e.src),
+                                    (r.id = e.id || ''),
+                                    (r.async = !0),
+                                    e.type && r.setAttribute('type', ''.concat(e.type)),
+                                    e.crossorigin && r.setAttribute('crossorigin', ''.concat(e.crossorigin)),
+                                    Object.keys(i).forEach(function (e) {
+                                        r.setAttribute('data-'.concat(e), ''.concat(i[e]));
+                                    }),
+                                    (t = new Promise(function (t, n) {
+                                        r.addEventListener('load', function () {
+                                            t(r);
+                                        }),
+                                            r.addEventListener('error', function () {
+                                                n(Error(''.concat(e.src, ' failed to load.')));
+                                            }),
+                                            r.addEventListener('abort', function () {
+                                                n(Error(''.concat(e.src, ' has aborted.')));
+                                            }),
+                                            o.appendChild(r);
+                                    })),
+                                    (a[n] = t),
+                                    t
+                                );
+                            }
+                            s.clearCache = function () {
+                                a = {};
+                            };
+                            Object.defineProperty(o, '__esModule', { value: !0 }), (o.loadStylesheet = c = o.loadScript = void 0);
+                            var c = (o.loadScript = s);
+                            o.loadStylesheet = function (e) {
+                                var t = document.querySelector('link[href="'.concat(e.href, '"]'));
+                                if (t) return Promise.resolve(t);
+                                t = document.createElement('link');
+                                var n = e.container || document.head;
+                                return t.setAttribute('rel', 'stylesheet'), t.setAttribute('type', 'text/css'), t.setAttribute('href', e.href), t.setAttribute('id', e.id), n.firstChild ? n.insertBefore(t, n.firstChild) : n.appendChild(t), Promise.resolve(t);
+                            };
+                            var d = 'fastlane',
+                                u = 'connect-boba',
+                                l = {
+                                    AXO_ASSET_NAME: {
+                                        minified: 'axo.min',
+                                        unminified: 'axo'
+                                    },
+                                    AXO_ASSET_PATH: u,
+                                    LOCALE_PATH: ''.concat(u, '/locales/'),
+                                    CDNX_PROD: 'https://www.paypalobjects.com'
+                                },
+                                p = {
+                                    BT: 'BT',
+                                    PPCP: 'PPCP'
+                                };
+                            function _() {
+                                return 'function' == typeof window.define && !!window.define.amd;
+                            }
+                            function E(e, r, i) {
+                                var o, a;
+                                return (
+                                    void 0 === i && (i = !0),
+                                    t(this, void 0, void 0, function () {
+                                        var t, s;
+                                        return n(this, function (n) {
+                                            if (
+                                                (t = (function () {
+                                                    return null == window ? void 0 : window.braintree;
+                                                })()) &&
+                                                t[e.module]
+                                            ) {
+                                                if (!r || (null === (o = t[e.module]) || void 0 === o ? void 0 : o.VERSION) === r) return [2, !0];
+                                                throw ((s = null === (a = t[e.module]) || void 0 === a ? void 0 : a.VERSION), Error(''.concat(e.module, ' already loaded with version ').concat(s, ' cannot load version ').concat(r)));
+                                            }
+                                            if (!r) throw Error('Attempted to load '.concat(e.module, ' without specifying version'));
+                                            return [
+                                                2,
+                                                (function (e, t, n) {
+                                                    if ((void 0 === n && (n = !0), _())) {
+                                                        var r = n ? e.amdModule.minified : e.amdModule.unminified;
+                                                        return new Promise(function (e, t) {
+                                                            window.require([r], e, t);
+                                                        });
+                                                    }
+                                                    var i = n ? e.script.minified : e.script.unminified;
+                                                    return c({
+                                                        id: ''.concat(e.id, '-').concat(t),
+                                                        src: 'https://js.braintreegateway.com/web/'.concat(t, '/js/').concat(i)
+                                                    });
+                                                })(e, r, i)
+                                            ];
+                                        });
+                                    })
+                                );
+                            }
+                            var h = 'client',
+                                m = 'hostedFields',
+                                f = 'braintree',
+                                y = (((r = {})[h] = 'client'), (r[m] = 'hosted-fields'), r),
+                                A =
+                                    (((i = {})[h] = {
+                                        id: 'client',
+                                        module: h,
+                                        amdModule: {
+                                            unminified: ''.concat(f, '/').concat(y[h]),
+                                            minified: ''.concat(f, '/').concat(y[h], '.min')
+                                        },
+                                        script: {
+                                            unminified: ''.concat(y[h], '.js'),
+                                            minified: ''.concat(y[h], '.min.js')
+                                        }
+                                    }),
+                                    (i[m] = {
+                                        id: 'hcf',
+                                        module: m,
+                                        amdModule: {
+                                            unminified: ''.concat(f, '/').concat(y[m]),
+                                            minified: ''.concat(f, '/').concat(y[m], '.min')
+                                        },
+                                        script: {
+                                            unminified: ''.concat(y[m], '.js'),
+                                            minified: ''.concat(y[m], '.min.js')
+                                        }
+                                    }),
+                                    i);
+                            function T(e, t) {
+                                var n;
+                                if ((void 0 === t && (t = !0), _())) {
+                                    _() && 'function' == typeof window.requirejs && 'function' == typeof window.requirejs.config && requirejs.config({ paths: (((n = {})[d] = e), n) });
+                                    var r = ''.concat(d, '/').concat(t ? l.AXO_ASSET_NAME.minified : l.AXO_ASSET_NAME.unminified);
+                                    return new Promise(function (e, t) {
+                                        window.require([r], e, t);
+                                    });
+                                }
+                                return c({
+                                    id: 'axo-id',
+                                    src: e,
+                                    forceScriptReload: !0
+                                });
+                            }
+                            function I(e) {
+                                var t = e.assetUrl,
+                                    n = e.bundleId;
+                                return n ? 'https://cdn-'.concat(n, '.static.engineering.dev.paypalinc.com/').concat(t) : ''.concat(l.CDNX_PROD, '/').concat(t);
+                            }
+                            (e.constants = l),
+                                (e.loadAxo = function (e) {
+                                    return t(this, void 0, void 0, function () {
+                                        var t, r, i, o;
+                                        return n(this, function (n) {
+                                            switch (n.label) {
+                                                case 0:
+                                                    if (
+                                                        (performance.mark('pp_axo_sdk_init_invoked'),
+                                                        (t = e.btSdkVersion),
+                                                        (r = e.minified),
+                                                        (i = (function (e) {
+                                                            var t,
+                                                                n = (null == e ? void 0 : e.minified) !== !1 ? l.AXO_ASSET_NAME.minified : l.AXO_ASSET_NAME.unminified;
+                                                            return I({
+                                                                assetUrl: _() ? l.AXO_ASSET_PATH : ''.concat(l.AXO_ASSET_PATH, '/').concat(n, '.js'),
+                                                                bundleId: null === (t = null == e ? void 0 : e.metadata) || void 0 === t ? void 0 : t.bundleIdOverride
+                                                            });
+                                                        })(e)),
+                                                        (o = (function (e) {
+                                                            var t;
+                                                            return I({
+                                                                assetUrl: l.LOCALE_PATH,
+                                                                bundleId: null === (t = null == e ? void 0 : e.metadata) || void 0 === t ? void 0 : t.bundleIdOverride
+                                                            });
+                                                        })(e)),
+                                                        e.platform !== p.BT)
+                                                    )
+                                                        return [3, 2];
+                                                    return [4, Promise.all([E(A.hostedFields, t, r), T(i, r)])];
+                                                case 1:
+                                                case 3:
+                                                    return n.sent(), [3, 5];
+                                                case 2:
+                                                    if (e.platform !== p.PPCP) return [3, 4];
+                                                    return [4, Promise.all([E(A.client, t, r), E(A.hostedFields, t, r), T(i, r)])];
+                                                case 4:
+                                                    throw Error('unsupported axo platform');
+                                                case 5:
+                                                    return [2, { metadata: { localeUrl: o } }];
+                                            }
+                                        });
+                                    });
+                                });
+                        }),
+                        'object' == typeof r && void 0 !== n ? o(r) : 'function' == typeof e && e.amd ? e(['exports'], o) : o(((i = 'undefined' != typeof globalThis ? globalThis : i || self).loadAxo = {}));
+                },
+                {}
+            ],
+            42: [
                 function (e, t, n) {
                     var r =
                             (this && this.__assign) ||
@@ -682,7 +978,7 @@ var t;
                             HIPERCARD: 'hipercard'
                         },
                         l = [u.VISA, u.MASTERCARD, u.AMERICAN_EXPRESS, u.DINERS_CLUB, u.DISCOVER, u.JCB, u.UNIONPAY, u.MAESTRO, u.ELO, u.MIR, u.HIPER, u.HIPERCARD],
-                        p = c.clone(l);
+                        p = (0, c.clone)(l);
                     function _(e) {
                         return d[e] || i[e];
                     }
@@ -694,20 +990,20 @@ var t;
                     }
                     function h(e) {
                         var t = [];
-                        if (!a.isValidInputType(e)) return t;
+                        if (!(0, a.isValidInputType)(e)) return t;
                         if (0 === e.length)
                             return p.map(function (e) {
-                                return c.clone(_(e));
+                                return (0, c.clone)(_(e));
                             });
                         p.forEach(function (n) {
                             var r = _(n);
-                            o.addMatchingCardsToResults(e, r, t);
+                            (0, o.addMatchingCardsToResults)(e, r, t);
                         });
-                        var n = s.findBestMatch(t);
+                        var n = (0, s.findBestMatch)(t);
                         return n ? [n] : t;
                     }
                     (h.getTypeInfo = function (e) {
-                        return c.clone(_(e));
+                        return (0, c.clone)(_(e));
                     }),
                         (h.removeCard = function (e) {
                             var t = E(e);
@@ -719,9 +1015,9 @@ var t;
                         }),
                         (h.updateCard = function (e, t) {
                             var n = d[e] || i[e];
-                            if (!n) throw Error('"' + e + '" is not a recognized type. Use `addCard` instead.\'');
+                            if (!n) throw Error('"'.concat(e, '" is not a recognized type. Use `addCard` instead.\''));
                             if (t.type && n.type !== t.type) throw Error('Cannot overwrite type parameter.');
-                            var o = c.clone(n);
+                            var o = (0, c.clone)(n);
                             d[(o = r(r({}, o), t)).type] = o;
                         }),
                         (h.changeOrder = function (e, t) {
@@ -729,20 +1025,20 @@ var t;
                             p.splice(n, 1), p.splice(t, 0, e);
                         }),
                         (h.resetModifications = function () {
-                            (p = c.clone(l)), (d = {});
+                            (p = (0, c.clone)(l)), (d = {});
                         }),
                         (h.types = u),
                         (t.exports = h);
                 },
                 {
-                    './lib/add-matching-cards-to-results': 45,
-                    './lib/card-types': 46,
-                    './lib/clone': 47,
-                    './lib/find-best-match': 48,
-                    './lib/is-valid-input-type': 49
+                    './lib/add-matching-cards-to-results': 43,
+                    './lib/card-types': 44,
+                    './lib/clone': 45,
+                    './lib/find-best-match': 46,
+                    './lib/is-valid-input-type': 47
                 }
             ],
-            45: [
+            43: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.addMatchingCardsToResults = void 0);
                     var r = e('./clone'),
@@ -751,8 +1047,8 @@ var t;
                         var o, a;
                         for (o = 0; o < t.patterns.length; o++) {
                             var s = t.patterns[o];
-                            if (!!i.matches(e, s)) {
-                                var c = r.clone(t);
+                            if (!!(0, i.matches)(e, s)) {
+                                var c = (0, r.clone)(t);
                                 (a = Array.isArray(s) ? String(s[0]).length : String(s).length), e.length >= a && (c.matchStrength = a), n.push(c);
                                 break;
                             }
@@ -760,11 +1056,11 @@ var t;
                     };
                 },
                 {
-                    './clone': 47,
-                    './matches': 50
+                    './clone': 45,
+                    './matches': 48
                 }
             ],
-            46: [
+            44: [
                 function (e, t, n) {
                     t.exports = {
                         visa: {
@@ -836,7 +1132,7 @@ var t;
                         unionpay: {
                             niceType: 'UnionPay',
                             type: 'unionpay',
-                            patterns: [620, [624, 626], [62100, 62182], [62184, 62187], [62185, 62197], [62200, 62205], [622010, 622999], 622018, [622019, 622999], [62207, 62209], [622126, 622925], [623, 626], 6270, 6272, 6276, [627700, 627779], [627781, 627799], [6282, 6289], 6291, 6292, 810, [8110, 8131], [8132, 8151], [8152, 8163], [8164, 8171]],
+                            patterns: [620, [62100, 62182], [62184, 62187], [62185, 62197], [62200, 62205], [622010, 622999], 622018, [62207, 62209], [623, 626], 6270, 6272, 6276, [627700, 627779], [627781, 627799], [6282, 6289], 6291, 6292, 810, [8110, 8131], [8132, 8151], [8152, 8163], [8164, 8171]],
                             gaps: [4, 8, 12],
                             lengths: [14, 15, 16, 17, 18, 19],
                             code: {
@@ -903,7 +1199,7 @@ var t;
                 },
                 {}
             ],
-            47: [
+            45: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.clone = void 0);
                     n.clone = function (e) {
@@ -912,7 +1208,7 @@ var t;
                 },
                 {}
             ],
-            48: [
+            46: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.findBestMatch = void 0);
                     n.findBestMatch = function (e) {
@@ -928,7 +1224,7 @@ var t;
                 },
                 {}
             ],
-            49: [
+            47: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.isValidInputType = void 0);
                     n.isValidInputType = function (e) {
@@ -937,7 +1233,7 @@ var t;
                 },
                 {}
             ],
-            50: [
+            48: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.matches = void 0);
                     n.matches = function (e, t) {
@@ -950,7 +1246,7 @@ var t;
                 },
                 {}
             ],
-            51: [
+            49: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.Framebus = void 0);
                     var r = e('./lib'),
@@ -1088,20 +1384,20 @@ var t;
                         })();
                     n.Framebus = o;
                 },
-                { './lib': 59 }
+                { './lib': 57 }
             ],
-            52: [
+            50: [
                 function (e, t, n) {
                     var r = e('./lib'),
                         i = e('./framebus');
                     (0, r.attach)(), (t.exports = i.Framebus);
                 },
                 {
-                    './framebus': 51,
-                    './lib': 59
+                    './framebus': 49,
+                    './lib': 57
                 }
             ],
-            53: [
+            51: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.detach = n.attach = void 0);
                     var r = e('./'),
@@ -1113,9 +1409,9 @@ var t;
                         (i = !1), window.removeEventListener('message', r.onMessage, !1);
                     };
                 },
-                { './': 59 }
+                { './': 57 }
             ],
-            54: [
+            52: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.broadcastToChildWindows = void 0);
                     var r = e('./');
@@ -1132,9 +1428,9 @@ var t;
                         }
                     };
                 },
-                { './': 59 }
+                { './': 57 }
             ],
-            55: [
+            53: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.broadcast = void 0);
                     var r = e('./');
@@ -1163,15 +1459,15 @@ var t;
                         } catch (e) {}
                     };
                 },
-                { './': 59 }
+                { './': 57 }
             ],
-            56: [
+            54: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.subscribers = n.childWindows = n.prefix = void 0), (n.prefix = '/*framebus*/'), (n.childWindows = []), (n.subscribers = {});
                 },
                 {}
             ],
-            57: [
+            55: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.dispatch = void 0);
                     var r = e('./');
@@ -1183,9 +1479,9 @@ var t;
                         }
                     };
                 },
-                { './': 59 }
+                { './': 57 }
             ],
-            58: [
+            56: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.hasOpener = void 0);
                     n.hasOpener = function (e) {
@@ -1194,7 +1490,7 @@ var t;
                 },
                 {}
             ],
-            59: [
+            57: [
                 function (e, t, n) {
                     var r =
                             (this && this.__createBinding) ||
@@ -1222,23 +1518,23 @@ var t;
                     Object.defineProperty(n, '__esModule', { value: !0 }), i(e('./attach'), n), i(e('./broadcast-to-child-windows'), n), i(e('./broadcast'), n), i(e('./constants'), n), i(e('./dispatch'), n), i(e('./has-opener'), n), i(e('./is-not-string'), n), i(e('./message'), n), i(e('./package-payload'), n), i(e('./send-message'), n), i(e('./subscribe-replier'), n), i(e('./subscription-args-invalid'), n), i(e('./types'), n), i(e('./unpack-payload'), n);
                 },
                 {
-                    './attach': 53,
-                    './broadcast': 55,
-                    './broadcast-to-child-windows': 54,
-                    './constants': 56,
-                    './dispatch': 57,
-                    './has-opener': 58,
-                    './is-not-string': 60,
-                    './message': 61,
-                    './package-payload': 62,
-                    './send-message': 63,
-                    './subscribe-replier': 64,
-                    './subscription-args-invalid': 65,
-                    './types': 66,
-                    './unpack-payload': 67
+                    './attach': 51,
+                    './broadcast': 53,
+                    './broadcast-to-child-windows': 52,
+                    './constants': 54,
+                    './dispatch': 55,
+                    './has-opener': 56,
+                    './is-not-string': 58,
+                    './message': 59,
+                    './package-payload': 60,
+                    './send-message': 61,
+                    './subscribe-replier': 62,
+                    './subscription-args-invalid': 63,
+                    './types': 64,
+                    './unpack-payload': 65
                 }
             ],
-            60: [
+            58: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.isntString = void 0);
                     n.isntString = function (e) {
@@ -1247,7 +1543,7 @@ var t;
                 },
                 {}
             ],
-            61: [
+            59: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.onMessage = void 0);
                     var r = e('./');
@@ -1261,9 +1557,9 @@ var t;
                         }
                     };
                 },
-                { './': 59 }
+                { './': 57 }
             ],
-            62: [
+            60: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.packagePayload = void 0);
                     var r = e('./');
@@ -1282,9 +1578,9 @@ var t;
                         return o;
                     };
                 },
-                { './': 59 }
+                { './': 57 }
             ],
-            63: [
+            61: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.sendMessage = void 0);
                     n.sendMessage = function (e, t, n) {
@@ -1295,7 +1591,7 @@ var t;
                 },
                 {}
             ],
-            64: [
+            62: [
                 function (e, t, n) {
                     var r =
                         (this && this.__importDefault) ||
@@ -1316,11 +1612,11 @@ var t;
                     };
                 },
                 {
-                    '../framebus': 51,
-                    '@braintree/uuid': 39
+                    '../framebus': 49,
+                    '@braintree/uuid': 66
                 }
             ],
-            65: [
+            63: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.subscriptionArgsInvalid = void 0);
                     var r = e('./');
@@ -1328,15 +1624,15 @@ var t;
                         return !!(0, r.isntString)(e) || 'function' != typeof t || (0, r.isntString)(n);
                     };
                 },
-                { './': 59 }
+                { './': 57 }
             ],
-            66: [
+            64: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 });
                 },
                 {}
             ],
-            67: [
+            65: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.unpackPayload = void 0);
                     var r = e('./');
@@ -1361,220 +1657,20 @@ var t;
                         return t;
                     };
                 },
-                { './': 59 }
+                { './': 57 }
             ],
-            68: [
+            66: [
                 function (e, t, n) {
-                    var r = setTimeout;
-                    function i(e) {
-                        return !!(e && void 0 !== e.length);
-                    }
-                    function o() {}
-                    function a(e) {
-                        if (!(this instanceof a)) throw TypeError('Promises must be constructed via new');
-                        if ('function' != typeof e) throw TypeError('not a function');
-                        (this._state = 0), (this._handled = !1), (this._value = void 0), (this._deferreds = []), p(e, this);
-                    }
-                    function s(e, t) {
-                        for (; 3 === e._state; ) e = e._value;
-                        if (0 === e._state) {
-                            e._deferreds.push(t);
-                            return;
-                        }
-                        (e._handled = !0),
-                            a._immediateFn(function () {
-                                var n,
-                                    r = 1 === e._state ? t.onFulfilled : t.onRejected;
-                                if (null === r) {
-                                    (1 === e._state ? c : d)(t.promise, e._value);
-                                    return;
-                                }
-                                try {
-                                    n = r(e._value);
-                                } catch (e) {
-                                    d(t.promise, e);
-                                    return;
-                                }
-                                c(t.promise, n);
-                            });
-                    }
-                    function c(e, t) {
-                        try {
-                            if (t === e) throw TypeError('A promise cannot be resolved with itself.');
-                            if (t && ('object' == typeof t || 'function' == typeof t)) {
-                                var n,
-                                    r,
-                                    i = t.then;
-                                if (t instanceof a) {
-                                    (e._state = 3), (e._value = t), u(e);
-                                    return;
-                                }
-                                if ('function' == typeof i) {
-                                    p(
-                                        ((n = i),
-                                        (r = t),
-                                        function () {
-                                            n.apply(r, arguments);
-                                        }),
-                                        e
-                                    );
-                                    return;
-                                }
-                            }
-                            (e._state = 1), (e._value = t), u(e);
-                        } catch (t) {
-                            d(e, t);
-                        }
-                    }
-                    function d(e, t) {
-                        (e._state = 2), (e._value = t), u(e);
-                    }
-                    function u(e) {
-                        2 === e._state &&
-                            0 === e._deferreds.length &&
-                            a._immediateFn(function () {
-                                !e._handled && a._unhandledRejectionFn(e._value);
-                            });
-                        for (var t = 0, n = e._deferreds.length; t < n; t++) s(e, e._deferreds[t]);
-                        e._deferreds = null;
-                    }
-                    function l(e, t, n) {
-                        (this.onFulfilled = 'function' == typeof e ? e : null), (this.onRejected = 'function' == typeof t ? t : null), (this.promise = n);
-                    }
-                    function p(e, t) {
-                        var n = !1;
-                        try {
-                            e(
-                                function (e) {
-                                    !n && ((n = !0), c(t, e));
-                                },
-                                function (e) {
-                                    !n && ((n = !0), d(t, e));
-                                }
-                            );
-                        } catch (e) {
-                            if (n) return;
-                            (n = !0), d(t, e);
-                        }
-                    }
-                    (a.prototype.catch = function (e) {
-                        return this.then(null, e);
-                    }),
-                        (a.prototype.then = function (e, t) {
-                            var n = new this.constructor(o);
-                            return s(this, new l(e, t, n)), n;
-                        }),
-                        (a.prototype.finally = function (e) {
-                            var t = this.constructor;
-                            return this.then(
-                                function (n) {
-                                    return t.resolve(e()).then(function () {
-                                        return n;
-                                    });
-                                },
-                                function (n) {
-                                    return t.resolve(e()).then(function () {
-                                        return t.reject(n);
-                                    });
-                                }
-                            );
-                        }),
-                        (a.all = function (e) {
-                            return new a(function (t, n) {
-                                if (!i(e)) return n(TypeError('Promise.all accepts an array'));
-                                var r = Array.prototype.slice.call(e);
-                                if (0 === r.length) return t([]);
-                                for (var o = r.length, a = 0; a < r.length; a++)
-                                    !(function e(i, a) {
-                                        try {
-                                            if (a && ('object' == typeof a || 'function' == typeof a)) {
-                                                var s = a.then;
-                                                if ('function' == typeof s) {
-                                                    s.call(
-                                                        a,
-                                                        function (t) {
-                                                            e(i, t);
-                                                        },
-                                                        n
-                                                    );
-                                                    return;
-                                                }
-                                            }
-                                            (r[i] = a), 0 == --o && t(r);
-                                        } catch (e) {
-                                            n(e);
-                                        }
-                                    })(a, r[a]);
-                            });
-                        }),
-                        (a.allSettled = function (e) {
-                            return new this(function (t, n) {
-                                if (!(e && void 0 !== e.length)) return n(TypeError(typeof e + ' ' + e + ' is not iterable(cannot read property Symbol(Symbol.iterator))'));
-                                var r = Array.prototype.slice.call(e);
-                                if (0 === r.length) return t([]);
-                                for (var i = r.length, o = 0; o < r.length; o++)
-                                    !(function e(n, o) {
-                                        if (o && ('object' == typeof o || 'function' == typeof o)) {
-                                            var a = o.then;
-                                            if ('function' == typeof a) {
-                                                a.call(
-                                                    o,
-                                                    function (t) {
-                                                        e(n, t);
-                                                    },
-                                                    function (e) {
-                                                        (r[n] = {
-                                                            status: 'rejected',
-                                                            reason: e
-                                                        }),
-                                                            0 == --i && t(r);
-                                                    }
-                                                );
-                                                return;
-                                            }
-                                        }
-                                        (r[n] = {
-                                            status: 'fulfilled',
-                                            value: o
-                                        }),
-                                            0 == --i && t(r);
-                                    })(o, r[o]);
-                            });
-                        }),
-                        (a.resolve = function (e) {
-                            return e && 'object' == typeof e && e.constructor === a
-                                ? e
-                                : new a(function (t) {
-                                      t(e);
-                                  });
-                        }),
-                        (a.reject = function (e) {
-                            return new a(function (t, n) {
-                                n(e);
-                            });
-                        }),
-                        (a.race = function (e) {
-                            return new a(function (t, n) {
-                                if (!i(e)) return n(TypeError('Promise.race accepts an array'));
-                                for (var r = 0, o = e.length; r < o; r++) a.resolve(e[r]).then(t, n);
-                            });
-                        }),
-                        (a._immediateFn =
-                            ('function' == typeof setImmediate &&
-                                function (e) {
-                                    setImmediate(e);
-                                }) ||
-                            function (e) {
-                                r(e, 0);
-                            }),
-                        (a._unhandledRejectionFn = function (e) {
-                            'undefined' != typeof console && console && console.warn('Possible Unhandled Promise Rejection:', e);
-                        }),
-                        (t.exports = a);
+                    t.exports = function () {
+                        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (e) {
+                            var t = (16 * Math.random()) | 0;
+                            return ('x' === e ? t : (3 & t) | 8).toString(16);
+                        });
+                    };
                 },
                 {}
             ],
-            69: [
+            67: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.isIos = n.isIE9 = n.isSamsungBrowser = n.isAndroidChrome = n.isKitKatWebview = void 0);
                     var r = 'undefined' != typeof window && window.navigator && window.navigator.userAgent,
@@ -1598,29 +1694,149 @@ var t;
                     };
                 },
                 {
-                    '@braintree/browser-detection/is-android': 22,
-                    '@braintree/browser-detection/is-chrome': 24,
-                    '@braintree/browser-detection/is-chrome-os': 23,
-                    '@braintree/browser-detection/is-ie9': 26,
-                    '@braintree/browser-detection/is-ios': 30
+                    '@braintree/browser-detection/is-android': 80,
+                    '@braintree/browser-detection/is-chrome': 82,
+                    '@braintree/browser-detection/is-chrome-os': 81,
+                    '@braintree/browser-detection/is-ie9': 83,
+                    '@braintree/browser-detection/is-ios': 84
                 }
             ],
-            70: [
+            68: [
                 function (e, t, n) {
                     var r = e('./lib/device');
                     t.exports = function () {
                         return !(0, r.isSamsungBrowser)();
                     };
                 },
-                { './lib/device': 69 }
+                { './lib/device': 67 }
+            ],
+            69: [
+                function (e, t, n) {
+                    arguments[4][3][0].apply(n, arguments);
+                },
+                { dup: 3 }
+            ],
+            70: [
+                function (e, t, n) {
+                    arguments[4][4][0].apply(n, arguments);
+                },
+                { dup: 4 }
             ],
             71: [
                 function (e, t, n) {
-                    t.exports = e('./dist/supports-input-formatting');
+                    arguments[4][5][0].apply(n, arguments);
                 },
-                { './dist/supports-input-formatting': 70 }
+                {
+                    './is-duckduckgo': 72,
+                    './is-edge': 73,
+                    './is-opera': 77,
+                    './is-samsung': 78,
+                    './is-silk': 79,
+                    dup: 5
+                }
             ],
             72: [
+                function (e, t, n) {
+                    arguments[4][6][0].apply(n, arguments);
+                },
+                { dup: 6 }
+            ],
+            73: [
+                function (e, t, n) {
+                    arguments[4][7][0].apply(n, arguments);
+                },
+                { dup: 7 }
+            ],
+            74: [
+                function (e, t, n) {
+                    t.exports = function (e) {
+                        return -1 !== (e = e || window.navigator.userAgent).indexOf('MSIE 9');
+                    };
+                },
+                {}
+            ],
+            75: [
+                function (e, t, n) {
+                    arguments[4][14][0].apply(n, arguments);
+                },
+                {
+                    './is-ipados': 76,
+                    dup: 14
+                }
+            ],
+            76: [
+                function (e, t, n) {
+                    arguments[4][15][0].apply(n, arguments);
+                },
+                { dup: 15 }
+            ],
+            77: [
+                function (e, t, n) {
+                    arguments[4][16][0].apply(n, arguments);
+                },
+                { dup: 16 }
+            ],
+            78: [
+                function (e, t, n) {
+                    arguments[4][17][0].apply(n, arguments);
+                },
+                { dup: 17 }
+            ],
+            79: [
+                function (e, t, n) {
+                    arguments[4][18][0].apply(n, arguments);
+                },
+                { dup: 18 }
+            ],
+            80: [
+                function (e, t, n) {
+                    arguments[4][20][0].apply(n, arguments);
+                },
+                {
+                    './dist/is-android': 69,
+                    dup: 20
+                }
+            ],
+            81: [
+                function (e, t, n) {
+                    arguments[4][21][0].apply(n, arguments);
+                },
+                {
+                    './dist/is-chrome-os': 70,
+                    dup: 21
+                }
+            ],
+            82: [
+                function (e, t, n) {
+                    arguments[4][22][0].apply(n, arguments);
+                },
+                {
+                    './dist/is-chrome': 71,
+                    dup: 22
+                }
+            ],
+            83: [
+                function (e, t, n) {
+                    t.exports = e('./dist/is-ie9');
+                },
+                { './dist/is-ie9': 74 }
+            ],
+            84: [
+                function (e, t, n) {
+                    arguments[4][27][0].apply(n, arguments);
+                },
+                {
+                    './dist/is-ios': 75,
+                    dup: 27
+                }
+            ],
+            85: [
+                function (e, t, n) {
+                    t.exports = e('./dist/supports-input-formatting');
+                },
+                { './dist/supports-input-formatting': 68 }
+            ],
+            86: [
                 function (e, t, n) {
                     var r = e('../lib/braintree-error'),
                         i = e('./errors'),
@@ -1702,15 +1918,15 @@ var t;
                         (t.exports = c.wrapPrototype(d));
                 },
                 {
-                    '../lib/assign': 121,
-                    '../lib/braintree-error': 124,
-                    '../lib/convert-methods-to-error': 127,
-                    '../lib/methods': 155,
-                    './errors': 73,
-                    '@braintree/wrap-promise': 43
+                    '../lib/assign': 140,
+                    '../lib/braintree-error': 143,
+                    '../lib/convert-methods-to-error': 146,
+                    '../lib/methods': 175,
+                    './errors': 87,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            73: [
+            87: [
                 function (e, t, n) {
                     var r = e('../lib/braintree-error');
                     t.exports = {
@@ -1724,9 +1940,9 @@ var t;
                         }
                     };
                 },
-                { '../lib/braintree-error': 124 }
+                { '../lib/braintree-error': 143 }
             ],
-            74: [
+            88: [
                 function (e, t, n) {
                     var r = e('./american-express'),
                         i = e('../lib/basic-component-verification'),
@@ -1755,18 +1971,18 @@ var t;
                                     return (e.client = t), new r(e);
                                 });
                         }),
-                        VERSION: '3.97.0'
+                        VERSION: '3.112.1'
                     };
                 },
                 {
-                    '../lib/basic-component-verification': 122,
-                    '../lib/create-assets-url': 129,
-                    '../lib/create-deferred-client': 131,
-                    './american-express': 72,
-                    '@braintree/wrap-promise': 43
+                    '../lib/basic-component-verification': 141,
+                    '../lib/create-assets-url': 148,
+                    '../lib/create-deferred-client': 150,
+                    './american-express': 86,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            75: [
+            89: [
                 function (e, t, n) {
                     var r = e('../lib/braintree-error'),
                         i = e('../lib/analytics'),
@@ -1903,15 +2119,15 @@ var t;
                         (t.exports = c.wrapPrototype(d));
                 },
                 {
-                    '../lib/analytics': 119,
-                    '../lib/braintree-error': 124,
-                    '../lib/convert-methods-to-error': 127,
-                    '../lib/methods': 155,
-                    './errors': 76,
-                    '@braintree/wrap-promise': 43
+                    '../lib/analytics': 138,
+                    '../lib/braintree-error': 143,
+                    '../lib/convert-methods-to-error': 146,
+                    '../lib/methods': 175,
+                    './errors': 90,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            76: [
+            90: [
                 function (e, t, n) {
                     var r = e('../lib/braintree-error');
                     t.exports = {
@@ -1947,9 +2163,9 @@ var t;
                         }
                     };
                 },
-                { '../lib/braintree-error': 124 }
+                { '../lib/braintree-error': 143 }
             ],
-            77: [
+            91: [
                 function (e, t, n) {
                     var r = e('./apple-pay'),
                         i = e('../lib/analytics'),
@@ -1988,21 +2204,21 @@ var t;
                                           });
                                 });
                         }),
-                        VERSION: '3.97.0'
+                        VERSION: '3.112.1'
                     };
                 },
                 {
-                    '../lib/analytics': 119,
-                    '../lib/basic-component-verification': 122,
-                    '../lib/braintree-error': 124,
-                    '../lib/create-assets-url': 129,
-                    '../lib/create-deferred-client': 131,
-                    './apple-pay': 75,
-                    './errors': 76,
-                    '@braintree/wrap-promise': 43
+                    '../lib/analytics': 138,
+                    '../lib/basic-component-verification': 141,
+                    '../lib/braintree-error': 143,
+                    '../lib/create-assets-url': 148,
+                    '../lib/create-deferred-client': 150,
+                    './apple-pay': 89,
+                    './errors': 90,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            78: [
+            92: [
                 function (e, t, n) {
                     var r = e('./constants').BRAINTREE_VERSION,
                         i = e('./request/graphql'),
@@ -2068,7 +2284,7 @@ var t;
                             return Promise.reject(new s(f.CLIENT_INVALID_AUTHORIZATION));
                         }
                         return (
-                            (r = d(n).then(function (n) {
+                            (r = d(n, e.sessionId).then(function (n) {
                                 return e.debug && (n.isDebug = !0), (n.authorization = e.authorization), (t = new v(n));
                             })),
                             (b[e.authorization] = r),
@@ -2133,7 +2349,7 @@ var t;
                                         }),
                                         'clientApi' === a)
                                     )
-                                        (d = n._clientApiBaseUrl), (u.data = l(n._configuration, e.data));
+                                        (d = n._clientApiBaseUrl), (u.data = l.addMetadata(n._configuration, e.data));
                                     else if ('graphQLApi' === a)
                                         (d = A[n._configuration.gatewayConfiguration.environment]),
                                             (e.endpoint = ''),
@@ -2244,34 +2460,34 @@ var t;
                     t.exports = v;
                 },
                 {
-                    '../lib/add-metadata': 118,
-                    '../lib/analytics': 119,
-                    '../lib/assets': 120,
-                    '../lib/assign': 121,
-                    '../lib/braintree-error': 124,
-                    '../lib/constants': 126,
-                    '../lib/convert-methods-to-error': 127,
-                    '../lib/convert-to-braintree-error': 128,
-                    '../lib/create-authorization-data': 130,
-                    '../lib/deferred': 132,
-                    '../lib/is-verified-domain': 153,
-                    '../lib/methods': 155,
-                    '../lib/once': 156,
-                    './constants': 79,
-                    './errors': 80,
-                    './get-configuration': 81,
-                    './request': 92,
-                    './request/graphql': 90,
-                    '@braintree/wrap-promise': 43
+                    '../lib/add-metadata': 137,
+                    '../lib/analytics': 138,
+                    '../lib/assets': 139,
+                    '../lib/assign': 140,
+                    '../lib/braintree-error': 143,
+                    '../lib/constants': 145,
+                    '../lib/convert-methods-to-error': 146,
+                    '../lib/convert-to-braintree-error': 147,
+                    '../lib/create-authorization-data': 149,
+                    '../lib/deferred': 151,
+                    '../lib/is-verified-domain': 173,
+                    '../lib/methods': 175,
+                    '../lib/once': 176,
+                    './constants': 93,
+                    './errors': 94,
+                    './get-configuration': 95,
+                    './request': 108,
+                    './request/graphql': 106,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            79: [
+            93: [
                 function (e, t, n) {
                     t.exports = { BRAINTREE_VERSION: '2018-05-10' };
                 },
                 {}
             ],
-            80: [
+            94: [
                 function (e, t, n) {
                     var r = e('../lib/braintree-error');
                     t.exports = {
@@ -2334,9 +2550,9 @@ var t;
                         }
                     };
                 },
-                { '../lib/braintree-error': 124 }
+                { '../lib/braintree-error': 143 }
             ],
-            81: [
+            95: [
                 function (e, t, n) {
                     var r = e('../lib/braintree-error'),
                         i = e('@braintree/wrap-promise'),
@@ -2349,66 +2565,66 @@ var t;
                         l = e('../lib/is-date-string-before-or-on'),
                         p = e('./constants').BRAINTREE_VERSION;
                     t.exports = {
-                        getConfiguration: i(function (e) {
-                            return new Promise(function (t, n) {
-                                var i,
-                                    _,
+                        getConfiguration: i(function (e, t) {
+                            return new Promise(function (n, i) {
+                                var _,
                                     E,
-                                    h = a(),
-                                    m = {
+                                    h,
+                                    m = t || a(),
+                                    f = {
                                         merchantAppId: window.location.host,
                                         platform: s.PLATFORM,
                                         sdkVersion: s.VERSION,
                                         source: s.SOURCE,
                                         integration: s.INTEGRATION,
                                         integrationType: s.INTEGRATION,
-                                        sessionId: h
+                                        sessionId: m
                                     };
-                                (i = e.attrs),
-                                    (_ = e.configUrl),
-                                    (i._meta = m),
-                                    (i.braintreeLibraryVersion = s.BRAINTREE_LIBRARY_VERSION),
-                                    (i.configVersion = '3'),
-                                    (E = {
-                                        url: _,
+                                (_ = e.attrs),
+                                    (E = e.configUrl),
+                                    (_._meta = f),
+                                    (_.braintreeLibraryVersion = s.BRAINTREE_LIBRARY_VERSION),
+                                    (_.configVersion = '3'),
+                                    (h = {
+                                        url: E,
                                         method: 'GET',
-                                        data: i
+                                        data: _
                                     }),
-                                    i.authorizationFingerprint && e.graphQL
+                                    _.authorizationFingerprint && e.graphQL
                                         ? (l(e.graphQL.date, p) &&
-                                              (E.graphQL = new d({
+                                              (h.graphQL = new d({
                                                   graphQL: {
                                                       url: e.graphQL.url,
                                                       features: ['configuration']
                                                   }
                                               })),
-                                          (E.metadata = m))
-                                        : i.tokenizationKey &&
-                                          ((E.graphQL = new d({
+                                          (h.metadata = f))
+                                        : _.tokenizationKey &&
+                                          ((h.graphQL = new d({
                                               graphQL: {
                                                   url: u[e.environment],
                                                   features: ['configuration']
                                               }
                                           })),
-                                          (E.metadata = m)),
-                                    o(E, function (e, o, a) {
-                                        var s;
+                                          (h.metadata = f)),
+                                    o(h, function (e, t, o) {
+                                        var a;
                                         if (e) {
-                                            n(
+                                            i(
                                                 new r({
-                                                    type: (s = 403 === a ? c.CLIENT_AUTHORIZATION_INSUFFICIENT : 401 === a ? c.CLIENT_AUTHORIZATION_INVALID : c.CLIENT_GATEWAY_NETWORK).type,
-                                                    code: s.code,
-                                                    message: s.message,
+                                                    type: (a = 403 === o ? c.CLIENT_AUTHORIZATION_INSUFFICIENT : 401 === o ? c.CLIENT_AUTHORIZATION_INVALID : c.CLIENT_GATEWAY_NETWORK).type,
+                                                    code: a.code,
+                                                    message: a.message,
                                                     details: { originalError: e }
                                                 })
                                             );
                                             return;
                                         }
-                                        t({
-                                            authorizationType: i.tokenizationKey ? 'TOKENIZATION_KEY' : 'CLIENT_TOKEN',
-                                            authorizationFingerprint: i.authorizationFingerprint,
-                                            analyticsMetadata: m,
-                                            gatewayConfiguration: o
+                                        n({
+                                            authorizationType: _.tokenizationKey ? 'TOKENIZATION_KEY' : 'CLIENT_TOKEN',
+                                            authorizationFingerprint: _.authorizationFingerprint,
+                                            analyticsMetadata: f,
+                                            gatewayConfiguration: t
                                         });
                                     });
                             });
@@ -2416,18 +2632,18 @@ var t;
                     };
                 },
                 {
-                    '../lib/braintree-error': 124,
-                    '../lib/constants': 126,
-                    '../lib/is-date-string-before-or-on': 151,
-                    './constants': 79,
-                    './errors': 80,
-                    './request': 92,
-                    './request/graphql': 90,
-                    '@braintree/uuid': 39,
-                    '@braintree/wrap-promise': 43
+                    '../lib/braintree-error': 143,
+                    '../lib/constants': 145,
+                    '../lib/is-date-string-before-or-on': 170,
+                    './constants': 93,
+                    './errors': 94,
+                    './request': 108,
+                    './request/graphql': 106,
+                    '@braintree/uuid': 36,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            82: [
+            96: [
                 function (e, t, n) {
                     var r = e('../lib/braintree-error'),
                         i = e('./client'),
@@ -2445,17 +2661,17 @@ var t;
                                       })
                                   );
                         }),
-                        VERSION: '3.97.0'
+                        VERSION: '3.112.1'
                     };
                 },
                 {
-                    '../lib/braintree-error': 124,
-                    '../lib/errors': 135,
-                    './client': 78,
-                    '@braintree/wrap-promise': 43
+                    '../lib/braintree-error': 143,
+                    '../lib/errors': 154,
+                    './client': 92,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            83: [
+            97: [
                 function (e, t, n) {
                     var r = e('../../lib/querystring'),
                         i = e('../../lib/assign').assign,
@@ -2538,16 +2754,16 @@ var t;
                     };
                 },
                 {
-                    '../../lib/assign': 121,
-                    '../../lib/querystring': 157,
-                    './default-request': 84,
-                    './graphql/request': 91,
-                    './parse-body': 93,
-                    './prep-body': 94,
-                    './xhr': 95
+                    '../../lib/assign': 140,
+                    '../../lib/querystring': 177,
+                    './default-request': 98,
+                    './graphql/request': 107,
+                    './parse-body': 109,
+                    './prep-body': 110,
+                    './xhr': 111
                 }
             ],
-            84: [
+            98: [
                 function (e, t, n) {
                     function r(e) {
                         (this._url = e.url), (this._data = e.data), (this._method = e.method), (this._headers = e.headers);
@@ -2574,7 +2790,7 @@ var t;
                 },
                 {}
             ],
-            85: [
+            99: [
                 function (e, t, n) {
                     var r = e('./error'),
                         i = e('../../../../lib/assign').assign,
@@ -2655,6 +2871,7 @@ var t;
                                               }),
                                           r.braintreeApi && (n.braintreeApi = r.braintreeApi),
                                           r.applePayWeb && ((n.applePayWeb = r.applePayWeb), (n.applePayWeb.supportedNetworks = a(r.applePayWeb.supportedCardBrands, o.applePayWeb)), delete n.applePayWeb.supportedCardBrands),
+                                          r.fastlane && (n.fastlane = r.fastlane),
                                           r.ideal && (n.ideal = r.ideal),
                                           r.kount && (n.kount = { kountMerchantId: r.kount.merchantId }),
                                           r.creditCard
@@ -2711,11 +2928,83 @@ var t;
                     };
                 },
                 {
-                    '../../../../lib/assign': 121,
-                    './error': 87
+                    '../../../../lib/assign': 140,
+                    './error': 102
                 }
             ],
-            86: [
+            100: [
+                function (e, t, n) {
+                    var r = e('./error'),
+                        i = {
+                            AMERICAN_EXPRESS: 'American Express',
+                            DINERS: 'Discover',
+                            DISCOVER: 'Discover',
+                            ELO: 'Elo',
+                            HIPER: 'Hiper',
+                            HIPERCARD: 'Hipercard',
+                            INTERNATIONAL_MAESTRO: 'Maestro',
+                            JCB: 'JCB',
+                            MASTERCARD: 'MasterCard',
+                            UK_MAESTRO: 'Maestro',
+                            UNION_PAY: 'UnionPay',
+                            VISA: 'Visa'
+                        },
+                        o = {
+                            YES: 'Yes',
+                            NO: 'No',
+                            UNKNOWN: 'Unknown'
+                        },
+                        a = { PSDTWO: 'psd2' };
+                    t.exports = function (e) {
+                        var t;
+                        return (t =
+                            e.data && !e.errors
+                                ? (function (e) {
+                                      var t,
+                                          n,
+                                          r = e.data.tokenizeCreditCardForPayPalConnect,
+                                          s = r.paymentMethod.details,
+                                          c = s.last4 ? s.last4.substr(2, 4) : '',
+                                          d = s.binData;
+                                      return (
+                                          d &&
+                                              (['commercial', 'debit', 'durbinRegulated', 'healthcare', 'payroll', 'prepaid'].forEach(function (e) {
+                                                  d[e] ? (d[e] = o[d[e]]) : (d[e] = 'Unknown');
+                                              }),
+                                              ['issuingBank', 'countryOfIssuance', 'productId'].forEach(function (e) {
+                                                  !d[e] && (d[e] = 'Unknown');
+                                              })),
+                                          (t = {
+                                              creditCards: [
+                                                  {
+                                                      binData: d,
+                                                      consumed: !1,
+                                                      description: c ? 'ending in ' + c : '',
+                                                      nonce: r.paymentMethod.id,
+                                                      details: {
+                                                          cardholderName: s.cardholderName,
+                                                          expirationMonth: s.expirationMonth,
+                                                          expirationYear: s.expirationYear,
+                                                          bin: s.bin || '',
+                                                          cardType: i[s.brandCode] || 'Unknown',
+                                                          lastFour: s.last4 || '',
+                                                          lastTwo: c
+                                                      },
+                                                      type: 'CreditCard',
+                                                      threeDSecureInfo: null
+                                                  }
+                                              ]
+                                          }),
+                                          r.authenticationInsight && ((n = r.authenticationInsight.customerAuthenticationRegulationEnvironment), (t.creditCards[0].authenticationInsight = { regulationEnvironment: a[n] || n.toLowerCase() })),
+                                          t
+                                      );
+                                  })(e)
+                                : r(e));
+                    };
+                },
+                { './error': 102 }
+            ],
+            101: [
                 function (e, t, n) {
                     var r = e('./error'),
                         i = {
@@ -2785,9 +3074,9 @@ var t;
                                 : r(e));
                     };
                 },
-                { './error': 87 }
+                { './error': 102 }
             ],
-            87: [
+            102: [
                 function (e, t, n) {
                     t.exports = function (e) {
                         var t,
@@ -2853,18 +3142,90 @@ var t;
                 },
                 {}
             ],
-            88: [
+            103: [
                 function (e, t, n) {
                     t.exports = function () {
                         return {
-                            query: 'query ClientConfiguration {   clientConfiguration {     analyticsUrl     environment     merchantId     assetsUrl     clientApiUrl     creditCard {       supportedCardBrands       challenges       threeDSecureEnabled       threeDSecure {         cardinalAuthenticationJWT       }     }     applePayWeb {       countryCode       currencyCode       merchantIdentifier       supportedCardBrands     }     googlePay {       displayName       supportedCardBrands       environment       googleAuthorization       paypalClientId     }     ideal {       routeId       assetsUrl     }     kount {       merchantId     }     masterpass {       merchantCheckoutId       supportedCardBrands     }     paypal {       displayName       clientId       assetsUrl       environment       environmentNoNetwork       unvettedMerchant       braintreeClientId       billingAgreementsEnabled       merchantAccountId       currencyCode       payeeEmail     }     unionPay {       merchantAccountId     }     usBankAccount {       routeId       plaidPublicKey     }     venmo {       merchantId       accessToken       environment       enrichedCustomerDataEnabled    }     visaCheckout {       apiKey       externalClientId       supportedCardBrands     }     braintreeApi {       accessToken       url     }     supportedFeatures   } }',
+                            query: 'query ClientConfiguration {   clientConfiguration {     analyticsUrl     environment     merchantId     assetsUrl     clientApiUrl     creditCard {       supportedCardBrands       challenges       threeDSecureEnabled       threeDSecure {         cardinalAuthenticationJWT       }     }     applePayWeb {       countryCode       currencyCode       merchantIdentifier       supportedCardBrands     }     fastlane {       enabled     }     googlePay {       displayName       supportedCardBrands       environment       googleAuthorization       paypalClientId     }     ideal {       routeId       assetsUrl     }     kount {       merchantId     }     masterpass {       merchantCheckoutId       supportedCardBrands     }     paypal {       displayName       clientId       assetsUrl       environment       environmentNoNetwork       unvettedMerchant       braintreeClientId       billingAgreementsEnabled       merchantAccountId       currencyCode       payeeEmail     }     unionPay {       merchantAccountId     }     usBankAccount {       routeId       plaidPublicKey     }     venmo {       merchantId       accessToken       environment       enrichedCustomerDataEnabled    }     visaCheckout {       apiKey       externalClientId       supportedCardBrands     }     braintreeApi {       accessToken       url     }     supportedFeatures   } }',
                             operationName: 'ClientConfiguration'
                         };
                     };
                 },
                 {}
             ],
-            89: [
+            104: [
+                function (e, t, n) {
+                    var r = e('../../../../lib/assign').assign;
+                    t.exports = function (e) {
+                        var t,
+                            n,
+                            i,
+                            o,
+                            a,
+                            s,
+                            c,
+                            d,
+                            u,
+                            l,
+                            p,
+                            _ = { hasAuthenticationInsight: !!(e.authenticationInsight && e.merchantAccountId) };
+                        return {
+                            query: ((t = _.hasAuthenticationInsight), (n = 'mutation TokenizeCreditCardForPayPalConnect($input: TokenizeCreditCardForPayPalConnectInput!'), t && (n += ', $authenticationInsightInput: AuthenticationInsightInput!'), (n += ') {   tokenizeCreditCardForPayPalConnect(input: $input) {     clientMutationId     paymentMethod {       id       details {         ... on CreditCardDetails {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }         }       }     }'), t && (n += '    authenticationInsight(input: $authenticationInsightInput) {      customerAuthenticationRegulationEnvironment    }'), (n += '  } }')),
+                            variables:
+                                ((i = e),
+                                (o = _),
+                                (s = (a = i.creditCard).fastlane || {}),
+                                (c = 'fastlane' in a && 'termsAndConditionsVersion' in a.fastlane && a.fastlane.termsAndConditionsVersion),
+                                (d = a.email),
+                                (u = 'hasBuyerConsent' in s && s.hasBuyerConsent),
+                                (l = a.shippingAddress),
+                                (p = r(
+                                    {},
+                                    (function (e, t) {
+                                        var n = e.creditCard,
+                                            i = n && n.billingAddress,
+                                            o = n && n.expirationDate,
+                                            a = n && (n.expirationMonth || (o && o.split('/')[0].trim())),
+                                            s = n && (n.expirationYear || (o && o.split('/')[1].trim())),
+                                            c = {
+                                                input: {
+                                                    creditCard: {
+                                                        number: n && n.number,
+                                                        expirationMonth: a,
+                                                        expirationYear: s,
+                                                        cvv: n && n.cvv,
+                                                        cardholderName: n && n.cardholderName
+                                                    },
+                                                    options: {}
+                                                }
+                                            };
+                                        return (
+                                            t.hasAuthenticationInsight && (c.authenticationInsightInput = { merchantAccountId: e.merchantAccountId }),
+                                            i && (c.input.creditCard.billingAddress = i),
+                                            (c.input = (function (e, t) {
+                                                var n;
+                                                return e.creditCard && e.creditCard.options && 'boolean' == typeof e.creditCard.options.validate ? (n = e.creditCard.options.validate) : (e.authorizationFingerprint && e.tokenizationKey) || e.authorizationFingerprint ? (n = !0) : e.tokenizationKey && (n = !1), 'boolean' == typeof n && (t.options = r({ validate: n }, t.options)), t;
+                                            })(e, c.input)),
+                                            c
+                                        );
+                                    })(i, o).input,
+                                    {
+                                        email: d,
+                                        optIn: u,
+                                        phone: a.phone,
+                                        termsAndConditionsVersion: c
+                                    }
+                                )),
+                                'authAssertion' in s && (p.authAssertion = s.authAssertion),
+                                l && (p.shippingAddress = l),
+                                { input: p }),
+                            operationName: 'TokenizeCreditCardForPayPalConnect'
+                        };
+                    };
+                },
+                { '../../../../lib/assign': 140 }
+            ],
+            105: [
                 function (e, t, n) {
                     var r = e('../../../../lib/assign').assign;
                     t.exports = function (e) {
@@ -2911,9 +3272,9 @@ var t;
                         };
                     };
                 },
-                { '../../../../lib/assign': 121 }
+                { '../../../../lib/assign': 140 }
             ],
-            90: [
+            106: [
                 function (e, t, n) {
                     var r = {
                             tokenize_credit_cards: 'payment_methods/credit_cards',
@@ -2959,24 +3320,31 @@ var t;
                 },
                 {}
             ],
-            91: [
+            107: [
                 function (e, t, n) {
                     var r = e('../../constants').BRAINTREE_VERSION,
                         i = e('../../../lib/assign').assign,
                         o = e('../../../lib/snake-case-to-camel-case'),
-                        a = e('./generators/credit-card-tokenization'),
-                        s = e('./adapters/credit-card-tokenization'),
-                        c = e('./generators/configuration'),
-                        d = e('./adapters/configuration'),
-                        u = {
-                            'payment_methods/credit_cards': a,
-                            configuration: c
+                        a = e('../../../lib/is-fastlane-checkout'),
+                        s = e('./generators/credit-card-tokenization'),
+                        c = e('./adapters/credit-card-tokenization'),
+                        d = e('./adapters/credit-card-tokenization-fastlane'),
+                        u = e('./generators/credit-card-for-fastlane-tokenization'),
+                        l = e('./generators/configuration'),
+                        p = e('./adapters/configuration'),
+                        _ = {
+                            'payment_methods/credit_cards': function (e, t) {
+                                return t ? u(e) : s(e);
+                            },
+                            configuration: l
                         },
-                        l = {
-                            'payment_methods/credit_cards': s,
-                            configuration: d
+                        E = {
+                            'payment_methods/credit_cards': function (e, t, n) {
+                                return n ? d(e, t) : c(e, t);
+                            },
+                            configuration: p
                         };
-                    function p(e) {
+                    function h(e) {
                         var t = e.graphQL.getClientApiPath(e.url);
                         (this._graphQL = e.graphQL),
                             (this._data = e.data),
@@ -2988,14 +3356,14 @@ var t;
                                 sessionId: e.metadata.sessionId
                             }),
                             (this._sendAnalyticsEvent = e.sendAnalyticsEvent || Function.prototype),
-                            (this._generator = u[t]),
-                            (this._adapter = l[t]),
+                            (this._generator = _[t]),
+                            (this._adapter = E[t]),
                             this._sendAnalyticsEvent('graphql.init');
                     }
-                    (p.prototype.getUrl = function () {
+                    (h.prototype.getUrl = function () {
                         return this._graphQL.getGraphQLEndpoint();
                     }),
-                        (p.prototype.getBody = function () {
+                        (h.prototype.getBody = function () {
                             var e = (function e(t) {
                                     var n = {};
                                     return (
@@ -3006,13 +3374,13 @@ var t;
                                         n
                                     );
                                 })(this._data),
-                                t = this._generator(e);
+                                t = this._generator(e, a(this._data.creditCard));
                             return JSON.stringify(i({ clientSdkMetadata: this._clientSdkMetadata }, t));
                         }),
-                        (p.prototype.getMethod = function () {
+                        (h.prototype.getMethod = function () {
                             return 'POST';
                         }),
-                        (p.prototype.getHeaders = function () {
+                        (h.prototype.getHeaders = function () {
                             var e, t;
                             return (
                                 this._data.authorizationFingerprint ? (this._sendAnalyticsEvent('graphql.authorization-fingerprint'), (e = this._data.authorizationFingerprint)) : (this._sendAnalyticsEvent('graphql.tokenization-key'), (e = this._data.tokenizationKey)),
@@ -3023,10 +3391,10 @@ var t;
                                 i({}, this._headers, t)
                             );
                         }),
-                        (p.prototype.adaptResponseBody = function (e) {
-                            return this._adapter(e, this);
+                        (h.prototype.adaptResponseBody = function (e) {
+                            return this._adapter(e, this, 'creditCard' in this._data && a(this._data.creditCard));
                         }),
-                        (p.prototype.determineStatus = function (e, t) {
+                        (h.prototype.determineStatus = function (e, t) {
                             var n, r;
                             return (
                                 200 === e
@@ -3051,19 +3419,22 @@ var t;
                                 n
                             );
                         });
-                    t.exports = p;
+                    t.exports = h;
                 },
                 {
-                    '../../../lib/assign': 121,
-                    '../../../lib/snake-case-to-camel-case': 159,
-                    '../../constants': 79,
-                    './adapters/configuration': 85,
-                    './adapters/credit-card-tokenization': 86,
-                    './generators/configuration': 88,
-                    './generators/credit-card-tokenization': 89
+                    '../../../lib/assign': 140,
+                    '../../../lib/is-fastlane-checkout': 171,
+                    '../../../lib/snake-case-to-camel-case': 179,
+                    '../../constants': 93,
+                    './adapters/configuration': 99,
+                    './adapters/credit-card-tokenization': 101,
+                    './adapters/credit-card-tokenization-fastlane': 100,
+                    './generators/configuration': 103,
+                    './generators/credit-card-for-fastlane-tokenization': 104,
+                    './generators/credit-card-tokenization': 105
                 }
             ],
-            92: [
+            108: [
                 function (e, t, n) {
                     var r = e('../../lib/once'),
                         i = e('./ajax-driver');
@@ -3072,11 +3443,11 @@ var t;
                     };
                 },
                 {
-                    '../../lib/once': 156,
-                    './ajax-driver': 83
+                    '../../lib/once': 176,
+                    './ajax-driver': 97
                 }
             ],
-            93: [
+            109: [
                 function (e, t, n) {
                     t.exports = function (e) {
                         try {
@@ -3087,7 +3458,7 @@ var t;
                 },
                 {}
             ],
-            94: [
+            110: [
                 function (e, t, n) {
                     t.exports = function (e, t) {
                         if ('string' != typeof e) throw Error('Method must be a string');
@@ -3096,7 +3467,7 @@ var t;
                 },
                 {}
             ],
-            95: [
+            111: [
                 function (e, t, n) {
                     var r = 'undefined' != typeof window && window.XMLHttpRequest && 'withCredentials' in new window.XMLHttpRequest();
                     t.exports = {
@@ -3108,7 +3479,7 @@ var t;
                 },
                 {}
             ],
-            96: [
+            112: [
                 function (e, t, n) {
                     var r = e('../lib/braintree-error');
                     t.exports = {
@@ -3128,9 +3499,9 @@ var t;
                         }
                     };
                 },
-                { '../lib/braintree-error': 124 }
+                { '../lib/braintree-error': 143 }
             ],
-            97: [
+            113: [
                 function (e, t, n) {
                     var r,
                         i = e('../lib/constants').FRAUDNET_FNCLS,
@@ -3145,14 +3516,8 @@ var t;
                         var t = e.environment,
                             n = this;
                         return (
-                            (this.sessionId =
-                                e.sessionId ||
-                                (function () {
-                                    var e,
-                                        t = '';
-                                    for (e = 0; e < 32; e++) t += Math.floor(16 * Math.random()).toString(16);
-                                    return t;
-                                })()),
+                            (this.sessionId = e.sessionId || e.clientSessionId),
+                            this.sessionId && (this.sessionId = this.sessionId.substring(0, 32)),
                             !e.sessionId && (r = this.sessionId),
                             (this._beaconId = (function (e) {
                                 return 'https://b.stats.paypal.com/counter.cgi?i=127.0.0.1&p=' + e + '&t=' + new Date().getTime() / 1000 + '&a=14';
@@ -3189,11 +3554,11 @@ var t;
                     };
                 },
                 {
-                    '../lib/assets': 120,
-                    '../lib/constants': 126
+                    '../lib/assets': 139,
+                    '../lib/constants': 145
                 }
             ],
-            98: [
+            114: [
                 function (e, t, n) {
                     var r = e('./kount'),
                         i = e('./fraudnet'),
@@ -3249,10 +3614,12 @@ var t;
                                             return Promise.resolve(n);
                                         })
                                         .then(function (n) {
+                                            var r = n.getConfiguration();
                                             return i
                                                 .setup({
                                                     sessionId: e.riskCorrelationId || e.clientMetadataId || e.correlationId,
-                                                    environment: n.getConfiguration().gatewayConfiguration.environment
+                                                    clientSessionId: r.analyticsMetadata.sessionId,
+                                                    environment: r.gatewayConfiguration.environment
                                                 })
                                                 .then(function (e) {
                                                     e && ((t.correlation_id = e.sessionId), _._instances.push(e));
@@ -3286,23 +3653,23 @@ var t;
                                         : _;
                                 });
                         }),
-                        VERSION: '3.97.0'
+                        VERSION: '3.112.1'
                     };
                 },
                 {
-                    '../lib/basic-component-verification': 122,
-                    '../lib/braintree-error': 124,
-                    '../lib/convert-methods-to-error': 127,
-                    '../lib/create-assets-url': 129,
-                    '../lib/create-deferred-client': 131,
-                    '../lib/methods': 155,
-                    './errors': 96,
-                    './fraudnet': 97,
-                    './kount': 99,
-                    '@braintree/wrap-promise': 43
+                    '../lib/basic-component-verification': 141,
+                    '../lib/braintree-error': 143,
+                    '../lib/convert-methods-to-error': 146,
+                    '../lib/create-assets-url': 148,
+                    '../lib/create-deferred-client': 150,
+                    '../lib/methods': 175,
+                    './errors': 112,
+                    './fraudnet': 113,
+                    './kount': 115,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            99: [
+            115: [
                 function (e, t, n) {
                     var r = e('./vendor/sjcl'),
                         i = e('../lib/camel-case-to-snake-case'),
@@ -3385,11 +3752,11 @@ var t;
                         });
                 },
                 {
-                    '../lib/camel-case-to-snake-case': 125,
-                    './vendor/sjcl': 100
+                    '../lib/camel-case-to-snake-case': 144,
+                    './vendor/sjcl': 116
                 }
             ],
-            100: [
+            116: [
                 function (t, n, r) {
                     var i,
                         o,
@@ -3839,7 +4206,121 @@ var t;
                 },
                 { crypto: void 0 }
             ],
-            101: [
+            117: [
+                function (e, t, n) {
+                    var r = e('../lib/braintree-error');
+                    t.exports = {
+                        FASTLANE_SDK_LOAD_ERROR: {
+                            type: r.types.MERCHANT,
+                            code: 'FASTLANE_SDK_LOAD_ERROR'
+                        }
+                    };
+                },
+                { '../lib/braintree-error': 143 }
+            ],
+            118: [
+                function (e, t, n) {
+                    var r = e('../lib/braintree-error'),
+                        i = e('./errors'),
+                        o = e('../lib/assets').loadFastlane,
+                        a = e('@braintree/wrap-promise'),
+                        s = e('../lib/assign').assign;
+                    t.exports = a(function (e) {
+                        var t = e.client.getConfiguration(),
+                            n = e.client.getVersion(),
+                            a = t.gatewayConfiguration.environment,
+                            c = !0;
+                        return (
+                            'production' !== a && (c = !1),
+                            o(
+                                s(
+                                    {
+                                        platform: 'BT',
+                                        btSdkVersion: n,
+                                        minified: c
+                                    },
+                                    e
+                                )
+                            )
+                                .then(function (t) {
+                                    var n = {
+                                        platform: 'BT',
+                                        authorization: e.authorization,
+                                        client: e.client,
+                                        deviceData: e.deviceData
+                                    };
+                                    return delete e.authorization, delete e.client, delete e.deviceData, delete e.minified, delete e.btSdkVersion, window.braintree.fastlane.create(s({ platformOptions: n }, e, t.metadata));
+                                })
+                                .catch(function (e) {
+                                    return Promise.reject(
+                                        new r({
+                                            type: i.FASTLANE_SDK_LOAD_ERROR.type,
+                                            code: i.FASTLANE_SDK_LOAD_ERROR.code,
+                                            message: e.message
+                                        })
+                                    );
+                                })
+                        );
+                    });
+                },
+                {
+                    '../lib/assets': 139,
+                    '../lib/assign': 140,
+                    '../lib/braintree-error': 143,
+                    './errors': 117,
+                    '@braintree/wrap-promise': 40
+                }
+            ],
+            119: [
+                function (e, t, n) {
+                    var r = e('../lib/basic-component-verification'),
+                        i = e('./fastlane'),
+                        o = e('../lib/create-assets-url'),
+                        a = e('../lib/create-deferred-client'),
+                        s = e('@braintree/wrap-promise'),
+                        c = e('../lib/assign').assign;
+                    t.exports = {
+                        create: s(function (e) {
+                            var t = 'fastlane';
+                            return r
+                                .verify({
+                                    name: t,
+                                    client: e.client,
+                                    authorization: e.authorization
+                                })
+                                .then(function () {
+                                    return a.create({
+                                        authorization: e.authorization,
+                                        client: e.client,
+                                        assetsUrl: o.create(e.authorization),
+                                        name: t
+                                    });
+                                })
+                                .then(function (t) {
+                                    return i(
+                                        c(
+                                            {
+                                                client: t,
+                                                deviceData: e.deviceData
+                                            },
+                                            e
+                                        )
+                                    );
+                                });
+                        }),
+                        VERSION: '3.112.1'
+                    };
+                },
+                {
+                    '../lib/assign': 140,
+                    '../lib/basic-component-verification': 141,
+                    '../lib/create-assets-url': 148,
+                    '../lib/create-deferred-client': 150,
+                    './fastlane': 118,
+                    '@braintree/wrap-promise': 40
+                }
+            ],
+            120: [
                 function (e, t, n) {
                     var r = e('../lib/braintree-error');
                     t.exports = {
@@ -3859,9 +4340,9 @@ var t;
                         }
                     };
                 },
-                { '../lib/braintree-error': 124 }
+                { '../lib/braintree-error': 143 }
             ],
-            102: [
+            121: [
                 function (e, t, n) {
                     var r = e('../lib/analytics'),
                         i = e('../lib/assign').assign,
@@ -3934,7 +4415,7 @@ var t;
                             var t = i({}, e),
                                 n = this._googlePayVersion,
                                 o = p[n];
-                            return r.sendEvent(this._createPromise, 'google-payment.v' + n + '.createPaymentDataRequest'), this[o](t);
+                            return t.transactionInfo && t.transactionInfo.totalPrice && (t.transactionInfo.totalPrice = t.transactionInfo.totalPrice.toString()), r.sendEvent(this._createPromise, 'google-payment.v' + n + '.createPaymentDataRequest'), this[o](t);
                         }),
                         (_.prototype.parseResponse = function (e) {
                             var t = this;
@@ -3989,18 +4470,18 @@ var t;
                     t.exports = l.wrapPrototype(_);
                 },
                 {
-                    '../lib/analytics': 119,
-                    '../lib/assign': 121,
-                    '../lib/braintree-error': 124,
-                    '../lib/convert-methods-to-error': 127,
-                    '../lib/find': 137,
-                    '../lib/generate-google-pay-configuration': 149,
-                    '../lib/methods': 155,
-                    './errors': 101,
-                    '@braintree/wrap-promise': 43
+                    '../lib/analytics': 138,
+                    '../lib/assign': 140,
+                    '../lib/braintree-error': 143,
+                    '../lib/convert-methods-to-error': 146,
+                    '../lib/find': 156,
+                    '../lib/generate-google-pay-configuration': 168,
+                    '../lib/methods': 175,
+                    './errors': 120,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            103: [
+            122: [
                 function (e, t, n) {
                     var r = e('./google-payment'),
                         i = e('../lib/braintree-error'),
@@ -4041,20 +4522,20 @@ var t;
                                           });
                                 });
                         }),
-                        VERSION: '3.97.0'
+                        VERSION: '3.112.1'
                     };
                 },
                 {
-                    '../lib/basic-component-verification': 122,
-                    '../lib/braintree-error': 124,
-                    '../lib/create-assets-url': 129,
-                    '../lib/create-deferred-client': 131,
-                    './errors': 101,
-                    './google-payment': 102,
-                    '@braintree/wrap-promise': 43
+                    '../lib/basic-component-verification': 141,
+                    '../lib/braintree-error': 143,
+                    '../lib/create-assets-url': 148,
+                    '../lib/create-deferred-client': 150,
+                    './errors': 120,
+                    './google-payment': 121,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            104: [
+            123: [
                 function (e, t, n) {
                     var r = e('../../lib/braintree-error'),
                         i = e('../shared/errors'),
@@ -4082,12 +4563,12 @@ var t;
                     };
                 },
                 {
-                    '../../lib/braintree-error': 124,
-                    '../shared/constants': 112,
-                    '../shared/errors': 113
+                    '../../lib/braintree-error': 143,
+                    '../shared/constants': 131,
+                    '../shared/errors': 132
                 }
             ],
-            105: [
+            124: [
                 function (e, t, n) {
                     var r = e('../shared/constants'),
                         i = e('../../lib/use-min');
@@ -4096,11 +4577,11 @@ var t;
                     };
                 },
                 {
-                    '../../lib/use-min': 160,
-                    '../shared/constants': 112
+                    '../../lib/use-min': 181,
+                    '../shared/constants': 131
                 }
             ],
-            106: [
+            125: [
                 function (e, t, n) {
                     var r = e('../shared/constants').navigationDirections,
                         i = e('../shared/browser-detection'),
@@ -4166,13 +4647,13 @@ var t;
                     };
                 },
                 {
-                    '../shared/browser-detection': 111,
-                    '../shared/constants': 112,
-                    '../shared/find-parent-tags': 114,
-                    '../shared/focus-intercept': 115
+                    '../shared/browser-detection': 130,
+                    '../shared/constants': 131,
+                    '../shared/find-parent-tags': 133,
+                    '../shared/focus-intercept': 134
                 }
             ],
-            107: [
+            126: [
                 function (e, t, n) {
                     var r = e('../shared/constants').allowedStyles;
                     t.exports = function (e) {
@@ -4197,9 +4678,9 @@ var t;
                         );
                     };
                 },
-                { '../shared/constants': 112 }
+                { '../shared/constants': 131 }
             ],
-            108: [
+            127: [
                 function (e, t, n) {
                     var r = e('../../lib/assign').assign,
                         i = e('../../lib/create-assets-url'),
@@ -4243,16 +4724,18 @@ var t;
                             D = {},
                             U = {},
                             k = [],
-                            F = m();
+                            F = m(),
+                            x = e.sessionId;
                         if (
                             ((this._merchantConfigurationOptions = r({}, e)),
-                            e.client ? ((y = (f = e.client.getConfiguration()).gatewayConfiguration.assetsUrl), (O = f.isDebug)) : ((y = i.create(e.authorization)), (O = !!e.isDebug)),
+                            e.client ? ((y = (f = e.client.getConfiguration(void 0, x)).gatewayConfiguration.assetsUrl), (O = f.isDebug)) : ((y = i.create(e.authorization)), (O = !!e.isDebug)),
                             (this._clientPromise = d.create({
                                 client: e.client,
                                 authorization: e.authorization,
                                 debug: O,
                                 assetsUrl: y,
-                                name: 'Hosted Fields'
+                                name: 'Hosted Fields',
+                                sessionId: x
                             })),
                             (b = l(y, F, O)),
                             !e.fields || 0 === Object.keys(e.fields).length)
@@ -4273,7 +4756,7 @@ var t;
                             (this._bus = new c({
                                 channel: F,
                                 verifyDomain: o,
-                                targetFrames: []
+                                targetFrames: [window]
                             })),
                             this._destructor.registerFunctionForTeardown(function () {
                                 S._bus.teardown();
@@ -4706,38 +5189,38 @@ var t;
                     t.exports = D.wrapPrototype(M);
                 },
                 {
-                    '../../lib/analytics': 119,
-                    '../../lib/assign': 121,
-                    '../../lib/braintree-error': 124,
-                    '../../lib/constants': 126,
-                    '../../lib/convert-methods-to-error': 127,
-                    '../../lib/create-assets-url': 129,
-                    '../../lib/create-deferred-client': 131,
-                    '../../lib/destructor': 133,
-                    '../../lib/errors': 135,
-                    '../../lib/find-root-node': 136,
-                    '../../lib/is-verified-domain': 153,
-                    '../../lib/methods': 155,
-                    '../../lib/shadow': 158,
-                    '../shared/browser-detection': 111,
-                    '../shared/constants': 112,
-                    '../shared/errors': 113,
-                    '../shared/find-parent-tags': 114,
-                    '../shared/focus-intercept': 115,
-                    '../shared/get-card-types': 116,
-                    './attribute-validation-error': 104,
-                    './compose-url': 105,
-                    './focus-change': 106,
-                    './get-styles-from-class': 107,
-                    './inject-frame': 109,
-                    '@braintree/event-emitter': 33,
-                    '@braintree/iframer': 35,
-                    '@braintree/uuid': 39,
-                    '@braintree/wrap-promise': 43,
-                    framebus: 52
+                    '../../lib/analytics': 138,
+                    '../../lib/assign': 140,
+                    '../../lib/braintree-error': 143,
+                    '../../lib/constants': 145,
+                    '../../lib/convert-methods-to-error': 146,
+                    '../../lib/create-assets-url': 148,
+                    '../../lib/create-deferred-client': 150,
+                    '../../lib/destructor': 152,
+                    '../../lib/errors': 154,
+                    '../../lib/find-root-node': 155,
+                    '../../lib/is-verified-domain': 173,
+                    '../../lib/methods': 175,
+                    '../../lib/shadow': 178,
+                    '../shared/browser-detection': 130,
+                    '../shared/constants': 131,
+                    '../shared/errors': 132,
+                    '../shared/find-parent-tags': 133,
+                    '../shared/focus-intercept': 134,
+                    '../shared/get-card-types': 135,
+                    './attribute-validation-error': 123,
+                    './compose-url': 124,
+                    './focus-change': 125,
+                    './get-styles-from-class': 126,
+                    './inject-frame': 128,
+                    '@braintree/event-emitter': 30,
+                    '@braintree/iframer': 32,
+                    '@braintree/uuid': 36,
+                    '@braintree/wrap-promise': 40,
+                    framebus: 50
                 }
             ],
-            109: [
+            128: [
                 function (e, t, n) {
                     var r = e('../shared/focus-intercept'),
                         i = e('../shared/constants').navigationDirections;
@@ -4751,11 +5234,11 @@ var t;
                     };
                 },
                 {
-                    '../shared/constants': 112,
-                    '../shared/focus-intercept': 115
+                    '../shared/constants': 131,
+                    '../shared/focus-intercept': 134
                 }
             ],
-            110: [
+            129: [
                 function (e, t, n) {
                     var r = e('./external/hosted-fields'),
                         i = e('../lib/basic-component-verification'),
@@ -4784,19 +5267,19 @@ var t;
                                     });
                                 });
                         }),
-                        VERSION: '3.97.0'
+                        VERSION: '3.112.1'
                     };
                 },
                 {
-                    '../lib/basic-component-verification': 122,
-                    '../lib/braintree-error': 124,
-                    './external/hosted-fields': 108,
-                    './shared/errors': 113,
-                    '@braintree/wrap-promise': 43,
-                    'restricted-input/supports-input-formatting': 71
+                    '../lib/basic-component-verification': 141,
+                    '../lib/braintree-error': 143,
+                    './external/hosted-fields': 127,
+                    './shared/errors': 132,
+                    '@braintree/wrap-promise': 40,
+                    'restricted-input/supports-input-formatting': 85
                 }
             ],
-            111: [
+            130: [
                 function (e, t, n) {
                     var r = e('@braintree/browser-detection/is-android'),
                         i = e('@braintree/browser-detection/is-chrome-os'),
@@ -4817,20 +5300,20 @@ var t;
                     };
                 },
                 {
-                    '@braintree/browser-detection/is-android': 22,
-                    '@braintree/browser-detection/is-chrome': 24,
-                    '@braintree/browser-detection/is-chrome-os': 23,
-                    '@braintree/browser-detection/is-firefox': 25,
-                    '@braintree/browser-detection/is-ios': 30,
-                    '@braintree/browser-detection/is-ios-webview': 28
+                    '@braintree/browser-detection/is-android': 20,
+                    '@braintree/browser-detection/is-chrome': 22,
+                    '@braintree/browser-detection/is-chrome-os': 21,
+                    '@braintree/browser-detection/is-firefox': 23,
+                    '@braintree/browser-detection/is-ios': 27,
+                    '@braintree/browser-detection/is-ios-webview': 25
                 }
             ],
-            112: [
+            131: [
                 function (e, t, n) {
                     var r = e('../../lib/enumerate'),
                         i = e('./errors'),
                         o = {
-                            VERSION: '3.97.0',
+                            VERSION: '3.112.1',
                             maxExpirationYearAge: 19,
                             externalEvents: {
                                 FOCUS: 'focus',
@@ -4904,6 +5387,8 @@ var t;
                                 disabled: 'boolean',
                                 placeholder: 'string'
                             },
+                            allowedBillingAddressFields: ['company', 'countryCodeNumeric', 'countryCodeAlpha2', 'countryCodeAlpha3', 'countryName', 'extendedAddress', 'locality', 'region', 'firstName', 'lastName', 'postalCode', 'streetAddress'],
+                            allowedShippingAddressFields: ['company', 'countryCodeNumeric', 'countryCodeAlpha2', 'countryCodeAlpha3', 'countryName', 'extendedAddress', 'locality', 'region', 'firstName', 'lastName', 'postalCode', 'streetAddress'],
                             autocompleteMappings: {
                                 'cardholder-name': 'cc-name',
                                 'credit-card-number': 'cc-number',
@@ -4917,11 +5402,11 @@ var t;
                     (o.events = r(['ADD_CLASS', 'AUTOFILL_DATA_AVAILABLE', 'BIN_AVAILABLE', 'CARD_FORM_ENTRY_HAS_BEGUN', 'CLEAR_FIELD', 'CONFIGURATION', 'FRAME_READY', 'INPUT_EVENT', 'READY_FOR_CLIENT', 'REMOVE_ATTRIBUTE', 'REMOVE_CLASS', 'REMOVE_FOCUS_INTERCEPTS', 'SET_ATTRIBUTE', 'SET_MESSAGE', 'SET_MONTH_OPTIONS', 'TOKENIZATION_REQUEST', 'TRIGGER_FOCUS_CHANGE', 'TRIGGER_INPUT_FOCUS', 'VALIDATE_STRICT'], 'hosted-fields:')), (t.exports = o);
                 },
                 {
-                    '../../lib/enumerate': 134,
-                    './errors': 113
+                    '../../lib/enumerate': 153,
+                    './errors': 132
                 }
             ],
-            113: [
+            132: [
                 function (e, t, n) {
                     var r = e('../../lib/braintree-error');
                     t.exports = {
@@ -4996,9 +5481,9 @@ var t;
                         }
                     };
                 },
-                { '../../lib/braintree-error': 124 }
+                { '../../lib/braintree-error': 143 }
             ],
-            114: [
+            133: [
                 function (e, t, n) {
                     t.exports = function (e, t) {
                         for (var n = e.parentNode, r = []; null != n; ) null != n.tagName && n.tagName.toLowerCase() === t && r.push(n), (n = n.parentNode);
@@ -5007,7 +5492,7 @@ var t;
                 },
                 {}
             ],
-            115: [
+            134: [
                 function (e, t, n) {
                     var r = e('./browser-detection'),
                         i = e('./constants'),
@@ -5059,11 +5544,11 @@ var t;
                     t.exports = s;
                 },
                 {
-                    './browser-detection': 111,
-                    './constants': 112
+                    './browser-detection': 130,
+                    './constants': 131
                 }
             ],
-            116: [
+            135: [
                 function (e, t, n) {
                     var r = e('credit-card-type');
                     t.exports = function (e) {
@@ -5076,95 +5561,120 @@ var t;
                         );
                     };
                 },
-                { 'credit-card-type': 44 }
+                { 'credit-card-type': 42 }
             ],
-            117: [
+            136: [
                 function (e, t, n) {
                     var r = e('./american-express'),
                         i = e('./apple-pay'),
                         o = e('./client'),
-                        a = e('./data-collector'),
-                        s = e('./hosted-fields'),
-                        c = e('./local-payment'),
-                        d = e('./masterpass'),
-                        u = e('./payment-request'),
-                        l = e('./paypal'),
-                        p = e('./paypal-checkout'),
-                        _ = e('./google-payment'),
-                        E = e('./sepa'),
-                        h = e('./three-d-secure'),
-                        m = e('./unionpay'),
-                        f = e('./us-bank-account'),
-                        y = e('./vault-manager'),
-                        A = e('./venmo'),
-                        T = e('./visa-checkout'),
-                        I = e('./preferred-payment-methods');
+                        a = e('./fastlane'),
+                        s = e('./data-collector'),
+                        c = e('./hosted-fields'),
+                        d = e('./local-payment'),
+                        u = e('./masterpass'),
+                        l = e('./payment-request'),
+                        p = e('./paypal'),
+                        _ = e('./paypal-checkout'),
+                        E = e('./google-payment'),
+                        h = e('./sepa'),
+                        m = e('./three-d-secure'),
+                        f = e('./unionpay'),
+                        y = e('./us-bank-account'),
+                        A = e('./vault-manager'),
+                        T = e('./venmo'),
+                        I = e('./visa-checkout'),
+                        N = e('./preferred-payment-methods');
                     t.exports = {
+                        fastlane: a,
                         americanExpress: r,
                         applePay: i,
                         client: o,
-                        dataCollector: a,
-                        hostedFields: s,
-                        localPayment: c,
-                        masterpass: d,
-                        googlePayment: _,
-                        paymentRequest: u,
-                        paypal: l,
-                        paypalCheckout: p,
-                        threeDSecure: h,
-                        unionpay: m,
-                        usBankAccount: f,
-                        vaultManager: y,
-                        venmo: A,
-                        visaCheckout: T,
-                        sepa: E,
-                        preferredPaymentMethods: I,
-                        VERSION: '3.97.0'
+                        dataCollector: s,
+                        hostedFields: c,
+                        localPayment: d,
+                        masterpass: u,
+                        googlePayment: E,
+                        paymentRequest: l,
+                        paypal: p,
+                        paypalCheckout: _,
+                        threeDSecure: m,
+                        unionpay: f,
+                        usBankAccount: y,
+                        vaultManager: A,
+                        venmo: T,
+                        visaCheckout: I,
+                        sepa: h,
+                        preferredPaymentMethods: N,
+                        VERSION: '3.112.1'
                     };
                 },
                 {
-                    './american-express': 74,
-                    './apple-pay': 77,
-                    './client': 82,
-                    './data-collector': 98,
-                    './google-payment': 103,
-                    './hosted-fields': 110,
-                    './local-payment': 164,
-                    './masterpass': 167,
-                    './payment-request': 172,
-                    './paypal': 179,
-                    './paypal-checkout': 176,
-                    './preferred-payment-methods': 182,
-                    './sepa': 186,
-                    './three-d-secure': 198,
-                    './unionpay': 202,
-                    './us-bank-account': 208,
-                    './vault-manager': 211,
-                    './venmo': 216,
-                    './visa-checkout': 226
+                    './american-express': 88,
+                    './apple-pay': 91,
+                    './client': 96,
+                    './data-collector': 114,
+                    './fastlane': 119,
+                    './google-payment': 122,
+                    './hosted-fields': 129,
+                    './local-payment': 185,
+                    './masterpass': 188,
+                    './payment-request': 193,
+                    './paypal': 200,
+                    './paypal-checkout': 197,
+                    './preferred-payment-methods': 203,
+                    './sepa': 207,
+                    './three-d-secure': 219,
+                    './unionpay': 223,
+                    './us-bank-account': 229,
+                    './vault-manager': 232,
+                    './venmo': 237,
+                    './visa-checkout': 247
                 }
             ],
-            118: [
+            137: [
                 function (e, t, n) {
                     var r = e('./create-authorization-data'),
                         i = e('./json-clone'),
                         o = e('./constants');
-                    t.exports = function (e, t) {
-                        var n,
-                            a = t ? i(t) : {},
-                            s = r(e.authorization).attrs,
-                            c = i(e.analyticsMetadata);
-                        for (n in ((a.braintreeLibraryVersion = o.BRAINTREE_LIBRARY_VERSION), a._meta)) a._meta.hasOwnProperty(n) && (c[n] = a._meta[n]);
-                        return (a._meta = c), s.tokenizationKey ? (a.tokenizationKey = s.tokenizationKey) : (a.authorizationFingerprint = s.authorizationFingerprint), a;
+                    t.exports = {
+                        addMetadata: function (e, t) {
+                            var n,
+                                a = t ? i(t) : {},
+                                s = r(e.authorization).attrs,
+                                c = i(e.analyticsMetadata);
+                            for (n in ((a.braintreeLibraryVersion = o.BRAINTREE_LIBRARY_VERSION), a._meta)) a._meta.hasOwnProperty(n) && (c[n] = a._meta[n]);
+                            return (a._meta = c), s.tokenizationKey ? (a.tokenizationKey = s.tokenizationKey) : (a.authorizationFingerprint = s.authorizationFingerprint), a;
+                        },
+                        addEventMetadata: function (e) {
+                            var t = e.getConfiguration(),
+                                n = r(t.authorization).attrs,
+                                i = 'production' === t.gatewayConfiguration.environment,
+                                a = {
+                                    api_integration_type: t.analyticsMetadata.integrationType,
+                                    app_id: window.location.host,
+                                    c_sdk_ver: o.VERSION,
+                                    component: 'braintreeclientsdk',
+                                    merchant_sdk_env: i ? 'production' : 'sandbox',
+                                    merchant_id: t.gatewayConfiguration.merchantId,
+                                    event_source: 'web',
+                                    platform: o.PLATFORM,
+                                    platform_version: window.navigator.userAgent,
+                                    session_id: t.analyticsMetadata.sessionId,
+                                    client_session_id: t.analyticsMetadata.sessionId,
+                                    tenant_name: 'braintree'
+                                };
+                            return n.tokenizationKey ? (a.tokenization_key = n.tokenizationKey) : (a.auth_fingerprint = n.authorizationFingerprint), a;
+                        }
                     };
                 },
                 {
-                    './constants': 126,
-                    './create-authorization-data': 130,
-                    './json-clone': 154
+                    './constants': 145,
+                    './create-authorization-data': 149,
+                    './json-clone': 174
                 }
             ],
-            119: [
+            138: [
                 function (e, t, n) {
                     var r = e('./constants'),
                         i = e('./add-metadata');
@@ -5173,24 +5683,38 @@ var t;
                             var o = Date.now();
                             return Promise.resolve(e)
                                 .then(function (e) {
-                                    var a = Date.now(),
-                                        s = e.getConfiguration();
-                                    (0, e._request)(
-                                        {
-                                            url: s.gatewayConfiguration.analytics.url,
-                                            method: 'post',
-                                            data: i(s, {
-                                                analytics: [
-                                                    {
-                                                        kind: r.ANALYTICS_PREFIX + t,
-                                                        isAsync: Math.floor(a / 1000) !== Math.floor(o / 1000),
-                                                        timestamp: o
-                                                    }
-                                                ]
-                                            }),
-                                            timeout: r.ANALYTICS_REQUEST_TIMEOUT_MS
+                                    var a = e._request,
+                                        s = r.ANALYTICS_URL,
+                                        c = r.ANALYTICS_PREFIX + t,
+                                        d = 'production' === e.getConfiguration().gatewayConfiguration.environment,
+                                        u = {
+                                            events: [],
+                                            tracking: []
                                         },
-                                        n
+                                        l = i.addEventMetadata(e, u);
+                                    return (
+                                        (l.event_name = c),
+                                        (l.t = o),
+                                        (u.events = [
+                                            {
+                                                level: 'info',
+                                                event: c,
+                                                payload: {
+                                                    env: d ? 'production' : 'sandbox',
+                                                    timestamp: o
+                                                }
+                                            }
+                                        ]),
+                                        (u.tracking = [l]),
+                                        a(
+                                            {
+                                                url: s,
+                                                method: 'post',
+                                                data: u,
+                                                timeout: r.ANALYTICS_REQUEST_TIMEOUT_MS
+                                            },
+                                            n
+                                        )
                                     );
                                 })
                                 .catch(function (e) {
@@ -5200,18 +5724,25 @@ var t;
                     };
                 },
                 {
-                    './add-metadata': 118,
-                    './constants': 126
+                    './add-metadata': 137,
+                    './constants': 145
                 }
             ],
-            120: [
+            139: [
                 function (e, t, n) {
-                    var r = e('@braintree/asset-loader/load-script');
-                    t.exports = { loadScript: r };
+                    var r = e('@braintree/asset-loader/load-script'),
+                        i = e('@paypal/accelerated-checkout-loader');
+                    t.exports = {
+                        loadScript: r,
+                        loadFastlane: i.loadAxo
+                    };
                 },
-                { '@braintree/asset-loader/load-script': 3 }
+                {
+                    '@braintree/asset-loader/load-script': 2,
+                    '@paypal/accelerated-checkout-loader': 41
+                }
             ],
-            121: [
+            140: [
                 function (e, t, n) {
                     var r = 'function' == typeof Object.assign ? Object.assign : i;
                     function i(e) {
@@ -5226,11 +5757,11 @@ var t;
                 },
                 {}
             ],
-            122: [
+            141: [
                 function (e, t, n) {
                     var r = e('./braintree-error'),
                         i = e('./errors'),
-                        o = '3.97.0';
+                        o = '3.112.1';
                     t.exports = {
                         verify: function (e) {
                             var t, n, a;
@@ -5263,11 +5794,11 @@ var t;
                     };
                 },
                 {
-                    './braintree-error': 124,
-                    './errors': 135
+                    './braintree-error': 143,
+                    './errors': 154
                 }
             ],
-            123: [
+            142: [
                 function (e, t, n) {
                     var r = e('./once');
                     t.exports = function (e, t) {
@@ -5293,9 +5824,9 @@ var t;
                         }
                     };
                 },
-                { './once': 156 }
+                { './once': 176 }
             ],
-            124: [
+            143: [
                 function (e, t, n) {
                     var r = e('./enumerate');
                     function i(e) {
@@ -5312,32 +5843,43 @@ var t;
                         }),
                         (t.exports = i);
                 },
-                { './enumerate': 134 }
+                { './enumerate': 153 }
             ],
-            125: [
+            144: [
                 function (e, t, n) {
-                    t.exports = function (e) {
-                        return Object.keys(e).reduce(function (t, n) {
-                            return (
-                                (t[
-                                    n
-                                        .replace(/([a-z\d])([A-Z])/g, '$1_$2')
-                                        .replace(/([A-Z]+)([A-Z][a-z\d]+)/g, '$1_$2')
-                                        .toLowerCase()
-                                ] = e[n]),
-                                t
-                            );
-                        }, {});
+                    t.exports = function e(t) {
+                        var n;
+                        return (
+                            null === t
+                                ? (n = null)
+                                : Array.isArray(t)
+                                  ? ((n = []),
+                                    t.forEach(function (t) {
+                                        n.push(e(t));
+                                    }))
+                                  : (n =
+                                        'object' == typeof t
+                                            ? Object.keys(t).reduce(function (n, r) {
+                                                  var i = r
+                                                      .replace(/([a-z\d])([A-Z])/g, '$1_$2')
+                                                      .replace(/([A-Z]+)([A-Z][a-z\d]+)/g, '$1_$2')
+                                                      .toLowerCase();
+                                                  return 'object' == typeof t[r] ? (n[i] = e(t[r])) : (n[i] = t[r]), n;
+                                              }, {})
+                                            : t),
+                            n
+                        );
                     };
                 },
                 {}
             ],
-            126: [
+            145: [
                 function (e, t, n) {
-                    var r = '3.97.0';
+                    var r = '3.112.1';
                     t.exports = {
                         ANALYTICS_PREFIX: 'web.',
                         ANALYTICS_REQUEST_TIMEOUT_MS: 2000,
+                        ANALYTICS_URL: 'https://www.paypal.com/xoplatform/logger/api/logger',
                         ASSETS_URLS: {
                             production: 'https://assets.braintreegateway.com',
                             sandbox: 'https://assets.braintreegateway.com'
@@ -5364,7 +5906,7 @@ var t;
                 },
                 {}
             ],
-            127: [
+            146: [
                 function (e, t, n) {
                     var r = e('./braintree-error'),
                         i = e('./errors');
@@ -5381,11 +5923,11 @@ var t;
                     };
                 },
                 {
-                    './braintree-error': 124,
-                    './errors': 135
+                    './braintree-error': 143,
+                    './errors': 154
                 }
             ],
-            128: [
+            147: [
                 function (e, t, n) {
                     var r = e('./braintree-error');
                     t.exports = function (e, t) {
@@ -5399,9 +5941,9 @@ var t;
                               });
                     };
                 },
-                { './braintree-error': 124 }
+                { './braintree-error': 143 }
             ],
-            129: [
+            148: [
                 function (e, t, n) {
                     var r = e('./constants').ASSETS_URLS;
                     t.exports = {
@@ -5410,9 +5952,9 @@ var t;
                         }
                     };
                 },
-                { './constants': 126 }
+                { './constants': 145 }
             ],
-            130: [
+            149: [
                 function (e, t, n) {
                     var r = e('../lib/vendor/polyfill').atob,
                         i = e('../lib/constants').CLIENT_API_URLS;
@@ -5440,16 +5982,16 @@ var t;
                     };
                 },
                 {
-                    '../lib/constants': 126,
-                    '../lib/vendor/polyfill': 161
+                    '../lib/constants': 145,
+                    '../lib/vendor/polyfill': 182
                 }
             ],
-            131: [
+            150: [
                 function (e, t, n) {
                     var r = e('./braintree-error'),
                         i = e('./assets'),
                         o = e('./errors'),
-                        a = '3.97.0';
+                        a = '3.112.1';
                     t.exports = {
                         create: function (e) {
                             var t = Promise.resolve();
@@ -5484,12 +6026,12 @@ var t;
                     };
                 },
                 {
-                    './assets': 120,
-                    './braintree-error': 124,
-                    './errors': 135
+                    './assets': 139,
+                    './braintree-error': 143,
+                    './errors': 154
                 }
             ],
-            132: [
+            151: [
                 function (e, t, n) {
                     t.exports = function (e) {
                         return function () {
@@ -5502,7 +6044,7 @@ var t;
                 },
                 {}
             ],
-            133: [
+            152: [
                 function (e, t, n) {
                     var r = e('./batch-execute-functions');
                     function i() {
@@ -5526,9 +6068,9 @@ var t;
                         }),
                         (t.exports = i);
                 },
-                { './batch-execute-functions': 123 }
+                { './batch-execute-functions': 142 }
             ],
-            134: [
+            153: [
                 function (e, t, n) {
                     t.exports = function (e, t) {
                         return (
@@ -5541,7 +6083,7 @@ var t;
                 },
                 {}
             ],
-            135: [
+            154: [
                 function (e, t, n) {
                     var r = e('./braintree-error');
                     t.exports = {
@@ -5568,9 +6110,9 @@ var t;
                         }
                     };
                 },
-                { './braintree-error': 124 }
+                { './braintree-error': 143 }
             ],
-            136: [
+            155: [
                 function (e, t, n) {
                     t.exports = function (e) {
                         for (; e.parentNode; ) e = e.parentNode;
@@ -5579,7 +6121,7 @@ var t;
                 },
                 {}
             ],
-            137: [
+            156: [
                 function (e, t, n) {
                     t.exports = function (e, t, n) {
                         var r;
@@ -5589,7 +6131,7 @@ var t;
                 },
                 {}
             ],
-            138: [
+            157: [
                 function (e, t, n) {
                     var r = e('./strategies/popup'),
                         i = e('./strategies/popup-bridge'),
@@ -5735,22 +6277,22 @@ var t;
                         (t.exports = y);
                 },
                 {
-                    '../../braintree-error': 124,
-                    '../../constants': 126,
-                    '../shared/browser-detection': 145,
-                    '../shared/constants': 146,
-                    '../shared/errors': 147,
-                    '../shared/events': 148,
-                    './../../assign': 121,
-                    './strategies/modal': 140,
-                    './strategies/popup': 143,
-                    './strategies/popup-bridge': 141,
-                    '@braintree/iframer': 35,
-                    '@braintree/uuid': 39,
-                    framebus: 52
+                    '../../braintree-error': 143,
+                    '../../constants': 145,
+                    '../shared/browser-detection': 164,
+                    '../shared/constants': 165,
+                    '../shared/errors': 166,
+                    '../shared/events': 167,
+                    './../../assign': 140,
+                    './strategies/modal': 159,
+                    './strategies/popup': 162,
+                    './strategies/popup-bridge': 160,
+                    '@braintree/iframer': 32,
+                    '@braintree/uuid': 36,
+                    framebus: 50
                 }
             ],
-            139: [
+            158: [
                 function (e, t, n) {
                     var r = e('./frame-service');
                     t.exports = {
@@ -5762,9 +6304,9 @@ var t;
                         }
                     };
                 },
-                { './frame-service': 138 }
+                { './frame-service': 157 }
             ],
-            140: [
+            159: [
                 function (e, t, n) {
                     var r = e('@braintree/iframer'),
                         i = e('../../../assign').assign,
@@ -5839,12 +6381,12 @@ var t;
                         (t.exports = c);
                 },
                 {
-                    '../../../assign': 121,
-                    '../../shared/browser-detection': 145,
-                    '@braintree/iframer': 35
+                    '../../../assign': 140,
+                    '../../shared/browser-detection': 164,
+                    '@braintree/iframer': 32
                 }
             ],
-            141: [
+            160: [
                 function (e, t, n) {
                     var r = e('../../../braintree-error'),
                         i = e('../../shared/errors');
@@ -5878,11 +6420,11 @@ var t;
                         (t.exports = a);
                 },
                 {
-                    '../../../braintree-error': 124,
-                    '../../shared/errors': 147
+                    '../../../braintree-error': 143,
+                    '../../shared/errors': 166
                 }
             ],
-            142: [
+            161: [
                 function (e, t, n) {
                     var r = e('../../../shared/constants'),
                         i = e('./position');
@@ -5898,11 +6440,11 @@ var t;
                     };
                 },
                 {
-                    '../../../shared/constants': 146,
-                    './position': 144
+                    '../../../shared/constants': 165,
+                    './position': 163
                 }
             ],
-            143: [
+            162: [
                 function (e, t, n) {
                     var r = e('./compose-options');
                     function i(e) {
@@ -5926,9 +6468,9 @@ var t;
                         }),
                         (t.exports = i);
                 },
-                { './compose-options': 142 }
+                { './compose-options': 161 }
             ],
-            144: [
+            163: [
                 function (e, t, n) {
                     function r(e, t, n) {
                         return (e - t) / 2 + n;
@@ -5949,7 +6491,7 @@ var t;
                 },
                 {}
             ],
-            145: [
+            164: [
                 function (e, t, n) {
                     t.exports = {
                         isIos: e('@braintree/browser-detection/is-ios'),
@@ -5958,12 +6500,12 @@ var t;
                     };
                 },
                 {
-                    '@braintree/browser-detection/is-ios': 30,
-                    '@braintree/browser-detection/is-ios-wkwebview': 29,
-                    '@braintree/browser-detection/supports-popups': 32
+                    '@braintree/browser-detection/is-ios': 27,
+                    '@braintree/browser-detection/is-ios-wkwebview': 26,
+                    '@braintree/browser-detection/supports-popups': 29
                 }
             ],
-            146: [
+            165: [
                 function (e, t, n) {
                     t.exports = {
                         DISPATCH_FRAME_NAME: 'dispatch',
@@ -5977,7 +6519,7 @@ var t;
                 },
                 {}
             ],
-            147: [
+            166: [
                 function (e, t, n) {
                     var r = e('../../braintree-error');
                     t.exports = {
@@ -5993,18 +6535,18 @@ var t;
                         }
                     };
                 },
-                { '../../braintree-error': 124 }
+                { '../../braintree-error': 143 }
             ],
-            148: [
+            167: [
                 function (e, t, n) {
                     var r = e('../../enumerate');
                     t.exports = r(['DISPATCH_FRAME_READY', 'DISPATCH_FRAME_REPORT'], 'frameService:');
                 },
-                { '../../enumerate': 134 }
+                { '../../enumerate': 153 }
             ],
-            149: [
+            168: [
                 function (e, t, n) {
-                    var r = '3.97.0',
+                    var r = '3.112.1',
                         i = e('./assign').assign;
                     function o(e, t) {
                         var n = e.analyticsMetadata;
@@ -6093,9 +6635,9 @@ var t;
                         );
                     };
                 },
-                { './assign': 121 }
+                { './assign': 140 }
             ],
-            150: [
+            169: [
                 function (e, t, n) {
                     t.exports = function (e) {
                         e = e || window;
@@ -6108,7 +6650,7 @@ var t;
                 },
                 {}
             ],
-            151: [
+            170: [
                 function (e, t, n) {
                     function r(e) {
                         var t = e.split('-');
@@ -6120,7 +6662,15 @@ var t;
                 },
                 {}
             ],
-            152: [
+            171: [
+                function (e, t, n) {
+                    t.exports = function (e) {
+                        return e && e.hasOwnProperty('fastlane') && e.fastlane;
+                    };
+                },
+                {}
+            ],
+            172: [
                 function (e, t, n) {
                     t.exports = {
                         isHTTPS: function (e) {
@@ -6130,7 +6680,7 @@ var t;
                 },
                 {}
             ],
-            153: [
+            173: [
                 function (e, t, n) {
                     var r,
                         i = {
@@ -6147,7 +6697,7 @@ var t;
                 },
                 {}
             ],
-            154: [
+            174: [
                 function (e, t, n) {
                     t.exports = function (e) {
                         return JSON.parse(JSON.stringify(e));
@@ -6155,7 +6705,7 @@ var t;
                 },
                 {}
             ],
-            155: [
+            175: [
                 function (e, t, n) {
                     t.exports = function (e) {
                         return Object.keys(e).filter(function (t) {
@@ -6165,7 +6715,7 @@ var t;
                 },
                 {}
             ],
-            156: [
+            176: [
                 function (e, t, n) {
                     t.exports = function (e) {
                         var t = !1;
@@ -6176,7 +6726,7 @@ var t;
                 },
                 {}
             ],
-            157: [
+            177: [
                 function (e, t, n) {
                     function r(e) {
                         return (e = e || window.location.href), /\?/.test(e);
@@ -6230,7 +6780,7 @@ var t;
                 },
                 {}
             ],
-            158: [
+            178: [
                 function (e, t, n) {
                     var r = e('@braintree/uuid'),
                         i = e('./find-root-node');
@@ -6254,11 +6804,11 @@ var t;
                     };
                 },
                 {
-                    './find-root-node': 136,
-                    '@braintree/uuid': 39
+                    './find-root-node': 155,
+                    '@braintree/uuid': 36
                 }
             ],
-            159: [
+            179: [
                 function (e, t, n) {
                     t.exports = function (e) {
                         return -1 === e.indexOf('_')
@@ -6270,7 +6820,18 @@ var t;
                 },
                 {}
             ],
-            160: [
+            180: [
+                function (e, t, n) {
+                    var r = e('./querystring');
+                    t.exports = {
+                        getUrlParams: function () {
+                            return r.parse(window.location.href);
+                        }
+                    };
+                },
+                { './querystring': 177 }
+            ],
+            181: [
                 function (e, t, n) {
                     t.exports = function (e) {
                         return e ? '' : '.min';
@@ -6278,7 +6839,7 @@ var t;
                 },
                 {}
             ],
-            161: [
+            182: [
                 function (e, t, n) {
                     var r = 'function' == typeof atob ? atob : i;
                     function i(e) {
@@ -6308,19 +6869,22 @@ var t;
                 },
                 {}
             ],
-            162: [
+            183: [
                 function (e, t, n) {
                     t.exports = {
-                        REQUIRED_OPTIONS_FOR_START_PAYMENT: ['givenName', 'surname', 'currencyCode', 'onPaymentStart', 'paymentType', 'amount', 'fallback'],
-                        REQUIRED_OPTIONS_FOR_DEFERRED_PAYMENT_TYPE: ['givenName', 'surname', 'currencyCode', 'onPaymentStart', 'paymentType', 'amount', 'address', 'billingAddress', 'birthDate', 'email', 'locale', 'customerServiceInstructions', 'correlationId', 'phone', 'phoneCountryCode', 'lineItems'],
+                        REQUIRED_OPTIONS_FOR_START_PAYMENT: ['givenName', 'surname', 'currencyCode', 'paymentType', 'amount', 'fallback'],
+                        REQUIRED_OPTIONS_FOR_PAY_UPON_INVOICE_PAYMENT_TYPE: ['givenName', 'surname', 'currencyCode', 'onPaymentStart', 'paymentType', 'amount', 'address', 'billingAddress', 'birthDate', 'email', 'locale', 'customerServiceInstructions', 'correlationId', 'phone', 'phoneCountryCode', 'lineItems'],
                         REQUIRED_OPTIONS_FOR_ADDRESS: ['streetAddress', 'locality', 'postalCode', 'countryCode'],
                         REQUIRED_OPTIONS_FOR_LINE_ITEMS: ['category', 'name', 'quantity', 'unitAmount', 'unitTaxAmount'],
-                        DEFERRED_PAYMENT_TYPES: ['pay_upon_invoice']
+                        REQUIRED_OPTIONS_FOR_BLIK_SEAMLESS_PAYMENT_TYPE: ['givenName', 'surname', 'currencyCode', 'paymentType', 'amount'],
+                        REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_LEVEL_0: ['authCode'],
+                        REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_ONE_CLICK_FIRST: ['authCode', 'consumerReference', 'aliasLabel'],
+                        REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_ONE_CLICK_SUBSEQUENT: ['consumerReference', 'aliasKey']
                     };
                 },
                 {}
             ],
-            163: [
+            184: [
                 function (e, t, n) {
                     var r = e('../../lib/frame-service/external'),
                         i = e('../../lib/braintree-error'),
@@ -6334,15 +6898,18 @@ var t;
                         p = e('../../lib/querystring'),
                         _ = e('@braintree/wrap-promise'),
                         E = e('./constants'),
-                        h = e('../shared/errors');
-                    function m(e) {
-                        (this._client = e.client), (this._assetsUrl = e.client.getConfiguration().gatewayConfiguration.assetsUrl + '/web/3.97.0'), (this._isDebug = e.client.getConfiguration().isDebug), (this._loadingFrameUrl = this._assetsUrl + '/html/local-payment-landing-frame' + o(this._isDebug) + '.html'), (this._authorizationInProgress = !1), (this._paymentType = 'unknown'), (this._merchantAccountId = e.merchantAccountId);
-                    }
+                        h = e('../shared/errors'),
+                        m = e('../../lib/assign').assign;
                     function f(e) {
-                        return E.DEFERRED_PAYMENT_TYPES.indexOf(e) >= 0;
+                        (this._client = e.client), (this._assetsUrl = e.client.getConfiguration().gatewayConfiguration.assetsUrl + '/web/3.112.1'), (this._isDebug = e.client.getConfiguration().isDebug), (this._loadingFrameUrl = this._assetsUrl + '/html/local-payment-landing-frame' + o(this._isDebug) + '.html'), (this._authorizationInProgress = !1), (this._paymentType = 'unknown'), (this._merchantAccountId = e.merchantAccountId), e.redirectUrl && ((this._redirectUrl = e.redirectUrl), (this._isRedirectFlow = !0));
+                    }
+                    function y(e) {
+                        var t = e.blikOptions || {},
+                            n = 'string' == typeof e.paymentType ? e.paymentType.toLowerCase() : e.paymentType;
+                        return 'blik' === n ? t.hasOwnProperty('level_0') || t.hasOwnProperty('oneClick') : ['pay_upon_invoice', 'mbway', 'bancomatpay'].includes(n);
                     }
                     (l.suppressUnhandledPromiseMessage = !0),
-                        (m.prototype._initialize = function () {
+                        (f.prototype._initialize = function () {
                             var e = this,
                                 t = this._client,
                                 n = setTimeout(function () {
@@ -6361,7 +6928,7 @@ var t;
                                 );
                             });
                         }),
-                        (m.prototype.startPayment = function (e) {
+                        (f.prototype.startPayment = function (e) {
                             var t,
                                 n,
                                 r,
@@ -6369,81 +6936,70 @@ var t;
                                 c,
                                 d,
                                 _,
-                                m,
-                                y = this,
-                                A = this._frameService._serviceId;
-                            return (t = (function (e) {
-                                var t, n, r, i;
+                                f,
+                                A,
+                                T,
+                                I,
+                                N,
+                                O = this;
+                            return (O._isRedirectFlow ? (e.redirectUrl = O._redirectUrl) : (T = O._frameService._serviceId),
+                            (t = (function (e) {
+                                var t, n, r, i, o;
                                 if (!e) return !0;
-                                if (f(e.paymentType))
-                                    for (t = 0; t < E.REQUIRED_OPTIONS_FOR_DEFERRED_PAYMENT_TYPE.length; t++) {
-                                        if (((n = E.REQUIRED_OPTIONS_FOR_DEFERRED_PAYMENT_TYPE[t]), !e.hasOwnProperty(n))) return n;
-                                        if ('address' === n || 'billingAddress' === n) {
-                                            if (
-                                                (r = (function (e) {
-                                                    var t, n;
-                                                    for (t = 0; t < E.REQUIRED_OPTIONS_FOR_ADDRESS.length; t++) if (((n = E.REQUIRED_OPTIONS_FOR_ADDRESS[t]), !e.hasOwnProperty(n))) return n;
+                                if (y(e)) {
+                                    if ('pay_upon_invoice' === (o = e.paymentType || '').toLowerCase())
+                                        for (t = 0; t < E.REQUIRED_OPTIONS_FOR_PAY_UPON_INVOICE_PAYMENT_TYPE.length; t++) {
+                                            if (((n = E.REQUIRED_OPTIONS_FOR_PAY_UPON_INVOICE_PAYMENT_TYPE[t]), !e.hasOwnProperty(n))) return n;
+                                            if ('address' === n || 'billingAddress' === n) {
+                                                if (
+                                                    (r = (function (e) {
+                                                        var t, n;
+                                                        for (t = 0; t < E.REQUIRED_OPTIONS_FOR_ADDRESS.length; t++) if (((n = E.REQUIRED_OPTIONS_FOR_ADDRESS[t]), !e.hasOwnProperty(n))) return n;
+                                                        return !1;
+                                                    })(e[n]))
+                                                )
+                                                    return n + '.' + r;
+                                            } else if (
+                                                'lineItems' === n &&
+                                                (i = (function (e) {
+                                                    var t, n, r, i;
+                                                    for (n = 0; n < e.length; n++) for (t = 0, r = e[n]; t < E.REQUIRED_OPTIONS_FOR_LINE_ITEMS.length; t++) if (((i = E.REQUIRED_OPTIONS_FOR_LINE_ITEMS[t]), !r.hasOwnProperty(i))) return i;
                                                     return !1;
                                                 })(e[n]))
                                             )
-                                                return n + '.' + r;
-                                        } else if (
-                                            'lineItems' === n &&
-                                            (i = (function (e) {
-                                                var t, n, r, i;
-                                                for (n = 0; n < e.length; n++) for (t = 0, r = e[n]; t < E.REQUIRED_OPTIONS_FOR_LINE_ITEMS.length; t++) if (((i = E.REQUIRED_OPTIONS_FOR_LINE_ITEMS[t]), !r.hasOwnProperty(i))) return i;
-                                                return !1;
-                                            })(e[n]))
-                                        )
-                                            return n + '.' + i;
-                                    }
-                                else {
-                                    for (t = 0; t < E.REQUIRED_OPTIONS_FOR_START_PAYMENT.length; t++) if (((n = E.REQUIRED_OPTIONS_FOR_START_PAYMENT[t]), !e.hasOwnProperty(n))) return n;
+                                                return n + '.' + i;
+                                        }
+                                    else if ('blik' === o.toLowerCase())
+                                        return (function (e) {
+                                            var t,
+                                                n,
+                                                r,
+                                                i = e.blikOptions || {};
+                                            for (!e.redirectUrl && E.REQUIRED_OPTIONS_FOR_BLIK_SEAMLESS_PAYMENT_TYPE.push('onPaymentStart'), t = 0; t < E.REQUIRED_OPTIONS_FOR_BLIK_SEAMLESS_PAYMENT_TYPE.length; t++) if (((n = E.REQUIRED_OPTIONS_FOR_BLIK_SEAMLESS_PAYMENT_TYPE[t]), !e.hasOwnProperty(n))) return n;
+                                            if (i.hasOwnProperty('level_0')) {
+                                                for (t = 0; t < E.REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_LEVEL_0.length; t++) if (((n = E.REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_LEVEL_0[t]), !i.level_0.hasOwnProperty(n))) return 'blikOptions.level_0.' + n;
+                                            } else if (i.hasOwnProperty('oneClick')) {
+                                                if ((r = i.oneClick || {}).hasOwnProperty('aliasKey')) {
+                                                    for (t = 0; t < E.REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_ONE_CLICK_SUBSEQUENT.length; t++) if (((n = E.REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_ONE_CLICK_SUBSEQUENT[t]), !r.hasOwnProperty(n))) return 'blikOptions.oneClick.' + n;
+                                                } else for (t = 0; t < E.REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_ONE_CLICK_FIRST.length; t++) if (((n = E.REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_ONE_CLICK_FIRST[t]), !r.hasOwnProperty(n))) return 'blikOptions.oneClick.' + n;
+                                            }
+                                            return !1;
+                                        })(e);
+                                } else {
+                                    for (!e.redirectUrl && E.REQUIRED_OPTIONS_FOR_START_PAYMENT.push('onPaymentStart'), t = 0; t < E.REQUIRED_OPTIONS_FOR_START_PAYMENT.length; t++) if (((n = E.REQUIRED_OPTIONS_FOR_START_PAYMENT[t]), !e.hasOwnProperty(n))) return n;
                                     if (!e.fallback.url) return 'fallback.url';
                                     if (!e.fallback.buttonText) return 'fallback.buttonText';
+                                    if (!0 === e.recurrent && !e.customerId) return 'customerId';
                                 }
                                 return !1;
-                            })(e))
+                            })(e)))
                                 ? ((n = new i(h.LOCAL_PAYMENT_START_PAYMENT_MISSING_REQUIRED_OPTION)), 'string' == typeof t && (n.details = "Missing required '" + t + "' option."), Promise.reject(n))
-                                : ((m = e.windowOptions || {}),
+                                : ((f = e.windowOptions || {}),
                                     (r = e.address || {}),
                                     (a = e.fallback || {}),
                                     (_ = e.billingAddress || {}),
                                     (c = {
-                                        intent: 'sale',
-                                        returnUrl: p.queryify(y._assetsUrl + '/html/local-payment-redirect-frame' + o(y._isDebug) + '.html', {
-                                            channel: A,
-                                            r: a.url,
-                                            t: a.buttonText
-                                        }),
-                                        cancelUrl: p.queryify(y._assetsUrl + '/html/local-payment-redirect-frame' + o(y._isDebug) + '.html', {
-                                            channel: A,
-                                            r: a.cancelUrl || a.url,
-                                            t: a.cancelButtonText || a.buttonText,
-                                            c: 1
-                                        }),
-                                        experienceProfile: {
-                                            brandName: e.displayName,
-                                            noShipping: !e.shippingAddressRequired,
-                                            locale: e.locale,
-                                            customerServiceInstructions: e.customerServiceInstructions
-                                        },
-                                        fundingSource: e.paymentType,
-                                        paymentTypeCountryCode: e.paymentTypeCountryCode,
                                         amount: e.amount,
-                                        currencyIsoCode: e.currencyCode,
-                                        firstName: e.givenName,
-                                        lastName: e.surname,
-                                        payerEmail: e.email,
-                                        phone: e.phone,
-                                        line1: r.streetAddress,
-                                        line2: r.extendedAddress,
-                                        city: r.locality,
-                                        state: r.region,
-                                        postalCode: r.postalCode,
-                                        countryCode: r.countryCode,
-                                        merchantAccountId: y._merchantAccountId,
-                                        bic: e.bic,
                                         billingAddress: {
                                             line1: _.streetAddress,
                                             line2: _.extendedAddress,
@@ -6453,19 +7009,61 @@ var t;
                                             countryCode: _.countryCode
                                         },
                                         birthDate: e.birthDate,
+                                        blikOptions: e.blikOptions,
+                                        city: r.locality,
                                         correlationId: e.correlationId,
+                                        countryCode: r.countryCode,
+                                        currencyIsoCode: e.currencyCode,
                                         discountAmount: e.discountAmount,
+                                        experienceProfile: {
+                                            brandName: e.displayName,
+                                            customerServiceInstructions: e.customerServiceInstructions,
+                                            locale: e.locale,
+                                            noShipping: !e.shippingAddressRequired
+                                        },
+                                        firstName: e.givenName,
+                                        fundingSource: e.paymentType,
+                                        intent: 'sale',
+                                        lastName: e.surname,
+                                        line1: r.streetAddress,
+                                        line2: r.extendedAddress,
+                                        lineItems: e.lineItems,
+                                        merchantAccountId: O._merchantAccountId,
+                                        merchantOrPartnerCustomerId: e.customerId,
+                                        payerEmail: e.email,
+                                        paymentTypeCountryCode: e.paymentTypeCountryCode,
+                                        phone: e.phone,
                                         phoneCountryCode: e.phoneCountryCode,
+                                        postalCode: r.postalCode,
+                                        recurrent: e.recurrent,
                                         shippingAmount: e.shippingAmount,
-                                        lineItems: e.lineItems
+                                        state: r.region
                                     }),
-                                    (y._paymentType = e.paymentType.toLowerCase()),
-                                    y._authorizationInProgress)
-                                  ? (s.sendEvent(y._client, y._paymentType + '.local-payment.start-payment.error.already-opened'), Promise.reject(new i(h.LOCAL_PAYMENT_ALREADY_IN_PROGRESS)))
-                                  : ((y._authorizationInProgress = !0),
+                                    O._isRedirectFlow
+                                        ? ((I = p.queryify(O._redirectUrl, { wasCanceled: !0 })), (N = O._redirectUrl))
+                                        : ((I = p.queryify(O._assetsUrl + '/html/local-payment-redirect-frame' + o(O._isDebug) + '.html', {
+                                              channel: T,
+                                              r: a.cancelUrl || a.url,
+                                              t: a.cancelButtonText || a.buttonText,
+                                              c: 1
+                                          })),
+                                          (N = p.queryify(O._assetsUrl + '/html/local-payment-redirect-frame' + o(O._isDebug) + '.html', {
+                                              channel: T,
+                                              r: a.url,
+                                              t: a.buttonText
+                                          }))),
+                                    m(c, {
+                                        cancelUrl: I,
+                                        returnUrl: N
+                                    }),
+                                    (O._paymentType = e.paymentType.toLowerCase()),
+                                    O._authorizationInProgress && !O._isRedirectFlow)
+                                  ? (s.sendEvent(O._client, O._paymentType + '.local-payment.start-payment.error.already-opened'), Promise.reject(new i(h.LOCAL_PAYMENT_ALREADY_IN_PROGRESS)))
+                                  : ((O._authorizationInProgress = !0),
                                     (d = new l()),
-                                    !f(e.paymentType) &&
-                                        ((y._startPaymentCallback = y._createStartPaymentCallback(
+                                    !y(e) &&
+                                        !O._isRedirectFlow &&
+                                        ((O._startPaymentCallback = O._createStartPaymentCallback(
                                             function (e) {
                                                 d.resolve(e);
                                             },
@@ -6473,31 +7071,41 @@ var t;
                                                 d.reject(e);
                                             }
                                         )),
-                                        y._frameService.open(
+                                        O._frameService.open(
                                             {
-                                                width: m.width || 1282,
-                                                height: m.height || 720
+                                                width: f.width || 1282,
+                                                height: f.height || 720
                                             },
-                                            y._startPaymentCallback
+                                            O._startPaymentCallback
                                         )),
-                                    y._client
+                                    O._client
                                         .request({
                                             method: 'post',
                                             endpoint: 'local_payments/create',
                                             data: c
                                         })
                                         .then(function (t) {
-                                            s.sendEvent(y._client, y._paymentType + '.local-payment.start-payment.opened'),
-                                                (y._startPaymentOptions = e),
-                                                f(e.paymentType)
-                                                    ? (e.onPaymentStart({ paymentId: t.paymentResource.paymentToken }), (y._authorizationInProgress = !1), d.resolve())
-                                                    : e.onPaymentStart({ paymentId: t.paymentResource.paymentToken }, function () {
-                                                          y._frameService.redirect(t.paymentResource.redirectUrl);
-                                                      });
+                                            var n = t.paymentResource.redirectUrl;
+                                            O._isRedirectFlow ? s.sendEvent(O._client, O._paymentType + '.local-payment.start-payment.redirected') : s.sendEvent(O._client, O._paymentType + '.local-payment.start-payment.opened'),
+                                                (O._startPaymentOptions = e),
+                                                y(e)
+                                                    ? ((O._authorizationInProgress = !1),
+                                                      'string' == typeof n && n.length
+                                                          ? d.reject(new i(h.LOCAL_PAYMENT_START_PAYMENT_DEFERRED_PAYMENT_FAILED))
+                                                          : (A = e.onPaymentStart({ paymentId: t.paymentResource.paymentToken })) instanceof Promise
+                                                            ? A.then(function () {
+                                                                  d.resolve();
+                                                              })
+                                                            : d.resolve())
+                                                    : O._isRedirectFlow
+                                                      ? (window.location.href = t.paymentResource.redirectUrl)
+                                                      : e.onPaymentStart({ paymentId: t.paymentResource.paymentToken }, function () {
+                                                            O._frameService.redirect(t.paymentResource.redirectUrl);
+                                                        });
                                         })
                                         .catch(function (e) {
                                             var t = e.details && e.details.httpStatus;
-                                            if ((y._frameService.close(), (y._authorizationInProgress = !1), 422 === t)) {
+                                            if ((!O._isRedirectFlow && O._frameService.close(), (O._authorizationInProgress = !1), 422 === t)) {
                                                 d.reject(
                                                     new i({
                                                         type: h.LOCAL_PAYMENT_INVALID_PAYMENT_OPTION.type,
@@ -6518,7 +7126,7 @@ var t;
                                         }),
                                     d);
                         }),
-                        (m.prototype.tokenize = function (e) {
+                        (f.prototype.tokenize = function (e) {
                             var t = this,
                                 n = this._client;
                             return ((e = e || p.parse()).queryItems && (e = e.queryItems), e.c || e.wasCanceled)
@@ -6572,13 +7180,13 @@ var t;
                                             );
                                         });
                         }),
-                        (m.prototype.closeWindow = function () {
+                        (f.prototype.closeWindow = function () {
                             this._authoriztionInProgress && s.sendEvent(this._client, this._paymentType + '.local-payment.start-payment.closed.by-merchant'), this._frameService.close();
                         }),
-                        (m.prototype.focusWindow = function () {
+                        (f.prototype.focusWindow = function () {
                             this._frameService.focus();
                         }),
-                        (m.prototype._createStartPaymentCallback = function (e, t) {
+                        (f.prototype._createStartPaymentCallback = function (e, t) {
                             var n = this,
                                 r = this._client;
                             return function (o, a) {
@@ -6612,7 +7220,7 @@ var t;
                                             }));
                             };
                         }),
-                        (m.prototype._formatTokenizePayload = function (e) {
+                        (f.prototype._formatTokenizePayload = function (e) {
                             var t,
                                 n = {};
                             return (
@@ -6626,11 +7234,11 @@ var t;
                                 t
                             );
                         }),
-                        (m.prototype.hasTokenizationParams = function () {
+                        (f.prototype.hasTokenizationParams = function () {
                             var e = p.parse();
                             return !!e.errorcode || !!(e.btLpToken && e.btLpPaymentId && e.btLpPayerId);
                         }),
-                        (m.prototype._formatTokenizeData = function (e) {
+                        (f.prototype._formatTokenizeData = function (e) {
                             var t = this._client.getConfiguration().gatewayConfiguration;
                             return {
                                 merchantAccountId: this._merchantAccountId,
@@ -6643,28 +7251,29 @@ var t;
                                 }
                             };
                         });
-                    (m.prototype.teardown = function () {
-                        return this._frameService.teardown(), d(this, c(m.prototype)), s.sendEvent(this._client, 'local-payment.teardown-completed'), Promise.resolve();
+                    (f.prototype.teardown = function () {
+                        return !this._isRedirectFlow && this._frameService.teardown(), d(this, c(f.prototype)), s.sendEvent(this._client, 'local-payment.teardown-completed'), Promise.resolve();
                     }),
-                        (t.exports = _.wrapPrototype(m));
+                        (t.exports = _.wrapPrototype(f));
                 },
                 {
-                    '../../lib/analytics': 119,
-                    '../../lib/braintree-error': 124,
-                    '../../lib/constants': 126,
-                    '../../lib/convert-methods-to-error': 127,
-                    '../../lib/convert-to-braintree-error': 128,
-                    '../../lib/frame-service/external': 139,
-                    '../../lib/methods': 155,
-                    '../../lib/querystring': 157,
-                    '../../lib/use-min': 160,
-                    '../shared/errors': 165,
-                    './constants': 162,
-                    '@braintree/extended-promise': 34,
-                    '@braintree/wrap-promise': 43
+                    '../../lib/analytics': 138,
+                    '../../lib/assign': 140,
+                    '../../lib/braintree-error': 143,
+                    '../../lib/constants': 145,
+                    '../../lib/convert-methods-to-error': 146,
+                    '../../lib/convert-to-braintree-error': 147,
+                    '../../lib/frame-service/external': 158,
+                    '../../lib/methods': 175,
+                    '../../lib/querystring': 177,
+                    '../../lib/use-min': 181,
+                    '../shared/errors': 186,
+                    './constants': 183,
+                    '@braintree/extended-promise': 31,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            164: [
+            185: [
                 function (e, t, n) {
                     var r = e('../lib/analytics'),
                         i = e('../lib/basic-component-verification'),
@@ -6673,7 +7282,8 @@ var t;
                         s = e('./external/local-payment'),
                         c = e('@braintree/wrap-promise'),
                         d = e('../lib/braintree-error'),
-                        u = e('./shared/errors');
+                        u = e('./shared/errors'),
+                        l = e('../lib/querystring').parse;
                     t.exports = {
                         create: c(function (e) {
                             var t = 'Local Payment';
@@ -6693,25 +7303,40 @@ var t;
                                     });
                                 })
                                 .then(function (t) {
-                                    var n = t.getConfiguration();
-                                    return ((e.client = t), !0 !== n.gatewayConfiguration.paypalEnabled) ? Promise.reject(new d(u.LOCAL_PAYMENT_NOT_ENABLED)) : (r.sendEvent(t, 'local-payment.initialized'), new s(e)._initialize());
+                                    var n,
+                                        i,
+                                        o = t.getConfiguration();
+                                    if (((e.client = t), !0 !== o.gatewayConfiguration.paypalEnabled)) return Promise.reject(new d(u.LOCAL_PAYMENT_NOT_ENABLED));
+                                    if ((r.sendEvent(t, 'local-payment.initialized'), (n = new s(e)), e.redirectUrl))
+                                        return (i = l(window.location.href)).token || i.wasCanceled
+                                            ? n
+                                                  .tokenize(i)
+                                                  .then(function (e) {
+                                                      return (n.tokenizePayload = e), n;
+                                                  })
+                                                  .catch(function (e) {
+                                                      return console.log('Error while tokenizing: ', e), n;
+                                                  })
+                                            : n;
+                                    return n._initialize();
                                 });
                         }),
-                        VERSION: '3.97.0'
+                        VERSION: '3.112.1'
                     };
                 },
                 {
-                    '../lib/analytics': 119,
-                    '../lib/basic-component-verification': 122,
-                    '../lib/braintree-error': 124,
-                    '../lib/create-assets-url': 129,
-                    '../lib/create-deferred-client': 131,
-                    './external/local-payment': 163,
-                    './shared/errors': 165,
-                    '@braintree/wrap-promise': 43
+                    '../lib/analytics': 138,
+                    '../lib/basic-component-verification': 141,
+                    '../lib/braintree-error': 143,
+                    '../lib/create-assets-url': 148,
+                    '../lib/create-deferred-client': 150,
+                    '../lib/querystring': 177,
+                    './external/local-payment': 184,
+                    './shared/errors': 186,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            165: [
+            186: [
                 function (e, t, n) {
                     var r = e('../../lib/braintree-error');
                     t.exports = {
@@ -6750,6 +7375,11 @@ var t;
                             code: 'LOCAL_PAYMENT_START_PAYMENT_MISSING_REQUIRED_OPTION',
                             message: 'Missing required option for startPayment.'
                         },
+                        LOCAL_PAYMENT_START_PAYMENT_DEFERRED_PAYMENT_FAILED: {
+                            type: r.types.UNKNOWN,
+                            code: 'LOCAL_PAYMENT_START_PAYMENT_DEFERRED_PAYMENT_FAILED',
+                            message: 'LocalPayment startPayment deferred payment failed.'
+                        },
                         LOCAL_PAYMENT_TOKENIZATION_FAILED: {
                             type: r.types.NETWORK,
                             code: 'LOCAL_PAYMENT_TOKENIZATION_FAILED',
@@ -6762,9 +7392,9 @@ var t;
                         }
                     };
                 },
-                { '../../lib/braintree-error': 124 }
+                { '../../lib/braintree-error': 143 }
             ],
-            166: [
+            187: [
                 function (e, t, n) {
                     var r = e('../../lib/frame-service/external'),
                         i = e('../../lib/braintree-error'),
@@ -6778,7 +7408,7 @@ var t;
                         p = e('../../lib/constants').INTEGRATION_TIMEOUT_MS;
                     function _(e) {
                         var t = e.client.getConfiguration();
-                        (this._client = e.client), (this._assetsUrl = t.gatewayConfiguration.assetsUrl + '/web/3.97.0'), (this._isDebug = t.isDebug), (this._authInProgress = !1), window.popupBridge && 'function' == typeof window.popupBridge.getReturnUrlPrefix ? (this._callbackUrl = window.popupBridge.getReturnUrlPrefix() + 'return') : (this._callbackUrl = this._assetsUrl + '/html/redirect-frame' + (this._isDebug ? '' : '.min') + '.html');
+                        (this._client = e.client), (this._assetsUrl = t.gatewayConfiguration.assetsUrl + '/web/3.112.1'), (this._isDebug = t.isDebug), (this._authInProgress = !1), window.popupBridge && 'function' == typeof window.popupBridge.getReturnUrlPrefix ? (this._callbackUrl = window.popupBridge.getReturnUrlPrefix() + 'return') : (this._callbackUrl = this._assetsUrl + '/html/redirect-frame' + (this._isDebug ? '' : '.min') + '.html');
                     }
                     (_.prototype._initialize = function () {
                         var e = this;
@@ -6940,19 +7570,19 @@ var t;
                     t.exports = s.wrapPrototype(_);
                 },
                 {
-                    '../../lib/analytics': 119,
-                    '../../lib/braintree-error': 124,
-                    '../../lib/constants': 126,
-                    '../../lib/convert-methods-to-error': 127,
-                    '../../lib/convert-to-braintree-error': 128,
-                    '../../lib/frame-service/external': 139,
-                    '../../lib/methods': 155,
-                    '../shared/constants': 169,
-                    '../shared/errors': 170,
-                    '@braintree/wrap-promise': 43
+                    '../../lib/analytics': 138,
+                    '../../lib/braintree-error': 143,
+                    '../../lib/constants': 145,
+                    '../../lib/convert-methods-to-error': 146,
+                    '../../lib/convert-to-braintree-error': 147,
+                    '../../lib/frame-service/external': 158,
+                    '../../lib/methods': 175,
+                    '../shared/constants': 190,
+                    '../shared/errors': 191,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            167: [
+            188: [
                 function (e, t, n) {
                     var r = e('../lib/braintree-error'),
                         i = e('../lib/basic-component-verification'),
@@ -6991,27 +7621,27 @@ var t;
                                 });
                         }),
                         isSupported: l,
-                        VERSION: '3.97.0'
+                        VERSION: '3.112.1'
                     };
                 },
                 {
-                    '../lib/basic-component-verification': 122,
-                    '../lib/braintree-error': 124,
-                    '../lib/create-assets-url': 129,
-                    '../lib/create-deferred-client': 131,
-                    './external/masterpass': 166,
-                    './shared/browser-detection': 168,
-                    './shared/errors': 170,
-                    '@braintree/wrap-promise': 43
+                    '../lib/basic-component-verification': 141,
+                    '../lib/braintree-error': 143,
+                    '../lib/create-assets-url': 148,
+                    '../lib/create-deferred-client': 150,
+                    './external/masterpass': 187,
+                    './shared/browser-detection': 189,
+                    './shared/errors': 191,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            168: [
+            189: [
                 function (e, t, n) {
                     t.exports = { supportsPopups: e('@braintree/browser-detection/supports-popups') };
                 },
-                { '@braintree/browser-detection/supports-popups': 32 }
+                { '@braintree/browser-detection/supports-popups': 29 }
             ],
-            169: [
+            190: [
                 function (e, t, n) {
                     t.exports = {
                         LANDING_FRAME_NAME: 'braintreemasterpasslanding',
@@ -7023,7 +7653,7 @@ var t;
                 },
                 {}
             ],
-            170: [
+            191: [
                 function (e, t, n) {
                     var r = e('../../lib/braintree-error');
                     t.exports = {
@@ -7079,9 +7709,9 @@ var t;
                         }
                     };
                 },
-                { '../../lib/braintree-error': 124 }
+                { '../../lib/braintree-error': 143 }
             ],
-            171: [
+            192: [
                 function (e, t, n) {
                     var r = e('../../lib/analytics'),
                         i = e('../../lib/assign').assign,
@@ -7199,7 +7829,7 @@ var t;
                                                   }),
                                                   n(t);
                                           }),
-                                          (t._frame.src = ((i = e.gatewayConfiguration.assetsUrl), (o = t._componentId), i + '/web/3.97.0/html/payment-request-frame' + u(e.isDebug) + '.html#' + o)),
+                                          (t._frame.src = ((i = e.gatewayConfiguration.assetsUrl), (o = t._componentId), i + '/web/3.112.1/html/payment-request-frame' + u(e.isDebug) + '.html#' + o)),
                                           document.body.appendChild(t._frame);
                                   });
                         }),
@@ -7364,22 +7994,22 @@ var t;
                         (t.exports = f.wrapPrototype(A));
                 },
                 {
-                    '../../lib/analytics': 119,
-                    '../../lib/assign': 121,
-                    '../../lib/braintree-error': 124,
-                    '../../lib/convert-methods-to-error': 127,
-                    '../../lib/generate-google-pay-configuration': 149,
-                    '../../lib/methods': 155,
-                    '../../lib/use-min': 160,
-                    '../shared/constants': 173,
-                    '@braintree/event-emitter': 33,
-                    '@braintree/iframer': 35,
-                    '@braintree/uuid': 39,
-                    '@braintree/wrap-promise': 43,
-                    framebus: 52
+                    '../../lib/analytics': 138,
+                    '../../lib/assign': 140,
+                    '../../lib/braintree-error': 143,
+                    '../../lib/convert-methods-to-error': 146,
+                    '../../lib/generate-google-pay-configuration': 168,
+                    '../../lib/methods': 175,
+                    '../../lib/use-min': 181,
+                    '../shared/constants': 194,
+                    '@braintree/event-emitter': 30,
+                    '@braintree/iframer': 32,
+                    '@braintree/uuid': 36,
+                    '@braintree/wrap-promise': 40,
+                    framebus: 50
                 }
             ],
-            172: [
+            193: [
                 function (e, t, n) {
                     var r = e('./external/payment-request'),
                         i = e('../lib/basic-component-verification'),
@@ -7408,18 +8038,18 @@ var t;
                                     return (e.client = t), new r(e).initialize();
                                 });
                         }),
-                        VERSION: '3.97.0'
+                        VERSION: '3.112.1'
                     };
                 },
                 {
-                    '../lib/basic-component-verification': 122,
-                    '../lib/create-assets-url': 129,
-                    '../lib/create-deferred-client': 131,
-                    './external/payment-request': 171,
-                    '@braintree/wrap-promise': 43
+                    '../lib/basic-component-verification': 141,
+                    '../lib/create-assets-url': 148,
+                    '../lib/create-deferred-client': 150,
+                    './external/payment-request': 192,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            173: [
+            194: [
                 function (e, t, n) {
                     var r = e('../../lib/enumerate'),
                         i = e('./errors'),
@@ -7433,11 +8063,11 @@ var t;
                         (t.exports = o);
                 },
                 {
-                    '../../lib/enumerate': 134,
-                    './errors': 174
+                    '../../lib/enumerate': 153,
+                    './errors': 195
                 }
             ],
-            174: [
+            195: [
                 function (e, t, n) {
                     var r = e('../../lib/braintree-error');
                     t.exports = {
@@ -7496,9 +8126,9 @@ var t;
                         }
                     };
                 },
-                { '../../lib/braintree-error': 124 }
+                { '../../lib/braintree-error': 143 }
             ],
-            175: [
+            196: [
                 function (e, t, n) {
                     var r = e('../lib/braintree-error');
                     t.exports = {
@@ -7563,9 +8193,9 @@ var t;
                         }
                     };
                 },
-                { '../lib/braintree-error': 124 }
+                { '../lib/braintree-error': 143 }
             ],
-            176: [
+            197: [
                 function (e, t, n) {
                     var r = e('../lib/basic-component-verification'),
                         i = e('@braintree/wrap-promise'),
@@ -7585,16 +8215,16 @@ var t;
                         isSupported: function () {
                             return !0;
                         },
-                        VERSION: '3.97.0'
+                        VERSION: '3.112.1'
                     };
                 },
                 {
-                    '../lib/basic-component-verification': 122,
-                    './paypal-checkout': 177,
-                    '@braintree/wrap-promise': 43
+                    '../lib/basic-component-verification': 141,
+                    './paypal-checkout': 198,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            177: [
+            198: [
                 function (e, t, n) {
                     var r = e('../lib/analytics'),
                         i = e('../lib/assign').assign,
@@ -7612,13 +8242,14 @@ var t;
                         m = e('../lib/use-min'),
                         f = e('../lib/convert-methods-to-error'),
                         y = e('../lib/querystring'),
-                        A = e('../lib/constants').INTEGRATION_TIMEOUT_MS,
-                        T = ['amount', 'currency', 'vaultInitiatedCheckoutPaymentMethodToken'];
-                    function I(e) {
+                        A = e('../lib/camel-case-to-snake-case'),
+                        T = e('../lib/constants').INTEGRATION_TIMEOUT_MS,
+                        I = ['amount', 'currency', 'vaultInitiatedCheckoutPaymentMethodToken'];
+                    function N(e) {
                         (this._merchantAccountId = e.merchantAccountId), (this._autoSetDataUserIdToken = !!e.autoSetDataUserIdToken);
                     }
                     (s.suppressUnhandledPromiseMessage = !0),
-                        (I.prototype._initialize = function (e) {
+                        (N.prototype._initialize = function (e) {
                             var t;
                             return (e.client
                                 ? ((t = e.client.getConfiguration()),
@@ -7652,14 +8283,14 @@ var t;
                                   )
                                 : Promise.resolve(this);
                         }),
-                        (I.prototype._setupFrameService = function (e) {
+                        (N.prototype._setupFrameService = function (e) {
                             var t = new s(),
                                 n = e.getConfiguration(),
                                 i = setTimeout(function () {
                                     r.sendEvent(e, 'paypal-checkout.frame-service.timed-out'), t.reject(new d(l.PAYPAL_START_VAULT_INITIATED_CHECKOUT_SETUP_FAILED));
-                                }, A);
+                                }, T);
                             return (
-                                (this._assetsUrl = n.gatewayConfiguration.paypal.assetsUrl + '/web/3.97.0'),
+                                (this._assetsUrl = n.gatewayConfiguration.paypal.assetsUrl + '/web/3.112.1'),
                                 (this._isDebug = n.isDebug),
                                 (this._loadingFrameUrl = this._assetsUrl + '/html/paypal-landing-frame' + m(this._isDebug) + '.html'),
                                 _.create(
@@ -7675,7 +8306,7 @@ var t;
                                 t
                             );
                         }),
-                        (I.prototype.createPayment = function (e) {
+                        (N.prototype.createPayment = function (e) {
                             return e && p.FLOW_ENDPOINTS.hasOwnProperty(e.flow)
                                 ? (r.sendEvent(this._clientPromise, 'paypal-checkout.createPayment'),
                                   this._createPaymentResource(e).then(function (t) {
@@ -7684,10 +8315,11 @@ var t;
                                   }))
                                 : Promise.reject(new d(l.PAYPAL_FLOW_OPTION_REQUIRED));
                         }),
-                        (I.prototype._createPaymentResource = function (e, t) {
+                        (N.prototype._createPaymentResource = function (e, t) {
                             var n = this,
                                 i = 'paypal_hermes/' + p.FLOW_ENDPOINTS[e.flow];
                             return (
+                                (this._flow = e.flow),
                                 delete this.intentFromCreatePayment,
                                 (t = t || {}),
                                 !0 === e.offerCredit && r.sendEvent(this._clientPromise, 'paypal-checkout.credit.offered'),
@@ -7725,7 +8357,7 @@ var t;
                                     })
                             );
                         }),
-                        (I.prototype.updatePayment = function (e) {
+                        (N.prototype.updatePayment = function (e) {
                             var t = this;
                             return !e || this._hasMissingOption(e, p.REQUIRED_OPTIONS)
                                 ? (r.sendEvent(t._clientPromise, 'paypal-checkout.updatePayment.missing-options'), Promise.reject(new d(l.PAYPAL_MISSING_REQUIRED_OPTION)))
@@ -7769,12 +8401,12 @@ var t;
                                         })
                                     ));
                         }),
-                        (I.prototype.startVaultInitiatedCheckout = function (e) {
+                        (N.prototype.startVaultInitiatedCheckout = function (e) {
                             var t,
                                 n = this;
                             return this._vaultInitiatedCheckoutInProgress
                                 ? (r.sendEvent(this._clientPromise, 'paypal-checkout.startVaultInitiatedCheckout.error.already-in-progress'), Promise.reject(new d(l.PAYPAL_START_VAULT_INITIATED_CHECKOUT_IN_PROGRESS)))
-                                : (T.forEach(function (n) {
+                                : (I.forEach(function (n) {
                                         !e.hasOwnProperty(n) && (t = n);
                                     }),
                                     t)
@@ -7822,7 +8454,7 @@ var t;
                                             return n._frameService.close(), (n._vaultInitiatedCheckoutInProgress = !1), n._removeModalBackdrop(), r.sendEvent(n._clientPromise, 'paypal-checkout.startVaultInitiatedCheckout.succeeded'), Promise.resolve(e);
                                         }));
                         }),
-                        (I.prototype._addModalBackdrop = function (e) {
+                        (N.prototype._addModalBackdrop = function (e) {
                             if (!e.optOutOfModalBackdrop)
                                 !this._modalBackdrop &&
                                     ((this._modalBackdrop = document.createElement('div')),
@@ -7843,10 +8475,10 @@ var t;
                                     )),
                                     document.body.appendChild(this._modalBackdrop);
                         }),
-                        (I.prototype._removeModalBackdrop = function () {
+                        (N.prototype._removeModalBackdrop = function () {
                             if (!!(this._modalBackdrop && this._modalBackdrop.parentNode)) this._modalBackdrop.parentNode.removeChild(this._modalBackdrop);
                         }),
-                        (I.prototype.closeVaultInitiatedCheckoutWindow = function () {
+                        (N.prototype.closeVaultInitiatedCheckoutWindow = function () {
                             return (
                                 this._vaultInitiatedCheckoutInProgress && r.sendEvent(this._clientPromise, 'paypal-checkout.startVaultInitiatedCheckout.canceled.by-merchant'),
                                 this._waitForVaultInitiatedCheckoutDependencies().then(
@@ -7856,14 +8488,14 @@ var t;
                                 )
                             );
                         }),
-                        (I.prototype.focusVaultInitiatedCheckoutWindow = function () {
+                        (N.prototype.focusVaultInitiatedCheckoutWindow = function () {
                             return this._waitForVaultInitiatedCheckoutDependencies().then(
                                 function () {
                                     this._frameService.focus();
                                 }.bind(this)
                             );
                         }),
-                        (I.prototype._createFrameServiceCallback = function (e) {
+                        (N.prototype._createFrameServiceCallback = function (e) {
                             var t = this;
                             return function (n, r) {
                                 n
@@ -7885,22 +8517,22 @@ var t;
                                           }));
                             };
                         }),
-                        (I.prototype._waitForVaultInitiatedCheckoutDependencies = function () {
+                        (N.prototype._waitForVaultInitiatedCheckoutDependencies = function () {
                             var e = this;
                             return this._clientPromise.then(function () {
                                 return e._frameServicePromise;
                             });
                         }),
-                        (I.prototype._constructVaultCheckutUrl = function (e) {
+                        (N.prototype._constructVaultCheckutUrl = function (e) {
                             var t = this._frameService._serviceId;
                             return this._assetsUrl + '/html/' + e + m(this._isDebug) + '.html?channel=' + t;
                         }),
-                        (I.prototype.tokenizePayment = function (e) {
+                        (N.prototype.tokenizePayment = function (e) {
                             var t,
                                 n = this,
                                 i = !0,
                                 o = {
-                                    flow: e.billingToken && !e.paymentID ? 'vault' : 'checkout',
+                                    flow: this._flow,
                                     intent: e.intent || this.intentFromCreatePayment
                                 },
                                 a = {
@@ -7940,18 +8572,19 @@ var t;
                                     })
                             );
                         }),
-                        (I.prototype.getClientId = function () {
+                        (N.prototype.getClientId = function () {
                             return this._clientPromise.then(function (e) {
                                 return e.getConfiguration().gatewayConfiguration.paypal.clientId;
                             });
                         }),
-                        (I.prototype.loadPayPalSDK = function (e) {
+                        (N.prototype.loadPayPalSDK = function (e) {
                             var t,
                                 n,
                                 r = new s(),
                                 o = (e && e.dataAttributes) || {},
                                 a = o['user-id-token'] || o['data-user-id-token'];
                             return (
+                                this._configuration && (o['client-metadata-id'] = o['client-metadata-id'] ? o['client-metadata-id'] : this._configuration.analyticsMetadata.sessionId),
                                 !a && (a = this._authorizationInformation.fingerprint && this._authorizationInformation.fingerprint.split('?')[0]),
                                 (this._paypalScript = document.createElement('script')),
                                 (e = i({}, { components: 'buttons' }, e)),
@@ -7990,7 +8623,7 @@ var t;
                                 )
                             );
                         }),
-                        (I.prototype._attachPreloadPixel = function (e) {
+                        (N.prototype._attachPreloadPixel = function (e) {
                             var t,
                                 n = e.id,
                                 r = e.userIdToken,
@@ -8002,7 +8635,7 @@ var t;
                                 };
                             e.amount && (a.amount = e.amount), e.currency && (a.currency = e.currency), e.merchantId && (a['merchant-id'] = e.merchantId), (t = new XMLHttpRequest()).open('GET', y.queryify(o, a)), t.send();
                         }),
-                        (I.prototype._formatPaymentResourceData = function (e, t) {
+                        (N.prototype._formatPaymentResourceData = function (e, t) {
                             var n,
                                 r = this._configuration.gatewayConfiguration,
                                 i = e.intent,
@@ -8018,15 +8651,16 @@ var t;
                                         addressOverride: !1 === e.shippingAddressEditable,
                                         landingPageType: e.landingPageType
                                     },
-                                    shippingOptions: e.shippingOptions
+                                    shippingOptions: e.shippingOptions,
+                                    payer_email: e.userAuthenticationEmail
                                 };
                             if ('checkout' === e.flow) {
                                 for (n in ((o.amount = e.amount), (o.currencyIsoCode = e.currency), (o.requestBillingAgreement = e.requestBillingAgreement), i && ('capture' === i && (i = 'sale'), (o.intent = i)), e.hasOwnProperty('lineItems') && (o.lineItems = e.lineItems), e.hasOwnProperty('vaultInitiatedCheckoutPaymentMethodToken') && (o.vaultInitiatedCheckoutPaymentMethodToken = e.vaultInitiatedCheckoutPaymentMethodToken), e.hasOwnProperty('shippingOptions') && (o.shippingOptions = e.shippingOptions), e.shippingAddressOverride)) e.shippingAddressOverride.hasOwnProperty(n) && (o[n] = e.shippingAddressOverride[n]);
                                 e.hasOwnProperty('billingAgreementDetails') && (o.billingAgreementDetails = e.billingAgreementDetails);
-                            } else (o.shippingAddress = e.shippingAddressOverride), e.billingAgreementDescription && (o.description = e.billingAgreementDescription);
+                            } else (o.shippingAddress = e.shippingAddressOverride), e.billingAgreementDescription && (o.description = e.billingAgreementDescription), e.planType && ((o.plan_type = e.planType), e.planMetadata && (o.plan_metadata = A(e.planMetadata)));
                             return (this._riskCorrelationId = e.riskCorrelationId), e.riskCorrelationId && (o.correlationId = this._riskCorrelationId), o;
                         }),
-                        (I.prototype._verifyConsistentCurrency = function (e) {
+                        (N.prototype._verifyConsistentCurrency = function (e) {
                             return (
                                 !(e.currency && e.hasOwnProperty('shippingOptions') && Array.isArray(e.shippingOptions)) ||
                                 e.shippingOptions.every(function (t) {
@@ -8034,21 +8668,21 @@ var t;
                                 })
                             );
                         }),
-                        (I.prototype._hasMissingOption = function (e, t) {
+                        (N.prototype._hasMissingOption = function (e, t) {
                             var n, r;
                             if (((t = t || []), !e.hasOwnProperty('amount') && !e.hasOwnProperty('lineItems'))) return !0;
                             for (n = 0; n < t.length; n++) if (((r = t[n]), !e.hasOwnProperty(r))) return !0;
                             return !1;
                         }),
-                        (I.prototype._formatUpdatePaymentData = function (e) {
+                        (N.prototype._formatUpdatePaymentData = function (e) {
                             var t = {
                                 merchantAccountId: this._merchantAccountId,
                                 paymentId: e.paymentId || e.orderId,
                                 currencyIsoCode: e.currency
                             };
-                            return e.hasOwnProperty('amount') && (t.amount = e.amount), e.hasOwnProperty('lineItems') && (t.lineItems = e.lineItems), e.hasOwnProperty('shippingOptions') && (t.shippingOptions = e.shippingOptions), e.hasOwnProperty('shippingAddress') && (r.sendEvent(this._clientPromise, 'paypal-checkout.updatePayment.shippingAddress.provided.by-the-merchant'), (t.line1 = e.shippingAddress.line1), e.shippingAddress.hasOwnProperty('line2') && (t.line2 = e.shippingAddress.line2), (t.city = e.shippingAddress.city), (t.state = e.shippingAddress.state), (t.postalCode = e.shippingAddress.postalCode), (t.countryCode = e.shippingAddress.countryCode), e.shippingAddress.hasOwnProperty('phone') && (t.phone = e.shippingAddress.phone), e.shippingAddress.hasOwnProperty('recipientName') && (t.recipientName = e.shippingAddress.recipientName)), t;
+                            return e.hasOwnProperty('amount') && (t.amount = e.amount), e.hasOwnProperty('lineItems') && (t.lineItems = e.lineItems), e.hasOwnProperty('shippingOptions') && (t.shippingOptions = e.shippingOptions), e.hasOwnProperty('amountBreakdown') && (t.amountBreakdown = e.amountBreakdown), e.hasOwnProperty('shippingAddress') && (r.sendEvent(this._clientPromise, 'paypal-checkout.updatePayment.shippingAddress.provided.by-the-merchant'), (t.line1 = e.shippingAddress.line1), e.shippingAddress.hasOwnProperty('line2') && (t.line2 = e.shippingAddress.line2), (t.city = e.shippingAddress.city), (t.state = e.shippingAddress.state), (t.postalCode = e.shippingAddress.postalCode), (t.countryCode = e.shippingAddress.countryCode), e.shippingAddress.hasOwnProperty('phone') && (t.phone = e.shippingAddress.phone), e.shippingAddress.hasOwnProperty('recipientName') && (t.recipientName = e.shippingAddress.recipientName)), t;
                         }),
-                        (I.prototype._formatTokenizeData = function (e, t) {
+                        (N.prototype._formatTokenizeData = function (e, t) {
                             var n = this._configuration,
                                 r = n.gatewayConfiguration,
                                 i = 'TOKENIZATION_KEY' === n.authorizationType,
@@ -8061,7 +8695,7 @@ var t;
                                 };
                             return o ? (a.paypalAccount.billingAgreementToken = t.billingToken) : ((a.paypalAccount.paymentToken = t.paymentId || t.orderId), (a.paypalAccount.payerId = t.payerId), (a.paypalAccount.unilateral = r.paypal.unvettedMerchant), e.intent && (a.paypalAccount.intent = e.intent)), this._merchantAccountId && (a.merchantAccountId = this._merchantAccountId), a;
                         }),
-                        (I.prototype._formatTokenizePayload = function (e) {
+                        (N.prototype._formatTokenizePayload = function (e) {
                             var t,
                                 n = {};
                             return (
@@ -8078,10 +8712,10 @@ var t;
                                 t
                             );
                         }),
-                        (I.prototype.teardown = function () {
+                        (N.prototype.teardown = function () {
                             var e = this;
                             return (
-                                f(this, h(I.prototype)),
+                                f(this, h(N.prototype)),
                                 this._paypalScript && this._paypalScript.parentNode && this._paypalScript.parentNode.removeChild(this._paypalScript),
                                 this._frameServicePromise
                                     .catch(function () {})
@@ -8090,36 +8724,37 @@ var t;
                                     })
                             );
                         }),
-                        (t.exports = c.wrapPrototype(I));
+                        (t.exports = c.wrapPrototype(N));
                 },
                 {
-                    '../lib/analytics': 119,
-                    '../lib/assign': 121,
-                    '../lib/braintree-error': 124,
-                    '../lib/constants': 126,
-                    '../lib/convert-methods-to-error': 127,
-                    '../lib/convert-to-braintree-error': 128,
-                    '../lib/create-assets-url': 129,
-                    '../lib/create-authorization-data': 130,
-                    '../lib/create-deferred-client': 131,
-                    '../lib/frame-service/external': 139,
-                    '../lib/methods': 155,
-                    '../lib/querystring': 157,
-                    '../lib/use-min': 160,
-                    '../paypal/shared/constants': 180,
-                    './errors': 175,
-                    '@braintree/extended-promise': 34,
-                    '@braintree/wrap-promise': 43
+                    '../lib/analytics': 138,
+                    '../lib/assign': 140,
+                    '../lib/braintree-error': 143,
+                    '../lib/camel-case-to-snake-case': 144,
+                    '../lib/constants': 145,
+                    '../lib/convert-methods-to-error': 146,
+                    '../lib/convert-to-braintree-error': 147,
+                    '../lib/create-assets-url': 148,
+                    '../lib/create-authorization-data': 149,
+                    '../lib/create-deferred-client': 150,
+                    '../lib/frame-service/external': 158,
+                    '../lib/methods': 175,
+                    '../lib/querystring': 177,
+                    '../lib/use-min': 181,
+                    '../paypal/shared/constants': 201,
+                    './errors': 196,
+                    '@braintree/extended-promise': 31,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            178: [
+            199: [
                 function (e, t, n) {
                     var r = e('../../lib/frame-service/external'),
                         i = e('../../lib/braintree-error'),
                         o = e('../../lib/convert-to-braintree-error'),
                         a = e('../../lib/use-min'),
                         s = e('../../lib/once'),
-                        c = '3.97.0',
+                        c = '3.112.1',
                         d = e('../shared/constants'),
                         u = e('../../lib/constants').INTEGRATION_TIMEOUT_MS,
                         l = e('../../lib/analytics'),
@@ -8323,23 +8958,23 @@ var t;
                         (t.exports = y);
                 },
                 {
-                    '../../lib/analytics': 119,
-                    '../../lib/braintree-error': 124,
-                    '../../lib/constants': 126,
-                    '../../lib/convert-methods-to-error': 127,
-                    '../../lib/convert-to-braintree-error': 128,
-                    '../../lib/deferred': 132,
-                    '../../lib/frame-service/external': 139,
-                    '../../lib/methods': 155,
-                    '../../lib/once': 156,
-                    '../../lib/querystring': 157,
-                    '../../lib/use-min': 160,
-                    '../shared/constants': 180,
-                    '../shared/errors': 181,
-                    '@braintree/wrap-promise': 43
+                    '../../lib/analytics': 138,
+                    '../../lib/braintree-error': 143,
+                    '../../lib/constants': 145,
+                    '../../lib/convert-methods-to-error': 146,
+                    '../../lib/convert-to-braintree-error': 147,
+                    '../../lib/deferred': 151,
+                    '../../lib/frame-service/external': 158,
+                    '../../lib/methods': 175,
+                    '../../lib/once': 176,
+                    '../../lib/querystring': 177,
+                    '../../lib/use-min': 181,
+                    '../shared/constants': 201,
+                    '../shared/errors': 202,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            179: [
+            200: [
                 function (e, t, n) {
                     var r = e('../lib/analytics'),
                         i = e('../lib/basic-component-verification'),
@@ -8375,21 +9010,21 @@ var t;
                         isSupported: function () {
                             return !0;
                         },
-                        VERSION: '3.97.0'
+                        VERSION: '3.112.1'
                     };
                 },
                 {
-                    '../lib/analytics': 119,
-                    '../lib/basic-component-verification': 122,
-                    '../lib/braintree-error': 124,
-                    '../lib/create-assets-url': 129,
-                    '../lib/create-deferred-client': 131,
-                    './external/paypal': 178,
-                    './shared/errors': 181,
-                    '@braintree/wrap-promise': 43
+                    '../lib/analytics': 138,
+                    '../lib/basic-component-verification': 141,
+                    '../lib/braintree-error': 143,
+                    '../lib/create-assets-url': 148,
+                    '../lib/create-deferred-client': 150,
+                    './external/paypal': 199,
+                    './shared/errors': 202,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            180: [
+            201: [
                 function (e, t, n) {
                     t.exports = {
                         LANDING_FRAME_NAME: 'braintreepaypallanding',
@@ -8402,7 +9037,7 @@ var t;
                 },
                 {}
             ],
-            181: [
+            202: [
                 function (e, t, n) {
                     var r = e('../../lib/braintree-error');
                     t.exports = {
@@ -8448,9 +9083,9 @@ var t;
                         }
                     };
                 },
-                { '../../lib/braintree-error': 124 }
+                { '../../lib/braintree-error': 143 }
             ],
-            182: [
+            203: [
                 function (e, t, n) {
                     var r = e('@braintree/wrap-promise'),
                         i = e('../lib/basic-component-verification'),
@@ -8467,16 +9102,16 @@ var t;
                                     return new o().initialize(e);
                                 });
                         }),
-                        VERSION: '3.97.0'
+                        VERSION: '3.112.1'
                     };
                 },
                 {
-                    '../lib/basic-component-verification': 122,
-                    './preferred-payment-methods': 183,
-                    '@braintree/wrap-promise': 43
+                    '../lib/basic-component-verification': 141,
+                    './preferred-payment-methods': 204,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            183: [
+            204: [
                 function (e, t, n) {
                     var r = e('@braintree/wrap-promise'),
                         i = e('../lib/analytics'),
@@ -8536,13 +9171,13 @@ var t;
                         (t.exports = r.wrapPrototype(s));
                 },
                 {
-                    '../lib/analytics': 119,
-                    '../lib/create-assets-url': 129,
-                    '../lib/create-deferred-client': 131,
-                    '@braintree/wrap-promise': 43
+                    '../lib/analytics': 138,
+                    '../lib/create-assets-url': 148,
+                    '../lib/create-deferred-client': 150,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            184: [
+            205: [
                 function (e, t, n) {
                     var r = e('../../lib/braintree-error'),
                         i = e('../shared/errors'),
@@ -8550,7 +9185,38 @@ var t;
                         a = e('../../lib/analytics'),
                         s = e('../../lib/use-min'),
                         c = e('../shared/constants').BILLING_ADDRESS_OPTIONS,
-                        d = e('../../lib/snake-case-to-camel-case');
+                        d = e('../../lib/snake-case-to-camel-case'),
+                        u = e('../../lib/assign').assign;
+                    function l(e, t) {
+                        var n = {
+                            sepa_debit_account: {
+                                last_4: t.last4,
+                                merchant_or_partner_customer_id: t.customerId,
+                                bank_reference_token: t.bankReferenceToken,
+                                mandate_type: t.mandateType
+                            },
+                            merchant_account_id: t.merchantAccountId
+                        };
+                        return e
+                            .request({
+                                api: 'clientApi',
+                                method: 'post',
+                                endpoint: 'payment_methods/sepa_debit_accounts',
+                                data: n
+                            })
+                            .then(function (e) {
+                                if (!e.nonce) throw new r(i.SEPA_TRANSACTION_FAILED);
+                                return {
+                                    nonce: e.nonce,
+                                    ibanLastFour: t.last4,
+                                    customerId: t.customerId,
+                                    mandateType: t.mandateType
+                                };
+                            })
+                            .catch(function () {
+                                throw new r(i.SEPA_TRANSACTION_FAILED);
+                            });
+                    }
                     t.exports = {
                         createMandate: function (e, t) {
                             var n = {
@@ -8631,51 +9297,53 @@ var t;
                                 );
                             });
                         },
-                        handleApproval: function (e, t) {
-                            var n = {
-                                sepa_debit_account: {
-                                    last_4: t.last4,
-                                    merchant_or_partner_customer_id: t.customerId,
-                                    bank_reference_token: t.bankReferenceToken,
-                                    mandate_type: t.mandateType
-                                },
-                                merchant_account_id: t.merchantAccountId
-                            };
+                        handleApproval: l,
+                        POPUP_WIDTH: 400,
+                        POPUP_HEIGHT: 570,
+                        redirectPage: function (e) {
+                            window.location.href = e;
+                        },
+                        handleApprovalForFullPageRedirect: function (e, t) {
                             return e
                                 .request({
                                     api: 'clientApi',
-                                    method: 'post',
-                                    endpoint: 'payment_methods/sepa_debit_accounts',
-                                    data: n
+                                    method: 'get',
+                                    endpoint: 'sepa_debit/' + t.cart_id
                                 })
-                                .then(function (e) {
-                                    if (!e.nonce) throw new r(i.SEPA_TRANSACTION_FAILED);
-                                    return {
-                                        nonce: e.nonce,
-                                        ibanLastFour: t.last4,
-                                        customerId: t.customerId,
-                                        mandateType: t.mandateType
-                                    };
+                                .then(function (n) {
+                                    var r = n.sepaDebitMandateDetail;
+                                    return (
+                                        a.sendEvent(e, 'sepa.redirect.mandate.approved'),
+                                        u(t, {
+                                            last4: r.last4,
+                                            customerId: r.merchantOrPartnerCustomerId,
+                                            mandateType: r.mandateType,
+                                            bankReferenceToken: r.bankReferenceToken
+                                        }),
+                                        l(e, t)
+                                    );
+                                })
+                                .then(function (t) {
+                                    return a.sendEvent(e, 'sepa.redirect.tokenization.success'), t;
                                 })
                                 .catch(function () {
-                                    throw new r(i.SEPA_TRANSACTION_FAILED);
+                                    throw (a.sendEvent(e, 'sepa.redirect.handle-approval.failed'), new r(i.SEPA_TRANSACTION_FAILED));
                                 });
-                        },
-                        POPUP_WIDTH: 400,
-                        POPUP_HEIGHT: 570
+                        }
                     };
                 },
                 {
-                    '../../lib/analytics': 119,
-                    '../../lib/braintree-error': 124,
-                    '../../lib/frame-service/external': 139,
-                    '../../lib/snake-case-to-camel-case': 159,
-                    '../../lib/use-min': 160,
-                    '../shared/constants': 187,
-                    '../shared/errors': 188
+                    '../../lib/analytics': 138,
+                    '../../lib/assign': 140,
+                    '../../lib/braintree-error': 143,
+                    '../../lib/frame-service/external': 158,
+                    '../../lib/snake-case-to-camel-case': 179,
+                    '../../lib/use-min': 181,
+                    '../shared/constants': 208,
+                    '../shared/errors': 209
                 }
             ],
-            185: [
+            206: [
                 function (e, t, n) {
                     var r = e('@braintree/wrap-promise'),
                         i = e('../../lib/braintree-error'),
@@ -8687,77 +9355,82 @@ var t;
                         u = e('../../lib/assign').assign;
                     function l(e) {
                         var t = e.client.getConfiguration();
-                        (this._client = e.client), (this._assetsUrl = t.gatewayConfiguration.assetsUrl + '/web/3.97.0'), (this._isDebug = t.isDebug), (this._returnUrl = this._assetsUrl + '/html/redirect-frame.html?success=1'), (this._cancelUrl = this._assetsUrl + '/html/redirect-frame.html?cancel=1'), d.sendEvent(this._client, 'sepa.component.initialized');
+                        (this._client = e.client), (this._assetsUrl = t.gatewayConfiguration.assetsUrl + '/web/3.112.1'), (this._isDebug = t.isDebug), e.redirectUrl ? ((this._returnUrl = e.redirectUrl), (this._cancelUrl = e.redirectUrl + '?cancel=1'), (this._isRedirectFlow = !0)) : ((this._returnUrl = this._assetsUrl + '/html/redirect-frame.html?success=1'), (this._cancelUrl = this._assetsUrl + '/html/redirect-frame.html?cancel=1')), e.tokenizePayload && (this.tokenizePayload = e.tokenizePayload), d.sendEvent(this._client, 'sepa.component.initialized');
                     }
                     (l.prototype.tokenize = function (e) {
-                        var t = this,
-                            n = u(
+                        var t,
+                            n = this,
+                            r = u(
                                 {
-                                    cancelUrl: t._cancelUrl,
-                                    returnUrl: t._returnUrl
+                                    cancelUrl: n._cancelUrl,
+                                    returnUrl: n._returnUrl
                                 },
                                 e
                             );
                         return !e || c(e, a.REQUIRED_OPTIONS)
-                            ? (d.sendEvent(t._client, 'sepa.input-validation.missing-options'), Promise.reject(new i(o.SEPA_TOKENIZE_MISSING_REQUIRED_OPTION)))
+                            ? (d.sendEvent(n._client, 'sepa.input-validation.missing-options'), Promise.reject(new i(o.SEPA_TOKENIZE_MISSING_REQUIRED_OPTION)))
                             : a.MANDATE_TYPE_ENUM.includes(e.mandateType)
-                              ? s
-                                    .createMandate(t._client, n)
-                                    .then(function (n) {
-                                        return (
-                                            d.sendEvent(t._client, 'sepa.create-mandate.success'),
-                                            (e.last4 = n.last4),
-                                            (e.bankReferenceToken = n.bankReferenceToken),
-                                            s.openPopup(t._client, {
-                                                approvalUrl: n.approvalUrl,
-                                                assetsUrl: t._assetsUrl
-                                            })
-                                        );
-                                    })
-                                    .then(function () {
-                                        return (
-                                            d.sendEvent(t._client, 'sepa.mandate.approved'),
-                                            s.handleApproval(t._client, {
-                                                bankReferenceToken: e.bankReferenceToken,
-                                                last4: e.last4,
-                                                customerId: e.customerId,
-                                                mandateType: e.mandateType,
-                                                merchantAccountId: e.merchantAccountId
-                                            })
-                                        );
-                                    })
-                                    .then(function (e) {
-                                        return d.sendEvent(t._client, 'sepa.tokenization.success'), Promise.resolve(e);
-                                    })
-                                    .catch(function (e) {
-                                        return d.sendEvent(t._client, 'sepa.' + e.details + '.failed'), Promise.reject(e);
-                                    })
-                              : (d.sendEvent(t._client, 'sepa.input-validation.invalid-mandate'), Promise.reject(new i(o.SEPA_INVALID_MANDATE_TYPE)));
+                              ? ((t = s.createMandate(n._client, r).then(function (t) {
+                                    return (d.sendEvent(n._client, 'sepa.create-mandate.success'), n._isRedirectFlow)
+                                        ? s.redirectPage(t.approvalUrl)
+                                        : ((e.last4 = t.last4),
+                                          (e.bankReferenceToken = t.bankReferenceToken),
+                                          s.openPopup(n._client, {
+                                              approvalUrl: t.approvalUrl,
+                                              assetsUrl: n._assetsUrl
+                                          }));
+                                })),
+                                n._isRedirectFlow)
+                                  ? Promise.resolve()
+                                  : t
+                                        .then(function () {
+                                            return (
+                                                d.sendEvent(n._client, 'sepa.mandate.approved'),
+                                                s.handleApproval(n._client, {
+                                                    bankReferenceToken: e.bankReferenceToken,
+                                                    last4: e.last4,
+                                                    customerId: e.customerId,
+                                                    mandateType: e.mandateType,
+                                                    merchantAccountId: e.merchantAccountId
+                                                })
+                                            );
+                                        })
+                                        .then(function (e) {
+                                            return d.sendEvent(n._client, 'sepa.tokenization.success'), Promise.resolve(e);
+                                        })
+                                        .catch(function (e) {
+                                            return d.sendEvent(n._client, 'sepa.' + e.details + '.failed'), Promise.reject(e);
+                                        })
+                              : (d.sendEvent(n._client, 'sepa.input-validation.invalid-mandate'), Promise.reject(new i(o.SEPA_INVALID_MANDATE_TYPE)));
                     }),
                         (t.exports = r.wrapPrototype(l));
                 },
                 {
-                    '../../lib/analytics': 119,
-                    '../../lib/assign': 121,
-                    '../../lib/braintree-error': 124,
-                    '../shared/constants': 187,
-                    '../shared/errors': 188,
-                    '../shared/has-missing-option': 189,
-                    './mandate': 184,
-                    '@braintree/wrap-promise': 43
+                    '../../lib/analytics': 138,
+                    '../../lib/assign': 140,
+                    '../../lib/braintree-error': 143,
+                    '../shared/constants': 208,
+                    '../shared/errors': 209,
+                    '../shared/has-missing-option': 210,
+                    './mandate': 205,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            186: [
+            207: [
                 function (e, t, n) {
                     var r = e('../lib/analytics'),
                         i = e('./external/sepa'),
                         o = e('../lib/create-assets-url'),
                         a = e('../lib/create-deferred-client'),
                         s = e('../lib/basic-component-verification'),
-                        c = e('@braintree/wrap-promise');
+                        c = e('@braintree/wrap-promise'),
+                        d = e('../lib/querystring').parse,
+                        u = e('../lib/assign').assign,
+                        l = e('./external/mandate');
                     t.exports = {
                         create: c(function (e) {
-                            var t = 'SEPA';
+                            var t = 'SEPA',
+                                n = d(window.location.href);
                             return s
                                 .verify({
                                     name: t,
@@ -8774,22 +9447,38 @@ var t;
                                     });
                                 })
                                 .then(function (t) {
-                                    return (e.client = t), r.sendEvent(e.client, 'sepa.client.initialized'), new i(e);
+                                    return (e.client = t), r.sendEvent(t, 'sepa.client.initialized'), new i(e);
+                                })
+                                .then(function (t) {
+                                    return n.success && 'true' === n.success && n.cart_id
+                                        ? ((e = u(e, n)),
+                                          l
+                                              .handleApprovalForFullPageRedirect(e.client, e)
+                                              .then(function (e) {
+                                                  return (t.tokenizePayload = e), t;
+                                              })
+                                              .catch(function (e) {
+                                                  console.error('Problem while finishing tokenizing: ', e);
+                                              }))
+                                        : (n.cancel && r.sendEvent(e.client, 'sepa.redirect.customer-canceled.failed'), t);
                                 });
                         }),
-                        VERSION: '3.97.0'
+                        VERSION: '3.112.1'
                     };
                 },
                 {
-                    '../lib/analytics': 119,
-                    '../lib/basic-component-verification': 122,
-                    '../lib/create-assets-url': 129,
-                    '../lib/create-deferred-client': 131,
-                    './external/sepa': 185,
-                    '@braintree/wrap-promise': 43
+                    '../lib/analytics': 138,
+                    '../lib/assign': 140,
+                    '../lib/basic-component-verification': 141,
+                    '../lib/create-assets-url': 148,
+                    '../lib/create-deferred-client': 150,
+                    '../lib/querystring': 177,
+                    './external/mandate': 205,
+                    './external/sepa': 206,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            187: [
+            208: [
                 function (e, t, n) {
                     t.exports = {
                         REQUIRED_OPTIONS: ['iban', 'merchantAccountId', 'mandateType', 'customerId', 'accountHolderName', 'countryCode'],
@@ -8799,7 +9488,7 @@ var t;
                 },
                 {}
             ],
-            188: [
+            209: [
                 function (e, t, n) {
                     var r = e('../../lib/braintree-error');
                     t.exports = {
@@ -8839,9 +9528,9 @@ var t;
                         }
                     };
                 },
-                { '../../lib/braintree-error': 124 }
+                { '../../lib/braintree-error': 143 }
             ],
-            189: [
+            210: [
                 function (e, t, n) {
                     t.exports = function (e, t) {
                         var n, r;
@@ -8851,7 +9540,7 @@ var t;
                 },
                 {}
             ],
-            190: [
+            211: [
                 function (e, t, n) {
                     var r = e('../../../lib/assign').assign,
                         i = e('../../../lib/analytics'),
@@ -8867,7 +9556,7 @@ var t;
                         E = e('../../shared/events'),
                         h = e('../../../lib/use-min'),
                         m = e('../../../lib/constants').BUS_CONFIGURATION_REQUEST_EVENT,
-                        f = '3.97.0';
+                        f = '3.112.1';
                     function y(e) {
                         c.call(this), (this._client = e.client), (this._createPromise = e.createPromise), (this._createOptions = e), this._client ? ((this._isDebug = this._client.getConfiguration().isDebug), (this._assetsUrl = this._client.getConfiguration().gatewayConfiguration.assetsUrl)) : ((this._isDebug = !!e.isDebug), (this._assetsUrl = e.assetsUrl)), (this._assetsUrl = this._assetsUrl + '/web/' + f);
                     }
@@ -8951,11 +9640,14 @@ var t;
                                     });
                             });
                         }),
+                        (y.prototype._existsAndIsNumeric = function (e) {
+                            return !(null == e || Array.isArray(e) || 'boolean' == typeof e || ('string' == typeof e && '' === e.trim()) || isNaN(Number(e)));
+                        }),
                         (y.prototype._checkForVerifyCardError = function (e, t) {
                             var n;
                             return !0 === this._verifyCardInProgress
                                 ? new o(d.THREEDS_AUTHENTICATION_IN_PROGRESS)
-                                : (e.nonce ? !e.amount && (n = 'an amount') : (n = 'a nonce'), !n && (n = this._checkForFrameworkSpecificVerifyCardErrors(e, t)), n)
+                                : (e.nonce ? !this._existsAndIsNumeric(e.amount) && (n = 'an amount') : (n = 'a nonce'), !n && (n = this._checkForFrameworkSpecificVerifyCardErrors(e, t)), n)
                                   ? new o({
                                         type: d.THREEDS_MISSING_VERIFY_CARD_OPTION.type,
                                         code: d.THREEDS_MISSING_VERIFY_CARD_OPTION.code,
@@ -9076,23 +9768,23 @@ var t;
                         (t.exports = y);
                 },
                 {
-                    '../../../lib/analytics': 119,
-                    '../../../lib/assign': 121,
-                    '../../../lib/braintree-error': 124,
-                    '../../../lib/constants': 126,
-                    '../../../lib/is-verified-domain': 153,
-                    '../../../lib/use-min': 160,
-                    '../../shared/constants': 199,
-                    '../../shared/errors': 200,
-                    '../../shared/events': 201,
-                    '@braintree/event-emitter': 33,
-                    '@braintree/extended-promise': 34,
-                    '@braintree/iframer': 35,
-                    '@braintree/uuid': 39,
-                    framebus: 52
+                    '../../../lib/analytics': 138,
+                    '../../../lib/assign': 140,
+                    '../../../lib/braintree-error': 143,
+                    '../../../lib/constants': 145,
+                    '../../../lib/is-verified-domain': 173,
+                    '../../../lib/use-min': 181,
+                    '../../shared/constants': 220,
+                    '../../shared/errors': 221,
+                    '../../shared/events': 222,
+                    '@braintree/event-emitter': 30,
+                    '@braintree/extended-promise': 31,
+                    '@braintree/iframer': 32,
+                    '@braintree/uuid': 36,
+                    framebus: 50
                 }
             ],
-            191: [
+            212: [
                 function (e, t, n) {
                     var r = e('./songbird');
                     function i(e) {
@@ -9109,9 +9801,9 @@ var t;
                         }),
                         (t.exports = i);
                 },
-                { './songbird': 196 }
+                { './songbird': 217 }
             ],
-            192: [
+            213: [
                 function (e, t, n) {
                     var r = e('./songbird');
                     function i(e) {
@@ -9125,9 +9817,9 @@ var t;
                         }),
                         (t.exports = i);
                 },
-                { './songbird': 196 }
+                { './songbird': 217 }
             ],
-            193: [
+            214: [
                 function (e, t, n) {
                     var r = e('./legacy'),
                         i = e('./cardinal-modal'),
@@ -9141,13 +9833,13 @@ var t;
                     };
                 },
                 {
-                    './bootstrap3-modal': 191,
-                    './cardinal-modal': 192,
-                    './inline-iframe': 194,
-                    './legacy': 195
+                    './bootstrap3-modal': 212,
+                    './cardinal-modal': 213,
+                    './inline-iframe': 215,
+                    './legacy': 216
                 }
             ],
-            194: [
+            215: [
                 function (e, t, n) {
                     var r = e('./songbird'),
                         i = e('../../../lib/braintree-error'),
@@ -9191,13 +9883,13 @@ var t;
                         (t.exports = s);
                 },
                 {
-                    '../../../lib/braintree-error': 124,
-                    '../../../lib/enumerate': 134,
-                    '../../shared/errors': 200,
-                    './songbird': 196
+                    '../../../lib/braintree-error': 143,
+                    '../../../lib/enumerate': 153,
+                    '../../shared/errors': 221,
+                    './songbird': 217
                 }
             ],
-            195: [
+            216: [
                 function (e, t, n) {
                     var r = e('./base'),
                         i = e('../../../lib/deferred');
@@ -9260,11 +9952,11 @@ var t;
                         (t.exports = o);
                 },
                 {
-                    '../../../lib/deferred': 132,
-                    './base': 190
+                    '../../../lib/deferred': 151,
+                    './base': 211
                 }
             ],
-            196: [
+            217: [
                 function (e, t, n) {
                     var r = e('./base'),
                         i = e('../../../lib/assign').assign,
@@ -9279,12 +9971,12 @@ var t;
                         _ = e('@braintree/extended-promise'),
                         E = e('../../../lib/constants').INTEGRATION_TIMEOUT_MS,
                         h = e('../../../lib/constants').PLATFORM,
-                        m = '3.97.0',
+                        m = '3.112.1',
                         f = ['ui.close', 'ui.render', 'ui.renderHidden', 'ui.loading.close', 'ui.loading.render'],
                         y = ['low_value', 'transaction_risk_analysis'];
                     function A(e) {
                         r.call(this, e),
-                            (this._useV1Fallback = !1),
+                            (this._songbirdInitFailed = !1),
                             (this._clientMetadata = {
                                 requestedThreeDSecureVersion: '2',
                                 sdkVersion: h + '/' + m
@@ -9348,8 +10040,8 @@ var t;
                                 }.bind(this)
                             );
                         }),
-                        (A.prototype.initiateV1Fallback = function (e) {
-                            (this._useV1Fallback = !0), this._removeSongbirdListeners(), c.sendEvent(this._createPromise, 'three-d-secure.v1-fallback.' + e), this._songbirdPromise && this._songbirdPromise.resolve();
+                        (A.prototype.handleSongbirdError = function (e) {
+                            (this._songbirdInitFailed = !0), this._removeSongbirdListeners(), c.sendEvent(this._createPromise, 'three-d-secure.cardinal-sdk.songbird-error.' + e), this._songbirdPromise && this._songbirdPromise.resolve();
                         }),
                         (A.prototype._triggerCardinalBinProcess = function (e) {
                             var t = this,
@@ -9390,21 +10082,6 @@ var t;
                         (A.prototype._addV1IframeToPage = function () {
                             document.body.appendChild(this._v1Modal);
                         }),
-                        (A.prototype._handleAuthResponseFromV1Fallback = function (e) {
-                            this._teardownV1Elements(), this._v1Modal.parentNode.removeChild(this._v1Modal), this._handleV1AuthResponse(e);
-                        }),
-                        (A.prototype._presentChallengeWithV1Fallback = function (e) {
-                            var t = this;
-                            this._setupV1Elements({
-                                lookupResponse: e,
-                                showLoader: !0,
-                                handleAuthResponse: function (e) {
-                                    t._handleAuthResponseFromV1Fallback(e);
-                                }
-                            }),
-                                (this._v1Modal = this._createV1IframeModal(this._v1Iframe)),
-                                this._addV1IframeToPage();
-                        }),
                         (A.prototype.setupSongbird = function (e) {
                             var t = this,
                                 n = Date.now();
@@ -9429,7 +10106,7 @@ var t;
                                               code: u.THREEDS_CARDINAL_SDK_SETUP_FAILED.code,
                                               message: u.THREEDS_CARDINAL_SDK_SETUP_FAILED.message
                                           });
-                                          t._getDfReferenceIdPromisePlus.reject(n), window.clearTimeout(t._songbirdSetupTimeoutReference), c.sendEvent(t._client, 'three-d-secure.cardinal-sdk.init.setup-failed'), t.initiateV1Fallback('cardinal-sdk-setup-failed.' + t._v2SetupFailureReason);
+                                          t._getDfReferenceIdPromisePlus.reject(n), window.clearTimeout(t._songbirdSetupTimeoutReference), c.sendEvent(t._client, 'three-d-secure.cardinal-sdk.init.setup-failed'), t.handleSongbirdError('cardinal-sdk-setup-failed.' + t._v2SetupFailureReason);
                                       }),
                                   this._songbirdPromise);
                         }),
@@ -9476,7 +10153,7 @@ var t;
                                     var n = t._getCardinalScriptSource();
                                     return (
                                         (t._songbirdSetupTimeoutReference = window.setTimeout(function () {
-                                            c.sendEvent(t._client, 'three-d-secure.cardinal-sdk.init.setup-timeout'), t.initiateV1Fallback('cardinal-sdk-setup-timeout');
+                                            c.sendEvent(t._client, 'three-d-secure.cardinal-sdk.init.setup-timeout'), t.handleSongbirdError('cardinal-sdk-setup-timeout');
                                         }, e.timeout || E)),
                                         d.loadScript({ src: n })
                                     );
@@ -9537,12 +10214,8 @@ var t;
                             var e = this;
                             return function (t, n) {
                                 var r;
-                                if (e._useV1Fallback) {
-                                    c.sendEvent(e._createPromise, 'three-d-secure.verification-flow.cardinal-sdk.payments-validated-callback-called-in-v1-fallback-flow');
-                                    return;
-                                }
                                 if ((c.sendEvent(e._createPromise, 'three-d-secure.verification-flow.cardinal-sdk.action-code.' + t.ActionCode.toLowerCase()), !e._verifyCardPromisePlus)) {
-                                    e.initiateV1Fallback('cardinal-sdk-setup-error.number-' + t.ErrorNumber);
+                                    e.handleSongbirdError('cardinal-sdk-setup-error.number-' + t.ErrorNumber);
                                     return;
                                 }
                                 switch (t.ActionCode) {
@@ -9622,18 +10295,15 @@ var t;
                             });
                         }),
                         (A.prototype._presentChallenge = function (e) {
-                            if (this._useV1Fallback || !e.lookup.transactionId) {
-                                this._presentChallengeWithV1Fallback(e.lookup);
-                                return;
-                            }
-                            window.Cardinal.continue(
-                                'cca',
-                                {
-                                    AcsUrl: e.lookup.acsUrl,
-                                    Payload: e.lookup.pareq
-                                },
-                                { OrderDetails: { TransactionId: e.lookup.transactionId } }
-                            );
+                            if (!this._songbirdInitFailed && !!e.lookup.transactionId)
+                                window.Cardinal.continue(
+                                    'cca',
+                                    {
+                                        AcsUrl: e.lookup.acsUrl,
+                                        Payload: e.lookup.pareq
+                                    },
+                                    { OrderDetails: { TransactionId: e.lookup.transactionId } }
+                                );
                         }),
                         (A.prototype._formatLookupData = function (e) {
                             var t = this;
@@ -9678,21 +10348,21 @@ var t;
                         (t.exports = A);
                 },
                 {
-                    '../../../lib/analytics': 119,
-                    '../../../lib/assets': 120,
-                    '../../../lib/assign': 121,
-                    '../../../lib/braintree-error': 124,
-                    '../../../lib/constants': 126,
-                    '../../../lib/convert-to-braintree-error': 128,
-                    '../../../lib/deferred': 132,
-                    '../../../lib/enumerate': 134,
-                    '../../shared/constants': 199,
-                    '../../shared/errors': 200,
-                    './base': 190,
-                    '@braintree/extended-promise': 34
+                    '../../../lib/analytics': 138,
+                    '../../../lib/assets': 139,
+                    '../../../lib/assign': 140,
+                    '../../../lib/braintree-error': 143,
+                    '../../../lib/constants': 145,
+                    '../../../lib/convert-to-braintree-error': 147,
+                    '../../../lib/deferred': 151,
+                    '../../../lib/enumerate': 153,
+                    '../../shared/constants': 220,
+                    '../../shared/errors': 221,
+                    './base': 211,
+                    '@braintree/extended-promise': 31
                 }
             ],
-            197: [
+            218: [
                 function (e, t, n) {
                     var r = e('@braintree/wrap-promise'),
                         i = e('../../lib/methods'),
@@ -9730,14 +10400,14 @@ var t;
                         (t.exports = r.wrapPrototype(c));
                 },
                 {
-                    '../../lib/convert-methods-to-error': 127,
-                    '../../lib/methods': 155,
-                    './frameworks': 193,
-                    '@braintree/event-emitter': 33,
-                    '@braintree/wrap-promise': 43
+                    '../../lib/convert-methods-to-error': 146,
+                    '../../lib/methods': 175,
+                    './frameworks': 214,
+                    '@braintree/event-emitter': 30,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            198: [
+            219: [
                 function (e, t, n) {
                     var r = e('./external/three-d-secure'),
                         i = e('../lib/is-https').isHTTPS,
@@ -9812,22 +10482,22 @@ var t;
                                         : p;
                                 });
                         }),
-                        VERSION: '3.97.0'
+                        VERSION: '3.112.1'
                     };
                 },
                 {
-                    '../lib/analytics': 119,
-                    '../lib/basic-component-verification': 122,
-                    '../lib/braintree-error': 124,
-                    '../lib/create-assets-url': 129,
-                    '../lib/create-deferred-client': 131,
-                    '../lib/is-https': 152,
-                    './external/three-d-secure': 197,
-                    './shared/errors': 200,
-                    '@braintree/wrap-promise': 43
+                    '../lib/analytics': 138,
+                    '../lib/basic-component-verification': 141,
+                    '../lib/braintree-error': 143,
+                    '../lib/create-assets-url': 148,
+                    '../lib/create-deferred-client': 150,
+                    '../lib/is-https': 172,
+                    './external/three-d-secure': 218,
+                    './shared/errors': 221,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            199: [
+            220: [
                 function (e, t, n) {
                     t.exports = {
                         LANDING_FRAME_NAME: 'braintreethreedsecurelanding',
@@ -9839,7 +10509,7 @@ var t;
                 },
                 {}
             ],
-            200: [
+            221: [
                 function (e, t, n) {
                     var r = e('../../lib/braintree-error');
                     t.exports = {
@@ -9973,16 +10643,16 @@ var t;
                         }
                     };
                 },
-                { '../../lib/braintree-error': 124 }
+                { '../../lib/braintree-error': 143 }
             ],
-            201: [
+            222: [
                 function (e, t, n) {
                     var r = e('../../lib/enumerate');
                     t.exports = r(['AUTHENTICATION_COMPLETE'], 'threedsecure:');
                 },
-                { '../../lib/enumerate': 134 }
+                { '../../lib/enumerate': 153 }
             ],
-            202: [
+            223: [
                 function (e, t, n) {
                     var r = e('./shared/unionpay'),
                         i = e('../lib/basic-component-verification'),
@@ -10015,21 +10685,21 @@ var t;
                                     return ((e.client = t), n.gatewayConfiguration.unionPay && !0 === n.gatewayConfiguration.unionPay.enabled) ? (c.sendEvent(e.client, 'unionpay.initialized'), new r(e)) : Promise.reject(new o(d.UNIONPAY_NOT_ENABLED));
                                 });
                         }),
-                        VERSION: '3.97.0'
+                        VERSION: '3.112.1'
                     };
                 },
                 {
-                    '../lib/analytics': 119,
-                    '../lib/basic-component-verification': 122,
-                    '../lib/braintree-error': 124,
-                    '../lib/create-assets-url': 129,
-                    '../lib/create-deferred-client': 131,
-                    './shared/errors': 204,
-                    './shared/unionpay': 205,
-                    '@braintree/wrap-promise': 43
+                    '../lib/analytics': 138,
+                    '../lib/basic-component-verification': 141,
+                    '../lib/braintree-error': 143,
+                    '../lib/create-assets-url': 148,
+                    '../lib/create-deferred-client': 150,
+                    './shared/errors': 225,
+                    './shared/unionpay': 226,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            203: [
+            224: [
                 function (e, t, n) {
                     var r = e('../../lib/enumerate');
                     t.exports = {
@@ -10037,9 +10707,9 @@ var t;
                         HOSTED_FIELDS_FRAME_NAME: 'braintreeunionpayhostedfields'
                     };
                 },
-                { '../../lib/enumerate': 134 }
+                { '../../lib/enumerate': 153 }
             ],
-            204: [
+            225: [
                 function (e, t, n) {
                     var r = e('../../lib/braintree-error');
                     t.exports = {
@@ -10105,9 +10775,9 @@ var t;
                         }
                     };
                 },
-                { '../../lib/braintree-error': 124 }
+                { '../../lib/braintree-error': 143 }
             ],
-            205: [
+            226: [
                 function (e, t, n) {
                     var r = e('../../lib/analytics'),
                         i = e('../../lib/braintree-error'),
@@ -10315,7 +10985,7 @@ var t;
                                           })),
                                           (r._hostedFieldsFrame = p({
                                               name: a.HOSTED_FIELDS_FRAME_NAME + '_' + n,
-                                              src: e + '/web/3.97.0/html/unionpay-hosted-fields-frame' + c(t) + '.html',
+                                              src: e + '/web/3.112.1/html/unionpay-hosted-fields-frame' + c(t) + '.html',
                                               height: 0,
                                               width: 0
                                           })),
@@ -10329,28 +10999,28 @@ var t;
                         (t.exports = h.wrapPrototype(f));
                 },
                 {
-                    '../../lib/analytics': 119,
-                    '../../lib/braintree-error': 124,
-                    '../../lib/constants': 126,
-                    '../../lib/convert-methods-to-error': 127,
-                    '../../lib/is-verified-domain': 153,
-                    '../../lib/methods': 155,
-                    '../../lib/use-min': 160,
-                    './constants': 203,
-                    './errors': 204,
-                    '@braintree/iframer': 35,
-                    '@braintree/uuid': 39,
-                    '@braintree/wrap-promise': 43,
-                    framebus: 52
+                    '../../lib/analytics': 138,
+                    '../../lib/braintree-error': 143,
+                    '../../lib/constants': 145,
+                    '../../lib/convert-methods-to-error': 146,
+                    '../../lib/is-verified-domain': 173,
+                    '../../lib/methods': 175,
+                    '../../lib/use-min': 181,
+                    './constants': 224,
+                    './errors': 225,
+                    '@braintree/iframer': 32,
+                    '@braintree/uuid': 36,
+                    '@braintree/wrap-promise': 40,
+                    framebus: 50
                 }
             ],
-            206: [
+            227: [
                 function (e, t, n) {
                     t.exports = { PLAID_LINK_JS: 'https://cdn.plaid.com/link/v2/stable/link-initialize.js' };
                 },
                 {}
             ],
-            207: [
+            228: [
                 function (e, t, n) {
                     var r = e('../lib/braintree-error');
                     t.exports = {
@@ -10399,9 +11069,9 @@ var t;
                         }
                     };
                 },
-                { '../lib/braintree-error': 124 }
+                { '../lib/braintree-error': 143 }
             ],
-            208: [
+            229: [
                 function (e, t, n) {
                     var r = e('../lib/basic-component-verification'),
                         i = e('../lib/braintree-error'),
@@ -10432,20 +11102,20 @@ var t;
                                     return ((e.client = t), e.client.getConfiguration().gatewayConfiguration.usBankAccount) ? new c(e) : Promise.reject(new i(s.US_BANK_ACCOUNT_NOT_ENABLED));
                                 });
                         }),
-                        VERSION: '3.97.0'
+                        VERSION: '3.112.1'
                     };
                 },
                 {
-                    '../lib/basic-component-verification': 122,
-                    '../lib/braintree-error': 124,
-                    '../lib/create-assets-url': 129,
-                    '../lib/create-deferred-client': 131,
-                    './errors': 207,
-                    './us-bank-account': 209,
-                    '@braintree/wrap-promise': 43
+                    '../lib/basic-component-verification': 141,
+                    '../lib/braintree-error': 143,
+                    '../lib/create-assets-url': 148,
+                    '../lib/create-deferred-client': 150,
+                    './errors': 228,
+                    './us-bank-account': 230,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            209: [
+            230: [
                 function (e, t, n) {
                     var r = e('../lib/braintree-error'),
                         i = e('./constants'),
@@ -10648,18 +11318,18 @@ var t;
                         (t.exports = l.wrapPrototype(E));
                 },
                 {
-                    '../lib/analytics': 119,
-                    '../lib/braintree-error': 124,
-                    '../lib/convert-methods-to-error': 127,
-                    '../lib/errors': 135,
-                    '../lib/methods': 155,
-                    '../lib/once': 156,
-                    './constants': 206,
-                    './errors': 207,
-                    '@braintree/wrap-promise': 43
+                    '../lib/analytics': 138,
+                    '../lib/braintree-error': 143,
+                    '../lib/convert-methods-to-error': 146,
+                    '../lib/errors': 154,
+                    '../lib/methods': 175,
+                    '../lib/once': 176,
+                    './constants': 227,
+                    './errors': 228,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            210: [
+            231: [
                 function (e, t, n) {
                     var r = e('../lib/braintree-error');
                     t.exports = {
@@ -10678,9 +11348,9 @@ var t;
                         }
                     };
                 },
-                { '../lib/braintree-error': 124 }
+                { '../lib/braintree-error': 143 }
             ],
-            211: [
+            232: [
                 function (e, t, n) {
                     var r = e('../lib/basic-component-verification'),
                         i = e('../lib/create-deferred-client'),
@@ -10708,18 +11378,18 @@ var t;
                                     });
                                 });
                         }),
-                        VERSION: '3.97.0'
+                        VERSION: '3.112.1'
                     };
                 },
                 {
-                    '../lib/basic-component-verification': 122,
-                    '../lib/create-assets-url': 129,
-                    '../lib/create-deferred-client': 131,
-                    './vault-manager': 212,
-                    '@braintree/wrap-promise': 43
+                    '../lib/basic-component-verification': 141,
+                    '../lib/create-assets-url': 148,
+                    '../lib/create-deferred-client': 150,
+                    './vault-manager': 233,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            212: [
+            233: [
                 function (e, t, n) {
                     var r = e('../lib/analytics'),
                         i = e('../lib/braintree-error'),
@@ -10806,15 +11476,15 @@ var t;
                         (t.exports = c.wrapPrototype(d));
                 },
                 {
-                    '../lib/analytics': 119,
-                    '../lib/braintree-error': 124,
-                    '../lib/convert-methods-to-error': 127,
-                    '../lib/methods': 155,
-                    './errors': 210,
-                    '@braintree/wrap-promise': 43
+                    '../lib/analytics': 138,
+                    '../lib/braintree-error': 143,
+                    '../lib/convert-methods-to-error': 146,
+                    '../lib/methods': 175,
+                    './errors': 231,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            213: [
+            234: [
                 function (e, t, n) {
                     var r = (
                         (this && this.__importDefault) ||
@@ -10826,15 +11496,15 @@ var t;
                         return new r.default(e).initialize();
                     };
                 },
-                { './venmo-desktop': 215 }
+                { './venmo-desktop': 236 }
             ],
-            214: [
+            235: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.VENMO_PAYMENT_CONTEXT_STATUS_QUERY = n.LEGACY_VENMO_PAYMENT_CONTEXT_STATUS_QUERY = n.UPDATE_PAYMENT_CONTEXT_QUERY = n.LEGACY_UPDATE_PAYMENT_CONTEXT_QUERY = n.CREATE_PAYMENT_CONTEXT_QUERY = n.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY = void 0), (n.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY = 'mutation CreateVenmoQRCodePaymentContext($input: CreateVenmoQRCodePaymentContextInput!) {\n  createVenmoQRCodePaymentContext(input: $input) {\n    clientMutationId\n    venmoQRCodePaymentContext {\n      id\n      merchantId\n      createdAt\n      expiresAt\n    }\n  }\n}'), (n.CREATE_PAYMENT_CONTEXT_QUERY = 'mutation CreateVenmoPaymentContext($input: CreateVenmoPaymentContextInput!) {\n  createVenmoPaymentContext(input: $input) {\n    clientMutationId\n    venmoPaymentContext {\n      id\n      merchantId\n      createdAt\n      expiresAt\n    }\n  }\n}'), (n.LEGACY_UPDATE_PAYMENT_CONTEXT_QUERY = 'mutation UpdateVenmoQRCodePaymentContext($input: UpdateVenmoQRCodePaymentContextInput!) {\n  updateVenmoQRCodePaymentContext(input: $input) {\n    clientMutationId\n  }\n}'), (n.UPDATE_PAYMENT_CONTEXT_QUERY = 'mutation UpdateVenmoPaymentContextStatus($input: UpdateVenmoPaymentContextStatusInput!) {\n  updateVenmoPaymentContextStatus(input: $input) {\n    clientMutationId\n  }\n}'), (n.LEGACY_VENMO_PAYMENT_CONTEXT_STATUS_QUERY = 'query PaymentContext($id: ID!) {\n  node(id: $id) {\n    ... on VenmoQRCodePaymentContext {\n      status\n      paymentMethodId\n      userName\n    }\n  }\n}'), (n.VENMO_PAYMENT_CONTEXT_STATUS_QUERY = 'query PaymentContext($id: ID!) {\n  node(id: $id) {\n    ... on VenmoPaymentContext {\n      status\n      paymentMethodId\n      userName\n      payerInfo {\n        firstName\n        lastName\n        phoneNumber\n        email\n        externalId\n        userName\n        billingAddress {\n          fullName\n          addressLine1\n          addressLine2\n          adminArea1\n          adminArea2\n          postalCode\n          countryCode\n        }\n        shippingAddress {\n          fullName\n          addressLine1\n          addressLine2\n          adminArea1\n          adminArea2\n          postalCode\n          countryCode\n        }\n      }\n    }\n  }\n}');
                 },
                 {}
             ],
-            215: [
+            236: [
                 function (e, t, n) {
                     var r =
                             (this && this.__assign) ||
@@ -11127,14 +11797,14 @@ var t;
                     n.default = u;
                 },
                 {
-                    '../shared/events': 220,
-                    './queries': 214,
-                    '@braintree/iframer': 35,
-                    '@braintree/uuid': 39,
-                    framebus: 52
+                    '../shared/events': 241,
+                    './queries': 235,
+                    '@braintree/iframer': 32,
+                    '@braintree/uuid': 36,
+                    framebus: 50
                 }
             ],
-            216: [
+            237: [
                 function (e, t, n) {
                     var r = e('../lib/analytics'),
                         i = e('../lib/basic-component-verification'),
@@ -11183,22 +11853,22 @@ var t;
                         isBrowserSupported: function (e) {
                             return l.isBrowserSupported(e);
                         },
-                        VERSION: '3.97.0'
+                        VERSION: '3.112.1'
                     };
                 },
                 {
-                    '../lib/analytics': 119,
-                    '../lib/basic-component-verification': 122,
-                    '../lib/braintree-error': 124,
-                    '../lib/create-assets-url': 129,
-                    '../lib/create-deferred-client': 131,
-                    './shared/errors': 219,
-                    './shared/supports-venmo': 222,
-                    './venmo': 224,
-                    '@braintree/wrap-promise': 43
+                    '../lib/analytics': 138,
+                    '../lib/basic-component-verification': 141,
+                    '../lib/braintree-error': 143,
+                    '../lib/create-assets-url': 148,
+                    '../lib/create-deferred-client': 150,
+                    './shared/errors': 240,
+                    './shared/supports-venmo': 243,
+                    './venmo': 245,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            217: [
+            238: [
                 function (e, t, n) {
                     var r = e('@braintree/browser-detection/is-android'),
                         i = e('@braintree/browser-detection/is-chrome'),
@@ -11229,15 +11899,15 @@ var t;
                     };
                 },
                 {
-                    '@braintree/browser-detection/is-android': 22,
-                    '@braintree/browser-detection/is-chrome': 24,
-                    '@braintree/browser-detection/is-ios': 30,
-                    '@braintree/browser-detection/is-ios-safari': 27,
-                    '@braintree/browser-detection/is-ios-webview': 28,
-                    '@braintree/browser-detection/is-samsung': 31
+                    '@braintree/browser-detection/is-android': 20,
+                    '@braintree/browser-detection/is-chrome': 22,
+                    '@braintree/browser-detection/is-ios': 27,
+                    '@braintree/browser-detection/is-ios-safari': 24,
+                    '@braintree/browser-detection/is-ios-webview': 25,
+                    '@braintree/browser-detection/is-samsung': 28
                 }
             ],
-            218: [
+            239: [
                 function (e, t, n) {
                     t.exports = {
                         DOCUMENT_VISIBILITY_CHANGE_EVENT_DELAY: 500,
@@ -11249,7 +11919,7 @@ var t;
                 },
                 {}
             ],
-            219: [
+            240: [
                 function (e, t, n) {
                     var r = e('../../lib/braintree-error');
                     t.exports = {
@@ -11360,87 +12030,95 @@ var t;
                         }
                     };
                 },
-                { '../../lib/braintree-error': 124 }
+                { '../../lib/braintree-error': 143 }
             ],
-            220: [
+            241: [
                 function (e, t, n) {
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.VENMO_DESKTOP_UNKNOWN_ERROR = n.VENMO_DESKTOP_REQUEST_NEW_QR_CODE = n.VENMO_DESKTOP_CLOSED_FROM_PARENT = n.VENMO_DESKTOP_IFRAME_READY = n.VENMO_DESKTOP_DISPLAY_QR_CODE = n.VENMO_DESKTOP_DISPLAY_ERROR = n.VENMO_DESKTOP_CUSTOMER_CANCELED = n.VENMO_DESKTOP_AUTHORIZING = n.VENMO_DESKTOP_AUTHORIZE = n.VENMO_DESKTOP_AUTHORIZATION_TIMED_OUT = void 0), (n.VENMO_DESKTOP_AUTHORIZATION_TIMED_OUT = 'VENMO_DESKTOP_AUTHORIZATION_TIMED_OUT'), (n.VENMO_DESKTOP_AUTHORIZE = 'VENMO_DESKTOP_AUTHORIZE'), (n.VENMO_DESKTOP_AUTHORIZING = 'VENMO_DESKTOP_AUTHORIZING'), (n.VENMO_DESKTOP_CUSTOMER_CANCELED = 'VENMO_DESKTOP_CUSTOMER_CANCELED'), (n.VENMO_DESKTOP_DISPLAY_ERROR = 'VENMO_DESKTOP_DISPLAY_ERROR'), (n.VENMO_DESKTOP_DISPLAY_QR_CODE = 'VENMO_DESKTOP_DISPLAY_QR_CODE'), (n.VENMO_DESKTOP_IFRAME_READY = 'VENMO_DESKTOP_IFRAME_READY'), (n.VENMO_DESKTOP_CLOSED_FROM_PARENT = 'VENMO_DESKTOP_CLOSED_FROM_PARENT'), (n.VENMO_DESKTOP_REQUEST_NEW_QR_CODE = 'VENMO_DESKTOP_REQUEST_NEW_QR_CODE'), (n.VENMO_DESKTOP_UNKNOWN_ERROR = 'VENMO_DESKTOP_UNKNOWN_ERROR');
                 },
                 {}
             ],
-            221: [
+            242: [
                 function (e, t, n) {
                     var r = e('./constants');
                     t.exports = function (e) {
                         return e.useAllowDesktopWebLogin ? r.VENMO_WEB_LOGIN_URL : e.mobileWebFallBack ? r.VENMO_APP_OR_MOBILE_AUTH_URL : r.VENMO_MOBILE_APP_AUTH_ONLY_URL;
                     };
                 },
-                { './constants': 218 }
+                { './constants': 239 }
             ],
-            222: [
+            243: [
                 function (e, t, n) {
-                    var r = e('./browser-detection');
+                    var r = e('./browser-detection'),
+                        i = e('../../lib/in-iframe');
                     t.exports = {
                         isBrowserSupported: function (e) {
                             var t,
                                 n,
-                                i,
-                                o = r.isAndroid(),
-                                a = o || r.isIos(),
-                                s = o && r.isChrome(),
-                                c = r.isIosSafari() || s,
-                                d = r.isIosChrome() || r.isFacebookOwnedBrowserOnAndroid() || r.isSamsung();
-                            return (i = !0 === ((e = e || {}).allowDesktopWebLogin || e.allowDesktop)), (t = !e.hasOwnProperty('allowNewBrowserTab') || e.allowNewBrowserTab), (n = !e.hasOwnProperty('allowWebviews') || e.allowWebviews), !(d || (!n && (r.isAndroidWebview() || r.isIosWebview()))) && (a ? (t ? a : c) : i);
+                                o,
+                                a = r.isAndroid(),
+                                s = a || r.isIos(),
+                                c = a && r.isChrome(),
+                                d = r.isIosSafari() || c;
+                            return (t = !0 === ((e = e || {}).allowDesktopWebLogin || e.allowDesktop)), (n = !e.hasOwnProperty('allowNewBrowserTab') || e.allowNewBrowserTab), (o = !e.hasOwnProperty('allowWebviews') || e.allowWebviews), !((!(n && !i()) && r.isIosChrome()) || r.isFacebookOwnedBrowserOnAndroid() || r.isSamsung() || (!o && (r.isAndroidWebview() || r.isIosWebview()))) && (s ? (n ? s : d) : t);
                         }
                     };
                 },
-                { './browser-detection': 217 }
+                {
+                    '../../lib/in-iframe': 169,
+                    './browser-detection': 238
+                }
             ],
-            223: [
+            244: [
                 function (e, t, n) {
                     var r = e('../../lib/frame-service/external'),
                         i = e('../../lib/use-min'),
                         o = e('@braintree/extended-promise'),
-                        a = 'venmo-desktop-web-backdrop',
-                        s = 'venmo-desktop-web-backdrop.hidden',
-                        c = 'venmo-backdrop-container',
-                        d = 'venmo-popup-cancel-button',
-                        u = 'venmo-popup-continue-button',
-                        l = 'venmo-message',
-                        p = 'venmo-instructions',
-                        _ = 'venmo-full-logo';
-                    function E(e) {
+                        a = e('../shared/errors'),
+                        s = e('../../lib/braintree-error'),
+                        c = 'venmo-desktop-web-backdrop',
+                        d = 'venmo-desktop-web-backdrop.hidden',
+                        u = 'venmo-backdrop-container',
+                        l = 'venmo-popup-cancel-button',
+                        p = 'venmo-popup-continue-button',
+                        _ = 'venmo-message',
+                        E = 'venmo-instructions',
+                        h = 'venmo-full-logo';
+                    function m(e) {
                         var t = e.frameServiceInstance,
                             n = e.venmoUrl,
                             r = e.checkForStatusChange,
                             i = e.cancelTokenization,
-                            a = new o();
+                            c = e.checkPaymentContextStatus,
+                            d = new o();
                         return (
-                            document.getElementById(u).addEventListener('click', function () {
+                            document.getElementById(p).addEventListener('click', function () {
                                 t.focus();
                             }),
-                            document.getElementById(d).addEventListener('click', function () {
-                                t.close(), i(), h();
+                            document.getElementById(l).addEventListener('click', function () {
+                                t.close(), i(), f();
                             }),
                             t.open({}, function (e) {
                                 e
-                                    ? a.reject(e)
+                                    ? d.reject(e)
                                     : r(1)
                                           .then(function (e) {
-                                              a.resolve(e);
+                                              d.resolve(e);
                                           })
                                           .catch(function (e) {
-                                              a.reject(e);
+                                              c().then(function (t) {
+                                                  'CREATED' === t.status ? d.reject(new s(a.VENMO_CUSTOMER_CANCELED)) : d.reject(e);
+                                              });
                                           }),
                                     t.close(),
-                                    h();
+                                    f();
                             }),
                             t.redirect(n),
-                            a
+                            d
                         );
                     }
                     o.suppressUnhandledPromiseMessage = !0;
-                    function h() {
+                    function f() {
                         document.getElementById('venmo-desktop-web-backdrop').classList.add('hidden');
                     }
                     t.exports = {
@@ -11453,9 +12131,9 @@ var t;
                                         r,
                                         i,
                                         o,
-                                        E,
-                                        h,
-                                        m = document.getElementById(a);
+                                        a,
+                                        s,
+                                        m = document.getElementById(c);
                                     if (m) {
                                         m.classList.remove('hidden');
                                         return;
@@ -11466,35 +12144,38 @@ var t;
                                         (r = document.createElement('div')),
                                         (i = document.createElement('div')),
                                         (o = document.createElement('div')),
-                                        (E = document.createElement('button')),
-                                        (h = document.createElement('button')),
+                                        (a = document.createElement('button')),
+                                        (s = document.createElement('button')),
                                         (e.id = 'venmo-desktop-web__injected-styles'),
-                                        (e.innerHTML = ['#' + s + ' {', 'display: none;', '}', '#' + a + ' {', 'cursor: pointer;', 'position: fixed;', 'top: 0;', 'left: 0;', 'bottom: 0;', 'width: 100%;', 'background: rgba(0, 0, 0, 0.4);', '}'].concat(['#' + c + ' {', 'display: flex;', 'align-content: center;', 'justify-content: center;', 'align-items: center;', 'width: 100%;', 'height: 100%;', 'flex-direction: column;', '}'], ['#' + d + ' {', 'height: 24px;', 'width: 380px;', "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", 'font-style: normal;', 'font-weight: 700;', 'font-size: 18px;', 'line-height: 24px;', 'text-align: center;', 'background-color: transparent;', 'border: none;', 'color: #FFFFFF;', 'margin-top: 28px;', '}'], ['#' + u + ' {', 'width: 400px;', 'height: 50px;', 'background: #0074DE;', 'border-radius: 24px;', 'border: none;', "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", 'font-style: normal;', 'font-weight: 700;', 'font-size: 18px;', 'color: #FFFFFF;', 'margin-top: 44px;', '}'], ['#' + l + ' {', "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", 'font-style: normal;', 'font-weight: 500;', 'font-size: 24px;', 'line-height: 32px;', 'text-align: center;', 'color: #FFFFFF;', 'margin-top: 32px;', '}'], ['#' + p + ' {', "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", 'font-style: normal;', 'font-weight: 400;', 'font-size: 16px;', 'line-height: 20px;', 'text-align: center;', 'color: #FFFFFF;', 'margin-top: 16px;', 'width: 400px;', '}']).join('\n')),
-                                        (t.id = a),
-                                        (n.id = c),
-                                        (r.id = _),
+                                        (e.innerHTML = ['#' + d + ' {', 'display: none;', '}', '#' + c + ' {', 'z-index: 3141592632;', 'cursor: pointer;', 'position: fixed;', 'top: 0;', 'left: 0;', 'bottom: 0;', 'width: 100%;', 'background: rgba(0, 0, 0, 0.8);', '}'].concat(['#' + u + ' {', 'display: flex;', 'align-content: center;', 'justify-content: center;', 'align-items: center;', 'width: 100%;', 'height: 100%;', 'flex-direction: column;', '}'], ['#' + l + ' {', 'height: 24px;', 'width: 380px;', "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", 'font-style: normal;', 'font-weight: 700;', 'font-size: 18px;', 'line-height: 24px;', 'text-align: center;', 'background-color: transparent;', 'border: none;', 'color: #FFFFFF;', 'margin-top: 28px;', '}'], ['#' + p + ' {', 'width: 400px;', 'height: 50px;', 'background: #0074DE;', 'border-radius: 24px;', 'border: none;', "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", 'font-style: normal;', 'font-weight: 700;', 'font-size: 18px;', 'color: #FFFFFF;', 'margin-top: 44px;', '}'], ['#' + _ + ' {', "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", 'font-style: normal;', 'font-weight: 500;', 'font-size: 24px;', 'line-height: 32px;', 'text-align: center;', 'color: #FFFFFF;', 'margin-top: 32px;', '}'], ['#' + E + ' {', "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", 'font-style: normal;', 'font-weight: 400;', 'font-size: 16px;', 'line-height: 20px;', 'text-align: center;', 'color: #FFFFFF;', 'margin-top: 16px;', 'width: 400px;', '}']).join('\n')),
+                                        (t.id = c),
+                                        (n.id = u),
+                                        (r.id = h),
                                         (r.innerHTML = '<svg width="198" height="58" viewBox="0 0 198 58" fill="none" xmlns="http://www.w3.org/2000/svg">\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M43.0702 13.6572C44.1935 15.4585 44.6999 17.3139 44.6999 19.6576C44.6999 27.1328 38.1277 36.8436 32.7935 43.6625H20.6099L15.7236 15.2939L26.3917 14.3105L28.9751 34.4966C31.389 30.6783 34.3678 24.6779 34.3678 20.587C34.3678 18.3477 33.9727 16.8225 33.3553 15.5666L43.0702 13.6572Z" fill="white"/>\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M56.8965 26.1491C58.8596 26.1491 63.8018 25.2772 63.8018 22.5499C63.8018 21.2402 62.8481 20.587 61.7242 20.587C59.7579 20.587 57.1776 22.8763 56.8965 26.1491ZM56.6715 31.5506C56.6715 34.8807 58.5787 36.1873 61.107 36.1873C63.8603 36.1873 66.4966 35.534 69.923 33.8433L68.6324 42.3523C66.2183 43.4976 62.4559 44.2617 58.8039 44.2617C49.5403 44.2617 46.2249 38.8071 46.2249 31.9879C46.2249 23.1496 51.6179 13.765 62.7365 13.765C68.858 13.765 72.2809 17.0949 72.2809 21.7317C72.2815 29.2066 62.4005 31.4965 56.6715 31.5506Z" fill="white"/>\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M103.067 20.3142C103.067 21.4052 102.897 22.9875 102.727 24.0216L99.5262 43.6622H89.1385L92.0585 25.658C92.1139 25.1696 92.284 24.1865 92.284 23.6411C92.284 22.3314 91.4414 22.0047 90.4282 22.0047C89.0826 22.0047 87.7337 22.6042 86.8354 23.0418L83.5234 43.6625H73.0772L77.8495 14.257H86.8908L87.0052 16.6041C89.1382 15.2404 91.9469 13.7656 95.932 13.7656C101.212 13.765 103.067 16.3845 103.067 20.3142Z" fill="white"/>\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M133.906 16.9841C136.881 14.9131 139.69 13.765 143.563 13.765C148.897 13.765 150.753 16.3845 150.753 20.3142C150.753 21.4052 150.583 22.9875 150.413 24.0216L147.216 43.6622H136.825L139.801 25.2774C139.855 24.786 139.971 24.1865 139.971 23.8063C139.971 22.3317 139.128 22.0047 138.115 22.0047C136.824 22.0047 135.535 22.5501 134.577 23.0418L131.266 43.6625H120.878L123.854 25.2777C123.908 24.7863 124.02 24.1868 124.02 23.8065C124.02 22.332 123.177 22.0049 122.167 22.0049C120.819 22.0049 119.473 22.6045 118.574 23.0421L115.26 43.6628H104.817L109.589 14.2573H118.52L118.8 16.7122C120.878 15.241 123.684 13.7662 127.446 13.7662C130.704 13.765 132.837 15.129 133.906 16.9841Z" fill="white"/>\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M171.426 25.5502C171.426 23.1496 170.808 21.513 168.956 21.513C164.857 21.513 164.015 28.55 164.015 32.1498C164.015 34.8807 164.802 36.5709 166.653 36.5709C170.528 36.5709 171.426 29.1497 171.426 25.5502ZM153.458 31.7152C153.458 22.442 158.511 13.765 170.136 13.765C178.896 13.765 182.098 18.7854 182.098 25.7148C182.098 34.8805 177.099 44.3723 165.194 44.3723C156.378 44.3723 153.458 38.7525 153.458 31.7152Z" fill="white"/>\n</svg>'),
-                                        (i.id = l),
+                                        (i.id = _),
                                         (i.innerText = 'What would you like to do?'),
-                                        (o.id = p),
+                                        (o.id = E),
                                         (o.innerText = 'Tap cancel payment to cancel and return to the business. Continue payment will relaunch the payment window.'),
-                                        (E.id = u),
-                                        (E.innerText = 'Continue payment'),
-                                        (h.id = d),
-                                        (h.innerText = 'Cancel payment'),
+                                        (a.id = p),
+                                        (a.innerText = 'Continue payment'),
+                                        (s.id = l),
+                                        (s.innerText = 'Cancel payment'),
                                         document.head.appendChild(e),
                                         n.appendChild(r),
                                         n.appendChild(i),
                                         n.appendChild(o),
-                                        n.appendChild(E),
-                                        n.appendChild(h),
+                                        n.appendChild(a),
+                                        n.appendChild(s),
                                         t.appendChild(n),
-                                        document.body.appendChild(t);
+                                        document.body.appendChild(t),
+                                        t.addEventListener('click', function (e) {
+                                            e.stopPropagation();
+                                        });
                                 })(),
-                                E(e)
+                                m(e)
                             );
                         },
-                        openPopup: E,
+                        openPopup: m,
                         setupDesktopWebLogin: function (e) {
                             var t = new o(),
                                 n = e.assetsUrl,
@@ -11503,7 +12184,7 @@ var t;
                                     top: Math.round((window.outerHeight - 570) / 2) + window.screenTop,
                                     left: Math.round((window.outerWidth - 400) / 2) + window.screenLeft
                                 },
-                                c = n + '/web/3.97.0/html';
+                                c = n + '/web/3.112.1/html';
                             return (
                                 r.create(
                                     {
@@ -11527,12 +12208,14 @@ var t;
                     };
                 },
                 {
-                    '../../lib/frame-service/external': 139,
-                    '../../lib/use-min': 160,
-                    '@braintree/extended-promise': 34
+                    '../../lib/braintree-error': 143,
+                    '../../lib/frame-service/external': 158,
+                    '../../lib/use-min': 181,
+                    '../shared/errors': 240,
+                    '@braintree/extended-promise': 31
                 }
             ],
-            224: [
+            245: [
                 function (e, t, n) {
                     var r = e('../lib/analytics'),
                         i = e('./shared/supports-venmo'),
@@ -11550,10 +12233,11 @@ var t;
                         m = e('./shared/get-venmo-url'),
                         f = e('./shared/web-login-backdrop'),
                         y = e('../lib/snake-case-to-camel-case'),
-                        A = e('./external/'),
-                        T = e('./external/queries'),
-                        I = '3.97.0';
-                    function N(e) {
+                        A = e('../lib/url-params'),
+                        T = e('./external/'),
+                        I = e('./external/queries'),
+                        N = '3.112.1';
+                    function O(e) {
                         var t = this;
                         (this._allowDesktopWebLogin = e.allowDesktopWebLogin || !1),
                             (this._mobileWebFallBack = e.mobileWebFallBack || !1),
@@ -11576,6 +12260,7 @@ var t;
                             (this._maxRetryCount = 3),
                             (this._collectCustomerBillingAddress = e.collectCustomerBillingAddress || !1),
                             (this._collectCustomerShippingAddress = e.collectCustomerShippingAddress || !1),
+                            (this._isFinalAmount = e.isFinalAmount || !1),
                             (this._lineItems = e.lineItems),
                             (this._subTotalAmount = e.subTotalAmount),
                             (this._discountAmount = e.discountAmount),
@@ -11589,8 +12274,8 @@ var t;
                                 : this._useDesktopQRFlow
                                   ? (this._createPromise = this._createPromise.then(function (e) {
                                         var n = e.getConfiguration().gatewayConfiguration;
-                                        return A({
-                                            url: n.assetsUrl + '/web/' + I + '/html/venmo-desktop-frame.html',
+                                        return T({
+                                            url: n.assetsUrl + '/web/' + N + '/html/venmo-desktop-frame.html',
                                             environment: 'production' === n.environment ? 'PRODUCTION' : 'SANDBOX',
                                             profileId: t._profileId || n.payWithVenmo.merchantId,
                                             paymentMethodUsage: t._paymentMethodUsage,
@@ -11676,7 +12361,7 @@ var t;
                                     })));
                     }
                     h.suppressUnhandledPromiseMessage = !0;
-                    function O(e) {
+                    function g(e) {
                         var t = (e || window.location.hash.substring(1)).split('&').reduce(function (e, t) {
                             var n = t.split('='),
                                 r = y(decodeURIComponent(n[0]).replace(/\W/g, '')),
@@ -11685,22 +12370,23 @@ var t;
                         }, {});
                         return t.resourceId && (t.id = t.resourceId), t;
                     }
-                    function g(e) {
+                    function P(e) {
                         return '@' + (e = e || '').replace('@', '');
                     }
-                    (N.prototype._createVenmoPaymentContext = function (e, t) {
+                    (O.prototype._createVenmoPaymentContext = function (e, t) {
                         var n,
                             r,
                             i = this,
                             o = e.getConfiguration().gatewayConfiguration.payWithVenmo,
-                            a = !1;
+                            a = !1,
+                            c = i._useAllowDesktopWebLogin ? 'NATIVE_WEB' : 'MOBILE_WEB';
                         if (!this._shouldCreateVenmoPaymentContext) return Promise.resolve();
                         if (this._shouldUseLegacyFlow)
                             n = e
                                 .request({
                                     api: 'graphQLApi',
                                     data: {
-                                        query: T.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY,
+                                        query: I.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY,
                                         variables: {
                                             input: {
                                                 environment: this._mobilePollingContextEnvironment,
@@ -11734,12 +12420,13 @@ var t;
                                     .request({
                                         api: 'graphQLApi',
                                         data: {
-                                            query: T.CREATE_PAYMENT_CONTEXT_QUERY,
+                                            query: I.CREATE_PAYMENT_CONTEXT_QUERY,
                                             variables: {
                                                 input: {
                                                     paymentMethodUsage: this._paymentMethodUsage,
                                                     intent: 'CONTINUE',
-                                                    customerClient: 'MOBILE_WEB',
+                                                    customerClient: c,
+                                                    isFinalAmount: this._isFinalAmount,
                                                     displayName: this._displayName,
                                                     paysheetDetails: {
                                                         collectCustomerBillingAddress: this._collectCustomerBillingAddress,
@@ -11766,7 +12453,7 @@ var t;
                                 (i._venmoPaymentContextStatus = n.status), (i._venmoPaymentContextId = n.id);
                         });
                     }),
-                        (N.prototype.appSwitch = function (e) {
+                        (O.prototype.appSwitch = function (e) {
                             this._deepLinkReturnUrl
                                 ? (function () {
                                       return window.navigator.platform && /iPhone|iPad|iPod/.test(window.navigator.platform);
@@ -11777,7 +12464,7 @@ var t;
                                       : (r.sendEvent(this._createPromise, 'venmo.appswitch.start.webview'), window.open(e))
                                 : (r.sendEvent(this._createPromise, 'venmo.appswitch.start.browser'), o.doesNotSupportWindowOpenInIos() || this._shouldUseRedirectStrategy() ? (window.location.href = e) : window.open(e));
                         }),
-                        (N.prototype.getUrl = function () {
+                        (O.prototype.getUrl = function () {
                             return this._createPromise.then(
                                 function (e) {
                                     var t = e.getConfiguration(),
@@ -11799,7 +12486,7 @@ var t;
                                         (this._assetsUrl = t.gatewayConfiguration.assetsUrl),
                                         (r = r.replace(/#*$/, '')),
                                         this._venmoPaymentContextId && (this._shouldUseLegacyFlow ? (a += '|pcid:' + this._venmoPaymentContextId) : (n.resource_id = this._venmoPaymentContextId)),
-                                        this._shouldIncludeReturnUrls() || this._useAllowDesktopWebLogin ? (this._useAllowDesktopWebLogin && (r = this._assetsUrl + '/web/' + I + '/html/redirect-frame.html'), (n['x-success'] = r + '#venmoSuccess=1'), (n['x-cancel'] = r + '#venmoCancel=1'), (n['x-error'] = r + '#venmoError=1')) : ((n['x-success'] = 'NOOP'), (n['x-cancel'] = 'NOOP'), (n['x-error'] = 'NOOP')),
+                                        this._shouldIncludeReturnUrls() || this._useAllowDesktopWebLogin ? (this._useAllowDesktopWebLogin && (r = this._assetsUrl + '/web/' + N + '/html/redirect-frame.html'), (n['x-success'] = r + '#venmoSuccess=1'), (n['x-cancel'] = r + '#venmoCancel=1'), (n['x-error'] = r + '#venmoError=1')) : ((n['x-success'] = 'NOOP'), (n['x-cancel'] = 'NOOP'), (n['x-error'] = 'NOOP')),
                                         this._allowAndroidRecreation ? (n.allowAndroidRecreation = 1) : (n.allowAndroidRecreation = 0),
                                         (n.ua = window.navigator.userAgent),
                                         (n.braintree_merchant_id = this._profileId || i.merchantId),
@@ -11816,7 +12503,7 @@ var t;
                                 }.bind(this)
                             );
                         }),
-                        (N.prototype.isBrowserSupported = function () {
+                        (O.prototype.isBrowserSupported = function () {
                             return i.isBrowserSupported({
                                 allowNewBrowserTab: this._allowNewBrowserTab,
                                 allowWebviews: this._allowWebviews,
@@ -11824,20 +12511,21 @@ var t;
                                 allowDesktopWebLogin: this._allowDesktopWebLogin
                             });
                         }),
-                        (N.prototype.hasTokenizationResult = function () {
+                        (O.prototype.hasTokenizationResult = function () {
                             return this._hasTokenizationResult();
                         }),
-                        (N.prototype._hasTokenizationResult = function (e) {
-                            var t = O(e);
-                            return void 0 !== (t.venmoSuccess || t.venmoError || t.venmoCancel);
+                        (O.prototype._hasTokenizationResult = function (e) {
+                            var t = g(e),
+                                n = A.getUrlParams();
+                            return n.resource_id && (this._venmoPaymentContextId = n.resource_id), void 0 !== (t.venmoSuccess || t.venmoError || t.venmoCancel);
                         }),
-                        (N.prototype._shouldIncludeReturnUrls = function () {
+                        (O.prototype._shouldIncludeReturnUrls = function () {
                             return !!this._deepLinkReturnUrl || !this._cannotHaveReturnUrls;
                         }),
-                        (N.prototype._isDesktop = function () {
+                        (O.prototype._isDesktop = function () {
                             return !(o.isIos() || o.isAndroid());
                         }),
-                        (N.prototype.tokenize = function (e) {
+                        (O.prototype.tokenize = function (e) {
                             var t,
                                 n = this;
                             return ((e = e || {}), !0 === this._tokenizationInProgress)
@@ -11857,11 +12545,11 @@ var t;
                                                               nonce: e.paymentMethodNonce,
                                                               type: 'VenmoAccount',
                                                               details: {
-                                                                  username: g(e.username),
+                                                                  username: P(e.username),
                                                                   paymentContextId: e.id
                                                               }
                                                           };
-                                                          return e.payerInfo && ((t.details.payerInfo = e.payerInfo), (t.details.payerInfo.userName = g(e.payerInfo.userName))), t;
+                                                          return e.payerInfo && ((t.details.payerInfo = e.payerInfo), (t.details.payerInfo.userName = P(e.payerInfo.userName))), t;
                                                       })(e)
                                                   );
                                               });
@@ -11876,10 +12564,10 @@ var t;
                                               });
                                       }));
                         }),
-                        (N.prototype.cancelTokenization = function () {
+                        (O.prototype.cancelTokenization = function () {
                             return this._tokenizationInProgress ? (this._removeVisibilityEventListener(), this._tokenizePromise && this._tokenizePromise.reject(new _(s.VENMO_TOKENIZATION_CANCELED_BY_MERCHANT)), Promise.all([this._cancelMobilePaymentContext(), this._cancelVenmoDesktopContext()])) : Promise.reject(new _(s.VENMO_TOKENIZATION_REQUEST_NOT_ACTIVE));
                         }),
-                        (N.prototype._tokenizeWebLoginWithRedirect = function () {
+                        (O.prototype._tokenizeWebLoginWithRedirect = function () {
                             var e = this;
                             return (
                                 r.sendEvent(e._createPromise, 'venmo.tokenize.web-login.start'),
@@ -11892,7 +12580,8 @@ var t;
                                                 cancelTokenization: e.cancelTokenization.bind(e),
                                                 frameServiceInstance: e._frameServiceInstance,
                                                 venmoUrl: t,
-                                                debug: e._isDebug
+                                                debug: e._isDebug,
+                                                checkPaymentContextStatus: e._checkPaymentContextStatus.bind(e)
                                             })
                                             .then(function (t) {
                                                 r.sendEvent(e._createPromise, 'venmo.tokenize.web-login.success'),
@@ -11911,11 +12600,11 @@ var t;
                                 })
                             );
                         }),
-                        (N.prototype._queryPaymentContextStatus = function (e) {
+                        (O.prototype._queryPaymentContextStatus = function (e) {
                             var t = this;
                             return this._createPromise
                                 .then(function (n) {
-                                    var r = t._shouldUseLegacyFlow ? T.LEGACY_VENMO_PAYMENT_CONTEXT_STATUS_QUERY : T.VENMO_PAYMENT_CONTEXT_STATUS_QUERY;
+                                    var r = t._shouldUseLegacyFlow ? I.LEGACY_VENMO_PAYMENT_CONTEXT_STATUS_QUERY : I.VENMO_PAYMENT_CONTEXT_STATUS_QUERY;
                                     return n.request({
                                         api: 'graphQLApi',
                                         data: {
@@ -11928,10 +12617,26 @@ var t;
                                     return e.data.node;
                                 });
                         }),
-                        (N.prototype._checkPaymentContextStatusAndProcessResult = function (e) {
+                        (O.prototype._checkPaymentContextStatusAndProcessResult = function (e) {
                             var t = this;
-                            return t
-                                ._queryPaymentContextStatus(t._venmoPaymentContextId)
+                            return t._checkPaymentContextStatus().then(function (n) {
+                                var i = n.status;
+                                if (i !== t._venmoPaymentContextStatus)
+                                    switch (((t._venmoPaymentContextStatus = i), r.sendEvent(t._createPromise, 'venmo.tokenize.web-login.status-change'), i)) {
+                                        case 'APPROVED':
+                                            return Promise.resolve(n);
+                                        case 'CANCELED':
+                                            return Promise.reject(new _(s.VENMO_CUSTOMER_CANCELED));
+                                        case 'FAILED':
+                                            return Promise.reject(new _(s.VENMO_TOKENIZATION_FAILED));
+                                    }
+                                return new Promise(function (n, r) {
+                                    return e < t._maxRetryCount ? (e++, t._checkPaymentContextStatusAndProcessResult(e).then(n).catch(r)) : r(new _(s.VENMO_TOKENIZATION_FAILED));
+                                });
+                            });
+                        }),
+                        (O.prototype._checkPaymentContextStatus = function () {
+                            return this._queryPaymentContextStatus(this._venmoPaymentContextId)
                                 .catch(function (e) {
                                     return Promise.reject(
                                         new _({
@@ -11942,23 +12647,11 @@ var t;
                                         })
                                     );
                                 })
-                                .then(function (n) {
-                                    var i = n.status;
-                                    if (i !== t._venmoPaymentContextStatus)
-                                        switch (((t._venmoPaymentContextStatus = i), r.sendEvent(t._createPromise, 'venmo.tokenize.web-login.status-change'), i)) {
-                                            case 'APPROVED':
-                                                return Promise.resolve(n);
-                                            case 'CANCELED':
-                                                return Promise.reject(new _(s.VENMO_CUSTOMER_CANCELED));
-                                            case 'FAILED':
-                                                return Promise.reject(new _(s.VENMO_TOKENIZATION_FAILED));
-                                        }
-                                    return new Promise(function (n, r) {
-                                        return e < t._maxRetryCount ? (e++, t._checkPaymentContextStatusAndProcessResult(e).then(n).catch(r)) : r(new _(s.VENMO_TOKENIZATION_FAILED));
-                                    });
+                                .then(function (e) {
+                                    return Promise.resolve(e);
                                 });
                         }),
-                        (N.prototype._pollForStatusChange = function () {
+                        (O.prototype._pollForStatusChange = function () {
                             var e = this;
                             return Date.now() > e._mobilePollingContextExpiresIn
                                 ? Promise.reject(new _(s.VENMO_MOBILE_POLLING_TOKENIZATION_TIMEOUT))
@@ -11991,7 +12684,7 @@ var t;
                                           });
                                       });
                         }),
-                        (N.prototype._tokenizeForMobileWithManualReturn = function () {
+                        (O.prototype._tokenizeForMobileWithManualReturn = function () {
                             var e = this;
                             return (
                                 r.sendEvent(this._createPromise, 'venmo.tokenize.manual-return.start'),
@@ -12015,10 +12708,10 @@ var t;
                                 })
                             );
                         }),
-                        (N.prototype._shouldUseRedirectStrategy = function () {
+                        (O.prototype._shouldUseRedirectStrategy = function () {
                             return !!o.isIos() && (!0 === this._mobileWebFallBack || this._useRedirectForIOS);
                         }),
-                        (N.prototype._tokenizeForMobileWithHashChangeListeners = function (e) {
+                        (O.prototype._tokenizeForMobileWithHashChangeListeners = function (e) {
                             var t,
                                 n,
                                 i = this;
@@ -12050,14 +12743,14 @@ var t;
                                     return (
                                         i.appSwitch(e),
                                         setTimeout(function () {
-                                            window.document.addEventListener(P(), i._visibilityChangeListener);
+                                            window.document.addEventListener(b(), i._visibilityChangeListener);
                                         }, a.DOCUMENT_VISIBILITY_CHANGE_EVENT_DELAY),
                                         i._tokenizePromise
                                     );
                                 })
                             );
                         }),
-                        (N.prototype._tokenizeForDesktopQRFlow = function () {
+                        (O.prototype._tokenizeForDesktopQRFlow = function () {
                             var e = this;
                             return (
                                 r.sendEvent(this._createPromise, 'venmo.tokenize.desktop.start'),
@@ -12086,12 +12779,12 @@ var t;
                                 this._tokenizePromise
                             );
                         }),
-                        (N.prototype._cancelMobilePaymentContext = function () {
+                        (O.prototype._cancelMobilePaymentContext = function () {
                             var e = this;
                             return this._createPromise.then(function (t) {
                                 var n;
                                 return e._venmoPaymentContextId
-                                    ? ((n = e._shouldUseLegacyFlow ? T.LEGACY_UPDATE_PAYMENT_CONTEXT_QUERY : T.UPDATE_PAYMENT_CONTEXT_QUERY),
+                                    ? ((n = e._shouldUseLegacyFlow ? I.LEGACY_UPDATE_PAYMENT_CONTEXT_QUERY : I.UPDATE_PAYMENT_CONTEXT_QUERY),
                                       t.request({
                                           api: 'graphQLApi',
                                           data: {
@@ -12107,29 +12800,29 @@ var t;
                                     : Promise.resolve();
                             });
                         }),
-                        (N.prototype._cancelVenmoDesktopContext = function () {
+                        (O.prototype._cancelVenmoDesktopContext = function () {
                             var e = this;
                             return this._createPromise.then(function () {
                                 return e._venmoDesktopInstance && e._venmoDesktopInstance.updateVenmoDesktopPaymentContext('CANCELED'), Promise.resolve();
                             });
                         }),
-                        (N.prototype.teardown = function () {
+                        (O.prototype.teardown = function () {
                             var e = this;
                             return (
                                 this._removeVisibilityEventListener(),
                                 this._createPromise.then(
                                     function () {
-                                        e._venmoDesktopInstance && e._venmoDesktopInstance.teardown(), clearTimeout(e._refreshPaymentContextTimeout), e._cancelMobilePaymentContext(), l(this, u(N.prototype));
+                                        e._venmoDesktopInstance && e._venmoDesktopInstance.teardown(), clearTimeout(e._refreshPaymentContextTimeout), e._cancelMobilePaymentContext(), l(this, u(O.prototype));
                                     }.bind(this)
                                 )
                             );
                         }),
-                        (N.prototype._removeVisibilityEventListener = function () {
-                            window.removeEventListener('hashchange', this._onHashChangeListener), window.document.removeEventListener(P(), this._visibilityChangeListener), delete this._visibilityChangeListener, delete this._onHashChangeListener;
+                        (O.prototype._removeVisibilityEventListener = function () {
+                            window.removeEventListener('hashchange', this._onHashChangeListener), window.document.removeEventListener(b(), this._visibilityChangeListener), delete this._visibilityChangeListener, delete this._onHashChangeListener;
                         }),
-                        (N.prototype.processHashChangeFlowResults = function (e) {
+                        (O.prototype.processHashChangeFlowResults = function (e) {
                             var t = this,
-                                n = O(e);
+                                n = g(e);
                             return new Promise(function (e, i) {
                                 t._shouldUseLegacyFlow
                                     ? n.venmoSuccess
@@ -12171,37 +12864,38 @@ var t;
                                     t._clearFragmentParameters();
                             });
                         }),
-                        (N.prototype._clearFragmentParameters = function () {
+                        (O.prototype._clearFragmentParameters = function () {
                             if (!this._ignoreHistoryChanges) 'function' == typeof window.history.replaceState && window.location.hash && history.pushState({}, '', window.location.href.slice(0, window.location.href.indexOf('#')));
                         });
-                    function P() {
+                    function b() {
                         var e;
                         return void 0 !== window.document.hidden ? (e = 'visibilitychange') : void 0 !== window.document.msHidden ? (e = 'msvisibilitychange') : void 0 !== window.document.webkitHidden && (e = 'webkitvisibilitychange'), e;
                     }
-                    t.exports = p.wrapPrototype(N);
+                    t.exports = p.wrapPrototype(O);
                 },
                 {
-                    '../lib/analytics': 119,
-                    '../lib/braintree-error': 124,
-                    '../lib/convert-methods-to-error': 127,
-                    '../lib/in-iframe': 150,
-                    '../lib/is-verified-domain': 153,
-                    '../lib/methods': 155,
-                    '../lib/querystring': 157,
-                    '../lib/snake-case-to-camel-case': 159,
-                    './external/': 213,
-                    './external/queries': 214,
-                    './shared/browser-detection': 217,
-                    './shared/constants': 218,
-                    './shared/errors': 219,
-                    './shared/get-venmo-url': 221,
-                    './shared/supports-venmo': 222,
-                    './shared/web-login-backdrop': 223,
-                    '@braintree/extended-promise': 34,
-                    '@braintree/wrap-promise': 43
+                    '../lib/analytics': 138,
+                    '../lib/braintree-error': 143,
+                    '../lib/convert-methods-to-error': 146,
+                    '../lib/in-iframe': 169,
+                    '../lib/is-verified-domain': 173,
+                    '../lib/methods': 175,
+                    '../lib/querystring': 177,
+                    '../lib/snake-case-to-camel-case': 179,
+                    '../lib/url-params': 180,
+                    './external/': 234,
+                    './external/queries': 235,
+                    './shared/browser-detection': 238,
+                    './shared/constants': 239,
+                    './shared/errors': 240,
+                    './shared/get-venmo-url': 242,
+                    './shared/supports-venmo': 243,
+                    './shared/web-login-backdrop': 244,
+                    '@braintree/extended-promise': 31,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            225: [
+            246: [
                 function (e, t, n) {
                     var r = e('../lib/braintree-error');
                     t.exports = {
@@ -12227,9 +12921,9 @@ var t;
                         }
                     };
                 },
-                { '../lib/braintree-error': 124 }
+                { '../lib/braintree-error': 143 }
             ],
-            226: [
+            247: [
                 function (e, t, n) {
                     var r = e('../lib/basic-component-verification'),
                         i = e('../lib/braintree-error'),
@@ -12261,21 +12955,21 @@ var t;
                                     return ((e.client = t), e.client.getConfiguration().gatewayConfiguration.visaCheckout) ? (c.sendEvent(e.client, 'visacheckout.initialized'), new s(e)) : Promise.reject(new i(d.VISA_CHECKOUT_NOT_ENABLED));
                                 });
                         }),
-                        VERSION: '3.97.0'
+                        VERSION: '3.112.1'
                     };
                 },
                 {
-                    '../lib/analytics': 119,
-                    '../lib/basic-component-verification': 122,
-                    '../lib/braintree-error': 124,
-                    '../lib/create-assets-url': 129,
-                    '../lib/create-deferred-client': 131,
-                    './errors': 225,
-                    './visa-checkout': 227,
-                    '@braintree/wrap-promise': 43
+                    '../lib/analytics': 138,
+                    '../lib/basic-component-verification': 141,
+                    '../lib/braintree-error': 143,
+                    '../lib/create-assets-url': 148,
+                    '../lib/create-deferred-client': 150,
+                    './errors': 246,
+                    './visa-checkout': 248,
+                    '@braintree/wrap-promise': 40
                 }
             ],
-            227: [
+            248: [
                 function (e, t, n) {
                     var r = e('../lib/braintree-error'),
                         i = e('../lib/analytics'),
@@ -12344,18 +13038,18 @@ var t;
                         (t.exports = d.wrapPrototype(l));
                 },
                 {
-                    '../lib/analytics': 119,
-                    '../lib/braintree-error': 124,
-                    '../lib/convert-methods-to-error': 127,
-                    '../lib/json-clone': 154,
-                    '../lib/methods': 155,
-                    './errors': 225,
-                    '@braintree/wrap-promise': 43
+                    '../lib/analytics': 138,
+                    '../lib/braintree-error': 143,
+                    '../lib/convert-methods-to-error': 146,
+                    '../lib/json-clone': 174,
+                    '../lib/methods': 175,
+                    './errors': 246,
+                    '@braintree/wrap-promise': 40
                 }
             ]
         },
         {},
-        [117]
-    )(117);
+        [136]
+    )(136);
 }),
     (e.exports = t());
