@@ -16,25 +16,26 @@ function d(e) {
         [h, f] = i.useState(!1),
         [m, g] = i.useState(null),
         [S, x] = i.useState(''),
-        v = i.useRef(null);
+        p = i.useRef(null);
     return (
         i.useEffect(() => {
             if (c) {
                 var e;
-                null === (e = v.current) || void 0 === e || e.focus();
+                null === (e = p.current) || void 0 === e || e.focus();
             }
         }, [c]),
         (0, l.jsxs)('form', {
             onSubmit: (e) => {
                 e.preventDefault(),
                     f(!0),
+                    g(null),
                     n({
                         mfaType: 'totp',
                         data: S
                     })
                         .catch((e) => {
                             var t, n;
-                            g(null !== (n = e.message) && void 0 !== n ? n : null === (t = e.body) || void 0 === t ? void 0 : t.message);
+                            g(null !== (n = null === (t = e.body) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : e.message);
                         })
                         .finally(() => {
                             f(!1);
@@ -47,7 +48,7 @@ function d(e) {
                         title: a.intl.string(a.t.HZPBOT),
                         children: [
                             (0, l.jsx)(s.TextInput, {
-                                inputRef: v,
+                                inputRef: p,
                                 onChange: x,
                                 placeholder: a.intl.string(a.t.tARzgo),
                                 maxLength: r.gH,
