@@ -48,7 +48,9 @@ function N(e) {
                         })
                     );
                 case I.F$.APPS:
-                    return C && ((0, d.x)(), (0, _.u)({ tab: t })), (0, u.XL)();
+                    if (!C) return (0, u.XL)();
+                    (0, d.x)(), (0, _.u)({ tab: t });
+                    return;
                 case I.F$.SERVERS:
                     if (!C) return (0, _.u)({ tab: t });
                     (0, h.V)(), (0, m.O)();
