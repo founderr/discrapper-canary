@@ -35,23 +35,29 @@ function p() {
 }
 async function h(e) {
     let { riotConnectionId: t, lolConnectionId: n, onlyUpdateIfStale: r } = e;
-    if (_) return;
-    f.stop(), (_ = !0);
-    let { next_update_timestamp: i } = await (0, l._7)({
-        riotConnectionId: t,
-        lolConnectionId: n,
-        onlyUpdateIfStale: r
-    });
-    _ = !1;
-    let a = new Date(1000 * i),
-        s = new Date(),
-        o = Math.max(0, a.getTime() - s.getTime());
-    f.start(o, () =>
-        (0, l._7)({
-            riotConnectionId: t,
-            lolConnectionId: n
-        })
-    );
+    if (!_) {
+        f.stop();
+        try {
+            _ = !0;
+            let { next_update_timestamp: e } = await (0, l._7)({
+                riotConnectionId: t,
+                lolConnectionId: n,
+                onlyUpdateIfStale: r
+            });
+            _ = !1;
+            let i = new Date(1000 * e),
+                a = new Date(),
+                s = Math.max(0, i.getTime() - a.getTime());
+            f.start(s, () =>
+                (0, l._7)({
+                    riotConnectionId: t,
+                    lolConnectionId: n
+                })
+            );
+        } catch (e) {
+            _ = !1;
+        }
+    }
 }
 function m() {
     return Object.values(s.Z.getGuilds()).some(
