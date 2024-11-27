@@ -16,8 +16,8 @@ var i,
     c = n.n(d),
     u = n(995295),
     h = n(374470),
-    m = n(442837),
-    g = n(692547),
+    g = n(442837),
+    m = n(692547),
     x = n(481060),
     S = n(87051),
     p = n(798140),
@@ -476,7 +476,7 @@ class Y extends r.PureComponent {
 }
 function W(e) {
     let { guildId: t, ...n } = e,
-        i = (0, m.cj)([I.Z, A.Z, M.Z, P.ZP], () => {
+        i = (0, g.cj)([I.Z, A.Z, M.Z, P.ZP], () => {
             let e = I.Z.getCategories(t);
             return {
                 guildId: t,
@@ -491,22 +491,23 @@ function W(e) {
                 muteConfig: P.ZP.getMuteConfig(t),
                 messageNotifications: P.ZP.getMessageNotifications(t),
                 channelOverrides: P.ZP.getChannelOverrides(t),
-                channels: (0, v.Z)(e._categories, e, (e) => {
-                    let {
-                        channel: { type: t }
-                    } = e;
-                    return (0, O.r8)(t) || t === y.d4z.GUILD_CATEGORY;
-                }),
                 notifyHighlights: P.ZP.getNotifyHighlights(t)
             };
         }),
-        s = _.Y.useExperiment({ location: 'connected_notification_settings' }, { autoTrackExposure: !0 }).enabled,
-        r = (0, x.useToken)(g.Z.unsafe_rawColors.GREEN_360).hex();
+        s = (0, v.Z)(i.categories._categories, i.categories, (e) => {
+            let {
+                channel: { type: t }
+            } = e;
+            return (0, O.r8)(t) || t === y.d4z.GUILD_CATEGORY;
+        }),
+        r = _.Y.useExperiment({ location: 'connected_notification_settings' }, { autoTrackExposure: !0 }).enabled,
+        a = (0, x.useToken)(m.Z.unsafe_rawColors.GREEN_360).hex();
     return (0, l.jsx)(Y, {
         ...i,
+        channels: s,
         ...n,
-        shouldShowCustomNotificationSounds: s,
-        checkboxColor: r
+        shouldShowCustomNotificationSounds: r,
+        checkboxColor: a
     });
 }
 function z(e) {
