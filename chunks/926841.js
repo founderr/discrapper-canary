@@ -29,6 +29,5 @@ let l = (0, a.B)({
     ]
 });
 function i() {
-    let e = l.getCurrentConfig({ location: 'premium_payment_flow_started_1' }, { autoTrackExposure: !0 });
-    return e.enabled ? e : l.getCurrentConfig({ location: 'premium_payment_flow_started_1' }, { autoTrackExposure: !0 });
+    return l.getCurrentConfig({ location: 'premium_payment_flow_started_1' }, { autoTrackExposure: !0 });
 }
