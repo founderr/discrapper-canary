@@ -46,13 +46,12 @@ async function C(e) {
         M.Z.dispatch({ type: 'PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA' });
         let t = e ? g.Z : P.Z;
         window.matchMedia('(min-width: 1012px) and (max-width: 1980px)').matches || window.matchMedia('(min-height: 720px) and (max-height: 1408px)').matches ? (t = e ? Z.Z : y.Z) : (window.matchMedia('(min-width: 1980px)').matches || window.matchMedia('(min-height: 1408px)').matches) && (t = e ? F.Z : U.Z);
-        let n = await fetch(t).then(async (e) => {
-            let t = await e.blob();
-            return window.URL.createObjectURL(t);
-        });
+        let n = await fetch(t),
+            i = await n.blob(),
+            a = window.URL.createObjectURL(i);
         M.Z.dispatch({
             type: 'PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_SUCCESS',
-            wumpusMedia: n
+            wumpusMedia: a
         });
     } catch (e) {
         E.Z.captureException(e), M.Z.dispatch({ type: 'PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE' });
@@ -73,15 +72,18 @@ function H() {
         M = (0, f.vu)(),
         E = (0, f.rO)(),
         I = M > 52 || -1 === M || E,
-        g = E ? 'video/mp4' : 'video/webm';
-    I && !e && a && null === t && !1 === n && C(E),
+        g = E ? 'video/mp4' : 'video/webm',
+        P = I && !e && a && null === t && !1 === n;
+    d.useEffect(() => {
+        P && C(E);
+    }, [P, E]),
         d.useEffect(() => {
             function t() {
                 !e &&
                     T.Z.canPlayWowMoment &&
                     (s(!0),
                     (i = setTimeout(() => {
-                        s(!1), Z(!0), _.default.track(b.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'gradient_highlight' }), (0, W.H)(!1);
+                        s(!1), y(!0), _.default.track(b.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'gradient_highlight' }), (0, W.H)(!1);
                     }, 2000)));
             }
             return (
@@ -91,52 +93,52 @@ function H() {
                 }
             );
         }, [e, I]);
-    let [P, Z] = d.useState(!1),
-        [y, F] = d.useState(!1),
-        U = (0, p.useSpring)({
-            opacity: P ? 0.2 : 0,
+    let [Z, y] = d.useState(!1),
+        [F, U] = d.useState(!1),
+        H = (0, p.useSpring)({
+            opacity: Z ? 0.2 : 0,
             config: { duration: 100 }
         }),
-        H = (0, p.useSpring)(
+        x = (0, p.useSpring)(
             {
-                x: y ? '100%' : '-100%',
+                x: F ? '100%' : '-100%',
                 config: { duration: 500 }
             },
-            y ? 'respect-motion-settings' : 'animate-never'
+            F ? 'respect-motion-settings' : 'animate-never'
         );
     d.useEffect(() => {
         let e = -1;
         return (
-            P &&
+            Z &&
                 (e = window.setTimeout(() => {
-                    F(!0);
+                    U(!0);
                 }, 1000)),
             () => {
                 window.clearTimeout(e);
             }
         );
-    }, [P]),
+    }, [Z]),
         d.useEffect(() => {
             let e = -1;
             return (
-                y &&
+                F &&
                     (e = window.setTimeout(() => {
-                        F(!1), Z(!1);
+                        U(!1), y(!1);
                     }, 1000)),
                 () => {
                     window.clearTimeout(e);
                 }
             );
-        }, [y]);
-    let x = c && null !== t,
-        O = x || P;
+        }, [F]);
+    let O = c && null !== t,
+        v = O || Z;
     return (0, o.jsxs)('div', {
         className: r()({
-            [S.wrapper]: !O,
-            [S.activeWrapper]: O
+            [S.wrapper]: !v,
+            [S.activeWrapper]: v
         }),
         children: [
-            x &&
+            O &&
                 (0, o.jsx)(w.Z, {
                     autoPlay: !0,
                     className: S.videoWrapper,
@@ -156,11 +158,11 @@ function H() {
                 }),
             (0, o.jsx)(u.animated.div, {
                 className: S.gadientHighlight,
-                style: U
+                style: H
             }),
             (0, o.jsx)(u.animated.div, {
                 className: S.swipeWrapper,
-                style: H,
+                style: x,
                 children: (0, o.jsxs)('svg', {
                     className: S.swipe,
                     viewBox: '0 0 848 1024',
