@@ -148,6 +148,10 @@ function A(e) {
                         return _.QS.AVATAR_DECORATION_STATUS_TYPING_32;
                     case h.EF.SIZE_40:
                         return _.QS.AVATAR_DECORATION_STATUS_TYPING_40;
+                    case h.EF.SIZE_44:
+                        return _.QS.AVATAR_DECORATION_STATUS_TYPING_44;
+                    case h.EF.SIZE_48:
+                        return _.QS.AVATAR_DECORATION_STATUS_TYPING_48;
                     case h.EF.SIZE_56:
                         return _.QS.AVATAR_DECORATION_STATUS_TYPING_56;
                     case h.EF.SIZE_80:
@@ -167,6 +171,10 @@ function A(e) {
                         return _.QS.AVATAR_DECORATION_STATUS_MOBILE_32;
                     case h.EF.SIZE_40:
                         return _.QS.AVATAR_DECORATION_STATUS_MOBILE_40;
+                    case h.EF.SIZE_44:
+                        return _.QS.AVATAR_DECORATION_STATUS_MOBILE_44;
+                    case h.EF.SIZE_48:
+                        return _.QS.AVATAR_DECORATION_STATUS_MOBILE_48;
                     case h.EF.SIZE_56:
                         return _.QS.AVATAR_DECORATION_STATUS_MOBILE_56;
                     case h.EF.SIZE_80:
@@ -185,6 +193,10 @@ function A(e) {
                     return _.QS.AVATAR_DECORATION_STATUS_ROUND_32;
                 case h.EF.SIZE_40:
                     return _.QS.AVATAR_DECORATION_STATUS_ROUND_40;
+                case h.EF.SIZE_44:
+                    return _.QS.AVATAR_DECORATION_STATUS_ROUND_44;
+                case h.EF.SIZE_48:
+                    return _.QS.AVATAR_DECORATION_STATUS_ROUND_48;
                 case h.EF.SIZE_56:
                     return _.QS.AVATAR_DECORATION_STATUS_ROUND_56;
                 case h.EF.SIZE_80:
@@ -306,6 +318,8 @@ function C(e) {
                                         return _.QS.AVATAR_STATUS_TYPING_32;
                                     case h.EF.SIZE_40:
                                         return _.QS.AVATAR_STATUS_TYPING_40;
+                                    case h.EF.SIZE_44:
+                                        return _.QS.AVATAR_STATUS_TYPING_44;
                                     case h.EF.SIZE_48:
                                         return _.QS.AVATAR_STATUS_TYPING_48;
                                     case h.EF.SIZE_56:
@@ -327,6 +341,8 @@ function C(e) {
                                         return _.QS.AVATAR_STATUS_MOBILE_32;
                                     case h.EF.SIZE_40:
                                         return _.QS.AVATAR_STATUS_MOBILE_40;
+                                    case h.EF.SIZE_44:
+                                        return _.QS.AVATAR_STATUS_MOBILE_44;
                                     case h.EF.SIZE_48:
                                         return _.QS.AVATAR_STATUS_MOBILE_48;
                                     case h.EF.SIZE_56:
@@ -347,6 +363,8 @@ function C(e) {
                                     return _.QS.AVATAR_STATUS_ROUND_32;
                                 case h.EF.SIZE_40:
                                     return _.QS.AVATAR_STATUS_ROUND_40;
+                                case h.EF.SIZE_44:
+                                    return _.QS.AVATAR_STATUS_ROUND_44;
                                 case h.EF.SIZE_48:
                                     return _.QS.AVATAR_STATUS_ROUND_48;
                                 case h.EF.SIZE_56:
