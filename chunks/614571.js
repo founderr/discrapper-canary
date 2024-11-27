@@ -21,8 +21,9 @@ function d(e, t, n) {
     );
 }
 let f = new r.V7(),
-    _ = !1;
-function p() {
+    _ = !1,
+    p = !1;
+function h() {
     let e = a.Z.getAccount(null, c.ABu.RIOT_GAMES),
         t = a.Z.getAccount(null, c.ABu.LEAGUE_OF_LEGENDS);
     if (null == e && null == t) return 'missing_connections';
@@ -33,9 +34,9 @@ function p() {
         lolConnection: t
     };
 }
-async function h(e) {
+async function m(e) {
     let { riotConnectionId: t, lolConnectionId: n, onlyUpdateIfStale: r } = e;
-    if (!_) {
+    if (!_ && (!p || !r)) {
         f.stop();
         try {
             _ = !0;
@@ -44,7 +45,7 @@ async function h(e) {
                 lolConnectionId: n,
                 onlyUpdateIfStale: r
             });
-            _ = !1;
+            (_ = !1), (p = !1);
             let i = new Date(1000 * e),
                 a = new Date(),
                 s = Math.max(0, i.getTime() - a.getTime());
@@ -55,11 +56,11 @@ async function h(e) {
                 })
             );
         } catch (e) {
-            _ = !1;
+            (_ = !1), (p = !0);
         }
     }
 }
-function m() {
+function g() {
     return Object.values(s.Z.getGuilds()).some(
         (e) =>
             e.hasFeature(c.oNc.LEADERBOARD_ENABLED) &&
@@ -70,18 +71,18 @@ function m() {
             })
     );
 }
-class g extends i.Z {
+class E extends i.Z {
     handleRunningGameChange(e) {
         let { removed: t } = e;
-        if (!!m()) {
+        if (!!g()) {
             if (t.some((e) => 'League of Legends' === e.name)) {
-                let e = p();
+                let e = h();
                 if ('string' == typeof e) {
                     var n;
                     (n = e), o.default.track(c.rMx.LEAGUE_OF_LEGENDS_MATCH_DATA_NOT_FETCHING, { reason: n });
                     return;
                 }
-                h({
+                m({
                     riotConnectionId: e.riotConnection.id,
                     lolConnectionId: e.lolConnection.id
                 });
@@ -89,14 +90,14 @@ class g extends i.Z {
         }
     }
     handleDependantStoreChanges() {
-        let e = p(),
+        let e = h(),
             t = 'string' != typeof e,
-            n = m() && t;
+            n = g() && t;
         f.isStarted() && !n
             ? f.stop()
             : !f.isStarted() &&
               n &&
-              h({
+              m({
                   riotConnectionId: e.riotConnection.id,
                   lolConnectionId: e.lolConnection.id,
                   onlyUpdateIfStale: !0
@@ -106,4 +107,4 @@ class g extends i.Z {
         super(...e), d(this, 'actions', { RUNNING_GAMES_CHANGE: this.handleRunningGameChange }), d(this, 'stores', new Map().set(s.Z, this.handleDependantStoreChanges).set(a.Z, this.handleDependantStoreChanges));
     }
 }
-t.Z = new g();
+t.Z = new E();
