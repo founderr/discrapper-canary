@@ -3539,7 +3539,6 @@ let _Z = Object.freeze({
     BUILD_OVERRIDE: 'Build Override',
     CHECK_NATIVE_UPDATE: 'Check For Native Update',
     INSTALL_NATIVE_UPDATE: 'Install Native Build',
-    CHANGELOG_OVERRIDE: 'Changelog Override',
     ACCOUNT: 'My Account',
     GAMES: 'Games',
     ACCOUNT_CHANGE_USERNAME: 'Change Username',
