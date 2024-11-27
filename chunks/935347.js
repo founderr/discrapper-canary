@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(197344),
     f = n(474873),
     _ = n(706454),
-    I = n(215427),
-    E = n(820254),
+    E = n(215427),
+    I = n(820254),
     C = n(358085),
     v = n(557177),
     N = n(998502),
@@ -138,7 +138,7 @@ class Z extends r.PureComponent {
                                             className: b.statusLink,
                                             href: T.yXt.STATUS,
                                             target: '_blank',
-                                            children: [(0, i.jsx)(E.Z, { className: b.icon }), x.intl.string(x.t.AgXXy8)]
+                                            children: [(0, i.jsx)(I.Z, { className: b.icon }), x.intl.string(x.t.AgXXy8)]
                                         })
                                     ]
                                 })
@@ -371,10 +371,10 @@ class Z extends r.PureComponent {
             (this._connectedSound.volume = 1);
     }
 }
-t.Z = c.ZP.connectStores([p.Z, I.Z, f.Z, m.Z], () => ({
+t.Z = c.ZP.connectStores([p.Z, E.Z, f.Z, m.Z], () => ({
     isTryingToConnect: p.Z.isTryingToConnect(),
     connected: p.Z.isConnected(),
-    incident: I.Z.getIncident(),
+    incident: E.Z.getIncident(),
     soundpack: f.Z.getSoundpack(),
     reducedMotion: m.Z.useReducedMotion
 }))((e) => {

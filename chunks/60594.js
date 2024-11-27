@@ -22,8 +22,8 @@ var l,
     g = n(872810),
     p = n(410575),
     v = n(579806),
-    j = n(317381),
-    C = n(316253),
+    j = n(636449),
+    C = n(317381),
     S = n(89425),
     Z = n(812206),
     _ = n(835473),
@@ -87,11 +87,11 @@ function eo(e) {
         { preset: em, resolution: ex, fps: eg, soundshareEnabled: ep } = (0, f.cj)([k.Z], () => k.Z.getState()),
         ev = (0, f.e7)([G.Z, A.Z], () => A.Z.getChannel(G.Z.getVoiceChannelId())),
         ej = (0, f.e7)([w.ZP, O.Z], () => ((0, H.isWindows)() ? (0, X.Z)(w.ZP, O.Z) : null)),
-        eC = (0, f.e7)([j.ZP], () => j.ZP.getCurrentEmbeddedActivity()),
+        eC = (0, f.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
         eS = (0, _.q)(null == eC ? void 0 : eC.applicationId),
         [eZ, e_] = s.useState(null);
     s.useEffect(() => {
-        (0, C.Z)() &&
+        (0, j.R)() &&
             (async () => {
                 var e;
                 e_(await (null === v.Z || void 0 === v.Z ? void 0 : null === (e = v.Z.window) || void 0 === e ? void 0 : e.getMediaSourceId('DISCORD_ACTIVITY_POPOUT')));

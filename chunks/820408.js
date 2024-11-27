@@ -14,8 +14,8 @@ var i = n(200651),
     c = n(436774),
     u = n(690221),
     h = n(626135),
-    m = n(197115),
-    g = n(474936),
+    g = n(197115),
+    m = n(474936),
     x = n(981631),
     S = n(388032),
     p = n(205459);
@@ -28,7 +28,7 @@ function v(e) {
             (e) => {
                 if (!N && !!e)
                     h.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
-                        type: g.cd.CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL,
+                        type: m.cd.CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL,
                         location: n.location,
                         location_stack: v
                     }),
@@ -62,12 +62,12 @@ function v(e) {
             }),
             (0, i.jsx)('div', {
                 className: p.nitroButton,
-                children: (0, i.jsx)(m.Z, {
+                children: (0, i.jsx)(g.Z, {
                     showGradient: !0,
                     buttonText: S.intl.string(S.t.pj0XBA),
                     size: l.Button.Sizes.SMALL,
                     shinyButtonClassName: p.nitroButton,
-                    subscriptionTier: g.Si.TIER_2,
+                    subscriptionTier: m.Si.TIER_2,
                     premiumModalAnalyticsLocation: { section: x.jXE.PREMIUM_CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPSELL }
                 })
             })

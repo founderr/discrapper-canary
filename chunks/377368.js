@@ -15,8 +15,8 @@ var r = n(481060),
     g = n(641015),
     f = n(22382),
     _ = n(747071),
-    I = n(49230),
-    E = n(981631),
+    E = n(49230),
+    I = n(981631),
     C = n(65154);
 function v(e, t, n) {
     return (
@@ -66,7 +66,7 @@ class N extends h.Z {
                             soundVolume: (0, _.Z)(n),
                             reportSoundStartedPlaying: () => (0, m.xR)(e, i)
                         };
-                        c.Z.supports(C.AN.SAMPLE_PLAYBACK) ? await (0, I.$)(r) : await (0, I.h)(r, t.playingSoundsWeb);
+                        c.Z.supports(C.AN.SAMPLE_PLAYBACK) ? await (0, E.$)(r) : await (0, E.h)(r, t.playingSoundsWeb);
                     } finally {
                         (0, m.R)(e, i);
                     }
@@ -77,7 +77,7 @@ class N extends h.Z {
             v(this, '_handleOpenEducationModal', (e, t) => {
                 if (null == e) return;
                 let l = o.Z.getChannel(t),
-                    c = u.Z.getKeybindForAction(E.kg4.SOUNDBOARD_HOLD);
+                    c = u.Z.getKeybindForAction(I.kg4.SOUNDBOARD_HOLD);
                 null != l &&
                     (0, g.Z)(l) &&
                     null != c &&

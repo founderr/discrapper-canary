@@ -19,8 +19,8 @@ var i = n(392711),
     g = n(699516),
     f = n(944486),
     _ = n(594174),
-    I = n(979651),
-    E = n(626135),
+    E = n(979651),
+    I = n(626135),
     C = n(823379),
     v = n(358085),
     N = n(914946),
@@ -56,7 +56,7 @@ class L {
                     socketId: e.id,
                     application: e.application
                 }),
-                    E.default.track(x.rMx.AUTHORIZED_APP_CONNECTED, {
+                    I.default.track(x.rMx.AUTHORIZED_APP_CONNECTED, {
                         app_id: e.application.id,
                         transport: e.transport
                     });
@@ -69,7 +69,7 @@ class L {
                     reason: t
                 });
             });
-        let e = [c.Z, d.ZP, m.Z, I.Z, h.Z, p.Z];
+        let e = [c.Z, d.ZP, m.Z, E.Z, h.Z, p.Z];
         new l.Fh(e.concat(this.stores), () => this.rpcServer.updateSubscriptions()).attach('RPCServerManager'), a.Z.subscribe('MESSAGE_CREATE', (e) => this.handleMessage(e)), a.Z.subscribe('MESSAGE_UPDATE', (e) => this.handleMessage(e)), a.Z.subscribe('MESSAGE_DELETE', (e) => this.handleMessage(e)), a.Z.subscribe('SPEAKING', (e) => this.handleSpeaking(e)), a.Z.subscribe('OAUTH2_TOKEN_REVOKE', (e) => this.handleOAuth2TokenRevoke(e)), a.Z.subscribe('GUILD_CREATE', (e) => this.handleGuildCreate(e)), a.Z.subscribe('CHANNEL_CREATE', (e) => this.handleChannelCreate(e)), a.Z.subscribe('LOGOUT', () => this.handleLogout()), a.Z.subscribe('VOICE_CHANNEL_SELECT', (e) => this.handleVoiceChannelSelect(e)), a.Z.subscribe('RPC_NOTIFICATION_CREATE', (e) => this.handleNotificationCreate(e)), a.Z.subscribe('ACTIVITY_JOIN', (e) => this.handleActivityJoin(e)), a.Z.subscribe('ACTIVITY_LAYOUT_MODE_UPDATE', (e) => this.handleActivityLayoutModeUpdate(e)), a.Z.subscribe('THERMAL_STATE_CHANGE', (e) => this.handleThermalStateChange(e)), a.Z.subscribe('ACTIVITY_SCREEN_ORIENTATION_UPDATE', (e) => this.handleScreenOrientationUpdate(e)), (0, S.HU)((e) => this.rpcServer.dispatchToSubscriptions(x.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e)), a.Z.subscribe('RELATIONSHIP_ADD', (e) => this.handleRelationshipAdd(e)), a.Z.subscribe('RELATIONSHIP_REMOVE', (e) => this.handleRelationshipRemove(e)), a.Z.subscribe('PRESENCE_UPDATES', (e) => this.handlePresenceUpdate(e)), a.Z.subscribe('PRESENCES_REPLACE', () => this.handlePresencesReplace()), a.Z.subscribe('ENTITLEMENT_CREATE', (e) => this.handleEntitlementCreate(e)), a.Z.subscribe('ENTITLEMENT_DELETE', (e) => this.handleEntitlementDelete(e));
     }
     handleMessage(e) {
@@ -110,7 +110,7 @@ class L {
             if (null != n) {
                 let i = c.Z.getChannel(n);
                 if (null == i) return;
-                let r = I.Z.getVoiceState(i.getGuildId(), e.userId);
+                let r = E.Z.getVoiceState(i.getGuildId(), e.userId);
                 if (null == r) return;
                 this.rpcServer.dispatchToSubscriptions(
                     t,

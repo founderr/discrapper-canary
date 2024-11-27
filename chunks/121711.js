@@ -13,8 +13,8 @@ var i = n(200651),
     g = n(283293),
     f = n(63063),
     _ = n(113434),
-    I = n(833435),
-    E = n(150560),
+    E = n(833435),
+    I = n(150560),
     C = n(558652),
     v = n(736683),
     N = n(452081),
@@ -23,10 +23,10 @@ var i = n(200651),
     x = n(388032),
     b = n(359643);
 t.Z = function () {
-    let { tabs: e, selectedTab: t, onSelectTab: n } = (0, N.z)(),
+    let { selectedTab: e, onSelectTab: t, tabs: n } = (0, N.z)(),
         { onScroll: A, scrollPosition: Z } = (0, c.M)(),
-        L = E.Z.getState().getUtmCurrentContext(),
-        y = (0, I._)({ location: S.dr.QUEST_HOME_DESKTOP }) ? v.Z : v.j;
+        L = I.Z.getState().getUtmCurrentContext(),
+        y = (0, E._)({ location: S.dr.QUEST_HOME_DESKTOP }) ? v.Z : v.j;
     r.useEffect(() => {
         (0, s.h)({
             name: l.ImpressionNames.QUEST_HOME,
@@ -36,10 +36,10 @@ t.Z = function () {
                 utm_medium_current: L.utmMediumCurrent,
                 utm_campaign_current: L.utmCampaignCurrent,
                 utm_content_current: L.utmContentCurrent,
-                tab: t
+                tab: e
             }
         });
-    }, [t]);
+    }, [e]);
     let P = r.useCallback(() => {
         window.open(f.Z.getArticleURL(T.BhN.QUESTS_LEARN_MORE));
     }, []);
@@ -71,12 +71,12 @@ t.Z = function () {
                         (0, i.jsxs)(h.Z, {
                             children: [
                                 (0, i.jsx)(m.Z, {
-                                    tabs: e,
-                                    selectedTab: t,
-                                    onTabSelect: n,
+                                    tabs: n,
+                                    selectedTab: e,
+                                    onTabSelect: t,
                                     className: b.tabs
                                 }),
-                                t === _.e5.CLAIMED ? (0, i.jsx)(y, { onSelectTab: n }) : (0, i.jsx)(C.Z, {})
+                                e === _.e5.CLAIMED ? (0, i.jsx)(y, { onSelectTab: t }) : (0, i.jsx)(C.Z, {})
                             ]
                         })
                     ]

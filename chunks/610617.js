@@ -14,8 +14,8 @@ var i = n(200651),
     c = n(442837),
     u = n(704215),
     h = n(433517),
-    m = n(481060),
-    g = n(243778),
+    g = n(481060),
+    m = n(243778),
     x = n(430824),
     S = n(9156),
     p = n(594174),
@@ -67,7 +67,7 @@ function O(e) {
                     }))
             };
         }),
-        [Y, W] = (0, g.US)([u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]),
+        [Y, W] = (0, m.US)([u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]),
         z = Y === u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE;
     s.useEffect(
         () => () => {
@@ -84,33 +84,33 @@ function O(e) {
                   (0, i.jsxs)('div', {
                       className: Z.header,
                       children: [
-                          (0, i.jsx)(m.Heading, {
+                          (0, i.jsx)(g.Heading, {
                               variant: 'heading-md/semibold',
                               children: T.intl.string(T.t.mrqSOj)
                           }),
-                          (0, i.jsx)(m.Clickable, {
+                          (0, i.jsx)(g.Clickable, {
                               onClick: D,
                               className: Z.nitroWheelContainer,
-                              children: (0, i.jsx)(m.NitroWheelIcon, {
+                              children: (0, i.jsx)(g.NitroWheelIcon, {
                                   size: 'md',
                                   color: 'currentColor',
                                   className: Z.nitroWheel
                               })
                           }),
                           z &&
-                              (0, i.jsx)(m.TextBadge, {
+                              (0, i.jsx)(g.TextBadge, {
                                   className: Z.newBadge,
                                   text: T.intl.string(T.t.y2b7CA)
                               })
                       ]
                   }),
-                  (0, i.jsx)(m.Text, {
+                  (0, i.jsx)(g.Text, {
                       className: Z.subheader,
                       variant: 'text-sm/normal',
                       children: T.intl.format(T.t.LuYDy8, {
                           guildName: (e, t) =>
                               (0, i.jsx)(
-                                  m.Text,
+                                  g.Text,
                                   {
                                       tag: 'span',
                                       variant: 'text-sm/medium',
@@ -124,26 +124,26 @@ function O(e) {
                       (0, i.jsxs)('div', {
                           className: Z.warningContainer,
                           children: [
-                              (0, i.jsx)(m.CircleWarningIcon, {
+                              (0, i.jsx)(g.CircleWarningIcon, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,
                                   color: d.Z.STATUS_WARNING
                               }),
-                              (0, i.jsx)(m.Text, {
+                              (0, i.jsx)(g.Text, {
                                   className: Z.warningLabel,
                                   variant: 'text-sm/medium',
                                   children: T.intl.string(T.t['a9G/ER'])
                               })
                           ]
                       }),
-                  (0, i.jsx)(m.FormItem, {
+                  (0, i.jsx)(g.FormItem, {
                       className: Z.optionsContainer,
                       title: T.intl.string(T.t.xxvoAg),
                       children: (0, i.jsxs)('div', {
                           className: r()({ [Z.options]: !V }),
                           children: [
-                              (0, i.jsx)(m.RadioGroup, {
+                              (0, i.jsx)(g.RadioGroup, {
                                   className: r()({ [Z.options]: V }),
                                   value: null != P ? P : _.YC.CLASSIC,
                                   onChange: (e) => {

@@ -14,8 +14,8 @@ var i,
     h = n(40851),
     g = n(607070),
     v = n(899663),
-    S = n(317381),
-    I = n(316253),
+    S = n(636449),
+    I = n(317381),
     _ = n(496616),
     x = n(100527),
     E = n(906732),
@@ -190,7 +190,7 @@ class z extends (i = a.Component) {
                 };
                 if (this.props.connectedToEmbeddedActivity && !O.ZP.disableEmbeddedActivityPopOutAlert) {
                     if (!k.isPlatformEmbedded) return;
-                    (0, I.Z)()
+                    (0, S.R)()
                         ? t()
                         : ((e.returnValue = W.intl.string(W.t['bST/Y2'])),
                           (0, _.Z)(() => {
@@ -221,11 +221,11 @@ let H = a.forwardRef(function (e, t) {
         })),
         o = (0, m.e7)([g.Z], () => (g.Z.useForcedColors ? 'yes' : 'no')),
         { accessibilitySettings: u, appWrapperClassName: d } = (0, T.I)(),
-        p = (0, m.e7)([S.ZP], () => null != e.channelId && null !== S.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
+        p = (0, m.e7)([I.ZP], () => null != e.channelId && null !== I.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
     (0, N.Z)(n, !1);
     let h = (0, w.Z)(n, i),
         { analyticsLocations: v } = (0, E.ZP)(x.Z.POPOUT_WINDOW),
-        { clientThemesClassName: I, clientThemesCSS: _ } = (0, Z.ZP)();
+        { clientThemesClassName: S, clientThemesCSS: _ } = (0, Z.ZP)();
     return null == n
         ? null
         : (0, l.jsx)(f.DnDProvider, {
@@ -250,7 +250,7 @@ let H = a.forwardRef(function (e, t) {
                       fontScaleClass: u.fontScaleClass,
                       saturation: u.saturation,
                       alwaysShowLinkDecorations: u.alwaysShowLinkDecorations,
-                      clientThemesClassName: I,
+                      clientThemesClassName: S,
                       clientThemesCSS: _,
                       appWrapperClassName: d
                   })

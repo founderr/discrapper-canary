@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(239091),
     f = n(230711),
     _ = n(410575),
-    I = n(941129),
-    E = n(634894),
+    E = n(941129),
+    I = n(634894),
     C = n(586902),
     v = n(570928),
     N = n(100527),
@@ -74,8 +74,8 @@ var i = n(200651),
     eg = n(70956),
     ef = n(74538),
     e_ = n(374023),
-    eI = n(51144),
-    eE = n(998502),
+    eE = n(51144),
+    eI = n(998502),
     eC = n(870569),
     ev = n(345243),
     eN = n(115530),
@@ -96,7 +96,7 @@ function eA(e, t, n) {
         e
     );
 }
-let eZ = eE.ZP.getEnableHardwareAcceleration() ? m.AnimatedAvatar : m.Avatar,
+let eZ = eI.ZP.getEnableHardwareAcceleration() ? m.AnimatedAvatar : m.Avatar,
     eL = 2 * eg.Z.Millis.MINUTE,
     ey = 30 * eg.Z.Millis.DAY;
 function eP(e) {
@@ -185,7 +185,7 @@ class eO extends r.PureComponent {
         let { hovered: t } = this.state,
             { customStatusActivity: n, userTag: r, currentUser: l, status: a } = this.props;
         if (null == l) return null;
-        let s = eI.ZP.getName(l),
+        let s = eE.ZP.getName(l),
             o = null != a && a !== eS.Skl.UNKNOWN,
             c = null != n;
         return (
@@ -199,7 +199,7 @@ class eO extends r.PureComponent {
                               emojiClassName: eb.emoji,
                               className: eb.customStatus
                           })
-                        : eI.ZP.humanizeStatus(a)
+                        : eE.ZP.humanizeStatus(a)
                 })),
             (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -439,7 +439,7 @@ class eO extends r.PureComponent {
                     { shouldShowNametagTooltip: t, copiedStreak: n } = this.state;
                 if (null == e) return;
                 (0, ep.JG)(
-                    eI.ZP.getUserTag(e, {
+                    eE.ZP.getUserTag(e, {
                         decoration: 'never',
                         identifiable: 'always'
                     })
@@ -498,7 +498,7 @@ function eR() {
             status: eo.Z.getStatus()
         })),
         d = (0, C.Z)({ userId: n }),
-        u = eI.ZP.useUserTag(t, { decoration: 'never' }),
+        u = eE.ZP.useUserTag(t, { decoration: 'never' }),
         h = (0, s.e7)([ec.Z], () => ec.Z.hidePersonalInformation),
         g = (0, s.e7)([es.Z, er.Z], () => {
             let e = es.Z.getChannelId();
@@ -517,16 +517,16 @@ function eR() {
         R = (0, H.b)(),
         j = (0, s.e7)([U.Z], () => null != U.Z.getAwaitingRemoteSessionInfo()),
         M = (0, W.D)(),
-        k = (0, I.u)(),
+        k = (0, E.u)(),
         G = (0, Y.t)(),
         B = ef.ZP.canUsePremiumGuildMemberProfile(t),
         z = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eT.rL,
         K = 'account';
-    (0, E.j)({
+    (0, I.j)({
         location: K + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, E.j)({
+        (0, I.j)({
             location: K + ' auto off',
             autoTrackExposure: !1
         });
@@ -625,10 +625,10 @@ function ej(e) {
 function eD(e) {
     let { selfMute: t, serverMute: n, suppress: l, awaitingRemote: a, tooltipText: s, tooltipColor: o, tooltipForceOpen: c, onMouseEnter: d, onMouseLeave: h, onClick: p, onContextMenu: g } = e,
         f = t || l || n,
-        { Component: _, play: I, events: E } = (0, u.O)(f ? 'unmute' : 'mute'),
+        { Component: _, play: E, events: I } = (0, u.O)(f ? 'unmute' : 'mute'),
         C = n || l ? m.MicrophoneDenyIcon : _,
         { analyticsLocations: v } = (0, S.ZP)(N.Z.AUDIO_INPUT_BUTTON);
-    r.useEffect(() => () => I(), [f, I]);
+    r.useEffect(() => () => E(), [f, E]);
     let T = r.useCallback(
         (e) => {
             g(e, v);
@@ -642,10 +642,10 @@ function eD(e) {
             tooltipColor: o,
             tooltipForceOpen: c,
             onMouseEnter: () => {
-                d(), E.onMouseEnter();
+                d(), I.onMouseEnter();
             },
             onMouseLeave: () => {
-                h(), E.onMouseLeave();
+                h(), I.onMouseLeave();
             },
             icon: (0, i.jsx)(C, {
                 size: 'custom',
@@ -674,7 +674,7 @@ function eM(e) {
         f = n ? m.HeadphonesDenyIcon : u,
         { analyticsLocations: _ } = (0, S.ZP)(N.Z.AUDIO_OUTPUT_BUTTON);
     r.useEffect(() => () => h(), [c, h]);
-    let I = r.useCallback(
+    let E = r.useCallback(
         (e) => {
             o(e, _);
         },
@@ -693,7 +693,7 @@ function eM(e) {
                 color: c ? m.tokens.colors.STATUS_DANGER : 'currentColor'
             }),
             onClick: s,
-            onContextMenu: I,
+            onContextMenu: E,
             innerClassName: a()({ [eb.redIcon]: n }),
             iconForeground: c ? eb.strikethrough : null,
             role: 'switch',

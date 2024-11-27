@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(51025),
     f = n(785547),
     _ = n(730749),
-    I = n(112724),
-    E = n(812206),
+    E = n(112724),
+    I = n(812206),
     C = n(44315),
     v = n(600164),
     N = n(167533),
@@ -618,11 +618,11 @@ function et(e, t, n, i) {
         );
     }, []);
 }
-t.Z = (0, I.Z)(
-    c.ZP.connectStores([E.Z, A.Z, Z.Z, x.Z, L.Z], () => {
-        let e = et(Z.Z.activeItems, !1, E.Z, A.Z);
+t.Z = (0, E.Z)(
+    c.ZP.connectStores([I.Z, A.Z, Z.Z, x.Z, L.Z], () => {
+        let e = et(Z.Z.activeItems, !1, I.Z, A.Z);
         return {
-            applications: [...e, ...et(Z.Z.finishedItems, !0, E.Z, A.Z)],
+            applications: [...e, ...et(Z.Z.finishedItems, !0, I.Z, A.Z)],
             paused: Z.Z.paused,
             isFocused: L.Z.isFocused(),
             theme: x.Z.theme

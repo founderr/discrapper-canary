@@ -14,7 +14,7 @@ var i = n(200651),
     g = n(823379),
     f = n(824138),
     _ = n(388032);
-function I(e, t, n) {
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function I(e, t, n) {
         e
     );
 }
-class E extends r.PureComponent {
+class I extends r.PureComponent {
     hasParty(e) {
         return e.length > 1;
     }
@@ -49,7 +49,7 @@ class E extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            I(this, 'handleUserContextMenu', (e, t) => {
+            E(this, 'handleUserContextMenu', (e, t) => {
                 (0, o.jW)(e, async () => {
                     let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('95052')]).then(n.bind(n, 881351));
                     return (n) =>
@@ -59,7 +59,7 @@ class E extends r.PureComponent {
                         });
                 });
             }),
-            I(this, 'renderOverflowPopout', () => {
+            E(this, 'renderOverflowPopout', () => {
                 let { party: e } = this.props;
                 return (0, i.jsx)(c.Z, {
                     party: e,
@@ -87,4 +87,4 @@ t.Z = s.ZP.connectStores([u.Z, p.default, m.Z, h.Z], () => {
         host: e,
         party: l
     };
-})(E);
+})(I);

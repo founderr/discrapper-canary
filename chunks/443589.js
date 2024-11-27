@@ -18,8 +18,8 @@ var i = n(200651),
     g = n(814443),
     f = n(626135),
     _ = n(479446),
-    I = n(522558),
-    E = n(441623),
+    E = n(522558),
+    I = n(441623),
     C = n(317271),
     v = n(674701),
     N = n(474936),
@@ -35,7 +35,7 @@ function Z(e) {
     let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: Z } = e,
         { analyticsLocations: L } = (0, u.ZP)(),
         { isHovered: y, setIsHovered: P, onMouseEnter: O, onMouseLeave: R } = (0, p.Z)(200, 300),
-        { enableEmojiCTA: j } = I.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
+        { enableEmojiCTA: j } = E.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
     r.useEffect(() => {
         let e = g.Z.getUserAffinity(t.id);
         (0, h.h)({
@@ -76,7 +76,7 @@ function Z(e) {
                 });
         },
         w = () => {
-            if (n === N.hX.FRIEND_ANNIVERSARY) return T.intl.formatToPlainString(T.t['L2s/Nz'], { numberOfYears: E.Z.getFriendAnniversaryYears(t.id) });
+            if (n === N.hX.FRIEND_ANNIVERSARY) return T.intl.formatToPlainString(T.t['L2s/Nz'], { numberOfYears: I.Z.getFriendAnniversaryYears(t.id) });
             return (0, _.Ou)(n);
         },
         k = () => {

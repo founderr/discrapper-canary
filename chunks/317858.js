@@ -19,12 +19,12 @@ var i = n(192379),
     g = n(252618),
     f = n(981631),
     _ = n(388032);
-let I = new Set(['Blink', 'Gecko', 'WebKit']),
-    E = f.dG4;
-if (m.isPlatformEmbedded) E = (e) => p.ZP.setBadge(e);
-else if (I.has(s().layout)) {
+let E = new Set(['Blink', 'Gecko', 'WebKit']),
+    I = f.dG4;
+if (m.isPlatformEmbedded) I = (e) => p.ZP.setBadge(e);
+else if (E.has(s().layout)) {
     let e = new (l())({ animation: 'none' });
-    E = (t) => {
+    I = (t) => {
         try {
             (0, g.PR)(t), e.badge(-1 === t ? '\u2022' : t);
         } catch (e) {}
@@ -52,7 +52,7 @@ function C() {
         };
     }, [e]),
         i.useEffect(() => {
-            E(t);
+            I(t);
         }, [t]),
-        i.useEffect(() => () => E(0), []);
+        i.useEffect(() => () => I(0), []);
 }

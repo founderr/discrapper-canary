@@ -1,12 +1,12 @@
 n.d(t, {
     E3: function () {
-        return P;
-    },
-    OA: function () {
         return L;
     },
-    tH: function () {
+    OA: function () {
         return R;
+    },
+    tH: function () {
+        return P;
     }
 }),
     n(653041);
@@ -28,42 +28,42 @@ var c = n(200651),
     I = n(753194),
     O = n(598077),
     N = n(671533),
-    f = n(49012),
-    h = n(981631),
+    h = n(49012),
+    f = n(981631),
     C = n(856651),
     v = n(388032),
     x = n(196161);
-function P(e) {
+function L(e) {
     var t, n;
     let l,
         r,
         s,
-        { connectedAccount: E, theme: A, locale: O, userId: P, className: R, showMetadata: L, showInvisibleIcon: S } = e;
-    null == L && (L = !0);
+        { connectedAccount: E, theme: A, locale: O, userId: L, className: P, showMetadata: R, showInvisibleIcon: S } = e;
+    null == R && (R = !0);
     let g = null !== (n = E.metadata) && void 0 !== n ? n : {},
-        D = L ? (0, _.FI)(g[C.PC.CREATED_AT], O) : null,
+        D = R ? (0, _.FI)(g[C.PC.CREATED_AT], O) : null,
         b = (0, u.useToken)(o.Z.unsafe_rawColors.TWITTER).hex(),
         y = v.intl.string(v.t['6H6h1t']);
-    if (L)
+    if (R)
         switch (E.type) {
-            case h.ABu.REDDIT:
+            case f.ABu.REDDIT:
                 l = (0, m.oP)(g);
                 break;
-            case h.ABu.STEAM:
+            case f.ABu.STEAM:
                 l = (0, m.Dq)(g);
                 break;
-            case h.ABu.BLUESKY:
-            case h.ABu.MASTODON:
-            case h.ABu.TWITTER:
+            case f.ABu.BLUESKY:
+            case f.ABu.MASTODON:
+            case f.ABu.TWITTER:
                 (l = (0, m.rJ)(g)), '1' === g[C.PC.TWITTER_VERIFIED] && ((r = b), (y = v.intl.string(v.t.Jebrw8)));
                 break;
-            case h.ABu.PAYPAL:
+            case f.ABu.PAYPAL:
                 l = (0, m.li)(g);
                 break;
-            case h.ABu.EBAY:
+            case f.ABu.EBAY:
                 l = (0, m.ul)(g);
                 break;
-            case h.ABu.TIKTOK:
+            case f.ABu.TIKTOK:
                 l = (0, m.hf)(g);
         }
     let j = d.Z.get((0, p.rR)(E.type)),
@@ -80,15 +80,15 @@ function P(e) {
               onClick: (e) => {
                   var t, n;
                   (t = E.type),
-                      (n = P),
-                      (0, T.yw)(h.rMx.CONNECTED_ACCOUNT_VIEWED, {
+                      (n = L),
+                      (0, T.yw)(f.rMx.CONNECTED_ACCOUNT_VIEWED, {
                           platform_type: t,
                           other_user_id: n
                       }),
-                      (0, f.q)(
+                      (0, h.q)(
                           {
                               href: U,
-                              trusted: (null == j ? void 0 : j.type) !== h.ABu.DOMAIN
+                              trusted: (null == j ? void 0 : j.type) !== f.ABu.DOMAIN
                           },
                           e
                       );
@@ -110,7 +110,7 @@ function P(e) {
               })
             : null;
     return (0, c.jsxs)('div', {
-        className: a()(x.connectedAccountContainer, (null != l && l.length > 0) || null != D ? x.connectedAccountContainerWithMetadata : null, R),
+        className: a()(x.connectedAccountContainer, (null != l && l.length > 0) || null != D ? x.connectedAccountContainerWithMetadata : null, P),
         children: [
             (0, c.jsxs)('div', {
                 className: x.connectedAccount,
@@ -172,7 +172,7 @@ function P(e) {
         ]
     });
 }
-function R(e) {
+function P(e) {
     let { applicationRoleConnection: t, className: n, locale: l, onApplicationClicked: r, selectedGuildId: o } = e,
         i = (0, m.rm)(t, void 0, l),
         d = () => {
@@ -255,14 +255,14 @@ function R(e) {
         ]
     });
 }
-let L = l.forwardRef(function (e, t) {
+let R = l.forwardRef(function (e, t) {
     let { connectedAccounts: n, theme: l, locale: r, className: o, userId: i } = e;
     if (null == n || 0 === n.length) return null;
     let u = n
             .filter((e) => d.Z.isSupported(e.type))
             .map((e) =>
                 (0, c.jsx)(
-                    P,
+                    L,
                     {
                         connectedAccount: e,
                         theme: l,

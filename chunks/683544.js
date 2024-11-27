@@ -19,8 +19,8 @@ let _ = {
 };
 t.Z = function (e) {
     var t;
-    let { categoryId: n, onSelectApplication: I } = e,
-        [E, C] = r.useState(1),
+    let { categoryId: n, onSelectApplication: E } = e,
+        [I, C] = r.useState(1),
         v = r.useCallback((e) => {
             C(e);
         }, []);
@@ -30,16 +30,16 @@ t.Z = function (e) {
     let N = r.useMemo(
             () => ({
                 query: g.Mm,
-                page: E,
+                page: I,
                 pageSize: g.IV,
                 categoryId: n
             }),
-            [E, n]
+            [I, n]
         ),
         S = (0, a.e7)([u.Z], () =>
             u.Z.getFetchState({
                 query: g.Mm,
-                page: E,
+                page: I,
                 pageSize: g.IV,
                 categoryId: n
             })
@@ -71,11 +71,11 @@ t.Z = function (e) {
         }, []);
     return (r.useEffect(() => {
         L({
-            page: E,
+            page: I,
             activeCategoryId: n,
             onSuccessCallback: () => {}
         });
-    }, [n, L, E]),
+    }, [n, L, I]),
     S === d.M.ERROR)
         ? (0, i.jsx)('div', {
               className: f.errorContainer,
@@ -96,7 +96,7 @@ t.Z = function (e) {
                                             m.Z,
                                             {
                                                 application: t,
-                                                onSelectApplication: I
+                                                onSelectApplication: E
                                             },
                                             t.id
                                         );
@@ -110,7 +110,7 @@ t.Z = function (e) {
                       pageSize: g.IV,
                       disablePaginationGap: !0,
                       hideMaxPage: !0,
-                      currentPage: E,
+                      currentPage: I,
                       onPageChange: v
                   })
               ]

@@ -19,8 +19,8 @@ var r = n(120356),
     g = n(981631),
     f = n(332325),
     _ = n(388032),
-    I = n(690924);
-function E(e) {
+    E = n(690924);
+function I(e) {
     (0, o.Z)(f.Z.CLIPS), (0, m.UW)(e);
 }
 function C() {
@@ -32,7 +32,7 @@ function C() {
             keybind: t,
             keybindHook: () =>
                 (0, i.jsx)('span', {
-                    className: I.keyCombo,
+                    className: E.keyCombo,
                     children: (0, i.jsx)(s.KeyCombo, { shortcut: t })
                 })
         })
@@ -49,7 +49,7 @@ let v = {
                     (0, i.jsx)(s.WarningIcon, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: I.errorWarningIcon
+                        className: E.errorWarningIcon
                     }),
                     _.intl.string(_.t.Sr64AA)
                 ]
@@ -58,7 +58,7 @@ let v = {
         ctaOnClick: () => {
             window.open(d.Z.getArticleURL(g.BhN.CLIPS), '_blank');
         },
-        containerClass: I.container
+        containerClass: E.container
     },
     [p.D5.Disabled]: {
         textColor: 'text-primary',
@@ -66,8 +66,8 @@ let v = {
         buttonColor: s.Button.Colors.BRAND,
         bodyCopy: () => _.intl.string(_.t.MhrVg4),
         buttonCopy: () => _.intl.string(_.t.GMLBKS),
-        ctaOnClick: () => E(p.D5.Disabled),
-        containerClass: I.container
+        ctaOnClick: () => I(p.D5.Disabled),
+        containerClass: E.container
     },
     [p.D5.Enabled]: {
         textColor: 'always-white',
@@ -75,8 +75,8 @@ let v = {
         buttonColor: s.Button.Colors.BRAND_INVERTED,
         bodyCopy: () => (0, i.jsx)(C, {}),
         buttonCopy: () => _.intl.string(_.t.GMLBKS),
-        ctaOnClick: () => E(p.D5.Enabled),
-        containerClass: l()(I.container, I.containerEnabled)
+        ctaOnClick: () => I(p.D5.Enabled),
+        containerClass: l()(E.container, E.containerEnabled)
     }
 };
 function N() {
@@ -99,16 +99,16 @@ function N() {
                 onClick: () => (0, m.UW)(r),
                 size: s.Button.Sizes.NONE,
                 look: s.Button.Looks.BLANK,
-                className: I.buttonClose,
+                className: E.buttonClose,
                 children: (0, i.jsx)(s.XSmallIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: I.dismissIcon
+                    className: E.dismissIcon
                 })
             }),
             (0, i.jsx)(s.Button, {
                 onClick: c,
-                className: I.buttonCTA,
+                className: E.buttonCTA,
                 color: u,
                 look: g,
                 fullWidth: !0,

@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(607070),
     f = n(627845),
     _ = n(185666),
-    I = n(503737),
-    E = n(513202),
+    E = n(503737),
+    I = n(513202),
     C = n(318891),
     v = n(687751),
     N = n(912471),
@@ -68,8 +68,8 @@ var i = n(200651),
     eg = n(304445),
     ef = n(893607),
     e_ = n(703656),
-    eI = n(298969),
-    eE = n(719256),
+    eE = n(298969),
+    eI = n(719256),
     eC = n(6025),
     ev = n(897473),
     eN = n(377368),
@@ -122,7 +122,7 @@ n(117240), n(801077), n(967368), n(272053), n(974180), n(574254), n(551428), n(5
 let e2 = !1;
 (0, N.D)(),
     s.ZP.initialize(),
-    eI.Z.loadServer(),
+    eE.Z.loadServer(),
     eq.isPlatformEmbedded &&
         (eX.ZP.on('USER_SETTINGS_OPEN', () => {
             !eG.Z.getLayers().includes(eJ.S9g.USER_SETTINGS) && p.Z.open(eJ.oAB.ACCOUNT);
@@ -161,8 +161,8 @@ let e4 = s.ZP.connectStores([F.Z, ek.Z, eD.default], () => ({
         }
     ),
     e3 = (0, x.e)(A.Z, null, { passProps: !1 }),
-    e7 = (0, x.e)(T.default, null, { passProps: !1 }),
-    e5 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(ef.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(ef.Hw.guildId(), e))];
+    e5 = (0, x.e)(T.default, null, { passProps: !1 }),
+    e7 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(ef.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(ef.Hw.guildId(), e))];
 function e9(e) {
     let { guildId: t, channelId: n = null, messageId: i = null, threadId: r = null } = e.params;
     return {
@@ -361,7 +361,7 @@ let e6 = [
     },
     {
         path: [eJ.Z5c.APPLICATION_DIRECTORY],
-        render: e7,
+        render: e5,
         isSessionRequired: !0
     }
 ];
@@ -382,7 +382,7 @@ function te(e) {
 class tt extends r.PureComponent {
     componentDidMount() {
         eX.ZP.setZoomFactor(g.Z.zoom),
-            eI.Z.init(),
+            eE.Z.init(),
             b.Z.initialize(),
             ed.Z.initialize(),
             G.Z.initialize(),
@@ -401,12 +401,12 @@ class tt extends r.PureComponent {
             C.ZP.initialize(),
             eR.Z.initialize(),
             ec.Z.initialize(),
-            E.Z.initialize(),
+            I.Z.initialize(),
             W.Z.init(),
             J.Z.init(),
             eW.Z.init(),
             eK.Z.init(),
-            I.Z.initialize(),
+            E.Z.initialize(),
             eA.Z.init(),
             ez.Z.init(),
             ey.Z.init(),
@@ -416,7 +416,7 @@ class tt extends r.PureComponent {
             eP.Z.init(),
             w.Z.initialize(),
             _.Z.initialize(),
-            eE.Z.initialize(),
+            eI.Z.initialize(),
             eN.Z.initialize(),
             es.Z.initialize(),
             ea.Z.initialize(),
@@ -442,7 +442,7 @@ class tt extends r.PureComponent {
             (this.historyUnlisten = eg.Z.addRouteChangeListener(this.handleHistoryChange));
     }
     componentWillUnmount() {
-        ej.Z.terminate(), eh.Z.terminate(), ed.Z.terminate(), b.Z.terminate(), C.ZP.terminate(), eR.Z.terminate(), E.Z.terminate(), em.Z.terminate(), ec.Z.terminate(), eL.Z.terminate(), I.Z.terminate(), w.Z.terminate(), et.Z.terminate(), _.Z.terminate(), ep.Z.terminate(), eE.Z.terminate(), eN.Z.terminate(), es.Z.terminate(), ea.Z.terminate(), eo.Z.terminate(), y.Z.terminate(), P.Z.terminate(), eu.Z.terminate(), j.Z.terminate(), U.Z.terminate(), Z.Z.terminate(), L.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
+        ej.Z.terminate(), eh.Z.terminate(), ed.Z.terminate(), b.Z.terminate(), C.ZP.terminate(), eR.Z.terminate(), I.Z.terminate(), em.Z.terminate(), ec.Z.terminate(), eL.Z.terminate(), E.Z.terminate(), w.Z.terminate(), et.Z.terminate(), _.Z.terminate(), ep.Z.terminate(), eI.Z.terminate(), eN.Z.terminate(), es.Z.terminate(), ea.Z.terminate(), eo.Z.terminate(), y.Z.terminate(), P.Z.terminate(), eu.Z.terminate(), j.Z.terminate(), U.Z.terminate(), Z.Z.terminate(), L.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
     }
     handleHistoryChange(e) {
         let { pathname: t, search: n } = e;
@@ -510,7 +510,7 @@ class tt extends r.PureComponent {
                     var f;
                     if (
                         ((f = e),
-                        !e5.some((e) => {
+                        !e7.some((e) => {
                             var t;
                             return (null === (t = (0, a.LX)(f, e)) || void 0 === t ? void 0 : t.isExact) === !0;
                         }))

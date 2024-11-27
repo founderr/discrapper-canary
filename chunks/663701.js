@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(493683),
     f = n(529103),
     _ = n(607070),
-    I = n(213609),
-    E = n(143757),
+    E = n(213609),
+    I = n(143757),
     C = n(463119),
     v = n(377171),
     N = n(243778),
@@ -64,13 +64,13 @@ let $ = (e) => {
             m = s && h;
         r.useEffect(() => {
             m &&
-                (0, I.h)({
+                (0, E.h)({
                     name: o.ImpressionNames.GIFT_INTENT_BADGE,
                     type: o.ImpressionTypes.VIEW,
                     properties: { gift_intent_type: X.hX.FRIEND_ANNIVERSARY }
                 });
         }, [m]);
-        let [g, E] = r.useState(!1);
+        let [g, I] = r.useState(!1);
         return (0, i.jsxs)('div', {
             className: J.friendsButtonContainer,
             children: [
@@ -84,10 +84,10 @@ let $ = (e) => {
                     icon: p.FriendsIcon,
                     text: Q.intl.string(Q.t.TdEu5e),
                     onMouseEnter: () => {
-                        E(!0);
+                        I(!0);
                     },
                     onMouseLeave: () => {
-                        E(!1);
+                        I(!1);
                     },
                     ...n,
                     ...l,
@@ -292,7 +292,7 @@ let es = (e) => {
                         'discord-shop'
                     ),
                     (0, i.jsx)(ei, { selected: (null != r && r.startsWith(K.Z5c.FAMILY_CENTER)) || (null != c && c.startsWith(K.Z5c.FAMILY_CENTER)) }, 'family-center'),
-                    (0, i.jsx)(E.Z, {}, 'dm-quick-launcher')
+                    (0, i.jsx)(I.Z, {}, 'dm-quick-launcher')
                 ]
             })
         ]

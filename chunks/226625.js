@@ -40,18 +40,18 @@ function g(e) {
             [n, l]
         );
     r.useEffect(() => (window.addEventListener('mousemove', f), () => window.removeEventListener('mousemove', f)), [f]);
-    let [_, I] = (0, u.useSpring)(() => ({
+    let [_, E] = (0, u.useSpring)(() => ({
         x: 0,
         y: 0,
         config: p
     }));
     return (
         r.useEffect(() => {
-            I({
+            E({
                 x: s.x,
                 y: s.y
             });
-        }, [s.x, s.y, I]),
+        }, [s.x, s.y, E]),
         (0, i.jsx)(c.animated.div, {
             style: {
                 transform: (0, c.to)([_.x, _.y], (e, t) => 'translate3d('.concat(e, 'px, ').concat(t, 'px, 0)'))

@@ -1,7 +1,7 @@
 n(47120);
 var l,
-    i = n(200651),
-    r = n(192379),
+    r = n(200651),
+    i = n(192379),
     s = n(442837),
     a = n(481060),
     o = n(274616),
@@ -20,7 +20,7 @@ function h(e, t, n) {
         e
     );
 }
-class u extends (l = r.Component) {
+class u extends (l = i.Component) {
     componentDidMount() {
         let { applicationId: e, branches: t, onHasBranchesChange: n } = this.props;
         (0, o.Z)(e), null == n || n(t.length > 0);
@@ -31,10 +31,10 @@ class u extends (l = r.Component) {
         null != t && l !== e.branches.length > 0 && t(l);
     }
     render() {
-        let { branches: e, selectedBranchId: t, applicationId: n, includeMaster: l, hide: r, className: s } = this.props;
-        if (0 === e.length || r) return null;
+        let { branches: e, selectedBranchId: t, applicationId: n, includeMaster: l, hide: i, className: s } = this.props;
+        if (0 === e.length || i) return null;
         let o = l ? e : e.filter((e) => e.id !== n);
-        return (0, i.jsx)(a.SingleSelect, {
+        return (0, r.jsx)(a.SingleSelect, {
             options: o.map((e) => ({
                 label: e.getName(n),
                 value: e.id

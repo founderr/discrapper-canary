@@ -1,6 +1,6 @@
 var l,
-    i,
     r,
+    i,
     s,
     a = n(442837),
     o = n(570140);
@@ -11,15 +11,15 @@ class c extends (s = a.ZP.Store) {
         return null !== (t = d[e]) && void 0 !== t ? t : [];
     }
 }
-(r = 'ApplicationBranchStore'),
-    (i = 'displayName') in (l = c)
-        ? Object.defineProperty(l, i, {
-              value: r,
+(i = 'ApplicationBranchStore'),
+    (r = 'displayName') in (l = c)
+        ? Object.defineProperty(l, r, {
+              value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[i] = r),
+        : (l[r] = i),
     (t.Z = new c(o.Z, {
         OWNED_APPLICATION_BRANCHES_FETCH_SUCCESS: function (e) {
             let { applicationId: t, branches: n } = e;

@@ -78,8 +78,8 @@ function f(e) {
         f = r.useRef(h),
         {
             lastVisibleIndex: _,
-            onItemLayout: I,
-            overflowItemsRef: E,
+            onItemLayout: E,
+            overflowItemsRef: I,
             itemWidthsRef: C
         } = (0, s.zP)({
             items: l,
@@ -116,7 +116,7 @@ function f(e) {
                             s.AJ,
                             {
                                 index: t,
-                                onItemLayout: I,
+                                onItemLayout: E,
                                 children: (0, i.jsx)(c.TabBar.Item, {
                                     id: e.id,
                                     'aria-label': e.label,
@@ -131,7 +131,7 @@ function f(e) {
                         )
                     ),
                     (0, i.jsx)('div', {
-                        ref: E,
+                        ref: I,
                         children: (0, i.jsx)(g, {
                             tabs: N,
                             onTabSelect: o,

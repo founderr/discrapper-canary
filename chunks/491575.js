@@ -13,8 +13,8 @@ var i = n(200651),
     g = n(5560),
     f = n(451478),
     _ = n(585483),
-    I = n(145604),
-    E = n(718813),
+    E = n(145604),
+    I = n(718813),
     C = n(981631),
     v = n(224239);
 t.Z = r.memo(function () {
@@ -41,13 +41,13 @@ t.Z = r.memo(function () {
             ref: e,
             className: v.app,
             children: [
-                (0, i.jsx)(E.Z, {
+                (0, i.jsx)(I.Z, {
                     className: v.layers,
                     children: (0, i.jsx)(o.Z, {})
                 }),
                 (0, i.jsx)(p.Z, {}),
                 (0, i.jsx)(c.Z, {}),
-                (0, i.jsx)(I.Z, {}),
+                (0, i.jsx)(E.Z, {}),
                 (0, i.jsx)(g.Z, {}),
                 (0, i.jsx)(s.DnDKeyboardHelpBar, {})
             ]

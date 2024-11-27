@@ -1,9 +1,9 @@
 n(47120), n(315314), n(610138), n(216116), n(78328), n(815648);
 var i = n(230711),
     r = n(782568),
-    l = n(317381),
-    a = n(611577),
-    s = n(316253),
+    l = n(636449),
+    a = n(317381),
+    s = n(611577),
     o = n(812206),
     c = n(12647),
     d = n(49012),
@@ -14,7 +14,7 @@ var i = n(230711),
     g = n(186901),
     f = n(981631),
     _ = n(701488);
-let I = new Set([_.Fu, _.JT]);
+let E = new Set([_.Fu, _.JT]);
 t.Z = {
     [f.Etm.OPEN_EXTERNAL_LINK]: {
         scope: {
@@ -30,10 +30,10 @@ t.Z = {
             try {
                 let e = new URL(n).toString();
                 if (u.isPlatformEmbedded) {
-                    let e = (0, s.Z)() ? f.KJ3.ACTIVITY_POPOUT : null;
+                    let e = (0, l.R)() ? f.KJ3.ACTIVITY_POPOUT : null;
                     c.Z.focus(e, !0);
                 }
-                let t = l.ZP.getCurrentEmbeddedActivity(),
+                let t = a.ZP.getCurrentEmbeddedActivity(),
                     i = o.Z.getApplication(null == t ? void 0 : t.applicationId),
                     h = null == t ? void 0 : t.channelId;
                 return new Promise((t) =>
@@ -50,7 +50,7 @@ t.Z = {
                         },
                         void 0,
                         void 0,
-                        (0, a.z)({
+                        (0, s.z)({
                             application: i,
                             channelId: h
                         })
@@ -68,7 +68,7 @@ t.Z = {
             let { socket: t } = e;
             (0, m.bu)(t.transport);
             let n = (0, m._f)(t.application);
-            if (!I.has(n)) throw new h.Z({ errorCode: f.lTL.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
+            if (!E.has(n)) throw new h.Z({ errorCode: f.lTL.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
             i.Z.open(f.oAB.CONNECTIONS);
         }
     }

@@ -14,8 +14,8 @@ var s = n(392711),
     c = n(471445),
     u = n(131704),
     h = n(592125),
-    m = n(324067),
-    g = n(699516),
+    g = n(324067),
+    m = n(699516),
     x = n(594174),
     S = n(981631),
     p = n(388032),
@@ -31,8 +31,8 @@ function j(e) {
     let { guildId: n, onSelected: s } = e;
     let { channels: u, categories: j } =
             ((t = n),
-            (0, r.cj)([m.Z], () => {
-                let e = m.Z.getCategories(t);
+            (0, r.cj)([g.Z], () => {
+                let e = g.Z.getCategories(t);
                 return {
                     channels: (0, o.Z)(e._categories, e, N),
                     categories: e
@@ -47,7 +47,7 @@ function j(e) {
                 let { channel: t } = e;
                 return {
                     value: t.id,
-                    label: (0, d.F6)(t, x.default, g.Z)
+                    label: (0, d.F6)(t, x.default, m.Z)
                 };
             })
             .value();

@@ -23,8 +23,8 @@ var i = n(200651),
     g = n(125909),
     f = n(374939),
     _ = n(283293),
-    I = n(797908),
-    E = n(133743),
+    E = n(797908),
+    I = n(133743),
     C = n(120549),
     v = n(753511),
     N = n(979007),
@@ -98,7 +98,7 @@ function T(e) {
         R = r.useMemo(() => (L === h.M.FETCHING ? O : y), [L, O, y]),
         j = r.useCallback(
             (e) => {
-                (0, E.pR)({
+                (0, I.pR)({
                     query: b,
                     categoryId: Z,
                     page: e
@@ -108,7 +108,7 @@ function T(e) {
         ),
         D = r.useCallback(
             (e) => {
-                (0, E.pR)({
+                (0, I.pR)({
                     query: b,
                     categoryId: e
                 });
@@ -148,7 +148,7 @@ function T(e) {
                                                             if (e.type === a.s.APPLICATION) {
                                                                 let t = e.data;
                                                                 return (0, i.jsx)(
-                                                                    I.Z,
+                                                                    E.Z,
                                                                     {
                                                                         application: t,
                                                                         onSelectApplication: n,

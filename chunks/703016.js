@@ -14,8 +14,8 @@ var i = n(913527),
     g = n(592125),
     f = n(271383),
     _ = n(430824),
-    I = n(131951),
-    E = n(292959),
+    E = n(131951),
+    I = n(292959),
     C = n(699516),
     v = n(944486),
     N = n(9156),
@@ -107,14 +107,14 @@ function B(e) {
 function H(e) {
     var t, n, i, r, l, a;
     let { channelId: s, message: o, optimistic: c } = e;
-    if (c || I.Z.isSelfDeaf()) return !1;
+    if (c || E.Z.isSelfDeaf()) return !1;
     let d = g.Z.getChannel(s);
     if (null == d) return !1;
     let u = v.Z.getChannelId(),
         _ = p.ZP.getCurrentSidebarChannelId(u),
         S = s === u || s === _,
         x = h.OW.getSetting() && o.tts && S,
-        b = E.Z.getTTSType(),
+        b = I.Z.getTTSType(),
         L = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== m.default.getId() && (b === Z.PrB.ALL_CHANNELS || (b === Z.PrB.SELECTED_CHANNEL && S));
     if ((x || L) && !C.Z.isBlockedOrIgnoredForMessage(o)) {
         if (y.indexOf(o.id) >= 0) return !1;
@@ -134,7 +134,7 @@ function V(e) {
     return null != i && t === i.messageId && n === i.channelId && ((0, x.NB)(), !0);
 }
 function F() {
-    I.Z.isSelfDeaf() && s.M9();
+    E.Z.isSelfDeaf() && s.M9();
 }
 t.Z = {
     init() {

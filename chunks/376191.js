@@ -19,13 +19,13 @@ var r = n(442837),
     g = n(51144),
     f = n(998502),
     _ = n(620924),
-    I = n(332712),
-    E = n(81471),
+    E = n(332712),
+    I = n(81471),
     C = n(388032),
     v = n(993595);
 let N = (e) => {
         let { userId: t } = e,
-            n = (0, I.O)(t);
+            n = (0, E.O)(t);
         return null == n || 0 === n.length
             ? (0, i.jsx)(l.Text, {
                   className: v.mutualGuilds,
@@ -56,7 +56,7 @@ function T(e) {
     var t;
     let { channel: n, otherUser: c, active: m } = e,
         f = (0, r.e7)([s.Z], () => s.Z.useReducedMotion),
-        I = (0, r.e7)([p.Z], () => (null == c ? null : p.Z.getNickname(c.id))),
+        E = (0, r.e7)([p.Z], () => (null == c ? null : p.Z.getNickname(c.id))),
         T = !f && m,
         x = (0, _.c)(n),
         { avatarDecorationSrc: b } = (0, u.Z)({
@@ -80,7 +80,7 @@ function T(e) {
                         className: v.userContainerWithPreview,
                         children: [
                             (0, i.jsx)(a.Z, {
-                                nick: I,
+                                nick: E,
                                 user: c,
                                 showAccountIdentifier: !0,
                                 className: v.tagContainer,
@@ -96,7 +96,7 @@ function T(e) {
                         ]
                     }),
                     (0, i.jsx)(o.Z, {
-                        hoverText: (0, i.jsx)(E.Z, { channel: n }),
+                        hoverText: (0, i.jsx)(I.Z, { channel: n }),
                         forceHover: m,
                         children: (0, i.jsx)(N, { userId: c.id })
                     })

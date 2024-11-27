@@ -9,8 +9,8 @@ var i = n(200651),
     c = n(239091),
     u = n(87051),
     h = n(225433),
-    m = n(933557),
-    g = n(775666),
+    g = n(933557),
+    m = n(775666),
     x = n(471445),
     S = n(592125),
     p = n(324067),
@@ -37,7 +37,7 @@ function A(e) {
     if (null == t) return null;
     let f = I.intl.string(I.t.uIzfCA),
         E = (0, x.KS)(t);
-    t.type === L.d4z.GUILD_CATEGORY && null != t.guild_id && '' !== t.guild_id ? (f = I.intl.formatToPlainString(I.t['2KzH8/'], { num: null != n[t.id] ? n[t.id].length : 0 })) : null != u && (f = I.intl.formatToPlainString(I.t.L1zJgY, { categoryName: (0, m.F6)(u, j.default, v.Z) }));
+    t.type === L.d4z.GUILD_CATEGORY && null != t.guild_id && '' !== t.guild_id ? (f = I.intl.formatToPlainString(I.t['2KzH8/'], { num: null != n[t.id] ? n[t.id].length : 0 })) : null != u && (f = I.intl.formatToPlainString(I.t.L1zJgY, { categoryName: (0, g.F6)(u, j.default, v.Z) }));
     let _ = N ? T.s8.CUSTOM : p.preset;
     return (0, i.jsx)('div', {
         children: (0, i.jsxs)('div', {
@@ -60,7 +60,7 @@ function A(e) {
                                 (0, i.jsx)(d.Text, {
                                     variant: 'text-md/semibold',
                                     className: M.modColor,
-                                    children: (0, m.F6)(t, j.default, v.Z)
+                                    children: (0, g.F6)(t, j.default, v.Z)
                                 }),
                                 (0, i.jsx)(d.Text, {
                                     variant: 'text-xs/medium',
@@ -118,7 +118,7 @@ function A(e) {
                                         'aria-label': I.intl.string(I.t.kMdneX),
                                         onClose: () => {},
                                         onSelect: () => {},
-                                        children: (0, g.T5)(t, () => C(!1))
+                                        children: (0, m.T5)(t, () => C(!1))
                                     })
                                 );
                             },

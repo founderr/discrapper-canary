@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(100527),
     f = n(906732),
     _ = n(821982),
-    I = n(377171),
-    E = n(633302),
+    E = n(377171),
+    I = n(633302),
     C = n(153066),
     v = n(335131),
     N = n(744112),
@@ -34,7 +34,7 @@ let L = (e) => {
         let { color: t } = e;
         return (0, i.jsx)(d.TextBadge, {
             className: Z.newBadge,
-            color: null != t ? t : I.Z.STATUS_DANGER_BACKGROUND,
+            color: null != t ? t : E.Z.STATUS_DANGER_BACKGROUND,
             text: A.intl.string(A.t.y2b7CA)
         });
     },
@@ -43,7 +43,7 @@ let L = (e) => {
             m = (0, s.JA)('shop'),
             p = g.Z.HOME_PAGE_SHOP_TAB,
             { analyticsLocations: _ } = (0, f.ZP)(p),
-            I = r.useCallback(
+            E = r.useCallback(
                 () =>
                     (0, v.Sm)({
                         analyticsSource: p,
@@ -61,7 +61,7 @@ let L = (e) => {
             ...u,
             onMouseEnter: a,
             onMouseLeave: o,
-            onClick: I,
+            onClick: E,
             children: c
         });
     },
@@ -112,7 +112,7 @@ let L = (e) => {
         });
     }),
     R = (e) => {
-        var t, n, l, s, u, h, g, f, _, I, E, v;
+        var t, n, l, s, u, h, g, f, _, E, I, v;
         let N, S;
         let { selected: T, locationState: x, displayOptions: b } = e,
             P = (0, o.e7)([p.Z], () => p.Z.useReducedMotion),
@@ -121,7 +121,7 @@ let L = (e) => {
             w = (0, m.ZP)(),
             k = b.entrypointDecorationAssets,
             U = (0, c.wj)(w);
-        D ? (U ? ((N = null === (t = b.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (S = null === (l = b.entrypointBackgroundStyle) || void 0 === l ? void 0 : null === (n = l.hovered) || void 0 === n ? void 0 : n.dark)) : ((N = null === (s = b.entryPointBackgroundAssets) || void 0 === s ? void 0 : s.srcLightHovered), (S = null === (h = b.entrypointBackgroundStyle) || void 0 === h ? void 0 : null === (u = h.hovered) || void 0 === u ? void 0 : u.light))) : U ? ((N = null === (g = b.entryPointBackgroundAssets) || void 0 === g ? void 0 : g.srcDark), (S = null === (_ = b.entrypointBackgroundStyle) || void 0 === _ ? void 0 : null === (f = _.resting) || void 0 === f ? void 0 : f.dark)) : ((N = null === (I = b.entryPointBackgroundAssets) || void 0 === I ? void 0 : I.srcLight), (S = null === (v = b.entrypointBackgroundStyle) || void 0 === v ? void 0 : null === (E = v.resting) || void 0 === E ? void 0 : E.light));
+        D ? (U ? ((N = null === (t = b.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (S = null === (l = b.entrypointBackgroundStyle) || void 0 === l ? void 0 : null === (n = l.hovered) || void 0 === n ? void 0 : n.dark)) : ((N = null === (s = b.entryPointBackgroundAssets) || void 0 === s ? void 0 : s.srcLightHovered), (S = null === (h = b.entrypointBackgroundStyle) || void 0 === h ? void 0 : null === (u = h.hovered) || void 0 === u ? void 0 : u.light))) : U ? ((N = null === (g = b.entryPointBackgroundAssets) || void 0 === g ? void 0 : g.srcDark), (S = null === (_ = b.entrypointBackgroundStyle) || void 0 === _ ? void 0 : null === (f = _.resting) || void 0 === f ? void 0 : f.dark)) : ((N = null === (E = b.entryPointBackgroundAssets) || void 0 === E ? void 0 : E.srcLight), (S = null === (v = b.entrypointBackgroundStyle) || void 0 === v ? void 0 : null === (I = v.resting) || void 0 === I ? void 0 : I.light));
         let G = r.useCallback(
                 (e) => {
                     j((e) => (e + 1) % b.assetIds.length), M(!0), null == e || e();
@@ -183,7 +183,7 @@ let L = (e) => {
         let { selected: t, locationState: n, displayOptions: l } = e,
             a = r.useMemo(() => {
                 var e;
-                let t = null != l.emojiName ? (null === (e = E.ZP.getByName(l.emojiName)) || void 0 === e ? void 0 : e.surrogates) : null;
+                let t = null != l.emojiName ? (null === (e = I.ZP.getByName(l.emojiName)) || void 0 === e ? void 0 : e.surrogates) : null;
                 return (0, i.jsxs)(d.Text, {
                     variant: 'text-sm/medium',
                     className: Z.marketingBadgeTooltipContent,

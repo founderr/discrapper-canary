@@ -20,9 +20,9 @@ var i = n(200651),
     I = n(393238),
     E = n(110924),
     b = n(40851),
-    N = n(115130),
-    Z = n(317381),
-    S = n(316253),
+    N = n(636449),
+    Z = n(115130),
+    S = n(317381),
     T = n(596040),
     j = n(349619),
     A = n(100527),
@@ -452,7 +452,7 @@ class ew extends l.PureComponent {
                         let t = e.getGuildId();
                         null != t && (0, G.uL)((0, eg.LY)(t)), U.hP(e);
                     };
-                !t || (0, S.Z)() ? n() : (0, j.Z)(n);
+                !t || (0, N.R)() ? n() : (0, j.Z)(n);
             }),
             ek(this, 'handleStayOnTop', (e) => {
                 U.hY(eM.KJ3.CHANNEL_CALL_POPOUT, e);
@@ -682,7 +682,7 @@ t.Z = function (e) {
             return (null !== (e = null == C ? void 0 : C.channelId) && void 0 !== e ? e : eh.Z.getVoiceChannelId()) === n.id;
         }),
         {
-            participants: S,
+            participants: N,
             filteredParticipants: j,
             participantsVersion: y,
             mode: M,
@@ -732,12 +732,12 @@ t.Z = function (e) {
         }, []),
         et = null !== (t = null == V ? void 0 : V.id) && void 0 !== t ? t : null,
         en = (0, T.Z)(et, n.id),
-        ei = (0, c.e7)([N.Z], () => N.Z.getFetchState(), []),
+        ei = (0, c.e7)([Z.Z], () => Z.Z.getFetchState(), []),
         el = (0, E.Z)(ei);
     l.useEffect(() => {
-        ei === N.O.ERROR && el !== N.O.ERROR && (0, h.showToast)((0, h.createToast)(eR.intl.string(eR.t.AlJyIy), h.ToastType.FAILURE));
+        ei === Z.O.ERROR && el !== Z.O.ERROR && (0, h.showToast)((0, h.createToast)(eR.intl.string(eR.t.AlJyIy), h.ToastType.FAILURE));
     }, [ei, el]);
-    let ep = (0, c.e7)([Z.ZP], () => Z.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
+    let ep = (0, c.e7)([S.ZP], () => S.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
     l.useEffect(() => {
         let e = !1,
             t = null;
@@ -753,7 +753,7 @@ t.Z = function (e) {
     let em = (0, eb.Z)(n, !0),
         ef = (0, L.bn)(d.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
         { analyticsLocations: eg } = (0, P.ZP)(A.Z.CHANNEL_CALL),
-        eC = Z.ZP.getEmbeddedActivitiesForChannel(n.id);
+        eC = S.ZP.getEmbeddedActivitiesForChannel(n.id);
     return (0, i.jsx)(P.Gt, {
         value: eg,
         children: (0, i.jsx)(v.Z, {
@@ -775,7 +775,7 @@ t.Z = function (e) {
                             selectedStream: G,
                             mode: M,
                             inCall: _,
-                            participants: S,
+                            participants: N,
                             filteredParticipants: j,
                             participantsVersion: y,
                             layout: R,

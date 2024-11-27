@@ -14,25 +14,25 @@ t.Z = function (e) {
     var t;
     let { tabId: n, onSelectApplication: g, onScroll: f } = e,
         _ = (0, l.e7)([a.Z], () => a.Z.getCategories()),
-        I = r.useMemo(() => _.find((e) => e.id === n), [_, n]),
-        E = r.useMemo(() => (null != I ? (0, u.v)(I) : ''), [I]);
+        E = r.useMemo(() => _.find((e) => e.id === n), [_, n]),
+        I = r.useMemo(() => (null != E ? (0, u.v)(E) : ''), [E]);
     return (0, i.jsxs)(d.Z, {
         onScroll: f,
         children: [
             (0, i.jsx)(o.Z, {
-                title: null !== (t = null == I ? void 0 : I.name) && void 0 !== t ? t : '',
-                description: E,
+                title: null !== (t = null == E ? void 0 : E.name) && void 0 !== t ? t : '',
+                description: I,
                 children: (0, i.jsx)(s.Z, {})
             }),
             (0, i.jsx)(c.Z, {
                 children:
-                    null == I
+                    null == E
                         ? (0, i.jsx)('div', {
                               className: p.errorContainer,
                               children: (0, i.jsx)(h.Z, { className: p.error })
                           })
                         : (0, i.jsx)(m.Z, {
-                              categoryId: I.id,
+                              categoryId: E.id,
                               onSelectApplication: g
                           })
             })

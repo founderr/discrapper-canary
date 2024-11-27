@@ -18,9 +18,9 @@ var i,
     f = n(594174),
     _ = n(585483),
     p = n(358085),
-    h = n(155268),
-    m = n(413458),
-    g = n(316253),
+    h = n(636449),
+    m = n(155268),
+    g = n(413458),
     E = n(761122),
     v = n(917107),
     I = n(701488),
@@ -67,7 +67,7 @@ function F(e) {
 function V(e) {
     var t, n, i, a;
     let { guildId: o, channelId: l, location: p, applicationId: E, launchId: I, compositeInstanceId: S, participants: y } = e,
-        N = (0, h.Z)(E);
+        N = (0, m.Z)(E);
     if (null == N) return;
     let D = null !== (n = O.get(l)) && void 0 !== n ? n : A,
         L = 0 === D.length,
@@ -76,7 +76,7 @@ function V(e) {
         P = u.default.getId(),
         M = w.some((e) => e === P),
         k = null === (t = y.find((e) => e.userId === P)) || void 0 === t ? void 0 : t.sessionId,
-        G = y.some((e) => (0, m.J)(e)),
+        G = y.some((e) => (0, g.J)(e)),
         Z = C.get(E),
         V = {
             applicationId: E,
@@ -102,8 +102,8 @@ function V(e) {
           k === u.default.getSessionId() &&
           (function (e) {
               var t, n;
-              let { channelId: i, applicationId: a, launchId: o, compositeInstanceId: l, location: p, participants: m, isFirstActivityInChannel: E, isStart: I } = e,
-                  S = (0, h.Z)(a),
+              let { channelId: i, applicationId: a, launchId: o, compositeInstanceId: l, location: p, participants: g, isFirstActivityInChannel: E, isStart: I } = e,
+                  S = (0, m.Z)(a),
                   y = u.default.getSessionId();
               if (null == S || null == y || (null === (t = C.get(a)) || void 0 === t ? void 0 : t.channelId) === i) return !1;
               let A = c.Z.getChannel(i),
@@ -116,8 +116,8 @@ function V(e) {
                   channelId: i,
                   applicationId: a,
                   url: S,
-                  userIds: new Set(m.map((e) => e.userId)),
-                  participants: m,
+                  userIds: new Set(g.map((e) => e.userId)),
+                  participants: g,
                   connectedSince: Date.now(),
                   launchId: o,
                   compositeInstanceId: l,
@@ -129,10 +129,10 @@ function V(e) {
                       applicationId: a,
                       isFirstActivityInChannel: E,
                       isStart: I,
-                      participants: m,
+                      participants: g,
                       embeddedActivity: O
                   }),
-                  (0, g.Z)()
+                  (0, h.R)()
                       ? ((B = T.Ez.ACTIVITY_POPOUT_WINDOW),
                         s.Z.wait(() => {
                             s.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' });

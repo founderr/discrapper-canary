@@ -18,8 +18,8 @@ var i = n(200651),
     g = n(984370),
     f = n(430824),
     _ = n(351402),
-    I = n(730647),
-    E = n(772021),
+    E = n(730647),
+    I = n(772021),
     C = n(396828),
     v = n(293423),
     N = n(20967),
@@ -33,9 +33,9 @@ function Z(e) {
         n = (0, a.e7)([f.Z], () => f.Z.getGuild(t), [t]),
         Z = (0, a.e7)([p.Z], () => p.Z.isConnected()),
         L = (0, h.Z)(t),
-        y = (0, E.Z)(t),
+        y = (0, I.Z)(t),
         P = (0, a.e7)([_.Z], () => _.Z.isSubscriptionFetching),
-        O = (0, I.f)(),
+        O = (0, E.f)(),
         { shouldHideGuildPurchaseEntryPoints: R, restrictionsLoading: j } = (0, m.uP)(t),
         D = null == n || !O || P || j;
     (0, d.Tt)({
@@ -88,7 +88,7 @@ function Z(e) {
 }
 function L(e) {
     let { guildId: t } = e;
-    return (0, i.jsx)(I.l, {
+    return (0, i.jsx)(E.l, {
         guildId: t,
         refetchOnMount: !0,
         children: (0, i.jsx)(Z, { guildId: t })

@@ -19,8 +19,8 @@ var i,
     g = n(774078),
     f = n(410030),
     _ = n(607070),
-    I = n(927359),
-    E = n(975298),
+    E = n(927359),
+    I = n(975298),
     C = n(605236),
     v = n(243778),
     N = n(819640),
@@ -76,9 +76,9 @@ let en = (e) => {
         eg = (0, d.e7)([x.ZP], () => x.ZP.inReverseTrial()),
         ef = (null == em ? void 0 : em.trial_id) === z.jz,
         e_ = (0, d.e7)([T.Z], () => T.Z.isLocalizedPromoEnabled) && null == em,
-        eI = (0, k.Vi)(),
-        { enabled: eE } = (0, L.Z)();
-    (0, g.Z)(new Date(2024, 10, 21), 1000, void 0, !eE);
+        eE = (0, k.Vi)(),
+        { enabled: eI } = (0, L.Z)();
+    (0, g.Z)(new Date(2024, 10, 21), 1000, void 0, !eI);
     let eC = (0, M.$_)(),
         ev = (0, B.V6)(),
         eN = (0, V.Kn)(ee),
@@ -86,10 +86,10 @@ let en = (e) => {
         eT = (0, V.wG)(ee),
         ex = (0, d.e7)([Z.Z], () => Z.Z.getCreatedAtOverride()),
         eb = (0, d.e7)([N.Z], () => N.Z.hasLayers()),
-        { fractionalState: eA, endsAt: eZ, currentEntitlementId: eL } = (0, E.Z)({ forceFetch: !0 }),
+        { fractionalState: eA, endsAt: eZ, currentEntitlementId: eL } = (0, I.Z)({ forceFetch: !0 }),
         [ey, eP] = (0, v.XR)(eA !== z.a$.NONE ? u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, eA !== z.a$.NONE ? Number(eL) : 0),
         eO = null != ex ? ex : null == el ? void 0 : el.createdAt,
-        eR = s || null != em || null != ep || eI || eS || eT || null != eC || null != ev || eu,
+        eR = s || null != em || null != ep || eE || eS || eT || null != eC || null != ev || eu,
         { enabled: ej } = P._.useExperiment({ location: ee }, { autoTrackExposure: !1 }),
         { enabled: eD } = y.Z.useExperiment(
             { location: ee },
@@ -107,7 +107,7 @@ let en = (e) => {
             (i = (0, l.jsx)(O.Z, {
                 className: '',
                 endsAt: eZ,
-                messageStyle: I.a.SHORT_TIME,
+                messageStyle: E.a.SHORT_TIME,
                 upperCase: !0,
                 currentEntitlementId: eL
             }))),
@@ -139,7 +139,7 @@ let en = (e) => {
             ? ((t = q.referralIncentive), (r = 7))
             : eT
               ? ((i = (0, l.jsx)(H.Z, { copy: K.intl.string(K.t.jyYgZ2) })), (r = 8))
-              : eI
+              : eE
                 ? ((i = (0, l.jsx)(D.Z, {})), (r = 0))
                 : null != ew && ew === u.z.REVERSE_TRIAL_NITRO_TAB_BADGE
                   ? ((i = (0, l.jsx)(F.Z, {

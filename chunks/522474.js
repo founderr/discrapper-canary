@@ -62,7 +62,7 @@ function R(e) {
     let t = I[e];
     null != t &&
         (!t.closed && N(e),
-        t.close(),
+        setTimeout(() => t.close(), 100),
         !(function (e) {
             let t = I[e];
             a()(null != t, 'Popout window was null during unmount'), t.removeEventListener('focus', y), t.removeEventListener('blur', y), t.removeEventListener('resize', A);

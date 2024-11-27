@@ -1,6 +1,6 @@
 n.d(t, {
     b: function () {
-        return I;
+        return E;
     }
 });
 var i = n(200651),
@@ -27,7 +27,7 @@ function _(e) {
         guildId: t
     });
 }
-function I() {
+function E() {
     let e = (0, a.Q)('AppPanels'),
         t = r.useRef(null);
     return (

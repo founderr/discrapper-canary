@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(313201),
     f = n(5254),
     _ = n(984370),
-    I = n(518311),
-    E = n(199104),
+    E = n(518311),
+    I = n(199104),
     C = n(922611),
     v = n(108427),
     N = n(210887),
@@ -29,23 +29,23 @@ var i = n(200651),
 function y() {
     return (0, i.jsxs)('div', {
         className: L.inviteToolbar,
-        children: [(0, i.jsx)(I.Z, { tooltip: Z.intl.string(Z.t.HfOgAw) }), (0, i.jsx)(_.Z.Divider, {})]
+        children: [(0, i.jsx)(E.Z, { tooltip: Z.intl.string(Z.t.HfOgAw) }), (0, i.jsx)(_.Z.Divider, {})]
     });
 }
 t.Z = function (e) {
     let { initialSection: t } = e,
         n = (0, C.Do)({ location: 'PeoplePage' }),
         l = (0, s.TH)(),
-        I = (0, s.k6)();
+        E = (0, s.k6)();
     r.useEffect(() => {
         'true' === new URLSearchParams(l.search).get('confirm-age') &&
             u.Z.dispatch({
                 type: 'AGE_GATE_MODAL_OPEN',
                 source: A.L0.DEEP_LINK_PROMPT
             }).then(() => {
-                I.replace(b.Z5c.ME);
+                E.replace(b.Z5c.ME);
             });
-    }, [I, l]),
+    }, [E, l]),
         r.useEffect(() => {
             h.Y(b.Z5c.FRIENDS), (0, v.e)('friends');
         }, []),
@@ -164,7 +164,7 @@ t.Z = function (e) {
                     }),
                     (0, i.jsx)('div', {
                         className: L.nowPlayingColumn,
-                        children: (0, i.jsx)(E.Z, {})
+                        children: (0, i.jsx)(I.Z, {})
                     })
                 ]
             })

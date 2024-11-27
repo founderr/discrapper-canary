@@ -29,7 +29,7 @@ let g = l.forwardRef(function (e, t) {
                         entrypoint: p.Qq.GUILDS_BAR
                     });
                 case h.F$.APPS:
-                    return (0, u.Wv)();
+                    return (0, u.XL)();
                 default:
                     return (0, c.u)({ tab: e });
             }

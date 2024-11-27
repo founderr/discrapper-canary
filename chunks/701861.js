@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(131951),
     f = n(699516),
     _ = n(51144),
-    I = n(321488),
-    E = n(417183),
+    E = n(321488),
+    I = n(417183),
     C = n(825682),
     v = n(170245),
     N = n(981631),
@@ -98,7 +98,7 @@ class Z extends r.PureComponent {
     render() {
         let { user: e, isFocused: t, activities: n, applicationStream: r, status: l, isMobile: a, giftIntentType: s } = this.props,
             { isActiveRow: c } = this.state;
-        return (0, i.jsx)(E.Z, {
+        return (0, i.jsx)(I.Z, {
             ref: this.peopleListItemRef,
             isFocused: t,
             isActive: c,
@@ -134,13 +134,13 @@ class Z extends r.PureComponent {
                                         analyticsPage: N.ZY5.FRIENDS_LIST,
                                         shouldHighlight: t
                                     }),
-                                (0, i.jsx)(I.Z, {
+                                (0, i.jsx)(E.Z, {
                                     icon: o.ChatIcon,
                                     tooltip: T.intl.string(T.t['g33r/P']),
                                     onClick: this.handleOpenPrivateChannel,
                                     shouldHighlight: t
                                 }),
-                                (0, i.jsx)(I.Z, {
+                                (0, i.jsx)(E.Z, {
                                     icon: o.MoreVerticalIcon,
                                     tooltip: T.intl.string(T.t.UKOtz8),
                                     onClick: this.handleOpenActionsMenu,

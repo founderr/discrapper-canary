@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(567458),
     f = n(782959),
     _ = n(276645),
-    I = n(970731),
-    E = n(626135),
+    E = n(970731),
+    I = n(626135),
     C = n(267642),
     v = n(981631),
     N = n(921944),
@@ -61,13 +61,13 @@ t.Z = r.memo(function (e) {
     let { contentTypes: t, theme: n, guild: r, renderGuildHeaderDropdownButton: s } = e,
         { analyticsLocations: u } = (0, o.ZP)(),
         S = () => {
-            E.default.track(v.rMx.TOOLTIP_VIEWED, {
+            I.default.track(v.rMx.TOOLTIP_VIEWED, {
                 type: T.cd.PREMIUM_PROGRESS_BAR,
                 location: { page: v.ZY5.GUILD_CHANNEL }
             });
         },
         D = () => {
-            E.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
+            I.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: T.cd.INVITE_SPLASH_UPSELL,
                 location: { page: v.ZY5.GUILD_CHANNEL },
                 location_stack: u
@@ -88,7 +88,7 @@ t.Z = r.memo(function (e) {
                     });
                 case l.z.GUILD_HEADER_PREMIUM_GUILD_PROGRESS:
                     return (0, i.jsx)(j, {
-                        renderPopout: (0, i.jsx)(I.ZP, {
+                        renderPopout: (0, i.jsx)(E.ZP, {
                             onComponentMount: S,
                             header: x.intl.string(x.t.nxtaFx),
                             asset: (0, i.jsx)('img', {
@@ -107,7 +107,7 @@ t.Z = r.memo(function (e) {
                     });
                 case l.z.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK:
                     return (0, i.jsx)(j, {
-                        renderPopout: (0, i.jsx)(I.ZP, {
+                        renderPopout: (0, i.jsx)(E.ZP, {
                             onComponentMount: S,
                             header: x.intl.string(x.t.KAsfPT),
                             asset: (0, i.jsx)('img', {
@@ -144,7 +144,7 @@ t.Z = r.memo(function (e) {
                     let e = (0, C.f2)(r, v.Eu4.TIER_1) ? x.intl.format(x.t.DDzEVl, {}) : x.intl.formatToPlainString(x.t.pMftkJ, { boostCount: (0, C.KK)(r, v.Eu4.TIER_1) }),
                         t = (0, C.f2)(r, v.Eu4.TIER_1) ? x.intl.string(x.t.rOFcBg) : x.intl.string(x.t.hvVgAQ);
                     return (0, i.jsx)(j, {
-                        renderPopout: (0, i.jsx)(I.ZP, {
+                        renderPopout: (0, i.jsx)(E.ZP, {
                             onComponentMount: D,
                             header: x.intl.string(x.t['36wK8/']),
                             asset: (0, i.jsx)('img', {
@@ -168,7 +168,7 @@ t.Z = r.memo(function (e) {
                     });
                 case l.z.GUILD_HEADER_ACTIVE_THREADS_NOTICE:
                     return (0, i.jsx)(j, {
-                        renderPopout: (0, i.jsx)(I.ZP, {
+                        renderPopout: (0, i.jsx)(E.ZP, {
                             className: b.tooltipOverrideColor,
                             header: x.intl.string(x.t.hLUL3t),
                             content: x.intl.string(x.t.ahWaPT),
@@ -180,7 +180,7 @@ t.Z = r.memo(function (e) {
                     });
                 case l.z.GUILD_HEADER_SOUNDBOARD_PERMISSION:
                     return (0, i.jsx)(j, {
-                        renderPopout: (0, i.jsx)(I.ZP, {
+                        renderPopout: (0, i.jsx)(E.ZP, {
                             header: x.intl.string(x.t.PZNQKC),
                             content: x.intl.string(x.t.jQIyyM),
                             buttonCTA: x.intl.string(x.t.RzWDqa),

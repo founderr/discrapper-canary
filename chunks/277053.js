@@ -13,8 +13,8 @@ var l,
     g = n(388610),
     f = n(592125),
     _ = n(981631),
-    I = n(71080);
-let E = new Set(),
+    E = n(71080);
+let I = new Set(),
     C = _.QZA.CLOSED,
     v = !1,
     N = null,
@@ -23,7 +23,7 @@ let E = new Set(),
     x = null,
     b = null,
     A = null,
-    Z = h.K.get(I.kf) || !1;
+    Z = h.K.get(E.kf) || !1;
 function L(e) {
     let t = e.getGuildId(),
         n = { ...e.permissionOverwrites };
@@ -32,7 +32,7 @@ function L(e) {
 function y() {
     if (((T = g.Z.getChannel()), (x = g.Z.getCategory()), null == T)) return !1;
     let e = T.getGuildId();
-    (S = N = L(T)), null == N[b] && (b = e), (r = null != x), (i = p.o4(T, x)), (A = null), (v = !1), (C = _.QZA.CLOSED), E.clear();
+    (S = N = L(T)), null == N[b] && (b = e), (r = null != x), (i = p.o4(T, x)), (A = null), (v = !1), (C = _.QZA.CLOSED), I.clear();
 }
 class P extends (l = u.ZP.Store) {
     initialize() {
@@ -48,7 +48,7 @@ class P extends (l = u.ZP.Store) {
         return null == N ? void 0 : N[e];
     }
     get editedPermissionIds() {
-        return Array.from(E);
+        return Array.from(I);
     }
     get permissionOverwrites() {
         return N;
@@ -104,7 +104,7 @@ class P extends (l = u.ZP.Store) {
                     ...N,
                     [t]: l
                 }),
-                E.add(t),
+                I.add(t),
                 (C = _.QZA.OPEN),
                 (v = !d().isEqual(N, S)),
                 (i = p.o4(T, x));
@@ -118,7 +118,7 @@ class P extends (l = u.ZP.Store) {
             }
         },
         CHANNEL_SETTINGS_CLOSE: function () {
-            (C = _.QZA.CLOSED), (N = null), (S = null), (T = null), (x = null), (v = !1), E.clear(), (b = null), (A = null);
+            (C = _.QZA.CLOSED), (N = null), (S = null), (T = null), (x = null), (v = !1), I.clear(), (b = null), (A = null);
         },
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e;
@@ -134,7 +134,7 @@ class P extends (l = u.ZP.Store) {
                         S = L(T);
                         let n = {};
                         return (
-                            E.forEach((e) => {
+                            I.forEach((e) => {
                                 null != N && (n[e] = N[e]);
                             }),
                             null == n[t] && null == T.permissionOverwrites[t] && (n[t] = p.we(t)),
@@ -160,6 +160,6 @@ class P extends (l = u.ZP.Store) {
         },
         CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function (e) {
             let { advancedMode: t } = e;
-            (Z = t), h.K.set(I.kf, t);
+            (Z = t), h.K.set(E.kf, t);
         }
     }));

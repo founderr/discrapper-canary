@@ -628,7 +628,7 @@ function ed(e) {
         s = H(e),
         o = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         l = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        u = d.T.DESKTOP.has(i.taskType),
+        u = d.T.DESKTOP.has(i.taskType) && i.percentComplete > 0,
         c = 0 === i.percentComplete,
         f = o && !l && !s && null == r && (u || (c && a === R.LI.DESKTOP)),
         _ = (0, y.isWeb)() && f && !(0, O.Gd)(e),

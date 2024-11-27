@@ -14,8 +14,8 @@ var i = n(200651),
     c = n(600164),
     u = n(592125),
     h = n(324067),
-    m = n(699516),
-    g = n(594174),
+    g = n(699516),
+    m = n(594174),
     x = n(621600),
     S = n(981631),
     p = n(388032),
@@ -84,7 +84,7 @@ class j extends s.PureComponent {
         if (n.type === S.d4z.GUILD_CATEGORY && null != n.guild_id && '' !== n.guild_id) {
             let e = h.Z.getCategories(n.guild_id);
             t = p.intl.formatToPlainString(p.t['2KzH8/'], { num: null != e[n.id] ? e[n.id].length : 0 });
-        } else t = null != e ? p.intl.formatToPlainString(p.t.L1zJgY, { categoryName: (0, o.F6)(e, g.default, m.Z) }) : p.intl.string(p.t.uIzfCA);
+        } else t = null != e ? p.intl.formatToPlainString(p.t.L1zJgY, { categoryName: (0, o.F6)(e, m.default, g.Z) }) : p.intl.string(p.t.uIzfCA);
         return (0, i.jsxs)(c.Z, {
             grow: 1,
             className: v.nameContainer,
@@ -96,7 +96,7 @@ class j extends s.PureComponent {
                         (0, i.jsx)(l.Text, {
                             variant: 'text-md/semibold',
                             className: v.channelName,
-                            children: (0, o.F6)(n, g.default, m.Z)
+                            children: (0, o.F6)(n, m.default, g.Z)
                         }),
                         (0, i.jsx)(l.Text, {
                             variant: 'text-xs/normal',

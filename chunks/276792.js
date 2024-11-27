@@ -20,9 +20,9 @@ var r = n(704215),
     f = n(74316);
 function _(e) {
     var t, n;
-    let { content: _, renderModalProps: I, analyticsLocations: E, analyticsLocation: C, isLightTheme: v } = e,
+    let { content: _, renderModalProps: E, analyticsLocations: I, analyticsLocation: C, isLightTheme: v } = e,
         N = 'AnnouncementModalVariant1_'.concat(r.z[Number(_.dismissKey)]),
-        { onClose: S } = I,
+        { onClose: S } = E,
         T = null != _.button && '' !== _.button.copy ? _.button.copy : p.intl.string(p.t.YScQSE),
         x = (null === (t = _.button) || void 0 === t ? void 0 : t.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
         b =
@@ -33,7 +33,7 @@ function _(e) {
                 : () =>
                       (0, s.Z)({
                           subscriptionTier: h.Si.TIER_2,
-                          analyticsLocations: E,
+                          analyticsLocations: I,
                           analyticsObject: {
                               ...C,
                               object: m.qAy.BUTTON_CTA,
@@ -83,7 +83,7 @@ function _(e) {
                       })
                 : void 0;
     return {
-        renderModalProps: I,
+        renderModalProps: E,
         header: _.header,
         modalTopExtra: y,
         subHeader: _.subheader,

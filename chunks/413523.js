@@ -17,8 +17,8 @@ var r,
     a = n(392711),
     s = n(759174),
     o = n(586902),
-    l = n(317381),
-    u = n(316253),
+    l = n(636449),
+    u = n(317381),
     c = n(569545),
     d = n(199902),
     f = n(314897),
@@ -171,14 +171,14 @@ class R {
         );
     }
     _getEmbeddedActivities() {
-        let e = l.ZP.getEmbeddedActivitiesForChannel(this.channelId),
-            t = l.ZP.getSelfEmbeddedActivityForChannel(this.channelId);
+        let e = u.ZP.getEmbeddedActivitiesForChannel(this.channelId),
+            t = u.ZP.getSelfEmbeddedActivityForChannel(this.channelId);
         if (null == t) return e;
         {
             var n;
             let r = (0, a.uniqBy)([...e, t], (e) => e.applicationId),
                 i = null === (n = t.participants) || void 0 === n ? void 0 : n.some((e) => e.sessionId === f.default.getSessionId());
-            return (0, u.Z)() && i ? r.filter((e) => e.applicationId !== t.applicationId && e.compositeInstanceId !== t.compositeInstanceId) : r;
+            return (0, l.R)() && i ? r.filter((e) => e.applicationId !== t.applicationId && e.compositeInstanceId !== t.compositeInstanceId) : r;
         }
     }
     _getParticipantsForEmbeddedActivities() {

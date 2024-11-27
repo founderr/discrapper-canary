@@ -1,6 +1,6 @@
 n.d(e, {
     Z: function () {
-        return _;
+        return A;
     },
     x: function () {
         return r;
@@ -21,19 +21,19 @@ var r,
     L = n(768581),
     E = n(624138),
     S = n(388032),
-    f = n(484759);
+    h = n(484759);
 ((i = r || (r = {}))[(i.SMALL = (0, E.Mg)(s.Z.GUILD_COUNT_SMALL_ICON_SIZE))] = 'SMALL'), (i[(i.LARGE = (0, E.Mg)(s.Z.GUILD_COUNT_LARGE_ICON_SIZE))] = 'LARGE');
-let h = {
-        [r.SMALL]: f.moreGuildsSmall,
-        [r.LARGE]: f.moreGuildsLarge
+let f = {
+        [r.SMALL]: h.moreGuildsSmall,
+        [r.LARGE]: h.moreGuildsLarge
     },
     O = {
-        [r.SMALL]: f.iconSmall,
-        [r.LARGE]: f.iconLarge
+        [r.SMALL]: h.iconSmall,
+        [r.LARGE]: h.iconLarge
     };
-function _(t) {
+function A(t) {
     var e, n, i;
-    let { application: c, mutualGuilds: s, mutualGuildShownMax: E = 4, className: _, textVariant: A = 'text-sm/normal', compact: R, guildIconSize: T = r.LARGE, guildsClassName: g } = t,
+    let { application: c, mutualGuilds: s, mutualGuildShownMax: E = 4, className: A, textVariant: _ = 'text-sm/normal', compact: R, guildIconSize: T = r.LARGE, guildsClassName: g } = t,
         P = (0, u.e7)([I.default], () => I.default.locale),
         m = new Intl.ListFormat(P),
         C = null !== (n = null === (e = c.directory_entry) || void 0 === e ? void 0 : e.guild_count) && void 0 !== n ? n : 0,
@@ -72,10 +72,10 @@ function _(t) {
     return 0 === v.length && null == G
         ? null
         : (0, o.jsxs)('div', {
-              className: a()(_, f.wrapper),
+              className: a()(A, h.wrapper),
               children: [
                   (0, o.jsx)('div', {
-                      className: a()(f.icons, g),
+                      className: a()(h.icons, g),
                       children:
                           v.length > 0
                               ? (0, o.jsxs)(o.Fragment, {
@@ -94,7 +94,7 @@ function _(t) {
                                                     children: (t) =>
                                                         (0, o.jsx)('img', {
                                                             ...t,
-                                                            className: a()(f.icon, O[T]),
+                                                            className: a()(h.icon, O[T]),
                                                             src: r,
                                                             alt: ''
                                                         })
@@ -104,7 +104,7 @@ function _(t) {
                                                 : (0, o.jsx)(
                                                       p.ZP,
                                                       {
-                                                          className: f.iconMask,
+                                                          className: h.iconMask,
                                                           height: T,
                                                           width: T,
                                                           mask: p.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
@@ -120,7 +120,7 @@ function _(t) {
                                                   children: (t) =>
                                                       (0, o.jsxs)('div', {
                                                           ...t,
-                                                          className: a()(f.moreGuilds, h[T]),
+                                                          className: a()(h.moreGuilds, f[T]),
                                                           children: ['+', D]
                                                       })
                                               })
@@ -132,12 +132,12 @@ function _(t) {
                                     color: 'currentColor',
                                     width: T,
                                     height: T,
-                                    className: f.defaultIcon
+                                    className: h.defaultIcon
                                 })
                   }),
                   null != G
                       ? (0, o.jsx)(d.Text, {
-                            variant: A,
+                            variant: _,
                             color: 'header-secondary',
                             children: G
                         })

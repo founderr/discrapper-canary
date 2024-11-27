@@ -6,10 +6,10 @@ var i = n(481060),
     s = n(468026),
     o = n(522474),
     l = n(788983),
-    u = n(566620),
-    c = n(287545),
-    d = n(317381),
-    f = n(316253),
+    u = n(636449),
+    c = n(566620),
+    d = n(287545),
+    f = n(317381),
     _ = n(318891),
     p = n(719296),
     h = n(981631),
@@ -28,7 +28,7 @@ function g(e, t, n) {
     );
 }
 let E = !1;
-class v extends c.Z {
+class v extends d.Z {
     _initialize() {
         super._initialize(), o.Z.addChangeListener(this.handlePopoutWindowUpdate);
     }
@@ -59,13 +59,13 @@ class v extends c.Z {
     leaveActivity(e) {
         let { channelId: t, applicationId: n, showFeedback: r } = e;
         a.Z.wait(() => {
-            (0, u.mW)({
+            (0, c.mW)({
                 channelId: t,
                 applicationId: n,
                 showFeedback: r
             });
         }),
-            (0, f.Z)() && (0, l.xv)(h.KJ3.ACTIVITY_POPOUT);
+            (0, u.R)() && (0, l.xv)(h.KJ3.ACTIVITY_POPOUT);
     }
     hidePIPEmbed(e) {
         let { channelId: t, applicationId: n } = e,
@@ -86,7 +86,7 @@ class v extends c.Z {
                 let e = E,
                     t = o.Z.getWindowOpen(h.KJ3.ACTIVITY_POPOUT);
                 if (e && !t) {
-                    let e = d.ZP.getCurrentEmbeddedActivity();
+                    let e = f.ZP.getCurrentEmbeddedActivity();
                     null != e &&
                         this.leaveActivity({
                             channelId: e.channelId,

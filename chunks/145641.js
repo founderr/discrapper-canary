@@ -27,7 +27,7 @@ t.Z = function (e) {
                 }),
             []
         ),
-        I = r.useCallback(
+        E = r.useCallback(
             () =>
                 new Promise((e) => {
                     let t = f.current;
@@ -36,7 +36,7 @@ t.Z = function (e) {
                 }),
             []
         ),
-        E = r.useCallback((e) => {
+        I = r.useCallback((e) => {
             let t = document.querySelector(e),
                 n = f.current;
             null != t &&
@@ -51,8 +51,8 @@ t.Z = function (e) {
             id: 'people-list',
             isEnabled: g,
             scrollToStart: _,
-            scrollToEnd: I,
-            setFocus: E
+            scrollToEnd: E,
+            setFocus: I
         });
     return (0, i.jsx)(a.bG, {
         navigator: C,

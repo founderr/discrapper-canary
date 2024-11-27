@@ -15,8 +15,8 @@ var r = n(243814),
     g = n(596223),
     f = n(838195),
     _ = n(333861),
-    I = n(928518),
-    E = n(23750),
+    E = n(928518),
+    I = n(23750),
     C = n(592125),
     v = n(293273),
     N = n(885110),
@@ -150,7 +150,7 @@ t.Z = {
                     application: t.application,
                     channelId: r.id
                 }),
-                o = null != s ? I.Z.getWindow(s) : void 0;
+                o = null != s ? E.Z.getWindow(s) : void 0;
             (null == o ? void 0 : o.closed) && (o = void 0);
             let c = null != o ? M.IlC.POPOUT : M.IlC.APP;
             (0, Z.Pr)({}, null == o ? void 0 : o.document),
@@ -271,7 +271,7 @@ t.Z = {
                             width: l.width
                         }
                     ]),
-                    (n = new E.ZP({
+                    (n = new I.ZP({
                         id: b.default.cast(b.default.fromTimestamp(Date.now())),
                         applicationId: o,
                         content: s,

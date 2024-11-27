@@ -18,8 +18,8 @@ var i = n(200651),
     g = n(906732),
     f = n(335131),
     _ = n(436774),
-    I = n(676035),
-    E = n(440051),
+    E = n(676035),
+    I = n(440051),
     C = n(734934),
     v = n(158238),
     N = n(759198),
@@ -183,12 +183,12 @@ function ec(e) {
         null == ec || ec(eg.current);
     }, [eg, ec]);
     let e_ = (0, o.e7)([F.Z], () => F.Z.getStatus(Y.id)),
-        eI = (0, o.e7)([z.Z], () => z.Z.hidePersonalInformation),
-        eE = (0, C.p)(),
+        eE = (0, o.e7)([z.Z], () => z.Z.hidePersonalInformation),
+        eI = (0, C.p)(),
         eC = V.Sb.useSetting(),
-        ev = (0, I.a)(),
+        ev = (0, E.a)(),
         eN = (function (e) {
-            let t = E.Y.useExperiment({ location: 'AccountProfilePopout' }).expiringStatus,
+            let t = I.Y.useExperiment({ location: 'AccountProfilePopout' }).expiringStatus,
                 n = V.Cr.useSetting(),
                 r = (0, C.p)(),
                 a = v.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || r,
@@ -401,7 +401,7 @@ function ec(e) {
                                 (0, i.jsx)(H.Z, {
                                     user: Y,
                                     bio: null == eu ? void 0 : eu.bio,
-                                    hidePersonalInformation: eI,
+                                    hidePersonalInformation: eE,
                                     onClose: Q
                                 }),
                                 (0, i.jsx)(R.Z, {
@@ -486,7 +486,7 @@ function ec(e) {
                                                                 status: e_,
                                                                 size: 12
                                                             }),
-                                                        hint: (eE || e_ === et.Skl.DND) && (0, i.jsx)(c.BellSlashIcon, { size: 'xxs' }),
+                                                        hint: (eI || e_ === et.Skl.DND) && (0, i.jsx)(c.BellSlashIcon, { size: 'xxs' }),
                                                         renderSubmenu: a.tq
                                                             ? void 0
                                                             : (e) => {
