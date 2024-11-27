@@ -57,15 +57,15 @@ function h(e) {
 }
 function v(e) {
     let { user: n, onClose: t } = e,
-        { mutualFriends: l } = (0, u.Z)(n.id),
-        { analyticsLocations: r } = (0, c.ZP)(),
-        { context: s, trackUserProfileAction: a } = (0, d.KZ)(),
-        p = (e) => {
+        { mutualFriends: l, isFetching: r } = (0, u.Z)(n.id),
+        { analyticsLocations: s } = (0, c.ZP)(),
+        { context: a, trackUserProfileAction: p } = (0, d.KZ)(),
+        v = (e) => {
             t(),
                 (0, f.openUserProfileModal)({
-                    ...s,
+                    ...a,
                     userId: e,
-                    sourceAnalyticsLocations: r,
+                    sourceAnalyticsLocations: s,
                     analyticsLocation: { section: m.jXE.USER_PROFILE_MUTUAL_FRIENDS }
                 });
         };
@@ -73,13 +73,29 @@ function v(e) {
         className: x.listScroller,
         fade: !0,
         children:
-            null == l
+            null == l && r
                 ? (0, i.jsx)('div', {
                       className: x.empty,
                       children: (0, i.jsx)(o.Spinner, {})
                   })
-                : 0 === l.length
-                  ? (0, i.jsxs)('div', {
+                : (null != l || r) && (null == l ? void 0 : l.length) !== 0
+                  ? null == l
+                      ? void 0
+                      : l.map((e) => {
+                            let { key: n, user: t, status: l } = e;
+                            return (0, i.jsx)(
+                                h,
+                                {
+                                    user: t,
+                                    status: l,
+                                    onSelect: () => {
+                                        p({ action: 'PRESS_MUTUAL_FRIEND' }), v(t.id);
+                                    }
+                                },
+                                n
+                            );
+                        })
+                  : (0, i.jsxs)('div', {
                         className: x.empty,
                         children: [
                             (0, i.jsx)('div', { className: x.emptyIconFriends }),
@@ -88,20 +104,6 @@ function v(e) {
                                 children: I.intl.string(I.t['/5p4g4'])
                             })
                         ]
-                    })
-                  : l.map((e) => {
-                        let { key: n, user: t, status: l } = e;
-                        return (0, i.jsx)(
-                            h,
-                            {
-                                user: t,
-                                status: l,
-                                onSelect: () => {
-                                    a({ action: 'PRESS_MUTUAL_FRIEND' }), p(t.id);
-                                }
-                            },
-                            n
-                        );
                     })
     });
 }

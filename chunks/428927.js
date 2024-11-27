@@ -86,22 +86,40 @@ function b(e) {
 function E(e) {
     let { user: n, onClose: t } = e,
         { trackUserProfileAction: l } = (0, x.KZ)(),
-        { mutualGuilds: o } = (0, p.Z)(n.id),
-        r = (0, d.ZP)(),
-        c = (e) => {
+        { mutualGuilds: o, isFetching: r } = (0, p.Z)(n.id),
+        c = (0, d.ZP)(),
+        u = (e) => {
             (0, m.X)(e), t(), (0, a.xf)();
         };
     return (0, i.jsx)(s.ScrollerThin, {
         className: Z.listScroller,
         fade: !0,
         children:
-            null == o
+            null == o && r
                 ? (0, i.jsx)('div', {
                       className: Z.empty,
                       children: (0, i.jsx)(s.Spinner, {})
                   })
-                : 0 === o.length
-                  ? (0, i.jsxs)('div', {
+                : (null != o || r) && (null == o ? void 0 : o.length) !== 0
+                  ? null == o
+                      ? void 0
+                      : o.map((e) => {
+                            let { guild: t, nick: o } = e;
+                            return (0, i.jsx)(
+                                b,
+                                {
+                                    user: n,
+                                    guild: t,
+                                    nick: o,
+                                    theme: c,
+                                    onSelect: () => {
+                                        l({ action: 'PRESS_MUTUAL_GUILD' }), u(t.id);
+                                    }
+                                },
+                                t.id
+                            );
+                        })
+                  : (0, i.jsxs)('div', {
                         className: Z.empty,
                         children: [
                             (0, i.jsx)('div', { className: Z.emptyIconGuilds }),
@@ -110,22 +128,6 @@ function E(e) {
                                 children: g.intl.string(g.t.zjVh8v)
                             })
                         ]
-                    })
-                  : o.map((e) => {
-                        let { guild: t, nick: o } = e;
-                        return (0, i.jsx)(
-                            b,
-                            {
-                                user: n,
-                                guild: t,
-                                nick: o,
-                                theme: r,
-                                onSelect: () => {
-                                    l({ action: 'PRESS_MUTUAL_GUILD' }), c(t.id);
-                                }
-                            },
-                            t.id
-                        );
                     })
     });
 }
