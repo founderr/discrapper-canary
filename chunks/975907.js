@@ -1,22 +1,23 @@
 n.d(t, {
     M: function () {
-        return l;
+        return a;
     }
-}),
-    n(47120);
+});
 var i = n(192379),
-    r = n(133743);
-function l(e) {
+    r = n(31569),
+    l = n(133743);
+function a(e) {
     let { initialQuery: t = '' } = e,
-        [n, l] = i.useState(null != t ? t : ''),
-        a = i.useCallback((e) => {
-            l(e);
+        n = r.Z.useField('query');
+    i.useEffect(() => r.Z.setState({ query: t }), [t]);
+    let a = i.useCallback((e) => {
+            r.Z.setState({ query: e });
         }, []),
         s = i.useCallback(() => {
-            l('');
+            r.Z.setState({ query: '' });
         }, []),
         o = i.useCallback(() => {
-            (0, r.pR)({ query: n });
+            (0, l.pR)({ query: n });
         }, [n]);
     return {
         searchQuery: n,

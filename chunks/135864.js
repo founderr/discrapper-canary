@@ -5,53 +5,64 @@ var i = n(200651),
     s = n(636977),
     o = n(481060),
     c = n(352057),
-    d = n(133743),
-    u = n(836768),
-    h = n(766219),
-    m = n(749681),
-    p = n(49898),
-    g = n(46140),
-    f = n(388032),
-    _ = n(729922);
-function I(e) {
+    d = n(31569),
+    u = n(133743),
+    h = n(164991),
+    m = n(859921),
+    p = n(220068),
+    g = n(836768),
+    f = n(766219),
+    _ = n(749681),
+    E = n(49898),
+    I = n(46140),
+    C = n(388032),
+    v = n(729922);
+function N(e) {
     let { tab: t } = e,
-        n = u.Z.useField('selectedTab'),
+        n = g.Z.useField('selectedTab'),
         l = r.useMemo(
             () =>
                 (function (e) {
                     switch (e) {
-                        case p.F$.SERVERS:
+                        case E.F$.SERVERS:
                             return (0, i.jsx)(o.ServerIcon, { color: 'currentColor' });
-                        case p.F$.APPS:
+                        case E.F$.APPS:
                             return (0, i.jsx)(o.AppsIcon, { color: 'currentColor' });
-                        case p.F$.QUESTS:
+                        case E.F$.QUESTS:
                             return (0, i.jsx)(o.QuestsIcon, { color: 'currentColor' });
                     }
                 })(t),
             [t]
         ),
-        c = r.useMemo(() => (0, h.s)(t), [t]),
-        f = n === t,
-        I = r.useCallback(() => {
+        c = r.useMemo(() => (0, f.s)(t), [t]),
+        C = n === t,
+        N = r.useCallback(() => {
             switch (t) {
-                case p.F$.QUESTS:
-                    return (0, m.u)({
-                        tab: p.F$.QUESTS,
-                        location: g.dr.DISCOVERY_SIDEBAR,
-                        questContent: s.j.DISCOVERY_SIDEBAR
-                    });
-                case p.F$.APPS:
-                    return (0, d.Wv)();
+                case E.F$.QUESTS:
+                    return (
+                        C && (0, p.B)(),
+                        (0, _.u)({
+                            tab: E.F$.QUESTS,
+                            location: I.dr.DISCOVERY_SIDEBAR,
+                            questContent: s.j.DISCOVERY_SIDEBAR
+                        })
+                    );
+                case E.F$.APPS:
+                    return C && ((0, d.x)(), (0, _.u)({ tab: t })), (0, u.XL)();
+                case E.F$.SERVERS:
+                    if (!C) return (0, _.u)({ tab: t });
+                    (0, h.V)(), (0, m.O)();
+                    return;
                 default:
-                    return (0, m.u)({ tab: t });
+                    return (0, _.u)({ tab: t });
             }
-        }, [t]);
+        }, [t, C]);
     return (0, i.jsxs)(o.Clickable, {
-        onClick: I,
-        className: a()(_.navItem, { [_.selected]: f }),
+        onClick: N,
+        className: a()(v.navItem, { [v.selected]: C }),
         children: [
             (0, i.jsx)('div', {
-                className: _.navItemIcon,
+                className: v.navItemIcon,
                 children: l
             }),
             (0, i.jsx)(o.Text, {
@@ -65,18 +76,18 @@ function I(e) {
 t.Z = function () {
     let e = (0, c.h)({ location: 'GlobalDiscoverySidebar' });
     return (0, i.jsxs)('div', {
-        className: _.container,
+        className: v.container,
         children: [
             (0, i.jsx)('div', {
-                className: _.header,
+                className: v.header,
                 children: (0, i.jsx)(o.Heading, {
                     variant: 'text-lg/semibold',
-                    children: f.intl.string(f.t['1KqYnp'])
+                    children: C.intl.string(C.t['1KqYnp'])
                 })
             }),
             (0, i.jsx)('nav', {
-                className: _.nav,
-                children: p.mc.map((t) => (t !== p.F$.APPS || e ? (0, i.jsx)(I, { tab: t }, t) : null))
+                className: v.nav,
+                children: E.mc.map((t) => (t !== E.F$.APPS || e ? (0, i.jsx)(N, { tab: t }, t) : null))
             })
         ]
     });

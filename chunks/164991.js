@@ -1,3 +1,8 @@
+n.d(t, {
+    V: function () {
+        return a;
+    }
+});
 var i = n(972959);
 let r = Object.freeze({
         query: '',
@@ -9,4 +14,7 @@ let r = Object.freeze({
         scrollPosition: null
     }),
     l = (0, i.H)(() => r);
+function a() {
+    l.setState(r);
+}
 t.Z = l;
