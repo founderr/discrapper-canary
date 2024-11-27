@@ -29,21 +29,22 @@ var a,
     _ = n(626135),
     h = n(526167),
     f = n(585483),
-    E = n(138464),
-    W = n(438820),
-    T = n(981631),
-    I = n(236029),
-    S = n(233975),
-    g = n(656402),
-    b = n(683984),
-    P = n(347010),
-    y = n(713669),
+    E = n(960048),
+    W = n(138464),
+    T = n(438820),
+    I = n(981631),
+    S = n(236029),
+    g = n(233975),
+    b = n(656402),
+    P = n(683984),
+    y = n(347010),
+    Z = n(713669),
     F = n(471517);
 async function U(e) {
     try {
         m.Z.dispatch({ type: 'PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA' });
-        let t = e ? S.Z : g.Z;
-        window.matchMedia('(min-width: 1012px) and (max-width: 1980px)').matches || window.matchMedia('(min-height: 720px) and (max-height: 1408px)').matches ? (t = e ? b.Z : P.Z) : (window.matchMedia('(min-width: 1980px)').matches || window.matchMedia('(min-height: 1408px)').matches) && (t = e ? y.Z : F.Z);
+        let t = e ? g.Z : b.Z;
+        window.matchMedia('(min-width: 1012px) and (max-width: 1980px)').matches || window.matchMedia('(min-height: 720px) and (max-height: 1408px)').matches ? (t = e ? P.Z : y.Z) : (window.matchMedia('(min-width: 1980px)').matches || window.matchMedia('(min-height: 1408px)').matches) && (t = e ? Z.Z : F.Z);
         let n = await fetch(t).then(async (e) => {
             let t = await e.blob();
             return window.URL.createObjectURL(t);
@@ -53,7 +54,7 @@ async function U(e) {
             wumpusMedia: n
         });
     } catch (e) {
-        m.Z.dispatch({ type: 'PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE' });
+        E.Z.captureException(e), m.Z.dispatch({ type: 'PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE' });
     }
 }
 ((c = a || (a = {})).WUMPUS_FLIGHT = 'wumpus_flight'), (c.GRADIENT_HIGHLIGHT = 'gradient_highlight');
@@ -63,52 +64,52 @@ t.default = function () {
             wumpusMedia: t,
             isFetchingMedia: n,
             canPlayWowMoment: a
-        } = (0, p.cj)([W.Z], () => ({
-            wumpusMedia: W.Z.wowMomentWumpusMedia,
-            isFetchingMedia: W.Z.isFetchingWowMomentMedia,
-            canPlayWowMoment: W.Z.canPlayWowMoment
+        } = (0, p.cj)([T.Z], () => ({
+            wumpusMedia: T.Z.wowMomentWumpusMedia,
+            isFetchingMedia: T.Z.isFetchingWowMomentMedia,
+            canPlayWowMoment: T.Z.canPlayWowMoment
         })),
         [c, d] = s.useState(!1),
         m = (0, h.vu)(),
-        S = (0, h.rO)(),
-        g = m > 52 || -1 === m || S,
-        b = S ? 'video/mp4' : 'video/webm';
-    g && !e && a && null === t && !1 === n && U(S),
+        E = (0, h.rO)(),
+        g = m > 52 || -1 === m || E,
+        b = E ? 'video/mp4' : 'video/webm';
+    g && !e && a && null === t && !1 === n && U(E),
         s.useEffect(() => {
             function t() {
                 !e &&
-                    W.Z.canPlayWowMoment &&
+                    T.Z.canPlayWowMoment &&
                     (d(!0),
                     (i = setTimeout(() => {
-                        d(!1), y(!0), _.default.track(T.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'gradient_highlight' }), (0, E.H)(!1);
+                        d(!1), y(!0), _.default.track(I.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'gradient_highlight' }), (0, W.H)(!1);
                     }, 2000)));
             }
             return (
-                f.S.subscribe(T.CkL.PREMIUM_SUBSCRIPTION_CREATED, t),
+                f.S.subscribe(I.CkL.PREMIUM_SUBSCRIPTION_CREATED, t),
                 () => {
-                    f.S.unsubscribe(T.CkL.PREMIUM_SUBSCRIPTION_CREATED, t);
+                    f.S.unsubscribe(I.CkL.PREMIUM_SUBSCRIPTION_CREATED, t);
                 }
             );
         }, [e, g]);
     let [P, y] = s.useState(!1),
-        [F, Z] = s.useState(!1),
+        [Z, F] = s.useState(!1),
         H = (0, M.useSpring)({
             opacity: P ? 0.2 : 0,
             config: { duration: 100 }
         }),
         C = (0, M.useSpring)(
             {
-                x: F ? '100%' : '-100%',
+                x: Z ? '100%' : '-100%',
                 config: { duration: 500 }
             },
-            F ? 'respect-motion-settings' : 'animate-never'
+            Z ? 'respect-motion-settings' : 'animate-never'
         );
     s.useEffect(() => {
         let e = -1;
         return (
             P &&
                 (e = window.setTimeout(() => {
-                    Z(!0);
+                    F(!0);
                 }, 1000)),
             () => {
                 window.clearTimeout(e);
@@ -118,35 +119,35 @@ t.default = function () {
         s.useEffect(() => {
             let e = -1;
             return (
-                F &&
+                Z &&
                     (e = window.setTimeout(() => {
-                        Z(!1), y(!1);
+                        F(!1), y(!1);
                     }, 1000)),
                 () => {
                     window.clearTimeout(e);
                 }
             );
-        }, [F]);
+        }, [Z]);
     let O = c && null !== t,
         v = O || P;
     return (0, o.jsxs)('div', {
         className: r()({
-            [I.wrapper]: !v,
-            [I.activeWrapper]: v
+            [S.wrapper]: !v,
+            [S.activeWrapper]: v
         }),
         children: [
             O &&
                 (0, o.jsx)(l.Z, {
                     autoPlay: !0,
-                    className: I.videoWrapper,
+                    className: S.videoWrapper,
                     onPlay: () => {
-                        clearTimeout(i), _.default.track(T.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'wumpus_flight' });
+                        clearTimeout(i), _.default.track(I.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'wumpus_flight' });
                     },
                     onTimeUpdate: (e) => {
-                        e.currentTarget.currentTime > 4 && (0, E.H)(!0);
+                        e.currentTarget.currentTime > 4 && (0, W.H)(!0);
                     },
                     onEnded: () => {
-                        d(!1), (0, E.H)(!1);
+                        d(!1), (0, W.H)(!1);
                     },
                     children: (0, o.jsx)('source', {
                         src: t,
@@ -154,14 +155,14 @@ t.default = function () {
                     })
                 }),
             (0, o.jsx)(u.animated.div, {
-                className: I.gadientHighlight,
+                className: S.gadientHighlight,
                 style: H
             }),
             (0, o.jsx)(u.animated.div, {
-                className: I.swipeWrapper,
+                className: S.swipeWrapper,
                 style: C,
                 children: (0, o.jsxs)('svg', {
-                    className: I.swipe,
+                    className: S.swipe,
                     viewBox: '0 0 848 1024',
                     fill: 'none',
                     children: [
