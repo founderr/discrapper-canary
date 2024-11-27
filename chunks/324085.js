@@ -76,8 +76,9 @@ let T = new a.Yd('HDStreamingConsumableModal'),
             },
             [a, i]
         );
-        let v = (0, r.useMemo)(() => 0 === u.length || (!u.some((e) => null == e || e < 3500000) && !0), [u]);
-        return null != t && 0 === t.premiumTier && v && !o;
+        let v = (0, r.useMemo)(() => 0 === u.length || (!u.some((e) => null == e || e < 3500000) && !0), [u]),
+            E = (null == t ? void 0 : t.premiumTier) === I.Eu4.NONE || (null == t ? void 0 : t.premiumTier) === I.Eu4.TIER_1;
+        return E && v && !o;
     },
     N = (e, t) => {
         let n = (0, l.e7)([h.default], () => {
