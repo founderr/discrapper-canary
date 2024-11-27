@@ -32,9 +32,10 @@ function E(e) {
             })
         );
     if (!(0, i.e7)([d.Z], () => d.Z.can(h.Plq.VIEW_CHANNEL, E))) return null;
-    let S = E.isGuildStageVoice() ? a.StageIcon : a.VoiceNormalIcon,
-        y = T === p.y0.FULL_SIZE,
-        A = T === p.y0.PANEL;
+    let S = E.isGuildStageVoice(),
+        y = d.Z.can(h.Plq.CONNECT, E) ? (S ? a.StageIcon : a.VoiceNormalIcon) : a.LockIcon,
+        A = T === p.y0.FULL_SIZE,
+        N = T === p.y0.PANEL;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', { className: m.voiceChannelDivider }),
@@ -54,7 +55,7 @@ function E(e) {
                     (0, r.jsxs)('div', {
                         className: m.voiceChannelText,
                         children: [
-                            (0, r.jsx)(S, {
+                            (0, r.jsx)(y, {
                                 size: 'xxs',
                                 color: a.tokens.colors.INTERACTIVE_NORMAL,
                                 className: m.voiceIcon
@@ -80,7 +81,7 @@ function E(e) {
                         maxUsers: g,
                         size: a.AvatarSizes.SIZE_16,
                         onClick: () => (null == v ? void 0 : v({ action: 'PRESS_VOICE_CHANNEL_AVATARS' })),
-                        disableUserPopout: !!(!y && !A) || ((e) => e === t.id),
+                        disableUserPopout: !!(!A && !N) || ((e) => e === t.id),
                         overflowCountVariant: 'text-xs/normal'
                     })
                 ]
