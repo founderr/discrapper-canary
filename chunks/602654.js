@@ -16,7 +16,5 @@ e.exports = {
     description: 'description_ad5fac',
     themeContainer: 'themeContainer_ad5fac',
     username: 'username_ad5fac',
-    focusModeTitle: 'focusModeTitle_ad5fac',
-    customEmojiPlaceholder: 'customEmojiPlaceholder_ad5fac',
-    clearCustomStatusHint: 'clearCustomStatusHint_ad5fac'
+    focusModeTitle: 'focusModeTitle_ad5fac'
 };
