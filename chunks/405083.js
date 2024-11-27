@@ -15,13 +15,13 @@ var r = n(355467),
     c = n(981631);
 function f(e) {
     let { onClose: a, onComplete: n, forcesTransitionToGuild: f, ...u } = e,
-        { subscriptionMetadataRequest: m } = (0, d.usePaymentContext)();
+        { subscriptionMetadataRequest: g } = (0, d.usePaymentContext)();
     return (0, t.jsx)(s.PaymentModal, {
         ...u,
         onComplete: n,
         onClose: (e) => {
             a(e);
-            let t = null == m ? void 0 : m.guild_id;
+            let t = null == g ? void 0 : g.guild_id;
             e && null != t && (r.jg(), (0, o.i1)(t), null == n || n(), null != t && (f || l.Z.getGuildId() !== t) && (0, i.uL)(c.Z5c.CHANNEL(t)));
         },
         forceNewPaymentModal: !0
