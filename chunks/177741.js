@@ -5,7 +5,7 @@ n.r(t),
             return a;
         },
         prefetch: function () {
-            return U;
+            return C;
         }
     }),
     n(315314),
@@ -17,94 +17,94 @@ n.r(t),
 var a,
     c,
     o = n(200651),
-    s = n(192379),
-    d = n(120356),
-    r = n.n(d),
+    d = n(192379),
+    s = n(120356),
+    r = n.n(s),
     u = n(752877),
-    p = n(442837),
-    M = n(481060),
-    m = n(570140),
-    w = n(607070),
-    l = n(70097),
+    m = n(442837),
+    p = n(481060),
+    M = n(570140),
+    l = n(607070),
+    w = n(70097),
     _ = n(626135),
-    h = n(526167),
-    f = n(585483),
+    f = n(526167),
+    h = n(585483),
     E = n(960048),
     W = n(138464),
     T = n(438820),
-    I = n(981631),
+    I = n(553300),
+    b = n(981631),
     S = n(236029),
     g = n(233975),
-    b = n(656402),
-    P = n(683984),
+    P = n(656402),
+    Z = n(683984),
     y = n(347010),
-    Z = n(713669),
-    F = n(471517);
-async function U(e) {
+    F = n(713669),
+    U = n(471517);
+async function C(e) {
     try {
-        m.Z.dispatch({ type: 'PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA' });
-        let t = e ? g.Z : b.Z;
-        window.matchMedia('(min-width: 1012px) and (max-width: 1980px)').matches || window.matchMedia('(min-height: 720px) and (max-height: 1408px)').matches ? (t = e ? P.Z : y.Z) : (window.matchMedia('(min-width: 1980px)').matches || window.matchMedia('(min-height: 1408px)').matches) && (t = e ? Z.Z : F.Z);
+        M.Z.dispatch({ type: 'PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA' });
+        let t = e ? g.Z : P.Z;
+        window.matchMedia('(min-width: 1012px) and (max-width: 1980px)').matches || window.matchMedia('(min-height: 720px) and (max-height: 1408px)').matches ? (t = e ? Z.Z : y.Z) : (window.matchMedia('(min-width: 1980px)').matches || window.matchMedia('(min-height: 1408px)').matches) && (t = e ? F.Z : U.Z);
         let n = await fetch(t).then(async (e) => {
             let t = await e.blob();
             return window.URL.createObjectURL(t);
         });
-        m.Z.dispatch({
+        M.Z.dispatch({
             type: 'PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_SUCCESS',
             wumpusMedia: n
         });
     } catch (e) {
-        E.Z.captureException(e), m.Z.dispatch({ type: 'PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE' });
+        E.Z.captureException(e), M.Z.dispatch({ type: 'PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE' });
     }
 }
-((c = a || (a = {})).WUMPUS_FLIGHT = 'wumpus_flight'), (c.GRADIENT_HIGHLIGHT = 'gradient_highlight');
-t.default = function () {
-    let e = (0, p.e7)([w.Z], () => w.Z.useReducedMotion),
+function H() {
+    let e = (0, m.e7)([l.Z], () => l.Z.useReducedMotion),
         {
             wumpusMedia: t,
             isFetchingMedia: n,
             canPlayWowMoment: a
-        } = (0, p.cj)([T.Z], () => ({
+        } = (0, m.cj)([T.Z], () => ({
             wumpusMedia: T.Z.wowMomentWumpusMedia,
             isFetchingMedia: T.Z.isFetchingWowMomentMedia,
             canPlayWowMoment: T.Z.canPlayWowMoment
         })),
-        [c, d] = s.useState(!1),
-        m = (0, h.vu)(),
-        E = (0, h.rO)(),
-        g = m > 52 || -1 === m || E,
-        b = E ? 'video/mp4' : 'video/webm';
-    g && !e && a && null === t && !1 === n && U(E),
-        s.useEffect(() => {
+        [c, s] = d.useState(!1),
+        M = (0, f.vu)(),
+        E = (0, f.rO)(),
+        I = M > 52 || -1 === M || E,
+        g = E ? 'video/mp4' : 'video/webm';
+    I && !e && a && null === t && !1 === n && C(E),
+        d.useEffect(() => {
             function t() {
                 !e &&
                     T.Z.canPlayWowMoment &&
-                    (d(!0),
+                    (s(!0),
                     (i = setTimeout(() => {
-                        d(!1), y(!0), _.default.track(I.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'gradient_highlight' }), (0, W.H)(!1);
+                        s(!1), Z(!0), _.default.track(b.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'gradient_highlight' }), (0, W.H)(!1);
                     }, 2000)));
             }
             return (
-                f.S.subscribe(I.CkL.PREMIUM_SUBSCRIPTION_CREATED, t),
+                h.S.subscribe(b.CkL.PREMIUM_SUBSCRIPTION_CREATED, t),
                 () => {
-                    f.S.unsubscribe(I.CkL.PREMIUM_SUBSCRIPTION_CREATED, t);
+                    h.S.unsubscribe(b.CkL.PREMIUM_SUBSCRIPTION_CREATED, t);
                 }
             );
-        }, [e, g]);
-    let [P, y] = s.useState(!1),
-        [Z, F] = s.useState(!1),
-        H = (0, M.useSpring)({
+        }, [e, I]);
+    let [P, Z] = d.useState(!1),
+        [y, F] = d.useState(!1),
+        U = (0, p.useSpring)({
             opacity: P ? 0.2 : 0,
             config: { duration: 100 }
         }),
-        C = (0, M.useSpring)(
+        H = (0, p.useSpring)(
             {
-                x: Z ? '100%' : '-100%',
+                x: y ? '100%' : '-100%',
                 config: { duration: 500 }
             },
-            Z ? 'respect-motion-settings' : 'animate-never'
+            y ? 'respect-motion-settings' : 'animate-never'
         );
-    s.useEffect(() => {
+    d.useEffect(() => {
         let e = -1;
         return (
             P &&
@@ -116,51 +116,51 @@ t.default = function () {
             }
         );
     }, [P]),
-        s.useEffect(() => {
+        d.useEffect(() => {
             let e = -1;
             return (
-                Z &&
+                y &&
                     (e = window.setTimeout(() => {
-                        F(!1), y(!1);
+                        F(!1), Z(!1);
                     }, 1000)),
                 () => {
                     window.clearTimeout(e);
                 }
             );
-        }, [Z]);
-    let O = c && null !== t,
-        v = O || P;
+        }, [y]);
+    let x = c && null !== t,
+        O = x || P;
     return (0, o.jsxs)('div', {
         className: r()({
-            [S.wrapper]: !v,
-            [S.activeWrapper]: v
+            [S.wrapper]: !O,
+            [S.activeWrapper]: O
         }),
         children: [
-            O &&
-                (0, o.jsx)(l.Z, {
+            x &&
+                (0, o.jsx)(w.Z, {
                     autoPlay: !0,
                     className: S.videoWrapper,
                     onPlay: () => {
-                        clearTimeout(i), _.default.track(I.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'wumpus_flight' });
+                        clearTimeout(i), _.default.track(b.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'wumpus_flight' });
                     },
                     onTimeUpdate: (e) => {
                         e.currentTarget.currentTime > 4 && (0, W.H)(!0);
                     },
                     onEnded: () => {
-                        d(!1), (0, W.H)(!1);
+                        s(!1), (0, W.H)(!1);
                     },
                     children: (0, o.jsx)('source', {
                         src: t,
-                        type: b
+                        type: g
                     })
                 }),
             (0, o.jsx)(u.animated.div, {
                 className: S.gadientHighlight,
-                style: H
+                style: U
             }),
             (0, o.jsx)(u.animated.div, {
                 className: S.swipeWrapper,
-                style: C,
+                style: H,
                 children: (0, o.jsxs)('svg', {
                     className: S.swipe,
                     viewBox: '0 0 848 1024',
@@ -179,4 +179,9 @@ t.default = function () {
             })
         ]
     });
+}
+((c = a || (a = {})).WUMPUS_FLIGHT = 'wumpus_flight'), (c.GRADIENT_HIGHLIGHT = 'gradient_highlight');
+t.default = function () {
+    let { enabled: e } = I.Z.useExperiment({ location: 'PremiumSubscriptionWowMoment' });
+    return e ? (0, o.jsx)(H, {}) : null;
 };
