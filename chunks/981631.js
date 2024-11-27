@@ -4516,6 +4516,7 @@ let on = Object.freeze({
     (ah.COMMANDS_MIGRATION_TOOLTIP_VIEWED = 'commands_migration_tooltip_viewed'),
     (ah.POPULAR_APPLICATION_COMMAND_CLICKED = 'popular_application_command_clicked'),
     (ah.APP_MANAGE_CTA_CLICKED = 'app_manage_cta_clicked'),
+    (ah.REPORT_APPLICATION_CLICKED = 'report_application_clicked'),
     (ah.CAPTCHA_SERVED = 'captcha_served'),
     (ah.CAPTCHA_EVENT = 'captcha_event'),
     (ah.CHANNEL_PERMISSIONS_PAGE_VIEWED = 'channel_permissions_page_viewed'),

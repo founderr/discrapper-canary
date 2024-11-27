@@ -23,9 +23,9 @@ var i = t(200651),
     N = t(468026),
     g = t(317381),
     j = t(513202),
-    T = t(979200),
-    A = t(600164),
-    _ = t(726721),
+    _ = t(979200),
+    T = t(600164),
+    A = t(726721),
     C = t(726521),
     v = t(713938),
     S = t(973616),
@@ -44,18 +44,18 @@ var i = t(200651),
     F = t(494620),
     M = t(981631),
     G = t(388032),
-    U = t(728513),
-    z = t(232186);
+    z = t(728513),
+    U = t(232186);
 let H = u.ZP.connectStores([b.Z], () => ({ theme: b.Z.theme }))(p.EmptyState);
 function W(e) {
     let { application: n } = e;
     return (0, i.jsxs)('div', {
-        className: U.twoWayWarning,
+        className: z.twoWayWarning,
         children: [
             (0, i.jsx)(p.CircleInformationIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: U.twoWayWarningIcon
+                className: z.twoWayWarningIcon
             }),
             (0, i.jsx)(p.Text, {
                 color: 'text-normal',
@@ -76,19 +76,19 @@ let Y = (e) => {
                     return (0, i.jsx)(p.GlobeEarthIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: U.disclosureIcon
+                        className: z.disclosureIcon
                     });
                 case m.u$.DISPLAYS_ADVERTISEMENTS:
-                    return (0, i.jsx)(p.EmbedIcon, { className: U.disclosureIcon });
+                    return (0, i.jsx)(p.EmbedIcon, { className: z.disclosureIcon });
                 default:
-                    return (0, i.jsx)(p.CircleInformationIcon, { className: U.disclosureIcon });
+                    return (0, i.jsx)(p.CircleInformationIcon, { className: z.disclosureIcon });
             }
         }, [n]);
     },
     X = (e) => {
         let { scopes: n, application: t, selectedChannelId: r, selectedGuildId: a, onDelete: o, disclosures: c, locale: u, id: m } = e,
             h = l.useMemo(() => S.Z.createFromServer(t), [t]),
-            f = _.Z.useExperiment({ location: 'Authorized Applications' }, { autoTrackExposure: !1 }).enabled,
+            f = A.Z.useExperiment({ location: 'Authorized Applications' }, { autoTrackExposure: !1 }).enabled,
             I = () => {
                 let e = G.intl.formatToPlainString(G.t.QWGvxM, { applicationName: t.name });
                 return (
@@ -98,7 +98,7 @@ let Y = (e) => {
                                 e,
                                 (0, i.jsx)(F.Z, {
                                     look: F.z.WARNING,
-                                    className: U.infoBox,
+                                    className: z.infoBox,
                                     children: G.intl.string(G.t.LY35Z2)
                                 })
                             ]
@@ -108,7 +108,7 @@ let Y = (e) => {
                             children: [
                                 e,
                                 (0, i.jsx)(F.Z, {
-                                    className: U.infoBox,
+                                    className: z.infoBox,
                                     children: G.intl.format(G.t.KRnERk, { applicationName: t.name })
                                 })
                             ]
@@ -126,7 +126,12 @@ let Y = (e) => {
                 );
             },
             g = () => {
-                (0, C.uu)(h, a, r);
+                (0, C.uu)({
+                    application: h,
+                    entrypoint: 'authorized_apps_settings',
+                    contextualGuildId: a,
+                    contextualChannelId: r
+                });
             },
             j = () => {
                 null != t.terms_of_service_url &&
@@ -144,7 +149,7 @@ let Y = (e) => {
             },
             P = (0, B.O)(t.id);
         return (0, i.jsx)(p.Card, {
-            className: s()(U.authedApp, z.marginBottom8),
+            className: s()(z.authedApp, U.marginBottom8),
             outline: !0,
             children: (0, i.jsxs)(p.HeadingLevel, {
                 component: (() => {
@@ -154,8 +159,8 @@ let Y = (e) => {
                         }),
                         n =
                             null != e
-                                ? (0, i.jsx)(A.Z.Child, {
-                                      className: U.appAvatar,
+                                ? (0, i.jsx)(T.Z.Child, {
+                                      className: z.appAvatar,
                                       grow: 0,
                                       children: (0, i.jsx)('img', {
                                           src: e,
@@ -165,15 +170,15 @@ let Y = (e) => {
                                 : null,
                         l = new Date(w.default.extractTimestamp(m)).toLocaleDateString(u);
                     return (0, i.jsxs)('div', {
-                        className: s()(U.header, z.marginBottom20),
+                        className: s()(z.header, U.marginBottom20),
                         children: [
                             n,
                             (0, i.jsxs)('div', {
-                                className: U.headerTextContainer,
+                                className: z.headerTextContainer,
                                 children: [
                                     (0, i.jsx)(p.Heading, {
                                         variant: 'text-sm/semibold',
-                                        className: U.headerText,
+                                        className: z.headerText,
                                         children: t.name
                                     }),
                                     (0, i.jsx)(p.Text, {
@@ -188,7 +193,7 @@ let Y = (e) => {
                                       color: p.ButtonColors.TRANSPARENT,
                                       look: p.ButtonLooks.LINK,
                                       size: p.ButtonSizes.SMALL,
-                                      className: U.reportButton,
+                                      className: z.reportButton,
                                       onClick: g,
                                       children: G.intl.string(G.t['+78Pfn'])
                                   })
@@ -215,20 +220,20 @@ let Y = (e) => {
                     (() => {
                         if (null != t.terms_of_service_url || null != t.privacy_policy_url)
                             return (0, i.jsxs)('div', {
-                                className: U.tosPrivacy,
+                                className: z.tosPrivacy,
                                 children: [
                                     null != t.terms_of_service_url
                                         ? (0, i.jsxs)(x.P, {
                                               tag: 'a',
                                               onClick: j,
-                                              className: U.tos,
+                                              className: z.tos,
                                               children: [
                                                   (0, i.jsx)(p.FormText, {
-                                                      className: U.link,
+                                                      className: z.link,
                                                       children: G.intl.string(G.t['lx+GeX'])
                                                   }),
                                                   (0, i.jsx)(p.LinkExternalSmallIcon, {
-                                                      className: U.externalLinkIcon,
+                                                      className: z.externalLinkIcon,
                                                       color: 'var(--text-link)'
                                                   })
                                               ]
@@ -236,20 +241,20 @@ let Y = (e) => {
                                         : null,
                                     null != t.privacy_policy_url
                                         ? (0, i.jsxs)('div', {
-                                              className: U.privacy,
+                                              className: z.privacy,
                                               children: [
-                                                  null != t.terms_of_service_url ? (0, i.jsx)('div', { className: U.divider }) : null,
+                                                  null != t.terms_of_service_url ? (0, i.jsx)('div', { className: z.divider }) : null,
                                                   (0, i.jsxs)(x.P, {
                                                       tag: 'a',
                                                       onClick: L,
-                                                      className: U.privacy,
+                                                      className: z.privacy,
                                                       children: [
                                                           (0, i.jsx)(p.FormText, {
-                                                              className: U.link,
+                                                              className: z.link,
                                                               children: G.intl.string(G.t.okSwq6)
                                                           }),
                                                           (0, i.jsx)(p.LinkExternalSmallIcon, {
-                                                              className: U.externalLinkIcon,
+                                                              className: z.externalLinkIcon,
                                                               color: 'var(--text-link)'
                                                           })
                                                       ]
@@ -267,15 +272,15 @@ let Y = (e) => {
                             return (0, i.jsx)(p.FormItem, {
                                 faded: !0,
                                 title: G.intl.string(G.t.xrmhRU),
-                                className: z.marginTop20,
+                                className: U.marginTop20,
                                 children: (0, i.jsxs)('ul', {
                                     children: [
                                         e.map((e, n) =>
                                             (0, i.jsxs)(
                                                 'li',
                                                 {
-                                                    className: s()(U.permission, z.marginTop8),
-                                                    children: [(0, i.jsx)('i', { className: U.permissionCheckmark }), (0, i.jsx)(p.FormText, { children: e })]
+                                                    className: s()(z.permission, U.marginTop8),
+                                                    children: [(0, i.jsx)('i', { className: z.permissionCheckmark }), (0, i.jsx)(p.FormText, { children: e })]
                                                 },
                                                 n
                                             )
@@ -283,12 +288,12 @@ let Y = (e) => {
                                         null == c
                                             ? void 0
                                             : c.map((n, t) => {
-                                                  let l = (0, T.PM)(n);
+                                                  let l = (0, _.PM)(n);
                                                   return null != l
                                                       ? (0, i.jsxs)(
                                                             'li',
                                                             {
-                                                                className: s()(U.permission, z.marginTop8),
+                                                                className: s()(z.permission, U.marginTop8),
                                                                 children: [(0, i.jsx)(Y, { disclosure: n }), (0, i.jsx)(p.FormText, { children: l })]
                                                             },
                                                             t + e.length
@@ -340,9 +345,9 @@ n.Z = () => {
         N = () => {
             x('');
         },
-        T = () =>
+        _ = () =>
             (0, i.jsx)('div', {
-                className: U.searchContainer,
+                className: z.searchContainer,
                 children: (0, i.jsx)(p.SearchBar, {
                     size: p.SearchBar.Sizes.MEDIUM,
                     query: m,
@@ -352,9 +357,9 @@ n.Z = () => {
                     'aria-label': G.intl.string(G.t['5prvKS'])
                 })
             }),
-        A = (e, n) =>
+        T = (e, n) =>
             (0, i.jsxs)(H, {
-                className: U.__invalid_marginTop20,
+                className: z.__invalid_marginTop20,
                 children: [
                     (0, i.jsx)(p.EmptyStateImage, {
                         darkSrc: t(701972),
@@ -368,7 +373,7 @@ n.Z = () => {
                     })
                 ]
             }),
-        _ = l.useMemo(() => {
+        A = l.useMemo(() => {
             let e = m.trim().toLowerCase();
             return '' === e || null == n ? n : n.length < 100 ? n.filter((n) => o()(e, n.application.name.toLowerCase())) : n.filter((n) => n.application.name.toLowerCase().includes(e));
         }, [n, m]);
@@ -379,27 +384,27 @@ n.Z = () => {
               title: G.intl.string(G.t['f6kk+v']),
               children: (0, i.jsx)(p.HeadingLevel, {
                   component: (0, i.jsx)(p.FormNotice, {
-                      className: z.marginBottom40,
+                      className: U.marginBottom40,
                       type: p.CardTypes.PRIMARY,
                       title: G.intl.string(G.t.HU3RFx),
                       body: G.intl.string(G.t.Nu5Yi4)
                   }),
                   children:
-                      null == n || null == _
+                      null == n || null == A
                           ? (0, i.jsx)(p.Spinner, {
-                                className: z.marginTop20,
+                                className: U.marginTop20,
                                 type: p.Spinner.Type.SPINNING_CIRCLE
                             })
                           : 0 === n.length
-                            ? A(G.intl.string(G.t.CpPv5u), G.intl.string(G.t['E+SM6e']))
-                            : 0 === _.length
+                            ? T(G.intl.string(G.t.CpPv5u), G.intl.string(G.t['E+SM6e']))
+                            : 0 === A.length
                               ? (0, i.jsxs)(i.Fragment, {
-                                    children: [T(), A(null, G.intl.string(G.t.EVWFNj))]
+                                    children: [_(), T(null, G.intl.string(G.t.EVWFNj))]
                                 })
                               : (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        T(),
-                                        _.sort((e, n) => Number(n.id) - Number(e.id)).map((e) =>
+                                        _(),
+                                        A.sort((e, n) => Number(n.id) - Number(e.id)).map((e) =>
                                             (0, i.jsx)(
                                                 X,
                                                 {

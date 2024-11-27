@@ -243,21 +243,26 @@ function S(e, t) {
             t
         );
 }
-function y(e, t, n, r) {
-    A(o.b.APPLICATION, {
-        application_id: e.id,
-        guild_id: t,
-        channel_id: n
+function y(e) {
+    let { application: t, entrypoint: n, contextualGuildId: i, contextualChannelId: a, onSubmit: s } = e;
+    r.ZP.trackWithMetadata(c.rMx.REPORT_APPLICATION_CLICKED, {
+        application_id: t.id,
+        location: n
     }),
+        A(o.b.APPLICATION, {
+            application_id: t.id,
+            guild_id: i,
+            channel_id: a
+        }),
         (0, u.m)(
             {
                 name: o.b.APPLICATION,
-                record: e,
-                contextualGuildId: t,
-                contextualChannelId: n
+                record: t,
+                contextualGuildId: i,
+                contextualChannelId: a
             },
             {},
-            r
+            s
         );
 }
 function A(e, t) {

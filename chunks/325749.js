@@ -23,15 +23,15 @@ var i = t(200651),
     x = t(271383),
     C = t(594174),
     g = t(51144),
-    k = t(145597),
-    I = t(214629),
+    I = t(145597),
+    k = t(214629),
     Z = t(317381),
-    N = t(884338),
-    S = t(473179),
-    j = t(981631),
-    y = t(388032),
+    y = t(884338),
+    N = t(473179),
+    S = t(981631),
+    j = t(388032),
     z = t(124062);
-let A = N.u.SIZE_24;
+let A = y.u.SIZE_24;
 function E(e) {
     let { applicationId: n, channelId: t } = e,
         a = (0, c.e7)([u.Z], () => u.Z.getApplication(n)),
@@ -91,14 +91,14 @@ function E(e) {
         ),
         T = _.Z.useExperiment({ location: 'activity_popout_overflow_menu' }, { autoTrackExposure: !1 }).enabled,
         U = o.useCallback(() => {
-            let e = (0, k.QF)();
+            let e = (0, I.QF)();
             d.Z.setInputLocked(!f.Z.isInputLocked(e), e);
         }, []),
-        O = (0, I.PR)();
+        O = (0, k.PR)();
     return null == a || null == t || null == W
         ? null
         : (0, i.jsx)(l.ThemeProvider, {
-              theme: j.BRd.DARK,
+              theme: S.BRd.DARK,
               children: (e) =>
                   (0, i.jsxs)('div', {
                       className: r()(z.container, e),
@@ -124,7 +124,7 @@ function E(e) {
                                           children: '.'
                                       })
                                   }),
-                                  (0, i.jsx)(N.Z, {
+                                  (0, i.jsx)(y.Z, {
                                       renderIcon: !1,
                                       users: R,
                                       size: A,
@@ -140,7 +140,7 @@ function E(e) {
                                   className: z.actionButtonsContainer,
                                   children: [
                                       (0, i.jsx)(h.Z, {
-                                          appContext: j.IlC.POPOUT,
+                                          appContext: S.IlC.POPOUT,
                                           applicationId: n,
                                           channel: W,
                                           shouldPrioritizeGroupPlusIcon: !0
@@ -149,7 +149,7 @@ function E(e) {
                                           ? (0, i.jsx)(b.Z, {
                                                 onClick: U,
                                                 iconComponent: l.WindowTopOutlineIcon,
-                                                label: y.intl.string(y.t.mseZsL)
+                                                label: j.intl.string(j.t.mseZsL)
                                             })
                                           : null,
                                       T &&
@@ -160,8 +160,9 @@ function E(e) {
                                                   renderPopout: (e) => {
                                                       let { closePopout: n } = e;
                                                       return (0, i.jsx)(p.Z, {
-                                                          children: (0, i.jsx)(S.Z, {
+                                                          children: (0, i.jsx)(N.Z, {
                                                               application: a,
+                                                              channelId: t,
                                                               onClose: n
                                                           })
                                                       });

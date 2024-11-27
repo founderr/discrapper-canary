@@ -96,7 +96,12 @@ function b(e) {
                                               label: g.intl.string(g.t.jhJze3),
                                               action: () => {
                                                   var e;
-                                                  (0, m.uu)(n, null !== (e = t.getGuildId()) && void 0 !== e ? e : void 0, t.id);
+                                                  (0, m.uu)({
+                                                      application: n,
+                                                      entrypoint: 'app_launcher',
+                                                      contextualGuildId: null !== (e = t.getGuildId()) && void 0 !== e ? e : void 0,
+                                                      contextualChannelId: t.id
+                                                  });
                                               }
                                           })
                                         : null
