@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return O;
+            return U;
         }
     }),
     n(47120);
@@ -11,8 +11,8 @@ var r,
     s = n(192379),
     C = n(120356),
     i = n.n(C),
-    l = n(703533),
-    d = n(442837),
+    d = n(703533),
+    l = n(442837),
     c = n(481060),
     u = n(230711),
     m = n(607070),
@@ -25,8 +25,8 @@ var r,
     M = n(55935),
     f = n(70956),
     N = n(63063),
-    _ = n(74538),
-    v = n(272008),
+    v = n(74538),
+    _ = n(272008),
     L = n(497505),
     Z = n(981631),
     R = n(675654),
@@ -34,17 +34,17 @@ var r,
     k = n(388032),
     S = n(83266),
     V = n(499018),
-    I = n(946790);
-function T(e) {
+    T = n(946790);
+function I(e) {
     var t;
     let { transitionState: n, onClose: r, quest: a, location: C } = e,
         h = s.useRef(null),
         [j, g] = s.useState(null),
-        p = s.useRef(new l.qA()),
-        H = (0, d.e7)([m.Z], () => m.Z.useReducedMotion),
+        p = s.useRef(new d.qA()),
+        H = (0, l.e7)([m.Z], () => m.Z.useReducedMotion),
         M = (null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
         [f, N] = s.useState({ state: 'loading' }),
-        _ = s.useCallback(() => {
+        v = s.useCallback(() => {
             u.Z.open(Z.oAB.SUBSCRIPTIONS, null, {}), r();
         }, [r]),
         B = s.useCallback(() => {
@@ -52,7 +52,7 @@ function T(e) {
         }, [r]);
     s.useEffect(() => {
         !M &&
-            (0, v.QB)(a.id, L.y$.CROSS_PLATFORM, C)
+            (0, _.QB)(a.id, L.y$.CROSS_PLATFORM, C)
                 .then((e) => {
                     if ((null == e ? void 0 : e.claimedAt) != null) {
                         N({
@@ -75,10 +75,10 @@ function T(e) {
     }, [a, C, M]);
     let k = 'loading' === f.state,
         V = !H && !M && 'claimed' === f.state,
-        I = 'claimed' === f.state && null != f.entitlements && f.entitlements.items.some((e) => e.consumed);
+        T = 'claimed' === f.state && null != f.entitlements && f.entitlements.items.some((e) => e.consumed);
     return (0, o.jsxs)(o.Fragment, {
         children: [
-            (0, o.jsx)(l.O_, {
+            (0, o.jsx)(d.O_, {
                 ref: g,
                 className: S.confettiCanvas,
                 environment: p.current
@@ -97,16 +97,16 @@ function T(e) {
                                 errorReason: f.errorReason,
                                 onClose: r
                             })
-                          : I
+                          : T
                             ? (0, o.jsx)(b, {
                                   entitlements: f.entitlements,
                                   onClose: r,
                                   onLearnMore: B
                               })
-                            : (0, o.jsx)(y, {
+                            : (0, o.jsx)(O, {
                                   entitlements: f.entitlements,
                                   onClose: r,
-                                  onLearnMore: _
+                                  onLearnMore: v
                               })
                 })
             }),
@@ -160,7 +160,7 @@ function F(e) {
     });
 }
 function A(e) {
-    let t = (0, _.xG)(e.map((e) => e.skuId)),
+    let t = (0, v.xG)(e.map((e) => e.skuId)),
         n = {
             days: k.t.fYmir6,
             hours: k.t['C3RO+v'],
@@ -175,7 +175,7 @@ function b(e) {
         { theme: s } = (0, c.useThemeContext)(),
         C = A(null !== (t = null == n ? void 0 : n.items) && void 0 !== t ? t : []),
         i = (0, h.Z)({ forceFetch: !0 }),
-        l = (0, M.vc)(i.endsAt, 'L');
+        d = (0, M.vc)(i.endsAt, 'L');
     return i.fractionalState === B.a$.NONE
         ? (0, o.jsx)(c.Spinner, { type: c.Spinner.Type.SPINNING_CIRCLE })
         : (0, o.jsxs)(o.Fragment, {
@@ -186,7 +186,7 @@ function b(e) {
                           (0, o.jsx)('div', { className: S.nitroHeaderClouds }),
                           (0, o.jsx)(H.Z, { className: S.nitroHeaderWordmark }),
                           (0, o.jsx)(c.Image, {
-                              src: I,
+                              src: T,
                               width: 110,
                               height: 82,
                               zoomable: !1,
@@ -215,7 +215,7 @@ function b(e) {
                               children: k.intl.format(k.t['jzW5/P'], {
                                   helpCenterLink: N.Z.getArticleURL(Z.BhN.NITRO),
                                   duration: C,
-                                  date: l
+                                  date: d
                               })
                           }),
                           (0, o.jsx)(c.Button, {
@@ -228,72 +228,74 @@ function b(e) {
               ]
           });
 }
-function y(e) {
+function O(e) {
     var t;
     let { entitlements: n, onClose: r, onLearnMore: a } = e,
         s = A(null !== (t = null == n ? void 0 : n.items) && void 0 !== t ? t : []);
-    return (0, o.jsxs)('div', {
-        className: S.claimedRootContainer,
-        children: [
+    return (0, o.jsx)(c.ThemeProvider, {
+        theme: Z.BRd.DARK,
+        children: (e) =>
             (0, o.jsxs)('div', {
-                className: S.headerContainer,
+                className: i()(S.claimedRootContainer, e),
                 children: [
-                    (0, o.jsx)('img', {
-                        className: S.headerBackground,
-                        src: V,
-                        alt: k.intl.string(k.t['8SsCa2'])
-                    }),
-                    (0, o.jsx)(g.Z, { className: S.beta }),
                     (0, o.jsxs)('div', {
-                        className: S.headerForeground,
+                        className: S.headerContainer,
                         children: [
-                            (0, o.jsx)('div', {
-                                className: S.iconBackgroundFractional,
-                                children: (0, o.jsx)(c.NitroWheelIcon, {
-                                    size: 'lg',
-                                    className: S.iconFractional,
-                                    color: j.JX.PREMIUM_GUILD_BADGE_V2_BACKGROUND
+                            (0, o.jsx)('img', {
+                                className: S.headerBackground,
+                                src: V,
+                                alt: k.intl.string(k.t['8SsCa2'])
+                            }),
+                            (0, o.jsx)(g.Z, { className: S.beta }),
+                            (0, o.jsxs)('div', {
+                                className: S.headerForeground,
+                                children: [
+                                    (0, o.jsx)('div', {
+                                        className: S.iconBackgroundFractional,
+                                        children: (0, o.jsx)(c.NitroWheelIcon, {
+                                            size: 'lg',
+                                            className: S.iconFractional,
+                                            color: j.JX.PREMIUM_GUILD_BADGE_V2_BACKGROUND
+                                        })
+                                    }),
+                                    (0, o.jsx)(c.ModalCloseButton, {
+                                        className: S.close,
+                                        withCircleBackground: !0,
+                                        onClick: r
+                                    })
+                                ]
+                            })
+                        ]
+                    }),
+                    (0, o.jsxs)(c.ModalFooter, {
+                        className: i()(S.footerContainer, S.gradient),
+                        separator: !1,
+                        children: [
+                            (0, o.jsx)(c.Heading, {
+                                variant: 'heading-lg/bold',
+                                className: S.heading,
+                                children: k.intl.string(k.t.dOQ9RU)
+                            }),
+                            (0, o.jsx)(c.Text, {
+                                variant: 'text-sm/normal',
+                                className: S.text,
+                                children: k.intl.format(k.t.KnH4jo, {
+                                    helpCenterLink: N.Z.getArticleURL(Z.BhN.NITRO),
+                                    duration: s
                                 })
                             }),
-                            (0, o.jsx)(c.ModalCloseButton, {
-                                className: S.close,
-                                withCircleBackground: !0,
-                                onClick: r
+                            (0, o.jsx)(c.Button, {
+                                className: S.cta2,
+                                onClick: a,
+                                children: k.intl.string(k.t.LnsQGR)
                             })
                         ]
                     })
                 ]
-            }),
-            (0, o.jsxs)(c.ModalFooter, {
-                className: i()(S.footerContainer, S.gradient),
-                separator: !1,
-                children: [
-                    (0, o.jsx)(c.Heading, {
-                        variant: 'heading-lg/bold',
-                        color: 'always-white',
-                        className: S.heading,
-                        children: k.intl.string(k.t.dOQ9RU)
-                    }),
-                    (0, o.jsx)(c.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'always-white',
-                        className: S.text,
-                        children: k.intl.format(k.t.KnH4jo, {
-                            helpCenterLink: N.Z.getArticleURL(Z.BhN.NITRO),
-                            duration: s
-                        })
-                    }),
-                    (0, o.jsx)(c.Button, {
-                        className: S.cta2,
-                        onClick: a,
-                        children: k.intl.string(k.t.LnsQGR)
-                    })
-                ]
             })
-        ]
     });
 }
-function O(e) {
+function U(e) {
     let { quest: t, location: n, onClose: r, transitionState: a } = e,
         C = s.useMemo(() => {
             var e;
@@ -304,7 +306,7 @@ function O(e) {
     }, [r, C]),
     C)
         ? null
-        : (0, o.jsx)(T, {
+        : (0, o.jsx)(I, {
               onClose: r,
               transitionState: a,
               quest: t,
