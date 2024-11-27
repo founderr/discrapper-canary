@@ -20,8 +20,8 @@ var i = n(192379),
     E = n(358085),
     b = n(709054),
     N = n(418476),
-    Z = n(901461),
-    S = n(432376),
+    S = n(901461),
+    Z = n(432376),
     T = n(996861),
     j = n(981631);
 function A(e) {
@@ -58,7 +58,7 @@ t.Z = function (e, t, n) {
                         break;
                     case 'p':
                         if (k || B) {
-                            if (((R = H), (L = U), !R.isSystemDM() && !(0, Z.Z)(L) && (A(R) || R.isPrivate()))) n.preventDefault(), (0, T.rY)(H, U, n);
+                            if (((R = H), (L = U), !R.isSystemDM() && !(0, S.Z)(L) && (A(R) || R.isPrivate()))) n.preventDefault(), (0, T.rY)(H, U, n);
                         }
                         break;
                     case '+':
@@ -66,7 +66,7 @@ t.Z = function (e, t, n) {
                             (function (e) {
                                 let t = null == e.guild_id || C.Z.canChatInGuild(e.guild_id),
                                     n = h.nc.getSetting(),
-                                    { disableReactionCreates: i } = (0, S.Z)({
+                                    { disableReactionCreates: i } = (0, Z.Z)({
                                         channel: e,
                                         canChat: t,
                                         renderReactions: n,

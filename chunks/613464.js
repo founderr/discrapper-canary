@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return S;
     }
 }),
     n(47120);
@@ -26,8 +26,8 @@ var i = n(200651),
     E = n(718617),
     b = n(327250),
     N = n(764948);
-function Z(e) {
-    let { userId: t, guildId: n, onClose: r, className: Z, infoPanelClassName: S, style: T } = e,
+function S(e) {
+    let { userId: t, guildId: n, onClose: r, className: S, infoPanelClassName: Z, style: T } = e,
         j = (0, I.ms)(n),
         A = (0, s.e7)([v.default], () => v.default.getUser(t), [t]),
         y = (0, s.e7)([_.ZP], () => _.ZP.getMember(n, t), [n, t]),
@@ -72,7 +72,7 @@ function Z(e) {
     j)
         ? P || null == A || null == y
             ? (0, i.jsx)('div', {
-                  className: a()(N.sidebarContainer, N.loadingContainer, Z),
+                  className: a()(N.sidebarContainer, N.loadingContainer, S),
                   style: T,
                   children: (0, i.jsx)(o.Spinner, {
                       animated: !0,
@@ -82,7 +82,7 @@ function Z(e) {
             : (0, i.jsx)(m.Gt, {
                   value: k,
                   children: (0, i.jsx)('div', {
-                      className: a()(N.sidebarContainer, Z),
+                      className: a()(N.sidebarContainer, S),
                       style: T,
                       children: (0, i.jsx)(x.Z, {
                           user: A,
@@ -103,7 +103,7 @@ function Z(e) {
                                       userId: t,
                                       guildId: n,
                                       onClose: r,
-                                      className: S
+                                      className: Z
                                   })
                               ]
                           })

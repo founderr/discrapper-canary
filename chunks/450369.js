@@ -25,8 +25,8 @@ var i = n(200651),
     E = n(496675),
     b = n(979651),
     N = n(88751),
-    Z = n(252132),
-    S = n(248400),
+    S = n(252132),
+    Z = n(248400),
     T = n(981631),
     j = n(354459),
     A = n(235537);
@@ -58,7 +58,7 @@ let y = 16 / 9,
                     onContextMenu: (e) => u(n, e),
                     ...e,
                     children: (0, i.jsx)(
-                        Z.Z,
+                        S.Z,
                         {
                             participant: n,
                             aspectRatio: y,
@@ -71,7 +71,7 @@ let y = 16 / 9,
                             paused: !1,
                             pulseSpeakingIndicator: !p.enabled,
                             width: c,
-                            children: d && (0, i.jsx)(S.Z, {})
+                            children: d && (0, i.jsx)(Z.Z, {})
                         },
                         g
                     )
@@ -98,7 +98,7 @@ let y = 16 / 9,
                 [R, r, L, k]
             );
         return (0, i.jsx)(
-            Z.Z,
+            S.Z,
             {
                 participant: n,
                 aspectRatio: y,
@@ -114,7 +114,7 @@ let y = 16 / 9,
                 paused: !1,
                 pulseSpeakingIndicator: !_.enabled,
                 width: a,
-                children: d && n.type === j.fO.USER && (0, i.jsx)(S.Z, {})
+                children: d && n.type === j.fO.USER && (0, i.jsx)(Z.Z, {})
             },
             N
         );

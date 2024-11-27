@@ -20,19 +20,19 @@ var i = n(200651),
     E = n(625938),
     b = n(981631),
     N = n(388032),
-    Z = n(239856);
+    S = n(239856);
 t.Z = (e) => {
-    let { hangStatusActivity: t, userId: r, channel: S, previewIsOpen: T } = e,
+    let { hangStatusActivity: t, userId: r, channel: Z, previewIsOpen: T } = e,
         { enableHangStatus: j } = x.n.useExperiment({
-            guildId: S.guild_id,
+            guildId: Z.guild_id,
             location: 'HangStatusPopout'
         }),
         A = (0, s.e7)([u.default], () => u.default.getId()),
         y = (0, s.e7)([f.default], () => f.default.getUser(r)),
-        P = (0, s.e7)([m.Z], () => m.Z.getChannelId() === S.id),
-        M = (0, s.e7)([p.Z], () => p.Z.can(b.Plq.CONNECT, S)),
-        R = (null == t ? void 0 : t.emoji) == null || (0, v.K)(t.emoji, S),
-        L = (0, s.e7)([h.ZP], () => (null != S.guild_id && null != y ? h.ZP.getMember(S.guild_id, r) : null)),
+        P = (0, s.e7)([m.Z], () => m.Z.getChannelId() === Z.id),
+        M = (0, s.e7)([p.Z], () => p.Z.can(b.Plq.CONNECT, Z)),
+        R = (null == t ? void 0 : t.emoji) == null || (0, v.K)(t.emoji, Z),
+        L = (0, s.e7)([h.ZP], () => (null != Z.guild_id && null != y ? h.ZP.getMember(Z.guild_id, r) : null)),
         k = l.useMemo(() => (null != y ? (0, d.SG)(void 0, L, y, { size: 40 }) : void 0), [L, y]);
     return (l.useEffect(() => {
         (0, C.UP)();
@@ -45,31 +45,31 @@ t.Z = (e) => {
             A !== r &&
             g.default.track(b.rMx.VIEW_HANG_STATUS, {
                 source: 'HangStatusPopout',
-                guild_id: S.guild_id,
-                channel_id: S.id
+                guild_id: Z.guild_id,
+                channel_id: Z.id
             });
-    }, [j, t, T, y, A, r, S]),
+    }, [j, t, T, y, A, r, Z]),
     j && null != y)
         ? A === r
             ? (0, i.jsx)('div', {
-                  className: a()(Z.popoutWrapper, { [Z.mounted]: T }),
+                  className: a()(S.popoutWrapper, { [S.mounted]: T }),
                   children: (0, i.jsx)(E.y, {
                       currentStatus: t,
-                      channel: S
+                      channel: Z
                   })
               })
             : null == t
               ? null
               : (0, i.jsx)('div', {
-                    className: a()(Z.popoutWrapper, { [Z.mounted]: T }),
+                    className: a()(S.popoutWrapper, { [S.mounted]: T }),
                     children: (0, i.jsxs)('div', {
-                        className: Z.popout,
+                        className: S.popout,
                         children: [
                             (0, i.jsxs)('div', {
-                                className: Z.contentContainer,
+                                className: S.contentContainer,
                                 children: [
                                     (0, i.jsxs)('div', {
-                                        className: Z.statusGroup,
+                                        className: S.statusGroup,
                                         children: [
                                             (0, i.jsx)(o.Text, {
                                                 variant: 'text-xs/medium',
@@ -79,28 +79,28 @@ t.Z = (e) => {
                                             (0, i.jsx)(o.Text, {
                                                 variant: 'text-sm/semibold',
                                                 color: 'text-normal',
-                                                className: Z.statusText,
+                                                className: S.statusText,
                                                 children: (0, _.O8)(t)
                                             })
                                         ]
                                     }),
                                     (0, i.jsxs)('div', {
-                                        className: Z.iconGroup,
+                                        className: S.iconGroup,
                                         children: [
                                             (0, i.jsx)(I.Z, {
-                                                className: Z.statusIcon,
+                                                className: S.statusIcon,
                                                 hangStatusActivity: t
                                             }),
                                             (0, i.jsxs)('div', {
-                                                className: Z.avatarWrapper,
+                                                className: S.avatarWrapper,
                                                 children: [
                                                     (0, i.jsx)(o.Avatar, {
-                                                        className: Z.avatar,
+                                                        className: S.avatar,
                                                         size: o.AvatarSizes.SIZE_40,
                                                         src: k,
                                                         'aria-hidden': !0
                                                     }),
-                                                    (0, i.jsx)('div', { className: Z.outline })
+                                                    (0, i.jsx)('div', { className: S.outline })
                                                 ]
                                             })
                                         ]
@@ -109,16 +109,16 @@ t.Z = (e) => {
                             }),
                             !P && M
                                 ? (0, i.jsx)(o.Button, {
-                                      className: Z.cta,
+                                      className: S.cta,
                                       size: o.Button.Sizes.SMALL,
                                       onClick: () => {
                                           !P &&
                                               M &&
-                                              (c.default.selectVoiceChannel(S.id),
+                                              (c.default.selectVoiceChannel(Z.id),
                                               g.default.track(b.rMx.HANG_STATUS_CTA_CLICKED, {
                                                   source: 'HangStatusPopout',
-                                                  guild_id: S.guild_id,
-                                                  channel_id: S.id
+                                                  guild_id: Z.guild_id,
+                                                  channel_id: Z.id
                                               }));
                                       },
                                       children: N.intl.string(N.t['B/dHXF'])
@@ -126,7 +126,7 @@ t.Z = (e) => {
                                 : null,
                             P && R
                                 ? (0, i.jsx)(o.Button, {
-                                      className: Z.cta,
+                                      className: S.cta,
                                       size: o.Button.Sizes.SMALL,
                                       onClick: () => {
                                           let e = t.state;
@@ -142,8 +142,8 @@ t.Z = (e) => {
                                                 })
                                               : (0, C.Zx)(e, !0),
                                               g.default.track(b.rMx.SWIPE_HANG_STATUS, {
-                                                  guild_id: S.guild_id,
-                                                  channel_id: S.id,
+                                                  guild_id: Z.guild_id,
+                                                  channel_id: Z.id,
                                                   media_session_id: m.Z.getMediaSessionId()
                                               });
                                       },

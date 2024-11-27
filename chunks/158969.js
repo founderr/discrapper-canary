@@ -64,16 +64,16 @@ let N = l.memo(function (e) {
 t.Z = l.memo(function (e) {
     var t, n;
     let { className: r, compact: s, message: d, children: m, content: f, onUpdate: _ } = e,
-        Z = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
-        S = l.useRef(!1),
+        S = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
+        Z = l.useRef(!1),
         T = (0, c.e7)([p.Z], () => p.Z.getMessage(d.id), [d.id]),
         j = l.useCallback(() => {
             (null == T ? void 0 : T.isBlockedEdit) ? (0, h.I)(d.id) : u.Z.deleteMessage(d.channel_id, d.id, !0);
         }, [d, T]);
     return (
         l.useLayoutEffect(() => {
-            S.current ? null != _ && _() : (S.current = !0);
-        }, [_, d.content, f, Z, m]),
+            Z.current ? null != _ && _() : (Z.current = !0);
+        }, [_, d.content, f, S, m]),
         (0, i.jsxs)('div', {
             id: (0, g.ut)(d),
             className: a()(r, b.markup, {

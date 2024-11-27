@@ -31,7 +31,7 @@ function v(e) {
             onActivityItemSelected: E,
             imageBackground: b,
             activityAction: N,
-            labelType: Z
+            labelType: S
         } = (0, u.ZP)({
             channel: n,
             activityItem: i,
@@ -42,7 +42,7 @@ function v(e) {
             assetNames: x,
             commandOrigin: I
         }),
-        [S, T] = a.useState(!1),
+        [Z, T] = a.useState(!1),
         j = a.useCallback(() => {
             T(!0);
         }, [T]),
@@ -57,11 +57,11 @@ function v(e) {
                         className: C.badgeContainer,
                         children: (0, r.jsx)(p.Z, {
                             name: i.application.name,
-                            labelType: Z
+                            labelType: S
                         })
                     })
                 }),
-            [i.application.name, Z]
+            [i.application.name, S]
         ),
         P = a.useMemo(() => {
             switch (N) {
@@ -107,7 +107,7 @@ function v(e) {
         children: (0, r.jsx)(d.Spring, {
             config: _,
             from: { value: 0 },
-            to: { value: S ? 1 : 0 },
+            to: { value: Z ? 1 : 0 },
             children: (e) => {
                 let { value: t } = e;
                 return (0, r.jsx)(d.ThemeProvider, {

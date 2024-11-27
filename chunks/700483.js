@@ -21,8 +21,8 @@ var i = n(200651),
     E = n(829750),
     b = n(189771),
     N = n(294629),
-    Z = n(793319),
-    S = n(560688),
+    S = n(793319),
+    Z = n(560688),
     T = n(390322),
     j = n(871499),
     A = n(386000),
@@ -333,8 +333,8 @@ let es = l.memo(function (e) {
                         hasPermission: _,
                         enabled: x,
                         cameraUnavailable: C,
-                        onChange: Z.r,
-                        onCameraUnavailable: S.Z,
+                        onChange: S.r,
+                        onCameraUnavailable: Z.Z,
                         channelLimitReached: j,
                         channelLimit: v,
                         popoutOpen: l,
@@ -342,7 +342,7 @@ let es = l.memo(function (e) {
                     });
                 }
             }),
-            (0, i.jsx)(Z.NZ, {
+            (0, i.jsx)(S.NZ, {
                 channel: t,
                 currentUser: P,
                 exitFullScreen: () => null,

@@ -29,8 +29,8 @@ let N = (e, t) => {
             speakerTileHeight: i
         };
     },
-    Z = (e, t) => (e < I ? 1 : e < E ? 2 : e < b ? 3 : t ? 3 : 4),
-    S = (e) => Math.floor((e - 32) / 102);
+    S = (e, t) => (e < I ? 1 : e < E ? 2 : e < b ? 3 : t ? 3 : 4),
+    Z = (e) => Math.floor((e - 32) / 102);
 function T(e) {
     return e.type === h.Ui.VOICE;
 }
@@ -56,8 +56,8 @@ t.Z = (0, o.Z)((e) => {
         P = (0, u.w8)(i.id, h.pV.SPEAKER),
         M = P.filter(T),
         R = null != P.find((e) => e.type === h.Ui.STREAM),
-        L = S(l),
-        k = Z(l, b),
+        L = Z(l),
+        k = S(l, b),
         O = {
             [h.pV.SPEAKER]: k,
             [h.pV.AUDIENCE]: L,

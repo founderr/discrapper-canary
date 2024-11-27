@@ -21,8 +21,8 @@ var i = n(200651),
     E = n(36311),
     b = n(112724),
     N = n(902840),
-    Z = n(110924),
-    S = n(317381),
+    S = n(110924),
+    Z = n(317381),
     T = n(82888),
     j = n(917107),
     A = n(296797),
@@ -75,8 +75,8 @@ var i = n(200651),
     eE = n(504185),
     eb = n(657218),
     eN = n(66556),
-    eZ = n(739830),
-    eS = n(377929),
+    eS = n(739830),
+    eZ = n(377929),
     eT = n(900157),
     ej = n(108427),
     eA = n(171368),
@@ -568,7 +568,7 @@ class tt extends l.PureComponent {
                     case e1.d4z.ANNOUNCEMENT_THREAD:
                     case e1.d4z.PRIVATE_THREAD:
                     case e1.d4z.PUBLIC_THREAD:
-                        null != t && !t.isForumLikeChannel() && a.push((0, i.jsx)(eN.Z, { channel: t }, 'browser')), e.isVocalThread() && a.push((0, i.jsx)(es.Z, { channel: e }, 'thread-call')), a.push((0, i.jsx)(eZ.Z, { channel: e }, 'notifications')), a.push((0, i.jsx)(Q.Z, { channel: e }, 'pins')), !e.isArchivedThread() && a.push((0, i.jsx)(X.Z, { channelId: e.id }, 'members')), null != t && (0, N.Lp)(e) && a.push((0, i.jsx)($.Z, { channel: e }, 'summaries')), a.push((0, i.jsx)(eS.Z, { channel: e }, 'threads-overflow'));
+                        null != t && !t.isForumLikeChannel() && a.push((0, i.jsx)(eN.Z, { channel: t }, 'browser')), e.isVocalThread() && a.push((0, i.jsx)(es.Z, { channel: e }, 'thread-call')), a.push((0, i.jsx)(eS.Z, { channel: e }, 'notifications')), a.push((0, i.jsx)(Q.Z, { channel: e }, 'pins')), !e.isArchivedThread() && a.push((0, i.jsx)(X.Z, { channelId: e.id }, 'members')), null != t && (0, N.Lp)(e) && a.push((0, i.jsx)($.Z, { channel: e }, 'summaries')), a.push((0, i.jsx)(eZ.Z, { channel: e }, 'threads-overflow'));
                         break;
                     case e1.d4z.GUILD_ANNOUNCEMENT:
                     case e1.d4z.GUILD_TEXT:
@@ -718,18 +718,18 @@ t.Z = l.memo(function (e) {
             var e;
             return (null !== (e = null == b ? void 0 : b.channelId) && void 0 !== e ? e : eF.Z.getVoiceChannelId()) === (null == c ? void 0 : c.id);
         }),
-        P = (0, p.e7)([S.ZP], () => (null != c ? S.ZP.getSelfEmbeddedActivityForChannel(c.id) : null), [c]),
+        P = (0, p.e7)([Z.ZP], () => (null != c ? Z.ZP.getSelfEmbeddedActivityForChannel(c.id) : null), [c]),
         M = (0, p.e7)([eH.Z], () => eH.Z.isConnected()),
-        R = (0, Z.Z)(M),
+        R = (0, S.Z)(M),
         L = M && !1 === R;
     l.useEffect(() => {
         T && L && null != P && null != c && C.Z.selectParticipant(c.id, P.applicationId);
     }, [L, c, T, P]);
-    let k = (0, p.e7)([S.ZP], () => {
+    let k = (0, p.e7)([Z.ZP], () => {
             var e;
-            return S.ZP.getSelfEmbeddedActivityForChannel(null !== (e = null == c ? void 0 : c.id) && void 0 !== e ? e : e1.lds);
+            return Z.ZP.getSelfEmbeddedActivityForChannel(null !== (e = null == c ? void 0 : c.id) && void 0 !== e ? e : e1.lds);
         }),
-        O = (0, p.e7)([S.ZP], () => S.ZP.getActivityPanelMode()),
+        O = (0, p.e7)([Z.ZP], () => Z.ZP.getActivityPanelMode()),
         w = null != k && !(0, j.Z)(null == c ? void 0 : c.id) && O === e2.Ez.PANEL,
         B = (0, p.e7)([eW.Z], () => null != c && c.isVocalThread() && !d().isEmpty(eW.Z.getVoiceStatesForChannel(c.id)), [c]),
         H = null != c && c.isPrivate() && !w && E,
@@ -737,7 +737,7 @@ t.Z = l.memo(function (e) {
         { welcomeModalChannelId: F } = (0, u.TH)(),
         V = (0, p.e7)([ed.Z], () => null != c && ed.Z.isLurking(c.guild_id), [c]),
         z = (0, p.e7)([eM.Z], () => eM.Z.hasSeen(null == c ? void 0 : c.guild_id, V), [c, V]),
-        K = (0, p.e7)([y.Z, S.ZP], () => (null != S.ZP.getConnectedActivityChannelId() && S.ZP.getActivityPanelMode() === e2.Ez.PANEL ? (S.ZP.getFocusedLayout() === e2.MI.NO_CHAT ? e1.AEg.NO_CHAT : e1.AEg.NORMAL) : null != s ? y.Z.getLayout(s) : e1.AEg.NORMAL), [s]),
+        K = (0, p.e7)([y.Z, Z.ZP], () => (null != Z.ZP.getConnectedActivityChannelId() && Z.ZP.getActivityPanelMode() === e2.Ez.PANEL ? (Z.ZP.getFocusedLayout() === e2.MI.NO_CHAT ? e1.AEg.NO_CHAT : e1.AEg.NORMAL) : null != s ? y.Z.getLayout(s) : e1.AEg.NORMAL), [s]),
         Y = (0, p.e7)([y.Z], () => (null != c ? y.Z.getSelectedParticipant(c.id) : null)),
         q = (0, p.e7)([ez.default], () => ez.default.getCurrentUser()),
         X = (0, eo.Z)(v),
@@ -774,8 +774,8 @@ t.Z = l.memo(function (e) {
         }, [r, eg]);
     let eC = (0, N.ts)(c),
         ex = null != c && c.isPrivate(),
-        e_ = (0, Z.Z)(ex),
-        ev = (0, Z.Z)(null == c ? void 0 : c.id);
+        e_ = (0, S.Z)(ex),
+        ev = (0, S.Z)(null == c ? void 0 : c.id);
     l.useEffect(() => {
         let e = e_ && !ex,
             t = e_ && ex && (null == c ? void 0 : c.id) !== ev;

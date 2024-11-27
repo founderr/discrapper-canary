@@ -26,8 +26,8 @@ var i = n(200651),
     E = n(703656),
     b = n(493754),
     N = n(880831),
-    Z = n(73563),
-    S = n(800965),
+    S = n(73563),
+    Z = n(800965),
     T = n(107169),
     j = n(891551),
     A = n(314897),
@@ -102,7 +102,7 @@ function ei(e) {
                   })
                 : null,
             p
-                ? (0, i.jsx)(S.Z, {
+                ? (0, i.jsx)(Z.Z, {
                       className: Q.rightTrayIcon,
                       popoutOpen: r,
                       onOpenPopout: ee(t, u),
@@ -138,7 +138,7 @@ function er(e) {
         v = (0, D.w8)(n.id, w.pV.SPEAKER),
         I = (0, o.e7)([g.Z], () => g.Z.getSelectedParticipant(n.id)),
         E = h && f !== q.IlC.POPOUT,
-        [b, S] = l.useState(0),
+        [b, Z] = l.useState(0),
         { isOnStartStageScreen: T } = (0, U.ZP)();
     (0, U.MV)(n);
     let j = (0, o.e7)([y.Z], () => y.Z.getToastsEnabled(n.id)),
@@ -156,7 +156,7 @@ function er(e) {
                     channel: n,
                     onScroll: (e) => {
                         let { scrollTop: t } = e.target;
-                        (0, s.debounce)(() => S(t), 1000, { leading: !0 })();
+                        (0, s.debounce)(() => Z(t), 1000, { leading: !0 })();
                     }
                 })
               : (0, i.jsx)(G.Z, {
@@ -164,12 +164,12 @@ function er(e) {
                     channel: n,
                     hasConnectPermission: _
                 })),
-        (0, i.jsx)(Z.Z, {
+        (0, i.jsx)(S.Z, {
             style: {
                 height: 'calc(100% - '.concat(A, ')'),
                 paddingTop: A
             },
-            disableGradients: 0 === b && Z.e.TOP,
+            disableGradients: 0 === b && S.e.TOP,
             renderBottomLeft: () => (0, i.jsx)(el, { channel: n }),
             renderBottomCenter: () =>
                 C
@@ -228,8 +228,8 @@ function ea(e) {
         E = null != C && !C.closed,
         { analyticsLocations: b } = (0, f.ZP)(m.Z.STAGE_CHANNEL_CALL),
         N = (0, p.bp)(),
-        Z = (0, o.e7)([g.Z], () => g.Z.getChatOpen(t.id), [t.id]),
-        S = (0, o.e7)([P.Z], () => P.Z.getGuild(t.guild_id), [t.guild_id]);
+        S = (0, o.e7)([g.Z], () => g.Z.getChatOpen(t.id), [t.id]),
+        Z = (0, o.e7)([P.Z], () => P.Z.getGuild(t.guild_id), [t.guild_id]);
     l.useEffect(() => {
         null == c.K.get($) &&
             ((0, d.openModalLazy)(async () => {
@@ -253,7 +253,7 @@ function ea(e) {
                                 (0, i.jsx)('div', {
                                     className: a()(Q.callContainer, e, {
                                         [Q.sidebarVisible]: r,
-                                        [Q.sidebarOrChatVisible]: r || Z
+                                        [Q.sidebarOrChatVisible]: r || S
                                     }),
                                     children: (0, i.jsx)(er, {
                                         channel: t,
@@ -262,7 +262,7 @@ function ea(e) {
                                         popoutWindow: C,
                                         popoutWindowAlwaysOnTop: v,
                                         popoutOpen: E,
-                                        chatOpen: Z
+                                        chatOpen: S
                                     })
                                 })
                         }),
@@ -270,17 +270,17 @@ function ea(e) {
                             ? (0, i.jsx)(H.Z, {
                                   channel: t,
                                   toggleRequestToSpeakSidebar: u,
-                                  chatOpen: Z
+                                  chatOpen: S
                               })
                             : null,
                         (0, i.jsx)('div', {
                             className: Q.channelChatWrapper,
                             children:
-                                Z &&
+                                S &&
                                 (!E || (E && N === q.IlC.POPOUT)) &&
                                 (0, i.jsx)(_.Z, {
                                     channel: t,
-                                    guild: S,
+                                    guild: Z,
                                     maxWidth: T - 550
                                 })
                         })

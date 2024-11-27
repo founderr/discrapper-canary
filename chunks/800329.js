@@ -38,7 +38,7 @@ function h(e) {
             tileStyle: E,
             tileWidth: b,
             rows: N,
-            columns: Z
+            columns: S
         } = l.useMemo(
             () =>
                 (function (e, t, n) {
@@ -84,8 +84,8 @@ function h(e) {
                 })(_, v, I),
             [_, v, I]
         ),
-        S = Z + 1,
-        T = S * b + (S - 1) * 8 <= C,
+        Z = S + 1,
+        T = Z * b + (Z - 1) * 8 <= C,
         j = Math.floor(b / c) + 8,
         A = Math.max(0, I - j * N) / 2;
     return (0, i.jsx)(s.Z, {
@@ -94,7 +94,7 @@ function h(e) {
         listPadding: [p + A, 0, m + A - 8, 8],
         renderRow: function (e) {
             var t;
-            let n = e * Z;
+            let n = e * S;
             return (0, i.jsx)(
                 'div',
                 {
@@ -102,7 +102,7 @@ function h(e) {
                     children:
                         null == r
                             ? void 0
-                            : null === (t = r.slice(n, n + Z)) || void 0 === t
+                            : null === (t = r.slice(n, n + S)) || void 0 === t
                               ? void 0
                               : t.map((e, t) => {
                                     var l;
@@ -113,8 +113,8 @@ function h(e) {
                                             style: E,
                                             className: a()(o.tile, {
                                                 [o.padColumn]: T,
-                                                [o.noVerticalMargin]: r >= (N - 1) * Z,
-                                                [o.noHorizontalMargin]: (r + 1) % Z == 0 || r === _ - 1
+                                                [o.noVerticalMargin]: r >= (N - 1) * S,
+                                                [o.noHorizontalMargin]: (r + 1) % S == 0 || r === _ - 1
                                             }),
                                             children: (0, i.jsx)('div', {
                                                 className: o.tileSizer,

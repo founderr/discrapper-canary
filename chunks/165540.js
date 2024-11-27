@@ -20,8 +20,8 @@ var i = n(200651),
     E = n(61356),
     b = n(981631),
     N = n(314734),
-    Z = n(921944),
-    S = n(388032),
+    S = n(921944),
+    Z = n(388032),
     T = n(805660),
     j = n(795361);
 let A = l.forwardRef(function (e, t) {
@@ -38,7 +38,7 @@ let A = l.forwardRef(function (e, t) {
         [C]
     );
     let v = l.useCallback(() => {
-        (0, u.yw)(b.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), f ? h.yT(m.ti.DISMISSED) : ((0, _.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: Z.L.TAKE_ACTION }), h.__(m._b.TEXT, n)), x();
+        (0, u.yw)(b.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), f ? h.yT(m.ti.DISMISSED) : ((0, _.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: S.L.TAKE_ACTION }), h.__(m._b.TEXT, n)), x();
     }, [f, n, x]);
     return (0, i.jsx)('div', {
         className: a()(T.buttonContainer, N.t4),
@@ -49,7 +49,7 @@ let A = l.forwardRef(function (e, t) {
             tabIndex: 0,
             className: a()(T.button, { [T.buttonActive]: f }),
             onClick: v,
-            'aria-label': S.intl.string(S.t.erHFxM),
+            'aria-label': Z.intl.string(Z.t.erHFxM),
             focusProps: {
                 offset: {
                     top: 4,
@@ -84,7 +84,7 @@ function y(e) {
                   children: [
                       (0, i.jsx)('img', {
                           className: a()(T.buttonContainer, T.button, T.channelAppLauncherButtonPopoutIcon),
-                          alt: S.intl.string(S.t.X4IxWF),
+                          alt: Z.intl.string(Z.t.X4IxWF),
                           src: null == c ? void 0 : c.iconURL,
                           'aria-hidden': !0,
                           draggable: !1
@@ -93,7 +93,7 @@ function y(e) {
                           className: T.channelAppLauncherButtonPopoutIconShimmerContainer,
                           children: (0, i.jsx)('img', {
                               className: a()(T.channelAppLauncherButtonPopoutIconShimmer),
-                              alt: S.intl.string(S.t.X4IxWF),
+                              alt: Z.intl.string(Z.t.X4IxWF),
                               src: j,
                               'aria-hidden': !0,
                               draggable: !1
@@ -104,7 +104,7 @@ function y(e) {
             : null;
     return u
         ? (0, i.jsx)(d.Tooltip, {
-              text: S.intl.string(S.t.JDj6Xl),
+              text: Z.intl.string(Z.t.JDj6Xl),
               shouldShow: o,
               forceOpen: o,
               children: () =>

@@ -25,8 +25,8 @@ var i = n(200651),
     E = n(430824),
     b = n(979651),
     N = n(664342),
-    Z = n(124368),
-    S = n(981631),
+    S = n(124368),
+    Z = n(981631),
     T = n(388032),
     j = n(31224);
 function A(e) {
@@ -43,7 +43,7 @@ function A(e) {
                     type: 'SIDEBAR_CLOSE',
                     baseChannelId: e.parent_id
                 }),
-                (0, _.ad)(e, { source: Z.on.VOICE_AUTO_OPEN }));
+                (0, _.ad)(e, { source: S.on.VOICE_AUTO_OPEN }));
         }, [t, e]);
     })(y);
     let R = l.useRef(!1);
@@ -52,12 +52,12 @@ function A(e) {
             if (null == y || R.current) return;
             R.current = !0;
             let e = (0, h.K)(v.Z.getChannel(y.id), !0);
-            (0, u.yw)(S.rMx.CHANNEL_OPENED, {
+            (0, u.yw)(Z.rMx.CHANNEL_OPENED, {
                 ...e,
                 ...(0, u.$H)(y.id),
                 channel_view: A
             }),
-                (0, p.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: y.id });
+                (0, p.a)(Z.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: y.id });
         }, [y, A]),
         null == y || null == P)
     )

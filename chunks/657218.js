@@ -26,8 +26,8 @@ var i = n(200651),
     E = n(665149),
     b = n(294218),
     N = n(913663),
-    Z = n(268350),
-    S = n(695346),
+    S = n(268350),
+    Z = n(695346),
     T = n(592125),
     j = n(703558),
     A = n(375954),
@@ -149,7 +149,7 @@ function W(e) {
         {
             nameError: E,
             messageError: b,
-            submit: S,
+            submit: Z,
             submitting: T
         } = (function (e) {
             let { parentChannel: t, parentMessageId: n, threadSettings: i, privateThreadMode: r, textAreaState: a, location: s } = e,
@@ -218,7 +218,7 @@ function W(e) {
                             );
                         }
                         return (
-                            (0, Z.qB)(t.id, V.drafts.type),
+                            (0, S.qB)(t.id, V.drafts.type),
                             p(!1),
                             {
                                 shouldClear: !0,
@@ -247,7 +247,7 @@ function W(e) {
             className: a()(G.messagesWrapper, 'group-spacing-'.concat(d)),
             children: (0, i.jsxs)('form', {
                 onSubmit: (e) => {
-                    e.preventDefault(), S();
+                    e.preventDefault(), Z();
                 },
                 className: G.form,
                 children: [
@@ -296,7 +296,7 @@ function W(e) {
                                 parentChannel: t,
                                 textAreaState: x,
                                 setTextAreaState: _,
-                                submit: S,
+                                submit: Z,
                                 error: b
                             }),
                             (0, i.jsx)(u.Z, {
@@ -449,7 +449,7 @@ function q(e) {
 function X(e) {
     let { parentChannel: t, parentMessageId: n } = e,
         l = (0, s.e7)([A.Z], () => (null == n ? null : A.Z.getMessage(t.id, n))),
-        r = S.jU.useSetting();
+        r = Z.jU.useSetting();
     return null != l
         ? (0, i.jsx)(b.Z, {
               className: G.messagePreview,

@@ -1,6 +1,6 @@
 n.d(t, {
     NZ: function () {
-        return eZ;
+        return eS;
     },
     r: function () {
         return eN;
@@ -29,8 +29,8 @@ var i,
     E = n(596040),
     b = n(100527),
     N = n(906732),
-    Z = n(358221),
-    S = n(887012),
+    S = n(358221),
+    Z = n(887012),
     T = n(659580),
     j = n(793865),
     A = n(575175),
@@ -87,7 +87,7 @@ function eN(e, t) {
     let n = () => g.Z.setVideoEnabled(e);
     e ? (0, e_.Z)(n, t) : n();
 }
-function eZ(e) {
+function eS(e) {
     let { channel: t, currentUser: n, exitFullScreen: i, canGoLive: l, hasPermission: s, disabled: o } = e,
         c = (0, v.bp)(),
         d = (0, p.Wu)([en.Z], () => en.Z.getAllActiveStreams()),
@@ -102,16 +102,16 @@ function eZ(e) {
         }, [I, t.id, l, i]),
         b = (0, G.x8)('GoLiveButton'),
         N = (0, P.Zm)(t, 'GoLiveButton'),
-        Z = (0, P.bK)(),
-        [S, T] = a.useState(!1);
+        S = (0, P.bK)(),
+        [Z, T] = a.useState(!1);
     a.useEffect(() => {
-        if ((T(t.isHDStreamSplashed && null == u && !Z), t.isHDStreamSplashed)) {
+        if ((T(t.isHDStreamSplashed && null == u && !S), t.isHDStreamSplashed)) {
             let e = setTimeout(() => {
                 T(!1);
             }, 300000);
             return () => clearTimeout(e);
         }
-    }, [t.isHDStreamSplashed, u, N, Z]);
+    }, [t.isHDStreamSplashed, u, N, S]);
     let j = () => {
             if (l) {
                 E();
@@ -149,7 +149,7 @@ function eZ(e) {
                     : null,
                 popoutOpen: t,
                 shouldShowTooltip: !t,
-                premiumGlow: S,
+                premiumGlow: Z,
                 buttonRef: _,
                 onClick: null != u ? A : j
             });
@@ -230,7 +230,7 @@ function eZ(e) {
         ]
     });
 }
-function eS(e) {
+function eZ(e) {
     let { channel: t, idle: n } = e,
         i = t.getGuildId();
     return (0, E.Z)(i, t.id)
@@ -246,7 +246,7 @@ function eS(e) {
 ((l = i || (i = {})).ACTIVITY = 'ACTIVITY'), (l.STREAM = 'STREAM'), (l.CALL = 'CALL'), (l.EVENT = 'EVENT');
 let eT = a.memo(function (e) {
     let { connectedActivityApplicationId: t, currentUser: n, onDisconnectCall: i, channel: l } = e,
-        s = (0, p.e7)([Z.Z], () => Z.Z.getSelectedParticipant(l.id)),
+        s = (0, p.e7)([S.Z], () => S.Z.getSelectedParticipant(l.id)),
         { reducedMotion: o } = a.useContext(f.AccessibilityPreferencesContext),
         [c, d] = a.useState(!1),
         h = null == s ? void 0 : s.id,
@@ -286,7 +286,7 @@ let eT = a.memo(function (e) {
     a.useEffect(() => {
         I() !== E && d(!0);
     }, [E, I]);
-    let S = a.useCallback(() => {
+    let Z = a.useCallback(() => {
             if (null != m) (0, x.g)((0, k.V9)(m));
             else for (let e of _) (0, x.g)((0, k.V9)(e));
         }, [_, m]),
@@ -312,7 +312,7 @@ let eT = a.memo(function (e) {
                         hasPermission: !0,
                         streamActive: !0,
                         color: 'red',
-                        onClick: S,
+                        onClick: Z,
                         onPopoutClick: _.length > 1 ? t : null,
                         isSelfStream: !1
                     });
@@ -416,13 +416,13 @@ t.ZP = function (e) {
         { suppress: g, selfMute: C, mute: x } = (0, eh.Z)(n),
         { canGoLive: v } = (0, p.cj)([el.Z], () => ({ canGoLive: (0, O.Z)(el.Z) })),
         E = (0, L.Z)(),
-        Z = (0, p.e7)([R.Z], () => null != R.Z.getAwaitingRemoteSessionInfo()),
+        S = (0, p.e7)([R.Z], () => null != R.Z.getAwaitingRemoteSessionInfo()),
         y = null != E,
         P = (0, p.e7)([er.Z], () => {
             var e;
             return (null !== (e = null == E ? void 0 : E.channelId) && void 0 !== e ? e : er.Z.getVoiceChannelId()) === n.id;
         }),
-        M = (0, S.Z)(n, !0),
+        M = (0, Z.Z)(n, !0),
         k = (0, p.e7)([I.ZP], () => {
             let e = I.ZP.getSelfEmbeddedActivityForChannel(n.id);
             return null != e ? e.applicationId : null;
@@ -487,12 +487,12 @@ t.ZP = function (e) {
                                 }
                             }),
                         !y &&
-                            (0, r.jsx)(eS, {
+                            (0, r.jsx)(eZ, {
                                 channel: n,
                                 idle: null === (t = null == s ? void 0 : s.idle) || void 0 === t || t
                             }),
                         !y &&
-                            (0, r.jsx)(eZ, {
+                            (0, r.jsx)(eS, {
                                 channel: n,
                                 currentUser: c,
                                 exitFullScreen: a,
@@ -525,7 +525,7 @@ t.ZP = function (e) {
                                     serverMute: x,
                                     suppress: g,
                                     popoutOpen: i,
-                                    awaitingRemote: Z,
+                                    awaitingRemote: S,
                                     onClick: () => (0, A.Z)(x, g, ev.jXE.VOICE_CONTROL_TRAY)
                                 });
                             }

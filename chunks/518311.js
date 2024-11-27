@@ -28,8 +28,8 @@ var i,
     E = n(425493),
     b = n(461745),
     N = n(40851),
-    Z = n(367907),
-    S = n(43267),
+    S = n(367907),
+    Z = n(43267),
     T = n(933557),
     j = n(600164),
     A = n(313201),
@@ -101,7 +101,7 @@ let es = (e) => {
                 className: ee.confirmChannelItemContainer,
                 children: [
                     (0, l.jsx)(m.Avatar, {
-                        src: (0, S.x)(n),
+                        src: (0, Z.x)(n),
                         size: m.AvatarSizes.SIZE_24,
                         'aria-label': r
                     }),
@@ -176,7 +176,7 @@ class ec extends (i = r.PureComponent) {
     componentDidMount() {
         let { channel: e } = this.props;
         f.Z.wait(() => v.Z.open(null == e ? void 0 : e.id));
-        let t = (0, Z.v_)(e);
+        let t = (0, S.v_)(e);
         F.default.track(Q.rMx.OPEN_POPOUT, {
             ...t,
             type: this._getAnalyticsEntryPoint().entryPointType,
@@ -579,7 +579,7 @@ class ec extends (i = r.PureComponent) {
             }),
             ei(this, 'handleQueryChange', (e) => {
                 let { channel: t } = this.props,
-                    n = (0, Z.v_)(t);
+                    n = (0, S.v_)(t);
                 v.Z.search(e, null == t ? void 0 : t.id),
                     null != this._existingTimeout && clearTimeout(this._existingTimeout),
                     (this._existingTimeout = setTimeout(() => {
@@ -610,7 +610,7 @@ class ec extends (i = r.PureComponent) {
             ei(this, 'createNewDM', (e) => {
                 let t = this._searchCounter,
                     { channel: n } = this.props,
-                    i = (0, Z.v_)(n),
+                    i = (0, S.v_)(n),
                     l = !0;
                 1 === e.length && (l = null == C.Z._openCachedDMChannel(e[0])),
                     F.default.track(Q.rMx.CREATE_DM_USER_LIST_CLICKED, {
@@ -626,7 +626,7 @@ class ec extends (i = r.PureComponent) {
             }),
             ei(this, 'pushToExistingDM', (e, t) => {
                 let n = this._searchCounter,
-                    i = (0, Z.v_)(e),
+                    i = (0, S.v_)(e),
                     l = w.Z.getChannelId() === e.id;
                 C.Z.addRecipients(e.id, t, Q.Sbl.ADD_FRIENDS_TO_DM).then((n) => {
                     if (!!l) {

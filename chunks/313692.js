@@ -27,7 +27,7 @@ var i = n(200651),
     b = n(949801);
 function N(e) {
     var t, n;
-    let { userId: r, guildId: N, location: Z, className: S, onNavigate: T } = e,
+    let { userId: r, guildId: N, location: S, className: Z, onNavigate: T } = e,
         j = l.useRef(null),
         A = (0, o.e7)([f.ZP], () => f.ZP.getGuildSidebarState(N), [N]),
         y = l.useRef(0),
@@ -142,7 +142,7 @@ function N(e) {
     return null == L || null == k || null == H
         ? null
         : (0, i.jsxs)('div', {
-              className: a()(E.container, S),
+              className: a()(E.container, Z),
               children: [
                   (0, i.jsx)(v.Z, {
                       guildId: N,

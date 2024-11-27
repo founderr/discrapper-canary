@@ -19,12 +19,12 @@ t.Z = (e) => {
         E = (0, s.e7)([h.Z], () => h.Z.effectCooldownEndTime),
         b = l.useMemo(() => (null != E ? (E.getTime() - Date.now()) / 1000 : 0), [E]),
         { seconds: N } = (0, c.Z)(null != E ? E : new Date()),
-        Z = N > 0,
-        S = l.useCallback(
+        S = N > 0,
+        Z = l.useCallback(
             (e) => {
-                if ('focus' !== e.type) !v && !Z && C();
+                if ('focus' !== e.type) !v && !S && C();
             },
-            [v, Z, C]
+            [v, S, C]
         ),
         T = l.useCallback(() => {
             !v && x();
@@ -70,7 +70,7 @@ t.Z = (e) => {
                 onClick: (e) => {
                     j(e, t);
                 },
-                onMouseEnter: S,
+                onMouseEnter: Z,
                 onMouseLeave: T,
                 isActive: A
             });

@@ -26,9 +26,9 @@ function I(e) {
     let { channel: t, themeable: I } = e,
         E = t.getGuildId(),
         { mute: b, suppress: N } = (0, p.Z)(t),
-        Z = (0, r.e7)([g.Z], () => g.Z.isDeaf()),
-        S = b || N || Z,
-        T = (0, d.sR)({ isSoundboardButtonDisabled: S }),
+        S = (0, r.e7)([g.Z], () => g.Z.isDeaf()),
+        Z = b || N || S,
+        T = (0, d.sR)({ isSoundboardButtonDisabled: Z }),
         [j, A] = (0, c.cv)(T);
     function y(e) {
         null != E &&
@@ -55,7 +55,7 @@ function I(e) {
             ref: P,
             renderPopout: (e) => {
                 let { closePopout: n } = e;
-                return S
+                return Z
                     ? null
                     : (0, i.jsx)(m.Z, {
                           children: (0, i.jsx)(h.Z, {
@@ -78,10 +78,10 @@ function I(e) {
                     label: (function () {
                         if (b) return v.intl.string(v.t['Ox4/zc']);
                         if (N) return v.intl.string(v.t['+YBKYG']);
-                        if (Z) return v.intl.string(v.t.X1lQlp);
+                        if (S) return v.intl.string(v.t.X1lQlp);
                     })(),
                     iconComponent: s.SoundboardIcon,
-                    disabled: S,
+                    disabled: Z,
                     onContextMenu: y,
                     ...e
                 })

@@ -21,22 +21,22 @@ var l,
     E = n(594174),
     b = n(981631);
 let N = !1,
-    Z = '',
-    S = 0,
+    S = '',
+    Z = 0,
     T = [],
     j = !1,
     A = new Set(),
     y = null;
 function P() {
-    (Z = ''), (S = 0), (T = []), (A = new Set()), (N = !1), (y = null);
+    (S = ''), (Z = 0), (T = []), (A = new Set()), (N = !1), (y = null);
 }
 function M(e) {
-    (Z = e), (S = 0), R();
+    (S = e), (Z = 0), R();
 }
 function R() {
     if (!N) return !1;
     let e = x.Z.getChannel(y);
-    if (0 === Z.trim().length)
+    if (0 === S.trim().length)
         return (
             null != i && i.clearQuery(),
             (T = (function (e) {
@@ -57,7 +57,7 @@ function R() {
     return (
         null != i &&
             i.setQuery(
-                Z,
+                S,
                 {
                     friends: !0,
                     provisional: !1
@@ -103,7 +103,7 @@ function k(e, t) {
 }
 function O(e) {
     let { results: t } = e;
-    if (!!N && '' !== Z)
+    if (!!N && '' !== S)
         (T = t
             .map((e) => {
                 let { id: t } = e;
@@ -140,12 +140,12 @@ class H extends (l = d.ZP.Store) {
         return A;
     }
     getQuery() {
-        return Z;
+        return S;
     }
     getState() {
         return {
-            query: Z,
-            selectedRow: S,
+            query: S,
+            selectedRow: Z,
             selectedUsers: A,
             results: T,
             hasFriends: j
@@ -183,7 +183,7 @@ let G = new H(u.Z, {
         (y = e.channelId), M(e.query);
     },
     PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function (e) {
-        S = e.row;
+        Z = e.row;
     },
     PRIVATE_CHANNEL_RECIPIENTS_ADD_USER: function (e) {
         let { userId: t } = e;

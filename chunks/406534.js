@@ -28,8 +28,8 @@ var i = n(200651),
     E = n(88101),
     b = n(576954),
     N = n(280006),
-    Z = n(347102),
-    S = n(765104),
+    S = n(347102),
+    Z = n(765104),
     T = n(122707),
     j = n(779836),
     A = n(23750),
@@ -96,7 +96,7 @@ function ei(e) {
         eg = (0, H.$)(p),
         eC = G.length > 0 && (null === (t = G.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(p)),
         ex = (0, o.ts)(p),
-        e_ = (0, r.e7)([S.Z], () => S.Z.shouldShowTopicsBar() && !eh),
+        e_ = (0, r.e7)([Z.Z], () => Z.Z.shouldShowTopicsBar() && !eh),
         ev = (0, E.P)(p.id),
         eI = (0, v.z)(p.id, $.zr),
         eE = (0, u.k)(p.id, $.zr),
@@ -120,10 +120,10 @@ function ei(e) {
                             warningId: t.id,
                             senderId: e.getRecipientId()
                         });
-            return e.isGroupDM() && (0, N.f)({ location: 'blocked_user_banner' }) ? (0, i.jsx)(Z.e, { channel: e }) : null;
+            return e.isGroupDM() && (0, N.f)({ location: 'blocked_user_banner' }) ? (0, i.jsx)(S.e, { channel: e }) : null;
         })(p, null !== (n = null != ev ? ev : eI) && void 0 !== n ? n : eE),
-        eZ = p.isForumPost() && !eC ? (0, i.jsx)(f.Z, { postId: p.id }) : null,
-        eS = (0, C.Z)(p.id);
+        eS = p.isForumPost() && !eC ? (0, i.jsx)(f.Z, { postId: p.id }) : null,
+        eZ = (0, C.Z)(p.id);
     (0, q.Z)();
     let eT = null,
         ej = [],
@@ -195,7 +195,7 @@ function ei(e) {
                     flashKey: e.flashKey,
                     id: (0, D.p)(p.id, e.content.id),
                     isLastItem: t >= ea.length - 1,
-                    renderContentOnly: eS
+                    renderContentOnly: eZ
                 },
                 e.content.id
             );
@@ -447,7 +447,7 @@ function ei(e) {
         channelStreamMarkup: ej,
         newMessagesBar: l,
         jumpToPresentBar: s,
-        forumPostActionBar: eZ,
+        forumPostActionBar: eS,
         safetyWarningBanner: eN
     };
 }

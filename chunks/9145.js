@@ -26,8 +26,8 @@ var i = n(200651),
     E = n(51144),
     b = n(566620),
     N = n(317381),
-    Z = n(619915),
-    S = n(988980),
+    S = n(619915),
+    Z = n(988980),
     T = n(952561),
     j = n(563218),
     A = n(884338),
@@ -48,8 +48,8 @@ function w(e) {
         U = (0, T.Z)(),
         H = (0, s.Wu)([N.ZP], () => (null != w ? N.ZP.getEmbeddedActivitiesForChannel(w) : []), [w]),
         G = (0, s.e7)([C.Z], () => C.Z.getChannel(w)),
-        F = (0, Z.gb)(H),
-        V = (0, Z.uF)(F),
+        F = (0, S.gb)(H),
+        V = (0, S.uF)(F),
         z = l.useCallback(() => {
             (0, b.tg)(M.Ez.PIP);
         }, []),
@@ -79,7 +79,7 @@ function w(e) {
     let et = $.width / Math.max($.height, 1) < M.I0,
         en = 0,
         ei = 0,
-        el = (0, S.Z)(null == U ? void 0 : U.id);
+        el = (0, Z.Z)(null == U ? void 0 : U.id);
     if (!el) {
         let e = $.width,
             t = $.height;

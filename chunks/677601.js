@@ -21,8 +21,8 @@ var i = n(200651),
     E = n(110924),
     b = n(40851),
     N = n(636449),
-    Z = n(115130),
-    S = n(317381),
+    S = n(115130),
+    Z = n(317381),
     T = n(596040),
     j = n(349619),
     A = n(100527),
@@ -75,8 +75,8 @@ var i = n(200651),
     eE = n(414910),
     eb = n(887012),
     eN = n(909820),
-    eZ = n(493010),
-    eS = n(742603),
+    eS = n(493010),
+    eZ = n(742603),
     eT = n(221888),
     ej = n(900211),
     eA = n(18759),
@@ -305,7 +305,7 @@ class ew extends l.PureComponent {
                     children:
                         r &&
                         (!d || !this.popoutOpen || this.inPopout) &&
-                        (0, i.jsx)(eZ.Z, {
+                        (0, i.jsx)(eS.Z, {
                             channel: t,
                             guild: n,
                             maxWidth: o
@@ -653,7 +653,7 @@ class ew extends l.PureComponent {
                                       ? null == e
                                           ? void 0
                                           : e()
-                                      : (0, i.jsx)(eS.Z, {
+                                      : (0, i.jsx)(eZ.Z, {
                                             channel: t,
                                             guild: n,
                                             appContext: l,
@@ -732,12 +732,12 @@ t.Z = function (e) {
         }, []),
         et = null !== (t = null == V ? void 0 : V.id) && void 0 !== t ? t : null,
         en = (0, T.Z)(et, n.id),
-        ei = (0, c.e7)([Z.Z], () => Z.Z.getFetchState(), []),
+        ei = (0, c.e7)([S.Z], () => S.Z.getFetchState(), []),
         el = (0, E.Z)(ei);
     l.useEffect(() => {
-        ei === Z.O.ERROR && el !== Z.O.ERROR && (0, h.showToast)((0, h.createToast)(eR.intl.string(eR.t.AlJyIy), h.ToastType.FAILURE));
+        ei === S.O.ERROR && el !== S.O.ERROR && (0, h.showToast)((0, h.createToast)(eR.intl.string(eR.t.AlJyIy), h.ToastType.FAILURE));
     }, [ei, el]);
-    let ep = (0, c.e7)([S.ZP], () => S.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
+    let ep = (0, c.e7)([Z.ZP], () => Z.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
     l.useEffect(() => {
         let e = !1,
             t = null;
@@ -753,7 +753,7 @@ t.Z = function (e) {
     let em = (0, eb.Z)(n, !0),
         ef = (0, L.bn)(d.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
         { analyticsLocations: eg } = (0, P.ZP)(A.Z.CHANNEL_CALL),
-        eC = S.ZP.getEmbeddedActivitiesForChannel(n.id);
+        eC = Z.ZP.getEmbeddedActivitiesForChannel(n.id);
     return (0, i.jsx)(P.Gt, {
         value: eg,
         children: (0, i.jsx)(v.Z, {

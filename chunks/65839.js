@@ -118,14 +118,14 @@ function E(e) {
     });
 }
 t.Z = (e) => {
-    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: r, searchQuery: a, setSearchQuery: c, handleClearSearch: u, handleSearchKeyPress: h, currentCategoryId: _, handleSelectCategory: v, categoryCounts: b, allEntriesCount: N, isLoading: Z } = e,
-        S = (0, s.e7)([d.Z], () => d.Z.getGuild(t.getGuildId()));
-    return null != S && S.hasFeature(f.oNc.SHARD)
+    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: r, searchQuery: a, setSearchQuery: c, handleClearSearch: u, handleSearchKeyPress: h, currentCategoryId: _, handleSelectCategory: v, categoryCounts: b, allEntriesCount: N, isLoading: S } = e,
+        Z = (0, s.e7)([d.Z], () => d.Z.getGuild(t.getGuildId()));
+    return null != Z && Z.hasFeature(f.oNc.SHARD)
         ? (0, i.jsx)(E, {
-              guild: S,
+              guild: Z,
               directoryEntries: n,
               handleCreateOrAddGuild: r,
-              isLoading: Z
+              isLoading: S
           })
         : (0, i.jsx)('div', {
               className: C.pageContainer,
@@ -173,7 +173,7 @@ t.Z = (e) => {
                               ]
                           })
                       }),
-                      Z && null == n
+                      S && null == n
                           ? (0, i.jsx)(o.Spinner, { className: C.spinner })
                           : null == n
                             ? void 0

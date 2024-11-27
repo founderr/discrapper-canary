@@ -24,7 +24,7 @@ function C(e) {
         [_, v] = i.useState(!1),
         [I, E] = i.useState(!1),
         [b, N] = i.useState(!1),
-        [Z, S] = i.useState(!1),
+        [S, Z] = i.useState(!1),
         [T, j] = i.useState(!1),
         A = _ || I || b,
         y = i.useCallback(
@@ -32,7 +32,7 @@ function C(e) {
                 if (!A) {
                     v(!0);
                     try {
-                        await (0, h.e4)(e), S(!0), null == n || n();
+                        await (0, h.e4)(e), Z(!0), null == n || n();
                     } catch (t) {
                         let e = new a.Hx(t);
                         null == C || C(e);
@@ -157,7 +157,7 @@ function C(e) {
         isAcceptLoading: _,
         isRejectLoading: I,
         isUserProfileLoading: b,
-        isOptimisticAccepted: Z,
+        isOptimisticAccepted: S,
         isOptimisticRejected: T
     };
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     m: function () {
-        return S;
+        return Z;
     }
 }),
     n(47120);
@@ -26,8 +26,8 @@ var i = n(200651),
     E = n(981631),
     b = n(388032),
     N = n(393289),
-    Z = n(883760);
-let S = (e) => {
+    S = n(883760);
+let Z = (e) => {
     let { onClick: t } = e;
     return (0, i.jsxs)(o.Clickable, {
         onClick: t,
@@ -35,7 +35,7 @@ let S = (e) => {
         children: [
             (0, i.jsx)('img', {
                 alt: '',
-                src: Z
+                src: S
             }),
             (0, i.jsx)(o.Text, {
                 variant: 'text-sm/semibold',
@@ -129,12 +129,12 @@ t.Z = (e) => {
                 h(!1);
             }
         },
-        Z = _.ZP.getGuildSplashURL({
+        S = _.ZP.getGuildSplashURL({
             id: r.guildId,
             splash: r.splash,
             size: 300 * (0, f.x_)()
         }),
-        S =
+        Z =
             null !==
                 (t = _.ZP.getGuildIconURL({
                     id: r.guildId,
@@ -165,9 +165,9 @@ t.Z = (e) => {
                         (0, i.jsx)('div', {
                             className: N.splash,
                             children:
-                                null != Z &&
+                                null != S &&
                                 (0, i.jsx)('img', {
-                                    src: Z,
+                                    src: S,
                                     alt: '',
                                     className: N.splashImage
                                 })
@@ -182,7 +182,7 @@ t.Z = (e) => {
                                     className: N.iconMask,
                                     children: (0, i.jsx)(p.Z, {
                                         className: N.icon,
-                                        iconSrc: S,
+                                        iconSrc: Z,
                                         guild: new C.ZP(r),
                                         size: p.Z.Sizes.MEDIUM,
                                         active: !0

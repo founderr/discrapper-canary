@@ -30,7 +30,7 @@ function C(e) {
         E = s.Z.getSettings().clipsEnabled,
         b = (null == x ? void 0 : x.ownerId) === h.default.getId(),
         N = !E || !(b || v) || I || null == n,
-        Z = l.useCallback(
+        S = l.useCallback(
             (e) =>
                 (0, i.jsx)(a.CameraIcon, {
                     ...e,
@@ -44,7 +44,7 @@ function C(e) {
             !N && (b ? (0, o.C1)() : (0, o.C1)(n.id));
         },
         disabled: N,
-        iconComponent: Z,
+        iconComponent: S,
         label: null == x ? f.intl.string(f.t.eg5qtb) : b || v ? (E ? (I ? void 0 : f.intl.string(f.t.U4URzM)) : f.intl.string(f.t.wSS1yM)) : f.intl.string(f.t.aRifJS),
         grow: !1
     });

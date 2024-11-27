@@ -3,7 +3,7 @@ n.d(t, {
         return T;
     },
     Z: function () {
-        return S;
+        return Z;
     }
 });
 var i = n(200651),
@@ -28,8 +28,8 @@ var i = n(200651),
     E = n(228168),
     b = n(388032),
     N = n(562296),
-    Z = n(321975);
-function S(e) {
+    S = n(321975);
+function Z(e) {
     let { user: t, channel: n, onViewBlockedProfileClick: r } = e,
         a = (0, C.ZP)(t.id),
         o = (0, d.ZP)(),
@@ -56,7 +56,7 @@ function S(e) {
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: Z,
+                                src: S,
                                 className: N.previewForCollected,
                                 'aria-hidden': !0
                             }),
@@ -106,7 +106,7 @@ function S(e) {
 }
 function T(e) {
     let { user: t, channel: n, onViewBlockedProfileClick: r } = e,
-        S = (0, C.ZP)(t.id),
+        Z = (0, C.ZP)(t.id),
         T = (0, d.ZP)(),
         j = (0, o.e7)([p.Z], () => p.Z.isBlocked(t.id)),
         { analyticsLocations: A } = (0, h.ZP)(j ? u.Z.BLOCKED_PROFILE_PANEL : u.Z.IGNORED_PROFILE_PANEL),
@@ -123,7 +123,7 @@ function T(e) {
             children: (0, i.jsx)(_.Z, {
                 ref: P,
                 user: t,
-                displayProfile: S,
+                displayProfile: Z,
                 profileType: E.y0.PANEL,
                 themeOverride: T,
                 children: (0, i.jsx)(s.u2, {
@@ -132,7 +132,7 @@ function T(e) {
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: Z,
+                                src: S,
                                 className: N.previewForCollected,
                                 'aria-hidden': !0
                             }),

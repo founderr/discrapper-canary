@@ -25,8 +25,8 @@ var i = n(200651),
     E = n(530),
     b = n(827313),
     N = n(101638),
-    Z = n(228168),
-    S = n(981631),
+    S = n(228168),
+    Z = n(981631),
     T = n(388032),
     j = n(866669);
 function A(e) {
@@ -45,13 +45,13 @@ function A(e) {
         children: [
             (0, i.jsx)(E.Z, {
                 user: t,
-                profileType: Z.y0.PANEL,
+                profileType: S.y0.PANEL,
                 nickname: o.ZP.getName(null, y.id, t),
                 pronouns: null == A ? void 0 : A.pronouns,
                 onOpenProfile: M,
                 tags: (0, i.jsx)(p.Z, {
                     displayProfile: A,
-                    profileType: Z.y0.PANEL
+                    profileType: S.y0.PANEL
                 }),
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [
@@ -65,7 +65,7 @@ function A(e) {
                     ]
                 })
             }),
-            R === S.OGo.PENDING_INCOMING &&
+            R === Z.OGo.PENDING_INCOMING &&
                 (0, i.jsx)(I.Z.Overlay, {
                     children: (0, i.jsx)(C.Z, {
                         user: t,

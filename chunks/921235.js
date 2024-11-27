@@ -38,8 +38,8 @@ function b(e) {
                     .reverse()
                     .find((e) => e.author.id !== p.default.getId() && e.state === _.yb.SENT && !(0, x.Z)(e))
         ),
-        Z = (0, s.e7)([f.default], () => f.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-        S = null !== (t = C.ZP.useName(Z)) && void 0 !== t ? t : v.intl.string(v.t.y1Wu2d),
+        S = (0, s.e7)([f.default], () => f.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
+        Z = null !== (t = C.ZP.useName(S)) && void 0 !== t ? t : v.intl.string(v.t.y1Wu2d),
         T = (0, s.e7)([u.Z], () => u.Z.getStickerById(E)),
         j = l.useCallback(async () => {
             if (null == r || '' === r)
@@ -55,7 +55,7 @@ function b(e) {
                     !e.ok && 429 === e.status && b(v.intl.string(v.t['Whhv4+']));
                 }
         }, [n.id, n.type, r]),
-        A = v.intl.formatToPlainString(v.t.m0zYbW, { username: S }),
+        A = v.intl.formatToPlainString(v.t.m0zYbW, { username: Z }),
         y =
             null != r && '' !== r
                 ? (0, i.jsx)(o.Text, {

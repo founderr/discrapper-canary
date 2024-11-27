@@ -43,8 +43,8 @@ function E(e) {
         E = null != g && g.hasFeature(_.oNc.NEWS),
         N = C && E,
         {
-            editingMessage: Z,
-            editingTextValue: S,
+            editingMessage: S,
+            editingTextValue: Z,
             editingRichValue: T
         } = (0, r.cj)(
             [u.Z],
@@ -60,10 +60,10 @@ function E(e) {
             (e, n, i) => {
                 let { content: l } = i,
                     r = p.Z.can(_.Plq.MANAGE_MESSAGES, t),
-                    o = null != Z && null != Z.author ? Z.author.id : null;
-                return N && (o === j || r) && null != Z && (0, f.yE)(Z.flags, _.iLy.CROSSPOSTED) ? s.Z.confirmEdit(e, n, l) : a.Z.editMessage(e, n, { content: l }), Promise.resolve();
+                    o = null != S && null != S.author ? S.author.id : null;
+                return N && (o === j || r) && null != S && (0, f.yE)(S.flags, _.iLy.CROSSPOSTED) ? s.Z.confirmEdit(e, n, l) : a.Z.editMessage(e, n, { content: l }), Promise.resolve();
             },
-            [Z, N, j, t]
+            [S, N, j, t]
         ),
         y = l.useCallback(
             (e) =>
@@ -74,12 +74,12 @@ function E(e) {
                 }),
             [c]
         );
-    return null != S && null != T
+    return null != Z && null != T
         ? (0, i.jsx)(x.Z, {
               ref: void 0,
               channel: t,
               message: n,
-              textValue: S,
+              textValue: Z,
               richValue: T,
               onCancel: a.Z.endEditMessage,
               onChange: a.Z.updateEditMessage,

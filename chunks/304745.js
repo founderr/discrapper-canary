@@ -26,8 +26,8 @@ var i = n(200651),
     E = n(301076),
     b = n(981631),
     N = n(921944),
-    Z = n(388032),
-    S = n(812801);
+    S = n(388032),
+    Z = n(812801);
 function T(e) {
     let { channel: t, idle: n } = e,
         T = (0, r.e7)([d.ZP], () => d.ZP.isLaunchingActivity()),
@@ -100,7 +100,7 @@ function T(e) {
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(s.Tooltip, {
-                                    text: Z.intl.string(Z.t.P8vmUl),
+                                    text: S.intl.string(S.t.P8vmUl),
                                     color: s.TooltipColors.BRAND,
                                     forceOpen: !0,
                                     shouldShow: o,
@@ -112,7 +112,7 @@ function T(e) {
                                                 'aria-label': A,
                                                 label: D ? void 0 : A,
                                                 isActivityActive: O || P,
-                                                className: S.controlButton,
+                                                className: Z.controlButton,
                                                 onClick: () => {
                                                     F(), (l === a.z.ACTIVITIES_MINI_SHELF_SPARKLES || l === a.z.ACTIVITY_GDM_ROCKET_SPARKLE || l === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || l === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || l === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && r(N.L.TAKE_ACTION);
                                                 },

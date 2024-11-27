@@ -25,7 +25,7 @@ var i = n(200651),
     E = n(388032);
 let b = l.memo(function (e) {
     var t;
-    let { baseMessage: n, referencedMessage: b, channel: N, compact: Z = !1, referencedUsernameProfile: S, referencedAvatarProfile: T, setPopout: j, isReplySpineClickable: A, showReplySpine: y } = e,
+    let { baseMessage: n, referencedMessage: b, channel: N, compact: S = !1, referencedUsernameProfile: Z, referencedAvatarProfile: T, setPopout: j, isReplySpineClickable: A, showReplySpine: y } = e,
         P = b.state === p.Y.LOADED ? b.message : void 0,
         M = (0, C.Uj)(P),
         R = (0, c.p)(),
@@ -105,7 +105,7 @@ let b = l.memo(function (e) {
         ),
         w = (0, v.wq)(null == P ? void 0 : P.author.id, N.id),
         B = (0, v.$3)(n, P, O, D),
-        U = (0, v.Wl)(P, N, S, j),
+        U = (0, v.Wl)(P, N, Z, j),
         H = (0, v.rY)(T, j),
         G = l.useCallback(
             () =>
@@ -123,11 +123,11 @@ let b = l.memo(function (e) {
         baseAuthor: F,
         referencedMessage: b,
         content: k,
-        compact: Z,
+        compact: S,
         isReplyAuthorBlocked: O,
         isReplyAuthorIgnored: D,
         showAvatarPopout: T,
-        showUsernamePopout: S,
+        showUsernamePopout: Z,
         renderPopout: _.Z,
         onClickAvatar: H,
         onClickUsername: U,

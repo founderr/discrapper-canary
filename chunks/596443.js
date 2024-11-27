@@ -27,11 +27,11 @@ var i = n(200651),
     E = n(351127),
     b = n(981631),
     N = n(388032),
-    Z = n(758570),
-    S = n(227893);
+    S = n(758570),
+    Z = n(227893);
 function T(e) {
     var t, n, r, s;
-    let { permission: o, roleIds: g, guild: _, specMap: v, categoryTitle: I, userId: Z } = e,
+    let { permission: o, roleIds: g, guild: _, specMap: v, categoryTitle: I, userId: S } = e,
         T = (0, c.e7)([C.Z], () => C.Z.getRoles(_.id)),
         j = b.Plq[o],
         A = null !== (r = null === (t = v[j.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== r ? r : (0, f.wt)(j),
@@ -47,13 +47,13 @@ function T(e) {
             [L, _.id]
         );
     return (0, i.jsxs)('div', {
-        className: a()(S.permissionItemContainer, { [S.elevatedPermission]: P }),
+        className: a()(Z.permissionItemContainer, { [Z.elevatedPermission]: P }),
         children: [
             (0, i.jsxs)('div', {
-                className: S.permissionItemHeader,
+                className: Z.permissionItemHeader,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: S.permissionTitle,
+                        className: Z.permissionTitle,
                         children: [
                             (0, i.jsx)(d.Text, {
                                 variant: 'text-md/medium',
@@ -62,7 +62,7 @@ function T(e) {
                             }),
                             null != I &&
                                 (0, i.jsxs)('div', {
-                                    className: S.permissionItemSubheader,
+                                    className: Z.permissionItemSubheader,
                                     children: [
                                         (0, i.jsx)(d.Text, {
                                             variant: 'text-xs/normal',
@@ -82,7 +82,7 @@ function T(e) {
                                                         text: N.intl.string(N.t.GZvXuL),
                                                         children: (e) =>
                                                             (0, i.jsxs)(d.Clickable, {
-                                                                className: S.elevatedPermissionContainer,
+                                                                className: Z.elevatedPermissionContainer,
                                                                 ...e,
                                                                 children: [
                                                                     (0, i.jsx)(d.ShieldLockIcon, {
@@ -112,7 +112,7 @@ function T(e) {
                                                         color: d.tokens.colors.INTERACTIVE_MUTED.css
                                                     }),
                                                     (0, i.jsx)('div', {
-                                                        className: S.elevatedPermissionContainer,
+                                                        className: Z.elevatedPermissionContainer,
                                                         children: (0, i.jsx)(d.Text, {
                                                             variant: 'text-xs/normal',
                                                             color: 'header-muted',
@@ -134,7 +134,7 @@ function T(e) {
             }),
             null != y &&
                 (0, i.jsx)('div', {
-                    className: S.permissionItemDescription,
+                    className: Z.permissionItemDescription,
                     children: (0, i.jsx)(d.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-secondary',
@@ -142,15 +142,15 @@ function T(e) {
                     })
                 }),
             (0, i.jsx)('div', {
-                className: S.permissionItemRoleContainer,
+                className: Z.permissionItemRoleContainer,
                 children: g.map((e) =>
-                    (0, E.Ov)(e, Z)
+                    (0, E.Ov)(e, S)
                         ? (0, i.jsx)(
                               'div',
                               {
-                                  className: S.roleTooltipItem,
+                                  className: Z.roleTooltipItem,
                                   children: (0, i.jsx)('div', {
-                                      className: S.roleChiplet,
+                                      className: Z.roleChiplet,
                                       children: (0, i.jsx)(d.Text, {
                                           variant: 'text-xs/medium',
                                           color: 'text-normal',
@@ -163,12 +163,12 @@ function T(e) {
                         : (0, i.jsx)(
                               d.Clickable,
                               {
-                                  className: a()(S.roleTooltipItem, { [S.editable]: L && !(0, u.pM)(_.id, e) }),
+                                  className: a()(Z.roleTooltipItem, { [Z.editable]: L && !(0, u.pM)(_.id, e) }),
                                   onClick: () => k(e),
                                   children: (0, i.jsx)(p.Z, {
                                       role: T[e],
                                       guildId: _.id,
-                                      className: S.roleChiplet
+                                      className: Z.roleChiplet
                                   })
                               },
                               e
@@ -256,7 +256,7 @@ function A(e) {
     return null == h || null == m
         ? null
         : (0, i.jsxs)('div', {
-              className: a()(Z.container, s),
+              className: a()(S.container, s),
               children: [
                   (0, i.jsx)(I.Z, {
                       guildId: n,
@@ -264,14 +264,14 @@ function A(e) {
                       onNavigate: u
                   }),
                   (0, i.jsx)(d.Scroller, {
-                      className: S.permissionsGroupContainer,
+                      className: Z.permissionsGroupContainer,
                       children: (0, i.jsx)(d.FormItem, {
                           title: N.intl.string(N.t.BBWnpq),
                           children: (0, i.jsxs)('div', {
-                              className: S.permissionsItemContainer,
+                              className: Z.permissionsItemContainer,
                               children: [
                                   (0, i.jsx)(d.SearchBar, {
-                                      className: S.searchBar,
+                                      className: Z.searchBar,
                                       query: M,
                                       placeholder: N.intl.string(N.t['yD9+dH']),
                                       onChange: D,

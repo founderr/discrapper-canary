@@ -44,16 +44,16 @@ function _(e) {
                 isTyping: t
             };
         })(t),
-        Z = l.useCallback(() => {
+        S = l.useCallback(() => {
             var e;
             null === (e = v.current) || void 0 === e || e.focus();
         }, []);
     (0, h.yp)({
         event: g.CkL.FOCUS_CHAT_BUTTON,
-        handler: Z
+        handler: S
     });
-    let S = I ? C.intl.string(C.t['5MstTk']) : C.intl.string(C.t.kkKapK),
-        T = [S];
+    let Z = I ? C.intl.string(C.t['5MstTk']) : C.intl.string(C.t.kkKapK),
+        T = [Z];
     N > 0 && T.push(C.intl.formatToPlainString(C.t['3l1GOz'], { mentionCount: N })), b > 0 && T.push(C.intl.string(C.t.x5zAGR));
     let j = (0, a.e7)([m.ZP], () => m.ZP.getFocusedLayout()),
         A = N > 0 ? N : b,
@@ -64,7 +64,7 @@ function _(e) {
             (0, i.jsx)(c.d, {
                 buttonRef: v,
                 onClick: E,
-                label: S,
+                label: Z,
                 'aria-label': T.join(', '),
                 tooltipPosition: 'top',
                 iconComponent: j === f.MI.NO_CHAT ? s.ChevronLargeUpIcon : s.ChevronLargeDownIcon,

@@ -1,6 +1,6 @@
 n.d(t, {
     y: function () {
-        return S;
+        return Z;
     }
 }),
     n(47120);
@@ -26,7 +26,7 @@ var i = n(200651),
     E = n(231338),
     b = n(388032),
     N = n(304066);
-let Z = (e) => {
+let S = (e) => {
         let { style: t, className: n, name: l, icon: r } = e;
         return (0, i.jsx)(u.Tooltip, {
             text: l,
@@ -39,15 +39,15 @@ let Z = (e) => {
                 })
         });
     },
-    S = (e) => {
+    Z = (e) => {
         let { currentStatus: t, channel: r } = e,
             s = l.useRef(C.Z.getRecentCustomStatuses()),
-            S = l.useRef((0, p.un)(d.z.HANG_STATUS_NEW_BADGE)).current,
+            Z = l.useRef((0, p.un)(d.z.HANG_STATUS_NEW_BADGE)).current,
             T = (0, x.V)(),
             [j, A] = l.useState(null != t ? t : null),
             y = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
             P = () => {
-                !S && (0, p.EW)(d.z.HANG_STATUS_NEW_BADGE);
+                !Z && (0, p.EW)(d.z.HANG_STATUS_NEW_BADGE);
             },
             M = (e, t) => {
                 e.stopPropagation(), (0, g.Zx)(t, !0), P();
@@ -85,7 +85,7 @@ let Z = (e) => {
         return (0, i.jsxs)('div', {
             className: N.popout,
             children: [
-                !S &&
+                !Z &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)('div', { className: N.popoutBackground }),
@@ -153,7 +153,7 @@ let Z = (e) => {
                                             'aria-label': l.title,
                                             onMouseEnter: () => O(n),
                                             onClick: (e) => M(e, n),
-                                            children: (0, i.jsx)(Z, {
+                                            children: (0, i.jsx)(S, {
                                                 className: a()(N.iconWidget, { [N.selectedWidget]: n === (null == t ? void 0 : t.state) }),
                                                 name: l.title,
                                                 icon: (0, i.jsx)('img', {
@@ -171,7 +171,7 @@ let Z = (e) => {
                                     'aria-label': b.intl.string(b.t.S90Fub),
                                     onClick: L,
                                     onMouseEnter: () => A(null),
-                                    children: (0, i.jsx)(Z, {
+                                    children: (0, i.jsx)(S, {
                                         className: N.optionButton,
                                         name: b.intl.string(b.t.S90Fub),
                                         icon: (0, i.jsx)(u.DenyIcon, {
@@ -199,7 +199,7 @@ let Z = (e) => {
                                             onClick: s ? void 0 : (t) => R(t, e),
                                             className: N.statusOptionContainer,
                                             children: [
-                                                (0, i.jsx)(Z, {
+                                                (0, i.jsx)(S, {
                                                     className: a()(N.iconWidget, { [N.selectedWidget]: l }),
                                                     name: e.status,
                                                     icon:
@@ -233,7 +233,7 @@ let Z = (e) => {
                                           {
                                               'aria-label': null != t ? b.intl.string(b.t.IN2LTk) : b.intl.string(b.t.UDg0qK),
                                               onClick: k,
-                                              children: (0, i.jsx)(Z, {
+                                              children: (0, i.jsx)(S, {
                                                   className: N.optionButton,
                                                   name: null != t ? b.intl.string(b.t.IN2LTk) : b.intl.string(b.t.UDg0qK),
                                                   icon: (0, i.jsx)(u.PencilIcon, {

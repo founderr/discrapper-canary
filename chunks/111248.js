@@ -36,16 +36,16 @@ function _(e) {
         })(),
         b = l.useRef(null),
         N = null == _.getGuildId() ? 70 : 50,
-        Z = (0, s.e7)([u.Z], () => u.Z.pipWidth(m.cL.CAMERA_PREVIEW)),
-        S = v.length;
-    let T = Z * (t = S) + 8 * (t - 1),
+        S = (0, s.e7)([u.Z], () => u.Z.pipWidth(m.cL.CAMERA_PREVIEW)),
+        Z = v.length;
+    let T = S * (t = Z) + 8 * (t - 1),
         j = l.useMemo(() => {
             var e, t, n, i;
             return {
-                minWidth: ((e = m.Rv[m.cL.CAMERA_PREVIEW]), e * (t = S) + 8 * (t - 1)),
-                maxWidth: ((n = m.$i[m.cL.CAMERA_PREVIEW]), n * (i = S) + 8 * (i - 1))
+                minWidth: ((e = m.Rv[m.cL.CAMERA_PREVIEW]), e * (t = Z) + 8 * (t - 1)),
+                maxWidth: ((n = m.$i[m.cL.CAMERA_PREVIEW]), n * (i = Z) + 8 * (i - 1))
             };
-        }, [S]);
+        }, [Z]);
     l.useLayoutEffect(() => {
         var e;
         null === (e = b.current) || void 0 === e || e.ensureIsInPosition();
@@ -53,10 +53,10 @@ function _(e) {
     let A = l.useCallback(
             (e) => {
                 var t, n;
-                let i = ((t = e), 0 === (n = S) ? t : (t - 8 * (n - 1)) / n);
+                let i = ((t = e), 0 === (n = Z) ? t : (t - 8 * (n - 1)) / n);
                 c.d7(i, m.cL.CAMERA_PREVIEW);
             },
-            [S]
+            [Z]
         ),
         y = l.useCallback(
             (e, t) => {
