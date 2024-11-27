@@ -13,32 +13,33 @@ var r = n(544891),
     o = n(675478),
     l = n(626135),
     u = n(981631);
-async function c(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    if (t) {
+async function c(e, t) {
+    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+    if (n) {
         a.Z.dispatch({ type: 'BILLING_USER_OFFER_FETCH_START' });
         try {
-            var n, c, d;
+            var c, d, f;
             null != e && l.default.track(u.rMx.FETCH_USER_OFFER_STARTED, { call_location: e });
-            let t = await r.tn.post({
+            let n = await r.tn.post({
                     url: u.ANM.USER_OFFER,
+                    body: null != t ? { payment_gateway: t } : {},
                     rejectWithError: !0
                 }),
-                f = null !== (n = t.body.user_trial_offer) && void 0 !== n ? n : null,
-                _ = null !== (c = t.body.user_discount) && void 0 !== c ? c : null,
-                p = null !== (d = t.body.user_discount_offer) && void 0 !== d ? d : null;
+                _ = null !== (c = n.body.user_trial_offer) && void 0 !== c ? c : null,
+                p = null !== (d = n.body.user_discount) && void 0 !== d ? d : null,
+                h = null !== (f = n.body.user_discount_offer) && void 0 !== f ? f : null;
             return (
-                null == f && (0, s.un)(i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (0, o.w9)(i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING),
+                null == _ && (0, s.un)(i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (0, o.w9)(i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING),
                 a.Z.dispatch({
                     type: 'BILLING_USER_OFFER_FETCH_SUCCESS',
-                    userTrialOffer: f,
-                    userDiscount: _,
-                    userDiscountOffer: p
+                    userTrialOffer: _,
+                    userDiscount: p,
+                    userDiscountOffer: h
                 }),
                 {
-                    userTrialOffer: f,
-                    userDiscount: _,
-                    userDiscountOffer: p
+                    userTrialOffer: _,
+                    userDiscount: p,
+                    userDiscountOffer: h
                 }
             );
         } catch (e) {

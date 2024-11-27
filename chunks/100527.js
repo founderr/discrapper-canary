@@ -256,6 +256,7 @@ var n, r;
     (r.EMBEDDED_ACTIVITY_MESSAGE = 'embedded activity message'),
     (r.REFERRAL_TRIALS_COMPOSER_BUTTON = 'referral trials composer button'),
     (r.REFERRAL_TRIALS_POPOUT = 'referral trials popout'),
+    (r.REFERRAL_MESSAGE_EMBED = 'referral message embed'),
     (r.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL = 'premium marketing announcement modal'),
     (r.PREMIUM_MARKETING_PAGE_BANNER = 'premium marketing page banner'),
     (r.ACTIVITY_BOOKMARK = 'activity bookmark'),

@@ -40,7 +40,7 @@ function E() {
 }
 function v() {
     let e = u.default.getCurrentUser();
-    !(0, c.I5)(e) && Object.keys(h.userDiscountOffers).length > 0 && (0, o.T)('UserOfferStore', !0);
+    !(0, c.I5)(e) && Object.keys(h.userDiscountOffers).length > 0 && (0, o.T)('UserOfferStore', void 0, !0);
 }
 function I() {
     var e;
@@ -80,6 +80,12 @@ class T extends (r = i.ZP.PersistedStore) {
         let t = h.userOffersLastFetchedAtDate,
             n = null !== (e = h.isFetching) && void 0 !== e && e;
         return null == t ? !n : !n && Date.now() - 172800000 > t;
+    }
+    shouldFetchReferralOffer() {
+        var e;
+        let t = h.userOffersLastFetchedAtDate,
+            n = null !== (e = h.isFetching) && void 0 !== e && e;
+        return null == t ? !n : !n && Date.now() - 600000 > t;
     }
     shouldFetchAnnualOffer() {
         let e = h.userAnnualOfferLastFetchedAtDate;
