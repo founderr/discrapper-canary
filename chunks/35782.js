@@ -9,7 +9,7 @@ let { Themes: r } = n(15202).V,
             ACTIVITY_CARD_BACKGROUND: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_70',
+                        raw: 'NEUTRAL_68',
                         opacity: 1
                     },
                     [r.LIGHT]: {
@@ -17,7 +17,7 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_88',
+                        raw: 'NEUTRAL_92',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -29,7 +29,7 @@ let { Themes: r } = n(15202).V,
             BACKGROUND_FLOATING: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_70',
+                        raw: 'NEUTRAL_68',
                         opacity: 1
                     },
                     [r.LIGHT]: {
@@ -37,7 +37,7 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_88',
+                        raw: 'NEUTRAL_92',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -89,19 +89,19 @@ let { Themes: r } = n(15202).V,
             BACKGROUND_MESSAGE_HOVER: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_81',
+                        raw: 'NEUTRAL_74',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'NEUTRAL_4',
+                        raw: 'NEUTRAL_3',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_99',
+                        raw: 'NEUTRAL_98',
                         opacity: 1
                     },
                     [r.DARKER]: {
-                        raw: 'NEUTRAL_89',
+                        raw: 'NEUTRAL_87',
                         opacity: 1
                     }
                 }
@@ -169,7 +169,7 @@ let { Themes: r } = n(15202).V,
             BACKGROUND_PRIMARY: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_75',
+                        raw: 'NEUTRAL_70',
                         opacity: 1
                     },
                     [r.LIGHT]: {
@@ -189,7 +189,7 @@ let { Themes: r } = n(15202).V,
             BACKGROUND_SECONDARY: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_78',
+                        raw: 'NEUTRAL_72',
                         opacity: 1
                     },
                     [r.LIGHT]: {
@@ -197,7 +197,7 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_95',
+                        raw: 'NEUTRAL_96',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -209,7 +209,7 @@ let { Themes: r } = n(15202).V,
             BACKGROUND_TERTIARY: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_81',
+                        raw: 'NEUTRAL_75',
                         opacity: 1
                     },
                     [r.LIGHT]: {
@@ -229,7 +229,7 @@ let { Themes: r } = n(15202).V,
             BG_BASE_PRIMARY: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_75',
+                        raw: 'NEUTRAL_70',
                         opacity: 1
                     },
                     [r.LIGHT]: {
@@ -249,7 +249,7 @@ let { Themes: r } = n(15202).V,
             BG_BASE_SECONDARY: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_78',
+                        raw: 'NEUTRAL_72',
                         opacity: 1
                     },
                     [r.LIGHT]: {
@@ -257,7 +257,7 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_95',
+                        raw: 'NEUTRAL_96',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -269,7 +269,7 @@ let { Themes: r } = n(15202).V,
             BG_BASE_TERTIARY: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_81',
+                        raw: 'NEUTRAL_75',
                         opacity: 1
                     },
                     [r.LIGHT]: {
@@ -1109,15 +1109,15 @@ let { Themes: r } = n(15202).V,
             CHANNEL_ICON: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_19',
+                        raw: 'NEUTRAL_18',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'NEUTRAL_47',
+                        raw: 'NEUTRAL_43',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_26',
+                        raw: 'NEUTRAL_28',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1133,11 +1133,11 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'NEUTRAL_42',
+                        raw: 'NEUTRAL_38',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_32',
+                        raw: 'NEUTRAL_33',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1153,11 +1153,11 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'NEUTRAL_42',
+                        raw: 'NEUTRAL_38',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_32',
+                        raw: 'NEUTRAL_33',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1169,15 +1169,15 @@ let { Themes: r } = n(15202).V,
             HEADER_PRIMARY: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_8',
+                        raw: 'NEUTRAL_7',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'NEUTRAL_62',
+                        raw: 'NEUTRAL_55',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_16',
+                        raw: 'NEUTRAL_18',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1193,15 +1193,15 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'NEUTRAL_58',
+                        raw: 'NEUTRAL_49',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_19',
+                        raw: 'NEUTRAL_21',
                         opacity: 1
                     },
                     [r.DARKER]: {
-                        raw: 'NEUTRAL_16',
+                        raw: 'NEUTRAL_17',
                         opacity: 1
                     }
                 }
@@ -1213,11 +1213,11 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'NEUTRAL_42',
+                        raw: 'NEUTRAL_38',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_32',
+                        raw: 'NEUTRAL_33',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1229,19 +1229,19 @@ let { Themes: r } = n(15202).V,
             ICON_PRIMARY: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_5',
+                        raw: 'NEUTRAL_4',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'NEUTRAL_67',
+                        raw: 'NEUTRAL_59',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_14',
+                        raw: 'NEUTRAL_15',
                         opacity: 1
                     },
                     [r.DARKER]: {
-                        raw: 'NEUTRAL_10',
+                        raw: 'NEUTRAL_11',
                         opacity: 1
                     }
                 }
@@ -1249,15 +1249,15 @@ let { Themes: r } = n(15202).V,
             ICON_SECONDARY: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_19',
+                        raw: 'NEUTRAL_18',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'NEUTRAL_47',
+                        raw: 'NEUTRAL_43',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_26',
+                        raw: 'NEUTRAL_28',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1289,15 +1289,15 @@ let { Themes: r } = n(15202).V,
             INFO_DANGER_TEXT: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'RED_NEW_28',
+                        raw: 'RED_NEW_26',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'RED_NEW_52',
+                        raw: 'RED_NEW_46',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'RED_NEW_38',
+                        raw: 'RED_NEW_39',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1329,15 +1329,15 @@ let { Themes: r } = n(15202).V,
             INFO_HELP_TEXT: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'BLUE_NEW_31',
+                        raw: 'BLUE_NEW_29',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'BLUE_NEW_55',
+                        raw: 'BLUE_NEW_49',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'BLUE_NEW_41',
+                        raw: 'BLUE_NEW_42',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1369,15 +1369,15 @@ let { Themes: r } = n(15202).V,
             INFO_POSITIVE_TEXT: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'GREEN_NEW_31',
+                        raw: 'GREEN_NEW_30',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'GREEN_NEW_54',
+                        raw: 'GREEN_NEW_48',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'GREEN_NEW_41',
+                        raw: 'GREEN_NEW_42',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1409,15 +1409,15 @@ let { Themes: r } = n(15202).V,
             INFO_WARNING_TEXT: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'YELLOW_NEW_29',
+                        raw: 'YELLOW_NEW_28',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'YELLOW_NEW_53',
+                        raw: 'YELLOW_NEW_47',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'YELLOW_NEW_39',
+                        raw: 'YELLOW_NEW_40',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1481,15 +1481,15 @@ let { Themes: r } = n(15202).V,
             INTERACTIVE_ACTIVE: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_8',
+                        raw: 'NEUTRAL_7',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'NEUTRAL_62',
+                        raw: 'NEUTRAL_55',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_16',
+                        raw: 'NEUTRAL_18',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1501,15 +1501,15 @@ let { Themes: r } = n(15202).V,
             INTERACTIVE_HOVER: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_19',
+                        raw: 'NEUTRAL_18',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'NEUTRAL_47',
+                        raw: 'NEUTRAL_43',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_26',
+                        raw: 'NEUTRAL_28',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1521,15 +1521,15 @@ let { Themes: r } = n(15202).V,
             INTERACTIVE_NORMAL: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_19',
+                        raw: 'NEUTRAL_18',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'NEUTRAL_47',
+                        raw: 'NEUTRAL_43',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_26',
+                        raw: 'NEUTRAL_28',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1561,19 +1561,119 @@ let { Themes: r } = n(15202).V,
             MENTION_FOREGROUND: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'BLURPLE_20',
+                        raw: 'BLURPLE_11',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'BLURPLE_67',
+                        raw: 'BLURPLE_71',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'BLURPLE_30',
+                        raw: 'BLURPLE_25',
                         opacity: 1
                     },
                     [r.DARKER]: {
-                        raw: 'BLURPLE_24',
+                        raw: 'BLURPLE_19',
+                        opacity: 1
+                    }
+                }
+            },
+            SCROLLBAR_AUTO_SCROLLBAR_COLOR_THUMB: {
+                'visual-refresh': {
+                    [r.DARK]: {
+                        raw: 'NEUTRAL_38',
+                        opacity: 1
+                    },
+                    [r.LIGHT]: {
+                        raw: 'NEUTRAL_31',
+                        opacity: 1
+                    },
+                    [r.MIDNIGHT]: {
+                        raw: 'NEUTRAL_46',
+                        opacity: 1
+                    },
+                    [r.DARKER]: {
+                        raw: 'NEUTRAL_44',
+                        opacity: 1
+                    }
+                }
+            },
+            SCROLLBAR_AUTO_SCROLLBAR_COLOR_TRACK: {
+                'visual-refresh': {
+                    [r.DARK]: {
+                        raw: 'NEUTRAL_74',
+                        opacity: 1
+                    },
+                    [r.LIGHT]: {
+                        raw: 'NEUTRAL_3',
+                        opacity: 1
+                    },
+                    [r.MIDNIGHT]: {
+                        raw: 'NEUTRAL_99',
+                        opacity: 1
+                    },
+                    [r.DARKER]: {
+                        raw: 'NEUTRAL_92',
+                        opacity: 1
+                    }
+                }
+            },
+            SCROLLBAR_AUTO_THUMB: {
+                'visual-refresh': {
+                    [r.DARK]: {
+                        raw: 'NEUTRAL_38',
+                        opacity: 1
+                    },
+                    [r.LIGHT]: {
+                        raw: 'NEUTRAL_31',
+                        opacity: 1
+                    },
+                    [r.MIDNIGHT]: {
+                        raw: 'NEUTRAL_46',
+                        opacity: 1
+                    },
+                    [r.DARKER]: {
+                        raw: 'NEUTRAL_43',
+                        opacity: 1
+                    }
+                }
+            },
+            SCROLLBAR_AUTO_TRACK: {
+                'visual-refresh': {
+                    [r.DARK]: {
+                        raw: 'NEUTRAL_74',
+                        opacity: 1
+                    },
+                    [r.LIGHT]: {
+                        raw: 'NEUTRAL_4',
+                        opacity: 1
+                    },
+                    [r.MIDNIGHT]: {
+                        raw: 'NEUTRAL_99',
+                        opacity: 1
+                    },
+                    [r.DARKER]: {
+                        raw: 'NEUTRAL_89',
+                        opacity: 1
+                    }
+                }
+            },
+            SCROLLBAR_THIN_THUMB: {
+                'visual-refresh': {
+                    [r.DARK]: {
+                        raw: 'NEUTRAL_39',
+                        opacity: 1
+                    },
+                    [r.LIGHT]: {
+                        raw: 'NEUTRAL_31',
+                        opacity: 1
+                    },
+                    [r.MIDNIGHT]: {
+                        raw: 'NEUTRAL_46',
+                        opacity: 1
+                    },
+                    [r.DARKER]: {
+                        raw: 'NEUTRAL_44',
                         opacity: 1
                     }
                 }
@@ -1581,15 +1681,15 @@ let { Themes: r } = n(15202).V,
             TEXT_BRAND: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'BLURPLE_30',
+                        raw: 'BLURPLE_29',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'BLURPLE_55',
+                        raw: 'BLURPLE_49',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'BLURPLE_40',
+                        raw: 'BLURPLE_42',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1601,15 +1701,15 @@ let { Themes: r } = n(15202).V,
             TEXT_LINK: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'BLUE_NEW_31',
+                        raw: 'BLUE_NEW_29',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'BLUE_NEW_55',
+                        raw: 'BLUE_NEW_49',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'BLUE_NEW_41',
+                        raw: 'BLUE_NEW_42',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1625,11 +1725,11 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'NEUTRAL_42',
+                        raw: 'NEUTRAL_38',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_32',
+                        raw: 'NEUTRAL_33',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1645,15 +1745,15 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'NEUTRAL_58',
+                        raw: 'NEUTRAL_49',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_19',
+                        raw: 'NEUTRAL_21',
                         opacity: 1
                     },
                     [r.DARKER]: {
-                        raw: 'NEUTRAL_16',
+                        raw: 'NEUTRAL_17',
                         opacity: 1
                     }
                 }
@@ -1661,15 +1761,15 @@ let { Themes: r } = n(15202).V,
             TEXT_POSITIVE: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'GREEN_NEW_31',
+                        raw: 'GREEN_NEW_30',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'GREEN_NEW_54',
+                        raw: 'GREEN_NEW_48',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'GREEN_NEW_41',
+                        raw: 'GREEN_NEW_42',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1681,15 +1781,15 @@ let { Themes: r } = n(15202).V,
             TEXT_PRIMARY: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_8',
+                        raw: 'NEUTRAL_7',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'NEUTRAL_62',
+                        raw: 'NEUTRAL_55',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_16',
+                        raw: 'NEUTRAL_18',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1701,15 +1801,15 @@ let { Themes: r } = n(15202).V,
             TEXT_SECONDARY: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_19',
+                        raw: 'NEUTRAL_18',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'NEUTRAL_47',
+                        raw: 'NEUTRAL_43',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_26',
+                        raw: 'NEUTRAL_28',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -1721,15 +1821,15 @@ let { Themes: r } = n(15202).V,
             TEXT_WARNING: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'YELLOW_NEW_29',
+                        raw: 'YELLOW_NEW_28',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'YELLOW_NEW_53',
+                        raw: 'YELLOW_NEW_47',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'YELLOW_NEW_39',
+                        raw: 'YELLOW_NEW_40',
                         opacity: 1
                     },
                     [r.DARKER]: {

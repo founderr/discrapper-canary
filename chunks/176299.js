@@ -434,7 +434,8 @@ function eG() {
         f = l || a || c || h || g,
         I = r.useCallback(() => B.Z.openSidebar(), []),
         C = (0, A.Q)('AppView'),
-        v = C ? 'div' : r.Fragment;
+        v = C ? 'div' : r.Fragment,
+        S = (0, T.useAppSidebarState)((e) => !e.isOpen);
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
             className: ep.container,
@@ -466,6 +467,7 @@ function eG() {
                                     }),
                                     (0, i.jsx)(v, {
                                         className: ep.page,
+                                        'data-collapsed': !!C && S,
                                         children: (0, i.jsx)(_.Z.Provider, {
                                             value: I,
                                             children: (0, i.jsxs)(s.rs, {

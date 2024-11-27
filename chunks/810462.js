@@ -3,7 +3,7 @@ var r = n(200651),
     i = n(192379),
     a = n(232713),
     s = n(260866),
-    o = n(461745),
+    o = n(481060),
     l = n(806966),
     u = n(28546),
     c = n(849736);
@@ -38,19 +38,17 @@ let d = i.forwardRef(function (e, t) {
         }, [v]),
         (0, r.jsx)('div', {
             className: c.wrapper,
-            children: (0, r.jsx)(o.ZP, {
+            children: (0, r.jsx)(o.SearchBar, {
                 autoFocus: d,
                 disabled: !d,
                 query: E,
                 ref: g,
-                size: o.ZP.Sizes.MEDIUM,
+                size: o.SearchBar.Sizes.MEDIUM,
                 placeholder: null != I ? I : d || null == m ? h : m,
                 onClear: S,
                 onKeyDown: f,
-                onQueryChange: b,
+                onChange: b,
                 className: c.__invalid_searchBar,
-                preventEscapePropagation: !1,
-                useKeyboardNavigation: !1,
                 inputProps: {
                     'aria-haspopup': 'grid',
                     'aria-controls': _,

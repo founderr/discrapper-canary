@@ -5,7 +5,7 @@ var r = n(200651),
     s = n.n(a),
     o = n(232713),
     l = n(260866),
-    u = n(461745),
+    u = n(481060),
     c = n(806966),
     d = n(28546),
     f = n(149203),
@@ -34,11 +34,11 @@ let m = i.forwardRef(function (e, t) {
                 return null === (e = b.current) || void 0 === e ? void 0 : e.focus();
             }
         })),
-        (0, r.jsx)(u.ZP, {
+        (0, r.jsx)(u.SearchBar, {
             autoFocus: v,
             query: S,
             ref: b,
-            size: u.ZP.Sizes.MEDIUM,
+            size: u.SearchBar.Sizes.MEDIUM,
             placeholder: null != A ? A : T,
             onClear: C,
             onKeyDown: (e) => {
@@ -52,10 +52,8 @@ let m = i.forwardRef(function (e, t) {
                 g(e);
             },
             onFocus: E,
-            onQueryChange: N,
+            onChange: N,
             className: s()(I, { [h.searchBarFullRow]: m }),
-            preventEscapePropagation: !1,
-            useKeyboardNavigation: !1,
             inputProps: {
                 'aria-label': p.intl.string(p.t.tCauZW),
                 'aria-haspopup': 'grid',

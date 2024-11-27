@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return A;
     }
 }),
     n(757143),
@@ -37,58 +37,118 @@ function _() {
                 iconPosition: 'end',
                 icon: d.TrashIcon
             }),
-            (0, i.jsx)(N, {}),
+            (0, i.jsx)(b, {}),
+            (0, i.jsx)(D, {}),
+            (0, i.jsx)(y, {}),
             (0, i.jsx)(R, {}),
-            (0, i.jsx)(P, {}),
+            (0, i.jsx)(O, {}),
             (0, i.jsx)(j, {}),
             (0, i.jsx)(v, {}),
-            (0, i.jsx)(b, {}),
-            (0, i.jsx)(A, {}),
-            (0, i.jsx)(D, {})
+            (0, i.jsx)(B, {})
         ]
     });
 }
-let C = ['neutral', 'blue_new', 'blurple', 'green_new', 'red_new', 'teal_new', 'yellow_new', 'orange_new'];
-function I() {
-    return C.map((e) =>
-        (0, i.jsxs)(
-            'div',
-            {
-                className: x.palette,
-                children: [
-                    (0, i.jsx)(d.Text, {
-                        variant: 'text-lg/semibold',
-                        children: e
-                    }),
-                    (0, i.jsx)('div', {
-                        className: x.colors,
-                        children: Array.from({ length: 100 }, (t, n) =>
-                            (0, i.jsx)(
-                                'div',
-                                {
-                                    className: x.color,
-                                    style: { background: 'var(--'.concat(e.replace('_', '-'), '-').concat(n + 1, ')') },
-                                    children: (0, i.jsx)(d.ThemeProvider, {
-                                        theme: n < 50 ? 'light' : 'dark',
-                                        children: (t) =>
-                                            (0, i.jsxs)(d.Text, {
-                                                className: t,
-                                                variant: 'text-xs/medium',
-                                                children: [e, '.', n + 1]
-                                            })
-                                    })
+let C = ['neutral', 'blue_new', 'blurple', 'green_new', 'red_new', 'teal_new', 'yellow_new', 'orange_new'],
+    I = ['background-surface-highest', 'background-surface-higher', 'background-surface-high', 'background-base-low', 'background-base-lower', 'background-base-lowest'],
+    f = ['background-mod-subtle', 'background-mod-normal', 'background-mod-strong'];
+function N() {
+    return (0, i.jsxs)('div', {
+        children: [
+            (0, i.jsx)(d.Heading, {
+                variant: 'heading-xl/semibold',
+                className: x.heading,
+                children: 'Background Colors'
+            }),
+            I.map((e) =>
+                (0, i.jsxs)(
+                    'div',
+                    {
+                        className: x.palette,
+                        style: {
+                            backgroundColor: 'var(--'.concat(e, ')'),
+                            padding: 24
+                        },
+                        children: [
+                            (0, i.jsx)(d.Text, {
+                                variant: 'text-md/medium',
+                                children: e
+                            }),
+                            (0, i.jsx)('div', {
+                                style: {
+                                    display: 'grid',
+                                    gap: 8,
+                                    gridAutoFlow: 'column'
                                 },
-                                n
-                            )
-                        )
-                    })
-                ]
-            },
-            e
-        )
-    );
+                                children: f.map((e) =>
+                                    (0, i.jsx)(
+                                        'div',
+                                        {
+                                            className: x.color,
+                                            style: {
+                                                padding: 16,
+                                                background: 'var(--'.concat(e, ')')
+                                            },
+                                            children: (0, i.jsx)(d.Text, {
+                                                variant: 'text-xs/medium',
+                                                color: 'text-secondary',
+                                                children: e
+                                            })
+                                        },
+                                        e
+                                    )
+                                )
+                            })
+                        ]
+                    },
+                    e
+                )
+            ),
+            (0, i.jsx)(d.Heading, {
+                variant: 'heading-xl/semibold',
+                className: x.heading,
+                children: 'Scales'
+            }),
+            C.map((e) =>
+                (0, i.jsxs)(
+                    'div',
+                    {
+                        className: x.palette,
+                        children: [
+                            (0, i.jsx)(d.Text, {
+                                variant: 'text-lg/semibold',
+                                children: e
+                            }),
+                            (0, i.jsx)('div', {
+                                className: x.colors,
+                                children: Array.from({ length: 100 }, (t, n) =>
+                                    (0, i.jsx)(
+                                        'div',
+                                        {
+                                            className: x.color,
+                                            style: { background: 'var(--'.concat(e.replace('_', '-'), '-').concat(n + 1, ')') },
+                                            children: (0, i.jsx)(d.ThemeProvider, {
+                                                theme: n < 50 ? 'light' : 'dark',
+                                                children: (t) =>
+                                                    (0, i.jsxs)(d.Text, {
+                                                        className: t,
+                                                        variant: 'text-xs/medium',
+                                                        children: [e, '.', n + 1]
+                                                    })
+                                            })
+                                        },
+                                        n
+                                    )
+                                )
+                            })
+                        ]
+                    },
+                    e
+                )
+            )
+        ]
+    });
 }
-function f() {
+function A() {
     return (0, i.jsx)(m.Z, {
         parentSetting: h.s6.DESIGN_SYSTEMS,
         settingsSection: g.oAB.DESIGN_SYSTEMS,
@@ -100,13 +160,13 @@ function f() {
             },
             {
                 title: 'Colors',
-                component: () => (0, i.jsx)(I, {}),
+                component: () => (0, i.jsx)(N, {}),
                 setting: h.s6.DESIGN_SYSTEMS_COLORS
             }
         ]
     });
 }
-function N() {
+function b() {
     let [e, t] = s.useState(!1),
         n = S.flatMap((e) => [
             ...T.map((t) =>
@@ -240,11 +300,11 @@ function N() {
                     children: 'Large'
                 })
             }),
-            (0, i.jsx)(O, {})
+            (0, i.jsx)(P, {})
         ]
     });
 }
-function A() {
+function v() {
     let [e, t] = s.useState('1');
     return (0, i.jsxs)('div', {
         className: x.section,
@@ -281,7 +341,7 @@ function A() {
         ]
     });
 }
-function b() {
+function j() {
     let [e, t] = s.useState(1),
         [n, r] = s.useState(!1),
         [l, a] = s.useState(5),
@@ -399,7 +459,7 @@ function b() {
         ]
     });
 }
-function v() {
+function O() {
     return (0, i.jsxs)('div', {
         className: x.section,
         children: [
@@ -456,7 +516,7 @@ function v() {
         ]
     });
 }
-function j() {
+function R() {
     let [e, t] = s.useState(!1),
         [n, r] = s.useState(!1),
         [l, a] = s.useState('auto');
@@ -658,7 +718,7 @@ function j() {
         ]
     });
 }
-function O() {
+function P() {
     return (0, i.jsxs)('div', {
         className: x.shinyButtonExamples,
         children: [
@@ -678,7 +738,7 @@ function O() {
         ]
     });
 }
-function R() {
+function D() {
     let [e, t] = s.useState(null),
         [n, r] = s.useState(null),
         [l, o] = s.useState([]),
@@ -743,7 +803,7 @@ function R() {
         ]
     });
 }
-function P() {
+function y() {
     let [e, t] = s.useState(''),
         [n, r] = s.useState(''),
         [l, a] = s.useState('');
@@ -812,7 +872,7 @@ function P() {
         ]
     });
 }
-function D() {
+function B() {
     let e = (0, o.e7)([u.Z], () => u.Z.gradientPreset);
     return (0, i.jsx)(d.ThemeProvider, {
         theme: p.BR.DARKER,
