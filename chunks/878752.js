@@ -1,62 +1,102 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return y;
     }
-});
-var i = n(200651);
-n(192379);
-var l = n(512722),
-    r = n.n(l),
-    a = n(442837),
-    s = n(779618),
-    o = n(446226),
-    c = n(441167),
-    d = n(822183),
-    u = n(641015),
-    h = n(131951),
-    p = n(594174),
-    m = n(700785),
-    f = n(213652),
-    g = n(320427),
-    C = n(145010),
-    x = n(933686),
-    _ = n(997614),
-    v = n(159909),
-    I = n(981631),
-    E = n(637335);
-function b(e) {
-    let { channel: t, hasActiveStream: n, themeable: l = !1 } = e,
-        b = (0, a.e7)([p.default], () => {
-            let e = p.default.getCurrentUser();
-            return r()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
+}),
+    n(47120);
+var i = n(200651),
+    l = n(192379),
+    r = n(512722),
+    a = n.n(r),
+    s = n(442837),
+    o = n(704215),
+    c = n(779618),
+    d = n(464792),
+    u = n(324085),
+    h = n(243778),
+    p = n(446226),
+    m = n(441167),
+    f = n(822183),
+    g = n(641015),
+    C = n(131951),
+    x = n(594174),
+    _ = n(700785),
+    v = n(213652),
+    I = n(320427),
+    E = n(145010),
+    b = n(933686),
+    N = n(361057),
+    Z = n(997614),
+    S = n(159909),
+    T = n(981631),
+    j = n(921944),
+    A = n(637335);
+function y(e) {
+    let { channel: t, hasActiveStream: n, themeable: r = !1 } = e,
+        y = (0, s.e7)([x.default], () => {
+            let e = x.default.getCurrentUser();
+            return a()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
         }),
-        N = (0, o.Z)(),
-        { isSharedCanvasEnabled: Z } = d.Z.useExperiment({
+        P = (0, u.Ou)(t),
+        M = l.useRef(null),
+        R = (0, p.Z)(),
+        { isSharedCanvasEnabled: L } = f.Z.useExperiment({
             guildId: null == t ? void 0 : t.guild_id,
             location: 'b7309a_1'
         }),
-        { enableViewerClipping: S } = c.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
-        T = (0, s.Z)(h.Z);
-    if (null == t || null != N) return null;
-    let j = (0, u.Z)(t),
-        A = m.BT({
-            permission: I.Plq.ADD_REACTIONS,
-            user: b,
+        { enableViewerClipping: k } = m.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
+        O = (0, c.Z)(C.Z),
+        D = (0, u.Zm)(t, 'VoiceEffectsActionBar') ? [o.z.CONSUMABLE_HD_POTION_UPSELL] : [],
+        [w, B] = (0, h.US)(D, void 0, !0),
+        U = w === o.z.CONSUMABLE_HD_POTION_UPSELL;
+    if (null == t || null != R) return null;
+    let H = (0, g.Z)(t),
+        G = _.BT({
+            permission: T.Plq.ADD_REACTIONS,
+            user: y,
             context: t
         });
     return (0, i.jsxs)('div', {
-        className: E.voiceEffectsActionBar,
+        className: A.voiceEffectsActionBar,
         children: [
-            j &&
-                (0, i.jsx)(_.Z, {
+            H &&
+                (0, i.jsx)(Z.Z, {
                     channel: t,
-                    themeable: l
+                    themeable: r
                 }),
-            A && (0, i.jsx)(x.Z, { channel: t }),
-            S && T && (0, i.jsx)(f.Z, { channel: t }),
-            Z && n && (0, i.jsx)(g.Z, {}),
-            Z && n && (0, i.jsx)(C.Z, { channel: t }),
-            Z && n && (0, i.jsx)(v.Z, {})
+            G && (0, i.jsx)(b.Z, { channel: t }),
+            k && O && (0, i.jsx)(v.Z, { channel: t }),
+            U &&
+                (0, i.jsx)(
+                    (e) => {
+                        let { channel: t, markAsDismissed: n } = e;
+                        return (0, i.jsx)(d.Z, {
+                            channel: t,
+                            buttonRef: M,
+                            dismissed: !1,
+                            nudgeAlignIntoViewport: !0,
+                            onClick: () => {
+                                n(j.L.TAKE_ACTION);
+                            },
+                            onDismiss: () => {
+                                n(j.L.USER_DISMISS);
+                            }
+                        });
+                    },
+                    {
+                        channel: t,
+                        markAsDismissed: B
+                    }
+                ),
+            P &&
+                (0, i.jsx)(N.Z, {
+                    ref: M,
+                    channel: t,
+                    glow: U
+                }),
+            L && n && (0, i.jsx)(I.Z, {}),
+            L && n && (0, i.jsx)(E.Z, { channel: t }),
+            L && n && (0, i.jsx)(S.Z, {})
         ]
     });
 }

@@ -1,31 +1,28 @@
 n.d(t, {
     Z: function () {
-        return f;
-    },
-    n: function () {
-        return i;
+        return m;
     }
 });
-var r,
-    i,
-    o = n(200651);
+var i,
+    r,
+    l = n(200651);
 n(192379);
 var a = n(120356),
-    l = n.n(a),
+    o = n.n(a),
     s = n(410030),
-    u = n(231338),
-    c = n(388032),
+    c = n(231338),
+    u = n(388032),
     d = n(40690);
-function f(e) {
+function m(e) {
     let { className: t, size: n = 'md' } = e,
-        r = (0, s.ZP)() === u.BR.LIGHT ? 'https://cdn.discordapp.com/assets/content/e4ec02f7af5d01c8c168eb814823a94a6bf1ce440e70e35e5a6f18b0fdad3321.png' : 'https://cdn.discordapp.com/assets/content/f814e4be3c27004f4e60c1bdad648ee24acfa9716c0be8048cc63b5b869e56a4.png';
-    return (0, o.jsx)('img', {
-        className: l()(t, {
+        i = (0, s.ZP)() === c.BR.LIGHT ? 'https://cdn.discordapp.com/assets/content/e4ec02f7af5d01c8c168eb814823a94a6bf1ce440e70e35e5a6f18b0fdad3321.png' : 'https://cdn.discordapp.com/assets/content/f814e4be3c27004f4e60c1bdad648ee24acfa9716c0be8048cc63b5b869e56a4.png';
+    return (0, l.jsx)('img', {
+        className: o()(t, {
             [d.sm]: 'sm' === n,
             [d.md]: 'md' === n
         }),
-        src: r,
-        alt: c.intl.string(c.t.htEhYm)
+        src: i,
+        alt: u.intl.string(u.t.htEhYm)
     });
 }
-((r = i || (i = {})).SMALL = 'sm'), (r.MEDIUM = 'md');
+((i = r || (r = {})).SMALL = 'sm'), (i.MEDIUM = 'md');
