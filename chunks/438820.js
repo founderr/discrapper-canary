@@ -14,34 +14,34 @@ function o(e, t, n) {
         e
     );
 }
-let s = {
+let d = {
     canPlayWowMoment: !1,
     isFetchingWowMomentMedia: !1,
     wowMomentWumpusMediaUrl: null
 };
-class d extends (i = a.ZP.PersistedStore) {
+class s extends (i = a.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (s = e), (s.canPlayWowMoment = !1), (s.isFetchingWowMomentMedia = !1), (s.wowMomentWumpusMediaUrl = null);
+        null != e && (d = e), (d.canPlayWowMoment = !1), (d.isFetchingWowMomentMedia = !1), (d.wowMomentWumpusMediaUrl = null);
     }
     getState() {
-        return s;
+        return d;
     }
     get canPlayWowMoment() {
-        return s.canPlayWowMoment;
+        return d.canPlayWowMoment;
     }
     get isFetchingWowMomentMedia() {
-        return s.isFetchingWowMomentMedia;
+        return d.isFetchingWowMomentMedia;
     }
     get wowMomentWumpusMedia() {
-        return s.wowMomentWumpusMediaUrl;
+        return d.wowMomentWumpusMediaUrl;
     }
 }
-o(d, 'displayName', 'PurchasedItemsFestivityStore'),
-    o(d, 'persistKey', 'PurchasedItemsFestivityStore'),
-    o(d, 'migrations', [(e) => ({ ...e })]),
-    (t.Z = new d(c.Z, {
+o(s, 'displayName', 'PurchasedItemsFestivityStore'),
+    o(s, 'persistKey', 'PurchasedItemsFestivityStore'),
+    o(s, 'migrations', [(e) => ({ ...e })]),
+    (t.Z = new s(c.Z, {
         LOGOUT: function () {
-            s = {
+            d = {
                 canPlayWowMoment: !1,
                 isFetchingWowMomentMedia: !1,
                 wowMomentWumpusMediaUrl: null
@@ -49,16 +49,16 @@ o(d, 'displayName', 'PurchasedItemsFestivityStore'),
         },
         PURCHASED_ITEMS_FESTIVITY_SET_CAN_PLAY_WOW_MOMENT: function (e) {
             let { value: t } = e;
-            s.canPlayWowMoment = t;
+            d.canPlayWowMoment = t;
         },
         PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA: function () {
-            s.isFetchingWowMomentMedia = !0;
+            d.isFetchingWowMomentMedia = !0;
         },
         PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_SUCCESS: function (e) {
             let { wumpusMedia: t } = e;
-            (s.wowMomentWumpusMediaUrl = t), (s.isFetchingWowMomentMedia = !1);
+            (d.wowMomentWumpusMediaUrl = t), (d.isFetchingWowMomentMedia = !1);
         },
         PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE: function () {
-            (s.isFetchingWowMomentMedia = !1), (s.canPlayWowMoment = !1);
+            (d.isFetchingWowMomentMedia = !1), (d.canPlayWowMoment = !1);
         }
     }));

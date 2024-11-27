@@ -1,6 +1,6 @@
 n.d(t, {
     g: function () {
-        return I;
+        return E;
     }
 }),
     n(653041);
@@ -20,15 +20,15 @@ var r = n(442837),
     g = n(383832),
     f = n(981631),
     _ = n(388032),
-    E = n(543395);
-function I(e) {
+    I = n(543395);
+function E(e) {
     let t = (0, r.e7)([c.default], () => c.default.getCurrentUser()),
         n = (0, r.e7)([o.Z], () => o.Z.hidePersonalInformation),
-        { multiAccountUsers: I } = (0, p.L)(),
+        { multiAccountUsers: E } = (0, p.L)(),
         C = (e) => {
             if (e !== (null == t ? void 0 : t.id)) d.default.track(f.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: f.jXE.USER_PROFILE } }), h.yD(e);
         },
-        v = I.map((r) => {
+        v = E.map((r) => {
             let o = new s.Z(r),
                 c = o.id === (null == t ? void 0 : t.id),
                 d = r.tokenStatus === m.q.INVALID,
@@ -37,11 +37,11 @@ function I(e) {
                 l.MenuItem,
                 {
                     id: o.id,
-                    focusedClassName: E.focused,
+                    focusedClassName: I.focused,
                     label: (e) => {
                         let { isFocused: t } = e;
                         return (0, i.jsxs)('div', {
-                            className: E.userMenuItem,
+                            className: I.userMenuItem,
                             children: [
                                 (0, i.jsx)(l.Avatar, {
                                     src: o.getAvatarURL(void 0, 40),
@@ -49,10 +49,10 @@ function I(e) {
                                     'aria-label': r.username
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: E.userMenuUsername,
+                                    className: I.userMenuUsername,
                                     children: [
                                         (0, i.jsx)(l.Text, {
-                                            className: E.userMenuText,
+                                            className: I.userMenuText,
                                             variant: 'text-sm/normal',
                                             children: u.ZP.getUserTag(o, {
                                                 mode: 'username',
@@ -61,7 +61,7 @@ function I(e) {
                                         }),
                                         !o.isPomelo() &&
                                             (0, i.jsx)(l.Text, {
-                                                className: E.userMenuDiscriminator,
+                                                className: I.userMenuDiscriminator,
                                                 variant: 'text-sm/normal',
                                                 children: h
                                             })
@@ -72,14 +72,14 @@ function I(e) {
                                         size: 'sm',
                                         color: (0, a.Lq)(t ? f.Ilk.WHITE_500 : f.Ilk.BRAND_500),
                                         secondaryColor: (0, a.Lq)(t ? f.Ilk.BRAND_500 : f.Ilk.WHITE_500),
-                                        className: E.activeIcon
+                                        className: I.activeIcon
                                     }),
                                 d &&
                                     (0, i.jsx)(l.CircleWarningIcon, {
                                         color: (0, a.Lq)(f.Ilk.RED_400),
                                         secondaryColor: (0, a.Lq)(f.Ilk.WHITE_500),
                                         size: 'xs',
-                                        className: E.activeIcon
+                                        className: I.activeIcon
                                     })
                             ]
                         });

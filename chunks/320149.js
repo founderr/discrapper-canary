@@ -18,14 +18,14 @@ var i = n(200651),
     g = n(359110),
     f = n(6025),
     _ = n(433355),
-    E = n(933557),
-    I = n(287746),
+    I = n(933557),
+    E = n(287746),
     C = n(388032),
     v = n(837199),
     N = n(215191);
 function S(e) {
     let { channel: t, baseChannelId: n } = e,
-        S = (0, E.ZP)(t),
+        S = (0, I.ZP)(t),
         T = (0, h.K)(),
         x = (0, h.V)(),
         b = (0, l.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
@@ -84,7 +84,7 @@ function S(e) {
             (0, i.jsx)('div', {
                 className: v.chat,
                 children: (0, i.jsx)(
-                    I.Z,
+                    E.Z,
                     {
                         channel: t,
                         guild: null,

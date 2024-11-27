@@ -19,8 +19,8 @@ var i = n(200651),
 function f(e) {
     let { user: t, key: n, isFocused: f } = e,
         _ = r.useContext(c.AnalyticsContext),
-        { analyticsLocations: E } = (0, s.ZP)(),
-        I = (e) => {
+        { analyticsLocations: I } = (0, s.ZP)(),
+        E = (e) => {
             e.stopPropagation(), a.Z.unblockUser(t.id, { location: 'Friends' });
         };
     return (0, i.jsx)(
@@ -30,7 +30,7 @@ function f(e) {
             onClick: () =>
                 (0, o.openUserProfileModal)({
                     userId: t.id,
-                    sourceAnalyticsLocations: E,
+                    sourceAnalyticsLocations: I,
                     analyticsLocation: _.location
                 }),
             user: t,
@@ -48,7 +48,7 @@ function f(e) {
                             icon: l.UserMinusIcon,
                             actionType: d.Z.ActionTypes.DENY,
                             tooltip: p.intl.string(p.t.XyHpKC),
-                            onClick: I,
+                            onClick: E,
                             shouldHighlight: e
                         })
                     ]

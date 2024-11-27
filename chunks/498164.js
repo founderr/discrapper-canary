@@ -15,8 +15,8 @@ var a = n(756647),
     g = n(962220),
     f = n(69580),
     _ = n(703656),
-    E = n(314897),
-    I = n(553795),
+    I = n(314897),
+    E = n(553795),
     C = n(594174),
     v = n(626135),
     N = n(585483),
@@ -54,7 +54,7 @@ function Z(e, t) {
                     { invite: n } = await m.Z.resolveInvite(t, 'Desktop Modal');
                 if (null == n) throw new x.Z({ errorCode: A.lTL.INVALID_INVITE }, 'Invalid invite id: '.concat(t));
                 return (
-                    E.default.isAuthenticated()
+                    I.default.isAuthenticated()
                         ? o.Z.dispatch({
                               type: 'INVITE_MODAL_OPEN',
                               invite: n,
@@ -205,10 +205,10 @@ function Z(e, t) {
                 let {
                     args: { providerType: t, code: n, openid_params: i, iss: r, state: l }
                 } = e;
-                if (!p.g.getCurrentConfig({ location: 'private.CONNECTIONS_CALLBACK' }).enabled && !I.Z.hasPendingAuthorizedState(l)) throw new x.Z({ errorCode: A.lTL.INVALID_CONNECTION_CALLBACK_STATE }, 'Provider authorization did not originate from this discord client');
+                if (!p.g.getCurrentConfig({ location: 'private.CONNECTIONS_CALLBACK' }).enabled && !E.Z.hasPendingAuthorizedState(l)) throw new x.Z({ errorCode: A.lTL.INVALID_CONNECTION_CALLBACK_STATE }, 'Provider authorization did not originate from this discord client');
                 try {
                     return (
-                        I.Z.deletePendingAuthorizedState(l),
+                        E.Z.deletePendingAuthorizedState(l),
                         await u.Z.callback(t, {
                             code: n,
                             openid_params: i,

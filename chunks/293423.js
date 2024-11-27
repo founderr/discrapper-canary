@@ -16,17 +16,17 @@ var r = n(481060),
 t.Z = (e) => {
     var t, n;
     let { guild: _ } = e,
-        E = (0, l.GG)(_.id)[0];
+        I = (0, l.GG)(_.id)[0];
     (0, o.Z)({
         guildId: _.id,
-        groupListingId: null == E ? void 0 : E.id,
+        groupListingId: null == I ? void 0 : I.id,
         location: p.Sbl.ROLE_SUBSCRIPTIONS_TAB,
-        relevantSubscriptionListingIds: null == E ? void 0 : E.subscription_listings_ids
+        relevantSubscriptionListingIds: null == I ? void 0 : I.subscription_listings_ids
     });
-    let { activeSubscription: I } = (0, s.Z)(null == E ? void 0 : E.id),
+    let { activeSubscription: E } = (0, s.Z)(null == I ? void 0 : I.id),
         C = (0, l.YB)(_.id),
         v = null == C ? void 0 : C.description,
-        { editStateIds: N } = a.B7(null !== (t = null == E ? void 0 : E.id) && void 0 !== t ? t : null, _.id);
+        { editStateIds: N } = a.B7(null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : null, _.id);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(m.Z, {
@@ -35,14 +35,14 @@ t.Z = (e) => {
                 coverImageAsset: null !== (n = null == C ? void 0 : C.cover_image_asset) && void 0 !== n ? n : null,
                 guild: _,
                 children: [
-                    null != E
+                    null != I
                         ? (0, i.jsx)(c.Z, {
                               className: f.pendingPlanChangeNotice,
-                              groupListingId: E.id,
-                              subscription: I
+                              groupListingId: I.id,
+                              subscription: E
                           })
                         : null,
-                    (0, i.jsx)(d.Z, { subscription: I })
+                    (0, i.jsx)(d.Z, { subscription: E })
                 ]
             }),
             (0, i.jsx)(r.HeadingLevel, {
@@ -54,7 +54,7 @@ t.Z = (e) => {
                             h.Z,
                             {
                                 guildId: _.id,
-                                groupListingId: null !== (t = null == E ? void 0 : E.id) && void 0 !== t ? t : '',
+                                groupListingId: null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : '',
                                 listingId: e,
                                 analyticsLocation: p.Sbl.ROLE_SUBSCRIPTIONS_TAB
                             },

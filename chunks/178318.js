@@ -13,8 +13,8 @@ var l = n(836560),
     g = n(76238),
     f = n(852926),
     _ = n(186901),
-    E = n(981631),
-    I = n(413135).Buffer;
+    I = n(981631),
+    E = n(413135).Buffer;
 function C(e, t, n) {
     return (
         t in e
@@ -56,7 +56,7 @@ function b() {
                               port: e
                           });
                   };
-    r.listen(E.V6Z + (e % E.frH), '127.0.0.1', t);
+    r.listen(I.V6Z + (e % I.frH), '127.0.0.1', t);
 }
 function A(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
@@ -72,7 +72,7 @@ function A(e, t, n) {
                 : {};
     (n = n ? JSON.stringify(n) : ''),
         (i = 200 === i && 0 === n.length ? 204 : i),
-        t.setHeader('Content-Length', I.byteLength(n).toString()),
+        t.setHeader('Content-Length', E.byteLength(n).toString()),
         t.setHeader('Content-Type', 'application/json'),
         t.writeHead(i, {
             ...r,
@@ -94,26 +94,26 @@ function Z(e, t, n, i) {
 }
 class L extends g.Z {
     send(e) {
-        (u.default.isLoggingOverlayEvents || (e.cmd !== E.Etm.OVERLAY && e.evt !== E.zMe.OVERLAY)) && S.info('Socket Emit: '.concat(this.id), (0, p.Z)(e)), null != i && 'etf' === this.encoding ? this._socket.send(i.pack(e), { binary: !0 }) : this._socket.send(JSON.stringify(e));
+        (u.default.isLoggingOverlayEvents || (e.cmd !== I.Etm.OVERLAY && e.evt !== I.zMe.OVERLAY)) && S.info('Socket Emit: '.concat(this.id), (0, p.Z)(e)), null != i && 'etf' === this.encoding ? this._socket.send(i.pack(e), { binary: !0 }) : this._socket.send(JSON.stringify(e));
     }
     close(e, t) {
         this._socket.close(e, t);
     }
     constructor(e, t, n) {
-        if ((super('ws', t, n), C(this, '_socket', void 0), -1 === ['etf', 'json'].indexOf(n))) throw new m.Z({ closeCode: E.$VG.INVALID_ENCODING }, 'Invalid Encoding: '.concat(n));
-        if ('etf' === n && null == i) throw new m.Z({ closeCode: E.$VG.INVALID_ENCODING }, 'Erlpack cannot be used on this client');
+        if ((super('ws', t, n), C(this, '_socket', void 0), -1 === ['etf', 'json'].indexOf(n))) throw new m.Z({ closeCode: I.$VG.INVALID_ENCODING }, 'Invalid Encoding: '.concat(n));
+        if ('etf' === n && null == i) throw new m.Z({ closeCode: I.$VG.INVALID_ENCODING }, 'Erlpack cannot be used on this client');
         this._socket = e;
     }
 }
 class y extends g.Z {
     send(e) {
-        (u.default.isLoggingOverlayEvents || e.cmd !== E.Etm.OVERLAY) && S.info('Socket Emit: '.concat(this.id), e), this._sendCallback(e);
+        (u.default.isLoggingOverlayEvents || e.cmd !== I.Etm.OVERLAY) && S.info('Socket Emit: '.concat(this.id), e), this._sendCallback(e);
     }
     close(e, t) {
         this._closeCallback(t, e);
     }
     constructor(e, t, n, i) {
-        if ((super('http', n, i), C(this, '_sendCallback', void 0), C(this, '_closeCallback', void 0), 'json' !== i)) throw new m.Z({ closeCode: E.$VG.INVALID_ENCODING }, 'Invalid Encoding: '.concat(i));
+        if ((super('http', n, i), C(this, '_sendCallback', void 0), C(this, '_closeCallback', void 0), 'json' !== i)) throw new m.Z({ closeCode: I.$VG.INVALID_ENCODING }, 'Invalid Encoding: '.concat(i));
         (this._sendCallback = e), (this._closeCallback = t);
     }
 }
@@ -185,10 +185,10 @@ class P extends l.EventEmitter {
             else if ('string' == typeof t) n = JSON.parse(t);
             else throw Error();
         } catch (t) {
-            e.close(E.$VG.CLOSE_UNSUPPORTED, 'Payload not '.concat(e.encoding));
+            e.close(I.$VG.CLOSE_UNSUPPORTED, 'Payload not '.concat(e.encoding));
             return;
         }
-        (u.default.isLoggingOverlayEvents || n.cmd !== E.Etm.OVERLAY) && S.info('Socket Message: '.concat(e.id), (0, p.Z)(n)), this.emit('request', e, n);
+        (u.default.isLoggingOverlayEvents || n.cmd !== I.Etm.OVERLAY) && S.info('Socket Message: '.concat(e.id), (0, p.Z)(n)), this.emit('request', e, n);
     }
     constructor() {
         var e;

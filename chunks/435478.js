@@ -23,12 +23,12 @@ function h(e) {
     let { id: t, label: n, icon: c, hint: h, renderSubmenu: m, ...p } = e,
         { onFocus: g, ...f } = (0, a.JA)(t),
         { id: _ } = (0, a.f$)(),
-        [E, I] = r.useState(!1),
+        [I, E] = r.useState(!1),
         C = null != m;
     r.useLayoutEffect(() => {
         if (!!C)
             return (0, l.N)(_, (e) => {
-                I(e === t);
+                E(e === t);
             });
     }, [t, _, C]);
     let v = (e) =>
@@ -66,8 +66,8 @@ function h(e) {
         ? (0, i.jsx)(o.Popout, {
               spacing: 0,
               renderPopout: m,
-              shouldShow: E,
-              onRequestClose: () => I(!1),
+              shouldShow: I,
+              onRequestClose: () => E(!1),
               children: v
           })
         : v();

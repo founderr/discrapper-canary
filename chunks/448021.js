@@ -40,7 +40,7 @@ function f(e) {
             name: t.name
         });
     });
-    let E = r.useCallback(
+    let I = r.useCallback(
         (e, t) => {
             if (e.type === h.s9s.IMG) {
                 let t = n.filter((e) => e.type === h.s9s.IMG),
@@ -74,7 +74,7 @@ function f(e) {
               autoplayInterval: 8000,
               paused: !f,
               videoAutoPlay: !0,
-              onCurrentItemClick: E,
+              onCurrentItemClick: I,
               errorComponent: _
           });
 }

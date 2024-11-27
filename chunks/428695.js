@@ -11,7 +11,7 @@ var i = n(200651),
     m = n(173549);
 let p = (0, s.debounce)(c.ZP.trackWithMetadata, 500);
 t.Z = function (e) {
-    let { guild: t, title: n, message: l, image: s, type: g, imageStyles: f, imageMarginX: _, imageMarginTop: E, trackingSource: I, undismissable: C, onDismissed: v, onClick: N, cta: S, ctaColor: T, centerText: x, className: b } = e;
+    let { guild: t, title: n, message: l, image: s, type: g, imageStyles: f, imageMarginX: _, imageMarginTop: I, trackingSource: E, undismissable: C, onDismissed: v, onClick: N, cta: S, ctaColor: T, centerText: x, className: b } = e;
     r.useEffect(() => {
         p(u.rMx.CHANNEL_NOTICE_VIEWED, {
             notice_type: g,
@@ -28,7 +28,7 @@ t.Z = function (e) {
               onClick: () => {
                   null != g &&
                       d.default.track(u.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
-                          source: I,
+                          source: E,
                           guild_id: t.id,
                           notice_type: g
                       }),
@@ -80,7 +80,7 @@ t.Z = function (e) {
                 (0, i.jsx)('div', {
                     className: m.imageContainer,
                     style: {
-                        marginTop: ''.concat(E, 'px'),
+                        marginTop: ''.concat(I, 'px'),
                         marginLeft: y,
                         marginRight: y
                     },

@@ -19,8 +19,8 @@ var i = n(200651),
 function f(e) {
     let { party: t, close: n, onSelect: f } = e,
         _ = (0, c.Z)(t),
-        E = (0, h.Z)(t),
-        I = (0, u.Z)(t),
+        I = (0, h.Z)(t),
+        E = (0, u.Z)(t),
         C = (0, d.Z)(t),
         v = (0, s.Z)(t),
         N = (0, o.Z)(t);
@@ -45,7 +45,7 @@ function f(e) {
             children: [
                 _,
                 (0, i.jsxs)(l.MenuGroup, {
-                    children: [E, I]
+                    children: [I, E]
                 }),
                 (0, i.jsx)(l.MenuGroup, { children: C }),
                 (0, i.jsx)(l.MenuGroup, { children: v }),

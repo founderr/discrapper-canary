@@ -19,12 +19,12 @@ var i = n(433517),
 let g = 'LATEST_HEARTBEAST_EVENT_TIMESTAMP',
     f = null,
     _ = null,
-    E = !1;
-async function I() {
-    if (E) return;
-    (E = !0), (0, m.fr)(!0), h.Z.addBreadcrumb({ message: 'Start Analytics Heartbeat' });
+    I = !1;
+async function E() {
+    if (I) return;
+    (I = !0), (0, m.fr)(!0), h.Z.addBreadcrumb({ message: 'Start Analytics Heartbeat' });
     let e = await i.K.getAfterRefresh(g).then(m.Hg);
-    if (!E) return;
+    if (!I) return;
     let t = Date.now(),
         n = 15 * d.Z.Millis.MINUTE + e - t;
     n > d.Z.Millis.HOUR && h.Z.addBreadcrumb({ message: 'Received invalid Date.now() when generating a heartbeat. Date.now() = '.concat(t, ', timeUntilNextHeartbeat = ').concat(n, ', latestHeartbeatEventTimestamp = ').concat(e) }),
@@ -52,7 +52,7 @@ async function v() {
         h.Z.captureException(Error('Null session when tracking session heartbeat. Waited '.concat(n - e, 'ms')));
         return;
     }
-    if (!E) {
+    if (!I) {
         h.Z.captureException(Error('Heartbeat scheduler not started when tracking session heartbeat.')), C();
         return;
     }
@@ -79,13 +79,13 @@ let N = null,
 function T() {
     if (S || (null != N && N !== p.hes.DISCONNECTED && N !== p.hes.RTC_DISCONNECTED))
         try {
-            I();
+            E();
         } catch (e) {
             h.Z.captureException(e);
         }
     else
         !(function () {
-            if (!!E) (E = !1), h.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, m.fr)(!1), C(), (0, l.Z)();
+            if (!!I) (I = !1), h.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, m.fr)(!1), C(), (0, l.Z)();
         })();
 }
 function x() {

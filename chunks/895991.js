@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(957657),
     f = n(665307),
     _ = n(530151),
-    E = n(981631),
-    I = n(186901),
+    I = n(981631),
+    E = n(186901),
     C = n(277900);
 function v(e, t, n) {
     return (
@@ -37,7 +37,7 @@ function v(e, t, n) {
 }
 class N extends r.PureComponent {
     componentDidMount() {
-        c.Y(E.Z5c.APPLICATION_LIBRARY), (0, m.T)(I.jE.LIBRARY), o.Z.wait(() => (0, d.o)()), (0, u.N)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding);
+        c.Y(I.Z5c.APPLICATION_LIBRARY), (0, m.T)(E.jE.LIBRARY), o.Z.wait(() => (0, d.o)()), (0, u.N)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding);
     }
     renderToolbar() {
         return (0, i.jsx)(p.Z, {});
@@ -46,14 +46,14 @@ class N extends r.PureComponent {
         let { includeUpdatesInScroller: e } = this.state,
             t = (0, i.jsx)('div', {
                 children: (0, i.jsx)(h.Z, {
-                    section: E.jXE.LIBRARY_INSTALL_MODULE,
+                    section: I.jXE.LIBRARY_INSTALL_MODULE,
                     children: (0, i.jsx)(_.Z, { onHeightTallerThanHalfViewportChange: this.handleHeightTallerThanHalfViewportChange })
                 })
             });
         return (0, i.jsxs)(r.Fragment, {
             children: [
                 (0, i.jsx)(g.Z, {
-                    currentRoute: E.Z5c.APPLICATION_LIBRARY,
+                    currentRoute: I.Z5c.APPLICATION_LIBRARY,
                     renderToolbar: this.renderToolbar
                 }),
                 e ? null : t,
@@ -63,7 +63,7 @@ class N extends r.PureComponent {
                     children: [
                         e ? t : null,
                         (0, i.jsx)(h.Z, {
-                            section: E.jXE.LIBRARY_APPLICATION_LIST,
+                            section: I.jXE.LIBRARY_APPLICATION_LIST,
                             children: (0, i.jsx)(f.Z, {
                                 stickyHeader: !e,
                                 scrollToRow: this.scrollToRow

@@ -14,7 +14,7 @@ var i = n(200651),
     g = n(388032),
     f = n(762353),
     _ = n(232186);
-function E(e, t, n) {
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function E(e, t, n) {
         e
     );
 }
-class I extends r.PureComponent {
+class E extends r.PureComponent {
     renderDiskUsageCircle() {
         let { metadata: e } = this.props;
         return null != e && null != e.availableKB && null != e.totalKB
@@ -172,11 +172,11 @@ class I extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            E(this, 'state', {
+            I(this, 'state', {
                 label: void 0,
                 isDefault: null
             }),
-            E(this, 'handleStartEditing', () => {
+            I(this, 'handleStartEditing', () => {
                 let { path: e, label: t, isDefault: n, onToggleEditing: i } = this.props;
                 i(e),
                     this.setState({
@@ -184,7 +184,7 @@ class I extends r.PureComponent {
                         isDefault: n
                     });
             }),
-            E(this, 'handleStopEditing', () => {
+            I(this, 'handleStopEditing', () => {
                 let { onToggleEditing: e } = this.props;
                 e(null),
                     this.setState({
@@ -192,7 +192,7 @@ class I extends r.PureComponent {
                         isDefault: null
                     });
             }),
-            E(this, 'handleRemoveLocation', () => {
+            I(this, 'handleRemoveLocation', () => {
                 (0, a.openModal)((e) =>
                     (0, i.jsx)(a.ConfirmModal, {
                         ...e,
@@ -209,17 +209,17 @@ class I extends r.PureComponent {
                     })
                 );
             }),
-            E(this, 'handleSaveChanges', () => {
+            I(this, 'handleSaveChanges', () => {
                 (0, s.Tb)(this.props.path, {
                     label: null != this.state.label ? this.state.label : this.props.label,
                     isDefault: null != this.state.isDefault ? this.state.isDefault : this.props.isDefault
                 }),
                     this.handleStopEditing();
             }),
-            E(this, 'handleLabelChange', (e) => {
+            I(this, 'handleLabelChange', (e) => {
                 this.setState({ label: e });
             }),
-            E(this, 'handleToggleDefault', () => {
+            I(this, 'handleToggleDefault', () => {
                 this.setState({ isDefault: !this.state.isDefault });
             });
     }
@@ -243,7 +243,7 @@ class C extends r.PureComponent {
                 e.map((e) => {
                     let { path: l, label: a } = e;
                     return (0, i.jsx)(
-                        I,
+                        E,
                         {
                             path: l,
                             label: a,
@@ -270,13 +270,13 @@ class C extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            E(this, 'state', { editingPath: null }),
-            E(this, 'handleAddInstallationLocation', () => {
+            I(this, 'state', { editingPath: null }),
+            I(this, 'handleAddInstallationLocation', () => {
                 p.ZP.showOpenDialog(['openDirectory']).then((e) => {
                     if (null != e && 0 !== e.length && null != e[0] && 'undefined' !== e[0]) (0, s.RY)(e[0]);
                 });
             }),
-            E(this, 'handleToggleEditing', (e) => {
+            I(this, 'handleToggleEditing', (e) => {
                 this.setState({ editingPath: e });
             });
     }

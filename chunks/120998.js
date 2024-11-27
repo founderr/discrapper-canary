@@ -76,21 +76,21 @@ class u extends (i = l.PureComponent) {
                 f.addColorStop(1, this.fillColor), (m.fillStyle = f);
                 let _ = r.length >= s ? s : r.length;
                 m.setTransform(1, 0, 0, -1, 0, i.height), m.clearRect(0, 0, i.width, i.height), m.translate(0, 0.5 * m.lineWidth);
-                let E = Math.floor(i.width / (_ - 3)),
-                    I = 0.5 * E;
-                m.translate(E - E * h, 0), m.beginPath();
-                let C = -E;
+                let I = Math.floor(i.width / (_ - 3)),
+                    E = 0.5 * I;
+                m.translate(I - I * h, 0), m.beginPath();
+                let C = -I;
                 r.forEach((e, i) => {
                     (t = {
                         x: C,
                         y: (g * e) / p
                     }),
-                        0 === i ? m.moveTo(t.x, t.y) : m.bezierCurveTo(n.x + I, n.y, t.x - I, t.y, t.x, t.y),
+                        0 === i ? m.moveTo(t.x, t.y) : m.bezierCurveTo(n.x + E, n.y, t.x - E, t.y, t.x, t.y),
                         (n = t),
-                        (C += E);
+                        (C += I);
                 }),
                     m.stroke(),
-                    m.lineTo(C - E, 0),
+                    m.lineTo(C - I, 0),
                     m.lineTo(0, 0),
                     m.fill(),
                     d && h < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));

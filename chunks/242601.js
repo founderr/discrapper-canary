@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(269128),
     f = n(711237),
     _ = n(110924),
-    E = n(100527),
-    I = n(906732),
+    I = n(100527),
+    E = n(906732),
     C = n(211242),
     v = n(785203),
     N = n(745837),
@@ -86,7 +86,7 @@ function eg(e, t, n) {
 }
 let ef = 64,
     e_ = 'server-settings',
-    eE = {
+    eI = {
         origin: {
             x: -8,
             y: -48
@@ -98,7 +98,7 @@ let ef = 64,
             y: 0
         }
     };
-class eI extends r.PureComponent {
+class eE extends r.PureComponent {
     static getDerivedStateFromProps(e) {
         let { guild: t, hasChannelNotice: n } = e;
         return null == t || null == t.banner || n
@@ -130,7 +130,7 @@ class eI extends r.PureComponent {
                 children: (0, i.jsx)(G.Z, {
                     tutorialId: e_,
                     position: 'bottom',
-                    inlineSpecs: eE,
+                    inlineSpecs: eI,
                     children: this.renderGuildHeaderDropdownButton(e)
                 })
             });
@@ -172,7 +172,7 @@ class eI extends r.PureComponent {
             p = r || l || a;
         return null == t
             ? null
-            : (0, i.jsx)(I.Gt, {
+            : (0, i.jsx)(E.Gt, {
                   value: s,
                   children: (0, i.jsx)(h.LazyPopout, {
                       renderPopout: this.renderMenuPopout,
@@ -303,7 +303,7 @@ class eI extends r.PureComponent {
                         setHasSubheader: (e) => this.setState({ hasGuildSubheader: e })
                     }),
                 this.renderChannelList(),
-                (0, i.jsx)(I.Gt, {
+                (0, i.jsx)(E.Gt, {
                     value: t,
                     children: this.renderFooter()
                 })
@@ -431,8 +431,8 @@ function eC(e) {
         Y = (0, T.ZP)((e) => e.currentlyShown.has(d.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
         [ei, er] = r.useState(!Y),
         el = (0, _.Z)(n),
-        { analyticsLocations: ea } = (0, I.ZP)(E.Z.GUILD_HEADER),
-        { analyticsLocations: es } = (0, I.ZP)(E.Z.GUILD_CHANNEL_LIST_FOOTER);
+        { analyticsLocations: ea } = (0, E.ZP)(I.Z.GUILD_HEADER),
+        { analyticsLocations: es } = (0, E.ZP)(I.Z.GUILD_CHANNEL_LIST_FOOTER);
     r.useEffect(() => {
         n !== el && er(!Y);
     }, [n, el, Y]);
@@ -441,7 +441,7 @@ function eC(e) {
         ep = (0, h.useModalsStore)(h.hasAnyModalOpenSelector),
         eg = (0, c.e7)([X.Z], () => X.Z.hasLayers()),
         ef = (0, c.e7)([B.Z], () => B.Z.shouldShow(e_)),
-        eE = N && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(),
+        eI = N && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(),
         eC = (0, c.e7)([K.Z], () => K.Z.getMemberCount(n)),
         ev = N && null != eC && eC >= 30 && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(),
         eN = b && null != u && (u.hasFeature(ec.oNc.COMMUNITY) || (null != eC && eC > 50)),
@@ -465,7 +465,7 @@ function eC(e) {
         eU = (0, c.e7)([$.Z], () => $.Z.getChannelId()),
         eG = (0, c.e7)([J.Z], () => J.Z.desyncedVoiceStatesCount),
         eB = w.Y.useExperiment({ location: 'GuildSidebar' }, { autoTrackExposure: !0 }).enabled;
-    return (0, i.jsx)(eI, {
+    return (0, i.jsx)(eE, {
         guildId: n,
         hideSelectedChannel: l,
         guild: u,
@@ -481,7 +481,7 @@ function eC(e) {
         user: k,
         hasChannelNotice: null != em || eo,
         anyLayerOpen: ep || eg,
-        showGuildBoostingProgressBarUpsell: eE,
+        showGuildBoostingProgressBarUpsell: eI,
         showGuildBoostingProgressBarSizeUpsell: ev,
         showInviteSplashUpsell: eA,
         showDiscoveryLandingPageSettingsUpsell: ex,

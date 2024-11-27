@@ -36,8 +36,8 @@ var n = s(442837),
     a = s(276444),
     o = s(822070),
     l = s(520540),
-    c = s(705864),
-    d = s(944345),
+    c = s(533525),
+    d = s(796634),
     u = s(981631),
     p = s(388032);
 let f = '40%',
@@ -48,11 +48,11 @@ let f = '40%',
             ? p.intl.format(p.t['3OYZMT'], { helpdeskArticle: r })
             : s
               ? p.intl.format(p.t.EkWiZm, {
-                    numFriends: c.Q - n,
+                    numFriends: d.Q - n,
                     helpdeskArticle: r
                 })
               : p.intl.format(p.t.FjrXCg, {
-                    numFriends: c.Q,
+                    numFriends: d.Q,
                     helpdeskArticle: r
                 });
     },
@@ -62,7 +62,7 @@ let f = '40%',
     },
     _ = (e) => {
         let t = g(e),
-            s = (0, d.b)('PremiumManagementSettings'),
+            s = (0, c.b)('PremiumManagementSettings'),
             r = (0, n.e7)([a.Z], () => a.Z.getRecipientStatus());
         if (!t) return !1;
         if (!s) return !!(r.size > 0) || !1;
@@ -97,7 +97,7 @@ let f = '40%',
     },
     j = (e) => {
         let t = g(e),
-            s = (0, d.b)(e),
+            s = (0, c.b)(e),
             n = (0, i.wE)(r.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
         return !t && s && !n;
     },
@@ -108,12 +108,12 @@ let f = '40%',
                 return s ? p.intl.string(p.t.M47CJS) : p.intl.string(p.t.USo4s7);
             case u.g2L.ELIGIBLE:
                 if (n.sent < 2) return p.intl.formatToPlainString(p.t.md2GU1, { discountRate: f });
-                if (n.redeemed === c.Q) return p.intl.string(p.t.SRJkUV);
+                if (n.redeemed === d.Q) return p.intl.string(p.t.SRJkUV);
                 return p.intl.formatToPlainString(p.t.O8mswM, { discountRate: f });
             case u.g2L.QUALIFIED:
             case u.g2L.COOLDOWN:
             case u.g2L.UNAPPLIED:
-                return n.redeemed === c.Q ? p.intl.string(p.t.SRJkUV) : p.intl.string(p.t.MoKnzc);
+                return n.redeemed === d.Q ? p.intl.string(p.t.SRJkUV) : p.intl.string(p.t.MoKnzc);
         }
     },
     O = (e) => {
@@ -121,7 +121,7 @@ let f = '40%',
         switch (s) {
             case u.g2L.NOT_ELIGIBLE:
                 return C({
-                    hasSentAll: n.sent >= c.Q,
+                    hasSentAll: n.sent >= d.Q,
                     hasSentAtLeastOne: n.sent >= 1,
                     numSentUsers: n.sent,
                     helpdeskArticle: t
@@ -137,7 +137,7 @@ let f = '40%',
             case u.g2L.QUALIFIED:
             case u.g2L.COOLDOWN:
             case u.g2L.UNAPPLIED:
-                if (n.redeemed < c.Q) return p.intl.format(p.t.HGO89v, { learnMoreLink: t });
+                if (n.redeemed < d.Q) return p.intl.format(p.t.HGO89v, { learnMoreLink: t });
                 if (!r)
                     return p.intl.format(p.t.iGlQKi, {
                         learnMoreLink: t,

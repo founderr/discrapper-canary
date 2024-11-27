@@ -15,8 +15,8 @@ var l = n(481060),
     g = n(486472),
     f = n(430824),
     _ = n(914010),
-    E = n(594174),
-    I = n(823379),
+    I = n(594174),
+    E = n(823379),
     C = n(358085),
     v = n(929809),
     N = n(179645),
@@ -88,7 +88,7 @@ class L extends s.Z {
                             case null:
                                 break;
                             default:
-                                I.vE(e);
+                                E.vE(e);
                         }
                     };
                     i = await (0, l.openModalLazy)(
@@ -119,7 +119,7 @@ class L extends s.Z {
                 open: (e) => c.j(C.isPlatformEmbedded, e),
                 predicate: () => {
                     var e;
-                    return !s && null != E.default.getCurrentUser() && !(null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !b.a && !(0, u.g)('new_user_manager');
+                    return !s && null != I.default.getCurrentUser() && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !b.a && !(0, u.g)('new_user_manager');
                 }
             },
             {
@@ -127,7 +127,7 @@ class L extends s.Z {
                 open: (e) => (0, d.hk)(Z, null != e ? e : void 0),
                 predicate: () => {
                     var e;
-                    return s && !(null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !b.a;
+                    return s && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !b.a;
                 }
             },
             {

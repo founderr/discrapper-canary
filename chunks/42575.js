@@ -18,8 +18,8 @@ var i = n(200651),
     g = n(388032),
     f = n(28504);
 function _(e) {
-    let { user: t, nickname: n, status: _, isFocused: E } = e,
-        I = r.useContext(d.AnalyticsContext),
+    let { user: t, nickname: n, status: _, isFocused: I } = e,
+        E = r.useContext(d.AnalyticsContext),
         { analyticsLocations: C } = (0, s.ZP)(),
         v = (e) => {
             null == e || e.stopPropagation(),
@@ -36,13 +36,13 @@ function _(e) {
         },
         S = _ === p.Skl.OFFLINE ? p.Skl.UNKNOWN : _;
     return (0, i.jsx)(h.Z, {
-        isFocused: E,
+        isFocused: I,
         user: t,
         onClick: () =>
             (0, c.openUserProfileModal)({
                 userId: t.id,
                 sourceAnalyticsLocations: C,
-                analyticsLocation: I.location
+                analyticsLocation: E.location
             }),
         children: (e) => {
             let r = (0, i.jsxs)(i.Fragment, {

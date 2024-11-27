@@ -14,8 +14,8 @@ var i,
     g = n(581883),
     f = n(70956),
     _ = n(780570),
-    E = n(314897),
-    I = n(77498),
+    I = n(314897),
+    E = n(77498),
     C = n(283595),
     v = n(19780),
     N = n(944486),
@@ -39,7 +39,7 @@ function P(e) {
     i > x + b && (i = 0);
     let r = (0, _.OT)(e.applicationId, C.Z),
         l = N.Z.getVoiceChannelId(),
-        a = E.default.getSessionId(),
+        a = I.default.getSessionId(),
         s = v.Z.getMediaSessionId();
     h.Z.updateActivity({
         applicationId: e.applicationId,
@@ -62,7 +62,7 @@ function O() {
         t = p.ZP.getVisibleRunningGames(),
         n = new Set();
     for (let { name: e, distributor: i, exePath: r } of t) {
-        let t = I.Z.getGameByName(e);
+        let t = E.Z.getGameByName(e);
         if (null != t)
             n.add(t.id),
                 !(t.id in A) &&

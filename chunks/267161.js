@@ -22,8 +22,8 @@ var i = n(200651),
     g = n(592125),
     f = n(430824),
     _ = n(944486),
-    E = n(998502),
-    I = n(950796),
+    I = n(998502),
+    E = n(950796),
     C = n(981631),
     v = n(741764),
     N = n(553512);
@@ -53,15 +53,15 @@ function T() {
 }
 function x() {
     r.useLayoutEffect(() => {
-        E.ZP.setMinimumSize(v.J, v.N);
+        I.ZP.setMinimumSize(v.J, v.N);
     }, []);
     let e = S((e) => e.isOpen),
         { hasBugReporterAccess: t } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     return (
         r.useLayoutEffect(() => {
-            E.ZP.setMinimumSize(v.J, v.N);
+            I.ZP.setMinimumSize(v.J, v.N);
         }, []),
-        (0, i.jsx)(I.T, {
+        (0, i.jsx)(E.T, {
             leading:
                 !e &&
                 (0, i.jsxs)(i.Fragment, {

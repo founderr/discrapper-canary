@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(294629),
     f = n(131951),
     _ = n(459273),
-    E = n(242291),
-    I = n(792165),
+    I = n(242291),
+    E = n(792165),
     C = n(603074),
     v = n(981631),
     N = n(921944),
@@ -33,7 +33,7 @@ function x(e) {
         P = Z || L || y,
         [O, R] = r.useState(!1),
         j = t.getGuildId(),
-        D = (0, E.sR)({ isSoundboardButtonDisabled: P }),
+        D = (0, I.sR)({ isSoundboardButtonDisabled: P }),
         [M, w] = (0, p.cv)(D),
         { analyticsLocations: k } = (0, m.ZP)(h.Z.SOUNDBOARD_BUTTON);
     function U(e) {
@@ -66,7 +66,7 @@ function x(e) {
                         onClose: n,
                         gridNotice:
                             M === o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
-                            (0, i.jsx)(I.o, {
+                            (0, i.jsx)(E.o, {
                                 onClose: n,
                                 markAsDismissed: w
                             }),

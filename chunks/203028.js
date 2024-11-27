@@ -21,8 +21,8 @@ var r = n(512722),
 function f(e) {
     let { party: t, onUserContextMenu: r } = e,
         { priorityMembers: f, guildContext: _ } = t,
-        E = f[0],
-        I = (function (e) {
+        I = f[0],
+        E = (function (e) {
             let { priorityMembers: t, partiedMembers: n } = e,
                 i = new Set(
                     t.map((e) => {
@@ -52,8 +52,8 @@ function f(e) {
         { subtitle: C, icon: v } = (function (e) {
             var t;
             let { priorityMembers: r, partiedMembers: d, voiceChannels: f, currentActivities: _ } = e,
-                E = r.length,
-                I = d.length - E,
+                I = r.length,
+                E = d.length - I,
                 C = _[0],
                 v = null == C ? void 0 : C.activity,
                 N = null == C ? void 0 : C.startedPlayingTime,
@@ -67,7 +67,7 @@ function f(e) {
                     }),
                     icon: null
                 };
-            if (E + I === 1 && null != C) {
+            if (I + E === 1 && null != C) {
                 let { game: e } = C;
                 if (null == v)
                     return {
@@ -162,11 +162,11 @@ function f(e) {
             };
         })(t);
     return (0, i.jsx)(h.Z.Header, {
-        priorityUser: E,
+        priorityUser: I,
         guildId: null == _ ? void 0 : _.id,
-        title: I,
+        title: E,
         subtitle: C,
         icon: v,
-        onContextMenu: (e) => r(e, E.user)
+        onContextMenu: (e) => r(e, I.user)
     });
 }

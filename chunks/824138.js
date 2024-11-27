@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(63063),
     f = n(870569),
     _ = n(345243),
-    E = n(115530),
-    I = n(981631),
+    I = n(115530),
+    E = n(981631),
     C = n(388032),
     v = n(730873);
 function N(e, t, n) {
@@ -42,7 +42,7 @@ class T extends r.PureComponent {
     }
     renderTitle() {
         return (0, i.jsxs)('div', {
-            children: [(0, i.jsx)(E.Z, { children: this.isHost() ? C.intl.formatToPlainString(C.t['6UJ7mp'], { count: this.props.party.length }) : C.intl.string(C.t.RZufbG) }), (0, i.jsx)(_.Z, { children: C.intl.string(C.t['0ZHLIi']) })]
+            children: [(0, i.jsx)(I.Z, { children: this.isHost() ? C.intl.formatToPlainString(C.t['6UJ7mp'], { count: this.props.party.length }) : C.intl.string(C.t.RZufbG) }), (0, i.jsx)(_.Z, { children: C.intl.string(C.t['0ZHLIi']) })]
         });
     }
     renderStopListeningButton() {
@@ -60,7 +60,7 @@ class T extends r.PureComponent {
             ? (0, i.jsx)(f.Z, {
                   tooltipText: C.intl.string(C.t.U7N2Hh),
                   onClick: () => {
-                      window.open(g.Z.getArticleURL(I.BhN.SPOTIFY_CONNECTION), '_blank');
+                      window.open(g.Z.getArticleURL(E.BhN.SPOTIFY_CONNECTION), '_blank');
                   },
                   icon: c.CircleInformationIcon
               })

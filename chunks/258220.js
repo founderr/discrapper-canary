@@ -24,8 +24,8 @@ function g(e) {
     var t;
     let { applicationId: n, ...g } = e,
         [f, _] = r.useState(!1),
-        [E] = (0, s.Z)([n]),
-        I = null !== (t = null == E ? void 0 : E.name) && void 0 !== t ? t : 'This Activity';
+        [I] = (0, s.Z)([n]),
+        E = null !== (t = null == I ? void 0 : I.name) && void 0 !== t ? t : 'This Activity';
     r.useEffect(() => {
         c.default.track(u.rMx.OPEN_MODAL, { type: p });
     }, []);
@@ -62,7 +62,7 @@ function g(e) {
                 children: (0, i.jsx)(l.Text, {
                     variant: 'text-md/normal',
                     className: m.__invalid_ratingBody,
-                    children: h.intl.format(h.t.B9eiaG, { applicationName: I })
+                    children: h.intl.format(h.t.B9eiaG, { applicationName: E })
                 })
             }),
             (0, i.jsxs)(l.ModalFooter, {

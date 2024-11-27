@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(592745),
     f = n(553795),
     _ = n(757266),
-    E = n(283595),
-    I = n(417363),
+    I = n(283595),
+    E = n(417363),
     C = n(626135),
     v = n(804739),
     N = n(346329),
@@ -50,21 +50,21 @@ function b(e) {
             let { currentActivities: t } = e,
                 n = r.useContext(C.AnalyticsContext);
             return (0, l.Wu)(
-                [p.ZP, E.Z, g.Z, I.Z, _.Z],
+                [p.ZP, I.Z, g.Z, E.Z, _.Z],
                 () =>
                     t
                         .filter((e) => !(0, h.Z)(e.activity))
                         .map((e) => {
                             let { activity: t, game: i } = e,
-                                r = E.Z.getActiveLibraryApplication(i.id);
+                                r = I.Z.getActiveLibraryApplication(i.id);
                             return {
                                 ...e,
                                 libraryApplication: r,
                                 canJoin: null != t && (0, u.Z)(t, S.xjy.JOIN) && t.type === S.IIU.PLAYING,
                                 canPlay: (0, v.t)({
-                                    LibraryApplicationStore: E.Z,
+                                    LibraryApplicationStore: I.Z,
                                     LaunchableGameStore: g.Z,
-                                    DispatchApplicationStore: I.Z,
+                                    DispatchApplicationStore: E.Z,
                                     ConnectedAppsStore: _.Z,
                                     applicationId: i.id,
                                     branchId: null != r ? r.branchId : null

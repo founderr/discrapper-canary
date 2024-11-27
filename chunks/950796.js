@@ -1,6 +1,6 @@
 n.d(t, {
     T: function () {
-        return I;
+        return E;
     }
 });
 var i = n(200651),
@@ -20,7 +20,7 @@ let g = (e) => h.ZP.close(e),
     _ = (e, t) => {
         (0, u.isMac)() && !t.altKey ? h.ZP.fullscreen(e) : h.ZP.maximize(e);
     };
-function E(e) {
+function I(e) {
     let { windowKey: t, showDivider: n } = e,
         r = (0, i.jsx)(s.Clickable, {
             className: a()(p.winButton, p.winButtonClose),
@@ -48,7 +48,7 @@ function E(e) {
         children: [u, l, r]
     });
 }
-function I(e) {
+function E(e) {
     let { leading: t, title: n, trailing: l, windowKey: a } = e,
         s = (0, u.getPlatform)(),
         o = r.useCallback(() => {
@@ -76,7 +76,7 @@ function I(e) {
                 children: [
                     l,
                     s === u.PlatformTypes.WINDOWS &&
-                        (0, i.jsx)(E, {
+                        (0, i.jsx)(I, {
                             windowKey: a,
                             showDivider: null != l
                         })

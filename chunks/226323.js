@@ -20,34 +20,34 @@ var i = n(200651),
     g = n(131951),
     f = n(51144),
     _ = n(524484),
-    E = n(388032),
-    I = n(525270);
+    I = n(388032),
+    E = n(525270);
 let C = { offset: 2 },
     v = {
         serverDeaf: {
             icon: o.HeadphonesDenyIcon,
             colorize: !0,
-            getStatus: () => E.intl.string(E.t.btxSdH)
+            getStatus: () => I.intl.string(I.t.btxSdH)
         },
         serverMute: {
             icon: o.MicrophoneDenyIcon,
             colorize: !0,
-            getStatus: () => E.intl.string(E.t.uLddbW)
+            getStatus: () => I.intl.string(I.t.uLddbW)
         },
         deaf: {
             icon: o.HeadphonesSlashIcon,
             colorize: !1,
-            getStatus: () => E.intl.string(E.t.NjmiOD)
+            getStatus: () => I.intl.string(I.t.NjmiOD)
         },
         mute: {
             icon: o.MicrophoneSlashIcon,
             colorize: !1,
-            getStatus: () => E.intl.string(E.t.tjtv3N)
+            getStatus: () => I.intl.string(I.t.tjtv3N)
         },
         localMute: {
             icon: o.MicrophoneDenyIcon,
             colorize: !1,
-            getStatus: () => E.intl.string(E.t['9F+xJS'])
+            getStatus: () => I.intl.string(I.t['9F+xJS'])
         }
     };
 function N(e) {
@@ -84,7 +84,7 @@ function N(e) {
             : {},
         D =
             null != j
-                ? E.intl.formatToPlainString(E.t['1+MVBA'], {
+                ? I.intl.formatToPlainString(I.t['1+MVBA'], {
                       userName: P,
                       status: j()
                   })
@@ -133,19 +133,19 @@ function N(e) {
                     (0, i.jsx)(o.Clickable, {
                         ...t,
                         ...e,
-                        className: I.avatarContainer,
+                        className: E.avatarContainer,
                         onContextMenu: M,
                         focusProps: C,
                         children: (0, i.jsx)(u.Z, {
                             shakeLocation: _.oZ.VOICE_USER,
                             isShaking: Z,
                             children: (0, i.jsx)('div', {
-                                className: a()(I.avatar, { [I.speaking]: Z }),
+                                className: a()(E.avatar, { [E.speaking]: Z }),
                                 style: { backgroundImage: 'url('.concat(y, ')') },
                                 children:
                                     null != O
                                         ? (0, i.jsx)(O, {
-                                              className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: R }),
+                                              className: a()(E.avatarIconOverlay, { [E.avatarIconRed]: R }),
                                               color: 'currentColor',
                                               size: 'xs'
                                           })
@@ -161,11 +161,11 @@ function S(e) {
         [c, d] = r.useState(!1),
         u = c ? o.MinusIcon : o.PlusSmallIcon,
         h = (0, i.jsx)(o.CircleIconButton, {
-            className: I.expandButton,
+            className: E.expandButton,
             onClick: () => d(!c),
             color: o.CircleIconButtonColors.PRIMARY,
             size: o.CircleIconButtonSizes.SIZE_24,
-            tooltip: c ? E.intl.string(E.t['Z/Tya2']) : E.intl.string(E.t.XR5BAQ),
+            tooltip: c ? I.intl.string(I.t['Z/Tya2']) : I.intl.string(I.t.XR5BAQ),
             icon: (0, i.jsx)(u, {
                 size: 'xs',
                 color: 'currentColor'
@@ -187,12 +187,12 @@ function S(e) {
     return _.length <= 0
         ? null
         : (0, i.jsx)(o.ScrollerThin, {
-              className: a()(I.scroller, l),
+              className: a()(E.scroller, l),
               fade: !0,
               children: (0, i.jsxs)('div', {
-                  className: I.voiceUsers,
+                  className: E.voiceUsers,
                   role: 'group',
-                  'aria-label': E.intl.string(E.t['/ZgaVV']),
+                  'aria-label': I.intl.string(I.t['/ZgaVV']),
                   children: [
                       _.map((e) => {
                           let { user: t, nick: r, voiceState: l } = e;

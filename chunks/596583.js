@@ -10,8 +10,8 @@ var s = r(120356),
     d = r(481060),
     c = r(493683),
     x = r(37234),
-    p = r(410030),
-    h = r(518950),
+    h = r(410030),
+    p = r(518950),
     f = r(819640),
     u = r(63063),
     m = r(51144),
@@ -27,7 +27,7 @@ let N = (e, t) => {
     },
     w = (e) => {
         let { user: t, trialCreationResult: r, onClose: s } = e,
-            { avatarSrc: n, eventHandlers: l } = (0, h.Z)({
+            { avatarSrc: n, eventHandlers: l } = (0, p.Z)({
                 user: t,
                 size: d.AvatarSizes.SIZE_56
             }),
@@ -106,13 +106,13 @@ t.Z = (e) => {
         ),
         n = (0, o.e7)([j.Z], () => j.Z.getReferralsRemaining());
     l()(null !== n, 'Referrals remaining should not be null');
-    let c = (0, p.Fg)(),
+    let c = (0, h.Fg)(),
         x = (0, C.ap)(c) ? L.Z : g.Z,
-        h = v.intl.string(v.t.Pcb7KC),
+        p = v.intl.string(v.t.Pcb7KC),
         f = [...r.values()].filter((e) => e === _.Fz.SUCCESS).length;
     return (
-        n > 0 && (h = v.intl.formatToPlainString(v.t.iWtOfH, { numReferrals: f })),
-        0 === f && (h = v.intl.string(v.t['7VBEub'])),
+        n > 0 && (p = v.intl.formatToPlainString(v.t.iWtOfH, { numReferrals: f })),
+        0 === f && (p = v.intl.string(v.t['7VBEub'])),
         (0, i.jsxs)('div', {
             className: y.confrimationContainer,
             children: [
@@ -129,7 +129,7 @@ t.Z = (e) => {
                 (0, i.jsx)(d.Heading, {
                     variant: 'heading-lg/bold',
                     className: y.heading,
-                    children: h
+                    children: p
                 }),
                 (0, i.jsx)('div', {
                     className: y.confirmedUserContainer,

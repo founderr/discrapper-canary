@@ -14,8 +14,8 @@ var i = n(392711),
     g = n(594174),
     f = n(979651),
     _ = n(996106),
-    E = n(914946),
-    I = n(238679),
+    I = n(914946),
+    E = n(238679),
     C = n(452426),
     v = n(295424),
     N = n(277272),
@@ -30,7 +30,7 @@ function A(e) {
             socket: i
         } = e,
         r = d.Z.getChannel(n);
-    if (null == r || !(0, E.zM)(r, i.application.id, i.authorization.scopes)) throw new _.Z({ errorCode: x.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(n));
+    if (null == r || !(0, I.zM)(r, i.application.id, i.authorization.scopes)) throw new _.Z({ errorCode: x.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(n));
     if (r.isNSFW() && (null === (t = g.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0) throw new _.Z({ errorCode: x.lTL.INVALID_CHANNEL }, 'Invalid nsfw channel id: '.concat(r.id));
 }
 let Z = (e) => (0, C.Z)(e).keys({ channel_id: e.string().allow(null) });
@@ -89,7 +89,7 @@ let y = {
                                 let { userId: t } = e;
                                 return t;
                             })
-                            .forEach((e) => i((0, E.aE)(a, l.id, e))),
+                            .forEach((e) => i((0, I.aE)(a, l.id, e))),
                     s
                 );
             };
@@ -117,7 +117,7 @@ let y = {
                             let { userId: t } = e;
                             return t;
                         })
-                        .forEach((e) => i((0, E.aE)(a, l.id, e))),
+                        .forEach((e) => i((0, I.aE)(a, l.id, e))),
                     s
                 );
             };
@@ -138,7 +138,7 @@ let y = {
                     l = d.Z.getChannel(t);
                 if (null == l) return;
                 let a = l.getGuildId(),
-                    s = Object.values(f.Z.getVoiceStatesForChannel(l.id)).map((e) => (0, E.aE)(a, l.id, e));
+                    s = Object.values(f.Z.getVoiceStatesForChannel(l.id)).map((e) => (0, I.aE)(a, l.id, e));
                 return (
                     r()
                         .differenceWith(s, n, r().isEqual)
@@ -155,7 +155,7 @@ let y = {
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 i = {
-                    state: (0, E.zy)(p.Z.getState()),
+                    state: (0, I.zy)(p.Z.getState()),
                     hostname: p.Z.getHostname(),
                     pings: p.Z.getPings(),
                     average_ping: p.Z.getAveragePing(),
@@ -249,7 +249,7 @@ let y = {
         },
         handler() {}
     },
-    [x.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: I.gQ,
+    [x.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: E.gQ,
     [x.zMe.THERMAL_STATE_UPDATE]: {
         scope: { [T.Gp.ANY]: [T.wE] },
         handler() {}

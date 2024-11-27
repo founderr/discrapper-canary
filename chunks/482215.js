@@ -12,8 +12,8 @@ var r = n(200651),
     s = n(857192),
     o = n(743013);
 let l = (0, i.U)((e) => ({
-    horizontalSpacing: 8,
-    verticalSpacing: 8,
+    horizontalSpacing: 4,
+    verticalSpacing: 4,
     maxHorizontalSpacing: 64,
     maxVerticalSpacing: 64,
     setHorizontalSpacing: (t) => {

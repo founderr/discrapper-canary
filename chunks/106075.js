@@ -18,8 +18,8 @@ var i = n(200651),
     g = n(750910),
     f = n(28494),
     _ = n(29086),
-    E = n(590771),
-    I = n(273596),
+    I = n(590771),
+    E = n(273596),
     C = n(128449),
     v = n(49898),
     N = n(388032),
@@ -117,12 +117,12 @@ function T() {
                     ]
                 }),
                 j
-                    ? (0, i.jsx)(I.Z, {
+                    ? (0, i.jsx)(E.Z, {
                           loadId: e.current,
                           onGuildCardClick: z,
                           onGuildCardSeen: F
                       })
-                    : (0, i.jsx)(E.Z, {
+                    : (0, i.jsx)(I.Z, {
                           selectedTab: b,
                           onScroll: t,
                           onGuildCardClick: z,

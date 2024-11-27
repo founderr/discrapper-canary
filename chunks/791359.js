@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(814443),
     f = n(594174),
     _ = n(801077),
-    E = n(626135),
-    I = n(70956),
+    I = n(626135),
+    E = n(70956),
     C = n(225559),
     v = n(910436),
     N = n(203028),
@@ -31,7 +31,7 @@ var i = n(200651),
     A = n(674563),
     Z = n(388032),
     L = n(721925);
-let y = 15 * I.Z.Millis.MINUTE,
+let y = 15 * E.Z.Millis.MINUTE,
     P = (0, x.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
             s = (0, i.jsx)(N.Z, {
@@ -47,7 +47,7 @@ let y = 15 * I.Z.Millis.MINUTE,
             g = u.length,
             f = h.length,
             _ = m.length,
-            I = p.length > 0,
+            E = p.length > 0,
             C = r.useCallback(() => {
                 let e = m
                     .filter((e) => {
@@ -55,14 +55,14 @@ let y = 15 * I.Z.Millis.MINUTE,
                         return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === A.wW.GAME;
                     })
                     .map((e) => e.game.name);
-                E.default.track(b.rMx.NOW_PLAYING_CARD_HOVERED, {
+                I.default.track(b.rMx.NOW_PLAYING_CARD_HOVERED, {
                     num_users: g,
                     num_streams: f,
                     num_activities: _,
-                    in_voice_channel: I,
+                    in_voice_channel: E,
                     games_detected: e
                 });
-            }, [g, f, _, I, m]),
+            }, [g, f, _, E, m]),
             x = o()(C, y);
         return null != s || null != c
             ? (0, i.jsx)(d.Popout, {

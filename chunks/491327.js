@@ -14,8 +14,8 @@ var i = n(392711),
     g = n(934415),
     f = n(996106),
     _ = n(914946),
-    E = n(452426),
-    I = n(561205),
+    I = n(452426),
+    E = n(561205),
     C = n(186901),
     v = n(981631);
 t.Z = {
@@ -71,7 +71,7 @@ t.Z = {
             [C.Gp.ANY]: [l.x.GUILDS_MEMBERS_READ, l.x.GUILDS_CHANNELS_READ]
         },
         handler(e) {
-            let t = (0, I.Z)();
+            let t = (0, E.Z)();
             if (null == t) throw new f.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Invalid channel');
             return { permissions: h.Z.computePermissions(t) };
         }
@@ -79,7 +79,7 @@ t.Z = {
     [v.Etm.SELECT_VOICE_CHANNEL]: {
         scope: l.x.RPC,
         validation: (e) =>
-            (0, E.Z)(e)
+            (0, I.Z)(e)
                 .required()
                 .keys({
                     channel_id: e.string().allow(null),
@@ -94,8 +94,8 @@ t.Z = {
                 args: { channel_id: i, timeout: r = 0, force: l = !1, navigate: a = !1 }
             } = e;
             if (!i) return s.default.selectVoiceChannel(null), null;
-            let E = m.Z.getVoiceChannelId();
-            if (null != E && E !== i && !1 === l) throw new f.Z({ errorCode: v.lTL.SELECT_VOICE_FORCE_REQUIRED }, 'User is already joined to a voice channel.');
+            let I = m.Z.getVoiceChannelId();
+            if (null != I && I !== i && !1 === l) throw new f.Z({ errorCode: v.lTL.SELECT_VOICE_FORCE_REQUIRED }, 'User is already joined to a voice channel.');
             return t
                 .storeWait(n, () => d.Z.getChannel(i), r)
                 .catch(() => {
@@ -130,7 +130,7 @@ t.Z = {
     [v.Etm.SELECT_TEXT_CHANNEL]: {
         scope: l.x.RPC,
         validation: (e) =>
-            (0, E.Z)(e)
+            (0, I.Z)(e)
                 .required()
                 .keys({
                     channel_id: e.string().allow(null),

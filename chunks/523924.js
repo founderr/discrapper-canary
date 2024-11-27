@@ -10,15 +10,15 @@ var i = n(200651),
     h = n(364632);
 t.Z = (e) => {
     let { headerId: t, reapplyText: n, onReapply: m, confirmText: p, onWithdrawApplication: g, rejectionReason: f = null, guild: _ = null } = e,
-        E = (0, l.e7)([c.Z], () => {
+        I = (0, l.e7)([c.Z], () => {
             var e;
             return c.Z.getCooldown(null !== (e = null == _ ? void 0 : _.id) && void 0 !== e ? e : '0');
         });
     r.useEffect(() => {
-        null == E && null != _ && o.Z.fetchJoinRequestCooldown(_.id);
-    }, [E, _]);
-    let I = (null != E ? E : 0) > 0,
-        C = I && null != E ? Math.ceil((1000 * E - Date.now()) / 86400000) : 0;
+        null == I && null != _ && o.Z.fetchJoinRequestCooldown(_.id);
+    }, [I, _]);
+    let E = (null != I ? I : 0) > 0,
+        C = E && null != I ? Math.ceil((1000 * I - Date.now()) / 86400000) : 0;
     return (0, i.jsxs)('div', {
         className: u.confirmation,
         children: [
@@ -66,14 +66,14 @@ t.Z = (e) => {
                 children: [
                     (0, i.jsx)(a.TooltipContainer, {
                         className: u.confirmationButton,
-                        text: I ? d.intl.formatToPlainString(d.t.A0f0Pz, { days: C }) : null,
-                        'aria-label': I ? d.intl.formatToPlainString(d.t.A0f0Pz, { days: C }) : void 0,
+                        text: E ? d.intl.formatToPlainString(d.t.A0f0Pz, { days: C }) : null,
+                        'aria-label': E ? d.intl.formatToPlainString(d.t.A0f0Pz, { days: C }) : void 0,
                         children: (0, i.jsx)(a.Button, {
                             className: u.confirmationTooltipContents,
                             onClick: m,
                             color: a.Button.Colors.PRIMARY,
-                            submitting: null == E,
-                            disabled: I,
+                            submitting: null == I,
+                            disabled: E,
                             children: n
                         })
                     }),

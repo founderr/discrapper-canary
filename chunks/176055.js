@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(565138),
     f = n(41776),
     _ = n(703656),
-    E = n(769654),
-    I = n(601964),
+    I = n(769654),
+    E = n(601964),
     C = n(430824),
     v = n(843445),
     N = n(981631),
@@ -59,7 +59,7 @@ class b extends r.PureComponent {
     render() {
         let { guild: e, inChannel: t, isInGuild: n, isLurking: r, isAuthenticated: l, className: s, pageSize: o } = this.props;
         if (t && n) return null;
-        let d = new I.ZP(e),
+        let d = new E.ZP(e),
             u = S.intl.string(S.t.pxwdrK),
             h = this.handleJoinOrView,
             f = c.Button.Looks.FILLED,
@@ -129,7 +129,7 @@ class b extends r.PureComponent {
         super(...e),
             x(this, 'handleJoinOrView', async () => {
                 let { guild: e, skuId: t, isInGuild: n, isLurking: i } = this.props,
-                    r = () => (0, E.X)(e.id);
+                    r = () => (0, I.X)(e.id);
                 if (i) (0, u.Oj)(t).then(r);
                 else if (n) r();
                 else

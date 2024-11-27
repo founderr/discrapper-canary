@@ -171,7 +171,7 @@ function T(e) {
         : (0, i.jsxs)(u.Gt, {
               value: m,
               children: [
-                  (0, i.jsx)(v.iz, {}),
+                  (0, i.jsx)(v.iz, { className: N.divider }),
                   (0, i.jsx)(o.TextBadge, {
                       text: b.intl.string(b.t.l1QVfn),
                       disableColor: !0,

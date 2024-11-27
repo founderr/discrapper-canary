@@ -25,7 +25,7 @@ function _() {
         _ = (e) => {
             (0, c.EW)(r.z.HOLIDAY_COACHMARK_HALLOWEEN_2024, { dismissAction: e });
         },
-        E = () => {
+        I = () => {
             a.Z.open(m.oAB.NOTIFICATIONS, null, { analyticsLocations: n }), _(p.L.SECONDARY);
         };
     return e && !t
@@ -65,7 +65,7 @@ function _() {
                                                       {
                                                           tag: 'span',
                                                           className: f.specialTextLink,
-                                                          onClick: E,
+                                                          onClick: I,
                                                           children: e
                                                       },
                                                       t

@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(346329),
     f = n(981631),
     _ = n(388032),
-    E = n(860536);
-function I(e, t, n) {
+    I = n(860536);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -60,11 +60,11 @@ class C extends r.Component {
             { focused: t } = this.state;
         return (0, i.jsx)('div', {
             className: a()({
-                [E.libraryFilter]: !0,
-                [E.focused]: t
+                [I.libraryFilter]: !0,
+                [I.focused]: t
             }),
             children: (0, i.jsx)(o.SearchBar, {
-                className: E.searchBar,
+                className: I.searchBar,
                 ref: this.setRef,
                 onChange: d.JZ,
                 onFocus: () => this.setState({ focused: !0 }),
@@ -81,12 +81,12 @@ class C extends r.Component {
     }
     constructor(...e) {
         super(...e),
-            I(this, 'searchBarRef', null),
-            I(this, 'state', { focused: !1 }),
-            I(this, 'setRef', (e) => {
+            E(this, 'searchBarRef', null),
+            E(this, 'state', { focused: !1 }),
+            E(this, 'setRef', (e) => {
                 this.searchBarRef = e;
             }),
-            I(this, 'handleKeyDown', (e) => {
+            E(this, 'handleKeyDown', (e) => {
                 var t;
                 let { activeRowKey: n, hasModalOpen: i, applicationViewItems: r } = this.props,
                     { searchBarRef: l } = this;

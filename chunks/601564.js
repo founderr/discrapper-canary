@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(714338),
     f = n(663993),
     _ = n(628123),
-    E = n(703656),
-    I = n(108427),
+    I = n(703656),
+    E = n(108427),
     C = n(911314),
     v = n(429899),
     N = n(843445),
@@ -52,14 +52,14 @@ s.ZP.initialize();
 class L extends r.PureComponent {
     componentDidMount() {
         (0, o.Y)(this.props.location),
-            (this.stopListeningToHistory = (0, E.s1)().listen((e) => {
+            (this.stopListeningToHistory = (0, I.s1)().listen((e) => {
                 e.pathname.startsWith(S.Z5c.APPLICATION_STORE) && (0, o.Y)(e);
             })),
             this.props.isAuthenticated && (0, c.tZ)(),
             g.Z.disable(),
             g.Z.setLayout(m.r),
             g.Z.enable(),
-            (0, I.e)('application_store');
+            (0, E.e)('application_store');
     }
     componentWillUnmount() {
         null != this.stopListeningToHistory && this.stopListeningToHistory(), g.Z.disable(), g.Z.setLayout(p.oT), g.Z.enable();

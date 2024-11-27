@@ -129,7 +129,7 @@ function h(e) {
                 n
             );
         }),
-        E = p.map((e) => e.id);
+        I = p.map((e) => e.id);
     return [
         ..._,
         (0, i.jsx)(l.MenuGroup, {
@@ -137,7 +137,7 @@ function h(e) {
             children: u({
                 priorityMembers: t.filter((e) => {
                     let { user: t } = e;
-                    return E.includes(t.id);
+                    return I.includes(t.id);
                 }),
                 otherMembers: p.filter((e) => !c.has(e.id)),
                 totalMembers: p.length,

@@ -25,8 +25,8 @@ var i = n(664751),
     g = n(307643),
     f = n(973616),
     _ = n(594174),
-    E = n(630388),
-    I = n(700785),
+    I = n(630388),
+    E = n(700785),
     C = n(996106),
     v = n(186901),
     N = n(981631);
@@ -52,7 +52,7 @@ async function T(e, t, n) {
             return n < Date.now() - 5000;
         })(G.id)) &&
         (G = f.Z.createFromServer(await (0, g.UM)(S, k)));
-    let B = null != G && (0, E.yE)(G.flags, N.udG.EMBEDDED) && (null === (i = G.integrationTypesConfig) || void 0 === i ? void 0 : i[r.Y.USER_INSTALL]) != null;
+    let B = null != G && (0, I.yE)(G.flags, N.udG.EMBEDDED) && (null === (i = G.integrationTypesConfig) || void 0 === i ? void 0 : i[r.Y.USER_INSTALL]) != null;
     o = null == M ? (B ? r.Y.USER_INSTALL : r.Y.GUILD_INSTALL) : Number(M);
     try {
         c = await (0, m.Ww)({
@@ -97,7 +97,7 @@ async function T(e, t, n) {
             throw new C.Z({ errorCode: N.lTL.OAUTH2_ERROR }, 'OAuth2 Authorize Error: '.concat((null == e ? void 0 : e.message) || 'Unknown Error'));
         }
     null == n || n(c.application, R, w);
-    let H = I.Hn;
+    let H = E.Hn;
     try {
         H = a.vB(null != P ? P : 0);
     } catch (e) {}

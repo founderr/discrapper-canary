@@ -22,8 +22,8 @@ var i = n(200651),
     g = n(66637),
     f = n(782738),
     _ = n(371260),
-    E = n(372769),
-    I = n(134432),
+    I = n(372769),
+    E = n(134432),
     C = n(695346),
     v = n(768581),
     N = n(356164),
@@ -79,7 +79,7 @@ function y(e) {
             let e = v.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
                 splash: t.discoverySplash,
-                size: 300 * (0, I.x_)()
+                size: 300 * (0, E.x_)()
             });
             if (null != e) return e;
             if (w) return L;
@@ -167,7 +167,7 @@ function y(e) {
                                 (0, i.jsxs)('div', {
                                     className: b.title,
                                     children: [
-                                        (0, i.jsx)(E.Z, {
+                                        (0, i.jsx)(I.Z, {
                                             className: b.guildBadge,
                                             guild: t,
                                             tooltipColor: c.Tooltip.Colors.PRIMARY

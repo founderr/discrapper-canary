@@ -10,11 +10,11 @@ var i = n(200651),
     u = n(687683),
     h = n(262755);
 t.Z = function (e) {
-    let { index: t, children: l, user: m, channel: p, onClick: g, isFocused: f, isActive: _, onOtherHover: E, className: I } = e,
+    let { index: t, children: l, user: m, channel: p, onClick: g, isFocused: f, isActive: _, onOtherHover: I, className: E } = e,
         [C, v] = r.useState(!1),
         [N, S] = r.useState(!1),
         T = () => {
-            v(!0), f && !_ && !N && (null == E || E());
+            v(!0), f && !_ && !N && (null == I || I());
         },
         x = () => {
             v(!1);
@@ -48,7 +48,7 @@ t.Z = function (e) {
                     right: -8
                 },
                 children: (0, i.jsx)(s.Z.div, {
-                    className: a()(h.messageRequestItem, I, {
+                    className: a()(h.messageRequestItem, E, {
                         [h.active]: _ || N,
                         [h.firstItem]: 0 === t
                     }),

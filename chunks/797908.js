@@ -12,25 +12,25 @@ var i = n(200651),
 let p = 28;
 t.Z = function (e) {
     var t, n, g, f, _;
-    let { application: E, onSelectApplication: I, showCategory: C = !1 } = e,
-        v = (0, o.Z)({ application: E }),
-        N = null === (t = E.categories) || void 0 === t ? void 0 : t[0],
-        S = (0, a.lf)(E),
+    let { application: I, onSelectApplication: E, showCategory: C = !1 } = e,
+        v = (0, o.Z)({ application: I }),
+        N = null === (t = I.categories) || void 0 === t ? void 0 : t[0],
+        S = (0, a.lf)(I),
         T = r.useCallback(() => {
-            I(E.id);
-        }, [I, E.id]),
+            E(I.id);
+        }, [E, I.id]),
         x = r.useMemo(
             () =>
                 d.ZP.getApplicationIconURL({
-                    id: E.id,
-                    icon: E.icon,
+                    id: I.id,
+                    icon: I.icon,
                     size: 48
                 }),
-            [E]
+            [I]
         ),
-        b = (null !== (f = null === (n = E.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== f ? f : 0) > 0 || v.length > 0,
+        b = (null !== (f = null === (n = I.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== f ? f : 0) > 0 || v.length > 0,
         A = (0, i.jsx)(s.Z, {
-            application: E,
+            application: I,
             textVariant: 'text-xs/medium',
             mutualGuilds: v,
             mutualGuildShownMax: 3,
@@ -49,7 +49,7 @@ t.Z = function (e) {
                     className: m.header,
                     children: [
                         (0, i.jsx)(u.Z, {
-                            application: E,
+                            application: I,
                             bannerType: 'card',
                             iconURL: x
                         }),
@@ -81,7 +81,7 @@ t.Z = function (e) {
                                     variant: 'heading-md/semibold',
                                     color: 'header-primary',
                                     className: m.appName,
-                                    children: E.name
+                                    children: I.name
                                 })
                             })
                         }),
@@ -119,7 +119,7 @@ t.Z = function (e) {
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
                             lineClamp: Z || S ? 2 : 3,
-                            children: null !== (_ = null === (g = E.directory_entry) || void 0 === g ? void 0 : g.short_description) && void 0 !== _ ? _ : E.description
+                            children: null !== (_ = null === (g = I.directory_entry) || void 0 === g ? void 0 : g.short_description) && void 0 !== _ ? _ : I.description
                         }),
                         b
                             ? (0, i.jsx)('div', {

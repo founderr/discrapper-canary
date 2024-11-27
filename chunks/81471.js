@@ -13,8 +13,8 @@ var i = n(200651),
     g = n(496675),
     f = n(699516),
     _ = n(868807),
-    E = n(981631),
-    I = n(217702),
+    I = n(981631),
+    E = n(217702),
     C = n(388032),
     v = n(560006),
     N = n(665162);
@@ -30,7 +30,7 @@ let S = r.memo(function (e) {
             }),
             [S]
         ),
-        A = (0, s.e7)([g.Z], () => g.Z.can(E.Plq.MANAGE_MESSAGES, t)),
+        A = (0, s.e7)([g.Z], () => g.Z.can(I.Plq.MANAGE_MESSAGES, t)),
         Z = p.cC.useSetting(),
         { content: L } = r.useMemo(
             () =>
@@ -70,7 +70,7 @@ let S = r.memo(function (e) {
             let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(S, L, x, b, a()(v.messageContent, N.inlineFormat), {
                 leadingIconClass: v.messageContentIcon,
                 trailingIconClass: v.messageContentIcon,
-                iconSize: I.WW
+                iconSize: E.WW
             });
             y =
                 null != t

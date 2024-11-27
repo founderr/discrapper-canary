@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(497505),
     f = n(918701),
     _ = n(585500),
-    E = n(475595),
-    I = n(566078),
+    I = n(475595),
+    E = n(566078),
     C = n(602667),
     v = n(611855),
     N = n(64141),
@@ -30,7 +30,7 @@ function y(e) {
     var t;
     let { quest: n } = e,
         r = (0, m.B6)(n.config.expiresAt),
-        l = (0, m.B6)(I.r.build(n.config).rewardsExpireAt),
+        l = (0, m.B6)(E.r.build(n.config).rewardsExpireAt),
         a = (0, s.e7)([d.Z], () => d.Z.getState().theme),
         u = (0, o.wj)(a) ? A.BRd.DARK : A.BRd.LIGHT,
         h = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
@@ -40,7 +40,7 @@ function y(e) {
             (0, i.jsx)('img', {
                 className: L.headingGameTile,
                 alt: '',
-                src: (0, E.fh)(n, E.eC.GAME_TILE, u).url
+                src: (0, I.fh)(n, I.eC.GAME_TILE, u).url
             }),
             (0, i.jsxs)('div', {
                 className: L.headingCopy,
@@ -64,9 +64,9 @@ t.Z = function (e) {
     var t, n, l;
     let { quest: o } = e,
         d = (0, s.e7)([p.Z], () => p.Z.isEnrolling(o.id), [o]),
-        [E, I] = r.useState(!1),
-        A = r.useCallback(() => I(!0), []),
-        P = r.useCallback(() => I(!1), []),
+        [I, E] = r.useState(!1),
+        A = r.useCallback(() => E(!0), []),
+        P = r.useCallback(() => E(!1), []),
         O = r.useCallback((e) => {
             e.stopPropagation();
         }, []),
@@ -165,7 +165,7 @@ t.Z = function (e) {
                           k &&
                               !U &&
                               (0, i.jsx)(T.Z, {
-                                  autoplay: E,
+                                  autoplay: I,
                                   className: L.rewardTileWithInstructions,
                                   quest: o,
                                   questContent: g.jn.ACTIVITY_PANEL,

@@ -20,7 +20,7 @@ t.Z = function (e) {
     r.useEffect(() => {
         d.bG({ includesInactive: n });
     }, [n]);
-    let E = r.useMemo(() => (null == _ ? void 0 : _.filter((e) => e.type !== s.o.GALLERY)), [_]);
+    let I = r.useMemo(() => (null == _ ? void 0 : _.filter((e) => e.type !== s.o.GALLERY)), [_]);
     return l === u.M.ERROR
         ? (0, i.jsx)('div', {
               className: f.errorContainer,
@@ -29,9 +29,9 @@ t.Z = function (e) {
         : (0, i.jsx)(h.Z, {
               loading: l === u.M.FETCHING,
               children:
-                  null == E
+                  null == I
                       ? void 0
-                      : E.map((e, n) =>
+                      : I.map((e, n) =>
                             (0, i.jsxs)(
                                 'div',
                                 {

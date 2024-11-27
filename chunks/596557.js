@@ -20,15 +20,15 @@ function g(e) {
     let g = (0, s.SE)(e),
         f = p.$X.some((t) => (null == e ? void 0 : e.id) !== m._ && c.oz(t, e)),
         _ = (null == e ? void 0 : e.defaultMessageNotifications) === u.bL.ALL_MESSAGES,
-        E = (0, d.FT)(l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds),
-        I = g && (f || _) && !E,
+        I = (0, d.FT)(l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds),
+        E = g && (f || _) && !I,
         C = r.useCallback(() => {
             var t;
             (0, d.Qd)(l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds, !0, h.L.DISMISS);
         }, [e]),
         v = r.useRef(!1);
     r.useEffect(() => {
-        if (I && !v.current) {
+        if (E && !v.current) {
             var t;
             (0, a.openModalLazy)(
                 async () => {
@@ -49,5 +49,5 @@ function g(e) {
                 }),
                 (v.current = !0);
         }
-    }, [f, e, C, _, I]);
+    }, [f, e, C, _, E]);
 }
