@@ -1,42 +1,166 @@
 n.d(t, {
     M: function () {
-        return p;
+        return E;
     }
 });
 var i = n(200651),
     l = n(192379),
     r = n(286379),
-    a = n(797614),
-    s = n(378298),
-    o = n(359119),
-    c = n(473092),
-    d = n(177342),
-    u = n(981631),
-    h = n(388032);
-function p(e) {
-    let { channelId: t, warningId: n, senderId: p } = e,
-        m = l.useCallback(() => {
-            (0, s.T)(t, [n]);
-        }, [t, n]);
+    a = n(442837),
+    s = n(481060),
+    o = n(87051),
+    c = n(797614),
+    d = n(681678),
+    u = n(378298),
+    h = n(359119),
+    p = n(473092),
+    m = n(177342),
+    f = n(9156),
+    g = n(621600),
+    C = n(870991),
+    x = n(981631),
+    _ = n(388032),
+    v = n(162787);
+function I(e) {
+    let { senderId: t, channelId: n, warningId: l } = e,
+        r = (0, a.e7)([f.ZP], () => f.ZP.isChannelMuted(null, n));
+    return (0, i.jsxs)('div', {
+        className: v.safetyAction,
+        children: [
+            (0, i.jsxs)('div', {
+                className: v.safetyActionText,
+                children: [
+                    (0, i.jsx)(s.Text, {
+                        variant: 'text-md/semibold',
+                        color: 'header-primary',
+                        children: _.intl.string(_.t['UVp+4+'])
+                    }),
+                    (0, i.jsx)(s.Text, {
+                        variant: 'text-xs/medium',
+                        color: 'header-secondary',
+                        children: _.intl.string(_.t.VS47BA)
+                    })
+                ]
+            }),
+            (0, i.jsx)(s.Button, {
+                size: s.Button.Sizes.SMALL,
+                color: s.Button.Colors.PRIMARY,
+                'aria-label': r ? _.intl.string(_.t['6QK4Hx']) : _.intl.string(_.t['UVp+4+']),
+                onClick: r
+                    ? () => {
+                          o.Z.updateChannelOverrideSettings(null, n, { muted: !1 }, g.ZB.Unmuted),
+                              d.Z.showUnmuteSuccessToast(t, n),
+                              (0, p.qc)({
+                                  channelId: n,
+                                  warningId: l,
+                                  senderId: t,
+                                  warningType: h.pj.STRANGER_DANGER,
+                                  cta: p.NM.USER_MODAL_UNMUTE
+                              });
+                      }
+                    : () => {
+                          o.Z.updateChannelOverrideSettings(null, n, { muted: !0 }, g.ZB.Muted),
+                              d.Z.showMuteSuccessToast(t, n),
+                              (0, p.qc)({
+                                  channelId: n,
+                                  warningId: l,
+                                  senderId: t,
+                                  warningType: h.pj.STRANGER_DANGER,
+                                  cta: p.NM.USER_MODAL_MUTE
+                              });
+                      },
+                children: r ? _.intl.string(_.t['6QK4Hx']) : _.intl.string(_.t['UVp+4+'])
+            })
+        ]
+    });
+}
+function E(e) {
+    let { channelId: t, warningId: a, senderId: o } = e,
+        d = (0, C.E)(),
+        f = l.useCallback(() => {
+            (0, u.T)(t, [a]);
+        }, [t, a]),
+        g = () => {
+            (0, s.openModalLazy)(async () => {
+                let { default: e } = await n.e('59385').then(n.bind(n, 480884));
+                return (n) => {
+                    let { transitionState: l, onClose: r } = n;
+                    return (0, i.jsx)(e, {
+                        transitionState: l,
+                        onClose: r,
+                        channelId: t,
+                        warningId: a,
+                        senderId: o,
+                        description: _.intl.string(_.t['/uid3t']),
+                        safetyTips: d.map((e, t) =>
+                            (0, i.jsxs)(
+                                'div',
+                                {
+                                    className: v.tipContent,
+                                    children: [
+                                        (0, i.jsx)(s.Text, {
+                                            variant: 'text-md/medium',
+                                            color: 'header-primary',
+                                            children: e.title
+                                        }),
+                                        (0, i.jsx)(
+                                            s.Text,
+                                            {
+                                                variant: 'text-sm/medium',
+                                                color: 'header-secondary',
+                                                children: e.description
+                                            },
+                                            t
+                                        )
+                                    ]
+                                },
+                                t
+                            )
+                        ),
+                        actions: (0, i.jsx)(I, {
+                            senderId: o,
+                            channelId: t,
+                            warningId: a
+                        }),
+                        learnMore: _.intl.format(_.t.UkH129, { learnMoreLink: C.D })
+                    });
+                };
+            });
+        };
     return (
         l.useEffect(() => {
-            (0, c.MC)(u.rMx.SAFETY_WARNING_VIEWED, {
+            (0, p.MC)(x.rMx.SAFETY_WARNING_VIEWED, {
                 channelId: t,
-                warningId: n,
-                senderId: p,
-                warningType: o.pj.LIKELY_ATO
+                warningId: a,
+                senderId: o,
+                warningType: h.pj.LIKELY_ATO
             }),
-                a.Z.increment({ name: r.V.SAFETY_WARNING_VIEW });
-        }, [t, n, p]),
-        (0, i.jsx)(d.Q, {
+                c.Z.increment({ name: r.V.SAFETY_WARNING_VIEW });
+        }, [t, a, o]),
+        (0, i.jsx)(m.Q, {
             channelId: t,
-            warningId: n,
-            senderId: p,
-            warningType: o.pj.LIKELY_ATO,
-            header: h.intl.string(h.t.R8UsiI),
-            description: h.intl.string(h.t.lI8nQk),
-            onDismiss: m,
-            buttons: []
+            warningId: a,
+            senderId: o,
+            warningType: h.pj.LIKELY_ATO,
+            header: _.intl.string(_.t.R8UsiI),
+            description: _.intl.string(_.t.lI8nQk),
+            onDismiss: f,
+            buttons: [
+                {
+                    text: _.intl.string(_.t.tC1pvL),
+                    color: s.Button.Colors.BRAND,
+                    onclick: () => {
+                        g(),
+                            (0, p.qc)({
+                                channelId: t,
+                                warningId: a,
+                                senderId: o,
+                                warningType: h.pj.LIKELY_ATO,
+                                cta: p.NM.OPEN_MORE_TIPS
+                            });
+                    }
+                }
+            ]
         })
     );
 }

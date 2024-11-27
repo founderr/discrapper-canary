@@ -1,36 +1,36 @@
-n.r(t),
-    n.d(t, {
+t.r(e),
+    t.d(e, {
         default: function () {
             return _;
         }
     });
-var a = n(200651),
-    o = n(192379),
-    s = n(286379),
-    i = n(399606),
-    c = n(481060),
-    l = n(797614),
-    r = n(359119),
-    d = n(473092),
-    u = n(636749),
-    m = n(981631),
-    x = n(388032),
-    b = n(636370);
-function _(e) {
-    let { transitionState: t, onClose: n, channelId: _, warningId: v, senderId: g, description: h, safetyTips: p, actions: N } = e,
-        k = (0, i.e7)([r.ZP], () => r.ZP.getChannelSafetyWarning(_, v));
+var a = t(200651),
+    o = t(192379),
+    s = t(286379),
+    i = t(399606),
+    c = t(481060),
+    l = t(797614),
+    r = t(359119),
+    d = t(473092),
+    u = t(636749),
+    m = t(981631),
+    x = t(388032),
+    b = t(636370);
+function _(n) {
+    let { transitionState: e, onClose: t, channelId: _, warningId: v, senderId: g, description: h, safetyTips: N, actions: p, learnMore: k } = n,
+        j = (0, i.e7)([r.ZP], () => r.ZP.getChannelSafetyWarning(_, v));
     return (
         o.useEffect(() => {
             (0, d.MC)(m.rMx.SAFETY_WARNING_MODAL_VIEWED, {
                 channelId: _,
                 warningId: v,
                 senderId: g,
-                warningType: null == k ? void 0 : k.type
+                warningType: null == j ? void 0 : j.type
             }),
                 l.Z.increment({ name: s.V.SAFETY_WARNING_MODAL_VIEW });
-        }, [_, v, g, k]),
+        }, [_, v, g, j]),
         (0, a.jsx)(c.ModalRoot, {
-            transitionState: t,
+            transitionState: e,
             children: (0, a.jsxs)(c.Scroller, {
                 style: { overflow: 'hidden auto' },
                 children: [
@@ -56,7 +56,7 @@ function _(e) {
                                 'aria-label': x.intl.string(x.t.cpT0Cg),
                                 look: c.Button.Looks.BLANK,
                                 size: c.Button.Sizes.NONE,
-                                onClick: n,
+                                onClick: t,
                                 innerClassName: b.closeButtonInner,
                                 className: b.closeButton,
                                 children: (0, a.jsx)(c.XSmallIcon, {
@@ -70,30 +70,40 @@ function _(e) {
                     (0, a.jsxs)(c.ModalContent, {
                         className: b.modalContent,
                         children: [
-                            (0, a.jsx)('div', {
-                                className: b.tipsSection,
-                                children: p.map((e, t) =>
-                                    (0, a.jsxs)(
-                                        'div',
-                                        {
-                                            className: b.tipRow,
-                                            children: [
-                                                (0, a.jsx)(c.Heading, {
-                                                    variant: 'heading-md/semibold',
-                                                    color: 'text-brand',
-                                                    className: b.tipNumber,
-                                                    children: t + 1
-                                                }),
-                                                (0, a.jsx)(c.Text, {
-                                                    variant: 'text-sm/medium',
-                                                    color: 'header-secondary',
-                                                    children: e
-                                                })
-                                            ]
-                                        },
-                                        t
-                                    )
-                                )
+                            (0, a.jsxs)('div', {
+                                className: b.mainSection,
+                                children: [
+                                    (0, a.jsx)('div', {
+                                        className: b.tipsSection,
+                                        children: N.map((n, e) =>
+                                            (0, a.jsxs)(
+                                                'div',
+                                                {
+                                                    className: b.tipRow,
+                                                    children: [
+                                                        (0, a.jsx)(c.Heading, {
+                                                            variant: 'heading-md/semibold',
+                                                            color: 'text-brand',
+                                                            className: b.tipNumber,
+                                                            children: e + 1
+                                                        }),
+                                                        n
+                                                    ]
+                                                },
+                                                e
+                                            )
+                                        )
+                                    }),
+                                    null != k
+                                        ? (0, a.jsx)('div', {
+                                              children: (0, a.jsx)(c.Heading, {
+                                                  variant: 'heading-sm/medium',
+                                                  color: 'text-link',
+                                                  children: k
+                                              })
+                                          })
+                                        : null
+                                ]
                             }),
                             (0, a.jsxs)('div', {
                                 children: [
@@ -105,7 +115,7 @@ function _(e) {
                                     }),
                                     (0, a.jsx)('div', {
                                         className: b.tipsSection,
-                                        children: N
+                                        children: p
                                     })
                                 ]
                             }),
@@ -113,7 +123,7 @@ function _(e) {
                                 channelId: _,
                                 warningId: v,
                                 senderId: g,
-                                safetyWarning: k
+                                safetyWarning: j
                             })
                         ]
                     })

@@ -26,7 +26,7 @@ var i = n(200651),
     E = n(981631),
     b = n(388032),
     N = n(771860);
-function Z(e) {
+function S(e) {
     let { senderId: t, channelId: n, warningId: r } = e,
         { isIgnored: d } = (0, a.cj)([m.Z], () => ({ isIgnored: m.Z.isIgnored(t) }), [t]),
         u = (0, h.Do)({ location: 'web_stranger_danger_more' }),
@@ -129,7 +129,7 @@ function Z(e) {
               ]
           });
 }
-function S(e) {
+function Z(e) {
     let { onClick: t } = e;
     return (0, i.jsxs)('div', {
         className: N.safetyAction,
@@ -205,16 +205,26 @@ function T(e) {
                         warningId: o,
                         senderId: h,
                         description: b.intl.string(b.t.DJMZX1),
-                        safetyTips: g,
+                        safetyTips: g.map((e, t) =>
+                            (0, i.jsx)(
+                                s.Text,
+                                {
+                                    variant: 'text-sm/medium',
+                                    color: 'header-secondary',
+                                    children: e
+                                },
+                                t
+                            )
+                        ),
                         actions: (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(Z, {
+                                (0, i.jsx)(S, {
                                     senderId: h,
                                     channelId: t,
                                     warningId: o
                                 }),
                                 (0, i.jsx)(d.Z, {}),
-                                (0, i.jsx)(S, {
+                                (0, i.jsx)(Z, {
                                     onClick: () => {
                                         r(), j(_.NM.USER_MODAL_BLOCK_CONFIRM, _.NM.USER_MODAL_BLOCK_CANCEL, T);
                                     }
