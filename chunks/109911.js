@@ -24,6 +24,24 @@ let o = (0, a.B)({
                 id: 1,
                 label: 'enables the new icymi tab',
                 config: { enabled: !0 }
+            },
+            {
+                id: 2,
+                label: 'new icymi tab with some new features',
+                config: {
+                    enabled: !0,
+                    activeVoice: !1,
+                    activeConvos: !0
+                }
+            },
+            {
+                id: 3,
+                label: 'new icymi tab with more new features',
+                config: {
+                    enabled: !0,
+                    activeVoice: !0,
+                    activeConvos: !0
+                }
             }
         ]
     }),

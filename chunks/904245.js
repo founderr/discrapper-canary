@@ -372,11 +372,11 @@ let eg = {
                 });
         },
         fetchMessages(e) {
-            let { channelId: t, before: n, after: r, limit: a, jump: l, focus: u, isPreload: c, skipLocalFetch: d, truncate: f } = e,
-                _ = K.Z.getChannel(t),
-                p = I.Z.isConnectedOrOverlay(),
-                h = Date.now();
-            if (null != _ && _.type === el.d4z.GUILD_STORE) return !1;
+            let { channelId: t, before: n, after: r, limit: a, jump: l, focus: u, isPreload: c, skipLocalFetch: d, truncate: f, forICYMI: _ } = e,
+                p = K.Z.getChannel(t),
+                h = I.Z.isConnectedOrOverlay(),
+                m = Date.now();
+            if (null != p && p.type === el.d4z.GUILD_STORE) return !1;
             if (t === eu.V) return;
             if (
                 (ef.log('Fetching messages for '.concat(t, ' between ').concat(n, ' and ').concat(r, '. jump=').concat(JSON.stringify(l))),
@@ -392,14 +392,14 @@ let eg = {
             )
                 return;
             H.Z.fetchMessages.recordStart();
-            let m = null != l ? l : void 0;
-            null == m && null != u && (m = { ...u });
-            let g = o.Z.getOrCreate(t).loadStart(m);
-            o.Z.commit(g), s.Z.dispatch({ type: 'LOAD_MESSAGES' });
-            let E = null == m ? void 0 : m.messageId,
-                v = new eh();
+            let g = null != l ? l : void 0;
+            null == g && null != u && (g = { ...u });
+            let E = o.Z.getOrCreate(t).loadStart(g);
+            o.Z.commit(E), s.Z.dispatch({ type: 'LOAD_MESSAGES' });
+            let v = null == g ? void 0 : g.messageId,
+                T = new eh();
             return (
-                !d && this.fetchLocalMessages(t, n, r, a, v),
+                !d && this.fetchLocalMessages(t, n, r, a, T),
                 i.tn
                     .get({
                         url: el.ANM.MESSAGES(t),
@@ -407,7 +407,7 @@ let eg = {
                             before: n,
                             after: r,
                             limit: a,
-                            around: E,
+                            around: v,
                             preload: c
                         },
                         retries: 2,
@@ -422,12 +422,12 @@ let eg = {
                                     o = null != n,
                                     u = null != r,
                                     c = null == n && null == r,
-                                    d = null != E || (i.length === a && (o || c)),
-                                    _ = null != E || (u && i.length === a);
-                                if (null != E) {
+                                    d = null != v || (i.length === a && (o || c)),
+                                    p = null != v || (u && i.length === a);
+                                if (null != v) {
                                     let e = Math.floor(a / 2),
                                         n = [
-                                            E,
+                                            v,
                                             ...i.map((e) => {
                                                 let { id: t } = e;
                                                 return t;
@@ -435,14 +435,14 @@ let eg = {
                                         ]
                                             .filter((e, t, n) => n.indexOf(e) === t)
                                             .sort(es.default.compare)
-                                            .indexOf(E);
-                                    if ((n < e && (d = !1), i.length - n < e && (_ = !1), _ && i.length > 0)) {
+                                            .indexOf(v);
+                                    if ((n < e && (d = !1), i.length - n < e && (p = !1), p && i.length > 0)) {
                                         let e = J.ZP.lastMessageId(t);
-                                        i[0].id === e && (_ = !1);
+                                        i[0].id === e && (p = !1);
                                     }
                                 }
                                 ef.log('Fetched '.concat(i.length, ' messages for ').concat(t, ' isBefore:').concat(o, ' isAfter:').concat(u)),
-                                    v.markComplete(),
+                                    T.markComplete(),
                                     s.Z.dispatch({
                                         type: 'LOAD_MESSAGES_SUCCESS',
                                         channelId: t,
@@ -450,10 +450,11 @@ let eg = {
                                         isBefore: o,
                                         isAfter: u,
                                         hasMoreBefore: d,
-                                        hasMoreAfter: _,
+                                        hasMoreAfter: p,
                                         limit: a,
                                         jump: l,
-                                        isStale: !p || I.Z.lastTimeConnectedChanged() >= h,
+                                        forICYMI: _,
+                                        isStale: !h || I.Z.lastTimeConnectedChanged() >= m,
                                         truncate: f
                                     });
                             }),

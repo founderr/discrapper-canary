@@ -1,11 +1,10 @@
-let i;
 n(47120);
-var r,
-    l = n(442837),
-    o = n(570140),
-    u = n(699516),
-    a = n(496232);
-function s(e, t, n) {
+var i,
+    r = n(442837),
+    l = n(570140),
+    o = n(699516),
+    u = n(496232);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,21 +17,22 @@ function s(e, t, n) {
         e
     );
 }
-let c = !1,
+let s = new Map(),
+    c = !1,
     d = Object.freeze({
         userAffinities: [],
         lastFetched: 0
     }),
     f = { ...d };
 function _() {
-    i = new Map(f.userAffinities.filter((e) => !u.Z.isBlockedOrIgnored(e.otherUserId)).map((e) => [e.otherUserId, e]));
+    s = new Map(f.userAffinities.filter((e) => !o.Z.isBlockedOrIgnored(e.otherUserId)).map((e) => [e.otherUserId, e]));
 }
-class E extends (r = l.ZP.PersistedStore) {
+class E extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(u.Z), null != e && ((f.userAffinities = e.userAffinities), (f.lastFetched = e.lastFetched), _()), this.syncWith([u.Z], _);
+        this.waitFor(o.Z), null != e && ((f.userAffinities = e.userAffinities), (f.lastFetched = e.lastFetched), _()), this.syncWith([o.Z], _);
     }
     shouldFetch() {
-        if (!c) return Date.now() - f.lastFetched > a.K;
+        if (!c) return Date.now() - f.lastFetched > u.K;
     }
     isFetching() {
         return c;
@@ -40,16 +40,23 @@ class E extends (r = l.ZP.PersistedStore) {
     getUserAffinities() {
         return f.userAffinities;
     }
+    getUserAffinitiesMap() {
+        return s;
+    }
+    compare(e, t) {
+        var n, i, r, l;
+        return (null !== (r = null === (n = s.get(t)) || void 0 === n ? void 0 : n.communicationProbability) && void 0 !== r ? r : 0) - (null !== (l = null === (i = s.get(e)) || void 0 === i ? void 0 : i.communicationProbability) && void 0 !== l ? l : 0);
+    }
     getUserAffinity(e) {
-        return i.get(e);
+        return s.get(e);
     }
     getState() {
         return f;
     }
 }
-s(E, 'displayName', 'UserAffinitiesStoreV2'),
-    s(E, 'persistKey', 'UserAffinitiesStoreV2'),
-    (t.Z = new E(o.Z, {
+a(E, 'displayName', 'UserAffinitiesStoreV2'),
+    a(E, 'persistKey', 'UserAffinitiesStoreV2'),
+    (t.Z = new E(l.Z, {
         LOAD_USER_AFFINITIES_V2: function () {
             c = !0;
         },
@@ -61,6 +68,6 @@ s(E, 'displayName', 'UserAffinitiesStoreV2'),
             c = !1;
         },
         LOGOUT: function () {
-            (f = { ...d }), (i = new Map()), (c = !1);
+            (f = { ...d }), (s = new Map()), (c = !1);
         }
     }));
