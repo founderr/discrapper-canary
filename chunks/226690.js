@@ -52,22 +52,23 @@ class c extends (i = o.Component) {
                 let { importData: e, loop: t, autoplay: r, delay: i, renderer: a, rendererSettings: s, shouldAnimate: o } = this.props;
                 null != this.animation && this.animation.destroy();
                 let [l, { default: u }] = await Promise.all([e(), n.e('23755').then(n.t.bind(n, 500923, 23))]);
-                if (null != this.animationRef.current)
-                    (this.animation = u.loadAnimation({
-                        container: this.animationRef.current,
-                        renderer: a,
-                        loop: t,
-                        autoplay: r && null == i && o,
-                        animationData: l,
-                        rendererSettings: s
-                    })),
-                        null != i
-                            ? this.delayTimeout.start(i, () => {
-                                  var e;
-                                  null === (e = this.animation) || void 0 === e || e.play();
-                              })
-                            : this.playOrPauseAnimation(),
-                        this.animation.addEventListener('complete', this.handleComplete);
+                if (null == this.animationRef.current) return;
+                let c = 'object' == typeof l && 'default' in l && 'string' == typeof l.default ? { path: l.default } : { animationData: l };
+                (this.animation = u.loadAnimation({
+                    container: this.animationRef.current,
+                    renderer: a,
+                    loop: t,
+                    autoplay: r && null == i && o,
+                    rendererSettings: s,
+                    ...c
+                })),
+                    null != i
+                        ? this.delayTimeout.start(i, () => {
+                              var e;
+                              null === (e = this.animation) || void 0 === e || e.play();
+                          })
+                        : this.playOrPauseAnimation(),
+                    this.animation.addEventListener('complete', this.handleComplete);
             }),
             u(this, 'handleComplete', () => {
                 let { onComplete: e } = this.props;
