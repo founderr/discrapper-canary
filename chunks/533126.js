@@ -14,10 +14,10 @@ function r(e) {
 }
 n.d(t, {
     U2: function () {
-        return _;
+        return x;
     },
     wz: function () {
-        return f;
+        return p;
     }
 });
 var s = 'copy',
@@ -109,7 +109,7 @@ c({
         })
     }),
     o(g, (e) => e.getClientExtensionResults());
-var p = {
+var m = {
         mediation: u(s),
         publicKey: c({
             challenge: c(l),
@@ -121,7 +121,7 @@ var p = {
         }),
         signal: u(s)
     },
-    m = {
+    f = {
         type: c(s),
         id: c(s),
         rawId: c(l),
@@ -134,10 +134,10 @@ var p = {
         }),
         clientExtensionResults: o(g, (e) => e.getClientExtensionResults())
     };
-function f(e) {
-    return a(i, p, e);
+function p(e) {
+    return a(i, m, e);
 }
-async function _(e) {
+async function x(e) {
     let t = await navigator.credentials.get(e);
-    return (t.toJSON = () => a(r, m, t)), t;
+    return (t.toJSON = () => a(r, f, t)), t;
 }

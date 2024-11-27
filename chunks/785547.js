@@ -12,20 +12,20 @@ var i,
     o = n(192379),
     s = n(442837),
     c = n(692547),
-    d = n(481060),
-    u = n(58642),
+    u = n(481060),
+    d = n(58642),
     m = n(2052),
     h = n(710845),
     f = n(703656),
     p = n(173747),
-    _ = n(7956),
-    g = n(293245),
+    g = n(7956),
+    _ = n(293245),
     E = n(417363),
     C = n(941128),
     I = n(780570),
     x = n(358085),
-    v = n(814225),
-    N = n(346329),
+    N = n(814225),
+    v = n(346329),
     T = n(701560),
     S = n(981631),
     A = n(388032),
@@ -94,7 +94,7 @@ class P extends (r = o.Component) {
         return null != i ? i : null != t && t.type === S.vxO.UNINSTALLING ? 'uninstalling' : (0, x.isWeb)() ? 'play' : 'unsupported_os';
     }
     renderPlayButton() {
-        let { libraryApplication: e, fullWidth: t, size: n, color: i, customDisabledColor: r, isPlayShiny: l, onDropdownOpen: o, onDropdownClose: s, analyticsListSort: c, analyticsListIndex: d } = this.props;
+        let { libraryApplication: e, fullWidth: t, size: n, color: i, customDisabledColor: r, isPlayShiny: l, onDropdownOpen: o, onDropdownClose: s, analyticsListSort: c, analyticsListIndex: u } = this.props;
         return (0, a.jsx)(T.Z, {
             applicationId: e.id,
             libraryApplication: e,
@@ -106,7 +106,7 @@ class P extends (r = o.Component) {
             onDropdownOpen: o,
             onDropdownClose: s,
             analyticsListSort: c,
-            analyticsListIndex: d
+            analyticsListIndex: u
         });
     }
     renderDisabledButton(e, t) {
@@ -114,7 +114,7 @@ class P extends (r = o.Component) {
         return (0, a.jsxs)('div', {
             className: b.disabledButtonWrapper,
             children: [
-                (0, a.jsxs)(d.Button, {
+                (0, a.jsxs)(u.Button, {
                     className: n,
                     fullWidth: i,
                     size: r,
@@ -122,7 +122,7 @@ class P extends (r = o.Component) {
                     disabled: !0,
                     children: [this.getText(e), this.renderProgressBar()]
                 }),
-                (0, a.jsx)(d.Tooltip, {
+                (0, a.jsx)(u.Tooltip, {
                     text: t,
                     position: o,
                     children: (e) =>
@@ -139,10 +139,10 @@ class P extends (r = o.Component) {
         if (e) return null;
         let n = I.KJ(t);
         if (null == n) return null;
-        let i = n.type === S.vxO.UNINSTALLING ? d.Progress.INDETERMINATE : I.xI(Number(n.progress), Number(n.total));
-        return (0, a.jsx)(d.Progress, {
+        let i = n.type === S.vxO.UNINSTALLING ? u.Progress.INDETERMINATE : I.xI(Number(n.progress), Number(n.total));
+        return (0, a.jsx)(u.Progress, {
             percent: i,
-            size: d.Progress.Sizes.XSMALL,
+            size: u.Progress.Sizes.XSMALL,
             foregroundColor: n.paused ? c.Z.unsafe_rawColors.PRIMARY_500.css : c.Z.unsafe_rawColors.GREEN_360.css,
             backgroundColor: c.Z.unsafe_rawColors.TRANSPARENT.css,
             className: b.progress
@@ -150,11 +150,11 @@ class P extends (r = o.Component) {
     }
     renderActionButton(e, t) {
         let { className: n, fullWidth: i, size: r, color: l, isCloudSyncing: o } = this.props;
-        return (0, a.jsxs)(d.Button, {
+        return (0, a.jsxs)(u.Button, {
             className: n,
             fullWidth: i,
             size: r,
-            color: null != l ? l : d.Button.Colors.GREEN,
+            color: null != l ? l : u.Button.Colors.GREEN,
             submitting: 'uninstalling' === e || o,
             onClick: (e) => this.handleClick(e, t),
             children: [this.getText(e), this.renderProgressBar()]
@@ -168,7 +168,7 @@ class P extends (r = o.Component) {
             return this.renderDisabledButton(
                 n,
                 (function (e) {
-                    let t = v.en(e.sku);
+                    let t = N.en(e.sku);
                     return null != t ? A.intl.formatToPlainString(A.t.Aqe2ZG, { date: t }) : null;
                 })(t)
             );
@@ -183,18 +183,18 @@ class P extends (r = o.Component) {
             j(this, 'handleAddToLibrary', async () => {
                 try {
                     let { libraryApplication: e } = this.props;
-                    await u.h(e.id, e.branchId, e.getFlags() & ~S.eHb.HIDDEN), (0, f.uL)(S.Z5c.APPLICATION_LIBRARY);
+                    await d.h(e.id, e.branchId, e.getFlags() & ~S.eHb.HIDDEN), (0, f.uL)(S.Z5c.APPLICATION_LIBRARY);
                 } catch (e) {
                     new h.Z('LibraryApplicationButton').error(e);
                 }
             }),
             j(this, 'handleInstall', () => {
                 let { libraryApplication: e, source: t } = this.props;
-                N.installApplication(e.id, e.branchId, t);
+                v.installApplication(e.id, e.branchId, t);
             }),
             j(this, 'handleUpdate', () => {
                 let { libraryApplication: e } = this.props;
-                N.updateApplication(e.id, e.branchId);
+                v.updateApplication(e.id, e.branchId);
             }),
             j(this, 'onClickHandlers', {
                 add_to_library: this.handleAddToLibrary,
@@ -210,8 +210,8 @@ class P extends (r = o.Component) {
 function L(e) {
     let { libraryApplication: t } = e,
         n = (0, m.O)(),
-        [i, r] = (0, s.Wu)([E.Z, C.Z], () => [(0, _.i)(t, E.Z, C.Z), E.Z.getState(t.id, t.branchId)], [t]),
-        l = (0, s.e7)([g.Z], () => g.Z.isSyncing(t.id, t.branchId), [t]),
+        [i, r] = (0, s.Wu)([E.Z, C.Z], () => [(0, g.i)(t, E.Z, C.Z), E.Z.getState(t.id, t.branchId)], [t]),
+        l = (0, s.e7)([_.Z], () => _.Z.isSyncing(t.id, t.branchId), [t]),
         o = (0, s.e7)([p.Z], () => p.Z.hasNoBuild(t.id, t.branchId), [t]);
     return (0, a.jsx)(P, {
         ...e,
@@ -224,7 +224,7 @@ function L(e) {
 }
 j(P, 'defaultProps', {
     fullWidth: !1,
-    size: d.Button.Sizes.LARGE,
+    size: u.Button.Sizes.LARGE,
     hideProgress: !1,
     isPlayShiny: !1,
     tooltipPosition: 'top'

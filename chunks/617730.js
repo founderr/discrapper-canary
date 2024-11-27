@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return f;
     }
 });
 var i = n(200651);
@@ -15,7 +15,7 @@ var r = n(481060),
     d = n(981631),
     h = n(388032),
     g = n(461342);
-let p = (e) => {
+let m = (e) => {
     let { state: t } = e;
     switch (t) {
         case d.r2o.ACCEPTING:
@@ -25,26 +25,26 @@ let p = (e) => {
             return !1;
     }
 };
-function m(e) {
-    let { invite: t, onAcceptInvite: n, disableUser: m = !1 } = e;
+function f(e) {
+    let { invite: t, onAcceptInvite: n, disableUser: f = !1 } = e;
     if (null == t) return null;
-    let f = null != t.guild ? new a.ZP(t.guild) : null,
-        _ = null != t.channel ? (0, l.jD)(t.channel) : null,
-        x = null != t.target_application ? new s.Z(t.target_application) : null,
-        E = m || null == t.inviter ? null : new o.Z(t.inviter),
-        I = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != f && f.hasFeature(d.oNc.COMMUNITY))) && null != E && (0, c.WT)(t),
-        v = p(t),
+    let p = null != t.guild ? new a.ZP(t.guild) : null,
+        x = null != t.channel ? (0, l.jD)(t.channel) : null,
+        _ = null != t.target_application ? new s.Z(t.target_application) : null,
+        E = f || null == t.inviter ? null : new o.Z(t.inviter),
+        I = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != p && p.hasFeature(d.oNc.COMMUNITY))) && null != E && (0, c.WT)(t),
+        v = m(t),
         N = {
             invite: t,
             user: E,
-            guild: f,
-            channel: _,
-            application: x
+            guild: p,
+            channel: x,
+            application: _
         };
     return (0, c.JI)(t)
         ? (0, i.jsx)(u.Z, {
               invite: t,
-              channel: _,
+              channel: x,
               isSubmitting: v,
               onAcceptInvite: n
           })
@@ -52,8 +52,8 @@ function m(e) {
               className: g.container,
               children: [
                   (0, i.jsx)(c.GB, {
-                      application: x,
-                      guild: f,
+                      application: _,
+                      guild: p,
                       user: I || (0, c.X7)(t) ? E : null
                   }),
                   (0, c.X7)(t)

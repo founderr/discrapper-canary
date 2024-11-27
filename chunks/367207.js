@@ -134,7 +134,7 @@ class Y extends c.Z {
                 let e = C.default.getCurrentUser();
                 if (null != e && e.verified) {
                     let t = !(0, x.I5)(e) && _.Z.shouldFetchOffer();
-                    await (0, M.T)('PremiumManager', t);
+                    await (0, M.T)('PremiumManager', void 0, t);
                 }
                 o.Z.dispatch({ type: 'PREMIUM_MARKETING_DATA_READY' });
             }),

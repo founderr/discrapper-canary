@@ -301,7 +301,7 @@ function er(e) {
             h &&
                 null != a &&
                 (0, p.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e('77298'), n.e('23357'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('68956'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('87624'), n.e('2181'), n.e('57674'), n.e('46746'), n.e('39614')]).then(n.bind(n, 60594));
+                    let { default: e } = await Promise.all([n.e('46746'), n.e('66913')]).then(n.bind(n, 60594));
                     return (t) =>
                         (0, i.jsx)(e, {
                             ...t,

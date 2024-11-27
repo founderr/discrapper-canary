@@ -4,8 +4,8 @@ var r,
     l,
     o = n(200651),
     s = n(192379),
-    a = n(120356),
-    d = n.n(a),
+    d = n(120356),
+    a = n.n(d),
     c = n(481060),
     E = n(388032),
     S = n(323822);
@@ -17,7 +17,7 @@ class _ extends (l = s.PureComponent) {
     render() {
         let { children: e, className: t, textClassName: n, type: r = f.BLOCK, style: i } = this.props;
         return (0, o.jsxs)('div', {
-            className: d()(t, r),
+            className: a()(t, r),
             style: i,
             children: [
                 (0, o.jsxs)(c.Text, {
@@ -28,7 +28,7 @@ class _ extends (l = s.PureComponent) {
                     children: [E.intl.string(E.t['8tvIiI']), ':']
                 }),
                 (0, o.jsx)(c.Text, {
-                    className: d()(S.tip, n),
+                    className: a()(S.tip, n),
                     variant: 'text-sm/normal',
                     children: e
                 })

@@ -11,20 +11,20 @@ var i = n(200651),
     o = n(399606),
     s = n(481060),
     c = n(434650),
-    d = n(778569),
-    u = n(182906),
+    u = n(778569),
+    d = n(182906),
     m = n(367907),
     h = n(213609),
     f = n(783097),
     p = n(213459),
-    _ = n(132871),
-    g = n(147890),
+    g = n(132871),
+    _ = n(147890),
     E = n(220082),
     C = n(240991),
     I = n(592125),
     x = n(496675),
-    v = n(944486),
-    N = n(914010),
+    N = n(944486),
+    v = n(914010),
     T = n(768581),
     S = n(585483),
     A = n(135431),
@@ -51,11 +51,11 @@ function O(e) {
         : null;
 }
 function M(e) {
-    var t, n, d, u;
+    var t, n, u, d;
     let { application: E } = e,
-        T = (0, o.e7)([N.Z], () => {
+        T = (0, o.e7)([v.Z], () => {
             var e;
-            return null !== (e = N.Z.getGuildId()) && void 0 !== e ? e : void 0;
+            return null !== (e = v.Z.getGuildId()) && void 0 !== e ? e : void 0;
         }),
         {
             iconURL: b,
@@ -83,11 +83,11 @@ function M(e) {
                 properties: { application_id: E.id }
             });
     }, [D, E]);
-    let F = E.id in (null !== (d = null === (t = (0, p.PL)(!0, !1).result) || void 0 === t ? void 0 : t.sections) && void 0 !== d ? d : {}),
-        G = E.id in (null !== (u = null === (n = (0, p.LD)(T, !1).result) || void 0 === n ? void 0 : n.sections) && void 0 !== u ? u : {}),
+    let F = E.id in (null !== (u = null === (t = (0, p.PL)(!0, !1).result) || void 0 === t ? void 0 : t.sections) && void 0 !== u ? u : {}),
+        G = E.id in (null !== (d = null === (n = (0, p.LD)(T, !1).result) || void 0 === n ? void 0 : n.sections) && void 0 !== d ? d : {}),
         V = F || G,
         H = E.isVerified && E.isDiscoverable,
-        z = (0, o.e7)([v.Z, I.Z], () => I.Z.getChannel(v.Z.getChannelId())),
+        z = (0, o.e7)([N.Z, I.Z], () => I.Z.getChannel(N.Z.getChannelId())),
         W = (0, o.e7)([x.Z], () => x.Z.can(Z.Plq.SEND_MESSAGES, z));
     return (0, i.jsxs)('div', {
         ref: w,
@@ -136,11 +136,11 @@ function M(e) {
                                         var e;
                                         a.Y.USER_INSTALL in (null !== (e = E.integrationTypesConfig) && void 0 !== e ? e : {}) || V
                                             ? S.S.dispatchToLastSubscribed(Z.CkL.OPEN_APP_LAUNCHER, { applicationId: E.id })
-                                            : (0, g.goToAppDirectory)({
+                                            : (0, _.goToAppDirectory)({
                                                   guildId: T,
-                                                  view: _.ApplicationDirectoryViews.APPLICATION,
+                                                  view: g.ApplicationDirectoryViews.APPLICATION,
                                                   applicationId: E.id,
-                                                  entrypoint: { name: _.ApplicationDirectoryEntrypointNames.OAUTH2_EMBED }
+                                                  entrypoint: { name: g.ApplicationDirectoryEntrypointNames.OAUTH2_EMBED }
                                               });
                                     },
                                     children: R.intl.string(R.t.fbcCzc)
@@ -171,7 +171,7 @@ function M(e) {
 }
 function k(e) {
     let { application: t, iconUrl: n } = e,
-        r = (0, d.Z)({
+        r = (0, u.Z)({
             applicationId: t.id,
             size: 280,
             names: ['embedded_cover']
@@ -181,7 +181,7 @@ function k(e) {
         o = null,
         s = {};
     if ((0, f.ye)(t))
-        o = (0, i.jsx)(u.Z, {
+        o = (0, i.jsx)(d.Z, {
             imageBackground: r,
             applicationName: t.name,
             imageClassName: P.bannerImage,

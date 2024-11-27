@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return g;
     }
 }),
     n(47120);
@@ -12,27 +12,27 @@ var r = n(442837),
     o = n(706454),
     s = n(594174),
     c = n(626135),
-    d = n(63063),
-    u = n(51144),
+    u = n(63063),
+    d = n(51144),
     m = n(665149),
     h = n(981631),
     f = n(388032);
 let p = new Set(['ko', 'ja']);
-function _(e) {
+function g(e) {
     let { className: t } = e,
         n = (0, r.e7)([s.default], () => s.default.getCurrentUser()),
-        _ = (0, r.e7)([o.default], () => o.default.locale),
-        g = (0, u.EO)(n);
+        g = (0, r.e7)([o.default], () => o.default.locale),
+        _ = (0, d.EO)(n);
     return (0, i.jsx)(a.Anchor, {
-        href: d.w,
+        href: u.w,
         target: '_blank',
         tabIndex: -1,
         children: (0, i.jsx)(m.JO, {
-            color: g ? l.Z.unsafe_rawColors.GREEN_360.css : 'currentColor',
+            color: _ ? l.Z.unsafe_rawColors.GREEN_360.css : 'currentColor',
             className: t,
-            onClick: () => c.default.track(h.rMx.HELP_CLICKED, { highlighted: g }),
+            onClick: () => c.default.track(h.rMx.HELP_CLICKED, { highlighted: _ }),
             icon: a.CircleQuestionIcon,
-            tooltipPosition: p.has(_) ? 'left' : void 0,
+            tooltipPosition: p.has(g) ? 'left' : void 0,
             tooltip: f.intl.string(f.t.cqEoj4)
         })
     });

@@ -1,80 +1,80 @@
-n.d(t, {
+t.d(n, {
     l: function () {
         return f;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    o = n(481060),
-    a = n(100527),
-    l = n(906732),
-    s = n(184301),
-    u = n(347475),
-    c = n(592125),
-    d = n(91047);
+var r = t(200651),
+    i = t(192379),
+    l = t(481060),
+    u = t(100527),
+    o = t(906732),
+    a = t(184301),
+    s = t(347475),
+    c = t(592125),
+    d = t(91047);
 function f(e) {
-    var t, n;
-    let { user: f, channelId: _, guildId: p, messageId: m, stopPropagation: h = !1, ariaLabel: v } = e,
-        { analyticsLocations: E } = (0, l.ZP)(a.Z.USERNAME);
-    let b =
-        ((t = f),
-        (n = _),
+    var n, t;
+    let { user: f, channelId: m, guildId: v, messageId: p, stopPropagation: h = !1, ariaLabel: g } = e,
+        { analyticsLocations: b } = (0, o.ZP)(u.Z.USERNAME);
+    let x =
+        ((n = f),
+        (t = m),
         i.useCallback(
             (e) => {
-                let r = c.Z.getChannel(n);
-                null != r && null != t && (0, d.Pv)(e, t, r);
+                let r = c.Z.getChannel(t);
+                null != r && null != n && (0, d.Pv)(e, n, r);
             },
-            [t, n]
+            [n, t]
         ));
     return i.useCallback(
-        (e) => (t, n) => {
-            let i = (n) =>
-                    (0, r.jsx)(o.NameWithRoleAnchor, {
-                        ...(null != n ? n : {}),
-                        onContextMenu: b,
-                        name: t,
+        (e) => (n, t) => {
+            let i = (t) =>
+                    (0, r.jsx)(l.NameWithRoleAnchor, {
+                        ...(null != t ? t : {}),
+                        onContextMenu: x,
+                        name: n,
                         color: null == e ? void 0 : e.colorString,
                         roleName: null == e ? void 0 : e.colorRoleName,
-                        'aria-label': v
+                        'aria-label': g
                     }),
-                a = (e) => (t) => {
-                    h && t.stopPropagation(), e(t);
+                u = (e) => (n) => {
+                    h && n.stopPropagation(), e(n);
                 };
             return (0, r.jsx)(
-                l.Gt,
+                o.Gt,
                 {
-                    value: E,
+                    value: b,
                     children:
                         null != f
-                            ? (0, r.jsx)(o.Popout, {
+                            ? (0, r.jsx)(l.Popout, {
                                   position: 'right',
                                   preload: () =>
-                                      (0, s.Z)(f.id, f.getAvatarURL(p, 80), {
-                                          guildId: p,
-                                          channelId: _
+                                      (0, a.Z)(f.id, f.getAvatarURL(v, 80), {
+                                          guildId: v,
+                                          channelId: m
                                       }),
-                                  renderPopout: (t) =>
-                                      (0, r.jsx)(u.Z, {
-                                          ...t,
+                                  renderPopout: (n) =>
+                                      (0, r.jsx)(s.Z, {
+                                          ...n,
                                           userId: f.id,
-                                          guildId: p,
-                                          channelId: _,
-                                          messageId: m,
+                                          guildId: v,
+                                          channelId: m,
+                                          messageId: p,
                                           roleId: null == e ? void 0 : e.colorRoleId
                                       }),
                                   children: (e) => {
-                                      let { onClick: t, ...n } = e;
+                                      let { onClick: n, ...t } = e;
                                       return i({
-                                          onClick: a(t),
-                                          ...n
+                                          onClick: u(n),
+                                          ...t
                                       });
                                   }
                               })
                             : i(void 0)
                 },
-                n
+                t
             );
         },
-        [E, f, _, p, m, b, h, v]
+        [b, f, m, v, p, x, h, g]
     );
 }

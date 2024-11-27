@@ -10,11 +10,11 @@ var i = n(200651),
     d = n(353926),
     h = n(82554),
     g = n(726521),
-    p = n(185625),
-    m = n(314897),
-    f = n(63063),
-    _ = n(981631),
-    x = n(388032),
+    m = n(185625),
+    f = n(314897),
+    p = n(63063),
+    x = n(981631),
+    _ = n(388032),
     E = n(57717),
     I = n(232186);
 l.ZP.initialize();
@@ -27,8 +27,8 @@ let v = (e) => {
                     (0, i.jsx)(e, {
                         ...t,
                         onSuccess: o,
-                        headerText: x.intl.string(x.t.ZLRYGR),
-                        confirmButtonText: x.intl.string(x.t.PDTjLC),
+                        headerText: _.intl.string(_.t.ZLRYGR),
+                        confirmButtonText: _.intl.string(_.t.PDTjLC),
                         confirmButtonColor: a.Button.Colors.BRAND,
                         impressionName: s.ImpressionNames.URF_ENTER_EMAIL
                     });
@@ -36,9 +36,9 @@ let v = (e) => {
         },
         o = (e) => {
             let t = async () => {
-                    await (0, p.yL)(r, e);
+                    await (0, m.yL)(r, e);
                 },
-                l = async (t) => await (0, p.RV)(r, e, t),
+                l = async (t) => await (0, m.RV)(r, e, t),
                 o = (e) => {
                     let t = null == e ? void 0 : e.token;
                     r === h.BM.MESSAGE ? (0, g.eE)(t) : r === h.BM.USER && (0, g.JM)(t);
@@ -52,8 +52,8 @@ let v = (e) => {
                             onFormSubmit: l,
                             onResend: t,
                             onSuccess: o,
-                            headerText: x.intl.string(x.t.H3Q7U1),
-                            confirmButtonText: x.intl.string(x.t['13ofGh']),
+                            headerText: _.intl.string(_.t.H3Q7U1),
+                            confirmButtonText: _.intl.string(_.t['13ofGh']),
                             confirmButtonColor: a.Button.Colors.BRAND,
                             impressionName: s.ImpressionNames.URF_CONFIRM_EMAIL_CODE
                         });
@@ -73,10 +73,10 @@ let v = (e) => {
 t.Z = () => {
     let [e, t] = r.useState(!0),
         [n, s] = r.useState(!1),
-        g = (0, l.e7)([m.default], () => m.default.isAuthenticated()),
+        g = (0, l.e7)([f.default], () => f.default.isAuthenticated()),
         N = (0, l.e7)([d.Z], () => d.Z.hasLoadedExperiments),
-        b = () => {
-            (0, p.qJ)()
+        C = () => {
+            (0, m.qJ)()
                 .then(() => {
                     t(!1), s(!0);
                 })
@@ -90,9 +90,9 @@ t.Z = () => {
                 ? (t(!0),
                   c
                       .k({ withAnalyticsToken: !0 })
-                      .then(() => b())
+                      .then(() => C())
                       .catch(() => t(!1)))
-                : b();
+                : C();
         }, [g]),
         r.useEffect(() => {
             (async () => {
@@ -106,21 +106,21 @@ t.Z = () => {
                   children: [
                       (0, i.jsx)(u.Dx, {
                           className: I.marginBottom8,
-                          children: x.intl.string(x.t.Z11w19)
+                          children: _.intl.string(_.t.Z11w19)
                       }),
                       (0, i.jsx)(u.DK, {
                           className: I.marginBottom8,
-                          children: x.intl.format(x.t['532l+v'], { supportURL: f.Z.getArticleURL(_.BhN.COPYRIGHT_AND_IP_POLICY) })
+                          children: _.intl.format(_.t['532l+v'], { supportURL: p.Z.getArticleURL(x.BhN.COPYRIGHT_AND_IP_POLICY) })
                       }),
                       (0, i.jsxs)('div', {
                           className: E.container,
                           children: [
                               (0, i.jsx)(v, {
-                                  title: x.intl.string(x.t.fuqnBA),
+                                  title: _.intl.string(_.t.fuqnBA),
                                   menuType: h.BM.MESSAGE
                               }),
                               (0, i.jsx)(v, {
-                                  title: x.intl.string(x.t.F4jrRU),
+                                  title: _.intl.string(_.t.F4jrRU),
                                   menuType: h.BM.USER
                               })
                           ]

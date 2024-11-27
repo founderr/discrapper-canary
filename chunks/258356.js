@@ -1,9 +1,9 @@
 n.d(t, {
     X: function () {
-        return p;
+        return m;
     },
     Z: function () {
-        return m;
+        return f;
     }
 });
 var i = n(200651);
@@ -50,7 +50,7 @@ function g(e) {
         ]
     });
 }
-function p(e) {
+function m(e) {
     var t;
     let { invite: n } = e,
         a = null != n.guild ? new c.ZP(n.guild) : null;
@@ -110,7 +110,7 @@ function p(e) {
         ]
     });
 }
-function m(e) {
+function f(e) {
     let { invite: t, channel: n, isSubmitting: r, onAcceptInvite: s } = e,
         { guild_scheduled_event: l } = t;
     return null != l

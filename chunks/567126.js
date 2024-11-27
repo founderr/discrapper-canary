@@ -48,10 +48,10 @@ var l = n(200651),
     I = n(28798),
     T = n(131951),
     N = n(449224),
-    b = n(358085),
-    w = n(463727),
-    E = n(855403),
-    y = n(299570),
+    w = n(358085),
+    b = n(463727),
+    y = n(855403),
+    E = n(299570),
     R = n(960861),
     M = n(989941),
     P = n(958707),
@@ -69,7 +69,7 @@ async function F() {
             width: 176,
             height: 99
         }),
-        n = H(),
+        n = W(),
         l = await n,
         i = await t,
         r = i
@@ -121,7 +121,7 @@ async function F() {
             })
     };
 }
-async function H() {
+async function W() {
     let e = j.ZP.getRunningGames();
     return (
         await Promise.all(
@@ -147,23 +147,23 @@ async function H() {
         )
     ).filter((e) => null !== e);
 }
-function W(e) {
-    let t = (0, b.isWindows)() ? (0, M.Z)(j.ZP, N.Z) : null,
+function H(e) {
+    let t = (0, w.isWindows)() ? (0, M.Z)(j.ZP, N.Z) : null,
         n = j.ZP.getRunningGames();
-    return null != t && (0, E.Z)(e.id, t.windowHandle) ? 2 : null != n.find((t) => (0, E.Z)(e.id, t.windowHandle)) ? 1 : 0;
+    return null != t && (0, y.Z)(e.id, t.windowHandle) ? 2 : null != n.find((t) => (0, y.Z)(e.id, t.windowHandle)) ? 1 : 0;
 }
 function V(e) {
     let { selectedSource: t, onChangeSelectedSource: n } = e,
-        { enableGoLiveCaptureCard: r } = w.Z.useExperiment({ location: 'GoLive_Source_Select' }),
+        { enableGoLiveCaptureCard: r } = b.Z.useExperiment({ location: 'GoLive_Source_Select' }),
         a = T.Z.supports(D.AN.GO_LIVE_HARDWARE),
         [o, c] = i.useState(null),
         [f, x] = i.useState(null),
         [g, N] = i.useState(null),
-        b = null != g && g.length > 0,
-        [y, R] = i.useState(d.vA.WINDOW),
+        w = null != g && g.length > 0,
+        [E, R] = i.useState(d.vA.WINDOW),
         [M, k] = i.useState(!1),
         B = i.useRef(null),
-        H = i.useRef(new h.Xp()),
+        W = i.useRef(new h.Xp()),
         V = (0, u.e7)([j.ZP], () => j.ZP.getRunningGames()),
         z = (function (e, t, n) {
             let l = (0, _.Zy)({ location: G.dr.STREAM_SOURCE_SELECT });
@@ -171,7 +171,7 @@ function V(e) {
                 if (null == n || !l) return null;
                 for (let l of n) {
                     var i, r;
-                    let n = t.find((e) => (0, E.Z)(l.id, e.windowHandle));
+                    let n = t.find((e) => (0, y.Z)(l.id, e.windowHandle));
                     if ((null == n ? void 0 : n.id) == null) continue;
                     let s = (0, Z.lQ)(e, n.id);
                     if (null != s && (null === (i = s.userStatus) || void 0 === i ? void 0 : i.enrolledAt) != null && (null === (r = s.userStatus) || void 0 === r ? void 0 : r.completedAt) == null)
@@ -187,9 +187,9 @@ function V(e) {
             V,
             f
         ),
-        K = i.useMemo(() => (null == f ? null : [...f].sort((e, t) => ((null == z ? void 0 : z.source.id) === e.id ? -1 : (null == z ? void 0 : z.source.id) === t.id ? 1 : W(t) - W(e)))), [z, f]);
+        K = i.useMemo(() => (null == f ? null : [...f].sort((e, t) => ((null == z ? void 0 : z.source.id) === e.id ? -1 : (null == z ? void 0 : z.source.id) === t.id ? 1 : H(t) - H(e)))), [z, f]);
     i.useEffect(() => {
-        let e = H.current;
+        let e = W.current;
         return (
             F().then((e) => {
                 let { screenSources: t, windowSources: n, cameraSources: l } = e;
@@ -220,7 +220,7 @@ function V(e) {
             case d.vA.CAMERA:
                 return g;
         }
-    })(y);
+    })(E);
     if (null == q)
         return !1 === X
             ? (0, l.jsxs)(m.Text, {
@@ -280,7 +280,7 @@ function V(e) {
                             return (
                                 r &&
                                     a &&
-                                    b &&
+                                    w &&
                                     e.push({
                                         name: O.intl.string(O.t.cWt5Ul),
                                         value: d.vA.CAMERA
@@ -288,7 +288,7 @@ function V(e) {
                                 e
                             );
                         })(),
-                        value: y,
+                        value: E,
                         onChange: (e) => {
                             let { value: t } = e;
                             return R(t);
@@ -298,7 +298,7 @@ function V(e) {
                     })
                 ]
             }),
-            y === d.vA.CAMERA
+            E === d.vA.CAMERA
                 ? (0, l.jsx)('div', {
                       className: U.sourceContainer,
                       children: (0, l.jsx)(m.AdvancedScroller, {
@@ -318,7 +318,7 @@ function V(e) {
                       className: U.sourceScroller,
                       onScroll: $,
                       children: [
-                          y === d.vA.WINDOW && null != z && (0, l.jsx)(I.Z, { quest: z.quest }),
+                          E === d.vA.WINDOW && null != z && (0, l.jsx)(I.Z, { quest: z.quest }),
                           (0, l.jsx)(v.Z, {
                               layout: v.Z.Layout.WRAP,
                               columns: 2,
@@ -429,8 +429,8 @@ function Y(e) {
             },
             [t, a]
         ),
-        f = (0, b.isMac)() && o().satisfies(null === g.Z || void 0 === g.Z ? void 0 : g.Z.os.release, B.jR),
-        x = (0, b.isMac)(),
+        f = (0, w.isMac)() && o().satisfies(null === g.Z || void 0 === g.Z ? void 0 : g.Z.os.release, B.jR),
+        x = (0, w.isMac)(),
         [p, v] = i.useState(!1),
         j = i.useCallback(() => {
             v(!p);
@@ -523,10 +523,10 @@ function X(e) {
     return (
         (0, R.kE)(),
         i.useEffect(() => {
-            '' === r ? (0, y.T)(r) : (0, y.t)();
+            '' === r ? (0, E.T)(r) : (0, E.t)();
         }, [r]),
         i.useEffect(() => {
-            o ? (s === R.Uc.Update ? t() : s === R.Uc.Cancel && ((0, y.t)(), n())) : (null == s || s === R.Uc.Present) && c(!0);
+            o ? (s === R.Uc.Update ? t() : s === R.Uc.Cancel && ((0, E.t)(), n())) : (null == s || s === R.Uc.Present) && c(!0);
         }, [o, s, t, n]),
         s === R.Uc.Error
             ? (0, l.jsx)(m.Text, {

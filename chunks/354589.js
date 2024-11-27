@@ -14,15 +14,15 @@ var r = t(481060),
     p = t(607783),
     h = t(299206),
     g = t(819403),
-    _ = t(777658),
-    v = t(858488),
+    v = t(777658),
+    _ = t(858488),
     E = t(185457),
     Z = t(570870),
     x = t(389052),
     I = t(24311),
     T = t(915193),
-    b = t(332576),
-    A = t(158508),
+    A = t(332576),
+    b = t(158508),
     M = t(710631),
     S = t(297047),
     C = t(88966),
@@ -45,17 +45,17 @@ e.default = (0, o.Z)(
                 }),
                 V = (0, S.Z)(t, null, o),
                 L = (0, y.Z)(t, a.id),
-                H = (0, C.Z)(t.id, o),
-                K = (0, I.Z)({
+                z = (0, C.Z)(t.id, o),
+                H = (0, I.Z)({
                     user: t,
                     context: o
                 }),
-                z = (0, E.Z)({
+                K = (0, E.Z)({
                     user: t,
                     channelId: a.id,
                     context: o
                 }),
-                q = (0, v.Z)({ user: t }),
+                q = (0, _.Z)({ user: t }),
                 F = (0, P.Z)(t.id),
                 Y = (0, j.Z)(t.id, a.id),
                 J = (0, N.Z)(t.id),
@@ -65,12 +65,12 @@ e.default = (0, o.Z)(
                     guildId: a.getGuildId(),
                     location: 'GroupDMUserContextMenu'
                 }),
-                X = (0, b.Z)(t.id, a.id),
+                X = (0, A.Z)(t.id, a.id),
                 $ = (0, M.Z)({ user: t }),
                 nn = (0, u.Z)(null, t),
-                ne = (0, _.Z)(t),
+                ne = (0, v.Z)(t),
                 nt = (0, x.Z)({ user: t }),
-                ni = (0, A.Z)({ user: t }),
+                ni = (0, b.Z)({ user: t }),
                 nr = (0, h.Z)({
                     id: t.id,
                     label: U.intl.string(U.t['/AXYnJ'])
@@ -102,7 +102,7 @@ e.default = (0, o.Z)(
                             children: [
                                 (0, i.jsx)(r.MenuGroup, { children: nd }),
                                 (0, i.jsxs)(r.MenuGroup, {
-                                    children: [D && B, s && V, H, K, !nm && L, D && z, D && q, nl]
+                                    children: [D && B, s && V, z, H, !nm && L, D && K, D && q, nl]
                                 }),
                                 k && (0, i.jsx)(r.MenuGroup, { children: F }),
                                 np &&

@@ -11,20 +11,20 @@ var r = n(481060),
     o = n(447564),
     s = n(63063),
     c = n(739566),
-    d = n(942951),
-    u = n(834129),
+    u = n(942951),
+    d = n(834129),
     m = n(981631),
     h = n(388032),
     f = n(505984);
 function p(e) {
     let { compact: t, message: n, channel: p } = e,
-        _ = (0, c.ZP)(n),
-        g = (0, d.l)({
+        g = (0, c.ZP)(n),
+        _ = (0, u.l)({
             user: n.author,
             channelId: n.channel_id,
             guildId: p.guild_id,
             messageId: n.id
-        })(_),
+        })(g),
         E = (0, l.j)('HDStreamingUpgradedMessage'),
         C = () => (0, o.openHDPotionModal)(p, 'HDStreamingUpgradedMessage'),
         I = E ? C : s.Z.getArticleURL(m.BhN.HD_STREAMING_POTION);
@@ -32,13 +32,13 @@ function p(e) {
         children: [
             (0, i.jsx)('div', {
                 className: f.parentContainer,
-                children: (0, i.jsx)(u.Z, {
+                children: (0, i.jsx)(d.Z, {
                     iconNode: (0, i.jsx)(r.PotionIcon, { size: 'sm' }),
                     timestamp: n.timestamp,
                     compact: t,
                     children: h.intl.format(h.t['u0qJ4+'], {
-                        actorName: _.nick,
-                        actorHook: g
+                        actorName: g.nick,
+                        actorHook: _
                     })
                 })
             }),

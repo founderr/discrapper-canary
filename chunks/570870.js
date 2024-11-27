@@ -12,17 +12,17 @@ var i = t(200651),
     p = t(430824),
     h = t(594174),
     g = t(981631),
-    _ = t(689079),
-    v = t(388032),
+    v = t(689079),
+    _ = t(388032),
     E = t(148562);
 e.Z = (n) => {
     let e,
         { commandType: t, commandTargetId: l, channel: Z, guildId: x, onHeightUpdate: I, context: T } = n,
-        b = (0, o.e7)([p.Z], () => p.Z.getGuild(null != x ? x : Z.guild_id)),
-        A = (0, o.e7)([h.default], () => h.default.getUser(l)),
+        A = (0, o.e7)([p.Z], () => p.Z.getGuild(null != x ? x : Z.guild_id)),
+        b = (0, o.e7)([h.default], () => h.default.getUser(l)),
         M = (0, f.Z)({
-            user: A,
-            guildId: null == b ? void 0 : b.id,
+            user: b,
+            guildId: null == A ? void 0 : A.id,
             context: T
         }),
         {
@@ -32,7 +32,7 @@ e.Z = (n) => {
         } = u.wi({
             channel: Z,
             filters: { commandTypes: [t] },
-            options: { limit: _.lr },
+            options: { limit: v.lr },
             allowFetch: !0
         }),
         { sections: y } = r.useMemo(() => {
@@ -74,7 +74,7 @@ e.Z = (n) => {
                             optionValues: {},
                             context: {
                                 channel: Z,
-                                guild: b
+                                guild: A
                             },
                             commandTargetId: l
                         });
@@ -83,7 +83,7 @@ e.Z = (n) => {
                 n.id
             );
         },
-        [Z, b, l, y]
+        [Z, A, l, y]
     );
     if (
         (j.current
@@ -102,7 +102,7 @@ e.Z = (n) => {
                             d.MenuItem,
                             {
                                 id: 'menu-commands-empty',
-                                label: v.intl.string(v.t.YSNlV1),
+                                label: _.intl.string(_.t.YSNlV1),
                                 disabled: !0
                             },
                             'menu-commands-empty'
@@ -119,7 +119,7 @@ e.Z = (n) => {
     }
     return (0, i.jsx)(d.MenuItem, {
         id: 'apps',
-        label: v.intl.string(v.t.PHjkRE),
+        label: _.intl.string(_.t.PHjkRE),
         listClassName: E.list,
         children: e
     });

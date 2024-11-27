@@ -6,14 +6,14 @@ var i,
     o = n.n(a),
     s = n(86357),
     c = n(54936),
-    d = n(687755),
-    u = n(351465),
+    u = n(687755),
+    d = n(351465),
     m = n(669021),
     h = n(73346),
     f = n(568836),
     p = n(345898),
-    _ = n(981631),
-    g = n(895402);
+    g = n(981631),
+    _ = n(895402);
 function E(e, t, n) {
     return (
         t in e
@@ -48,17 +48,17 @@ class C extends (i = l.PureComponent) {
                 return null != n
                     ? n()
                     : (0, r.jsxs)('div', {
-                          className: g.priceOs,
+                          className: _.priceOs,
                           children: [
                               (0, r.jsx)(s.Z, {
                                   type: s.Z.Types.DIRECTORY_TILE,
                                   sku: t,
                                   inLibrary: e,
-                                  className: a && i ? g.tilePriceWithVisibleBuyButton : g.tilePrice
+                                  className: a && i ? _.tilePriceWithVisibleBuyButton : _.tilePrice
                               }),
                               (0, r.jsx)(c.n, {
-                                  systems: [_.TaA.WINDOWS],
-                                  className: g.platform
+                                  systems: [g.TaA.WINDOWS],
+                                  className: _.platform
                               }),
                               a ? (0, r.jsx)('div', { children: 'deprecated!' }) : null
                           ]
@@ -69,7 +69,7 @@ class C extends (i = l.PureComponent) {
                 return (0, r.jsxs)(l.Fragment, {
                     children: [
                         (0, r.jsx)(m.Z, {
-                            className: o()(g.splashContainer, { [g.splashContainerHorizontal]: s }),
+                            className: o()(_.splashContainer, { [_.splashContainerHorizontal]: s }),
                             video: null != c.previewVideo ? (0, h._W)(a.applicationId, c.previewVideo) : void 0,
                             image: null != c.thumbnail ? (0, h._W)(a.applicationId, c.thumbnail, 600) : null,
                             title: a.name,
@@ -77,10 +77,10 @@ class C extends (i = l.PureComponent) {
                             muted: t,
                             placeholder: n,
                             onToggleMute: i,
-                            splashClassName: g.splashVideo,
-                            splashPlaceholderClassName: g.splashPlaceholder
+                            splashClassName: _.splashVideo,
+                            splashPlaceholderClassName: _.splashPlaceholder
                         }),
-                        a.exclusive ? (0, r.jsx)(u.Z, { className: o()(g.exclusiveRegular, { [g.exclusivePlaying]: e }) }) : a.isTheGameAwardsWinner ? (0, r.jsx)(d.Z, { className: o()(g.exclusiveRegular, { [g.exclusivePlaying]: e }) }) : null
+                        a.exclusive ? (0, r.jsx)(d.Z, { className: o()(_.exclusiveRegular, { [_.exclusivePlaying]: e }) }) : a.isTheGameAwardsWinner ? (0, r.jsx)(u.Z, { className: o()(_.exclusiveRegular, { [_.exclusivePlaying]: e }) }) : null
                     ]
                 });
             });

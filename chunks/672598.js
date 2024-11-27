@@ -1,25 +1,25 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return l;
+        return o;
     }
 }),
-    n(47120);
-var r = n(553813),
-    i = n.n(r),
-    o = n(358085);
-let a = { [o.PlatformTypes.WINDOWS]: { nvidia: '>=397.93.0' } };
-function l(e) {
-    let t = a[(0, o.getPlatform)()];
-    if (null == t) return !1;
-    for (let n of Object.keys(e)) {
-        let r = e[n],
-            o = t[n];
-        if (null == r || null == o || null != r.error) continue;
-        let a = (function (e) {
-            var t, n;
-            return ''.concat(null !== (t = e.major) && void 0 !== t ? t : 0, '.').concat(null !== (n = e.minor) && void 0 !== n ? n : 0, '.0');
+    t(47120);
+var r = t(553813),
+    i = t.n(r),
+    l = t(358085);
+let u = { [l.PlatformTypes.WINDOWS]: { nvidia: '>=397.93.0' } };
+function o(e) {
+    let n = u[(0, l.getPlatform)()];
+    if (null == n) return !1;
+    for (let t of Object.keys(e)) {
+        let r = e[t],
+            l = n[t];
+        if (null == r || null == l || null != r.error) continue;
+        let u = (function (e) {
+            var n, t;
+            return ''.concat(null !== (n = e.major) && void 0 !== n ? n : 0, '.').concat(null !== (t = e.minor) && void 0 !== t ? t : 0, '.0');
         })(r);
-        if (!i().satisfies(a, o)) return !0;
+        if (!i().satisfies(u, l)) return !0;
     }
     return !1;
 }

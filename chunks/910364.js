@@ -42,7 +42,7 @@ var i = t(200651),
     F = t(388032),
     D = t(171865);
 function G(e) {
-    let { user: n, currentUser: t, guildId: G, channelId: w, messageId: k, roleId: V, sessionId: W, friendToken: K, initialSection: z, initialSubsection: H, transitionState: Y, onClose: J, showGuildProfile: X = !0, sourceAnalyticsLocations: q = [] } = e,
+    let { user: n, currentUser: t, guildId: G, channelId: w, messageId: k, roleId: V, sessionId: W, friendToken: z, initialSection: K, initialSubsection: H, transitionState: Y, onClose: J, showGuildProfile: X = !0, sourceAnalyticsLocations: q = [] } = e,
         { analyticsLocations: Q } = (0, u.ZP)([...q, d.Z.SIMPLIFIED_PROFILE_MODAL]),
         $ = (0, g.Z)({
             user: n,
@@ -86,7 +86,7 @@ function G(e) {
                                 (0, O.openUserProfileModal)({
                                     ...ee,
                                     showGuildProfile: !1,
-                                    friendToken: K,
+                                    friendToken: z,
                                     sourceAnalyticsLocations: q
                                 }),
                                 (0, p.pQ)({
@@ -105,7 +105,7 @@ function G(e) {
                                 (0, O.openUserProfileModal)({
                                     ...ee,
                                     showGuildProfile: !0,
-                                    friendToken: K,
+                                    friendToken: z,
                                     sourceAnalyticsLocations: q
                                 }),
                                 (0, p.pQ)({
@@ -158,7 +158,7 @@ function G(e) {
                                             shouldShowTooltip: null === en.interactionType,
                                             profileType: U.y0.FULL_SIZE,
                                             user: n,
-                                            friendToken: K
+                                            friendToken: z
                                         }),
                                         (0, i.jsx)(P.Z, {
                                             user: n,
@@ -212,7 +212,7 @@ function G(e) {
                                                             isCurrentUser: er,
                                                             user: n,
                                                             relationshipType: eo,
-                                                            friendToken: K,
+                                                            friendToken: z,
                                                             onClose: J
                                                         }),
                                                         (0, i.jsx)(S.Z, {
@@ -231,9 +231,9 @@ function G(e) {
                                     currentUser: t,
                                     channelId: w,
                                     displayProfile: ei,
-                                    initialSection: z,
+                                    initialSection: K,
                                     initialSubsection: H,
-                                    friendToken: K,
+                                    friendToken: z,
                                     onClose: J
                                 })
                             ]

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return p;
     }
 });
 var i = n(512722),
@@ -14,9 +14,9 @@ var i = n(512722),
     d = n(314897),
     h = n(896797),
     g = n(626135),
-    p = n(954824),
-    m = n(981631);
-function f(e) {
+    m = n(954824),
+    f = n(981631);
+function p(e) {
     let t = (function (e) {
             var t;
             let n = null === (t = l().os) || void 0 === t ? void 0 : t.family;
@@ -36,12 +36,12 @@ function f(e) {
         })(e),
         n = (0, o.zS)(t);
     null != n &&
-        g.default.track(m.rMx.DEEP_LINK_CLICKED, {
+        g.default.track(f.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, c.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource
         }),
-        p.Z.launch(t, (e) => {
+        m.Z.launch(t, (e) => {
             !e && (0, u.dL)(h.Z.fallbackRoute);
         });
 }

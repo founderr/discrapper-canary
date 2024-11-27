@@ -1,6 +1,6 @@
 n.d(t, {
     X: function () {
-        return o;
+        return u;
     },
     j: function () {
         return i;
@@ -25,4 +25,4 @@ let r = (0, n(818083).B)({
         ]
     }),
     i = (e) => r.useExperiment({ location: e }).enabled,
-    o = (e) => r.getCurrentConfig({ location: e }).enabled;
+    u = (e) => r.getCurrentConfig({ location: e }).enabled;

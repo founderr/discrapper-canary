@@ -28,10 +28,10 @@ var l = n(200651),
     I = n(74538),
     T = n(451467),
     N = n(122186),
-    b = n(37113),
-    w = n(981631),
-    E = n(474936),
-    y = n(388032),
+    w = n(37113),
+    b = n(981631),
+    y = n(474936),
+    E = n(388032),
     R = n(456963),
     M = n(998139),
     P = n(232186);
@@ -59,7 +59,7 @@ function A() {
             (0, l.jsx)(u.Text, {
                 className: M.upsellText,
                 variant: 'text-sm/medium',
-                children: y.intl.string(y.t.sEAnVF)
+                children: E.intl.string(E.t.sEAnVF)
             })
         ]
     });
@@ -74,7 +74,7 @@ function B(e) {
             ? ((t = (0, l.jsx)(u.TooltipContainer, {
                   tooltipClassName: M.tooltip,
                   spacing: 6,
-                  'aria-label': y.intl.string(y.t.sEAnVF),
+                  'aria-label': E.intl.string(E.t.sEAnVF),
                   text: (0, l.jsx)(A, {}),
                   children: (0, l.jsx)('div', {
                       className: M.textContainer,
@@ -121,25 +121,25 @@ function L(e) {
         O = (0, d.e7)([Z.Z, S.Z], () => S.Z.getChannel(Z.Z.getVoiceChannelId())),
         U = I.ZP.canStreamQuality(I.U2.MID, D),
         { location: F } = (0, h.O)(),
-        H = (0, m.Zq)({ autoTrackExposure: !1 }),
-        W = (0, I.I5)(D, E.p9.TIER_1);
+        W = (0, m.Zq)({ autoTrackExposure: !1 }),
+        H = (0, I.I5)(D, y.p9.TIER_1);
     j.Z.useExperiment(
         { location: 'Go Live Modal' },
         {
             autoTrackExposure: !0,
-            disable: W
+            disable: H
         }
     );
     let V = (0, v.x8)('StreamSettings'),
         z = _.default.getUser(null == O ? void 0 : O.hdStreamingBuyerId),
         K = null != O && null != O.hdStreamingUntil && new Date(O.hdStreamingUntil) > new Date() && null != z,
         Y = (0, p.So)(c.q.STREAM_HIGH_QUALITY),
-        X = (!U && !H) || Y,
+        X = (!U && !W) || Y,
         [J, q] = i.useState(!1),
-        Q = G ? b.z8 : b.WC,
+        Q = G ? w.z8 : w.WC,
         $ = {
             ...F,
-            section: w.jXE.STREAM_SETTINGS
+            section: b.jXE.STREAM_SETTINGS
         },
         ee = (0, l.jsx)(u.ButtonGroup, {
             buttons: Q.map((e) =>
@@ -147,7 +147,7 @@ function L(e) {
                     type: e,
                     selected: e.value === r,
                     needsPremium: !(0, T.Z)(n, e.value, s, D, L, O),
-                    needsDemo: (Y || V) && e.value !== b.LY.RESOLUTION_720,
+                    needsDemo: (Y || V) && e.value !== w.LY.RESOLUTION_720,
                     analyticsLocation: $,
                     onClick: () => a(e.value),
                     onClose: t,
@@ -156,12 +156,12 @@ function L(e) {
             )
         }),
         et = (0, l.jsx)(u.ButtonGroup, {
-            buttons: b.k0.map((e) =>
+            buttons: w.k0.map((e) =>
                 B({
                     type: e,
                     selected: e.value === s,
                     needsPremium: !(0, T.Z)(n, r, e.value, D, L, O),
-                    needsDemo: (Y || V) && e.value === b.ws.FPS_60,
+                    needsDemo: (Y || V) && e.value === w.ws.FPS_60,
                     analyticsLocation: $,
                     onClick: () => g(e.value),
                     onClose: t,
@@ -171,40 +171,40 @@ function L(e) {
         }),
         en = [
             {
-                value: b.tI.PRESET_VIDEO,
-                label: y.intl.string(y.t.HcwHc3)
+                value: w.tI.PRESET_VIDEO,
+                label: E.intl.string(E.t.HcwHc3)
             },
             ...(G
                 ? []
                 : [
                       {
-                          value: b.tI.PRESET_DOCUMENTS,
-                          label: y.intl.string(y.t['/RfohI'])
+                          value: w.tI.PRESET_DOCUMENTS,
+                          label: E.intl.string(E.t['/RfohI'])
                       }
                   ]),
             {
-                value: b.tI.PRESET_CUSTOM,
-                label: y.intl.string(y.t['+eOtrK'])
+                value: w.tI.PRESET_CUSTOM,
+                label: E.intl.string(E.t['+eOtrK'])
             }
         ],
         el =
-            n === b.tI.PRESET_DOCUMENTS
+            n === w.tI.PRESET_DOCUMENTS
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(x.Z, {
                               children: (0, l.jsx)(u.FormItem, {
-                                  title: y.intl.string(y.t.rHyPXl),
+                                  title: E.intl.string(E.t.rHyPXl),
                                   titleClassName: R.formItemTitleSlim,
                                   className: M.documentModeGroup,
                                   children: (0, l.jsx)(u.Text, {
                                       variant: 'text-xs/normal',
-                                      children: y.intl.format(y.t['U+hmam'], { fps: s })
+                                      children: E.intl.format(E.t['U+hmam'], { fps: s })
                                   })
                               })
                           }),
                           X
                               ? (0, l.jsx)(N.Z, {
-                                    message: y.intl.string(y.t.deDogI),
+                                    message: E.intl.string(E.t.deDogI),
                                     onClose: t,
                                     openStreamUpsellModal: k
                                 })
@@ -224,13 +224,13 @@ function L(e) {
                           (0, l.jsxs)(x.Z, {
                               children: [
                                   (0, l.jsx)(u.FormItem, {
-                                      title: y.intl.string(y.t.rHyPXl),
+                                      title: E.intl.string(E.t.rHyPXl),
                                       className: M.settingsGroup,
                                       titleClassName: R.formItemTitleSlim,
                                       children: ee
                                   }),
                                   (0, l.jsx)(u.FormItem, {
-                                      title: y.intl.string(y.t.SkkeIi),
+                                      title: E.intl.string(E.t.SkkeIi),
                                       className: M.settingsGroup,
                                       titleClassName: R.formItemTitleSlim,
                                       children: et
@@ -257,7 +257,7 @@ function L(e) {
     return (0, l.jsx)(f.Z, {
         ...$,
         children: (0, l.jsx)(u.FormItem, {
-            title: y.intl.string(y.t.ax4FnZ),
+            title: E.intl.string(E.t.ax4FnZ),
             titleClassName: R.formItemTitle,
             className: R.modalContent,
             children: (0, l.jsxs)('div', {

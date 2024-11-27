@@ -1,9 +1,9 @@
 n.d(t, {
     R$: function () {
-        return f;
+        return p;
     },
     ZP: function () {
-        return m;
+        return f;
     }
 });
 var i = n(913527),
@@ -17,17 +17,17 @@ var i = n(913527),
     d = n(573261),
     h = n(959776),
     g = n(981631),
-    p = n(723359);
-function m(e) {
+    m = n(723359);
+function f(e) {
     let { invite: t = null, giftCodeSKUId: n = null, ...i } = e;
-    return f({
+    return p({
         ...i,
         invite: t,
         giftCodeSKUId: n
     });
 }
-function f(e) {
-    let { email: t, phoneToken: n, username: i, globalName: m, consent: f, password: _, guildTemplateCode: x, birthday: E, invite: I = null, giftCodeSKUId: v = null, multiStep: N = !1, promoEmailConsent: b = null, usedUsernameSuggestion: C = null } = e;
+function p(e) {
+    let { email: t, phoneToken: n, username: i, globalName: f, consent: p, password: x, guildTemplateCode: _, birthday: E, invite: I = null, giftCodeSKUId: v = null, multiStep: N = !1, promoEmailConsent: C = null, usedUsernameSuggestion: b = null } = e;
     return (
         l.Z.dispatch({
             type: 'REGISTER',
@@ -36,8 +36,8 @@ function f(e) {
         null != E &&
             ((0, h.Z)(E, g.jXE.REGISTER),
             u.default.track(g.rMx.AGE_GATE_ACTION, {
-                source: p.L0.REGISTER,
-                action: p.Al.AGE_GATE_SUBMITTED
+                source: m.L0.REGISTER,
+                action: m.Al.AGE_GATE_SUBMITTED
             }),
             !(function (e) {
                 let t;
@@ -50,23 +50,23 @@ function f(e) {
                 fingerprint: c.default.getFingerprint(),
                 email: t,
                 username: i,
-                global_name: m,
-                password: _,
+                global_name: f,
+                password: x,
                 invite: I,
-                consent: f,
+                consent: p,
                 phone_token: n,
                 date_of_birth: null == E ? void 0 : E.format('YYYY-MM-DD'),
                 gift_code_sku_id: v,
-                guild_template_code: x,
-                promotional_email_opt_in: null == b ? void 0 : b.checked
+                guild_template_code: _,
+                promotional_email_opt_in: null == C ? void 0 : C.checked
             },
             trackedActionData: {
                 event: s.NetworkActionNames.USER_REGISTER,
                 properties: {
                     invite_code: I,
-                    used_username_suggestion: C,
-                    promotional_email_opt_in: null == b ? void 0 : b.checked,
-                    promotional_email_pre_checked: null == b ? void 0 : b.preChecked,
+                    used_username_suggestion: b,
+                    promotional_email_opt_in: null == C ? void 0 : C.checked,
+                    promotional_email_pre_checked: null == C ? void 0 : C.preChecked,
                     was_unique_username: !0
                 }
             },
@@ -78,8 +78,8 @@ function f(e) {
                     token: e.body.token
                 }),
                     u.default.track(g.rMx.AGE_GATE_ACTION, {
-                        source: p.L0.REGISTER,
-                        action: p.Al.AGE_GATE_SUCCESS
+                        source: m.L0.REGISTER,
+                        action: m.Al.AGE_GATE_SUCCESS
                     });
             },
             (e) => {
@@ -89,7 +89,7 @@ function f(e) {
                         type: 'REGISTER_FAILURE',
                         error: t
                     }),
-                    null != t.getFieldErrors('date_of_birth') && o.wE(p.L0.REGISTER),
+                    null != t.getFieldErrors('date_of_birth') && o.wE(m.L0.REGISTER),
                     u.default.track(g.rMx.REGISTER_SUBMIT_ERRORED, {
                         is_unique_username_registration: !0,
                         email_error_reason: t.getFirstFieldErrorMessage('email'),

@@ -6,20 +6,20 @@ var i = n(200651),
     o = n(100527),
     s = n(367907),
     c = n(906732),
-    d = n(524444),
-    u = n(624138),
+    u = n(524444),
+    d = n(624138),
     m = n(453070),
     h = n(373228),
     f = n(419922),
     p = n(217588),
-    _ = n(981631),
-    g = n(474936),
+    g = n(981631),
+    _ = n(474936),
     E = n(540093);
-let C = (0, u.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
+let C = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
     I = (e) => {
         if (null != e)
-            s.ZP.trackWithMetadata(_.rMx.EXPRESSION_TOOLTIP_VIEWED, {
-                type: g.cd.STICKER_IN_MESSAGE_HOVER,
+            s.ZP.trackWithMetadata(g.rMx.EXPRESSION_TOOLTIP_VIEWED, {
+                type: _.cd.STICKER_IN_MESSAGE_HOVER,
                 expression_id: e.id,
                 expression_name: e.name,
                 is_animated: (0, h.aQ)(e.format_type),
@@ -28,11 +28,11 @@ let C = (0, u.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
     };
 t.Z = (e) => {
     let { renderableSticker: t, channel: n, isInteracting: l } = e,
-        [s, u] = r.useState(!0),
-        [h, _] = r.useState(String(Date.now())),
-        [g] = (0, m.XW)(t, l),
+        [s, d] = r.useState(!0),
+        [h, g] = r.useState(String(Date.now())),
+        [_] = (0, m.XW)(t, l),
         { analyticsLocations: x } = (0, c.ZP)(o.Z.STICKER_MESSAGE),
-        v = (0, i.jsxs)('span', {
+        N = (0, i.jsxs)('span', {
             className: E.stickerName,
             children: [
                 (0, i.jsx)(a.StickerSmallIcon, {
@@ -40,7 +40,7 @@ t.Z = (e) => {
                     color: 'currentColor',
                     className: E.stickerIcon
                 }),
-                (null != g ? g : t).name
+                (null != _ ? _ : t).name
             ]
         });
     return (0, i.jsx)(c.Gt, {
@@ -50,37 +50,37 @@ t.Z = (e) => {
             animation: a.Popout.Animation.TRANSLATE,
             positionKey: h,
             onRequestClose: () => {
-                u(!0);
+                d(!0);
             },
             renderPopout: (e) =>
                 (0, i.jsx)(p.Z, {
                     ...e,
                     renderableSticker: t,
                     channel: n,
-                    refreshPositionKey: () => _(String(Date.now()))
+                    refreshPositionKey: () => g(String(Date.now()))
                 }),
             children: (e) => {
                 let { onClick: n } = e;
                 return (0, i.jsx)(a.Tooltip, {
-                    ...d.b_,
+                    ...u.b_,
                     shouldShow: s,
-                    text: (0, d.Y)(v),
+                    text: (0, u.Y)(N),
                     'aria-label': !1,
                     onTooltipShow: () => {
-                        I(g);
+                        I(_);
                     },
                     children: (e) =>
                         (0, i.jsx)(a.Clickable, {
                             ...e,
                             className: E.clickableSticker,
                             onClick: (e) => {
-                                u(!s), n(e);
+                                d(!s), n(e);
                             },
                             tag: 'span',
                             children: (0, i.jsx)(f.ZP, {
                                 isInteracting: l,
                                 size: C,
-                                sticker: null != g ? g : t
+                                sticker: null != _ ? _ : t
                             })
                         })
                 });

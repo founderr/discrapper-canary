@@ -8,13 +8,13 @@ var i = t(200651),
     a = t(870745),
     r = t(388032);
 function c(e) {
-    let { onClose: n, onSelect: t, application: c } = e,
-        l = (0, a.Z)(c);
+    let { onClose: n, onSelect: t, application: c, channelId: l } = e,
+        d = (0, a.Z)(c, l);
     return (0, i.jsx)(o.Menu, {
         navId: 'activity-popout-overflow-popout',
         onClose: n,
         onSelect: t,
         'aria-label': r.intl.string(r.t.SS9Y6O),
-        children: l
+        children: d
     });
 }

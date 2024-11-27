@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return g;
     }
 });
 var i = n(200651);
@@ -11,19 +11,19 @@ var r = n(512722),
     o = n(481060),
     s = n(607070),
     c = n(430824),
-    d = n(506071),
-    u = n(267101),
+    u = n(506071),
+    d = n(267101),
     m = n(240864),
     h = n(57949),
     f = n(400916),
     p = n(388032);
-function _(e) {
+function g(e) {
     let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: r } = e,
-        _ = (0, a.e7)([m.Z], () => m.Z.getGuildProduct(n)),
-        g = (0, a.e7)([c.Z], () => c.Z.getGuild(t), [t]),
+        g = (0, a.e7)([m.Z], () => m.Z.getGuildProduct(n)),
+        _ = (0, a.e7)([c.Z], () => c.Z.getGuild(t), [t]),
         E = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-        C = (0, d.n)();
-    if ((l()(null != g, 'guild cannot be null'), l()(null != _, 'guildProductListing cannot be null'), (0, u.SO)(g)))
+        C = (0, u.n)();
+    if ((l()(null != _, 'guild cannot be null'), l()(null != g, 'guildProductListing cannot be null'), (0, d.SO)(_)))
         return (0, i.jsx)(o.Tooltip, {
             text: p.intl.string(p.t.sAJr9f),
             children: (e) =>
@@ -34,22 +34,22 @@ function _(e) {
                     children: p.intl.string(p.t.xUi3BA)
                 })
         });
-    if (!_.has_entitlement)
+    if (!g.has_entitlement)
         return (0, i.jsx)(o.ShinyButton, {
             shineSize: o.ShinyButton.ShineSizes.SMALL,
             pauseAnimation: E || !C,
             onClick: () =>
                 (0, h.z)({
-                    guildProductListing: _,
-                    guildId: g.id,
+                    guildProductListing: g,
+                    guildId: _.id,
                     sourceAnalyticsLocations: r
                 }),
             children: p.intl.string(p.t.xUi3BA)
         });
-    return null != _.attachments
+    return null != g.attachments
         ? (0, i.jsx)(f.Z, {
-              guildId: g.id,
-              productId: _.id
+              guildId: _.id,
+              productId: g.id
           })
         : (0, i.jsx)(o.Button, {
               color: o.Button.Colors.PRIMARY,

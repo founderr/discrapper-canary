@@ -15,45 +15,45 @@ var i = n(200651),
 function u(e) {
     let { giftStyle: t, className: n, shouldAnimate: u = !0, defaultAnimationState: d, idleAnimationState: h } = e,
         g = (0, s.e7)([a.Z], () => a.Z.useReducedMotion),
-        [p, m] = r.useState(d),
-        f = r.useRef((0, o._)(t, p)),
-        [_, x] = r.useState(null == h),
+        [m, f] = r.useState(d),
+        p = r.useRef((0, o._)(t, m)),
+        [x, _] = r.useState(null == h),
         [E, I] = r.useState(!1),
         [v, N] = r.useState(-1),
-        b = () => {
-            (f.current = (0, o._)(t, p)), N((e) => e + 1);
-        },
         C = () => {
-            x(!1), I(!0), N(-1), m(d);
+            (p.current = (0, o._)(t, m)), N((e) => e + 1);
+        },
+        b = () => {
+            _(!1), I(!0), N(-1), f(d);
         };
     r.useEffect(() => {
-        null == h && m(d);
+        null == h && f(d);
     }, [h, d]),
         r.useEffect(() => {
             if (null != h && v >= 0) {
-                C();
+                b();
                 return;
             }
-            b();
+            C();
         }, [t, h]),
         r.useEffect(() => {
-            (!E || null == h) && b();
-        }, [p]),
+            (!E || null == h) && C();
+        }, [m]),
         r.useEffect(() => {
-            E && (x(null == h), I(!1), b());
+            E && (_(null == h), I(!1), C());
         }, [E]);
     if (!c.Cj.hasOwnProperty(t)) throw Error('Unexpected giftStyle '.concat(t));
     return (0, i.jsx)(l.LottieAnimation, {
-        importData: f.current,
+        importData: p.current,
         shouldAnimate: !g && u,
         className: n,
         versionKey: v,
         onComplete:
             null != h
                 ? () => {
-                      null != h && (m(h), x(!0));
+                      null != h && (f(h), _(!0));
                   }
                 : void 0,
-        loop: _
+        loop: x
     });
 }

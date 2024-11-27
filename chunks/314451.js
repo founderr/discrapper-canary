@@ -11,17 +11,17 @@ var i = n(200651),
     o = n(782568),
     s = n(31336),
     c = n(906467),
-    d = n(63063),
-    u = n(665149),
+    u = n(63063),
+    d = n(665149),
     m = n(388032);
 function h(e) {
     let { className: t } = e,
         h = (0, l.e7)([c.Z], () => c.Z.isDeveloper),
         [f, p] = r.useState(!1),
-        [_, g] = r.useState(0),
+        [g, _] = r.useState(0),
         E = (e) => {
-            clearTimeout(_),
-                g(
+            clearTimeout(g),
+                _(
                     setTimeout(() => {
                         p(e);
                     }, 100)
@@ -70,7 +70,7 @@ function h(e) {
                                     id: 'staff-help-center',
                                     label: 'Go to Help Center',
                                     icon: a.WindowLaunchIcon,
-                                    action: () => (0, o.Z)(d.w)
+                                    action: () => (0, o.Z)(u.w)
                                 })
                             ]
                         })
@@ -81,7 +81,7 @@ function h(e) {
                 }),
             children: (e, n) => {
                 let { isShown: r } = n;
-                return (0, i.jsx)(u.JO, {
+                return (0, i.jsx)(d.JO, {
                     ...e,
                     icon: a.BugIcon,
                     'aria-label': m.intl.string(m.t.cqEoj4),

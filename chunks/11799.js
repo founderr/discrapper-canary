@@ -11,19 +11,19 @@ var i = n(192379),
     o = n(455199),
     s = n(833592),
     c = n(140155),
-    d = n(774807),
-    u = n(490897);
+    u = n(774807),
+    d = n(490897);
 let m = (e) => {
         let { isFocused: t, navigatedAway: n, isDesktop: m, withMentions: h = !1, initialPageSize: f } = e,
-            p = (0, r.e7)([d.Z], () => d.Z.shouldReload()),
-            _ = i.useRef(!1),
-            [g, E] = i.useState(!1),
+            p = (0, r.e7)([u.Z], () => u.Z.shouldReload()),
+            g = i.useRef(!1),
+            [_, E] = i.useState(!1),
             {
                 initialized: C,
                 loading: I,
                 items: x,
-                hasMore: v,
-                cursor: N,
+                hasMore: N,
+                cursor: v,
                 errored: T
             } = (0, r.cj)([c.Z], () => ({
                 initialized: c.Z.initialized,
@@ -39,7 +39,7 @@ let m = (e) => {
             }));
         i.useEffect(() => ((0, s.Vk)(!0), () => (0, s.Vk)(!1)), []),
             i.useEffect(() => {
-                C && t && (0, l.FT)(u.W.NOTIFICATION_CENTER);
+                C && t && (0, l.FT)(d.W.NOTIFICATION_CENTER);
             }, [t, C]);
         let b = (0, a.Z)();
         i.useEffect(
@@ -60,36 +60,36 @@ let m = (e) => {
             }, [C, p, t, h, S, A, f]);
         let j = i.useCallback(
             async (e) => {
-                !_.current &&
+                !g.current &&
                     C &&
-                    v &&
-                    null != N &&
+                    N &&
+                    null != v &&
                     (e || !T) &&
-                    ((_.current = !0),
+                    ((g.current = !0),
                     E(!0),
                     await (0, s.jk)(
                         {
-                            after: N,
+                            after: v,
                             with_mentions: h,
                             roles_filter: S,
                             everyone_filter: A,
                             limit: h ? 8 : 20
                         },
                         () => {
-                            _.current = !1;
+                            g.current = !1;
                         }
                     ),
                     E(!1));
             },
-            [C, v, N, T, h, S, A]
+            [C, N, v, T, h, S, A]
         );
         return {
             initialized: C,
             loading: I,
             items: x,
-            hasMore: v,
+            hasMore: N,
             loadMore: j,
-            loadingMore: g,
+            loadingMore: _,
             setReadNotifItemToAcked: (e) => {
                 !e.acked && (e.acked = !0);
             },

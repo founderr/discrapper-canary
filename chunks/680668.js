@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return _;
     }
 }),
     n(789020);
@@ -12,36 +12,36 @@ var r = n(533800),
     o = n(955415),
     s = n(131704),
     c = n(630388),
-    d = n(267642),
-    u = n(411198),
+    u = n(267642),
+    d = n(411198),
     m = n(277707),
     h = n(358595),
     f = n(981631),
     p = n(388032),
-    _ = n(658412);
-function g(e) {
-    var t, g;
+    g = n(658412);
+function _(e) {
+    var t, _;
     let E,
         C,
         I,
-        { onTransitionToInviteChannel: x, onAcceptInstantInvite: v, guild: N, invite: T, author: S, currentUserId: A } = e,
+        { onTransitionToInviteChannel: x, onAcceptInstantInvite: N, guild: v, invite: T, author: S, currentUserId: A } = e,
         b = A === S.id,
         { channel: j, approximate_member_count: Z, approximate_presence_count: R } = T,
         P = T.state === f.r2o.ACCEPTING,
         L = null != j ? (0, s.jD)(j) : null,
-        y = null != N,
+        y = null != v,
         O = null != L,
         M = null != L && L.isGuildVocal(),
         k = null != L && L.isGuildStageVoice(),
         D = (0, c.yE)(null !== (t = T.flags) && void 0 !== t ? t : 0, r.$.IS_GUEST_INVITE),
-        B = null !== (g = null == N ? void 0 : N.hasFeature(f.oNc.HUB)) && void 0 !== g && g;
-    if (null == N) {
+        B = null !== (_ = null == v ? void 0 : v.hasFeature(f.oNc.HUB)) && void 0 !== _ && _;
+    if (null == v) {
         if (null == T.guild) return (0, i.jsx)(h.Z, {});
-        N = u.Qs(T.guild);
-        let e = (0, d.rF)(T.guild.premium_subscription_count, T.guild.id);
-        N.premiumTier = e;
+        v = d.Qs(T.guild);
+        let e = (0, u.rF)(T.guild.premium_subscription_count, T.guild.id);
+        v.premiumTier = e;
     }
-    let U = y ? x : v,
+    let U = y ? x : N,
         w = (0, m.e)({
             isVoiceChannel: M,
             isOwnInvite: b,
@@ -52,13 +52,13 @@ function g(e) {
         });
     return (
         (C = (0, i.jsxs)('span', {
-            className: _.infoTitle,
+            className: g.infoTitle,
             children: [
-                (0, i.jsx)(o.Z.GuildName, { guild: N }),
+                (0, i.jsx)(o.Z.GuildName, { guild: v }),
                 (0, i.jsx)('span', {
-                    className: _.infoBadge,
+                    className: g.infoBadge,
                     children: (0, i.jsx)(a.Z, {
-                        guild: N,
+                        guild: v,
                         isBannerVisible: !1,
                         disableBoostClick: !0
                     })
@@ -67,24 +67,24 @@ function g(e) {
         })),
         D &&
             (I = (0, i.jsx)(l.TooltipContainer, {
-                className: _.tooltipContainer,
+                className: g.tooltipContainer,
                 text: p.intl.string(p.t['/FeTKy']),
                 children: (0, i.jsx)(l.CircleInformationIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: _.infoIcon
+                    className: g.infoIcon
                 })
             })),
         M
             ? ((C = (0, i.jsx)(o.Z.Channel, { channel: L })),
               (E = (0, i.jsxs)('span', {
-                  className: _.infoTitle,
+                  className: g.infoTitle,
                   children: [
-                      p.intl.format(p.t['2wimj4'], { guildName: N.name }),
+                      p.intl.format(p.t['2wimj4'], { guildName: v.name }),
                       (0, i.jsx)('span', {
-                          className: _.infoBadge,
+                          className: g.infoBadge,
                           children: (0, i.jsx)(a.Z, {
-                              guild: N,
+                              guild: v,
                               isBannerVisible: !1
                           })
                       })
@@ -98,11 +98,11 @@ function g(e) {
               : O &&
                 (E = (0, i.jsx)(o.Z.Channel, {
                     channel: L,
-                    guild: N
+                    guild: v
                 })),
         (0, i.jsxs)(o.Z, {
             children: [
-                (0, i.jsx)(o.Z.GuildSplash, { guild: N }),
+                (0, i.jsx)(o.Z.GuildSplash, { guild: v }),
                 (0, i.jsx)(o.Z.Header, {
                     text: w,
                     extra: I
@@ -110,9 +110,9 @@ function g(e) {
                 (0, i.jsxs)(o.Z.Body, {
                     children: [
                         (0, i.jsxs)('div', {
-                            className: _.headerLine,
+                            className: g.headerLine,
                             children: [
-                                (0, i.jsx)(o.Z.Icon, { guild: N }),
+                                (0, i.jsx)(o.Z.Icon, { guild: v }),
                                 (0, i.jsx)(o.Z.Info, {
                                     title: C,
                                     onClick: y ? U : null,
@@ -128,10 +128,10 @@ function g(e) {
                         })
                     ]
                 }),
-                N.hasFeature(f.oNc.HUB) &&
+                v.hasFeature(f.oNc.HUB) &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)('div', { className: _.separator }),
+                            (0, i.jsx)('div', { className: g.separator }),
                             (0, i.jsx)(l.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',

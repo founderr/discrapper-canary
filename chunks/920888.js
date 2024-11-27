@@ -6,14 +6,14 @@ var i = n(200651),
     o = n(215569),
     s = n(481060),
     c = n(140710),
-    d = n(833803),
-    u = n(566006),
+    u = n(833803),
+    d = n(566006),
     m = n(60174),
     h = n(453687),
     f = n(434624),
     p = n(287151),
-    _ = n(388032),
-    g = n(636804),
+    g = n(388032),
+    _ = n(636804),
     E = n(952714);
 let C = (e, t) => (null == e && null == t) || e === t,
     I = (e, t) => e.findIndex((e) => C(e.emoji.id, null == t ? void 0 : t.id) && C(e.emoji.name, null == t ? void 0 : t.name)),
@@ -22,7 +22,7 @@ let C = (e, t) => (null == e && null == t) || e === t,
         let n = I(e, t);
         return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
     };
-class v extends r.PureComponent {
+class N extends r.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let n = e.message.reactions.length;
         return 0 === t.reactionsCount && n > 0
@@ -35,19 +35,19 @@ class v extends r.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: r, isGuest: l, isPendingMember: C, isForumToolbar: I, channel: x, className: v, forceAddReactions: N, reactionClassName: T, useChatFontScaling: S, forceHideReactionCreates: A, remainingReactions: b, combinedReactions: j, visibleReactionsCount: Z } = this.props,
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: r, isGuest: l, isPendingMember: C, isForumToolbar: I, channel: x, className: N, forceAddReactions: v, reactionClassName: T, useChatFontScaling: S, forceHideReactionCreates: A, remainingReactions: b, combinedReactions: j, visibleReactionsCount: Z } = this.props,
             { disableTransitionAppear: R } = this.state,
-            P = S ? E : g,
+            P = S ? E : _,
             L = Z > 0;
-        if (!L && !N) return null;
+        if (!L && !v) return null;
         let { enabled: y } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
-            { canShowImprovedReactionButton: O } = d.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
+            { canShowImprovedReactionButton: O } = u.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
             M = y && L,
-            k = (N && !L) || M,
+            k = (v && !L) || M,
             D = O && !I;
         return (0, i.jsxs)(o.W, {
             component: 'div',
-            className: a()(P.reactions, v, { [P.largeReactions]: D }),
+            className: a()(P.reactions, N, { [P.largeReactions]: D }),
             transitionAppear: !R,
             role: 'group',
             transitionLeave: !1,
@@ -73,7 +73,7 @@ class v extends r.PureComponent {
                             t.stopPropagation(), (0, p.op)(x, e);
                         },
                         className: a()(P.reaction, T, P.remainingReactions),
-                        'aria-label': _.intl.string(_.t.lfIHs7),
+                        'aria-label': g.intl.string(g.t.lfIHs7),
                         children: (0, i.jsxs)(s.Text, {
                             className: P.reactionInner,
                             variant: 'text-sm/normal',
@@ -84,14 +84,14 @@ class v extends r.PureComponent {
                     !A &&
                     (0, i.jsx)(m.X, {
                         tabIndex: k || this.state.isHovered ? 0 : -1,
-                        type: u.O.NORMAL,
+                        type: d.O.NORMAL,
                         message: e,
                         channel: x,
                         useChatFontScaling: S,
                         isHovered: this.state.isHovered,
                         className: a()({
                             [P.forceShow]: k,
-                            [P.forceShowLook]: N || M
+                            [P.forceShowLook]: v || M
                         })
                     })
             ]
@@ -134,12 +134,12 @@ t.Z = (e) => {
                     t.burst_count > 0 &&
                         e.push({
                             ...t,
-                            type: u.O.BURST
+                            type: d.O.BURST
                         }),
                         t.count > 0 &&
                             e.push({
                                 ...t,
-                                type: u.O.NORMAL
+                                type: d.O.NORMAL
                             }),
                         null != t.me_vote && --o;
                 }),
@@ -150,7 +150,7 @@ t.Z = (e) => {
                 }
             );
         }, [l, n, t.reactions]);
-    return (0, i.jsx)(v, {
+    return (0, i.jsx)(N, {
         ...e,
         visibleReactionsCount: s,
         combinedReactions: a,

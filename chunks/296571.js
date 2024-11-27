@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(200651);
@@ -11,19 +11,19 @@ var r = n(442837),
     o = n(739566),
     s = n(834129),
     c = n(388032),
-    d = n(798168);
-function u(e) {
+    u = n(798168);
+function d(e) {
     var t;
-    let { message: n, compact: u, usernameHook: m, onClickThread: h, onClickViewThreads: f, onContextMenuThread: p } = e,
-        _ = (0, o.ZP)(n),
-        g = m(_),
+    let { message: n, compact: d, usernameHook: m, onClickThread: h, onClickViewThreads: f, onContextMenuThread: p } = e,
+        g = (0, o.ZP)(n),
+        _ = m(g),
         E = (0, r.e7)([a.Z], () => {
             var e;
             return a.Z.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id);
         }),
         C = c.intl.format(c.t.cZ9Uf3, {
-            actorName: _.nick,
-            actorHook: g,
+            actorName: g.nick,
+            actorHook: _,
             threadName: null !== (t = null == E ? void 0 : E.name) && void 0 !== t ? t : n.content,
             threadOnClick: {
                 onClick: h,
@@ -35,10 +35,10 @@ function u(e) {
         iconNode: (0, i.jsx)(l.ThreadIcon, {
             size: 'md',
             color: 'currentColor',
-            className: d.icon
+            className: u.icon
         }),
         timestamp: n.timestamp,
-        compact: u,
+        compact: d,
         children: C
     });
 }

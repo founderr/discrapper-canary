@@ -10,14 +10,14 @@ var i = n(200651),
     o = n(657707),
     s = n(442837),
     c = n(481060),
-    d = n(933557),
-    u = n(471445),
+    u = n(933557),
+    d = n(471445),
     m = n(266076),
     h = n(565138),
     f = n(430824),
     p = n(388032),
-    _ = n(121361);
-let g = {
+    g = n(121361);
+let _ = {
     top: 8,
     bottom: 8,
     left: -4,
@@ -26,9 +26,9 @@ let g = {
 function E(e) {
     let { channel: t, children: n } = e;
     return (0, i.jsx)(a.tE, {
-        offset: g,
+        offset: _,
         children: (0, i.jsxs)('div', {
-            className: _.channelHeader,
+            className: g.channelHeader,
             'data-recents-channel': t.id,
             children: [(0, i.jsx)(C, { channel: t }), t.isPrivate() ? null : (0, i.jsx)(o.Fbu, { size: 'xxs' }), (0, i.jsx)(I, { channel: t }), n]
         })
@@ -39,7 +39,7 @@ function C(e) {
         n = (0, s.e7)([f.Z], () => f.Z.getGuild(t.guild_id));
     return null != n
         ? (0, i.jsx)(h.Z, {
-              className: _.icon,
+              className: g.icon,
               guild: n,
               size: h.Z.Sizes.SMALLER,
               'aria-hidden': !0
@@ -51,24 +51,24 @@ function C(e) {
                 experimentLocation: 'ForLaterChannelHeader'
             })
           : (0, i.jsx)('div', {
-                className: l()(_.icon, _.dmIcon),
+                className: l()(g.icon, g.dmIcon),
                 children: (0, i.jsx)(o.kBi, { size: 'xxs' })
             });
 }
 function I(e) {
     let { channel: t } = e,
         n = (0, s.e7)([f.Z], () => f.Z.getGuild(t.guild_id)),
-        r = (0, d.ZP)(t, !1),
-        l = (0, u.KS)(t, n),
+        r = (0, u.ZP)(t, !1),
+        l = (0, d.KS)(t, n),
         a = t.isPrivate() || null == l,
         o = t.isDM() ? p.intl.formatToPlainString(p.t.smD7XV, { username: r }) : r;
     return (0, i.jsxs)('div', {
-        className: _.channelNameSection,
+        className: g.channelNameSection,
         children: [
             a
                 ? null
                 : (0, i.jsx)(l, {
-                      className: _.channelTypeIcon,
+                      className: g.channelTypeIcon,
                       size: 'xxs'
                   }),
             (0, i.jsx)(c.Heading, {

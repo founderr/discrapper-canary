@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return _;
     }
 }),
     n(47120);
@@ -11,18 +11,18 @@ var i = n(200651),
     o = n(442837),
     s = n(524437),
     c = n(481060),
-    d = n(317632),
-    u = n(174767),
+    u = n(317632),
+    d = n(174767),
     m = n(240126),
     h = n(791914),
     f = n(326838),
     p = n(388032),
-    _ = n(366475);
-function g(e) {
-    let { setTab: t, badgeState: l, closePopout: g } = e,
-        C = (0, o.Wu)([d.Z], () => d.Z.getInvites()),
-        I = (0, o.e7)([d.Z], () => d.Z.getInviteStatuses()),
-        [x, v] = r.useMemo(
+    g = n(366475);
+function _(e) {
+    let { setTab: t, badgeState: l, closePopout: _ } = e,
+        C = (0, o.Wu)([u.Z], () => u.Z.getInvites()),
+        I = (0, o.e7)([u.Z], () => u.Z.getInviteStatuses()),
+        [x, N] = r.useMemo(
             () =>
                 a().partition(C, (e) => {
                     var t;
@@ -31,20 +31,20 @@ function g(e) {
             [C, I]
         );
     return (r.useEffect(() => {
-        (0, u.sJ)();
+        (0, d.sJ)();
     }),
     0 === C.length)
         ? (0, i.jsxs)('div', {
-              className: _.container,
+              className: g.container,
               children: [
                   (0, i.jsx)(h.Z, {
                       tab: s.X.GAME_INVITES,
                       setTab: t,
                       badgeState: l,
-                      closePopout: g
+                      closePopout: _
                   }),
                   (0, i.jsx)('div', {
-                      className: _.__invalid_emptyStateContainer,
+                      className: g.__invalid_emptyStateContainer,
                       children: (0, i.jsx)(m.Z, {
                           Icon: c.GameControllerIcon,
                           header: p.intl.string(p.t.PbSPWV),
@@ -54,15 +54,15 @@ function g(e) {
               ]
           })
         : (0, i.jsxs)('div', {
-              className: _.container,
+              className: g.container,
               children: [
                   (0, i.jsx)(h.Z, {
                       tab: s.X.GAME_INVITES,
                       setTab: t,
                       badgeState: l,
-                      closePopout: g,
+                      closePopout: _,
                       children: (0, i.jsx)(c.CircleIconButton, {
-                          className: _.__invalid_deleteButton,
+                          className: g.__invalid_deleteButton,
                           tooltip: p.intl.string(p.t.Zy3MR0),
                           color: c.CircleIconButtonColors.SECONDARY,
                           icon: (0, i.jsx)(c.TrashIcon, { size: 'xs' }),
@@ -82,7 +82,7 @@ function g(e) {
                   }),
                   (0, i.jsx)(c.AdvancedScrollerThin, {
                       children: (0, i.jsxs)('div', {
-                          className: _.invitesContainer,
+                          className: g.invitesContainer,
                           children: [
                               x.length > 0 &&
                                   (0, i.jsxs)(i.Fragment, {
@@ -102,12 +102,12 @@ function g(e) {
                                           })
                                       ]
                                   }),
-                              v.length > 0 &&
+                              N.length > 0 &&
                                   (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(E, { title: p.intl.string(p.t.f0Ia4e) }),
                                           (0, i.jsx)(i.Fragment, {
-                                              children: v.map((e) =>
+                                              children: N.map((e) =>
                                                   (0, i.jsx)(
                                                       f.Z,
                                                       {
@@ -129,15 +129,15 @@ function g(e) {
 function E(e) {
     let { title: t } = e;
     return (0, i.jsxs)('div', {
-        className: _.headerContainer,
+        className: g.headerContainer,
         children: [
             (0, i.jsx)(c.Text, {
-                className: _.headerTitle,
+                className: g.headerTitle,
                 variant: 'text-xs/semibold',
                 color: 'interactive-normal',
                 children: t
             }),
-            (0, i.jsx)('div', { className: _.headerDivider })
+            (0, i.jsx)('div', { className: g.headerDivider })
         ]
     });
 }

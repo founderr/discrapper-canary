@@ -16,26 +16,26 @@ function a(e) {
         hasSpoilerEmbeds: o,
         handleContextMenu: s,
         isInteracting: c,
-        isAutomodBlockedMessage: d,
-        isMessageSnapshot: u,
+        isAutomodBlockedMessage: u,
+        isMessageSnapshot: d,
         renderThreadAccessory: m,
         renderComponentAccessory: h,
         renderSuppressEmbeds: f,
         forceAddReactions: p,
-        className: _
+        className: g
     } = e;
-    return d
+    return u
         ? null
         : (0, i.jsx)(r.Z, {
               message: t,
               children: (0, i.jsx)(l.ZP, {
-                  className: _,
+                  className: g,
                   isInteracting: c,
                   message: t,
                   channel: n,
                   compact: a,
                   hasSpoilerEmbeds: o,
-                  isMessageSnapshot: u,
+                  isMessageSnapshot: d,
                   onMediaItemContextMenu: s,
                   renderThreadAccessory: m,
                   renderComponentAccessory: h,
@@ -45,7 +45,7 @@ function a(e) {
           });
 }
 function o(e, t) {
-    let { message: n, channel: r, compact: a = !1, renderThreadAccessory: o, disableReactionCreates: s, disableReactionUpdates: c, isSearchResult: d } = e;
+    let { message: n, channel: r, compact: a = !1, renderThreadAccessory: o, disableReactionCreates: s, disableReactionUpdates: c, isSearchResult: u } = e;
     return (0, i.jsx)(l.$p, {
         message: n,
         channel: r,
@@ -54,6 +54,6 @@ function o(e, t) {
         renderThreadAccessory: o,
         disableReactionCreates: s,
         disableReactionUpdates: c,
-        isSearchResult: d
+        isSearchResult: u
     });
 }

@@ -10,19 +10,19 @@ var i = n(200651),
     o = n(481060),
     s = n(230711),
     c = n(2052),
-    d = n(906732),
-    u = n(963249),
+    u = n(906732),
+    d = n(963249),
     m = n(594174),
     h = n(626135),
     f = n(74538),
     p = n(163684),
-    _ = n(748770),
-    g = n(474936),
+    g = n(748770),
+    _ = n(474936),
     E = n(981631),
     C = n(388032),
     I = n(614990);
 function x() {
-    let e = (0, a.e7)([m.default], () => f.ZP.isPremiumExactly(m.default.getCurrentUser(), g.p9.TIER_2)),
+    let e = (0, a.e7)([m.default], () => f.ZP.isPremiumExactly(m.default.getCurrentUser(), _.p9.TIER_2)),
         { enabled: t, getNitroCTA: n } = p.g.useExperiment(
             { location: 'OutboundPromotionNotice' },
             {
@@ -31,31 +31,31 @@ function x() {
             }
         ),
         { location: x } = (0, c.O)(),
-        { analyticsLocations: v } = (0, d.ZP)(),
-        N = r.useCallback(() => {
-            (0, u.Z)({
-                subscriptionTier: f.ZP.getSkuIdForPremiumType(g.p9.TIER_2),
-                analyticsLocations: v,
+        { analyticsLocations: N } = (0, u.ZP)(),
+        v = r.useCallback(() => {
+            (0, d.Z)({
+                subscriptionTier: f.ZP.getSkuIdForPremiumType(_.p9.TIER_2),
+                analyticsLocations: N,
                 analyticsObject: {
                     ...x,
                     object: E.qAy.BUTTON_CTA,
                     objectType: E.Qqv.TIER_2
                 }
             });
-        }, [v, x]),
+        }, [N, x]),
         T = r.useCallback(() => {
-            s.Z.open(E.oAB.INVENTORY), _.ZP.dismissOutboundPromotionNotice();
+            s.Z.open(E.oAB.INVENTORY), g.ZP.dismissOutboundPromotionNotice();
         }, []),
         S = r.useCallback(() => {
-            h.default.track(E.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), n ? N() : T();
-        }, [n, N, T]);
+            h.default.track(E.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), n ? v() : T();
+        }, [n, v, T]);
     return (0, i.jsxs)(o.Notice, {
         color: o.NoticeColors.PREMIUM_TIER_2,
         children: [
             (0, i.jsx)(o.NoticeCloseButton, {
                 noticeType: E.kVF.OUTBOUND_PROMOTION,
                 onClick: () => {
-                    _.ZP.dismissOutboundPromotionNotice();
+                    g.ZP.dismissOutboundPromotionNotice();
                 }
             }),
             (0, i.jsx)(o.NitroWheelIcon, {

@@ -24,7 +24,7 @@ function f(e) {
         I = (0, c.Z)(),
         E = (0, o.Z)(t),
         b = (0, h.Z)(t),
-        N = (0, d.Z)(x);
+        N = (0, d.Z)(x, t);
     return (0, i.jsxs)(r.Menu, {
         navId: 'channel-call-overflow-popout',
         onClose: n,

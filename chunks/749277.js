@@ -11,20 +11,20 @@ var r = n(442837),
     o = n(232567),
     s = n(230711),
     c = n(726542),
-    d = n(100527),
-    u = n(231757),
+    u = n(100527),
+    d = n(231757),
     m = n(674525),
     h = n(963249),
     f = n(346585),
     p = n(303172),
-    _ = n(463230),
-    g = n(246965),
+    g = n(463230),
+    _ = n(246965),
     E = n(703656),
     C = n(706454),
     I = n(933429),
     x = n(395361),
-    v = n(626135),
-    N = n(243778),
+    N = n(626135),
+    v = n(243778),
     T = n(921944),
     S = n(981631),
     A = n(801461),
@@ -35,7 +35,7 @@ let R = (e) => {
     let { dismissibleContent: t, noticeType: R } = e,
         P = (0, r.e7)([I.Z], () => I.Z.getNotice()),
         L = (0, r.e7)([C.default], () => C.default.locale);
-    return (0, i.jsx)(N.ZP, {
+    return (0, i.jsx)(v.ZP, {
         contentTypes: [t],
         groupName: T.R.NOTICE_BAR,
         bypassAutoDismiss: !0,
@@ -82,7 +82,7 @@ let R = (e) => {
                             j.intl.string(j.t['5NUVHB']),
                             (0, i.jsx)(a.PrimaryCTANoticeButton, {
                                 onClick: () =>
-                                    (0, u.Z)({
+                                    (0, d.Z)({
                                         platformType: S.ABu.SPOTIFY,
                                         location: 'Notice Bar'
                                     }),
@@ -104,7 +104,7 @@ let R = (e) => {
                             j.intl.string(j.t.WHWgoa),
                             (0, i.jsx)(a.NoticeButton, {
                                 onClick: () =>
-                                    (0, u.Z)({
+                                    (0, d.Z)({
                                         platformType: S.ABu.PLAYSTATION,
                                         location: 'Notice Bar'
                                     }),
@@ -141,7 +141,7 @@ let R = (e) => {
                                 className: Z.premiumAction,
                                 noticeType: R,
                                 onClick: () => {
-                                    v.default.track(S.rMx.PREMIUM_PROMOTION_OPENED, {
+                                    N.default.track(S.rMx.PREMIUM_PROMOTION_OPENED, {
                                         location_section: S.jXE.NOTIFICATION_BAR,
                                         location_object: S.qAy.BUTTON_CTA
                                     }),
@@ -158,12 +158,12 @@ let R = (e) => {
                         ]
                     });
                 case l.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
-                    return (0, i.jsx)(g.Z, {
+                    return (0, i.jsx)(_.Z, {
                         dismissCurrentNotice: () => r(T.L.UNKNOWN),
                         subscriptionTier: b.Si.TIER_2
                     });
                 case l.z.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
-                    return (0, i.jsx)(g.Z, {
+                    return (0, i.jsx)(_.Z, {
                         dismissCurrentNotice: () => r(T.L.UNKNOWN),
                         subscriptionTier: b.Si.TIER_0
                     });
@@ -186,7 +186,7 @@ let R = (e) => {
                         ]
                     });
                 case l.z.NAGBAR_NOTICE_LOCALIZED_PRICING:
-                    return (0, i.jsx)(_.Z, {
+                    return (0, i.jsx)(g.Z, {
                         notice: P,
                         noticeType: R,
                         dismissCurrentNotice: () => r(T.L.UNKNOWN)
@@ -273,7 +273,7 @@ let R = (e) => {
                                 onClick: () => {
                                     (0, h.Z)({
                                         subscriptionTier: b.Si.TIER_2,
-                                        analyticsLocations: [d.Z.CHECKOUT_RECOVERY_NAGBAR],
+                                        analyticsLocations: [u.Z.CHECKOUT_RECOVERY_NAGBAR],
                                         analyticsLocation: S.Sbl.CHECKOUT_RECOVERY_NAGBAR,
                                         onClose: () => r(T.L.UNKNOWN)
                                     });

@@ -10,22 +10,22 @@ var i = n(200651),
     o = n(665149),
     s = n(618158),
     c = n(819640),
-    d = n(131951),
-    u = n(924557),
+    u = n(131951),
+    d = n(924557),
     m = n(435064),
     h = n(779618),
     f = n(175470),
     p = n(203259),
-    _ = n(356659),
-    g = n(388032);
+    g = n(356659),
+    _ = n(388032);
 function E(e) {
     let { canShowReminder: t = !1, className: E } = e,
-        C = (0, h.Z)(d.Z),
-        { showClipsHeaderEntrypoint: I } = u.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
+        C = (0, h.Z)(u.Z),
+        { showClipsHeaderEntrypoint: I } = d.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
         {
             hasClips: x,
-            hasNewClips: v,
-            lastClipsSession: N,
+            hasNewClips: N,
+            lastClipsSession: v,
             remindersEnabled: T,
             hasAnyClipAnimations: S
         } = (0, l.cj)([m.Z], () => ({
@@ -35,7 +35,7 @@ function E(e) {
             remindersEnabled: m.Z.getSettings().remindersEnabled,
             hasAnyClipAnimations: m.Z.hasAnyClipAnimations()
         })),
-        A = null != N && N.newClipIds.length > 0,
+        A = null != v && v.newClipIds.length > 0,
         b = (0, f.n)((e) => e.clipsButtonRef),
         j = (0, f.n)((e) => e.setClipsButtonRef),
         Z = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
@@ -46,7 +46,7 @@ function E(e) {
                 let { default: e } = await Promise.all([n.e('2668'), n.e('74750')]).then(n.bind(n, 542055));
                 return (t) => (0, i.jsx)(e, { ...t });
             },
-            { modalKey: _.Qr }
+            { modalKey: g.Qr }
         );
     }
     return (r.useEffect(() => (S ? R() : P(), () => P()), [S, R, P]), I && C && x)
@@ -60,7 +60,7 @@ function E(e) {
                       !Z &&
                       (0, i.jsx)(p.Z, {
                           clipIconRef: b,
-                          lastClipsSession: N,
+                          lastClipsSession: v,
                           onOpenClipsGallery: L
                       }),
                   (0, i.jsx)('div', {
@@ -68,8 +68,8 @@ function E(e) {
                       children: (0, i.jsx)(o.JO, {
                           className: E,
                           icon: a.ClipsIcon,
-                          showBadge: v,
-                          tooltip: g.intl.string(g.t.MXaLEB),
+                          showBadge: N,
+                          tooltip: _.intl.string(_.t.MXaLEB),
                           onClick: L
                       })
                   })
