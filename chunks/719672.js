@@ -64,6 +64,7 @@ function g() {
             dismissibleContent: e
         }));
     return (0, l.jsxs)('div', {
+        className: x.panelContainer,
         children: [
             (0, l.jsxs)('div', {
                 className: x.buttonContainer,
@@ -86,9 +87,13 @@ function g() {
                 ]
             }),
             (0, l.jsx)('br', {}),
-            (0, l.jsx)(m.Z, {
-                columns: b,
-                data: r
+            (0, l.jsx)('div', {
+                className: x.candidatesTableContainer,
+                children: (0, l.jsx)(m.Z, {
+                    className: x.candidatesTable,
+                    columns: b,
+                    data: r
+                })
             }),
             (0, l.jsx)('br', {}),
             (0, l.jsx)(m.Z, {
