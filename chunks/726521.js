@@ -259,7 +259,8 @@ function y(e) {
                 name: o.b.APPLICATION,
                 record: t,
                 contextualGuildId: i,
-                contextualChannelId: a
+                contextualChannelId: a,
+                entrypoint: n
             },
             {},
             s

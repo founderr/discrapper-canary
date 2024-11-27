@@ -164,7 +164,8 @@ let S = (e, t, n, r) => {
             guild_scheduled_event_id: void 0,
             user_id: void 0,
             email_token: void 0,
-            application_id: void 0
+            application_id: void 0,
+            entrypoint: void 0
         },
         l = {
             version: i,
@@ -264,7 +265,8 @@ let S = (e, t, n, r) => {
             name: t.name,
             application_id: t.record.id,
             guild_id: t.contextualGuildId,
-            channel_id: t.contextualChannelId
+            channel_id: t.contextualChannelId,
+            entrypoint: t.entrypoint
         };
     return null;
 };
