@@ -390,7 +390,7 @@ function eU(e) {
 }
 function eG() {
     var e;
-    let t = (0, u.e7)([et.Z], () => et.Z.hasNotice()),
+    let t = (0, u.e7)([et.ZP], () => et.ZP.hasNotice()),
         n = (0, u.e7)([X.Z], () => (X.Z.darkSidebar ? eu.BRd.DARK : void 0)),
         l = (function () {
             let [e, t] = r.useState(() => window.location.pathname.startsWith(eu.Z5c.GUILD_MEMBER_VERIFICATION('')));

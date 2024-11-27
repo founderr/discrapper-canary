@@ -33,7 +33,7 @@ var r = n(442837),
     Z = n(230278);
 let R = (e) => {
     let { dismissibleContent: t, noticeType: R } = e,
-        P = (0, r.e7)([I.Z], () => I.Z.getNotice()),
+        P = (0, r.e7)([I.ZP], () => I.ZP.getNotice()),
         L = (0, r.e7)([C.default], () => C.default.locale);
     return (0, i.jsx)(v.ZP, {
         contentTypes: [t],

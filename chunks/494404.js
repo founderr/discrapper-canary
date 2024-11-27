@@ -150,7 +150,7 @@ function M(e) {
     let { analyticsName: t, items: n, hasMore: l, loading: o, loadMore: m, renderHeader: h, renderEmptyState: g, renderItem: _, getProTip: C, scrollerClassName: I, className: x, listName: Z } = e,
         P = r.useRef(null),
         L = (0, f.Z)(Z, P),
-        y = (0, u.e7)([N.Z], () => N.Z.hasNotice()),
+        y = (0, u.e7)([N.ZP], () => N.ZP.hasNotice()),
         O = (0, u.e7)([v.Z], () => v.Z.windowSize());
     r.useEffect(() => {
         T.default.track(A.rMx.OPEN_POPOUT, { type: t });

@@ -14,7 +14,7 @@ function s(e) {
     return (0, i.jsx)(a.Text, {
         color: 'none',
         className: r()(o.title, n),
-        variant: 'text-sm/normal',
+        variant: 'text-sm/medium',
         children: t
     });
 }
