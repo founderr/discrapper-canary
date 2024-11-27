@@ -1429,12 +1429,20 @@ let { Themes: r } = n(15202).V,
             INPUT_BACKGROUND: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'WHITE',
-                        opacity: 0.04
+                        raw: 'OPACITY_BLACK_8',
+                        opacity: 0.0784313725490196
                     },
                     [r.LIGHT]: {
-                        raw: 'BLACK',
-                        opacity: 0.04
+                        raw: 'OPACITY_BLACK_8',
+                        opacity: 0.0784313725490196
+                    },
+                    [r.MIDNIGHT]: {
+                        raw: 'OPACITY_BLACK_8',
+                        opacity: 0.0784313725490196
+                    },
+                    [r.DARKER]: {
+                        raw: 'OPACITY_BLACK_8',
+                        opacity: 0.0784313725490196
                     }
                 }
             },

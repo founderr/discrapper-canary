@@ -13,5 +13,6 @@ e.exports = {
     sidebarResizeHandle: 'sidebarResizeHandle_a4d4d9',
     sidebarList: 'sidebarList_a4d4d9',
     dragging: 'dragging_a4d4d9',
-    collapsing: 'collapsing_a4d4d9'
+    collapsing: 'collapsing_a4d4d9',
+    page: 'page_a4d4d9'
 };
