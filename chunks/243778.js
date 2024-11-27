@@ -5,6 +5,9 @@ n.d(t, {
     XR: function () {
         return u;
     },
+    Xf: function () {
+        return d;
+    },
     ZP: function () {
         return c;
     }
@@ -37,4 +40,17 @@ function c(e) {
             markAsDismissed: o
         })
     });
+}
+function d(e) {
+    let { contentType: t, latestVersion: n, groupName: i, bypassAutoDismiss: a, children: l } = e,
+        [u, c] = (0, s.EM)(t, n, i);
+    return (
+        (0, o.A)(u, c, a),
+        (0, r.jsx)(r.Fragment, {
+            children: l({
+                visibleContent: u,
+                markAsDismissed: c
+            })
+        })
+    );
 }

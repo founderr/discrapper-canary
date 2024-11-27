@@ -353,6 +353,7 @@ var n, r;
     (r.NITROWEEN_COACHMARK = 'nitroween coachmark'),
     (r.SEASONAL_GIFTING_COACHMARK = 'seasonal gifting coachmark'),
     (r.SEASONAL_GIFTING_REMINDER_COACHMARK = 'seasonal gifting reminder coachmark'),
+    (r.SEASONAL_GIFTING_REMINDER_NAGBAR = 'seasonal gifting reminder nagbar'),
     (r.HD_STREAMING_POTION_MODAL = 'hd streaming potion modal'),
     (r.APP_DMS_QUICK_LAUNCHER = 'app_dms_quick_launcher'),
     (r.DEEPLINK = 'deeplink'),

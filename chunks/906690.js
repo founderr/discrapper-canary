@@ -56,6 +56,12 @@ let h = {
         analyticsLocation: i.Z.SEASONAL_GIFTING_REMINDER_COACHMARK,
         analyticsPage: s.ZY5.PREMIUM_UPSELL_SEASONAL_GIFTING_CAMPAIGN
     },
+    reminderNagbar: {
+        description: () => o.intl.formatToPlainString(o.t['vdmn//'], {}),
+        cta: () => o.intl.string(o.t.RzWDqa),
+        analyticsLocation: i.Z.SEASONAL_GIFTING_REMINDER_NAGBAR,
+        analyticsPage: s.ZY5.PREMIUM_UPSELL_SEASONAL_GIFTING_CAMPAIGN
+    },
     planSelection: {
         heading: () => o.intl.string(o.t.wMNoxM),
         subheading: (e) => o.intl.formatToPlainString(o.t.OCR6yM, { optionCount: e }),
