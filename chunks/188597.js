@@ -168,5 +168,7 @@ function N(e, t) {
             return v.intl.string(v.t.uGDCc3);
         case c.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_NO_ACCESS_TO_ACTIVITY:
             return v.intl.string(v.t.WjNAAA);
+        case c.Z.ReasonCodes.ACTIVITY_LAUNCH_INVALID_LOCATION_TYPE:
+            return v.intl.string(v.t.PtobXV);
     }
 }
