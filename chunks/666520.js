@@ -1,85 +1,52 @@
 t.d(n, {
     Z: function () {
-        return h;
+        return m;
     }
-}),
-    t(47120);
-var i,
-    l = t(200651),
-    o = t(192379),
-    r = t(995295),
-    s = t(442837),
-    c = t(481060),
-    a = t(34854),
-    d = t(531301),
-    u = t(246946),
-    f = t(981631),
-    m = t(388032),
-    I = t(120238);
-function x(e, n, t) {
-    return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: t,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
+});
+var i = t(200651),
+    l = t(192379),
+    o = t(442837),
+    r = t(481060),
+    s = t(34854),
+    c = t(531301),
+    a = t(246946),
+    d = t(981631),
+    u = t(388032),
+    f = t(120238);
+function m(e) {
+    let { autoFocus: n = !1, className: t, userId: m, onUpdate: I } = e,
+        x = (0, o.e7)([a.Z], () => a.Z.hidePersonalInformation),
+        { loading: p, note: h } = (0, c.Z)(m),
+        v = l.useRef(null);
+    return (l.useEffect(() => {
+        if (!n || x) return;
+        let e = v.current;
+        (null == e ? void 0 : e.selectionStart) != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
+    }, [n, x]),
+    x)
+        ? null
+        : (0, i.jsx)('div', {
+              className: t,
+              children: (0, i.jsx)(r.TextAreaAutosize, {
+                  ref: v,
+                  className: f.textarea,
+                  disabled: p,
+                  placeholder: p ? u.intl.string(u.t['WLKx//']) : u.intl.string(u.t.VBhOe3),
+                  'aria-label': u.intl.string(u.t.PbMNh4),
+                  onBlur: (e) => {
+                      let n = e.currentTarget.value;
+                      if ((null != h ? h : '') !== n) null == I || I(), s.Z.updateNote(m, n);
+                  },
+                  onKeyPress: (e) => {
+                      if (13 === e.which) {
+                          if (e.shiftKey) {
+                              var n;
+                              (null !== (n = e.currentTarget.value.match(/\n/g)) && void 0 !== n ? n : []).length >= 5 && e.preventDefault();
+                          } else e.preventDefault(), e.currentTarget.blur();
+                      } else e.which === d.yXg.SPACE && e.stopPropagation();
+                  },
+                  defaultValue: null != h ? h : void 0,
+                  maxLength: d.vuo
               })
-            : (e[n] = t),
-        e
-    );
+          });
 }
-class p extends (i = o.PureComponent) {
-    componentDidMount() {
-        if (this.props.autoFocus && !this.props.hideNote) {
-            let e = r.findDOMNode(this.noteRef.current);
-            null != e && null != e.selectionStart && (e.focus(), (e.selectionStart = e.selectionEnd = e.value.length));
-        }
-    }
-    render() {
-        let { className: e, loading: n, note: t, hideNote: i } = this.props;
-        return i
-            ? null
-            : (0, l.jsx)('div', {
-                  className: e,
-                  children: (0, l.jsx)(c.TextAreaAutosize, {
-                      ref: this.noteRef,
-                      className: I.textarea,
-                      disabled: n,
-                      placeholder: n ? m.intl.string(m.t['WLKx//']) : m.intl.string(m.t.VBhOe3),
-                      'aria-label': m.intl.string(m.t.PbMNh4),
-                      onBlur: this.handleBlur,
-                      onKeyPress: this.handleKeyPress,
-                      defaultValue: null != t ? t : void 0,
-                      maxLength: f.vuo
-                  })
-              });
-    }
-    constructor(...e) {
-        super(...e),
-            x(this, 'noteRef', o.createRef()),
-            x(this, 'handleBlur', (e) => {
-                let n = e.currentTarget.value,
-                    { note: t, userId: i, onUpdate: l } = this.props;
-                if ((null != t ? t : '') !== n) null == l || l(), a.Z.updateNote(i, n);
-            }),
-            x(this, 'handleKeyPress', (e) => {
-                if (13 === e.which) {
-                    if (e.shiftKey) {
-                        var n;
-                        (null !== (n = e.currentTarget.value.match(/\n/g)) && void 0 !== n ? n : []).length >= 5 && e.preventDefault();
-                    } else e.preventDefault(), e.currentTarget.blur();
-                } else e.which === f.yXg.SPACE && e.stopPropagation();
-            });
-    }
-}
-function h(e) {
-    let n = (0, s.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        t = (0, d.Z)(e.userId);
-    return (0, l.jsx)(p, {
-        ...e,
-        ...t,
-        hideNote: n
-    });
-}
-x(p, 'defaultProps', { autoFocus: !1 });
