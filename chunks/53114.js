@@ -364,7 +364,7 @@ class m extends s.Z {
                 duration_decoder_unknown: p(e.decoderBuckets[f.gr.UNKNOWN]),
                 ...c
             },
-            { bytes: _, framesDropped: h, framesCodecError: m, framesCodec: g, framesNetwork: E, packets: v, packetsLost: I, nackCount: T, pliCount: b, qpSum: S, pauseCount: y, freezeCount: A, totalPausesDuration: N, totalFreezesDuration: C, totalFramesDuration: R, keyframes: O, passthroughCount: D, cryptorSuccessCount: L, cryptorFailureCount: x, cryptorDuration: w, cryptorAttempts: P, qualityDecodeErrors: M, qualityDecoderReboots: k, qualityScoreErrors: U, qualityFrameDrops: B, qualitySizeMismatches: G } = e.aggregatedProperties;
+            { bytes: _, framesDropped: h, framesCodecError: m, framesCodec: g, framesNetwork: E, packets: v, packetsLost: I, nackCount: T, pliCount: b, qpSum: S, pauseCount: y, freezeCount: A, totalPausesDuration: N, totalFreezesDuration: C, totalFramesDuration: R, keyframes: O, passthroughCount: D, cryptorSuccessCount: L, cryptorFailureCount: x, cryptorDuration: w, cryptorAttempts: P, cryptorMissingKeyCount: M, cryptorInvalidNonceCount: k, qualityDecodeErrors: U, qualityDecoderReboots: B, qualityScoreErrors: G, qualityFrameDrops: Z, qualitySizeMismatches: F } = e.aggregatedProperties;
         return (
             e instanceof f.nt ? ((d.sender_freeze_count = A), (d.sender_total_freezes_duration = C), (d.sender_total_frames_duration = R)) : ((d.receiver_freeze_count = A), (d.receiver_total_freezes_duration = C), (d.receiver_total_frames_duration = R), (d.receiver_pause_count = y), (d.receiver_total_pauses_duration = N)),
             {
@@ -387,11 +387,13 @@ class m extends s.Z {
                 cryptor_failure_count: x,
                 cryptor_duration: w,
                 cryptor_attempts: P,
-                encoder_quality_decode_errors: M,
-                encoder_quality_decoder_reboots: k,
-                encoder_quality_score_errors: U,
-                encoder_quality_frame_drops: B,
-                encoder_quality_size_mismatches: G
+                cryptor_missing_key_count: M,
+                cryptor_invalid_nonce_count: k,
+                encoder_quality_decode_errors: U,
+                encoder_quality_decoder_reboots: B,
+                encoder_quality_score_errors: G,
+                encoder_quality_frame_drops: Z,
+                encoder_quality_size_mismatches: F
             }
         );
     }

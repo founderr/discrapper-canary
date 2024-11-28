@@ -95,6 +95,7 @@ function l(e, t) {
         encryptDuration: e.encryptDuration,
         encryptAttempts: e.encryptAttempts,
         encryptMaxAttempts: e.encryptMaxAttempts,
+        encryptMissingKeyCount: e.encryptMissingKeyCount,
         hqSimulcastStreamEncoded: e.hqSimulcastStreamEncoded,
         lqSimulcastStreamEncoded: e.lqSimulcastStreamEncoded,
         bandwidthLimitedFrameRate: e.bwLimitedFrameRate,
@@ -158,6 +159,8 @@ function u(e, t, n, i) {
         decryptFailureCount: e.decryptFailureCount,
         decryptDuration: e.decryptDuration,
         decryptAttempts: e.decryptAttempts,
+        decryptMissingKeyCount: e.decryptMissingKeyCount,
+        decryptInvalidNonceCount: e.decryptInvalidNonceCount,
         ...(null != i
             ? o({
                   videoJitterBuffer: i.videoJitterBuffer,
@@ -202,7 +205,8 @@ function c(e, t, n, i) {
                     encryptFailureCount: e.encryptFailureCount,
                     encryptDuration: e.encryptDuration,
                     encryptAttempts: e.encryptAttempts,
-                    encryptMaxAttempts: e.encryptMaxAttempts
+                    encryptMaxAttempts: e.encryptMaxAttempts,
+                    encryptMissingKeyCount: e.encryptMissingKeyCount
                 });
         if (null != i)
             i.forEach((e) => {
@@ -264,6 +268,8 @@ function c(e, t, n, i) {
                         decryptFailureCount: s.decryptFailureCount,
                         decryptDuration: s.decryptDuration,
                         decryptAttempts: s.decryptAttempts,
+                        decryptMissingKeyCount: s.decryptMissingKeyCount,
+                        decryptInvalidNonceCount: s.decryptInvalidNonceCount,
                         ...(null != d
                             ? o({
                                   audioJitterBuffer: d.audioJitterBuffer,

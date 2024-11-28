@@ -146,10 +146,10 @@ function m(e) {
 function p(e) {
     return e;
 }
-function h(e) {
+function g(e) {
     return ''.concat(e, ' ms');
 }
-function g(e) {
+function h(e) {
     return ''.concat(e.toFixed(0), '%');
 }
 function f(e) {
@@ -169,9 +169,12 @@ let S = {
         audioPlayoutUnderruns: !0,
         decryptAttempts: !0,
         decryptDuration: !0,
+        decryptMissingKeyCount: !0,
+        decryptInvalidNonceCount: !0,
         encryptAttempts: !0,
         encryptDuration: !0,
         encryptMaxAttempts: !0,
+        encryptMissingKeyCount: !0,
         fractionLost: !0,
         framesCaptured: !0,
         framesRendered: !0,
@@ -188,13 +191,13 @@ let S = {
         videoJitterTarget: !0,
         voiceActivityDetectorProcessTime: !0
     },
-    v = {
-        accelerateRate: g,
+    C = {
+        accelerateRate: h,
         audioDetected: f,
         audioLevel: y,
         availableOutgoingBitrate: u,
-        averageDecodeTime: h,
-        averageEncodeTime: h,
+        averageDecodeTime: g,
+        averageEncodeTime: g,
         bandwidthLimitedFrameRate: f,
         bandwidthLimitedResolution: f,
         bitrate: u,
@@ -206,46 +209,46 @@ let S = {
             return (n = null != (n = '' === n ? 'unknown' : n) ? n : 'unknown'), ''.concat(n[0].toUpperCase()).concat(n.slice(1), ' (').concat(t, ')');
         },
         cpuLimitedResolution: f,
-        currentDelay: h,
+        currentDelay: g,
         decoderImplementationName: p,
-        delayEstimate: h,
+        delayEstimate: g,
         encoderImplementationName: p,
         encoderQualityPsnr: y,
         encoderQualityVmaf: (e) => ''.concat(e.toFixed(2)),
-        encodeUsage: g,
-        expandRate: g,
+        encodeUsage: h,
+        expandRate: h,
         filter: p,
-        fractionLost: g,
+        fractionLost: h,
         inboundBitrateEstimate: u,
-        jitter: h,
-        jitterBuffer: h,
-        jitterBufferPreferred: h,
-        keyFrameInterval: h,
-        minPlayoutDelay: h,
+        jitter: g,
+        jitterBuffer: g,
+        jitterBufferPreferred: g,
+        keyFrameInterval: g,
+        minPlayoutDelay: g,
         outboundBitrateEstimate: u,
-        pacerDelay: h,
-        ping: h,
-        preemptiveExpandRate: g,
+        pacerDelay: g,
+        ping: g,
+        preemptiveExpandRate: h,
         receiverBitrateEstimate: u,
         relativePlayoutDelay: b,
         relativeReceptionDelay: b,
-        renderDelay: h,
+        renderDelay: g,
         resolution: (e) => {
             let { width: t, height: n } = e;
             return ''.concat(t, 'x').concat(n);
         },
-        secondaryDecodedRate: g,
+        secondaryDecodedRate: h,
         secureFramesProtocolVersion: function (e) {
             return e > 0 ? 'Version '.concat(e) : 'Disabled';
         },
-        speechExpandRate: g,
-        targetDelay: h,
+        speechExpandRate: h,
+        targetDelay: g,
         videohookBackend: function (e) {
             let t = ['N/A', 'Direct3D 9', 'Direct3D 10', 'Direct3D 11', 'Direct3D 12', 'OpenGL', 'Vulkan'];
             return e < t.length ? t[e] : 'Unknown';
         }
     },
-    C = (e) => e,
+    v = (e) => e,
     D = (e) => {
         let [t] = a.useState([]);
         return (
@@ -264,8 +267,8 @@ let S = {
 function F(e) {
     var t, n, a, i;
     let { label: o, value: u, section: m } = e,
-        p = null !== (n = v[o]) && void 0 !== n ? n : C;
-    let h =
+        p = null !== (n = C[o]) && void 0 !== n ? n : v;
+    let g =
             l.Pz[o] &&
             (Array.isArray((i = u)) && i.length > 0 && 'number' == typeof i[0].value
                 ? (0, r.jsx)(s.Z, {
@@ -280,12 +283,12 @@ function F(e) {
                         height: 100
                     })
                   : void 0),
-        g = Array.isArray(u) ? (null === (t = u.at(-1)) || void 0 === t ? void 0 : t.value) : u;
+        h = Array.isArray(u) ? (null === (t = u.at(-1)) || void 0 === t ? void 0 : t.value) : u;
     return (0, r.jsx)(c.Z, {
         label: o,
-        valueRendered: p(g),
+        valueRendered: p(h),
         section: m,
-        renderGraph: h,
+        renderGraph: g,
         children: null !== (a = d[o]) && void 0 !== a ? a : o
     });
 }
