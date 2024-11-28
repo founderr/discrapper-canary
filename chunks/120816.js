@@ -1,4 +1,4 @@
-n(47120);
+n(653041), n(47120);
 var r,
     a,
     l,
@@ -11,24 +11,28 @@ var r,
     h = n(906467);
 let m = 0,
     x = [],
-    f = [],
-    p = !1;
-class g extends (r = c.ZP.Store) {
+    f = 0,
+    p = [],
+    g = !1;
+class b extends (r = c.ZP.Store) {
     initialize() {
         this.waitFor(h.Z);
     }
     get loggedEvents() {
         return x;
     }
-    get loggedTriggers() {
+    get loggedEventsVersion() {
         return f;
     }
-    get trackTriggers() {
+    get loggedTriggers() {
         return p;
+    }
+    get trackTriggers() {
+        return g;
     }
 }
 (i = 'AnalyticsLogStore'),
-    (l = 'displayName') in (a = g)
+    (l = 'displayName') in (a = b)
         ? Object.defineProperty(a, l, {
               value: i,
               enumerable: !0,
@@ -36,29 +40,28 @@ class g extends (r = c.ZP.Store) {
               writable: !0
           })
         : (a[l] = i),
-    (t.Z = new g(d.Z, {
+    (t.Z = new b(d.Z, {
         TRACK: function (e) {
             let { event: t, properties: n, fingerprint: r } = e;
             if (h.Z.isDeveloper) {
                 var a;
-                (x = [
-                    ...x,
-                    {
-                        key: (m++).toString(),
-                        event: t,
-                        properties: n,
-                        fingerprint: null != (a = r) ? (0, s.s)(a) : u.default.getId(),
-                        timestamp: new Date()
-                    }
-                ]).length > 500 && x.shift();
+                x.push({
+                    key: (m++).toString(),
+                    event: t,
+                    properties: n,
+                    fingerprint: null != (a = r) ? (0, s.s)(a) : u.default.getId(),
+                    timestamp: new Date()
+                }),
+                    f++,
+                    x.length > 500 && (x = x.slice(-Math.floor(250)));
             }
         },
         TRACK_TRIGGER: function (e) {
             let { experimentId: t, descriptor: n, exposureType: r, excluded: a, location: l, previouslyTracked: i } = e;
             if (!!h.Z.isDeveloper)
-                p &&
-                    (f = [
-                        ...f,
+                g &&
+                    (p = [
+                        ...p,
                         {
                             key: (0, o.Z)(),
                             experimentId: t,
@@ -70,13 +73,13 @@ class g extends (r = c.ZP.Store) {
                             timestamp: new Date()
                         }
                     ]).length > 500 &&
-                    f.shift();
+                    p.shift();
         },
         SET_TRACK_TRIGGERS: function (e) {
             let { enabled: t } = e;
-            p = t;
+            g = t;
         },
         ANALYTICS_LOG_CLEAR: function () {
-            (x = []), (f = []);
+            (x = []), (p = []);
         }
     }));

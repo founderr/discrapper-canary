@@ -175,18 +175,19 @@ let k = [
 function Z() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
-        l = (0, d.e7)([g.Z], () => g.Z.loggedEvents),
-        [s, c] = a.useState(Object.keys(w)),
-        [h, m] = a.useState(l),
-        f = a.useRef(null),
-        p = a.useCallback(
+        l = (0, d.e7)([g.Z], () => g.Z.loggedEventsVersion),
+        s = a.useMemo(() => g.Z.loggedEvents, [l]),
+        [c, h] = a.useState(Object.keys(w)),
+        [m, f] = a.useState(s),
+        p = a.useRef(null),
+        v = a.useCallback(
             (0, o.throttle)(
                 async (e, t) => {
                     if ('' === e) {
-                        m(t);
+                        f(t);
                         return;
                     }
-                    f.current = (0, o.uniqueId)();
+                    p.current = (0, o.uniqueId)();
                     let n = await (0, x.H)(
                         t,
                         (e) => {
@@ -196,27 +197,27 @@ function Z() {
                         e,
                         !0
                     );
-                    if (null != f.current) m(n);
+                    if (null != p.current) f(n);
                 },
                 300,
                 { leading: !0 }
             ),
             []
         ),
-        v = a.useMemo(
+        I = a.useMemo(
             () =>
-                h.filter((e) => {
-                    for (let t of s) if (w[t].filter(e)) return !0;
+                m.filter((e) => {
+                    for (let t of c) if (w[t].filter(e)) return !0;
                     return !1;
                 }),
-            [h, s]
+            [m, c]
         );
     a.useEffect(() => {
-        p(t, l);
-    }, [t, p, l]);
-    let [I, E] = a.useState(void 0),
-        Z = v.find((e) => e.key === I),
-        { TabBar: R, renderSelectedTab: O } = (0, _.Z)({ tabs: k }, []);
+        v(t, s);
+    }, [t, v, s]);
+    let [E, Z] = a.useState(void 0),
+        R = I.find((e) => e.key === E),
+        { TabBar: O, renderSelectedTab: A } = (0, _.Z)({ tabs: k }, []);
     return (0, r.jsxs)('div', {
         ref: e,
         className: i()(y.panel, S.panel),
@@ -246,10 +247,10 @@ function Z() {
                             return (0, r.jsx)(
                                 u.Clickable,
                                 {
-                                    className: i()(S.filter, s.includes(t) && S.activeFilter),
+                                    className: i()(S.filter, c.includes(t) && S.activeFilter),
                                     onClick: () => {
                                         var e;
-                                        return (e = t), void c((t) => (t.includes(e) ? t.filter((t) => t !== e) : [...t, e]));
+                                        return (e = t), void h((t) => (t.includes(e) ? t.filter((t) => t !== e) : [...t, e]));
                                     },
                                     children: n.label
                                 },
@@ -271,20 +272,20 @@ function Z() {
             }),
             (0, r.jsx)(j.Z, {
                 columns: N,
-                data: v,
-                selectedRowKey: I,
-                onClickRow: (e) => E(e.key)
+                data: I,
+                selectedRowKey: E,
+                onClickRow: (e) => Z(e.key)
             }),
-            null != Z &&
+            null != R &&
                 (0, r.jsxs)(C.Z, {
                     className: S.subPanel,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                     children: [
-                        (0, r.jsx)(R, {}),
-                        O({
-                            loggedEvent: Z,
-                            onClose: () => E(void 0)
+                        (0, r.jsx)(O, {}),
+                        A({
+                            loggedEvent: R,
+                            onClose: () => Z(void 0)
                         })
                     ]
                 })
