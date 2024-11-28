@@ -136,8 +136,7 @@ class d extends a.Z {
                         type: l.uA.FIXED,
                         width: null === (n = a.capture) || void 0 === n ? void 0 : n.width,
                         height: null === (r = a.capture) || void 0 === r ? void 0 : r.height
-                    },
-                    profile: e.profile
+                    }
                 };
             });
     }
