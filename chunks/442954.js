@@ -9,8 +9,8 @@ var r = n(200651),
     l = n(120356),
     i = n.n(l),
     o = n(481060),
-    c = n(138464),
-    s = n(585483),
+    s = n(138464),
+    c = n(585483),
     d = n(246992),
     u = n(981631),
     h = n(941469),
@@ -80,7 +80,7 @@ function x() {
                             className: m.inputRow,
                             children: (0, r.jsx)(o.Button, {
                                 onClick: () => {
-                                    (0, c.H)(!0), s.S.dispatch(u.CkL.PREMIUM_SUBSCRIPTION_CREATED);
+                                    (0, s.H)(!0), c.S.dispatch(u.CkL.PREMIUM_SUBSCRIPTION_CREATED);
                                 },
                                 children: 'Open'
                             })

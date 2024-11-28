@@ -4,8 +4,8 @@ i.d(e, {
     }
 }),
     i(789020);
-var s = i(913527),
-    n = i.n(s),
+var n = i(913527),
+    s = i.n(n),
     r = i(81825),
     o = i(630388),
     a = i(301766),
@@ -38,7 +38,7 @@ class d extends r.Z {
             uses: t.uses,
             maxUses: t.max_uses,
             storeListingId: null != t.store_listing ? t.store_listing.id : null,
-            expiresAt: null != t.expires_at ? n()(t.expires_at) : null,
+            expiresAt: null != t.expires_at ? s()(t.expires_at) : null,
             redeemed: t.redeemed,
             subscriptionPlanId: null != t.subscription_plan ? t.subscription_plan.id : t.subscription_plan_id,
             subscriptionPlan: null != t.subscription_plan ? a.ZP.createFromServer(t.subscription_plan) : null,
@@ -70,7 +70,7 @@ class d extends r.Z {
     }
     isExpired() {
         let t = this.expiresAt;
-        return null != t && n()().isAfter(t);
+        return null != t && s()().isAfter(t);
     }
     get hasMultipleCopies() {
         return this.maxUses > 1;

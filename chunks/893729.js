@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return I;
     }
 });
 var i = n(200651),
@@ -14,47 +14,47 @@ var i = n(200651),
     d = n(3148),
     f = n(753206),
     _ = n(594174),
-    E = n(5192),
-    p = n(981631),
+    p = n(5192),
+    g = n(981631),
     m = n(388032),
-    g = n(674055);
-function h(e) {
+    E = n(674055);
+function I(e) {
     var t;
-    let { guildId: n, role: l, theme: h, content: I = m.intl.string(m.t['6OSasb']), className: S } = e,
-        C = (0, u.e7)([_.default], () => _.default.getCurrentUser()),
-        T = E.ZP.useName(n, null, C),
+    let { guildId: n, role: l, theme: I, content: h = m.intl.string(m.t['6OSasb']), className: C } = e,
+        S = (0, u.e7)([_.default], () => _.default.getCurrentUser()),
+        T = p.ZP.useName(n, null, S),
         v = (0, s.Kz)(l),
-        N = r.useMemo(
+        b = r.useMemo(
             () =>
                 (0, c.e5)({
                     ...(0, d.ZP)({
                         channelId: '0',
-                        content: I,
+                        content: h,
                         tts: void 0,
                         type: void 0,
                         messageReference: void 0,
                         allowedMentions: void 0,
-                        author: C
+                        author: S
                     }),
-                    state: p.yb.SENT,
+                    state: g.yb.SENT,
                     id: '0'
                 }),
-            [C, I]
+            [S, h]
         ),
-        A = {
+        N = {
             nick: T,
             colorString: null !== (t = l.colorString) && void 0 !== t ? t : void 0
         };
     return (0, i.jsx)(a.ThemeProvider, {
-        theme: h,
+        theme: I,
         children: (e) =>
             (0, i.jsx)('div', {
-                className: o()(e, g.container, S),
+                className: o()(e, E.container, C),
                 children: (0, i.jsx)(f.Z, {
                     hideTimestamp: !0,
-                    author: A,
+                    author: N,
                     roleIcon: v,
-                    message: N,
+                    message: b,
                     isGroupStart: !0,
                     disableInteraction: !0
                 })

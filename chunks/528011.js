@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     },
     mI: function () {
-        return p;
+        return g;
     }
 }),
     n(47120);
@@ -18,14 +18,14 @@ var i = n(149765),
     d = n(709054),
     f = n(533244),
     _ = n(487419),
-    E = n(676770);
+    p = n(676770);
 n(981631);
-function p(e) {
+function g(e) {
     let t = (0, r.e7)([o.Z, u.Z], () => {
             let t = o.Z.getGuild(e);
             if (null == t) return !1;
             let n = u.Z.getGuildPermissions(t);
-            return null != n && i.Db(n, E.cv);
+            return null != n && i.Db(n, p.cv);
         }),
         n = (0, r.e7)([_.Z], () => (null != e ? _.Z.getGuildIncident(e) : null)),
         l = null != n && (0, f.ur)(n);
@@ -51,7 +51,7 @@ function m() {
                                 context: r,
                                 checkElevated: !1
                             }),
-                            E.cv
+                            p.cv
                         )
                     )
                         return r.id;

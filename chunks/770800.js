@@ -10,14 +10,14 @@ var r = n(200651),
     u = n(226961),
     m = n(914010),
     p = n(959457),
-    h = n(246946),
-    g = n(594174),
+    g = n(246946),
+    h = n(594174),
     f = n(5192),
     y = n(476221),
     b = n(481250),
     S = n(206314),
-    v = n(513547),
-    C = n(65154),
+    C = n(513547),
+    v = n(65154),
     D = n(388032),
     F = n(378481),
     R = n(232186);
@@ -32,7 +32,7 @@ class E extends a.PureComponent {
             l = o().map(i, (e, t) => {
                 if ('receiverReports' !== t && (!n || 'localAddress' !== t))
                     return (0, r.jsx)(
-                        v.ck,
+                        C.ck,
                         {
                             label: t,
                             value: e
@@ -42,7 +42,7 @@ class E extends a.PureComponent {
             }),
             d = o().map(i.receiverReports, (e) => {
                 let t = Array.isArray(e.bitrate) ? (null === (r = e.bitrate.at(-1)) || void 0 === r ? void 0 : r.value) : e.bitrate,
-                    n = g.default.getUser(e.id);
+                    n = h.default.getUser(e.id);
                 var r,
                     a = f.ZP.getNickname(m.Z.getGuildId(), void 0, n);
                 return (
@@ -96,12 +96,12 @@ class E extends a.PureComponent {
         });
     }
 }
-t.Z = l.ZP.connectStores([u.ZP, d.Z, h.Z, p.Z], (e) => {
+t.Z = l.ZP.connectStores([u.ZP, d.Z, g.Z, p.Z], (e) => {
     let { context: t, index: n } = e,
         r = u.ZP.getAllStats(t)[n],
-        a = t === C.Yn.STREAM ? p.Z.getHostname(p.Z.getActiveStreamKey()) : d.Z.getHostname();
+        a = t === v.Yn.STREAM ? p.Z.getHostname(p.Z.getActiveStreamKey()) : d.Z.getHostname();
     return {
-        hidePersonalInformation: h.Z.hidePersonalInformation,
+        hidePersonalInformation: g.Z.hidePersonalInformation,
         transport: null != r ? r.transport : null,
         mediaSessionId: d.Z.getMediaSessionId(),
         hostname: y.Z.getShortHostname(a)

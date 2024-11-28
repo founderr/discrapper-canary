@@ -9,8 +9,8 @@ var r = n(200651),
     l = n(120356),
     i = n.n(l),
     o = n(392711),
-    c = n.n(o),
-    s = n(876215),
+    s = n.n(o),
+    c = n(876215),
     d = n(442837),
     u = n(433517),
     h = n(481060),
@@ -18,8 +18,8 @@ var r = n(200651),
     x = n(812206),
     f = n(835473),
     p = n(681619),
-    b = n(810568),
-    g = n(168524),
+    g = n(810568),
+    b = n(168524),
     v = n(77498),
     C = n(823379),
     j = n(71585),
@@ -29,7 +29,7 @@ var r = n(200651),
     y = n(206583),
     N = n(298149),
     I = n(941469);
-let k = [
+let E = [
     {
         key: 'type',
         cellClassName: i()(N.cell, N.cellType),
@@ -37,7 +37,7 @@ let k = [
             let { type: t } = e;
             return (0, r.jsx)(h.Text, {
                 variant: 'text-md/semibold',
-                children: s.s[t]
+                children: c.s[t]
             });
         }
     },
@@ -59,11 +59,11 @@ let k = [
         cellClassName: N.cell,
         render(e) {
             let { type: t } = e;
-            return (0, r.jsx)(E, { type: t });
+            return (0, r.jsx)(k, { type: t });
         }
     }
 ];
-function E(e) {
+function k(e) {
     var t, n;
     let { type: a } = e,
         l = (0, d.e7)([_.Z], () => _.Z.getFilters()),
@@ -88,8 +88,8 @@ function w() {
     let n = (0, d.e7)([_.Z], () => _.Z.getFeed(y.YN.GLOBAL_FEED)),
         l = (0, d.e7)([_.Z], () => _.Z.getDebugImpressionCappingDisabled()),
         o = (0, d.e7)([j.Z], () => j.Z.getDebugFastImpressionCappingEnabled()),
-        s = (function (e) {
-            let t = c().groupBy(e, (e) => e.content_type);
+        c = (function (e) {
+            let t = s().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
                 let n = t[e];
                 return {
@@ -99,7 +99,7 @@ function w() {
                 };
             });
         })(null == n ? void 0 : null === (e = n.entries) || void 0 === e ? void 0 : e.map((e) => e.content)),
-        E = (0, d.e7)([_.Z], () => {
+        k = (0, d.e7)([_.Z], () => {
             var e;
             return (null === (e = _.Z.getFeedState(y.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
         }),
@@ -112,12 +112,12 @@ function w() {
             },
             [w]
         ),
-        A = (0, g.Z)({
+        A = (0, b.Z)({
             applicationId: O,
             location: 'DevToolsContentInventory',
-            source: b.m1.DevTools
+            source: g.m1.DevTools
         }),
-        B = Object.entries(null !== (t = u.K.get('GameProfileModal')) && void 0 !== t ? t : {})
+        L = Object.entries(null !== (t = u.K.get('GameProfileModal')) && void 0 !== t ? t : {})
             .filter((e) => {
                 let [t, n] = e;
                 return n;
@@ -126,7 +126,7 @@ function w() {
                 let [t] = e;
                 return t;
             }),
-        P = (0, f.Z)(B).filter(C.lm);
+        P = (0, f.Z)(L).filter(C.lm);
     return (0, r.jsx)('div', {
         className: i()(I.panel),
         children: (0, r.jsxs)(h.ScrollerThin, {
@@ -135,10 +135,10 @@ function w() {
                 (0, r.jsxs)(h.FormSection, {
                     children: [
                         (0, r.jsx)(h.FormTitle, { children: 'Inventory' }),
-                        s.length > 0 &&
+                        c.length > 0 &&
                             (0, r.jsx)(p.Z, {
-                                columns: k,
-                                data: s
+                                columns: E,
+                                data: c
                             }),
                         (0, r.jsx)(h.Spacer, { size: 8 }),
                         (0, r.jsx)(S.Z, {}),
@@ -150,7 +150,7 @@ function w() {
                                     feedId: y.YN.GLOBAL_FEED
                                 });
                             },
-                            submitting: E,
+                            submitting: k,
                             children: 'Refresh Now'
                         })
                     ]
@@ -214,10 +214,10 @@ function w() {
 }
 let Z = (e) => {
     let { application: t } = e,
-        n = (0, g.Z)({
+        n = (0, b.Z)({
             applicationId: t.id,
             location: 'DevToolsContentInventory',
-            source: b.m1.DevTools
+            source: g.m1.DevTools
         });
     return (0, r.jsx)(h.Clickable, {
         onClick: n,

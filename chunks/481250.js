@@ -1,6 +1,6 @@
 n.d(t, {
     V: function () {
-        return v;
+        return C;
     },
     a: function () {
         return b;
@@ -20,13 +20,13 @@ var a = n(120356),
     u = n(131951),
     m = n(226961),
     p = n(513547),
-    h = n(65154),
-    g = n(378481),
+    g = n(65154),
+    h = n(378481),
     f = n(232186);
 let y = {
-    [h.Z.NO_OVERRIDE]: 'None',
-    [h.Z.LOW]: 'Low Quality Stream',
-    [h.Z.HIGH]: 'High Quality Stream'
+    [g.Z.NO_OVERRIDE]: 'None',
+    [g.Z.LOW]: 'Low Quality Stream',
+    [g.Z.HIGH]: 'High Quality Stream'
 };
 function b(e) {
     let t = [],
@@ -63,17 +63,17 @@ let S = {
     ssrc: 1,
     codec: 2
 };
-function v(e, t, n, a, v) {
-    return e.map((C, D) => {
+function C(e, t, n, a, C) {
+    return e.map((v, D) => {
         var F, R;
         let E = [];
-        for (let e of Object.keys(C).sort((e, t) => {
+        for (let e of Object.keys(v).sort((e, t) => {
             let n = S[e],
                 r = S[t];
             if (n !== r) return void 0 === n ? 1 : void 0 === r ? -1 : n - r;
             return m.Pz[e] !== m.Pz[t] ? (m.Pz[e] ? 1 : -1) : e > t ? 1 : -1;
         })) {
-            let t = C[e];
+            let t = v[e];
             if (!p.al[e] && void 0 !== t)
                 E.push(
                     (0, r.jsx)(
@@ -91,18 +91,18 @@ function v(e, t, n, a, v) {
             o.FormSection,
             {
                 className: f.marginBottom40,
-                title: C.type,
-                titleClassName: g.sectionHeader,
+                title: v.type,
+                titleClassName: h.sectionHeader,
                 children: [
-                    'video' === C.type &&
+                    'video' === v.type &&
                         null != n &&
                         null != a &&
-                        null != v &&
+                        null != C &&
                         (function (e, t, n, a) {
                             let o = a.get(t, n, e.ssrc);
                             return null != o
                                 ? (0, r.jsx)('div', {
-                                      className: i()(g.videoWrapper, f.marginBottom40),
+                                      className: i()(h.videoWrapper, f.marginBottom40),
                                       children: (0, r.jsx)(d.Z, {
                                           streamId: o,
                                           videoComponent: u.Z.getMediaEngine().Video,
@@ -112,13 +112,13 @@ function v(e, t, n, a, v) {
                                       })
                                   })
                                 : null;
-                        })(C, n, a, v),
+                        })(v, n, a, C),
                     b(E),
-                    'video' === C.type &&
+                    'video' === v.type &&
                         D === e.length - 1 &&
                         null != n &&
                         null != a &&
-                        null != v &&
+                        null != C &&
                         ((F = a),
                         (R = t),
                         (0, r.jsx)(c.Z, {
@@ -136,7 +136,7 @@ function v(e, t, n, a, v) {
                                         onChange: (e) => {
                                             l.MS(F, R, e);
                                         },
-                                        options: Object.values(h.Z).map((e) => ({
+                                        options: Object.values(g.Z).map((e) => ({
                                             value: e,
                                             label: y[e]
                                         }))
@@ -146,7 +146,7 @@ function v(e, t, n, a, v) {
                         }))
                 ]
             },
-            ''.concat(C.type, ' + ').concat(C.ssrc)
+            ''.concat(v.type, ' + ').concat(v.ssrc)
         );
     });
 }

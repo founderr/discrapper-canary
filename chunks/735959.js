@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return g;
     }
 }),
     n(47120);
@@ -9,8 +9,8 @@ var r = n(200651),
     l = n(436772),
     i = n(913527),
     o = n.n(i),
-    c = n(330711),
-    s = n(442837),
+    s = n(330711),
+    c = n(442837),
     d = n(481060),
     u = n(424395),
     h = n(665149),
@@ -18,11 +18,11 @@ var r = n(200651),
     x = n(428530),
     f = n(257785),
     p = n(388032);
-function b() {
-    let e = (0, s.e7)([m.default], () => m.default.locale),
+function g() {
+    let e = (0, c.e7)([m.default], () => m.default.locale),
         [t, n] = a.useState(),
         i = (0, l.runtimeHashMessageKey)(null != t ? t : ''),
-        b = a.useMemo(() => p.t[i], [i]);
+        g = a.useMemo(() => p.t[i], [i]);
     return (0, r.jsxs)('div', {
         children: [
             (0, r.jsxs)(h.ZP, {
@@ -50,7 +50,7 @@ function b() {
                     }),
                     (0, r.jsx)(f.Z9, {
                         name: 'common i18n',
-                        children: c.Z.getLocale()
+                        children: s.Z.getLocale()
                     }),
                     (0, r.jsx)(f.Z9, {
                         name: 'Moment',
@@ -83,11 +83,11 @@ function b() {
                     }),
                     (0, r.jsx)(f.Z9, {
                         name: 'Exists?',
-                        children: null != b ? 'yes' : 'no'
+                        children: null != g ? 'yes' : 'no'
                     })
                 ]
             }),
-            (0, r.jsx)(x.Z, { data: null == b ? void 0 : b(e) })
+            (0, r.jsx)(x.Z, { data: null == g ? void 0 : g(e) })
         ]
     });
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return g;
     }
 }),
     n(47120);
@@ -9,8 +9,8 @@ var r = n(200651),
     l = n(442837),
     i = n(481060),
     o = n(570140),
-    c = n(178635),
-    s = n(115470),
+    s = n(178635),
+    c = n(115470),
     d = n(511010),
     u = n(246992),
     h = n(719);
@@ -35,16 +35,16 @@ let m = 60000,
             value: 86400000
         }
     ];
-function b() {
+function g() {
     let [e, t] = a.useState(null),
-        [n, b] = a.useState(0),
-        [g, v] = a.useState(1000),
+        [n, g] = a.useState(0),
+        [b, v] = a.useState(1000),
         [C, j] = a.useState(0),
-        _ = (0, l.e7)([s.Z], () => {
+        _ = (0, l.e7)([c.Z], () => {
             var t;
-            return null === e ? null : null !== (t = s.Z.getFeedbackConfig(e)) && void 0 !== t ? t : c.R[e];
+            return null === e ? null : null !== (t = c.Z.getFeedbackConfig(e)) && void 0 !== t ? t : s.R[e];
         }),
-        T = Object.keys(c.R).map((e) => ({
+        T = Object.keys(s.R).map((e) => ({
             label: e,
             value: e
         })),
@@ -114,11 +114,11 @@ function b() {
                                 value: n.toString(),
                                 type: 'number',
                                 placeholder: 'Duration length',
-                                onChange: (e) => b(parseFloat(e))
+                                onChange: (e) => g(parseFloat(e))
                             }),
                             (0, r.jsx)(i.SingleSelect, {
                                 options: p,
-                                value: g,
+                                value: b,
                                 onChange: (e) => {
                                     v(e);
                                 },
@@ -182,7 +182,7 @@ function b() {
                             void o.Z.dispatch({
                                 type: 'FEEDBACK_OVERRIDE_SET',
                                 feedbackType: e,
-                                cooldown: n * g,
+                                cooldown: n * b,
                                 chance: C / 100
                             }),
                         disabled: !S,

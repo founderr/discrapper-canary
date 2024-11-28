@@ -1,12 +1,12 @@
 n.d(t, {
     Dr: function () {
-        return E;
+        return p;
     },
     YO: function () {
         return f;
     },
     _X: function () {
-        return p;
+        return g;
     },
     _o: function () {
         return _;
@@ -46,14 +46,14 @@ function _(e, t) {
         pagination: r
     });
 }
-async function E(e, t) {
+async function p(e, t) {
     await i.Z.dispatch({
         type: 'MEMBER_SAFETY_SEARCH_STATE_UPDATE',
         guildId: e,
         searchState: t
     });
 }
-function p(e) {
+function g(e) {
     let t = (0, u.lv)(e),
         n = o.Z.getGuild(e);
     return !!t && null != n && (n.hasFeature(s.oNc.COMMUNITY) || n.hasFeature(s.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? ((0, l.uL)(s.Z5c.CHANNEL(e, c.oC.MEMBER_SAFETY)), !0) : (r.Z.open(n.id, s.pNK.MEMBERS), !0));

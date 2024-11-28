@@ -9,12 +9,12 @@ var a = n(442837),
     l = n(814443),
     i = n(594174),
     o = n(681619),
-    c = n(299205),
-    s = n(941469);
+    s = n(299205),
+    c = n(941469);
 let d = [
     {
         key: 'user',
-        cellClassName: c.userCell,
+        cellClassName: s.userCell,
         render(e) {
             var t;
             let { user: n, key: r } = e;
@@ -23,7 +23,7 @@ let d = [
     },
     {
         key: 'affinity',
-        cellClassName: c.affinityCell,
+        cellClassName: s.affinityCell,
         render(e) {
             let { affinity: t } = e;
             return ''.concat(t);
@@ -44,9 +44,9 @@ function u() {
     return 0 === e.length
         ? null
         : (0, r.jsx)(o.Z, {
-              className: s.panel,
+              className: c.panel,
               columns: d,
-              rowClassName: c.row,
+              rowClassName: s.row,
               data: e
           });
 }

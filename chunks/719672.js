@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return b;
     }
 }),
     n(47120);
@@ -10,8 +10,8 @@ var r,
 n(192379);
 var i = n(442837),
     o = n(704215),
-    c = n(481060),
-    s = n(713284),
+    s = n(481060),
+    c = n(713284),
     d = n(883904),
     u = n(211644),
     h = n(675478),
@@ -20,11 +20,11 @@ var i = n(442837),
 ((a = r || (r = {})).EVENT = 'events'), (a.CANDIDATES = 'candidates');
 let f = (e) => {
         switch (e) {
-            case s.D.DC_DISMISSED:
+            case c.D.DC_DISMISSED:
                 return 'DISMISS:';
-            case s.D.DC_SHOWN:
+            case c.D.DC_SHOWN:
                 return 'SHOW:';
-            case s.D.DC_SHOW_REQUEST:
+            case c.D.DC_SHOW_REQUEST:
                 return 'REQUEST TO SHOW:';
             default:
                 return 'UNKNOWN TYPE:';
@@ -39,7 +39,7 @@ let f = (e) => {
             }
         }
     ],
-    b = [
+    g = [
         {
             key: 'candidates',
             render(e) {
@@ -48,8 +48,8 @@ let f = (e) => {
             }
         }
     ];
-function g() {
-    let e = (0, i.e7)([s.Z], () => s.Z.getDCFEvents()),
+function b() {
+    let e = (0, i.e7)([c.Z], () => c.Z.getDCFEvents()),
         t = (0, u.ZP)((e) => e.candidates),
         n = e.map((e) => {
             let { eventType: t, dismissibleContent: n } = e;
@@ -69,17 +69,17 @@ function g() {
             (0, l.jsxs)('div', {
                 className: x.buttonContainer,
                 children: [
-                    (0, l.jsx)(c.Button, {
+                    (0, l.jsx)(s.Button, {
                         className: x.button,
                         onClick: () => (0, d.EG)(),
                         children: 'Reset Daily Cap'
                     }),
-                    (0, l.jsx)(c.Button, {
+                    (0, l.jsx)(s.Button, {
                         className: x.button,
                         onClick: h.sr,
                         children: 'Clear All Dismissed Contents'
                     }),
-                    (0, l.jsx)(c.Button, {
+                    (0, l.jsx)(s.Button, {
                         className: x.button,
                         onClick: h.bE,
                         children: 'Check All Dismissed Contents'
@@ -91,7 +91,7 @@ function g() {
                 className: x.candidatesTableContainer,
                 children: (0, l.jsx)(m.Z, {
                     className: x.candidatesTable,
-                    columns: b,
+                    columns: g,
                     data: r
                 })
             }),

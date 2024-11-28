@@ -9,8 +9,8 @@ var a = n(120356),
     l = n.n(a),
     i = n(481060),
     o = n(963886),
-    c = n(110478),
-    s = n(423932),
+    s = n(110478),
+    c = n(423932),
     d = n(695346),
     u = n(601948),
     h = n(594174),
@@ -62,7 +62,7 @@ function p() {
             (0, r.jsx)('div', {
                 className: l()(m.buttonsContainer, x.marginBottom20),
                 children: (0, r.jsx)(i.Button, {
-                    onClick: () => (0, s.Z)(),
+                    onClick: () => (0, c.Z)(),
                     children: 'Launch Vibing Wumpus'
                 })
             }),
@@ -70,7 +70,7 @@ function p() {
                 (0, r.jsx)('div', {
                     className: l()(m.buttonsContainer, x.marginBottom20),
                     children: (0, r.jsx)(i.Button, {
-                        onClick: () => (0, c.N)(),
+                        onClick: () => (0, s.N)(),
                         children: 'Launch Captcha Test Tool'
                     })
                 }),

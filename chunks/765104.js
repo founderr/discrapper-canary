@@ -99,8 +99,8 @@ class Z extends (l = h.ZP.PersistedStore) {
     channelAffinities() {
         return P;
     }
-    channelAffinitiesById(e) {
-        return null == e ? M : M[e];
+    channelAffinitiesById() {
+        return M;
     }
     channelAffinitiesStatus() {
         return k;

@@ -1,21 +1,21 @@
 n.d(t, {
     GN: function () {
-        return C;
-    },
-    be: function () {
         return S;
     },
+    be: function () {
+        return C;
+    },
     g4: function () {
-        return h;
+        return I;
     },
     m7: function () {
-        return g;
+        return E;
     },
     r4: function () {
         return T;
     },
     sO: function () {
-        return N;
+        return b;
     },
     yL: function () {
         return v;
@@ -35,16 +35,16 @@ var i = n(991637),
     d = n(944537),
     f = n(144507),
     _ = n(853439),
-    E = n(981631),
-    p = n(176505);
+    p = n(981631),
+    g = n(176505);
 r().shim();
 let m = {};
-function g(e) {
+function E(e) {
     let t = (0, l.e7)([a.Z], () => a.Z.getChannel(e)),
         n = (0, l.e7)([_.Z], () => _.Z.getChannel(e));
     return null != t ? t : n;
 }
-function h(e, t, n) {
+function I(e, t, n) {
     let i = (0, l.e7)([c.Z], () => c.Z.getSubscriptionListingsForGuild(e)),
         r = (0, d.n)((t) => t.editStateIdsForGroup[e]),
         o = (0, d.n)((e) => e.listings);
@@ -65,7 +65,7 @@ function h(e, t, n) {
     for (let e = f + 1; e < t.length && (!s.has(t[e]) && _.push(t[e]), 3 !== _.length); e++);
     return _;
 }
-function I(e) {
+function h(e) {
     let t = d.n.getState().editStateIdsForGroup[e],
         n = d.n.getState().listings,
         i = new Set();
@@ -88,20 +88,20 @@ function I(e) {
     }
     return r;
 }
-function S(e) {
-    let t = I(e);
+function C(e) {
+    let t = h(e);
     (m[e] = t),
         t.forEach((e) => {
-            let t = e.set('flags', p.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
+            let t = e.set('flags', g.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
             o.Z.dispatch({
                 type: 'CHANNEL_CREATE',
                 channel: t
             });
         });
 }
-function C(e) {
+function S(e) {
     var t;
-    (null !== (t = m[e]) && void 0 !== t ? t : I(e)).forEach((e) => {
+    (null !== (t = m[e]) && void 0 !== t ? t : h(e)).forEach((e) => {
         o.Z.dispatch({
             type: 'CHANNEL_DELETE',
             channel: e
@@ -183,6 +183,6 @@ function v(e, t) {
         hasChangeFromTemplate: !1
     };
 }
-function N(e) {
-    return (0, f.H2)(e) && e.hasFeature(E.oNc.ROLE_SUBSCRIPTIONS_ENABLED) && (0, s.$F)() && (0, s.hQ)(e.id);
+function b(e) {
+    return (0, f.H2)(e) && e.hasFeature(p.oNc.ROLE_SUBSCRIPTIONS_ENABLED) && (0, s.$F)() && (0, s.hQ)(e.id);
 }

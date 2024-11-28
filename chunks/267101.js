@@ -9,10 +9,10 @@ n.d(t, {
         return _;
     },
     r: function () {
-        return p;
+        return g;
     },
     ue: function () {
-        return E;
+        return p;
     }
 }),
     n(47120);
@@ -52,9 +52,9 @@ let f = (e) => {
             (0, r.e7)([c.Z], () => c.Z.getGuildProduct(t))
         );
     },
-    E = function (e) {
+    p = function (e) {
         let { publishedOnly: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         return (0, r.e7)([c.Z, o.Z], () => c.Z.getGuildProductsForGuild(e, { publishedOnly: null != t ? t : !o.Z.isViewingServerShop(e) }));
     },
-    p = (e) => (0, r.e7)([c.Z], () => (null == e ? void 0 : c.Z.getGuildProduct(e))),
+    g = (e) => (0, r.e7)([c.Z], () => (null == e ? void 0 : c.Z.getGuildProduct(e))),
     m = (e) => (0, r.e7)([u.Z], () => null != e && u.Z.can(d.Plq.ADMINISTRATOR, e));

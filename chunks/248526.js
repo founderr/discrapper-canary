@@ -9,8 +9,8 @@ var r = n(200651),
     l = n(848246),
     i = n(442837),
     o = n(481060),
-    c = n(570140),
-    s = n(746599),
+    s = n(570140),
+    c = n(746599),
     d = n(594174),
     u = n(246992),
     h = n(473657);
@@ -47,8 +47,8 @@ let m = [
 function p() {
     let e = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
         [t, n] = a.useState(!1),
-        [p, b] = a.useState(!1),
-        [g, v] = a.useState(1);
+        [p, g] = a.useState(!1),
+        [b, v] = a.useState(1);
     return (0, r.jsxs)('div', {
         className: h.container,
         children: [
@@ -73,7 +73,7 @@ function p() {
                     options: x,
                     value: p,
                     onChange: (e) => {
-                        b(e);
+                        g(e);
                     },
                     popoutLayerContext: u.O$
                 })
@@ -84,7 +84,7 @@ function p() {
                 tag: o.FormTitleTags.H3,
                 children: (0, r.jsx)(o.SingleSelect, {
                     options: f,
-                    value: g,
+                    value: b,
                     onChange: (e) => {
                         v(e);
                     },
@@ -93,15 +93,15 @@ function p() {
             }),
             (0, r.jsx)(o.Button, {
                 onClick: () =>
-                    void (c.Z.dispatch({
+                    void (s.Z.dispatch({
                         type: 'PREMIUM_PERKS_DEMO_OVERRIDE',
                         perkType: l.q.STREAM_HIGH_QUALITY,
                         user: e,
                         available: t,
                         activateSuccess: p,
-                        demoDuration: g
+                        demoDuration: b
                     }),
-                    (0, s.Vk)()),
+                    (0, c.Vk)()),
                 children: 'Update'
             })
         ]

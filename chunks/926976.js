@@ -9,8 +9,8 @@ var r = n(200651),
     l = n(120356),
     i = n.n(l),
     o = n(392711),
-    c = n(913527),
-    s = n.n(c),
+    s = n(913527),
+    c = n.n(s),
     d = n(442837),
     u = n(481060),
     h = n(129861),
@@ -18,8 +18,8 @@ var r = n(200651),
     x = n(301801),
     f = n(594174),
     p = n(55935),
-    b = n(120816),
-    g = n(31336),
+    g = n(120816),
+    b = n(31336),
     v = n(257785),
     C = n(484036),
     j = n(681619),
@@ -52,7 +52,7 @@ function I(e) {
         children: (0, r.jsx)('dl', { children: t })
     });
 }
-function k(e) {
+function E(e) {
     let { name: t, children: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -67,7 +67,7 @@ function k(e) {
         ]
     });
 }
-let E = [
+let k = [
         {
             id: 'details',
             name: 'Details',
@@ -76,8 +76,8 @@ let E = [
                         loggedEvent: { event: t, properties: n, timestamp: a, fingerprint: l },
                         onClose: o
                     } = e,
-                    c = f.default.getUser(l),
-                    d = s()(a);
+                    s = f.default.getUser(l),
+                    d = c()(a);
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(m.ZP, {
@@ -106,13 +106,13 @@ let E = [
                                     children: (0, r.jsxs)('time', {
                                         dateTime: a.toISOString(),
                                         title: (0, p.vc)(d, 'LLLL'),
-                                        children: [s().locale(), (0, p.Y4)(d)]
+                                        children: [c().locale(), (0, p.Y4)(d)]
                                     })
                                 }),
-                                null != c &&
+                                null != s &&
                                     (0, r.jsx)(v.Z9, {
                                         name: 'User',
-                                        children: (0, r.jsx)(h.Z, { user: c })
+                                        children: (0, r.jsx)(h.Z, { user: s })
                                     }),
                                 (0, r.jsx)(v.Z9, {
                                     name: 'Fingerprint',
@@ -124,7 +124,7 @@ let E = [
                             children: Object.entries(n).map((e) => {
                                 let [t, n] = e;
                                 return (0, r.jsx)(
-                                    k,
+                                    E,
                                     {
                                         name: ''.concat(t, ':'),
                                         children:
@@ -175,8 +175,8 @@ let E = [
 function Z() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
-        l = (0, d.e7)([b.Z], () => b.Z.loggedEvents),
-        [c, s] = a.useState(Object.keys(w)),
+        l = (0, d.e7)([g.Z], () => g.Z.loggedEvents),
+        [s, c] = a.useState(Object.keys(w)),
         [h, m] = a.useState(l),
         f = a.useRef(null),
         p = a.useCallback(
@@ -206,17 +206,17 @@ function Z() {
         v = a.useMemo(
             () =>
                 h.filter((e) => {
-                    for (let t of c) if (w[t].filter(e)) return !0;
+                    for (let t of s) if (w[t].filter(e)) return !0;
                     return !1;
                 }),
-            [h, c]
+            [h, s]
         );
     a.useEffect(() => {
         p(t, l);
     }, [t, p, l]);
-    let [I, k] = a.useState(void 0),
+    let [I, E] = a.useState(void 0),
         Z = v.find((e) => e.key === I),
-        { TabBar: R, renderSelectedTab: O } = (0, _.Z)({ tabs: E }, []);
+        { TabBar: R, renderSelectedTab: O } = (0, _.Z)({ tabs: k }, []);
     return (0, r.jsxs)('div', {
         ref: e,
         className: i()(y.panel, S.panel),
@@ -228,7 +228,7 @@ function Z() {
                         className: S.toolbarButton,
                         look: u.Button.Looks.BLANK,
                         size: u.Button.Sizes.ICON,
-                        onClick: g.Zw,
+                        onClick: b.Zw,
                         children: (0, r.jsx)('span', {
                             title: T.intl.string(T.t.VkKicX),
                             children: (0, r.jsx)(u.TrashIcon, {
@@ -246,10 +246,10 @@ function Z() {
                             return (0, r.jsx)(
                                 u.Clickable,
                                 {
-                                    className: i()(S.filter, c.includes(t) && S.activeFilter),
+                                    className: i()(S.filter, s.includes(t) && S.activeFilter),
                                     onClick: () => {
                                         var e;
-                                        return (e = t), void s((t) => (t.includes(e) ? t.filter((t) => t !== e) : [...t, e]));
+                                        return (e = t), void c((t) => (t.includes(e) ? t.filter((t) => t !== e) : [...t, e]));
                                     },
                                     children: n.label
                                 },
@@ -273,7 +273,7 @@ function Z() {
                 columns: N,
                 data: v,
                 selectedRowKey: I,
-                onClickRow: (e) => k(e.key)
+                onClickRow: (e) => E(e.key)
             }),
             null != Z &&
                 (0, r.jsxs)(C.Z, {
@@ -284,7 +284,7 @@ function Z() {
                         (0, r.jsx)(R, {}),
                         O({
                             loggedEvent: Z,
-                            onClose: () => k(void 0)
+                            onClose: () => E(void 0)
                         })
                     ]
                 })

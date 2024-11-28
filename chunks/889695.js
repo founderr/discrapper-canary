@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return b;
     }
 }),
     n(47120),
@@ -17,14 +17,14 @@ var i = n(200651),
     d = n(481060),
     f = n(271383),
     _ = n(430824),
-    E = n(594174),
-    p = n(700785),
+    p = n(594174),
+    g = n(700785),
     m = n(709054),
-    g = n(962086),
-    h = n(160404),
-    I = n(225675),
-    S = n(981631),
-    C = n(388032),
+    E = n(962086),
+    I = n(160404),
+    h = n(225675),
+    C = n(981631),
+    S = n(388032),
     T = n(22314);
 function v(e) {
     var t;
@@ -33,75 +33,75 @@ function v(e) {
         children: e.name
     });
 }
-function N(e) {
+function b(e) {
     let { guildId: t } = e,
-        n = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
+        n = (0, c.e7)([p.default], () => p.default.getCurrentUser()),
         l = (0, c.e7)([_.Z], () => _.Z.getGuild(t)),
         u = (0, c.e7)([_.Z], () => _.Z.getRoles(t)),
-        { impersonateType: N, viewingRoles: A } = (0, c.cj)([h.Z], () => ({
-            impersonateType: h.Z.getImpersonateType(t),
-            viewingRoles: h.Z.getViewingRoles(t)
+        { impersonateType: b, viewingRoles: N } = (0, c.cj)([I.Z], () => ({
+            impersonateType: I.Z.getImpersonateType(t),
+            viewingRoles: I.Z.getViewingRoles(t)
         })),
-        b = N === I.z.SERVER_SHOP,
-        L = (0, c.e7)([f.ZP], () => (null != n ? f.ZP.getTrueMember(t, n.id) : null)),
-        [O, R] = (0, d.useMultiSelect)(null == A ? [] : m.default.keys(A)),
-        P = r.useRef(l);
+        A = b === h.z.SERVER_SHOP,
+        O = (0, c.e7)([f.ZP], () => (null != n ? f.ZP.getTrueMember(t, n.id) : null)),
+        [L, P] = (0, d.useMultiSelect)(null == N ? [] : m.default.keys(N)),
+        R = r.useRef(l);
     r.useEffect(() => {
         let e = {},
-            t = P.current;
-        if (null != t && null != N) {
-            for (let t of O) {
+            t = R.current;
+        if (null != t && null != b) {
+            for (let t of L) {
                 let n = u[t];
                 null != n && (e[t] = n);
             }
-            (0, g.Zm)(t.id, {
-                type: N,
+            (0, E.Zm)(t.id, {
+                type: b,
                 roles: e
             });
         }
-    }, [O, N, u]);
-    let y =
-            null != l && null != n && null != L
+    }, [L, b, u]);
+    let M =
+            null != l && null != n && null != O
                 ? a()(u)
-                      .filter((e) => -1 !== L.roles.indexOf(e.id))
+                      .filter((e) => -1 !== O.roles.indexOf(e.id))
                       .sortBy((e) => -e.position)
                       .first()
                 : void 0,
-        Z = r.useMemo(
+        y = r.useMemo(
             () =>
                 null != l && null != n
                     ? Object.values(u)
                           .filter((e) => e.id !== l.id)
                           .filter((e) => {
                               var t;
-                              return !b || (null === (t = e.tags) || void 0 === t ? void 0 : t.subscription_listing_id) != null;
+                              return !A || (null === (t = e.tags) || void 0 === t ? void 0 : t.subscription_listing_id) != null;
                           })
-                          .filter((e) => (null == y ? void 0 : y.id) === e.id || p.r6(l, n.id, y, e))
+                          .filter((e) => (null == M ? void 0 : M.id) === e.id || g.r6(l, n.id, M, e))
                     : [],
-            [l, n, b, y, u]
+            [l, n, A, M, u]
         );
-    if (null == n || null == l || null == L) return null;
-    let M = {};
-    return (L.roles.forEach((e) => {
+    if (null == n || null == l || null == O) return null;
+    let x = {};
+    return (O.roles.forEach((e) => {
         let t = u[e];
-        null != t && (M[t.id] = t);
+        null != t && (x[t.id] = t);
     }),
     s.e$(
-        p.I0({
-            forceRoles: M,
+        g.I0({
+            forceRoles: x,
             context: l
         }),
-        s.$e(S.Plq.MANAGE_GUILD, S.Plq.MANAGE_ROLES)
+        s.$e(C.Plq.MANAGE_GUILD, C.Plq.MANAGE_ROLES)
     ) || l.isOwner(n.id))
         ? (0, i.jsx)('div', {
               className: T.container,
               children: (0, i.jsx)(d.Combobox, {
-                  placeholder: C.intl.string(C.t.Sojqsr),
-                  value: O,
-                  onChange: R,
+                  placeholder: S.intl.string(S.t.Sojqsr),
+                  value: L,
+                  onChange: P,
                   autoFocus: !0,
                   children: (e) => {
-                      let t = Z.reduce(
+                      let t = y.reduce(
                               (t, n) => (
                                   o()(e.toLowerCase(), n.name.toLowerCase()) &&
                                       t.push(
@@ -139,6 +139,6 @@ function N(e) {
           })
         : (0, i.jsx)(d.Text, {
               variant: 'text-md/medium',
-              children: C.intl.string(C.t.MNSTbW)
+              children: S.intl.string(S.t.MNSTbW)
           });
 }

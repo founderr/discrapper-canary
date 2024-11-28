@@ -9,8 +9,8 @@ var a = n(120356),
     l = n.n(a),
     i = n(772848),
     o = n(442837),
-    c = n(481060),
-    s = n(765250),
+    s = n(481060),
+    c = n(765250),
     d = n(13245),
     u = n(610394),
     h = n(355863),
@@ -18,7 +18,7 @@ var a = n(120356),
     x = n(501787),
     f = n(27731),
     p = n(941469);
-let b = (e) => ({
+let g = (e) => ({
         type: m.Odu.CLICK_ZONE_DEBUG,
         id: (0, i.Z)(),
         layoutId: e,
@@ -33,7 +33,7 @@ let b = (e) => ({
         ...h.Z.getWidgetDefaultSettings(m.Odu.CLICK_ZONE_DEBUG),
         pinned: !0
     }),
-    g = (e, t) => e.find((e) => e.type === t);
+    b = (e, t) => e.find((e) => e.type === t);
 function v() {
     let e = (0, o.Wu)([h.Z], () => h.Z.getWidgetsForLayout(x.OVERLAY_V3_LAYOUT_ID)),
         t = (0, o.e7)([u.Z], () => u.Z.clickZoneDebugMode),
@@ -44,30 +44,30 @@ function v() {
         i = () => {
             d.Z.setRenderDebugMode(!u.Z.renderDebugMode);
         },
-        v = g(Object.values(e), m.Odu.CLICK_ZONE_DEBUG),
+        v = b(Object.values(e), m.Odu.CLICK_ZONE_DEBUG),
         C = () => {
-            if (null != v) (0, s.E9)(v.id);
+            if (null != v) (0, c.E9)(v.id);
             else {
-                let e = b(x.OVERLAY_V3_LAYOUT_ID);
-                (0, s.A4)(e);
+                let e = g(x.OVERLAY_V3_LAYOUT_ID);
+                (0, c.A4)(e);
             }
         };
     return (0, r.jsxs)('div', {
         className: l()(p.panel, f.panel),
         children: [
-            (0, r.jsx)(c.Tooltip, {
+            (0, r.jsx)(s.Tooltip, {
                 position: 'left',
                 text: 'Enables a red border around click zones to help with debugging.',
                 children: (e) =>
                     (0, r.jsx)('div', {
                         ...e,
-                        children: (0, r.jsx)(c.Checkbox, {
+                        children: (0, r.jsx)(s.Checkbox, {
                             value: t,
                             onChange: () => a(),
                             size: 18,
-                            type: c.Checkbox.Types.INVERTED,
-                            shape: c.Checkbox.Shapes.BOX,
-                            children: (0, r.jsx)(c.Text, {
+                            type: s.Checkbox.Types.INVERTED,
+                            shape: s.Checkbox.Shapes.BOX,
+                            children: (0, r.jsx)(s.Text, {
                                 tag: 'span',
                                 variant: 'text-md/normal',
                                 color: 'text-muted',
@@ -76,19 +76,19 @@ function v() {
                         })
                     })
             }),
-            (0, r.jsx)(c.Tooltip, {
+            (0, r.jsx)(s.Tooltip, {
                 position: 'left',
                 text: 'Enables a border around any widgets that are rendered on screen that are pinned (even if they are hidden). Blue = pinned widgets, Gray = unpinned widgets',
                 children: (e) =>
                     (0, r.jsx)('div', {
                         ...e,
-                        children: (0, r.jsx)(c.Checkbox, {
+                        children: (0, r.jsx)(s.Checkbox, {
                             value: n,
                             onChange: () => i(),
                             size: 18,
-                            type: c.Checkbox.Types.INVERTED,
-                            shape: c.Checkbox.Shapes.BOX,
-                            children: (0, r.jsx)(c.Text, {
+                            type: s.Checkbox.Types.INVERTED,
+                            shape: s.Checkbox.Shapes.BOX,
+                            children: (0, r.jsx)(s.Text, {
                                 tag: 'span',
                                 variant: 'text-md/normal',
                                 color: 'text-muted',
@@ -97,19 +97,19 @@ function v() {
                         })
                     })
             }),
-            (0, r.jsx)(c.Tooltip, {
+            (0, r.jsx)(s.Tooltip, {
                 position: 'left',
                 text: 'Creates a widget that has a clickzone inside of it, which will show/hide every few seconds.',
                 children: (e) =>
                     (0, r.jsx)('div', {
                         ...e,
-                        children: (0, r.jsx)(c.Checkbox, {
+                        children: (0, r.jsx)(s.Checkbox, {
                             value: null != v,
                             onChange: () => C(),
                             size: 18,
-                            type: c.Checkbox.Types.INVERTED,
-                            shape: c.Checkbox.Shapes.BOX,
-                            children: (0, r.jsx)(c.Text, {
+                            type: s.Checkbox.Types.INVERTED,
+                            shape: s.Checkbox.Shapes.BOX,
+                            children: (0, r.jsx)(s.Text, {
                                 tag: 'span',
                                 variant: 'text-md/normal',
                                 color: 'text-muted',

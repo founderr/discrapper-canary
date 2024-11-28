@@ -9,8 +9,8 @@ var r = n(200651),
     l = n(120356),
     i = n.n(l),
     o = n(442837),
-    c = n(481060),
-    s = n(665149),
+    s = n(481060),
+    c = n(665149),
     d = n(428530),
     u = n(484036),
     h = n(681619),
@@ -20,7 +20,7 @@ var r = n(200651),
 function p(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
 }
-function b(e) {
+function g(e) {
     let { store: t, dataGetter: n } = e,
         [l, i] = a.useState(n(t));
     return (
@@ -34,13 +34,13 @@ function b(e) {
                 }
             );
         }, [t, n]),
-        (0, r.jsx)(c.ScrollerThin, {
+        (0, r.jsx)(s.ScrollerThin, {
             className: f.inspectorContainer,
             children: (0, r.jsx)(d.Z, { data: l })
         })
     );
 }
-let g = [
+let b = [
         {
             key: 'name',
             cellClassName: f.__invalid_eventColumn,
@@ -61,7 +61,7 @@ let g = [
                           className: f.inspectorContainer,
                           children: ['Store is missing ', (0, r.jsx)('code', { children: '__getLocalVars' }), ' method.']
                       })
-                    : (0, r.jsx)(b, {
+                    : (0, r.jsx)(g, {
                           store: t,
                           dataGetter: (e) => e.__getLocalVars()
                       });
@@ -72,7 +72,7 @@ let g = [
             name: 'Store Instance',
             render(e) {
                 let { store: t } = e;
-                return (0, r.jsx)(b, {
+                return (0, r.jsx)(g, {
                     store: t,
                     dataGetter: (e) => e
                 });
@@ -88,14 +88,14 @@ function C(e) {
         initialHeight: n,
         children: [
             (0, r.jsx)(a, {}),
-            (0, r.jsxs)(s.ZP, {
+            (0, r.jsxs)(c.ZP, {
                 className: i()(x.headerBar, f.subPanelHeaderBar),
                 children: [
-                    (0, r.jsx)(s.ZP.Icon, {
-                        icon: c.TagIcon,
+                    (0, r.jsx)(c.ZP.Icon, {
+                        icon: s.TagIcon,
                         tooltip: t.getName()
                     }),
-                    (0, r.jsx)(s.ZP.Title, { children: t.getName() })
+                    (0, r.jsx)(c.ZP.Title, { children: t.getName() })
                 ]
             }),
             l({ store: t })
@@ -106,7 +106,7 @@ function j() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
         l = o.yh.getAll(),
-        s = a
+        c = a
             .useMemo(
                 () =>
                     l
@@ -131,9 +131,9 @@ function j() {
         children: [
             (0, r.jsx)('div', {
                 className: f.toolbar,
-                children: (0, r.jsx)(c.SearchBar, {
+                children: (0, r.jsx)(s.SearchBar, {
                     className: f.searchBar,
-                    size: c.SearchBar.Sizes.SMALL,
+                    size: s.SearchBar.Sizes.SMALL,
                     query: t,
                     onChange: n,
                     onClear: () => n(''),
@@ -142,8 +142,8 @@ function j() {
                 })
             }),
             (0, r.jsx)(h.Z, {
-                columns: g,
-                data: s,
+                columns: b,
+                data: c,
                 selectedRowKey: d,
                 onClickRow: (e) => u(e.key)
             }),

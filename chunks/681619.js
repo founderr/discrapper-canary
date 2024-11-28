@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return c;
     }
 });
 var r = n(200651),
@@ -8,9 +8,9 @@ var r = n(200651),
     l = n(120356),
     i = n.n(l),
     o = n(481060),
-    c = n(941469);
-function s(e) {
-    let { columns: t, data: n, className: l, rowClassName: s, onClickRow: d, selectedRowKey: u, rowHeight: h = 40 } = e,
+    s = n(941469);
+function c(e) {
+    let { columns: t, data: n, className: l, rowClassName: c, onClickRow: d, selectedRowKey: u, rowHeight: h = 40 } = e,
         m = a.useMemo(
             () =>
                 t.map((e) => ({
@@ -25,15 +25,15 @@ function s(e) {
         ),
         x = [n.length];
     return (0, r.jsx)('div', {
-        className: c.tableContainer,
+        className: s.tableContainer,
         children: (0, r.jsx)(o.ListThin, {
             className: i()(l),
-            innerClassName: c.table,
+            innerClassName: s.table,
             sections: x,
             sectionHeight: 40,
             renderSection: (e) => {
                 let { section: t } = e,
-                    a = i()(c.tableHeader);
+                    a = i()(s.tableHeader);
                 return (0, r.jsx)(
                     'div',
                     {
@@ -41,12 +41,12 @@ function s(e) {
                         children: m.map((e) => {
                             var a, l;
                             let o = i()(e.cellClassName),
-                                c = { width: 'calc('.concat(null !== (l = e.cellWidth) && void 0 !== l ? l : '1fr', ' - ').concat(16, 'px)') };
+                                s = { width: 'calc('.concat(null !== (l = e.cellWidth) && void 0 !== l ? l : '1fr', ' - ').concat(16, 'px)') };
                             return (0, r.jsx)(
                                 'div',
                                 {
                                     className: o,
-                                    style: c,
+                                    style: s,
                                     children: null === (a = e.renderHeader) || void 0 === a ? void 0 : a.call(e, e, n)
                                 },
                                 'dev-tools-th-'.concat(t, '-').concat(e.key)
@@ -61,9 +61,9 @@ function s(e) {
                 let { rowIndex: t } = e,
                     a = n[t],
                     l = a.key,
-                    x = i()(c.tableRow, {
-                        [c.selectedTableRow]: l === u,
-                        rowClassName: s
+                    x = i()(s.tableRow, {
+                        [s.selectedTableRow]: l === u,
+                        rowClassName: c
                     });
                 return (0, r.jsx)(
                     o.Clickable,
@@ -73,7 +73,7 @@ function s(e) {
                         children: m.map((e) => {
                             var n, l;
                             let o = i()(e.cellClassName),
-                                c = {
+                                s = {
                                     width: 'calc('.concat(null !== (l = e.cellWidth) && void 0 !== l ? l : '1fr', ' - ').concat(16, 'px)'),
                                     height: 'calc('.concat(h, 'px - ').concat(16, 'px)')
                                 };
@@ -81,7 +81,7 @@ function s(e) {
                                 'div',
                                 {
                                     className: o,
-                                    style: c,
+                                    style: s,
                                     children: null === (n = e.render) || void 0 === n ? void 0 : n.call(e, a, void 0, t)
                                 },
                                 'dev-tools-td-'.concat(t, '-').concat(e.key)

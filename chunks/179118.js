@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return P;
     }
 }),
     n(47120);
@@ -12,8 +12,8 @@ var i = n(200651),
     d = n.n(s),
     c = n(442837),
     l = n(481060),
-    f = n(37234),
-    u = n(194359),
+    u = n(37234),
+    f = n(194359),
     p = n(700582),
     _ = n(925329),
     b = n(479446),
@@ -34,12 +34,12 @@ var i = n(200651),
     L = n(474936),
     F = n(388032),
     R = n(431852);
-function N(e) {
-    let { giftCode: t, application: n, sku: r, subscriptionPlan: s, selectedGiftStyle: d, onClose: f, hasSentMessage: u, giftRecipient: b, giftMessageError: h, isSendingMessage: C, halloweenDecoPurchase: I } = e,
-        [v, N] = o.useState(l.CopyInput.Modes.DEFAULT),
-        P = (0, c.e7)([S.Z], () => S.Z.enabled),
-        j = u || (null != d && null != b),
-        M = (null == r ? void 0 : r.productLine) === E.POd.COLLECTIBLES,
+function P(e) {
+    let { giftCode: t, application: n, sku: r, subscriptionPlan: s, selectedGiftStyle: d, onClose: u, hasSentMessage: f, giftRecipient: b, giftMessageError: h, isSendingMessage: C, halloweenDecoPurchase: I } = e,
+        [v, P] = o.useState(l.CopyInput.Modes.DEFAULT),
+        O = (0, c.e7)([S.Z], () => S.Z.enabled),
+        M = f || (null != d && null != b),
+        j = (null == r ? void 0 : r.productLine) === E.POd.COLLECTIBLES,
         { selectedPlan: w } = (0, T.usePaymentContext)(),
         U = (0, g.Z)({ location: 'Gift purchase confirm' }) && (null == w ? void 0 : w.skuId) === L.Si.TIER_2 && null != I,
         Z = () => (null != s ? s.skuId : null != r ? r.id : null),
@@ -50,10 +50,10 @@ function N(e) {
             if (null == s) return null;
             if (s.interval === L.rV.MONTH) {
                 if (U) return F.intl.string(F.t.IelGKy);
-                e = j ? (t ? F.t.ECjJJy : F.t['4ZJ+7e']) : F.t['P+z55e'];
+                e = M ? (t ? F.t.ECjJJy : F.t['4ZJ+7e']) : F.t['P+z55e'];
             } else {
                 if (U) return F.intl.string(F.t.gausub);
-                e = j ? (t ? F.t.jeiz2N : F.t.p0pZXF) : F.t.bXqk3t;
+                e = M ? (t ? F.t.jeiz2N : F.t.p0pZXF) : F.t.bXqk3t;
             }
             return F.intl.format(e, {
                 skuName: (0, B.aq)(s.id),
@@ -70,12 +70,12 @@ function N(e) {
                     r
                 );
             try {
-                (0, y.JG)(e), N(l.CopyInput.Modes.SUCCESS);
+                (0, y.JG)(e), P(l.CopyInput.Modes.SUCCESS);
             } catch (e) {
-                N(l.CopyInput.Modes.ERROR);
+                P(l.CopyInput.Modes.ERROR);
             }
             setTimeout(() => {
-                N(l.CopyInput.Modes.DEFAULT);
+                P(l.CopyInput.Modes.DEFAULT);
             }, 1500);
         },
         D = () => {
@@ -97,7 +97,7 @@ function N(e) {
                     (0, i.jsx)(l.FormTitle, { children: F.intl.string(F.t['/dG4ND']) }),
                     null != t &&
                         (0, i.jsx)(l.CopyInput, {
-                            hideMessage: P ? F.intl.string(F.t['0RLn4+']) : null,
+                            hideMessage: O ? F.intl.string(F.t['0RLn4+']) : null,
                             value: (0, k.Nz)(t),
                             mode: v,
                             text: e,
@@ -143,12 +143,12 @@ function N(e) {
                   (0, i.jsx)(l.Heading, {
                       variant: 'heading-lg/semibold',
                       className: a()({
-                          [R.header]: null == d && !M,
-                          [R.headerCustomGifting]: null != d && !M
+                          [R.header]: null == d && !j,
+                          [R.headerCustomGifting]: null != d && !j
                       }),
-                      children: null != b || (u && null == h) ? F.intl.string(F.t.zOmK9P) : null != h ? F.intl.string(F.t.d1lrmZ) : F.intl.string(F.t['/s1xR0'])
+                      children: null != b || (f && null == h) ? F.intl.string(F.t.zOmK9P) : null != h ? F.intl.string(F.t.d1lrmZ) : F.intl.string(F.t['/s1xR0'])
                   }),
-                  (u && null != b && null == h) || j
+                  (f && null != b && null == h) || M
                       ? (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(p.Z, {
@@ -172,7 +172,7 @@ function N(e) {
                             ]
                         })
                       : (() => {
-                            let e = (0, k.MY)(b, M),
+                            let e = (0, k.MY)(b, j),
                                 { removeGiftRecipientUI: n } = m.m.getCurrentConfig(
                                     { location: 'GiftPurchaseConfirmation' },
                                     {
@@ -188,9 +188,9 @@ function N(e) {
                                     }),
                                     !n &&
                                         null == h &&
-                                        (0, i.jsx)(O, {
+                                        (0, i.jsx)(N, {
                                             giftCode: t,
-                                            onClose: f
+                                            onClose: u
                                         }),
                                     (0, i.jsx)('div', { className: R.divider }),
                                     D()
@@ -200,10 +200,10 @@ function N(e) {
               ]
           });
 }
-let O = (e) => {
+let N = (e) => {
     let { giftCode: t, onClose: n } = e;
     o.useEffect(() => {
-        u.Z.fetchRelationships(), (0, h.W)();
+        f.Z.fetchRelationships(), (0, h.W)();
     }, []);
     let [r, a] = o.useState(),
         [s, _] = o.useState(!1),
@@ -255,7 +255,7 @@ let O = (e) => {
                             g(!0),
                                 (0, b.YD)(r, t)
                                     .then(() => {
-                                        n(), (0, f.Ou)();
+                                        n(), (0, u.Ou)();
                                     })
                                     .catch(() => {
                                         _(!0), g(!1);

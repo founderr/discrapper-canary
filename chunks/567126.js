@@ -519,15 +519,15 @@ function Y(e) {
 function X(e) {
     let { onSourceSelect: t, onCancel: n, pickerType: r } = e,
         { lastPickerAction: s, lastPickerError: a } = (0, u.e7)([R.ZP], () => R.ZP.getPickerState()),
-        [o, c] = i.useState(!1);
+        [c, d] = i.useState(!1);
     return (
         (0, R.kE)(),
         i.useEffect(() => {
-            '' === r ? (0, E.T)(r) : (0, E.t)();
+            (0, w.isLinux)() || ((0, w.isMac)() && o().satisfies(null === g.Z || void 0 === g.Z ? void 0 : g.Z.os.release, B.jR)) ? (0, E.T)(r) : (0, E.t)();
         }, [r]),
         i.useEffect(() => {
-            o ? (s === R.Uc.Update ? t() : s === R.Uc.Cancel && ((0, E.t)(), n())) : (null == s || s === R.Uc.Present) && c(!0);
-        }, [o, s, t, n]),
+            c ? (s === R.Uc.Update ? t() : s === R.Uc.Cancel && ((0, E.t)(), n())) : (null == s || s === R.Uc.Present) && d(!0);
+        }, [c, s, t, n]),
         s === R.Uc.Error
             ? (0, l.jsx)(m.Text, {
                   className: U.errorMessage,

@@ -9,8 +9,8 @@ var a = n(120356),
     l = n.n(a),
     i = n(149765),
     o = n(442837),
-    c = n(481060),
-    s = n(933557),
+    s = n(481060),
+    c = n(933557),
     d = n(592125),
     u = n(430824),
     h = n(496675),
@@ -18,22 +18,22 @@ var a = n(120356),
     x = n(914010),
     f = n(233608),
     p = n(71080),
-    b = n(182682),
-    g = n(941469);
+    g = n(182682),
+    b = n(941469);
 function v(e) {
     let { title: t, can: n } = e,
-        a = n ? c.CheckmarkLargeIcon : c.XSmallIcon,
+        a = n ? s.CheckmarkLargeIcon : s.XSmallIcon,
         i = (0, r.jsx)('div', {
-            className: l()(b.iconOuter, n ? b.iconCheck : b.iconCross),
-            children: (0, r.jsx)(a, { className: b.icon })
+            className: l()(g.iconOuter, n ? g.iconCheck : g.iconCross),
+            children: (0, r.jsx)(a, { className: g.icon })
         });
     return (0, r.jsxs)('div', {
-        className: b.scope,
+        className: g.scope,
         children: [
             i,
             (0, r.jsx)('div', {
-                className: b.scopeInner,
-                children: (0, r.jsx)(c.Text, {
+                className: g.scopeInner,
+                children: (0, r.jsx)(s.Text, {
                     variant: 'text-md/normal',
                     children: t
                 })
@@ -48,7 +48,7 @@ function C() {
         a = (0, o.e7)([u.Z], () => u.Z.getGuild(t)),
         C = (0, o.e7)([h.Z], () => h.Z.computePermissions(n)),
         j = (0, o.e7)([h.Z], () => h.Z.computePermissions(a)),
-        _ = (0, s.ZP)(n, !0),
+        _ = (0, c.ZP)(n, !0),
         T = null != n ? (0, p.IG)(n, !1, !0) : null,
         S = null != a ? f.Z.getGuildPermissionSpecMap(a) : null,
         y = Object.values(null != T ? T : {}).map((e) => {
@@ -76,14 +76,14 @@ function C() {
             );
         });
     return (0, r.jsx)('div', {
-        className: l()(g.panel, b.panel),
+        className: l()(b.panel, g.panel),
         children: (0, r.jsxs)('div', {
-            className: b.panelInner,
+            className: g.panelInner,
             children: [
                 (0, r.jsxs)('section', {
-                    className: b.section,
+                    className: g.section,
                     children: [
-                        (0, r.jsx)(c.Heading, {
+                        (0, r.jsx)(s.Heading, {
                             variant: 'heading-md/semibold',
                             children: null != _ ? 'Permissions in '.concat(_) : 'No channel selected'
                         }),
@@ -91,9 +91,9 @@ function C() {
                     ]
                 }),
                 (0, r.jsxs)('section', {
-                    className: b.section,
+                    className: g.section,
                     children: [
-                        (0, r.jsx)(c.Heading, {
+                        (0, r.jsx)(s.Heading, {
                             variant: 'heading-md/semibold',
                             children: null != a ? 'Permissions in '.concat(a.name) : 'No guild selected'
                         }),

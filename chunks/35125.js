@@ -6,13 +6,13 @@ n.d(t, {
         return c;
     },
     _i: function () {
-        return g;
+        return E;
     },
     eI: function () {
-        return p;
+        return g;
     },
     vp: function () {
-        return E;
+        return p;
     },
     y8: function () {
         return m;
@@ -64,9 +64,9 @@ function f(e, t) {
 function _(e) {
     let t,
         { username: n, usernameOnClickHandler: i = s, roleSubscriptionOnClickHandler: r = u.dG4, guildId: l, roleSubscriptionData: o } = e,
-        { guild: c, totalMonthsSubscribed: d, showWithDuration: _, isRenewal: E } = f(l, o);
+        { guild: c, totalMonthsSubscribed: d, showWithDuration: _, isRenewal: p } = f(l, o);
     return (
-        (t = _ ? (E ? a.t.Iy66Mz : a.t.eCgb2d) : E ? a.t.mPTTdn : a.t.mYjFFx),
+        (t = _ ? (p ? a.t.Iy66Mz : a.t.eCgb2d) : p ? a.t.mPTTdn : a.t.mYjFFx),
         {
             content: t,
             formatParams: {
@@ -80,12 +80,12 @@ function _(e) {
         }
     );
 }
-function E(e) {
+function p(e) {
     let t,
         { username: n, usernameOnClickHandler: i = s, roleSubscriptionOnClickHandler: r = u.dG4, guildId: l, roleSubscriptionData: o } = e,
-        { guild: c, totalMonthsSubscribed: d, showWithDuration: _, isRenewal: E } = f(l, o);
+        { guild: c, totalMonthsSubscribed: d, showWithDuration: _, isRenewal: p } = f(l, o);
     return (
-        (t = _ ? (E ? a.t.OQ0OU1 : a.t['+N9bxs']) : E ? a.t.OxP1ND : a.t['6Z1E+/']),
+        (t = _ ? (p ? a.t.OQ0OU1 : a.t['+N9bxs']) : p ? a.t.OxP1ND : a.t['6Z1E+/']),
         a.intl.formatToParts(t, {
             guildName: null == c ? void 0 : c.name,
             tierName: null == o ? void 0 : o.tier_name,
@@ -96,7 +96,7 @@ function E(e) {
         })
     );
 }
-function p(e) {
+function g(e) {
     return (0, r.l)(e);
 }
 function m(e, t, n, r) {
@@ -109,7 +109,7 @@ function m(e, t, n, r) {
         role_subscription_listing_id: r
     });
 }
-function g(e, t) {
+function E(e, t) {
     var n;
     return {
         guild_id: e.guild_id,
