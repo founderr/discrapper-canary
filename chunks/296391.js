@@ -61,21 +61,22 @@ function v(e) {
                         )
                     ]
                 }),
-                b &&
-                    _.length > 0 &&
+                _.length > 0 &&
                     (0, i.jsx)(d.Z, {
                         heading: p.intl.string(p.t.M0zgnZ),
-                        subheading: p.intl.format(p.t['4bk9Ag'], {
-                            learnMoreHook: (e, n) =>
-                                (0, i.jsx)(
-                                    r.Anchor,
-                                    {
-                                        href: c.Z.getArticleURL(I.BhN.ACTIVITY_STATUS_SETTINGS),
-                                        children: e
-                                    },
-                                    n
-                                )
-                        }),
+                        subheading: b
+                            ? p.intl.format(p.t['4bk9Ag'], {
+                                  learnMoreHook: (e, n) =>
+                                      (0, i.jsx)(
+                                          r.Anchor,
+                                          {
+                                              href: c.Z.getArticleURL(I.BhN.ACTIVITY_STATUS_SETTINGS),
+                                              children: e
+                                          },
+                                          n
+                                      )
+                              })
+                            : void 0,
                         children: _.map((e) =>
                             (0, i.jsx)(
                                 f.Z,
