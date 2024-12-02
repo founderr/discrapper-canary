@@ -9,8 +9,8 @@ var l = n(192379),
     i = n(38618),
     s = n(51596),
     a = n(516373),
-    o = n(314897),
-    u = n(580005),
+    u = n(314897),
+    o = n(580005),
     c = n(987509),
     d = n(601565),
     h = n(41837);
@@ -29,7 +29,7 @@ function f(e) {
 }
 function m(e) {
     let { targetDestination: t, selectedDestinations: n, originDestination: s, includeMissingDMs: h = !1 } = e,
-        m = (0, r.e7)([o.default], () => o.default.getId()),
+        m = (0, r.e7)([u.default], () => u.default.getId()),
         g = l.useMemo(
             () => ({
                 searchOptions: {
@@ -54,15 +54,15 @@ function m(e) {
             y(null != n ? n : []);
     }, [p, v]),
         (0, a.D)();
-    let _ = (0, r.e7)([u.Z], () => u.Z.getFrequentlyWithoutFetchingLatest()),
+    let _ = (0, r.e7)([o.Z], () => o.Z.getFrequentlyWithoutFetchingLatest()),
         j = (0, r.e7)([i.Z], () => i.Z.isConnected()),
-        M = '' !== x;
+        E = '' !== x;
     return {
         results: l.useMemo(
             () =>
                 (0, c.ZP)({
                     results: b,
-                    hasQuery: M,
+                    hasQuery: E,
                     queryMode: Z,
                     targetDestination: t,
                     frequentChannels: _,
@@ -72,7 +72,7 @@ function m(e) {
                     includeMissingDMs: h,
                     isConnected: j
                 }),
-            [b, M, Z, t, _, n, N, s, h, j]
+            [b, E, Z, t, _, n, N, s, h, j]
         ),
         updateSearchText: S
     };

@@ -34,7 +34,7 @@ function o() {
                 );
                 return;
             }
-            if (null != n) {
+            if (null != n && n.length > 0) {
                 let e = n.map((e) => {
                     var t;
                     return null === (t = e.sku) || void 0 === t ? void 0 : t.name;

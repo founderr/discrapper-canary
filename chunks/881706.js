@@ -4,7 +4,7 @@ n.d(t, {
     }
 }),
     n(47120);
-var r = n(729594);
+var r = n(591759);
 let i = new Set(n(821445)),
     a = {
         'github.com': RegExp('/releases\\S*/download|archive/refs/\\S*|/i/raw/i/\\S*|/user-attachments\\S*'),
@@ -12,33 +12,33 @@ let i = new Set(n(821445)),
         'gitlab.com': RegExp('/downloads\\S*/[^/]*')
     };
 function s(e) {
-    var t;
-    let { pathname: n, hostname: s } = r.parse(e);
-    if (null == s) return null;
-    let o = a[s];
-    if ((null != o && null != n && !o.test(n)) || null == n) return null;
-    let l = n;
+    var t, n;
+    let { pathname: s, hostname: o } = null !== (n = r.Z.toURLSafe(e)) && void 0 !== n ? n : {};
+    if (null == o) return null;
+    let l = a[o];
+    if ((null != l && null != s && !l.test(s)) || null == s) return null;
+    let u = s;
     try {
-        l = decodeURIComponent(n);
+        u = decodeURIComponent(s);
     } catch (e) {}
-    let u = l.split('/'),
-        c = null,
-        d = 0;
-    for (let e = u.length - 1; e >= 0; e--) {
-        let t = u[e];
+    let c = u.split('/'),
+        d = null,
+        f = 0;
+    for (let e = c.length - 1; e >= 0; e--) {
+        let t = c[e];
         if ('' !== t && '.' !== t) {
             if ('..' === t) {
-                d++;
+                f++;
                 continue;
             }
-            if (d > e) break;
-            c = u[e - d];
+            if (f > e) break;
+            d = c[e - f];
             break;
         }
     }
-    if (null == c) return null;
-    let f = c.split('.');
-    if (f.length < 2) return null;
-    let _ = null === (t = f.pop()) || void 0 === t ? void 0 : t.toLowerCase();
-    return null != _ && i.has(_) ? _ : null;
+    if (null == d) return null;
+    let _ = d.split('.');
+    if (_.length < 2) return null;
+    let p = null === (t = _.pop()) || void 0 === t ? void 0 : t.toLowerCase();
+    return null != p && i.has(p) ? p : null;
 }

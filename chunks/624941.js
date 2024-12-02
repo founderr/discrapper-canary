@@ -25,7 +25,7 @@ class a extends (i = s.ZP.Store) {
     }
     handleRedeemVirtualCurrencyFail(e) {
         let { error: t } = e;
-        (this._redeemVirtualCurrencyError = t), (this._redeemingSkuId = null), (this._isRedeemingVirtualCurrency = !1);
+        (this._entitlements = null), (this._redeemVirtualCurrencyError = t), (this._redeemingSkuId = null), (this._isRedeemingVirtualCurrency = !1);
     }
     get error() {
         return this._redeemVirtualCurrencyError;
