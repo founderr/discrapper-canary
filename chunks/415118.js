@@ -74,11 +74,13 @@ n.default = (0, d.Z)(
                 J = (0, f.Z)(n),
                 Y = (0, M.Z)({
                     user: n,
-                    guildId: t
+                    guildId: t,
+                    location: 'GuildUserContextMenu'
                 }),
                 X = (0, h.Z)({
                     user: n,
-                    guildId: t
+                    guildId: t,
+                    location: 'GuildUserContextMenu'
                 }),
                 K = (0, x.Z)(n, t),
                 z = (0, U.Z)(n.id, t),

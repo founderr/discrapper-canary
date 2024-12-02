@@ -5055,6 +5055,7 @@ let on = Object.freeze({
     (ah.PARTY_VOICE_ACTIVITY_VIEWED = 'party_voice_activity_viewed'),
     (ah.BLOCK_USER_CONFIRMED = 'block_user_confirmed'),
     (ah.IGNORE_USER_CONFIRMED = 'ignore_user_confirmed'),
+    (ah.USER_REMEDIATION_ACTION = 'user_remediation_action'),
     ((aD = eX || (eX = {})).CANARY = 'canary'),
     (aD.PTB = 'ptb'),
     (aD.STABLE = 'stable'),

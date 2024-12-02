@@ -13,10 +13,10 @@ var r = t(481060),
     I = t(737013),
     g = t(607783),
     x = t(702321),
-    _ = t(461535),
-    m = t(776568),
-    h = t(299206),
-    M = t(895563),
+    M = t(461535),
+    _ = t(776568),
+    m = t(299206),
+    h = t(895563),
     p = t(212205),
     v = t(62420),
     j = t(455395),
@@ -27,8 +27,8 @@ var r = t(481060),
     N = t(122074),
     S = t(819403),
     A = t(777658),
-    O = t(858488),
-    U = t(185457),
+    U = t(858488),
+    O = t(185457),
     y = t(570870),
     b = t(389052),
     G = t(24311),
@@ -55,12 +55,12 @@ e.default = (0, a.Z)(
                     user: e,
                     context: X
                 }),
-                nn = (0, U.Z)({
+                nn = (0, O.Z)({
                     user: e,
                     channelId: t.id,
                     context: X
                 }),
-                ne = (0, O.Z)({ user: e }),
+                ne = (0, U.Z)({ user: e }),
                 nt = (0, z.Z)(e.id),
                 ni = (0, P.Z)(t.id, u),
                 nr = (0, F.Z)({ user: e }),
@@ -76,20 +76,26 @@ e.default = (0, a.Z)(
                     location: 'DMUserContextMenu'
                 }),
                 nc = (0, R.Z)(e.id, t.id),
-                nf = (0, b.Z)({ user: e }),
-                nI = (0, D.Z)({ user: e }),
-                ng = (0, m.ZP)(t),
+                nf = (0, b.Z)({
+                    user: e,
+                    location: 'DMUserContextMenu'
+                }),
+                nI = (0, D.Z)({
+                    user: e,
+                    location: 'DMUserContextMenu'
+                }),
+                ng = (0, _.ZP)(t),
                 nx = (0, N.Uf)(B.aIL, t.id, 'trailing'),
-                n_ = (0, h.Z)({
+                nM = (0, m.Z)({
                     id: e.id,
                     label: V.intl.string(V.t['/AXYnJ'])
                 }),
-                nm = (0, h.Z)({
+                n_ = (0, m.Z)({
                     id: t.id,
                     label: V.intl.string(V.t.gFHI3t)
                 }),
-                nh = (0, _.Z)(t),
-                nM = (0, f.Z)(e.id),
+                nm = (0, M.Z)(t),
+                nh = (0, f.Z)(e.id),
                 np = (0, c.Z)(t.id),
                 nv = (0, S.Z)(e),
                 nj = (0, I.Z)(e.id),
@@ -100,14 +106,14 @@ e.default = (0, a.Z)(
                     guildId: void 0,
                     onHeightUpdate: H
                 }),
-                nZ = (0, M.l)(t),
-                nT = (0, M.P)(t),
+                nZ = (0, h.l)(t),
+                nT = (0, h.P)(t),
                 nE = (0, p.Z)(t),
                 nN = (0, v.Z)(t),
                 nS = (0, Z.V)(t),
                 nA = (0, j.i)(t),
-                nO = (0, E.g)(t),
-                nU = (0, T.H)(t),
+                nU = (0, E.g)(t),
+                nO = (0, T.H)(t),
                 ny = (0, C.e)(t),
                 nb = t.isManaged(),
                 nG = e.isNonUserBot();
@@ -117,10 +123,10 @@ e.default = (0, a.Z)(
                 'aria-label': V.intl.string(V.t.liqwPD),
                 onSelect: q,
                 children: [
-                    (0, i.jsx)(r.MenuGroup, { children: !(nG && !(0, x.Z)(t.id)) && nh }),
+                    (0, i.jsx)(r.MenuGroup, { children: !(nG && !(0, x.Z)(t.id)) && nm }),
                     (0, i.jsx)(r.MenuGroup, { children: nS }),
-                    (0, i.jsx)(r.MenuGroup, { children: nU }),
                     (0, i.jsx)(r.MenuGroup, { children: nO }),
+                    (0, i.jsx)(r.MenuGroup, { children: nU }),
                     (0, i.jsx)(r.MenuGroup, { children: nA }),
                     (0, i.jsx)(r.MenuGroup, { children: ny }),
                     (0, i.jsxs)(r.MenuGroup, {
@@ -150,7 +156,7 @@ e.default = (0, a.Z)(
                                 }),
                                 W &&
                                     (0, i.jsxs)(r.MenuGroup, {
-                                        children: [np, nM]
+                                        children: [np, nh]
                                     })
                             ]
                         }),
@@ -160,7 +166,7 @@ e.default = (0, a.Z)(
                         }),
                     (0, i.jsx)(r.MenuGroup, { children: nT }),
                     (0, i.jsxs)(r.MenuGroup, {
-                        children: [n_, !J && nm]
+                        children: [nM, !J && n_]
                     })
                 ]
             });
