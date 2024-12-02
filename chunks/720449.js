@@ -1,6 +1,6 @@
 n.d(e, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var a = n(913527),
@@ -8,15 +8,16 @@ var a = n(913527),
     l = n(695346),
     i = n(626135),
     o = n(337953),
-    r = n(981631);
-function u(t, e, n, a) {
-    let u = t.trim();
-    if (u.length > 0 || null != e) {
-        var d;
+    r = n(875425),
+    u = n(981631);
+function d(t, e, n, a) {
+    let d = t.trim();
+    if (d.length > 0 || null != e) {
+        var c;
         l.Ok.updateSetting({
-            text: u.length > 0 ? u : '',
+            text: d.length > 0 ? d : '',
             expiresAtMs:
-                null != n
+                null != n && n !== r.F.DONT_CLEAR
                     ? String(
                           s()()
                               .add((0, o.Z)(n), 'ms')
@@ -28,10 +29,10 @@ function u(t, e, n, a) {
             emojiName: null != e ? e.name : '',
             createdAtMs: String(s()().toDate().getTime())
         }),
-            i.default.track(r.rMx.CUSTOM_STATUS_UPDATED, {
+            i.default.track(u.rMx.CUSTOM_STATUS_UPDATED, {
                 location: null != a ? a.location : null,
-                emoji_type: null == (d = e) ? null : null != d.id ? 'custom' : 'unicode',
-                text_len: u.length,
+                emoji_type: null == (c = e) ? null : null != c.id ? 'custom' : 'unicode',
+                text_len: d.length,
                 clear_after: null != n ? ''.concat(n) : null
             });
     } else l.Ok.updateSetting(void 0);

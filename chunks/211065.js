@@ -15,13 +15,14 @@ var a = n(200651),
     g = n(594174),
     f = n(626135),
     j = n(51144),
-    b = n(720449),
-    x = n(875425),
-    C = n(981631),
-    N = n(185923),
+    C = n(720449),
+    N = n(684269),
+    b = n(875425),
+    T = n(981631),
+    x = n(185923),
     v = n(388032),
-    T = n(58448);
-function I(t, e, n) {
+    _ = n(58448);
+function O(t, e, n) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
@@ -34,23 +35,20 @@ function I(t, e, n) {
         t
     );
 }
-let _ = Object.values(x.F)
-    .filter((t) => 'number' == typeof t)
-    .sort((t, e) => t - e);
-function O(t) {
+function D(t) {
     return (0, a.jsxs)('div', {
-        className: T.statusOptionItem,
+        className: _.statusOptionItem,
         children: [
             (0, a.jsx)(r.Status, {
                 status: t.value,
                 size: 10,
-                className: T.statusIcon
+                className: _.statusIcon
             }),
             t.label
         ]
     });
 }
-let D = [
+let I = [
     {
         key: 1,
         value: r.StatusTypes.ONLINE,
@@ -72,12 +70,12 @@ let D = [
         label: (0, j.u5)(r.StatusTypes.INVISIBLE)
     }
 ];
-class y extends s.PureComponent {
+class A extends s.PureComponent {
     componentDidMount() {
         let { sourceAnalyticsLocations: t, sourceAnalyticsContext: e } = this.props;
-        f.default.track(C.rMx.OPEN_MODAL, {
+        f.default.track(T.rMx.OPEN_MODAL, {
             source: null == e ? void 0 : e.location,
-            type: C.jXE.CUSTOM_STATUS_MODAL,
+            type: T.jXE.CUSTOM_STATUS_MODAL,
             load_id: null == e ? void 0 : e.loadId,
             location_stack: t
         });
@@ -86,33 +84,33 @@ class y extends s.PureComponent {
         return [
             {
                 key: 1,
-                value: x.F.TODAY,
+                value: b.F.TODAY,
                 label: v.intl.string(v.t.GQmLra)
             },
             {
                 key: 2,
-                value: x.F.HOURS_4,
+                value: b.F.HOURS_4,
                 label: v.intl.formatToPlainString(v.t.Rea2gY, { hours: 4 })
             },
             {
                 key: 3,
-                value: x.F.HOURS_1,
+                value: b.F.HOURS_1,
                 label: v.intl.formatToPlainString(v.t.Rea2gY, { hours: 1 })
             },
             {
                 key: 4,
-                value: x.F.MINUTES_30,
+                value: b.F.MINUTES_30,
                 label: v.intl.formatToPlainString(v.t.TS3eJS, { minutes: 30 })
             },
             {
                 key: 5,
-                value: null,
+                value: b.F.DONT_CLEAR,
                 label: v.intl.string(v.t.bRn8cn)
             }
         ];
     }
     get analyticsLocation() {
-        return { page: C.ZY5.CUSTOM_STATUS_MODAL };
+        return { page: T.ZY5.CUSTOM_STATUS_MODAL };
     }
     getEmojiButtonRenderer() {
         let { emojiInfo: t } = this.state;
@@ -120,7 +118,7 @@ class y extends s.PureComponent {
             ? null
             : () =>
                   (0, a.jsx)(u.Z, {
-                      className: T.emoji,
+                      className: _.emoji,
                       emojiId: t.id,
                       emojiName: t.name,
                       animated: !!t.animated
@@ -130,13 +128,13 @@ class y extends s.PureComponent {
         let { user: t } = this.props,
             { text: e, emojiInfo: n } = this.state;
         return (0, a.jsx)(r.FormSection, {
-            className: T.formGroup,
+            className: _.formGroup,
             title: v.intl.formatToPlainString(v.t['/w9pHx'], { username: t.username }),
             children: (0, a.jsxs)('div', {
-                className: T.inputContainer,
+                className: _.inputContainer,
                 children: [
                     (0, a.jsx)('div', {
-                        className: T.emojiButtonContainer,
+                        className: _.emojiButtonContainer,
                         children: (0, a.jsx)(r.Popout, {
                             renderPopout: this.renderEmojiPicker,
                             position: 'left',
@@ -147,7 +145,7 @@ class y extends s.PureComponent {
                                 return (0, a.jsx)(c.Z, {
                                     ...t,
                                     active: n,
-                                    className: T.emojiButton,
+                                    className: _.emojiButton,
                                     tabIndex: 0,
                                     renderButtonContents: this.getEmojiButtonRenderer()
                                 });
@@ -155,9 +153,9 @@ class y extends s.PureComponent {
                         })
                     }),
                     (0, a.jsx)(r.TextInput, {
-                        maxLength: x.s,
+                        maxLength: b.s,
                         value: e,
-                        inputClassName: T.input,
+                        inputClassName: _.input,
                         placeholder: v.intl.string(v.t['zYR38/']),
                         onChange: this.handleStatusChange,
                         onKeyPress: this.handleKeyPress,
@@ -173,14 +171,14 @@ class y extends s.PureComponent {
                                       right: -2
                                   }
                               },
-                              className: T.clearButton,
+                              className: _.clearButton,
                               onClick: this.handleClearStatus,
                               look: r.Button.Looks.BLANK,
                               size: r.Button.Sizes.NONE,
                               children: (0, a.jsx)(r.CircleXIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: T.clearIcon
+                                  className: _.clearIcon
                               })
                           })
                         : null
@@ -191,7 +189,7 @@ class y extends s.PureComponent {
     renderClearAfter() {
         let { clearAfter: t } = this.state;
         return (0, a.jsx)(r.FormSection, {
-            className: T.formGroup,
+            className: _.formGroup,
             title: v.intl.string(v.t.E45wvL),
             children: (0, a.jsx)(r.SingleSelect, {
                 placeholder: v.intl.string(v.t.E45wvL),
@@ -205,14 +203,14 @@ class y extends s.PureComponent {
     renderStatusInput() {
         let { status: t } = this.state;
         return (0, a.jsx)(r.FormSection, {
-            className: T.formGroup,
+            className: _.formGroup,
             title: v.intl.string(v.t.zOdg0N),
             children: (0, a.jsx)(r.SingleSelect, {
                 maxVisibleItems: 4,
                 value: t,
-                options: D,
+                options: I,
                 onChange: this.handleChangeStatus,
-                renderOptionLabel: O
+                renderOptionLabel: D
             })
         });
     }
@@ -222,29 +220,29 @@ class y extends s.PureComponent {
             ...this.analyticsLocation,
             children: (0, a.jsxs)(r.ModalRoot, {
                 transitionState: t,
-                className: T.modalRoot,
+                className: _.modalRoot,
                 'aria-label': v.intl.string(v.t['/UonHB']),
                 children: [
                     (0, a.jsxs)(r.ModalHeader, {
                         separator: !1,
-                        className: T.headerContainer,
+                        className: _.headerContainer,
                         children: [
-                            (0, a.jsx)('div', { className: T.art }),
+                            (0, a.jsx)('div', { className: _.art }),
                             (0, a.jsx)('div', {
-                                className: T.header,
+                                className: _.header,
                                 children: (0, a.jsx)(r.H, {
-                                    className: T.headerText,
+                                    className: _.headerText,
                                     children: v.intl.string(v.t['/UonHB'])
                                 })
                             }),
                             (0, a.jsx)(r.ModalCloseButton, {
                                 onClick: e,
-                                className: T.modalCloseButton
+                                className: _.modalCloseButton
                             })
                         ]
                     }),
                     (0, a.jsxs)(r.ModalContent, {
-                        children: [this.renderCustomStatusInput(), this.renderClearAfter(), (0, a.jsx)(r.FormDivider, { className: T.formDivider }), this.renderStatusInput()]
+                        children: [this.renderCustomStatusInput(), this.renderClearAfter(), (0, a.jsx)(r.FormDivider, { className: _.formDivider }), this.renderStatusInput()]
                     }),
                     (0, a.jsxs)(r.ModalFooter, {
                         children: [
@@ -255,7 +253,7 @@ class y extends s.PureComponent {
                             (0, a.jsx)(r.Button, {
                                 onClick: e,
                                 look: r.Button.Looks.LINK,
-                                color: T.cancelButton,
+                                color: _.cancelButton,
                                 children: v.intl.string(v.t['ETE/oK'])
                             })
                         ]
@@ -266,39 +264,28 @@ class y extends s.PureComponent {
     }
     constructor(...t) {
         super(...t),
-            I(this, 'state', {
+            O(this, 'state', {
                 emojiInfo: null != this.props.customStatus ? this.props.customStatus.emoji : null,
                 text: null != this.props.customStatus && null != this.props.customStatus.state ? this.props.customStatus.state : '',
-                clearAfter: (function () {
-                    var t, e, n;
-                    let a = p.Ok.getSetting();
-                    if (null == a || '' === a.expiresAtMs) return x.F.TODAY;
-                    let s = Number(a.expiresAtMs);
-                    if (isNaN(s)) return x.F.TODAY;
-                    let l = new Date(),
-                        i = new Date(s);
-                    if (((e = l), (n = i), e.getFullYear() !== n.getFullYear() || e.getMonth() !== n.getMonth() || e.getDate() !== n.getDate())) return x.F.TODAY;
-                    let o = Number(s) - Date.now();
-                    return null !== (t = _.find((t) => o <= t)) && void 0 !== t ? t : x.F.TODAY;
-                })(),
+                clearAfter: (0, N.Z)(),
                 status: (function () {
                     let t = p.co.getSetting();
-                    return D.some((e) => e.value === t) ? t : r.StatusTypes.ONLINE;
+                    return I.some((e) => e.value === t) ? t : r.StatusTypes.ONLINE;
                 })()
             }),
-            I(this, 'handleClearStatus', () => {
+            O(this, 'handleClearStatus', () => {
                 this.setState({
                     emojiInfo: null,
                     text: ''
                 });
             }),
-            I(this, 'handleSubmit', (t) => {
+            O(this, 'handleSubmit', (t) => {
                 t.preventDefault(), this.handleSaveStatus();
             }),
-            I(this, 'handleStatusChange', (t) => {
+            O(this, 'handleStatusChange', (t) => {
                 this.setState({ text: t });
             }),
-            I(this, 'handleEmojiChange', (t) => {
+            O(this, 'handleEmojiChange', (t) => {
                 if (null == t) return;
                 let e =
                     null != t.id
@@ -314,22 +301,22 @@ class y extends s.PureComponent {
                           };
                 this.setState({ emojiInfo: e });
             }),
-            I(this, 'handleChangeClearAfter', (t) => {
+            O(this, 'handleChangeClearAfter', (t) => {
                 this.setState({ clearAfter: t });
             }),
-            I(this, 'handleChangeStatus', (t) => {
+            O(this, 'handleChangeStatus', (t) => {
                 this.setState({ status: t });
             }),
-            I(this, 'handleSaveStatus', () => {
+            O(this, 'handleSaveStatus', () => {
                 let { sourceAnalyticsContext: t, onClose: e } = this.props,
                     { emojiInfo: n, text: a, clearAfter: s, status: l } = this.state,
                     i = p.co.getSetting();
-                i !== l && (0, h.Z)(l, i, t), (0, b.Z)(a, n, s, t), e();
+                i !== l && (0, h.Z)(l, i, t), (0, C.Z)(a, n, s, t), e();
             }),
-            I(this, 'handleKeyPress', (t) => {
-                t.which === C.yXg.ENTER && this.handleSaveStatus();
+            O(this, 'handleKeyPress', (t) => {
+                t.which === T.yXg.ENTER && this.handleSaveStatus();
             }),
-            I(this, 'renderEmojiPicker', (t) => {
+            O(this, 'renderEmojiPicker', (t) => {
                 let { closePopout: e } = t,
                     { onClose: n } = this.props;
                 return (0, a.jsx)(m.Z, {
@@ -337,7 +324,7 @@ class y extends s.PureComponent {
                     onSelectEmoji: (t, n) => {
                         this.handleEmojiChange(t), n && e();
                     },
-                    pickerIntention: N.Hz.STATUS,
+                    pickerIntention: x.Hz.STATUS,
                     onNavigateAway: n
                 });
             });
@@ -356,4 +343,4 @@ e.default = o.ZP.connectStores(
         );
     },
     { forwardRef: !0 }
-)(y);
+)(A);

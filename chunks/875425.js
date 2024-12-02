@@ -12,5 +12,6 @@ let a = 3600000,
         MINUTES_30: 1800000,
         HOURS_1: 3600000,
         HOURS_4: 14400000,
-        TODAY: 'TODAY'
+        TODAY: 'TODAY',
+        DONT_CLEAR: 'DONT_CLEAR'
     });
