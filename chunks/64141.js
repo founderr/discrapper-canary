@@ -82,7 +82,7 @@ function T(e) {
                         !e.hideLearnMore &&
                             (0, i.jsx)(r.MenuItem, {
                                 id: 'learn-more',
-                                label: j.intl.string(j.t['0SzXmp']),
+                                label: j.intl.string(j.t.Ws2Bl5),
                                 action: () => {
                                     (0, c._3)({
                                         questId: e.quest.id,

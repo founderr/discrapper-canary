@@ -18,16 +18,16 @@ var t = l(442837),
 function p(e, n, l) {
     var p;
     let h = a.Z.getChannel(l),
-        g = (0, t.e7)([u.Z], () => u.Z.getGuild(n), [n]),
-        C = (0, t.e7)([c.ZP], () => c.ZP.getPermissionsForUser(e.id, l), [l, e.id]),
-        E = (null === (p = s.default.getCurrentUser()) || void 0 === p ? void 0 : p.id) === e.id,
-        N = (0, t.e7)([d.Z], () => null != l && d.Z.canWithPartialContext(Z.Plq.MUTE_MEMBERS, { channelId: l }), [l]);
-    return null != h && null != g && (N || E) && C.speaker
+        C = (0, t.e7)([u.Z], () => u.Z.getGuild(n), [n]),
+        g = (0, t.e7)([c.ZP], () => c.ZP.getPermissionsForUser(e.id, l), [l, e.id]),
+        x = (null === (p = s.default.getCurrentUser()) || void 0 === p ? void 0 : p.id) === e.id,
+        E = (0, t.e7)([d.Z], () => null != l && d.Z.canWithPartialContext(Z.Plq.MUTE_MEMBERS, { channelId: l }), [l]);
+    return null != h && null != C && (E || x) && g.speaker
         ? (0, i.jsx)(r.MenuItem, {
               id: 'audience',
-              label: E ? M.intl.string(M.t['6C6PJy']) : M.intl.string(M.t.VK3vQ0),
+              label: x ? M.intl.string(M.t['6C6PJy']) : M.intl.string(M.t.VK3vQ0),
               action: () => {
-                  E ? (0, o.yi)(h) : (0, o.hz)(e, h);
+                  x ? (0, o.yi)(h) : (0, o.hz)(e, h);
               }
           })
         : null;

@@ -1,9 +1,9 @@
-n.d(t, {
+e.d(t, {
     t: function () {
-        return l;
+        return i;
     }
 });
-let i = (0, n(818083).B)({
+let r = (0, e(818083).B)({
     kind: 'user',
     id: '2024-09_likely_atoed_connections',
     label: 'Likely ATO Warning',
@@ -16,8 +16,8 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function l(e) {
-    let { location: t, autoTrackExposure: n = !0 } = e,
-        { enabled: l } = i.useExperiment({ location: t }, { autoTrackExposure: n });
-    return l;
+function i(n) {
+    let { location: t, autoTrackExposure: e = !0 } = n,
+        { enabled: i } = r.useExperiment({ location: t }, { autoTrackExposure: e });
+    return i;
 }

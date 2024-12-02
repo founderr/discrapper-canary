@@ -1,28 +1,28 @@
-t.d(e, {
+e.d(t, {
     Z: function () {
-        return d;
+        return o;
     }
 });
-var i = t(200651);
-t(192379);
-var r = t(153867),
-    l = t(468026),
-    a = t(394059),
-    o = t(388032);
-function d(n) {
-    let { type: e, onConfirm: t, ...d } = n,
-        u = e === a.K.STREAM ? o.intl.string(o.t['/lFMWl']) : o.intl.string(o.t.xzxhZW),
-        s = e === a.K.STREAM ? o.intl.string(o.t.xaOX7e) : o.intl.string(o.t.oU1p9P);
-    return (0, i.jsx)(l.default, {
-        confirmText: o.intl.string(o.t['cY+Ooa']),
-        secondaryConfirmText: o.intl.string(o.t['JdIQ/f']),
-        title: u,
-        cancelText: o.intl.string(o.t['ETE/oK']),
-        onConfirm: t,
+var r = e(200651);
+e(192379);
+var i = e(153867),
+    u = e(468026),
+    l = e(394059),
+    a = e(388032);
+function o(n) {
+    let { type: t, onConfirm: e, ...o } = n,
+        d = t === l.K.STREAM ? a.intl.string(a.t['/lFMWl']) : a.intl.string(a.t.xzxhZW),
+        c = t === l.K.STREAM ? a.intl.string(a.t.xaOX7e) : a.intl.string(a.t.oU1p9P);
+    return (0, r.jsx)(u.default, {
+        confirmText: a.intl.string(a.t['cY+Ooa']),
+        secondaryConfirmText: a.intl.string(a.t['JdIQ/f']),
+        title: d,
+        cancelText: a.intl.string(a.t['ETE/oK']),
+        onConfirm: e,
         onConfirmSecondary: () => {
-            r.ZP.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 }), t();
+            i.ZP.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 }), e();
         },
-        body: s,
-        ...d
+        body: c,
+        ...o
     });
 }

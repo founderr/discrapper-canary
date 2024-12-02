@@ -20,27 +20,27 @@ var l = t(200651),
 function v(e, n, v) {
     let x = i.useMemo(() => ({ [n]: [e.id] }), [n, e.id]);
     (0, u.$)(x), (0, r.e7)([f.Z], () => f.Z.getGuildVersion(n), [n]);
-    let P = (0, r.e7)([c.Z], () => c.Z.getChannel(v)),
-        h = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
+    let h = (0, r.e7)([c.Z], () => c.Z.getChannel(v)),
+        P = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
         p = (0, r.e7)([g.default], () => g.default.getCurrentUser()),
-        I = (0, o.Z)(P, 'Context Menu'),
-        b = (0, s.Xb)(P);
-    if ((null == p ? void 0 : p.id) === e.id) return [I];
-    if (null == h || null == P || null == p) return [];
-    let C = b || (P.ownerId === p.id && P.type === m.d4z.PRIVATE_THREAD);
+        C = (0, o.Z)(h, 'Context Menu'),
+        I = (0, s.Xb)(h);
+    if ((null == p ? void 0 : p.id) === e.id) return [C];
+    if (null == P || null == h || null == p) return [];
+    let b = I || (h.ownerId === p.id && h.type === m.d4z.PRIVATE_THREAD);
     return [
-        C
+        b
             ? (0, l.jsx)(a.MenuItem, {
                   id: 'remove',
-                  label: P.isForumPost() ? M.intl.formatToPlainString(M.t.v2KNNz, { user: e.username }) : M.intl.formatToPlainString(M.t['27xWaW'], { user: e.username }),
+                  label: h.isForumPost() ? M.intl.formatToPlainString(M.t.v2KNNz, { user: e.username }) : M.intl.formatToPlainString(M.t['27xWaW'], { user: e.username }),
                   color: 'danger',
-                  action: () => d.Z.removeMember(P, e.id, 'Context Menu')
+                  action: () => d.Z.removeMember(h, e.id, 'Context Menu')
               })
             : null,
-        f.Z.canManageUser(m.Plq.KICK_MEMBERS, e, h)
+        f.Z.canManageUser(m.Plq.KICK_MEMBERS, e, P)
             ? (0, l.jsx)(a.MenuItem, {
                   id: 'kick',
-                  label: C ? M.intl.formatToPlainString(M.t['1Ie87u'], { user: e.username }) : M.intl.formatToPlainString(M.t['9l/iTU'], { user: e.username }),
+                  label: b ? M.intl.formatToPlainString(M.t['1Ie87u'], { user: e.username }) : M.intl.formatToPlainString(M.t['9l/iTU'], { user: e.username }),
                   color: 'danger',
                   action: () =>
                       (0, a.openModalLazy)(async () => {
@@ -48,16 +48,16 @@ function v(e, n, v) {
                           return (t) =>
                               (0, l.jsx)(n, {
                                   ...t,
-                                  guildId: h.id,
+                                  guildId: P.id,
                                   user: e
                               });
                       })
               })
             : null,
-        f.Z.canManageUser(m.Plq.BAN_MEMBERS, e, h)
+        f.Z.canManageUser(m.Plq.BAN_MEMBERS, e, P)
             ? (0, l.jsx)(a.MenuItem, {
                   id: 'ban',
-                  label: C ? M.intl.formatToPlainString(M.t.i62APT, { user: e.username }) : M.intl.formatToPlainString(M.t.WnpUBg, { user: e.username }),
+                  label: b ? M.intl.formatToPlainString(M.t.i62APT, { user: e.username }) : M.intl.formatToPlainString(M.t.WnpUBg, { user: e.username }),
                   color: 'danger',
                   action: () =>
                       (0, a.openModalLazy)(async () => {
@@ -65,7 +65,7 @@ function v(e, n, v) {
                           return (t) =>
                               (0, l.jsx)(n, {
                                   ...t,
-                                  guildId: h.id,
+                                  guildId: P.id,
                                   user: e
                               });
                       })

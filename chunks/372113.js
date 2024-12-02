@@ -91,21 +91,21 @@ function I(e) {
 t.Z = (e) => {
     let { quest: t, location: n, size: s, isFocused: a, isQuestExpired: h, isExpanded: T, isAnimating: L, contentPosition: Z } = e,
         y = (0, x._Q)(t),
-        P = y >= x.OH.ACCEPTED,
-        B = y >= x.OH.COMPLETED,
+        B = y >= x.OH.ACCEPTED,
+        P = y >= x.OH.COMPLETED,
         U = y >= x.OH.CLAIMED,
         D = (0, p.Xv)(t.config),
         w = (0, S.uq)(n),
         Q = n === C.jn.QUESTS_EMBED,
         O = T || L,
-        k = P && !U && w,
+        k = B && !U && w,
         H = (0, x.t5)(t, q.dr.QUESTS_CARD, n),
         { xboxAndPlaystationAccounts: W } = (0, x.z6)(),
         G = (0, r.e7)([u.default], () => u.default.locale),
         z = (0, x.z)(t),
         F = w && D,
-        V = h && !B,
-        X = W.length > 0 && w && (0, p.$J)(t) && P && !B && !z,
+        V = h && !P,
+        X = W.length > 0 && w && (0, p.$J)(t) && B && !P && !z,
         Y = (0, i.jsx)(j.Z, {
             autoplay: a,
             className: l()(R.gridImg, {
@@ -160,7 +160,7 @@ t.Z = (e) => {
                         className: l()(R.gridText, R.taskDetails),
                         children: [
                             (0, i.jsx)(o.Text, {
-                                variant: b(n, s, P),
+                                variant: b(n, s, B),
                                 className: R.taskInstructions,
                                 children: h ? A.intl.formatToPlainString(A.t['ge+AJi'], { questName: t.config.messages.questName }) : H
                             }),
@@ -253,7 +253,7 @@ t.Z = (e) => {
                                     },
                                     children: A.intl.string(A.t.LLLLPD)
                                 }),
-                            h && !B
+                            h && !P
                                 ? null
                                 : (0, i.jsx)(I, {
                                       quest: t,
@@ -267,7 +267,7 @@ t.Z = (e) => {
                     k &&
                         (0, i.jsx)(E.Z, {
                             className: R.gridProgressBar,
-                            color: B ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.BG_BRAND,
+                            color: P ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.BG_BRAND,
                             quest: t,
                             isInventory: w
                         })

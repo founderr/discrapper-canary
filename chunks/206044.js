@@ -68,7 +68,7 @@ let I = (0, o.animated)(d.ChevronSmallDownIcon),
     };
 t.Z = (e) => {
     var t, n;
-    let { isFocused: l, isQuestExpired: c, quest: h, location: p, size: T, expansionSpring: y, isAnimating: P, isExpanded: B, isInConcurrentQuestExperiment: U, contentPosition: D, toggleExpanded: w } = e,
+    let { isFocused: l, isQuestExpired: c, quest: h, location: p, size: T, expansionSpring: y, isAnimating: B, isExpanded: P, isInConcurrentQuestExperiment: U, contentPosition: D, toggleExpanded: w } = e,
         { ref: Q, height: O } = (0, m.Z)(),
         { ref: k, width: H, scrollWidth: W } = (0, m.Z)(),
         G = (0, u.e7)([C.Z], () => C.Z.getState().theme),
@@ -97,7 +97,7 @@ t.Z = (e) => {
                 (0, g._3)({
                     questId: h.id,
                     questContent: p,
-                    questContentCTA: B ? g.jZ.COLLAPSE : g.jZ.EXPAND,
+                    questContentCTA: P ? g.jZ.COLLAPSE : g.jZ.EXPAND,
                     questContentPosition: D
                 });
         };
@@ -147,7 +147,7 @@ t.Z = (e) => {
             }),
             (0, i.jsxs)('div', {
                 className: M.header,
-                'aria-expanded': B,
+                'aria-expanded': P,
                 children: [
                     (0, i.jsxs)(o.animated.div, {
                         className: r()(M.headerContent, { [M.headerContentEmbed]: Y }),
@@ -168,9 +168,9 @@ t.Z = (e) => {
                                             range: [0, 1],
                                             output: [1, 0]
                                         }),
-                                        visibility: P || !B ? 'inherit' : 'hidden'
+                                        visibility: B || !P ? 'inherit' : 'hidden'
                                     },
-                                    'aria-hidden': !P && B,
+                                    'aria-hidden': !B && P,
                                     children: (0, i.jsxs)(d.ClickableContainer, {
                                         'aria-label': b.intl.string(b.t.dcl9MT),
                                         onClick: en,
@@ -214,9 +214,9 @@ t.Z = (e) => {
                                         range: [0, 1],
                                         output: [0, 1]
                                     }),
-                                    visibility: P || B ? 'inherit' : 'hidden'
+                                    visibility: B || P ? 'inherit' : 'hidden'
                                 },
-                                'aria-hidden': !P && !B,
+                                'aria-hidden': !B && !P,
                                 children: [
                                     (0, i.jsxs)('div', {
                                         className: M.headerExpandedWrapper,
@@ -281,9 +281,9 @@ t.Z = (e) => {
                                     (0, i.jsx)(o.animated.div, {
                                         style: {
                                             opacity: y,
-                                            visibility: P || B ? 'inherit' : 'hidden'
+                                            visibility: B || P ? 'inherit' : 'hidden'
                                         },
-                                        'aria-hidden': !P && !B,
+                                        'aria-hidden': !B && !P,
                                         children: (0, i.jsx)(d.Clickable, {
                                             ...e,
                                             className: M.iconWrapper,
@@ -300,7 +300,7 @@ t.Z = (e) => {
                                 (0, i.jsx)(d.Clickable, {
                                     onClick: en,
                                     className: M.iconWrapper,
-                                    'aria-label': B ? b.intl.string(b.t.iTcumZ) : b.intl.string(b.t.dcl9MT),
+                                    'aria-label': P ? b.intl.string(b.t.iTcumZ) : b.intl.string(b.t.dcl9MT),
                                     children: (0, i.jsx)(I, {
                                         style: {
                                             rotate: y.to({

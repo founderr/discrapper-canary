@@ -80,6 +80,6 @@ class b extends (r = c.ZP.Store) {
             g = t;
         },
         ANALYTICS_LOG_CLEAR: function () {
-            (x = []), (p = []);
+            (x = []), f++, (p = []);
         }
     }));
