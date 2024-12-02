@@ -40,7 +40,8 @@ let o = (0, a.B)({
                 config: {
                     enabled: !0,
                     activeVoice: !0,
-                    activeConvos: !0
+                    activeConvos: !0,
+                    forumThreads: !0
                 }
             }
         ]
