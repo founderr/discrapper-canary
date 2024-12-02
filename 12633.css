@@ -26659,7 +26659,7 @@ div.popoutCloseButton_d523a2:hover {
     background-color: var(--background-accent)
 }
 
-.container_fcfd9f {
+.container_efc1ac {
     background-color: var(--brand-500);
     display: flex;
     align-items: center;
@@ -26671,12 +26671,12 @@ div.popoutCloseButton_d523a2:hover {
     padding: 0 16px
 }
 
-.body_fcfd9f {
+.body_efc1ac {
     padding-top: 54px;
     max-width: 248px
 }
 
-.pointer_fcfd9f {
+.pointer_efc1ac {
     width: 0;
     height: 0;
     border: 0 solid transparent;
@@ -26689,30 +26689,37 @@ div.popoutCloseButton_d523a2:hover {
     border-top-color: var(--brand-500)
 }
 
-.button_fcfd9f {
+.button_efc1ac {
     margin: 16px;
     width: 100%
 }
 
-.popoutTarget_fcfd9f {
+.popoutTarget_efc1ac {
     width: 0;
     height: 0;
     position: absolute;
     left: 20px
 }
 
-.text_fcfd9f {
+.text_efc1ac {
     color: #fff;
     padding-top: 4px
 }
 
-.image_fcfd9f {
+.coachmark_efc1ac {
     position: absolute;
-    width: 200px;
-    bottom: 148px
+    width: 200px
 }
 
-.dmButtonContainer_fcfd9f {
+.staticImage_efc1ac {
+    top: -200px
+}
+
+.animation_efc1ac {
+    top: -208px
+}
+
+.dmButtonContainer_efc1ac {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -26720,8 +26727,27 @@ div.popoutCloseButton_d523a2:hover {
     gap: 4px
 }
 
-.dmButton_fcfd9f {
+.dmButton_efc1ac {
     flex: 1
+}
+
+.closeButton_efc1ac {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, .25);
+    border-radius: var(--radius-round);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer
+}
+
+.closeIcon_efc1ac {
+    color: var(--white-500);
+    padding: 5px
 }
 
 .icon_cfe645 {
