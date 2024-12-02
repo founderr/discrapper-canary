@@ -24,60 +24,67 @@ function m(e) {
     let {
             header: f,
             isLargeModal: h,
-            stepProps: x
+            isDynamicModal: x,
+            stepProps: N
         } = (function (e) {
-            let { header: r, isLargeModal: n, ...l } = e;
+            let { header: r, isLargeModal: n, isDynamicModal: l, ...o } = e;
             return {
                 header: r,
                 isLargeModal: n,
-                stepProps: l
+                isDynamicModal: l,
+                stepProps: o
             };
         })(e),
-        { step: N, stepConfigs: _, setBodyNode: g, setFooterNode: v, setModalOverlayNode: b, setReadySlideId: j } = (0, u.usePaymentContext)(),
-        C = _.find((e) => e.key === N);
+        { step: _, stepConfigs: y, setBodyNode: b, setFooterNode: g, setModalOverlayNode: v, setReadySlideId: j } = (0, u.usePaymentContext)(),
+        C = y.find((e) => e.key === _);
     o.useEffect(() => {
-        b(null);
-    }, [N, b]),
+        v(null);
+    }, [_, v]),
         a()(null != C, 'Unknown step for current payment flow.');
-    let y = null !== (i = null == C ? void 0 : null === (r = C.options) || void 0 === r ? void 0 : r.hideSlider) && void 0 !== i && i,
-        S = null == C ? void 0 : null === (n = C.options) || void 0 === n ? void 0 : n.bodyClassName,
-        E = void 0 !== h && h ? p.sliderBodyLarge : null == C ? void 0 : null === (t = C.options) || void 0 === t ? void 0 : t.sliderBodyClassName;
-    return (0, l.jsxs)(l.Fragment, {
-        children: [
-            null === (m = null == C ? void 0 : null === (c = C.options) || void 0 === c ? void 0 : c.renderHeader) || void 0 === m || m ? f : null,
-            C.renderStep(x),
-            null == N || y
-                ? null
-                : (0, l.jsxs)(l.Fragment, {
-                      children: [
-                          (0, l.jsx)(d.ModalContent, {
-                              className: s()(p.body, S),
-                              children: (0, l.jsx)(d.Slides, {
-                                  activeSlide: N,
-                                  centered: !1,
-                                  onSlideReady: (e) => j(e),
-                                  children: _.filter((e) => null != e.key).map((e) =>
-                                      (0, l.jsx)(
-                                          d.Slide,
-                                          {
-                                              id: e.key,
-                                              children: (0, l.jsx)('form', {
-                                                  className: s()(p.sliderBody, E),
-                                                  ref: (e) => g(e),
-                                                  onSubmit: (e) => e.preventDefault()
-                                              })
-                                          },
-                                          e.key
-                                      )
-                                  )
-                              })
-                          }),
-                          (0, l.jsx)('div', { ref: (e) => v(e) }),
-                          (0, l.jsx)('div', { ref: (e) => b(e) })
-                      ]
-                  })
-        ]
-    });
+    let S = null !== (i = null == C ? void 0 : null === (r = C.options) || void 0 === r ? void 0 : r.hideSlider) && void 0 !== i && i,
+        E = null == C ? void 0 : null === (n = C.options) || void 0 === n ? void 0 : n.bodyClassName,
+        I = null == C ? void 0 : null === (t = C.options) || void 0 === t ? void 0 : t.sliderBodyClassName;
+    return (
+        void 0 !== h && h ? (I = p.sliderBodyLarge) : x && (I = p.sliderBodyDynamic),
+        (0, l.jsxs)(l.Fragment, {
+            children: [
+                null === (m = null == C ? void 0 : null === (c = C.options) || void 0 === c ? void 0 : c.renderHeader) || void 0 === m || m ? f : null,
+                C.renderStep(N),
+                null == _ || S
+                    ? null
+                    : (0, l.jsxs)(l.Fragment, {
+                          children: [
+                              (0, l.jsx)(d.ModalContent, {
+                                  className: s()(p.body, E),
+                                  children: (0, l.jsx)(d.Slides, {
+                                      activeSlide: _,
+                                      centered: !1,
+                                      onSlideReady: (e) => j(e),
+                                      children: y
+                                          .filter((e) => null != e.key)
+                                          .map((e) =>
+                                              (0, l.jsx)(
+                                                  d.Slide,
+                                                  {
+                                                      id: e.key,
+                                                      children: (0, l.jsx)('form', {
+                                                          className: s()(p.sliderBody, I),
+                                                          ref: (e) => b(e),
+                                                          onSubmit: (e) => e.preventDefault()
+                                                      })
+                                                  },
+                                                  e.key
+                                              )
+                                          )
+                                  })
+                              }),
+                              (0, l.jsx)('div', { ref: (e) => g(e) }),
+                              (0, l.jsx)('div', { ref: (e) => v(e) })
+                          ]
+                      })
+            ]
+        })
+    );
 }
 function f(e) {
     let { children: r } = e,

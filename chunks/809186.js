@@ -18,5 +18,6 @@ e.exports = {
     formTitle: 'formTitle_df35cb',
     spinnerWrapper: 'spinnerWrapper_df35cb',
     trialHeader: 'trialHeader_df35cb',
-    giftMainAnimation: 'giftMainAnimation_df35cb'
+    giftMainAnimation: 'giftMainAnimation_df35cb',
+    selectFreeSku: 'selectFreeSku_df35cb'
 };
