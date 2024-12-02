@@ -18,6 +18,7 @@ var s = n(120356),
     d = n(388032),
     f = n(684033);
 let _ = {
+    none: void 0,
     default: f.aspectRatio,
     crunchyroll: o()(f.aspectRatio, f.crunchyroll)
 };

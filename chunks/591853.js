@@ -734,6 +734,7 @@ function eg(e) {
                                 children: (0, l.jsx)(K.E, {
                                     image: j,
                                     smallImage: Z,
+                                    aspectRatio: x ? 'none' : void 0,
                                     onClick: null != s ? s : P,
                                     size: K.J.SIZE_72
                                 })
