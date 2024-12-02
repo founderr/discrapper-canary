@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return C;
     }
 }),
     n(47120);
@@ -8,97 +8,106 @@ var r,
     a,
     l = n(200651);
 n(192379);
-var i = n(442837),
-    o = n(704215),
-    s = n(481060),
-    c = n(713284),
-    d = n(883904),
-    u = n(211644),
-    h = n(675478),
-    m = n(681619),
-    x = n(388958);
+var i = n(913527),
+    o = n.n(i),
+    s = n(442837),
+    c = n(704215),
+    d = n(481060),
+    u = n(713284),
+    h = n(883904),
+    m = n(211644),
+    x = n(675478),
+    f = n(681619),
+    p = n(388958);
 ((a = r || (r = {})).EVENT = 'events'), (a.CANDIDATES = 'candidates');
-let f = (e) => {
+let g = (e) => {
         switch (e) {
-            case c.D.DC_DISMISSED:
+            case u.D.DC_DISMISSED:
                 return 'DISMISS:';
-            case c.D.DC_SHOWN:
+            case u.D.DC_SHOWN:
                 return 'SHOW:';
-            case c.D.DC_SHOW_REQUEST:
+            case u.D.DC_SHOW_REQUEST:
                 return 'REQUEST TO SHOW:';
             default:
                 return 'UNKNOWN TYPE:';
         }
     },
-    p = [
+    b = [
         {
             key: 'events',
             render(e) {
                 let { event: t, dismissibleContent: n } = e;
-                return ''.concat(t, ' ').concat(o.z[n]);
+                return ''.concat(t, ' ').concat(c.z[n]);
             }
         }
     ],
-    g = [
+    v = [
         {
             key: 'candidates',
             render(e) {
                 let { dismissibleContent: t } = e;
-                return ''.concat(o.z[t]);
+                return ''.concat(c.z[t]);
             }
         }
     ];
-function b() {
-    let e = (0, i.e7)([c.Z], () => c.Z.getDCFEvents()),
-        t = (0, u.ZP)((e) => e.candidates),
-        n = e.map((e) => {
+function C() {
+    let e = (0, s.e7)([u.Z], () => u.Z.getDCFEvents()),
+        t = (0, m.ZP)((e) => e.candidates),
+        n = (0, m.ZP)((e) => e.lastWinnerTime),
+        r = o()(n).fromNow(),
+        a = e.map((e) => {
             let { eventType: t, dismissibleContent: n } = e;
             return {
-                key: f(t) + n.toString(),
-                event: f(t),
+                key: g(t) + n.toString(),
+                event: g(t),
                 dismissibleContent: n
             };
         }),
-        r = Array.from(t.keys()).map((e) => ({
+        i = Array.from(t.keys()).map((e) => ({
             key: e.toString(),
             dismissibleContent: e
         }));
     return (0, l.jsxs)('div', {
-        className: x.panelContainer,
+        className: p.panelContainer,
         children: [
             (0, l.jsxs)('div', {
-                className: x.buttonContainer,
+                className: p.buttonContainer,
                 children: [
-                    (0, l.jsx)(s.Button, {
-                        className: x.button,
-                        onClick: () => (0, d.EG)(),
+                    (0, l.jsx)(d.Button, {
+                        className: p.button,
+                        onClick: () => (0, h.EG)(),
                         children: 'Reset Daily Cap'
                     }),
-                    (0, l.jsx)(s.Button, {
-                        className: x.button,
-                        onClick: h.sr,
+                    (0, l.jsx)(d.Button, {
+                        className: p.button,
+                        onClick: x.sr,
                         children: 'Clear All Dismissed Contents'
                     }),
-                    (0, l.jsx)(s.Button, {
-                        className: x.button,
-                        onClick: h.bE,
+                    (0, l.jsx)(d.Button, {
+                        className: p.button,
+                        onClick: x.bE,
                         children: 'Check All Dismissed Contents'
                     })
                 ]
             }),
             (0, l.jsx)('br', {}),
+            (0, l.jsxs)('div', {
+                className: p.info,
+                children: ['Last winner time: ', r]
+            }),
+            (0, l.jsx)('br', {}),
             (0, l.jsx)('div', {
-                className: x.candidatesTableContainer,
-                children: (0, l.jsx)(m.Z, {
-                    className: x.candidatesTable,
-                    columns: g,
-                    data: r
+                className: p.candidatesTableContainer,
+                children: (0, l.jsx)(f.Z, {
+                    className: p.candidatesTable,
+                    columns: v,
+                    data: i
                 })
             }),
             (0, l.jsx)('br', {}),
-            (0, l.jsx)(m.Z, {
-                columns: p,
-                data: n
+            (0, l.jsx)(f.Z, {
+                columns: b,
+                data: a
             })
         ]
     });
