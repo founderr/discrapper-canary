@@ -29,20 +29,20 @@ var i = n(200651),
     o = n(981729),
     s = n(481060),
     c = n(543651),
-    u = n(519320),
-    d = n(592125),
+    d = n(519320),
+    u = n(592125),
     m = n(52824),
     h = n(630388),
     f = n(591759),
     p = n(850908),
-    g = n(524444),
-    _ = n(981631),
+    _ = n(524444),
+    g = n(981631),
     E = n(388032),
     C = n(418135);
 function I(e) {
     var t;
     let n = e.item.originalItem;
-    return (0, g.Yi)({
+    return (0, _.Yi)({
         ...e,
         alt: n.description,
         src: (0, m.q)({
@@ -52,7 +52,7 @@ function I(e) {
         original: n.url,
         placeholder: n.placeholder,
         placeholderVersion: n.placeholder_version,
-        srcIsAnimated: (0, h.yE)(null !== (t = n.flags) && void 0 !== t ? t : 0, _.J0y.IS_ANIMATED),
+        srcIsAnimated: (0, h.yE)(null !== (t = n.flags) && void 0 !== t ? t : 0, g.J0y.IS_ANIMATED),
         sourceMetadata: {
             message: e.message,
             identifier: {
@@ -67,7 +67,7 @@ function x(e) {
     let n = e.item.originalItem,
         l = r.useCallback(() => {
             var e;
-            return (0, h.yE)(null !== (e = n.flags) && void 0 !== e ? e : 0, _.J0y.IS_CLIP)
+            return (0, h.yE)(null !== (e = n.flags) && void 0 !== e ? e : 0, g.J0y.IS_CLIP)
                 ? (0, i.jsxs)(o.DY, {
                       text: E.intl.string(E.t['/fgfWl']),
                       className: C.clipPill,
@@ -89,7 +89,7 @@ function x(e) {
     return null == c
         ? null
         : (c.searchParams.append('format', 'webp'),
-          (0, g.lV)({
+          (0, _.lV)({
               ...e,
               alt: n.description,
               poster: c.toString(),
@@ -98,7 +98,7 @@ function x(e) {
               src: n.url,
               placeholder: n.placeholder,
               placeholderVersion: n.placeholder_version,
-              srcIsAnimated: (0, h.yE)(null !== (t = n.flags) && void 0 !== t ? t : 0, _.J0y.IS_ANIMATED),
+              srcIsAnimated: (0, h.yE)(null !== (t = n.flags) && void 0 !== t ? t : 0, g.J0y.IS_ANIMATED),
               renderOverlayContent: l,
               sourceMetadata: {
                   message: e.message,
@@ -111,7 +111,7 @@ function x(e) {
 }
 function N(e) {
     let t = e.item.originalItem;
-    return (0, g.hX)({
+    return (0, _.hX)({
         ...e,
         fileSize: t.size,
         fileName: (0, p.Z)(t),
@@ -124,25 +124,25 @@ function v(e) {
         l = r.useCallback(
             (e, n, r) => {
                 var l;
-                (0, u.tb)(t.id, null !== (l = i.duration_secs) && void 0 !== l ? l : null, n, t.author.id);
+                (0, d.tb)(t.id, null !== (l = i.duration_secs) && void 0 !== l ? l : null, n, t.author.id);
             },
             [t, i.duration_secs]
         ),
         a = r.useCallback(
             (e, n) => {
                 var r;
-                (0, u.EW)(t.id, null !== (r = i.duration_secs) && void 0 !== r ? r : null, e, t.author.id, n);
+                (0, d.EW)(t.id, null !== (r = i.duration_secs) && void 0 !== r ? r : null, e, t.author.id, n);
             },
             [t, i.duration_secs]
         ),
         o = r.useCallback(
             (e) => {
                 var n;
-                (0, u.Np)(t.id, null !== (n = null == e ? void 0 : e.message) && void 0 !== n ? n : null);
+                (0, d.Np)(t.id, null !== (n = null == e ? void 0 : e.message) && void 0 !== n ? n : null);
             },
             [t]
         );
-    return (0, g.wj)({
+    return (0, _.wj)({
         ...e,
         fileSize: i.size,
         fileName: (0, p.Z)(i),
@@ -156,7 +156,7 @@ function v(e) {
 }
 function T(e) {
     let t = e.item.originalItem;
-    return (0, g.xi)({
+    return (0, _.xi)({
         ...e,
         url: t.url,
         fileName: (0, p.Z)(t),
@@ -166,7 +166,7 @@ function T(e) {
 }
 function S(e) {
     let t = e.item.originalItem;
-    return (0, g.ur)({
+    return (0, _.ur)({
         ...e,
         url: t.url,
         fileName: (0, p.Z)(t),
@@ -185,19 +185,19 @@ function b(e) {
     var t;
     let { attachment: n, message: r } = e,
         a = r.channel_id,
-        o = (0, l.e7)([d.Z], () => {
+        o = (0, l.e7)([u.Z], () => {
             var e;
-            return null === (e = d.Z.getBasicChannel(a)) || void 0 === e ? void 0 : e.guild_id;
+            return null === (e = u.Z.getBasicChannel(a)) || void 0 === e ? void 0 : e.guild_id;
         }),
-        { clip_created_at: s, clip_participants: u, title: m, application: h } = n;
+        { clip_created_at: s, clip_participants: d, title: m, application: h } = n;
     return (0, i.jsx)(c.Z, {
         createdAt: null != s ? Date.parse(s) : void 0,
         participantIds:
             null !==
                 (t =
-                    null == u
+                    null == d
                         ? void 0
-                        : u.map((e) => {
+                        : d.map((e) => {
                               let { id: t } = e;
                               return t;
                           })) && void 0 !== t

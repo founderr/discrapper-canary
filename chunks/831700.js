@@ -33,8 +33,8 @@ var l = n(120356),
     y = n(378844),
     T = n(574176),
     A = n(359110),
-    P = n(155409),
-    j = n(695346),
+    j = n(155409),
+    P = n(695346),
     R = n(447564),
     M = n(592125),
     L = n(430824),
@@ -154,7 +154,7 @@ class $ extends V.ZP {
         let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: o, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: m, connectDragPreview: C, canReorderChannel: _, canMoveMembers: v, showTutorial: x, hasActiveEvent: b, embeddedApps: E, isSubscriptionGated: S, isFavoriteSuggestion: Z, withGuildIcon: N } = this.props,
             { shouldShowActivities: y, shouldShowGuildVerificationPopout: T } = this.state,
             A = this.getVoiceStatesCount(),
-            j = (0, i.jsxs)('li', {
+            P = (0, i.jsxs)('li', {
                 className: r()(this.getModeClass(), { [X.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
                 children: [
@@ -207,7 +207,7 @@ class $ extends V.ZP {
                                                 }),
                                                 withGuildIcon: N,
                                                 ...h,
-                                                children: [Z && this.renderAcceptSuggestionButton(), Z && this.renderRemoveSuggestionButton(), !Z && this.renderOpenChatButton(), !Z && this.renderInviteButton(), !Z && this.renderEditButton(), !Z && this.renderHDSplashedIcon()]
+                                                children: [Z && this.renderAcceptSuggestionButton(), Z && this.renderRemoveSuggestionButton(), !Z && this.renderOpenChatButton(), !Z && this.renderInviteButton(), !Z && this.renderEditButton(), !Z && this.renderChannelInfo(), !Z && this.renderHDSplashedIcon()]
                                             })
                                         });
                                     }
@@ -218,16 +218,16 @@ class $ extends V.ZP {
                 ]
             });
         return (
-            v && (j = m(j)),
-            _ && (j = h(p(j))),
+            v && (P = m(P)),
+            _ && (P = h(p(P))),
             x &&
-                (j = (0, i.jsx)(P.Z, {
+                (P = (0, i.jsx)(j.Z, {
                     tutorialId: 'voice-conversations',
                     position: 'right',
                     offsetX: -20,
-                    children: j
+                    children: P
                 })),
-            j
+            P
         );
     }
     constructor(...e) {
@@ -308,7 +308,7 @@ class $ extends V.ZP {
                 let { channel: e, voiceStates: t, sorting: n, isUserOver: l, selected: r, guild: a } = this.props,
                     { shouldShowActivities: o, shouldShowGuildVerificationPopout: s } = this.state;
                 if (o && !n && !l && !s) {
-                    let n = j.SE.getSetting().includes(a.id);
+                    let n = P.SE.getSetting().includes(a.id);
                     return (0, i.jsx)(W.Z, {
                         onAction: this.closePopout,
                         guild: a,
@@ -393,7 +393,7 @@ function et(e) {
             },
             { autoTrackExposure: !1 }
         ),
-        P = (0, H.Z)({
+        j = (0, H.Z)({
             channel: n,
             isChannelSelected: o,
             isChannelCollapsed: s,
@@ -403,7 +403,7 @@ function et(e) {
             enableConnectedUserLimit: !0,
             enableActivities: !0
         }),
-        j = S && null == P;
+        P = S && null == j;
     return (0, i.jsx)(ee, {
         channelName: g,
         embeddedApps: f,
@@ -417,8 +417,8 @@ function et(e) {
         ...e,
         connected: S,
         isFavoriteSuggestion: r && !E,
-        forceShowButtons: j,
-        channelInfo: P,
+        forceShowButtons: P,
+        channelInfo: j,
         enableHangStatus: y,
         allowChannelTopic: A,
         resolvedUnreadSetting: d

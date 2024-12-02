@@ -63,8 +63,8 @@ function A(e) {
             return null;
     }
 }
-let P = [C.Q2.MESSAGE, C.Q2.NAVIGATION, C.Q2.VOICE_AND_VIDEO, C.Q2.CHAT, C.Q2.MISCELLANEOUS];
-function j(e) {
+let j = [C.Q2.MESSAGE, C.Q2.NAVIGATION, C.Q2.VOICE_AND_VIDEO, C.Q2.CHAT, C.Q2.MISCELLANEOUS];
+function P(e) {
     let { showBackdrop: t } = e;
     return (0, r.jsx)('div', { className: s()(N.backdrop, { [N.show]: t }) });
 }
@@ -78,7 +78,7 @@ function R() {
     );
     return (0, r.jsx)('div', {
         className: N.keyboardShortcutList,
-        children: P.map((t) => {
+        children: j.map((t) => {
             let n = e[t],
                 i = (0, C.UD)(t),
                 l = (0, C.U6)(t);
@@ -322,7 +322,7 @@ function w(e) {
         }));
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(j, { showBackdrop: o }),
+            (0, r.jsx)(P, { showBackdrop: o }),
             (0, r.jsx)(g.ModalRoot, {
                 className: s()(N.noBackground, { [N.noShadow]: i }),
                 size: g.ModalSize.DYNAMIC,

@@ -31,17 +31,17 @@ let I = l.memo(function (e) {
         r,
         u,
         I,
-        { stream: b, canGoLive: E, guildId: S, isStreaming: Z, channel: N, canStream: y, runningGame: T, embeddedActivity: A, activity: P, application: j, analyticsContext: R } = e,
-        M = x(j, P, A),
+        { stream: b, canGoLive: E, guildId: S, isStreaming: Z, channel: N, canStream: y, runningGame: T, embeddedActivity: A, activity: j, application: P, analyticsContext: R } = e,
+        M = x(P, j, A),
         L = l.useCallback(() => {
-            a()(null != P, 'Received null activity'),
+            a()(null != j, 'Received null activity'),
                 f.default.track(C.rMx.OPEN_MODAL, {
                     type: 'Send Join Invite',
-                    application_id: P.application_id,
+                    application_id: j.application_id,
                     location: R.location
                 }),
-                (0, s.h7)(P, !1);
-        }, [P, R]),
+                (0, s.h7)(j, !1);
+        }, [j, R]),
         w = l.useCallback(
             (e, t) => () => {
                 d.Z.leaveActivity({

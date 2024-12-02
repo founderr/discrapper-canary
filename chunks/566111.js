@@ -1,27 +1,27 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return c;
     }
 }),
     n(47120);
-var i = n(192379),
-    r = n(442837),
+var r = n(192379),
+    i = n(442837),
     l = n(365943),
-    o = n(25251),
-    s = n(223143);
-function a() {
+    s = n(25251),
+    o = n(223143);
+function c() {
     var e;
-    let { isFetching: t, fetchCategoriesError: n, fetchPurchasesError: a, categories: c, purchases: d } = (0, s.Z)(),
-        [u, f, m] = (0, r.Wu)([o.Z], () => [o.Z.isFetching, o.Z.fetchError, o.Z.profileEffects]);
+    let { isFetching: t, fetchCategoriesError: n, fetchPurchasesError: c, categories: a, purchases: d } = (0, o.Z)(),
+        [u, f, m] = (0, i.Wu)([s.Z], () => [s.Z.isFetching, s.Z.fetchError, s.Z.profileEffects]);
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             (0, l.z)(!0);
         }, []),
         {
             isFetching: t || u,
-            combinedError: null !== (e = null != n ? n : a) && void 0 !== e ? e : f,
+            combinedError: null !== (e = null != n ? n : c) && void 0 !== e ? e : f,
             profileEffects: m,
-            categories: c,
+            categories: a,
             purchases: d
         }
     );

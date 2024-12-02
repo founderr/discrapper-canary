@@ -11,14 +11,14 @@ var r = n(481060),
     o = n(585483),
     s = n(74538),
     c = n(138464),
-    u = n(474936),
-    d = n(981631);
+    d = n(474936),
+    u = n(981631);
 function m(e) {
     let { processedCode: t, channelContext: m, customGiftMessage: h, giftInfo: f } = e,
         p = !1,
-        g = null,
-        _ = l.default.getCurrentUser(),
-        E = (0, s.yd)(null == _ ? void 0 : _.premiumType, u.p9.TIER_0);
+        _ = null,
+        g = l.default.getCurrentUser(),
+        E = (0, s.yd)(null == g ? void 0 : g.premiumType, d.p9.TIER_0);
     (0, r.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([n.e('92446'), n.e('65624')]).then(n.bind(n, 409858));
@@ -31,7 +31,7 @@ function m(e) {
                     emojiName: null == f ? void 0 : null === (r = f.emoji) || void 0 === r ? void 0 : r.name,
                     soundId: null == f ? void 0 : null === (l = f.sound) || void 0 === l ? void 0 : l.id,
                     onComplete: (e, t) => {
-                        (g = e), t && ((p = t), e.isSubscription && null == a.ZP.getPremiumSubscription(!1) && (0, c.H)(!0));
+                        (_ = e), t && ((p = t), e.isSubscription && null == a.ZP.getPremiumSubscription(!1) && (0, c.H)(!0));
                     },
                     ...n
                 });
@@ -40,7 +40,7 @@ function m(e) {
         {
             onCloseCallback: () => {
                 var e;
-                p && null != g && !E && g.isSubscription && (null == g ? void 0 : null === (e = g.subscriptionPlan) || void 0 === e ? void 0 : e.premiumSubscriptionType) === u.p9.TIER_2 && o.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
+                p && null != _ && !E && _.isSubscription && (null == _ ? void 0 : null === (e = _.subscriptionPlan) || void 0 === e ? void 0 : e.premiumSubscriptionType) === d.p9.TIER_2 && o.S.dispatch(u.CkL.PREMIUM_SUBSCRIPTION_CREATED);
             }
         }
     );

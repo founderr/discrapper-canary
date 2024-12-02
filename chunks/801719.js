@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return C;
     }
 });
-var r = n(192379),
-    i = n(442837),
-    a = n(607070),
-    s = n(821982),
-    o = n(155491);
-function l(e) {
-    let t = (0, i.e7)([a.Z], () => a.Z.useReducedMotion);
-    return r.useMemo(() => (0, s.Z)(o.Vy, e, !t), [e, t]);
+var i = n(192379),
+    l = n(442837),
+    s = n(607070),
+    r = n(821982),
+    a = n(155491);
+function C(e) {
+    let t = (0, l.e7)([s.Z], () => s.Z.useReducedMotion);
+    return i.useMemo(() => (0, r.Z)(a.Vy, e, !t), [e, t]);
 }

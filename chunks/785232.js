@@ -1,29 +1,29 @@
 var i = n(200651);
 n(192379);
-var r = n(442837),
-    l = n(481060),
-    a = n(289823),
-    o = n(594174);
-t.Z = function (e) {
-    let { recipients: t, size: n, status: s, isTyping: c, className: u, ...d } = e,
-        m = l.AvatarSizeSpecs[n],
-        h = (0, r.Wu)(
-            [o.default],
+var s = n(442837),
+    a = n(481060),
+    r = n(289823),
+    l = n(594174);
+e.Z = function (t) {
+    let { recipients: e, size: n, status: o, isTyping: d, className: c, ...u } = t,
+        _ = a.AvatarSizeSpecs[n],
+        A = (0, s.Wu)(
+            [l.default],
             () =>
-                t.slice(0, 2).map((e) => {
-                    let t = o.default.getUser(e);
-                    if (null != t) return t.getAvatarURL(void 0, m.size, !1);
+                e.slice(0, 2).map((t) => {
+                    let e = l.default.getUser(t);
+                    if (null != e) return e.getAvatarURL(void 0, _.size, !1);
                 }),
-            [t, m.size]
+            [e, _.size]
         );
-    return (0, i.jsx)(a.Z, {
-        'aria-label': d['aria-label'],
-        'aria-hidden': d['aria-hidden'],
-        backSrc: h[0],
-        frontSrc: h[1],
+    return (0, i.jsx)(r.Z, {
+        'aria-label': u['aria-label'],
+        'aria-hidden': u['aria-hidden'],
+        backSrc: A[0],
+        frontSrc: A[1],
         size: n,
-        status: s,
-        isTyping: null != c && c,
-        className: u
+        status: o,
+        isTyping: null != d && d,
+        className: c
     });
 };

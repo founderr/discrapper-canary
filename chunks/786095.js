@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return M;
+        return p;
     }
 }),
     t(47120),
@@ -21,17 +21,17 @@ var i = t(200651),
     E = t(273504),
     I = t(388032),
     v = t(986371);
-let p = E.fX.KEYWORD;
-function M(e, n) {
-    let { perGuildMaxCount: t } = u.I6[p],
-        { isLoading: M, saveRule: Z, errorMessage: x } = (0, c.w)(),
+let M = E.fX.KEYWORD;
+function p(e, n) {
+    let { perGuildMaxCount: t } = u.I6[M],
+        { isLoading: p, saveRule: Z, errorMessage: x } = (0, c.w)(),
         { createNewEditingRule: S } = (0, c.V)(),
         [j, _] = l.useState(!1),
         [b, A] = (0, s.I2)(n),
         { rulesByTriggerType: P, updateRule: N } = (0, s.pH)(n),
         T = l.useMemo(() => {
             var e;
-            return null !== (e = P[p]) && void 0 !== e ? e : [];
+            return null !== (e = P[M]) && void 0 !== e ? e : [];
         }, [P]),
         y = 0 === T.length,
         C = t > T.length && !y;
@@ -48,7 +48,7 @@ function M(e, n) {
                 (0, a.Zy)(),
                     m.Z.open(n, h.pNK.GUILD_AUTOMOD),
                     setTimeout(() => {
-                        S(n, p, {
+                        S(n, M, {
                             triggerMetadata: {
                                 keywordFilter: [e],
                                 regexPatterns: [],
@@ -84,10 +84,10 @@ function M(e, n) {
                             id: 'add-first-rule',
                             label: I.intl.string(I.t.f72Zqa),
                             action: R,
-                            disabled: M
+                            disabled: p
                         }),
                     T.map((e) => {
-                        let n = (0, u.V9)(p).reduce((n, t) => {
+                        let n = (0, u.V9)(M).reduce((n, t) => {
                             let i = e.actions.find((e) => {
                                 let { type: n } = e;
                                 return t === n;
@@ -109,7 +109,7 @@ function M(e, n) {
                                 }),
                                 group: 'automod-rule-selection',
                                 checked: !1,
-                                disabled: M,
+                                disabled: p,
                                 action: () => O(e)
                             },
                             e.id
@@ -123,7 +123,7 @@ function M(e, n) {
                                     id: 'add-another-rule',
                                     label: I.intl.string(I.t['0K5jDA']),
                                     action: R,
-                                    disabled: M
+                                    disabled: p
                                 })
                             ]
                         })

@@ -10,18 +10,18 @@ var i = n(200651),
     o = n(665149),
     s = n(618158),
     c = n(819640),
-    u = n(131951),
-    d = n(924557),
+    d = n(131951),
+    u = n(924557),
     m = n(435064),
     h = n(779618),
     f = n(175470),
     p = n(203259),
-    g = n(356659),
-    _ = n(388032);
+    _ = n(356659),
+    g = n(388032);
 function E(e) {
     let { canShowReminder: t = !1, className: E } = e,
-        C = (0, h.Z)(u.Z),
-        { showClipsHeaderEntrypoint: I } = d.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
+        C = (0, h.Z)(d.Z),
+        { showClipsHeaderEntrypoint: I } = u.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
         {
             hasClips: x,
             hasNewClips: N,
@@ -46,7 +46,7 @@ function E(e) {
                 let { default: e } = await Promise.all([n.e('2668'), n.e('74750')]).then(n.bind(n, 542055));
                 return (t) => (0, i.jsx)(e, { ...t });
             },
-            { modalKey: g.Qr }
+            { modalKey: _.Qr }
         );
     }
     return (r.useEffect(() => (S ? R() : P(), () => P()), [S, R, P]), I && C && x)
@@ -69,7 +69,7 @@ function E(e) {
                           className: E,
                           icon: a.ClipsIcon,
                           showBadge: N,
-                          tooltip: _.intl.string(_.t.MXaLEB),
+                          tooltip: g.intl.string(g.t.MXaLEB),
                           onClick: L
                       })
                   })

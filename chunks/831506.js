@@ -6,29 +6,29 @@ var i,
     o = n(392711),
     s = n.n(o),
     c = n(442837),
-    u = n(570140),
-    d = n(314897),
+    d = n(570140),
+    u = n(314897),
     m = n(699516),
     h = n(885110),
     f = n(981631);
 let p = {},
-    g = {};
-function _(e, t) {
+    _ = {};
+function g(e, t) {
     var n;
     return (null !== (n = p[e]) && void 0 !== n ? n : {})[t];
 }
 function E(e, t) {
-    let n = _(e, t);
+    let n = g(e, t);
     if (null == n) return;
     let i = p[e];
     delete i[t], s().isEmpty(i) && delete p[e];
-    let r = g[n];
-    null != r && (r.delete(e), 0 === r.size && delete g[n]);
+    let r = _[n];
+    null != r && (r.delete(e), 0 === r.size && delete _[n]);
 }
 function C(e, t, n, i) {
     let r = n.find((e) => null != e.party && e.party.id),
         l = null != r && null != r.party ? r.party.id : null,
-        a = _(t, e);
+        a = g(t, e);
     if (null == l || i === f.Skl.OFFLINE) return null != a && (E(t, e), void 0);
     if (null != a) {
         if (a === l) return !1;
@@ -38,8 +38,8 @@ function C(e, t, n, i) {
         var i;
         let r = p[e];
         if ((null == r && (r = p[e] = {}), (r[t] = n), m.Z.isBlocked(e) || m.Z.isIgnored(e))) return;
-        let l = null !== (i = g[n]) && void 0 !== i ? i : new Set();
-        (g[n] = l), l.add(e);
+        let l = null !== (i = _[n]) && void 0 !== i ? i : new Set();
+        (_[n] = l), l.add(e);
     })(t, e, l);
 }
 function I(e) {
@@ -58,7 +58,7 @@ function x(e, t) {
     );
 }
 function N() {
-    let e = d.default.getId(),
+    let e = u.default.getId(),
         t = h.Z.getActivities();
     return C(f.ME, e, t);
 }
@@ -68,7 +68,7 @@ function v(e) {
     let n = p[t.id];
     if (null == n) return !1;
     for (let e of s().values(n)) {
-        let n = g[e];
+        let n = _[e];
         null != n && n.delete(t.id);
     }
 }
@@ -77,13 +77,13 @@ class T extends (i = c.ZP.Store) {
         this.syncWith([h.Z], N), this.waitFor(h.Z, m.Z);
     }
     getParty(e) {
-        return null != e && null != g[e] ? g[e] : null;
+        return null != e && null != _[e] ? _[e] : null;
     }
     getUserParties() {
         return p;
     }
     getParties() {
-        return g;
+        return _;
     }
 }
 (a = 'GamePartyStore'),
@@ -95,7 +95,7 @@ class T extends (i = c.ZP.Store) {
               writable: !0
           })
         : (r[l] = a),
-    (t.Z = new T(u.Z, {
+    (t.Z = new T(d.Z, {
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { guilds: t, presences: n } = e,
                 i = !1;
@@ -105,7 +105,7 @@ class T extends (i = c.ZP.Store) {
         },
         OVERLAY_INITIALIZE: function (e) {
             let { parties: t, userParties: n } = e;
-            (g = {}), (p = { ...n }), Object.keys(t).forEach((e) => (g[e] = new Set(t[e])));
+            (_ = {}), (p = { ...n }), Object.keys(t).forEach((e) => (_[e] = new Set(t[e])));
         },
         GUILD_CREATE: I,
         PRESENCES_REPLACE: function (e) {
@@ -147,7 +147,7 @@ class T extends (i = c.ZP.Store) {
                 n = p[t.id];
             if (null == n) return !1;
             for (let e of s().values(n)) {
-                let n = g[e];
+                let n = _[e];
                 null != n && n.add(t.id);
             }
         }

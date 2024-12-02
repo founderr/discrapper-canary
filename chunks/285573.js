@@ -37,11 +37,11 @@ let _ = (0, c.B)(function (e) {
             [Z]
         );
     if (null == Z) return null;
-    let P = (0, p.jo)(c, I),
-        j = (0, p.CN)(Z, v, x),
+    let j = (0, p.jo)(c, I),
+        P = (0, p.CN)(Z, v, x),
         R = (0, i.jsx)('div', {
-            className: a()(P, {
-                [C.disabled]: j,
+            className: a()(j, {
+                [C.disabled]: P,
                 [C.selected]: y
             }),
             'data-dnd-name': Z.name,

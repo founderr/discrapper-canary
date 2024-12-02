@@ -60,14 +60,14 @@ var i = n(5148),
     o = n.n(a),
     s = n(283852),
     c = n.n(s),
-    u = n(115129),
-    d = n.n(u),
+    d = n(115129),
+    u = n.n(d),
     m = n(357062),
     h = n.n(m),
     f = n(34399),
     p = n.n(f),
-    g = n(157202),
-    _ = n.n(g),
+    _ = n(157202),
+    g = n.n(_),
     E = n(473552),
     C = n.n(E),
     I = n(634523),
@@ -91,10 +91,10 @@ function S(e, t, n, r) {
     let l, a;
     let s = t.getCurrentContent(),
         c = s.getFirstBlock(),
-        u = c.getText();
+        d = c.getText();
     'number' == typeof n
-        ? (n > u.length && (n = u.length),
-          null != r && r > u.length && (r = u.length),
+        ? (n > d.length && (n = d.length),
+          null != r && r > d.length && (r = d.length),
           (l = new i.SelectionState({
               anchorKey: c.getKey(),
               anchorOffset: n,
@@ -102,9 +102,9 @@ function S(e, t, n, r) {
               focusOffset: null != r && 0 !== r ? r : n
           })))
         : (l = t.getSelection());
-    let d = t.getCurrentInlineStyle(),
+    let u = t.getCurrentInlineStyle(),
         m = o()(s, l);
-    return l.isCollapsed() ? ((s = i.Modifier.insertText(s, l, e, d, m)), (a = 'insert-characters')) : ((s = i.Modifier.replaceText(s, l, e, d, m)), (a = 'replace-characters')), i.EditorState.push(t, s, a);
+    return l.isCollapsed() ? ((s = i.Modifier.insertText(s, l, e, u, m)), (a = 'insert-characters')) : ((s = i.Modifier.replaceText(s, l, e, u, m)), (a = 'replace-characters')), i.EditorState.push(t, s, a);
 }
 function A(e, t) {
     switch (e) {
@@ -115,7 +115,7 @@ function A(e, t) {
         case 'backspace':
             return C()(t);
         case 'backspace-word':
-            return d()(t);
+            return u()(t);
         case 'backspace-to-start-of-line':
             return c()(t);
         default:
@@ -127,7 +127,7 @@ function b(e, t) {
         case 'transpose-characters':
             return v()(t);
         case 'move-selection-to-start-of-block':
-            return _()(t);
+            return g()(t);
         case 'move-selection-to-end-of-block':
             return p()(t);
         default:

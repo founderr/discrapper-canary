@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     categoryButton: 'categoryButton_ce8be8',
     modalRoot: 'modalRoot_ce8be8',
     modalContent: 'modalContent_ce8be8',

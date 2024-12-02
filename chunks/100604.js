@@ -1,6 +1,6 @@
 n.d(t, {
     r: function () {
-        return _;
+        return g;
     }
 });
 var i = n(933557),
@@ -10,8 +10,8 @@ var i = n(933557),
     o = n(496675),
     s = n(699516),
     c = n(594174),
-    u = n(768581),
-    d = n(55935),
+    d = n(768581),
+    u = n(55935),
     m = n(631184),
     h = n(346610);
 n(978003);
@@ -29,10 +29,10 @@ function p(e, t, n) {
         e
     );
 }
-function g(e, t) {
+function _(e, t) {
     return {
         originLabel: e.name,
-        originIconUrl: u.ZP.getGuildIconURL({
+        originIconUrl: d.ZP.getGuildIconURL({
             id: e.id,
             size: 16,
             icon: e.icon,
@@ -45,11 +45,11 @@ function g(e, t) {
         })
     };
 }
-class _ {
+class g {
     getForwardInfo() {
-        var e, t, n, u;
+        var e, t, n, d;
         let p = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.Z,
-            _ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
+            g = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
             E = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Z,
             C = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.Z,
             I = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : a.Z,
@@ -62,7 +62,7 @@ class _ {
                 snapshotIndex: N,
                 useOldIcon: S
             };
-        let b = (0, d.Xf)(T.message.timestamp),
+        let b = (0, u.Xf)(T.message.timestamp),
             j = p.getChannel(this.parentMessage.channel_id);
         if (null != j && j.guild_id === (null === (e = v.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
             let e = p.getChannel(null === (n = v.messageReference) || void 0 === n ? void 0 : n.channel_id);
@@ -75,7 +75,7 @@ class _ {
                       }
                     : {
                           snapshotIndex: N,
-                          footerInfo: g(e, b),
+                          footerInfo: _(e, b),
                           useOldIcon: S
                       };
             }
@@ -84,7 +84,7 @@ class _ {
                     snapshotIndex: N,
                     useOldIcon: S
                 };
-            let t = (0, i.F6)(e, _, E, !0);
+            let t = (0, i.F6)(e, g, E, !0);
             return {
                 snapshotIndex: N,
                 footerInfo: {
@@ -104,7 +104,7 @@ class _ {
                 snapshotIndex: N,
                 useOldIcon: S
             };
-        let R = null !== (u = I.getGuild(Z)) && void 0 !== u ? u : x.getGuild(Z);
+        let R = null !== (d = I.getGuild(Z)) && void 0 !== d ? d : x.getGuild(Z);
         return null == R
             ? {
                   snapshotIndex: N,
@@ -112,7 +112,7 @@ class _ {
               }
             : {
                   snapshotIndex: N,
-                  footerInfo: g(R, b),
+                  footerInfo: _(R, b),
                   useOldIcon: S
               };
     }

@@ -10,14 +10,14 @@ var i = n(200651),
     o = n(902704),
     s = n(692547),
     c = n(481060),
-    u = n(356264),
-    d = n(628238),
+    d = n(356264),
+    u = n(628238),
     m = n(930282),
     h = n(25015),
     f = n(438075),
     p = n(695346),
-    g = n(592125),
-    _ = n(906467),
+    _ = n(592125),
+    g = n(906467),
     E = n(430824),
     C = n(496675),
     I = n(699516),
@@ -47,9 +47,9 @@ function j() {
     });
 }
 function Z(e) {
-    let { message: t, snapshot: n, index: d } = e,
-        m = r.useMemo(() => new N.r(t, n, d), [t, n, d]),
-        h = (0, a.e7)([g.Z, x.default, I.Z, C.Z, E.Z, u.Z], () => m.getForwardInfo(g.Z, x.default, I.Z, C.Z, E.Z, u.Z).footerInfo, [m], o.Z),
+    let { message: t, snapshot: n, index: u } = e,
+        m = r.useMemo(() => new N.r(t, n, u), [t, n, u]),
+        h = (0, a.e7)([_.Z, x.default, I.Z, C.Z, E.Z, d.Z], () => m.getForwardInfo(_.Z, x.default, I.Z, C.Z, E.Z, d.Z).footerInfo, [m], o.Z),
         f = r.useCallback(() => {
             (0, v.Z)(t);
         }, [t]);
@@ -84,11 +84,11 @@ function R(e) {
     let { message: n, snapshot: l, index: o } = e,
         s = r.useMemo(() => (0, T.Z)(n, l), [n, l]),
         c = p.RS.useSetting(),
-        u = p.NA.useSetting(),
-        E = (0, a.e7)([_.Z], () => _.Z.isDeveloper),
-        C = (0, d.A)((null !== (t = s.editedTimestamp) && void 0 !== t ? t : s.timestamp).valueOf()),
+        d = p.NA.useSetting(),
+        E = (0, a.e7)([g.Z], () => g.Z.isDeveloper),
+        C = (0, u.A)((null !== (t = s.editedTimestamp) && void 0 !== t ? t : s.timestamp).valueOf()),
         { content: I, hasSpoilerEmbeds: x } = (0, h.Z)(s, {
-            hideSimpleEmbedContent: c && u,
+            hideSimpleEmbedContent: c && d,
             isInteracting: !1,
             formatInline: !1,
             allowList: C,
@@ -97,7 +97,7 @@ function R(e) {
             allowDevLinks: E,
             previewLinkTarget: !0
         }),
-        N = (0, a.e7)([g.Z], () => g.Z.getChannel(n.channel_id)),
+        N = (0, a.e7)([_.Z], () => _.Z.getChannel(n.channel_id)),
         v = p.jU.useSetting();
     return null == N
         ? null

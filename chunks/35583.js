@@ -6,8 +6,8 @@ var i = n(200651),
     o = n(668781),
     s = n(431583),
     c = n(91372),
-    u = n(19780),
-    d = n(35818),
+    d = n(19780),
+    u = n(35818),
     m = n(665149),
     h = n(388032),
     f = n(681714);
@@ -24,7 +24,7 @@ function p(e, t, n) {
         e
     );
 }
-class g extends r.PureComponent {
+class _ extends r.PureComponent {
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.memoizedMode
             ? {
@@ -72,7 +72,7 @@ class g extends r.PureComponent {
                 clicked: !1
             }),
             p(this, 'handleInstallDownload', () => {
-                u.Z.isConnected()
+                d.Z.isConnected()
                     ? o.Z.show({
                           title: h.intl.string(h.t.tiu1l5),
                           body: h.intl.string(h.t['zK+lqa']),
@@ -83,8 +83,8 @@ class g extends r.PureComponent {
                     : this.doUpdate();
             }),
             p(this, 'doUpdate', () => {
-                !this.state.clicked && (this.setState({ clicked: !0 }), (0, d.Q)());
+                !this.state.clicked && (this.setState({ clicked: !0 }), (0, u.Q)());
             });
     }
 }
-t.Z = l.ZP.connectStores([c.Z], () => ({ mode: c.Z.getState() }))(g);
+t.Z = l.ZP.connectStores([c.Z], () => ({ mode: c.Z.getState() }))(_);

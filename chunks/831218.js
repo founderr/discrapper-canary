@@ -26,8 +26,8 @@ var i,
     y = n(333984),
     T = n(210887),
     A = n(592125),
-    P = n(158776),
-    j = n(55589),
+    j = n(158776),
+    P = n(55589),
     R = n(515753),
     M = n(981631),
     L = n(388032),
@@ -296,7 +296,7 @@ class k extends (l = o.Component) {
                     c = n.some((e) => (0, v.Z)(e)),
                     u = {
                         num_users_visible: a.length,
-                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && P.Z.isMobileOnline(e)).length
+                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && j.Z.isMobileOnline(e)).length
                     };
                 (this.hasReportedAnalytics = !0),
                     C.ZP.trackWithMetadata(M.rMx.DM_LIST_VIEWED, {
@@ -392,9 +392,9 @@ t.Z = (e) => {
         s = A.Z.getMutablePrivateChannels(),
         c = (0, N.k1)(s),
         p = (0, h.Wu)(
-            [j.Z, Z.Z, y.Z],
+            [P.Z, Z.Z, y.Z],
             () => {
-                let e = j.Z.getPrivateChannelIds();
+                let e = P.Z.getPrivateChannelIds();
                 return (0, N.tU)(e, [Z.Z, y.Z]);
             },
             []

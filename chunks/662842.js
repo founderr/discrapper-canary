@@ -19,15 +19,15 @@ var i,
     g = n(15274),
     f = n(924301),
     _ = n(504160),
-    I = n(151864),
-    E = n(725436),
+    E = n(151864),
+    I = n(725436),
     C = n(497656),
     v = n(554747),
     N = n(230900),
     S = n(854698),
     T = n(703656),
-    x = n(922482),
-    b = n(565799),
+    b = n(922482),
+    x = n(565799),
     A = n(501655),
     Z = n(427679),
     L = n(448206),
@@ -47,16 +47,16 @@ function U(e) {
         r = (0, v.k5)(t.id),
         s = (0, c.e7)([Z.Z], () => Z.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
         { isStageNoticeHidden: U, isEventNoticeHidden: G } = (0, c.cj)(
-            [I.Z],
+            [E.Z],
             () => ({
-                isStageNoticeHidden: I.Z.isLiveChannelNoticeHidden({ stageId: null == s ? void 0 : s.id }),
-                isEventNoticeHidden: I.Z.isLiveChannelNoticeHidden({ eventId: null == r ? void 0 : r.id })
+                isStageNoticeHidden: E.Z.isLiveChannelNoticeHidden({ stageId: null == s ? void 0 : s.id }),
+                isEventNoticeHidden: E.Z.isLiveChannelNoticeHidden({ eventId: null == r ? void 0 : r.id })
             }),
             [s, r]
         ),
         B = null == i ? void 0 : i.id,
-        H = (0, c.Wu)([b.Z], () => [...new Set(b.Z.getMutableParticipants(B, A.pV.SPEAKER).map((e) => e.user))], [B]),
-        V = (0, c.e7)([b.Z], () => (null != B ? b.Z.getParticipantCount(B, A.pV.AUDIENCE) : 0), [B]),
+        H = (0, c.Wu)([x.Z], () => [...new Set(x.Z.getMutableParticipants(B, A.pV.SPEAKER).map((e) => e.user))], [B]),
+        V = (0, c.e7)([x.Z], () => (null != B ? x.Z.getParticipantCount(B, A.pV.AUDIENCE) : 0), [B]),
         F = (0, c.e7)([O.Z], () => O.Z.can(D.Plq.CONNECT, i)),
         z = (0, L.Z)(null == i ? void 0 : i.id),
         W = null == r ? void 0 : r.creator_id,
@@ -79,7 +79,7 @@ function U(e) {
             (function (e) {
                 let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: r, myRole: a, eventCreator: s, speakers: o, listenerCount: c, isEventNoticeHidden: d, isStageNoticeHidden: h, isStudyRoomNotice: m } = e,
                     g = null != n && null != i && !h,
-                    I = null != t ? (0, S.DK)(t) : null;
+                    E = null != t ? (0, S.DK)(t) : null;
                 if (m && null != i) {
                     let e = (0, p.KS)(i);
                     return {
@@ -191,11 +191,11 @@ function U(e) {
                     if (t.entity_type === M.WX.EXTERNAL) {
                         let e = (0, N.cS)(t);
                         if (null == e) return { noticeType: null };
-                        let n = f.ZP.getUserCount(t.id, I);
+                        let n = f.ZP.getUserCount(t.id, E);
                         return {
                             noticeType: 1,
                             title: t.name,
-                            location: (0, E.m)(e, !0),
+                            location: (0, I.m)(e, !0),
                             locationIcon: (0, l.jsx)(u.LocationIcon, {
                                 size: 'custom',
                                 color: 'currentColor',
@@ -231,7 +231,7 @@ function U(e) {
                         };
                     } else if (t.entity_type === M.WX.VOICE && null != i) {
                         let e = (0, p.KS)(i),
-                            n = f.ZP.getUserCount(t.id, I);
+                            n = f.ZP.getUserCount(t.id, E);
                         return {
                             noticeType: 2,
                             title: t.name,
@@ -375,7 +375,7 @@ function U(e) {
                             size: u.Button.Sizes.SMALL,
                             color: u.Button.Colors.GREEN,
                             onClick: () => {
-                                if (J) null != i && null != i.getGuildId() && ((0, x.Cq)(i), (0, T.XU)(i.getGuildId(), i.id));
+                                if (J) null != i && null != i.getGuildId() && ((0, b.Cq)(i), (0, T.XU)(i.getGuildId(), i.id));
                                 else {
                                     if (null == r) return;
                                     (0, g.bO)({ eventId: r.id });

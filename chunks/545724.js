@@ -10,16 +10,16 @@ var i = n(200651),
     u = n(687683),
     h = n(262755);
 t.Z = function (e) {
-    let { index: t, children: l, user: m, channel: p, onClick: g, isFocused: f, isActive: _, onOtherHover: I, className: E } = e,
+    let { index: t, children: l, user: m, channel: p, onClick: g, isFocused: f, isActive: _, onOtherHover: E, className: I } = e,
         [C, v] = r.useState(!1),
         [N, S] = r.useState(!1),
         T = () => {
-            v(!0), f && !_ && !N && (null == I || I());
+            v(!0), f && !_ && !N && (null == E || E());
         },
-        x = () => {
+        b = () => {
             v(!1);
         },
-        b = (e, t) => {
+        x = (e, t) => {
             if (null != t)
                 S(!0),
                     (0, d.jW)(
@@ -48,13 +48,13 @@ t.Z = function (e) {
                     right: -8
                 },
                 children: (0, i.jsx)(s.Z.div, {
-                    className: a()(h.messageRequestItem, E, {
+                    className: a()(h.messageRequestItem, I, {
                         [h.active]: _ || N,
                         [h.firstItem]: 0 === t
                     }),
-                    onContextMenu: (e) => b(e, m),
+                    onContextMenu: (e) => x(e, m),
                     onMouseEnter: T,
-                    onMouseLeave: x,
+                    onMouseLeave: b,
                     onClick: null != g ? g : void 0,
                     style: {
                         LIST_ROW_HEIGHT: u.WN,

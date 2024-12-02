@@ -34,8 +34,8 @@ var i = n(200651),
     y = n(853856),
     T = n(93687),
     A = n(785232),
-    P = n(878857),
-    j = n(518950),
+    j = n(878857),
+    P = n(518950),
     R = n(199902),
     M = n(158776),
     L = n(306680),
@@ -145,7 +145,7 @@ function J(e) {
             avatarSrc: ei,
             avatarDecorationSrc: el,
             eventHandlers: er
-        } = (0, j.Z)({
+        } = (0, P.Z)({
             user: T,
             size: p.AvatarSizes.SIZE_32,
             animateOnHover: !(d || $)
@@ -226,7 +226,7 @@ function J(e) {
             let e = {
                 className: F.activity,
                 textClassName: F.activityText,
-                emojiClassName: F.activityEmoji
+                emojiClassName: a()(F.activityEmoji, { [F.mutedEmoji]: ea })
             };
             return r.isSystemDM()
                 ? (0, i.jsx)('div', {
@@ -292,7 +292,7 @@ function J(e) {
         },
         eb = r.isMultiUserDM(),
         eE = r.isSystemDM(),
-        eS = (0, P.Q)(),
+        eS = (0, j.Q)(),
         eZ = !eb && !eE && r.type === V.d4z.DM,
         eN = eZ && (null == T ? void 0 : T.clan) != null,
         ey = eZ && eo,
@@ -311,7 +311,7 @@ function J(e) {
                   ]
               })
             : eu,
-        eP = null !== (t = ea || ey || eT) && void 0 !== t && t;
+        ej = null !== (t = ea || ey || eT) && void 0 !== t && t;
     return (0, i.jsx)(u.mh, {
         id: r.id,
         children: (e) => {
@@ -338,7 +338,7 @@ function J(e) {
                     }),
                     as: 'div',
                     onClick: eC,
-                    muted: eP,
+                    muted: ej,
                     selected: d,
                     children: [
                         (0, i.jsx)(c.rU, {
@@ -354,7 +354,7 @@ function J(e) {
                                 avatar: eI(),
                                 selected: d,
                                 highlighted: ec,
-                                muted: eP,
+                                muted: ej,
                                 subText: ex(),
                                 name: (0, i.jsx)(N.Z, {
                                     tooltipClassName: F.overflowTooltip,

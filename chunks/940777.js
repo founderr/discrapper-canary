@@ -33,8 +33,8 @@ var i = n(200651),
     y = n(603274),
     T = n(981631),
     A = n(388032),
-    P = n(120555);
-let j = {
+    j = n(120555);
+let P = {
     analyticsSource: {
         page: T.ZY5.GUILD_CHANNEL,
         section: T.jXE.CHANNEL_LIST,
@@ -97,7 +97,7 @@ function R() {
                 selected: k,
                 hovered: R,
                 unread: G && !L,
-                className: P.pill
+                className: j.pill
             }),
             (0, i.jsx)(y.Z, {
                 onShow: H,
@@ -114,7 +114,7 @@ function R() {
                             }),
                             to: {
                                 pathname: T.Z5c.CHANNEL(T.I_8, D),
-                                state: j
+                                state: P
                             },
                             selected: k || R,
                             onMouseEnter: () => M(!0),
@@ -129,11 +129,11 @@ function R() {
                                 });
                             },
                             children: (0, i.jsx)('div', {
-                                className: a()(P.ring, { [P.ringActive]: t }),
+                                className: a()(j.ring, { [j.ringActive]: t }),
                                 children: (0, i.jsx)(c.StarIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
-                                    className: P.favoriteIcon,
+                                    className: j.favoriteIcon,
                                     width: 20,
                                     height: 20
                                 })

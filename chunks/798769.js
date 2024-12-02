@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    r = n(442837),
     o = n(481060),
     s = n(607070),
     u = n(409813),
@@ -19,7 +19,7 @@ var l = n(120356),
     m = n(622694);
 function L(e) {
     let { currentStep: t, className: n, purchaseState: l, premiumType: L, useWinterTheme: S = !1, onClose: p, hideCloseButton: T, showTrialBadge: E, showDiscountBadge: h, isGift: N, giftRecipient: g } = e,
-        A = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+        A = (0, r.e7)([s.Z], () => s.Z.useReducedMotion),
         v = S ? C.nL.WINTER : C.nL.DEFAULT;
     return N && (0, c.pO)(g) && t !== u.h8.CONFIRM
         ? (0, i.jsxs)(o.ModalHeader, {
@@ -51,7 +51,7 @@ function L(e) {
               ]
           })
         : (0, i.jsx)(o.ModalHeader, {
-              className: r()(m.modalHeader, n),
+              className: a()(m.modalHeader, n),
               separator: !1,
               children: (0, i.jsx)(d.Z, {
                   hideCloseOnFullScreen: !0,

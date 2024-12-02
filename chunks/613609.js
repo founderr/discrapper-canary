@@ -15,9 +15,9 @@ var i = n(200651),
 t.Z = (e) => {
     let { guildId: t, inviteCode: n } = e,
         [f, _] = r.useState(p.hO.INITIAL),
-        [I, E] = r.useState(null != n);
+        [E, I] = r.useState(null != n);
     r.useEffect(() => {
-        null != n && a.Z.resolveInvite(n, 'Hub').finally(() => E(!1));
+        null != n && a.Z.resolveInvite(n, 'Hub').finally(() => I(!1));
     }, [n]);
     let C = (0, l.e7)([d.Z], () => (null != n ? d.Z.getInvite(n) : null)),
         v = (0, l.e7)([c.Z], () => c.Z.getGuild(t));
@@ -40,7 +40,7 @@ t.Z = (e) => {
                 (0, i.jsx)('div', { className: g.dragRegion }),
                 (0, i.jsx)('div', {
                     className: g.contentWrapper,
-                    children: !I && (0, i.jsx)(h.HubEmailConnectionModalView, { invite: C })
+                    children: !E && (0, i.jsx)(h.HubEmailConnectionModalView, { invite: C })
                 })
             ]
         })

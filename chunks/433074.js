@@ -11,14 +11,14 @@ var i = n(200651),
     o = n(399606),
     s = n(481060),
     c = n(434650),
-    u = n(955415),
-    d = n(706454),
+    d = n(955415),
+    u = n(706454),
     m = n(973616),
     h = n(914010),
     f = n(594174),
     p = n(626135),
-    g = n(135431),
-    _ = n(674588),
+    _ = n(135431),
+    g = n(674588),
     E = n(264043),
     C = n(132871),
     I = n(147890),
@@ -29,7 +29,7 @@ function T(e) {
     var t, n, T;
     let { code: S, message: A } = e,
         [b, j, Z] = (0, o.Wu)([E.Z], () => [E.Z.getApplication(S), E.Z.isInvalidApplication(S), E.Z.getApplicationFetchState(S)], [S]),
-        R = (0, o.e7)([d.default], () => d.default.locale),
+        R = (0, o.e7)([u.default], () => u.default.locale),
         P = (0, o.e7)([h.Z], () => {
             var e;
             return null !== (e = h.Z.getGuildId()) && void 0 !== e ? e : void 0;
@@ -41,7 +41,7 @@ function T(e) {
         }, []),
         k = (0, c.O)(M);
     r.useEffect(() => {
-        (0, _.gZ)(S);
+        (0, g.gZ)(S);
     }, [S]),
         r.useEffect(() => {
             y &&
@@ -80,16 +80,16 @@ function T(e) {
             });
     };
     if (j)
-        return (0, i.jsxs)(u.Z, {
+        return (0, i.jsxs)(d.Z, {
             containerRef: k,
             children: [
-                (0, i.jsx)(u.Z.Header, { text: N.intl.string(N.t.j4KtLS) }),
-                (0, i.jsx)(u.Z.Body, {
+                (0, i.jsx)(d.Z.Header, { text: N.intl.string(N.t.j4KtLS) }),
+                (0, i.jsx)(d.Z.Body, {
                     children: (0, i.jsxs)('div', {
                         className: v.invalidBody,
                         children: [
-                            (0, i.jsx)(u.Z.Icon, { expired: !0 }),
-                            (0, i.jsx)(u.Z.Info, {
+                            (0, i.jsx)(d.Z.Icon, { expired: !0 }),
+                            (0, i.jsx)(d.Z.Info, {
                                 expired: !0,
                                 title: N.intl.string(N.t.NaQLEx),
                                 children: N.intl.string(N.t['0H5OT0'])
@@ -100,36 +100,36 @@ function T(e) {
             ]
         });
     if (null == b || Z === E.M.FETCHING)
-        return (0, i.jsxs)(u.Z, {
+        return (0, i.jsxs)(d.Z, {
             containerRef: k,
-            children: [(0, i.jsx)(u.Z.Header, { text: N.intl.string(N.t.m9hXGR) }), (0, i.jsx)(u.Z.Body, { resolving: !0 })]
+            children: [(0, i.jsx)(d.Z.Header, { text: N.intl.string(N.t.m9hXGR) }), (0, i.jsx)(d.Z.Body, { resolving: !0 })]
         });
     let B = new Intl.NumberFormat(R, {
             notation: 'compact',
             compactDisplay: 'short'
         }),
         U = null !== (n = null === (t = b.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0,
-        w = (0, g.Eb)({
+        w = (0, _.Eb)({
             customInstallUrl: b.custom_install_url,
             installParams: b.install_params,
             integrationTypesConfig: b.integration_types_config
         }),
         F = a.Y.GUILD_INSTALL in (null !== (T = b.integration_types_config) && void 0 !== T ? T : {}) && w;
-    return (0, i.jsxs)(u.Z, {
+    return (0, i.jsxs)(d.Z, {
         containerRef: k,
         children: [
-            (0, i.jsx)(u.Z.Header, { text: N.intl.string(N.t.KC1oZ2) }),
-            (0, i.jsxs)(u.Z.Body, {
+            (0, i.jsx)(d.Z.Header, { text: N.intl.string(N.t.KC1oZ2) }),
+            (0, i.jsxs)(d.Z.Body, {
                 children: [
                     (0, i.jsxs)('div', {
                         className: v.applicationInfoContainer,
                         children: [
-                            (0, i.jsx)(u.Z.Icon, {
+                            (0, i.jsx)(d.Z.Icon, {
                                 application: m.Z.createFromServer(b),
                                 className: v.applicationIcon,
                                 onClick: () => D('application_icon')
                             }),
-                            (0, i.jsx)(u.Z.Info, {
+                            (0, i.jsx)(d.Z.Info, {
                                 title: (0, i.jsx)(s.Clickable, {
                                     onClick: () => D('application_name'),
                                     children: b.name
@@ -155,10 +155,10 @@ function T(e) {
                         ]
                     }),
                     w &&
-                        (0, i.jsx)(u.Z.Button, {
+                        (0, i.jsx)(d.Z.Button, {
                             onClick: () => {
                                 if (null != b)
-                                    (0, g.LO)({
+                                    (0, _.LO)({
                                         applicationId: S,
                                         customInstallUrl: b.custom_install_url,
                                         installParams: b.install_params,
@@ -167,7 +167,7 @@ function T(e) {
                                         source: 'app_directory_profile_embed'
                                     });
                             },
-                            color: u.Z.Button.Colors.GREEN,
+                            color: d.Z.Button.Colors.GREEN,
                             children: N.intl.string(N.t.NgXl3N)
                         })
                 ]

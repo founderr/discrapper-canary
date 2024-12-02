@@ -20,15 +20,15 @@ var i = n(200651),
     g = n(714338),
     f = n(663993),
     _ = n(628123),
-    I = n(703656),
-    E = n(108427),
+    E = n(703656),
+    I = n(108427),
     C = n(911314),
     v = n(429899),
     N = n(843445),
     S = n(981631),
     T = n(388032),
-    x = n(32304);
-function b(e, t, n) {
+    b = n(32304);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -52,14 +52,14 @@ s.ZP.initialize();
 class L extends r.PureComponent {
     componentDidMount() {
         (0, o.Y)(this.props.location),
-            (this.stopListeningToHistory = (0, I.s1)().listen((e) => {
+            (this.stopListeningToHistory = (0, E.s1)().listen((e) => {
                 e.pathname.startsWith(S.Z5c.APPLICATION_STORE) && (0, o.Y)(e);
             })),
             this.props.isAuthenticated && (0, c.tZ)(),
             g.Z.disable(),
             g.Z.setLayout(m.r),
             g.Z.enable(),
-            (0, E.e)('application_store');
+            (0, I.e)('application_store');
     }
     componentWillUnmount() {
         null != this.stopListeningToHistory && this.stopListeningToHistory(), g.Z.disable(), g.Z.setLayout(p.oT), g.Z.enable();
@@ -73,11 +73,11 @@ class L extends r.PureComponent {
         let { isAuthenticated: e, location: t } = this.props,
             n = e
                 ? (0, i.jsx)('div', {
-                      className: x.applicationStore,
+                      className: b.applicationStore,
                       children: this.renderContent()
                   })
                 : (0, i.jsx)(A, {
-                      className: x.applicationStore,
+                      className: b.applicationStore,
                       location: t,
                       render: this.renderContent
                   });
@@ -88,8 +88,8 @@ class L extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'stopListeningToHistory', void 0),
-            b(this, 'renderStoreListing', (e) => {
+            x(this, 'stopListeningToHistory', void 0),
+            x(this, 'renderStoreListing', (e) => {
                 let {
                         match: {
                             params: { skuId: t, applicationId: n, slug: r }
@@ -111,7 +111,7 @@ class L extends r.PureComponent {
                     })
                 });
             }),
-            b(this, 'renderContent', () =>
+            x(this, 'renderContent', () =>
                 (0, i.jsxs)(a.rs, {
                     children: [
                         (0, i.jsx)(a.AW, {

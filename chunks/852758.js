@@ -3,10 +3,10 @@ n.d(t, {
         return T;
     },
     HR: function () {
-        return x;
+        return b;
     },
     ZP: function () {
-        return b;
+        return x;
     }
 }),
     n(47120);
@@ -25,33 +25,33 @@ var i = n(200651),
     g = n(429142),
     f = n(144114),
     _ = n(210887),
-    I = n(23434),
-    E = n(1964),
+    E = n(23434),
+    I = n(1964),
     C = n(762756),
     v = n(981631),
     N = n(815660),
     S = n(388032);
 let T = 'Email Verification',
-    x = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
-function b() {
-    let { action: e, theme: t } = (0, a.cj)([I.Z, _.Z], () => ({
-            action: I.Z.getAction(),
+    b = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
+function x() {
+    let { action: e, theme: t } = (0, a.cj)([E.Z, _.Z], () => ({
+            action: E.Z.getAction(),
             theme: _.Z.theme
         })),
-        b = E.Z.getVerificationTypes(e),
+        x = I.Z.getVerificationTypes(e),
         [A, Z] = r.useState(0),
-        L = (0, h.Z)(b);
+        L = (0, h.Z)(x);
     (0, p.Z)(
         {
             type: l.ImpressionTypes.MODAL,
             name: l.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
-                verification_type: b[0],
-                verification_types: b
+                verification_type: x[0],
+                verification_types: x
             }
         },
         {},
-        [b.toString()]
+        [x.toString()]
     );
     let y = () => {
             (0, u.FD)(),
@@ -94,7 +94,7 @@ function b() {
         ),
         r.useEffect(() => {
             (null == L ? void 0 : L[0]) === v.PUi.PHONE &&
-                (null == b ? void 0 : b[0]) === v.PUi.EMAIL &&
+                (null == x ? void 0 : x[0]) === v.PUi.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
@@ -107,14 +107,14 @@ function b() {
                             });
                     },
                     {
-                        modalKey: x,
+                        modalKey: b,
                         Layer: g.ZP,
                         onCloseCallback: y
                     }
                 );
-        }, [b, L]),
+        }, [x, L]),
         (0, i.jsx)(C.Z, {
-            types: b,
+            types: x,
             captchaKey: A,
             onCaptchaVerify: (e) => {
                 s.tn

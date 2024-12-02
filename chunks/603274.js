@@ -106,8 +106,8 @@ function N() {
             [l]
         ),
         A = (0, s.Wu)([g.default], () => T.map((e) => g.default.getUser(e)), [T]),
-        P = (0, s.Wu)([g.default], () => y.map((e) => g.default.getUser(e)), [y]),
-        j = Z(
+        j = (0, s.Wu)([g.default], () => y.map((e) => g.default.getUser(e)), [y]),
+        P = Z(
             c.VoiceNormalIcon,
             b.filter((e) => !y.includes(e.id) && !T.includes(e.id))
         );
@@ -148,11 +148,11 @@ function N() {
                   })),
         M = Z(
             c.ScreenArrowIcon,
-            P.filter((e) => null != e && !T.includes(e.id))
+            j.filter((e) => null != e && !T.includes(e.id))
         ),
         L = Z(c.ActivitiesIcon, A);
     return (0, i.jsxs)(i.Fragment, {
-        children: [R, j, M, L]
+        children: [R, P, M, L]
     });
 }
 function y() {

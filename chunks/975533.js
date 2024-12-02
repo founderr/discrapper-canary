@@ -13,15 +13,15 @@ var i = n(570140),
     g = n(641015),
     f = n(183584),
     _ = n(199902),
-    I = n(131951),
-    E = n(246946),
+    E = n(131951),
+    I = n(246946),
     C = n(808506),
     v = n(237997),
     N = n(626135),
     S = n(554174),
     T = n(981631),
-    x = n(65154);
-let b = {
+    b = n(65154);
+let x = {
     [T.kg4.TOGGLE_PRIORITY_SPEAKER]: {
         onTrigger() {},
         keyEvents: {}
@@ -32,7 +32,7 @@ let b = {
     },
     [T.kg4.PUSH_TO_TALK]: {
         onTrigger(e, t) {
-            I.Z.getMode(t.context) === T.pM4.PUSH_TO_TALK && ((b[T.kg4.PUSH_TO_TALK].isPressed = e), I.Z.getMediaEngine().eachConnection((t) => t.setForceAudioInput(e, !1), t.context));
+            E.Z.getMode(t.context) === T.pM4.PUSH_TO_TALK && ((x[T.kg4.PUSH_TO_TALK].isPressed = e), E.Z.getMediaEngine().eachConnection((t) => t.setForceAudioInput(e, !1), t.context));
         },
         keyEvents: {
             keyup: !0,
@@ -42,7 +42,7 @@ let b = {
     },
     [T.kg4.PUSH_TO_TALK_PRIORITY]: {
         onTrigger(e) {
-            I.Z.getMode() === T.pM4.PUSH_TO_TALK && ((b[T.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e), I.Z.getMediaEngine().eachConnection((t) => t.setForceAudioInput(e, !0), x.Yn.DEFAULT));
+            E.Z.getMode() === T.pM4.PUSH_TO_TALK && ((x[T.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e), E.Z.getMediaEngine().eachConnection((t) => t.setForceAudioInput(e, !0), b.Yn.DEFAULT));
         },
         keyEvents: {
             keyup: !0,
@@ -52,7 +52,7 @@ let b = {
     },
     [T.kg4.PUSH_TO_MUTE]: {
         onTrigger(e) {
-            if (I.Z.getMode() === T.pM4.VOICE_ACTIVITY) (b[T.kg4.PUSH_TO_MUTE].isPressed = e), r.Z.setTemporarySelfMute(e);
+            if (E.Z.getMode() === T.pM4.VOICE_ACTIVITY) (x[T.kg4.PUSH_TO_MUTE].isPressed = e), r.Z.setTemporarySelfMute(e);
         },
         keyEvents: {
             keyup: !0,
@@ -84,7 +84,7 @@ let b = {
     },
     [T.kg4.TOGGLE_VOICE_MODE]: {
         onTrigger() {
-            let e = I.Z.getMode() === T.pM4.PUSH_TO_TALK ? T.pM4.VOICE_ACTIVITY : T.pM4.PUSH_TO_TALK;
+            let e = E.Z.getMode() === T.pM4.PUSH_TO_TALK ? T.pM4.VOICE_ACTIVITY : T.pM4.PUSH_TO_TALK;
             r.Z.setMode(e);
         },
         keyEvents: {
@@ -136,7 +136,7 @@ let b = {
     },
     [T.kg4.TOGGLE_STREAMER_MODE]: {
         onTrigger() {
-            o.Z.setEnabled(!E.Z.enabled);
+            o.Z.setEnabled(!I.Z.enabled);
         },
         keyEvents: {
             keyup: !0,
@@ -226,7 +226,7 @@ class A extends c.Z {
         i.Z.wait(() =>
             i.Z.dispatch({
                 type: 'KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS',
-                keybinds: b
+                keybinds: x
             })
         );
     }

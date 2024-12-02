@@ -24,8 +24,8 @@ var l = t(374470),
     E = t(268623),
     I = t(667922),
     v = t(941389),
-    p = t(449751),
-    M = t(749339),
+    M = t(449751),
+    p = t(749339),
     Z = t(601184),
     x = t(6148),
     S = t(519110),
@@ -54,7 +54,7 @@ function U(e) {
         E = c,
         I = c.getAttribute('data-type'),
         v = c.getAttribute('data-id'),
-        p = c.getAttribute('data-name');
+        M = c.getAttribute('data-name');
     if (null != g) r = i = o = g.url;
     else for (; (0, l.k)(E); ) (0, l.k)(E, HTMLImageElement) && null != E.src && (r = E.src), (0, l.k)(E, HTMLAnchorElement) && null != E.href && ((i = E.href), (s = E.textContent), null == r && 'img' === E.getAttribute('data-role') && ((r = i), E.hasAttribute('data-safe-src') && '' !== E.getAttribute('data-safe-src') && (o = E.getAttribute('data-safe-src')))), (E = E.parentNode);
     return k({
@@ -64,7 +64,7 @@ function U(e) {
         textSelection: null !== (t = null === (n = document.getSelection()) || void 0 === n ? void 0 : n.toString()) && void 0 !== t ? t : '',
         favoriteableType: I,
         favoriteableId: v,
-        favoriteableName: p,
+        favoriteableName: M,
         itemHref: i,
         itemSrc: r,
         itemSafeSrc: o,
@@ -95,7 +95,7 @@ function k(e) {
         eo = (0, _.Z)(n, t),
         es = (0, P.Z)(n),
         eu = (0, v.Z)(n, t),
-        ed = (0, p.Z)(n, t),
+        ed = (0, M.Z)(n, t),
         ec = (0, N.Z)(n, t),
         eg = (0, T.Z)(n, t),
         ef = (0, Z.Z)(n, t),
@@ -104,8 +104,8 @@ function k(e) {
         eE = (0, D.Z)(n, t),
         eI = (0, c.Z)(null != z ? z : K, B, n, { shouldHideMediaOptions: Y }),
         ev = (0, d.Z)(H, n, { shouldHideMediaOptions: Y }),
-        ep = (0, G.Z)(n, l),
-        eM = (0, s.Z)({
+        eM = (0, G.Z)(n, l),
+        ep = (0, s.Z)({
             id: n.id,
             label: w.intl.string(w.t.zBoHlZ),
             shiftId: ''.concat(n.channel_id, '-').concat(n.id)
@@ -115,7 +115,7 @@ function k(e) {
         eS = (0, R.Z)(n, t),
         ej = (0, h.Z)(a, t.getGuildId()),
         e_ = (0, E.Z)(n),
-        eb = (0, M.Z)(n),
+        eb = (0, p.Z)(n),
         eA = (0, m.Z)({
             commandType: o.yU.MESSAGE,
             commandTargetId: n.id,
@@ -146,10 +146,10 @@ function k(e) {
                 children: [eg, ec, ef, X && em, X && eh]
             }),
             (0, i.jsxs)(r.MenuGroup, {
-                children: [er, ej, ev, ep]
+                children: [er, ej, ev, eM]
             }),
             (0, i.jsx)(r.MenuGroup, { children: eI }),
-            (0, i.jsx)(r.MenuGroup, { children: eM })
+            (0, i.jsx)(r.MenuGroup, { children: ep })
         ]
     });
 }

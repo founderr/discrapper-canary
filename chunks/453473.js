@@ -14,14 +14,14 @@ var i = n(200651),
     o = n(512722),
     s = n.n(o),
     c = n(913527),
-    u = n.n(c),
-    d = n(990547),
+    d = n.n(c),
+    u = n(990547),
     m = n(91192),
     h = n(442837),
     f = n(481060),
     p = n(239091),
-    g = n(494404),
-    _ = n(724757),
+    _ = n(494404),
+    g = n(724757),
     E = n(213609),
     C = n(294218),
     I = n(373662),
@@ -54,7 +54,7 @@ function B(e) {
         children: (0, i.jsxs)('div', {
             className: k.popoutContainer,
             children: [
-                (0, i.jsx)(g.h4, {
+                (0, i.jsx)(_.h4, {
                     icon: f.BookmarkIcon,
                     title: M.intl.string(M.t['2pAkDA'])
                 }),
@@ -68,8 +68,8 @@ function U(e) {
         n = (0, R.Z)();
     return ((0, E.Z)(
         {
-            type: d.ImpressionTypes.POPOUT,
-            name: d.ImpressionNames.FOR_LATER_LIST_VIEWED,
+            type: u.ImpressionTypes.POPOUT,
+            name: u.ImpressionNames.FOR_LATER_LIST_VIEWED,
             properties: {
                 total_count: n.length,
                 overdue_count: j.Z.getOverdueMessageReminderCount()
@@ -88,13 +88,13 @@ function U(e) {
 function w(e) {
     let { onOpen: t, onClose: n, children: l, popoutPosition: a, popoutAlign: o } = e,
         [s, c] = r.useState(!1),
-        u = r.useCallback(() => {
+        d = r.useCallback(() => {
             c(!1), s && (null == n || n());
         }, [n, s]),
-        d = r.useCallback(() => {
+        u = r.useCallback(() => {
             c(!s), s ? null == n || n() : null == t || t();
         }, [n, t, s]);
-    r.useEffect(() => (T.S.subscribe(O.CkL.TOGGLE_FOR_LATER, d), () => void T.S.unsubscribe(O.CkL.TOGGLE_FOR_LATER, d)), [d]);
+    r.useEffect(() => (T.S.subscribe(O.CkL.TOGGLE_FOR_LATER, u), () => void T.S.unsubscribe(O.CkL.TOGGLE_FOR_LATER, u)), [u]);
     let m = (0, h.e7)([j.Z], () => j.Z.hasOverdueReminder(), []);
     return (0, i.jsx)(f.Popout, {
         animation: f.Popout.Animation.NONE,
@@ -102,21 +102,21 @@ function w(e) {
         align: o,
         autoInvert: !1,
         shouldShow: s,
-        onRequestClose: u,
+        onRequestClose: d,
         renderPopout: function () {
-            return (0, i.jsx)(B, { closePopout: u });
+            return (0, i.jsx)(B, { closePopout: d });
         },
         ignoreModalClicks: !0,
         children: (e, t) => {
             let { isShown: n } = t;
-            return l(d, n, e, m);
+            return l(u, n, e, m);
         }
     });
 }
 function F(e) {
     let { savedMessageKeys: t, closePopout: n } = e,
         l = r.useRef(null),
-        a = (0, _.Z)('for-later', l),
+        a = (0, g.Z)('for-later', l),
         [o, s] = r.useState(new Date());
     return (
         r.useEffect(() => {
@@ -167,7 +167,7 @@ function G(e) {
                         message_id: t.saveData.messageId,
                         message_author_id: null === (i = t.message) || void 0 === i ? void 0 : i.author.id,
                         type: null != t.saveData.dueAt ? Z._l.REMINDER : Z._l.BOOKMARK,
-                        due_duration: null != t.saveData.dueAt ? u()().diff(t.saveData.dueAt) : void 0
+                        due_duration: null != t.saveData.dueAt ? d()().diff(t.saveData.dueAt) : void 0
                     });
             },
             [n, t, o]

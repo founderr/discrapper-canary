@@ -10,29 +10,29 @@ var i = n(200651),
     o = n(358555),
     s = n(955415),
     c = n(944486),
-    u = n(914010),
-    d = n(626135),
+    d = n(914010),
+    u = n(626135),
     m = n(981631),
     h = n(388032),
     f = n(658412);
 function p(e) {
     var t;
-    let { guild: n, channel: p, messageData: g } = e,
-        _ = u.Z.getGuildId(),
-        E = c.Z.getChannelId(_),
+    let { guild: n, channel: p, messageData: _ } = e,
+        g = d.Z.getGuildId(),
+        E = c.Z.getChannelId(g),
         C = r.useCallback(() => {
             var e;
-            d.default.track(m.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
-                author_id: null === (e = g.author) || void 0 === e ? void 0 : e.id,
+            u.default.track(m.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
+                author_id: null === (e = _.author) || void 0 === e ? void 0 : e.id,
                 link_guild_id: n.id,
                 link_channel_id: p.id,
                 link_channel_type: p.type,
-                guild_id: _,
+                guild_id: g,
                 channel_id: E
             }),
                 (0, a.K)(n.id, p.id),
                 l.default.selectVoiceChannel(p.id);
-        }, [null === (t = g.author) || void 0 === t ? void 0 : t.id, n.id, p.id, p.type, _, E]),
+        }, [null === (t = _.author) || void 0 === t ? void 0 : t.id, n.id, p.id, p.type, g, E]),
         I = (0, i.jsx)(s.Z.Channel, { channel: p });
     return (0, i.jsx)(s.Z, {
         children: (0, i.jsxs)(s.Z.Body, {

@@ -20,15 +20,15 @@ var i = n(200651),
     g = n(239091),
     f = n(230711),
     _ = n(410575),
-    I = n(941129),
-    E = n(634894),
+    E = n(941129),
+    I = n(634894),
     C = n(586902),
     v = n(570928),
     N = n(100527),
     S = n(906732),
     T = n(676742),
-    x = n(1585),
-    b = n(304761),
+    b = n(1585),
+    x = n(304761),
     A = n(865427),
     Z = n(571250),
     L = n(628581),
@@ -74,15 +74,15 @@ var i = n(200651),
     eg = n(572004),
     ef = n(70956),
     e_ = n(74538),
-    eI = n(374023),
-    eE = n(51144),
+    eE = n(374023),
+    eI = n(51144),
     eC = n(998502),
     ev = n(870569),
     eN = n(345243),
     eS = n(115530),
     eT = n(981631),
-    ex = n(215023),
-    eb = n(388032),
+    eb = n(215023),
+    ex = n(388032),
     eA = n(628005);
 function eZ(e, t, n) {
     return (
@@ -106,7 +106,7 @@ function eO(e) {
         d = (0, T.Z)(null == r ? void 0 : r.avatarDecoration),
         u = (0, ep.NZ)({
             avatarDecoration: d,
-            size: (0, x.y9)(m.AvatarSizes.SIZE_32)
+            size: (0, b.y9)(m.AvatarSizes.SIZE_32)
         });
     return null == r
         ? null
@@ -139,7 +139,7 @@ function eO(e) {
                   children: (e) =>
                       (0, i.jsxs)(m.Clickable, {
                           ...e,
-                          'aria-label': eb.intl.string(eb.t['3Uj+2t']),
+                          'aria-label': ex.intl.string(ex.t['3Uj+2t']),
                           className: eA.avatarWrapper,
                           children: [
                               (0, i.jsx)(eL, {
@@ -175,7 +175,7 @@ class eR extends r.PureComponent {
     }
     renderCopiedSuccess() {
         let { copiedStreak: e } = this.state,
-            t = [eb.intl.string(eb.t.MSaeTU), eb.intl.string(eb.t.UmrCw8), eb.intl.string(eb.t.gKE0Ji), eb.intl.string(eb.t['4DSKbm']), eb.intl.string(eb.t['+8ENdX']), eb.intl.string(eb.t.GlWHv7), eb.intl.string(eb.t.hIzxU1), eb.intl.string(eb.t['26uMPD']), eb.intl.string(eb.t.uFs7R0), eb.intl.string(eb.t.bLXdcX), eb.intl.string(eb.t.gPg9fX)],
+            t = [ex.intl.string(ex.t.MSaeTU), ex.intl.string(ex.t.UmrCw8), ex.intl.string(ex.t.gKE0Ji), ex.intl.string(ex.t['4DSKbm']), ex.intl.string(ex.t['+8ENdX']), ex.intl.string(ex.t.GlWHv7), ex.intl.string(ex.t.hIzxU1), ex.intl.string(ex.t['26uMPD']), ex.intl.string(ex.t.uFs7R0), ex.intl.string(ex.t.bLXdcX), ex.intl.string(ex.t.gPg9fX)],
             n = Math.min(Math.max(0, e - 1), t.length - 1);
         return (0, i.jsx)(m.Shaker, {
             isShaking: this.isCopiedStreakGodlike,
@@ -187,7 +187,7 @@ class eR extends r.PureComponent {
         let { hovered: t } = this.state,
             { customStatusActivity: n, userTag: r, currentUser: l, status: a } = this.props;
         if (null == l) return null;
-        let s = eE.ZP.getName(l),
+        let s = eI.ZP.getName(l),
             o = null != a && a !== eT.Skl.UNKNOWN,
             c = null != n;
         return (
@@ -201,7 +201,7 @@ class eR extends r.PureComponent {
                               emojiClassName: eA.emoji,
                               className: eA.customStatus
                           })
-                        : eE.ZP.humanizeStatus(a)
+                        : eI.ZP.humanizeStatus(a)
                 })),
             (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -265,7 +265,7 @@ class eR extends r.PureComponent {
                                           serverMute: l,
                                           suppress: s,
                                           awaitingRemote: r,
-                                          tooltipText: d ? eb.intl.string(eb.t['29gnR0']) : (0, L.Z)(n, l, s, r),
+                                          tooltipText: d ? ex.intl.string(ex.t['29gnR0']) : (0, L.Z)(n, l, s, r),
                                           tooltipColor: d ? m.TooltipColors.GREEN : void 0,
                                           tooltipForceOpen: d || void 0,
                                           onMouseEnter: this.handleMouseEnterMute,
@@ -441,7 +441,7 @@ class eR extends r.PureComponent {
                     { shouldShowNametagTooltip: t, copiedStreak: n } = this.state;
                 if (null == e) return;
                 (0, eg.JG)(
-                    eE.ZP.getUserTag(e, {
+                    eI.ZP.getUserTag(e, {
                         decoration: 'never',
                         identifiable: 'always'
                     })
@@ -500,35 +500,35 @@ function ej() {
             status: ec.Z.getStatus()
         })),
         d = (0, C.Z)({ userId: n }),
-        u = eE.ZP.useUserTag(t, { decoration: 'never' }),
+        u = eI.ZP.useUserTag(t, { decoration: 'never' }),
         h = (0, s.e7)([ed.Z], () => ed.Z.hidePersonalInformation),
         g = (0, s.e7)([eo.Z, el.Z], () => {
             let e = eo.Z.getChannelId();
             return null != e ? el.Z.getChannel(e) : null;
         }),
         { mute: f, selfMute: _, suppress: v } = (0, ei.Z)(g),
-        { selfDeaf: T, deaf: x } = (0, en.Z)(g),
-        Z = (0, s.e7)([b.C], () => {
+        { selfDeaf: T, deaf: b } = (0, en.Z)(g),
+        Z = (0, s.e7)([x.C], () => {
             var e;
-            return (0, A.fD)() ? (null === (e = b.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
+            return (0, A.fD)() ? (null === (e = x.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
         L = (0, s.e7)([eh.ZP], () => eh.ZP.getPremiumTypeSubscription()),
         y = (0, s.e7)([es.Z], () => es.Z.getSpeakingWhileMuted()),
         P = (0, s.e7)([ea.Z], () => ea.Z.hasLayers()),
-        O = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || P || eI.s.isDisallowPopupsSet(),
+        O = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || P || eE.s.isDisallowPopupsSet(),
         R = (0, V.b)(),
         j = (0, s.e7)([G.Z], () => null != G.Z.getAwaitingRemoteSessionInfo()),
         M = (0, Y.D)(),
-        w = (0, I.u)(),
+        w = (0, E.u)(),
         U = (0, K.t)(),
         B = e_.ZP.canUsePremiumGuildMemberProfile(t),
-        H = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === ex.rL,
+        H = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eb.rL,
         W = 'account';
-    (0, E.j)({
+    (0, I.j)({
         location: W + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, E.j)({
+        (0, I.j)({
             location: W + ' auto off',
             autoTrackExposure: !1
         });
@@ -575,7 +575,7 @@ function ej() {
                 premiumSubscription: L,
                 selfDeaf: T,
                 selfMute: _,
-                serverDeaf: x,
+                serverDeaf: b,
                 serverMute: f,
                 speaking: d,
                 speakingWhileMuted: y,
@@ -614,7 +614,7 @@ function eD(e) {
                     'aria-hidden': !0
                 })),
         (0, i.jsx)(ev.Z, {
-            tooltipText: null != t ? eb.intl.formatToPlainString(eb.t.Gzh6ZG, { webBuildOverride: t.id }) : eb.intl.string(eb.t.cduTBA),
+            tooltipText: null != t ? ex.intl.formatToPlainString(ex.t.Gzh6ZG, { webBuildOverride: t.id }) : ex.intl.string(ex.t.cduTBA),
             onClick: r,
             onContextMenu: l,
             innerClassName: null != t || n ? eA.buildOverrideButton : null,
@@ -627,10 +627,10 @@ function eD(e) {
 function eM(e) {
     let { selfMute: t, serverMute: n, suppress: l, awaitingRemote: a, tooltipText: s, tooltipColor: o, tooltipForceOpen: c, onMouseEnter: d, onMouseLeave: h, onClick: p, onContextMenu: g } = e,
         f = t || l || n,
-        { Component: _, play: I, events: E } = (0, u.O)(f ? 'unmute' : 'mute'),
+        { Component: _, play: E, events: I } = (0, u.O)(f ? 'unmute' : 'mute'),
         C = n || l ? m.MicrophoneDenyIcon : _,
         { analyticsLocations: v } = (0, S.ZP)(N.Z.AUDIO_INPUT_BUTTON);
-    r.useEffect(() => () => I(), [f, I]);
+    r.useEffect(() => () => E(), [f, E]);
     let T = r.useCallback(
         (e) => {
             g(e, v);
@@ -644,10 +644,10 @@ function eM(e) {
             tooltipColor: o,
             tooltipForceOpen: c,
             onMouseEnter: () => {
-                d(), E.onMouseEnter();
+                d(), I.onMouseEnter();
             },
             onMouseLeave: () => {
-                h(), E.onMouseLeave();
+                h(), I.onMouseLeave();
             },
             icon: (0, i.jsx)(C, {
                 size: 'custom',
@@ -659,7 +659,7 @@ function eM(e) {
             onClick: p,
             onContextMenu: T,
             role: 'switch',
-            'aria-label': eb.intl.string(eb.t['w4m94+']),
+            'aria-label': ex.intl.string(ex.t['w4m94+']),
             'aria-checked': f,
             disabled: a
         })
@@ -676,7 +676,7 @@ function ew(e) {
         f = n ? m.HeadphonesDenyIcon : u,
         { analyticsLocations: _ } = (0, S.ZP)(N.Z.AUDIO_OUTPUT_BUTTON);
     r.useEffect(() => () => h(), [c, h]);
-    let I = r.useCallback(
+    let E = r.useCallback(
         (e) => {
             o(e, _);
         },
@@ -695,11 +695,11 @@ function ew(e) {
                 color: c ? m.tokens.colors.STATUS_DANGER : 'currentColor'
             }),
             onClick: s,
-            onContextMenu: I,
+            onContextMenu: E,
             innerClassName: a()({ [eA.redIcon]: n }),
             iconForeground: c ? eA.strikethrough : null,
             role: 'switch',
-            'aria-label': eb.intl.string(eb.t.wjcRFR),
+            'aria-label': ex.intl.string(ex.t.wjcRFR),
             'aria-checked': c,
             disabled: l
         })

@@ -78,8 +78,8 @@ function f(e) {
         f = r.useRef(h),
         {
             lastVisibleIndex: _,
-            onItemLayout: I,
-            overflowItemsRef: E,
+            onItemLayout: E,
+            overflowItemsRef: I,
             itemWidthsRef: C
         } = (0, s.zP)({
             items: l,
@@ -103,7 +103,7 @@ function f(e) {
         let e = (0, u.pP)(T);
         return (0, u.YP)(e, document.body), () => (0, u.UC)(e, document.body);
     }, [T]);
-    let x = 0 !== h;
+    let b = 0 !== h;
     return (0, i.jsxs)('div', {
         className: a()(p.container, t),
         ref: S,
@@ -116,7 +116,7 @@ function f(e) {
                             s.AJ,
                             {
                                 index: t,
-                                onItemLayout: I,
+                                onItemLayout: E,
                                 children: (0, i.jsx)(c.TabBar.Item, {
                                     id: e.id,
                                     'aria-label': e.label,
@@ -131,7 +131,7 @@ function f(e) {
                         )
                     ),
                     (0, i.jsx)('div', {
-                        ref: E,
+                        ref: I,
                         children: (0, i.jsx)(g, {
                             tabs: N,
                             onTabSelect: o,
@@ -140,7 +140,7 @@ function f(e) {
                     })
                 ]
             }),
-            x &&
+            b &&
                 (0, i.jsxs)(c.TabBar, {
                     type: 'top',
                     look: 'brand',

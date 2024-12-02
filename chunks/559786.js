@@ -15,19 +15,19 @@ var i = n(200651),
 function d(e) {
     let { transitionTo: t, token: n, width: d } = e,
         [h, g] = r.useState(u.n.START),
-        [m, f] = r.useState(null),
-        [p, x] = r.useState(''),
-        _ = { impression_group: s.ImpressionGroups.ACCOUNT_REVERT_FLOW };
+        [p, m] = r.useState(null),
+        [f, _] = r.useState(''),
+        x = { impression_group: s.ImpressionGroups.ACCOUNT_REVERT_FLOW };
     return (0, i.jsx)('div', {
         style: { margin: '8px' },
         children: (0, i.jsxs)(l.Slides, {
             activeSlide: h,
             width: d,
-            onSlideReady: f,
+            onSlideReady: m,
             children: [
                 (0, i.jsx)(l.Slide, {
                     id: u.n.START,
-                    impressionProperties: _,
+                    impressionProperties: x,
                     impressionName: s.ImpressionNames.ACCOUNT_REVERT_EXPLAINER,
                     children: (0, i.jsx)(o.Z, {
                         setSlide: g,
@@ -36,21 +36,21 @@ function d(e) {
                 }),
                 (0, i.jsx)(l.Slide, {
                     id: u.n.PASSWORD,
-                    impressionProperties: _,
+                    impressionProperties: x,
                     impressionName: s.ImpressionNames.ACCOUNT_REVERT_CHANGE_PASSWORD,
                     children: (0, i.jsx)(a.Z, {
-                        setOriginalEmail: x,
+                        setOriginalEmail: _,
                         setSlide: g,
                         transitionTo: t,
-                        ready: m === u.n.PASSWORD,
+                        ready: p === u.n.PASSWORD,
                         token: n
                     })
                 }),
                 (0, i.jsx)(l.Slide, {
                     id: u.n.SUCCESS,
-                    impressionProperties: _,
+                    impressionProperties: x,
                     impressionName: s.ImpressionNames.ACCOUNT_REVERT_SUCCESS,
-                    children: (0, i.jsx)(c.Z, { email: p })
+                    children: (0, i.jsx)(c.Z, { email: f })
                 })
             ]
         })

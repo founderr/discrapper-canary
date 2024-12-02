@@ -196,10 +196,10 @@ let S = {
                 rejectWithError: !1
             })
             .then(() => {
-                d.Z.showIgnoreSuccessToast(e, n);
+                d.Z.showIgnoreSuccessToast(e, n), s.uv.announce(I.intl.string(I.t.Us93CQ));
             })
             .catch(() => {
-                d.Z.showFailedToast();
+                d.Z.showFailedToast(), s.uv.announce(I.intl.string(I.t.n6Jo3N));
             }),
     unignoreUser: (e, t, n) =>
         a.tn
@@ -209,10 +209,10 @@ let S = {
                 rejectWithError: !1
             })
             .then(() => {
-                d.Z.showUnignoreSuccessToast(e, n);
+                d.Z.showUnignoreSuccessToast(e, n), s.uv.announce(I.intl.string(I.t.QlH5w8));
             })
             .catch(() => {
-                d.Z.showFailedToast();
+                d.Z.showFailedToast(), s.uv.announce(I.intl.string(I.t.n6Jo3N));
             })
 };
 t.Z = S;

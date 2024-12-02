@@ -19,15 +19,15 @@ var i = n(200651),
     g = n(87005),
     f = n(753972),
     _ = n(895924),
-    I = n(812236),
-    E = n(82295),
+    E = n(812236),
+    I = n(82295),
     C = n(740492),
     v = n(973616),
     N = n(592125),
     S = n(626135),
     T = n(823379),
-    x = n(404295),
-    b = n(728345),
+    b = n(404295),
+    x = n(728345),
     A = n(812206),
     Z = n(981631),
     L = n(388032),
@@ -39,7 +39,7 @@ async function O(e, t, n) {
     if (null == i)
         try {
             var r, l, a;
-            i = null !== (a = null === (r = A.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = v.Z.createFromServer(await (0, b.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
+            i = null !== (a = null === (r = A.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = v.Z.createFromServer(await (0, x.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
         } catch (e) {
             t(void 0);
             return;
@@ -64,9 +64,9 @@ async function O(e, t, n) {
             return;
         }
         try {
-            await (0, I.ZP)(r, e.id);
+            await (0, E.ZP)(r, e.id);
         } catch (e) {
-            if (e.message === I.sV) {
+            if (e.message === E.sV) {
                 t(void 0);
                 return;
             }
@@ -151,7 +151,7 @@ let D = (e) => {
     });
 };
 function M() {
-    let e = (0, x.en)(m.Z.APP_DMS_QUICK_LAUNCHER),
+    let e = (0, b.en)(m.Z.APP_DMS_QUICK_LAUNCHER),
         { frecentApps: t } = (0, g.f)({
             channel: void 0,
             onlyActivityApps: !0,
@@ -175,7 +175,7 @@ function M() {
         if (!d && !!c) u(!0), S.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = h.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
     }, [c, h, d]),
     c)
-        ? (0, i.jsx)(E.Z, {
+        ? (0, i.jsx)(I.Z, {
               className: a()(y.headerContainer, P.privateChannelsHeaderContainer),
               children: (0, i.jsxs)('div', {
                   className: y.container,

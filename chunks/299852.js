@@ -10,11 +10,11 @@ var i,
     d = n(388905),
     h = n(108427),
     g = n(598077),
-    m = n(896797),
-    f = n(981631),
-    p = n(930441),
-    x = n(388032),
-    _ = n(232186);
+    p = n(896797),
+    m = n(981631),
+    f = n(930441),
+    _ = n(388032),
+    x = n(232186);
 function E(e, t, n) {
     return (
         t in e
@@ -35,7 +35,7 @@ class I extends (i = s.PureComponent) {
             t = (0, l.parse)(this.props.location.search);
         o.tn
             .post({
-                url: f.ANM.DISABLE_EMAIL_NOTIFICATIONS,
+                url: m.ANM.DISABLE_EMAIL_NOTIFICATIONS,
                 body: {
                     token: e,
                     pixel_uuid: t.hash,
@@ -71,25 +71,25 @@ class I extends (i = s.PureComponent) {
     }
     renderCategorySuccess(e, t) {
         let { defaultRoute: n, transitionTo: i } = this.props,
-            s = x.intl.formatToPlainString(x.t.YDAohI, { category: t });
+            s = _.intl.formatToPlainString(_.t.YDAohI, { category: t });
         return (0, r.jsxs)(d.ZP, {
             children: [
                 (0, r.jsx)(d.Dx, {
-                    className: _.marginBottom8,
-                    children: x.intl.string(x.t.f6rdLi)
+                    className: x.marginBottom8,
+                    children: _.intl.string(_.t.f6rdLi)
                 }),
                 (0, r.jsx)(d.DK, { children: s }),
                 (0, r.jsx)(d.zx, {
-                    className: _.marginTop20,
+                    className: x.marginTop20,
                     onClick: () => i(n),
-                    children: x.intl.string(x.t.fIv16O)
+                    children: _.intl.string(_.t.fIv16O)
                 }),
                 (0, r.jsx)(d.zx, {
-                    className: _.marginTop8,
+                    className: x.marginTop8,
                     color: d.zx.Colors.LINK,
                     look: d.zx.Looks.LINK,
-                    onClick: () => i(f.Z5c.SETTINGS('notifications', p.vG)),
-                    children: x.intl.string(x.t.YYTira)
+                    onClick: () => i(m.Z5c.SETTINGS('notifications', f.vG)),
+                    children: _.intl.string(_.t.YYTira)
                 })
             ]
         });
@@ -98,7 +98,7 @@ class I extends (i = s.PureComponent) {
         let { defaultRoute: e, transitionTo: t } = this.props,
             { user: n, category: i } = this.state;
         if (null != i) {
-            let e = p.Od.find((e) => e.category === i);
+            let e = f.Od.find((e) => e.category === i);
             if (null != e) return this.renderCategorySuccess(i, e.label());
         }
         return (0, r.jsxs)(d.ZP, {
@@ -106,17 +106,17 @@ class I extends (i = s.PureComponent) {
                 (0, r.jsx)(d.qE, {
                     src: null == n ? void 0 : n.getAvatarURL(void 0, 100),
                     size: c.AvatarSizes.DEPRECATED_SIZE_100,
-                    className: _.marginBottom20
+                    className: x.marginBottom20
                 }),
                 (0, r.jsx)(d.Dx, {
-                    className: _.marginBottom8,
-                    children: x.intl.string(x.t['6U6OMT'])
+                    className: x.marginBottom8,
+                    children: _.intl.string(_.t['6U6OMT'])
                 }),
-                (0, r.jsx)(d.DK, { children: x.intl.string(x.t['yaDJ4+']) }),
+                (0, r.jsx)(d.DK, { children: _.intl.string(_.t['yaDJ4+']) }),
                 (0, r.jsx)(d.zx, {
-                    className: _.marginTop40,
+                    className: x.marginTop40,
                     onClick: () => t(e),
-                    children: x.intl.string(x.t.fIv16O)
+                    children: _.intl.string(_.t.fIv16O)
                 })
             ]
         });
@@ -127,17 +127,17 @@ class I extends (i = s.PureComponent) {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(105020),
-                    className: _.marginBottom20
+                    className: x.marginBottom20
                 }),
                 (0, r.jsx)(d.Dx, {
-                    className: _.marginBottom8,
-                    children: x.intl.string(x.t.ox9hIS)
+                    className: x.marginBottom8,
+                    children: _.intl.string(_.t.ox9hIS)
                 }),
-                (0, r.jsx)(d.DK, { children: x.intl.string(x.t['/dcuR0']) }),
+                (0, r.jsx)(d.DK, { children: _.intl.string(_.t['/dcuR0']) }),
                 (0, r.jsx)(d.zx, {
-                    className: _.marginTop40,
+                    className: x.marginTop40,
                     onClick: () => t(e),
-                    children: x.intl.string(x.t.fIv16O)
+                    children: _.intl.string(_.t.fIv16O)
                 })
             ]
         });
@@ -156,4 +156,4 @@ class I extends (i = s.PureComponent) {
             });
     }
 }
-E(I, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }), (t.Z = a.ZP.connectStores([m.Z], () => ({ defaultRoute: m.Z.defaultRoute }))(I));
+E(I, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }), (t.Z = a.ZP.connectStores([p.Z], () => ({ defaultRoute: p.Z.defaultRoute }))(I));

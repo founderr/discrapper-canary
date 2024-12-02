@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return E;
     }
 });
 var i = n(200651),
@@ -18,8 +18,8 @@ var i = n(200651),
     g = n(981631),
     f = n(388032),
     _ = n(55945);
-function I(e) {
-    let { user: t, type: n, status: I, isFocused: E } = e,
+function E(e) {
+    let { user: t, type: n, status: E, isFocused: I } = e,
         C = r.useContext(u.AnalyticsContext),
         { analyticsLocations: v } = (0, o.ZP)(),
         N = (e) => {
@@ -32,10 +32,10 @@ function I(e) {
                     context: { location: 'Friends' }
                 });
         },
-        T = I === g.Skl.OFFLINE ? g.Skl.UNKNOWN : I,
-        x = n === g.OGo.PENDING_INCOMING ? f.intl.string(f.t.ZOFd1N) : f.intl.string(f.t.zz2i8v);
+        T = E === g.Skl.OFFLINE ? g.Skl.UNKNOWN : E,
+        b = n === g.OGo.PENDING_INCOMING ? f.intl.string(f.t.ZOFd1N) : f.intl.string(f.t.zz2i8v);
     return (0, i.jsx)(m.Z, {
-        isFocused: E,
+        isFocused: I,
         user: t,
         onClick: () =>
             (0, c.openUserProfileModal)({
@@ -89,7 +89,7 @@ function I(e) {
                         hovered: e,
                         showAccountIdentifier: !0,
                         status: T,
-                        subText: x
+                        subText: b
                     }),
                     (0, i.jsx)('div', {
                         className: _.actions,

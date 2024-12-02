@@ -14,26 +14,26 @@ var i = n(200651),
     g = n(680474),
     f = n(571737),
     _ = n(101400),
-    I = n(946542),
-    E = n(213746),
+    E = n(946542),
+    I = n(213746),
     C = n(979007),
     v = n(981631),
     N = n(388032),
     S = n(890030);
 t.Z = function (e) {
-    let { applicationId: t, onSelectApplication: n, onScroll: T, initialTab: x } = e,
-        b = r.useRef(null),
+    let { applicationId: t, onSelectApplication: n, onScroll: T, initialTab: b } = e,
+        x = r.useRef(null),
         A = (0, l.e7)([s.Z], () => s.Z.getApplication(t)),
         Z = (0, l.e7)([s.Z], () => s.Z.getApplicationFetchState(t));
     r.useEffect(() => {
         null != t && null == A && a.i6(t);
     }, [t, A]);
     let L = null == A ? void 0 : A.storefront_available,
-        [y, P] = r.useState(null != x ? x : C.Wc.ABOUT),
+        [y, P] = r.useState(null != b ? b : C.Wc.ABOUT),
         O = r.useCallback(
             (e) => {
                 var t;
-                null === (t = b.current) || void 0 === t || t.scrollTo({ to: 0 }), P(C.Wc.ABOUT), n(e);
+                null === (t = x.current) || void 0 === t || t.scrollTo({ to: 0 }), P(C.Wc.ABOUT), n(e);
             },
             [n]
         );
@@ -59,7 +59,7 @@ t.Z = function (e) {
                 case C.Wc.ABOUT:
                     return (0, i.jsx)(g.Z, { application: A });
                 case C.Wc.STORE:
-                    return (0, i.jsx)(E.Z, { application: A });
+                    return (0, i.jsx)(I.Z, { application: A });
             }
         }, [y, A]),
         D = r.useCallback(
@@ -74,7 +74,7 @@ t.Z = function (e) {
         w = y === C.Wc.ABOUT;
     return (0, i.jsx)(h.Z, {
         onScroll: T,
-        ref: b,
+        ref: x,
         children: (0, i.jsx)(d.Z, {
             children:
                 null == A
@@ -107,7 +107,7 @@ t.Z = function (e) {
                                                       })
                                                   }),
                                               j,
-                                              (0, i.jsx)(I.Z, {
+                                              (0, i.jsx)(E.Z, {
                                                   application: A,
                                                   onSelectApplication: O
                                               })

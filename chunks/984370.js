@@ -11,14 +11,14 @@ var r = n(120356),
     o = n(100527),
     s = n(906732),
     c = n(174556),
-    u = n(320007),
-    d = n(540059),
+    d = n(320007),
+    u = n(540059),
     m = n(141321),
     h = n(2818),
     f = n(954551),
     p = n(159738),
-    g = n(358085),
-    _ = n(998502),
+    _ = n(358085),
+    g = n(998502),
     E = n(665149),
     C = n(300986),
     I = n(314451),
@@ -27,27 +27,27 @@ var r = n(120356),
     v = n(176505),
     T = n(681714);
 async function S() {
-    if ((0, g.isMac)() && g.isPlatformEmbedded) {
+    if ((0, _.isMac)() && _.isPlatformEmbedded) {
         var e, t, n;
         let i = null !== (n = await (null === (e = (t = window.DiscordNative.remoteApp).getDefaultDoubleClickAction) || void 0 === e ? void 0 : e.call(t))) && void 0 !== n ? n : 'Maximize';
-        'Minimize' === i ? _.ZP.minimize() : 'Maximize' === i && _.ZP.maximize();
+        'Minimize' === i ? g.ZP.minimize() : 'Maximize' === i && g.ZP.maximize();
     }
 }
 function A(e) {
-    let { children: t, className: n, channelId: r, guildId: l, innerClassname: o, transparent: s = !1, toolbar: g, mobileToolbar: _, 'aria-label': N, 'aria-labelledby': v, scrollable: A, role: b, hideSearch: j, showDivider: Z } = e,
+    let { children: t, className: n, channelId: r, guildId: l, innerClassname: o, transparent: s = !1, toolbar: _, mobileToolbar: g, 'aria-label': N, 'aria-labelledby': v, scrollable: A, role: b, hideSearch: j, showDivider: Z } = e,
         { hasBugReporterAccess: R } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 }),
         { enabled: P, inInbox: L } = h.Z.useExperiment({ location: 'HeaderBar' }),
-        y = (0, d.Q)('HeaderBar');
+        y = (0, u.Q)('HeaderBar');
     return (0, i.jsx)(E.ZP, {
         className: n,
         innerClassName: o,
         toolbar: (function () {
-            if (null == g) return null;
+            if (null == _) return null;
             let e = null != r && !j;
             return a.tq
-                ? _
+                ? g
                 : (0, i.jsxs)(i.Fragment, {
-                      children: [g, e ? (0, i.jsx)(p.Z, { className: T.search }, null != l ? l : r) : null, Z && (0, i.jsx)(E.ZP.Divider, {}), !y && (0, i.jsx)(x.Z, {}), (0, i.jsx)(u.Z, { canShowReminder: !0 }), !y && (0, i.jsx)(m.Z, {}), P && !L ? (0, i.jsx)(f.Z, {}) : null, !y && (R ? (0, i.jsx)(I.Z, {}) : (0, i.jsx)(C.Z, {}))]
+                      children: [_, e ? (0, i.jsx)(p.Z, { className: T.search }, null != l ? l : r) : null, Z && (0, i.jsx)(E.ZP.Divider, {}), !y && (0, i.jsx)(x.Z, {}), (0, i.jsx)(d.Z, { canShowReminder: !0 }), !y && (0, i.jsx)(m.Z, {}), P && !L ? (0, i.jsx)(f.Z, {}) : null, !y && (R ? (0, i.jsx)(I.Z, {}) : (0, i.jsx)(C.Z, {}))]
                   });
         })(),
         transparent: s,

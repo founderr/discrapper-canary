@@ -14,15 +14,15 @@ var i,
     g = n(638880),
     f = n(655922),
     _ = n(122810),
-    I = n(833664),
-    E = n(503438),
+    E = n(833664),
+    I = n(503438),
     C = n(420660),
     v = n(74433),
     N = n(906732),
     S = n(812206),
     T = n(933557),
-    x = n(194082),
-    b = n(264165),
+    b = n(194082),
+    x = n(264165),
     A = n(630186),
     Z = n(925329),
     L = n(102172),
@@ -81,7 +81,7 @@ class Q extends a.Component {
         let e;
         let { activity: t } = this.props,
             { timestamps: n } = t;
-        return null == n || !(0, I.Z)(t) || (0, E.Z)(t)
+        return null == n || !(0, E.Z)(t) || (0, I.Z)(t)
             ? null
             : K(
                   (e = (0, _.Z)(t)
@@ -390,7 +390,7 @@ let ee = (e) => {
             { name: c, details: d, assets: h, application_id: m } = i;
         if (null != h && (0, C.Z)(i)) {
             var g;
-            t = (0, l.jsx)(b.Z, {
+            t = (0, l.jsx)(x.Z, {
                 className: F.twitchSectionPreviewWrapper,
                 aspectRatio: 16 / 9,
                 children: (0, l.jsxs)(u.Clickable, {
@@ -478,7 +478,7 @@ let ee = (e) => {
                         (0, l.jsxs)('div', {
                             children: [Y(G.ZP.getName(r)), K(g)]
                         }),
-                        (0, l.jsx)(x.ZP, { size: x.ZP.Sizes.SMALL })
+                        (0, l.jsx)(b.ZP, { size: b.ZP.Sizes.SMALL })
                     ]
                 }),
                 p
@@ -506,8 +506,8 @@ let ee = (e) => {
         if (null == d) return null;
         let _ = S.Z.getApplication(d);
         if (null == _) return null;
-        let I = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
-            E = (0, k.getAssetImage)(_.id, s, 300);
+        let E = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
+            I = (0, k.getAssetImage)(_.id, s, 300);
         return (0, l.jsxs)(X, {
             children: [
                 (0, l.jsxs)('div', {
@@ -525,13 +525,13 @@ let ee = (e) => {
                                 children: _.name
                             })
                         }),
-                        null != I
+                        null != E
                             ? (0, l.jsx)('div', {
                                   className: F.embeddedActivityTimeElapsed,
                                   children: (0, l.jsx)(u.Text, {
                                       color: 'text-muted',
                                       variant: 'text-sm/normal',
-                                      children: (0, l.jsx)(q, { timestamps: I })
+                                      children: (0, l.jsx)(q, { timestamps: E })
                                   })
                               })
                             : null
@@ -540,9 +540,9 @@ let ee = (e) => {
                 (0, l.jsxs)('div', {
                     className: F.embeddedActivityPlayerContainer,
                     children: [
-                        null != E
+                        null != I
                             ? (0, l.jsx)('img', {
-                                  src: E,
+                                  src: I,
                                   alt: _.name,
                                   className: F.embeddedActivityImage
                               })

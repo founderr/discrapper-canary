@@ -19,7 +19,7 @@ function g(e) {
         E = (0, a.yh)(),
         I = (0, u.K)(n, t, g),
         v = (0, u.b)(n, t, f),
-        { reportFalsePositive: p, isReportFalsePositiveLoading: M } = (0, s.$)({
+        { reportFalsePositive: M, isReportFalsePositiveLoading: p } = (0, s.$)({
             onSuccess: () => (0, d.s)(h),
             onError: () => {
                 (0, l.showToast)((0, l.createToast)(c.intl.string(c.t.R0RpRU), l.ToastType.FAILURE));
@@ -38,9 +38,9 @@ function g(e) {
         (0, i.jsx)(d.$, {
             messageId: t,
             channelId: n,
-            isReportFalsePositiveLoading: M,
+            isReportFalsePositiveLoading: p,
             analyticsContext: o.UU.EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW,
-            onConfirmPress: p,
+            onConfirmPress: M,
             attachmentPreview: 1 === I.length && 0 === v.length ? I[0] : void 0,
             embedPreview: 1 === v.length && 0 === I.length ? v[0] : void 0,
             transitionState: m,

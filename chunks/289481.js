@@ -6,14 +6,14 @@ var i = n(200651),
     o = n(752877),
     s = n(442837),
     c = n(481060),
-    u = n(570140),
-    d = n(45114),
+    d = n(570140),
+    u = n(45114),
     m = n(367907),
     h = n(717680),
     f = n(703656),
     p = n(592125),
-    g = n(259580),
-    _ = n(617379),
+    _ = n(259580),
+    g = n(617379),
     E = n(324081),
     C = n(305248),
     I = n(520116),
@@ -23,14 +23,14 @@ var i = n(200651),
 let T = r.memo(function (e) {
     let { channel: t, deleteChannel: n } = e,
         l = r.useRef(null),
-        [[a, s], u] = r.useState([0, 0]),
-        d = t.deleted && a > 0;
+        [[a, s], d] = r.useState([0, 0]),
+        u = t.deleted && a > 0;
     if (t.deleted && 0 === a && null != l.current) {
         let e = l.current.offsetHeight,
             t = l.current.offsetTop,
             n = l.current.parentElement.scrollTop,
             i = n > t ? e - (n - t) : e;
-        u([e, e - i]);
+        d([e, e - i]);
     }
     let { opacity: m, size: h } = (0, c.useSpring)(
             {
@@ -39,8 +39,8 @@ let T = r.memo(function (e) {
                     friction: 18,
                     tension: 200
                 },
-                opacity: d ? 0 : 1,
-                size: d ? 0 : 1,
+                opacity: u ? 0 : 1,
+                size: u ? 0 : 1,
                 onRest: () => {
                     n(t.channelId);
                 }
@@ -50,7 +50,7 @@ let T = r.memo(function (e) {
         f = {
             opacity: m,
             height: h.to((e) =>
-                d
+                u
                     ? (function (e, t, n) {
                           return t + (e - t) * n;
                       })(a, s, e)
@@ -75,8 +75,8 @@ let S = r.memo(function (e) {
                 !t.collapsed &&
                 'messages' === t.type &&
                 0 === t.messages.length &&
-                u.Z.wait(() => {
-                    (0, d.In)(t.channelId, !0), l(t.channelId);
+                d.Z.wait(() => {
+                    (0, u.In)(t.channelId, !0), l(t.channelId);
                 });
         }),
         null == o || !t.hasLoadedAnything)
@@ -99,7 +99,7 @@ let S = r.memo(function (e) {
                 mentionCount: t.mentionCount,
                 toggleCollapsed: a,
                 channelState: t,
-                children: [(0, i.jsx)(_.Z, { channel: o }), (0, i.jsx)(A, { ...e }), 'nsfw' === t.type ? null : (0, i.jsx)(b, { ...e })]
+                children: [(0, i.jsx)(g.Z, { channel: o }), (0, i.jsx)(A, { ...e }), 'nsfw' === t.type ? null : (0, i.jsx)(b, { ...e })]
             }),
             children: t.collapsed
                 ? null
@@ -164,7 +164,7 @@ function b(e) {
                 ...e,
                 className: a()(v.collapseButton, { [v.collapsed]: t.collapsed }),
                 onClick: l,
-                children: (0, i.jsx)(g.Z, {
+                children: (0, i.jsx)(_.Z, {
                     width: 16,
                     height: 16
                 })

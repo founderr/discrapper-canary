@@ -14,15 +14,15 @@ var i = n(200651),
     g = n(131951),
     f = n(699516),
     _ = n(51144),
-    I = n(321488),
-    E = n(417183),
+    E = n(321488),
+    I = n(417183),
     C = n(825682),
     v = n(170245),
     N = n(981631),
     S = n(65154),
     T = n(388032),
-    x = n(401207);
-function b(e, t, n) {
+    b = n(401207);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -98,7 +98,7 @@ class Z extends r.PureComponent {
     render() {
         let { user: e, isFocused: t, activities: n, applicationStream: r, status: l, isMobile: a, giftIntentType: s } = this.props,
             { isActiveRow: c } = this.state;
-        return (0, i.jsx)(E.Z, {
+        return (0, i.jsx)(I.Z, {
             ref: this.peopleListItemRef,
             isFocused: t,
             isActive: c,
@@ -107,7 +107,7 @@ class Z extends r.PureComponent {
             onClick: this.handleOpenPrivateChannel,
             children: (t) =>
                 (0, i.jsxs)('div', {
-                    className: x.listItemContents,
+                    className: b.listItemContents,
                     children: [
                         (0, i.jsx)(v.Z, {
                             user: e,
@@ -125,7 +125,7 @@ class Z extends r.PureComponent {
                             showAccountIdentifier: !0
                         }),
                         (0, i.jsxs)('div', {
-                            className: x.actions,
+                            className: b.actions,
                             children: [
                                 null != s &&
                                     (0, i.jsx)(h.Z, {
@@ -134,13 +134,13 @@ class Z extends r.PureComponent {
                                         analyticsPage: N.ZY5.FRIENDS_LIST,
                                         shouldHighlight: t
                                     }),
-                                (0, i.jsx)(I.Z, {
+                                (0, i.jsx)(E.Z, {
                                     icon: o.ChatIcon,
                                     tooltip: T.intl.string(T.t['g33r/P']),
                                     onClick: this.handleOpenPrivateChannel,
                                     shouldHighlight: t
                                 }),
-                                (0, i.jsx)(I.Z, {
+                                (0, i.jsx)(E.Z, {
                                     icon: o.MoreVerticalIcon,
                                     tooltip: T.intl.string(T.t.UKOtz8),
                                     onClick: this.handleOpenActionsMenu,
@@ -154,15 +154,15 @@ class Z extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'peopleListItemRef', r.createRef()),
-            b(this, 'state', { isActiveRow: !1 }),
-            b(this, 'handleOpenPrivateChannel', (e) => {
+            x(this, 'peopleListItemRef', r.createRef()),
+            x(this, 'state', { isActiveRow: !1 }),
+            x(this, 'handleOpenPrivateChannel', (e) => {
                 let { user: t } = this.props;
                 e.stopPropagation();
                 let n = a().find(p.Z.getMutablePrivateChannels(), (e) => e.type === N.d4z.DM && e.getRecipientId() === t.id);
                 null != n ? (0, m.uL)(N.Z5c.CHANNEL(N.ME, n.id)) : c.Z.openPrivateChannel(t.id);
             }),
-            b(this, 'handleOpenActionsMenu', (e) => {
+            x(this, 'handleOpenActionsMenu', (e) => {
                 let { user: t } = this.props;
                 (0, d.vq)(
                     e,

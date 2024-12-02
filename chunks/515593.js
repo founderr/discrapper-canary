@@ -1,27 +1,27 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return o;
     }
 });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(442837),
-    a = n(481060),
-    s = n(607070),
-    o = n(594174),
-    l = n(801719);
-function u(e) {
+var l = n(442837),
+    s = n(481060),
+    r = n(607070),
+    a = n(594174),
+    C = n(801719);
+function o(e) {
     let { size: t, className: n } = e,
-        u = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
-        c = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
-        d = (0, l.Z)(t);
-    return null == d
+        o = (0, l.e7)([a.default], () => a.default.getCurrentUser()),
+        d = (0, l.e7)([r.Z], () => r.Z.useReducedMotion),
+        u = (0, C.Z)(t);
+    return null == u
         ? null
-        : (0, r.jsx)(a.AnimatedAvatar, {
-              'aria-label': null == u ? void 0 : u.username,
+        : (0, i.jsx)(s.AnimatedAvatar, {
+              'aria-label': null == o ? void 0 : o.username,
               size: t,
               className: n,
-              src: null == u ? void 0 : u.getAvatarURL(void 0, (0, a.getAvatarSize)(t), !c),
-              avatarDecoration: d
+              src: null == o ? void 0 : o.getAvatarURL(void 0, (0, s.getAvatarSize)(t), !d),
+              avatarDecoration: u
           });
 }

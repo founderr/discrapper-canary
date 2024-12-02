@@ -23,7 +23,7 @@ function u(e, t) {
     let _ = f ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
     (0, i.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('29549'), n.e('89675')]).then(n.bind(n, 146747));
+            let { default: e } = await n.e('89675').then(n.bind(n, 146747));
             return (t) =>
                 (0, r.jsx)(e, {
                     ...d,

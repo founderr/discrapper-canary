@@ -1,33 +1,33 @@
-n.d(e, {
+n.d(t, {
     Z: function () {
-        return E;
+        return i;
     }
 }),
     n(47120);
 var r = n(192379);
-function E(t) {
-    var e;
-    let { stepConfigs: n, breadcrumbs: E } = t,
-        [i, u] = r.useState(null === (e = n[0]) || void 0 === e ? void 0 : e.key),
-        S = r.useRef(null);
+function i(e) {
+    var t;
+    let { stepConfigs: n, breadcrumbs: i } = e,
+        [a, s] = r.useState(null === (t = n[0]) || void 0 === t ? void 0 : t.key),
+        o = r.useRef(null);
     r.useEffect(() => {
-        S.current = i;
-    }, [S, i]);
-    let o = n.map((t) => t.key).filter((t) => null != t);
+        o.current = a;
+    }, [o, a]);
+    let l = n.map((e) => e.key).filter((e) => null != e);
     return {
-        steps: o,
-        step: i,
-        setStep: u,
+        steps: l,
+        step: a,
+        setStep: s,
         breadcrumbsData: n
-            .filter((t) => {
-                var e;
-                return null != t.key && (null == t ? void 0 : null === (e = t.options) || void 0 === e ? void 0 : e.useBreadcrumbLabel) != null;
+            .filter((e) => {
+                var t;
+                return null != e.key && (null == e ? void 0 : null === (t = e.options) || void 0 === t ? void 0 : t.useBreadcrumbLabel) != null;
             })
-            .map((t) => ({
-                id: t.key,
-                useBreadcrumbLabel: t.options.useBreadcrumbLabel
+            .map((e) => ({
+                id: e.key,
+                useBreadcrumbLabel: e.options.useBreadcrumbLabel
             }))
-            .sort((t, e) => (null != E ? E.indexOf(t.id) - E.indexOf(e.id) : 0)),
-        previousStepRef: S
+            .sort((e, t) => (null != i ? i.indexOf(e.id) - i.indexOf(t.id) : 0)),
+        previousStepRef: o
     };
 }

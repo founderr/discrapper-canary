@@ -18,15 +18,15 @@ var i = n(200651),
     g = n(734934),
     f = n(158238),
     _ = n(300284),
-    I = n(680295),
-    E = n(785717),
+    E = n(680295),
+    I = n(785717),
     C = n(816988),
     v = n(687158),
     N = n(899007),
     S = n(648052),
     T = n(867176),
-    x = n(537006),
-    b = n(483424),
+    b = n(537006),
+    x = n(483424),
     A = n(681837),
     Z = n(502762),
     L = n(530),
@@ -163,7 +163,7 @@ function ee(e) {
         ee = __OVERLAY__,
         et = (0, v.ZP)(n.id),
         { analyticsLocations: en } = (0, m.ZP)(h.Z.ACCOUNT_PROFILE_POPOUT),
-        ei = (0, E.ZB)({
+        ei = (0, I.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
             userId: n.id
         }),
@@ -303,7 +303,7 @@ function ee(e) {
         };
     return (0, i.jsx)(m.Gt, {
         value: en,
-        children: (0, i.jsx)(E.Mt, {
+        children: (0, i.jsx)(I.Mt, {
             value: ei,
             children: (0, i.jsx)(c.Dialog, {
                 ref: er,
@@ -337,7 +337,7 @@ function ee(e) {
                             ]
                         }),
                         (null == et ? void 0 : et.profileEffectId) != null &&
-                            (0, i.jsx)(I.Z, {
+                            (0, i.jsx)(E.Z, {
                                 profileEffectId: null == et ? void 0 : et.profileEffectId,
                                 isHovering: el
                             }),
@@ -373,11 +373,11 @@ function ee(e) {
                                     onClose: k
                                 }),
                                 em &&
-                                    (0, i.jsx)(x.Z, {
+                                    (0, i.jsx)(b.Z, {
                                         isPremiumUser: ep,
                                         onInteraction: k
                                     }),
-                                (0, i.jsx)(b.Z, {
+                                (0, i.jsx)(x.Z, {
                                     user: n,
                                     currentUser: n,
                                     onClose: k

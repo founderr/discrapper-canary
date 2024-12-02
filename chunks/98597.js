@@ -6,10 +6,10 @@ n.d(t, {
         return L;
     },
     eP: function () {
-        return j;
+        return P;
     },
     hR: function () {
-        return P;
+        return j;
     },
     jo: function () {
         return A;
@@ -46,7 +46,7 @@ function T(e, t, n) {
 function A(e, t) {
     return null == t ? y.containerDefault : e > t ? y.containerDragAfter : y.containerDragBefore;
 }
-function P(e) {
+function j(e) {
     let { channel: t, disableManageChannels: n, tabIndex: i, forceShowButtons: l, hasChannelInfo: r = !1 } = e;
     if ((0, d.e7)([b.Z, E.Z], () => n || E.Z.getGuildId() === Z.I_8 || (!b.Z.can(Z.Plq.MANAGE_CHANNELS, t) && !b.Z.can(Z.Plq.MANAGE_ROLES, t) && !b.Z.can(Z.Plq.MANAGE_WEBHOOKS, t)) || ((0, v.r8)(t.type) && !b.Z.can(Z.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !b.Z.can(Z.Plq.CONNECT, t)) || !v.dF.has(t.type))) return null;
     function a() {
@@ -74,7 +74,7 @@ function P(e) {
         }
     });
 }
-function j(e) {
+function P(e) {
     let { channel: t, isDefaultChannel: i = !1, locked: l, tabIndex: r, forceShowButtons: a, hasChannelInfo: s = !1 } = e,
         c = (0, d.e7)([I.Z], () => I.Z.getGuild(t.getGuildId())),
         p = (0, d.e7)([C.Z], () => C.Z.getStageInstanceByChannel(t.id), [t.id]),
@@ -169,10 +169,10 @@ function M(e) {
 }
 class L extends (a = s.PureComponent) {
     renderEditButton() {
-        return (0, o.jsx)(P, { ...this.props });
+        return (0, o.jsx)(j, { ...this.props });
     }
     renderInviteButton() {
-        return (0, o.jsx)(j, { ...this.props });
+        return (0, o.jsx)(P, { ...this.props });
     }
     renderRemoveSuggestionButton() {
         return (0, o.jsx)(R, { ...this.props });

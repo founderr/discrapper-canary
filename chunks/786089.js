@@ -14,15 +14,15 @@ var i = n(200651),
     g = n(70097),
     f = n(594174),
     _ = n(626135),
-    I = n(617136),
-    E = n(113434),
+    E = n(617136),
+    I = n(113434),
     C = n(497505),
     v = n(475595),
     N = n(352084),
     S = n(685613),
     T = n(981631),
-    x = n(388032),
-    b = n(625844);
+    b = n(388032),
+    x = n(625844);
 t.Z = (0, r.memo)(function (e) {
     var t, n, l, A, Z;
     let { quest: L } = e,
@@ -35,7 +35,7 @@ t.Z = (0, r.memo)(function (e) {
         U = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
         { ref: G, height: B = 0 } = (0, u.Z)(),
         H = (0, h.ZP)(),
-        V = (0, E.B6)(null === (t = L.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
+        V = (0, I.B6)(null === (t = L.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
             month: 'numeric',
             day: 'numeric'
         }),
@@ -61,7 +61,7 @@ t.Z = (0, r.memo)(function (e) {
             P(!0),
                 _.default.track(T.rMx.QUEST_HOVER, {
                     quest_id: L.id,
-                    ...(0, I.mH)(C.jn.TROPHY_CASE_CARD)
+                    ...(0, E.mH)(C.jn.TROPHY_CASE_CARD)
                 });
         },
         et = () => P(!1),
@@ -83,13 +83,13 @@ t.Z = (0, r.memo)(function (e) {
                   onBlur: et,
                   onMouseEnter: ee,
                   onMouseLeave: et,
-                  className: a()(b.container, { [b.hovered]: y }),
+                  className: a()(x.container, { [x.hovered]: y }),
                   children: [
                       null != U &&
                           W &&
                           (0, i.jsx)('div', {
                               ref: k,
-                              className: b.decoWrapper,
+                              className: x.decoWrapper,
                               style: { top: O },
                               children: (0, i.jsx)(m.Z, {
                                   avatarDecorationOverride: q,
@@ -98,11 +98,11 @@ t.Z = (0, r.memo)(function (e) {
                               })
                           }),
                       Y
-                          ? (0, i.jsx)(N.Z, { className: b.image })
+                          ? (0, i.jsx)(N.Z, { className: x.image })
                           : J.isAnimated
                             ? (0, i.jsx)(i.Fragment, {
                                   children: (0, i.jsx)(g.Z, {
-                                      className: b.assetBlurred,
+                                      className: x.assetBlurred,
                                       autoPlay: !1,
                                       children: (0, i.jsx)('source', {
                                           src: J.url,
@@ -112,42 +112,42 @@ t.Z = (0, r.memo)(function (e) {
                                   })
                               })
                             : (0, i.jsx)('img', {
-                                  className: b.image,
+                                  className: x.image,
                                   src: J.url,
                                   alt: L.config.messages.questName,
                                   onError: () => en(J.url)
                               }),
                       (0, i.jsx)('div', {
-                          className: a()(b.overlay, {
-                              [b.darkThemeGradient]: X,
-                              [b.lightThemeGradient]: !X
+                          className: a()(x.overlay, {
+                              [x.darkThemeGradient]: X,
+                              [x.lightThemeGradient]: !X
                           })
                       }),
                       (0, i.jsx)('div', {
                           ref: w,
-                          className: b.logoContainer,
+                          className: x.logoContainer,
                           style: { transform: 'translateY(-'.concat($, 'px)') },
                           children: (0, i.jsx)(S.ZP, {
-                              logotypeClassName: a()(b.logo, { [b.logoWithCosponsor]: Q }),
+                              logotypeClassName: a()(x.logo, { [x.logoWithCosponsor]: Q }),
                               quest: L,
                               withGameTile: !1
                           })
                       }),
                       (0, i.jsxs)('div', {
                           ref: G,
-                          className: b.details,
+                          className: x.details,
                           children: [
                               (0, i.jsx)(d.Heading, {
-                                  className: b.title,
+                                  className: x.title,
                                   variant: 'heading-md/semibold',
                                   color: 'always-white',
-                                  children: x.intl.format(x.t.EAYZAg, { questName: L.config.messages.questName })
+                                  children: b.intl.format(b.t.EAYZAg, { questName: L.config.messages.questName })
                               }),
                               (0, i.jsx)(d.Text, {
                                   variant: 'text-sm/medium',
                                   color: X ? 'text-muted' : 'always-white',
                                   style: { opacity: X ? 1 : 0.75 },
-                                  children: x.intl.format(x.t.kXVcV1, {
+                                  children: b.intl.format(b.t.kXVcV1, {
                                       reward: z.name,
                                       claimedDate: V
                                   })

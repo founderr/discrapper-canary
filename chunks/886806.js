@@ -10,11 +10,11 @@ var i,
     d = n(388905),
     h = n(17894),
     g = n(108427),
-    m = n(314897),
-    f = n(626135),
-    p = n(981631),
-    x = n(388032),
-    _ = n(823793),
+    p = n(314897),
+    m = n(626135),
+    f = n(981631),
+    _ = n(388032),
+    x = n(823793),
     E = n(232186);
 function I(e, t, n) {
     return (
@@ -39,19 +39,19 @@ class v extends (i = s.PureComponent) {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(375673),
-                    className: a()(_.image, E.marginBottom20)
+                    className: a()(x.image, E.marginBottom20)
                 }),
                 (0, r.jsx)(d.Dx, {
                     className: E.marginBottom8,
-                    children: x.intl.string(x.t.PCgG39)
+                    children: _.intl.string(_.t.PCgG39)
                 }),
                 (0, r.jsx)(d.DK, {
                     className: E.marginBottom40,
-                    children: x.intl.string(x.t.tQpeAw)
+                    children: _.intl.string(_.t.tQpeAw)
                 }),
                 (0, r.jsx)(d.zx, {
                     onClick: this.handleLogin,
-                    children: x.intl.string(x.t.dKhVQE)
+                    children: _.intl.string(_.t.dKhVQE)
                 })
             ]
         });
@@ -61,15 +61,15 @@ class v extends (i = s.PureComponent) {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(73962),
-                    className: a()(_.image, E.marginBottom20)
+                    className: a()(x.image, E.marginBottom20)
                 }),
                 (0, r.jsx)(d.Dx, {
                     className: E.marginBottom40,
-                    children: x.intl.string(x.t.dAfGb2)
+                    children: _.intl.string(_.t.dAfGb2)
                 }),
                 (0, r.jsx)(d.zx, {
                     onClick: this.handleOpenApp,
-                    children: x.intl.string(x.t.uJWIj4)
+                    children: _.intl.string(_.t.uJWIj4)
                 })
             ]
         });
@@ -79,15 +79,15 @@ class v extends (i = s.PureComponent) {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(892235),
-                    className: a()(_.image, E.marginBottom20)
+                    className: a()(x.image, E.marginBottom20)
                 }),
                 (0, r.jsx)(d.Dx, {
                     className: E.marginBottom8,
-                    children: x.intl.string(x.t['0c8+5u'])
+                    children: _.intl.string(_.t['0c8+5u'])
                 }),
                 (0, r.jsx)(d.DK, {
                     className: E.marginBottom40,
-                    children: x.intl.string(x.t.ULTCBA)
+                    children: _.intl.string(_.t.ULTCBA)
                 }),
                 (0, r.jsx)(d.zx, {
                     submitting: !0,
@@ -108,19 +108,19 @@ class v extends (i = s.PureComponent) {
             }),
             I(this, 'handleLogin', () => {
                 let { transitionTo: e } = this.props;
-                e(p.Z5c.LOGIN);
+                e(f.Z5c.LOGIN);
             }),
             I(this, 'handleOpenApp', () => {
                 let { verifyingUserId: e } = this.props;
-                f.default.track(p.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: e }), (0, h.Z)('verify_email');
+                m.default.track(f.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: e }), (0, h.Z)('verify_email');
             });
     }
 }
 I(v, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }),
-    (t.Z = o.ZP.connectStores([m.default], () => ({
-        verifyFailed: m.default.didVerifyFail(),
-        verifyErrors: m.default.getVerifyErrors(),
-        verifySucceeded: m.default.didVerifySucceed(),
-        fingerprint: m.default.getFingerprint(),
-        verifyingUserId: m.default.getVerifyingUserId()
+    (t.Z = o.ZP.connectStores([p.default], () => ({
+        verifyFailed: p.default.didVerifyFail(),
+        verifyErrors: p.default.getVerifyErrors(),
+        verifySucceeded: p.default.didVerifySucceed(),
+        fingerprint: p.default.getFingerprint(),
+        verifyingUserId: p.default.getVerifyingUserId()
     }))(v));

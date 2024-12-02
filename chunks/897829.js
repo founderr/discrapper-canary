@@ -1,18 +1,18 @@
-n.d(e, {
+n.d(t, {
     Z: function () {
-        return S;
+        return o;
     }
 });
 var r = n(192379),
-    E = n(442837),
-    i = n(355467),
-    u = n(78839);
-function S() {
-    let t = (0, E.e7)([u.ZP], () => u.ZP.hasFetchedSubscriptions());
+    i = n(442837),
+    a = n(355467),
+    s = n(78839);
+function o() {
+    let e = (0, i.e7)([s.ZP], () => s.ZP.hasFetchedSubscriptions());
     return (
         r.useEffect(() => {
-            !t && (0, i.jg)();
-        }, [t]),
-        t
+            !e && (0, a.jg)();
+        }, [e]),
+        e
     );
 }

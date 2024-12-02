@@ -1,79 +1,79 @@
 t.d(n, {
     x: function () {
-        return I;
+        return v;
     }
 });
 var i = t(200651),
-    a = t(192379),
-    r = t(512722),
-    o = t.n(r),
-    l = t(399606),
-    s = t(607070),
+    l = t(192379),
+    s = t(512722),
+    a = t.n(s),
+    r = t(399606),
+    o = t(607070),
     d = t(597688),
     c = t(1870),
     u = t(429368),
-    f = t(624377),
-    p = t(530618),
-    m = t(331042),
-    _ = t(372654),
-    g = t(987209),
-    b = t(563132),
-    h = t(179118),
-    x = t(614277),
-    C = t(698708);
-function v(e) {
-    let { handleClose: n, confettiCanvas: t, hideConfetti: a = !1, analyticsLocations: r } = e,
-        s = (0, l.e7)([c.Z], () => c.Z.purchases),
-        { skusById: f, selectedSkuId: p, application: _ } = (0, b.usePaymentContext)(),
-        g = (0, l.e7)([d.Z], () => d.Z.getProduct(p)),
-        h = (0, u.o)(g, s);
-    o()(null != p, 'Expected selectedSkuId'), o()(null != _, 'Expected application');
-    let v = f[p];
-    return (o()(null != v, 'Expected sku'), null == g)
+    h = t(624377),
+    f = t(530618),
+    x = t(331042),
+    C = t(372654),
+    m = t(987209),
+    g = t(563132),
+    p = t(179118),
+    S = t(614277),
+    j = t(698708);
+function E(e) {
+    let { handleClose: n, confettiCanvas: t, hideConfetti: l = !1, analyticsLocations: s } = e,
+        o = (0, r.e7)([c.Z], () => c.Z.purchases),
+        { skusById: h, selectedSkuId: f, application: C } = (0, g.usePaymentContext)(),
+        m = (0, r.e7)([d.Z], () => d.Z.getProduct(f)),
+        p = (0, u.o)(m, o);
+    a()(null != f, 'Expected selectedSkuId'), a()(null != C, 'Expected application');
+    let E = h[f];
+    return (a()(null != E, 'Expected sku'), null == m)
         ? null
-        : (0, i.jsxs)(x.C3, {
+        : (0, i.jsxs)(S.C3, {
               children: [
-                  (0, i.jsx)(C.Z, {}),
-                  (0, i.jsx)(m.CollectiblesCollectedModalInner, {
-                      product: g,
+                  (0, i.jsx)(j.Z, {}),
+                  (0, i.jsx)(x.CollectiblesCollectedModalInner, {
+                      product: m,
                       onClose: n,
                       confettiCanvas: t,
-                      analyticsLocations: r,
-                      hideConfetti: a,
-                      selectedVariantIndex: h
+                      analyticsLocations: s,
+                      hideConfetti: l,
+                      selectedVariantIndex: p
                   })
               ]
           });
 }
-function I(e) {
-    let { isGift: n, giftCode: t, selectedGiftStyle: r, hasSentMessage: o, giftRecipient: c, giftMessageError: u, isSendingMessage: m } = (0, g.wD)(),
-        x = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
-        C = a.useRef(null),
-        { selectedSkuId: I } = (0, b.usePaymentContext)(),
-        S = (0, l.e7)([d.Z], () => d.Z.getProduct(I)),
-        { confettiColors: T } = (0, f.Z)(null == S ? void 0 : S.styles);
+function v(e) {
+    let { isGift: n, giftCode: t, selectedGiftStyle: s, hasSentMessage: a, giftRecipient: c, giftMessageError: u, isSendingMessage: x } = (0, m.wD)(),
+        S = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
+        j = l.useRef(null),
+        { selectedSkuId: v } = (0, g.usePaymentContext)(),
+        I = (0, r.e7)([d.Z], () => d.Z.getProduct(v)),
+        { confettiColors: T } = (0, h.Z)(null == I ? void 0 : I.styles);
     return n
         ? (0, i.jsxs)('div', {
-              ref: C,
+              ref: j,
               children: [
-                  (0, i.jsx)(h.Z, {
+                  (0, i.jsx)(p.Z, {
                       giftCode: t,
                       onClose: e.handleClose,
-                      selectedGiftStyle: r,
-                      hasSentMessage: o,
+                      selectedGiftStyle: s,
+                      hasSentMessage: a,
                       giftRecipient: c,
                       giftMessageError: u,
-                      isSendingMessage: m
+                      isSendingMessage: x
                   }),
                   !e.hideConfetti &&
-                      !x &&
-                      (0, i.jsx)(p.Z, {
-                          confettiTarget: C.current,
+                      !S &&
+                      (0, i.jsx)(f.Z, {
+                          confettiTarget: j.current,
                           confettiCanvas: e.confettiCanvas,
-                          sprites: (0, _.vK)(null == S ? void 0 : S.categorySkuId),
+                          sprites: (0, C.vK)(null == I ? void 0 : I.categorySkuId),
                           colors: null == T ? void 0 : T.map((e) => e.toHexString())
                       })
               ]
           })
-        : (0, i.jsx)(v, { ...e });
+        : (0, i.jsx)(E, { ...e });
 }

@@ -1,7 +1,7 @@
 n.r(r),
     n.d(r, {
         StickerPackViewAllModalFooter: function () {
-            return B;
+            return W;
         },
         default: function () {
             return O;
@@ -33,19 +33,19 @@ var t = n(200651),
     I = n(981631),
     k = n(388032),
     v = n(9520);
-let j = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSIONS),
-    b = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_PADDING),
-    y = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_MARGIN),
-    A = j + 2 * b,
+let y = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSIONS),
+    j = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_PADDING),
+    b = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_MARGIN),
+    A = y + 2 * j,
     T = a()(N.pF, 250),
     R = () => {
         T.cancel();
     },
-    M = (e) => {
+    B = (e) => {
         let { visibleRowIndex: r, columnIndex: n } = e;
         T.cancel(), (0, N.Mf)(n, r, m.u.MOUSE_EVENT);
     },
-    W = (e) => {
+    M = (e) => {
         let { stickerPack: r, width: n, hasHeaderImage: o, isScrolling: s, onInspect: a } = e,
             c = l.useMemo(() => [(0, E.z)(r)], [r]),
             d = (0, N.Y6)((e) => e.inspectedStickerPosition),
@@ -55,7 +55,7 @@ let j = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
                 gutterWidth: p
             } = (0, S.el)({
                 stickersCategories: c,
-                stickerNodeMargin: y,
+                stickerNodeMargin: b,
                 stickerNodeWidth: A,
                 listWidth: n
             });
@@ -92,8 +92,8 @@ let j = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
                                         onInspect: a,
                                         rowIndex: r,
                                         stickerDescriptors: m[r],
-                                        stickerPadding: b,
-                                        stickerSize: j,
+                                        stickerPadding: j,
+                                        stickerSize: y,
                                         isDisplayingIndividualStickers: !0,
                                         checkSendability: !1
                                     },
@@ -106,7 +106,7 @@ let j = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
             ]
         });
     },
-    B = (e) => {
+    W = (e) => {
         let { onClose: r, stickerPack: n } = e;
         (0, S.fP)();
         let l = (0, c.e7)([x.Z], () => x.Z.isPremiumPack(n.id));
@@ -181,14 +181,14 @@ function O(e) {
                         ref: a,
                         children:
                             null != i &&
-                            (0, t.jsx)(W, {
+                            (0, t.jsx)(M, {
                                 stickerPack: n,
                                 hasHeaderImage: !0,
-                                onInspect: M,
+                                onInspect: B,
                                 width: i
                             })
                     }),
-                    footer: (0, t.jsx)(B, {
+                    footer: (0, t.jsx)(W, {
                         onClose: r,
                         stickerPack: n
                     }),

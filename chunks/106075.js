@@ -18,8 +18,8 @@ var i = n(200651),
     g = n(750910),
     f = n(28494),
     _ = n(29086),
-    I = n(590771),
-    E = n(273596),
+    E = n(590771),
+    I = n(273596),
     C = n(128449),
     v = n(49898),
     N = n(388032),
@@ -27,9 +27,9 @@ var i = n(200651),
 function T() {
     let e = r.useRef((0, m.PM)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: T } = (0, a.M)(),
-        { tabs: x, selectedTab: b, setSelectedTab: A } = (0, _.Y)(),
-        Z = (0, m.lg)(b),
-        L = !C.MU.has(b),
+        { tabs: b, selectedTab: x, setSelectedTab: A } = (0, _.Y)(),
+        Z = (0, m.lg)(x),
+        L = !C.MU.has(x),
         { searchQuery: y, onSearchTextChange: P, onClearSearch: O, onSearchSubmit: R, isSearchVisible: j } = (0, f.H)({ loadId: e.current }),
         D = p.Z.useField('searchBarState'),
         {
@@ -53,12 +53,12 @@ function T() {
         H = r.useMemo(
             () =>
                 j
-                    ? x.filter((e) => {
+                    ? b.filter((e) => {
                           let { id: t } = e;
                           return !C.MU.has(t);
                       })
-                    : x,
-            [x, j]
+                    : b,
+            [b, j]
         ),
         V = r.useRef(new h.Z(Z)),
         { onGuildCardSeen: F, onGuildCardClick: z } = (0, g.H)({
@@ -71,7 +71,7 @@ function T() {
         }, [Z]),
         r.useEffect(() => {
             T();
-        }, [b, T]),
+        }, [x, T]),
         r.useEffect(() => {
             !j && u.Z.setState({ scrollPosition: null });
         }, [j]),
@@ -92,7 +92,7 @@ function T() {
                             (0, i.jsx)(c.Z, {
                                 className: U,
                                 tabs: H,
-                                selectedTab: j ? null : b,
+                                selectedTab: j ? null : x,
                                 onTabSelect: B,
                                 onAvailableWidthChange: M
                             }),
@@ -117,13 +117,13 @@ function T() {
                     ]
                 }),
                 j
-                    ? (0, i.jsx)(E.Z, {
+                    ? (0, i.jsx)(I.Z, {
                           loadId: e.current,
                           onGuildCardClick: z,
                           onGuildCardSeen: F
                       })
-                    : (0, i.jsx)(I.Z, {
-                          selectedTab: b,
+                    : (0, i.jsx)(E.Z, {
+                          selectedTab: x,
                           onScroll: t,
                           onGuildCardClick: z,
                           onGuildCardSeen: F

@@ -9,7 +9,7 @@ t.d(n, {
         return r;
     },
     m1: function () {
-        return u;
+        return c;
     },
     uc: function () {
         return a;
@@ -78,7 +78,7 @@ let i = (0, o.Z)({
             }
         ]
     }),
-    u = (0, o.Z)({
+    c = (0, o.Z)({
         kind: 'user',
         id: '2024-07_ctp_payment_flow_started_uneven_buckets_',
         label: 'CTP payment flow started - A/A test - Uneven buckets',

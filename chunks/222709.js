@@ -5,19 +5,19 @@ var i = n(200651),
     o = n(528963),
     s = n(143740),
     c = n(528144),
-    u = n(212342),
-    d = n(388032),
+    d = n(212342),
+    u = n(388032),
     m = n(869361);
 t.Z = (e) => {
     let { channelId: t, messageId: n } = e,
-        h = (0, l.e7)([u.Z], () => u.Z.shouldShowBump(n), [n]),
+        h = (0, l.e7)([d.Z], () => d.Z.shouldShowBump(n), [n]),
         f = r.useCallback(() => {
             o.Z.dismissPublishBump(n), (0, s.Z)(t, n);
         }, [t, n]),
         p = r.useCallback(() => {
             o.Z.dismissPublishBump(n);
         }, [n]),
-        g = r.useCallback(() => {
+        _ = r.useCallback(() => {
             o.Z.permanentlyHidePublishBump(t);
         }, [t]);
     return h
@@ -35,7 +35,7 @@ t.Z = (e) => {
                           (0, i.jsx)(c.Z, {
                               className: m.tagline,
                               size: c.Z.Sizes.SIZE_14,
-                              children: d.intl.string(d.t.hasZoa)
+                              children: u.intl.string(u.t.hasZoa)
                           }),
                           (0, i.jsx)(a.Button, {
                               color: a.Button.Colors.LINK,
@@ -43,7 +43,7 @@ t.Z = (e) => {
                               size: a.Button.Sizes.MIN,
                               className: m.publish,
                               onClick: f,
-                              children: d.intl.string(d.t['MFGE5+'])
+                              children: u.intl.string(u.t['MFGE5+'])
                           }),
                           (0, i.jsx)(a.Clickable, {
                               onClick: p,
@@ -60,8 +60,8 @@ t.Z = (e) => {
                       className: m.hidePermanently,
                       variant: 'text-sm/normal',
                       children: (0, i.jsx)(a.Clickable, {
-                          onClick: g,
-                          children: d.intl.string(d.t.efSkDg)
+                          onClick: _,
+                          children: u.intl.string(u.t.efSkDg)
                       })
                   })
               ]

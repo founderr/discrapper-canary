@@ -13,8 +13,8 @@ var i = n(200651),
     g = n(836768),
     f = n(766219),
     _ = n(749681),
-    I = n(49898),
-    E = n(46140),
+    E = n(49898),
+    I = n(46140),
     C = n(388032),
     v = n(729922);
 function N(e) {
@@ -24,11 +24,11 @@ function N(e) {
             () =>
                 (function (e) {
                     switch (e) {
-                        case I.F$.SERVERS:
+                        case E.F$.SERVERS:
                             return (0, i.jsx)(o.ServerIcon, { color: 'currentColor' });
-                        case I.F$.APPS:
+                        case E.F$.APPS:
                             return (0, i.jsx)(o.AppsIcon, { color: 'currentColor' });
-                        case I.F$.QUESTS:
+                        case E.F$.QUESTS:
                             return (0, i.jsx)(o.QuestsIcon, { color: 'currentColor' });
                     }
                 })(t),
@@ -38,20 +38,20 @@ function N(e) {
         C = n === t,
         N = r.useCallback(() => {
             switch (t) {
-                case I.F$.QUESTS:
+                case E.F$.QUESTS:
                     return (
                         C && (0, p.B)(),
                         (0, _.u)({
-                            tab: I.F$.QUESTS,
-                            location: E.dr.DISCOVERY_SIDEBAR,
+                            tab: E.F$.QUESTS,
+                            location: I.dr.DISCOVERY_SIDEBAR,
                             questContent: s.j.DISCOVERY_SIDEBAR
                         })
                     );
-                case I.F$.APPS:
+                case E.F$.APPS:
                     if (!C) return (0, u.XL)();
                     (0, d.x)(), (0, _.u)({ tab: t });
                     return;
-                case I.F$.SERVERS:
+                case E.F$.SERVERS:
                     if (!C) return (0, _.u)({ tab: t });
                     (0, h.V)(), (0, m.O)();
                     return;
@@ -89,7 +89,7 @@ t.Z = function () {
             }),
             (0, i.jsx)('nav', {
                 className: v.nav,
-                children: I.mc.map((t) => (t !== I.F$.APPS || e ? (0, i.jsx)(N, { tab: t }, t) : null))
+                children: E.mc.map((t) => (t !== E.F$.APPS || e ? (0, i.jsx)(N, { tab: t }, t) : null))
             })
         ]
     });

@@ -5,14 +5,14 @@ var i = n(200651),
     o = n(913527),
     s = n.n(o),
     c = n(442837),
-    u = n(570140),
-    d = n(821849),
+    d = n(570140),
+    u = n(821849),
     m = n(131388),
     h = n(906732),
     f = n(305325),
     p = n(246364),
-    g = n(937111),
-    _ = n(281956),
+    _ = n(937111),
+    g = n(281956),
     E = n(41776),
     C = n(738737),
     I = n(509545),
@@ -30,8 +30,8 @@ var i = n(200651),
 t.Z = (e, t, n, l) => {
     let o;
     let L = (0, c.e7)([E.Z], () => E.Z.isLurking(t)),
-        y = (0, _.J)(t),
-        O = (0, c.e7)([g.Z], () => (null != t ? g.Z.getRequest(t) : null)),
+        y = (0, g.J)(t),
+        O = (0, c.e7)([_.Z], () => (null != t ? _.Z.getRequest(t) : null)),
         M = (null == O ? void 0 : O.applicationStatus) === p.wB.SUBMITTED,
         k = null == e ? void 0 : e.subscription_plans[0],
         D = null == k ? void 0 : k.id,
@@ -53,8 +53,8 @@ t.Z = (e, t, n, l) => {
     r.useEffect(() => {
         B &&
             null != U &&
-            u.Z.wait(() => {
-                (0, d.GZ)(U);
+            d.Z.wait(() => {
+                (0, u.GZ)(U);
             });
     }, [B, U]);
     let ee = r.useCallback(async () => {

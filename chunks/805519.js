@@ -12,13 +12,13 @@ var i = n(192379),
     o = n(937111),
     s = n(430824),
     c = n(496675),
-    u = n(709054),
-    d = n(981631);
+    d = n(709054),
+    u = n(981631);
 function m(e) {
     let [t, n] = i.useState(!1),
         [m, h] = i.useState(!1),
-        f = u.default.cast(e),
-        { joinRequest: p, guild: g } = (0, r.cj)([a.Z, o.Z, s.Z, c.Z], () => {
+        f = d.default.cast(e),
+        { joinRequest: p, guild: _ } = (0, r.cj)([a.Z, o.Z, s.Z, c.Z], () => {
             var e;
             let t = a.Z.getRequest(f);
             if (null == t)
@@ -30,14 +30,14 @@ function m(e) {
             let n = null !== (e = s.Z.getGuild(t.guildId)) && void 0 !== e ? e : o.Z.getJoinRequestGuild(t.guildId);
             return {
                 joinRequest: t,
-                isModmin: null != n && c.Z.can(d.Plq.KICK_MEMBERS, n),
+                isModmin: null != n && c.Z.can(u.Plq.KICK_MEMBERS, n),
                 guild: n
             };
         });
     return (
         i.useEffect(() => {
-            null == g && !m && (h(!0), l.Z.fetchRequestToJoinGuilds());
-        }, [g, m]),
+            null == _ && !m && (h(!0), l.Z.fetchRequestToJoinGuilds());
+        }, [_, m]),
         i.useEffect(() => {
             null == p &&
                 (n(!0),
@@ -48,7 +48,7 @@ function m(e) {
         {
             loading: t,
             joinRequest: p,
-            joinRequestGuild: g
+            joinRequestGuild: _
         }
     );
 }

@@ -1,66 +1,66 @@
-t.d(n, {
+i.d(e, {
     CW: function () {
-        return u;
+        return d;
     },
     G9: function () {
-        return x;
-    },
-    K9: function () {
         return f;
     },
+    K9: function () {
+        return x;
+    },
     q$: function () {
-        return h;
+        return j;
     },
     r0: function () {
-        return d;
+        return u;
     },
     s$: function () {
         return m;
     }
 });
-var i = t(200651);
-t(192379);
-var r = t(120356),
-    l = t.n(r),
-    a = t(481060),
-    s = t(41959),
-    o = t(245561),
-    c = t(76962);
-let u = (e) => {
-        let { application: n, asset: t, className: r, ...l } = e;
-        return (0, i.jsx)(s.Z, {
-            application: n,
+var t = i(200651);
+i(192379);
+var r = i(120356),
+    l = i.n(r),
+    a = i(481060),
+    s = i(41959),
+    o = i(245561),
+    c = i(76962);
+let d = (n) => {
+        let { application: e, asset: i, className: r, ...l } = n;
+        return (0, t.jsx)(s.Z, {
+            application: e,
             size: s.H.MEDIUM,
-            asset: t,
+            asset: i,
             className: r,
             ...l
         });
     },
-    d = (e) => {
-        let { children: n, className: t, id: r, ...s } = e;
-        return (0, i.jsx)(a.Heading, {
-            className: l()(c.header, t),
+    u = (n) => {
+        let { children: e, className: i, id: r, ...s } = n;
+        return (0, t.jsx)(a.Heading, {
+            className: l()(c.header, i),
             variant: 'heading-xl/extrabold',
             id: r,
             ...s,
-            children: n
+            children: e
         });
     };
 function m() {
-    return (0, i.jsx)('hr', { className: c.divider });
+    return (0, t.jsx)('hr', { className: c.divider });
 }
-let f = (e) => {
-        let { className: n, title: t, description: r, ...l } = e;
-        return (0, i.jsxs)('div', {
-            className: n,
+let x = (n) => {
+        let { className: e, title: i, description: r, ...l } = n;
+        return (0, t.jsxs)('div', {
+            className: e,
             ...l,
             children: [
-                (0, i.jsx)(a.Heading, {
+                (0, t.jsx)(a.Heading, {
                     variant: 'heading-md/bold',
                     color: 'header-primary',
-                    children: t
+                    children: i
                 }),
-                (0, i.jsx)(a.Heading, {
+                (0, t.jsx)(a.Heading, {
                     variant: 'heading-sm/normal',
                     color: 'header-secondary',
                     children: r
@@ -68,24 +68,24 @@ let f = (e) => {
             ]
         });
     },
-    x = (e) => {
-        let { applicationId: n, storeListingBenefits: t, skuBenefits: r, className: a, ...s } = e;
-        return (0, i.jsx)('div', {
+    f = (n) => {
+        let { applicationId: e, storeListingBenefits: i, skuBenefits: r, className: a, ...s } = n;
+        return (0, t.jsx)('div', {
             className: l()(c.benefitsContainer, a),
             ...s,
-            children: (0, i.jsx)(o.GU, {
-                applicationId: n,
-                storeListingBenefits: t,
+            children: (0, t.jsx)(o.GU, {
+                applicationId: e,
+                storeListingBenefits: i,
                 skuBenefits: r,
                 className: c.benefit
             })
         });
     },
-    h = (e) => {
-        let { children: n, className: t, ...r } = e;
-        return (0, i.jsx)('div', {
-            className: l()(c.container, t),
+    j = (n) => {
+        let { children: e, className: i, ...r } = n;
+        return (0, t.jsx)('div', {
+            className: l()(c.container, i),
             ...r,
-            children: n
+            children: e
         });
     };

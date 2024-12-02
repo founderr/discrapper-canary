@@ -11,33 +11,33 @@ var r = n(657707),
     o = n(739566),
     s = n(543388),
     c = n(942951),
-    u = n(834129),
-    d = n(388032),
+    d = n(834129),
+    u = n(388032),
     m = n(560390);
 function h(e) {
     let { message: t, channel: n, author: h, compact: f } = e,
         { nick: p } = (0, o.Sw)(h, n),
-        g = (0, c.l)({
+        _ = (0, c.l)({
             user: h,
             channelId: n.id,
             guildId: void 0,
             messageId: void 0
         })(),
-        _ = (0, l.q)(t.applicationId);
-    if (null == _) return null;
-    let E = d.intl.format(d.t.m7Lwam, {
+        g = (0, l.q)(t.applicationId);
+    if (null == g) return null;
+    let E = u.intl.format(u.t.m7Lwam, {
         username: p,
-        usernameHook: g,
-        gameName: _.name,
+        usernameHook: _,
+        gameName: g.name,
         gameIconHook: (e) =>
             (0, i.jsx)(s.j, {
-                application: _,
+                application: g,
                 timestamp: t.timestamp,
                 children: (0, i.jsxs)('span', {
                     className: m.gameContainer,
                     children: [
                         (0, i.jsx)(a.Z, {
-                            game: _,
+                            game: g,
                             size: a.Z.Sizes.XXSMALL,
                             className: m.inlineIcon
                         }),
@@ -48,7 +48,7 @@ function h(e) {
             }),
         helpdeskArticle: '#'
     });
-    return (0, i.jsx)(u.Z, {
+    return (0, i.jsx)(d.Z, {
         iconNode: (0, i.jsx)(r.iWm, { size: 'sm' }),
         compact: f,
         contentClassName: m.content,

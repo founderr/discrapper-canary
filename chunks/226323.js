@@ -20,39 +20,39 @@ var i = n(200651),
     g = n(131951),
     f = n(51144),
     _ = n(524484),
-    I = n(388032),
-    E = n(525270);
+    E = n(388032),
+    I = n(525270);
 let C = { offset: 2 },
     v = {
         serverDeaf: {
             icon: o.HeadphonesDenyIcon,
             colorize: !0,
-            getStatus: () => I.intl.string(I.t.btxSdH)
+            getStatus: () => E.intl.string(E.t.btxSdH)
         },
         serverMute: {
             icon: o.MicrophoneDenyIcon,
             colorize: !0,
-            getStatus: () => I.intl.string(I.t.uLddbW)
+            getStatus: () => E.intl.string(E.t.uLddbW)
         },
         deaf: {
             icon: o.HeadphonesSlashIcon,
             colorize: !1,
-            getStatus: () => I.intl.string(I.t.NjmiOD)
+            getStatus: () => E.intl.string(E.t.NjmiOD)
         },
         mute: {
             icon: o.MicrophoneSlashIcon,
             colorize: !1,
-            getStatus: () => I.intl.string(I.t.tjtv3N)
+            getStatus: () => E.intl.string(E.t.tjtv3N)
         },
         localMute: {
             icon: o.MicrophoneDenyIcon,
             colorize: !1,
-            getStatus: () => I.intl.string(I.t['9F+xJS'])
+            getStatus: () => E.intl.string(E.t['9F+xJS'])
         }
     };
 function N(e) {
     var t, r;
-    let { channel: l, user: p, nick: N, mute: S, deaf: T, serverMute: x, serverDeaf: b } = e,
+    let { channel: l, user: p, nick: N, mute: S, deaf: T, serverMute: b, serverDeaf: x } = e,
         A = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
         Z = (0, d.Z)({
             userId: p.id,
@@ -74,9 +74,9 @@ function N(e) {
                 else if (l) return v.localMute;
                 else if (r) return v.mute;
             })({
-                serverDeaf: b,
+                serverDeaf: x,
                 deaf: T,
-                serverMute: x,
+                serverMute: b,
                 mute: S,
                 localMute: A
             })) && void 0 !== r
@@ -84,7 +84,7 @@ function N(e) {
             : {},
         D =
             null != j
-                ? I.intl.formatToPlainString(I.t['1+MVBA'], {
+                ? E.intl.formatToPlainString(E.t['1+MVBA'], {
                       userName: P,
                       status: j()
                   })
@@ -133,19 +133,19 @@ function N(e) {
                     (0, i.jsx)(o.Clickable, {
                         ...t,
                         ...e,
-                        className: E.avatarContainer,
+                        className: I.avatarContainer,
                         onContextMenu: M,
                         focusProps: C,
                         children: (0, i.jsx)(u.Z, {
                             shakeLocation: _.oZ.VOICE_USER,
                             isShaking: Z,
                             children: (0, i.jsx)('div', {
-                                className: a()(E.avatar, { [E.speaking]: Z }),
+                                className: a()(I.avatar, { [I.speaking]: Z }),
                                 style: { backgroundImage: 'url('.concat(y, ')') },
                                 children:
                                     null != O
                                         ? (0, i.jsx)(O, {
-                                              className: a()(E.avatarIconOverlay, { [E.avatarIconRed]: R }),
+                                              className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: R }),
                                               color: 'currentColor',
                                               size: 'xs'
                                           })
@@ -161,11 +161,11 @@ function S(e) {
         [c, d] = r.useState(!1),
         u = c ? o.MinusIcon : o.PlusSmallIcon,
         h = (0, i.jsx)(o.CircleIconButton, {
-            className: E.expandButton,
+            className: I.expandButton,
             onClick: () => d(!c),
             color: o.CircleIconButtonColors.PRIMARY,
             size: o.CircleIconButtonSizes.SIZE_24,
-            tooltip: c ? I.intl.string(I.t['Z/Tya2']) : I.intl.string(I.t.XR5BAQ),
+            tooltip: c ? E.intl.string(E.t['Z/Tya2']) : E.intl.string(E.t.XR5BAQ),
             icon: (0, i.jsx)(u, {
                 size: 'xs',
                 color: 'currentColor'
@@ -187,12 +187,12 @@ function S(e) {
     return _.length <= 0
         ? null
         : (0, i.jsx)(o.ScrollerThin, {
-              className: a()(E.scroller, l),
+              className: a()(I.scroller, l),
               fade: !0,
               children: (0, i.jsxs)('div', {
-                  className: E.voiceUsers,
+                  className: I.voiceUsers,
                   role: 'group',
-                  'aria-label': I.intl.string(I.t['/ZgaVV']),
+                  'aria-label': E.intl.string(E.t['/ZgaVV']),
                   children: [
                       _.map((e) => {
                           let { user: t, nick: r, voiceState: l } = e;

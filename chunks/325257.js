@@ -26,8 +26,8 @@ var i = n(200651),
     y = n(674552),
     T = n(981631),
     A = n(388032),
-    P = n(284923);
-let j = {
+    j = n(284923);
+let P = {
     analyticsSource: {
         page: T.ZY5.GUILD_CHANNEL,
         section: T.jXE.CHANNEL_LIST,
@@ -77,10 +77,10 @@ t.Z = l.memo(function (e) {
     l.useEffect(() => () => eh.cancel(), [eh]);
     let ep = l.useCallback(() => {
             if (null != k) {
-                (0, g.uL)(k, { state: j });
+                (0, g.uL)(k, { state: P });
                 return;
             }
-            (0, C.X)(X, { state: j });
+            (0, C.X)(X, { state: P });
         }, [X, k]),
         em = l.useCallback(() => {
             if (null != k || null == U || F || !q) return;
@@ -159,10 +159,10 @@ t.Z = l.memo(function (e) {
             : (0, i.jsx)('div', {
                   ref: Y ? ei : void 0,
                   'data-dnd-name': U.toString(),
-                  className: a()(P.blobContainer, {
-                      [P.sorting]: K,
-                      [P.wobble]: eu,
-                      [P.selected]: eu || B
+                  className: a()(j.blobContainer, {
+                      [j.sorting]: K,
+                      [j.wobble]: eu,
+                      [j.selected]: eu || B
                   }),
                   children: (0, i.jsx)(d.BlobMask, {
                       selected: eu || B || eo,
@@ -179,7 +179,7 @@ t.Z = l.memo(function (e) {
                 hovered: !en && eo,
                 selected: !en && B,
                 unread: !en && V,
-                className: P.pill
+                className: j.pill
             }),
             (0, i.jsx)(S.Z, {
                 guild: U,

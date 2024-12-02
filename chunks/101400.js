@@ -19,7 +19,7 @@ var i = n(200651),
 function f(e) {
     let { className: t, application: n, onSelectCategory: f } = e,
         _ = (0, c.Z)({ application: n }),
-        I = r.useCallback(async () => {
+        E = r.useCallback(async () => {
             try {
                 var e;
                 let t = null == n ? void 0 : null === (e = n.guild) || void 0 === e ? void 0 : e.id;
@@ -29,10 +29,10 @@ function f(e) {
                 }
             } catch {}
         }, [n]),
-        E = r.useCallback(() => {
+        I = r.useCallback(() => {
             var e;
-            null != (null == n ? void 0 : null === (e = n.guild) || void 0 === e ? void 0 : e.id) && I();
-        }, [n, I]);
+            null != (null == n ? void 0 : null === (e = n.guild) || void 0 === e ? void 0 : e.id) && E();
+        }, [n, E]);
     return (0, i.jsxs)('div', {
         className: t,
         children: [
@@ -98,7 +98,7 @@ function f(e) {
                                 }),
                                 (0, i.jsx)(o.Z, {
                                     guild: n.guild,
-                                    onClick: E
+                                    onClick: I
                                 })
                             ]
                         })

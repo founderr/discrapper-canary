@@ -26,8 +26,8 @@ var i = n(200651),
     y = n(271383),
     T = n(430824),
     A = n(771845),
-    P = n(358085),
-    j = n(709054),
+    j = n(358085),
+    P = n(709054),
     R = n(727258),
     M = n(605951),
     L = n(474109),
@@ -62,7 +62,7 @@ function J(e, t, n) {
     );
 }
 let $ = 56,
-    ee = (0, P.isWindows)() ? 4 : (0, P.isMac)() ? 0 : 12,
+    ee = (0, j.isWindows)() ? 4 : (0, j.isMac)() ? 0 : 12,
     et = $ - 16,
     en = ee + 10;
 class ei {
@@ -150,14 +150,14 @@ class ei {
     }
 }
 function el(e) {
-    let { disableAppDownload: t = P.isPlatformEmbedded, isOverlay: n = !1, className: r, themeOverride: o } = e,
+    let { disableAppDownload: t = j.isPlatformEmbedded, isOverlay: n = !1, className: r, themeOverride: o } = e,
         [s] = (0, h.Wu)([A.ZP], () => {
             let e = A.ZP.getGuildsTree();
             return [e, e.version];
         }),
         d = (0, h.e7)([E.Z], () => E.Z.lurkingGuildIds()),
         p = l.useMemo(() => (n ? [] : d), [d, n]),
-        g = (0, h.Wu)([T.Z, y.ZP], () => j.default.keys(T.Z.getGuilds()).filter((e) => y.ZP.isCurrentUserGuest(e))),
+        g = (0, h.Wu)([T.Z, y.ZP], () => P.default.keys(T.Z.getGuilds()).filter((e) => y.ZP.isCurrentUserGuest(e))),
         C = p.concat(g),
         J = (0, h.e7)([x.Z], () => x.Z.isFullscreenInContext()),
         $ = (0, h.e7)([T.Z], () => T.Z.getGeoRestrictedGuilds()),

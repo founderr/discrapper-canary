@@ -41,7 +41,7 @@ let A = {
     friction: 28,
     tension: 600
 };
-function P(e) {
+function j(e) {
     switch (e) {
         case 'height':
         case 'opacity':
@@ -55,7 +55,7 @@ function P(e) {
             throw Error('DirectMessage: getSpringConfigs() - Invalid spring '.concat(String(e)));
     }
 }
-class j extends (i = r.PureComponent) {
+class P extends (i = r.PureComponent) {
     componentWillEnter(e) {
         let { controller: t } = this.state;
         e(),
@@ -65,7 +65,7 @@ class j extends (i = r.PureComponent) {
                     height: 1,
                     opacity: 1,
                     scale: 1,
-                    config: P
+                    config: j
                 })
                 .start()
                 .then(() => this.setState({ animating: !1 }));
@@ -77,7 +77,7 @@ class j extends (i = r.PureComponent) {
             scale: 1,
             opacity: 1,
             height: 1,
-            config: P
+            config: j
         })
             .start()
             .then(e);
@@ -91,7 +91,7 @@ class j extends (i = r.PureComponent) {
                     height: 0,
                     opacity: 0,
                     scale: 0,
-                    config: P
+                    config: j
                 })
                 .start()
                 .then(e)
@@ -180,7 +180,7 @@ class j extends (i = r.PureComponent) {
                     scale: 0,
                     height: 0,
                     opacity: 0,
-                    config: P
+                    config: j
                 })
             }),
             T(this, 'handleContextMenu', (e) => {
@@ -208,7 +208,7 @@ class j extends (i = r.PureComponent) {
             });
     }
 }
-T(j, 'defaultProps', {
+T(P, 'defaultProps', {
     badge: 0,
     audio: !1,
     video: !1,
@@ -228,7 +228,7 @@ T(j, 'defaultProps', {
             I = !1;
         return (
             f && ((x = a === N.WtW.VOICE), (I = a === N.WtW.VIDEO)),
-            (0, l.jsx)(j, {
+            (0, l.jsx)(P, {
                 ...e,
                 ref: t,
                 channelName: i,

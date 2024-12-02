@@ -3,8 +3,8 @@ n(192379);
 var l = n(780384),
     s = n(481060),
     r = n(410030),
-    C = n(518950),
-    a = n(51144),
+    a = n(518950),
+    C = n(51144),
     o = n(105759),
     d = n(898969),
     u = n(703614),
@@ -13,15 +13,15 @@ var l = n(780384),
     x = n(684315);
 t.Z = () => {
     let e = (0, o.Z)(),
-        { avatarSrc: t, eventHandlers: n } = (0, C.Z)({
+        { avatarSrc: t, eventHandlers: n } = (0, a.Z)({
             user: e,
             size: c.EF.SIZE_32,
             animateOnHover: !0
         }),
-        _ = (0, r.Fg)(),
-        h = (0, l.ap)(_),
-        f = a.ZP.getName(e),
-        j = h ? d.Z : u.Z;
+        h = (0, r.Fg)(),
+        f = (0, l.ap)(h),
+        _ = C.ZP.getName(e),
+        j = f ? d.Z : u.Z;
     return null == e
         ? null
         : (0, i.jsxs)('div', {
@@ -39,7 +39,7 @@ t.Z = () => {
                   (0, i.jsx)(s.Text, {
                       variant: 'text-xs/bold',
                       className: x.bannerHeader,
-                      children: p.intl.format(p.t.oxhCOj, { userName: f })
+                      children: p.intl.format(p.t.oxhCOj, { userName: _ })
                   }),
                   (0, i.jsx)(j, { className: x.bannerIcon })
               ]

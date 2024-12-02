@@ -30,7 +30,7 @@ var l = n(442837),
     N = n(518360);
 function y(e) {
     var t;
-    let { channel: n, isChannelSelected: y, isChannelCollapsed: T, voiceStates: A, enableConnectedUserLimit: P, enableActivities: j, isSubscriptionGated: R, needSubscriptionToAccess: M, isNewChannel: L, muted: w, resolvedUnreadSetting: D } = e,
+    let { channel: n, isChannelSelected: y, isChannelCollapsed: T, voiceStates: A, enableConnectedUserLimit: j, enableActivities: P, isSubscriptionGated: R, needSubscriptionToAccess: M, isNewChannel: L, muted: w, resolvedUnreadSetting: D } = e,
         O = (0, l.e7)([m.ZP], () => m.ZP.getMentionCount(n.id)),
         k = (0, o.ZP)(n),
         U = (0, l.e7)([p.Z], () => !p.Z.can(E.Plq.CONNECT, n)),
@@ -69,7 +69,7 @@ function y(e) {
             children: (0, a.getBadgeCountString)(F)
         });
     let z = null !== (t = null == A ? void 0 : A.length) && void 0 !== t ? t : 0;
-    return null != P && P && V
+    return null != j && j && V
         ? (0, i.jsx)(I.Z, {
               userCount: z,
               video: G || B,
@@ -80,7 +80,7 @@ function y(e) {
                 text: Z.intl.string(Z.t.dI3q4u),
                 color: r.Z.unsafe_rawColors.RED_400.css
             })
-          : null != j && j && (0, C.u)(k)
+          : null != P && P && (0, C.u)(k)
             ? (0, i.jsx)(x.Z, {
                   embeddedApps: k,
                   muted: w

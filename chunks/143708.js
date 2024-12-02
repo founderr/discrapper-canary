@@ -11,32 +11,32 @@ var r = n(442837),
     o = n(314897),
     s = n(944486),
     c = n(585483),
-    u = n(51144),
-    d = n(981631),
+    d = n(51144),
+    u = n(981631),
     m = n(388032),
     h = n(658412);
 function f(e) {
     let t,
         n,
         f,
-        { author: p, banned: g } = e,
-        _ = (0, r.e7)([o.default], () => o.default.getId()),
+        { author: p, banned: _ } = e,
+        g = (0, r.e7)([o.default], () => o.default.getId()),
         E = (0, r.e7)([s.Z], () => s.Z.getChannelId()),
-        C = u.ZP.useName(p),
-        I = _ === p.id;
+        C = d.ZP.useName(p),
+        I = g === p.id;
     return (
         I
             ? ((t = m.intl.string(m.t['F/OLvL'])), (f = m.intl.string(m.t.C89OLC)))
             : ((f = m.intl.string(m.t['YVub5+'])),
-              g
+              _
                   ? (t = m.intl.string(m.t['57nBt7']))
                   : null != C
                     ? ((t = m.intl.formatToPlainString(m.t['9Akp1t'], { username: C })),
                       (n = (0, i.jsx)(a.Z.Button, {
                           onClick: function () {
                               let { id: e } = p,
-                                  t = '@'.concat(u.ZP.getUserTag(p, { decoration: 'never' }));
-                              c.S.dispatchToLastSubscribed(d.CkL.INSERT_TEXT, {
+                                  t = '@'.concat(d.ZP.getUserTag(p, { decoration: 'never' }));
+                              c.S.dispatchToLastSubscribed(u.CkL.INSERT_TEXT, {
                                   plainText: t,
                                   rawText: '<@'.concat(e, '>')
                               }),

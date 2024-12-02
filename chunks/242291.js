@@ -78,7 +78,7 @@ function R(e) {
     var t, n;
     let { isSoundboardButtonDisabled: a = !1 } = e,
         s = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
-        o = [i.z.SOUNDBOARD_EDUCATION];
+        o = [];
     if (!a && !Object.values(null !== (n = null === (t = l.Z.settings.guilds) || void 0 === t ? void 0 : t.guilds) && void 0 !== n ? n : {}).some((e) => null != e.joinSound)) {
         o.push(i.z.CUSTOM_CALL_SOUNDS_SPARKLES);
         let e = (0, h.Fc)(s);

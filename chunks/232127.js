@@ -1,6 +1,6 @@
 t.d(n, {
     U: function () {
-        return c;
+        return u;
     }
 });
 var o = t(926841),
@@ -9,8 +9,8 @@ var o = t(926841),
     r = t(959784),
     a = t(987338),
     s = t(981631);
-let u = new i.E([r.NR, r.ZI, r.Ob, r.uc, r.m1, o.b], a.$P.PAYMENT_FLOW_STARTED, { location: 'payment flow started' });
-function c(e) {
+let c = new i.E([r.NR, r.ZI, r.Ob, r.uc, r.m1, o.b], a.$P.PAYMENT_FLOW_STARTED, { location: 'payment flow started' });
+function u(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    l.default.track(s.rMx.PAYMENT_FLOW_STARTED, e, n), u.trigger();
+    l.default.track(s.rMx.PAYMENT_FLOW_STARTED, e, n), c.trigger();
 }

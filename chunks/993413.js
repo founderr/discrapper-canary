@@ -34,25 +34,25 @@ function d(e) {
     });
 }
 function m(e) {
-    let { title: n, titleIcon: t, titleId: l, description: a, children: m, className: p, errors: x, disabled: h = !1, hideDivider: f = !1, showBorder: v = !1, borderType: g, hasBackground: S = !1, forcedDivider: j = !1, showPremiumIcon: E = !1 } = e;
+    let { title: n, titleIcon: t, titleId: l, description: a, children: m, className: p, errors: x, disabled: h = !1, hideDivider: f = !1, showBorder: v = !1, borderType: S, hasBackground: g = !1, forcedDivider: E = !1, showPremiumIcon: j = !1 } = e;
     return (0, i.jsx)('div', {
         className: r()(u.customizationSection, p, {
             [u.disabled]: h,
             [u.hideDivider]: f,
             [u.showBorder]: v,
-            [u.withDivider]: j
+            [u.withDivider]: E
         }),
         children: (0, i.jsxs)(o.Z, {
             className: u.customizationSectionBorder,
             backgroundClassName: u.customizationSectionBackground,
             isShown: v,
-            type: g,
-            hasBackground: S,
+            type: S,
+            hasBackground: g,
             children: [
                 (0, i.jsxs)(s.FormTitle, {
                     className: u.title,
                     id: l,
-                    children: [n, E && (0, i.jsx)(c.Z, {}), t]
+                    children: [n, j && (0, i.jsx)(c.Z, {}), t]
                 }),
                 null != a
                     ? (0, i.jsx)(s.FormText, {

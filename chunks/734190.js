@@ -41,7 +41,7 @@ function A(e) {
     });
 }
 t.Z = l.memo(function (e) {
-    let { thread: t, isSelectedChannel: r, isSelectedVoice: T, isLast: P, withGuildIcon: j } = e,
+    let { thread: t, isSelectedChannel: r, isSelectedVoice: T, isLast: j, withGuildIcon: P } = e,
         R = (0, s.e7)([_.ZP], () => _.ZP.getVoiceStatesForChannel(t), [t]),
         M = (0, s.e7)([C.Z], () => C.Z.hasVideo(t.id)),
         { unread: L, mentionCount: w } = (0, s.cj)([g.ZP], () => ({
@@ -89,11 +89,11 @@ t.Z = l.memo(function (e) {
         role: B,
         className: a()(N.containerDefault, { [N.selected]: r }),
         children: [
-            (0, i.jsx)(A, { withGuildIcon: j }),
-            P
+            (0, i.jsx)(A, { withGuildIcon: P }),
+            j
                 ? null
                 : (0, i.jsx)(A, {
-                      withGuildIcon: j,
+                      withGuildIcon: P,
                       style: { transform: 'rotateX(180deg) translateY(-9px)' }
                   }),
             (0, i.jsx)(c.FocusRing, {
@@ -109,7 +109,7 @@ t.Z = l.memo(function (e) {
                         [y.modeSelected]: r,
                         [y.modeMuted]: !r && D,
                         [y.modeUnreadImportant]: !D && !r && L,
-                        [y.withGuildIcon]: j
+                        [y.withGuildIcon]: P
                     }),
                     onMouseDown: k,
                     onContextMenu: U,

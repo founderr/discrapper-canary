@@ -23,8 +23,8 @@ var i = n(200651),
     g = n(125909),
     f = n(374939),
     _ = n(283293),
-    I = n(797908),
-    E = n(133743),
+    E = n(797908),
+    I = n(133743),
     C = n(120549),
     v = n(753511),
     N = n(979007),
@@ -33,9 +33,9 @@ function T(e) {
     var t;
     let { onSelectApplication: n } = e,
         T = (0, l.TH)(),
-        x = r.useRef(null),
+        b = r.useRef(null),
         {
-            query: b,
+            query: x,
             page: A,
             categoryId: Z
         } = r.useMemo(() => {
@@ -50,14 +50,14 @@ function T(e) {
             };
         }, [T.search]);
     r.useEffect(() => {
-        b !== x.current &&
-            ((x.current = b),
+        x !== b.current &&
+            ((b.current = x),
             u.yC({
-                query: b,
+                query: x,
                 options: { source: s.F.APP_DIRECTORY }
             })),
             u.yC({
-                query: b,
+                query: x,
                 options: {
                     categoryId: Z,
                     page: A,
@@ -65,17 +65,17 @@ function T(e) {
                     source: s.F.APP_DIRECTORY
                 }
             });
-    }, [Z, A, b]);
+    }, [Z, A, x]);
     let { fetchState: L, searchResults: y } = (0, o.cj)([m.Z], () => ({
             fetchState: m.Z.getFetchState({
-                query: b,
+                query: x,
                 categoryId: Z,
                 page: A,
                 pageSize: N.IV,
                 source: s.F.APP_DIRECTORY
             }),
             searchResults: m.Z.getSearchResults({
-                query: b,
+                query: x,
                 categoryId: Z,
                 page: A,
                 pageSize: N.IV,
@@ -84,7 +84,7 @@ function T(e) {
         })),
         P = (0, o.cj)([m.Z], () => {
             let e = m.Z.getSearchResults({
-                query: b,
+                query: x,
                 source: s.F.APP_DIRECTORY
             });
             return null != e
@@ -98,22 +98,22 @@ function T(e) {
         R = r.useMemo(() => (L === h.M.FETCHING ? O : y), [L, O, y]),
         j = r.useCallback(
             (e) => {
-                (0, E.pR)({
-                    query: b,
+                (0, I.pR)({
+                    query: x,
                     categoryId: Z,
                     page: e
                 });
             },
-            [Z, b]
+            [Z, x]
         ),
         D = r.useCallback(
             (e) => {
-                (0, E.pR)({
-                    query: b,
+                (0, I.pR)({
+                    query: x,
                     categoryId: e
                 });
             },
-            [b]
+            [x]
         );
     return (0, i.jsxs)('div', {
         className: S.container,
@@ -148,7 +148,7 @@ function T(e) {
                                                             if (e.type === a.s.APPLICATION) {
                                                                 let t = e.data;
                                                                 return (0, i.jsx)(
-                                                                    I.Z,
+                                                                    E.Z,
                                                                     {
                                                                         application: t,
                                                                         onSelectApplication: n,

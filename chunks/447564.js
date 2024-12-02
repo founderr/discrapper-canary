@@ -18,14 +18,14 @@ var i,
     o = n(311570),
     s = n(692547),
     c = n(481060),
-    u = n(100527),
-    d = n(906732),
+    d = n(100527),
+    u = n(906732),
     m = n(997323),
     h = n(324085),
     f = n(688465),
     p = n(333867),
-    g = n(63063),
-    _ = n(937615),
+    _ = n(63063),
+    g = n(937615),
     E = n(82950),
     C = n(981631),
     I = n(215023),
@@ -59,19 +59,19 @@ function b(e) {
     let { channel: t } = e,
         n = (0, h.T$)(t),
         [i, r] = (0, a.useState)(!1),
-        { price: s, fetchingPrice: f, error: g } = (0, h.R2)(I.FX),
-        { entitlement: _, fetchedEntitlement: E, error: x } = (0, h.t6)(I.FX),
-        N = g || x,
-        { analyticsLocations: v } = (0, d.ZP)([u.Z.HD_STREAMING_POTION_MODAL]),
-        T = null != _ && !_.consumed;
+        { price: s, fetchingPrice: f, error: _ } = (0, h.R2)(I.FX),
+        { entitlement: g, fetchedEntitlement: E, error: x } = (0, h.t6)(I.FX),
+        N = _ || x,
+        { analyticsLocations: v } = (0, u.ZP)([d.Z.HD_STREAMING_POTION_MODAL]),
+        T = null != g && !g.consumed;
     (0, a.useEffect)(
         () => (
-            null != _ && !1 === _.consumed && i && _.type !== C.qc2.DEVELOPER_GIFT && (0, m.Zu)(t.id, I.FX),
+            null != g && !1 === g.consumed && i && g.type !== C.qc2.DEVELOPER_GIFT && (0, m.Zu)(t.id, I.FX),
             () => {
                 N && (0, m.SN)(I.FX);
             }
         ),
-        [_, t, i, N]
+        [g, t, i, N]
     );
     let S = (0, a.useMemo)(
             () => () =>
@@ -89,7 +89,7 @@ function b(e) {
             },
             [t.id]
         ),
-        b = (0, a.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == _ ? void 0 : _.type) === C.qc2.DEVELOPER_GIFT ? 1 : T ? 2 : 0) : 3), [t.isHDStreamSplashed, n, null == _ ? void 0 : _.type, T]),
+        b = (0, a.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == g ? void 0 : g.type) === C.qc2.DEVELOPER_GIFT ? 1 : T ? 2 : 0) : 3), [t.isHDStreamSplashed, n, null == g ? void 0 : g.type, T]),
         Z = (0, a.useMemo)(() => b(), [b]);
     return (0, l.jsx)(j, {
         channel: t,
@@ -151,7 +151,7 @@ let j = (e) => {
                         (0, l.jsx)(c.Text, {
                             color: 'text-link',
                             variant: 'text-sm/normal',
-                            children: x.intl.format(x.t['1wV4qq'], { helpCenterLink: g.Z.getArticleURL(C.BhN.HD_STREAMING_POTION) })
+                            children: x.intl.format(x.t['1wV4qq'], { helpCenterLink: _.Z.getArticleURL(C.BhN.HD_STREAMING_POTION) })
                         }),
                         (0, l.jsx)(c.Text, {
                             color: 'text-muted',
@@ -197,7 +197,7 @@ let P = (e) => {
     },
     L = (e) => {
         let { buttonState: t, price: n, onActionClick: i } = e,
-            r = x.intl.formatToPlainString(x.t.S9LAdX, { price: (0, _.T4)(n.amount, n.currency) });
+            r = x.intl.formatToPlainString(x.t.S9LAdX, { price: (0, g.T4)(n.amount, n.currency) });
         if (3 === t || 4 === t) {
             let e = {
                 3: x.intl.string(x.t.Qrh2BQ),

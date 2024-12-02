@@ -1,89 +1,89 @@
 n(411104);
 var r,
-    E,
     i,
-    u,
-    S = n(442837),
-    o = n(570140),
-    _ = n(366939),
-    l = n(16084),
-    A = n(128069),
-    a = n(122289),
-    T = n(622999),
-    I = n(981631),
-    c = n(388032);
-let R = !1,
-    C = null,
-    N = null;
-function s() {
-    (R = !1), (N = null), (C = null);
+    a,
+    s,
+    o = n(442837),
+    l = n(570140),
+    u = n(366939),
+    c = n(16084),
+    d = n(128069),
+    f = n(122289),
+    _ = n(622999),
+    p = n(981631),
+    h = n(388032);
+let m = !1,
+    g = null,
+    E = null;
+function v() {
+    (m = !1), (E = null), (g = null);
 }
-function M(t) {
-    let { error: e } = t,
-        { code: n, paymentId: r } = e;
-    if (n !== A.ZP.ErrorCodes.CONFIRMATION_REQUIRED && n !== A.ZP.ErrorCodes.AUTHENTICATION_REQUIRED) return (R = !1), !1;
-    !R && ((R = !0), (C = r), n === A.ZP.ErrorCodes.AUTHENTICATION_REQUIRED && P(r));
+function I(e) {
+    let { error: t } = e,
+        { code: n, paymentId: r } = t;
+    if (n !== d.ZP.ErrorCodes.CONFIRMATION_REQUIRED && n !== d.ZP.ErrorCodes.AUTHENTICATION_REQUIRED) return (m = !1), !1;
+    !m && ((m = !0), (g = r), n === d.ZP.ErrorCodes.AUTHENTICATION_REQUIRED && T(r));
 }
-async function P(t) {
-    if (null == t) return;
-    let { error: e } = await (0, T.oe)(t);
-    if (null != e) {
-        o.Z.dispatch({
+async function T(e) {
+    if (null == e) return;
+    let { error: t } = await (0, _.oe)(e);
+    if (null != t) {
+        l.Z.dispatch({
             type: 'PAYMENT_AUTHENTICATION_ERROR',
-            error: new A.ZP(c.intl.string(c.t.khEaRE))
+            error: new d.ZP(h.intl.string(h.t.khEaRE))
         });
-        let t = Error(e);
-        (0, a.q2)(t, { extra: { authenticationError: e } });
+        let e = Error(t);
+        (0, f.q2)(e, { extra: { authenticationError: t } });
     }
 }
-function U(t) {
-    let { payment: e } = t,
-        n = [I.PyE.COMPLETED, I.PyE.FAILED, I.PyE.CANCELED];
-    if (!R || e.id !== C || !n.includes(e.status)) return !1;
-    (R = !1), (C = null), e.status === I.PyE.FAILED ? (N = new A.ZP(c.intl.string(c.t.khEaRE))) : ((N = null), o.Z.wait(_.fw), o.Z.wait(l.pB));
+function b(e) {
+    let { payment: t } = e,
+        n = [p.PyE.COMPLETED, p.PyE.FAILED, p.PyE.CANCELED];
+    if (!m || t.id !== g || !n.includes(t.status)) return !1;
+    (m = !1), (g = null), t.status === p.PyE.FAILED ? (E = new d.ZP(h.intl.string(h.t.khEaRE))) : ((E = null), l.Z.wait(u.fw), l.Z.wait(c.pB));
 }
-class d extends (r = S.ZP.Store) {
+class S extends (r = o.ZP.Store) {
     get isAwaitingAuthentication() {
-        return R;
+        return m;
     }
     get error() {
-        return N;
+        return E;
     }
     get awaitingPaymentId() {
-        return C;
+        return g;
     }
 }
-(u = 'PaymentAuthenticationStore'),
-    (i = 'displayName') in (E = d)
-        ? Object.defineProperty(E, i, {
-              value: u,
+(s = 'PaymentAuthenticationStore'),
+    (a = 'displayName') in (i = S)
+        ? Object.defineProperty(i, a, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (E[i] = u),
-    (e.Z = new d(o.Z, {
-        BILLING_SUBSCRIPTION_UPDATE_START: s,
-        PAYMENT_AUTHENTICATION_CLEAR_ERROR: s,
-        PREMIUM_PAYMENT_ERROR_CLEAR: s,
-        PREMIUM_PAYMENT_MODAL_CLOSE: s,
-        PREMIUM_PAYMENT_MODAL_OPEN: s,
-        PREMIUM_PAYMENT_SUBSCRIBE_START: s,
-        PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: s,
-        PREMIUM_PAYMENT_UPDATE_SUCCESS: s,
-        SKU_PURCHASE_MODAL_CLOSE: s,
-        SKU_PURCHASE_MODAL_OPEN: s,
-        SKU_PURCHASE_START: s,
-        SKU_PURCHASE_SUCCESS: s,
-        BILLING_SUBSCRIPTION_UPDATE_FAIL: M,
-        PREMIUM_PAYMENT_SUBSCRIBE_FAIL: M,
-        PREMIUM_PAYMENT_UPDATE_FAIL: M,
-        SKU_PURCHASE_FAIL: M,
-        GIFT_CODE_REDEEM_FAILURE: M,
-        PAYMENT_AUTHENTICATION_ERROR: function (t) {
-            let { error: e } = t;
-            (N = e), (R = !1);
+        : (i[a] = s),
+    (t.Z = new S(l.Z, {
+        BILLING_SUBSCRIPTION_UPDATE_START: v,
+        PAYMENT_AUTHENTICATION_CLEAR_ERROR: v,
+        PREMIUM_PAYMENT_ERROR_CLEAR: v,
+        PREMIUM_PAYMENT_MODAL_CLOSE: v,
+        PREMIUM_PAYMENT_MODAL_OPEN: v,
+        PREMIUM_PAYMENT_SUBSCRIBE_START: v,
+        PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: v,
+        PREMIUM_PAYMENT_UPDATE_SUCCESS: v,
+        SKU_PURCHASE_MODAL_CLOSE: v,
+        SKU_PURCHASE_MODAL_OPEN: v,
+        SKU_PURCHASE_START: v,
+        SKU_PURCHASE_SUCCESS: v,
+        BILLING_SUBSCRIPTION_UPDATE_FAIL: I,
+        PREMIUM_PAYMENT_SUBSCRIBE_FAIL: I,
+        PREMIUM_PAYMENT_UPDATE_FAIL: I,
+        SKU_PURCHASE_FAIL: I,
+        GIFT_CODE_REDEEM_FAILURE: I,
+        PAYMENT_AUTHENTICATION_ERROR: function (e) {
+            let { error: t } = e;
+            (E = t), (m = !1);
         },
-        PAYMENT_UPDATE: U,
-        BILLING_PAYMENT_FETCH_SUCCESS: U
+        PAYMENT_UPDATE: b,
+        BILLING_PAYMENT_FETCH_SUCCESS: b
     }));

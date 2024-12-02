@@ -12,14 +12,14 @@ var i = n(200651),
     o = n(954955),
     s = n.n(o),
     c = n(507274),
-    u = n(481060),
-    d = n(130402),
+    d = n(481060),
+    u = n(130402),
     m = n(466794),
     h = n(659215),
     f = n(222677),
     p = n(995774),
-    g = n(931651),
-    _ = n(594174),
+    _ = n(931651),
+    g = n(594174),
     E = n(630388),
     C = n(74538),
     I = n(833803),
@@ -50,10 +50,10 @@ class Z extends r.Component {
             c = t.state === N.yb.SENDING,
             h = e === x.O.BURST;
         if (c || (0, E.yE)(t.flags, N.iLy.EPHEMERAL)) return null;
-        let f = _.default.getCurrentUser(),
+        let f = g.default.getCurrentUser(),
             p = (0, C.I5)(f),
-            g = h ? S.intl.string(S.t.Kfcszs) : S.intl.string(S.t.lfIHs7);
-        !p && h && (g = (0, i.jsx)(m.X, { tooltipText: S.intl.string(S.t.Kfcszs) }));
+            _ = h ? S.intl.string(S.t.Kfcszs) : S.intl.string(S.t.lfIHs7);
+        !p && h && (_ = (0, i.jsx)(m.X, { tooltipText: S.intl.string(S.t.Kfcszs) }));
         let T = l ? b : A,
             { canShowImprovedReactionButton: j } = I.Z.getCurrentConfig({ location: 'ButtonAddReaction' }, { autoTrackExposure: !this.props.isForumToolbar }),
             Z = j && !this.props.isForumToolbar,
@@ -62,26 +62,26 @@ class Z extends r.Component {
                 color: 'currentColor',
                 className: a()(T.icon, { [T.largeIcon]: Z })
             };
-        return (0, i.jsx)(u.Popout, {
+        return (0, i.jsx)(d.Popout, {
             shouldShow: s,
             onRequestClose: this.handleReactionPickerToggle,
             renderPopout: this.renderReactionPopout,
             position: 'right',
             children: (e, t) => {
                 let { isShown: l } = t;
-                return (0, i.jsx)(u.TooltipContainer, {
-                    text: g,
-                    color: u.TooltipColors.PRIMARY,
+                return (0, i.jsx)(d.TooltipContainer, {
+                    text: _,
+                    color: d.TooltipColors.PRIMARY,
                     'aria-label': h ? S.intl.string(S.t.Kfcszs) : S.intl.string(S.t.lfIHs7),
                     tooltipClassName: T.__invalid_addReactionTooltip,
-                    children: (0, i.jsxs)(u.Clickable, {
+                    children: (0, i.jsxs)(d.Clickable, {
                         ...e,
                         tabIndex: o,
                         onClick: (e) => {
                             this.handleAddReactionClick(e);
                         },
-                        onMouseEnter: () => (0, d.x)(v.qR.AddReactionPopoutMouseEntered),
-                        onFocus: () => (0, d.x)(v.qR.AddReactionPopoutFocused),
+                        onMouseEnter: () => (0, u.x)(v.qR.AddReactionPopoutMouseEntered),
+                        onFocus: () => (0, u.x)(v.qR.AddReactionPopoutFocused),
                         className: a()(
                             T.reactionBtn,
                             {
@@ -90,7 +90,7 @@ class Z extends r.Component {
                             },
                             n
                         ),
-                        children: [h ? (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(u.SuperReactionIcon, { ...R }) }) : (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(u.ReactionIcon, { ...R }) }), r]
+                        children: [h ? (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(d.SuperReactionIcon, { ...R }) }) : (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(d.ReactionIcon, { ...R }) }), r]
                     })
                 });
             }
@@ -110,7 +110,7 @@ class Z extends r.Component {
             j(this, 'handleAddReactionClick', (e) => {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
-                let i = _.default.getCurrentUser();
+                let i = g.default.getCurrentUser();
                 t === x.O.BURST &&
                     !(0, C.I5)(i) &&
                     (0, h.openBurstReactionsUpsellModal)({
@@ -135,7 +135,7 @@ class Z extends r.Component {
                             object: N.qAy.REACTION_RAIL
                         })
                     },
-                    o = (0, i.jsx)(g.$, {
+                    o = (0, i.jsx)(_.$, {
                         closePopout: t,
                         channel: r,
                         onSelectEmoji: (e, n, i) => {
@@ -147,7 +147,7 @@ class Z extends r.Component {
                 return (0, i.jsx)(c.M.Consumer, {
                     children: (e) =>
                         e
-                            ? (0, i.jsx)(u.Dialog, {
+                            ? (0, i.jsx)(d.Dialog, {
                                   'aria-label': S.intl.string(S.t['7Xqzdn']),
                                   children: o
                               })

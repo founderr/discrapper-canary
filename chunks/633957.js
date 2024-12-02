@@ -11,14 +11,14 @@ var i = n(200651),
     o = n(2052),
     s = n(317381),
     c = n(638880),
-    u = n(122613),
-    d = n(527805),
+    d = n(122613),
+    u = n(527805),
     m = n(884338),
     h = n(100527),
     f = n(906732),
     p = n(895924),
-    g = n(973616),
-    _ = n(314897),
+    _ = n(973616),
+    g = n(314897),
     E = n(592125),
     C = n(158776),
     I = n(594174),
@@ -34,7 +34,7 @@ function A(e) {
         Z = (0, o.O)(),
         R = (0, l.e7)([E.Z], () => E.Z.getChannel(A)),
         P = (null == R ? void 0 : null === (t = R.isThread) || void 0 === t ? void 0 : t.call(R)) ? (null == R ? void 0 : R.parent_id) : A,
-        L = (0, l.e7)([_.default], () => _.default.getId()),
+        L = (0, l.e7)([g.default], () => g.default.getId()),
         {
             embeddedActivity: y,
             currentEmbeddedActivity: O,
@@ -56,10 +56,10 @@ function A(e) {
             return null == t ? null : null === (e = C.Z.findActivity(t, (e) => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
         }),
         B = r.useMemo(() => {
-            let e = new g.Z(n);
+            let e = new _.Z(n);
             return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = v.wT), e;
         }, [n]),
-        U = (0, d.s5)({
+        U = (0, u.s5)({
             userId: L,
             channelId: A,
             application: B
@@ -75,7 +75,7 @@ function A(e) {
         V = null != M && M.isLaunching && M.componentId === G,
         H = async () => {
             w
-                ? await (0, u.Z)({
+                ? await (0, d.Z)({
                       targetApplicationId: n.id,
                       channelId: A,
                       locationObject: Z.location,

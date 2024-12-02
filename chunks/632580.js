@@ -18,13 +18,13 @@ var i = t(512722),
     x = t(981631),
     h = t(474936);
 async function f(e) {
-    let { setPurchaseState: n, setHasAcceptedTerms: t, setIsSubmitting: i, setPurchaseError: f, hasRedirectURL: v, setHasRedirectURL: g, isGift: S, baseAnalyticsData: j, analyticsLocation: E, analyticsLocations: y, flowStartTime: I, subscriptionPlan: P, planGroup: T, trialId: N, priceOptions: b, paymentSource: C, isPrepaidPaymentPastDue: _, openInvoiceId: O, premiumSubscription: A, onNext: Z, metadata: R, sku: M, skuPricePreview: w, purchaseType: L, referralCode: k, loadId: D, giftInfoOptions: F, invoicePreview: U } = e;
+    let { setPurchaseState: n, setHasAcceptedTerms: t, setIsSubmitting: i, setPurchaseError: f, hasRedirectURL: v, setHasRedirectURL: S, isGift: g, baseAnalyticsData: E, analyticsLocation: j, analyticsLocations: y, flowStartTime: I, subscriptionPlan: P, planGroup: T, trialId: N, priceOptions: b, paymentSource: C, isPrepaidPaymentPastDue: _, openInvoiceId: O, premiumSubscription: A, onNext: Z, metadata: R, sku: M, skuPricePreview: w, purchaseType: L, referralCode: k, loadId: F, giftInfoOptions: D, invoicePreview: U } = e;
     n(p.A.PURCHASING), t(!0), i(!0), r.Z.wait(a.fw), f(null);
     try {
         let e, t, i;
         if (
             (d.default.track(x.rMx.PAYMENT_FLOW_COMPLETED, {
-                ...j,
+                ...E,
                 subtotal: null == U ? void 0 : U.subtotal,
                 tax: null == U ? void 0 : U.tax,
                 expected_amount: null == U ? void 0 : U.total,
@@ -40,12 +40,12 @@ async function f(e) {
                 (e = await (0, o.ZZ)(M.applicationId, M.id, {
                     expectedAmount: w.amount,
                     expectedCurrency: w.currency,
-                    isGift: S,
+                    isGift: g,
                     paymentSource: C,
-                    loadId: D,
-                    giftInfoOptions: F
+                    loadId: F,
+                    giftInfoOptions: D
                 }));
-        else if ((l()(null != P, 'Missing subscriptionPlan'), S)) {
+        else if ((l()(null != P, 'Missing subscriptionPlan'), g)) {
             l()(null != U, 'Missing invoicePreview');
             let n = U.total,
                 t = U.currency;
@@ -55,8 +55,8 @@ async function f(e) {
                 paymentSource: C,
                 subscriptionPlanId: P.id,
                 isGift: !0,
-                loadId: D,
-                giftInfoOptions: F
+                loadId: F,
+                giftInfoOptions: D
             });
         } else if (_ && null != O && null != C && null != A)
             e = x.Uk1.has(C.type)
@@ -68,8 +68,8 @@ async function f(e) {
                           currency: b.currency
                       },
                       y,
-                      E,
-                      D
+                      j,
+                      F
                   );
         else if (null != A) {
             let n = (0, m.al)(A, P.id, 1, new Set(T)),
@@ -77,7 +77,7 @@ async function f(e) {
                     paymentSource: C,
                     currency: b.currency
                 };
-            A.status === x.O0b.PAUSED ? (t.status = x.O0b.ACTIVE) : (t.items = n), (e = await (0, s.Mg)(A, t, y, E, D));
+            A.status === x.O0b.PAUSED ? (t.status = x.O0b.ACTIVE) : (t.items = n), (e = await (0, s.Mg)(A, t, y, j, F));
         } else
             e = await (0, c.Ld)({
                 planId: P.id,
@@ -86,10 +86,10 @@ async function f(e) {
                 trialId: N,
                 metadata: R,
                 referralCode: k,
-                loadId: D
+                loadId: F
             });
         if (e.redirectConfirmation) {
-            g(null != e.redirectURL);
+            S(null != e.redirectURL);
             return;
         }
         n(p.A.COMPLETED), 'subscription' in e ? (t = null != e.subscription ? u.Z.createFromServer(e.subscription) : null) : 'entitlements' in e && (i = null != e.entitlements ? e.entitlements : void 0), Z(t, i);
@@ -97,7 +97,7 @@ async function f(e) {
         n(p.A.FAIL),
             f(e),
             d.default.track(x.rMx.PAYMENT_FLOW_FAILED, {
-                ...j,
+                ...E,
                 payment_error_code: null == e ? void 0 : e.code,
                 payment_source_id: null == C ? void 0 : C.id,
                 payment_source_type: null == C ? void 0 : C.type,

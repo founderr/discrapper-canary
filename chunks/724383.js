@@ -28,17 +28,17 @@ t.Z = function () {
                     (0, h.vE)(e);
             }
         })(t),
-        I = (0, l.TH)(),
-        E = !e && t === f.F$.APPS;
+        E = (0, l.TH)(),
+        I = !e && t === f.F$.APPS;
     return (r.useEffect(() => {
-        let e = I.pathname,
+        let e = E.pathname,
             t = (0, g.I)(e);
         t !== p.Z.getField('selectedTab') && p.Z.setState({ selectedTab: t });
-    }, [e, I.pathname]),
+    }, [e, E.pathname]),
     r.useEffect(() => {
-        E || (0, m.RI)({ selectedTab: t });
-    }, [E, t]),
-    E)
+        I || (0, m.RI)({ selectedTab: t });
+    }, [I, t]),
+    I)
         ? (0, i.jsx)(a.default, {})
         : (0, i.jsxs)('section', {
               className: _.container,

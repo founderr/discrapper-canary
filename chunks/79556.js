@@ -32,8 +32,8 @@ var l = n(120356),
     y = n(473403),
     T = n(304471),
     A = n(981631),
-    P = n(647086),
-    j = n(831746);
+    j = n(647086),
+    P = n(831746);
 function R(e, t, n) {
     return (
         t in e
@@ -59,7 +59,7 @@ class M extends Z.ZP {
         return null == e
             ? null
             : (0, i.jsx)('div', {
-                  className: j.channelInfo,
+                  className: P.channelInfo,
                   children: e
               });
     }
@@ -69,8 +69,8 @@ class M extends Z.ZP {
             N = (0, m.D)(v),
             T = (0, i.jsx)('li', {
                 className: r()(this.getClassName(), {
-                    [j.disabled]: this.isDisabled(),
-                    [j.selected]: n
+                    [P.disabled]: this.isDisabled(),
+                    [P.selected]: n
                 }),
                 'data-dnd-name': e.name,
                 onMouseEnter: c || Z ? this.handleMouseEnter : void 0,
@@ -83,7 +83,7 @@ class M extends Z.ZP {
                     shouldShow: (c && this.state.shouldShowThreadsPopout) || (Z && this.state.shouldShowActivities),
                     children: () =>
                         (0, i.jsxs)(y.Z, {
-                            className: j.iconVisibility,
+                            className: P.iconVisibility,
                             channel: e,
                             guild: t,
                             selected: !_ && n,
@@ -218,13 +218,13 @@ function w(e) {
             let e = _.Z.getChannel(t.parent_id);
             return {
                 canManageChannel: x.Z.can(A.Plq.MANAGE_CHANNELS, t),
-                canReorderChannel: !0 !== l && (n.id === P._ || (null != e ? x.Z.can(A.Plq.MANAGE_CHANNELS, e) : x.Z.can(A.Plq.MANAGE_CHANNELS, n)))
+                canReorderChannel: !0 !== l && (n.id === j._ || (null != e ? x.Z.can(A.Plq.MANAGE_CHANNELS, e) : x.Z.can(A.Plq.MANAGE_CHANNELS, n)))
             };
         }),
         S = (0, a.e7)([g.Z], () => g.Z.shouldIndicateNewChannel(n.id, t.id)),
         { needSubscriptionToAccess: Z, isSubscriptionGated: y } = (0, f.Z)(t.id),
         T = (0, a.e7)([b.ZP], () => b.ZP.isFavorite(n.id, t.id)),
-        j = (0, a.e7)(
+        P = (0, a.e7)(
             [E.default],
             () => {
                 let e = E.default.getCurrentUser();
@@ -255,7 +255,7 @@ function w(e) {
         needSubscriptionToAccess: Z,
         isNewChannel: S && e.canBeNewChannel,
         isFavoriteSuggestion: r && !T,
-        canShowThreadPreviewForUser: j,
+        canShowThreadPreviewForUser: P,
         channelInfo: M,
         embeddedApps: w,
         resolvedUnreadSetting: m,

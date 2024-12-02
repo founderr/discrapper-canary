@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return g;
     }
 });
 var i = n(200651),
@@ -10,17 +10,17 @@ var i = n(200651),
     o = n(447543),
     s = n(955415),
     c = n(598077),
-    u = n(314897),
-    d = n(592125),
+    d = n(314897),
+    u = n(592125),
     m = n(699516),
     h = n(51144),
     f = n(981631),
     p = n(388032),
-    g = n(658412);
-function _(e) {
+    _ = n(658412);
+function g(e) {
     var t;
-    let { invite: n, getAcceptInviteContext: _ } = e,
-        E = (0, l.e7)([u.default], () => u.default.getId()),
+    let { invite: n, getAcceptInviteContext: g } = e,
+        E = (0, l.e7)([d.default], () => d.default.getId()),
         C = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === E,
         I = n.state === f.r2o.ACCEPTING,
         x = (0, l.e7)([m.Z], () => {
@@ -28,15 +28,15 @@ function _(e) {
             return null != n.inviter && m.Z.isFriend(null === (e = n.inviter) || void 0 === e ? void 0 : e.id);
         }),
         N = r.useCallback(() => {
-            null != n.inviter && null != d.Z.getDMFromUserId(n.inviter.id) && a.Z.openPrivateChannel([n.inviter.id]);
+            null != n.inviter && null != u.Z.getDMFromUserId(n.inviter.id) && a.Z.openPrivateChannel([n.inviter.id]);
         }, [n.inviter]),
         v = r.useCallback(() => {
-            let e = _('Invite Button Embed');
+            let e = g('Invite Button Embed');
             o.Z.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: n.code,
                 context: e
             });
-        }, [n.code, _]);
+        }, [n.code, g]);
     if (null == n.inviter) return null;
     let T = x ? N : v,
         S = p.intl.string(p.t.ib7Ng4),
@@ -51,7 +51,7 @@ function _(e) {
             (0, i.jsxs)(s.Z.Body, {
                 children: [
                     (0, i.jsxs)('div', {
-                        className: g.headerLine,
+                        className: _.headerLine,
                         children: [
                             (0, i.jsx)(s.Z.Icon, {
                                 user: new c.Z(n.inviter),

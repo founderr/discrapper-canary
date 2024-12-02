@@ -5,14 +5,14 @@ var i = n(200651),
     o = n(442837),
     s = n(481060),
     c = n(25610),
-    u = n(703751),
-    d = n(628238),
+    d = n(703751),
+    u = n(628238),
     m = n(976853),
     h = n(977683),
     f = n(869765),
     p = n(695346),
-    g = n(592125),
-    _ = n(699516),
+    _ = n(592125),
+    g = n(699516),
     E = n(709054),
     C = n(786761),
     I = n(493892),
@@ -60,12 +60,12 @@ t.Z = r.memo(function e(t) {
     let { channel: l, message: s, compact: y = !1, className: k, onContextMenu: U, onClick: w, disableInteraction: F = !1, hasThread: G, treatSpam: V } = t,
         H = O.OBS.has(s.type) ? s.messageReference : void 0,
         z = (0, o.e7)([f.Z], () => f.Z.getMessageByReference(H)),
-        W = (0, o.e7)([g.Z], () => (s.type === O.uaV.THREAD_STARTER_MESSAGE && z.state === f.Y.LOADED ? g.Z.getChannel(z.message.channel_id) : null)),
+        W = (0, o.e7)([_.Z], () => (s.type === O.uaV.THREAD_STARTER_MESSAGE && z.state === f.Y.LOADED ? _.Z.getChannel(z.message.channel_id) : null)),
         K = p.x4.useSetting(),
         Y = p.RS.useSetting(),
         X = p.NA.useSetting(),
         Q = p.QK.useSetting(),
-        q = (0, d.A)((null !== (n = s.editedTimestamp) && void 0 !== n ? n : s.timestamp).valueOf()),
+        q = (0, u.A)((null !== (n = s.editedTimestamp) && void 0 !== n ? n : s.timestamp).valueOf()),
         J = (0, m.Z)(null == l ? void 0 : l.id),
         { disableReactionCreates: $ } = (0, v.Z)(l),
         { content: ee, hasSpoilerEmbeds: et } = (0, A.Z)(s, {
@@ -76,7 +76,7 @@ t.Z = r.memo(function e(t) {
             previewLinkTarget: !0
         }),
         en = (0, N.ZP)(s),
-        ei = (0, o.e7)([g.Z], () => s.hasFlag(O.iLy.HAS_THREAD) && g.Z.getChannel(E.default.castMessageIdAsChannelId(s.id))),
+        ei = (0, o.e7)([_.Z], () => s.hasFlag(O.iLy.HAS_THREAD) && _.Z.getChannel(E.default.castMessageIdAsChannelId(s.id))),
         er = s.type === O.uaV.THREAD_STARTER_MESSAGE && z.state === f.Y.LOADED && null != W,
         el = !er && void 0 === r,
         ea = (0, b.Z)({
@@ -85,7 +85,7 @@ t.Z = r.memo(function e(t) {
             enabled: el
         }),
         eo = (0, c.V)(l.id, s.author.id),
-        es = (0, u.r)(s.id),
+        es = (0, d.r)(s.id),
         ec = (0, h.Z)(s);
     return er
         ? (0, i.jsx)(e, {
@@ -94,7 +94,7 @@ t.Z = r.memo(function e(t) {
               channel: W,
               hasThread: !1
           })
-        : (_.Z.isBlockedForMessage(s) ? (r = M.t['+FcYMz']) : _.Z.isIgnoredForMessage(s) ? (r = M.t.VFWjc3) : (0, I.DQ)(s) && V && (r = M.t.xfkfTE), void 0 !== r)
+        : (g.Z.isBlockedForMessage(s) ? (r = M.t['+FcYMz']) : g.Z.isIgnoredForMessage(s) ? (r = M.t.VFWjc3) : (0, I.DQ)(s) && V && (r = M.t.xfkfTE), void 0 !== r)
           ? (0, i.jsx)(B, {
                 className: k,
                 compact: y,

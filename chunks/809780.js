@@ -21,14 +21,14 @@ var i,
     o = n(192379),
     s = n(836560),
     c = n(512722),
-    u = n.n(c),
-    d = n(392711),
-    m = n.n(d),
+    d = n.n(c),
+    u = n(392711),
+    m = n.n(u),
     h = n(570140),
     f = n(904245),
     p = n(45114),
-    g = n(607070),
-    _ = n(853856),
+    _ = n(607070),
+    g = n(853856),
     E = n(181945),
     C = n(220444),
     I = n(601070),
@@ -81,7 +81,7 @@ class V extends s.EventEmitter {
                               ...e,
                               hasLoadedAnything: !0
                           };
-                return (e = this.populateInitialStateFromStore(e)).isFullyLoaded ? e : (u()('nsfw' !== e.type, 'this channel should already be loaded'), 'messages' === e.type && this.loadChannelMessages(e) && (n = !0), e);
+                return (e = this.populateInitialStateFromStore(e)).isFullyLoaded ? e : (d()('nsfw' !== e.type, 'this channel should already be loaded'), 'messages' === e.type && this.loadChannelMessages(e) && (n = !0), e);
             });
         (!n || i.some((e, n) => e !== t[n])) &&
             this.setState({
@@ -128,7 +128,7 @@ class V extends s.EventEmitter {
                     this.setState({
                         loadState: 'loaded',
                         channels: this.updateChannel(e.channelId, (e) => {
-                            u()('messages' === e.type, 'channel cannot change type');
+                            d()('messages' === e.type, 'channel cannot change type');
                             let n = H(e, !0);
                             return (
                                 (0 === n.messages.length || n.messages.length === e.messages.length) &&
@@ -149,7 +149,7 @@ class V extends s.EventEmitter {
                         channels: this.updateChannel(e.channelId, (e) => {
                             var t;
                             return (
-                                u()('messages' === e.type, 'channel cannot change type'),
+                                d()('messages' === e.type, 'channel cannot change type'),
                                 {
                                     ...H(e, !0),
                                     isFullyLoaded: !0,
@@ -222,7 +222,7 @@ class V extends s.EventEmitter {
                         deleted: !0
                     }))
                 }),
-                    g.Z.useReducedMotion && this.deleteChannel(t),
+                    _.Z.useReducedMotion && this.deleteChannel(t),
                     this.maybeLoadMore();
             }),
             (this.undoMarkChannelRead = () => {
@@ -390,7 +390,7 @@ function W(e, t, n, i) {
         s = y.ZP.getMentionCount(i),
         c = s > 0 || r.isPrivate();
     if (null == o || B.default.compare(l, o) >= 0) return;
-    let u = {
+    let d = {
         guildId: n,
         channelId: i,
         oldestReadMessageId: l,
@@ -405,7 +405,7 @@ function W(e, t, n, i) {
         mentionCount: s,
         sortOrder: (function (e, t, n) {
             let i = b.Z.getChannel(t);
-            if (_.Z.isFavorite(t)) return 0;
+            if (g.Z.isFavorite(t)) return 0;
             if (i.isPrivate()) return 1;
             if (y.ZP.getMentionCount(t) > 0) return 2;
             if (null != n) {
@@ -427,16 +427,16 @@ function W(e, t, n, i) {
     };
     r.isNSFW() && !Z.Z.didAgree(r.guild_id)
         ? t.push({
-              ...u,
+              ...d,
               type: 'nsfw'
           })
         : r.isForumLikeChannel()
           ? t.push({
-                ...u,
+                ...d,
                 type: 'forum'
             })
           : t.push({
-                ...u,
+                ...d,
                 type: 'messages',
                 messages: []
             });

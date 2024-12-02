@@ -23,24 +23,24 @@ function p(e) {
         _ = r.useCallback(() => {
             s.Z.closeChannelSidebar(o.uZ);
         }, []),
-        I = r.useCallback(() => {
+        E = r.useCallback(() => {
             s.Z.closeChannelSidebar(o.uZ), g && (0, a.Kh)(p.id);
         }, [p.id, g]),
         {
-            acceptMessageRequest: E,
+            acceptMessageRequest: I,
             rejectMessageRequest: C,
             isAcceptLoading: v,
             isRejectLoading: N,
             isUserProfileLoading: S,
             isOptimisticAccepted: T,
-            isOptimisticRejected: x
+            isOptimisticRejected: b
         } = (0, d.m)({
             user: n,
-            onAcceptSuccess: I,
+            onAcceptSuccess: E,
             onRejectSuccess: _,
             onError: f
         }),
-        b = v || N || S || T || x;
+        x = v || N || S || T || b;
     return (0, i.jsxs)('div', {
         className: m.container,
         children: [
@@ -59,8 +59,8 @@ function p(e) {
                         onClick: (e) => {
                             e.stopPropagation(), C(p.id);
                         },
-                        disabled: b,
-                        submitting: N || x,
+                        disabled: x,
+                        submitting: N || b,
                         children: h.intl.string(h.t.B2nygY)
                     }),
                     (0, i.jsx)(l.Button, {
@@ -68,9 +68,9 @@ function p(e) {
                         color: l.ButtonColors.BRAND,
                         size: l.Button.Sizes.SMALL,
                         onClick: (e) => {
-                            e.stopPropagation(), E(p.id);
+                            e.stopPropagation(), I(p.id);
                         },
-                        disabled: b,
+                        disabled: x,
                         submitting: v || S || T,
                         children: h.intl.string(h.t.Kz8Pws)
                     })

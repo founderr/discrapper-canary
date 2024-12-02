@@ -1,22 +1,22 @@
-n.d(e, {
+n.d(t, {
     Z: function () {
-        return S;
+        return o;
     }
 }),
     n(47120);
 var r = n(192379),
-    E = n(742280),
-    i = n(442837),
-    u = n(351402);
-function S() {
-    let [t, e] = r.useState(!1),
-        [n, S] = r.useState(!1),
-        o = (0, i.e7)([u.Z], () => E.M.EEA_COUNTRIES.has(u.Z.ipCountryCodeWithFallback));
+    i = n(742280),
+    a = n(442837),
+    s = n(351402);
+function o() {
+    let [e, t] = r.useState(!1),
+        [n, o] = r.useState(!1),
+        l = (0, a.e7)([s.Z], () => i.M.EEA_COUNTRIES.has(s.Z.ipCountryCodeWithFallback));
     return {
-        hasViewedPurchaseTerms: t,
-        setHasViewedPurchaseTerms: e,
-        showWithdrawalWaiver: o,
-        hasAcceptedWithdrawalWaiver: !o || n,
-        setHasAcceptedWithdrawalWaiver: S
+        hasViewedPurchaseTerms: e,
+        setHasViewedPurchaseTerms: t,
+        showWithdrawalWaiver: l,
+        hasAcceptedWithdrawalWaiver: !l || n,
+        setHasAcceptedWithdrawalWaiver: o
     };
 }

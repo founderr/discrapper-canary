@@ -39,7 +39,7 @@ n.d(t, {
                     })(i, e(t[a], n));
                 return i;
             }
-            return (null != t.content && (t.content = e(t.content, t)), 'list' === t.type && (t.items = t.items.map((t) => (Array.isArray(t) ? e(t, null) : t))), null != n && t.type === n.type) ? t.content : t;
+            return (null != t.content && (t.content = e(t.content, t)), 'inlineCode' === t.type && delete t.validationChildContent, 'list' === t.type && (t.items = t.items.map((t) => (Array.isArray(t) ? e(t, null) : t))), null != n && t.type === n.type) ? t.content : t;
         };
     }
 }),

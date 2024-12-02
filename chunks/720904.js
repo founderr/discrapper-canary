@@ -20,8 +20,8 @@ var l = t(120356),
     E = t(981631),
     I = t(185923),
     v = t(388032),
-    p = t(953568);
-let M = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
+    M = t(953568);
+let p = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
 function Z(e) {
     var n;
     let { emoji: t, isFocused: l } = e,
@@ -44,17 +44,17 @@ function Z(e) {
                 children: (e) =>
                     (0, i.jsx)('div', {
                         'aria-label': v.intl.formatToPlainString(v.t['/iYSo6'], { emojiName: t.name }),
-                        className: r()(p.button, { [p.focused]: l }),
+                        className: r()(M.button, { [M.focused]: l }),
                         ...e,
                         children:
                             null == s || '' === s.trim()
                                 ? (0, i.jsx)('span', {
-                                      className: r()('emoji', 'emoji-text', p.icon),
+                                      className: r()('emoji', 'emoji-text', M.icon),
                                       ...e,
                                       children: u
                                   })
                                 : (0, i.jsx)('img', {
-                                      className: p.icon,
+                                      className: M.icon,
                                       src: s,
                                       alt: ''
                                   })
@@ -68,7 +68,7 @@ function x(e, n) {
     let t = (0, s.MZ)(n.guild_id).filter((e) => {
         var t;
         return (
-            !(e.useSpriteSheet && M.indexOf(null !== (t = e.uniqueName) && void 0 !== t ? t : '') >= 0) &&
+            !(e.useSpriteSheet && p.indexOf(null !== (t = e.uniqueName) && void 0 !== t ? t : '') >= 0) &&
             !h.ZP.isEmojiPremiumLocked({
                 emoji: e,
                 channel: n,
@@ -85,7 +85,7 @@ function x(e, n) {
         };
     return m && t.length > 0
         ? (0, i.jsx)(o.MenuGroup, {
-              className: p.wrapper,
+              className: M.wrapper,
               children: t.map((e, n) => {
                   var t;
                   return (0, i.jsx)(

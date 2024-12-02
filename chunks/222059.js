@@ -31,8 +31,8 @@ var i = n(200651),
     y = n(674552),
     T = n(981631),
     A = n(474936),
-    P = n(871465),
-    j = n(388032),
+    j = n(871465),
+    P = n(388032),
     R = n(491708);
 let M = {
     origin: {
@@ -58,8 +58,8 @@ function L(e) {
             E(null), L(0), clearTimeout(I);
         };
     if (null == n) return null;
-    let O = j.intl.string(j.t.YUU0RE);
-    v && (O = o.K.get(T.wli) ? j.intl.string(j.t.nkq1l5) : j.intl.string(j.t.Be8Q5O));
+    let O = P.intl.string(P.t.YUU0RE);
+    v && (O = o.K.get(T.wli) ? P.intl.string(P.t.nkq1l5) : P.intl.string(P.t.Be8Q5O));
     let k = null;
     !t &&
         f &&
@@ -81,7 +81,7 @@ function L(e) {
                         D();
                         let e = !o.K.get(T.wli);
                         o.K.set(T.wli, e),
-                            e && o.K.set(P.O5, !0),
+                            e && o.K.set(j.O5, !0),
                             e ? (0, b.GN)('discodo') : (0, b.GN)('user_leave'),
                             x(!0),
                             setTimeout(() => {
@@ -90,7 +90,7 @@ function L(e) {
                     }
                 },
                 selected: U,
-                ariaLabel: j.intl.string(j.t.YUU0RE),
+                ariaLabel: P.intl.string(P.t.YUU0RE),
                 ...w,
                 to: {
                     pathname: m,

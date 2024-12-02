@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return g;
     }
 }),
     n(789020);
@@ -12,15 +12,15 @@ var r = n(533800),
     o = n(955415),
     s = n(131704),
     c = n(630388),
-    u = n(267642),
-    d = n(411198),
+    d = n(267642),
+    u = n(411198),
     m = n(277707),
     h = n(358595),
     f = n(981631),
     p = n(388032),
-    g = n(658412);
-function _(e) {
-    var t, _;
+    _ = n(658412);
+function g(e) {
+    var t, g;
     let E,
         C,
         I,
@@ -34,11 +34,11 @@ function _(e) {
         M = null != L && L.isGuildVocal(),
         k = null != L && L.isGuildStageVoice(),
         D = (0, c.yE)(null !== (t = T.flags) && void 0 !== t ? t : 0, r.$.IS_GUEST_INVITE),
-        B = null !== (_ = null == v ? void 0 : v.hasFeature(f.oNc.HUB)) && void 0 !== _ && _;
+        B = null !== (g = null == v ? void 0 : v.hasFeature(f.oNc.HUB)) && void 0 !== g && g;
     if (null == v) {
         if (null == T.guild) return (0, i.jsx)(h.Z, {});
-        v = d.Qs(T.guild);
-        let e = (0, u.rF)(T.guild.premium_subscription_count, T.guild.id);
+        v = u.Qs(T.guild);
+        let e = (0, d.rF)(T.guild.premium_subscription_count, T.guild.id);
         v.premiumTier = e;
     }
     let U = y ? x : N,
@@ -52,11 +52,11 @@ function _(e) {
         });
     return (
         (C = (0, i.jsxs)('span', {
-            className: g.infoTitle,
+            className: _.infoTitle,
             children: [
                 (0, i.jsx)(o.Z.GuildName, { guild: v }),
                 (0, i.jsx)('span', {
-                    className: g.infoBadge,
+                    className: _.infoBadge,
                     children: (0, i.jsx)(a.Z, {
                         guild: v,
                         isBannerVisible: !1,
@@ -67,22 +67,22 @@ function _(e) {
         })),
         D &&
             (I = (0, i.jsx)(l.TooltipContainer, {
-                className: g.tooltipContainer,
+                className: _.tooltipContainer,
                 text: p.intl.string(p.t['/FeTKy']),
                 children: (0, i.jsx)(l.CircleInformationIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: g.infoIcon
+                    className: _.infoIcon
                 })
             })),
         M
             ? ((C = (0, i.jsx)(o.Z.Channel, { channel: L })),
               (E = (0, i.jsxs)('span', {
-                  className: g.infoTitle,
+                  className: _.infoTitle,
                   children: [
                       p.intl.format(p.t['2wimj4'], { guildName: v.name }),
                       (0, i.jsx)('span', {
-                          className: g.infoBadge,
+                          className: _.infoBadge,
                           children: (0, i.jsx)(a.Z, {
                               guild: v,
                               isBannerVisible: !1
@@ -110,7 +110,7 @@ function _(e) {
                 (0, i.jsxs)(o.Z.Body, {
                     children: [
                         (0, i.jsxs)('div', {
-                            className: g.headerLine,
+                            className: _.headerLine,
                             children: [
                                 (0, i.jsx)(o.Z.Icon, { guild: v }),
                                 (0, i.jsx)(o.Z.Info, {
@@ -131,7 +131,7 @@ function _(e) {
                 v.hasFeature(f.oNc.HUB) &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)('div', { className: g.separator }),
+                            (0, i.jsx)('div', { className: _.separator }),
                             (0, i.jsx)(l.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',

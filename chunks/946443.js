@@ -14,14 +14,14 @@ var i = n(200651),
     o = n(525654),
     s = n.n(o),
     c = n(91192),
-    u = n(442837),
-    d = n(524437),
+    d = n(442837),
+    u = n(524437),
     m = n(481060),
     h = n(570140),
     f = n(607070),
     p = n(724757),
-    g = n(626135),
-    _ = n(585483),
+    _ = n(626135),
+    g = n(585483),
     E = n(358085),
     C = n(143316),
     I = n(240126),
@@ -59,9 +59,9 @@ function b(e) {
                     null != n && t.markChannelRead(n);
                 };
                 return (
-                    _.S.subscribe(T.CkL.MARK_TOP_INBOX_CHANNEL_READ, n),
+                    g.S.subscribe(T.CkL.MARK_TOP_INBOX_CHANNEL_READ, n),
                     () => {
-                        _.S.unsubscribe(T.CkL.MARK_TOP_INBOX_CHANNEL_READ, n);
+                        g.S.unsubscribe(T.CkL.MARK_TOP_INBOX_CHANNEL_READ, n);
                     }
                 );
             }, [t, e.channels]);
@@ -80,7 +80,7 @@ function b(e) {
             }, [e]);
         })(L),
         r.useEffect(() => {
-            g.default.track(T.rMx.OPEN_POPOUT, { type: 'Inbox' });
+            _.default.track(T.rMx.OPEN_POPOUT, { type: 'Inbox' });
         }, []),
         r.useEffect(
             () => (
@@ -91,7 +91,7 @@ function b(e) {
             ),
             [b]
         );
-    let D = (0, u.e7)([f.Z], () => f.Z.messageGroupSpacing),
+    let D = (0, d.e7)([f.Z], () => f.Z.messageGroupSpacing),
         B = (0, p.Z)('unreads', R);
     if (0 === O.length) {
         var U;
@@ -99,7 +99,7 @@ function b(e) {
             className: A.container,
             children: [
                 (0, i.jsx)(x.Z, {
-                    tab: d.X.UNREADS,
+                    tab: u.X.UNREADS,
                     setTab: t,
                     badgeState: Z,
                     closePopout: b
@@ -117,7 +117,7 @@ function b(e) {
         'aria-label': S.intl.string(S.t.sRUdBw),
         children: [
             (0, i.jsx)(x.Z, {
-                tab: d.X.UNREADS,
+                tab: u.X.UNREADS,
                 setTab: t,
                 badgeState: Z,
                 closePopout: b,
@@ -188,7 +188,7 @@ function Z(e) {
         className: A.container,
         children: [
             (0, i.jsx)(x.Z, {
-                tab: d.X.UNREADS,
+                tab: u.X.UNREADS,
                 setTab: t,
                 badgeState: n,
                 closePopout: r

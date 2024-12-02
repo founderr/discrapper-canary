@@ -25,15 +25,15 @@ var i,
     g = n(703656),
     f = n(922482),
     _ = n(565799),
-    I = n(501655),
-    E = n(192079),
+    E = n(501655),
+    I = n(192079),
     C = n(427679),
     v = n(448206),
     N = n(496675),
     S = n(938475),
     T = n(626135),
-    x = n(823379),
-    b = n(15274),
+    b = n(823379),
+    x = n(15274),
     A = n(924301),
     Z = n(504160),
     L = n(151864),
@@ -208,7 +208,7 @@ function z(e) {
         u = (0, h.KS)(c),
         { startTime: m, endTime: p } = (0, R.ZP)(n),
         { startDateTimeString: g, upcomingEvent: f, diffMinutes: _ } = (0, M.ub)(m.toISOString(), null == p ? void 0 : p.toISOString()),
-        I = f ? (_ > 0 ? G.intl.formatToPlainString(G.t.PQlCWl, { minutes: _ }) : G.intl.string(G.t.WINqKS)) : G.intl.formatToPlainString(G.t.DC6h3N, { date: g });
+        E = f ? (_ > 0 ? G.intl.formatToPlainString(G.t.PQlCWl, { minutes: _ }) : G.intl.string(G.t.WINqKS)) : G.intl.formatToPlainString(G.t.DC6h3N, { date: g });
     return (
         a.useEffect(() => {
             T.default.track(U.rMx.CHANNEL_NOTICE_VIEWED, {
@@ -223,7 +223,7 @@ function z(e) {
                     className: B.textBlock,
                     children: [
                         (0, l.jsx)(d.Clickable, {
-                            onClick: () => (0, b.bO)({ eventId: n.id }),
+                            onClick: () => (0, x.bO)({ eventId: n.id }),
                             className: B.eventNameClickable,
                             children: (0, l.jsx)(d.Text, {
                                 color: 'header-primary',
@@ -263,7 +263,7 @@ function z(e) {
                             color: 'header-secondary',
                             variant: 'text-xs/normal',
                             className: B.startTime,
-                            children: I
+                            children: E
                         })
                     ]
                 }),
@@ -322,7 +322,7 @@ function W(e) {
 function Y(e) {
     let { guildEvent: t } = e,
         n = a.useCallback(() => {
-            (0, b.bO)({ eventId: t.id });
+            (0, x.bO)({ eventId: t.id });
         }, [t]);
     return (0, l.jsx)(d.Button, {
         fullWidth: !0,
@@ -348,8 +348,8 @@ function K(e) {
 }
 function q(e) {
     let { stageInstance: t, channel: n } = e,
-        i = (0, c.Wu)([_.Z], () => [...new Set(_.Z.getMutableParticipants(n.id, I.pV.SPEAKER).map((e) => e.user))], [n.id]),
-        r = (0, c.e7)([_.Z], () => _.Z.getParticipantCount(n.id, I.pV.AUDIENCE), [n.id]),
+        i = (0, c.Wu)([_.Z], () => [...new Set(_.Z.getMutableParticipants(n.id, E.pV.SPEAKER).map((e) => e.user))], [n.id]),
+        r = (0, c.e7)([_.Z], () => _.Z.getParticipantCount(n.id, E.pV.AUDIENCE), [n.id]),
         a = G.intl.formatToPlainString(G.t['+v2pNz'], { count: ''.concat(r) });
     return (0, l.jsx)(H, {
         onClickCloseIcon: () => (0, Z.ji)({ stageId: null == t ? void 0 : t.id }),
@@ -396,7 +396,7 @@ function X(e) {
             p = G.intl.string(G.t.wBoE6O);
             break;
         default:
-            (0, x.vE)(i);
+            (0, b.vE)(i);
     }
     return null == r
         ? null
@@ -416,7 +416,7 @@ function X(e) {
                                     color: 'header-secondary',
                                     variant: 'text-xs/normal',
                                     className: B.userNames,
-                                    children: (0, E.ER)(r, s, null == t ? void 0 : t.id, n.length)
+                                    children: (0, I.ER)(r, s, null == t ? void 0 : t.id, n.length)
                                 })
                             ]
                         })

@@ -3,17 +3,17 @@ n(192379);
 var l = n(481060),
     s = n(823188),
     r = n(474936),
-    C = n(101098);
-function a(e) {
-    let { onClick: t, isGift: n, priceOptions: r, showHalloweenGift: a } = e;
+    a = n(101098);
+function C(e) {
+    let { onClick: t, isGift: n, priceOptions: r, showPromotionalGiftBanner: C } = e;
     return (0, i.jsx)(l.Clickable, {
         onClick: t,
         style: { cursor: 'pointer' },
         children: (0, i.jsx)(s.wp, {
-            className: C.tier2MarketingCard,
+            className: a.tier2MarketingCard,
             ctaButton: null,
-            showWumpus: !a,
-            showHalloweenGift: a,
+            showWumpus: !C,
+            showPromotionalGiftBanner: C,
             showYearlyPrice: !0,
             isGift: n,
             isModal: !0,
@@ -27,7 +27,7 @@ function o(e) {
         onClick: t,
         style: { cursor: 'pointer' },
         children: (0, i.jsx)(s.Gq, {
-            className: C.tier0MarketingCard,
+            className: a.tier0MarketingCard,
             ctaButton: null,
             showWumpus: !0,
             showYearlyPrice: !0,
@@ -37,14 +37,14 @@ function o(e) {
     });
 }
 t.Z = function (e) {
-    let { onSelectSku: t, isGift: n, priceOptions: l, shouldShowHalloweenTier2Card: s } = e;
+    let { onSelectSku: t, isGift: n, priceOptions: l, showPromotionalGiftBanner: s } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(a, {
+            (0, i.jsx)(C, {
                 onClick: () => t(r.Si.TIER_2),
                 isGift: n,
                 priceOptions: l,
-                showHalloweenGift: s
+                showPromotionalGiftBanner: s
             }),
             (0, i.jsx)(o, {
                 onClick: () => t(r.Si.TIER_0),

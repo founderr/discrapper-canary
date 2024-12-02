@@ -21,8 +21,8 @@ var i,
     g = n(592125),
     f = n(626135),
     _ = n(981631),
-    I = n(921944),
-    E = n(388032),
+    E = n(921944),
+    I = n(388032),
     C = n(650510);
 ((i = r || (r = {})).BOOSTING = 'BOOSTING'), (i.NITRO = 'NITRO'), (i.BASH_OUT = 'BASH_OUT'), (i.GAME_NIGHT = 'GAME_NIGHT');
 let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4',
@@ -33,8 +33,8 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                 analyticsLocation: r,
                 analyticsType: S,
                 ctaText: T,
-                dismissText: x,
-                description: b,
+                dismissText: b,
+                description: x,
                 learnMore: A,
                 title: Z,
                 videoPosterUrl: L,
@@ -46,49 +46,49 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                         return {
                             analyticsLocation: h.Z.ACTIVITY_COACH_MARK_BOOSTING,
                             analyticsType: 'embedded_activity_discovery_tutorial',
-                            description: E.intl.string(E.t.eDjBOT),
+                            description: I.intl.string(I.t.eDjBOT),
                             learnMore: !0,
-                            title: E.intl.string(E.t.wbiFFB),
+                            title: I.intl.string(I.t.wbiFFB),
                             videoPosterUrl: N,
                             videoUrl: v,
-                            ctaText: E.intl.string(E.t['5SaQDw']),
-                            dismissText: E.intl.string(E.t.WAI6xs)
+                            ctaText: I.intl.string(I.t['5SaQDw']),
+                            dismissText: I.intl.string(I.t.WAI6xs)
                         };
                     case 'NITRO':
                         return {
                             analyticsLocation: h.Z.ACTIVITY_COACH_MARK_NITRO,
                             analyticsType: 'embedded_activity_nitro_discovery_tutorial',
-                            description: E.intl.string(E.t.qJn0bW),
+                            description: I.intl.string(I.t.qJn0bW),
                             learnMore: !0,
-                            title: E.intl.string(E.t.g8itmp),
+                            title: I.intl.string(I.t.g8itmp),
                             videoPosterUrl: N,
                             videoUrl: v,
-                            ctaText: E.intl.string(E.t['5SaQDw']),
-                            dismissText: E.intl.string(E.t.WAI6xs)
+                            ctaText: I.intl.string(I.t['5SaQDw']),
+                            dismissText: I.intl.string(I.t.WAI6xs)
                         };
                     case 'BASH_OUT':
                         return {
                             analyticsLocation: h.Z.ACTIVITY_COACH_MARK_BASH_OUT,
                             analyticsType: 'embedded_activity_bash_out_tutorial',
-                            description: E.intl.string(E.t.n9Tkzc),
+                            description: I.intl.string(I.t.n9Tkzc),
                             learnMore: !1,
-                            title: E.intl.string(E.t.HET4fn),
+                            title: I.intl.string(I.t.HET4fn),
                             videoPosterUrl: 'https://cdn.discordapp.com/attachments/860252504826445825/1037963592227635230/bash_out.jpg',
                             videoUrl: 'https://cdn.discordapp.com/attachments/860252504826445825/1037967755955146762/bash_out.mp4',
-                            ctaText: E.intl.string(E.t.RscU7O),
-                            dismissText: E.intl.string(E.t.WAI6xs)
+                            ctaText: I.intl.string(I.t.RscU7O),
+                            dismissText: I.intl.string(I.t.WAI6xs)
                         };
                     case 'GAME_NIGHT':
                         return {
                             analyticsLocation: h.Z.ACTIVITIES_COACH_MARK_GAME_NIGHT,
                             analyticsType: 'embedded_activity_game_night_tutorial',
-                            description: E.intl.string(E.t['1s1xdH']),
+                            description: I.intl.string(I.t['1s1xdH']),
                             learnMore: !1,
-                            title: E.intl.string(E.t['+4M1ZW']),
+                            title: I.intl.string(I.t['+4M1ZW']),
                             videoPosterUrl: 'https://cdn.discordapp.com/attachments/860252504826445825/1093287297950175272/game_night_desktop.jpg',
                             videoUrl: 'https://cdn.discordapp.com/attachments/860252504826445825/1093286971708813382/game_night_desktop.mp4',
-                            ctaText: E.intl.string(E.t.y0nXOj),
-                            dismissText: E.intl.string(E.t.TulDPj)
+                            ctaText: I.intl.string(I.t.y0nXOj),
+                            dismissText: I.intl.string(I.t.TulDPj)
                         };
                     default:
                         return {
@@ -143,7 +143,7 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                 variant: 'text-xs/normal',
                                 color: 'always-white',
                                 children: [
-                                    b,
+                                    x,
                                     A
                                         ? (0, l.jsxs)(l.Fragment, {
                                               children: [
@@ -151,7 +151,7 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                                   (0, l.jsx)(o.Anchor, {
                                                       className: C.learnMoreLink,
                                                       href: 'https://support.discord.com/hc/articles/4422142836759',
-                                                      children: E.intl.string(E.t.hvVgAQ)
+                                                      children: I.intl.string(I.t.hvVgAQ)
                                                   })
                                               ]
                                           })
@@ -164,9 +164,9 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                     (0, l.jsx)(o.Button, {
                                         color: o.Button.Colors.BRAND,
                                         onClick: () => {
-                                            n(I.L.UNKNOWN);
+                                            n(E.L.UNKNOWN);
                                         },
-                                        children: x
+                                        children: b
                                     }),
                                     (0, l.jsx)(o.Button, {
                                         color: o.Button.Colors.BRAND_INVERTED,
@@ -174,7 +174,7 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                             null != P
                                                 ? P
                                                 : () => {
-                                                      if ((n(I.L.UNKNOWN), null != j))
+                                                      if ((n(E.L.UNKNOWN), null != j))
                                                           (0, u.Z)({
                                                               channel: j.isGuildVoice() ? j : void 0,
                                                               guildId: j.guild_id,

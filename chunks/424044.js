@@ -10,37 +10,37 @@ var i = n(200651),
     d = n(353926),
     h = n(185625),
     g = n(551549),
-    m = n(108427),
-    f = n(314897),
-    p = n(981631),
-    x = n(388032),
-    _ = n(232186);
+    p = n(108427),
+    m = n(314897),
+    f = n(981631),
+    _ = n(388032),
+    x = n(232186);
 s.ZP.initialize();
 t.Z = (e) => {
     let { location: t } = e,
-        n = (0, s.e7)([f.default], () => f.default.isAuthenticated()),
+        n = (0, s.e7)([m.default], () => m.default.isAuthenticated()),
         E = (0, s.e7)([d.Z], () => d.Z.hasLoadedExperiments),
         I = (0, g.oK)('RSL - Landing Page'),
         [v, N] = r.useState(!1),
-        [C, b] = r.useState(x.intl.string(x.t['9exy+f'])),
+        [b, C] = r.useState(_.intl.string(_.t['9exy+f'])),
         [S, A] = r.useState(!0),
-        j = (e) => {
+        T = (e) => {
             switch (e) {
-                case p.evJ.INVALID_FORM_BODY:
-                case p.evJ.DSA_RSL_REPORT_NOT_FOUND:
-                    b(x.intl.string(x.t.bzXDfX));
+                case f.evJ.INVALID_FORM_BODY:
+                case f.evJ.DSA_RSL_REPORT_NOT_FOUND:
+                    C(_.intl.string(_.t.bzXDfX));
                     break;
-                case p.evJ.DSA_RSL_ALREADY_REQUESTED:
-                    b(x.intl.string(x.t.rV00ws));
+                case f.evJ.DSA_RSL_ALREADY_REQUESTED:
+                    C(_.intl.string(_.t.rV00ws));
                     break;
-                case p.evJ.DSA_RSL_LIMITED_TIME:
-                    b(x.intl.string(x.t['0dI29v']));
+                case f.evJ.DSA_RSL_LIMITED_TIME:
+                    C(_.intl.string(_.t['0dI29v']));
                     break;
-                case p.evJ.DSA_RSL_REPORT_INELIGIBLE:
-                    b(x.intl.string(x.t['RGa/GR']));
+                case f.evJ.DSA_RSL_REPORT_INELIGIBLE:
+                    C(_.intl.string(_.t['RGa/GR']));
                     break;
                 default:
-                    b(x.intl.string(x.t['0QLzfn']));
+                    C(_.intl.string(_.t['0QLzfn']));
             }
         };
     return (
@@ -61,22 +61,22 @@ t.Z = (e) => {
                 var t, n;
                 try {
                     let n = null != e ? await (0, h.hs)(e) : void 0;
-                    null != n ? b(x.intl.string(x.t.e6mZMj)) : j(null === (t = n.body) || void 0 === t ? void 0 : t.code);
+                    null != n ? C(_.intl.string(_.t.e6mZMj)) : T(null === (t = n.body) || void 0 === t ? void 0 : t.code);
                 } catch (e) {
-                    j(null === (n = e.body) || void 0 === n ? void 0 : n.code);
+                    T(null === (n = e.body) || void 0 === n ? void 0 : n.code);
                 } finally {
                     N(!1);
                 }
             };
-            N(!0), e((0, c.Z)(t)), (0, m.e)('report_second_look');
+            N(!0), e((0, c.Z)(t)), (0, p.e)('report_second_look');
         }, [t]),
         I &&
             !S &&
             (0, i.jsxs)(u.ZP, {
                 children: [
                     (0, i.jsx)(u.Dx, {
-                        className: _.marginBottom8,
-                        children: C
+                        className: x.marginBottom8,
+                        children: b
                     }),
                     v && (0, i.jsx)(l.Spinner, {})
                 ]

@@ -20,15 +20,15 @@ var i,
     g = n(287259),
     f = n(785547),
     _ = n(600164),
-    I = n(167533),
-    E = n(925329),
+    E = n(167533),
+    I = n(925329),
     C = n(707409),
     v = n(490983),
     N = n(799777),
     S = n(626135),
     T = n(780570),
-    x = n(624138),
-    b = n(645818),
+    b = n(624138),
+    x = n(645818),
     A = n(981631),
     Z = n(388032),
     L = n(399210);
@@ -45,8 +45,8 @@ function y(e, t, n) {
         e
     );
 }
-let P = (0, x.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
-    O = (0, x.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
+let P = (0, b.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
+    O = (0, b.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
     R = Object.freeze({
         [A.iEv.PLATFORM]: 'Platform',
         [A.iEv.LAST_PLAYED]: 'Last Played',
@@ -75,9 +75,9 @@ let P = (0, x.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                 (0, r.jsxs)(_.Z, {
                     align: _.Z.Align.CENTER,
                     children: [
-                        (0, r.jsx)(E.Z, {
+                        (0, r.jsx)(I.Z, {
                             game: e.application,
-                            size: E.Z.Sizes.SMALL,
+                            size: I.Z.Sizes.SMALL,
                             className: L.gameIcon
                         }),
                         (0, r.jsxs)('div', {
@@ -170,7 +170,7 @@ let P = (0, x.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                     icon: h.ScreenSlashIcon,
                                     tooltip: Z.intl.string(Z.t.Az9eqq)
                                 }),
-                                (0, r.jsx)(b.Z, {
+                                (0, r.jsx)(x.Z, {
                                     className: s()(L.settingIcon, { [L.hidden]: !e.supportsCloudSync }),
                                     libraryApplication: e.libraryApplication
                                 })
@@ -325,7 +325,7 @@ class w extends (i = l.PureComponent) {
         return (0, r.jsxs)(l.Fragment, {
             children: [
                 n.length > 0
-                    ? (0, r.jsx)(I.Z, {
+                    ? (0, r.jsx)(E.Z, {
                           columns: D,
                           data: n,
                           sortData: !1,

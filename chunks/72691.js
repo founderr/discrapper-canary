@@ -1,7 +1,7 @@
 n.r(r),
     n.d(r, {
         default: function () {
-            return M;
+            return B;
         }
     });
 var l = n(200651),
@@ -11,8 +11,8 @@ var l = n(200651),
     c = n(442837),
     s = n(481060),
     a = n(570140),
-    u = n(355467),
-    d = n(821849),
+    d = n(355467),
+    u = n(821849),
     p = n(15640),
     m = n(563132),
     f = n(409813),
@@ -21,50 +21,50 @@ var l = n(200651),
     N = n(165583),
     x = n(197115),
     S = n(185139),
-    C = n(263954),
-    b = n(706454),
+    b = n(263954),
+    C = n(706454),
     E = n(853872),
     g = n(930153),
-    P = n(74538),
-    j = n(937615),
-    v = n(981631),
-    I = n(474936),
-    y = n(388032),
+    y = n(74538),
+    P = n(937615),
+    j = n(981631),
+    v = n(474936),
+    I = n(388032),
     k = n(866803);
 let T = (e) => {
         let { locale: r } = e;
         return (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(C.Z, {
+                (0, l.jsx)(b.Z, {
                     icon: s.StickerIcon,
                     iconClassName: k.iconColorPurple,
-                    description: y.intl.string(y.t.uAfKTU)
+                    description: I.intl.string(I.t.uAfKTU)
                 }),
-                (0, l.jsx)(C.Z, {
+                (0, l.jsx)(b.Z, {
                     icon: s.BoostTier2SimpleIcon,
                     iconClassName: k.iconColorPink,
-                    description: y.intl.formatToPlainString(y.t.sWnv5O, {
-                        numGuildSubscriptions: I.cb,
-                        discountPercent: (0, g.T3)(r, I.Rr / 100)
+                    description: I.intl.formatToPlainString(I.t.sWnv5O, {
+                        numGuildSubscriptions: v.cb,
+                        discountPercent: (0, g.T3)(r, v.Rr / 100)
                     })
                 }),
-                (0, l.jsx)(C.Z, {
+                (0, l.jsx)(b.Z, {
                     icon: s.ReactionIcon,
                     iconClassName: k.iconColorYellow,
-                    description: y.intl.string(y.t.pqHIf3)
+                    description: I.intl.string(I.t.pqHIf3)
                 })
             ]
         });
     },
     R = (e) => {
-        let { trialOffer: r, discountOffer: o, isLoading: t, price: a, onClose: u } = e,
-            d = (0, c.e7)([b.default], () => b.default.locale),
+        let { trialOffer: r, discountOffer: o, isLoading: t, price: a, onClose: d } = e,
+            u = (0, c.e7)([C.default], () => C.default.locale),
             p = null != r || null != o;
         return (0, l.jsxs)('div', {
             className: k.wrapper,
             children: [
                 (0, l.jsx)(s.ModalCloseButton, {
-                    onClick: u,
+                    onClick: d,
                     className: k.closeButton
                 }),
                 p && (0, l.jsx)(N.dz, { className: k.premiumTrialBadge }),
@@ -80,11 +80,11 @@ let T = (e) => {
                               (0, l.jsx)(s.Text, {
                                   variant: 'text-md/normal',
                                   className: k.heading,
-                                  children: null == a ? (0, l.jsx)(s.Spinner, { type: s.Spinner.Type.PULSING_ELLIPSIS }) : y.intl.format(y.t.TBsJfX, { monthlyPrice: (0, j.T4)(a.amount, a.currency) })
+                                  children: null == a ? (0, l.jsx)(s.Spinner, { type: s.Spinner.Type.PULSING_ELLIPSIS }) : I.intl.format(I.t.TBsJfX, { monthlyPrice: (0, P.T4)(a.amount, a.currency) })
                               }),
                               (0, l.jsx)('div', {
                                   className: k.perks,
-                                  children: (0, l.jsx)(T, { locale: d })
+                                  children: (0, l.jsx)(T, { locale: u })
                               })
                           ]
                       })
@@ -93,7 +93,7 @@ let T = (e) => {
     },
     A = (e) => {
         let { trialOffer: r, discountOffer: n, onClose: o } = e,
-            t = { section: v.jXE.STICKER_PREMIUM_TIER_2_UPSELL_MODAL };
+            t = { section: j.jXE.STICKER_PREMIUM_TIER_2_UPSELL_MODAL };
         return (0, l.jsxs)(s.ModalFooter, {
             className: k.footer,
             children: [
@@ -102,12 +102,12 @@ let T = (e) => {
                     size: s.Button.Sizes.SMALL,
                     color: s.Button.Colors.PRIMARY,
                     look: s.Button.Looks.LINK,
-                    children: y.intl.string(y.t.cpT0Cg)
+                    children: I.intl.string(I.t.cpT0Cg)
                 }),
                 (0, l.jsx)(x.Z, {
-                    buttonText: null != r || null != n ? y.intl.string(y.t['Gd/XHB']) : void 0,
+                    buttonText: null != r || null != n ? I.intl.string(I.t['Gd/XHB']) : void 0,
                     premiumModalAnalyticsLocation: t,
-                    subscriptionTier: I.Si.TIER_2,
+                    subscriptionTier: v.Si.TIER_2,
                     size: s.Button.Sizes.SMALL,
                     color: s.Button.Colors.GREEN,
                     onClick: () => {
@@ -117,19 +117,19 @@ let T = (e) => {
             ]
         });
     };
-function M(e) {
+function B(e) {
     let { onClose: r, ...n } = e,
         t = (0, p.V)(),
         i = (0, c.e7)([E.Z], () => E.Z.hasFetchedPaymentSources),
         N = t && i,
         x = (0, h.N)(),
-        C = (0, _.Ng)();
+        b = (0, _.Ng)();
     o.useEffect(() => {
         a.Z.wait(() => {
-            (0, u.tZ)(), (0, d.Y2)(null, null, v.JjL.DISCOVERY);
+            (0, d.tZ)(), (0, u.Y2)(null, null, j.JjL.DISCOVERY);
         });
     }, []);
-    let b = N ? P.ZP.getDefaultPrice(I.Xh.PREMIUM_MONTH_TIER_2) : null;
+    let C = N ? y.ZP.getDefaultPrice(v.Xh.PREMIUM_MONTH_TIER_2) : null;
     return (0, l.jsx)(m.PaymentContextProvider, {
         activeSubscription: null,
         stepConfigs: [],
@@ -141,14 +141,14 @@ function M(e) {
                 hideBreadcrumbs: !0,
                 body: (0, l.jsx)(R, {
                     trialOffer: x,
-                    discountOffer: C,
+                    discountOffer: b,
                     isLoading: !N,
-                    price: b,
+                    price: C,
                     onClose: r
                 }),
                 footer: (0, l.jsx)(A, {
                     trialOffer: x,
-                    discountOffer: C,
+                    discountOffer: b,
                     onClose: r
                 }),
                 steps: [f.h8.PREMIUM_UPSELL],

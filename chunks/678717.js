@@ -181,6 +181,11 @@ function q() {
                         name: 'Content Inventory',
                         render: () => (0, r.jsx)(h.Z, {})
                     }),
+                e.push({
+                    id: 'dcf',
+                    name: 'DCF',
+                    render: () => (0, r.jsx)(S.Z, {})
+                }),
                 window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith('staging') &&
                     (e.push({
                         id: 'trials',
@@ -201,11 +206,6 @@ function q() {
                         id: 'billing',
                         name: 'Billing',
                         render: () => (0, r.jsx)(j.Z, {})
-                    }),
-                    e.push({
-                        id: 'dcf',
-                        name: 'DCF',
-                        render: () => (0, r.jsx)(S.Z, {})
                     })),
                 e.push({
                     id: 'gifting_intent',

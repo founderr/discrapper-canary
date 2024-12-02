@@ -32,8 +32,8 @@ var i,
     y = n(823385),
     T = n(415795),
     A = n(670512),
-    P = n(981631),
-    j = n(388032),
+    j = n(981631),
+    P = n(388032),
     R = n(449532);
 function M(e, t, n) {
     return (
@@ -55,13 +55,13 @@ let L = 10,
             children: [
                 (0, l.jsx)('div', {
                     className: R.emptyStateNote,
-                    children: j.intl.string(j.t.bpbATE)
+                    children: P.intl.string(P.t.bpbATE)
                 }),
                 (0, l.jsx)('div', {
                     className: R.emptyStateCTA,
                     children: (0, l.jsx)(u.Anchor, {
-                        href: Z.Z.getArticleURL(P.BhN.QUICK_SWITCHER_TUTORIAL),
-                        children: j.intl.string(j.t['4iPfEB'])
+                        href: Z.Z.getArticleURL(j.BhN.QUICK_SWITCHER_TUTORIAL),
+                        children: P.intl.string(P.t['4iPfEB'])
                     })
                 })
             ]
@@ -155,7 +155,7 @@ class H extends r.PureComponent {
         return (0, l.jsx)(u.FocusRing, {
             children: (0, l.jsx)('input', {
                 className: R.input,
-                'aria-label': j.intl.string(j.t.ZvKwYW),
+                'aria-label': P.intl.string(P.t.ZvKwYW),
                 ref: this.inputRef,
                 type: 'text',
                 role: 'combobox',
@@ -163,7 +163,7 @@ class H extends r.PureComponent {
                 'aria-expanded': i,
                 'aria-activedescendant': i ? this.getRowId(e) : void 0,
                 'aria-autocomplete': 'list',
-                placeholder: j.intl.string(j.t.Vtvewc),
+                placeholder: P.intl.string(P.t.Vtvewc),
                 onChange: this.handleInputChange,
                 onKeyDown: this.handleKeyDown,
                 value: this.state.query,
@@ -185,7 +185,7 @@ class H extends r.PureComponent {
               : (0, l.jsx)(u.ListAuto, {
                     innerId: this._listId,
                     innerRole: 'listbox',
-                    'aria-label': j.intl.string(j.t.Wef5Dg),
+                    'aria-label': P.intl.string(P.t.Wef5Dg),
                     ref: this.scrollerRef,
                     sectionHeight: 0,
                     rowHeight: 34,
@@ -197,7 +197,7 @@ class H extends r.PureComponent {
                 });
     }
     focusNode(e) {
-        S.S.dispatch(P.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
+        S.S.dispatch(j.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
     }
     getRowId(e) {
         return 'quick-switcher-'.concat(this._listId, '-item-').concat(e);
@@ -206,12 +206,12 @@ class H extends r.PureComponent {
         return (0, l.jsx)(g.Z, {
             className: o()(R.protip, { [R.hasContent]: this.state.query.length > 0 }),
             type: g.Z.Types.INLINE,
-            children: j.intl.format(j.t.wukqXV, {
-                userSymbolHook: (e, t) => V(t, m.xQ.USER, j.intl.string(j.t.GQRCGh)),
-                textChannelSymbolHook: (e, t) => V(t, m.xQ.TEXT_CHANNEL, j.intl.string(j.t.wrwhub)),
-                voiceChannelSymbolHook: (e, t) => V(t, m.xQ.VOICE_CHANNEL, j.intl.string(j.t['jz+hJi'])),
-                guildSymbolHook: (e, t) => V(t, m.xQ.GUILD, j.intl.string(j.t.WuwCWl)),
-                helpdeskArticle: Z.Z.getArticleURL(P.BhN.QUICK_SWITCHER_TUTORIAL)
+            children: P.intl.format(P.t.wukqXV, {
+                userSymbolHook: (e, t) => V(t, m.xQ.USER, P.intl.string(P.t.GQRCGh)),
+                textChannelSymbolHook: (e, t) => V(t, m.xQ.TEXT_CHANNEL, P.intl.string(P.t.wrwhub)),
+                voiceChannelSymbolHook: (e, t) => V(t, m.xQ.VOICE_CHANNEL, P.intl.string(P.t['jz+hJi'])),
+                guildSymbolHook: (e, t) => V(t, m.xQ.GUILD, P.intl.string(P.t.WuwCWl)),
+                helpdeskArticle: Z.Z.getArticleURL(j.BhN.QUICK_SWITCHER_TUTORIAL)
             })
         });
     }
@@ -222,7 +222,7 @@ class H extends r.PureComponent {
     }
     render() {
         return (0, l.jsx)(u.ModalRoot, {
-            'aria-label': j.intl.string(j.t.ZvKwYW),
+            'aria-label': P.intl.string(P.t.ZvKwYW),
             size: u.ModalSize.DYNAMIC,
             transitionState: this.props.transitionState,
             className: o()(R.container, s.tq && R.mobileContainer),
@@ -277,10 +277,10 @@ class H extends r.PureComponent {
                             r = x.Z.getGuild(i.getGuildId());
                         if (null == r) return;
                         switch (i.type) {
-                            case P.d4z.GUILD_TEXT:
-                            case P.d4z.GUILD_ANNOUNCEMENT:
-                            case P.d4z.GUILD_FORUM:
-                            case P.d4z.GUILD_MEDIA:
+                            case j.d4z.GUILD_TEXT:
+                            case j.d4z.GUILD_ANNOUNCEMENT:
+                            case j.d4z.GUILD_FORUM:
+                            case j.d4z.GUILD_MEDIA:
                                 return (0, d.jW)(e, async () => {
                                     let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('54310')]).then(n.bind(n, 373651));
                                     return (t) =>
@@ -291,8 +291,8 @@ class H extends r.PureComponent {
                                             onSelect: N.Cp
                                         });
                                 });
-                            case P.d4z.GUILD_VOICE:
-                            case P.d4z.GUILD_STAGE_VOICE:
+                            case j.d4z.GUILD_VOICE:
+                            case j.d4z.GUILD_STAGE_VOICE:
                                 return (0, d.jW)(e, async () => {
                                     let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331')]).then(n.bind(n, 213202));
                                     return (t) =>
@@ -303,9 +303,9 @@ class H extends r.PureComponent {
                                             onSelect: N.Cp
                                         });
                                 });
-                            case P.d4z.ANNOUNCEMENT_THREAD:
-                            case P.d4z.PUBLIC_THREAD:
-                            case P.d4z.PRIVATE_THREAD:
+                            case j.d4z.ANNOUNCEMENT_THREAD:
+                            case j.d4z.PUBLIC_THREAD:
+                            case j.d4z.PRIVATE_THREAD:
                                 return (0, d.jW)(e, async () => {
                                     let { default: e } = await n.e('40157').then(n.bind(n, 422200));
                                     return (t) =>
@@ -315,7 +315,7 @@ class H extends r.PureComponent {
                                             onSelect: N.Cp
                                         });
                                 });
-                            case P.d4z.GUILD_STORE:
+                            case j.d4z.GUILD_STORE:
                                 return (0, d.jW)(e, async () => {
                                     let { default: e } = await n.e('99905').then(n.bind(n, 649400));
                                     return (t) =>
@@ -326,7 +326,7 @@ class H extends r.PureComponent {
                                             onSelect: N.Cp
                                         });
                                 });
-                            case P.d4z.GUILD_DIRECTORY:
+                            case j.d4z.GUILD_DIRECTORY:
                                 return (0, d.jW)(e, async () => {
                                     let { default: e } = await n.e('70623').then(n.bind(n, 99334));
                                     return (t) =>

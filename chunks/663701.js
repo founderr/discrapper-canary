@@ -19,15 +19,15 @@ var i = n(200651),
     g = n(493683),
     f = n(529103),
     _ = n(607070),
-    I = n(213609),
-    E = n(143757),
+    E = n(213609),
+    I = n(143757),
     C = n(463119),
     v = n(377171),
     N = n(540059),
     S = n(243778),
     T = n(922409),
-    x = n(899740),
-    b = n(28476),
+    b = n(899740),
+    x = n(28476),
     A = n(880257),
     Z = n(631885),
     L = n(522558),
@@ -65,13 +65,13 @@ let ee = (e) => {
             m = s && h;
         r.useEffect(() => {
             m &&
-                (0, I.h)({
+                (0, E.h)({
                     name: o.ImpressionNames.GIFT_INTENT_BADGE,
                     type: o.ImpressionTypes.VIEW,
                     properties: { gift_intent_type: Q.hX.FRIEND_ANNIVERSARY }
                 });
         }, [m]);
-        let [g, E] = r.useState(!1);
+        let [g, I] = r.useState(!1);
         return (0, i.jsxs)('div', {
             className: $.friendsButtonContainer,
             children: [
@@ -85,10 +85,10 @@ let ee = (e) => {
                     icon: p.FriendsIcon,
                     text: J.intl.string(J.t.TdEu5e),
                     onMouseEnter: () => {
-                        E(!0);
+                        I(!0);
                     },
                     onMouseLeave: () => {
-                        E(!1);
+                        I(!1);
                     },
                     ...n,
                     ...l,
@@ -133,14 +133,14 @@ let ee = (e) => {
         });
     },
     en = () => {
-        let e = (0, x.q)();
+        let e = (0, b.q)();
         return e > 0 ? (0, i.jsx)(p.NumberBadge, { count: e }) : null;
     },
     ei = (e) => {
         let { selected: t } = e,
             n = (0, c.JA)('messageRequests'),
             { channelId: r } = (0, T._)();
-        if (!(0, b.a)()) return null;
+        if (!(0, x.a)()) return null;
         let l = null == r ? void 0 : () => g.Z.preload(q.ME, r);
         return (0, i.jsx)(W.Qj, {
             selected: t,
@@ -303,7 +303,7 @@ let eo = (e) => {
                         'discord-shop'
                     ),
                     (0, i.jsx)(er, { selected: (null != r && r.startsWith(q.Z5c.FAMILY_CENTER)) || (null != c && c.startsWith(q.Z5c.FAMILY_CENTER)) }, 'family-center'),
-                    (0, i.jsx)(E.Z, {}, 'dm-quick-launcher')
+                    (0, i.jsx)(I.Z, {}, 'dm-quick-launcher')
                 ]
             })
         ]

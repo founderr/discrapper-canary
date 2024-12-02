@@ -14,15 +14,15 @@ var i = n(200651),
     g = n(680180),
     f = n(703656),
     _ = n(31569),
-    I = n(975907),
-    E = n(119014),
+    E = n(975907),
+    I = n(119014),
     C = n(258971),
     v = n(133743),
     N = n(726941),
     S = n(666697),
     T = n(370648),
-    x = n(569527),
-    b = n(979007),
+    b = n(569527),
+    x = n(979007),
     A = n(388032),
     Z = n(544973);
 function L(e) {
@@ -59,7 +59,7 @@ t.Z = function () {
         M = (0, l.e7)([c.Z], () => c.Z.getCategories()),
         w = r.useMemo(() => [(0, d.KQ)(), ...M], [M]),
         k = r.useMemo(() => w.find((e) => e.id === Number(D)), [w, D]),
-        { tabs: U, selectedTab: G, onSelectTab: B } = (0, E.i)(null == P ? void 0 : P.toString());
+        { tabs: U, selectedTab: G, onSelectTab: B } = (0, I.i)(null == P ? void 0 : P.toString());
     r.useEffect(() => {
         s.CP();
     }, []),
@@ -69,7 +69,7 @@ t.Z = function () {
         r.useEffect(() => C.aQ.setState({ lastItem: y }), [y]);
     let H = null != O,
         V = (null == y ? void 0 : y.type) === C.m_.SEARCH,
-        { searchQuery: F, onSearchTextChange: z, onClearSearch: W, onSearchSubmit: Y } = (0, I.M)({ initialQuery: null != j ? j : '' }),
+        { searchQuery: F, onSearchTextChange: z, onClearSearch: W, onSearchSubmit: Y } = (0, E.M)({ initialQuery: null != j ? j : '' }),
         K = _.Z.useField('searchBarState'),
         {
             onTabsAvailableWidthChange: q,
@@ -147,8 +147,8 @@ t.Z = function () {
                       initialTab: R
                   })
                 : V
-                  ? (0, i.jsx)(x.Z, { onSelectApplication: $ })
-                  : G === b.kK
+                  ? (0, i.jsx)(b.Z, { onSelectApplication: $ })
+                  : G === x.kK
                     ? (0, i.jsx)(T.Z, {
                           onScroll: t,
                           onSelectApplication: $

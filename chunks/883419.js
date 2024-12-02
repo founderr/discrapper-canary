@@ -29,14 +29,14 @@ var i = t(200651),
 function k(e) {
     var n, t;
     let { backButtonEligible: o, prevStep: k, handleStepChange: T, trialFooterMessageOverride: y, reviewWarningMessage: P, planGroup: B, openInvoiceId: N, analyticsData: E, analyticsLocation: A, handleClose: I } = e,
-        { activeSubscription: O, application: Z, setUpdatedSubscription: M, contextMetadata: H, currencies: L, paymentSources: w, priceOptions: D, purchaseError: R, purchaseTokenAuthState: W, selectedPlan: G, selectedSku: F, setCurrency: z, setPaymentSourceId: K, setPurchaseState: V, setPurchaseError: Y, purchaseState: U, subscriptionMetadataRequest: Q, setHasAcceptedTerms: q } = (0, m.usePaymentContext)();
-    a()(null != G, 'Expected plan to be selected');
+        { activeSubscription: O, application: Z, setUpdatedSubscription: M, contextMetadata: H, currencies: L, paymentSources: w, priceOptions: D, purchaseError: R, purchaseTokenAuthState: W, selectedPlan: F, selectedSku: G, setCurrency: z, setPaymentSourceId: K, setPurchaseState: V, setPurchaseError: Y, purchaseState: U, subscriptionMetadataRequest: Q, setHasAcceptedTerms: q } = (0, m.usePaymentContext)();
+    a()(null != F, 'Expected plan to be selected');
     let J = r.useRef(null),
         [X, $] = (0, d.Z)(!1, 500),
         ee = null == Q ? void 0 : Q.guild_id,
         en = (0, l.e7)([p.Z], () => p.Z.getGuild(ee), [ee]),
         [et, ei] = r.useState(null),
-        er = (0, f.KW)(null !== (n = null == F ? void 0 : F.flags) && void 0 !== n ? n : 0);
+        er = (0, f.KW)(null !== (n = null == G ? void 0 : G.flags) && void 0 !== n ? n : 0);
     r.useEffect(() => {
         null != R && null != J.current && J.current.scrollIntoView({ behavior: 'smooth' });
     }, [R]);
@@ -97,7 +97,7 @@ function k(e) {
                               }),
                           null == O
                               ? (0, i.jsx)(s.Z, {
-                                    selectedPlanId: G.id,
+                                    selectedPlanId: F.id,
                                     paymentSources: w,
                                     onPaymentSourceChange: (e) => K(null != e ? e.id : null),
                                     priceOptions: D,
@@ -122,7 +122,7 @@ function k(e) {
                                     onPaymentSourceAdd: () => {
                                         T(b.h8.ADD_PAYMENT_STEPS);
                                     },
-                                    planId: G.id,
+                                    planId: F.id,
                                     setHasAcceptedTerms: q,
                                     legalTermsNodeRef: ea,
                                     hasLegalTermsFlash: X,

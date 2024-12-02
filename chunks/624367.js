@@ -13,14 +13,14 @@ var r = n(568611),
     o = n(481060),
     s = n(668781),
     c = n(2052),
-    u = n(100527),
-    d = n(906732),
+    d = n(100527),
+    u = n(906732),
     m = n(895924),
     h = n(835473),
     f = n(523746),
     p = n(592125),
-    g = n(594174),
-    _ = n(630388),
+    _ = n(594174),
+    g = n(630388),
     E = n(823379),
     C = n(624138),
     I = n(317381),
@@ -39,7 +39,7 @@ let L = (0, C.Mg)(a.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 function y(e) {
     var t, n, a, C;
     let { applicationId: y, message: O } = e,
-        { analyticsLocations: M } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK),
+        { analyticsLocations: M } = (0, u.ZP)(d.Z.ACTIVITY_BOOKMARK),
         k = (0, c.O)(),
         D = O.channel_id,
         B = (0, l.e7)([p.Z], () => p.Z.getChannel(D), [D]),
@@ -51,7 +51,7 @@ function y(e) {
         H = (0, T.ZP)(null !== (a = null == V ? void 0 : V.maxParticipants) && void 0 !== a ? a : 0),
         [z] = (0, l.Wu)([I.ZP], () => (w ? I.ZP.getEmbeddedActivitiesForChannel(D).filter((e) => e.applicationId === y) : []), [y, D, w]),
         W = Array.from(null !== (C = null == z ? void 0 : z.userIds) && void 0 !== C ? C : []),
-        K = (0, l.Wu)([g.default], () => W.map((e) => g.default.getUser(e)).filter(E.lm), [W]),
+        K = (0, l.Wu)([_.default], () => W.map((e) => _.default.getUser(e)).filter(E.lm), [W]),
         Y = (0, S.Z)({
             applicationId: y,
             size: L,
@@ -102,8 +102,8 @@ function y(e) {
                     analyticsLocations: M
                 });
         };
-    return null != V && (0, _.yE)(V.flags, Z.udG.EMBEDDED)
-        ? (0, i.jsx)(d.Gt, {
+    return null != V && (0, g.yE)(V.flags, Z.udG.EMBEDDED)
+        ? (0, i.jsx)(u.Gt, {
               value: M,
               children: (0, i.jsxs)('div', {
                   className: P.container,

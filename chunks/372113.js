@@ -89,21 +89,21 @@ function I(e) {
     );
 }
 t.Z = (e) => {
-    let { quest: t, location: n, size: s, isFocused: a, isQuestExpired: h, isExpanded: T, isAnimating: L, contentPosition: Z } = e,
-        y = (0, x._Q)(t),
-        B = y >= x.OH.ACCEPTED,
-        P = y >= x.OH.COMPLETED,
-        U = y >= x.OH.CLAIMED,
-        D = (0, p.Xv)(t.config),
+    let { quest: t, location: n, size: s, isFocused: a, isQuestExpired: h, isExpanded: T, isAnimating: L, contentPosition: y } = e,
+        Z = (0, x._Q)(t),
+        B = Z >= x.OH.ACCEPTED,
+        P = Z >= x.OH.COMPLETED,
+        D = Z >= x.OH.CLAIMED,
+        U = (0, p.Xv)(t.config),
         w = (0, S.uq)(n),
         Q = n === C.jn.QUESTS_EMBED,
         O = T || L,
-        k = B && !U && w,
+        k = B && !D && w,
         H = (0, x.t5)(t, q.dr.QUESTS_CARD, n),
         { xboxAndPlaystationAccounts: W } = (0, x.z6)(),
         G = (0, r.e7)([u.default], () => u.default.locale),
         z = (0, x.z)(t),
-        F = w && D,
+        F = w && U,
         V = h && !P,
         X = W.length > 0 && w && (0, p.$J)(t) && B && !P && !z,
         Y = (0, i.jsx)(j.Z, {
@@ -118,7 +118,7 @@ t.Z = (e) => {
             location: q.dr.QUESTS_CARD,
             quest: t,
             questContent: n,
-            questContentPosition: Z
+            questContentPosition: y
         });
     return (0, i.jsxs)('div', {
         className: R.root,
@@ -247,7 +247,7 @@ t.Z = (e) => {
                                             (0, m._3)({
                                                 questId: t.id,
                                                 questContent: n,
-                                                questContentPosition: Z,
+                                                questContentPosition: y,
                                                 questContentCTA: m.jZ.LEARN_MORE
                                             });
                                     },
@@ -257,8 +257,8 @@ t.Z = (e) => {
                                 ? null
                                 : (0, i.jsx)(I, {
                                       quest: t,
-                                      progressState: y,
-                                      isCollectibleQuest: D,
+                                      progressState: Z,
+                                      isCollectibleQuest: U,
                                       location: n,
                                       inGiftInventory: w
                                   })

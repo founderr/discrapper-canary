@@ -65,8 +65,8 @@ var u = t(623292),
     E = t(572004),
     I = t(585483),
     v = t(709054),
-    p = t(111618),
-    M = t(50284),
+    M = t(111618),
+    p = t(50284),
     Z = t(730954),
     x = t(981631);
 function S(e) {
@@ -90,7 +90,7 @@ function A(e, n) {
     l.Z.startEditMessage(e.id, n.id, n.content);
 }
 function P(e, n) {
-    (0, M.Z)(e.id, n.id);
+    (0, p.Z)(e.id, n.id);
 }
 function N(e, n, t) {
     if (!1 === n.pinned) {
@@ -103,7 +103,7 @@ function T(e, n) {
     (0, a.Z)(e.id, n.id);
 }
 function y(e, n) {
-    (0, Z.Z)(e, n, void 0, p.Z.getOptions(n.id));
+    (0, Z.Z)(e, n, void 0, M.Z.getOptions(n.id));
 }
 function C(e, n, t) {
     let i = e.isPrivate(),

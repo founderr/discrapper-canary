@@ -35,8 +35,8 @@ var i,
     y = n(10401),
     T = n(131704),
     A = n(592125),
-    P = n(796974),
-    j = n(984933),
+    j = n(796974),
+    P = n(984933),
     R = n(914010),
     M = n(540126),
     L = n(734307),
@@ -89,7 +89,7 @@ class es extends (i = r.PureComponent) {
     componentDidUpdate(e, t) {
         let { scrollToChannel: n, guildId: i, selectedChannelId: l } = this.props,
             { initialized: r } = this.state,
-            { scrollTop: a } = P.Z.getGuildDimensions(i);
+            { scrollTop: a } = j.Z.getGuildDimensions(i);
         null != n ? (this.scrollToChannel(n), h.Z.clearChannelListScrollTo(i)) : i !== e.guildId ? null != a && this.scrollTo(a) : l !== e.selectedChannelId ? this.scrollToChannel(l) : !t.initialized && r && (null == a && null != l ? this.scrollToChannel(l, !1, en.yE, this.handleListScroll) : this.scrollTo(null != a ? a : 0, this.handleListScroll)), this.testShouldSkipTutorial();
     }
     getSectionRowsFromChannel(e) {
@@ -468,7 +468,7 @@ class es extends (i = r.PureComponent) {
                                 b.Z,
                                 {
                                     guild: i,
-                                    channel: j.ZP.getDefaultChannel(i.id)
+                                    channel: P.ZP.getDefaultChannel(i.id)
                                 },
                                 et.z.GUILD_HUB_HEADER_OPTIONS
                             );

@@ -18,15 +18,15 @@ var i = n(200651),
     g = n(436774),
     f = n(440051),
     _ = n(734934),
-    I = n(158238),
-    E = n(759198),
+    E = n(158238),
+    I = n(759198),
     C = n(300284),
     v = n(680295),
     N = n(703656),
     S = n(785717),
     T = n(687158),
-    x = n(899007),
-    b = n(648052),
+    b = n(899007),
+    x = n(648052),
     A = n(867176),
     Z = n(483424),
     L = n(681837),
@@ -182,7 +182,7 @@ function en(e) {
             let t = f.Y.useExperiment({ location: 'AccountProfilePopout' }).expiringStatus,
                 n = M.Cr.useSetting(),
                 r = (0, _.p)(),
-                a = I.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || r,
+                a = E.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || r,
                 s = M.fv.useSetting(),
                 o = e === K.Skl.DND,
                 d = (t) => {
@@ -326,7 +326,7 @@ function en(e) {
                                     displayProfile: ei,
                                     profileType: q.y0.BITE_SIZE
                                 }),
-                                (0, i.jsx)(x.Z, {
+                                (0, i.jsx)(b.Z, {
                                     user: n,
                                     displayProfile: ei,
                                     profileType: q.y0.BITE_SIZE,
@@ -355,7 +355,7 @@ function en(e) {
                                     nickname: B.ZP.getName(null, null, n),
                                     onOpenProfile: en ? void 0 : ef,
                                     pronouns: null == ei ? void 0 : ei.pronouns,
-                                    tags: (0, i.jsx)(b.Z, {
+                                    tags: (0, i.jsx)(x.Z, {
                                         displayProfile: ei,
                                         profileType: q.y0.BITE_SIZE,
                                         onClose: G
@@ -425,7 +425,7 @@ function en(e) {
                                                         : (0, i.jsx)(W.Mv, {
                                                               id: 'get-premium',
                                                               action: q.yM.GET_PREMIUM,
-                                                              label: (0, i.jsx)(E.Z, {
+                                                              label: (0, i.jsx)(I.Z, {
                                                                   variant: 'text-sm/medium',
                                                                   children: X.intl.string(X.t.x6rkDg)
                                                               }),

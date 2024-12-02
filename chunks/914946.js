@@ -71,15 +71,15 @@ var i,
     g = n(598077),
     f = n(592125),
     _ = n(430824),
-    I = n(131951),
-    E = n(375954),
+    E = n(131951),
+    I = n(375954),
     C = n(158776),
     v = n(594174),
     N = n(979651),
     S = n(70956),
     T = n(5192),
-    x = n(226951),
-    b = n(996106),
+    b = n(226951),
+    x = n(996106),
     A = n(863141),
     Z = n(186901),
     L = n(981631);
@@ -91,7 +91,7 @@ let y = null !== (i = r.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && v
             n = t[t.length - 1];
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
     })(),
-    O = new RegExp('^'.concat(x.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(x.Z.escape(P), '|discordapp.com|discord.com)$')),
+    O = new RegExp('^'.concat(b.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(b.Z.escape(P), '|discordapp.com|discord.com)$')),
     R = 1 * S.Z.Millis.MINUTE,
     j = {};
 function D(e) {
@@ -117,7 +117,7 @@ function k(e, t) {
         ![L.d4z.GUILD_CATEGORY, ...p.tx].includes(e.type) &&
             n.push(
                 new Promise((t) => {
-                    E.Z.whenReady(e.id, () => t()),
+                    I.Z.whenReady(e.id, () => t()),
                         c.Z.fetchMessages({
                             channelId: e.id,
                             limit: L.AQB
@@ -126,7 +126,7 @@ function k(e, t) {
             ),
         Promise.all(n).then(() => {
             var n;
-            let r = (!e.isNSFW() || (null === (n = v.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? E.Z.getMessages(e.id).toArray().map(U) : [],
+            let r = (!e.isNSFW() || (null === (n = v.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? I.Z.getMessages(e.id).toArray().map(U) : [],
                 l = Object.values(N.Z.getVoiceStatesForChannel(e.id)).map((t) => G(i, e.id, t));
             return {
                 id: e.id,
@@ -174,9 +174,9 @@ function G(e, t, n) {
     if (null == c) throw Error('Invalid user id: '.concat(o));
     return {
         nick: T.ZP.getName(e, t, c),
-        mute: I.Z.isLocalMute(c.id),
-        volume: I.Z.getLocalVolume(c.id),
-        pan: I.Z.getLocalPan(c.id),
+        mute: E.Z.isLocalMute(c.id),
+        volume: E.Z.getLocalVolume(c.id),
+        pan: E.Z.getLocalPan(c.id),
         voice_state: {
             mute: i,
             deaf: r,
@@ -253,8 +253,8 @@ function Y(e, t, n) {
                 if ('string' == typeof n) {
                     if (e.transport === Z.He.POST_MESSAGE) {
                         let e = (0, d.Z)(t);
-                        if (null == e || !w(n, [e])) throw new b.Z({ closeCode: L.$VG.INVALID_ORIGIN }, 'Invalid Origin');
-                    } else if (!w(n, r)) throw new b.Z({ closeCode: L.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+                        if (null == e || !w(n, [e])) throw new x.Z({ closeCode: L.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+                    } else if (!w(n, r)) throw new x.Z({ closeCode: L.$VG.INVALID_ORIGIN }, 'Invalid Origin');
                 }
                 e.application = {
                     id: l,
@@ -265,7 +265,7 @@ function Y(e, t, n) {
                 };
             },
             () => {
-                throw new b.Z({ closeCode: L.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
+                throw new x.Z({ closeCode: L.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
             }
         );
 }
@@ -277,7 +277,7 @@ function q(e, t) {
     null == t && (e.authorization.scopes = [Z.lH]);
 }
 function X(e) {
-    let t = I.Z.getSettings(),
+    let t = E.Z.getSettings(),
         n = (e) =>
             Object.values(e)
                 .sort((e, t) => e.index - t.index)
@@ -288,12 +288,12 @@ function X(e) {
         i = e(t);
     return {
         input: {
-            available_devices: n(I.Z.getInputDevices()),
+            available_devices: n(E.Z.getInputDevices()),
             device_id: t.inputDeviceId,
             volume: t.inputVolume
         },
         output: {
-            available_devices: n(I.Z.getOutputDevices()),
+            available_devices: n(E.Z.getOutputDevices()),
             device_id: t.outputDeviceId,
             volume: t.outputVolume
         },
@@ -314,7 +314,7 @@ function X(e) {
     };
 }
 function Q(e, t) {
-    let n = I.Z.getSettings(e),
+    let n = E.Z.getSettings(e),
         i = t(n);
     return {
         input_mode: {
@@ -328,9 +328,9 @@ function Q(e, t) {
     };
 }
 function J(e) {
-    if (e !== Z.He.POST_MESSAGE) throw new b.Z({ errorCode: L.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
+    if (e !== Z.He.POST_MESSAGE) throw new x.Z({ errorCode: L.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
 }
 function $(e) {
-    if (null == e.id) throw new b.Z({ errorCode: L.lTL.INVALID_COMMAND }, 'Invalid application');
+    if (null == e.id) throw new x.Z({ errorCode: L.lTL.INVALID_COMMAND }, 'Invalid application');
     return e.id;
 }

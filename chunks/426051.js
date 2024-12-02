@@ -19,29 +19,29 @@ var i = n(200651),
     f = n(48829);
 function _(e) {
     let { active: t, user: n, channel: _ } = e,
-        I = (0, u.V)(),
-        E = r.useCallback(() => {
+        E = (0, u.V)(),
+        I = r.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(g.intl.string(g.t.pIQ3h4), a.ToastType.FAILURE)), s.Z.increment({ name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
         }, []),
         C = r.useCallback(() => {
             c.Z.closeChannelSidebar(d.uZ);
         }, []),
         v = r.useCallback(() => {
-            c.Z.closeChannelSidebar(d.uZ), I && (0, o.Kh)(_.id);
-        }, [_.id, I]),
+            c.Z.closeChannelSidebar(d.uZ), E && (0, o.Kh)(_.id);
+        }, [_.id, E]),
         {
             acceptMessageRequest: N,
             isAcceptLoading: S,
             isUserProfileLoading: T,
-            isOptimisticAccepted: x
+            isOptimisticAccepted: b
         } = (0, h.m)({
             user: n,
             onAcceptSuccess: v,
             onRejectSuccess: C,
-            onError: E
+            onError: I
         }),
-        b = S || T,
-        A = b || x;
+        x = S || T,
+        A = x || b;
     return (0, i.jsxs)('div', {
         className: f.container,
         children: [
@@ -61,7 +61,7 @@ function _(e) {
                             N(_.id), e.stopPropagation();
                         },
                         disabled: A,
-                        submitting: b,
+                        submitting: x,
                         children: g.intl.string(g.t.vicfl5)
                     }),
                     (0, i.jsx)(p.Z, {

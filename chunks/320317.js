@@ -1,20 +1,20 @@
-n.d(e, {
+n.d(t, {
     Z: function () {
-        return E;
+        return i;
     }
 }),
     n(47120);
 var r = n(192379);
-function E() {
-    let [t, e] = r.useState(null),
+function i() {
+    let [e, t] = r.useState(null),
         n = r.useRef(null);
     return (
         r.useEffect(() => {
-            null != t && null != n.current && n.current.scrollIntoView({ behavior: 'smooth' });
-        }, [t]),
+            null != e && null != n.current && n.current.scrollIntoView({ behavior: 'smooth' });
+        }, [e]),
         {
-            purchaseError: t,
-            setPurchaseError: e,
+            purchaseError: e,
+            setPurchaseError: t,
             purchaseErrorBlockRef: n
         }
     );

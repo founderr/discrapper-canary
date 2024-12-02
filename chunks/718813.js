@@ -19,8 +19,8 @@ var i,
     g = n(663993),
     f = n(84615),
     _ = n(210887),
-    I = n(819640),
-    E = n(585483),
+    E = n(819640),
+    I = n(585483),
     C = n(981631),
     v = n(294981);
 function N(e, t, n) {
@@ -46,12 +46,12 @@ let S = (0, g.Un)({
         webpackId: 869779,
         name: 'ChannelSettings'
     }),
-    x = (0, g.Un)({
+    b = (0, g.Un)({
         createPromise: () => n.e('18249').then(n.bind(n, 838819)),
         webpackId: 838819,
         name: 'CollectiblesShop'
     }),
-    b = (0, g.Un)({
+    x = (0, g.Un)({
         createPromise: () => Promise.all([n.e('63288'), n.e('33053'), n.e('15669'), n.e('7654'), n.e('98479'), n.e('31113'), n.e('85552'), n.e('58227'), n.e('16114'), n.e('61720')]).then(n.bind(n, 994763)),
         webpackId: 994763,
         name: 'GuildSettings'
@@ -59,8 +59,8 @@ let S = (0, g.Un)({
     A = {
         [C.S9g.USER_SETTINGS]: () => (0, r.jsx)(S, {}),
         [C.S9g.CHANNEL_SETTINGS]: () => (0, r.jsx)(T, {}),
-        [C.S9g.GUILD_SETTINGS]: () => (0, r.jsx)(b, {}),
-        [C.S9g.COLLECTIBLES_SHOP]: () => (0, r.jsx)(x, {})
+        [C.S9g.GUILD_SETTINGS]: () => (0, r.jsx)(x, {}),
+        [C.S9g.COLLECTIBLES_SHOP]: () => (0, r.jsx)(b, {})
     },
     Z = 'SHOWN',
     L = 'HIDDEN',
@@ -109,7 +109,7 @@ class O extends (i = l.PureComponent) {
     animateOut(e) {
         c.ZP.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
-        E.S.dispatch(C.CkL.LAYER_POP_START),
+        I.S.dispatch(C.CkL.LAYER_POP_START),
             o.Z.parallel([
                 o.Z.spring(t, {
                     toValue: 0,
@@ -120,7 +120,7 @@ class O extends (i = l.PureComponent) {
                     ...y
                 })
             ]).start(() => {
-                e(), E.S.dispatch(C.CkL.LAYER_POP_COMPLETE);
+                e(), I.S.dispatch(C.CkL.LAYER_POP_COMPLETE);
             });
     }
     animateUnder() {
@@ -187,10 +187,10 @@ class O extends (i = l.PureComponent) {
 N(O, 'defaultProps', { baseLayer: !1 }), N(O, 'contextType', u.AccessibilityPreferencesContext);
 class R extends l.PureComponent {
     componentDidMount() {
-        E.S.subscribe(C.CkL.LAYER_POP_ESCAPE_KEY, h.xf);
+        I.S.subscribe(C.CkL.LAYER_POP_ESCAPE_KEY, h.xf);
     }
     componentWillUnmount() {
-        E.S.unsubscribe(C.CkL.LAYER_POP_ESCAPE_KEY, h.xf);
+        I.S.unsubscribe(C.CkL.LAYER_POP_ESCAPE_KEY, h.xf);
     }
     renderLayers() {
         let { children: e, layers: t, hasFullScreenLayer: n } = this.props,
@@ -247,7 +247,7 @@ class R extends l.PureComponent {
 }
 function j(e) {
     let t = (0, c.e7)([_.Z], () => _.Z.darkSidebar) ? C.BRd.DARK : void 0,
-        n = (0, c.e7)([I.Z], () => I.Z.getLayers()),
+        n = (0, c.e7)([E.Z], () => E.Z.getLayers()),
         i = (0, f.QP)((e) => e.fullScreenLayers.length > 0);
     return (0, r.jsx)(R, {
         ...e,

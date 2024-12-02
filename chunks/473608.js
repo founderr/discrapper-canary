@@ -1,6 +1,6 @@
 t.d(n, {
     O: function () {
-        return S;
+        return g;
     }
 }),
     t(47120),
@@ -37,7 +37,7 @@ let v = (e) => {
                   ...s
               });
     },
-    g = (e) => {
+    S = (e) => {
         var n;
         let { profileEffect: t, fallbackLabel: l } = e,
             r = (0, m.V)(null == t ? void 0 : t.id);
@@ -59,7 +59,7 @@ let v = (e) => {
             ]
         });
     },
-    S = (e) => {
+    g = (e) => {
         var n;
         let { product: t, sku: l, fallbackLabel: o } = e,
             u = (0, c.e7)([x.Z], () => x.Z.getProduct(null == l ? void 0 : l.id)),
@@ -80,7 +80,7 @@ let v = (e) => {
                 a.Z.PROFILE_EFFECT,
                 () => (
                     r()(m.type === a.Z.PROFILE_EFFECT, 'ts-match checked the type'),
-                    (0, i.jsx)(g, {
+                    (0, i.jsx)(S, {
                         profileEffect: m,
                         fallbackLabel: o
                     })

@@ -31,8 +31,8 @@ var i = n(200651),
     y = n(379164),
     T = n(590965),
     A = n(981631),
-    P = n(474936),
-    j = n(388032),
+    j = n(474936),
+    P = n(388032),
     R = n(939661),
     M = n(232186);
 function L() {
@@ -40,7 +40,7 @@ function L() {
     return (
         l.useEffect(() => {
             E.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: P.cd.GUILD_CAP_INLINE_INVITE_MODAL,
+                type: j.cd.GUILD_CAP_INLINE_INVITE_MODAL,
                 location: { page: A.ZY5.NATIVE_INVITE_MODAL },
                 location_stack: t
             });
@@ -64,11 +64,11 @@ function L() {
                 }),
                 (0, i.jsx)('span', {
                     className: R.experimentUpsellText,
-                    children: j.intl.string(j.t['4/W4Pz'])
+                    children: P.intl.string(P.t['4/W4Pz'])
                 }),
                 (0, i.jsx)('span', {
                     className: R.experimentGetNitro,
-                    children: j.intl.string(j.t.b6KOkJ)
+                    children: P.intl.string(P.t.b6KOkJ)
                 })
             ]
         })
@@ -110,17 +110,17 @@ function D(e) {
                         id: n,
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        children: j.intl.string(j.t.u9zxnZ)
+                        children: P.intl.string(P.t.u9zxnZ)
                     }),
                     (0, i.jsx)('div', {
                         className: R.errorBody,
-                        children: j.intl.string(j.t.FWkU6O)
+                        children: P.intl.string(P.t.FWkU6O)
                     }),
                     (0, i.jsx)(h.zx, {
                         size: h.zx.Sizes.LARGE,
                         onClick: () => y.Z.close(),
                         color: h.zx.Colors.BRAND,
-                        children: j.intl.string(j.t.wcqOoK)
+                        children: P.intl.string(P.t.wcqOoK)
                     })
                 ]
             })
@@ -144,7 +144,7 @@ function O(e) {
     if (null == f) return null;
     if (f.state === A.r2o.EXPIRED || f.state === A.r2o.BANNED || f.state === A.r2o.ERROR) return (0, i.jsx)(D, { transitionState: r });
     if (null == f.channel) return null;
-    function P() {
+    function j() {
         null != f && y.Z.acceptInvite(f);
     }
     let { guild: w, channel: O, inviter: k, target_application: U } = f,
@@ -160,9 +160,9 @@ function O(e) {
             }));
     else if (((null == (t = O.name) || '' === t) && null != k && (t = k.username), null == t)) throw Error('no name for group DM invite');
     let H = (0, C.yU)(),
-        F = B ? j.intl.string(j.t['5UKyUl']) : j.intl.format(j.t.QD7BDA, { guildName: t });
+        F = B ? P.intl.string(P.t['5UKyUl']) : P.intl.format(P.t.QD7BDA, { guildName: t });
     return (
-        V && (F = j.intl.string(j.t['e/6Ogo'])),
+        V && (F = P.intl.string(P.t['e/6Ogo'])),
         (0, i.jsx)(d.Gt, {
             value: E,
             children: (0, i.jsxs)(s.ModalRoot, {
@@ -204,19 +204,19 @@ function O(e) {
                                             H ? (0, i.jsx)(L, {}) : null,
                                             null == U
                                                 ? (0, i.jsx)(s.Tooltip, {
-                                                      text: H ? j.intl.string(j.t.iLyuDA) : null,
+                                                      text: H ? P.intl.string(P.t.iLyuDA) : null,
                                                       position: 'bottom',
                                                       children: (e) => {
                                                           let { onMouseEnter: t, onMouseLeave: n } = e;
                                                           return (0, i.jsx)(h.zx, {
                                                               size: h.zx.Sizes.LARGE,
-                                                              onClick: P,
+                                                              onClick: j,
                                                               submitting: I,
                                                               disabled: H,
                                                               color: B ? h.zx.Colors.GREEN : h.zx.Colors.BRAND,
                                                               onMouseEnter: t,
                                                               onMouseLeave: n,
-                                                              children: H ? j.intl.string(j.t.ZNCziI) : F
+                                                              children: H ? P.intl.string(P.t.ZNCziI) : F
                                                           });
                                                       }
                                                   })
@@ -225,16 +225,16 @@ function O(e) {
                                                       children: [
                                                           (0, i.jsx)(h.zx, {
                                                               size: h.zx.Sizes.LARGE,
-                                                              onClick: P,
+                                                              onClick: j,
                                                               submitting: I,
-                                                              children: j.intl.string(j.t.RscU7O)
+                                                              children: P.intl.string(P.t.RscU7O)
                                                           }),
                                                           (0, i.jsx)(h.zx, {
                                                               color: h.zx.Colors.PRIMARY,
                                                               size: h.zx.Sizes.LARGE,
-                                                              onClick: P,
+                                                              onClick: j,
                                                               submitting: I,
-                                                              children: j.intl.string(j.t.eylRaW)
+                                                              children: P.intl.string(P.t.eylRaW)
                                                           })
                                                       ]
                                                   }),
@@ -248,7 +248,7 @@ function O(e) {
                                                         y.Z.close();
                                                     },
                                                     color: h.zx.Colors.TRANSPARENT,
-                                                    children: j.intl.string(j.t.ndsK4e)
+                                                    children: P.intl.string(P.t.ndsK4e)
                                                 })
                                             })
                                         ]

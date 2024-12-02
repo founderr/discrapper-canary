@@ -10,14 +10,14 @@ var i,
     o = n(120356),
     s = n.n(o),
     c = n(512722),
-    u = n.n(c),
-    d = n(913527),
-    m = n.n(d),
+    d = n.n(c),
+    u = n(913527),
+    m = n.n(u),
     h = n(481060),
     f = n(911969),
     p = n(595519),
-    g = n(566620),
-    _ = n(403404),
+    _ = n(566620),
+    g = n(403404),
     E = n(100527),
     C = n(906732),
     I = n(783097),
@@ -54,9 +54,9 @@ function M(e) {
 ((i = r || (r = {}))[(i.InteractionUser = 0)] = 'InteractionUser'), (i[(i.InteractionTarget = 1)] = 'InteractionTarget');
 function k(e, t, n, i, r) {
     var a, o, c;
-    let { message: u, compact: d, channel: m, isInteractionUserBlocked: f, isInteractionUserIgnored: p, showAvatarPopout: g, showTargetAvatarPopout: _, onClickAvatar: E, onUserContextMenu: C, onClickTargetAvatar: I, onTargetUserContextMenu: x, onPopoutRequestClose: N } = e;
-    if (d && 1 === n) return null;
-    if ((d && null == u.activityInstance) || f || p)
+    let { message: d, compact: u, channel: m, isInteractionUserBlocked: f, isInteractionUserIgnored: p, showAvatarPopout: _, showTargetAvatarPopout: g, onClickAvatar: E, onUserContextMenu: C, onClickTargetAvatar: I, onTargetUserContextMenu: x, onPopoutRequestClose: N } = e;
+    if (u && 1 === n) return null;
+    if ((u && null == d.activityInstance) || f || p)
         return (0, l.jsx)('div', {
             className: O.replyBadge,
             children: (0, l.jsx)(M, { className: O.commandIcon })
@@ -91,7 +91,7 @@ function k(e, t, n, i, r) {
                 onClick: 1 === n ? I : E,
                 onContextMenu: 1 === n ? x : C
             }),
-        A = 1 === n ? _ : g;
+        A = 1 === n ? g : _;
     return null != r && null != A
         ? (0, l.jsx)(h.Popout, {
               renderPopout: r,
@@ -103,7 +103,7 @@ function k(e, t, n, i, r) {
         : T();
 }
 function D(e, t, n, i, r) {
-    let { message: a, channel: o, showUsernamePopout: s, showTargetUsernamePopout: c, onClickUsername: u, onUserContextMenu: d, onClickTargetUsername: m, onTargetUserContextMenu: h, onPopoutRequestClose: f } = e;
+    let { message: a, channel: o, showUsernamePopout: s, showTargetUsernamePopout: c, onClickUsername: d, onUserContextMenu: u, onClickTargetUsername: m, onTargetUserContextMenu: h, onPopoutRequestClose: f } = e;
     return (0, l.jsx)(Z.Z, {
         className: 1 === n ? O.targetUsername : '',
         compact: !0,
@@ -113,8 +113,8 @@ function D(e, t, n, i, r) {
         userOverride: t,
         showPopout: 1 === n ? c : s,
         renderPopout: r,
-        onClick: 1 === n ? m : u,
-        onContextMenu: 1 === n ? h : d,
+        onClick: 1 === n ? m : d,
+        onContextMenu: 1 === n ? h : u,
         onPopoutRequestClose: f
     });
 }
@@ -131,7 +131,7 @@ function U(e) {
         { analyticsLocations: o } = (0, C.ZP)(E.Z.EXECUTED_COMMAND),
         c = a.useMemo(
             () => (e, t, n) => (
-                u()(null != r && null != t, 'ExecuteCommand: user and channel cannot be undefined'),
+                d()(null != r && null != t, 'ExecuteCommand: user and channel cannot be undefined'),
                 (0, l.jsx)(v.Z, {
                     ...e,
                     channelId: r.id,
@@ -143,9 +143,9 @@ function U(e) {
             ),
             [r, i.id]
         ),
-        d = a.useMemo(
+        u = a.useMemo(
             () => (e) => (
-                u()(null != r, 'ExecutedCommand: channel cannot be null'),
+                d()(null != r, 'ExecutedCommand: channel cannot be null'),
                 (0, l.jsx)(R.Z, {
                     ...e,
                     channel: r,
@@ -241,7 +241,7 @@ function U(e) {
                             }
                         }
                     });
-                })(e, d);
+                })(e, u);
                 return (0, l.jsx)(a.Fragment, { children: t }, 'command');
             }
         })),
@@ -270,7 +270,7 @@ function U(e) {
                   }));
     else {
         let e = () => {
-            (0, _.Z)({
+            (0, g.Z)({
                 channel: r,
                 guildId: r.guild_id,
                 locationObject: {
@@ -283,7 +283,7 @@ function U(e) {
                 enableSelectedTextChannelInvite: !0,
                 analyticsLocations: o
             }),
-                (0, g.w1)({ guildId: r.guild_id });
+                (0, _.w1)({ guildId: r.guild_id });
         };
         n = G
             ? y.intl.format(y.t.kfV8WF, {

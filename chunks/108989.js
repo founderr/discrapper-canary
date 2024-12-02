@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(703533);
-let a = [n(123353)],
+    a = n(703533);
+let r = [n(123353)],
     o = ['#FFFFFF'],
     s = 1000 / 60,
     u = {
@@ -60,11 +60,11 @@ let a = [n(123353)],
         }
     };
 function c(e) {
-    let { className: t, firing: n = !0, wind: c = 2, sprites: d = a, spriteColors: f = o, confettiConfig: C } = e,
+    let { className: t, firing: n = !0, wind: c = 2, sprites: d = r, spriteColors: f = o, confettiConfig: C } = e,
         [_, m] = l.useState(null),
         [L, S] = l.useState(null),
-        p = (0, r.uR)(L, _),
-        T = l.useMemo(() => new r.qA({ wind: c }), [c]),
+        p = (0, a.uR)(L, _),
+        T = l.useMemo(() => new a.qA({ wind: c }), [c]),
         E = l.useCallback(() => {
             let e = null == L ? void 0 : L.getCanvas();
             if (null == e) return;
@@ -92,12 +92,12 @@ function c(e) {
         }, [n, E]),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(r.O_, {
+                (0, i.jsx)(a.O_, {
                     ref: S,
                     className: t,
                     environment: T
                 }),
-                (0, i.jsx)(r.Ji, {
+                (0, i.jsx)(a.Ji, {
                     ref: m,
                     colors: f,
                     sprites: d,

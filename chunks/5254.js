@@ -14,8 +14,8 @@ var i,
 let g = {},
     f = 0,
     _ = !1,
-    I = !1;
-function E(e) {
+    E = !1;
+function I(e) {
     var t;
     let n = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
     return {
@@ -54,10 +54,10 @@ class C extends (i = c.ZP.Store) {
         : (r[l] = a),
     (t.Z = new C(d.Z, {
         CONNECTION_OPEN: function (e) {
-            (g = {}), (f = e.friendSuggestionCount) > 0 ? ((I = !0), _ || !I || ((_ = !0), (I = !1), m.Z.fetch())) : (0, p.Z)();
+            (g = {}), (f = e.friendSuggestionCount) > 0 ? ((E = !0), _ || !E || ((_ = !0), (E = !1), m.Z.fetch())) : (0, p.Z)();
         },
         FRIEND_SUGGESTION_CREATE: function (e) {
-            let t = E(e.suggestion);
+            let t = I(e.suggestion);
             if (null != g[t.key]) return !1;
             f++,
                 (g = {
@@ -74,7 +74,7 @@ class C extends (i = c.ZP.Store) {
                 (t = e.suggestions),
                 (g = o()
                     .chain(t)
-                    .map((e) => E(e))
+                    .map((e) => I(e))
                     .keyBy((e) => e.key)
                     .value()),
                 (f = o().keys(g).length);

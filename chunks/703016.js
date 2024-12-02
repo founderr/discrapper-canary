@@ -14,15 +14,15 @@ var i = n(913527),
     g = n(592125),
     f = n(271383),
     _ = n(430824),
-    I = n(131951),
-    E = n(292959),
+    E = n(131951),
+    I = n(292959),
     C = n(699516),
     v = n(944486),
     N = n(9156),
     S = n(594174),
     T = n(51144),
-    x = n(196051),
-    b = n(441729),
+    b = n(196051),
+    x = n(441729),
     A = n(653477),
     Z = n(981631),
     L = n(388032);
@@ -80,11 +80,11 @@ function M() {
 }
 async function w(e, t, n, i, r) {
     let l = s.e6(e, n);
-    null !== l && (null == O && M(), t ? await (0, x.NB)() : null == P || P.removeEventListener('end', x.NB), l.addEventListener('end', x.NB), null != i && l.addEventListener('start', i), null != r && l.addEventListener('end', r), (P = l), s.iq(l, O));
+    null !== l && (null == O && M(), t ? await (0, b.NB)() : null == P || P.removeEventListener('end', b.NB), l.addEventListener('end', b.NB), null != i && l.addEventListener('start', i), null != r && l.addEventListener('end', r), (P = l), s.iq(l, O));
 }
 function k(e, t, n, i, r) {
     w(e, t, r, () => {
-        (0, x.Bo)(n, i);
+        (0, b.Bo)(n, i);
     });
 }
 function U(e) {
@@ -92,7 +92,7 @@ function U(e) {
     w(t, n, i, r, l);
 }
 function G() {
-    return null !== P && P.removeEventListener('end', x.NB), s.M9(), (P = null), !0;
+    return null !== P && P.removeEventListener('end', b.NB), s.M9(), (P = null), !0;
 }
 function B(e) {
     var t, n, i;
@@ -107,16 +107,16 @@ function B(e) {
 function H(e) {
     var t, n, i, r, l, a;
     let { channelId: s, message: o, optimistic: c } = e;
-    if (c || I.Z.isSelfDeaf()) return !1;
+    if (c || E.Z.isSelfDeaf()) return !1;
     let d = g.Z.getChannel(s);
     if (null == d) return !1;
     let u = v.Z.getChannelId(),
         _ = p.ZP.getCurrentSidebarChannelId(u),
         S = s === u || s === _,
-        x = h.OW.getSetting() && o.tts && S,
-        b = E.Z.getTTSType(),
-        L = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== m.default.getId() && (b === Z.PrB.ALL_CHANNELS || (b === Z.PrB.SELECTED_CHANNEL && S));
-    if ((x || L) && !C.Z.isBlockedOrIgnoredForMessage(o)) {
+        b = h.OW.getSetting() && o.tts && S,
+        x = I.Z.getTTSType(),
+        L = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== m.default.getId() && (x === Z.PrB.ALL_CHANNELS || (x === Z.PrB.SELECTED_CHANNEL && S));
+    if ((b || L) && !C.Z.isBlockedOrIgnoredForMessage(o)) {
         if (y.indexOf(o.id) >= 0) return !1;
         y.unshift(o.id) > 10 && y.pop();
         let e = d.getGuildId();
@@ -130,11 +130,11 @@ function H(e) {
 }
 function V(e) {
     let { id: t, channelId: n } = e,
-        i = b.Z.currentMessage;
-    return null != i && t === i.messageId && n === i.channelId && ((0, x.NB)(), !0);
+        i = x.Z.currentMessage;
+    return null != i && t === i.messageId && n === i.channelId && ((0, b.NB)(), !0);
 }
 function F() {
-    I.Z.isSelfDeaf() && s.M9();
+    E.Z.isSelfDeaf() && s.M9();
 }
 t.Z = {
     init() {

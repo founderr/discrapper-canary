@@ -19,8 +19,8 @@ let _ = {
 };
 t.Z = function (e) {
     var t;
-    let { categoryId: n, onSelectApplication: I } = e,
-        [E, C] = r.useState(1),
+    let { categoryId: n, onSelectApplication: E } = e,
+        [I, C] = r.useState(1),
         v = r.useCallback((e) => {
             C(e);
         }, []);
@@ -30,16 +30,16 @@ t.Z = function (e) {
     let N = r.useMemo(
             () => ({
                 query: g.Mm,
-                page: E,
+                page: I,
                 pageSize: g.IV,
                 categoryId: n
             }),
-            [E, n]
+            [I, n]
         ),
         S = (0, a.e7)([u.Z], () =>
             u.Z.getFetchState({
                 query: g.Mm,
-                page: E,
+                page: I,
                 pageSize: g.IV,
                 categoryId: n
             })
@@ -48,9 +48,9 @@ t.Z = function (e) {
             var e;
             return null !== (e = u.Z.getSearchResults(N)) && void 0 !== e ? e : _;
         }),
-        x = null !== (t = (0, o.Z)(T)) && void 0 !== t ? t : _,
-        { results: b, totalPages: A } = r.useMemo(() => (S === d.M.FETCHING ? x : T), [S, x, T]),
-        Z = r.useMemo(() => (null == b ? void 0 : b.filter((e) => !(e.type !== l.s.APPLICATION))), [b]),
+        b = null !== (t = (0, o.Z)(T)) && void 0 !== t ? t : _,
+        { results: x, totalPages: A } = r.useMemo(() => (S === d.M.FETCHING ? b : T), [S, b, T]),
+        Z = r.useMemo(() => (null == x ? void 0 : x.filter((e) => !(e.type !== l.s.APPLICATION))), [x]),
         L = r.useCallback((e) => {
             let { page: t, activeCategoryId: n, onSuccessCallback: i, guildId: r, fetchCounts: l } = e;
             l &&
@@ -71,11 +71,11 @@ t.Z = function (e) {
         }, []);
     return (r.useEffect(() => {
         L({
-            page: E,
+            page: I,
             activeCategoryId: n,
             onSuccessCallback: () => {}
         });
-    }, [n, L, E]),
+    }, [n, L, I]),
     S === d.M.ERROR)
         ? (0, i.jsx)('div', {
               className: f.errorContainer,
@@ -96,7 +96,7 @@ t.Z = function (e) {
                                             m.Z,
                                             {
                                                 application: t,
-                                                onSelectApplication: I
+                                                onSelectApplication: E
                                             },
                                             t.id
                                         );
@@ -110,7 +110,7 @@ t.Z = function (e) {
                       pageSize: g.IV,
                       disablePaginationGap: !0,
                       hideMaxPage: !0,
-                      currentPage: E,
+                      currentPage: I,
                       onPageChange: v
                   })
               ]

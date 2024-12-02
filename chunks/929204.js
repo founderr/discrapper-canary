@@ -14,7 +14,7 @@ function o(e) {
         location: e
     }),
         (0, i.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e('29549'), n.e('75613')]).then(n.bind(n, 72691));
+            let { default: e } = await n.e('75613').then(n.bind(n, 72691));
             return (t) => (0, r.jsx)(e, { ...t });
         });
 }

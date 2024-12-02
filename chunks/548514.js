@@ -33,9 +33,9 @@ t.Z = function (e) {
                 }),
             [n]
         ),
-        I = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(m.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e)),
-        E = r.useCallback(() => {
-            (0, u.JG)(I(n.id)), (0, a.showToast)((0, a.createToast)(p.intl.string(p.t['L/PwZW']), a.ToastType.SUCCESS));
+        E = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(m.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e)),
+        I = r.useCallback(() => {
+            (0, u.JG)(E(n.id)), (0, a.showToast)((0, a.createToast)(p.intl.string(p.t['L/PwZW']), a.ToastType.SUCCESS));
         }, [n.id]),
         C = (0, l.e7)([d.default], () => d.default.locale),
         v = r.useCallback(() => {
@@ -91,7 +91,7 @@ t.Z = function (e) {
                       className: g.iconButton,
                       innerClassName: g.innerIconButton,
                       'aria-label': p.intl.string(p.t.z4sP5O),
-                      onClick: E,
+                      onClick: I,
                       children: (0, i.jsx)(a.LinkIcon, {
                           size: 'xs',
                           color: 'currentColor'

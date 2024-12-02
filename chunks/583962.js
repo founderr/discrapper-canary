@@ -1,9 +1,9 @@
 n.d(t, {
     PD: function () {
-        return P;
+        return j;
     },
     aR: function () {
-        return j;
+        return P;
     }
 }),
     n(47120);
@@ -55,8 +55,8 @@ let T = (0, x.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             })
         });
     },
-    P = 57,
-    j = 57 + T,
+    j = 57,
+    P = 57 + T,
     R = {
         tension: 180,
         friction: 80
@@ -67,8 +67,8 @@ t.ZP = (e) => {
         { premiumSubscriberCount: u, id: g } = t,
         x = (0, v.rF)(u, g),
         T = (0, v.FZ)(x, t.id),
-        P = null == T,
-        j = null != T ? T : x,
+        j = null == T,
+        P = null != T ? T : x,
         M = (0, c.e7)([b.Z], () => {
             var e;
             return null !== (e = b.Z.getCountForGuild(g)) && void 0 !== e ? e : 0;
@@ -77,7 +77,7 @@ t.ZP = (e) => {
     l.useEffect(() => {
         M !== u && (0, I.v)(g, u);
     }, [g, M, u]);
-    let w = ''.concat(Math.min(100, (u / (0, v.vn)(t.id)[j]) * 100), '%'),
+    let w = ''.concat(Math.min(100, (u / (0, v.vn)(t.id)[P]) * 100), '%'),
         { current: D } = l.useRef(w),
         O = {
             from: { width: M === u ? D : '0%' },
@@ -103,16 +103,16 @@ t.ZP = (e) => {
                     perkIntro: N.intl.string(N.t.ZhvSn5)
                 });
         },
-        B = N.intl.formatToPlainString(N.t['2oNfMT'], { levelName: (0, v.e9)(j) }),
+        B = N.intl.formatToPlainString(N.t['2oNfMT'], { levelName: (0, v.e9)(P) }),
         V = N.intl.format(N.t.dhKnYm, {
             numBoosts: u,
-            numTotal: (0, v.vn)(t.id)[j]
+            numTotal: (0, v.vn)(t.id)[P]
         });
-    P && ((B = (0, v.e9)(j)), (V = N.intl.format(N.t.B2byER, { numBoosts: u })));
+    j && ((B = (0, v.e9)(P)), (V = N.intl.format(N.t.B2byER, { numBoosts: u })));
     let H = (0, s.JA)('boosts-'.concat(t.id));
     return (0, i.jsx)('li', {
         children: (0, i.jsx)(d.Tooltip, {
-            text: P ? N.intl.string(N.t['Y+V9go']) : N.intl.formatToPlainString(N.t.UyDKl5, { levelName: (0, v.nW)(j) }),
+            text: j ? N.intl.string(N.t['Y+V9go']) : N.intl.formatToPlainString(N.t.UyDKl5, { levelName: (0, v.nW)(P) }),
             color: d.Tooltip.Colors.BLACK,
             position: 'top',
             delay: 200,
@@ -177,13 +177,13 @@ t.ZP = (e) => {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: a()(y.progressBarContainer, { [y.progressBarContainerComplete]: P }),
+                            className: a()(y.progressBarContainer, { [y.progressBarContainerComplete]: j }),
                             children: [
                                 (0, i.jsx)(o.animated.div, {
                                     className: y.progressBar,
                                     style: k
                                 }),
-                                P
+                                j
                                     ? (0, i.jsx)('span', {
                                           'aria-label': N.intl.string(N.t['7iL1q6']),
                                           role: 'img',

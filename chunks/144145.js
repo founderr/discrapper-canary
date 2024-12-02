@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return x;
     }
 }),
     n(653041),
@@ -20,18 +20,18 @@ var i = n(200651),
     g = n(592745),
     f = n(553795),
     _ = n(757266),
-    I = n(283595),
-    E = n(417363),
+    E = n(283595),
+    I = n(417363),
     C = n(626135),
     v = n(804739),
     N = n(346329),
     S = n(981631),
     T = n(388032);
-let x = d.Z.get(S.ABu.XBOX).name;
-function b(e) {
+let b = d.Z.get(S.ABu.XBOX).name;
+function x(e) {
     let { currentActivities: t } = e,
         n = t.length > 1,
-        b = (function (e) {
+        x = (function (e) {
             let { currentActivities: t } = e,
                 n = (0, l.e7)([f.Z], () => f.Z.getAccounts().some((e) => e.type === d.Z.get(S.ABu.XBOX).type)),
                 r = t.some((e) => {
@@ -43,28 +43,28 @@ function b(e) {
                 : (0, i.jsx)(a.MenuItem, {
                       id: 'xbox-connect',
                       action: () => c.Z.open(S.oAB.CONNECTIONS),
-                      label: T.intl.formatToPlainString(T.t.XWSHTU, { platform: x })
+                      label: T.intl.formatToPlainString(T.t.XWSHTU, { platform: b })
                   });
         })(e),
         A = (function (e) {
             let { currentActivities: t } = e,
                 n = r.useContext(C.AnalyticsContext);
             return (0, l.Wu)(
-                [p.ZP, I.Z, g.Z, E.Z, _.Z],
+                [p.ZP, E.Z, g.Z, I.Z, _.Z],
                 () =>
                     t
                         .filter((e) => !(0, h.Z)(e.activity))
                         .map((e) => {
                             let { activity: t, game: i } = e,
-                                r = I.Z.getActiveLibraryApplication(i.id);
+                                r = E.Z.getActiveLibraryApplication(i.id);
                             return {
                                 ...e,
                                 libraryApplication: r,
                                 canJoin: null != t && (0, u.Z)(t, S.xjy.JOIN) && t.type === S.IIU.PLAYING,
                                 canPlay: (0, v.t)({
-                                    LibraryApplicationStore: I.Z,
+                                    LibraryApplicationStore: E.Z,
                                     LaunchableGameStore: g.Z,
-                                    DispatchApplicationStore: E.Z,
+                                    DispatchApplicationStore: I.Z,
                                     ConnectedAppsStore: _.Z,
                                     applicationId: i.id,
                                     branchId: null != r ? r.branchId : null
@@ -124,5 +124,5 @@ function b(e) {
                 })(e, n)
             );
     }
-    return [b, ...Z];
+    return [x, ...Z];
 }

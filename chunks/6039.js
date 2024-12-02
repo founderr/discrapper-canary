@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(246364),
     f = n(937111),
     _ = n(523924),
-    I = n(390500),
-    E = n(200305),
+    E = n(390500),
+    I = n(200305),
     C = n(981631),
     v = n(898625),
     N = n(388032),
@@ -23,18 +23,18 @@ var i = n(200651),
 t.Z = (e) => {
     var t;
     let n, T;
-    let { guildId: x, inviteCode: b } = e,
+    let { guildId: b, inviteCode: x } = e,
         [A, Z] = r.useState(v.hO.INITIAL),
-        L = (0, l.e7)([p.Z], () => p.Z.get(x)),
-        y = (0, l.e7)([f.Z], () => f.Z.getRequest(x)),
-        P = (0, l.e7)([c.Z], () => c.Z.getGuild(x)),
+        L = (0, l.e7)([p.Z], () => p.Z.get(b)),
+        y = (0, l.e7)([f.Z], () => f.Z.getRequest(b)),
+        P = (0, l.e7)([c.Z], () => c.Z.getGuild(b)),
         { hasFetchedRequestToJoinGuilds: O, guildPreviewDisabled: R } = (0, l.cj)([f.Z], () => ({
             hasFetchedRequestToJoinGuilds: f.Z.hasFetchedRequestToJoinGuilds,
-            guildPreviewDisabled: f.Z.getJoinRequestGuild(x)
+            guildPreviewDisabled: f.Z.getJoinRequestGuild(b)
         }));
     r.useEffect(() => {
-        null != P && (0, o.uL)(C.Z5c.CHANNEL(x));
-    }, [P, x]),
+        null != P && (0, o.uL)(C.Z5c.CHANNEL(b));
+    }, [P, b]),
         r.useEffect(() => {
             !O && h.Z.fetchRequestToJoinGuilds();
         }, [O]);
@@ -42,15 +42,15 @@ t.Z = (e) => {
             Z((t) => Math.max(t, e));
         }, []),
         D = async (e) => {
-            await m.ZP.submitVerificationForm(x, e);
+            await m.ZP.submitVerificationForm(b, e);
         },
         M = () => {
-            h.Z.resetGuildJoinRequest(x);
+            h.Z.resetGuildJoinRequest(b);
         };
     let w =
             ((n = N.intl.format(N.t['9ZezpK'], { name: null == R ? void 0 : R.toString() })),
             (T = () => {
-                Z(Math.max(A, v.hO.FILLING)), h.Z.removeGuildJoinRequest(x), (0, o.uL)(C.Z5c.ME);
+                Z(Math.max(A, v.hO.FILLING)), h.Z.removeGuildJoinRequest(b), (0, o.uL)(C.Z5c.ME);
             }),
             () => {
                 (0, a.openModal)((e) =>
@@ -91,7 +91,7 @@ t.Z = (e) => {
                     children: (() => {
                         switch (null == y ? void 0 : y.applicationStatus) {
                             case g.wB.SUBMITTED:
-                                return (0, i.jsx)(I.Z, {
+                                return (0, i.jsx)(E.Z, {
                                     onWithdrawApplication: w,
                                     guild: R
                                 });
@@ -105,9 +105,9 @@ t.Z = (e) => {
                                     guild: R
                                 });
                             default:
-                                return (0, i.jsx)(E.Z, {
-                                    guildId: x,
-                                    inviteCode: b,
+                                return (0, i.jsx)(I.Z, {
+                                    guildId: b,
+                                    inviteCode: x,
                                     onComplete: D,
                                     disableVerification: !0
                                 });

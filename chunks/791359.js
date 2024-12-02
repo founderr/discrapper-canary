@@ -19,20 +19,20 @@ var i = n(200651),
     g = n(814443),
     f = n(594174),
     _ = n(801077),
-    I = n(626135),
-    E = n(70956),
+    E = n(626135),
+    I = n(70956),
     C = n(225559),
     v = n(910436),
     N = n(203028),
     S = n(358924),
     T = n(292140),
-    x = n(525296),
-    b = n(981631),
+    b = n(525296),
+    x = n(981631),
     A = n(674563),
     Z = n(388032),
     L = n(721925);
-let y = 15 * E.Z.Millis.MINUTE,
-    P = (0, x.Z)(function (e) {
+let y = 15 * I.Z.Millis.MINUTE,
+    P = (0, b.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
             s = (0, i.jsx)(N.Z, {
                 party: t,
@@ -47,7 +47,7 @@ let y = 15 * E.Z.Millis.MINUTE,
             g = u.length,
             f = h.length,
             _ = m.length,
-            E = p.length > 0,
+            I = p.length > 0,
             C = r.useCallback(() => {
                 let e = m
                     .filter((e) => {
@@ -55,15 +55,15 @@ let y = 15 * E.Z.Millis.MINUTE,
                         return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === A.wW.GAME;
                     })
                     .map((e) => e.game.name);
-                I.default.track(b.rMx.NOW_PLAYING_CARD_HOVERED, {
+                E.default.track(x.rMx.NOW_PLAYING_CARD_HOVERED, {
                     num_users: g,
                     num_streams: f,
                     num_activities: _,
-                    in_voice_channel: E,
+                    in_voice_channel: I,
                     games_detected: e
                 });
-            }, [g, f, _, E, m]),
-            x = o()(C, y);
+            }, [g, f, _, I, m]),
+            b = o()(C, y);
         return null != s || null != c
             ? (0, i.jsx)(d.Popout, {
                   position: 'left',
@@ -79,7 +79,7 @@ let y = 15 * E.Z.Millis.MINUTE,
                       let { isShown: n } = t;
                       return (0, i.jsx)(S.Z, {
                           ...e,
-                          onMouseEnter: x,
+                          onMouseEnter: b,
                           'aria-haspopup': 'menu',
                           className: L.itemCard,
                           active: n,

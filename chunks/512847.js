@@ -18,15 +18,15 @@ var i = n(200651),
     g = n(314897),
     f = n(592125),
     _ = n(430824),
-    I = n(131951),
-    E = n(292959),
+    E = n(131951),
+    I = n(292959),
     C = n(19780),
     v = n(944486),
     N = n(606304),
     S = n(979651),
     T = n(938475),
-    x = n(823379),
-    b = n(557177),
+    b = n(823379),
+    x = n(557177),
     A = n(981631);
 function Z(e, t, n, i) {
     r.useEffect(() => {
@@ -34,7 +34,7 @@ function Z(e, t, n, i) {
             l = new s.Fh(e, () => {
                 let e = t(),
                     l = n(r, e);
-                null != l && !E.Z.isSoundDisabled(l) && (0, b.GN)(l, null != i ? i : 0.4), (r = e);
+                null != l && !I.Z.isSoundDisabled(l) && (0, x.GN)(l, null != i ? i : 0.4), (r = e);
             });
         return l.attach('useSound'), () => l.detach();
     });
@@ -42,13 +42,13 @@ function Z(e, t, n, i) {
 function L() {
     return (
         Z(
-            [I.Z, v.Z],
+            [E.Z, v.Z],
             () => ({
                 inVoiceChannel: null != v.Z.getVoiceChannelId(),
-                selfMute: I.Z.isSelfMute(),
-                selfDeaf: I.Z.isSelfDeaf(),
-                audioPermissionReady: I.Z.isNativeAudioPermissionReady(),
-                shouldSkipMuteUnmuteSound: I.Z.shouldSkipMuteUnmuteSound()
+                selfMute: E.Z.isSelfMute(),
+                selfDeaf: E.Z.isSelfDeaf(),
+                audioPermissionReady: E.Z.isNativeAudioPermissionReady(),
+                shouldSkipMuteUnmuteSound: E.Z.shouldSkipMuteUnmuteSound()
             }),
             (e, t) => {
                 let { inVoiceChannel: n, selfMute: i, selfDeaf: r, audioPermissionReady: l, shouldSkipMuteUnmuteSound: a } = t;
@@ -56,7 +56,7 @@ function L() {
                 if (!!l && (!!n || !!e.audioPermissionReady)) {
                     if (e.selfMute !== i) {
                         if (a) {
-                            I.Z.notifyMuteUnmuteSoundWasSkipped();
+                            E.Z.notifyMuteUnmuteSoundWasSkipped();
                             return;
                         }
                         return i ? 'mute' : 'unmute';
@@ -112,8 +112,8 @@ function P() {
             () => N.Z.isCurrentUserSpeaking(),
             (e, t) => {
                 if (e !== t) {
-                    let e = I.Z.isSelfMute();
-                    if (I.Z.getMode() === A.pM4.PUSH_TO_TALK && !e) return t ? 'ptt_start' : 'ptt_stop';
+                    let e = E.Z.isSelfMute();
+                    if (E.Z.getMode() === A.pM4.PUSH_TO_TALK && !e) return t ? 'ptt_start' : 'ptt_stop';
                 }
             }
         ),
@@ -123,12 +123,12 @@ function P() {
 function O() {
     return (
         Z(
-            [I.Z],
-            () => I.Z.isSelfMutedTemporarily(),
+            [E.Z],
+            () => E.Z.isSelfMutedTemporarily(),
             (e, t) => {
                 if (e !== t) {
-                    let e = I.Z.isSelfMute();
-                    if (I.Z.getMode() === A.pM4.VOICE_ACTIVITY && !e) return t ? 'ptt_stop' : 'ptt_start';
+                    let e = E.Z.isSelfMute();
+                    if (E.Z.getMode() === A.pM4.VOICE_ACTIVITY && !e) return t ? 'ptt_stop' : 'ptt_start';
                 }
             }
         ),
@@ -236,15 +236,15 @@ function M() {
                     t = v.Z.getChannelId(),
                     n = o.ZP.getConnectedActivityChannelId(),
                     i = g.default.getId(),
-                    r = (0, x.lm)(t) ? o.ZP.getEmbeddedActivitiesForChannel(t) : o.i6,
-                    l = (0, x.lm)(e) ? o.ZP.getEmbeddedActivitiesForChannel(e) : o.i6,
-                    a = (0, x.lm)(n) ? o.ZP.getEmbeddedActivitiesForChannel(n) : o.i6;
+                    r = (0, b.lm)(t) ? o.ZP.getEmbeddedActivitiesForChannel(t) : o.i6,
+                    l = (0, b.lm)(e) ? o.ZP.getEmbeddedActivitiesForChannel(e) : o.i6,
+                    a = (0, b.lm)(n) ? o.ZP.getEmbeddedActivitiesForChannel(n) : o.i6;
                 return {
                     voiceChannelId: e,
                     currentUserId: i,
                     channelActivities: r,
                     connectedChannelActivities: a,
-                    userConnectedActivity: (0, x.lm)(n) ? o.ZP.getSelfEmbeddedActivityForChannel(n) : null,
+                    userConnectedActivity: (0, b.lm)(n) ? o.ZP.getSelfEmbeddedActivityForChannel(n) : null,
                     voiceChannelActivities: l
                 };
             },
@@ -252,15 +252,15 @@ function M() {
                 let n,
                     { voiceChannelId: i, currentUserId: r, channelActivities: l, connectedChannelActivities: a, userConnectedActivity: s, voiceChannelActivities: o } = t;
                 let c = o.some((e) => e.applicationId === (null == s ? void 0 : s.applicationId) && e.launchId === s.launchId);
-                if ((0, x.lm)(i)) {
+                if ((0, b.lm)(i)) {
                     let t = e.voiceChannelActivities.find((e) => e.userIds.has(r)),
                         i = o.find((e) => e.userIds.has(r));
-                    e.voiceChannelActivities.length < o.length && (0, x.lm)(e.voiceChannelId) && (n = 'activity_launch'), void 0 === i && (0, x.lm)(t) && (n = 'activity_end'), void 0 === t && (0, x.lm)(i) && i.userIds.size > 1 && (n = 'activity_user_join'), (0, x.lm)(i) && (0, x.lm)(t) && (i.userIds.size > t.userIds.size && (n = 'activity_user_join'), i.userIds.size < t.userIds.size && (n = 'activity_user_left'));
+                    e.voiceChannelActivities.length < o.length && (0, b.lm)(e.voiceChannelId) && (n = 'activity_launch'), void 0 === i && (0, b.lm)(t) && (n = 'activity_end'), void 0 === t && (0, b.lm)(i) && i.userIds.size > 1 && (n = 'activity_user_join'), (0, b.lm)(i) && (0, b.lm)(t) && (i.userIds.size > t.userIds.size && (n = 'activity_user_join'), i.userIds.size < t.userIds.size && (n = 'activity_user_left'));
                 }
                 if (!c) {
                     e.connectedChannelActivities.length < a.length && e.channelActivities.length < l.length && (n = 'activity_launch');
                     let t = e.userConnectedActivity;
-                    null == s && (0, x.lm)(t) && (n = 'activity_end'), (0, x.lm)(s) && (0, x.lm)(t) && (s.userIds.size > t.userIds.size && (n = 'activity_user_join'), s.userIds.size < t.userIds.size && (n = 'activity_user_left'));
+                    null == s && (0, b.lm)(t) && (n = 'activity_end'), (0, b.lm)(s) && (0, b.lm)(t) && (s.userIds.size > t.userIds.size && (n = 'activity_user_join'), s.userIds.size < t.userIds.size && (n = 'activity_user_left'));
                 }
                 return n;
             }

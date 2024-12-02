@@ -15,7 +15,7 @@ var r = n(544891),
     g = n(996106),
     f = n(186901),
     _ = n(981631);
-let I = 10 * m.Z.Millis.SECOND;
+let E = 10 * m.Z.Millis.SECOND;
 t.Z = {
     [_.Etm.VALIDATE_APPLICATION]: {
         scope: f.lH,
@@ -35,7 +35,7 @@ t.Z = {
                     })(t, e.id).then((e) => {
                         if (!e) throw new g.Z({ errorCode: _.lTL.INVALID_ENTITLEMENT }, 'User does not have entitlement.');
                     }),
-                    (0, l.GR)(I).then(() => {
+                    (0, l.GR)(E).then(() => {
                         throw new g.Z({ errorCode: _.lTL.INVALID_ENTITLEMENT }, 'Timed out fetching entitlement.');
                     })
                 ]);

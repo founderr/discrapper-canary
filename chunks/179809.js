@@ -30,7 +30,7 @@ let Z = (0, m.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     N = (0, m.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
     y = (0, m.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 function T(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: m, mentionCount: T = 0, unread: A = !1, defaultFolderName: P, useCircleMask: j = !1, draggable: R = !1, sorting: M = !1, onDragStart: L, onDragEnd: w, onExpandCollapse: D, onContextMenu: O, renderChildNode: k, folderIconContent: U } = e,
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: m, mentionCount: T = 0, unread: A = !1, defaultFolderName: j, useCircleMask: P = !1, draggable: R = !1, sorting: M = !1, onDragStart: L, onDragEnd: w, onExpandCollapse: D, onContextMenu: O, renderChildNode: k, folderIconContent: U } = e,
         { id: G, name: B, children: V } = t,
         [H, F] = l.useState(!1),
         [W, z] = l.useState(!1),
@@ -61,7 +61,7 @@ function T(e) {
             },
             [D, u]
         ),
-        J = null != B && '' !== B ? B : null != P && '' !== P ? P : b.intl.string(b.t.xV9hVl),
+        J = null != B && '' !== B ? B : null != j && '' !== j ? j : b.intl.string(b.t.xV9hVl),
         $ = (0, c.Ie)(''.concat(G)),
         ee = 'folder-items-'.concat(G),
         et = V.length * (N + y),
@@ -95,7 +95,7 @@ function T(e) {
                             : (0, i.jsx)(C.Z, {
                                   folderNode: t,
                                   expanded: u,
-                                  forceCircular: j,
+                                  forceCircular: P,
                                   sorting: M,
                                   mediaState: m,
                                   mentionCount: T,

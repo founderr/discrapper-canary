@@ -18,7 +18,7 @@ let _ = {
     [p.TaA.MACOS]: h.PlatformTypes.OSX,
     [p.TaA.LINUX]: h.PlatformTypes.LINUX
 };
-class I extends r.PureComponent {
+class E extends r.PureComponent {
     render() {
         let { active: e, children: t, pageSize: n, onClick: r } = this.props,
             l = n === m.b.LARGE;
@@ -37,7 +37,7 @@ class I extends r.PureComponent {
         });
     }
 }
-let E = (e) => [
+let I = (e) => [
     {
         key: g.intl.string(g.t['0TcHzs']),
         value: e.operating_system_version
@@ -90,7 +90,7 @@ class C extends r.PureComponent {
                       (0, i.jsx)('div', { className: f.separator }),
                       r.map((t) =>
                           (0, i.jsx)(
-                              I,
+                              E,
                               {
                                   active: t === n,
                                   onClick: () => this.handleSelectOperatingSystem(t),
@@ -114,7 +114,7 @@ class C extends r.PureComponent {
     }
     renderRequirementsSection(e, t) {
         if (null == e) return null;
-        let n = E(e)
+        let n = I(e)
             .map((e, t) => {
                 let n = null != e.value ? e.value.trim() : null;
                 return null == n || 0 === n.length

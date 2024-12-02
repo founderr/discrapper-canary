@@ -14,15 +14,15 @@ var i = n(200651),
     g = n(795448),
     f = n(922611),
     _ = n(699516),
-    I = n(974042),
-    E = n(451478),
+    E = n(974042),
+    I = n(451478),
     C = n(434184),
     v = n(701861),
     N = n(437314),
     S = n(696577),
     T = n(163417),
-    x = n(830880),
-    b = n(492347),
+    b = n(830880),
+    x = n(492347),
     A = n(42575),
     Z = n(617015),
     L = n(981631),
@@ -31,8 +31,8 @@ var i = n(200651),
 t.Z = function (e) {
     let { sectionFilter: t, titleId: l } = e,
         { analyticsLocations: O } = (0, p.ZP)(m.Z.FRIENDS_LIST),
-        { rows: R, section: j } = (0, s.cj)([I.ZP], () => I.ZP.getState()),
-        D = (0, s.e7)([E.Z], () => E.Z.isFocused()),
+        { rows: R, section: j } = (0, s.cj)([E.ZP], () => E.ZP.getState()),
+        D = (0, s.e7)([I.Z], () => I.Z.isFocused()),
         M = (0, s.e7)([_.Z], () => _.Z.getRelationshipCount()),
         w = (0, f.Do)({ location: 'PeopleList' }),
         [k, U] = r.useState(() => {
@@ -95,7 +95,7 @@ t.Z = function (e) {
         children: (0, i.jsxs)(u.Z, {
             section: L.jXE.FRIENDS_LIST,
             children: [
-                w && (0, i.jsx)(x.R, {}),
+                w && (0, i.jsx)(b.R, {}),
                 (0, i.jsx)(o.SearchBar, {
                     className: a()(P.searchBar, W ? P.searchEmptyState : null),
                     query: k[t],
@@ -106,7 +106,7 @@ t.Z = function (e) {
                 (0, i.jsxs)('div', {
                     className: P.sectionTitle,
                     children: [
-                        (0, i.jsx)(b.Z, {
+                        (0, i.jsx)(x.Z, {
                             id: l,
                             title: (function (e, t) {
                                 switch (e) {

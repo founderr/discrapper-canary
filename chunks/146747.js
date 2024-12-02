@@ -1,7 +1,7 @@
 n.r(r),
     n.d(r, {
         default: function () {
-            return C;
+            return j;
         }
     });
 var l = n(200651),
@@ -20,7 +20,7 @@ var l = n(200651),
     x = n(316798),
     N = n(232186);
 let _ = 'premium-guild-subscription-upsell-modal-header';
-function g(e) {
+function y(e) {
     let { title: r, subtitle: n, image: o } = e;
     return (0, l.jsxs)('div', {
         className: x.header,
@@ -41,7 +41,7 @@ function g(e) {
         ]
     });
 }
-let v = (e) => {
+let b = (e) => {
         let { onClose: r, perks: n, perkIntro: o = h.intl.string(h.t.Dr3Goa), headerProps: s } = e;
         return (0, l.jsxs)('div', {
             className: x.wrapper,
@@ -52,7 +52,7 @@ let v = (e) => {
                         r();
                     }
                 }),
-                (0, l.jsx)(b, {
+                (0, l.jsx)(g, {
                     headerProps: s,
                     perkIntro: o
                 }),
@@ -75,12 +75,12 @@ let v = (e) => {
             ]
         });
     },
-    b = (e) => {
+    g = (e) => {
         let { headerProps: r, perkIntro: s } = e;
         return (0, l.jsxs)(o.Fragment, {
             children: [
                 null != r
-                    ? (0, l.jsx)(g, { ...r })
+                    ? (0, l.jsx)(y, { ...r })
                     : (0, l.jsx)('img', {
                           className: x.heroImage,
                           src: n(438471),
@@ -94,7 +94,7 @@ let v = (e) => {
             ]
         });
     },
-    j = (e) => {
+    v = (e) => {
         let { guild: r, targetBoostedGuildTier: n, onClose: o, analyticsSourceLocation: s } = e,
             c = {
                 section: f.jXE.PREMIUM_GUILD_UPSELL_MODAL,
@@ -125,7 +125,7 @@ let v = (e) => {
             ]
         });
     };
-function C(e) {
+function j(e) {
     let { analyticsSourceLocation: r, guild: n, targetBoostedGuildTier: o, perks: u, perkIntro: p, headerProps: m, onClose: f, ...h } = e,
         { analyticsLocations: x } = (0, c.ZP)(s.Z.ACTIVITY_DIRECTORY);
     return (0, l.jsx)(c.Gt, {
@@ -139,13 +139,13 @@ function C(e) {
                 'aria-labelledby': _,
                 children: (0, l.jsx)(d.Z, {
                     hideBreadcrumbs: !0,
-                    body: (0, l.jsx)(v, {
+                    body: (0, l.jsx)(b, {
                         onClose: f,
                         perks: u,
                         perkIntro: p,
                         headerProps: m
                     }),
-                    footer: (0, l.jsx)(j, {
+                    footer: (0, l.jsx)(v, {
                         guild: n,
                         targetBoostedGuildTier: o,
                         onClose: f,

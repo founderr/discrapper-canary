@@ -14,15 +14,15 @@ var i,
     g = n(581883),
     f = n(70956),
     _ = n(780570),
-    I = n(314897),
-    E = n(77498),
+    E = n(314897),
+    I = n(77498),
     C = n(283595),
     v = n(19780),
     N = n(944486),
     S = n(981631);
 let T = 'ActivityTrackingStore',
-    x = 30 * f.Z.Millis.MINUTE,
-    b = 5 * f.Z.Millis.MINUTE,
+    b = 30 * f.Z.Millis.MINUTE,
+    x = 5 * f.Z.Millis.MINUTE,
     A = null !== (i = c.K.get(T)) && void 0 !== i ? i : {},
     Z = {},
     L = !1;
@@ -36,10 +36,10 @@ function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = Date.now(),
         i = null != e.updatedAt ? n - e.updatedAt : 0;
-    i > x + b && (i = 0);
+    i > b + x && (i = 0);
     let r = (0, _.OT)(e.applicationId, C.Z),
         l = N.Z.getVoiceChannelId(),
-        a = I.default.getSessionId(),
+        a = E.default.getSessionId(),
         s = v.Z.getMediaSessionId();
     h.Z.updateActivity({
         applicationId: e.applicationId,
@@ -55,14 +55,14 @@ function P(e) {
     }),
         (e.updatedAt = n);
     let o = Z[e.applicationId];
-    null == o && (o = Z[e.applicationId] = new d.Xp()).start(x, () => P(e)), !t && ((A[e.applicationId] = e), c.K.set(T, A));
+    null == o && (o = Z[e.applicationId] = new d.Xp()).start(b, () => P(e)), !t && ((A[e.applicationId] = e), c.K.set(T, A));
 }
 function O() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = p.ZP.getVisibleRunningGames(),
         n = new Set();
     for (let { name: e, distributor: i, exePath: r } of t) {
-        let t = E.Z.getGameByName(e);
+        let t = I.Z.getGameByName(e);
         if (null != t)
             n.add(t.id),
                 !(t.id in A) &&

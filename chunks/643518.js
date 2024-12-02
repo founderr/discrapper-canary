@@ -32,7 +32,7 @@ function f(e) {
             }
         ];
     return (
-        (I.length > 0 || (g && x.length > 0) || null != p) &&
+        (I.length > 0 || x.length > 0 || null != p) &&
             _.push({
                 section: a.oh.ACTIVITY,
                 text: u.intl.string(u.t.chq59f)

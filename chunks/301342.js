@@ -40,12 +40,12 @@ let Z = l.memo(function (e) {
     let t,
         { channel: r, connectChannelDragSource: h, connectChannelDropTarget: v, disableManageChannels: x, position: Z, sortingPosition: N, hideIcon: y, children: T } = e,
         A = (0, s.e7)([_.ZP], () => _.ZP.isChannelMuted(r.getGuildId(), r.id)),
-        P = (0, s.e7)([f.Z], () => f.Z.isCollapsed(r.id)),
-        j = (0, s.e7)([C.Z], () => C.Z.can(I.Plq.MANAGE_CHANNELS, r));
+        j = (0, s.e7)([f.Z], () => f.Z.isCollapsed(r.id)),
+        P = (0, s.e7)([C.Z], () => C.Z.can(I.Plq.MANAGE_CHANNELS, r));
     t = null != N ? (Z > N ? E.containerDragAfter : E.containerDragBefore) : E.containerDefault;
     let R = l.useCallback(() => {
-            P ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
-        }, [r.id, P]),
+            j ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
+        }, [r.id, j]),
         M = l.useCallback(
             (e) => {
                 if ('null' !== r.id) {
@@ -96,7 +96,7 @@ let Z = l.memo(function (e) {
                     children: (0, i.jsxs)('div', {
                         ref: U,
                         className: a()(E.iconVisibility, E.wrapper, {
-                            [E.collapsed]: P,
+                            [E.collapsed]: j,
                             [E.muted]: A,
                             [E.clickable]: !0
                         }),
@@ -109,7 +109,7 @@ let Z = l.memo(function (e) {
                                 ...O,
                                 onClick: R,
                                 'aria-label': b.intl.formatToPlainString(b.t.y5l3Jy, { categoryName: r.name }),
-                                'aria-expanded': !P,
+                                'aria-expanded': !j,
                                 focusProps: { enabled: !1 },
                                 children: [
                                     y
@@ -129,7 +129,7 @@ let Z = l.memo(function (e) {
                                 onClick: S,
                                 className: E.children,
                                 children:
-                                    j && !x
+                                    P && !x
                                         ? (0, i.jsx)(c.Tooltip, {
                                               text: b.intl.string(b.t['fUYU+v']),
                                               children: (e) => {

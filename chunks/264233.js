@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return g;
     }
 }),
     n(47120);
@@ -11,17 +11,17 @@ var i = n(200651),
     o = n(442837),
     s = n(524437),
     c = n(481060),
-    u = n(317632),
-    d = n(174767),
+    d = n(317632),
+    u = n(174767),
     m = n(240126),
     h = n(791914),
     f = n(326838),
     p = n(388032),
-    g = n(366475);
-function _(e) {
-    let { setTab: t, badgeState: l, closePopout: _ } = e,
-        C = (0, o.Wu)([u.Z], () => u.Z.getInvites()),
-        I = (0, o.e7)([u.Z], () => u.Z.getInviteStatuses()),
+    _ = n(366475);
+function g(e) {
+    let { setTab: t, badgeState: l, closePopout: g } = e,
+        C = (0, o.Wu)([d.Z], () => d.Z.getInvites()),
+        I = (0, o.e7)([d.Z], () => d.Z.getInviteStatuses()),
         [x, N] = r.useMemo(
             () =>
                 a().partition(C, (e) => {
@@ -31,20 +31,20 @@ function _(e) {
             [C, I]
         );
     return (r.useEffect(() => {
-        (0, d.sJ)();
+        (0, u.sJ)();
     }),
     0 === C.length)
         ? (0, i.jsxs)('div', {
-              className: g.container,
+              className: _.container,
               children: [
                   (0, i.jsx)(h.Z, {
                       tab: s.X.GAME_INVITES,
                       setTab: t,
                       badgeState: l,
-                      closePopout: _
+                      closePopout: g
                   }),
                   (0, i.jsx)('div', {
-                      className: g.__invalid_emptyStateContainer,
+                      className: _.__invalid_emptyStateContainer,
                       children: (0, i.jsx)(m.Z, {
                           Icon: c.GameControllerIcon,
                           header: p.intl.string(p.t.PbSPWV),
@@ -54,15 +54,15 @@ function _(e) {
               ]
           })
         : (0, i.jsxs)('div', {
-              className: g.container,
+              className: _.container,
               children: [
                   (0, i.jsx)(h.Z, {
                       tab: s.X.GAME_INVITES,
                       setTab: t,
                       badgeState: l,
-                      closePopout: _,
+                      closePopout: g,
                       children: (0, i.jsx)(c.CircleIconButton, {
-                          className: g.__invalid_deleteButton,
+                          className: _.__invalid_deleteButton,
                           tooltip: p.intl.string(p.t.Zy3MR0),
                           color: c.CircleIconButtonColors.SECONDARY,
                           icon: (0, i.jsx)(c.TrashIcon, { size: 'xs' }),
@@ -82,7 +82,7 @@ function _(e) {
                   }),
                   (0, i.jsx)(c.AdvancedScrollerThin, {
                       children: (0, i.jsxs)('div', {
-                          className: g.invitesContainer,
+                          className: _.invitesContainer,
                           children: [
                               x.length > 0 &&
                                   (0, i.jsxs)(i.Fragment, {
@@ -129,15 +129,15 @@ function _(e) {
 function E(e) {
     let { title: t } = e;
     return (0, i.jsxs)('div', {
-        className: g.headerContainer,
+        className: _.headerContainer,
         children: [
             (0, i.jsx)(c.Text, {
-                className: g.headerTitle,
+                className: _.headerTitle,
                 variant: 'text-xs/semibold',
                 color: 'interactive-normal',
                 children: t
             }),
-            (0, i.jsx)('div', { className: g.headerDivider })
+            (0, i.jsx)('div', { className: _.headerDivider })
         ]
     });
 }

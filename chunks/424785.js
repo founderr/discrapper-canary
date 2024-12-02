@@ -33,8 +33,8 @@ var l = n(120356),
     y = n(430824),
     T = n(607744),
     A = n(496675),
-    P = n(306680),
-    j = n(9156),
+    j = n(306680),
+    P = n(9156),
     R = n(979651),
     M = n(934415),
     L = n(98597),
@@ -226,11 +226,11 @@ class F extends L.ZP {
 let W = (0, u.B)((0, d.Q)(F));
 function z(e) {
     let { guild: t, channel: n, disableSorting: l, isFavoriteCategory: r, collapsed: o, voiceStates: s } = e,
-        c = (0, a.cj)([P.ZP], () => ({
-            unread: P.ZP.hasUnread(n.id),
-            mentionCount: P.ZP.getMentionCount(n.id)
+        c = (0, a.cj)([j.ZP], () => ({
+            unread: j.ZP.hasUnread(n.id),
+            mentionCount: j.ZP.getMentionCount(n.id)
         })),
-        u = (0, a.e7)([j.ZP], () => j.ZP.resolveUnreadSetting(n)),
+        u = (0, a.e7)([P.ZP], () => P.ZP.resolveUnreadSetting(n)),
         d = (0, a.cj)([N.Z, T.Z, A.Z], () => {
             let e = N.Z.getChannel(n.parent_id),
                 i = T.Z.getCheck(n.guild_id);
@@ -248,7 +248,7 @@ function z(e) {
         m = (0, a.e7)([b.Z], () => b.Z.getStageInstanceByChannel(n.id), [n.id]),
         f = (0, x.Rk)(n.id, I.pV.AUDIENCE),
         { isSubscriptionGated: C, needSubscriptionToAccess: _ } = (0, g.Z)(n.id),
-        v = (0, a.e7)([j.ZP], () => j.ZP.isFavorite(t.id, n.id)),
+        v = (0, a.e7)([P.ZP], () => P.ZP.isFavorite(t.id, n.id)),
         y = (0, E.xJ)(n.id),
         R = (0, w.Z)({
             channel: n,

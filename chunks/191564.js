@@ -1,17 +1,17 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return S;
+            return B;
         }
     }),
     n(47120);
-var i = n(200651),
-    r = n(192379),
+var r = n(200651),
+    i = n(192379),
     l = n(979554),
-    o = n(442837),
-    s = n(481060),
-    a = n(100527),
-    c = n(906732),
+    s = n(442837),
+    o = n(481060),
+    c = n(100527),
+    a = n(906732),
     d = n(335131),
     u = n(884697),
     f = n(449217),
@@ -19,159 +19,159 @@ var i = n(200651),
     p = n(222062),
     h = n(269982),
     g = n(197115),
-    v = n(150039),
-    x = n(594174),
+    x = n(150039),
+    C = n(594174),
     I = n(626135),
-    C = n(74538),
-    j = n(934261),
-    P = n(52268),
-    Z = n(981631),
-    E = n(474936),
-    _ = n(388032),
+    v = n(74538),
+    E = n(934261),
+    _ = n(52268),
+    j = n(981631),
+    P = n(474936),
+    S = n(388032),
     N = n(390153);
-function y(e) {
-    let { user: t, product: n, purchase: l, onApply: o, onClose: c, disableApplyButton: f, canUseCollectibles: m, selectedProfileEffectId: v, selectedProfileEffectItem: x, analyticsLocations: I } = e,
-        j = r.useCallback(() => {
-            c(),
+function Z(e) {
+    let { user: t, product: n, purchase: l, onApply: s, onClose: a, disableApplyButton: f, canUseCollectibles: m, selectedProfileEffectId: x, selectedProfileEffectItem: C, analyticsLocations: I } = e,
+        E = i.useCallback(() => {
+            a(),
                 (0, d.mK)({
                     analyticsLocations: I,
-                    analyticsSource: a.Z.EDIT_PROFILE_EFFECT_MODAL,
-                    initialProductSkuId: null != x ? x.skuId : void 0
+                    analyticsSource: c.Z.EDIT_PROFILE_EFFECT_MODAL,
+                    initialProductSkuId: null != C ? C.skuId : void 0
                 });
-        }, [c, I, x]),
-        P = (0, p.M)();
-    return (0, i.jsxs)(s.ModalFooter, {
+        }, [a, I, C]),
+        _ = (0, p.M)();
+    return (0, r.jsxs)(o.ModalFooter, {
         className: N.modalFooter,
         children: [
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: N.buttonsRight,
                 children: [
-                    !P &&
-                        (0, i.jsx)(s.Button, {
-                            look: s.Button.Looks.LINK,
-                            color: s.Button.Colors.PRIMARY,
-                            onClick: c,
-                            children: _.intl.string(_.t['ETE/oK'])
+                    !_ &&
+                        (0, r.jsx)(o.Button, {
+                            look: o.Button.Looks.LINK,
+                            color: o.Button.Colors.PRIMARY,
+                            onClick: a,
+                            children: S.intl.string(S.t['ETE/oK'])
                         }),
-                    (null != l && (!(0, u.qS)(l) || m)) || null === v
-                        ? (0, i.jsx)(s.Button, {
-                              onClick: o,
+                    (null != l && (!(0, u.qS)(l) || m)) || null === x
+                        ? (0, r.jsx)(o.Button, {
+                              onClick: s,
                               disabled: f,
-                              children: _.intl.string(_.t.d6sv6u)
+                              children: S.intl.string(S.t.d6sv6u)
                           })
                         : m || !(0, u.G1)(n)
-                          ? (0, i.jsx)(s.Button, {
-                                onClick: j,
-                                children: _.intl.string(_.t.fYfGgI)
+                          ? (0, r.jsx)(o.Button, {
+                                onClick: E,
+                                children: S.intl.string(S.t.fYfGgI)
                             })
-                          : (0, i.jsx)(g.Z, {
-                                subscriptionTier: E.Si.TIER_2,
-                                showGradient: P,
-                                buttonText: C.ZP.isPremium(t) ? _.intl.string(_.t.KXLX7u) : P ? _.intl.string(_.t.pj0XBA) : _.intl.string(_.t.mr4K7O)
+                          : (0, r.jsx)(g.Z, {
+                                subscriptionTier: P.Si.TIER_2,
+                                showGradient: _,
+                                buttonText: v.ZP.isPremium(t) ? S.intl.string(S.t.KXLX7u) : _ ? S.intl.string(S.t.pj0XBA) : S.intl.string(S.t.mr4K7O)
                             })
                 ]
             }),
-            P &&
+            _ &&
                 (0, u.G1)(n) &&
-                (0, i.jsx)(h.Z, {
+                (0, r.jsx)(h.Z, {
                     product: n,
-                    onSecondaryClick: c
+                    onSecondaryClick: a
                 })
         ]
     });
 }
-function b(e) {
-    let { user: t, guild: n, categories: l, purchases: o, onClose: a, initialSelectedProfileEffectId: c, currentSavedEffectId: d, analyticsLocations: m } = e,
-        { pendingProfileEffectId: p } = (0, v.bd)(n),
-        [h, g] = r.useMemo(() => {
-            let e = (0, u.bl)(l, o);
+function T(e) {
+    let { user: t, guild: n, categories: l, purchases: s, onClose: c, initialSelectedProfileEffectId: a, currentSavedEffectId: d, analyticsLocations: m } = e,
+        { pendingProfileEffectId: p } = (0, x.bd)(n),
+        [h, g] = i.useMemo(() => {
+            let e = (0, u.bl)(l, s);
             return [e.purchased, e.shopPreviews];
-        }, [l, o]),
-        [x, I] = r.useState(() => (null != c ? c : void 0 !== p ? p : null == d ? null : null != d ? d : null)),
-        [Z, E] = r.useMemo(() => {
+        }, [l, s]),
+        [C, I] = i.useState(() => (null != a ? a : void 0 !== p ? p : null == d ? null : null != d ? d : null)),
+        [j, P] = i.useMemo(() => {
             var e;
-            let t = h.find((e) => (null == e ? void 0 : e.id) === x),
-                n = null != t || null === x;
-            return [null !== (e = null != t ? t : g.find((e) => (null == e ? void 0 : e.id) === x)) && void 0 !== e ? e : null, n];
-        }, [x, h, g]),
-        { product: b, purchase: S } = (0, f.Z)(null == Z ? void 0 : Z.skuId),
-        T = r.useRef(null),
-        A = C.ZP.canUseCollectibles(t),
-        k = x === (void 0 === p ? (null != d ? d : null) : p),
-        B = r.useCallback(
+            let t = h.find((e) => (null == e ? void 0 : e.id) === C),
+                n = null != t || null === C;
+            return [null !== (e = null != t ? t : g.find((e) => (null == e ? void 0 : e.id) === C)) && void 0 !== e ? e : null, n];
+        }, [C, h, g]),
+        { product: T, purchase: B } = (0, f.Z)(null == j ? void 0 : j.skuId),
+        b = i.useRef(null),
+        A = v.ZP.canUseCollectibles(t),
+        k = C === (void 0 === p ? (null != d ? d : null) : p),
+        y = i.useCallback(
             (e) => {
                 I(e);
             },
             [I]
         );
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsxs)(s.ModalHeader, {
+            (0, r.jsxs)(o.ModalHeader, {
                 separator: !1,
                 className: N.modalHeader,
                 children: [
-                    (0, i.jsx)(s.Heading, {
+                    (0, r.jsx)(o.Heading, {
                         variant: 'heading-lg/semibold',
-                        children: _.intl.string(_.t.t5SVGR)
+                        children: S.intl.string(S.t.t5SVGR)
                     }),
-                    (0, i.jsx)(s.ModalCloseButton, {
+                    (0, r.jsx)(o.ModalCloseButton, {
                         className: N.modalCloseButton,
-                        onClick: a
+                        onClick: c
                     })
                 ]
             }),
-            (0, i.jsxs)(s.ModalContent, {
+            (0, r.jsxs)(o.ModalContent, {
                 className: N.modalContent,
                 children: [
-                    (0, i.jsx)(P.Z, {
+                    (0, r.jsx)(_.Z, {
                         user: t,
                         guild: n,
-                        pendingProfileEffect: x,
-                        selectedProfileEffectRef: T,
-                        onSelect: B,
-                        onClose: a
+                        pendingProfileEffect: C,
+                        selectedProfileEffectRef: b,
+                        onSelect: y,
+                        onClose: c
                     }),
-                    (0, i.jsx)(j.Z, {
+                    (0, r.jsx)(E.Z, {
                         user: t,
-                        canApplySelectedChange: E,
-                        pendingProfileEffectRecord: Z,
-                        product: b,
-                        purchase: S,
+                        canApplySelectedChange: P,
+                        pendingProfileEffectRecord: j,
+                        product: T,
+                        purchase: B,
                         guild: n
                     })
                 ]
             }),
-            (0, i.jsx)(y, {
+            (0, r.jsx)(Z, {
                 user: t,
                 onApply: () => {
-                    (0, v.s6)(x, d, null == n ? void 0 : n.id), a();
+                    (0, x.s6)(C, d, null == n ? void 0 : n.id), c();
                 },
-                onClose: a,
-                product: b,
-                purchase: S,
+                onClose: c,
+                product: T,
+                purchase: B,
                 canUseCollectibles: A,
-                selectedProfileEffectId: x,
-                selectedProfileEffectItem: Z,
+                selectedProfileEffectId: C,
+                selectedProfileEffectItem: j,
                 disableApplyButton: k,
                 analyticsLocations: m
             })
         ]
     });
 }
-function S(e) {
+function B(e) {
     let { transitionState: t, analyticsLocations: n, initialSelectedEffectId: u, guild: f, onClose: p } = e,
-        { isFetching: h, categories: g, purchases: C } = (0, m.Z)(),
-        j = (0, o.e7)([x.default], () => x.default.getCurrentUser()),
-        { analyticsLocations: P } = (0, c.ZP)(n, a.Z.EDIT_PROFILE_EFFECT_MODAL),
-        E = (0, v.Kg)(j, f);
+        { isFetching: h, categories: g, purchases: v } = (0, m.Z)(),
+        E = (0, s.e7)([C.default], () => C.default.getCurrentUser()),
+        { analyticsLocations: _ } = (0, a.ZP)(n, c.Z.EDIT_PROFILE_EFFECT_MODAL),
+        P = (0, x.Kg)(E, f);
     return (
-        r.useEffect(() => {
-            I.default.track(Z.rMx.OPEN_MODAL, {
-                type: Z.jXE.PROFILE_EFFECT_CUSTOMIZATION,
-                location_stack: P
+        i.useEffect(() => {
+            I.default.track(j.rMx.OPEN_MODAL, {
+                type: j.jXE.PROFILE_EFFECT_CUSTOMIZATION,
+                location_stack: _
             });
-        }, [P]),
-        r.useEffect(
+        }, [_]),
+        i.useEffect(
             () => () => {
                 (0, d.K$)({
                     categories: [...g.values()],
@@ -180,26 +180,26 @@ function S(e) {
             },
             [g]
         ),
-        (0, i.jsx)(c.Gt, {
-            value: P,
-            children: (0, i.jsx)(s.ModalRoot, {
+        (0, r.jsx)(a.Gt, {
+            value: _,
+            children: (0, r.jsx)(o.ModalRoot, {
                 transitionState: t,
                 className: N.modal,
-                size: h ? s.ModalSize.DYNAMIC : s.ModalSize.MEDIUM,
+                size: h ? o.ModalSize.DYNAMIC : o.ModalSize.MEDIUM,
                 children: h
-                    ? (0, i.jsx)(s.Spinner, {
+                    ? (0, r.jsx)(o.Spinner, {
                           className: N.spinner,
-                          type: s.Spinner.Type.SPINNING_CIRCLE
+                          type: o.Spinner.Type.SPINNING_CIRCLE
                       })
-                    : (0, i.jsx)(b, {
-                          user: j,
+                    : (0, r.jsx)(T, {
+                          user: E,
                           guild: f,
                           categories: g,
-                          purchases: C,
+                          purchases: v,
                           initialSelectedProfileEffectId: u,
-                          currentSavedEffectId: E,
+                          currentSavedEffectId: P,
                           onClose: p,
-                          analyticsLocations: P
+                          analyticsLocations: _
                       })
             })
         })

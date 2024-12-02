@@ -79,9 +79,9 @@ function p(e) {
 function g(e) {
     let { className: t, endsAt: n, messageStyle: r, upperCase: c, showSparkles: g, currentEntitlementId: f } = e,
         [_] = (0, o.XR)(a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL, Number(f)),
-        I = (0, s.Z)(n, r);
+        E = (0, s.Z)(n, r);
     return (
-        c && (I = I.toUpperCase()),
+        c && (E = E.toUpperCase()),
         (0, i.jsxs)('div', {
             className: l()(t, u.countDown),
             children: [
@@ -100,7 +100,7 @@ function g(e) {
                       })
                     : null,
                 (0, i.jsx)(d.mn, {
-                    text: I,
+                    text: E,
                     colorOptions: _ === a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL ? d.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : d.VE.PREMIUM_TIER_2_GREY_FILL
                 })
             ]

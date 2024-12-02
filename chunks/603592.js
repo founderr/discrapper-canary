@@ -13,7 +13,7 @@ let p = l.forwardRef(function (e, t) {
     let { id: n, onClick: r, onContextMenu: p, icon: m, selected: f, tooltip: g, upperBadge: C, lowerBadge: _, lowerBadgeSize: v, showPill: x = !0, className: I, 'aria-label': b, children: E, onMouseEnter: S, onMouseLeave: Z, onMouseDown: N } = e,
         y = (0, o.Ie)(n),
         [T, A] = l.useState(!1),
-        P = 'string' == typeof g && null == b ? g : b;
+        j = 'string' == typeof g && null == b ? g : b;
     return (0, i.jsxs)(u.H, {
         children: [
             x
@@ -45,7 +45,7 @@ let p = l.forwardRef(function (e, t) {
                         onMouseDown: N,
                         className: a()(h.circleIconButton, I, { [h.selected]: f || T }),
                         onClick: r,
-                        'aria-label': P,
+                        'aria-label': j,
                         onContextMenu: p,
                         focusProps: { enabled: !1 },
                         ...y,

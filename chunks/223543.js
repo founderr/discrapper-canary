@@ -10,7 +10,7 @@ var i = n(200651),
     h = n(232186);
 t.Z = (e) => {
     let { location: t } = e,
-        { verifyFailed: g, verifySucceeded: m } = (0, s.cj)([u.default], () => ({
+        { verifyFailed: g, verifySucceeded: p } = (0, s.cj)([u.default], () => ({
             verifyFailed: u.default.didVerifyFail(),
             verifySucceeded: u.default.didVerifySucceed()
         }));
@@ -36,7 +36,7 @@ t.Z = (e) => {
                   })
               ]
           })
-        : m
+        : p
           ? (0, i.jsxs)(o.ZP, {
                 children: [
                     (0, i.jsx)('img', {

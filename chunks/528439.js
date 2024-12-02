@@ -1,6 +1,6 @@
 n.d(t, {
     $0: function () {
-        return i;
+        return r;
     },
     Tm: function () {
         return p;
@@ -12,30 +12,30 @@ n.d(t, {
     n(47120),
     n(724458),
     n(653041);
-var i,
-    r,
+var r,
+    i,
     l = n(192379),
-    o = n(392711),
-    s = n(399606),
-    a = n(597688),
-    c = n(1870),
+    s = n(392711),
+    o = n(399606),
+    c = n(597688),
+    a = n(1870),
     d = n(884697),
     u = n(594174),
     f = n(74538),
     m = n(388032);
-((r = i || (i = {})).PURCHASE = 'purchase'), (r.PREMIUM_PURCHASE = 'premium_purchase'), (r.PREVIEW = 'preview');
+((i = r || (r = {})).PURCHASE = 'purchase'), (i.PREMIUM_PURCHASE = 'premium_purchase'), (i.PREVIEW = 'preview');
 let p = { id: 'None' },
     h = { id: 'Shop' };
 t.ZP = () => {
-    let e = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
+    let e = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
         t = f.ZP.canUseCollectibles(e),
-        n = (0, s.e7)([c.Z], () => c.Z.purchases),
-        [i, r] = (0, s.Wu)([a.Z], () => [a.Z.categories, a.Z.products]);
+        n = (0, o.e7)([a.Z], () => a.Z.purchases),
+        [r, i] = (0, o.Wu)([c.Z], () => [c.Z.categories, c.Z.products]);
     return (0, l.useMemo)(() => {
-        let e = (0, o.uniqBy)([...(0, d.aj)(n), ...(0, d.XS)(i)], 'id').reduce(
-            (e, i) => {
-                let l = n.get(i.skuId);
-                return (0, d.qS)(l) ? (e.premium_purchase.push(i), e) : null != l ? (e.purchase.push(i), e) : !t && (0, d.G1)(r.get(i.skuId)) ? (e.premium_purchase.push(i), e) : (e.preview.push(i), e);
+        let e = (0, s.uniqBy)([...(0, d.aj)(n), ...(0, d.XS)(r)], 'id').reduce(
+            (e, r) => {
+                let l = n.get(r.skuId);
+                return (0, d.qS)(l) ? (e.premium_purchase.push(r), e) : null != l ? (e.purchase.push(r), e) : !t && (0, d.G1)(i.get(r.skuId)) ? (e.premium_purchase.push(r), e) : (e.preview.push(r), e);
             },
             {
                 purchase: [],
@@ -66,5 +66,5 @@ t.ZP = () => {
             let { items: t } = e;
             return t.length > 0;
         });
-    }, [i, r, n, t]);
+    }, [r, i, n, t]);
 };
