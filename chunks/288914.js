@@ -33,7 +33,7 @@ var i = n(200651),
     y = n(502762),
     P = n(530),
     O = n(309494),
-    R = n(4517),
+    R = n(495804),
     j = n(171368),
     D = n(420654),
     M = n(695346),
@@ -333,6 +333,7 @@ function en(e) {
                                     onOpenProfile: en ? void 0 : ef
                                 }),
                                 (0, i.jsx)(R.Z, {
+                                    location: 'AccountProfilePopoutWithEntryPoints',
                                     user: n,
                                     profileType: q.y0.BITE_SIZE,
                                     onCloseProfile: G

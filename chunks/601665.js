@@ -21,7 +21,7 @@ var r = n(200651),
     g = n(502762),
     E = n(952124),
     v = n(544989),
-    I = n(4517),
+    I = n(495804),
     T = n(171368),
     b = n(895697),
     S = n(161572),
@@ -107,6 +107,7 @@ function C(e) {
                                     onOpenProfile: w ? void 0 : V
                                 }),
                                 (0, r.jsx)(I.Z, {
+                                    location: 'BotUserProfilePopout',
                                     user: t,
                                     profileType: y.y0.BITE_SIZE,
                                     onCloseProfile: L

@@ -13632,6 +13632,66 @@ div.cardContainer_c22357 {
     color: inherit
 }
 
+.image_b029da {
+    width: 100%
+}
+
+.firstPromotionalAvatar_b029da {
+    z-index: 1
+}
+
+.secondPromotionalAvatar_b029da {
+    margin-right: -18px
+}
+
+.container_b029da {
+    display: flex;
+    flex-direction: row-reverse
+}
+
+.promotionalGiftMessage_d84998 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    -moz-column-gap: 12px;
+    column-gap: 12px;
+    margin: 24px -24px -24px;
+    padding: 12px 24px;
+    background: linear-gradient(90deg, #e6e5bb 0%, #1d744b 100%);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    min-height: 36px
+}
+
+.promotionalGiftMessageText_d84998 {
+    color: black
+}
+
+.promotionalAvatarMaxRewards_d84998 {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 32%
+}
+
+.promotionalAvatar_d84998 {
+    position: absolute;
+    bottom: 18px;
+    right: 24px
+}
+
+.promotionalTextSection_d84998 {
+    display: flex;
+    flex-direction: column;
+    width: 68%
+}
+
+.rotatingAvatars_d84998 {
+    width: 100%
+}
+
 .pricePerInterval_af8f09 {
     margin-bottom: 18px;
     font-weight: 200
@@ -14128,35 +14188,15 @@ div.cardContainer_c22357 {
     margin-bottom: 18px
 }
 
-.withHalloweenTier2_c87d73 {
-    background-image: linear-gradient(100.98deg, rgba(133, 71, 198, .64)25.21%, rgba(184, 69, 193, .64)62.43%, rgba(171, 93, 138, .64)95.57%), url(https://cdn.discordapp.com/assets/content/2fb8950c84e002f2db23d1e206a2c7300a8f511449a86e3f7ef3dfe89eaa076d.png);
-    background-size: cover;
-    background-position: center;
+.withPromotionalGradientBanner_c87d73 {
+    background-image: url(https://cdn.discordapp.com/assets/content/9d08c9788226acee6a98b75ae74946561591d8c5098d14ea951e7026fcf16764.png), linear-gradient(100.98deg, rgba(133, 71, 198, .64)25.21%, rgba(184, 69, 193, .64)62.43%, rgba(171, 93, 138, .64)95.57%);
+    background-size: 90%, cover;
+    background-position: top right, center;
+    background-repeat: no-repeat;
     box-sizing: border-box;
     transform: scale(1);
     border-bottom-left-radius: 17px;
     border-bottom-right-radius: 17px
-}
-
-.halloweenGiftMessage_c87d73 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    -moz-column-gap: 12px;
-    column-gap: 12px;
-    margin: 24px -24px -24px;
-    padding: 12px 24px;
-    background: linear-gradient(0deg, rgba(255, 139, 13, .9)0%, rgba(255, 139, 13, .9)100%);
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px
-}
-
-.halloweenGiftMessageText_c87d73 {
-    color: black
-}
-
-.halloweenAvatar_c87d73 {
-    margin-top: -52px
 }
 
 .heading_aac415 {

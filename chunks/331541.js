@@ -31,7 +31,7 @@ var i = n(200651),
     Z = n(502762),
     L = n(530),
     y = n(309494),
-    P = n(4517),
+    P = n(495804),
     O = n(171368),
     R = n(420654),
     j = n(695346),
@@ -329,6 +329,7 @@ function ee(e) {
                                     onOpenProfile: ee ? void 0 : eg
                                 }),
                                 (0, i.jsx)(P.Z, {
+                                    location: 'AccountProfilePopout',
                                     user: n,
                                     profileType: Y.y0.BITE_SIZE,
                                     onCloseProfile: k

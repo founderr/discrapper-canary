@@ -23,7 +23,7 @@ var l = t(481060),
     v = t(53558),
     g = t(544989),
     Z = t(934861),
-    _ = t(4517),
+    _ = t(495804),
     j = t(740628),
     b = t(398145),
     E = t(228168),
@@ -84,6 +84,7 @@ function y(e) {
                                             profileType: E.y0.FULL_SIZE
                                         }),
                                         (0, i.jsx)(_.Z, {
+                                            location: 'BotUserProfileModal',
                                             user: n,
                                             profileType: E.y0.FULL_SIZE,
                                             hasEntered: M === l.ModalTransitionState.ENTERED,
