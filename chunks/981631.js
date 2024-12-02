@@ -4819,6 +4819,7 @@ let on = Object.freeze({
     (ah.USER_PROFILE_BADGE_HOVERED = 'user_profile_badge_hovered'),
     (ah.DM_PROFILE_TOGGLED = 'dm_profile_toggled'),
     (ah.PREMIUM_WOW_MOMENT_VIEWED = 'premium_wow_moment_viewed'),
+    (ah.PREMIUM_WOW_MOMENT_MEDIA_PREFETCH_TRIGGER = 'premium_wow_moment_media_prefetch_trigger'),
     (ah.PREMIUM_FEATURE_HELPER_ACTIONS = 'premium_feature_helper_actions'),
     (ah.PREMIUM_FEATURE_TUTORIAL_STEPS = 'premium_feature_tutorial_steps'),
     (ah.PREMIUM_FEATURE_TUTORIAL_STEPS_NEXT = 'premium_feature_tutorial_steps_next'),
