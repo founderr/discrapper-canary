@@ -126,7 +126,7 @@ function A(e, t) {
     return n === h.F_ ? r : n;
 }
 function N(e, t) {
-    var n, r, i, a, s;
+    var n, r, i, a, s, o;
     if (
         (null != e.author && 'SENDING' !== e.state && S(e.author) && y(e.author, t),
         null === (n = e.mentions) ||
@@ -151,6 +151,7 @@ function N(e, t) {
             let r = e.resolved.users[n];
             S(r) && y(r, t);
         }
+    (null === (o = e.interaction_metadata) || void 0 === o ? void 0 : o.user) != null && S(e.interaction_metadata.user) && y(e.interaction_metadata.user, t);
 }
 function C(e) {
     let { user: t, users: n, guilds: r } = e;
