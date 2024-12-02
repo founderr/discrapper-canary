@@ -661,10 +661,12 @@ function ev(e) {
         }),
         { ref: e0, ...e1 } = eQ.containerProps,
         e6 = M.ZP.getSidebarState(t.id),
-        e9 = null != e6 && (0, M.D5)(e6);
+        e9 = null != e6 && (0, M.D5)(e6),
+        e2 = (0, g.e7)([M.ZP], () => M.ZP.getSection(t.id)) === es.ULH.MEMBERS;
     return (0, a.jsx)('div', {
         className: ed.container,
         ref: ev,
+        'data-member-list-open': e2,
         children: (0, a.jsx)(f.FocusJumpSection, {
             children: (e) =>
                 (0, a.jsxs)(a.Fragment, {

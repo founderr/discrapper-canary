@@ -29,7 +29,8 @@ function g(e) {
             resizableDomNodeRef: t,
             onElementResize: n,
             onElementResizeEnd: i,
-            orientation: h.y.HORIZONTAL_LEFT
+            orientation: h.y.HORIZONTAL_LEFT,
+            throttleDuration: 16
         });
     return (0, r.jsx)('div', {
         onMouseDown: a,
