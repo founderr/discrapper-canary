@@ -15779,8 +15779,8 @@ span.clanTag_a31c43 {
 .icon_b01a4f {
     position: absolute;
     padding: var(--spacing-4);
-    bottom: -6px;
-    right: -6px;
+    bottom: -8px;
+    right: -8px;
     background-color: var(--bg-surface-raised);
     border-radius: var(--radius-round)
 }
