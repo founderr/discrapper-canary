@@ -21505,7 +21505,7 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     align-items: center;
     box-shadow: var(--shadow-low);
     margin: 0 -1px;
-    padding: var(--custom-gif-picker-gutter-size);
+    padding: 12px;
     z-index: 100;
     position: relative;
     grid-column: 1/3
