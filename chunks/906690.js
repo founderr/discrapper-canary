@@ -1,9 +1,9 @@
 n.d(t, {
     JY: function () {
-        return _;
+        return p;
     },
     yl: function () {
-        return m;
+        return g;
     }
 });
 var r = n(704215),
@@ -12,12 +12,13 @@ var r = n(704215),
     s = n(474936),
     o = n(981631),
     l = n(388032),
-    u = n(955604),
-    c = n(865338),
-    d = n(692557),
-    f = n(430502);
-let _ = 1,
-    p = [
+    u = n(663211),
+    c = n(955604),
+    d = n(865338),
+    f = n(692557),
+    _ = n(430502);
+let p = 1,
+    h = [
         {
             skuId: '1301993378484850769',
             assetId: 'a_b1da12c72766c550c1759bf5c9dc6c7a'
@@ -31,18 +32,19 @@ let _ = 1,
             assetId: 'a_65cce62b814c5d0c17ee2be00e5f2f77'
         }
     ];
-function h(e, t) {
-    return t ? (e ? d.Z : f.Z) : e ? u.Z : c.Z;
+function m(e, t) {
+    return t ? (e ? f.Z : _.Z) : e ? c.Z : d.Z;
 }
-let m = {
-    dismissibleContentVersion: _,
-    rewards: p,
-    rewardAssetIdMap: (0, a.YV)(p),
+let g = {
+    dismissibleContentVersion: p,
+    rewards: h,
+    rewardAssetIdMap: (0, a.YV)(h),
     eligiblePlanIds: [s.Xh.PREMIUM_YEAR_TIER_2, s.Xh.PREMIUM_MONTH_TIER_2],
     chatIconAnimationData: () => n(485542),
     firstTimeNotice: {
         dismissibleContent: r.z.GIFTING_PROMOTION_MOBILE_FIRST_TIME_HALFSHEET,
-        getImageUrl: h,
+        getImageUrl: (e, t) => u.Z,
+        coachmarkAnimationData: [() => n.e('2196').then(n.bind(n, 927928))],
         title: () => l.intl.string(l.t.Ann2VF),
         description: () => l.intl.string(l.t.MVYCGB),
         cta: () => l.intl.string(l.t.RzWDqa),
@@ -51,7 +53,7 @@ let m = {
     },
     reminderNotice: {
         dismissibleContent: r.z.GIFTING_PROMOTION_REMINDER,
-        getImageUrl: h,
+        getImageUrl: m,
         title: () => l.intl.string(l.t.MzahXV),
         description: () => l.intl.formatToPlainString(l.t.Ls1ZSU, {}),
         cta: () => l.intl.string(l.t.RzWDqa),
@@ -68,6 +70,6 @@ let m = {
         heading: () => l.intl.string(l.t['FNVJ4+']),
         subheading: (e) => l.intl.formatToPlainString(l.t.IKZTRE, { optionCount: e }),
         gradient: ['#F6CFC6', '#008D4B'],
-        getImageUrl: h
+        getImageUrl: m
     }
 };

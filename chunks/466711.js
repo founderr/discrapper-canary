@@ -3,13 +3,13 @@ var r = n(200651),
     i = n(192379),
     a = n(442837),
     s = n(704215),
-    o = n(845538),
-    l = n(100527),
-    u = n(906732),
-    c = n(644916),
-    d = n(243778),
-    f = n(963249),
-    _ = n(906690),
+    o = n(100527),
+    l = n(906732),
+    u = n(644916),
+    c = n(243778),
+    d = n(963249),
+    f = n(906690),
+    _ = n(802408),
     p = n(685311),
     h = n(819640),
     m = n(594174),
@@ -25,29 +25,29 @@ var r = n(200651),
 let N = g.Z.Millis.DAYS_30;
 function C(e) {
     let { giftingPromotionVersion: t, hovered: n } = e;
-    if (t === _.JY) return (0, r.jsx)(p.Z, { hovered: n });
+    if (t === f.JY) return (0, r.jsx)(p.Z, { hovered: n });
     return null;
 }
 t.Z = i.memo(function (e) {
-    let { giftingPromotionConfig: t, disabled: n, channel: _ } = e,
-        { analyticsLocations: p } = (0, u.ZP)(l.Z.GIFT_BUTTON),
+    let { giftingPromotionConfig: t, disabled: n, channel: f } = e,
+        { analyticsLocations: p } = (0, l.ZP)(o.Z.GIFT_BUTTON),
         [g, R] = i.useState(!1),
         O = (0, a.e7)([h.Z], () => !(null === h.Z || void 0 === h.Z ? void 0 : h.Z.hasLayers())),
         D = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
         L = null != D ? E.default.age(D.id) : 0,
-        [x, w] = (0, d.XR)(!n && O && L >= N ? s.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, (0, c.t)(s.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK)),
-        P = null != x,
-        M = (0, v.Ft)(_),
-        k = null != M;
+        x = null != t.firstTimeNotice && !n && O && L >= N,
+        [w, P] = (0, c.XR)(x ? s.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, (0, u.t)(s.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK)),
+        M = null != w,
+        k = (0, v.Ft)(f);
     if (n) return null;
     let U = () => {
-        (0, f.Z)({
+        (0, d.Z)({
             isGift: !0,
-            giftRecipient: null == M ? void 0 : M,
+            giftRecipient: null == k ? void 0 : k,
             initialPlanId: null,
             analyticsLocations: p,
             analyticsObject: {
-                page: _.isPrivate() ? T.ZY5.DM_CHANNEL : T.ZY5.GUILD_CHANNEL,
+                page: f.isPrivate() ? T.ZY5.DM_CHANNEL : T.ZY5.GUILD_CHANNEL,
                 section: T.jXE.CHANNEL_TEXT_AREA,
                 object: T.qAy.SEASONAL_BUTTON_ICON,
                 objectType: T.Qqv.GIFT
@@ -63,25 +63,26 @@ t.Z = i.memo(function (e) {
             R(!1);
         },
         children: [
-            P &&
-                (0, r.jsx)(o.Z, {
+            null != t.firstTimeNotice &&
+                M &&
+                (0, r.jsx)(_.Z, {
                     onComplete: () => R(!1),
-                    onDMCheckItOutClick: U,
-                    markAsDismissed: w,
-                    isDM: k
+                    onCheckItOutClick: U,
+                    markAsDismissed: P,
+                    config: t.firstTimeNotice
                 }),
             (0, r.jsx)(I.Z, {
                 innerClassName: A.button,
                 'aria-label': S.intl.string(S.t.Z1RnTk),
                 isActive: !1,
                 onClick: () => {
-                    R(!1), w(b.L.TAKE_ACTION), U();
+                    R(!1), P(b.L.TAKE_ACTION), U();
                 },
                 children: (0, r.jsx)('div', {
                     className: y.giftIconContainer,
                     children: (0, r.jsx)(C, {
                         giftingPromotionVersion: t.dismissibleContentVersion,
-                        hovered: g || P
+                        hovered: g || M
                     })
                 })
             })
