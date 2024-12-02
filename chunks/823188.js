@@ -60,7 +60,7 @@ var f = n(120356),
     x = n(357355),
     w = n(140465),
     P = n(650032),
-    M = n(515593),
+    M = n(33052),
     k = n(104494),
     U = n(639119),
     B = n(230916),
@@ -495,7 +495,7 @@ function en(e) {
 }
 function er(e) {
     var t;
-    let { showWumpus: n, ctaButton: r, showYearlyPrice: i, featureSet: a = 0, className: s, isGift: o = !1, isModal: l = !1, priceOptions: u, showHalloweenGift: c = !1 } = e,
+    let { showWumpus: n, ctaButton: r, showYearlyPrice: i, featureSet: a = 0, className: s, isGift: o = !1, isModal: l = !1, priceOptions: u, showPromotionalGiftBanner: c = !1 } = e,
         f = (0, m.e7)([N.ZP], () => N.ZP.getPremiumTypeSubscription()),
         p = (0, m.e7)([A.default], () => A.default.getCurrentUser()),
         h = (0, U.N)(),
@@ -518,7 +518,7 @@ function er(e) {
         className: _()(W.card, W.tier2, s, {
             [W.withTier2Rim]: D,
             [W.withCardHover]: D,
-            [W.withHalloweenTier2]: c
+            [W.withPromotionalGradientBanner]: c
         }),
         children: [
             !o && null != S && (0, k.Wp)(S, j.Si.TIER_2) && void 0 !== S.discount.amount
@@ -618,22 +618,7 @@ function er(e) {
             }),
             r,
             o || (g !== j.Si.TIER_2 && null == S) ? null : (0, d.jsx)(F.t, { tier: j.p9.TIER_2 }),
-            c
-                ? (0, d.jsxs)('div', {
-                      className: W.halloweenGiftMessage,
-                      children: [
-                          (0, d.jsx)(v.Text, {
-                              className: W.halloweenGiftMessageText,
-                              variant: 'text-md/medium',
-                              children: Y.intl.string(Y.t.J88y6O)
-                          }),
-                          (0, d.jsx)('div', {
-                              className: W.halloweenAvatar,
-                              children: (0, d.jsx)(M.Z, { size: v.AvatarSizes.SIZE_80 })
-                          })
-                      ]
-                  })
-                : null
+            c && (0, d.jsx)(M.K, {})
         ]
     });
 }

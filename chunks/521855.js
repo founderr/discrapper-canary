@@ -36,8 +36,5 @@ e.exports = {
     rimGlowTier0: 'rimGlowTier0_c87d73',
     rimGlowTier2: 'rimGlowTier2_c87d73',
     trialHeader: 'trialHeader_c87d73',
-    withHalloweenTier2: 'withHalloweenTier2_c87d73',
-    halloweenGiftMessage: 'halloweenGiftMessage_c87d73',
-    halloweenGiftMessageText: 'halloweenGiftMessageText_c87d73',
-    halloweenAvatar: 'halloweenAvatar_c87d73'
+    withPromotionalGradientBanner: 'withPromotionalGradientBanner_c87d73'
 };
