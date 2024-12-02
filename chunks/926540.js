@@ -17,5 +17,6 @@ e.exports = {
     activity: 'activity_c91bad subtext_c91bad',
     activityText: 'activityText_c91bad',
     activityEmoji: 'activityEmoji_c91bad',
+    mutedEmoji: 'mutedEmoji_c91bad',
     decorator: 'decorator_c91bad'
 };
