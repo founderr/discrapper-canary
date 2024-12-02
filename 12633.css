@@ -23157,6 +23157,18 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     border-bottom: 1px solid var(--background-modifier-accent)
 }
 
+.visual-refresh .list_efd8e6 {
+    background: none
+}
+
+.visual-refresh .wrapper_efd8e6 {
+    background-color: var(--background-base-lowest)
+}
+
+.visual-refresh .builtInSeparator_efd8e6 {
+    border-color: var(--border-subtle)
+}
+
 .outerWrapper_fe2299 {
     border-radius: 5px;
     box-shadow: var(--shadow-border), var(--shadow-high);
@@ -53324,6 +53336,7 @@ html.disable-forced-colors * {
 .visual-refresh.theme-dark,
 .visual-refresh .theme-dark {
     --activity-card-background: var(--neutral-67);
+    --autocomplete-bg: var(--neutral-67);
     --background-floating: var(--neutral-67);
     --background-mentioned: hsl(var(--opacity-yellow-8-hsl) / 0.0784313725490196);
     --background-mentioned-hover: hsl(var(--opacity-yellow-16-hsl) / 0.1607843137254902);
@@ -53444,6 +53457,9 @@ html.disable-forced-colors * {
     .visual-refresh.theme-dark,
     .visual-refresh .theme-dark {
         --activity-card-background: color-mix(in oklab,
+                var(--neutral-67) 100%,
+                var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
+        --autocomplete-bg: color-mix(in oklab,
                 var(--neutral-67) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
         --background-floating: color-mix(in oklab,
@@ -53686,6 +53702,7 @@ html.disable-forced-colors * {
 .visual-refresh.theme-light,
 .visual-refresh .theme-light {
     --activity-card-background: var(--neutral-1);
+    --autocomplete-bg: var(--neutral-1);
     --background-floating: var(--neutral-1);
     --background-mentioned: hsl(var(--opacity-yellow-8-hsl) / 0.0784313725490196);
     --background-mentioned-hover: hsl(var(--opacity-yellow-12-hsl) / 0.12156862745098039);
@@ -53806,6 +53823,9 @@ html.disable-forced-colors * {
     .visual-refresh.theme-light,
     .visual-refresh .theme-light {
         --activity-card-background: color-mix(in oklab,
+                var(--neutral-1) 100%,
+                var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
+        --autocomplete-bg: color-mix(in oklab,
                 var(--neutral-1) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
         --background-floating: color-mix(in oklab,
@@ -54048,6 +54068,7 @@ html.disable-forced-colors * {
 .visual-refresh.theme-midnight,
 .visual-refresh .theme-midnight {
     --activity-card-background: var(--neutral-91);
+    --autocomplete-bg: var(--neutral-91);
     --background-floating: var(--neutral-91);
     --background-mentioned: hsl(var(--opacity-yellow-8-hsl) / 0.0784313725490196);
     --background-mentioned-hover: hsl(var(--opacity-yellow-16-hsl) / 0.1607843137254902);
@@ -54167,6 +54188,9 @@ html.disable-forced-colors * {
     .visual-refresh.theme-midnight,
     .visual-refresh .theme-midnight {
         --activity-card-background: color-mix(in oklab,
+                var(--neutral-91) 100%,
+                var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
+        --autocomplete-bg: color-mix(in oklab,
                 var(--neutral-91) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
         --background-floating: color-mix(in oklab,
@@ -54406,6 +54430,7 @@ html.disable-forced-colors * {
 .visual-refresh.theme-darker,
 .visual-refresh .theme-darker {
     --activity-card-background: var(--neutral-79);
+    --autocomplete-bg: var(--neutral-79);
     --background-floating: var(--neutral-79);
     --background-mentioned: hsl(var(--opacity-yellow-8-hsl) / 0.0784313725490196);
     --background-mentioned-hover: hsl(var(--opacity-yellow-16-hsl) / 0.1607843137254902);
@@ -54525,6 +54550,9 @@ html.disable-forced-colors * {
     .visual-refresh.theme-darker,
     .visual-refresh .theme-darker {
         --activity-card-background: color-mix(in oklab,
+                var(--neutral-79) 100%,
+                var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
+        --autocomplete-bg: color-mix(in oklab,
                 var(--neutral-79) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
         --background-floating: color-mix(in oklab,
@@ -56194,7 +56222,8 @@ img[alt] {
 }
 
 :root {
-    --custom-channel-header-height: 48px
+    --custom-channel-header-height: 48px;
+    --custom-member-list-width: 240px
 }
 
 .visual-refresh {
