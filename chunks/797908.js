@@ -1,135 +1,158 @@
+n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(481060),
-    a = n(783097),
-    s = n(924489),
-    o = n(824606),
-    c = n(66637),
-    d = n(768581),
-    u = n(956965),
-    h = n(388032),
-    m = n(833643);
-let p = 28;
+    l = n(622535),
+    a = n(481060),
+    s = n(783097),
+    o = n(924489),
+    c = n(824606),
+    d = n(66637),
+    u = n(768581),
+    h = n(956965),
+    m = n(388032),
+    p = n(833643);
+let g = 28;
 t.Z = function (e) {
-    var t, n, g, f, _;
-    let { application: I, onSelectApplication: E, showCategory: C = !1 } = e,
-        v = (0, o.Z)({ application: I }),
-        N = null === (t = I.categories) || void 0 === t ? void 0 : t[0],
-        S = (0, a.lf)(I),
-        T = r.useCallback(() => {
-            E(I.id);
-        }, [E, I.id]),
-        x = r.useMemo(
+    var t, n, f, _, E;
+    let { application: I, onSelectApplication: C, showCategory: v = !1 } = e,
+        N = (0, c.Z)({ application: I }),
+        S = null === (t = I.categories) || void 0 === t ? void 0 : t[0],
+        [T, b] = r.useState(!1),
+        x = r.useCallback((e) => {
+            e && b(!0);
+        }, []),
+        A = (0, s.lf)(I),
+        Z = r.useCallback(() => {
+            C(I.id);
+        }, [C, I.id]),
+        L = r.useMemo(
             () =>
-                d.ZP.getApplicationIconURL({
-                    id: I.id,
-                    icon: I.icon,
-                    size: 48
-                }),
-            [I]
+                T
+                    ? u.ZP.getApplicationIconURL({
+                          id: I.id,
+                          icon: I.icon,
+                          size: 48
+                      })
+                    : void 0,
+            [T, I]
         ),
-        b = (null !== (f = null === (n = I.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== f ? f : 0) > 0 || v.length > 0,
-        A = (0, i.jsx)(s.Z, {
+        y = (null !== (_ = null === (n = I.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== _ ? _ : 0) > 0 || N.length > 0,
+        P = (0, i.jsx)(o.Z, {
             application: I,
             textVariant: 'text-xs/medium',
-            mutualGuilds: v,
+            mutualGuilds: N,
             mutualGuildShownMax: 3,
-            guildIconSize: s.x.SMALL,
+            guildIconSize: o.x.SMALL,
             compact: !0
         }),
-        Z = C && null != N;
-    return (0, i.jsx)('div', {
-        className: m.container,
-        children: (0, i.jsxs)(c.Z, {
-            className: m.card,
-            onClick: T,
-            onContextMenu: () => {},
-            children: [
-                (0, i.jsxs)('div', {
-                    className: m.header,
-                    children: [
-                        (0, i.jsx)(u.Z, {
-                            application: I,
-                            bannerType: 'card',
-                            iconURL: x
-                        }),
-                        (0, i.jsx)('div', {
-                            className: m.avatarContainer,
-                            style: { height: p },
-                            children: (0, i.jsx)('img', {
-                                src: x,
-                                alt: '',
-                                className: m.avatar,
-                                height: 48,
-                                width: 48,
+        O = v && null != S;
+    return (0, i.jsx)(l.$, {
+        onChange: x,
+        active: !T,
+        children: (0, i.jsx)('div', {
+            className: p.container,
+            children: (0, i.jsxs)(d.Z, {
+                className: p.card,
+                onClick: Z,
+                onContextMenu: () => {},
+                children: [
+                    (0, i.jsxs)('div', {
+                        className: p.header,
+                        children: [
+                            (0, i.jsx)('div', {
                                 style: {
-                                    borderWidth: 4,
-                                    marginLeft: 12
-                                }
+                                    width: '100%',
+                                    display: 'block',
+                                    aspectRatio: 16 / 9
+                                },
+                                children: T
+                                    ? (0, i.jsx)(h.Z, {
+                                          application: I,
+                                          bannerType: 'card',
+                                          iconURL: L
+                                      })
+                                    : null
+                            }),
+                            (0, i.jsx)('div', {
+                                className: p.avatarContainer,
+                                style: { height: g },
+                                children: T
+                                    ? (0, i.jsx)('img', {
+                                          src: L,
+                                          alt: '',
+                                          className: p.avatar,
+                                          height: 48,
+                                          width: 48,
+                                          style: {
+                                              borderWidth: 4,
+                                              marginLeft: 12
+                                          }
+                                      })
+                                    : null
                             })
-                        })
-                    ]
-                }),
-                (0, i.jsxs)('div', {
-                    className: m.appDetails,
-                    children: [
-                        (0, i.jsx)('div', {
-                            className: m.titleContainer,
-                            children: (0, i.jsx)('div', {
-                                className: m.title,
-                                children: (0, i.jsx)(l.Heading, {
-                                    variant: 'heading-md/semibold',
-                                    color: 'header-primary',
-                                    className: m.appName,
-                                    children: I.name
+                        ]
+                    }),
+                    (0, i.jsxs)('div', {
+                        className: p.appDetails,
+                        children: [
+                            (0, i.jsx)('div', {
+                                className: p.titleContainer,
+                                children: (0, i.jsx)('div', {
+                                    className: p.title,
+                                    children: (0, i.jsx)(a.Heading, {
+                                        variant: 'heading-md/semibold',
+                                        color: 'header-primary',
+                                        className: p.appName,
+                                        children: I.name
+                                    })
                                 })
-                            })
-                        }),
-                        Z || S
-                            ? (0, i.jsxs)('div', {
-                                  className: m.infoContainer,
-                                  children: [
-                                      Z
-                                          ? (0, i.jsx)(l.Text, {
-                                                className: m.appCategory,
-                                                variant: 'text-xs/medium',
-                                                color: 'text-normal',
-                                                children: N.name
-                                            })
-                                          : null,
-                                      Z && S
-                                          ? (0, i.jsx)(l.Text, {
-                                                variant: 'text-xs/medium',
-                                                color: 'text-secondary',
-                                                children: '\u2022'
-                                            })
-                                          : null,
-                                      S
-                                          ? (0, i.jsx)(l.Text, {
-                                                variant: 'text-xs/medium',
-                                                color: 'text-secondary',
-                                                children: h.intl.string(h.t['/eVltr'])
-                                            })
-                                          : null
-                                  ]
-                              })
-                            : null,
-                        (0, i.jsx)(l.Text, {
-                            className: m.description,
-                            variant: 'text-sm/medium',
-                            color: 'header-secondary',
-                            lineClamp: Z || S ? 2 : 3,
-                            children: null !== (_ = null === (g = I.directory_entry) || void 0 === g ? void 0 : g.short_description) && void 0 !== _ ? _ : I.description
-                        }),
-                        b
-                            ? (0, i.jsx)('div', {
-                                  className: m.memberDetails,
-                                  children: A
-                              })
-                            : null
-                    ]
-                })
-            ]
+                            }),
+                            O || A
+                                ? (0, i.jsxs)('div', {
+                                      className: p.infoContainer,
+                                      children: [
+                                          O
+                                              ? (0, i.jsx)(a.Text, {
+                                                    className: p.appCategory,
+                                                    variant: 'text-xs/medium',
+                                                    color: 'text-normal',
+                                                    children: S.name
+                                                })
+                                              : null,
+                                          O && A
+                                              ? (0, i.jsx)(a.Text, {
+                                                    variant: 'text-xs/medium',
+                                                    color: 'text-secondary',
+                                                    children: '\u2022'
+                                                })
+                                              : null,
+                                          A
+                                              ? (0, i.jsx)(a.Text, {
+                                                    variant: 'text-xs/medium',
+                                                    color: 'text-secondary',
+                                                    children: m.intl.string(m.t['/eVltr'])
+                                                })
+                                              : null
+                                      ]
+                                  })
+                                : null,
+                            (0, i.jsx)(a.Text, {
+                                className: p.description,
+                                variant: 'text-sm/medium',
+                                color: 'header-secondary',
+                                lineClamp: O || A ? 2 : 3,
+                                children: null !== (E = null === (f = I.directory_entry) || void 0 === f ? void 0 : f.short_description) && void 0 !== E ? E : I.description
+                            }),
+                            y
+                                ? (0, i.jsx)('div', {
+                                      className: p.memberDetails,
+                                      children: P
+                                  })
+                                : null
+                        ]
+                    })
+                ]
+            })
         })
     });
 };

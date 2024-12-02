@@ -1,12 +1,15 @@
 n.d(t, {
     Cf: function () {
-        return m;
+        return g;
+    },
+    Dq: function () {
+        return h;
     },
     SR: function () {
         return f;
     },
     ZP: function () {
-        return h;
+        return m;
     },
     vM: function () {
         return _;
@@ -67,12 +70,15 @@ async function p(e) {
         }
     }
 }
-function h(e, t) {
-    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        [r] = m(e, t, n);
-    return r;
+function h(e) {
+    return !f((t) => null != e && t.fetching[e]);
 }
 function m(e, t) {
+    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+        [r] = g(e, t, n);
+    return r;
+}
+function g(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         i = f((t) => (null == e ? void 0 : t.palette[e])),
         s = (0, l.e7)([u.Z], () => (n && u.Z.desaturateUserColors ? u.Z.saturation : 1));
