@@ -3,14 +3,16 @@ t.d(n, {
         return a;
     },
     z: function () {
-        return i;
+        return r;
     }
 });
-var r = t(192379);
-let i = (0, r.createContext)({
+var i = t(192379);
+let r = (0, i.createContext)({
     zoomed: !1,
-    setZoomed: () => {}
+    setZoomed: () => {},
+    topBarVisible: !1,
+    setTopBarVisible: () => {}
 });
 function a() {
-    return (0, r.useContext)(i);
+    return (0, i.useContext)(r);
 }

@@ -1,36 +1,39 @@
 n.d(t, {
     Bo: function () {
-        return I;
+        return T;
     },
     Dc: function () {
-        return d;
+        return f;
     },
     OF: function () {
-        return m;
+        return g;
     },
     QB: function () {
-        return v;
+        return I;
     },
     Tj: function () {
         return u;
     },
     XN: function () {
-        return h;
+        return m;
     },
     c0: function () {
-        return b;
+        return S;
     },
     fD: function () {
-        return E;
+        return v;
     },
     kD: function () {
-        return T;
+        return b;
     },
     rn: function () {
-        return f;
+        return _;
     },
     rv: function () {
-        return _;
+        return p;
+    },
+    vV: function () {
+        return d;
     },
     zp: function () {
         return c;
@@ -77,25 +80,32 @@ function c(e, t) {
         maxHeight: n
     });
 }
-function d(e) {
+function d(e, t, n, r) {
+    let i = Math.max(2, null == e || 0 === e || null == t || 0 === t ? 0 : e / n),
+        a = 2;
+    null != n && n * i > 1.3 * window.innerWidth && (a = (1.3 * window.innerWidth) / n);
+    let s = 2;
+    return null != r && r * i > 1.3 * window.innerHeight && (s = (1.3 * window.innerHeight) / r), (i = Math.min(i, a, s));
+}
+function f(e) {
     let { width: t, height: n, maxWidth: r, maxHeight: i } = e,
         a = 1;
     t > r && (a = r / t), (t = Math.round(t * a));
     let s = 1;
     return (n = Math.round(n * a)) > i && (s = i / n), Math.min(a * s, 1);
 }
-function f(e) {
+function _(e) {
     let { width: t, height: n, maxWidth: r, maxHeight: i } = e;
     return t === n ? 1 : Math.min(Math.max(r / t, i / n), 1);
 }
-function _(e) {
+function p(e) {
     return null == e || '' === e ? 'none' : 'url('.concat(e, ')');
 }
-let p = [[0, 0, 0]];
-function h(e, t, n) {
+let h = [[0, 0, 0]];
+function m(e, t, n) {
     let r = document.createElement('canvas'),
         i = r.getContext('2d');
-    if (null == i) return p;
+    if (null == i) return h;
     let a = (r.width = 0 === e.width ? 128 : e.width),
         s = (r.height = 0 === e.height ? 128 : e.height);
     i.drawImage(e, 0, 0, a, s);
@@ -105,10 +115,10 @@ function h(e, t, n) {
             return r;
         })(i.getImageData(0, 0, a, s).data, a * s, n),
         u = l()(o, t);
-    return 'boolean' == typeof u ? p : u.palette();
+    return 'boolean' == typeof u ? h : u.palette();
 }
-let m = (e) => ('number' == typeof e ? null : g(e)),
-    g = s().memoize(
+let g = (e) => ('number' == typeof e ? null : E(e)),
+    E = s().memoize(
         (e) =>
             new Promise((t, n) => {
                 let r = new Image();
@@ -117,12 +127,12 @@ let m = (e) => ('number' == typeof e ? null : g(e)),
                         n(e), (r.onerror = r.onload = null), (r = null);
                     }),
                     (r.onload = () => {
-                        t(h(r, 5, 10)), (r.onerror = r.onload = null), (r = null);
+                        t(m(r, 5, 10)), (r.onerror = r.onload = null), (r = null);
                     }),
                     (r.src = e);
             })
     );
-function E(e) {
+function v(e) {
     return new Promise((t, n) => {
         let r = new FileReader();
         r.readAsDataURL(e),
@@ -132,15 +142,15 @@ function E(e) {
             (r.onerror = (e) => n(e));
     });
 }
-function v(e) {
+function I(e) {
     let t = e.split(';base64,');
     return i()(2 === t.length, 'Input data is not a valid image.'), atob(t[1]).length;
 }
-async function I(e, t, n) {
-    let r = T(e);
+async function T(e, t, n) {
+    let r = b(e);
     return new File([await r.arrayBuffer()], t, { type: n });
 }
-function T(e) {
+function b(e) {
     let t;
     t = e.split(',')[0].indexOf('base64') >= 0 ? atob(e.split(',')[1]) : btoa(e.split(',')[1]);
     let n = e.split(',')[0].split(':')[1].split(';')[0],
@@ -148,7 +158,7 @@ function T(e) {
     for (var i = 0; i < t.length; i++) r[i] = t.charCodeAt(i);
     return new Blob([r], { type: n });
 }
-async function b(e) {
+async function S(e) {
     var t;
     if ('image/png' !== (null === (t = e.type) || void 0 === t ? void 0 : t.split(';')[0])) throw Error('File is not a PNG');
     let n = await e.text(),
