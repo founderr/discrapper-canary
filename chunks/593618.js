@@ -1,9 +1,9 @@
 n.d(t, {
     K: function () {
-        return H;
+        return F;
     },
     Z: function () {
-        return Y;
+        return V;
     }
 }),
     n(390547),
@@ -33,26 +33,23 @@ var r = n(200651),
     A = n(517334),
     N = n(344185),
     C = n(199902),
-    R = n(77498),
-    O = n(984933),
-    D = n(158776),
-    L = n(699516),
-    x = n(9156),
-    w = n(594174),
-    P = n(938475),
-    M = n(510601),
-    k = n(981631),
-    U = n(388032),
-    B = n(782451),
-    G = n(572488);
-function Z(e, t, n) {
+    R = n(984933),
+    O = n(699516),
+    D = n(9156),
+    L = n(594174),
+    x = n(938475),
+    w = n(981631),
+    P = n(388032),
+    M = n(782451),
+    k = n(572488);
+function U(e, t, n) {
     return 0 === t.length
         ? null
         : (0, r.jsxs)('div', {
-              className: B.row,
+              className: M.row,
               children: [
                   (0, r.jsx)(e, {
-                      className: B.activityIcon,
+                      className: M.activityIcon,
                       color: 'currentColor'
                   }),
                   (0, r.jsx)(f.Z, {
@@ -63,21 +60,21 @@ function Z(e, t, n) {
               ]
           });
 }
-function F(e) {
+function B(e) {
     let { muteConfig: t, className: n } = e;
     return (null == t ? void 0 : t.end_time) == null
         ? (0, r.jsx)(c.Text, {
               variant: 'text-xs/normal',
               color: 'text-muted',
               className: n,
-              children: U.intl.string(U.t.fpKdS0)
+              children: P.intl.string(P.t.fpKdS0)
           })
         : (0, r.jsx)(b.Z, {
               muteConfig: t,
               className: n
           });
 }
-function V(e) {
+function G(e) {
     var t, n, a;
     let { guild: o } = e,
         h = o.id,
@@ -86,18 +83,16 @@ function V(e) {
             stageSpeakers: g,
             numStageListeners: E,
             streamUsersToShow: v,
-            embeddedActivitiesUsers: I,
-            gameUsers: T,
-            shouldShowGameBadge: b
+            embeddedActivitiesUsers: I
         } = (function (e) {
             let t = e.id,
                 n = (0, u.Wu)(
-                    [O.ZP, N.Z],
+                    [R.ZP, N.Z],
                     () => {
-                        let e = O.ZP.getChannels(t)
-                            [O.Zb].filter((e) => {
+                        let e = R.ZP.getChannels(t)
+                            [R.Zb].filter((e) => {
                                 let { channel: t } = e;
-                                return t.type === k.d4z.GUILD_VOICE;
+                                return t.type === w.d4z.GUILD_VOICE;
                             })
                             .map((e) => {
                                 let { channel: t } = e;
@@ -109,8 +104,8 @@ function V(e) {
                 ),
                 r = (0, A.ZP)(t),
                 a = i.useMemo(() => r.map((e) => e.id), [r]),
-                s = (0, u.e7)([P.ZP], () => P.ZP.getVoiceStates(t), [t]),
-                o = (0, u.Wu)([L.Z], () => L.Z.getBlockedOrIgnoredIDs()),
+                s = (0, u.e7)([x.ZP], () => x.ZP.getVoiceStates(t), [t]),
+                o = (0, u.Wu)([O.Z], () => O.Z.getBlockedOrIgnoredIDs()),
                 { enabled: c } = (0, p.bA)('guild-tooltip'),
                 f = l().flatMap(n, (t) => {
                     var n;
@@ -148,13 +143,7 @@ function V(e) {
                     },
                     [c, o, t]
                 ),
-                E = (0, u.Wu)([D.Z, R.Z], () => {
-                    let e = f.filter((e) => D.Z.getActivities(e.id, t).some((e) => (null == e ? void 0 : e.application_id) != null && null != R.Z.getDetectableGame(null == e ? void 0 : e.application_id)));
-                    return c ? (0, _.dq)(e, o) : e;
-                }),
-                v = (0, M.kM)('Guild Tooltip', !1),
-                I = v ? E.map((e) => e.id) : [],
-                T = (0, u.Wu)(
+                E = (0, u.Wu)(
                     [d.ZP],
                     () => {
                         let e = d.ZP.getEmbeddedActivitiesForGuild(t).flatMap((e) => Array.from(e.userIds));
@@ -162,45 +151,42 @@ function V(e) {
                     },
                     [t, c, o]
                 ),
-                b = (0, u.Wu)(
-                    [w.default],
+                v = (0, u.Wu)(
+                    [L.default],
                     () => {
-                        let e = T.map((e) => w.default.getUser(e));
+                        let e = E.map((e) => L.default.getUser(e));
                         return c ? (0, _.dq)(e) : e;
                     },
-                    [c, T]
+                    [c, E]
                 ),
-                x = (0, u.Wu)([w.default], () => g.map((e) => w.default.getUser(e)), [g]),
-                U = f.filter((e) => !g.includes(e.id) && !T.includes(e.id) && !I.includes(e.id)),
-                B = c ? (0, _.dq)(U) : U,
-                G = x.filter((e) => null != e && !T.includes(e.id)),
-                Z = h.length > 0 || U.length > 0 || G.length > 0 || b.length > 0;
+                I = (0, u.Wu)([L.default], () => g.map((e) => L.default.getUser(e)), [g]),
+                T = f.filter((e) => !g.includes(e.id) && !E.includes(e.id)),
+                b = c ? (0, _.dq)(T) : T,
+                D = I.filter((e) => null != e && !E.includes(e.id)),
+                P = h.length > 0 || T.length > 0 || D.length > 0 || v.length > 0;
             return {
-                voiceUsersToShow: B,
+                voiceUsersToShow: b,
                 stageSpeakers: h,
                 numStageListeners: m,
-                streamUsersToShow: G,
-                embeddedActivitiesUsers: b,
-                gameUsers: E,
-                shouldShowGameBadge: v,
-                hasActivity: Z
+                streamUsersToShow: D,
+                embeddedActivitiesUsers: v,
+                hasActivity: P
             };
         })(o),
-        U = Z(c.GameControllerIcon, T, h),
-        G = Z(c.VoiceNormalIcon, m, h);
-    let V =
+        T = U(c.VoiceNormalIcon, m, h);
+    let b =
             ((t = h),
             (n = g),
             (a = E),
             0 === n.length
                 ? null
                 : (0, r.jsxs)('div', {
-                      className: B.row,
+                      className: M.row,
                       children: [
                           (0, r.jsx)(c.StageIcon, {
                               size: 'lg',
                               color: 'currentColor',
-                              className: B.activityIcon
+                              className: M.activityIcon
                           }),
                           (0, r.jsx)(f.Z, {
                               guildId: t,
@@ -208,14 +194,14 @@ function V(e) {
                               max: 3
                           }),
                           (0, r.jsxs)('div', {
-                              className: B.stageListenerPill,
+                              className: M.stageListenerPill,
                               children: [
                                   (0, r.jsx)(c.HeadphonesIcon, {
                                       size: 'xs',
                                       color: 'currentColor'
                                   }),
                                   (0, r.jsx)(c.Text, {
-                                      className: B.stageListenerCount,
+                                      className: M.stageListenerCount,
                                       color: 'text-normal',
                                       variant: 'text-xs/normal',
                                       children: a
@@ -224,98 +210,94 @@ function V(e) {
                           })
                       ]
                   })),
-        j = Z(c.ScreenArrowIcon, v, h),
-        H = Z(c.ActivitiesIcon, I, h),
-        { isMuted: Y, muteConfig: W } = (0, u.cj)(
-            [x.ZP],
+        P = U(c.ScreenArrowIcon, v, h),
+        k = U(c.ActivitiesIcon, I, h),
+        { isMuted: G, muteConfig: Z } = (0, u.cj)(
+            [D.ZP],
             () => ({
-                isMuted: x.ZP.isMuted(h),
-                muteConfig: x.ZP.getMuteConfig(h)
+                isMuted: D.ZP.isMuted(h),
+                muteConfig: D.ZP.getMuteConfig(h)
             }),
             [h]
         );
-    return (
-        null != U && M.ZP.trackExposure({ location: 'Guild Tooltip' }),
-        (0, r.jsxs)(r.Fragment, {
-            children: [
-                V,
-                G,
-                j,
-                b && U,
-                H,
-                Y
-                    ? (0, r.jsx)(F, {
-                          muteConfig: W,
-                          className: s()(B.muteText, { [B.muteTextWithActivity]: null != G || null != j })
-                      })
-                    : null
-            ]
-        })
-    );
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            b,
+            T,
+            P,
+            k,
+            G
+                ? (0, r.jsx)(B, {
+                      muteConfig: Z,
+                      className: s()(M.muteText, { [M.muteTextWithActivity]: null != T || null != P })
+                  })
+                : null
+        ]
+    });
 }
-function j(e) {
+function Z(e) {
     let { guildJoinRequestStatus: t } = e;
     return (0, r.jsx)(c.Text, {
-        className: B.viewAsRolesWarning,
+        className: M.viewAsRolesWarning,
         color: 'text-normal',
         variant: 'text-xs/normal',
         children: (function (e) {
             switch (e) {
                 case E.wB.SUBMITTED:
-                    return U.intl.string(U.t['9KFC9/']);
+                    return P.intl.string(P.t['9KFC9/']);
                 case E.wB.REJECTED:
-                    return U.intl.string(U.t['TQY/RU']);
+                    return P.intl.string(P.t['TQY/RU']);
                 case E.wB.APPROVED:
-                    return U.intl.string(U.t.WXHcq6);
+                    return P.intl.string(P.t.WXHcq6);
                 default:
-                    return U.intl.string(U.t.fjHFCw);
+                    return P.intl.string(P.t.fjHFCw);
             }
         })(t)
     });
 }
-function H(e) {
+function F(e) {
     let { guild: t, includeActivity: n = !0 } = e,
         i = (0, h.Z)(t),
         a = (0, v.E)(t),
-        o = null != a ? (0, r.jsx)(j, { guildJoinRequestStatus: a }) : null,
-        l = n ? (0, r.jsx)(V, { guild: t }) : null,
+        o = null != a ? (0, r.jsx)(Z, { guildJoinRequestStatus: a }) : null,
+        l = n ? (0, r.jsx)(G, { guild: t }) : null,
         d = (0, u.e7)([T.Z], () => T.Z.isViewingRoles(t.id)),
         f = (0, I.I)(t);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: s()(B.row, B.rowGuildName),
+                className: s()(M.row, M.rowGuildName),
                 children: [
                     i
                         ? (0, r.jsx)(g.Z, {
                               guild: t,
-                              className: B.rowIconV2
+                              className: M.rowIconV2
                           })
                         : (0, r.jsx)(m.Z, {
                               guild: t,
                               size: 20,
-                              className: B.rowIcon
+                              className: M.rowIcon
                           }),
                     (0, r.jsx)('span', {
-                        className: s()(B.guildNameText, { [B.guildNameTextLimitedSize]: null != l }),
+                        className: s()(M.guildNameText, { [M.guildNameTextLimitedSize]: null != l }),
                         children: t.toString()
                     })
                 ]
             }),
             f
                 ? (0, r.jsx)(c.Text, {
-                      className: B.invitesDisabledTooltip,
+                      className: M.invitesDisabledTooltip,
                       color: 'header-secondary',
                       variant: 'text-sm/medium',
-                      children: U.intl.string(U.t['2n0/Fh'])
+                      children: P.intl.string(P.t['2n0/Fh'])
                   })
                 : null,
             d
                 ? (0, r.jsx)(c.Text, {
-                      className: B.viewAsRolesWarning,
+                      className: M.viewAsRolesWarning,
                       color: 'text-normal',
                       variant: 'text-xs/normal',
-                      children: U.intl.string(U.t['5LwN8/'])
+                      children: P.intl.string(P.t['5LwN8/'])
                   })
                 : null != o
                   ? o
@@ -323,7 +305,7 @@ function H(e) {
         ]
     });
 }
-function Y(e) {
+function V(e) {
     let { guild: t, disabled: n = !1, 'aria-label': a = !1, children: s, includeActivity: o = !0 } = e;
     return (0, r.jsx)(c.Tooltip, {
         hideOnClick: !0,
@@ -331,12 +313,12 @@ function Y(e) {
         position: 'right',
         text: n
             ? null
-            : (0, r.jsx)(H, {
+            : (0, r.jsx)(F, {
                   guild: t,
                   includeActivity: o
               }),
         'aria-label': a,
-        tooltipClassName: G.listItemTooltip,
+        tooltipClassName: k.listItemTooltip,
         children: (e) => {
             let { onFocus: t, onBlur: n, ...a } = e;
             return (0, r.jsx)('div', {
