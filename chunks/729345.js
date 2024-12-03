@@ -20,10 +20,23 @@ async function h(e, t) {
 }
 async function m(e) {
     try {
-        let t = o.Pz(),
-            n = '',
-            i = await (0, c.Z)().then((e) => (0, f.Z)(e, !0)),
-            l = t.length + n.length + i.length;
+        let t, n, i;
+        try {
+            t = o.Pz();
+        } catch (e) {
+            t = 'Logs failed: '.concat(e);
+        }
+        try {
+            n = '';
+        } catch (e) {
+            n = 'System Logs failed '.concat(e);
+        }
+        try {
+            i = await (0, c.Z)().then((e) => (0, f.Z)(e, !0));
+        } catch (e) {
+            i = 'Push logs failed: '.concat(e);
+        }
+        let l = t.length + n.length + i.length;
         if (l > 9437184) {
             let e = 1 - 9437184 / l;
             (t = t.slice(t.length - Math.floor(t.length * e))), (n = n.slice(n.length - Math.floor(n.length * e))), (i = i.slice(i.length - Math.floor(i.length * e)));
