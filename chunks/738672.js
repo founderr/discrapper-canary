@@ -13,12 +13,12 @@ var i = n(200651),
     c = n(937995),
     d = n(618158);
 function u(e) {
-    let { buttonRef: t, dismissed: n, onDismiss: u, renderComponent: h, nudgeAlignIntoViewport: p = !1 } = e,
+    let { buttonRef: t, dismissed: n, onDismiss: u, renderComponent: h, align: p = 'center' } = e,
         m = l.useContext(c.h9),
         [f, g] = l.useState(''),
         [C, x] = l.useState(!1),
-        _ = (0, r.e7)([o.ZP], () => o.ZP.callHeaderHeight),
-        v = l.createRef(),
+        v = (0, r.e7)([o.ZP], () => o.ZP.callHeaderHeight),
+        _ = l.createRef(),
         I = l.useRef(0);
     l.useEffect(() => {
         let e = t.current;
@@ -26,8 +26,8 @@ function u(e) {
     }),
         l.useEffect(() => {
             var e, t;
-            g(String(I.current)), x(void 0 !== _ && _ < (null !== (t = null === (e = v.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 300) + 24), (I.current += 1);
-        }, [_, v]);
+            g(String(I.current)), x(void 0 !== v && v < (null !== (t = null === (e = _.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 300) + 24), (I.current += 1);
+        }, [v, _]);
     let { preventIdle: E, allowIdle: b } = (0, d.Y)('popup');
     return (null == t ? void 0 : t.current) == null
         ? null
@@ -35,13 +35,12 @@ function u(e) {
               children: (0, i.jsx)(a.ReferencePositionLayer, {
                   targetRef: t,
                   position: 'top',
-                  align: 'center',
+                  align: p,
                   spacing: 0,
-                  nudgeAlignIntoViewport: p,
                   positionKey: f,
                   children: () =>
                       (0, i.jsx)('div', {
-                          ref: v,
+                          ref: _,
                           onMouseOver: E,
                           onFocus: E,
                           onBlur: b,
