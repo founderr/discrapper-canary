@@ -21,7 +21,7 @@ function p() {
         t = a.iH.useSetting().includes(e),
         n = s.useCallback(
             (t) => {
-                let n = new Set((0, l.rr)());
+                let n = (0, l.rr)();
                 t ? n.delete(e) : n.add(e), a.iH.updateSetting([...n]);
             },
             [e]

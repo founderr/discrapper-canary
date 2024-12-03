@@ -149,7 +149,7 @@ function _(e) {
         u = c.iH.useSetting().includes(i),
         p = l.useCallback(
             (e) => {
-                let t = new Set((0, m.YK)());
+                let t = (0, m.YK)();
                 e ? t.delete(i) : t.add(i),
                     c.h2.updateSetting(Array.from(t)),
                     d.default.track(h.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
@@ -162,7 +162,7 @@ function _(e) {
         ),
         x = l.useCallback(
             (e) => {
-                let t = new Set((0, m._o)());
+                let t = (0, m._o)();
                 e ? t.delete(i) : t.add(i),
                     c.SE.updateSetting([...t]),
                     d.default.track(h.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
@@ -175,7 +175,7 @@ function _(e) {
         ),
         S = l.useCallback(
             (e) => {
-                let t = new Set((0, m.rr)());
+                let t = (0, m.rr)();
                 e ? t.delete(i) : t.add(i),
                     c.iH.updateSetting([...t]),
                     d.default.track(h.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
@@ -188,7 +188,7 @@ function _(e) {
         ),
         E = l.useCallback(
             (e) => {
-                let t = new Set((0, m.gl)());
+                let t = (0, m.gl)();
                 e ? t.delete(i) : t.add(i),
                     c.zA.updateSetting(Array.from(t)),
                     d.default.track(h.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {

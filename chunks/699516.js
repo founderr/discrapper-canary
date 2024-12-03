@@ -28,7 +28,7 @@ let g = {},
 function O() {
     N = Object.values(g).length;
     let { [m.OGo.PENDING_INCOMING]: e = 0, [m.OGo.PENDING_OUTGOING]: t = 0, [m.OGo.FRIEND]: n = 0 } = l().countBy(Object.values(g), (e) => e);
-    (y = t), (A = n), (C = I.size), (R = b.size), (S = e - C - R);
+    (y = t), (A = n), (C = I.size), (R = b.size), (S = Math.max(e - C - R, 0));
 }
 class D extends (r = u.ZP.Store) {
     initialize() {

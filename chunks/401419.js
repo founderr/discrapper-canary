@@ -1,4 +1,4 @@
-t.d(l, {
+l.d(t, {
     Z: function () {
         return c;
     },
@@ -6,24 +6,24 @@ t.d(l, {
         return m;
     }
 });
-var n = t(200651);
-t(192379);
-var i = t(120356),
-    r = t.n(i),
-    a = t(729594),
-    s = t(388032),
-    o = t(112197);
+var n = l(200651);
+l(192379);
+var i = l(120356),
+    r = l.n(i),
+    a = l(729594),
+    s = l(388032),
+    o = l(112197);
 let d = ['sessionshare.sp-int.playstation.com', 'session-share.playstation.com'],
-    u = (e, l, t) => 'https://'.concat(e, '/embed/').concat(l, '?locale=').concat(t),
+    u = (e, t, l) => 'https://'.concat(e, '/embed/').concat(t, '?locale=').concat(l),
     m = ['PlayStation'],
-    h = (e, l) => {
-        let { host: t, pathname: n } = l,
+    h = (e, t) => {
+        let { host: l, pathname: n } = t,
             i = [];
         switch ((null != n && (i = n.split('/')), e)) {
             case 'PlayStation':
-                if (null == t || !d.includes(t) || 2 !== i.length) break;
+                if (null == l || !d.includes(l) || 2 !== i.length) break;
                 return {
-                    embedUrl: u(t, i[1], s.intl.currentLocale),
+                    embedUrl: u(l, i[1], s.intl.currentLocale),
                     style: {
                         width: 400,
                         height: 300,
@@ -34,13 +34,13 @@ let d = ['sessionshare.sp-int.playstation.com', 'session-share.playstation.com']
         return null;
     };
 function c(e) {
-    var l;
-    let t = e.embed.url,
-        i = null === (l = e.embed.provider) || void 0 === l ? void 0 : l.name;
-    if (null == t || null == i) return null;
+    var t;
+    let l = e.embed.url,
+        i = null === (t = e.embed.provider) || void 0 === t ? void 0 : t.name;
+    if (null == l || null == i) return null;
     let s = null;
     try {
-        s = a.parse(t, !0);
+        s = a.parse(l, !0);
     } catch (e) {
         return null;
     }

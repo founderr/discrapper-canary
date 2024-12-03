@@ -4,65 +4,65 @@ var i,
     r,
     u = n(979079),
     _ = n.n(u),
-    o = n(442837),
-    E = n(570140),
+    E = n(442837),
+    o = n(570140),
     s = n(531441),
     c = n(800530);
-let S = {},
-    A = {},
+let A = {},
+    S = {},
     d = { state: s.Sn.ALL_GOOD },
     T = !1,
-    p = !1,
-    f = null,
-    I = null,
-    U = !1,
+    f = !1,
+    p = null,
+    U = null,
     g = !1,
-    F = [],
+    F = !1,
+    I = [],
     C = !1,
     b = null,
     R = c.bK.DIDNT_VIOLATE_POLICY,
     H = '',
-    h = '',
-    N = '',
-    y = null,
-    B = !1;
-function Y(e) {
+    D = '',
+    L = '',
+    h = null,
+    N = !1;
+function y(e) {
     let {} = e;
-    (N = ''), (y = null), (B = !1);
+    (L = ''), (h = null), (N = !1);
 }
-class O extends (r = o.ZP.Store) {
+class B extends (r = E.ZP.Store) {
     isFetching() {
         return T;
     }
     getClassifications() {
-        return Object.values(S);
+        return Object.values(A);
     }
     getClassification(e) {
-        return S[e];
+        return A[e];
     }
     getAccountStanding() {
         return d;
     }
     getFetchError() {
-        return f;
-    }
-    isInitialized() {
         return p;
     }
+    isInitialized() {
+        return f;
+    }
     getClassificationRequestState(e) {
-        return A[e];
+        return S[e];
     }
     getAppealClassificationId() {
-        return I;
-    }
-    getIsDsaEligible() {
         return U;
     }
-    getIsAppealEligible() {
+    getIsDsaEligible() {
         return g;
     }
-    getAppealEligibility() {
+    getIsAppealEligible() {
         return F;
+    }
+    getAppealEligibility() {
+        return I;
     }
     getAppealSignal() {
         return R;
@@ -77,20 +77,20 @@ class O extends (r = o.ZP.Store) {
         return b;
     }
     getUsername() {
-        return h;
+        return D;
     }
     getAgeVerificationWebviewUrl() {
-        return N;
+        return L;
     }
     getAgeVerificationError() {
-        return y;
+        return h;
     }
     getIsLoadingAgeVerification() {
-        return B;
+        return N;
     }
 }
 (a = 'SafetyHubStore'),
-    (l = 'displayName') in (i = O)
+    (l = 'displayName') in (i = B)
         ? Object.defineProperty(i, l, {
               value: a,
               enumerable: !0,
@@ -98,35 +98,35 @@ class O extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[l] = a),
-    (t.Z = new O(E.Z, {
+    (t.Z = new B(o.Z, {
         SAFETY_HUB_FETCH_START: function (e) {
             T = !0;
         },
         SAFETY_HUB_FETCH_SUCCESS: function (e) {
             let { classifications: t, accountStanding: n, isDsaEligible: i, isAppealEligible: l, username: a, appealEligibility: r } = e;
-            (S = _()(t, 'id')), (d = n), (U = i), (g = l), (T = !1), (p = !0), (f = null), (h = a), (F = r);
+            (A = _()(t, 'id')), (d = n), (g = i), (F = l), (T = !1), (f = !0), (p = null), (D = a), (I = r);
         },
         SAFETY_HUB_FETCH_FAILURE: function (e) {
             let { error: t } = e;
-            (T = !1), (p = !1), (f = t);
+            (T = !1), (f = !1), (p = t);
         },
         SAFETY_HUB_FETCH_CLASSIFICATION_START: function (e) {
-            (A[e.classificationId] = s.OY.PENDING), (T = !0);
+            (S[e.classificationId] = s.OY.PENDING), (T = !0);
         },
         SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS: function (e) {
             let { classification: t, accountStanding: n, isDsaEligible: i, username: l, isAppealEligible: a } = e;
-            (S[t.id] = t), (A[t.id] = s.OY.SUCCESS), (d = n), (T = !1), (f = null), (U = i), (g = a), (p = !0), (h = l);
+            (A[t.id] = t), (S[t.id] = s.OY.SUCCESS), (d = n), (T = !1), (p = null), (g = i), (F = a), (f = !0), (D = l);
         },
         SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function (e) {
             let { error: t, classificationId: n } = e;
-            (T = !1), (f = t), (A[n] = s.OY.FAILED), (p = !1);
+            (T = !1), (p = t), (S[n] = s.OY.FAILED), (f = !1);
         },
         SAFETY_HUB_APPEAL_OPEN: function (e) {
             let { classificationId: t } = e;
-            I = t;
+            U = t;
         },
         SAFETY_HUB_APPEAL_CLOSE: function () {
-            (I = null), (R = c.bK.DIDNT_VIOLATE_POLICY), (H = '');
+            (U = null), (R = c.bK.DIDNT_VIOLATE_POLICY), (H = '');
         },
         SAFETY_HUB_APPEAL_SIGNAL_SELECT: function (e) {
             let { signal: t } = e;
@@ -142,27 +142,27 @@ class O extends (r = o.ZP.Store) {
         },
         SAFETY_HUB_REQUEST_REVIEW_SUCCESS: function (e) {
             let { classificationId: t } = e;
-            (C = !1), (b = null), (S[t].appeal_status = { status: s.hQ.REVIEW_PENDING });
+            (C = !1), (b = null), (A[t].appeal_status = { status: s.hQ.REVIEW_PENDING });
         },
         SAFETY_HUB_REQUEST_REVIEW_FAILURE: function (e) {
             let { error: t } = e;
             (C = !1), (b = t);
         },
-        SAFETY_HUB_REQUEST_AGE_VERIFICATION_START: function (e) {
+        SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_START: function (e) {
             let {} = e;
-            (N = ''), (y = null), (B = !0);
+            (L = ''), (h = null), (N = !0);
         },
-        SAFETY_HUB_REQUEST_AGE_VERIFICATION_SUCCESS: function (e) {
+        SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_SUCCESS: function (e) {
             let { verificationWebviewUrl: t } = e;
-            (N = t), (y = null), (B = !1);
+            (L = t), (h = null), (N = !1);
         },
-        SAFETY_HUB_REQUEST_AGE_VERIFICATION_FAILURE: function (e) {
+        SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_FAILURE: function (e) {
             let { error: t } = e;
-            (N = ''), (y = t), (B = !1);
+            (L = ''), (h = t), (N = !1);
         },
-        SAFETY_HUB_REQUEST_AGE_VERIFICATION_MODAL_OPEN: Y,
-        SAFETY_HUB_REQUEST_AGE_VERIFICATION_MODAL_CLOSE: Y,
+        SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN: y,
+        SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE: y,
         LOGOUT: function () {
-            (T = !1), (S = {}), (d = { state: s.Sn.ALL_GOOD }), (I = null), (R = c.bK.DIDNT_VIOLATE_POLICY), (H = ''), (F = []);
+            (T = !1), (A = {}), (d = { state: s.Sn.ALL_GOOD }), (U = null), (R = c.bK.DIDNT_VIOLATE_POLICY), (H = ''), (I = []);
         }
     }));

@@ -27,7 +27,7 @@ function E() {
         E = d.iG.useSetting(),
         _ = s.useCallback(
             (t) => {
-                let n = new Set((0, c.YK)());
+                let n = (0, c.YK)();
                 t ? n.delete(e) : n.add(e), d.h2.updateSetting(Array.from(n));
             },
             [e]

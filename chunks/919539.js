@@ -31,7 +31,7 @@ function C() {
         f = u.zA.useSetting().includes(e),
         N = s.useCallback(
             (t) => {
-                let n = new Set((0, d.gl)());
+                let n = (0, d.gl)();
                 t ? n.delete(e) : n.add(e), u.zA.updateSetting(Array.from(n));
             },
             [e]

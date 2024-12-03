@@ -22,16 +22,16 @@ var n = t(200651),
     g = t(884182),
     v = t(25015),
     _ = t(963550),
-    E = t(845080),
-    j = t(594174),
-    A = t(956664),
+    A = t(845080),
+    E = t(594174),
+    j = t(956664),
     C = t(709054),
     N = t(236289),
     T = t(788080),
     y = t(800530),
     I = t(981631),
-    S = t(217702),
-    L = t(453486);
+    L = t(217702),
+    S = t(453486);
 let w = (e, i, t, n) => {
         let a = e.attachments.map((e) => {
             var t, n, a, l;
@@ -77,7 +77,7 @@ let w = (e, i, t, n) => {
                 let a = y.Sv,
                     o = y.EY;
                 if (null != i.width && null != i.height) {
-                    let e = (0, A.Dc)({
+                    let e = (0, j.Dc)({
                         width: i.width,
                         height: i.height,
                         maxWidth: y.Sv,
@@ -120,7 +120,7 @@ let w = (e, i, t, n) => {
             return (0, d.dn)(e.originalItem, i);
         }
         return (0, n.jsx)('div', {
-            className: L.classificationEvidenceMessageAttachment,
+            className: S.classificationEvidenceMessageAttachment,
             children: (0, n.jsx)(g.Z, {
                 items: t.map((e) => ({
                     item: {
@@ -134,7 +134,7 @@ let w = (e, i, t, n) => {
                         contentType: e.content_type
                     },
                     message: i,
-                    mediaLayoutType: S.hV.MOSAIC,
+                    mediaLayoutType: L.hV.MOSAIC,
                     autoPlayGif: !1,
                     canRemoveItem: !1,
                     isSingleMosaicItem: o,
@@ -160,7 +160,7 @@ let w = (e, i, t, n) => {
 function P(e) {
     var i;
     let { flaggedContent: t } = e,
-        l = (0, o.e7)([j.default], () => j.default.getCurrentUser()),
+        l = (0, o.e7)([E.default], () => E.default.getCurrentUser()),
         [r, d] = a.useState({}),
         [u, m] = a.useState(!0),
         h = (0, o.e7)([N.Z], () => N.Z.getUsername()),
@@ -223,12 +223,12 @@ function P(e) {
     '' === f.content && 0 === f.attachments.length)
         ? null
         : (0, n.jsx)('div', {
-              className: L.classificationEvidenceCard,
+              className: S.classificationEvidenceCard,
               children: u
                   ? (0, n.jsx)(s.Spinner, {})
                   : (0, n.jsx)(p.Z, {
                         compact: !1,
-                        childrenHeader: (0, E.Z)({
+                        childrenHeader: (0, A.Z)({
                             author: {
                                 ...l,
                                 colorString: '',

@@ -1,27 +1,27 @@
-t.d(l, {
+l.d(t, {
     Z: function () {
         return u;
     }
 }),
-    t(757143);
-var n = t(200651);
-t(192379);
-var i = t(120356),
-    r = t.n(i),
-    a = t(729594),
-    s = t(785992),
-    o = t(616922),
-    d = t(340702);
+    l(757143);
+var n = l(200651);
+l(192379);
+var i = l(120356),
+    r = l.n(i),
+    a = l(729594),
+    s = l(785992),
+    o = l(616922),
+    d = l(340702);
 function u(e) {
     let {
-        className: l,
-        embed: { url: t }
+        className: t,
+        embed: { url: l }
     } = e;
-    if (null == t) return null;
+    if (null == l) return null;
     let i = null,
         u = null;
     try {
-        let e = a.parse(t.replace(/intl-[^/]+\//, ''), !0);
+        let e = a.parse(l.replace(/intl-[^/]+\//, ''), !0);
         (i = e.host), (u = e.pathname);
     } catch (e) {
         return null;
@@ -37,7 +37,7 @@ function u(e) {
     return (
         'track' === h ? (b = 80) : ('episode' === h || 'show' === h) && (b = 232),
         (0, n.jsx)('iframe', {
-            className: r()(d.embedSpotify, l),
+            className: r()(d.embedSpotify, t),
             src: o.C7.EMBED(u),
             style: {
                 width: 400,

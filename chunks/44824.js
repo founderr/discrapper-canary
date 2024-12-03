@@ -1,16 +1,16 @@
-t.d(l, {
+l.d(t, {
     Z: function () {
         return u;
     }
 });
-var n = t(200651),
-    i = t(192379),
-    r = t(70097),
-    a = t(947849),
-    s = t(981631),
-    o = t(388032);
+var n = l(200651),
+    i = l(192379),
+    r = l(70097),
+    a = l(947849),
+    s = l(981631),
+    o = l(388032);
 function d(e) {
-    let { poster: l, src: t, width: a, height: o, naturalWidth: d, naturalHeight: u, play: m = !0, className: h, alt: c, responsive: p } = e,
+    let { poster: t, src: l, width: a, height: o, naturalWidth: d, naturalHeight: u, play: m = !0, className: h, alt: c, responsive: p } = e,
         b = i.useRef(null);
     return (i.useEffect(() => {
         let { current: e } = b;
@@ -20,8 +20,8 @@ function d(e) {
         ? (0, n.jsx)(r.Z, {
               ref: b,
               className: h,
-              poster: l,
-              src: t,
+              poster: t,
+              src: l,
               width: a,
               height: o,
               responsive: p,
@@ -33,33 +33,33 @@ function d(e) {
           })
         : (0, n.jsx)('img', {
               alt: '',
-              src: l,
+              src: t,
               width: a,
               height: o
           });
 }
 function u(e) {
-    let { src: l, poster: t, naturalWidth: i, naturalHeight: r, responsive: s, autoPlay: u, className: m, playable: h = !0, renderImageComponent: c, alt: p = o.intl.string(o.t.I5gL2N), sourceMetadata: b, ...g } = e;
+    let { src: t, poster: l, naturalWidth: i, naturalHeight: r, responsive: s, autoPlay: u, className: m, playable: h = !0, renderImageComponent: c, alt: p = o.intl.string(o.t.I5gL2N), sourceMetadata: b, ...g } = e;
     return (0, n.jsx)(a.h.Consumer, {
         children: (e) =>
             c({
                 ...g,
                 alt: p,
-                src: t,
+                src: l,
                 containerClassName: m,
                 autoPlay: u,
                 animated: h,
                 responsive: s,
                 renderAccessory: e,
                 tabIndex: h ? 0 : -1,
-                dataSafeSrc: l,
+                dataSafeSrc: t,
                 children(e) {
-                    let { src: t, size: a, animating: o, alt: u } = e;
+                    let { src: l, size: a, animating: o, alt: u } = e;
                     return (0, n.jsx)(d, {
                         alt: u,
                         className: m,
-                        poster: t,
-                        src: l,
+                        poster: l,
+                        src: t,
                         width: a.width,
                         height: a.height,
                         naturalWidth: i,

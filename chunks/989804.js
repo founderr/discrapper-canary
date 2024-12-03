@@ -44,8 +44,8 @@ let E = i.forwardRef(function () {
         }),
         I = (0, u.Z)(n),
         W = (0, u.Z)(E),
-        P = (0, p.Z7)(),
-        { analyticsLocations: v } = (0, g.ZP)(d.Z.USER_SETTINGS);
+        w = (0, p.Z7)(),
+        { analyticsLocations: P } = (0, g.ZP)(d.Z.USER_SETTINGS);
     i.useEffect(() => {
         if (!!(null != n && (n !== I || E !== W)))
             !(function (e) {
@@ -65,22 +65,22 @@ let E = i.forwardRef(function () {
                 source: R,
                 subsection: E,
                 locationStack: U,
-                searchQuery: '' !== P ? P : null
+                searchQuery: '' !== w ? w : null
             });
-    }, [n, I, E, W, R, U, P]);
-    let G = (0, h.eA)({ location: 'user_settings' }),
-        { hasSearchResults: M, searchResults: H } = (0, Z.E)(),
-        w = i.useMemo(() => G && M, [G, M]),
+    }, [n, I, E, W, R, U, w]);
+    let v = (0, h.eA)({ location: 'user_settings' }),
+        { hasSearchResults: G, searchResults: M } = (0, Z.E)(),
+        H = i.useMemo(() => v && G, [v, G]),
         D = (0, B.VO)(),
-        A = (0, B.q8)(H),
-        O = i.useMemo(() => (w ? A : D), [w, A, D]),
+        A = (0, B.q8)(M),
+        O = i.useMemo(() => (H ? A : D), [H, A, D]),
         y = (0, m.b)(),
         L = (0, S.iO)(),
         N = i.useCallback((e) => {
             r.Z.setSection(e);
         }, []);
     return (0, o.jsx)(g.Gt, {
-        value: v,
+        value: P,
         children: (0, o.jsx)(l.Z, {
             root: !0,
             page: T.ZY5.USER_SETTINGS,
@@ -94,7 +94,7 @@ let E = i.forwardRef(function () {
                 sections: O,
                 isEligibleForPomelo: y,
                 questsForBadge: L,
-                isUserSettingsSearchEnabled: G
+                isUserSettingsSearchEnabled: v
             })
         })
     });

@@ -15,9 +15,9 @@ var n = t(200651),
     g = t(613734),
     v = t(846488),
     _ = t(384725),
-    E = t(853178),
-    j = t(97568),
-    A = t(800530),
+    A = t(853178),
+    E = t(97568),
+    j = t(800530),
     C = t(981631),
     N = t(388032),
     T = t(729779);
@@ -65,7 +65,7 @@ let y = (e) => {
                       (0, n.jsxs)('ul', {
                           className: T.classificationActionsTakenList,
                           children: [
-                              i.map((e) => (0, n.jsx)(S, { action: e }, e.id)),
+                              i.map((e) => (0, n.jsx)(L, { action: e }, e.id)),
                               null != t
                                   ? (0, n.jsx)(
                                         'li',
@@ -86,7 +86,7 @@ let y = (e) => {
                   ]
               });
     },
-    S = (e) => {
+    L = (e) => {
         let { action: i } = e;
         return (0, n.jsx)(n.Fragment, {
             children: i.descriptions.map((e, i) =>
@@ -106,7 +106,7 @@ let y = (e) => {
             )
         });
     },
-    L = (e) => {
+    S = (e) => {
         let { classificationTypeText: i, policyExplainerLink: t } = e;
         return (0, n.jsxs)(s.Anchor, {
             href: t,
@@ -166,12 +166,12 @@ let y = (e) => {
             children: e.hasBeenAppealed
                 ? (0, n.jsx)(w, {})
                 : (0, n.jsx)(k, {
-                      appealLink: A.sQ.APPEALS_LINK,
+                      appealLink: j.sQ.APPEALS_LINK,
                       letUsKnowClick: e.onLetUsKnowClick,
                       isAppealEligible: e.isAppealEligible
                   })
         }),
-    Z = (e) => {
+    U = (e) => {
         let { tosLink: i, communityGuidelinesLink: t, classificationTypeText: a, policyExplainerLink: l, appealComponent: o } = e;
         return (0, n.jsxs)('div', {
             className: T.classificationActionExplanationContainer,
@@ -189,7 +189,7 @@ let y = (e) => {
                         communityGuidelinesLink: t
                     })
                 }),
-                (0, n.jsx)(L, {
+                (0, n.jsx)(S, {
                     classificationTypeText: a,
                     policyExplainerLink: l
                 }),
@@ -200,23 +200,23 @@ let y = (e) => {
 i.Z = (e) => {
     var i;
     let { classificationId: t, source: o, onError: s } = e,
-        { classification: d, classificationRequestState: m, isAppealEligible: N, isDsaEligible: S, violationType: L } = (0, g.YG)(t),
+        { classification: d, classificationRequestState: m, isAppealEligible: N, isDsaEligible: L, violationType: S } = (0, g.YG)(t),
         w = (0, r.e7)([p.Z], () => p.Z.getAppealEligibility()),
         k = (0, f.P)(),
-        U = null != d && null != d.flagged_content && d.flagged_content.length > 0,
-        O = (0, v.e)();
+        Z = null != d && null != d.flagged_content && d.flagged_content.length > 0,
+        M = (0, v.e)();
     return (a.useEffect(() => {
-        O &&
+        M &&
             u.default.track(C.rMx.SAFETY_HUB_ACTION, {
-                action: A.n0.ViewViolationDetail,
+                action: j.n0.ViewViolationDetail,
                 account_standing: k.state,
                 classification_ids: [Number(t)],
                 source: o,
-                is_violative_content_shown: U,
-                is_dsa_eligible: S,
-                violation_type: L
+                is_violative_content_shown: Z,
+                is_dsa_eligible: L,
+                violation_type: S
             });
-    }, [O]),
+    }, [M]),
     null == d && m === h.OY.FAILED)
         ? (s(), null)
         : null == d
@@ -228,29 +228,29 @@ i.Z = (e) => {
                         classificationTypeText: d.description,
                         guildMetadata: null == d ? void 0 : d.guild_metadata
                     }),
-                    (0, n.jsx)(j.s, { flaggedContent: null !== (i = d.flagged_content) && void 0 !== i ? i : [] }),
+                    (0, n.jsx)(E.s, { flaggedContent: null !== (i = d.flagged_content) && void 0 !== i ? i : [] }),
                     (0, n.jsx)(I, {
                         actions: d.actions,
                         classificationExpiration: (0, x.Pu)(d)
                     }),
-                    (0, n.jsx)(Z, {
+                    (0, n.jsx)(U, {
                         classificationTypeText: d.description,
-                        tosLink: A.sQ.TOS_LINK,
-                        communityGuidelinesLink: A.sQ.COMMUNITY_GUIDELINES,
+                        tosLink: j.sQ.TOS_LINK,
+                        communityGuidelinesLink: j.sQ.COMMUNITY_GUIDELINES,
                         policyExplainerLink: d.explainer_link,
                         appealComponent: (0, n.jsx)(P, {
                             hasBeenAppealed: null != d.appeal_status,
                             onLetUsKnowClick: () => {
                                 u.default.track(C.rMx.SAFETY_HUB_ACTION, {
-                                    action: A.n0.ClickLetUsKnow,
+                                    action: j.n0.ClickLetUsKnow,
                                     account_standing: k.state,
                                     classification_ids: [Number(t)],
                                     source: o,
-                                    is_violative_content_shown: U,
-                                    is_dsa_eligible: S,
-                                    violation_type: L
+                                    is_violative_content_shown: Z,
+                                    is_dsa_eligible: L,
+                                    violation_type: S
                                 }),
-                                    (null == d ? void 0 : d.is_coppa) && w.includes(h.tG.AGE_VERIFY_ELIGIBLE) ? E.Z.open() : N && (c.Z.increment({ name: l.V.APPEAL_INGESTION_VIEW }), _.Z.open(t));
+                                    (null == d ? void 0 : d.is_coppa) && w.includes(h.tG.AGE_VERIFY_ELIGIBLE) ? A.Z.open() : N && (c.Z.increment({ name: l.V.APPEAL_INGESTION_VIEW }), _.Z.open(t));
                             },
                             isAppealEligible: N
                         })

@@ -21,7 +21,7 @@ function p() {
         t = a.SE.useSetting().includes(e),
         n = s.useCallback(
             (t) => {
-                let n = new Set((0, l._o)());
+                let n = (0, l._o)();
                 t ? n.delete(e) : n.add(e), a.SE.updateSetting([...n]);
             },
             [e]

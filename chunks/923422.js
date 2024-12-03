@@ -35,14 +35,14 @@ n.default = (0, u.Z)(
             D = (0, M.Z)(),
             { analyticsLocations: G } = (0, s.ZP)(),
             O = o.useMemo(() => (0, m.j)(), []);
-        async function U() {
+        async function w() {
             try {
                 d(!0), await (0, g.bF)(), window.location.reload(!0);
             } catch (e) {
                 d(!1);
             }
         }
-        let y = (e) => {
+        let U = (e) => {
                 switch (e) {
                     case Z.oAB.GAMES:
                         return I;
@@ -64,7 +64,7 @@ n.default = (0, u.Z)(
                         return null;
                 }
             },
-            w = (0, b.VO)()
+            y = (0, b.VO)()
                 .filter((e) => {
                     let { section: n } = e;
                     return n !== c.ID.HEADER && n !== c.ID.CUSTOM && n !== c.ID.DIVIDER && 'logout' !== n;
@@ -78,7 +78,7 @@ n.default = (0, u.Z)(
                 'aria-label': v.intl.string(v.t.opYYHh),
                 onSelect: t,
                 children: [
-                    w.map((e) => {
+                    y.map((e) => {
                         let { section: n, label: t, onClick: o } = e,
                             l = n.replace(/\W/gi, '_');
                         return (0, r.jsx)(
@@ -93,7 +93,7 @@ n.default = (0, u.Z)(
                                               let t = Object.values(Z.oAB).filter((n) => n === e)[0];
                                               null != t && a.Z.open(t, void 0, { analyticsLocations: n });
                                           })(n, G),
-                                children: y(n)
+                                children: U(n)
                             },
                             l
                         );
@@ -127,7 +127,7 @@ n.default = (0, u.Z)(
                                   id: 'clear-build-override',
                                   disabled: u,
                                   label: v.intl.string(v.t['/Nz9ra']),
-                                  action: U,
+                                  action: w,
                                   color: 'danger'
                               })
                           })
