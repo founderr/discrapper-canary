@@ -135,7 +135,7 @@ function Z(e) {
         ]
     });
 }
-let O = () => {
+let B = () => {
         let e = (0, E.Z)(),
             t = (0, b.mq)(S.ne.ACTIVE),
             n = (0, f.o)(A.intl.formatToPlainString(A.t['7hqFl5'], { activeLinks: t.length }), A.intl.string(A.t['Q/D/0d'])),
@@ -162,7 +162,7 @@ let O = () => {
                   ]
               });
     },
-    B = (e) => {
+    M = (e) => {
         let { userId: t, subText: n, avatarSize: r = o.AvatarSizes.SIZE_40 } = e,
             a = (0, h.I)(t);
         return void 0 === a
@@ -190,7 +190,7 @@ let O = () => {
                   ]
               });
     },
-    M = () => {
+    O = () => {
         let e = (0, b.mq)(S.ne.ACTIVE),
             t = (0, l.e7)([u.Z], () => u.Z.getSelectedTeenId()),
             { selectTeenUser: n } = (0, p.G)({}),
@@ -200,7 +200,7 @@ let O = () => {
             })),
             s = r.useCallback(
                 (e) =>
-                    (0, i.jsx)(B, {
+                    (0, i.jsx)(M, {
                         userId: e.value,
                         avatarSize: o.AvatarSizes.SIZE_24
                     }),
@@ -228,8 +228,8 @@ let O = () => {
             a = (0, g.Qr)(!!n),
             s = (0, b.Rd)(a);
         return n && 1 !== r.length
-            ? (0, i.jsx)(M, {})
-            : (0, i.jsx)(B, {
+            ? (0, i.jsx)(O, {})
+            : (0, i.jsx)(M, {
                   userId: t,
                   subText: s
               });
@@ -245,7 +245,7 @@ t.Z = (e) => {
         children: [
             (0, i.jsxs)('div', {
                 className: j.connectedCounter,
-                children: [(0, i.jsx)(O, {}), (0, i.jsx)(P, {})]
+                children: [(0, i.jsx)(B, {}), (0, i.jsx)(P, {})]
             }),
             (0, i.jsxs)('div', {
                 className: j.card,

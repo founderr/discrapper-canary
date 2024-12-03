@@ -35,9 +35,9 @@ var i = n(200651),
     j = n(652262),
     P = n(880257),
     Z = n(631885),
-    O = n(830746),
-    B = n(731934),
-    M = n(521450),
+    B = n(830746),
+    M = n(731934),
+    O = n(521450),
     w = n(292352),
     y = n(981631),
     k = n(723359),
@@ -45,13 +45,13 @@ var i = n(200651),
     U = n(388032),
     D = n(228351);
 let G = {
-        [w.dG.REQUESTS]: () => (0, i.jsx)(B.Z, {}),
-        [w.dG.ACTIVITY]: () => (0, i.jsx)(O.Z, {}),
-        [w.dG.SETTINGS]: () => (0, i.jsx)(M.Z, {})
+        [w.dG.REQUESTS]: () => (0, i.jsx)(M.Z, {}),
+        [w.dG.ACTIVITY]: () => (0, i.jsx)(B.Z, {}),
+        [w.dG.SETTINGS]: () => (0, i.jsx)(O.Z, {})
     },
     H = {
-        [w.dG.REQUESTS]: () => (0, i.jsx)(B.Z, {}),
-        [w.dG.ACTIVITY]: () => (0, i.jsx)(O.Z, {})
+        [w.dG.REQUESTS]: () => (0, i.jsx)(M.Z, {}),
+        [w.dG.ACTIVITY]: () => (0, i.jsx)(B.Z, {})
     };
 function V(e) {
     let { section: t, handleItemSelect: n } = e,
@@ -213,8 +213,8 @@ function z() {
         a = (0, E.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         l = (0, c.e7)([R.Z], () => R.Z.getIsInitialized()),
         b = (0, j.M)(),
-        O = (0, c.e7)([v.Z], () => v.Z.theme),
-        { selectedTab: B, handleTabChange: M } = (0, A.Z)(),
+        B = (0, c.e7)([v.Z], () => v.Z.theme),
+        { selectedTab: M, handleTabChange: O } = (0, A.Z)(),
         G = (0, h.Dt)(),
         V = N.default.getCurrentUser(),
         W = null != t,
@@ -236,7 +236,7 @@ function z() {
                     is_considered_adult: t,
                     num_of_accepted_links: n,
                     selected_teen_id: b,
-                    initial_page: w.QH[B],
+                    initial_page: w.QH[M],
                     source: w._6[w.Mu.SIDENAV]
                 }),
                 x.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
@@ -249,7 +249,7 @@ function z() {
             z && (0, m.mN)(k.L0.FAMILY_CENTER);
         }, [z]);
     if (z) return null;
-    let Y = B !== w.dG.SETTINGS ? B : w.dG.ACTIVITY,
+    let Y = M !== w.dG.SETTINGS ? M : w.dG.ACTIVITY,
         K = H[Y];
     return (0, i.jsx)(p.Gt, {
         value: e,
@@ -259,10 +259,10 @@ function z() {
             children: [
                 (0, i.jsx)(_.yY, { location: U.intl.string(U.t.RZqaJi) }),
                 (0, i.jsx)(F, {
-                    theme: O,
+                    theme: B,
                     section: Y,
                     handleItemSelect: (e) => {
-                        M(e);
+                        O(e);
                     }
                 }),
                 (0, i.jsx)(u.TabBar.Panel, {

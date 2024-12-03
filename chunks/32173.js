@@ -33,9 +33,9 @@ var s = n(399606),
     j = n(687362),
     P = n(119269),
     Z = n(467685),
-    O = n(391110),
-    B = n(75077),
-    M = n(976465),
+    B = n(391110),
+    M = n(75077),
+    O = n(976465),
     w = n(474936),
     y = n(735825),
     k = n(981631),
@@ -93,9 +93,9 @@ t.Z = () => {
         ej = (0, m.Z)(E.Z),
         eP = (0, j.ZP)(),
         eZ = (0, j.aJ)(),
-        eO = (0, A.Kb)(y.qY),
-        { fractionalState: eB } = (0, g.Z)(),
-        eM = eB === w.a$.FP_ONLY,
+        eB = (0, A.Kb)(y.qY),
+        { fractionalState: eM } = (0, g.Z)(),
+        eO = eM === w.a$.FP_ONLY,
         ew = (0, p.Z)({
             scrollPosition: L.Y_.TRY_IT_OUT,
             analyticsLocations: e
@@ -293,9 +293,9 @@ t.Z = () => {
                 name: 'serverBoosts',
                 title: D.intl.string(D.t['NyDu//']),
                 subtitle: D.intl.string(D.t['4pEwXF']),
-                description: eM ? D.intl.format(D.t.uPiIBQ, { link: 'https://discord.com' }) : D.intl.string(D.t.jsyNHh),
+                description: eO ? D.intl.format(D.t.uPiIBQ, { link: 'https://discord.com' }) : D.intl.string(D.t.jsyNHh),
                 descriptionCta: D.intl.string(D.t.jVcuVV),
-                onCtaClick: eM
+                onCtaClick: eO
                     ? void 0
                     : () => {
                           o.Z.open(k.oAB.GUILD_BOOSTING, null, {
@@ -304,8 +304,8 @@ t.Z = () => {
                           });
                       },
                 perkImage: K,
-                hideOnNarrowScreen: !eM,
-                imageOverlayText: eM ? D.intl.string(D.t.lcYttb) : void 0
+                hideOnNarrowScreen: !eO,
+                imageOverlayText: eO ? D.intl.string(D.t.lcYttb) : void 0
             },
             greyServerBoosts: {
                 name: 'greyServerBoosts',
@@ -436,14 +436,14 @@ t.Z = () => {
                 name: 'customSoundsEverywhere',
                 title: D.intl.string(D.t.LWsAra),
                 subtitle: D.intl.string(D.t.bTzbVl),
-                perkImage: (0, B.gx)(t, V, F),
+                perkImage: (0, M.gx)(t, V, F),
                 description: D.intl.string(D.t.JLnOMz)
             },
             specialStickerAccess: {
                 name: 'specialStickerAccess',
                 title: D.intl.string(D.t.tzdIwM),
                 subtitle: D.intl.string(D.t.FXlU29),
-                perkImage: (0, B.gx)(t, W, eg),
+                perkImage: (0, M.gx)(t, W, eg),
                 description: D.intl.string(D.t.e7FKCg)
             },
             largeUploads: {
@@ -510,15 +510,15 @@ t.Z = () => {
             perkComponent: o,
             descriptionCta: s,
             onCtaClick: () => {
-                if (null != eO)
+                if (null != eB)
                     (0, f.Z)({
-                        product: eO,
+                        product: eB,
                         title: D.intl.string(D.t.wRAXra),
                         description: D.intl.string(D.t.sQX6HR),
                         analyticsLocations: e
                     });
             },
-            cardVariant: O.zW.REWARD,
+            cardVariant: B.zW.REWARD,
             pillText: r,
             dismissibleContentType: l
         };
@@ -543,12 +543,12 @@ t.Z = () => {
             onCtaClick: () => {
                 o.Z.open(k.oAB.GUILD_BOOSTING, null, { analyticsLocations: e });
             },
-            cardVariant: O.zW.REWARD,
+            cardVariant: B.zW.REWARD,
             pillText: r,
             dismissibleContentType: l
         };
     }
-    let eD = (0, M.kG)(),
+    let eD = (0, O.kG)(),
         { enabled: eG } = (0, S.Z)(),
         eH = () => {
             C.default.track(k.rMx.OPEN_MODAL, {
@@ -570,7 +570,7 @@ t.Z = () => {
                 title: D.intl.string(D.t.rnsqpa),
                 pillText: D.intl.string(D.t.jyYgZ2).toLocaleUpperCase(),
                 perkComponent: (0, a.jsx)(Z.Z, {}),
-                cardVariant: O.zW.NITRO_GRADIENT_HOVER_BORDER,
+                cardVariant: B.zW.NITRO_GRADIENT_HOVER_BORDER,
                 onClick: () => eH()
             }),
         (0, I.ZP)('usePerksDiscoverabilityCard') === I.P0.SUMMER_2024 &&

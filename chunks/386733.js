@@ -121,11 +121,11 @@ t.Z = (e) => {
         S = (0, l.e7)([_.Z], () => _.Z.getRecipientStatus()),
         R = (0, C.uv)('ReferralProgramProgressBar'),
         j = (0, C.TW)('ReferralProgramProgressBar'),
-        { referralSentUsers: P, hasSentAllReferrals: Z, refreshAt: O } = (0, E.G)(),
-        B = r.useMemo(() => P.map((e) => new g.Z(e)), [P]),
-        { subscriberHomeVariant: M } = h.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
+        { referralSentUsers: P, hasSentAllReferrals: Z, refreshAt: B } = (0, E.G)(),
+        M = r.useMemo(() => P.map((e) => new g.Z(e)), [P]),
+        { subscriberHomeVariant: O } = h.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
         w = R === v.g2L.UNAPPLIED || R === v.g2L.QUALIFIED,
-        y = M === h.p.VARIANT_2,
+        y = O === h.p.VARIANT_2,
         k = {
             redeemed: 0,
             converted: 0,
@@ -140,7 +140,7 @@ t.Z = (e) => {
         G = r.useRef(null),
         H = (k.sent / E.Q) * 100,
         V = !1;
-    j && null != O && ((V = 0 < (t = Math.ceil((new Date(O).getTime() - new Date().getTime()) / 86400000)) && t < C.AV), (a = (100 * (C.AV - t)) / C.AV));
+    j && null != B && ((V = 0 < (t = Math.ceil((new Date(B).getTime() - new Date().getTime()) / 86400000)) && t < C.AV), (a = (100 * (C.AV - t)) / C.AV));
     let F = V && null != t,
         W = (0, i.jsxs)('div', {
             className: N.referralInfoContent,
@@ -183,7 +183,7 @@ t.Z = (e) => {
                                   ]
                               })
                             : (0, i.jsx)(A, {
-                                  userRecords: B,
+                                  userRecords: M,
                                   recipientStatus: S
                               }),
                         (0, i.jsx)(o.Text, {

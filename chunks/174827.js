@@ -42,13 +42,13 @@ var i = n(200651),
     w = n(242582);
 function H(e) {
     var t, n, s;
-    let { handleStepChange: H, initialPlanId: B, subscriptionTier: F, trialId: G, referralTrialOfferId: W, handleClose: Y } = e,
-        { activeSubscription: D, hasFetchedSubscriptions: V, paymentSourceId: K, paymentSources: X, selectedSkuId: Q, selectedPlan: z, step: q, defaultPlanId: J, priceOptions: $, isPremium: ee } = (0, v.usePaymentContext)(),
+    let { handleStepChange: H, initialPlanId: B, subscriptionTier: F, trialId: G, referralTrialOfferId: W, handleClose: D } = e,
+        { activeSubscription: Y, hasFetchedSubscriptions: V, paymentSourceId: K, paymentSources: X, selectedSkuId: Q, selectedPlan: z, step: q, defaultPlanId: J, priceOptions: $, isPremium: ee } = (0, v.usePaymentContext)(),
         { isGift: et, giftRecipient: en, giftMessage: ei } = (0, I.wD)(),
         el = null != K ? X[K] : null,
         { newPlans: es } = u.ZP.useExperiment({ location: 'd17fd6_3' }, { autoTrackExposure: !1 }),
         er = (0, a.e7)([E.default], () => E.default.getCurrentUser()),
-        ea = !et && null != Q && Q === O.Si.TIER_2 && null != er && er.hasHadPremium() && V && null == D && (0, u.aQ)(el),
+        ea = !et && null != Q && Q === O.Si.TIER_2 && null != er && er.hasHadPremium() && V && null == Y && (0, u.aQ)(el),
         eC = (0, j.N)(W),
         eo = !et && null != eC && null != Q && O.nG[eC.trial_id].skus.includes(Q),
         ed = (0, _.Ng)(),
@@ -62,13 +62,13 @@ function H(e) {
                     skuId: Q,
                     isPremium: ee,
                     multiMonthPlans: ea ? es : [],
-                    currentSubscription: D,
+                    currentSubscription: Y,
                     isGift: et,
                     isEligibleForTrial: eo,
                     defaultPlanId: J,
                     defaultToMonthlyPlan: ex
                 }),
-            [Q, ee, es, D, ea, et, eo, J, ex]
+            [Q, ee, es, Y, ea, et, eo, J, ex]
         ),
         ef = ec && eh.includes(O.Xh.PREMIUM_MONTH_TIER_2) ? O.Xh.PREMIUM_MONTH_TIER_2 : eh[0],
         e_ = (0, a.e7)([S.Z], () => S.Z.get(ef)),
@@ -106,7 +106,7 @@ function H(e) {
     let ey = null !== (s = null == eE ? void 0 : eE.message) && void 0 !== s ? s : R.intl.string(R.t.R0RpRU),
         eM = ep && null == eE,
         eZ = ep && null != eE,
-        eI = eM && null == D && !!ep && (null == eg ? void 0 : eg.subscriptionPeriodEnd) == null,
+        eI = eM && null == Y && !!ep && (null == eg ? void 0 : eg.subscriptionPeriodEnd) == null,
         { enabled: ev } = p._.useExperiment({ location: 'PremiumPaymentPlanSelectStep' }, { autoTrackExposure: !1 }),
         eP = !et && (null == e_ ? void 0 : e_.skuId) === O.Si.TIER_2 && (null == eC ? void 0 : eC.referrer_id) != null && ev,
         eT = null;
@@ -132,7 +132,7 @@ function H(e) {
                                     selectedPlanId: null == z ? void 0 : z.id,
                                     subscriptionPeriodEnd: null == eg ? void 0 : eg.subscriptionPeriodEnd,
                                     discountInvoiceItems: ec ? (null == eg ? void 0 : eg.invoiceItems) : void 0,
-                                    handleClose: Y
+                                    handleClose: D
                                 }),
                           eM &&
                               (0, i.jsxs)(i.Fragment, {

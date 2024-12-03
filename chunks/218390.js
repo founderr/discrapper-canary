@@ -33,9 +33,9 @@ var i = n(200651),
     j = n(246946),
     P = n(78839),
     Z = n(483444),
-    O = n(626135),
-    B = n(63063),
-    M = n(74538),
+    B = n(626135),
+    M = n(63063),
+    O = n(74538),
     w = n(140465),
     y = n(599659),
     k = n(91802),
@@ -63,7 +63,7 @@ function et(e) {
         d = n || l,
         m = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), 'd') : 0,
         f = z.GP[t.planIdFromItems],
-        p = M.ZP.formatPriceString(M.ZP.getDefaultPrice(f.id), f.interval);
+        p = O.ZP.formatPriceString(O.ZP.getDefaultPrice(f.id), f.interval);
     return d
         ? (0, i.jsxs)(i.Fragment, {
               children: [
@@ -82,7 +82,7 @@ function et(e) {
                           var e, n, i;
                           if (l) {
                               if (r) {
-                                  let e = M.ZP.getReverseTrialWeeks(t.trialId);
+                                  let e = O.ZP.getReverseTrialWeeks(t.trialId);
                                   return K.intl.format(K.t.jLglur, { weeks: e });
                               }
                               return K.intl.format(K.t['2CGBrq'], {
@@ -141,7 +141,7 @@ function en() {
                                       variant: 'heading-md/normal',
                                       color: 'always-white',
                                       className: Q.fractionalPremiumSubheader,
-                                      children: K.intl.format(K.t.sK7fGh, { helpCenterLink: B.Z.getArticleURL(Y.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+                                      children: K.intl.format(K.t.sK7fGh, { helpCenterLink: M.Z.getArticleURL(Y.BhN.FRACTIONAL_PREMIUM_ABOUT) })
                                   })
                               ]
                           })
@@ -159,7 +159,7 @@ function en() {
                         className: Q.tierCardButton,
                         color: g.Button.Colors.WHITE,
                         onClick: () => {
-                            O.default.track(Y.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            B.default.track(Y.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: 'to_premium_home_button',
                                 target: 'premium home page'
                             }),
@@ -177,7 +177,7 @@ function en() {
                         look: g.Button.Looks.OUTLINED,
                         color: g.Button.Colors.WHITE,
                         onClick: () => {
-                            O.default.track(Y.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            B.default.track(Y.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: 'to_subscriptions_button',
                                 target: 'subscriptions settings'
                             }),
@@ -237,7 +237,7 @@ function ei(e) {
                         buttonTextClassName: Q.giftButtonCTA,
                         color: g.Button.Colors.CUSTOM,
                         onClick: () => {
-                            O.default.track(Y.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            B.default.track(Y.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: $,
                                 target: ee
                             });
@@ -281,7 +281,7 @@ function er() {
                               buttonTextClassName: Q.giftButtonCTA,
                               color: g.Button.Colors.CUSTOM,
                               onClick: () => {
-                                  O.default.track(Y.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                  B.default.track(Y.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                       cta_type: $,
                                       target: ee
                                   });
@@ -314,13 +314,13 @@ t.Z = function () {
         }),
         (0, U.B)(A);
     let Z = (0, L.b)(A),
-        B = (0, F.pn)(A);
+        M = (0, F.pn)(A);
     r.useEffect(() => {
         m.Z.wait(async () => {
             !x && !e && (await Promise.all([f.jg(), f.tZ(), (0, _.Y2)(h, null, Y.JjL.DISCOVERY)])), o(!1);
         });
     }, [h, x, e]);
-    let [M, w] = r.useState(!1);
+    let [O, w] = r.useState(!1);
     if (x) return (0, i.jsx)(E.Z, {});
     if (e) return (0, i.jsx)(S.c8, {});
     let y = a && null !== n && s,
@@ -340,7 +340,7 @@ t.Z = function () {
                     className: Q.__invalid_container,
                     children: [
                         (0, i.jsx)(en, {}),
-                        (Z || B) && (0, i.jsx)(W.Z, { isInSettings: !0 }),
+                        (Z || M) && (0, i.jsx)(W.Z, { isInSettings: !0 }),
                         (0, i.jsx)(er, {}),
                         (0, i.jsx)(V.Z, {
                             className: Q.__invalid_planComparisonTable,
@@ -354,7 +354,7 @@ t.Z = function () {
                 }),
                 (0, i.jsx)(d.$, {
                     onChange: (e) => {
-                        e && !M && (O.default.track(Y.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), w(!0));
+                        e && !O && (B.default.track(Y.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), w(!0));
                     },
                     children: (0, i.jsx)('div', { className: Q.bottomOfPageVisibilitySensor })
                 })

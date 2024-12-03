@@ -15,7 +15,7 @@ n.d(t, {
         return S;
     },
     sf: function () {
-        return O;
+        return B;
     },
     x$: function () {
         return k;
@@ -121,7 +121,7 @@ let S = () => {
         }
     },
     Z = () => P(S()),
-    O = (e) => {
+    B = (e) => {
         switch (e) {
             case _.VU.PREMIUM_TENURE_1_MONTH:
             case _.VU.PREMIUM_TENURE_3_MONTH:
@@ -138,8 +138,8 @@ let S = () => {
                 return '';
         }
     },
-    B = () => O(S()),
-    M = () => {
+    M = () => B(S()),
+    O = () => {
         let e = S(),
             t = (0, s.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription());
         return null == e || null == t || null == t.premiumSince ? null : (0, d.RZ)(e, t.premiumSince);
@@ -148,8 +148,8 @@ let S = () => {
         badge: S(),
         image: j(),
         name: Z(),
-        earnedOnDate: M(),
-        tenureRequirement: B()
+        earnedOnDate: O(),
+        tenureRequirement: M()
     }),
     y = () => {
         let e = R(),

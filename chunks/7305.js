@@ -51,7 +51,7 @@ function k(e) {
     }, []);
     let { step: B } = (0, h.usePaymentContext)(),
         { isGift: F, giftMessage: G, giftRecipient: W } = (0, x.wD)(),
-        Y = F && (0, p.pO)(W) && B === f.h8.PLAN_SELECT;
+        D = F && (0, p.pO)(W) && B === f.h8.PLAN_SELECT;
     return (0, i.jsx)(_.PaymentModal, {
         analyticsLocations: H,
         analyticsLocation: t,
@@ -80,7 +80,7 @@ function k(e) {
         referralTrialOfferId: U,
         skuId: k,
         shakeWhilePurchasing: !0,
-        isLargeModal: Y,
+        isLargeModal: D,
         returnRef: b,
         skipConfirm: O,
         continueSession: R,

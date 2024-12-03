@@ -28,9 +28,9 @@ var i = n(200651),
     j = n(388032),
     P = n(808112),
     Z = n(102655),
-    O = n(768236),
-    B = n(314907),
-    M = n(826701);
+    B = n(768236),
+    M = n(314907),
+    O = n(826701);
 let w = () => {
         let e = (0, T.W1)();
         return (0, i.jsx)(N.Cy, {
@@ -52,7 +52,7 @@ let w = () => {
         let t,
             { premiumType: n } = e,
             r = (0, u.ZP)();
-        t = n === A.p9.TIER_0 ? ((0, o.wj)(r) ? Z : O) : (0, o.wj)(r) ? B : M;
+        t = n === A.p9.TIER_0 ? ((0, o.wj)(r) ? Z : B) : (0, o.wj)(r) ? M : O;
         let a = (0, E.Px)(n);
         return (0, i.jsx)('img', {
             src: t,
@@ -117,7 +117,7 @@ let w = () => {
 t.Z = (e) => {
     var t;
     let n,
-        { className: a, hideCTAs: Z = !1, headingOverride: O, hidePill: B = !1, selectedPlanColumnClassName: M, selectedPlanTier: D = A.p9.TIER_2 } = e,
+        { className: a, hideCTAs: Z = !1, headingOverride: B, hidePill: M = !1, selectedPlanColumnClassName: O, selectedPlanTier: D = A.p9.TIER_2 } = e,
         { analyticsLocations: G } = (0, m.ZP)(g.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
         H = (0, l.e7)([h.ZP], () => h.ZP.hasFetchedSubscriptions()),
         V = (0, p.V)(),
@@ -221,7 +221,7 @@ t.Z = (e) => {
               withBottomBorderRadius: !0,
               buttonsRow: null == J
           }),
-        (n = B
+        (n = M
             ? null
             : null != J || null != q
               ? (0, i.jsx)(N.Cy, {
@@ -242,13 +242,13 @@ t.Z = (e) => {
                 (0, i.jsx)(c.Heading, {
                     className: s()(P.titleText, P.__invalid_textColor),
                     variant: 'heading-xxl/extrabold',
-                    children: null != O ? O : j.intl.string(j.t.FIbMh4)
+                    children: null != B ? B : j.intl.string(j.t.FIbMh4)
                 }),
                 (0, i.jsxs)('div', {
                     className: P.tableWrapper,
                     children: [
                         (0, i.jsx)('div', {
-                            className: s()(M, {
+                            className: s()(O, {
                                 [P.tier0ColumnOuter]: eo,
                                 [P.tier2ColumnOuter]: !eo
                             }),
