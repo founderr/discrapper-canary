@@ -1,97 +1,122 @@
-t.r(o), t(47120);
-var i = t(200651),
-    n = t(192379),
-    a = t(442837),
-    c = t(481060),
-    r = t(103879),
-    s = t(236289),
-    l = t(853178),
-    d = t(800530),
-    h = t(177872);
-o.default = function (e) {
-    let { onClose: o, transitionState: t } = e,
-        x = (0, a.e7)([s.Z], () => s.Z.getAgeVerificationWebviewUrl()),
-        g = (0, a.e7)([s.Z], () => s.Z.getAgeVerificationError()),
-        f = (0, a.e7)([s.Z], () => s.Z.getIsLoadingAgeVerification()),
-        [m, u] = n.useState(!1);
-    n.useEffect(() => {
-        u(null !== g);
-    }, [g]);
-    let j = () => {
-        o(), l.Z.close();
-    };
-    return (0, i.jsxs)(c.ModalRoot, {
-        transitionState: t,
-        className: h.root,
-        children: [
-            (0, i.jsxs)(c.ModalHeader, {
-                className: h.header,
-                children: [
-                    (0, i.jsx)(c.Heading, {
-                        variant: 'heading-lg/semibold',
-                        children: 'Age Verification Test Tool'
-                    }),
-                    (0, i.jsx)(c.ModalCloseButton, { onClick: j })
-                ]
-            }),
-            (0, i.jsxs)(c.ModalContent, {
-                className: h.content,
-                children: [
-                    m &&
-                        (0, i.jsxs)(c.Notice, {
-                            color: c.NoticeColors.DANGER,
-                            className: h.nagbar,
+e.r(n);
+var i = e(200651),
+    o = e(192379),
+    r = e(442837),
+    s = e(481060),
+    l = e(955522),
+    c = e(138201),
+    a = e(103879),
+    d = e(236289),
+    h = e(853178),
+    u = e(800530),
+    p = e(388032),
+    g = e(177872);
+let x = [
+    {
+        title: p.intl.string(p.t['1+E7LC']),
+        description: p.intl.string(p.t.BXiat7),
+        icon: s.CircleCheckIcon
+    },
+    {
+        title: p.intl.string(p.t.iMQXtL),
+        description: p.intl.string(p.t.oQ0vws),
+        icon: s.CircleCheckIcon
+    },
+    {
+        title: p.intl.string(p.t['oY/z1d']),
+        description: p.intl.string(p.t.wtj02d),
+        icon: s.CircleInformationIcon
+    }
+];
+n.default = function (t) {
+    let { onClose: n, transitionState: e } = t,
+        b = (0, r.e7)([d.Z], () => d.Z.getAgeVerificationWebviewUrl()),
+        C = (0, r.e7)([d.Z], () => d.Z.getIsLoadingAgeVerification()),
+        f = o.useCallback(() => {
+            n(), h.Z.close();
+        }, [n]),
+        j = o.useCallback(() => {
+            f();
+        }, [f]);
+    return (
+        o.useEffect(() => {
+            '' !== b &&
+                (0, l.F)({
+                    webviewUrl: b,
+                    onComplete: j
+                });
+        }, [b, j]),
+        (0, i.jsxs)(s.ModalRoot, {
+            transitionState: e,
+            className: g.root,
+            children: [
+                (0, i.jsxs)(s.ModalContent, {
+                    className: g.content,
+                    children: [
+                        (0, i.jsxs)('div', {
+                            className: g.header,
                             children: [
-                                'Error loading Age Verification',
-                                (0, i.jsx)(c.NoticeButton, {
-                                    onClick: () => u(!1),
-                                    children: 'Hide'
+                                (0, i.jsx)(s.Heading, {
+                                    variant: 'heading-xl/bold',
+                                    children: p.intl.string(p.t['9SDLnp'])
+                                }),
+                                (0, i.jsx)(s.Heading, {
+                                    variant: 'heading-md/normal',
+                                    children: p.intl.string(p.t['yvx///'])
                                 })
                             ]
                         }),
-                    '' !== x
-                        ? (0, i.jsx)('iframe', {
-                              id: 'frame',
-                              src: x,
-                              className: h.iframe,
-                              allow: 'camera; microphone'
-                          })
-                        : (0, i.jsx)('div', {
-                              className: h.textBody,
-                              children: (0, i.jsx)(c.Text, {
-                                  variant: 'text-md/normal',
-                                  children: 'Text explaining options to user'
-                              })
-                          })
-                ]
-            }),
-            (0, i.jsx)(c.ModalFooter, {
-                className: h.footer,
-                children:
-                    '' === x
-                        ? (0, i.jsxs)(i.Fragment, {
-                              children: [
-                                  (0, i.jsx)(c.Button, {
-                                      onClick: () => {
-                                          (0, r.pU)();
-                                      },
-                                      submitting: f,
-                                      children: 'Begin Age Verification'
-                                  }),
-                                  (0, i.jsx)(c.Button, {
-                                      onClick: () => {
-                                          window.open(d.sQ.AGE_VERIFICATION_LINK, '_blank');
-                                      },
-                                      disabled: f,
-                                      children: 'Open Form'
-                                  })
-                              ]
-                          })
-                        : (0, i.jsx)(c.Button, {
-                              onClick: j,
-                              children: 'Close'
-                          })
-            })
-        ]
-    });
+                        (0, i.jsx)('div', {
+                            className: g.table,
+                            children: x.map((t, n) => {
+                                let { title: e, icon: o, description: r } = t;
+                                return (0, i.jsx)(
+                                    c.Z,
+                                    {
+                                        title: e,
+                                        description: r,
+                                        icon: o
+                                    },
+                                    n
+                                );
+                            })
+                        }),
+                        (0, i.jsxs)('div', {
+                            className: g.anotherOption,
+                            children: [
+                                (0, i.jsx)(s.Text, {
+                                    variant: 'text-sm/semibold',
+                                    className: g.optionEyebrow,
+                                    children: p.intl.string(p.t.WPwp1d)
+                                }),
+                                (0, i.jsx)(c.Z, {
+                                    title: p.intl.string(p.t.N9WJMD),
+                                    description: p.intl.string(p.t['NHq38/']),
+                                    buttonText: p.intl.string(p.t['9iy4lJ']),
+                                    buttonColor: s.Button.Colors.PRIMARY,
+                                    onButtonPress: () => window.open(u.sQ.AGE_VERIFICATION_LINK, '_blank')
+                                })
+                            ]
+                        })
+                    ]
+                }),
+                (0, i.jsxs)(s.ModalFooter, {
+                    className: g.footer,
+                    children: [
+                        (0, i.jsx)(s.Button, {
+                            onClick: a.FN,
+                            submitting: C,
+                            children: p.intl.string(p.t['54b8V1'])
+                        }),
+                        (0, i.jsx)(s.Button, {
+                            color: s.Button.Colors.TRANSPARENT,
+                            look: s.Button.Looks.BLANK,
+                            onClick: f,
+                            children: p.intl.string(p.t.dKacJy)
+                        })
+                    ]
+                })
+            ]
+        })
+    );
 };
