@@ -6,15 +6,12 @@ n.d(t, {
         return g;
     },
     II: function () {
-        return T;
+        return I;
     },
     fK: function () {
         return m;
     },
     pL: function () {
-        return I;
-    },
-    yp: function () {
         return v;
     }
 });
@@ -33,7 +30,7 @@ var i = n(442837),
     p = n(145597),
     h = n(501787);
 async function m() {
-    let { default: e } = await Promise.all([n.e('50506'), n.e('23755'), n.e('35535'), n.e('90508'), n.e('13351'), n.e('39701'), n.e('70205'), n.e('9540'), n.e('27702'), n.e('54109'), n.e('50751'), n.e('2076')]).then(n.bind(n, 989373));
+    let { default: e } = await Promise.all([n.e('50506'), n.e('23755'), n.e('35535'), n.e('90508'), n.e('13351'), n.e('39701'), n.e('70205'), n.e('9540'), n.e('27702'), n.e('54109'), n.e('50751'), n.e('78506')]).then(n.bind(n, 989373));
     (0, s.te)(h.OVERLAY_V3_LAYOUT_ID, f.Z.getDefaultLayout(h.OVERLAY_V3_LAYOUT_ID, 1), 1),
         await d.bA(
             h.OVERLAY_V3_KEY,
@@ -57,10 +54,7 @@ function E(e, t) {
     for (let n = 0; n < e.length; n++) if (e[n].index !== t[n].index || e[n].notification !== t[n].notification || e[n].locked !== t[n].locked) return !1;
     return !0;
 }
-function v(e, t) {
-    return e.participantsVersion === t.participantsVersion;
-}
-function I() {
+function v() {
     var e, t;
     let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.ZP,
         r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.Z,
@@ -87,7 +81,7 @@ function I() {
               name: null !== (t = null == g ? void 0 : g.name) && void 0 !== t ? t : null == E ? void 0 : E.name
           };
 }
-function T() {
+function I() {
     let e = (0, o.PR)();
-    return (0, i.e7)([c.ZP, _.Z, l.ZP, u.Z], () => I(c.ZP, _.Z, l.ZP, u.Z, e), [e], a.Z);
+    return (0, i.e7)([c.ZP, _.Z, l.ZP, u.Z], () => v(c.ZP, _.Z, l.ZP, u.Z, e), [e], a.Z);
 }

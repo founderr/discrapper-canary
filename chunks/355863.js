@@ -696,9 +696,15 @@ E(S, 'displayName', 'LayoutStore'),
             let { widgetId: t, meta: n } = e;
             return T(t, (e, t) => {
                 (function (e, t) {
+                    var n;
                     i = {
                         ...i,
-                        [e.id]: e.merge({ meta: t })
+                        [e.id]: e.merge({
+                            meta: {
+                                ...(null !== (n = e.meta) && void 0 !== n ? n : {}),
+                                ...t
+                            }
+                        })
                     };
                 })(e, n);
             });

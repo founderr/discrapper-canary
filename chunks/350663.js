@@ -1,88 +1,118 @@
 n.d(t, {
-    C: function () {
-        return i;
+    z: function () {
+        return f;
     }
-}),
-    n(47120);
-var i,
-    l,
-    o = n(200651),
-    r = n(192379),
-    s = n(120356),
-    a = n.n(s),
-    u = n(399606),
-    d = n(239091),
-    c = n(40851),
-    h = n(352978),
-    f = n(27457),
-    p = n(199902),
-    m = n(592125),
-    g = n(944486),
-    v = n(981631),
-    E = n(228680);
-let Z = new Set([v.jm8.ENDED, v.jm8.FAILED, v.jm8.PAUSED]);
-function C(e) {
-    let { participant: t, width: i, locked: l, channel: r } = e,
-        s = (0, c.bp)(),
-        a = (0, u.e7)([p.Z], () => p.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [t.user.id, t.stream.guildId]),
-        m = null != a && Z.has(a.state);
-    return !(null != a) || m
-        ? null
-        : (0, o.jsx)('div', {
-              className: E.tileContainer,
-              children: (0, o.jsx)(f.ZP, {
-                  participant: t,
-                  width: i,
-                  className: E.tile,
-                  fit: h.L.COVER,
-                  inPopout: !0,
-                  inCall: !0,
-                  focused: l,
-                  forceIdle: l,
-                  channel: r,
-                  onContextMenu: l
-                      ? void 0
-                      : (e, t) => {
-                            (0, d.jW)(t, async () => {
-                                let { default: t } = await n.e('22183').then(n.bind(n, 987281));
-                                return (n) =>
-                                    (0, o.jsx)(t, {
-                                        ...n,
-                                        stream: e.stream,
-                                        exitFullscreen: () => {},
-                                        appContext: s
-                                    });
-                            });
-                        }
-              })
-          });
-}
-((l = i || (i = {})).HORIZONTAL = 'horizontal'),
-    (l.VERTICAL = 'vertical'),
-    (t.Z = r.memo(function (e) {
-        let { tileWidth: t, layout: n, locked: i, streamParticipants: l, participantsVersion: r } = e,
-            s = (0, u.e7)([g.Z], () => g.Z.getVoiceChannelId()),
-            d = (0, u.e7)([m.Z], () => m.Z.getChannel(s), [s]);
-        return (0, o.jsx)('div', {
-            className: a()({
-                [E.gridContainer]: !0,
-                [E.vertical]: 'vertical' === n,
-                [E.horizontal]: 'horizontal' === n
-            }),
-            children:
-                null == d
-                    ? []
-                    : l.map((e) =>
-                          (0, o.jsx)(
-                              C,
-                              {
-                                  participant: e,
-                                  width: t,
-                                  locked: i,
-                                  channel: d
-                              },
-                              e.user.id
-                          )
-                      )
-        });
-    }));
+});
+var i = n(200651),
+    o = n(192379),
+    l = n(120356),
+    r = n.n(l),
+    s = n(752877),
+    a = n(481060),
+    u = n(110924),
+    c = n(752802),
+    d = n(340101),
+    h = n(228680);
+let f = 8,
+    p = (e) => {
+        let { participant: t, width: n, locked: o, widgetId: l, pinned: r } = e;
+        return (0, i.jsx)(
+            c.Z,
+            {
+                participant: t,
+                width: n,
+                locked: o,
+                widgetId: l,
+                pinned: r
+            },
+            t.user.id
+        );
+    },
+    m = {
+        mass: 1,
+        tension: 250,
+        friction: 18,
+        clamp: !0
+    };
+t.Z = o.memo(function (e) {
+    let { widgetId: t, tileWidth: n, layout: o, locked: l, streamParticipants: c, participantsVersion: v, pinned: g } = e,
+        E = (9 / 16) * n,
+        x = c.map((e) => ({
+            participant: e,
+            key: e.user.id,
+            width: n,
+            locked: l,
+            widgetId: t,
+            height: E,
+            pinned: g
+        })),
+        C = (0, u.Z)(n),
+        Z = o === d.C5.VERTICAL,
+        _ = 0,
+        I = 0,
+        S = (0, a.useTransition)(
+            Z
+                ? x.map((e, t) => ({
+                      ...e,
+                      y: (_ += e.height + (t > 0 ? f : 0)) - e.height,
+                      x: 0
+                  }))
+                : x.map((e, t) => ({
+                      ...e,
+                      x: (I += e.width + (t > 0 ? f : 0)) - e.width,
+                      y: 0
+                  })),
+            {
+                key: (e) => e.key,
+                from: {
+                    height: 0,
+                    opacity: 0
+                },
+                leave: {
+                    height: 0,
+                    opacity: 0
+                },
+                enter: (e) => {
+                    let { x: t, y: n, width: i, height: o } = e;
+                    return {
+                        x: t,
+                        y: n,
+                        width: i,
+                        height: o,
+                        opacity: 1
+                    };
+                },
+                update: (e) => {
+                    let { x: t, y: n, width: i, height: o } = e;
+                    return {
+                        x: t,
+                        y: n,
+                        width: i,
+                        height: o
+                    };
+                },
+                config: m,
+                trail: n !== C ? 0 : 100
+            },
+            n !== C ? 'animate-never' : 'respect-motion-settings'
+        );
+    return (0, i.jsx)('div', {
+        className: r()({
+            [h.gridContainer]: !0,
+            [h.vertical]: Z,
+            [h.horizontal]: !Z
+        }),
+        style: Z ? { height: _ } : { width: I },
+        children: S((e, t, o, l) =>
+            (0, i.jsx)(s.animated.div, {
+                className: h.gridItem,
+                style: Object.assign({}, e, {
+                    width: n,
+                    height: E,
+                    zIndex: x.length - l
+                }),
+                children: p(t)
+            })
+        )
+    });
+});
