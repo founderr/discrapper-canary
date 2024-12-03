@@ -11,7 +11,12 @@ let r = (0, n(818083).B)({
     treatments: [
         {
             id: 1,
-            label: 'Automatic is Rust ADM',
+            label: 'Automatic is Rust ADM (previous cohort)',
+            config: { enabled: !0 }
+        },
+        {
+            id: 2,
+            label: 'Automatic is Rust ADM (new stats slice)',
             config: { enabled: !0 }
         }
     ]
