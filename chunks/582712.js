@@ -3,8 +3,7 @@ n.r(t),
         default: function () {
             return x;
         }
-    }),
-    n(47120);
+    });
 var a = n(200651),
     l = n(192379),
     i = n(286379),
@@ -17,15 +16,15 @@ var a = n(200651),
     f = n(430824),
     g = n(88658),
     m = n(401416),
-    h = n(920133),
-    S = n(388032),
+    S = n(920133),
+    h = n(388032),
     D = n(215084),
     _ = n(444812);
 function x(e) {
     let { transitionState: t, guildId: x, onClose: I } = e,
         b = (0, r.e7)([f.Z], () => f.Z.getGuild(x));
     return (l.useEffect(() => {
-        (0, m.Y)(x), (0, h.L)(h.Q.MODAL_VIEWED, x), u.Z.increment({ name: i.V.DM_SETTINGS_UPSELL_VIEW });
+        (0, m.Y)(x), (0, S.L)(S.Q.MODAL_VIEWED, x), u.Z.increment({ name: i.V.DM_SETTINGS_UPSELL_VIEW });
     }, [x]),
     null == b)
         ? null
@@ -35,8 +34,8 @@ function x(e) {
               children: (0, a.jsxs)('form', {
                   onSubmit: (e) => {
                       e.preventDefault();
-                      let t = new Set((0, g.YK)());
-                      t.add(x), c.h2.updateSetting(Array.from(t)).then(() => (0, s.showToast)((0, s.createToast)(S.intl.string(S.t.rlYD1d), s.ToastType.SUCCESS))), I(), (0, h.L)(h.Q.MODAL_DISABLED_DMS, x);
+                      let t = (0, g.YK)();
+                      t.add(x), c.h2.updateSetting(Array.from(t)).then(() => (0, s.showToast)((0, s.createToast)(h.intl.string(h.t.rlYD1d), s.ToastType.SUCCESS))), I(), (0, S.L)(S.Q.MODAL_DISABLED_DMS, x);
                   },
                   children: [
                       (0, a.jsx)('img', {
@@ -51,13 +50,13 @@ function x(e) {
                               (0, a.jsx)(s.Heading, {
                                   variant: 'heading-lg/bold',
                                   className: D.title,
-                                  children: S.intl.string(S.t.w2BvnJ)
+                                  children: h.intl.string(h.t.w2BvnJ)
                               }),
                               (0, a.jsx)(s.Text, {
                                   variant: 'text-md/normal',
                                   color: 'header-secondary',
                                   className: D.body,
-                                  children: S.intl.format(S.t.Depjkp, { guild_name: b.name })
+                                  children: h.intl.format(h.t.Depjkp, { guild_name: b.name })
                               })
                           ]
                       }),
@@ -67,7 +66,7 @@ function x(e) {
                                   variant: 'eyebrow',
                                   color: 'header-secondary',
                                   className: D.subtitle,
-                                  children: S.intl.string(S.t.KPB2i4)
+                                  children: h.intl.string(h.t.KPB2i4)
                               }),
                               (0, a.jsx)('div', {
                                   className: D.guildContainer,
@@ -94,21 +93,21 @@ function x(e) {
                                           type: 'submit',
                                           color: s.Button.Colors.BRAND,
                                           size: s.Button.Sizes.MEDIUM,
-                                          children: S.intl.string(S.t.TD7iU1)
+                                          children: h.intl.string(h.t.TD7iU1)
                                       }),
                                       (0, a.jsx)(s.Button, {
                                           className: D.button,
                                           color: s.Button.Colors.PRIMARY,
                                           onClick: () => {
-                                              I(), (0, h.L)(h.Q.MODAL_DISMISSED, x);
+                                              I(), (0, S.L)(S.Q.MODAL_DISMISSED, x);
                                           },
-                                          children: S.intl.string(S.t.PsWbcn)
+                                          children: h.intl.string(h.t.PsWbcn)
                                       }),
                                       (0, a.jsx)(s.Text, {
                                           variant: 'text-xs/normal',
                                           color: 'header-secondary',
                                           className: D.footer,
-                                          children: S.intl.format(S.t.IzZxXV, {
+                                          children: h.intl.format(h.t.IzZxXV, {
                                               onClick: () => {
                                                   I(),
                                                       (0, d.X)(x),
@@ -120,7 +119,7 @@ function x(e) {
                                                                   guild: b
                                                               });
                                                       }),
-                                                      (0, h.L)(h.Q.MODAL_GUILD_SETTINGS_CLICKED, x);
+                                                      (0, S.L)(S.Q.MODAL_GUILD_SETTINGS_CLICKED, x);
                                               }
                                           })
                                       })

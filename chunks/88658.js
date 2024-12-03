@@ -15,7 +15,7 @@ t.d(n, {
         return m;
     },
     g0: function () {
-        return c;
+        return o;
     },
     gl: function () {
         return _;
@@ -26,7 +26,8 @@ t.d(n, {
     xH: function () {
         return C;
     }
-});
+}),
+    t(47120);
 var o,
     c,
     i = t(695346),
@@ -38,19 +39,19 @@ var l = t(981631),
 let u = 86400000 * l.eBq;
 function s() {
     let e = i.h2.getSetting();
-    return 0 === a.Z.totalUnavailableGuilds && (e = e.filter((e) => null != r.Z.getGuild(e))), e;
+    return 0 === a.Z.totalUnavailableGuilds && (e = e.filter((e) => null != r.Z.getGuild(e))), new Set(e);
 }
 function _() {
     let e = i.zA.getSetting();
-    return 0 === a.Z.totalUnavailableGuilds && (e = e.filter((e) => null != r.Z.getGuild(e))), e;
+    return 0 === a.Z.totalUnavailableGuilds && (e = e.filter((e) => null != r.Z.getGuild(e))), new Set(e);
 }
 function b() {
     let e = i.SE.getSetting();
-    return 0 === a.Z.totalUnavailableGuilds && (e = e.filter((e) => null != r.Z.getGuild(e))), e;
+    return 0 === a.Z.totalUnavailableGuilds && (e = e.filter((e) => null != r.Z.getGuild(e))), new Set(e);
 }
 function g() {
     let e = i.iH.getSetting();
-    return 0 === a.Z.totalUnavailableGuilds && (e = e.filter((e) => null != r.Z.getGuild(e))), e;
+    return 0 === a.Z.totalUnavailableGuilds && (e = e.filter((e) => null != r.Z.getGuild(e))), new Set(e);
 }
 function m(e) {
     return (e & l.HGf) === l.HGf
@@ -68,7 +69,7 @@ function m(e) {
 function f(e, n) {
     return !n.verified || (null != e && u > Date.now() - new Date(e.created_at).getTime());
 }
-((o = c || (c = {}))[(o.UNDECIDED = 0)] = 'UNDECIDED'), (o[(o.OPTIN = 1)] = 'OPTIN'), (o[(o.OPTOUT = 2)] = 'OPTOUT');
+((c = o || (o = {}))[(c.UNDECIDED = 0)] = 'UNDECIDED'), (c[(c.OPTIN = 1)] = 'OPTIN'), (c[(c.OPTOUT = 2)] = 'OPTOUT');
 let S = {
     0: void 0,
     1: !0,
