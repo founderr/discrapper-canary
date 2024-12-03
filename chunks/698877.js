@@ -1,35 +1,39 @@
 n.d(t, {
     O: function () {
-        return o;
+        return c;
     }
 });
 var i = n(200651),
     l = n(192379),
     r = n(864094),
-    a = n(871499),
-    s = n(388032);
-function o(e) {
+    a = n(411840),
+    s = n(871499),
+    o = n(388032);
+function c(e) {
     let t,
-        { hasPermission: n, streamActive: o, isSelfStream: c, centerButton: d, onMouseEnter: u, onMouseLeave: h, premiumGlow: p, buttonRef: m, ...f } = e,
-        g = d ? a.d : a.Z;
-    t = o ? (c ? s.intl.string(s.t.S5anIS) : s.intl.string(s.t.q3O3Jy)) : n ? s.intl.string(s.t.fjBNo6) : s.intl.string(s.t.uQn9Bw);
-    let { Component: C, events: x, play: _ } = (0, r.P)(o ? 'disable' : 'enable');
+        { hasPermission: n, streamActive: c, isSelfStream: d, centerButton: u, onMouseEnter: h, onMouseLeave: p, premiumGlow: m, buttonRef: f, ...g } = e,
+        { mode: C } = (0, a.Z)({ location: 'StreamButton' }),
+        x = u ? s.d : s.Z;
+    t = c ? (d ? o.intl.string(o.t.S5anIS) : o.intl.string(o.t.q3O3Jy)) : n ? o.intl.string(o.t.fjBNo6) : o.intl.string(o.t.uQn9Bw);
+    let { Component: v, events: _, play: I } = (0, r.P)(c ? 'disable' : 'enable');
     return (
-        l.useEffect(() => () => _(), [o, _]),
-        (0, i.jsx)(g, {
-            buttonRef: m,
+        l.useEffect(() => () => I(), [c, I]),
+        (0, i.jsx)(x, {
+            buttonRef: f,
             label: t,
             disabled: !n,
-            iconComponent: C,
-            isActive: o,
+            iconComponent: v,
+            isActive: c,
+            color: C === a.B.GroupedButtonsRedMic && c ? 'green' : void 0,
+            ignoreColorForCaret: C === a.B.GroupedButtonsRedMic && c,
             onMouseEnter: (e) => {
-                null == u || u(e), x.onMouseEnter();
+                null == h || h(e), _.onMouseEnter();
             },
             onMouseLeave: (e) => {
-                null == h || h(e), x.onMouseLeave();
+                null == p || p(e), _.onMouseLeave();
             },
-            premiumGlow: p,
-            ...f
+            premiumGlow: m,
+            ...g
         })
     );
 }

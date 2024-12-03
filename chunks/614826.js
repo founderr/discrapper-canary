@@ -5,10 +5,11 @@ e.exports = {
     buttonWithTextInnerContainer: 'buttonWithTextInnerContainer_e12b21',
     primaryButtonColor: 'primaryButtonColor_e12b21',
     buttonWithTextIcon: 'buttonWithTextIcon_e12b21',
-    raisedHandButtonIcon: 'raisedHandButtonIcon_e12b21',
-    raisedHandButtonIconActive: 'raisedHandButtonIconActive_e12b21',
     buttonSpacing: 'buttonSpacing_e12b21',
+    experimentButtonSpacing: 'experimentButtonSpacing_e12b21',
     eventPrompts: 'eventPrompts_e12b21',
     separator: 'separator_e12b21',
-    avControls: 'avControls_e12b21'
+    avControls: 'avControls_e12b21',
+    experimentWrapper: 'experimentWrapper_e12b21',
+    buttonSection: 'buttonSection_e12b21'
 };
