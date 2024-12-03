@@ -26,8 +26,8 @@ var i = n(200651),
     N = n(626421),
     S = n(118379),
     T = n(267161),
-    b = n(652515),
-    x = n(544978),
+    x = n(652515),
+    b = n(544978),
     A = n(540059),
     Z = n(724383),
     L = n(135864),
@@ -131,21 +131,21 @@ let eg = 'resizable-sidebar-width-2',
                 if ((null == e ? void 0 : e.type) === U.z.SERVER_SHOP)
                     switch (e.initialTab) {
                         case 'role_subscriptions':
-                            return x.y.GUILD_ROLE_SUBSCRIPTIONS;
+                            return b.y.GUILD_ROLE_SUBSCRIPTIONS;
                         case 'guild_products':
-                            return x.y.GUILD_PRODUCTS;
+                            return b.y.GUILD_PRODUCTS;
                         default:
                             return;
                     }
             }),
-            d = (0, b.C4)(r, 'channel_renderer');
+            d = (0, x.C4)(r, 'channel_renderer');
         if (null != r && null != l && (0, eh.AB)(l))
             switch (l) {
                 case eh.oC.ROLE_SUBSCRIPTIONS:
                     return d
                         ? (0, i.jsx)(eE, {
                               guildId: r,
-                              initialTab: x.y.GUILD_ROLE_SUBSCRIPTIONS
+                              initialTab: b.y.GUILD_ROLE_SUBSCRIPTIONS
                           })
                         : (0, i.jsx)(j.Z, { guildId: r });
                 case eh.oC.GUILD_SHOP:
@@ -193,7 +193,7 @@ let eg = 'resizable-sidebar-width-2',
         }
         return (0, i.jsx)(v.Z, {});
     },
-    eb = r.memo(function () {
+    ex = r.memo(function () {
         let { guildId: e, channelId: t } = (0, W.Z)(),
             n = (0, u.e7)([ee.Z], () => (null != t ? t : ee.Z.getChannelId(e)));
         return (function () {
@@ -214,7 +214,7 @@ let eg = 'resizable-sidebar-width-2',
                 )
               : (0, i.jsx)(eo.Z, {});
     }),
-    ex = (e) => (0, i.jsx)(eT, { ...e }),
+    eb = (e) => (0, i.jsx)(eT, { ...e }),
     eA = () => (0, i.jsx)(Z.Z, {}),
     eZ = (e) => {
         let { match: t } = e;
@@ -252,6 +252,8 @@ let eg = 'resizable-sidebar-width-2',
     ew = (e) => {
         let { match: t } = e;
         switch (t.params.feature) {
+            case 'friends':
+                return (0, i.jsx)(F.Z, { initialSection: eu.pJs.ONLINE });
             case 'addFriends':
                 return (0, i.jsx)(F.Z, { initialSection: eu.pJs.ADD_FRIEND });
             case 'pendingFriends':
@@ -274,6 +276,10 @@ let eg = 'resizable-sidebar-width-2',
                 return (0, i.jsx)(s.l_, { to: eu.Z5c.SETTINGS('authorized-apps') });
             case 'open-shop':
                 return (0, i.jsx)(s.l_, { to: eu.Z5c.COLLECTIBLES_SHOP_FULLSCREEN });
+            case 'editProfile':
+                return (0, i.jsx)(s.l_, { to: { pathname: eu.Z5c.SETTINGS('profile-customization') } });
+            case 'gift':
+                return (0, i.jsx)(s.l_, { to: { pathname: eu.Z5c.NITRO_HOME } });
             default:
                 return (0, i.jsx)(s.l_, { to: eu.Z5c.ME });
         }
@@ -325,17 +331,17 @@ function eU(e) {
         S = r.useCallback(() => {
             document.body.classList.add(ep.dragging);
         }, []),
-        b = r.useCallback((e) => {
+        x = r.useCallback((e) => {
             var t;
             document.body.classList.remove(ep.dragging), document.body.classList.remove(ep.draggingMin), document.body.classList.remove(ep.draggingMax), document.body.classList.remove(ep.collapsing), null === (t = v.current) || void 0 === t || t.style.setProperty('--custom-overdrag', '0px'), h.K.set(eg, e);
         }, []),
-        x = (0, f.Z)({
+        b = (0, f.Z)({
             minDimension: 264,
             maxDimension: 432,
             resizableDomNodeRef: v,
             onElementResize: N,
             onElementResizeStart: S,
-            onElementResizeEnd: b,
+            onElementResizeEnd: x,
             orientation: f.y.HORIZONTAL_RIGHT,
             throttleDuration: 0
         }),
@@ -372,14 +378,14 @@ function eU(e) {
                         }),
                     (0, i.jsx)(L, {
                         ...y,
-                        children: (0, i.jsx)(eb, {})
+                        children: (0, i.jsx)(ex, {})
                     }),
                     E
                         ? (0, i.jsx)(m.Clickable, {
                               onClick: Z,
                               'aria-label': 'Resize Sidebar',
                               className: ep.sidebarResizeHandle,
-                              onMouseDown: x
+                              onMouseDown: b
                           })
                         : null,
                     (0, i.jsx)(er.b, {}),
@@ -532,7 +538,7 @@ function eG() {
                                                     }),
                                                     (0, i.jsx)(I.Z, {
                                                         path: [eu.Z5c.CHANNEL_THREAD_VIEW(K.Hw.guildId(), K.Hw.channelId(), ':threadId', ':messageId?'), eu.Z5c.CHANNEL(eu.ME, K.Hw.channelId()), eu.Z5c.CHANNEL(K.Hw.guildId(), K.Hw.channelId({ optional: !0 }), ':messageId?')],
-                                                        render: ex,
+                                                        render: eb,
                                                         impressionName: o.ImpressionNames.GUILD_CHANNEL,
                                                         disableTrack: !0
                                                     }),
