@@ -26,8 +26,10 @@ e.exports = {
     zIndex1: 'zIndex1_a8b566',
     trialMarketingMargin: 'trialMarketingMargin_a8b566',
     whatsNewSectionBackground: 'whatsNewSectionBackground_a8b566',
+    whatsNewSectionBackgroundV2: 'whatsNewSectionBackgroundV2_a8b566',
     pdSparklesTop: 'pdSparklesTop_a8b566',
     pdSparklesBottom: 'pdSparklesBottom_a8b566',
     bottomOfPageVisibilitySensor: 'bottomOfPageVisibilitySensor_a8b566',
-    scroller: 'scroller_a8b566'
+    scroller: 'scroller_a8b566',
+    containerBackground: 'containerBackground_a8b566'
 };

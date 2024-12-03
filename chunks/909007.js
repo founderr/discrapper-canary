@@ -21,5 +21,7 @@ e.exports = {
     compactBoxOuterContainer: 'compactBoxOuterContainer_dbabb4',
     compactTextBox: 'compactTextBox_dbabb4',
     compactBoxHeader: 'compactBoxHeader_dbabb4',
-    leftSideArt: 'leftSideArt_dbabb4'
+    leftSideArt: 'leftSideArt_dbabb4',
+    whatsNewBoxButtonWhite: 'whatsNewBoxButtonWhite_dbabb4',
+    whatsNewBoxButtonBrand: 'whatsNewBoxButtonBrand_dbabb4'
 };

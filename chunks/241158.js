@@ -4,160 +4,158 @@ var i = n(200651),
     a = n(120356),
     s = n.n(a),
     l = n(392711),
-    o = n(481060),
-    c = n(70097),
-    d = n(626135),
-    u = n(526167),
-    g = n(409100),
-    m = n(831964),
-    f = n(981631),
-    p = n(869783),
-    _ = n(388032),
-    h = n(909007);
-let E = (e) => {
-    let { name: t, title: n, description: a, descriptionCta: _, previewImage: E, videoUrl: b, shouldLoadVideo: x, index: C, isCompact: v, onClick: T, isBestOfNitro: N } = e,
-        I = (0, u.rO)(),
+    o = n(780384),
+    c = n(481060),
+    d = n(410030),
+    u = n(70097),
+    g = n(626135),
+    m = n(526167),
+    f = n(831964),
+    p = n(981631),
+    _ = n(869783),
+    h = n(388032),
+    E = n(909007);
+let b = (e) => {
+    let { name: t, title: n, description: a, descriptionCta: h, previewImage: b, videoUrl: x, shouldLoadVideo: C, index: v, isCompact: T, onClick: N } = e,
+        I = (0, m.rO)(),
         S = r.useRef(null),
         [R, A] = r.useState(0),
         j = (function (e) {
             let t;
             switch (e) {
-                case m.dm.EMOJIS:
-                    t = h.emojisBackground;
+                case f.dm.EMOJIS:
+                    t = E.emojisBackground;
                     break;
-                case m.dm.REFERRAL_PROGRAM:
-                    t = h.referralProgramBackground;
+                case f.dm.REFERRAL_PROGRAM:
+                    t = E.referralProgramBackground;
                     break;
-                case m.dm.NO_LIMITS:
-                    t = h.noLimitsBackground;
+                case f.dm.NO_LIMITS:
+                    t = E.noLimitsBackground;
                     break;
-                case m.dm.NEW_APP_STYLES:
-                    t = h.newStylesBackground;
+                case f.dm.NEW_APP_STYLES:
+                    t = E.newStylesBackground;
                     break;
-                case m.dm.YOUR_SPACE:
-                    t = h.yourSpaceBackground;
+                case f.dm.YOUR_SPACE:
+                    t = E.yourSpaceBackground;
                     break;
-                case m.dm.SERVER_PROFILES:
-                    t = h.serverProfilesBackground;
+                case f.dm.SERVER_PROFILES:
+                    t = E.serverProfilesBackground;
                     break;
-                case m.dm.SHOW_YOUR_STYLE:
-                    t = h.yourStyleBackground;
+                case f.dm.SHOW_YOUR_STYLE:
+                    t = E.yourStyleBackground;
             }
             return t;
         })(t),
-        P = (0, l.debounce)(() => {
-            d.default.track(f.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
+        P = (0, d.ZP)(),
+        Z = (0, o.wj)(P),
+        B = Z ? c.ButtonColors.WHITE : c.ButtonColors.BRAND,
+        M = (0, l.debounce)(() => {
+            g.default.track(p.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
         }, 800),
-        Z = () => {
+        O = () => {
             null != S.current && ((S.current.currentTime = R), S.current.play());
         },
-        B = () => {
+        w = () => {
             null != S.current && (A(S.current.currentTime), S.current.pause());
         },
-        M = () =>
+        y = () =>
             (0, i.jsxs)('div', {
                 className: s()({
-                    [h.whatsNewTextBoxOuter]: !v,
-                    [h.compactTextBox]: v
+                    [E.whatsNewTextBoxOuter]: !T,
+                    [E.compactTextBox]: T
                 }),
                 children: [
-                    (0, i.jsx)(o.Heading, {
-                        variant: 'display-md',
+                    (0, i.jsx)(c.Heading, {
+                        variant: 'display-sm',
                         color: 'header-primary',
                         className: s()({
-                            [h.whatsNewBoxHeader]: !v,
-                            [h.compactBoxHeader]: v
+                            [E.whatsNewBoxHeader]: !T,
+                            [E.compactBoxHeader]: T
                         }),
                         children: n
                     }),
-                    (0, i.jsx)(o.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'text-normal',
-                        className: h.whatsNewBoxDescription,
+                    (0, i.jsx)(c.Text, {
+                        variant: 'text-md/medium',
+                        color: 'text-muted',
+                        className: E.whatsNewBoxDescription,
                         children: a
                     }),
-                    null != _ &&
-                        (null != T
-                            ? (0, i.jsx)(o.Button, {
-                                  className: h.whatsNewBoxButton,
-                                  onClick: () => {
-                                      P(), T();
-                                  },
-                                  children: _
-                              })
-                            : (0, i.jsx)(g.Z, {
-                                  className: h.whatsNewBoxButton,
-                                  onClick: P,
-                                  buttonText: _,
-                                  color: o.Button.Colors.BRAND,
-                                  look: o.Button.Looks.FILLED,
-                                  showIcon: !1
-                              }))
+                    null != h &&
+                        null != N &&
+                        (0, i.jsx)(c.Button, {
+                            look: c.ButtonLooks.OUTLINED,
+                            color: B,
+                            className: s()(E.whatsNewBoxButton, Z ? E.whatsNewBoxButtonWhite : E.whatsNewBoxButtonBrand),
+                            onClick: () => {
+                                M(), N();
+                            },
+                            children: h
+                        })
                 ]
             }),
-        O = (e) => {
+        k = (e) => {
             let { isLeft: t } = e;
             return (0, i.jsx)('div', {
                 className: s()({
-                    [h.whatsNewArtContainer]: !v,
-                    [h.compactBoxArtContainer]: v
+                    [E.whatsNewArtContainer]: !T,
+                    [E.compactBoxArtContainer]: T
                 }),
-                children: (0, i.jsx)(c.Z, {
+                children: (0, i.jsx)(u.Z, {
                     playsInline: !0,
-                    preload: x ? 'auto' : 'none',
+                    preload: C ? 'auto' : 'none',
                     muted: !0,
-                    poster: E,
+                    poster: b,
                     loop: !0,
                     className: s()({
-                        [h.perkBoxVideo]: !v,
-                        [h.leftSideArt]: t && !v,
-                        [h.compactBoxVideo]: v
+                        [E.perkBoxVideo]: !T,
+                        [E.leftSideArt]: t && !T,
+                        [E.compactBoxVideo]: T
                     }),
                     ref: S,
                     children: (0, i.jsx)('source', {
-                        src: b,
-                        type: I ? p.m.MP4 : p.m.WEBM
+                        src: x,
+                        type: I ? _.m.MP4 : _.m.WEBM
                     })
                 })
             });
         },
-        w = N ? C % 2 == 0 : C % 2 != 0;
+        L = v % 2 == 0;
     return (0, i.jsx)('div', {
         className: s()(j, {
-            [h.whatsNewBoxContainer]: !v,
-            [h.compactBoxContainer]: v
+            [E.whatsNewBoxContainer]: !T,
+            [E.compactBoxContainer]: T
         }),
-        onMouseEnter: Z,
-        onFocus: Z,
-        onBlur: B,
-        onMouseLeave: B,
-        children: w
+        onMouseEnter: O,
+        onFocus: O,
+        onBlur: w,
+        onMouseLeave: w,
+        children: L
             ? (0, i.jsxs)(i.Fragment, {
-                  children: [(0, i.jsx)(M, {}), (0, i.jsx)(O, { isLeft: w })]
+                  children: [(0, i.jsx)(y, {}), (0, i.jsx)(k, { isLeft: L })]
               })
             : (0, i.jsxs)(i.Fragment, {
-                  children: [(0, i.jsx)(O, { isLeft: w }), (0, i.jsx)(M, {})]
+                  children: [(0, i.jsx)(k, { isLeft: L }), (0, i.jsx)(y, {})]
               })
     });
 };
 t.Z = r.memo(function (e) {
     let { className: t, shouldLoadVideo: n, isBestOfNitro: r = !1 } = e,
-        a = Object.values((0, m.ZP)(r)),
-        l = r ? Object.values((0, m.__)()) : null;
+        a = Object.values((0, f.ZP)(r)),
+        l = r ? Object.values((0, f.__)()) : null;
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
-            className: s()(h.boxBackdrop, t),
+            className: s()(E.boxBackdrop, t),
             children: [
-                (0, i.jsx)(o.Heading, {
-                    className: h.whatsNewHeader,
-                    variant: 'heading-xxl/extrabold',
-                    children: r ? _.intl.string(_.t.EnzW2N) : _.intl.string(_.t.LRmNAg)
+                (0, i.jsx)(c.Heading, {
+                    className: E.whatsNewHeader,
+                    variant: 'display-md',
+                    color: 'header-primary',
+                    children: r ? h.intl.string(h.t.EnzW2N) : h.intl.string(h.t.LRmNAg)
                 }),
                 a.map((e, t) =>
                     (0, i.jsx)(
-                        E,
+                        b,
                         {
-                            isBestOfNitro: r,
                             shouldLoadVideo: n,
                             index: t,
                             ...e
@@ -167,12 +165,11 @@ t.Z = r.memo(function (e) {
                 ),
                 null != l &&
                     (0, i.jsx)('div', {
-                        className: h.compactBoxOuterContainer,
+                        className: E.compactBoxOuterContainer,
                         children: l.map((e, t) =>
                             (0, i.jsx)(
-                                E,
+                                b,
                                 {
-                                    isBestOfNitro: r,
                                     shouldLoadVideo: n,
                                     index: t,
                                     ...e
