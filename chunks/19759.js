@@ -29,7 +29,8 @@ let l = 360,
         devWidgetPosition: {
             x: 0,
             y: 0
-        }
+        },
+        sortedScreenKeys: []
     };
 class c extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
@@ -54,6 +55,9 @@ class c extends (r = i.ZP.DeviceSettingsStore) {
     }
     get devWidgetPosition() {
         return u.devWidgetPosition;
+    }
+    get sortedScreenKeys() {
+        return u.sortedScreenKeys;
     }
 }
 o(c, 'displayName', 'DevToolsSettingsStore'),
