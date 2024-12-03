@@ -28069,7 +28069,7 @@ div.popoutCloseButton_d523a2:hover {
     background: var(--custom-status-bubble-background);
     margin: 0 auto;
     padding: 8px 12px;
-    font-size: 12px;
+    font-size: medium;
     word-break: break-word;
     cursor: text;
     -webkit-user-select: text;
