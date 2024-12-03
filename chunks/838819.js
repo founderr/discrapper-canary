@@ -183,7 +183,7 @@ t.default = function (e) {
         { onClose: ep } = (0, M.Db)(),
         ef = (0, c.e7)([S.default], () => S.default.getCurrentUser()),
         eg = T.ZP.canUseCollectibles(ef),
-        { categories: eC, isFetchingCategories: ev, fetchCategoriesError: eb, fetchPurchasesError: ex, claimError: e_, refreshCategories: ek } = (0, Z.Z)(),
+        { categories: eC, isFetchingCategories: ev, fetchCategoriesError: eb, fetchPurchasesError: ex, claimError: e_, refreshCategories: ek } = (0, Z.ZP)(),
         eI = null !== (t = null != eb ? eb : ex) && void 0 !== t ? t : e_;
     (0, I.P)();
     let ej = (0, O.O)(eC),

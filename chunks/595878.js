@@ -19,13 +19,13 @@ var r = n(290031);
 function i(e) {
     let { location: t } = e,
         { enableNitroTenureRewardCard: n } = r.OW.useExperiment({ location: t }, { autoTrackExposure: !1 }),
-        { enabled: i } = r.Hd.useExperiment({ location: t }, { autoTrackExposure: !1 });
+        { enabled: i } = r.Hd.useExperiment({ location: t });
     return n || i;
 }
 function a(e) {
     let { location: t } = e,
         { enableNitroTenureRewardCard: n } = r.OW.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }),
-        { enabled: i } = r.Hd.getCurrentConfig({ location: t }, { autoTrackExposure: !1 });
+        { enabled: i } = r.Hd.getCurrentConfig({ location: t });
     return n || i;
 }
 function s(e) {
@@ -40,6 +40,6 @@ function o(e) {
 }
 function l(e) {
     let { location: t } = e,
-        { enabled: n } = r.Hd.useExperiment({ location: t }, { autoTrackExposure: !1 });
+        { enabled: n } = r.Hd.useExperiment({ location: t });
     return n;
 }
