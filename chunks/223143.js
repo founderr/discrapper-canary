@@ -1,8 +1,8 @@
 n.d(t, {
-    Z: function () {
+    ZP: function () {
         return d;
     },
-    c: function () {
+    c7: function () {
         return c;
     }
 }),
@@ -15,28 +15,29 @@ var r = n(192379),
     l = n(228624),
     u = n(267097);
 function c() {
-    let e = 'useFetchPurchases';
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+        t = 'useFetchPurchases';
     (0, a.j)({
-        location: e + ' auto on',
+        location: t + ' auto on',
         autoTrackExposure: !0
     }),
         (0, a.j)({
-            location: e + ' auto off',
+            location: t + ' auto off',
             autoTrackExposure: !1
         });
-    let t = (0, l.hv)('useFetchPurchases'),
-        [n, u, c, d, f, _] = (0, i.Wu)([o.Z], () => [o.Z.isFetching, o.Z.isClaiming, o.Z.fetchError, o.Z.claimError, o.Z.purchases, o.Z.hasPreviouslyFetched]);
+    let n = (0, l.hv)('useFetchPurchases'),
+        [u, c, d, f, _, p] = (0, i.Wu)([o.Z], () => [o.Z.isFetching, o.Z.isClaiming, o.Z.fetchError, o.Z.claimError, o.Z.purchases, o.Z.hasPreviouslyFetched]);
     return (
         (0, r.useEffect)(() => {
-            (0, s.qg)({ variantsReturnStyle: t });
-        }, [t]),
+            if (!0 !== e || !p || null != d) (0, s.qg)({ variantsReturnStyle: n });
+        }, [d, p, e, n]),
         {
-            isClaiming: u,
-            fetchPurchasesError: c,
-            claimError: d,
-            isFetching: n,
-            purchases: f,
-            hasPreviouslyFetched: _
+            isClaiming: c,
+            fetchPurchasesError: d,
+            claimError: f,
+            isFetching: u,
+            purchases: _,
+            hasPreviouslyFetched: p
         }
     );
 }
@@ -52,7 +53,7 @@ function d(e) {
             autoTrackExposure: !1
         });
     let { isFetching: r, categories: i, fetchCategoriesError: s, refreshCategories: o } = (0, u.Z)({ paymentGateway: t }),
-        { isClaiming: l, fetchPurchasesError: d, claimError: f, isFetching: _, purchases: p, hasPreviouslyFetched: h } = c();
+        { isClaiming: l, fetchPurchasesError: d, claimError: f, isFetching: _, purchases: p, hasPreviouslyFetched: h } = c(null == e ? void 0 : e.stalePurchasesOK);
     return {
         isFetching: r || _,
         isFetchingCategories: r,
