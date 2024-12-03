@@ -19,8 +19,8 @@ var i = t(200651),
     p = t(388032),
     h = t(189144);
 function v(e) {
-    let { user: n, currentUser: t, onClose: v, profileGuildId: g } = e,
-        { live: Z, recent: _, stream: j } = (0, a.Z)(n.id),
+    let { user: n, currentUser: t, onClose: v, profileGuildId: Z } = e,
+        { live: g, recent: _, stream: j } = (0, a.Z)(n.id),
         b = n.id === t.id,
         E = (0, s.wE)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
     return (
@@ -44,9 +44,9 @@ function v(e) {
                                 currentUser: t,
                                 stream: j,
                                 onClose: v,
-                                profileGuildId: g
+                                profileGuildId: Z
                             }),
-                        Z.map((e, l) =>
+                        g.map((e, l) =>
                             (0, i.jsx)(
                                 u.Z,
                                 {
@@ -54,7 +54,7 @@ function v(e) {
                                     currentUser: t,
                                     activity: e,
                                     onClose: v,
-                                    profileGuildId: g
+                                    profileGuildId: Z
                                 },
                                 'live-'.concat(l)
                             )
@@ -83,8 +83,7 @@ function v(e) {
                                 {
                                     user: n,
                                     entry: e,
-                                    onClose: v,
-                                    hideHeader: !0
+                                    onClose: v
                                 },
                                 e.id
                             )

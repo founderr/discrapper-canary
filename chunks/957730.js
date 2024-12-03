@@ -288,7 +288,8 @@ let w = c.Z.RULES,
             ...w.timestamp,
             parse() {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                return { content: w.timestamp.parse(...t).formatted };
+                let r = w.timestamp.parse(...t);
+                return 'text' === r.type ? { content: r.content } : { content: r.formatted };
             }
         },
         text: { ...P }
