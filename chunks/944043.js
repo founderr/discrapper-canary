@@ -15,60 +15,58 @@ var i = n(793030),
     d = n(388032),
     f = n(267895);
 function _(e) {
-    let { user: t, nickname: n, hideAction: _, truncateLongName: p } = e,
+    let { user: t } = e,
         {
-            isPendingIncoming: h,
-            isBlocked: m,
-            isIgnored: g
+            isPendingIncoming: n,
+            isBlocked: _,
+            isIgnored: p
         } = (0, a.cj)([l.Z], () => ({
             isPendingIncoming: l.Z.getRelationshipType(t.id) === c.OGo.PENDING_INCOMING,
             isBlocked: l.Z.isBlocked(t.id),
             isIgnored: l.Z.isIgnored(t.id)
         }));
-    return m || (g && !h)
+    return _ || (p && !n)
         ? (0, r.jsxs)(u.Z.Overlay, {
               className: f.container,
               children: [
-                  m &&
+                  _ &&
                       (0, r.jsx)(i.xv, {
                           variant: 'text-sm/semibold',
                           color: 'header-secondary',
-                          children: d.intl.format(d.t.ua2rDA, { username: n })
+                          children: d.intl.string(d.t['oC/fU1'])
                       }),
-                  g &&
+                  p &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(i.xv, {
                                   variant: 'text-sm/semibold',
                                   color: 'header-secondary',
-                                  lineClamp: p ? 1 : void 0,
-                                  children: d.intl.format(d.t.etDfwM, { username: n })
+                                  children: d.intl.string(d.t.HXz5Ag)
                               }),
-                              !_ &&
-                                  (0, r.jsxs)(r.Fragment, {
-                                      children: [
-                                          (0, r.jsx)(i.xv, {
-                                              variant: 'text-sm/semibold',
-                                              color: 'header-secondary',
-                                              children: '\u2022'
-                                          }),
-                                          (0, r.jsx)(i.xv, {
-                                              variant: 'text-sm/semibold',
-                                              color: 'header-secondary',
-                                              children: d.intl.format(d.t.PrtAq6, {
-                                                  unignoreHook: (e, n) =>
-                                                      (0, r.jsx)(
-                                                          s.Anchor,
-                                                          {
-                                                              onClick: () => o.Z.unignoreUser(t.id, 'UserProfileRemediatedNotice'),
-                                                              children: e
-                                                          },
-                                                          n
-                                                      )
-                                              })
+                              (0, r.jsxs)(r.Fragment, {
+                                  children: [
+                                      (0, r.jsx)(i.xv, {
+                                          variant: 'text-sm/semibold',
+                                          color: 'header-secondary',
+                                          children: '\u2022'
+                                      }),
+                                      (0, r.jsx)(i.xv, {
+                                          variant: 'text-sm/semibold',
+                                          color: 'header-secondary',
+                                          children: d.intl.format(d.t.PrtAq6, {
+                                              unignoreHook: (e, n) =>
+                                                  (0, r.jsx)(
+                                                      s.Anchor,
+                                                      {
+                                                          onClick: () => o.Z.unignoreUser(t.id, 'UserProfileRemediatedNotice'),
+                                                          children: e
+                                                      },
+                                                      n
+                                                  )
                                           })
-                                      ]
-                                  })
+                                      })
+                                  ]
+                              })
                           ]
                       })
               ]

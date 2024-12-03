@@ -77,12 +77,7 @@ function R(e) {
                         channelId: x
                     })
                 }),
-            (0, r.jsx)(g.Z, {
-                user: t,
-                nickname: P,
-                hideAction: !0,
-                truncateLongName: !0
-            }),
+            (0, r.jsx)(g.Z, { user: t }),
             !U &&
                 (0, r.jsx)(y.Z, {
                     user: t,

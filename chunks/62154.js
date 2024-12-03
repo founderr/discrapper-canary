@@ -61,10 +61,7 @@ function _(e) {
                         className: Z.friendRequestBanner
                     })
                 }),
-            (0, i.jsx)(m.Z, {
-                user: t,
-                nickname: C
-            }),
+            (0, i.jsx)(m.Z, { user: t }),
             A &&
                 L &&
                 (0, i.jsx)(d.Z, {

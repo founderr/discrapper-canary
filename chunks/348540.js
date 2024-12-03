@@ -33,8 +33,7 @@ function Z(e) {
         M = (0, l.e7)([c.Z], () => {
             var e;
             return null === (e = c.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
-        }),
-        R = o.ZP.useName(T.guild_id, T.id, t);
+        });
     return (0, i.jsxs)('div', {
         className: S.body,
         children: [
@@ -67,11 +66,7 @@ function Z(e) {
                         channelId: T.id
                     })
                 }),
-            (0, i.jsx)(C.Z, {
-                user: t,
-                nickname: R,
-                truncateLongName: !0
-            }),
+            (0, i.jsx)(C.Z, { user: t }),
             t.isProvisional && (0, i.jsx)(r.Z, { look: 'profile' }),
             (0, i.jsx)(p.Z, {
                 user: t,
