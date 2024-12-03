@@ -1,48 +1,48 @@
 n.d(t, {
     Hr: function () {
-        return v;
-    },
-    Hz: function () {
-        return j;
-    },
-    To: function () {
-        return R;
-    },
-    XG: function () {
-        return T;
-    },
-    _N: function () {
-        return p;
-    },
-    ad: function () {
-        return I;
-    },
-    bj: function () {
-        return A;
-    },
-    el: function () {
         return C;
     },
-    hS: function () {
-        return _;
+    Hz: function () {
+        return T;
     },
-    lq: function () {
-        return b;
-    },
-    mM: function () {
-        return S;
-    },
-    oo: function () {
+    To: function () {
         return E;
     },
-    q6: function () {
-        return Z;
-    },
-    r2: function () {
+    XG: function () {
         return N;
     },
-    vR: function () {
+    _N: function () {
+        return x;
+    },
+    ad: function () {
+        return _;
+    },
+    bj: function () {
+        return Z;
+    },
+    el: function () {
         return f;
+    },
+    hS: function () {
+        return v;
+    },
+    lq: function () {
+        return j;
+    },
+    mM: function () {
+        return b;
+    },
+    oo: function () {
+        return S;
+    },
+    q6: function () {
+        return y;
+    },
+    r2: function () {
+        return I;
+    },
+    vR: function () {
+        return p;
     }
 }),
     n(390547);
@@ -53,48 +53,47 @@ var i = n(392711),
     a = n(668781),
     o = n(563534),
     c = n(734893),
-    d = n(621923),
-    u = n(626135),
-    m = n(960048),
-    h = n(969632),
-    g = n(981631),
-    x = n(388032);
-function p(e) {
+    d = n(626135),
+    u = n(960048),
+    m = n(969632),
+    h = n(981631),
+    g = n(388032);
+function x(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_UPDATE_WELCOME_MESSAGE',
         welcomeMessage: e
     });
 }
-function f(e) {
+function p(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_ADD_NEW_MEMBER_ACTION',
         action: e
     });
 }
-function C(e, t) {
+function f(e, t) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_UPDATE_NEW_MEMBER_ACTION',
         channelId: e,
         action: t
     });
 }
-function v(e) {
+function C(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_DELETE_NEW_MEMBER_ACTION',
         channelId: e
     });
 }
-function _(e) {
+function v(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_REORDER_NEW_MEMBER_ACTION',
         actions: e
     });
 }
-async function I(e, t, n, i) {
+async function _(e, t, n, i) {
     if (!i) return Promise.resolve();
     try {
         let i = await l.tn.patch({
-                url: g.ANM.NEW_MEMBER_ACTION(e, t),
+                url: h.ANM.NEW_MEMBER_ACTION(e, t),
                 body: { icon: n },
                 oldFormErrors: !0,
                 rejectWithError: !1
@@ -113,43 +112,43 @@ async function I(e, t, n, i) {
         let e = r().flatMap(null !== (o = t.body) && void 0 !== o ? o : {}, (e) => e);
         return (
             a.Z.show({
-                title: x.intl.string(x.t['6nCZyM']),
-                body: x.intl.format(x.t.dYCPDw, { errorMessage: e.join(', ') })
+                title: g.intl.string(g.t['6nCZyM']),
+                body: g.intl.format(g.t.dYCPDw, { errorMessage: e.join(', ') })
             }),
-            m.Z.addBreadcrumb({ message: 'Error updating new member action icon' }),
+            u.Z.addBreadcrumb({ message: 'Error updating new member action icon' }),
             Promise.reject()
         );
     }
 }
-function N(e) {
+function I(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_ADD_RESOURCE_CHANNEL',
         resourceChannel: e
     });
 }
-function T(e, t) {
+function N(e, t) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_UPDATE_RESOURCE_CHANNEL',
         channelId: e,
         resourceChannel: t
     });
 }
-function j(e) {
+function T(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_DELETE_RESOURCE_CHANNEL',
         resourceChannelId: e
     });
 }
-function b(e) {
+function j(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_REORDER_RESOURCE_CHANNEL',
         resourceChannels: e
     });
 }
-async function S(e, t, n) {
+async function b(e, t, n) {
     try {
         let i = await l.tn.put({
-                url: g.ANM.RESOURCE_CHANNEL(e, t),
+                url: h.ANM.RESOURCE_CHANNEL(e, t),
                 body: { icon: n },
                 oldFormErrors: !0,
                 rejectWithError: !1
@@ -167,30 +166,30 @@ async function S(e, t, n) {
         var i;
         let e = r().flatMap(null !== (i = t.body) && void 0 !== i ? i : {}, (e) => e);
         a.Z.show({
-            title: x.intl.string(x.t['6nCZyM']),
-            body: x.intl.format(x.t.dYCPDw, { errorMessage: e.join(', ') })
+            title: g.intl.string(g.t['6nCZyM']),
+            body: g.intl.format(g.t.dYCPDw, { errorMessage: e.join(', ') })
         });
     }
 }
-function E(e, t) {
+function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    if (!n && !h.Z.hasChanges()) return Promise.resolve();
-    let { serverGuideOptional: i } = (0, d.FJ)(e);
-    return (!i || o.Z.getEnabled(e)) && !(0, c.uo)(t)
-        ? (a.Z.show({
-              title: x.intl.string(x.t['6nCZyM']),
-              body: x.intl.string(x.t.JuhUTU)
-          }),
-          m.Z.addBreadcrumb({ message: 'Error saving home settings' }),
-          Promise.reject())
-        : (!i && null != t && (t.enabled = !0), y(e, t));
+    return n || m.Z.hasChanges()
+        ? o.Z.getEnabled(e) && !(0, c.uo)(t)
+            ? (a.Z.show({
+                  title: g.intl.string(g.t['6nCZyM']),
+                  body: g.intl.string(g.t.JuhUTU)
+              }),
+              u.Z.addBreadcrumb({ message: 'Error saving home settings' }),
+              Promise.reject())
+            : R(e, t)
+        : Promise.resolve();
 }
-function R(e, t) {
+function E(e, t) {
     let n = o.Z.getSettings(e);
     if (t && !(0, c.uo)(n)) {
         a.Z.show({
-            title: x.intl.string(x.t['6nCZyM']),
-            body: x.intl.string(x.t.JuhUTU)
+            title: g.intl.string(g.t['6nCZyM']),
+            body: g.intl.string(g.t.JuhUTU)
         });
         return;
     }
@@ -200,18 +199,18 @@ function R(e, t) {
             guildId: e,
             enabled: t
         }),
-        y(e, {
+        R(e, {
             ...n,
             enabled: t
         })
     );
 }
-async function y(e, t) {
-    var n, i, o, d, m, h, p, f, C;
+async function R(e, t) {
+    var n, i, o, u, m, x, p, f, C;
     s.Z.dispatch({ type: 'GUILD_HOME_SETTINGS_UPDATE_START' });
     try {
         let r = await l.tn.put({
-                url: g.ANM.GUILD_HOME_SETTINGS(e),
+                url: h.ANM.GUILD_HOME_SETTINGS(e),
                 body: (0, c.HH)(e, t),
                 oldFormErrors: !0,
                 rejectWithError: !1
@@ -223,11 +222,11 @@ async function y(e, t) {
                 guildId: e,
                 homeSettings: a
             }),
-            u.default.track(g.rMx.GUILD_SETTINGS_GUIDE_UPDATED, {
+            d.default.track(h.rMx.GUILD_SETTINGS_GUIDE_UPDATED, {
                 guild_id: e,
-                welcome_message_author_id: (null !== (d = null == a ? void 0 : null === (n = a.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) && void 0 !== d ? d : [])[0],
+                welcome_message_author_id: (null !== (u = null == a ? void 0 : null === (n = a.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) && void 0 !== u ? u : [])[0],
                 welcome_message_length: null !== (m = null == a ? void 0 : null === (o = a.welcomeMessage) || void 0 === o ? void 0 : null === (i = o.message) || void 0 === i ? void 0 : i.length) && void 0 !== m ? m : 0,
-                member_action_channel_ids: (null !== (h = null == a ? void 0 : a.newMemberActions) && void 0 !== h ? h : []).map((e) => e.channelId),
+                member_action_channel_ids: (null !== (x = null == a ? void 0 : a.newMemberActions) && void 0 !== x ? x : []).map((e) => e.channelId),
                 member_action_channel_actions: (null !== (p = null == a ? void 0 : a.newMemberActions) && void 0 !== p ? p : []).map((e) => e.actionType),
                 resource_channel_ids: (null !== (f = null == a ? void 0 : a.resourceChannels) && void 0 !== f ? f : []).map((e) => e.channelId),
                 enabled: null == a ? void 0 : a.enabled
@@ -238,12 +237,12 @@ async function y(e, t) {
         let e = r().flatMap(null !== (C = t.body) && void 0 !== C ? C : {}, (e) => e);
         s.Z.dispatch({ type: 'GUILD_HOME_SETTINGS_UPDATE_FAIL' }),
             a.Z.show({
-                title: x.intl.string(x.t['6nCZyM']),
-                body: x.intl.format(x.t.dYCPDw, { errorMessage: e.join(', ') })
+                title: g.intl.string(g.t['6nCZyM']),
+                body: g.intl.format(g.t.dYCPDw, { errorMessage: e.join(', ') })
             });
     }
 }
-function Z(e, t) {
+function y(e, t) {
     null != e &&
         s.Z.dispatch({
             type: 'GUILD_SETTINGS_ONBOARDING_DISMISS_RESOURCE_CHANNEL_SUGGESTION',
@@ -251,6 +250,6 @@ function Z(e, t) {
             channelIds: t
         });
 }
-function A() {
+function Z() {
     s.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESET' });
 }

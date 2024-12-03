@@ -1,21 +1,21 @@
 t.d(n, {
     $K: function () {
-        return v;
+        return _;
     },
     IG: function () {
-        return j;
-    },
-    Nb: function () {
-        return p;
-    },
-    Ts: function () {
         return C;
     },
+    Nb: function () {
+        return v;
+    },
+    Ts: function () {
+        return p;
+    },
     Wy: function () {
-        return D;
+        return j;
     },
     di: function () {
-        return O;
+        return D;
     }
 }),
     t(47120);
@@ -26,51 +26,50 @@ var i = t(570140),
     a = t(819553),
     o = t(637853),
     c = t(17181),
-    d = t(621923),
-    u = t(962086),
-    m = t(225675),
-    I = t(592125),
-    h = t(430824),
-    N = t(823379),
-    g = t(434404),
-    T = t(889369),
-    f = t(570961),
-    S = t(84658),
-    x = t(176505),
-    E = t(290511),
-    _ = t(388032);
-function v(e) {
+    d = t(962086),
+    u = t(225675),
+    m = t(592125),
+    I = t(430824),
+    h = t(823379),
+    N = t(434404),
+    g = t(889369),
+    T = t(570961),
+    f = t(84658),
+    S = t(176505),
+    x = t(290511),
+    E = t(388032);
+function _(e) {
     i.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_STEP',
         step: e
     });
 }
-function p(e) {
+function v(e) {
     null != e &&
         i.Z.dispatch({
             type: 'GUILD_SETTINGS_ONBOARDING_EDUCATION_UPSELL_DISMISSED',
             upsellType: e
         });
 }
-async function C(e, n) {
+async function p(e, n) {
     let t = s.Z.getEnabled(e),
-        a = Array.from(T.Z.editedDefaultChannelIds).filter((e) => null != I.Z.getChannel(e)),
+        a = Array.from(g.Z.editedDefaultChannelIds).filter((e) => null != m.Z.getChannel(e)),
         [c, d] = (0, o.d9)(e, [...a]);
-    if (t && n === E.Un.ONBOARDING_DEFAULT && (d.length < E.md || c.length < E.X)) {
+    if (t && n === x.Un.ONBOARDING_DEFAULT && (d.length < x.md || c.length < x.X)) {
         l.Z.show({
-            title: _.intl.string(_.t.iLdiqa),
-            body: _.intl.string(_.t.JOT74e)
+            title: E.intl.string(E.t.iLdiqa),
+            body: E.intl.string(E.t.JOT74e)
         });
         return;
     }
     try {
-        await (0, f.n_)(e, { mode: n });
+        await (0, T.n_)(e, { mode: n });
     } catch (t) {
         var u;
         let { fieldName: e, error: n } = null !== (u = new r.Z(t).getAnyErrorMessageAndField()) && void 0 !== u ? u : {};
         l.Z.show({
-            title: _.intl.string(_.t.iLdiqa),
-            body: [e, n].filter(N.lm).join(': ')
+            title: E.intl.string(E.t.iLdiqa),
+            body: [e, n].filter(h.lm).join(': ')
         });
     }
     i.Z.dispatch({
@@ -79,34 +78,20 @@ async function C(e, n) {
         mode: n
     });
 }
+function C(e, n) {
+    let t = f.xh.findIndex((e) => e === n);
+    if (-1 !== t && t !== f.xh.length - 1) _(f.xh[t + 1]);
+}
 function j(e, n) {
-    let { homeSettingsEnabled: t } = (0, d.l6)(e),
-        i = S.xh.findIndex((e) => e === n);
-    if (-1 !== i && i !== S.xh.length - 1) {
-        if (!t && S.xh[i + 1] === S.PG.HOME_SETTINGS) {
-            v(S.xh[i + 2]);
-            return;
-        }
-        v(S.xh[i + 1]);
-    }
+    let t = f.xh.findIndex((e) => e === n);
+    if (-1 !== t && 0 !== t) _(f.xh[t - 1]);
 }
-function D(e, n) {
-    let { homeSettingsEnabled: t } = (0, d.l6)(e),
-        i = S.xh.findIndex((e) => e === n);
-    if (-1 !== i && 0 !== i) {
-        if (!t && S.xh[i - 1] === S.PG.HOME_SETTINGS) {
-            v(S.xh[i - 2]);
-            return;
-        }
-        v(S.xh[i - 1]);
-    }
-}
-async function O(e) {
-    let n = h.Z.getGuild(e);
+async function D(e) {
+    let n = I.Z.getGuild(e);
     null != n &&
-        (g.Z.close(),
-        (0, u.iD)(n.id, {
-            type: m.z.NEW_MEMBER,
+        (N.Z.close(),
+        (0, d.iD)(n.id, {
+            type: u.z.NEW_MEMBER,
             roles: {},
             optInChannels: new Set(),
             optInEnabled: !1,
@@ -122,6 +107,6 @@ async function O(e) {
         await (0, c.default)({
             guildId: n.id,
             isPreview: !0,
-            returnChannelId: x.oC.GUILD_HOME
+            returnChannelId: S.oC.GUILD_HOME
         }));
 }
