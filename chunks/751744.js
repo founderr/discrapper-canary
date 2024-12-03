@@ -1,118 +1,137 @@
-e.r(n);
-var i = e(200651),
-    o = e(192379),
-    r = e(442837),
-    s = e(481060),
-    l = e(955522),
-    c = e(138201),
-    a = e(103879),
-    d = e(236289),
-    h = e(853178),
-    u = e(800530),
-    p = e(388032),
-    g = e(177872);
-let x = [
+n.r(e);
+var i = n(200651),
+    o = n(192379),
+    s = n(442837),
+    l = n(481060),
+    r = n(955522),
+    a = n(138201),
+    c = n(103879),
+    d = n(236289),
+    h = n(853178),
+    u = n(800530),
+    x = n(388032),
+    g = n(177872);
+let m = [
     {
-        title: p.intl.string(p.t['1+E7LC']),
-        description: p.intl.string(p.t.BXiat7),
-        icon: s.CircleCheckIcon
+        title: x.intl.string(x.t['1+E7LC']),
+        description: x.intl.string(x.t.BXiat7)
     },
     {
-        title: p.intl.string(p.t.iMQXtL),
-        description: p.intl.string(p.t.oQ0vws),
-        icon: s.CircleCheckIcon
+        title: x.intl.string(x.t.iMQXtL),
+        description: x.intl.string(x.t.oQ0vws)
     },
     {
-        title: p.intl.string(p.t['oY/z1d']),
-        description: p.intl.string(p.t.wtj02d),
-        icon: s.CircleInformationIcon
+        title: x.intl.string(x.t['oY/z1d']),
+        description: x.intl.string(x.t.wtj02d)
     }
 ];
-n.default = function (t) {
-    let { onClose: n, transitionState: e } = t,
-        b = (0, r.e7)([d.Z], () => d.Z.getAgeVerificationWebviewUrl()),
-        C = (0, r.e7)([d.Z], () => d.Z.getIsLoadingAgeVerification()),
-        f = o.useCallback(() => {
-            n(), h.Z.close();
-        }, [n]),
+e.default = function (t) {
+    let { onClose: e, transitionState: n } = t,
+        p = (0, s.e7)([d.Z], () => d.Z.getAgeVerificationWebviewUrl()),
+        b = (0, s.e7)([d.Z], () => d.Z.getIsLoadingAgeVerification()),
         j = o.useCallback(() => {
-            f();
-        }, [f]);
+            e(), h.Z.close();
+        }, [e]),
+        N = o.useCallback(() => {
+            j();
+        }, [j]);
     return (
         o.useEffect(() => {
-            '' !== b &&
-                (0, l.F)({
-                    webviewUrl: b,
-                    onComplete: j
+            '' !== p &&
+                (0, r.F)({
+                    webviewUrl: p,
+                    onComplete: N
                 });
-        }, [b, j]),
-        (0, i.jsxs)(s.ModalRoot, {
-            transitionState: e,
+        }, [p, N]),
+        (0, i.jsxs)(l.ModalRoot, {
+            transitionState: n,
             className: g.root,
             children: [
-                (0, i.jsxs)(s.ModalContent, {
+                (0, i.jsxs)(l.ModalContent, {
                     className: g.content,
                     children: [
                         (0, i.jsxs)('div', {
                             className: g.header,
                             children: [
-                                (0, i.jsx)(s.Heading, {
+                                (0, i.jsx)(l.Heading, {
                                     variant: 'heading-xl/bold',
-                                    children: p.intl.string(p.t['9SDLnp'])
+                                    children: x.intl.string(x.t['9SDLnp'])
                                 }),
-                                (0, i.jsx)(s.Heading, {
+                                (0, i.jsx)(l.Heading, {
                                     variant: 'heading-md/normal',
-                                    children: p.intl.string(p.t['yvx///'])
+                                    color: 'header-secondary',
+                                    children: x.intl.string(x.t['yvx///'])
                                 })
                             ]
                         }),
-                        (0, i.jsx)('div', {
-                            className: g.table,
-                            children: x.map((t, n) => {
-                                let { title: e, icon: o, description: r } = t;
-                                return (0, i.jsx)(
-                                    c.Z,
-                                    {
-                                        title: e,
-                                        description: r,
-                                        icon: o
-                                    },
-                                    n
-                                );
-                            })
+                        (0, i.jsxs)('div', {
+                            className: g.listContent,
+                            children: [
+                                (0, i.jsx)('div', {
+                                    className: g.table,
+                                    children: m.map((t, e) => {
+                                        let { title: n, description: o } = t;
+                                        return (0, i.jsx)(
+                                            a.Z,
+                                            {
+                                                title: n,
+                                                description: o,
+                                                index: e,
+                                                listType: 'numbered',
+                                                titleVariant: 'text-md/medium'
+                                            },
+                                            e
+                                        );
+                                    })
+                                }),
+                                (0, i.jsx)(l.Anchor, {
+                                    href: u.sQ.TOS_LINK,
+                                    children: (0, i.jsx)(l.Heading, {
+                                        variant: 'heading-sm/medium',
+                                        color: 'text-link',
+                                        children: x.intl.string(x.t['0WIC4O'])
+                                    })
+                                })
+                            ]
                         }),
                         (0, i.jsxs)('div', {
                             className: g.anotherOption,
                             children: [
-                                (0, i.jsx)(s.Text, {
+                                (0, i.jsx)(l.Text, {
                                     variant: 'text-sm/semibold',
                                     className: g.optionEyebrow,
-                                    children: p.intl.string(p.t.WPwp1d)
+                                    color: 'header-secondary',
+                                    children: x.intl.string(x.t.WPwp1d)
                                 }),
-                                (0, i.jsx)(c.Z, {
-                                    title: p.intl.string(p.t.N9WJMD),
-                                    description: p.intl.string(p.t['NHq38/']),
-                                    buttonText: p.intl.string(p.t['9iy4lJ']),
-                                    buttonColor: s.Button.Colors.PRIMARY,
-                                    onButtonPress: () => window.open(u.sQ.AGE_VERIFICATION_LINK, '_blank')
+                                (0, i.jsx)('div', {
+                                    className: g.table,
+                                    children: (0, i.jsx)(a.Z, {
+                                        title: x.intl.string(x.t.N9WJMD),
+                                        description: x.intl.string(x.t['NHq38/']),
+                                        buttonText: x.intl.string(x.t['9iy4lJ']),
+                                        buttonColor: l.Button.Colors.PRIMARY,
+                                        titleVariant: 'text-md/medium',
+                                        onButtonPress: () => window.open(u.sQ.AGE_VERIFICATION_LINK, '_blank')
+                                    })
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, i.jsxs)(s.ModalFooter, {
+                (0, i.jsxs)(l.ModalFooter, {
                     className: g.footer,
                     children: [
-                        (0, i.jsx)(s.Button, {
-                            onClick: a.FN,
-                            submitting: C,
-                            children: p.intl.string(p.t['54b8V1'])
+                        (0, i.jsx)(l.Button, {
+                            onClick: c.FN,
+                            submitting: b,
+                            children: x.intl.string(x.t['54b8V1'])
                         }),
-                        (0, i.jsx)(s.Button, {
-                            color: s.Button.Colors.TRANSPARENT,
-                            look: s.Button.Looks.BLANK,
-                            onClick: f,
-                            children: p.intl.string(p.t.dKacJy)
+                        (0, i.jsx)(l.Button, {
+                            color: l.Button.Colors.TRANSPARENT,
+                            look: l.Button.Looks.BLANK,
+                            onClick: j,
+                            className: g.cancelButton,
+                            children: x.intl.string(x.t.dKacJy)
                         })
                     ]
                 })

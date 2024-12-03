@@ -5,5 +5,7 @@ t.exports = {
     root: 'root_e4c51c',
     table: 'table_e4c51c',
     anotherOption: 'anotherOption_e4c51c',
-    optionEyebrow: 'optionEyebrow_e4c51c'
+    optionEyebrow: 'optionEyebrow_e4c51c',
+    cancelButton: 'cancelButton_e4c51c',
+    listContent: 'listContent_e4c51c'
 };
