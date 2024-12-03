@@ -51,8 +51,8 @@ n.Z = r.memo(function (e) {
         ),
         b = (0, r.useCallback)(
             (e) => {
-                if (!t || 0 !== e.button) {
-                    null == a || a(e);
+                if (!t) {
+                    0 === e.button && (null == a || a(e));
                     return;
                 }
                 (e.clientX - _.x) ** 2 + (e.clientY - _.y) ** 2 < 400 && (null == a || a(e)), x(!1);

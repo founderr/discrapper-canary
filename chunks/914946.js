@@ -148,7 +148,7 @@ function G(e, t) {
 function B(e) {
     let t = h.Z.parseToAST(e.content, !0, { channelId: e.channel_id }).map(w),
         n = _.Z.getChannel(e.channel_id),
-        i = new f.Z(e.author),
+        i = null != e.author ? new f.Z(e.author) : void 0,
         r = null != e.author ? (0, m.ij)(i, n) : void 0;
     return {
         id: e.id,
@@ -166,7 +166,7 @@ function B(e) {
         mention_roles: e.mention_roles || e.mentionRoles,
         embeds: e.embeds,
         attachments: e.attachments,
-        author: (0, L.Z)(i),
+        author: null != i ? (0, L.Z)(i) : void 0,
         pinned: e.pinned,
         type: e.type
     };

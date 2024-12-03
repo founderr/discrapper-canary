@@ -21,14 +21,14 @@ var i = n(200651),
     g = n(590293),
     C = n(970731),
     x = n(560688),
-    _ = n(173507),
-    v = n(523746),
+    v = n(173507),
+    _ = n(523746),
     I = n(819640),
     E = n(131951),
     b = n(699516),
     N = n(594174),
-    S = n(979651),
-    Z = n(585483),
+    Z = n(979651),
+    S = n(585483),
     T = n(63063),
     j = n(665149),
     A = n(981631),
@@ -51,10 +51,10 @@ function L(e, t, n) {
 }
 class k extends l.PureComponent {
     componentDidMount() {
-        Z.S.subscribe(A.CkL.CALL_START, this.handleVoiceClick);
+        S.S.subscribe(A.CkL.CALL_START, this.handleVoiceClick);
     }
     componentWillUnmount() {
-        Z.S.unsubscribe(A.CkL.CALL_START, this.handleVoiceClick);
+        S.S.unsubscribe(A.CkL.CALL_START, this.handleVoiceClick);
     }
     renderVideoCallButton() {
         let e, t;
@@ -143,7 +143,7 @@ class k extends l.PureComponent {
                 let { channel: n, notFriend: i, appContext: l } = this.props,
                     r = i ? n.getRecipientId() : null,
                     a = () => o.Z.call(n.id, t, !i && !n.isManaged() && !(null == e ? void 0 : e.shiftKey), r);
-                t ? (0, _.Z)(a, l) : a();
+                t ? (0, v.Z)(a, l) : a();
             }),
             L(this, 'handleJoinCall', (e) => {
                 c.default.selectVoiceChannel(this.props.channel.id, e);
@@ -159,7 +159,7 @@ class k extends l.PureComponent {
             }),
             L(this, 'handleJoinVideoCall', () => {
                 let { appContext: e } = this.props;
-                (0, _.Z)(() => this.handleJoinCall(!0), e);
+                (0, v.Z)(() => this.handleJoinCall(!0), e);
             }),
             L(this, 'handleBrowserNotSupported', () => {
                 (0, x.Z)();
@@ -171,18 +171,18 @@ function O(e) {
     let { channel: n } = e,
         s = (0, g.Z)(),
         o = (0, r.e7)([p.Z], () => p.Z.getMode(n.id)),
-        c = (0, r.e7)([S.Z], () => S.Z.isInChannel(n.id)),
+        c = (0, r.e7)([Z.Z], () => Z.Z.isInChannel(n.id)),
         m = (0, r.e7)([u.Z], () => u.Z.useReducedMotion),
-        { callActive: f, callUnavailable: C } = (0, r.cj)([v.Z], () => ({
-            callActive: v.Z.isCallActive(n.id),
-            callUnavailable: v.Z.isCallUnavailable(n.id)
+        { callActive: f, callUnavailable: C } = (0, r.cj)([_.Z], () => ({
+            callActive: _.Z.isCallActive(n.id),
+            callUnavailable: _.Z.isCallUnavailable(n.id)
         })),
         x = n.getRecipientId(),
-        { notFriend: _, isBlocked: E } = (0, r.cj)([b.Z], () => ({
+        { notFriend: v, isBlocked: E } = (0, r.cj)([b.Z], () => ({
             notFriend: n.type === A.d4z.DM && null != x && !b.Z.isFriend(x),
             isBlocked: n.type === A.d4z.DM && null != x && b.Z.isBlocked(x)
         })),
-        Z = (0, r.e7)([N.default], () => N.default.getUser(x)),
+        S = (0, r.e7)([N.default], () => N.default.getUser(x)),
         T = (0, d.bp)(),
         j = [],
         y = (0, h.Z)(n.id),
@@ -195,16 +195,16 @@ function O(e) {
         }, 250);
         return () => clearTimeout(e);
     }, []),
-    s || (null == Z ? void 0 : Z.bot))
+    s || (null == S ? void 0 : S.bot))
         ? null
         : (0, i.jsx)(k, {
               channel: n,
               mode: o,
               inCall: c,
               callActive: f,
-              isProvisional: null !== (t = null == Z ? void 0 : Z.isProvisional) && void 0 !== t && t,
+              isProvisional: null !== (t = null == S ? void 0 : S.isProvisional) && void 0 !== t && t,
               callUnavailable: C,
-              notFriend: _,
+              notFriend: v,
               isBlocked: E,
               appContext: T,
               canShowTooltip: M,

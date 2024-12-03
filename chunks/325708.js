@@ -54,8 +54,8 @@ function C(e) {
                     return 'homeSidebarWidth';
             }
         })(t),
-        [x, _] = a.useState(p.ZP[C]),
-        v = a.useCallback(
+        [x, v] = a.useState(p.ZP[C]),
+        _ = a.useCallback(
             (e) => {
                 u.ZP.updatedUnsyncedSettings({ [C]: e });
             },
@@ -86,8 +86,8 @@ function C(e) {
                             (0, r.jsx)(g, {
                                 maxWidth: n,
                                 resizableNode: h,
-                                onResize: _,
-                                onResizeEnd: v
+                                onResize: v,
+                                onResizeEnd: _
                             }),
                         (0, r.jsx)('div', {
                             ref: h,

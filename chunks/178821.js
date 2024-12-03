@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return j;
     }
 }),
     n(47120);
@@ -80,7 +80,7 @@ function p(e) {
                 onResetFrameData: u
             };
         })(n, l),
-        [C, j, _] = (function (e) {
+        [j, C, _] = (function (e) {
             let t = a.useRef(Array(f).fill(0)),
                 n = a.useRef(performance.now()),
                 r = a.useRef(0),
@@ -132,9 +132,9 @@ function p(e) {
                 }, [i, o]),
                 i
             ];
-        })(C, v),
+        })(j, v),
         y = performance.now() - i.current < 5000,
-        N = j(c, b.current);
+        N = C(c, b.current);
     a.useEffect(
         () => (
             T(),
@@ -508,7 +508,7 @@ function v(e) {
         ]
     });
 }
-function C() {
+function j() {
     let e = (0, o.e7)([c.Z], () => c.Z.getSocket()),
         [t, n] = a.useState(!1);
     return (

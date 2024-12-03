@@ -23,14 +23,14 @@ var i = n(200651),
     g = n(937889),
     C = n(739566),
     x = n(267128),
-    _ = n(378233),
-    v = n(419922),
+    v = n(378233),
+    _ = n(419922),
     I = n(375954),
     E = n(699516),
     b = n(768581),
     N = n(70956),
-    S = n(823379),
-    Z = n(981631),
+    Z = n(823379),
+    S = n(981631),
     T = n(217702),
     j = n(644921);
 let A = 10 * N.Z.Millis.SECOND;
@@ -48,8 +48,8 @@ function y(e) {
         o = (0, C.Uj)(n),
         u = l.useContext(m.Z),
         [I, N] = l.useState(!1),
-        S = (0, f.p)(),
-        Z = l.useCallback(
+        Z = (0, f.p)(),
+        S = l.useCallback(
             (e) => {
                 if ('A' !== e.target.nodeName)
                     h.Z.updateChatOpen(n.channel_id, !0),
@@ -65,7 +65,7 @@ function y(e) {
             null != n.content && '' !== n.content
                 ? (0, g.ZP)(n, {
                       isInteracting: I,
-                      shouldFilterKeywords: S
+                      shouldFilterKeywords: Z
                   }).content
                 : null,
         {
@@ -78,12 +78,12 @@ function y(e) {
             leadingIconClass: j.messageContentLeadingIcon,
             iconSize: T.WW
         }),
-        L = (0, _.cv)(n),
+        L = (0, v.cv)(n),
         k =
             L.length > 0
                 ? L.map((e) =>
                       (0, i.jsx)(
-                          v.ZP,
+                          _.ZP,
                           {
                               className: j.sticker,
                               size: 128,
@@ -102,7 +102,7 @@ function y(e) {
         onMouseLeave: () => {
             N(!1);
         },
-        onClick: Z,
+        onClick: S,
         children: [
             (0, i.jsxs)('div', {
                 className: a()(j.messageContentWrapper, { [j.mentioned]: n.mentioned }),
@@ -139,7 +139,7 @@ function P(e) {
             l.useEffect(() => {
                 function e(e) {
                     let { channelId: t, message: i } = e;
-                    if (t === n && i.type !== Z.uaV.STAGE_START && i.type !== Z.uaV.STAGE_END && i.type !== Z.uaV.STAGE_TOPIC && i.type !== Z.uaV.STAGE_SPEAKER && i.type !== Z.uaV.STAGE_RAISE_HAND) clearTimeout(m.current), (m.current = setTimeout(f, a)), o((e) => [...e, i.id]);
+                    if (t === n && i.type !== S.uaV.STAGE_START && i.type !== S.uaV.STAGE_END && i.type !== S.uaV.STAGE_TOPIC && i.type !== S.uaV.STAGE_SPEAKER && i.type !== S.uaV.STAGE_RAISE_HAND) clearTimeout(m.current), (m.current = setTimeout(f, a)), o((e) => [...e, i.id]);
                 }
                 return (
                     u.Z.subscribe('MESSAGE_CREATE', e),
@@ -165,7 +165,7 @@ function P(e) {
             let g = null !== (t = p.current) && void 0 !== t ? t : s;
             return {
                 toastsHidden: d,
-                toastMessages: (0, c.Wu)([I.Z], () => g.map((e) => I.Z.getMessage(n, e)), [n, g]).filter(S.lm)
+                toastMessages: (0, c.Wu)([I.Z], () => g.map((e) => I.Z.getMessage(n, e)), [n, g]).filter(Z.lm)
             };
         })({
             channelId: t,
@@ -188,12 +188,12 @@ function P(e) {
         }
         !(0, s.isEqual)(e, g) && C(e);
     }, [m]);
-    let _ = m.map((e) => ({
+    let v = m.map((e) => ({
             message: e,
             height: f.current[e.id],
             y: g[e.id]
         })),
-        v = (0, d.useTransition)(_, {
+        _ = (0, d.useTransition)(v, {
             keys: (e) => e.message.id,
             from: () => ({ opacity: 0 }),
             enter: (e) => {
@@ -217,7 +217,7 @@ function P(e) {
             }
         });
     return (0, i.jsx)(d.ThemeProvider, {
-        theme: Z.BRd.DARK,
+        theme: S.BRd.DARK,
         children: (e) =>
             (0, i.jsx)('div', {
                 className: a()(n, e),
@@ -227,7 +227,7 @@ function P(e) {
                 onMouseLeave: () => {
                     h(!1);
                 },
-                children: v((e, t) =>
+                children: _((e, t) =>
                     (0, i.jsx)(o.animated.div, {
                         ref: (e) => x(t.message.id, null != e ? e.offsetHeight : null),
                         className: j.toastWrapper,

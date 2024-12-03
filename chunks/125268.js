@@ -6,7 +6,7 @@ n.d(t, {
         return d;
     },
     Bo: function () {
-        return g;
+        return h;
     },
     Df: function () {
         return m;
@@ -21,7 +21,7 @@ n.d(t, {
         return u;
     },
     fW: function () {
-        return h;
+        return g;
     },
     gr: function () {
         return p;
@@ -95,14 +95,14 @@ function p(e, t, n) {
         streamerId: n
     });
 }
-function h(e, t) {
+function g(e, t) {
     a.Z.dispatch({
         type: 'SHARED_CANVAS_CLEAR_DRAWABLES',
         drawables: e,
         streamerId: t
     });
 }
-function g(e) {
+function h(e) {
     a.Z.dispatch({
         type: 'SHARED_CANVAS_SET_DRAW_MODE',
         drawMode: e

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return S;
     }
 }),
     n(653041);
@@ -20,15 +20,15 @@ var i = n(200651),
     g = n(800329),
     C = n(470956),
     x = n(430824),
-    _ = n(496675),
-    v = n(434488),
+    v = n(496675),
+    _ = n(434488),
     I = n(27457),
     E = n(251564),
     b = n(695492),
     N = n(981631),
-    S = n(948899);
-function Z(e) {
-    let { participants: t, onClick: n, onDoubleClick: Z, onContextMenu: T, channel: j, className: A, inCall: y, totalNumberOfParticipants: P, paused: M = !1 } = e,
+    Z = n(948899);
+function S(e) {
+    let { participants: t, onClick: n, onDoubleClick: S, onContextMenu: T, channel: j, className: A, inCall: y, totalNumberOfParticipants: P, paused: M = !1 } = e,
         R = (0, c.bp)() === N.IlC.POPOUT,
         L = (0, s.e7)([x.Z], () => x.Z.getGuild(j.guild_id), [j.guild_id]),
         { dismissedActivityEntryPointTileChannel: k } = (0, E.d)(),
@@ -46,7 +46,7 @@ function Z(e) {
                 E.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [j.id, k]);
-    let B = (0, s.e7)([_.Z], () => j.isPrivate() || (0, f.b)(_.Z, L, j), [L, j]),
+    let B = (0, s.e7)([v.Z], () => j.isPrivate() || (0, f.b)(v.Z, L, j), [L, j]),
         U = (null == L ? void 0 : L.afkChannelId) === j.id,
         H = j.userLimit <= 0 || j.userLimit > 1,
         G = (0, s.e7)([d.ZP], () => d.ZP.getEmbeddedActivitiesForChannel(j.id).length <= 0),
@@ -60,10 +60,10 @@ function Z(e) {
                     {
                         participant: e,
                         channel: j,
-                        className: S.tile,
+                        className: Z.tile,
                         paused: M,
                         onClick: n,
-                        onDoubleClick: Z,
+                        onDoubleClick: S,
                         onContextMenu: T,
                         inCall: y,
                         width: t,
@@ -94,7 +94,7 @@ function Z(e) {
                   B &&
                   (G && !V
                       ? W.push((e) =>
-                            (0, i.jsx)(v.h, {
+                            (0, i.jsx)(_.h, {
                                 channel: j,
                                 guild: L,
                                 width: e,
@@ -112,7 +112,7 @@ function Z(e) {
                             })
                         ))
                 : W.push((e) =>
-                      (0, i.jsx)(v.h, {
+                      (0, i.jsx)(_.h, {
                           channel: j,
                           guild: L,
                           width: e,

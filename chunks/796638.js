@@ -23,8 +23,8 @@ var i = n(200651),
     m = n(340665);
 let f = 112,
     p = (16 / 9) * f + 8,
-    h = 10 * o.Z.Millis.SECOND;
-function g(e) {
+    g = 10 * o.Z.Millis.SECOND;
+function h(e) {
     var t;
     let n = s.default.getId();
     return e.type === d.fO.USER && e.user.id === n && (null === (t = e.voiceState) || void 0 === t ? void 0 : t.selfVideo);
@@ -45,7 +45,7 @@ function v(e, t) {
     l.useEffect(() => {
         let e = setTimeout(() => {
             S(Date.now());
-        }, h);
+        }, g);
         return () => {
             clearTimeout(e);
         };
@@ -66,7 +66,7 @@ function v(e, t) {
                                 var n;
                                 let i = '\x05';
                                 return (
-                                    e.speaking ? (i = '\x02') : t - e.lastSpoke < h ? (i = '\x03') : (null === (n = e.voiceState) || void 0 === n ? void 0 : n.selfVideo) && (i = '\x04'),
+                                    e.speaking ? (i = '\x02') : t - e.lastSpoke < g ? (i = '\x03') : (null === (n = e.voiceState) || void 0 === n ? void 0 : n.selfVideo) && (i = '\x04'),
                                     ''
                                         .concat(i)
                                         .concat(
@@ -81,7 +81,7 @@ function v(e, t) {
                     })(e, n)
                 ),
                 [f, p] = (0, a.partition)(l, d.Io),
-                v = f.findIndex(g),
+                v = f.findIndex(h),
                 S = null;
             -1 !== v && ((S = f[v]), f.splice(v, 1));
             let _ = null == S || m ? e : e - i - o,
@@ -123,12 +123,12 @@ function v(e, t) {
 }
 function S(e) {
     let { participants: t, participantTileWidth: n, selectedParticipantId: l, onDoubleClick: a, onContextMenu: r, onClick: s, channel: o, inCall: c, popoutWindow: d, paused: f = !1 } = e,
-        h = null != d;
+        g = null != d;
     return (0, i.jsx)('div', {
         className: m.root,
         children: t.map((e) => {
             if (null == e) return null;
-            let t = g(e);
+            let t = h(e);
             return (0, i.jsx)(
                 'div',
                 {
@@ -146,7 +146,7 @@ function S(e) {
                         width: t ? p : n,
                         inCall: c,
                         paused: f,
-                        inPopout: h
+                        inPopout: g
                     })
                 },
                 e.id

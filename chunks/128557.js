@@ -24,14 +24,14 @@ var i = n(200651),
     g = n(434404),
     C = n(330010),
     x = n(314897),
-    _ = n(430824),
-    v = n(594174),
+    v = n(430824),
+    _ = n(594174),
     I = n(259580),
     E = n(585483),
     b = n(63063),
     N = n(358085),
-    S = n(709054),
-    Z = n(967128),
+    Z = n(709054),
+    S = n(967128),
     T = n(981631),
     j = n(231873),
     A = n(388032),
@@ -76,13 +76,13 @@ function P(e) {
 }
 function M(e) {
     let { channel: t } = e,
-        r = (0, c.e7)([_.Z], () => (null != t ? _.Z.getGuild(t.getGuildId()) : null), [t]),
-        h = null != r && S.default.extractTimestamp(r.id) < Date.now() - T._8R,
+        r = (0, c.e7)([v.Z], () => (null != t ? v.Z.getGuild(t.getGuildId()) : null), [t]),
+        h = null != r && Z.default.extractTimestamp(r.id) < Date.now() - T._8R,
         I = (0, c.e7)([x.default], () => (null == r ? void 0 : r.ownerId) === x.default.getId(), [r]),
         { canInvite: M, canManageGuild: R, canMessage: L } = (0, f.TE)(t, r),
-        k = (0, c.e7)([v.default], () => {
+        k = (0, c.e7)([_.default], () => {
             var e, t;
-            return (null === (e = v.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0;
+            return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0;
         }),
         { guildPopulated: O, guildMessaged: D, guildPersonalized: w } = (0, f.h_)(r),
         {
@@ -323,7 +323,7 @@ function M(e) {
     let q = I ? A.intl.string(A.t['1ach9P']) : A.intl.string(A.t['ezm+/v']);
     h && (q = A.intl.string(A.t['gwyU/P']));
     let X = ''.concat(b.Z.getArticleURL(T.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
-    return (0, i.jsx)(Z.ZP, {
+    return (0, i.jsx)(S.ZP, {
         channelId: t.id,
         children: (0, i.jsx)('div', {
             className: y.container,

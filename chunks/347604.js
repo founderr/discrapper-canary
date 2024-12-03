@@ -6,17 +6,17 @@ var i = n(200651),
     a = n(252759),
     o = n(442837),
     c = n(481060),
-    d = n(946314),
-    u = n(938502),
-    m = n(967916),
-    h = n(68638),
-    g = n(816817),
-    x = n(650774),
+    d = n(650774),
+    u = n(21297),
+    m = n(118215),
+    h = n(30766),
+    g = n(166184),
+    x = n(654351),
     p = n(259674),
     f = n(845377),
     C = n(981631),
-    v = n(388032),
-    _ = n(442344),
+    _ = n(388032),
+    v = n(442344),
     I = n(716455);
 let N = ['322850917248663552', '172018499005317120', '414234792121597953', '228406572756369408'],
     T = ['620723483965653003', '662246299369734154', '181970867549503489', '102860784329052160'];
@@ -24,51 +24,51 @@ t.Z = (e) => {
     let { guild: t, onEnableDiscovery: n, isGuildAdmin: l } = e,
         [j, b] = (0, a.Z)(() => [s().sample(N), s().sample(T)], []);
     r.useEffect(() => {
-        m.z([j, b]);
+        (0, u.z)([j, b]);
     }, [j, b]);
     let [S, E] = (0, o.Wu)([h.Z], () => [h.Z.getGuild(j), h.Z.getGuild(b)], [j, b]),
         { canEnableDiscovery: R, isPendingSuccess: y } = (0, o.cj)(
-            [d.ZP],
+            [m.ZP],
             () => ({
-                canEnableDiscovery: d.ZP.passesChecklist(t.id),
-                isPendingSuccess: d.ZP.isPendingSuccess(t.id)
+                canEnableDiscovery: m.ZP.passesChecklist(t.id),
+                isPendingSuccess: m.ZP.isPendingSuccess(t.id)
             }),
             [t.id]
         ),
-        [Z, A] = (0, o.Wu)([x.Z], () => [null, x.Z.getMemberCount(t.id)], [t.id]),
+        [Z, A] = (0, o.Wu)([d.Z], () => [null, d.Z.getMemberCount(t.id)], [t.id]),
         L = r.useCallback(() => {
             null != n && n();
         }, [n]),
         D = null;
     return (
-        l ? (y ? (D = v.intl.string(v.t.zP8DFx)) : !R && (D = v.intl.string(v.t.ABFu19))) : (D = v.intl.string(v.t['5VbUBw'])),
+        l ? (y ? (D = _.intl.string(_.t.zP8DFx)) : !R && (D = _.intl.string(_.t.ABFu19))) : (D = _.intl.string(_.t['5VbUBw'])),
         (0, i.jsxs)('div', {
-            className: _.container,
+            className: v.container,
             children: [
                 (0, i.jsx)('img', {
                     alt: '',
                     src: I,
-                    className: _.sparkles
+                    className: v.sparkles
                 }),
                 (0, i.jsxs)('div', {
-                    className: _.discoverPreview,
+                    className: v.discoverPreview,
                     children: [
                         (0, i.jsx)(g.Z, {
-                            className: _.placeholderCard,
+                            className: v.placeholderCard,
                             disabled: !0,
                             small: !0,
                             loading: null == S,
                             guild: S
                         }),
                         (0, i.jsx)(g.Z, {
-                            className: _.previewCard,
+                            className: v.previewCard,
                             guild: t,
-                            description: v.intl.string(v.t['0k7fyM']),
+                            description: _.intl.string(_.t['0k7fyM']),
                             presenceCount: Z,
                             memberCount: A
                         }),
                         (0, i.jsx)(g.Z, {
-                            className: _.placeholderCard,
+                            className: v.placeholderCard,
                             disabled: !0,
                             small: !0,
                             loading: null == E,
@@ -77,33 +77,33 @@ t.Z = (e) => {
                     ]
                 }),
                 (0, i.jsx)(c.Heading, {
-                    className: _.header,
+                    className: v.header,
                     variant: 'heading-xl/semibold',
-                    children: v.intl.string(v.t.UwPrKS)
+                    children: _.intl.string(_.t.UwPrKS)
                 }),
                 (0, i.jsx)(c.Text, {
                     variant: 'text-md/normal',
-                    className: _.valueProp,
+                    className: v.valueProp,
                     color: 'header-secondary',
-                    children: v.intl.format(v.t.BhkgBg, {
+                    children: _.intl.format(_.t.BhkgBg, {
                         onLinkClick: () =>
                             (0, p.lW)({
                                 articleId: C.BhN.SERVER_DISCOVERY,
                                 guildId: t.id,
-                                pageView: u.d5.INTRO
+                                pageView: x.d5.INTRO
                             })
                     })
                 }),
                 (0, i.jsx)(c.Text, {
                     variant: 'text-md/normal',
-                    className: _.byline,
+                    className: v.byline,
                     color: 'header-secondary',
-                    children: v.intl.format(v.t.ALSi8v, {
+                    children: _.intl.format(_.t.ALSi8v, {
                         onGuidelinesClick: () =>
                             (0, p.lW)({
                                 articleId: C.BhN.SERVER_DISCOVERY_GUIDELINES,
                                 guildId: t.id,
-                                pageView: u.d5.INTRO
+                                pageView: x.d5.INTRO
                             })
                     })
                 }),
@@ -112,16 +112,16 @@ t.Z = (e) => {
                     children: (e) =>
                         (0, i.jsx)(c.Button, {
                             ...e,
-                            className: _.enableButton,
+                            className: v.enableButton,
                             color: c.Button.Colors.BRAND,
                             size: c.Button.Sizes.LARGE,
                             disabled: !R || !l,
                             onClick: L,
-                            children: v.intl.string(v.t.oBIZwc)
+                            children: _.intl.string(_.t.oBIZwc)
                         })
                 }),
                 (0, i.jsx)(f.Z, {
-                    className: _.checklist,
+                    className: v.checklist,
                     guild: t,
                     guildId: t.id
                 })

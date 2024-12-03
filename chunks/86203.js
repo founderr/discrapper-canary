@@ -17,7 +17,7 @@ function d(e) {
         C = t.isDM() ? t.getRecipientId() : null,
         x = (0, s.V)(t.id, C);
     if (null == x && (g || f)) return null;
-    let _ = () => {
+    let v = () => {
         null == h || h(), r.Z.closePrivateChannel(t.id);
     };
     return (0, i.jsx)(l.Button, {
@@ -26,7 +26,7 @@ function d(e) {
         color: l.Button.Colors.RED,
         disabled: null == x,
         onClick: (e) => {
-            e.stopPropagation(), null == u || u(), null != x && (0, a.WL)(x, _);
+            e.stopPropagation(), null == u || u(), null != x && (0, a.WL)(x, v);
         },
         onMouseEnter: p,
         onMouseLeave: m,

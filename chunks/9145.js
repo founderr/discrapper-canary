@@ -20,14 +20,14 @@ var i = n(200651),
     g = n(402113),
     C = n(592125),
     x = n(271383),
-    _ = n(944486),
-    v = n(594174),
+    v = n(944486),
+    _ = n(594174),
     I = n(585483),
     E = n(51144),
     b = n(566620),
     N = n(317381),
-    S = n(619915),
-    Z = n(988980),
+    Z = n(619915),
+    S = n(988980),
     T = n(952561),
     j = n(563218),
     A = n(884338),
@@ -48,8 +48,8 @@ function w(e) {
         U = (0, T.Z)(),
         H = (0, s.Wu)([N.ZP], () => (null != w ? N.ZP.getEmbeddedActivitiesForChannel(w) : []), [w]),
         G = (0, s.e7)([C.Z], () => C.Z.getChannel(w)),
-        F = (0, S.gb)(H),
-        V = (0, S.uF)(F),
+        F = (0, Z.gb)(H),
+        V = (0, Z.uF)(F),
         z = l.useCallback(() => {
             (0, b.tg)(M.Ez.PIP);
         }, []),
@@ -79,14 +79,14 @@ function w(e) {
     let et = $.width / Math.max($.height, 1) < M.I0,
         en = 0,
         ei = 0,
-        el = (0, Z.Z)(null == U ? void 0 : U.id);
+        el = (0, S.Z)(null == U ? void 0 : U.id);
     if (!el) {
         let e = $.width,
             t = $.height;
         et ? ((t = $.width / M.I0) > $.height && (e = (t = $.height) * M.I0), (ei = ($.height - t) / 2)) : ((e = Math.min($.height * M.I0)) > $.width && (t = (e = $.width) / M.I0), (en = ($.width - e) / 2));
     }
     let er = V.get(null !== (n = null == U ? void 0 : U.id) && void 0 !== n ? n : ''),
-        ea = (0, s.e7)([_.Z], () => _.Z.getChannelId()),
+        ea = (0, s.e7)([v.Z], () => v.Z.getChannelId()),
         es = (0, s.Wu)(
             [x.ZP],
             () => {
@@ -136,7 +136,7 @@ function w(e) {
     let ed = [];
     null != er &&
         (ed = Array.from(er.embeddedActivity.userIds)
-            .map((e) => v.default.getUser(e))
+            .map((e) => _.default.getUser(e))
             .filter((e) => null != e && void 0 !== e));
     let eu = (e, t) => {
         var n;

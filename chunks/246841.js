@@ -11,12 +11,12 @@ var l = n(481060),
     s = n(629257);
 function o(e) {
     let { activity: t, user: n, source: o, className: c, size: u, look: d, color: m, fullWidth: f, onAction: p } = e,
-        { label: h, tooltip: g, loading: v, disabled: S, onClick: I } = (0, r.Ih)(t, n, o),
+        { label: g, tooltip: h, loading: v, disabled: S, onClick: I } = (0, r.Ih)(t, n, o),
         _ = () => {
             null == p || p(), I();
         };
     return (0, i.jsx)(l.Tooltip, {
-        text: g,
+        text: h,
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n } = e;
             return (0, i.jsxs)(l.Button, {
@@ -36,7 +36,7 @@ function o(e) {
                         width: 16,
                         height: 16
                     }),
-                    h
+                    g
                 ]
             });
         }

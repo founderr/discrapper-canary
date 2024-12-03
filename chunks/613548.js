@@ -20,14 +20,14 @@ var i = n(200651),
     g = n(569545),
     C = n(517525),
     x = n(665149),
-    _ = n(6242),
-    v = n(757692),
+    v = n(6242),
+    _ = n(757692),
     I = n(933843),
     E = n(141321),
     b = n(2818),
     N = n(954551),
-    S = n(44136),
-    Z = n(651183),
+    Z = n(44136),
+    S = n(651183),
     T = n(618158),
     j = n(390322),
     A = n(616286),
@@ -53,7 +53,7 @@ function W(e) {
             let e = Date.now();
             return o()(O.Z.getSpeakers())
                 .map((e) => w.Z.getParticipant(t, e))
-                .filter((e) => null != e && e.type === G.fO.USER && e.speaking && !(0, S.ZP)(e))
+                .filter((e) => null != e && e.type === G.fO.USER && e.speaking && !(0, Z.ZP)(e))
                 .sortBy((t) => -O.Z.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
                 .value();
@@ -85,7 +85,7 @@ function W(e) {
 }
 function K(e) {
     let { inPopout: t, channel: n, appContext: r, inCall: a, isChatOpen: s, exitFullScreen: o } = e,
-        S = n.id,
+        Z = n.id,
         {
             voiceParticipantsHidden: k,
             selectedParticipant: O,
@@ -93,17 +93,17 @@ function K(e) {
         } = (0, d.cj)(
             [w.Z],
             () => ({
-                selectedParticipant: w.Z.getSelectedParticipant(S),
-                voiceParticipantsHidden: w.Z.getVoiceParticipantsHidden(S),
-                userParticipantCount: w.Z.getUserParticipantCount(S)
+                selectedParticipant: w.Z.getSelectedParticipant(Z),
+                voiceParticipantsHidden: w.Z.getVoiceParticipantsHidden(Z),
+                userParticipantCount: w.Z.getUserParticipantCount(Z)
             }),
-            [S]
+            [Z]
         ),
         K = (0, d.e7)([D.default], () => D.default.getCurrentUser()),
         Y = (0, B.Z)(n),
         q = (0, I.So)(c.q.STREAM_HIGH_QUALITY),
-        X = (0, v.o)(O, K),
-        J = (0, _.lL)('CallHeader', !0, K, X),
+        X = (0, _.o)(O, K),
+        J = (0, v.lL)('CallHeader', !0, K, X),
         { enabled: Q, inInbox: $ } = b.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
         ee = (0, f.Q)('ChannelCallHeaderToolbar'),
         { preventIdle: et, allowIdle: en } = (0, T.Y)('popup'),
@@ -132,7 +132,7 @@ function K(e) {
                 (0, i.jsx)(
                     W,
                     {
-                        channelId: S,
+                        channelId: Z,
                         guildId: n.guild_id
                     },
                     'current-speaker'
@@ -143,7 +143,7 @@ function K(e) {
                 m.Z,
                 {
                     className: z.button,
-                    channelId: S
+                    channelId: Z
                 },
                 'clips-enabled-indicator'
             )
@@ -151,7 +151,7 @@ function K(e) {
         (null == O ? void 0 : O.type) === G.fO.STREAM &&
             (ei.push(
                 (0, i.jsx)(
-                    Z.Z,
+                    S.Z,
                     {
                         className: z.button,
                         participant: O
@@ -200,7 +200,7 @@ function K(e) {
                           P.Z,
                           {
                               className: z.button,
-                              channelId: S
+                              channelId: Z
                           },
                           'deselect-participant'
                       )
@@ -208,7 +208,7 @@ function K(e) {
                           L.Z,
                           {
                               className: z.button,
-                              channelId: S,
+                              channelId: Z,
                               isHorizontal: !0
                           },
                           'select-participant'
@@ -237,7 +237,7 @@ function K(e) {
                         let { closePopout: t } = e;
                         return (0, i.jsx)(j.Z, {
                             children: (0, i.jsx)(U.Z, {
-                                channelId: S,
+                                channelId: Z,
                                 onClose: t,
                                 appContext: r,
                                 exitFullScreen: o

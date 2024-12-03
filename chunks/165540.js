@@ -14,14 +14,14 @@ var i = n(200651),
     g = n(663924),
     C = n(533379),
     x = n(404295),
-    _ = n(605236),
-    v = n(819640),
+    v = n(605236),
+    _ = n(819640),
     I = n(291407),
     E = n(61356),
     b = n(981631),
     N = n(314734),
-    S = n(921944),
-    Z = n(388032),
+    Z = n(921944),
+    S = n(388032),
     T = n(805660),
     j = n(795361);
 let A = l.forwardRef(function (e, t) {
@@ -37,8 +37,8 @@ let A = l.forwardRef(function (e, t) {
         }),
         [C]
     );
-    let v = l.useCallback(() => {
-        (0, u.yw)(b.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), f ? h.yT(m.ti.DISMISSED) : ((0, _.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: S.L.TAKE_ACTION }), h.__(m._b.TEXT, n)), x();
+    let _ = l.useCallback(() => {
+        (0, u.yw)(b.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), f ? h.yT(m.ti.DISMISSED) : ((0, v.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: Z.L.TAKE_ACTION }), h.__(m._b.TEXT, n)), x();
     }, [f, n, x]);
     return (0, i.jsx)('div', {
         className: a()(T.buttonContainer, N.t4),
@@ -48,8 +48,8 @@ let A = l.forwardRef(function (e, t) {
             size: d.Button.Sizes.NONE,
             tabIndex: 0,
             className: a()(T.button, { [T.buttonActive]: f }),
-            onClick: v,
-            'aria-label': Z.intl.string(Z.t.erHFxM),
+            onClick: _,
+            'aria-label': S.intl.string(S.t.erHFxM),
             focusProps: {
                 offset: {
                     top: 4,
@@ -66,7 +66,7 @@ let A = l.forwardRef(function (e, t) {
 });
 function y(e) {
     let { showAppLauncherPopup: t, children: n } = e,
-        l = (0, s.e7)([v.Z], () => v.Z.hasLayers()),
+        l = (0, s.e7)([_.Z], () => _.Z.hasLayers()),
         {
             enabled: r,
             shouldShow: o,
@@ -84,7 +84,7 @@ function y(e) {
                   children: [
                       (0, i.jsx)('img', {
                           className: a()(T.buttonContainer, T.button, T.channelAppLauncherButtonPopoutIcon),
-                          alt: Z.intl.string(Z.t.X4IxWF),
+                          alt: S.intl.string(S.t.X4IxWF),
                           src: null == c ? void 0 : c.iconURL,
                           'aria-hidden': !0,
                           draggable: !1
@@ -93,7 +93,7 @@ function y(e) {
                           className: T.channelAppLauncherButtonPopoutIconShimmerContainer,
                           children: (0, i.jsx)('img', {
                               className: a()(T.channelAppLauncherButtonPopoutIconShimmer),
-                              alt: Z.intl.string(Z.t.X4IxWF),
+                              alt: S.intl.string(S.t.X4IxWF),
                               src: j,
                               'aria-hidden': !0,
                               draggable: !1
@@ -104,7 +104,7 @@ function y(e) {
             : null;
     return u
         ? (0, i.jsx)(d.Tooltip, {
-              text: Z.intl.string(Z.t.JDj6Xl),
+              text: S.intl.string(S.t.JDj6Xl),
               shouldShow: o,
               forceOpen: o,
               children: () =>

@@ -15,8 +15,8 @@ var i = n(200651),
     p = n(389134),
     f = n(35313),
     C = n(94963),
-    v = n(745628),
-    _ = n(950279),
+    _ = n(745628),
+    v = n(950279),
     I = n(796918),
     N = n(513532),
     T = n(741595),
@@ -322,7 +322,7 @@ t.Z = (e) => {
                                     switch (R) {
                                         case S.Wy.GAMES:
                                             var e;
-                                            return (0, i.jsx)(_.Z, {
+                                            return (0, i.jsx)(v.Z, {
                                                 title: y.intl.string(y.t.t6Mbq6),
                                                 description: y.intl.string(y.t.E7Ymwc),
                                                 onUpdateGames: F,
@@ -355,7 +355,7 @@ t.Z = (e) => {
                                                 error: P.interests
                                             });
                                         case S.Wy.DESCRIPTION:
-                                            return (0, i.jsx)(v.Z, {
+                                            return (0, i.jsx)(_.Z, {
                                                 guildId: t,
                                                 handleUpdate: W,
                                                 progress: k,

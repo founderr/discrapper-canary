@@ -12,12 +12,12 @@ function r(e) {
     null == d.current[t.id] && (d.current[t.id] = Date.now()), (n.lineCap = 'round'), (n.lineJoin = 'round');
     let f = t.points.map((e) => (0, i.RR)(e, r, s)),
         p = d.current[t.id],
-        h = (e) => p + e.deltaTime,
-        g = (e) => h(e) + 1500 >= Date.now(),
-        v = (e) => h(e) <= Date.now() && g(e),
+        g = (e) => p + e.deltaTime,
+        h = (e) => g(e) + 1500 >= Date.now(),
+        v = (e) => g(e) <= Date.now() && h(e),
         S = f.find(v);
     if (null == S) {
-        !g(t.points[t.points.length - 1]) && m.push(t);
+        !h(t.points[t.points.length - 1]) && m.push(t);
         return;
     }
     let I = (e, t) => {

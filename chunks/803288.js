@@ -24,8 +24,8 @@ var i = n(200651),
     p = n(26323),
     f = n(366980),
     C = n(246946),
-    v = n(709586),
-    _ = n(267642),
+    _ = n(709586),
+    v = n(267642),
     I = n(999382),
     N = n(621319),
     T = n(44550),
@@ -114,7 +114,7 @@ class A extends r.PureComponent {
             innerClassName: R.upsellButton,
             onClick: this.handleVanityUrlUpsellButton,
             children: [
-                (0, i.jsx)(v.Z, {
+                (0, i.jsx)(_.Z, {
                     height: 16,
                     width: 16,
                     className: R.premiumUpsellBadge
@@ -203,7 +203,7 @@ class A extends r.PureComponent {
                         location: {
                             section: n,
                             object: b.qAy.LEARN_MORE,
-                            objectType: (0, _.ge)(t),
+                            objectType: (0, v.ge)(t),
                             location_stack: s
                         },
                         guild_id: null == l ? void 0 : l.id

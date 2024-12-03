@@ -15,8 +15,8 @@ var i,
     g = n(401139),
     C = n(12779),
     x = n(450369),
-    _ = n(388032),
-    v = n(38524);
+    v = n(388032),
+    _ = n(38524);
 let I = 424,
     E = 624,
     b = 824;
@@ -29,8 +29,8 @@ let N = (e, t) => {
             speakerTileHeight: i
         };
     },
-    S = (e, t) => (e < I ? 1 : e < E ? 2 : e < b ? 3 : t ? 3 : 4),
-    Z = (e) => Math.floor((e - 32) / 102);
+    Z = (e, t) => (e < I ? 1 : e < E ? 2 : e < b ? 3 : t ? 3 : 4),
+    S = (e) => Math.floor((e - 32) / 102);
 function T(e) {
     return e.type === h.Ui.VOICE;
 }
@@ -56,8 +56,8 @@ t.Z = (0, o.Z)((e) => {
         P = (0, u.w8)(i.id, h.pV.SPEAKER),
         M = P.filter(T),
         R = null != P.find((e) => e.type === h.Ui.STREAM),
-        L = Z(l),
-        k = S(l, b),
+        L = S(l),
+        k = Z(l, b),
         O = {
             [h.pV.SPEAKER]: k,
             [h.pV.AUDIENCE]: L,
@@ -82,8 +82,8 @@ t.Z = (0, o.Z)((e) => {
                           C.Z,
                           {
                               participantCount: j,
-                              label: _.intl.string(_.t.CduOk5),
-                              className: v.header,
+                              label: v.intl.string(v.t.CduOk5),
+                              className: _.header,
                               onClick: () => W(!z),
                               collapsed: z,
                               speakers: M,
@@ -99,8 +99,8 @@ t.Z = (0, o.Z)((e) => {
                           C.Z,
                           {
                               participantCount: A,
-                              label: _.intl.string(_.t['3foUu7']),
-                              className: v.header,
+                              label: v.intl.string(v.t['3foUu7']),
+                              className: _.header,
                               onClick: () => Y(!K),
                               collapsed: K,
                               channel: i
@@ -120,7 +120,7 @@ t.Z = (0, o.Z)((e) => {
                     return (0, r.jsx)(
                         'div',
                         {
-                            className: v.focusedRow,
+                            className: _.focusedRow,
                             children: (0, r.jsx)(x.Z, {
                                 channel: i,
                                 participant: l[0],
@@ -161,10 +161,10 @@ t.Z = (0, o.Z)((e) => {
         rowHeight: (e) => (null == B[e][0] ? 0 : 0 === e ? F / x.Q + 8 : 1 === e ? (z ? 0 : G) : K ? 0 : 98),
         renderFooter: (e) => {
             let { section: t } = e;
-            return V(t) ? (0, r.jsx)('div', { className: v.spacer }, 'bottom-spacer') : null;
+            return V(t) ? (0, r.jsx)('div', { className: _.spacer }, 'bottom-spacer') : null;
         },
         footerHeight: (e) => (1 === e ? 8 : 0 === e ? 12 : V(e) ? 88 : 0),
-        className: v.scroller,
+        className: _.scroller,
         chunkSize: 60,
         onScroll: o
     });

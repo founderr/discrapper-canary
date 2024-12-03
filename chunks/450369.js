@@ -19,14 +19,14 @@ var i = n(200651),
     g = n(102172),
     C = n(352978),
     x = n(184301),
-    _ = n(347475),
-    v = n(199902),
+    v = n(347475),
+    _ = n(199902),
     I = n(430824),
     E = n(496675),
     b = n(979651),
     N = n(88751),
-    S = n(252132),
-    Z = n(248400),
+    Z = n(252132),
+    S = n(248400),
     T = n(981631),
     j = n(354459),
     A = n(235537);
@@ -45,7 +45,7 @@ let y = 16 / 9,
                               channelId: r.id
                           }),
             renderPopout: (e) =>
-                (0, i.jsx)(_.Z, {
+                (0, i.jsx)(v.Z, {
                     ...e,
                     guildId: a,
                     channelId: r.id,
@@ -58,7 +58,7 @@ let y = 16 / 9,
                     onContextMenu: (e) => u(n, e),
                     ...e,
                     children: (0, i.jsx)(
-                        S.Z,
+                        Z.Z,
                         {
                             participant: n,
                             aspectRatio: y,
@@ -71,7 +71,7 @@ let y = 16 / 9,
                             paused: !1,
                             pulseSpeakingIndicator: !p.enabled,
                             width: c,
-                            children: d && (0, i.jsx)(Z.Z, {})
+                            children: d && (0, i.jsx)(S.Z, {})
                         },
                         g
                     )
@@ -80,9 +80,9 @@ let y = 16 / 9,
     },
     M = (e) => {
         let { stageParticipant: t, rtcParticipant: n, channel: r, width: a, isModerator: d, onContextMenu: h, inPopout: x } = e,
-            { reducedMotion: _ } = l.useContext(o.AccessibilityPreferencesContext),
+            { reducedMotion: v } = l.useContext(o.AccessibilityPreferencesContext),
             { id: N, blocked: P, ignored: M } = t,
-            R = (0, s.Wu)([v.Z], () => v.Z.getAllActiveStreams(), []),
+            R = (0, s.Wu)([_.Z], () => _.Z.getAllActiveStreams(), []),
             { selectedParticipant: L, largeStream: k } = (0, s.cj)([p.Z], () => ({
                 selectedParticipant: null != r ? p.Z.getSelectedParticipant(r.id) : null,
                 largeStream: null != r && p.Z.getStageStreamSize(r.id)
@@ -98,7 +98,7 @@ let y = 16 / 9,
                 [R, r, L, k]
             );
         return (0, i.jsx)(
-            S.Z,
+            Z.Z,
             {
                 participant: n,
                 aspectRatio: y,
@@ -112,9 +112,9 @@ let y = 16 / 9,
                 onClick: O,
                 onContextMenu: h,
                 paused: !1,
-                pulseSpeakingIndicator: !_.enabled,
+                pulseSpeakingIndicator: !v.enabled,
                 width: a,
-                children: d && n.type === j.fO.USER && (0, i.jsx)(Z.Z, {})
+                children: d && n.type === j.fO.USER && (0, i.jsx)(S.Z, {})
             },
             N
         );

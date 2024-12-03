@@ -19,35 +19,35 @@ var i = n(200651),
     g = n(271383),
     C = n(709586),
     x = n(5192),
-    _ = n(590415),
-    v = n(253428);
+    v = n(590415),
+    _ = n(253428);
 let I = l.memo(function (e) {
         let { guildId: t, channelId: n, user: l, isPremium: r, isBlocked: a, isIgnored: s } = e;
         return (0, i.jsxs)('div', {
-            className: v.textContainer,
+            className: _.textContainer,
             children: [
                 a
                     ? (0, i.jsx)(u.DenyIcon, {
                           size: 'lg',
-                          className: v.blockedIcon,
+                          className: _.blockedIcon,
                           color: d.Z.unsafe_rawColors.RED_400.css
                       })
                     : null,
                 s
                     ? (0, i.jsx)(u.EyeSlashIcon, {
                           size: 'lg',
-                          className: v.blockedIcon
+                          className: _.blockedIcon
                       })
                     : null,
                 (0, i.jsx)(u.Text, {
-                    className: v.text,
+                    className: _.text,
                     variant: 'text-sm/normal',
                     color: 'header-primary',
                     children: x.ZP.getName(t, n, l)
                 }),
                 r
                     ? (0, i.jsx)(C.Z, {
-                          className: v.boost,
+                          className: _.boost,
                           color: d.Z.unsafe_rawColors.GUILD_BOOSTING_PINK.css
                       })
                     : null
@@ -58,24 +58,24 @@ let I = l.memo(function (e) {
         var t;
         let { participant: n, guildId: l, channel: r, isPremium: s } = e,
             { user: o, blocked: c, ignored: d, rtsState: h } = n,
-            p = h === _.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
-            m = h === _.xO.REQUESTED_TO_SPEAK || p;
+            p = h === v.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
+            m = h === v.xO.REQUESTED_TO_SPEAK || p;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: v.avatarContainer,
+                    className: _.avatarContainer,
                     children: [
                         m &&
                             (0, i.jsx)(u.HandRequestSpeakIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: a()(v.icon, { [v.invited]: p })
+                                className: a()(_.icon, { [_.invited]: p })
                             }),
                         (0, i.jsx)('img', {
                             src: null !== (t = o.getAvatarURL(r.guild_id, 56, !1)) && void 0 !== t ? t : void 0,
                             alt: o.username,
                             'aria-label': o.username,
-                            className: a()(v.avatar, { [v.faded]: c || d })
+                            className: a()(_.avatar, { [_.faded]: c || d })
                         })
                     ]
                 }),
@@ -90,13 +90,13 @@ let I = l.memo(function (e) {
             ]
         });
     }),
-    b = () => (0, i.jsx)('div', { className: v.tileBaseContainer });
+    b = () => (0, i.jsx)('div', { className: _.tileBaseContainer });
 t.Z = l.memo(function (e) {
     let { participant: t, channel: r } = e,
         { user: s, blocked: d } = t,
         C = r.getGuildId(),
         x = (0, p.bp)(),
-        _ = (0, c.e7)(
+        v = (0, c.e7)(
             [g.ZP],
             () => {
                 var e;
@@ -148,9 +148,9 @@ t.Z = l.memo(function (e) {
         spacing: 8,
         children: (e) =>
             (0, i.jsx)(u.Clickable, {
-                className: a()(v.tileContainer, {
-                    [v.singleIcon]: _ || d,
-                    [v.doubleIcon]: _ && d
+                className: a()(_.tileContainer, {
+                    [_.singleIcon]: v || d,
+                    [_.doubleIcon]: v && d
                 }),
                 onContextMenu: I,
                 ...e,
@@ -158,7 +158,7 @@ t.Z = l.memo(function (e) {
                     participant: t,
                     guildId: C,
                     channel: r,
-                    isPremium: _
+                    isPremium: v
                 })
             })
     });

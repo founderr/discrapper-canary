@@ -27,8 +27,8 @@ var i,
     p = n(289393),
     f = n(264451),
     C = n(759178),
-    v = n(462087),
-    _ = n(685201),
+    _ = n(462087),
+    v = n(685201),
     I = n(981631),
     N = n(198139),
     T = n(388032),
@@ -40,7 +40,7 @@ let b = (e, t, n, i) => {
         switch (e) {
             case N.x_.OPEN:
                 return (0, l.jsxs)(l.Fragment, {
-                    children: [null != s ? T.intl.formatToPlainString(T.t.I6YOjY, { payoutDate: s }) : T.intl.string(T.t.G5ATX1), (0, l.jsx)(v.Z, { className: j.statusScheduledIcon })]
+                    children: [null != s ? T.intl.formatToPlainString(T.t.I6YOjY, { payoutDate: s }) : T.intl.string(T.t.G5ATX1), (0, l.jsx)(_.Z, { className: j.statusScheduledIcon })]
                 });
             case N.x_.CANCELED:
                 return (0, l.jsxs)(l.Fragment, {
@@ -66,7 +66,7 @@ let b = (e, t, n, i) => {
                         ]
                     });
                 return (0, l.jsxs)(l.Fragment, {
-                    children: [T.intl.string(T.t.OtZ5k5), (0, l.jsx)(_.Z, { className: j.statusDeferredIcon })]
+                    children: [T.intl.string(T.t.OtZ5k5), (0, l.jsx)(v.Z, { className: j.statusDeferredIcon })]
                 });
         }
         switch (t) {
@@ -79,7 +79,7 @@ let b = (e, t, n, i) => {
             case N.jw.CANCELED:
             case N.jw.ERROR:
                 return (0, l.jsxs)(l.Fragment, {
-                    children: [null != s ? T.intl.formatToPlainString(T.t.I6YOjY, { payoutDate: s }) : T.intl.string(T.t.ubdQTk), (0, l.jsx)(v.Z, { className: j.statusScheduledIcon })]
+                    children: [null != s ? T.intl.formatToPlainString(T.t.I6YOjY, { payoutDate: s }) : T.intl.string(T.t.ubdQTk), (0, l.jsx)(_.Z, { className: j.statusScheduledIcon })]
                 });
             case N.jw.PAID:
                 return (0, l.jsxs)(l.Fragment, {

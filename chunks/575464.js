@@ -17,7 +17,7 @@ var l = n(120356),
     p = n(51144),
     m = n(22078);
 function f(e) {
-    let { user: t, row: n, hideDiscriminator: l, comparator: f, selected: g, checked: C, onClick: x, onMouseEnter: _, 'aria-setsize': v, 'aria-posinset': I } = e,
+    let { user: t, row: n, hideDiscriminator: l, comparator: f, selected: g, checked: C, onClick: x, onMouseEnter: v, 'aria-setsize': _, 'aria-posinset': I } = e,
         E = (0, s.e7)([h.Z], () => h.Z.getStatus(t.id)),
         b = (0, a.JA)(String(t.id));
     return (0, i.jsx)(o.Clickable, {
@@ -27,12 +27,12 @@ function f(e) {
             null != x && x(t.id);
         },
         onMouseEnter: () => {
-            null != _ && _(n);
+            null != v && v(n);
         },
         ...b,
         role: 'option',
         'aria-selected': C,
-        'aria-setsize': v,
+        'aria-setsize': _,
         'aria-posinset': I,
         children: (0, i.jsxs)(u.Z, {
             align: u.Z.Align.CENTER,

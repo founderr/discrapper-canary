@@ -20,8 +20,8 @@ var i = n(200651),
     p = n(393238),
     f = n(313201),
     C = n(345861),
-    v = n(208567),
-    _ = n(73346),
+    _ = n(208567),
+    v = n(73346),
     I = n(624138),
     N = n(584825),
     T = n(723047),
@@ -95,7 +95,7 @@ function O(e) {
         a = (0, N.YB)(n.id),
         c = r.useCallback(() => {
             var e;
-            return (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, _._W)(a.cover_image_asset.application_id, a.cover_image_asset, A);
+            return (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, v._W)(a.cover_image_asset.application_id, a.cover_image_asset, A);
         }, [a]),
         [u, h] = r.useState(s),
         [p, I] = r.useState(null !== (t = null == a ? void 0 : a.description) && void 0 !== t ? t : ''),
@@ -117,7 +117,7 @@ function O(e) {
         X = null != p && '' !== p && null != L;
     r.useEffect(() => {
         var e;
-        (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null && O((0, _._W)(a.cover_image_asset.application_id, a.cover_image_asset, A));
+        (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null && O((0, v._W)(a.cover_image_asset.application_id, a.cover_image_asset, A));
     }, [null == a ? void 0 : a.cover_image_asset]);
     let Q = (0, T.mY)(),
         J = r.useMemo(
@@ -216,7 +216,7 @@ function O(e) {
                         disabled: Q,
                         children: y.intl.string(y.t.i2rCwc)
                     }),
-                    (0, i.jsx)(v.Z, {
+                    (0, i.jsx)(_.Z, {
                         image: L,
                         hint: F,
                         showIcon: !0,

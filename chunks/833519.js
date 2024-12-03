@@ -19,8 +19,8 @@ var i = n(200651),
     m = n(194082),
     f = n(324085),
     p = n(710845),
-    h = n(590293),
-    g = n(863908),
+    g = n(590293),
+    h = n(863908),
     v = n(871118),
     S = n(517525),
     I = n(352978),
@@ -50,18 +50,18 @@ function W(e) {
     let { participant: t, selected: n, focused: a, idle: r, width: o, premiumIndicator: c } = e,
         u = (0, s.e7)([E.Z], () => E.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
         d = (0, O.K)(o),
-        [p, h] = l.useState(!1),
-        g = (0, s.e7)([C.Z], () => C.Z.getChannel(null == u ? void 0 : u.channelId));
+        [p, g] = l.useState(!1),
+        h = (0, s.e7)([C.Z], () => C.Z.getChannel(null == u ? void 0 : u.channelId));
     return (
-        (0, f.J)(g, () => {
+        (0, f.J)(h, () => {
             let e = setTimeout(() => {
-                    h(!0);
+                    g(!0);
                 }, 5000),
                 t = setTimeout(() => {
-                    h(!1);
+                    g(!1);
                 }, 15000);
             return () => {
-                h(!1), clearTimeout(e), clearTimeout(t);
+                g(!1), clearTimeout(e), clearTimeout(t);
             };
         }),
         (0, i.jsxs)(i.Fragment, {
@@ -85,7 +85,7 @@ function B(e) {
     let { participant: t, selected: n, onVideoResize: a, paused: m, fit: f, inPopout: p, width: S, focused: M, wrapperClassName: O } = e,
         W = y.Z.getVideoComponent(),
         B = (0, s.e7)([Z.default], () => Z.default.getId()),
-        G = (0, h.Z)(),
+        G = (0, g.Z)(),
         { stream: z, user: H, streamId: Y } = t,
         J = (0, s.e7)([C.Z], () => C.Z.getChannel(z.channelId)),
         q = (0, s.e7)([E.Z], () => E.Z.getActiveStreamForUser(H.id, z.guildId), [H.id, z.guildId]),
@@ -93,7 +93,7 @@ function B(e) {
         K = (0, s.e7)([b.Z], () => b.Z.isFocused()),
         Q = (null == q ? void 0 : q.ownerId) === B,
         $ = Q && !K && !p,
-        ee = null != q ? (0, g.Z)(q, H, H.id === B, $) : null,
+        ee = null != q ? (0, h.Z)(q, H, H.id === B, $) : null,
         et = S < 195;
     if (
         (l.useEffect(() => {

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return v;
     }
 }),
     n(653041);
@@ -20,9 +20,9 @@ var i = n(200651),
     g = n(981631),
     C = n(388032),
     x = n(636501);
-function _(e) {
-    let { channelId: t, className: n, ..._ } = e,
-        v = l.useRef(null),
+function v(e) {
+    let { channelId: t, className: n, ...v } = e,
+        _ = l.useRef(null),
         I = (0, a.e7)([m.ZP], () => m.ZP.getFocusedLayout() === f.MI.RESIZABLE),
         E = l.useCallback(() => {
             let e = I ? f.MI.NO_CHAT : f.MI.RESIZABLE;
@@ -44,16 +44,16 @@ function _(e) {
                 isTyping: t
             };
         })(t),
-        S = l.useCallback(() => {
+        Z = l.useCallback(() => {
             var e;
-            null === (e = v.current) || void 0 === e || e.focus();
+            null === (e = _.current) || void 0 === e || e.focus();
         }, []);
     (0, h.yp)({
         event: g.CkL.FOCUS_CHAT_BUTTON,
-        handler: S
+        handler: Z
     });
-    let Z = I ? C.intl.string(C.t['5MstTk']) : C.intl.string(C.t.kkKapK),
-        T = [Z];
+    let S = I ? C.intl.string(C.t['5MstTk']) : C.intl.string(C.t.kkKapK),
+        T = [S];
     N > 0 && T.push(C.intl.formatToPlainString(C.t['3l1GOz'], { mentionCount: N })), b > 0 && T.push(C.intl.string(C.t.x5zAGR));
     let j = (0, a.e7)([m.ZP], () => m.ZP.getFocusedLayout()),
         A = N > 0 ? N : b,
@@ -62,15 +62,15 @@ function _(e) {
         className: x.wrapper,
         children: [
             (0, i.jsx)(c.d, {
-                buttonRef: v,
+                buttonRef: _,
                 onClick: E,
-                label: Z,
+                label: S,
                 'aria-label': T.join(', '),
                 tooltipPosition: 'top',
                 iconComponent: j === f.MI.NO_CHAT ? s.ChevronLargeUpIcon : s.ChevronLargeDownIcon,
                 themeable: !0,
                 className: n,
-                ..._
+                ...v
             }),
             y
                 ? (0, i.jsx)(o.Z, {

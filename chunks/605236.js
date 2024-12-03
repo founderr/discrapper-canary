@@ -81,7 +81,7 @@ function y(e, t) {
     if (null != t) {
         let e = a + t.cooldownDurationMs,
             n = Date.now(),
-            r = null == t.showAfterTimestamp || n >= t.showAfterTimestamp;
+            r = null == t.showAfterTimestamp || (n >= t.showAfterTimestamp && a <= t.showAfterTimestamp);
         s = n < e || !r;
     }
     return {

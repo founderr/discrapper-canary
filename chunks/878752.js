@@ -77,7 +77,7 @@ function P(e) {
                             channel: t,
                             buttonRef: L,
                             dismissed: !1,
-                            nudgeAlignIntoViewport: !0,
+                            align: 'left',
                             onClick: () => {
                                 n(A.L.TAKE_ACTION);
                             },

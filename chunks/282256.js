@@ -11,33 +11,33 @@ var i = n(200651),
 t.Z = l.memo(function (e) {
     let { children: t, isOverlay: n, contextGuildId: a, ...m } = e,
         f = l.useRef(null),
-        [p, h] = l.useState({ maskImage: 'none' }),
-        g = l.useCallback(() => {
+        [p, g] = l.useState({ maskImage: 'none' }),
+        h = l.useCallback(() => {
             var e, t;
             if (n) {
-                h({ maskImage: 'none' });
+                g({ maskImage: 'none' });
                 return;
             }
             let i = null === (e = v.current) || void 0 === e ? void 0 : e.getBoundingClientRect(),
                 l = null === (t = f.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
             if (null == i || null == l) {
-                h({ maskImage: 'none' });
+                g({ maskImage: 'none' });
                 return;
             }
             let a = l.right - i.right,
                 r = l.width - a;
             if (r > l.width) {
-                h({ maskImage: 'none' });
+                g({ maskImage: 'none' });
                 return;
             }
-            h({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(r, 'px)') });
+            g({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(r, 'px)') });
         }, []),
-        v = (0, o.y)(g),
+        v = (0, o.y)(h),
         S = (0, c.p0)(m.userId, a);
     l.useEffect(() => {
-        if (null != v.current) g();
+        if (null != v.current) h();
     }, [S]);
-    let I = (0, s.O)(g);
+    let I = (0, s.O)(h);
     return (0, i.jsxs)('div', {
         className: r()(d.container, n && d.isOverlayContainer),
         ref: v,

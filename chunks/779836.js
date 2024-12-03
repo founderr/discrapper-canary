@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return v;
     }
 });
 var i = n(200651);
@@ -84,7 +84,7 @@ function x(e) {
         )
     });
 }
-function _(e) {
+function v(e) {
     var t, n;
     let l,
         { item: a, channel: d, index: u } = e,

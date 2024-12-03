@@ -19,14 +19,14 @@ var i = n(200651),
     g = n(687158),
     C = n(326094),
     x = n(510659),
-    _ = n(113557),
-    v = n(867176),
+    v = n(113557),
+    _ = n(867176),
     I = n(451834),
     E = n(502762),
     b = n(952124),
     N = n(544989),
-    S = n(481932),
-    Z = n(272510),
+    Z = n(481932),
+    S = n(272510),
     T = n(495804),
     j = n(171368),
     A = n(348540),
@@ -88,17 +88,17 @@ function k(e) {
                                 (0, i.jsxs)(N.Z, {
                                     profileType: P.y0.PANEL,
                                     children: [
-                                        (0, i.jsx)(S.Z, {
+                                        (0, i.jsx)(Z.Z, {
                                             user: t,
                                             profileType: P.y0.PANEL
                                         }),
-                                        t.bot ? (0, i.jsx)(b.Z, { user: t }) : (0, i.jsx)(Z.Z, { user: t })
+                                        t.bot ? (0, i.jsx)(b.Z, { user: t }) : (0, i.jsx)(S.Z, { user: t })
                                     ]
                                 }),
                                 (0, i.jsxs)('header', {
                                     className: L.header,
                                     children: [
-                                        (0, i.jsx)(v.Z, {
+                                        (0, i.jsx)(_.Z, {
                                             user: t,
                                             displayProfile: D,
                                             profileType: P.y0.PANEL,
@@ -109,7 +109,7 @@ function k(e) {
                                             userId: t.id,
                                             className: L.toast
                                         }),
-                                        (0, i.jsx)(_.Z, {
+                                        (0, i.jsx)(v.Z, {
                                             location: 'UserProfilePanel',
                                             user: t,
                                             displayProfile: D,

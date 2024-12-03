@@ -5,9 +5,9 @@ var d = a(200651),
     r = a(481060),
     s = a(367907),
     i = a(313201),
-    l = a(816817),
-    c = a(650774),
-    C = a(434404),
+    l = a(650774),
+    c = a(434404),
+    C = a(166184),
     u = a(981631),
     m = a(388032),
     h = a(435339);
@@ -17,7 +17,7 @@ t.default = (e) => {
     o.useEffect(() => {
         s.ZP.trackWithMetadata(u.rMx.OPEN_MODAL, { type: u.jXE.DISCOVERY_SETUP_SUCCESS_MODAL });
     }, []);
-    let [x, S] = (0, n.Wu)([c.Z], () => [c.Z.getOnlineCount(p.id), c.Z.getMemberCount(p.id)], [p.id]);
+    let [x, S] = (0, n.Wu)([l.Z], () => [l.Z.getOnlineCount(p.id), l.Z.getMemberCount(p.id)], [p.id]);
     return (0, d.jsxs)(r.ModalRoot, {
         transitionState: t,
         'aria-labelledby': _,
@@ -46,7 +46,7 @@ t.default = (e) => {
                         children: m.intl.format(m.t.TRh6a2, {
                             onServerSettingsClick: () => {
                                 a(),
-                                    C.Z.setSection(u.pNK.DISCOVERY),
+                                    c.Z.setSection(u.pNK.DISCOVERY),
                                     s.ZP.trackWithMetadata(u.rMx.SETTINGS_PANE_VIEWED, {
                                         settings_type: 'guild',
                                         origin_pane: 'DISCOVERY',
@@ -55,7 +55,7 @@ t.default = (e) => {
                             }
                         })
                     }),
-                    (0, d.jsx)(l.Z, {
+                    (0, d.jsx)(C.Z, {
                         className: h.previewCard,
                         guild: p,
                         presenceCount: x,

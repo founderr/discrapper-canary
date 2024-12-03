@@ -26,8 +26,8 @@ function g(e) {
         [u, g] = i.useState(!1),
         C = (0, l.e7)([r.ZP], () => r.ZP.getCurrentEmbeddedActivity()),
         x = s ? f.t.cpT0Cg : f.t['0hKkS0'],
-        _ = i.useMemo(() => (null != n ? (0, d.XZ)(n.displayName) : f.intl.string(f.t['3xjX0d'])), [n]),
-        v = void 0 !== a.flags && (0, p.yE)(a.flags, m.udG.EMBEDDED),
+        v = i.useMemo(() => (null != n ? (0, d.XZ)(n.displayName) : f.intl.string(f.t['3xjX0d'])), [n]),
+        _ = void 0 !== a.flags && (0, p.yE)(a.flags, m.udG.EMBEDDED),
         I = null != C && C.applicationId === a.id && C.channelId === t.id,
         { analyticsLocations: E } = (0, c.ZP)(o.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON),
         b = null != t.recipients ? t.recipients[0] : void 0,
@@ -38,9 +38,9 @@ function g(e) {
         });
     return {
         isExecutingLaunchInteraction: u,
-        buttonText: N && v ? (I ? f.intl.string(f.t['Hi1/aW']) : null != _ ? _ : f.intl.string(f.t.zKX8Nj)) : f.intl.string(x),
+        buttonText: N && _ ? (I ? f.intl.string(f.t['Hi1/aW']) : null != v ? v : f.intl.string(f.t.zKX8Nj)) : f.intl.string(x),
         hasActiveMatchingEmbeddedActivity: I,
-        isEmbeddedApp: v,
+        isEmbeddedApp: _,
         currentEmbeddedActivity: C,
         channelRecipientUserId: b,
         setIsExecutingLaunchInteraction: g,

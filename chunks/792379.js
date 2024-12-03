@@ -19,14 +19,14 @@ var i = n(200651),
     g = n(221292),
     C = n(687158),
     x = n(899007),
-    _ = n(648052),
-    v = n(867176),
+    v = n(648052),
+    _ = n(867176),
     I = n(280885),
     E = n(900927),
     b = n(678738),
     N = n(502762),
-    S = n(530),
-    Z = n(679332),
+    Z = n(530),
+    S = n(679332),
     T = n(544989),
     j = n(171368),
     A = n(228168),
@@ -68,12 +68,12 @@ function R(e) {
                         children: [
                             (0, i.jsx)(T.Z, {
                                 profileType: A.y0.PANEL,
-                                children: (0, i.jsx)(Z.Z, { user: t })
+                                children: (0, i.jsx)(S.Z, { user: t })
                             }),
                             (0, i.jsxs)('header', {
                                 className: P.header,
                                 children: [
-                                    (0, i.jsx)(v.Z, {
+                                    (0, i.jsx)(_.Z, {
                                         user: t,
                                         displayProfile: L,
                                         profileType: A.y0.PANEL,
@@ -92,13 +92,13 @@ function R(e) {
                             (0, i.jsxs)('div', {
                                 className: M.body,
                                 children: [
-                                    (0, i.jsx)(S.Z, {
+                                    (0, i.jsx)(Z.Z, {
                                         user: t,
                                         profileType: A.y0.PANEL,
                                         nickname: m.ZP.getName(null, n.id, t),
                                         pronouns: null == L ? void 0 : L.pronouns,
                                         onOpenProfile: R ? void 0 : U,
-                                        tags: (0, i.jsx)(_.Z, {
+                                        tags: (0, i.jsx)(v.Z, {
                                             displayProfile: L,
                                             profileType: A.y0.PANEL
                                         })

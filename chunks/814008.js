@@ -9,10 +9,10 @@ var s = i(200651),
     c = i(481060),
     m = i(558324),
     u = i(367907),
-    x = i(938502),
-    g = i(296386),
-    h = i(626135),
-    p = i(999382),
+    x = i(456268),
+    g = i(626135),
+    h = i(999382),
+    p = i(654351),
     v = i(259674),
     f = i(203377),
     N = i(981631),
@@ -23,7 +23,7 @@ t.Z = (e) => {
     var t;
     let { guild: i, guildMetadata: n, headerId: l } = e,
         [I, S] = a.useState(!1),
-        b = (0, d.e7)([p.Z], () => 'keywords' in p.Z.getErrors()),
+        b = (0, d.e7)([h.Z], () => 'keywords' in h.Z.getErrors()),
         E = (e) => {
             if (C.test(e)) S(!1);
             else {
@@ -32,11 +32,11 @@ t.Z = (e) => {
             }
             if ((null == i ? void 0 : i.id) == null) return;
             let { keywords: t } = n;
-            !(t.length >= f.G7) && g.zH(i.id, o()([...t, e.toLowerCase()]));
+            !(t.length >= f.G7) && (0, x.zH)(i.id, o()([...t, e.toLowerCase()]));
         },
         _ = (e) => {
             E(e),
-                h.default.track(N.rMx.DISCOVERY_SETUP_POPULAR_TAG_CLICKED, {
+                g.default.track(N.rMx.DISCOVERY_SETUP_POPULAR_TAG_CLICKED, {
                     tag: e,
                     primary_category_id: n.primaryCategoryId,
                     ...(0, u.hH)(i.id)
@@ -95,7 +95,7 @@ t.Z = (e) => {
                         onRemoveTag: (e) => {
                             if ((null == i ? void 0 : i.id) == null) return;
                             let t = [...n.keywords];
-                            t.splice(e, 1), g.zH(i.id, t);
+                            t.splice(e, 1), (0, x.zH)(i.id, t);
                         },
                         onAddTag: E,
                         maxTags: f.G7,
@@ -116,7 +116,7 @@ t.Z = (e) => {
             }),
             (0, s.jsx)('div', {
                 className: j.tagContainer,
-                children: (0, x.P5)(n.primaryCategoryId).map((e) =>
+                children: (0, p.P5)(n.primaryCategoryId).map((e) =>
                     (0, s.jsx)(
                         c.Anchor,
                         {

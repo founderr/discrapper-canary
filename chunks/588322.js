@@ -19,23 +19,23 @@ var i = n(200651),
     g = n(703558),
     C = n(430824),
     x = n(228392),
-    _ = n(388032),
-    v = n(454002);
+    v = n(388032),
+    _ = n(454002);
 function I(e) {
     let { channelId: t } = e,
         I = (0, r.e7)([f.Z], () => f.Z.getChannel(t)),
         E = (0, r.e7)([f.Z], () => f.Z.getChannel(null == I ? void 0 : I.parent_id)),
         b = (0, r.e7)([C.Z], () => C.Z.getGuild(null == I ? void 0 : I.getGuildId())),
         N = (0, o.ZP)(I),
-        S = l.useRef(!1);
+        Z = l.useRef(!1);
     if (
         (l.useEffect(() => {
-            null != I && !S.current && ((S.current = !0), (0, x.lN)(I));
+            null != I && !Z.current && ((Z.current = !0), (0, x.lN)(I));
         }, [I]),
         null == I || null == b)
     )
         return null;
-    let Z = (0, i.jsx)(m.Z, { channel: I });
+    let S = (0, i.jsx)(m.Z, { channel: I });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(s.Z, {
@@ -43,8 +43,8 @@ function I(e) {
                 draftType: g.d.ChannelMessage
             }),
             (0, i.jsx)(u.ZP, {
-                toolbar: Z,
-                'aria-label': _.intl.string(_.t.Pwe8tL),
+                toolbar: S,
+                'aria-label': v.intl.string(v.t.Pwe8tL),
                 children: (0, h.ud)({
                     channel: I,
                     parentChannel: E,
@@ -67,7 +67,7 @@ function I(e) {
                 })
             }),
             (0, i.jsx)('div', {
-                className: v.chat,
+                className: _.chat,
                 children: (0, i.jsx)(
                     c.Z,
                     {

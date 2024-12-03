@@ -20,8 +20,8 @@ var i = n(200651),
     p = n(723047),
     f = n(727843),
     C = n(290348),
-    v = n(857081),
-    _ = n(869269),
+    _ = n(857081),
+    v = n(869269),
     I = n(981631),
     N = n(388032),
     T = n(83701);
@@ -58,7 +58,7 @@ function j(e) {
                         className: T.headerImageContainer,
                         children:
                             null == W
-                                ? (0, i.jsx)(v.Z, {
+                                ? (0, i.jsx)(_.Z, {
                                       className: T.starIcon,
                                       'aria-hidden': !0
                                   })
@@ -153,7 +153,7 @@ function j(e) {
                     editStateId: Z,
                     guildId: l,
                     groupListingId: E,
-                    children: (0, i.jsx)(_.Z, {
+                    children: (0, i.jsx)(v.Z, {
                         allSubscriptionListings: j,
                         priceTiers: b,
                         loading: et,

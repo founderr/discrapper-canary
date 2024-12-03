@@ -6,8 +6,8 @@ var r = n(664751),
     o = n(900849),
     l = n(356164),
     u = n(726115),
-    c = n(981631),
-    d = n(731455);
+    c = n(128449),
+    d = n(981631);
 function f(e, t, n) {
     return (
         t in e
@@ -30,26 +30,26 @@ class _ extends s.Z {
             f(this, 'handleConnectionOpen', () => {
                 (this.isFetchEnabled = !0),
                     this.queue.forEach((e) => {
-                        e === d.Hk ? this.fetchFeaturedGuilds() : this.fetchCategoryFeaturedGuilds({ categoryId: e });
+                        e === c.Hk ? this.fetchFeaturedGuilds() : this.fetchCategoryFeaturedGuilds({ categoryId: e });
                     });
             }),
             f(this, 'fetchFeaturedGuilds', async (e) => {
                 var t;
                 if (!this.isFetchEnabled) {
-                    this.queue.add(d.Hk);
+                    this.queue.add(c.Hk);
                     return;
                 }
                 let n = null !== (t = null == e ? void 0 : e.forceRefresh) && void 0 !== t && t,
-                    s = l.Z.getLastFetchTimestamp({ categoryId: d.Hk });
+                    s = l.Z.getLastFetchTimestamp({ categoryId: c.Hk });
                 if (n || (0, u.Ew)(s)) {
                     a.Z.dispatch({
                         type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_START',
-                        categoryId: d.Hk,
+                        categoryId: c.Hk,
                         reset: !0
                     });
                     try {
                         let e = await i.tn.get({
-                                url: c.ANM.GUILD_DISCOVERY,
+                                url: d.ANM.GUILD_DISCOVERY,
                                 query: r.stringify({
                                     offset: 0,
                                     limit: 30
@@ -61,17 +61,17 @@ class _ extends s.Z {
                             n = e.body.guilds.map(u.Uv);
                         a.Z.dispatch({
                             type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS',
-                            categoryId: d.Hk,
+                            categoryId: c.Hk,
                             guilds: n,
                             total: t
                         });
                     } catch (e) {
                         a.Z.dispatch({
                             type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE',
-                            categoryId: d.Hk,
+                            categoryId: c.Hk,
                             error: e
                         }),
-                            o.rC({ categoryId: d.Hk });
+                            o.rC({ categoryId: c.Hk });
                     }
                 }
             }),
@@ -90,7 +90,7 @@ class _ extends s.Z {
                     });
                     try {
                         let e = await i.tn.get({
-                                url: c.ANM.GUILD_DISCOVERY,
+                                url: d.ANM.GUILD_DISCOVERY,
                                 query: r.stringify({ categories: [t] }),
                                 oldFormErrors: !0,
                                 rejectWithError: !1

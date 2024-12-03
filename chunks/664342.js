@@ -20,13 +20,13 @@ var i = n(200651),
     g = n(299206),
     C = n(727429),
     x = n(665149),
-    _ = n(359110),
-    v = n(585483),
+    v = n(359110),
+    _ = n(585483),
     I = n(739830),
     E = n(488131),
     b = n(981631),
     N = n(388032);
-function S(e) {
+function Z(e) {
     let { channel: t } = e,
         [n, a] = l.useState(!1);
     function s() {
@@ -41,7 +41,7 @@ function S(e) {
         autoInvert: !1,
         onRequestClose: () => a(!1),
         renderPopout: function (e) {
-            return (0, i.jsx)(Z, {
+            return (0, i.jsx)(S, {
                 ...e,
                 channel: t
             });
@@ -59,14 +59,14 @@ function S(e) {
         }
     });
 }
-function Z(e) {
+function S(e) {
     let { channel: t, closePopout: n, onSelect: l } = e,
         C = (0, o.Z)(t, 'Sidebar Overflow'),
         x = (0, d.Z)(t),
         I = (0, p.Z)(t),
         E = (0, m.Z)(t),
-        S = (0, a.Z)(t),
-        Z = (0, c.Z)(t),
+        Z = (0, a.Z)(t),
+        S = (0, c.Z)(t),
         T = (0, h.Z)(t.id),
         j = (0, u.Z)(t),
         A = (0, s.Z)(t),
@@ -76,7 +76,7 @@ function Z(e) {
         }),
         P = (0, f.Z)(t);
     function M() {
-        (0, _.Kh)(t.id);
+        (0, v.Kh)(t.id);
     }
     return (0, i.jsxs)(r.Menu, {
         navId: 'thread-context',
@@ -109,7 +109,7 @@ function Z(e) {
                         action: function () {
                             M(),
                                 setTimeout(() => {
-                                    v.S.dispatch(b.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
+                                    _.S.dispatch(b.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
                                 }, 2000);
                         }
                     }),
@@ -118,13 +118,13 @@ function Z(e) {
                         label: N.intl.string(N.t['2BSH7u']),
                         icon: r.WindowLaunchIcon,
                         action: function () {
-                            M(), v.S.dispatch(b.CkL.TOGGLE_CHANNEL_PINS);
+                            M(), _.S.dispatch(b.CkL.TOGGLE_CHANNEL_PINS);
                         }
                     })
                 ]
             }),
             (0, i.jsxs)(r.MenuGroup, {
-                children: [P, S, Z, A]
+                children: [P, Z, S, A]
             }),
             (0, i.jsx)(r.MenuGroup, { children: y })
         ]
@@ -135,7 +135,7 @@ function T(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             t.isForumPost() ? null : (0, i.jsx)(I.Z, { channel: t }),
-            (0, i.jsx)(S, { channel: t }),
+            (0, i.jsx)(Z, { channel: t }),
             (0, i.jsx)(x.ZP.Icon, {
                 icon: r.XSmallIcon,
                 tooltip: N.intl.string(N.t.cpT0Cg),

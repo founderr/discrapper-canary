@@ -15,8 +15,8 @@ var i = n(200651),
     p = n(933557),
     f = n(471445),
     C = n(339085),
-    v = n(565138),
-    _ = n(372769),
+    _ = n(565138),
+    v = n(372769),
     I = n(690221),
     N = n(524329),
     T = n(575258),
@@ -35,7 +35,7 @@ let k = 'WELCOME_CHANNEL',
     P = (e) => {
         var t;
         let l,
-            { guildId: a, welcomeChannel: o, onEdit: x, onChannelReorder: v, isDropHovered: _, index: I } = e,
+            { guildId: a, welcomeChannel: o, onEdit: x, onChannelReorder: _, isDropHovered: v, index: I } = e,
             [N, T] = r.useState(!1),
             E = r.useRef(null),
             y = (0, u.e7)([b.Z], () => b.Z.getChannel(o.channel_id)),
@@ -50,16 +50,16 @@ let k = 'WELCOME_CHANNEL',
                     index: I
                 },
                 end: (e, t) => {
-                    null != e && !t.didDrop() && v(e.channel, null, !0);
+                    null != e && !t.didDrop() && _(e.channel, null, !0);
                 }
             }),
             [, U] = (0, d.L)({
                 accept: k,
                 hover: (e) => {
-                    v(e.channel, I, !1);
+                    _(e.channel, I, !1);
                 },
                 drop: (e) => {
-                    v(e.channel, I, !0);
+                    _(e.channel, I, !0);
                 }
             });
         return (
@@ -90,7 +90,7 @@ let k = 'WELCOME_CHANNEL',
                       className: O.warningIcon
                   })),
             (0, i.jsxs)('div', {
-                className: s()(O.welcomeChannel, { [O.dragging]: _ }),
+                className: s()(O.welcomeChannel, { [O.dragging]: v }),
                 ref: E,
                 'data-dnd-name': o.description,
                 onContextMenu: (e) => {
@@ -101,7 +101,7 @@ let k = 'WELCOME_CHANNEL',
                                 ...t,
                                 guildId: a,
                                 welcomeChannel: o,
-                                onChannelReorder: v,
+                                onChannelReorder: _,
                                 setShowConfirmModal: T,
                                 onEdit: x,
                                 index: I
@@ -306,8 +306,8 @@ t.Z = (e) => {
                           (0, i.jsxs)('div', {
                               className: O.welcomeHeader,
                               children: [
-                                  (0, i.jsx)(v.Z, {
-                                      size: v.Z.Sizes.LARGER,
+                                  (0, i.jsx)(_.Z, {
+                                      size: _.Z.Sizes.LARGER,
                                       className: O.icon,
                                       guild: t,
                                       animate: !0,
@@ -323,7 +323,7 @@ t.Z = (e) => {
                                                   'span',
                                                   {
                                                       children: [
-                                                          (0, i.jsx)(_.Z, {
+                                                          (0, i.jsx)(v.Z, {
                                                               guild: t,
                                                               className: O.headerGuildBadge,
                                                               flowerStarClassName: O.flowerStar

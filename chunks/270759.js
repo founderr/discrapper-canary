@@ -54,7 +54,7 @@ t.Z = function (e) {
         }, [t]);
     let P = (0, c.e7)([N.Z], () => N.Z.theme),
         { section: O, pendingCount: R } = (0, c.cj)([S.ZP], () => S.ZP.getState()),
-        j = (0, c.cj)([f.Z], () => f.Z.getSuggestionCount()),
+        j = (0, c.e7)([f.Z], () => f.Z.getSuggestionCount()),
         D = (e) => {
             m.Z.setSection(e);
         },

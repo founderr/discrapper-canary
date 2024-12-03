@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return h;
     }
 }),
     n(47120);
@@ -16,9 +16,9 @@ var i = n(200651),
     m = n(963838),
     f = n(39127),
     p = n(981631),
-    h = n(972213);
-function g(e) {
-    let { channelId: t, guildId: n, userId: g, containerDimensions: v } = e,
+    g = n(972213);
+function h(e) {
+    let { channelId: t, guildId: n, userId: h, containerDimensions: v } = e,
         S = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
         [I, _] = l.useState([]),
         x = I.length < 50;
@@ -26,9 +26,9 @@ function g(e) {
         function e(e) {
             var i;
             let { channelId: l, userId: r, emoji: s, animationType: o, animationId: f } = e;
-            if ((null != g && g !== r) || (u.Z.getEnabled() && (0, d.Z)(null !== (i = null == s ? void 0 : s.name) && void 0 !== i ? i : ''))) return;
-            let h = null != s && null != o && null != f;
-            if (l === t && !S && x && h) {
+            if ((null != h && h !== r) || (u.Z.getEnabled() && (0, d.Z)(null !== (i = null == s ? void 0 : s.name) && void 0 !== i ? i : ''))) return;
+            let g = null != s && null != o && null != f;
+            if (l === t && !S && x && g) {
                 let e = (0, m._r)(s),
                     i = null != s.id && !s.animated,
                     l = {
@@ -52,7 +52,7 @@ function g(e) {
                 s.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
             }
         );
-    }, [t, n, g, S, x]);
+    }, [t, n, h, S, x]);
     let E = l.useCallback((e) => {
         _((t) => {
             let n = [...t],
@@ -63,10 +63,10 @@ function g(e) {
     return S
         ? null
         : (0, i.jsx)('div', {
-              className: h.effectsWrapper,
+              className: g.effectsWrapper,
               style: { width: v.width },
               children: (0, i.jsx)('div', {
-                  className: h.effects,
+                  className: g.effects,
                   children: I.map((e) =>
                       (0, i.jsx)(
                           f.Z,

@@ -20,19 +20,19 @@ var i = n(200651),
     g = n(271383),
     C = n(594174),
     x = n(189432),
-    _ = n(356778),
-    v = n(370595),
+    v = n(356778),
+    _ = n(370595),
     I = n(50493),
     E = n(758570),
     b = n(949801);
 function N(e) {
     var t, n;
-    let { userId: r, guildId: N, location: S, className: Z, onNavigate: T } = e,
+    let { userId: r, guildId: N, location: Z, className: S, onNavigate: T } = e,
         j = l.useRef(null),
         A = (0, o.e7)([f.ZP], () => f.ZP.getGuildSidebarState(N), [N]),
         y = l.useRef(0),
         [P, M] = l.useState(null !== (t = null == A ? void 0 : A.details.additionalSearchQuery) && void 0 !== t ? t : {}),
-        R = (0, _.z0)(r, N, {
+        R = (0, v.z0)(r, N, {
             addtionalQuery: P,
             shouldDispatch: !0
         }),
@@ -142,9 +142,9 @@ function N(e) {
     return null == L || null == k || null == H
         ? null
         : (0, i.jsxs)('div', {
-              className: a()(E.container, Z),
+              className: a()(E.container, S),
               children: [
-                  (0, i.jsx)(v.Z, {
+                  (0, i.jsx)(_.Z, {
                       guildId: N,
                       userId: r,
                       onNavigate: T

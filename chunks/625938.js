@@ -1,6 +1,6 @@
 n.d(t, {
     y: function () {
-        return Z;
+        return S;
     }
 }),
     n(47120);
@@ -20,13 +20,13 @@ var i = n(200651),
     g = n(906605),
     C = n(106301),
     x = n(833858),
-    _ = n(866071),
-    v = n(223135),
+    v = n(866071),
+    _ = n(223135),
     I = n(981631),
     E = n(231338),
     b = n(388032),
     N = n(304066);
-let S = (e) => {
+let Z = (e) => {
         let { style: t, className: n, name: l, icon: r } = e;
         return (0, i.jsx)(u.Tooltip, {
             text: l,
@@ -39,15 +39,15 @@ let S = (e) => {
                 })
         });
     },
-    Z = (e) => {
+    S = (e) => {
         let { currentStatus: t, channel: r } = e,
             s = l.useRef(C.Z.getRecentCustomStatuses()),
-            Z = l.useRef((0, p.un)(d.z.HANG_STATUS_NEW_BADGE)).current,
+            S = l.useRef((0, p.un)(d.z.HANG_STATUS_NEW_BADGE)).current,
             T = (0, x.V)(),
             [j, A] = l.useState(null != t ? t : null),
             y = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
             P = () => {
-                !Z && (0, p.EW)(d.z.HANG_STATUS_NEW_BADGE);
+                !S && (0, p.EW)(d.z.HANG_STATUS_NEW_BADGE);
             },
             M = (e, t) => {
                 e.stopPropagation(), (0, g.Zx)(t, !0), P();
@@ -85,7 +85,7 @@ let S = (e) => {
         return (0, i.jsxs)('div', {
             className: N.popout,
             children: [
-                !Z &&
+                !S &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)('div', { className: N.popoutBackground }),
@@ -129,7 +129,7 @@ let S = (e) => {
                                                         (0, i.jsx)('div', { className: N.outline })
                                                     ]
                                                 }),
-                                            (0, i.jsx)(v.Z, {
+                                            (0, i.jsx)(_.Z, {
                                                 className: N.statusIcon,
                                                 hangStatusActivity: j
                                             })
@@ -153,7 +153,7 @@ let S = (e) => {
                                             'aria-label': l.title,
                                             onMouseEnter: () => O(n),
                                             onClick: (e) => M(e, n),
-                                            children: (0, i.jsx)(S, {
+                                            children: (0, i.jsx)(Z, {
                                                 className: a()(N.iconWidget, { [N.selectedWidget]: n === (null == t ? void 0 : t.state) }),
                                                 name: l.title,
                                                 icon: (0, i.jsx)('img', {
@@ -171,7 +171,7 @@ let S = (e) => {
                                     'aria-label': b.intl.string(b.t.S90Fub),
                                     onClick: L,
                                     onMouseEnter: () => A(null),
-                                    children: (0, i.jsx)(S, {
+                                    children: (0, i.jsx)(Z, {
                                         className: N.optionButton,
                                         name: b.intl.string(b.t.S90Fub),
                                         icon: (0, i.jsx)(u.DenyIcon, {
@@ -190,7 +190,7 @@ let S = (e) => {
                             children: [
                                 s.current.map((e, n) => {
                                     let l = e.status === (null == t ? void 0 : t.details) && o().isEqual(e.emoji, null == t ? void 0 : t.emoji),
-                                        s = null != e.emoji && !(0, _.K)(e.emoji, r);
+                                        s = null != e.emoji && !(0, v.K)(e.emoji, r);
                                     return (0, i.jsxs)(
                                         u.Clickable,
                                         {
@@ -199,7 +199,7 @@ let S = (e) => {
                                             onClick: s ? void 0 : (t) => R(t, e),
                                             className: N.statusOptionContainer,
                                             children: [
-                                                (0, i.jsx)(S, {
+                                                (0, i.jsx)(Z, {
                                                     className: a()(N.iconWidget, { [N.selectedWidget]: l }),
                                                     name: e.status,
                                                     icon:
@@ -233,7 +233,7 @@ let S = (e) => {
                                           {
                                               'aria-label': null != t ? b.intl.string(b.t.IN2LTk) : b.intl.string(b.t.UDg0qK),
                                               onClick: k,
-                                              children: (0, i.jsx)(S, {
+                                              children: (0, i.jsx)(Z, {
                                                   className: N.optionButton,
                                                   name: null != t ? b.intl.string(b.t.IN2LTk) : b.intl.string(b.t.UDg0qK),
                                                   icon: (0, i.jsx)(u.PencilIcon, {

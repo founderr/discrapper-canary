@@ -22,8 +22,8 @@ function g(e) {
         x = l.useCallback(() => {
             (0, d.T)(t, [g]);
         }, [t, g]),
-        _ = (0, a.e7)([c.Z], () => c.Z.isBlocked(C)),
-        v = l.useMemo(
+        v = (0, a.e7)([c.Z], () => c.Z.isBlocked(C)),
+        _ = l.useMemo(
             () => ({
                 channelId: t,
                 warningId: g,
@@ -34,19 +34,19 @@ function g(e) {
         );
     l.useEffect(() => {
         (0, h.KQ)({
-            ...v,
+            ..._,
             viewName: h.pb.SAFETY_WARNING_BANNER
         }),
             o.Z.increment({ name: r.V.SAFETY_WARNING_VIEW });
-    }, [v]);
+    }, [_]);
     let I = l.useCallback(
             (e) => {
                 (0, h.qc)({
-                    ...v,
+                    ..._,
                     cta: e
                 });
             },
-            [v]
+            [_]
         ),
         E = l.useCallback(() => {
             (0, s.openModalLazy)(
@@ -74,7 +74,7 @@ function g(e) {
         N = l.useCallback(() => {
             x(), I(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
         }, [x, I]),
-        S = l.useCallback(() => {
+        Z = l.useCallback(() => {
             (0, s.openModalLazy)(async () => {
                 let { default: e } = await n.e('41128').then(n.bind(n, 699783));
                 return (n) => {
@@ -107,13 +107,13 @@ function g(e) {
                 color: s.Button.Colors.BRAND,
                 onclick: E
             },
-            ...(_
+            ...(v
                 ? []
                 : [
                       {
                           text: f.intl.string(f.t['7q0bNT']),
                           color: s.Button.Colors.PRIMARY,
-                          onclick: S
+                          onclick: Z
                       }
                   ])
         ]

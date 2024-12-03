@@ -16,8 +16,8 @@ var i = n(200651),
     m = n(576855),
     f = n(258609),
     p = n(199902),
-    h = n(314897),
-    g = n(430824),
+    g = n(314897),
+    h = n(430824),
     v = n(496675),
     S = n(158776),
     I = n(979651),
@@ -119,10 +119,10 @@ class A extends l.PureComponent {
 }
 function N(e) {
     let { user: t, channel: n, ...a } = e,
-        [r, o] = (0, s.Wu)([I.Z, g.Z, v.Z, f.Z], () => (0, x.p9)(n, I.Z, g.Z, v.Z, f.Z)),
+        [r, o] = (0, s.Wu)([I.Z, h.Z, v.Z, f.Z], () => (0, x.p9)(n, I.Z, h.Z, v.Z, f.Z)),
         c = (0, s.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())),
         d = (0, s.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)),
-        m = (0, s.e7)([h.default], () => h.default.getId()),
+        m = (0, s.e7)([g.default], () => g.default.getId()),
         _ = (0, E.Cf)(c),
         Z = (0, s.e7)([S.Z], () => (0, E.Um)(c, S.Z)),
         C = l.useMemo(() => ({ [n.guild_id]: [t.id] }), [n.guild_id, t.id]);

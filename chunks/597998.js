@@ -21,8 +21,8 @@ var i,
     m = n(194082),
     f = n(282256),
     p = n(925329),
-    h = n(833858),
-    g = n(223135),
+    g = n(833858),
+    h = n(223135),
     v = n(374129),
     S = n(639351),
     I = n(630388),
@@ -69,8 +69,8 @@ let T = (e) => {
                   o.TooltipContainer,
                   {
                       className: y.iconSpacing,
-                      text: (0, h.O8)(t),
-                      children: (0, l.jsx)(g.Z, {
+                      text: (0, g.O8)(t),
+                      children: (0, l.jsx)(h.Z, {
                           hangStatusActivity: t,
                           className: s()(y.hangStatusIcon, n)
                       })
@@ -79,8 +79,8 @@ let T = (e) => {
               );
     };
 function N(e) {
-    let { className: t, mute: n, localMute: i, localVideoDisabled: a, serverMute: r, deaf: c, serverDeaf: d, collapsed: f, video: p, isStreaming: h, disabled: g, isWatching: _, iconClassName: b, embeddedApplication: T, otherClientSessionType: N, voicePlatform: w, hangStatusActivity: R, showHangStatus: M, isSelf: O, application: L, guildId: k, channelId: D, user: U, handleHoverHangStatus: V, handleHoverIcons: F, disconnected: W } = e;
-    if (f || g) return null;
+    let { className: t, mute: n, localMute: i, localVideoDisabled: a, serverMute: r, deaf: c, serverDeaf: d, collapsed: f, video: p, isStreaming: g, disabled: h, isWatching: _, iconClassName: b, embeddedApplication: T, otherClientSessionType: N, voicePlatform: w, hangStatusActivity: R, showHangStatus: M, isSelf: O, application: L, guildId: k, channelId: D, user: U, handleHoverHangStatus: V, handleHoverIcons: F, disconnected: W } = e;
+    if (f || h) return null;
     let B = [],
         G = (0, l.jsx)(P, {
             iconClassName: b,
@@ -176,7 +176,7 @@ function N(e) {
                       'playstation'
                   )
               ),
-        h
+        g
             ? B.push(
                   (0, l.jsx)(
                       'div',
@@ -364,7 +364,7 @@ class w extends (i = a.Component) {
 function j(e) {
     let { application: t, iconClassName: n, guildId: i, channelId: r, userId: u } = e,
         [m, f] = a.useState(!1),
-        h = (0, c.O)((e) => f(e));
+        g = (0, c.O)((e) => f(e));
     return (
         a.useEffect(() => {
             m &&
@@ -379,7 +379,7 @@ function j(e) {
             'aria-label': C.intl.formatToPlainString(C.t.Sq9xJy, { game: t.name }),
             className: y.iconSpacing,
             children: (0, l.jsx)('div', {
-                ref: h,
+                ref: g,
                 children: (0, l.jsx)(p.Z, {
                     className: s()(y.icon, n),
                     game: t,

@@ -12,6 +12,6 @@ e.exports = {
     wrapper: 'wrapper_cbf230',
     actions: 'actions_cbf230',
     actionButton: 'actionButton_cbf230',
-    last: 'last_cbf230',
+    experimentActions: 'experimentActions_cbf230',
     previewButton: 'previewButton_cbf230'
 };

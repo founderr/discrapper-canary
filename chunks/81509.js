@@ -74,7 +74,7 @@ function C(e) {
         ]
     });
 }
-function v(e) {
+function _(e) {
     let { quote: t, quoteAttribution: n, quoteAttributionTitle: r } = e;
     return (0, i.jsxs)('div', {
         className: p.guildCardQuote,
@@ -95,7 +95,7 @@ function v(e) {
         ]
     });
 }
-function _(e) {
+function v(e) {
     let { emojisToShow: t, notShownEmojiCount: n, storePageUrl: r } = e,
         c = null != t && t.length > 0,
         d = () => {
@@ -186,12 +186,12 @@ function I(e) {
                 guildAvatarUrl: g,
                 subscriberCount: x
             }),
-            (0, i.jsx)(v, {
+            (0, i.jsx)(_, {
                 quote: r,
                 quoteAttribution: l,
                 quoteAttributionTitle: a
             }),
-            (0, i.jsx)(_, {
+            (0, i.jsx)(v, {
                 emojisToShow: f,
                 notShownEmojiCount: I,
                 storePageUrl: N

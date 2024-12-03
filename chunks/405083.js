@@ -1,28 +1,28 @@
-n.r(a),
-    n.d(a, {
+a.r(n),
+    a.d(n, {
         default: function () {
             return f;
         }
     });
-var t = n(200651);
-n(192379);
-var r = n(355467),
-    o = n(106976),
-    i = n(703656),
-    l = n(914010),
-    d = n(563132),
-    s = n(791785),
-    c = n(981631);
+var t = a(200651);
+a(192379);
+var o = a(355467),
+    r = a(106976),
+    i = a(703656),
+    l = a(914010),
+    d = a(563132),
+    c = a(791785),
+    s = a(981631);
 function f(e) {
-    let { onClose: a, onComplete: n, forcesTransitionToGuild: f, ...u } = e,
-        { subscriptionMetadataRequest: g } = (0, d.usePaymentContext)();
-    return (0, t.jsx)(s.PaymentModal, {
+    let { onClose: n, onComplete: a, forcesTransitionToGuild: f, ...u } = e,
+        { subscriptionMetadataRequest: _ } = (0, d.usePaymentContext)();
+    return (0, t.jsx)(c.PaymentModal, {
         ...u,
-        onComplete: n,
+        onComplete: a,
         onClose: (e) => {
-            a(e);
-            let t = null == g ? void 0 : g.guild_id;
-            e && null != t && (r.jg(), (0, o.i1)(t), null == n || n(), null != t && (f || l.Z.getGuildId() !== t) && (0, i.uL)(c.Z5c.CHANNEL(t)));
+            n(e);
+            let t = null == _ ? void 0 : _.guild_id;
+            e && null != t && (o.jg(), (0, r.i1)(t), null == a || a(), null != t && (f || l.Z.getGuildId() !== t) && (0, i.uL)(s.Z5c.CHANNEL(t)));
         },
         forceNewPaymentModal: !0
     });

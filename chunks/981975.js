@@ -22,8 +22,8 @@ var i = n(200651),
     p = n(764260),
     f = n(946724),
     C = n(95242),
-    v = n(530198),
-    _ = n(420966),
+    _ = n(530198),
+    v = n(420966),
     I = n(203377),
     N = n(981631),
     T = n(856651),
@@ -64,7 +64,7 @@ function y(e) {
 function Z(e) {
     let { guild: t, role: n, locked: l, setSelectedSection: a, integrations: o } = e,
         { headerHeight: h, headerRef: Z } = (0, C.Z)(0),
-        { scrolledToTop: A, handleScroll: L } = (0, _.V)(),
+        { scrolledToTop: A, handleScroll: L } = (0, v.V)(),
         D = (0, c.e7)(
             [x.Z],
             () => {
@@ -237,7 +237,7 @@ function Z(e) {
                             className: b.configurationsContainer,
                             children: Array.from(a.values()).map((e) =>
                                 (0, i.jsx)(
-                                    v.Z,
+                                    _.Z,
                                     {
                                         configurationItems: e,
                                         onConfigurationChange: s,
@@ -263,7 +263,7 @@ function Z(e) {
                 (0, i.jsx)('div', {
                     className: s()(S.header, S.stickyHeader, { [S.stickyHeaderElevated]: !A }),
                     ref: Z,
-                    children: (0, i.jsx)(_.Z, {
+                    children: (0, i.jsx)(v.Z, {
                         guild: t,
                         role: n,
                         selectedSection: I.ZI.VERIFICATIONS,

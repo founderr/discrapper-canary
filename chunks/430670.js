@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return v;
     }
 }),
     n(47120);
@@ -20,60 +20,60 @@ var i = n(200651),
     g = n(432958),
     C = n(792379),
     x = n(177222);
-function _(e) {
+function v(e) {
     let { channel: t, ...n } = e,
         r = (0, m.Z)();
     (0, o.t)();
-    let [_] = t.recipients,
-        v = (0, s.e7)([h.default], () => h.default.getUser(_));
-    a()(null != v, 'UserProfilePanelWrapper: user cannot be undefined');
+    let [v] = t.recipients,
+        _ = (0, s.e7)([h.default], () => h.default.getUser(v));
+    a()(null != _, 'UserProfilePanelWrapper: user cannot be undefined');
     let I = (0, s.e7)([h.default], () => h.default.getCurrentUser());
     a()(null != I, 'UserProfilePanelWrapper: currentUser cannot be undefined'),
         l.useEffect(() => {
-            (0, f.Z)(v, {
-                withMutualFriends: !v.bot,
+            (0, f.Z)(_, {
+                withMutualFriends: !_.bot,
                 withMutualGuilds: !0,
                 channelId: t.id
             });
-        }, [v, t.id]);
+        }, [_, t.id]);
     let { isBlocked: E, isIgnored: b } = (0, s.cj)([u.Z], () => ({
-            isBlocked: u.Z.isBlocked(v.id),
-            isIgnored: u.Z.isIgnored(v.id)
+            isBlocked: u.Z.isBlocked(_.id),
+            isIgnored: u.Z.isIgnored(_.id)
         })),
         N = (0, c.Do)({ location: 'UserProfilePanelWrapper' }),
-        [S, Z] = l.useState(E || (N && (b || E))),
+        [Z, S] = l.useState(E || (N && (b || E))),
         T = (0, p.sS)({ location: 'UserProfilePopoutWrapper' });
     l.useEffect(() => {
-        Z(E || (N && (b || E)));
+        S(E || (N && (b || E)));
     }, [E, b, N]);
     let j = d.Rt.useSetting();
     return r
         ? null
-        : S && T && !N
+        : Z && T && !N
           ? (0, i.jsx)(g.Z, {
-                user: v,
+                user: _,
                 currentUser: I,
                 channel: t,
-                onViewBlockedProfileClick: () => Z(!1),
+                onViewBlockedProfileClick: () => S(!1),
                 ...n
             })
-          : N && S && !(b && j)
+          : N && Z && !(b && j)
             ? (0, i.jsx)(g.A, {
-                  user: v,
+                  user: _,
                   currentUser: I,
                   channel: t,
-                  onViewBlockedProfileClick: () => Z(!1),
+                  onViewBlockedProfileClick: () => S(!1),
                   ...n
               })
-            : v.isNonUserBot()
+            : _.isNonUserBot()
               ? (0, i.jsx)(C.Z, {
-                    user: v,
+                    user: _,
                     currentUser: I,
                     channel: t,
                     ...n
                 })
               : (0, i.jsx)(x.Z, {
-                    user: v,
+                    user: _,
                     currentUser: I,
                     channel: t,
                     ...n

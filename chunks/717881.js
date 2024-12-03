@@ -15,8 +15,8 @@ var i = n(200651),
     m = n(850827),
     f = n(812206),
     p = n(202458),
-    h = n(220779),
-    g = n(142550),
+    g = n(220779),
+    h = n(142550),
     v = n(954017),
     S = n(314091),
     I = n(159244),
@@ -110,7 +110,7 @@ t.Z = function (e) {
                                     user: n
                                 }),
                                 G &&
-                                    (0, i.jsx)(h.ZP, {
+                                    (0, i.jsx)(g.ZP, {
                                         showReact: !0,
                                         showReply: !0,
                                         popoutProps: {
@@ -124,7 +124,7 @@ t.Z = function (e) {
                                                 interaction_type: i,
                                                 ...A
                                             }),
-                                                i === g.L.ReactSubmit &&
+                                                i === h.L.ReactSubmit &&
                                                     null != l &&
                                                     (0, v.sendReactionToActivity)({
                                                         reaction: l,
@@ -134,7 +134,7 @@ t.Z = function (e) {
                                                         altText: (0, S.xC)(n, t),
                                                         stream: L
                                                     }),
-                                                i === g.L.ReplySubmit &&
+                                                i === h.L.ReplySubmit &&
                                                     null != a &&
                                                     (0, v.sendReplyToActivity)({
                                                         reply: a,

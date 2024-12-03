@@ -16,8 +16,8 @@ var i = n(200651),
     m = n(70956),
     f = n(456631),
     p = n(890913);
-let h = 6 * m.Z.Millis.SECOND,
-    g = 2 * m.Z.Millis.SECOND,
+let g = 6 * m.Z.Millis.SECOND,
+    h = 2 * m.Z.Millis.SECOND,
     v = 2 * m.Z.Millis.SECOND,
     S = (e) => 'scale('.concat(1 - -(e / 120), ') rotate(').concat(e, 'deg)');
 function I(e) {
@@ -45,7 +45,7 @@ function I(e) {
                       () => {
                           E(!1), Z && (0, f.H)(t);
                       },
-                      Z ? g : h
+                      Z ? h : g
                   )),
             () => {
                 null != e && clearTimeout(e);

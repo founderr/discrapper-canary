@@ -15,7 +15,7 @@ var i = n(200651),
     h = n(614584);
 let p = l.memo(function (e) {
     var t, n;
-    let { message: p, channel: m, compact: f = !1, interactionUsernameProfile: g, interactionAvatarProfile: C, interactionData: x, referencedUsernameProfile: _, referencedAvatarProfile: v, setPopout: I } = e,
+    let { message: p, channel: m, compact: f = !1, interactionUsernameProfile: g, interactionAvatarProfile: C, interactionData: x, referencedUsernameProfile: v, referencedAvatarProfile: _, setPopout: I } = e,
         { isInteractionUserBlocked: E, isInteractionUserIgnored: b } = (0, r.cj)(
             [c.Z],
             () => ({
@@ -25,14 +25,14 @@ let p = l.memo(function (e) {
             [p]
         ),
         N = (0, r.e7)([o.Z], () => o.Z.getMessageByReference(null == p ? void 0 : p.messageReference)),
-        S = (0, u.wq)(null === (t = p.interaction) || void 0 === t ? void 0 : t.user.id, m.id),
-        Z = (0, u.Nk)(p.interaction, m, g, I),
+        Z = (0, u.wq)(null === (t = p.interaction) || void 0 === t ? void 0 : t.user.id, m.id),
+        S = (0, u.Nk)(p.interaction, m, g, I),
         T = (0, u.NU)(C, I),
         j = (0, s.t0)(p),
         A = (null == j ? void 0 : j.type) === a.B8.APPLICATION_COMMAND ? (null === (n = j.target_user) || void 0 === n ? void 0 : n.id) : void 0,
         y = (0, u.wq)(A, m.id),
-        P = (0, u.JC)(A, m, _, I),
-        M = (0, u.rY)(v, I),
+        P = (0, u.JC)(A, m, v, I),
+        M = (0, u.rY)(_, I),
         R = (0, u.Xn)(x, I),
         L = l.useCallback(
             () =>
@@ -52,14 +52,14 @@ let p = l.memo(function (e) {
                     channel: m,
                     compact: f,
                     setPopout: I,
-                    referencedAvatarProfile: v,
-                    referencedUsernameProfile: _,
+                    referencedAvatarProfile: _,
+                    referencedUsernameProfile: v,
                     replyReference: p.messageReference,
                     replyMessage: N,
                     isReplySpineClickable: !1,
                     showReplySpine: !1
                 }),
-            [m, f, p, v, N, _, I]
+            [m, f, p, _, N, v, I]
         );
     return (0, i.jsx)(d.Z, {
         message: p,
@@ -70,12 +70,12 @@ let p = l.memo(function (e) {
         showAvatarPopout: C,
         showUsernamePopout: g,
         showDataPopout: x,
-        showTargetAvatarPopout: v,
-        showTargetUsernamePopout: _,
+        showTargetAvatarPopout: _,
+        showTargetUsernamePopout: v,
         onClickAvatar: T,
-        onClickUsername: Z,
+        onClickUsername: S,
         onClickCommand: R,
-        onUserContextMenu: S,
+        onUserContextMenu: Z,
         onClickTargetAvatar: M,
         onClickTargetUsername: P,
         onTargetUserContextMenu: y,

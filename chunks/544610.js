@@ -15,28 +15,28 @@ var l,
     g = n(624138),
     C = n(51144),
     x = n(592125),
-    _ = n(480294),
-    v = n(580005),
+    v = n(480294),
+    _ = n(580005),
     I = n(699516),
     E = n(594174),
     b = n(981631);
 let N = !1,
-    S = '',
-    Z = 0,
+    Z = '',
+    S = 0,
     T = [],
     j = !1,
     A = new Set(),
     y = null;
 function P() {
-    (S = ''), (Z = 0), (T = []), (A = new Set()), (N = !1), (y = null);
+    (Z = ''), (S = 0), (T = []), (A = new Set()), (N = !1), (y = null);
 }
 function M(e) {
-    (S = e), (Z = 0), R();
+    (Z = e), (S = 0), R();
 }
 function R() {
     if (!N) return !1;
     let e = x.Z.getChannel(y);
-    if (0 === S.trim().length)
+    if (0 === Z.trim().length)
         return (
             null != i && i.clearQuery(),
             (T = (function (e) {
@@ -57,24 +57,24 @@ function R() {
     return (
         null != i &&
             i.setQuery(
-                S,
+                Z,
                 {
                     friends: !0,
                     provisional: !1
                 },
                 t,
                 (function () {
-                    let e = v.Z.getFrequentlyWithoutFetchingLatest().filter((e) => e instanceof f.mn && e.isDM()),
+                    let e = _.Z.getFrequentlyWithoutFetchingLatest().filter((e) => e instanceof f.mn && e.isDM()),
                         t = Math.max(
                             ...e.map((e) => {
                                 let { id: t } = e;
-                                return v.Z.getScoreWithoutFetchingLatest(t);
+                                return _.Z.getScoreWithoutFetchingLatest(t);
                             })
                         ),
                         n = {};
                     return (
                         e.forEach((e) => {
-                            let i = v.Z.getScoreWithoutFetchingLatest(e.id),
+                            let i = _.Z.getScoreWithoutFetchingLatest(e.id),
                                 l = e.getRecipientId(),
                                 r = I.Z.isFriend(l) ? 0.2 : 0,
                                 a = null != x.Z.getDMFromUserId(l) ? 0.1 : 0;
@@ -93,7 +93,7 @@ function L() {
     return (j = c().some(I.Z.getRelationships(), (e) => e === b.OGo.FRIEND)) !== e;
 }
 function k(e, t) {
-    if (_.Z.hasConsented(b.pjP.PERSONALIZATION)) {
+    if (v.Z.hasConsented(b.pjP.PERSONALIZATION)) {
         var n, i, l, r;
         let a = null !== (l = null === (n = m.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.communicationProbability) && void 0 !== l ? l : 0,
             s = null !== (r = null === (i = m.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.communicationProbability) && void 0 !== r ? r : 0;
@@ -103,7 +103,7 @@ function k(e, t) {
 }
 function O(e) {
     let { results: t } = e;
-    if (!!N && '' !== S)
+    if (!!N && '' !== Z)
         (T = t
             .map((e) => {
                 let { id: t } = e;
@@ -128,7 +128,7 @@ function U() {
 }
 class H extends (l = d.ZP.Store) {
     initialize() {
-        this.waitFor(E.default, x.Z, I.Z, p.Z, _.Z), this.syncWith([E.default, x.Z], R), this.syncWith([I.Z], L);
+        this.waitFor(E.default, x.Z, I.Z, p.Z, v.Z), this.syncWith([E.default, x.Z], R), this.syncWith([I.Z], L);
     }
     getResults() {
         return T;
@@ -140,12 +140,12 @@ class H extends (l = d.ZP.Store) {
         return A;
     }
     getQuery() {
-        return S;
+        return Z;
     }
     getState() {
         return {
-            query: S,
-            selectedRow: Z,
+            query: Z,
+            selectedRow: S,
             selectedUsers: A,
             results: T,
             hasFriends: j
@@ -183,7 +183,7 @@ let G = new H(u.Z, {
         (y = e.channelId), M(e.query);
     },
     PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function (e) {
-        Z = e.row;
+        S = e.row;
     },
     PRIVATE_CHANNEL_RECIPIENTS_ADD_USER: function (e) {
         let { userId: t } = e;

@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(946724),
     f = n(999382),
     C = n(130341),
-    v = n(981975),
-    _ = n(660962),
+    _ = n(981975),
+    v = n(660962),
     I = n(442182),
     N = n(322816),
     T = n(266665),
@@ -71,7 +71,7 @@ function E(e) {
         return null;
     switch (E) {
         case j.ZI.DISPLAY:
-            t = (0, i.jsx)(_.ZP, {
+            t = (0, i.jsx)(v.ZP, {
                 guild: y,
                 role: Z,
                 locked: D,
@@ -89,7 +89,7 @@ function E(e) {
             });
             break;
         case j.ZI.VERIFICATIONS:
-            t = (0, i.jsx)(v.Z, {
+            t = (0, i.jsx)(_.Z, {
                 guild: y,
                 role: Z,
                 locked: D,

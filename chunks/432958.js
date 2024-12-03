@@ -3,7 +3,7 @@ n.d(t, {
         return T;
     },
     Z: function () {
-        return Z;
+        return S;
     }
 });
 var i = n(200651),
@@ -22,14 +22,14 @@ var i = n(200651),
     g = n(221292),
     C = n(687158),
     x = n(471879),
-    _ = n(502762),
-    v = n(848780),
+    v = n(502762),
+    _ = n(848780),
     I = n(475413),
     E = n(228168),
     b = n(388032),
     N = n(562296),
-    S = n(321975);
-function Z(e) {
+    Z = n(321975);
+function S(e) {
     let { user: t, channel: n, onViewBlockedProfileClick: r } = e,
         a = (0, C.ZP)(t.id),
         o = (0, d.ZP)(),
@@ -39,13 +39,13 @@ function Z(e) {
             userId: t.id,
             channelId: n.id
         }),
-        v = l.useRef(null);
+        _ = l.useRef(null);
     return (0, i.jsx)(h.Gt, {
         value: p,
         children: (0, i.jsx)(f.Mt, {
             value: m,
-            children: (0, i.jsx)(_.Z, {
-                ref: v,
+            children: (0, i.jsx)(v.Z, {
+                ref: _,
                 user: t,
                 displayProfile: a,
                 profileType: E.y0.PANEL,
@@ -56,7 +56,7 @@ function Z(e) {
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: S,
+                                src: Z,
                                 className: N.previewForCollected,
                                 'aria-hidden': !0
                             }),
@@ -106,7 +106,7 @@ function Z(e) {
 }
 function T(e) {
     let { user: t, channel: n, onViewBlockedProfileClick: r } = e,
-        Z = (0, C.ZP)(t.id),
+        S = (0, C.ZP)(t.id),
         T = (0, d.ZP)(),
         j = (0, o.e7)([p.Z], () => p.Z.isBlocked(t.id)),
         { analyticsLocations: A } = (0, h.ZP)(j ? u.Z.BLOCKED_PROFILE_PANEL : u.Z.IGNORED_PROFILE_PANEL),
@@ -120,10 +120,10 @@ function T(e) {
         value: A,
         children: (0, i.jsx)(f.Mt, {
             value: y,
-            children: (0, i.jsx)(_.Z, {
+            children: (0, i.jsx)(v.Z, {
                 ref: P,
                 user: t,
-                displayProfile: Z,
+                displayProfile: S,
                 profileType: E.y0.PANEL,
                 themeOverride: T,
                 children: (0, i.jsx)(s.u2, {
@@ -132,7 +132,7 @@ function T(e) {
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: S,
+                                src: Z,
                                 className: N.previewForCollected,
                                 'aria-hidden': !0
                             }),
@@ -170,7 +170,7 @@ function T(e) {
                                                         });
                                                 }
                                             }),
-                                            (0, i.jsx)(v.Z, {
+                                            (0, i.jsx)(_.Z, {
                                                 userId: t.id,
                                                 onClick: () => {
                                                     null == r || r(),

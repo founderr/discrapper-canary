@@ -20,8 +20,8 @@ var i = n(200651),
     p = n(295141),
     f = n(723047),
     C = n(290348),
-    v = n(450215),
-    _ = n(981631),
+    _ = n(450215),
+    v = n(981631),
     I = n(388032),
     N = n(26405);
 let T = 'guild-role-subscription-tier-template-selector',
@@ -91,7 +91,7 @@ function b(e) {
     return (
         r.useEffect(
             () => (
-                B === _.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && k(),
+                B === v.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && k(),
                 () => {
                     (0, d.closeModal)(T);
                 }
@@ -105,7 +105,7 @@ function b(e) {
                     children: [
                         A.map((e) =>
                             (0, i.jsx)(
-                                v.Z,
+                                _.Z,
                                 {
                                     guildId: t,
                                     initialEditStateId: e,

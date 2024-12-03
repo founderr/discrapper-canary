@@ -9,13 +9,13 @@ n.d(t, {
         return C;
     },
     Su: function () {
-        return _;
+        return v;
     },
     YZ: function () {
         return p;
     },
     _Q: function () {
-        return v;
+        return _;
     },
     bF: function () {
         return m;
@@ -160,14 +160,14 @@ let g = l()(async (e, t) => {
             entry: l.body
         });
     },
-    _ = (e, t) => {
+    v = (e, t) => {
         s.Z.dispatch({
             type: 'GUILD_DIRECTORY_CATEGORY_SELECT',
             channelId: e,
             categoryId: t
         });
     },
-    v = async (e, t) => {
+    _ = async (e, t) => {
         try {
             let n = await a.tn.get({
                 url: u.ANM.DIRECTORY_CHANNEL_LIST_BY_ID(e),

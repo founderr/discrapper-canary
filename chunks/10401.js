@@ -17,16 +17,16 @@ let p = {},
 function x() {
     return u.Z;
 }
-function _() {
+function v() {
     if (((g = {}), !f))
         for (let [e, t] of Object.entries(u.Z)) {
             let n = !1 !== p[e];
             if (((g[e] = n), n && null != t.prerequisites)) for (let n of t.prerequisites) !1 !== p[n] && (g[e] = !1);
         }
 }
-class v extends (i = o.ZP.Store) {
+class _ extends (i = o.ZP.Store) {
     initialize() {
-        _(), this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(d.Z);
+        v(), this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(d.Z);
     }
     shouldShow(e) {
         var t;
@@ -47,7 +47,7 @@ class v extends (i = o.ZP.Store) {
     }
 }
 (a = 'TutorialIndicatorStore'),
-    (r = 'displayName') in (l = v)
+    (r = 'displayName') in (l = _)
         ? Object.defineProperty(l, r, {
               value: a,
               enumerable: !0,
@@ -55,10 +55,10 @@ class v extends (i = o.ZP.Store) {
               writable: !0
           })
         : (l[r] = a),
-    (t.Z = new v(c.Z, {
+    (t.Z = new _(c.Z, {
         CONNECTION_OPEN: function (e) {
             let { tutorial: t } = e;
-            (C = !0), (f = !0), (p = {}), null != t && ((f = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (p[e] = !1))), _();
+            (C = !0), (f = !0), (p = {}), null != t && ((f = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (p[e] = !1))), v();
         },
         CONNECTION_CLOSED: function () {
             C = !1;
@@ -70,7 +70,7 @@ class v extends (i = o.ZP.Store) {
             }),
                 (m = { ...m }),
                 delete m[e.tutorialId],
-                _();
+                v();
         },
         TUTORIAL_INDICATOR_SHOW: function (e) {
             m = {

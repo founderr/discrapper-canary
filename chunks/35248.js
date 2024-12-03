@@ -37,7 +37,7 @@ let b = (e) => {
             { isGift: T } = (0, m.wD)(),
             [I, S] = r.useState(!1),
             v = t === h.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY ? f.i$l.GOOGLE_PAY : void 0,
-            x = t === h.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY ? (0, E.a)() : (0, A.q)();
+            x = t === h.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY ? (0, E.a)() : (0, A.q1)();
         return (
             r.useEffect(() => {
                 let e = setTimeout(

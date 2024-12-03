@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return _;
     }
 });
 var i = n(200651);
@@ -20,7 +20,7 @@ var l = n(120356),
     g = n(467014),
     C = n(388032),
     x = n(758570);
-function _() {
+function v() {
     return (0, i.jsxs)('div', {
         className: x.header,
         children: [
@@ -47,16 +47,16 @@ function _() {
         ]
     });
 }
-function v(e) {
+function _(e) {
     let { userId: t, guildId: n, location: l, className: d, onNavigate: C } = e,
-        v = (0, a.e7)([c.default], () => c.default.getUser(t), [t]),
+        _ = (0, a.e7)([c.default], () => c.default.getUser(t), [t]),
         I = (0, a.e7)([o.ZP], () => o.ZP.getMember(n, t), [n, t]);
-    return null == v || null == I
+    return null == _ || null == I
         ? null
         : (0, i.jsxs)('div', {
               className: r()(x.container, d),
               children: [
-                  (0, i.jsx)(_, {}),
+                  (0, i.jsx)(v, {}),
                   (0, i.jsxs)(s.Scroller, {
                       className: x.innerContainer,
                       children: [

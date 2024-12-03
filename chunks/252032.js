@@ -21,8 +21,8 @@ var i = n(200651),
     g = n(838440),
     C = n(930282),
     x = n(955384),
-    _ = n(981631),
-    v = n(46124);
+    v = n(981631),
+    _ = n(46124);
 function I(e) {
     let { value: t, channel: n } = e;
     return (0, g.v)({
@@ -39,12 +39,12 @@ function E(e) {
         { id: c } = n,
         m = t.getGuildId(),
         g = (0, r.e7)([h.Z], () => h.Z.getGuild(m), [m]),
-        C = t.type === _.d4z.GUILD_ANNOUNCEMENT,
-        E = null != g && g.hasFeature(_.oNc.NEWS),
+        C = t.type === v.d4z.GUILD_ANNOUNCEMENT,
+        E = null != g && g.hasFeature(v.oNc.NEWS),
         N = C && E,
         {
-            editingMessage: S,
-            editingTextValue: Z,
+            editingMessage: Z,
+            editingTextValue: S,
             editingRichValue: T
         } = (0, r.cj)(
             [u.Z],
@@ -59,27 +59,27 @@ function E(e) {
         A = l.useCallback(
             (e, n, i) => {
                 let { content: l } = i,
-                    r = p.Z.can(_.Plq.MANAGE_MESSAGES, t),
-                    o = null != S && null != S.author ? S.author.id : null;
-                return N && (o === j || r) && null != S && (0, f.yE)(S.flags, _.iLy.CROSSPOSTED) ? s.Z.confirmEdit(e, n, l) : a.Z.editMessage(e, n, { content: l }), Promise.resolve();
+                    r = p.Z.can(v.Plq.MANAGE_MESSAGES, t),
+                    o = null != Z && null != Z.author ? Z.author.id : null;
+                return N && (o === j || r) && null != Z && (0, f.yE)(Z.flags, v.iLy.CROSSPOSTED) ? s.Z.confirmEdit(e, n, l) : a.Z.editMessage(e, n, { content: l }), Promise.resolve();
             },
-            [S, N, j, t]
+            [Z, N, j, t]
         ),
         y = l.useCallback(
             (e) =>
                 (0, l.createElement)(b, {
                     ...e,
-                    className: v.channelTextArea,
+                    className: _.channelTextArea,
                     key: c
                 }),
             [c]
         );
-    return null != Z && null != T
+    return null != S && null != T
         ? (0, i.jsx)(x.Z, {
               ref: void 0,
               channel: t,
               message: n,
-              textValue: Z,
+              textValue: S,
               richValue: T,
               onCancel: a.Z.endEditMessage,
               onChange: a.Z.updateEditMessage,
@@ -98,10 +98,10 @@ function b(e) {
     return (
         l.useEffect(
             () => (
-                m.S.subscribe(_.CkL.TEXTAREA_FOCUS, f),
-                m.S.subscribe(_.CkL.TEXTAREA_BLUR, g),
+                m.S.subscribe(v.CkL.TEXTAREA_FOCUS, f),
+                m.S.subscribe(v.CkL.TEXTAREA_BLUR, g),
                 () => {
-                    m.S.unsubscribe(_.CkL.TEXTAREA_FOCUS, f), m.S.unsubscribe(_.CkL.TEXTAREA_BLUR, g);
+                    m.S.unsubscribe(v.CkL.TEXTAREA_FOCUS, f), m.S.unsubscribe(v.CkL.TEXTAREA_BLUR, g);
                 }
             ),
             [f, g]
@@ -109,7 +109,7 @@ function b(e) {
         (0, i.jsx)(
             c.Z,
             {
-                className: v.channelTextArea,
+                className: _.channelTextArea,
                 textValue: t,
                 richValue: n,
                 channel: a,

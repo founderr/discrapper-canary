@@ -14,9 +14,9 @@ var i = n(200651),
     g = n(236564),
     C = n(981631),
     x = n(354459),
-    _ = n(288135);
+    v = n(288135);
 t.Z = (0, s.Z)((e) => {
-    let { participants: t, filteredParticipants: n, selectedParticipant: r, participantsVersion: s, layout: v, onSelectParticipant: I, onContextMenuParticipant: E, onFullscreenParticipant: b, channel: N, hasConnectPermission: S, className: Z, inCall: T, showParticipants: j = !0, paused: A = !1, width: y, height: P, idle: M, mode: R, popoutWindow: L, awaitingRemoteSessionInfo: k, callContainerDimensions: O } = e;
+    let { participants: t, filteredParticipants: n, selectedParticipant: r, participantsVersion: s, layout: _, onSelectParticipant: I, onContextMenuParticipant: E, onFullscreenParticipant: b, channel: N, hasConnectPermission: Z, className: S, inCall: T, showParticipants: j = !0, paused: A = !1, width: y, height: P, idle: M, mode: R, popoutWindow: L, awaitingRemoteSessionInfo: k, callContainerDimensions: O } = e;
     l.useEffect(() => {
         u.S.dispatch(C.CkL.REMEASURE_TARGET);
     }, [y, P, O.width, O.height]);
@@ -26,30 +26,30 @@ t.Z = (0, s.Z)((e) => {
         return (0, i.jsx)(h.Z, {
             channel: N,
             participants: t,
-            hasConnectPermission: S
+            hasConnectPermission: Z
         });
     if (R === C.WtW.VOICE)
         return (0, i.jsx)(c.Z, {
             guildId: N.guild_id,
             width: y,
-            className: _.voiceCallWrapper,
+            className: v.voiceCallWrapper,
             participants: t,
             onContextMenu: E
         });
     if (((n = T ? n : t), null == r))
         return 0 === n.length
             ? (0, i.jsx)(g.Z, {
-                  className: a()(_.videoGrid, _.hiddenParticipants),
+                  className: a()(v.videoGrid, v.hiddenParticipants),
                   channelId: N.id,
                   width: y
               })
             : (0, i.jsx)(d.Z, {
-                  className: _.videoGridWrapper,
+                  className: v.videoGridWrapper,
                   justify: d.Z.Justify.CENTER,
                   align: d.Z.Align.CENTER,
                   children: (0, i.jsx)(m.Z, {
                       channel: N,
-                      className: _.videoGrid,
+                      className: v.videoGrid,
                       participants: D,
                       totalNumberOfParticipants: t.length,
                       onClick: I,
@@ -67,11 +67,11 @@ t.Z = (0, s.Z)((e) => {
         filteredParticipants: D,
         participants: t,
         popoutWindow: L,
-        className: Z,
+        className: S,
         idle: M,
         height: P,
         width: y,
-        layout: v,
+        layout: _,
         inCall: T,
         channel: N,
         showParticipants: j

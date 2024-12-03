@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(442837),
-    r = n(150192),
-    l = n(731455),
+    r = n(526429),
+    l = n(128449),
     a = n(388032);
 function s(e) {
     let { categoryId: t } = e;

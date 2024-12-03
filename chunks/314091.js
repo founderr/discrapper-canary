@@ -6,7 +6,7 @@ n.d(t, {
         return p;
     },
     xC: function () {
-        return h;
+        return g;
     }
 }),
     n(47120);
@@ -55,7 +55,7 @@ let u = (e) => (''.concat(e).length < 13 ? 1000 * e : e),
             theme: u === t ? 'dark' : c
         };
     },
-    h = (e, t) =>
+    g = (e, t) =>
         (0, l.Z)(t)
             ? c.intl.formatToPlainString(c.t.Xuqn4e, {
                   username: e.username,

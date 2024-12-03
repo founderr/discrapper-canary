@@ -16,8 +16,8 @@ var i = n(192379),
     m = n(88315),
     f = n(262433),
     p = n(400321),
-    h = n(813900);
-let g = 1000 / 60;
+    g = n(813900);
+let h = 1000 / 60;
 function v(e, t, n, v) {
     let S = (0, r.useToken)(a.Z.unsafe_rawColors.BRAND_500).hex(),
         I = (0, r.useToken)(a.Z.unsafe_rawColors.BLACK_500).hex(),
@@ -33,9 +33,9 @@ function v(e, t, n, v) {
                         if (0 === n.length) return;
                         let m = t.current;
                         if (null == m) return;
-                        let h = m.getContext('2d');
-                        if (null == h) return;
-                        let { width: g, height: v } = m.getBoundingClientRect(),
+                        let g = m.getContext('2d');
+                        if (null == g) return;
+                        let { width: h, height: v } = m.getBoundingClientRect(),
                             S = [];
                         n.forEach((e) => {
                             if (!(null != o.Z.getVoiceStateForChannel(r, e.userId))) {
@@ -72,8 +72,8 @@ function v(e, t, n, v) {
                                 }
                             })({
                                 drawable: e,
-                                context: h,
-                                canvasWidth: g,
+                                context: g,
+                                canvasWidth: h,
                                 canvasHeight: v,
                                 fallbackColor: i,
                                 outlineColorDark: s,
@@ -110,14 +110,14 @@ function v(e, t, n, v) {
         let t = u.Z.getDrawables(n),
             i = f.U.getState().particles,
             l = t.length > 0 || Object.keys(i).length > 0;
-        l && null == E.current._ref && (null == E.current._ref ? (Z(n), E.current.start(g, () => Z(n))) : !l && null != E.current._ref && (E.current.stop(), (0, m.UN)(e)));
+        l && null == E.current._ref && (null == E.current._ref ? (Z(n), E.current.start(h, () => Z(n))) : !l && null != E.current._ref && (E.current.stop(), (0, m.UN)(e)));
     }, [e, Z, n]);
     i.useEffect(() => {
         let e = E.current;
         return (
             u.Z.addChangeListener(C),
             C(),
-            (0, s.vM)(t.getAvatarURL(null, h.Ks)),
+            (0, s.vM)(t.getAvatarURL(null, g.Ks)),
             () => {
                 u.Z.removeChangeListener(C), e.stop();
             }

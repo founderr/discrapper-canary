@@ -15,14 +15,14 @@ var i = n(200651),
     g = n(144144),
     C = n(166459),
     x = n(966390),
-    _ = n(738619),
-    v = n(410575),
+    v = n(738619),
+    _ = n(410575),
     I = n(744061),
     E = n(857595),
     b = n(607070),
     N = n(367907),
-    S = n(450936),
-    Z = n(993766),
+    Z = n(450936),
+    S = n(993766),
     T = n(499254),
     j = n(541099),
     A = n(827498),
@@ -69,14 +69,14 @@ var i = n(200651),
     eg = n(314897),
     eC = n(433355),
     ex = n(703558),
-    e_ = n(323873),
-    ev = n(271383),
+    ev = n(323873),
+    e_ = n(271383),
     eI = n(375954),
     eE = n(496675),
     eb = n(944486),
     eN = n(117530),
-    eS = n(594174),
-    eZ = n(626135),
+    eZ = n(594174),
+    eS = n(626135),
     eT = n(934415),
     ej = n(459273),
     eA = n(585483),
@@ -140,7 +140,7 @@ class eX extends l.PureComponent {
             let e = ex.Z.getDraft(n.id, ex.d.ChannelMessage);
             e !== i && this.setState((0, G.eK)(e));
         }
-        t.textValue.length < eG.J6R && i.length >= eG.J6R && eZ.default.track(eG.rMx.MESSAGE_LENGTH_LIMIT_REACHED, {});
+        t.textValue.length < eG.J6R && i.length >= eG.J6R && eS.default.track(eG.rMx.MESSAGE_LENGTH_LIMIT_REACHED, {});
     }
     handleEditLastMessage(e) {
         let { channel: t } = this.props;
@@ -499,7 +499,7 @@ class eJ extends l.PureComponent {
     render() {
         var e;
         let t;
-        let { channel: n, guild: l, keyboardModeEnabled: r, hasModalOpen: s, pendingReply: o, chatInputType: c, placeholder: d, accessibilityLabel: h, showQuarantinedUserBanner: m, filterAfterTimestamp: f, communicationDisabledUntil: g, shakeIntensity: C, poggermodeEnabled: x, isSelectedResourceChannel: I, showAutomodUserProfileChatBlocker: E, showAppLauncherButton: b, showAppDMsUI: N, isInitialLoading: S, entryPointCommandButtonRef: Z, isFailedAppDMLoad: T } = this.props,
+        let { channel: n, guild: l, keyboardModeEnabled: r, hasModalOpen: s, pendingReply: o, chatInputType: c, placeholder: d, accessibilityLabel: h, showQuarantinedUserBanner: m, filterAfterTimestamp: f, communicationDisabledUntil: g, shakeIntensity: C, poggermodeEnabled: x, isSelectedResourceChannel: I, showAutomodUserProfileChatBlocker: E, showAppLauncherButton: b, showAppDMsUI: N, isInitialLoading: Z, entryPointCommandButtonRef: S, isFailedAppDMLoad: T } = this.props,
             { textAreaFocused: j, textAreaHighlighted: A } = this.state,
             y = c === H.I.SIDEBAR;
         t = y && n.type === eG.d4z.GUILD_VOICE ? eF.t.pnnyFR : y && n.type === eG.d4z.GUILD_STAGE_VOICE ? eF.t.YInSkp : u.T.THREADS.has(n.type) ? eF.t['OkzL+f'] : eF.t.UbNmGR;
@@ -538,7 +538,7 @@ class eJ extends l.PureComponent {
                             channel: n,
                             type: c,
                             animateRef: this.appIconAnimateRef,
-                            entryPointCommandButtonRef: Z
+                            entryPointCommandButtonRef: S
                         })
                     }),
                     N && !T
@@ -546,21 +546,21 @@ class eJ extends l.PureComponent {
                               className: eV.entryPointButtonContainer,
                               children: (0, i.jsx)(ew.Z, {
                                   channel: n,
-                                  entryPointCommandButtonRef: Z,
+                                  entryPointCommandButtonRef: S,
                                   type: c
                               })
                           })
                         : null
                 ]
             }),
-            R = N && S,
-            L = R && S ? P : M,
+            R = N && Z,
+            L = R && Z ? P : M,
             k = a()({
                 [ez.barWithAppLauncherButton]: b,
                 [ez.barWithAppsDMsUI]: N
             });
         return (0, i.jsx)(
-            v.Z,
+            _.Z,
             {
                 page: (0, eT.mE)(this.props.channel),
                 children: (0, i.jsx)(en.sW, {
@@ -633,7 +633,7 @@ class eJ extends l.PureComponent {
                                                                           channel: n,
                                                                           children: L
                                                                       }),
-                                                                (0, i.jsx)(_.Z, {
+                                                                (0, i.jsx)(v.Z, {
                                                                     channel: n,
                                                                     poggermodeEnabled: x
                                                                 }),
@@ -740,25 +740,25 @@ function eQ(e) {
 t.Z = l.memo(function (e) {
     let { channel: t, guild: n, chatInputType: r, filterAfterTimestamp: a } = e,
         { placeholder: s, accessibilityLabel: o } = (0, eL.Z)(t),
-        c = (0, eu.S)(eS.default.getCurrentUser(), t),
+        c = (0, eu.S)(eZ.default.getCurrentUser(), t),
         [d] = (0, Q.AB)(null == n ? void 0 : n.id),
         u = (0, q.Ux)(null == n ? void 0 : n.id),
-        m = (0, h.e7)([eS.default], () => eS.default.getCurrentUser()),
-        f = (0, h.e7)([ev.ZP], () => {
+        m = (0, h.e7)([eZ.default], () => eZ.default.getCurrentUser()),
+        f = (0, h.e7)([e_.ZP], () => {
             var e, t, i;
-            return null != m && null !== (i = null === (e = ev.ZP.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : eG.lds, null == m ? void 0 : m.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== i && i;
+            return null != m && null !== (i = null === (e = e_.ZP.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : eG.lds, null == m ? void 0 : m.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== i && i;
         }),
         g = (0, h.e7)([es.Z], () => es.Z.isEnabled()),
         C = (0, ed.Z)(t.id),
         x = (0, ee.Z)(t.id),
-        _ = (0, P.R)({
+        v = (0, P.R)({
             channel: t,
             chatInputType: r,
             location: 'ChannelChatMemo'
         }),
-        v = (0, U.h9)(t.id, 'ChannelChatMemo'),
-        { isInitialLoading: I, primaryEntryPointCommand: E, isProfileFetching: N, wasProfileFetching: T, applicationId: A, channelId: y, commands: M } = (0, S.Z)({ channel: t });
-    (0, Z.Z)({
+        _ = (0, U.h9)(t.id, 'ChannelChatMemo'),
+        { isInitialLoading: I, primaryEntryPointCommand: E, isProfileFetching: N, wasProfileFetching: T, applicationId: A, channelId: y, commands: M } = (0, Z.Z)({ channel: t });
+    (0, S.Z)({
         isProfileFetching: N,
         wasProfileFetching: T,
         applicationId: A,
@@ -769,7 +769,7 @@ t.Z = l.memo(function (e) {
         L = (0, h.e7)([j.Z], () => j.Z.appDMChannelsWithFailedLoads().has(t.id));
     return (0, i.jsx)(eJ, {
         channel: t,
-        isEditing: null != (0, h.e7)([e_.Z], () => e_.Z.getEditingMessageId(t.id)),
+        isEditing: null != (0, h.e7)([ev.Z], () => ev.Z.getEditingMessageId(t.id)),
         hasModalOpen: (0, p.useModalsStore)(p.hasAnyModalOpenSelector),
         guild: n,
         keyboardModeEnabled: (0, h.e7)([b.Z], () => b.Z.keyboardModeEnabled),
@@ -784,8 +784,8 @@ t.Z = l.memo(function (e) {
         poggermodeEnabled: g,
         isSelectedResourceChannel: x,
         showAutomodUserProfileChatBlocker: u && !f,
-        showAppLauncherButton: _,
-        showAppDMsUI: v,
+        showAppLauncherButton: v,
+        showAppDMsUI: _,
         isInitialLoading: I,
         showEntryPointAppCommandButton: null != E,
         entryPointCommandButtonRef: R,

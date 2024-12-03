@@ -20,14 +20,14 @@ var i,
     g = n(665149),
     C = n(484459),
     x = n(347475),
-    _ = n(271383),
-    v = n(496675),
+    v = n(271383),
+    _ = n(496675),
     I = n(158776),
     E = n(471253),
     b = n(431328),
     N = n(145834),
-    S = n(590415),
-    Z = n(614173),
+    Z = n(590415),
+    S = n(614173),
     T = n(618896),
     j = n(231338),
     A = n(388032),
@@ -62,14 +62,14 @@ let P = a.memo(function (e) {
         }, []);
         let g = t.getGuildId();
         d()(null != g, 'Channel cannot be guildless');
-        let { isMobile: v, status: b } = (0, u.cj)([I.Z], () => ({
+        let { isMobile: _, status: b } = (0, u.cj)([I.Z], () => ({
                 isMobile: I.Z.isMobileOnline(i.user.id),
                 status: I.Z.getStatus(i.user.id, g)
             })),
-            Z = (0, u.e7)([_.ZP], () => _.ZP.getMember(g, i.user.id)),
+            S = (0, u.e7)([v.ZP], () => v.ZP.getMember(g, i.user.id)),
             T = a.useMemo(() => ({ [g]: [i.user.id] }), [g, i.user.id]);
         (0, f.$)(T);
-        let j = i.rtsState === S.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+        let j = i.rtsState === Z.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         function P() {
             (0, E.DT)(t, i.user.id, !1);
         }
@@ -118,7 +118,7 @@ let P = a.memo(function (e) {
                                     size: h.AvatarSizes.SIZE_40,
                                     className: y.participantAvatar,
                                     user: i.user,
-                                    isMobile: v,
+                                    isMobile: _,
                                     status: b
                                 }),
                                 (0, r.jsxs)('div', {
@@ -126,7 +126,7 @@ let P = a.memo(function (e) {
                                     children: [
                                         (0, r.jsx)(h.NameWithRole, {
                                             name: i.userNick,
-                                            color: null !== (t = null == Z ? void 0 : Z.colorString) && void 0 !== t ? t : void 0,
+                                            color: null !== (t = null == S ? void 0 : S.colorString) && void 0 !== t ? t : void 0,
                                             className: y.participantName
                                         }),
                                         (0, r.jsx)(h.Text, {
@@ -176,7 +176,7 @@ let P = a.memo(function (e) {
     }),
     R = a.memo(function (e) {
         let { channel: t } = e,
-            [n, i] = (0, Z.h)(t.id);
+            [n, i] = (0, S.h)(t.id);
         return (0, r.jsx)(h.FormSwitch, {
             className: y.toggle,
             onChange: i,
@@ -207,7 +207,7 @@ let P = a.memo(function (e) {
 function k(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: i } = e,
         l = (0, b.Fd)(t.id),
-        a = [(0, u.e7)([v.Z], () => v.Z.can(j.Pl.MANAGE_CHANNELS, t) || v.Z.can(j.Pl.MANAGE_ROLES, t)) ? 1 : 0, Math.max(1, l.length)];
+        a = [(0, u.e7)([_.Z], () => _.Z.can(j.Pl.MANAGE_CHANNELS, t) || _.Z.can(j.Pl.MANAGE_ROLES, t)) ? 1 : 0, Math.max(1, l.length)];
     return (0, r.jsxs)('div', {
         className: o()(y.container, { [y.chatOpen]: i }),
         children: [

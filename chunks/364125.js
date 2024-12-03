@@ -13,8 +13,8 @@ var i = n(192379),
     u = n(743597);
 function d(e) {
     let { user: t, channelId: n, streamerId: d, stream: m, focused: f, canvas: p } = e,
-        h = i.useRef(!1),
-        g = (0, l.e7)([a.Z], () => a.Z.getDrawMode()),
+        g = i.useRef(!1),
+        h = (0, l.e7)([a.Z], () => a.Z.getDrawMode()),
         v = (0, o.Z)((0, c.Z)(t.id, n, d), m),
         S = (0, o.Z)((0, u.Z)(t.id, n, d), m),
         I = i.useCallback(
@@ -32,41 +32,41 @@ function d(e) {
         ),
         _ = i.useCallback(
             (e) => {
-                if (!!f && null != g) e.stopPropagation(), (h.current = !0), I('handleMouseDown', g, e);
+                if (!!f && null != h) e.stopPropagation(), (g.current = !0), I('handleMouseDown', h, e);
             },
-            [I, g, f]
+            [I, h, f]
         ),
         x = i.useCallback(
             (e) => {
-                if (!!f && null != g) e.stopPropagation(), h.current && I('handleMouseMove', g, e);
+                if (!!f && null != h) e.stopPropagation(), g.current && I('handleMouseMove', h, e);
             },
-            [I, g, f]
+            [I, h, f]
         ),
         E = i.useCallback(
             (e) => {
-                if (!!f && null != g) e.stopPropagation(), (h.current = !1), I('handleMouseUp', g, e);
+                if (!!f && null != h) e.stopPropagation(), (g.current = !1), I('handleMouseUp', h, e);
             },
-            [I, g, f]
+            [I, h, f]
         ),
         Z = i.useCallback(
             (e) => {
-                if (!!h.current && null != g) I('handleMouseEnter', g, e);
+                if (!!g.current && null != h) I('handleMouseEnter', h, e);
             },
-            [I, g]
+            [I, h]
         );
     return (
         i.useEffect(() => {
             let e = (e) => {
-                if (null != g) (h.current = !1), I('handleMouseUp', g, e);
+                if (null != h) (g.current = !1), I('handleMouseUp', h, e);
             };
             return window.addEventListener('mouseup', e), () => window.removeEventListener('mouseup', e);
-        }, [I, g]),
+        }, [I, h]),
         {
             handleClick: i.useCallback(
                 (e) => {
-                    f && null != g && e.stopPropagation();
+                    f && null != h && e.stopPropagation();
                 },
-                [g, f]
+                [h, f]
             ),
             handleMouseDown: _,
             handleMouseEnter: Z,

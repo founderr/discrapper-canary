@@ -17,8 +17,8 @@ var l = n(442837),
     m = n(592125),
     f = n(585483),
     p = n(915863),
-    h = n(981631),
-    g = n(388032),
+    g = n(981631),
+    h = n(388032),
     v = n(951908);
 function S(e) {
     let { isCurrentUser: t, color: n, look: S, applicationStream: I, onAction: _ } = e,
@@ -34,13 +34,13 @@ function S(e) {
         Z = (0, l.e7)([m.Z], () => m.Z.getChannel(null == I ? void 0 : I.channelId)),
         [C, y] = (0, u.wq)(Z),
         b = (0, c.Aq)(),
-        T = null != x && null != I && x.state !== h.jm8.ENDED && x.ownerId === I.ownerId,
+        T = null != x && null != I && x.state !== g.jm8.ENDED && x.ownerId === I.ownerId,
         A = (e) => {
-            if (null != I) null == _ || _(), s.default.selectVoiceChannel(I.channelId), !T && (0, o.iV)(I, { forceMultiple: e }), b.dispatch(h.CkL.POPOUT_CLOSE), f.S.dispatch(h.CkL.MODAL_CLOSE), r.Z.popAll();
+            if (null != I) null == _ || _(), s.default.selectVoiceChannel(I.channelId), !T && (0, o.iV)(I, { forceMultiple: e }), b.dispatch(g.CkL.POPOUT_CLOSE), f.S.dispatch(g.CkL.MODAL_CLOSE), r.Z.popAll();
         };
     if (null == I) return null;
     let N = (0, u.P9)(y);
-    t ? (N = g.intl.string(g.t.XvBdeX)) : T && (N = g.intl.string(g.t.JH1SJy));
+    t ? (N = h.intl.string(h.t.XvBdeX)) : T && (N = h.intl.string(h.t.JH1SJy));
     let w = {
         color: n,
         look: S
@@ -67,7 +67,7 @@ function S(e) {
             ),
             E && !T
                 ? (0, i.jsx)(a.Tooltip, {
-                      text: g.intl.string(g.t.wCrzur),
+                      text: h.intl.string(h.t.wCrzur),
                       children: (e) =>
                           (0, i.jsx)(p.Z, {
                               ...e,

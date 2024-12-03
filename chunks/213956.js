@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(464610),
     f = n(733629),
     C = n(598622),
-    v = n(921944),
-    _ = n(388032),
+    _ = n(921944),
+    v = n(388032),
     I = n(232203);
 function N(e) {
     let t,
@@ -30,7 +30,7 @@ function N(e) {
         j = (0, l.e7)([g.Z], () => g.Z.getCurrentPage());
     if (
         (r.useEffect(() => {
-            (0, o.EW)(s.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: v.L.AUTO });
+            (0, o.EW)(s.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: _.L.AUTO });
         }, []),
         null == T)
     )
@@ -45,13 +45,13 @@ function N(e) {
             break;
         case x.u.CAPTCHA_AND_RAID_PROTECTION:
             t = (0, i.jsx)(f.Z, {
-                title: _.intl.string(_.t['53eF5u']),
+                title: v.intl.string(v.t['53eF5u']),
                 settings: b[x.u.CAPTCHA_AND_RAID_PROTECTION]
             });
             break;
         case x.u.DM_AND_SPAM_PROTECTION:
             t = (0, i.jsx)(f.Z, {
-                title: _.intl.string(_.t.O0SfFx),
+                title: v.intl.string(v.t.O0SfFx),
                 settings: b[x.u.DM_AND_SPAM_PROTECTION]
             });
             break;
@@ -60,7 +60,7 @@ function N(e) {
             break;
         case x.u.PERMISSIONS:
             t = (0, i.jsx)(f.Z, {
-                title: _.intl.string(_.t.BXoNiY),
+                title: v.intl.string(v.t.BXoNiY),
                 settings: b[x.u.PERMISSIONS]
             });
     }
@@ -83,7 +83,7 @@ function N(e) {
                         (0, i.jsx)(a.Text, {
                             variant: 'text-sm/semibold',
                             color: 'interactive-normal',
-                            children: _.intl.string(_.t['13/7kZ'])
+                            children: v.intl.string(v.t['13/7kZ'])
                         })
                     ]
                 }),

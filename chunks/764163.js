@@ -23,8 +23,8 @@ var i = n(200651),
     p = n(984933),
     f = n(691886),
     C = n(185923),
-    v = n(388032),
-    _ = n(575769);
+    _ = n(388032),
+    v = n(575769);
 function I(e) {
     let { guildId: t, emojiData: n, 'aria-labelledby': l, onSelectEmoji: s } = e,
         d = (0, a.e7)([g.ZP], () => (null != n.id ? g.ZP.getCustomEmojiById(n.id) : void 0)),
@@ -62,7 +62,7 @@ function I(e) {
                     ? null
                     : function () {
                           return (0, i.jsx)(c.Z, {
-                              className: _.emoji,
+                              className: v.emoji,
                               emojiId: n.id,
                               emojiName: n.name,
                               animated: null == d ? void 0 : d.animated
@@ -80,18 +80,18 @@ function I(e) {
             children: (e, t) => {
                 let { isShown: n } = t;
                 return (0, i.jsxs)('div', {
-                    className: _.emojiInputContainer,
+                    className: v.emojiInputContainer,
                     ...e,
                     children: [
                         (0, i.jsx)(m.Z, {
-                            className: _.emojiButton,
+                            className: v.emojiButton,
                             active: n,
                             tabIndex: 0,
                             renderButtonContents: I
                         }),
                         (0, i.jsx)(o.TextInput, {
-                            inputClassName: _.emojiText,
-                            placeholder: v.intl.string(v.t.qJPLNT),
+                            inputClassName: v.emojiText,
+                            placeholder: _.intl.string(_.t.qJPLNT),
                             value: N,
                             'aria-labelledby': l,
                             readOnly: !0
@@ -134,21 +134,21 @@ function N(e) {
                         (0, i.jsx)(o.Heading, {
                             id: p,
                             variant: 'heading-md/semibold',
-                            children: v.intl.string(v.t['2qf9EB'])
+                            children: _.intl.string(_.t['2qf9EB'])
                         }),
                         (0, i.jsx)(o.ModalCloseButton, {
-                            className: _.closeButton,
+                            className: v.closeButton,
                             onClick: x
                         })
                     ]
                 }),
                 (0, i.jsxs)(o.ModalContent, {
-                    className: _.modalContent,
+                    className: v.modalContent,
                     children: [
                         s,
                         (0, i.jsx)(o.Spacer, { size: 24 }),
                         (0, i.jsx)(o.FormSection, {
-                            title: v.intl.string(v.t['1Ts7QE']),
+                            title: _.intl.string(_.t['1Ts7QE']),
                             titleId: f,
                             children: (0, i.jsx)(o.TextArea, {
                                 placeholder: a,
@@ -161,7 +161,7 @@ function N(e) {
                         }),
                         (0, i.jsx)(o.Spacer, { size: 24 }),
                         (0, i.jsx)(o.FormSection, {
-                            title: v.intl.string(v.t.sMOuub),
+                            title: _.intl.string(_.t.sMOuub),
                             titleId: C,
                             children: (0, i.jsx)(I, {
                                 guildId: n,
@@ -176,25 +176,25 @@ function N(e) {
                     justify: d.Z.Justify.BETWEEN,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: _.primaryButtons,
+                            className: v.primaryButtons,
                             children: [
                                 (0, i.jsx)(o.Button, {
                                     type: 'submit',
                                     disabled: !S,
-                                    children: null == l ? v.intl.string(v.t.OYkgVl) : v.intl.string(v.t.R3BPHx)
+                                    children: null == l ? _.intl.string(_.t.OYkgVl) : _.intl.string(_.t.R3BPHx)
                                 }),
                                 null != h &&
                                     (0, i.jsx)(o.Button, {
                                         look: o.Button.Looks.BLANK,
                                         size: o.Button.Sizes.ICON,
-                                        className: _.deleteButton,
+                                        className: v.deleteButton,
                                         onClick: () => {
                                             h(), x();
                                         },
                                         children: (0, i.jsx)(o.TrashIcon, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            'aria-label': v.intl.string(v.t.oyYWHB)
+                                            'aria-label': _.intl.string(_.t.oyYWHB)
                                         })
                                     })
                             ]
@@ -202,9 +202,9 @@ function N(e) {
                         (0, i.jsx)(o.Button, {
                             look: o.Button.Looks.LINK,
                             color: o.Button.Colors.PRIMARY,
-                            className: _.cancelButton,
+                            className: v.cancelButton,
                             onClick: x,
-                            children: v.intl.string(v.t['ETE/oK'])
+                            children: _.intl.string(_.t['ETE/oK'])
                         })
                     ]
                 })
@@ -220,11 +220,11 @@ function T(e) {
             children: [
                 (0, i.jsx)(o.HelpMessage, {
                     messageType: o.HelpMessageTypes.WARNING,
-                    children: v.intl.string(v.t.xunxCg)
+                    children: _.intl.string(_.t.xunxCg)
                 }),
                 (0, i.jsx)(o.Spacer, { size: 24 }),
                 (0, i.jsx)(o.FormSection, {
-                    title: v.intl.string(v.t.GK18KC),
+                    title: _.intl.string(_.t.GK18KC),
                     titleId: x,
                     children: (0, i.jsx)(f.Z, {
                         guildId: t,
@@ -243,7 +243,7 @@ function T(e) {
         guildId: t,
         initialData: l,
         benefitTypeInput: p,
-        descriptionPlaceholder: v.intl.string(v.t.J8O1Li),
+        descriptionPlaceholder: _.intl.string(_.t.J8O1Li),
         canSubmit: null != h,
         onSave: function (e) {
             s()(null != h, 'Cannot submit null channel'),
@@ -263,10 +263,10 @@ function j(e) {
         [h, g] = r.useState(null !== (t = null == n ? void 0 : n.name) && void 0 !== t ? t : ''),
         x = (0, u.Dt)(),
         p = (0, i.jsx)(o.FormSection, {
-            title: v.intl.string(v.t.NPOJra),
+            title: _.intl.string(_.t.NPOJra),
             titleId: x,
             children: (0, i.jsx)(o.TextArea, {
-                placeholder: v.intl.string(v.t.NPOJra),
+                placeholder: _.intl.string(_.t.NPOJra),
                 value: h,
                 rows: 1,
                 onChange: function (e) {
@@ -279,7 +279,7 @@ function j(e) {
         guildId: m,
         initialData: n,
         benefitTypeInput: p,
-        descriptionPlaceholder: v.intl.string(v.t.ucP4Tk),
+        descriptionPlaceholder: _.intl.string(_.t.ucP4Tk),
         canSubmit: '' !== h,
         onSave: function (e) {
             s()('' !== h, 'Cannot submit empty name'),

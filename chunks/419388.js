@@ -21,8 +21,8 @@ var i = n(192379),
     g = n(534469),
     C = n(173033),
     x = n(959517),
-    _ = n(981631);
-function v(e, t, n) {
+    v = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -139,7 +139,7 @@ class b {
         }
         let a = e.messages.last(),
             s = t.last();
-        if (null != a && a.state === _.yb.SENDING && (null == s ? void 0 : s.id) !== a.id) {
+        if (null != a && a.state === v.yb.SENDING && (null == s ? void 0 : s.id) !== a.id) {
             this.setScrollToBottom();
             return;
         }
@@ -374,7 +374,7 @@ class b {
         let { initialScrollTop: e } = this;
         this.initialScrollTop = void 0;
         let t = I(this.props.messages);
-        null != t ? this.scrollToMessage(t, !1) : this.props.hasUnreads && this.props.channel.type !== _.d4z.GUILD_VOICE && this.props.channel.type !== _.d4z.GUILD_STAGE_VOICE ? this.scrollToNewMessages() : null != e ? this.scrollTo(e + this.props.placeholderHeight, !1, this.handleScroll) : this.setScrollToBottom();
+        null != t ? this.scrollToMessage(t, !1) : this.props.hasUnreads && this.props.channel.type !== v.d4z.GUILD_VOICE && this.props.channel.type !== v.d4z.GUILD_STAGE_VOICE ? this.scrollToNewMessages() : null != e ? this.scrollTo(e + this.props.placeholderHeight, !1, this.handleScroll) : this.setScrollToBottom();
     }
     scrollTo(e) {
         var t;
@@ -404,7 +404,7 @@ class b {
             { messages: t, channel: n } = this.props;
         if (t.hasMoreAfter) {
             var i, l;
-            (i = n), o.Z.jumpToPresent(i.id, _.AQB), (0, h.XU)(null !== (l = i.getGuildId()) && void 0 !== l ? l : _.ME, i.id);
+            (i = n), o.Z.jumpToPresent(i.id, v.AQB), (0, h.XU)(null !== (l = i.getGuildId()) && void 0 !== l ? l : v.ME, i.id);
         } else
             this.scrollTo(Number.MAX_SAFE_INTEGER, e, () => {
                 (this.jumping = !1), this.handleScroll();
@@ -484,29 +484,29 @@ class b {
             n,
             l = this;
         if (
-            (v(this, 'props', void 0),
-            v(this, 'ref', i.createRef()),
-            v(this, 'automaticAnchor', null),
-            v(this, 'messageFetchAnchor', null),
-            v(this, 'focusAnchor', null),
-            v(this, 'loading', void 0),
-            v(this, 'jumping', !1),
-            v(this, 'pinned', void 0),
-            v(this, 'dragging', !1),
-            v(this, 'isAtBottom', !1),
-            v(this, 'prevScrollTop', null),
-            v(this, 'anchorTimeout', null),
-            v(this, 'initialScrollTop', null),
-            v(this, 'acking', !1),
-            v(this, 'scrollCounter', 0),
-            v(this, 'offsetHeightCache', 0),
-            v(this, 'scrollHeightCache', 0),
-            v(this, 'scrollTopCache', -1),
-            v(this, '_bottomAnchor', null),
-            v(this, '_automaticAnchorCallbacks', []),
-            v(this, '_scrollCompleteCallbacks', []),
-            v(this, 'updateVisibleMessagesDebounced', r().debounce(p.JR, 300)),
-            v(this, 'handleScroll', (e) => {
+            (_(this, 'props', void 0),
+            _(this, 'ref', i.createRef()),
+            _(this, 'automaticAnchor', null),
+            _(this, 'messageFetchAnchor', null),
+            _(this, 'focusAnchor', null),
+            _(this, 'loading', void 0),
+            _(this, 'jumping', !1),
+            _(this, 'pinned', void 0),
+            _(this, 'dragging', !1),
+            _(this, 'isAtBottom', !1),
+            _(this, 'prevScrollTop', null),
+            _(this, 'anchorTimeout', null),
+            _(this, 'initialScrollTop', null),
+            _(this, 'acking', !1),
+            _(this, 'scrollCounter', 0),
+            _(this, 'offsetHeightCache', 0),
+            _(this, 'scrollHeightCache', 0),
+            _(this, 'scrollTopCache', -1),
+            _(this, '_bottomAnchor', null),
+            _(this, '_automaticAnchorCallbacks', []),
+            _(this, '_scrollCompleteCallbacks', []),
+            _(this, 'updateVisibleMessagesDebounced', r().debounce(p.JR, 300)),
+            _(this, 'handleScroll', (e) => {
                 var t;
                 if (!this.isInitialized()) return;
                 let n = this.getScrollerState(),
@@ -530,17 +530,17 @@ class b {
                 let l = this.isInScrollTriggerLoadingRegion(n);
                 1 === l ? this.loadMore() : 2 === l ? this.loadMore(!0) : this.enableAutomaticAck(), this.handleScrollSpeed(n);
             }),
-            v(this, 'handleResize', (e, t) => {
+            _(this, 'handleResize', (e, t) => {
                 let { offsetHeightCache: n, scrollHeightCache: i } = this;
                 'container' === t ? (n = e.contentRect.height) : 'content' === t && (i = e.contentRect.height), this.isHeightChange(n, i) && this.fixScrollPosition(n, i);
             }),
-            v(this, 'handleMouseDown', (e) => {
+            _(this, 'handleMouseDown', (e) => {
                 e.target === e.currentTarget && (this.dragging = !0);
             }),
-            v(this, 'handleMouseUp', () => {
+            _(this, 'handleMouseUp', () => {
                 (this.dragging = !1), this.handleScroll();
             }),
-            v(this, 'loadMore', function () {
+            _(this, 'loadMore', function () {
                 let e,
                     t,
                     n = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -558,11 +558,11 @@ class b {
                         channelId: l.props.channel.id,
                         before: e,
                         after: t,
-                        limit: _.AQB,
+                        limit: v.AQB,
                         truncate: !0
                     });
             }),
-            v(this, 'updateStoreDimensionsDebounced', r().debounce(this.updateStoreDimensions, 200)),
+            _(this, 'updateStoreDimensionsDebounced', r().debounce(this.updateStoreDimensions, 200)),
             (this.props = e),
             (this.loading = e.messages.loadingMore),
             null != e.messages.jumpTargetId)

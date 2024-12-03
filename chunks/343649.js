@@ -199,7 +199,7 @@ function et(e) {
         [e2, e1] = (0, g.Z)(!1, 500),
         [e7, e9] = i.useState(null),
         [e3, e5] = i.useState([]),
-        [e6, e4] = i.useState(!1);
+        [e4, e6] = i.useState(!1);
     i.useEffect(() => {
         let e;
         if (!!eD) null != D.Z.get(X.Xh.PREMIUM_MONTH_GUILD) && e5((e = (0, W.DE)(X.Xh.PREMIUM_MONTH_GUILD, ex, !1))), null == ex && null != eu && null != eu.paymentSourceId ? e9(eu.currency) : null != e && e9(e[0]);
@@ -370,7 +370,7 @@ function et(e) {
                                                   guild_id: el,
                                                   application_id: ec
                                               }),
-                                              e6)
+                                              e4)
                                           )
                                               return;
                                           if (null == eu || null == em) {
@@ -381,7 +381,7 @@ function et(e) {
                                                   currency: s.currency
                                               });
                                               if (n.redirectConfirmation) {
-                                                  e4(null != n.redirectURL);
+                                                  e6(null != n.redirectURL);
                                                   return;
                                               }
                                           } else {
@@ -389,7 +389,7 @@ function et(e) {
                                               (n.currency = eu.currency), null == n.currency && (n.currency = s.currency), (n.paymentSource = null != ef ? eI[ef] : void 0), null == n.paymentSource && (a()(null != e, 'Missing paymentSource'), (n.paymentSource = e), (n.currency = s.currency));
                                               let t = await (0, m.Mg)(eu, n, eF);
                                               if (t.redirectConfirmation) {
-                                                  e4(null != t.redirectURL);
+                                                  e6(null != t.redirectURL);
                                                   return;
                                               }
                                           }
@@ -405,7 +405,7 @@ function et(e) {
                                                   duration_ms: Date.now() - ew
                                               });
                                       } finally {
-                                          !e6 && ey(!1);
+                                          !e4 && ey(!1);
                                       }
                                   },
                                   children: $.intl.string($.t.eUEeCg)

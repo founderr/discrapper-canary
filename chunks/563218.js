@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return h;
     }
 });
 var i = n(200651),
@@ -15,21 +15,21 @@ var i = n(200651),
     m = n(716600),
     f = n(918559),
     p = n(981631);
-let h = (e, t) => {
+let g = (e, t) => {
     r.Z.wait(() => {
         (0, s.Cz)(e, t);
     });
 };
-function g(e) {
+function h(e) {
     let t,
         { embedId: n, className: r, style: s } = e,
-        g = (0, a.e7)([o.Z], () => o.Z.getWindow(p.KJ3.CHANNEL_CALL_POPOUT)),
+        h = (0, a.e7)([o.Z], () => o.Z.getWindow(p.KJ3.CHANNEL_CALL_POPOUT)),
         v = (0, m.Z)(),
         S = (0, a.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
     if (null != v && !(0, d.Z)(v.channelId) && S === f.Ez.PANEL) t = window;
     else {
         var I;
-        t = null !== (I = null == g ? void 0 : g.window) && void 0 !== I ? I : window;
+        t = null !== (I = null == h ? void 0 : h.window) && void 0 !== I ? I : window;
     }
     let _ = l.useRef(null),
         x = l.useMemo(() => {
@@ -38,7 +38,7 @@ function g(e) {
                 null == e &&
                     (e = t.requestAnimationFrame(() => {
                         var t, i;
-                        h(n, null !== (i = null === (t = _.current) || void 0 === t ? void 0 : t.getBoundingClientRect()) && void 0 !== i ? i : null), (e = null);
+                        g(n, null !== (i = null === (t = _.current) || void 0 === t ? void 0 : t.getBoundingClientRect()) && void 0 !== i ? i : null), (e = null);
                     }));
             };
         }, [n, t]);
@@ -63,7 +63,7 @@ function g(e) {
             return (
                 i.observe(e),
                 () => {
-                    i.disconnect(), h(n, null);
+                    i.disconnect(), g(n, null);
                 }
             );
         }, [n, x]),

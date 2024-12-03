@@ -20,34 +20,34 @@ var i = n(200651),
     g = n(621600),
     C = n(378298),
     x = n(359119),
-    _ = n(473092),
-    v = n(177342),
+    v = n(473092),
+    _ = n(177342),
     I = n(134612),
     E = n(981631),
     b = n(388032),
     N = n(771860);
-function S(e) {
+function Z(e) {
     let { senderId: t, channelId: n, warningId: r } = e,
         { isIgnored: d } = (0, a.cj)([m.Z], () => ({ isIgnored: m.Z.isIgnored(t) }), [t]),
         u = (0, h.Do)({ location: 'web_stranger_danger_more' }),
         C = (0, a.e7)([f.ZP], () => f.ZP.isChannelMuted(null, n)),
-        v = l.useCallback(() => {
-            (0, _.qc)({
+        _ = l.useCallback(() => {
+            (0, v.qc)({
                 channelId: n,
                 warningId: r,
                 senderId: t,
                 warningType: x.pj.STRANGER_DANGER,
-                cta: _.NM.USER_MODAL_IGNORE
+                cta: v.NM.USER_MODAL_IGNORE
             }),
                 c.Z.ignoreUser(t, 'web_stranger_danger_more', n);
         }, [n, r, t]),
         I = l.useCallback(() => {
-            (0, _.qc)({
+            (0, v.qc)({
                 channelId: n,
                 warningId: r,
                 senderId: t,
                 warningType: x.pj.STRANGER_DANGER,
-                cta: _.NM.USER_MODAL_UNIGNORE
+                cta: v.NM.USER_MODAL_UNIGNORE
             }),
                 c.Z.unignoreUser(t, 'web_stranger_danger_more', n);
         }, [n, r, t]);
@@ -74,7 +74,7 @@ function S(e) {
                       size: s.Button.Sizes.SMALL,
                       color: s.Button.Colors.PRIMARY,
                       'aria-label': d ? b.intl.string(b.t['3SrzRU']) : b.intl.string(b.t.avyV7O),
-                      onClick: d ? I : v,
+                      onClick: d ? I : _,
                       children: d ? b.intl.string(b.t['3SrzRU']) : b.intl.string(b.t.avyV7O)
                   })
               ]
@@ -105,23 +105,23 @@ function S(e) {
                           ? () => {
                                 o.Z.updateChannelOverrideSettings(null, n, { muted: !1 }, g.ZB.Unmuted),
                                     p.Z.showUnmuteSuccessToast(t, n),
-                                    (0, _.qc)({
+                                    (0, v.qc)({
                                         channelId: n,
                                         warningId: r,
                                         senderId: t,
                                         warningType: x.pj.STRANGER_DANGER,
-                                        cta: _.NM.USER_MODAL_UNMUTE
+                                        cta: v.NM.USER_MODAL_UNMUTE
                                     });
                             }
                           : () => {
                                 o.Z.updateChannelOverrideSettings(null, n, { muted: !0 }, g.ZB.Muted),
                                     p.Z.showMuteSuccessToast(t, n),
-                                    (0, _.qc)({
+                                    (0, v.qc)({
                                         channelId: n,
                                         warningId: r,
                                         senderId: t,
                                         warningType: x.pj.STRANGER_DANGER,
-                                        cta: _.NM.USER_MODAL_MUTE
+                                        cta: v.NM.USER_MODAL_MUTE
                                     });
                             },
                       children: C ? b.intl.string(b.t['6QK4Hx']) : b.intl.string(b.t['UVp+4+'])
@@ -129,7 +129,7 @@ function S(e) {
               ]
           });
 }
-function Z(e) {
+function S(e) {
     let { onClick: t } = e;
     return (0, i.jsxs)('div', {
         className: N.safetyAction,
@@ -174,7 +174,7 @@ function T(e) {
                     type: E.OGo.BLOCKED
                 }),
                     f(),
-                    (0, _.qc)({
+                    (0, v.qc)({
                         channelId: t,
                         warningId: o,
                         senderId: h,
@@ -185,7 +185,7 @@ function T(e) {
             [f, t, o, h]
         );
     l.useEffect(() => {
-        (0, _.MC)(E.rMx.SAFETY_WARNING_VIEWED, {
+        (0, v.MC)(E.rMx.SAFETY_WARNING_VIEWED, {
             channelId: t,
             warningId: o,
             senderId: h,
@@ -218,15 +218,15 @@ function T(e) {
                         ),
                         actions: (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(S, {
+                                (0, i.jsx)(Z, {
                                     senderId: h,
                                     channelId: t,
                                     warningId: o
                                 }),
                                 (0, i.jsx)(d.Z, {}),
-                                (0, i.jsx)(Z, {
+                                (0, i.jsx)(S, {
                                     onClick: () => {
-                                        r(), j(_.NM.USER_MODAL_BLOCK_CONFIRM, _.NM.USER_MODAL_BLOCK_CANCEL, T);
+                                        r(), j(v.NM.USER_MODAL_BLOCK_CONFIRM, v.NM.USER_MODAL_BLOCK_CANCEL, T);
                                     }
                                 })
                             ]
@@ -245,7 +245,7 @@ function T(e) {
                         confirmBlock: N(e),
                         onCancel: () => {
                             null == r || r(),
-                                (0, _.qc)({
+                                (0, v.qc)({
                                     channelId: t,
                                     warningId: o,
                                     senderId: h,
@@ -256,7 +256,7 @@ function T(e) {
                     });
             });
         };
-    return (0, i.jsx)(v.Q, {
+    return (0, i.jsx)(_.Q, {
         channelId: t,
         warningId: o,
         senderId: h,
@@ -270,12 +270,12 @@ function T(e) {
                 color: s.Button.Colors.BRAND,
                 onclick: () => {
                     T(),
-                        (0, _.qc)({
+                        (0, v.qc)({
                             channelId: t,
                             warningId: o,
                             senderId: h,
                             warningType: x.pj.STRANGER_DANGER,
-                            cta: _.NM.OPEN_MORE_TIPS
+                            cta: v.NM.OPEN_MORE_TIPS
                         });
                 }
             },
@@ -285,7 +285,7 @@ function T(e) {
                       {
                           text: b.intl.string(b.t.ie0QdH),
                           color: s.Button.Colors.RED,
-                          onclick: () => j(_.NM.USER_BANNER_BLOCK_CONFIRM, _.NM.USER_BANNER_BLOCK_CANCEL)
+                          onclick: () => j(v.NM.USER_BANNER_BLOCK_CONFIRM, v.NM.USER_BANNER_BLOCK_CANCEL)
                       }
                   ])
         ]

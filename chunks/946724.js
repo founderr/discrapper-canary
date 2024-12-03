@@ -13,8 +13,8 @@ var s,
     p = n(561654),
     f = n(430824),
     C = n(990492),
-    v = n(823379),
-    _ = n(700785),
+    _ = n(823379),
+    v = n(700785),
     I = n(999382),
     N = n(981631);
 let T = new Set(),
@@ -213,7 +213,7 @@ let G = new U(
               GUILD_SETTINGS_ROLES_SORT_UPDATE: function (e) {
                   let { roles: t } = e;
                   if (null != E && t.length !== E.length) return !1;
-                  (E = t.map((e) => w(e)).filter(v.lm)), (S = !0), P();
+                  (E = t.map((e) => w(e)).filter(_.lm)), (S = !0), P();
               },
               GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS: function (e) {
                   let { id: t, flag: n, allow: i } = e,
@@ -230,7 +230,7 @@ let G = new U(
               GUILD_SETTINGS_ROLES_CLEAR_PERMISSIONS: function (e) {
                   let { id: t } = e,
                       n = w(t);
-                  return null != n && M(n, { permissions: _.Hn });
+                  return null != n && M(n, { permissions: v.Hn });
               },
               GUILD_SETTINGS_ROLES_UPDATE_NAME: function (e) {
                   let { id: t, name: n } = e,

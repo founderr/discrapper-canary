@@ -116,7 +116,7 @@ function f(e) {
     (0, s.RD)(t.id);
     let f = (0, a.Z6)(t.id),
         { rulesByTriggerType: C } = (0, s.pH)(t.id),
-        { numEnabledRules: v, numRules: _ } = r.useMemo(() => {
+        { numEnabledRules: _, numRules: v } = r.useMemo(() => {
             let e = 0,
                 t = 0;
             return null == C
@@ -186,8 +186,8 @@ function f(e) {
                                     icon: n(145136),
                                     title: h.intl.string(h.t.uRelg4),
                                     subtitle: h.intl.formatToPlainString(h.t.TG7NYG, {
-                                        enabled: v,
-                                        total: _
+                                        enabled: _,
+                                        total: v
                                     }),
                                     page: u.u.AUTOMOD
                                 }),

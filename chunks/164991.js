@@ -7,7 +7,7 @@ var i = n(972959);
 let r = Object.freeze({
         query: '',
         languageCode: null,
-        categoryId: n(731455).Hk,
+        categoryId: n(128449).Hk,
         fetchedQuery: '',
         resultsQuery: '',
         resultsInitialCategoryId: null,

@@ -32,7 +32,7 @@ var i = t(200651),
     C = t(981631),
     _ = t(374172);
 function O(e) {
-    let { premiumSubscription: n, setPurchaseState: t, onBack: r, onNext: O, legalTermsNodeRef: A, flashLegalTerms: Z, invoiceError: R, planError: M, onPurchaseError: w, baseAnalyticsData: L, flowStartTime: k, trialId: F, planGroup: D, analyticsLocation: U, purchaseTokenAuthState: B, openInvoiceId: G, metadata: H, backButtonEligible: W, disablePurchase: V, isTrial: K = !1 } = e,
+    let { premiumSubscription: n, setPurchaseState: t, onBack: r, onNext: O, legalTermsNodeRef: A, flashLegalTerms: R, invoiceError: Z, planError: M, onPurchaseError: w, baseAnalyticsData: L, flowStartTime: k, trialId: F, planGroup: D, analyticsLocation: U, purchaseTokenAuthState: B, openInvoiceId: G, metadata: H, backButtonEligible: W, disablePurchase: V, isTrial: K = !1 } = e,
         { selectedPlan: z, priceOptions: Y, setHasAcceptedTerms: X, setPurchaseError: q, purchaseType: J, paymentSourceId: Q, paymentSources: $, selectedSkuId: ee, skusById: en, skuPricePreviewsById: et, referralCode: ei, contextMetadata: el, invoicePreview: er, inReverseTrial: es } = (0, I.usePaymentContext)(),
         { isGift: ea, selectedGiftStyle: ec, customGiftMessage: eo, emojiConfetti: eu, soundEffect: ed, giftRecipient: em } = (0, y.wD)(),
         ep = (0, E.MY)(em),
@@ -115,7 +115,7 @@ function O(e) {
         l.useEffect(() => {
             ef && !ea && null == n && eA();
         }, [ef, ea, n]);
-    let eZ = null != G || (J === C.GZQ.ONE_TIME && !ea);
+    let eR = null != G || (J === C.GZQ.ONE_TIME && !ea);
     return ef
         ? null
         : (0, i.jsxs)(c.ModalFooter, {
@@ -123,10 +123,10 @@ function O(e) {
               children: [
                   (0, i.jsx)(h.Z, {
                       legalTermsNodeRef: A,
-                      invoiceError: R,
+                      invoiceError: Z,
                       planError: M,
                       disablePurchase: V,
-                      flashLegalTerms: Z,
+                      flashLegalTerms: R,
                       isSubmitting: eE,
                       premiumSubscription: n,
                       isGift: ea,
@@ -139,7 +139,7 @@ function O(e) {
                       inReverseTrial: es
                   }),
                   (0, i.jsx)(b.Z, {}),
-                  W && !eZ
+                  W && !eR
                       ? (0, i.jsx)('div', {
                             className: _.back,
                             children: (0, i.jsx)(p.Z, { onClick: r })

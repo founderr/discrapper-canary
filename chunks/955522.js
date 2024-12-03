@@ -1,18 +1,18 @@
-e.d(n, {
+n.d(e, {
     F: function () {
-        return r;
+        return s;
     }
 });
-var i = e(200651);
-e(192379);
-var o = e(481060);
-let r = (t) => {
+var i = n(200651);
+n(192379);
+var o = n(481060);
+let s = (t) => {
     (0, o.openModalLazy)(async () => {
-        let { default: n } = await e.e('12014').then(e.bind(e, 879367));
-        return (e) =>
-            (0, i.jsx)(n, {
+        let { default: e } = await n.e('12014').then(n.bind(n, 879367));
+        return (n) =>
+            (0, i.jsx)(e, {
                 ...t,
-                ...e
+                ...n
             });
     });
 };

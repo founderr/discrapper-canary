@@ -21,25 +21,25 @@ var i = n(200651),
     g = n(626135),
     C = n(120522),
     x = n(386542),
-    _ = n(933843),
-    v = n(746599),
+    v = n(933843),
+    _ = n(746599),
     I = n(1163),
     E = n(738672),
     b = n(981631),
     N = n(37113),
-    S = n(388032),
-    Z = n(235726);
+    Z = n(388032),
+    S = n(235726);
 function T(e) {
     let { className: t, onDismiss: n } = e;
     return (0, i.jsx)(u.Button, {
         className: t,
-        'aria-label': S.intl.string(S.t.cpT0Cg),
+        'aria-label': Z.intl.string(Z.t.cpT0Cg),
         look: u.Button.Looks.BLANK,
         size: u.Button.Sizes.NONE,
         onClick: n,
         children: (0, i.jsx)(u.XSmallIcon, {
             size: 'xs',
-            className: Z.closeIcon,
+            className: S.closeIcon,
             color: 'white'
         })
     });
@@ -58,7 +58,7 @@ function y(e) {
                     .then((e) => {
                         if (e) {
                             if (
-                                ((0, v.J1)(!(0, _.mc)(j, A)),
+                                ((0, _.J1)(!(0, v.mc)(j, A)),
                                 g.default.track(b.rMx.PERK_DEMO_OFFER_ACCEPTED, {
                                     guild_id: t.guild_id,
                                     channel_id: t.id,
@@ -66,7 +66,7 @@ function y(e) {
                                     resolution: j,
                                     max_fps: A
                                 }),
-                                (0, v.cD)(!1),
+                                (0, _.cD)(!1),
                                 null == x)
                             )
                                 return;
@@ -101,36 +101,36 @@ function y(e) {
         pauseAnimation: n,
         color: u.Button.Colors.GREEN,
         size: u.Button.Sizes.SMALL,
-        className: Z.optInButton,
+        className: S.optInButton,
         onClick: I,
         submitting: r,
-        children: S.intl.string(S.t['Rpn/09'])
+        children: Z.intl.string(Z.t['Rpn/09'])
     });
 }
 function P(e) {
     let { channel: t, hidden: n, onDismiss: l } = e,
         r = I.Z.useExperiment({ location: 'StreamButtonDemoOptInPopoutContent' }, { autoTrackExposure: !1 }).extendedDemoDuration;
     return (0, i.jsxs)('div', {
-        className: a()(Z.optInPopout, Z.variant2OptInPopout, { [Z.hidden]: n }),
+        className: a()(S.optInPopout, S.variant2OptInPopout, { [S.hidden]: n }),
         children: [
             (0, i.jsx)('img', {
-                className: Z.image,
+                className: S.image,
                 src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
                 alt: 'HD Streaming Nitro Perk'
             }),
             (0, i.jsx)(T, {
-                className: Z.variant2CloseButton,
+                className: S.variant2CloseButton,
                 onDismiss: l
             }),
             (0, i.jsx)('div', {
-                className: Z.variant2InfoContainerParent,
+                className: S.variant2InfoContainerParent,
                 children: (0, i.jsxs)('div', {
-                    className: Z.variant2InfoContainer,
+                    className: S.variant2InfoContainer,
                     children: [
                         (0, i.jsx)(o.xv, {
-                            className: Z.variant2Text,
+                            className: S.variant2Text,
                             variant: 'text-sm/medium',
-                            children: r ? S.intl.string(S.t.ZYQ2zc) : S.intl.string(S.t.kr8AEx)
+                            children: r ? Z.intl.string(Z.t.ZYQ2zc) : Z.intl.string(Z.t.kr8AEx)
                         }),
                         (0, i.jsx)(y, { channel: t })
                     ]

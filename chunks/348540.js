@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return S;
     }
 });
 var i = n(200651),
@@ -19,15 +19,15 @@ var i = n(200651),
     g = n(900927),
     C = n(944043),
     x = n(678738),
-    _ = n(502762),
-    v = n(530),
+    v = n(502762),
+    _ = n(530),
     I = n(827313),
     E = n(228168),
     b = n(981631),
     N = n(388032),
-    S = n(866669);
-function Z(e) {
-    let { user: t, currentUser: n, displayProfile: Z, channel: T, isHovering: j, onOpenProfile: A } = e,
+    Z = n(866669);
+function S(e) {
+    let { user: t, currentUser: n, displayProfile: S, channel: T, isHovering: j, onOpenProfile: A } = e,
         y = (0, l.e7)([a.Z], () => a.Z.getRelationshipType(t.id)),
         P = (0, l.e7)([s.Z], () => s.Z.hidePersonalInformation),
         M = (0, l.e7)([c.Z], () => {
@@ -35,16 +35,16 @@ function Z(e) {
             return null === (e = c.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         });
     return (0, i.jsxs)('div', {
-        className: S.body,
+        className: Z.body,
         children: [
-            (0, i.jsx)(v.Z, {
+            (0, i.jsx)(_.Z, {
                 user: t,
                 profileType: E.y0.PANEL,
                 nickname: o.ZP.getName(null, T.id, t),
-                pronouns: null == Z ? void 0 : Z.pronouns,
+                pronouns: null == S ? void 0 : S.pronouns,
                 onOpenProfile: A,
                 tags: (0, i.jsx)(u.Z, {
-                    displayProfile: Z,
+                    displayProfile: S,
                     profileType: E.y0.PANEL
                 }),
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
@@ -60,7 +60,7 @@ function Z(e) {
                 })
             }),
             y === b.OGo.PENDING_INCOMING &&
-                (0, i.jsx)(_.Z.Overlay, {
+                (0, i.jsx)(v.Z.Overlay, {
                     children: (0, i.jsx)(f.Z, {
                         user: t,
                         channelId: T.id
@@ -71,19 +71,19 @@ function Z(e) {
             (0, i.jsx)(p.Z, {
                 user: t,
                 currentUser: n,
-                className: S.activity
+                className: Z.activity
             }),
-            (0, i.jsxs)(_.Z.Overlay, {
-                className: S.overlay,
+            (0, i.jsxs)(v.Z.Overlay, {
+                className: Z.overlay,
                 children: [
                     !P &&
-                        (null == Z ? void 0 : Z.bio) != null &&
-                        (null == Z ? void 0 : Z.bio) !== '' &&
+                        (null == S ? void 0 : S.bio) != null &&
+                        (null == S ? void 0 : S.bio) !== '' &&
                         (0, i.jsx)(x.Z, {
                             heading: N.intl.string(N.t['61W33d']),
                             headingColor: 'header-primary',
                             children: (0, i.jsx)(h.Z, {
-                                userBio: Z.bio,
+                                userBio: S.bio,
                                 animateOnHover: !0,
                                 isHovering: j,
                                 userId: t.id

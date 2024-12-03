@@ -22,8 +22,8 @@ function x(e) {
     let { member: t } = e,
         n = (0, r.e7)([u.Z], () => u.Z.getGuild(t.guildId), [t.guildId]),
         x = (0, c.mh)(t.userId, t.guildId),
-        _ = (0, c.mV)(t.userId, t.guildId),
-        v = (0, c.LD)(t.userId),
+        v = (0, c.mV)(t.userId, t.guildId),
+        _ = (0, c.LD)(t.userId),
         I = (0, c.wi)(t.userId, t.guildId);
     return (l.useEffect(() => {
         (0, o.zO)(t.guildId);
@@ -60,7 +60,7 @@ function x(e) {
                                     color: a.tokens.colors.INFO_DANGER_FOREGROUND
                                 })
                       }),
-                      _ !== c.qc.NO_GATE &&
+                      v !== c.qc.NO_GATE &&
                           (0, i.jsx)(m._2, {
                               icon: (0, i.jsx)(a.BookCheckIcon, {
                                   size: 'custom',
@@ -73,7 +73,7 @@ function x(e) {
                                   children: g.intl.string(g.t['93hqlp'])
                               }),
                               description:
-                                  _ === c.qc.AGREED
+                                  v === c.qc.AGREED
                                       ? (0, i.jsx)(a.CheckmarkLargeBoldIcon, {
                                             size: 'custom',
                                             width: m.Mn,
@@ -102,7 +102,7 @@ function x(e) {
                           description: (0, i.jsx)(a.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
-                              children: v
+                              children: _
                           })
                       }),
                       (0, i.jsx)(m._2, {

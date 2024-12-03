@@ -20,20 +20,20 @@ var l = n(120356),
     g = n(271383),
     C = n(430824),
     x = n(496675),
-    _ = n(158776),
-    v = n(885110),
+    v = n(158776),
+    _ = n(885110),
     I = n(594174),
     E = n(572004),
     b = n(5192),
     N = n(51144),
-    S = n(981631),
-    Z = n(308083),
+    Z = n(981631),
+    S = n(308083),
     T = n(388032),
     j = n(125712);
 function A(e) {
     let { user: t, guildId: n, onClose: l } = e,
         r = t.id,
-        o = (0, a.e7)([v.Z, _.Z, f.default], () => (r === f.default.getId() ? v.Z.getStatus() : _.Z.getStatus(r, n)), [r, n]);
+        o = (0, a.e7)([_.Z, v.Z, f.default], () => (r === f.default.getId() ? _.Z.getStatus() : v.Z.getStatus(r, n)), [r, n]);
     return (0, i.jsxs)('div', {
         className: j.topRow,
         children: [
@@ -66,7 +66,7 @@ function A(e) {
                                         clan: null == t ? void 0 : t.clan,
                                         userId: null == t ? void 0 : t.id,
                                         contextGuildId: n,
-                                        badgeSize: Z.NC.SIZE_16,
+                                        badgeSize: S.NC.SIZE_16,
                                         textVariant: 'heading-md/semibold',
                                         className: j.memberClanTag,
                                         containerClassName: j.memberClanTagContainer
@@ -115,22 +115,22 @@ function P(e) {
         d = (0, a.e7)([C.Z], () => C.Z.getGuild(r)),
         {
             canKickUser: g,
-            canBanUser: _,
-            canModerateMembers: v
+            canBanUser: v,
+            canModerateMembers: _
         } = (0, a.cj)(
             [x.Z, I.default, C.Z],
             () => ({
-                canKickUser: null != d && x.Z.canManageUser(S.Plq.KICK_MEMBERS, t, d),
-                canBanUser: null != d && x.Z.canManageUser(S.Plq.BAN_MEMBERS, t, d),
+                canKickUser: null != d && x.Z.canManageUser(Z.Plq.KICK_MEMBERS, t, d),
+                canBanUser: null != d && x.Z.canManageUser(Z.Plq.BAN_MEMBERS, t, d),
                 canModerateMembers: null != d && (0, p.F)(d.id, t.id, [I.default, C.Z, x.Z])
             }),
             [t, d]
         ),
         b = (0, u.b)(l),
-        { analyticsLocations: N, newestAnalyticsLocation: Z } = (0, c.ZP)(),
+        { analyticsLocations: N, newestAnalyticsLocation: S } = (0, c.ZP)(),
         A = (0, m.sE)(r, {
             targetUserId: t.id,
-            location: Z,
+            location: S,
             locations: N
         }),
         P = (0, a.e7)([f.default], () => f.default.getId() === (null == t ? void 0 : t.id));
@@ -166,7 +166,7 @@ function P(e) {
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
-                                location: Z,
+                                location: S,
                                 guildId: r,
                                 user: t
                             });
@@ -187,7 +187,7 @@ function P(e) {
                 ]
             }),
             (0, i.jsxs)(y, {
-                disabled: !_,
+                disabled: !v,
                 'aria-label': T.intl.string(T.t['5MBJ5O']),
                 onClick: () => {
                     (0, s.openModalLazy)(async () => {
@@ -195,7 +195,7 @@ function P(e) {
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
-                                location: Z,
+                                location: S,
                                 guildId: r,
                                 user: t
                             });
@@ -216,7 +216,7 @@ function P(e) {
                 ]
             }),
             (0, i.jsxs)(y, {
-                disabled: !v,
+                disabled: !_,
                 'aria-label': T.intl.string(T.t.kTlLr6),
                 onClick: () => {
                     b

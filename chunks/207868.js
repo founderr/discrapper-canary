@@ -18,8 +18,8 @@ t.Z = l.memo(function (e) {
     let { channel: t } = e,
         n = (0, d.Z)(),
         r = (0, s.e7)([m.Z], () => m.Z.isInChannel(t.id)),
-        _ = (0, s.e7)([m.Z], () => !a().isEmpty(m.Z.getVoiceStatesForChannel(t.id))),
-        v = (0, s.e7)([p.Z], () => p.Z.can(C.Plq.CONNECT, t)),
+        v = (0, s.e7)([m.Z], () => !a().isEmpty(m.Z.getVoiceStatesForChannel(t.id))),
+        _ = (0, s.e7)([p.Z], () => p.Z.can(C.Plq.CONNECT, t)),
         { needSubscriptionToAccess: I } = (0, u.Z)(t.id),
         E = (0, h.$R)(t),
         b = l.useCallback(() => {
@@ -48,13 +48,13 @@ t.Z = l.memo(function (e) {
     ).enabled &&
         !n &&
         !r &&
-        v &&
+        _ &&
         E &&
         t.isVocalThread())
         ? (0, i.jsx)(g.ZP.Icon, {
               icon: o.PhoneCallIcon,
               onClick: b,
-              tooltip: _ ? x.intl.string(x.t.fdEeb2) : x.intl.string(x.t.focH1t)
+              tooltip: v ? x.intl.string(x.t.fdEeb2) : x.intl.string(x.t.focH1t)
           })
         : null;
 });

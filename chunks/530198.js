@@ -68,18 +68,18 @@ function C(e) {
         ]
     });
 }
-function v(e) {
+function _(e) {
     var t, n, l;
     let { inputRef: s, existingPendingConfiguration: a, locked: o, onConfigurationChange: c, platform: u, applicationId: m, metadataField: h, operator: g } = e,
         p = null !== (n = null == a ? void 0 : a.index) && void 0 !== n ? n : -1,
         C = null != g ? g : x.iO.GREATER_THAN,
-        v = Math.round(Number(null !== (l = null == a ? void 0 : null === (t = a.configuration) || void 0 === t ? void 0 : t.value) && void 0 !== l ? l : 0));
-    C === x.iO.GREATER_THAN ? (v = Math.max(1, v + 1)) : C === x.iO.LESS_THAN && (v = Math.max(0, v - 1));
-    let [_, I] = r.useState(v.toString());
+        _ = Math.round(Number(null !== (l = null == a ? void 0 : null === (t = a.configuration) || void 0 === t ? void 0 : t.value) && void 0 !== l ? l : 0));
+    C === x.iO.GREATER_THAN ? (_ = Math.max(1, _ + 1)) : C === x.iO.LESS_THAN && (_ = Math.max(0, _ - 1));
+    let [v, I] = r.useState(_.toString());
     return (
         r.useEffect(() => {
-            I(_);
-        }, [_]),
+            I(v);
+        }, [v]),
         (0, i.jsx)(
             d.TextInput,
             {
@@ -87,7 +87,7 @@ function v(e) {
                 type: 'number',
                 className: f.numericalRuleInput,
                 size: d.TextInput.Sizes.MINI,
-                value: _,
+                value: v,
                 onChange: (e) => {
                     if (null != a) {
                         if ('' !== e) {
@@ -114,7 +114,7 @@ function v(e) {
         )
     );
 }
-function _(e) {
+function v(e) {
     let { titleText: t, fieldText: n, metadataField: r, existingPendingConfiguration: l, platform: s, applicationId: a, onConfigurationChange: o, locked: c } = e;
     return (0, i.jsxs)(
         'div',
@@ -165,8 +165,8 @@ function I(e) {
     let { titleText: t, fieldText: n, fieldTextHook: l, metadataField: s, existingPendingConfiguration: a, platform: o, applicationId: c, onConfigurationChange: u, locked: m, operator: h } = e,
         g = r.createRef(),
         C = (null == a ? void 0 : a.configuration) != null,
-        _ = (0, i.jsx)(
-            v,
+        v = (0, i.jsx)(
+            _,
             {
                 inputRef: g,
                 metadataField: s,
@@ -181,10 +181,10 @@ function I(e) {
         ),
         I =
             null != l
-                ? p.intl.format(l, { metadataHook: () => _ })
+                ? p.intl.format(l, { metadataHook: () => v })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          _,
+                          v,
                           (0, i.jsx)('span', {
                               className: f.fieldText,
                               children: n
@@ -317,7 +317,7 @@ function T(e) {
                 onConfigurationChange: n,
                 locked: r
             }),
-            (0, i.jsx)(_, {
+            (0, i.jsx)(v, {
                 titleText: p.intl.string(p.t.yz2CIC),
                 fieldText: p.intl.string(p.t.E2iT8P),
                 metadataField: x.PC.TWITTER_VERIFIED,
@@ -352,7 +352,7 @@ function j(e) {
                 onConfigurationChange: n,
                 locked: r
             }),
-            (0, i.jsx)(_, {
+            (0, i.jsx)(v, {
                 titleText: p.intl.string(p.t.oWM95O),
                 fieldText: p.intl.string(p.t['0cKdkZ']),
                 metadataField: x.PC.REDDIT_MOD,
@@ -361,7 +361,7 @@ function j(e) {
                 onConfigurationChange: n,
                 locked: r
             }),
-            (0, i.jsx)(_, {
+            (0, i.jsx)(v, {
                 titleText: p.intl.string(p.t['06rDHR']),
                 fieldText: p.intl.string(p.t['kCAN5+']),
                 metadataField: x.PC.REDDIT_GOLD,
@@ -387,7 +387,7 @@ function b(e) {
                 onConfigurationChange: n,
                 locked: r
             }),
-            (0, i.jsx)(_, {
+            (0, i.jsx)(v, {
                 titleText: p.intl.string(p.t.IhXLy8),
                 fieldText: p.intl.string(p.t['0JyE8P']),
                 metadataField: x.PC.PAYPAL_VERIFIED,
@@ -441,7 +441,7 @@ function S(e) {
                 locked: r,
                 operator: x.iO.LESS_THAN
             }),
-            (0, i.jsx)(_, {
+            (0, i.jsx)(v, {
                 titleText: p.intl.string(p.t.TEEYwc),
                 fieldText: p.intl.string(p.t['39wASE']),
                 metadataField: x.PC.EBAY_TOP_RATED_SELLER,
@@ -458,7 +458,7 @@ function E(e) {
         l = h.Z.get(g.ABu.TIKTOK);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(_, {
+            (0, i.jsx)(v, {
                 titleText: p.intl.string(p.t.QHHwRU),
                 fieldText: p.intl.string(p.t.E2iT8P),
                 metadataField: x.PC.TIKTOK_VERIFIED,
@@ -548,7 +548,7 @@ function R(e) {
             case x.xn.BOOLEAN_EQUAL:
             case x.xn.BOOLEAN_NOT_EQUAL:
                 return (0, i.jsx)(
-                    _,
+                    v,
                     {
                         titleText: e.name,
                         fieldText: e.description,

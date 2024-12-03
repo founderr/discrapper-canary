@@ -19,8 +19,8 @@ var l = n(442837),
 function f(e) {
     let { channelId: t, onClose: n, appContext: f, exitFullScreen: g, onSelect: C } = e,
         x = (0, l.e7)([a.Z], () => a.Z.getSelectedParticipant(t)),
-        _ = (null == x ? void 0 : x.type) === p.fO.STREAM ? x.stream : null,
-        v = (0, s.Z)(t),
+        v = (null == x ? void 0 : x.type) === p.fO.STREAM ? x.stream : null,
+        _ = (0, s.Z)(t),
         I = (0, c.Z)(),
         E = (0, o.Z)(t),
         b = (0, h.Z)(t),
@@ -30,6 +30,6 @@ function f(e) {
         onClose: n,
         'aria-label': m.intl.string(m.t.pkYeAw),
         onSelect: C,
-        children: [v, I, E, b, (0, u.Z)(_, f, g), N]
+        children: [_, I, E, b, (0, u.Z)(v, f, g), N]
     });
 }

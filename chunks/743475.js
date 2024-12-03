@@ -54,8 +54,8 @@ async function f(e) {
                     channelIds: t
                 });
         } catch (n) {
-            var v;
-            let { fieldName: e, error: t } = null !== (v = new l.Hx(n).getAnyErrorMessageAndField()) && void 0 !== v ? v : {};
+            var _;
+            let { fieldName: e, error: t } = null !== (_ = new l.Hx(n).getAnyErrorMessageAndField()) && void 0 !== _ ? _ : {};
             r.Z.show({
                 title: g.intl.string(g.t.iLdiqa),
                 body: [e, t].filter(c.lm).join(': ')

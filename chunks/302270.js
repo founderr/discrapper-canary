@@ -19,14 +19,14 @@ var i = n(200651),
     g = n(623624),
     C = n(665149),
     x = n(984370),
-    _ = n(141321),
-    v = n(618158),
+    v = n(141321),
+    _ = n(618158),
     I = n(390322),
     E = n(616286),
     b = n(961048),
     N = n(430824),
-    S = n(496675),
-    Z = n(626135),
+    Z = n(496675),
+    S = n(626135),
     T = n(431328),
     j = n(501655),
     A = n(200498),
@@ -45,7 +45,7 @@ function B(e) {
         g = (0, s.e7)([h.Z], () => h.Z.getChatOpen(n.id)),
         C = (0, A.B)(n.id),
         x = (0, T.Rk)(n.id, j.pV.REQUESTED_TO_SPEAK_ONLY),
-        { preventIdle: N, allowIdle: S } = (0, v.Y)('popup');
+        { preventIdle: N, allowIdle: Z } = (0, _.Y)('popup');
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(f.Z, { channelId: n.id }, 'clips-enabled-indicator'),
@@ -79,10 +79,10 @@ function B(e) {
             ),
             !t && (0, i.jsx)(m.Z, { className: w.button }, 'clips'),
             (0, i.jsx)(
-                _.Z,
+                v.Z,
                 {
                     onOpen: N,
-                    onClose: S,
+                    onClose: Z,
                     className: w.button
                 },
                 'recents'
@@ -117,16 +117,16 @@ function U(e) {
     let { inPopout: n, channel: r, toggleRequestToSpeakSidebar: u, showRequestToSpeakSidebar: h } = e,
         m = (0, p.ZP)(r),
         f = (0, s.e7)([P.Z], () => P.Z.getStageInstanceByChannel(r.id)),
-        _ = (0, T.Io)(r.id),
-        v = (0, T.Rk)(r.id, j.pV.AUDIENCE),
+        v = (0, T.Io)(r.id),
+        _ = (0, T.Rk)(r.id, j.pV.AUDIENCE),
         I = (0, s.e7)([N.Z], () => N.Z.getGuild(r.guild_id), [r.guild_id]),
         E = null !== (t = null == I ? void 0 : I.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
         b = (null == I ? void 0 : I.isCommunity()) ? E < k.TU7 : (null == I ? void 0 : I.premiumTier) !== k.Eu4.TIER_3 && E <= k.eez,
         A = (0, L.Z)(r),
-        M = (0, s.e7)([S.Z], () => S.Z.can(y.yP, r)),
+        M = (0, s.e7)([Z.Z], () => Z.Z.can(y.yP, r)),
         R = () => {
             d.Z.updateStageVideoLimitBoostUpsellDismissed(r.id, !0),
-                Z.default.track(k.rMx.BOOSTING_UPSELL_CLICKED, {
+                S.default.track(k.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: r.guild_id,
                     type: O.cd.VIDEO_STAGE_LIMIT,
                     is_moderator: M,
@@ -135,11 +135,11 @@ function U(e) {
         };
     l.useEffect(() => {
         A &&
-            Z.default.track(k.rMx.BOOSTING_UPSELL_VIEWED, {
+            S.default.track(k.rMx.BOOSTING_UPSELL_VIEWED, {
                 guild_id: r.guild_id,
                 type: O.cd.VIDEO_STAGE_LIMIT,
                 is_moderator: M,
-                listener_count: _ + v
+                listener_count: v + _
             });
     }, [A]);
     let U = (0, i.jsx)(c.ThemeProvider, {
@@ -180,7 +180,7 @@ function U(e) {
                                 variant: 'text-xs/medium',
                                 color: 'header-secondary',
                                 className: w.speakerCount,
-                                children: D.intl.format(D.t.chmM9P, { count: _ })
+                                children: D.intl.format(D.t.chmM9P, { count: v })
                             }),
                             (0, i.jsx)(c.GroupIcon, {
                                 size: 'xs',
@@ -190,7 +190,7 @@ function U(e) {
                                 variant: 'text-xs/medium',
                                 color: 'header-secondary',
                                 className: w.speakerCount,
-                                children: D.intl.format(D.t['+v2pNz'], { count: v })
+                                children: D.intl.format(D.t['+v2pNz'], { count: _ })
                             })
                         ]
                     })
@@ -240,7 +240,7 @@ function U(e) {
                                                         guildId: r.guild_id,
                                                         location: { section: k.jXE.STAGE_VIDEO_LIMIT }
                                                     }),
-                                                        Z.default.track(k.rMx.BOOSTING_UPSELL_CLICKED, {
+                                                        S.default.track(k.rMx.BOOSTING_UPSELL_CLICKED, {
                                                             guild_id: r.guild_id,
                                                             type: O.cd.VIDEO_STAGE_LIMIT,
                                                             is_moderator: M,

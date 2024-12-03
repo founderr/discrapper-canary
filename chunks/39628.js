@@ -43,7 +43,7 @@ function p(e) {
         a = Math.floor(t / 3600);
     return 0 === a ? (n ? ''.concat(f(l), ':').concat(f(i)) : ''.concat(l, ':').concat(f(i))) : n ? ''.concat(f(a), ':').concat(f(l), ':').concat(f(i)) : ''.concat(a, ':').concat(f(l), ':').concat(f(i));
 }
-class h extends (i = a.PureComponent) {
+class g extends (i = a.PureComponent) {
     componentDidMount() {
         this.timer.start(500, () => {
             this.setState({ now: Date.now() });
@@ -118,4 +118,4 @@ class h extends (i = a.PureComponent) {
         super(...e), d(this, 'timer', new o.Xp()), d(this, 'state', { now: Date.now() });
     }
 }
-d(h, 'defaultProps', { themed: !1 }), (t.Z = h);
+d(g, 'defaultProps', { themed: !1 }), (t.Z = g);

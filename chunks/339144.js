@@ -70,7 +70,7 @@ let I = l.memo(function (e) {
             });
         }, [N, S]);
     let k =
-            (null != T || ((0, c.R)() && null != A)) && (Z || E)
+            (null != T || null == A || (0, c.R)()) && (Z || E)
                 ? (Z ? ((t = !1), (r = D), (u = o.ScreenXIcon), (I = _.intl.string(_.t.S5anIS))) : y ? ((t = !1), (r = O), (u = o.ScreenArrowIcon), (I = null != T ? _.intl.formatToPlainString(_.t.AB5gT0, { game: T.name }) : _.intl.string(_.t.FeUKeH))) : ((t = !0), (r = null), (u = o.ScreenArrowIcon), (I = null != N && (0, m.vd)(N.type) ? _.intl.string(_.t.uQn9Bw) : null != S ? _.intl.string(_.t.fBXEoK) : _.intl.string(_.t.n3feND))),
                   (0, i.jsx)('div', {
                       className: v.panelButtonContainer,

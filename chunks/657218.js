@@ -20,14 +20,14 @@ var i = n(200651),
     g = n(541716),
     C = n(752305),
     x = n(893718),
-    _ = n(303628),
-    v = n(313201),
+    v = n(303628),
+    _ = n(313201),
     I = n(967128),
     E = n(665149),
     b = n(294218),
     N = n(913663),
-    S = n(268350),
-    Z = n(695346),
+    Z = n(268350),
+    S = n(695346),
     T = n(592125),
     j = n(703558),
     A = n(375954),
@@ -122,7 +122,7 @@ function W(e) {
                 updateThreadSettings: r
             };
         })(t, n),
-        { textAreaState: x, setTextAreaState: _ } = (function (e, t) {
+        { textAreaState: x, setTextAreaState: v } = (function (e, t) {
             let [n, i] = l.useState((0, C.H2)());
             return (
                 l.useEffect(() => {
@@ -145,11 +145,11 @@ function W(e) {
                 }
             );
         })(t, f),
-        v = (0, O.vH)(t),
+        _ = (0, O.vH)(t),
         {
             nameError: E,
             messageError: b,
-            submit: Z,
+            submit: S,
             submitting: T
         } = (function (e) {
             let { parentChannel: t, parentMessageId: n, threadSettings: i, privateThreadMode: r, textAreaState: a, location: s } = e,
@@ -218,7 +218,7 @@ function W(e) {
                             );
                         }
                         return (
-                            (0, S.qB)(t.id, V.drafts.type),
+                            (0, Z.qB)(t.id, V.drafts.type),
                             p(!1),
                             {
                                 shouldClear: !0,
@@ -234,11 +234,11 @@ function W(e) {
             parentChannel: t,
             parentMessageId: n,
             threadSettings: m,
-            privateThreadMode: v,
+            privateThreadMode: _,
             textAreaState: x,
             location: r
         }),
-        A = (0, O.oD)(m, v) ? o.ThreadLockIcon : o.ThreadIcon;
+        A = (0, O.oD)(m, _) ? o.ThreadLockIcon : o.ThreadIcon;
     return (0, i.jsx)('div', {
         className: G.chat,
         onMouseDown: h,
@@ -247,7 +247,7 @@ function W(e) {
             className: a()(G.messagesWrapper, 'group-spacing-'.concat(d)),
             children: (0, i.jsxs)('form', {
                 onSubmit: (e) => {
-                    e.preventDefault(), Z();
+                    e.preventDefault(), S();
                 },
                 className: G.form,
                 children: [
@@ -277,7 +277,7 @@ function W(e) {
                                                   startedFromMessage: null != n,
                                                   threadSettings: m,
                                                   updateThreadSettings: g,
-                                                  privateThreadMode: v
+                                                  privateThreadMode: _
                                               })
                                             : null
                                     ]
@@ -295,8 +295,8 @@ function W(e) {
                             (0, i.jsx)(q, {
                                 parentChannel: t,
                                 textAreaState: x,
-                                setTextAreaState: _,
-                                submit: Z,
+                                setTextAreaState: v,
+                                submit: S,
                                 error: b
                             }),
                             (0, i.jsx)(u.Z, {
@@ -357,7 +357,7 @@ function Y(e) {
         h = (0, k.Op)(s, { content: u }),
         p = (0, O.Od)(n, l),
         m = null != l,
-        f = (0, v.Dt)();
+        f = (0, _.Dt)();
     return (0, i.jsx)(o.FormSection, {
         tag: 'label',
         htmlFor: f,
@@ -400,7 +400,7 @@ function q(e) {
             },
             [t.id, r]
         ),
-        v = l.useCallback(
+        _ = l.useCallback(
             (e) => {
                 let { value: t, uploads: n, stickers: i } = e;
                 return u(t, i, n);
@@ -419,7 +419,7 @@ function q(e) {
         E = (0, k.Op)(h, { content: n.textValue });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(_.Z, {
+            (0, i.jsx)(v.Z, {
                 channelId: t.id,
                 type: V,
                 canAttachFiles: I
@@ -440,7 +440,7 @@ function q(e) {
                 onFocus: f,
                 onBlur: g,
                 onChange: C,
-                onSubmit: v,
+                onSubmit: _,
                 promptToUpload: L.d
             })
         ]
@@ -449,7 +449,7 @@ function q(e) {
 function X(e) {
     let { parentChannel: t, parentMessageId: n } = e,
         l = (0, s.e7)([A.Z], () => (null == n ? null : A.Z.getMessage(t.id, n))),
-        r = Z.jU.useSetting();
+        r = S.jU.useSetting();
     return null != l
         ? (0, i.jsx)(b.Z, {
               className: G.messagePreview,

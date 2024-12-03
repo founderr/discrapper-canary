@@ -24,8 +24,8 @@ var i = n(192379),
     g = n(178762),
     C = n(206583),
     x = n(809017),
-    _ = n(981631),
-    v = n(388032);
+    v = n(981631),
+    _ = n(388032);
 let I = 0;
 function E(e) {
     let {
@@ -33,8 +33,8 @@ function E(e) {
             channelId: E,
             guildId: b
         } = e,
-        [N, S] = i.useState(!1),
-        { requestId: Z, entries: T, impressionCappedEntryIds: j, hasLeaderboardEntry: A } = (0, f.Z)(E),
+        [N, Z] = i.useState(!1),
+        { requestId: S, entries: T, impressionCappedEntryIds: j, hasLeaderboardEntry: A } = (0, f.Z)(E),
         y = (0, l.e7)([h.Z], () => h.Z.hidden),
         P = (0, l.e7)([c.Z], () => c.Z.isFocused()),
         M = (0, l.e7)([s.Z], () => s.Z.getChannel(E)),
@@ -43,7 +43,7 @@ function E(e) {
         k = null != L && L && (null == M ? void 0 : M.isForumChannel()) === !1,
         [O, D, w, B] = i.useMemo(() => {
             let e;
-            if (null == T || 0 === T.length || null == Z || !k) return [t, n, I];
+            if (null == T || 0 === T.length || null == S || !k) return [t, n, I];
             let i = N ? T.length : A ? 4 : 3,
                 l = T.slice(0, i);
             e = y
@@ -51,7 +51,7 @@ function E(e) {
                 : l.map((e) => ({
                       type: a.so.CONTENT_INVENTORY,
                       entry: e,
-                      requestId: Z
+                      requestId: S
                   }));
             let r = {
                 id: x.G,
@@ -59,12 +59,12 @@ function E(e) {
                 key: x.G,
                 count: e.length,
                 index: n.length,
-                title: v.intl.string(v.t['6gwSFR']),
+                title: _.intl.string(_.t['6gwSFR']),
                 onToggleExpand: () => {
-                    S((e) => {
+                    Z((e) => {
                         let t = !e;
                         return (
-                            d.default.track(_.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
+                            d.default.track(v.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
                                 channel_id: E,
                                 guild_id: b,
                                 expanded: t
@@ -78,7 +78,7 @@ function E(e) {
                 feedHeight: e.map(g.iZ).reduce((e, t) => e + t, 0)
             };
             return [[r, ...t], [...n, r, ...e], Math.random(), e];
-        }, [E, T, N, t, b, Z, n, I, y, k, A]),
+        }, [E, T, N, t, b, S, n, I, y, k, A]),
         U = i.useRef(0),
         H = i.useRef(T),
         G = i.useRef(),
@@ -105,12 +105,12 @@ function E(e) {
                 (G.current = Date.now()),
                 () => {
                     var e, t;
-                    if (null == Z || null == G.current || Date.now() - G.current < 3000) return;
+                    if (null == S || null == G.current || Date.now() - G.current < 3000) return;
                     let n = null !== (t = null === (e = H.current) || void 0 === e ? void 0 : e.map((e) => e.id)) && void 0 !== t ? t : [],
                         i = n.slice(0, U.current);
                     if (!y && !!P && !!k)
-                        (0, m.e)(_.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
-                            request_id: Z,
+                        (0, m.e)(v.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
+                            request_id: S,
                             first_shown_at: G.current,
                             item_ids: i,
                             surface_type: C.Kd.GUILD_MEMBER_LIST,
@@ -126,7 +126,7 @@ function E(e) {
                                 });
                 }
             ),
-            [Z, E, b, y, P, k]
+            [S, E, b, y, P, k]
         ),
         {
             groups: O,

@@ -19,12 +19,12 @@ function u(e) {
         u,
         { channel: h, messages: p, oldestUnreadMessageId: m, treatSpam: f, summaries: g, selectedSummary: C } = e,
         x = [],
-        _ = !1,
-        v = null != m ? a.default.extractTimestamp(m) : null,
+        v = !1,
+        _ = null != m ? a.default.extractTimestamp(m) : null,
         I = null;
     return (
         p.forEach((e) => {
-            var l, E, b, N, S, Z, T, j;
+            var l, E, b, N, Z, S, T, j;
             if (null != g && g.length > 0) {
                 let t = a.default.extractTimestamp(e.id);
                 for (let e = 0; (l = e < (null == g ? void 0 : g.length)), l; e++) {
@@ -55,7 +55,7 @@ function u(e) {
             let y = x[x.length - 1],
                 P = null,
                 M = (0, o.DQ)(e);
-            _ = _ || M;
+            v = v || M;
             let R = (function (e, t, n) {
                 if (i.V.NON_COLLAPSIBLE.has(t.type));
                 else if (t.blocked) return d.ys_.MESSAGE_GROUP_BLOCKED;
@@ -69,45 +69,45 @@ function u(e) {
                     ((E = x),
                     (b = e),
                     (N = R),
-                    (n = S = y),
-                    null == S || S.type !== N
+                    (n = Z = y),
+                    null == Z || Z.type !== N
                         ? ((t = {
                               type: N,
                               content: [],
                               key: b.id
                           }),
                           E.push(t))
-                        : (n = (t = S).content[t.content.length - 1]),
+                        : (n = (t = Z).content[t.content.length - 1]),
                     [t, n]);
             }
-            if (m === e.id && null != v) {
-                if (null != y && y.type === d.ys_.DIVIDER) (y.unreadId = e.id), (v = null);
+            if (m === e.id && null != _) {
+                if (null != y && y.type === d.ys_.DIVIDER) (y.unreadId = e.id), (_ = null);
                 else if (null !== P) {
-                    (Z = P),
+                    (S = P),
                         (T = h),
                         (j = e).isFirstMessageInForumPost(T) ||
-                            Z.content.push({
+                            S.content.push({
                                 type: d.ys_.DIVIDER,
                                 unreadId: j.id
                             }),
-                        (Z.hasUnread = !0),
-                        (v = null);
+                        (S.hasUnread = !0),
+                        (_ = null);
                 } else
                     !e.isFirstMessageInForumPost(h) &&
                         x.push({
                             type: d.ys_.DIVIDER,
                             unreadId: e.id
                         }),
-                        (v = null);
+                        (_ = null);
             } else
-                null != v &&
-                    a.default.extractTimestamp(e.id) > v &&
+                null != _ &&
+                    a.default.extractTimestamp(e.id) > _ &&
                     (!e.isFirstMessageInForumPost(h) &&
                         x.push({
                             type: d.ys_.DIVIDER,
                             unreadId: e.id
                         }),
-                    (v = null));
+                    (_ = null));
             let L = (0, c.f)(e, h);
             null != L &&
                 x.push({
@@ -146,7 +146,7 @@ function u(e) {
                         isSummaryDivider: !0
                     });
         }),
-        _ && (0, o.P1)(h) && l.Z.trackExposure({ location: '416cc9_1' }),
+        v && (0, o.P1)(h) && l.Z.trackExposure({ location: '416cc9_1' }),
         x
     );
 }

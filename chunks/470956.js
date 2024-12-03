@@ -74,7 +74,7 @@ function f(e, t) {
         [o, d] = i.useState(!1),
         [m, f] = i.useState(!1),
         p = (0, a.e7)([c.Z, u.Z], () => null != t && null != e && c.Z.getChannelId() === e && null != u.Z.isInChannel(e, t) && c.Z.isUserConnected(t)),
-        h = (0, a.e7)([c.Z, u.Z], () => null != t && null != e && c.Z.getChannelId() === e && null != u.Z.isInChannel(e, t) && !c.Z.isUserConnected(t));
+        g = (0, a.e7)([c.Z, u.Z], () => null != t && null != e && c.Z.getChannelId() === e && null != u.Z.isInChannel(e, t) && !c.Z.isUserConnected(t));
     return (
         i.useEffect(() => {
             p && f(!0);
@@ -84,7 +84,7 @@ function f(e, t) {
         }, [e, l]),
         i.useEffect(
             () => (
-                h && null == r.current
+                g && null == r.current
                     ? (r.current = setTimeout(() => {
                           (r.current = null), d(!0);
                       }, 250))
@@ -93,7 +93,7 @@ function f(e, t) {
                     clearTimeout(r.current), (r.current = null);
                 }
             ),
-            [h]
+            [g]
         ),
         !n && m && o
     );

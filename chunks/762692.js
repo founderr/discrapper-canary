@@ -10,8 +10,8 @@ var i = n(807034),
     u = n(900849),
     h = n(356164),
     m = n(726115),
-    p = n(981631),
-    g = n(731455);
+    p = n(128449),
+    g = n(981631);
 let f = window.GLOBAL_ENV.ALGOLIA_KEY,
     _ = 'production' === window.GLOBAL_ENV.PROJECT_ENV ? 'prod_discoverable_guilds' : 'staging' === window.GLOBAL_ENV.PROJECT_ENV ? 'stg_discoverable_guilds' : 'dev_discoverable_guilds',
     E = {
@@ -29,10 +29,10 @@ async function I(e, t) {
     });
     try {
         let t = await s.tn.get({
-                url: p.ANM.GUILD_DISCOVERY_SEARCH,
+                url: g.ANM.GUILD_DISCOVERY_SEARCH,
                 query: {
                     query: e,
-                    category_id: n === g.Hk ? null : n,
+                    category_id: n === p.Hk ? null : n,
                     offset: r,
                     limit: l,
                     language_code: i,
@@ -99,9 +99,9 @@ async function C(e, t, n) {
         categoryId: i,
         languageCode: r
     });
-    let p = Object.assign({}, E, t.filters),
-        f = Object.keys(p).map((e) => ''.concat(e).concat(p[e]));
-    i !== g.Hk && f.push('(primary_category_id='.concat(i, ' OR categories.id=').concat(i, ')'));
+    let g = Object.assign({}, E, t.filters),
+        f = Object.keys(g).map((e) => ''.concat(e).concat(g[e]));
+    i !== p.Hk && f.push('(primary_category_id='.concat(i, ' OR categories.id=').concat(i, ')'));
     let _ = f.join(' AND '),
         I = null != r ? r : (0, m.Xp)();
     try {
@@ -167,7 +167,7 @@ async function v(e) {
         });
         if (null == n) return;
         let i = null !== (o = n['categories.id']) && void 0 !== o ? o : {};
-        delete i[g.o3];
+        delete i[p.o3];
         let l = (0, a.chain)(i)
             .entries()
             .map((e) => {
@@ -177,7 +177,7 @@ async function v(e) {
             .sort((e, t) => t[1] - e[1])
             .slice(0, 7)
             .value();
-        l.unshift([g.Hk, e]),
+        l.unshift([p.Hk, e]),
             c.Z.dispatch({
                 type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS',
                 query: t,

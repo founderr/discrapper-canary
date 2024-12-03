@@ -23,8 +23,8 @@ var i = n(200651),
     p = n(958832),
     f = n(324067),
     C = n(984933),
-    v = n(259580),
-    _ = n(999382),
+    _ = n(259580),
+    v = n(999382),
     I = n(743475),
     N = n(889369),
     T = n(570961),
@@ -43,7 +43,7 @@ function L(e) {
         c = (0, b.Z)(t),
         f = (0, a.e7)([N.Z], () => N.Z.editedDefaultChannelIds),
         C = c.filter((e) => !f.has(e.id)),
-        [v, _] = r.useState(!1);
+        [_, v] = r.useState(!1);
     r.useEffect(() => {
         !s && !l && (0, x.S)(t.id);
     }, [t.id, s, l]);
@@ -58,7 +58,7 @@ function L(e) {
                 });
         });
     };
-    return v || 0 === C.length
+    return _ || 0 === C.length
         ? null
         : (0, i.jsxs)('div', {
               className: A.recommendations,
@@ -78,7 +78,7 @@ function L(e) {
                           }),
                           (0, i.jsxs)(o.Clickable, {
                               className: A.dismissAll,
-                              onClick: () => _(!0),
+                              onClick: () => v(!0),
                               children: [
                                   (0, i.jsx)(o.CheckmarkLargeIcon, {
                                       size: 'xxs',
@@ -178,7 +178,7 @@ function L(e) {
 }
 function D(e) {
     let { saveOnClose: t = !1 } = e,
-        n = (0, a.e7)([_.Z], () => _.Z.getGuild()),
+        n = (0, a.e7)([v.Z], () => v.Z.getGuild()),
         l = (0, a.e7)([m.Z], () => m.Z.isLoading()),
         c = (0, a.e7)([C.ZP], () => C.ZP.getChannels(null == n ? void 0 : n.id)),
         d = (0, a.e7)([f.Z], () => f.Z.getCategories(null == n ? void 0 : n.id)),
@@ -209,8 +209,8 @@ function D(e) {
                             (0, i.jsx)(o.Clickable, {
                                 className: A.collapseButton,
                                 onClick: () => x((e) => !e),
-                                children: (0, i.jsx)(v.Z, {
-                                    direction: g ? v.Z.Directions.DOWN : v.Z.Directions.UP,
+                                children: (0, i.jsx)(_.Z, {
+                                    direction: g ? _.Z.Directions.DOWN : _.Z.Directions.UP,
                                     height: 16,
                                     width: 16
                                 })
@@ -282,7 +282,7 @@ function D(e) {
             });
 }
 function O() {
-    let e = (0, a.e7)([_.Z], () => _.Z.getProps().guild),
+    let e = (0, a.e7)([v.Z], () => v.Z.getProps().guild),
         t = (0, a.e7)([N.Z], () => N.Z.submitting),
         n = (0, a.e7)([j.Z], () => j.Z.advancedMode);
     return null == e

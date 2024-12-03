@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return Z;
     }
 }),
     n(47120);
@@ -20,13 +20,13 @@ var i = n(200651),
     g = n(13736),
     C = n(732393),
     x = n(137591),
-    _ = n(299206),
-    v = n(665149),
+    v = n(299206),
+    _ = n(665149),
     I = n(695346),
     E = n(979651),
     b = n(488131),
     N = n(388032);
-function S(e) {
+function Z(e) {
     let { channel: t } = e,
         [n, r] = l.useState(!1);
     function a() {
@@ -41,14 +41,14 @@ function S(e) {
         autoInvert: !1,
         onRequestClose: () => r(!1),
         renderPopout: function (e) {
-            return (0, i.jsx)(Z, {
+            return (0, i.jsx)(S, {
                 ...e,
                 channel: t
             });
         },
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, i.jsx)(v.ZP.Icon, {
+            return (0, i.jsx)(_.ZP.Icon, {
                 ...e,
                 onClick: a,
                 tooltip: n ? null : s,
@@ -59,13 +59,13 @@ function S(e) {
         }
     });
 }
-function Z(e) {
+function S(e) {
     let { channel: t, closePopout: n, onSelect: l } = e,
         r = (0, c.Z)(t),
-        v = (0, m.Z)(t),
-        S = (0, C.Z)(t.id),
-        Z = (0, g.Z)(t),
-        T = (0, _.Z)({
+        _ = (0, m.Z)(t),
+        Z = (0, C.Z)(t.id),
+        S = (0, g.Z)(t),
+        T = (0, v.Z)({
             id: t.id,
             label: N.intl.string(N.t.DQ797u)
         }),
@@ -88,9 +88,9 @@ function Z(e) {
             }),
             (0, i.jsxs)(o.MenuGroup, {
                 children: [
-                    Z,
-                    P,
                     S,
+                    P,
+                    Z,
                     L && !k
                         ? (0, i.jsx)(o.MenuItem, {
                               id: 'open',
@@ -103,7 +103,7 @@ function Z(e) {
                 ]
             }),
             (0, i.jsxs)(o.MenuGroup, {
-                children: [R, r, v, A]
+                children: [R, r, _, A]
             }),
             (0, i.jsxs)(o.MenuGroup, {
                 children: [j, T]

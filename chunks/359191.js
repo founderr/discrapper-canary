@@ -15,21 +15,21 @@ var i,
     p = n(208665),
     f = n(84658),
     C = n(142961),
-    v = n(981631);
-let _ = new Set(),
+    _ = n(981631);
+let v = new Set(),
     I = f.PG.LANDING,
     N = null;
 function T(e) {
     let { subsection: t } = e;
     if (u.Z.getGuildId() === N) return !1;
-    (I = t === v.KsC.SERVER_GUIDE ? f.PG.HOME_SETTINGS : f.PG.LANDING), (N = u.Z.getGuildId());
+    (I = t === _.KsC.SERVER_GUIDE ? f.PG.HOME_SETTINGS : f.PG.LANDING), (N = u.Z.getGuildId());
 }
 class j extends (i = a.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, g.Z, p.Z, x.Z, m.Z), this.syncWith([c.Z, g.Z, p.Z, x.Z, m.Z], () => !0);
     }
     isEducationUpsellDismissed(e) {
-        return _.has(e);
+        return v.has(e);
     }
     getCurrentPage() {
         return I;
@@ -81,6 +81,6 @@ class j extends (i = a.ZP.Store) {
         },
         GUILD_SETTINGS_ONBOARDING_EDUCATION_UPSELL_DISMISSED: function (e) {
             let { upsellType: t } = e;
-            _.add(t);
+            v.add(t);
         }
     }));

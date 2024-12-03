@@ -23,8 +23,8 @@ var i = n(200651),
     p = n(225433),
     f = n(327802),
     C = n(110924),
-    v = n(200876),
-    _ = n(730089),
+    _ = n(200876),
+    v = n(730089),
     I = n(372444),
     N = n(889564),
     T = n(372129),
@@ -309,7 +309,7 @@ t.ZP = () => {
         U = e.getMaxEmojiSlots(),
         G = Math.max(U - Z.length, U - w.length),
         H = (n, i, r) =>
-            (0, _.G)({
+            (0, v.G)({
                 data: n,
                 file: i,
                 image: r,
@@ -339,7 +339,7 @@ t.ZP = () => {
                     });
             });
         },
-        K = (0, v.l)(e);
+        K = (0, _.l)(e);
     return (0, i.jsxs)('div', {
         className: M.emojiSettings,
         children: [

@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     },
     o: function () {
-        return g;
+        return h;
     }
 }),
     n(47120);
@@ -32,8 +32,8 @@ function p(e, t, n) {
     );
 }
 ((l = i || (i = {})).SELF_VIDEO = 'self_video'), (l.SELF_STREAM = 'self_stream'), (l.REMOTE_VIDEO = 'remote_video'), (l.REMOTE_STREAM = 'remote_stream'), (l.CHANGE_VIDEO_BACKGROUND = 'change_video_background'), (l.VIDEO_PLAYER = 'video_player'), (l.REPLAY_VIDEO_STREAM = 'replay_video_stream');
-let h = new Map();
-class g {
+let g = new Map();
+class h {
     onSpinnerStarted() {
         null == this.spinnerVisibleStart && (this.spinnerVisibleStart = (0, r.zO)());
     }
@@ -41,8 +41,8 @@ class g {
         if (null == this.spinnerVisibleStart) return;
         let i = (function (e) {
                 var t;
-                let n = (null !== (t = h.get(e)) && void 0 !== t ? t : 0) + 1;
-                return h.set(e, n), n;
+                let n = (null !== (t = g.get(e)) && void 0 !== t ? t : 0) + 1;
+                return g.set(e, n), n;
             })(n),
             l = (0, r.zO)() - this.spinnerVisibleStart;
         if (((this.spinnerVisibleStart = null), l < 0)) {
@@ -52,7 +52,7 @@ class g {
         this.logger.info('spinner visible for '.concat(l, ' ms\n      [').concat(e, ', count for stream: ').concat(i, ']'));
         let a = u.Z.getGuildId(),
             p = d.Z.getUserVoiceChannelId(a, s.default.getId()),
-            g = (function (e) {
+            h = (function (e) {
                 if (null != e) {
                     if (e.isGuildVoice()) return 'guild_voice';
                     if (e.isGuildStageVoice()) return 'is_stage_channel';
@@ -69,7 +69,7 @@ class g {
             event_count_for_stream: i,
             guild_id: a,
             channel_id: p,
-            channel_type: g,
+            channel_type: h,
             spinning_user_id: t,
             connection_type: c.Z.getType(),
             effective_connection_speed: c.Z.getEffectiveConnectionSpeed(),

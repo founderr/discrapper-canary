@@ -61,7 +61,7 @@ function y(e) {
                         colorClass: S.addStatusIconColor
                     }),
                     (0, r.jsx)(l.Text, {
-                        variant: 'text-xs/normal',
+                        variant: 'text-sm/normal',
                         className: S.addStatusPrompt,
                         children: b.intl.string(b.t.evw0o6)
                     })
@@ -95,7 +95,7 @@ function A(e) {
                         }),
                     null != o &&
                         (0, r.jsx)(l.Text, {
-                            variant: 'text-xs/normal',
+                            variant: 'text-sm/normal',
                             className: S.statusText,
                             children: o
                         })

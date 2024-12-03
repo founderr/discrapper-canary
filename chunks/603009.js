@@ -20,14 +20,14 @@ var i = n(200651),
     g = n(594174),
     C = n(626135),
     x = n(645896),
-    _ = n(905362),
-    v = n(603368),
+    v = n(905362),
+    _ = n(603368),
     I = n(353093),
     E = n(940725),
     b = n(114487),
     N = n(979264),
-    S = n(981631),
-    Z = n(921944),
+    Z = n(981631),
+    S = n(921944),
     T = n(388032),
     j = n(431972);
 function A(e) {
@@ -35,15 +35,15 @@ function A(e) {
     let { guild: n, showToast: r, onConfirm: o, onDismiss: p } = e,
         [m, f] = l.useState(!1),
         C = l.useRef(null),
-        _ = (0, x.Cc)(n.id),
+        v = (0, x.Cc)(n.id),
         E = (0, u.ZP)(),
-        S = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
-        Z = (0, v.nP)(null == _ ? void 0 : null === (t = _.branding) || void 0 === t ? void 0 : t.primaryColor, [c.tokens.colors.BG_BRAND, 0.5]),
+        Z = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
+        S = (0, _.nP)(null == v ? void 0 : null === (t = v.branding) || void 0 === t ? void 0 : t.primaryColor, [c.tokens.colors.BG_BRAND, 0.5]),
         A = c.tokens.colors.BG_SURFACE_OVERLAY.resolve({
             theme: E,
             saturation: 1
         }).hex(),
-        y = (0, v.nj)(Z, A, 'top left', 0.3, '30%'),
+        y = (0, _.nj)(S, A, 'top left', 0.3, '30%'),
         P = (0, d.e7)(
             [g.default],
             () => {
@@ -79,7 +79,7 @@ function A(e) {
             r,
             {
                 from: {
-                    transform: S ? 'translateY(0)' : 'translateY(16px)',
+                    transform: Z ? 'translateY(0)' : 'translateY(16px)',
                     opacity: 0,
                     pointerEvents: 'none'
                 },
@@ -89,7 +89,7 @@ function A(e) {
                     pointerEvents: 'all'
                 },
                 leave: {
-                    transform: S ? 'translateY(0)' : 'translateY(16px)',
+                    transform: Z ? 'translateY(0)' : 'translateY(16px)',
                     opacity: 0,
                     pointerEvents: 'none'
                 },
@@ -192,9 +192,9 @@ function y(e) {
             n &&
                 (c.current = window.setTimeout(() => {
                     s(!0),
-                        C.default.track(S.rMx.DISMISSIBLE_CONTENT_SHOWN, {
+                        C.default.track(Z.rMx.DISMISSIBLE_CONTENT_SHOWN, {
                             type: o.C[o.C.ADOPT_CLAN_IDENTITY_NOTICE],
-                            guild_id: null != t ? t : S.lds
+                            guild_id: null != t ? t : Z.lds
                         });
                 }, 2500)),
             () => {
@@ -204,10 +204,10 @@ function y(e) {
         []
     );
     let u = l.useCallback(() => {
-            if ((s(!1), null != t)) (0, _.SJ)(t);
+            if ((s(!1), null != t)) (0, v.SJ)(t);
         }, [, t]),
         h = l.useCallback(() => {
-            if ((s(!1), null != t)) (0, p.Qd)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : S.lds, !0, Z.L.DISMISS);
+            if ((s(!1), null != t)) (0, p.Qd)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : Z.lds, !0, S.L.DISMISS);
         }, [t]);
     return n && null != t && null != r
         ? (0, i.jsx)(A, {

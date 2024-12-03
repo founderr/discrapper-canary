@@ -21,23 +21,23 @@ var i = n(192379),
 function C(e) {
     let { user: t, onAcceptSuccess: n, onRejectSuccess: l, onError: C } = e,
         x = (0, m.Z)(),
-        [_, v] = i.useState(!1),
+        [v, _] = i.useState(!1),
         [I, E] = i.useState(!1),
         [b, N] = i.useState(!1),
-        [S, Z] = i.useState(!1),
+        [Z, S] = i.useState(!1),
         [T, j] = i.useState(!1),
-        A = _ || I || b,
+        A = v || I || b,
         y = i.useCallback(
             async (e) => {
                 if (!A) {
-                    v(!0);
+                    _(!0);
                     try {
-                        await (0, h.e4)(e), Z(!0), null == n || n();
+                        await (0, h.e4)(e), S(!0), null == n || n();
                     } catch (t) {
                         let e = new a.Hx(t);
                         null == C || C(e);
                     } finally {
-                        v(!1);
+                        _(!1);
                     }
                 }
             },
@@ -154,10 +154,10 @@ function C(e) {
         rejectMessageRequest: P,
         rejectAll: M,
         markAsNotSpam: L,
-        isAcceptLoading: _,
+        isAcceptLoading: v,
         isRejectLoading: I,
         isUserProfileLoading: b,
-        isOptimisticAccepted: S,
+        isOptimisticAccepted: Z,
         isOptimisticRejected: T
     };
 }

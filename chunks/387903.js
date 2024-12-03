@@ -17,8 +17,8 @@ var i,
     m = n(780384),
     f = n(481060),
     p = n(438139),
-    h = n(410030),
-    g = n(726542),
+    g = n(410030),
+    h = n(726542),
     v = n(600164),
     S = n(686546),
     I = n(111028),
@@ -78,14 +78,14 @@ let z = {
     );
 function J(e) {
     let { activity: t } = e,
-        n = (0, h.ZP)(),
+        n = (0, g.ZP)(),
         i = (function (e) {
             let { activity: t } = e,
                 n = null;
             return (0, L.Z)(t) && (n = F.ABu.SPOTIFY), null != t.platform && [F.M7m.PS4, F.M7m.PS5].includes(t.platform) && (n = F.ABu.PLAYSTATION), n;
         })({ activity: t });
     if (null == i) return null;
-    let l = g.Z.get(i);
+    let l = h.Z.get(i);
     return (0, r.jsx)('img', {
         alt: '',
         src: (0, m.ap)(n) ? l.icon.lightSVG : l.icon.darkSVG,
@@ -117,7 +117,7 @@ class q extends (l = s.PureComponent) {
         switch (s.type) {
             case F.IIU.STREAMING:
                 t = W.intl.formatToPlainString(W.t.Dzgz4u, {
-                    platform: [F.ABu.TWITCH, F.ABu.YOUTUBE].includes(o.toLowerCase()) ? o : g.Z.get(F.ABu.TWITCH).name
+                    platform: [F.ABu.TWITCH, F.ABu.YOUTUBE].includes(o.toLowerCase()) ? o : h.Z.get(F.ABu.TWITCH).name
                 });
                 break;
             case F.IIU.LISTENING:
@@ -156,7 +156,7 @@ class q extends (l = s.PureComponent) {
             className: B.assets,
             children: (0, r.jsx)('img', {
                 alt: '',
-                src: g.Z.get(F.ABu.XBOX).icon.customPNG,
+                src: h.Z.get(F.ABu.XBOX).icon.customPNG,
                 className: c()(this.getTypeClass('assetsLargeImage', 'Xbox'))
             })
         });
@@ -511,14 +511,14 @@ class q extends (l = s.PureComponent) {
             m = 'StreamPreview' === t,
             p = !1;
         (0, k.Z)(u) ? ((e = this.renderXboxImage()), (p = !0)) : null == (e = this.renderImage(u)) && (p = null != (e = this.renderGameImage(u)));
-        let h = this.renderName(u),
-            g = this.renderDetails(u),
+        let g = this.renderName(u),
+            h = this.renderDetails(u),
             S = this.renderState(u, l),
             I = this.renderTimePlayed(u),
             _ = this.renderChannelDetails(u),
             x = null != n ? n() : null,
             E = this.renderTimeBar(u),
-            Z = ![e, h, g, S, I, E, x].some((e) => null != e);
+            Z = ![e, g, h, S, I, E, x].some((e) => null != e);
         return (0, r.jsxs)('div', {
             className: c()(this.getTypeClass('activity'), i),
             children: [
@@ -542,7 +542,7 @@ class q extends (l = s.PureComponent) {
                                                             o(e), null == s || s();
                                                         }
                                                       : void 0,
-                                              children: [h, g, S, I]
+                                              children: [g, h, S, I]
                                           }),
                                           _,
                                           m ? null : E,

@@ -6,16 +6,16 @@ var i = n(200651),
     a = n(442837),
     o = n(481060),
     c = n(596454),
-    d = n(296386),
-    u = n(318766),
-    m = n(907040),
+    d = n(318766),
+    u = n(907040),
+    m = n(456268),
     h = n(999382),
     g = n(185923),
     x = n(388032),
     p = n(778916);
 let f = (e) => {
     var t;
-    let { reason: n = '', emoji_name: l, onSetReason: d, onSelectEmoji: x, onClearPressed: f, reasonMinLength: C, reasonMaxLength: v, placeholder: _, position: I } = e,
+    let { reason: n = '', emoji_name: l, onSetReason: m, onSelectEmoji: x, onClearPressed: f, reasonMinLength: C, reasonMaxLength: _, placeholder: v, position: I } = e,
         [N, T] = r.useState(!1),
         j = (0, a.e7)([h.Z], () => h.Z.isGuildMetadataLoaded());
     return (0, i.jsxs)('div', {
@@ -31,7 +31,7 @@ let f = (e) => {
                 animation: o.Popout.Animation.NONE,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return (0, i.jsx)(m.Z, {
+                    return (0, i.jsx)(u.Z, {
                         pickerIntention: g.Hz.COMMUNITY_CONTENT,
                         closePopout: t,
                         onSelectEmoji: (e, n) => {
@@ -42,7 +42,7 @@ let f = (e) => {
                 children: () =>
                     (0, i.jsx)('div', {
                         className: p.background,
-                        children: (0, i.jsx)(u.Z, {
+                        children: (0, i.jsx)(d.Z, {
                             active: !1,
                             onClick: () => {
                                 T(!0);
@@ -66,12 +66,12 @@ let f = (e) => {
                         o.TextInput,
                         {
                             inputClassName: p.reason,
-                            placeholder: _,
+                            placeholder: v,
                             value: n,
                             minLength: C,
-                            maxLength: v,
+                            maxLength: _,
                             onChange: (e) => {
-                                d(e);
+                                m(e);
                             },
                             defaultDirty: (null == n ? void 0 : n.length) > 0
                         },
@@ -112,12 +112,12 @@ t.Z = (e) => {
                     onSetReason: (t) => {
                         let n = [...l],
                             i = Object.assign({}, l[e], { reason: t });
-                        (n[e] = i), (0, d.P$)(r, n);
+                        (n[e] = i), (0, m.P$)(r, n);
                     },
                     onSelectEmoji: (t) => {
                         let n = [...l],
                             i = Object.assign({}, l[e], { emoji_name: t.optionallyDiverseSequence });
-                        (n[e] = i), (0, d.P$)(r, n);
+                        (n[e] = i), (0, m.P$)(r, n);
                     },
                     onClearPressed: () => {
                         let t = [...l],
@@ -125,7 +125,7 @@ t.Z = (e) => {
                                 reason: '',
                                 emoji_name: null
                             };
-                        (t[e] = n), (0, d.P$)(r, t);
+                        (t[e] = n), (0, m.P$)(r, t);
                     },
                     reasonMinLength: t,
                     reasonMaxLength: n

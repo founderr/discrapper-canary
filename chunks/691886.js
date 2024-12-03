@@ -21,10 +21,10 @@ var i = n(200651),
     p = n(981631),
     f = n(388032),
     C = n(904685);
-function v(e) {
+function _(e) {
     return String(e);
 }
-function _(e) {
+function v(e) {
     let { icon: t, title: n, subtitle: r, className: l } = e;
     return (0, i.jsxs)('div', {
         className: s()(C.label, l),
@@ -53,7 +53,7 @@ function _(e) {
     });
 }
 function I() {
-    return (0, i.jsx)(_, {
+    return (0, i.jsx)(v, {
         icon: (0, i.jsx)(o.PlusSmallIcon, {
             size: 'md',
             color: 'currentColor',
@@ -72,7 +72,7 @@ function N(e) {
     let s = (0, d.KS)(r),
         a = (0, c.F6)(r, g.default, h.Z),
         o = null != l ? (0, c.F6)(l, g.default, h.Z) : void 0;
-    return (0, i.jsx)(_, {
+    return (0, i.jsx)(v, {
         icon: null != s && (0, i.jsx)(s, { className: C.labelIcon }),
         title: a,
         subtitle: o
@@ -83,7 +83,7 @@ function T(e) {
     return null != t ? (0, i.jsx)(N, { channelId: t }) : (0, i.jsx)(I, {});
 }
 function j(e) {
-    let { guildId: t, value: l, initialChannelId: s, omitChannelIds: d, 'aria-labelledby': C, onChange: _ } = e,
+    let { guildId: t, value: l, initialChannelId: s, omitChannelIds: d, 'aria-labelledby': C, onChange: v } = e,
         I = f.intl.string(f.t.d7YJMD),
         N = (0, a.e7)([m.Z], () => m.Z.getCategories(t), [t]),
         j = (0, x.m7)(null != l ? l : p.lds),
@@ -127,13 +127,13 @@ function j(e) {
                           (0, i.jsx)(e, {
                               ...n,
                               guildId: t,
-                              onSubmit: _
+                              onSubmit: v
                           });
                   })
-                : _(e);
+                : v(e);
         },
-        isSelected: (e) => null != l && v(e) === v(l),
-        serialize: v,
+        isSelected: (e) => null != l && _(e) === _(l),
+        serialize: _,
         renderOptionLabel: T,
         renderOptionValue: (e) => {
             let [t] = e;

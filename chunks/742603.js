@@ -21,14 +21,14 @@ var l = n(120356),
     g = n(554747),
     C = n(854698),
     x = n(897669),
-    _ = n(665149),
-    v = n(984370),
+    v = n(665149),
+    _ = n(984370),
     I = n(910611),
     E = n(454585),
     b = n(134483),
     N = n(210975),
-    S = n(809244),
-    Z = n(618158),
+    Z = n(809244),
+    S = n(618158),
     T = n(358221),
     j = n(362721),
     A = n(887012),
@@ -45,7 +45,7 @@ function B(e) {
     let { focusedParticipant: t, channel: n } = e,
         l = (0, c.bp)(),
         r = (0, a.e7)([T.Z], () => T.Z.getLayout(n.id, l));
-    return (0, i.jsx)(Z.Z, {
+    return (0, i.jsx)(S.Z, {
         children: (0, i.jsx)(P.Z, {
             className: D.participants,
             participant: t,
@@ -58,7 +58,7 @@ function B(e) {
 }
 function U(e) {
     let { user: t, channel: n, stream: l, color: r } = e,
-        a = (0, S.Z)(n, t, l);
+        a = (0, Z.Z)(n, t, l);
     return null == t || null == l
         ? null
         : (0, i.jsxs)(i.Fragment, {
@@ -89,7 +89,7 @@ function H(e) {
         null != n &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(_.ZP.Divider, { className: D.divider }),
+                    (0, i.jsx)(v.ZP.Divider, { className: D.divider }),
                     (0, i.jsx)(f.Z, {
                         game: n,
                         className: D.activityIcon
@@ -112,7 +112,7 @@ function H(e) {
             n = l.stream;
         t = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(_.ZP.Divider, { className: D.divider }),
+                (0, i.jsx)(v.ZP.Divider, { className: D.divider }),
                 (0, i.jsx)(U, {
                     user: e,
                     channel: r,
@@ -149,9 +149,9 @@ function G(e) {
         ),
         C = (0, p.ZP)(t),
         x = (0, m.KS)(t),
-        [S] = (0, u.Z)((null == g ? void 0 : g.type) === R.fO.ACTIVITY ? [g.id] : []),
-        Z = O.intl.string(O.t.BVZqJi);
-    t.isDM() ? (Z = O.intl.string(O.t.jN2DfX)) : t.isGroupDM() && (Z = O.intl.string(O.t['e5y+go']));
+        [Z] = (0, u.Z)((null == g ? void 0 : g.type) === R.fO.ACTIVITY ? [g.id] : []),
+        S = O.intl.string(O.t.BVZqJi);
+    t.isDM() ? (S = O.intl.string(O.t.jN2DfX)) : t.isGroupDM() && (S = O.intl.string(O.t['e5y+go']));
     let A = (0, a.e7)([h.Z], () => h.Z.getChannelStatus(t)),
         P = t.isGuildVoice() && c && null != A && A.length > 0,
         B = (0, j.ZP)(t),
@@ -207,8 +207,8 @@ function G(e) {
             (0, i.jsx)(s.ThemeProvider, {
                 theme: k.BR.DARK,
                 children: (e) =>
-                    (0, i.jsxs)(_.ZP, {
-                        onDoubleClick: v.O,
+                    (0, i.jsxs)(v.ZP, {
+                        onDoubleClick: _.O,
                         transparent: !0,
                         className: e,
                         childrenBottom: U,
@@ -222,13 +222,13 @@ function G(e) {
                         }),
                         children: [
                             null != x
-                                ? (0, i.jsx)(_.ZP.Icon, {
+                                ? (0, i.jsx)(v.ZP.Icon, {
                                       icon: x,
                                       disabled: !0,
-                                      'aria-label': Z
+                                      'aria-label': S
                                   })
                                 : null,
-                            (0, i.jsx)(_.ZP.Title, {
+                            (0, i.jsx)(v.ZP.Title, {
                                 children: (0, i.jsxs)(i.Fragment, {
                                     children: [
                                         C,
@@ -252,7 +252,7 @@ function G(e) {
                                 guild: l
                             }),
                             (0, i.jsx)(H, {
-                                focusedApplication: S,
+                                focusedApplication: Z,
                                 focusedParticipant: g,
                                 channel: t
                             })

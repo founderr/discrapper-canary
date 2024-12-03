@@ -23,9 +23,9 @@ function C() {
     var e;
     let { editStateId: t } = (0, u.N)(),
         [n, l] = m.TT(t),
-        [C, v] = m.F2(t),
-        _ = (0, c.oC)(t),
-        { options: I } = (0, g.Z)(null !== (e = null == _ ? void 0 : _.active_trial) && void 0 !== e ? e : null),
+        [C, _] = m.F2(t),
+        v = (0, c.oC)(t),
+        { options: I } = (0, g.Z)(null !== (e = null == v ? void 0 : v.active_trial) && void 0 !== e ? e : null),
         N = (0, h.Z)(),
         T = null != n,
         j = r.useCallback(
@@ -91,7 +91,7 @@ function C() {
                         options: N,
                         className: f.formInput,
                         value: C,
-                        onChange: v,
+                        onChange: _,
                         maxVisibleItems: 5,
                         isDisabled: !T || b,
                         look: a.SelectLooks.CUSTOM

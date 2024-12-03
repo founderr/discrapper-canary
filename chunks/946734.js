@@ -20,13 +20,13 @@ var i = n(200651),
     g = n(430824),
     C = n(594174),
     x = n(251625),
-    _ = n(823379),
-    v = n(665149),
+    v = n(823379),
+    _ = n(665149),
     I = n(981631),
     E = n(228168),
     b = n(388032),
     N = n(25161);
-function S(e, t, n) {
+function Z(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +39,7 @@ function S(e, t, n) {
         e
     );
 }
-class Z {
+class S {
     updateData(e) {
         let { userId: t, user: n, channelId: i, analyticsLocations: l } = e;
         (this.userId = t), (this.user = n), (this.channelId = i), (this.analyticsLocations = l);
@@ -74,11 +74,11 @@ class Z {
         });
     }
     constructor({ userId: e, user: t, channelId: n, analyticsLocations: l }) {
-        S(this, 'userId', void 0),
-            S(this, 'user', void 0),
-            S(this, 'channelId', void 0),
-            S(this, 'analyticsLocations', void 0),
-            S(
+        Z(this, 'userId', void 0),
+            Z(this, 'user', void 0),
+            Z(this, 'channelId', void 0),
+            Z(this, 'analyticsLocations', void 0),
+            Z(
                 this,
                 'generateNicknameGuildPairs',
                 (0, x.oH)((e) => {
@@ -94,13 +94,13 @@ class Z {
                                         var t;
                                         return null === (t = g.Z.getGuild(e)) || void 0 === t ? void 0 : t.name;
                                     })
-                                    .filter(_.lm)
+                                    .filter(v.lm)
                             ];
                         })
                         .value();
                 })
             ),
-            S(this, 'renderMoreAvatars', () =>
+            Z(this, 'renderMoreAvatars', () =>
                 (0, i.jsx)(
                     o.TooltipContainer,
                     {
@@ -119,7 +119,7 @@ class Z {
                     'more-avatars'
                 )
             ),
-            S(this, 'handleClick', () => {
+            Z(this, 'handleClick', () => {
                 (0, m.openUserProfileModal)({
                     userId: this.userId,
                     channelId: this.channelId,
@@ -145,7 +145,7 @@ function T(e) {
                 r = (0, s.e7)([C.default], () => C.default.getUser(t), [t]),
                 [a] = l.useState(
                     () =>
-                        new Z({
+                        new S({
                             user: r,
                             userId: t,
                             channelId: n,
@@ -171,7 +171,7 @@ function T(e) {
         : (0, i.jsxs)(u.Gt, {
               value: m,
               children: [
-                  (0, i.jsx)(v.iz, { className: N.divider }),
+                  (0, i.jsx)(_.iz, { className: N.divider }),
                   (0, i.jsx)(o.TextBadge, {
                       text: b.intl.string(b.t.l1QVfn),
                       disableColor: !0,

@@ -81,7 +81,7 @@ function b() {
             }),
                 await c();
         },
-        C = async () => {
+        j = async () => {
             await o.tn.del({
                 url: '/debug/subscription',
                 rejectWithError: !1
@@ -124,7 +124,7 @@ function b() {
                             }),
                         (0, r.jsx)(s.Button, {
                             size: s.Button.Sizes.SMALL,
-                            onClick: C,
+                            onClick: j,
                             children: 'Delete Subscription'
                         })
                     ]

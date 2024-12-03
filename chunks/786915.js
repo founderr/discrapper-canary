@@ -17,14 +17,14 @@ var l = n(512722),
     p = n(388032);
 function m(e) {
     var t, l;
-    let { applicationId: m, stream: f, channel: g, exitFullScreen: C, appContext: x, analyticsLocation: _, guildScheduledEvent: v, shouldPrioritizeGroupPlusIcon: I = !1, ...E } = e,
+    let { applicationId: m, stream: f, channel: g, exitFullScreen: C, appContext: x, analyticsLocation: v, guildScheduledEvent: _, shouldPrioritizeGroupPlusIcon: I = !1, ...E } = e,
         b = (0, o.bp)(),
         N = null == g ? void 0 : g.getGuildId(),
-        S = (0, a.e7)([c.Z], () => (null != N ? c.Z.getGuild(N) : null), [N]);
-    return ((t = S), (l = g), null != t && null != l && d.Z.can(h.Plq.CREATE_INSTANT_INVITE, l))
+        Z = (0, a.e7)([c.Z], () => (null != N ? c.Z.getGuild(N) : null), [N]);
+    return ((t = Z), (l = g), null != t && null != l && d.Z.can(h.Plq.CREATE_INSTANT_INVITE, l))
         ? (0, i.jsx)(u.Z, {
               onClick: () => {
-                  r()(null != S, 'guild cannot be null'),
+                  r()(null != Z, 'guild cannot be null'),
                       r()(null != g, 'channel cannot be null'),
                       !(function (e) {
                           let { guild: t, channel: l, streamUserId: r, applicationId: a, appContext: o, exitFullScreen: c, analyticsLocation: d, guildScheduledEvent: u } = e;
@@ -50,14 +50,14 @@ function m(e) {
                                   }
                               );
                       })({
-                          guild: S,
+                          guild: Z,
                           channel: g,
                           streamUserId: null == f ? void 0 : f.ownerId,
                           applicationId: m,
                           appContext: null != x ? x : b,
                           exitFullScreen: C,
-                          analyticsLocation: _,
-                          guildScheduledEvent: v
+                          analyticsLocation: v,
+                          guildScheduledEvent: _
                       });
               },
               iconComponent: null == m || I ? s.GroupPlusIcon : s.ActivitiesPlusIcon,

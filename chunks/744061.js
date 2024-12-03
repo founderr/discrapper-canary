@@ -17,7 +17,7 @@ var i = n(200651),
     p = n(300759),
     m = n(665162);
 function f(e) {
-    let { onClose: t, onConfirm: f, onCancel: g, channel: C, analyticsType: x, popoutText: _, animation: v } = e;
+    let { onClose: t, onConfirm: f, onCancel: g, channel: C, analyticsType: x, popoutText: v, animation: _ } = e;
     l.useEffect(() => {
         d.default.track(u.rMx.OPEN_POPOUT, {
             type: x,
@@ -37,9 +37,9 @@ function f(e) {
             let t = c.Z.theme,
                 i = !1;
             return (
-                null != v &&
+                null != _ &&
                     (async () => {
-                        let [{ default: l }, r] = await Promise.all([Promise.resolve().then(n.t.bind(n, 500923, 23)), (0, a.wj)(t) ? v.dark() : v.light()]);
+                        let [{ default: l }, r] = await Promise.all([Promise.resolve().then(n.t.bind(n, 500923, 23)), (0, a.wj)(t) ? _.dark() : _.light()]);
                         !i &&
                             null != b.current &&
                             (e = l.loadAnimation({
@@ -54,7 +54,7 @@ function f(e) {
                     (i = !0), null != e && (e.destroy(), (e = void 0));
                 }
             );
-        }, [v]),
+        }, [_]),
         (0, i.jsx)(s.Dialog, {
             'aria-labelledby': 'content-warning-popout-label',
             children: (0, i.jsxs)('form', {
@@ -64,7 +64,7 @@ function f(e) {
                     (0, i.jsxs)('div', {
                         className: p.body,
                         children: [
-                            null != v &&
+                            null != _ &&
                                 (0, i.jsx)('div', {
                                     className: p.animation,
                                     ref: b
@@ -80,7 +80,7 @@ function f(e) {
                                         id: 'content-warning-popout-label',
                                         className: m.markup,
                                         variant: 'text-sm/normal',
-                                        children: _.body
+                                        children: v.body
                                     }),
                                     (0, i.jsxs)('div', {
                                         className: p.buttonWrapper,
@@ -124,7 +124,7 @@ function f(e) {
                             })
                         ]
                     }),
-                    null != _.footer && '' !== _.footer
+                    null != v.footer && '' !== v.footer
                         ? (0, i.jsxs)('div', {
                               className: p.footer,
                               children: [
@@ -135,7 +135,7 @@ function f(e) {
                                   }),
                                   (0, i.jsx)(s.Text, {
                                       variant: 'text-sm/normal',
-                                      children: _.footer
+                                      children: v.footer
                                   })
                               ]
                           })

@@ -1,6 +1,6 @@
 n.d(t, {
     U: function () {
-        return h;
+        return g;
     },
     Z: function () {
         return v;
@@ -30,13 +30,13 @@ let p = {
         SIZE_MIN: f.qh / 2,
         SIZE_MAX: f.qh
     },
-    h = (0, r.U)(() => ({
+    g = (0, r.U)(() => ({
         particles: {},
         lastSpawned: {}
     }));
-function g(e, t) {
+function h(e, t) {
     var n;
-    l()(null !== (n = h.getState().particles[e.id]) && void 0 !== n ? n : {}).forEach(t);
+    l()(null !== (n = g.getState().particles[e.id]) && void 0 !== n ? n : {}).forEach(t);
 }
 function v(e) {
     var t, n, i, r;
@@ -47,7 +47,7 @@ function v(e) {
         A = (0, d.np)(v.y, _),
         { outlineColor: N } = (0, d.bg)(v.userId, E, Z, x);
     if (
-        (g(v, (e) => {
+        (h(v, (e) => {
             var t, n;
             return (
                 (t = v),
@@ -57,17 +57,17 @@ function v(e) {
                 (n.opacity -= n.opacitySpeed),
                 n.opacity <= 0 &&
                     (0, s.j)(() => {
-                        h.setState((e) => (delete e.particles[t.id][n.id], 0 === Object.keys(e.particles[t.id]).length && delete e.particles[t.id], e));
+                        g.setState((e) => (delete e.particles[t.id][n.id], 0 === Object.keys(e.particles[t.id]).length && delete e.particles[t.id], e));
                     }))
             );
         }),
         !(function (e, t, n) {
             var i;
-            let r = null !== (i = h.getState().lastSpawned[e.id]) && void 0 !== i ? i : 0,
+            let r = null !== (i = g.getState().lastSpawned[e.id]) && void 0 !== i ? i : 0,
                 o = Date.now();
             if (!(r + 100 > o) && e.state !== u.f.STOP && !!(0.8 >= Math.random() || r + 300 < o))
                 (0, s.j)(() => {
-                    h.setState((i) => {
+                    g.setState((i) => {
                         var r, s, o;
                         let c = null !== (r = i.particles[e.id]) && void 0 !== r ? r : {},
                             u = l().random(1, 2);
@@ -93,7 +93,7 @@ function v(e) {
         })(v, T, A),
         (0, m.I)(S, T, A, N, f.q2),
         (0, m.T)(S, T, A, v.userId),
-        g(v, (e) =>
+        h(v, (e) =>
             (function (e, t, n) {
                 if (null == t) return;
                 let i = n.size * window.devicePixelRatio,
@@ -103,7 +103,7 @@ function v(e) {
             })(S, b, e)
         ),
         v.lastUpdatedAt + f.FO < Date.now() && (0, o.ZZ)(C, v),
-        v.state === u.f.STOP && ((i = v), !(Object.keys(null !== (r = h.getState().particles[i.id]) && void 0 !== r ? r : {}).length > 0)))
+        v.state === u.f.STOP && ((i = v), !(Object.keys(null !== (r = g.getState().particles[i.id]) && void 0 !== r ? r : {}).length > 0)))
     )
         y.push(v);
     S.restore();

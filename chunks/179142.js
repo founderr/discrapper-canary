@@ -23,16 +23,16 @@ function x(e) {
     let { user: t } = e,
         { analyticsLocations: n } = (0, r.ZP)(),
         { context: x } = (0, s.KZ)(),
-        _ = (0, l.ZP)(),
-        { mutualFriends: v, isFetching: I } = (0, o.Z)(t.id, !t.bot),
+        v = (0, l.ZP)(),
+        { mutualFriends: _, isFetching: I } = (0, o.Z)(t.id, !t.bot),
         { mutualGuilds: E, isFetching: b } = (0, c.Z)(t.id, !0),
-        N = !t.bot && null != v && v.length > 0,
-        S = null != E && E.length > 0;
-    return N || S
+        N = !t.bot && null != _ && _.length > 0,
+        Z = null != E && E.length > 0;
+    return N || Z
         ? (0, i.jsxs)(u.Z.Overlay, {
               className: C.overlay,
               children: [
-                  S &&
+                  Z &&
                       (0, i.jsx)(f.Z, {
                           section: 'MUTUAL_GUILDS',
                           header: g.intl.string(g.t['4lTDZm']),
@@ -46,21 +46,21 @@ function x(e) {
                                       user: t,
                                       guild: n,
                                       nick: l,
-                                      theme: _,
+                                      theme: v,
                                       onSelect: () => (0, a.X)(n.id)
                                   },
                                   n.id
                               );
                           })
                       }),
-                  S && N && (0, i.jsx)(d.Z, { className: C.divider }),
+                  Z && N && (0, i.jsx)(d.Z, { className: C.divider }),
                   N &&
                       (0, i.jsx)(f.Z, {
                           section: 'MUTUAL_FRIENDS',
                           header: g.intl.string(g.t['0mTJ3t']),
                           isLoading: I,
                           listClassName: C.list,
-                          items: v.map((e) => {
+                          items: _.map((e) => {
                               let { key: t, user: l, status: r } = e;
                               return (0, i.jsx)(
                                   p.T,

@@ -11,18 +11,18 @@ var i,
     m = n(984063),
     f = n(88315),
     p = n(813900);
-let h = {},
-    g = {},
+let g = {},
+    h = {},
     v = {},
     S = !0,
     I = null;
 function _(e) {
-    if (null == g[e]) {
+    if (null == h[e]) {
         let t = u.default.getUser(e);
         if (null == t) return;
         let n = t.getAvatarURL(null, p.Ks),
             i = new Image();
-        (i.src = n), (g[e] = i);
+        (i.src = n), (h[e] = i);
     }
 }
 class x extends (i = s.ZP.Store) {
@@ -30,10 +30,10 @@ class x extends (i = s.ZP.Store) {
         return S;
     }
     getDrawables(e) {
-        return null != h[e] ? h[e] : [];
+        return null != g[e] ? g[e] : [];
     }
     getAvatarImage(e) {
-        return g[e];
+        return h[e];
     }
     getEmojiImage(e) {
         return v[e];
@@ -54,9 +54,9 @@ class x extends (i = s.ZP.Store) {
 let E = new x(o.Z, {
     SHARED_CANVAS_UPDATE_LINE_POINTS: function (e) {
         let { lineId: t, newPoints: n, userId: i, streamerId: l } = e,
-            a = h[l];
+            a = g[l];
         if (null == a)
-            h[l] = [
+            g[l] = [
                 {
                     type: m.W.LINE,
                     id: t,
@@ -84,15 +84,15 @@ let E = new x(o.Z, {
                 ...l,
                 type: m.W.EMOJI_HOSE
             };
-        if (null == h[a]) h[a] = [s];
+        if (null == g[a]) g[a] = [s];
         else {
-            let e = h[a].findIndex((e) => e.id === l.id);
+            let e = g[a].findIndex((e) => e.id === l.id);
             e >= 0
-                ? (h[a][e] = {
-                      ...h[a][e],
+                ? (g[a][e] = {
+                      ...g[a][e],
                       ...s
                   })
-                : h[a].push(s);
+                : g[a].push(s);
         }
         let o = null !== (n = null !== (t = l.emojiId) && void 0 !== t ? t : l.emojiName) && void 0 !== n ? n : '';
         if (null == v[o]) {
@@ -111,9 +111,9 @@ let E = new x(o.Z, {
     },
     SHARED_CANVAS_CLEAR_DRAWABLES: function (e) {
         let { drawables: t, streamerId: n } = e;
-        if (null != h[n]) {
+        if (null != g[n]) {
             let e = new Set();
-            t.forEach((t) => e.add(t.id)), (h[n] = h[n].filter((t) => !e.has(t.id)));
+            t.forEach((t) => e.add(t.id)), (g[n] = g[n].filter((t) => !e.has(t.id)));
         }
     },
     SHARED_CANVAS_SET_DRAW_MODE: function (e) {

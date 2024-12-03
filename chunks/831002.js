@@ -20,15 +20,15 @@ var l = n(512722),
     g = n(423589),
     C = n(592125),
     x = n(496675),
-    _ = n(881824),
-    v = n(146085),
+    v = n(881824),
+    _ = n(146085),
     I = n(427679),
     E = n(354459),
     b = n(388032);
 function N(e) {
     let { channelId: t, closePopout: n, appContext: l, onSelect: N } = e,
-        S = (0, a.e7)([c.Z], () => c.Z.getSelectedParticipant(t)),
-        Z = (null == S ? void 0 : S.type) === E.fO.STREAM ? S.stream : null,
+        Z = (0, a.e7)([c.Z], () => c.Z.getSelectedParticipant(t)),
+        S = (null == Z ? void 0 : Z.type) === E.fO.STREAM ? Z.stream : null,
         T = (0, p.Z)(t);
     return (0, i.jsxs)(s.Menu, {
         navId: 'stage-channel-call-overflow-popout',
@@ -38,10 +38,10 @@ function N(e) {
         children: [
             (function (e) {
                 let t = (0, a.e7)([C.Z], () => C.Z.getChannel(e), [e]),
-                    n = (0, a.e7)([x.Z], () => x.Z.can(v.yP, t)),
+                    n = (0, a.e7)([x.Z], () => x.Z.can(_.yP, t)),
                     l = (0, a.e7)([I.Z], () => I.Z.getStageInstanceByChannel(e), [e]),
                     r = (0, o.bp)(),
-                    c = () => null != t && (0, _.T)(t, r);
+                    c = () => null != t && (0, v.T)(t, r);
                 return (null == t ? void 0 : t.isGuildStageVoice()) && n
                     ? null != l
                         ? (0, i.jsx)(s.MenuItem, {
@@ -67,7 +67,7 @@ function N(e) {
             (0, u.Z)(),
             (0, d.Z)(t),
             T,
-            (0, h.Z)(Z, l)
+            (0, h.Z)(S, l)
         ]
     });
 }

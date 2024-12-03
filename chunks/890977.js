@@ -1,6 +1,6 @@
 n.d(t, {
     b: function () {
-        return _;
+        return v;
     }
 });
 var i,
@@ -53,7 +53,7 @@ function x(e) {
         className: o()(f.trinkets, t)
     });
 }
-let _ = (e) => {
+let v = (e) => {
     let { children: t, animationContainerClassName: n, glowClassName: i, trinketsClassName: l, onMount: s } = e;
     return (
         a.useEffect(() => {

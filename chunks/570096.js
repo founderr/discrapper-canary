@@ -1,6 +1,6 @@
 n.d(t, {
     N: function () {
-        return _;
+        return v;
     }
 }),
     n(47120);
@@ -63,7 +63,7 @@ let C = (e) => {
             }
         });
     };
-function _(e) {
+function v(e) {
     let { children: t } = e,
         n = [r.z.LEADERBOARD_NUX_COACHMARK],
         [s, c] = (0, o.US)(n, void 0),

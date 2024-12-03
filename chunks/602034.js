@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return v;
     },
     r: function () {
-        return v;
+        return _;
     }
 });
 var i = n(200651),
@@ -22,7 +22,7 @@ var i = n(200651),
     g = n(928477),
     C = n(981631),
     x = n(388032);
-function _(e) {
+function v(e) {
     let { parentChannel: t, parentMessageId: n, threadSettings: i, privateThreadMode: r, location: a, onThreadCreated: s, useDefaultThreadName: o } = e,
         d = l.useCallback((e, t, n, i) => {
             c.Z.uploadFiles({
@@ -44,7 +44,7 @@ function _(e) {
         uploadHandler: d
     });
 }
-function v(e) {
+function _(e) {
     let { parentChannel: t } = e,
         { name: l, appliedTags: c } = (0, u.xH)((e) => {
             let { name: t, appliedTags: n } = e;

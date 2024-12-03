@@ -15,11 +15,11 @@ t.Z = function (e) {
             coverImageHeight: 336,
             coverImageWidth: 252
         }),
-        v = (0, o.e7)([d.Z], () => {
+        _ = (0, o.e7)([d.Z], () => {
             var e, n;
             return null !== (n = null === (e = d.Z.getDetectableGame(t)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : '';
         }),
-        _ = r.useCallback(() => {
+        v = r.useCallback(() => {
             null == l || l(t);
         }, [t, l]),
         I = r.useMemo(
@@ -33,16 +33,16 @@ t.Z = function (e) {
                         })
                       : (0, i.jsx)('img', {
                             className: m.gameImage,
-                            alt: v,
+                            alt: _,
                             src: C
                         }),
-            [C, f, v]
+            [C, f, _]
         );
     return (0, i.jsxs)('div', {
         className: m.selectedGame,
         children: [
             (0, i.jsxs)(a.Clickable, {
-                onClick: _,
+                onClick: v,
                 className: s()(n, f ? m.gameImageLoading : void 0, m.gameImageBackground),
                 children: [
                     h &&
@@ -71,7 +71,7 @@ t.Z = function (e) {
                 className: m.gameName,
                 variant: 'text-xs/normal',
                 color: 'header-primary',
-                children: [v, g && (0, i.jsx)(a.LockIcon, { size: 'xxs' })]
+                children: [_, g && (0, i.jsx)(a.LockIcon, { size: 'xxs' })]
             })
         ]
     });

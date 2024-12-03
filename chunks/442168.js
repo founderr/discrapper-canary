@@ -15,8 +15,8 @@ var i = n(200651),
     m = n(569545),
     f = n(314910),
     p = n(340534);
-let h = { visibility: 'hidden' },
-    g = {
+let g = { visibility: 'hidden' },
+    h = {
         precision: 0.0001,
         duration: 300
     },
@@ -46,7 +46,7 @@ function I(e) {
             var e;
             let t = null === (e = _.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
             return null == t || n
-                ? h
+                ? g
                 : {
                       width: t.width,
                       height: t.height,
@@ -56,7 +56,7 @@ function I(e) {
         },
         T = (e) => {
             let t = null == x ? void 0 : x.getBoundingClientRect();
-            if (((y.current = t), e.timestamp !== Z || null == t || n)) return h;
+            if (((y.current = t), e.timestamp !== Z || null == t || n)) return g;
             let { top: i, left: l } = t;
             return {
                 top: i + 36,
@@ -73,7 +73,7 @@ function I(e) {
                 ref: A,
                 from: { opacity: 0.2 },
                 enter: { opacity: 0 },
-                config: g
+                config: h
             },
             'animate-always'
         ),

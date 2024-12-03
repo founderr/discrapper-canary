@@ -19,19 +19,19 @@ var i = n(200651),
     g = n(541716),
     C = n(665149),
     x = n(910611),
-    _ = n(359110),
-    v = n(592125),
+    v = n(359110),
+    _ = n(592125),
     I = n(703558),
     E = n(430824),
     b = n(979651),
     N = n(664342),
-    S = n(124368),
-    Z = n(981631),
+    Z = n(124368),
+    S = n(981631),
     T = n(388032),
     j = n(31224);
 function A(e) {
     let { channelId: t, baseChannelId: r, channelViewSource: A = 'Split View' } = e,
-        y = (0, s.e7)([v.Z], () => v.Z.getChannel(t)),
+        y = (0, s.e7)([_.Z], () => _.Z.getChannel(t)),
         P = (0, s.e7)([E.Z], () => E.Z.getGuild(null == y ? void 0 : y.getGuildId())),
         M = (0, m.ZP)(y);
     (function (e) {
@@ -43,7 +43,7 @@ function A(e) {
                     type: 'SIDEBAR_CLOSE',
                     baseChannelId: e.parent_id
                 }),
-                (0, _.ad)(e, { source: S.on.VOICE_AUTO_OPEN }));
+                (0, v.ad)(e, { source: Z.on.VOICE_AUTO_OPEN }));
         }, [t, e]);
     })(y);
     let R = l.useRef(!1);
@@ -51,13 +51,13 @@ function A(e) {
         (l.useEffect(() => {
             if (null == y || R.current) return;
             R.current = !0;
-            let e = (0, h.K)(v.Z.getChannel(y.id), !0);
-            (0, u.yw)(Z.rMx.CHANNEL_OPENED, {
+            let e = (0, h.K)(_.Z.getChannel(y.id), !0);
+            (0, u.yw)(S.rMx.CHANNEL_OPENED, {
                 ...e,
                 ...(0, u.$H)(y.id),
                 channel_view: A
             }),
-                (0, p.a)(Z.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: y.id });
+                (0, p.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: y.id });
         }, [y, A]),
         null == y || null == P)
     )
@@ -91,7 +91,7 @@ function A(e) {
                         });
                     },
                     handleClick: function () {
-                        if (null != y) (0, _.Kh)(y.id);
+                        if (null != y) (0, v.Kh)(y.id);
                     }
                 })
             }),

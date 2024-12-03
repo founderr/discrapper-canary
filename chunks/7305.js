@@ -100,15 +100,15 @@ function b(e) {
 function O(e) {
     let { initialPlanId: t, handleStepChange: n, referralTrialOfferId: l } = e,
         { paymentSources: s, selectedSkuId: r, selectedPlan: a } = (0, h.usePaymentContext)(),
-        { isGift: C } = (0, x.wD)(),
-        o = b(
+        { isGift: C, claimableRewards: o } = (0, x.wD)(),
+        u = b(
             (0, v.Z)({
                 isGift: C,
                 skuId: r,
                 referralTrialOfferId: l
             })
         ),
-        u = (0, d.id)(a, C);
+        c = (0, d.id)(a, C, o);
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(j.J, {
             ...e,
@@ -116,7 +116,7 @@ function O(e) {
             onReturn: () => {
                 let e = Object.values(s),
                     i = e.length < 1 && null == t ? f.h8.PLAN_SELECT : f.h8.REVIEW;
-                o && (i = f.h8.REVIEW), u && e.length < 1 && (i = f.h8.SELECT_FREE_SKU), n(i, { trackedFromStep: f.h8.PAYMENT_TYPE });
+                u && (i = f.h8.REVIEW), c && e.length < 1 && (i = f.h8.SELECT_FREE_SKU), n(i, { trackedFromStep: f.h8.PAYMENT_TYPE });
             }
         })
     });

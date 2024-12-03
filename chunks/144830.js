@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return g;
     }
 }),
     n(411104),
@@ -105,7 +105,7 @@ let f = (e) => (t, n) =>
             }
         }
     };
-function h(e) {
+function g(e) {
     var t, n;
     return (
         (n = class extends (t = o.PureComponent) {

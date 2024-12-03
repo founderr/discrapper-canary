@@ -205,7 +205,7 @@ function eG(e) {
             ...s,
             enabled: !l && s.enabled,
             children: (e) => {
-                let { unavailable: t, active: n, label: r, iconComponent: l, ...s } = e,
+                let { unavailable: t, isActive: n, label: r, iconComponent: l, ...s } = e,
                     o = (0, i.jsx)(v, {
                         size: 'sm',
                         className: a()(ej.buttonIcon, { [ej.withText]: !C }),

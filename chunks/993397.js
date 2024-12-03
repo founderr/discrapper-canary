@@ -115,8 +115,8 @@ t.Z = l.memo(function (e) {
     let { messages: n, channel: r, compact: s = !1, unreadId: o, collapsedReason: c } = e,
         { hasJumpTarget: d = !1 } = n,
         [p, f] = l.useState(d),
-        _ = l.useCallback(() => f((e) => !e), []),
-        v = n.hasUnread ? n.content.length - 1 : n.content.length;
+        v = l.useCallback(() => f((e) => !e), []),
+        _ = n.hasUnread ? n.content.length - 1 : n.content.length;
     return (0, i.jsxs)('div', {
         className: a()({
             [C.groupStart]: !0,
@@ -136,10 +136,10 @@ t.Z = l.memo(function (e) {
             (0, i.jsx)(
                 x,
                 {
-                    count: v,
+                    count: _,
                     compact: s,
                     expanded: p,
-                    onClick: _,
+                    onClick: v,
                     collapsedReason: c
                 },
                 'collapsed-message-item'

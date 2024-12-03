@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return v;
     }
 }),
     n(47120);
@@ -22,9 +22,9 @@ let C = 'CameraPreviewPosition';
 function x(e, t) {
     return e * t + 8 * (t - 1);
 }
-function _(e) {
+function v(e) {
     var t;
-    let { width: n, onContextMenuParticipant: r, height: x, channel: _, participants: v } = e,
+    let { width: n, onContextMenuParticipant: r, height: x, channel: v, participants: _ } = e,
         [I, E] = (function () {
             let [e, t] = l.useState(() => o.K.get(C, p.VD2.BOTTOM_RIGHT));
             return [
@@ -35,28 +35,28 @@ function _(e) {
             ];
         })(),
         b = l.useRef(null),
-        N = null == _.getGuildId() ? 70 : 50,
-        S = (0, s.e7)([u.Z], () => u.Z.pipWidth(m.cL.CAMERA_PREVIEW)),
-        Z = v.length;
-    let T = S * (t = Z) + 8 * (t - 1),
+        N = null == v.getGuildId() ? 70 : 50,
+        Z = (0, s.e7)([u.Z], () => u.Z.pipWidth(m.cL.CAMERA_PREVIEW)),
+        S = _.length;
+    let T = Z * (t = S) + 8 * (t - 1),
         j = l.useMemo(() => {
             var e, t, n, i;
             return {
-                minWidth: ((e = m.Rv[m.cL.CAMERA_PREVIEW]), e * (t = Z) + 8 * (t - 1)),
-                maxWidth: ((n = m.$i[m.cL.CAMERA_PREVIEW]), n * (i = Z) + 8 * (i - 1))
+                minWidth: ((e = m.Rv[m.cL.CAMERA_PREVIEW]), e * (t = S) + 8 * (t - 1)),
+                maxWidth: ((n = m.$i[m.cL.CAMERA_PREVIEW]), n * (i = S) + 8 * (i - 1))
             };
-        }, [Z]);
+        }, [S]);
     l.useLayoutEffect(() => {
         var e;
         null === (e = b.current) || void 0 === e || e.ensureIsInPosition();
-    }, [v.length]);
+    }, [_.length]);
     let A = l.useCallback(
             (e) => {
                 var t, n;
-                let i = ((t = e), 0 === (n = Z) ? t : (t - 8 * (n - 1)) / n);
+                let i = ((t = e), 0 === (n = S) ? t : (t - 8 * (n - 1)) / n);
                 c.d7(i, m.cL.CAMERA_PREVIEW);
             },
-            [Z]
+            [S]
         ),
         y = l.useCallback(
             (e, t) => {
@@ -82,12 +82,12 @@ function _(e) {
             resizeConfig: j,
             children: (0, i.jsx)('div', {
                 className: f.tileContainer,
-                children: v.map((e) =>
+                children: _.map((e) =>
                     (0, i.jsx)(
                         h.ZP,
                         {
                             participant: e,
-                            channel: _,
+                            channel: v,
                             onContextMenu: r,
                             className: a()(f.tile, g.elevationHigh),
                             fit: h.BP.COVER,

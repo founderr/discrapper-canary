@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return Z;
     }
 }),
     n(653041),
@@ -21,7 +21,7 @@ var i = n(200651),
     g = n(397109),
     C = n(652849),
     x = n(73004);
-function _(e, t, n) {
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function _(e, t, n) {
         e
     );
 }
-let v = {
+let _ = {
         STEPS: 23,
         FRAME_DURATION: 17,
         FRAME_SIZE: 26
@@ -77,11 +77,11 @@ class N extends l.PureComponent {
         let { scaleAnimation: t, spriteAnimation: n, spriteOpacity: i, widthAnimation: l } = this;
         i.setValue(1), n.setValue(0);
         let r = [];
-        for (let e = 0; e < v.STEPS; e++)
+        for (let e = 0; e < _.STEPS; e++)
             r.push(
                 s.Z.timing(n, {
-                    toValue: -v.FRAME_SIZE * e,
-                    duration: v.FRAME_DURATION
+                    toValue: -_.FRAME_SIZE * e,
+                    duration: _.FRAME_DURATION
                 })
             );
         s.Z.sequence([
@@ -152,14 +152,14 @@ class N extends l.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), _(this, 'scaleAnimation', new s.Z.Value(0)), _(this, 'spriteAnimation', new s.Z.Value(0)), _(this, 'spriteOpacity', new s.Z.Value(0)), _(this, 'widthAnimation', new s.Z.Value(0));
+        super(...e), v(this, 'scaleAnimation', new s.Z.Value(0)), v(this, 'spriteAnimation', new s.Z.Value(0)), v(this, 'spriteOpacity', new s.Z.Value(0)), v(this, 'widthAnimation', new s.Z.Value(0));
     }
 }
-function S(e) {
+function Z(e) {
     var t, n;
     let { participants: l, onContextMenu: r, className: s, onClick: d, width: C, guildId: x } = e,
-        _ = (0, h.ZP)();
-    let v = ((t = C), (n = l.length), ((0, u.getAvatarSize)(u.AvatarSizes.SIZE_80) + 16) * n > t ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80),
+        v = (0, h.ZP)();
+    let _ = ((t = C), (n = l.length), ((0, u.getAvatarSize)(u.AvatarSizes.SIZE_80) + 16) * n > t ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80),
         I = (0, o.e7)([p.Z], () => p.Z.isFocused()),
         E = l.map((e) => {
             var t, n;
@@ -169,13 +169,13 @@ function S(e) {
                 N,
                 {
                     className: g.participant,
-                    width: (0, u.getAvatarSize)(v),
-                    theme: _,
+                    width: (0, u.getAvatarSize)(_),
+                    theme: v,
                     children: (0, i.jsx)(
                         m.Z,
                         {
-                            src: l.getAvatarURL(x, (0, u.getAvatarSize)(v), s && I),
-                            size: v,
+                            src: l.getAvatarURL(x, (0, u.getAvatarSize)(_), s && I),
+                            size: _,
                             muted: null !== (t = null == a ? void 0 : a.isVoiceMuted()) && void 0 !== t && t,
                             deafen: null !== (n = null == a ? void 0 : a.isVoiceDeafened()) && void 0 !== n && n,
                             speaking: s,

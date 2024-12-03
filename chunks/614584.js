@@ -19,13 +19,13 @@ var i = n(200651),
     g = n(937889),
     C = n(739566),
     x = n(267128),
-    _ = n(507418),
-    v = n(348238),
+    v = n(507418),
+    _ = n(348238),
     I = n(981631),
     E = n(388032);
 let b = l.memo(function (e) {
     var t;
-    let { baseMessage: n, referencedMessage: b, channel: N, compact: S = !1, referencedUsernameProfile: Z, referencedAvatarProfile: T, setPopout: j, isReplySpineClickable: A, showReplySpine: y } = e,
+    let { baseMessage: n, referencedMessage: b, channel: N, compact: Z = !1, referencedUsernameProfile: S, referencedAvatarProfile: T, setPopout: j, isReplySpineClickable: A, showReplySpine: y } = e,
         P = b.state === p.Y.LOADED ? b.message : void 0,
         M = (0, C.Uj)(P),
         R = (0, c.p)(),
@@ -103,10 +103,10 @@ let b = l.memo(function (e) {
             }),
             [P]
         ),
-        w = (0, v.wq)(null == P ? void 0 : P.author.id, N.id),
-        B = (0, v.$3)(n, P, O, D),
-        U = (0, v.Wl)(P, N, Z, j),
-        H = (0, v.rY)(T, j),
+        w = (0, _.wq)(null == P ? void 0 : P.author.id, N.id),
+        B = (0, _.$3)(n, P, O, D),
+        U = (0, _.Wl)(P, N, S, j),
+        H = (0, _.rY)(T, j),
         G = l.useCallback(
             () =>
                 j({
@@ -123,12 +123,12 @@ let b = l.memo(function (e) {
         baseAuthor: F,
         referencedMessage: b,
         content: k,
-        compact: S,
+        compact: Z,
         isReplyAuthorBlocked: O,
         isReplyAuthorIgnored: D,
         showAvatarPopout: T,
-        showUsernamePopout: Z,
-        renderPopout: _.Z,
+        showUsernamePopout: S,
+        renderPopout: v.Z,
         onClickAvatar: H,
         onClickUsername: U,
         onClickReply: B,

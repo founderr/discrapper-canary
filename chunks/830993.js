@@ -127,7 +127,7 @@ function Z(e) {
                                       children: E.intl.format(E.t.ePyoY2, {
                                           onClick: () => {
                                               (0, a.openModalLazy)(async () => {
-                                                  let { default: e } = await Promise.all([n.e('23217'), n.e('33053'), n.e('8016'), n.e('76540'), n.e('15669'), n.e('17938'), n.e('22646'), n.e('34842'), n.e('30419'), n.e('48923'), n.e('8821'), n.e('18824'), n.e('89985'), n.e('42309'), n.e('37229'), n.e('25183'), n.e('28044'), n.e('19081'), n.e('8876')]).then(n.bind(n, 241420));
+                                                  let { default: e } = await Promise.all([n.e('23217'), n.e('33053'), n.e('8016'), n.e('17298'), n.e('76540'), n.e('17938'), n.e('22646'), n.e('34842'), n.e('30419'), n.e('48923'), n.e('8821'), n.e('18824'), n.e('89985'), n.e('42309'), n.e('37229'), n.e('25183'), n.e('28044'), n.e('19081'), n.e('8876')]).then(n.bind(n, 241420));
                                                   return (t) =>
                                                       (0, i.jsx)(e, {
                                                           ...t,

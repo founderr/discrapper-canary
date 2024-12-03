@@ -14,16 +14,16 @@ t.Z = function (e) {
     let { participants: m, channel: f, hasConnectPermission: g } = e,
         C = m.filter(u.Io),
         x = (0, o.J)(f.guild_id),
-        _ = l.useCallback(() => {
+        v = l.useCallback(() => {
             x ? (0, s.hk)(f.guild_id, () => a.default.selectVoiceChannel(f.id)) : a.default.selectVoiceChannel(f.id);
         }, [f.id, f.guild_id, x]),
-        v = 4 === C.length ? 2 : 3;
+        _ = 4 === C.length ? 2 : 3;
     return (0, i.jsxs)('div', {
         className: p.container,
         children: [
             (0, i.jsx)('div', {
                 className: p.tiles,
-                style: { maxWidth: 168 * v },
+                style: { maxWidth: 168 * _ },
                 children: C.slice(0, 5).map((e) =>
                     (0, i.jsx)(
                         d.ZP,
@@ -75,7 +75,7 @@ t.Z = function (e) {
                 disabled: !g,
                 className: p.joinButton,
                 color: g ? r.Button.Colors.GREEN : r.Button.Colors.PRIMARY,
-                onClick: _,
+                onClick: v,
                 size: r.Button.Sizes.MEDIUM,
                 children: g ? h.intl.string(h.t['96ANUF']) : h.intl.string(h.t.TVBCKS)
             })

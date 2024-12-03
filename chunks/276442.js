@@ -18,7 +18,7 @@ var i = t(512722),
     h = t(474936);
 function f(e) {
     let { analyticsData: n, initialPlanId: t, breadcrumbSteps: i, handleStepChange: f, referralTrialOfferId: v, onReturn: S, continueSession: g = !1, continueSessionInitialStep: E } = e,
-        { contextMetadata: j, step: y, paymentSources: I, paymentSourceId: P, setPaymentSourceId: T, purchaseError: N, setPurchaseError: b, purchaseErrorBlockRef: C, paymentAuthenticationState: _, selectedSkuId: O, activeSubscription: A, previousStepRef: Z, setPurchaseState: R } = (0, u.usePaymentContext)(),
+        { contextMetadata: j, step: y, paymentSources: I, paymentSourceId: P, setPaymentSourceId: T, purchaseError: N, setPurchaseError: b, purchaseErrorBlockRef: C, paymentAuthenticationState: _, selectedSkuId: O, activeSubscription: A, previousStepRef: R, setPurchaseState: Z } = (0, u.usePaymentContext)(),
         { isGift: M } = (0, o.wD)(),
         w = {
             ...(0, a.fL)(),
@@ -43,7 +43,7 @@ function f(e) {
     l()(y, 'Step should be set here');
     let D = (0, r.Z)(() => Date.now(), [y]),
         U = null != E ? E : d.h8.CREDIT_CARD_INFORMATION,
-        B = g && null == Z.current ? U : d.h8.PAYMENT_TYPE;
+        B = g && null == R.current ? U : d.h8.PAYMENT_TYPE;
     return (0, a.vP)({
         paymentModalArgs: w,
         initialStep: B,
@@ -54,7 +54,7 @@ function f(e) {
         usePaymentModalStep: !0,
         onReturn: F,
         onComplete: (e) => {
-            e === d.h8.AWAITING_BROWSER_CHECKOUT ? (R(m.A.COMPLETED), f(d.h8.CONFIRM, { trackedFromStep: e })) : f(d.h8.REVIEW, { trackedFromStep: e });
+            e === d.h8.AWAITING_BROWSER_CHECKOUT ? (Z(m.A.COMPLETED), f(d.h8.CONFIRM, { trackedFromStep: e })) : f(d.h8.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {
             let { currentStep: t, toStep: i } = e,
@@ -68,6 +68,6 @@ function f(e) {
             });
         },
         isEligibleForTrial: k,
-        allowDesktopRedirectPurchase: (0, p.t)(O, M, A)
+        allowDesktopRedirectPurchase: (0, p.tr)(O, M, A)
     });
 }

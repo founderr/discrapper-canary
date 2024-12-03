@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return g;
     }
 });
 var i = n(200651),
@@ -17,16 +17,16 @@ var i = n(200651),
 function p(e) {
     let { focused: t, channelId: n, streamerId: a, stream: u } = e,
         p = l.useRef(null),
-        h = (0, s.e7)([c.default], () => c.default.getCurrentUser());
-    r()(null != h, 'user cannot be null'), (0, m.Z)(p, h, a, n);
+        g = (0, s.e7)([c.default], () => c.default.getCurrentUser());
+    r()(null != g, 'user cannot be null'), (0, m.Z)(p, g, a, n);
     let {
-        handleClick: g,
+        handleClick: h,
         handleMouseDown: v,
         handleMouseEnter: S,
         handleMouseMove: I,
         handleMouseUp: _
     } = (0, d.Z)({
-        user: h,
+        user: g,
         channelId: n,
         streamerId: a,
         stream: u,
@@ -36,7 +36,7 @@ function p(e) {
     return (0, i.jsx)(o.Z, {
         children: (0, i.jsx)('canvas', {
             ref: p,
-            onClick: g,
+            onClick: h,
             onMouseDown: v,
             onMouseEnter: S,
             onMouseMove: I,
@@ -45,7 +45,7 @@ function p(e) {
         })
     });
 }
-function h(e) {
+function g(e) {
     let { isSharedCanvasEnabled: t } = u.Z.useExperiment(
         {
             guildId: e.guildId,

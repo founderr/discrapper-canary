@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return Z;
     }
 }),
     n(47120),
@@ -21,8 +21,8 @@ var i = n(200651),
     g = n(43982),
     C = n(721351),
     x = n(420529),
-    _ = n(927923),
-    v = n(981631),
+    v = n(927923),
+    _ = n(981631),
     I = n(921944),
     E = n(388032),
     b = n(151745);
@@ -37,12 +37,12 @@ function N(e) {
         children: l
     });
 }
-function S(e) {
+function Z(e) {
     let { channel: t, showLeftDivider: n = !1, ...x } = e,
-        S = (0, m.Z)(),
-        Z = (0, r.e7)([p.Z], () => {
+        Z = (0, m.Z)(),
+        S = (0, r.e7)([p.Z], () => {
             var e, t;
-            return null === (e = p.Z.getSessionById(null !== (t = null == S ? void 0 : S.sessionId) && void 0 !== t ? t : '')) || void 0 === e ? void 0 : e.clientInfo.os;
+            return null === (e = p.Z.getSessionById(null !== (t = null == Z ? void 0 : Z.sessionId) && void 0 !== t ? t : '')) || void 0 === e ? void 0 : e.clientInfo.os;
         }),
         T = (0, r.e7)([h.Z], () => h.Z.hasLayers()),
         [j, A] = (0, r.Wu)([o.Z], () => [o.Z.getMode(t.id), o.Z.getLayout(t.id)]),
@@ -50,8 +50,8 @@ function S(e) {
         P = (0, f.Z)(),
         M = P.filter((e) => e.twoWayLink),
         [R, L] = l.useState(!1);
-    if (null == S && 0 === P.length) return null;
-    let k = v.WtW.VOICE !== j && [v.AEg.NO_CHAT, v.AEg.FULL_SCREEN].includes(A) ? 'top' : 'bottom',
+    if (null == Z && 0 === P.length) return null;
+    let k = _.WtW.VOICE !== j && [_.AEg.NO_CHAT, _.AEg.FULL_SCREEN].includes(A) ? 'top' : 'bottom',
         O = [];
     return (
         M.length > 0 && O.push(a.z.DONUT_DESKTOP_NUX),
@@ -95,8 +95,8 @@ function S(e) {
                                     ...e,
                                     ...x,
                                     onClick: () => L(!0),
-                                    label: null != (t = Z) ? (t === _.YE.XBOX ? E.intl.string(E.t.T0uYKy) : E.intl.string(E.t.FWAzS0)) : E.intl.string(E.t['mbi/fH']),
-                                    iconComponent: (0, C.Z)(Z)
+                                    label: null != (t = S) ? (t === v.YE.XBOX ? E.intl.string(E.t.T0uYKy) : E.intl.string(E.t.FWAzS0)) : E.intl.string(E.t['mbi/fH']),
+                                    iconComponent: (0, C.Z)(S)
                                 });
                             }
                         })

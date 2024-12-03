@@ -11,8 +11,8 @@ var i = n(200651),
     m = n(481060),
     f = n(2052),
     p = n(906732),
-    h = n(194082),
-    g = n(484459),
+    g = n(194082),
+    h = n(484459),
     v = n(594174),
     S = n(626135),
     I = n(74538),
@@ -44,7 +44,7 @@ let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     M = (e) => {
         let t,
             a,
-            { participant: s, isUpsellEnabled: o, shape: d, size: g, didTrackUpsellViewed: b, setDidTrackUpsellViewed: T, className: A, premiumIndicator: N } = e,
+            { participant: s, isUpsellEnabled: o, shape: d, size: h, didTrackUpsellViewed: b, setDidTrackUpsellViewed: T, className: A, premiumIndicator: N } = e,
             w = (0, _.Wc)(s),
             { analyticsLocations: j } = (0, p.ZP)(),
             P = null != (0, x.Z)(s);
@@ -97,7 +97,7 @@ let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 (0, i.jsxs)(m.Clickable, {
                     ...e,
                     onClick: k,
-                    className: r()(y.qualityIndicator, g, h.eE[d], P ? y.qualityIndicatorLowQuality : y.qualityIndicatorFullQuality, { [y.clickable]: L && R }),
+                    className: r()(y.qualityIndicator, h, g.eE[d], P ? y.qualityIndicatorLowQuality : y.qualityIndicatorFullQuality, { [y.clickable]: L && R }),
                     children: [
                         R
                             ? (0, i.jsx)(m.NitroWheelIcon, {
@@ -128,7 +128,7 @@ t.Z = (e) => {
         { reducedMotion: v } = l.useContext(m.AccessibilityPreferencesContext),
         S = n && null != p;
     l.useEffect(() => {
-        (0, g.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
+        (0, h.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
     }, [t]);
     let I = (0, m.useTransition)(
             S,
@@ -175,8 +175,8 @@ t.Z = (e) => {
                 (0, i.jsx)(s.animated.div, {
                     style: x,
                     className: y.liveIndicator,
-                    children: (0, i.jsx)(h.ZP, {
-                        look: h.jZ.RED,
+                    children: (0, i.jsx)(g.ZP, {
+                        look: g.jZ.RED,
                         size: o,
                         shape: S ? m.BadgeShapes.ROUND_RIGHT : m.BadgeShapes.ROUND
                     })

@@ -23,8 +23,8 @@ var i = n(200651),
     p = n(999382),
     f = n(130341),
     C = n(853813),
-    v = n(163249),
-    _ = n(150689),
+    _ = n(163249),
+    v = n(150689),
     I = n(203377),
     N = n(981631);
 function T(e) {
@@ -84,7 +84,7 @@ function b(e) {
               setSelectedSection: b
           })
         : g
-          ? (0, i.jsx)(_.Z, {
+          ? (0, i.jsx)(v.Z, {
                 setEditRoleId: T,
                 guild: n,
                 everyoneRole: c,
@@ -92,7 +92,7 @@ function b(e) {
                 setSelectedSection: b,
                 refToScroller: t
             })
-          : (0, i.jsx)(v.Z, {
+          : (0, i.jsx)(_.Z, {
                 guild: n,
                 everyoneRole: c,
                 setEditRoleId: T

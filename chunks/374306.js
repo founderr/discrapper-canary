@@ -22,8 +22,8 @@ function f(e) {
         g = (0, d.r_)(f),
         C = (0, l.e7)([a.Z], () => a.Z.hasHidden(f.id)),
         x = (0, u.c)(f.id),
-        { sortOrder: _, tagFilter: v } = (0, c.H)(f.id),
-        I = (0, l.e7)([o.Z, h.Z], () => !!(o.Z.getThreadIds(f.id, _, v).length > 0) || !!(h.Z.getThreads(f.id, _, v).length > 0) || !1, [f.id, _, v]),
+        { sortOrder: v, tagFilter: _ } = (0, c.H)(f.id),
+        I = (0, l.e7)([o.Z, h.Z], () => !!(o.Z.getThreadIds(f.id, v, _).length > 0) || !!(h.Z.getThreads(f.id, v, _).length > 0) || !1, [f.id, v, _]),
         E = f.isMediaChannel();
     if (!g || x || (E && I)) return null;
     let b = ((t = C), (n = E), t ? (n ? m.intl.string(m.t['WP/IEx']) : m.intl.string(m.t.zfq9V1)) : n ? m.intl.string(m.t.p60yFx) : m.intl.string(m.t.SNOqYG));

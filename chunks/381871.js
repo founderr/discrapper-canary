@@ -20,14 +20,14 @@ var i = n(200651),
     g = n(970731),
     C = n(594174),
     x = n(176354),
-    _ = n(823379),
-    v = n(74538),
+    v = n(823379),
+    _ = n(74538),
     I = n(401062),
     E = n(696900),
     b = n(456631),
     N = n(963838),
-    S = n(535879),
-    Z = n(310892),
+    Z = n(535879),
+    S = n(310892),
     T = n(12168),
     j = n(353368),
     A = n(981631),
@@ -42,13 +42,13 @@ let O = P.Hz.CHAT,
         section: A.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: 'voice_channel_effect_emoji_picker'
     },
-    w = [f.ZP.getByName('thumbsup'), f.ZP.getByName('eyes'), f.ZP.getByName('laughing'), f.ZP.getByName('watermelon'), f.ZP.getByName('fork_and_knife'), f.ZP.getByName('yum')].filter(_.lm);
+    w = [f.ZP.getByName('thumbsup'), f.ZP.getByName('eyes'), f.ZP.getByName('laughing'), f.ZP.getByName('watermelon'), f.ZP.getByName('fork_and_knife'), f.ZP.getByName('yum')].filter(v.lm);
 function B(e) {
     var t;
-    let { channel: n, closePopout: f, onFocus: _ } = e,
+    let { channel: n, closePopout: f, onFocus: v } = e,
         P = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
         B = (0, a.e7)([C.default], () => C.default.getCurrentUser()),
-        U = v.ZP.canUseFancyVoiceChannelReactions(B),
+        U = _.ZP.canUseFancyVoiceChannelReactions(B),
         H = (0, a.e7)([E.Z], () => E.Z.getState().animationType),
         G = l.useRef(!1),
         F = (0, m.wC)(n.guild_id),
@@ -80,7 +80,7 @@ function B(e) {
                 });
         },
         Y = () => {
-            (0, Z.openEffectsUpsellModal)({
+            (0, S.openEffectsUpsellModal)({
                 analytics: {
                     type: M.cd.EMOJI_PICKER_EMOJI_CLICKED,
                     object: A.qAy.BUTTON_CTA,
@@ -116,7 +116,7 @@ function B(e) {
                 shouldShow: r,
                 renderPopout: () =>
                     (0, i.jsx)('div', {
-                        onMouseEnter: _,
+                        onMouseEnter: v,
                         children: (0, i.jsx)(g.ZP, {
                             className: k.reducedMotionTooltip,
                             header: L.intl.string(L.t['6gGHnZ']),
@@ -137,11 +137,11 @@ function B(e) {
                         closePopout: f,
                         onSelectEmoji: K,
                         onSelectDisabledEmoji: Y,
-                        onFocus: _,
+                        onFocus: v,
                         onExpandedToggle: q,
                         analyticsOverride: D,
                         emojiSearchProps: {
-                            accessory: (0, i.jsx)(S.Z, {
+                            accessory: (0, i.jsx)(Z.Z, {
                                 labelText: L.intl.string(L.t['ktEv/v']),
                                 value: $,
                                 onChange: () => {
@@ -156,7 +156,7 @@ function B(e) {
                                         );
                                 },
                                 onShowUpsell: () =>
-                                    (0, Z.openEffectsUpsellModal)({
+                                    (0, S.openEffectsUpsellModal)({
                                         analytics: {
                                             type: G.current ? M.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : M.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
                                             object: A.qAy.VOICE_CHANNEL_EFFECTS_TOGGLE,

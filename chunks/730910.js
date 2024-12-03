@@ -20,8 +20,8 @@ var i = n(200651),
     p = n(626135),
     f = n(585483),
     C = n(999382),
-    v = n(743475),
-    _ = n(983135),
+    _ = n(743475),
+    v = n(983135),
     I = n(8426),
     N = n(969632),
     T = n(570961),
@@ -101,7 +101,7 @@ function P(e) {
             let e = j.Z.advancedMode;
             if (P)
                 try {
-                    if (C === S.PG.DEFAULT_CHANNELS) await (0, v.DO)(t).then(() => (e ? (0, T.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
+                    if (C === S.PG.DEFAULT_CHANNELS) await (0, _.DO)(t).then(() => (e ? (0, T.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
                     else if (C === S.PG.CUSTOMIZATION_QUESTIONS) await (0, T.rS)(t, { ignoreDefaultPrompt: !0 });
                     else if (C === S.PG.HOME_SETTINGS) {
                         let e = N.Z.getSettings();
@@ -119,8 +119,8 @@ function P(e) {
                 back: !1,
                 skip: !P
             }),
-                (0, _.Nb)((0, S.lg)(C)),
-                (await X()) && (0, _.IG)(l, C);
+                (0, v.Nb)((0, S.lg)(C)),
+                (await X()) && (0, v.IG)(l, C);
         },
         J = async () => {
             p.default.track(L.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
@@ -129,7 +129,7 @@ function P(e) {
                 back: !0,
                 skip: !1
             }),
-                (await X()) && (0, _.Wy)(l, C);
+                (await X()) && (0, v.Wy)(l, C);
         },
         $ = null;
     B && (C === S.PG.SAFETY_CHECK ? ($ = (0, i.jsx)(R.j7, {})) : C === S.PG.DEFAULT_CHANNELS ? ($ = (0, i.jsx)(R.Io, {})) : C === S.PG.CUSTOMIZATION_QUESTIONS ? ($ = (0, i.jsx)(R.cZ, {})) : C === S.PG.HOME_SETTINGS && ($ = (0, i.jsx)(R.g6, {})));

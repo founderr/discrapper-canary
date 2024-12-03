@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return v;
     }
 }),
     n(47120),
@@ -21,13 +21,13 @@ var i = n(200651),
     g = n(921944),
     C = n(388032),
     x = n(140343);
-function _(e) {
+function v(e) {
     let { channel: t } = e,
         r = (0, s.e7)([p.default], () => p.default.getUser(t.hdStreamingBuyerId), [t.hdStreamingBuyerId]),
         [a, d] = (0, l.useState)(!1),
         [h, C] = (0, l.useState)(!1),
         x = (0, f.bK)(),
-        [_, I] = (0, l.useState)(!1);
+        [v, I] = (0, l.useState)(!1);
     (0, l.useEffect)(() => {
         t.isHDStreamSplashed && I(!0);
     }, []),
@@ -67,14 +67,14 @@ function _(e) {
         }, 25000);
         return () => clearTimeout(e);
     });
-    let b = _ ? [o.z.HD_STREAMING_POTION_BANNER] : [],
-        [N, S] = (0, u.US)(b);
+    let b = v ? [o.z.HD_STREAMING_POTION_BANNER] : [],
+        [N, Z] = (0, u.US)(b);
     return null == r
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   a &&
-                      (0, i.jsx)(v, {
+                      (0, i.jsx)(_, {
                           buyer: r,
                           onEnd: E
                       }),
@@ -84,13 +84,13 @@ function _(e) {
                           buyer: r,
                           streaming: !0,
                           onClose: () => {
-                              C(!1), _ && S(g.L.DISMISS);
+                              C(!1), v && Z(g.L.DISMISS);
                           }
                       })
               ]
           });
 }
-function v(e) {
+function _(e) {
     let { onEnd: t, buyer: n } = e,
         r = (0, l.useRef)(null),
         s = (0, l.useRef)(null),

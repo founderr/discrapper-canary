@@ -21,14 +21,14 @@ var i = n(200651),
     g = n(488131),
     C = n(375954),
     x = n(626135),
-    _ = n(585483),
-    v = n(403182),
+    v = n(585483),
+    _ = n(403182),
     I = n(127654),
     E = n(752305),
     b = n(951211),
     N = n(981631),
-    S = n(921944),
-    Z = n(489887),
+    Z = n(921944),
+    S = n(489887),
     T = n(388032),
     j = n(308183);
 let A = /(.*)```(\w+)\n(.*)```(.*)/s;
@@ -40,7 +40,7 @@ function y() {
     return (
         l.useEffect(
             () => () => {
-                n === s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, p.EW)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: S.L.TAKE_ACTION });
+                n === s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, p.EW)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: Z.L.TAKE_ACTION });
             },
             [n]
         ),
@@ -78,7 +78,7 @@ function P(e) {
         L();
     }
     function B() {
-        (0, p.EW)(s.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: S.L.TAKE_ACTION }),
+        (0, p.EW)(s.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: Z.L.TAKE_ACTION }),
             (0, o.openModalLazy)(
                 async () => {
                     let { default: e } = await n.e('68784').then(n.bind(n, 611611));
@@ -88,7 +88,7 @@ function P(e) {
                             channel: t
                         });
                 },
-                { modalKey: Z.$z }
+                { modalKey: S.$z }
             );
     }
     function U() {
@@ -117,7 +117,7 @@ function P(e) {
             n = 'txt',
             i = '',
             l = M.match(A);
-        null != l && ((i = l[1]), (n = l[2]), (e = l[3]), (i += l[4])), (0, I.d)([(0, v.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, P), _.S.dispatchToLastSubscribed(N.CkL.CLEAR_TEXT), '' !== i && _.S.dispatchToLastSubscribed(N.CkL.INSERT_TEXT, { plainText: i });
+        null != l && ((i = l[1]), (n = l[2]), (e = l[3]), (i += l[4])), (0, I.d)([(0, _.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, P), v.S.dispatchToLastSubscribed(N.CkL.CLEAR_TEXT), '' !== i && v.S.dispatchToLastSubscribed(N.CkL.INSERT_TEXT, { plainText: i });
     }
     return (0, i.jsx)(o.Menu, {
         onSelect: C,

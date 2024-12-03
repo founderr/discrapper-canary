@@ -20,8 +20,8 @@ var i,
     p = n(402766),
     f = n(267642),
     C = n(981631),
-    v = n(388032),
-    _ = n(534560);
+    _ = n(388032),
+    v = n(534560);
 let I = {
         tension: 200,
         friction: 20
@@ -42,7 +42,7 @@ function T(e) {
         c = 2 === t,
         g = 1 === t;
     if (!(!(i >= r) && i / r >= 0.8) || c) return null;
-    let x = g || c ? _.hidden : null,
+    let x = g || c ? v.hidden : null,
         p = g ? h.Z.Stages.FLYING : h.Z.Stages.HOVERING;
     return (0, a.jsx)(m.Spring, {
         from: { opacity: 0 },
@@ -51,25 +51,25 @@ function T(e) {
         shouldAnimate: 'animate-always',
         children: (e) =>
             (0, a.jsxs)(u.animated.div, {
-                className: _.tierClose,
+                className: v.tierClose,
                 style: e,
                 children: [
                     (0, a.jsx)(h.Z, {
-                        className: _.tierCloseMechaWumpus,
+                        className: v.tierCloseMechaWumpus,
                         stage: p,
                         onFlyingComplete: s
                     }),
                     (0, a.jsx)('div', {
-                        className: d()(_.tierCloseHint, x),
-                        children: v.intl.format(v.t.qV3Erq, { numLeft: r - i })
+                        className: d()(v.tierCloseHint, x),
+                        children: _.intl.format(_.t.qV3Erq, { numLeft: r - i })
                     }),
                     (0, a.jsx)(m.Clickable, {
                         onClick: l,
-                        className: d()(_.tierCloseClose, x),
+                        className: d()(v.tierCloseClose, x),
                         children: (0, a.jsx)(m.CircleXIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: _.tierCloseCloseIcon
+                            className: v.tierCloseCloseIcon
                         })
                     })
                 ]
@@ -94,22 +94,22 @@ function j(e) {
                 (0, a.jsx)('div', {
                     className: d()(
                         {
-                            [_.tierHeaderWithoutCardBody]: !t,
-                            [_.tierHeaderUnlocked]: i,
-                            [_.tierHeaderLocked]: !i
+                            [v.tierHeaderWithoutCardBody]: !t,
+                            [v.tierHeaderUnlocked]: i,
+                            [v.tierHeaderLocked]: !i
                         },
                         g
                     ),
                     ref: x,
                     children: (0, a.jsxs)('div', {
-                        className: _.tierHeaderContent,
+                        className: v.tierHeaderContent,
                         children: [
                             (0, a.jsx)(p.Z, {
                                 tier: l.tier,
-                                className: d()(_.tierIcon, { [_.tierIconLocked]: !i })
+                                className: d()(v.tierIcon, { [v.tierIconLocked]: !i })
                             }),
                             (0, a.jsx)('div', {
-                                className: d()(_.tierTitle, { [_.tierTitleActive]: i }),
+                                className: d()(v.tierTitle, { [v.tierTitleActive]: i }),
                                 children: l.title
                             }),
                             s
@@ -141,31 +141,31 @@ function b(e) {
             return (0, a.jsxs)(
                 'div',
                 {
-                    className: _.perk,
+                    className: v.perk,
                     children: [
                         (0, a.jsx)(x.Z, {
                             name: String(e.icon),
                             icon: i,
-                            className: _.perkIcon,
+                            className: v.perkIcon,
                             iconClassName: r
                         }),
                         (0, a.jsxs)('div', {
-                            className: _.perkText,
+                            className: v.perkText,
                             children: [
                                 (0, a.jsxs)('div', {
-                                    className: _.perkTitle,
+                                    className: v.perkTitle,
                                     children: [
                                         e.title,
                                         e.isNew
                                             ? (0, a.jsx)(m.TextBadge, {
-                                                  className: _.newBadge,
-                                                  text: v.intl.string(v.t.y2b7CA)
+                                                  className: v.newBadge,
+                                                  text: _.intl.string(_.t.y2b7CA)
                                               })
                                             : null
                                     ]
                                 }),
                                 (0, a.jsx)('div', {
-                                    className: _.perkDescription,
+                                    className: v.perkDescription,
                                     children: e.description
                                 })
                             ]
@@ -178,7 +178,7 @@ function b(e) {
     return (0, a.jsxs)(
         'div',
         {
-            className: d()(_.tier, { [_.tierBottomMargin]: s }),
+            className: d()(v.tier, { [v.tierBottomMargin]: s }),
             children: [
                 (0, a.jsx)(j, {
                     subscriptionCount: n,
@@ -196,7 +196,7 @@ function b(e) {
                     isAnimatedTo: l
                 }),
                 (0, a.jsx)('div', {
-                    className: d()({ [_.tierBody]: c }),
+                    className: d()({ [v.tierBody]: c }),
                     children:
                         null != t
                             ? t
@@ -204,13 +204,13 @@ function b(e) {
                                   children: [
                                       N
                                           ? (0, a.jsx)('div', {
-                                                className: _.previousPerks,
-                                                children: v.intl.string(v.t.oKzyRU)
+                                                className: v.previousPerks,
+                                                children: _.intl.string(_.t.oKzyRU)
                                             })
                                           : null,
                                       null != r.perks &&
                                           (0, a.jsx)('div', {
-                                              className: _.perks,
+                                              className: v.perks,
                                               children: r.perks.map((e) => T(e, I))
                                           })
                                   ]
@@ -230,8 +230,8 @@ let S = (e) => {
         let { transform: t } = e;
         return (0, a.jsx)(u.animated.div, {
             style: { transform: t },
-            className: _.tierUnlocked,
-            children: v.intl.string(v.t.dNGM0t)
+            className: v.tierUnlocked,
+            children: _.intl.string(_.t.dNGM0t)
         });
     },
     R = (e) => {
@@ -239,13 +239,13 @@ let S = (e) => {
         return (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsx)('div', {
-                    className: _.tierRequirement,
-                    children: v.intl.format(v.t.t2Wbo6, { required: t })
+                    className: v.tierRequirement,
+                    children: _.intl.format(_.t.t2Wbo6, { required: t })
                 }),
                 (0, a.jsx)(m.LockIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: _.tierLock
+                    className: v.tierLock
                 })
             ]
         });

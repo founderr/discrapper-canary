@@ -20,21 +20,21 @@ var i = n(200651),
     g = n(131951),
     C = n(594174),
     x = n(63063),
-    _ = n(5192),
-    v = n(120619),
+    v = n(5192),
+    _ = n(120619),
     I = n(578976),
     E = n(981631),
     b = n(37113),
     N = n(388032),
-    S = n(540964),
-    Z = n(454120);
+    Z = n(540964),
+    S = n(454120);
 let T = (e) => 1 - Math.pow(1 - e, 3);
 function j(e) {
     let { channel: t, buyer: r, onClose: s, dismissibleContent: j } = e,
         A = (0, d.Wu)([f.Z], () => f.Z.getAllActiveStreams()),
         y = (0, d.e7)([C.default], () => C.default.getCurrentUser()),
         P = null != A.find((e) => e.ownerId === (null == y ? void 0 : y.id)),
-        M = (0, d.e7)([v.Z], () => v.Z.getPreviousGoLiveSettings()),
+        M = (0, d.e7)([_.Z], () => _.Z.getPreviousGoLiveSettings()),
         R = P && null != M && M.resolution !== b.LY.RESOLUTION_1440 && M.frameRate !== b.ws.FPS_60,
         [L, k] = (0, l.useState)(!1);
     (0, l.useEffect)(() => {
@@ -63,7 +63,7 @@ function j(e) {
             size: u.AvatarSizes.SIZE_48,
             animateOnHover: !0
         }),
-        U = _.ZP.getName(t.guild_id, t.id, r),
+        U = v.ZP.getName(t.guild_id, t.id, r),
         H = P && !R,
         G = t.hdStreamingUntil;
     if (null == G || null == r || null == y) return null;
@@ -87,7 +87,7 @@ function j(e) {
         ? null
         : (0, i.jsxs)(c.animated.div, {
               style: D,
-              className: S.banner,
+              className: Z.banner,
               children: [
                   (0, i.jsxs)('div', {
                       children: [
@@ -98,8 +98,8 @@ function j(e) {
                               ...B
                           }),
                           (0, i.jsx)('img', {
-                              className: S.potion,
-                              src: Z,
+                              className: Z.potion,
+                              src: S,
                               alt: ''
                           })
                       ]
@@ -109,12 +109,12 @@ function j(e) {
                       children: V
                   }),
                   (0, i.jsxs)('div', {
-                      className: S.subsection,
+                      className: Z.subsection,
                       children: [
                           (0, i.jsx)(u.Button, {
                               onClick: () => {
                                   if (R) {
-                                      let e = v.Z.getPreviousGoLiveSettings(),
+                                      let e = _.Z.getPreviousGoLiveSettings(),
                                           t = g.Z.getGoLiveSource();
                                       if (null == e) {
                                           s();
@@ -138,12 +138,12 @@ function j(e) {
                                   }),
                                       s();
                               },
-                              className: a()({ [S.actionButton]: !0 !== P }),
+                              className: a()({ [Z.actionButton]: !0 !== P }),
                               children: z
                           }),
                           !H &&
                               (0, i.jsx)(u.Clickable, {
-                                  className: S.x,
+                                  className: Z.x,
                                   onClick: s,
                                   children: (0, i.jsx)(u.XSmallIcon, { name: 'close' })
                               })

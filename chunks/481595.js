@@ -33,8 +33,8 @@ var i = t(200651),
     _ = t(669079),
     O = t(937615),
     A = t(987209),
-    Z = t(563132),
-    R = t(45572),
+    R = t(563132),
+    Z = t(45572),
     M = t(119226),
     w = t(981631),
     L = t(388032),
@@ -106,7 +106,7 @@ function D(e) {
 }
 function U(e) {
     let { hasLegalTermsFlash: n, legalTermsNodeRef: t, onPaymentSourceChange: r, handlePaymentSourceAdd: v } = e,
-        { application: O, purchaseState: U, paymentSources: B, paymentSourceId: G, setHasAcceptedTerms: H, skusById: W, skuPricePreviewsById: V, selectedSkuId: K, isEmbeddedIAP: z, purchaseType: Y, purchasePreviewError: X, devShelfFetchState: q } = (0, Z.usePaymentContext)(),
+        { application: O, purchaseState: U, paymentSources: B, paymentSourceId: G, setHasAcceptedTerms: H, skusById: W, skuPricePreviewsById: V, selectedSkuId: K, isEmbeddedIAP: z, purchaseType: Y, purchasePreviewError: X, devShelfFetchState: q } = (0, R.usePaymentContext)(),
         { isGift: J, giftRecipient: Q } = (0, A.wD)(),
         $ = J && (0, _.pO)(Q),
         { defaultPaymentSourceId: ee, hasFetchedPaymentSources: en } = (0, c.cj)([P.Z], () => ({
@@ -122,7 +122,7 @@ function U(e) {
     let es = (0, c.e7)([h.Z, N.Z], () => N.Z.inTestModeForApplication(O.id) || h.Z.inDevModeForApplication(O.id), [O.id]),
         ea = (0, c.e7)([y.Z], () => y.Z.enabled),
         ec = a.M.EEA_COUNTRIES.has(I.Z.ipCountryCodeWithFallback),
-        eo = U === R.A.PURCHASING || U === R.A.COMPLETED,
+        eo = U === Z.A.PURCHASING || U === Z.A.COMPLETED,
         eu = null != G ? B[G].type : null,
         ed = (0, f.ed)('SKUInvoice'),
         em = et.productLine === w.POd.COLLECTIBLES && ed;

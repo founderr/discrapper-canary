@@ -20,14 +20,14 @@ var i = n(200651),
     g = n(390322),
     C = n(626135),
     x = n(566620),
-    _ = n(127255),
-    v = n(5200),
+    v = n(127255),
+    _ = n(5200),
     I = n(558317),
     E = n(403404),
     b = n(981631),
     N = n(388032),
-    S = n(350562);
-let Z = 'vc-activities-'.concat((0, s.Z)()),
+    Z = n(350562);
+let S = 'vc-activities-'.concat((0, s.Z)()),
     T = l.forwardRef(function (e, t) {
         let { channel: n, isHovered: r, closePopout: s, onMouseEnter: T, onMouseLeave: j, onClick: A, className: y } = e,
             P = (0, o.e7)([h.Z], () => h.Z.useReducedMotion),
@@ -47,7 +47,7 @@ let Z = 'vc-activities-'.concat((0, s.Z)()),
             D = L === b.IlC.POPOUT,
             w = (0, d.O)(),
             B = (function (e) {
-                return (0, _.Z)({ guildId: e }).slice(0, 5);
+                return (0, v.Z)({ guildId: e }).slice(0, 5);
             })(n.getGuildId());
         l.useEffect(() => {
             let e = setTimeout(() => x.ux(), 1000);
@@ -81,32 +81,32 @@ let Z = 'vc-activities-'.concat((0, s.Z)()),
             children: (0, i.jsx)(g.Z, {
                 children: (0, i.jsxs)(c.Dialog, {
                     ref: t,
-                    'aria-labelledby': Z,
+                    'aria-labelledby': S,
                     className: y,
                     children: [
                         (0, i.jsx)(c.HeadingLevel, {
                             forceLevel: 2,
                             children: (0, i.jsx)(c.HiddenVisually, {
                                 children: (0, i.jsx)(c.H, {
-                                    id: Z,
+                                    id: S,
                                     children: N.intl.string(N.t['2lnYtL'])
                                 })
                             })
                         }),
                         (0, i.jsxs)('div', {
-                            className: S.container,
+                            className: Z.container,
                             onMouseEnter: H,
                             onMouseLeave: j,
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: S.titleContainer,
+                                    className: Z.titleContainer,
                                     children: [
                                         (0, i.jsxs)('div', {
-                                            className: S.titleLeft,
+                                            className: Z.titleLeft,
                                             children: [
                                                 (0, i.jsx)(c.ActivitiesIcon, {
                                                     size: 'md',
-                                                    className: S.titleLeftIcon,
+                                                    className: Z.titleLeftIcon,
                                                     color: 'var(--interactive-active)'
                                                 }),
                                                 (0, i.jsx)(c.Text, {
@@ -116,7 +116,7 @@ let Z = 'vc-activities-'.concat((0, s.Z)()),
                                             ]
                                         }),
                                         (0, i.jsxs)(c.Clickable, {
-                                            className: S.titleRight,
+                                            className: Z.titleRight,
                                             onClick: U,
                                             children: [
                                                 (0, i.jsx)(c.Text, {
@@ -128,7 +128,7 @@ let Z = 'vc-activities-'.concat((0, s.Z)()),
                                                     width: 12,
                                                     height: 12,
                                                     color: 'var(--interactive-active)',
-                                                    className: S.titleRightIcon
+                                                    className: Z.titleRightIcon
                                                 })
                                             ]
                                         })
@@ -139,29 +139,29 @@ let Z = 'vc-activities-'.concat((0, s.Z)()),
                                     children: null
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: S.activityContainer,
+                                    className: Z.activityContainer,
                                     children: [
                                         B.map((e) =>
                                             (0, i.jsx)(
-                                                v.Y,
+                                                _.Y,
                                                 {
                                                     channel: n,
                                                     activityItem: e,
                                                     onClick: () => {
                                                         s(), A();
                                                     },
-                                                    aspectRatio: v.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
-                                                    animatedDivClass: S.activitySuggestion,
+                                                    aspectRatio: _.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
+                                                    animatedDivClass: Z.activitySuggestion,
                                                     commandOrigin: f.bB.MINI_SHELF
                                                 },
                                                 e.application.id
                                             )
                                         ),
                                         (0, i.jsx)('div', {
-                                            className: a()(S.wumpusRocketOuterContainer, { [S.wumpusReducedMotion]: P }),
+                                            className: a()(Z.wumpusRocketOuterContainer, { [Z.wumpusReducedMotion]: P }),
                                             children: (0, i.jsx)('div', {
-                                                className: S.wumpusRocketInnerContainer,
-                                                children: (0, i.jsx)(I.Z, { className: S.wumpusRocket })
+                                                className: Z.wumpusRocketInnerContainer,
+                                                children: (0, i.jsx)(I.Z, { className: Z.wumpusRocket })
                                             })
                                         })
                                     ]

@@ -28,18 +28,18 @@ let E = (e) => {
         _ = l.useRef(null),
         O = (0, a.useRadioGroup)({ orientation: 'horizontal' }),
         A = (0, u.MY)(E, n),
-        Z = A === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        R = A !== u.xr.DEFAULT,
+        R = A === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        Z = A !== u.xr.DEFAULT,
         M = (0, m.rK)(),
         { enabled: w } = m.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: M }),
         { enabled: L } = p.O.useExperiment({ location: 'gift card' }),
         k = null;
     return (
-        R && (k = M && w ? v.kJ : v.QI),
+        Z && (k = M && w ? v.kJ : v.QI),
         L && (k = v.RQ),
         (0, i.jsxs)('div', {
             children: [
-                R &&
+                Z &&
                     (0, i.jsxs)('div', {
                         className: s()(g.giftMainAnimation, t),
                         children: [
@@ -52,7 +52,7 @@ let E = (e) => {
                                       className: g.animation
                                   })
                                 : (0, i.jsx)(a.Spinner, { className: g.spinner }),
-                            Z &&
+                            R &&
                                 (0, i.jsxs)('div', {
                                     className: g.soundEmojiContainer,
                                     children: [

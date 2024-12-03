@@ -15,8 +15,8 @@ var i = n(200651),
     g = n(64078),
     C = n(351780),
     x = n(843693),
-    _ = n(641033),
-    v = n(989830),
+    v = n(641033),
+    _ = n(989830),
     I = n(388032),
     E = n(242803);
 let b = l.memo(function (e) {
@@ -28,7 +28,7 @@ let b = l.memo(function (e) {
             if (null == a ? void 0 : a.displayed) return;
             h(!1),
                 setImmediate(() => {
-                    h((null != a ? (0, _.Eo)(a.combo) : 0) > 0);
+                    h((null != a ? (0, v.Eo)(a.combo) : 0) > 0);
                 });
             let e = setTimeout(() => {
                 h(!1), null != a && (0, g.ew)(a);
@@ -55,14 +55,14 @@ let b = l.memo(function (e) {
                     children: (0, i.jsx)(c.Text, {
                         className: E.comboScore,
                         variant: 'text-sm/bold',
-                        children: (0, _.Eo)(a.combo)
+                        children: (0, v.Eo)(a.combo)
                     })
                 })
         });
     }),
     N = l.memo(function (e) {
         let { value: t, multiplier: n } = e,
-            { color: r, square: s, flair: o } = l.useMemo(() => (0, _.yz)(n), [n]),
+            { color: r, square: s, flair: o } = l.useMemo(() => (0, v.yz)(n), [n]),
             d = (0, h.Lq)(r);
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -131,15 +131,15 @@ t.Z = l.memo(function (e) {
         a = (0, o.e7)([C.Z], () => C.Z.isEnabled()),
         u = (0, o.e7)([x.ZP], () => x.ZP.isComboing(n, t), [t, n]),
         { ref: h, width: f = 0 } = (0, d.Z)(),
-        [g, _] = l.useState(!1),
-        I = (0, v.Z)(t),
-        S = a && u && r;
+        [g, v] = l.useState(!1),
+        I = (0, _.Z)(t),
+        Z = a && u && r;
     l.useEffect(() => {
-        S && _(!0);
-        let e = setTimeout(() => _(S), 1000);
+        Z && v(!0);
+        let e = setTimeout(() => v(Z), 1000);
         return () => clearTimeout(e);
-    }, [S]);
-    let Z = (0, c.useSpring)({
+    }, [Z]);
+    let S = (0, c.useSpring)({
             opacity: g ? 1 : 0,
             transform: g ? 'translateY(0)' : 'translateY(100%)',
             pointerEvents: 'none',
@@ -161,10 +161,10 @@ t.Z = l.memo(function (e) {
     }, [T]);
     let { multiplier: A, value: y } = l.useMemo(
         () => ({
-            value: S ? T.value : j.current.value,
-            multiplier: S ? T.multiplier : j.current.multiplier
+            value: Z ? T.value : j.current.value,
+            multiplier: Z ? T.multiplier : j.current.multiplier
         }),
-        [S, T, j]
+        [Z, T, j]
     );
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -175,7 +175,7 @@ t.Z = l.memo(function (e) {
             (0, i.jsx)(s.animated.div, {
                 ref: h,
                 className: E.combo,
-                style: Z,
+                style: S,
                 children: (0, i.jsx)(N, {
                     value: y,
                     multiplier: A

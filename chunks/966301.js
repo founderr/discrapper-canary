@@ -23,8 +23,8 @@ var i = n(200651),
     p = n(974513),
     f = n(716130),
     C = n(981631),
-    v = n(290511),
-    _ = n(388032),
+    _ = n(290511),
+    v = n(388032),
     I = n(554205);
 function N(e) {
     let { guildId: t, prompts: n } = e,
@@ -35,7 +35,7 @@ function N(e) {
         x = (h / g) * 100,
         p = Math.max(Math.ceil((85 * g) / 100) - h, 0),
         [f, C] = r.useState(!1),
-        v = f ? s.ChevronSmallDownIcon : s.ChevronSmallUpIcon;
+        _ = f ? s.ChevronSmallDownIcon : s.ChevronSmallUpIcon;
     return (0, i.jsxs)('div', {
         className: I.channelCoverage,
         children: [
@@ -56,7 +56,7 @@ function N(e) {
                                 className: I.coverageTitle,
                                 variant: 'text-xs/medium',
                                 color: 'text-muted',
-                                children: _.intl.format(_.t.nMVKCQ, { numChannelsMissing: g - h })
+                                children: v.intl.format(v.t.nMVKCQ, { numChannelsMissing: g - h })
                             })
                         ]
                     }),
@@ -68,7 +68,7 @@ function N(e) {
                                 foregroundColor: x > 85 ? 'var(--status-positive)' : 'var(--status-warning)',
                                 percent: x
                             }),
-                            (0, i.jsx)(v, {
+                            (0, i.jsx)(_, {
                                 size: 'md',
                                 color: 'currentColor',
                                 className: I.caret
@@ -84,7 +84,7 @@ function N(e) {
                           (0, i.jsx)(s.Text, {
                               variant: 'text-xs/semibold',
                               color: 'text-muted',
-                              children: _.intl.string(_.t['0FM4i4'])
+                              children: v.intl.string(v.t['0FM4i4'])
                           }),
                           (0, i.jsx)('div', {
                               className: I.channels,
@@ -125,14 +125,14 @@ function N(e) {
                                                 (0, i.jsx)(s.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'text-muted',
-                                                    children: _.intl.format(_.t['sX889/'], { numChannels: p })
+                                                    children: v.intl.format(v.t['sX889/'], { numChannels: p })
                                                 })
                                             ]
                                         })
                                       : (0, i.jsx)(s.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'text-muted',
-                                            children: _.intl.string(_.t.o4s29v)
+                                            children: v.intl.string(v.t.o4s29v)
                                         })
                           })
                       ]
@@ -159,7 +159,7 @@ function j(e) {
         u = r.useRef(!1);
     if (
         (r.useEffect(() => {
-            !a && !u.current && 0 === o.length && ((u.current = !0), !d && (0, g.tS)(t, [(0, v.ae)()], !1));
+            !a && !u.current && 0 === o.length && ((u.current = !0), !d && (0, g.tS)(t, [(0, _.ae)()], !1));
         }),
         r.useEffect(() => {
             if (n)
@@ -180,12 +180,12 @@ function j(e) {
             (0, i.jsx)(s.Heading, {
                 className: I.header,
                 variant: 'heading-lg/extrabold',
-                children: d ? _.intl.string(_.t.AGjtFh) : _.intl.string(_.t.dqCzoa)
+                children: d ? v.intl.string(v.t.AGjtFh) : v.intl.string(v.t.dqCzoa)
             }),
             (0, i.jsx)(s.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: _.intl.string(_.t['q/6MLC'])
+                children: v.intl.string(v.t['q/6MLC'])
             }),
             (0, i.jsxs)('div', {
                 className: I.links,
@@ -196,7 +196,7 @@ function j(e) {
                         children: (0, i.jsx)(s.Text, {
                             variant: 'text-sm/medium',
                             color: 'text-link',
-                            children: _.intl.string(_.t.Ok55Ki)
+                            children: v.intl.string(v.t.Ok55Ki)
                         })
                     }),
                     (0, i.jsx)('div', { className: I.dot }),
@@ -205,7 +205,7 @@ function j(e) {
                         children: (0, i.jsx)(s.Text, {
                             variant: 'text-sm/medium',
                             color: 'text-link',
-                            children: _.intl.string(_.t['6gsjdH'])
+                            children: v.intl.string(v.t['6gsjdH'])
                         })
                     }),
                     (0, i.jsx)('div', { className: I.dot }),
@@ -241,6 +241,6 @@ function b() {
               },
               onReset: g.NB,
               submitting: t,
-              onSaveText: _.intl.string(_.t.R3BPHx)
+              onSaveText: v.intl.string(v.t.R3BPHx)
           });
 }

@@ -21,8 +21,8 @@ var i = n(200651),
     p = n(367907),
     f = n(906732),
     C = n(118012),
-    v = n(218867),
-    _ = n(733026),
+    _ = n(218867),
+    v = n(733026),
     I = n(246946),
     N = n(594174),
     T = n(626135),
@@ -52,12 +52,12 @@ function O(e) {
     var t;
     let { transitionState: n, guild: l, user: s, ban: a, hideDiscriminator: o, onClose: c } = e,
         [u, g] = r.useState(!1),
-        [x, v] = r.useState(null),
-        { analyticsLocations: _ } = (0, f.ZP)(),
-        I = null !== (t = null == _ ? void 0 : _[0]) && void 0 !== t ? t : null;
+        [x, _] = r.useState(null),
+        { analyticsLocations: v } = (0, f.ZP)(),
+        I = null !== (t = null == v ? void 0 : v[0]) && void 0 !== t ? t : null;
     async function N() {
         if (null != l) {
-            v(null), g(!0);
+            _(null), g(!0);
             try {
                 await m.Z.unbanUser(l.id, s.id),
                     c(),
@@ -68,7 +68,7 @@ function O(e) {
                         location: I
                     });
             } catch (e) {
-                v(new h.Z(e)), g(!1);
+                _(new h.Z(e)), g(!1);
             }
         }
     }
@@ -243,7 +243,7 @@ let P = r.forwardRef(function (e, t) {
             },
             [s, n, l, a]
         );
-    return (0, i.jsx)(v.Z, {
+    return (0, i.jsx)(_.Z, {
         role: 'listbox',
         listPadding: [8, 8, 8, 8],
         rowCount: l.length,
@@ -273,7 +273,7 @@ function M(e) {
             if (!a)
                 try {
                     o(!0);
-                    let [e, n] = (0, _.C)(l),
+                    let [e, n] = (0, v.C)(l),
                         i = e[0];
                     S.Z.setSearchQuery(l), await m.Z.searchGuildBans(t, i, n), o(!1);
                 } catch (e) {
@@ -337,7 +337,7 @@ function w() {
         p = (0, g.Z)(h),
         f = h !== p,
         [C] = (0, c.e7)([E.Z], () => E.Z.getBans(), [], j.Q),
-        v = null !== (e = null == C ? void 0 : C.size) && void 0 !== e ? e : 0,
+        _ = null !== (e = null == C ? void 0 : C.size) && void 0 !== e ? e : 0,
         I = (0, x.ZP)(),
         T = null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : Z.lds,
         b = r.useRef(null),
@@ -347,7 +347,7 @@ function w() {
                     ? (e) => null != e
                     : (t) => {
                           if (null == t || 0 === e.trim().length) return !1;
-                          let [[n], i] = (0, _.C)(e);
+                          let [[n], i] = (0, v.C)(e);
                           return !!i.includes(t.id) || (null != n && (!!(t.username.toLowerCase().includes(n.toLowerCase()) || (null != t.globalName && t.globalName.toLowerCase().includes(n.toLowerCase()))) || !1));
                       },
             []
@@ -364,7 +364,7 @@ function w() {
             },
             [S]
         ),
-        y = r.useMemo(() => R(C, u, v), [C, R, u, v]),
+        y = r.useMemo(() => R(C, u, _), [C, R, u, _]),
         D = null != C,
         O = y.length % 1000 == 0 && y.length > 0 && D,
         k = 0 === y.length,

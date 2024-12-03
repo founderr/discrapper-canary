@@ -21,14 +21,14 @@ var i = n(200651),
     g = n(239091),
     C = n(941028),
     x = n(144144),
-    _ = n(276264),
-    v = n(607070),
+    v = n(276264),
+    _ = n(607070),
     I = n(100527),
     E = n(367907),
     b = n(906732),
     N = n(493324),
-    S = n(611064),
-    Z = n(677432),
+    Z = n(611064),
+    S = n(677432),
     T = n(178762),
     j = n(868671),
     A = n(82295),
@@ -65,7 +65,7 @@ function q(e, t, n) {
     );
 }
 let X = z.ZP.getEnableHardwareAcceleration(),
-    J = 44 + _.x,
+    J = 44 + v.x,
     Q = {
         origin: {
             x: 38,
@@ -97,7 +97,7 @@ class $ extends l.Component {
             onShiftClick: this.handleShiftClick,
             children: (u, f) => {
                 let { isShown: g } = f;
-                return (0, i.jsx)(_.Z, {
+                return (0, i.jsx)(v.Z, {
                     className: Y.member,
                     onContextMenu: this.renderUserContextMenu,
                     shouldAnimateStatus: X,
@@ -234,7 +234,7 @@ let ee = l.memo((e) => {
 function en(e) {
     let { index: t } = e,
         n = (0, c.JA)(''.concat(t));
-    return (0, i.jsx)(_.Z, { itemProps: n });
+    return (0, i.jsx)(v.Z, { itemProps: n });
 }
 class ei extends l.Component {
     shouldComponentUpdate(e) {
@@ -337,8 +337,8 @@ class ei extends l.Component {
                 let { section: t } = e,
                     { groups: n, channel: r } = this.props,
                     a = n[t];
-                return (0, S.R)(a)
-                    ? (0, l.createElement)(S.Z, {
+                return (0, Z.R)(a)
+                    ? (0, l.createElement)(Z.Z, {
                           ...a,
                           key: 'section-'.concat(t)
                       })
@@ -410,7 +410,7 @@ class ei extends l.Component {
                         );
                         return a.entry.content_type === h.s.LEADERBOARD ? (0, i.jsx)(L.N, { children: t }, e) : t;
                     }
-                    if (a.type === w.so.HIDDEN_CONTENT_INVENTORY) return (0, i.jsx)(Z.Z, {}, 'content-inventory-hidden-entry');
+                    if (a.type === w.so.HIDDEN_CONTENT_INVENTORY) return (0, i.jsx)(S.Z, {}, 'content-inventory-hidden-entry');
                 }
                 return (0, i.jsx)(en, { index: l }, 'placeholder-'.concat(t, ':').concat(n));
             }),
@@ -429,7 +429,7 @@ class ei extends l.Component {
             ),
             q(this, 'getContentFeedGroup', () => {
                 let e = this.props.groups[j.T];
-                if ((0, S.R)(e)) return e;
+                if ((0, Z.R)(e)) return e;
             }),
             q(this, 'hasContentFeed', () => null != this.getContentFeedGroup()),
             q(this, 'getRowHeightComputer', () => {
@@ -493,7 +493,7 @@ class ei extends l.Component {
 function el(e) {
     let { channel: t, className: n } = e,
         { analyticsLocations: r } = (0, b.ZP)(I.Z.MEMBER_LIST),
-        s = (0, p.e7)([v.Z], () => v.Z.keyboardModeEnabled),
+        s = (0, p.e7)([_.Z], () => _.Z.keyboardModeEnabled),
         o = (0, p.cj)([w.ZP], () => w.ZP.getProps(t.guild_id, t.id)),
         {
             rows: u,
@@ -533,7 +533,7 @@ function el(e) {
                 }),
             []
         ),
-        _ = l.useCallback(
+        v = l.useCallback(
             () =>
                 new Promise((e) => {
                     let t = g.current;
@@ -551,7 +551,7 @@ function el(e) {
             setFocus: C,
             isEnabled: s,
             scrollToStart: x,
-            scrollToEnd: _
+            scrollToEnd: v
         });
     return (0, i.jsx)(b.Gt, {
         value: r,

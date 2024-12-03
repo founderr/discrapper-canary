@@ -11,8 +11,8 @@ var l = n(120356),
     m = n(600164),
     f = n(750154),
     p = n(592125),
-    h = n(594174),
-    g = n(979651),
+    g = n(594174),
+    h = n(979651),
     v = n(374129),
     S = n(639351),
     I = n(503438),
@@ -32,17 +32,17 @@ var l = n(120356),
     R = n(522832);
 t.Z = (0, u.Z)((e) => {
     let { activity: t, embeddedActivity: n, user: l, applicationStream: r, className: u, guildId: M, channelId: O, source: L, color: k = c.Button.Colors.WHITE, look: D = c.Button.Looks.OUTLINED, type: U, onAction: V, isEmbedded: F = !1 } = e,
-        W = (0, o.e7)([h.default], () => {
-            let e = h.default.getCurrentUser();
+        W = (0, o.e7)([g.default], () => {
+            let e = g.default.getCurrentUser();
             return s()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
         }),
         B = U === x.Y.STREAM_PREVIEW || null != r,
         G = (0, I.Z)(t),
         z = G || B ? m.Z.Direction.HORIZONTAL : m.Z.Direction.VERTICAL,
         H = (null == t ? void 0 : t.type) === P.IIU.HANG_STATUS,
-        Y = (0, o.e7)([g.Z, p.Z], () => {
+        Y = (0, o.e7)([h.Z, p.Z], () => {
             var e;
-            return H ? p.Z.getChannel(null === (e = g.Z.getVoiceStateForUser(l.id)) || void 0 === e ? void 0 : e.channelId) : null;
+            return H ? p.Z.getChannel(null === (e = h.Z.getVoiceStateForUser(l.id)) || void 0 === e ? void 0 : e.channelId) : null;
         }),
         J = z === m.Z.Direction.VERTICAL;
     return (0, i.jsx)(m.Z, {

@@ -15,8 +15,8 @@ var i = n(200651),
     g = n(388032),
     C = n(405143),
     x = n(73234),
-    _ = n(584354),
-    v = n(725060);
+    v = n(584354),
+    _ = n(725060);
 let I = (0, c.Z)((e) => {
     let { searchQuery: t, setSearchQuery: n, handleClearSearch: l, handleSearchKeyPress: r, width: s } = e,
         c = null != s && s <= 800;
@@ -26,7 +26,7 @@ let I = (0, c.Z)((e) => {
             (0, i.jsx)('img', {
                 alt: '',
                 className: x.headerImage,
-                src: c ? v : _
+                src: c ? _ : v
             }),
             (0, i.jsx)('div', {
                 className: x.headerContentWrapper,
@@ -118,14 +118,14 @@ function E(e) {
     });
 }
 t.Z = (e) => {
-    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: r, searchQuery: a, setSearchQuery: c, handleClearSearch: u, handleSearchKeyPress: h, currentCategoryId: _, handleSelectCategory: v, categoryCounts: b, allEntriesCount: N, isLoading: S } = e,
-        Z = (0, s.e7)([d.Z], () => d.Z.getGuild(t.getGuildId()));
-    return null != Z && Z.hasFeature(f.oNc.SHARD)
+    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: r, searchQuery: a, setSearchQuery: c, handleClearSearch: u, handleSearchKeyPress: h, currentCategoryId: v, handleSelectCategory: _, categoryCounts: b, allEntriesCount: N, isLoading: Z } = e,
+        S = (0, s.e7)([d.Z], () => d.Z.getGuild(t.getGuildId()));
+    return null != S && S.hasFeature(f.oNc.SHARD)
         ? (0, i.jsx)(E, {
-              guild: Z,
+              guild: S,
               directoryEntries: n,
               handleCreateOrAddGuild: r,
-              isLoading: S
+              isLoading: Z
           })
         : (0, i.jsx)('div', {
               className: C.pageContainer,
@@ -144,9 +144,9 @@ t.Z = (e) => {
                               className: x.tabBar,
                               type: 'top',
                               look: 'brand',
-                              selectedItem: _,
+                              selectedItem: v,
                               onItemSelect: (e) => {
-                                  v(e);
+                                  _(e);
                               },
                               children: [
                                   (0, i.jsx)(
@@ -173,7 +173,7 @@ t.Z = (e) => {
                               ]
                           })
                       }),
-                      S && null == n
+                      Z && null == n
                           ? (0, i.jsx)(o.Spinner, { className: C.spinner })
                           : null == n
                             ? void 0

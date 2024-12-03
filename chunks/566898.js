@@ -9,7 +9,7 @@ n.d(t, {
         return f;
     },
     ZP: function () {
-        return _;
+        return v;
     },
     ZT: function () {
         return h;
@@ -138,7 +138,7 @@ let m = 44,
     g = 26,
     C = 26,
     x = 6;
-function _(e) {
+function v(e) {
     let { messages: t, groupSpacing: n = 0, compact: l = !1, attachmentSpecs: r, className: a } = e,
         o = null != r ? (r.last ? t - 1 : s().random(0, t - 1)) : -1,
         c = s().random(80, 120),

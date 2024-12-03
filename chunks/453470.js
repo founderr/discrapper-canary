@@ -19,33 +19,33 @@ var i = n(200651),
     g = n(621600),
     C = n(870991),
     x = n(981631),
-    _ = n(388032),
-    v = n(162787);
+    v = n(388032),
+    _ = n(162787);
 function I(e) {
     let { senderId: t, channelId: n, warningId: l } = e,
         r = (0, a.e7)([f.ZP], () => f.ZP.isChannelMuted(null, n));
     return (0, i.jsxs)('div', {
-        className: v.safetyAction,
+        className: _.safetyAction,
         children: [
             (0, i.jsxs)('div', {
-                className: v.safetyActionText,
+                className: _.safetyActionText,
                 children: [
                     (0, i.jsx)(s.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: _.intl.string(_.t['UVp+4+'])
+                        children: v.intl.string(v.t['UVp+4+'])
                     }),
                     (0, i.jsx)(s.Text, {
                         variant: 'text-xs/medium',
                         color: 'header-secondary',
-                        children: _.intl.string(_.t.VS47BA)
+                        children: v.intl.string(v.t.VS47BA)
                     })
                 ]
             }),
             (0, i.jsx)(s.Button, {
                 size: s.Button.Sizes.SMALL,
                 color: s.Button.Colors.PRIMARY,
-                'aria-label': r ? _.intl.string(_.t['6QK4Hx']) : _.intl.string(_.t['UVp+4+']),
+                'aria-label': r ? v.intl.string(v.t['6QK4Hx']) : v.intl.string(v.t['UVp+4+']),
                 onClick: r
                     ? () => {
                           o.Z.updateChannelOverrideSettings(null, n, { muted: !1 }, g.ZB.Unmuted),
@@ -69,7 +69,7 @@ function I(e) {
                                   cta: p.NM.USER_MODAL_MUTE
                               });
                       },
-                children: r ? _.intl.string(_.t['6QK4Hx']) : _.intl.string(_.t['UVp+4+'])
+                children: r ? v.intl.string(v.t['6QK4Hx']) : v.intl.string(v.t['UVp+4+'])
             })
         ]
     });
@@ -91,12 +91,12 @@ function E(e) {
                         channelId: t,
                         warningId: a,
                         senderId: o,
-                        description: _.intl.string(_.t['/uid3t']),
+                        description: v.intl.string(v.t['/uid3t']),
                         safetyTips: d.map((e, t) =>
                             (0, i.jsxs)(
                                 'div',
                                 {
-                                    className: v.tipContent,
+                                    className: _.tipContent,
                                     children: [
                                         (0, i.jsx)(s.Text, {
                                             variant: 'text-md/medium',
@@ -122,7 +122,7 @@ function E(e) {
                             channelId: t,
                             warningId: a
                         }),
-                        learnMore: _.intl.format(_.t.UkH129, { learnMoreLink: C.D })
+                        learnMore: v.intl.format(v.t.UkH129, { learnMoreLink: C.D })
                     });
                 };
             });
@@ -142,12 +142,12 @@ function E(e) {
             warningId: a,
             senderId: o,
             warningType: h.pj.LIKELY_ATO,
-            header: _.intl.string(_.t.R8UsiI),
-            description: _.intl.string(_.t.lI8nQk),
+            header: v.intl.string(v.t.R8UsiI),
+            description: v.intl.string(v.t.lI8nQk),
             onDismiss: f,
             buttons: [
                 {
-                    text: _.intl.string(_.t.tC1pvL),
+                    text: v.intl.string(v.t.tC1pvL),
                     color: s.Button.Colors.BRAND,
                     onclick: () => {
                         g(),

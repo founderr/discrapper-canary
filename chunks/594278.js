@@ -13,17 +13,17 @@ t.Z = function (e) {
     let { items: t, carouselClassName: n, paginationCaretClassName: l, intervalBetweenAutomaticItemRotations: h, renderItem: g } = e,
         x = r.useMemo(() => new a.Xp(), []),
         [p, f] = r.useState(d.n.LEFT),
-        [C, v] = r.useState(0),
-        [_, I] = r.useState(!1),
+        [C, _] = r.useState(0),
+        [v, I] = r.useState(!1),
         [N, T] = r.useState(!1),
         j = r.useCallback(
             (e, t) => {
-                v((n) => {
+                _((n) => {
                     let i = n + t;
                     return i < 0 ? (i = e.length - 1) : i > e.length - 1 && (i = 0), i;
                 });
             },
-            [v]
+            [_]
         ),
         b = r.useCallback(() => {
             if (!N) j(t, 1);
@@ -33,8 +33,8 @@ t.Z = function (e) {
         }, [j, t, N]);
     return (
         r.useEffect(() => {
-            null != h && (_ ? _ && x.stop() : x.start(h, b));
-        }, [_, x, h, b]),
+            null != h && (v ? v && x.stop() : x.start(h, b));
+        }, [v, x, h, b]),
         (0, i.jsxs)('div', {
             className: m.root,
             onMouseEnter: () => I(!0),

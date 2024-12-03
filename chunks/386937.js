@@ -15,8 +15,8 @@ var i = n(200651),
     p = n(237583),
     f = n(899667),
     C = n(271383),
-    v = n(594174),
-    _ = n(267642),
+    _ = n(594174),
+    v = n(267642),
     I = n(624138),
     N = n(981631),
     T = n(388032),
@@ -61,12 +61,12 @@ class E extends r.Component {
                 y: 0,
                 key: x.x
             },
-            s = (0, _.vn)(n),
+            s = (0, v.vn)(n),
             a = e.map((e) => {
                 var n;
                 return {
                     numRequired: s[e.tier],
-                    name: (0, _.nW)(e.tier),
+                    name: (0, v.nW)(e.tier),
                     y: null !== (n = t[e.tier]) && void 0 !== n ? n : 0,
                     key: e.tier
                 };
@@ -120,7 +120,7 @@ class E extends r.Component {
         let { guildId: e, renderTier: t, subscriptions: n, subscriberCount: r, tiers: l } = this.props;
         if (null == n) return (0, i.jsx)(u.Spinner, { type: u.Spinner.Type.SPINNING_CIRCLE });
         if (null == e) return null;
-        let s = (0, _.vn)(e);
+        let s = (0, v.vn)(e);
         return (0, i.jsx)('div', {
             children: (0, i.jsxs)('div', {
                 className: j.content,
@@ -247,13 +247,13 @@ class E extends r.Component {
             );
     }
 }
-let R = c.ZP.connectStores([g.Z, v.default, f.Z, C.ZP], () => {
+let R = c.ZP.connectStores([g.Z, _.default, f.Z, C.ZP], () => {
     let e = g.Z.getGuildId(),
         t = null != e ? f.Z.getAppliedGuildBoostsForGuild(e) : null,
         n = o()(null != t ? t : []).uniqBy((e) => e.userId),
         i = n
             .map((t) => ({
-                user: v.default.getUser(t.userId),
+                user: _.default.getUser(t.userId),
                 nick: C.ZP.getNick(e, t.userId)
             }))
             .filter((e) => null != e.user)
