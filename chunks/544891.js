@@ -57,9 +57,9 @@ function d(e, t, n) {
 let f = new s.Yd('HTTPUtils'),
     _ = new Set([502, 504, 507, 598, 599, 522, 523, 524]);
 class p extends Error {
-    constructor({ method: e, url: t, ok: n, status: r, body: i, text: a }, ...s) {
-        let o = t.replace(/\d+/g, 'xxx');
-        super(''.concat(e.toUpperCase(), ' ').concat(o, ' [').concat(r, ']'), ...s), d(this, 'method', void 0), d(this, 'url', void 0), d(this, 'ok', void 0), d(this, 'status', void 0), d(this, 'body', void 0), d(this, 'text', void 0), (this.name = 'HTTPResponseError'), (this.method = e), (this.url = t), (this.ok = n), (this.status = r), (this.body = i), (this.text = a);
+    constructor({ method: e, url: t, ok: n, status: r, body: i, text: a, headers: s }, ...o) {
+        let l = t.replace(/\d+/g, 'xxx');
+        super(''.concat(e.toUpperCase(), ' ').concat(l, ' [').concat(r, ']'), ...o), d(this, 'method', void 0), d(this, 'url', void 0), d(this, 'ok', void 0), d(this, 'status', void 0), d(this, 'body', void 0), d(this, 'text', void 0), d(this, 'headers', void 0), (this.name = 'HTTPResponseError'), (this.method = e), (this.url = t), (this.ok = n), (this.status = r), (this.body = i), (this.text = a), (this.headers = s);
     }
 }
 function h(e, t, n, r, s) {
@@ -163,7 +163,8 @@ function h(e, t, n, r, s) {
                                       ok: d.ok,
                                       status: d.status,
                                       body: d.body,
-                                      text: d.text
+                                      text: d.text,
+                                      headers: d.headers
                                   })
                               )
                             : r(d);
