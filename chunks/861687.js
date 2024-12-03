@@ -167,6 +167,7 @@ class es extends f.Z {
     getMediaSessionId() {
         return this._mediaSessionId;
     }
+    getVoiceParticipantType() {}
     getRTCConnectionId() {
         return this._rtcConnectionId;
     }
@@ -425,7 +426,8 @@ class es extends f.Z {
                 parent_media_session_id: this.parentMediaSessionId,
                 audio_subsystem: w.Z.getMediaEngine().getAudioSubsystem(),
                 audio_layer: w.Z.getMediaEngine().getAudioLayer(),
-                automatic_audio_subsystem: n.automaticAudioSubsystem
+                automatic_audio_subsystem: n.automaticAudioSubsystem,
+                participant_type: this.getVoiceParticipantType()
             });
             let a = this.getMediaSessionId();
             w.Z.getMediaEngine()
@@ -617,6 +619,7 @@ class es extends f.Z {
                             audio_layer: w.Z.getMediaEngine().getAudioLayer(),
                             automatic_audio_subsystem: t.automaticAudioSubsystem,
                             media_session_id: this.getMediaSessionId(),
+                            participant_type: this.getVoiceParticipantType(),
                             ...this.stateHistory.getVoiceConnectionSuccessStats()
                         });
                     }
@@ -1165,7 +1168,8 @@ class es extends f.Z {
                     hostname: this.hostname,
                     connect_count: this._connectCount,
                     context: this.context,
-                    channel_type: t
+                    channel_type: t,
+                    participant_type: this.getVoiceParticipantType()
                 });
             }),
             er(this, 'incomingVideoEnabledChanged', (e) => {

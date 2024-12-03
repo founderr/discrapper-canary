@@ -92,6 +92,9 @@ class O extends o.Z {
     getMaxViewers() {
         return this.analyticsContext.maxViewers;
     }
+    getVoiceParticipantType() {
+        return this.isOwner ? 'streamer' : 'receiver';
+    }
     updateStats(e) {
         var t, n, r, a, s, o, l, u, c, d, f, _, p;
         let h;
