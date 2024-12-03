@@ -26,10 +26,15 @@ function h(e) {
             id: n.id,
             label: d.intl.string(d.t['/AXYnJ'])
         }),
-        I = (0, c.dX)(C),
-        j = (0, s.Z)({
+        I = 'application_id' in C.extra ? C.extra.application_id : null,
+        j = (0, r.Z)({
+            id: I,
+            label: d.intl.string(d.t['FfCL+/'])
+        }),
+        Z = (0, c.dX)(C),
+        P = (0, s.Z)({
             location: 'ContentPopoutContextMenu',
-            applicationId: I && !0 !== v ? (null === (t = C.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
+            applicationId: Z && !0 !== v ? (null === (t = C.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
             source: o.m1.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
             sourceUserId: C.author_id
@@ -52,15 +57,17 @@ function h(e) {
                         (0, l.jsxs)(a.MenuGroup, {
                             children: [
                                 g,
-                                null != j &&
+                                null != P &&
                                     (0, l.jsx)(a.MenuItem, {
                                         id: 'game-profile',
                                         label: d.intl.string(d.t.f7aVGh),
-                                        action: j
+                                        action: P
                                     })
                             ]
                         }),
-                        (0, l.jsx)(a.MenuGroup, { children: f })
+                        (0, l.jsxs)(a.MenuGroup, {
+                            children: [f, j]
+                        })
                     ]
                 })
             });
