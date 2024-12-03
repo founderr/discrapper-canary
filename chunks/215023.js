@@ -156,6 +156,10 @@ let f = {
                 animationSource: 'https://cdn.discordapp.com/assets/collectibles/drops/kawaii_mode/hero_banner.webm'
             },
             animatedBanner: 'https://cdn.discordapp.com/assets/collectibles/drops/kawaii_mode/banner_animated.webm'
+        },
+        [d.T.LOFI_GIRL]: {
+            heroBanner: { animationSource: 'https://cdn.discordapp.com/assets/collectibles/drops/lofi_girl/hero_banner.webm' },
+            animatedBanner: 'https://cdn.discordapp.com/assets/collectibles/drops/lofi_girl/banner_animated.webm'
         }
     },
     _ = (e) => f[e],
