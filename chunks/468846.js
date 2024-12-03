@@ -3,25 +3,29 @@ l.d(t, {
         return c;
     },
     pn: function () {
-        return i;
+        return n;
     }
-});
+}),
+    l(610138),
+    l(216116),
+    l(78328),
+    l(815648),
+    l(47120);
 var n,
     i,
     r = l(200651),
     a = l(192379),
-    s = l(729594),
+    s = l(591759),
     o = l(340702);
 function d(e, t) {
-    let l = s.parse(null != e ? e : '', !0);
-    return (
-        (l.query = {
-            ...l.query,
-            ...t
-        }),
-        (l.search = null),
-        s.format(l)
-    );
+    let l = s.Z.toURLSafe(null != e ? e : '');
+    return null === l
+        ? ''
+        : ((l.search = new URLSearchParams({
+              ...l.searchParams,
+              ...t
+          }).toString()),
+          l.toString());
 }
 function u(e) {
     let { src: t, autoMute: l, ...n } = e,
@@ -100,4 +104,4 @@ function c(e) {
             return (0, r.jsx)(h, { ...e });
     }
 }
-((n = i || (i = {})).YOUTUBE = 'YouTube'), (n.TIKTOK = 'TikTok');
+((i = n || (n = {})).YOUTUBE = 'YouTube'), (i.TIKTOK = 'TikTok');

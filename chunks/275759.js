@@ -3,7 +3,7 @@ n.d(t, {
         return T;
     },
     O1: function () {
-        return i;
+        return r;
     },
     SJ: function () {
         return m;
@@ -20,38 +20,44 @@ n.d(t, {
     xp: function () {
         return g;
     }
-});
+}),
+    n(610138),
+    n(216116),
+    n(78328),
+    n(815648),
+    n(47120);
 var r,
     i,
     a = n(512722),
     s = n.n(a),
     o = n(392711),
-    l = n.n(o),
-    u = n(729594);
+    l = n.n(o);
 n(442837);
-var c = n(627420);
+var u = n(627420);
 n(704215);
-var d = n(277800);
+var c = n(277800);
 n(605236);
-var f = n(430824);
+var d = n(430824);
 n(496675);
-var _ = n(856651),
+var f = n(591759),
+    _ = n(856651),
     p = n(981631),
     h = n(388032);
 let m = ['426537812993638400', '1042836142560645130', '296023718839451649', '979802510766268446', '1031611223235637258', '512333785338216465'];
 function g(e) {
-    let { query: t } = u.parse(e, !0),
-        { code: n, state: r, error: i, error_description: a } = t;
+    var t;
+    let { searchParams: n } = null !== (t = f.Z.toURLSafe(e)) && void 0 !== t ? t : { searchParams: new URLSearchParams() },
+        { code: r, state: i, error: a, error_description: o } = Object.fromEntries(n);
     return (
-        s()(!Array.isArray(n), 'Received multiple query param values for code'),
-        s()(!Array.isArray(r), 'Received multiple query param values for state'),
-        s()(!Array.isArray(i), 'Received multiple query param values for error'),
-        s()(!Array.isArray(a), 'Received multiple query param values for error_description'),
+        s()(!Array.isArray(r), 'Received multiple query param values for code'),
+        s()(!Array.isArray(i), 'Received multiple query param values for state'),
+        s()(!Array.isArray(a), 'Received multiple query param values for error'),
+        s()(!Array.isArray(o), 'Received multiple query param values for error_description'),
         {
-            code: n,
-            state: r,
-            error: i,
-            errorDescription: a
+            code: r,
+            state: i,
+            error: a,
+            errorDescription: o
         }
     );
 }
@@ -76,7 +82,7 @@ function E(e) {
         case null:
             return null;
     }
-    if ((null != i && (s = i), s instanceof c._H && null != r))
+    if ((null != i && (s = i), s instanceof u._H && null != r))
         switch (t) {
             case p.ABu.REDDIT:
                 switch (n) {
@@ -198,9 +204,9 @@ function I(e) {
     var t, n;
     let { guildMember: r, guild: i, guildRoles: a, channel: o, onlyChannelConnectionRoles: u = !1 } = e;
     if (null == r) return null;
-    if ((null == i && null != o && (i = f.Z.getGuild(o.getGuildId())), null == i)) return null;
-    let { id: c } = i;
-    null == a && (a = f.Z.getRoles(c));
+    if ((null == i && null != o && (i = d.Z.getGuild(o.getGuildId())), null == i)) return null;
+    let { id: f } = i;
+    null == a && (a = d.Z.getRoles(f));
     let _ = r.roles
             .map((e) => a[e])
             .filter((e) => {
@@ -208,7 +214,7 @@ function I(e) {
                 return (null == e ? void 0 : null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null;
             })
             .sort((e, t) => (s()(null != e && null != t, 'roleA or roleB is null'), t.position - e.position)),
-        p = l().intersection(_, (0, d.Z)(o));
+        p = l().intersection(_, (0, c.Z)(o));
     return p.length > 0 ? (null !== (t = p[0]) && void 0 !== t ? t : null) : u ? null : null !== (n = _[0]) && void 0 !== n ? n : null;
 }
 function T(e, t) {
@@ -222,4 +228,4 @@ function T(e, t) {
               year: 'numeric'
           });
 }
-((r = i || (i = {}))[(r.AND = 0)] = 'AND'), (r[(r.OR = 1)] = 'OR');
+((i = r || (r = {}))[(i.AND = 0)] = 'AND'), (i[(i.OR = 1)] = 'OR');
