@@ -1,15 +1,19 @@
 n.d(t, {
-    q: function () {
+    L4: function () {
         return s;
     },
-    t: function () {
+    q1: function () {
         return c;
+    },
+    tr: function () {
+        return u;
     }
 });
 var a = n(818083),
     r = n(358085),
-    l = n(474936);
-let i = (0, a.B)({
+    l = n(987338),
+    i = n(474936);
+let o = (0, a.B)({
         id: '2023-07_checkout_optimization_browser_autofill',
         label: 'Checkout Optimization Browser Autofill',
         kind: 'user',
@@ -36,7 +40,7 @@ let i = (0, a.B)({
             }
         ]
     }),
-    o = (0, a.B)({
+    s = (0, a.B)({
         id: '2024-11_checkout_optimization_browser_autofill_global',
         label: 'Checkout Optimization Browser Autofill Global',
         kind: 'user',
@@ -44,6 +48,7 @@ let i = (0, a.B)({
             enabled: !1,
             delay: !1
         },
+        commonTriggerPoint: l.$P.PAYMENT_FLOW_STARTED,
         treatments: [
             {
                 id: 1,
@@ -63,10 +68,10 @@ let i = (0, a.B)({
             }
         ]
     });
-function s() {
-    let e = i.getCurrentConfig({ location: '5f89bb_3' }, { autoTrackExposure: !0 });
-    return e.enabled ? e : o.getCurrentConfig({ location: '5f89bb_3' }, { autoTrackExposure: !0 });
+function c() {
+    let e = o.getCurrentConfig({ location: '5f89bb_3' }, { autoTrackExposure: !0 });
+    return e.enabled ? e : s.getCurrentConfig({ location: '5f89bb_3' }, { autoTrackExposure: !0 });
 }
-function c(e, t, n) {
-    return (0, r.isDesktop)() && null != e && [l.Si.TIER_0, l.Si.TIER_2].includes(e) && !t && null == n;
+function u(e, t, n) {
+    return (0, r.isDesktop)() && null != e && [i.Si.TIER_0, i.Si.TIER_2].includes(e) && !t && null == n;
 }
