@@ -32,15 +32,16 @@ var i = n(200651),
 function T(e) {
     var t;
     let { onSelectApplication: n } = e,
-        T = (0, l.TH)(),
-        b = r.useRef(null),
+        T = r.useRef(null),
+        b = (0, l.TH)(),
+        x = r.useRef(null),
         {
-            query: x,
-            page: A,
-            categoryId: Z
+            query: A,
+            page: Z,
+            categoryId: L
         } = r.useMemo(() => {
             var e, t;
-            let n = new URLSearchParams(T.search),
+            let n = new URLSearchParams(b.search),
                 i = n.get('page'),
                 r = null != i ? Number(i) : 1;
             return {
@@ -48,43 +49,45 @@ function T(e) {
                 page: r,
                 categoryId: null !== (t = Number(n.get('category_id'))) && void 0 !== t ? t : p.MU
             };
-        }, [T.search]);
+        }, [b.search]);
     r.useEffect(() => {
-        x !== b.current &&
-            ((b.current = x),
+        var e;
+        null === (e = T.current) || void 0 === e || e.scrollTo({ to: 0 }),
+            A !== x.current &&
+                ((x.current = A),
+                u.yC({
+                    query: A,
+                    options: { source: s.F.APP_DIRECTORY }
+                })),
             u.yC({
-                query: x,
-                options: { source: s.F.APP_DIRECTORY }
-            })),
-            u.yC({
-                query: x,
+                query: A,
                 options: {
-                    categoryId: Z,
-                    page: A,
+                    categoryId: L,
+                    page: Z,
                     pageSize: N.IV,
                     source: s.F.APP_DIRECTORY
                 }
             });
-    }, [Z, A, x]);
-    let { fetchState: L, searchResults: y } = (0, o.cj)([m.Z], () => ({
+    }, [L, Z, A]);
+    let { fetchState: y, searchResults: P } = (0, o.cj)([m.Z], () => ({
             fetchState: m.Z.getFetchState({
-                query: x,
-                categoryId: Z,
-                page: A,
+                query: A,
+                categoryId: L,
+                page: Z,
                 pageSize: N.IV,
                 source: s.F.APP_DIRECTORY
             }),
             searchResults: m.Z.getSearchResults({
-                query: x,
-                categoryId: Z,
-                page: A,
+                query: A,
+                categoryId: L,
+                page: Z,
                 pageSize: N.IV,
                 source: s.F.APP_DIRECTORY
             })
         })),
-        P = (0, o.cj)([m.Z], () => {
+        O = (0, o.cj)([m.Z], () => {
             let e = m.Z.getSearchResults({
-                query: x,
+                query: A,
                 source: s.F.APP_DIRECTORY
             });
             return null != e
@@ -94,31 +97,32 @@ function T(e) {
                   }
                 : {};
         }),
-        O = (0, d.Z)(y),
-        R = r.useMemo(() => (L === h.M.FETCHING ? O : y), [L, O, y]),
-        j = r.useCallback(
-            (e) => {
-                (0, I.pR)({
-                    query: x,
-                    categoryId: Z,
-                    page: e
-                });
-            },
-            [Z, x]
-        ),
+        R = (0, d.Z)(P),
+        j = r.useMemo(() => (y === h.M.FETCHING ? R : P), [y, R, P]),
         D = r.useCallback(
             (e) => {
                 (0, I.pR)({
-                    query: x,
+                    query: A,
+                    categoryId: L,
+                    page: e
+                });
+            },
+            [L, A]
+        ),
+        M = r.useCallback(
+            (e) => {
+                (0, I.pR)({
+                    query: A,
                     categoryId: e
                 });
             },
-            [x]
+            [A]
         );
     return (0, i.jsxs)('div', {
         className: S.container,
         children: [
             (0, i.jsx)(_.Z, {
+                ref: T,
                 children: (0, i.jsx)(f.Z, {
                     children: (0, i.jsxs)('div', {
                         className: S.contentContainer,
@@ -126,25 +130,25 @@ function T(e) {
                             (0, i.jsx)('div', {
                                 className: S.topFilterContainer,
                                 children: (0, i.jsx)(C.V, {
-                                    countsByCategory: P,
-                                    selectedCategoryId: Z,
-                                    onSelectCategory: D
+                                    countsByCategory: O,
+                                    selectedCategoryId: L,
+                                    onSelectCategory: M
                                 })
                             }),
                             (0, i.jsx)(g.Z, {
-                                loading: L === h.M.FETCHING,
+                                loading: y === h.M.FETCHING,
                                 children:
-                                    L === h.M.FETCHED && (null == R || (null == R ? void 0 : R.results.length) === 0)
+                                    y === h.M.FETCHED && (null == j || (null == j ? void 0 : j.results.length) === 0)
                                         ? (0, i.jsx)(v.Z, {
-                                              selectedCategoryId: null != Z ? Z : p.MU,
-                                              searchAllCategories: () => D(p.MU)
+                                              selectedCategoryId: null != L ? L : p.MU,
+                                              searchAllCategories: () => M(p.MU)
                                           })
                                         : (0, i.jsx)('div', {
                                               className: S.content,
                                               children:
-                                                  null == R
+                                                  null == j
                                                       ? void 0
-                                                      : R.results.map((e) => {
+                                                      : j.results.map((e) => {
                                                             if (e.type === a.s.APPLICATION) {
                                                                 let t = e.data;
                                                                 return (0, i.jsx)(
@@ -163,12 +167,12 @@ function T(e) {
                             }),
                             (0, i.jsx)(c.Paginator, {
                                 className: S.paginationInput,
-                                totalCount: Math.min((null !== (t = null == R ? void 0 : R.totalPages) && void 0 !== t ? t : 0) * N.IV, N.Et * N.IV),
+                                totalCount: Math.min((null !== (t = null == j ? void 0 : j.totalPages) && void 0 !== t ? t : 0) * N.IV, N.Et * N.IV),
                                 pageSize: N.IV,
                                 disablePaginationGap: !0,
                                 hideMaxPage: !0,
-                                currentPage: A,
-                                onPageChange: j
+                                currentPage: Z,
+                                onPageChange: D
                             })
                         ]
                     })
@@ -179,9 +183,9 @@ function T(e) {
                 children: (0, i.jsx)('div', {
                     className: S.sideFilterContent,
                     children: (0, i.jsx)(C.Z, {
-                        countsByCategory: P,
-                        selectedCategoryId: Z,
-                        onSelectCategory: D
+                        countsByCategory: O,
+                        selectedCategoryId: L,
+                        onSelectCategory: M
                     })
                 })
             })

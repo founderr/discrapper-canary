@@ -13,27 +13,34 @@ var i = n(200651),
 t.Z = function (e) {
     var t;
     let { tabId: n, onSelectApplication: g, onScroll: f } = e,
-        _ = (0, l.e7)([a.Z], () => a.Z.getCategories()),
-        E = r.useMemo(() => _.find((e) => e.id === n), [_, n]),
-        I = r.useMemo(() => (null != E ? (0, u.v)(E) : ''), [E]);
+        _ = r.useRef(null),
+        E = r.useCallback(() => {
+            var e;
+            null === (e = _.current) || void 0 === e || e.scrollTo({ to: 0 });
+        }, []),
+        I = (0, l.e7)([a.Z], () => a.Z.getCategories()),
+        C = r.useMemo(() => I.find((e) => e.id === n), [I, n]),
+        v = r.useMemo(() => (null != C ? (0, u.v)(C) : ''), [C]);
     return (0, i.jsxs)(d.Z, {
         onScroll: f,
+        ref: _,
         children: [
             (0, i.jsx)(o.Z, {
-                title: null !== (t = null == E ? void 0 : E.name) && void 0 !== t ? t : '',
-                description: I,
+                title: null !== (t = null == C ? void 0 : C.name) && void 0 !== t ? t : '',
+                description: v,
                 children: (0, i.jsx)(s.Z, {})
             }),
             (0, i.jsx)(c.Z, {
                 children:
-                    null == E
+                    null == C
                         ? (0, i.jsx)('div', {
                               className: p.errorContainer,
                               children: (0, i.jsx)(h.Z, { className: p.error })
                           })
                         : (0, i.jsx)(m.Z, {
-                              categoryId: E.id,
-                              onSelectApplication: g
+                              categoryId: C.id,
+                              onSelectApplication: g,
+                              resetScroll: E
                           })
             })
         ]

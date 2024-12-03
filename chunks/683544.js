@@ -19,39 +19,39 @@ let _ = {
 };
 t.Z = function (e) {
     var t;
-    let { categoryId: n, onSelectApplication: E } = e,
-        [I, C] = r.useState(1),
-        v = r.useCallback((e) => {
-            C(e);
+    let { categoryId: n, onSelectApplication: E, resetScroll: I } = e,
+        [C, v] = r.useState(1),
+        N = r.useCallback((e) => {
+            v(e);
         }, []);
     r.useEffect(() => {
-        C(1);
+        v(1);
     }, [n]);
-    let N = r.useMemo(
+    let S = r.useMemo(
             () => ({
                 query: g.Mm,
-                page: I,
+                page: C,
                 pageSize: g.IV,
                 categoryId: n
             }),
-            [I, n]
+            [C, n]
         ),
-        S = (0, a.e7)([u.Z], () =>
+        T = (0, a.e7)([u.Z], () =>
             u.Z.getFetchState({
                 query: g.Mm,
-                page: I,
+                page: C,
                 pageSize: g.IV,
                 categoryId: n
             })
         ),
-        T = (0, a.cj)([u.Z], () => {
+        b = (0, a.cj)([u.Z], () => {
             var e;
-            return null !== (e = u.Z.getSearchResults(N)) && void 0 !== e ? e : _;
+            return null !== (e = u.Z.getSearchResults(S)) && void 0 !== e ? e : _;
         }),
-        b = null !== (t = (0, o.Z)(T)) && void 0 !== t ? t : _,
-        { results: x, totalPages: A } = r.useMemo(() => (S === d.M.FETCHING ? b : T), [S, b, T]),
-        Z = r.useMemo(() => (null == x ? void 0 : x.filter((e) => !(e.type !== l.s.APPLICATION))), [x]),
-        L = r.useCallback((e) => {
+        x = null !== (t = (0, o.Z)(b)) && void 0 !== t ? t : _,
+        { results: A, totalPages: Z } = r.useMemo(() => (T === d.M.FETCHING ? x : b), [T, x, b]),
+        L = r.useMemo(() => (null == A ? void 0 : A.filter((e) => !(e.type !== l.s.APPLICATION))), [A]),
+        y = r.useCallback((e) => {
             let { page: t, activeCategoryId: n, onSuccessCallback: i, guildId: r, fetchCounts: l } = e;
             l &&
                 c.yC({
@@ -70,26 +70,27 @@ t.Z = function (e) {
                 });
         }, []);
     return (r.useEffect(() => {
-        L({
-            page: I,
-            activeCategoryId: n,
-            onSuccessCallback: () => {}
-        });
-    }, [n, L, I]),
-    S === d.M.ERROR)
+        I(),
+            y({
+                page: C,
+                activeCategoryId: n,
+                onSuccessCallback: () => {}
+            });
+    }, [n, I, y, C]),
+    T === d.M.ERROR)
         ? (0, i.jsx)('div', {
               className: f.errorContainer,
               children: (0, i.jsx)(p.Z, { className: f.error })
           })
         : (0, i.jsxs)(h.Z, {
-              loading: S === d.M.FETCHING,
+              loading: T === d.M.FETCHING,
               children: [
                   (0, i.jsx)('div', {
                       className: f.content,
                       children:
-                          null == Z
+                          null == L
                               ? void 0
-                              : Z.map((e) => {
+                              : L.map((e) => {
                                     if (e.type === l.s.APPLICATION) {
                                         let t = e.data;
                                         return (0, i.jsx)(
@@ -106,12 +107,12 @@ t.Z = function (e) {
                   }),
                   (0, i.jsx)(s.Paginator, {
                       className: f.paginationInput,
-                      totalCount: Math.min(A * g.IV, g.Et * g.IV),
+                      totalCount: Math.min(Z * g.IV, g.Et * g.IV),
                       pageSize: g.IV,
                       disablePaginationGap: !0,
                       hideMaxPage: !0,
-                      currentPage: I,
-                      onPageChange: v
+                      currentPage: C,
+                      onPageChange: N
                   })
               ]
           });
