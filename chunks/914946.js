@@ -148,15 +148,16 @@ function G(e, t) {
 function B(e) {
     let t = h.Z.parseToAST(e.content, !0, { channelId: e.channel_id }).map(w),
         n = _.Z.getChannel(e.channel_id),
-        i = null != e.author ? (0, m.ij)(new f.Z(e.author), n) : void 0;
+        i = new f.Z(e.author),
+        r = null != e.author ? (0, m.ij)(i, n) : void 0;
     return {
         id: e.id,
         blocked: e.blocked,
         bot: e.bot,
         content: e.content,
         content_parsed: t.length ? t : void 0,
-        nick: null == i ? void 0 : i.nick,
-        author_color: null == i ? void 0 : i.colorString,
+        nick: null == r ? void 0 : r.nick,
+        author_color: null == r ? void 0 : r.colorString,
         edited_timestamp: e.edited_timestamp || e.editedTimestamp,
         timestamp: e.timestamp,
         tts: e.tts,
@@ -165,7 +166,7 @@ function B(e) {
         mention_roles: e.mention_roles || e.mentionRoles,
         embeds: e.embeds,
         attachments: e.attachments,
-        author: e.author,
+        author: (0, L.Z)(i),
         pinned: e.pinned,
         type: e.type
     };
