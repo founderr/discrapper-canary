@@ -18,7 +18,7 @@ function o() {
     let [e, t] = r.useState(),
         n = (0, s.Z)(),
         a = null == n ? void 0 : n.rewards,
-        { purchases: o, hasPreviouslyFetched: l } = (0, i.c7)(),
+        { purchases: o, hasPreviouslyFetched: l } = (0, i.c)(),
         u = r.useRef(!1);
     return (
         r.useEffect(() => {

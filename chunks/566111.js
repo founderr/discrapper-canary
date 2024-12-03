@@ -11,7 +11,7 @@ var r = n(192379),
     o = n(223143);
 function c() {
     var e;
-    let { isFetching: t, fetchCategoriesError: n, fetchPurchasesError: c, categories: a, purchases: d } = (0, o.ZP)(),
+    let { isFetching: t, fetchCategoriesError: n, fetchPurchasesError: c, categories: a, purchases: d } = (0, o.Z)(),
         [u, f, m] = (0, i.Wu)([s.Z], () => [s.Z.isFetching, s.Z.fetchError, s.Z.profileEffects]);
     return (
         r.useEffect(() => {

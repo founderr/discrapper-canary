@@ -1,20 +1,20 @@
 t.d(n, {
     Z: function () {
-        return c;
+        return o;
     }
 });
 var i = t(200651),
-    o = t(481060),
+    r = t(481060),
     a = t(870745),
-    r = t(388032);
-function c(e) {
-    let { onClose: n, onSelect: t, application: c, channelId: l } = e,
-        d = (0, a.Z)(c, l);
-    return (0, i.jsx)(o.Menu, {
+    l = t(388032);
+function o(e) {
+    let { onClose: n, onSelect: t, application: o, channelId: d } = e,
+        c = (0, a.Z)(o, d);
+    return (0, i.jsx)(r.Menu, {
         navId: 'activity-popout-overflow-popout',
         onClose: n,
         onSelect: t,
-        'aria-label': r.intl.string(r.t.SS9Y6O),
-        children: d
+        'aria-label': l.intl.string(l.t.SS9Y6O),
+        children: c
     });
 }

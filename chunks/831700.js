@@ -45,8 +45,8 @@ var l = n(120356),
     U = n(979651),
     G = n(934415),
     B = n(63063),
-    V = n(98597),
-    H = n(648501),
+    H = n(98597),
+    V = n(648501),
     F = n(473403),
     W = n(830993),
     z = n(653577),
@@ -68,7 +68,7 @@ function J(e, t, n) {
         e
     );
 }
-class $ extends V.ZP {
+class $ extends H.ZP {
     componentWillUnmount() {
         this.activitiesHideTimeout.stop();
     }
@@ -393,7 +393,7 @@ function et(e) {
             },
             { autoTrackExposure: !1 }
         ),
-        j = (0, H.Z)({
+        j = (0, V.Z)({
             channel: n,
             isChannelSelected: o,
             isChannelCollapsed: s,

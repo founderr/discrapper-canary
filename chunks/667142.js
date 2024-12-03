@@ -1,9 +1,9 @@
 n.d(t, {
     Df: function () {
-        return c;
+        return d;
     },
     S_: function () {
-        return d;
+        return c;
     },
     V5: function () {
         return s;
@@ -19,19 +19,19 @@ n.d(t, {
     }
 });
 var i = n(972959);
-let l = {
+let o = {
         timeToLiveMs: 5000,
         reappearTimeMs: 10000
     },
-    o = (0, i.H)(() => l),
+    l = (0, i.H)(() => o),
     r = 10000,
     s = 20000,
     a = 500,
     u = 1000;
-function d(e) {
-    o.setState({ timeToLiveMs: e });
-}
 function c(e) {
-    o.setState({ reappearTimeMs: e });
+    l.setState({ timeToLiveMs: e });
 }
-t.ZP = o;
+function d(e) {
+    l.setState({ reappearTimeMs: e });
+}
+t.ZP = l;

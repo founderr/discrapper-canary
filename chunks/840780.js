@@ -38,8 +38,8 @@ var i = n(200651),
     U = n(984933),
     G = n(430824),
     B = n(131951),
-    V = n(496675),
-    H = n(158776),
+    H = n(496675),
+    V = n(158776),
     F = n(699516),
     W = n(944486),
     z = n(594174),
@@ -204,7 +204,7 @@ t.Z = (0, f.Z)(function (e) {
         [h, p] = (0, c.Wu)([D.Z], () => [D.Z.getCurrentUserActiveStream(), D.Z.getStreamerActiveStreamMetadata()]),
         m = (0, c.e7)([g.Z], () => g.Z.useReducedMotion),
         f = (0, c.e7)([x.ZP], () => (null != u ? x.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
-        v = (0, c.e7)([G.Z, V.Z, U.ZP], () => (null != o ? y.JL(o, G.Z, V.Z, !1) : null != n && y.h_(U.ZP.getChannels(n), G.Z, V.Z).length > 0)),
+        v = (0, c.e7)([G.Z, H.Z, U.ZP], () => (null != o ? y.JL(o, G.Z, H.Z, !1) : null != n && y.h_(U.ZP.getChannels(n), G.Z, H.Z).length > 0)),
         [E] = (0, I.Z)([
             null !==
                 (t = (function () {
@@ -218,7 +218,7 @@ t.Z = (0, f.Z)(function (e) {
         S = (0, c.e7)([x.ZP], () => x.ZP.getCurrentEmbeddedActivity()),
         N = (0, _.Z0)() && null != S && (0, C.R)(),
         A = (0, c.e7)([B.Z], () => (0, T.Z)(B.Z) && (0, K.isWindows)()),
-        j = (0, c.e7)([H.Z], () => (null != r ? H.Z.findActivity(r, (e) => e.type === $.IIU.PLAYING) : null)),
+        j = (0, c.e7)([V.Z], () => (null != r ? V.Z.findActivity(r, (e) => e.type === $.IIU.PLAYING) : null)),
         R = null != h && h.ownerId === r && h.state !== $.jm8.ENDED,
         L = (0, c.e7)([z.default, F.Z], () => (null != u ? (0, b.F6)(u, z.default, F.Z) : void 0)),
         w = (0, M.Z)();

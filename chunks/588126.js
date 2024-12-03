@@ -6,7 +6,7 @@ var i = n(192379),
 t.Z = function (e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         [n, a] = i.useState(),
-        { categories: o, purchases: c } = (0, l.ZP)();
+        { categories: o, purchases: c } = (0, l.Z)();
     return (
         i.useEffect(() => {
             (null == n || 0 === n.size) && a(o);

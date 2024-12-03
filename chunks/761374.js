@@ -33,7 +33,7 @@ function C(e) {
             height: 'number' == typeof t.height ? t.height : 144
         },
         T = (0, l.e7)([p.Z], () => p.Z.getVoiceChannelId()),
-        { width: k, height: w, ref: L } = (0, s.Z)(),
+        { width: k, height: L, ref: w } = (0, s.Z)(),
         A = (0, l.e7)(
             [f.Z],
             () => {
@@ -94,7 +94,7 @@ function C(e) {
                     tileWidth: u
                 }
             );
-        })(!1, P, null != k ? k : y - O, null != w ? w : j - O, b ? v.C5.HORIZONTAL : v.C5.VERTICAL),
+        })(!1, P, null != k ? k : y - O, null != L ? L : j - O, b ? v.C5.HORIZONTAL : v.C5.VERTICAL),
         F = {
             id: n,
             width: y,
@@ -193,7 +193,7 @@ function C(e) {
         : (0, i.jsx)('div', {
               className: g.goLiveGridContainer,
               style: { opacity: S },
-              ref: L,
+              ref: w,
               children: (0, i.jsx)(m.Z, {
                   widgetId: n,
                   tileWidth: W,

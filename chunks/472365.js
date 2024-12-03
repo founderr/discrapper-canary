@@ -150,7 +150,7 @@ function O(e) {
     let { guild: w, channel: O, inviter: k, target_application: U } = f,
         G = null != w,
         B = null != f.stage_instance,
-        V = null == f.guild && null == f.channel && null != f.inviter;
+        H = null == f.guild && null == f.channel && null != f.inviter;
     if (null != U) (t = null == w ? void 0 : w.name), (n = v.Z.createFromServer(U).getCoverImageURL(1024));
     else if (null != w)
         (t = w.name),
@@ -159,10 +159,10 @@ function O(e) {
                 splash: w.splash
             }));
     else if (((null == (t = O.name) || '' === t) && null != k && (t = k.username), null == t)) throw Error('no name for group DM invite');
-    let H = (0, C.yU)(),
+    let V = (0, C.yU)(),
         F = B ? P.intl.string(P.t['5UKyUl']) : P.intl.format(P.t.QD7BDA, { guildName: t });
     return (
-        V && (F = P.intl.string(P.t['e/6Ogo'])),
+        H && (F = P.intl.string(P.t['e/6Ogo'])),
         (0, i.jsx)(d.Gt, {
             value: E,
             children: (0, i.jsxs)(s.ModalRoot, {
@@ -201,10 +201,10 @@ function O(e) {
                                         : null,
                                     (0, i.jsxs)('div', {
                                         children: [
-                                            H ? (0, i.jsx)(L, {}) : null,
+                                            V ? (0, i.jsx)(L, {}) : null,
                                             null == U
                                                 ? (0, i.jsx)(s.Tooltip, {
-                                                      text: H ? P.intl.string(P.t.iLyuDA) : null,
+                                                      text: V ? P.intl.string(P.t.iLyuDA) : null,
                                                       position: 'bottom',
                                                       children: (e) => {
                                                           let { onMouseEnter: t, onMouseLeave: n } = e;
@@ -212,11 +212,11 @@ function O(e) {
                                                               size: h.zx.Sizes.LARGE,
                                                               onClick: j,
                                                               submitting: I,
-                                                              disabled: H,
+                                                              disabled: V,
                                                               color: B ? h.zx.Colors.GREEN : h.zx.Colors.BRAND,
                                                               onMouseEnter: t,
                                                               onMouseLeave: n,
-                                                              children: H ? P.intl.string(P.t.ZNCziI) : F
+                                                              children: V ? P.intl.string(P.t.ZNCziI) : F
                                                           });
                                                       }
                                                   })

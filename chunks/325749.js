@@ -1,76 +1,76 @@
 t.d(n, {
     Z: function () {
-        return E;
+        return k;
     }
 }),
     t(47120);
 var i = t(200651),
-    o = t(192379),
+    r = t(192379),
     a = t(120356),
-    r = t.n(a),
-    c = t(442837),
-    l = t(481060),
-    d = t(13245),
-    s = t(753972),
-    u = t(812206),
-    _ = t(726721),
-    f = t(610394),
-    p = t(390322),
-    v = t(961048),
-    b = t(871499),
-    h = t(786915),
-    m = t(592125),
-    x = t(271383),
+    l = t.n(a),
+    o = t(442837),
+    d = t(481060),
+    c = t(13245),
+    u = t(753972),
+    s = t(812206),
+    p = t(726721),
+    v = t(610394),
+    m = t(390322),
+    f = t(961048),
+    h = t(871499),
+    x = t(786915),
+    Z = t(592125),
+    I = t(271383),
     C = t(594174),
-    g = t(51144),
-    I = t(145597),
-    k = t(214629),
-    Z = t(317381),
-    y = t(884338),
-    N = t(473179),
-    S = t(981631),
-    j = t(388032),
-    z = t(124062);
-let A = y.u.SIZE_24;
-function E(e) {
+    _ = t(51144),
+    j = t(145597),
+    g = t(214629),
+    P = t(317381),
+    A = t(884338),
+    S = t(473179),
+    N = t(981631),
+    b = t(388032),
+    y = t(124062);
+let T = A.u.SIZE_24;
+function k(e) {
     let { applicationId: n, channelId: t } = e,
-        a = (0, c.e7)([u.Z], () => u.Z.getApplication(n)),
-        E = (0, c.e7)([Z.ZP], () => Z.ZP.getSelfEmbeddedActivities().get(n)),
-        W = (0, c.e7)([m.Z], () => m.Z.getChannel(t)),
-        B = (0, c.Wu)(
-            [x.ZP],
+        a = (0, o.e7)([s.Z], () => s.Z.getApplication(n)),
+        k = (0, o.e7)([P.ZP], () => P.ZP.getSelfEmbeddedActivities().get(n)),
+        w = (0, o.e7)([Z.Z], () => Z.Z.getChannel(t)),
+        E = (0, o.Wu)(
+            [I.ZP],
             () => {
                 var e;
-                return null == W || null == E ? [] : Array.from(null !== (e = E.userIds) && void 0 !== e ? e : []).map((e) => x.ZP.getMember(W.guild_id, e));
+                return null == w || null == k ? [] : Array.from(null !== (e = k.userIds) && void 0 !== e ? e : []).map((e) => I.ZP.getMember(w.guild_id, e));
             },
-            [E, W]
+            [k, w]
         ),
-        P = o.useMemo(() => {
+        R = r.useMemo(() => {
             let e = new Map();
             return (
-                B.forEach((n) => {
+                E.forEach((n) => {
                     null != n && void 0 !== n && e.set(n.userId, n);
                 }),
                 e
             );
-        }, [B]),
-        w = o.useCallback(
+        }, [E]),
+        L = r.useCallback(
             (e, n) => {
                 var t;
                 if (null == e || void 0 === e || void 0 === n) return null;
-                let o = P.get(e.id),
-                    a = null !== (t = null == o ? void 0 : o.nick) && void 0 !== t ? t : g.ZP.getName(e);
+                let r = R.get(e.id),
+                    a = null !== (t = null == r ? void 0 : r.nick) && void 0 !== t ? t : _.ZP.getName(e);
                 return (0, i.jsx)(
-                    l.TooltipContainer,
+                    d.TooltipContainer,
                     {
                         text: a,
                         position: 'bottom',
                         children: (0, i.jsx)(
                             'img',
                             {
-                                src: e.getAvatarURL(n.guild_id, A),
+                                src: e.getAvatarURL(n.guild_id, T),
                                 alt: a,
-                                className: z.avatar
+                                className: y.avatar
                             },
                             e.id
                         )
@@ -78,89 +78,89 @@ function E(e) {
                     e.id
                 );
             },
-            [P]
+            [R]
         ),
-        L = null == E ? void 0 : E.userIds,
-        R = (0, c.Wu)(
+        O = null == k ? void 0 : k.userIds,
+        B = (0, o.Wu)(
             [C.default],
             () =>
-                Array.from(null != L ? L : [])
+                Array.from(null != O ? O : [])
                     .map((e) => C.default.getUser(e))
                     .filter((e) => null != e && void 0 !== e),
-            [L]
+            [O]
         ),
-        T = _.Z.useExperiment({ location: 'activity_popout_overflow_menu' }, { autoTrackExposure: !1 }).enabled,
-        U = o.useCallback(() => {
-            let e = (0, I.QF)();
-            d.Z.setInputLocked(!f.Z.isInputLocked(e), e);
+        M = p.Z.useExperiment({ location: 'activity_popout_overflow_menu' }, { autoTrackExposure: !1 }).enabled,
+        U = r.useCallback(() => {
+            let e = (0, j.QF)();
+            c.Z.setInputLocked(!v.Z.isInputLocked(e), e);
         }, []),
-        O = (0, k.PR)();
-    return null == a || null == t || null == W
+        z = (0, g.PR)();
+    return null == a || null == t || null == w
         ? null
-        : (0, i.jsx)(l.ThemeProvider, {
-              theme: S.BRd.DARK,
+        : (0, i.jsx)(d.ThemeProvider, {
+              theme: N.BRd.DARK,
               children: (e) =>
                   (0, i.jsxs)('div', {
-                      className: r()(z.container, e),
+                      className: l()(y.container, e),
                       children: [
                           (0, i.jsxs)('div', {
-                              className: r()(z.headerSection, z.headerSectionLeft),
+                              className: l()(y.headerSection, y.headerSectionLeft),
                               children: [
-                                  (0, i.jsx)(s.Z, {
+                                  (0, i.jsx)(u.Z, {
                                       application: a,
                                       size: 24,
-                                      className: z.appIcon
+                                      className: y.appIcon
                                   }),
-                                  (0, i.jsx)(l.Text, {
+                                  (0, i.jsx)(d.Text, {
                                       variant: 'text-md/normal',
                                       color: 'header-primary',
                                       children: a.name
                                   }),
                                   (0, i.jsx)('div', {
-                                      className: z.dotSpacer,
-                                      children: (0, i.jsx)(l.Text, {
+                                      className: y.dotSpacer,
+                                      children: (0, i.jsx)(d.Text, {
                                           variant: 'text-md/normal',
                                           color: 'text-muted',
                                           children: '.'
                                       })
                                   }),
-                                  (0, i.jsx)(y.Z, {
+                                  (0, i.jsx)(A.Z, {
                                       renderIcon: !1,
-                                      users: R,
-                                      size: A,
+                                      users: B,
+                                      size: T,
                                       max: 6,
-                                      className: z.userAvatars,
-                                      renderUser: (e) => w(e, W)
+                                      className: y.userAvatars,
+                                      renderUser: (e) => L(e, w)
                                   })
                               ]
                           }),
                           (0, i.jsx)('div', {
-                              className: r()(z.headerSection, z.headerSectionRight),
+                              className: l()(y.headerSection, y.headerSectionRight),
                               children: (0, i.jsxs)('div', {
-                                  className: z.actionButtonsContainer,
+                                  className: y.actionButtonsContainer,
                                   children: [
-                                      (0, i.jsx)(h.Z, {
-                                          appContext: S.IlC.POPOUT,
+                                      (0, i.jsx)(x.Z, {
+                                          appContext: N.IlC.POPOUT,
                                           applicationId: n,
-                                          channel: W,
+                                          channel: w,
                                           shouldPrioritizeGroupPlusIcon: !0
                                       }),
-                                      O
-                                          ? (0, i.jsx)(b.Z, {
+                                      z
+                                          ? (0, i.jsx)(h.Z, {
                                                 onClick: U,
-                                                iconComponent: l.WindowTopOutlineIcon,
-                                                label: j.intl.string(j.t.mseZsL)
+                                                iconComponent: d.WindowTopOutlineIcon,
+                                                label: b.intl.string(b.t.mseZsL)
                                             })
                                           : null,
-                                      T &&
+                                      M &&
                                           (0, i.jsx)(
-                                              l.Popout,
+                                              d.Popout,
                                               {
                                                   position: 'bottom',
                                                   renderPopout: (e) => {
                                                       let { closePopout: n } = e;
-                                                      return (0, i.jsx)(p.Z, {
-                                                          children: (0, i.jsx)(N.Z, {
+                                                      return (0, i.jsx)(m.Z, {
+                                                          children: (0, i.jsx)(S.Z, {
                                                               application: a,
                                                               channelId: t,
                                                               onClose: n
@@ -169,7 +169,7 @@ function E(e) {
                                                   },
                                                   children: (e, n) => {
                                                       let { isShown: t } = n;
-                                                      return (0, o.createElement)(v.Z, {
+                                                      return (0, r.createElement)(f.Z, {
                                                           ...e,
                                                           key: 'more-options',
                                                           isActive: t

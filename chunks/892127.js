@@ -1,61 +1,61 @@
 var i = n(200651),
-    l = n(192379),
-    o = n(120356),
-    r = n.n(o),
+    o = n(192379),
+    l = n(120356),
+    r = n.n(l),
     s = n(442837),
     a = n(765250),
     u = n(13245),
-    d = n(355863),
-    c = n(237997),
+    c = n(355863),
+    d = n(237997),
     h = n(451478),
     f = n(434529),
     p = n(145597),
     m = n(830917),
-    g = n(353038),
-    v = n(610394),
+    v = n(353038),
+    g = n(610394),
     E = n(561064),
-    Z = n(981631),
+    x = n(981631),
     C = n(152397);
-t.Z = l.memo(function (e) {
-    let { widget: t, renderWidget: n, renderTitle: o, renderButtons: x, resizeValidation: S } = e,
-        I = d.Z.getWidgetConfig(t.type),
-        _ = (0, s.e7)([c.Z], () => c.Z.isLocked((0, p.QF)())),
+t.Z = o.memo(function (e) {
+    let { widget: t, renderWidget: n, renderTitle: l, renderButtons: Z, resizeValidation: _ } = e,
+        I = c.Z.getWidgetConfig(t.type),
+        S = (0, s.e7)([d.Z], () => d.Z.isLocked((0, p.QF)())),
+        b = (0, E.Z)(),
+        N = (0, s.e7)([h.Z], () => h.Z.windowSize((0, m.ZY)(b))),
         O = (0, E.Z)(),
-        N = (0, s.e7)([h.Z], () => h.Z.windowSize((0, m.ZY)(O))),
-        y = (0, E.Z)(),
-        T = l.useCallback((e, t, n, i, l) => {
-            let o = h.Z.windowSize((0, m.ZY)((0, E.i)())),
-                r = (0, f.jL)(n, o),
-                s = (0, f.Ox)(i, o);
+        y = o.useCallback((e, t, n, i, o) => {
+            let l = h.Z.windowSize((0, m.ZY)((0, E.i)())),
+                r = (0, f.jL)(n, l),
+                s = (0, f.Ox)(i, l);
             (0, a.Os)(t),
                 (0, a.nv)({
                     widgetId: t,
                     anchor: r,
                     size: s
                 });
-            let c = e === g.B.MOVE,
-                p = (0, f.PY)(n, o.width, o.height, l.width, l.height);
-            u.Z.track(Z.rMx.OVERLAY_LAYOUT_UPDATED, {
-                was_resized: !c,
-                was_dragged: c,
-                widget_type: d.Z.getWidgetType(t),
-                window_width: o.width,
-                window_height: o.height,
-                widget_width: l.width,
-                widget_height: l.height,
+            let d = e === v.B.MOVE,
+                p = (0, f.PY)(n, l.width, l.height, o.width, o.height);
+            u.Z.track(x.rMx.OVERLAY_LAYOUT_UPDATED, {
+                was_resized: !d,
+                was_dragged: d,
+                widget_type: c.Z.getWidgetType(t),
+                window_width: l.width,
+                window_height: l.height,
+                widget_width: o.width,
+                widget_height: o.height,
                 widget_left: p.left,
                 widget_top: p.top
             });
         }, []),
-        j = l.useCallback((e) => {
+        j = o.useCallback((e) => {
             (0, a.Os)(e);
         }, []),
-        { id: b, pinned: L, zIndex: R, size: w, anchor: k } = t,
-        A = (0, f.w_)(w, N),
-        M = (0, f.KR)(k, N),
+        { id: T, pinned: k, zIndex: L, size: w, anchor: A } = t,
+        R = (0, f.w_)(w, N),
+        M = (0, f.KR)(A, N),
         { minSize: z, resizeX: D, resizeY: P, dragAnywhere: V } = I,
-        U = L || !_,
-        W = l.useMemo(
+        W = k || !S,
+        U = o.useMemo(
             () => ({
                 minX: 0,
                 minY: 0,
@@ -64,7 +64,7 @@ t.Z = l.memo(function (e) {
             }),
             [N]
         ),
-        F = l.useCallback(
+        F = o.useCallback(
             (e) =>
                 n({
                     ...e,
@@ -72,48 +72,48 @@ t.Z = l.memo(function (e) {
                 }),
             [t, n]
         ),
-        H = l.useCallback(
+        B = o.useCallback(
             (e) =>
-                null != o || null != x
+                null != l || null != Z
                     ? (0, i.jsxs)('div', {
                           className: C.extrasContainer,
-                          children: [null == o ? void 0 : o(t), null == x ? void 0 : x(t, e)]
+                          children: [null == l ? void 0 : l(t), null == Z ? void 0 : Z(t, e)]
                       })
                     : null,
-            [t, o, x]
+            [t, l, Z]
         ),
-        Y = (0, s.e7)([v.Z], () => v.Z.renderDebugMode),
-        G = l.useMemo(() => {
-            if (null != S)
+        H = (0, s.e7)([g.Z], () => g.Z.renderDebugMode),
+        Y = o.useMemo(() => {
+            if (null != _)
                 return (e) =>
-                    S({
+                    _({
                         ...e,
                         widget: t
                     });
-        }, [S, t]);
-    return (0, i.jsx)(g.Z, {
+        }, [_, t]);
+    return (0, i.jsx)(v.Z, {
         className: r()({
-            [C.debug]: Y,
-            [C.debugUnpinned]: Y && !L,
-            [C.debugPinned]: Y && L
+            [C.debug]: H,
+            [C.debugUnpinned]: H && !k,
+            [C.debugPinned]: H && k
         }),
-        id: b,
-        size: A,
+        id: T,
+        size: R,
         anchor: M,
-        container: W,
+        container: U,
         minSize: z,
-        hidden: !U,
-        locked: _,
+        hidden: !W,
+        locked: S,
         resizeX: D,
         resizeY: P,
-        style: { zIndex: R },
+        style: { zIndex: L },
         dragAnywhere: V,
-        active: !_,
-        onUpdate: T,
+        active: !S,
+        onUpdate: y,
         onClick: j,
-        targetWindow: y,
-        renderExtras: H,
-        resizeValidation: G,
+        targetWindow: O,
+        renderExtras: B,
+        resizeValidation: Y,
         children: F
     });
 });

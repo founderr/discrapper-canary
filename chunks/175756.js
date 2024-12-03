@@ -5,7 +5,7 @@ var i = n(192379),
     l = n(223143);
 t.Z = (e) => {
     let [t, n] = i.useState(),
-        { categories: a } = (0, l.ZP)();
+        { categories: a } = (0, l.Z)();
     return (
         i.useEffect(() => {
             (null == t || 0 === t.size) && n(a);

@@ -151,7 +151,7 @@ function D(e) {
     let { transitionState: t, analyticsLocations: n, onClose: d, onCloseModal: f, initialSelectedDecoration: p, initialSelectedDecorationId: h, isTryItOutFlow: m, guild: g } = e,
         E = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
         { analyticsLocations: T } = (0, u.ZP)(n, l.Z.EDIT_AVATAR_DECORATION_MODAL),
-        { categories: b, purchases: S, isFetchingCategories: y, isFetchingPurchases: N } = (0, _.ZP)(),
+        { categories: b, purchases: S, isFetchingCategories: y, isFetchingPurchases: N } = (0, _.Z)(),
         C = y || (N && 0 === S.size);
     return (
         i.useEffect(() => {

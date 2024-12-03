@@ -72,7 +72,7 @@ function k(e) {
         }
     });
 }
-function w(e) {
+function L(e) {
     let { hasActiveStream: t, participant: o, onEnablePin: l } = e,
         a = (0, p.bp)(),
         c = o.user,
@@ -187,11 +187,11 @@ function w(e) {
         ]
     });
 }
-let L = new Set([y.jm8.ENDED, y.jm8.FAILED, y.jm8.PAUSED]),
+let w = new Set([y.jm8.ENDED, y.jm8.FAILED, y.jm8.PAUSED]),
     A = o.memo(function (e) {
         let { participant: t, width: n, locked: o, widgetId: l, pinned: a } = e,
             u = (0, s.e7)([_.Z], () => _.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [t.user.id, t.stream.guildId]),
-            c = null != u && L.has(u.state),
+            c = null != u && w.has(u.state),
             d = null != u,
             f = (0, O.yA)(t.stream),
             p = (0, O.xN)(t.stream);
@@ -234,7 +234,7 @@ let L = new Set([y.jm8.ENDED, y.jm8.FAILED, y.jm8.PAUSED]),
                             }),
                       o
                           ? null
-                          : (0, i.jsx)(w, {
+                          : (0, i.jsx)(L, {
                                 participant: t,
                                 hasActiveStream: d,
                                 onEnablePin: () => {

@@ -47,8 +47,8 @@ var i,
     U = n(429122),
     G = n(285573),
     B = n(995993),
-    V = n(910595),
-    H = n(466935),
+    H = n(910595),
+    V = n(466935),
     F = n(120818),
     W = n(61642),
     z = n(848442),
@@ -484,7 +484,7 @@ class es extends (i = r.PureComponent) {
                             );
                         case et.z.GUILD_HOME:
                             return (0, l.jsx)(
-                                V.Z,
+                                H.Z,
                                 {
                                     guild: i,
                                     selected: o === el.oC.GUILD_HOME
@@ -521,7 +521,7 @@ class es extends (i = r.PureComponent) {
                             );
                         case et.z.GUILD_MEMBER_APPLICATIONS:
                             return (0, l.jsx)(
-                                H.Z,
+                                V.Z,
                                 {
                                     guild: i,
                                     selected: o === el.oC.MEMBER_APPLICATIONS

@@ -105,7 +105,7 @@ let O = c.ZP.connectStores([I.ZP, _.Z], (e) => {
             n = _.Z.getDMFromUserId(t.id);
         return { mentions: null != n ? I.ZP.getMentionCount(n) : 0 };
     })(T.n5);
-function V(e, t, n) {
+function H(e, t, n) {
     return (0, l.jsx)(
         u.Tooltip,
         {
@@ -120,7 +120,7 @@ function V(e, t, n) {
         e
     );
 }
-class H extends r.PureComponent {
+class V extends r.PureComponent {
     componentDidMount() {
         p.Z.disable(), p.Z.enableTemp(h.u);
     }
@@ -207,10 +207,10 @@ class H extends r.PureComponent {
             className: o()(R.protip, { [R.hasContent]: this.state.query.length > 0 }),
             type: g.Z.Types.INLINE,
             children: P.intl.format(P.t.wukqXV, {
-                userSymbolHook: (e, t) => V(t, m.xQ.USER, P.intl.string(P.t.GQRCGh)),
-                textChannelSymbolHook: (e, t) => V(t, m.xQ.TEXT_CHANNEL, P.intl.string(P.t.wrwhub)),
-                voiceChannelSymbolHook: (e, t) => V(t, m.xQ.VOICE_CHANNEL, P.intl.string(P.t['jz+hJi'])),
-                guildSymbolHook: (e, t) => V(t, m.xQ.GUILD, P.intl.string(P.t.WuwCWl)),
+                userSymbolHook: (e, t) => H(t, m.xQ.USER, P.intl.string(P.t.GQRCGh)),
+                textChannelSymbolHook: (e, t) => H(t, m.xQ.TEXT_CHANNEL, P.intl.string(P.t.wrwhub)),
+                voiceChannelSymbolHook: (e, t) => H(t, m.xQ.VOICE_CHANNEL, P.intl.string(P.t['jz+hJi'])),
+                guildSymbolHook: (e, t) => H(t, m.xQ.GUILD, P.intl.string(P.t.WuwCWl)),
                 helpdeskArticle: Z.Z.getArticleURL(j.BhN.QUICK_SWITCHER_TUTORIAL)
             })
         });
@@ -534,7 +534,7 @@ class H extends r.PureComponent {
 }
 function F(e) {
     let t = (0, c.cj)([y.Z], () => y.Z.getProps());
-    return (0, l.jsx)(H, {
+    return (0, l.jsx)(V, {
         ...t,
         ...e
     });

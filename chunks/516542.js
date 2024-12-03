@@ -1,66 +1,66 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return v;
     }
 }),
     n(47120);
 var i = n(200651),
-    l = n(192379),
-    o = n(904245),
+    o = n(192379),
+    l = n(904245),
     r = n(13245),
     s = n(655687),
     a = n(541716),
     u = n(752305),
-    d = n(893718),
-    c = n(957730),
+    c = n(893718),
+    d = n(957730),
     h = n(849522),
     f = n(145597),
     p = n(981631),
     m = n(640784);
-function g(e) {
-    let { id: t, channel: n, onSend: g } = e,
-        v = (0, h.Z)(),
-        { placeholder: E, accessibilityLabel: Z } = (0, s.Z)(n),
-        [C, x] = l.useState(() => (0, u.H2)()),
-        { textValue: S, richValue: I } = C,
-        [_, O] = l.useState(!1),
-        N = l.useCallback(() => O(!0), []),
-        y = l.useCallback(() => O(!1), []),
-        T = l.useCallback((e, t, n) => {
-            x({
+function v(e) {
+    let { id: t, channel: n, onSend: v } = e,
+        g = (0, h.Z)(),
+        { placeholder: E, accessibilityLabel: x } = (0, s.Z)(n),
+        [C, Z] = o.useState(() => (0, u.H2)()),
+        { textValue: _, richValue: I } = C,
+        [S, b] = o.useState(!1),
+        N = o.useCallback(() => b(!0), []),
+        O = o.useCallback(() => b(!1), []),
+        y = o.useCallback((e, t, n) => {
+            Z({
                 textValue: t,
                 richValue: n
             });
         }, []),
-        j = l.useCallback(
+        j = o.useCallback(
             () =>
-                S.length > v
+                _.length > g
                     ? Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !0
                       })
-                    : (o.Z.sendMessage(n.id, c.ZP.parse(n, S), !1),
+                    : (l.Z.sendMessage(n.id, d.ZP.parse(n, _), !1),
                       r.Z.setInputLocked(!0, (0, f.QF)()),
                       r.Z.updateNotificationStatus(t, p._1z.DISMISSED),
-                      null == g || g(S),
+                      null == v || v(_),
                       Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !0
                       })),
-            [S, v, n, t, g]
+            [_, g, n, t, v]
         );
-    return (0, i.jsx)(d.Z, {
+    return (0, i.jsx)(c.Z, {
         innerClassName: m.textArea,
-        onChange: T,
+        onChange: y,
         placeholder: E,
-        accessibilityLabel: Z,
+        accessibilityLabel: x,
         channel: n,
-        textValue: S,
+        textValue: _,
         richValue: I,
         type: a.I.OVERLAY_INLINE_REPLY,
-        onBlur: y,
+        onBlur: O,
         onFocus: N,
-        focused: _,
+        focused: S,
         onSubmit: j,
         autoCompletePosition: 'bottom',
         disableThemedBackground: !0

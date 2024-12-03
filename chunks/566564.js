@@ -33,7 +33,7 @@ var r = n(200651),
 t.Z = (e) => {
     var t, n, i, O, w, A;
     let { handleTransition: R, numVisibleItems: H } = e,
-        { categories: F, isFetchingCategories: D, fetchCategoriesError: V, fetchPurchasesError: M, claimError: W, refreshCategories: U } = (0, k.ZP)(),
+        { categories: F, isFetchingCategories: D, fetchCategoriesError: V, fetchPurchasesError: M, claimError: W, refreshCategories: U } = (0, k.Z)(),
         G = null !== (t = null != V ? V : M) && void 0 !== t ? t : W,
         z = Array.from(F.values()),
         K = (0, o.e7)([p.default], () => p.default.getCurrentUser()),

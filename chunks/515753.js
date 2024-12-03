@@ -46,8 +46,8 @@ var i = n(200651),
     U = n(709054),
     G = n(998502),
     B = n(788307),
-    V = n(981631),
-    H = n(388032),
+    H = n(981631),
+    V = n(388032),
     F = n(926540);
 let W = G.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
     z = {
@@ -169,7 +169,7 @@ function J(e) {
             null != e && (e.preventDefault(), e.stopPropagation()), m.Z.closePrivateChannel(r.id, d, t);
         },
         ef = () => {
-            m.Z.preload(V.ME, r.id);
+            m.Z.preload(H.ME, r.id);
         },
         eg = (e) => {
             e.stopPropagation();
@@ -208,9 +208,9 @@ function J(e) {
         },
         ev = (e) => {
             e.preventDefault(), e.stopPropagation();
-            let t = H.intl.formatToPlainString(H.t.hJ5Ap6, { name: eu }),
-                l = H.intl.format(H.t.SSIVOj, { name: eu });
-            r.isManaged() && ((t = H.intl.formatToPlainString(H.t.hVGjER, { name: eu })), (l = H.intl.format(H.t.IK1Qvr, { name: eu }))),
+            let t = V.intl.formatToPlainString(V.t.hJ5Ap6, { name: eu }),
+                l = V.intl.format(V.t.SSIVOj, { name: eu });
+            r.isManaged() && ((t = V.intl.formatToPlainString(V.t.hVGjER, { name: eu })), (l = V.intl.format(V.t.IK1Qvr, { name: eu }))),
                 (0, p.openModalLazy)(async () => {
                     let { default: e } = await n.e('14604').then(n.bind(n, 960670));
                     return (n) =>
@@ -231,14 +231,14 @@ function J(e) {
             return r.isSystemDM()
                 ? (0, i.jsx)('div', {
                       className: F.subtext,
-                      children: (0, v.Z)(r.id) ? H.intl.string(H.t.FL5T09) : H.intl.string(H.t.NnY5lZ)
+                      children: (0, v.Z)(r.id) ? V.intl.string(V.t.FL5T09) : V.intl.string(V.t.NnY5lZ)
                   })
                 : r.isMultiUserDM()
                   ? (0, i.jsx)('div', {
                         className: F.subtext,
-                        children: H.intl.format(H.t.CxSA5O, { members: r.recipients.length + 1 })
+                        children: V.intl.format(V.t.CxSA5O, { members: r.recipients.length + 1 })
                     })
-                  : U !== V.Skl.OFFLINE && U !== V.Skl.INVISIBLE && null != R && R.length > 0
+                  : U !== H.Skl.OFFLINE && U !== H.Skl.INVISIBLE && null != R && R.length > 0
                     ? (0, i.jsx)(B.ZP, {
                           ...e,
                           activities: R,
@@ -270,13 +270,13 @@ function J(e) {
                           src: (0, I.x)(r),
                           'aria-hidden': !0,
                           size: e,
-                          status: k ? V.Skl.ONLINE : U,
+                          status: k ? H.Skl.ONLINE : U,
                           isTyping: k
                       });
             s()(null != T, 'PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel');
             let t = null;
             return (
-                !T.isSystemUser() && (t = (0, g.Z)(R) ? V.Skl.STREAMING : U),
+                !T.isSystemUser() && (t = (0, g.Z)(R) ? H.Skl.STREAMING : U),
                 (0, i.jsx)(W, {
                     ...er,
                     size: p.AvatarSizes.SIZE_32,
@@ -293,7 +293,7 @@ function J(e) {
         eb = r.isMultiUserDM(),
         eE = r.isSystemDM(),
         eS = (0, j.Q)(),
-        eZ = !eb && !eE && r.type === V.d4z.DM,
+        eZ = !eb && !eE && r.type === H.d4z.DM,
         eN = eZ && (null == T ? void 0 : T.clan) != null,
         ey = eZ && eo,
         eT = eZ && es,
@@ -343,7 +343,7 @@ function J(e) {
                     children: [
                         (0, i.jsx)(c.rU, {
                             innerRef: et,
-                            to: V.Z5c.CHANNEL(V.ME, r.id),
+                            to: H.Z5c.CHANNEL(H.ME, r.id),
                             className: F.link,
                             'aria-label': (0, x.ZP)({
                                 channel: r,
@@ -373,7 +373,7 @@ function J(e) {
                         ey ? (0, i.jsx)(q, {}) : null,
                         eT ? (0, i.jsx)(Q, {}) : null,
                         (0, i.jsx)(Y, {
-                            'aria-label': eb ? H.intl.string(H.t['26C4oq']) : H.intl.string(H.t.jsvgc3),
+                            'aria-label': eb ? V.intl.string(V.t['26C4oq']) : V.intl.string(V.t.jsvgc3),
                             onClick: eb ? ev : em,
                             onMouseDown: eg
                         })
@@ -395,7 +395,7 @@ t.ZP = (e) => {
                 if (t.isMultiUserDM()) {
                     if (a) {
                         let n = M.Z.getState().statuses;
-                        t.recipients.some((e) => n[e] === V.Skl.ONLINE) && (e = V.Skl.ONLINE);
+                        t.recipients.some((e) => n[e] === H.Skl.ONLINE) && (e = H.Skl.ONLINE);
                     }
                 } else null != c && (e = M.Z.getStatus(c));
                 return {
@@ -428,7 +428,7 @@ t.ZP = (e) => {
               channel: t,
               selected: n,
               isTyping: d,
-              status: u.status === V.Skl.ONLINE ? V.Skl.ONLINE : void 0,
+              status: u.status === H.Skl.ONLINE ? H.Skl.ONLINE : void 0,
               isGDMFacepileEnabled: s,
               ...l
           })

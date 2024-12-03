@@ -104,12 +104,12 @@ t.ZP = (e) => {
                 });
         },
         B = N.intl.formatToPlainString(N.t['2oNfMT'], { levelName: (0, v.e9)(P) }),
-        V = N.intl.format(N.t.dhKnYm, {
+        H = N.intl.format(N.t.dhKnYm, {
             numBoosts: u,
             numTotal: (0, v.vn)(t.id)[P]
         });
-    j && ((B = (0, v.e9)(P)), (V = N.intl.format(N.t.B2byER, { numBoosts: u })));
-    let H = (0, s.JA)('boosts-'.concat(t.id));
+    j && ((B = (0, v.e9)(P)), (H = N.intl.format(N.t.B2byER, { numBoosts: u })));
+    let V = (0, s.JA)('boosts-'.concat(t.id));
     return (0, i.jsx)('li', {
         children: (0, i.jsx)(d.Tooltip, {
             text: j ? N.intl.string(N.t['Y+V9go']) : N.intl.formatToPlainString(N.t.UyDKl5, { levelName: (0, v.nW)(P) }),
@@ -119,7 +119,7 @@ t.ZP = (e) => {
             hideOnClick: !0,
             children: (e) =>
                 (0, i.jsxs)(d.Clickable, {
-                    ...H,
+                    ...V,
                     ...e,
                     'aria-label': void 0,
                     role: 'button',
@@ -164,7 +164,7 @@ t.ZP = (e) => {
                                         (0, i.jsx)(d.Text, {
                                             color: 'interactive-normal',
                                             variant: 'text-xs/normal',
-                                            children: V
+                                            children: H
                                         }),
                                         (0, i.jsx)(_.Z, {
                                             className: y.count,
