@@ -1,60 +1,60 @@
 n.d(t, {
     BP: function () {
-        return H;
-    },
-    DK: function () {
-        return B;
-    },
-    G3: function () {
-        return _;
-    },
-    Ho: function () {
-        return k;
-    },
-    Ib: function () {
-        return p;
-    },
-    P8: function () {
-        return y;
-    },
-    PJ: function () {
-        return U;
-    },
-    Rp: function () {
-        return G;
-    },
-    Uq: function () {
-        return P;
-    },
-    Y4: function () {
-        return M;
-    },
-    hn: function () {
-        return h;
-    },
-    iA: function () {
-        return L;
-    },
-    ib: function () {
-        return A;
-    },
-    lh: function () {
         return Y;
     },
-    mF: function () {
-        return V;
+    DK: function () {
+        return G;
     },
-    ub: function () {
-        return R;
+    G3: function () {
+        return p;
     },
-    v1: function () {
-        return w;
+    Ho: function () {
+        return U;
     },
-    x6: function () {
+    Ib: function () {
+        return h;
+    },
+    P8: function () {
+        return A;
+    },
+    PJ: function () {
+        return B;
+    },
+    Rp: function () {
+        return Z;
+    },
+    Uq: function () {
+        return M;
+    },
+    Y4: function () {
+        return k;
+    },
+    hn: function () {
+        return m;
+    },
+    iA: function () {
         return x;
     },
-    zi: function () {
+    ib: function () {
+        return N;
+    },
+    lh: function () {
+        return W;
+    },
+    mF: function () {
         return j;
+    },
+    ub: function () {
+        return O;
+    },
+    v1: function () {
+        return P;
+    },
+    x6: function () {
+        return w;
+    },
+    zi: function () {
+        return H;
     }
 }),
     n(47120),
@@ -64,51 +64,52 @@ var r = n(392711),
     a = n.n(i),
     s = n(859334),
     o = n(594174),
-    l = n(70956),
-    u = n(709054),
-    c = n(849464),
-    d = n(765305),
-    f = n(388032);
-let _ = 365,
-    p = 366,
-    h = 4,
-    m = [s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday],
-    g = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday],
-    E = [s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
-    v = [s.Ci.SA.weekday, s.Ci.SU.weekday],
-    I = [s.Ci.FR.weekday, s.Ci.SA.weekday],
-    T = [s.Ci.SU.weekday, s.Ci.MO.weekday],
-    b = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
-    S = new Set([0, 6]);
-function y(e) {
+    l = n(55935),
+    u = n(70956),
+    c = n(709054),
+    d = n(849464),
+    f = n(765305),
+    _ = n(388032);
+let p = 365,
+    h = 366,
+    m = 4,
+    g = [s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday],
+    E = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday],
+    v = [s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
+    I = [s.Ci.SA.weekday, s.Ci.SU.weekday],
+    T = [s.Ci.FR.weekday, s.Ci.SA.weekday],
+    b = [s.Ci.SU.weekday, s.Ci.MO.weekday],
+    S = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
+    y = new Set([0, 6]);
+function A(e) {
     var t;
     let n = e.toDate(),
         r = Math.ceil(n.getDate() / 7),
         i = e.format('dddd'),
         a = [
             {
-                value: c.z.NONE,
-                label: f.intl.string(f.t['0bK0Bw'])
+                value: d.z.NONE,
+                label: _.intl.string(_.t['0bK0Bw'])
             },
             {
-                value: c.z.WEEKLY,
-                label: f.intl.formatToPlainString(f.t['B8/yfn'], { weekday: i })
+                value: d.z.WEEKLY,
+                label: _.intl.formatToPlainString(_.t['B8/yfn'], { weekday: i })
             },
             {
-                value: c.z.BIWEEKLY,
-                label: f.intl.formatToPlainString(f.t['z+aIub'], { weekday: i })
+                value: d.z.BIWEEKLY,
+                label: _.intl.formatToPlainString(_.t['z+aIub'], { weekday: i })
             },
             {
-                value: c.z.MONTHLY,
-                label: f.intl.formatToPlainString(f.t.mjOEBg, {
+                value: d.z.MONTHLY,
+                label: _.intl.formatToPlainString(_.t.mjOEBg, {
                     nth: r,
                     weekday: i
                 })
             },
             {
-                value: c.z.YEARLY,
-                label: f.intl.formatToPlainString(f.t['5DFcVl'], {
-                    date: n.toLocaleString(f.intl.currentLocale, {
+                value: d.z.YEARLY,
+                label: _.intl.formatToPlainString(_.t['5DFcVl'], {
+                    date: n.toLocaleString(_.intl.currentLocale, {
                         month: 'short',
                         day: '2-digit'
                     })
@@ -116,44 +117,47 @@ function y(e) {
             }
         ];
     return (
-        S.has(n.getDay())
+        y.has(n.getDay())
             ? (null === (t = o.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) &&
               a.push({
-                  value: c.z.WEEKEND_ONLY,
-                  label: f.intl.string(f.t.hRpynZ)
+                  value: d.z.WEEKEND_ONLY,
+                  label: _.intl.string(_.t.hRpynZ)
               })
             : a.push({
-                  value: c.z.WEEKDAY_ONLY,
-                  label: f.intl.string(f.t['jYR/MT'])
+                  value: d.z.WEEKDAY_ONLY,
+                  label: _.intl.string(_.t['jYR/MT'])
               }),
         a
     );
 }
-let A = () => {
+let N = () => {
         let e = a()().add(1, 'hour'),
             t = e.hour();
         return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0);
     },
-    N = (e, t) => e.format(e.get('years') === t.get('years') ? 'ddd MMM Do \xB7 LT' : 'ddd MMM Do, YYYY \xB7 LT'),
-    C = (e, t) => (e.diff(t, 'days') > 1 ? N(e, t) : e.calendar(t));
-function R(e, t, n) {
+    C = (e, t) => (0, l.vc)(e, e.get('years') === t.get('years') ? 'ddd MMM Do \xB7 LT' : 'ddd MMM Do, YYYY \xB7 LT'),
+    R = (e, t) => {
+        let n = (0, l.wY)(e.toDate(), t.toDate());
+        return n > 1 || n < 0 ? C(e, t) : (0, l.vc)(e, e.localeData().calendar(n < 1 ? 'sameDay' : 'nextDay', e, t));
+    };
+function O(e, t, n) {
     null == n && (n = a()());
     let r = a()(e),
         i = null != t && '' !== t ? a()(t) : void 0,
         s = null != t && r.isSame(i, 'day');
     return {
-        startDateTimeString: C(r, n),
-        endDateTimeString: null != i ? (s ? i.format('LT') : N(i, n)) : void 0,
+        startDateTimeString: R(r, n),
+        endDateTimeString: null != i ? (s ? i.format('LT') : C(i, n)) : void 0,
         currentOrPastEvent: r <= n,
         upcomingEvent: r <= a()().add(1, 'hour'),
         withinStartWindow: r <= a()().add(15, 'minute'),
         diffMinutes: r.diff(n, 'minutes')
     };
 }
-function O(e) {
-    return new s.OG(b[e]);
+function D(e) {
+    return new s.OG(S[e]);
 }
-function D(e, t) {
+function L(e, t) {
     let n;
     return (
         null != e &&
@@ -165,18 +169,18 @@ function D(e, t) {
         n
     );
 }
-function L(e, t) {
+function x(e, t) {
     let n = (function (e) {
-            return D(e.scheduled_start_time, e.scheduled_end_time);
+            return L(e.scheduled_start_time, e.scheduled_end_time);
         })(t),
-        r = a()(u.default.extractTimestamp(e)),
+        r = a()(c.default.extractTimestamp(e)),
         i = (null == n ? void 0 : n.endDate) != null ? r.clone().add(n.endDate.diff(n.startDate)) : void 0;
     return {
         startDate: r,
         endDate: i
     };
 }
-function x(e, t) {
+function w(e, t) {
     var n;
     if (null == t) return e;
     let r = null !== (n = t.scheduled_end_time) && void 0 !== n ? n : e.endDate;
@@ -185,16 +189,16 @@ function x(e, t) {
         endDate: null != r ? a()(r) : void 0
     };
 }
-function w(e) {
-    return D(e.scheduledStartTime, e.scheduledEndTime);
-}
-function P(e, t) {
-    return null == e || null == t ? null == e && null == t : e.isSame(t);
+function P(e) {
+    return L(e.scheduledStartTime, e.scheduledEndTime);
 }
 function M(e, t) {
-    return null == e || null == t ? null == e && null == t : P(e.startDate, t.startDate) && P(e.endDate, t.endDate);
+    return null == e || null == t ? null == e && null == t : e.isSame(t);
 }
-function k(e) {
+function k(e, t) {
+    return null == e || null == t ? null == e && null == t : M(e.startDate, t.startDate) && M(e.endDate, t.endDate);
+}
+function U(e) {
     var t;
     let n = null != e.byWeekday ? [...e.byWeekday] : null,
         r = null === (t = e.byNWeekday) || void 0 === t ? void 0 : t.map((e) => new s.OG(e.day, e.n)),
@@ -214,13 +218,13 @@ function k(e) {
         })
     );
 }
-function U(e, t, n) {
+function B(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = [],
         a = n;
     a.setMilliseconds(0);
     let s = new Date();
-    s.setFullYear(s.getFullYear() + h);
+    s.setFullYear(s.getFullYear() + m);
     for (let n = 0; n < e && a < s; n++) {
         let e = t.after(a, 0 === n && !r);
         if (null == e) break;
@@ -228,16 +232,16 @@ function U(e, t, n) {
     }
     return i;
 }
-function B(e) {
+function G(e) {
     var t;
     if (null == e) return null;
     let n = null == (t = e).recurrence_rule ? null : new Date(t.scheduled_start_time);
-    return null != n ? u.default.fromTimestamp(Math.floor(n.getTime() / l.Z.Millis.SECOND) * l.Z.Millis.SECOND) : null;
+    return null != n ? c.default.fromTimestamp(Math.floor(n.getTime() / u.Z.Millis.SECOND) * u.Z.Millis.SECOND) : null;
 }
-function G(e, t) {
+function Z(e, t) {
     if (null == t || null == e) return !1;
     let n = new Date(e.start),
-        r = new Date(u.default.extractTimestamp(t));
+        r = new Date(c.default.extractTimestamp(t));
     if (n.getUTCHours() !== r.getUTCHours() || n.getUTCMinutes() !== r.getUTCMinutes() || n.getUTCSeconds() !== r.getUTCSeconds()) return !1;
     switch (e.frequency) {
         case s.Ci.WEEKLY:
@@ -248,55 +252,55 @@ function G(e, t) {
             return !0;
     }
 }
-function Z(e) {
-    let t = O(e.toDate().getDay()),
-        n = O(e.toDate().getUTCDay());
-    return n.weekday - t.weekday > 0 ? E : n.weekday - t.weekday < 0 ? g : m;
-}
 function F(e) {
-    let t = O(e.toDate().getDay()),
-        n = O(e.toDate().getUTCDay());
-    return n.weekday - t.weekday > 0 ? T : n.weekday - t.weekday < 0 ? I : v;
+    let t = D(e.toDate().getDay()),
+        n = D(e.toDate().getUTCDay());
+    return n.weekday - t.weekday > 0 ? v : n.weekday - t.weekday < 0 ? E : g;
 }
-function V(e, t) {
+function V(e) {
+    let t = D(e.toDate().getDay()),
+        n = D(e.toDate().getUTCDay());
+    return n.weekday - t.weekday > 0 ? b : n.weekday - t.weekday < 0 ? T : I;
+}
+function j(e, t) {
     let n = (function (e, t) {
-        let n = Z(t),
-            r = F(t),
-            i = O(t.toDate().getUTCDay()),
+        let n = F(t),
+            r = V(t),
+            i = D(t.toDate().getUTCDay()),
             a = Math.ceil(t.toDate().getUTCDate() / 7),
             o = t.toDate();
         switch ((o.setMilliseconds(0), e)) {
-            case c.z.NONE:
+            case d.z.NONE:
                 return null;
-            case c.z.WEEKLY:
+            case d.z.WEEKLY:
                 return new s.Ci({
                     dtstart: o,
                     freq: s.Ci.WEEKLY
                 });
-            case c.z.BIWEEKLY:
+            case d.z.BIWEEKLY:
                 return new s.Ci({
                     dtstart: o,
                     freq: s.Ci.WEEKLY,
                     interval: 2
                 });
-            case c.z.MONTHLY:
+            case d.z.MONTHLY:
                 return new s.Ci({
                     dtstart: o,
                     freq: s.Ci.MONTHLY,
                     byweekday: [i.nth(a)]
                 });
-            case c.z.YEARLY:
+            case d.z.YEARLY:
                 return new s.Ci({
                     dtstart: o,
                     freq: s.Ci.YEARLY
                 });
-            case c.z.WEEKDAY_ONLY:
+            case d.z.WEEKDAY_ONLY:
                 return new s.Ci({
                     dtstart: o,
                     freq: s.Ci.DAILY,
                     byweekday: n
                 });
-            case c.z.WEEKEND_ONLY:
+            case d.z.WEEKEND_ONLY:
                 return new s.Ci({
                     dtstart: o,
                     freq: s.Ci.DAILY,
@@ -305,7 +309,7 @@ function V(e, t) {
         }
     })(e, t);
     if (null == n) return null;
-    let { dtstart: r, until: i, freq: a, interval: o, byweekday: l, bynweekday: u, bymonth: d, bymonthday: f, byyearday: _, count: p } = n.options,
+    let { dtstart: r, until: i, freq: a, interval: o, byweekday: l, bynweekday: u, bymonth: c, bymonthday: f, byyearday: _, count: p } = n.options,
         h =
             null == u
                 ? void 0
@@ -320,34 +324,34 @@ function V(e, t) {
         interval: o,
         byWeekday: l,
         byNWeekday: h,
-        byMonth: d,
+        byMonth: c,
         byMonthDay: f,
         byYearDay: _,
         count: p
     };
 }
-function j(e, t) {
-    if (null == t) return c.z.NONE;
-    let n = k(t);
+function H(e, t) {
+    if (null == t) return d.z.NONE;
+    let n = U(t);
     switch (n.options.freq) {
         case s.Ci.WEEKLY:
-            if (n.options.interval < 1 || n.options.interval > 2) return c.z.NONE;
-            return 1 === n.options.interval ? c.z.WEEKLY : c.z.BIWEEKLY;
+            if (n.options.interval < 1 || n.options.interval > 2) return d.z.NONE;
+            return 1 === n.options.interval ? d.z.WEEKLY : d.z.BIWEEKLY;
         case s.Ci.YEARLY:
-            return c.z.YEARLY;
+            return d.z.YEARLY;
         case s.Ci.MONTHLY:
-            return c.z.MONTHLY;
+            return d.z.MONTHLY;
         case s.Ci.DAILY:
-            if ((0, r.isEqual)(n.options.byweekday, Z(e))) return c.z.WEEKDAY_ONLY;
-            if ((0, r.isEqual)(n.options.byweekday, F(e))) return c.z.WEEKEND_ONLY;
-            return c.z.NONE;
+            if ((0, r.isEqual)(n.options.byweekday, F(e))) return d.z.WEEKDAY_ONLY;
+            if ((0, r.isEqual)(n.options.byweekday, V(e))) return d.z.WEEKEND_ONLY;
+            return d.z.NONE;
         default:
-            return c.z.NONE;
+            return d.z.NONE;
     }
 }
-function H(e, t) {
+function Y(e, t) {
     return (null == e ? void 0 : e.scheduled_start_time) !== t.scheduledStartTime || e.scheduled_end_time !== t.scheduledEndTime || !(0, r.isEqual)(e.recurrence_rule, t.recurrenceRule);
 }
-function Y(e, t, n) {
-    return (null == e ? void 0 : e.is_canceled) ? d.p1.CANCELED : t < n ? d.p1.COMPLETED : null != e ? d.p1.SCHEDULED : null;
+function W(e, t, n) {
+    return (null == e ? void 0 : e.is_canceled) ? f.p1.CANCELED : t < n ? f.p1.COMPLETED : null != e ? f.p1.SCHEDULED : null;
 }

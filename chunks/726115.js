@@ -1,36 +1,36 @@
 n.d(t, {
     Ew: function () {
-        return g;
-    },
-    Iv: function () {
-        return v;
-    },
-    Mf: function () {
-        return _;
-    },
-    PM: function () {
-        return b;
-    },
-    QW: function () {
-        return h;
-    },
-    Uv: function () {
-        return E;
-    },
-    Xp: function () {
-        return I;
-    },
-    a$: function () {
-        return p;
-    },
-    lg: function () {
         return m;
     },
-    vL: function () {
+    Iv: function () {
+        return E;
+    },
+    Mf: function () {
+        return f;
+    },
+    PM: function () {
         return T;
     },
+    QW: function () {
+        return p;
+    },
+    Uv: function () {
+        return g;
+    },
+    Xp: function () {
+        return v;
+    },
+    a$: function () {
+        return _;
+    },
+    lg: function () {
+        return h;
+    },
+    vL: function () {
+        return I;
+    },
     vb: function () {
-        return f;
+        return d;
     }
 }),
     n(411104),
@@ -44,42 +44,61 @@ var r = n(772848),
 n(275131), n(356164);
 var l = n(128449),
     u = n(981631),
-    c = n(731455),
-    d = n(388032);
+    c = n(388032);
+function d(e) {
+    switch (e) {
+        case l.vf.FEATURED:
+            return c.intl.string(c.t['RU+DCQ']);
+        case l.vf.GAMING:
+            return c.intl.string(c.t['CD/USE']);
+        case l.vf.MUSIC:
+            return c.intl.string(c.t.nt9PLy);
+        case l.vf.ENTERTAINMENT:
+            return c.intl.string(c.t.gSbmdn);
+        case l.vf.TECH:
+            return c.intl.string(c.t['0A0By8']);
+        case l.vf.EDUCATION:
+            return c.intl.string(c.t.Gy9woq);
+        case l.vf.HUBS:
+            return c.intl.string(c.t['q469/f']);
+    }
+}
 function f(e) {
     switch (e) {
         case l.vf.FEATURED:
-            return d.intl.string(d.t['RU+DCQ']);
+            return c.intl.string(c.t.OlDfzM);
         case l.vf.GAMING:
-            return d.intl.string(d.t['CD/USE']);
+            return c.intl.string(c.t['CD/USE']);
         case l.vf.MUSIC:
-            return d.intl.string(d.t.nt9PLy);
+            return c.intl.string(c.t.nt9PLy);
         case l.vf.ENTERTAINMENT:
-            return d.intl.string(d.t.gSbmdn);
+            return c.intl.string(c.t.gSbmdn);
         case l.vf.TECH:
-            return d.intl.string(d.t['0A0By8']);
+            return c.intl.string(c.t['0A0By8']);
         case l.vf.EDUCATION:
-            return d.intl.string(d.t.Gy9woq);
+            return c.intl.string(c.t.Gy9woq);
         case l.vf.HUBS:
-            return d.intl.string(d.t['q469/f']);
+            return c.intl.string(c.t.X5xPlZ);
+        default:
+            throw Error('[getGlobalDiscoveryServerTabTitle] Unsupported tab: '.concat(e));
     }
 }
 function _(e) {
     switch (e) {
         case l.vf.FEATURED:
-            return d.intl.string(d.t.OlDfzM);
+            return c.intl.string(c.t.SdMhrq);
         case l.vf.GAMING:
-            return d.intl.string(d.t['CD/USE']);
+            return c.intl.string(c.t.AAJ5oq);
         case l.vf.MUSIC:
-            return d.intl.string(d.t.nt9PLy);
+            return c.intl.string(c.t['SOio+P']);
         case l.vf.ENTERTAINMENT:
-            return d.intl.string(d.t.gSbmdn);
+            return c.intl.string(c.t.R09vf3);
         case l.vf.TECH:
-            return d.intl.string(d.t['0A0By8']);
+            return c.intl.string(c.t['Ew4d5+']);
         case l.vf.EDUCATION:
-            return d.intl.string(d.t.Gy9woq);
+            return c.intl.string(c.t.sasIWV);
         case l.vf.HUBS:
-            return d.intl.string(d.t.X5xPlZ);
+            return c.intl.string(c.t['F/IQCA']);
         default:
             throw Error('[getGlobalDiscoveryServerTabTitle] Unsupported tab: '.concat(e));
     }
@@ -87,65 +106,45 @@ function _(e) {
 function p(e) {
     switch (e) {
         case l.vf.FEATURED:
-            return d.intl.string(d.t.SdMhrq);
+            return c.intl.string(c.t.crt84e);
         case l.vf.GAMING:
-            return d.intl.string(d.t.AAJ5oq);
+            return c.intl.string(c.t.fWbIpa);
         case l.vf.MUSIC:
-            return d.intl.string(d.t['SOio+P']);
+            return c.intl.string(c.t.nfgDz8);
         case l.vf.ENTERTAINMENT:
-            return d.intl.string(d.t.R09vf3);
+            return c.intl.string(c.t.k1CYxs);
         case l.vf.TECH:
-            return d.intl.string(d.t['Ew4d5+']);
+            return c.intl.string(c.t['4dawpq']);
         case l.vf.EDUCATION:
-            return d.intl.string(d.t.sasIWV);
-        case l.vf.HUBS:
-            return d.intl.string(d.t['F/IQCA']);
+            return c.intl.string(c.t.uexPgY);
         default:
-            throw Error('[getGlobalDiscoveryServerTabTitle] Unsupported tab: '.concat(e));
+            return null;
     }
 }
 function h(e) {
     switch (e) {
         case l.vf.FEATURED:
-            return d.intl.string(d.t.crt84e);
+            return l.Hk;
         case l.vf.GAMING:
-            return d.intl.string(d.t.fWbIpa);
+            return l.Gj.Activity;
         case l.vf.MUSIC:
-            return d.intl.string(d.t.nfgDz8);
+            return l.Gj.Music;
         case l.vf.ENTERTAINMENT:
-            return d.intl.string(d.t.k1CYxs);
+            return l.Gj.Television;
         case l.vf.TECH:
-            return d.intl.string(d.t['4dawpq']);
+            return l.Gj.Science;
         case l.vf.EDUCATION:
-            return d.intl.string(d.t.uexPgY);
-        default:
-            return null;
-    }
-}
-function m(e) {
-    switch (e) {
-        case l.vf.FEATURED:
-            return c.Hk;
-        case l.vf.GAMING:
-            return c.Gj.Activity;
-        case l.vf.MUSIC:
-            return c.Gj.Music;
-        case l.vf.ENTERTAINMENT:
-            return c.Gj.Television;
-        case l.vf.TECH:
-            return c.Gj.Science;
-        case l.vf.EDUCATION:
-            return c.Gj.Education;
+            return l.Gj.Education;
         case l.vf.HUBS:
-            return c.gU;
+            return l.gU;
         default:
             (0, s.vE)(e);
     }
 }
-function g(e) {
+function m(e) {
     return null == e || Date.now() - e > l.AF;
 }
-function E(e) {
+function g(e) {
     return {
         id: e.id,
         name: e.name,
@@ -163,7 +162,7 @@ function E(e) {
         emojiCount: e.emoji_count
     };
 }
-function v(e) {
+function E(e) {
     return {
         id: e.id,
         name: e.name,
@@ -180,14 +179,14 @@ function v(e) {
         emojis: []
     };
 }
-function I() {
+function v() {
     var e;
     let [t] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [i.default],
-        n = (0, c.Cf)(),
+        n = (0, l.Cf)(),
         r = t.locale;
     return (null !== (e = n.find((e) => e.code === r)) && void 0 !== e ? e : n[0]).code;
 }
-async function T(e) {
+async function I(e) {
     let { loadId: t, guildId: n, index: r, categoryId: i, analyticsLocation: s, options: l } = e,
         c = {
             ...l,
@@ -202,6 +201,6 @@ async function T(e) {
             location: s
         });
 }
-function b() {
+function T() {
     return (0, r.Z)().replace(/-/g, '');
 }

@@ -1,13 +1,13 @@
 n(47120);
 var i = n(544891),
-    r = n(401919),
-    l = n(900849),
-    a = n(999916),
-    s = n(762692),
-    o = n(331114),
-    c = n(356164),
-    d = n(164991),
-    u = n(981631);
+    r = n(900849),
+    l = n(999916),
+    a = n(762692),
+    s = n(331114),
+    o = n(356164),
+    c = n(164991),
+    d = n(981631),
+    u = n(231338);
 function h(e, t, n) {
     return (
         t in e
@@ -21,18 +21,22 @@ function h(e, t, n) {
         e
     );
 }
-class m {}
-class p extends m {
+let m = function () {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '';
+    return e.split(' ').some((e) => u.sL.includes(e.toLowerCase()));
+};
+class p {}
+class g extends p {
     constructor(...e) {
         super(...e),
             h(
                 this,
                 'isValidSearchQuery',
                 async (e) =>
-                    !(0, r.x)(e) &&
+                    !m(e) &&
                     (
                         await i.tn.get({
-                            url: u.ANM.GUILD_DISCOVERY_VALID_TERM,
+                            url: d.ANM.GUILD_DISCOVERY_VALID_TERM,
                             query: { term: e },
                             oldFormErrors: !0,
                             rejectWithError: !1
@@ -40,13 +44,13 @@ class p extends m {
                     ).body.valid
             ),
             h(this, 'fetch', async (e) => {
-                let { query: t, categoryId: n, languageCode: i, offset: r } = e;
-                await s.Z.fetchAlgoliaSearchResults(t, {
+                let { query: t, categoryId: n, languageCode: i, offset: l } = e;
+                await a.Z.fetchAlgoliaSearchResults(t, {
                     categoryId: n,
                     languageCode: i,
-                    offset: r,
+                    offset: l,
                     length: 12,
-                    filters: { approximate_member_count: l.sq }
+                    filters: { approximate_member_count: r.sq }
                 });
             }),
             h(this, 'loadMoreCategoryResults', async (e) => {
@@ -70,31 +74,31 @@ class p extends m {
                 });
             }),
             h(this, 'loadCategoryResultsAndCounts', async (e) => {
-                let { loadId: t, query: n, categoryId: i, languageCode: r } = e;
-                if (c.Z.getIsBlocked(n) || !(await this.isValidSearchQuery(n))) {
-                    s.Z.handleBlockedSearchQuery(n);
+                let { loadId: t, query: n, categoryId: i, languageCode: l } = e;
+                if (o.Z.getIsBlocked(n) || !(await this.isValidSearchQuery(n))) {
+                    a.Z.handleBlockedSearchQuery(n);
                     return;
                 }
-                await s.Z.fetchAlgoliaSearchResultCounts({
+                await a.Z.fetchAlgoliaSearchResultCounts({
                     query: n,
-                    algoliaFilters: { approximate_member_count: l.sq }
+                    algoliaFilters: { approximate_member_count: r.sq }
                 }),
                     await this.fetch({
                         loadId: t,
                         categoryId: i,
                         query: n,
-                        languageCode: r,
+                        languageCode: l,
                         offset: 0
                     });
             });
     }
 }
-class g extends m {
+class f extends p {
     constructor(...e) {
         super(...e),
             h(this, 'loadMoreCategoryResults', async (e) => {
                 let { query: t, categoryId: n, languageCode: i, offset: r } = e;
-                await s.Z.fetchSearchResults(t, {
+                await a.Z.fetchSearchResults(t, {
                     categoryId: n,
                     languageCode: i,
                     offset: r,
@@ -104,7 +108,7 @@ class g extends m {
             }),
             h(this, 'loadCategoryResults', async (e) => {
                 let { query: t, categoryId: n, languageCode: i } = e;
-                await s.Z.fetchSearchResults(t, {
+                await a.Z.fetchSearchResults(t, {
                     categoryId: n,
                     languageCode: i,
                     offset: 0,
@@ -114,7 +118,7 @@ class g extends m {
             }),
             h(this, 'loadCategoryResultsAndCounts', async (e) => {
                 let { query: t, categoryId: n, languageCode: i } = e;
-                await s.Z.fetchSearchResults(t, {
+                await a.Z.fetchSearchResults(t, {
                     categoryId: n,
                     languageCode: i,
                     offset: 0,
@@ -124,24 +128,24 @@ class g extends m {
             });
     }
 }
-t.Z = new (class e extends m {
+t.Z = new (class e extends p {
     get manager() {
-        return (0, a.P)({ location: 'GlobalDiscoverySearchManagerImpl' }) ? this._backendSearchManager : this._algoliaSearchManager;
+        return (0, l.P)({ location: 'GlobalDiscoverySearchManagerImpl' }) ? this._backendSearchManager : this._algoliaSearchManager;
     }
     constructor(...e) {
         super(...e),
-            h(this, '_backendSearchManager', new g()),
-            h(this, '_algoliaSearchManager', new p()),
+            h(this, '_backendSearchManager', new f()),
+            h(this, '_algoliaSearchManager', new g()),
             h(this, 'loadMoreCategoryResults', async (e) => {
                 let { query: t, categoryId: n, languageCode: i } = e;
                 if (
-                    !c.Z.getIsFetching({
+                    !o.Z.getIsFetching({
                         query: t,
                         categoryId: n,
                         languageCode: i
                     })
                 )
-                    c.Z.getIsInitialFetchComplete({
+                    o.Z.getIsInitialFetchComplete({
                         query: t,
                         categoryId: n,
                         languageCode: i
@@ -149,12 +153,12 @@ t.Z = new (class e extends m {
             }),
             h(this, 'loadCategoryResults', async (e) => {
                 let { query: t, categoryId: n, languageCode: i } = e,
-                    r = c.Z.getIsFetching({
+                    r = o.Z.getIsFetching({
                         query: t,
                         categoryId: n,
                         languageCode: i
                     }),
-                    l = c.Z.getIsInitialFetchComplete({
+                    l = o.Z.getIsInitialFetchComplete({
                         query: t,
                         categoryId: n,
                         languageCode: i
@@ -164,17 +168,17 @@ t.Z = new (class e extends m {
             h(this, 'loadCategoryResultsAndCounts', async (e) => {
                 let { query: t, loadId: n, categoryId: i } = e;
                 if ('' === t.trim()) return;
-                let r = o.Z.getIsFetchingCounts(t),
-                    a = o.Z.getIsFetchingCounts(t);
-                !r &&
+                let l = s.Z.getIsFetchingCounts(t),
+                    a = s.Z.getIsFetchingCounts(t);
+                !l &&
                     !a &&
-                    (d.Z.setState({
+                    (c.Z.setState({
                         fetchedQuery: t,
                         resultsQuery: ''
                     }),
-                    l.tI(n, i),
+                    r.tI(n, i),
                     await this.manager.loadCategoryResultsAndCounts(e),
-                    d.Z.setState({ resultsQuery: t }));
+                    c.Z.setState({ resultsQuery: t }));
             });
     }
 })();

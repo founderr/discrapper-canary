@@ -1,0 +1,164 @@
+n(47120);
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(780384),
+    o = n(481060),
+    c = n(410030),
+    d = n(686546),
+    u = n(372769),
+    m = n(134432),
+    h = n(768581),
+    g = n(624138),
+    x = n(388032),
+    p = n(965624),
+    f = n(129512),
+    C = n(330065);
+let _ = [16, 16, 14, 14, 12, 10, 8];
+t.Z = function (e) {
+    var t, n;
+    let { guild: l, disabled: v, small: I, loading: N = !1, description: T, memberCount: j, presenceCount: b, className: S } = e,
+        E = (0, c.ZP)(),
+        [R, y] = r.useState(!1);
+    if (null == l || N)
+        return (0, i.jsx)('div', {
+            className: s()(S, p.card, p.cardPlaceholder, {
+                [p.cardSmall]: I,
+                [p.cardDisabled]: v
+            })
+        });
+    let { name: Z } = l,
+        A =
+            null != l.discoverySplash && /^data:/.test(l.discoverySplash)
+                ? l.discoverySplash
+                : h.ZP.getGuildDiscoverySplashURL({
+                      id: l.id,
+                      splash: l.discoverySplash,
+                      size: 240 * (0, m.x_)()
+                  }),
+        L = (0, a.wj)(E) ? f : C,
+        D =
+            null !==
+                (t = h.ZP.getGuildIconURL({
+                    id: l.id,
+                    icon: l.icon,
+                    size: 40
+                })) && void 0 !== t
+                ? t
+                : void 0,
+        O = null != l.description ? l.description : T,
+        k = null != j ? j : null == l ? void 0 : l.memberCount,
+        P = null != b ? b : null == l ? void 0 : l.presenceCount,
+        M = null;
+    if (null != D)
+        M = (0, i.jsx)('img', {
+            src: D,
+            alt: '',
+            className: p.avatar
+        });
+    else {
+        let e = (0, g.Zg)(l.name);
+        M = (0, i.jsx)('div', {
+            className: p.defaultIcon,
+            children: (0, i.jsx)(o.Text, {
+                className: p.acronym,
+                style: { fontSize: null !== (n = _[e.length]) && void 0 !== n ? n : _[_.length - 1] },
+                variant: 'text-sm/normal',
+                children: e
+            })
+        });
+    }
+    return (0, i.jsxs)('div', {
+        className: s()(S, p.card, {
+            [p.cardSmall]: I,
+            [p.cardDisabled]: v,
+            [p.splashLoaded]: R
+        }),
+        children: [
+            (0, i.jsxs)('div', {
+                className: p.cardHeader,
+                children: [
+                    (0, i.jsx)('div', {
+                        className: p.splash,
+                        children: (0, i.jsx)('img', {
+                            src: null != A ? A : L,
+                            alt: '',
+                            className: p.splashImage,
+                            onLoad: () => y(!0)
+                        })
+                    }),
+                    (0, i.jsx)('div', {
+                        className: p.guildIcon,
+                        children: (0, i.jsx)(d.ZP, {
+                            mask: d.ZP.Masks.SQUIRCLE,
+                            width: 48,
+                            height: 48,
+                            children: (0, i.jsx)('div', {
+                                className: p.iconMask,
+                                children: (0, i.jsx)(d.ZP, {
+                                    mask: d.ZP.Masks.SQUIRCLE,
+                                    width: 40,
+                                    height: 40,
+                                    children: null != M ? M : null
+                                })
+                            })
+                        })
+                    })
+                ]
+            }),
+            (0, i.jsxs)('div', {
+                className: p.guildInfo,
+                children: [
+                    (0, i.jsxs)('div', {
+                        className: p.title,
+                        children: [
+                            (0, i.jsx)(u.Z, {
+                                className: p.verifiedIcon,
+                                guild: l,
+                                tooltipColor: o.Tooltip.Colors.PRIMARY
+                            }),
+                            (0, i.jsx)(o.Text, {
+                                className: p.guildName,
+                                variant: 'text-md/normal',
+                                children: (0, i.jsx)('span', { children: Z })
+                            })
+                        ]
+                    }),
+                    (0, i.jsx)(o.Text, {
+                        className: p.description,
+                        variant: 'text-sm/normal',
+                        children: (0, i.jsx)('span', { children: O })
+                    }),
+                    (0, i.jsxs)('div', {
+                        className: p.memberInfo,
+                        children: [
+                            null != P &&
+                                (0, i.jsxs)('div', {
+                                    className: p.memberCount,
+                                    children: [
+                                        (0, i.jsx)('div', { className: p.dotOnline }),
+                                        (0, i.jsx)(o.Text, {
+                                            variant: 'text-xs/normal',
+                                            children: I ? x.intl.formatToPlainString(x.t.YMor7u, { count: P }) : x.intl.formatToPlainString(x.t['LC+S+v'], { membersOnline: P })
+                                        })
+                                    ]
+                                }),
+                            null != k &&
+                                (0, i.jsxs)('div', {
+                                    className: p.memberCount,
+                                    children: [
+                                        (0, i.jsx)('div', { className: p.dotOffline }),
+                                        (0, i.jsx)(o.Text, {
+                                            variant: 'text-xs/normal',
+                                            children: I ? x.intl.formatToPlainString(x.t.YMor7u, { count: k }) : x.intl.formatToPlainString(x.t.zRl6XV, { count: k })
+                                        })
+                                    ]
+                                })
+                        ]
+                    })
+                ]
+            })
+        ]
+    });
+};
