@@ -53,7 +53,7 @@ function D(e) {
         p = (0, _.Dt)(),
         { theme: D } = (0, s.useThemeContext)(),
         N = (0, n.e7)([f.default], () => f.default.getCurrentUser()),
-        { purchases: y } = (0, v.c)(),
+        { purchases: y } = (0, v.c7)(),
         A = null === (t = y.get(h)) || void 0 === t ? void 0 : t.items,
         k = void 0 !== A ? A[0] : void 0,
         { analyticsLocations: E } = (0, c.ZP)(d.Z.PREMIUM_SUBSCRIPTION_APRIL_CAMPAIGN_MODAL),

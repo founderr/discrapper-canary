@@ -30,7 +30,7 @@ async function d(e, t, n, c, d) {
         let a = {
                 url: u.ANM.STORE_PUBLISHED_LISTINGS_SUBSCRIPTION_PLANS(e),
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             },
             o = {};
         null != t && (o.country_code = t), null != n && (o.payment_source_id = n), null != c && (o.include_unpublished = c), null != d && (o.revenue_surface = d), (a.query = o), !s.Z.ipCountryCodeLoaded && (await (0, l.GE)());

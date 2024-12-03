@@ -15,12 +15,12 @@ var r = n(192379),
 let a = '1157412779335090267',
     s = 'a_f979ba5f9c2ba83db3149cc02f489f7c';
 function o() {
-    let { purchases: e } = (0, i.c)();
+    let { purchases: e } = (0, i.c7)();
     return e.get(a);
 }
 function l() {
     let [e, t] = r.useState(),
-        { purchases: n, hasPreviouslyFetched: s } = (0, i.c)(),
+        { purchases: n, hasPreviouslyFetched: s } = (0, i.c7)(),
         o = r.useRef(!1);
     return (
         r.useEffect(() => {

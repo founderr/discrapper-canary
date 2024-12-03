@@ -70,7 +70,7 @@ var i = n(200651),
     eh = n(176505),
     em = n(290511),
     ep = n(415281);
-let eg = 'resizable-sidebar-width',
+let eg = 'resizable-sidebar-width-2',
     ef = (0, c.Un)({
         createPromise: () => Promise.resolve().then(n.bind(n, 267161)),
         webpackId: 267161
@@ -293,7 +293,7 @@ function eU(e) {
         if (E) {
             var e;
             let t = parseInt(null !== (e = h.K.get(eg)) && void 0 !== e ? e : '');
-            Number.isNaN(t) && (t = 264), ek((t = Math.min(Math.max(t, 240), 416)));
+            Number.isNaN(t) && (t = 375), ek((t = Math.min(Math.max(t, 264), 432)));
             let n = (e) => {
                 e.metaKey && 'b' === e.key && T.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
             };
@@ -310,15 +310,15 @@ function eU(e) {
             else {
                 var e;
                 let t = parseInt(null !== (e = h.K.get(eg)) && void 0 !== e ? e : '');
-                Number.isNaN(t) && (t = 264), ek(t);
+                Number.isNaN(t) && (t = 375), ek(t);
             }
         }, [I]);
     let v = r.useRef(null),
         N = r.useCallback((e, t) => {
             var n;
             ek(e);
-            let i = t < 80;
-            T.useAppSidebarState.setState({ isOpen: !i }), t < 240 ? document.body.classList.add(ep.collapsing) : document.body.classList.remove(ep.collapsing);
+            let i = t < 88;
+            T.useAppSidebarState.setState({ isOpen: !i }), t <= 264 ? document.body.classList.add(ep.draggingMin) : document.body.classList.remove(ep.draggingMin), t >= 432 ? document.body.classList.add(ep.draggingMax) : document.body.classList.remove(ep.draggingMax);
             let r = t - e;
             null === (n = v.current) || void 0 === n || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(r / 76), 0.25))), i && ek(76);
         }, []),
@@ -327,11 +327,11 @@ function eU(e) {
         }, []),
         b = r.useCallback((e) => {
             var t;
-            document.body.classList.remove(ep.dragging), document.body.classList.remove(ep.collapsing), null === (t = v.current) || void 0 === t || t.style.setProperty('--custom-overdrag', '0px'), h.K.set(eg, e);
+            document.body.classList.remove(ep.dragging), document.body.classList.remove(ep.draggingMin), document.body.classList.remove(ep.draggingMax), document.body.classList.remove(ep.collapsing), null === (t = v.current) || void 0 === t || t.style.setProperty('--custom-overdrag', '0px'), h.K.set(eg, e);
         }, []),
         x = (0, f.Z)({
-            minDimension: 240,
-            maxDimension: 416,
+            minDimension: 264,
+            maxDimension: 432,
             resizableDomNodeRef: v,
             onElementResize: N,
             onElementResizeStart: S,
