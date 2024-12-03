@@ -49,7 +49,6 @@ n.Z = r.memo(function (e) {
             height: S,
             maxWidth: T,
             maxHeight: R,
-            responsive: !0,
             poster: e,
             naturalWidth: C,
             naturalHeight: S,
@@ -79,8 +78,7 @@ n.Z = r.memo(function (e) {
                       autoPlay: !r,
                       alt: E,
                       zoomThumbnailPlaceholder: t.zoomThumbnailPlaceholder,
-                      onContextMenu: a,
-                      responsive: !0
+                      onContextMenu: a
                   })
                 : (0, i.jsx)('img', {
                       src: O,
