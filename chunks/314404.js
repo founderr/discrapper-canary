@@ -36,8 +36,8 @@ var i = t(200651),
     _ = t(639119),
     O = t(55610),
     A = t(653798),
-    Z = t(553797),
-    R = t(927699),
+    R = t(553797),
+    Z = t(927699),
     M = t(987716),
     w = t(311821),
     L = t(459965),
@@ -98,15 +98,15 @@ function V(e) {
             if ((null == eh ? void 0 : eh.interval) === D.rV.DAY) return (null == eh ? void 0 : eh.interval_count) > 7 ? G.intl.string(G.t.Z1V2cn) : G.intl.string(G.t.MI1rHh);
             return G.intl.string(G.t['+S5lra']);
         }, [eh]),
-        eZ = !ei && (ey || (null != eh && ej && null != Y)),
-        eR = null == q ? void 0 : null === (a = q.find((e) => e.subscriptionPlanId === D.Xh.PREMIUM_MONTH_TIER_2)) || void 0 === a ? void 0 : null === (r = a.discounts) || void 0 === r ? void 0 : null === (t = r.find((e) => e.type === m.eW.SUBSCRIPTION_PLAN)) || void 0 === t ? void 0 : t.amount,
+        eR = !ei && (ey || (null != eh && ej && null != Y)),
+        eZ = null == q ? void 0 : null === (a = q.find((e) => e.subscriptionPlanId === D.Xh.PREMIUM_MONTH_TIER_2)) || void 0 === a ? void 0 : null === (r = a.discounts) || void 0 === r ? void 0 : null === (t = r.find((e) => e.type === m.eW.SUBSCRIPTION_PLAN)) || void 0 === t ? void 0 : t.amount,
         eM = (e, n, t) => {
             if (eu)
                 return (0, i.jsx)(u.FormTitle, {
                     className: W.selectGiftTitle,
                     children: G.intl.string(G.t['3E5hXl'])
                 });
-            if (!eZ)
+            if (!eR)
                 return (0, i.jsx)('div', {
                     className: W.selectPlanChooseTitle,
                     children: G.intl.string(G.t.a19jpa)
@@ -129,7 +129,7 @@ function V(e) {
                     ]
                 });
             }
-            if (t && null != eR && null != eI && T === D.Xh.PREMIUM_MONTH_TIER_2)
+            if (t && null != eZ && null != eI && T === D.Xh.PREMIUM_MONTH_TIER_2)
                 return (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsx)(u.Text, {
@@ -137,7 +137,7 @@ function V(e) {
                             className: W.trialPlanSelectHeader,
                             children: G.intl.format(G.t['nG7g/P'], {
                                 numMonths: null == ef ? void 0 : ef.discount.user_usage_limit,
-                                discountedPrice: (0, y.T4)(eI.amount - eR, eI.currency),
+                                discountedPrice: (0, y.T4)(eI.amount - eZ, eI.currency),
                                 regularPrice: (0, y.T4)(eI.amount, eI.currency)
                             })
                         }),
@@ -170,9 +170,9 @@ function V(e) {
                             selectPlan: eg,
                             selected: (null == eS ? void 0 : eS.id) === e,
                             priceOptions: eE,
-                            shouldShowUpdatedPaymentModal: eZ,
+                            shouldShowUpdatedPaymentModal: eR,
                             isEligibleForDiscount: ey,
-                            discountAmountOff: eR,
+                            discountAmountOff: eZ,
                             isEligibleForTrial: ej
                         },
                         e
@@ -204,7 +204,7 @@ function V(e) {
                         eL && eF(),
                         (() => {
                             if (eo === g.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null != ea)
-                                return (0, i.jsx)(R.Z, {
+                                return (0, i.jsx)(Z.Z, {
                                     sectionTitle: G.intl.string(G.t.B3miEx),
                                     className: W.customGiftMessageWrapper,
                                     innerClassName: W.customGiftMessage,
@@ -274,7 +274,7 @@ function V(e) {
                                               (0, i.jsx)('div', { className: W.selectPlanDivider }),
                                               (0, i.jsx)(A.Ji, {
                                                   label: G.intl.string(G.t.txajQE),
-                                                  value: (0, i.jsx)(Z.Z, {
+                                                  value: (0, i.jsx)(R.Z, {
                                                       price: eb.amount,
                                                       currency: eb.currency,
                                                       intervalType: ei ? null : eS.interval,
@@ -288,7 +288,7 @@ function V(e) {
                                     : null
                         }),
                         !eL && eB(),
-                        !ei && !eZ && X && (0, i.jsx)(d.Z, { message: G.intl.format(G.t.Om31w8, { documentationLink: E.Z.getArticleURL(U.BhN.LOCALIZED_PRICING) }) }),
+                        !ei && !eR && X && (0, i.jsx)(d.Z, { message: G.intl.format(G.t.Om31w8, { documentationLink: E.Z.getArticleURL(U.BhN.LOCALIZED_PRICING) }) }),
                         ei && !eL && (0, i.jsx)(p.Z, { onClose: J })
                     ]
                 })
@@ -299,7 +299,7 @@ function V(e) {
 function K(e) {
     let { onStepChange: n, selectedPlanId: t, paymentSources: l, onBackClick: r, showBackButton: s, planOptions: a, shouldRenderUpdatedPaymentModal: c = !1, isTrial: o } = e,
         { paymentSources: d, selectedPlan: m } = (0, h.usePaymentContext)(),
-        { isGift: p } = (0, x.wD)();
+        { isGift: p, claimableRewards: f } = (0, x.wD)();
     return (
         (l = null != l ? l : d),
         (t = null != t ? t : null == m ? void 0 : m.id),
@@ -311,6 +311,7 @@ function K(e) {
                           onStepChange: n,
                           selectedPlanId: t,
                           isGift: p,
+                          claimableRewards: f,
                           shouldRenderUpdatedPaymentModal: c,
                           isTrial: o
                       })
@@ -324,19 +325,19 @@ function K(e) {
     );
 }
 function z(e) {
-    let { onStepChange: n, selectedPlanId: t, isGift: l, paymentSources: r, shouldRenderUpdatedPaymentModal: s, isTrial: a } = e,
-        c = (0, o.e7)([S.ZP], () => S.ZP.getPremiumTypeSubscription()),
-        { step: d, selectedPlan: m } = (0, h.usePaymentContext)(),
-        { hasEntitlements: p } = (0, L.H)(t, l),
-        x = (null != c && null != c.paymentSourceId) || Object.keys(r).length > 0 || (p && !a);
-    var v = s ? G.intl.string(G.t.PDTjLC) : G.intl.string(G.t.XqMe3N),
-        g = f.h8.ADD_PAYMENT_STEPS;
+    let { onStepChange: n, selectedPlanId: t, isGift: l, claimableRewards: r, paymentSources: s, shouldRenderUpdatedPaymentModal: a, isTrial: c } = e,
+        d = (0, o.e7)([S.ZP], () => S.ZP.getPremiumTypeSubscription()),
+        { step: m, selectedPlan: p } = (0, h.usePaymentContext)(),
+        { hasEntitlements: x } = (0, L.H)(t, l),
+        v = (null != d && null != d.paymentSourceId) || Object.keys(s).length > 0 || (x && !c);
+    var g = a ? G.intl.string(G.t.PDTjLC) : G.intl.string(G.t.XqMe3N),
+        E = f.h8.ADD_PAYMENT_STEPS;
     return (
-        x && (g = f.h8.REVIEW),
-        (0, T.id)(m, l) && d !== f.h8.SELECT_FREE_SKU && (g = f.h8.SELECT_FREE_SKU),
+        v && (E = f.h8.REVIEW),
+        (0, T.id)(p, l, r) && m !== f.h8.SELECT_FREE_SKU && (E = f.h8.SELECT_FREE_SKU),
         (0, i.jsx)(u.Button, {
-            onClick: () => n(g),
-            children: v
+            onClick: () => n(E),
+            children: g
         })
     );
 }
