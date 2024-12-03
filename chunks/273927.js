@@ -177,6 +177,7 @@ function b() {
     return (0, i.jsxs)(p.U, {
         setting: S.s6.RESTRICTED_USERS,
         scrollPosition: x.FY.RESTRICTED_ACCOUNTS,
+        scrollHighlightDelay: 900,
         children: [
             (0, i.jsx)(p.H, {
                 header: E.intl.string(E.t['3wRorq']),
