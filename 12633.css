@@ -13726,7 +13726,7 @@ div.cardContainer_c22357 {
 }
 
 .image_b029da {
-    width: 100%
+    max-width: 100%
 }
 
 .firstPromotionalAvatar_b029da {
@@ -13766,7 +13766,10 @@ div.cardContainer_c22357 {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    width: 32%
+    width: 32%;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
 
 .promotionalAvatar_d84998 {

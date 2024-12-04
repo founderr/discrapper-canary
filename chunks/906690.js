@@ -71,5 +71,9 @@ let g = {
         subheading: (e) => l.intl.formatToPlainString(l.t.IKZTRE, { optionCount: e }),
         gradient: ['#F6CFC6', '#008D4B'],
         getImageUrl: m
+    },
+    planSelectionBanner: {
+        body: (e) => (e > 1 ? l.intl.formatToPlainString(l.t.XMBaKy, { optionCount: e }) : l.intl.string(l.t.pOmOBQ)),
+        getImageUrl: m
     }
 };

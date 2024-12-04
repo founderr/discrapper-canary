@@ -16,12 +16,14 @@ var i = n(442837),
 function f(e) {
     let { maxRewardImageSrc: t, claimableRewards: n, size: f } = e,
         _ = (0, i.e7)([l.default], () => l.default.getCurrentUser()),
-        p = (0, i.e7)([s.Z], () => s.Z.useReducedMotion);
+        p = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
+        h = (0, a.getAvatarSize)(f);
     return n.length > 2
         ? (0, r.jsx)('img', {
               alt: '',
               src: t,
-              className: u.image
+              className: u.image,
+              style: { height: Math.round(1.4 * h) }
           })
         : (0, r.jsxs)('div', {
               className: u.container,
@@ -35,12 +37,14 @@ function f(e) {
                           avatarDecoration: (0, o.Z)(n[0].assetId, f, !p)
                       }),
                   2 === n.length &&
-                      (0, r.jsx)(a.AnimatedAvatar, {
-                          'aria-label': null == _ ? void 0 : _.username,
-                          size: f,
-                          className: u.secondPromotionalAvatar,
-                          src: c,
-                          avatarDecoration: (0, o.Z)(n[1].assetId, f, !p)
+                      (0, r.jsx)('div', {
+                          style: { marginRight: -Math.round(0.321 * h) },
+                          children: (0, r.jsx)(a.AnimatedAvatar, {
+                              'aria-label': null == _ ? void 0 : _.username,
+                              size: f,
+                              src: c,
+                              avatarDecoration: (0, o.Z)(n[1].assetId, f, !p)
+                          })
                       })
               ]
           });
