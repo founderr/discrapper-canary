@@ -75,7 +75,17 @@ function D(e) {
     for (let e of t) for (let t of e) C(t.thread);
     n.forEach(C);
 }
-class L extends (r = u.ZP.Store) {
+function L() {
+    for (let e in T) {
+        let t = T[e];
+        if (null != t && null != t.mostRecentMessage) {
+            let n = m.Z.getMessage(e, t.mostRecentMessage.id);
+            if (null == n) continue;
+            t.mostRecentMessage = n;
+        }
+    }
+}
+class x extends (r = u.ZP.Store) {
     initialize() {
         this.waitFor(h.Z, m.Z);
     }
@@ -96,7 +106,7 @@ class L extends (r = u.ZP.Store) {
     }
 }
 (s = 'ThreadMessageStore'),
-    (a = 'displayName') in (i = L)
+    (a = 'displayName') in (i = x)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -104,7 +114,7 @@ class L extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new L(c.Z, {
+    (t.Z = new x(c.Z, {
         CONNECTION_OPEN: function (e) {
             (b = {}), I.clear(), e.guilds.forEach(A);
         },
@@ -149,6 +159,9 @@ class L extends (r = u.ZP.Store) {
         },
         LOAD_THREADS_SUCCESS: O,
         LOAD_ARCHIVED_THREADS_SUCCESS: O,
+        RELATIONSHIP_ADD: L,
+        RELATIONSHIP_UPDATE: L,
+        RELATIONSHIP_REMOVE: L,
         SEARCH_FINISH: D,
         MOD_VIEW_SEARCH_FINISH: D,
         THREAD_DELETE: function (e) {
