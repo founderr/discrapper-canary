@@ -4,6 +4,7 @@ e.exports = {
     toggledCutoutContainer: 'toggledCutoutContainer_a467e9',
     separatorDot: 'separatorDot_a467e9',
     guildIconContainer: 'guildIconContainer_a467e9',
+    guildName: 'guildName_a467e9',
     guildIcon: 'guildIcon_a467e9',
     voiceChannelNameContainer: 'voiceChannelNameContainer_a467e9',
     channelIcon: 'channelIcon_a467e9',
