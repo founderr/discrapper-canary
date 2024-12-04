@@ -21,13 +21,13 @@ var r = n(200651),
     x = n(561526),
     _ = n(731364);
 function E(e) {
-    let { detectedGame: t, trackClick: n, onInviteResolved: a } = e,
-        [E, v] = i.useState(),
-        I = (0, s.e7)([m.Z], () => {
+    let { detectedGame: t, trackClick: n, onInviteResolved: a, closeModal: E } = e,
+        [v, I] = i.useState(),
+        C = (0, s.e7)([m.Z], () => {
             var e, t;
-            return (null == E ? void 0 : null === (e = E.guild) || void 0 === e ? void 0 : e.id) != null && m.Z.isMember(null == E ? void 0 : null === (t = E.guild) || void 0 === t ? void 0 : t.id);
+            return (null == v ? void 0 : null === (e = v.guild) || void 0 === e ? void 0 : e.id) != null && m.Z.isMember(null == v ? void 0 : null === (t = v.guild) || void 0 === t ? void 0 : t.id);
         }),
-        C = i.useMemo(() => {
+        A = i.useMemo(() => {
             var e;
             return null === (e = t.websites) || void 0 === e
                 ? void 0
@@ -42,17 +42,17 @@ function E(e) {
                 let t = e.split('/').pop();
                 if (null != t) {
                     let e = await (0, u.Z)(t);
-                    !0 !== e.banned && (v(e.invite), null != e.invite && (null == a || a(e.invite)));
+                    !0 !== e.banned && (I(e.invite), null != e.invite && (null == a || a(e.invite)));
                 }
             };
-            null != C && e(C.url);
-        }, [C, a]),
-        null == E || null == E.guild || (!E.guild.features.includes('VERIFIED') && !E.guild.features.includes('PARTNER')))
+            null != A && e(A.url);
+        }, [A, a]),
+        null == v || null == v.guild || (!v.guild.features.includes('VERIFIED') && !v.guild.features.includes('PARTNER')))
     )
         return null;
-    let A = p.ZP.getGuildIconURL({
-        id: E.guild.id,
-        icon: E.guild.icon,
+    let S = p.ZP.getGuildIconURL({
+        id: v.guild.id,
+        icon: v.guild.icon,
         size: 32
     });
     return (0, r.jsxs)('div', {
@@ -69,20 +69,20 @@ function E(e) {
                 children: [
                     (0, r.jsx)('img', {
                         className: _.guildIcon,
-                        src: A,
-                        alt: h.intl.formatToPlainString(h.t.xm6W9P, { guildName: E.guild.name })
+                        src: S,
+                        alt: h.intl.formatToPlainString(h.t.xm6W9P, { guildName: v.guild.name })
                     }),
                     (0, r.jsxs)('div', {
                         className: _.inviteInfo,
                         children: [
                             (0, r.jsx)(c.Text, {
                                 variant: 'text-sm/normal',
-                                children: E.guild.name
+                                children: v.guild.name
                             }),
-                            null != E.approximate_member_count &&
+                            null != v.approximate_member_count &&
                                 (0, r.jsx)(c.Text, {
                                     variant: 'text-xxs/normal',
-                                    children: h.intl.format(h.t.zRl6XV, { count: E.approximate_member_count })
+                                    children: h.intl.format(h.t.zRl6XV, { count: v.approximate_member_count })
                                 })
                         ]
                     })
@@ -91,15 +91,16 @@ function E(e) {
             (0, r.jsx)(c.Button, {
                 color: c.ButtonColors.PRIMARY,
                 onClick: () => {
-                    n(g.as.JoinOfficialServer),
+                    E(),
+                        n(g.as.JoinOfficialServer),
                         d.Z.dispatch({
                             type: 'INVITE_MODAL_OPEN',
-                            invite: E,
-                            code: E.code,
+                            invite: v,
+                            code: v.code,
                             context: f.IlC.APP
                         });
                 },
-                children: I ? h.intl.string(h.t.cEnaW1) : h.intl.string(h.t.XpeFYm)
+                children: C ? h.intl.string(h.t.cEnaW1) : h.intl.string(h.t.XpeFYm)
             })
         ]
     });

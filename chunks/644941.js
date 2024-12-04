@@ -174,7 +174,7 @@ function H(e) {
     });
 }
 function B(e) {
-    let { detectedGame: t, setOfficialGuildInvite: n, trackAction: i } = e;
+    let { detectedGame: t, setOfficialGuildInvite: n, trackAction: i, onClose: a } = e;
     return (0, r.jsxs)('div', {
         className: l()(Z.sidebar, Z.column, Z.gapLg),
         children: [
@@ -192,7 +192,8 @@ function B(e) {
                     (0, r.jsx)(O.Z, {
                         detectedGame: t,
                         trackClick: i,
-                        onInviteResolved: n
+                        onInviteResolved: n,
+                        closeModal: a
                     }),
                     (0, r.jsx)(M.Z, {
                         detectedGame: t,
@@ -315,7 +316,8 @@ t.default = (e) => {
                                   (0, r.jsx)(B, {
                                       detectedGame: R,
                                       setOfficialGuildInvite: L,
-                                      trackAction: k
+                                      trackAction: k,
+                                      onClose: c
                                   })
                               ]
                           })
