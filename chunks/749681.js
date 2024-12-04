@@ -1,8 +1,9 @@
-n.d(t, {
-    u: function () {
-        return u;
-    }
-}),
+n.r(t),
+    n.d(t, {
+        transitionToGlobalDiscovery: function () {
+            return u;
+        }
+    }),
     n(610138),
     n(216116),
     n(78328),
@@ -20,7 +21,7 @@ var i = n(859921),
 function u(e) {
     let t = e.tab;
     switch ((a.Z.setState({ selectedTab: t }), t)) {
-        case o.F$.SERVERS:
+        case o.GlobalDiscoveryTab.SERVERS:
             var n, u;
             let h = e.selectedServersTab;
             return (
@@ -32,11 +33,11 @@ function u(e) {
                     : i.Z.setState({ entrypoint: null !== (u = e.entrypoint) && void 0 !== u ? u : d.Qq.UNKNOWN }),
                 (0, s.uL)(l.Z5c.GLOBAL_DISCOVERY_SERVERS, e.extra)
             );
-        case o.F$.APPS:
+        case o.GlobalDiscoveryTab.APPS:
             if (null != e.applicationId) {
-                if (e.section === c.Wc.STORE) {
+                if (e.section === c.GlobalDiscoveryAppsSections.STORE) {
                     if (null != e.skuId) return (0, s.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(e.applicationId, e.skuId));
-                    return (0, s.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(e.applicationId, c.Wc.STORE));
+                    return (0, s.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(e.applicationId, c.GlobalDiscoveryAppsSections.STORE));
                 }
                 return (0, s.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e.applicationId));
             }
@@ -45,7 +46,7 @@ function u(e) {
                 return '' !== e.query && t.set('q', e.query), null != e.categoryId && t.set('category_id', e.categoryId.toString()), null != e.page && t.set('page', e.page.toString()), (0, s.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, { search: t.toString() });
             } else if (null != e.categoryId) return (0, s.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(e.categoryId.toString()));
             else return (0, s.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS);
-        case o.F$.QUESTS:
+        case o.GlobalDiscoveryTab.QUESTS:
             return (0, r.navigateToQuestHome)(e.location, e.questContent, e.questId);
         default:
             throw Error('[transitionToGlobalDiscovery] Unhandled tab type: '.concat(t));

@@ -1,9 +1,9 @@
 n.d(t, {
     F: function () {
-        return R;
+        return L;
     },
     P: function () {
-        return Z;
+        return P;
     }
 }),
     n(47120),
@@ -15,60 +15,66 @@ var i = n(200651),
     o = n(241159),
     s = n(558381),
     c = n(812206),
-    d = n(307643),
-    u = n(171246),
-    m = n(263519),
-    h = n(592125),
-    f = n(509545),
-    p = n(238),
-    _ = n(55563),
-    g = n(551428),
-    E = n(626135),
-    C = n(572004),
-    I = n(601911),
-    x = n(504211),
-    N = n(381961),
-    v = n(970321),
-    T = n(680005),
-    S = n(981631),
-    A = n(272242),
-    b = n(388032),
-    j = n(94913);
-let Z = L(function (e) {
+    d = n(352057),
+    u = n(307643),
+    m = n(171246),
+    h = n(263519),
+    f = n(592125),
+    p = n(509545),
+    _ = n(238),
+    g = n(55563),
+    E = n(551428),
+    C = n(626135),
+    I = n(572004),
+    x = n(601911),
+    N = n(504211),
+    v = n(381961),
+    T = n(970321),
+    S = n(680005),
+    A = n(981631),
+    b = n(272242),
+    j = n(979007),
+    Z = n(388032),
+    R = n(94913);
+let P = O(function (e) {
         let { appId: t, message: s } = e,
-            u = (0, v.R)(t),
-            [m, f, _, g, C, N, T] = (0, l.Wu)(
-                [c.Z, p.Z, h.Z],
+            m = (0, T.R)(t),
+            [h, p, g, E, I, v, S] = (0, l.Wu)(
+                [c.Z, _.Z, f.Z],
                 () => {
                     var e;
                     let n = c.Z.getApplication(t),
-                        i = null != n ? (0, I.y)(n, 45) : void 0,
-                        r = null === (e = h.Z.getBasicChannel(s.channel_id)) || void 0 === e ? void 0 : e.guild_id;
-                    return [n, c.Z.isFetchingApplication(t), c.Z.didFetchingApplicationFail(t), p.Z.getStoreLayout(t), p.Z.getFetchStatus(t), r, i];
+                        i = null != n ? (0, x.y)(n, 45) : void 0,
+                        r = null === (e = f.Z.getBasicChannel(s.channel_id)) || void 0 === e ? void 0 : e.guild_id;
+                    return [n, c.Z.isFetchingApplication(t), c.Z.didFetchingApplicationFail(t), _.Z.getStoreLayout(t), _.Z.getFetchStatus(t), r, i];
                 },
                 [t, s.channel_id]
             );
         r.useEffect(() => {
-            C === p.N.NONE && (0, o.k)(t), null == m && !f && !_ && (0, d.UM)(t);
-        }, [m, t, _, f, C]);
-        let Z = g.subscriptions.length,
-            R = g.otps.length,
-            L = r.useMemo(
+            I === _.N.NONE && (0, o.k)(t), null == h && !p && !g && (0, u.UM)(t);
+        }, [h, t, g, p, I]);
+        let P = (0, d.h)({
+                location: 'AppStorefrontMessageEmbed',
+                autoTrackExposure: !1
+            }),
+            L = E.subscriptions.length,
+            O = E.otps.length,
+            M = r.useMemo(
                 () =>
-                    Z > 0 && R > 0
-                        ? b.intl.formatToPlainString(b.t['jA648/'], {
-                              subCount: Z,
-                              itemCount: R
+                    L > 0 && O > 0
+                        ? Z.intl.formatToPlainString(Z.t['jA648/'], {
+                              subCount: L,
+                              itemCount: O
                           })
-                        : Z > 0
-                          ? b.intl.formatToPlainString(b.t.GSfibG, { count: Z })
-                          : R > 0
-                            ? b.intl.formatToPlainString(b.t.j7Go5O, { count: R })
-                            : b.intl.string(b.t.rMA98v),
-                [R, Z]
+                        : L > 0
+                          ? Z.intl.formatToPlainString(Z.t.GSfibG, { count: L })
+                          : O > 0
+                            ? Z.intl.formatToPlainString(Z.t.j7Go5O, { count: O })
+                            : Z.intl.string(Z.t.rMA98v),
+                [O, L]
             );
-        if (!u || null == m) return null;
-        let y = () => {
+        if (!m || null == h) return null;
+        let k = () => {
             (0, a.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('77803'), n.e('7657')]).then(n.bind(n, 7225));
                 return (n) =>
@@ -76,106 +82,113 @@ let Z = L(function (e) {
                         transitionState: n.transitionState,
                         onClose: n.onClose,
                         appId: t,
-                        guildId: N
+                        guildId: v
                     });
             });
         };
-        return (0, i.jsx)(P, {
-            appName: m.name,
-            title: b.intl.formatToPlainString(b.t.XDRjs7, { appName: m.name }),
-            description: L,
-            link: ''.concat(location.protocol, '//').concat(location.host).concat(S.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(t, A.ApplicationDirectoryProfileSections.STORE)),
+        return (0, i.jsx)(y, {
+            appName: h.name,
+            title: Z.intl.formatToPlainString(Z.t.XDRjs7, { appName: h.name }),
+            description: M,
+            link: ''
+                .concat(location.protocol, '//')
+                .concat(location.host)
+                .concat(P ? A.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(h.id, j.GlobalDiscoveryAppsSections.STORE) : A.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(h.id, b.ApplicationDirectoryProfileSections.STORE)),
             onLinkCopy: () => {
-                (0, x.X)(t, x.B.STORE_EMBED);
+                (0, N.X)(t, N.B.STORE_EMBED);
             },
-            iconSrc: T,
+            iconSrc: S,
             onIconClick: () => {
-                y(),
-                    E.default.track(S.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+                k(),
+                    C.default.track(A.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                         application_id: t,
                         area: 'app_icon'
                     });
             },
             children: (0, i.jsx)(a.Button, {
                 onClick: () => {
-                    y(),
-                        E.default.track(S.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+                    k(),
+                        C.default.track(A.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                             application_id: t,
                             area: 'open_store_button'
                         });
                 },
-                className: j.openStoreButton,
-                children: b.intl.string(b.t.kRvlKC)
+                className: R.openStoreButton,
+                children: Z.intl.string(Z.t.kRvlKC)
             })
         });
     }),
-    R = L(function (e) {
+    L = O(function (e) {
         var t, o;
-        let { skuId: d, message: p } = e,
-            [C, N, Z, R, L, y, O, M] = (0, l.Wu)(
-                [_.Z, g.Z, f.Z, h.Z, c.Z],
+        let { skuId: u, message: _ } = e,
+            [I, v, P, L, O, M, k, D] = (0, l.Wu)(
+                [g.Z, E.Z, p.Z, f.Z, c.Z],
                 () => {
                     var e, t, n, i;
-                    let r = null === (e = h.Z.getBasicChannel(p.channel_id)) || void 0 === e ? void 0 : e.guild_id,
-                        l = _.Z.get(d),
+                    let r = null === (e = f.Z.getBasicChannel(_.channel_id)) || void 0 === e ? void 0 : e.guild_id,
+                        l = g.Z.get(u),
                         a = null !== (n = null == l ? void 0 : null === (t = l.application) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null == l ? void 0 : l.applicationId,
                         o = null !== (i = null != a ? c.Z.getApplication(a) : void 0) && void 0 !== i ? i : null == l ? void 0 : l.application,
-                        s = null != o ? (0, I.y)(o, 45) : void 0,
-                        u = f.Z.getForSKU(d);
-                    return [l, o, g.Z.getForSKU(d), _.Z.isFetching(d), _.Z.didFetchingSkuFail(d), u.length > 0 ? u[0] : null, r, s];
+                        s = null != o ? (0, x.y)(o, 45) : void 0,
+                        d = p.Z.getForSKU(u);
+                    return [l, o, E.Z.getForSKU(u), g.Z.isFetching(u), g.Z.didFetchingSkuFail(u), d.length > 0 ? d[0] : null, r, s];
                 },
-                [p.channel_id, d]
+                [_.channel_id, u]
             ),
-            k = (0, v.R)(null !== (o = null == N ? void 0 : N.id) && void 0 !== o ? o : '');
+            B = (0, T.R)(null !== (o = null == v ? void 0 : v.id) && void 0 !== o ? o : '');
         r.useEffect(() => {
-            null == C && !R && !L && (0, s.km)(d);
-        }, [L, R, C, d]),
+            null == I && !L && !O && (0, s.km)(u);
+        }, [O, L, I, u]),
             r.useEffect(() => {
-                if ((null == N ? void 0 : N.id) != null) (0, s.oJ)(null == N ? void 0 : N.id);
-            }, [null == N ? void 0 : N.id]);
-        let D = (0, l.e7)([_.Z], () => (null != d ? _.Z.getParentSKU(d) : void 0), [d]),
-            { openModal: B, subscriptionPurchaseButtonState: U } = (0, m.Z)({
-                skuId: d,
-                subscribeForGuild: O
+                if ((null == v ? void 0 : v.id) != null) (0, s.oJ)(null == v ? void 0 : v.id);
+            }, [null == v ? void 0 : v.id]);
+        let U = (0, l.e7)([g.Z], () => (null != u ? g.Z.getParentSKU(u) : void 0), [u]),
+            { openModal: w, subscriptionPurchaseButtonState: F } = (0, h.Z)({
+                skuId: u,
+                subscribeForGuild: k
+            }),
+            G = (0, d.h)({
+                location: 'AppStorefrontSKUMessageEmbed',
+                autoTrackExposure: !1
             });
-        if (!k || null == N || null == C) return null;
-        let w = C.type === S.epS.SUBSCRIPTION,
-            F = !!w && (0, u.KW)(C.flags),
-            G = () => {
+        if (!B || null == v || null == I) return null;
+        let V = I.type === A.epS.SUBSCRIPTION,
+            H = !!V && (0, m.KW)(I.flags),
+            z = () => {
                 (0, a.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([n.e('77803'), n.e('7657')]).then(n.bind(n, 7225));
                     return (t) =>
                         (0, i.jsx)(e, {
                             transitionState: t.transitionState,
                             onClose: t.onClose,
-                            appId: N.id,
-                            guildId: O
+                            appId: v.id,
+                            guildId: k
                         });
                 });
             },
-            V = () => {
+            W = () => {
                 (0, a.openModalLazy)(async () => {
-                    let e = w ? (await Promise.resolve().then(n.bind(n, 519896))).SubscriptionDetailsModal : null,
-                        t = w ? null : (await Promise.resolve().then(n.bind(n, 147496))).ItemDetailsModal;
+                    let e = V ? (await Promise.resolve().then(n.bind(n, 519896))).SubscriptionDetailsModal : null,
+                        t = V ? null : (await Promise.resolve().then(n.bind(n, 147496))).ItemDetailsModal;
                     return (n) => {
                         let r = () => {
-                            n.onClose(), G();
+                            n.onClose(), z();
                         };
-                        return null != e && null != D
+                        return null != e && null != U
                             ? (0, i.jsx)(e, {
                                   transitionState: n.transitionState,
-                                  appId: N.id,
-                                  skuId: C.id,
-                                  guildId: O,
-                                  subscriptionType: F ? 'user' : 'guild',
+                                  appId: v.id,
+                                  skuId: I.id,
+                                  guildId: k,
+                                  subscriptionType: H ? 'user' : 'guild',
                                   onClose: n.onClose,
                                   onHeaderTitleClick: r
                               })
                             : null != t
                               ? (0, i.jsx)(t, {
                                     transitionState: n.transitionState,
-                                    appId: N.id,
-                                    skuId: d,
+                                    appId: v.id,
+                                    skuId: u,
                                     onClose: n.onClose,
                                     onHeaderTitleClick: r
                                 })
@@ -183,8 +196,8 @@ let Z = L(function (e) {
                     };
                 });
             },
-            H = w
-                ? F
+            K = V
+                ? H
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(a.UserIcon, {
@@ -193,7 +206,7 @@ let Z = L(function (e) {
                                   height: 12
                               }),
                               ' ',
-                              b.intl.string(b.t.wnifjI)
+                              Z.intl.string(Z.t.wnifjI)
                           ]
                       })
                     : (0, i.jsxs)(i.Fragment, {
@@ -204,97 +217,100 @@ let Z = L(function (e) {
                                   height: 12
                               }),
                               ' ',
-                              b.intl.string(b.t.NRC3am)
+                              Z.intl.string(Z.t.NRC3am)
                           ]
                       })
-                : null == Z
+                : null == P
                   ? void 0
-                  : null === (t = Z.description) || void 0 === t
+                  : null === (t = P.description) || void 0 === t
                     ? void 0
                     : t.trim();
-        '' === H && (H = void 0);
-        let z = () => {
-            E.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
-                application_id: N.id,
-                sku_id: C.id,
+        '' === K && (K = void 0);
+        let Y = () => {
+            C.default.track(A.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                application_id: v.id,
+                sku_id: I.id,
                 area: 'purchase_button'
             });
         };
-        return (0, i.jsx)(P, {
-            appName: N.name,
-            title: C.name,
-            description: H,
-            link: ''.concat(location.protocol, '//').concat(location.host).concat(S.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(N.id, A.ApplicationDirectoryProfileSections.STORE)),
+        return (0, i.jsx)(y, {
+            appName: v.name,
+            title: I.name,
+            description: K,
+            link: ''
+                .concat(location.protocol, '//')
+                .concat(location.host)
+                .concat(G ? A.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(v.id, j.GlobalDiscoveryAppsSections.STORE) : A.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(v.id, b.ApplicationDirectoryProfileSections.STORE)),
             onLinkCopy: () => {
-                (0, x.X)(N.id, x.B.SKU_EMBED, d);
+                (0, N.X)(v.id, N.B.SKU_EMBED, u);
             },
-            iconSrc: M,
+            iconSrc: D,
             onIconClick: () => {
-                G(),
-                    E.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
-                        application_id: N.id,
-                        sku_id: C.id,
+                z(),
+                    C.default.track(A.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                        application_id: v.id,
+                        sku_id: I.id,
                         area: 'app_icon'
                     });
             },
             children: (0, i.jsxs)('div', {
-                className: j.skuPurchaseButtons,
+                className: R.skuPurchaseButtons,
                 children: [
                     (0, i.jsx)(a.Button, {
                         color: a.ButtonColors.CUSTOM,
                         onClick: () => {
-                            V(),
-                                E.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
-                                    application_id: N.id,
-                                    sku_id: C.id,
+                            W(),
+                                C.default.track(A.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                                    application_id: v.id,
+                                    sku_id: I.id,
                                     area: 'view_details'
                                 });
                         },
-                        className: j.viewDetailsButton,
-                        children: b.intl.string(b.t.DXYfjI)
+                        className: R.viewDetailsButton,
+                        children: Z.intl.string(Z.t.DXYfjI)
                     }),
-                    w
-                        ? null != y
-                            ? (0, i.jsx)(T.pV, {
-                                  onClick: B,
-                                  appId: N.id,
-                                  subscriptionType: F ? 'user' : 'guild',
-                                  skuId: C.id,
+                    V
+                        ? null != M
+                            ? (0, i.jsx)(S.pV, {
+                                  onClick: w,
+                                  appId: v.id,
+                                  subscriptionType: H ? 'user' : 'guild',
+                                  skuId: I.id,
                                   icon: (0, i.jsx)(a.ShopIcon, {
                                       size: 'xs',
                                       color: 'currentcolor'
                                   }),
-                                  onHasClicked: z,
-                                  subscriptionPlan: y,
-                                  state: U
+                                  onHasClicked: Y,
+                                  subscriptionPlan: M,
+                                  state: F
                               })
                             : (0, i.jsx)(a.Button, {
-                                  onClick: V,
-                                  children: b.intl.string(b.t.uuzaAA)
+                                  onClick: W,
+                                  children: Z.intl.string(Z.t.uuzaAA)
                               })
-                        : (0, i.jsx)(T.YG, {
-                              appId: N.id,
-                              sku: C,
+                        : (0, i.jsx)(S.YG, {
+                              appId: v.id,
+                              sku: I,
                               icon: (0, i.jsx)(a.ShopIcon, {
                                   size: 'xs',
                                   color: 'currentcolor'
                               }),
-                              onHasClicked: z
+                              onHasClicked: Y
                           })
                 ]
             })
         });
     });
-function P(e) {
+function y(e) {
     let { appName: t, title: n, description: r, link: l, iconSrc: o, onIconClick: s, onLinkCopy: c, children: d } = e;
     return (0, i.jsxs)('div', {
-        className: j.wrapper,
+        className: R.wrapper,
         children: [
             (0, i.jsxs)('div', {
-                className: j.header,
+                className: R.header,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: j.headerTitle,
+                        className: R.headerTitle,
                         children: [
                             (0, i.jsx)(a.ShopIcon, { size: 'xxs' }),
                             (0, i.jsx)(a.Text, {
@@ -304,23 +320,23 @@ function P(e) {
                             })
                         ]
                     }),
-                    C.wS &&
+                    I.wS &&
                         (0, i.jsx)(a.Button, {
                             look: a.ButtonLooks.BLANK,
                             size: a.ButtonSizes.ICON,
-                            'aria-label': b.intl.string(b.t.WqhZsr),
+                            'aria-label': Z.intl.string(Z.t.WqhZsr),
                             onClick: () => {
-                                (0, C.JG)(l), (0, a.showToast)((0, a.createToast)(b.intl.string(b.t['L/PwZW']), a.ToastType.SUCCESS)), c();
+                                (0, I.JG)(l), (0, a.showToast)((0, a.createToast)(Z.intl.string(Z.t['L/PwZW']), a.ToastType.SUCCESS)), c();
                             },
                             children: (0, i.jsx)(a.LinkIcon, { size: 'xs' })
                         })
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: j.content,
+                className: R.content,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: j.contentTextWrapper,
+                        className: R.contentTextWrapper,
                         children: [
                             null != o &&
                                 (0, i.jsx)(a.Button, {
@@ -330,11 +346,11 @@ function P(e) {
                                     children: (0, i.jsx)('img', {
                                         src: o.href,
                                         alt: '',
-                                        className: j.appIcon
+                                        className: R.appIcon
                                     })
                                 }),
                             (0, i.jsxs)('div', {
-                                className: j.contentText,
+                                className: R.contentText,
                                 style: null == r ? { justifyContent: 'space-evenly' } : void 0,
                                 children: [
                                     (0, i.jsx)(a.Text, {
@@ -347,7 +363,7 @@ function P(e) {
                                             variant: 'heading-md/medium',
                                             color: 'text-muted',
                                             tag: 'div',
-                                            className: j.description,
+                                            className: R.description,
                                             children: r
                                         })
                                 ]
@@ -360,9 +376,9 @@ function P(e) {
         ]
     });
 }
-function L(e) {
+function O(e) {
     return (t) => {
-        let { enabled: n } = N.u.useExperiment({ location: 'AppStorefrontMessageEmbed' });
+        let { enabled: n } = v.u.useExperiment({ location: 'AppStorefrontMessageEmbed' });
         return n ? (0, i.jsx)(e, { ...t }) : null;
     };
 }
