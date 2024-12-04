@@ -24,8 +24,8 @@ var r = n(200651),
     b = n(432877);
 n(381996);
 var v = n(392750),
-    j = n(926976),
-    C = n(592197),
+    C = n(926976),
+    j = n(592197),
     _ = n(806240),
     T = n(789654),
     S = n(719672),
@@ -46,8 +46,8 @@ var v = n(392750),
     F = n(958328),
     M = n(514866),
     H = n(678639),
-    G = n(351930),
-    U = n(771751),
+    U = n(351930),
+    G = n(771751),
     z = n(596768),
     V = n(621060),
     W = n(388032),
@@ -74,7 +74,7 @@ function q() {
                 {
                     id: 'analytics',
                     name: 'Analytics',
-                    render: () => (0, r.jsx)(j.Z, {})
+                    render: () => (0, r.jsx)(C.Z, {})
                 },
                 {
                     id: 'triggers',
@@ -190,7 +190,7 @@ function q() {
                     (e.push({
                         id: 'trials',
                         name: 'Trials',
-                        render: () => (0, r.jsx)(U.Z, {})
+                        render: () => (0, r.jsx)(G.Z, {})
                     }),
                     e.push({
                         id: 'payments',
@@ -200,12 +200,12 @@ function q() {
                     e.push({
                         id: 'subscriptions',
                         name: 'Subscriptions',
-                        render: () => (0, r.jsx)(G.Z, {})
+                        render: () => (0, r.jsx)(U.Z, {})
                     }),
                     e.push({
                         id: 'billing',
                         name: 'Billing',
-                        render: () => (0, r.jsx)(C.Z, {})
+                        render: () => (0, r.jsx)(j.Z, {})
                     })),
                 e.push({
                     id: 'gifting_intent',

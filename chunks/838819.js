@@ -20,8 +20,8 @@ var r = n(200651),
     _ = n(479446),
     k = n(981632),
     I = n(290026),
-    j = n(819640),
-    S = n(594174),
+    S = n(819640),
+    j = n(594174),
     E = n(626135),
     T = n(74538),
     N = n(335131),
@@ -56,7 +56,7 @@ var r = n(200651),
     er = n(697526);
 function ea(e) {
     let { products: t, handleShopCardMount: n, header: a, category: i, isPremiumUser: l, isGiftEasterEggEnabled: s, showMysteryCard: o = !1 } = e,
-        d = (0, c.e7)([S.default], () => S.default.getCurrentUser());
+        d = (0, c.e7)([j.default], () => j.default.getCurrentUser());
     return null == d || 0 === t.length
         ? null
         : (0, r.jsxs)('div', {
@@ -178,22 +178,22 @@ t.default = function (e) {
         [ei, es] = a.useState(Q.IV),
         [eo, ec] = a.useState(),
         [ed, eu] = a.useState(),
-        em = (0, c.e7)([j.Z], () => j.Z.getLayers().includes(X.S9g.COLLECTIBLES_SHOP)),
+        em = (0, c.e7)([S.Z], () => S.Z.getLayers().includes(X.S9g.COLLECTIBLES_SHOP)),
         eh = (0, u.f9)(),
         { onClose: ep } = (0, M.Db)(),
-        ef = (0, c.e7)([S.default], () => S.default.getCurrentUser()),
+        ef = (0, c.e7)([j.default], () => j.default.getCurrentUser()),
         eg = T.ZP.canUseCollectibles(ef),
-        { categories: eC, isFetchingCategories: ev, fetchCategoriesError: eb, fetchPurchasesError: ex, claimError: e_, refreshCategories: ek } = (0, Z.ZP)(),
+        { categories: eC, isFetchingCategories: ev, fetchCategoriesError: eb, fetchPurchasesError: ex, claimError: e_, refreshCategories: ek } = (0, Z.ZP)({ location: 'CollectiblesShop.web' }),
         eI = null !== (t = null != eb ? eb : ex) && void 0 !== t ? t : e_;
     (0, I.P)();
-    let ej = (0, O.O)(eC),
-        eS = a.useRef(null),
+    let eS = (0, O.O)(eC),
+        ej = a.useRef(null),
         [eE, eT] = a.useState(!1);
     (0, H.Kp)({
         categories: eC,
         isFetchingCategories: ev,
         isLayer: em,
-        initialItemCardRef: eS
+        initialItemCardRef: ej
     }),
         a.useEffect(() => {
             if (F === Q.f7.VISIBLE || U === Q.f7.VISIBLE) {
@@ -338,7 +338,7 @@ t.default = function (e) {
                                                         })
                                                       : (0, r.jsx)('div', {
                                                             className: er.categories,
-                                                            children: ej
+                                                            children: eS
                                                                 .filter((e) => null == e.unpublishedAt || e.unpublishedAt > new Date())
                                                                 .filter((e) => {
                                                                     let { products: t } = e;
@@ -354,7 +354,7 @@ t.default = function (e) {
                                                                                 children: (0, r.jsx)(el, {
                                                                                     isPremiumUser: eg,
                                                                                     category: e,
-                                                                                    initialItemCardRef: eS,
+                                                                                    initialItemCardRef: ej,
                                                                                     setIsGiftEasterEggEnabled: eT,
                                                                                     isGiftEasterEggEnabled: eE,
                                                                                     isFullScreen: n

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return j;
     }
 }),
     n(47120);
@@ -79,7 +79,7 @@ let b = [
             }
         }
     ];
-function j(e) {
+function C(e) {
     let { store: t, initialHeight: n } = e,
         { TabBar: a, renderSelectedTab: l } = (0, m.Z)({ tabs: v }, []);
     return (0, r.jsxs)(u.Z, {
@@ -102,7 +102,7 @@ function j(e) {
         ]
     });
 }
-function C() {
+function j() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
         l = o.yh.getAll(),
@@ -148,7 +148,7 @@ function C() {
                 onClickRow: (e) => u(e.key)
             }),
             null != m &&
-                (0, r.jsx)(j, {
+                (0, r.jsx)(C, {
                     store: m,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
                 })

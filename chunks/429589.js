@@ -24,31 +24,31 @@ var i = n(200651),
     y = n(699516),
     P = n(944486),
     Z = n(594174),
-    C = n(979651),
-    I = n(181106),
+    I = n(979651),
+    C = n(181106),
     S = n(417363),
     b = n(358085),
     R = n(804739),
     E = n(317381),
     T = n(638880),
-    j = n(255621),
-    A = n(452634),
-    F = n(527805),
-    O = n(620662),
-    L = n(275920),
+    F = n(255621),
+    j = n(452634),
+    A = n(527805),
+    L = n(620662),
+    O = n(275920),
     D = n(915863),
-    U = n(701488),
-    N = n(981631),
-    M = n(388032);
+    M = n(701488),
+    U = n(981631),
+    N = n(388032);
 function _(t) {
     var e, n;
     let { activity: _, embeddedActivity: k, user: B, onAction: G, isEmbedded: z = !1, ButtonComponent: J = D.Z, ...H } = t,
         { analyticsLocations: W } = (0, d.ZP)(),
-        [Q, V] = l.useState(!1),
+        [V, Q] = l.useState(!1),
         X = (0, r.e7)([Z.default], () => Z.default.getCurrentUser()),
         q = B.id === (null == X ? void 0 : X.id),
         Y = null !== (e = null == k ? void 0 : k.applicationId) && void 0 !== e ? e : null == _ ? void 0 : _.application_id,
-        K = (0, A.Z)({
+        K = (0, j.Z)({
             channelId: null == k ? void 0 : k.channelId,
             userId: B.id,
             activity: _
@@ -72,19 +72,19 @@ function _(t) {
                 return (e === (null == _ ? void 0 : _.application_id) || e === (null == k ? void 0 : k.applicationId)) && n === K;
             })
         ),
-        te = (0, r.e7)([I.Z], () => null != _ && null != _.application_id && I.Z.getState(_.application_id, N.mFx.JOIN) === N.OcF.LOADING),
+        te = (0, r.e7)([C.Z], () => null != _ && null != _.application_id && C.Z.getState(_.application_id, U.mFx.JOIN) === U.OcF.LOADING),
         [tn] = (0, h.Z)((null == k ? void 0 : k.applicationId) != null ? [null == k ? void 0 : k.applicationId] : (null == _ ? void 0 : _.application_id) != null ? [null == _ ? void 0 : _.application_id] : []),
-        ti = (0, F.s5)({
+        ti = (0, A.s5)({
             userId: B.id,
             activity: _,
             channelId: K,
             application: tn
         }),
-        tl = (0, r.e7)([v.Z, g.Z, x.Z, y.Z, P.Z, C.Z, w.Z], () =>
+        tl = (0, r.e7)([v.Z, g.Z, x.Z, y.Z, P.Z, I.Z, w.Z], () =>
             null != k
-                ? ti === F.Fw.CAN_JOIN
+                ? ti === A.Fw.CAN_JOIN
                 : null != _
-                  ? (0, j.Z)({
+                  ? (0, F.Z)({
                         user: B,
                         activity: _,
                         application: tn,
@@ -96,7 +96,7 @@ function _(t) {
                         GuildMemberCountStore: x.Z,
                         RelationshipStore: y.Z,
                         SelectedChannelStore: P.Z,
-                        VoiceStateStore: C.Z,
+                        VoiceStateStore: I.Z,
                         PermissionStore: w.Z
                     })
                   : void 0
@@ -104,16 +104,16 @@ function _(t) {
         tr = (0, r.e7)([E.ZP], () => Array.from(E.ZP.getSelfEmbeddedActivities().values()).some((t) => t.applicationId === (null == k ? void 0 : k.applicationId) && t.channelId === (null == k ? void 0 : k.channelId))),
         to = (0, c.O)(),
         ta = !b.isPlatformEmbedded;
-    if (!((0, O.Z)(_, N.xjy.JOIN) || z) || null == Y) return null;
+    if (!((0, L.Z)(_, U.xjy.JOIN) || z) || null == Y) return null;
     let ts = !q || (z && !tr),
-        tu = ts && (ta || $) && !Q && !tt && (!z || tl),
+        tu = ts && (ta || $) && !V && !tt && (!z || tl),
         tc = null;
-    ts ? !ta && !$ && null != _ && (tc = M.intl.formatToPlainString(M.t.SqJBnJ, { name: _.name })) : (tc = M.intl.string(M.t['0OiwfH']));
+    ts ? !ta && !$ && null != _ && (tc = N.intl.formatToPlainString(N.t.SqJBnJ, { name: _.name })) : (tc = N.intl.string(N.t['0OiwfH']));
     let td = null !== (n = null == k ? void 0 : k.launchId) && void 0 !== n ? n : null == _ ? void 0 : _.session_id,
         th = async (t, e) => {
             var n, i;
             if (null == td || null == Y) return;
-            let l = (0, O.Z)(e, N.xjy.EMBEDDED),
+            let l = (0, L.Z)(e, U.xjy.EMBEDDED),
                 r = P.Z.getVoiceChannelId(),
                 o = v.Z.getChannel(r);
             await s.Z.join({
@@ -122,15 +122,15 @@ function _(t) {
                 applicationId: Y,
                 channelId: r,
                 messageId: null,
-                intent: U.Ws.PLAY,
+                intent: M.Ws.PLAY,
                 embedded: l,
                 partyId: null != e ? (null == e ? void 0 : null === (n = e.party) || void 0 === n ? void 0 : n.id) : '',
                 locationObject: to.location,
                 analyticsLocations: W
             }),
                 !l &&
-                    (0, L.Z)({
-                        type: N.q5t.JOIN,
+                    (0, O.Z)({
+                        type: U.q5t.JOIN,
                         userId: t.id,
                         guildId: null == o ? void 0 : o.guild_id,
                         channelId: r,
@@ -158,21 +158,21 @@ function _(t) {
                     null == G || G(), th(B, _);
                     return;
                 }
-                V(!0),
+                Q(!0),
                     null != _ &&
                         (t = await a.Z.sendActivityInviteUser({
-                            type: N.mFx.JOIN_REQUEST,
+                            type: U.mFx.JOIN_REQUEST,
                             userId: B.id,
                             activity: _,
-                            location: N.Sbl.PROFILE_POPOUT
+                            location: U.Sbl.PROFILE_POPOUT
                         })),
                     null != t && u.default.selectPrivateChannel(t.id);
             }
         },
-        tv = tl ? M.intl.string(M.t.VJlc0d) : M.intl.string(M.t.OKsSCQ);
+        tv = tl ? N.intl.string(N.t.VJlc0d) : N.intl.string(N.t.OKsSCQ);
     return (
-        z && (tv = M.intl.string(M.t['4i2vj4'])),
-        tr && (tv = M.intl.string(M.t.DPfdsr)),
+        z && (tv = N.intl.string(N.t['4i2vj4'])),
+        tr && (tv = N.intl.string(N.t.DPfdsr)),
         (0, i.jsx)(
             o.Tooltip,
             {

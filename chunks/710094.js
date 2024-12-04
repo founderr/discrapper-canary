@@ -34,7 +34,7 @@ var i = t(200651),
 function _(e) {
     var n, t;
     let r,
-        { handleStepChange: _, trialId: O, trialFooterMessageOverride: A, reviewWarningMessage: R, planGroup: Z, openInvoiceId: M, analyticsData: w, analyticsLocation: L, referralTrialOfferId: k, initialPlanId: F, subscriptionTier: D, handleClose: U } = e,
+        { handleStepChange: _, trialId: O, trialFooterMessageOverride: A, reviewWarningMessage: R, planGroup: Z, openInvoiceId: w, analyticsData: M, analyticsLocation: L, referralTrialOfferId: k, initialPlanId: F, subscriptionTier: D, handleClose: U } = e,
         { activeSubscription: B, setUpdatedSubscription: G, contextMetadata: H, currencies: W, paymentSourceId: V, paymentSources: K, priceOptions: z, purchaseError: Y, purchaseTokenAuthState: X, selectedPlan: q, selectedSkuId: J, setCurrency: Q, setPaymentSourceId: $, setPurchaseState: ee, setPurchaseError: en, step: et, purchaseState: ei, isPremium: el, setHasAcceptedTerms: er, purchaseType: es, setEntitlementsGranted: ea, startedPaymentFlowWithPaymentSourcesRef: ec, invoicePreview: eo, inReverseTrial: eu } = (0, v.usePaymentContext)(),
         { isGift: ed, giftMessage: em, giftRecipient: ep, claimableRewards: ex } = (0, f.wD)();
     s()(null != et, 'Step should be set');
@@ -71,17 +71,17 @@ function _(e) {
         eA = !ed && null != ej && null != eO && null != q && eO.includes(q.id),
         eR = ed && (0, h.pO)(ep),
         eZ = null == F && null == D && es === b.GZ.SUBSCRIPTION,
-        eM = (0, j.Kp)({
+        ew = (0, j.Kp)({
             isTrial: e_,
             isGift: ed,
             selectedSkuId: J,
             startedPaymentFlowWithPaymentSources: ec.current
         }),
-        ew = ed && es === b.GZ.ONE_TIME,
-        eL = ew || (eM ? eZ && el : el),
+        eM = ed && es === b.GZ.ONE_TIME,
+        eL = eM || (ew ? eZ && el : el),
         ek = (0, o.id)(q, ed, ex),
         eF = l.useCallback(() => {
-            if (eM) {
+            if (ew) {
                 _(S.h8.SKU_SELECT);
                 return;
             }
@@ -89,8 +89,8 @@ function _(e) {
                 _(S.h8.SELECT_FREE_SKU);
                 return;
             }
-            return ew ? _(S.h8.GIFT_CUSTOMIZATION) : _(S.h8.PLAN_SELECT);
-        }, [_, eM, ew, ek]),
+            return eM ? _(S.h8.GIFT_CUSTOMIZATION) : _(S.h8.PLAN_SELECT);
+        }, [_, ew, eM, ek]),
         eD = !1;
     return (
         es === b.GZ.ONE_TIME
@@ -142,7 +142,7 @@ function _(e) {
                         planGroup: Z,
                         currencies: W,
                         onCurrencyChange: (e) => Q(e),
-                        hasOpenInvoice: null != M,
+                        hasOpenInvoice: null != w,
                         purchaseState: ei,
                         handleClose: U
                     })))),
@@ -165,12 +165,12 @@ function _(e) {
                         invoiceError: eb,
                         planError: eT,
                         analyticsLocation: L,
-                        baseAnalyticsData: w,
+                        baseAnalyticsData: M,
                         flowStartTime: H.startTime,
                         trialId: eg,
                         planGroup: Z,
                         purchaseTokenAuthState: X,
-                        openInvoiceId: M,
+                        openInvoiceId: w,
                         backButtonEligible: eL,
                         metadata: ey,
                         isTrial: e_,

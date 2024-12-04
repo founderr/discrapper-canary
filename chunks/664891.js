@@ -35,12 +35,12 @@ var i = t(200651),
     A = t(42818),
     R = t(981631),
     Z = t(388032),
-    M = t(311583),
-    w = t(809186);
+    w = t(311583),
+    M = t(809186);
 function L(e) {
     var n;
     let t,
-        { premiumSubscription: r, paymentSources: x, priceOptions: h, onPaymentSourceChange: T, onPaymentSourceAdd: C, planId: A, setHasAcceptedTerms: M, legalTermsNodeRef: L, hasLegalTermsFlash: G, onInvoiceError: H, planGroup: W, currencies: V, onCurrencyChange: K, hasOpenInvoice: z, purchaseState: Y, handleClose: X } = e,
+        { premiumSubscription: r, paymentSources: x, priceOptions: h, onPaymentSourceChange: T, onPaymentSourceAdd: C, planId: A, setHasAcceptedTerms: w, legalTermsNodeRef: L, hasLegalTermsFlash: G, onInvoiceError: H, planGroup: W, currencies: V, onCurrencyChange: K, hasOpenInvoice: z, purchaseState: Y, handleClose: X } = e,
         { selectedSkuId: q, defaultPlanId: J, isPremium: Q, startedPaymentFlowWithPaymentSourcesRef: $ } = (0, v.usePaymentContext)(),
         { isGift: ee } = (0, f.wD)(),
         en = h.paymentSourceId,
@@ -105,7 +105,7 @@ function L(e) {
                           preventFetch: er
                       })),
         (0, i.jsxs)('div', {
-            className: w.stepBody,
+            className: M.stepBody,
             children: [
                 !ea &&
                     es &&
@@ -132,7 +132,7 @@ function L(e) {
                 }),
                 eo,
                 (0, i.jsxs)('div', {
-                    className: w.paymentSourceWrapper,
+                    className: M.paymentSourceWrapper,
                     children: [
                         (0, i.jsx)(o.FormTitle, {
                             tag: o.FormTitleTags.H5,
@@ -150,7 +150,7 @@ function L(e) {
                 }),
                 (0, i.jsxs)(u.b, {
                     currencies: V,
-                    className: w.currencyWrapper,
+                    className: M.currencyWrapper,
                     children: [
                         (0, i.jsx)(o.FormTitle, {
                             tag: o.FormTitleTags.H5,
@@ -179,10 +179,10 @@ function L(e) {
                                   disabled: er,
                                   isEEA: el,
                                   paymentSources: x,
-                                  setHasAcceptedTerms: M
+                                  setHasAcceptedTerms: w
                               })
                             : (0, i.jsx)(p.Z, {
-                                  onChange: M,
+                                  onChange: w,
                                   finePrint: (0, i.jsx)(d.Z, {
                                       subscriptionPlan: et,
                                       paymentSourceType: null === (n = x[null != en ? en : '']) || void 0 === n ? void 0 : n.type,
@@ -215,7 +215,7 @@ function k(e) {
     let u = (0, I.Ap)(r.paymentSourceId);
     return null != a
         ? (0, i.jsxs)(b.PO, {
-              className: M.__invalid_invoice,
+              className: w.__invalid_invoice,
               children: [
                   (0, i.jsx)(A.By, {
                       invoice: a,
@@ -273,7 +273,7 @@ function F(e) {
             startedPaymentFlowWithPaymentSources: d.current
         }),
         _ = (0, g.$g)(C, E, t);
-    if (null == E || null == y || _) return (0, i.jsx)(o.Spinner, { className: w.__invalid_spinner });
+    if (null == E || null == y || _) return (0, i.jsx)(o.Spinner, { className: M.__invalid_spinner });
     let O = (0, I.Ap)(a.paymentSourceId);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -282,7 +282,7 @@ function F(e) {
                 renewalInvoice: y
             }),
             (0, i.jsxs)(b.PO, {
-                className: w.invoice,
+                className: M.invoice,
                 children: [
                     (0, i.jsx)(b.q9, { children: Z.intl.string(Z.t['2eh+Cg']) }),
                     (0, i.jsx)(A.Lu, {
@@ -380,16 +380,16 @@ function U(e) {
         null != p)
     )
         return (0, i.jsx)(o.FormErrorBlock, { children: p.message });
-    if (null == c || null == d) return (0, i.jsx)(o.Spinner, { className: w.__invalid_spinner });
+    if (null == c || null == d) return (0, i.jsx)(o.Spinner, { className: M.__invalid_spinner });
     let f = (0, I.Ap)(t.paymentSourceId);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                className: M.renewalInvoiceDate,
+                className: w.renewalInvoiceDate,
                 children: Z.intl.string(Z.t.spIYoq)
             }),
             (0, i.jsxs)(b.PO, {
-                className: w.invoice,
+                className: M.invoice,
                 children: [
                     (0, i.jsx)(b.q9, { children: Z.intl.string(Z.t['2eh+Cg']) }),
                     (0, i.jsx)(A.By, {
@@ -427,14 +427,14 @@ function B(e) {
     n = t.type === R.NYc.PREMIUM ? (0, I.Gf)(l.id) : l.name;
     let m = (0, I.Ap)(s.paymentSourceId);
     return (0, i.jsxs)('div', {
-        className: w.bodyText,
+        className: M.bodyText,
         children: [
             (0, i.jsx)('div', {
-                className: M.renewalInvoiceDate,
+                className: w.renewalInvoiceDate,
                 children: Z.intl.format(Z.t['+y0Tj4'], { renewalDate: u.subscriptionPeriodStart })
             }),
             (0, i.jsxs)(b.PO, {
-                className: w.invoice,
+                className: M.invoice,
                 children: [
                     (0, i.jsx)(b.q9, { children: Z.intl.string(Z.t.iqhIp6) }),
                     (0, i.jsx)(b.R$, {

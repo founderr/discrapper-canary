@@ -16,8 +16,8 @@ var i = n(200651),
     s = n(512722),
     r = n.n(s),
     a = n(442837),
-    C = n(481060),
-    o = n(16084),
+    o = n(481060),
+    C = n(16084),
     d = n(987209),
     u = n(179118),
     c = n(912788),
@@ -32,21 +32,21 @@ var i = n(200651),
 function g(e) {
     var t, n;
     let l,
-        { planId: s, startingPremiumSubscriptionPlanId: C, paymentSourceType: o } = e,
-        [d, u] = (0, a.Wu)([p.Z], () => [p.Z.get(C), p.Z.get(s)]);
-    if ((r()(null != d && null != u, 'Missing startingPlan or newPlan'), (t = C), (n = s), _.Y1.indexOf(t) < _.Y1.indexOf(n)))
+        { planId: s, startingPremiumSubscriptionPlanId: o, paymentSourceType: C } = e,
+        [d, u] = (0, a.Wu)([p.Z], () => [p.Z.get(o), p.Z.get(s)]);
+    if ((r()(null != d && null != u, 'Missing startingPlan or newPlan'), (t = o), (n = s), _.Y1.indexOf(t) < _.Y1.indexOf(n)))
         switch (s) {
             case _.Xh.PREMIUM_MONTH_TIER_1:
-                (l = L.intl.string(L.t.knvOV1)), j.X7u.has(null != o ? o : j.HeQ.UNKNOWN) && (l = L.intl.format(L.t.o6hBiY, {}));
+                (l = L.intl.string(L.t.knvOV1)), j.X7u.has(null != C ? C : j.HeQ.UNKNOWN) && (l = L.intl.format(L.t.o6hBiY, {}));
                 break;
             case _.Xh.PREMIUM_MONTH_TIER_2:
-                (l = L.intl.string(L.t.f8Dqur)), j.X7u.has(null != o ? o : j.HeQ.UNKNOWN) && (l = L.intl.format(L.t.A4THYm, {}));
+                (l = L.intl.string(L.t.f8Dqur)), j.X7u.has(null != C ? C : j.HeQ.UNKNOWN) && (l = L.intl.format(L.t.A4THYm, {}));
                 break;
             case _.Xh.PREMIUM_YEAR_TIER_1:
-                (l = L.intl.string(L.t.YZd5r6)), j.X7u.has(null != o ? o : j.HeQ.UNKNOWN) && (l = L.intl.format(L.t.MHAxpK, {}));
+                (l = L.intl.string(L.t.YZd5r6)), j.X7u.has(null != C ? C : j.HeQ.UNKNOWN) && (l = L.intl.format(L.t.MHAxpK, {}));
                 break;
             case _.Xh.PREMIUM_YEAR_TIER_2:
-                (l = L.intl.formatToPlainString(L.t['M/Lknp'], { numFreeGuildSubscriptions: _.cb })), j.X7u.has(null != o ? o : j.HeQ.UNKNOWN) && (l = L.intl.format(L.t.mULxLS, { numFreeGuildSubscriptions: _.cb }));
+                (l = L.intl.formatToPlainString(L.t['M/Lknp'], { numFreeGuildSubscriptions: _.cb })), j.X7u.has(null != C ? C : j.HeQ.UNKNOWN) && (l = L.intl.format(L.t.mULxLS, { numFreeGuildSubscriptions: _.cb }));
                 break;
             case _.Xh.PREMIUM_3_MONTH_TIER_2:
             case _.Xh.PREMIUM_6_MONTH_TIER_2:
@@ -83,12 +83,12 @@ function E(e) {
     let t,
         n,
         { planId: s, enableNoPaymentTrial: d, startingPremiumSubscriptionPlanId: u, onClose: c, followupSKUInfo: E, isDowngrade: S, hideClose: y, postSuccessGuild: M, paymentSourceType: Z } = e,
-        { theme: I } = (0, C.useThemeContext)(),
+        { theme: I } = (0, o.useThemeContext)(),
         v = (0, a.e7)([x.Z], () => (null != E ? x.Z.get(E.id) : null));
     l.useEffect(() => {
         if (null == E || null != v) return;
         let { applicationId: e, id: t } = E;
-        (0, o.$N)(e, t).catch(j.VqG);
+        (0, C.$N)(e, t).catch(j.VqG);
     }, [E, v]);
     let P = (e) => {
         if (e.skuId === _.Si.TIER_0) return j.X7u.has(null != Z ? Z : j.HeQ.UNKNOWN) ? L.intl.format(L.t.o6hBiY, {}) : L.intl.string(L.t['AGf/yc']);
@@ -144,7 +144,7 @@ function E(e) {
                 t,
                 y
                     ? null
-                    : (0, i.jsx)(C.Button, {
+                    : (0, i.jsx)(o.Button, {
                           onClick: c,
                           children: n
                       })
@@ -154,7 +154,7 @@ function E(e) {
 }
 function S(e) {
     let { planId: t, onClose: n, halloweenDecoPurchase: l } = e,
-        { giftRecipient: s, selectedGiftStyle: C, hasSentMessage: o, giftMessageError: x, isSendingMessage: h } = (0, d.wD)(),
+        { giftRecipient: s, selectedGiftStyle: o, hasSentMessage: C, giftMessageError: x, isSendingMessage: h } = (0, d.wD)(),
         f = (0, a.e7)([p.Z], () => p.Z.get(t));
     r()(null != f, 'Missing plan');
     let _ = (0, a.e7)([c.Z], () => c.Z.getGiftCode(f.skuId));
@@ -162,8 +162,8 @@ function S(e) {
         giftCode: _,
         subscriptionPlan: f,
         onClose: n,
-        selectedGiftStyle: C,
-        hasSentMessage: o,
+        selectedGiftStyle: o,
+        hasSentMessage: C,
         giftRecipient: s,
         giftMessageError: x,
         isSendingMessage: h,
@@ -174,19 +174,19 @@ function y() {
     return (0, i.jsxs)('div', {
         className: m.redirectConfirmation,
         children: [
-            (0, i.jsx)(C.Heading, {
+            (0, i.jsx)(o.Heading, {
                 variant: 'heading-xl/bold',
                 children: L.intl.string(L.t.Xtf9wM)
             }),
             (0, i.jsxs)('div', {
                 className: m.redirectBody,
                 children: [
-                    (0, i.jsx)(C.Text, {
+                    (0, i.jsx)(o.Text, {
                         variant: 'text-md/normal',
                         children: L.intl.string(L.t.bIVRSU)
                     }),
                     (0, i.jsx)('br', {}),
-                    (0, i.jsx)(C.Text, {
+                    (0, i.jsx)(o.Text, {
                         variant: 'text-md/normal',
                         children: L.intl.string(L.t['0UJqOz'])
                     })

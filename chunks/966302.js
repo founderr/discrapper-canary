@@ -140,7 +140,7 @@ function j(e) {
 function H(e) {
     let { animatedStyle: t, y: n, x: a, channel: f } = e,
         [m, g] = i.useState(!1),
-        E = (0, p.x)(f),
+        E = (0, p.x)(f, 128, !0),
         v = (0, h.ZP)(f),
         [I, T] = (0, l.Wu)([C.Z], () => [C.Z.supports(P.AN.VIDEO), Object.keys(C.Z.getVideoDevices()).length]),
         b = (0, l.e7)([O.Z], () => O.Z.isFocused()),

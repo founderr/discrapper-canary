@@ -4,15 +4,15 @@ var l = n(780384),
     s = n(481060),
     r = n(410030),
     a = n(518950),
-    C = n(51144),
-    o = n(105759),
+    o = n(51144),
+    C = n(105759),
     d = n(898969),
     u = n(703614),
     c = n(182294),
     p = n(388032),
     x = n(684315);
 t.Z = () => {
-    let e = (0, o.Z)(),
+    let e = (0, C.Z)(),
         { avatarSrc: t, eventHandlers: n } = (0, a.Z)({
             user: e,
             size: c.EF.SIZE_32,
@@ -20,7 +20,7 @@ t.Z = () => {
         }),
         h = (0, r.Fg)(),
         f = (0, l.ap)(h),
-        _ = C.ZP.getName(e),
+        _ = o.ZP.getName(e),
         j = f ? d.Z : u.Z;
     return null == e
         ? null

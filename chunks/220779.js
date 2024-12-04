@@ -3,7 +3,7 @@ n.d(e, {
         return P;
     },
     dE: function () {
-        return C;
+        return I;
     }
 }),
     n(47120);
@@ -70,10 +70,10 @@ function P(t) {
     let { placeholder: e, onEnter: n, setEditorRef: r, showEmojiButton: a = !1, renderAttachButton: s, autoFocus: h = !0, onFocus: f, channel: v, className: x } = t,
         [g, y] = l.useState(''),
         [P, Z] = l.useState((0, c.JM)('')),
-        C = () => {
+        I = () => {
             y(''), Z((0, c.JM)(''));
         },
-        I = u.I.ATOMIC_REACTOR_REPLY_INPUT,
+        C = u.I.ATOMIC_REACTOR_REPLY_INPUT,
         S = l.useRef(null);
     return (0, i.jsx)(d.Z, {
         ref: S,
@@ -89,10 +89,10 @@ function P(t) {
         },
         type: a
             ? {
-                  ...I,
+                  ...C,
                   emojis: { button: !0 }
               }
-            : I,
+            : C,
         textValue: g,
         richValue: P,
         onSubmit: (t) => {
@@ -103,7 +103,7 @@ function P(t) {
                       shouldRefocus: !0
                   })
                 : (n(e),
-                  C(),
+                  I(),
                   Promise.resolve({
                       shouldClear: !0,
                       shouldRefocus: !1
@@ -142,7 +142,7 @@ let Z = (t, e) => {
             );
         }, [t, e]);
     },
-    C = (t) => {
+    I = (t) => {
         let { onSelectEmoji: e, onClick: n } = t,
             r = (0, s.ZP)(),
             [o, u] = l.useState(!1),
@@ -204,7 +204,7 @@ e.ZP = (t) => {
                 className: m.reactions,
                 children: [
                     n &&
-                        (0, i.jsx)(C, {
+                        (0, i.jsx)(I, {
                             onSelectEmoji: (t) => {
                                 null != t &&
                                     e({

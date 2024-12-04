@@ -574,7 +574,7 @@ let ex = new eL(
                   let { port: t } = e;
                   z = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                   let n = new URLSearchParams();
-                  n.append('build_id', '7cb981ac5138d649acc38d8eb196354d5f17e096'), n.append('rpc', String(t)), n.append('rpc_auth_token', z), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
+                  n.append('build_id', 'f03a0c42a411af251b63a36d3fc090e86b76e491'), n.append('rpc', String(t)), n.append('rpc_auth_token', z), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
               },
               OVERLAY_CALL_PRIVATE_CHANNEL: function (e) {
                   let { channelId: t, ring: n } = e;

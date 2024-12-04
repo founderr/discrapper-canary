@@ -9,8 +9,8 @@ var l = n(512722),
     s = n.n(l),
     r = n(780384),
     a = n(481060),
-    C = n(410030),
-    o = n(807163),
+    o = n(410030),
+    C = n(807163),
     d = n(74538),
     u = n(987209),
     c = n(563132),
@@ -20,7 +20,7 @@ var l = n(512722),
     f = n(475536);
 function _(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        l = (0, C.ZP)(),
+        l = (0, o.ZP)(),
         { activeSubscription: _, selectedSkuId: j, setSelectedPlanId: L, startedPaymentFlowWithPaymentSourcesRef: m } = (0, c.usePaymentContext)(),
         { isGift: g } = (0, u.wD)(),
         E = null != _ ? (0, d.Af)(_) : null,
@@ -34,7 +34,7 @@ function _(e) {
         });
     return (
         s()(null != y, 'Expected premium type'),
-        (0, i.jsx)(o.Z, {
+        (0, i.jsx)(C.Z, {
             premiumType: y,
             titleText: h.intl.string(h.t['7VcWW1']),
             subtitleText: h.intl.format(h.t.Qk34Ii, { subscriptionName: S }),

@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(810568),
     b = n(168524),
     v = n(77498),
-    j = n(823379),
-    C = n(71585),
+    C = n(823379),
+    j = n(71585),
     _ = n(146282),
     T = n(650613),
     S = n(789086),
@@ -87,7 +87,7 @@ function w() {
     var e, t;
     let n = (0, d.e7)([_.Z], () => _.Z.getFeed(y.YN.GLOBAL_FEED)),
         l = (0, d.e7)([_.Z], () => _.Z.getDebugImpressionCappingDisabled()),
-        o = (0, d.e7)([C.Z], () => C.Z.getDebugFastImpressionCappingEnabled()),
+        o = (0, d.e7)([j.Z], () => j.Z.getDebugFastImpressionCappingEnabled()),
         c = (function (e) {
             let t = s().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
@@ -126,7 +126,7 @@ function w() {
                 let [t] = e;
                 return t;
             }),
-        P = (0, f.Z)(L).filter(j.lm);
+        P = (0, f.Z)(L).filter(C.lm);
     return (0, r.jsx)('div', {
         className: i()(I.panel),
         children: (0, r.jsxs)(h.ScrollerThin, {

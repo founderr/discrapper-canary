@@ -19,8 +19,8 @@ var i = t(512722),
 function f(e) {
     let { analyticsData: n, initialPlanId: t, breadcrumbSteps: i, handleStepChange: f, referralTrialOfferId: v, onReturn: S, continueSession: g = !1, continueSessionInitialStep: E } = e,
         { contextMetadata: j, step: y, paymentSources: I, paymentSourceId: P, setPaymentSourceId: T, purchaseError: N, setPurchaseError: b, purchaseErrorBlockRef: C, paymentAuthenticationState: _, selectedSkuId: O, activeSubscription: A, previousStepRef: R, setPurchaseState: Z } = (0, u.usePaymentContext)(),
-        { isGift: M } = (0, o.wD)(),
-        w = {
+        { isGift: w } = (0, o.wD)(),
+        M = {
             ...(0, a.fL)(),
             paymentSources: I,
             paymentSourceId: P,
@@ -30,10 +30,10 @@ function f(e) {
             purchaseErrorBlockRef: C,
             paymentAuthenticationState: _,
             selectedSkuId: O,
-            isGift: M
+            isGift: w
         },
         L = (0, s.N)(v),
-        k = !M && null != L && null != O && h.nG[L.trial_id].skus.includes(O),
+        k = !w && null != L && null != O && h.nG[L.trial_id].skus.includes(O),
         F =
             null != S
                 ? S
@@ -45,7 +45,7 @@ function f(e) {
         U = null != E ? E : d.h8.CREDIT_CARD_INFORMATION,
         B = g && null == R.current ? U : d.h8.PAYMENT_TYPE;
     return (0, a.vP)({
-        paymentModalArgs: w,
+        paymentModalArgs: M,
         initialStep: B,
         prependSteps: [d.h8.PROMOTION_INFO],
         appendSteps: [d.h8.REVIEW, d.h8.CONFIRM],
@@ -68,6 +68,6 @@ function f(e) {
             });
         },
         isEligibleForTrial: k,
-        allowDesktopRedirectPurchase: (0, p.tr)(O, M, A)
+        allowDesktopRedirectPurchase: (0, p.tr)(O, w, A)
     });
 }

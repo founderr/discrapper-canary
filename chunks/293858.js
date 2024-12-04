@@ -8,8 +8,8 @@ var i = n(200651),
     s = n(512722),
     r = n.n(s),
     a = n(605236),
-    C = n(881602),
-    o = n(155491),
+    o = n(881602),
+    C = n(155491),
     d = n(717401),
     u = n(286961),
     c = n(317269),
@@ -26,18 +26,18 @@ function g(e) {
     let s,
         { handleClose: g, planGroup: E, onSubscriptionConfirmation: S, renderPurchaseConfirmation: y, postSuccessGuild: M, followupSKUInfo: Z, continueSession: I } = e,
         { activeSubscription: v, paymentSources: P, paymentSourceId: T, selectedPlan: N, selectedSkuId: A, step: U, updatedSubscription: k, startingPremiumSubscriptionPlanIdRef: b } = (0, f.usePaymentContext)(),
-        { isGift: O, giftRecipient: R, giftCode: w, hasSentMessage: H, isSendingMessage: B, sendGiftMessage: F, claimableRewards: G } = (0, h.wD)(),
-        W = (0, d.id)(N, O, G),
+        { isGift: R, giftRecipient: O, giftCode: w, hasSentMessage: H, isSendingMessage: B, sendGiftMessage: F, claimableRewards: G } = (0, h.wD)(),
+        W = (0, d.id)(N, R, G),
         D = (0, u.Z)(),
-        Y = (0, o.Z2)();
+        Y = (0, C.Z2)();
     r()(null != N, 'Expected plan to selected'), r()(null != A, 'Expected selectedSkuId'), r()(null != U, 'Step should be set');
     let V = l.useCallback(() => {
         g(), null == S || S();
     }, [g, S]);
     return (
         l.useEffect(() => {
-            if (!(!O || null == R || null == w || H || B || (0, p.pO)(R))) C.F.getCurrentConfig({ location: '36b986_1' }).enabled && F({ onSubscriptionConfirmation: S });
-        }, [F, O, R, w, H, B, S]),
+            if (!(!R || null == O || null == w || H || B || (0, p.pO)(O))) o.F.getCurrentConfig({ location: '36b986_1' }).enabled && F({ onSubscriptionConfirmation: S });
+        }, [F, R, O, w, H, B, S]),
         l.useEffect(() => {
             null != D && null != D.reminderNotice && W && (0, a.wH)(D.reminderNotice.dismissibleContent, D.dismissibleContentVersion, { dismissAction: m.L.INDIRECT_ACTION });
         }, [D, W]),
@@ -46,7 +46,7 @@ function g(e) {
                 ? y(N, V, k)
                 : I
                   ? (0, i.jsx)(c.VY, {})
-                  : O
+                  : R
                     ? (0, i.jsx)(c.TB, {
                           planId: N.id,
                           onClose: V,
@@ -72,7 +72,7 @@ function g(e) {
                 (0, i.jsxs)(j.C3, {
                     children: [(0, i.jsx)(L.Z, {}), s]
                 }),
-                O
+                R
                     ? (0, i.jsx)(_.Z, {
                           onClose: V,
                           halloweenDecoPurchase: Y

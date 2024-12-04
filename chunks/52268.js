@@ -18,8 +18,8 @@ var r = n(200651),
     I = n(388032),
     v = n(479366),
     E = n(223223);
-let _ = () => 80,
-    j = (e) => {
+let P = () => 80,
+    _ = (e) => {
         let { children: t, className: n, isSelected: i = !1, ...l } = e;
         return (0, r.jsx)(d.Clickable, {
             className: s()(v.effectGridItem, n, { [v.selected]: i }),
@@ -28,21 +28,21 @@ let _ = () => 80,
             children: t
         });
     },
-    P = (e) => {
+    j = (e) => {
         var t;
         let { user: n, profileEffect: l, innerRef: s, section: o, isSelected: u, ...C } = e,
-            _ = (0, g.V)(l.id),
-            P = (0, a.e7)([f.Z], () => {
+            P = (0, g.V)(l.id),
+            j = (0, a.e7)([f.Z], () => {
                 let e = f.Z.getProduct(l.skuId);
                 return (0, m.G1)(e);
             }),
             S = (0, m.Yq)(l.skuId),
             N = i.useRef(null),
-            { accessibilityLabel: Z, thumbnailPreviewSrc: T, title: B } = null !== (t = null == _ ? void 0 : _.config) && void 0 !== t ? t : {},
+            { accessibilityLabel: Z, thumbnailPreviewSrc: T, title: B } = null !== (t = null == P ? void 0 : P.config) && void 0 !== t ? t : {},
             b = h.ZP.canUseCollectibles(n),
             A = o === x.$0.PREMIUM_PURCHASE && !b,
             k = (0, p.M)();
-        return (0, r.jsxs)(j, {
+        return (0, r.jsxs)(_, {
             className: !A || u || k ? void 0 : v.decorationGridItemChurned,
             innerRef: null != s ? s : N,
             isSelected: u,
@@ -75,7 +75,7 @@ let _ = () => 80,
                             })
                         })
                       : (0, r.jsx)(d.IconBadge, {
-                            icon: P
+                            icon: j
                                 ? () =>
                                       (0, r.jsx)(d.NitroWheelIcon, {
                                           size: 'custom',
@@ -120,7 +120,7 @@ t.Z = (e) => {
                 return (0, o.EQ)(g[c])
                     .with(x.Tm, () =>
                         (0, r.jsxs)(
-                            j,
+                            _,
                             {
                                 style: { ...u },
                                 isSelected: !m,
@@ -143,7 +143,7 @@ t.Z = (e) => {
                     )
                     .with(x.oT, () =>
                         (0, r.jsxs)(
-                            j,
+                            _,
                             {
                                 style: u,
                                 onSelect: a,
@@ -168,7 +168,7 @@ t.Z = (e) => {
                     .otherwise((e) => {
                         let n = i === e.id;
                         return (0, r.jsx)(
-                            P,
+                            j,
                             {
                                 user: t,
                                 style: { ...u },
@@ -198,7 +198,7 @@ t.Z = (e) => {
                 var n, r;
                 return null !== (r = null === (n = f[e].items[t]) || void 0 === n ? void 0 : n.id) && void 0 !== r ? r : null;
             },
-            getItemHeight: _,
+            getItemHeight: P,
             removeEdgeItemGutters: !0
         })
     });

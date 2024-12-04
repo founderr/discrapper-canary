@@ -327,7 +327,7 @@ let M = (e) => {
                           type: 'text',
                           content: t
                       }
-                    : i;
+                    : ((i.type = 'timestamp'), i);
             }
         },
         s: {

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return C;
     }
 });
 var r = n(200651);
@@ -41,19 +41,19 @@ function v(e) {
         ]
     });
 }
-function j() {
+function C() {
     let e = (0, o.e7)([m.Z], () => m.Z.getChannelId()),
         t = (0, o.e7)([x.Z], () => x.Z.getGuildId()),
         n = (0, o.e7)([d.Z], () => d.Z.getChannel(e)),
         a = (0, o.e7)([u.Z], () => u.Z.getGuild(t)),
-        j = (0, o.e7)([h.Z], () => h.Z.computePermissions(n)),
-        C = (0, o.e7)([h.Z], () => h.Z.computePermissions(a)),
+        C = (0, o.e7)([h.Z], () => h.Z.computePermissions(n)),
+        j = (0, o.e7)([h.Z], () => h.Z.computePermissions(a)),
         _ = (0, c.ZP)(n, !0),
         T = null != n ? (0, p.IG)(n, !1, !0) : null,
         S = null != a ? f.Z.getGuildPermissionSpecMap(a) : null,
         y = Object.values(null != T ? T : {}).map((e) => {
             let { title: t, flag: n } = e,
-                a = i.e$(j, n);
+                a = i.e$(C, n);
             return (0, r.jsx)(
                 v,
                 {
@@ -65,7 +65,7 @@ function j() {
         }),
         N = Object.values(null != S ? S : {}).map((e) => {
             let { title: t, flag: n } = e,
-                a = i.e$(C, n);
+                a = i.e$(j, n);
             return (0, r.jsx)(
                 v,
                 {

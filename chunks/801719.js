@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return o;
     }
 });
 var i = n(192379),
@@ -8,7 +8,7 @@ var i = n(192379),
     s = n(607070),
     r = n(821982),
     a = n(155491);
-function C(e) {
+function o(e) {
     let t = (0, l.e7)([s.Z], () => s.Z.useReducedMotion);
     return i.useMemo(() => (0, r.Z)(a.Vy, e, !t), [e, t]);
 }

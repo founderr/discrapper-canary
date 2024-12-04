@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(120816),
     b = n(31336),
     v = n(257785),
-    j = n(484036),
-    C = n(681619),
+    C = n(484036),
+    j = n(681619),
     _ = n(621060),
     T = n(388032),
     S = n(931933),
@@ -270,14 +270,14 @@ function Z() {
                     placeholder: 'Search by event name'
                 })
             }),
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(j.Z, {
                 columns: N,
                 data: I,
                 selectedRowKey: E,
                 onClickRow: (e) => Z(e.key)
             }),
             null != R &&
-                (0, r.jsxs)(j.Z, {
+                (0, r.jsxs)(C.Z, {
                     className: S.subPanel,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,

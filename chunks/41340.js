@@ -69,8 +69,8 @@ let g = {
     ];
 function v(e) {
     var t, n, l;
-    let { subscription: v, onUpdated: j } = e,
-        [C, _] = a.useState(!1),
+    let { subscription: v, onUpdated: C } = e,
+        [j, _] = a.useState(!1),
         [T, S] = a.useState(!1),
         y = (e) => ((null == e && (e = v.status), e in g) ? g[e] : 'Unknown status '.concat(e)),
         N = (e) => {
@@ -89,7 +89,7 @@ function v(e) {
                 body: a,
                 rejectWithError: !1
             }),
-                j();
+                C();
         },
         E = (null === (t = x.GP[v.planIdFromItems]) || void 0 === t ? void 0 : t.premiumType) === x.p9.TIER_0,
         k = null === (n = v.metadata) || void 0 === n ? void 0 : n.ended_at,
@@ -129,7 +129,7 @@ function v(e) {
                         children: [
                             (0, r.jsxs)(s.Clickable, {
                                 onClick: () => {
-                                    _(!C);
+                                    _(!j);
                                 },
                                 className: f.collapsablePaneHeader,
                                 children: [
@@ -139,10 +139,10 @@ function v(e) {
                                             children: 'Metadata'
                                         })
                                     }),
-                                    (0, r.jsx)(c.Z, { direction: C ? c.Z.Directions.UP : c.Z.Directions.DOWN })
+                                    (0, r.jsx)(c.Z, { direction: j ? c.Z.Directions.UP : c.Z.Directions.DOWN })
                                 ]
                             }),
-                            C &&
+                            j &&
                                 (0, r.jsx)('ul', {
                                     style: { marginBottom: '15px' },
                                     children: Object.entries(v.metadata).map((e) => {

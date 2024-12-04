@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(31336),
     b = n(257785),
     v = n(484036),
-    j = n(681619),
-    C = n(621060),
+    C = n(681619),
+    j = n(621060),
     _ = n(388032),
     T = n(931933),
     S = n(941469);
@@ -131,7 +131,7 @@ function I() {
         o = a.useMemo(() => l.filter((t) => 0 === e.length || s()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
         [c, d] = a.useState(void 0),
         x = o.find((e) => e.key === c),
-        { TabBar: f, renderSelectedTab: b } = (0, C.Z)({ tabs: N }, []),
+        { TabBar: f, renderSelectedTab: b } = (0, j.Z)({ tabs: N }, []),
         I = (0, u.e7)([p.Z], () => p.Z.trackTriggers),
         E = a.useCallback((e) => {
             m.Z.dispatch({
@@ -178,7 +178,7 @@ function I() {
                     })
                 ]
             }),
-            (0, r.jsx)(j.Z, {
+            (0, r.jsx)(C.Z, {
                 columns: y,
                 data: o,
                 selectedRowKey: c,

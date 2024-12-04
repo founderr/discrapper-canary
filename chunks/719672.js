@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return C;
     }
 }),
     n(47120);
@@ -50,7 +50,7 @@ let g = (e) => {
             }
         }
     ];
-function j() {
+function C() {
     let e = (0, s.e7)([u.Z], () => u.Z.getDCFEvents()),
         t = (0, m.ZP)((e) => e.candidates),
         n = (0, m.ZP)((e) => e.lastWinnerTime),

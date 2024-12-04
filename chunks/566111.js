@@ -9,20 +9,20 @@ var r = n(192379),
     l = n(365943),
     s = n(25251),
     o = n(223143);
-function c() {
-    var e;
-    let { isFetching: t, fetchCategoriesError: n, fetchPurchasesError: c, categories: a, purchases: d } = (0, o.ZP)(),
-        [u, f, m] = (0, i.Wu)([s.Z], () => [s.Z.isFetching, s.Z.fetchError, s.Z.profileEffects]);
+function c(e) {
+    var t;
+    let { isFetching: n, fetchCategoriesError: c, fetchPurchasesError: a, categories: d, purchases: u } = (0, o.ZP)({ location: e }),
+        [f, m, p] = (0, i.Wu)([s.Z], () => [s.Z.isFetching, s.Z.fetchError, s.Z.profileEffects]);
     return (
         r.useEffect(() => {
             (0, l.z)(!0);
         }, []),
         {
-            isFetching: t || u,
-            combinedError: null !== (e = null != n ? n : c) && void 0 !== e ? e : f,
-            profileEffects: m,
-            categories: a,
-            purchases: d
+            isFetching: n || f,
+            combinedError: null !== (t = null != c ? c : a) && void 0 !== t ? t : m,
+            profileEffects: p,
+            categories: d,
+            purchases: u
         }
     );
 }

@@ -30,12 +30,12 @@ let E = (e) => {
         A = (0, u.MY)(E, n),
         R = A === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
         Z = A !== u.xr.DEFAULT,
-        M = (0, m.rK)(),
-        { enabled: w } = m.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: M }),
+        w = (0, m.rK)(),
+        { enabled: M } = m.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: w }),
         { enabled: L } = p.O.useExperiment({ location: 'gift card' }),
         k = null;
     return (
-        Z && (k = M && w ? v.kJ : v.QI),
+        Z && (k = w && M ? v.kJ : v.QI),
         L && (k = v.RQ),
         (0, i.jsxs)('div', {
             children: [

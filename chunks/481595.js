@@ -35,8 +35,8 @@ var i = t(200651),
     A = t(987209),
     R = t(563132),
     Z = t(45572),
-    M = t(119226),
-    w = t(981631),
+    w = t(119226),
+    M = t(981631),
     L = t(388032),
     k = t(215409);
 function F(e) {
@@ -44,7 +44,7 @@ function F(e) {
     s()(null != t.amount, 'SKU must have a price set.');
     let l = t.amount - t.tax,
         r = (0, f.ed)('SKUInvoice'),
-        a = n.productLine === w.POd.COLLECTIBLES && r;
+        a = n.productLine === M.POd.COLLECTIBLES && r;
     return !t.tax_inclusive && t.tax > 0
         ? (0, i.jsxs)(g.PO, {
               className: k.invoice,
@@ -125,7 +125,7 @@ function U(e) {
         eo = U === Z.A.PURCHASING || U === Z.A.COMPLETED,
         eu = null != G ? B[G].type : null,
         ed = (0, f.ed)('SKUInvoice'),
-        em = et.productLine === w.POd.COLLECTIBLES && ed;
+        em = et.productLine === M.POd.COLLECTIBLES && ed;
     return (
         l.useEffect(() => {
             en && G === ee && ee !== T.c && null == er && (0, u.x2)(et.applicationId, et.id, ee, { isGift: J });
@@ -146,7 +146,7 @@ function U(e) {
                           'TEST_MODE'
                       )
                     : null,
-                (0, C.yE)(O.flags, w.udG.EMBEDDED) && q === h.O.ERROR
+                (0, C.yE)(O.flags, M.udG.EMBEDDED) && q === h.O.ERROR
                     ? (0, i.jsx)(
                           m.Z,
                           {
@@ -164,7 +164,7 @@ function U(e) {
                     sku: et,
                     isEmbeddedIAP: z
                 }),
-                $ && (0, i.jsx)(M.Z, { sku: et }),
+                $ && (0, i.jsx)(w.Z, { sku: et }),
                 null != Q ? (0, i.jsx)(j.s, { giftRecipient: Q }) : null,
                 (0, i.jsx)(o.FormTitle, {
                     tag: o.FormTitleTags.H5,
@@ -222,7 +222,7 @@ function U(e) {
                         finePrintClassname: k.fineprint,
                         purchaseType: Y,
                         isGift: J,
-                        checkboxLabel: et.productLine === w.POd.COLLECTIBLES ? L.intl.format(L.t['1EdAlZ'], { paidURL: w.EYA.PAID_TERMS }) : void 0,
+                        checkboxLabel: et.productLine === M.POd.COLLECTIBLES ? L.intl.format(L.t['1EdAlZ'], { paidURL: M.EYA.PAID_TERMS }) : void 0,
                         finePrint: (0, i.jsx)(d.Z, {
                             paymentSourceType: eu,
                             isEmbeddedIAP: z,

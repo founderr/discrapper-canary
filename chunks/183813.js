@@ -8,8 +8,8 @@ var i = n(200651),
     s = n(512722),
     r = n.n(s),
     a = n(442837),
-    C = n(481060),
-    o = n(204418),
+    o = n(481060),
+    C = n(204418),
     d = n(628952),
     u = n(314404),
     c = n(594174),
@@ -58,7 +58,7 @@ function L(e) {
                             children: [
                                 (0, i.jsx)('div', {
                                     className: j.header,
-                                    children: (0, i.jsx)(C.Heading, {
+                                    children: (0, i.jsx)(o.Heading, {
                                         variant: 'heading-lg/bold',
                                         color: 'header-primary',
                                         children: _.intl.string(_.t['Rp0+ZG'])
@@ -67,7 +67,7 @@ function L(e) {
                                 null == S ? void 0 : S.map((e) => M(e))
                             ]
                         }),
-                        (0, i.jsx)(C.ModalCloseButton, {
+                        (0, i.jsx)(o.ModalCloseButton, {
                             onClick: n,
                             className: j.closeButton
                         }),
@@ -76,7 +76,7 @@ function L(e) {
                             children:
                                 null != E &&
                                 null != y &&
-                                (0, i.jsx)(o.Z, {
+                                (0, i.jsx)(C.Z, {
                                     avatarDecorationOverride: { asset: E.assetId },
                                     user: y,
                                     guildId: null
@@ -85,7 +85,7 @@ function L(e) {
                     ]
                 }),
                 (0, i.jsx)(f.O3, {
-                    children: (0, i.jsx)(C.ModalFooter, {
+                    children: (0, i.jsx)(o.ModalFooter, {
                         className: j.modalFooter,
                         children: (0, i.jsx)(u.y, {
                             onStepChange: t,

@@ -26,8 +26,8 @@ var i = n(200651),
     N = n(626421),
     S = n(118379),
     T = n(267161),
-    x = n(652515),
-    b = n(544978),
+    b = n(652515),
+    x = n(544978),
     A = n(540059),
     Z = n(724383),
     L = n(135864),
@@ -131,21 +131,21 @@ let eg = 'resizable-sidebar-width-2',
                 if ((null == e ? void 0 : e.type) === U.z.SERVER_SHOP)
                     switch (e.initialTab) {
                         case 'role_subscriptions':
-                            return b.y.GUILD_ROLE_SUBSCRIPTIONS;
+                            return x.y.GUILD_ROLE_SUBSCRIPTIONS;
                         case 'guild_products':
-                            return b.y.GUILD_PRODUCTS;
+                            return x.y.GUILD_PRODUCTS;
                         default:
                             return;
                     }
             }),
-            d = (0, x.C4)(r, 'channel_renderer');
+            d = (0, b.C4)(r, 'channel_renderer');
         if (null != r && null != l && (0, eh.AB)(l))
             switch (l) {
                 case eh.oC.ROLE_SUBSCRIPTIONS:
                     return d
                         ? (0, i.jsx)(eE, {
                               guildId: r,
-                              initialTab: b.y.GUILD_ROLE_SUBSCRIPTIONS
+                              initialTab: x.y.GUILD_ROLE_SUBSCRIPTIONS
                           })
                         : (0, i.jsx)(j.Z, { guildId: r });
                 case eh.oC.GUILD_SHOP:
@@ -193,7 +193,7 @@ let eg = 'resizable-sidebar-width-2',
         }
         return (0, i.jsx)(v.Z, {});
     },
-    ex = r.memo(function () {
+    eb = r.memo(function () {
         let { guildId: e, channelId: t } = (0, W.Z)(),
             n = (0, u.e7)([ee.Z], () => (null != t ? t : ee.Z.getChannelId(e)));
         return (function () {
@@ -214,7 +214,7 @@ let eg = 'resizable-sidebar-width-2',
                 )
               : (0, i.jsx)(eo.Z, {});
     }),
-    eb = (e) => (0, i.jsx)(eT, { ...e }),
+    ex = (e) => (0, i.jsx)(eT, { ...e }),
     eA = () => (0, i.jsx)(Z.Z, {}),
     eZ = (e) => {
         let { match: t } = e;
@@ -331,17 +331,17 @@ function eU(e) {
         S = r.useCallback(() => {
             document.body.classList.add(ep.dragging);
         }, []),
-        x = r.useCallback((e) => {
+        b = r.useCallback((e) => {
             var t;
             document.body.classList.remove(ep.dragging), document.body.classList.remove(ep.draggingMin), document.body.classList.remove(ep.draggingMax), document.body.classList.remove(ep.collapsing), null === (t = v.current) || void 0 === t || t.style.setProperty('--custom-overdrag', '0px'), h.K.set(eg, e);
         }, []),
-        b = (0, f.Z)({
+        x = (0, f.Z)({
             minDimension: 264,
             maxDimension: 432,
             resizableDomNodeRef: v,
             onElementResize: N,
             onElementResizeStart: S,
-            onElementResizeEnd: x,
+            onElementResizeEnd: b,
             orientation: f.y.HORIZONTAL_RIGHT,
             throttleDuration: 0
         }),
@@ -378,14 +378,14 @@ function eU(e) {
                         }),
                     (0, i.jsx)(L, {
                         ...y,
-                        children: (0, i.jsx)(ex, {})
+                        children: (0, i.jsx)(eb, {})
                     }),
                     E
                         ? (0, i.jsx)(m.Clickable, {
                               onClick: Z,
                               'aria-label': 'Resize Sidebar',
                               className: ep.sidebarResizeHandle,
-                              onMouseDown: b
+                              onMouseDown: x
                           })
                         : null,
                     (0, i.jsx)(er.b, {}),
@@ -538,7 +538,7 @@ function eG() {
                                                     }),
                                                     (0, i.jsx)(I.Z, {
                                                         path: [eu.Z5c.CHANNEL_THREAD_VIEW(K.Hw.guildId(), K.Hw.channelId(), ':threadId', ':messageId?'), eu.Z5c.CHANNEL(eu.ME, K.Hw.channelId()), eu.Z5c.CHANNEL(K.Hw.guildId(), K.Hw.channelId({ optional: !0 }), ':messageId?')],
-                                                        render: eb,
+                                                        render: ex,
                                                         impressionName: o.ImpressionNames.GUILD_CHANNEL,
                                                         disableTrack: !0
                                                     }),

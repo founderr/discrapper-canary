@@ -45,7 +45,7 @@ function v() {
             d.Z.setRenderDebugMode(!u.Z.renderDebugMode);
         },
         v = b(Object.values(e), m.Odu.CLICK_ZONE_DEBUG),
-        j = () => {
+        C = () => {
             if (null != v) (0, c.E9)(v.id);
             else {
                 let e = g(x.OVERLAY_V3_LAYOUT_ID);
@@ -105,7 +105,7 @@ function v() {
                         ...e,
                         children: (0, r.jsx)(s.Checkbox, {
                             value: null != v,
-                            onChange: () => j(),
+                            onChange: () => C(),
                             size: 18,
                             type: s.Checkbox.Types.INVERTED,
                             shape: s.Checkbox.Shapes.BOX,

@@ -4,16 +4,16 @@ var l = n(481060),
     s = n(823188),
     r = n(474936),
     a = n(101098);
-function C(e) {
-    let { onClick: t, isGift: n, priceOptions: r, showPromotionalGiftBanner: C } = e;
+function o(e) {
+    let { onClick: t, isGift: n, priceOptions: r, showPromotionalGiftBanner: o } = e;
     return (0, i.jsx)(l.Clickable, {
         onClick: t,
         style: { cursor: 'pointer' },
         children: (0, i.jsx)(s.wp, {
             className: a.tier2MarketingCard,
             ctaButton: null,
-            showWumpus: !C,
-            showPromotionalGiftBanner: C,
+            showWumpus: !o,
+            showPromotionalGiftBanner: o,
             showYearlyPrice: !0,
             isGift: n,
             isModal: !0,
@@ -21,7 +21,7 @@ function C(e) {
         })
     });
 }
-function o(e) {
+function C(e) {
     let { onClick: t, isGift: n, priceOptions: r } = e;
     return (0, i.jsx)(l.Clickable, {
         onClick: t,
@@ -40,13 +40,13 @@ t.Z = function (e) {
     let { onSelectSku: t, isGift: n, priceOptions: l, showPromotionalGiftBanner: s } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(C, {
+            (0, i.jsx)(o, {
                 onClick: () => t(r.Si.TIER_2),
                 isGift: n,
                 priceOptions: l,
                 showPromotionalGiftBanner: s
             }),
-            (0, i.jsx)(o, {
+            (0, i.jsx)(C, {
                 onClick: () => t(r.Si.TIER_0),
                 isGift: n,
                 priceOptions: l

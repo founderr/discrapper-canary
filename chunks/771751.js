@@ -21,7 +21,7 @@ var r = n(200651),
     g = n(474936),
     b = n(941469),
     v = n(509345);
-let j = async () => {
+let C = async () => {
         try {
             let { body: e } = await o.tn.get({
                 url: p.ANM.USER_OFFER_IDS,
@@ -32,7 +32,7 @@ let j = async () => {
             return [];
         }
     },
-    C = async (e, t) => {
+    j = async (e, t) => {
         try {
             await o.tn.post({
                 url: p.ANM.CREATE_USER_OFFER(e, t),
@@ -94,18 +94,18 @@ function N(e) {
     var t, n, l, o;
     let { offer: s, offerOptions: u, forceRefetch: h } = e,
         [f, p] = a.useState(!1),
-        [b, j] = a.useState(!1),
-        [C, S] = a.useState(!1),
+        [b, C] = a.useState(!1),
+        [j, S] = a.useState(!1),
         [y, N] = a.useState(!1);
     a.useEffect(() => {
-        C && N(!0);
+        j && N(!0);
         let e = setTimeout(() => {
             N(!1);
         }, 500);
         return () => {
             clearTimeout(e);
         };
-    }, [C]);
+    }, [j]);
     let { id: I, expires_at: E, redeemed_at: k, trial_id: w, subscription_trial: Z, referrer: R } = s,
         O =
             null !==
@@ -137,7 +137,7 @@ function N(e) {
         }
         if (b) {
             let e = setTimeout(() => {
-                j(!1);
+                C(!1);
             }, 3000);
             return () => {
                 clearTimeout(e);
@@ -198,7 +198,7 @@ function N(e) {
                 (0, r.jsxs)(c.Clickable, {
                     className: i()(v.row, v.idRow),
                     onClick: () => {
-                        (0, m.JG)(w), j(!0);
+                        (0, m.JG)(w), C(!0);
                     },
                     children: [
                         (0, r.jsxs)(c.Text, {
@@ -261,7 +261,7 @@ function N(e) {
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: i()(v.loadingContainer, { [v.isLoading]: C || y }),
+                    className: i()(v.loadingContainer, { [v.isLoading]: j || y }),
                     children: (0, r.jsx)(c.Spinner, {})
                 })
             ]
@@ -274,17 +274,17 @@ function I(e) {
         [u, h] = a.useState(!1),
         [x, f] = a.useState(!1),
         [p, g] = a.useState(!1),
-        [b, j] = a.useState(!1);
+        [b, C] = a.useState(!1);
     a.useEffect(() => {
-        p && j(!0);
+        p && C(!0);
         let e = setTimeout(() => {
-            j(!1);
+            C(!1);
         }, 500);
         return () => {
             clearTimeout(e);
         };
     }, [p]);
-    let { id: C, expires_at: S, applied_at: y, discount_id: N, discount: I } = l,
+    let { id: j, expires_at: S, applied_at: y, discount_id: N, discount: I } = l,
         E =
             null !==
                 (n =
@@ -300,7 +300,7 @@ function I(e) {
         k = null != S,
         w = null != S && new Date(S).getTime() < Date.now(),
         Z = async () => {
-            g(!0), k ? await T(C, 'discount') : await (0, d.a)(void 0, l), s(), g(!1);
+            g(!0), k ? await T(j, 'discount') : await (0, d.a)(void 0, l), s(), g(!1);
         };
     a.useEffect(() => {
         if (u) {
@@ -337,7 +337,7 @@ function I(e) {
                         }),
                         (0, r.jsx)(c.Clickable, {
                             onClick: async () => {
-                                g(!0), await _(C, 'discount'), s(), g(!1);
+                                g(!0), await _(j, 'discount'), s(), g(!1);
                             },
                             children: (0, r.jsx)(c.TrashIcon, {
                                 size: 'md',
@@ -350,13 +350,13 @@ function I(e) {
                 (0, r.jsxs)(c.Clickable, {
                     className: i()(v.row, v.idRow),
                     onClick: () => {
-                        (0, m.JG)(C), h(!0);
+                        (0, m.JG)(j), h(!0);
                     },
                     children: [
                         (0, r.jsxs)(c.Text, {
                             variant: 'eyebrow',
                             color: 'text-normal',
-                            children: ['Offer: ', C]
+                            children: ['Offer: ', j]
                         }),
                         u
                             ? (0, r.jsx)(c.CheckmarkLargeIcon, {
@@ -446,7 +446,7 @@ function E() {
         [k, w] = a.useState(!0);
     a.useEffect(() => {
         (0 === e.length || 0 === n.length || k) &&
-            j().then((e) => {
+            C().then((e) => {
                 let n = Object.keys(e.trial).map((t) => ({
                         label: t,
                         value: e.trial[t]
@@ -468,10 +468,10 @@ function E() {
                 }));
         }, [k]);
     let Z = async () => {
-            null != o && (await C(o, 'trial'), w(!0));
+            null != o && (await j(o, 'trial'), w(!0));
         },
         R = async () => {
-            null != x && (await C(x, 'discount'), w(!0));
+            null != x && (await j(x, 'discount'), w(!0));
         },
         O = async () => {
             await y(), w(!0);

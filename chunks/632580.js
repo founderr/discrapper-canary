@@ -18,7 +18,7 @@ var i = t(512722),
     x = t(981631),
     h = t(474936);
 async function f(e) {
-    let { setPurchaseState: n, setHasAcceptedTerms: t, setIsSubmitting: i, setPurchaseError: f, hasRedirectURL: v, setHasRedirectURL: S, isGift: g, baseAnalyticsData: E, analyticsLocation: j, analyticsLocations: y, flowStartTime: I, subscriptionPlan: P, planGroup: T, trialId: N, priceOptions: b, paymentSource: C, isPrepaidPaymentPastDue: _, openInvoiceId: O, premiumSubscription: A, onNext: R, metadata: Z, sku: M, skuPricePreview: w, purchaseType: L, referralCode: k, loadId: F, giftInfoOptions: D, invoicePreview: U } = e;
+    let { setPurchaseState: n, setHasAcceptedTerms: t, setIsSubmitting: i, setPurchaseError: f, hasRedirectURL: v, setHasRedirectURL: S, isGift: g, baseAnalyticsData: E, analyticsLocation: j, analyticsLocations: y, flowStartTime: I, subscriptionPlan: P, planGroup: T, trialId: N, priceOptions: b, paymentSource: C, isPrepaidPaymentPastDue: _, openInvoiceId: O, premiumSubscription: A, onNext: R, metadata: Z, sku: w, skuPricePreview: M, purchaseType: L, referralCode: k, loadId: F, giftInfoOptions: D, invoicePreview: U } = e;
     n(p.A.PURCHASING), t(!0), i(!0), r.Z.wait(a.fw), f(null);
     try {
         let e, t, i;
@@ -35,11 +35,11 @@ async function f(e) {
         )
             return;
         if (L === x.GZQ.ONE_TIME)
-            l()(null != M, 'SKU must exist and be fetched.'),
-                l()(null != w, 'SKUPricePreview must exist.'),
-                (e = await (0, o.ZZ)(M.applicationId, M.id, {
-                    expectedAmount: w.amount,
-                    expectedCurrency: w.currency,
+            l()(null != w, 'SKU must exist and be fetched.'),
+                l()(null != M, 'SKUPricePreview must exist.'),
+                (e = await (0, o.ZZ)(w.applicationId, w.id, {
+                    expectedAmount: M.amount,
+                    expectedCurrency: M.currency,
                     isGift: g,
                     paymentSource: C,
                     loadId: F,

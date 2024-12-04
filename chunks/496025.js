@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(630388),
     b = n(98357),
     v = n(432877),
-    j = n(246992),
-    C = n(821843),
+    C = n(246992),
+    j = n(821843),
     _ = n(941469);
 function T() {
     var e;
@@ -52,10 +52,10 @@ function T() {
                 children: 'In-Game NUX Message for DMs'
             }),
             (0, r.jsxs)('div', {
-                className: C.inGameNuxContainer,
+                className: j.inGameNuxContainer,
                 children: [
                     (0, r.jsx)(c.SearchableSelect, {
-                        wrapperClassName: C.search,
+                        wrapperClassName: j.search,
                         options: b,
                         placeholder: 'Select DM',
                         value: n,
@@ -71,7 +71,7 @@ function T() {
                                       size: c.AvatarSizes.SIZE_16
                                   });
                         },
-                        popoutLayerContext: j.O$
+                        popoutLayerContext: C.O$
                     }),
                     (0, r.jsx)(c.Button, {
                         size: c.Button.Sizes.SMALL,
@@ -93,14 +93,14 @@ function S() {
                 value: n,
                 onChange: (e) => (0, b.Z)(t, e),
                 hideBorder: !0,
-                className: C.switch,
+                className: j.switch,
                 children: a
             },
             t
         );
     });
     return (0, r.jsxs)('div', {
-        className: i()(_.panel, C.panel),
-        children: [e, (0, r.jsx)('div', { className: C.divider }), (0, r.jsx)(T, {})]
+        className: i()(_.panel, j.panel),
+        children: [e, (0, r.jsx)('div', { className: j.divider }), (0, r.jsx)(T, {})]
     });
 }
