@@ -21,12 +21,13 @@ t.Z = (e) => {
         });
     i.useEffect(() => {
         null != E && g(!0);
-    }, [E]),
-        i.useEffect(() => {
-            'NOT_FETCHED' === f.Z.getFetchState() && o.Z.fetch();
-        }, []);
-    let v = (0, a.e7)([l.ZP], () => l.ZP.getSelfEmbeddedActivities()),
-        I = i.useCallback(() => {
+    }, [E]);
+    let v = i.useRef(!1);
+    i.useEffect(() => {
+        !v.current && (o.Z.fetch(), (v.current = !0));
+    }, []);
+    let I = (0, a.e7)([l.ZP], () => l.ZP.getSelfEmbeddedActivities()),
+        T = i.useCallback(() => {
             if (
                 (g(!1),
                 c.ZP.trackWithMetadata(p.rMx.IAR_DEAUTHORIZE_APP_BUTTON_CLICKED, {
@@ -37,14 +38,14 @@ t.Z = (e) => {
             )
                 return;
             o.Z.delete(E.id), _.S.safeDispatch(p.CkL.HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, { applicationId: t.id });
-            let e = v.get(t.id);
+            let e = I.get(t.id);
             null != e &&
                 u.Z.leaveActivity({
                     channelId: e.channelId,
                     applicationId: t.id,
                     showFeedback: !1
                 });
-        }, [t.id, E, v, n]);
+        }, [t.id, E, I, n]);
     return null == t
         ? null
         : (0, r.jsx)(d.Z, {
@@ -54,6 +55,6 @@ t.Z = (e) => {
               buttonDisabled: !m,
               buttonColor: m ? s.Button.Colors.RED : s.Button.Colors.WHITE,
               buttonLook: m ? s.Button.Looks.FILLED : s.Button.Looks.LINK,
-              onButtonPress: I
+              onButtonPress: T
           });
 };

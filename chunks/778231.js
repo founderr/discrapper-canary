@@ -1,86 +1,91 @@
-var r = n(200651);
-n(192379);
-var i = n(442837),
-    a = n(481060),
-    s = n(824606),
-    o = n(686546),
-    l = n(522289),
-    u = n(146078),
-    c = n(881998),
-    d = n(709054),
-    f = n(388032),
-    _ = n(914301),
-    p = n(970952);
+var r = n(200651),
+    i = n(192379),
+    a = n(442837),
+    s = n(481060),
+    o = n(384275),
+    l = n(824606),
+    u = n(686546),
+    c = n(522289),
+    d = n(146078),
+    f = n(881998),
+    _ = n(709054),
+    p = n(388032),
+    h = n(914301),
+    m = n(970952);
 t.Z = (e) => {
     var t, n;
-    let { entry: h } = e,
-        { name: m } = h,
-        g = (0, i.e7)([c.Z], () => {
-            let e = c.Z.getApps();
-            return null != e ? e.find((e) => e.application.id === h.id) : null;
+    let { entry: g } = e,
+        { name: E } = g,
+        v = (0, a.e7)([f.Z], () => {
+            let e = f.Z.getApps();
+            return null != e ? e.find((e) => e.application.id === g.id) : null;
         }),
-        E = null !== (n = h.getIconURL(64)) && void 0 !== n ? n : p,
-        v = (0, s.Z)({ application: h }),
-        I = null != g ? d.default.extractTimestamp(g.id) : void 0;
+        I = null !== (n = g.getIconURL(64)) && void 0 !== n ? n : m,
+        T = (0, l.Z)({ application: g }),
+        b = i.useRef(!1);
+    i.useEffect(() => {
+        !b.current && (o.Z.fetch(), (b.current = !0));
+    }, []);
+    let S = null != v ? _.default.extractTimestamp(v.id) : void 0;
     return (0, r.jsxs)('div', {
-        className: _.container,
+        className: h.container,
         children: [
-            (0, r.jsx)(a.Heading, {
-                className: _.header,
+            (0, r.jsx)(s.Heading, {
+                className: h.header,
                 variant: 'heading-sm/semibold',
-                children: f.intl.string(f.t['aYfK//'])
+                children: p.intl.string(p.t['aYfK//'])
             }),
             (0, r.jsx)('div', {
-                className: _.appContainer,
+                className: h.appContainer,
                 children: (0, r.jsxs)('div', {
-                    className: _.appInfo,
+                    className: h.appInfo,
                     children: [
-                        (0, r.jsx)(o.ZP, {
-                            mask: o.ZP.Masks.AVATAR_DEFAULT,
+                        (0, r.jsx)(u.ZP, {
+                            mask: u.ZP.Masks.AVATAR_DEFAULT,
                             width: 64,
                             height: 64,
-                            className: _.appIconMask,
+                            className: h.appIconMask,
                             children: (0, r.jsx)('img', {
-                                src: E,
+                                src: I,
                                 alt: '',
-                                className: _.appIcon
+                                className: h.appIcon
                             })
                         }),
                         (0, r.jsxs)('div', {
-                            className: _.textContainer,
+                            className: h.textContainer,
                             children: [
-                                (0, r.jsx)(a.Text, {
+                                (0, r.jsx)(s.Text, {
                                     color: 'header-primary',
                                     variant: 'text-sm/semibold',
-                                    children: m
+                                    children: E
                                 }),
-                                v.length > 0
+                                T.length > 0
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, r.jsx)(a.Text, {
+                                              (0, r.jsx)(s.Text, {
                                                   color: 'text-normal',
                                                   variant: 'text-xs/normal',
-                                                  children: (0, u.Z)(v.length)
+                                                  children: (0, d.Z)(T.length)
                                               }),
-                                              (0, r.jsx)(l.Z, {
-                                                  className: _.guildStack,
-                                                  guilds: v,
+                                              (0, r.jsx)(c.Z, {
+                                                  className: h.guildStack,
+                                                  guilds: T,
                                                   maxGuilds: 6
                                               })
                                           ]
                                       })
                                     : (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, r.jsx)(a.Text, {
+                                              (0, r.jsx)(s.Text, {
                                                   color: 'text-normal',
                                                   variant: 'text-xs/normal',
-                                                  children: null === (t = h.bot) || void 0 === t ? void 0 : t.tag
+                                                  children: null === (t = g.bot) || void 0 === t ? void 0 : t.tag
                                               }),
-                                              null != I &&
-                                                  (0, r.jsx)(a.Text, {
+                                              null != S &&
+                                                  (0, r.jsx)(s.Text, {
                                                       color: 'text-normal',
                                                       variant: 'text-xs/normal',
-                                                      children: f.intl.formatToPlainString(f.t.C9rUOz, { authorizedAt: I })
+                                                      children: p.intl.formatToPlainString(p.t.C9rUOz, { authorizedAt: S })
                                                   })
                                           ]
                                       })
