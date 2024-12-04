@@ -204,7 +204,8 @@ i.Z = (e) => {
         w = (0, r.e7)([p.Z], () => p.Z.getAppealEligibility()),
         k = (0, f.P)(),
         Z = null != d && null != d.flagged_content && d.flagged_content.length > 0,
-        M = (0, v.e)();
+        M = (0, v.e)(),
+        O = !!(null == d ? void 0 : d.is_coppa) && w.includes(h.tG.AGE_VERIFY_ELIGIBLE);
     return (a.useEffect(() => {
         M &&
             u.default.track(C.rMx.SAFETY_HUB_ACTION, {
@@ -250,9 +251,9 @@ i.Z = (e) => {
                                     is_dsa_eligible: L,
                                     violation_type: S
                                 }),
-                                    (null == d ? void 0 : d.is_coppa) && w.includes(h.tG.AGE_VERIFY_ELIGIBLE) ? A.Z.open() : N && (c.Z.increment({ name: l.V.APPEAL_INGESTION_VIEW }), _.Z.open(t));
+                                    O ? A.Z.open() : N && (c.Z.increment({ name: l.V.APPEAL_INGESTION_VIEW }), _.Z.open(t));
                             },
-                            isAppealEligible: N
+                            isAppealEligible: N || O
                         })
                     })
                 ]
