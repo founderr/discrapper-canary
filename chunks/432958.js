@@ -1,9 +1,9 @@
 n.d(t, {
     A: function () {
-        return T;
+        return j;
     },
     Z: function () {
-        return S;
+        return T;
     }
 });
 var i = n(200651),
@@ -24,12 +24,13 @@ var i = n(200651),
     x = n(471879),
     v = n(502762),
     _ = n(848780),
-    I = n(475413),
-    E = n(228168),
-    b = n(388032),
-    N = n(562296),
-    Z = n(321975);
-function S(e) {
+    I = n(907179),
+    E = n(475413),
+    b = n(228168),
+    N = n(388032),
+    Z = n(562296),
+    S = n(321975);
+function T(e) {
     let { user: t, channel: n, onViewBlockedProfileClick: r } = e,
         a = (0, C.ZP)(t.id),
         o = (0, d.ZP)(),
@@ -48,20 +49,20 @@ function S(e) {
                 ref: _,
                 user: t,
                 displayProfile: a,
-                profileType: E.y0.PANEL,
+                profileType: b.y0.PANEL,
                 themeOverride: o,
                 children: (0, i.jsx)(s.u2, {
                     children: (0, i.jsxs)('div', {
-                        className: N.container,
+                        className: Z.container,
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: Z,
-                                className: N.previewForCollected,
+                                src: S,
+                                className: Z.previewForCollected,
                                 'aria-hidden': !0
                             }),
                             (0, i.jsxs)('div', {
-                                className: N.body,
+                                className: Z.body,
                                 children: [
                                     (0, i.jsx)(x.Z, {
                                         user: t,
@@ -69,21 +70,21 @@ function S(e) {
                                     }),
                                     (0, i.jsx)(c.Heading, {
                                         variant: 'heading-lg/bold',
-                                        className: N.header,
-                                        children: b.intl.string(b.t.VNJ7UF)
+                                        className: Z.header,
+                                        children: N.intl.string(N.t.VNJ7UF)
                                     }),
                                     (0, i.jsx)(c.Text, {
                                         variant: 'text-sm/medium',
-                                        children: b.intl.format(b.t.LXbngo, { username: t.username })
+                                        children: N.intl.format(N.t.LXbngo, { username: t.username })
                                     }),
                                     (0, i.jsx)(c.Text, {
                                         variant: 'text-sm/medium',
-                                        children: b.intl.string(b.t['20WzZ2'])
+                                        children: N.intl.string(N.t['20WzZ2'])
                                     }),
-                                    (0, i.jsx)(I.tG, {
-                                        className: N.centeredButton,
+                                    (0, i.jsx)(E.tG, {
+                                        className: Z.centeredButton,
                                         action: 'VIEW_BLOCKED_PROFILE',
-                                        text: b.intl.string(b.t.iXAna2),
+                                        text: N.intl.string(N.t.iXAna2),
                                         autoFocus: !0,
                                         fullWidth: !1,
                                         onClick: () => {
@@ -104,9 +105,9 @@ function S(e) {
         })
     });
 }
-function T(e) {
+function j(e) {
     let { user: t, channel: n, onViewBlockedProfileClick: r } = e,
-        S = (0, C.ZP)(t.id),
+        E = (0, C.ZP)(t.id),
         T = (0, d.ZP)(),
         j = (0, o.e7)([p.Z], () => p.Z.isBlocked(t.id)),
         { analyticsLocations: A } = (0, h.ZP)(j ? u.Z.BLOCKED_PROFILE_PANEL : u.Z.IGNORED_PROFILE_PANEL),
@@ -123,44 +124,41 @@ function T(e) {
             children: (0, i.jsx)(v.Z, {
                 ref: P,
                 user: t,
-                displayProfile: S,
-                profileType: E.y0.PANEL,
+                displayProfile: E,
+                profileType: b.y0.PANEL,
                 themeOverride: T,
                 children: (0, i.jsx)(s.u2, {
                     children: (0, i.jsxs)('div', {
-                        className: N.container,
+                        className: Z.container,
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: Z,
-                                className: N.previewForCollected,
+                                src: S,
+                                className: Z.previewForCollected,
                                 'aria-hidden': !0
                             }),
                             (0, i.jsxs)('div', {
-                                className: a()(N.body, N.bodySpacing),
+                                className: a()(Z.body, Z.bodySpacing),
                                 children: [
                                     (0, i.jsxs)('div', {
-                                        className: N.headerContainer,
+                                        className: Z.headerContainer,
                                         children: [
                                             (0, i.jsx)(x.i, { user: t }),
                                             (0, i.jsx)(c.Heading, {
                                                 variant: 'heading-lg/bold',
-                                                children: b.intl.string(b.t.b33pLC)
+                                                children: N.intl.string(N.t.b33pLC)
                                             }),
                                             (0, i.jsx)(c.Text, {
                                                 variant: 'text-sm/medium',
-                                                children: b.intl.format(j ? b.t['8F+WNz'] : b.t['/cZp5u'], { username: m.ZP.getName(n.guild_id, n.id, t) })
+                                                children: N.intl.format(j ? N.t['8F+WNz'] : N.t['/cZp5u'], { username: m.ZP.getName(n.guild_id, n.id, t) })
                                             })
                                         ]
                                     }),
                                     (0, i.jsxs)(c.Stack, {
                                         align: 'center',
                                         children: [
-                                            (0, i.jsx)(I.tG, {
-                                                action: j ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
-                                                text: b.intl.string(b.t['UJKH/v']),
-                                                autoFocus: !0,
-                                                fullWidth: !1,
+                                            (0, i.jsx)(I.Z, {
+                                                isBlocked: j,
                                                 onClick: () => {
                                                     null == r || r(),
                                                         (0, g.pQ)({

@@ -1,9 +1,9 @@
 n.d(t, {
     Y: function () {
-        return N;
+        return C;
     },
     Z: function () {
-        return A;
+        return N;
     }
 }),
     n(47120);
@@ -24,14 +24,15 @@ var r = n(200651),
     g = n(471879),
     E = n(502762),
     v = n(848780),
-    I = n(475413),
-    T = n(228168),
-    b = n(388032),
-    S = n(378067),
-    y = n(609440);
-function A(e) {
-    let { user: t, guildId: n, setPopoutRef: a, channelId: s, messageId: f, roleId: _, onViewBlockedProfileClick: v, newAnalyticsLocations: A = [] } = e,
-        { analyticsLocations: N } = (0, c.ZP)([...A, u.Z.BLOCKED_PROFILE_POPOUT]),
+    I = n(907179),
+    T = n(475413),
+    b = n(228168),
+    S = n(388032),
+    y = n(378067),
+    A = n(609440);
+function N(e) {
+    let { user: t, guildId: n, setPopoutRef: a, channelId: s, messageId: f, roleId: _, onViewBlockedProfileClick: v, newAnalyticsLocations: I = [] } = e,
+        { analyticsLocations: N } = (0, c.ZP)([...I, u.Z.BLOCKED_PROFILE_POPOUT]),
         C = (0, p.ZB)({
             layout: 'BLOCKED_PROFILE_POPOUT',
             userId: t.id,
@@ -58,18 +59,18 @@ function A(e) {
                     children: (0, r.jsx)(E.Z, {
                         user: t,
                         displayProfile: O,
-                        profileType: T.y0.BITE_SIZE,
+                        profileType: b.y0.BITE_SIZE,
                         children: (0, r.jsxs)('div', {
-                            className: S.container,
+                            className: y.container,
                             children: [
                                 (0, r.jsx)('img', {
                                     alt: '',
-                                    src: y,
-                                    className: S.previewForCollected,
+                                    src: A,
+                                    className: y.previewForCollected,
                                     'aria-hidden': !0
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: S.body,
+                                    className: y.body,
                                     children: [
                                         (0, r.jsx)(g.Z, {
                                             user: t,
@@ -77,21 +78,21 @@ function A(e) {
                                         }),
                                         (0, r.jsx)(l.Heading, {
                                             variant: 'heading-lg/bold',
-                                            className: S.header,
-                                            children: b.intl.string(b.t.VNJ7UF)
+                                            className: y.header,
+                                            children: S.intl.string(S.t.VNJ7UF)
                                         }),
                                         (0, r.jsx)(l.Text, {
                                             variant: 'text-sm/medium',
-                                            children: b.intl.format(b.t.LXbngo, { username: t.username })
+                                            children: S.intl.format(S.t.LXbngo, { username: t.username })
                                         }),
                                         (0, r.jsx)(l.Text, {
                                             variant: 'text-sm/medium',
-                                            children: b.intl.string(b.t['20WzZ2'])
+                                            children: S.intl.string(S.t['20WzZ2'])
                                         }),
-                                        (0, r.jsx)(I.tG, {
-                                            className: S.centeredButton,
+                                        (0, r.jsx)(T.tG, {
+                                            className: y.centeredButton,
                                             action: 'VIEW_BLOCKED_PROFILE',
-                                            text: b.intl.string(b.t.iXAna2),
+                                            text: S.intl.string(S.t.iXAna2),
                                             autoFocus: !0,
                                             fullWidth: !1,
                                             onClick: () => {
@@ -113,15 +114,15 @@ function A(e) {
         })
     );
 }
-function N(e) {
-    let { user: t, guildId: n, setPopoutRef: a, channelId: A, messageId: N, roleId: C, onViewBlockedProfileClick: R, newAnalyticsLocations: O = [] } = e,
+function C(e) {
+    let { user: t, guildId: n, setPopoutRef: a, channelId: T, messageId: N, roleId: C, onViewBlockedProfileClick: R, newAnalyticsLocations: O = [] } = e,
         D = (0, o.e7)([f.Z], () => f.Z.isBlocked(t.id)),
         { analyticsLocations: L } = (0, c.ZP)([...O, D ? u.Z.BLOCKED_PROFILE_POPOUT : u.Z.IGNORED_PROFILE_POPOUT]),
         x = (0, p.ZB)({
             layout: D ? 'BLOCKED_PROFILE_POPOUT' : 'IGNORED_PROFILE_POPOUT',
             userId: t.id,
             guildId: n,
-            channelId: A,
+            channelId: T,
             messageId: N,
             roleId: C
         }),
@@ -143,21 +144,21 @@ function N(e) {
                 children: (0, r.jsx)(E.Z, {
                     user: t,
                     displayProfile: P,
-                    profileType: T.y0.BITE_SIZE,
+                    profileType: b.y0.BITE_SIZE,
                     children: (0, r.jsxs)('div', {
-                        className: S.container,
+                        className: y.container,
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
-                                src: y,
-                                className: S.previewForCollected,
+                                src: A,
+                                className: y.previewForCollected,
                                 'aria-hidden': !0
                             }),
                             (0, r.jsxs)('div', {
-                                className: s()(S.body, S.bodySpacing),
+                                className: s()(y.body, y.bodySpacing),
                                 children: [
                                     (0, r.jsxs)('div', {
-                                        className: S.headerContainer,
+                                        className: y.headerContainer,
                                         children: [
                                             (0, r.jsx)(g.i, {
                                                 user: t,
@@ -165,23 +166,19 @@ function N(e) {
                                             }),
                                             (0, r.jsx)(l.Heading, {
                                                 variant: 'heading-lg/bold',
-                                                children: b.intl.string(b.t.b33pLC)
+                                                children: S.intl.string(S.t.b33pLC)
                                             }),
                                             (0, r.jsx)(l.Text, {
                                                 variant: 'text-sm/medium',
-                                                children: b.intl.format(D ? b.t['8F+WNz'] : b.t['/cZp5u'], { username: _.ZP.getName(n, A, t) })
+                                                children: S.intl.format(D ? S.t['8F+WNz'] : S.t['/cZp5u'], { username: _.ZP.getName(n, T, t) })
                                             })
                                         ]
                                     }),
                                     (0, r.jsxs)(l.Stack, {
                                         align: 'center',
                                         children: [
-                                            (0, r.jsx)(I.tG, {
-                                                action: k,
-                                                text: b.intl.string(b.t['UJKH/v']),
-                                                autoFocus: !0,
-                                                grow: !0,
-                                                fullWidth: !1,
+                                            (0, r.jsx)(I.Z, {
+                                                isBlocked: D,
                                                 onClick: () => {
                                                     null == R || R(),
                                                         (0, h.pQ)({
