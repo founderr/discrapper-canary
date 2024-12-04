@@ -141,10 +141,10 @@ function T(e) {
 function y(e) {
     let { user: n, guildId: t, channelId: o, messageId: _, roleId: T, transitionState: y, onViewBlockedProfileClick: P, showGuildProfile: C = !0, sourceAnalyticsLocations: A = [] } = e,
         L = t === b.ME ? void 0 : t,
-        O = (0, s.e7)([f.Z], () => f.Z.isBlocked(n.id)),
-        { analyticsLocations: M } = (0, d.ZP)([...A, O ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
+        M = (0, s.e7)([f.Z], () => f.Z.isBlocked(n.id)),
+        { analyticsLocations: O } = (0, d.ZP)([...A, M ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
         R = (0, I.ZB)({
-            layout: O ? 'BLOCKED_PROFILE_MODAL' : 'IGNORED_PROFILE_MODAL',
+            layout: M ? 'BLOCKED_PROFILE_MODAL' : 'IGNORED_PROFILE_MODAL',
             userId: n.id,
             guildId: L,
             channelId: o,
@@ -159,13 +159,13 @@ function y(e) {
             },
             {
                 icon: c.CircleCheckIcon,
-                description: E.intl.string(O ? E.t.QxrDY2 : E.t.W6fjkZ)
+                description: E.intl.string(M ? E.t.QxrDY2 : E.t.W6fjkZ)
             }
         ],
         B = (0, p.ZP)(n.id, C ? L : void 0),
         D = l.createRef();
     return (0, i.jsx)(d.Gt, {
-        value: M,
+        value: O,
         children: (0, i.jsx)(I.Mt, {
             value: R,
             children: (0, i.jsx)(c.ModalRoot, {
@@ -205,7 +205,7 @@ function y(e) {
                                             (0, i.jsx)(c.Text, {
                                                 variant: 'text-md/medium',
                                                 color: 'header-primary',
-                                                children: E.intl.format(O ? E.t['8F+WNz'] : E.t['/cZp5u'], { username: m.ZP.getName(L, o, n) })
+                                                children: E.intl.format(M ? E.t['8F+WNz'] : E.t['/cZp5u'], { username: m.ZP.getName(L, o, n) })
                                             })
                                         ]
                                     }),
@@ -228,12 +228,13 @@ function y(e) {
                                         align: 'center',
                                         children: [
                                             (0, i.jsx)(g.Z, {
-                                                isBlocked: O,
+                                                size: c.ButtonSizes.MEDIUM,
+                                                isBlocked: M,
                                                 onClick: () => {
                                                     null == P || P(),
                                                         (0, x.pQ)({
-                                                            action: O ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
-                                                            analyticsLocations: M,
+                                                            action: M ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
+                                                            analyticsLocations: O,
                                                             ...R
                                                         });
                                                 }
@@ -244,7 +245,7 @@ function y(e) {
                                                     null == P || P(),
                                                         (0, x.pQ)({
                                                             action: 'DONT_SHOW_AGAIN_IGNORED_PROFILE',
-                                                            analyticsLocations: M,
+                                                            analyticsLocations: O,
                                                             ...R
                                                         });
                                                 }
