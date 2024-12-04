@@ -8,6 +8,7 @@ e.exports = {
     outer: 'outer_c8ce83',
     inner: 'inner_c8ce83',
     clickable: 'clickable_c8ce83',
+    clamp: 'clamp_c8ce83',
     ring: 'ring_c8ce83',
     statusText: 'statusText_c8ce83',
     statusEmoji: 'statusEmoji_c8ce83',

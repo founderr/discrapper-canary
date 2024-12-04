@@ -20,7 +20,7 @@ var i = t(200651),
     h = t(189144);
 function v(e) {
     let { user: n, currentUser: t, onClose: v, profileGuildId: Z } = e,
-        { live: g, recent: _, stream: j } = (0, a.Z)(n.id),
+        { live: g, recent: j, stream: _ } = (0, a.Z)(n.id),
         b = n.id === t.id,
         E = (0, s.wE)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
     return (
@@ -37,12 +37,12 @@ function v(e) {
             children: [
                 (0, i.jsxs)(d.Z, {
                     children: [
-                        null != j &&
+                        null != _ &&
                             (0, i.jsx)(m.Z, {
                                 location: 'UserProfileModalActivity',
                                 user: n,
                                 currentUser: t,
-                                stream: j,
+                                stream: _,
                                 onClose: v,
                                 profileGuildId: Z
                             }),
@@ -61,7 +61,7 @@ function v(e) {
                         )
                     ]
                 }),
-                _.length > 0 &&
+                j.length > 0 &&
                     (0, i.jsx)(d.Z, {
                         heading: p.intl.string(p.t.M0zgnZ),
                         subheading: b
@@ -77,14 +77,13 @@ function v(e) {
                                       )
                               })
                             : void 0,
-                        children: _.map((e) =>
+                        children: j.map((e) =>
                             (0, i.jsx)(
                                 f.Z,
                                 {
                                     user: n,
                                     entry: e,
-                                    onClose: v,
-                                    hideHeader: !0
+                                    onClose: v
                                 },
                                 e.id
                             )

@@ -1,28 +1,37 @@
 var i = n(200651);
 n(192379);
 var r = n(788307),
-    l = n(51144),
-    a = n(388032),
-    s = n(542745);
+    l = n(588688),
+    a = n(565640),
+    s = n(51144),
+    o = n(388032),
+    c = n(542745);
 t.Z = function (e) {
-    let { hovered: t, activities: n, applicationStream: o, status: c, user: d, userIgnored: u } = e;
-    return u
+    let { hovered: t, activities: n, applicationStream: d, status: u, user: h, userIgnored: m } = e,
+        p = (0, a.Z)(null == h ? void 0 : h.id, 'StatusText');
+    return m
         ? (0, i.jsx)('div', {
-              className: s.text,
-              children: a.intl.string(a.t.tFY5ZW)
+              className: c.text,
+              children: o.intl.string(o.t.tFY5ZW)
           })
         : n.length > 0
           ? (0, i.jsx)(r.ZP, {
-                className: s.activity,
-                textClassName: s.text,
-                emojiClassName: s.customStatusEmoji,
+                className: c.activity,
+                textClassName: c.text,
+                emojiClassName: c.customStatusEmoji,
                 activities: n,
-                applicationStream: o,
+                applicationStream: d,
                 animate: t,
-                user: d
+                user: h
             })
-          : (0, i.jsx)('div', {
-                className: s.text,
-                children: (0, l.u5)(c)
-            });
+          : null != p
+            ? (0, i.jsx)(l.Z, {
+                  className: c.activity,
+                  textClassName: c.text,
+                  entry: p
+              })
+            : (0, i.jsx)('div', {
+                  className: c.text,
+                  children: (0, s.u5)(u)
+              });
 };

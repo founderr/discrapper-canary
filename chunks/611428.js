@@ -82,24 +82,27 @@ function A(e) {
         },
         v = (0, r.jsx)('div', {
             className: s()(S.outer, E),
-            children: (0, r.jsxs)('span', {
+            children: (0, r.jsx)('span', {
                 className: S.inner,
-                children: [
-                    null != a &&
-                        (0, r.jsx)(u.Iv, {
-                            emoji: a,
-                            animate: d,
-                            hideTooltip: !1,
-                            tooltipDelay: T.vB,
-                            className: S.statusEmoji
-                        }),
-                    null != o &&
-                        (0, r.jsx)(l.Text, {
-                            variant: 'text-sm/normal',
-                            className: S.statusText,
-                            children: o
-                        })
-                ]
+                children: (0, r.jsxs)('span', {
+                    className: S.clamp,
+                    children: [
+                        null != a &&
+                            (0, r.jsx)(u.Iv, {
+                                emoji: a,
+                                animate: d,
+                                hideTooltip: !1,
+                                tooltipDelay: T.vB,
+                                className: S.statusEmoji
+                            }),
+                        null != o &&
+                            (0, r.jsx)(l.Text, {
+                                variant: 'text-sm/normal',
+                                className: S.statusText,
+                                children: o
+                            })
+                    ]
+                })
             })
         });
     return null == p
