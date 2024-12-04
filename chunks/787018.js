@@ -108,7 +108,7 @@ function T(e) {
                                                 {
                                                     icon: t,
                                                     title: l,
-                                                    titleVariant: 'text-md/normal'
+                                                    titleVariant: 'text-md/medium'
                                                 },
                                                 n
                                             );
