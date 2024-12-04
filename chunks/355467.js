@@ -635,29 +635,30 @@ function F(e) {
     return Z(e);
 }
 async function V() {
-    try {
-        let e = s.tn.get({
-            url: E.ANM.BILLING_PAYMENT_SOURCES,
-            oldFormErrors: !0,
-            rejectWithError: !1
-        });
-        o.Z.wait(() =>
-            o.Z.dispatch({
-                type: 'BILLING_PAYMENT_SOURCES_FETCH_START',
-                request: e
-            })
-        );
-        let t = await e;
-        return (
-            o.Z.dispatch({
-                type: 'BILLING_PAYMENT_SOURCES_FETCH_SUCCESS',
-                paymentSources: t.body
-            }),
-            t
-        );
-    } catch (e) {
-        throw (o.Z.dispatch({ type: 'BILLING_PAYMENT_SOURCES_FETCH_FAIL' }), e);
-    }
+    if (!f.Z.isPaymentSourceFetching)
+        try {
+            let e = s.tn.get({
+                url: E.ANM.BILLING_PAYMENT_SOURCES,
+                oldFormErrors: !0,
+                rejectWithError: !1
+            });
+            o.Z.wait(() =>
+                o.Z.dispatch({
+                    type: 'BILLING_PAYMENT_SOURCES_FETCH_START',
+                    request: e
+                })
+            );
+            let t = await e;
+            return (
+                o.Z.dispatch({
+                    type: 'BILLING_PAYMENT_SOURCES_FETCH_SUCCESS',
+                    paymentSources: t.body
+                }),
+                t
+            );
+        } catch (e) {
+            throw (o.Z.dispatch({ type: 'BILLING_PAYMENT_SOURCES_FETCH_FAIL' }), e);
+        }
 }
 async function j(e) {
     try {
