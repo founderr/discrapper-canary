@@ -114,7 +114,8 @@ class C extends _.Z {
                     soundshare: this.context === S.Yn.STREAM
                 },
                 ...this.videoStreamParameters
-            ]);
+            ]),
+            (e.context = this.context);
         let n = (0, v.zS)(),
             r = null != n.getCodecCapabilities ? n.getCodecCapabilities : n.getSupportedVideoCodecs;
         if (null != n.createOwnStreamConnectionWithOptions) s = this.context === S.Yn.STREAM && this.streamUserId === this.userId ? n.createOwnStreamConnectionWithOptions : n.createVoiceConnectionWithOptions;
