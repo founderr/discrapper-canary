@@ -18,19 +18,23 @@ function l() {
     var e, t;
     return null !== (t = null === (e = (0, s.D)().favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : o;
 }
-function u() {
-    let e = l();
+function u(e) {
+    let t = l();
     return r.useMemo(
         () =>
-            a()(e)
-                .map((e, t) => ({
-                    ...e,
-                    url: t
-                }))
+            a()(t)
+                .map((t, n) => {
+                    var r;
+                    return {
+                        ...t,
+                        url: n,
+                        src: null !== (r = null == e ? void 0 : e(t.src, n)) && void 0 !== r ? r : t.src
+                    };
+                })
                 .sortBy('order')
                 .reverse()
                 .value(),
-        [e]
+        [t, e]
     );
 }
 function c(e) {
