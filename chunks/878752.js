@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return y;
     }
 }),
     n(47120);
@@ -30,76 +30,59 @@ var i = n(200651),
     S = n(997614),
     T = n(159909),
     j = n(981631),
-    A = n(921944),
-    y = n(637335);
-function P(e) {
+    A = n(637335);
+function y(e) {
     let { channel: t, hasActiveStream: n, themeable: r = !1 } = e,
-        P = (0, s.e7)([v.default], () => {
+        y = (0, s.e7)([v.default], () => {
             let e = v.default.getCurrentUser();
             return a()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
         }),
-        { groupedButtons: M } = (0, C.Z)({ location: 'VoiceEffectsActionBar' }),
-        R = (0, u.Ou)(t),
-        L = l.useRef(null),
-        k = (0, p.Z)(),
-        { isSharedCanvasEnabled: O } = f.Z.useExperiment({
+        { groupedButtons: P } = (0, C.Z)({ location: 'VoiceEffectsActionBar' }),
+        M = (0, u.Ou)(t),
+        R = l.useRef(null),
+        L = (0, p.Z)(),
+        { isSharedCanvasEnabled: k } = f.Z.useExperiment({
             guildId: null == t ? void 0 : t.guild_id,
             location: 'b7309a_1'
         }),
-        { enableViewerClipping: D } = m.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
-        w = (0, c.Z)(x.Z),
-        B = (0, u.Zm)(t, 'VoiceEffectsActionBar') ? [o.z.CONSUMABLE_HD_POTION_UPSELL] : [],
-        [U, H] = (0, h.US)(B, void 0, !0),
-        G = U === o.z.CONSUMABLE_HD_POTION_UPSELL;
-    if (null == t || null != k) return null;
-    let F = (0, g.Z)(t),
-        V = _.BT({
+        { enableViewerClipping: O } = m.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
+        D = (0, c.Z)(x.Z),
+        w = (0, u.Zm)(t, 'VoiceEffectsActionBar') ? [o.z.CONSUMABLE_HD_POTION_UPSELL] : [],
+        [B, U] = (0, h.US)(w, void 0, !0),
+        H = B === o.z.CONSUMABLE_HD_POTION_UPSELL;
+    if (null == t || null != L) return null;
+    let G = (0, g.Z)(t),
+        F = _.BT({
             permission: j.Plq.ADD_REACTIONS,
-            user: P,
+            user: y,
             context: t
         });
     return (0, i.jsxs)('div', {
-        className: y.voiceEffectsActionBar,
+        className: A.voiceEffectsActionBar,
         children: [
-            !M &&
-                F &&
+            !P &&
+                G &&
                 (0, i.jsx)(S.Z, {
                     channel: t,
                     themeable: r
                 }),
-            !M && V && (0, i.jsx)(N.Z, { channel: t }),
-            D && w && (0, i.jsx)(I.Z, { channel: t }),
-            G &&
-                (0, i.jsx)(
-                    (e) => {
-                        let { channel: t, markAsDismissed: n } = e;
-                        return (0, i.jsx)(d.Z, {
-                            channel: t,
-                            buttonRef: L,
-                            dismissed: !1,
-                            align: 'left',
-                            onClick: () => {
-                                n(A.L.TAKE_ACTION);
-                            },
-                            onDismiss: () => {
-                                n(A.L.USER_DISMISS);
-                            }
-                        });
-                    },
-                    {
-                        channel: t,
-                        markAsDismissed: H
-                    }
-                ),
-            R &&
-                (0, i.jsx)(Z.Z, {
-                    ref: L,
+            !P && F && (0, i.jsx)(N.Z, { channel: t }),
+            O && D && (0, i.jsx)(I.Z, { channel: t }),
+            H &&
+                (0, i.jsx)(d.t, {
+                    potionRef: R,
                     channel: t,
-                    glow: G
+                    markAsDismissed: U
                 }),
-            O && n && (0, i.jsx)(E.Z, {}),
-            O && n && (0, i.jsx)(b.Z, { channel: t }),
-            O && n && (0, i.jsx)(T.Z, {})
+            M &&
+                (0, i.jsx)(Z.Z, {
+                    ref: R,
+                    channel: t,
+                    glow: H
+                }),
+            k && n && (0, i.jsx)(E.Z, {}),
+            k && n && (0, i.jsx)(b.Z, { channel: t }),
+            k && n && (0, i.jsx)(T.Z, {})
         ]
     });
 }

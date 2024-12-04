@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: function () {
+    t: function () {
         return h;
     }
 });
@@ -10,21 +10,37 @@ var l = n(120356),
     a = n(481060),
     s = n(738672),
     o = n(447564),
-    c = n(388032),
-    d = n(30057);
-function u(e) {
+    c = n(921944),
+    d = n(388032),
+    u = n(30057);
+let h = (e) => {
+    let { channel: t, markAsDismissed: n, potionRef: l } = e;
+    return (0, i.jsx)(m, {
+        channel: t,
+        buttonRef: l,
+        dismissed: !1,
+        nudgeAlignIntoViewport: !0,
+        onClick: () => {
+            n(c.L.TAKE_ACTION);
+        },
+        onDismiss: () => {
+            n(c.L.USER_DISMISS);
+        }
+    });
+};
+function p(e) {
     let { channel: t, onClick: n, hidden: l, onDismiss: s } = e;
     return (0, i.jsxs)('div', {
-        className: r()(d.popoutContainer, { [d.hidden]: l }),
+        className: r()(u.popoutContainer, { [u.hidden]: l }),
         children: [
             (0, i.jsx)('img', {
-                className: d.image,
+                className: u.image,
                 src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
                 alt: 'HD Streaming Nitro Perk'
             }),
             (0, i.jsx)(a.Button, {
-                className: d.closeButton,
-                'aria-label': c.intl.string(c.t.cpT0Cg),
+                className: u.closeButton,
+                'aria-label': d.intl.string(d.t.cpT0Cg),
                 look: a.Button.Looks.BLANK,
                 size: a.Button.Sizes.NONE,
                 onClick: () => {
@@ -32,35 +48,35 @@ function u(e) {
                 },
                 children: (0, i.jsx)(a.XSmallIcon, {
                     size: 'xs',
-                    className: d.closeIcon,
+                    className: u.closeIcon,
                     color: 'white'
                 })
             }),
             (0, i.jsxs)('div', {
-                className: d.infoContainerParent,
+                className: u.infoContainerParent,
                 children: [
                     (0, i.jsx)(a.Heading, {
-                        className: d.heading,
+                        className: u.heading,
                         variant: 'heading-md/extrabold',
-                        children: c.intl.string(c.t.kQqTnp)
+                        children: d.intl.string(d.t.kQqTnp)
                     }),
                     (0, i.jsx)('div', {
-                        className: d.infoContainer,
+                        className: u.infoContainer,
                         children: (0, i.jsx)(a.Text, {
-                            className: d.infoText,
+                            className: u.infoText,
                             variant: 'text-sm/medium',
-                            children: c.intl.string(c.t.cxf5yM)
+                            children: d.intl.string(d.t.cxf5yM)
                         })
                     }),
                     (0, i.jsx)('div', {
-                        className: d.buttonContainer,
+                        className: u.buttonContainer,
                         children: (0, i.jsx)(a.Button, {
                             onClick: () => {
                                 (0, o.openHDPotionModal)(t, 'HDStreamingPotionUpsellPopout'), n();
                             },
                             color: a.ButtonColors.WHITE,
-                            className: d.button,
-                            children: c.intl.string(c.t.GBe9lJ)
+                            className: u.button,
+                            children: d.intl.string(d.t.GBe9lJ)
                         })
                     })
                 ]
@@ -68,12 +84,12 @@ function u(e) {
         ]
     });
 }
-function h(e) {
+function m(e) {
     let { channel: t, onClick: n, ...l } = e;
     return (0, i.jsx)(s.h, {
         ...l,
         renderComponent: (e) =>
-            (0, i.jsx)(u, {
+            (0, i.jsx)(p, {
                 onClick: n,
                 channel: t,
                 ...e

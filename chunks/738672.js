@@ -13,7 +13,7 @@ var i = n(200651),
     c = n(937995),
     d = n(618158);
 function u(e) {
-    let { buttonRef: t, dismissed: n, onDismiss: u, renderComponent: h, align: p = 'center' } = e,
+    let { buttonRef: t, dismissed: n, onDismiss: u, renderComponent: h, nudgeAlignIntoViewport: p = !1 } = e,
         m = l.useContext(c.h9),
         [f, g] = l.useState(''),
         [C, x] = l.useState(!1),
@@ -35,9 +35,10 @@ function u(e) {
               children: (0, i.jsx)(a.ReferencePositionLayer, {
                   targetRef: t,
                   position: 'top',
-                  align: p,
+                  align: 'center',
                   spacing: 0,
                   positionKey: f,
+                  nudgeAlignIntoViewport: p,
                   children: () =>
                       (0, i.jsx)('div', {
                           ref: _,
