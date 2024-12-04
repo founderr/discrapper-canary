@@ -18,6 +18,7 @@ function u(e) {
               onClick: () => {
                   s.Rt.updateSetting(!0), n();
               },
+              color: a.ButtonColors.LINK,
               children: l.intl.string(l.t.QbcRCA)
           })
         : null;

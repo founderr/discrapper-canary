@@ -16023,11 +16023,14 @@ span.clanTag_a31c43 {
 }
 
 .icon_b01a4f {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     padding: var(--spacing-4);
     bottom: -8px;
     right: -8px;
-    background-color: var(--bg-surface-raised);
+    background-color: var(--modal-background);
     border-radius: var(--radius-round)
 }
 
