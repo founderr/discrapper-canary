@@ -8491,7 +8491,7 @@ div.modalHeader_c5e09c {
 
 .colorable_ef18ee.experimentDark_ef18ee.active_ef18ee,
 .colorable_ef18ee.experimentDark_ef18ee:hover {
-    background: var(--primary-630)
+    background: rgba(255, 255, 255, .1)
 }
 
 .centerButton_ef18ee {
@@ -8594,7 +8594,8 @@ div.modalHeader_c5e09c {
 .caretButtonContainer_ef18ee {
     display: flex;
     direction: row;
-    align-items: center
+    align-items: center;
+    gap: 1px
 }
 
 .contextMenuNubExperiment_ef18ee {
