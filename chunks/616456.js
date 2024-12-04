@@ -41,8 +41,8 @@ var c,
     H = r(501684),
     x = r(157079),
     K = r(469359),
-    V = r(393523);
-let k = P.n,
+    k = r(393523);
+let V = P.n,
     F = 'sentryReplaySession',
     X = 'Unable to send Replay';
 function j(e, t) {
@@ -916,10 +916,10 @@ function eK(e, t, r, a, n) {
     return !(E < 0) && (a && (i = eC(_, eP(null, a))), (!!(E > -1) && !!(i < 0)) || E < i);
 }
 !/[1-9][0-9]{12}/.test(Date.now().toString()) && (eB = () => new Date().getTime());
-function eV(e, t) {
+function ek(e, t) {
     return -2 === t.getId(e);
 }
-function ek(e) {
+function eV(e) {
     return !!e.changedTouches;
 }
 function eF(e, t) {
@@ -1189,7 +1189,7 @@ class e8 {
                 if (!!o.texts.length || !!o.attributes.length || !!o.removes.length || !!o.adds.length) (this.texts = []), (this.attributes = []), (this.attributeMap = new WeakMap()), (this.removes = []), (this.addedSet = new Set()), (this.movedSet = new Set()), (this.droppedSet = new Set()), (this.movedMap = {}), this.mutationCb(o);
             }),
             (this.processMutation = (e) => {
-                if (!eV(e.target, this.mirror))
+                if (!ek(e.target, this.mirror))
                     switch (e.type) {
                         case 'characterData': {
                             let t = e.target.textContent;
@@ -1263,7 +1263,7 @@ class e8 {
                                     var r;
                                     let a = this.mirror.getId(t),
                                         n = q(e.target) ? this.mirror.getId(e.target.host) : this.mirror.getId(e.target);
-                                    if (!(eK(e.target, this.blockClass, this.blockSelector, this.unblockSelector, !1) || eV(t, this.mirror)) && ((r = t), -1 !== this.mirror.getId(r)))
+                                    if (!(eK(e.target, this.blockClass, this.blockSelector, this.unblockSelector, !1) || ek(t, this.mirror)) && ((r = t), -1 !== this.mirror.getId(r)))
                                         this.addedSet.has(t)
                                             ? (e7(this.addedSet, t), this.droppedSet.add(t))
                                             : (this.addedSet.has(e.target) && -1 === a) ||
@@ -1287,7 +1287,7 @@ class e8 {
                 if (!this.processedNodeManager.inOtherBuffer(e, this)) {
                     if (!(this.addedSet.has(e) || this.movedSet.has(e))) {
                         if (this.mirror.hasNode(e)) {
-                            if (eV(e, this.mirror)) return;
+                            if (ek(e, this.mirror)) return;
                             this.movedSet.add(e);
                             let r = null;
                             t && this.mirror.hasNode(t) && (r = this.mirror.getId(t)), r && -1 !== r && (this.movedMap[e5(this.mirror.getId(e), r)] = !0);
@@ -1516,7 +1516,7 @@ function tI(e, t = {}) {
                     ev(
                         tt((e) => {
                             let t = tn(e),
-                                { clientX: r, clientY: _ } = ek(e) ? e.changedTouches[0] : e;
+                                { clientX: r, clientY: _ } = eV(e) ? e.changedTouches[0] : e;
                             !n && (n = eB()),
                                 E.push({
                                     x: r,
@@ -1557,9 +1557,9 @@ function tI(e, t = {}) {
                                 i = e3.Pen;
                         }
                         i === e3.Touch ? (e2[t] === e2.MouseDown ? (s = 'TouchStart') : e2[t] === e2.MouseUp && (s = 'TouchEnd')) : e3.Pen;
-                    } else ek(o) && (i = e3.Touch);
+                    } else eV(o) && (i = e3.Touch);
                     null !== i ? ((c = i), ((s.startsWith('Touch') && i === e3.Touch) || (s.startsWith('Mouse') && i === e3.Mouse)) && (i = null)) : e2[t] === e2.Click && ((i = c), (c = null));
-                    let l = ek(o) ? o.changedTouches[0] : o;
+                    let l = eV(o) ? o.changedTouches[0] : o;
                     if (!l) return;
                     let I = r.getId(E),
                         { clientX: u, clientY: R } = l;
@@ -2456,17 +2456,17 @@ try {
 let tD = new Z();
 function tS(e = {}) {
     let t;
-    let { emit: r, checkoutEveryNms: a, checkoutEveryNth: n, blockClass: i = 'rr-block', blockSelector: c = null, unblockSelector: s = null, ignoreClass: l = 'rr-ignore', ignoreSelector: I = null, maskAllText: u = !1, maskTextClass: R = 'rr-mask', unmaskTextClass: A = null, maskTextSelector: T = null, unmaskTextSelector: N = null, inlineStylesheet: f = !0, maskAllInputs: O, maskInputOptions: L, slimDOMOptions: p, maskAttributeFn: h, maskInputFn: D, maskTextFn: S, maxCanvasSize: C = null, packFn: P, sampling: g = {}, dataURLOptions: U = {}, mousemoveWait: M, recordDOM: G = !0, recordCanvas: m = !1, recordCrossOriginIframes: y = !1, recordAfter: b = 'DOMContentLoaded' === e.recordAfter ? e.recordAfter : 'load', userTriggeredOnInput: v = !1, collectFonts: w = !1, inlineImages: B = !1, plugins: W, keepIframeSrcFn: Y = () => !1, ignoreCSSAttributes: H = new Set([]), errorHandler: x, onMutation: K, getCanvasManager: V } = e;
+    let { emit: r, checkoutEveryNms: a, checkoutEveryNth: n, blockClass: i = 'rr-block', blockSelector: c = null, unblockSelector: s = null, ignoreClass: l = 'rr-ignore', ignoreSelector: I = null, maskAllText: u = !1, maskTextClass: R = 'rr-mask', unmaskTextClass: A = null, maskTextSelector: T = null, unmaskTextSelector: N = null, inlineStylesheet: f = !0, maskAllInputs: O, maskInputOptions: L, slimDOMOptions: p, maskAttributeFn: h, maskInputFn: D, maskTextFn: S, maxCanvasSize: C = null, packFn: P, sampling: g = {}, dataURLOptions: U = {}, mousemoveWait: M, recordDOM: G = !0, recordCanvas: m = !1, recordCrossOriginIframes: y = !1, recordAfter: b = 'DOMContentLoaded' === e.recordAfter ? e.recordAfter : 'load', userTriggeredOnInput: v = !1, collectFonts: w = !1, inlineImages: B = !1, plugins: W, keepIframeSrcFn: Y = () => !1, ignoreCSSAttributes: H = new Set([]), errorHandler: x, onMutation: K, getCanvasManager: k } = e;
     _ = x;
-    let k = !y || window.parent === window,
+    let V = !y || window.parent === window,
         F = !1;
-    if (!k)
+    if (!V)
         try {
             window.parent.document && (F = !1);
         } catch (e) {
             F = !0;
         }
-    if (k && !r) throw Error('emit function is required');
+    if (V && !r) throw Error('emit function is required');
     void 0 !== M && void 0 === g.mousemove && (g.mousemove = M), tD.reset();
     let X =
             !0 === O
@@ -2525,7 +2525,7 @@ function tS(e = {}) {
             return P && !F && (e = P(e)), e;
         };
     o = (e, _) => {
-        if (((e.timestamp = eB()), (0, d.x)([ta, 'access', (e) => e[0], 'optionalAccess', (e) => e.isFrozen, 'call', (e) => e()]) && e.type !== e0.FullSnapshot && !(e.type === e0.IncrementalSnapshot && e.data.source === e1.Mutation) && ta.forEach((e) => e.unfreeze()), k)) (0, d.x)([r, 'optionalCall', (t) => t(q(e), _)]);
+        if (((e.timestamp = eB()), (0, d.x)([ta, 'access', (e) => e[0], 'optionalAccess', (e) => e.isFrozen, 'call', (e) => e()]) && e.type !== e0.FullSnapshot && !(e.type === e0.IncrementalSnapshot && e.data.source === e1.Mutation) && ta.forEach((e) => e.unfreeze()), V)) (0, d.x)([r, 'optionalCall', (t) => t(q(e), _)]);
         else if (F) {
             let t = {
                 type: 'rrweb',
@@ -2604,7 +2604,7 @@ function tS(e = {}) {
             } catch (e) {
                 return console.warn('Unable to initialize CanvasManager'), new tL();
             }
-        })(V, {
+        })(k, {
             mirror: tD,
             win: window,
             mutationCb: (e) =>
@@ -3033,13 +3033,13 @@ class tm {
             !i &&
                 ((i = []),
                 (function () {
-                    (0, U.hl)(k, 'open', function (e) {
+                    (0, U.hl)(V, 'open', function (e) {
                         return function (...t) {
                             if (i)
                                 try {
                                     i.forEach((e) => e());
                                 } catch (e) {}
-                            return e.apply(k, t);
+                            return e.apply(V, t);
                         };
                     });
                 })()),
@@ -3118,7 +3118,7 @@ class tm {
                     category: 'ui.slowClickDetected',
                     data: {
                         ..._.data,
-                        url: k.location.href,
+                        url: V.location.href,
                         route: t.getCurrentRoute(),
                         timeAfterClickMs: r,
                         endReason: a,
@@ -3136,7 +3136,7 @@ class tm {
                 category: 'ui.multiClick',
                 data: {
                     ..._.data,
-                    url: k.location.href,
+                    url: V.location.href,
                     route: t.getCurrentRoute(),
                     clickCount: n,
                     metric: !0
@@ -3300,13 +3300,13 @@ function tx(e) {
     return t ? t(e) : null;
 }
 function tK(e) {
-    return ((G.Z1 || k.performance.timeOrigin) + e) / 1000;
+    return ((G.Z1 || V.performance.timeOrigin) + e) / 1000;
 }
-function tV(e) {
+function tk(e) {
     let t = e.entries[e.entries.length - 1];
     return tj(e, 'largest-contentful-paint', t && t.element ? [t.element] : void 0);
 }
-function tk(e) {
+function tV(e) {
     let t = e.entries[e.entries.length - 1],
         r = [];
     if (t && t.sources) for (let e of t.sources) e.node && r.push(e.node);
@@ -3550,7 +3550,7 @@ class t2 {
 }
 function t3() {
     try {
-        return 'sessionStorage' in k && !!k.sessionStorage;
+        return 'sessionStorage' in V && !!V.sessionStorage;
     } catch (e) {
         return !1;
     }
@@ -3577,7 +3577,7 @@ function t4(e) {
 function t5(e) {
     if (!!t3())
         try {
-            k.sessionStorage.setItem(F, JSON.stringify(e));
+            V.sessionStorage.setItem(F, JSON.stringify(e));
         } catch (e) {}
 }
 function t8({ sessionSampleRate: e, allowBuffering: t, stickySession: r = !1 }, { previousSessionId: a } = {}) {
@@ -3610,7 +3610,7 @@ function rt({ traceInternals: e, sessionIdleExpire: t, maxReplayDuration: r, pre
         (function (e) {
             if (!t3()) return null;
             try {
-                let t = k.sessionStorage.getItem(F);
+                let t = V.sessionStorage.getItem(F);
                 if (!t) return null;
                 let r = JSON.parse(t);
                 return tz('[Replay] Loading existing session', e), t4(r);
@@ -3807,8 +3807,8 @@ function rf(e) {
     return new URLSearchParams(e).toString();
 }
 function rO(e, t) {
-    let r = (function (e, t = k.document.baseURI) {
-        if (e.startsWith('http://') || e.startsWith('https://') || e.startsWith(k.location.origin)) return e;
+    let r = (function (e, t = V.document.baseURI) {
+        if (e.startsWith('http://') || e.startsWith('https://') || e.startsWith(V.location.origin)) return e;
         let r = new URL(e, t);
         if (r.origin !== new URL(t).origin) return e;
         let a = r.href;
@@ -4020,7 +4020,7 @@ async function rM(e) {
                             }
                         }
                     };
-                })(k.performance.memory)
+                })(V.performance.memory)
             ])
         );
     } catch (e) {
@@ -4447,7 +4447,7 @@ class rB {
                     (function () {
                         if (!!t3())
                             try {
-                                k.sessionStorage.removeItem(F);
+                                V.sessionStorage.removeItem(F);
                             } catch (e) {}
                     })(),
                     (r.session = void 0);
@@ -4507,8 +4507,8 @@ class rB {
         return !!this._checkSession() || !1;
     }
     setInitialState() {
-        let e = `${k.location.pathname}${k.location.hash}${k.location.search}`,
-            t = `${k.location.origin}${e}`;
+        let e = `${V.location.pathname}${V.location.hash}${V.location.search}`,
+            t = `${V.location.origin}${e}`;
         (this.performanceEntries = []), (this.replayPerformanceEntries = []), this._clearContext(), (this._context.initialUrl = t), (this._context.initialTimestamp = Date.now()), this._context.urls.push(t);
     }
     throttledAddEvent(e, t) {
@@ -4608,17 +4608,17 @@ class rB {
     }
     _addListeners() {
         try {
-            k.document.addEventListener('visibilitychange', this._handleVisibilityChange),
-                k.addEventListener('blur', this._handleWindowBlur),
-                k.addEventListener('focus', this._handleWindowFocus),
-                k.addEventListener('keydown', this._handleKeyboardEvent),
+            V.document.addEventListener('visibilitychange', this._handleVisibilityChange),
+                V.addEventListener('blur', this._handleWindowBlur),
+                V.addEventListener('focus', this._handleWindowFocus),
+                V.addEventListener('keydown', this._handleKeyboardEvent),
                 this.clickDetector && this.clickDetector.addListeners(),
                 !this._hasInitializedCoreListeners &&
                     (!(function (e) {
                         var t, r, a, n;
                         let _ = (0, O.s3)();
                         (0, K.O)(tB(e)),
-                            (0, V.a)(
+                            (0, k.a)(
                                 ((t = e),
                                 (e) => {
                                     if (!t.isEnabled()) return;
@@ -4864,7 +4864,7 @@ class rB {
                 ['navigation', 'paint', 'resource'].forEach((e) => {
                     a.push((0, H._j)(e, r));
                 }),
-                a.push((0, H.$A)(tH(tV, e)), (0, H.PR)(tH(tk, e)), (0, H.to)(tH(tF, e)), (0, H.YF)(tH(tX, e))),
+                a.push((0, H.$A)(tH(tk, e)), (0, H.PR)(tH(tV, e)), (0, H.to)(tH(tF, e)), (0, H.YF)(tH(tX, e))),
                 () => {
                     a.forEach((e) => e());
                 }
@@ -4873,14 +4873,14 @@ class rB {
     }
     _removeListeners() {
         try {
-            k.document.removeEventListener('visibilitychange', this._handleVisibilityChange), k.removeEventListener('blur', this._handleWindowBlur), k.removeEventListener('focus', this._handleWindowFocus), k.removeEventListener('keydown', this._handleKeyboardEvent), this.clickDetector && this.clickDetector.removeListeners(), this._performanceCleanupCallback && this._performanceCleanupCallback();
+            V.document.removeEventListener('visibilitychange', this._handleVisibilityChange), V.removeEventListener('blur', this._handleWindowBlur), V.removeEventListener('focus', this._handleWindowFocus), V.removeEventListener('keydown', this._handleKeyboardEvent), this.clickDetector && this.clickDetector.removeListeners(), this._performanceCleanupCallback && this._performanceCleanupCallback();
         } catch (e) {
             this.handleException(e);
         }
     }
     __init() {
         this._handleVisibilityChange = () => {
-            'visible' === k.document.visibilityState ? this._doChangeToForegroundTasks() : this._doChangeToBackgroundTasks();
+            'visible' === V.document.visibilityState ? this._doChangeToForegroundTasks() : this._doChangeToBackgroundTasks();
         };
     }
     __init2() {
@@ -5092,13 +5092,13 @@ function rW(e, t) {
 let rY = 'img,image,svg,video,object,picture,embed,map,audio,link[rel="icon"],link[rel="apple-touch-icon"]',
     rH = ['content-length', 'content-type', 'accept'],
     rx = !1,
-    rK = (e) => new rV(e);
-class rV {
+    rK = (e) => new rk(e);
+class rk {
     static __initStatic() {
         this.id = 'Replay';
     }
     constructor({ flushMinDelay: e = 5000, flushMaxDelay: t = 5500, minReplayDuration: r = 4999, maxReplayDuration: a = 3600000, stickySession: n = !0, useCompression: _ = !0, workerUrl: o, _experiments: E = {}, maskAllText: i = !0, maskAllInputs: c = !0, blockAllMedia: s = !0, mutationBreadcrumbLimit: l = 750, mutationLimit: I = 10000, slowClickTimeout: u = 7000, slowClickIgnoreSelectors: R = [], networkDetailAllowUrls: A = [], networkDetailDenyUrls: T = [], networkCaptureBodies: N = !0, networkRequestHeaders: d = [], networkResponseHeaders: f = [], mask: O = [], maskAttributes: L = ['title', 'placeholder'], unmask: p = [], block: h = [], unblock: D = [], ignore: S = [], maskFn: C, beforeAddRecordingEvent: P, beforeErrorSampling: g } = {}) {
-        this.name = rV.id;
+        this.name = rk.id;
         let U = (function ({ mask: e, unmask: t, block: r, unblock: a, ignore: n }) {
             let _ = rW(e, ['.sentry-mask', '[data-sentry-mask]']);
             return {
@@ -5162,8 +5162,8 @@ class rV {
                 networkDetailAllowUrls: A,
                 networkDetailDenyUrls: T,
                 networkCaptureBodies: N,
-                networkRequestHeaders: rk(d),
-                networkResponseHeaders: rk(f),
+                networkRequestHeaders: rV(d),
+                networkResponseHeaders: rV(f),
                 beforeAddRecordingEvent: P,
                 beforeErrorSampling: g,
                 _experiments: E
@@ -5235,8 +5235,8 @@ class rV {
         } catch (e) {}
     }
 }
-rV.__initStatic();
-function rk(e) {
+rk.__initStatic();
+function rV(e) {
     return [...rH, ...e.map((e) => e.toLowerCase())];
 }
 function rF() {

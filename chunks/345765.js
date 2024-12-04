@@ -98,11 +98,11 @@ function O() {
 }
 function D() {
     O();
-    let { recentActivityEnabled: e } = (0, l.G)({
+    let { recentActivityEnabled: e, recentActivityLoadTestEnabled: t } = (0, l.G)({
         location: 'ContentInventoryManager',
         autoTrackExposure: !1
     });
-    e && R(m.YN.GAME_PROFILE_FEED);
+    (e || t) && R(m.YN.GAME_PROFILE_FEED);
 }
 function L() {
     N(E);

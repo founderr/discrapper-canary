@@ -156,8 +156,8 @@ let v =
         tags: H,
         colorScheme: x = 'system',
         themeLight: K = {},
-        themeDark: V = {},
-        addScreenshotButtonLabel: k = S,
+        themeDark: k = {},
+        addScreenshotButtonLabel: V = S,
         cancelButtonLabel: F = u,
         confirmButtonLabel: X = A,
         emailLabel: j = d,
@@ -191,7 +191,7 @@ let v =
                 useSentryUser: Y,
                 tags: H,
                 colorScheme: x,
-                themeDark: V,
+                themeDark: k,
                 themeLight: K,
                 triggerLabel: en,
                 triggerAriaLabel: e_,
@@ -207,7 +207,7 @@ let v =
                 namePlaceholder: ee,
                 successMessageText: ea,
                 isRequiredLabel: z,
-                addScreenshotButtonLabel: k,
+                addScreenshotButtonLabel: V,
                 removeScreenshotButtonLabel: et,
                 onFormClose: eE,
                 onFormOpen: eo,
@@ -483,8 +483,8 @@ var B,
     H,
     x,
     K,
-    V,
-    k = {},
+    k,
+    V = {},
     F = [],
     X = /acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i,
     j = Array.isArray;
@@ -544,7 +544,7 @@ function er() {
         r,
         a = [],
         n = [];
-    for (H.sort(V); (e = H.shift()); )
+    for (H.sort(k); (e = H.shift()); )
         e.__d &&
             ((r = H.length),
             (t =
@@ -575,7 +575,7 @@ function er() {
                             a
                         );
                 })(e, a, n) || t),
-            0 === r || H.length > r ? (ec(a, t, n), (n.length = a.length = 0), (t = void 0), H.sort(V)) : t && W.__c && W.__c(t, F));
+            0 === r || H.length > r ? (ec(a, t, n), (n.length = a.length = 0), (t = void 0), H.sort(k)) : t && W.__c && W.__c(t, F));
     t && ec(a, t, n), (er.__r = 0);
 }
 function ea(e, t, r, a, n, _, o, E, i, c, s) {
@@ -637,7 +637,7 @@ function ea(e, t, r, a, n, _, o, E, i, c, s) {
         null != (u = r.__k[l]) &&
             'boolean' != typeof u &&
             'function' != typeof u &&
-            ((I = -1 === u.__i ? k : T[u.__i] || k),
+            ((I = -1 === u.__i ? V : T[u.__i] || V),
             (u.__i = l),
             ei(e, u, I, n, _, o, E, i, c, s),
             (R = u.__e),
@@ -778,7 +778,7 @@ function ei(e, t, r, a, n, _, o, E, i, c) {
                   }
                   if (null === d) T === N || (E && e.data === N) || (e.data = N);
                   else {
-                      if (((_ = _ && B.call(e.childNodes)), (T = r.props || k), !E && null != _)) for (T = {}, c = 0; c < e.attributes.length; c++) T[(u = e.attributes[c]).name] = u.value;
+                      if (((_ = _ && B.call(e.childNodes)), (T = r.props || V), !E && null != _)) for (T = {}, c = 0; c < e.attributes.length; c++) T[(u = e.attributes[c]).name] = u.value;
                       for (c in T) (u = T[c]), 'children' == c || ('dangerouslySetInnerHTML' == c ? (l = u) : 'key' === c || c in N || e_(e, c, null, u, n));
                       for (c in N) (u = N[c]), 'children' == c ? (I = u) : 'dangerouslySetInnerHTML' == c ? (s = u) : 'value' == c ? (R = u) : 'checked' == c ? (A = u) : 'key' === c || (E && 'function' != typeof u) || T[c] === u || e_(e, c, u, T[c], n);
                       if (s) E || (l && (s.__html === l.__html || s.__html === e.innerHTML)) || (e.innerHTML = s.__html), (t.__k = []);
@@ -852,7 +852,7 @@ function eI(e, t, r) {
     (Z.prototype.render = Q),
     (H = []),
     (K = 'function' == typeof Promise ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout),
-    (V = function (e, t) {
+    (k = function (e, t) {
         return e.__v.__b - t.__v.__b;
     }),
     (er.__r = 0);
@@ -1180,11 +1180,11 @@ function ex({ options: e }) {
     );
 }
 let eK = '/home/runner/work/sentry-javascript/sentry-javascript/packages/feedback/src/modal/components/Form.tsx';
-function eV(e, t) {
+function ek(e, t) {
     let r = e.get(t);
     return 'string' == typeof r ? r.trim() : '';
 }
-function ek({ options: e, defaultEmail: t, defaultName: r, onFormClose: a, onSubmit: n, onSubmitSuccess: _, onSubmitError: o, showEmail: i, showName: c, screenshotInput: s }) {
+function eV({ options: e, defaultEmail: t, defaultName: r, onFormClose: a, onSubmit: n, onSubmitSuccess: _, onSubmitError: o, showEmail: i, showName: c, screenshotInput: s }) {
     let { tags: l, addScreenshotButtonLabel: I, removeScreenshotButtonLabel: u, cancelButtonLabel: R, emailLabel: A, emailPlaceholder: T, isEmailRequired: N, isNameRequired: d, messageLabel: f, messagePlaceholder: O, nameLabel: L, namePlaceholder: p, submitButtonLabel: h, isRequiredLabel: D } = e,
         [S, C] = eg(null),
         [P, U] = eg(!1),
@@ -1220,9 +1220,9 @@ function ek({ options: e, defaultEmail: t, defaultName: r, onFormClose: a, onSub
                         let t = new FormData(e.target),
                             r = await (s && P ? s.value() : void 0),
                             a = {
-                                name: eV(t, 'name'),
-                                email: eV(t, 'email'),
-                                message: eV(t, 'message'),
+                                name: ek(t, 'name'),
+                                email: ek(t, 'email'),
+                                message: ek(t, 'message'),
                                 attachments: r ? [r] : void 0
                             };
                         if (!b(a)) return;
@@ -1676,7 +1676,7 @@ function ej({ open: e, onFormSubmitted: t, ...r }) {
                                   lineNumber: 66
                               }
                           }),
-                          z(ek, {
+                          z(eV, {
                               ...r,
                               onSubmitSuccess: i,
                               __self: this,
@@ -2044,7 +2044,7 @@ ${eQ}
                         (s = ((c = false), (i && i.__k) || n.__k)),
                         (l = []),
                         (R = []),
-                        ei(n, (a = ((!c && i) || n).__k = z(Q, null, [a])), s || k, k, void 0 !== n.ownerSVGElement, !c && i ? [i] : s ? null : n.firstChild ? B.call(n.childNodes) : null, l, !c && i ? i : s ? s.__e : n.firstChild, c, R),
+                        ei(n, (a = ((!c && i) || n).__k = z(Q, null, [a])), s || V, V, void 0 !== n.ownerSVGElement, !c && i ? [i] : s ? null : n.firstChild ? B.call(n.childNodes) : null, l, !c && i ? i : s ? s.__e : n.firstChild, c, R),
                         (a.__d = void 0),
                         ec(l, a, R);
                 };

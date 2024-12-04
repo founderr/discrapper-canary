@@ -251,14 +251,14 @@ var t, r;
                 var e = this._rgb;
                 return [e[0] / 255, e[1] / 255, e[2] / 255, e[3]];
             });
-        var V = E.unpack,
-            k = E.unpack,
+        var k = E.unpack,
+            V = E.unpack,
             F = Math.floor,
             X = E.unpack,
             j = E.type,
             $ = function () {
                 for (var e, t = [], r = arguments.length; r--; ) t[r] = arguments[r];
-                var a = V(t, 'rgb'),
+                var a = k(t, 'rgb'),
                     n = a[0],
                     _ = a[1],
                     o = a[2],
@@ -276,7 +276,7 @@ var t, r;
             }),
             (i.format.hcg = function () {
                 for (var e, t, r, a, n, _, o, E, i, c = [], s = arguments.length; s--; ) c[s] = arguments[s];
-                var l = (c = k(c, 'hcg'))[0],
+                var l = (c = V(c, 'hcg'))[0],
                     I = c[1],
                     u = c[2];
                 u *= 255;
@@ -568,8 +568,8 @@ var t, r;
         var eH = E.unpack,
             ex = E.RAD2DEG,
             eK = Math.sqrt,
-            eV = Math.atan2,
-            ek = Math.round,
+            ek = Math.atan2,
+            eV = Math.round,
             eF = function () {
                 for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
                 var r = eH(e, 'lab'),
@@ -577,8 +577,8 @@ var t, r;
                     n = r[1],
                     _ = r[2],
                     o = eK(n * n + _ * _),
-                    E = (eV(_, n) * ex + 360) % 360;
-                return 0 === ek(10000 * o) && (E = Number.NaN), [a, o, E];
+                    E = (ek(_, n) * ex + 360) % 360;
+                return 0 === eV(10000 * o) && (E = Number.NaN), [a, o, E];
             },
             eX = E.unpack,
             ej = E.unpack,
@@ -1160,8 +1160,8 @@ var t, r;
             tH = Math.pow,
             tx = Math.sqrt,
             tK = Math.PI,
-            tV = Math.cos,
-            tk = Math.sin,
+            tk = Math.cos,
+            tV = Math.sin,
             tF = Math.atan2,
             tX = function (e, t) {
                 for (var r = e.length, a = [0, 0, 0, 0], n = 0; n < e.length; n++) {
@@ -1690,7 +1690,7 @@ var t, r;
                 for (var _ = e.shift(), o = _.get(t), E = [], i = 0, c = 0, s = 0; s < o.length; s++)
                     if (((o[s] = (o[s] || 0) * r[0]), E.push(isNaN(o[s]) ? 0 : r[0]), 'h' === t.charAt(s) && !isNaN(o[s]))) {
                         var l = (o[s] / 180) * tK;
-                        (i += tV(l) * r[0]), (c += tk(l) * r[0]);
+                        (i += tk(l) * r[0]), (c += tV(l) * r[0]);
                     }
                 var u = _.alpha() * r[0];
                 e.forEach(function (e, a) {
@@ -1700,7 +1700,7 @@ var t, r;
                         if (!isNaN(n[_])) {
                             if (((E[_] += r[a + 1]), 'h' === t.charAt(_))) {
                                 var s = (n[_] / 180) * tK;
-                                (i += tV(s) * r[a + 1]), (c += tk(s) * r[a + 1]);
+                                (i += tk(s) * r[a + 1]), (c += tV(s) * r[a + 1]);
                             } else o[_] += n[_] * r[a + 1];
                         }
                 });

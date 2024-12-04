@@ -1,6 +1,6 @@
 let { createLoader: i } = n(436772),
     s = i(
-        ['JJ0wpK', 'uczI4u', 'Q+eyqq', 'rdfRys', 'HMvECw', 'rmps8/', 'XOdbAw'],
+        ['uczI4u', 'JJ0wpK', 'Q+eyqq', 'rdfRys', 'HMvECw', 'rmps8/', 'XOdbAw'],
         {
             fr: () => n.e('69637').then(n.t.bind(n, 915514, 19)),
             'en-US': () => n.e('55223').then(n.bind(n, 553440))

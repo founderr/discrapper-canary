@@ -78,7 +78,7 @@ r.d(t, {
         return U;
     },
     RK: function () {
-        return ek;
+        return eV;
     },
     S7: function () {
         return N;
@@ -171,7 +171,7 @@ r.d(t, {
         return eK;
     },
     yX: function () {
-        return eV;
+        return ek;
     },
     yY: function () {
         return eb;
@@ -221,8 +221,8 @@ var a,
     H,
     x,
     K,
-    V,
     k,
+    V,
     F,
     X,
     j,
@@ -358,12 +358,12 @@ let ep = new Map([
     (K[(K.REVERSED = 3)] = 'REVERSED'),
     (K[(K.REFUNDED = 4)] = 'REFUNDED'),
     (K[(K.CANCELED = 5)] = 'CANCELED'),
-    ((V = u || (u = {}))[(V.PREMIUM = 1)] = 'PREMIUM'),
-    (V[(V.GUILD = 2)] = 'GUILD'),
-    (V[(V.APPLICATION = 3)] = 'APPLICATION'),
-    ((k = R || (R = {})).PAYPAL_POPUP_CLOSED = 'PAYPAL_POPUP_CLOSED'),
-    (k.VENMO_APP_CANCELED = 'VENMO_APP_CANCELED'),
-    (k.VENMO_CANCELED = 'VENMO_CANCELED'),
+    ((k = u || (u = {}))[(k.PREMIUM = 1)] = 'PREMIUM'),
+    (k[(k.GUILD = 2)] = 'GUILD'),
+    (k[(k.APPLICATION = 3)] = 'APPLICATION'),
+    ((V = R || (R = {})).PAYPAL_POPUP_CLOSED = 'PAYPAL_POPUP_CLOSED'),
+    (V.VENMO_APP_CANCELED = 'VENMO_APP_CANCELED'),
+    (V.VENMO_CANCELED = 'VENMO_CANCELED'),
     Object.freeze({
         CONSTANT: 1,
         APPLE_STICKER: 2
@@ -605,7 +605,7 @@ let eM = Object.freeze({
 let eH = 'token',
     ex = 'tokens',
     eK = 'https://'.concat('status.discord.com'),
-    eV = {
+    ek = {
         PRESSKIT: 'https://app.box.com/s/5puqm5ijahrrdao7yldi7fr3zah5i1am',
         REBRAND_PRESSKIT: 'https://www.dropbox.com/scl/fo/2vittfakjukwa3zl4gnxh/AOS0AZlx-zA4TjDyv-M-dgk?rlkey=kn0v1lcqfq1lurj3lk3x1ujhf&dl=0',
         STATUS: 'https://discordstatus.com',
@@ -634,7 +634,7 @@ let eH = 'token',
         TWITTER_SUPPORT: 'https://twitter.com/discord_support',
         QUESTS: '/quests'
     },
-    ek = Object.freeze({
+    eV = Object.freeze({
         TWITTER: Object.freeze({
             default: 'https://twitter.com/discord',
             ja: 'https://twitter.com/discord_jp'

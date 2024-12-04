@@ -816,7 +816,7 @@ var a = (function (e) {
             }
         );
     }
-    function V(e, t, a) {
+    function k(e, t, a) {
         var n = K(e, t);
         return (
             (n.isNegative ? '-' : '') +
@@ -828,7 +828,7 @@ var a = (function (e) {
                 .join('')
         );
     }
-    function k(e) {
+    function V(e) {
         if (c(+e)) {
             var t = +e;
             if (t === R(t)) return n ? new i(BigInt(t)) : new E(t);
@@ -861,12 +861,12 @@ var a = (function (e) {
             return K(this, e);
         }),
         (o.prototype.toString = function (t, r) {
-            if ((e === t && (t = 10), 10 !== t)) return V(this, t, r);
+            if ((e === t && (t = 10), 10 !== t)) return k(this, t, r);
             for (var a, n = this.value, _ = n.length, o = String(n[--_]); --_ >= 0; ) (a = String(n[_])), (o += '0000000'.slice(a.length) + a);
             return (this.sign ? '-' : '') + o;
         }),
         (E.prototype.toString = function (t, r) {
-            return (e === t && (t = 10), 10 != t) ? V(this, t, r) : String(this.value);
+            return (e === t && (t = 10), 10 != t) ? k(this, t, r) : String(this.value);
         }),
         (i.prototype.toString = E.prototype.toString),
         (i.prototype.toJSON =
@@ -895,10 +895,10 @@ var a = (function (e) {
                       if (e !== R(e)) throw Error(e + ' is not an integer.');
                       return new E(e);
                   }
-                  return k(e.toString());
+                  return V(e.toString());
               })(e)
             : 'string' == typeof e
-              ? k(e)
+              ? V(e)
               : 'bigint' == typeof e
                 ? new i(e)
                 : e;
