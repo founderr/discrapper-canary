@@ -177,7 +177,7 @@ class M extends i.PureComponent {
                 index: t,
                 offset: this.props.searchOffset,
                 limit: this.props.searchLimit,
-                results: i,
+                results: i.length,
                 totalResults: this.props.searchTotalResults,
                 query: a,
                 gifId: e.id

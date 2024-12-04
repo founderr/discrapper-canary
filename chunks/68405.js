@@ -75,7 +75,7 @@ function S(e, t) {
         a = (0, h._)(_.Z.getAnalyticsID(), t, {
             ...i,
             ...r,
-            results: e
+            results: e.length
         }),
         s = null == n ? {} : { load_duration_ms: Date.now() - n };
     u.ZP.trackWithMetadata(E.rMx.SEARCH_RESULT_VIEWED, {

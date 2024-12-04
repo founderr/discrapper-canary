@@ -14,7 +14,7 @@ function i(e, t, n) {
         offset: a,
         page: null != s && null != a ? Math.floor(a / s) + 1 : 1,
         total_results: l,
-        page_results: null != o ? o.length : null,
+        page_results: null != o ? o : null,
         num_modifiers: Object.keys(i).length,
         modifiers: i
     };
