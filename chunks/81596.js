@@ -5,61 +5,61 @@ e.r(n),
         }
     }),
     e(47120);
-var o = e(200651),
-    r = e(192379),
-    i = e(442837),
-    l = e(481060),
-    s = e(230711),
-    a = e(485267),
-    c = e(564990),
+var i = e(200651),
+    o = e(192379),
+    r = e(442837),
+    a = e(481060),
+    c = e(230711),
+    l = e(485267),
+    s = e(564990),
     d = e(353647),
     u = e(527790),
-    E = e(540440),
-    _ = e(365583),
-    h = e(388032),
-    f = e(51478);
+    _ = e(540440),
+    E = e(365583),
+    f = e(388032),
+    h = e(51478);
 function T(t) {
-    let { user: n, entry: e, transitionState: T, onAction: N, onClose: R, onOpenGameSettings: x } = t,
-        [C, S] = (0, i.Wu)([d.Z], () => [d.Z.isDeletingEntryHistory, d.Z.deleteOutboxEntryError]);
+    let { user: n, entry: e, transitionState: T, onAction: S, onClose: p, onOpenGameSettings: x } = t,
+        [N, R] = (0, r.Wu)([d.Z], () => [d.Z.isDeletingEntryHistory, d.Z.deleteOutboxEntryError]);
     return (
-        r.useEffect(() => a.Bt, []),
-        (0, o.jsxs)(l.ModalRoot, {
-            size: l.ModalSize.SMALL,
+        o.useEffect(() => l.Bt, []),
+        (0, i.jsxs)(a.ModalRoot, {
+            size: a.ModalSize.SMALL,
             transitionState: T,
             children: [
-                (0, o.jsxs)(l.ModalContent, {
-                    className: f.content,
+                (0, i.jsxs)(a.ModalContent, {
+                    className: h.content,
                     children: [
-                        null != S
-                            ? (0, o.jsxs)('div', {
-                                  className: f.error,
+                        null != R
+                            ? (0, i.jsxs)('div', {
+                                  className: h.error,
                                   children: [
-                                      (0, o.jsx)(l.CircleXIcon, { color: l.tokens.colors.STATUS_DANGER }),
-                                      (0, o.jsx)(l.Text, {
+                                      (0, i.jsx)(a.CircleXIcon, { color: a.tokens.colors.STATUS_DANGER }),
+                                      (0, i.jsx)(a.Text, {
                                           variant: 'text-sm/medium',
-                                          children: h.intl.string(h.t.FMbL3t)
+                                          children: f.intl.string(f.t.FMbL3t)
                                       })
                                   ]
                               })
                             : null,
-                        (0, o.jsx)(l.Heading, {
+                        (0, i.jsx)(a.Heading, {
                             variant: 'heading-lg/semibold',
-                            children: (0, E.y)(e)
+                            children: (0, _.y)(e)
                         }),
-                        (0, o.jsx)(l.Text, {
+                        (0, i.jsx)(a.Text, {
                             variant: 'text-sm/normal',
                             tag: 'span',
-                            children: h.intl.format(h.t.KV72oa, {
+                            children: f.intl.format(f.t.KV72oa, {
                                 settingsHook: (t, n) => {
-                                    let r = (0, _.C)({
+                                    let o = (0, E.C)({
                                         entry: e,
                                         onOpenGameSettings: x
                                     });
-                                    return (0, o.jsx)(
-                                        l.Anchor,
+                                    return (0, i.jsx)(
+                                        a.Anchor,
                                         {
                                             onClick: () => {
-                                                null == N || N({ action: 'PRESS_CLEAR_HISTORY_DISCLAIMER' }), null != r ? r() : s.Z.open(), R();
+                                                null == S || S({ action: 'PRESS_CLEAR_HISTORY_DISCLAIMER' }), null != o ? o() : c.Z.open(), p();
                                             },
                                             children: t
                                         },
@@ -68,32 +68,33 @@ function T(t) {
                                 }
                             })
                         }),
-                        (0, o.jsx)(u.Z, {
+                        (0, i.jsx)(u.Z, {
                             user: n,
                             entry: e,
-                            className: f.card,
+                            className: h.card,
+                            hideHeader: !0,
                             hideContextMenu: !0
                         })
                     ]
                 }),
-                (0, o.jsxs)(l.ModalFooter, {
-                    className: f.footer,
+                (0, i.jsxs)(a.ModalFooter, {
+                    className: h.footer,
                     children: [
-                        (0, o.jsx)(l.Button, {
-                            disabled: C,
-                            color: l.ButtonColors.RED,
-                            size: l.ButtonSizes.SMALL,
+                        (0, i.jsx)(a.Button, {
+                            disabled: N,
+                            color: a.ButtonColors.RED,
+                            size: a.ButtonSizes.SMALL,
                             onClick: () => {
-                                null == N || N({ action: 'PRESS_CLEAR_HISTORY_BUTTON' }), (0, c.CV)(e, n.id, R);
+                                null == S || S({ action: 'PRESS_CLEAR_HISTORY_BUTTON' }), (0, s.CV)(e, n.id, p);
                             },
-                            children: null != S ? h.intl.string(h.t['5911LS']) : h.intl.string(h.t.VkKicX)
+                            children: null != R ? f.intl.string(f.t['5911LS']) : f.intl.string(f.t.VkKicX)
                         }),
-                        (0, o.jsx)(l.Button, {
-                            onClick: R,
-                            size: l.ButtonSizes.SMALL,
-                            look: l.ButtonLooks.FILLED,
-                            color: l.ButtonColors.TRANSPARENT,
-                            children: h.intl.string(h.t['ETE/oK'])
+                        (0, i.jsx)(a.Button, {
+                            onClick: p,
+                            size: a.ButtonSizes.SMALL,
+                            look: a.ButtonLooks.FILLED,
+                            color: a.ButtonColors.TRANSPARENT,
+                            children: f.intl.string(f.t['ETE/oK'])
                         })
                     ]
                 })

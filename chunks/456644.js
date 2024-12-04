@@ -1,9 +1,6 @@
 n.d(t, {
     G: function () {
         return i;
-    },
-    i: function () {
-        return a;
     }
 });
 let r = (0, n(818083).B)({
@@ -22,8 +19,4 @@ let r = (0, n(818083).B)({
     i = (e) => {
         let { location: t, autoTrackExposure: n = !0 } = e;
         return r.getCurrentConfig({ location: t }, { autoTrackExposure: n });
-    },
-    a = (e) => {
-        let { location: t, autoTrackExposure: n = !0 } = e;
-        return r.useExperiment({ location: t }, { autoTrackExposure: n });
     };
