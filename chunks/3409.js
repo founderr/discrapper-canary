@@ -719,13 +719,14 @@ function ef(e) {
     return W
         ? (0, a.jsxs)(a.Fragment, {
               children: [
-                  (0, a.jsx)(M.Z, { className: Q.paymentModalError }),
                   el &&
                       (0, a.jsx)(T.Z, {
                           className: Q.paymentModalBreadcrumbs,
                           isEligibleForTrial: el
                       }),
-                  (0, a.jsx)(S.C3, { children: tm }),
+                  (0, a.jsxs)(S.C3, {
+                      children: [(0, a.jsx)(M.Z, { className: Q.paymentModalError }), tm]
+                  }),
                   (0, a.jsx)(S.O3, { children: tp })
               ]
           })
