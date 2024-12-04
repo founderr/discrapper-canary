@@ -68,8 +68,9 @@ function S(e) {
                           premiumModalAnalyticsLocation: { section: g.jXE.USER_PROFILE },
                           className: T.upsellButton,
                           size: t ? o.Button.Sizes.TINY : o.Button.Sizes.SMALL,
-                          onlyShineOnHover: !0,
-                          showGradient: !0
+                          look: o.Button.Looks.FILLED,
+                          color: o.Button.Colors.PRIMARY,
+                          onlyShineOnHover: !0
                       })
             }),
             (0, r.jsx)('div', {
@@ -78,8 +79,8 @@ function S(e) {
                     icon: o.ShopIcon,
                     action: m.yM.VISIT_SHOP,
                     text: I.intl.string(I.t.b2d0Nz),
-                    color: o.Button.Colors.BRAND,
                     look: o.Button.Looks.FILLED,
+                    color: o.Button.Colors.PRIMARY,
                     size: t ? o.Button.Sizes.TINY : o.Button.Sizes.SMALL,
                     className: T.upsellButton,
                     onClick: () => {
