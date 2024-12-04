@@ -1,17 +1,18 @@
-var o = i(200651);
-i(192379);
-var n = i(481060);
+var i = o(200651);
+o(192379);
+var n = o(481060);
 e.Z = (t) => {
-    let { product: e, analyticsLocations: a, title: l, description: u } = t;
+    let { product: e, analyticsLocations: a, title: l, description: r, shouldShowPromotionalExperience: u } = t;
     (0, n.openModalLazy)(async () => {
-        let { default: t } = await Promise.all([i.e('87624'), i.e('56604')]).then(i.bind(i, 331042));
-        return (i) =>
-            (0, o.jsx)(t, {
+        let { default: t } = await Promise.all([o.e('87624'), o.e('56604')]).then(o.bind(o, 331042));
+        return (o) =>
+            (0, i.jsx)(t, {
                 product: e,
                 analyticsLocations: a,
                 title: l,
-                description: u,
-                ...i
+                description: r,
+                shouldShowPromotionalExperience: u,
+                ...o
             });
     });
 };

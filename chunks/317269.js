@@ -153,21 +153,20 @@ function E(e) {
     );
 }
 function S(e) {
-    let { planId: t, onClose: n, halloweenDecoPurchase: l } = e,
-        { giftRecipient: s, selectedGiftStyle: o, hasSentMessage: C, giftMessageError: x, isSendingMessage: h } = (0, d.wD)(),
-        f = (0, a.e7)([p.Z], () => p.Z.get(t));
-    r()(null != f, 'Missing plan');
-    let _ = (0, a.e7)([c.Z], () => c.Z.getGiftCode(f.skuId));
+    let { planId: t, onClose: n } = e,
+        { giftRecipient: l, selectedGiftStyle: s, hasSentMessage: o, giftMessageError: C, isSendingMessage: x } = (0, d.wD)(),
+        h = (0, a.e7)([p.Z], () => p.Z.get(t));
+    r()(null != h, 'Missing plan');
+    let f = (0, a.e7)([c.Z], () => c.Z.getGiftCode(h.skuId));
     return (0, i.jsx)(u.Z, {
-        giftCode: _,
-        subscriptionPlan: f,
+        giftCode: f,
+        subscriptionPlan: h,
         onClose: n,
-        selectedGiftStyle: o,
-        hasSentMessage: C,
-        giftRecipient: s,
-        giftMessageError: x,
-        isSendingMessage: h,
-        halloweenDecoPurchase: l
+        selectedGiftStyle: s,
+        hasSentMessage: o,
+        giftRecipient: l,
+        giftMessageError: C,
+        isSendingMessage: x
     });
 }
 function y() {

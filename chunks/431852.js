@@ -14,5 +14,6 @@ e.exports = {
     giftRecipientInputError: 'giftRecipientInputError_c9a9bf',
     sendToRecipientButton: 'sendToRecipientButton_c9a9bf',
     confirmation: 'confirmation_c9a9bf',
+    seasonalConfirmationPadding: 'seasonalConfirmationPadding_c9a9bf',
     giftCodeSection: 'giftCodeSection_c9a9bf'
 };

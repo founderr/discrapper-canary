@@ -14,5 +14,8 @@ e.exports = {
     bundlePreview: 'bundlePreview_a0e502',
     bundleProfileEffectCard: 'bundleProfileEffectCard_a0e502',
     buttons: 'buttons_a0e502',
-    easterEggContainer: 'easterEggContainer_a0e502'
+    easterEggContainer: 'easterEggContainer_a0e502',
+    seaonalButtonGradient: 'seaonalButtonGradient_a0e502',
+    seasonalBanner: 'seasonalBanner_a0e502',
+    seasonalBackgroundGradient: 'seasonalBackgroundGradient_a0e502'
 };

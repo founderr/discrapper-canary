@@ -1,0 +1,57 @@
+n.d(t, {
+    Z: function () {
+        return h;
+    }
+});
+var i = n(200651);
+n(192379);
+var l = n(442837),
+    s = n(481060),
+    r = n(607070),
+    a = n(906732),
+    o = n(821982),
+    C = n(832149),
+    d = n(600164),
+    u = n(286961),
+    c = n(594174),
+    p = n(614277),
+    x = n(648102);
+function h(e) {
+    let { onClose: t, selectedPromotionalDecoPurchaseRecord: n, selectedGiftingPromotionReward: h } = e,
+        f = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
+        _ = (0, l.e7)([r.Z], () => r.Z.useReducedMotion),
+        { analyticsLocations: j } = (0, a.ZP)(),
+        L = s.AvatarSizes.SIZE_32,
+        m = (0, o.Z)(null == h ? void 0 : h.assetId, L, !_),
+        g = (0, u.Z)(),
+        E = null == g ? void 0 : g.giftPurchaseConfirmation;
+    return null == n || null == E
+        ? null
+        : (0, i.jsx)(p.O3, {
+              children: (0, i.jsx)(s.ModalFooter, {
+                  align: d.Z.Align.CENTER,
+                  children: (0, i.jsxs)('div', {
+                      className: x.promotionalFooter,
+                      children: [
+                          (0, i.jsx)(s.AnimatedAvatar, {
+                              'aria-label': null == f ? void 0 : f.username,
+                              size: L,
+                              src: null == f ? void 0 : f.getAvatarURL(void 0, (0, s.getAvatarSize)(L), !_),
+                              avatarDecoration: m
+                          }),
+                          (0, i.jsx)(s.Button, {
+                              onClick: () => {
+                                  t(),
+                                      (0, C.Z)({
+                                          product: n,
+                                          shouldShowPromotionalExperience: !0,
+                                          analyticsLocations: j
+                                      });
+                              },
+                              children: E.collectRewardButtonText()
+                          })
+                      ]
+                  })
+              })
+          });
+}
