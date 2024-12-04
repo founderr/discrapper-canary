@@ -7,63 +7,68 @@ var r = n(200651),
     l = n(442837),
     u = n(114101),
     c = n(481060),
-    d = n(28546),
-    f = n(581883),
-    _ = n(459273),
-    p = n(443603),
-    h = n(981631),
-    m = n(957825),
-    g = n(388032),
-    E = n(553796);
+    d = n(540059),
+    f = n(28546),
+    _ = n(581883),
+    p = n(459273),
+    h = n(443603),
+    m = n(981631),
+    g = n(957825),
+    E = n(388032),
+    v = n(553796);
 t.Z = i.memo(
     i.forwardRef(function (e, t) {
         let { disabled: n, type: a } = e,
-            [v, I] = i.useState(!1),
-            T = (0, l.e7)([f.Z], () => {
+            [I, T] = i.useState(!1),
+            b = (0, l.e7)([_.Z], () => {
                 var e, t;
-                return v && Object.values(null !== (t = null === (e = f.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2;
+                return I && Object.values(null !== (t = null === (e = _.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2;
             }),
-            [b, S, y] = (0, d.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.X),
-            A = i.useRef(0),
-            N = i.useCallback(() => {
-                I(!0),
-                    clearTimeout(A.current),
-                    (A.current = setTimeout(() => {
-                        I(!1), (A.current = 0);
+            [S, y, A] = (0, f.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.X),
+            N = i.useRef(0),
+            C = i.useCallback(() => {
+                T(!0),
+                    clearTimeout(N.current),
+                    (N.current = setTimeout(() => {
+                        T(!1), (N.current = 0);
                     }, 2000));
             }, []);
-        (0, _.yp)({
-            event: h.CkL.FAVORITE_GIF,
-            handler: N
+        (0, p.yp)({
+            event: m.CkL.FAVORITE_GIF,
+            handler: C
         });
-        let C = i.useCallback(() => {
-                (0, d.RO)(m.X1.GIF, a);
+        let R = i.useCallback(() => {
+                (0, f.RO)(g.X1.GIF, a);
             }, [a]),
-            { Component: R, events: O, play: D } = (0, u.V)();
+            { Component: O, events: D, play: L } = (0, u.V)(),
+            x = (0, d.Q)('ChannelGIFPickerButton');
         if (n) return null;
-        let L = b === m.X1.GIF && S === a;
+        let w = S === g.X1.GIF && y === a;
         return (0, r.jsx)(c.Tooltip, {
-            text: T ? g.intl.string(g.t.mE2e8P) : null,
+            text: b ? E.intl.string(E.t.mE2e8P) : null,
             forceOpen: !0,
             children: (e) =>
                 (0, r.jsx)('div', {
                     ref: t,
-                    className: s()(m.CT, E.buttonContainer),
+                    className: s()(g.CT, v.buttonContainer),
                     ...e,
-                    children: (0, r.jsx)(p.Z, {
-                        innerClassName: E.button,
-                        onMouseEnter: O.onMouseEnter,
-                        onMouseLeave: O.onMouseLeave,
+                    children: (0, r.jsx)(h.Z, {
+                        innerClassName: v.button,
+                        onMouseEnter: D.onMouseEnter,
+                        onMouseLeave: D.onMouseLeave,
                         onClick: () => {
-                            C(), D();
+                            R(), L();
                         },
-                        isActive: L,
-                        pulse: v,
-                        'aria-label': g.intl.string(g.t.PtVpk5),
-                        'aria-expanded': L,
+                        isActive: w,
+                        pulse: I,
+                        'aria-label': E.intl.string(E.t.PtVpk5),
+                        'aria-expanded': w,
                         'aria-haspopup': 'dialog',
-                        'aria-controls': y,
-                        children: (0, r.jsx)(R, { color: 'currentColor' })
+                        'aria-controls': A,
+                        children: (0, r.jsx)(O, {
+                            size: x ? 'refresh_sm' : void 0,
+                            color: 'currentColor'
+                        })
                     })
                 })
         });

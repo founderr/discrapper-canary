@@ -14,20 +14,22 @@ var i = n(200651),
     g = n(663924),
     C = n(533379),
     x = n(404295),
-    v = n(605236),
-    _ = n(819640),
-    I = n(291407),
-    E = n(61356),
-    b = n(981631),
-    Z = n(314734),
-    N = n(921944),
-    S = n(388032),
-    T = n(805660),
-    j = n(795361);
-let A = l.forwardRef(function (e, t) {
+    v = n(540059),
+    _ = n(605236),
+    I = n(819640),
+    E = n(291407),
+    b = n(61356),
+    Z = n(981631),
+    N = n(314734),
+    S = n(921944),
+    T = n(388032),
+    j = n(805660),
+    A = n(795361);
+let y = l.forwardRef(function (e, t) {
     let { type: n, animateRef: r } = e,
         f = (0, s.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === n),
-        { Component: g, events: C, play: x } = (0, c.w)();
+        { Component: g, events: C, play: x } = (0, c.w)(),
+        I = (0, v.Q)('ChannelAppLauncherButton');
     l.useImperativeHandle(
         r,
         () => ({
@@ -37,19 +39,19 @@ let A = l.forwardRef(function (e, t) {
         }),
         [C]
     );
-    let _ = l.useCallback(() => {
-        (0, u.yw)(b.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), f ? h.yT(m.ti.DISMISSED) : ((0, v.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: N.L.TAKE_ACTION }), h.__(m._b.TEXT, n)), x();
+    let E = l.useCallback(() => {
+        (0, u.yw)(Z.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), f ? h.yT(m.ti.DISMISSED) : ((0, _.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: S.L.TAKE_ACTION }), h.__(m._b.TEXT, n)), x();
     }, [f, n, x]);
     return (0, i.jsx)('div', {
-        className: a()(T.buttonContainer, Z.t4),
+        className: a()(j.buttonContainer, N.t4),
         ref: t,
         children: (0, i.jsx)(d.Button, {
             look: d.Button.Looks.BLANK,
             size: d.Button.Sizes.NONE,
             tabIndex: 0,
-            className: a()(T.button, { [T.buttonActive]: f }),
-            onClick: _,
-            'aria-label': S.intl.string(S.t.erHFxM),
+            className: a()(j.button, { [j.buttonActive]: f }),
+            onClick: E,
+            'aria-label': T.intl.string(T.t.erHFxM),
             focusProps: {
                 offset: {
                     top: 4,
@@ -58,15 +60,18 @@ let A = l.forwardRef(function (e, t) {
                     right: -4
                 }
             },
-            innerClassName: T.buttonContents,
+            innerClassName: j.buttonContents,
             ...C,
-            children: (0, i.jsx)(g, { color: 'currentColor' })
+            children: (0, i.jsx)(g, {
+                size: I ? 'refresh_sm' : void 0,
+                color: 'currentColor'
+            })
         })
     });
 });
-function y(e) {
+function P(e) {
     let { showAppLauncherPopup: t, children: n } = e,
-        l = (0, s.e7)([_.Z], () => _.Z.hasLayers()),
+        l = (0, s.e7)([I.Z], () => I.Z.hasLayers()),
         {
             enabled: r,
             shouldShow: o,
@@ -80,21 +85,21 @@ function y(e) {
     let h =
         o && (null == c ? void 0 : c.iconURL) != null
             ? (0, i.jsxs)('div', {
-                  className: T.channelAppLauncherButtonPopoutIconContainer,
+                  className: j.channelAppLauncherButtonPopoutIconContainer,
                   children: [
                       (0, i.jsx)('img', {
-                          className: a()(T.buttonContainer, T.button, T.channelAppLauncherButtonPopoutIcon),
-                          alt: S.intl.string(S.t.X4IxWF),
+                          className: a()(j.buttonContainer, j.button, j.channelAppLauncherButtonPopoutIcon),
+                          alt: T.intl.string(T.t.X4IxWF),
                           src: null == c ? void 0 : c.iconURL,
                           'aria-hidden': !0,
                           draggable: !1
                       }),
                       (0, i.jsx)('div', {
-                          className: T.channelAppLauncherButtonPopoutIconShimmerContainer,
+                          className: j.channelAppLauncherButtonPopoutIconShimmerContainer,
                           children: (0, i.jsx)('img', {
-                              className: a()(T.channelAppLauncherButtonPopoutIconShimmer),
-                              alt: S.intl.string(S.t.X4IxWF),
-                              src: j,
+                              className: a()(j.channelAppLauncherButtonPopoutIconShimmer),
+                              alt: T.intl.string(T.t.X4IxWF),
+                              src: A,
                               'aria-hidden': !0,
                               draggable: !1
                           })
@@ -104,7 +109,7 @@ function y(e) {
             : null;
     return u
         ? (0, i.jsx)(d.Tooltip, {
-              text: S.intl.string(S.t.JDj6Xl),
+              text: T.intl.string(T.t.JDj6Xl),
               shouldShow: o,
               forceOpen: o,
               children: () =>
@@ -124,21 +129,21 @@ t.Z = l.memo(function (e) {
             chatInputType: n,
             location: 'chat_input'
         }),
-        d = (0, E.Z)({ type: n }),
+        d = (0, b.Z)({ type: n }),
         u = (0, x.h9)(t.id, 'ChannelAppLauncher'),
         h = (0, s.e7)([p.Z], () => p.Z.appDMChannelsWithFailedLoads().has(t.id));
     return c
         ? (0, i.jsxs)('div', {
-              className: T.channelAppLauncher,
+              className: j.channelAppLauncher,
               children: [
-                  (0, i.jsx)(I.Z, {
+                  (0, i.jsx)(E.Z, {
                       channel: t,
-                      animationContainerClassName: T.entrypointAnimation,
-                      glowClassName: T.animationGlow,
-                      trinketsClassName: T.animationTrinkets,
-                      children: (0, i.jsx)(y, {
+                      animationContainerClassName: j.entrypointAnimation,
+                      glowClassName: j.animationGlow,
+                      trinketsClassName: j.animationTrinkets,
+                      children: (0, i.jsx)(P, {
                           showAppLauncherPopup: d,
-                          children: (0, i.jsx)(A, {
+                          children: (0, i.jsx)(y, {
                               type: n,
                               ref: o,
                               animateRef: r

@@ -6,60 +6,65 @@ var r = n(200651),
     o = n(232713),
     l = n(532772),
     u = n(570220),
-    c = n(28546),
-    d = n(443603),
-    f = n(957825),
-    _ = n(388032),
-    p = n(553796);
+    c = n(540059),
+    d = n(28546),
+    f = n(443603),
+    _ = n(957825),
+    p = n(388032),
+    h = n(553796);
 t.Z = i.memo(
     i.forwardRef(function (e, t) {
         let { disabled: n, type: a } = e,
-            [h, m] = (0, c.Iu)((e) => [e.activeView, e.pickerId], o.X),
-            g = i.useContext(u.ZP),
-            [E, v] = i.useState(!1),
-            I = h === f.X1.STICKER,
-            T = i.useCallback(() => {
-                (0, c.RO)(f.X1.STICKER, a);
+            [m, g] = (0, d.Iu)((e) => [e.activeView, e.pickerId], o.X),
+            E = i.useContext(u.ZP),
+            [v, I] = i.useState(!1),
+            T = m === _.X1.STICKER,
+            b = i.useCallback(() => {
+                (0, d.RO)(_.X1.STICKER, a);
             }, [a]);
         i.useEffect(() => {
             let e = () => {
                     requestAnimationFrame(() => {
-                        v(!0);
+                        I(!0);
                     });
                 },
                 t = () => {
                     requestAnimationFrame(() => {
-                        v(!1);
+                        I(!1);
                     });
                 };
             return (
-                g.addListener('sticker-suggestions-shown', e),
-                g.addListener('sticker-suggestions-hidden', t),
+                E.addListener('sticker-suggestions-shown', e),
+                E.addListener('sticker-suggestions-hidden', t),
                 () => {
-                    g.removeListener('sticker-suggestions-shown', e), g.removeListener('sticker-suggestions-hidden', t);
+                    E.removeListener('sticker-suggestions-shown', e), E.removeListener('sticker-suggestions-hidden', t);
                 }
             );
-        }, [g]);
-        let { Component: b, events: S, play: y } = (0, l.z)();
+        }, [E]);
+        let { Component: S, events: y, play: A } = (0, l.z)(),
+            N = (0, c.Q)('ChannelStickerPickerButton');
         return n
             ? null
             : (0, r.jsx)('div', {
-                  className: s()(f.CT, p.buttonContainer),
+                  className: s()(_.CT, h.buttonContainer),
                   ref: t,
-                  children: (0, r.jsx)(d.Z, {
-                      innerClassName: s()(p.button, p.stickerButton, { [p.stickerButtonTilted]: E && !I }),
-                      ...S,
+                  children: (0, r.jsx)(f.Z, {
+                      innerClassName: s()(h.button, h.stickerButton, { [h.stickerButtonTilted]: v && !T }),
+                      ...y,
                       onClick: () => {
-                          T(), y();
+                          b(), A();
                       },
-                      isActive: I,
-                      'aria-label': _.intl.string(_.t.rZpidX),
-                      'aria-expanded': I,
+                      isActive: T,
+                      'aria-label': p.intl.string(p.t.rZpidX),
+                      'aria-expanded': T,
                       'aria-haspopup': 'dialog',
-                      'aria-controls': m,
+                      'aria-controls': g,
                       sparkle: !1,
                       notification: null,
-                      children: (0, r.jsx)(b, { color: 'currentColor' })
+                      children: (0, r.jsx)(S, {
+                          size: N ? 'refresh_sm' : void 0,
+                          color: 'currentColor'
+                      })
                   })
               });
     })

@@ -9,5 +9,6 @@ let r = {
     sm: 18,
     md: 24,
     lg: 32,
-    custom: void 0
+    custom: void 0,
+    refresh_sm: 20
 };
