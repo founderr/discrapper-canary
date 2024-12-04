@@ -358,4 +358,5 @@ var n, r;
     (r.APP_DMS_QUICK_LAUNCHER = 'app_dms_quick_launcher'),
     (r.DEEPLINK = 'deeplink'),
     (r.HOLIDAY_COACHMARK = 'holiday coachmark'),
+    (r.USER_SETTINGS_COACHMARK = 'user settings coachmark'),
     (t.Z = n);
