@@ -23,16 +23,19 @@ function g() {
         children: [
             (0, r.jsx)(l.Z, {
                 title: h.intl.string(h.t.ruhGkp),
+                titleVariant: 'text-md/medium',
                 description: h.intl.string(h.t['/FWKKC']),
                 icon: s.CircleCheckIcon
             }),
             (0, r.jsx)(l.Z, {
                 title: h.intl.string(h.t.N9v3en),
+                titleVariant: 'text-md/medium',
                 description: h.intl.string(h.t.ddpuJi),
                 icon: s.CircleCheckIcon
             }),
             (0, r.jsx)(l.Z, {
                 title: h.intl.string(h.t['4ycGEx']),
+                titleVariant: 'text-md/medium',
                 description: h.intl.string(h.t['5yfN+v']),
                 icon: s.CircleInformationIcon
             })

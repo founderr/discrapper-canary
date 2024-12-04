@@ -22,16 +22,19 @@ function c() {
                       children: [
                           (0, r.jsx)(s.Z, {
                               title: l.intl.string(l.t.fjFJFR),
+                              titleVariant: 'text-md/medium',
                               description: l.intl.string(l.t['8SIMPz']),
                               icon: i.CircleCheckIcon
                           }),
                           (0, r.jsx)(s.Z, {
                               title: l.intl.string(l.t.QCrmqa),
+                              titleVariant: 'text-md/medium',
                               description: l.intl.string(l.t.TKDMoK),
                               icon: i.CircleCheckIcon
                           }),
                           (0, r.jsx)(s.Z, {
                               title: l.intl.string(l.t['lkm/a2']),
+                              titleVariant: 'text-md/medium',
                               description: l.intl.string(l.t['8j3qaG']),
                               icon: i.WarningIcon
                           })
