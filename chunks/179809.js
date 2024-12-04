@@ -70,7 +70,7 @@ function T(e) {
             iconHeight: (t = V) ? 44 : 48,
             iconMargin: 8
         },
-        el = H.length * (en + ei) - 4,
+        el = H.length * (en + ei) - (V ? 4 : 0),
         er = (0, d.useTransition)(!q && u, {
             from: { height: 0 },
             enter: { height: 1 },
@@ -145,7 +145,7 @@ function T(e) {
                         y,
                         {
                             as: 'ul',
-                            gap: 'xxs',
+                            gap: V ? 'xxs' : 0,
                             id: et,
                             style: { height: e.height.to((e) => e * el) },
                             role: 'group',

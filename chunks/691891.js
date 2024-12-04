@@ -1,17 +1,17 @@
 var i = n(200651);
 n(192379);
-var o = n(120356),
-    l = n.n(o),
+var l = n(120356),
+    o = n.n(l),
     r = n(481060),
     s = n(932209);
 let a = (e) => {
-    let { className: t, onDismiss: n, 'aria-label': o } = e;
+    let { className: t, onDismiss: n, 'aria-label': l } = e;
     return (0, i.jsx)(r.Button, {
         look: r.Button.Looks.BLANK,
         size: r.Button.Sizes.NONE,
         onClick: n,
-        className: l()(s.dismissButton, t),
-        'aria-label': o,
+        className: o()(s.dismissButton, t),
+        'aria-label': l,
         children: (0, i.jsx)(r.XSmallIcon, {
             size: 'xs',
             color: 'currentColor',

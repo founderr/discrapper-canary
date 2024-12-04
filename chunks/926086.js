@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    o = n(192379),
-    l = n(120356),
-    r = n.n(l),
+    l = n(192379),
+    o = n(120356),
+    r = n.n(o),
     s = n(348327),
     a = n.n(s),
     u = n(752877),
@@ -23,25 +23,25 @@ let p = {
 };
 function m(e) {
     let { locked: t, pinned: n } = e,
-        [l, s] = o.useState(0),
-        [m, v] = o.useState(0),
-        [g, E] = o.useState(0),
-        x = o.useRef(0),
-        [C, Z] = o.useState(0),
-        { timeToLiveMs: _, reappearTimeMs: I } = d.ZP.useState(
+        [o, s] = l.useState(0),
+        [m, v] = l.useState(0),
+        [g, E] = l.useState(0),
+        x = l.useRef(0),
+        [C, Z] = l.useState(0),
+        { timeToLiveMs: _, reappearTimeMs: S } = d.ZP.useState(
             (e) => ({
                 timeToLiveMs: e.timeToLiveMs,
                 reappearTimeMs: e.reappearTimeMs
             }),
             a()
         ),
-        S = {
+        I = {
             timeToLiveMs: _,
-            reappearTimeMs: I
+            reappearTimeMs: S
         },
-        b = o.useRef(S);
-    o.useEffect(() => void (b.current = S)),
-        o.useEffect(
+        N = l.useRef(I);
+    l.useEffect(() => void (N.current = I)),
+        l.useEffect(
             () => (
                 (x.current = setInterval(() => {
                     let e = Date.now();
@@ -49,9 +49,9 @@ function m(e) {
                         E((t) => {
                             if (0 === t) return e;
                             let n = e - t,
-                                i = b.current.timeToLiveMs,
-                                o = i + b.current.reappearTimeMs;
-                            return n > i ? t + o : t;
+                                i = N.current.timeToLiveMs,
+                                l = i + N.current.reappearTimeMs;
+                            return n > i ? t + l : t;
                         });
                 }, 100)),
                 () => {
@@ -60,10 +60,10 @@ function m(e) {
             ),
             []
         );
-    let N = () => {
+    let b = () => {
             s(Date.now()), Z((e) => e + 1);
         },
-        O = l > 0 && m - l < 1000,
+        O = o > 0 && m - o < 1000,
         y = (0, c.useTransition)(g > 0 && g < m && m - g < _, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
@@ -82,7 +82,7 @@ function m(e) {
                           children: (0, i.jsx)(h.Z, {
                               className: r()(f.clickZone, O && f.clickBackground),
                               children: (0, i.jsx)(c.Clickable, {
-                                  onClick: N,
+                                  onClick: b,
                                   className: f.clickable,
                                   children: (0, i.jsxs)(c.Text, {
                                       variant: 'text-md/semibold',

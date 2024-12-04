@@ -4,9 +4,9 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    o = n(192379),
-    l = n(120356),
-    r = n.n(l),
+    l = n(192379),
+    o = n(120356),
+    r = n.n(o),
     s = n(752877),
     a = n(481060),
     u = n(110924),
@@ -15,14 +15,14 @@ var i = n(200651),
     h = n(228680);
 let f = 8,
     p = (e) => {
-        let { participant: t, width: n, locked: o, widgetId: l, pinned: r } = e;
+        let { participant: t, width: n, locked: l, widgetId: o, pinned: r } = e;
         return (0, i.jsx)(
             c.Z,
             {
                 participant: t,
                 width: n,
-                locked: o,
-                widgetId: l,
+                locked: l,
+                widgetId: o,
                 pinned: r
             },
             t.user.id
@@ -34,23 +34,23 @@ let f = 8,
         friction: 18,
         clamp: !0
     };
-t.Z = o.memo(function (e) {
-    let { widgetId: t, tileWidth: n, layout: o, locked: l, streamParticipants: c, participantsVersion: v, pinned: g } = e,
+t.Z = l.memo(function (e) {
+    let { widgetId: t, tileWidth: n, layout: l, locked: o, streamParticipants: c, participantsVersion: v, pinned: g } = e,
         E = (9 / 16) * n,
         x = c.map((e) => ({
             participant: e,
             key: e.user.id,
             width: n,
-            locked: l,
+            locked: o,
             widgetId: t,
             height: E,
             pinned: g
         })),
         C = (0, u.Z)(n),
-        Z = o === d.C5.VERTICAL,
+        Z = l === d.C5.VERTICAL,
         _ = 0,
-        I = 0,
-        S = (0, a.useTransition)(
+        S = 0,
+        I = (0, a.useTransition)(
             Z
                 ? x.map((e, t) => ({
                       ...e,
@@ -59,7 +59,7 @@ t.Z = o.memo(function (e) {
                   }))
                 : x.map((e, t) => ({
                       ...e,
-                      x: (I += e.width + (t > 0 ? f : 0)) - e.width,
+                      x: (S += e.width + (t > 0 ? f : 0)) - e.width,
                       y: 0
                   })),
             {
@@ -73,22 +73,22 @@ t.Z = o.memo(function (e) {
                     opacity: 0
                 },
                 enter: (e) => {
-                    let { x: t, y: n, width: i, height: o } = e;
+                    let { x: t, y: n, width: i, height: l } = e;
                     return {
                         x: t,
                         y: n,
                         width: i,
-                        height: o,
+                        height: l,
                         opacity: 1
                     };
                 },
                 update: (e) => {
-                    let { x: t, y: n, width: i, height: o } = e;
+                    let { x: t, y: n, width: i, height: l } = e;
                     return {
                         x: t,
                         y: n,
                         width: i,
-                        height: o
+                        height: l
                     };
                 },
                 config: m,
@@ -102,14 +102,14 @@ t.Z = o.memo(function (e) {
             [h.vertical]: Z,
             [h.horizontal]: !Z
         }),
-        style: Z ? { height: _ } : { width: I },
-        children: S((e, t, o, l) =>
+        style: Z ? { height: _ } : { width: S },
+        children: I((e, t, l, o) =>
             (0, i.jsx)(s.animated.div, {
                 className: h.gridItem,
                 style: Object.assign({}, e, {
                     width: n,
                     height: E,
-                    zIndex: x.length - l
+                    zIndex: x.length - o
                 }),
                 children: p(t)
             })

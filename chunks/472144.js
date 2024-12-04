@@ -1,87 +1,87 @@
-var r = n(200651),
-    o = n(192379),
-    i = n(120356),
-    l = n.n(i),
-    s = n(752877),
-    a = n(481060),
-    c = n(569379),
-    u = n(642145),
-    d = n(793436);
-t.Z = o.forwardRef((e, t) => {
-    let { quest: n, percentComplete: o, size: i = 42, strokeWidth: m = 3, glowBlur: f = 0.4, percentCompleteText: p, percentCompleteTextVariant: v = 'text-lg/medium', children: C } = e,
-        g = (0, c.E)(n, o > 0),
-        x = i / 2,
-        S = i / 2 - m / 2,
-        _ = 2 * Math.PI * S,
-        E = _ - o * _,
+var o = t(200651),
+    r = t(192379),
+    c = t(120356),
+    a = t.n(c),
+    i = t(752877),
+    s = t(481060),
+    l = t(569379),
+    d = t(642145),
+    f = t(793436);
+n.Z = r.forwardRef((e, n) => {
+    let { quest: t, percentComplete: r, size: c = 42, strokeWidth: u = 3, glowBlur: p = 0.4, percentCompleteText: _, percentCompleteTextVariant: C = 'text-lg/medium', children: v } = e,
+        g = (0, l.E)(t, r > 0),
+        m = c / 2,
+        x = c / 2 - u / 2,
+        B = 2 * Math.PI * x,
+        b = B - r * B,
+        S = {
+            strokeDasharray: ''.concat(B, ' ').concat(B),
+            strokeDashoffset: b
+        },
         h = {
-            strokeDasharray: ''.concat(_, ' ').concat(_),
-            strokeDashoffset: E
+            strokeDasharray: ''.concat(B, ' ').concat(B),
+            strokeDashoffset: -r * B
         },
-        T = {
-            strokeDasharray: ''.concat(_, ' ').concat(_),
-            strokeDashoffset: -o * _
-        },
-        I = { boxShadow: '0 0 30px 0px '.concat(g.glow) },
-        { progressTextAnimation: N } = (0, a.useSpring)({
-            progressTextAnimation: null != p && 1 !== o ? 1 : 0,
-            config: u.Y
+        y = { boxShadow: '0 0 30px 0px '.concat(g.glow) },
+        { progressTextAnimation: k } = (0, s.useSpring)({
+            progressTextAnimation: null != _ && 1 !== r ? 1 : 0,
+            config: d.Y
         });
-    return (0, r.jsxs)('div', {
-        className: d.outer,
-        ref: t,
+    return (0, o.jsxs)('div', {
+        className: f.outer,
+        ref: n,
         children: [
-            (0, r.jsxs)('div', {
-                className: d.inner,
-                style: I,
+            (0, o.jsxs)('div', {
+                className: f.inner,
+                style: y,
                 children: [
-                    C,
-                    (0, r.jsxs)(s.animated.div, {
-                        style: { opacity: N },
-                        className: l()(d.coverContent, d.progressTextWrapper),
+                    v,
+                    (0, o.jsxs)(i.animated.div, {
+                        style: { opacity: k },
+                        className: a()(f.coverContent, f.progressTextWrapper),
                         children: [
-                            (0, r.jsx)('div', { className: l()(d.coverContent, d.progressTextOverlay) }),
-                            (0, r.jsx)(a.Text, {
-                                variant: v,
+                            (0, o.jsx)('div', { className: a()(f.coverContent, f.progressTextOverlay) }),
+                            (0, o.jsx)(s.Text, {
+                                variant: C,
                                 color: 'text-primary',
-                                className: d.progressText,
-                                children: p
+                                className: f.progressText,
+                                children: _
                             })
                         ]
                     })
                 ]
             }),
-            (0, r.jsxs)('svg', {
-                className: d.progressBar,
-                height: i,
-                width: i,
+            (0, o.jsxs)('svg', {
+                className: f.progressBar,
+                height: c,
+                width: c,
                 children: [
-                    (0, r.jsxs)('defs', {
+                    (0, o.jsxs)('defs', {
                         children: [
-                            (0, r.jsxs)('filter', {
+                            (0, o.jsxs)('filter', {
                                 id: 'glow',
                                 children: [
-                                    (0, r.jsx)('feGaussianBlur', {
+                                    (0, o.jsx)('feGaussianBlur', {
                                         result: 'coloredBlur',
-                                        stdDeviation: f
+                                        stdDeviation: p
                                     }),
-                                    (0, r.jsxs)('feMerge', {
-                                        children: [(0, r.jsx)('feMergeNode', { in: 'coloredBlur' }), (0, r.jsx)('feMergeNode', { in: 'coloredBlur' }), (0, r.jsx)('feMergeNode', { in: 'coloredBlur' }), (0, r.jsx)('feMergeNode', { in: 'SourceGraphic' })]
+                                    (0, o.jsxs)('feMerge', {
+                                        children: [(0, o.jsx)('feMergeNode', { in: 'coloredBlur' }), (0, o.jsx)('feMergeNode', { in: 'coloredBlur' }), (0, o.jsx)('feMergeNode', { in: 'coloredBlur' }), (0, o.jsx)('feMergeNode', { in: 'SourceGraphic' })]
                                     })
                                 ]
                             }),
-                            (0, r.jsxs)('linearGradient', {
+                            (0, o.jsxs)('linearGradient', {
                                 id: 'linear',
                                 x1: '100%',
                                 y1: '0%',
                                 x2: '0%',
                                 y2: '0%',
                                 children: [
-                                    (0, r.jsx)('stop', {
+                                    (0, o.jsx)('stop', {
                                         offset: '0%',
                                         stopColor: g.backgroundTop
                                     }),
-                                    (0, r.jsx)('stop', {
+                                    (0, o.jsx)('stop', {
                                         offset: '100%',
                                         stopColor: g.backgroundBottom
                                     })
@@ -89,25 +89,25 @@ t.Z = o.forwardRef((e, t) => {
                             })
                         ]
                     }),
-                    (0, r.jsx)('circle', {
-                        className: d.progress,
-                        strokeWidth: m,
+                    (0, o.jsx)('circle', {
+                        className: f.progress,
+                        strokeWidth: u,
                         fill: 'transparent',
-                        r: S,
-                        cx: x,
-                        cy: x,
+                        r: x,
+                        cx: m,
+                        cy: m,
                         stroke: 'url(#linear)',
-                        style: T
-                    }),
-                    (0, r.jsx)('circle', {
-                        className: d.progress,
-                        strokeWidth: m,
-                        fill: 'transparent',
-                        r: S,
-                        cx: x,
-                        cy: x,
-                        stroke: g.foreground,
                         style: h
+                    }),
+                    (0, o.jsx)('circle', {
+                        className: f.progress,
+                        strokeWidth: u,
+                        fill: 'transparent',
+                        r: x,
+                        cx: m,
+                        cy: m,
+                        stroke: g.foreground,
+                        style: S
                     })
                 ]
             })

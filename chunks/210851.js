@@ -1,33 +1,33 @@
 t(47120), t(315314), t(610138), t(216116), t(78328), t(815648);
-var a = t(200651),
-    n = t(192379),
-    r = t(481060),
-    i = t(763610),
-    l = t(102787);
+var i = t(200651),
+    a = t(192379),
+    n = t(481060),
+    l = t(763610),
+    r = t(102787);
 s.Z = function (e) {
     var s, t;
-    let { assetKey: o, filters: d, initialValue: c, onFileChange: u, title: m } = e,
-        [h, g] = n.useState(null),
-        x = n.useRef(null);
+    let { assetKey: o, filters: d, initialValue: c, onFileChange: u, title: g } = e,
+        [m, h] = a.useState(null),
+        v = a.useRef(null);
     return (
-        n.useEffect(
+        a.useEffect(
             () => () => {
-                null != x.current && URL.revokeObjectURL(x.current);
+                null != v.current && URL.revokeObjectURL(v.current);
             },
             []
         ),
-        (0, a.jsxs)(r.FormItem, {
+        (0, i.jsxs)(n.FormItem, {
             children: [
-                (0, a.jsx)(r.FormTitle, {
-                    tag: r.FormTitleTags.H5,
-                    children: (0, a.jsxs)('div', {
-                        className: l.headingWithTooltip,
+                (0, i.jsx)(n.FormTitle, {
+                    tag: n.FormTitleTags.H5,
+                    children: (0, i.jsxs)('div', {
+                        className: r.headingWithTooltip,
                         children: [
-                            m,
-                            (0, a.jsx)(r.Tooltip, {
+                            g,
+                            (0, i.jsx)(n.Tooltip, {
                                 text: 'Supported asset formats: '.concat(d.join(', ')),
                                 children: (e) =>
-                                    (0, a.jsx)(r.CircleInformationIcon, {
+                                    (0, i.jsx)(n.CircleInformationIcon, {
                                         size: 'xs',
                                         ...e
                                     })
@@ -35,20 +35,20 @@ s.Z = function (e) {
                         ]
                     })
                 }),
-                (0, a.jsx)(i.Z, {
-                    filename: null !== (t = null !== (s = null == h ? void 0 : h.name) && void 0 !== s ? s : c) && void 0 !== t ? t : '',
+                (0, i.jsx)(l.Z, {
+                    filename: null !== (t = null !== (s = null == m ? void 0 : m.name) && void 0 !== s ? s : c) && void 0 !== t ? t : '',
                     filters: [
                         {
-                            name: m,
+                            name: g,
                             extensions: d
                         }
                     ],
                     buttonText: 'Browse',
                     placeholder: 'Select an asset',
                     onFileSelect: function (e) {
-                        if ((g(null != e ? e : null), null == e)) return;
+                        if ((h(null != e ? e : null), null == e)) return;
                         let s = URL.createObjectURL(e);
-                        x.current = s;
+                        v.current = s;
                         let t = new URL(s);
                         t.searchParams.append('mimetype', e.type), t.searchParams.append('name', e.name), u(o, t.toString());
                     }

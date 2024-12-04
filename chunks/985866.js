@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return M;
+            return P;
         }
     }),
     n(47120);
@@ -123,17 +123,17 @@ function A(e) {
         ]
     });
 }
-function M(e) {
+function P(e) {
     let t = (0, l.e7)([I.Z], () => I.Z.getQuest(e.questId));
     return null != t
-        ? (0, r.jsx)(P, {
+        ? (0, r.jsx)(M, {
               ...e,
               quest: t,
               preview: e.preview
           })
         : null;
 }
-function P(e) {
+function M(e) {
     var t;
     let { transitionState: n, onClose: a, quest: s, location: d, questContentPosition: c, preview: m } = e,
         b = o.useMemo(() => {
@@ -142,7 +142,7 @@ function P(e) {
         }, []),
         B = y.r.build(s.config).rewardPlatforms,
         j = B.length > 1,
-        [M, P] = o.useState(j ? null : B[0]),
+        [P, M] = o.useState(j ? null : B[0]),
         k = o.useRef(new i.qA()),
         O = o.useRef(null),
         [D, Z] = o.useState(null),
@@ -172,7 +172,7 @@ function P(e) {
             questContent: d,
             requiresPlatformSelection: V,
             rewardCode: Q,
-            selectedPlatformType: M,
+            selectedPlatformType: P,
             preview: m
         }),
         ee = null;
@@ -212,7 +212,7 @@ function P(e) {
                 : null;
         })({
             quest: s,
-            selectedPlatform: M,
+            selectedPlatform: P,
             requiresPlatformSelection: V,
             rewardCode: Q,
             hasTieredRewardCodes: z
@@ -234,9 +234,9 @@ function P(e) {
                     placeholder: q.intl.string(q.t.EMrUHR),
                     options: er,
                     select: (e) => {
-                        K(!1), P(e);
+                        K(!1), M(e);
                     },
-                    isSelected: (e) => e === M,
+                    isSelected: (e) => e === P,
                     serialize: (e) => (0, S.t2)(e),
                     className: $ ? L.errorInput : '',
                     isDisabled: X,
@@ -304,10 +304,10 @@ function P(e) {
             questContent: d,
             questContentPosition: c,
             requiresPlatformSelection: V,
-            selectedPlatformType: M
+            selectedPlatformType: P
         }),
         ed = V && X,
-        ec = !ed && ((V && null == M) || ea),
+        ec = !ed && ((V && null == P) || ea),
         eu = q.intl.string(q.t['23SS+/']);
     V ? (eu = q.intl.string(q.t.SLZMi4)) : !V && $ && (eu = q.intl.string(q.t.gNJHHh));
     let ep = !U && null != Q && !b && !$,

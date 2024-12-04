@@ -1,18 +1,18 @@
 function r(e) {
     return new ResizeObserver(e);
 }
-function o(e, t) {
+function i(e, t) {
     e.observe(t);
 }
-function i(e, t) {
+function l(e, t) {
     e.unobserve(t);
 }
 n.d(t, {
     UC: function () {
-        return i;
+        return l;
     },
     YP: function () {
-        return o;
+        return i;
     },
     pP: function () {
         return r;

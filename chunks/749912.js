@@ -1,13 +1,13 @@
 t(47120);
-var a,
-    i,
+var i,
+    a,
     n = t(200651);
 t(192379);
-var r = t(754700),
-    l = t(481060),
+var l = t(754700),
+    r = t(481060),
     o = t(70956),
     d = t(416457);
-((i = a || (a = {}))[(i.PLAY_DESKTOP = 0)] = 'PLAY_DESKTOP'), (i[(i.STREAM_DESKTOP = 1)] = 'STREAM_DESKTOP'), (i[(i.WATCH_VIDEO = 2)] = 'WATCH_VIDEO'), (i[(i.PLAY_CONSOLE = 3)] = 'PLAY_CONSOLE'), (i[(i.PLAY_DESKTOP_CONSOLE = 4)] = 'PLAY_DESKTOP_CONSOLE'), (i[(i.PLAY_ACTIVITY = 5)] = 'PLAY_ACTIVITY');
+((a = i || (i = {}))[(a.PLAY_DESKTOP = 0)] = 'PLAY_DESKTOP'), (a[(a.STREAM_DESKTOP = 1)] = 'STREAM_DESKTOP'), (a[(a.WATCH_VIDEO = 2)] = 'WATCH_VIDEO'), (a[(a.PLAY_CONSOLE = 3)] = 'PLAY_CONSOLE'), (a[(a.PLAY_DESKTOP_CONSOLE = 4)] = 'PLAY_DESKTOP_CONSOLE'), (a[(a.PLAY_ACTIVITY = 5)] = 'PLAY_ACTIVITY');
 let c = [
     {
         value: 1,
@@ -35,17 +35,17 @@ let c = [
     }
 ];
 s.Z = function (e) {
-    let { onSelect: s, taskDuration: t = 10, taskConfig: a } = e;
+    let { onSelect: s, taskDuration: t = 10, taskConfig: i } = e;
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsxs)(l.FormItem, {
+            (0, n.jsxs)(r.FormItem, {
                 children: [
-                    (0, n.jsx)(l.FormTitle, {
-                        tag: l.FormTitleTags.H5,
+                    (0, n.jsx)(r.FormTitle, {
+                        tag: r.FormTitleTags.H5,
                         children: 'Task Type(s)'
                     }),
-                    (0, n.jsx)(l.FormText, {
-                        children: (0, n.jsx)(l.Select, {
+                    (0, n.jsx)(r.FormText, {
+                        children: (0, n.jsx)(r.Select, {
                             className: d.taskPresetSelect,
                             placeholder: 'Select Task Preset',
                             options: c,
@@ -54,45 +54,45 @@ s.Z = function (e) {
                             isSelected: (e) =>
                                 e ===
                                 (function (e) {
-                                    let s = r.X.PLAY_ON_PLAYSTATION in e || r.X.PLAY_ON_XBOX in e,
-                                        t = r.X.PLAY_ON_DESKTOP in e || r.X.PLAY_ON_DESKTOP_V2 in e,
-                                        a = r.X.STREAM_ON_DESKTOP in e,
-                                        i = r.X.WATCH_VIDEO in e,
-                                        n = r.X.PLAY_ACTIVITY in e;
-                                    return s && t ? 4 : s ? 3 : t ? 0 : a ? 1 : i ? 2 : n ? 5 : void 0;
-                                })(a.tasks),
+                                    let s = l.X.PLAY_ON_PLAYSTATION in e || l.X.PLAY_ON_XBOX in e,
+                                        t = l.X.PLAY_ON_DESKTOP in e || l.X.PLAY_ON_DESKTOP_V2 in e,
+                                        i = l.X.STREAM_ON_DESKTOP in e,
+                                        a = l.X.WATCH_VIDEO in e,
+                                        n = l.X.PLAY_ACTIVITY in e;
+                                    return s && t ? 4 : s ? 3 : t ? 0 : i ? 1 : a ? 2 : n ? 5 : void 0;
+                                })(i.tasks),
                             select: (e) => {
                                 s({
-                                    ...a,
+                                    ...i,
                                     tasks: (function (e, s) {
                                         let t = [];
                                         switch (e) {
                                             case 1:
-                                                t = [r.X.STREAM_ON_DESKTOP];
+                                                t = [l.X.STREAM_ON_DESKTOP];
                                                 break;
                                             case 0:
-                                                t = [r.X.PLAY_ON_DESKTOP];
+                                                t = [l.X.PLAY_ON_DESKTOP];
                                                 break;
                                             case 3:
-                                                t = [r.X.PLAY_ON_PLAYSTATION, r.X.PLAY_ON_XBOX];
+                                                t = [l.X.PLAY_ON_PLAYSTATION, l.X.PLAY_ON_XBOX];
                                                 break;
                                             case 4:
-                                                t = [r.X.PLAY_ON_DESKTOP, r.X.PLAY_ON_PLAYSTATION, r.X.PLAY_ON_XBOX];
+                                                t = [l.X.PLAY_ON_DESKTOP, l.X.PLAY_ON_PLAYSTATION, l.X.PLAY_ON_XBOX];
                                                 break;
                                             case 2:
-                                                t = [r.X.WATCH_VIDEO];
+                                                t = [l.X.WATCH_VIDEO];
                                                 break;
                                             case 5:
-                                                t = [r.X.PLAY_ACTIVITY];
+                                                t = [l.X.PLAY_ACTIVITY];
                                         }
-                                        let a = {};
+                                        let i = {};
                                         for (let e of t)
-                                            a[e] = {
+                                            i[e] = {
                                                 eventName: e,
                                                 target: s,
                                                 externalIds: []
                                             };
-                                        return a;
+                                        return i;
                                     })(e, t)
                                 });
                             },
@@ -101,28 +101,28 @@ s.Z = function (e) {
                     })
                 ]
             }),
-            (0, n.jsxs)(l.FormItem, {
+            (0, n.jsxs)(r.FormItem, {
                 children: [
-                    (0, n.jsx)(l.FormTitle, {
-                        tag: l.FormTitleTags.H5,
+                    (0, n.jsx)(r.FormTitle, {
+                        tag: r.FormTitleTags.H5,
                         children: 'Task Duration'
                     }),
-                    (0, n.jsx)(l.FormText, {
-                        children: (0, n.jsx)(l.TextInput, {
+                    (0, n.jsx)(r.FormText, {
+                        children: (0, n.jsx)(r.TextInput, {
                             value: String(t / o.Z.Seconds.MINUTE),
                             onChange: function (e) {
                                 let t = Number(e);
                                 if (isNaN(t)) return;
                                 t *= o.Z.Seconds.MINUTE;
-                                let i = { ...a.tasks };
-                                for (let [e, s] of Object.entries(i))
-                                    i[e] = {
+                                let a = { ...i.tasks };
+                                for (let [e, s] of Object.entries(a))
+                                    a[e] = {
                                         ...s,
                                         target: t
                                     };
                                 s({
-                                    ...a,
-                                    tasks: i
+                                    ...i,
+                                    tasks: a
                                 });
                             }
                         })

@@ -16,9 +16,9 @@ var r = n(200651),
     f = n(51144),
     _ = n(357498);
 function p(e) {
-    let { users: t, maxUsers: a, guildId: o, channelId: p, className: h, avatarClassName: m, onClick: g, onFocus: E, size: v = u.AvatarSizes.SIZE_24, overflowCountVariant: I = 'text-xs/medium', overflowCountColor: T = 'interactive-normal', hideOverflowCount: b = !1, disableUsernameTooltip: S = !1, disableUserPopout: y = !1, onUserPopoutClosed: A } = e,
-        [N, C] = i.useState(!1);
-    function R() {
+    let { users: t, maxUsers: a, guildId: o, channelId: p, className: h, avatarClassName: m, onClick: g, onFocus: E, size: v = u.AvatarSizes.SIZE_24, overflowCountVariant: I = 'text-xs/medium', overflowCountColor: T = 'interactive-normal', overflowCountClassName: b, hideOverflowCount: S = !1, disableUsernameTooltip: y = !1, disableUserPopout: A = !1, onUserPopoutClosed: N } = e,
+        [C, R] = i.useState(!1);
+    function O() {
         return (0, r.jsx)(u.Dialog, {
             className: _.popoutWrapper,
             children: (0, r.jsx)(u.Scroller, {
@@ -31,10 +31,10 @@ function p(e) {
                             guildId: o,
                             channelId: p,
                             nick: f.ZP.getName(e),
-                            disablePopout: 'function' == typeof y ? y(e.id) : y,
+                            disablePopout: 'function' == typeof A ? A(e.id) : A,
                             ignoreModalClicks: !0,
                             onPopoutClose: () => {
-                                C(!1), null == A || A();
+                                R(!1), null == N || N();
                             },
                             onContextMenu: (t) =>
                                 (0, c.jW)(
@@ -49,7 +49,7 @@ function p(e) {
                                                 channelId: p
                                             });
                                     },
-                                    { onClose: () => C(!1) }
+                                    { onClose: () => R(!1) }
                                 )
                         },
                         e.id
@@ -67,7 +67,7 @@ function p(e) {
                           .take(a)
                           .map((e) => {
                               let t = f.ZP.getName(e);
-                              return S
+                              return y
                                   ? (0, r.jsx)(
                                         'div',
                                         {
@@ -98,20 +98,20 @@ function p(e) {
                       n = t.length - a;
                   return (
                       n > 0 &&
-                          !b &&
+                          !S &&
                           (e[e.length - 1] = (0, r.jsx)(
                               u.Popout,
                               {
-                                  renderPopout: R,
-                                  shouldShow: N,
+                                  renderPopout: O,
+                                  shouldShow: C,
                                   position: 'bottom',
-                                  onRequestClose: () => C(!1),
+                                  onRequestClose: () => R(!1),
                                   children: () =>
                                       (0, r.jsx)(u.Button, {
-                                          className: s()(_.avatar, _.overflow),
+                                          className: s()(_.avatar, _.overflow, b),
                                           onFocus: E,
                                           onClick: (e) => {
-                                              null == g || g(e), C(!0);
+                                              null == g || g(e), R(!0);
                                           },
                                           look: u.Button.Looks.BLANK,
                                           size: u.Button.Sizes.NONE,

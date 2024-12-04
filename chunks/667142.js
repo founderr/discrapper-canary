@@ -19,19 +19,19 @@ n.d(t, {
     }
 });
 var i = n(972959);
-let o = {
+let l = {
         timeToLiveMs: 5000,
         reappearTimeMs: 10000
     },
-    l = (0, i.H)(() => o),
+    o = (0, i.H)(() => l),
     r = 10000,
     s = 20000,
     a = 500,
     u = 1000;
 function c(e) {
-    l.setState({ timeToLiveMs: e });
+    o.setState({ timeToLiveMs: e });
 }
 function d(e) {
-    l.setState({ reappearTimeMs: e });
+    o.setState({ reappearTimeMs: e });
 }
-t.ZP = l;
+t.ZP = o;

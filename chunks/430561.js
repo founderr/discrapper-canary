@@ -14,8 +14,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var o = n(120356),
-    l = n.n(o),
+var l = n(120356),
+    o = n.n(l),
     r = n(692547),
     s = n(481060),
     a = n(765250),
@@ -52,17 +52,17 @@ function h(e) {
 }
 function f(e) {
     let { widgetId: t, showAllStreams: n } = e,
-        o = n ? u.intl.string(u.t.q2B3rq) : u.intl.string(u.t.JKGi6u),
+        l = n ? u.intl.string(u.t.q2B3rq) : u.intl.string(u.t.JKGi6u),
         d = () => {
             (0, a.zG)(t, { showAllStreams: !n });
         };
     return (0, i.jsx)(s.Tooltip, {
-        text: o,
-        'aria-label': o,
+        text: l,
+        'aria-label': l,
         children: (e) =>
             (0, i.jsx)(s.Clickable, {
                 ...e,
-                className: l()(c.button, n && c.active),
+                className: o()(c.button, n && c.active),
                 onClick: d,
                 children: (0, i.jsx)(s.ScreenIcon, {
                     size: 'xxs',
@@ -73,14 +73,14 @@ function f(e) {
 }
 function p(e) {
     let { id: t, pinned: n } = e,
-        o = n ? u.intl.string(u.t.cSu80t) : u.intl.string(u.t.cM8Vnp);
+        l = n ? u.intl.string(u.t.cSu80t) : u.intl.string(u.t.cM8Vnp);
     return (0, i.jsx)(s.Tooltip, {
-        text: o,
-        'aria-label': o,
+        text: l,
+        'aria-label': l,
         children: (e) =>
             (0, i.jsx)(s.Clickable, {
                 ...e,
-                className: l()(c.button, n && c.active),
+                className: o()(c.button, n && c.active),
                 onClick: () => (0, a.xh)(t),
                 children: (0, i.jsx)(s.PinUprightIcon, {
                     size: 'xxs',

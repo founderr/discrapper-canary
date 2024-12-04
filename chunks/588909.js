@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return S;
     }
 }),
     n(47120);
 var i = n(200651);
 n(192379);
-var o = n(952265),
-    l = n(988298),
+var l = n(952265),
+    o = n(988298),
     r = n(13245),
     s = n(620662),
     a = n(835473),
@@ -34,7 +34,7 @@ function _(e) {
               size: 40
           });
 }
-function I(e, t) {
+function S(e, t) {
     let { trackView: a, trackClick: u } = (0, p.R)(m.n0.WelcomeNudge, { notif_type: m.n0.WelcomeNudge }),
         E = {};
     for (let a of t)
@@ -45,7 +45,7 @@ function I(e, t) {
                     (0, s.Z)(t, v.xjy.JOIN) &&
                     ((E.cancelText = x.intl.string(x.t['6F9ivr'])),
                     (E.onCancelClick = (e, n) => {
-                        u('unlock'), r.Z.updateNotificationStatus(n), r.Z.setInputLocked(!1, (0, d.QF)()), (0, l.h7)(t, !1, v.IlC.POPOUT);
+                        u('unlock'), r.Z.updateNotificationStatus(n), r.Z.setInputLocked(!1, (0, d.QF)()), (0, o.h7)(t, !1, v.IlC.POPOUT);
                     }));
                 break;
             }
@@ -56,7 +56,7 @@ function I(e, t) {
                         u('unlock'),
                             r.Z.updateNotificationStatus(t),
                             r.Z.setInputLocked(!1, (0, d.QF)()),
-                            (0, o.ZD)(
+                            (0, l.ZD)(
                                 async () => {
                                     let { default: e } = await Promise.all([n.e('46746'), n.e('66913')]).then(n.bind(n, 60594));
                                     return (t) =>

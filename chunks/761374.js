@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    o = n(192379),
-    l = n(442837),
+    l = n(192379),
+    o = n(442837),
     r = n(765250),
     s = n(393238),
     a = n(358221),
@@ -21,20 +21,20 @@ var i = n(200651),
     g = n(666540);
 let E = [];
 function x(e, t, n, i) {
-    let o = (i - 1) * m.z;
-    return e === v.C5.HORIZONTAL ? Math.min(Math.max((t - o) / i, 256), Math.max((16 * n) / 9, 256)) : Math.min(Math.max(t, 256), Math.max((((n - o) / i) * 16) / 9, 256));
+    let l = (i - 1) * m.z;
+    return e === v.C5.HORIZONTAL ? Math.min(Math.max((t - l) / i, 256), Math.max((16 * n) / 9, 256)) : Math.min(Math.max(t, 256), Math.max((((n - l) / i) * 16) / 9, 256));
 }
 function C(e) {
     var t;
-    let { id: n, size: C, locked: Z, padding: _, borderWidth: I, opacity: S, horizontal: b, pinned: N } = e,
-        O = 2 * _ + 2 * I;
+    let { id: n, size: C, locked: Z, padding: _, borderWidth: S, opacity: I, horizontal: N, pinned: b } = e,
+        O = 2 * _ + 2 * S;
     let { width: y, height: j } = {
             width: 'number' == typeof (t = C).width ? t.width : 256,
             height: 'number' == typeof t.height ? t.height : 144
         },
-        T = (0, l.e7)([p.Z], () => p.Z.getVoiceChannelId()),
-        { width: k, height: L, ref: w } = (0, s.Z)(),
-        A = (0, l.e7)(
+        T = (0, o.e7)([p.Z], () => p.Z.getVoiceChannelId()),
+        { width: k, height: w, ref: A } = (0, s.Z)(),
+        L = (0, o.e7)(
             [f.Z],
             () => {
                 var e;
@@ -43,9 +43,9 @@ function C(e) {
             },
             [n]
         ),
-        R = (0, l.e7)([h.Z], () => h.Z.getChannel(T)),
-        M = (0, l.e7)([d.default], () => d.default.getId()),
-        { participantsVersion: z, streamParticipants: D } = (0, l.cj)(
+        R = (0, o.e7)([h.Z], () => h.Z.getChannel(T)),
+        M = (0, o.e7)([d.default], () => d.default.getId()),
+        { participantsVersion: z, streamParticipants: D } = (0, o.cj)(
             [c.Z, a.Z],
             () => {
                 if (null == T)
@@ -55,7 +55,7 @@ function C(e) {
                     };
                 let e = new Set(c.Z.getAllActiveStreamsForChannel(T).map((e) => (0, u.V9)(e))),
                     t = (t) => e.has((0, u.V9)(t.stream)),
-                    n = a.Z.getStreamParticipants(T).filter((t) => t.user.id !== M && (!!A || e.has((0, u.V9)(t.stream))));
+                    n = a.Z.getStreamParticipants(T).filter((t) => t.user.id !== M && (!!L || e.has((0, u.V9)(t.stream))));
                 return (
                     n.sort((e, n) => (t(e) && !t(n) ? -1 : !t(e) && t(n) ? 1 : e.user.username.localeCompare(n.user.username))),
                     {
@@ -65,28 +65,28 @@ function C(e) {
                     }
                 );
             },
-            [T, M, A]
+            [T, M, L]
         ),
         P = D.length,
         V = null == R || 0 === P,
-        { tileWidth: W, layout: U } = (function (e, t, n, i, l) {
+        { tileWidth: W, layout: U } = (function (e, t, n, i, o) {
             let r = (function (e, t, n, i) {
-                    let o = x(v.C5.HORIZONTAL, e, t, n),
-                        l = x(v.C5.VERTICAL, e, t, n);
+                    let l = x(v.C5.HORIZONTAL, e, t, n),
+                        o = x(v.C5.VERTICAL, e, t, n);
                     switch (i) {
                         case v.C5.VERTICAL:
-                            return l;
-                        case v.C5.HORIZONTAL:
                             return o;
+                        case v.C5.HORIZONTAL:
+                            return l;
                     }
-                    let r = ((9 * l) / 16 + m.z) * n - m.z;
-                    return e > (16 * t) / 9 ? o : r <= t ? l : (9 * o) / 16 <= t ? o : l;
-                })(n, i, t, l),
+                    let r = ((9 * o) / 16 + m.z) * n - m.z;
+                    return e > (16 * t) / 9 ? l : r <= t ? o : (9 * l) / 16 <= t ? l : o;
+                })(n, i, t, o),
                 s = x(v.C5.VERTICAL, n, i, t),
-                a = null != l ? l : r === s ? v.C5.VERTICAL : v.C5.HORIZONTAL,
-                [u, c] = o.useState(r);
+                a = null != o ? o : r === s ? v.C5.VERTICAL : v.C5.HORIZONTAL,
+                [u, c] = l.useState(r);
             return (
-                o.useEffect(() => {
+                l.useEffect(() => {
                     !e && c(r);
                 }, [e, r]),
                 {
@@ -94,7 +94,7 @@ function C(e) {
                     tileWidth: u
                 }
             );
-        })(!1, P, null != k ? k : y - O, null != L ? L : j - O, b ? v.C5.HORIZONTAL : v.C5.VERTICAL),
+        })(!1, P, null != k ? k : y - O, null != w ? w : j - O, N ? v.C5.HORIZONTAL : v.C5.VERTICAL),
         F = {
             id: n,
             width: y,
@@ -105,11 +105,11 @@ function C(e) {
             participants: D.length
         };
     return (!(function (e) {
-        let { id: t, streamParticipants: n, layout: i, widgetLayoutSpecs: l } = e,
-            s = o.useRef(l);
-        o.useEffect(() => void (s.current = l)),
-            o.useEffect(() => {
-                let { id: e, width: t, height: i, sizeOffset: o, layout: l, padding: a } = s.current;
+        let { id: t, streamParticipants: n, layout: i, widgetLayoutSpecs: o } = e,
+            s = l.useRef(o);
+        l.useEffect(() => void (s.current = o)),
+            l.useEffect(() => {
+                let { id: e, width: t, height: i, sizeOffset: l, layout: o, padding: a } = s.current;
                 if (0 === n.length) {
                     (256 !== t || 144 !== i) &&
                         (0, r.nv)({
@@ -122,54 +122,54 @@ function C(e) {
                         });
                     return;
                 }
-                if (l === v.C5.HORIZONTAL) {
-                    let t = (16 / 9) * (i - o);
+                if (o === v.C5.HORIZONTAL) {
+                    let t = (16 / 9) * (i - l);
                     (0, r.nv)({
                         widgetId: e,
                         size: {
                             fixed: !0,
                             height: i,
-                            width: t * n.length + a * (n.length - 1) + o
+                            width: t * n.length + a * (n.length - 1) + l
                         }
                     });
                 } else {
-                    let i = (9 / 16) * (t - o);
+                    let i = (9 / 16) * (t - l);
                     (0, r.nv)({
                         widgetId: e,
                         size: {
                             fixed: !0,
                             width: t,
-                            height: i * n.length + a * (n.length - 1) + o
+                            height: i * n.length + a * (n.length - 1) + l
                         }
                     });
                 }
             }, [n.length]),
-            o.useEffect(() => {
+            l.useEffect(() => {
                 if (s.current.participants <= 1) return;
-                let { id: e, width: t, height: n, sizeOffset: o, padding: l, participants: a } = s.current;
+                let { id: e, width: t, height: n, sizeOffset: l, padding: o, participants: a } = s.current;
                 if (i === v.C5.HORIZONTAL) {
-                    let n = t - o;
+                    let n = t - l;
                     (0, r.nv)({
                         widgetId: e,
                         size: {
                             fixed: !0,
-                            width: n * a + l * (a - 1) + o,
-                            height: (9 / 16) * n + o
+                            width: n * a + o * (a - 1) + l,
+                            height: (9 / 16) * n + l
                         }
                     });
                 } else {
-                    let t = n - o;
+                    let t = n - l;
                     (0, r.nv)({
                         widgetId: e,
                         size: {
                             fixed: !0,
-                            width: (16 / 9) * t + o,
-                            height: t * a + l * (a - 1) + o
+                            width: (16 / 9) * t + l,
+                            height: t * a + o * (a - 1) + l
                         }
                     });
                 }
             }, [i]),
-            o.useEffect(
+            l.useEffect(
                 () => () => {
                     (0, r.nv)({
                         widgetId: t,
@@ -192,8 +192,8 @@ function C(e) {
         ? null
         : (0, i.jsx)('div', {
               className: g.goLiveGridContainer,
-              style: { opacity: S },
-              ref: w,
+              style: { opacity: I },
+              ref: A,
               children: (0, i.jsx)(m.Z, {
                   widgetId: n,
                   tileWidth: W,
@@ -201,7 +201,7 @@ function C(e) {
                   layout: U,
                   streamParticipants: D,
                   participantsVersion: z,
-                  pinned: N
+                  pinned: b
               })
           });
 }

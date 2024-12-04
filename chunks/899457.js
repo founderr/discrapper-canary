@@ -1,24 +1,24 @@
 t.d(s, {
     a: function () {
-        return n;
+        return a;
     }
 });
-var a,
-    n,
-    r = t(200651);
+var i,
+    a,
+    n = t(200651);
 t(192379);
-var i = t(481060);
-((a = n || (n = {}))[(a.UNENROLLED = 0)] = 'UNENROLLED'), (a[(a.ENROLLED = 1)] = 'ENROLLED'), (a[(a.COMPLETED_25 = 2)] = 'COMPLETED_25'), (a[(a.COMPLETED_50 = 3)] = 'COMPLETED_50'), (a[(a.COMPLETED_75 = 4)] = 'COMPLETED_75'), (a[(a.COMPLETED_100 = 5)] = 'COMPLETED_100'), (a[(a.CLAIMED = 6)] = 'CLAIMED');
+var l = t(481060);
+((i = a || (a = {}))[(i.UNENROLLED = 0)] = 'UNENROLLED'), (i[(i.ENROLLED = 1)] = 'ENROLLED'), (i[(i.COMPLETED_25 = 2)] = 'COMPLETED_25'), (i[(i.COMPLETED_50 = 3)] = 'COMPLETED_50'), (i[(i.COMPLETED_75 = 4)] = 'COMPLETED_75'), (i[(i.COMPLETED_100 = 5)] = 'COMPLETED_100'), (i[(i.CLAIMED = 6)] = 'CLAIMED');
 s.Z = function (e) {
     let { onChange: s, value: t } = e;
-    return (0, r.jsxs)(i.FormItem, {
+    return (0, n.jsxs)(l.FormItem, {
         children: [
-            (0, r.jsx)(i.FormTitle, {
-                tag: i.FormTitleTags.H5,
+            (0, n.jsx)(l.FormTitle, {
+                tag: l.FormTitleTags.H5,
                 children: 'User State'
             }),
-            (0, r.jsx)(i.FormText, {
-                children: (0, r.jsx)(i.Select, {
+            (0, n.jsx)(l.FormText, {
+                children: (0, n.jsx)(l.Select, {
                     'aria-label': 'User State',
                     options: [
                         {

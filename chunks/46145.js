@@ -34,7 +34,7 @@ class f extends (r = l.ZP.PersistedStore) {
 }
 c(f, 'displayName', 'RecentVoiceChannelStore'), c(f, 'persistKey', 'RecentVoiceChannelStore');
 let _ = new f(i.Z, {
-    CONNECTION_OPEN: function () {
+    POST_CONNECTION_OPEN: function () {
         d = new Set([...s]);
     },
     VOICE_CHANNEL_SELECT: function (e) {

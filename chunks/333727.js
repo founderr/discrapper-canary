@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(278323),
-    o = n(13245),
-    l = n(45114),
+    l = n(13245),
+    o = n(45114),
     r = n(237997),
     s = n(145597),
     a = n(620954),
@@ -42,10 +42,10 @@ function h(e, t, n, h) {
                 location: r.Z.isLocked((0, s.QF)()) ? c.Sbl.LOCKED_OVERLAY : c.Sbl.UNLOCKED_OVERLAY
             }),
                 g('join'),
-                o.Z.updateNotificationStatus(n);
+                l.Z.updateNotificationStatus(n);
         },
         onCancelClick: (t, n) => {
-            (0, l.In)(e.id, !0, !0), o.Z.updateNotificationStatus(n), g('decline');
+            (0, o.In)(e.id, !0, !0), l.Z.updateNotificationStatus(n), g('decline');
         },
         onDismissClick: () => {
             g('dismiss');

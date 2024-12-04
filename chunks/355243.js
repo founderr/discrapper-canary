@@ -5,81 +5,81 @@ n.d(t, {
 }),
     n(47120);
 var r = n(200651),
-    o = n(192379),
-    i = n(120356),
-    l = n.n(i),
+    i = n(192379),
+    l = n(120356),
+    o = n.n(l),
     s = n(481060),
     a = n(393903),
-    c = n(604162),
-    u = n(420212),
+    u = n(604162),
+    c = n(420212),
     d = n(452973);
 function m(e, t, n) {
     return n * (Math.max(e - t.left, 0) / t.width);
 }
-function f(e, t, n) {
+function v(e, t, n) {
     return n.left + (e / t) * n.width;
 }
 function p(e) {
-    let { percent: t, animate: n, interactionEnabled: i, backgroundColor: p, preloadedBuffers: v, duration: C, maxSeekableTime: g, onClick: x, onScrubBack: S, onScrubForward: _ } = e,
-        [E, h] = o.useState(null),
-        [T, I] = o.useState(null),
-        [N, b] = o.useState(null),
-        [j, D] = o.useState(!1),
-        A = o.useRef(null),
-        y = (e) => {
-            (A.current = e), h(e);
+    let { percent: t, animate: n, interactionEnabled: l, backgroundColor: p, preloadedBuffers: E, duration: f, maxSeekableTime: g, onClick: C, onScrubBack: S, onScrubForward: x } = e,
+        [h, _] = i.useState(null),
+        [T, I] = i.useState(null),
+        [D, N] = i.useState(null),
+        [j, A] = i.useState(!1),
+        b = i.useRef(null),
+        L = (e) => {
+            (b.current = e), _(e);
         };
-    o.useEffect(() => {
-        null != E && (null == g ? b(null) : b(f(g, C, E)));
-    }, [E, g, C]);
-    let k = (0, a.y)(() => {
-        if (null != k.current) y(k.current.getBoundingClientRect());
+    i.useEffect(() => {
+        null != h && (null == g ? N(null) : N(v(g, f, h)));
+    }, [h, g, f]);
+    let M = (0, a.y)(() => {
+        if (null != M.current) L(M.current.getBoundingClientRect());
     });
-    o.useLayoutEffect(() => {
-        null != k.current && y(k.current.getBoundingClientRect());
-    }, [k]),
-        o.useEffect(() => {
+    i.useLayoutEffect(() => {
+        null != M.current && L(M.current.getBoundingClientRect());
+    }, [M]),
+        i.useEffect(() => {
             let e = () => {
-                null != k.current && y(k.current.getBoundingClientRect());
+                null != M.current && L(M.current.getBoundingClientRect());
             };
             return window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
-        }, [k]);
-    let B = (e) => {
+        }, [M]);
+    let O = (e) => {
             I(e.clientX);
         },
-        L = o.useCallback(
+        k = i.useCallback(
             (e) => {
                 let { key: t } = e;
-                t === u.mR.ArrowLeft && null != S ? (e.preventDefault(), e.stopPropagation(), S()) : t === u.mR.ArrowRight && null != _ && (e.preventDefault(), e.stopPropagation(), _());
+                t === c.mR.ArrowLeft && null != S ? (e.preventDefault(), e.stopPropagation(), S()) : t === c.mR.ArrowRight && null != x && (e.preventDefault(), e.stopPropagation(), x());
             },
-            [S, _]
+            [S, x]
         ),
-        P = null != T && null != E ? m(T, E, C) : 0,
-        M = (0, c.yv)(P),
-        O = null != E ? E.right - f((t / 100) * C, C, E) : null,
-        R = null != T && null != E ? E.right - T : null,
-        w = null != N && null != E ? E.right - N : null;
+        y = null != T && null != h ? m(T, h, f) : 0,
+        P = (0, u.yv)(y),
+        R = null != h ? h.right - v((t / 100) * f, f, h) : null,
+        w = null != T && null != h ? h.right - T : null,
+        Z = null != D && null != h ? h.right - D : null;
     return (0, r.jsxs)('div', {
         className: d.cont,
-        ref: k,
+        ref: M,
         children: [
             (0, r.jsxs)(s.Clickable, {
-                className: l()(d.hitboxArea, { [d.interactionEnabled]: i }),
+                className: o()(d.hitboxArea, { [d.interactionEnabled]: l }),
                 ignoreKeyPress: !0,
                 onClick: (e) => {
-                    if (!!i && null != x) x(m(e.clientX, e.currentTarget.getBoundingClientRect(), C));
+                    if (!!l && null != C) C(m(e.clientX, e.currentTarget.getBoundingClientRect(), f));
                 },
                 onMouseEnter: (e) => {
-                    if (!!i) null != k.current && y(k.current.getBoundingClientRect()), D(!0), B(e);
+                    if (!!l) null != M.current && L(M.current.getBoundingClientRect()), A(!0), O(e);
                 },
                 onMouseLeave: (e) => {
-                    if (!!i) D(!1), I(null);
+                    if (!!l) A(!1), I(null);
                 },
                 onMouseMove: (e) => {
-                    if (!!i) j && B(e);
+                    if (!!l) j && O(e);
                 },
-                onKeyDown: L,
-                tabIndex: i ? void 0 : -1,
+                onKeyDown: k,
+                tabIndex: l ? void 0 : -1,
                 focusProps: {
                     offset: {
                         top: 12,
@@ -87,13 +87,13 @@ function p(e) {
                     }
                 },
                 children: [
-                    null == v
+                    null == E
                         ? void 0
-                        : v.map((e) =>
+                        : E.map((e) =>
                               (0, r.jsx)(
                                   'div',
                                   {
-                                      className: l()(d.buffer, { [d.bufferHovered]: j }),
+                                      className: o()(d.buffer, { [d.bufferHovered]: j }),
                                       style: {
                                           width: ''.concat(100 * e.size, '%'),
                                           left: ''.concat(100 * e.start, '%')
@@ -102,14 +102,14 @@ function p(e) {
                                   ''.concat(e.start, ':').concat(e.size)
                               )
                           ),
-                    !i &&
-                        null != w &&
-                        w > 0 &&
+                    !l &&
+                        null != Z &&
+                        Z > 0 &&
                         (0, r.jsx)('div', {
                             className: d.seekableBar,
                             style: {
-                                right: null != w ? ''.concat(w, 'px') : 'auto',
-                                opacity: null != w ? 1 : 0
+                                right: null != Z ? ''.concat(Z, 'px') : 'auto',
+                                opacity: null != Z ? 1 : 0
                             }
                         }),
                     (0, r.jsx)(s.Progress, {
@@ -121,22 +121,22 @@ function p(e) {
                         animate: n
                     }),
                     j &&
-                        null != M &&
+                        null != P &&
                         (0, r.jsx)(s.Text, {
                             className: d.timeDisplay,
                             variant: 'text-xs/normal',
                             style: {
-                                right: null != R ? ''.concat(R - 10, 'px') : 'auto',
+                                right: null != w ? ''.concat(w - 10, 'px') : 'auto',
                                 color: '#FFFFFF'
                             },
-                            children: M
+                            children: P
                         }),
                     j &&
-                        i &&
-                        null != O &&
+                        l &&
+                        null != R &&
                         (0, r.jsx)('div', {
                             className: d.grabber,
-                            style: { right: ''.concat(O - 6, 'px') }
+                            style: { right: ''.concat(R - 6, 'px') }
                         })
                 ]
             }),

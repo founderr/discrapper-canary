@@ -1,6 +1,6 @@
 n.d(t, {
     C5: function () {
-        return o;
+        return l;
     },
     ZL: function () {
         return r;
@@ -10,12 +10,12 @@ n.d(t, {
     }
 });
 var i,
-    o,
-    l = n(981631);
+    l,
+    o = n(981631);
 function r(e) {
-    return (null == e ? void 0 : e.type) === l.Odu.GO_LIVE;
+    return (null == e ? void 0 : e.type) === o.Odu.GO_LIVE;
 }
 function s(e) {
-    return e.type === l.Odu.VIDEO;
+    return e.type === o.Odu.VIDEO;
 }
-((i = o || (o = {})).HORIZONTAL = 'horizontal'), (i.VERTICAL = 'vertical');
+((i = l || (l = {})).HORIZONTAL = 'horizontal'), (i.VERTICAL = 'vertical');

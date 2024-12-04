@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(768581),
-    o = n(620954),
-    l = n(987650),
+    l = n(620954),
+    o = n(987650),
     r = n(981631),
     s = n(388032);
 function a(e, t) {
@@ -13,8 +13,8 @@ function a(e, t) {
         a = s.intl.format(s.t['Yk+uYG'], { username: '' }),
         u = (0, i.ov)(e),
         c = s.intl.string(s.t.WRj1Wl),
-        { trackView: d, trackClick: h } = (0, o.R)(l.n0.ActivityUserJoin, {
-            notif_type: l.n0.ActivityUserJoin,
+        { trackView: d, trackClick: h } = (0, l.R)(o.n0.ActivityUserJoin, {
+            notif_type: o.n0.ActivityUserJoin,
             notif_user_id: e.id,
             activity_type: r.mFx.JOIN,
             activity_name: t.name

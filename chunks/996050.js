@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(224706),
-    o = n(13245),
-    l = n(150097),
+    l = n(13245),
+    o = n(150097),
     r = n(620954),
     s = n(987650),
     a = n(388032);
@@ -14,7 +14,7 @@ function u(e, t, n, u, c) {
     let d = t.activity.type,
         h = c.session_id;
     if (null == h) return null;
-    let { icon: f, title: p, body: m } = (0, l.Xi)(e, t, n),
+    let { icon: f, title: p, body: m } = (0, o.Xi)(e, t, n),
         { trackView: v, trackClick: g } = (0, r.R)(s.n0.ActivityInvite, {
             notif_type: s.n0.ActivityInvite,
             notif_user_id: n.id,
@@ -34,7 +34,7 @@ function u(e, t, n, u, c) {
             v();
         },
         confirmText: a.intl.string(a.t.VJlc0d),
-        onConfirmClick: (l, r) => {
+        onConfirmClick: (o, r) => {
             var s;
             i.Z.join({
                 userId: n.id,
@@ -43,7 +43,7 @@ function u(e, t, n, u, c) {
                 channelId: e.id,
                 messageId: t.id
             }),
-                o.Z.updateNotificationStatus(r),
+                l.Z.updateNotificationStatus(r),
                 g('join');
         },
         onDismissClick: () => {

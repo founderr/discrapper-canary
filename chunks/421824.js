@@ -8,8 +8,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var o = n(481060),
-    l = n(522474),
+var l = n(481060),
+    o = n(522474),
     r = n(556296),
     s = n(13140),
     a = n(44359),
@@ -18,7 +18,7 @@ var o = n(481060),
     d = n(981631),
     h = n(388032);
 function f() {
-    if (l.Z.getWindowOpen(d.KJ3.ACTIVITY_POPOUT)) return null;
+    if (o.Z.getWindowOpen(d.KJ3.ACTIVITY_POPOUT)) return null;
     let { trackView: e, trackClick: t } = (0, u.R)(c.n0.ClipsReminderNotification, { notif_type: c.n0.ClipsReminderNotification }),
         n = r.Z.getKeybindForAction(d.kg4.SAVE_CLIP);
     if (null == n) return null;
@@ -28,7 +28,7 @@ function f() {
             keybind: f,
             keybindHook: (e, t) => (0, i.jsx)(a.Z, { keybind: f.split('+') }, t)
         }),
-        icon: (0, i.jsx)(o.ClipsIcon, {
+        icon: (0, i.jsx)(l.ClipsIcon, {
             size: 'lg',
             color: 'currentColor'
         }),
@@ -44,7 +44,7 @@ function p(e) {
     let { trackView: t, trackClick: n } = (0, u.R)(c.n0.ClipsNotification, { notif_type: c.n0.ClipsNotification });
     return {
         title: e,
-        icon: (0, i.jsx)(o.ClipsIcon, {
+        icon: (0, i.jsx)(l.ClipsIcon, {
             size: 'lg',
             color: 'currentColor'
         }),

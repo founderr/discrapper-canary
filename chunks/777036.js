@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(26151),
-    o = n(13245),
-    l = n(43267),
+    l = n(13245),
+    o = n(43267),
     r = n(933557),
     s = n(699516),
     a = n(594174),
@@ -16,7 +16,7 @@ var i = n(26151),
 function f(e) {
     let t = (0, r.F6)(e, a.default, s.Z),
         n = h.intl.string(h.t.ssrVzM),
-        f = (0, l.x)(e),
+        f = (0, o.x)(e),
         { trackView: p, trackClick: m } = (0, u.R)(c.n0.IncomingCall, {
             notif_type: c.n0.IncomingCall,
             notif_user_id: 1 === e.recipients.length ? e.recipients[0] : null,
@@ -36,8 +36,8 @@ function f(e) {
         onConfirmClick: (t, n) => {
             m('join'),
                 i.Z.call(e.id, !1, !1),
-                o.Z.updateNotificationStatus(n),
-                o.Z.track(d.rMx.VOICE_CHANNEL_SELECTED, {
+                l.Z.updateNotificationStatus(n),
+                l.Z.track(d.rMx.VOICE_CHANNEL_SELECTED, {
                     location: 'Overlay Notificaiton',
                     guild_id: null,
                     channel_id: e.id,

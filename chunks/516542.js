@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    o = n(192379),
-    l = n(904245),
+    l = n(192379),
+    o = n(904245),
     r = n(13245),
     s = n(655687),
     a = n(541716),
@@ -21,25 +21,25 @@ function v(e) {
     let { id: t, channel: n, onSend: v } = e,
         g = (0, h.Z)(),
         { placeholder: E, accessibilityLabel: x } = (0, s.Z)(n),
-        [C, Z] = o.useState(() => (0, u.H2)()),
-        { textValue: _, richValue: I } = C,
-        [S, b] = o.useState(!1),
-        N = o.useCallback(() => b(!0), []),
-        O = o.useCallback(() => b(!1), []),
-        y = o.useCallback((e, t, n) => {
+        [C, Z] = l.useState(() => (0, u.H2)()),
+        { textValue: _, richValue: S } = C,
+        [I, N] = l.useState(!1),
+        b = l.useCallback(() => N(!0), []),
+        O = l.useCallback(() => N(!1), []),
+        y = l.useCallback((e, t, n) => {
             Z({
                 textValue: t,
                 richValue: n
             });
         }, []),
-        j = o.useCallback(
+        j = l.useCallback(
             () =>
                 _.length > g
                     ? Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !0
                       })
-                    : (l.Z.sendMessage(n.id, d.ZP.parse(n, _), !1),
+                    : (o.Z.sendMessage(n.id, d.ZP.parse(n, _), !1),
                       r.Z.setInputLocked(!0, (0, f.QF)()),
                       r.Z.updateNotificationStatus(t, p._1z.DISMISSED),
                       null == v || v(_),
@@ -56,11 +56,11 @@ function v(e) {
         accessibilityLabel: x,
         channel: n,
         textValue: _,
-        richValue: I,
+        richValue: S,
         type: a.I.OVERLAY_INLINE_REPLY,
         onBlur: O,
-        onFocus: N,
-        focused: S,
+        onFocus: b,
+        focused: I,
         onSubmit: j,
         autoCompletePosition: 'bottom',
         disableThemedBackground: !0

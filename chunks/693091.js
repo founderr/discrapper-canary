@@ -11,8 +11,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(192379),
-    o = n(481060);
-function l(e, t, n) {
+    l = n(481060);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -53,10 +53,10 @@ class r {
         let t = 0,
             n = 0;
         for (let i of this.items) {
-            let o = this.listeners.get(i.notification.id);
-            if (null == o) continue;
-            let { offsetHeight: l } = o.element;
-            (o.top !== t || o.height !== l || o.index !== n) && (e = !0), (o.top = t), (o.height = l), (o.index = n), 0 === t && (this.matchHeight !== l && (e = !0), (this.matchHeight = l)), (t += l + 8), n++;
+            let l = this.listeners.get(i.notification.id);
+            if (null == l) continue;
+            let { offsetHeight: o } = l.element;
+            (l.top !== t || l.height !== o || l.index !== n) && (e = !0), (l.top = t), (l.height = o), (l.index = n), 0 === t && (this.matchHeight !== o && (e = !0), (this.matchHeight = o)), (t += o + 8), n++;
         }
         e && this.broadcastLayoutUpdates();
     }
@@ -95,13 +95,13 @@ class r {
         return this.listeners.get(e);
     }
     constructor(e) {
-        l(this, 'resizeObserver', void 0),
-            l(this, 'listeners', new Map()),
-            l(this, 'queuedCompute', !1),
-            l(this, 'items', []),
-            l(this, 'matchHeight', 0),
-            l(this, 'locked', !0),
-            l(this, 'handleResize', (e) => {
+        o(this, 'resizeObserver', void 0),
+            o(this, 'listeners', new Map()),
+            o(this, 'queuedCompute', !1),
+            o(this, 'items', []),
+            o(this, 'matchHeight', 0),
+            o(this, 'locked', !0),
+            o(this, 'handleResize', (e) => {
                 this.computeLayout();
             }),
             (this.locked = e);
@@ -117,7 +117,7 @@ let u = {
     tension: 320
 };
 function c(e, t, n) {
-    let [l, r] = (0, o.useSpring)(
+    let [o, r] = (0, l.useSpring)(
             () => ({
                 from: {
                     opacity: 0,
@@ -138,14 +138,14 @@ function c(e, t, n) {
                 null == n
                     ? d.unsubscribe(e)
                     : d.subscribe(e, n, (e) => {
-                          var n, i, o, l;
+                          var n, i, l, o;
                           let { locked: r, matchHeight: s, height: d, top: h, index: f } = e,
                               { current: p } = c;
                           let m = {
                               opacity: ((n = f), (i = r) && n > 4 ? 0 : i ? Math.min(1 - n / 4, 1) : 1),
-                              scale: ((o = f), r ? Math.min(1 - o / 4, 1) : 1),
+                              scale: ((l = f), r ? Math.min(1 - l / 4, 1) : 1),
                               transform: a(f, r, h),
-                              contentOpacity: ((l = f), r ? (l > 0 ? 0 : 1) : 1),
+                              contentOpacity: ((o = f), r ? (o > 0 ? 0 : 1) : 1),
                               height: r ? s : d
                           };
                           p({
@@ -167,7 +167,7 @@ function c(e, t, n) {
         }, [e, d]);
     return (
         i.useLayoutEffect(() => {
-            if (t === o.TransitionStates.YEETED) {
+            if (t === l.TransitionStates.YEETED) {
                 let t = d.getLayoutSpecs(e);
                 if (null == t) {
                     n();
@@ -186,7 +186,7 @@ function c(e, t, n) {
         }, [t, n, e, d]),
         {
             ref: h,
-            springs: l
+            springs: o
         }
     );
 }

@@ -1,8 +1,8 @@
-var a, n;
+var i, a;
 t.d(s, {
     r: function () {
-        return a;
+        return i;
     }
 }),
-    ((n = a || (a = {})).AND = 'and'),
-    (n.OR = 'or');
+    ((a = i || (i = {})).AND = 'and'),
+    (a.OR = 'or');

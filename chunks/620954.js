@@ -7,8 +7,8 @@ n.d(t, {
     }
 });
 var i = n(13245),
-    o = n(556296),
-    l = n(237997),
+    l = n(556296),
+    o = n(237997),
     r = n(13140),
     s = n(145597),
     a = n(987650),
@@ -19,10 +19,10 @@ function c(e, t) {
             i.Z.track(u.rMx.NOTIFICATION_VIEWED, t), i.Z.notificationEvent(e, a.bv.Viewed);
         },
         trackClick(n) {
-            let o = l.Z.isLocked((0, s.QF)()) ? u.Sbl.LOCKED_OVERLAY : u.Sbl.UNLOCKED_OVERLAY;
+            let l = o.Z.isLocked((0, s.QF)()) ? u.Sbl.LOCKED_OVERLAY : u.Sbl.UNLOCKED_OVERLAY;
             i.Z.track(u.rMx.NOTIFICATION_CLICKED, {
                 ...t,
-                location: o,
+                location: l,
                 action_type: n
             }),
                 i.Z.notificationEvent(e, a.bv.Clicked);
@@ -30,6 +30,6 @@ function c(e, t) {
     };
 }
 function d() {
-    let e = o.Z.getOverlayKeybind();
+    let e = l.Z.getOverlayKeybind();
     return null != e ? (0, r.BB)(e.shortcut, !0).split(' + ') : ['???'];
 }

@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    o = n(192379),
-    l = n(120356),
-    r = n.n(l),
+    l = n(192379),
+    o = n(120356),
+    r = n.n(o),
     s = n(954955),
     a = n.n(s),
     u = n(772848),
@@ -42,7 +42,7 @@ function C(e, t) {
         bottom: Math.ceil(t.bottom)
     };
 }
-let Z = o.createContext(
+let Z = l.createContext(
     new (class e {
         observe(e) {
             var t;
@@ -111,12 +111,12 @@ let Z = o.createContext(
                             let e = !1;
                             for (let [t, n] of this.zones) {
                                 let i = t.getBoundingClientRect(),
-                                    o = C(n.zone.name, i);
-                                if (!(0, d.Z)(o, n.zone))
+                                    l = C(n.zone.name, i);
+                                if (!(0, d.Z)(l, n.zone))
                                     (e = !0),
                                         (n = {
                                             element: n.element,
-                                            zone: o
+                                            zone: l
                                         }),
                                         this.zones.set(t, n);
                             }
@@ -134,10 +134,10 @@ let Z = o.createContext(
     })((0, v.i)())
 );
 function _(e) {
-    let { observe: t = !0, className: n, children: l } = e,
-        s = o.useContext(Z),
+    let { observe: t = !0, className: n, children: o } = e,
+        s = l.useContext(Z),
         a = (0, c.e7)([m.Z], () => m.Z.clickZoneDebugMode),
-        [{ refHandler: u, setObserve: d }] = o.useState(() => {
+        [{ refHandler: u, setObserve: d }] = l.useState(() => {
             let e = null;
             return {
                 setObserve(t) {
@@ -149,14 +149,14 @@ function _(e) {
             };
         });
     return (
-        o.useLayoutEffect(() => {
+        l.useLayoutEffect(() => {
             d(t);
         }, [t, d]),
         (0, i.jsx)('div', {
             ref: u,
             className: r()(n, E.clickable, a && E.debugMode),
             'data-click-zone': !0,
-            children: l
+            children: o
         })
     );
 }
