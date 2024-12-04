@@ -61,7 +61,11 @@ function C(e) {
                     (0, a.fw)(),
                     (0, r.p)(),
                     null == g || g(I),
-                    I && (0, o.qg)({ variantsReturnStyle: v });
+                    I &&
+                        (0, o.qg)({
+                            variantsReturnStyle: v,
+                            location: 'openCollectiblesPaymentModal'
+                        });
             },
             onCloseRequest: () => {
                 null != n && x.has(n) && (0, s.closeModal)(f);

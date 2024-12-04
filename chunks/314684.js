@@ -261,7 +261,12 @@ function D(e) {
         [a, l] = (0, s.Wu)([u.Z], () => [u.Z.purchases, u.Z.hasPreviouslyFetched]);
     return (
         i.useEffect(() => {
-            n && !l && (0, d.qg)({ variantsReturnStyle: r });
+            n &&
+                !l &&
+                (0, d.qg)({
+                    variantsReturnStyle: r,
+                    location: 'useCollectiblePurchaseForTenureReward'
+                });
         }, [a, l, n, r]),
         null !== (t = null == a ? void 0 : a.get(e)) && void 0 !== t ? t : null
     );

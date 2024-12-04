@@ -26,7 +26,11 @@ function I(e) {
                 type: 'USER_TENURE_REWARD_STATUS_DELETE',
                 tenureRewardIds: [t.skuId]
             })
-          : (0, m.km)(t) && (0, o.qg)({ variantsReturnStyle: (0, l.oj)('TenureRewardManager') });
+          : (0, m.km)(t) &&
+            (0, o.qg)({
+                variantsReturnStyle: (0, l.oj)('TenureRewardManager'),
+                location: 'tenure_reward_manager'
+            });
 }
 function T() {
     let { forceRefresh: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
