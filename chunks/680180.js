@@ -26,7 +26,7 @@ function d(e) {
                     return null === (e = g.current) || void 0 === e ? void 0 : e.focus();
                 });
         }, [u]);
-    return t === o.WB.COLLAPSED
+    return t === o.GlobalDiscoverySearchBarState.COLLAPSED
         ? (0, i.jsx)(s.Clickable, {
               className: c.searchIcon,
               onClick: _,
@@ -37,7 +37,7 @@ function d(e) {
           })
         : (0, i.jsx)(s.SearchBar, {
               ref: g,
-              className: a()(c.searchBar, { [c.searchFloating]: t === o.WB.FLOATING }),
+              className: a()(c.searchBar, { [c.searchFloating]: t === o.GlobalDiscoverySearchBarState.FLOATING }),
               size: s.SearchBar.Sizes.MEDIUM,
               query: n,
               placeholder: l,

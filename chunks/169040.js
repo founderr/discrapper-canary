@@ -30,7 +30,7 @@ n.d(t, {
         return v;
     },
     Ue: function () {
-        return y;
+        return N;
     },
     Z: function () {
         return c;
@@ -95,4 +95,4 @@ let l = 'M20.97 4.06c0 .18.08.35.24.43.55.28.9.82 1.04 1.42.3 1.24.75 3.7.75 7.0
     P = 12,
     L = 18,
     T = ['gg sans', 'sans-serif'],
-    y = 500;
+    N = 500;

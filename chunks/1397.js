@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(937111),
     E = n(270801),
     b = n(652730),
-    N = n(41776),
-    Z = n(657352),
+    Z = n(41776),
+    N = n(657352),
     S = n(33154),
     T = n(144114),
     j = n(703656),
@@ -70,29 +70,29 @@ class F extends l.PureComponent {
     }
     render() {
         let { isFollowable: e, isLurking: t, notClaimed: r, notPhoneVerified: a, notEmailVerified: s, newMember: c, memberDeadline: d, newAccount: u, accountDeadline: h, theme: p, children: m, canSendMessages: f, channelFollowingUsersSeen: g, showLurkerModeUpsellPopout: C, showMemberVerificationModal: x, useReducedMotion: v, isStaff: I, guildJoinRequest: E } = this.props,
-            { shouldShowLurkerModeUpsellPopout: b, shouldShowLurkerModeSuccessPopout: N } = this.state,
-            Z = {
+            { shouldShowLurkerModeUpsellPopout: b, shouldShowLurkerModeSuccessPopout: Z } = this.state,
+            N = {
                 theme: p,
                 useReducedMotion: v
             };
         if (e && !f) {
-            if (((Z.message = U.intl.string(U.t.Hl0Mqq)), null != g && g >= 1000)) {
+            if (((N.message = U.intl.string(U.t.Hl0Mqq)), null != g && g >= 1000)) {
                 let e = 1000 * Math.floor(g / 1000);
-                Z.subtitle = U.intl.formatToPlainString(U.t.C5bgrK, { count: e.toLocaleString() });
+                N.subtitle = U.intl.formatToPlainString(U.t.C5bgrK, { count: e.toLocaleString() });
             }
-            (Z.buttonText = U.intl.string(U.t['3aOv+v'])), (Z.onButtonClick = this.handleFollowAnnouncement), (Z.imageSrc = n(485195)), t && ((Z.onSecondaryButtonClick = this.handleJoinServer), (Z.secondaryButtonText = U.intl.string(U.t['RLch7+'])));
-        } else if (r) (Z.message = U.intl.string(U.t['Eg3/c3'])), (Z.buttonText = U.intl.string(U.t.fiNVio)), (Z.onButtonClick = x ? this.handleShowMemberVerification : this.handleClaimAccount), (Z.imageSrc = n(102811));
+            (N.buttonText = U.intl.string(U.t['3aOv+v'])), (N.onButtonClick = this.handleFollowAnnouncement), (N.imageSrc = n(485195)), t && ((N.onSecondaryButtonClick = this.handleJoinServer), (N.secondaryButtonText = U.intl.string(U.t['RLch7+'])));
+        } else if (r) (N.message = U.intl.string(U.t['Eg3/c3'])), (N.buttonText = U.intl.string(U.t.fiNVio)), (N.onButtonClick = x ? this.handleShowMemberVerification : this.handleClaimAccount), (N.imageSrc = n(102811));
         else if (x)
             switch (null == E ? void 0 : E.applicationStatus) {
                 case _.wB.SUBMITTED:
-                    (Z.message = U.intl.string(U.t['5iLvS0'])), (Z.subtitle = U.intl.string(U.t.FdsK4u)), (Z.buttonText = U.intl.string(U.t.mqtdmZ)), (Z.onButtonClick = this.handleCancelApplication), (Z.imageSrc = n(281958));
+                    (N.message = U.intl.string(U.t['5iLvS0'])), (N.subtitle = U.intl.string(U.t.FdsK4u)), (N.buttonText = U.intl.string(U.t.mqtdmZ)), (N.onButtonClick = this.handleCancelApplication), (N.imageSrc = n(281958));
                     break;
                 case _.wB.REJECTED:
-                    (Z.message = U.intl.string(U.t.lk30cX)), (Z.buttonText = U.intl.string(U.t['8RrsHh'])), (Z.onButtonClick = this.handleViewApplicationRejection), (Z.imageSrc = n(809844));
+                    (N.message = U.intl.string(U.t.lk30cX)), (N.buttonText = U.intl.string(U.t['8RrsHh'])), (N.onButtonClick = this.handleViewApplicationRejection), (N.imageSrc = n(809844));
                     break;
                 default:
-                    (Z.message = U.intl.string(U.t.rEBKvr)), (Z.buttonText = U.intl.string(U.t['r8/DT0'])), (Z.buttonColor = o.ButtonColors.BRAND), (Z.onButtonClick = this.handleShowMemberVerification);
-                    Z.animationSrc = () =>
+                    (N.message = U.intl.string(U.t.rEBKvr)), (N.buttonText = U.intl.string(U.t['r8/DT0'])), (N.buttonColor = o.ButtonColors.BRAND), (N.onButtonClick = this.handleShowMemberVerification);
+                    N.animationSrc = () =>
                         n
                             .e('26176')
                             .then(n.t.bind(n, 737848, 19))
@@ -101,16 +101,16 @@ class F extends l.PureComponent {
                                 return t;
                             });
             }
-        else a && !I ? ((Z.message = U.intl.string(U.t['2dThMD'])), (Z.buttonText = U.intl.string(U.t['50gfOj'])), (Z.onButtonClick = this.handleVerifyPhone), (Z.imageSrc = n(98063))) : s ? ((Z.message = U.intl.string(U.t.FkGPS0)), (Z.buttonText = U.intl.string(U.t.lm1UKi)), (Z.onButtonClick = this.handleResendVerification), (Z.imageSrc = n(102811))) : c ? ((Z.message = U.intl.formatToPlainString(U.t.IH7RMD, { min: w.YeM.MEMBER_AGE })), (Z.countdown = d)) : u && ((Z.message = U.intl.formatToPlainString(U.t['2JA2GB'], { min: w.YeM.ACCOUNT_AGE })), (Z.countdown = h));
+        else a && !I ? ((N.message = U.intl.string(U.t['2dThMD'])), (N.buttonText = U.intl.string(U.t['50gfOj'])), (N.onButtonClick = this.handleVerifyPhone), (N.imageSrc = n(98063))) : s ? ((N.message = U.intl.string(U.t.FkGPS0)), (N.buttonText = U.intl.string(U.t.lm1UKi)), (N.onButtonClick = this.handleResendVerification), (N.imageSrc = n(102811))) : c ? ((N.message = U.intl.formatToPlainString(U.t.IH7RMD, { min: w.YeM.MEMBER_AGE })), (N.countdown = d)) : u && ((N.message = U.intl.formatToPlainString(U.t['2JA2GB'], { min: w.YeM.ACCOUNT_AGE })), (N.countdown = h));
         return (0, i.jsx)(o.Popout, {
             position: 'top',
             align: 'left',
-            shouldShow: N,
+            shouldShow: Z,
             onRequestClose: () => this.setState({ shouldShowLurkerModeSuccessPopout: !1 }),
             renderPopout: this.renderSuccessPopout,
             children: (e) =>
                 (0, i.jsx)(D.Z, {
-                    ...Z,
+                    ...N,
                     children: (0, i.jsxs)(l.Fragment, {
                         children: [
                             this.renderMemberVerificationSuccessModal(),
@@ -145,7 +145,7 @@ class F extends l.PureComponent {
                     { guild: n } = this.props;
                 return (
                     a()(null != n, 'This guildID cannot be null'),
-                    (0, i.jsx)(Z.Z, {
+                    (0, i.jsx)(N.Z, {
                         onClose: t,
                         guild: n
                     })
@@ -297,15 +297,15 @@ function V(e) {
         d = (0, s.e7)([R.Z], () => R.Z.getCheck(o)),
         u = r.type === w.d4z.GUILD_ANNOUNCEMENT && null != c && c.hasFeature(w.oNc.NEWS),
         p = (0, s.e7)([y.Z], () => (u ? y.Z.getFollowerStatsForChannel(r.id) : null)),
-        g = (0, s.e7)([N.Z], () => N.Z.isLurking(o)),
+        g = (0, s.e7)([Z.Z], () => Z.Z.isLurking(o)),
         C = (0, s.e7)([k.default], () => k.default.getCurrentUser()),
         v = null !== (t = null == C ? void 0 : C.isStaff()) && void 0 !== t && t,
         E = (0, s.e7)([P.ZP], () => {
             var e, t;
             return null != C && null !== (t = null === (e = P.ZP.getMember(o, C.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t;
         }),
-        Z = !!(null == c ? void 0 : c.hasVerificationGate()),
-        S = (E || d.notClaimed) && Z,
+        N = !!(null == c ? void 0 : c.hasVerificationGate()),
+        S = (E || d.notClaimed) && N,
         T = (0, s.e7)([b.Z], () => b.Z.shouldShowPopout(o)),
         j = (0, s.e7)([L.Z], () => L.Z.can(w.Plq.SEND_MESSAGES, r)),
         D = (0, s.e7)([I.Z], () => I.Z.getRequest(o)),
@@ -325,7 +325,7 @@ function V(e) {
         theme: A.Z.theme,
         canSendMessages: j,
         channelFollowingUsersSeen: null != p ? p.usersSeenEver : null,
-        hasVerificationGate: Z,
+        hasVerificationGate: N,
         showMemberVerificationModal: S,
         guildJoinRequestStatus: null !== (n = null == D ? void 0 : D.applicationStatus) && void 0 !== n ? n : _.wB.STARTED,
         guildJoinRequest: D,

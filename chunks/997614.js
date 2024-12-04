@@ -26,16 +26,16 @@ var i = n(200651),
 function E(e) {
     let { channel: t, themeable: E } = e,
         b = t.getGuildId(),
-        { mute: N, suppress: Z } = (0, p.Z)(t),
+        { mute: Z, suppress: N } = (0, p.Z)(t),
         S = (0, r.e7)([C.Z], () => C.Z.isDeaf()),
-        T = N || Z || S,
+        T = Z || N || S,
         j = (0, d.sR)({ isSoundboardButtonDisabled: T }),
         [A, y] = (0, c.cv)(j),
         { groupedButtons: P, mode: M } = (0, m.Z)({ location: 'ActionBarSoundboardButton' }),
         R = M === m.B.GroupedButtonsRedMic ? 'green' : void 0;
     function L() {
-        if (N) return I.intl.string(I.t['Ox4/zc']);
-        if (Z) return I.intl.string(I.t['+YBKYG']);
+        if (Z) return I.intl.string(I.t['Ox4/zc']);
+        if (N) return I.intl.string(I.t['+YBKYG']);
         if (S) return I.intl.string(I.t.X1lQlp);
     }
     function k(e) {

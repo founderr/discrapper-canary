@@ -9,8 +9,8 @@ t.d(n, {
 var o = t(200651);
 t(192379);
 var l = t(628028),
-    r = t(220427),
-    i = t(777207),
+    i = t(220427),
+    r = t(777207),
     s = t(692547),
     a = t(330711),
     c = t(103665);
@@ -19,7 +19,7 @@ function d(e) {
     return (0, o.jsx)(u, {
         icon:
             'user' === n
-                ? (0, o.jsx)(r.t, {
+                ? (0, o.jsx)(i.t, {
                       size: 'xxs',
                       color: s.Z.colors.INTERACTIVE_NORMAL
                   })
@@ -36,7 +36,7 @@ function u(e) {
         className: c.container,
         children: [
             n,
-            (0, o.jsx)(i.x, {
+            (0, o.jsx)(r.x, {
                 color: 'header-primary',
                 variant: 'text-sm/medium',
                 children: t

@@ -72,8 +72,8 @@ t.Z = (e) => {
     let n,
         r,
         l,
-        { invite: c, disableUser: I = !1, error: y, flatActivityCount: N = !1, isRegister: T = !1 } = e,
-        { currentUser: O, multiAccounts: b } = (0, s.cj)([u.Z, m.default], () => ({
+        { invite: c, disableUser: I = !1, error: y, flatActivityCount: T = !1, isRegister: N = !1 } = e,
+        { currentUser: b, multiAccounts: O } = (0, s.cj)([u.Z, m.default], () => ({
             currentUser: m.default.getCurrentUser(),
             multiAccounts: u.Z.getUsers()
         }));
@@ -84,7 +84,7 @@ t.Z = (e) => {
         R = I || null == c.inviter ? null : new g.Z(c.inviter),
         j = !((null != c.approximate_member_count && c.approximate_member_count > 100) || (null != A && A.hasFeature(_.oNc.COMMUNITY))) && null != R,
         w = null,
-        M = !1;
+        D = !1;
     if (null != A)
         (w = null == R ? Z.intl.string(Z.t['3rE1Pz']) : Z.intl.formatToPlainString(Z.t['5u47vb'], { username: v.ZP.getFormattedName(R) })),
             c.target_type === x.Iq.STREAM && null != c.target_user && (w = Z.intl.formatToPlainString(Z.t.x2L32d, { username: v.ZP.getFormattedName(c.target_user) })),
@@ -138,13 +138,13 @@ t.Z = (e) => {
     } else if (null != R) {
         let e = v.ZP.getFormattedName(R, !0);
         (r = Z.intl.formatToPlainString(Z.t['4aF92d'], { username: e })),
-            (M = !0),
+            (D = !0),
             (l =
                 null != y
                     ? null
                     : (0, i.jsx)(o.DK, {
                           className: S.directInviteSubTitle,
-                          children: T ? Z.intl.format(Z.t['6r4JiY'], { username: e }) : Z.intl.format(Z.t.Quj7HR, { username: e })
+                          children: N ? Z.intl.format(Z.t['6r4JiY'], { username: e }) : Z.intl.format(Z.t.Quj7HR, { username: e })
                       }));
     }
     return (0, i.jsxs)('div', {
@@ -154,7 +154,7 @@ t.Z = (e) => {
                 application: P,
                 guild: A,
                 user: j ? R : null,
-                compact: M
+                compact: D
             }),
             null != y
                 ? (0, i.jsxs)(i.Fragment, {
@@ -180,15 +180,15 @@ t.Z = (e) => {
                       ]
                   }),
             l,
-            null != P || M || (null == c ? void 0 : null === (t = c.guild) || void 0 === t ? void 0 : t.id) === E.fQ
+            null != P || D || (null == c ? void 0 : null === (t = c.guild) || void 0 === t ? void 0 : t.id) === E.fQ
                 ? null
                 : (0, i.jsx)(o.EJ, {
                       className: S.activityCount,
                       online: c.approximate_presence_count,
                       total: c.approximate_member_count,
-                      flat: N
+                      flat: T
                   }),
-            b.length > 1 ? (0, i.jsx)(o.jQ, { user: O }) : null
+            O.length > 1 ? (0, i.jsx)(o.jQ, { user: b }) : null
         ]
     });
 };

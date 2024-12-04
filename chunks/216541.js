@@ -1,6 +1,6 @@
 n.d(e, {
     d: function () {
-        return v;
+        return h;
     }
 });
 var r = n(200651);
@@ -16,8 +16,8 @@ var a = n(120356),
     f = n(379252),
     p = n(63243),
     g = n(244488);
-let v = (t) => {
-    let { product: e, isPurchased: n, isHighlighted: a, user: v, forCollectedModal: h, profileEffectClassName: b } = t,
+let h = (t) => {
+    let { product: e, isPurchased: n, isHighlighted: a, user: h, forCollectedModal: v, profileEffectClassName: b } = t,
         { firstProfileEffect: m, firstAvatarDecoration: x } = (0, d.R)(e),
         S = (0, l.ZP)(),
         C = (0, o.ap)(S);
@@ -31,7 +31,7 @@ let v = (t) => {
                           isHovering: a,
                           profileEffectId: m.id,
                           isPurchased: n,
-                          forCollectedModal: h,
+                          forCollectedModal: v,
                           removeSetHeight: !0
                       })
                   })
@@ -41,7 +41,7 @@ let v = (t) => {
                       className: f.avatarDecorationPreview,
                       children: (0, r.jsx)(u.R, {
                           item: x,
-                          user: v,
+                          user: h,
                           avatarSize: s.AvatarSizes.SIZE_120,
                           isPurchased: n,
                           isHighlighted: a,

@@ -1,19 +1,19 @@
-t.d(n, {
+l.d(t, {
     VO: function () {
         return u;
     },
     f0: function () {
-        return d;
+        return m;
     },
     fS: function () {
-        return c;
+        return d;
     }
 });
-var i = t(15729),
-    o = t(731965),
-    r = t(626135),
-    a = t(981631);
-let l = {
+var n = l(15729),
+    i = l(731965),
+    r = l(626135),
+    a = l(981631);
+let s = {
         guildId: void 0,
         channelId: void 0,
         channelType: void 0,
@@ -22,20 +22,20 @@ let l = {
         selectedItemChanges: 0,
         numMediaItems: 0
     },
-    s = (0, i.U)(() => l);
-function c(e, n, t, i) {
-    (0, o.j)(() =>
-        s.setState({
-            ...l,
+    o = (0, n.U)(() => s);
+function d(e, t, l, n) {
+    (0, i.j)(() =>
+        o.setState({
+            ...s,
             guildId: e,
-            channelId: n,
-            channelType: t,
-            numMediaItems: i
+            channelId: t,
+            channelType: l,
+            numMediaItems: n
         })
     );
 }
 function u() {
-    let e = s.getState();
+    let e = o.getState();
     r.default.track(a.rMx.MEDIA_VIEWER_SESSION_COMPLETED, {
         guild_id: e.guildId,
         channel_id: e.channelId,
@@ -45,8 +45,8 @@ function u() {
         number_selected_item_changes: e.selectedItemChanges,
         number_media_items: e.numMediaItems
     }),
-        (0, o.j)(() => s.setState({ ...l }));
+        (0, i.j)(() => o.setState({ ...s }));
 }
-function d() {
-    (0, o.j)(() => s.setState((e) => ({ selectedItemChanges: e.selectedItemChanges + 1 })));
+function m() {
+    (0, i.j)(() => o.setState((e) => ({ selectedItemChanges: e.selectedItemChanges + 1 })));
 }

@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(579185),
     E = n(301076),
     b = n(411840),
-    N = n(981631),
-    Z = n(921944),
+    Z = n(981631),
+    N = n(921944),
     S = n(388032),
     T = n(812801);
 function j(e) {
@@ -47,7 +47,7 @@ function j(e) {
             [L]
         ),
         H = (0, o.O)(),
-        G = (0, c.bp)() === N.IlC.POPOUT,
+        G = (0, c.bp)() === Z.IlC.POPOUT,
         { analyticsLocations: F } = (0, x.ZP)(),
         V = F.length > 0 ? F[F.length - 1] : 'open-activity-shelf';
     v.m1.useExperiment({ location: V }, { autoTrackExposure: !0 });
@@ -72,7 +72,7 @@ function j(e) {
             let { visibleContent: l, markAsDismissed: r } = e,
                 o = l === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !n && !M;
             return (
-                !0 === Y.current && !1 === o && r(Z.L.AUTO_DISMISS),
+                !0 === Y.current && !1 === o && r(N.L.AUTO_DISMISS),
                 Y.current !== o && (Y.current = o),
                 (0, i.jsx)(s.Popout, {
                     fixed: !0,
@@ -94,7 +94,7 @@ function j(e) {
                                   onMouseEnter: L,
                                   onMouseLeave: k,
                                   isHovered: M,
-                                  onClick: () => r(Z.L.UNKNOWN)
+                                  onClick: () => r(N.L.UNKNOWN)
                               })
                             : (0, i.jsx)(i.Fragment, {});
                     },
@@ -116,7 +116,7 @@ function j(e) {
                                                 isActivityActive: w || M,
                                                 className: O ? '' : T.controlButton,
                                                 onClick: () => {
-                                                    z(), (l === a.z.ACTIVITIES_MINI_SHELF_SPARKLES || l === a.z.ACTIVITY_GDM_ROCKET_SPARKLE || l === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || l === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || l === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && r(Z.L.TAKE_ACTION);
+                                                    z(), (l === a.z.ACTIVITIES_MINI_SHELF_SPARKLES || l === a.z.ACTIVITY_GDM_ROCKET_SPARKLE || l === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || l === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || l === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && r(N.L.TAKE_ACTION);
                                                 },
                                                 onMouseEnter: U,
                                                 onMouseLeave: k

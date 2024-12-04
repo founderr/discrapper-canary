@@ -19,8 +19,8 @@ var i,
     x = n(750881),
     I = n(710845),
     b = n(38618),
-    E = n(656063),
-    S = n(761282),
+    S = n(656063),
+    E = n(761282),
     Z = n(814443),
     N = n(789407),
     y = n(974543),
@@ -35,8 +35,8 @@ var i,
     D = n(158776),
     O = n(699516),
     k = n(594174),
-    U = n(979651),
-    G = n(626135),
+    G = n(979651),
+    U = n(626135),
     B = n(823379),
     H = n(981631);
 let V = !1,
@@ -83,7 +83,7 @@ function en(e) {
     return null != t ? t : (0, g.Z)(e) ? $(e.name) : (0, C.Z)(e) && null != e.url ? ee(e.url) : (null != e.application_id && et(e.application_id), t);
 }
 function ei(e) {
-    let t = U.Z.getVoiceStateForUser(e);
+    let t = G.Z.getVoiceStateForUser(e);
     return (null == t ? void 0 : t.channelId) != null && w.Z.canWithPartialContext(H.Plq.VIEW_CHANNEL, { channelId: t.channelId }) ? t.channelId : null;
 }
 function el(e) {
@@ -116,7 +116,7 @@ function er(e, t, n) {
             null == o)
         )
             continue;
-        let c = (0, E.Z)(o);
+        let c = (0, S.Z)(o);
         if (null == c) continue;
         Z = c === N.XB;
         let u = (function (e) {
@@ -131,18 +131,18 @@ function er(e, t, n) {
                     activity: o,
                     userId: e.id,
                     application: u,
-                    channelId: null === (r = U.Z.getVoiceStateForUser(e.id)) || void 0 === r ? void 0 : r.channelId,
+                    channelId: null === (r = G.Z.getVoiceStateForUser(e.id)) || void 0 === r ? void 0 : r.channelId,
                     currentUser: d,
                     isActivitiesEnabledForCurrentPlatform: t,
                     ChannelStore: j.Z,
-                    VoiceStateStore: U.Z,
+                    VoiceStateStore: G.Z,
                     PermissionStore: w.Z,
                     GuildStore: L.Z
                 }) !== p.Fw.CAN_JOIN
             )
                 continue;
         } else if (null == g) continue;
-        if (!S.JE(o) || null == u || b.has(u.id)) continue;
+        if (!E.JE(o) || null == u || b.has(u.id)) continue;
         let C = null != o ? en(o) : null;
         (null == C || C.id !== u.id) && (o = null);
         let D = [];
@@ -168,7 +168,7 @@ function er(e, t, n) {
             });
     }
     let O = 1 === C.length,
-        G = [],
+        U = [],
         H = new Set(),
         V = new Set();
     for (let e of t) {
@@ -178,7 +178,7 @@ function er(e, t, n) {
             r = L.Z.getGuild(l);
         if ((V.has(l) && H.has(n)) || null == i || null == r || i.id === r.afkChannelId) null == i && ((u = null), (O = !0));
         else {
-            let e = U.Z.getVoiceStatesForChannel(i.id),
+            let e = G.Z.getVoiceStatesForChannel(i.id),
                 a = s()(e)
                     .map((e) => {
                         let { userId: t } = e;
@@ -191,7 +191,7 @@ function er(e, t, n) {
                 O ? !V.has(l) && (u = null) : ((u = r), (O = !0)),
                 V.add(l),
                 H.add(n),
-                G.push({
+                U.push({
                     channel: i,
                     guild: r,
                     members: a,
@@ -201,7 +201,7 @@ function er(e, t, n) {
     }
     return {
         id: n,
-        voiceChannels: G,
+        voiceChannels: U,
         isSpotifyActivity: Z,
         priorityMembers: C.map((e) => ({
             user: e,
@@ -305,7 +305,7 @@ let eu = s().throttle(() => {
                         l = s().map(n, 'userId'),
                         r = s().map(n, 'discoverable'),
                         a = s().map(n, (e) => O.Z.getRelationshipType(e.userId));
-                    G.default.track(H.rMx.PARTY_VOICE_ACTIVITY_VIEWED, {
+                    U.default.track(H.rMx.PARTY_VOICE_ACTIVITY_VIEWED, {
                         activity_user_ids: l,
                         discoverable: r,
                         relationship_types: a,
@@ -339,7 +339,7 @@ function ed() {
 }
 class eh extends (i = u.ZP.Store) {
     initialize() {
-        this.syncWith([k.default, v.Z, D.Z, R.Z, U.Z, A.Z, O.Z, P.Z, Z.Z], ed), this.waitFor(b.Z, L.Z, v.Z, k.default, Z.Z);
+        this.syncWith([k.default, v.Z, D.Z, R.Z, G.Z, A.Z, O.Z, P.Z, Z.Z], ed), this.waitFor(b.Z, L.Z, v.Z, k.default, Z.Z);
     }
     get currentActivityParties() {
         return W;

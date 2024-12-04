@@ -20,8 +20,8 @@ var l = n(392711),
     x = n(74538),
     I = n(557457),
     b = n(970645),
-    E = n(30684),
-    S = n(514701),
+    S = n(30684),
+    E = n(514701),
     Z = n(6242),
     N = n(467721),
     y = n(757692),
@@ -36,8 +36,8 @@ var l = n(392711),
     D = n(522558),
     O = n(879463),
     k = n(822070),
-    U = n(520540),
-    G = n(11352),
+    G = n(520540),
+    U = n(11352),
     B = n(474936),
     H = n(981631),
     V = n(354459),
@@ -80,7 +80,7 @@ class Y extends c.Z {
         if (P.Z.getIsFetchingReferralIncentiveEligibility() || !(0, x.I5)(e)) return;
         let t = { location: 'PremiumManager' },
             n = { autoTrackExposure: !1 };
-        if (!!U.g.getCurrentConfig(t, n).enabled && !O.eP.getCurrentConfig(t, n).enabled) k.$.getCurrentConfig(t, n).enabled && (0, j.bq)();
+        if (!!G.g.getCurrentConfig(t, n).enabled && !O.eP.getCurrentConfig(t, n).enabled) k.$.getCurrentConfig(t, n).enabled && (0, j.bq)();
     }
     openPremiumPaymentModalInApp(e) {
         if (__OVERLAY__) throw Error('Should not use this function from the overlay, use ModalAPI.openModal instead');
@@ -140,14 +140,14 @@ class Y extends c.Z {
             }),
             z(this, '_maybeFetchCheckoutRecovery', async () => {
                 let e = C.default.getCurrentUser();
-                null != e && e.verified && !(0, x.I5)(e) && E.Z.shouldFetchCheckoutRecovery() && (await (0, b.o)());
+                null != e && e.verified && !(0, x.I5)(e) && S.Z.shouldFetchCheckoutRecovery() && (await (0, b.o)());
             }),
             z(this, '_maybeFetchUserAffinities', () => {
                 let { enabled: e } = D.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
                 e && (0, p.W)();
             }),
             z(this, '_trackCustomNotificationSoundsExposure', () => {
-                G.Y.trackExposure({ location: 'PremiumManager' });
+                U.Y.trackExposure({ location: 'PremiumManager' });
             }),
             z(this, '_trackSkyLoadExposure', () => {
                 R.Z.trackExposure({ location: 'PremiumManager' });
@@ -182,7 +182,7 @@ class Y extends c.Z {
                         { sendNitroMessage: o } = (0, Z.TD)(a),
                         c = null !== (l = null === (i = g.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : H.Eu4.NONE;
                     if (N.Z.cooldownIsActive() || !o || c >= H.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== V.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
-                    S.I();
+                    E.I();
                     let u = W.intl.formatToPlainString(W.t.AbyeZG, {
                         nickname: r.userNick,
                         resolution: (0, F.o6)(r.maxResolution.height),

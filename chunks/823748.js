@@ -20,8 +20,8 @@ var i = n(200651),
     I = n(561472),
     E = n(36311),
     b = n(112724),
-    N = n(902840),
-    Z = n(110924),
+    Z = n(902840),
+    N = n(110924),
     S = n(317381),
     T = n(82888),
     j = n(917107),
@@ -74,8 +74,8 @@ var i = n(200651),
     eI = n(922482),
     eE = n(504185),
     eb = n(657218),
-    eN = n(66556),
-    eZ = n(739830),
+    eZ = n(66556),
+    eN = n(739830),
     eS = n(377929),
     eT = n(900157),
     ej = n(108427),
@@ -568,11 +568,11 @@ class tt extends l.PureComponent {
                     case e1.d4z.ANNOUNCEMENT_THREAD:
                     case e1.d4z.PRIVATE_THREAD:
                     case e1.d4z.PUBLIC_THREAD:
-                        null != t && !t.isForumLikeChannel() && a.push((0, i.jsx)(eN.Z, { channel: t }, 'browser')), e.isVocalThread() && a.push((0, i.jsx)(es.Z, { channel: e }, 'thread-call')), a.push((0, i.jsx)(eZ.Z, { channel: e }, 'notifications')), a.push((0, i.jsx)(Q.Z, { channel: e }, 'pins')), !e.isArchivedThread() && a.push((0, i.jsx)(X.Z, { channelId: e.id }, 'members')), null != t && (0, N.Lp)(e) && a.push((0, i.jsx)($.Z, { channel: e }, 'summaries')), a.push((0, i.jsx)(eS.Z, { channel: e }, 'threads-overflow'));
+                        null != t && !t.isForumLikeChannel() && a.push((0, i.jsx)(eZ.Z, { channel: t }, 'browser')), e.isVocalThread() && a.push((0, i.jsx)(es.Z, { channel: e }, 'thread-call')), a.push((0, i.jsx)(eN.Z, { channel: e }, 'notifications')), a.push((0, i.jsx)(Q.Z, { channel: e }, 'pins')), !e.isArchivedThread() && a.push((0, i.jsx)(X.Z, { channelId: e.id }, 'members')), null != t && (0, Z.Lp)(e) && a.push((0, i.jsx)($.Z, { channel: e }, 'summaries')), a.push((0, i.jsx)(eS.Z, { channel: e }, 'threads-overflow'));
                         break;
                     case e1.d4z.GUILD_ANNOUNCEMENT:
                     case e1.d4z.GUILD_TEXT:
-                        a.push((0, i.jsx)(w.Z, { channel: e }, 'favorites')), a.push((0, i.jsx)(eN.Z, { channel: e }, 'browser')), !n && a.push((0, i.jsx)(J.Z, { channel: e }, 'notifications')), a.push((0, i.jsx)(Q.Z, { channel: e }, 'pins')), a.push((0, i.jsx)(X.Z, { channelId: e.id }, 'members')), (0, N.Lp)(e) && a.push((0, i.jsx)($.Z, { channel: e }, 'summaries'));
+                        a.push((0, i.jsx)(w.Z, { channel: e }, 'favorites')), a.push((0, i.jsx)(eZ.Z, { channel: e }, 'browser')), !n && a.push((0, i.jsx)(J.Z, { channel: e }, 'notifications')), a.push((0, i.jsx)(Q.Z, { channel: e }, 'pins')), a.push((0, i.jsx)(X.Z, { channelId: e.id }, 'members')), (0, Z.Lp)(e) && a.push((0, i.jsx)($.Z, { channel: e }, 'summaries'));
                         break;
                     case e1.d4z.GUILD_FORUM:
                     case e1.d4z.GUILD_MEDIA:
@@ -720,7 +720,7 @@ t.Z = l.memo(function (e) {
         }),
         P = (0, p.e7)([S.ZP], () => (null != c ? S.ZP.getSelfEmbeddedActivityForChannel(c.id) : null), [c]),
         M = (0, p.e7)([eH.Z], () => eH.Z.isConnected()),
-        R = (0, Z.Z)(M),
+        R = (0, N.Z)(M),
         L = M && !1 === R;
     l.useEffect(() => {
         T && L && null != P && null != c && C.Z.selectParticipant(c.id, P.applicationId);
@@ -772,10 +772,10 @@ t.Z = l.memo(function (e) {
         l.useEffect(() => {
             null != r && null != c && eg && c.id === r && !em && ((0, eI.Cq)(c), a(null));
         }, [r, eg]);
-    let eC = (0, N.ts)(c),
+    let eC = (0, Z.ts)(c),
         ex = null != c && c.isPrivate(),
-        ev = (0, Z.Z)(ex),
-        e_ = (0, Z.Z)(null == c ? void 0 : c.id);
+        ev = (0, N.Z)(ex),
+        e_ = (0, N.Z)(null == c ? void 0 : c.id);
     l.useEffect(() => {
         let e = ev && !ex,
             t = ev && ex && (null == c ? void 0 : c.id) !== e_;

@@ -29,18 +29,18 @@ t.Z = function (e) {
     }, [n]);
     let S = r.useMemo(
             () => ({
-                query: g.Mm,
+                query: g.EMPTY_QUERY,
                 page: C,
-                pageSize: g.IV,
+                pageSize: g.PAGE_SIZE,
                 categoryId: n
             }),
             [C, n]
         ),
         T = (0, a.e7)([u.Z], () =>
             u.Z.getFetchState({
-                query: g.Mm,
+                query: g.EMPTY_QUERY,
                 page: C,
-                pageSize: g.IV,
+                pageSize: g.PAGE_SIZE,
                 categoryId: n
             })
         ),
@@ -48,22 +48,22 @@ t.Z = function (e) {
             var e;
             return null !== (e = u.Z.getSearchResults(S)) && void 0 !== e ? e : _;
         }),
-        x = null !== (t = (0, o.Z)(b)) && void 0 !== t ? t : _,
-        { results: A, totalPages: Z } = r.useMemo(() => (T === d.M.FETCHING ? x : b), [T, x, b]),
-        L = r.useMemo(() => (null == A ? void 0 : A.filter((e) => !(e.type !== l.s.APPLICATION))), [A]),
+        A = null !== (t = (0, o.Z)(b)) && void 0 !== t ? t : _,
+        { results: x, totalPages: Z } = r.useMemo(() => (T === d.M.FETCHING ? A : b), [T, A, b]),
+        L = r.useMemo(() => (null == x ? void 0 : x.filter((e) => !(e.type !== l.s.APPLICATION))), [x]),
         y = r.useCallback((e) => {
             let { page: t, activeCategoryId: n, onSuccessCallback: i, guildId: r, fetchCounts: l } = e;
             l &&
                 c.yC({
-                    query: g.Mm,
+                    query: g.EMPTY_QUERY,
                     guildId: r
                 }),
                 c.yC({
-                    query: g.Mm,
+                    query: g.EMPTY_QUERY,
                     guildId: r,
                     options: {
                         page: t,
-                        pageSize: g.IV,
+                        pageSize: g.PAGE_SIZE,
                         categoryId: n
                     },
                     onSuccessCallback: i
@@ -107,8 +107,8 @@ t.Z = function (e) {
                   }),
                   (0, i.jsx)(s.Paginator, {
                       className: f.paginationInput,
-                      totalCount: Math.min(Z * g.IV, g.Et * g.IV),
-                      pageSize: g.IV,
+                      totalCount: Math.min(Z * g.PAGE_SIZE, g.MAX_PAGES * g.PAGE_SIZE),
+                      pageSize: g.PAGE_SIZE,
                       disablePaginationGap: !0,
                       hideMaxPage: !0,
                       currentPage: C,

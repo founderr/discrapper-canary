@@ -29,8 +29,8 @@ var l = n(200651),
     P = n(591853),
     L = n(371991),
     T = n(410441),
-    y = n(981631),
-    N = n(616922),
+    N = n(981631),
+    y = n(616922),
     _ = n(388032),
     A = n(241574),
     E = n(179546);
@@ -94,8 +94,8 @@ function M(e) {
         { largeImage: V } = (0, v.rv)({ entry: w }),
         { activity: B, currentEntry: D, artist: U, title: z, user: G } = (0, Z.pi)(w),
         { primaryColor: Y, secondaryColor: W } = (0, j.Z)(null == V ? void 0 : V.src),
-        q = (0, I.Z)(y.ABu.SPOTIFY),
-        F = (0, r.e7)([c.Z, x.default], () => ((null == B ? void 0 : B.type) === y.IIU.LISTENING && null != G ? (0, m.Z)(c.Z, x.default, G, B) : void 0), [B, G], o.Z),
+        q = (0, I.Z)(N.ABu.SPOTIFY),
+        F = (0, r.e7)([c.Z, x.default], () => ((null == B ? void 0 : B.type) === N.IIU.LISTENING && null != G ? (0, m.Z)(c.Z, x.default, G, B) : void 0), [B, G], o.Z),
         J = a.useCallback(() => {
             var e;
             if (null == k || null == G) return;
@@ -146,7 +146,7 @@ function M(e) {
                         P.Ll,
                         {
                             onClick: () => {
-                                (0, h.Z)(F, N.kG.USER_ACTIVITY_SYNC), O();
+                                (0, h.Z)(F, y.kG.USER_ACTIVITY_SYNC), O();
                             },
                             IconComponent: s.UserPlayIcon,
                             children: _.intl.string(_.t.eU3inJ)

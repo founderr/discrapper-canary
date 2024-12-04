@@ -72,20 +72,20 @@ function x(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: r, jumpToVoiceChannels: c, jumpToChannel: d } = e,
         { bottomBar: h, topBar: m } = (0, s.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)),
         x = (0, s.e7)([p.Z], () => p.Z.isFocused()),
-        { mode: I, mentionCount: b, targetChannelId: E } = 'bottom' === t ? h : m,
-        S = I === f.x.HIDDEN,
+        { mode: I, mentionCount: b, targetChannelId: S } = 'bottom' === t ? h : m,
+        E = I === f.x.HIDDEN,
         Z = (0, u.useSpring)(
             {
-                to: { transform: S ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
+                to: { transform: E ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
                 config: _
             },
             x ? 'respect-motion-settings' : 'animate-never'
         ),
         N = l.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), null != E && d(E);
+                e.preventDefault(), e.stopPropagation(), null != S && d(S);
             },
-            [d, E]
+            [d, S]
         );
     return (0, i.jsx)('div', {
         className: a()(C.container, {
@@ -95,7 +95,7 @@ function x(e) {
         children: (0, i.jsx)(o.animated.div, {
             className: C.containerPadding,
             style: Z,
-            'aria-hidden': S,
+            'aria-hidden': E,
             children:
                 I === f.x.HIDDEN
                     ? (0, i.jsx)('div', { className: a()(C.bar, C.emptyBar) })

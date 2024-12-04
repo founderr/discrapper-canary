@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return b;
     }
 }),
     n(47120);
@@ -71,7 +71,7 @@ let I = () => [
             name: E.intl.string(E.t['2OvIZW'])
         }
     ];
-function N() {
+function T() {
     let e = f.Z.getNotificationPositionMode(),
         t = e !== _._vf.DISABLED,
         n = p.Z.getOverlayKeybind(),
@@ -86,7 +86,7 @@ function N() {
         text_activation_hotkey: null != i ? (0, m.BB)(i.shortcut) : null
     });
 }
-class T extends a.PureComponent {
+class N extends a.PureComponent {
     componentDidMount() {
         c.Z.track(_.rMx.SETTINGS_PANE_VIEWED, {
             settings_type: 'overlay',
@@ -95,7 +95,7 @@ class T extends a.PureComponent {
         });
     }
     handleChangeNotificationPositionMode(e, t) {
-        c.Z.setNotificationPositionMode(t), N();
+        c.Z.setNotificationPositionMode(t), T();
     }
     handleChangeAvatarSizeMode(e) {
         let { value: t } = e;
@@ -305,11 +305,11 @@ class T extends a.PureComponent {
             S(this, 'handleToggleTextChatNotifications', () => {
                 let { ENABLED: e, DISABLED: t } = _.Ypu,
                     n = this.props.textChatNotificationMode === e ? t : e;
-                c.Z.setTextChatNotificationMode(n), N();
+                c.Z.setTextChatNotificationMode(n), T();
             });
     }
 }
-function O(e) {
+function b(e) {
     let { onClose: t } = e,
         {
             avatarSizeMode: n,
@@ -327,7 +327,7 @@ function O(e) {
             shouldShowKeybindIndicators: f.Z.showKeybindIndicators
         })),
         d = (0, v.Z)({ location: 'Overlay Settings' });
-    return (0, s.jsx)(T, {
+    return (0, s.jsx)(N, {
         onClose: t,
         avatarSizeMode: n,
         displayNameMode: i,

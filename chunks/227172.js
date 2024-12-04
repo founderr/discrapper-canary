@@ -26,8 +26,8 @@ var l = n(200651),
     P = n(31074),
     L = n(206295),
     T = n(91140),
-    y = n(297781),
-    N = n(591853),
+    N = n(297781),
+    y = n(591853),
     _ = n(410441),
     A = n(797342),
     E = n(981631),
@@ -79,13 +79,13 @@ t.Z = (e) => {
             [null == O ? void 0 : O.src, t, W, n, z, J, q, F, D, U, b]
         );
     if (null == b) return null;
-    let et = (0, l.jsx)(y.Gk, {
-            location: null == G ? y.Gt.POPOUT : y.Gt.STREAMING_POPOUT,
+    let et = (0, l.jsx)(N.Gk, {
+            location: null == G ? N.Gt.POPOUT : N.Gt.STREAMING_POPOUT,
             children: T.W.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
         }),
         en =
             null == G
-                ? (0, l.jsx)(N.wG, {
+                ? (0, l.jsx)(y.wG, {
                       channel: t,
                       headerIcons:
                           null == K
@@ -104,7 +104,7 @@ t.Z = (e) => {
                       onUserPopoutClosed: k,
                       trackRankingItemInteraction: w
                   })
-                : (0, l.jsx)(N.jL, {
+                : (0, l.jsx)(y.jL, {
                       channel: t,
                       streamPreviewSrc: G,
                       title: n.extra.game_name,
@@ -122,7 +122,7 @@ t.Z = (e) => {
                       activity: B,
                       user: b,
                       ButtonComponent: (e) =>
-                          (0, l.jsx)(N.Ll, {
+                          (0, l.jsx)(y.Ll, {
                               IconComponent: o.GameControllerIcon,
                               ...e
                           })
@@ -134,18 +134,18 @@ t.Z = (e) => {
                 ? (0, l.jsx)(m.Z, {
                       activity: B,
                       ButtonComponent: (e) =>
-                          (0, l.jsx)(N.Ll, {
+                          (0, l.jsx)(y.Ll, {
                               IconComponent: o.EyeIcon,
                               ...e
                           })
                   })
                 : null
         ].filter(p.lm);
-    return (0, l.jsxs)(N.yR, {
+    return (0, l.jsxs)(y.yR, {
         children: [
             en,
-            (0, l.jsx)(N.St, {
-                children: (0, l.jsx)(N.WT, {
+            (0, l.jsx)(y.St, {
+                children: (0, l.jsx)(y.WT, {
                     onReaction: C,
                     onVoiceChannelPreview: M,
                     user: b,

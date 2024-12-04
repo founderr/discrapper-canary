@@ -14,24 +14,24 @@ var i = n(200651),
 let g = l.forwardRef(function (e, t) {
     let { selected: n, className: g } = e,
         C = l.useCallback(() => {
-            (0, o.k5)({ source: h.JU.GUILDS_BAR_ICON });
+            (0, o.k5)({ source: h.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
             let e = s.Z.getField('selectedTab');
             switch (e) {
-                case h.F$.QUESTS:
-                    return (0, c.u)({
-                        tab: h.F$.QUESTS,
+                case h.GlobalDiscoveryTab.QUESTS:
+                    return (0, c.transitionToGlobalDiscovery)({
+                        tab: h.GlobalDiscoveryTab.QUESTS,
                         location: m.dr.DISCOVERY_COMPASS,
                         questContent: r.j.DISCOVERY_COMPASS
                     });
-                case h.F$.SERVERS:
-                    return (0, c.u)({
-                        tab: h.F$.SERVERS,
+                case h.GlobalDiscoveryTab.SERVERS:
+                    return (0, c.transitionToGlobalDiscovery)({
+                        tab: h.GlobalDiscoveryTab.SERVERS,
                         entrypoint: p.Qq.GUILDS_BAR
                     });
-                case h.F$.APPS:
+                case h.GlobalDiscoveryTab.APPS:
                     return (0, u.XL)();
                 default:
-                    return (0, c.u)({ tab: e });
+                    return (0, c.transitionToGlobalDiscovery)({ tab: e });
             }
         }, []);
     return (0, i.jsx)(d.Z, {

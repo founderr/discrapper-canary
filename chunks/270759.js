@@ -22,8 +22,8 @@ var i = n(200651),
     S = n(974042),
     T = n(666286),
     b = n(596957),
-    x = n(981631),
-    A = n(723359),
+    A = n(981631),
+    x = n(723359),
     Z = n(388032),
     L = n(224602);
 function y() {
@@ -41,13 +41,13 @@ t.Z = function (e) {
         'true' === new URLSearchParams(l.search).get('confirm-age') &&
             u.Z.dispatch({
                 type: 'AGE_GATE_MODAL_OPEN',
-                source: A.L0.DEEP_LINK_PROMPT
+                source: x.L0.DEEP_LINK_PROMPT
             }).then(() => {
-                E.replace(x.Z5c.ME);
+                E.replace(A.Z5c.ME);
             });
     }, [E, l]),
         r.useEffect(() => {
-            h.Y(x.Z5c.FRIENDS), (0, v.e)('friends');
+            h.Y(A.Z5c.FRIENDS), (0, v.e)('friends');
         }, []),
         r.useEffect(() => {
             null != t && m.Z.setInitialSection(t);
@@ -92,17 +92,17 @@ t.Z = function (e) {
                                 className: L.tabBar,
                                 children: [
                                     (0, i.jsx)(d.TabBar.Item, {
-                                        id: x.pJs.ONLINE,
+                                        id: A.pJs.ONLINE,
                                         className: L.item,
                                         children: Z.intl.string(Z.t.b9w3bG)
                                     }),
                                     (0, i.jsx)(d.TabBar.Item, {
-                                        id: x.pJs.ALL,
+                                        id: A.pJs.ALL,
                                         className: L.item,
                                         children: Z.intl.string(Z.t.PfjFjY)
                                     }),
                                     (0, i.jsxs)(d.TabBar.Item, {
-                                        id: x.pJs.PENDING,
+                                        id: A.pJs.PENDING,
                                         className: L.item,
                                         'aria-label': Z.intl.string(Z.t.p6IHGB),
                                         children: [
@@ -117,7 +117,7 @@ t.Z = function (e) {
                                     }),
                                     j > 0
                                         ? (0, i.jsxs)(d.TabBar.Item, {
-                                              id: x.pJs.SUGGESTIONS,
+                                              id: A.pJs.SUGGESTIONS,
                                               className: L.item,
                                               'aria-label': Z.intl.string(Z.t['8rSi19']),
                                               children: [
@@ -132,14 +132,14 @@ t.Z = function (e) {
                                     n
                                         ? null
                                         : (0, i.jsx)(d.TabBar.Item, {
-                                              id: x.pJs.BLOCKED,
+                                              id: A.pJs.BLOCKED,
                                               className: L.item,
                                               children: Z.intl.string(Z.t['4bDptL'])
                                           }),
                                     (0, i.jsx)(d.TabBar.Item, {
                                         'aria-label': Z.intl.string(Z.t.j0wbEx),
                                         className: a()(L.item, L.addFriend),
-                                        id: x.pJs.ADD_FRIEND,
+                                        id: A.pJs.ADD_FRIEND,
                                         children: (0, i.jsx)('span', { children: Z.intl.string(Z.t.j0wbEx) })
                                     })
                                 ]
@@ -155,7 +155,7 @@ t.Z = function (e) {
                         className: L.peopleColumn,
                         'aria-labelledby': w,
                         children:
-                            O === x.pJs.ADD_FRIEND
+                            O === A.pJs.ADD_FRIEND
                                 ? (0, i.jsx)(T.Z, {})
                                 : (0, i.jsx)(b.Z, {
                                       titleId: w,

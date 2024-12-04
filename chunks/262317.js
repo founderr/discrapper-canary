@@ -28,8 +28,8 @@ var i,
     I = n(525925),
     E = n(701362),
     b = n(224184),
-    N = n(184301),
-    Z = n(347475),
+    Z = n(184301),
+    N = n(347475),
     S = n(597998),
     T = n(314897),
     j = n(430824),
@@ -101,7 +101,7 @@ class B extends (i = r.PureComponent) {
                 onMouseLeave: i ? void 0 : this.handleHidePreview,
                 children: (0, l.jsx)(d.Popout, {
                     preload: () =>
-                        (0, N.Z)(r.id, r.getAvatarURL(a.guild_id, 80), {
+                        (0, Z.Z)(r.id, r.getAvatarURL(a.guild_id, 80), {
                             guildId: a.guild_id,
                             channelId: a.id
                         }),
@@ -182,7 +182,7 @@ class B extends (i = r.PureComponent) {
             O(this, 'renderUserPopout', (e) => {
                 let { channel: t, user: n } = this.props,
                     i = t.getGuildId();
-                return (0, l.jsx)(Z.Z, {
+                return (0, l.jsx)(N.Z, {
                     userId: n.id,
                     guildId: null != i ? i : void 0,
                     channelId: t.id,
@@ -210,7 +210,7 @@ class B extends (i = r.PureComponent) {
                 });
             }),
             O(this, 'renderUser', (e) => {
-                let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: i, shouldShowPreview: r, mute: a, localMute: o, localVideoDisabled: c, speaking: u, disconnected: h, user: p, deaf: m, priority: f, collapsed: g, isStreaming: C, isGuest: v, nick: _, video: I, serverMute: E, serverDeaf: b, tabIndex: N, embeddedApplication: Z, channel: T, hangStatusActivity: j, showHangStatus: A, isSelf: y, application: P } = this.props,
+                let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: i, shouldShowPreview: r, mute: a, localMute: o, localVideoDisabled: c, speaking: u, disconnected: h, user: p, deaf: m, priority: f, collapsed: g, isStreaming: C, isGuest: v, nick: _, video: I, serverMute: E, serverDeaf: b, tabIndex: Z, embeddedApplication: N, channel: T, hangStatusActivity: j, showHangStatus: A, isSelf: y, application: P } = this.props,
                     { userPopoutOpen: R, isHoveringHangStatus: O } = this.state,
                     D = M.al.has(null != n ? n : ''),
                     w = {
@@ -230,10 +230,10 @@ class B extends (i = r.PureComponent) {
                         overlap: g,
                         serverMute: E,
                         serverDeaf: b,
-                        tabIndex: N,
+                        tabIndex: Z,
                         otherClientSessionType: n,
                         voicePlatform: i,
-                        embeddedApplication: Z,
+                        embeddedApplication: N,
                         avatarContainerClass: s()({ [k.userAvatar]: !0 }),
                         disabled: t && !D,
                         selected: R,

@@ -30,28 +30,28 @@ function Z(e) {
             isIgnored: u.Z.isIgnored(n.id)
         })),
         g = (0, a.Do)({ location: 'UserProfileModalWrapper' }),
-        [_, j] = l.useState(c || (g && (Z || c))),
+        [j, _] = l.useState(c || (g && (Z || c))),
         b = (0, m.sS)({ location: 'UserProfileModalWrapper' });
     l.useEffect(() => {
-        j(Z || c);
+        _(Z || c);
     }, [Z, c]);
     let E = !v.some((e) => {
             var n;
             return (null !== (n = t.sourceAnalyticsLocations) && void 0 !== n ? n : []).includes(e);
         }),
         N = d.Rt.useSetting();
-    return _ && b && E && !g
+    return j && b && E && !g
         ? (0, i.jsx)(I.Z, {
               user: n,
               currentUser: o,
-              onViewBlockedProfileClick: () => j(!1),
+              onViewBlockedProfileClick: () => _(!1),
               ...t
           })
-        : _ && E && g && !(Z && N)
+        : j && E && g && !(Z && N)
           ? (0, i.jsx)(I.W, {
                 user: n,
                 currentUser: o,
-                onViewBlockedProfileClick: () => j(!1),
+                onViewBlockedProfileClick: () => _(!1),
                 ...t
             })
           : n.isNonUserBot()

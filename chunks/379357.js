@@ -18,7 +18,7 @@ var r = n(726542),
     l = n(210753),
     u = n(81063),
     c = n(26033),
-    d = n(561308),
+    d = n(593294),
     f = n(981631),
     _ = n(701488),
     p = n(388032);
@@ -34,7 +34,7 @@ function h(e) {
 function m(e) {
     var t, n;
     let { entry: r, showCoverImage: i = !0 } = e,
-        { activity: a, activityApplication: s, fallbackApplication: o } = (0, d.qy)(r),
+        { activity: a, activityApplication: s, fallbackApplication: o } = (0, d.Z)(r),
         { largeImage: f, smallImage: p } = E(a, s),
         { largeImage: h } = g(a, null != o ? o : s),
         { coverImageUrl: m } = (0, l.$)(null === (t = null != o ? o : s) || void 0 === t ? void 0 : t.id);

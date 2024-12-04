@@ -38,27 +38,27 @@ let P = (e, t, n) => {
         });
 t.Z = (e) => {
     let { channel: t, entry: n, onReaction: c, onVoiceChannelPreview: T } = e,
-        y = (0, i.e7)([s.default], () => s.default.getUser(n.author_id)),
-        { largeImage: N } = (0, m.rv)({ entry: n }),
-        { primaryColor: _, secondaryColor: A } = (0, p.Z)(null == N ? void 0 : N.src),
+        N = (0, i.e7)([s.default], () => s.default.getUser(n.author_id)),
+        { largeImage: y } = (0, m.rv)({ entry: n }),
+        { primaryColor: _, secondaryColor: A } = (0, p.Z)(null == y ? void 0 : y.src),
         E = (0, i.e7)([o.default], () => o.default.locale),
         S = (0, C.Z)(j.ABu.CRUNCHYROLL),
         R = (0, h.ap)(n.extra.media_assets_large_text),
         M = a.useCallback(
             (e) => {
-                if (null != y && (null == N ? void 0 : N.src) != null)
+                if (null != N && (null == y ? void 0 : y.src) != null)
                     return (0, x.B)({
                         entry: n,
-                        mediaImageSrc: null == N ? void 0 : N.src,
-                        avatarSrc: y.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
-                        description: P(n, t, y),
+                        mediaImageSrc: null == y ? void 0 : y.src,
+                        avatarSrc: N.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
+                        description: P(n, t, N),
                         timestamp: (0, h.yh)(n, E),
                         episodeDescription: R,
                         colors: [_, A],
                         channelId: e
                     });
             },
-            [t, n, R, E, null == N ? void 0 : N.src, _, A, y]
+            [t, n, R, E, null == y ? void 0 : y.src, _, A, N]
         ),
         k = () => {
             if (null == n.extra.url) return;
@@ -69,7 +69,7 @@ t.Z = (e) => {
                     trusted: !1
                 });
         };
-    return null == y
+    return null == N
         ? null
         : (0, l.jsxs)(f.yR, {
               children: [
@@ -95,10 +95,10 @@ t.Z = (e) => {
                       children: (0, l.jsx)(f.WT, {
                           onReaction: c,
                           onVoiceChannelPreview: T,
-                          user: y,
+                          user: N,
                           channel: t,
                           generateReactionImage: M,
-                          reactionImageAltText: L(n, y),
+                          reactionImageAltText: L(n, N),
                           entry: n
                       })
                   })

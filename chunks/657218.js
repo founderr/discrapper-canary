@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(967128),
     E = n(665149),
     b = n(294218),
-    N = n(913663),
-    Z = n(268350),
+    Z = n(913663),
+    N = n(268350),
     S = n(695346),
     T = n(592125),
     j = n(703558),
@@ -176,7 +176,7 @@ function W(e) {
                                 shouldClear: !1,
                                 shouldRefocus: !1
                             };
-                        p(!0), null == e && (e = a.textValue), (e = e.trim()), (null == l || 0 === l.length) && (l = null === (s = N.Z.getStickerPreview(t.id, V.drafts.type)) || void 0 === s ? void 0 : s.map((e) => e.id)), (null == r || 0 === r.length) && (r = P.Z.getUploads(t.id, j.d.FirstThreadMessage));
+                        p(!0), null == e && (e = a.textValue), (e = e.trim()), (null == l || 0 === l.length) && (l = null === (s = Z.Z.getStickerPreview(t.id, V.drafts.type)) || void 0 === s ? void 0 : s.map((e) => e.id)), (null == r || 0 === r.length) && (r = P.Z.getUploads(t.id, j.d.FirstThreadMessage));
                         let f = null !== (o = i.name) && void 0 !== o ? o : '',
                             g = null == n && 0 === f.length,
                             C = '' === e && (null == l || 0 === l.length) && 0 === r.length;
@@ -218,7 +218,7 @@ function W(e) {
                             );
                         }
                         return (
-                            (0, Z.qB)(t.id, V.drafts.type),
+                            (0, N.qB)(t.id, V.drafts.type),
                             p(!1),
                             {
                                 shouldClear: !0,

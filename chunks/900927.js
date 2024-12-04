@@ -1,77 +1,77 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return I;
+        return m;
     }
 });
-var i = t(200651);
-t(192379);
-var l = t(399606),
-    o = t(481060),
-    r = t(275759),
-    s = t(565138),
-    c = t(706454),
-    a = t(271383),
-    d = t(430824),
-    u = t(709054),
-    f = t(388032),
-    m = t(181402);
-function I(e) {
-    let { userId: n, guildId: t, textClassName: I, tooltipDelay: x } = e,
-        p = (0, l.e7)([c.default], () => c.default.locale),
-        h = (0, l.e7)([d.Z], () => (null != t ? d.Z.getGuild(t) : null)),
-        v = (0, l.e7)([a.ZP], () => (null != t ? a.ZP.getMember(t, n) : null)),
-        Z = (0, r.FI)(u.default.extractTimestamp(n), p),
-        g = (0, r.FI)(null == v ? void 0 : v.joinedAt, p);
-    return null == h || null == v
-        ? (0, i.jsx)(o.Text, {
+var i = n(200651);
+n(192379);
+var l = n(399606),
+    r = n(481060),
+    a = n(275759),
+    s = n(565138),
+    o = n(706454),
+    c = n(271383),
+    d = n(430824),
+    u = n(709054),
+    h = n(388032),
+    p = n(181402);
+function m(e) {
+    let { userId: t, guildId: n, textClassName: m, tooltipDelay: f } = e,
+        g = (0, l.e7)([o.default], () => o.default.locale),
+        C = (0, l.e7)([d.Z], () => (null != n ? d.Z.getGuild(n) : null)),
+        x = (0, l.e7)([c.ZP], () => (null != n ? c.ZP.getMember(n, t) : null)),
+        v = (0, a.FI)(u.default.extractTimestamp(t), g),
+        _ = (0, a.FI)(null == x ? void 0 : x.joinedAt, g);
+    return null == C || null == x
+        ? (0, i.jsx)(r.Text, {
               variant: 'text-sm/normal',
-              className: I,
-              children: Z
+              className: m,
+              children: v
           })
         : (0, i.jsxs)('div', {
-              className: m.memberSinceWrapper,
+              className: p.memberSinceWrapper,
               children: [
                   (0, i.jsxs)('div', {
-                      className: m.memberSince,
+                      className: p.memberSince,
                       children: [
-                          (0, i.jsx)(o.Tooltip, {
-                              text: f.intl.string(f.t.uvGmCw),
-                              delay: x,
+                          (0, i.jsx)(r.Tooltip, {
+                              text: h.intl.string(h.t.uvGmCw),
+                              delay: f,
                               children: (e) =>
-                                  (0, i.jsx)(o.ClydeIcon, {
+                                  (0, i.jsx)(r.ClydeIcon, {
                                       size: 'custom',
                                       width: 28,
                                       height: 28,
                                       color: 'currentColor',
                                       ...e,
-                                      className: m.discordIcon
+                                      className: p.discordIcon
                                   })
                           }),
-                          (0, i.jsx)(o.Text, {
+                          (0, i.jsx)(r.Text, {
                               variant: 'text-sm/normal',
-                              className: I,
-                              children: Z
+                              className: m,
+                              children: v
                           })
                       ]
                   }),
-                  (0, i.jsx)('div', { className: m.divider }),
+                  (0, i.jsx)('div', { className: p.divider }),
                   (0, i.jsxs)('div', {
-                      className: m.memberSince,
+                      className: p.memberSince,
                       children: [
-                          (0, i.jsx)(o.Tooltip, {
-                              text: h.name,
-                              delay: x,
+                          (0, i.jsx)(r.Tooltip, {
+                              text: C.name,
+                              delay: f,
                               children: (e) =>
                                   (0, i.jsx)(s.Z, {
                                       ...e,
-                                      guild: h,
+                                      guild: C,
                                       size: s.Z.Sizes.SMOL
                                   })
                           }),
-                          (0, i.jsx)(o.Text, {
+                          (0, i.jsx)(r.Text, {
                               variant: 'text-sm/normal',
-                              className: I,
-                              children: g
+                              className: m,
+                              children: _
                           })
                       ]
                   })

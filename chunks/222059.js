@@ -24,8 +24,8 @@ var i = n(200651),
     x = n(941128),
     I = n(780570),
     b = n(557177),
-    E = n(278464),
-    S = n(276952),
+    S = n(278464),
+    E = n(276952),
     Z = n(682662),
     N = n(662146),
     y = n(674552),
@@ -51,11 +51,11 @@ function L(e) {
         g = (0, a.e7)([u.Z], () => u.Z.isEditorOpen),
         [C, _] = l.useState(!1),
         [v, x] = l.useState(!1),
-        [I, E] = l.useState(null),
+        [I, S] = l.useState(null),
         [A, L] = l.useState(0),
         w = (0, r.Ie)('home'),
         D = () => {
-            E(null), L(0), clearTimeout(I);
+            S(null), L(0), clearTimeout(I);
         };
     if (null == n) return null;
     let O = P.intl.string(P.t.YUU0RE);
@@ -67,9 +67,9 @@ function L(e) {
             className: R.downloadProgress,
             determineOwnVisibility: !1
         }));
-    let U = t || C || g,
-        G = (0, i.jsx)(s.BlobMask, {
-            selected: U,
+    let G = t || C || g,
+        U = (0, i.jsx)(s.BlobMask, {
+            selected: G,
             lowerBadge: h > 0 ? (0, y.Ne)(h) : null,
             upperBadge: k,
             lowerBadgeSize: { width: (0, s.getBadgeWidthForValue)(h) },
@@ -77,7 +77,7 @@ function L(e) {
                 onMouseEnter: () => _(!0),
                 onMouseLeave: () => _(!1),
                 onClick: () => {
-                    if (!__OVERLAY__ && (null != I && clearTimeout(I), E(setTimeout(D, 500)), L(A + 1), 15 === A)) {
+                    if (!__OVERLAY__ && (null != I && clearTimeout(I), S(setTimeout(D, 500)), L(A + 1), 15 === A)) {
                         D();
                         let e = !o.K.get(T.wli);
                         o.K.set(T.wli, e),
@@ -89,7 +89,7 @@ function L(e) {
                             }, 1000);
                     }
                 },
-                selected: U,
+                selected: G,
                 ariaLabel: P.intl.string(P.t.YUU0RE),
                 ...w,
                 to: {
@@ -113,7 +113,7 @@ function L(e) {
             position: 'right',
             children: (0, i.jsxs)(Z.H, {
                 children: [
-                    (0, i.jsx)(S.Z, {
+                    (0, i.jsx)(E.Z, {
                         selected: t,
                         hovered: C,
                         className: R.pill
@@ -123,7 +123,7 @@ function L(e) {
                         hideOnClick: !0,
                         text: O,
                         selected: t,
-                        children: G
+                        children: U
                     })
                 ]
             })
@@ -131,7 +131,7 @@ function L(e) {
     });
 }
 function w() {
-    let e = (0, E.n)(),
+    let e = (0, S.n)(),
         t = (0, a.e7)([x.Z, v.Z], () => {
             let e = (0, c.E)(x.Z.activeItems, v.Z),
                 { total: t, progress: n } = I.lK(e),
@@ -149,15 +149,15 @@ function w() {
         d = (0, h.q)(),
         p = n + s + d,
         b = p === s && s > 0 && n + d === 0,
-        S = _.Z.getHomeLink();
+        E = _.Z.getHomeLink();
     return (
-        b && (S = T.Z5c.APPLICATION_STORE),
+        b && (E = T.Z5c.APPLICATION_STORE),
         (0, i.jsx)(L, {
             selected: e,
             user: u,
             selectedChannelId: f.Z.getChannelId(T.ME),
             badge: p,
-            link: S,
+            link: E,
             showProgressBadge: t
         })
     );

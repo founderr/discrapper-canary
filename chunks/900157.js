@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(703558),
     E = n(430824),
     b = n(979651),
-    N = n(664342),
-    Z = n(124368),
+    Z = n(664342),
+    N = n(124368),
     S = n(981631),
     T = n(388032),
     j = n(31224);
@@ -43,7 +43,7 @@ function A(e) {
                     type: 'SIDEBAR_CLOSE',
                     baseChannelId: e.parent_id
                 }),
-                (0, v.ad)(e, { source: Z.on.VOICE_AUTO_OPEN }));
+                (0, v.ad)(e, { source: N.on.VOICE_AUTO_OPEN }));
         }, [t, e]);
     })(y);
     let R = l.useRef(!1);
@@ -62,7 +62,7 @@ function A(e) {
         null == y || null == P)
     )
         return null;
-    let L = (0, i.jsx)(N.Z, {
+    let L = (0, i.jsx)(Z.Z, {
         channel: y,
         baseChannelId: r
     });

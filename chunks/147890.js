@@ -42,13 +42,13 @@ var i = n(749681),
     h = n(979007);
 let p = (e) => {
         let { view: t = l.ApplicationDirectoryViews.HOME, guildId: n, applicationId: s, applicationSection: o, entrypoint: p, skuId: E } = e;
-        if ((0, r.r)({ location: p.name })) {
-            let e = o === c.ApplicationDirectoryProfileSections.STORE ? h.Wc.STORE : h.Wc.ABOUT;
-            (0, i.u)({
-                tab: u.F$.APPS,
+        if ((0, r.K)({ location: p.name })) {
+            let e = null == s ? void 0 : o === c.ApplicationDirectoryProfileSections.STORE ? h.GlobalDiscoveryAppsSections.STORE : h.GlobalDiscoveryAppsSections.ABOUT;
+            (0, i.transitionToGlobalDiscovery)({
+                tab: u.GlobalDiscoveryTab.APPS,
                 applicationId: s,
                 section: e,
-                skuId: e === h.Wc.STORE ? E : void 0
+                skuId: e === h.GlobalDiscoveryAppsSections.STORE ? E : void 0
             });
             return;
         }

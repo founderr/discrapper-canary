@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(776767),
     E = n(981631),
     b = n(388032),
-    N = n(872278),
-    Z = n(389401),
+    Z = n(872278),
+    N = n(389401),
     S = n(758570);
 function T(e) {
     var t;
@@ -54,7 +54,7 @@ function T(e) {
                               let { onMouseEnter: l, onMouseLeave: a } = e;
                               return (0, i.jsx)(d.Clickable, {
                                   tag: 'span',
-                                  className: N.username,
+                                  className: Z.username,
                                   onClick: A(j),
                                   onMouseEnter: l,
                                   onMouseLeave: a,
@@ -75,13 +75,13 @@ function T(e) {
             [A, n.user, r.guildId, j]
         )();
     return (0, i.jsxs)('div', {
-        className: a()(Z.modInfoItem, N.auditLogItem),
+        className: a()(N.modInfoItem, Z.auditLogItem),
         children: [
             (0, i.jsxs)('div', {
-                className: N.auditLogItemTitleContainer,
+                className: Z.auditLogItemTitleContainer,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: N.auditLogItemTitle,
+                        className: Z.auditLogItemTitle,
                         children: [
                             null != f &&
                                 (0, i.jsx)(d.Text, {
@@ -98,7 +98,7 @@ function T(e) {
                         ]
                     }),
                     (0, i.jsx)('div', {
-                        className: N.auditLogItemDate,
+                        className: Z.auditLogItemDate,
                         children: (0, i.jsx)(d.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-primary',
@@ -109,9 +109,9 @@ function T(e) {
             }),
             null != I &&
                 (0, i.jsx)('div', {
-                    className: N.auditLogSecondaryContainer,
+                    className: Z.auditLogSecondaryContainer,
                     children: (0, i.jsxs)('div', {
-                        className: N.auditLogReason,
+                        className: Z.auditLogReason,
                         children: [
                             y,
                             (0, i.jsx)(d.Text, {
@@ -126,9 +126,9 @@ function T(e) {
             null == I &&
                 null != S &&
                 (0, i.jsx)('div', {
-                    className: N.auditLogSecondaryContainer,
+                    className: Z.auditLogSecondaryContainer,
                     children: (0, i.jsxs)('div', {
-                        className: N.auditLogSecondary,
+                        className: Z.auditLogSecondary,
                         children: [
                             y,
                             (0, i.jsx)(d.Text, {
@@ -143,9 +143,9 @@ function T(e) {
             null == I &&
                 null == S &&
                 (0, i.jsx)('div', {
-                    className: N.auditLogSecondaryContainer,
+                    className: Z.auditLogSecondaryContainer,
                     children: (0, i.jsx)('div', {
-                        className: N.auditLogSecondary,
+                        className: Z.auditLogSecondary,
                         children: (0, i.jsx)(d.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-muted',
@@ -154,7 +154,7 @@ function T(e) {
                                 log: n,
                                 guild: s,
                                 onContentClick: () => {},
-                                className: N.auditLogExpandedChangeDetails
+                                className: Z.auditLogExpandedChangeDetails
                             })
                         })
                     })

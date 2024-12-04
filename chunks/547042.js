@@ -34,8 +34,8 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                 analyticsType: S,
                 ctaText: T,
                 dismissText: b,
-                description: x,
-                learnMore: A,
+                description: A,
+                learnMore: x,
                 title: Z,
                 videoPosterUrl: L,
                 videoUrl: y,
@@ -143,8 +143,8 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                 variant: 'text-xs/normal',
                                 color: 'always-white',
                                 children: [
-                                    x,
-                                    A
+                                    A,
+                                    x
                                         ? (0, l.jsxs)(l.Fragment, {
                                               children: [
                                                   ' ',

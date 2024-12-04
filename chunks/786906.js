@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return T;
     }
 }),
     n(47120);
@@ -154,7 +154,7 @@ class y extends r.Component {
             });
     }
 }
-function N(e) {
+function T(e) {
     let { channel: t, ...n } = e,
         r = (0, o.e7)([E.Z, m.Z], () => {
             let e = E.Z.getVoiceChannelId();

@@ -1,8 +1,8 @@
-var t, i;
-l.d(n, {
+var r, i;
+n.d(t, {
     _: function () {
-        return t;
+        return r;
     }
 }),
-    ((i = t || (t = {}))[(i.AGGREGATE_RANGE_UNSPECIFIED = 0)] = 'AGGREGATE_RANGE_UNSPECIFIED'),
+    ((i = r || (r = {}))[(i.AGGREGATE_RANGE_UNSPECIFIED = 0)] = 'AGGREGATE_RANGE_UNSPECIFIED'),
     (i[(i.WEEK = 1)] = 'WEEK');

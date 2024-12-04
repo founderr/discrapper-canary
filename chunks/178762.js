@@ -33,8 +33,8 @@ var l = n(200651),
     P = n(91140),
     L = n(227172),
     T = n(551228),
-    y = n(678869),
-    N = n(278399),
+    N = n(678869),
+    y = n(278399),
     _ = n(886217),
     A = n(555672),
     E = n(644548),
@@ -66,7 +66,7 @@ let H = (e) => {
                     entry: t
                 });
             case s.s.TOP_ARTIST:
-                return (0, l.jsx)(N.ZP, {
+                return (0, l.jsx)(y.ZP, {
                     ...n,
                     entry: t
                 });
@@ -133,7 +133,7 @@ let H = (e) => {
                     entry: t
                 });
             case s.s.LISTENED_SESSION:
-                return (0, l.jsx)(y.Z, {
+                return (0, l.jsx)(N.Z, {
                     ...n,
                     entry: t
                 });
@@ -173,12 +173,12 @@ t.ZP = a.memo((e) => {
             [P, x.channel.guild_id, x.channel.id, x.entry, x.requestId, Z]
         ),
         T = a.useRef(!1),
-        [y, N] = a.useState(!1),
+        [N, y] = a.useState(!1),
         [_, A] = a.useState(!1),
         E = (0, u.e7)([h.Z], () => h.Z.keyboardModeEnabled);
     a.useEffect(() => {
-        y && E && A(!0);
-    }, [y, E]);
+        N && E && A(!0);
+    }, [N, E]);
     let S = a.useCallback(
             (e) => {
                 if (!!j)
@@ -222,7 +222,7 @@ t.ZP = a.memo((e) => {
         B = () => {
             (T.current = !1),
                 setTimeout(() => {
-                    !T.current && (N(!1), A(E));
+                    !T.current && (y(!1), A(E));
                 }, 100);
         };
     return (0, l.jsx)('div', {
@@ -230,7 +230,7 @@ t.ZP = a.memo((e) => {
             x.entry.content_type === s.s.LEADERBOARD && !(0, C.un)(c.z.LEADERBOARD_NUX_COACHMARK) && (0, C.EW)(c.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: w.L.SECONDARY }),
                 (T.current = !0),
                 setTimeout(() => {
-                    T.current && N(!0), b(L);
+                    T.current && y(!0), b(L);
                 }, 100);
         },
         onMouseLeave: B,
@@ -245,7 +245,7 @@ t.ZP = a.memo((e) => {
                 });
             },
             position: 'left',
-            shouldShow: y,
+            shouldShow: N,
             positionKey: p,
             onRequestOpen: () => b(L),
             onRequestClose: () => {
@@ -266,7 +266,7 @@ t.ZP = a.memo((e) => {
                         }
                     },
                     onClick: () => {
-                        !y && N(!0);
+                        !N && y(!0);
                     },
                     onContextMenu: S,
                     children: (0, l.jsx)(H, {

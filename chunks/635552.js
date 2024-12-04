@@ -14,21 +14,21 @@ var r = n(192379),
 let d = (t) => {
     let { product: e, onSuccess: d, onError: u } = t,
         [f, p] = r.useState(!1),
-        { firstAvatarDecoration: g, firstProfileEffect: v } = (0, l.R)(e),
-        h = (0, s.x6)(e) ? c.intl.string(c.t.tf1ZZ2) : e.type === a.Z.AVATAR_DECORATION ? c.intl.string(c.t.zOA4a2) : c.intl.string(c.t.SWm2am);
+        { firstAvatarDecoration: g, firstProfileEffect: h } = (0, l.R)(e),
+        v = (0, s.x6)(e) ? c.intl.string(c.t.tf1ZZ2) : e.type === a.Z.AVATAR_DECORATION ? c.intl.string(c.t.zOA4a2) : c.intl.string(c.t.SWm2am);
     return {
         handleUseNow: r.useCallback(async () => {
             p(!0);
             try {
-                if ((null != g && (await (0, i.Mn)({ avatarDecoration: g })), null != v)) {
-                    let t = { profile_effect_id: v.id };
+                if ((null != g && (await (0, i.Mn)({ avatarDecoration: g })), null != h)) {
+                    let t = { profile_effect_id: h.id };
                     await (0, o.Z)(t);
                 }
                 {
                     let { ToastPosition: t, ToastType: e, createToast: r, popToast: a, showToast: i } = await Promise.resolve().then(n.bind(n, 481060));
                     a(),
                         i(
-                            r(h, e.MESSAGE, {
+                            r(v, e.MESSAGE, {
                                 duration: 6000,
                                 position: t.TOP
                             })
@@ -40,7 +40,7 @@ let d = (t) => {
             } finally {
                 p(!1);
             }
-        }, [g, v, d, h, u]),
+        }, [g, h, d, v, u]),
         isApplying: f
     };
 };

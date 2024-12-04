@@ -3,7 +3,7 @@ n.d(e, {
         return S;
     },
     M7: function () {
-        return h;
+        return v;
     },
     UY: function () {
         return m;
@@ -29,13 +29,13 @@ var r,
     f = n(744709),
     p = n(39934),
     g = n(681532),
-    v = n(12981);
+    h = n(12981);
 ((a = r || (r = {}))[(a.NONE = 0)] = 'NONE'), (a[(a.TOOLTIP = 1)] = 'TOOLTIP'), (a[(a.COACHTIP = 2)] = 'COACHTIP'), (a[(a.COACHTIP_HEADLINE_ONLY = 3)] = 'COACHTIP_HEADLINE_ONLY'), (a[(a.BADGE = 4)] = 'BADGE');
-let h = (t) =>
+let v = (t) =>
         (0, i.EQ)(t)
             .with(s.T.TIDE, () => ({
                 label: () => d.intl.string(d.t.kDb9hY),
-                iconSrc: v.Z,
+                iconSrc: h.Z,
                 style: {
                     background: 'linear-gradient(180deg, #103A8B -7.5%, #3390FD 128.75%)',
                     boxShadow: '0px 0px 15.4px 0px rgba(23, 160, 236, 0.5)',

@@ -1,26 +1,26 @@
-i(47120);
-var o = i(200651),
-    n = i(192379),
-    a = i(703533),
-    l = i(745510),
-    u = i(675654);
-let c = {
+o(47120);
+var i = o(200651),
+    n = o(192379),
+    a = o(703533),
+    l = o(745510),
+    r = o(675654);
+let u = {
         xMin: -40,
         xMax: 40,
         yMin: -40,
         yMax: -70
     },
-    r = (t, e, i) => (null == i ? e : (t * i) / 100),
+    c = (t, e, o) => (null == o ? e : (t * o) / 100),
     s = n.memo(function (t) {
-        let { confettiTarget: e, colors: i, emojiURL: s, numBursts: f, particlesPerBurst: d, offsetXPercentageMax: m, offsetXPercentageMin: p, offsetYPercentageMax: h, offsetYPercentageMin: x, customConfettiCanvas: y, speedValues: _ = c, dragCoefficientValue: g = 1.66, onAnimationEnd: v } = t,
-            [b, w] = n.useState(null),
+        let { confettiTarget: e, colors: o, emojiURL: s, numBursts: f, particlesPerBurst: d, offsetXPercentageMax: m, offsetXPercentageMin: p, offsetYPercentageMax: h, offsetYPercentageMin: x, customConfettiCanvas: y, speedValues: _ = u, dragCoefficientValue: g = 1.66, onAnimationEnd: v } = t,
+            [w, b] = n.useState(null),
             { confettiCanvas: C } = n.useContext(l.h),
-            M = (0, a.uR)(null != y ? y : C, b),
+            M = (0, a.uR)(null != y ? y : C, w),
             [G, k] = n.useState(!1);
         n.useEffect(() => {
             G && (null == v || v());
         });
-        let V = n.useMemo(() => {
+        let P = n.useMemo(() => {
             if (null != s)
                 return [
                     {
@@ -34,19 +34,19 @@ let c = {
                 if (null == e) return;
                 let t = Array(null != f ? f : 4).fill(0);
                 return (
-                    (t = t.map((i, o) =>
+                    (t = t.map((o, i) =>
                         setTimeout(() => {
                             M.createMultipleConfetti(
-                                (function (t, e, i, o, n) {
-                                    let a = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : c,
+                                (function (t, e, o, i, n) {
+                                    let a = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : u,
                                         l = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1.66,
-                                        s = r(t.width, 100, i),
-                                        f = r(t.height, 75, n),
-                                        d = r(t.width, 350, e),
-                                        m = r(t.height, 75, o),
+                                        s = c(t.width, 100, o),
+                                        f = c(t.height, 75, n),
+                                        d = c(t.width, 350, e),
+                                        m = c(t.height, 75, i),
                                         { xMin: p, xMax: h, yMin: x, yMax: y } = a;
                                     return {
-                                        ...u.We,
+                                        ...r.We,
                                         position: {
                                             type: 'static-random',
                                             minValue: {
@@ -71,8 +71,8 @@ let c = {
                                         },
                                         size: {
                                             type: 'static-random',
-                                            minValue: u.Ko,
-                                            maxValue: u.Ko
+                                            minValue: r.Ko,
+                                            maxValue: r.Ko
                                         },
                                         dragCoefficient: {
                                             type: 'static',
@@ -82,20 +82,20 @@ let c = {
                                 })(e.getBoundingClientRect(), m, p, h, x, _, g),
                                 null != d ? d : 50
                             ),
-                                o === t.length - 1 && null != v && k(!0);
-                        }, 60 * o)
+                                i === t.length - 1 && null != v && k(!0);
+                        }, 60 * i)
                     )),
                     () => {
                         for (let e of t) clearTimeout(e);
                     }
                 );
             }, [M, e, f, d, m, p, h, x, _, g, v]),
-            (0, o.jsx)(a.Ji, {
-                ref: w,
-                sprites: null != V ? V : u.CA,
-                colors: null != i ? i : u.Br,
-                spriteWidth: u.Ko,
-                spriteHeight: u.Ko
+            (0, i.jsx)(a.Ji, {
+                ref: b,
+                sprites: null != P ? P : r.CA,
+                colors: null != o ? o : r.Br,
+                spriteWidth: r.Ko,
+                spriteHeight: r.Ko
             })
         );
     });

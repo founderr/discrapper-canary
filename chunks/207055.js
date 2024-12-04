@@ -20,8 +20,8 @@ var i = n(200651),
     I = n(271383),
     E = n(131951),
     b = n(496675),
-    N = n(158776),
-    Z = n(885110),
+    Z = n(158776),
+    N = n(885110),
     S = n(797258),
     T = n(606304),
     j = n(979651),
@@ -54,7 +54,7 @@ let k = l.memo((e) => {
         ),
         G = (0, h.Z)(null != H ? [H.applicationId] : []),
         F = (0, y.Hr)('voice_users_eligibility_check', !1),
-        V = (0, s.e7)([N.Z, Z.Z], () => (L ? Z.Z.getActivities() : N.Z.getActivities(b, a.guild_id))).find((e) => null != e.application_id && e.type === M.IIU.PLAYING),
+        V = (0, s.e7)([Z.Z, N.Z], () => (L ? N.Z.getActivities() : Z.Z.getActivities(b, a.guild_id))).find((e) => null != e.application_id && e.type === M.IIU.PLAYING),
         z = (0, s.e7)([u.Z], () => ((null == V ? void 0 : V.application_id) != null ? u.Z.getApplication(null == V ? void 0 : V.application_id) : void 0));
     null != z && y.ZP.trackExposure({ location: 'voice_users' });
     let [W, K] = (0, s.Wu)([v.Z], () => [v.Z.getStreamForUser(b, a.getGuildId()), v.Z.getActiveStreamForUser(b, a.getGuildId())], [a, b]),
@@ -67,7 +67,7 @@ let k = l.memo((e) => {
         }),
         Q = (0, p.ZP)(a, !0, r),
         $ = (0, s.e7)([f.Z], () => (L ? f.Z.getHangStatusActivity() : null), [L]),
-        ee = (0, s.e7)([N.Z], () => N.Z.findActivity(b, (e) => e.type === M.IIU.HANG_STATUS), [b]),
+        ee = (0, s.e7)([Z.Z], () => Z.Z.findActivity(b, (e) => e.type === M.IIU.HANG_STATUS), [b]),
         et = (0, C.Eu)(a.id, b);
     return (0, i.jsx)(g.Z, {
         shakeLocation: R.oZ.VOICE_USER,
@@ -100,18 +100,18 @@ k.displayName = 'ConnectedVoiceUser';
 let O = [];
 t.Z = function (e) {
     let { allowPreviews: t = !0, allowDragging: n = !0, channel: r, voiceStates: c, collapsed: d, collapsedMax: u = 6, tabIndex: p, location: m, numAudience: f, withGuildIcon: g = !1, className: v, children: I } = e,
-        [E, Z] = l.useState(null),
+        [E, N] = l.useState(null),
         [S, T] = l.useState(!1),
         j = l.useRef(null),
         A = (0, C.Es)(r.id, null != c ? c : O),
         y = l.useRef(
             new o.sW(50, () => {
-                Z(j.current), (j.current = null);
+                N(j.current), (j.current = null);
             })
         ),
         R = l.useRef(
             new o.sW(175, () => {
-                Z(null);
+                N(null);
             })
         ),
         D = l.useCallback(
@@ -126,14 +126,14 @@ t.Z = function (e) {
             },
             [t, E]
         ),
-        B = (0, s.Wu)([N.Z], () => {
+        B = (0, s.Wu)([Z.Z], () => {
             if (d) return [];
             let e = new Set();
             return (
                 null == A ||
                     A.forEach((t) => {
                         let { user: n } = t;
-                        N.Z.getActivities(n.id, r.guild_id).forEach((t) => {
+                        Z.Z.getActivities(n.id, r.guild_id).forEach((t) => {
                             null != t.application_id && e.add(t.application_id);
                         });
                     }),

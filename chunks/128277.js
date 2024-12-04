@@ -13,7 +13,7 @@ var r = n(200651),
     c = n(906732),
     d = n(379357),
     f = n(358696),
-    _ = n(180335),
+    _ = n(649700),
     p = n(952164),
     h = n(960870),
     m = n(139793),
@@ -34,7 +34,7 @@ function D(e) {
     let { user: t, currentUser: n, activity: a, guild: D, channel: L, className: x, onClose: w } = e,
         { profileType: P } = (0, v.z)(),
         M = { [O.fullSize]: P === R.y0.FULL_SIZE },
-        k = (0, _.Bq)({
+        k = (0, _.Z)({
             activity: a,
             user: t
         }),

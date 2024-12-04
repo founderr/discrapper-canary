@@ -1,8 +1,8 @@
 t(47120);
 var n = t(200651);
 t(192379);
-var r = t(120356),
-    a = t.n(r),
+var a = t(120356),
+    r = t.n(a),
     o = t(979554),
     s = t(442837),
     l = t(481060),
@@ -16,7 +16,7 @@ var r = t(120356),
     m = t(388032),
     g = t(505069);
 i.Z = (e) => {
-    let { skuId: i, isSelected: t, price: r, onSelect: h, shouldDisplayHeader: x = !1, className: v } = e,
+    let { skuId: i, isSelected: t, price: a, onSelect: h, shouldDisplayHeader: x = !1, className: v } = e,
         { product: C } = (0, p.T)(i),
         { giftRecipient: I, giftRecipientError: S } = (0, c.wD)(),
         k = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
@@ -72,7 +72,7 @@ i.Z = (e) => {
                 onClick: () => {
                     null != i && null != h && h(i);
                 },
-                className: a()(g.previewContainer, {
+                className: r()(g.previewContainer, {
                     [g.previewContainerSelected]: t && null == S,
                     [g.previewContainerError]: t && null != S
                 }),
@@ -100,7 +100,7 @@ i.Z = (e) => {
                             }),
                             (0, n.jsx)(l.Text, {
                                 variant: 'text-md/semibold',
-                                children: r
+                                children: a
                             })
                         ]
                     }),

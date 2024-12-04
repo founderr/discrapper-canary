@@ -22,10 +22,10 @@ var r = n(200651),
     A = n(810568),
     S = n(998058),
     b = n(839392),
-    T = n(567409),
-    j = n(774073),
-    P = n(426482),
-    N = n(715318),
+    j = n(567409),
+    T = n(774073),
+    N = n(426482),
+    P = n(715318),
     M = n(38516),
     y = n(891949),
     L = n(252547),
@@ -84,14 +84,14 @@ function U(e) {
                         children: [
                             (0, r.jsx)('div', {
                                 className: Z.logoWrapper,
-                                children: (0, r.jsx)(P.C, {
+                                children: (0, r.jsx)(N.C, {
                                     game: n,
                                     application: a,
                                     className: Z.logo,
-                                    size: P.Z.LARGE
+                                    size: N.Z.LARGE
                                 })
                             }),
-                            (0, r.jsx)(N.Z, {
+                            (0, r.jsx)(P.Z, {
                                 applicationId: a.id,
                                 viewId: d,
                                 className: Z.overflowMenu
@@ -204,19 +204,19 @@ function B(e) {
         ]
     });
 }
-let F = (e) => e.filter(j.z6).slice(0, 5);
+let F = (e) => e.filter(T.z6).slice(0, 5);
 t.default = (e) => {
     var t;
     let { applicationId: n, source: a, sourceUserId: o, transitionState: s, onClose: c } = e,
         { clientThemesClassName: v } = (0, f.ZP)(),
         I = (0, d.e7)([E.default], () => E.default.locale),
         C = i.useMemo(() => (0, A.fP)(), []),
-        j = (0, d.Wu)([b.Z], () => {
+        T = (0, d.Wu)([b.Z], () => {
             var e;
             return (null !== (e = b.Z.getSimilarGames(n)) && void 0 !== e ? e : []).slice(0, 25);
         }),
-        [P, N] = i.useState(null),
-        M = (0, T.Ns)(n),
+        [N, P] = i.useState(null),
+        M = (0, j.Ns)(n),
         [y, L] = i.useState(null),
         O = (0, g.q)(n),
         R = (0, d.e7)([_.Z], () => _.Z.getGame(n)),
@@ -244,22 +244,22 @@ t.default = (e) => {
     i.useEffect(() => {
         (0, h.Jn)();
     }, []),
-    (0, g.Z)(j),
+    (0, g.Z)(T),
     i.useEffect(() => {
         !I.startsWith('en') && (null == R ? void 0 : R.summaryLocalized) == null && m.Z.getDetectableGamesSupplemental([n], { forceFetch: !0 });
     }, [n, null == R ? void 0 : R.summaryLocalized, I]),
     i.useEffect(() => {
         (async () => {
-            if (0 === j.length) {
-                N(null);
+            if (0 === T.length) {
+                P(null);
                 try {
                     await (0, S.i)(n);
                 } catch (e) {
-                    N(e);
+                    P(e);
                 }
             }
         })();
-    }, [n, j]),
+    }, [n, T]),
     (0, p.Z)(() => {
         var e;
         let t = Date.now(),
@@ -277,7 +277,7 @@ t.default = (e) => {
             gameName: null != w ? w : '',
             playedFriendIds: M.map((e) => e.author_id),
             playedFriendsData: r,
-            similarGames: F(j),
+            similarGames: F(T),
             officialGuildId: null == y ? void 0 : null === (e = y.guild) || void 0 === e ? void 0 : e.id
         });
     }),
@@ -306,8 +306,8 @@ t.default = (e) => {
                                       application: O,
                                       entries: M,
                                       officialGuildInvite: y,
-                                      similarGames: j,
-                                      similarGamesError: P,
+                                      similarGames: T,
+                                      similarGamesError: N,
                                       onClose: c,
                                       viewId: C,
                                       trackAction: k

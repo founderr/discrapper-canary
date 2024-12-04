@@ -24,11 +24,11 @@ function N(e) {
             () =>
                 (function (e) {
                     switch (e) {
-                        case E.F$.SERVERS:
+                        case E.GlobalDiscoveryTab.SERVERS:
                             return (0, i.jsx)(o.ServerIcon, { color: 'currentColor' });
-                        case E.F$.APPS:
+                        case E.GlobalDiscoveryTab.APPS:
                             return (0, i.jsx)(o.AppsIcon, { color: 'currentColor' });
-                        case E.F$.QUESTS:
+                        case E.GlobalDiscoveryTab.QUESTS:
                             return (0, i.jsx)(o.QuestsIcon, { color: 'currentColor' });
                     }
                 })(t),
@@ -38,25 +38,25 @@ function N(e) {
         C = n === t,
         N = r.useCallback(() => {
             switch (t) {
-                case E.F$.QUESTS:
+                case E.GlobalDiscoveryTab.QUESTS:
                     return (
                         C && (0, p.B)(),
-                        (0, _.u)({
-                            tab: E.F$.QUESTS,
+                        (0, _.transitionToGlobalDiscovery)({
+                            tab: E.GlobalDiscoveryTab.QUESTS,
                             location: I.dr.DISCOVERY_SIDEBAR,
                             questContent: s.j.DISCOVERY_SIDEBAR
                         })
                     );
-                case E.F$.APPS:
+                case E.GlobalDiscoveryTab.APPS:
                     if (!C) return (0, u.XL)();
-                    (0, d.x)(), (0, _.u)({ tab: t });
+                    (0, d.x)(), (0, _.transitionToGlobalDiscovery)({ tab: t });
                     return;
-                case E.F$.SERVERS:
-                    if (!C) return (0, _.u)({ tab: t });
+                case E.GlobalDiscoveryTab.SERVERS:
+                    if (!C) return (0, _.transitionToGlobalDiscovery)({ tab: t });
                     (0, h.V)(), (0, m.O)();
                     return;
                 default:
-                    return (0, _.u)({ tab: t });
+                    return (0, _.transitionToGlobalDiscovery)({ tab: t });
             }
         }, [t, C]);
     return (0, i.jsxs)(o.Clickable, {
@@ -89,7 +89,7 @@ t.Z = function () {
             }),
             (0, i.jsx)('nav', {
                 className: v.nav,
-                children: E.mc.map((t) => (t !== E.F$.APPS || e ? (0, i.jsx)(N, { tab: t }, t) : null))
+                children: E.GLOBAL_DISCOVERY_TABS.map((t) => (t !== E.GlobalDiscoveryTab.APPS || e ? (0, i.jsx)(N, { tab: t }, t) : null))
             })
         ]
     });

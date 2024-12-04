@@ -12,14 +12,14 @@ t(192379);
 var o = t(481060),
     r = t(118012),
     a = t(970184),
-    l = t(471073),
-    s = t(293979),
+    s = t(471073),
+    l = t(293979),
     c = t(954654),
     u = t(388032),
     d = t(517753);
 function _(e) {
     let { title: n, onClose: t, transitionState: _ } = e,
-        { components: p, applicationIconURL: f, applicationName: I, submissionState: S, error: C, validators: T, onSubmit: m } = (0, s.X9)(e, t);
+        { components: p, applicationIconURL: I, applicationName: S, submissionState: f, error: C, validators: T, onSubmit: m } = (0, l.X9)(e, t);
     return (0, i.jsx)('form', {
         onSubmit: (e) => {
             e.preventDefault(), m();
@@ -31,9 +31,9 @@ function _(e) {
                     separator: !1,
                     children: [
                         (0, i.jsx)(o.Avatar, {
-                            src: f,
+                            src: I,
                             size: o.AvatarSizes.SIZE_24,
-                            'aria-label': I,
+                            'aria-label': S,
                             className: d.applicationIcon
                         }),
                         (0, i.jsx)(r.Z, {
@@ -59,7 +59,7 @@ function _(e) {
                         (0, i.jsx)(o.HelpMessage, {
                             messageType: o.HelpMessageTypes.WARNING,
                             className: d.submissionWarning,
-                            children: u.intl.format(u.t['dSTy//'], { applicationName: I })
+                            children: u.intl.format(u.t['dSTy//'], { applicationName: S })
                         }),
                         (0, i.jsx)(o.FormSection, {
                             children: (0, i.jsx)(a.Il, {
@@ -76,7 +76,7 @@ function _(e) {
                             type: 'submit',
                             color: o.Button.Colors.BRAND,
                             size: o.Button.Sizes.MEDIUM,
-                            submitting: S === l.i.IN_FLIGHT,
+                            submitting: f === s.i.IN_FLIGHT,
                             children: u.intl.string(u.t.geKm7u)
                         }),
                         (0, i.jsx)(o.Button, {

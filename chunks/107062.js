@@ -22,12 +22,12 @@ var l = n(200651),
     P = n(797342),
     L = n(981631),
     T = n(388032);
-let y = (e, t) =>
+let N = (e, t) =>
         T.intl.formatToPlainString(T.t.tAwI1t, {
             username: t.username,
             activity: e.extra.activity_name
         }),
-    N = (e, t, n) => {
+    y = (e, t, n) => {
         let l = T.t['bES+y8'],
             a = C.ZP.getName(t.guild_id, t.id, n),
             i = e.extra.activity_name;
@@ -74,7 +74,7 @@ t.ZP = (e) => {
                               users: [V, B],
                               countOthers: D
                           })
-                        : N(n, t, S);
+                        : y(n, t, S);
                 return (0, f.C4)({
                     entry: n,
                     applicationImageSrc: null == E ? void 0 : E.src,
@@ -134,7 +134,7 @@ t.ZP = (e) => {
                     user: S,
                     channel: t,
                     generateReactionImage: z,
-                    reactionImageAltText: y(n, S),
+                    reactionImageAltText: N(n, S),
                     entry: n,
                     buttons: J
                 })

@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return j;
+            return B;
         }
     });
 var i,
@@ -29,7 +29,7 @@ var i,
     A = n(521050),
     x = n(476945),
     y = n(945182);
-function j(e) {
+function B(e) {
     let { analyticsLocations: t, transitionState: n, onClose: i, giftRecipient: o, analyticsObject: s } = e;
     return (
         r.useEffect(() => {
@@ -40,7 +40,7 @@ function j(e) {
         }, []),
         (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, a.jsx)(O, {}),
+                (0, a.jsx)(j, {}),
                 (0, a.jsxs)(d.ModalRoot, {
                     size: d.ModalSize.DYNAMIC,
                     transitionState: n,
@@ -68,7 +68,7 @@ function j(e) {
                         }),
                         (0, a.jsx)(d.ModalContent, {
                             className: A.modalContent,
-                            children: (0, a.jsx)(R, {
+                            children: (0, a.jsx)(O, {
                                 analyticsLocations: t,
                                 giftRecipient: o,
                                 analyticsObject: s,
@@ -82,8 +82,8 @@ function j(e) {
     );
 }
 ((i = o || (o = {}))[(i.NITRO = 0)] = 'NITRO'), (i[(i.NITRO_BASIC = 1)] = 'NITRO_BASIC'), (i[(i.SHOP = 2)] = 'SHOP');
-let O = () => ((0, m.Z)(), null);
-function R(e) {
+let j = () => ((0, m.Z)(), null);
+function O(e) {
     let { giftRecipient: t, analyticsObject: n, onClose: i } = e,
         { showBothNitroSkusInCategorySelect: o } = v.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
         r = (0, p.hv)('CategoryButtons'),
@@ -123,7 +123,7 @@ function R(e) {
                             className: A.buttonText,
                             children: T.intl.string(T.t['lG6a5+'])
                         }),
-                        (0, a.jsx)(F, { imageType: 0 })
+                        (0, a.jsx)(R, { imageType: 0 })
                     ]
                 })
             }),
@@ -139,7 +139,7 @@ function R(e) {
                                 className: A.buttonText,
                                 children: T.intl.string(T.t['t9uG/v'])
                             }),
-                            (0, a.jsx)(F, { imageType: 1 })
+                            (0, a.jsx)(R, { imageType: 1 })
                         ]
                     })
                 }),
@@ -164,14 +164,14 @@ function R(e) {
                             className: A.buttonText,
                             children: T.intl.string(T.t.gFlB9f)
                         }),
-                        (0, a.jsx)(F, { imageType: 2 })
+                        (0, a.jsx)(R, { imageType: 2 })
                     ]
                 })
             })
         ]
     });
 }
-function F(e) {
+function R(e) {
     let { imageType: t } = e,
         { avatarPlaceholderSrc: n } = (0, h.Z)({ size: (0, _.y9)(d.AvatarSizes.SIZE_80) }),
         i = (0, f.Z)('a_c3cffc19e9784f7d0b005eecdf1b566e', d.AvatarSizes.SIZE_80, !1);

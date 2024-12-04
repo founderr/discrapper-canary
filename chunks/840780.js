@@ -19,8 +19,8 @@ var i = n(200651),
     x = n(317381),
     I = n(835473),
     b = n(933557),
-    E = n(194082),
-    S = n(436774),
+    S = n(194082),
+    E = n(436774),
     Z = n(594190),
     N = n(925329),
     y = n(102172),
@@ -35,8 +35,8 @@ var i = n(200651),
     D = n(199902),
     O = n(314897),
     k = n(592125),
-    U = n(984933),
-    G = n(430824),
+    G = n(984933),
+    U = n(430824),
     B = n(131951),
     H = n(496675),
     V = n(158776),
@@ -91,9 +91,9 @@ class ei extends l.PureComponent {
             children: [
                 e
                     ? (0, i.jsx)(j.Z, { title: r })
-                    : (0, i.jsx)(E.ZP, {
-                          look: E.ZP.Looks.GRAY,
-                          size: E.ZP.Sizes.SMALL,
+                    : (0, i.jsx)(S.ZP, {
+                          look: S.ZP.Looks.GRAY,
+                          size: S.ZP.Sizes.SMALL,
                           className: et.liveIndicator
                       }),
                 (0, i.jsxs)('div', {
@@ -106,7 +106,7 @@ class ei extends l.PureComponent {
                                 children: [
                                     (0, i.jsx)(u.NitroWheelIcon, {
                                         size: 'xxs',
-                                        color: S.JX.PREMIUM_TIER_2
+                                        color: E.JX.PREMIUM_TIER_2
                                     }),
                                     (0, i.jsx)(L.Z, {
                                         className: et.perksDemoText,
@@ -200,12 +200,12 @@ t.Z = (0, f.Z)(function (e) {
         o = (0, c.e7)([W.Z, k.Z], () => k.Z.getChannel(W.Z.getVoiceChannelId())),
         s = (0, c.e7)([x.ZP], () => x.ZP.getConnectedActivityChannelId()),
         u = (0, c.e7)([k.Z], () => k.Z.getChannel(s)),
-        d = (0, c.e7)([G.Z], () => G.Z.getGuild(null == u ? void 0 : u.guild_id)),
+        d = (0, c.e7)([U.Z], () => U.Z.getGuild(null == u ? void 0 : u.guild_id)),
         [h, p] = (0, c.Wu)([D.Z], () => [D.Z.getCurrentUserActiveStream(), D.Z.getStreamerActiveStreamMetadata()]),
         m = (0, c.e7)([g.Z], () => g.Z.useReducedMotion),
         f = (0, c.e7)([x.ZP], () => (null != u ? x.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
-        v = (0, c.e7)([G.Z, H.Z, U.ZP], () => (null != o ? y.JL(o, G.Z, H.Z, !1) : null != n && y.h_(U.ZP.getChannels(n), G.Z, H.Z).length > 0)),
-        [E] = (0, I.Z)([
+        v = (0, c.e7)([U.Z, H.Z, G.ZP], () => (null != o ? y.JL(o, U.Z, H.Z, !1) : null != n && y.h_(G.ZP.getChannels(n), U.Z, H.Z).length > 0)),
+        [S] = (0, I.Z)([
             null !==
                 (t = (function () {
                     if (null != p && null != p.id) return p.id;
@@ -215,8 +215,8 @@ t.Z = (0, f.Z)(function (e) {
                 ? t
                 : ''
         ]),
-        S = (0, c.e7)([x.ZP], () => x.ZP.getCurrentEmbeddedActivity()),
-        N = (0, _.Z0)() && null != S && (0, C.R)(),
+        E = (0, c.e7)([x.ZP], () => x.ZP.getCurrentEmbeddedActivity()),
+        N = (0, _.Z0)() && null != E && (0, C.R)(),
         A = (0, c.e7)([B.Z], () => (0, T.Z)(B.Z) && (0, K.isWindows)()),
         j = (0, c.e7)([V.Z], () => (null != r ? V.Z.findActivity(r, (e) => e.type === $.IIU.PLAYING) : null)),
         R = null != h && h.ownerId === r && h.state !== $.jm8.ENDED,
@@ -230,7 +230,7 @@ t.Z = (0, f.Z)(function (e) {
         embeddedActivity: f,
         userId: r,
         runningGame: a,
-        application: E,
+        application: S,
         useReducedMotion: m,
         isStreaming: R,
         channel: u,

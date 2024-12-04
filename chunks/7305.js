@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         PremiumPaymentModal: function () {
-            return k;
+            return b;
         },
         STEPS: function () {
             return O;
@@ -43,8 +43,8 @@ var i = n(200651),
     N = n(388032),
     A = n(809186);
 let U = [f.h8.PLAN_SELECT, f.h8.ADD_PAYMENT_STEPS, f.h8.REVIEW, f.h8.CONFIRM];
-function k(e) {
-    let { analyticsLocation: t, analyticsObject: n, analyticsSourceLocation: s, onComplete: o, transitionState: d, initialPlanId: c, subscriptionTier: j, onClose: L, trialId: m, trialFooterMessageOverride: g, reviewWarningMessage: E, openInvoiceId: S, onSubscriptionConfirmation: y, renderPurchaseConfirmation: M, postSuccessGuild: Z, followupSKUInfo: I, renderHeader: v, applicationId: N, guildId: A, referralTrialOfferId: U, skuId: k, returnRef: b, skipConfirm: R = !1, continueSession: O = !1, continueSessionInitialStep: w } = e,
+function b(e) {
+    let { analyticsLocation: t, analyticsObject: n, analyticsSourceLocation: s, onComplete: o, transitionState: d, initialPlanId: c, subscriptionTier: j, onClose: L, trialId: m, trialFooterMessageOverride: g, reviewWarningMessage: E, openInvoiceId: S, onSubscriptionConfirmation: y, renderPurchaseConfirmation: M, postSuccessGuild: Z, followupSKUInfo: I, renderHeader: v, applicationId: N, guildId: A, referralTrialOfferId: U, skuId: b, returnRef: k, skipConfirm: R = !1, continueSession: O = !1, continueSessionInitialStep: w } = e,
         { analyticsLocations: H } = (0, C.ZP)();
     l.useEffect(() => {
         !u.Z.isLoadedForPremiumSKUs() && r.Z.wait(() => (0, a.Y2)());
@@ -78,16 +78,16 @@ function k(e) {
         applicationId: N,
         guildId: A,
         referralTrialOfferId: U,
-        skuId: k,
+        skuId: b,
         shakeWhilePurchasing: !0,
         isLargeModal: D,
-        returnRef: b,
+        returnRef: k,
         skipConfirm: R,
         continueSession: O,
         continueSessionInitialStep: w
     });
 }
-function b(e) {
+function k(e) {
     let { startedPaymentFlowWithPaymentSourcesRef: t, selectedSkuId: n } = (0, h.usePaymentContext)(),
         { isGift: i } = (0, x.wD)();
     return (0, y.Kp)({
@@ -101,7 +101,7 @@ function R(e) {
     let { initialPlanId: t, handleStepChange: n, referralTrialOfferId: l } = e,
         { paymentSources: s, selectedSkuId: r, selectedPlan: a } = (0, h.usePaymentContext)(),
         { isGift: o, claimableRewards: C } = (0, x.wD)(),
-        u = b(
+        u = k(
             (0, v.Z)({
                 isGift: o,
                 skuId: r,
@@ -147,7 +147,7 @@ let O = [
         renderStep: (e) => (0, i.jsx)(M.x, { ...e }),
         options: {
             renderHeader: !0,
-            useBreadcrumbLabel: (e) => (b(e) ? null : N.intl.string(N.t['r+SebW']))
+            useBreadcrumbLabel: (e) => (k(e) ? null : N.intl.string(N.t['r+SebW']))
         }
     },
     {
@@ -155,7 +155,7 @@ let O = [
         renderStep: (e) => (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(R, { ...e }) }),
         options: {
             renderHeader: !0,
-            useBreadcrumbLabel: (e) => (b(e) ? null : N.intl.string(N.t.Sb6wIy))
+            useBreadcrumbLabel: (e) => (k(e) ? null : N.intl.string(N.t.Sb6wIy))
         }
     },
     {
@@ -171,7 +171,7 @@ let O = [
         renderStep: (e) => (0, i.jsx)(g.l, { ...e }),
         options: {
             renderHeader: !0,
-            useBreadcrumbLabel: (e) => (b(e) ? N.intl.string(N.t.UKbp1N) : N.intl.string(N.t.QBnNHh))
+            useBreadcrumbLabel: (e) => (k(e) ? N.intl.string(N.t.UKbp1N) : N.intl.string(N.t.QBnNHh))
         }
     },
     {
@@ -209,7 +209,7 @@ function w(e) {
                 giftMessage: d,
                 giftStyle: u,
                 giftingOrigin: p,
-                children: (0, i.jsx)(k, { ...e })
+                children: (0, i.jsx)(b, { ...e })
             })
         })
     });

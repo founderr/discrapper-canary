@@ -26,8 +26,8 @@ var l = n(120356),
     I = n(910611),
     E = n(454585),
     b = n(134483),
-    N = n(210975),
-    Z = n(809244),
+    Z = n(210975),
+    N = n(809244),
     S = n(618158),
     T = n(358221),
     j = n(362721),
@@ -58,7 +58,7 @@ function B(e) {
 }
 function U(e) {
     let { user: t, channel: n, stream: l, color: r } = e,
-        a = (0, Z.Z)(n, t, l);
+        a = (0, N.Z)(n, t, l);
     return null == t || null == l
         ? null
         : (0, i.jsxs)(i.Fragment, {
@@ -149,7 +149,7 @@ function G(e) {
         ),
         C = (0, p.ZP)(t),
         x = (0, m.KS)(t),
-        [Z] = (0, u.Z)((null == g ? void 0 : g.type) === R.fO.ACTIVITY ? [g.id] : []),
+        [N] = (0, u.Z)((null == g ? void 0 : g.type) === R.fO.ACTIVITY ? [g.id] : []),
         S = O.intl.string(O.t.BVZqJi);
     t.isDM() ? (S = O.intl.string(O.t.jN2DfX)) : t.isGroupDM() && (S = O.intl.string(O.t['e5y+go']));
     let A = (0, a.e7)([h.Z], () => h.Z.getChannelStatus(t)),
@@ -197,7 +197,7 @@ function G(e) {
             { modalKey: M.VOICE_CHANNEL_STATUS_MODAL_KEY }
         );
     }
-    let F = (0, N.m$)({
+    let F = (0, Z.m$)({
         channelId: t.id,
         location: 'ChannelCallHeader'
     });
@@ -252,7 +252,7 @@ function G(e) {
                                 guild: l
                             }),
                             (0, i.jsx)(H, {
-                                focusedApplication: Z,
+                                focusedApplication: N,
                                 focusedParticipant: g,
                                 channel: t
                             })

@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(558317),
     E = n(403404),
     b = n(981631),
-    N = n(388032),
-    Z = n(350562);
+    Z = n(388032),
+    N = n(350562);
 let S = 'vc-activities-'.concat((0, s.Z)()),
     T = l.forwardRef(function (e, t) {
         let { channel: n, isHovered: r, closePopout: s, onMouseEnter: T, onMouseLeave: j, onClick: A, className: y } = e,
@@ -89,46 +89,46 @@ let S = 'vc-activities-'.concat((0, s.Z)()),
                             children: (0, i.jsx)(c.HiddenVisually, {
                                 children: (0, i.jsx)(c.H, {
                                     id: S,
-                                    children: N.intl.string(N.t['2lnYtL'])
+                                    children: Z.intl.string(Z.t['2lnYtL'])
                                 })
                             })
                         }),
                         (0, i.jsxs)('div', {
-                            className: Z.container,
+                            className: N.container,
                             onMouseEnter: H,
                             onMouseLeave: j,
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: Z.titleContainer,
+                                    className: N.titleContainer,
                                     children: [
                                         (0, i.jsxs)('div', {
-                                            className: Z.titleLeft,
+                                            className: N.titleLeft,
                                             children: [
                                                 (0, i.jsx)(c.ActivitiesIcon, {
                                                     size: 'md',
-                                                    className: Z.titleLeftIcon,
+                                                    className: N.titleLeftIcon,
                                                     color: 'var(--interactive-active)'
                                                 }),
                                                 (0, i.jsx)(c.Text, {
                                                     variant: 'eyebrow',
-                                                    children: N.intl.string(N.t.f3Cz29)
+                                                    children: Z.intl.string(Z.t.f3Cz29)
                                                 })
                                             ]
                                         }),
                                         (0, i.jsxs)(c.Clickable, {
-                                            className: Z.titleRight,
+                                            className: N.titleRight,
                                             onClick: U,
                                             children: [
                                                 (0, i.jsx)(c.Text, {
                                                     variant: 'eyebrow',
-                                                    children: N.intl.string(N.t['K8+z4e'])
+                                                    children: Z.intl.string(Z.t['K8+z4e'])
                                                 }),
                                                 (0, i.jsx)(c.ChevronSmallRightIcon, {
                                                     size: 'custom',
                                                     width: 12,
                                                     height: 12,
                                                     color: 'var(--interactive-active)',
-                                                    className: Z.titleRightIcon
+                                                    className: N.titleRightIcon
                                                 })
                                             ]
                                         })
@@ -139,7 +139,7 @@ let S = 'vc-activities-'.concat((0, s.Z)()),
                                     children: null
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: Z.activityContainer,
+                                    className: N.activityContainer,
                                     children: [
                                         B.map((e) =>
                                             (0, i.jsx)(
@@ -151,17 +151,17 @@ let S = 'vc-activities-'.concat((0, s.Z)()),
                                                         s(), A();
                                                     },
                                                     aspectRatio: _.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
-                                                    animatedDivClass: Z.activitySuggestion,
+                                                    animatedDivClass: N.activitySuggestion,
                                                     commandOrigin: f.bB.MINI_SHELF
                                                 },
                                                 e.application.id
                                             )
                                         ),
                                         (0, i.jsx)('div', {
-                                            className: a()(Z.wumpusRocketOuterContainer, { [Z.wumpusReducedMotion]: P }),
+                                            className: a()(N.wumpusRocketOuterContainer, { [N.wumpusReducedMotion]: P }),
                                             children: (0, i.jsx)('div', {
-                                                className: Z.wumpusRocketInnerContainer,
-                                                children: (0, i.jsx)(I.Z, { className: Z.wumpusRocket })
+                                                className: N.wumpusRocketInnerContainer,
+                                                children: (0, i.jsx)(I.Z, { className: N.wumpusRocket })
                                             })
                                         })
                                     ]

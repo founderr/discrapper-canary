@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return D;
+        return M;
     }
 }),
     n(47120);
@@ -27,10 +27,10 @@ var i = n(200651),
     I = n(19780),
     C = n(944486),
     y = n(9156),
-    N = n(938475),
-    T = n(518084),
-    O = n(669083),
-    b = n(711553),
+    T = n(938475),
+    N = n(518084),
+    b = n(669083),
+    O = n(711553),
     A = n(981631),
     L = n(647086),
     P = n(388032),
@@ -49,7 +49,7 @@ function j(e, t, n) {
     );
 }
 let w = 54;
-class M extends r.PureComponent {
+class D extends r.PureComponent {
     static getDerivedStateFromProps(e) {
         let { guild: t } = e;
         return null == t || null == t.banner
@@ -73,7 +73,7 @@ class M extends r.PureComponent {
     }
     renderSettings(e) {
         let { closePopout: t } = e;
-        return (0, i.jsx)(O.Z, { onClose: t });
+        return (0, i.jsx)(b.Z, { onClose: t });
     }
     setAnimatedValue(e) {
         let { guild: t } = this.props,
@@ -113,7 +113,7 @@ class M extends r.PureComponent {
             { guild: n } = t,
             { controller: r, renderBanner: s, bannerVisible: a, communityInfoVisible: l } = this.state,
             c = n.id === L._ ? d.j : d.E;
-        return (0, i.jsxs)(b.Z, {
+        return (0, i.jsxs)(O.Z, {
             header: (0, i.jsx)(u.ZP, {
                 guild: n,
                 controller: r,
@@ -128,7 +128,7 @@ class M extends r.PureComponent {
                     position: 'right',
                     renderPopout: this.renderSettings,
                     children: (e) =>
-                        (0, i.jsx)(T.ZP.Icon, {
+                        (0, i.jsx)(N.ZP.Icon, {
                             icon: o.SettingsIcon,
                             label: P.intl.string(P.t['3D5yo6']),
                             ...e
@@ -170,7 +170,7 @@ class M extends r.PureComponent {
             });
     }
 }
-function D(e) {
+function M(e) {
     var t;
     let { guildId: n } = e,
         r = (0, a.e7)([x.Z], () => x.Z.getGuild(n)),
@@ -180,10 +180,10 @@ function D(e) {
             mutedChannels: y.ZP.getMutedChannels(n),
             collapseMuted: y.ZP.isGuildCollapsed(n)
         })),
-        h = (0, a.e7)([N.ZP], () => N.ZP.getVoiceStates(n)),
-        T = (0, a.e7)([g.Z], () => g.Z.getCollapsed()),
-        { scrollTo: O } = (0, a.e7)([m.Z], () => m.Z.getGuildDimensions(n)),
-        b = (0, p.Z)((e) => {
+        h = (0, a.e7)([T.ZP], () => T.ZP.getVoiceStates(n)),
+        N = (0, a.e7)([g.Z], () => g.Z.getCollapsed()),
+        { scrollTo: b } = (0, a.e7)([m.Z], () => m.Z.getGuildDimensions(n)),
+        O = (0, p.Z)((e) => {
             let { channelId: t } = e;
             return t;
         }),
@@ -192,29 +192,29 @@ function D(e) {
         R = (0, a.e7)([f.Z], () => f.Z.version),
         j = (0, a.e7)([E.default], () => E.default.getGuildChangeSentinel(n)),
         w = (0, l.QN)(null == r ? void 0 : r.id),
-        D = (0, c.gM)(null == r ? void 0 : r.id),
+        M = (0, c.gM)(null == r ? void 0 : r.id),
         k = null !== (t = null == r ? void 0 : r.hasFeature(A.oNc.COMMUNITY)) && void 0 !== t && t,
         z = (0, a.e7)([I.Z], () => I.Z.getChannelId()),
         V = (0, a.e7)([S.Z], () => S.Z.desyncedVoiceStatesCount);
-    return (0, i.jsx)(M, {
+    return (0, i.jsx)(D, {
         guildId: n,
         guild: r,
         channels: s,
         categories: o,
         mutedChannels: d,
-        scrollToChannel: O,
-        selectedChannelId: b,
+        scrollToChannel: b,
+        selectedChannelId: O,
         selectedVoiceChannelId: L,
         voiceStates: h,
         rtcConnectedChannelId: z,
         rtcDesyncedVoiceStatesCount: V,
-        collapsedChannels: T,
+        collapsedChannels: N,
         collapseMuted: u,
         guildReadStateSentinel: j,
         permissionVersion: P,
         categoryCollapseVersion: R,
         embeddedAppsByChannel: w,
-        activeEventsByChannel: D,
+        activeEventsByChannel: M,
         showNewUnreadsBar: k,
         optInEnabled: !1
     });

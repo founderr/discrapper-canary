@@ -1,20 +1,20 @@
-t.d(n, {
+n.d(t, {
     w: function () {
-        return l;
+        return i;
     }
 }),
-    t(789020);
-var i = t(85025);
-function l(e) {
-    let { flags: n } = e,
-        t = (0, i.O)(n),
-        l = null != t && ((null == t ? void 0 : t.messageContent) || (null == t ? void 0 : t.messageContentLimited)),
-        o = null != t && ((null == t ? void 0 : t.guildPresences) || (null == t ? void 0 : t.guildPresencesLimited)),
-        r = null != t && ((null == t ? void 0 : t.guildMembers) || (null == t ? void 0 : t.guildMembersLimited));
+    n(789020);
+var a = n(85025);
+function i(e) {
+    let { flags: t } = e,
+        n = (0, a.O)(t),
+        i = null != n && ((null == n ? void 0 : n.messageContent) || (null == n ? void 0 : n.messageContentLimited)),
+        s = null != n && ((null == n ? void 0 : n.guildPresences) || (null == n ? void 0 : n.guildPresencesLimited)),
+        r = null != n && ((null == n ? void 0 : n.guildMembers) || (null == n ? void 0 : n.guildMembersLimited));
     return {
-        hasMessageContent: l,
-        hasGuildPresences: o,
+        hasMessageContent: i,
+        hasGuildPresences: s,
         hasGuildMembers: r,
-        hasIntents: l || o || r
+        hasIntents: i || s || r
     };
 }

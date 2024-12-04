@@ -71,10 +71,10 @@ function g(e) {
         b = l.useCallback(() => {
             x(), I(h.NM.USER_BANNER_BLOCK_CONFIRM);
         }, [x, I]),
-        N = l.useCallback(() => {
+        Z = l.useCallback(() => {
             x(), I(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
         }, [x, I]),
-        Z = l.useCallback(() => {
+        N = l.useCallback(() => {
             (0, s.openModalLazy)(async () => {
                 let { default: e } = await n.e('41128').then(n.bind(n, 699783));
                 return (n) => {
@@ -82,7 +82,7 @@ function g(e) {
                     return (0, i.jsx)(e, {
                         transitionState: l,
                         onBlock: b,
-                        onBlockAndReport: N,
+                        onBlockAndReport: Z,
                         onCancel: () => {
                             null == r || r(), I(h.NM.USER_BANNER_BLOCK_CANCEL);
                         },
@@ -92,7 +92,7 @@ function g(e) {
                     });
                 };
             });
-        }, [b, N, C, t, I]);
+        }, [b, Z, C, t, I]);
     return (0, i.jsx)(p.Q, {
         channelId: t,
         warningId: g,
@@ -113,7 +113,7 @@ function g(e) {
                       {
                           text: f.intl.string(f.t['7q0bNT']),
                           color: s.Button.Colors.PRIMARY,
-                          onclick: Z
+                          onclick: N
                       }
                   ])
         ]

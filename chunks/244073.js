@@ -27,10 +27,10 @@ var i = n(200651),
     I = n(979651),
     C = n(362446),
     y = n(518084),
-    N = n(981631),
-    T = n(388032),
-    O = n(963656),
-    b = n(382290);
+    T = n(981631),
+    N = n(388032),
+    b = n(963656),
+    O = n(382290);
 function A(e, t, n) {
     return (
         t in e
@@ -52,14 +52,14 @@ class L extends r.PureComponent {
         let { guild: t } = this.props,
             n = (0, p.F6)(e, S.default, Z.Z),
             r = null != t ? ''.concat(n, ' / ').concat(t.name) : n,
-            s = null != t ? t.id : N.ME;
+            s = null != t ? t.id : T.ME;
         return (0, i.jsx)(o.rU, {
-            to: N.Z5c.CHANNEL(s),
+            to: T.Z5c.CHANNEL(s),
             onClick: (t) => {
                 t.stopPropagation(), u.Z.channelListScrollTo(s, e.id);
             },
             children: (0, i.jsx)(m.Z, {
-                className: b.channel,
+                className: O.channel,
                 children: r
             })
         });
@@ -69,13 +69,13 @@ class L extends r.PureComponent {
         return null == s
             ? null
             : (0, i.jsx)(y.ZP.Bar, {
-                  className: a()(e, O.controls, { [O.unpinned]: !n }),
+                  className: a()(e, b.controls, { [b.unpinned]: !n }),
                   children: (0, i.jsxs)(y.ZP.Content, {
-                      className: a()(t, O.content),
+                      className: a()(t, b.content),
                       dynamicSize: !0,
                       children: [
                           (0, i.jsx)('div', {
-                              className: b.inner,
+                              className: O.inner,
                               children: (0, i.jsx)(c.Popout, {
                                   renderPopout: () => this.renderPopout(s.id),
                                   position: 'top',
@@ -97,20 +97,20 @@ class L extends r.PureComponent {
                               grow: 0,
                               children: [
                                   (0, i.jsx)(g.Z, {
-                                      tooltipText: p ? T.intl.string(T.t.YqAjX1) : T.intl.string(T.t['w4m94+']),
+                                      tooltipText: p ? N.intl.string(N.t.YqAjX1) : N.intl.string(N.t['w4m94+']),
                                       icon: p ? c.MicrophoneSlashIcon : c.MicrophoneIcon,
-                                      iconForeground: p ? O.strikethrough : null,
+                                      iconForeground: p ? b.strikethrough : null,
                                       onClick: this.handleToggleSelfMute
                                   }),
                                   (0, i.jsx)(g.Z, {
-                                      tooltipText: h ? T.intl.string(T.t['2US87+']) : T.intl.string(T.t.wjcRFR),
+                                      tooltipText: h ? N.intl.string(N.t['2US87+']) : N.intl.string(N.t.wjcRFR),
                                       icon: h ? c.HeadphonesSlashIcon : c.HeadphonesIcon,
                                       onClick: this.handleToggleSelfDeaf,
-                                      iconForeground: h ? O.strikethrough : null
+                                      iconForeground: h ? b.strikethrough : null
                                   }),
                                   null == r &&
                                       (0, i.jsx)(g.Z, {
-                                          tooltipText: T.intl.string(T.t['6vrfgo']),
+                                          tooltipText: N.intl.string(N.t['6vrfgo']),
                                           onClick: this.handleDisconnect,
                                           icon: c.PhoneHangUpIcon
                                       })

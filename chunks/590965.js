@@ -19,11 +19,11 @@ var l,
     x = n(981631),
     I = n(176505);
 let b = x.IlC.APP,
-    E = !1,
     S = !1,
+    E = !1,
     Z = [];
 function N() {
-    E = !0;
+    S = !0;
 }
 class y extends (l = s.ZP.Store) {
     initialize() {
@@ -31,13 +31,13 @@ class y extends (l = s.ZP.Store) {
     }
     isOpen() {
         let e = __OVERLAY__ ? x.IlC.OVERLAY : x.IlC.APP;
-        return !!(E && Z.length > 0 && b === e);
+        return !!(S && Z.length > 0 && b === e);
     }
     getProps() {
         return {
             invite: Z.length > 0 ? Z[0][0] : null,
             error: null != i && '' !== i ? i : null,
-            submitting: S
+            submitting: E
         };
     }
 }
@@ -54,7 +54,7 @@ class y extends (l = s.ZP.Store) {
         OVERLAY_INITIALIZE: N,
         CONNECTION_OPEN: N,
         CONNECTION_CLOSED: function () {
-            E = !1;
+            S = !1;
         },
         INVITE_MODAL_OPEN: function (e) {
             let t = e.invite;
@@ -87,7 +87,7 @@ class y extends (l = s.ZP.Store) {
                 })
             )
                 return !1;
-            (b = e.context), (S = !1);
+            (b = e.context), (E = !1);
             let n = (function (e) {
                 let { approximate_member_count: t, approximate_presence_count: n, code: i, state: l, target_type: r, target_user: a, target_application: o, stage_instance: s, type: c, channel: u, guild: d } = e,
                     h = {
@@ -106,16 +106,16 @@ class y extends (l = s.ZP.Store) {
             Z.push([n, e.resolve]);
         },
         INVITE_MODAL_CLOSE: function () {
-            if (((i = null), (S = !1), Z.length > 0)) {
+            if (((i = null), (E = !1), Z.length > 0)) {
                 let [, e] = Z.shift();
                 null != e && e();
             }
         },
         INVITE_ACCEPT: function () {
-            S = !0;
+            E = !0;
         },
         INVITE_MODAL_ERROR: function (e) {
             let { message: t } = e;
-            (i = t), (S = !1);
+            (i = t), (E = !1);
         }
     }));

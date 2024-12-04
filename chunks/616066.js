@@ -16,8 +16,8 @@ var a = n(120356),
     f = n(638079);
 let p = d.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar,
     g = (t) => {
-        let { item: e, user: n, isHighlighted: a = !1, isPurchased: d = !1, avatarSize: g = s.AvatarSizes.SIZE_152, avatarPlaceholderSrc: v } = t,
-            h = (0, l.y9)(g),
+        let { item: e, user: n, isHighlighted: a = !1, isPurchased: d = !1, avatarSize: g = s.AvatarSizes.SIZE_152, avatarPlaceholderSrc: h } = t,
+            v = (0, l.y9)(g),
             {
                 avatarDecorationSrc: b,
                 eventHandlers: m,
@@ -25,13 +25,13 @@ let p = d.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar,
             } = (0, c.Z)({
                 user: n,
                 avatarDecorationOverride: (null == e ? void 0 : e.type) === o.Z.AVATAR_DECORATION ? e : void 0,
-                size: h,
+                size: v,
                 onlyAnimateOnHover: !a
             });
         return (0, r.jsx)(p, {
             ...m,
             avatarDecoration: b,
-            src: a ? (null == n ? void 0 : n.getAvatarURL(void 0, 152, !0)) : null != v ? v : x,
+            src: a ? (null == n ? void 0 : n.getAvatarURL(void 0, 152, !0)) : null != h ? h : x,
             imageClassName: a ? f.fadeInAvatarImg : void 0,
             className: i()(f.avatar, { [f.avatarPurchased]: d && !a }),
             size: g,

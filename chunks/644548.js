@@ -37,7 +37,7 @@ t.Z = (e) => {
     let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: o, onVoiceChannelPreview: j } = e,
         { largeImage: Z } = (0, s.rv)({ entry: n }),
         { user: P, details: L, appName: T } = (0, v.n)(n),
-        { primaryColor: y, secondaryColor: N } = (0, d.Z)(null == Z ? void 0 : Z.src),
+        { primaryColor: N, secondaryColor: y } = (0, d.Z)(null == Z ? void 0 : Z.src),
         _ = (0, u.yA)(n),
         A = (0, u.Nq)(n),
         E = a.useCallback(
@@ -49,11 +49,11 @@ t.Z = (e) => {
                         avatarSrcs: [P.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
                         description: f(n, t, P, A),
                         timestamp: g.intl.formatToPlainString(g.t.YL7UEx, { hours: Math.round(_ / r.Z.Seconds.HOUR) }),
-                        colors: [y, N],
+                        colors: [N, y],
                         channelId: e
                     });
             },
-            [null == Z ? void 0 : Z.src, t, _, n, y, A, N, P]
+            [null == Z ? void 0 : Z.src, t, _, n, N, A, y, P]
         );
     if (null == P || null == _ || null == A || !(0, h.qy)(A)) return null;
     let S = null != n.extra.platform ? m.v[n.extra.platform] : null;

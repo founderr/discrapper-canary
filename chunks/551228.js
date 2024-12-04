@@ -1,66 +1,66 @@
-l.d(n, {
+n.d(t, {
     pi: function () {
-        return x;
+        return p;
     },
     te: function () {
-        return m;
+        return _;
     }
 }),
-    l(47120);
-var t = l(200651),
-    i = l(192379),
-    r = l(442837),
-    a = l(594174),
-    d = l(379357),
-    s = l(719247),
-    u = l(442550),
-    c = l(297781),
-    o = l(443487),
-    h = l(830677);
-let m = [c.XF];
-function x(e) {
-    var n, l, t, i;
-    let d = (0, r.e7)([s.Z], () => s.Z.getMatchingActivity(e)),
-        u = (0, r.e7)([a.default], () => a.default.getUser(e.author_id));
-    if (null == d || null == u) return {};
+    n(47120);
+var r = n(200651),
+    i = n(192379),
+    a = n(442837),
+    s = n(594174),
+    o = n(379357),
+    l = n(719247),
+    u = n(442550),
+    c = n(297781),
+    d = n(443487),
+    f = n(830677);
+let _ = [c.XF];
+function p(e) {
+    var t, n, r, i;
+    let o = (0, a.e7)([l.Z], () => l.Z.getMatchingActivity(e)),
+        u = (0, a.e7)([s.default], () => s.default.getUser(e.author_id));
+    if (null == o || null == u) return {};
     let c = e.extra.entries[0],
-        o = null !== (t = null !== (l = d.state) && void 0 !== l ? l : null === (n = c.media.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== t ? t : c.media.title,
-        h = null !== (i = d.details) && void 0 !== i ? i : c.media.title;
+        d = null !== (r = null !== (n = o.state) && void 0 !== n ? n : null === (t = c.media.artists[0]) || void 0 === t ? void 0 : t.name) && void 0 !== r ? r : c.media.title,
+        f = null !== (i = o.details) && void 0 !== i ? i : c.media.title;
     return {
-        activity: d,
-        artist: o,
+        activity: o,
+        artist: d,
         currentEntry: c,
-        title: h,
+        title: f,
         user: u
     };
 }
-n.ZP = i.memo(function (e) {
-    let { entry: n, channel: l, selected: i } = e,
-        { activity: r, artist: a } = x(n),
-        { largeImage: s } = (0, d.rv)({ entry: n });
-    return null == r
-        ? (0, t.jsx)(o.cA, {})
-        : (0, t.jsxs)(o.Zb, {
+t.ZP = i.memo(function (e) {
+    let { entry: t, channel: n, selected: i } = e,
+        { activity: a, artist: s } = p(t),
+        { largeImage: l } = (0, o.rv)({ entry: t });
+    return null == a
+        ? (0, r.jsx)(d.cA, {})
+        : (0, r.jsxs)(d.Zb, {
               selected: i,
               children: [
-                  (0, t.jsxs)(o.e$, {
+                  (0, r.jsxs)(d.e$, {
                       children: [
-                          (0, t.jsx)(o.F9, {
-                              entry: n,
-                              channelId: l.id,
-                              guildId: l.guild_id
+                          (0, r.jsx)(d.F9, {
+                              entry: t,
+                              channelId: n.id,
+                              guildId: n.guild_id
                           }),
-                          (0, t.jsx)(o.ll, { children: a }),
-                          (0, t.jsx)(c.Gk, {
+                          (0, r.jsx)(d.ll, { children: s }),
+                          (0, r.jsx)(c.Gk, {
                               location: c.Gt.CARD,
-                              children: m.map((e, l) => (0, t.jsx)(e, { entry: n }, l))
+                              children: _.map((e, n) => (0, r.jsx)(e, { entry: t }, n))
                           })
                       ]
                   }),
-                  (0, t.jsx)(u.f, {
-                      src: null == s ? void 0 : s.src,
+                  (0, r.jsx)(u.f, {
+                      src: null == l ? void 0 : l.src,
                       size: 48,
-                      className: h.thumbnail
+                      className: f.thumbnail
                   })
               ]
           });

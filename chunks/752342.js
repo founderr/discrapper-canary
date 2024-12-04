@@ -23,8 +23,8 @@ var l = t(481060),
     v = t(53558),
     Z = t(544989),
     g = t(934861),
-    _ = t(495804),
-    j = t(740628),
+    j = t(495804),
+    _ = t(740628),
     b = t(398145),
     E = t(228168),
     N = t(981631),
@@ -83,7 +83,7 @@ function y(e) {
                                             channelId: P,
                                             profileType: E.y0.FULL_SIZE
                                         }),
-                                        (0, i.jsx)(_.Z, {
+                                        (0, i.jsx)(j.Z, {
                                             location: 'BotUserProfileModal',
                                             user: n,
                                             profileType: E.y0.FULL_SIZE,
@@ -132,7 +132,7 @@ function y(e) {
                                 }),
                                 (0, i.jsx)(I.Z.Overlay, {
                                     className: T.overlay,
-                                    children: (0, i.jsx)(j.Z, {
+                                    children: (0, i.jsx)(_.Z, {
                                         user: n,
                                         currentUser: t,
                                         displayProfile: F,

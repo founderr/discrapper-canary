@@ -53,7 +53,7 @@ let c = {
     },
     d = s.createContext(c);
 function f(e) {
-    let { children: t, theme: n = o.BR.DARK, primaryColor: r = null, secondaryColor: i = null, gradient: l = null, flags: c = 0, contrast: f = 1, saturation: _ = 1, density: p = 'compact', disableAdaptiveTheme: h = !1 } = e,
+    let { children: t, theme: n = o.BR.DARK, primaryColor: r = null, secondaryColor: i = null, gradient: l = null, flags: c = 0, contrast: f = 1, saturation: _ = 1, density: p = 'cozy', disableAdaptiveTheme: h = !1 } = e,
         m = s.useMemo(
             () =>
                 u({

@@ -25,8 +25,8 @@ var i,
     x = n(430824),
     I = n(306680),
     b = n(944486),
-    E = n(938475),
-    S = n(585483),
+    S = n(938475),
+    E = n(585483),
     Z = n(63063),
     N = n(51596),
     y = n(823385),
@@ -87,16 +87,16 @@ let O = c.ZP.connectStores([I.ZP, _.Z], (e) => {
             category: _.Z.getChannel(t.parent_id)
         };
     })(D),
-    k = c.ZP.connectStores([E.ZP], (e) => {
+    k = c.ZP.connectStores([S.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id) throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
-        return { voiceStates: E.ZP.getVoiceStates(t.guild_id)[t.id] };
+        return { voiceStates: S.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(D),
-    U = c.ZP.connectStores([v.default], (e) => {
+    G = c.ZP.connectStores([v.default], (e) => {
         let { guild: t } = e;
         return { unread: v.default.hasUnread(t.id) };
     })(T.ic),
-    G = c.ZP.connectStores([I.ZP], (e) => {
+    U = c.ZP.connectStores([I.ZP], (e) => {
         let { channel: t } = e;
         return { mentions: I.ZP.getMentionCount(t.id) };
     })(T.PZ),
@@ -197,7 +197,7 @@ class V extends r.PureComponent {
                 });
     }
     focusNode(e) {
-        S.S.dispatch(j.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
+        E.S.dispatch(j.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
     }
     getRowId(e) {
         return 'quick-switcher-'.concat(this._listId, '-item-').concat(e);
@@ -439,7 +439,7 @@ class V extends r.PureComponent {
                         );
                     case m.h8.GUILD:
                         return (0, l.jsx)(
-                            U,
+                            G,
                             {
                                 id: this.getRowId(t),
                                 focused: i >= 0 && t === i,
@@ -470,7 +470,7 @@ class V extends r.PureComponent {
                         );
                     case m.h8.GROUP_DM:
                         return (0, l.jsx)(
-                            G,
+                            U,
                             {
                                 id: this.getRowId(t),
                                 focused: i >= 0 && t === i,

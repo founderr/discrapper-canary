@@ -18,8 +18,8 @@ var i = n(200651),
     x = n(135724),
     I = n(25601),
     b = n(207055),
-    E = n(981631),
-    S = n(124368),
+    S = n(981631),
+    E = n(124368),
     Z = n(388032),
     N = n(831746),
     y = n(193877),
@@ -51,14 +51,14 @@ t.Z = l.memo(function (e) {
         D = (0, s.e7)([p.Z], () => p.Z.isMuted(t.id)),
         O = l.useCallback(
             (e) => {
-                (0, m.ok)(t, !e.shiftKey, S.on.CHANNEL_LIST);
+                (0, m.ok)(t, !e.shiftKey, E.on.CHANNEL_LIST);
             },
             [t]
         ),
         k = l.useCallback(() => {
             u.Z.preload(t.guild_id, t.id);
         }, [t.guild_id, t.id]),
-        U = l.useCallback(
+        G = l.useCallback(
             (e) => {
                 let l = f.Z.getChannel(t.id);
                 null != l &&
@@ -73,7 +73,7 @@ t.Z = l.memo(function (e) {
             },
             [t.id]
         ),
-        G = null == R ? 0 : R.length,
+        U = null == R ? 0 : R.length,
         { role: B, ...H } = (0, o.JA)(t.id),
         V = l.useRef(null),
         F =
@@ -112,7 +112,7 @@ t.Z = l.memo(function (e) {
                         [y.withGuildIcon]: P
                     }),
                     onMouseDown: k,
-                    onContextMenu: U,
+                    onContextMenu: G,
                     children: [
                         !L || D || r ? null : (0, i.jsx)('div', { className: a()(y.unread, y.unreadImportant) }),
                         (0, i.jsx)(c.Clickable, {
@@ -133,9 +133,9 @@ t.Z = l.memo(function (e) {
                                     (0, i.jsxs)('div', {
                                         className: y.children,
                                         children: [
-                                            G > 0 && t.userLimit > 0
+                                            U > 0 && t.userLimit > 0
                                                 ? (0, i.jsx)(x.Z, {
-                                                      userCount: G,
+                                                      userCount: U,
                                                       video: M,
                                                       channel: t
                                                   })
@@ -154,7 +154,7 @@ t.Z = l.memo(function (e) {
                 collapsed: !T,
                 collapsedMax: 6,
                 voiceStates: R,
-                location: E.Sbl.GUILD_CHANNEL_LIST
+                location: S.Sbl.GUILD_CHANNEL_LIST
             })
         ]
     });

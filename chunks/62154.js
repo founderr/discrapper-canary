@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return _;
+        return j;
     }
 });
 var i = t(200651);
@@ -22,18 +22,18 @@ var l = t(442837),
     v = t(228168),
     Z = t(981631),
     g = t(171865);
-function _(e) {
+function j(e) {
     var n;
-    let { user: t, currentUser: _, channelId: j, displayProfile: b, initialSection: E, initialSubsection: N, friendToken: S, onClose: T } = e,
+    let { user: t, currentUser: j, channelId: _, displayProfile: b, initialSection: E, initialSubsection: N, friendToken: S, onClose: T } = e,
         y = (0, l.e7)([o.Z], () => o.Z.getRelationshipType(t.id)),
         P = (0, h.Z)({
             user: t,
-            currentUser: _
+            currentUser: j
         }),
-        C = r.ZP.useName(null == b ? void 0 : b.guildId, j, t),
-        A = t.id === _.id,
+        C = r.ZP.useName(null == b ? void 0 : b.guildId, _, t),
+        A = t.id === j.id,
         { dimissibleUpsellsEnabled: L } = (0, c.u)({ location: 'UserProfileModalBody' }),
-        M = (0, s.I5)(_);
+        M = (0, s.I5)(j);
     return (0, i.jsxs)('div', {
         className: g.body,
         children: [
@@ -56,7 +56,7 @@ function _(e) {
                     children: (0, i.jsx)(f.Z, {
                         user: t,
                         guildId: null !== (n = null == b ? void 0 : b.guildId) && void 0 !== n ? n : void 0,
-                        channelId: j,
+                        channelId: _,
                         friendToken: S,
                         className: g.friendRequestBanner
                     })
@@ -72,7 +72,7 @@ function _(e) {
                 className: g.overlay,
                 children: (0, i.jsx)(p.Z, {
                     user: t,
-                    currentUser: _,
+                    currentUser: j,
                     displayProfile: b,
                     items: P,
                     initialSection: E,

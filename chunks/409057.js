@@ -20,7 +20,7 @@ var i = n(120356),
     m = n(541716),
     g = n(379357),
     E = n(358696),
-    v = n(180335),
+    v = n(649700),
     I = n(810568),
     T = n(168524),
     b = n(833858),
@@ -51,7 +51,7 @@ function Y(e) {
         { analyticsLocations: Q } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { profileType: X } = (0, O.z)(),
         J = { [H.fullSize]: X === Z.y0.FULL_SIZE },
-        $ = (0, v.Bq)({
+        $ = (0, v.Z)({
             activity: i,
             user: t
         }),

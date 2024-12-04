@@ -22,62 +22,62 @@ var i = n(200651),
     S = n(890030);
 t.Z = function (e) {
     let { applicationId: t, onSelectApplication: n, onScroll: T, initialTab: b } = e,
-        x = r.useRef(null),
-        A = (0, l.e7)([s.Z], () => s.Z.getApplication(t)),
+        A = r.useRef(null),
+        x = (0, l.e7)([s.Z], () => s.Z.getApplication(t)),
         Z = (0, l.e7)([s.Z], () => s.Z.getApplicationFetchState(t));
     r.useEffect(() => {
-        null != t && null == A && a.i6(t);
-    }, [t, A]);
-    let L = null == A ? void 0 : A.storefront_available,
-        [y, P] = r.useState(null != b ? b : C.Wc.ABOUT),
+        null != t && null == x && a.i6(t);
+    }, [t, x]);
+    let L = null == x ? void 0 : x.storefront_available,
+        [y, P] = r.useState(null != b ? b : C.GlobalDiscoveryAppsSections.ABOUT),
         O = r.useCallback(
             (e) => {
                 var t;
-                null === (t = x.current) || void 0 === t || t.scrollTo({ to: 0 }), P(C.Wc.ABOUT), n(e);
+                null === (t = A.current) || void 0 === t || t.scrollTo({ to: 0 }), P(C.GlobalDiscoveryAppsSections.ABOUT), n(e);
             },
             [n]
         );
     r.useEffect(() => {
-        (null == A ? void 0 : A.storefront_available) && null != t && (0, c.Z)(t);
-    }, [null == A ? void 0 : A.storefront_available, t]);
+        (null == x ? void 0 : x.storefront_available) && null != t && (0, c.Z)(t);
+    }, [null == x ? void 0 : x.storefront_available, t]);
     let R = r.useMemo(
             () => [
                 {
-                    id: C.Wc.ABOUT,
+                    id: C.GlobalDiscoveryAppsSections.ABOUT,
                     label: N.intl.string(N.t.JkjJBQ)
                 },
                 {
-                    id: C.Wc.STORE,
+                    id: C.GlobalDiscoveryAppsSections.STORE,
                     label: N.intl.string(N.t.NfuihY)
                 }
             ],
             []
         ),
         j = r.useMemo(() => {
-            if (null == A) return null;
+            if (null == x) return null;
             switch (y) {
-                case C.Wc.ABOUT:
-                    return (0, i.jsx)(g.Z, { application: A });
-                case C.Wc.STORE:
-                    return (0, i.jsx)(I.Z, { application: A });
+                case C.GlobalDiscoveryAppsSections.ABOUT:
+                    return (0, i.jsx)(g.Z, { application: x });
+                case C.GlobalDiscoveryAppsSections.STORE:
+                    return (0, i.jsx)(I.Z, { application: x });
             }
-        }, [y, A]),
+        }, [y, x]),
         D = r.useCallback(
             (e) => {
-                P(e), e === C.Wc.ABOUT ? (0, p.Gp)(v.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t)) : (0, p.Gp)(v.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, e));
+                P(e), e === C.GlobalDiscoveryAppsSections.ABOUT ? (0, p.Gp)(v.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t)) : (0, p.Gp)(v.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, e));
             },
             [t]
         ),
         M = r.useCallback((e) => {
             (0, p.pR)({ categoryId: e });
         }, []),
-        w = y === C.Wc.ABOUT;
+        w = y === C.GlobalDiscoveryAppsSections.ABOUT;
     return (0, i.jsx)(h.Z, {
         onScroll: T,
-        ref: x,
+        ref: A,
         children: (0, i.jsx)(d.Z, {
             children:
-                null == A
+                null == x
                     ? null == Z || Z === s.M.FETCHING
                         ? (0, i.jsx)('div', {
                               className: S.centerContainer,
@@ -90,7 +90,7 @@ t.Z = function (e) {
                     : (0, i.jsxs)('div', {
                           className: S.detailContainer,
                           children: [
-                              (0, i.jsx)(f.Z, { application: A }),
+                              (0, i.jsx)(f.Z, { application: x }),
                               (0, i.jsxs)('div', {
                                   className: S.contentContainer,
                                   children: [
@@ -108,7 +108,7 @@ t.Z = function (e) {
                                                   }),
                                               j,
                                               (0, i.jsx)(E.Z, {
-                                                  application: A,
+                                                  application: x,
                                                   onSelectApplication: O
                                               })
                                           ]
@@ -116,7 +116,7 @@ t.Z = function (e) {
                                       w &&
                                           (0, i.jsx)(_.Z, {
                                               className: S.sidebar,
-                                              application: A,
+                                              application: x,
                                               onSelectCategory: M
                                           })
                                   ]

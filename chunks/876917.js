@@ -10,12 +10,12 @@ var r = n(200651),
 e.Z = (t) => {
     let { profileEffectId: e, isHovering: n, forCollectedModal: i = !1, isPurchased: u, removeSetHeight: f = !1 } = t,
         p = i ? 250 : 0.1,
-        [g, v] = a.useState(!0);
+        [g, h] = a.useState(!0);
     return (a.useEffect(() => {
-        if (!0 !== i) v(!1);
+        if (!0 !== i) h(!1);
         else {
             let t = setTimeout(() => {
-                v(!1);
+                h(!1);
             }, p);
             return () => {
                 clearTimeout(t);

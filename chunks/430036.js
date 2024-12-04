@@ -27,25 +27,25 @@ var i = n(200651),
     I = n(1397),
     C = n(541716),
     y = n(752305),
-    N = n(974251),
-    T = n(893718),
-    O = n(249458),
-    b = n(552062),
+    T = n(974251),
+    N = n(893718),
+    b = n(249458),
+    O = n(552062),
     A = n(957730),
     L = n(400023),
     P = n(623292),
     R = n(807092),
     j = n(592125),
     w = n(703558),
-    M = n(731290),
-    D = n(430824),
+    D = n(731290),
+    M = n(430824),
     k = n(375954),
     z = n(944486),
     V = n(914010),
     U = n(594174),
     B = n(556296),
-    W = n(237997),
-    G = n(585483),
+    G = n(237997),
+    W = n(585483),
     F = n(838440),
     H = n(13140),
     Y = n(519591),
@@ -75,7 +75,7 @@ class ei extends r.Component {
         e.channel.id !== this.props.channel.id && this.draftDidChange(this.props), (this.props.channel !== e.channel || (this.props.isTemporarilyActive && !e.isTemporarilyActive)) && this.setState({ focused: !0 });
     }
     componentWillUnmount() {
-        w.Z.removeChangeListener(this.draftDidChange), G.S.unsubscribe(J.CkL.TEXTAREA_FOCUS, this.focusInput), G.S.unsubscribe(J.CkL.TEXTAREA_BLUR, this.blurInput);
+        w.Z.removeChangeListener(this.draftDidChange), W.S.unsubscribe(J.CkL.TEXTAREA_FOCUS, this.focusInput), W.S.unsubscribe(J.CkL.TEXTAREA_BLUR, this.blurInput);
     }
     render() {
         let { channel: e, placeholder: t, ...n } = this.props,
@@ -98,7 +98,7 @@ class ei extends r.Component {
                     );
                 },
                 children: () =>
-                    (0, i.jsx)(T.Z, {
+                    (0, i.jsx)(N.Z, {
                         ...n,
                         renderAttachButton: this.renderAttachButton,
                         channel: e,
@@ -178,7 +178,7 @@ class ei extends r.Component {
                           let { valid: s, failureReason: a } = e;
                           if (!s)
                               return a === J.zYc.SLOWMODE_COOLDOWN
-                                  ? (G.S.dispatch(J.CkL.EMPHASIZE_SLOWMODE_COOLDOWN),
+                                  ? (W.S.dispatch(J.CkL.EMPHASIZE_SLOWMODE_COOLDOWN),
                                     {
                                         shouldClear: !1,
                                         shouldRefocus: !0
@@ -207,7 +207,7 @@ class ei extends r.Component {
                 this.setState({ focused: !1 });
             }),
             et(this, 'renderAttachButton', (e, t) =>
-                (0, i.jsx)(N.Z, {
+                (0, i.jsx)(T.Z, {
                     className: t,
                     channel: this.props.channel,
                     draftType: w.d.ChannelMessage,
@@ -223,8 +223,8 @@ class ei extends r.Component {
             focused: !1,
             contentWarningProps: null
         }),
-            G.S.subscribe(J.CkL.TEXTAREA_FOCUS, this.focusInput),
-            G.S.subscribe(J.CkL.TEXTAREA_BLUR, this.blurInput);
+            W.S.subscribe(J.CkL.TEXTAREA_FOCUS, this.focusInput),
+            W.S.subscribe(J.CkL.TEXTAREA_BLUR, this.blurInput);
     }
 }
 class er extends r.PureComponent {
@@ -270,7 +270,7 @@ class er extends r.PureComponent {
                           },
                           t.id
                       )),
-            (0, i.jsx)(O.G.Provider, {
+            (0, i.jsx)(b.G.Provider, {
                 value: {
                     disableInteractions: u && l && !c,
                     disableAnimations: u && g && !c
@@ -433,11 +433,11 @@ class er extends r.PureComponent {
             }),
             et(this, 'moveDragStart', (e) => {
                 let { dragStart: t } = this.props;
-                t(b.B.MOVE, e.clientX, e.clientY);
+                t(O.B.MOVE, e.clientX, e.clientY);
             }),
             et(this, 'resizeDragStart', (e) => {
                 let { dragStart: t } = this.props;
-                t(b.B.RESIZE_SOUTH_EAST, e.clientX, e.clientY);
+                t(O.B.RESIZE_SOUTH_EAST, e.clientX, e.clientY);
             });
     }
 }
@@ -448,9 +448,9 @@ function es(e) {
         a = (0, c.e7)([j.Z], () => j.Z.getChannel(s)),
         o = (0, c.e7)([B.Z], () => B.Z.getOverlayChatKeybind()),
         l = null != o ? (0, H.BB)(o.shortcut, !0) : ']',
-        [d, u, h] = (0, c.Wu)([W.Z], () => [W.Z.getTextWidgetOpacity(), W.Z.getActiveRegions(), !t && W.Z.isPreviewingInGame()]),
-        p = (0, c.e7)([D.Z], () => D.Z.getGuild(r)),
-        f = (0, c.e7)([M.Z], () => null != r && M.Z.didAgree(r)),
+        [d, u, h] = (0, c.Wu)([G.Z], () => [G.Z.getTextWidgetOpacity(), G.Z.getActiveRegions(), !t && G.Z.isPreviewingInGame()]),
+        p = (0, c.e7)([M.Z], () => M.Z.getGuild(r)),
+        f = (0, c.e7)([D.Z], () => null != r && D.Z.didAgree(r)),
         g = null != a && a.isPrivate() ? a.getRecipientId() : null,
         m = (0, c.e7)([R.Z], () => (null != s ? R.Z.getPendingReply(s) : void 0)),
         v = (0, c.e7)([U.default], () => (null != g ? U.default.getUser(g) : null)),

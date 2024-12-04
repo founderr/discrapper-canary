@@ -100,23 +100,23 @@ function x() {
     });
 }
 t.ZP = l.memo(function (e) {
-    let { bannerVisible: t, controller: n, className: r, onClick: o, onContextMenu: I, onMouseDown: b, disableBannerAnimation: E, 'aria-expanded': S, 'aria-controls': Z, guild: N, guildBanner: y, animationOverlayHeight: T, children: A, headerClassName: j, communityInfoVisible: P, hasSubheader: R } = e,
+    let { bannerVisible: t, controller: n, className: r, onClick: o, onContextMenu: I, onMouseDown: b, disableBannerAnimation: S, 'aria-expanded': E, 'aria-controls': Z, guild: N, guildBanner: y, animationOverlayHeight: T, children: A, headerClassName: j, communityInfoVisible: P, hasSubheader: R } = e,
         M = N.hasFeature(m.oNc.ANIMATED_BANNER),
         L = (0, u.Z)(N),
         w = !L && N.hasCommunityInfoSubheader(),
         D = !L && P,
-        O = (0, h.xR)(y) && M && !E,
-        [k, U] = l.useState(!1),
-        G = l.useRef(),
+        O = (0, h.xR)(y) && M && !S,
+        [k, G] = l.useState(!1),
+        U = l.useRef(),
         B = l.useRef(null),
         H = l.useRef(),
         V = d.QK.getSetting();
     l.useEffect(() => {
-        if (O && t && !G.current && V)
+        if (O && t && !U.current && V)
             return (
-                U(!0),
+                G(!0),
                 (H.current = setTimeout(() => {
-                    U(!1);
+                    G(!1);
                 }, 5000)),
                 () => {
                     clearTimeout(H.current);
@@ -124,7 +124,7 @@ t.ZP = l.memo(function (e) {
             );
     }, [O, t, V]),
         l.useEffect(() => {
-            G.current = t;
+            U.current = t;
         }, [t]);
     let F = () => {
         let { renderBanner: t, guildBanner: n } = e;
@@ -141,7 +141,7 @@ t.ZP = l.memo(function (e) {
                         className: a()(r, {
                             [C.container]: !0,
                             [C.clickable]: null != o,
-                            [C.selected]: null != o && S,
+                            [C.selected]: null != o && E,
                             [C.hasBanner]: F(),
                             [C.bannerVisible]: t,
                             [e]: t,
@@ -172,7 +172,7 @@ t.ZP = l.memo(function (e) {
                                                 (0, i.jsx)(c.Clickable, {
                                                     className: C.headerButton,
                                                     'aria-controls': Z,
-                                                    'aria-expanded': S,
+                                                    'aria-expanded': E,
                                                     focusProps: {
                                                         ringTarget: B,
                                                         offset: 4
@@ -210,9 +210,9 @@ t.ZP = l.memo(function (e) {
                         ? (0, i.jsx)('div', {
                               className: C.animatedBannerHoverLayer,
                               onMouseEnter: () => {
-                                  U(!0), clearTimeout(H.current);
+                                  G(!0), clearTimeout(H.current);
                               },
-                              onMouseLeave: () => U(!1),
+                              onMouseLeave: () => G(!1),
                               style: { height: T }
                           })
                         : null

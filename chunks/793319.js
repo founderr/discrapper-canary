@@ -28,8 +28,8 @@ var i,
     I = n(317381),
     E = n(596040),
     b = n(100527),
-    N = n(906732),
-    Z = n(358221),
+    Z = n(906732),
+    N = n(358221),
     S = n(887012),
     T = n(659580),
     j = n(793865),
@@ -82,8 +82,8 @@ var i,
     eI = n(173507),
     eE = n(981631),
     eb = n(354459),
-    eN = n(921944),
-    eZ = n(812801);
+    eZ = n(921944),
+    eN = n(812801);
 function eS(e, t) {
     if (er.Z.isVideoEnabled() === e) return;
     let n = () => g.Z.setVideoEnabled(e);
@@ -103,17 +103,17 @@ function eT(e) {
             if ((null == i || i(), !l)) return (0, ev.Z)();
             (0, e_.Z)(E, t.id, eE.ZY5.GUILD_CHANNEL);
         }, [E, t.id, l, i]),
-        N = (0, G.x8)('GoLiveButton'),
-        Z = (0, P.bK)(),
+        Z = (0, G.x8)('GoLiveButton'),
+        N = (0, P.bK)(),
         [S, T] = a.useState(!1);
     a.useEffect(() => {
-        if ((T(t.isHDStreamSplashed && null == g && !Z), t.isHDStreamSplashed)) {
+        if ((T(t.isHDStreamSplashed && null == g && !N), t.isHDStreamSplashed)) {
             let e = setTimeout(() => {
                 T(!1);
             }, 300000);
             return () => clearTimeout(e);
         }
-    }, [t.isHDStreamSplashed, g, Z]);
+    }, [t.isHDStreamSplashed, g, N]);
     let j = () => {
             if (l) {
                 b();
@@ -140,7 +140,7 @@ function eT(e) {
                 ...i,
                 centerButton: !0,
                 disabled: o || !s,
-                className: c ? void 0 : eZ.controlButton,
+                className: c ? void 0 : eN.controlButton,
                 hasPermission: s,
                 streamActive: null != g,
                 isSelfStream: !0,
@@ -158,7 +158,7 @@ function eT(e) {
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            N && 0 === u.length
+            Z && 0 === u.length
                 ? (0, r.jsx)(M.ZP, {
                       contentTypes: [m.z.TRIAL_FOR_ALL_STREAM_POPOUT],
                       bypassAutoDismiss: !0,
@@ -168,7 +168,7 @@ function eT(e) {
                               return (0, r.jsx)(W.h, {
                                   buttonRef: I,
                                   dismissed: !1,
-                                  onDismiss: () => n(eN.L.USER_DISMISS)
+                                  onDismiss: () => n(eZ.L.USER_DISMISS)
                               });
                       }
                   })
@@ -218,7 +218,7 @@ function ej(e) {
         i = t.getGuildId();
     return (0, E.Z)(i, t.id)
         ? (0, r.jsx)('div', {
-              className: eZ.buttonContainer,
+              className: eN.buttonContainer,
               children: (0, r.jsx)(em.M, {
                   channel: t,
                   idle: n
@@ -229,7 +229,7 @@ function ej(e) {
 ((l = i || (i = {})).ACTIVITY = 'ACTIVITY'), (l.STREAM = 'STREAM'), (l.CALL = 'CALL'), (l.EVENT = 'EVENT');
 let eA = a.memo(function (e) {
     let { connectedActivityApplicationId: t, currentUser: n, onDisconnectCall: i, channel: l } = e,
-        s = (0, p.e7)([Z.Z], () => Z.Z.getSelectedParticipant(l.id)),
+        s = (0, p.e7)([N.Z], () => N.Z.getSelectedParticipant(l.id)),
         { reducedMotion: o } = a.useContext(f.AccessibilityPreferencesContext),
         [c, d] = a.useState(!1),
         h = null == s ? void 0 : s.id,
@@ -249,7 +249,7 @@ let eA = a.memo(function (e) {
             return 'CALL';
         }, [s, t, g, _]),
         [E, b] = a.useState(I()),
-        { groupedButtons: N } = (0, eC.Z)({ location: 'DisconnectButton' }),
+        { groupedButtons: Z } = (0, eC.Z)({ location: 'DisconnectButton' }),
         S = (0, f.useSpring)(
             {
                 opacity: c ? 0.2 : 1,
@@ -275,7 +275,7 @@ let eA = a.memo(function (e) {
             else for (let e of v) (0, x.g)((0, k.V9)(e));
         }, [v, m]),
         j = (e, t) => {
-            let a = N
+            let a = Z
                 ? {
                       fullRegionButton: !0,
                       centerButton: !0,
@@ -283,7 +283,7 @@ let eA = a.memo(function (e) {
                   }
                 : {
                       centerButton: !0,
-                      className: eZ.controlButton,
+                      className: eN.controlButton,
                       popoutOpen: e
                   };
             switch (E) {
@@ -375,21 +375,21 @@ function ey(e) {
                 cameraUnavailable: n,
                 hasPermission: i,
                 onCameraUnavailable: u,
-                className: eZ.controlButton,
+                className: eN.controlButton,
                 onChange: d
             }),
             (0, r.jsx)(J.Z, {
                 centerButton: !0,
                 color: 'green',
                 channel: t,
-                className: eZ.controlButton,
+                className: eN.controlButton,
                 fullRegionButton: m
             }),
             h
                 ? (0, r.jsx)(X.Z, {
                       color: 'red',
                       channel: t,
-                      className: eZ.controlButton,
+                      className: eN.controlButton,
                       fullRegionButton: m
                   })
                 : null
@@ -406,7 +406,7 @@ t.ZP = function (e) {
         }),
         { cameraUnavailable: g, enabled: C } = (0, ed.Z)(),
         x = (0, eh.Z)(i),
-        { suppress: _, selfMute: E, mute: Z } = (0, ep.Z)(i),
+        { suppress: _, selfMute: E, mute: N } = (0, ep.Z)(i),
         { canGoLive: P } = (0, p.cj)([er.Z], () => ({ canGoLive: (0, O.Z)(er.Z) })),
         M = (0, L.Z)(),
         k = (0, p.e7)([R.Z], () => null != R.Z.getAwaitingRemoteSessionInfo()),
@@ -421,9 +421,9 @@ t.ZP = function (e) {
             return null != e ? e.applicationId : null;
         }),
         { reachedLimit: G, limit: F } = (0, eu.Z)(i),
-        { analyticsLocations: V } = (0, N.ZP)(b.Z.VOICE_CONTROL_TRAY);
+        { analyticsLocations: V } = (0, Z.ZP)(b.Z.VOICE_CONTROL_TRAY);
     if (!w)
-        return (0, r.jsx)(N.Gt, {
+        return (0, r.jsx)(Z.Gt, {
             value: V,
             children: (0, r.jsx)(ey, {
                 channel: i,
@@ -448,20 +448,20 @@ t.ZP = function (e) {
             }) && !i.isPrivate(),
         Y = (0, K.Z)(i);
     return h
-        ? (0, r.jsx)(N.Gt, {
+        ? (0, r.jsx)(Z.Gt, {
               value: V,
               children: (0, r.jsxs)(v.Z, {
                   section: eE.jXE.VOICE_CONTROL_TRAY,
                   children: [
                       (0, r.jsx)('div', {
-                          className: eZ.eventPromptsContainer,
+                          className: eN.eventPromptsContainer,
                           children: (0, r.jsx)(U.Z, { channelId: i.id })
                       }),
                       (0, r.jsxs)('div', {
-                          className: o()(eZ.experimentWrapper, l),
+                          className: o()(eN.experimentWrapper, l),
                           children: [
                               (0, r.jsxs)('div', {
-                                  className: eZ.buttonSection,
+                                  className: eN.buttonSection,
                                   children: [
                                       (0, r.jsx)(f.Popout, {
                                           renderPopout: (e) => {
@@ -486,11 +486,11 @@ t.ZP = function (e) {
                                                   centerButton: !0,
                                                   onPopoutClick: D ? null : n,
                                                   selfMute: E,
-                                                  serverMute: Z,
+                                                  serverMute: N,
                                                   suppress: _,
                                                   popoutOpen: i,
                                                   awaitingRemote: k,
-                                                  onClick: () => (0, A.Z)(Z, _, eE.jXE.VOICE_CONTROL_TRAY)
+                                                  onClick: () => (0, A.Z)(N, _, eE.jXE.VOICE_CONTROL_TRAY)
                                               });
                                           }
                                       }),
@@ -524,7 +524,7 @@ t.ZP = function (e) {
                                   ]
                               }),
                               (0, r.jsxs)('div', {
-                                  className: eZ.buttonSection,
+                                  className: eN.buttonSection,
                                   children: [
                                       !D &&
                                           (0, r.jsx)(eT, {
@@ -546,7 +546,7 @@ t.ZP = function (e) {
                                           }),
                                       W && !D
                                           ? (0, r.jsx)('div', {
-                                                className: eZ.buttonContainer,
+                                                className: eN.buttonContainer,
                                                 children: (0, r.jsx)(ef.Z, { channel: i })
                                             })
                                           : null
@@ -563,17 +563,17 @@ t.ZP = function (e) {
                   ]
               })
           })
-        : (0, r.jsx)(N.Gt, {
+        : (0, r.jsx)(Z.Gt, {
               value: V,
               children: (0, r.jsxs)(v.Z, {
                   section: eE.jXE.VOICE_CONTROL_TRAY,
                   children: [
                       (0, r.jsx)('div', {
-                          className: eZ.eventPromptsContainer,
+                          className: eN.eventPromptsContainer,
                           children: (0, r.jsx)(U.Z, { channelId: i.id })
                       }),
                       (0, r.jsxs)('div', {
-                          className: o()(eZ.wrapper, l),
+                          className: o()(eN.wrapper, l),
                           children: [
                               'mic-button-moved-left' === u
                                   ? (0, r.jsx)(f.Popout, {
@@ -597,13 +597,13 @@ t.ZP = function (e) {
                                             return (0, r.jsx)(ee.Z, {
                                                 centerButton: !0,
                                                 onPopoutClick: D ? null : n,
-                                                className: eZ.controlButton,
+                                                className: eN.controlButton,
                                                 selfMute: E,
-                                                serverMute: Z,
+                                                serverMute: N,
                                                 suppress: _,
                                                 popoutOpen: i,
                                                 awaitingRemote: k,
-                                                onClick: () => (0, A.Z)(Z, _, eE.jXE.VOICE_CONTROL_TRAY)
+                                                onClick: () => (0, A.Z)(N, _, eE.jXE.VOICE_CONTROL_TRAY)
                                             });
                                         }
                                     })
@@ -623,7 +623,7 @@ t.ZP = function (e) {
                                           return (0, r.jsx)(en.C, {
                                               centerButton: !0,
                                               hasPermission: x,
-                                              className: eZ.controlButton,
+                                              className: eN.controlButton,
                                               enabled: C,
                                               cameraUnavailable: g,
                                               onChange: eS,
@@ -670,20 +670,20 @@ t.ZP = function (e) {
                                             return (0, r.jsx)(ee.Z, {
                                                 centerButton: !0,
                                                 onPopoutClick: D ? null : n,
-                                                className: eZ.controlButton,
+                                                className: eN.controlButton,
                                                 selfMute: E,
-                                                serverMute: Z,
+                                                serverMute: N,
                                                 suppress: _,
                                                 popoutOpen: i,
                                                 awaitingRemote: k,
-                                                onClick: () => (0, A.Z)(Z, _, eE.jXE.VOICE_CONTROL_TRAY)
+                                                onClick: () => (0, A.Z)(N, _, eE.jXE.VOICE_CONTROL_TRAY)
                                             });
                                         }
                                     })
                                   : null,
                               z && !D
                                   ? (0, r.jsx)('div', {
-                                        className: eZ.buttonContainer,
+                                        className: eN.buttonContainer,
                                         children: (0, r.jsx)(ef.Z, { channel: i })
                                     })
                                   : null,

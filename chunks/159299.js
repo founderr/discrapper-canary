@@ -151,13 +151,13 @@ function b(e) {
     for (let n in _) _[n].updateUserId(e) && (t = !0);
     return t;
 }
-function N(e) {
+function Z(e) {
     let { guildId: t } = e,
         n = !1;
     for (let e in _) _[e].guildId === t && (_[e].rebuild(), (n = !0));
     return n;
 }
-class Z extends (i = a.ZP.Store) {
+class N extends (i = a.ZP.Store) {
     initialize() {
         this.waitFor(o.Z, c.ZP, d.Z, u.Z, h.Z, p.default),
             this.syncWith([d.Z], () => {
@@ -187,8 +187,8 @@ class Z extends (i = a.ZP.Store) {
         return null !== (l = null == a ? void 0 : a.canViewChannel) && void 0 !== l && l;
     }
 }
-v(Z, 'displayName', 'ThreadMemberListStore'),
-    (t.Z = new Z(s.Z, {
+v(N, 'displayName', 'ThreadMemberListStore'),
+    (t.Z = new N(s.Z, {
         CONNECTION_OPEN: function () {
             _ = {};
         },
@@ -263,8 +263,8 @@ v(Z, 'displayName', 'ThreadMemberListStore'),
             }
             return n;
         },
-        GUILD_ROLE_UPDATE: N,
-        GUILD_ROLE_DELETE: N,
+        GUILD_ROLE_UPDATE: Z,
+        GUILD_ROLE_DELETE: Z,
         PASSIVE_UPDATE_V2: function (e) {
             return e.members.reduce((e, t) => b(t.user.id) || e, !1);
         }

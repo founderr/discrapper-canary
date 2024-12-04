@@ -22,8 +22,8 @@ var i = n(200651),
     S = n(667105),
     T = n(860151),
     b = n(341907),
-    x = n(46140),
-    A = n(981631),
+    A = n(46140),
+    x = n(981631),
     Z = n(388032),
     L = n(444865);
 function y(e) {
@@ -32,7 +32,7 @@ function y(e) {
         r = (0, m.B6)(n.config.expiresAt),
         l = (0, m.B6)(I.r.build(n.config).rewardsExpireAt),
         a = (0, s.e7)([d.Z], () => d.Z.getState().theme),
-        u = (0, o.wj)(a) ? A.BRd.DARK : A.BRd.LIGHT,
+        u = (0, o.wj)(a) ? x.BRd.DARK : x.BRd.LIGHT,
         h = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
     return (0, i.jsxs)('div', {
         className: L.heading,
@@ -65,7 +65,7 @@ t.Z = function (e) {
     let { quest: o } = e,
         d = (0, s.e7)([p.Z], () => p.Z.isEnrolling(o.id), [o]),
         [E, I] = r.useState(!1),
-        A = r.useCallback(() => I(!0), []),
+        x = r.useCallback(() => I(!0), []),
         P = r.useCallback(() => I(!1), []),
         O = r.useCallback((e) => {
             e.stopPropagation();
@@ -83,7 +83,7 @@ t.Z = function (e) {
                     questContent: g.jn.ACTIVITY_PANEL,
                     questContentCTA: u.jZ.TRACK_PROGRESS
                 }),
-                (0, b.navigateToQuestHome)(x.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, o.id));
+                (0, b.navigateToQuestHome)(A.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, o.id));
         }, [o]),
         D = r.useCallback(() => {
             (0, u._3)({
@@ -91,7 +91,7 @@ t.Z = function (e) {
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.LEARN_MORE
             }),
-                (0, b.navigateToQuestHome)(x.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, o.id);
+                (0, b.navigateToQuestHome)(A.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, o.id);
         }, [o]),
         M = (0, S.hf)({
             quest: o,
@@ -106,7 +106,7 @@ t.Z = function (e) {
         V = (0, _.D)({
             quest: o,
             taskDetails: H,
-            location: x.dr.ACTIVITY_PANEL,
+            location: A.dr.ACTIVITY_PANEL,
             questContent: g.jn.ACTIVITY_PANEL
         });
     return B || w || G
@@ -123,8 +123,8 @@ t.Z = function (e) {
                       className: a()(L.wrapper, { [L.wrapperQuestAccepted]: k }),
                       onClick: O,
                       onKeyPress: O,
-                      onFocus: A,
-                      onMouseEnter: A,
+                      onFocus: x,
+                      onMouseEnter: x,
                       onBlur: P,
                       onMouseLeave: P,
                       children: [
@@ -169,7 +169,7 @@ t.Z = function (e) {
                                   className: L.rewardTileWithInstructions,
                                   quest: o,
                                   questContent: g.jn.ACTIVITY_PANEL,
-                                  location: x.dr.ACTIVITY_PANEL,
+                                  location: A.dr.ACTIVITY_PANEL,
                                   taskDetails: H
                               }),
                           (0, i.jsxs)('div', {

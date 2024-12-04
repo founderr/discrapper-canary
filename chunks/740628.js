@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return _;
+        return j;
     }
 }),
     t(47120);
@@ -58,9 +58,9 @@ function g(e) {
                       onClose: s
                   });
 }
-function _(e) {
+function j(e) {
     var n, t, d;
-    let { user: u, currentUser: f, displayProfile: m, items: I, initialSection: x = p.oh.USER_INFO, initialSubsection: _, onClose: j } = e,
+    let { user: u, currentUser: f, displayProfile: m, items: I, initialSection: x = p.oh.USER_INFO, initialSubsection: j, onClose: _ } = e,
         { trackUserProfileAction: b } = (0, a.KZ)(),
         E = (0, o.e7)([c.Z], () => c.Z.hidePersonalInformation),
         [{ section: N, subsection: S }, T] = l.useState({
@@ -78,7 +78,7 @@ function _(e) {
                     : null === (t = I[0]) || void 0 === t
                       ? void 0
                       : t.section,
-            subsection: _
+            subsection: j
         });
     l.useEffect(() => {
         if (null == I.find((e) => e.section === N))
@@ -146,7 +146,7 @@ function _(e) {
                       user: u,
                       currentUser: f,
                       displayProfile: m,
-                      onClose: j
+                      onClose: _
                   })
               ]
           });

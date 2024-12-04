@@ -27,8 +27,8 @@ var i = n(200651),
     x = n(624138),
     I = n(667815),
     b = n(531572),
-    E = n(26323),
-    S = n(30513),
+    S = n(26323),
+    E = n(30513),
     Z = n(981631),
     N = n(388032),
     y = n(976019);
@@ -84,14 +84,14 @@ t.ZP = (e) => {
             to: { width: w },
             config: R
         },
-        [k, U] = (0, d.useSpring)(() => O),
-        G = () => {
+        [k, G] = (0, d.useSpring)(() => O),
+        U = () => {
             (0, m.yw)(Z.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                 location: { section: Z.jXE.PREMIUM_GUILD_PROGRESS_BAR },
                 guild_id: g,
                 location_stack: r
             }),
-                (0, E.Z)({
+                (0, S.Z)({
                     analyticsLocations: r,
                     analyticsSourceLocation: {
                         page: Z.ZY5.GUILD_CHANNEL,
@@ -99,7 +99,7 @@ t.ZP = (e) => {
                         object: Z.qAy.TOOLTIP
                     },
                     guild: t,
-                    perks: (0, S.VF)(),
+                    perks: (0, E.VF)(),
                     perkIntro: N.intl.string(N.t.ZhvSn5)
                 });
         },
@@ -129,10 +129,10 @@ t.ZP = (e) => {
                             right: 4
                         }
                     },
-                    onClick: G,
+                    onClick: U,
                     onMouseEnter: () => {
                         var t;
-                        null === (t = e.onMouseEnter) || void 0 === t || t.call(e), U(O);
+                        null === (t = e.onMouseEnter) || void 0 === t || t.call(e), G(O);
                     },
                     className: a()(y.container, { [y.containerWithMargin]: n }),
                     onContextMenu: (e) => {

@@ -15,7 +15,7 @@ function c(e) {
         n = i.useMemo(
             () => [
                 {
-                    id: s.kK,
+                    id: s.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID,
                     label: o.intl.string(o.t.ijDDw8)
                 },
                 ...t.map((e) => ({

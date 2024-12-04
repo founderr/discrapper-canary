@@ -25,8 +25,8 @@ var i = t(200651),
     v = t(502762),
     Z = t(848780),
     g = t(907179),
-    _ = t(475413),
-    j = t(228168),
+    j = t(475413),
+    _ = t(228168),
     b = t(981631),
     E = t(388032),
     N = t(409308),
@@ -68,7 +68,7 @@ function T(e) {
                 children: (0, i.jsx)(v.Z, {
                     user: n,
                     displayProfile: A,
-                    profileType: j.y0.FULL_SIZE,
+                    profileType: _.y0.FULL_SIZE,
                     ref: L,
                     children: (0, i.jsxs)('div', {
                         className: N.container,
@@ -114,7 +114,7 @@ function T(e) {
                                             );
                                         })
                                     }),
-                                    (0, i.jsx)(_.tG, {
+                                    (0, i.jsx)(j.tG, {
                                         className: N.centeredButton,
                                         action: 'VIEW_BLOCKED_PROFILE',
                                         text: E.intl.string(E.t.iXAna2),
@@ -139,7 +139,7 @@ function T(e) {
     });
 }
 function y(e) {
-    let { user: n, guildId: t, channelId: o, messageId: _, roleId: T, transitionState: y, onViewBlockedProfileClick: P, showGuildProfile: C = !0, sourceAnalyticsLocations: A = [] } = e,
+    let { user: n, guildId: t, channelId: o, messageId: j, roleId: T, transitionState: y, onViewBlockedProfileClick: P, showGuildProfile: C = !0, sourceAnalyticsLocations: A = [] } = e,
         L = t === b.ME ? void 0 : t,
         M = (0, s.e7)([f.Z], () => f.Z.isBlocked(n.id)),
         { analyticsLocations: O } = (0, d.ZP)([...A, M ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
@@ -148,7 +148,7 @@ function y(e) {
             userId: n.id,
             guildId: L,
             channelId: o,
-            messageId: _,
+            messageId: j,
             roleId: T,
             showGuildProfile: C
         }),
@@ -176,7 +176,7 @@ function y(e) {
                 children: (0, i.jsx)(v.Z, {
                     user: n,
                     displayProfile: B,
-                    profileType: j.y0.FULL_SIZE,
+                    profileType: _.y0.FULL_SIZE,
                     ref: D,
                     children: (0, i.jsxs)('div', {
                         className: N.container,

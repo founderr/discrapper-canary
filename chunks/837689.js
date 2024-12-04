@@ -35,7 +35,7 @@ function T(e, t, n) {
     );
 }
 let b = 'PremiumServerDriveAnnouncementModal';
-class x extends o.Z {
+class A extends o.Z {
     _initialize() {
         s.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), s.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
     }
@@ -101,4 +101,4 @@ class x extends o.Z {
             });
     }
 }
-t.Z = new x();
+t.Z = new A();

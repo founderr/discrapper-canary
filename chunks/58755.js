@@ -103,7 +103,7 @@ function g(e) {
 }
 function b(e) {
     let { scale: t, setState: n, onClose: a } = e,
-        { name: c, base: p, darkness: g, lightness: b, showColumnarPalettePreview: v, colorSpace: j, easingStrength: _ = 1, useP3ColorSpace: T, steps: S = 26 } = t,
+        { name: c, base: p, darkness: g, lightness: b, showColumnarPalettePreview: v, colorSpace: C, easingStrength: _ = 1, useP3ColorSpace: T, steps: S = 26 } = t,
         y = (0, m.XM)(t),
         N = (0, m.W6)(y, c);
     return (0, r.jsxs)(d.FormSection, {
@@ -136,7 +136,7 @@ function b(e) {
                             (0, u.q)('figma-'.concat(t.name), JSON.stringify(e, null, 4));
                         },
                         style: { cursor: 'pointer' },
-                        children: (0, r.jsx)(C, {})
+                        children: (0, r.jsx)(j, {})
                     })
                 ]
             }),
@@ -165,7 +165,7 @@ function b(e) {
                     }),
                     (0, r.jsx)(d.SingleSelect, {
                         options: f,
-                        value: j,
+                        value: C,
                         onChange: (e) => (0, m.t4)(c, e, n),
                         popoutLayerContext: h.O$
                     })
@@ -358,7 +358,7 @@ function v(e) {
         ]
     });
 }
-let C = () =>
+let j = () =>
     (0, r.jsxs)('svg', {
         width: '20',
         height: '20',

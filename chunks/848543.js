@@ -27,7 +27,7 @@ var i = n(200651),
     S = n(388032),
     T = n(382290);
 function b(e) {
-    let { channel: t, iconClassName: l, className: b, innerClassName: x, ...A } = e,
+    let { channel: t, iconClassName: l, className: b, innerClassName: A, ...x } = e,
         { mute: Z, suppress: L } = (0, g.Z)(t),
         y = (0, s.e7)([f.Z], () => f.Z.isDeaf()),
         P = Z || L || y,
@@ -83,7 +83,7 @@ function b(e) {
                                 [T.disabled]: P
                             }),
                             wrapperClassName: b,
-                            innerClassName: x,
+                            innerClassName: A,
                             disabled: P,
                             onClick: () => {
                                 var t, n;
@@ -91,16 +91,16 @@ function b(e) {
                             },
                             onMouseEnter: (t) => {
                                 var n, i;
-                                null === (n = A.onMouseEnter) || void 0 === n || n.call(A, t), null == e || null === (i = e.onMouseEnter) || void 0 === i || i.call(e), H();
+                                null === (n = x.onMouseEnter) || void 0 === n || n.call(x, t), null == e || null === (i = e.onMouseEnter) || void 0 === i || i.call(e), H();
                             },
                             onMouseLeave: (t) => {
                                 var n, i;
-                                null === (n = A.onMouseLeave) || void 0 === n || n.call(A, t), null == e || null === (i = e.onMouseLeave) || void 0 === i || i.call(e), V();
+                                null === (n = x.onMouseLeave) || void 0 === n || n.call(x, t), null == e || null === (i = e.onMouseLeave) || void 0 === i || i.call(e), V();
                             },
                             onContextMenu: U,
                             fullWidth: !0,
                             size: d.Button.Sizes.SMALL,
-                            ...A,
+                            ...x,
                             children: (0, i.jsx)(G, {
                                 className: l,
                                 size: 'sm',

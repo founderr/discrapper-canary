@@ -102,7 +102,7 @@ function N(e) {
         o = (0, a.e7)([p.Z], () => p.Z.get(l), [l]),
         c = (0, a.e7)([p.Z], () => (null != l ? p.Z.getParentSKU(l) : void 0), [l]),
         d = r.useId(),
-        u = r.useCallback(() => (0, g.Gp)(_.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, f.Wc.STORE)), [t]);
+        u = r.useCallback(() => (0, g.Gp)(_.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, f.GlobalDiscoveryAppsSections.STORE)), [t]);
     return (
         r.useLayoutEffect(() => {
             var e, r, a, d, u;
@@ -121,7 +121,7 @@ function N(e) {
                                         ...n
                                     });
                             },
-                            { onCloseCallback: () => (0, g.Gp)(_.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(e, f.Wc.STORE)) }
+                            { onCloseCallback: () => (0, g.Gp)(_.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(e, f.GlobalDiscoveryAppsSections.STORE)) }
                         );
                     break;
                 case _.epS.SUBSCRIPTION:
@@ -141,7 +141,7 @@ function N(e) {
                                         ...t
                                     });
                             },
-                            { onCloseCallback: () => (0, g.Gp)(_.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(a, f.Wc.STORE)) }
+                            { onCloseCallback: () => (0, g.Gp)(_.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(a, f.GlobalDiscoveryAppsSections.STORE)) }
                         );
             }
         }, [t, d, u, null == c ? void 0 : c.flags, null == o ? void 0 : o.flags, null == o ? void 0 : o.type, l]),

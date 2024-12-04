@@ -40,7 +40,7 @@ let L = (e, t, n, l) => {
         });
 t.Z = (e) => {
     let { channel: t, entry: n, onReaction: i, onVoiceChannelPreview: m } = e,
-        { parent_title: y, provider: N, image_url: _ } = n.extra.media,
+        { parent_title: N, provider: y, image_url: _ } = n.extra.media,
         A = n.extra.artist.name,
         E = (0, o.e7)([u.default], () => u.default.getUser(n.author_id)),
         { primaryColor: S, secondaryColor: R } = (0, p.Z)(_),
@@ -78,7 +78,7 @@ t.Z = (e) => {
                 channel: t,
                 entry: n,
                 headerIcons:
-                    N === r.p.SPOTIFY
+                    y === r.p.SPOTIFY
                         ? (0, l.jsx)(I.Z, {
                               onClick: w,
                               Icon: c.Z,
@@ -86,7 +86,7 @@ t.Z = (e) => {
                           })
                         : null,
                 userDescription: P.t.CcVI1d,
-                title: y,
+                title: N,
                 subtitle: A,
                 badges: (0, l.jsx)(g.Gk, {
                     location: g.Gt.POPOUT,

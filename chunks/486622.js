@@ -23,8 +23,8 @@ function C(e) {
         x = (0, m.Z)(),
         [v, _] = i.useState(!1),
         [I, E] = i.useState(!1),
-        [b, N] = i.useState(!1),
-        [Z, S] = i.useState(!1),
+        [b, Z] = i.useState(!1),
+        [N, S] = i.useState(!1),
         [T, j] = i.useState(!1),
         A = v || I || b,
         y = i.useCallback(
@@ -80,7 +80,7 @@ function C(e) {
             async (e) => {
                 if (A) return;
                 if (null != t && null == o.Z.getMutualGuilds(t.id)) {
-                    N(!0);
+                    Z(!0);
                     try {
                         await (0, c.Z)(t.id, t.getAvatarURL(void 0, 80), {
                             withMutualGuilds: !0,
@@ -88,7 +88,7 @@ function C(e) {
                         });
                     } catch (e) {
                     } finally {
-                        N(!1);
+                        Z(!1);
                     }
                 }
                 let n = async () => {
@@ -157,7 +157,7 @@ function C(e) {
         isAcceptLoading: v,
         isRejectLoading: I,
         isUserProfileLoading: b,
-        isOptimisticAccepted: Z,
+        isOptimisticAccepted: N,
         isOptimisticRejected: T
     };
 }

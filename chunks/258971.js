@@ -84,7 +84,7 @@ function m() {
             type: 'application',
             applicationId: m,
             applicationName: e,
-            section: null != f ? f : null != g ? u.Wc.STORE : u.Wc.ABOUT
+            section: null != f ? f : null != g ? u.GlobalDiscoveryAppsSections.STORE : u.GlobalDiscoveryAppsSections.ABOUT
         };
     }
 }

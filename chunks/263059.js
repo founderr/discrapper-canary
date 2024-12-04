@@ -13,7 +13,7 @@ var r = n(200651),
     c = n(906732),
     d = n(379357),
     f = n(358696),
-    _ = n(180335),
+    _ = n(649700),
     p = n(952164),
     h = n(960870),
     m = n(139793),
@@ -42,7 +42,7 @@ function k(e) {
         { profileType: V } = (0, S.z)(),
         j = { [M.fullSize]: V === w.y0.FULL_SIZE },
         { interactionSource: H, interactionSourceId: Y } = (0, v.Xo)(),
-        W = (0, _.Bq)({
+        W = (0, _.Z)({
             activity: k,
             user: n
         }),

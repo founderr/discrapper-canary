@@ -25,14 +25,14 @@ var i = n(200651),
     I = n(739830),
     E = n(488131),
     b = n(981631),
-    N = n(388032);
-function Z(e) {
+    Z = n(388032);
+function N(e) {
     let { channel: t } = e,
         [n, a] = l.useState(!1);
     function s() {
         a((e) => !e);
     }
-    let o = N.intl.string(N.t.UKOtz8);
+    let o = Z.intl.string(Z.t.UKOtz8);
     return (0, i.jsx)(r.Popout, {
         shouldShow: n,
         animation: r.Popout.Animation.NONE,
@@ -65,14 +65,14 @@ function S(e) {
         x = (0, d.Z)(t),
         I = (0, p.Z)(t),
         E = (0, m.Z)(t),
-        Z = (0, a.Z)(t),
+        N = (0, a.Z)(t),
         S = (0, c.Z)(t),
         T = (0, h.Z)(t.id),
         j = (0, u.Z)(t),
         A = (0, s.Z)(t),
         y = (0, g.Z)({
             id: t.id,
-            label: N.intl.string(N.t.DQ797u)
+            label: Z.intl.string(Z.t.DQ797u)
         }),
         P = (0, f.Z)(t);
     function M() {
@@ -81,7 +81,7 @@ function S(e) {
     return (0, i.jsxs)(r.Menu, {
         navId: 'thread-context',
         onClose: n,
-        'aria-label': N.intl.string(N.t['1NBjqa']),
+        'aria-label': Z.intl.string(Z.t['1NBjqa']),
         onSelect: l,
         children: [
             (0, i.jsxs)(r.MenuGroup, {
@@ -89,7 +89,7 @@ function S(e) {
                     C,
                     (0, i.jsx)(r.MenuItem, {
                         id: 'open',
-                        label: N.intl.string(N.t.IxVmZm),
+                        label: Z.intl.string(Z.t.IxVmZm),
                         action: M
                     })
                 ]
@@ -104,7 +104,7 @@ function S(e) {
                 children: [
                     (0, i.jsx)(r.MenuItem, {
                         id: 'search',
-                        label: N.intl.string(N.t['5h0QOD']),
+                        label: Z.intl.string(Z.t['5h0QOD']),
                         icon: r.WindowLaunchIcon,
                         action: function () {
                             M(),
@@ -115,7 +115,7 @@ function S(e) {
                     }),
                     (0, i.jsx)(r.MenuItem, {
                         id: 'pins',
-                        label: N.intl.string(N.t['2BSH7u']),
+                        label: Z.intl.string(Z.t['2BSH7u']),
                         icon: r.WindowLaunchIcon,
                         action: function () {
                             M(), _.S.dispatch(b.CkL.TOGGLE_CHANNEL_PINS);
@@ -124,7 +124,7 @@ function S(e) {
                 ]
             }),
             (0, i.jsxs)(r.MenuGroup, {
-                children: [P, Z, S, A]
+                children: [P, N, S, A]
             }),
             (0, i.jsx)(r.MenuGroup, { children: y })
         ]
@@ -135,10 +135,10 @@ function T(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             t.isForumPost() ? null : (0, i.jsx)(I.Z, { channel: t }),
-            (0, i.jsx)(Z, { channel: t }),
+            (0, i.jsx)(N, { channel: t }),
             (0, i.jsx)(x.ZP.Icon, {
                 icon: r.XSmallIcon,
-                tooltip: N.intl.string(N.t.cpT0Cg),
+                tooltip: Z.intl.string(Z.t.cpT0Cg),
                 onClick: () => (0, E.vN)((0, C.e)(t), null != n ? n : t.parent_id)
             })
         ]

@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(920888),
     E = n(287151),
     b = n(569471),
-    N = n(346479),
-    Z = n(592125),
+    Z = n(346479),
+    N = n(592125),
     S = n(934415),
     T = n(456269),
     j = n(109590),
@@ -41,11 +41,11 @@ function L(e) {
         [D, w] = l.useState(3),
         [B, U] = l.useState(!n),
         [H, G] = (0, m.Z)(!1, 2000),
-        F = (0, o.e7)([Z.Z], () => Z.Z.getChannel(t), [t]),
+        F = (0, o.e7)([N.Z], () => N.Z.getChannel(t), [t]),
         { firstMessage: V } = (0, j.cl)(F),
         z = (0, o.e7)([b.Z], () => b.Z.hasJoined(t)),
         { disableReactionUpdates: W, disableReactionCreates: K, isLurking: Y, isGuest: q, isPendingMember: X } = (0, x.Z)(F),
-        J = (0, o.e7)([Z.Z], () => Z.Z.getChannel(L)),
+        J = (0, o.e7)([N.Z], () => N.Z.getChannel(L)),
         Q = (0, T.Bs)(J),
         $ = (0, o.e7)([f.Z], () => f.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
         ee = l.useCallback(
@@ -80,7 +80,7 @@ function L(e) {
         return null;
     let ei = V.reactions.length > 0,
         el = () => {
-            z ? N.Z.leaveThread(F, 'Forum Toolbar') : N.Z.joinThread(F, 'Forum Toolbar');
+            z ? Z.Z.leaveThread(F, 'Forum Toolbar') : Z.Z.joinThread(F, 'Forum Toolbar');
         },
         er = () => {
             (0, A.B)({

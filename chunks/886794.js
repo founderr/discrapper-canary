@@ -22,8 +22,8 @@ var i = t(200651),
     v = t(678738),
     Z = t(502762),
     g = t(530),
-    _ = t(679332),
-    j = t(544989),
+    j = t(679332),
+    _ = t(544989),
     b = t(228168),
     E = t(981631),
     N = t(388032),
@@ -62,9 +62,9 @@ function P(e) {
                         profileType: b.y0.FULL_SIZE,
                         ref: G,
                         children: [
-                            (0, i.jsx)(j.Z, {
+                            (0, i.jsx)(_.Z, {
                                 profileType: b.y0.FULL_SIZE,
-                                children: (0, i.jsx)(_.Z, { user: n })
+                                children: (0, i.jsx)(j.Z, { user: n })
                             }),
                             (0, i.jsxs)('header', {
                                 children: [

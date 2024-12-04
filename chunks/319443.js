@@ -22,8 +22,8 @@ var i = n(200651),
     S = n(666697),
     T = n(370648),
     b = n(569527),
-    x = n(979007),
-    A = n(388032),
+    A = n(979007),
+    x = n(388032),
     Z = n(544973);
 function L(e) {
     let { applicationId: t, onClickBack: n } = e,
@@ -117,7 +117,7 @@ t.Z = function () {
                                             variant: 'heading-lg/semibold',
                                             color: 'header-primary',
                                             className: Z.searchHeader,
-                                            children: null != j && '' !== j ? A.intl.formatToPlainString(A.t.zHdzqa, { query: j }) : A.intl.formatToPlainString(A.t.Qhj5Bg, { categoryName: null !== (e = null == k ? void 0 : k.name) && void 0 !== e ? e : A.intl.string(A.t.E407b2) })
+                                            children: null != j && '' !== j ? x.intl.formatToPlainString(x.t.zHdzqa, { query: j }) : x.intl.formatToPlainString(x.t.Qhj5Bg, { categoryName: null !== (e = null == k ? void 0 : k.name) && void 0 !== e ? e : x.intl.string(x.t.E407b2) })
                                         })
                                       : (0, i.jsx)(p.Z, {
                                             tabs: U,
@@ -127,7 +127,7 @@ t.Z = function () {
                                         }),
                                   (0, i.jsx)(g.Z, {
                                       query: F,
-                                      placeholder: A.intl.string(A.t['7J5i+/']),
+                                      placeholder: x.intl.string(x.t['7J5i+/']),
                                       onTextChange: z,
                                       onClear: W,
                                       onSubmit: Y,
@@ -148,7 +148,7 @@ t.Z = function () {
                   })
                 : V
                   ? (0, i.jsx)(b.Z, { onSelectApplication: $ })
-                  : G === x.kK
+                  : G === A.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID
                     ? (0, i.jsx)(T.Z, {
                           onScroll: t,
                           onSelectApplication: $

@@ -6,8 +6,8 @@ t.d(n, {
 var o = t(200651);
 t(192379);
 var l = t(409794),
-    r = t(777207),
-    i = t(541822),
+    i = t(777207),
+    r = t(541822),
     s = t(330711),
     a = t(189090);
 function c(e) {
@@ -15,7 +15,7 @@ function c(e) {
         x = null != c ? { '--custom-background-url': 'url('.concat(c.toString(), ')') } : void 0;
     return (0, o.jsx)('div', {
         className: a.container,
-        children: (0, o.jsx)(i.Z, {
+        children: (0, o.jsx)(r.Z, {
             className: a.scroller,
             children: (0, o.jsxs)('div', {
                 className: a.scrollContent,
@@ -58,7 +58,7 @@ function c(e) {
                                     }),
                                     null != t &&
                                         '' !== t &&
-                                        (0, o.jsx)(r.x, {
+                                        (0, o.jsx)(i.x, {
                                             color: 'text-normal',
                                             variant: 'text-md/normal',
                                             className: a.description,
@@ -70,7 +70,7 @@ function c(e) {
                                 (0, o.jsxs)('div', {
                                     className: a.benefits,
                                     children: [
-                                        (0, o.jsx)(r.x, {
+                                        (0, o.jsx)(i.x, {
                                             color: 'header-secondary',
                                             variant: 'eyebrow',
                                             children: s.Z.Messages.STOREFRONT_BENEFITS_TITLE

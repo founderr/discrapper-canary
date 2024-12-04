@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     },
     u: function () {
-        return y;
+        return N;
     }
 }),
     n(47120);
@@ -30,7 +30,7 @@ var l = n(200651),
     P = n(191315);
 let L = j.Hz.CHAT,
     T = [p.ZP.getByName('thumbsup'), p.ZP.getByName('eyes'), p.ZP.getByName('laughing'), p.ZP.getByName('watermelon'), p.ZP.getByName('fork_and_knife'), p.ZP.getByName('yum')].filter(f.lm);
-function y(e) {
+function N(e) {
     let { emoji: t, isDisabled: n = !1, onClick: i, className: o } = e,
         m = a.useRef(null),
         h = (0, d.Z)(m);
@@ -63,7 +63,7 @@ function y(e) {
         })
     });
 }
-function N(e) {
+function y(e) {
     let { otherAccessories: t, isEmojiPickerExpanded: n, onSetExpanded: a, onFocus: i } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -136,7 +136,7 @@ function _(e) {
                         pickerIntention: L,
                         searchProps: {
                             ...p,
-                            accessory: (0, l.jsx)(N, {
+                            accessory: (0, l.jsx)(y, {
                                 otherAccessories: null == p ? void 0 : p.accessory,
                                 isEmojiPickerExpanded: E,
                                 onSetExpanded: k,
@@ -167,7 +167,7 @@ function _(e) {
                                             'aria-label': e.name,
                                             tooltipClassName: P.tooltipContainer,
                                             color: u.Tooltip.Colors.BRAND,
-                                            children: (0, l.jsx)(y, {
+                                            children: (0, l.jsx)(N, {
                                                 emoji: e,
                                                 isDisabled: n,
                                                 onClick: () => {

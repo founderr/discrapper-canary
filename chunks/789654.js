@@ -43,8 +43,8 @@ var r = n(200651),
     g = n(246992),
     b = n(500949),
     v = n(833999);
-let { SemanticColors: C } = d.V;
-function j(e) {
+let { SemanticColors: j } = d.V;
+function C(e) {
     return e.replaceAll(/_|\./g, '-').toLowerCase();
 }
 function _(e) {
@@ -65,22 +65,22 @@ function T(e, t) {
 function S() {
     let e = (0, m.Fg)(),
         [t, n, l, o, d, u] = (0, b.zn)(),
-        { semanticColorOverrides: g, rawColorOverrides: C, tab: _, scales: S } = t,
+        { semanticColorOverrides: g, rawColorOverrides: j, tab: _, scales: S } = t,
         N = a.useMemo(() => {
             let t = Object.entries(g).map((t) => {
                     let [n, r] = t,
                         { colors: a, highlight: l } = r,
                         i = a[e];
                     if (null == i) return '';
-                    let o = j(n);
+                    let o = C(n);
                     if (l) return '--'.concat(o, ': magenta !important;');
-                    let s = j(i.color),
+                    let s = C(i.color),
                         c = i.opacity,
                         d = c < 1 ? 'hsl(var(--'.concat(s, '-hsl) / ').concat(c, ')') : 'var(--'.concat(s, ')');
                     return '--'.concat(o, ': color-mix(\n        in oklab,\n        ').concat(d, ' 100%,\n        var(--theme-base-color, black) var(--theme-base-color-amount, 0%)\n      );');
                 }),
-                n = Object.keys(C).flatMap((e) => {
-                    let t = C[e],
+                n = Object.keys(j).flatMap((e) => {
+                    let t = j[e],
                         {
                             h: n,
                             s: r,
@@ -113,7 +113,7 @@ function S() {
                     );
                 }, '');
             return '\n      :root {\n        '.concat(r, '\n      }\n\n      .theme-').concat(e, ' {\n        ').concat(t.join('\n'), '\n      }\n\n      html {\n        ').concat(n.join('\n'), '\n      }\n    ');
-        }, [C, S, g, e]);
+        }, [j, S, g, e]);
     return (0, r.jsxs)('div', {
         className: v.panel,
         children: [
@@ -328,9 +328,9 @@ function y(e) {
             },
             [n]
         ),
-        p = Object.keys(C).map((e) => ({
+        p = Object.keys(j).map((e) => ({
             value: e,
-            label: j(e)
+            label: C(e)
         })),
         T = Object.keys(u.b).map((e) => ({
             value: e,
@@ -369,7 +369,7 @@ function y(e) {
                     return (0, r.jsx)(
                         N,
                         {
-                            title: j(t),
+                            title: C(t),
                             subtitle: 1 === d.opacity ? _(d.raw) : ''.concat(_(d.raw), ' @ ').concat(100 * d.opacity, '%'),
                             highlight: a.highlight,
                             onReset: () => {

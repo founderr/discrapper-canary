@@ -18,18 +18,18 @@ t.Z = function () {
         t = p.Z.useField('selectedTab'),
         n = (function (e) {
             switch (e) {
-                case f.F$.SERVERS:
+                case f.GlobalDiscoveryTab.SERVERS:
                     return (0, i.jsx)(d.Z, {});
-                case f.F$.APPS:
+                case f.GlobalDiscoveryTab.APPS:
                     return (0, i.jsx)(c.Z, {});
-                case f.F$.QUESTS:
+                case f.GlobalDiscoveryTab.QUESTS:
                     return (0, i.jsx)(u.Z, {});
                 default:
                     (0, h.vE)(e);
             }
         })(t),
         E = (0, l.TH)(),
-        I = !e && t === f.F$.APPS;
+        I = !e && t === f.GlobalDiscoveryTab.APPS;
     return (r.useEffect(() => {
         let e = E.pathname,
             t = (0, g.I)(e);

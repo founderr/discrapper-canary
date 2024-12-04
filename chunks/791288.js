@@ -27,17 +27,17 @@ var i = n(200651),
     I = n(158776),
     C = n(594174),
     y = n(5192),
-    N = n(312839),
-    T = n(981631),
-    O = n(701488),
-    b = n(987650),
+    T = n(312839),
+    N = n(981631),
+    b = n(701488),
+    O = n(987650),
     A = n(388032),
     L = n(522634);
 function P(e) {
     let { game: t } = e,
         n = (0, h.q)(t.id);
     if (null == n) return null;
-    let r = n.getIconURL(O.Si.LARGE);
+    let r = n.getIconURL(b.Si.LARGE);
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
             className: L.header,
@@ -61,8 +61,8 @@ function R(e) {
         s = (0, o.e7)([C.default], () => C.default.getUser(t.author_id)),
         h = (0, _.kr)(t),
         f = h ? l.tokens.colors.TEXT_POSITIVE : l.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
-        [E, N] = r.useState('unsent'),
-        [O, b] = r.useState(!1),
+        [E, T] = r.useState('unsent'),
+        [b, O] = r.useState(!1),
         P = (0, o.e7)([Z.Z], () => (null != s ? Z.Z.getAnyStreamForUser(s.id) : null), [s]),
         { isMobileOnline: R, status: j } = (0, o.cj)(
             [I.Z],
@@ -80,7 +80,7 @@ function R(e) {
         );
     r.useEffect(() => {
         if ('sent' === E) {
-            let e = setTimeout(() => b(!0), 2000);
+            let e = setTimeout(() => O(!0), 2000);
             return () => clearTimeout(e);
         }
     }, [E]);
@@ -89,34 +89,34 @@ function R(e) {
                 e.stopPropagation();
                 try {
                     var i;
-                    N('sending');
+                    T('sending');
                     let e = await c.Z.getOrEnsurePrivateChannel(s.id),
                         r = null !== (i = S.Z.getChannel(e)) && void 0 !== i ? i : null;
                     a()(null != r, 'Send channel must be defined'),
-                        (0, x.uL)(T.Z5c.CHANNEL(r.guild_id, r.id)),
+                        (0, x.uL)(N.Z5c.CHANNEL(r.guild_id, r.id)),
                         await (0, v.p)({
                             channel: r,
                             content: A.intl.string(A.t.DwAcMz),
                             entry: t,
                             whenReady: !0
                         }),
-                        d.Z.track(T.rMx.OVERLAY_GAME_INVITE_SENT, {
+                        d.Z.track(N.rMx.OVERLAY_GAME_INVITE_SENT, {
                             target_user_id: s.id,
                             target_content_entry_id: t.id,
                             target_index: n
                         }),
-                        N('sent');
+                        T('sent');
                 } catch (e) {
-                    N('unsent');
+                    T('unsent');
                 }
             }
         },
-        M = async () => {
+        D = async () => {
             var e;
             if (null == s) return;
             let t = await c.Z.getOrEnsurePrivateChannel(s.id),
                 n = null !== (e = S.Z.getChannel(t)) && void 0 !== e ? e : null;
-            a()(null != n, 'Send channel must be defined'), (0, x.uL)(T.Z5c.CHANNEL(n.guild_id, n.id));
+            a()(null != n, 'Send channel must be defined'), (0, x.uL)(N.Z5c.CHANNEL(n.guild_id, n.id));
         };
     return null == s
         ? null
@@ -163,14 +163,14 @@ function R(e) {
                       className: L.inviteButtonWrapper,
                       children: (0, i.jsx)(l.Button, {
                           submitting: 'sending' === E,
-                          onClick: O ? M : w,
+                          onClick: b ? D : w,
                           className: L.inviteButton,
                           color: l.ButtonColors.PRIMARY,
                           look: 'sent' === E ? l.ButtonLooks.OUTLINED : l.ButtonLooks.FILLED,
                           size: l.ButtonSizes.MAX,
                           children:
                               'sent' === E
-                                  ? O
+                                  ? b
                                       ? (0, i.jsx)(l.ChatIcon, { size: 'sm' })
                                       : (0, i.jsx)(l.CheckmarkSmallBoldIcon, {
                                             size: 'sm',
@@ -208,7 +208,7 @@ function j(e) {
     });
 }
 function w(e, t) {
-    let { trackView: n, trackClick: r } = (0, N.R)(b.n0.SendGameInvitesNotification, { notif_type: b.n0.SendGameInvitesNotification });
+    let { trackView: n, trackClick: r } = (0, T.R)(O.n0.SendGameInvitesNotification, { notif_type: O.n0.SendGameInvitesNotification });
     return (
         a()(t.length > 0, 'Some entries must be present'),
         {
@@ -217,7 +217,7 @@ function w(e, t) {
             body: (0, i.jsx)(j, { entries: t }),
             onNotificationShow: () => {
                 n(),
-                    d.Z.track(T.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
+                    d.Z.track(N.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
                         user_ids: t.map((e) => e.author_id),
                         entry_ids: t.map((e) => e.id)
                     });

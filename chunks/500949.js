@@ -48,7 +48,7 @@ n.d(t, {
         return z;
     },
     jQ: function () {
-        return U;
+        return G;
     },
     lT: function () {
         return K;
@@ -86,8 +86,8 @@ var r,
     g = n(552952),
     b = n(857702),
     v = n(20450),
-    C = n(312976),
-    j = n(147591),
+    j = n(312976),
+    C = n(147591),
     _ = n(135164),
     T = n(940172),
     S = n(81011),
@@ -120,8 +120,8 @@ let H = {
         ICTCP: g.Z,
         JzCzHz: b.Z,
         Jzazbz: v.Z,
-        LCH: C.Z,
-        LCHuv: j.Z,
+        LCH: j.Z,
+        LCHuv: C.Z,
         Lab: _.Z,
         Lab_D65: T.Z,
         Luv: S.Z,
@@ -135,10 +135,10 @@ let H = {
         XYZ_D50: R.Z,
         XYZ_D65: O.Z
     },
-    U = Object.fromEntries(Object.keys(H).map((e) => [e, e]));
+    G = Object.fromEntries(Object.keys(H).map((e) => [e, e]));
 Object.values(H).forEach((e) => A.Z.register(e));
-let { SemanticColors: G } = F.V,
-    z = G,
+let { SemanticColors: U } = F.V,
+    z = U,
     V = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
 function W(e, t) {
     let [n, r] = o.useState(() => {

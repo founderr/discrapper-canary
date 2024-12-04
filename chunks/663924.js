@@ -20,19 +20,19 @@ var i = n(200651),
     I = n(388032),
     E = n(906047);
 let b = { height: v.lv };
-function N() {
+function Z() {
     m.yT(g.ti.DISMISSED);
 }
-function Z(e) {
+function N(e) {
     let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: u } = e,
         m = l.useRef(null),
         { renderWindow: I, windowDispatch: E } = l.useContext(c.ZP),
         b = null != u,
-        Z = (0, s.Jw)(null != u ? u : ''),
+        N = (0, s.Jw)(null != u ? u : ''),
         S = l.useCallback(
             (e) => {
                 var t;
-                if ((!b && (0, s.$s)()) || (b && !(Z && n))) return;
+                if ((!b && (0, s.$s)()) || (b && !(N && n))) return;
                 let { target: i } = e;
                 if ((0, r.k)(i) && null != i.closest('.' + v.Jh)) return;
                 for (; (0, r.k)(i); ) {
@@ -44,27 +44,27 @@ function Z(e) {
                     if (i.classList.contains(v.NN)) return;
                     i = i.parentNode;
                 }
-                N();
+                Z();
                 let l = null === (t = (0, p.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
                 (null == l || 'BODY' === l.tagName) && h.S.dispatchToLastSubscribed(_.CkL.TEXTAREA_FOCUS);
             },
-            [n, Z, b]
+            [n, N, b]
         );
     l.useLayoutEffect(
         () => (
             I.addEventListener('mousedown', S),
             I.addEventListener('contextmenu', S),
-            E.subscribe(_.CkL.POPOUT_CLOSE, N),
+            E.subscribe(_.CkL.POPOUT_CLOSE, Z),
             () => {
-                I.removeEventListener('mousedown', S), I.removeEventListener('contextmenu', S), E.unsubscribe(_.CkL.POPOUT_CLOSE, N);
+                I.removeEventListener('mousedown', S), I.removeEventListener('contextmenu', S), E.unsubscribe(_.CkL.POPOUT_CLOSE, Z);
             }
         ),
         [S, I, E]
     ),
         (0, o.useFocusLock)(m),
         l.useEffect(() => {
-            ((!b && (0, s.$s)()) || (b && !Z)) && N();
-        }, [Z, b]);
+            ((!b && (0, s.$s)()) || (b && !N)) && Z();
+        }, [N, b]);
     let T = (0, a.e7)([f.Z], () => f.Z.initialState(), []),
         j = (0, d.q)(null == T ? void 0 : T.applicationId),
         A = l.useMemo(() => {
@@ -105,7 +105,7 @@ t.Z = l.memo(function (e) {
                     role: 'dialog',
                     style: b,
                     'aria-label': I.intl.string(I.t['3CNGLC']),
-                    children: t && (0, i.jsx)(Z, { ...n })
+                    children: t && (0, i.jsx)(N, { ...n })
                 });
             }
         })

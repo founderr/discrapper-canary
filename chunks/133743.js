@@ -66,24 +66,24 @@ function m() {
     if (null != e)
         switch (e.type) {
             case a.m_.APPLICATION:
-                return (0, l.u)({
-                    tab: s.F$.APPS,
+                return (0, l.transitionToGlobalDiscovery)({
+                    tab: s.GlobalDiscoveryTab.APPS,
                     applicationId: e.applicationId,
                     section: e.section
                 });
             case a.m_.CATEGORY:
-                return (0, l.u)({
-                    tab: s.F$.APPS,
+                return (0, l.transitionToGlobalDiscovery)({
+                    tab: s.GlobalDiscoveryTab.APPS,
                     categoryId: Number(e.categoryId)
                 });
             case a.m_.SEARCH:
                 var t;
-                return (0, l.u)({
-                    tab: s.F$.APPS,
+                return (0, l.transitionToGlobalDiscovery)({
+                    tab: s.GlobalDiscoveryTab.APPS,
                     query: null !== (t = e.query) && void 0 !== t ? t : '',
                     page: e.page,
                     categoryId: null != e.categoryId ? Number(e.categoryId) : void 0
                 });
         }
-    return (0, l.u)({ tab: s.F$.APPS });
+    return (0, l.transitionToGlobalDiscovery)({ tab: s.GlobalDiscoveryTab.APPS });
 }

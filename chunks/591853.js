@@ -43,8 +43,8 @@ var u = n(442837),
     P = n(543241),
     L = n(318374),
     T = n(258609),
-    y = n(810568),
-    N = n(168524),
+    N = n(810568),
+    y = n(168524),
     _ = n(102172),
     A = n(871118),
     E = n(565138),
@@ -70,9 +70,9 @@ var u = n(442837),
     X = n(91907),
     K = n(358696),
     $ = n(656709),
-    Q = n(192918),
-    ee = n(22211),
-    et = n(561308),
+    Q = n(593294),
+    ee = n(192918),
+    et = n(22211),
     en = n(206295),
     el = n(111386),
     ea = n(896449),
@@ -133,13 +133,13 @@ function eh(e) {
 function ex(e) {
     let { channel: t, user: n, generateReactionImage: i, reactionImageAltText: r, onReaction: o, entry: C, buttons: p = [], header: v, onVoiceChannelPreview: j } = e,
         [P, L] = a.useState(!1),
-        [T, y] = a.useState(null),
-        N = (0, u.e7)([V.Z], () => null != t && eo.TPd.CONTENT_ENTRY_EMBEDS.has(t.type) && V.Z.can(eo.Plq.SEND_MESSAGES, t)),
+        [T, N] = a.useState(null),
+        y = (0, u.e7)([V.Z], () => null != t && eo.TPd.CONTENT_ENTRY_EMBEDS.has(t.type) && V.Z.can(eo.Plq.SEND_MESSAGES, t)),
         [_, A] = a.useState(!1),
         [k, W] = a.useState(!1),
         { voiceBar: F, joinVoiceButton: J } = (function (e) {
             let { channel: t, entry: n, onVoiceChannelPreview: i } = e,
-                { streamPreviewUrl: r, channel: o } = (0, ee.Z)(n),
+                { streamPreviewUrl: r, channel: o } = (0, et.Z)(n),
                 { needSubscriptionToAccess: s } = (0, S.Z)(null == t ? void 0 : t.id),
                 c = (0, u.e7)([H.Z], () => (null != o ? H.Z.getGuild(o.guild_id) : void 0)),
                 h = (0, u.Wu)([G.ZP], () => (null != o ? G.ZP.getVoiceStatesForChannel(o) : []), [o]),
@@ -282,7 +282,7 @@ function ex(e) {
             entry: C,
             onVoiceChannelPreview: j
         }),
-        { embeddedActivity: X } = (0, et.qy)(C),
+        { embeddedActivity: X } = (0, Q.Z)(C),
         K = (function (e) {
             let t = (0, u.e7)([H.Z], () => H.Z.getGuild(null == e ? void 0 : e.guildId)),
                 n = (0, u.e7)([b.Z], () => b.Z.getChannel(null == e ? void 0 : e.channelId)),
@@ -351,9 +351,9 @@ function ex(e) {
                   })
                 : null;
         })(X),
-        Q = null != J && 0 === p.length ? [J] : p,
-        en = Q.length > 0,
-        ea = Q.length >= 2,
+        ee = null != J && 0 === p.length ? [J] : p,
+        en = ee.length > 0,
+        ea = ee.length >= 2,
         [ec, ed] = a.useState(!en),
         em = q.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
         eh = null != t && P ? es.intl.formatToPlainString(es.t['8lzR/f'], { channel: '#'.concat(t.name) }) : es.intl.formatToPlainString(es.t['4c+CAw'], { channel: '@'.concat(em) }),
@@ -475,10 +475,10 @@ function ex(e) {
                         (0, l.jsx)(g.A7, {
                             placeholder: eh,
                             onEnter: ev,
-                            setEditorRef: (e) => y(e),
+                            setEditorRef: (e) => N(e),
                             channel: P ? t : void 0,
                             showEmojiButton: null != ef,
-                            renderAttachButton: N
+                            renderAttachButton: y
                                 ? () =>
                                       (0, l.jsx)(m.Tooltip, {
                                           text: ex,
@@ -544,7 +544,7 @@ function ex(e) {
                                 },
                                 'toggleMessageMode'
                             ),
-                            Q
+                            ee
                         ]
                     })
             ]
@@ -605,9 +605,9 @@ let eC = (e) => {
 function ep(e) {
     let { channel: t, userDescription: n, entry: a, disableGameProfileLinks: i, onUserPopoutClosed: o } = e,
         s = null == t ? void 0 : t.guild_id,
-        { displayParticipants: c, participant1: d, participant2: h, numOtherParticipants: x } = (0, Q.Z)(a, 3),
+        { displayParticipants: c, participant1: d, participant2: h, numOtherParticipants: x } = (0, ee.Z)(a, 3),
         C = (0, u.e7)([U.default], () => U.default.getUser(a.author_id)),
-        { streamPreviewUrl: p } = (0, ee.Z)(a),
+        { streamPreviewUrl: p } = (0, et.Z)(a),
         v = [d, h];
     return (0, l.jsxs)('div', {
         className: eu.popoutContentHeader,
@@ -700,11 +700,11 @@ function eg(e) {
     let { title: n, subtitle: a, badges: i, children: o, onClickThumbnail: s, onClickTitle: u, onClickSubtitle: c, headerIcons: d, disableGameProfileLinks: h = !1, showCoverImage: x = !0, onUserPopoutClosed: C, trackRankingItemInteraction: p, ...v } = e,
         { entry: g } = v,
         f = (0, J.dX)(g),
-        I = (0, N.Z)(
+        I = (0, y.Z)(
             {
                 location: 'ContentPopout',
                 applicationId: f && !h ? (null === (t = g.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
-                source: y.m1.ActivityCard,
+                source: N.m1.ActivityCard,
                 trackEntryPointImpression: !0,
                 sourceUserId: g.author_id
             },
@@ -784,18 +784,18 @@ function ef(e) {
         [f] = a.useMemo(() => (0, _.p9)(g, z.Z, H.Z, V.Z, T.Z), [g]),
         { entry: I } = v,
         j = (0, J.dX)(I),
-        Z = (0, N.Z)(
+        Z = (0, y.Z)(
             {
                 location: 'ContentPopout',
                 applicationId: j ? (null === (t = I.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
-                source: y.m1.ActivityCard,
+                source: N.m1.ActivityCard,
                 trackEntryPointImpression: !0,
                 sourceUserId: I.author_id
             },
             { onOpened: () => (null == x ? void 0 : x(er.xP.OPENED_GAME_PROFILE)) }
         ),
         P = j ? Z : void 0,
-        { activity: L, activityApplication: E, fallbackApplication: S } = (0, et.qy)(I),
+        { activity: L, activityApplication: E, fallbackApplication: S } = (0, Q.Z)(I),
         { largeImage: R, smallImage: M } = (0, F.YC)(L, null != E ? E : S);
     return null == o
         ? null

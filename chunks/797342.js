@@ -6,11 +6,11 @@ n.d(t, {
 var r = n(442837),
     i = n(594174),
     a = n(26033),
-    s = n(561308);
+    s = n(593294);
 function o(e) {
     var t, n, o, l, u;
     let c = (0, r.e7)([i.default], () => i.default.getUser(e.author_id)),
-        { activity: d, embeddedActivity: f } = (0, s.qy)(e);
+        { activity: d, embeddedActivity: f } = (0, s.Z)(e);
     if (null == d)
         return {
             isRich: !1,

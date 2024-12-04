@@ -27,8 +27,8 @@ var i,
     S = n(594174),
     T = n(351402),
     b = n(78839),
-    x = n(626135),
-    A = n(74538),
+    A = n(626135),
+    x = n(74538),
     Z = n(502087),
     L = n(657041),
     y = n(769415),
@@ -69,7 +69,7 @@ let en = (e) => {
         es = (0, d.e7)([_.Z], () => _.Z.useReducedMotion),
         eo = (0, h.ap)((0, f.ZP)()),
         [ec, ed] = a.useState(!1),
-        eu = (0, A.Qo)(el, ea),
+        eu = (0, x.Qo)(el, ea),
         eh = (0, c.JA)('nitro'),
         em = (0, j.N)(),
         ep = (0, R.Ng)(),
@@ -85,9 +85,9 @@ let en = (e) => {
         eS = (0, V.vx)(ee),
         eT = (0, V.wG)(ee),
         eb = (0, d.e7)([Z.Z], () => Z.Z.getCreatedAtOverride()),
-        ex = (0, d.e7)([N.Z], () => N.Z.hasLayers()),
-        { fractionalState: eA, endsAt: eZ, currentEntitlementId: eL } = (0, I.Z)({ forceFetch: !0 }),
-        [ey, eP] = (0, v.XR)(eA !== z.a$.NONE ? u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, eA !== z.a$.NONE ? Number(eL) : 0),
+        eA = (0, d.e7)([N.Z], () => N.Z.hasLayers()),
+        { fractionalState: ex, endsAt: eZ, currentEntitlementId: eL } = (0, I.Z)({ forceFetch: !0 }),
+        [ey, eP] = (0, v.XR)(ex !== z.a$.NONE ? u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, ex !== z.a$.NONE ? Number(eL) : 0),
         eO = null != eb ? eb : null == el ? void 0 : el.createdAt,
         eR = s || null != em || null != ep || eE || eS || eT || null != eC || null != ev || eu,
         { enabled: ej } = P._.useExperiment({ location: ee }, { autoTrackExposure: !1 }),
@@ -102,7 +102,7 @@ let en = (e) => {
         [ew, ek] = (0, v.US)(eg ? [u.z.REVERSE_TRIAL_NITRO_TAB_BADGE] : [], void 0, !0);
     if (!(eR = eR || (null != el && null != eO && Date.now() - eO.getTime() > et))) return null;
     if (
-        (eA !== z.a$.NONE &&
+        (ex !== z.a$.NONE &&
             ((r = 9),
             (i = (0, l.jsx)(O.Z, {
                 className: '',
@@ -187,7 +187,7 @@ let en = (e) => {
         locationState: ei,
         onClick: () => {
             ey === u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eP(Y.L.TAKE_ACTION),
-                x.default.track(W.rMx.NITRO_TAB_VISITED, {
+                A.default.track(W.rMx.NITRO_TAB_VISITED, {
                     badge_decorator: r,
                     has_premium: eu
                 }),
@@ -216,7 +216,7 @@ let en = (e) => {
                 variant: G.j$.REFERRAL_PROGRAM,
                 children: eH
             })
-          : eS && !ex
+          : eS && !eA
             ? (0, l.jsx)(G.A7, { children: () => eH })
             : eH;
 };

@@ -18,9 +18,9 @@ t.Z = (e) => {
         { isHovered: r, setIsHovered: C, onMouseEnter: x, onMouseLeave: v, cancelTimers: _ } = (0, d.Z)(200, 300),
         [I, E] = l.useState(!1),
         b = (0, s.e7)([h.Z], () => h.Z.effectCooldownEndTime),
-        N = l.useMemo(() => (null != b ? (b.getTime() - Date.now()) / 1000 : 0), [b]),
-        { seconds: Z } = (0, c.Z)(null != b ? b : new Date()),
-        S = Z > 0,
+        Z = l.useMemo(() => (null != b ? (b.getTime() - Date.now()) / 1000 : 0), [b]),
+        { seconds: N } = (0, c.Z)(null != b ? b : new Date()),
+        S = N > 0,
         { groupedButtons: T, mode: j } = (0, m.Z)({ location: 'ActionBarSoundboardButton' }),
         A = j === m.B.GroupedButtonsRedMic ? 'green' : void 0,
         y = l.useCallback(
@@ -64,8 +64,8 @@ t.Z = (e) => {
             return (0, i.jsx)(u.Z, {
                 isCenterButton: !0,
                 color: R ? A : void 0,
-                totalCooldownSeconds: N,
-                remainingCooldownSeconds: Z,
+                totalCooldownSeconds: Z,
+                remainingCooldownSeconds: N,
                 className: a()(!T && g.controlButton, n),
                 onKeyDown: (e) => {
                     var t, n;

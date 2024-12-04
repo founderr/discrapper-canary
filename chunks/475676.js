@@ -39,15 +39,15 @@ function Z() {
 function P(e) {
     var t, n, v, j;
     let P,
-        { selected: T, channel: y } = e,
-        N = y.guild_id,
+        { selected: T, channel: N } = e,
+        y = N.guild_id,
         _ = (0, h.Z)({
-            guildId: N,
+            guildId: y,
             leaderboardId: g._,
             intervalOffset: 0
         }),
         { rankChanges: A } = (0, x.Z)({
-            guildId: N,
+            guildId: y,
             leaderboardId: g._,
             intervalStart: null !== (v = null == _ ? void 0 : _.interval_start) && void 0 !== v ? v : ''
         }),
@@ -60,7 +60,7 @@ function P(e) {
             return [n, l];
         }, [_, A, E]),
         M = (0, i.e7)([c.default], () => c.default.getUser(null == S ? void 0 : S.userId)),
-        k = m.ZP.getName(N, void 0, M);
+        k = m.ZP.getName(y, void 0, M);
     if (
         (!(function (e) {
             let { leaderboard: t, guildId: n } = e,
@@ -74,7 +74,7 @@ function P(e) {
             }, [l, n]);
         })({
             leaderboard: _,
-            guildId: N
+            guildId: y
         }),
         null == _)
     )

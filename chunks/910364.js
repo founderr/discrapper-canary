@@ -22,8 +22,8 @@ var i = t(200651),
     v = t(687158),
     Z = t(326094),
     g = t(510659),
-    _ = t(113557),
-    j = t(867176),
+    j = t(113557),
+    _ = t(867176),
     b = t(451834),
     E = t(502762),
     N = t(544989),
@@ -42,7 +42,7 @@ var i = t(200651),
     D = t(388032),
     F = t(171865);
 function G(e) {
-    let { user: n, currentUser: t, guildId: G, channelId: w, messageId: k, roleId: V, sessionId: W, friendToken: z, initialSection: K, initialSubsection: H, transitionState: Y, onClose: J, showGuildProfile: X = !0, sourceAnalyticsLocations: q = [] } = e,
+    let { user: n, currentUser: t, guildId: G, channelId: w, messageId: k, roleId: V, sessionId: W, friendToken: z, initialSection: K, initialSubsection: Y, transitionState: H, onClose: J, showGuildProfile: X = !0, sourceAnalyticsLocations: q = [] } = e,
         { analyticsLocations: Q } = (0, u.ZP)([...q, d.Z.SIMPLIFIED_PROFILE_MODAL]),
         $ = (0, Z.Z)({
             user: n,
@@ -122,7 +122,7 @@ function G(e) {
             children: (0, i.jsx)(g.NJ, {
                 value: en,
                 children: (0, i.jsxs)(s.ModalRoot, {
-                    transitionState: Y,
+                    transitionState: H,
                     className: F.root,
                     hideShadow: !0,
                     'aria-label': D.intl.string(D.t['3N/J2t']),
@@ -169,7 +169,7 @@ function G(e) {
                                 }),
                                 (0, i.jsxs)('header', {
                                     children: [
-                                        (0, i.jsx)(j.Z, {
+                                        (0, i.jsx)(_.Z, {
                                             user: n,
                                             displayProfile: ei,
                                             profileType: U.y0.FULL_SIZE
@@ -187,7 +187,7 @@ function G(e) {
                                         (0, i.jsxs)('div', {
                                             className: F.headerInner,
                                             children: [
-                                                (0, i.jsx)(_.Z, {
+                                                (0, i.jsx)(j.Z, {
                                                     location: 'UserProfileModal',
                                                     user: n,
                                                     displayProfile: ei,
@@ -202,7 +202,7 @@ function G(e) {
                                                     guildId: G,
                                                     channelId: w,
                                                     profileType: U.y0.FULL_SIZE,
-                                                    hasEntered: Y === s.ModalTransitionState.ENTERED,
+                                                    hasEntered: H === s.ModalTransitionState.ENTERED,
                                                     onCloseProfile: J
                                                 }),
                                                 (0, i.jsxs)('div', {
@@ -232,7 +232,7 @@ function G(e) {
                                     channelId: w,
                                     displayProfile: ei,
                                     initialSection: K,
-                                    initialSubsection: H,
+                                    initialSubsection: Y,
                                     friendToken: z,
                                     onClose: J
                                 })

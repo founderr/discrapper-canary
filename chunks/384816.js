@@ -22,8 +22,8 @@ var l = t(442837),
     v = t(652853),
     Z = t(179828),
     g = t(228168),
-    _ = t(388032),
-    j = t(64406);
+    j = t(388032),
+    _ = t(64406);
 function b(e) {
     let { user: n, currentUser: t, displayProfile: b, subsection: E, onClose: N } = e,
         { theme: S } = (0, v.z)(),
@@ -36,7 +36,7 @@ function b(e) {
         M = (0, f.Z)(n.id);
     return (0, i.jsxs)(o.ScrollerThin, {
         fade: !0,
-        className: j.scroller,
+        className: _.scroller,
         children: [
             (null == b ? void 0 : b.bio) != null &&
                 (null == b ? void 0 : b.bio) !== '' &&
@@ -53,7 +53,7 @@ function b(e) {
                 }),
             n.isProvisional && (0, i.jsx)(s.Z, { look: 'profile_modal' }),
             (0, i.jsx)(h.Z, {
-                heading: _.intl.string(_.t.a6XYDw),
+                heading: j.intl.string(j.t.a6XYDw),
                 children: (0, i.jsx)(p.Z, {
                     userId: n.id,
                     guildId: null == b ? void 0 : b.guildId,
@@ -62,11 +62,11 @@ function b(e) {
             }),
             L.length > 0 &&
                 (0, i.jsx)(h.Z, {
-                    heading: _.intl.string(_.t['3fe7U1']),
+                    heading: j.intl.string(j.t['3fe7U1']),
                     scrollIntoView: E === g.Tb.CONNECTIONS,
                     children: (0, i.jsx)(x.OA, {
                         connectedAccounts: L,
-                        className: j.connections,
+                        className: _.connections,
                         userId: n.id,
                         theme: S,
                         locale: A
@@ -74,12 +74,12 @@ function b(e) {
                 }),
             M.length > 0 &&
                 (0, i.jsx)(h.Z, {
-                    heading: _.intl.string(_.t.PHjkRE),
+                    heading: j.intl.string(j.t.PHjkRE),
                     children: M.map((e) =>
                         (0, i.jsx)(
                             x.tH,
                             {
-                                className: j.appsConnections,
+                                className: _.appsConnections,
                                 applicationRoleConnection: e,
                                 locale: A,
                                 onApplicationClicked: () => {
@@ -92,11 +92,11 @@ function b(e) {
                     )
                 }),
             (0, i.jsx)(h.Z, {
-                heading: _.intl.string(_.t.PbMNh4),
+                heading: j.intl.string(j.t.PbMNh4),
                 scrollIntoView: E === g.Tb.NOTE,
                 children: (0, i.jsx)(r.Z, {
                     userId: n.id,
-                    className: j.note,
+                    className: _.note,
                     autoFocus: E === g.Tb.NOTE,
                     onUpdate: () => T({ action: 'SET_NOTE' })
                 })

@@ -105,7 +105,7 @@ function y(e, t, n) {
         utmContentCurrent: Object.keys(u.jn).find((e) => u.jn[e] === t)
     });
     let i = null != n ? '#'.concat(n) : '';
-    a.Z.setState({ selectedTab: v.F$.QUESTS }), (0, s.uL)(E.Z5c.QUEST_HOME + i);
+    a.Z.setState({ selectedTab: v.GlobalDiscoveryTab.QUESTS }), (0, s.uL)(E.Z5c.QUEST_HOME + i);
 }
 function A(e) {
     let t = (0, _.T)({ quest: e }),
