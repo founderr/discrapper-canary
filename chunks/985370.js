@@ -21,25 +21,26 @@ t.Z = (e) => {
         N = l.useMemo(() => (null != b ? (b.getTime() - Date.now()) / 1000 : 0), [b]),
         { seconds: Z } = (0, c.Z)(null != b ? b : new Date()),
         S = Z > 0,
-        { groupedButtons: T } = (0, m.Z)({ location: 'ActionBarSoundboardButton' }),
-        j = l.useCallback(
+        { groupedButtons: T, mode: j } = (0, m.Z)({ location: 'ActionBarSoundboardButton' }),
+        A = j === m.B.GroupedButtonsRedMic ? 'green' : void 0,
+        y = l.useCallback(
             (e) => {
                 if ('focus' !== e.type) !I && !S && x();
             },
             [I, S, x]
         ),
-        A = l.useCallback(() => {
+        P = l.useCallback(() => {
             !I && v();
         }, [v, I]),
-        y = l.useCallback(
+        M = l.useCallback(
             (e, t) => {
                 _(), E(!I), (!r || I) && (null == t || t(e));
             },
             [_, I, r]
         ),
-        P = r || I;
+        R = r || I;
     return (0, i.jsx)(o.Popout, {
-        shouldShow: P,
+        shouldShow: R,
         animationPosition: 'bottom',
         position: 'bottom',
         align: 'center',
@@ -50,11 +51,11 @@ t.Z = (e) => {
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return (0, i.jsx)(p.Z, {
-                isHovered: P,
+                isHovered: R,
                 channel: t,
                 closePopout: n,
                 onMouseEnter: x,
-                onMouseLeave: A,
+                onMouseLeave: P,
                 onFocus: () => E(!0)
             });
         },
@@ -62,19 +63,20 @@ t.Z = (e) => {
             let { onClick: t, onKeyDown: l } = e;
             return (0, i.jsx)(u.Z, {
                 isCenterButton: !0,
+                color: R ? A : void 0,
                 totalCooldownSeconds: N,
                 remainingCooldownSeconds: Z,
                 className: a()(!T && g.controlButton, n),
                 onKeyDown: (e) => {
                     var t, n;
-                    return (t = e), (n = l), void (t.keyCode === f.yXg.ENTER && t.keyCode === f.yXg.SPACE && y(t, n));
+                    return (t = e), (n = l), void (t.keyCode === f.yXg.ENTER && t.keyCode === f.yXg.SPACE && M(t, n));
                 },
                 onClick: (e) => {
-                    y(e, t);
+                    M(e, t);
                 },
-                onMouseEnter: j,
-                onMouseLeave: A,
-                isActive: P
+                onMouseEnter: y,
+                onMouseLeave: P,
+                isActive: R
             });
         }
     });

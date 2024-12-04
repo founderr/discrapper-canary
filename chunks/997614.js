@@ -31,13 +31,14 @@ function E(e) {
         T = N || Z || S,
         j = (0, d.sR)({ isSoundboardButtonDisabled: T }),
         [A, y] = (0, c.cv)(j),
-        { groupedButtons: P } = (0, m.Z)({ location: 'ActionBarSoundboardButton' });
-    function M() {
+        { groupedButtons: P, mode: M } = (0, m.Z)({ location: 'ActionBarSoundboardButton' }),
+        R = M === m.B.GroupedButtonsRedMic ? 'green' : void 0;
+    function L() {
         if (N) return I.intl.string(I.t['Ox4/zc']);
         if (Z) return I.intl.string(I.t['+YBKYG']);
         if (S) return I.intl.string(I.t.X1lQlp);
     }
-    function R(e) {
+    function k(e) {
         null != b &&
             (0, o.jW)(e, async () => {
                 let { default: e } = await n.e('56049').then(n.bind(n, 338991));
@@ -48,18 +49,18 @@ function E(e) {
                     });
             });
     }
-    let L = l.useRef(null),
-        k = l.useCallback(() => {
+    let O = l.useRef(null),
+        D = l.useCallback(() => {
             var e;
-            null === (e = L.current) || void 0 === e || e.hidePopout();
+            null === (e = O.current) || void 0 === e || e.hidePopout();
         }, []);
     return (
         (0, x.yp)({
             event: _.CkL.TOGGLE_SOUNDBOARD,
-            handler: k
+            handler: D
         }),
         (0, i.jsx)(v.Z, {
-            ref: L,
+            ref: O,
             align: P ? 'center' : 'left',
             renderPopout: (e) => {
                 let { closePopout: n } = e;
@@ -84,19 +85,20 @@ function E(e) {
                 P
                     ? (0, i.jsx)(g.d, {
                           themeable: E,
-                          label: M(),
+                          label: L(),
                           iconComponent: s.SoundboardIcon,
                           disabled: T,
-                          onContextMenu: R,
+                          onContextMenu: k,
                           ...e,
+                          color: e.isActive ? R : void 0,
                           className: ''
                       })
                     : (0, i.jsx)(g.Z, {
                           themeable: E,
-                          label: M(),
+                          label: L(),
                           iconComponent: s.SoundboardIcon,
                           disabled: T,
-                          onContextMenu: R,
+                          onContextMenu: k,
                           ...e
                       })
         })
