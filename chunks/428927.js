@@ -23,8 +23,8 @@ var l = t(120356),
     p = t(200634),
     h = t(228168),
     v = t(981631),
-    g = t(388032),
-    Z = t(731218),
+    Z = t(388032),
+    g = t(731218),
     _ = t(644197);
 let j = (0, s.getAvatarSize)(s.AvatarSizes.SIZE_16);
 function b(e) {
@@ -32,7 +32,7 @@ function b(e) {
         x = n.hasAvatarForGuild(l.id);
     return (0, i.jsxs)(s.Clickable, {
         focusProps: { offset: { right: 8 } },
-        className: Z.listRow,
+        className: g.listRow,
         onClick: m,
         onContextMenu: (e) => {
             (0, c.jW)(e, async () => {
@@ -49,7 +49,7 @@ function b(e) {
                 tabIndex: -1,
                 guild: l,
                 showBadge: !0,
-                className: o()(Z.listAvatar, null == l.icon ? _.guildAvatarWithoutIcon : null),
+                className: o()(g.listAvatar, null == l.icon ? _.guildAvatarWithoutIcon : null),
                 badgeStrokeColor: (0, u.Lq)((0, r.wj)(d) ? v.Ilk.PRIMARY_600 : v.Ilk.WHITE_500),
                 badgeTooltipColor: s.TooltipColors.PRIMARY,
                 badgeTooltipDelay: h.vB,
@@ -57,10 +57,10 @@ function b(e) {
                 active: !0
             }),
             (0, i.jsxs)('div', {
-                className: Z.listRowContent,
+                className: g.listRowContent,
                 children: [
                     (0, i.jsx)('div', {
-                        className: Z.listName,
+                        className: g.listName,
                         children: l.toString()
                     }),
                     x || null != a
@@ -92,12 +92,12 @@ function E(e) {
             (0, m.X)(e), t(), (0, a.xf)();
         };
     return (0, i.jsx)(s.ScrollerThin, {
-        className: Z.listScroller,
+        className: g.listScroller,
         fade: !0,
         children:
             null == o && r
                 ? (0, i.jsx)('div', {
-                      className: Z.empty,
+                      className: g.empty,
                       children: (0, i.jsx)(s.Spinner, {})
                   })
                 : (null != o || r) && (null == o ? void 0 : o.length) !== 0
@@ -120,12 +120,12 @@ function E(e) {
                             );
                         })
                   : (0, i.jsxs)('div', {
-                        className: Z.empty,
+                        className: g.empty,
                         children: [
-                            (0, i.jsx)('div', { className: Z.emptyIconGuilds }),
+                            (0, i.jsx)('div', { className: g.emptyIconGuilds }),
                             (0, i.jsx)('div', {
-                                className: Z.emptyText,
-                                children: g.intl.string(g.t.zjVh8v)
+                                className: g.emptyText,
+                                children: Z.intl.string(Z.t.zjVh8v)
                             })
                         ]
                     })

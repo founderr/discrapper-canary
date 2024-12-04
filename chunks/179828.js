@@ -20,8 +20,8 @@ var i = t(200651),
     p = t(256226),
     h = t(678738),
     v = t(314172),
-    g = t(981631),
-    Z = t(388032),
+    Z = t(981631),
+    g = t(388032),
     _ = t(454302);
 function j(e) {
     let { user: n, currentUser: t, guild: c, guildMember: a, roles: d, highestRole: u, canManageRoles: f, onAddRole: m, onRemoveRole: x } = e,
@@ -30,12 +30,12 @@ function j(e) {
         b = (0, r.ZP)({
             id: j,
             isEnabled: !0,
-            scrollToStart: g.Cyb,
-            scrollToEnd: g.Cyb,
+            scrollToStart: Z.Cyb,
+            scrollToEnd: Z.Cyb,
             wrap: !0
         }),
         E = d.length,
-        N = 0 === E ? Z.intl.string(Z.t['vR7M+/']) : Z.intl.formatToPlainString(Z.t.PCs0oq, { numRoles: E }),
+        N = 0 === E ? g.intl.string(g.t['vR7M+/']) : g.intl.formatToPlainString(g.t.PCs0oq, { numRoles: E }),
         S = d.map((e) => {
             var l;
             return (0, i.jsx)(
@@ -97,7 +97,7 @@ function b(e) {
             [v, _]
         ),
         E = I.e9(o, t.id),
-        [N] = (0, c.Wu)([m.Z], () => [m.Z.can(g.Plq.MANAGE_ROLES, o), null != o ? m.Z.getGuildVersion(o.id) : null]),
+        [N] = (0, c.Wu)([m.Z], () => [m.Z.can(Z.Plq.MANAGE_ROLES, o), null != o ? m.Z.getGuildVersion(o.id) : null]),
         S = l.useCallback(
             (e) => {
                 var t, i;
@@ -118,7 +118,7 @@ function b(e) {
         y = N && null != p;
     return 0 !== b.length || y
         ? (0, i.jsx)(h.Z, {
-              heading: Z.intl.string(Z.t.LPJmLy),
+              heading: g.intl.string(g.t.LPJmLy),
               scrollIntoView: r,
               children: (0, i.jsx)(j, {
                   user: n,

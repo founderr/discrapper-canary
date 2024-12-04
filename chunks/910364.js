@@ -20,8 +20,8 @@ var i = t(200651),
     p = t(221292),
     h = t(816988),
     v = t(687158),
-    g = t(326094),
-    Z = t(510659),
+    Z = t(326094),
+    g = t(510659),
     _ = t(113557),
     j = t(867176),
     b = t(451834),
@@ -32,19 +32,19 @@ var i = t(200651),
     y = t(195387),
     P = t(272510),
     C = t(748283),
-    L = t(902423),
-    A = t(495804),
-    O = t(171368),
-    R = t(62154),
-    M = t(412317),
+    A = t(902423),
+    L = t(495804),
+    M = t(171368),
+    O = t(62154),
+    R = t(412317),
     U = t(228168),
     B = t(981631),
-    F = t(388032),
-    D = t(171865);
+    D = t(388032),
+    F = t(171865);
 function G(e) {
     let { user: n, currentUser: t, guildId: G, channelId: w, messageId: k, roleId: V, sessionId: W, friendToken: z, initialSection: K, initialSubsection: H, transitionState: Y, onClose: J, showGuildProfile: X = !0, sourceAnalyticsLocations: q = [] } = e,
         { analyticsLocations: Q } = (0, u.ZP)([...q, d.Z.SIMPLIFIED_PROFILE_MODAL]),
-        $ = (0, g.Z)({
+        $ = (0, Z.Z)({
             user: n,
             currentUser: t,
             location: B.Sbl.SIMPLIFIED_USER_PROFILE
@@ -59,7 +59,7 @@ function G(e) {
             roleId: V,
             showGuildProfile: X
         }),
-        en = (0, Z.$m)(),
+        en = (0, g.$m)(),
         et = (0, s.useSpring)({
             opacity: null != en.interactionType ? 1 : 0,
             config: { duration: 150 }
@@ -79,11 +79,11 @@ function G(e) {
                 : (null == ei ? void 0 : ei.guildId) != null
                   ? (0, i.jsx)(s.MenuItem, {
                         id: 'view-main-profile',
-                        label: F.intl.string(F.t.GISTtb),
-                        subtext: F.intl.formatToPlainString(F.t['mn/nW1'], { displayName: I.ZP.getName(void 0, void 0, n) }),
+                        label: D.intl.string(D.t.GISTtb),
+                        subtext: D.intl.formatToPlainString(D.t['mn/nW1'], { displayName: I.ZP.getName(void 0, void 0, n) }),
                         action: () => {
                             J(),
-                                (0, O.openUserProfileModal)({
+                                (0, M.openUserProfileModal)({
                                     ...ee,
                                     showGuildProfile: !1,
                                     friendToken: z,
@@ -98,11 +98,11 @@ function G(e) {
                     })
                   : (0, i.jsx)(s.MenuItem, {
                         id: 'view-server-profile',
-                        label: F.intl.string(F.t.DisZzM),
-                        subtext: F.intl.formatToPlainString(F.t['mn/nW1'], { displayName: I.ZP.getName(G, w, n) }),
+                        label: D.intl.string(D.t.DisZzM),
+                        subtext: D.intl.formatToPlainString(D.t['mn/nW1'], { displayName: I.ZP.getName(G, w, n) }),
                         action: () => {
                             J(),
-                                (0, O.openUserProfileModal)({
+                                (0, M.openUserProfileModal)({
                                     ...ee,
                                     showGuildProfile: !0,
                                     friendToken: z,
@@ -119,13 +119,13 @@ function G(e) {
         value: Q,
         children: (0, i.jsx)(x.Mt, {
             value: ee,
-            children: (0, i.jsx)(Z.NJ, {
+            children: (0, i.jsx)(g.NJ, {
                 value: en,
                 children: (0, i.jsxs)(s.ModalRoot, {
                     transitionState: Y,
-                    className: D.root,
+                    className: F.root,
                     hideShadow: !0,
-                    'aria-label': F.intl.string(F.t['3N/J2t']),
+                    'aria-label': D.intl.string(D.t['3N/J2t']),
                     children: [
                         (0, i.jsxs)(E.Z, {
                             user: n,
@@ -140,7 +140,7 @@ function G(e) {
                                             er &&
                                             (0, i.jsxs)(i.Fragment, {
                                                 children: [
-                                                    (0, i.jsx)(L.Z, { onClose: J }),
+                                                    (0, i.jsx)(A.Z, { onClose: J }),
                                                     (0, i.jsx)(C.Z, {
                                                         currentUser: t,
                                                         onClose: J
@@ -177,15 +177,15 @@ function G(e) {
                                         (0, i.jsx)(b.Z, {
                                             userId: n.id,
                                             onClose: J,
-                                            className: D.toast
+                                            className: F.toast
                                         }),
                                         null != en.interactionType &&
                                             (0, i.jsx)(o.animated.div, {
                                                 style: et,
-                                                className: D.backdrop
+                                                className: F.backdrop
                                             }),
                                         (0, i.jsxs)('div', {
-                                            className: D.headerInner,
+                                            className: F.headerInner,
                                             children: [
                                                 (0, i.jsx)(_.Z, {
                                                     location: 'UserProfileModal',
@@ -195,7 +195,7 @@ function G(e) {
                                                     channelId: w,
                                                     profileType: U.y0.FULL_SIZE
                                                 }),
-                                                (0, i.jsx)(A.Z, {
+                                                (0, i.jsx)(L.Z, {
                                                     location: 'SimplifiedUserProfileModal',
                                                     user: n,
                                                     displayProfile: ei,
@@ -206,9 +206,9 @@ function G(e) {
                                                     onCloseProfile: J
                                                 }),
                                                 (0, i.jsxs)('div', {
-                                                    className: D.headerButtons,
+                                                    className: F.headerButtons,
                                                     children: [
-                                                        (0, i.jsx)(M.Z, {
+                                                        (0, i.jsx)(R.Z, {
                                                             isCurrentUser: er,
                                                             user: n,
                                                             relationshipType: eo,
@@ -226,7 +226,7 @@ function G(e) {
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(R.Z, {
+                                (0, i.jsx)(O.Z, {
                                     user: n,
                                     currentUser: t,
                                     channelId: w,

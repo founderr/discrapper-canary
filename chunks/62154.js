@@ -20,8 +20,8 @@ var l = t(442837),
     p = t(740628),
     h = t(643518),
     v = t(228168),
-    g = t(981631),
-    Z = t(171865);
+    Z = t(981631),
+    g = t(171865);
 function _(e) {
     var n;
     let { user: t, currentUser: _, channelId: j, displayProfile: b, initialSection: E, initialSubsection: N, friendToken: S, onClose: T } = e,
@@ -31,11 +31,11 @@ function _(e) {
             currentUser: _
         }),
         C = r.ZP.useName(null == b ? void 0 : b.guildId, j, t),
-        L = t.id === _.id,
-        { dimissibleUpsellsEnabled: A } = (0, c.u)({ location: 'UserProfileModalBody' }),
-        O = (0, s.I5)(_);
+        A = t.id === _.id,
+        { dimissibleUpsellsEnabled: L } = (0, c.u)({ location: 'UserProfileModalBody' }),
+        M = (0, s.I5)(_);
     return (0, i.jsxs)('div', {
-        className: Z.body,
+        className: g.body,
         children: [
             (0, i.jsx)(x.Z, {
                 user: t,
@@ -50,26 +50,26 @@ function _(e) {
                     onClose: T
                 })
             }),
-            y === g.OGo.PENDING_INCOMING &&
+            y === Z.OGo.PENDING_INCOMING &&
                 (0, i.jsx)(I.Z.Overlay, {
-                    className: Z.friendRequestBannerOverlay,
+                    className: g.friendRequestBannerOverlay,
                     children: (0, i.jsx)(f.Z, {
                         user: t,
                         guildId: null !== (n = null == b ? void 0 : b.guildId) && void 0 !== n ? n : void 0,
                         channelId: j,
                         friendToken: S,
-                        className: Z.friendRequestBanner
+                        className: g.friendRequestBanner
                     })
                 }),
             (0, i.jsx)(m.Z, { user: t }),
-            A &&
-                L &&
+            L &&
+                A &&
                 (0, i.jsx)(d.Z, {
-                    isPremiumUser: O,
+                    isPremiumUser: M,
                     onInteraction: T
                 }),
             (0, i.jsx)(I.Z.Overlay, {
-                className: Z.overlay,
+                className: g.overlay,
                 children: (0, i.jsx)(p.Z, {
                     user: t,
                     currentUser: _,

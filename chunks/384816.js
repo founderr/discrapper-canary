@@ -20,8 +20,8 @@ var l = t(442837),
     p = t(900927),
     h = t(678738),
     v = t(652853),
-    g = t(179828),
-    Z = t(228168),
+    Z = t(179828),
+    g = t(228168),
     _ = t(388032),
     j = t(64406);
 function b(e) {
@@ -31,9 +31,9 @@ function b(e) {
         y = null == b ? void 0 : b.guildId,
         P = (0, l.e7)([a.Z], () => (null != y ? a.Z.getGuild(y) : null)),
         C = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
-        L = (0, l.e7)([c.default], () => c.default.locale),
-        A = (0, m.Z)(n.id),
-        O = (0, f.Z)(n.id);
+        A = (0, l.e7)([c.default], () => c.default.locale),
+        L = (0, m.Z)(n.id),
+        M = (0, f.Z)(n.id);
     return (0, i.jsxs)(o.ScrollerThin, {
         fade: !0,
         className: j.scroller,
@@ -45,11 +45,11 @@ function b(e) {
                     setLineClamp: !1
                 }),
             null != P &&
-                (0, i.jsx)(g.Z, {
+                (0, i.jsx)(Z.Z, {
                     user: n,
                     currentUser: t,
                     guild: P,
-                    scrollIntoView: E === Z.Tb.ROLES
+                    scrollIntoView: E === g.Tb.ROLES
                 }),
             n.isProvisional && (0, i.jsx)(s.Z, { look: 'profile_modal' }),
             (0, i.jsx)(h.Z, {
@@ -57,31 +57,31 @@ function b(e) {
                 children: (0, i.jsx)(p.Z, {
                     userId: n.id,
                     guildId: null == b ? void 0 : b.guildId,
-                    tooltipDelay: Z.vB
+                    tooltipDelay: g.vB
                 })
             }),
-            A.length > 0 &&
+            L.length > 0 &&
                 (0, i.jsx)(h.Z, {
                     heading: _.intl.string(_.t['3fe7U1']),
-                    scrollIntoView: E === Z.Tb.CONNECTIONS,
+                    scrollIntoView: E === g.Tb.CONNECTIONS,
                     children: (0, i.jsx)(x.OA, {
-                        connectedAccounts: A,
+                        connectedAccounts: L,
                         className: j.connections,
                         userId: n.id,
                         theme: S,
-                        locale: L
+                        locale: A
                     })
                 }),
-            O.length > 0 &&
+            M.length > 0 &&
                 (0, i.jsx)(h.Z, {
                     heading: _.intl.string(_.t.PHjkRE),
-                    children: O.map((e) =>
+                    children: M.map((e) =>
                         (0, i.jsx)(
                             x.tH,
                             {
                                 className: j.appsConnections,
                                 applicationRoleConnection: e,
-                                locale: L,
+                                locale: A,
                                 onApplicationClicked: () => {
                                     T({ action: 'PRESS_APP_CONNECTION' }), N();
                                 },
@@ -93,11 +93,11 @@ function b(e) {
                 }),
             (0, i.jsx)(h.Z, {
                 heading: _.intl.string(_.t.PbMNh4),
-                scrollIntoView: E === Z.Tb.NOTE,
+                scrollIntoView: E === g.Tb.NOTE,
                 children: (0, i.jsx)(r.Z, {
                     userId: n.id,
                     className: j.note,
-                    autoFocus: E === Z.Tb.NOTE,
+                    autoFocus: E === g.Tb.NOTE,
                     onUpdate: () => T({ action: 'SET_NOTE' })
                 })
             })

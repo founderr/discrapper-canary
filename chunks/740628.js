@@ -20,8 +20,8 @@ var i = t(200651),
     p = t(228168),
     h = t(388032),
     v = t(731218),
-    g = t(893302);
-function Z(e) {
+    Z = t(893302);
+function g(e) {
     let { section: n, subsection: t, user: l, currentUser: o, displayProfile: r, onClose: s } = e;
     return n === p.oh.ACTIVITY
         ? (0, i.jsx)(f.Z, {
@@ -102,7 +102,7 @@ function _(e) {
     );
     return E
         ? (0, i.jsx)('div', {
-              className: g.container,
+              className: Z.container,
               children: (0, i.jsxs)('div', {
                   className: v.empty,
                   children: [
@@ -115,10 +115,10 @@ function _(e) {
               })
           })
         : (0, i.jsxs)('div', {
-              className: g.container,
+              className: Z.container,
               children: [
                   (0, i.jsx)(r.n, {
-                      className: g.tabBar,
+                      className: Z.tabBar,
                       type: 'top',
                       selectedItem: N,
                       onItemSelect: y,
@@ -127,7 +127,7 @@ function _(e) {
                           return (0, i.jsx)(
                               r.n.Item,
                               {
-                                  className: g.tabBarItem,
+                                  className: Z.tabBarItem,
                                   id: n,
                                   'aria-label': t,
                                   children: (0, i.jsx)(s.Text, {
@@ -139,7 +139,7 @@ function _(e) {
                           );
                       })
                   }),
-                  (0, i.jsx)(Z, {
+                  (0, i.jsx)(g, {
                       items: I,
                       section: N,
                       subsection: S,

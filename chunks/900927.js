@@ -20,13 +20,13 @@ function I(e) {
         p = (0, l.e7)([c.default], () => c.default.locale),
         h = (0, l.e7)([d.Z], () => (null != t ? d.Z.getGuild(t) : null)),
         v = (0, l.e7)([a.ZP], () => (null != t ? a.ZP.getMember(t, n) : null)),
-        g = (0, r.FI)(u.default.extractTimestamp(n), p),
-        Z = (0, r.FI)(null == v ? void 0 : v.joinedAt, p);
+        Z = (0, r.FI)(u.default.extractTimestamp(n), p),
+        g = (0, r.FI)(null == v ? void 0 : v.joinedAt, p);
     return null == h || null == v
         ? (0, i.jsx)(o.Text, {
               variant: 'text-sm/normal',
               className: I,
-              children: g
+              children: Z
           })
         : (0, i.jsxs)('div', {
               className: m.memberSinceWrapper,
@@ -50,7 +50,7 @@ function I(e) {
                           (0, i.jsx)(o.Text, {
                               variant: 'text-sm/normal',
                               className: I,
-                              children: g
+                              children: Z
                           })
                       ]
                   }),
@@ -71,7 +71,7 @@ function I(e) {
                           (0, i.jsx)(o.Text, {
                               variant: 'text-sm/normal',
                               className: I,
-                              children: Z
+                              children: g
                           })
                       ]
                   })

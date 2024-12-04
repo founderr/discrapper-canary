@@ -20,8 +20,8 @@ var i = t(200651),
     p = t(280885),
     h = t(900927),
     v = t(678738),
-    g = t(502762),
-    Z = t(530),
+    Z = t(502762),
+    g = t(530),
     _ = t(679332),
     j = t(544989),
     b = t(228168),
@@ -31,32 +31,32 @@ var i = t(200651),
     T = t(64406),
     y = t(893302);
 function P(e) {
-    let { user: n, guildId: t, channelId: P, messageId: C, roleId: L, sessionId: A, transitionState: O, onClose: R, sourceAnalyticsLocations: M = [] } = e,
+    let { user: n, guildId: t, channelId: P, messageId: C, roleId: A, sessionId: L, transitionState: M, onClose: O, sourceAnalyticsLocations: R = [] } = e,
         U = t === E.ME ? void 0 : t,
         B = (0, f.ZP)(n.id, U),
-        { analyticsLocations: F } = (0, c.ZP)([...M, s.Z.SIMPLIFIED_PROFILE_MODAL]),
-        D = (0, u.ZB)({
+        { analyticsLocations: D } = (0, c.ZP)([...R, s.Z.SIMPLIFIED_PROFILE_MODAL]),
+        F = (0, u.ZB)({
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
-            sourceSessionId: A,
+            sourceSessionId: L,
             guildId: U,
             channelId: P,
             messageId: C,
-            roleId: L
+            roleId: A
         }),
         G = l.createRef(),
         w = (0, r.Z)(G);
     return (0, i.jsx)(c.Gt, {
-        value: F,
+        value: D,
         children: (0, i.jsx)(u.Mt, {
-            value: D,
+            value: F,
             children: (0, i.jsxs)(o.ModalRoot, {
-                transitionState: O,
+                transitionState: M,
                 className: S.root,
                 hideShadow: !0,
                 'aria-label': N.intl.string(N.t['3N/J2t']),
                 children: [
-                    (0, i.jsxs)(g.Z, {
+                    (0, i.jsxs)(Z.Z, {
                         user: n,
                         displayProfile: B,
                         profileType: b.y0.FULL_SIZE,
@@ -88,7 +88,7 @@ function P(e) {
                             (0, i.jsxs)('div', {
                                 className: S.body,
                                 children: [
-                                    (0, i.jsx)(Z.Z, {
+                                    (0, i.jsx)(g.Z, {
                                         user: n,
                                         profileType: b.y0.FULL_SIZE,
                                         nickname: d.ZP.getName(U, P, n),
@@ -97,10 +97,10 @@ function P(e) {
                                         tags: (0, i.jsx)(I.Z, {
                                             displayProfile: B,
                                             profileType: b.y0.FULL_SIZE,
-                                            onClose: R
+                                            onClose: O
                                         })
                                     }),
-                                    (0, i.jsx)(g.Z.Overlay, {
+                                    (0, i.jsx)(Z.Z.Overlay, {
                                         className: S.overlay,
                                         children: (0, i.jsxs)('div', {
                                             className: y.container,

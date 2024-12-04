@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return Z;
+        return g;
     }
 });
 var i = t(200651);
@@ -20,10 +20,10 @@ var l = t(442837),
     p = t(179828),
     h = t(228168),
     v = t(388032),
-    g = t(64406);
-function Z(e) {
+    Z = t(64406);
+function g(e) {
     var n;
-    let { user: t, currentUser: Z, displayProfile: _, subsection: j, onClose: b } = e,
+    let { user: t, currentUser: g, displayProfile: _, subsection: j, onClose: b } = e,
         { trackUserProfileAction: E } = (0, d.KZ)(),
         N = (0, l.e7)([c.Z], () => ((null == _ ? void 0 : _.guildId) != null ? c.Z.getGuild(_.guildId) : null)),
         S = (0, l.e7)([u.Z], () => {
@@ -33,7 +33,7 @@ function Z(e) {
         T = (0, l.e7)([s.Z, a.Z], () => s.Z.getChannel(a.Z.getChannelId()));
     return (0, i.jsxs)(o.ScrollerThin, {
         fade: !0,
-        className: g.scroller,
+        className: Z.scroller,
         children: [
             (null == _ ? void 0 : _.bio) != null &&
                 (null == _ ? void 0 : _.bio) !== '' &&
@@ -53,7 +53,7 @@ function Z(e) {
             null != N &&
                 (0, i.jsx)(p.Z, {
                     user: t,
-                    currentUser: Z,
+                    currentUser: g,
                     guild: N,
                     scrollIntoView: j === h.Tb.ROLES
                 }),
@@ -70,7 +70,7 @@ function Z(e) {
                 scrollIntoView: j === h.Tb.NOTE,
                 children: (0, i.jsx)(r.Z, {
                     userId: t.id,
-                    className: g.note,
+                    className: Z.note,
                     autoFocus: j === h.Tb.NOTE,
                     onUpdate: () => E({ action: 'SET_NOTE' })
                 })

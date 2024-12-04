@@ -21,8 +21,8 @@ var l = t(481060),
     p = t(871604),
     h = t(952124),
     v = t(53558),
-    g = t(544989),
-    Z = t(934861),
+    Z = t(544989),
+    g = t(934861),
     _ = t(495804),
     j = t(740628),
     b = t(398145),
@@ -31,18 +31,18 @@ var l = t(481060),
     S = t(388032),
     T = t(171865);
 function y(e) {
-    let { user: n, currentUser: t, guildId: y, channelId: P, messageId: C, roleId: L, sessionId: A, initialSection: O, initialSubsection: R, transitionState: M, onClose: U, sourceAnalyticsLocations: B = [] } = e,
-        F = y === N.ME ? void 0 : y,
-        D = (0, a.ZP)(n.id, F),
+    let { user: n, currentUser: t, guildId: y, channelId: P, messageId: C, roleId: A, sessionId: L, initialSection: M, initialSubsection: O, transitionState: R, onClose: U, sourceAnalyticsLocations: B = [] } = e,
+        D = y === N.ME ? void 0 : y,
+        F = (0, a.ZP)(n.id, D),
         { analyticsLocations: G } = (0, r.ZP)([...B, o.Z.SIMPLIFIED_PROFILE_MODAL]),
         w = (0, c.ZB)({
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
-            sourceSessionId: A,
-            guildId: F,
+            sourceSessionId: L,
+            guildId: D,
             channelId: P,
             messageId: C,
-            roleId: L
+            roleId: A
         }),
         k = (0, b.Z)(n);
     return (0, i.jsx)(r.Gt, {
@@ -50,27 +50,27 @@ function y(e) {
         children: (0, i.jsx)(c.Mt, {
             value: w,
             children: (0, i.jsx)(l.ModalRoot, {
-                transitionState: M,
+                transitionState: R,
                 className: T.root,
                 hideShadow: !0,
                 'aria-label': S.intl.string(S.t['3N/J2t']),
                 children: (0, i.jsxs)(I.Z, {
                     user: n,
-                    displayProfile: D,
+                    displayProfile: F,
                     profileType: E.y0.FULL_SIZE,
                     children: [
-                        (0, i.jsx)(g.Z, {
+                        (0, i.jsx)(Z.Z, {
                             profileType: E.y0.FULL_SIZE,
                             children: (0, i.jsx)(h.Z, {
                                 user: n,
-                                guildId: F
+                                guildId: D
                             })
                         }),
                         (0, i.jsxs)('header', {
                             children: [
                                 (0, i.jsx)(f.Z, {
                                     user: n,
-                                    displayProfile: D,
+                                    displayProfile: F,
                                     profileType: E.y0.FULL_SIZE
                                 }),
                                 (0, i.jsxs)('div', {
@@ -78,8 +78,8 @@ function y(e) {
                                     children: [
                                         (0, i.jsx)(d.Z, {
                                             user: n,
-                                            displayProfile: D,
-                                            guildId: F,
+                                            displayProfile: F,
+                                            guildId: D,
                                             channelId: P,
                                             profileType: E.y0.FULL_SIZE
                                         }),
@@ -87,25 +87,25 @@ function y(e) {
                                             location: 'BotUserProfileModal',
                                             user: n,
                                             profileType: E.y0.FULL_SIZE,
-                                            hasEntered: M === l.ModalTransitionState.ENTERED,
+                                            hasEntered: R === l.ModalTransitionState.ENTERED,
                                             onCloseProfile: U
                                         }),
                                         (0, i.jsxs)('div', {
                                             className: T.headerButtons,
                                             children: [
-                                                (0, i.jsx)(Z.c, {
+                                                (0, i.jsx)(g.c, {
                                                     userId: n.id,
                                                     onClose: U,
                                                     className: T.messageTextButton
                                                 }),
-                                                (0, i.jsx)(Z.v, {
+                                                (0, i.jsx)(g.v, {
                                                     userId: n.id,
                                                     onClose: U,
                                                     tooltipContainerClassName: T.messageIconButton
                                                 }),
                                                 (0, i.jsx)(v.Z, {
                                                     user: n,
-                                                    guildId: F
+                                                    guildId: D
                                                 }),
                                                 (0, i.jsx)(p.Z, { user: n })
                                             ]
@@ -120,12 +120,12 @@ function y(e) {
                                 (0, i.jsx)(x.Z, {
                                     user: n,
                                     profileType: E.y0.FULL_SIZE,
-                                    nickname: s.ZP.getName(F, P, n),
-                                    pronouns: null == D ? void 0 : D.pronouns,
+                                    nickname: s.ZP.getName(D, P, n),
+                                    pronouns: null == F ? void 0 : F.pronouns,
                                     nicknameVariant: 'heading-xl/bold',
                                     nicknameIcons: (0, i.jsx)(m.Z, { userId: n.id }),
                                     tags: (0, i.jsx)(u.Z, {
-                                        displayProfile: D,
+                                        displayProfile: F,
                                         profileType: E.y0.FULL_SIZE,
                                         onClose: U
                                     })
@@ -135,10 +135,10 @@ function y(e) {
                                     children: (0, i.jsx)(j.Z, {
                                         user: n,
                                         currentUser: t,
-                                        displayProfile: D,
+                                        displayProfile: F,
                                         items: k,
-                                        initialSection: null != O ? O : E.oh.BOT_INFO,
-                                        initialSubsection: R,
+                                        initialSection: null != M ? M : E.oh.BOT_INFO,
+                                        initialSubsection: O,
                                         onClose: U
                                     })
                                 })
