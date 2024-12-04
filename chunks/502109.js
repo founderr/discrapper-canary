@@ -208,18 +208,29 @@ class N extends E {
         return this.props.renderConnectorView ? this.renderGooglePayConnector() : this.renderGooglePayButton();
     }
     render() {
+        if ((0, c.isDesktop)()) return this.renderGooglePayComponent();
         if (this.state.submitting) {
             var e;
             return null !== (e = this.props.loadingComponent) && void 0 !== e ? e : (0, a.jsx)(a.Fragment, {});
         }
         let { available: t } = this.validateGooglePay();
-        return t || (0, c.isDesktop)() ? this.renderGooglePayComponent() : (0, a.jsx)(a.Fragment, {});
+        return t ? this.renderGooglePayComponent() : (0, a.jsx)(a.Fragment, {});
     }
     constructor(...e) {
         super(...e),
             h(this, 'state', { ...this.initialState }),
             h(this, 'validateGooglePay', () => {
                 let { paymentRequest: e, canMakePaymentResult: t } = this.state;
+                if (!this.isBrowserCompatible()) {
+                    let e = 'Browser does not support Google Pay';
+                    return (
+                        A.warn(e),
+                        {
+                            available: !1,
+                            errorMessage: e
+                        }
+                    );
+                }
                 if (null == e) {
                     let e = 'Payment request is not ready';
                     return (
