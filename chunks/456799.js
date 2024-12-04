@@ -1,21 +1,23 @@
-var a = t(200651);
+var i = t(200651);
 t(192379);
-var n = t(120356),
-    r = t.n(n),
-    i = t(481060),
-    l = t(102787);
+var a = t(120356),
+    n = t.n(a),
+    l = t(481060),
+    r = t(102787);
 s.Z = function (e) {
-    let { children: s, withBorder: t = !1 } = e;
-    return (0, a.jsx)(i.FocusBlock, {
-        children: (0, a.jsx)(i.Card, {
-            className: r()(l.componentPreviewWrapper, { [l.componentPreviewWrapperBordered]: t }),
-            outline: t,
-            children: (0, a.jsx)('div', {
-                className: l.componentPreview,
-                onClickCapture: function (e) {
-                    e.stopPropagation();
-                },
-                children: s
+    let { allowClicks: s = !1, children: t, withBorder: a = !1 } = e;
+    return (0, i.jsx)(l.FocusBlock, {
+        children: (0, i.jsx)(l.Card, {
+            className: n()(r.componentPreviewWrapper, { [r.componentPreviewWrapperBordered]: a }),
+            outline: a,
+            children: (0, i.jsx)('div', {
+                className: r.componentPreview,
+                onClickCapture: s
+                    ? void 0
+                    : function (e) {
+                          e.stopPropagation();
+                      },
+                children: t
             })
         })
     });
