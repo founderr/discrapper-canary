@@ -217,7 +217,28 @@ function eK(e) {
                 color: 'currentColor'
             }),
             predicate: () => U
-        };
+        },
+        eJ = er
+            ? {
+                  section: eU.pNK.DISCOVERY,
+                  impressionName: l.ImpressionNames.GUILD_SETTINGS_DISCOVERY,
+                  label: ez.intl.string(ez.t.oGaVGx),
+                  element: eB.O,
+                  predicate: () => d,
+                  ariaLabel: ez.intl.string(ez.t.oGaVGx)
+              }
+            : {
+                  section: eU.pNK.DISCOVERY,
+                  impressionName: l.ImpressionNames.GUILD_SETTINGS_DISCOVERY,
+                  label: ez.intl.string(ez.t.oGaVGx),
+                  element: eN.Z,
+                  notice: {
+                      stores: [ec.Z],
+                      element: eN.s
+                  },
+                  predicate: () => d && r.hasFeature(eU.oNc.COMMUNITY),
+                  ariaLabel: r.hasFeature(eU.oNc.DISCOVERABLE) ? ez.intl.string(ez.t.oGaVGx) : ez.intl.string(ez.t.XU0S6u)
+              };
     if (el) {
         let e = [
                 { section: u.ID.DIVIDER },
@@ -419,18 +440,7 @@ function eK(e) {
                               newIndicatorDismissibleContentTypes: W ? [a.z.GUILD_INSIGHTS_ACCESS_RATE_NEW] : null,
                               predicate: () => N
                           },
-                          {
-                              section: eU.pNK.DISCOVERY,
-                              impressionName: l.ImpressionNames.GUILD_SETTINGS_DISCOVERY,
-                              label: ez.intl.string(ez.t.oGaVGx),
-                              element: eN.Z,
-                              notice: {
-                                  stores: [ec.Z],
-                                  element: eN.s
-                              },
-                              predicate: () => d,
-                              ariaLabel: r.hasFeature(eU.oNc.DISCOVERABLE) ? ez.intl.string(ez.t.oGaVGx) : ez.intl.string(ez.t.XU0S6u)
-                          },
+                          eJ,
                           {
                               section: eU.pNK.DISCOVERY_LANDING_PAGE,
                               impressionName: l.ImpressionNames.GUILD_SETTINGS_DISCOVERY_LANDING_PAGE,
@@ -532,6 +542,7 @@ function eK(e) {
                               },
                               predicate: () => ei
                           },
+                          ei ? eJ : void 0,
                           {
                               section: eU.pNK.WIDGET,
                               impressionName: l.ImpressionNames.GUILD_SETTINGS_WIDGET,
@@ -562,7 +573,7 @@ function eK(e) {
                               },
                               predicate: () => d
                           }
-                      ]
+                      ].filter((e) => void 0 !== e)
                     : [];
         return [
             {
@@ -603,27 +614,6 @@ function eK(e) {
             eQ
         ];
     }
-    let eJ = er
-        ? {
-              section: eU.pNK.DISCOVERY,
-              impressionName: l.ImpressionNames.GUILD_SETTINGS_DISCOVERY,
-              label: ez.intl.string(ez.t.oGaVGx),
-              element: eB.O,
-              predicate: () => d,
-              ariaLabel: ez.intl.string(ez.t.oGaVGx)
-          }
-        : {
-              section: eU.pNK.DISCOVERY,
-              impressionName: l.ImpressionNames.GUILD_SETTINGS_DISCOVERY,
-              label: ez.intl.string(ez.t.oGaVGx),
-              element: eN.Z,
-              notice: {
-                  stores: [ec.Z],
-                  element: eN.s
-              },
-              predicate: () => d && r.hasFeature(eU.oNc.COMMUNITY),
-              ariaLabel: r.hasFeature(eU.oNc.DISCOVERABLE) ? ez.intl.string(ez.t.oGaVGx) : ez.intl.string(ez.t.XU0S6u)
-          };
     return [
         {
             section: u.ID.HEADER,
