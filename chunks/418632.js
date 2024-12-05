@@ -9,8 +9,8 @@ var i,
     d = n(893776),
     u = n(468026),
     m = n(594174),
-    h = n(388032);
-function g(e, t, n) {
+    g = n(388032);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,13 +32,13 @@ class p extends (i = r.Component) {
             color: e,
             disabled: this.state.isSendingVerificationEmail,
             onClick: this.handleResendVerification,
-            children: h.intl.string(h.t.lm1UKi)
+            children: g.intl.string(g.t.lm1UKi)
         });
     }
     constructor(...e) {
         super(...e),
-            g(this, 'state', { isSendingVerificationEmail: !1 }),
-            g(this, 'handleResendVerification', () => {
+            h(this, 'state', { isSendingVerificationEmail: !1 }),
+            h(this, 'handleResendVerification', () => {
                 let { currentUser: e, onClick: t } = this.props;
                 null == t || t(),
                     this.setState({ isSendingVerificationEmail: !0 }, () => {
@@ -46,24 +46,24 @@ class p extends (i = r.Component) {
                             .then(() =>
                                 (0, c.openModal)((t) =>
                                     (0, s.jsx)(c.ConfirmModal, {
-                                        header: h.intl.string(h.t.LykQYm),
-                                        confirmText: h.intl.string(h.t.BddRzc),
+                                        header: g.intl.string(g.t.LykQYm),
+                                        confirmText: g.intl.string(g.t.BddRzc),
                                         confirmButtonColor: c.Button.Colors.BRAND,
                                         ...t,
                                         children: (0, s.jsx)(c.Text, {
                                             variant: 'text-md/normal',
-                                            children: h.intl.format(h.t.azKEPz, { email: e.email })
+                                            children: g.intl.format(g.t.azKEPz, { email: e.email })
                                         })
                                     })
                                 )
                             )
                             .catch((e) => {
                                 let { body: t } = e,
-                                    n = h.intl.string(h.t.XcrQNz);
+                                    n = g.intl.string(g.t.XcrQNz);
                                 null != t && t.email && (n = t.email),
                                     (0, c.openModal)((e) =>
                                         (0, s.jsx)(u.default, {
-                                            title: h.intl.string(h.t.VbTh0N),
+                                            title: g.intl.string(g.t.VbTh0N),
                                             body: n,
                                             ...e
                                         })
@@ -74,7 +74,7 @@ class p extends (i = r.Component) {
             });
     }
 }
-g(p, 'defaultProps', {
+h(p, 'defaultProps', {
     size: c.Button.Sizes.MEDIUM,
     color: c.Button.Colors.BRAND
 }),

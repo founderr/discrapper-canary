@@ -14,16 +14,16 @@ var s = n(442837),
     d = n(388032),
     u = n(765998);
 function m(e) {
-    let { errors: t, pendingNick: n, currentNick: m, username: h, guild: g } = e,
+    let { errors: t, pendingNick: n, currentNick: m, username: g, guild: h } = e,
         p = null != n ? n : m,
-        x = (0, s.e7)([a.Z], () => a.Z.can(c.Plq.CHANGE_NICKNAME, g) || a.Z.can(c.Plq.MANAGE_NICKNAMES, g));
+        x = (0, s.e7)([a.Z], () => a.Z.can(c.Plq.CHANGE_NICKNAME, h) || a.Z.can(c.Plq.MANAGE_NICKNAMES, h));
     return (0, i.jsxs)(l.Z, {
         title: d.intl.string(d.t.me1lRk),
         errors: t,
         children: [
             (0, i.jsx)(r.TextInput, {
                 value: null != p ? p : '',
-                placeholder: h,
+                placeholder: g,
                 maxLength: c.l$U,
                 onChange: function (e) {
                     (0, o.wi)(e, m);

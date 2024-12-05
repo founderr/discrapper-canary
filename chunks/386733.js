@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(518950),
     g = n(598077),
     m = n(626135),
-    f = n(63063),
-    p = n(281494),
+    p = n(63063),
+    f = n(281494),
     _ = n(276444),
     h = n(520540),
     E = n(796634),
@@ -20,8 +20,8 @@ var i = n(200651),
     v = n(981631),
     T = n(388032),
     N = n(102588),
-    I = n(691766);
-let S = (e) => {
+    S = n(691766);
+let I = (e) => {
         let { userRecord: t, placement: n, trialStatus: r } = e,
             { avatarSrc: a, eventHandlers: l } = (0, u.Z)({
                 user: t,
@@ -49,9 +49,9 @@ let S = (e) => {
             children: (e) =>
                 (0, i.jsx)('div', {
                     className: s()({
-                        [N.redeemedCircle]: c && (r === p.Fe.REDEEMED || r === p.Fe.CONVERTED),
-                        [N.convertedCircleGlow]: c && r === p.Fe.CONVERTED,
-                        [N.standardCircle]: c && (r === p.Fe.PENDING || null == r)
+                        [N.redeemedCircle]: c && (r === f.Fe.REDEEMED || r === f.Fe.CONVERTED),
+                        [N.convertedCircleGlow]: c && r === f.Fe.CONVERTED,
+                        [N.standardCircle]: c && (r === f.Fe.PENDING || null == r)
                     }),
                     children: (0, i.jsx)('div', {
                         className: c ? N.content : void 0,
@@ -88,7 +88,7 @@ let S = (e) => {
         return (0, i.jsxs)('div', {
             className: N.userAvatarProgressBarContainer,
             children: [
-                (0, i.jsx)(S, {
+                (0, i.jsx)(I, {
                     userRecord: a,
                     placement: 1,
                     trialStatus: (null == a ? void 0 : a.id) != null ? n.get(null == a ? void 0 : a.id) : void 0
@@ -97,7 +97,7 @@ let S = (e) => {
                     numSentReferrals: r,
                     placement: 1
                 }),
-                (0, i.jsx)(S, {
+                (0, i.jsx)(I, {
                     userRecord: s,
                     placement: 2,
                     trialStatus: (null == s ? void 0 : s.id) != null ? n.get(null == s ? void 0 : s.id) : void 0
@@ -106,7 +106,7 @@ let S = (e) => {
                     numSentReferrals: r,
                     placement: 2
                 }),
-                (0, i.jsx)(S, {
+                (0, i.jsx)(I, {
                     userRecord: l,
                     placement: 3,
                     trialStatus: (null == l ? void 0 : l.id) != null ? n.get(null == l ? void 0 : l.id) : void 0
@@ -118,7 +118,7 @@ t.Z = (e) => {
     let t,
         a,
         { isInSettings: u = !1 } = e,
-        S = (0, l.e7)([_.Z], () => _.Z.getRecipientStatus()),
+        I = (0, l.e7)([_.Z], () => _.Z.getRecipientStatus()),
         R = (0, C.uv)('ReferralProgramProgressBar'),
         j = (0, C.TW)('ReferralProgramProgressBar'),
         { referralSentUsers: P, hasSentAllReferrals: Z, refreshAt: B } = (0, E.G)(),
@@ -129,13 +129,13 @@ t.Z = (e) => {
         k = {
             redeemed: 0,
             converted: 0,
-            sent: S.size
+            sent: I.size
         };
-    S.forEach((e) => {
-        e === p.Fe.REDEEMED && k.redeemed++, e === p.Fe.CONVERTED && (k.redeemed++, k.converted++);
+    I.forEach((e) => {
+        e === f.Fe.REDEEMED && k.redeemed++, e === f.Fe.CONVERTED && (k.redeemed++, k.converted++);
     });
     let L = k.sent === E.Q,
-        U = f.Z.getArticleURL(v.BhN.REFERRAL_PROGRAM),
+        U = p.Z.getArticleURL(v.BhN.REFERRAL_PROGRAM),
         { analyticsLocations: D } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
         H = r.useRef(null),
         V = (k.sent / E.Q) * 100,
@@ -184,7 +184,7 @@ t.Z = (e) => {
                               })
                             : (0, i.jsx)(A, {
                                   userRecords: M,
-                                  recipientStatus: S
+                                  recipientStatus: I
                               }),
                         (0, i.jsx)(o.Text, {
                             variant: u ? 'text-sm/normal' : 'text-lg/medium',
@@ -227,7 +227,7 @@ t.Z = (e) => {
                                             className: N.expandedProgressBarSelectFriendsCTAInner,
                                             children: [
                                                 (0, i.jsx)('img', {
-                                                    src: I,
+                                                    src: S,
                                                     alt: '',
                                                     className: N.expandedProgressBarSelectFriendsIcon
                                                 }),

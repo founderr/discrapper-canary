@@ -1,6 +1,6 @@
 n.d(t, {
     S: function () {
-        return g;
+        return h;
     }
 });
 var i = n(200651);
@@ -14,11 +14,11 @@ var s = n(442837),
     d = n(594174),
     u = n(726985),
     m = n(474936),
-    h = n(764765);
-let g = (e) => {
+    g = n(764765);
+let h = (e) => {
     let { isDevTools: t = !1 } = e,
         n = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
-        g = (0, s.e7)([o.Z], () => {
+        h = (0, s.e7)([o.Z], () => {
             let e = o.Z.getCreatedAtOverride();
             return null != e ? e.toISOString().substring(0, 10) : '';
         }),
@@ -61,9 +61,9 @@ let g = (e) => {
                         tag: r.FormTitleTags.H3,
                         children: (0, i.jsx)('input', {
                             type: 'date',
-                            value: g,
+                            value: h,
                             onChange: (e) => x(e.target.value),
-                            className: h.datePicker
+                            className: g.datePicker
                         })
                     }),
                     (0, i.jsx)(r.Button, {

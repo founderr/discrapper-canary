@@ -10,38 +10,38 @@ var i = n(200651),
     u = n(70097),
     g = n(626135),
     m = n(526167),
-    f = n(831964),
-    p = n(981631),
+    p = n(831964),
+    f = n(981631),
     _ = n(869783),
     h = n(388032),
     E = n(909007);
 let b = (e) => {
     let { name: t, title: n, description: a, descriptionCta: h, previewImage: b, videoUrl: x, shouldLoadVideo: C, index: v, isCompact: T, onClick: N } = e,
-        I = (0, m.rO)(),
-        S = r.useRef(null),
+        S = (0, m.rO)(),
+        I = r.useRef(null),
         [R, A] = r.useState(0),
         j = (function (e) {
             let t;
             switch (e) {
-                case f.dm.EMOJIS:
+                case p.dm.EMOJIS:
                     t = E.emojisBackground;
                     break;
-                case f.dm.REFERRAL_PROGRAM:
+                case p.dm.REFERRAL_PROGRAM:
                     t = E.referralProgramBackground;
                     break;
-                case f.dm.NO_LIMITS:
+                case p.dm.NO_LIMITS:
                     t = E.noLimitsBackground;
                     break;
-                case f.dm.NEW_APP_STYLES:
+                case p.dm.NEW_APP_STYLES:
                     t = E.newStylesBackground;
                     break;
-                case f.dm.YOUR_SPACE:
+                case p.dm.YOUR_SPACE:
                     t = E.yourSpaceBackground;
                     break;
-                case f.dm.SERVER_PROFILES:
+                case p.dm.SERVER_PROFILES:
                     t = E.serverProfilesBackground;
                     break;
-                case f.dm.SHOW_YOUR_STYLE:
+                case p.dm.SHOW_YOUR_STYLE:
                     t = E.yourStyleBackground;
             }
             return t;
@@ -50,13 +50,13 @@ let b = (e) => {
         Z = (0, o.wj)(P),
         B = Z ? c.ButtonColors.WHITE : c.ButtonColors.BRAND,
         M = (0, l.debounce)(() => {
-            g.default.track(p.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
+            g.default.track(f.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
         }, 800),
         O = () => {
-            null != S.current && ((S.current.currentTime = R), S.current.play());
+            null != I.current && ((I.current.currentTime = R), I.current.play());
         },
         w = () => {
-            null != S.current && (A(S.current.currentTime), S.current.pause());
+            null != I.current && (A(I.current.currentTime), I.current.pause());
         },
         y = () =>
             (0, i.jsxs)('div', {
@@ -111,10 +111,10 @@ let b = (e) => {
                         [E.leftSideArt]: t && !T,
                         [E.compactBoxVideo]: T
                     }),
-                    ref: S,
+                    ref: I,
                     children: (0, i.jsx)('source', {
                         src: x,
-                        type: I ? _.m.MP4 : _.m.WEBM
+                        type: S ? _.m.MP4 : _.m.WEBM
                     })
                 })
             });
@@ -140,8 +140,8 @@ let b = (e) => {
 };
 t.Z = r.memo(function (e) {
     let { className: t, shouldLoadVideo: n, isBestOfNitro: r = !1 } = e,
-        a = Object.values((0, f.ZP)(r)),
-        l = r ? Object.values((0, f.__)()) : null;
+        a = Object.values((0, p.ZP)(r)),
+        l = r ? Object.values((0, p.__)()) : null;
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
             className: s()(E.boxBackdrop, t),

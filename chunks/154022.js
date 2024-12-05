@@ -14,17 +14,17 @@ var i = n(200651),
     d = n(481060),
     u = n(230711),
     m = n(419363),
-    h = n(857595),
-    g = n(607070),
+    g = n(857595),
+    h = n(607070),
     p = n(627845),
     x = n(600164),
-    S = n(313201),
-    T = n(786761),
-    E = n(3148),
-    _ = n(739566),
+    T = n(313201),
+    S = n(786761),
+    _ = n(3148),
+    E = n(739566),
     C = n(753206),
-    I = n(440849),
-    f = n(921801),
+    f = n(440849),
+    I = n(921801),
     N = n(196051),
     A = n(441729),
     b = n(626135),
@@ -41,11 +41,11 @@ var i = n(200651),
     F = n(871751),
     M = n(232186),
     k = n(328756);
-let w = (0, S.hQ)(),
-    U = (0, S.hQ)(),
-    V = (0, S.hQ)(),
+let w = (0, T.hQ)(),
+    U = (0, T.hQ)(),
+    V = (0, T.hQ)(),
     G = o().debounce((e) => {
-        (0, h.o2)(e);
+        (0, g.o2)(e);
     }, 250),
     Y = o().debounce((e) => {
         (0, N.Ct)(e);
@@ -59,46 +59,46 @@ function H(e) {
                 className: M.marginBottom20,
                 children: (0, i.jsx)(z, {})
             }),
-            (0, i.jsxs)(f.F, {
+            (0, i.jsxs)(I.F, {
                 setting: D.s6.ACCESSIBILITY_SATURATION,
                 children: [(0, i.jsx)(W, {}), (0, i.jsx)(d.FormDivider, {})]
             }),
-            (0, i.jsx)(f.F, {
+            (0, i.jsx)(I.F, {
                 setting: D.s6.ACCESSIBILITY_LINK_DECORATIONS,
                 children: (0, i.jsx)(K, {})
             }),
-            (0, i.jsx)(f.F, {
+            (0, i.jsx)(I.F, {
                 setting: D.s6.ACCESSIBILITY_ROLE_STYLE,
                 children: (0, i.jsx)(q, {})
             }),
-            (0, i.jsx)(f.F, {
+            (0, i.jsx)(I.F, {
                 setting: D.s6.ACCESSIBILITY_TAGS,
                 children: (0, i.jsx)(X, {})
             }),
-            (0, i.jsx)(f.F, {
+            (0, i.jsx)(I.F, {
                 setting: D.s6.ACCESSIBILITY_PROFILE_COLORS,
                 children: (0, i.jsx)(Q, {})
             }),
             (0, p.b)()
-                ? (0, i.jsxs)(f.F, {
+                ? (0, i.jsxs)(I.F, {
                       setting: D.s6.ACCESSIBILITY_CONTRAST,
                       children: [(0, i.jsx)(J, {}), ' ']
                   })
                 : null,
-            (0, i.jsx)(f.F, {
+            (0, i.jsx)(I.F, {
                 setting: D.s6.ACCESSIBILITY_REDUCED_MOTION,
                 children: (0, i.jsx)($, {})
             }),
-            (0, i.jsx)(f.F, {
+            (0, i.jsx)(I.F, {
                 setting: D.s6.ACCESSIBILITY_STICKERS,
                 children: (0, i.jsx)(ee, {})
             }),
-            (0, i.jsx)(f.F, {
+            (0, i.jsx)(I.F, {
                 setting: D.s6.ACCESSIBILITY_MESSAGES,
                 children: (0, i.jsx)(et, {})
             }),
             (0, i.jsx)(en, {}),
-            (0, i.jsxs)(f.F, {
+            (0, i.jsxs)(I.F, {
                 setting: D.s6.ACCESSIBILITY_APPEARANCE_UPSELL,
                 children: [
                     (0, i.jsx)(d.FormDivider, { className: M.marginTop20 }),
@@ -119,8 +119,8 @@ function H(e) {
 function z() {
     let e = j.jU.useSetting(),
         [t] = s.useState(() => {
-            let e = (0, T.e5)({
-                ...(0, E.ZP)({
+            let e = (0, S.e5)({
+                ...(0, _.ZP)({
                     channelId: '1337',
                     content: Z.intl.formatToPlainString(Z.t.bB80LC, { previewLink: 'https://discord.com/accessibility' })
                 }),
@@ -164,7 +164,7 @@ function z() {
                     children: (0, i.jsx)(C.Z, {
                         compact: e,
                         author: {
-                            ...(0, _.ZH)(t),
+                            ...(0, E.ZH)(t),
                             colorString: '#DD80F4'
                         },
                         message: t
@@ -175,9 +175,9 @@ function z() {
     });
 }
 function W() {
-    let { saturation: e, desaturateUserColors: t } = (0, c.cj)([g.Z], () => ({
-        saturation: g.Z.saturation,
-        desaturateUserColors: g.Z.desaturateUserColors
+    let { saturation: e, desaturateUserColors: t } = (0, c.cj)([h.Z], () => ({
+        saturation: h.Z.saturation,
+        desaturateUserColors: h.Z.desaturateUserColors
     }));
     return (0, i.jsxs)(d.FormSection, {
         className: M.marginTop20,
@@ -205,13 +205,13 @@ function W() {
                 onValueChange: G,
                 onMarkerRender: (e) => ((100 * e) % 2 == 0 ? ''.concat(100 * e, '%') : void 0)
             }),
-            (0, i.jsx)(f.F, {
+            (0, i.jsx)(I.F, {
                 setting: D.s6.ACCESSIBILITY_SATURATION_CUSTOM_COLOR,
                 children: (0, i.jsx)(d.FormSwitch, {
                     hideBorder: !0,
                     className: l()(M.marginTop20, M.marginBottom20),
                     value: t,
-                    onChange: h.f1,
+                    onChange: g.f1,
                     note: Z.intl.string(Z.t.nlAOER),
                     children: Z.intl.string(Z.t.bQCodH)
                 })
@@ -220,21 +220,21 @@ function W() {
     });
 }
 function K() {
-    let e = (0, c.e7)([g.Z], () => g.Z.alwaysShowLinkDecorations);
+    let e = (0, c.e7)([h.Z], () => h.Z.alwaysShowLinkDecorations);
     return (0, i.jsx)(d.FormItem, {
         className: M.marginTop20,
         children: (0, i.jsx)(d.FormSwitch, {
             note: Z.intl.string(Z.t['72i5GB']),
             value: e,
             onChange: function () {
-                (0, h.gs)(!e);
+                (0, g.gs)(!e);
             },
             children: Z.intl.string(Z.t.OLZFBw)
         })
     });
 }
 function q() {
-    let e = (0, c.e7)([g.Z], () => g.Z.roleStyle);
+    let e = (0, c.e7)([h.Z], () => h.Z.roleStyle);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(d.FormItem, {
@@ -262,7 +262,7 @@ function q() {
                             }
                         ],
                         onChange: function (e) {
-                            (0, h.u1)(e.value);
+                            (0, g.u1)(e.value);
                         },
                         value: e
                     })
@@ -273,22 +273,22 @@ function q() {
     });
 }
 function X() {
-    let e = (0, c.e7)([g.Z], () => g.Z.hideTags);
+    let e = (0, c.e7)([h.Z], () => h.Z.hideTags);
     return (0, i.jsx)(d.FormItem, {
         title: Z.intl.string(Z.t.UQt6dX),
         className: M.marginTop20,
-        children: (0, i.jsx)(f.F, {
+        children: (0, i.jsx)(I.F, {
             setting: D.s6.ACCESSIBILITY_TAGS_NAMES,
             children: (0, i.jsx)(d.FormSwitch, {
                 value: !e,
-                onChange: () => (0, h.Nv)(!e),
+                onChange: () => (0, g.Nv)(!e),
                 children: Z.intl.string(Z.t.UPwh1N)
             })
         })
     });
 }
 function Q() {
-    let e = (0, c.e7)([g.Z], () => g.Z.syncProfileThemeWithUserTheme),
+    let e = (0, c.e7)([h.Z], () => h.Z.syncProfileThemeWithUserTheme),
         t = s.useRef(null);
     return (
         (0, R.Z)(t, P.rP.SYNC_PROFILE_THEME_WITH_USER_THEME),
@@ -296,7 +296,7 @@ function Q() {
             ref: t,
             title: Z.intl.string(Z.t.BT8Bmp),
             className: l()(M.marginTop20, F.syncProfileThemeWithUserTheme),
-            children: (0, i.jsx)(f.F, {
+            children: (0, i.jsx)(I.F, {
                 setting: D.s6.ACCESSIBILITY_PROFILE_COLORS_SYNC_THEMES,
                 children: (0, i.jsx)(d.FormSwitch, {
                     note: Z.intl.format(Z.t.u6UjrK, {
@@ -306,7 +306,7 @@ function Q() {
                     }),
                     className: M.marginTop20,
                     value: e,
-                    onChange: h.Uv,
+                    onChange: g.Uv,
                     children: Z.intl.string(Z.t['sSY+mJ'])
                 })
             })
@@ -314,20 +314,20 @@ function Q() {
     );
 }
 function J() {
-    let [e] = (0, c.Wu)([g.Z], () => [g.Z.syncForcedColors, g.Z.systemForcedColors]),
+    let [e] = (0, c.Wu)([h.Z], () => [h.Z.syncForcedColors, h.Z.systemForcedColors]),
         [t, n] = s.useState(e);
     s.useEffect(() => {
         n(e);
     }, [e]);
     let r = s.useRef(null);
     s.useEffect(() => {
-        null != r.current && (clearTimeout(r.current), (r.current = null)), t !== e && (r.current = setTimeout(() => (0, h.qz)(t), 150));
+        null != r.current && (clearTimeout(r.current), (r.current = null)), t !== e && (r.current = setTimeout(() => (0, g.qz)(t), 150));
     }, [t, e]);
     let l = Z.intl.format(Z.t.GwEVEx, { learnMoreLink: v.Z.getArticleURL(y.BhN.FORCED_COLORS) });
     return (0, i.jsx)(d.FormItem, {
         title: Z.intl.string(Z.t.TYyfOz),
         className: M.marginTop20,
-        children: (0, i.jsx)(f.F, {
+        children: (0, i.jsx)(I.F, {
             setting: D.s6.ACCESSIBILITY_CONTRAST_SYNC_FORCED_COLORS,
             children: (0, i.jsx)(d.FormSwitch, {
                 value: t,
@@ -347,10 +347,10 @@ function $() {
             systemPrefersReducedMotion: a,
             gifAutoPlayOverrideReason: o,
             animateEmojiOverrideReason: u
-        } = (0, c.cj)([g.Z, O.Z], () => ({
-            systemPrefersReducedMotion: g.Z.systemPrefersReducedMotion,
-            rawPrefersReducedMotion: g.Z.rawPrefersReducedMotion,
-            useReducedMotion: g.Z.useReducedMotion,
+        } = (0, c.cj)([h.Z, O.Z], () => ({
+            systemPrefersReducedMotion: h.Z.systemPrefersReducedMotion,
+            rawPrefersReducedMotion: h.Z.rawPrefersReducedMotion,
+            useReducedMotion: h.Z.useReducedMotion,
             gifAutoPlayOverrideReason: O.Z.getAppliedOverrideReasonKey('gifAutoPlay'),
             animateEmojiOverrideReason: O.Z.getAppliedOverrideReasonKey('animateEmoji')
         })),
@@ -358,12 +358,12 @@ function $() {
     (0, R.Z)(m, P.rP.REDUCED_MOTION);
     let p = s.useCallback(
             (e, t) => {
-                (0, h.Zt)(t ? 'auto' : a);
+                (0, g.Zt)(t ? 'auto' : a);
             },
             [a]
         ),
         x = s.useCallback((e) => {
-            (0, h.Zt)(e ? 'reduce' : 'no-preference');
+            (0, g.Zt)(e ? 'reduce' : 'no-preference');
         }, []);
     return (0, i.jsxs)(d.FormItem, {
         ref: m,
@@ -386,7 +386,7 @@ function $() {
                     children: Z.intl.string(Z.t['+Dx+HB'])
                 })
             }),
-            (0, i.jsx)(f.F, {
+            (0, i.jsx)(I.F, {
                 setting: D.s6.ACCESSIBILITY_REDUCED_MOTION_ENABLE,
                 children: (0, i.jsx)(d.FormSwitch, {
                     value: n,
@@ -394,22 +394,22 @@ function $() {
                     children: Z.intl.string(Z.t.b3XBzs)
                 })
             }),
-            (0, i.jsx)(f.F, {
+            (0, i.jsx)(I.F, {
                 setting: D.s6.ACCESSIBILITY_REDUCED_MOTION_AUTO_PLAY_GIFS,
                 children: (0, i.jsx)(d.FormSwitch, {
                     className: M.marginBottom20,
                     value: e,
-                    note: null != o ? (0, I.Z)(o) : void 0,
+                    note: null != o ? (0, f.Z)(o) : void 0,
                     onChange: j.QK.updateSetting,
                     children: Z.intl.string(Z.t.Iayoh4)
                 })
             }),
-            (0, i.jsx)(f.F, {
+            (0, i.jsx)(I.F, {
                 setting: D.s6.ACCESSIBILITY_REDUCED_MOTION_PLAY_ANIMATED_EMOJI,
                 children: (0, i.jsx)(d.FormSwitch, {
                     className: M.marginBottom20,
                     value: t,
-                    note: null != u ? (0, I.Z)(u) : void 0,
+                    note: null != u ? (0, f.Z)(u) : void 0,
                     onChange: j.Yk.updateSetting,
                     children: Z.intl.string(Z.t.iIaOlZ)
                 })
@@ -430,7 +430,7 @@ function ee() {
             (0, i.jsx)(d.FormText, {
                 type: d.FormText.Types.DESCRIPTION,
                 className: M.marginBottom8,
-                children: null != t ? (0, I.Z)(t) : Z.intl.string(Z.t.GRa6U1)
+                children: null != t ? (0, f.Z)(t) : Z.intl.string(Z.t.GRa6U1)
             }),
             (0, i.jsx)(d.RadioGroup, {
                 options: [
@@ -455,7 +455,7 @@ function ee() {
     });
 }
 function et() {
-    let e = (0, c.e7)([g.Z], () => g.Z.isSubmitButtonEnabled),
+    let e = (0, c.e7)([h.Z], () => h.Z.isSubmitButtonEnabled),
         t = j.dN.useSetting(),
         n = s.useRef(null);
     return (
@@ -468,16 +468,16 @@ function et() {
                     className: M.marginBottom8,
                     children: Z.intl.string(Z.t.onqU6u)
                 }),
-                (0, i.jsx)(f.F, {
+                (0, i.jsx)(I.F, {
                     setting: D.s6.ACCESSIBILITY_MESSAGES_SEND_MESSAGE_BUTTON,
                     children: (0, i.jsx)(d.FormSwitch, {
                         className: M.marginTop20,
                         value: e,
-                        onChange: h.eN,
+                        onChange: g.eN,
                         children: Z.intl.string(Z.t['3Fztn5'])
                     })
                 }),
-                (0, i.jsx)(f.F, {
+                (0, i.jsx)(I.F, {
                     setting: D.s6.ACCESSIBILITY_MESSAGES_LEGACY_CHAT_INPUT,
                     children: (0, i.jsx)(d.FormSwitch, {
                         className: M.marginTop8,
@@ -504,7 +504,7 @@ function en() {
     return m.Zh
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(f.F, {
+                  (0, i.jsx)(I.F, {
                       setting: D.s6.ACCESSIBILITY_TEXT_TO_SPEECH,
                       children: (0, i.jsxs)(d.FormItem, {
                           className: M.marginTop20,
@@ -513,7 +513,7 @@ function en() {
                                   className: M.marginBottom8,
                                   children: Z.intl.string(Z.t.VpSKeH)
                               }),
-                              (0, i.jsx)(f.F, {
+                              (0, i.jsx)(I.F, {
                                   setting: D.s6.ACCESSIBILITY_TEXT_TO_SPEECH_TTS_COMMAND,
                                   children: (0, i.jsx)(d.FormSwitch, {
                                       className: M.marginTop20,
@@ -525,7 +525,7 @@ function en() {
                           ]
                       })
                   }),
-                  (0, i.jsx)(f.F, {
+                  (0, i.jsx)(I.F, {
                       setting: D.s6.ACCESSIBILITY_TEXT_TO_SPEECH_RATE,
                       children: (0, i.jsxs)(d.FormItem, {
                           className: M.marginTop20,

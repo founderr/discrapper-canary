@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(906732),
     g = n(66595),
     m = n(535322),
-    f = n(477734),
-    p = n(626135),
+    p = n(477734),
+    f = n(626135),
     _ = n(881100),
     h = n(981631),
     E = n(388032),
@@ -39,21 +39,21 @@ let x = (e) => (e ? E.intl.string(E.t.QX14gI) : E.intl.string(E.t.RGadQU)),
         });
     },
     v = (e) => {
-        let { title: t, description: n, className: r, imageSource: a, imageClassName: l, titleBadge: c, isNew: f = !1, isEarlyAccess: p = !1 } = e,
+        let { title: t, description: n, className: r, imageSource: a, imageClassName: l, titleBadge: c, isNew: p = !1, isEarlyAccess: f = !1 } = e,
             { analyticsLocations: _ } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD);
         return (0, i.jsx)(u.Gt, {
             value: _,
             children: (0, i.jsxs)('div', {
                 className: s()(b.perkCard, r),
                 children: [
-                    f
+                    p
                         ? (0, i.jsx)(m.Z, {
                               className: b.perkCardNewBadge,
                               shouldInheritBackgroundColor: !0,
                               shouldInheritTextColor: !0
                           })
                         : null,
-                    p ? (0, i.jsx)(g.Z, { className: b.perkCardEarlyAccessBadge }) : null,
+                    f ? (0, i.jsx)(g.Z, { className: b.perkCardEarlyAccessBadge }) : null,
                     (0, i.jsx)('img', {
                         src: a,
                         alt: '',
@@ -83,7 +83,7 @@ t.Z = (e) => {
         g = (0, _.N)({ styles: b }),
         m = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         { analyticsLocations: E } = (0, u.ZP)(),
-        T = (0, f._f)(),
+        T = (0, p._f)(),
         N = [g.emoji, g.streaming, g.upload, g.customAppIcons, g.soundboard, T ? g.remix : g.videoBackground, g.superReactions, g.stickersPerkDiscoverability, g.badgeAlt];
     return (0, i.jsxs)('div', {
         className: s()(b.perksContainer, t, {
@@ -111,7 +111,7 @@ t.Z = (e) => {
                             }),
                             children: (0, i.jsx)(C, {
                                 onClick: () => {
-                                    p.default.track(h.rMx.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
+                                    f.default.track(h.rMx.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
                                         location_stack: E,
                                         was_expanded: a
                                     }),

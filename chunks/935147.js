@@ -14,17 +14,17 @@ var i = n(200651),
     d = n(906732),
     u = n(335131),
     m = n(597688),
-    h = n(1870),
-    g = n(884697),
+    g = n(1870),
+    h = n(884697),
     p = n(175756),
     x = n(104494),
-    S = n(639119),
-    T = n(211712),
-    E = n(629654),
-    _ = n(53691),
+    T = n(639119),
+    S = n(211712),
+    _ = n(629654),
+    E = n(53691),
     C = n(165583),
-    I = n(267717),
-    f = n(350327),
+    f = n(267717),
+    I = n(350327),
     N = n(996073),
     A = n(25990),
     b = n(626135),
@@ -68,14 +68,14 @@ function U(e) {
         $ = s.useRef(null);
     (0, N.Z)($, M.Y_.TRY_IT_OUT);
     let { analyticsLocations: ee, sourceAnalyticsLocations: et } = (0, d.ZP)(c.Z.USER_SETTINGS_TRY_OUT_PREMIUM),
-        [en, ei] = s.useState(Math.floor(Math.random() * T.J2.length)),
+        [en, ei] = s.useState(Math.floor(Math.random() * S.J2.length)),
         es = (e) => {
             if (e) {
-                if (((0, a.I5)(K), (0, f.z5)(W), (0, f.ho)(q), null != Q)) {
+                if (((0, a.I5)(K), (0, I.z5)(W), (0, I.ho)(q), null != Q)) {
                     let e = m.Z.getProduct(Q.skuId);
-                    null != e && (0, g.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, a.cV)(Q)) : null != h.Z.getPurchase(Q.skuId) && (0, a.cV)(Q);
+                    null != e && (0, h.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, a.cV)(Q)) : null != g.Z.getPurchase(Q.skuId) && (0, a.cV)(Q);
                 }
-                b.default.track(Z.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: T.J2[en].presetName });
+                b.default.track(Z.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: S.J2[en].presetName });
             }
         };
     s.useEffect(() => {
@@ -86,7 +86,7 @@ function U(e) {
                 location_stack: et
             });
     }, [et, U, V]);
-    let er = (null === (n = (0, S.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === F.Si.TIER_2,
+    let er = (null === (n = (0, T.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === F.Si.TIER_2,
         el = (0, x.Ng)(),
         ea = (0, x.Wp)(el, F.Si.TIER_2),
         eo = 'TryOutPremiumSection';
@@ -122,7 +122,7 @@ function U(e) {
                           }),
                           profilePreview: (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(E.Z, {
+                                  (0, i.jsx)(_.Z, {
                                       selectedIndex: en,
                                       setSelectedIndex: ei
                                   }),
@@ -150,7 +150,7 @@ function U(e) {
                                       user: U,
                                       pendingAvatar: null != K ? K : H,
                                       pendingColors: null != W ? W : z,
-                                      onThemeColorsChange: f.rf,
+                                      onThemeColorsChange: I.rf,
                                       showPremiumIcon: !1,
                                       preventDisabled: !0
                                   }),
@@ -158,13 +158,13 @@ function U(e) {
                                       className: w.customizationSection,
                                       isTryItOutFlow: !0,
                                       showRemoveBannerButton: null != q,
-                                      onBannerChange: f.f4,
+                                      onBannerChange: I.f4,
                                       showPremiumIcon: !1
                                   }),
                                   (0, i.jsx)(R.Z, {
                                       className: w.customizationSection,
                                       isTryItOutFlow: !0,
-                                      onAvatarChange: f.c_,
+                                      onAvatarChange: I.c_,
                                       showRemoveAvatarButton: !1,
                                       changeAvatarButtonText: k.intl.string(k.t['7z0D1d']),
                                       sectionTitle: k.intl.string(k.t.vtFfPT)
@@ -199,11 +199,11 @@ function U(e) {
                           })
                       }),
                       !er &&
-                          (0, i.jsx)(_.p, {
+                          (0, i.jsx)(E.p, {
                               onSubscribeModalClose: es,
                               className: w.floatingUpsell,
                               showUpsell: !0,
-                              text: k.intl.format(k.t.TmfgIy, { onClick: () => (0, I.openPremiumTryItOutProfileUpsell)(es) }),
+                              text: k.intl.format(k.t.TmfgIy, { onClick: () => (0, f.openPremiumTryItOutProfileUpsell)(es) }),
                               button: Y ? k.intl.string(k.t.AfRWIy) : ea ? k.intl.formatToPlainString(k.t.bkQ4bG, { percent: null == el ? void 0 : el.discount.amount }) : k.intl.string(k.t.pj0XBA),
                               position: 'inline',
                               showShadow: !1

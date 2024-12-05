@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 }),
     n(47120);
@@ -14,29 +14,29 @@ var i,
     d = n(401430),
     u = n(155268),
     m = n(600164),
-    h = n(313201),
-    g = n(695103),
+    g = n(313201),
+    h = n(695103),
     p = n(388032),
     x = n(840891),
-    S = n(232186);
-let T = /^\d+$|^$/;
+    T = n(232186);
+let S = /^\d+$|^$/;
 ((s = i || (i = {})).LOCALHOST = 'localhost'), (s.PROXY = 'proxy');
-function E(e) {
+function _(e) {
     let { onClose: t, transitionState: n } = e,
         {
             authorizedApplicationId: i,
             authorizationError: s,
-            authorizing: E
-        } = (0, a.cj)([g.Z], () => ({
-            authorizedApplicationId: g.Z.testModeApplicationId,
-            authorizationError: g.Z.error,
-            authorizing: g.Z.isFetchingAuthorization
+            authorizing: _
+        } = (0, a.cj)([h.Z], () => ({
+            authorizedApplicationId: h.Z.testModeApplicationId,
+            authorizationError: h.Z.error,
+            authorizing: h.Z.isFetchingAuthorization
         })),
-        [_, C] = l.useState(null != i ? i : ''),
-        [I, f] = l.useState('8080'),
+        [E, C] = l.useState(null != i ? i : ''),
+        [f, I] = l.useState('8080'),
         [N, A] = l.useState('localhost'),
-        b = (0, h.Dt)(),
-        v = T.test(_);
+        b = (0, g.Dt)(),
+        v = S.test(E);
     async function j() {
         d.q$();
         let e = (function (e, t, n) {
@@ -47,11 +47,11 @@ function E(e) {
                 case 'proxy':
                     return (0, u.Z)(n);
             }
-        })(N, I, _);
-        null != (await d.Wt(_, e)) && t();
+        })(N, f, E);
+        null != (await d.Wt(E, e)) && t();
     }
     l.useEffect(() => () => c.Z.wait(() => d.q$()), []);
-    let O = null != i && i === _,
+    let O = null != i && i === E,
         R = O
             ? function () {
                   d.mc(), C(''), A(null);
@@ -68,7 +68,7 @@ function E(e) {
                     (0, r.jsx)(o.FormTitle, {
                         id: b,
                         tag: 'h1',
-                        className: S.marginReset,
+                        className: T.marginReset,
                         children: p.intl.string(p.t.f8fzk5)
                     }),
                     (0, r.jsx)(o.ModalCloseButton, { onClick: t })
@@ -78,14 +78,14 @@ function E(e) {
                 className: x.modalContent,
                 children: [
                     (0, r.jsx)(o.FormText, {
-                        className: S.marginBottom20,
+                        className: T.marginBottom20,
                         type: o.FormText.Types.DESCRIPTION,
                         children: p.intl.string(p.t.a6Vilp)
                     }),
                     null == s
                         ? null
                         : (0, r.jsx)(o.FormErrorBlock, {
-                              className: S.marginBottom20,
+                              className: T.marginBottom20,
                               children: s
                           }),
                     (0, r.jsx)('form', {
@@ -101,20 +101,20 @@ function E(e) {
                                     title: p.intl.string(p.t.P6TzgI),
                                     required: !0,
                                     children: (0, r.jsx)(o.TextInput, {
-                                        value: _,
+                                        value: E,
                                         maxLength: 19,
                                         error: v ? null : p.intl.string(p.t.gPNgKC),
                                         onChange: function (e) {
                                             C(e);
                                         },
-                                        disabled: E
+                                        disabled: _
                                     })
                                 }),
                                 (0, r.jsx)(o.FormItem, {
                                     className: x.inputWrapper,
                                     title: p.intl.string(p.t['/GTqXF']),
                                     children: (0, r.jsx)(o.SingleSelect, {
-                                        isDisabled: !v || '' === _,
+                                        isDisabled: !v || '' === E,
                                         value: N,
                                         options: [
                                             {
@@ -141,16 +141,16 @@ function E(e) {
                                           title: p.intl.string(p.t.fF4zxs),
                                           required: !0,
                                           children: (0, r.jsx)(o.TextInput, {
-                                              value: I,
+                                              value: f,
                                               maxLength: 5,
-                                              onChange: (e) => f(e),
-                                              disabled: E
+                                              onChange: (e) => I(e),
+                                              disabled: _
                                           })
                                       }),
                                 (0, r.jsx)(o.Button, {
-                                    submitting: E,
+                                    submitting: _,
                                     type: 'submit',
-                                    disabled: !v || 0 === _.length || ('localhost' === N && 0 === I.length),
+                                    disabled: !v || 0 === E.length || ('localhost' === N && 0 === f.length),
                                     color: O ? o.Button.Colors.RED : o.Button.Colors.GREEN,
                                     children: O ? p.intl.string(p.t.d6TR3N) : p.intl.string(p.t.qwuK5O)
                                 })

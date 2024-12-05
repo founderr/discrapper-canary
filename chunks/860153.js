@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return x;
+        return _;
     }
 });
 var i = t(200651),
@@ -14,8 +14,8 @@ var i = t(200651),
     d = t(318713),
     h = t(123145),
     m = t(592125),
-    p = t(212459),
-    f = t(795938);
+    f = t(212459),
+    p = t(795938);
 let g = r.memo(function (e) {
     let { message: n } = e,
         t = (0, o.e7)([m.Z], () => m.Z.getChannel(n.channel_id));
@@ -23,7 +23,7 @@ let g = r.memo(function (e) {
         ? null
         : (0, i.jsx)(i.Fragment, {
               children: (0, i.jsx)('div', {
-                  className: f.messageContents,
+                  className: p.messageContents,
                   onClick: (e) => e.stopPropagation(),
                   children: (0, i.jsxs)(c.Z.Provider, {
                       value: t.guild_id,
@@ -37,29 +37,29 @@ let g = r.memo(function (e) {
                           }),
                           (0, i.jsx)(d.Z, {
                               timestamp: n.timestamp,
-                              className: f.timestamp
+                              className: p.timestamp
                           })
                       ]
                   })
               })
           });
 });
-function x(e) {
+function _(e) {
     var n;
     let { item: t, onClose: r } = e,
-        { zoomed: a, topBarVisible: o } = (0, p.Y)(),
+        { zoomed: a, topBarVisible: o } = (0, f.Y)(),
         u = null === (n = t.sourceMetadata) || void 0 === n ? void 0 : n.message;
     return (0, i.jsx)('div', {
         className: 'fadeInWrapper',
         children: (0, i.jsxs)('div', {
-            className: l()(f.topBar, { [f.hidden]: a && !o }),
+            className: l()(p.topBar, { [p.hidden]: a && !o }),
             children: [
                 (0, i.jsx)(s.Button, {
                     look: s.ButtonLooks.BLANK,
                     color: s.ButtonColors.CUSTOM,
                     size: s.ButtonSizes.ICON,
-                    className: f.closeButton,
-                    innerClassName: f.closeButtonInner,
+                    className: p.closeButton,
+                    innerClassName: p.closeButtonInner,
                     onClick: r,
                     children: (0, i.jsx)(s.XSmallIcon, {})
                 }),

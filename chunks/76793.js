@@ -3,7 +3,7 @@ n.d(t, {
         return N;
     },
     q: function () {
-        return I;
+        return f;
     }
 });
 var i = n(200651),
@@ -16,40 +16,40 @@ var i = n(200651),
     d = n(615830),
     u = n(630759),
     m = n(931500),
-    h = n(921157),
-    g = n(171368),
+    g = n(921157),
+    h = n(171368),
     p = n(594174),
     x = n(51144),
-    S = n(388032),
-    T = n(47074),
-    E = n(232186);
-function _(e) {
+    T = n(388032),
+    S = n(47074),
+    _ = n(232186);
+function E(e) {
     let { userId: t, count: n } = e,
         c = (0, r.e7)([p.default], () => p.default.getUser(t)),
         d = x.ZP.getFormattedName(c),
         m = s.useCallback(() => {
             (0, u.Zn)(t);
         }, [t]),
-        h = s.useCallback(() => (0, g.openUserProfileModal)({ userId: t }), [t]);
+        g = s.useCallback(() => (0, h.openUserProfileModal)({ userId: t }), [t]);
     return (
         s.useEffect(() => {
             (0, a.PR)(t);
         }, [t]),
         (0, i.jsxs)('div', {
-            className: T.section,
+            className: S.section,
             children: [
                 null != c &&
                     (0, i.jsx)(o.Z, {
-                        className: T.avatar,
+                        className: S.avatar,
                         user: c,
                         size: l.AvatarSizes.SIZE_40
                     }),
                 (0, i.jsxs)('div', {
-                    className: T.text,
+                    className: S.text,
                     children: [
                         (0, i.jsx)(l.Clickable, {
-                            className: T.username,
-                            onClick: h,
+                            className: S.username,
+                            onClick: g,
                             children: (0, i.jsx)(l.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'interactive-active',
@@ -59,13 +59,13 @@ function _(e) {
                         (0, i.jsx)(l.Text, {
                             variant: 'text-md/medium',
                             color: 'header-secondary',
-                            children: S.intl.format(S.t['/MBjYG'], { count: n })
+                            children: T.intl.format(T.t['/MBjYG'], { count: n })
                         })
                     ]
                 }),
                 (0, i.jsx)(l.Clickable, {
                     onClick: m,
-                    className: T.sectionIconContainer,
+                    className: S.sectionIconContainer,
                     children: (0, i.jsx)(l.TrashIcon, { size: 'xs' })
                 })
             ]
@@ -82,12 +82,12 @@ function C(e) {
         className: t,
         children: [
             (0, i.jsxs)('div', {
-                className: T.text,
+                className: S.text,
                 children: [
                     (0, i.jsx)(l.Text, {
                         variant: 'text-sm/semibold',
                         color: 'interactive-active',
-                        children: S.intl.format(S.t.N4qBBA, { index: a + 1 })
+                        children: T.intl.format(T.t.N4qBBA, { index: a + 1 })
                     }),
                     (0, i.jsx)(l.Text, {
                         variant: 'text-sm/medium',
@@ -97,7 +97,7 @@ function C(e) {
                 ]
             }),
             (0, i.jsx)(l.Clickable, {
-                className: T.icon,
+                className: S.icon,
                 onClick: c,
                 children: (0, i.jsx)(l.XSmallIcon, {
                     size: 'md',
@@ -107,12 +107,12 @@ function C(e) {
         ]
     });
 }
-function I(e) {
+function f(e) {
     let { userId: t } = e,
         n = (0, m._)(t);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(_, {
+            (0, i.jsx)(E, {
                 userId: t,
                 count: n.length
             }),
@@ -122,12 +122,12 @@ function I(e) {
                     {
                         children: [
                             (0, i.jsx)(C, {
-                                className: T.row,
+                                className: S.row,
                                 userId: t,
                                 index: r,
                                 verification: e
                             }),
-                            r !== n.length - 1 && (0, i.jsx)('div', { className: T.divider })
+                            r !== n.length - 1 && (0, i.jsx)('div', { className: S.divider })
                         ]
                     },
                     ''.concat(r, '-').concat(e.timestamp)
@@ -136,23 +136,23 @@ function I(e) {
         ]
     });
 }
-function f(e) {
+function I(e) {
     let { userIds: t } = e;
     return 0 === t.length
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsxs)(l.FormItem, {
-                      className: E.marginBottom20,
+                      className: _.marginBottom20,
                       children: [
                           (0, i.jsx)(l.FormTitle, {
                               tag: l.FormTitleTags.H5,
-                              className: E.marginBottom8,
-                              children: S.intl.string(S.t['5b3FND'])
+                              className: _.marginBottom8,
+                              children: T.intl.string(T.t['5b3FND'])
                           }),
                           (0, i.jsx)(l.FormText, {
                               type: l.FormTextTypes.DESCRIPTION,
-                              children: S.intl.format(S.t['7w9ymJ'], { helpArticle: (0, u.pL)() })
+                              children: T.intl.format(T.t['7w9ymJ'], { helpArticle: (0, u.pL)() })
                           })
                       ]
                   }),
@@ -160,8 +160,8 @@ function f(e) {
                       (0, i.jsx)(
                           'div',
                           {
-                              className: T.item,
-                              children: (0, i.jsx)(I, { userId: e })
+                              className: S.item,
+                              children: (0, i.jsx)(f, { userId: e })
                           },
                           e
                       )
@@ -171,37 +171,37 @@ function f(e) {
 }
 function N() {
     let e = (0, r.e7)([d.Z], () => d.Z.getPersistentCodesEnabled()),
-        t = (0, h.s)();
+        t = (0, g.s)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(l.FormSection, {
                 tag: l.FormTitleTags.H1,
-                title: S.intl.string(S.t['9Q/PQk']),
+                title: T.intl.string(T.t['9Q/PQk']),
                 children: [
                     (0, i.jsx)(l.FormText, {
                         type: l.FormTextTypes.DESCRIPTION,
-                        className: E.marginBottom20,
-                        children: S.intl.format(S.t['8IwQfH'], { helpArticle: (0, u.uV)() })
+                        className: _.marginBottom20,
+                        children: T.intl.format(T.t['8IwQfH'], { helpArticle: (0, u.uV)() })
                     }),
                     (0, i.jsxs)(l.FormItem, {
                         children: [
                             (0, i.jsx)(l.FormTitle, {
                                 tag: l.FormTitleTags.H5,
-                                className: E.marginBottom8,
-                                children: S.intl.string(S.t['2Ap8sr'])
+                                className: _.marginBottom8,
+                                children: T.intl.string(T.t['2Ap8sr'])
                             }),
                             (0, i.jsx)(l.FormSwitch, {
                                 hideBorder: 0 === t.length,
                                 value: e,
-                                note: S.intl.format(S.t['7CXSaG'], { helpArticle: (0, u.aZ)() }),
+                                note: T.intl.format(T.t['7CXSaG'], { helpArticle: (0, u.aZ)() }),
                                 onChange: c.Z.updatePersistentCodesEnabled,
-                                children: S.intl.string(S.t['opi/XF'])
+                                children: T.intl.string(T.t['opi/XF'])
                             })
                         ]
                     })
                 ]
             }),
-            (0, i.jsx)(f, { userIds: t })
+            (0, i.jsx)(I, { userIds: t })
         ]
     });
 }

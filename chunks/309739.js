@@ -14,46 +14,46 @@ var i = n(200651),
     d = n(457330),
     u = n(410030),
     m = n(726542),
-    h = n(921801),
-    g = n(553795),
+    g = n(921801),
+    h = n(553795),
     p = n(430824),
     x = n(63063),
-    S = n(358085),
-    T = n(709054),
-    E = n(413182),
-    _ = n(695346),
+    T = n(358085),
+    S = n(709054),
+    _ = n(413182),
+    E = n(695346),
     C = n(726985),
-    I = n(981631),
-    f = n(388032),
+    f = n(981631),
+    I = n(388032),
     N = n(457796),
     A = n(232186);
 function b() {
-    let e = _.G6.useSetting(),
-        t = _.Wz.useSetting(),
-        n = S.isPlatformEmbedded ? f.intl.string(f.t.MznbeH) : f.intl.string(f.t.oKqC4u),
+    let e = E.G6.useSetting(),
+        t = E.Wz.useSetting(),
+        n = T.isPlatformEmbedded ? I.intl.string(I.t.MznbeH) : I.intl.string(I.t.oKqC4u),
         s = (e) => {
-            _.Wz.updateSetting(e),
+            E.Wz.updateSetting(e),
                 !(function (e) {
                     let t = () => {
-                        _.SE.updateSetting(e ? T.default.keys(p.Z.getGuilds()) : []);
+                        E.SE.updateSetting(e ? S.default.keys(p.Z.getGuilds()) : []);
                     };
                     (0, c.openModal)((e) =>
                         (0, i.jsx)(c.ConfirmModal, {
-                            header: f.intl.string(f.t['uUr+GR']),
-                            confirmText: f.intl.string(f.t.gm1Ven),
-                            cancelText: f.intl.string(f.t.p89ACg),
+                            header: I.intl.string(I.t['uUr+GR']),
+                            confirmText: I.intl.string(I.t.gm1Ven),
+                            cancelText: I.intl.string(I.t.p89ACg),
                             onCancel: t,
                             confirmButtonColor: c.Button.Colors.BRAND,
                             ...e,
                             children: (0, i.jsx)(c.Text, {
                                 variant: 'text-md/normal',
-                                children: f.intl.string(f.t.EFu2Ki)
+                                children: I.intl.string(I.t.EFu2Ki)
                             })
                         })
                     );
                 })(e);
         };
-    return (0, i.jsx)(h.F, {
+    return (0, i.jsx)(g.F, {
         setting: C.s6.ACTIVITY_PRIVACY_STATUS,
         children: (0, i.jsxs)(c.FormSection, {
             className: A.marginBottom40,
@@ -61,28 +61,28 @@ function b() {
                 (0, i.jsx)(c.FormTitle, {
                     tag: c.FormTitleTags.H5,
                     className: A.marginBottom8,
-                    children: f.intl.string(f.t['8ka8lp'])
+                    children: I.intl.string(I.t['8ka8lp'])
                 }),
                 (0, i.jsx)(c.FormSwitch, {
                     value: e,
-                    onChange: (e) => _.G6.updateSetting(e),
+                    onChange: (e) => E.G6.updateSetting(e),
                     note: n,
-                    children: f.intl.string(f.t['4q/Ewc'])
+                    children: I.intl.string(I.t['4q/Ewc'])
                 }),
                 (0, i.jsx)(c.FormSwitch, {
                     value: !t,
-                    note: f.intl.format(f.t['+5/xu7'], { helpdeskArticle: x.Z.getArticleURL(I.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                    note: I.intl.format(I.t['+5/xu7'], { helpdeskArticle: x.Z.getArticleURL(f.BhN.ACTIVITY_STATUS_SETTINGS) }),
                     onChange: (e) => s(!e),
-                    children: f.intl.string(f.t.D5GXTU)
+                    children: I.intl.string(I.t.D5GXTU)
                 })
             ]
         })
     });
 }
 function v() {
-    let e = _.cP.useSetting(),
-        t = _.Ou.useSetting();
-    return (0, i.jsx)(h.F, {
+    let e = E.cP.useSetting(),
+        t = E.Ou.useSetting();
+    return (0, i.jsx)(g.F, {
         setting: C.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
         children: (0, i.jsxs)(c.FormSection, {
             className: A.marginBottom40,
@@ -90,34 +90,34 @@ function v() {
                 (0, i.jsx)(c.FormTitle, {
                     tag: c.FormTitleTags.H5,
                     className: A.marginBottom8,
-                    children: f.intl.string(f.t.VOszPD)
+                    children: I.intl.string(I.t.VOszPD)
                 }),
                 (0, i.jsx)(c.FormSwitch, {
                     value: e,
-                    note: f.intl.string(f.t.Hdh7sb),
-                    onChange: (e) => _.cP.updateSetting(e),
-                    children: f.intl.string(f.t.WEWQQk)
+                    note: I.intl.string(I.t.Hdh7sb),
+                    onChange: (e) => E.cP.updateSetting(e),
+                    children: I.intl.string(I.t.WEWQQk)
                 }),
                 (0, i.jsx)(c.FormSwitch, {
                     value: t,
-                    note: f.intl.string(f.t.Czr3Bg),
-                    onChange: (e) => _.Ou.updateSetting(e),
-                    children: f.intl.string(f.t.UUvJVl)
+                    note: I.intl.string(I.t.Czr3Bg),
+                    onChange: (e) => E.Ou.updateSetting(e),
+                    children: I.intl.string(I.t.UUvJVl)
                 })
             ]
         })
     });
 }
 function j() {
-    return (0, i.jsx)(h.F, {
+    return (0, i.jsx)(g.F, {
         setting: C.s6.ACTIVITY_PRIVACY_TOS,
         children: (0, i.jsx)(c.FormSection, {
             className: A.marginBottom40,
             children: (0, i.jsx)(c.FormNotice, {
                 type: c.FormNotice.Types.PRIMARY,
-                body: f.intl.format(f.t.xvCsx8, {
-                    termsLink: I.EYA.TERMS,
-                    privacyLink: I.EYA.PRIVACY
+                body: I.intl.format(I.t.xvCsx8, {
+                    termsLink: f.EYA.TERMS,
+                    privacyLink: f.EYA.PRIVACY
                 })
             })
         })
@@ -125,12 +125,12 @@ function j() {
 }
 let O = (e) => {
     switch (e.type) {
-        case I.ABu.SPOTIFY:
-            return f.intl.format(f.t['5sYPnp'], { name: e.name });
-        case I.ABu.CRUNCHYROLL:
-            return f.intl.format(f.t.Ge29Z2, { name: e.name });
+        case f.ABu.SPOTIFY:
+            return I.intl.format(I.t['5sYPnp'], { name: e.name });
+        case f.ABu.CRUNCHYROLL:
+            return I.intl.format(I.t.Ge29Z2, { name: e.name });
         default:
-            return f.intl.format(f.t.nmMsys, { game: e.name });
+            return I.intl.format(I.t.nmMsys, { game: e.name });
     }
 };
 function R(e) {
@@ -179,8 +179,8 @@ function R(e) {
     });
 }
 function P() {
-    let e = (0, a.e7)([g.Z], () => g.Z.getAccounts()),
-        t = s.useMemo(() => e.filter((e) => m.Z.isSupported(e.type) && I.vbS.has(e.type)), [e]),
+    let e = (0, a.e7)([h.Z], () => h.Z.getAccounts()),
+        t = s.useMemo(() => e.filter((e) => m.Z.isSupported(e.type) && f.vbS.has(e.type)), [e]),
         [n, r] = s.useState(''),
         o = s.useMemo(() => {
             let e = n.trim().toLowerCase();
@@ -188,7 +188,7 @@ function P() {
         }, [t, n]);
     return 0 === t.length
         ? null
-        : (0, i.jsx)(h.F, {
+        : (0, i.jsx)(g.F, {
               setting: C.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY,
               children: (0, i.jsxs)(c.FormSection, {
                   className: A.marginBottom40,
@@ -196,13 +196,13 @@ function P() {
                       (0, i.jsx)(c.FormTitle, {
                           tag: c.FormTitleTags.H5,
                           className: A.marginBottom8,
-                          children: f.intl.string(f.t['4F2KoK'])
+                          children: I.intl.string(I.t['4F2KoK'])
                       }),
                       (0, i.jsx)(c.TextInput, {
                           className: N.searchInput,
                           value: n,
                           onChange: r,
-                          placeholder: f.intl.string(f.t.WPrtoa)
+                          placeholder: I.intl.string(I.t.WPrtoa)
                       }),
                       o.map((e) => (0, i.jsx)(R, { account: e }, e.id))
                   ]
@@ -211,11 +211,11 @@ function P() {
 }
 function D(e) {
     let { className: t, showHeader: n = !0 } = e,
-        { showRedesign: s } = E.b.useExperiment({ location: 'activity privacy tab' });
+        { showRedesign: s } = _.b.useExperiment({ location: 'activity privacy tab' });
     return (0, i.jsxs)(c.FormSection, {
         className: t,
         tag: c.FormTitleTags.H1,
-        title: n ? f.intl.string(f.t.Cq98yM) : null,
+        title: n ? I.intl.string(I.t.Cq98yM) : null,
         children: [(0, i.jsx)(b, {}), (0, i.jsx)(v, {}), (0, i.jsx)(j, {}), s && (0, i.jsx)(P, {})]
     });
 }

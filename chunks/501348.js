@@ -14,17 +14,17 @@ var i = n(200651),
     d = n(780384),
     u = n(481060),
     m = n(153867),
-    h = n(230711),
-    g = n(714338),
+    g = n(230711),
+    h = n(714338),
     p = n(857595),
     x = n(607070),
-    S = n(627845),
-    T = n(514361),
-    E = n(600164),
-    _ = n(313201),
+    T = n(627845),
+    S = n(514361),
+    _ = n(600164),
+    E = n(313201),
     C = n(605236),
-    I = n(786761),
-    f = n(3148),
+    f = n(786761),
+    I = n(3148),
     N = n(739566),
     A = n(753206),
     b = n(311476),
@@ -60,47 +60,47 @@ let G = {
         COZY: 'cozy',
         COMPACT: 'compact'
     },
-    Y = (0, _.hQ)(),
-    H = (0, _.hQ)(),
-    z = (0, _.hQ)(),
+    Y = (0, E.hQ)(),
+    H = (0, E.hQ)(),
+    z = (0, E.hQ)(),
     W = '1337',
     K = (e) => {
         let t = 0;
         return [
-            (0, I.e5)({
-                ...(0, f.ZP)({
+            (0, f.e5)({
+                ...(0, I.ZP)({
                     channelId: W,
                     content: k.intl.string(k.t.oZxkEh)
                 }),
                 state: Z.yb.SENT,
                 id: ''.concat(t++)
             }),
-            (0, I.e5)({
-                ...(0, f.ZP)({
+            (0, f.e5)({
+                ...(0, I.ZP)({
                     channelId: W,
                     content: (0, d.wj)(e) ? k.intl.string(k.t['WGb/v7']) : k.intl.string(k.t['62m4m5'])
                 }),
                 state: Z.yb.SENT,
                 id: ''.concat(t++)
             }),
-            (0, I.e5)({
-                ...(0, f.ZP)({
+            (0, f.e5)({
+                ...(0, I.ZP)({
                     channelId: W,
                     content: k.intl.string(k.t.a0Byo6)
                 }),
                 state: Z.yb.SENT,
                 id: ''.concat(t++)
             }),
-            (0, I.e5)({
-                ...(0, f.ZP)({
+            (0, f.e5)({
+                ...(0, I.ZP)({
                     channelId: W,
                     content: k.intl.string(k.t.bmwEWF)
                 }),
                 state: Z.yb.SENT,
                 id: ''.concat(t++)
             }),
-            (0, I.e5)({
-                ...(0, f.ZP)({
+            (0, f.e5)({
+                ...(0, I.ZP)({
                     channelId: W,
                     content: k.intl.string(k.t.hK9QW1)
                 }),
@@ -110,7 +110,7 @@ let G = {
         ];
     },
     q = () => {
-        let e = (0, a.e7)([T.Z], () => T.Z.isPreview),
+        let e = (0, a.e7)([S.Z], () => S.Z.isPreview),
             { enabled: t } = b.Z.useExperiment(
                 { location: 'GradientSelectorsTitle' },
                 {
@@ -155,7 +155,7 @@ class X extends s.Component {
                       }),
                       (0, i.jsx)(u.FormText, {
                           type: u.FormText.Types.DESCRIPTION,
-                          children: k.intl.format(k.t.OMkSUl, { modKey: g.Z.modKey })
+                          children: k.intl.format(k.t.OMkSUl, { modKey: h.Z.modKey })
                       })
                   ]
               })
@@ -171,8 +171,8 @@ class X extends s.Component {
                     className: U.marginBottom8,
                     children: k.intl.string(k.t.qPOqoK)
                 }),
-                (0, i.jsx)(E.Z, {
-                    align: E.Z.Align.CENTER,
+                (0, i.jsx)(_.Z, {
+                    align: _.Z.Align.CENTER,
                     children: (0, i.jsx)(u.Slider, {
                         className: l()(U.marginTop20, U.marginBottom4),
                         initialValue: this.props.fontSize,
@@ -255,10 +255,10 @@ class X extends s.Component {
                   children: (0, i.jsx)(u.FormText, {
                       type: u.FormText.Types.DEFAULT,
                       className: w.forcedColorsWarning,
-                      children: (0, S.b)()
+                      children: (0, T.b)()
                           ? k.intl.format(k.t.Jae48P, {
                                 onClick: () => {
-                                    h.Z.open(Z.oAB.ACCESSIBILITY);
+                                    g.Z.open(Z.oAB.ACCESSIBILITY);
                                 }
                             })
                           : k.intl.string(k.t.AUMSZG)
@@ -376,7 +376,7 @@ class X extends s.Component {
                     className: U.marginTop20,
                     children: k.intl.format(k.t['5LEQdX'], {
                         onAccessibilityClick() {
-                            h.Z.open(Z.oAB.ACCESSIBILITY);
+                            g.Z.open(Z.oAB.ACCESSIBILITY);
                         }
                     })
                 })
@@ -437,7 +437,7 @@ function J() {
     s.useEffect(() => {
         Q(o.z.CLIENT_THEMES_SETTINGS_BADGE), Q(o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), Q(o.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
     }, []);
-    let c = (0, a.cj)([R.Z, P.ZP, x.Z, j.default, T.Z], () => {
+    let c = (0, a.cj)([R.Z, P.ZP, x.Z, j.default, S.Z], () => {
         var e, t;
         return {
             theme: R.Z.theme,
@@ -449,7 +449,7 @@ function J() {
             messageGroupSpacing: x.Z.messageGroupSpacing,
             displayCompactAvatars: P.ZP.displayCompactAvatars,
             isStaff: null !== (t = null === (e = j.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
-            gradientPreset: T.Z.gradientPreset
+            gradientPreset: S.Z.gradientPreset
         };
     });
     return (0, i.jsx)(X, {

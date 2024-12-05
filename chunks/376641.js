@@ -3,7 +3,7 @@ t.d(n, {
         return i;
     },
     v: function () {
-        return o;
+        return l;
     }
 });
 var a = t(817718),
@@ -13,4 +13,4 @@ let i = {
         [r.EkH.MODAL_CAROUSEL_PREV]: a.py,
         [r.EkH.CLOSE_MODAL]: a.U3
     },
-    o = { [r.EkH.CLOSE_MODAL]: a.U3 };
+    l = { [r.EkH.CLOSE_MODAL]: a.U3 };

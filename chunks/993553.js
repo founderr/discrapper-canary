@@ -14,13 +14,13 @@ var i = n(200651),
     d = n(609173);
 function u(e) {
     let { children: t, lineClamp: n = 2, ...u } = e,
-        [m, h] = s.useState(!1),
-        [g, p] = s.useState(null),
+        [m, g] = s.useState(!1),
+        [h, p] = s.useState(null),
         x =
-            null != g &&
+            null != h &&
             (0, i.jsx)('button', {
                 className: d.button,
-                onClick: () => h((e) => !e),
+                onClick: () => g((e) => !e),
                 children: (0, i.jsxs)(o.Text, {
                     className: d.seeMore,
                     variant: 'text-sm/medium',
@@ -39,30 +39,30 @@ function u(e) {
                     ]
                 })
             }),
-        [S, T] = s.useState(null),
-        E = s.useCallback(() => {
-            if (null == S) return;
-            let { scrollHeight: e, clientHeight: t } = S;
+        [T, S] = s.useState(null),
+        _ = s.useCallback(() => {
+            if (null == T) return;
+            let { scrollHeight: e, clientHeight: t } = T;
             e > t &&
                 p({
                     truncatedHeight: t,
                     expandedHeight: e
                 });
-        }, [S]);
+        }, [T]);
     s.useEffect(() => {
-        requestAnimationFrame(E);
-    }, [E, t, n]);
-    let _ = 'auto';
+        requestAnimationFrame(_);
+    }, [_, t, n]);
+    let E = 'auto';
     return (
-        null != g && (_ = m ? ''.concat(g.expandedHeight, 'px') : ''.concat(g.truncatedHeight, 'px')),
+        null != h && (E = m ? ''.concat(h.expandedHeight, 'px') : ''.concat(h.truncatedHeight, 'px')),
         (0, i.jsxs)('div', {
             children: [
                 (0, i.jsx)(o.Text, {
                     ...u,
                     className: d.content,
                     lineClamp: m ? void 0 : n,
-                    ref: T,
-                    style: { height: _ },
+                    ref: S,
+                    style: { height: E },
                     children: t
                 }),
                 x

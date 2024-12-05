@@ -14,36 +14,36 @@ var i = n(200651),
     d = n(993413),
     u = n(921801),
     m = n(208049),
-    h = n(763296),
-    g = n(242291),
+    g = n(763296),
+    h = n(242291),
     p = n(893663),
     x = n(331642),
-    S = n(63063),
-    T = n(581883),
-    E = n(918257),
-    _ = n(726985),
+    T = n(63063),
+    S = n(581883),
+    _ = n(918257),
+    E = n(726985),
     C = n(981631),
-    I = n(710111),
-    f = n(388032),
+    f = n(710111),
+    I = n(388032),
     N = n(518782),
     A = n(232186);
 function b(e) {
-    return (0, r.e7)([h.Z], () => {
+    return (0, r.e7)([g.Z], () => {
         if (null == e) return null;
         let { guildId: t, soundId: n } = e;
-        return h.Z.getSound(t === I.hY ? I.X8 : t, n);
+        return g.Z.getSound(t === f.hY ? f.X8 : t, n);
     });
 }
 function v() {
     let { analyticsLocations: e } = (0, o.ZP)(),
-        [t, n] = s.useState(I.hY),
+        [t, n] = s.useState(f.hY),
         a = (0, p.tT)(t),
-        T = b(a),
-        v = (0, r.e7)([h.Z], () => h.Z.hasFetchedAllSounds()),
+        S = b(a),
+        v = (0, r.e7)([g.Z], () => g.Z.hasFetchedAllSounds()),
         O = (null == a ? void 0 : a.type) === p.zx.GLOBAL,
-        R = v && null != a && null == T;
+        R = v && null != a && null == S;
     s.useEffect(() => {
-        R && (0, g.tt)({ location: e });
+        R && (0, h.tt)({ location: e });
     }, [R, e]),
         s.useEffect(() => {
             (0, m.w)();
@@ -56,41 +56,41 @@ function v() {
         className: N.container,
         tag: l.FormTitleTags.H1,
         titleClassName: A.__invalid_marginBottom16,
-        title: f.intl.string(f.t.ABjMWF),
+        title: I.intl.string(I.t.ABjMWF),
         children: [
             (0, i.jsx)(u.F, {
-                setting: _.s6.VOICE_AND_VIDEO_SOUNDBOARD,
-                children: (0, i.jsx)(E.Z, {})
+                setting: E.s6.VOICE_AND_VIDEO_SOUNDBOARD,
+                children: (0, i.jsx)(_.Z, {})
             }),
             (0, i.jsxs)(u.F, {
-                setting: _.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
+                setting: E.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
                 children: [
                     (0, i.jsx)(l.FormDivider, { className: N.callSoundsDivider }),
                     (0, i.jsx)(l.Heading, {
                         variant: 'text-md/medium',
                         color: 'header-primary',
                         className: N.callSoundsTitle,
-                        children: f.intl.string(f.t.nzUc3N)
+                        children: I.intl.string(I.t.nzUc3N)
                     }),
                     (0, i.jsx)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: f.intl.format(f.t.u9RWmp, { helpdeskArticle: S.Z.getArticleURL(C.BhN.SOUNDBOARD) })
+                        children: I.intl.format(I.t.u9RWmp, { helpdeskArticle: T.Z.getArticleURL(C.BhN.SOUNDBOARD) })
                     }),
                     (0, i.jsx)(c.Z, {
                         guildId: t,
                         className: N.guildSelector,
                         globalOption: {
-                            label: f.intl.string(f.t.CpEUPz),
-                            value: I.hY
+                            label: I.intl.string(I.t.CpEUPz),
+                            value: f.hY
                         },
-                        onChange: (e) => n(null == e ? I.hY : e.id),
+                        onChange: (e) => n(null == e ? f.hY : e.id),
                         renderOptionSuffix: P,
                         hideDivider: !0
                     }),
                     (0, i.jsxs)(d.Z, {
                         className: A.marginTop20,
-                        title: f.intl.format(f.t.I2TsYG, {
+                        title: I.intl.format(I.t.I2TsYG, {
                             nitroWheelHook: () =>
                                 (0, i.jsx)(l.NitroWheelIcon, {
                                     size: 'md',
@@ -101,17 +101,17 @@ function v() {
                         forcedDivider: !0,
                         children: [
                             (0, i.jsx)(x.Z, {
-                                sound: T,
+                                sound: S,
                                 isGlobal: O,
                                 onSelect: (n) => {
-                                    null == n ? (0, g.aC)(t, e) : (0, g.SZ)(t, n, e);
+                                    null == n ? (0, h.aC)(t, e) : (0, h.SZ)(t, n, e);
                                 }
                             }),
                             R &&
                                 (0, i.jsx)(l.HelpMessage, {
                                     className: N.notice,
                                     messageType: l.HelpMessageTypes.WARNING,
-                                    children: f.intl.string(f.t.WkPsFR)
+                                    children: I.intl.string(I.t.WkPsFR)
                                 })
                         ]
                     })
@@ -122,9 +122,9 @@ function v() {
 }
 function j(e) {
     let { guildId: t } = e,
-        n = (0, r.e7)([T.Z], () => {
+        n = (0, r.e7)([S.Z], () => {
             var e, n, i;
-            return null === (i = T.Z.settings.guilds) || void 0 === i ? void 0 : null === (n = i.guilds) || void 0 === n ? void 0 : null === (e = n[t]) || void 0 === e ? void 0 : e.joinSound;
+            return null === (i = S.Z.settings.guilds) || void 0 === i ? void 0 : null === (n = i.guilds) || void 0 === n ? void 0 : null === (e = n[t]) || void 0 === e ? void 0 : e.joinSound;
         }),
         s = b(n);
     if (null == n || null == s) return null;

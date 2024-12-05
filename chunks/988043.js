@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 }),
     n(47120);
@@ -14,18 +14,18 @@ var i = n(200651),
     d = n(695346),
     u = n(639814),
     m = n(838436),
-    h = n(51331),
-    g = n(922628),
+    g = n(51331),
+    h = n(922628),
     p = n(726985),
     x = n(736530),
-    S = n(981631),
-    T = n(388032);
-function E() {
+    T = n(981631),
+    S = n(388032);
+function _() {
     let e = (0, u.is)(),
         t = (0, u.c_)(),
         n = d.h2.useSetting().includes(e),
-        E = d.iG.useSetting(),
-        _ = s.useCallback(
+        _ = d.iG.useSetting(),
+        E = s.useCallback(
             (t) => {
                 let n = (0, c.YK)();
                 t ? n.delete(e) : n.add(e), d.h2.updateSetting(Array.from(n));
@@ -33,17 +33,17 @@ function E() {
             [e]
         );
     function C(e, t) {
-        a.default.track(S.rMx.GUILD_DEFAULT_DMS_UPDATED, {
+        a.default.track(T.rMx.GUILD_DEFAULT_DMS_UPDATED, {
             default_guilds_restricted: e,
             applied_to_existing_guilds: t
         });
     }
-    let I = (e) => {
-        (0, g.V)({
-            header: T.intl.string(T.t['uUr+GR']),
-            body: T.intl.string(T.t.hjGJBg),
-            confirmText: T.intl.string(T.t.gm1Ven),
-            cancelText: T.intl.string(T.t.p89ACg),
+    let f = (e) => {
+        (0, h.V)({
+            header: S.intl.string(S.t['uUr+GR']),
+            body: S.intl.string(S.t.hjGJBg),
+            confirmText: S.intl.string(S.t.gm1Ven),
+            cancelText: S.intl.string(S.t.p89ACg),
             confirmButtonColor: r.Button.Colors.BRAND,
             onConfirm: () => {
                 d.iG.updateSetting(e), C(e, !1);
@@ -57,19 +57,19 @@ function E() {
         setting: p.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS_V2,
         children:
             e === x.T
-                ? (0, i.jsx)(h.Z, {
-                      title: T.intl.string(T.t.RAQUSE),
-                      note: T.intl.string(T.t.wbYDfX),
-                      value: !E,
+                ? (0, i.jsx)(g.Z, {
+                      title: S.intl.string(S.t.RAQUSE),
+                      note: S.intl.string(S.t.wbYDfX),
+                      value: !_,
                       onChange: (e) => {
-                          I(!e);
+                          f(!e);
                       }
                   })
-                : (0, i.jsx)(h.Z, {
-                      title: T.intl.string(T.t.RAQUSE),
-                      note: t ? T.intl.string(T.t.V0ka0d) : T.intl.string(T.t.G7c3Xl),
+                : (0, i.jsx)(g.Z, {
+                      title: S.intl.string(S.t.RAQUSE),
+                      note: t ? S.intl.string(S.t.V0ka0d) : S.intl.string(S.t.G7c3Xl),
                       value: !n,
-                      onChange: _
+                      onChange: E
                   })
     });
 }

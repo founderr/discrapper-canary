@@ -14,17 +14,17 @@ var s = n(512722),
     d = n(328783),
     u = n(295474),
     m = n(150039),
-    h = n(126631),
-    g = n(433411),
+    g = n(126631),
+    h = n(433411),
     p = n(532432),
     x = n(349177),
-    S = n(872736),
-    T = n(134795),
-    E = n(610966),
-    _ = n(513901),
+    T = n(872736),
+    S = n(134795),
+    _ = n(610966),
+    E = n(513901),
     C = n(451392),
-    I = n(906364),
-    f = n(350327),
+    f = n(906364),
+    I = n(350327),
     N = n(621853),
     A = n(687158),
     b = n(25990),
@@ -85,11 +85,11 @@ function P() {
                 onGlobalNameChange: a.UZ
             }),
             (0, i.jsx)(
-                I.Z,
+                f.Z,
                 {
                     sectionTitle: O.intl.string(O.t['+T3RIy']),
                     errors: Y.pronouns,
-                    onPronounsChange: f.ID,
+                    onPronounsChange: I.ID,
                     pendingPronouns: U,
                     currentPronouns: null !== (y = null == Z ? void 0 : Z.pronouns) && void 0 !== y ? y : ''
                 },
@@ -107,7 +107,7 @@ function P() {
                 'avatar'
             ),
             (0, i.jsx)(
-                g.Z,
+                h.Z,
                 {
                     user: L,
                     sectionTitle: O.intl.string(O.t['7v0T9P'])
@@ -115,7 +115,7 @@ function P() {
                 'decoration'
             ),
             (0, i.jsx)(
-                _.Z,
+                E.Z,
                 {
                     user: L,
                     sectionTitle: O.intl.string(O.t.wR5wOj)
@@ -126,11 +126,11 @@ function P() {
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(
-                              T.Z,
+                              S.Z,
                               {
                                   showRemoveBannerButton: K,
                                   errors: Y.banner,
-                                  onBannerChange: f.g_,
+                                  onBannerChange: I.g_,
                                   forcedDivider: !0
                               },
                               'banner'
@@ -139,23 +139,23 @@ function P() {
                               user: L,
                               pendingAvatar: F,
                               pendingColors: G,
-                              onThemeColorsChange: f.z5,
+                              onThemeColorsChange: I.z5,
                               forcedDivider: !0
                           })
                       ]
                   })
                 : (0, i.jsx)(
-                      E.Z,
+                      _.Z,
                       {
                           user: L,
                           savedUserColor: null == Z ? void 0 : Z.accentColor,
                           pendingColor: V,
-                          setPendingAccentColor: f.CM
+                          setPendingAccentColor: I.CM
                       },
                       'color'
                   ),
             (0, i.jsx)(
-                h.Z,
+                g.Z,
                 {
                     sectionTitle: O.intl.string(O.t.NepzEx),
                     errors: $,
@@ -166,7 +166,7 @@ function P() {
                 'bio'
             ),
             ee.length > 0 && (0, i.jsx)(d.Z, { availableClans: ee }),
-            null != Q && (0, i.jsx)(S.Z, { legacyUsername: Q }, 'legacy_username')
+            null != Q && (0, i.jsx)(T.Z, { legacyUsername: Q }, 'legacy_username')
         ]
     });
 }

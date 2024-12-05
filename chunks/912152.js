@@ -10,7 +10,7 @@ var s = n(481060),
     u = n(388032),
     m = n(755682);
 t.Z = function (e) {
-    let { hasAppliedGuildBoosts: t, hasBoostPerk: n, hasGuildAffinitiesOrInGuild: h, subscriptionIsPausedOrPausePending: g } = e,
+    let { hasAppliedGuildBoosts: t, hasBoostPerk: n, hasGuildAffinitiesOrInGuild: g, subscriptionIsPausedOrPausePending: h } = e,
         { subtitle: p, flavor: x } = (function (e) {
             let { hasAppliedGuildBoosts: t, hasBoostPerk: n, hasGuildAffinitiesOrInGuild: i, subscriptionIsPausedOrPausePending: s } = e;
             if (s) return { flavor: u.intl.format(u.t.doslJi, { onClick: () => r.Z.open(c.oAB.SUBSCRIPTIONS) }) };
@@ -21,17 +21,17 @@ t.Z = function (e) {
                     flavor: u.intl.format(u.t.cUHcaW, { helpdeskArticle: l.Z.getArticleURL(c.BhN.GUILD_SUBSCRIPTIONS) })
                 };
             let m = d.GP[d.Xh.PREMIUM_MONTH_GUILD],
-                h = a.ZP.getDefaultPrice(m.id, n),
-                g = (0, o.og)((0, o.T4)(h.amount, h.currency), m.interval, m.intervalCount);
+                g = a.ZP.getDefaultPrice(m.id, n),
+                h = (0, o.og)((0, o.T4)(g.amount, g.currency), m.interval, m.intervalCount);
             return {
                 subtitle: n ? u.intl.string(u.t.bhPzXV) : u.intl.string(u.t.Zs9h9f),
-                flavor: u.intl.formatToPlainString(u.t.PGgTdH, { monthlyGuildBoostPrice: g })
+                flavor: u.intl.formatToPlainString(u.t.PGgTdH, { monthlyGuildBoostPrice: h })
             };
         })({
             hasAppliedGuildBoosts: t,
             hasBoostPerk: n,
-            hasGuildAffinitiesOrInGuild: h,
-            subscriptionIsPausedOrPausePending: g
+            hasGuildAffinitiesOrInGuild: g,
+            subscriptionIsPausedOrPausePending: h
         });
     return (0, i.jsxs)('div', {
         className: m.wrapper,

@@ -1,8 +1,8 @@
 var a = t(147018),
     r = t(863664),
     i = t(299623),
-    o = t(345374),
-    l = Array;
+    l = t(345374),
+    o = Array;
 a(
     {
         target: 'Array',
@@ -10,8 +10,8 @@ a(
     },
     {
         toReversed: function () {
-            return r(i(this), l);
+            return r(i(this), o);
         }
     }
 ),
-    o('toReversed');
+    l('toReversed');

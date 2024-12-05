@@ -10,18 +10,18 @@ var r = n(120356),
     u = n(506829),
     g = n(721239),
     m = n(557634),
-    f = n(992429);
+    p = n(992429);
 t.Z = (e) => {
     var t;
     let n,
         r,
-        { title: p, titleClassName: _, buttonClassName: h, perkImage: E, isCarousel: b, onCtaClick: x, perkComponent: C, subtitle: v = '', descriptionCta: T = '', cardVariant: N, subtitleClassName: I, imageOverlayText: S } = e,
+        { title: f, titleClassName: _, buttonClassName: h, perkImage: E, isCarousel: b, onCtaClick: x, perkComponent: C, subtitle: v = '', descriptionCta: T = '', cardVariant: N, subtitleClassName: S, imageOverlayText: I } = e,
         R = (0, o._)(N),
         A = (0, l.yQ)(),
         j = (null == A ? void 0 : A.nitroTenureStatus) === d.EB.REDEEMABLE;
     switch (null == A ? void 0 : A.nitroTenureStatus) {
         case d.EB.REDEEMABLE:
-            (n = f), (r = 'unlocked icon');
+            (n = p), (r = 'unlocked icon');
             break;
         case d.EB.PENDING:
             (n = g), (r = 'locked icon');
@@ -32,17 +32,17 @@ t.Z = (e) => {
         default:
             (n = void 0), (r = '');
     }
-    let P = null != S;
+    let P = null != I;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', { className: a()(u.cover, u.below) }),
             (0, i.jsx)(c.Z, {
-                title: p,
+                title: f,
                 shouldShowElement: (e) => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
                 cardVariantStyleInfo: R,
                 titleClassName: _,
                 subtitle: v,
-                subtitleClassName: I
+                subtitleClassName: S
             }),
             null != E &&
                 (0, i.jsxs)('div', {
@@ -59,7 +59,7 @@ t.Z = (e) => {
                                   children: (0, i.jsx)(s.Text, {
                                       className: u.imageOverlayText,
                                       variant: 'text-md/bold',
-                                      children: S
+                                      children: I
                                   })
                               })
                             : null

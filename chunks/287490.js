@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return T;
     }
 }),
     n(47120),
@@ -15,8 +15,8 @@ var i = n(200651),
     d = n(353926),
     u = n(430824),
     m = n(499533),
-    h = n(878209),
-    g = n(987338),
+    g = n(878209),
+    h = n(987338),
     p = n(26296);
 function x(e, t) {
     return e.map((e, n) => ({
@@ -24,11 +24,11 @@ function x(e, t) {
         value: e
     }));
 }
-function S() {
+function T() {
     let e = (0, a.cj)([d.Z], () => d.Z.getAllExperimentOverrideDescriptors()),
         t = (0, a.cj)([d.Z], () => d.Z.getRegisteredExperiments()),
         [n, r] = s.useState(''),
-        l = (0, h.Ro)((0, h.Tc)((0, h.Cg)(t), e), n);
+        l = (0, g.Ro)((0, g.Tc)((0, g.Cg)(t), e), n);
     return (0, i.jsxs)(o.FormSection, {
         tag: o.FormTitleTags.H1,
         title: 'Experiments',
@@ -41,7 +41,7 @@ function S() {
             }),
             l.length > 0
                 ? l.map((t) => {
-                      let n = t.experiment.type === g.xY.GUILD ? E : T;
+                      let n = t.experiment.type === h.xY.GUILD ? _ : S;
                       return (0, i.jsx)(
                           n,
                           {
@@ -62,19 +62,19 @@ function S() {
         ]
     });
 }
-function T(e) {
+function S(e) {
     var t;
     let { experiment: n, experimentId: r, overrideDescriptor: u } = e,
-        [m, h] = s.useState(null != u),
-        [S, T] = s.useState(!1),
-        E = s.useCallback(() => {
-            h((e) => !e);
+        [m, g] = s.useState(null != u),
+        [T, S] = s.useState(!1),
+        _ = s.useCallback(() => {
+            g((e) => !e);
         }, []),
-        _ = (0, a.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(r)),
+        E = (0, a.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(r)),
         C = (0, a.e7)([d.Z], () => d.Z.getLoadedUserExperiment(r)),
-        I = (0, a.Wu)([d.Z], () =>
+        f = (0, a.Wu)([d.Z], () =>
             l()
-                .sortBy(d.Z.getRecentExposures(g.xY.USER, r), (e) => {
+                .sortBy(d.Z.getRecentExposures(h.xY.USER, r), (e) => {
                     let [t, n] = e;
                     return -n;
                 })
@@ -83,8 +83,8 @@ function T(e) {
                     return ''.concat(new Date(n).toLocaleString(), ' (').concat(t, ')');
                 })
         ),
-        f = (0, i.jsx)(o.Clickable, {
-            onClick: E,
+        I = (0, i.jsx)(o.Clickable, {
+            onClick: _,
             children: (0, i.jsxs)(o.FormTitle, {
                 tag: o.FormTitleTags.H3,
                 className: p.title,
@@ -112,7 +112,7 @@ function T(e) {
               children: [
                   (0, i.jsxs)(o.FormSection, {
                       children: [
-                          f,
+                          I,
                           (0, i.jsxs)('div', {
                               children: [
                                   (0, i.jsx)(o.FormItem, {
@@ -142,7 +142,7 @@ function T(e) {
                               children: [
                                   (0, i.jsxs)(o.FormText, {
                                       type: o.FormTextTypes.DESCRIPTION,
-                                      children: ['Current assigned to bucket ', null !== (t = null == _ ? void 0 : _.bucket) && void 0 !== t ? t : g.NZ.NOT_ELIGIBLE]
+                                      children: ['Current assigned to bucket ', null !== (t = null == E ? void 0 : E.bucket) && void 0 !== t ? t : h.NZ.NOT_ELIGIBLE]
                                   }),
                                   null == C
                                       ? (0, i.jsx)(o.FormText, {
@@ -152,7 +152,7 @@ function T(e) {
                                       : null
                               ]
                           }),
-                          S
+                          T
                               ? (0, i.jsxs)('div', {
                                     children: [
                                         (0, i.jsx)(o.FormTitle, {
@@ -183,7 +183,7 @@ function T(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: p.pre,
-                                            children: 0 === I.length ? 'None' : I.join('\n')
+                                            children: 0 === f.length ? 'None' : f.join('\n')
                                         })
                                     ]
                                 })
@@ -191,7 +191,7 @@ function T(e) {
                                     className: p.debugButton,
                                     size: o.Button.Sizes.SMALL,
                                     look: o.Button.Looks.BLANK,
-                                    onClick: () => T(!0),
+                                    onClick: () => S(!0),
                                     children: 'More Details \xBB'
                                 })
                       ]
@@ -201,20 +201,20 @@ function T(e) {
           })
         : (0, i.jsx)('div', {
               className: p.group,
-              children: (0, i.jsx)(o.FormSection, { children: f })
+              children: (0, i.jsx)(o.FormSection, { children: I })
           });
 }
-function E(e) {
+function _(e) {
     let { experiment: t, experimentId: n, overrideDescriptor: r } = e,
-        [m, h] = s.useState(null != r),
-        [S, T] = s.useState(!1),
-        E = s.useCallback(() => {
-            h((e) => !e);
+        [m, g] = s.useState(null != r),
+        [T, S] = s.useState(!1),
+        _ = s.useCallback(() => {
+            g((e) => !e);
         }, []),
-        _ = (0, a.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(n)),
+        E = (0, a.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(n)),
         C = (0, a.Wu)([d.Z], () =>
             l()
-                .sortBy(d.Z.getRecentExposures(g.xY.GUILD, n), (e) => {
+                .sortBy(d.Z.getRecentExposures(h.xY.GUILD, n), (e) => {
                     let [t, n] = e;
                     return -n;
                 })
@@ -223,14 +223,14 @@ function E(e) {
                     return ''.concat(new Date(n).toLocaleString(), ' (').concat(t, ')');
                 })
         ),
-        [I, f] = (0, a.Wu)([u.Z, d.Z], () => {
+        [f, I] = (0, a.Wu)([u.Z, d.Z], () => {
             let e = l().sortBy(l().values(u.Z.getGuilds()), (e) => e.name.toLowerCase()),
                 t = {},
                 i = [];
             for (let r of e) {
                 var s;
                 let e = d.Z.getGuildExperimentDescriptor(n, r.id),
-                    l = null !== (s = null == e ? void 0 : e.bucket) && void 0 !== s ? s : g.NZ.NOT_ELIGIBLE;
+                    l = null !== (s = null == e ? void 0 : e.bucket) && void 0 !== s ? s : h.NZ.NOT_ELIGIBLE;
                 !(l in t) && (t[l] = 0), t[l]++, i.push(''.concat(r.name, ': ').concat(l));
             }
             let r = l()(t)
@@ -242,7 +242,7 @@ function E(e) {
             return [i.join('\n'), r];
         }),
         N = (0, i.jsx)(o.Clickable, {
-            onClick: E,
+            onClick: _,
             children: (0, i.jsxs)(o.FormTitle, {
                 tag: o.FormTitleTags.H3,
                 className: p.title,
@@ -300,9 +300,9 @@ function E(e) {
                               children: [
                                   (0, i.jsxs)(o.FormText, {
                                       type: o.FormTextTypes.DESCRIPTION,
-                                      children: ['Current Assignments: ', f]
+                                      children: ['Current Assignments: ', I]
                                   }),
-                                  null == _
+                                  null == E
                                       ? (0, i.jsx)(o.FormText, {
                                             type: o.FormTextTypes.DESCRIPTION,
                                             children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
@@ -310,7 +310,7 @@ function E(e) {
                                       : null
                               ]
                           }),
-                          S
+                          T
                               ? (0, i.jsxs)('div', {
                                     children: [
                                         (0, i.jsx)(o.FormTitle, {
@@ -321,7 +321,7 @@ function E(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: p.pre,
-                                            children: I
+                                            children: f
                                         }),
                                         (0, i.jsx)(o.FormTitle, {
                                             tag: 'h5',
@@ -331,7 +331,7 @@ function E(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: p.pre,
-                                            children: null == _ ? 'None' : JSON.stringify(_, void 0, 2)
+                                            children: null == E ? 'None' : JSON.stringify(E, void 0, 2)
                                         }),
                                         (0, i.jsx)(o.FormTitle, {
                                             tag: 'h5',
@@ -359,7 +359,7 @@ function E(e) {
                                     className: p.debugButton,
                                     size: o.Button.Sizes.SMALL,
                                     look: o.Button.Looks.BLANK,
-                                    onClick: () => T(!0),
+                                    onClick: () => S(!0),
                                     children: 'More Details \xBB'
                                 })
                       ]

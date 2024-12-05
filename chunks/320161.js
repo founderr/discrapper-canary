@@ -15,22 +15,22 @@ var i = n(200651),
     u = n(981631),
     g = n(388032);
 let m = d.Z.Millis.SECOND,
-    f = 2 * m,
-    p = d.Z.Millis.HALF_SECOND,
+    p = 2 * m,
+    f = d.Z.Millis.HALF_SECOND,
     _ = [() => g.intl.string(g.t.MSaeTU), () => g.intl.string(g.t.UmrCw8), () => g.intl.string(g.t.gKE0Ji), () => g.intl.string(g.t['4DSKbm']), () => g.intl.string(g.t['+8ENdX']), () => g.intl.string(g.t.GlWHv7), () => g.intl.string(g.t.hIzxU1), () => g.intl.string(g.t['26uMPD']), () => g.intl.string(g.t.uFs7R0), () => g.intl.string(g.t.bLXdcX), () => g.intl.string(g.t.gPg9fX)];
 function h(e) {
-    let { text: t, copyValue: n, children: d, onCopy: g, 'aria-label': h, delay: E = p } = e,
+    let { text: t, copyValue: n, children: d, onCopy: g, 'aria-label': h, delay: E = f } = e,
         [b, x] = r.useState(0),
         [C, v] = r.useState(!1),
         [T, N] = r.useState(!1),
-        [I] = r.useState(() => new s.V7()),
-        [S] = r.useState(() => new s.V7());
+        [S] = r.useState(() => new s.V7()),
+        [I] = r.useState(() => new s.V7());
     if (
         (r.useEffect(
             () => () => {
-                I.stop(), S.stop();
+                S.stop(), I.stop();
             },
-            [I, S]
+            [S, I]
         ),
         !c.wS)
     )
@@ -39,7 +39,7 @@ function h(e) {
         A = R ? l.TooltipColors.RED : l.TooltipColors.GREEN,
         j = C ? A : l.TooltipColors.PRIMARY,
         P = () => {
-            null == g || g(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), !T && x(b + 1), N(!0), v(!0), I.start(m, () => N(!1)), S.start(f, () => x(0));
+            null == g || g(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), !T && x(b + 1), N(!0), v(!0), S.start(m, () => N(!1)), I.start(p, () => x(0));
         };
     return (0, i.jsx)(l.Tooltip, {
         text: (() => {
@@ -71,7 +71,7 @@ function h(e) {
                         null == n || n();
                         return;
                     }
-                    I.stop(), N(!1);
+                    S.stop(), N(!1);
                 }
             });
         }

@@ -1,7 +1,7 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return x;
+            return _;
         }
     }),
     t(47120);
@@ -16,21 +16,21 @@ var i = t(200651),
     d = t(212459),
     h = t(730606),
     m = t(860153),
-    p = t(981631),
-    f = t(388032),
+    f = t(981631),
+    p = t(388032),
     g = t(176598);
-function x(e) {
-    let { onClose: n, items: t, startingIndex: a, onIndexChange: x, shouldRedactExplicitContent: _, shouldHideMediaOptions: C = !1, className: S, transitionState: v, ...y } = e,
+function _(e) {
+    let { onClose: n, items: t, startingIndex: a, onIndexChange: _, shouldRedactExplicitContent: x, shouldHideMediaOptions: C = !1, className: S, transitionState: v, ...y } = e,
         [E, I] = r.useState(null != a ? a : 0),
         [b, L] = r.useState(!1),
-        [M, j] = r.useState(!0),
-        [A, O] = r.useState(void 0);
+        [M, A] = r.useState(!0),
+        [j, O] = r.useState(void 0);
     r.useEffect(() => {
         if (null != n)
             return (
-                c.S.subscribe(p.CkL.MEDIA_MODAL_CLOSE, n),
+                c.S.subscribe(f.CkL.MEDIA_MODAL_CLOSE, n),
                 () => {
-                    c.S.unsubscribe(p.CkL.MEDIA_MODAL_CLOSE, n);
+                    c.S.unsubscribe(f.CkL.MEDIA_MODAL_CLOSE, n);
                 }
             );
     }, [n]),
@@ -46,28 +46,28 @@ function x(e) {
         );
     let T = r.useCallback(
             (e) => {
-                I(e), null == x || x(e);
+                I(e), null == _ || _(e);
             },
-            [x]
+            [_]
         ),
         R = r.useMemo(
             () => ({
                 zoomed: b,
                 setZoomed: L,
                 topBarVisible: M,
-                setTopBarVisible: j
+                setTopBarVisible: A
             }),
             [b, M]
         ),
         w = r.useCallback(() => {
-            !M && j(!0), clearTimeout(A), O(setTimeout(() => j(!1), 1000));
-        }, [M, A]),
+            !M && A(!0), clearTimeout(j), O(setTimeout(() => A(!1), 1000));
+        }, [M, j]),
         N = r.useCallback(() => {
             w(), null == n || n();
         }, [w, n]),
         k = t[E];
     return (0, i.jsx)(o.ThemeProvider, {
-        theme: p.BRd.DARK,
+        theme: f.BRd.DARK,
         children: (e) =>
             (0, i.jsx)(o.ModalRoot, {
                 hideShadow: !0,
@@ -81,7 +81,7 @@ function x(e) {
                 fullscreenOnMobile: !1,
                 onMouseMove: w,
                 onClick: N,
-                'aria-label': f.intl.string(f.t.AMTX3t),
+                'aria-label': p.intl.string(p.t.AMTX3t),
                 children: (0, i.jsxs)(d.z.Provider, {
                     value: R,
                     children: [
@@ -93,7 +93,7 @@ function x(e) {
                             items: t,
                             startIndex: E,
                             onIndexChange: T,
-                            shouldRedactExplicitContent: _,
+                            shouldRedactExplicitContent: x,
                             shouldHideMediaOptions: C
                         })
                     ]

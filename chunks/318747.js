@@ -10,9 +10,9 @@ var r = n(120356),
     u = n(388032),
     g = n(923201);
 t.Z = (e) => {
-    let { className: t, forceWhite: n, giftMessage: r, subscriptionTier: m, ...f } = e,
-        p = (0, o.ZP)(),
-        _ = (0, s.wj)(p) || n,
+    let { className: t, forceWhite: n, giftMessage: r, subscriptionTier: m, ...p } = e,
+        f = (0, o.ZP)(),
+        _ = (0, s.wj)(f) || n,
         h = _ ? l.ButtonColors.WHITE : l.ButtonColors.BRAND,
         E = m === d.Si.TIER_0 ? u.intl.string(u.t.rk4Uu7) : u.intl.string(u.t.Ve9Ge3);
     return (0, i.jsx)(c.Z, {
@@ -23,6 +23,6 @@ t.Z = (e) => {
         giftMessage: r,
         className: a()(t, g.giftButton, _ ? g.buttonWhite : g.buttonBrand),
         subscriptionTier: m,
-        ...f
+        ...p
     });
 };

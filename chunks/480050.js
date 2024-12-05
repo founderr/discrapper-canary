@@ -6,10 +6,10 @@ var i = t(200651),
     o = t(956664),
     s = t(981656);
 n.Z = r.memo(function (e) {
-    let { children: n, active: t, onClick: a, className: u, style: c, width: d, height: h, maxWidth: m, maxHeight: p } = e,
-        f = (0, r.useRef)(null),
-        [g, x] = (0, r.useState)(!1),
-        [_, C] = (0, r.useState)({
+    let { children: n, active: t, onClick: a, className: u, style: c, width: d, height: h, maxWidth: m, maxHeight: f } = e,
+        p = (0, r.useRef)(null),
+        [g, _] = (0, r.useState)(!1),
+        [x, C] = (0, r.useState)({
             x: 0,
             y: 0
         }),
@@ -37,7 +37,7 @@ n.Z = r.memo(function (e) {
                 if (!t || 0 !== e.button) return;
                 e.preventDefault();
                 let { clientX: n, clientY: i } = e;
-                x(!0),
+                _(!0),
                     C({
                         x: n,
                         y: i
@@ -55,15 +55,15 @@ n.Z = r.memo(function (e) {
                     0 === e.button && (null == a || a(e));
                     return;
                 }
-                (e.clientX - _.x) ** 2 + (e.clientY - _.y) ** 2 < 400 && (null == a || a(e)), x(!1);
+                (e.clientX - x.x) ** 2 + (e.clientY - x.y) ** 2 < 400 && (null == a || a(e)), _(!1);
             },
-            [t, a, _]
+            [t, a, x]
         ),
         L = (0, r.useCallback)(
             (e) => {
                 var n;
                 if (!g) return;
-                let t = null === (n = f.current) || void 0 === n ? void 0 : n.getBoundingClientRect();
+                let t = null === (n = p.current) || void 0 === n ? void 0 : n.getBoundingClientRect();
                 if (null == t) return;
                 let [i, r] = [t.width > window.innerWidth, t.height > window.innerHeight];
                 if (!i && !r) return;
@@ -81,22 +81,22 @@ n.Z = r.memo(function (e) {
             },
             [g, y, S.x, S.y]
         ),
-        M = t ? (0, o.vV)(d, h, m, p) : 1,
-        j = (0, r.useCallback)(() => {
-            let e = f.current;
+        M = t ? (0, o.vV)(d, h, m, f) : 1,
+        A = (0, r.useCallback)(() => {
+            let e = p.current;
             if (null == e) return !1;
             let n = null != M ? M : 1;
             return e.offsetWidth * n > window.innerWidth || e.offsetHeight * n > window.innerHeight;
         }, [M]);
     return (0, i.jsx)('div', {
-        ref: f,
+        ref: p,
         onMouseDown: I,
         onMouseUp: b,
         onMouseMove: L,
-        onMouseLeave: () => x(!1),
+        onMouseLeave: () => _(!1),
         className: l()(u, s.wrapper, {
             [s.panning]: t && g,
-            [s.pannable]: t && j()
+            [s.pannable]: t && A()
         }),
         style: {
             ...(null != c ? c : {}),

@@ -70,8 +70,8 @@ let g = (e) => {
 };
 function m(e) {
     let { achievement: t, unlocked: n } = e,
-        { name: a, description: m, rarity: f, hideDescriptionUntilUnlock: p, onAction: _ } = t,
-        { color: h } = (0, o.F7)(f);
+        { name: a, description: m, rarity: p, hideDescriptionUntilUnlock: f, onAction: _ } = t,
+        { color: h } = (0, o.F7)(p);
     r.useEffect(() => {
         let e = setTimeout(() => {
             c.Z.playAchievementUnlockSound();
@@ -107,7 +107,7 @@ function m(e) {
                     (0, i.jsx)(l.Text, {
                         variant: 'text-xs/medium',
                         color: 'header-secondary',
-                        children: p && !n ? '?????' : m()
+                        children: f && !n ? '?????' : m()
                     })
                 ]
             }),

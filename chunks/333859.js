@@ -1,6 +1,6 @@
 n.d(t, {
     c: function () {
-        return I;
+        return f;
     }
 });
 var i = n(200651),
@@ -13,21 +13,21 @@ var i = n(200651),
     d = n(94795),
     u = n(327943),
     m = n(539873),
-    h = n(311476),
-    g = n(197115),
+    g = n(311476),
+    h = n(197115),
     p = n(626135),
     x = n(981631),
-    S = n(474936),
-    T = n(388032),
-    E = n(352545),
-    _ = n(232186);
+    T = n(474936),
+    S = n(388032),
+    _ = n(352545),
+    E = n(232186);
 let C = () => {
         (0, d.nJ)(), (0, a.xf)();
     },
-    I = () => {
+    f = () => {
         let { analyticsLocations: e } = (0, c.ZP)(o.Z.USER_SETTINGS),
             t = (0, r.e7)([u.Z], () => u.Z.isUpsellPreview),
-            { enabled: n } = h.Z.getCurrentConfig(
+            { enabled: n } = g.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceInAppIcon' },
                 {
                     autoTrackExposure: t,
@@ -38,35 +38,35 @@ let C = () => {
             s.useEffect(() => {
                 t &&
                     p.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
-                        type: S.cd.APP_ICON_UPSELL,
+                        type: T.cd.APP_ICON_UPSELL,
                         location_stack: e
                     });
             }, []),
             (0, i.jsxs)('div', {
-                className: E.selectionGroup,
+                className: _.selectionGroup,
                 children: [
                     (0, i.jsx)(m.Z, {
                         disabled: t && !n,
                         renderCTAButtons: () =>
                             (0, i.jsxs)('div', {
-                                className: E.tryItOutButtons,
+                                className: _.tryItOutButtons,
                                 children: [
                                     (0, i.jsx)(l.Button, {
                                         color: !n && t ? l.Button.Colors.PRIMARY : l.Button.Colors.BRAND,
                                         onClick: () => C(),
-                                        children: n ? T.intl.string(T.t.SKNnqq) : T.intl.string(T.t['hb/wEx'])
+                                        children: n ? S.intl.string(S.t.SKNnqq) : S.intl.string(S.t['hb/wEx'])
                                     }),
                                     t
-                                        ? (0, i.jsx)(g.Z, {
+                                        ? (0, i.jsx)(h.Z, {
                                               showGradient: n,
-                                              subscriptionTier: S.Si.TIER_2,
-                                              buttonText: n ? T.intl.string(T.t.pj0XBA) : T.intl.string(T.t.mr4K7O)
+                                              subscriptionTier: T.Si.TIER_2,
+                                              buttonText: n ? S.intl.string(S.t.pj0XBA) : S.intl.string(S.t.mr4K7O)
                                           })
                                         : null
                                 ]
                             })
                     }),
-                    (0, i.jsx)(l.FormDivider, { className: _.marginTop20 })
+                    (0, i.jsx)(l.FormDivider, { className: E.marginTop20 })
                 ]
             })
         );

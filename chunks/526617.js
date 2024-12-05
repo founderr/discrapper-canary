@@ -432,8 +432,8 @@ function $(e) {
                               width: 220,
                               height: 132
                           },
-                          title: Y.intl.string(Y.t.jGDYFx),
-                          description: Y.intl.string(Y.t['grL/ho']),
+                          title: Y.intl.string(er ? Y.t.rZEEvb : Y.t.jGDYFx),
+                          description: Y.intl.string(er ? Y.t.ZPNG5O : Y.t['grL/ho']),
                           enableSocialProof: eO,
                           analyticsLocationSection: j.jXE.SOUNDBOARD_SOUND_PICKER_UPSELL,
                           upsellViewedTrackingData: {

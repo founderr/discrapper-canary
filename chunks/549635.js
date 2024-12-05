@@ -1,6 +1,6 @@
 t.d(n, {
     D: function () {
-        return _;
+        return x;
     }
 });
 var i = t(200651),
@@ -14,32 +14,32 @@ var i = t(200651),
     d = t(524444),
     h = t(52824),
     m = t(956664),
-    p = t(589530),
-    f = t(591759),
+    f = t(589530),
+    p = t(591759),
     g = t(212459),
-    x = t(427244);
-function _(e) {
-    let n = f.Z.toURLSafe(e);
+    _ = t(427244);
+function x(e) {
+    let n = p.Z.toURLSafe(e);
     return null == n ? null : (n.searchParams.append('format', 'webp'), n.toString());
 }
 n.Z = r.memo(function (e) {
     let n,
         { media: t, obscured: r = !1, onContextMenu: a } = e,
         { width: C, height: S, url: v, proxyUrl: y, alt: E, type: I, maxWidth: b, maxHeight: L, ...M } = t,
-        { zoomed: j, setZoomed: A } = (0, g.Y)(),
+        { zoomed: A, setZoomed: j } = (0, g.Y)(),
         O = (function (e, n, t) {
-            return e && f.Z.isDiscordUrl(n, !0)
+            return e && p.Z.isDiscordUrl(n, !0)
                 ? (0, o.s$)(n)
                 : (0, h.q)({
                       proxyURL: t,
                       url: n
                   });
-        })(j, v, y),
+        })(A, v, y),
         { width: T, height: R } = (0, m.zp)(null != C ? C : 0, null != S ? S : 0),
         w = !(null == C || 0 === C || null == S || 0 === S);
     if ('VIDEO' === I && w && null != y) {
         var N;
-        let e = _(y);
+        let e = x(y);
         if (null == e) return null;
         let n = null !== (N = t.renderLinkComponent) && void 0 !== N ? N : d.iT;
         return (0, i.jsx)(u.Z, {
@@ -52,10 +52,10 @@ n.Z = r.memo(function (e) {
             poster: e,
             naturalWidth: C,
             naturalHeight: S,
-            volume: p.FC,
-            autoMute: p.rs,
-            onVolumeChange: p.jA,
-            onMute: p.Zj,
+            volume: f.FC,
+            autoMute: f.rs,
+            onVolumeChange: f.jA,
+            onMute: f.Zj,
             renderLinkComponent: n,
             autoPlay: !r,
             alt: E,
@@ -84,7 +84,7 @@ n.Z = r.memo(function (e) {
                       src: O,
                       alt: E,
                       onContextMenu: a,
-                      className: x.dimensionlessImage
+                      className: _.dimensionlessImage
                   })),
         null != n
             ? (0, i.jsx)(c.Z, {
@@ -92,9 +92,9 @@ n.Z = r.memo(function (e) {
                   height: S,
                   maxWidth: T,
                   maxHeight: R,
-                  active: j,
-                  className: l()(x.wrapper, { [x.zoomed]: j }),
-                  onClick: () => A(!j),
+                  active: A,
+                  className: l()(_.wrapper, { [_.zoomed]: A }),
+                  onClick: () => j(!A),
                   children: n
               })
             : null

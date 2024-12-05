@@ -14,17 +14,17 @@ var i = n(200651),
     d = n(570140),
     u = n(232567),
     m = n(809206),
-    h = n(497321),
-    g = n(634894),
+    g = n(497321),
+    h = n(634894),
     p = n(100527),
     x = n(906732),
-    S = n(475977),
-    T = n(957730),
-    E = n(53691),
-    _ = n(267717),
+    T = n(475977),
+    S = n(957730),
+    _ = n(53691),
+    E = n(267717),
     C = n(296810),
-    I = n(921813),
-    f = n(610794),
+    f = n(921813),
+    I = n(610794),
     N = n(935147),
     A = n(246946),
     b = n(25990),
@@ -49,16 +49,16 @@ function F() {
     let t = (0, a.e7)([A.Z], () => A.Z.hidePersonalInformation),
         { pendingBio: n, ...r } = (0, a.cj)([b.Z], () => b.Z.getAllPending()),
         F = (0, a.e7)([b.Z], () => b.Z.showNotice()),
-        M = P.dN.useSetting() && null != n ? T.ZP.parse(void 0, n).content : n,
+        M = P.dN.useSetting() && null != n ? S.ZP.parse(void 0, n).content : n,
         k = O.ZP.canUsePremiumProfileCustomization(e),
         { analyticsLocations: w } = (0, x.ZP)(p.Z.PROFILE);
     s.useEffect(() => () => d.Z.wait(m.W3), []);
     let U = 'UserSettingsProfileCustomization';
-    (0, g.j)({
+    (0, h.j)({
         location: U + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, g.j)({
+        (0, h.j)({
             location: U + ' auto off',
             autoTrackExposure: !1
         });
@@ -67,13 +67,13 @@ function F() {
         H = !k,
         z = s.useRef(null);
     return t
-        ? (0, i.jsx)(h.Z, {})
+        ? (0, i.jsx)(g.Z, {})
         : (0, i.jsxs)(x.Gt, {
               value: w,
               children: [
-                  (0, i.jsx)(S.Z, {}),
+                  (0, i.jsx)(T.Z, {}),
                   (0, i.jsx)(C.Z, {
-                      profilePreview: (0, i.jsx)(I.Z, {
+                      profilePreview: (0, i.jsx)(f.Z, {
                           user: e,
                           canUsePremiumCustomization: k,
                           onUpsellClick: D.Z,
@@ -82,7 +82,7 @@ function F() {
                       }),
                       children: (0, i.jsx)(y.Z, {})
                   }),
-                  Y && (0, i.jsx)(f.Z, {}),
+                  Y && (0, i.jsx)(I.Z, {}),
                   (0, i.jsx)(o.$, {
                       onChange: (e) => G(e),
                       threshold: 0.25,
@@ -98,10 +98,10 @@ function F() {
                   }),
                   H &&
                       !F &&
-                      (0, i.jsx)(E.p, {
+                      (0, i.jsx)(_.p, {
                           className: Z.floatingNitroUpsell,
                           showUpsell: H && !V,
-                          text: L.intl.format(L.t.TmfgIy, { onClick: () => (0, _.openPremiumTryItOutProfileUpsell)() }),
+                          text: L.intl.format(L.t.TmfgIy, { onClick: () => (0, E.openPremiumTryItOutProfileUpsell)() }),
                           textVariant: 'heading-md/medium',
                           button: (0, i.jsxs)(c.ShinyButton, {
                               className: Z.floatingNitroButton,

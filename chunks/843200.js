@@ -8,13 +8,13 @@ var i = n(200651),
     d = n(481060),
     u = n(600164),
     m = n(594174),
-    h = n(418632),
-    g = n(388032),
+    g = n(418632),
+    h = n(388032),
     p = n(167836);
 class x extends s.Component {
     renderNotice() {
         let { isClaimed: e, unclaimedNotice: t, unverifiedNotice: n } = this.props;
-        return e ? (null != n ? n : g.intl.string(g.t.WuyBbG)) : null != t ? t : g.intl.string(g.t['f+Zaoq']);
+        return e ? (null != n ? n : h.intl.string(h.t.WuyBbG)) : null != t ? t : h.intl.string(h.t['f+Zaoq']);
     }
     renderPrimaryAction() {
         return this.props.isClaimed
@@ -22,13 +22,13 @@ class x extends s.Component {
                 ? (0, i.jsx)(u.Z.Child, {
                       grow: 0,
                       shrink: 0,
-                      children: (0, i.jsx)(h.Z, {})
+                      children: (0, i.jsx)(g.Z, {})
                   })
                 : (0, i.jsx)(d.Button, {
                       size: d.Button.Sizes.MEDIUM,
                       color: d.Button.Colors.BRAND,
                       onClick: this.openChangeEmailModal,
-                      children: g.intl.string(g.t.ydw5nZ)
+                      children: h.intl.string(h.t.ydw5nZ)
                   })
             : (0, i.jsx)(u.Z.Child, {
                   grow: 0,
@@ -37,7 +37,7 @@ class x extends s.Component {
                       size: d.Button.Sizes.MEDIUM,
                       color: d.Button.Colors.BRAND,
                       onClick: this.openClaimAccountModal,
-                      children: g.intl.string(g.t.fiNVio)
+                      children: h.intl.string(h.t.fiNVio)
                   })
               });
     }
@@ -50,7 +50,7 @@ class x extends s.Component {
                       color: d.Button.Colors.PRIMARY,
                       look: d.Button.Looks.LINK,
                       onClick: this.openChangeEmailModal,
-                      children: g.intl.string(g.t.Vm8akJ)
+                      children: h.intl.string(h.t.Vm8akJ)
                   })
               })
             : null;

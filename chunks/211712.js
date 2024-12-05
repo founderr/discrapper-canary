@@ -3,7 +3,7 @@ n.d(t, {
         return x;
     },
     _h: function () {
-        return S;
+        return T;
     }
 });
 var i,
@@ -16,8 +16,8 @@ var i,
     d = n(187812),
     u = n(947557),
     m = n(808236),
-    h = n(265665),
-    g = n(181793),
+    g = n(265665),
+    h = n(181793),
     p = n(338430);
 ((i = s || (s = {})).ABOVE_THE_CLOUDS = 'above_the_clouds'), (i.CYBERPUNK = 'cyberpunk'), (i.STARLIT_DREAM = 'starlit_dream'), (i.SHADOW_REALM = 'shadow_realm'), (i.NEON_SPACE = 'neon_space');
 let x = [
@@ -36,14 +36,14 @@ let x = [
     },
     {
         presetName: 'shadow_realm',
-        presetBackgroundUrl: h.Z,
+        presetBackgroundUrl: g.Z,
         themeColors: [0, 4458504],
         bannerImageUrl: o.Z,
         avatarDecorationSkuId: '1144058522808614923'
     },
     {
         presetName: 'starlit_dream',
-        presetBackgroundUrl: g.Z,
+        presetBackgroundUrl: h.Z,
         themeColors: [5123751, 590625],
         bannerImageUrl: c.Z,
         avatarDecorationSkuId: '1144058844004233369'
@@ -55,7 +55,7 @@ let x = [
         bannerImageUrl: d.Z
     }
 ];
-function S(e) {
+function T(e) {
     switch (e) {
         case 'above_the_clouds':
             return r.intl.string(r.t['TFc+iI']);

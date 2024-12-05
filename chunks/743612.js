@@ -6,7 +6,7 @@ var r = n(120356),
     l = n(506829);
 t.Z = (e) => {
     var t, n, r, o;
-    let { title: c, shouldShowElement: d, cardVariantStyleInfo: u, description: g, titleClassName: m = '', subtitle: f = '', subtitleClassName: p } = e;
+    let { title: c, shouldShowElement: d, cardVariantStyleInfo: u, description: g, titleClassName: m = '', subtitle: p = '', subtitleClassName: f } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(s.Heading, {
@@ -14,15 +14,15 @@ t.Z = (e) => {
                 className: a()(l.cardHeading, m),
                 children: c
             }),
-            '' !== f &&
+            '' !== p &&
                 (null == d || d(null == u ? void 0 : u.subtitle)) &&
                 (0, i.jsx)(i.Fragment, {
                     children: (0, i.jsxs)('div', {
-                        className: p,
+                        className: f,
                         children: [
                             (0, i.jsx)(s.Text, {
                                 variant: null !== (r = null == u ? void 0 : null === (t = u.subtitle) || void 0 === t ? void 0 : t.textVariant) && void 0 !== r ? r : 'text-sm/normal',
-                                children: f
+                                children: p
                             }),
                             null != g &&
                                 (0, i.jsx)(s.Text, {

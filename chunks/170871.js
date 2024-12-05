@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return g;
     }
 }),
     n(47120);
@@ -14,13 +14,13 @@ var i = n(200651),
     d = n(979264),
     u = n(308083),
     m = n(984094);
-function h(e) {
-    let { className: t, clanTag: n, clanBadge: r, onTagClick: h, guildId: g, guildName: p, guildIcon: x, guildIconSize: S, memberCount: T } = e,
-        E = s.useRef(null),
-        [_, C] = s.useState(!1);
+function g(e) {
+    let { className: t, clanTag: n, clanBadge: r, onTagClick: g, guildId: h, guildName: p, guildIcon: x, guildIconSize: T, memberCount: S } = e,
+        _ = s.useRef(null),
+        [E, C] = s.useState(!1);
     return (
         s.useEffect(() => {
-            let e = E.current;
+            let e = _.current;
             null != e && null != e.offsetWidth && null != e.scrollWidth && C(e.offsetWidth < e.scrollWidth);
         }, []),
         (0, i.jsxs)('div', {
@@ -30,10 +30,10 @@ function h(e) {
                     className: m.guildPrefixContainer,
                     children: [
                         (0, i.jsx)(o.b, {
-                            guildId: g,
+                            guildId: h,
                             guildName: p,
                             guildIcon: x,
-                            iconSize: S,
+                            iconSize: T,
                             className: m.guildPrefixIcon,
                             animate: !1
                         }),
@@ -43,16 +43,16 @@ function h(e) {
                                 (0, i.jsx)(a.Tooltip, {
                                     text: p,
                                     color: a.Tooltip.Colors.PRIMARY,
-                                    shouldShow: _,
+                                    shouldShow: E,
                                     children: (e) =>
                                         (0, i.jsx)('span', {
-                                            ref: E,
+                                            ref: _,
                                             ...e,
                                             className: m.guildName,
                                             children: p
                                         })
                                 }),
-                                null != T && (0, i.jsx)(c.Z, { count: T })
+                                null != S && (0, i.jsx)(c.Z, { count: S })
                             ]
                         })
                     ]
@@ -60,11 +60,11 @@ function h(e) {
                 (0, i.jsx)('div', {
                     className: m.tagContainer,
                     children: (0, i.jsx)(d.aG, {
-                        guildId: g,
+                        guildId: h,
                         className: m.tag,
                         clanTag: n,
                         clanBadge: r,
-                        onClick: h,
+                        onClick: g,
                         badgeSize: u.NC.SIZE_16,
                         textColor: 'interactive-normal',
                         textVariant: 'text-sm/semibold',

@@ -7,8 +7,8 @@ var i = n(200651),
     a = n(138201),
     c = n(103879),
     d = n(236289),
-    h = n(853178),
-    u = n(800530),
+    u = n(853178),
+    h = n(800530),
     x = n(388032),
     g = n(177872);
 let m = [
@@ -30,10 +30,10 @@ e.default = function (t) {
         p = (0, s.e7)([d.Z], () => d.Z.getAgeVerificationWebviewUrl()),
         b = (0, s.e7)([d.Z], () => d.Z.getIsLoadingAgeVerification()),
         j = o.useCallback(() => {
-            e(), h.Z.close();
+            e(), u.Z.close();
         }, [e]),
         N = o.useCallback(() => {
-            j();
+            u.Z.success(), j();
         }, [j]);
     return (
         o.useEffect(() => {
@@ -85,7 +85,7 @@ e.default = function (t) {
                                     })
                                 }),
                                 (0, i.jsx)(l.Anchor, {
-                                    href: u.sQ.TOS_LINK,
+                                    href: h.sQ.TOS_LINK,
                                     children: (0, i.jsx)(l.Heading, {
                                         variant: 'heading-sm/medium',
                                         color: 'text-link',
@@ -111,7 +111,7 @@ e.default = function (t) {
                                         buttonText: x.intl.string(x.t['9iy4lJ']),
                                         buttonColor: l.Button.Colors.PRIMARY,
                                         titleVariant: 'text-md/medium',
-                                        onButtonPress: () => window.open(u.sQ.AGE_VERIFICATION_LINK, '_blank')
+                                        onButtonPress: () => window.open(h.sQ.AGE_VERIFICATION_LINK, '_blank')
                                     })
                                 })
                             ]

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return h;
     }
 });
 var i = n(200651),
@@ -13,8 +13,8 @@ var i = n(200651),
     d = n(695346),
     u = n(981631),
     m = n(388032),
-    h = n(232186);
-function g() {
+    g = n(232186);
+function h() {
     let e = d.xq.useSetting(),
         t = s.useMemo(() => (0, c.bL)(e), [e]);
     return (0, i.jsx)(a.FormSection, {
@@ -22,10 +22,10 @@ function g() {
         title: m.intl.string(m.t.fyA119),
         children: (0, i.jsxs)(a.FormSection, {
             title: m.intl.string(m.t.vyodkJ),
-            className: h.marginBottom40,
+            className: g.marginBottom40,
             children: [
                 (0, i.jsx)(a.FormSwitch, {
-                    className: l()(h.marginTop8, h.marginBottom20),
+                    className: l()(g.marginTop8, g.marginBottom20),
                     value: t.all,
                     onChange: (e) => d.xq.updateSetting(e ? u.HGf : u.HGf & ~u.SOq.NO_RELATION),
                     children: m.intl.string(m.t.mGr3CQ)

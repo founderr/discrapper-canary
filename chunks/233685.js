@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return g;
     }
 });
 var i = n(200651);
@@ -14,7 +14,7 @@ var s = n(442837),
     d = n(388032),
     u = n(277253),
     m = n(38419);
-function h() {
+function g() {
     let e = (0, s.e7)([a.Z], () => a.Z.getSettings().storageLocation),
         t = async () => {
             let e = await l.Z.fileManager.showOpenDialog({

@@ -15,46 +15,46 @@ var i = n(200651),
     u = n(388032);
 function m(e) {
     let { subscriptions: t, updateHeader: n } = e,
-        [m, h] = s.useState({ route: c.j.HOME }),
-        { route: g } = m,
+        [m, g] = s.useState({ route: c.j.HOME }),
+        { route: h } = m,
         p = () => {
-            h({ route: c.j.HOME });
+            g({ route: c.j.HOME });
         },
         x = (e) => {
-            h({
+            g({
                 route: c.j.SWITCH_APP_PLANS,
                 ...e
             }),
                 n(u.intl.string(u.t.VFqtkJ), p);
         },
-        [S, T] = s.useState({});
+        [T, S] = s.useState({});
     s.useEffect(() => {
         for (let n of t) {
             var e;
             let t = null === (e = n.items[0]) || void 0 === e ? void 0 : e.planId;
             null != t &&
-                (T((e) => ({
+                (S((e) => ({
                     ...e,
                     [n.id]: o.G.LOADING
                 })),
                 (0, l.vY)(t)
                     .then(() => {
-                        T((e) => ({
+                        S((e) => ({
                             ...e,
                             [n.id]: o.G.DONE
                         }));
                     })
                     .catch(() => {
-                        T((e) => ({
+                        S((e) => ({
                             ...e,
                             [n.id]: o.G.ERROR
                         }));
                     }));
         }
     }, [t]);
-    let { loadState: E } = (0, a.qz)(),
-        _ = E !== a.jd.LOADED;
-    switch (g) {
+    let { loadState: _ } = (0, a.qz)(),
+        E = _ !== a.jd.LOADED;
+    switch (h) {
         case c.j.HOME:
             return (0, i.jsx)(i.Fragment, {
                 children: t.map((e) => {
@@ -64,19 +64,19 @@ function m(e) {
                         {
                             subscription: e,
                             navigateToSwitchPlan: x,
-                            loadingState: _ ? o.G.LOADING : null !== (t = S[e.id]) && void 0 !== t ? t : o.G.LOADING
+                            loadingState: E ? o.G.LOADING : null !== (t = T[e.id]) && void 0 !== t ? t : o.G.LOADING
                         },
                         e.id
                     );
                 })
             });
         case c.j.SWITCH_APP_PLANS:
-            let { route: C, ...I } = m;
+            let { route: C, ...f } = m;
             return (0, i.jsx)(d.Z, {
-                ...I,
+                ...f,
                 navigateToHome: p
             });
         default:
-            (0, r.vE)(g);
+            (0, r.vE)(h);
     }
 }

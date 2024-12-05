@@ -11,8 +11,8 @@ var i = n(200651),
     g = n(981631),
     m = n(197831);
 t.Z = (e) => {
-    let { userId: t, children: n, isLast: a, className: f } = e,
-        [p, _] = r.useState(!1),
+    let { userId: t, children: n, isLast: a, className: p } = e,
+        [f, _] = r.useState(!1),
         { analyticsLocations: h } = (0, d.ZP)(),
         E = r.useCallback(() => {
             (0, u.openUserProfileModal)({
@@ -37,15 +37,15 @@ t.Z = (e) => {
                 },
                 children: (0, i.jsx)(o.Z.div, {
                     style: { opacity: 1 },
-                    className: s()(m.rowItem, f, {
+                    className: s()(m.rowItem, p, {
                         [m.last]: a,
-                        [m.active]: p
+                        [m.active]: f
                     }),
                     onMouseEnter: b,
                     onMouseLeave: x,
                     onClick: E,
                     ...e,
-                    children: n(p)
+                    children: n(f)
                 })
             })
     });

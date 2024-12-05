@@ -13,18 +13,18 @@ var i = n(200651),
     d = n(617630);
 function u(e) {
     var t;
-    let { user: u, disabledInputs: m, containerClassName: h } = e,
-        { reducedMotion: g } = s.useContext(l.AccessibilityPreferencesContext),
+    let { user: u, disabledInputs: m, containerClassName: g } = e,
+        { reducedMotion: h } = s.useContext(l.AccessibilityPreferencesContext),
         {
             pendingAvatar: p,
             pendingBanner: x,
-            pendingThemeColors: S,
-            pendingPronouns: T,
-            pendingBio: E,
-            tryItOutThemeColors: _,
+            pendingThemeColors: T,
+            pendingPronouns: S,
+            pendingBio: _,
+            tryItOutThemeColors: E,
             tryItOutAvatar: C,
-            tryItOutBanner: I,
-            tryItOutAvatarDecoration: f,
+            tryItOutBanner: f,
+            tryItOutAvatarDecoration: I,
             tryItOutProfileEffectId: N
         } = (0, r.cj)([o.Z], () => {
             let e = o.Z.getAllPending(),
@@ -34,18 +34,18 @@ function u(e) {
                 ...t
             };
         }),
-        A = (0, a.Z)(f, !1);
+        A = (0, a.Z)(I, !1);
     return (0, i.jsx)(c.Z, {
-        containerClassName: h,
+        containerClassName: g,
         user: u,
-        pendingPronouns: T,
-        pendingBio: E,
-        pendingBanner: null !== (t = null != I ? I : x) && void 0 !== t ? t : n(466045),
+        pendingPronouns: S,
+        pendingBio: _,
+        pendingBanner: null !== (t = null != f ? f : x) && void 0 !== t ? t : n(466045),
         pendingAvatar: null != C ? C : p,
-        pendingThemeColors: null != _ ? _ : S,
+        pendingThemeColors: null != E ? E : T,
         pendingAvatarDecoration: A,
         pendingProfileEffectId: N,
-        avatarClassName: null != C || null != p || g.enabled ? void 0 : d.spinningAvatar,
+        avatarClassName: null != C || null != p || h.enabled ? void 0 : d.spinningAvatar,
         canUsePremiumCustomization: !0,
         isTryItOutFlow: !0,
         hideExampleButton: !0,

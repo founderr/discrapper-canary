@@ -7,8 +7,8 @@ t.r(n),
 var a = t(200651),
     r = t(192379),
     i = t(120356),
-    o = t.n(i),
-    l = t(873546),
+    l = t.n(i),
+    o = t(873546),
     s = t(481060),
     u = t(425493),
     c = t(376641),
@@ -37,7 +37,7 @@ function C(e) {
 }
 function E(e) {
     let { onClose: n, items: t, startingIndex: i, onIndexChange: u, fit: E, shouldRedactExplicitContent: g, shouldHideMediaOptions: S, shouldAnimateCarousel: L, className: x, transitionState: v, ...A } = e,
-        O = l.tq && null != n;
+        O = o.tq && null != n;
     return (
         r.useEffect(() => {
             if (null != n)
@@ -60,7 +60,7 @@ function E(e) {
         ),
         (0, a.jsxs)(s.ModalRoot, {
             hideShadow: !0,
-            className: o()(m.carouselModal, x),
+            className: l()(m.carouselModal, x),
             transitionState: v,
             ...A,
             size: s.ModalSize.DYNAMIC,

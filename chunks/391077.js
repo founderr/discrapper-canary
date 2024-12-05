@@ -11,8 +11,8 @@ var s = n(120356),
 function m(e) {
     let { showChargingUpState: t, rowValueText: n, endsAt: s, fractionalState: a, activationDate: o } = e,
         m = t ? d.intl.string(d.t['hT6i//']) : d.intl.string(d.t['3G0CTE']),
-        h = t ? (void 0 === o ? null : d.intl.format(d.t['0Vwb/v'], { activateDate: o })) : a === c.a$.FP_SUB_PAUSED ? d.intl.format(d.t.MMvaIC, { resumeDate: s.toDate() }) : null,
-        g = r()({
+        g = t ? (void 0 === o ? null : d.intl.format(d.t['0Vwb/v'], { activateDate: o })) : a === c.a$.FP_SUB_PAUSED ? d.intl.format(d.t.MMvaIC, { resumeDate: s.toDate() }) : null,
+        h = r()({
             [u.fractionalUnactivatedPill]: t,
             [u.fractionalTimeRemainingPill]: !t
         }),
@@ -32,17 +32,17 @@ function m(e) {
                         className: x,
                         children: m
                     }),
-                    null !== h &&
+                    null !== g &&
                         (0, i.jsx)(l.Text, {
                             variant: 'text-sm/normal',
-                            children: h
+                            children: g
                         })
                 ]
             }),
             (0, i.jsx)('div', {
                 className: u.fractionalTimeRemainingPillWrapper,
                 children: (0, i.jsx)('div', {
-                    className: g,
+                    className: h,
                     children: (0, i.jsx)(l.Text, {
                         variant: 'text-sm/semibold',
                         className: p,
@@ -55,16 +55,16 @@ function m(e) {
 }
 t.Z = function (e) {
     var t;
-    let { fractionalPremiumInfo: n, className: s, unactivatedUnits: c, activationDate: h } = e,
-        g = (0, o.Am)(n, c),
-        p = g.length > 0,
+    let { fractionalPremiumInfo: n, className: s, unactivatedUnits: c, activationDate: g } = e,
+        h = (0, o.Am)(n, c),
+        p = h.length > 0,
         x = (0, a.Z)(n.endsAt, a.a.SHORT_TIME),
-        S = p ? g : x;
+        T = p ? h : x;
     return (0, i.jsx)('div', {
         children: (0, i.jsxs)('div', {
             className: r()(s, u.fractionalPremiumAccountCredit),
             children: [
-                ((t = g),
+                ((t = h),
                 (0, i.jsxs)('div', {
                     className: u.accountCreditRow,
                     children: [
@@ -92,10 +92,10 @@ t.Z = function (e) {
                 })),
                 (0, i.jsx)(m, {
                     showChargingUpState: p,
-                    rowValueText: S,
+                    rowValueText: T,
                     endsAt: n.endsAt,
                     fractionalState: n.fractionalState,
-                    activationDate: h
+                    activationDate: g
                 })
             ]
         })

@@ -9,14 +9,14 @@ var i = n(200651),
     d = n(53281),
     u = n(921813),
     m = n(594174),
-    h = n(572004),
-    g = n(451593),
+    g = n(572004),
+    h = n(451593),
     p = n(477146),
     x = n(329156),
-    S = n(658234),
-    T = n(346537),
-    E = n(830318);
-let _ = (e) => {
+    T = n(658234),
+    S = n(346537),
+    _ = n(830318);
+let E = (e) => {
     let [t, n] = e.split(','),
         i = atob(n),
         s = t.split(';')[0],
@@ -27,9 +27,9 @@ let _ = (e) => {
 };
 t.Z = (e) => {
     let { effect: t, back: n } = e,
-        { upsertConfig: r } = (0, g.E)(),
+        { upsertConfig: r } = (0, h.E)(),
         C = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
-        [I, f] = s.useState(!0),
+        [f, I] = s.useState(!0),
         N = s.useRef(null),
         [A, b] = s.useState(!1),
         [v, j] = s.useState(!1),
@@ -41,7 +41,7 @@ t.Z = (e) => {
         e.length > 0 &&
             D(
                 [...e].map((e) => {
-                    let t = _(e.base64),
+                    let t = E(e.base64),
                         n = URL.createObjectURL(t);
                     return (e.src = n), e;
                 })
@@ -57,27 +57,27 @@ t.Z = (e) => {
     null == C)
         ? (0, i.jsx)('div', {})
         : (0, i.jsxs)('div', {
-              className: S.root,
+              className: T.root,
               children: [
                   (0, i.jsx)('div', {
-                      className: l()(S.row, S.end),
+                      className: l()(T.row, T.end),
                       children: (0, i.jsx)(c.Button, {
                           onClick: n,
                           children: 'Back'
                       })
                   }),
                   (0, i.jsxs)('div', {
-                      className: S.grid,
+                      className: T.grid,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: l()(S.col, S.preview),
+                              className: l()(T.col, T.preview),
                               children: [
                                   (0, i.jsx)('img', {
-                                      src: A ? T : E,
+                                      src: A ? S : _,
                                       alt: '',
                                       width: 450
                                   }),
-                                  I &&
+                                  f &&
                                       (0, i.jsx)(x.Z, {
                                           config: {
                                               type: a.Z.PROFILE_EFFECT,
@@ -93,10 +93,10 @@ t.Z = (e) => {
                               ]
                           }),
                           (0, i.jsxs)('div', {
-                              className: l()(S.col, S.controls),
+                              className: l()(T.col, T.controls),
                               children: [
                                   (0, i.jsxs)('div', {
-                                      className: l()(S.col, S.section),
+                                      className: l()(T.col, T.section),
                                       children: [
                                           (0, i.jsx)(c.Text, {
                                               variant: 'text-md/normal',
@@ -105,7 +105,7 @@ t.Z = (e) => {
                                           (0, i.jsx)('input', {
                                               type: 'text',
                                               value: y,
-                                              className: S.input,
+                                              className: T.input,
                                               onChange: (e) => {
                                                   B(e.target.value);
                                               }
@@ -113,10 +113,10 @@ t.Z = (e) => {
                                       ]
                                   }),
                                   (0, i.jsxs)('div', {
-                                      className: S.grid,
+                                      className: T.grid,
                                       children: [
                                           (0, i.jsxs)('div', {
-                                              className: S.row,
+                                              className: T.row,
                                               children: [
                                                   (0, i.jsx)(c.Text, {
                                                       variant: 'text-md/normal',
@@ -125,7 +125,7 @@ t.Z = (e) => {
                                                   (0, i.jsx)('input', {
                                                       type: 'checkbox',
                                                       checked: A,
-                                                      className: S.checkBox,
+                                                      className: T.checkBox,
                                                       onChange: () => {
                                                           b(!A);
                                                       }
@@ -133,7 +133,7 @@ t.Z = (e) => {
                                               ]
                                           }),
                                           (0, i.jsxs)('div', {
-                                              className: S.row,
+                                              className: T.row,
                                               children: [
                                                   (0, i.jsx)(c.Text, {
                                                       variant: 'text-md/normal',
@@ -142,7 +142,7 @@ t.Z = (e) => {
                                                   (0, i.jsx)('input', {
                                                       type: 'checkbox',
                                                       checked: v,
-                                                      className: S.checkBox,
+                                                      className: T.checkBox,
                                                       onChange: () => {
                                                           j(!v);
                                                       }
@@ -150,7 +150,7 @@ t.Z = (e) => {
                                               ]
                                           }),
                                           (0, i.jsxs)('div', {
-                                              className: S.row,
+                                              className: T.row,
                                               children: [
                                                   (0, i.jsx)(c.Text, {
                                                       variant: 'text-md/normal',
@@ -159,7 +159,7 @@ t.Z = (e) => {
                                                   (0, i.jsx)('input', {
                                                       type: 'checkbox',
                                                       checked: O,
-                                                      className: S.checkBox,
+                                                      className: T.checkBox,
                                                       onChange: () => {
                                                           R(!O);
                                                       }
@@ -171,7 +171,7 @@ t.Z = (e) => {
                                   (0, i.jsxs)('div', {
                                       children: [
                                           (0, i.jsxs)('div', {
-                                              className: S.uploadButton,
+                                              className: T.uploadButton,
                                               children: [
                                                   (0, i.jsx)(c.Text, {
                                                       variant: 'text-md/normal',
@@ -203,7 +203,7 @@ t.Z = (e) => {
                                       ]
                                   }),
                                   (0, i.jsxs)('div', {
-                                      className: S.bottomControls,
+                                      className: T.bottomControls,
                                       children: [
                                           (0, i.jsx)(c.Button, {
                                               color: c.ButtonColors.RED,
@@ -216,21 +216,21 @@ t.Z = (e) => {
                                           (0, i.jsx)(c.Button, {
                                               color: c.ButtonColors.BRAND,
                                               onClick: () => {
-                                                  f(!1), setTimeout(() => f(!0), 100);
+                                                  I(!1), setTimeout(() => I(!0), 100);
                                               },
                                               children: 'Replay Animation'
                                           }),
                                           (0, i.jsx)(c.Button, {
                                               color: c.ButtonColors.BRAND,
                                               onClick: () => {
-                                                  (0, h.JG)((0, p.HV)(P, 'proto')), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
+                                                  (0, g.JG)((0, p.HV)(P, 'proto')), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
                                               },
                                               children: 'Export'
                                           })
                                       ]
                                   }),
                                   (0, i.jsxs)('div', {
-                                      className: l()(S.bottomControls, S.shareSection),
+                                      className: l()(T.bottomControls, T.shareSection),
                                       children: [
                                           (0, i.jsxs)(c.Text, {
                                               variant: 'text-sm/semibold',
@@ -238,7 +238,7 @@ t.Z = (e) => {
                                                   'Export the config for sharing in this tool.',
                                                   ' ',
                                                   (0, i.jsx)('span', {
-                                                      className: S.warningText,
+                                                      className: T.warningText,
                                                       children: "WARNING: it's really big"
                                                   })
                                               ]
@@ -246,7 +246,7 @@ t.Z = (e) => {
                                           (0, i.jsx)(c.Button, {
                                               color: c.ButtonColors.GREEN,
                                               onClick: () => {
-                                                  (0, h.JG)(JSON.stringify(t)), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
+                                                  (0, g.JG)(JSON.stringify(t)), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
                                               },
                                               children: 'Share'
                                           })
@@ -257,7 +257,7 @@ t.Z = (e) => {
                                       return (null !== (t = e.randomizedSources) && void 0 !== t ? t : []).length > 0;
                                   }) &&
                                       (0, i.jsxs)('div', {
-                                          className: l()(S.section, S.randomizedRules),
+                                          className: l()(T.section, T.randomizedRules),
                                           children: [
                                               (0, i.jsx)(c.Text, {
                                                   variant: 'text-md/bold',
@@ -272,7 +272,7 @@ t.Z = (e) => {
                                       children:
                                           v &&
                                           (0, i.jsxs)('div', {
-                                              className: l()(S.userProfilePreview, S.preview),
+                                              className: l()(T.userProfilePreview, T.preview),
                                               children: [
                                                   (0, i.jsx)(u.Z, {
                                                       user: C,
@@ -299,13 +299,13 @@ t.Z = (e) => {
                               ]
                           }),
                           (0, i.jsx)('div', {
-                              className: l()(S.grid, S.layers),
+                              className: l()(T.grid, T.layers),
                               children: P.map((e, t) => {
                                   var n;
                                   return (0, i.jsxs)(
                                       'div',
                                       {
-                                          className: S.layerForm,
+                                          className: T.layerForm,
                                           children: [
                                               (0, i.jsx)(c.Heading, {
                                                   variant: 'heading-md/bold',
@@ -313,7 +313,7 @@ t.Z = (e) => {
                                               }),
                                               (0, i.jsx)('img', {
                                                   src: e.base64,
-                                                  className: S.layerPreview,
+                                                  className: T.layerPreview,
                                                   alt: ''
                                               }),
                                               (null !== (n = e.randomizedSources) && void 0 !== n ? n : []).map((e, t) =>
@@ -321,17 +321,17 @@ t.Z = (e) => {
                                                       'img',
                                                       {
                                                           src: e.src,
-                                                          className: S.layerPreview,
+                                                          className: T.layerPreview,
                                                           alt: ''
                                                       },
                                                       t
                                                   )
                                               ),
                                               (0, i.jsxs)('div', {
-                                                  className: l()(S.grid, S.section),
+                                                  className: l()(T.grid, T.section),
                                                   children: [
                                                       (0, i.jsxs)('div', {
-                                                          className: S.col,
+                                                          className: T.col,
                                                           children: [
                                                               (0, i.jsx)(c.Text, {
                                                                   variant: 'text-md/bold',
@@ -340,7 +340,7 @@ t.Z = (e) => {
                                                               (0, i.jsx)('input', {
                                                                   type: 'number',
                                                                   value: e.start,
-                                                                  className: S.input,
+                                                                  className: T.input,
                                                                   onChange: (e) => {
                                                                       D((n) => {
                                                                           let i = [...n],
@@ -353,7 +353,7 @@ t.Z = (e) => {
                                                           ]
                                                       }),
                                                       (0, i.jsxs)('div', {
-                                                          className: S.col,
+                                                          className: T.col,
                                                           children: [
                                                               (0, i.jsx)(c.Text, {
                                                                   variant: 'text-md/bold',
@@ -362,7 +362,7 @@ t.Z = (e) => {
                                                               (0, i.jsx)('input', {
                                                                   type: 'number',
                                                                   value: e.duration,
-                                                                  className: S.input,
+                                                                  className: T.input,
                                                                   onChange: (e) => {
                                                                       D((n) => {
                                                                           let i = [...n],
@@ -377,10 +377,10 @@ t.Z = (e) => {
                                                   ]
                                               }),
                                               (0, i.jsxs)('div', {
-                                                  className: l()(S.grid, S.section),
+                                                  className: l()(T.grid, T.section),
                                                   children: [
                                                       (0, i.jsxs)('div', {
-                                                          className: S.col,
+                                                          className: T.col,
                                                           children: [
                                                               (0, i.jsx)(c.Text, {
                                                                   variant: 'text-md/bold',
@@ -389,7 +389,7 @@ t.Z = (e) => {
                                                               (0, i.jsx)('input', {
                                                                   type: 'checkbox',
                                                                   checked: e.loop,
-                                                                  className: S.checkBox,
+                                                                  className: T.checkBox,
                                                                   onChange: (e) => {
                                                                       D((n) => {
                                                                           let i = [...n],
@@ -401,7 +401,7 @@ t.Z = (e) => {
                                                           ]
                                                       }),
                                                       (0, i.jsx)('div', {
-                                                          className: S.col,
+                                                          className: T.col,
                                                           children:
                                                               e.loop &&
                                                               (0, i.jsxs)(i.Fragment, {
@@ -413,7 +413,7 @@ t.Z = (e) => {
                                                                       (0, i.jsx)('input', {
                                                                           type: 'number',
                                                                           value: e.loopDelay,
-                                                                          className: S.input,
+                                                                          className: T.input,
                                                                           onChange: (e) => {
                                                                               D((n) => {
                                                                                   let i = [...n],
@@ -429,10 +429,10 @@ t.Z = (e) => {
                                                   ]
                                               }),
                                               (0, i.jsxs)('div', {
-                                                  className: l()(S.row, S.end),
+                                                  className: l()(T.row, T.end),
                                                   children: [
                                                       (0, i.jsxs)('div', {
-                                                          className: S.uploadButton,
+                                                          className: T.uploadButton,
                                                           children: [
                                                               (0, i.jsx)(c.Text, {
                                                                   variant: 'text-sm/normal',

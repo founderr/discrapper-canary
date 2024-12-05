@@ -14,19 +14,19 @@ var i = n(200651),
     d = n(442837),
     u = n(607070),
     m = n(663389),
-    h = n(770082);
-function g(e) {
+    g = n(770082);
+function h(e) {
     let { children: t, className: n, onFlashEnd: r, animationDelay: m = 500 } = e,
-        g = c.tokens.colors.TEXT_LINK,
+        h = c.tokens.colors.TEXT_LINK,
         p = (0, d.e7)([u.Z], () => u.Z.useReducedMotion),
-        x = (0, c.useToken)(g).spring({ opacity: 0 }),
-        S = (0, c.useToken)(g).spring({ opacity: 0.1 }),
-        T = (0, c.useToken)(g).spring({ opacity: 0 }),
-        E = (0, c.useToken)(g).spring({ opacity: 1 }),
-        _ = (e) => {
+        x = (0, c.useToken)(h).spring({ opacity: 0 }),
+        T = (0, c.useToken)(h).spring({ opacity: 0.1 }),
+        S = (0, c.useToken)(h).spring({ opacity: 0 }),
+        _ = (0, c.useToken)(h).spring({ opacity: 1 }),
+        E = (e) => {
             e.finished && (null == r || r());
         },
-        [C, I] = (0, c.useSpring)(
+        [C, f] = (0, c.useSpring)(
             () => ({
                 from: {
                     backgroundColor: x,
@@ -35,11 +35,11 @@ function g(e) {
             }),
             'animate-never'
         ),
-        f = m + 200 + 200,
+        I = m + 200 + 200,
         N = p ? 0 : 200;
     return (
         s.useEffect(() => {
-            I({
+            f({
                 reset: !0,
                 immediate: !1,
                 to: {
@@ -51,13 +51,13 @@ function g(e) {
                     easing: o.Z.Easing.ease
                 }
             }),
-                I({
+                f({
                     delay: m,
                     immediate: p,
                     to: [
                         {
-                            backgroundColor: S,
-                            borderColor: E
+                            backgroundColor: T,
+                            borderColor: _
                         }
                     ],
                     config: {
@@ -65,25 +65,25 @@ function g(e) {
                         easing: o.Z.Easing.ease
                     }
                 }),
-                I({
-                    delay: f,
+                f({
+                    delay: I,
                     immediate: p,
                     to: [
                         {
-                            backgroundColor: T,
-                            borderColor: T
+                            backgroundColor: S,
+                            borderColor: S
                         }
                     ],
                     config: {
                         duration: N,
                         easing: o.Z.Easing.ease
                     },
-                    onRest: _
+                    onRest: E
                 });
-        }, [I]),
+        }, [f]),
         (0, i.jsx)(a.animated.div, {
             style: C,
-            className: l()(h.settingsItemHighlight, n),
+            className: l()(g.settingsItemHighlight, n),
             children: t
         })
     );
@@ -96,7 +96,7 @@ function p(e) {
         l && o(!0);
     }, [l]),
     a)
-        ? (0, i.jsx)(g, {
+        ? (0, i.jsx)(h, {
               animationDelay: r,
               onFlashEnd: () => o(!1),
               children: t

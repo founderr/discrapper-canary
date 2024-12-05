@@ -16,17 +16,17 @@ var i,
     d = n.n(c),
     u = n(913527),
     m = n.n(u),
-    h = n(442837),
-    g = n(524437),
+    g = n(442837),
+    h = n(524437),
     p = n(481060),
     x = n(570140),
-    S = n(668781),
-    T = n(924628),
-    E = n(809206),
-    _ = n(230711),
+    T = n(668781),
+    S = n(924628),
+    _ = n(809206),
+    E = n(230711),
     C = n(241420),
-    I = n(600164),
-    f = n(651530),
+    f = n(600164),
+    I = n(651530),
     N = n(247206),
     A = n(294602),
     b = n(778825),
@@ -82,7 +82,7 @@ function eu(e, t, n) {
     );
 }
 function em() {
-    let e = (0, h.e7)([b.Z], () => b.Z.getGuild()),
+    let e = (0, g.e7)([b.Z], () => b.Z.getGuild()),
         t = (0, P.Z)(),
         n = null != e ? e : t;
     l.useEffect(() => {
@@ -117,7 +117,7 @@ function em() {
               ]
           });
 }
-function eh() {
+function eg() {
     var e;
     let t = null === (e = (0, R.Z)()) || void 0 === e || e,
         n = (0, L.y0)({ location: 'user_settings_web' }),
@@ -157,7 +157,7 @@ function eh() {
               ]
           });
 }
-function eg(e, t) {
+function eh(e, t) {
     G.default.track(er.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
         default_guilds_restricted: e,
         applied_to_existing_guilds: t
@@ -182,17 +182,17 @@ function ep() {
                                 var e;
                                 return (
                                     (e = !t),
-                                    void eT({
+                                    void eS({
                                         header: ea.intl.string(ea.t.yAfu1t),
                                         body: ea.intl.string(ea.t['Ry2z7+']),
                                         confirmText: ea.intl.string(ea.t.gm1Ven),
                                         cancelText: ea.intl.string(ea.t.p89ACg),
                                         confirmButtonColor: p.Button.Colors.BRAND,
                                         onConfirm: () => {
-                                            q.mX.updateSetting(e), eg(e, !1);
+                                            q.mX.updateSetting(e), eh(e, !1);
                                         },
                                         onCancel: () => {
-                                            q.mX.updateSetting(e), q.zA.updateSetting(e ? W.default.keys(w.Z.getGuilds()) : []), eg(e, !0);
+                                            q.mX.updateSetting(e), q.zA.updateSetting(e ? W.default.keys(w.Z.getGuilds()) : []), eh(e, !0);
                                         }
                                     })
                                 );
@@ -218,22 +218,22 @@ function ex() {
         l = (0, X.a)(ei.to.EXPLICIT_MEDIA_REDACTION),
         a = [
             {
-                value: g.Q4.BLUR,
+                value: h.Q4.BLUR,
                 label: ea.intl.string(ea.t.S49UaW)
             },
             {
-                value: g.Q4.BLOCK,
+                value: h.Q4.BLOCK,
                 label: ea.intl.string(ea.t['D/157e'])
             }
         ],
         o = [
             {
-                value: g.Q4.BLUR,
+                value: h.Q4.BLUR,
                 label: ea.intl.string(ea.t.S49UaW)
             }
         ],
         c = {
-            value: g.Q4.SHOW,
+            value: h.Q4.SHOW,
             label: ea.intl.string(ea.t['5k5OFh'])
         };
     return (
@@ -294,7 +294,7 @@ function ex() {
         })
     );
 }
-function eS(e) {
+function eT(e) {
     let {
             modalProps: t,
             settings: { onConfirm: n, ...i }
@@ -376,7 +376,7 @@ function eS(e) {
     });
 }
 ((s = i || (i = {})).USERS = 'Account'), (s.MESSAGES = 'Messages'), (s.GUILDS = 'Servers'), (s.ANALYTICS = 'Analytics'), (s.ACTIVITIES = 'Activities'), (s.HUBSPOT = 'Programs');
-function eT(e) {
+function eS(e) {
     let { body: t, ...n } = e;
     (0, p.openModal)((e) =>
         (0, r.jsx)(p.ConfirmModal, {
@@ -389,18 +389,18 @@ function eT(e) {
         })
     );
 }
-function eE(e) {
+function e_(e) {
     let { message: t } = e;
-    eT({
+    eS({
         header: ea.intl.string(ea.t.OjbtDg),
         confirmText: ea.intl.string(ea.t.BddRzc),
         body: t
     });
 }
-class e_ extends l.PureComponent {
+class eE extends l.PureComponent {
     componentDidMount() {
-        (0, T.I)(),
-            (0, E.ol)().then(
+        (0, S.I)(),
+            (0, _.ol)().then(
                 (e) => {
                     let t = {
                         requestingHarvest: !1,
@@ -417,7 +417,7 @@ class e_ extends l.PureComponent {
         e.defaultGuildsRestricted !== this.props.defaultGuildsRestricted && this.setState({ defaultGuildsRestricted: this.props.defaultGuildsRestricted }), null != this.props.subsection && e.subsection !== this.props.subsection && this.setState({ selectedTab: this.props.subsection });
     }
     showGuildRestrictionModal(e) {
-        eT({
+        eS({
             header: ea.intl.string(ea.t['uUr+GR']),
             body: ea.intl.string(ea.t.hjGJBg),
             confirmText: ea.intl.string(ea.t.gm1Ven),
@@ -438,7 +438,7 @@ class e_ extends l.PureComponent {
         });
     }
     showMessageRequestRestrictionModal(e) {
-        eT({
+        eS({
             header: ea.intl.string(ea.t.yAfu1t),
             body: ea.intl.string(ea.t['Ry2z7+']),
             confirmText: ea.intl.string(ea.t.gm1Ven),
@@ -475,7 +475,7 @@ class e_ extends l.PureComponent {
                         options: (0, H.X7)(),
                         onChange: (t) => {
                             let { value: n } = t;
-                            this.props.dmSpamFilter === g.Xr.DEFAULT_UNSET
+                            this.props.dmSpamFilter === h.Xr.DEFAULT_UNSET
                                 ? q.Xr.updateSetting(e).then(() => {
                                       q.UP.updateSetting(n);
                                   })
@@ -488,7 +488,7 @@ class e_ extends l.PureComponent {
     }
     renderDMSafety() {
         var e;
-        let t = this.props.dmSpamFilter !== g.Xr.DEFAULT_UNSET ? this.props.dmSpamFilter : null !== (e = et.O7.get(this.props.explicitContentFilter)) && void 0 !== e ? e : g.Xr.NON_FRIENDS;
+        let t = this.props.dmSpamFilter !== h.Xr.DEFAULT_UNSET ? this.props.dmSpamFilter : null !== (e = et.O7.get(this.props.explicitContentFilter)) && void 0 !== e ? e : h.Xr.NON_FRIENDS;
         return this.props.mediaRedactionIsEnabled
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
@@ -528,7 +528,7 @@ class e_ extends l.PureComponent {
                               })
                           ]
                       }),
-                      (0, r.jsx)(eh, {})
+                      (0, r.jsx)(eg, {})
                   ]
               })
             : (0, r.jsxs)(r.Fragment, {
@@ -562,7 +562,7 @@ class e_ extends l.PureComponent {
                           ]
                       }),
                       (0, r.jsx)(p.FormDivider, { className: ed.marginBottom20 }),
-                      (0, r.jsx)(eh, {})
+                      (0, r.jsx)(eg, {})
                   ]
               });
     }
@@ -691,7 +691,7 @@ class e_ extends l.PureComponent {
                             className: ed.marginBottom20,
                             children: ea.intl.format(ea.t.R5N31N, {
                                 onClick: () => {
-                                    _.Z.setSection(er.oAB.ACCOUNT);
+                                    E.Z.setSection(er.oAB.ACCOUNT);
                                 }
                             })
                         }),
@@ -737,7 +737,7 @@ class e_ extends l.PureComponent {
                     })
                 })),
                 (a = null)),
-            null != a && (a = (0, r.jsx)(I.Z, { children: a })),
+            null != a && (a = (0, r.jsx)(f.Z, { children: a })),
             (0, r.jsxs)(l.Fragment, {
                 children: [
                     (0, r.jsx)(p.FormTitle, {
@@ -875,27 +875,27 @@ class e_ extends l.PureComponent {
             }),
             eu(this, 'handleUsageStatisticsChange', () => {
                 this.props.usageStatistics
-                    ? eT({
+                    ? eS({
                           header: ea.intl.string(ea.t.OdPCbG),
                           body: ea.intl.string(ea.t.MGWabG),
                           confirmText: ea.intl.string(ea.t['D3+rU1']),
                           cancelText: ea.intl.string(ea.t.kYpG0t),
-                          onConfirm: () => (0, T.g)([], [er.pjP.USAGE_STATISTICS]).catch(eE)
+                          onConfirm: () => (0, S.g)([], [er.pjP.USAGE_STATISTICS]).catch(e_)
                       })
-                    : (0, T.g)([er.pjP.USAGE_STATISTICS], []).catch(eE);
+                    : (0, S.g)([er.pjP.USAGE_STATISTICS], []).catch(e_);
             }),
             eu(this, 'handlePersonalizationChange', () => {
                 this.props.personalization
-                    ? eT({
+                    ? eS({
                           header: ea.intl.string(ea.t['9SNpzs']),
                           confirmText: ea.intl.string(ea.t['9g5UGx']),
                           cancelText: ea.intl.string(ea.t['+ZLPw8']),
                           onConfirm: () => {
-                              (0, T.g)([], [er.pjP.PERSONALIZATION]).catch(eE);
+                              (0, S.g)([], [er.pjP.PERSONALIZATION]).catch(e_);
                           },
                           body: ea.intl.string(ea.t.gJvDDg)
                       })
-                    : (0, T.g)([er.pjP.PERSONALIZATION], []).catch(eE);
+                    : (0, S.g)([er.pjP.PERSONALIZATION], []).catch(e_);
             }),
             eu(this, 'handleDataDownloadRequest', () => {
                 var e;
@@ -907,18 +907,18 @@ class e_ extends l.PureComponent {
                     confirmButtonColor: p.Button.Colors.BRAND,
                     onConfirm: (e) => {
                         this.setState({ requestingHarvest: !0 }, () => {
-                            (0, E.V3)(e)
+                            (0, _.V3)(e)
                                 .then(
                                     (e) => {
                                         null != e && null != e.body
-                                            ? (this.setState({ currentHarvestRequest: e.body }), S.Z.show({ body: ea.intl.string(ea.t['6Nmv4u']) }))
-                                            : S.Z.show({
+                                            ? (this.setState({ currentHarvestRequest: e.body }), T.Z.show({ body: ea.intl.string(ea.t['6Nmv4u']) }))
+                                            : T.Z.show({
                                                   title: ea.intl.string(ea.t.OjbtDg),
                                                   body: ea.intl.string(ea.t['0F5Jys'])
                                               });
                                     },
                                     () =>
-                                        S.Z.show({
+                                        T.Z.show({
                                             title: ea.intl.string(ea.t.OjbtDg),
                                             body: ea.intl.string(ea.t['0F5Jys'])
                                         })
@@ -928,7 +928,7 @@ class e_ extends l.PureComponent {
                     }
                 }),
                     (0, p.openModal)((t) =>
-                        (0, r.jsx)(eS, {
+                        (0, r.jsx)(eT, {
                             modalProps: t,
                             settings: e
                         })
@@ -944,24 +944,24 @@ class e_ extends l.PureComponent {
     }
 }
 function eC() {
-    let e = (0, h.e7)([V.default], () => {
+    let e = (0, g.e7)([V.default], () => {
             let e = V.default.getCurrentUser();
             return d()(null != e, 'ConnectedUserSettingsPrivacySafety: currentUser cannot be undefined'), e;
         }),
-        t = (0, h.cj)([k.Z], () => ({
+        t = (0, g.cj)([k.Z], () => ({
             fetchedConsents: k.Z.fetchedConsents,
             usageStatistics: k.Z.hasConsented(er.pjP.USAGE_STATISTICS),
             personalization: k.Z.hasConsented(er.pjP.PERSONALIZATION)
         })),
-        n = (0, h.e7)([y.Z], () => y.Z.getFetchError()),
-        i = (0, h.e7)([U.Z], () => U.Z.getSubsection()),
-        s = (0, f.yh)(),
+        n = (0, g.e7)([y.Z], () => y.Z.getFetchError()),
+        i = (0, g.e7)([U.Z], () => U.Z.getSubsection()),
+        s = (0, I.yh)(),
         l = (0, j.Xo)({ location: 'web_user_privacy_and_safety_settings' }),
         { hasSearchResults: a, searchResults: o } = (0, ee.E)(),
         c = (0, O.p)(),
         u = (0, R.Z)(),
         { enabled: m } = (0, D.S)({ location: 'PrivacySafetySettings' });
-    return (0, r.jsx)(e_, {
+    return (0, r.jsx)(eE, {
         currentUser: e,
         defaultGuildsRestricted: q.iG.useSetting(),
         nonSpamRetrainingOptIn: q.kJ.useSetting(),

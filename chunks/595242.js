@@ -13,40 +13,40 @@ var i = n(200651),
     d = n(355467),
     u = n(179360),
     m = n(821849),
-    h = n(15640),
-    g = n(314684),
+    g = n(15640),
+    h = n(314684),
     p = n(899667),
     x = n(853872),
-    S = n(78839),
-    T = n(783739),
-    E = n(981631),
-    _ = n(688738);
+    T = n(78839),
+    S = n(783739),
+    _ = n(981631),
+    E = n(688738);
 function C() {
     s.useEffect(() => {
         c.Z.wait(() => {
-            d.jg(), d.tZ(), (0, u.X8)(), (0, m.Y2)(null, null, E.JjL.DISCOVERY), (0, u.tH)(!0);
+            d.jg(), d.tZ(), (0, u.X8)(), (0, m.Y2)(null, null, _.JjL.DISCOVERY), (0, u.tH)(!0);
         });
     }, []);
-    let { hasFetchedSubscriptions: e, premiumSubscription: t } = (0, a.cj)([S.ZP], () => ({
-            hasFetchedSubscriptions: S.ZP.hasFetchedSubscriptions(),
-            premiumSubscription: S.ZP.getPremiumTypeSubscription()
+    let { hasFetchedSubscriptions: e, premiumSubscription: t } = (0, a.cj)([T.ZP], () => ({
+            hasFetchedSubscriptions: T.ZP.hasFetchedSubscriptions(),
+            premiumSubscription: T.ZP.getPremiumTypeSubscription()
         })),
-        n = (0, h.V)(),
+        n = (0, g.V)(),
         r = (0, a.e7)([x.Z], () => x.Z.hasFetchedPaymentSources),
         C = (0, a.e7)([p.Z], () => p.Z.isFetchingCurrentUserAppliedBoosts);
-    return ((0, g.JR)(), e && n && r && !C)
+    return ((0, h.JR)(), e && n && r && !C)
         ? (0, i.jsxs)('div', {
-              className: _.container,
+              className: E.container,
               children: [
-                  (0, i.jsx)('div', { className: _.background }),
+                  (0, i.jsx)('div', { className: E.background }),
                   (0, i.jsx)('div', {
-                      className: _.content,
-                      children: (0, i.jsx)(T.Z, { premiumSubscription: t })
+                      className: E.content,
+                      children: (0, i.jsx)(S.Z, { premiumSubscription: t })
                   })
               ]
           })
         : (0, i.jsx)('div', {
-              className: l()(_.container, _.loading),
+              className: l()(E.container, E.loading),
               children: (0, i.jsx)(o.Spinner, {})
           });
 }

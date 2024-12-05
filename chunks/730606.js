@@ -16,11 +16,11 @@ var i = t(200651),
     d = t(481060),
     h = t(95398),
     m = t(247206),
-    p = t(134432),
-    f = t(169525),
+    f = t(134432),
+    p = t(169525),
     g = t(585483),
-    x = t(212459),
-    _ = t(73249),
+    _ = t(212459),
+    x = t(73249),
     C = t(683528),
     S = t(549635),
     v = t(981631),
@@ -46,7 +46,7 @@ function L(e) {
                   h.Z,
                   {
                       type: h.Z.Types.ATTACHMENT,
-                      reason: f.wk.EXPLICIT_CONTENT,
+                      reason: p.wk.EXPLICIT_CONTENT,
                       obscured: !0,
                       isSingleMosaicItem: !0,
                       onToggleObscurity: u,
@@ -65,31 +65,31 @@ function L(e) {
 }
 function M(e) {
     var n;
-    let { items: t, onIndexChange: a, startIndex: o = 0, shouldRedactExplicitContent: h = !1, shouldHideMediaOptions: f = !1 } = e,
+    let { items: t, onIndexChange: a, startIndex: o = 0, shouldRedactExplicitContent: h = !1, shouldHideMediaOptions: p = !1 } = e,
         [I, M] = r.useState(o),
-        j = r.useRef(o),
-        [A, O] = r.useState([]),
-        { zoomed: T, setZoomed: R } = (0, x.Y)();
+        A = r.useRef(o),
+        [j, O] = r.useState([]),
+        { zoomed: T, setZoomed: R } = (0, _.Y)();
     r.useEffect(() => {
         var e, n;
         let i = (((I + 1) % (e = t.length)) + e) % e;
         let r = (((I - 1) % (n = t.length)) + n) % n;
-        b(t[i]) && (0, p.po)(t[i].url), b(t[r]) && (0, p.po)(t[r].url);
+        b(t[i]) && (0, f.po)(t[i].url), b(t[r]) && (0, f.po)(t[r].url);
     }, [I, t]);
     let w = r.useCallback(
         (e) => {
             var n;
-            let i = e - j.current;
-            M((e = ((e % (n = t.length)) + n) % n)), (j.current = e), O((e) => [...e, i]), null == a || a(e), R(!1);
+            let i = e - A.current;
+            M((e = ((e % (n = t.length)) + n) % n)), (A.current = e), O((e) => [...e, i]), null == a || a(e), R(!1);
         },
         [a, t, R]
     );
     r.useEffect(() => {
         let e = s()(() => {
-                w(j.current + 1);
+                w(A.current + 1);
             }, 300),
             n = s()(() => {
-                w(j.current - 1);
+                w(A.current - 1);
             }, 300);
         return (
             g.S.subscribe(v.CkL.MODAL_CAROUSEL_NEXT, e),
@@ -107,7 +107,7 @@ function M(e) {
             },
             h
         ),
-        P = f
+        P = p
             ? (e) => {
                   e.stopPropagation(), e.preventDefault();
               }
@@ -116,7 +116,7 @@ function M(e) {
             if (0 === e) return ['translateX(0)'];
             let n = ['translateX(100px)', 'translateX(-100px)'];
             return e > 0 ? n : n.toReversed();
-        })(null !== (n = A[A.length - 1]) && void 0 !== n ? n : 0),
+        })(null !== (n = j[j.length - 1]) && void 0 !== n ? n : 0),
         Z = (0, d.useTransition)(N, {
             key: N.url,
             from: {
@@ -218,9 +218,9 @@ function M(e) {
                             }),
                         (0, i.jsx)('div', {
                             className: E.actionButtonContainer,
-                            children: (0, i.jsx)(_.Z, {
+                            children: (0, i.jsx)(x.Z, {
                                 item: N,
-                                hideMediaOptions: ('IMAGE' === N.type && null == N.original) || f
+                                hideMediaOptions: ('IMAGE' === N.type && null == N.original) || p
                             })
                         })
                     ]

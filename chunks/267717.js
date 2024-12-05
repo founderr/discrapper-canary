@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return g;
+            return h;
         },
         openPremiumTryItOutProfileUpsell: function () {
-            return h;
+            return g;
         }
     });
 var i = n(200651);
@@ -18,7 +18,7 @@ var s = n(481060),
     d = n(981631),
     u = n(388032),
     m = n(761346);
-function h(e) {
+function g(e) {
     let t = l.default.getCurrentUser();
     if (null != t)
         (0, s.openModalLazy)(async () => {
@@ -36,7 +36,7 @@ function h(e) {
                 });
         });
 }
-function g(e) {
+function h(e) {
     let { user: t, onClose: n, ...s } = e;
     return (0, i.jsx)(o.Z, {
         modalClassName: m.modal,

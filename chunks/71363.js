@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(100527),
     g = n(906732),
     m = n(975298),
-    f = n(410154),
-    p = n(626135),
+    p = n(410154),
+    f = n(626135),
     _ = n(103433),
     h = n(166021),
     E = n(32173),
@@ -24,7 +24,7 @@ var i = n(200651),
 t.Z = (e) => {
     let t,
         n,
-        { isAllPerksVisible: a, setIsAllPerksVisible: I, previousComponent: S, isFullScreen: R } = e,
+        { isAllPerksVisible: a, setIsAllPerksVisible: S, previousComponent: I, isFullScreen: R } = e,
         A = r.useRef(null),
         j = Object.entries((0, E.Z)()).reduce((e, t) => {
             let [n, i] = t;
@@ -32,7 +32,7 @@ t.Z = (e) => {
         }, {}),
         { analyticsLocations: P } = (0, g.ZP)(u.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [Z, B] = r.useState(!1),
-        M = (0, f.ZP)('perks-discoverability'),
+        M = (0, p.ZP)('perks-discoverability'),
         O = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         w = (0, x.mN)(),
         { fractionalState: y } = (0, m.Z)();
@@ -52,10 +52,10 @@ t.Z = (e) => {
                         (0, i.jsx)(_.Z, {
                             className: T.heroHeading,
                             onBackClick: () => {
-                                I(!1),
-                                    p.default.track(C.rMx.NITRO_HOME_NAVIGATION, {
+                                S(!1),
+                                    f.default.track(C.rMx.NITRO_HOME_NAVIGATION, {
                                         current_component: b.MQ.SEE_ALL,
-                                        next_component: S,
+                                        next_component: I,
                                         interaction_component: 'Back Button'
                                     });
                             }
@@ -122,7 +122,7 @@ t.Z = (e) => {
                         (0, i.jsx)('div', { className: T.footerSpacing }),
                         (0, i.jsx)(o.$, {
                             onChange: (e) => {
-                                e && !Z && (p.default.track(C.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: P }), B(!0));
+                                e && !Z && (f.default.track(C.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: P }), B(!0));
                             },
                             children: (0, i.jsx)('div', { className: T.bottomOfPageVisibilitySensor })
                         }),

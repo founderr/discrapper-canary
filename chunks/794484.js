@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(314684),
     g = n(565626),
     m = n(32173),
-    f = n(976465),
-    p = n(391110),
+    p = n(976465),
+    f = n(391110),
     _ = n(75077),
     h = n(320319),
     E = n(761518);
@@ -47,20 +47,20 @@ let b = (e) => {
 };
 t.Z = (e) => {
     var t, n;
-    let { className: a, variant: x = p.R0.PERKS_DISCOVERABILITY, noBackground: C = !1, leftAlignHeaders: v = !1, showAllPerksButton: T, headerClassname: N, isFullScreen: I = !0 } = e,
-        S = r.useRef(null),
+    let { className: a, variant: x = f.R0.PERKS_DISCOVERABILITY, noBackground: C = !1, leftAlignHeaders: v = !1, showAllPerksButton: T, headerClassname: N, isFullScreen: S = !0 } = e,
+        I = r.useRef(null),
         R = (0, u.yQ)(),
         A = (0, g.Ag)(R),
         j = (0, d.ZP)('perks-discoverability');
     (0, g.I2)();
-    let P = x === p.R0.WHATS_NEW,
+    let P = x === f.R0.WHATS_NEW,
         Z = (0, u.IY)(),
-        B = (0, f.x$)();
+        B = (0, p.x$)();
     r.useEffect(() => {
         P && !A && (Z(), B());
     }, [Z, B, P, A]),
         r.useEffect(() => {
-            let e = S.current;
+            let e = I.current;
             if (null == e || !A || !P) return;
             let t = requestAnimationFrame(() => {
                 e.scrollIntoView({ behavior: 'smooth' }), P && Z();
@@ -68,7 +68,7 @@ t.Z = (e) => {
             return () => {
                 cancelAnimationFrame(t), P && Z();
             };
-        }, [S, A, P, Z]);
+        }, [I, A, P, Z]);
     let M = (0, _.Op)(P),
         O = (0, m.Z)(),
         w = (0, _.mN)(),
@@ -77,7 +77,7 @@ t.Z = (e) => {
             perksCards: O,
             variant: x,
             shopMarketingVariation: j,
-            isFullScreen: I,
+            isFullScreen: S,
             showTenureCard: null == R ? void 0 : R.showCard,
             isPremiumSubscriber: w,
             fractionalState: y
@@ -94,7 +94,7 @@ t.Z = (e) => {
                     environment: H.current
                 }),
             (0, i.jsxs)('div', {
-                ref: S,
+                ref: I,
                 className: s()(
                     E.section,
                     {
@@ -131,8 +131,8 @@ t.Z = (e) => {
                         }),
                     (0, i.jsx)('div', {
                         className: s()({
-                            [E.cardContainer]: I,
-                            [E.cardContainerNarrowWidth]: !I
+                            [E.cardContainer]: S,
+                            [E.cardContainerNarrowWidth]: !S
                         }),
                         children: k.map((e, t) =>
                             (0, i.jsx)(

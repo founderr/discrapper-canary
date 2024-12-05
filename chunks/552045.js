@@ -10,8 +10,8 @@ var r = n(481060),
     u = n(388032),
     g = n(852402),
     m = n(633488),
-    f = n(361848);
-let p = () => {
+    p = n(361848);
+let f = () => {
     let e = (0, o.mq)(d.ne.ACTIVE),
         t = (0, l.Z)(),
         { handleTabChange: n } = (0, s.Z)();
@@ -54,13 +54,13 @@ t.Z = () => {
                             ]
                         })
                     }),
-                    (0, i.jsx)(p, {})
+                    (0, i.jsx)(f, {})
                 ]
             }),
             (0, i.jsx)('div', {
                 className: g.headerImage,
                 children: (0, i.jsx)('img', {
-                    src: e ? m : f,
+                    src: e ? m : p,
                     alt: u.intl.string(u.t.ffg6xc)
                 })
             })

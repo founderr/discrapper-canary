@@ -79,7 +79,7 @@ function T(e) {
         o = null != r.id ? ''.concat(r.name, ':').concat(r.id) : r.name;
     return null == i ? g.ANM.REACTIONS(t, n, o) : a ? g.ANM.REACTION_WITH_TYPE(t, n, o, i, s) : g.ANM.REACTION(t, n, o, i);
 }
-((r = i || (i = {})).MESSAGE = 'Message'), (r.FORUM_TOOLBAR = 'Forum Toolbar'), (r.MOBILE_MEDIA_VIEWER = 'Mobile Media Viewer'), (r.MESSAGE_HOVER_BAR = 'Message Hover Bar'), (r.MESSAGE_INLINE_BUTTON = 'Message Inline Button'), (r.MESSAGE_CONTEXT_MENU = 'Message Context Menu'), (r.MESSAGE_REACTION_PICKER = 'Message Reaction Picker');
+((r = i || (i = {})).MESSAGE = 'Message'), (r.FORUM_TOOLBAR = 'Forum Toolbar'), (r.MOBILE_MEDIA_VIEWER = 'Mobile Media Viewer'), (r.MESSAGE_HOVER_BAR = 'Message Hover Bar'), (r.MESSAGE_INLINE_BUTTON = 'Message Inline Button'), (r.MESSAGE_CONTEXT_MENU = 'Message Context Menu'), (r.MESSAGE_REACTION_PICKER = 'Message Reaction Picker'), (r.MESSAGE_SHORTCUT = 'Message Shortcut');
 async function b(e) {
     let { channelId: t, messageId: n, emoji: r, limit: i, after: s, type: l } = e,
         c =

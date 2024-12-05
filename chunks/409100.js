@@ -10,8 +10,8 @@ var r = n(780384),
     u = n(197115),
     g = n(474936),
     m = n(388032),
-    f = n(755904);
-let p = (e) => {
+    p = n(755904);
+let f = (e) => {
         let { showTrialCTA: t, subscriptionTier: n, shouldShowUpsells: i, trialDurationCopy: r, isPersistentCTA: a, shouldShowReferralTrialCopy: s, subscriptionTrial: o } = e;
         if (t && s) return m.intl.string(m.t.bXTClZ);
         if (t && (n === g.Si.TIER_2 || a))
@@ -29,32 +29,32 @@ t.Z = (e) => {
         v = (0, r.wj)(C) || t,
         T = (0, d.N)(),
         N = null == T ? void 0 : T.subscription_trial,
-        I = (0, l.a5)({
+        S = (0, l.a5)({
             intervalType: null == N ? void 0 : N.interval,
             intervalCount: null == N ? void 0 : N.interval_count
         }),
-        S = (0, c.Ng)(),
+        I = (0, c.Ng)(),
         R = null != N && n === N.sku_id,
         { enabled: A } = o._.useExperiment({ location: 'SubscribeButton' }, { autoTrackExposure: !1 }),
         j = A && (null == T ? void 0 : T.trial_id) === g.a7,
         P = h
             ? m.intl.string(m.t.J61px8)
-            : null != S
-              ? _(n, b, E, S.discount.amount)
-              : p({
+            : null != I
+              ? _(n, b, E, I.discount.amount)
+              : f({
                     showTrialCTA: R,
                     subscriptionTier: n,
                     shouldShowUpsells: !1,
-                    trialDurationCopy: I,
+                    trialDurationCopy: S,
                     isPersistentCTA: E,
                     shouldShowReferralTrialCopy: j,
                     subscriptionTrial: N
                 });
     return (0, i.jsx)(u.Z, {
         color: v ? a.ButtonColors.BRAND_INVERTED : a.ButtonColors.BRAND,
-        buttonShineClassName: 'buttonShineClassName' in x ? x.buttonShineClassName : v ? f.brandShine : void 0,
+        buttonShineClassName: 'buttonShineClassName' in x ? x.buttonShineClassName : v ? p.brandShine : void 0,
         buttonText: P,
-        buttonTextClassName: R ? f.freeTrialText : void 0,
+        buttonTextClassName: R ? p.freeTrialText : void 0,
         onlyShineOnHover: !0,
         subscriptionTier: n,
         ...x

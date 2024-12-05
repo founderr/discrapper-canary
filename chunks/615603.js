@@ -9,17 +9,17 @@ var i = n(200651),
     d = n(607070),
     u = n(975298),
     m = n(125529),
-    h = n(158153),
-    g = n(760558),
+    g = n(158153),
+    h = n(760558),
     p = n(401786),
     x = n(450468),
-    S = n(98278),
-    T = n(314684),
-    E = n(594174),
-    _ = n(78839),
+    T = n(98278),
+    S = n(314684),
+    _ = n(594174),
+    E = n(78839),
     C = n(267642),
-    I = n(63063),
-    f = n(74538),
+    f = n(63063),
+    I = n(74538),
     N = n(283029),
     A = n(357956),
     b = n(275909),
@@ -31,9 +31,9 @@ var i = n(200651),
 function D(e) {
     let { guildBoostSlot: t, isCancellable: n, onCancel: r, onUncancel: l, premiumSubscription: a, useReducedMotion: o, fractionalPremiumState: d } = e,
         u = s.useMemo(() => (null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null), [t]),
-        h = (0, C.tl)(t),
-        g = (null == a ? void 0 : a.isPaused) === !0 || d !== j.a$.NONE,
-        p = d !== j.a$.NONE ? R.intl.format(R.t.hshta2, { helpCenterLink: I.Z.getArticleURL(v.BhN.FRACTIONAL_PREMIUM_ABOUT) }) : R.intl.string(R.t.mOWsFx);
+        g = (0, C.tl)(t),
+        h = (null == a ? void 0 : a.isPaused) === !0 || d !== j.a$.NONE,
+        p = d !== j.a$.NONE ? R.intl.format(R.t.hshta2, { helpCenterLink: f.Z.getArticleURL(v.BhN.FRACTIONAL_PREMIUM_ABOUT) }) : R.intl.string(R.t.mOWsFx);
     return (0, i.jsxs)(
         'li',
         {
@@ -45,10 +45,10 @@ function D(e) {
                         (0, i.jsx)(b.Z, {
                             className: P.unappliedGuildBoostSlotIcon,
                             hasCooldown: t.isOnCooldown(),
-                            isCanceled: h,
+                            isCanceled: g,
                             useReducedMotion: o
                         }),
-                        h && null != a
+                        g && null != a
                             ? (0, i.jsx)(c.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/medium',
@@ -68,9 +68,9 @@ function D(e) {
                     className: P.unappliedGuildBoostSlotContentSecondary,
                     children: [
                         n &&
-                            !h &&
+                            !g &&
                             (0, i.jsx)(m.Z, {
-                                shouldShow: g,
+                                shouldShow: h,
                                 text: p,
                                 'aria-label': p.toString(),
                                 children: (e) =>
@@ -81,13 +81,13 @@ function D(e) {
                                         look: c.Button.Looks.LINK,
                                         onClick: () => r(t),
                                         size: c.Button.Sizes.NONE,
-                                        disabled: g,
+                                        disabled: h,
                                         children: R.intl.string(R.t.twFU3d)
                                     })
                             }),
-                        h &&
+                        g &&
                             (0, i.jsx)(m.Z, {
-                                shouldShow: g,
+                                shouldShow: h,
                                 text: p,
                                 'aria-label': p.toString(),
                                 children: (e) =>
@@ -98,7 +98,7 @@ function D(e) {
                                         look: c.Button.Looks.LINK,
                                         onClick: () => l(t),
                                         size: c.Button.Sizes.NONE,
-                                        disabled: g,
+                                        disabled: h,
                                         children: R.intl.string(R.t['2glQNj'])
                                     })
                             })
@@ -130,12 +130,12 @@ function B(e) {
 t.Z = function (e) {
     let t, n;
     let { guildBoostSlots: r, fractionalPremiumState: p } = e,
-        x = (0, o.e7)([_.ZP], () => _.ZP.getPremiumTypeSubscription()),
+        x = (0, o.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()),
         A = (null == x ? void 0 : x.isPausedOrPausePending) === !0,
         { fractionalState: b } = (0, u.Z)(),
         L = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
-        Z = (0, o.e7)([E.default], () => E.default.getCurrentUser()),
-        F = (0, T.Vp)(),
+        Z = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
+        F = (0, S.Vp)(),
         M = b === j.a$.FP_SUB_PAUSED,
         k = b !== j.a$.NONE,
         w = A && !M,
@@ -164,7 +164,7 @@ t.Z = function (e) {
                 }
             );
         }, [r]),
-        z = null != x ? (0, h.G)(x, F) : 0,
+        z = null != x ? (0, g.G)(x, F) : 0,
         W = Math.max(0, z - U.length),
         K = G > z,
         q = z === r.length,
@@ -188,7 +188,7 @@ t.Z = function (e) {
         $ = s.useMemo(() => V.find((e) => e.isAvailable()), [V]);
     if (0 === V.length) return null;
     let ee = V.length;
-    if (((t = q ? (1 === ee && J ? R.intl.string(R.t['65r43N']) : R.intl.formatToPlainString(H ? R.t['3DW6DQ'] : R.t['/u15QU'], { numUnappliedGuildBoostSlots: ee })) : R.intl.formatToPlainString(H ? R.t['3DW6DQ'] : R.t.BPadnJ, { numUnappliedGuildBoostSlots: ee })), f.ZP.isPremium(Z))) {
+    if (((t = q ? (1 === ee && J ? R.intl.string(R.t['65r43N']) : R.intl.formatToPlainString(H ? R.t['3DW6DQ'] : R.t['/u15QU'], { numUnappliedGuildBoostSlots: ee })) : R.intl.formatToPlainString(H ? R.t['3DW6DQ'] : R.t.BPadnJ, { numUnappliedGuildBoostSlots: ee })), I.ZP.isPremium(Z))) {
         if (q && 1 === ee && J) n = F.skuId === O.Ft.FREE_GUILD_BOOST_1_MONTH ? R.intl.string(R.t.dm8r0t) : R.intl.string(R.t.VGJ9IC);
         else {
             let e = (e, t) =>
@@ -198,7 +198,7 @@ t.Z = function (e) {
                         className: P.headerLearnMoreLink,
                         tag: 'span',
                         onClick: () => {
-                            (0, S.z)();
+                            (0, T.z)();
                         },
                         children: e
                     },
@@ -221,7 +221,7 @@ t.Z = function (e) {
                 subscriptionIsPausedOrPausePending: !0,
                 hasFractionPremium: !0
             },
-            () => R.intl.format(R.t['4RgA6O'], { helpCenterLink: I.Z.getArticleURL(v.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+            () => R.intl.format(R.t['4RgA6O'], { helpCenterLink: f.Z.getArticleURL(v.BhN.FRACTIONAL_PREMIUM_ABOUT) })
         )
         .with(
             {
@@ -302,7 +302,7 @@ t.Z = function (e) {
                                                               (e = $),
                                                               void (0, c.openModalLazy)(
                                                                   async () => (t) =>
-                                                                      (0, i.jsx)(g.default, {
+                                                                      (0, i.jsx)(h.default, {
                                                                           ...t,
                                                                           guildBoostSlots: [e],
                                                                           locationSection: v.jXE.SETTINGS_PREMIUM

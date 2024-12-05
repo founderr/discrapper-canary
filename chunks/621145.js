@@ -24,20 +24,20 @@ var n = t(200651),
     _ = t(963550),
     A = t(845080),
     E = t(594174),
-    j = t(956664),
-    C = t(709054),
-    N = t(236289),
-    T = t(788080),
+    C = t(956664),
+    j = t(709054),
+    T = t(236289),
+    N = t(788080),
     y = t(800530),
-    I = t(981631),
-    L = t(217702),
-    S = t(453486);
+    S = t(981631),
+    I = t(217702),
+    L = t(453486);
 let w = (e, i, t, n) => {
         let a = e.attachments.map((e) => {
             var t, n, a, l;
             let o = {
                 ...e,
-                filename: (0, T.eS)(e),
+                filename: (0, N.eS)(e),
                 size: 0,
                 proxy_url: e.url
             };
@@ -61,12 +61,12 @@ let w = (e, i, t, n) => {
                           },
                 nonce: e.id,
                 content: e.content,
-                type: I.uaV.DEFAULT,
-                channelId: I.lds
+                type: S.uaV.DEFAULT,
+                channelId: S.lds
             }),
-            timestamp: new Date(C.default.extractTimestamp(e.id)).toISOString(),
+            timestamp: new Date(j.default.extractTimestamp(e.id)).toISOString(),
             attachments: a,
-            state: I.yb.SENT
+            state: S.yb.SENT
         });
     },
     k = (e) => {
@@ -77,7 +77,7 @@ let w = (e, i, t, n) => {
                 let a = y.Sv,
                     o = y.EY;
                 if (null != i.width && null != i.height) {
-                    let e = (0, j.Dc)({
+                    let e = (0, C.Dc)({
                         width: i.width,
                         height: i.height,
                         maxWidth: y.Sv,
@@ -120,7 +120,7 @@ let w = (e, i, t, n) => {
             return (0, d.dn)(e.originalItem, i);
         }
         return (0, n.jsx)('div', {
-            className: S.classificationEvidenceMessageAttachment,
+            className: L.classificationEvidenceMessageAttachment,
             children: (0, n.jsx)(g.Z, {
                 items: t.map((e) => ({
                     item: {
@@ -134,7 +134,7 @@ let w = (e, i, t, n) => {
                         contentType: e.content_type
                     },
                     message: i,
-                    mediaLayoutType: L.hV.MOSAIC,
+                    mediaLayoutType: I.hV.MOSAIC,
                     autoPlayGif: !1,
                     canRemoveItem: !1,
                     isSingleMosaicItem: o,
@@ -163,7 +163,7 @@ function P(e) {
         l = (0, o.e7)([E.default], () => E.default.getCurrentUser()),
         [r, d] = a.useState({}),
         [u, m] = a.useState(!0),
-        h = (0, o.e7)([N.Z], () => N.Z.getUsername()),
+        h = (0, o.e7)([T.Z], () => T.Z.getUsername()),
         x = t[0],
         f = w(x, r, l, h),
         g = (0, v.Z)(f, {
@@ -223,7 +223,7 @@ function P(e) {
     '' === f.content && 0 === f.attachments.length)
         ? null
         : (0, n.jsx)('div', {
-              className: S.classificationEvidenceCard,
+              className: L.classificationEvidenceCard,
               children: u
                   ? (0, n.jsx)(s.Spinner, {})
                   : (0, n.jsx)(p.Z, {

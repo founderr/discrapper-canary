@@ -1,16 +1,16 @@
 n.r(t),
     n.d(t, {
         ConnectedPrivacySettings: function () {
-            return _;
+            return E;
         },
         PrivacySettingSurfaces: function () {
             return i;
         },
         PrivacySettings: function () {
-            return T;
+            return S;
         },
         default: function () {
-            return E;
+            return _;
         }
     }),
     n(47120);
@@ -24,14 +24,14 @@ var i,
     d = n(626135),
     u = n(63063),
     m = n(88658),
-    h = n(981631),
-    g = n(703115),
+    g = n(981631),
+    h = n(703115),
     p = n(726985),
     x = n(388032),
-    S = n(916442);
-function T(e) {
-    let { isGuildRestricted: t, handleRestrictedGuildChange: n, isGuildActivityRestricted: i, handleActivityRestrictedGuildChange: s, isGuildActivityJoiningRestricted: l, handleActivityJoiningRestrictedGuildChange: c, isGuildMessageRequestRestricted: d, handleMessageRequestRestrictedGuildChange: m, guild: g } = e,
-        T = g.hasFeature(h.oNc.HUB);
+    T = n(916442);
+function S(e) {
+    let { isGuildRestricted: t, handleRestrictedGuildChange: n, isGuildActivityRestricted: i, handleActivityRestrictedGuildChange: s, isGuildActivityJoiningRestricted: l, handleActivityJoiningRestrictedGuildChange: c, isGuildMessageRequestRestricted: d, handleMessageRequestRestrictedGuildChange: m, guild: h } = e,
+        S = h.hasFeature(g.oNc.HUB);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(o.F, {
@@ -40,13 +40,13 @@ function T(e) {
                     (0, r.jsx)(a.FormItem, {
                         children: (0, r.jsx)(a.FormSwitch, {
                             value: !t,
-                            note: T ? x.intl.string(x.t['kZ+urq']) : x.intl.string(x.t.AZjdKS),
+                            note: S ? x.intl.string(x.t['kZ+urq']) : x.intl.string(x.t.AZjdKS),
                             onChange: n,
                             hideBorder: !0,
                             children: x.intl.string(x.t.LoKBGB)
                         })
                     }),
-                    (0, r.jsx)(a.FormDivider, { className: S.divider })
+                    (0, r.jsx)(a.FormDivider, { className: T.divider })
                 ]
             }),
             (0, r.jsx)(o.F, {
@@ -56,14 +56,14 @@ function T(e) {
                         (0, r.jsx)(a.FormItem, {
                             children: (0, r.jsx)(a.FormSwitch, {
                                 value: !d,
-                                note: T ? x.intl.format(x.t.qTey8v, { helpdeskArticle: u.Z.getArticleURL(h.BhN.MESSAGE_REQUESTS) }) : x.intl.format(x.t['+Jjgi4'], { helpdeskArticle: u.Z.getArticleURL(h.BhN.MESSAGE_REQUESTS) }),
+                                note: S ? x.intl.format(x.t.qTey8v, { helpdeskArticle: u.Z.getArticleURL(g.BhN.MESSAGE_REQUESTS) }) : x.intl.format(x.t['+Jjgi4'], { helpdeskArticle: u.Z.getArticleURL(g.BhN.MESSAGE_REQUESTS) }),
                                 onChange: m,
                                 disabled: t,
                                 hideBorder: !0,
                                 children: x.intl.string(x.t['5IN9wc'])
                             })
                         }),
-                        (0, r.jsx)(a.FormDivider, { className: S.divider })
+                        (0, r.jsx)(a.FormDivider, { className: T.divider })
                     ]
                 })
             }),
@@ -76,11 +76,11 @@ function T(e) {
                                 value: !i,
                                 onChange: s,
                                 hideBorder: !0,
-                                note: x.intl.format(x.t['+Tbfen'], { helpdeskArticle: u.Z.getArticleURL(h.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                                note: x.intl.format(x.t['+Tbfen'], { helpdeskArticle: u.Z.getArticleURL(g.BhN.ACTIVITY_STATUS_SETTINGS) }),
                                 children: x.intl.string(x.t.OLwZDQ)
                             })
                         }),
-                        (0, r.jsx)(a.FormDivider, { className: S.divider })
+                        (0, r.jsx)(a.FormDivider, { className: T.divider })
                     ]
                 })
             }),
@@ -92,15 +92,15 @@ function T(e) {
                             value: !l,
                             onChange: c,
                             hideBorder: !0,
-                            note: x.intl.format(x.t.vZmjuL, { helpdeskArticle: u.Z.getArticleURL(h.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                            note: x.intl.format(x.t.vZmjuL, { helpdeskArticle: u.Z.getArticleURL(g.BhN.ACTIVITY_STATUS_SETTINGS) }),
                             children: x.intl.string(x.t.wBkwu7)
                         })
                     }),
-                    (0, r.jsx)(a.FormDivider, { className: S.divider })
+                    (0, r.jsx)(a.FormDivider, { className: T.divider })
                 ]
             }),
             (0, r.jsx)(a.FormItem, {
-                className: S.disclaimer,
+                className: T.disclaimer,
                 children: (0, r.jsx)(a.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
@@ -110,7 +110,7 @@ function T(e) {
         ]
     });
 }
-function E(e) {
+function _(e) {
     let { guild: t, transitionState: n, onClose: i } = e,
         s = ''.concat(x.intl.string(x.t.BayiAg), '\u2014').concat(null != t ? t.toString() : '??');
     return (0, r.jsxs)(a.ModalRoot, {
@@ -125,8 +125,8 @@ function E(e) {
                 })
             }),
             (0, r.jsx)(a.ModalContent, {
-                className: S.content,
-                children: (0, r.jsx)(_, {
+                className: T.content,
+                children: (0, r.jsx)(E, {
                     guild: t,
                     ingress: 'server_privacy_modal'
                 })
@@ -140,7 +140,7 @@ function E(e) {
         ]
     });
 }
-function _(e) {
+function E(e) {
     let { guild: t, ingress: n = 'server_privacy_modal' } = e,
         i = t.id,
         s = c.h2.useSetting().includes(i),
@@ -152,8 +152,8 @@ function _(e) {
                 let t = (0, m.YK)();
                 e ? t.delete(i) : t.add(i),
                     c.h2.updateSetting(Array.from(t)),
-                    d.default.track(h.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                        action: g.Y.DIRECT_MESSAGES_TOGGLE,
+                    d.default.track(g.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                        action: h.Y.DIRECT_MESSAGES_TOGGLE,
                         ingress: n,
                         guild_id: i
                     });
@@ -165,49 +165,49 @@ function _(e) {
                 let t = (0, m._o)();
                 e ? t.delete(i) : t.add(i),
                     c.SE.updateSetting([...t]),
-                    d.default.track(h.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                        action: g.Y.RESTRICT_GUILD_ACTIVITY_STATUS_TOGGLE,
+                    d.default.track(g.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                        action: h.Y.RESTRICT_GUILD_ACTIVITY_STATUS_TOGGLE,
                         ingress: n,
                         guild_id: i
                     });
             },
             [i, n]
         ),
-        S = l.useCallback(
+        T = l.useCallback(
             (e) => {
                 let t = (0, m.rr)();
                 e ? t.delete(i) : t.add(i),
                     c.iH.updateSetting([...t]),
-                    d.default.track(h.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                        action: g.Y.RESTRICT_GUILD_ACTIVITY_JOIN_TOGGLE,
+                    d.default.track(g.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                        action: h.Y.RESTRICT_GUILD_ACTIVITY_JOIN_TOGGLE,
                         ingress: n,
                         guild_id: i
                     });
             },
             [i, n]
         ),
-        E = l.useCallback(
+        _ = l.useCallback(
             (e) => {
                 let t = (0, m.gl)();
                 e ? t.delete(i) : t.add(i),
                     c.zA.updateSetting(Array.from(t)),
-                    d.default.track(h.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                        action: g.Y.RESTRICT_GUILD_MESSAGE_REQUEST_TOGGLE,
+                    d.default.track(g.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                        action: h.Y.RESTRICT_GUILD_MESSAGE_REQUEST_TOGGLE,
                         ingress: n,
                         guild_id: i
                     });
             },
             [i, n]
         );
-    return (0, r.jsx)(T, {
+    return (0, r.jsx)(S, {
         isGuildRestricted: s,
         handleRestrictedGuildChange: p,
         isGuildActivityRestricted: o,
         handleActivityRestrictedGuildChange: x,
         isGuildActivityJoiningRestricted: u,
-        handleActivityJoiningRestrictedGuildChange: S,
+        handleActivityJoiningRestrictedGuildChange: T,
         isGuildMessageRequestRestricted: a,
-        handleMessageRequestRestrictedGuildChange: E,
+        handleMessageRequestRestrictedGuildChange: _,
         guild: t
     });
 }

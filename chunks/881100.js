@@ -14,8 +14,8 @@ var i = n(399606),
     u = n(981631),
     g = n(526761),
     m = n(388032),
-    f = n(323780),
-    p = n(101732),
+    p = n(323780),
+    f = n(101732),
     _ = n(450598),
     h = n(633030),
     E = n(97942),
@@ -25,8 +25,8 @@ var i = n(399606),
     v = n(680313),
     T = n(926433),
     N = n(302036),
-    I = n(994554),
-    S = n(1549),
+    S = n(994554),
+    I = n(1549),
     R = n(13327),
     A = n(59137),
     j = n(405991),
@@ -58,7 +58,7 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             badgeAlt: {
                 title: m.intl.string(m.t['5cYMu7']),
                 description: m.intl.string(m.t.vxk9vb),
-                imageSource: U(n, f, p),
+                imageSource: U(n, p, f),
                 imageClassName: t.badgeNewImage
             },
             clientThemes: {
@@ -128,19 +128,19 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             stickers: {
                 title: m.intl.string(m.t['1c+xwc']),
                 description: m.intl.string(m.t.hJG8ZG),
-                imageSource: U(n, I, y),
+                imageSource: U(n, S, y),
                 imageClassName: t.stickersImage
             },
             stickersBurst: {
                 title: m.intl.string(m.t.tzdIwM),
                 description: m.intl.string(m.t.hJG8ZG),
-                imageSource: U(n, I, y),
+                imageSource: U(n, S, y),
                 imageClassName: t.stickersImage
             },
             stickersPerkDiscoverability: {
                 title: m.intl.string(m.t.tzdIwM),
                 description: m.intl.string(m.t.FXlU29),
-                imageSource: U(n, I, y),
+                imageSource: U(n, S, y),
                 imageClassName: t.stickersImage
             },
             streaming: {
@@ -152,7 +152,7 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             superReactions: {
                 title: m.intl.string(m.t.uZt5q6),
                 description: m.intl.string(m.t.ZK3Zoa),
-                imageSource: U(n, S, R),
+                imageSource: U(n, I, R),
                 imageClassName: t.superReactionsImage
             },
             upload: {

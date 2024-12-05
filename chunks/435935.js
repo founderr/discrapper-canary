@@ -36,12 +36,12 @@ let g = {
         BETWEEN: c.flexJustifyBetween,
         AROUND: c.flexJustifyAround
     },
-    f = {
+    p = {
         NO_WRAP: c.flexNowrap,
         WRAP: c.flexWrap,
         WRAP_REVERSE: c.flexWrapReverse
     },
-    p = {
+    f = {
         START: c.flexAlignStart,
         END: c.flexAlignEnd,
         CENTER: c.flexAlignCenter,
@@ -88,32 +88,32 @@ u(h, 'defaultProps', {
 });
 class E extends (r = s.PureComponent) {
     render() {
-        let { children: e, className: t, direction: n, justify: i, align: r, wrap: s, shrink: l, grow: c, basis: u, style: g, gutter: m, ...f } = this.props,
-            p = {
+        let { children: e, className: t, direction: n, justify: i, align: r, wrap: s, shrink: l, grow: c, basis: u, style: g, gutter: m, ...p } = this.props,
+            f = {
                 flexShrink: l,
                 flexGrow: c,
                 flexBasis: u,
                 ...g
             };
         return (0, a.jsx)('div', {
-            style: p,
+            style: f,
             className: o()(d.flex, n, i, r, s, m, t),
-            ...f,
+            ...p,
             children: e
         });
     }
 }
 u(E, 'Child', h),
     u(E, 'Direction', g),
-    u(E, 'Align', p),
+    u(E, 'Align', f),
     u(E, 'Justify', m),
-    u(E, 'Wrap', f),
+    u(E, 'Wrap', p),
     u(E, 'Gutter', _),
     u(E, 'defaultProps', {
         direction: g.HORIZONTAL,
         justify: m.START,
-        align: p.STRETCH,
-        wrap: f.WRAP,
+        align: f.STRETCH,
+        wrap: p.WRAP,
         shrink: 1,
         grow: 1,
         basis: 'auto',

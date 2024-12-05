@@ -27,16 +27,16 @@ var i = t(200651),
     b = t(451834),
     E = t(502762),
     N = t(544989),
-    S = t(705556),
-    T = t(481932),
+    T = t(705556),
+    S = t(481932),
     y = t(195387),
     P = t(272510),
     C = t(748283),
     A = t(902423),
     L = t(495804),
     M = t(171368),
-    O = t(62154),
-    R = t(412317),
+    R = t(62154),
+    O = t(412317),
     U = t(228168),
     B = t(981631),
     D = t(388032),
@@ -154,7 +154,7 @@ function G(e) {
                                             channelId: w,
                                             onClose: J
                                         }),
-                                        (0, i.jsx)(T.Z, {
+                                        (0, i.jsx)(S.Z, {
                                             shouldShowTooltip: null === en.interactionType,
                                             profileType: U.y0.FULL_SIZE,
                                             user: n,
@@ -208,14 +208,14 @@ function G(e) {
                                                 (0, i.jsxs)('div', {
                                                     className: F.headerButtons,
                                                     children: [
-                                                        (0, i.jsx)(R.Z, {
+                                                        (0, i.jsx)(O.Z, {
                                                             isCurrentUser: er,
                                                             user: n,
                                                             relationshipType: eo,
                                                             friendToken: z,
                                                             onClose: J
                                                         }),
-                                                        (0, i.jsx)(S.Z, {
+                                                        (0, i.jsx)(T.Z, {
                                                             user: n,
                                                             guildId: G,
                                                             onClose: J
@@ -226,7 +226,7 @@ function G(e) {
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(O.Z, {
+                                (0, i.jsx)(R.Z, {
                                     user: n,
                                     currentUser: t,
                                     channelId: w,

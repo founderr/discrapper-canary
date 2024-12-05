@@ -9,17 +9,17 @@ var i = n(200651),
     d = n(533307),
     u = n(189907),
     m = n(812206),
-    h = n(600164),
-    g = n(925329),
+    g = n(600164),
+    h = n(925329),
     p = n(981632),
     x = n(314897),
-    S = n(82142),
-    T = n(246946),
-    E = n(509545),
-    _ = n(55563),
+    T = n(82142),
+    S = n(246946),
+    _ = n(509545),
+    E = n(55563),
     C = n(259580),
-    I = n(572004),
-    f = n(669079),
+    f = n(572004),
+    I = n(669079),
     N = n(296848),
     A = n(474936),
     b = n(388032),
@@ -57,16 +57,16 @@ class O extends s.PureComponent {
     render() {
         let { hideCode: e, giftCode: t } = this.props,
             { copyMode: n } = this.state;
-        return (0, i.jsxs)(h.Z, {
-            direction: h.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(g.Z, {
+            direction: g.Z.Direction.VERTICAL,
             className: v.giftCodeRow,
             children: [
                 (0, i.jsx)(c.CopyInput, {
                     className: v.codeText,
-                    value: (0, f.Nz)(t.code),
+                    value: (0, I.Nz)(t.code),
                     text: this.copyButtonText,
                     mode: n,
-                    supportsCopy: I.wS,
+                    supportsCopy: f.wS,
                     hideMessage: e ? b.intl.string(b.t['0RLn4+']) : null,
                     onCopy: this.handleCopy,
                     buttonColor: c.ButtonColors.BRAND,
@@ -96,9 +96,9 @@ class O extends s.PureComponent {
             j(this, 'state', { copyMode: c.CopyInputModes.DEFAULT }),
             j(this, 'handleCopy', (e) => {
                 let { giftCode: t, sku: n } = this.props;
-                (0, f.dM)(t, n);
+                (0, I.dM)(t, n);
                 try {
-                    (0, I.JG)(e), this.setState({ copyMode: c.CopyInputModes.SUCCESS });
+                    (0, f.JG)(e), this.setState({ copyMode: c.CopyInputModes.SUCCESS });
                 } catch (e) {
                     this.setState({ copyMode: c.CopyInputModes.ERROR });
                 }
@@ -137,9 +137,9 @@ class R extends s.PureComponent {
         );
     }
     renderGenerateGiftCodeRow() {
-        return (0, i.jsxs)(h.Z, {
-            justify: h.Z.Justify.BETWEEN,
-            align: h.Z.Align.CENTER,
+        return (0, i.jsxs)(g.Z, {
+            justify: g.Z.Justify.BETWEEN,
+            align: g.Z.Align.CENTER,
             className: v.generateCodeRow,
             children: [
                 (0, i.jsx)('div', {
@@ -175,8 +175,8 @@ class R extends s.PureComponent {
                         children: (0, i.jsxs)('div', {
                             className: v.cardHeader,
                             children: [
-                                (0, i.jsxs)(h.Z, {
-                                    align: h.Z.Align.CENTER,
+                                (0, i.jsxs)(g.Z, {
+                                    align: g.Z.Align.CENTER,
                                     children: [
                                         null != d
                                             ? (0, i.jsx)(p.Z, {
@@ -184,9 +184,9 @@ class R extends s.PureComponent {
                                                   className: v.seasonalGiftBox,
                                                   shouldAnimate: this.state.isHovered
                                               })
-                                            : (0, i.jsx)(g.Z, {
+                                            : (0, i.jsx)(h.Z, {
                                                   game: t,
-                                                  size: g.Z.Sizes.MEDIUM,
+                                                  size: h.Z.Sizes.MEDIUM,
                                                   skuId: l.id
                                               }),
                                         (0, i.jsxs)('div', {
@@ -259,18 +259,18 @@ class R extends s.PureComponent {
             });
     }
 }
-t.Z = a.ZP.connectStores([_.Z, T.Z, S.Z, m.Z, E.Z, x.default], (e) => {
+t.Z = a.ZP.connectStores([E.Z, S.Z, T.Z, m.Z, _.Z, x.default], (e) => {
     let { skuId: t, subscriptionPlanId: n, giftStyle: i } = e,
-        s = _.Z.get(t);
+        s = E.Z.get(t);
     if (null == s) throw Error('SKU was unavailable while rendering gift.');
-    let r = S.Z.getForGifterSKUAndPlan(x.default.getId(), t, n)
+    let r = T.Z.getForGifterSKUAndPlan(x.default.getId(), t, n)
         .filter((e) => !e.isClaimed)
         .filter((e) => e.giftStyle === i);
     return {
         sku: s,
-        hideCodes: T.Z.enabled,
-        isFetching: S.Z.getUserGiftCodesFetchingForSKUAndPlan(t, n),
-        loadedAt: S.Z.getUserGiftCodesLoadedAtForSKUAndPlan(t, n),
+        hideCodes: S.Z.enabled,
+        isFetching: T.Z.getUserGiftCodesFetchingForSKUAndPlan(t, n),
+        loadedAt: T.Z.getUserGiftCodesLoadedAtForSKUAndPlan(t, n),
         application: m.Z.getApplication(s.applicationId),
         subscriptionPlan: null != n ? (0, N.oE)(n) : null,
         giftCodes: r

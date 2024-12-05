@@ -10,11 +10,11 @@ var i = t(200651),
     d = t(378409),
     h = t(49012),
     m = t(358085),
-    p = t(998502),
-    f = t(212459),
+    f = t(998502),
+    p = t(212459),
     g = t(701865),
-    x = t(388032),
-    _ = t(197736);
+    _ = t(388032),
+    x = t(197736);
 function C() {
     (0, o.closeModal)(g.U);
 }
@@ -30,8 +30,8 @@ function S(e) {
                 look: o.ButtonLooks.BLANK,
                 size: o.ButtonSizes.ICON,
                 color: o.ButtonColors.CUSTOM,
-                className: l()(_.actionButton, { [_.selected]: a }),
-                innerClassName: _.actionButtonInner,
+                className: l()(x.actionButton, { [x.selected]: a }),
+                innerClassName: x.actionButtonInner,
                 ...s,
                 children: r
             });
@@ -39,10 +39,10 @@ function S(e) {
     });
 }
 function v() {
-    let { zoomed: e, setZoomed: n } = (0, f.Y)();
+    let { zoomed: e, setZoomed: n } = (0, p.Y)();
     return (0, i.jsx)(S, {
         onClick: () => n(!e),
-        tooltipText: e ? x.intl.string(x.t.vOFof3) : x.intl.string(x.t.Kt4gZ2),
+        tooltipText: e ? _.intl.string(_.t.vOFof3) : _.intl.string(_.t.Kt4gZ2),
         children: e ? (0, i.jsx)(o.MagnifyingGlassMinusIcon, {}) : (0, i.jsx)(o.MagnifyingGlassPlusIcon, {})
     });
 }
@@ -78,7 +78,7 @@ function y(e) {
     return null != l && m && (0, u.h)(l)
         ? (0, i.jsx)(S, {
               onClick: h,
-              tooltipText: x.intl.string(x.t.I3ltXF),
+              tooltipText: _.intl.string(_.t.I3ltXF),
               children: (0, i.jsx)(o.ArrowAngleRightUpIcon, {})
           })
         : null;
@@ -90,14 +90,14 @@ function E(e) {
     async function r() {
         if (('VIDEO' === n.type && (0, h.q)({ href: t }), 'IMAGE' === n.type))
             try {
-                await p.ZP.saveImage(t), (0, o.showToast)((0, o.createToast)(x.intl.string(x.t.cqpdJS), o.ToastType.SUCCESS));
+                await f.ZP.saveImage(t), (0, o.showToast)((0, o.createToast)(_.intl.string(_.t.cqpdJS), o.ToastType.SUCCESS));
             } catch (e) {
-                (0, o.showToast)((0, o.createToast)(x.intl.string(x.t['8Ve/S0']), o.ToastType.FAILURE));
+                (0, o.showToast)((0, o.createToast)(_.intl.string(_.t['8Ve/S0']), o.ToastType.FAILURE));
             }
     }
     return (0, i.jsx)(S, {
         onClick: r,
-        tooltipText: x.intl.string('VIDEO' === n.type ? x.t.JVuuz8 : x.t['S/xNKS']),
+        tooltipText: _.intl.string('VIDEO' === n.type ? _.t.JVuuz8 : _.t['S/xNKS']),
         children: (0, i.jsx)(o.DownloadIcon, {})
     });
 }
@@ -108,7 +108,7 @@ function I(e) {
     let r = (0, d.s$)(null !== (n = t.original) && void 0 !== n ? n : t.url);
     return (0, i.jsx)(S, {
         onClick: () => (0, h.q)({ href: r }),
-        tooltipText: x.intl.string(x.t.q5jLJC),
+        tooltipText: _.intl.string(_.t.q5jLJC),
         children: (0, i.jsx)(o.WindowLaunchIcon, {})
     });
 }
@@ -117,9 +117,9 @@ function b(e) {
     async function s() {
         let e = (0, d.s$)(n.url);
         try {
-            await p.ZP.copyImage(e), (0, o.showToast)((0, o.createToast)(x.intl.string(x.t.bhUpvL), o.ToastType.SUCCESS));
+            await f.ZP.copyImage(e), (0, o.showToast)((0, o.createToast)(_.intl.string(_.t.bhUpvL), o.ToastType.SUCCESS));
         } catch (e) {
-            (0, o.showToast)((0, o.createToast)(x.intl.string(x.t.PTPbj4), o.ToastType.FAILURE));
+            (0, o.showToast)((0, o.createToast)(_.intl.string(_.t.PTPbj4), o.ToastType.FAILURE));
         }
     }
     return (0, i.jsx)(o.Menu, {
@@ -133,7 +133,7 @@ function b(e) {
                     (0, i.jsx)(
                         o.MenuItem,
                         {
-                            label: x.intl.string(x.t.tvUqWl),
+                            label: _.intl.string(_.t.tvUqWl),
                             id: 'media-viewer-copy-image',
                             action: s
                         },
@@ -144,11 +144,11 @@ function b(e) {
                         o.MenuItem,
                         {
                             id: 'media-viewer-copy-link',
-                            label: x.intl.string(x.t.WqhZsr),
+                            label: _.intl.string(_.t.WqhZsr),
                             action: function () {
                                 var e;
                                 let t = (0, d.s$)(null !== (e = n.original) && void 0 !== e ? e : n.url);
-                                m.isPlatformEmbedded ? p.ZP.copy(t) : window.navigator.clipboard.writeText(t), (0, o.showToast)((0, o.createToast)(x.intl.string(x.t['L/PwZW']), o.ToastType.SUCCESS));
+                                m.isPlatformEmbedded ? f.ZP.copy(t) : window.navigator.clipboard.writeText(t), (0, o.showToast)((0, o.createToast)(_.intl.string(_.t['L/PwZW']), o.ToastType.SUCCESS));
                             }
                         },
                         'media-viewer-copy-link'
@@ -160,7 +160,7 @@ function b(e) {
 function L(e) {
     let { item: n } = e,
         [t, a] = r.useState(!1),
-        l = 'IMAGE' === n.type && m.isPlatformEmbedded && null == n.children && p.ZP.canCopyImage() && (0, d.Lz)(n.url),
+        l = 'IMAGE' === n.type && m.isPlatformEmbedded && null == n.children && f.ZP.canCopyImage() && (0, d.Lz)(n.url),
         s = (0, d.Jj)(n.url);
     return l || s
         ? (0, i.jsx)(o.Popout, {
@@ -179,7 +179,7 @@ function L(e) {
               children: (e) => {
                   let { onClick: n } = e;
                   return (0, i.jsx)(S, {
-                      tooltipText: x.intl.string(x.t.UKOtz8),
+                      tooltipText: _.intl.string(_.t.UKOtz8),
                       onClick: () => a(!t),
                       selected: t,
                       children: (0, i.jsx)(o.MoreHorizontalIcon, {})
@@ -193,7 +193,7 @@ n.Z = r.memo(function (e) {
     return (
         ('IMAGE' === n.type || !t) &&
         (0, i.jsxs)('div', {
-            className: _.actionButtons,
+            className: x.actionButtons,
             onClick: (e) => e.stopPropagation(),
             children: [
                 'IMAGE' === n.type && (0, i.jsx)(v, {}),

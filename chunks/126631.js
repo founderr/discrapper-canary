@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return S;
     }
 }),
     n(47120);
@@ -14,45 +14,45 @@ var i = n(200651),
     d = n(131704),
     u = n(993413),
     m = n(981631),
-    h = n(388032),
-    g = n(341258);
+    g = n(388032),
+    h = n(341258);
 let p = (0, c.hQ)(),
     x = (0, d.kt)({
         id: '1',
         type: m.d4z.DM
     }),
-    S = (0, c.hQ)();
-function T(e) {
-    let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: T, currentBio: E, disabled: _ = !1 } = e,
-        [C, I] = s.useState(null != d ? d : E),
-        [f, N] = s.useState((0, a.JM)(C)),
+    T = (0, c.hQ)();
+function S(e) {
+    let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: S, currentBio: _, disabled: E = !1 } = e,
+        [C, f] = s.useState(null != d ? d : _),
+        [I, N] = s.useState((0, a.JM)(C)),
         A = s.useRef(!1);
     return (
         s.useEffect(() => {
             if (void 0 === d) {
-                let e = (0, a.JM)(E);
-                I(E), N(e);
+                let e = (0, a.JM)(_);
+                f(_), N(e);
             }
-        }, [d, E]),
+        }, [d, _]),
         (0, i.jsxs)(u.Z, {
             title: t,
             titleId: p,
-            description: h.intl.string(h.t.Bbw6AQ),
+            description: g.intl.string(g.t.Bbw6AQ),
             errors: n,
-            disabled: _,
+            disabled: E,
             children: [
                 (0, i.jsx)(o.Z, {
-                    'aria-describedby': S,
+                    'aria-describedby': T,
                     'aria-labelledby': p,
-                    innerClassName: g.bioTextArea,
+                    innerClassName: h.bioTextArea,
                     maxCharacterCount: m.tPV,
                     onChange: function (e, t, n) {
-                        t !== C && (I(t), N(n), c(t));
+                        t !== C && (f(t), N(n), c(t));
                     },
-                    placeholder: T,
+                    placeholder: S,
                     channel: x,
                     textValue: C,
-                    richValue: f,
+                    richValue: I,
                     type: l.I.PROFILE_BIO_INPUT,
                     onBlur: () => {
                         A.current = !1;
@@ -71,8 +71,8 @@ function T(e) {
                     }
                 }),
                 (0, i.jsx)(r.HiddenVisually, {
-                    id: S,
-                    children: h.intl.format(h.t['+DFxLS'], { maxLength: m.tPV })
+                    id: T,
+                    children: g.intl.format(g.t['+DFxLS'], { maxLength: m.tPV })
                 })
             ]
         })

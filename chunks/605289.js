@@ -10,14 +10,14 @@ var r = n(120356),
     u = n(222727),
     g = n(318747),
     m = n(409100),
-    f = n(474936),
-    p = n(981631),
+    p = n(474936),
+    f = n(981631),
     _ = n(802273);
 t.Z = function (e) {
     let { localizedPricingPromo: t, smallGap: n } = e,
         r = t.countryCode,
         h = (0, s.e7)([o.default], () => o.default.locale);
-    (0, u.U)(p.jXE.SETTINGS_PREMIUM_BANNER, r);
+    (0, u.U)(f.jXE.SETTINGS_PREMIUM_BANNER, r);
     let E = (0, s.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
         { localizedPricingBannerHeader: b, localizedPricingBannerBody: x } = (0, d.vB)({
             localizedPricingPromo: t,
@@ -52,11 +52,11 @@ t.Z = function (e) {
                     (0, i.jsx)(m.Z, {
                         forceInverted: !0,
                         className: _.ctaButton,
-                        subscriptionTier: f.Si.TIER_2
+                        subscriptionTier: p.Si.TIER_2
                     }),
                     (0, i.jsx)(g.Z, {
                         forceWhite: !0,
-                        subscriptionTier: f.Si.TIER_2,
+                        subscriptionTier: p.Si.TIER_2,
                         className: _.ctaButton
                     })
                 ]

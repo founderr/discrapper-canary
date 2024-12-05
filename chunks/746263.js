@@ -15,7 +15,7 @@ var i = n(200651),
     d = n(451593),
     u = n(694539),
     m = n(658234);
-let h = (e) => {
+let g = (e) => {
         var t, n, s;
         let { effect: r, onClick: a } = e,
             { deleteConfig: c } = (0, d.E)();
@@ -49,7 +49,7 @@ let h = (e) => {
             ]
         });
     },
-    g = () => {
+    h = () => {
         let e = (0, a.Z)();
         return {
             id: e,
@@ -84,7 +84,7 @@ function p() {
                                     className: m.grid,
                                     children: Object.values(e).map((e) =>
                                         (0, i.jsx)(
-                                            h,
+                                            g,
                                             {
                                                 effect: e,
                                                 onClick: (e) => {
@@ -129,7 +129,7 @@ function p() {
                                 }),
                                 (0, i.jsx)(o.Button, {
                                     onClick: () => {
-                                        t(g());
+                                        t(h());
                                     },
                                     children: 'Create New Effect'
                                 })

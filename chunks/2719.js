@@ -14,17 +14,17 @@ var i = n(200651),
     d = n(692547),
     u = n(481060),
     m = n(230711),
-    h = n(129861),
-    g = n(279837),
+    g = n(129861),
+    h = n(279837),
     p = n(952306),
     x = n(299206),
-    S = n(295474),
-    T = n(144114),
-    E = n(918505),
-    _ = n(332473),
+    T = n(295474),
+    S = n(144114),
+    _ = n(918505),
+    E = n(332473),
     C = n(921801),
-    I = n(485341),
-    f = n(687158),
+    f = n(485341),
+    I = n(687158),
     N = n(518950),
     A = n(184325),
     b = n(867176),
@@ -46,17 +46,17 @@ function U(e) {
     var t, r;
     let { className: a, user: o } = e,
         c = s.useRef(null),
-        m = (0, E.o9)(),
-        h = (0, _.b)(),
-        g = (0, S.gS)(),
-        p = null !== (r = null == g ? void 0 : null === (t = g.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== r ? r : null,
-        [x, T] = s.useState(!1);
+        m = (0, _.o9)(),
+        g = (0, E.b)(),
+        h = (0, T.gS)(),
+        p = null !== (r = null == h ? void 0 : null === (t = h.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== r ? r : null,
+        [x, S] = s.useState(!1);
     s.useEffect(() => {
-        T(null != c.current && c.current.scrollWidth > c.current.clientWidth);
+        S(null != c.current && c.current.scrollWidth > c.current.clientWidth);
     }, [o.username]);
     let C = !o.isClaimed(),
-        I = (m && !o.isPomelo() && !o.hasVerifiedEmailOrPhone()) || C,
-        f = I ? M.intl.string(M.t['7Ngnys']) : void 0;
+        f = (m && !o.isPomelo() && !o.hasVerifiedEmailOrPhone()) || C,
+        I = f ? M.intl.string(M.t['7Ngnys']) : void 0;
     return (0, i.jsxs)('div', {
         className: l()(k.field, a),
         children: [
@@ -91,7 +91,7 @@ function U(e) {
                     ]
                 })
             }),
-            h &&
+            g &&
                 (0, i.jsx)('div', {
                     className: k.pomeloWarning,
                     children: (0, i.jsx)(u.Tooltip, {
@@ -123,18 +123,18 @@ function U(e) {
                     })
                 }),
             (0, i.jsx)(u.Tooltip, {
-                text: f,
+                text: I,
                 children: (e) =>
                     (0, i.jsx)(u.Button, {
                         ...e,
-                        disabled: I,
+                        disabled: f,
                         size: u.Button.Sizes.SMALL,
                         className: k.fieldButton,
                         color: u.Button.Colors.PRIMARY,
                         'aria-label': M.intl.string(M.t['JECa9/']),
                         onClick: () =>
                             (0, u.openModalLazy)(async () => {
-                                if (h) {
+                                if (g) {
                                     let { default: e } = await Promise.all([n.e('85342'), n.e('55508')]).then(n.bind(n, 193049));
                                     return (t) =>
                                         (0, i.jsx)(e, {
@@ -156,14 +156,14 @@ function U(e) {
 function V(e) {
     var t, n;
     let { user: r, className: a } = e,
-        o = (0, S.gS)(),
+        o = (0, T.gS)(),
         c = null !== (n = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== n ? n : null,
         m = R.ZP.getGlobalName(r),
-        h = s.useRef(null),
-        [g, p] = s.useState(!1);
+        g = s.useRef(null),
+        [h, p] = s.useState(!1);
     return (
         s.useEffect(() => {
-            p(null != h.current && h.current.scrollWidth > h.current.clientWidth);
+            p(null != g.current && g.current.scrollWidth > g.current.clientWidth);
         }, [m]),
         (0, i.jsxs)('div', {
             className: l()(k.field, a),
@@ -179,7 +179,7 @@ function V(e) {
                             }),
                             (0, i.jsx)('div', {
                                 className: k.usernameInnerRow,
-                                ref: h,
+                                ref: g,
                                 children: (0, i.jsx)(u.Text, {
                                     tag: 'span',
                                     color: 'header-primary',
@@ -212,7 +212,7 @@ function V(e) {
                     color: u.Button.Colors.PRIMARY,
                     'aria-label': M.intl.string(M.t.YXeWYG),
                     onClick: W,
-                    children: g ? M.intl.string(M.t['16kTw8']) : M.intl.string(M.t.bt75u7)
+                    children: h ? M.intl.string(M.t['16kTw8']) : M.intl.string(M.t.bt75u7)
                 })
             ]
         })
@@ -361,12 +361,12 @@ function H(e) {
                                   'aria-label': M.intl.string(M.t.Rpn4Aw),
                                   onClick: function () {
                                       (0, u.openModal)((e) =>
-                                          (0, i.jsx)(g.default, {
+                                          (0, i.jsx)(h.default, {
                                               ...e,
                                               title: M.intl.string(M.t['3CTiKi']),
                                               children: r.hasFlag(L.xW$.MFA_SMS) ? M.intl.string(M.t.jrhJys) : void 0,
                                               actionText: M.intl.string(M.t.N86XcH),
-                                              handleSubmit: (e) => T.Z.removePhone(e, T.L.USER_SETTINGS_UPDATE)
+                                              handleSubmit: (e) => S.Z.removePhone(e, S.L.USER_SETTINGS_UPDATE)
                                           })
                                       );
                                   },
@@ -384,7 +384,7 @@ function H(e) {
                                         let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
                                         return (t) =>
                                             (0, i.jsx)(e, {
-                                                reason: T.L.USER_SETTINGS_UPDATE,
+                                                reason: S.L.USER_SETTINGS_UPDATE,
                                                 ...t
                                             });
                                     },
@@ -440,8 +440,8 @@ function K() {
             let e = j.default.getCurrentUser();
             return o()(null != e, 'UserSettingsAccountProfileCard: currentUser cannot be undefined'), e;
         }),
-        n = (0, f.ZP)(t.id),
-        s = (0, I.Z)(n),
+        n = (0, I.ZP)(t.id),
+        s = (0, f.Z)(n),
         r = D.co.useSetting(),
         l = (0, c.e7)([v.Z], () => v.Z.getErrors()),
         a = null == l ? void 0 : null === (e = l.avatar) || void 0 === e ? void 0 : e[0],
@@ -478,7 +478,7 @@ function K() {
                             (0, i.jsxs)('div', {
                                 className: k.profileCardUsernameRow,
                                 children: [
-                                    (0, i.jsx)(h.Z, {
+                                    (0, i.jsx)(g.Z, {
                                         user: t,
                                         className: k.userTag,
                                         discriminatorClass: k.discriminator

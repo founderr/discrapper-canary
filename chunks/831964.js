@@ -17,8 +17,8 @@ var i,
     u = n(981631),
     g = n(526761),
     m = n(388032),
-    f = n(509614),
-    p = n(880511),
+    p = n(509614),
+    f = n(880511),
     _ = n(985443),
     h = n(612253),
     E = n(832287),
@@ -28,8 +28,8 @@ var i,
     v = n(821721),
     T = n(158897),
     N = n(290650),
-    I = n(751125),
-    S = n(904505),
+    S = n(751125),
+    I = n(904505),
     R = n(712626),
     A = n(386014),
     j = n(845571),
@@ -46,7 +46,7 @@ let w = () => {
             name: 'emojis',
             title: m.intl.string(m.t.zY5PPT),
             description: m.intl.string(m.t.R5Xag4),
-            previewImage: f,
+            previewImage: p,
             videoUrl: e ? x.Z : C.Z,
             isCompact: !0
         },
@@ -54,8 +54,8 @@ let w = () => {
             name: 'noLimits',
             title: m.intl.string(m.t['6b3ydH']),
             description: m.intl.string(m.t['Y+IJys']),
-            previewImage: p,
-            videoUrl: e ? N.Z : I.Z,
+            previewImage: f,
+            videoUrl: e ? N.Z : S.Z,
             isCompact: !0
         }
     };
@@ -73,8 +73,8 @@ t.ZP = (e) => {
             });
         },
         r = (0, c.rO)(),
-        f = d.Z.getArticleURL(u.BhN.REFERRAL_PROGRAM),
-        p = {
+        p = d.Z.getArticleURL(u.BhN.REFERRAL_PROGRAM),
+        f = {
             serverProfiles: {
                 name: 'serverProfiles',
                 title: m.intl.string(m.t.I9TYMj),
@@ -87,9 +87,9 @@ t.ZP = (e) => {
             referralProgram: {
                 name: 'referralProgram',
                 title: m.intl.string(m.t.tPY4o6),
-                description: m.intl.format(m.t.jRPQUF, { learnMoreLink: f }),
+                description: m.intl.format(m.t.jRPQUF, { learnMoreLink: p }),
                 previewImage: R.Z,
-                videoUrl: r ? S.Z : A.Z
+                videoUrl: r ? I.Z : A.Z
             },
             newAppStyles: {
                 name: 'newAppStyles',
@@ -121,5 +121,5 @@ t.ZP = (e) => {
                 videoUrl: r ? M.Z : O.Z
             }
         };
-    return e ? x : p;
+    return e ? x : f;
 };

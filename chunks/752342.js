@@ -28,10 +28,10 @@ var l = t(481060),
     b = t(398145),
     E = t(228168),
     N = t(981631),
-    S = t(388032),
-    T = t(171865);
+    T = t(388032),
+    S = t(171865);
 function y(e) {
-    let { user: n, currentUser: t, guildId: y, channelId: P, messageId: C, roleId: A, sessionId: L, initialSection: M, initialSubsection: O, transitionState: R, onClose: U, sourceAnalyticsLocations: B = [] } = e,
+    let { user: n, currentUser: t, guildId: y, channelId: P, messageId: C, roleId: A, sessionId: L, initialSection: M, initialSubsection: R, transitionState: O, onClose: U, sourceAnalyticsLocations: B = [] } = e,
         D = y === N.ME ? void 0 : y,
         F = (0, a.ZP)(n.id, D),
         { analyticsLocations: G } = (0, r.ZP)([...B, o.Z.SIMPLIFIED_PROFILE_MODAL]),
@@ -50,10 +50,10 @@ function y(e) {
         children: (0, i.jsx)(c.Mt, {
             value: w,
             children: (0, i.jsx)(l.ModalRoot, {
-                transitionState: R,
-                className: T.root,
+                transitionState: O,
+                className: S.root,
                 hideShadow: !0,
-                'aria-label': S.intl.string(S.t['3N/J2t']),
+                'aria-label': T.intl.string(T.t['3N/J2t']),
                 children: (0, i.jsxs)(I.Z, {
                     user: n,
                     displayProfile: F,
@@ -74,7 +74,7 @@ function y(e) {
                                     profileType: E.y0.FULL_SIZE
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: T.headerInner,
+                                    className: S.headerInner,
                                     children: [
                                         (0, i.jsx)(d.Z, {
                                             user: n,
@@ -87,21 +87,21 @@ function y(e) {
                                             location: 'BotUserProfileModal',
                                             user: n,
                                             profileType: E.y0.FULL_SIZE,
-                                            hasEntered: R === l.ModalTransitionState.ENTERED,
+                                            hasEntered: O === l.ModalTransitionState.ENTERED,
                                             onCloseProfile: U
                                         }),
                                         (0, i.jsxs)('div', {
-                                            className: T.headerButtons,
+                                            className: S.headerButtons,
                                             children: [
                                                 (0, i.jsx)(g.c, {
                                                     userId: n.id,
                                                     onClose: U,
-                                                    className: T.messageTextButton
+                                                    className: S.messageTextButton
                                                 }),
                                                 (0, i.jsx)(g.v, {
                                                     userId: n.id,
                                                     onClose: U,
-                                                    tooltipContainerClassName: T.messageIconButton
+                                                    tooltipContainerClassName: S.messageIconButton
                                                 }),
                                                 (0, i.jsx)(v.Z, {
                                                     user: n,
@@ -115,7 +115,7 @@ function y(e) {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: T.body,
+                            className: S.body,
                             children: [
                                 (0, i.jsx)(x.Z, {
                                     user: n,
@@ -131,14 +131,14 @@ function y(e) {
                                     })
                                 }),
                                 (0, i.jsx)(I.Z.Overlay, {
-                                    className: T.overlay,
+                                    className: S.overlay,
                                     children: (0, i.jsx)(_.Z, {
                                         user: n,
                                         currentUser: t,
                                         displayProfile: F,
                                         items: k,
                                         initialSection: null != M ? M : E.oh.BOT_INFO,
-                                        initialSubsection: O,
+                                        initialSubsection: R,
                                         onClose: U
                                     })
                                 })

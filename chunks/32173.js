@@ -15,8 +15,8 @@ var s = n(399606),
     u = n(906732),
     g = n(975298),
     m = n(779618),
-    f = n(832149),
-    p = n(300284),
+    p = n(832149),
+    f = n(300284),
     _ = n(703656),
     h = n(547972),
     E = n(131951),
@@ -26,8 +26,8 @@ var s = n(399606),
     v = n(424218),
     T = n(63063),
     N = n(74538),
-    I = n(860489),
-    S = n(471309),
+    S = n(860489),
+    I = n(471309),
     R = n(494127),
     A = n(314684),
     j = n(687362),
@@ -69,8 +69,8 @@ var s = n(399606),
     eu = n(570423),
     eg = n(912429),
     em = n(91394),
-    ef = n(209672),
-    ep = n(698173),
+    ep = n(209672),
+    ef = n(698173),
     e_ = n(926262),
     eh = n(371435),
     eE = n(83663);
@@ -86,17 +86,17 @@ t.Z = () => {
         ev = (0, N.I5)(eC, w.p9.TIER_2),
         eT = (0, N.I5)(eC, w.p9.TIER_0),
         { flipped: eN } = (0, R.JP)(),
-        { flipped: eI } = (0, R.as)(),
-        eS = (0, A.bq)({ showAnimations: !0 }),
-        eR = null != eS ? eS.initialPercentage : void 0,
-        eA = null != eS ? eS.percentage : void 0,
+        { flipped: eS } = (0, R.as)(),
+        eI = (0, A.bq)({ showAnimations: !0 }),
+        eR = null != eI ? eI.initialPercentage : void 0,
+        eA = null != eI ? eI.percentage : void 0,
         ej = (0, m.Z)(E.Z),
         eP = (0, j.ZP)(),
         eZ = (0, j.aJ)(),
         eB = (0, A.Kb)(y.qY),
         { fractionalState: eM } = (0, g.Z)(),
         eO = eM === w.a$.FP_ONLY,
-        ew = (0, p.Z)({
+        ew = (0, f.Z)({
             scrollPosition: L.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }),
@@ -252,7 +252,7 @@ t.Z = () => {
                       onCtaClick: ek,
                       pillText: D.intl.string(D.t.EYxi0t),
                       perkImage: es,
-                      canReveal: eI
+                      canReveal: eS
                   }
                 : {
                       name: 'profileEffects',
@@ -261,7 +261,7 @@ t.Z = () => {
                       description: D.intl.string(D.t.XNKnvr),
                       pillText: D.intl.string(D.t.EYxi0t),
                       perkImage: es,
-                      canReveal: eI
+                      canReveal: eS
                   },
             profiles: {
                 name: 'profiles',
@@ -376,7 +376,7 @@ t.Z = () => {
                       title: D.intl.string(D.t.hpgmOz),
                       subtitle: D.intl.string(D.t.Hxujsr),
                       description: D.intl.string(D.t['Cn/z6+']),
-                      perkImage: ep,
+                      perkImage: ef,
                       hideOnNarrowScreen: !0
                   }
                 : {
@@ -385,7 +385,7 @@ t.Z = () => {
                       subtitle: D.intl.string(D.t.Hxujsr),
                       description: D.intl.string(D.t.TF7cPT),
                       isPremiumGetCta: !0,
-                      perkImage: ep,
+                      perkImage: ef,
                       hideOnNarrowScreen: !0
                   },
             superReactions: {
@@ -393,7 +393,7 @@ t.Z = () => {
                 title: D.intl.string(D.t['6S7kOz']),
                 subtitle: D.intl.string(D.t.kN1JRE),
                 description: D.intl.string(D.t.e7FKCg),
-                perkImage: ef
+                perkImage: ep
             },
             upcomingDropUntimed: {
                 name: 'upcomingDropUntimed',
@@ -511,7 +511,7 @@ t.Z = () => {
             descriptionCta: s,
             onCtaClick: () => {
                 if (null != eB)
-                    (0, f.Z)({
+                    (0, p.Z)({
                         product: eB,
                         title: D.intl.string(D.t.wRAXra),
                         description: D.intl.string(D.t.sQX6HR),
@@ -549,7 +549,7 @@ t.Z = () => {
         };
     }
     let eD = (0, O.kG)(),
-        { enabled: eH } = (0, S.Z)(),
+        { enabled: eH } = (0, I.Z)(),
         eV = () => {
             C.default.track(k.rMx.OPEN_MODAL, {
                 type: 'Tiered Tenure Badge Details',
@@ -573,7 +573,7 @@ t.Z = () => {
                 cardVariant: B.zW.NITRO_GRADIENT_HOVER_BORDER,
                 onClick: () => eV()
             }),
-        (0, I.ZP)('usePerksDiscoverabilityCard') === I.P0.SUMMER_2024 &&
+        (0, S.ZP)('usePerksDiscoverabilityCard') === S.P0.SUMMER_2024 &&
             (eU.shyProject = {
                 name: 'shyProject',
                 title: D.intl.string(D.t['0Mykgo']),

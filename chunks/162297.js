@@ -149,7 +149,7 @@ function B(e) {
                                     type: 'button',
                                     size: s.Button.Sizes.MEDIUM,
                                     onClick: ee,
-                                    children: y.intl.string(y.t.QO7rOz)
+                                    children: y.intl.string(y.t.RscU7O)
                                 }),
                             (X || Q) &&
                                 J &&

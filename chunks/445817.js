@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return E;
     }
 }),
     n(47120);
@@ -14,44 +14,44 @@ var i = n(200651),
     d = n(716161),
     u = n(672339),
     m = n(747545),
-    h = n(131951),
-    g = n(594174),
+    g = n(131951),
+    h = n(594174),
     p = n(981631),
     x = n(388032),
-    S = n(31181);
-let T = 387,
-    E = 218;
-function _(e) {
+    T = n(31181);
+let S = 387,
+    _ = 218;
+function E(e) {
     let { previewEnabled: t, onEnablePreview: n } = e,
-        _ = h.Z.getCameraComponent(),
-        [C, I] = s.useState((0, c.P)(g.default.getCurrentUser())),
-        f = s.useRef(!1),
+        E = g.Z.getCameraComponent(),
+        [C, f] = s.useState((0, c.P)(h.default.getCurrentUser())),
+        I = s.useRef(!1),
         N = s.useRef(C),
         A = (0, o.O)(),
-        b = (0, r.e7)([h.Z], () => Object.values(h.Z.getVideoDevices()).length > 0);
+        b = (0, r.e7)([g.Z], () => Object.values(g.Z.getVideoDevices()).length > 0);
     return (
         s.useEffect(
             () => () => {
-                f.current && a.Z.wait(() => (0, d.Up)(N.current));
+                I.current && a.Z.wait(() => (0, d.Up)(N.current));
             },
             []
         ),
         (0, i.jsx)(m.Z, {
             selectedBackgroundOption: C,
             onSelectBackgroundOption: (e) => {
-                (f.current = !0), (N.current = e), I(e), (0, u.wG)(e, { location: A.location }).catch(p.dG4);
+                (I.current = !0), (N.current = e), f(e), (0, u.wG)(e, { location: A.location }).catch(p.dG4);
             },
             renderCamera: (e) =>
                 t
                     ? (0, i.jsx)('div', {
-                          className: S.cameraWrapper,
+                          className: T.cameraWrapper,
                           children: (0, i.jsxs)('div', {
-                              className: S.camera,
+                              className: T.camera,
                               children: [
-                                  (0, i.jsx)(_, {
+                                  (0, i.jsx)(E, {
                                       deviceId: e,
-                                      width: T,
-                                      height: E,
+                                      width: S,
+                                      height: _,
                                       disabled: !t
                                   }),
                                   (0, i.jsx)(m.S, {})
@@ -59,9 +59,9 @@ function _(e) {
                           })
                       })
                     : (0, i.jsxs)('div', {
-                          className: S.cameraWrapper,
+                          className: T.cameraWrapper,
                           children: [
-                              (0, i.jsx)('div', { className: S.previewImage }),
+                              (0, i.jsx)('div', { className: T.previewImage }),
                               (0, i.jsx)(l.Tooltip, {
                                   text: b ? null : x.intl.string(x.t['8jSzSU']),
                                   children: (e) =>

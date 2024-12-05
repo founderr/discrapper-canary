@@ -1,6 +1,6 @@
 n.d(t, {
     X8: function () {
-        return h;
+        return g;
     },
     tI: function () {
         return m;
@@ -70,7 +70,7 @@ let a = () => {
             );
         });
     },
-    h = (e) =>
+    g = (e) =>
         ({
             [r.gkr.HOUSE_1]: l.intl.string(l.t.ORKdHR),
             [r.gkr.HOUSE_2]: l.intl.string(l.t.aKf3dn),

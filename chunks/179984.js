@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(410030),
     g = n(100527),
     m = n(906732),
-    f = n(975298),
-    p = n(15640),
+    p = n(975298),
+    f = n(15640),
     _ = n(594174),
     h = n(78839),
     E = n(74538),
@@ -21,8 +21,8 @@ var i = n(200651),
     v = n(230916),
     T = n(346497),
     N = n(823188),
-    I = n(21023),
-    S = n(318747),
+    S = n(21023),
+    I = n(318747),
     R = n(409100),
     A = n(474936),
     j = n(388032),
@@ -120,7 +120,7 @@ t.Z = (e) => {
         { className: a, hideCTAs: Z = !1, headingOverride: B, hidePill: M = !1, selectedPlanColumnClassName: O, selectedPlanTier: D = A.p9.TIER_2 } = e,
         { analyticsLocations: H } = (0, m.ZP)(g.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
         V = (0, l.e7)([h.ZP], () => h.ZP.hasFetchedSubscriptions()),
-        G = (0, p.V)(),
+        G = (0, f.V)(),
         F = 'PlanComparisonTable';
     (0, d.j)({
         location: F + ' auto on',
@@ -143,8 +143,8 @@ t.Z = (e) => {
         et = ''.concat(ee, '/').concat((0, E.eP)(A.rV.MONTH)),
         en = (0, E.CY)(A.Xh.PREMIUM_MONTH_TIER_0),
         ei = (0, E.CY)(A.Xh.PREMIUM_MONTH_TIER_2),
-        er = (0, f.Z)(),
-        ea = (0, I.n)(en, ei, $, et, er.fractionalState),
+        er = (0, p.Z)(),
+        ea = (0, S.n)(en, ei, $, et, er.fractionalState),
         es = (0, T.Vi)();
     if (!V || !G) return null;
     let el = {
@@ -186,7 +186,7 @@ t.Z = (e) => {
                             }),
                       q === A.p9.TIER_2 || null != J
                           ? null
-                          : (0, i.jsx)(S.Z, {
+                          : (0, i.jsx)(I.Z, {
                                 className: P.button,
                                 subscriptionTier: A.Si.TIER_0
                             })
@@ -211,7 +211,7 @@ t.Z = (e) => {
                             }),
                       q === A.p9.TIER_0 || null != J
                           ? null
-                          : (0, i.jsx)(S.Z, {
+                          : (0, i.jsx)(I.Z, {
                                 className: P.button,
                                 subscriptionTier: A.Si.TIER_2
                             })

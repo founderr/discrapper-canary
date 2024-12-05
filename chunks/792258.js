@@ -10,19 +10,19 @@ var r = n(120356),
     u = n(981631),
     g = n(388032),
     m = n(77659);
-let f = [18, 18, 16, 16, 14, 12, 10];
+let p = [18, 18, 16, 16, 14, 12, 10];
 t.Z = (e) => {
     let { guildId: t } = e,
         n = (0, l.e7)([d.Z], () => d.Z.getGuild(t));
     if (void 0 === n) return null;
     let r = n.hasFeature(u.oNc.VERIFIED) || n.hasFeature(u.oNc.PARTNERED),
-        p = n.toString(),
+        f = n.toString(),
         _ = n.getIconURL(40, !0),
         h = null,
-        E = f[f.length - 1];
-    if (null == n.icon && null != p) {
+        E = p[p.length - 1];
+    if (null == n.icon && null != f) {
         var b;
-        E = null !== (b = f[(h = (0, s.Zg)(p)).length - 1]) && void 0 !== b ? b : f[f.length - 1];
+        E = null !== (b = p[(h = (0, s.Zg)(f)).length - 1]) && void 0 !== b ? b : p[p.length - 1];
     }
     return (0, i.jsxs)('div', {
         className: m.container,

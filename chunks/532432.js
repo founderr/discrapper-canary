@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return g;
     }
 });
 var i = n(200651);
@@ -19,23 +19,23 @@ let m = [
         extensions: ['gif']
     }
 ];
-function h(e) {
-    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: h, changeAvatarButtonText: g, guildId: p, className: x, disabled: S = !1, isTryItOutFlow: T = !1, forcedDivider: E, withHighlight: _ = !1 } = e,
-        C = _ ? l.ShinyButton : l.Button;
+function g(e) {
+    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: g, changeAvatarButtonText: h, guildId: p, className: x, disabled: T = !1, isTryItOutFlow: S = !1, forcedDivider: _, withHighlight: E = !1 } = e,
+        C = E ? l.ShinyButton : l.Button;
     return (0, i.jsx)(o.Z, {
         className: x,
-        title: h,
+        title: g,
         errors: n,
-        disabled: S,
-        forcedDivider: E,
+        disabled: T,
+        forcedDivider: _,
         children: (0, i.jsxs)('div', {
             className: u.buttonsContainer,
             children: [
                 (0, i.jsx)(C, {
-                    className: r()({ [u.buttonHighlighted]: _ }),
+                    className: r()({ [u.buttonHighlighted]: E }),
                     size: l.Button.Sizes.SMALL,
-                    onClick: () => (0, a.$r)(c.pC.AVATAR, p, T, T ? m : void 0),
-                    children: null != g ? g : d.intl.string(d.t['4OynCA'])
+                    onClick: () => (0, a.$r)(c.pC.AVATAR, p, S, S ? m : void 0),
+                    children: null != h ? h : d.intl.string(d.t['4OynCA'])
                 }),
                 t &&
                     (0, i.jsx)(l.Button, {

@@ -10,26 +10,26 @@ var r = n(120356),
     u = n(404615),
     g = n(743612),
     m = n(409100),
-    f = n(474936),
-    p = n(388032),
+    p = n(474936),
+    f = n(388032),
     _ = n(506829);
 t.Z = (e) => {
     var t;
     let n;
     let { title: r, titleClassName: h = '', buttonClassName: E = '', subtitle: b = '', description: x = '', descriptionCta: C = '', isPremiumGetCta: v, onCtaClick: T, cardVariant: N } = e,
-        I = (0, d.N)(),
-        S = null == I ? void 0 : I.subscription_trial,
+        S = (0, d.N)(),
+        I = null == S ? void 0 : S.subscription_trial,
         R = (0, c.Ng)(),
         A = (0, l.Rt)({
-            intervalType: null == S ? void 0 : S.interval,
-            intervalCount: null == S ? void 0 : S.interval_count
+            intervalType: null == I ? void 0 : I.interval,
+            intervalCount: null == I ? void 0 : I.interval_count
         }),
         j = (0, o._)({
-            defaultResponse: p.intl.string(p.t['8x0jKS']),
-            onNonTier2Subscriber: p.intl.string(p.t.IJI7ys),
+            defaultResponse: f.intl.string(f.t['8x0jKS']),
+            onNonTier2Subscriber: f.intl.string(f.t.IJI7ys),
             onTier2TrialOffer: A,
             onTier0TrialOffer: A,
-            onDiscountOffer: p.intl.formatToPlainString(p.t.bkQ4bG, { percent: null == R ? void 0 : R.discount.amount })
+            onDiscountOffer: f.intl.formatToPlainString(f.t.bkQ4bG, { percent: null == R ? void 0 : R.discount.amount })
         }),
         P = (0, u._)(N);
     return (0, i.jsxs)('div', {
@@ -45,7 +45,7 @@ t.Z = (e) => {
             v &&
                 (0, i.jsx)(m.Z, {
                     className: E,
-                    subscriptionTier: f.Si.TIER_2,
+                    subscriptionTier: p.Si.TIER_2,
                     buttonText: j,
                     color: s.Button.Colors.GREEN,
                     look: s.Button.Looks.FILLED

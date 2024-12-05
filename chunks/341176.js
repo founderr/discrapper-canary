@@ -9,8 +9,8 @@ t.d(n, {
 var a = t(200651),
     r = t(120356),
     i = t.n(r),
-    o = t(524444),
-    l = t(52824),
+    l = t(524444),
+    o = t(52824),
     s = t(956664),
     u = t(589530),
     c = t(591759),
@@ -26,7 +26,7 @@ function p(e) {
     let { media: n, fit: t = _.DEFAULT, obscured: r = !1, onContextMenu: p } = e,
         { width: m, height: C, url: E, proxyUrl: g, alt: S, type: L, maxWidth: x, maxHeight: v, ...A } = n,
         { width: O, height: b } = (0, s.zp)(null != m ? m : 0, null != C ? C : 0),
-        N = (0, l.q)({
+        N = (0, o.q)({
             proxyURL: g,
             url: E
         }),
@@ -38,7 +38,7 @@ function p(e) {
             return null == n ? null : (n.searchParams.append('format', 'webp'), n.toString());
         })(g);
         if (null == e) return null;
-        let t = null !== (D = n.renderLinkComponent) && void 0 !== D ? D : o.iT;
+        let t = null !== (D = n.renderLinkComponent) && void 0 !== D ? D : l.iT;
         return (0, a.jsx)(f.Z, {
             ...A,
             src: N,

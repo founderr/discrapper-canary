@@ -13,49 +13,49 @@ var i = n(200651),
     d = n(18438),
     u = n(778825),
     m = n(851894),
-    h = n(484459),
-    g = n(216045),
+    g = n(484459),
+    h = n(216045),
     p = n(839469),
     x = n(25990),
-    S = n(594174),
-    T = n(585483),
-    E = n(16703),
-    _ = n(785145),
+    T = n(594174),
+    S = n(585483),
+    _ = n(16703),
+    E = n(785145),
     C = n(981631),
-    I = n(526761),
-    f = n(726985),
+    f = n(526761),
+    I = n(726985),
     N = n(388032),
     A = n(228615);
 function b() {
     c.Z.useExperiment({ location: 'profile_customization_auto' });
     let e = (0, r.e7)([u.Z], () => u.Z.getGuild()),
-        t = (0, E.Z)(),
+        t = (0, _.Z)(),
         n = (0, r.e7)([u.Z, x.Z], () => u.Z.showNotice() || x.Z.showNotice()),
         b = null != e ? e : t,
-        v = (0, r.e7)([S.default], () => S.default.getCurrentUser()),
-        { subsection: j, setSubsection: O } = (0, _.Z)(),
+        v = (0, r.e7)([T.default], () => T.default.getCurrentUser()),
+        { subsection: j, setSubsection: O } = (0, E.Z)(),
         { analyticsLocations: R } = (0, o.ZP)(),
         { hasSearchResults: P, searchResults: D } = (0, p.E)();
     function y(t) {
         if (j !== t) {
             if (n) {
-                T.S.dispatch(C.CkL.SHAKE_APP, {
+                S.S.dispatch(C.CkL.SHAKE_APP, {
                     duration: 300,
                     intensity: a.$x
                 }),
-                    T.S.dispatch(C.CkL.EMPHASIZE_NOTICE);
+                    S.S.dispatch(C.CkL.EMPHASIZE_NOTICE);
                 return;
             }
-            t === I.NB.GUILD && null == e && null != b && (0, d.Fq)(b, R), O(t);
+            t === f.NB.GUILD && null == e && null != b && (0, d.Fq)(b, R), O(t);
         }
     }
     s.useEffect(() => {
-        null != v && (0, h.Z)(v.id, v.getAvatarURL(null == b ? void 0 : b.id, 80), { guildId: null == b ? void 0 : b.id });
+        null != v && (0, g.Z)(v.id, v.getAvatarURL(null == b ? void 0 : b.id, 80), { guildId: null == b ? void 0 : b.id });
     }, [null == b ? void 0 : b.id, v]);
     let B = !0,
         L = !0;
     return (
-        P && 1 === D.length && (D.includes(f.s6.PROFILE_SERVER_PROFILES) ? (y(I.NB.GUILD), (L = !1)) : D.includes(f.s6.PROFILE_USER_PROFILE) && (y(I.NB.USER_PROFILE), (B = !1))),
+        P && 1 === D.length && (D.includes(I.s6.PROFILE_SERVER_PROFILES) ? (y(f.NB.GUILD), (L = !1)) : D.includes(I.s6.PROFILE_USER_PROFILE) && (y(f.NB.USER_PROFILE), (B = !1))),
         (0, i.jsx)(o.Gt, {
             value: R,
             children: (0, i.jsxs)(l.HeadingLevel, {
@@ -76,10 +76,10 @@ function b() {
                                       l.TabBar.Item,
                                       {
                                           className: A.tabBarItem,
-                                          id: I.NB.USER_PROFILE,
+                                          id: f.NB.USER_PROFILE,
                                           children: N.intl.string(N.t['OU3/Pj'])
                                       },
-                                      I.NB.USER_PROFILE
+                                      f.NB.USER_PROFILE
                                   )
                                 : null,
                             B
@@ -87,15 +87,15 @@ function b() {
                                       l.TabBar.Item,
                                       {
                                           className: A.tabBarItem,
-                                          id: I.NB.GUILD,
+                                          id: f.NB.GUILD,
                                           children: N.intl.string(N.t.kPHroa)
                                       },
-                                      I.NB.GUILD
+                                      f.NB.GUILD
                                   )
                                 : null
                         ]
                     }),
-                    j === I.NB.GUILD ? (0, i.jsx)(m.Z, { selectedGuild: b }) : (0, i.jsx)(g.Z, {})
+                    j === f.NB.GUILD ? (0, i.jsx)(m.Z, { selectedGuild: b }) : (0, i.jsx)(h.Z, {})
                 ]
             })
         })
