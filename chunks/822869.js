@@ -1,70 +1,83 @@
 t.d(n, {
     Ad: function () {
-        return h;
+        return p;
     },
     Lb: function () {
-        return l;
-    },
-    ZF: function () {
-        return d;
-    },
-    gP: function () {
         return u;
     },
+    ZF: function () {
+        return h;
+    },
+    gP: function () {
+        return d;
+    },
     mh: function () {
-        return f;
+        return _;
     },
     sF: function () {
-        return s;
+        return c;
     },
     xp: function () {
-        return c;
+        return f;
     }
 });
 var a = t(192379),
     r = t(392711),
-    i = t(626135),
-    o = t(981631);
-function l(e, n, t) {
-    i.default.track(o.rMx.FORWARD_MESSAGE_STARTED, {
+    i = t(367907),
+    l = t(592125),
+    o = t(626135),
+    s = t(981631);
+function u(e, n, t) {
+    o.default.track(s.rMx.FORWARD_MESSAGE_STARTED, {
         channel_id: e,
         message_id: n,
         source: t
     });
 }
-function s(e) {
+function c(e) {
     let { channelId: n, messageId: t, numDestinationChanges: a, numQueryChanges: r } = e;
-    i.default.track(o.rMx.FORWARD_MESSAGE_CANCELLED, {
+    o.default.track(s.rMx.FORWARD_MESSAGE_CANCELLED, {
         channel_id: n,
         message_id: t,
         num_destination_changes: a,
         num_query_changes: r
     });
 }
-function u(e) {
-    let { channelId: n, messageId: t, hasError: a, hasContextMessage: r, numDestinations: l, numDestinationChanges: s, numQueryChanges: u, anyDestinationHasSlowmode: c } = e;
-    i.default.track(o.rMx.FORWARD_MESSAGE_SENT, {
-        channel_id: n,
-        message_id: t,
-        has_error: a,
-        has_context_message: r,
-        num_destinations: l,
-        num_destination_changes: s,
-        num_query_changes: u,
-        any_destination_has_slowmode: c
-    });
+function d(e) {
+    let { channelId: n, messageId: t, hasError: a, hasContextMessage: r, numDestinations: u, numDestinationChanges: c, numQueryChanges: d, anyDestinationHasSlowmode: f, source: h } = e;
+    if (
+        (o.default.track(s.rMx.FORWARD_MESSAGE_SENT, {
+            channel_id: n,
+            message_id: t,
+            has_error: a,
+            has_context_message: r,
+            num_destinations: u,
+            num_destination_changes: c,
+            num_query_changes: d,
+            any_destination_has_slowmode: f
+        }),
+        'message-shortcut' === h)
+    ) {
+        let e = l.Z.getChannel(n);
+        o.default.track(s.rMx.MESSAGE_SHORTCUT_ACTION_SENT, {
+            action: 'forward',
+            original_message_id: t,
+            ...(0, i.hH)(null == e ? void 0 : e.guild_id),
+            ...(0, i.v_)(e)
+        });
+    }
 }
-function c(e, n) {
-    i.default.track(o.rMx.FORWARD_COPY_LINK, {
+function f(e, n) {
+    o.default.track(s.rMx.FORWARD_COPY_LINK, {
         channel_id: e,
         message_id: n
     });
 }
-function d() {
+function h() {
     return a.useMemo(
         () =>
             (0, r.once)((e, n, t) => {
-                i.default.track(o.rMx.FORWARD_ADD_RECIPIENT, {
+                o.default.track(s.rMx.FORWARD_ADD_RECIPIENT, {
                     channel_id: e,
                     message_id: n,
                     has_query: t
@@ -73,11 +86,11 @@ function d() {
         []
     );
 }
-function f() {
+function _() {
     return a.useMemo(
         () =>
             (0, r.once)((e, n) => {
-                i.default.track(o.rMx.FORWARD_EDIT_SEARCH, {
+                o.default.track(s.rMx.FORWARD_EDIT_SEARCH, {
                     channel_id: e,
                     message_id: n
                 });
@@ -85,11 +98,11 @@ function f() {
         []
     );
 }
-function h() {
+function p() {
     return a.useMemo(
         () =>
             (0, r.once)((e, n) => {
-                i.default.track(o.rMx.FORWARD_EDIT_CONTEXT_MESSAGE, {
+                o.default.track(s.rMx.FORWARD_EDIT_CONTEXT_MESSAGE, {
                     channel_id: e,
                     message_id: n
                 });
