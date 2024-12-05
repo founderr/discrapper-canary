@@ -29,17 +29,21 @@ function c() {
     let u = (0, l.hv)('useFetchPurchases'),
         [c, d, f, _, p, h] = (0, i.Wu)([o.Z], () => [o.Z.isFetching, o.Z.isClaiming, o.Z.fetchError, o.Z.claimError, o.Z.purchases, o.Z.hasPreviouslyFetched]),
         m = (0, r.useRef)(o.Z.hasPreviouslyFetched);
+    (0, r.useEffect)(() => {
+        m.current = h;
+    }, [h]);
+    let g = (0, r.useRef)(o.Z.fetchError);
     return (
         (0, r.useEffect)(() => {
-            m.current = h;
-        }, [h]),
+            g.current = f;
+        }, [f]),
         (0, r.useEffect)(() => {
-            if (!0 !== e || !m.current || null != f)
+            if (!0 !== e || !m.current || null != g.current)
                 (0, s.qg)({
                     variantsReturnStyle: u,
                     location: t
                 });
-        }, [f, t, e, u]),
+        }, [t, e, u]),
         {
             isClaiming: d,
             fetchPurchasesError: f,
