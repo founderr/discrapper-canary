@@ -3,7 +3,8 @@ n.d(t, {
         return I;
     }
 }),
-    n(47120);
+    n(47120),
+    n(653041);
 var r = n(200651),
     i = n(192379),
     a = n(752877),
@@ -135,8 +136,11 @@ function I(e) {
 t.Z = i.memo(function (e) {
     let { hovered: t } = e,
         a = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
-        o = i.useMemo(() => [() => n.e('31496').then(n.t.bind(n, 347381, 19)), () => n.e('37711').then(n.t.bind(n, 891220, 19))], []);
-    return !a && t
+        o = i.useMemo(() => {
+            let e = [];
+            return !a && e.push(() => n.e('31496').then(n.t.bind(n, 347381, 19))), e.push(() => n.e('37711').then(n.t.bind(n, 891220, 19))), e;
+        }, [a]);
+    return t
         ? (0, r.jsx)(l.ChainedLottieAnimation, {
               className: _.icon,
               animationData: o
