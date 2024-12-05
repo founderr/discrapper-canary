@@ -13,38 +13,39 @@ var r = n(200651),
     h = n(388032),
     m = n(249942);
 t.Z = i.forwardRef(function (e, t) {
-    let { children: n, className: i, onAction: a, onClose: g, ...E } = e,
-        { profileType: v } = (0, f.z)(),
-        { analyticsLocations: I } = (0, l.ZP)(),
-        { context: T } = (0, u.KZ)(),
-        { recentActivityEnabled: b } = (0, c.i)({
+    let { children: n, className: i, subsection: a, onAction: g, onClose: E, ...v } = e,
+        { profileType: I } = (0, f.z)(),
+        { analyticsLocations: T } = (0, l.ZP)(),
+        { context: b } = (0, u.KZ)(),
+        { recentActivityEnabled: S } = (0, c.i)({
             location: 'UserProfileActivityCardContainer',
             autoTrackExposure: !1
         });
-    return v !== p.y0.FULL_SIZE && (null == T ? void 0 : T.userId) != null && b
+    return I !== p.y0.FULL_SIZE && (null == b ? void 0 : b.userId) != null && S
         ? (0, r.jsx)(o.Clickable, {
               className: m.clickableContainer,
               'aria-label': h.intl.string(h.t.pD1L1t),
               onClick: () => {
-                  null == a || a({ action: 'PRESS_CARD' }),
+                  null == g || g({ action: 'PRESS_CARD' }),
                       (0, _.openUserProfileModal)({
                           section: p.oh.ACTIVITY,
-                          sourceAnalyticsLocations: I,
-                          ...T
+                          sourceAnalyticsLocations: T,
+                          subsection: a,
+                          ...b
                       }),
-                      null == g || g();
+                      null == E || E();
               },
               children: (0, r.jsx)(d.Z.Overlay, {
                   ref: t,
                   className: s()(m.card, i),
-                  ...E,
+                  ...v,
                   children: n
               })
           })
         : (0, r.jsx)(d.Z.Overlay, {
               ref: t,
               className: s()(m.card, i),
-              ...E,
+              ...v,
               children: n
           });
 });

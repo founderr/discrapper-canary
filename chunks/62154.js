@@ -24,11 +24,12 @@ var l = t(442837),
     g = t(171865);
 function j(e) {
     var n;
-    let { user: t, currentUser: j, channelId: _, displayProfile: b, initialSection: E, initialSubsection: N, friendToken: S, onClose: T } = e,
+    let { user: t, currentUser: j, channelId: _, displayProfile: b, initialSection: E, initialSubsection: N, friendToken: T, onClose: S } = e,
         y = (0, l.e7)([o.Z], () => o.Z.getRelationshipType(t.id)),
         P = (0, h.Z)({
             user: t,
-            currentUser: j
+            currentUser: j,
+            initialSubsection: N
         }),
         C = r.ZP.useName(null == b ? void 0 : b.guildId, _, t),
         A = t.id === j.id,
@@ -47,7 +48,7 @@ function j(e) {
                 tags: (0, i.jsx)(a.Z, {
                     displayProfile: b,
                     profileType: v.y0.FULL_SIZE,
-                    onClose: T
+                    onClose: S
                 })
             }),
             y === Z.OGo.PENDING_INCOMING &&
@@ -57,7 +58,7 @@ function j(e) {
                         user: t,
                         guildId: null !== (n = null == b ? void 0 : b.guildId) && void 0 !== n ? n : void 0,
                         channelId: _,
-                        friendToken: S,
+                        friendToken: T,
                         className: g.friendRequestBanner
                     })
                 }),
@@ -66,7 +67,7 @@ function j(e) {
                 A &&
                 (0, i.jsx)(d.Z, {
                     isPremiumUser: M,
-                    onInteraction: T
+                    onInteraction: S
                 }),
             (0, i.jsx)(I.Z.Overlay, {
                 className: g.overlay,
@@ -77,7 +78,7 @@ function j(e) {
                     items: P,
                     initialSection: E,
                     initialSubsection: N,
-                    onClose: T
+                    onClose: S
                 })
             })
         ]

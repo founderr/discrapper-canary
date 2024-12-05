@@ -105,6 +105,7 @@ function k(e) {
         : (0, r.jsxs)(L.Z, {
               ref: b,
               className: s,
+              subsection: w.Tb.RECENT_ACTIVITY,
               onAction: I,
               onClose: c,
               children: [
@@ -167,6 +168,7 @@ function U(e) {
     return (0, r.jsxs)(L.Z, {
         ref: v,
         className: s,
+        subsection: w.Tb.RECENT_ACTIVITY,
         onAction: E,
         onClose: o,
         children: [
@@ -255,6 +257,7 @@ function B(e) {
         : (0, r.jsxs)(L.Z, {
               ref: I,
               className: l,
+              subsection: w.Tb.RECENT_ACTIVITY,
               onAction: E,
               onClose: c,
               children: [
@@ -325,6 +328,7 @@ function G(e) {
     return (0, r.jsxs)(L.Z, {
         ref: g,
         className: s,
+        subsection: w.Tb.RECENT_ACTIVITY,
         onAction: p,
         onClose: o,
         children: [
@@ -400,6 +404,7 @@ function Z(e) {
     return (0, r.jsxs)(L.Z, {
         ref: I,
         className: s,
+        subsection: w.Tb.RECENT_ACTIVITY,
         onAction: v,
         onClose: o,
         children: [

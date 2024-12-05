@@ -64,6 +64,7 @@ function C(e) {
     ((i = h || (h = {})).ROLES = 'ROLES'),
     (i.CONNECTIONS = 'CONNECTIONS'),
     (i.NOTE = 'NOTE'),
+    (i.RECENT_ACTIVITY = 'RECENT_ACTIVITY'),
     ((a = m || (m = {})).BITE_SIZE = 'BITE_SIZE'),
     (a.FULL_SIZE = 'FULL_SIZE'),
     (a.PANEL = 'PANEL'),
