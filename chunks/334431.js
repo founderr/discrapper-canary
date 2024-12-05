@@ -202,7 +202,8 @@ var a,
     (z.DAVE_PROTOCOL_VERIFICATION = 'dave-protocol-verification'),
     (z.ICYMI = 'icymi'),
     (z.QUESTS = 'quests'),
-    (z.GIFT = 'gift');
+    (z.GIFT = 'gift'),
+    (z.NITRO_HOME = 'store');
 let eE = 'CacheStoreLazy',
     ei = 'CacheStoreChannelsLazy',
     ec = 'CacheStore';

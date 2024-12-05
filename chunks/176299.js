@@ -279,6 +279,7 @@ let eg = 'resizable-sidebar-width-2',
             case 'editProfile':
                 return (0, i.jsx)(s.l_, { to: { pathname: eu.Z5c.SETTINGS('profile-customization') } });
             case 'gift':
+            case 'store':
                 return (0, i.jsx)(s.l_, { to: { pathname: eu.Z5c.NITRO_HOME } });
             default:
                 return (0, i.jsx)(s.l_, { to: eu.Z5c.ME });
