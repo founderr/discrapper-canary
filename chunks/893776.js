@@ -331,8 +331,8 @@ function N() {
                     goHomeAfterSwitching: t
                 }),
                 this.loginToken(e, !0).then(() => {
-                    let t = e === g.default.getToken();
-                    return S.log('Switched accounts finished', { isCorrectToken: t }), t;
+                    let t = g.default.getToken();
+                    S.log('Switched accounts finished', { isCorrectToken: e === t });
                 })
             );
         },
