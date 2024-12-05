@@ -7,8 +7,8 @@ n.r(e),
     n(627341);
 var a = n(200651);
 n(192379);
-var s = n(278074),
-    i = n(990547),
+var i = n(278074),
+    s = n(990547),
     r = n(442837),
     o = n(481060),
     l = n(287734),
@@ -32,8 +32,9 @@ function L(t) {
         v = (0, d.Do)({ location: 'BlockedUserJoinedVoiceChannelModal' }),
         G = (0, r.e7)([u.Z], () => u.Z.getChannel(e));
     if (!p) return null;
-    let O = c.default.getUser(n),
-        T = [
+    let O = c.default.getUser(n);
+    if (null == O) return null;
+    let T = [
             {
                 icon: v ? (0, h.r)([n], null == G ? void 0 : G.guild_id) : (0, a.jsx)(o.UserIcon, {}),
                 text: v ? (0, h.a)([n], 1, null == G ? void 0 : G.guild_id, e) : m.intl.formatToPlainString(m.t.w0YvUl, { userName: null == O ? void 0 : O.username }),
@@ -50,7 +51,7 @@ function L(t) {
                 className: v ? f.row : void 0
             }
         ],
-        j = (0, s.EQ)({
+        j = (0, i.EQ)({
             stealthRemediationEnabled: v,
             isBlocked: C
         })
@@ -107,7 +108,7 @@ function L(t) {
         transitionState: L,
         onClose: x,
         impression: {
-            impressionName: i.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING,
+            impressionName: s.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING,
             impressionProperties: {
                 channel_id: e,
                 blocked_user_ids: C ? [n] : [],
