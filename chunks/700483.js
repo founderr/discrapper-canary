@@ -400,7 +400,7 @@ let ec = l.memo(function (e) {
                                             });
                                         }
                                     }),
-                                    G && _ > 0 && W
+                                    G && W
                                 ]
                             })
                         })
@@ -408,14 +408,16 @@ let ec = l.memo(function (e) {
                   (0, i.jsxs)('div', {
                       className: et.buttonSection,
                       children: [
-                          (0, i.jsx)(N.NZ, {
-                              channel: t,
-                              currentUser: y,
-                              exitFullScreen: () => null,
-                              canGoLive: R,
-                              hasPermission: v,
-                              disabled: F
-                          }),
+                          k && !n && G
+                              ? (0, i.jsx)(N.NZ, {
+                                    channel: t,
+                                    currentUser: y,
+                                    exitFullScreen: () => null,
+                                    canGoLive: R,
+                                    hasPermission: v,
+                                    disabled: F
+                                })
+                              : null,
                           (0, i.jsx)(eo, { channelId: t.id }),
                           k && (0, i.jsx)(ei, { channel: t }),
                           k && c && n && (0, i.jsx)(er, { onClick: () => (0, B.RK)(t, !1) }),
@@ -434,7 +436,7 @@ let ec = l.memo(function (e) {
                       ? (0, i.jsxs)('div', {
                             className: a()(et.avControls, et.buttonSpacing),
                             children: [
-                                G && _ > 0 && W,
+                                G && W,
                                 (0, i.jsx)(o.Popout, {
                                     renderPopout: (e) => {
                                         let { closePopout: t } = e;
