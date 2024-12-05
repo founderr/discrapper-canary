@@ -14709,6 +14709,11 @@ div.cardContainer_c22357 {
     height: 50px
 }
 
+.v2Container_ced1ae {
+    justify-content: left;
+    background: none
+}
+
 .iconContainer_ced1ae {
     display: flex
 }
