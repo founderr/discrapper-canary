@@ -193,6 +193,7 @@ function C(e) {
     (c.GET_PREMIUM = 'GET_NITRO'),
     (c.VIEW_PREMIUM_PERKS = 'VIEW_NITRO_PERKS'),
     ((d = b || (b = {})).VIEW = 'VIEW'),
+    (d.PRESS_CARD = 'PRESS_CARD'),
     (d.PRESS_TEXT = 'PRESS_TEXT'),
     (d.PRESS_IMAGE = 'PRESS_IMAGE'),
     (d.PRESS_JOIN_BUTTON = 'PRESS_JOIN_BUTTON'),

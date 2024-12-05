@@ -37,9 +37,9 @@ var r = n(200651),
     w = n(510659),
     P = n(287954),
     M = n(660579),
-    k = n(502762),
-    U = n(652853),
-    B = n(64621),
+    k = n(652853),
+    U = n(64621),
+    B = n(336383),
     G = n(194811),
     Z = n(373826),
     F = n(315324),
@@ -56,7 +56,7 @@ var r = n(200651),
     J = n(774797);
 function $(e) {
     let { user: t, currentUser: n, stream: a, className: $, onClose: ee, profileGuildId: et } = e,
-        { profileType: en, theme: er } = (0, U.z)(),
+        { profileType: en, theme: er } = (0, k.z)(),
         { interactionSource: ei, interactionSourceId: ea } = (0, w.Xo)(),
         es = {
             [Q.fullSize]: en === Y.y0.FULL_SIZE,
@@ -204,7 +204,7 @@ function $(e) {
                                         className: q.voiceIcon
                                     }),
                                     (0, r.jsx)(l.Clickable, {
-                                        className: s()(q.clickable, q.inline),
+                                        className: s()(q.clickableText, q.inline),
                                         onClick: () => {
                                             null == ec || ec({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, b.Cq)(e_) : (u.default.selectVoiceChannel(e_.id), (0, I.Kh)(e_.id)), null == ee || ee();
                                         },
@@ -259,7 +259,7 @@ function $(e) {
         eO = null != eh ? K.intl.formatToPlainString(K.t['4CQq9f'], { name: eh.name }) : K.intl.string(K.t['Jpkr/v']);
     return (0, r.jsx)(h.Gt, {
         value: eu,
-        children: (0, r.jsx)(B.Z, {
+        children: (0, r.jsx)(U.Z, {
             sourceType: Y.n_.ACTIVITY,
             user: t,
             children: (0, r.jsx)(V.Z, {
@@ -288,9 +288,11 @@ function $(e) {
                                     className: z.button
                                 }),
                                 onShowToolbar: () => ec({ action: 'HOVER_ACTIVITY_CARD' }),
-                                children: (0, r.jsxs)(k.Z.Overlay, {
-                                    className: s()(q.card, $, { [q.hoisted]: eR }),
+                                children: (0, r.jsxs)(B.Z, {
                                     ref: ed,
+                                    className: s()($, { [q.hoisted]: eR }),
+                                    onAction: ec,
+                                    onClose: ee,
                                     children: [
                                         (0, r.jsx)(G.Z, {
                                             text: eO,

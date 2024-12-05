@@ -34,8 +34,8 @@ var r = n(200651),
     D = n(626135),
     L = n(960870),
     x = n(139793),
-    w = n(502762),
-    P = n(652853),
+    w = n(652853),
+    P = n(336383),
     M = n(194811),
     k = n(373826),
     U = n(315324),
@@ -51,7 +51,7 @@ var r = n(200651),
     K = n(774797);
 function z(e) {
     let { user: t, currentUser: n, stream: a, className: z, onClose: q } = e,
-        { profileType: Q, theme: X } = (0, P.z)(),
+        { profileType: Q, theme: X } = (0, w.z)(),
         J = {
             [Y.fullSize]: Q === F.y0.FULL_SIZE,
             [H.fullSize]: Q === F.y0.FULL_SIZE
@@ -198,7 +198,7 @@ function z(e) {
                                         className: H.voiceIcon
                                     }),
                                     (0, r.jsx)(l.Clickable, {
-                                        className: s()(H.clickable, H.inline),
+                                        className: s()(H.clickableText, H.inline),
                                         onClick: () => {
                                             null == en || en({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, b.Cq)(ea) : (u.default.selectVoiceChannel(ea.id), (0, I.Kh)(ea.id)), null == q || q();
                                         },
@@ -256,9 +256,11 @@ function z(e) {
             onClose: q,
             children: (e) => {
                 let { onAutoDismiss: n } = e;
-                return (0, r.jsxs)(w.Z.Overlay, {
-                    className: s()(H.card, z),
+                return (0, r.jsxs)(P.Z, {
                     ref: er,
+                    className: z,
+                    onAction: en,
+                    onClose: q,
                     children: [
                         (0, r.jsx)(M.Z, {
                             text: null != eo ? j.intl.formatToPlainString(j.t['4CQq9f'], { name: eo.name }) : j.intl.string(j.t['Jpkr/v']),

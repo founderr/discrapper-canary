@@ -22,10 +22,10 @@ var r = n(200651),
     v = n(510659),
     I = n(287954),
     T = n(660579),
-    b = n(502762),
-    S = n(652853),
-    y = n(64621),
-    A = n(448980),
+    b = n(652853),
+    S = n(64621),
+    y = n(448980),
+    A = n(336383),
     N = n(194811),
     C = n(373826),
     R = n(315324),
@@ -39,7 +39,7 @@ var r = n(200651),
 function k(e) {
     var t;
     let { user: n, currentUser: a, activity: k, guild: U, channel: B, className: G, onClose: Z, profileGuildId: F } = e,
-        { profileType: V } = (0, S.z)(),
+        { profileType: V } = (0, b.z)(),
         j = { [M.fullSize]: V === w.y0.FULL_SIZE },
         { interactionSource: H, interactionSourceId: Y } = (0, v.Xo)(),
         W = (0, _.Z)({
@@ -79,7 +79,7 @@ function k(e) {
                                 {
                                     children: [
                                         (0, r.jsx)(o.Clickable, {
-                                            className: s()(M.clickable, M.inline),
+                                            className: s()(M.clickableText, M.inline),
                                             onClick: () => {
                                                 Q({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, p.d$)(k, n.id, t);
                                             },
@@ -130,7 +130,7 @@ function k(e) {
         er = H === w.n_.ACTIVITY && Y === en;
     return (0, r.jsx)(c.Gt, {
         value: q,
-        children: (0, r.jsx)(y.Z, {
+        children: (0, r.jsx)(S.Z, {
             sourceType: w.n_.ACTIVITY,
             user: n,
             children: (0, r.jsx)(O.Z, {
@@ -162,9 +162,11 @@ function k(e) {
                                     className: P.button
                                 }),
                                 onShowToolbar: () => Q({ action: 'HOVER_ACTIVITY_CARD' }),
-                                children: (0, r.jsxs)(b.Z.Overlay, {
-                                    className: s()(M.card, G, { [M.hoisted]: er }),
+                                children: (0, r.jsxs)(A.Z, {
                                     ref: X,
+                                    className: s()(G, { [M.hoisted]: er }),
+                                    onAction: Q,
+                                    onClose: Z,
                                     children: [
                                         (0, r.jsx)(N.Z, { ...K }),
                                         (0, r.jsxs)('div', {
@@ -195,7 +197,7 @@ function k(e) {
                                                                         J()
                                                                     ]
                                                                 }),
-                                                                (0, r.jsx)(A.Z, {
+                                                                (0, r.jsx)(y.Z, {
                                                                     user: n,
                                                                     activity: k,
                                                                     className: M.badges

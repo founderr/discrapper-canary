@@ -18,9 +18,9 @@ var r = n(200651),
     h = n(960870),
     m = n(139793),
     g = n(994746),
-    E = n(502762),
-    v = n(652853),
-    I = n(448980),
+    E = n(652853),
+    v = n(448980),
+    I = n(336383),
     T = n(194811),
     b = n(373826),
     S = n(315324),
@@ -32,7 +32,7 @@ var r = n(200651),
     O = n(249942);
 function D(e) {
     let { user: t, currentUser: n, activity: a, guild: D, channel: L, className: x, onClose: w } = e,
-        { profileType: P } = (0, v.z)(),
+        { profileType: P } = (0, E.z)(),
         M = { [O.fullSize]: P === R.y0.FULL_SIZE },
         k = (0, _.Z)({
             activity: a,
@@ -71,7 +71,7 @@ function D(e) {
                                 {
                                     children: [
                                         (0, r.jsx)(o.Clickable, {
-                                            className: s()(O.clickable, O.inline),
+                                            className: s()(O.clickableText, O.inline),
                                             onClick: () => {
                                                 Z({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, p.d$)(a, t.id, n);
                                             },
@@ -124,9 +124,11 @@ function D(e) {
             onClose: w,
             children: (e) => {
                 let { onAutoDismiss: n } = e;
-                return (0, r.jsxs)(E.Z.Overlay, {
-                    className: s()(O.card, x),
+                return (0, r.jsxs)(I.Z, {
                     ref: F,
+                    className: s()(O.card, x),
+                    onAction: Z,
+                    onClose: w,
                     children: [
                         (0, r.jsx)(T.Z, {
                             ...U,
@@ -167,7 +169,7 @@ function D(e) {
                                                         V()
                                                     ]
                                                 }),
-                                                (0, r.jsx)(I.Z, {
+                                                (0, r.jsx)(v.Z, {
                                                     user: t,
                                                     activity: a,
                                                     className: O.badges

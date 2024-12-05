@@ -29,10 +29,10 @@ var i = n(120356),
     A = n(139793),
     N = n(994746),
     C = n(232174),
-    R = n(502762),
-    O = n(652853),
-    D = n(979038),
-    L = n(448980),
+    R = n(652853),
+    O = n(979038),
+    D = n(448980),
+    L = n(336383),
     x = n(194811),
     w = n(373826),
     P = n(315324),
@@ -49,7 +49,7 @@ var i = n(120356),
 function Y(e) {
     let { user: t, currentUser: n, activity: i, application: Y, guild: W, channel: K, className: z, onClose: q } = e,
         { analyticsLocations: Q } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        { profileType: X } = (0, O.z)(),
+        { profileType: X } = (0, R.z)(),
         J = { [H.fullSize]: X === Z.y0.FULL_SIZE },
         $ = (0, v.Z)({
             activity: i,
@@ -233,7 +233,7 @@ function Y(e) {
                       children: [eu(), ec(), ed()]
                   })
                 : (0, r.jsxs)(o.Clickable, {
-                      className: H.clickable,
+                      className: H.clickableText,
                       onClick: (e) => {
                           et({ action: 'PRESS_TEXT' }), eo(e);
                       },
@@ -254,7 +254,7 @@ function Y(e) {
                 ? null
                 : (0, r.jsx)('div', {
                       className: a()(H.actions, J),
-                      children: (0, r.jsx)(D.Z, {
+                      children: (0, r.jsx)(O.Z, {
                           activity: i,
                           user: t,
                           currentUser: n,
@@ -269,9 +269,11 @@ function Y(e) {
             onClose: q,
             children: (e) => {
                 let { onAutoDismiss: n } = e;
-                return (0, r.jsxs)(R.Z.Overlay, {
-                    className: a()(H.card, z),
+                return (0, r.jsxs)(L.Z, {
                     ref: en,
+                    className: a()(H.card, z),
+                    onAction: et,
+                    onClose: q,
                     children: [
                         (0, r.jsx)(x.Z, {
                             ...ei,
@@ -296,7 +298,7 @@ function Y(e) {
                                             children: [
                                                 ep(),
                                                 !t.bot &&
-                                                    (0, r.jsx)(L.Z, {
+                                                    (0, r.jsx)(D.Z, {
                                                         user: t,
                                                         activity: i,
                                                         className: H.badges

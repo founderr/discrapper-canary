@@ -57,16 +57,26 @@ function p(e) {
                   });
               },
               children: (e) =>
-                  (0, r.jsx)(o.Clickable, {
-                      ...e,
-                      onContextMenu: (t) => {
-                          t.preventDefault(), e.onClick(t);
-                      },
-                      className: s()(_.contextMenu, h),
-                      children: (0, r.jsx)(o.MoreHorizontalIcon, {
-                          color: o.tokens.colors.INTERACTIVE_NORMAL,
-                          size: 'xs'
-                      })
+                  (0, r.jsx)(o.Tooltip, {
+                      text: f.intl.string(f.t.UKOtz8),
+                      children: (t) =>
+                          (0, r.jsx)(o.Clickable, {
+                              ...t,
+                              ...e,
+                              onClick: (n) => {
+                                  var r;
+                                  n.stopPropagation(), null === (r = t.onClick) || void 0 === r || r.call(t), e.onClick(n);
+                              },
+                              onContextMenu: (n) => {
+                                  var r;
+                                  n.preventDefault(), null === (r = t.onClick) || void 0 === r || r.call(t), e.onClick(n);
+                              },
+                              className: s()(_.contextMenu, h),
+                              children: (0, r.jsx)(o.MoreHorizontalIcon, {
+                                  color: o.tokens.colors.INTERACTIVE_NORMAL,
+                                  size: 'xs'
+                              })
+                          })
                   })
           });
 }

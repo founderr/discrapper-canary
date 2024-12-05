@@ -30,11 +30,11 @@ var i = n(120356),
     N = n(510659),
     C = n(287954),
     R = n(660579),
-    O = n(502762),
-    D = n(652853),
-    L = n(64621),
-    x = n(979038),
-    w = n(448980),
+    O = n(652853),
+    D = n(64621),
+    L = n(979038),
+    x = n(448980),
+    w = n(336383),
     P = n(194811),
     M = n(373826),
     k = n(315324),
@@ -53,7 +53,7 @@ function z(e) {
     var t;
     let { user: n, currentUser: i, activity: z, application: q, guild: Q, channel: X, className: J, onClose: $, profileGuildId: ee } = e,
         { analyticsLocations: et } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        { profileType: en } = (0, D.z)(),
+        { profileType: en } = (0, O.z)(),
         er = { [K.fullSize]: en === V.y0.FULL_SIZE },
         { interactionSource: ei, interactionSourceId: ea } = (0, N.Xo)(),
         es = (0, m.Z)({
@@ -234,7 +234,7 @@ function z(e) {
                       children: [eh(), em(), eg()]
                   })
                 : (0, r.jsxs)(o.Clickable, {
-                      className: K.clickable,
+                      className: K.clickableText,
                       onClick: (e) => {
                           el({ action: 'PRESS_TEXT' }), e_(e);
                       },
@@ -255,7 +255,7 @@ function z(e) {
                 ? null
                 : (0, r.jsx)('div', {
                       className: a()(K.actions, er),
-                      children: (0, r.jsx)(x.Z, {
+                      children: (0, r.jsx)(L.Z, {
                           activity: z,
                           user: n,
                           currentUser: i,
@@ -268,7 +268,7 @@ function z(e) {
         ey = ei === V.n_.ACTIVITY && ea === eS;
     return (0, r.jsx)(_.Gt, {
         value: et,
-        children: (0, r.jsx)(L.Z, {
+        children: (0, r.jsx)(D.Z, {
             sourceType: V.n_.ACTIVITY,
             user: n,
             children: (0, r.jsx)(U.Z, {
@@ -300,9 +300,11 @@ function z(e) {
                                     className: W.button
                                 }),
                                 onShowToolbar: () => el({ action: 'HOVER_ACTIVITY_CARD' }),
-                                children: (0, r.jsxs)(O.Z.Overlay, {
-                                    className: a()(K.card, J, { [K.hoisted]: ey }),
+                                children: (0, r.jsxs)(w.Z, {
                                     ref: eu,
+                                    className: a()(J, { [K.hoisted]: ey }),
+                                    onAction: el,
+                                    onClose: $,
                                     children: [
                                         (0, r.jsx)(P.Z, { ...ec }),
                                         (0, r.jsxs)('div', {
@@ -317,7 +319,7 @@ function z(e) {
                                                             children: [
                                                                 eI(),
                                                                 !n.bot &&
-                                                                    (0, r.jsx)(w.Z, {
+                                                                    (0, r.jsx)(x.Z, {
                                                                         user: n,
                                                                         activity: z,
                                                                         className: K.badges
