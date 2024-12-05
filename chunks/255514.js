@@ -155,51 +155,47 @@ t.Z = (e) => {
                             return G.O.includes(t);
                         });
                     })(t) &&
-                        (0, r.jsxs)(r.Fragment, {
+                        (0, r.jsxs)(x.Z, {
                             children: [
-                                (0, r.jsxs)(x.Z, {
-                                    children: [
-                                        eS &&
-                                            (0, r.jsx)(N.Z, {
-                                                user: 'user' === n.name ? n.record : n.record.author,
-                                                channelId: em,
-                                                reportId: X
-                                            }),
-                                        null != j(t, 'block_users') &&
-                                            ('message' === n.name || 'first_dm' === n.name || 'user' === n.name || ('application' === n.name && null != n.record.bot)) &&
-                                            (0, r.jsx)(_.Z, {
-                                                user: 'application' === n.name ? n.record.bot : 'user' === n.name ? n.record : n.record.author,
-                                                channelId: em,
-                                                reportId: X
-                                            }),
-                                        !eS &&
-                                            null != j(t, 'mute_users') &&
-                                            ('message' === n.name || 'first_dm' === n.name || 'user' === n.name) &&
-                                            (0, r.jsx)(L.Z, {
-                                                user: 'user' === n.name ? n.record : n.record.author,
-                                                channelId: em,
-                                                reportId: X
-                                            }),
-                                        null != j(t, 'delete_message') &&
-                                            'message' === n.name &&
-                                            (0, r.jsx)(g.Z, {
-                                                message: n.record,
-                                                reportId: X
-                                            }),
-                                        null != j(t, 'leave_guild') &&
-                                            'guild' === n.name &&
-                                            (0, r.jsx)(R.Z, {
-                                                guildId: n.record.id,
-                                                reportId: X
-                                            }),
-                                        null != j(t, 'deauthorize_app') &&
-                                            'application' === n.name &&
-                                            (0, r.jsx)(m.Z, {
-                                                application: n.record,
-                                                reportId: X
-                                            })
-                                    ]
-                                }),
+                                eS &&
+                                    (0, r.jsx)(N.Z, {
+                                        user: 'user' === n.name ? n.record : n.record.author,
+                                        channelId: em,
+                                        reportId: X
+                                    }),
+                                null != j(t, 'block_users') &&
+                                    ('message' === n.name || 'first_dm' === n.name || 'user' === n.name || ('application' === n.name && null != n.record.bot)) &&
+                                    (0, r.jsx)(_.Z, {
+                                        user: 'application' === n.name ? n.record.bot : 'user' === n.name ? n.record : n.record.author,
+                                        channelId: em,
+                                        reportId: X
+                                    }),
+                                !eS &&
+                                    null != j(t, 'mute_users') &&
+                                    ('message' === n.name || 'first_dm' === n.name || 'user' === n.name) &&
+                                    (0, r.jsx)(L.Z, {
+                                        user: 'user' === n.name ? n.record : n.record.author,
+                                        channelId: em,
+                                        reportId: X
+                                    }),
+                                null != j(t, 'delete_message') &&
+                                    'message' === n.name &&
+                                    (0, r.jsx)(g.Z, {
+                                        message: n.record,
+                                        reportId: X
+                                    }),
+                                null != j(t, 'leave_guild') &&
+                                    'guild' === n.name &&
+                                    (0, r.jsx)(R.Z, {
+                                        guildId: n.record.id,
+                                        reportId: X
+                                    }),
+                                null != j(t, 'deauthorize_app') &&
+                                    'application' === n.name &&
+                                    (0, r.jsx)(m.Z, {
+                                        application: n.record,
+                                        reportId: X
+                                    }),
                                 null != j(t, 'deauthorize_app') &&
                                     'application' === n.name &&
                                     (0, r.jsx)(w.Z, {
