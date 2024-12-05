@@ -101,6 +101,7 @@ function R(e) {
             (0, r.jsx)(p.Z, {
                 user: t,
                 currentUser: n,
+                profileGuildId: null == R ? void 0 : R.guildId,
                 onClose: w,
                 className: C.activity
             }),

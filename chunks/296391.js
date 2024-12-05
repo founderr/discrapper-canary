@@ -12,7 +12,7 @@ var i = t(200651),
     a = t(369566),
     d = t(678738),
     u = t(151545),
-    f = t(527790),
+    f = t(744802),
     m = t(493043),
     I = t(981631),
     x = t(921944),
@@ -81,8 +81,11 @@ function v(e) {
                             (0, i.jsx)(
                                 f.Z,
                                 {
+                                    location: 'UserProfileModalActivity',
                                     user: n,
+                                    currentUser: t,
                                     entry: e,
+                                    profileGuildId: Z,
                                     onClose: v
                                 },
                                 e.id

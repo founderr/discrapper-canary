@@ -9,40 +9,45 @@ n(192379);
 var i = n(369566),
     a = n(565640),
     s = n(151545),
-    o = n(527790),
+    o = n(744802),
     l = n(493043);
 function u(e) {
-    let { user: t, currentUser: n, className: u, onClose: c } = e,
+    let { user: t, currentUser: n, profileGuildId: u, className: c, onClose: d } = e,
         {
-            live: [d],
-            recent: [f],
-            stream: _
+            live: [f],
+            recent: [_],
+            stream: p
         } = (0, i.Z)(t.id),
-        p = (0, a.Z)(t.id, 'UserProfileFeaturedActivity'),
-        h = t.id === n.id ? f : p;
-    return null != _
+        h = (0, a.Z)(t.id, 'UserProfileFeaturedActivity'),
+        m = t.id === n.id ? _ : h;
+    return null != p
         ? (0, r.jsx)(l.Z, {
               location: 'UserProfileFeaturedActivity',
               user: t,
               currentUser: n,
-              stream: _,
-              className: u,
-              onClose: c
+              stream: p,
+              profileGuildId: u,
+              className: c,
+              onClose: d
           })
-        : null != d
+        : null != f
           ? (0, r.jsx)(s.Z, {
                 user: t,
                 currentUser: n,
-                activity: d,
-                className: u,
-                onClose: c
+                activity: f,
+                profileGuildId: u,
+                className: c,
+                onClose: d
             })
-          : null != h
+          : null != m
             ? (0, r.jsx)(o.Z, {
+                  location: 'UserProfileFeaturedActivity',
                   user: t,
-                  entry: h,
-                  className: u,
-                  onClose: c
+                  currentUser: n,
+                  entry: m,
+                  profileGuildId: u,
+                  className: c,
+                  onClose: d
               })
             : null;
 }
