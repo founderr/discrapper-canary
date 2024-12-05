@@ -88,6 +88,7 @@ function m(e) {
     let { channel: t, onClick: n, ...l } = e;
     return (0, i.jsx)(s.h, {
         ...l,
+        skipForceHide: !0,
         renderComponent: (e) =>
             (0, i.jsx)(p, {
                 onClick: n,
