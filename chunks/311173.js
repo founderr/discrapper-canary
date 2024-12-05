@@ -40,7 +40,7 @@ function p(e) {
 function f(e) {
     var t, n;
     let { rule: l, onChangeText: a, className: o } = e,
-        { patterns: m, valueError: f, errors: C, validatePatternsChanged: _, validateEditingValueChanged: v } = (0, d.Z)(l, a),
+        { patterns: m, valueError: f, errors: C, validatePatternsChanged: v, validateEditingValueChanged: _ } = (0, d.Z)(l, a),
         [I] = r.useState(() => ({
             tags: m,
             value: '',
@@ -65,15 +65,15 @@ function f(e) {
         ),
         T = r.useCallback(
             (e) => {
-                _(e, m);
+                v(e, m);
             },
-            [_, m]
+            [v, m]
         ),
-        j = r.useCallback(
+        b = r.useCallback(
             (e) => {
-                v(e);
+                _(e);
             },
-            [v]
+            [_]
         );
     return (0, i.jsxs)('div', {
         className: s()(g.keywordsContainer, o),
@@ -82,7 +82,7 @@ function f(e) {
                 placeholder: '^b(a|@)d$\nw(o|0)rd(s|$)',
                 initialValue: I,
                 onChangeTags: T,
-                onChangeNewTagValue: j,
+                onChangeNewTagValue: b,
                 tagErrors: N,
                 maxTags: u.VW
             }),

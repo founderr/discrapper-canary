@@ -59,7 +59,7 @@ let I = l.memo(function (e) {
             let e = null != N && (0, m.vd)(N.type) ? N : null,
                 t = null != e ? e.getGuildId() : E;
             (0, o.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e('46746'), n.e('33641')]).then(n.bind(n, 60594));
+                let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('67911')]).then(n.bind(n, 60594));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,

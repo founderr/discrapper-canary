@@ -20,8 +20,8 @@ var i = n(200651),
     v = n(933557),
     g = n(701362),
     E = n(552282),
-    x = n(565799),
-    C = n(501655),
+    C = n(565799),
+    x = n(501655),
     Z = n(597998),
     _ = n(199902),
     S = n(314897),
@@ -34,8 +34,8 @@ var i = n(200651),
     T = n(136015),
     k = n(51144),
     w = n(145597),
-    A = n(388627),
-    L = n(981631),
+    L = n(388627),
+    A = n(981631),
     R = n(65154),
     M = n(882110);
 function z(e) {
@@ -62,18 +62,18 @@ function z(e) {
     });
 }
 function D(e) {
-    let { channel: t, flipped: n = !1, locked: o = !1, user: u, nick: c, displayNameMode: d, displayUserMode: p, size: m = L.ipw.LARGE, onClick: v, onContextMenu: E, context: x, guildId: C, voiceState: I, showStreamPreview: N, onShowStreamPreview: O, onWatchStream: y } = e,
+    let { channel: t, flipped: n = !1, locked: o = !1, user: u, nick: c, displayNameMode: d, displayUserMode: p, size: m = A.ipw.LARGE, onClick: v, onContextMenu: E, context: C, guildId: x, voiceState: I, showStreamPreview: N, onShowStreamPreview: O, onWatchStream: y } = e,
         j = (0, s.e7)([S.default], () => S.default.getId() === u.id, [u.id]),
         [T, k, w] = (0, s.Wu)([b.Z], () => (j ? [!b.Z.isSupported() || b.Z.isSelfMute() || b.Z.isSelfMutedTemporarily(), b.Z.isSelfDeaf(), !1] : [!b.Z.isSupported() || b.Z.isLocalMute(u.id), !1, b.Z.isLocalVideoDisabled(u.id)]), [j, u.id]),
-        A = (0, s.e7)([_.Z], () => _.Z.getCurrentUserActiveStream()),
-        R = (0, s.Wu)([_.Z], () => (null != A ? _.Z.getViewerIds(A) : [])),
+        L = (0, s.e7)([_.Z], () => _.Z.getCurrentUserActiveStream()),
+        R = (0, s.Wu)([_.Z], () => (null != L ? _.Z.getViewerIds(L) : [])),
         D = (0, f.Z)({
             userId: u.id,
-            context: x
+            context: C
         }),
-        P = (0, s.e7)([_.Z], () => _.Z.getStreamForUser(u.id, C)),
+        P = (0, s.e7)([_.Z], () => _.Z.getStreamForUser(u.id, x)),
         V = null != P,
-        W = l.useMemo(() => null != A && A.ownerId !== u.id && R.includes(u.id), [A, u.id, R]),
+        W = l.useMemo(() => null != L && L.ownerId !== u.id && R.includes(u.id), [L, u.id, R]),
         U = l.useCallback(() => O(null), [O]),
         F = l.useCallback(
             () =>
@@ -90,14 +90,14 @@ function D(e) {
                     },
                     onAction: y,
                     previewIsOpen: N,
-                    location: L.Sbl.UNLOCKED_OVERLAY,
+                    location: A.Sbl.UNLOCKED_OVERLAY,
                     hideTip: !0
                 }),
             [u, t, P, N, U, y]
         );
-    if (p === L.OYC.ONLY_WHILE_SPEAKING && o && !D) return null;
+    if (p === A.OYC.ONLY_WHILE_SPEAKING && o && !D) return null;
     let { mute: B, suppress: H, deaf: Y } = I,
-        G = m === L.ipw.LARGE ? 32 : 24;
+        G = m === A.ipw.LARGE ? 32 : 24;
     return (0, i.jsxs)(a.Clickable, {
         className: r()(M.voiceUser, {
             [M.speaking]: D,
@@ -111,8 +111,8 @@ function D(e) {
         children: [
             (0, i.jsx)(a.Avatar, {
                 className: M.avatar,
-                size: m === L.ipw.LARGE ? a.AvatarSizes.SIZE_32 : a.AvatarSizes.SIZE_24,
-                src: u.getAvatarURL(C, G),
+                size: m === A.ipw.LARGE ? a.AvatarSizes.SIZE_32 : a.AvatarSizes.SIZE_24,
+                src: u.getAvatarURL(x, G),
                 'aria-hidden': !0
             }),
             (0, i.jsx)(z, {
@@ -121,7 +121,7 @@ function D(e) {
                 channelId: t.id,
                 guildId: t.getGuildId()
             }),
-            o && (d === L.wC$.NEVER || (!D && d === L.wC$.ONLY_WHILE_SPEAKING))
+            o && (d === A.wC$.NEVER || (!D && d === A.wC$.ONLY_WHILE_SPEAKING))
                 ? null
                 : (0, i.jsx)(a.Popout, {
                       position: 'right',
@@ -139,7 +139,7 @@ function D(e) {
                                       children: c
                                   }),
                                   (0, i.jsx)(Z.nm, {
-                                      guildId: C,
+                                      guildId: x,
                                       user: u,
                                       video: I.selfVideo,
                                       isStreaming: V,
@@ -162,8 +162,8 @@ function D(e) {
 }
 function P(e) {
     let { id: t, context: o = R.Yn.DEFAULT, channel: r, sortedVoiceStates: s, displayNameMode: a, displayUserMode: h, locked: f, pinned: p, isPreviewingInGame: m, anchorLeft: v, avatarSizeMode: g } = e,
-        [E, x] = l.useState(null),
-        C = (e, t) => {
+        [E, C] = l.useState(null),
+        x = (e, t) => {
             (0, u.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('351')]).then(n.bind(n, 881351));
                 return (n) =>
@@ -179,16 +179,16 @@ function P(e) {
         _ = l.useCallback(() => {
             var e, n;
             let i = null === (e = N.Z.getWidget(t)) || void 0 === e ? void 0 : e.layoutId,
-                l = null != i ? (null === (n = N.Z.getWidgetsForLayout(i)) || void 0 === n ? void 0 : n.find((e) => e.type === L.Odu.GO_LIVE)) : null;
+                l = null != i ? (null === (n = N.Z.getWidgetsForLayout(i)) || void 0 === n ? void 0 : n.find((e) => e.type === A.Odu.GO_LIVE)) : null;
             null != l &&
                 !l.pinned &&
                 ((0, c.xh)(l.id),
-                d.Z.track(L.rMx.OVERLAY_PIN_TOGGLED, {
+                d.Z.track(A.rMx.OVERLAY_PIN_TOGGLED, {
                     pinned: !0,
                     guild_id: null == r ? void 0 : r.guild_id,
                     channel_id: null == r ? void 0 : r.id,
                     channel_type: null == r ? void 0 : r.type,
-                    widget_type: L.Odu.GO_LIVE
+                    widget_type: A.Odu.GO_LIVE
                 }));
         }, [r, t]);
     return Z
@@ -210,12 +210,12 @@ function P(e) {
                                 displayUserMode: h,
                                 size: g,
                                 locked: f || m,
-                                onContextMenu: C,
-                                onClick: C,
+                                onContextMenu: x,
+                                onClick: x,
                                 context: o,
                                 channel: r,
                                 showStreamPreview: n.id === E,
-                                onShowStreamPreview: x,
+                                onShowStreamPreview: C,
                                 onWatchStream: _
                             },
                             n.id
@@ -230,10 +230,10 @@ function V(e) {
         l = (0, v.ZP)(n),
         o = (function () {
             let [e] = (0, s.e7)(
-                [y.ZP, x.Z, O.Z, I.Z],
+                [y.ZP, C.Z, O.Z, I.Z],
                 () => {
                     let e = I.Z.getChannel(O.Z.getVoiceChannelId());
-                    return null == e ? [[], -1] : e.isGuildStageVoice() ? [x.Z.getMutableParticipants(e.id, C.pV.SPEAKER), x.Z.getParticipantsVersion(e.id)] : [y.ZP.getVoiceStatesForChannel(e), y.ZP.getVoiceStateVersion(e.getGuildId())];
+                    return null == e ? [[], -1] : e.isGuildStageVoice() ? [C.Z.getMutableParticipants(e.id, x.pV.SPEAKER), C.Z.getParticipantsVersion(e.id)] : [y.ZP.getVoiceStatesForChannel(e), y.ZP.getVoiceStateVersion(e.getGuildId())];
                 },
                 [],
                 T.Q
@@ -241,7 +241,7 @@ function V(e) {
             return e;
         })(),
         r = (0, s.e7)([_.Z], () => _.Z.getStreamerActiveStreamMetadata()),
-        a = (0, A.II)(),
+        a = (0, L.II)(),
         u = (0, p.q)(null == a ? void 0 : a.id),
         c = (0, s.cj)([_.Z, j.Z], () => {
             let e = _.Z.getCurrentUserActiveStream();

@@ -45,7 +45,7 @@ function h(e) {
                         s.Z.updateNotificationStatus(t),
                         s.Z.setInstanceLocked(!1),
                         (0, r.openModalLazy)(async () => {
-                            let { default: e } = await Promise.all([n.e('46746'), n.e('33641')]).then(n.bind(n, 60594));
+                            let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('67911')]).then(n.bind(n, 60594));
                             return (t) =>
                                 (0, i.jsx)(e, {
                                     ...t,
@@ -77,7 +77,7 @@ function h(e) {
                         s.Z.updateNotificationStatus(t),
                         s.Z.setInstanceLocked(!1),
                         (0, r.openModalLazy)(async () => {
-                            let { default: e } = await Promise.all([n.e('46746'), n.e('33641')]).then(n.bind(n, 60594));
+                            let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('67911')]).then(n.bind(n, 60594));
                             return (t) =>
                                 (0, i.jsx)(e, {
                                     ...t,

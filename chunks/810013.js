@@ -1,37 +1,37 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return f;
+        return m;
     }
 });
-var l = n(200651);
-n(192379);
-var i = n(442837),
-    r = n(481060),
-    s = n(314897),
-    a = n(938475),
-    o = n(499596),
-    c = n(537135),
-    d = n(388032),
-    u = n(456963);
-function f(e) {
-    let { channel: t } = e,
-        n = (0, i.e7)([s.default], () => s.default.getId()),
-        f = (0, i.e7)([a.ZP], () => a.ZP.getVoiceStatesForChannel(t), [t]);
-    return (0, l.jsx)(r.FormItem, {
-        title: d.intl.string(d.t.KPuWsr),
-        className: u.modalContent,
-        titleClassName: u.formItemTitle,
-        children: (0, l.jsx)(c.Z, {
+var l = t(200651);
+t(192379);
+var i = t(442837),
+    s = t(481060),
+    r = t(314897),
+    a = t(938475),
+    o = t(499596),
+    u = t(537135),
+    c = t(388032),
+    d = t(456963);
+function m(e) {
+    let { channel: n } = e,
+        t = (0, i.e7)([r.default], () => r.default.getId()),
+        m = (0, i.e7)([a.ZP], () => a.ZP.getVoiceStatesForChannel(n), [n]);
+    return (0, l.jsx)(s.FormItem, {
+        title: c.intl.string(c.t.KPuWsr),
+        className: d.modalContent,
+        titleClassName: d.formItemTitle,
+        children: (0, l.jsx)(u.Z, {
             children: (0, l.jsx)(o.Z, {
-                channel: t,
-                users: f
+                channel: n,
+                users: m
                     .filter((e) => {
-                        let { user: t } = e;
-                        return t.id !== n;
+                        let { user: n } = e;
+                        return n.id !== t;
                     })
                     .map((e) => {
-                        let { user: t } = e;
-                        return t;
+                        let { user: n } = e;
+                        return n;
                     })
             })
         })

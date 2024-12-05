@@ -45,7 +45,7 @@ function g(e) {
             secondaryTintLuminances: m,
             secondaryLuminanceWeights: h
         }),
-        { styleContent: _, containerId: v } = (0, l.bC)(f, C);
+        { styleContent: v, containerId: _ } = (0, l.bC)(f, C);
     return (0, i.jsxs)('svg', {
         ...p,
         'aria-label': s.intl.string(s.t.nH6S2d),
@@ -97,12 +97,12 @@ function g(e) {
                             })
                         ]
                     }),
-                    (0, i.jsx)('style', { children: _ })
+                    (0, i.jsx)('style', { children: v })
                 ]
             }),
             (0, i.jsx)('use', {
                 href: ''.concat(a, '#wrapper-layer'),
-                id: v
+                id: _
             }),
             (0, i.jsx)('use', {
                 href: ''.concat(a, '#clan-banner-warp-tunnel-secondary'),

@@ -10,8 +10,8 @@ var o = n(200651),
     p = n(617136),
     m = n(111382),
     x = n(113434),
-    g = n(497505),
-    f = n(918701),
+    f = n(497505),
+    g = n(918701),
     h = n(566078),
     C = n(667105),
     v = n(585857),
@@ -55,7 +55,7 @@ function E(e) {
 function N(e) {
     let { quest: t, useReducedMotion: n } = e,
         s = (0, m.n)(),
-        l = (0, C.k3)(t.id, g.jn.QUEST_BAR_V2),
+        l = (0, C.k3)(t.id, f.jn.QUEST_BAR_V2),
         d = (0, C.g2)({ useReducedMotion: n }),
         {
             errorHints: v,
@@ -66,14 +66,14 @@ function N(e) {
             beforeRequest: () => {
                 (0, p._3)({
                     questId: t.id,
-                    questContent: g.jn.QUEST_BAR_V2,
+                    questContent: f.jn.QUEST_BAR_V2,
                     questContentCTA: p.jZ.DEFIBRILLATOR
                 }),
                     d.startAnimation();
             },
             afterRequest: d.stopAnimation
         }),
-        { header: T, renderBody: B } = r.useMemo(() => {
+        { header: B, renderBody: T } = r.useMemo(() => {
             let e = v.length > 0,
                 n = h.r.build(t.config).application.name;
             return {
@@ -84,21 +84,21 @@ function N(e) {
                               children: v.map((e, n) => {
                                   if (e.type === i.K.EXPIRED_CREDENTIAL && s) {
                                       let r = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
-                                          s = (0, f.C9)(e),
-                                          a = (0, f._j)(e);
+                                          s = (0, g.C9)(e),
+                                          a = (0, g._j)(e);
                                       return (0, o.jsx)(
                                           E,
                                           {
                                               children: j.intl.format(s, {
                                                   account_name: null == r ? void 0 : r.name,
                                                   onClick: () => {
-                                                      (0, f.fY)(
+                                                      (0, g.fY)(
                                                           {
                                                               quest: t,
                                                               platformType: a
                                                           },
                                                           {
-                                                              content: g.jn.QUEST_BAR,
+                                                              content: f.jn.QUEST_BAR,
                                                               ctaContent: p.jZ.DEFIBRILLATOR_RECONNECT_CONSOLE
                                                           }
                                                       );
@@ -135,7 +135,7 @@ function N(e) {
                     }),
                     (0, o.jsx)(c.Text, {
                         variant: 'text-xs/medium',
-                        children: T
+                        children: B
                     }),
                     (0, o.jsx)(c.Clickable, {
                         className: a()(_.microphoneUnitRefreshIconWrapper, { [_.disabled]: b }),
@@ -146,12 +146,12 @@ function N(e) {
             }),
             (0, o.jsxs)('div', {
                 className: a()({ [_.opacity_50]: b }),
-                children: [B(), 0 === v.length ? null : (0, o.jsx)(E, { children: l })]
+                children: [T(), 0 === v.length ? null : (0, o.jsx)(E, { children: l })]
             })
         ]
     });
 }
-function T(e) {
+function B(e) {
     let { text: t } = e;
     return (0, o.jsx)(c.Text, {
         color: 'text-muted',
@@ -171,7 +171,7 @@ t.Z = function (e) {
         } = r.useMemo(() => {
             var e;
             let r = a.xboxAndPlaystationAccounts.length > 0,
-                s = r && (0, f.Bz)(t),
+                s = r && (0, g.Bz)(t),
                 i = h.r.build(t.config).application.name,
                 l = (null === (e = t.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
             return {
@@ -185,11 +185,11 @@ t.Z = function (e) {
                         isComplete: r || s || l
                     },
                     {
-                        renderContent: () => (0, o.jsx)(T, { text: j.intl.formatToPlainString(j.t['+8JB6e'], { gameTitle: i }) }),
+                        renderContent: () => (0, o.jsx)(B, { text: j.intl.formatToPlainString(j.t['+8JB6e'], { gameTitle: i }) }),
                         isComplete: s || l
                     },
                     {
-                        renderContent: () => (0, o.jsx)(T, { text: j.intl.formatToPlainString(j.t.HhfrYW, { numMinutes: n.targetMinutes }) }),
+                        renderContent: () => (0, o.jsx)(B, { text: j.intl.formatToPlainString(j.t.HhfrYW, { numMinutes: n.targetMinutes }) }),
                         isComplete: l
                     }
                 ],

@@ -1,16 +1,16 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
         return i;
     }
 }),
-    n(47120);
-var l = n(131951);
+    t(47120);
+var l = t(131951);
 function i() {
     return Object.entries(l.Z.getVideoDevices()).map((e) => {
-        let [t, n] = e;
+        let [n, t] = e;
         return {
-            id: 'camera:' + n.id,
-            name: n.name,
+            id: 'camera:' + t.id,
+            name: t.name,
             url: ''
         };
     });

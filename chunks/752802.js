@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return A;
     }
 }),
     n(47120);
@@ -20,8 +20,8 @@ var i = n(200651),
     v = n(194082),
     g = n(979264),
     E = n(871118),
-    x = n(352978),
-    C = n(833519),
+    C = n(352978),
+    x = n(833519),
     Z = n(839662),
     _ = n(199902),
     S = n(314897),
@@ -187,11 +187,11 @@ function w(e) {
         ]
     });
 }
-let A = new Set([y.jm8.ENDED, y.jm8.FAILED, y.jm8.PAUSED]),
-    L = l.memo(function (e) {
+let L = new Set([y.jm8.ENDED, y.jm8.FAILED, y.jm8.PAUSED]),
+    A = l.memo(function (e) {
         let { participant: t, width: n, locked: l, widgetId: o, pinned: a } = e,
             u = (0, s.e7)([_.Z], () => _.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [t.user.id, t.stream.guildId]),
-            c = null != u && A.has(u.state),
+            c = null != u && L.has(u.state),
             d = null != u,
             f = (0, O.yA)(t.stream),
             p = (0, O.xN)(t.stream);
@@ -212,10 +212,10 @@ let A = new Set([y.jm8.ENDED, y.jm8.FAILED, y.jm8.PAUSED]),
                                 children: (0, i.jsx)('div', {
                                     className: T.streamTile,
                                     style: { transform: 'scale('.concat(f, ')') },
-                                    children: (0, i.jsx)(C.Z, {
+                                    children: (0, i.jsx)(x.Z, {
                                         participant: t,
                                         width: n,
-                                        fit: null != p ? p : x.L.CONTAIN,
+                                        fit: null != p ? p : C.L.CONTAIN,
                                         inPopout: !0,
                                         focused: !l,
                                         paused: !1,

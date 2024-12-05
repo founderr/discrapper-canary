@@ -11,8 +11,8 @@ var o = n(200651),
     p = n(607070),
     m = n(819640),
     x = n(569379),
-    g = n(675654),
-    f = n(211720),
+    f = n(675654),
+    g = n(211720),
     h = n(197857);
 let C = ['#51BC9D'];
 t.Z = (e) => {
@@ -20,8 +20,8 @@ t.Z = (e) => {
     let { expansionSpring: n, overlayRef: s, quest: v, progressBarRef: j, isExpanded: _ } = e,
         { completionSpring: b, startCompletionAnimation: E } = (0, x.G)(),
         N = (null === (t = v.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-        T = r.useRef(!1),
-        B = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
+        B = r.useRef(!1),
+        T = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
         S = r.useRef(null),
         A = (0, d.e7)([m.Z], () => m.Z.hasLayers()),
         y = (0, u.Z)(A),
@@ -35,7 +35,7 @@ t.Z = (e) => {
         ),
         P = (0, i.uR)(R, I),
         M = r.useCallback(() => {
-            if (B) return;
+            if (T) return;
             let e = j.current,
                 t = S.current;
             if (null != t && null != e && P.isReady) {
@@ -48,7 +48,7 @@ t.Z = (e) => {
                     (r = e.clientHeight),
                     (s = e.clientWidth),
                     {
-                        ...g.We,
+                        ...f.We,
                         position: {
                             type: 'static-random',
                             minValue: {
@@ -89,7 +89,7 @@ t.Z = (e) => {
                     100
                 );
             }
-        }, [j, S, P, B]),
+        }, [j, S, P, T]),
         O = (0, u.Z)(_);
     return (r.useEffect(() => {
         N && _ && !O && (E(), M());
@@ -103,25 +103,25 @@ t.Z = (e) => {
             }, 200);
     }, [N, y, A, E, M]),
     r.useEffect(() => {
-        if (!!P.isReady) !T.current && N && (E(), M()), (T.current = N);
-    }, [N, T, M, E, P]),
-    B)
+        if (!!P.isReady) !B.current && N && (E(), M()), (B.current = N);
+    }, [N, B, M, E, P]),
+    T)
         ? null
         : (0, o.jsxs)('div', {
-              className: f.wrapper,
+              className: g.wrapper,
               'aria-hidden': 'true',
               ref: S,
               children: [
                   (0, o.jsx)(c.animated.div, {
-                      className: f.background,
+                      className: g.background,
                       style: { opacity: b }
                   }),
                   (0, o.jsx)(c.animated.div, {
-                      className: a()(f.borders, f.bordersTopLeft),
+                      className: a()(g.borders, g.bordersTopLeft),
                       style: { opacity: b }
                   }),
                   (0, o.jsxs)(c.animated.div, {
-                      className: f.confettiWrapper,
+                      className: g.confettiWrapper,
                       style: {
                           transform: n
                               .to({
@@ -133,20 +133,20 @@ t.Z = (e) => {
                       children: [
                           (0, o.jsx)(i.O_, {
                               ref: w,
-                              className: f.confetti,
+                              className: g.confetti,
                               environment: q.current
                           }),
                           (0, o.jsx)(i.Ji, {
                               ref: k,
                               sprites: [h],
                               colors: C,
-                              spriteWidth: g.Ko,
-                              spriteHeight: g.Ko
+                              spriteWidth: f.Ko,
+                              spriteHeight: f.Ko
                           }),
                           null != s.current &&
                               (0, l.createPortal)(
                                   (0, o.jsx)(c.animated.div, {
-                                      className: a()(f.borders, f.bordersBottom),
+                                      className: a()(g.borders, g.bordersBottom),
                                       style: { opacity: b }
                                   }),
                                   s.current

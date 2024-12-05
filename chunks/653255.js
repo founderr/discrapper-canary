@@ -1,53 +1,53 @@
 var r,
-    i,
+    o,
+    a,
     l,
-    u,
-    o = t(442837),
-    a = t(570140),
-    s = t(358085),
-    c = t(998502),
-    d = t(869614),
+    i = t(442837),
+    c = t(570140),
+    u = t(358085),
+    d = t(998502),
+    s = t(869614),
     f = t(281083),
     m = t(672598);
-let v = !1,
+let _ = !1,
     p = !0,
-    h = !1;
-class g extends (u = o.ZP.Store) {
+    x = !1;
+class h extends (l = i.ZP.Store) {
     initialize() {
-        !(!s.isPlatformEmbedded || __OVERLAY__) &&
-            c.ZP.getGPUDriverVersions().then((e) => {
-                (v = (0, m.Z)(e)), (p = (0, d.Z)(e)), (h = (0, f.Z)(e)), this.emitChange();
+        !(!u.isPlatformEmbedded || __OVERLAY__) &&
+            d.ZP.getGPUDriverVersions().then((e) => {
+                (_ = (0, m.Z)(e)), (p = (0, s.Z)(e)), (x = (0, f.Z)(e)), this.emitChange();
             });
     }
     get GPUDriversOutdated() {
-        return v;
+        return _;
     }
     get canUseHardwareAcceleration() {
         return p;
     }
     get problematicGPUDriver() {
-        return h;
+        return x;
     }
     getState() {
         return {
-            GPUDriversOutdated: v,
+            GPUDriversOutdated: _,
             canUseHardwareAcceleration: p,
-            problematicGPUDriver: h
+            problematicGPUDriver: x
         };
     }
 }
-(l = 'StreamingCapabilitiesStore'),
-    (i = 'displayName') in (r = g)
-        ? Object.defineProperty(r, i, {
-              value: l,
+(a = 'StreamingCapabilitiesStore'),
+    (o = 'displayName') in (r = h)
+        ? Object.defineProperty(r, o, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[i] = l),
-    (n.Z = new g(a.Z, {
+        : (r[o] = a),
+    (n.Z = new h(c.Z, {
         OVERLAY_INITIALIZE: function (e) {
             let { streamingCapabilitiesStoreState: n } = e;
-            (v = n.GPUDriversOutdated), (p = n.canUseHardwareAcceleration);
+            (_ = n.GPUDriversOutdated), (p = n.canUseHardwareAcceleration);
         }
     }));

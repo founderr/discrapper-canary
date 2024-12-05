@@ -19,24 +19,24 @@ var i = n(200651),
     p = n(464610),
     f = n(733629),
     C = n(598622),
-    _ = n(921944),
-    v = n(388032),
+    v = n(921944),
+    _ = n(388032),
     I = n(232203);
 function N(e) {
     let t,
         { hideChangelog: n } = e,
         N = (0, l.e7)([m.Z], () => m.Z.getGuildId()),
         T = (0, l.e7)([u.Z], () => u.Z.getGuild(N)),
-        j = (0, l.e7)([g.Z], () => g.Z.getCurrentPage());
+        b = (0, l.e7)([g.Z], () => g.Z.getCurrentPage());
     if (
         (r.useEffect(() => {
-            (0, o.EW)(s.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: _.L.AUTO });
+            (0, o.EW)(s.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: v.L.AUTO });
         }, []),
         null == T)
     )
         return null;
-    let b = (0, C.Q)(T);
-    switch (j) {
+    let j = (0, C.Q)(T);
+    switch (b) {
         case x.u.OVERVIEW:
             t = (0, i.jsx)(p.Z, {
                 guild: T,
@@ -45,14 +45,14 @@ function N(e) {
             break;
         case x.u.CAPTCHA_AND_RAID_PROTECTION:
             t = (0, i.jsx)(f.Z, {
-                title: v.intl.string(v.t['53eF5u']),
-                settings: b[x.u.CAPTCHA_AND_RAID_PROTECTION]
+                title: _.intl.string(_.t['53eF5u']),
+                settings: j[x.u.CAPTCHA_AND_RAID_PROTECTION]
             });
             break;
         case x.u.DM_AND_SPAM_PROTECTION:
             t = (0, i.jsx)(f.Z, {
-                title: v.intl.string(v.t.O0SfFx),
-                settings: b[x.u.DM_AND_SPAM_PROTECTION]
+                title: _.intl.string(_.t.O0SfFx),
+                settings: j[x.u.DM_AND_SPAM_PROTECTION]
             });
             break;
         case x.u.AUTOMOD:
@@ -60,13 +60,13 @@ function N(e) {
             break;
         case x.u.PERMISSIONS:
             t = (0, i.jsx)(f.Z, {
-                title: v.intl.string(v.t.BXoNiY),
-                settings: b[x.u.PERMISSIONS]
+                title: _.intl.string(_.t.BXoNiY),
+                settings: j[x.u.PERMISSIONS]
             });
     }
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            j !== x.u.OVERVIEW &&
+            b !== x.u.OVERVIEW &&
                 (0, i.jsxs)(a.Button, {
                     className: I.back,
                     innerClassName: I.backButton,
@@ -83,7 +83,7 @@ function N(e) {
                         (0, i.jsx)(a.Text, {
                             variant: 'text-sm/semibold',
                             color: 'interactive-normal',
-                            children: v.intl.string(v.t['13/7kZ'])
+                            children: _.intl.string(_.t['13/7kZ'])
                         })
                     ]
                 }),

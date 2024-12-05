@@ -23,13 +23,13 @@ var i = n(200651),
     p = n(26323),
     f = n(307707),
     C = n(734893),
-    _ = n(216701),
-    v = n(150512),
+    v = n(216701),
+    _ = n(150512),
     I = n(516129),
     N = n(813197),
     T = n(210887),
-    j = n(314897),
-    b = n(592125),
+    b = n(314897),
+    j = n(592125),
     S = n(984933),
     E = n(430824),
     R = n(709586),
@@ -65,7 +65,7 @@ function V(e) {
                         });
                 });
         }, [t, l]),
-        d = (0, a.e7)([j.default], () => j.default.getId());
+        d = (0, a.e7)([b.default], () => b.default.getId());
     return (0, C.pw)(l)
         ? (0, i.jsx)(c.Button, {
               size: c.Button.Sizes.SMALL,
@@ -79,7 +79,7 @@ function V(e) {
               className: G.editWelcomeSection,
               onClick: o,
               children: [
-                  (0, i.jsx)(v.Z, {
+                  (0, i.jsx)(_.Z, {
                       guildId: t,
                       welcomeMessage: {
                           authorIds: l.authorIds.length > 0 ? l.authorIds : [d],
@@ -106,8 +106,8 @@ function V(e) {
 }
 function Y(e) {
     var t, l, o, d, u;
-    let { guildId: g, action: x, actionIndex: p, onChange: v, onDelete: I, onDragStart: N, onDragComplete: T, onDragReset: j } = e,
-        S = (0, a.e7)([b.Z], () => b.Z.getChannel(x.channelId)),
+    let { guildId: g, action: x, actionIndex: p, onChange: _, onDelete: I, onDragStart: N, onDragComplete: T, onDragReset: b } = e,
+        S = (0, a.e7)([j.Z], () => j.Z.getChannel(x.channelId)),
         R = (0, a.e7)([E.Z], () => E.Z.getGuild(g)),
         { customEmoji: Z, unicodeEmoji: A } = (0, f.Z)(null === (t = x.emoji) || void 0 === t ? void 0 : t.id, null === (l = x.emoji) || void 0 === l ? void 0 : l.name),
         L = null == x.emoji || null != Z || null != A,
@@ -128,7 +128,7 @@ function Y(e) {
             optionId: x.channelId,
             onDragStart: N,
             onDragComplete: T,
-            onDragReset: j
+            onDragReset: b
         }),
         B = r.useCallback(() => {
             if (null != g)
@@ -139,11 +139,11 @@ function Y(e) {
                             ...t,
                             guildId: g,
                             action: x,
-                            onSave: (e, t, n) => v(p, e, t, n),
+                            onSave: (e, t, n) => _(p, e, t, n),
                             onDelete: () => I(p)
                         });
                 });
-        }, [g, x, p, v, I]);
+        }, [g, x, p, _, I]);
     if (null == S || null == R) return null;
     let F = null !== (u = (0, m.KS)(S)) && void 0 !== u ? u : c.TextIcon;
     return (0, i.jsxs)('div', {
@@ -181,10 +181,10 @@ function Y(e) {
                           })
                         : (0, i.jsx)('div', {
                               className: G.actionItemEmojiWrapper,
-                              children: (0, i.jsx)(_.Z, {
+                              children: (0, i.jsx)(v.Z, {
                                   emojiId: null === (o = x.emoji) || void 0 === o ? void 0 : o.id,
                                   emojiName: null === (d = x.emoji) || void 0 === d ? void 0 : d.name,
-                                  size: _.R.MEDIUM,
+                                  size: v.R.MEDIUM,
                                   defaultComponent: (0, i.jsx)(F, {})
                               })
                           }),
@@ -595,9 +595,9 @@ function $(e) {
     let { guildId: t, resourceChannel: l, index: o, onDragComplete: d, onDragStart: u, onDragReset: m } = e,
         g = (0, a.e7)([E.Z], () => E.Z.getGuild(t)),
         { title: x, channelId: p, description: f } = l,
-        _ = b.Z.getChannel(p),
-        v = null;
-    (null == _ || !(0, C.k3)(_)) && (v = U.intl.string(U.t.kTdL8f));
+        v = j.Z.getChannel(p),
+        _ = null;
+    (null == v || !(0, C.k3)(v)) && (_ = U.intl.string(U.t.kTdL8f));
     let I = null == f || 0 === f.length,
         N = y.ZP.getResourceChannelIconURL({
             channelId: l.channelId,
@@ -605,7 +605,7 @@ function $(e) {
         }),
         {
             drag: T,
-            dragSourcePosition: j,
+            dragSourcePosition: b,
             drop: S,
             setIsDraggable: R
         } = (0, h.Z)({
@@ -649,16 +649,16 @@ function $(e) {
                         });
                 });
         }, [t, l, Z, A]);
-    return null == g || null == _
+    return null == g || null == v
         ? null
         : (0, i.jsxs)('div', {
               className: s()(G.resourceChannelContainer),
               children: [
                   (0, i.jsxs)('div', {
                       className: s()(G.resourceChannel, {
-                          [G.dropIndicatorBefore]: null != j && o < j,
-                          [G.dropIndicatorAfter]: null != j && o > j,
-                          [G.resourceChannelError]: null != v
+                          [G.dropIndicatorBefore]: null != b && o < b,
+                          [G.dropIndicatorAfter]: null != b && o > b,
+                          [G.resourceChannelError]: null != _
                       }),
                       ref: (e) => T(S(e)),
                       children: [
@@ -723,11 +723,11 @@ function $(e) {
                           })
                       ]
                   }),
-                  null != v &&
+                  null != _ &&
                       (0, i.jsx)(c.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-danger',
-                          children: v
+                          children: _
                       })
               ]
           });

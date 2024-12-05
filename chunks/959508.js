@@ -20,8 +20,8 @@ var i = n(200651),
     p = n(570961),
     f = n(208665),
     C = n(976983),
-    _ = n(290511),
-    v = n(388032),
+    v = n(290511),
+    _ = n(388032),
     I = n(530961);
 let N = { optionErrors: [] };
 function T(e) {
@@ -29,7 +29,7 @@ function T(e) {
     let { guild: n, prompt: l, disableAutofocus: d, promptIndex: C, dragIndex: T, includeCount: S, singleColumn: E, onPromptDragComplete: R, onPromptDragStart: y, onPromptDragReset: Z } = e,
         { dropdownsAllowed: A } = (0, m.Ug)(n.id),
         L = (0, a.e7)([x.Z], () => x.Z.editedDefaultChannelIds),
-        D = A ? _.qm : _.M$,
+        D = A ? v.qm : v.M$,
         {
             drag: O,
             dragSourcePosition: k,
@@ -51,7 +51,7 @@ function T(e) {
         [G, F] = r.useState(!1),
         H = null !== (t = w.options) && void 0 !== t ? t : w.optionErrors.filter(g.lm)[0],
         z = w.config,
-        W = A && l.options.length >= _.fY,
+        W = A && l.options.length >= v.fY,
         V = (0, u.kl)(n.id, Array.from(L), [l]).length - L.size,
         Y = r.useRef(null);
     return (r.useLayoutEffect(() => {
@@ -90,7 +90,7 @@ function T(e) {
                           className: I.questionNumber,
                           variant: 'text-xs/semibold',
                           color: 'text-muted',
-                          children: v.intl.format(v.t.yjS3zs, { index: C + 1 })
+                          children: _.intl.format(_.t.yjS3zs, { index: C + 1 })
                       }),
                       (0, i.jsx)(o.Text, {
                           variant: 'text-lg/semibold',
@@ -107,7 +107,7 @@ function T(e) {
                           })
                       }),
                       (0, i.jsx)(o.TooltipContainer, {
-                          text: v.intl.string(v.t['Ku+86e']),
+                          text: _.intl.string(_.t['Ku+86e']),
                           className: I.removeButton,
                           children: (0, i.jsx)(o.Clickable, {
                               className: I.closeIcon,
@@ -147,7 +147,7 @@ function T(e) {
                           className: I.questionNumber,
                           variant: 'text-xs/semibold',
                           color: 'text-muted',
-                          children: v.intl.format(v.t.yjS3zs, { index: C + 1 })
+                          children: _.intl.format(_.t.yjS3zs, { index: C + 1 })
                       }),
                       (0, i.jsx)(o.TextInput, {
                           className: I.title,
@@ -155,11 +155,11 @@ function T(e) {
                           inputRef: Y,
                           value: l.title,
                           onChange: (e) => (0, p.Kk)(n, l.id, { title: e }),
-                          placeholder: v.intl.string(v.t.QMCuCg),
-                          maxLength: _.iU,
+                          placeholder: _.intl.string(_.t.QMCuCg),
+                          maxLength: v.iU,
                           error: w.title
                       }),
-                      (0, i.jsx)(j, {
+                      (0, i.jsx)(b, {
                           prompt: l,
                           guild: n
                       }),
@@ -168,16 +168,16 @@ function T(e) {
                           variant: 'text-xs/semibold',
                           color: 'text-muted',
                           children: W
-                              ? v.intl.formatToPlainString(v.t.AbvhZG, {
+                              ? _.intl.formatToPlainString(_.t.AbvhZG, {
                                     count: l.options.length,
                                     total: D
                                 })
-                              : v.intl.formatToPlainString(v.t.b7VxYW, {
+                              : _.intl.formatToPlainString(_.t.b7VxYW, {
                                     count: l.options.length,
                                     total: D
                                 })
                       }),
-                      (0, i.jsx)(b, {
+                      (0, i.jsx)(j, {
                           guild: n,
                           prompt: l,
                           promptIndex: C,
@@ -199,7 +199,7 @@ function T(e) {
                                           children: (0, i.jsx)(o.Text, {
                                               variant: 'text-sm/normal',
                                               color: 'interactive-normal',
-                                              children: v.intl.string(v.t.uCebZW)
+                                              children: _.intl.string(_.t.uCebZW)
                                           })
                                       }),
                                       l.inOnboarding
@@ -212,7 +212,7 @@ function T(e) {
                                                 children: (0, i.jsx)(o.Text, {
                                                     variant: 'text-sm/normal',
                                                     color: 'interactive-normal',
-                                                    children: S ? v.intl.formatToPlainString(v.t['0re8T0'], { count: V }) : v.intl.string(v.t.Ur8Vrq)
+                                                    children: S ? _.intl.formatToPlainString(_.t['0re8T0'], { count: V }) : _.intl.string(_.t.Ur8Vrq)
                                                 })
                                             })
                                           : null
@@ -228,7 +228,7 @@ function T(e) {
                                   })
                               }),
                               (0, i.jsx)(o.TooltipContainer, {
-                                  text: v.intl.string(v.t['Ku+86e']),
+                                  text: _.intl.string(_.t['Ku+86e']),
                                   className: I.removeButton,
                                   children: (0, i.jsx)(o.Clickable, {
                                       className: I.closeIcon,
@@ -246,7 +246,7 @@ function T(e) {
               })
           });
 }
-function j(e) {
+function b(e) {
     let { prompt: t, guild: n } = e,
         [l, s] = r.useState(!1);
     if (
@@ -272,19 +272,19 @@ function j(e) {
             (0, i.jsx)(o.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-muted',
-                children: v.intl.string(v.t.ECnSLi)
+                children: _.intl.string(_.t.ECnSLi)
             }),
             (0, i.jsxs)('div', {
                 className: I.examples,
-                children: [a(v.intl.string(v.t['7GZMJS'])), a(v.intl.string(v.t.nItydn)), a(v.intl.string(v.t.evuYbm)), a(v.intl.string(v.t.XWRuOj))]
+                children: [a(_.intl.string(_.t['7GZMJS'])), a(_.intl.string(_.t.nItydn)), a(_.intl.string(_.t.evuYbm)), a(_.intl.string(_.t.XWRuOj))]
             })
         ]
     });
 }
-function b(e) {
+function j(e) {
     let { guild: t, prompt: n, promptIndex: r, singleColumn: l, errors: s } = e,
         { dropdownsAllowed: a } = (0, m.Ug)(t.id),
-        o = a ? _.qm : _.M$,
+        o = a ? v.qm : v.M$,
         { handleDragStart: c, handleDragReset: u, handleDragComplete: h } = (0, d.Z)(n.options, (e) => (0, p.Kk)(t, n.id, { options: e }));
     return (0, i.jsxs)('div', {
         className: I.options,

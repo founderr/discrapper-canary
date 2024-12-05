@@ -22,8 +22,8 @@ var i = n(200651),
     v = n(430824),
     g = n(496675),
     E = n(699516),
-    x = n(594174),
-    C = n(979651),
+    C = n(594174),
+    x = n(979651),
     Z = n(823379),
     _ = n(981631),
     S = n(388032),
@@ -46,7 +46,7 @@ function N(e) {
                 variant: 'text-sm/semibold',
                 className: r()(I.label, I.channelName),
                 color: o ? 'text-positive' : 'text-normal',
-                children: (0, c.F6)(t, x.default, E.Z)
+                children: (0, c.F6)(t, C.default, E.Z)
             })
         ]
     });
@@ -70,10 +70,10 @@ function b(e) {
 function O(e) {
     let { channel: t } = e,
         n = (0, s.Wu)(
-            [C.Z, x.default, p.Z],
+            [x.Z, C.default, p.Z],
             () =>
-                Object.values(C.Z.getVoiceStatesForChannel(t.id))
-                    .map((e) => x.default.getUser(e.userId))
+                Object.values(x.Z.getVoiceStatesForChannel(t.id))
+                    .map((e) => C.default.getUser(e.userId))
                     .filter(Z.lm)
                     .sort((e, t) => {
                         var n, i, l, o;
@@ -103,16 +103,16 @@ function y(e) {
             })
         ),
         c = (0, s.Wu)(
-            [x.default],
+            [C.default],
             () =>
                 r.reduce((e, t) => {
-                    let n = x.default.getUser(t);
+                    let n = C.default.getUser(t);
                     return null != n && e.push(n), e;
                 }, []),
             [r]
         ),
         d = (0, s.Wu)(
-            [f.Z, C.Z, m.Z, g.Z],
+            [f.Z, x.Z, m.Z, g.Z],
             () => {
                 let e = new Set(
                         f.Z.getChannelHistory().reduce((e, t) => {
@@ -121,7 +121,7 @@ function y(e) {
                         }, [])
                     ),
                     t = c
-                        .map((e) => C.Z.getDiscoverableVoiceStateForUser(e.id))
+                        .map((e) => x.Z.getDiscoverableVoiceStateForUser(e.id))
                         .reduce((t, n) => {
                             let i = null == n ? void 0 : n.channelId;
                             if (null == i) return t;

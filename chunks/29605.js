@@ -23,13 +23,13 @@ var i = n(200651),
     p = n(225433),
     f = n(327802),
     C = n(110924),
-    _ = n(200876),
-    v = n(730089),
+    v = n(200876),
+    _ = n(730089),
     I = n(372444),
     N = n(889564),
     T = n(372129),
-    j = n(357156),
-    b = n(210887),
+    b = n(357156),
+    j = n(210887),
     S = n(626135),
     E = n(768581),
     R = n(176354),
@@ -209,7 +209,7 @@ let B = d().throttle(x.OQ, 1000),
     z = (e) => {
         let { emojis: t, guild: n, onEdit: l, editingDisabled: s = !1 } = e,
             a = r.useMemo(() => [...t].reverse(), [t]),
-            { canManageGuildExpression: o } = (0, j.Gw)(n);
+            { canManageGuildExpression: o } = (0, b.Gw)(n);
         return 0 === t.length
             ? (0, i.jsx)(h.FormText, {
                   type: h.FormTextTypes.DESCRIPTION,
@@ -282,8 +282,8 @@ t.ZP = () => {
     let e = (0, m.e7)([D.Z], () => D.Z.getGuild()),
         [t, l] = r.useState('');
     o()(null != e, 'ConnectedGuildSettingsEmoji must be rendered within a guild context');
-    let s = (0, m.e7)([b.Z], () => b.Z.theme),
-        { canCreateExpressions: a } = (0, j.XJ)(e),
+    let s = (0, m.e7)([j.Z], () => j.Z.theme),
+        { canCreateExpressions: a } = (0, b.XJ)(e),
         { revision: c, emojis: g } = (0, m.cj)([L.Z], () => ({
             revision: L.Z.getEmojiRevision(e.id),
             emojis: L.Z.getEmojis(e.id)
@@ -309,7 +309,7 @@ t.ZP = () => {
         U = e.getMaxEmojiSlots(),
         G = Math.max(U - Z.length, U - w.length),
         H = (n, i, r) =>
-            (0, v.G)({
+            (0, _.G)({
                 data: n,
                 file: i,
                 image: r,
@@ -339,7 +339,7 @@ t.ZP = () => {
                     });
             });
         },
-        K = (0, _.l)(e);
+        K = (0, v.l)(e);
     return (0, i.jsxs)('div', {
         className: M.emojiSettings,
         children: [

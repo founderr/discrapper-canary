@@ -15,13 +15,13 @@ var i = n(200651),
     p = n(690221),
     f = n(706454),
     C = n(650774),
-    _ = n(430824),
-    v = n(246946),
+    v = n(430824),
+    _ = n(246946),
     I = n(626135),
     N = n(771212),
     T = n(434404),
-    j = n(146596),
-    b = n(559368),
+    b = n(146596),
+    j = n(559368),
     S = n(999382),
     E = n(981631),
     R = n(921944),
@@ -104,7 +104,7 @@ let z = () => {
 };
 function W(e) {
     let { guildId: t } = e,
-        { hasAccessRate: n, accessRate: l } = (0, a.cj)([b.Z], () => b.Z.getMemberInsights(t)),
+        { hasAccessRate: n, accessRate: l } = (0, a.cj)([j.Z], () => j.Z.getMemberInsights(t)),
         s = (0, a.e7)([C.Z], () => {
             var e;
             return null !== (e = C.Z.getMemberCount()) && void 0 !== e ? e : 0;
@@ -363,16 +363,16 @@ function W(e) {
 t.Z = () => {
     let e = (0, a.e7)([S.Z], () => S.Z.getGuildId()),
         t = (0, a.e7)([C.Z], () => C.Z.getMemberCount(e)),
-        n = (0, a.e7)([_.Z], () => _.Z.getGuild(e)),
+        n = (0, a.e7)([v.Z], () => v.Z.getGuild(e)),
         l = (0, a.e7)([f.default], () => f.default.locale),
-        { analytics: s, errorCode: o } = (0, a.cj)([b.Z], () => ({
-            analytics: null != e ? b.Z.getOverviewAnalytics(e) : null,
-            errorCode: b.Z.getError()
+        { analytics: s, errorCode: o } = (0, a.cj)([j.Z], () => ({
+            analytics: null != e ? j.Z.getOverviewAnalytics(e) : null,
+            errorCode: j.Z.getError()
         })),
-        c = (0, a.e7)([v.Z], () => v.Z.getSettings().enabled),
+        c = (0, a.e7)([_.Z], () => _.Z.getSettings().enabled),
         d = null == t || null == n || (null != t && t < 500 && null != n && !n.hasFeature(E.oNc.PARTNERED) && !n.hasFeature(E.oNc.VERIFIED));
     r.useEffect(() => {
-        null != e && !d && ((0, j.Vk)(e), (0, j.SR)(e), (0, j.xl)(e));
+        null != e && !d && ((0, b.Vk)(e), (0, b.SR)(e), (0, b.xl)(e));
     }, [e, d]),
         r.useEffect(() => {
             (0, x.Kw)(y.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU);

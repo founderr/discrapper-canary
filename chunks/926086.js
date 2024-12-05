@@ -26,8 +26,8 @@ function m(e) {
         [o, s] = l.useState(0),
         [m, v] = l.useState(0),
         [g, E] = l.useState(0),
-        x = l.useRef(0),
-        [C, Z] = l.useState(0),
+        C = l.useRef(0),
+        [x, Z] = l.useState(0),
         { timeToLiveMs: _, reappearTimeMs: S } = d.ZP.useState(
             (e) => ({
                 timeToLiveMs: e.timeToLiveMs,
@@ -43,7 +43,7 @@ function m(e) {
     l.useEffect(() => void (N.current = I)),
         l.useEffect(
             () => (
-                (x.current = setInterval(() => {
+                (C.current = setInterval(() => {
                     let e = Date.now();
                     v(e),
                         E((t) => {
@@ -55,7 +55,7 @@ function m(e) {
                         });
                 }, 100)),
                 () => {
-                    clearInterval(x.current);
+                    clearInterval(C.current);
                 }
             ),
             []
@@ -87,7 +87,7 @@ function m(e) {
                                   children: (0, i.jsxs)(c.Text, {
                                       variant: 'text-md/semibold',
                                       color: 'always-white',
-                                      children: ['Click Me (', C, ')']
+                                      children: ['Click Me (', x, ')']
                                   })
                               })
                           })

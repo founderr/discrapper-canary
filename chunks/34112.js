@@ -20,13 +20,13 @@ var i = n(200651),
     p = n(646892),
     f = n(741247),
     C = n(518738),
-    _ = n(549631),
-    v = n(496675),
+    v = n(549631),
+    _ = n(496675),
     I = n(626135),
     N = n(480608),
     T = n(243730),
-    j = n(130341),
-    b = n(970129),
+    b = n(130341),
+    j = n(970129),
     S = n(712181),
     E = n(203377),
     R = n(981631),
@@ -37,7 +37,7 @@ let L = 'DRAGGABLE_ROLE';
 function D(e) {
     let { setEditRoleId: t, guild: n, everyoneRole: l, otherRoles: s, setSelectedSection: a, renderHeader: o, headerHeight: c, query: u } = e,
         m = (0, d.e7)([T.Z], () => T.Z.getRoleMemberCount(n.id), [n.id]),
-        g = (0, d.e7)([v.Z], () => v.Z.getHighestRole(n), [n]),
+        g = (0, d.e7)([_.Z], () => _.Z.getHighestRole(n), [n]),
         x = u.trim();
     r.useEffect(() => {
         (0, N.E)(n.id);
@@ -46,9 +46,9 @@ function D(e) {
     r.useEffect(() => {
         if (!p.current && '' !== u.trimStart()) I.default.track(R.rMx.SEARCH_STARTED, { search_type: 'Roles' }), (p.current = !0);
     }, [u]);
-    let f = r.useMemo(() => s.filter((e) => (0, j.uo)(e, x)), [s, x]),
+    let f = r.useMemo(() => s.filter((e) => (0, b.uo)(e, x)), [s, x]),
         C = r.useMemo(() => [...s, l], [s, l]),
-        { draggingId: _, handleDragStart: b, handleDragReset: E, handleDragComplete: y } = (0, S.Z)(C),
+        { draggingId: v, handleDragStart: j, handleDragReset: E, handleDragComplete: y } = (0, S.Z)(C),
         Z = r.useCallback(
             (e) => {
                 var r;
@@ -63,10 +63,10 @@ function D(e) {
                         highestRole: g,
                         currentPosition: l,
                         memberCount: null !== (r = null == m ? void 0 : m[o.id]) && void 0 !== r ? r : 0,
-                        onDragStart: b,
+                        onDragStart: j,
                         onDragReset: E,
                         onDragComplete: y,
-                        disableHover: null != _,
+                        disableHover: null != v,
                         disableDrag: s.length !== f.length,
                         setEditRoleId: t,
                         setSelectedSection: a
@@ -74,7 +74,7 @@ function D(e) {
                     o.id
                 );
             },
-            [f, n, g, m, b, E, y, _, s, t, a]
+            [f, n, g, m, j, E, y, v, s, t, a]
         );
     return (0, i.jsx)(h.Xi, {
         sections: [Math.max(f.length, 1)],
@@ -104,8 +104,8 @@ function O() {
 }
 function k(e) {
     var t, l, c;
-    let { role: d, guild: h, highestRole: x, currentPosition: C, memberCount: v, onDragStart: I, onDragReset: N, onDragComplete: T, disableHover: j, disableDrag: S, setEditRoleId: R, setSelectedSection: D } = e,
-        O = (0, b.T)(h, x, d),
+    let { role: d, guild: h, highestRole: x, currentPosition: C, memberCount: _, onDragStart: I, onDragReset: N, onDragComplete: T, disableHover: b, disableDrag: S, setEditRoleId: R, setSelectedSection: D } = e,
+        O = (0, j.T)(h, x, d),
         k = null != O,
         [M, w] = r.useState(!1),
         B = r.useMemo(
@@ -173,7 +173,7 @@ function k(e) {
     }
     return (0, i.jsxs)(u.Clickable, {
         className: s()(Z.roleRow, {
-            [Z.roleRowDisableHover]: j,
+            [Z.roleRowDisableHover]: b,
             [Z.containerDragBefore]: null != H && C < H,
             [Z.containerDragAfter]: null != H && C > H
         }),
@@ -183,7 +183,7 @@ function k(e) {
         'data-dnd-name': d.name,
         'aria-label': y.intl.formatToPlainString(y.t.Vu0AcX, {
             name: d.name,
-            count: ''.concat(v)
+            count: ''.concat(_)
         }),
         children: [
             (0, i.jsx)('div', {
@@ -212,7 +212,7 @@ function k(e) {
                               defaultIconClassName: Z.shield
                           }),
                     null != O
-                        ? (0, i.jsx)(b.Z, {
+                        ? (0, i.jsx)(j.Z, {
                               className: Z.lock,
                               tooltipText: O
                           })
@@ -224,7 +224,7 @@ function k(e) {
                         children: d.name
                     }),
                     (null === (l = d.tags) || void 0 === l ? void 0 : l.subscription_listing_id) != null &&
-                        (0, i.jsx)(_.Z, {
+                        (0, i.jsx)(v.Z, {
                             className: Z.subscriptionRoleIcon,
                             'aria-label': y.intl.string(y.t.a2Ak8f)
                         }),
@@ -233,7 +233,7 @@ function k(e) {
             }),
             (0, i.jsx)(u.Tooltip, {
                 text: y.intl.string(y.t.CW75t7),
-                'aria-label': y.intl.formatToPlainString(y.t.Fgs8fH, { count: ''.concat(v) }),
+                'aria-label': y.intl.formatToPlainString(y.t.Fgs8fH, { count: ''.concat(_) }),
                 position: 'right',
                 children: (e) =>
                     (0, i.jsxs)(u.Clickable, {
@@ -244,7 +244,7 @@ function k(e) {
                             (0, i.jsx)(u.Text, {
                                 variant: 'text-md/normal',
                                 color: 'none',
-                                children: v
+                                children: _
                             }),
                             (0, i.jsx)(u.UserIcon, {
                                 size: 'custom',

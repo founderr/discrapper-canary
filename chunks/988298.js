@@ -1,9 +1,9 @@
 n.d(t, {
     GG: function () {
-        return o;
+        return i;
     },
     R2: function () {
-        return i;
+        return o;
     },
     h7: function () {
         return s;
@@ -32,13 +32,13 @@ function r(e) {
         query: e
     });
 }
-function o(e) {
+function i(e) {
     l.Z.dispatch({
         type: 'ACTIVITY_INVITE_MODAL_SEND',
         channelId: e
     });
 }
-function i(e) {
+function o(e) {
     l.Z.dispatch({
         type: 'ACTIVITY_INVITE_MODAL_SEND',
         userId: e

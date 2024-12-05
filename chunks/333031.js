@@ -20,7 +20,7 @@ var i = n(200651),
     v = n(561064),
     g = n(501787),
     E = n(608631);
-function x(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function x(e, t, n) {
         e
     );
 }
-function C(e, t) {
+function x(e, t) {
     return {
         name: e,
         left: Math.ceil(t.left),
@@ -60,7 +60,7 @@ let Z = l.createContext(
             let i = e.getBoundingClientRect();
             this.zones.set(e, {
                 element: e,
-                zone: C(null !== (t = null == n ? void 0 : n.zone.name) && void 0 !== t ? t : (0, u.Z)(), i)
+                zone: x(null !== (t = null == n ? void 0 : n.zone.name) && void 0 !== t ? t : (0, u.Z)(), i)
             }),
                 this.elements.add(e),
                 this.resizeObserver.observe(e),
@@ -92,18 +92,18 @@ let Z = l.createContext(
             this.globalUpdate.cancel(), this.zones.clear(), this.elements.clear(), null === (e = this.resizeObserver) || void 0 === e || e.disconnect(), null === (t = this.mutationObserver) || void 0 === t || t.disconnect(), this.updateZones();
         }
         constructor(e) {
-            x(this, 'resizeObserver', void 0),
-                x(this, 'mutationObserver', void 0),
-                x(this, 'zones', new Map()),
-                x(this, 'elements', new Set()),
-                x(this, 'window', void 0),
-                x(this, 'handleResize', () => {
+            C(this, 'resizeObserver', void 0),
+                C(this, 'mutationObserver', void 0),
+                C(this, 'zones', new Map()),
+                C(this, 'elements', new Set()),
+                C(this, 'window', void 0),
+                C(this, 'handleResize', () => {
                     this.globalUpdate();
                 }),
-                x(this, 'handleMutations', () => {
+                C(this, 'handleMutations', () => {
                     this.globalUpdate();
                 }),
-                x(
+                C(
                     this,
                     'globalUpdate',
                     a()(
@@ -111,7 +111,7 @@ let Z = l.createContext(
                             let e = !1;
                             for (let [t, n] of this.zones) {
                                 let i = t.getBoundingClientRect(),
-                                    l = C(n.zone.name, i);
+                                    l = x(n.zone.name, i);
                                 if (!(0, d.Z)(l, n.zone))
                                     (e = !0),
                                         (n = {

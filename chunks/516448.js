@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return _;
     }
 }),
     n(47120);
@@ -20,14 +20,14 @@ var i = n(200651),
     p = n(574085),
     f = n(293810),
     C = n(388032),
-    _ = n(83701);
-function v(e) {
+    v = n(83701);
+function _(e) {
     let { allSubscriptionListings: t } = e,
-        { editStateId: n, guildId: v } = (0, o.N)(),
+        { editStateId: n, guildId: _ } = (0, o.N)(),
         [I, N] = c.UE(n),
-        [T, j] = c.R7(n),
-        b = r.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
-        { isFullServerGating: S } = (0, d.Z)(v),
+        [T, b] = c.R7(n),
+        j = r.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
+        { isFullServerGating: S } = (0, d.Z)(_),
         E = (0, s.Dt)(),
         R = (0, a.mY)();
     return (0, i.jsxs)(u.Z, {
@@ -40,21 +40,21 @@ function v(e) {
                 children: [
                     (0, i.jsx)(l.FormText, {
                         type: l.FormText.Types.DESCRIPTION,
-                        className: _.formDescription,
+                        className: v.formDescription,
                         disabled: R,
                         children: C.intl.string(C.t.kHalVF)
                     }),
                     (0, i.jsx)(m.Z, {
                         channelBenefits: I,
                         intangibleBenefits: T,
-                        subscriptionListings: b,
+                        subscriptionListings: j,
                         onImport: function (e, t) {
-                            N((t) => t.concat(e)), j((e) => e.concat(t));
+                            N((t) => t.concat(e)), b((e) => e.concat(t));
                         }
                     }),
                     (0, i.jsx)(l.Spacer, { size: 8 }),
                     (0, i.jsx)(m.w, {
-                        guildId: v,
+                        guildId: _,
                         onImport: function (e) {
                             N((t) => {
                                 let n = new Set(
@@ -86,7 +86,7 @@ function v(e) {
                 children: [
                     (0, i.jsx)(l.FormText, {
                         type: l.FormText.Types.DESCRIPTION,
-                        className: _.formDescription,
+                        className: v.formDescription,
                         disabled: R,
                         children: C.intl.string(C.t['5a4Axc'])
                     }),
@@ -110,7 +110,7 @@ function v(e) {
                 children: [
                     (0, i.jsx)(l.FormText, {
                         type: l.FormText.Types.DESCRIPTION,
-                        className: _.formDescription,
+                        className: v.formDescription,
                         disabled: R,
                         children: C.intl.string(C.t.zAww7e)
                     }),

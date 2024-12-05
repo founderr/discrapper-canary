@@ -10,8 +10,8 @@ var o = n(200651),
     p = n(70097),
     m = n(703656),
     x = n(358085),
-    g = n(617136),
-    f = n(272008),
+    f = n(617136),
+    g = n(272008),
     h = n(113434),
     C = n(569984),
     v = n(497505),
@@ -20,8 +20,8 @@ var o = n(200651),
     b = n(585500),
     E = n(475595),
     N = n(566078),
-    T = n(340100),
-    B = n(611855),
+    B = n(340100),
+    T = n(611855),
     S = n(644646),
     A = n(78826),
     y = n(64141),
@@ -33,17 +33,17 @@ var o = n(200651),
     P = n(502926);
 let M = r.forwardRef(function (e, t) {
     var n, s;
-    let { children: _, className: M, collapsedHeight: W, expansionSpring: L, isExpanded: Q, isExpansionAnimationComplete: Z, onCtxMenuOpen: D, onCtxMenuClose: H, onCtxMenuSelect: V, quest: U, useReducedMotion: z } = e,
+    let { children: _, className: M, collapsedHeight: W, expansionSpring: L, isExpanded: Q, isExpansionAnimationComplete: Z, onCtxMenuOpen: D, onCtxMenuClose: V, onCtxMenuSelect: H, quest: U, useReducedMotion: z } = e,
         F = (0, l.e7)([C.Z], () => C.Z.isEnrolling(U.id), [U]),
         G = (0, h.B6)(U.config.expiresAt),
         Y = N.r.build(U.config),
         K = (0, h.B6)(Y.rewardsExpireAt),
         X = r.useMemo(() => (0, E.fh)(U, E.eC.HERO), [U]),
         J = (0, R.tP)(Y.application.id),
-        $ = Y.features.has(w.S7.START_QUEST_CTA) ? g.jZ.START_QUEST : g.jZ.ACCEPT_QUEST,
+        $ = Y.features.has(w.S7.START_QUEST_CTA) ? f.jZ.START_QUEST : f.jZ.ACCEPT_QUEST,
         ee = Y.features.has(w.S7.START_QUEST_CTA) ? q.intl.string(q.t.E80Bdn) : q.intl.string(q.t.l7E81t),
         et = r.useCallback(() => {
-            (0, f.AH)(U.id, {
+            (0, g.AH)(U.id, {
                 questContent: v.jn.QUEST_BAR,
                 questContentCTA: $
             }),
@@ -56,7 +56,7 @@ let M = r.forwardRef(function (e, t) {
         eo = r.useCallback(() => {
             (0, j.FE)(U, {
                 content: v.jn.QUEST_BAR,
-                ctaContent: g.jZ.OPEN_GAME_LINK
+                ctaContent: f.jZ.OPEN_GAME_LINK
             });
         }, [U]),
         er = Y.features.has(w.S7.POST_ENROLLMENT_CTA),
@@ -151,8 +151,8 @@ let M = r.forwardRef(function (e, t) {
                                       }),
                                       (0, o.jsx)(y.r, {
                                           onOpen: D,
-                                          onClose: H,
-                                          onSelect: V,
+                                          onClose: V,
+                                          onSelect: H,
                                           questContent: v.jn.QUEST_BAR,
                                           quest: U,
                                           shouldShowDisclosure: !1,
@@ -187,7 +187,7 @@ let M = r.forwardRef(function (e, t) {
                                         variant: 'text-xs/normal',
                                         children: ep
                                     }),
-                              (0, o.jsx)(T.Z, { quest: U }),
+                              (0, o.jsx)(B.Z, { quest: U }),
                               !em && !ei && !J && er && (0, o.jsx)(O, { onClick: eu ? eo : void 0 })
                           ]
                       })
@@ -200,11 +200,11 @@ let M = r.forwardRef(function (e, t) {
                                       (0, o.jsxs)('div', {
                                           className: P.utils,
                                           children: [
-                                              (0, o.jsx)(B.Z, { color: 'always-white' }),
+                                              (0, o.jsx)(T.Z, { color: 'always-white' }),
                                               (0, o.jsx)(y.r, {
                                                   onOpen: D,
-                                                  onClose: H,
-                                                  onSelect: V,
+                                                  onClose: V,
+                                                  onSelect: H,
                                                   questContent: v.jn.QUEST_BAR,
                                                   quest: U,
                                                   shouldShowDisclosure: !0,

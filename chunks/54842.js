@@ -15,13 +15,13 @@ var i = n(200651),
     p = n(388032),
     f = n(905697),
     C = n(438825),
-    _ = n(236140),
-    v = n(37069),
+    v = n(236140),
+    _ = n(37069),
     I = n(518513),
     N = n(168179),
     T = n(348986),
-    j = n(930065),
-    b = n(345669);
+    b = n(930065),
+    j = n(345669);
 let S = () => [
         {
             icon: c.AnalyticsIcon,
@@ -81,7 +81,7 @@ let S = () => [
             position: [-230, -100]
         },
         {
-            iconSrc: j,
+            iconSrc: b,
             name: 'Python',
             position: [-180, -100],
             faded: !0,
@@ -100,12 +100,12 @@ let S = () => [
             rightAlign: !0
         },
         {
-            iconSrc: b,
+            iconSrc: j,
             name: 'Sneaker Fans',
             position: [-250, 40]
         },
         {
-            iconSrc: v,
+            iconSrc: _,
             name: 'Hogwarts School',
             position: [-270, 40],
             faded: !0,
@@ -169,17 +169,17 @@ t.Z = (e) => {
     let { guild: t } = e,
         [n, l] = r.useState(0),
         [s, o] = r.useState(0),
-        [v, I] = r.useState(),
+        [_, I] = r.useState(),
         N = (0, a.e7)([m.Z], () => m.Z.can(g.Plq.ADMINISTRATOR, t)),
-        T = null == v ? void 0 : v.offsetWidth,
-        j = null == v ? void 0 : v.offsetHeight;
+        T = null == _ ? void 0 : _.offsetWidth,
+        b = null == _ ? void 0 : _.offsetHeight;
     r.useEffect(() => {
-        null != T && l(T / 2), null != j && o(j / 2);
-    }, [T, j, l, o]),
+        null != T && l(T / 2), null != b && o(b / 2);
+    }, [T, b, l, o]),
         r.useEffect(() => {
             (0, d.Kw)(x.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
         }, []);
-    let b = () => {
+    let j = () => {
         u.Z.open();
     };
     return (0, i.jsxs)('div', {
@@ -207,7 +207,7 @@ t.Z = (e) => {
                     }),
                     (0, i.jsx)('img', {
                         alt: '',
-                        src: _,
+                        src: v,
                         className: f.sparkles
                     })
                 ]
@@ -227,7 +227,7 @@ t.Z = (e) => {
                 'aria-label': N ? void 0 : p.intl.string(p.t['pjG+T0']),
                 children: (e) =>
                     (0, i.jsx)(c.Button, {
-                        onClick: b,
+                        onClick: j,
                         className: f.button,
                         disabled: !N,
                         ...e,

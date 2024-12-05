@@ -1,71 +1,71 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return h;
+        return g;
     }
 });
-var l = n(200651);
-n(192379);
-var i = n(120356),
-    r = n.n(i),
-    s = n(481060),
-    a = n(884338),
-    o = n(933557),
-    c = n(471445),
-    d = n(5192),
-    u = n(388032),
-    f = n(381515);
-function h(e) {
-    let { channel: t, users: n, selected: i = !1 } = e,
-        h = (0, o.ZP)(t),
-        m = null;
-    null != n &&
-        n.length > 0 &&
-        (m = (0, l.jsx)(a.Z, {
-            guildId: t.guild_id,
-            className: f.voiceUserList,
-            users: n,
+var l = t(200651);
+t(192379);
+var i = t(120356),
+    s = t.n(i),
+    r = t(481060),
+    a = t(884338),
+    o = t(933557),
+    u = t(471445),
+    c = t(5192),
+    d = t(388032),
+    m = t(381515);
+function g(e) {
+    let { channel: n, users: t, selected: i = !1 } = e,
+        g = (0, o.ZP)(n),
+        h = null;
+    null != t &&
+        t.length > 0 &&
+        (h = (0, l.jsx)(a.Z, {
+            guildId: n.guild_id,
+            className: m.voiceUserList,
+            users: t,
             renderUser: (e) => {
                 if (null == e) return null;
-                let n = d.ZP.getName(t.guild_id, t.id, e),
-                    i = e.getAvatarURL(t.guild_id, 24);
-                return (0, l.jsx)(s.TooltipContainer, {
-                    text: n,
+                let t = c.ZP.getName(n.guild_id, n.id, e),
+                    i = e.getAvatarURL(n.guild_id, 24);
+                return (0, l.jsx)(r.TooltipContainer, {
+                    text: t,
                     children: (0, l.jsx)('img', {
                         src: null != i ? i : void 0,
                         'aria-label': e.username,
                         alt: '',
-                        className: f.avatar
+                        className: m.avatar
                     })
                 });
             },
             renderMoreUsers: (e) => {
-                let i = (function (e, t) {
-                    let n = t.id,
-                        l = t.guild_id;
+                let i = (function (e, n) {
+                    let t = n.id,
+                        l = n.guild_id;
                     return e.length <= 1
                         ? null
                         : 2 === e.length
-                          ? u.intl.formatToPlainString(u.t.MlgLFx, {
-                                nickname0: d.ZP.getName(l, n, e[0]),
-                                nickname1: d.ZP.getName(l, n, e[1])
+                          ? d.intl.formatToPlainString(d.t.MlgLFx, {
+                                nickname0: c.ZP.getName(l, t, e[0]),
+                                nickname1: c.ZP.getName(l, t, e[1])
                             })
                           : 3 === e.length
-                            ? u.intl.formatToPlainString(u.t.sihix8, {
-                                  nickname0: d.ZP.getName(l, n, e[0]),
-                                  nickname1: d.ZP.getName(l, n, e[1]),
-                                  nickname2: d.ZP.getName(l, n, e[2])
+                            ? d.intl.formatToPlainString(d.t.sihix8, {
+                                  nickname0: c.ZP.getName(l, t, e[0]),
+                                  nickname1: c.ZP.getName(l, t, e[1]),
+                                  nickname2: c.ZP.getName(l, t, e[2])
                               })
-                            : u.intl.formatToPlainString(u.t['824IXV'], {
-                                  nickname0: d.ZP.getName(l, n, e[0]),
-                                  nickname1: d.ZP.getName(l, n, e[1]),
+                            : d.intl.formatToPlainString(d.t['824IXV'], {
+                                  nickname0: c.ZP.getName(l, t, e[0]),
+                                  nickname1: c.ZP.getName(l, t, e[1]),
                                   remainingCount: e.length - 2
                               });
-                })(n.slice(4), t);
+                })(t.slice(4), n);
                 return (0, l.jsx)('div', {
-                    children: (0, l.jsx)(s.TooltipContainer, {
+                    children: (0, l.jsx)(r.TooltipContainer, {
                         text: i,
                         children: (0, l.jsx)('div', {
-                            className: f.userListOverflow,
+                            className: m.userListOverflow,
                             children: e
                         })
                     })
@@ -74,16 +74,16 @@ function h(e) {
             max: 5,
             showUserPopout: !1
         }));
-    let x = (0, c.KS)(t);
+    let x = (0, u.KS)(n);
     return (0, l.jsxs)('div', {
-        className: r()(f.channelInfo, { [f.selected]: i }),
+        className: s()(m.channelInfo, { [m.selected]: i }),
         children: [
-            (0, l.jsx)(x, { className: f.channelIcon }),
+            (0, l.jsx)(x, { className: m.channelIcon }),
             (0, l.jsx)('div', {
-                className: f.channelName,
-                children: h
+                className: m.channelName,
+                children: g
             }),
-            m
+            h
         ]
     });
 }

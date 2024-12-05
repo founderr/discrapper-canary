@@ -129,7 +129,7 @@ function j(e) {
                                       return;
                                   }
                                   (0, u.openModalLazy)(async () => {
-                                      let { default: e } = await Promise.all([n.e('46746'), n.e('19942')]).then(n.bind(n, 60594));
+                                      let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('57252')]).then(n.bind(n, 60594));
                                       return (t) =>
                                           (0, i.jsx)(e, {
                                               analyticsLocation: 'HDStreamingPotionBanner',

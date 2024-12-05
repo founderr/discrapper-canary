@@ -15,21 +15,21 @@ var i,
     p = n(208665),
     f = n(84658),
     C = n(142961),
-    _ = n(981631);
-let v = new Set(),
+    v = n(981631);
+let _ = new Set(),
     I = f.PG.LANDING,
     N = null;
 function T(e) {
     let { subsection: t } = e;
     if (u.Z.getGuildId() === N) return !1;
-    (I = t === _.KsC.SERVER_GUIDE ? f.PG.HOME_SETTINGS : f.PG.LANDING), (N = u.Z.getGuildId());
+    (I = t === v.KsC.SERVER_GUIDE ? f.PG.HOME_SETTINGS : f.PG.LANDING), (N = u.Z.getGuildId());
 }
-class j extends (i = a.ZP.Store) {
+class b extends (i = a.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, g.Z, p.Z, x.Z, m.Z), this.syncWith([c.Z, g.Z, p.Z, x.Z, m.Z], () => !0);
     }
     isEducationUpsellDismissed(e) {
-        return v.has(e);
+        return _.has(e);
     }
     getCurrentPage() {
         return I;
@@ -64,7 +64,7 @@ class j extends (i = a.ZP.Store) {
     }
 }
 (s = 'GuildSettingsOnboardingStore'),
-    (l = 'displayName') in (r = j)
+    (l = 'displayName') in (r = b)
         ? Object.defineProperty(r, l, {
               value: s,
               enumerable: !0,
@@ -72,7 +72,7 @@ class j extends (i = a.ZP.Store) {
               writable: !0
           })
         : (r[l] = s),
-    (t.Z = new j(o.Z, {
+    (t.Z = new b(o.Z, {
         GUILD_SETTINGS_INIT: T,
         GUILD_SETTINGS_SET_SECTION: T,
         GUILD_SETTINGS_ONBOARDING_STEP: function (e) {
@@ -81,6 +81,6 @@ class j extends (i = a.ZP.Store) {
         },
         GUILD_SETTINGS_ONBOARDING_EDUCATION_UPSELL_DISMISSED: function (e) {
             let { upsellType: t } = e;
-            v.add(t);
+            _.add(t);
         }
     }));

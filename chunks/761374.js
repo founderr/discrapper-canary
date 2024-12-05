@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return x;
     }
 }),
     n(47120);
@@ -20,21 +20,21 @@ var i = n(200651),
     v = n(340101),
     g = n(666540);
 let E = [];
-function x(e, t, n, i) {
+function C(e, t, n, i) {
     let l = (i - 1) * m.z;
     return e === v.C5.HORIZONTAL ? Math.min(Math.max((t - l) / i, 256), Math.max((16 * n) / 9, 256)) : Math.min(Math.max(t, 256), Math.max((((n - l) / i) * 16) / 9, 256));
 }
-function C(e) {
+function x(e) {
     var t;
-    let { id: n, size: C, locked: Z, padding: _, borderWidth: S, opacity: I, horizontal: N, pinned: b } = e,
+    let { id: n, size: x, locked: Z, padding: _, borderWidth: S, opacity: I, horizontal: N, pinned: b } = e,
         O = 2 * _ + 2 * S;
     let { width: y, height: j } = {
-            width: 'number' == typeof (t = C).width ? t.width : 256,
+            width: 'number' == typeof (t = x).width ? t.width : 256,
             height: 'number' == typeof t.height ? t.height : 144
         },
         T = (0, o.e7)([p.Z], () => p.Z.getVoiceChannelId()),
-        { width: k, height: w, ref: A } = (0, s.Z)(),
-        L = (0, o.e7)(
+        { width: k, height: w, ref: L } = (0, s.Z)(),
+        A = (0, o.e7)(
             [f.Z],
             () => {
                 var e;
@@ -55,7 +55,7 @@ function C(e) {
                     };
                 let e = new Set(c.Z.getAllActiveStreamsForChannel(T).map((e) => (0, u.V9)(e))),
                     t = (t) => e.has((0, u.V9)(t.stream)),
-                    n = a.Z.getStreamParticipants(T).filter((t) => t.user.id !== M && (!!L || e.has((0, u.V9)(t.stream))));
+                    n = a.Z.getStreamParticipants(T).filter((t) => t.user.id !== M && (!!A || e.has((0, u.V9)(t.stream))));
                 return (
                     n.sort((e, n) => (t(e) && !t(n) ? -1 : !t(e) && t(n) ? 1 : e.user.username.localeCompare(n.user.username))),
                     {
@@ -65,14 +65,14 @@ function C(e) {
                     }
                 );
             },
-            [T, M, L]
+            [T, M, A]
         ),
         P = D.length,
         V = null == R || 0 === P,
         { tileWidth: W, layout: U } = (function (e, t, n, i, o) {
             let r = (function (e, t, n, i) {
-                    let l = x(v.C5.HORIZONTAL, e, t, n),
-                        o = x(v.C5.VERTICAL, e, t, n);
+                    let l = C(v.C5.HORIZONTAL, e, t, n),
+                        o = C(v.C5.VERTICAL, e, t, n);
                     switch (i) {
                         case v.C5.VERTICAL:
                             return o;
@@ -82,7 +82,7 @@ function C(e) {
                     let r = ((9 * o) / 16 + m.z) * n - m.z;
                     return e > (16 * t) / 9 ? l : r <= t ? o : (9 * l) / 16 <= t ? l : o;
                 })(n, i, t, o),
-                s = x(v.C5.VERTICAL, n, i, t),
+                s = C(v.C5.VERTICAL, n, i, t),
                 a = null != o ? o : r === s ? v.C5.VERTICAL : v.C5.HORIZONTAL,
                 [u, c] = l.useState(r);
             return (
@@ -193,7 +193,7 @@ function C(e) {
         : (0, i.jsx)('div', {
               className: g.goLiveGridContainer,
               style: { opacity: I },
-              ref: A,
+              ref: L,
               children: (0, i.jsx)(m.Z, {
                   widgetId: n,
                   tileWidth: W,

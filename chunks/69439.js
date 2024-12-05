@@ -16,8 +16,8 @@ var o = n(200651),
     p = n(569984),
     m = n(497505),
     x = n(918701),
-    g = n(667105),
-    f = n(341907),
+    f = n(667105),
+    g = n(341907),
     h = n(284851),
     C = n(46140),
     v = n(388032),
@@ -57,9 +57,9 @@ function b(e) {
 }
 function E(e) {
     var t, n, s, E;
-    let { quest: N, location: T, onReceiveErrorHints: B, contentPosition: S, rowIndex: A } = e,
+    let { quest: N, location: B, onReceiveErrorHints: T, contentPosition: S, rowIndex: A } = e,
         y = (0, i.e7)([c.Z], () => c.Z.useReducedMotion),
-        R = (0, g.g2)({ useReducedMotion: y }),
+        R = (0, f.g2)({ useReducedMotion: y }),
         w = (0, u._s)({ quest: N }),
         I = (0, u.z)(N),
         k = (0, u.B6)(N.config.expiresAt, {
@@ -77,8 +77,8 @@ function E(e) {
         Q = !(0, x.zi)(N),
         Z = (0, u._Q)(N),
         D = (0, x.Xv)(N.config),
-        H = (0, x.q8)(N),
-        V = (0, u.GU)(N),
+        V = (0, x.q8)(N),
+        H = (0, u.GU)(N),
         U = (0, u.Rf)(N),
         [z, F, G] = (0, u.me)(N, U),
         Y = Q && Z === u.OH.ACCEPTED,
@@ -86,23 +86,23 @@ function E(e) {
         X = Y && !K && F.length > 1,
         J = r.useCallback(
             (e) => {
-                G(e), e === C.cd.DESKTOP && B([]);
+                G(e), e === C.cd.DESKTOP && T([]);
             },
-            [G, B]
+            [G, T]
         ),
         {
             text: $,
             onClick: ee,
             tooltipText: et
-        } = (0, g.Ks)({
+        } = (0, f.Ks)({
             progressState: Z,
             quest: N,
-            location: T,
+            location: B,
             isCollectibleQuest: D,
             questContentPosition: S,
             questContentRowIndex: A,
             inGiftInventory: !0,
-            isVideoQuest: H
+            isVideoQuest: V
         }),
         { startingConsoleQuest: en, startConsoleQuest: eo } = (0, u.GI)({
             questId: N.id,
@@ -110,14 +110,14 @@ function E(e) {
                 R.startAnimation(),
                     (0, d._3)({
                         questId: N.id,
-                        questContent: T,
+                        questContent: B,
                         questContentCTA: d.jZ.DEFIBRILLATOR,
                         questContentPosition: S,
                         questContentRowIndex: A
                     });
             },
             afterRequest: (e) => {
-                R.stopAnimation(), B(e);
+                R.stopAnimation(), T(e);
             }
         }),
         er = (null === (E = N.userStatus) || void 0 === E ? void 0 : E.claimedAt) != null,
@@ -131,7 +131,7 @@ function E(e) {
               children: $
           }))
         : O
-          ? (es = H
+          ? (es = V
                 ? (0, o.jsxs)(o.Fragment, {
                       children: [
                           (0, o.jsx)(l.Button, {
@@ -139,7 +139,7 @@ function E(e) {
                               className: j.button,
                               style: { flex: 1 },
                               onClick: () => {
-                                  (0, f.openVideoQuestModal)(N);
+                                  (0, g.openVideoQuestModal)(N);
                               },
                               children: (0, o.jsxs)('div', {
                                   className: j.ctaInner,
@@ -167,7 +167,7 @@ function E(e) {
                       children: $
                   }))
           : Q
-            ? V.length > 0
+            ? H.length > 0
                 ? (es = (0, o.jsx)(
                       l.TooltipContainer,
                       {
@@ -226,7 +226,7 @@ function E(e) {
                                           children: [R.render(), v.intl.string(v.t.nPThNT)]
                                       })
                                   })
-                            : H
+                            : V
                               ? (0, o.jsx)(l.Button, {
                                     color: l.ButtonColors.BRAND,
                                     onClick: null != ee ? ee : void 0,

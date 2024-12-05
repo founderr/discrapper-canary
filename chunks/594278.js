@@ -13,28 +13,28 @@ t.Z = function (e) {
     let { items: t, carouselClassName: n, paginationCaretClassName: l, intervalBetweenAutomaticItemRotations: h, renderItem: g } = e,
         x = r.useMemo(() => new a.Xp(), []),
         [p, f] = r.useState(d.n.LEFT),
-        [C, _] = r.useState(0),
-        [v, I] = r.useState(!1),
+        [C, v] = r.useState(0),
+        [_, I] = r.useState(!1),
         [N, T] = r.useState(!1),
-        j = r.useCallback(
+        b = r.useCallback(
             (e, t) => {
-                _((n) => {
+                v((n) => {
                     let i = n + t;
                     return i < 0 ? (i = e.length - 1) : i > e.length - 1 && (i = 0), i;
                 });
             },
-            [_]
+            [v]
         ),
-        b = r.useCallback(() => {
-            if (!N) j(t, 1);
-        }, [j, t, N]),
+        j = r.useCallback(() => {
+            if (!N) b(t, 1);
+        }, [b, t, N]),
         S = r.useCallback(() => {
-            if (!N) j(t, -1);
-        }, [j, t, N]);
+            if (!N) b(t, -1);
+        }, [b, t, N]);
     return (
         r.useEffect(() => {
-            null != h && (v ? v && x.stop() : x.start(h, b));
-        }, [v, x, h, b]),
+            null != h && (_ ? _ && x.stop() : x.start(h, j));
+        }, [_, x, h, j]),
         (0, i.jsxs)('div', {
             className: m.root,
             onMouseEnter: () => I(!0),
@@ -62,7 +62,7 @@ t.Z = function (e) {
                 }),
                 (0, i.jsx)(o.Clickable, {
                     className: s()(m.carouselCaret, l),
-                    onClick: b,
+                    onClick: j,
                     onMouseEnter: () => f(d.n.LEFT),
                     ignoreKeyPress: N,
                     children: (0, i.jsx)(c.Z, {

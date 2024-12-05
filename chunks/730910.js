@@ -20,13 +20,13 @@ var i = n(200651),
     p = n(626135),
     f = n(585483),
     C = n(999382),
-    _ = n(743475),
-    v = n(983135),
+    v = n(743475),
+    _ = n(983135),
     I = n(8426),
     N = n(969632),
     T = n(570961),
-    j = n(208665),
-    b = n(359191),
+    b = n(208665),
+    j = n(359191),
     S = n(84658),
     E = n(142961),
     R = n(232764),
@@ -43,20 +43,20 @@ function k() {
 function P(e) {
     let { guild: t } = e,
         l = t.id,
-        C = (0, o.e7)([b.Z], () => b.Z.getCurrentPage()),
+        C = (0, o.e7)([j.Z], () => j.Z.getCurrentPage()),
         k = (0, E.Z)(l),
         {
             hasChanges: P,
             hasConfiguredAnythingForCurrentStep: M,
             hasErrors: w
-        } = (0, o.cj)([b.Z], () => ({
-            hasChanges: b.Z.hasChanges(),
-            hasConfiguredAnythingForCurrentStep: b.Z.hasConfiguredAnythingForCurrentStep(),
-            hasErrors: b.Z.hasErrors()
+        } = (0, o.cj)([j.Z], () => ({
+            hasChanges: j.Z.hasChanges(),
+            hasConfiguredAnythingForCurrentStep: j.Z.hasConfiguredAnythingForCurrentStep(),
+            hasErrors: j.Z.hasErrors()
         })),
-        B = (0, o.e7)([b.Z], () => {
+        B = (0, o.e7)([j.Z], () => {
             let e = (0, S.lg)(C);
-            return null != e && !b.Z.isEducationUpsellDismissed(e);
+            return null != e && !j.Z.isEducationUpsellDismissed(e);
         }),
         U = (0, h.ZP)(),
         G = r.useRef(null),
@@ -98,10 +98,10 @@ function P(e) {
     }
     let q = C === S.xh[S.xh.length - 1],
         X = async () => {
-            let e = j.Z.advancedMode;
+            let e = b.Z.advancedMode;
             if (P)
                 try {
-                    if (C === S.PG.DEFAULT_CHANNELS) await (0, _.DO)(t).then(() => (e ? (0, T.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
+                    if (C === S.PG.DEFAULT_CHANNELS) await (0, v.DO)(t).then(() => (e ? (0, T.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
                     else if (C === S.PG.CUSTOMIZATION_QUESTIONS) await (0, T.rS)(t, { ignoreDefaultPrompt: !0 });
                     else if (C === S.PG.HOME_SETTINGS) {
                         let e = N.Z.getSettings();
@@ -119,8 +119,8 @@ function P(e) {
                 back: !1,
                 skip: !P
             }),
-                (0, v.Nb)((0, S.lg)(C)),
-                (await X()) && (0, v.IG)(l, C);
+                (0, _.Nb)((0, S.lg)(C)),
+                (await X()) && (0, _.IG)(l, C);
         },
         J = async () => {
             p.default.track(L.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
@@ -129,7 +129,7 @@ function P(e) {
                 back: !0,
                 skip: !1
             }),
-                (await X()) && (0, v.Wy)(l, C);
+                (await X()) && (0, _.Wy)(l, C);
         },
         $ = null;
     B && (C === S.PG.SAFETY_CHECK ? ($ = (0, i.jsx)(R.j7, {})) : C === S.PG.DEFAULT_CHANNELS ? ($ = (0, i.jsx)(R.Io, {})) : C === S.PG.CUSTOMIZATION_QUESTIONS ? ($ = (0, i.jsx)(R.cZ, {})) : C === S.PG.HOME_SETTINGS && ($ = (0, i.jsx)(R.g6, {})));

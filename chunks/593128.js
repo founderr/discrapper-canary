@@ -15,13 +15,13 @@ var i = n(200651),
     p = n(389134),
     f = n(35313),
     C = n(94963),
-    _ = n(745628),
-    v = n(950279),
+    v = n(745628),
+    _ = n(950279),
     I = n(796918),
     N = n(513532),
     T = n(741595),
-    j = n(974842),
-    b = n(359380),
+    b = n(974842),
+    j = n(359380),
     S = n(308083),
     E = n(981631),
     R = n(231338),
@@ -322,7 +322,7 @@ t.Z = (e) => {
                                     switch (R) {
                                         case S.Wy.GAMES:
                                             var e;
-                                            return (0, i.jsx)(v.Z, {
+                                            return (0, i.jsx)(_.Z, {
                                                 title: y.intl.string(y.t.t6Mbq6),
                                                 description: y.intl.string(y.t.E7Ymwc),
                                                 onUpdateGames: F,
@@ -340,7 +340,7 @@ t.Z = (e) => {
                                                 error: P.playstyle
                                             });
                                         case S.Wy.UTILITY_TRAITS:
-                                            return (0, i.jsx)(b.Z, {
+                                            return (0, i.jsx)(j.Z, {
                                                 guildId: t,
                                                 title: y.intl.string(y.t.G4tP09),
                                                 description: y.intl.string(y.t['6Eos19']),
@@ -355,14 +355,14 @@ t.Z = (e) => {
                                                 error: P.interests
                                             });
                                         case S.Wy.DESCRIPTION:
-                                            return (0, i.jsx)(_.Z, {
+                                            return (0, i.jsx)(v.Z, {
                                                 guildId: t,
                                                 handleUpdate: W,
                                                 progress: k,
                                                 errors: P
                                             });
                                         case S.Wy.CUSTOMIZE_TAG_BADGE:
-                                            return (0, i.jsx)(j.Z, {
+                                            return (0, i.jsx)(b.Z, {
                                                 handleUpdate: W,
                                                 tag: k.tag,
                                                 error: P.tag,

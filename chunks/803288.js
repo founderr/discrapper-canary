@@ -24,13 +24,13 @@ var i = n(200651),
     p = n(26323),
     f = n(366980),
     C = n(246946),
-    _ = n(709586),
-    v = n(267642),
+    v = n(709586),
+    _ = n(267642),
     I = n(999382),
     N = n(621319),
     T = n(44550),
-    j = n(770270),
-    b = n(981631),
+    b = n(770270),
+    j = n(981631),
     S = n(30513),
     E = n(388032),
     R = n(445744);
@@ -69,7 +69,7 @@ class A extends r.PureComponent {
         let { isRemoving: e } = this.state,
             { hasError: t, originalVanityURLCode: n, vanityURLCode: r, vanityURLUses: l, guild: s } = this.props;
         if (null == r) return (0, i.jsx)(o.Spinner, {});
-        let a = (null == s ? void 0 : s.hasFeature(b.oNc.VANITY_URL)) === !0;
+        let a = (null == s ? void 0 : s.hasFeature(j.oNc.VANITY_URL)) === !0;
         return (0, i.jsxs)(o.Card, {
             editable: !0,
             className: R.editVanityUrlCard,
@@ -114,7 +114,7 @@ class A extends r.PureComponent {
             innerClassName: R.upsellButton,
             onClick: this.handleVanityUrlUpsellButton,
             children: [
-                (0, i.jsx)(_.Z, {
+                (0, i.jsx)(v.Z, {
                     height: 16,
                     width: 16,
                     className: R.premiumUpsellBadge
@@ -131,7 +131,7 @@ class A extends r.PureComponent {
                 variant: 'text-md/normal',
                 color: 'text-danger',
                 className: R.__invalid_marginTop20,
-                children: (0, j.i)(null == t ? void 0 : t.code)
+                children: (0, b.i)(null == t ? void 0 : t.code)
             });
         if (null != n && n.length > 0) {
             let e = (0, f.Z)(n);
@@ -166,7 +166,7 @@ class A extends r.PureComponent {
                                 (0, i.jsx)('div', { children: E.intl.string(E.t['5XZKy8']) }),
                                 (0, i.jsx)(x.Z, {
                                     guild: t,
-                                    guildFeature: b.oNc.VANITY_URL,
+                                    guildFeature: j.oNc.VANITY_URL,
                                     className: R.guildFeatureAvailabilityIndicator,
                                     onClick: this.handleVanityUrlUpsellIndicator
                                 })
@@ -187,7 +187,7 @@ class A extends r.PureComponent {
                             className: R.__invalid_marginBottom20,
                             children: E.intl.string(E.t['eH/HMz'])
                         }),
-                        (0, j.p)(t) ? this.renderEditCard() : this.renderUpsellButton(),
+                        (0, b.p)(t) ? this.renderEditCard() : this.renderUpsellButton(),
                         this.renderInfo()
                     ]
                 });
@@ -199,11 +199,11 @@ class A extends r.PureComponent {
                 e.preventDefault(), e.stopPropagation();
                 let { guild: l, analyticsLocations: s } = this.props;
                 null != l &&
-                    ((0, m.yw)(b.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                    ((0, m.yw)(j.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                         location: {
                             section: n,
-                            object: b.qAy.LEARN_MORE,
-                            objectType: (0, v.ge)(t),
+                            object: j.qAy.LEARN_MORE,
+                            objectType: (0, _.ge)(t),
                             location_stack: s
                         },
                         guild_id: null == l ? void 0 : l.id
@@ -213,17 +213,17 @@ class A extends r.PureComponent {
                         analyticsSourceLocation: {
                             section: n,
                             object: i,
-                            page: b.ZY5.GUILD_SETTINGS
+                            page: j.ZY5.GUILD_SETTINGS
                         },
                         guild: l,
                         perks: r
                     }));
             }),
             y(this, 'handleVanityUrlUpsellIndicator', (e) => {
-                this.handleShowModalUpsell(e, b.Eu4.TIER_3, b.jXE.GUILD_SETTINGS_VANITY_URL, b.qAy.BADGE, (0, S.WW)());
+                this.handleShowModalUpsell(e, j.Eu4.TIER_3, j.jXE.GUILD_SETTINGS_VANITY_URL, j.qAy.BADGE, (0, S.WW)());
             }),
             y(this, 'handleVanityUrlUpsellButton', (e) => {
-                this.handleShowModalUpsell(e, b.Eu4.TIER_3, b.jXE.GUILD_SETTINGS_VANITY_URL, b.qAy.BUTTON_CTA, (0, S.WW)());
+                this.handleShowModalUpsell(e, j.Eu4.TIER_3, j.jXE.GUILD_SETTINGS_VANITY_URL, j.qAy.BUTTON_CTA, (0, S.WW)());
             });
     }
 }

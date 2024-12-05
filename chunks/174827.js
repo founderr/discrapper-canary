@@ -43,9 +43,9 @@ var i = n(200651),
 function H(e) {
     var t, n, s;
     let { handleStepChange: H, initialPlanId: B, subscriptionTier: F, trialId: G, referralTrialOfferId: W, handleClose: D } = e,
-        { activeSubscription: Y, hasFetchedSubscriptions: K, paymentSourceId: V, paymentSources: X, selectedSkuId: Q, selectedPlan: q, step: z, defaultPlanId: J, priceOptions: $, isPremium: ee } = (0, v.usePaymentContext)(),
+        { activeSubscription: Y, hasFetchedSubscriptions: K, paymentSourceId: V, paymentSources: X, selectedSkuId: Q, selectedPlan: z, step: q, defaultPlanId: J, priceOptions: $, isPremium: ee } = (0, v.usePaymentContext)(),
         { isGift: et, giftRecipient: en, giftMessage: ei, claimableRewards: el } = (0, I.wD)(),
-        es = (0, h.a5)(q),
+        es = (0, h.a5)(z),
         er = et && es && null != el && el.length > 0,
         ea = null != V ? X[V] : null,
         { newPlans: eo } = u.ZP.useExperiment({ location: 'd17fd6_3' }, { autoTrackExposure: !1 }),
@@ -113,7 +113,7 @@ function H(e) {
         eA = null;
     return ((eA = eN ? (0, i.jsx)(m.Z, {}) : (0, i.jsx)(L.Z, {})), eP)
         ? (0, i.jsx)(N.Z, {})
-        : (r()(null != z, 'Step should be set'),
+        : (r()(null != q, 'Step should be set'),
           r()(ej.length > 0, 'Premium plan options should be set'),
           (0, i.jsxs)(i.Fragment, {
               children: [
@@ -130,7 +130,7 @@ function H(e) {
                                     planOptions: ej,
                                     eligibleForMultiMonthPlans: ed,
                                     referralTrialOfferId: W,
-                                    selectedPlanId: null == q ? void 0 : q.id,
+                                    selectedPlanId: null == z ? void 0 : z.id,
                                     subscriptionPeriodEnd: null == ey ? void 0 : ey.subscriptionPeriodEnd,
                                     discountInvoiceItems: eh ? (null == ey ? void 0 : ey.invoiceItems) : void 0,
                                     handleClose: D

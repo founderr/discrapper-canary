@@ -116,7 +116,7 @@ function f(e) {
     (0, s.RD)(t.id);
     let f = (0, a.Z6)(t.id),
         { rulesByTriggerType: C } = (0, s.pH)(t.id),
-        { numEnabledRules: _, numRules: v } = r.useMemo(() => {
+        { numEnabledRules: v, numRules: _ } = r.useMemo(() => {
             let e = 0,
                 t = 0;
             return null == C
@@ -145,8 +145,8 @@ function f(e) {
         I = (0, m.Q)(t),
         N = I[u.u.CAPTCHA_AND_RAID_PROTECTION],
         T = I[u.u.DM_AND_SPAM_PROTECTION],
-        j = I[u.u.PERMISSIONS],
-        b = (0, o.pr)(t.id);
+        b = I[u.u.PERMISSIONS],
+        j = (0, o.pr)(t.id);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(l.Heading, {
@@ -179,15 +179,15 @@ function f(e) {
                         page: u.u.DM_AND_SPAM_PROTECTION
                     }),
                     (0, i.jsx)('div', { className: g.divider }),
-                    b &&
+                    j &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(p, {
                                     icon: n(145136),
                                     title: h.intl.string(h.t.uRelg4),
                                     subtitle: h.intl.formatToPlainString(h.t.TG7NYG, {
-                                        enabled: _,
-                                        total: v
+                                        enabled: v,
+                                        total: _
                                     }),
                                     page: u.u.AUTOMOD
                                 }),
@@ -198,8 +198,8 @@ function f(e) {
                         icon: n(913414),
                         title: h.intl.string(h.t.xrmhRU),
                         subtitle: h.intl.formatToPlainString(h.t.TG7NYG, {
-                            enabled: j.filter((e) => e.enabled).length,
-                            total: j.length
+                            enabled: b.filter((e) => e.enabled).length,
+                            total: b.length
                         }),
                         page: u.u.PERMISSIONS
                     })

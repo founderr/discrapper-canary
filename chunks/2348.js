@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return j;
     }
 }),
     n(653041);
@@ -20,16 +20,16 @@ var i = n(200651),
     p = n(827907),
     f = n(868814),
     C = n(981631),
-    _ = n(388032),
-    v = n(683559);
+    v = n(388032),
+    _ = n(683559);
 function I(e) {
     let { guild: t, channel: r } = e,
         l = (0, p.Mf)(r.id);
     return 'null' === r.id
         ? (0, i.jsx)('div', {
-              className: s()(v.categoryRow, v.uncategorized),
+              className: s()(_.categoryRow, _.uncategorized),
               children: (0, i.jsx)(o.Text, {
-                  className: v.categoryText,
+                  className: _.categoryText,
                   color: 'text-muted',
                   variant: 'text-xs/semibold',
                   lineClamp: 1,
@@ -37,7 +37,7 @@ function I(e) {
               })
           })
         : (0, i.jsxs)(o.Clickable, {
-              className: s()(v.categoryRow, { [v.uncategorized]: 'null' === r.id }),
+              className: s()(_.categoryRow, { [_.uncategorized]: 'null' === r.id }),
               onContextMenu: (e) => {
                   (0, c.jW)(e, async () => {
                       let { default: e } = await Promise.all([n.e('38902'), n.e('58059'), n.e('8965'), n.e('98350')]).then(n.bind(n, 139035));
@@ -66,7 +66,7 @@ function I(e) {
               ),
               children: [
                   (0, i.jsx)(o.Text, {
-                      className: v.categoryText,
+                      className: _.categoryText,
                       color: 'text-muted',
                       variant: 'text-xs/semibold',
                       lineClamp: 1,
@@ -76,14 +76,14 @@ function I(e) {
                       'aria-checked': l,
                       value: l,
                       type: o.Checkbox.Types.INVERTED,
-                      className: v.checkbox,
+                      className: _.checkbox,
                       displayOnly: !0
                   })
               ]
           });
 }
 let N = r.memo(function () {
-        return (0, i.jsx)('div', { className: v.separator });
+        return (0, i.jsx)('div', { className: _.separator });
     }),
     T = r.memo(function (e) {
         let { index: t } = e;
@@ -91,15 +91,15 @@ let N = r.memo(function () {
             o.Text,
             {
                 variant: 'text-xs/normal',
-                className: v.subtitleSeparator,
+                className: _.subtitleSeparator,
                 children: '\xB7'
             },
             'separator-'.concat(t)
         );
     }),
-    j = r.memo(function (e) {
-        let { channel: t, category: r, guild: l, isFirstChannel: g, isLastChannel: I, tooltipDirection: j = 'right' } = e,
-            b = (0, p.Mf)(t.id, r.id),
+    b = r.memo(function (e) {
+        let { channel: t, category: r, guild: l, isFirstChannel: g, isLastChannel: I, tooltipDirection: b = 'right' } = e,
+            j = (0, p.Mf)(t.id, r.id),
             S = (0, p.t4)(t.id, r.id),
             E = (0, p.EH)(t.id, r.id),
             R = (0, p.lL)(l.id, r.id),
@@ -149,31 +149,31 @@ let N = r.memo(function () {
                 (0, i.jsx)(o.Tooltip, {
                     text: null != E ? E : R,
                     delay: 500,
-                    position: j,
+                    position: b,
                     children: (e) =>
                         (0, i.jsxs)(o.Clickable, {
-                            className: s()(v.channelRow, {
-                                [v.firstChannel]: g,
-                                [v.lastChannel]: I,
-                                [v.disabled]: S
+                            className: s()(_.channelRow, {
+                                [_.firstChannel]: g,
+                                [_.lastChannel]: I,
+                                [_.disabled]: S
                             }),
                             ...e,
                             onClick: A,
                             onContextMenu: L,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: v.channelInfo,
+                                    className: _.channelInfo,
                                     children: (0, i.jsxs)('div', {
-                                        className: v.channelName,
+                                        className: _.channelName,
                                         children: [
                                             (0, i.jsx)(h._, {
                                                 channel: t,
                                                 guild: l
                                             }),
                                             (0, i.jsx)(d.Z, {
-                                                className: v.__invalid_name,
+                                                className: _.__invalid_name,
                                                 children: (0, i.jsx)(o.Text, {
-                                                    className: v.channelText,
+                                                    className: _.channelText,
                                                     variant: 'text-md/medium',
                                                     lineClamp: 1,
                                                     color: S ? 'text-muted' : 'text-normal',
@@ -186,9 +186,9 @@ let N = r.memo(function () {
                                                           (0, i.jsx)(T, { index: 0 }),
                                                           (0, i.jsx)(o.Text, {
                                                               variant: 'text-xs/medium',
-                                                              className: v.channelSubtitle,
+                                                              className: _.channelSubtitle,
                                                               color: 'text-brand',
-                                                              children: _.intl.string(_.t.mPxmeH)
+                                                              children: v.intl.string(v.t.mPxmeH)
                                                           })
                                                       ]
                                                   })
@@ -197,22 +197,22 @@ let N = r.memo(function () {
                                     })
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: v.channelActions,
+                                    className: _.channelActions,
                                     children: (0, u.s)(t.guild_id, t.id)
                                         ? (0, i.jsx)(o.Checkbox, {
-                                              'aria-checked': b,
-                                              value: b,
+                                              'aria-checked': j,
+                                              value: j,
                                               type: o.Checkbox.Types.INVERTED,
                                               disabled: S,
                                               color: Z ? a.Z.colors.TEXT_BRAND.css : a.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
-                                              innerClassName: v.checkboxInner,
+                                              innerClassName: _.checkboxInner,
                                               displayOnly: !0
                                           })
                                         : (0, i.jsxs)(o.Button, {
                                               look: o.Button.Looks.OUTLINED,
                                               color: o.Button.Colors.PRIMARY,
-                                              className: v.lockedPill,
-                                              innerClassName: v.lockedPillInner,
+                                              className: _.lockedPill,
+                                              innerClassName: _.lockedPillInner,
                                               onClick: C.dG4,
                                               children: [
                                                   (0, i.jsx)(o.LockIcon, {
@@ -222,7 +222,7 @@ let N = r.memo(function () {
                                                   (0, i.jsx)(o.Text, {
                                                       variant: 'text-sm/medium',
                                                       color: 'none',
-                                                      children: _.intl.string(_.t.zA9d1N)
+                                                      children: v.intl.string(v.t.zA9d1N)
                                                   })
                                               ]
                                           })
@@ -234,7 +234,7 @@ let N = r.memo(function () {
             ]
         });
     });
-function b(e) {
+function j(e) {
     let { categories: t, guild: n, className: l, hasSidebar: s } = e,
         a = r.useCallback(
             (e) => {
@@ -257,7 +257,7 @@ function b(e) {
                 return null == a
                     ? null
                     : (0, i.jsx)(
-                          j,
+                          b,
                           {
                               category: l.channel,
                               channel: a.channel,

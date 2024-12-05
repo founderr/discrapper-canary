@@ -19,13 +19,13 @@ var i = n(200651),
     p = n(946724),
     f = n(999382),
     C = n(130341),
-    _ = n(981975),
-    v = n(660962),
+    v = n(981975),
+    _ = n(660962),
     I = n(442182),
     N = n(322816),
     T = n(266665),
-    j = n(203377),
-    b = n(981631),
+    b = n(203377),
+    j = n(981631),
     S = n(556996);
 function E(e) {
     let t,
@@ -52,7 +52,7 @@ function E(e) {
             var e, t;
             let i = (0, C.UT)(E),
                 r = null !== (t = null === (e = x.Z.getRoleMemberCount(y.id)) || void 0 === e ? void 0 : e[n]) && void 0 !== t ? t : 0;
-            h.default.track(b.rMx.ROLE_PAGE_VIEWED, {
+            h.default.track(j.rMx.ROLE_PAGE_VIEWED, {
                 tab_opened: i,
                 is_everyone: (0, d.pM)(y.id, n),
                 role_id: n,
@@ -70,8 +70,8 @@ function E(e) {
     )
         return null;
     switch (E) {
-        case j.ZI.DISPLAY:
-            t = (0, i.jsx)(v.ZP, {
+        case b.ZI.DISPLAY:
+            t = (0, i.jsx)(_.ZP, {
                 guild: y,
                 role: Z,
                 locked: D,
@@ -79,7 +79,7 @@ function E(e) {
                 setSelectedSection: R
             });
             break;
-        case j.ZI.PERMISSIONS:
+        case b.ZI.PERMISSIONS:
             t = (0, i.jsx)(N.ZP, {
                 guild: y,
                 role: Z,
@@ -88,8 +88,8 @@ function E(e) {
                 initialSearchQuery: A
             });
             break;
-        case j.ZI.VERIFICATIONS:
-            t = (0, i.jsx)(_.Z, {
+        case b.ZI.VERIFICATIONS:
+            t = (0, i.jsx)(v.Z, {
                 guild: y,
                 role: Z,
                 locked: D,
@@ -97,7 +97,7 @@ function E(e) {
                 integrations: null != k ? k : void 0
             });
             break;
-        case j.ZI.MEMBERS:
+        case b.ZI.MEMBERS:
             t = (0, i.jsx)(I.ZP, {
                 guild: y,
                 role: Z,

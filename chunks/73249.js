@@ -10,8 +10,8 @@ var i = t(200651),
     d = t(378409),
     h = t(49012),
     m = t(358085),
-    f = t(998502),
-    p = t(212459),
+    p = t(998502),
+    f = t(212459),
     g = t(701865),
     x = t(388032),
     _ = t(197736);
@@ -39,7 +39,7 @@ function S(e) {
     });
 }
 function v() {
-    let { zoomed: e, setZoomed: n } = (0, p.Y)();
+    let { zoomed: e, setZoomed: n } = (0, f.Y)();
     return (0, i.jsx)(S, {
         onClick: () => n(!e),
         tooltipText: e ? x.intl.string(x.t.vOFof3) : x.intl.string(x.t.Kt4gZ2),
@@ -90,7 +90,7 @@ function E(e) {
     async function r() {
         if (('VIDEO' === n.type && (0, h.q)({ href: t }), 'IMAGE' === n.type))
             try {
-                await f.ZP.saveImage(t), (0, o.showToast)((0, o.createToast)(x.intl.string(x.t.cqpdJS), o.ToastType.SUCCESS));
+                await p.ZP.saveImage(t), (0, o.showToast)((0, o.createToast)(x.intl.string(x.t.cqpdJS), o.ToastType.SUCCESS));
             } catch (e) {
                 (0, o.showToast)((0, o.createToast)(x.intl.string(x.t['8Ve/S0']), o.ToastType.FAILURE));
             }
@@ -117,7 +117,7 @@ function b(e) {
     async function s() {
         let e = (0, d.s$)(n.url);
         try {
-            await f.ZP.copyImage(e), (0, o.showToast)((0, o.createToast)(x.intl.string(x.t.bhUpvL), o.ToastType.SUCCESS));
+            await p.ZP.copyImage(e), (0, o.showToast)((0, o.createToast)(x.intl.string(x.t.bhUpvL), o.ToastType.SUCCESS));
         } catch (e) {
             (0, o.showToast)((0, o.createToast)(x.intl.string(x.t.PTPbj4), o.ToastType.FAILURE));
         }
@@ -148,7 +148,7 @@ function b(e) {
                             action: function () {
                                 var e;
                                 let t = (0, d.s$)(null !== (e = n.original) && void 0 !== e ? e : n.url);
-                                m.isPlatformEmbedded ? f.ZP.copy(t) : window.navigator.clipboard.writeText(t), (0, o.showToast)((0, o.createToast)(x.intl.string(x.t['L/PwZW']), o.ToastType.SUCCESS));
+                                m.isPlatformEmbedded ? p.ZP.copy(t) : window.navigator.clipboard.writeText(t), (0, o.showToast)((0, o.createToast)(x.intl.string(x.t['L/PwZW']), o.ToastType.SUCCESS));
                             }
                         },
                         'media-viewer-copy-link'
@@ -160,7 +160,7 @@ function b(e) {
 function L(e) {
     let { item: n } = e,
         [t, a] = r.useState(!1),
-        l = 'IMAGE' === n.type && m.isPlatformEmbedded && null == n.children && f.ZP.canCopyImage() && (0, d.Lz)(n.url),
+        l = 'IMAGE' === n.type && m.isPlatformEmbedded && null == n.children && p.ZP.canCopyImage() && (0, d.Lz)(n.url),
         s = (0, d.Jj)(n.url);
     return l || s
         ? (0, i.jsx)(o.Popout, {

@@ -35,13 +35,13 @@ function f(e) {
     }
     let f = t === m.p6O,
         C = f ? c : t,
-        _ = (0, i.jsx)(o.CheckmarkLargeIcon, {
+        v = (0, i.jsx)(o.CheckmarkLargeIcon, {
             size: 'custom',
             width: 32,
             height: 24,
             color: p(t)
         }),
-        v = (0, o.useRadioGroup)({
+        _ = (0, o.useRadioGroup)({
             orientation: 'horizontal',
             isDisabled: l
         }),
@@ -56,7 +56,7 @@ function f(e) {
     return (0, i.jsxs)('div', {
         className: g.buttonsContainer,
         'aria-label': h.intl.string(h.t.FJjrIy),
-        ...v,
+        ..._,
         children: [
             (0, i.jsx)('div', {
                 className: s()(g.colorSwatch, { [g.disabled]: l }),
@@ -72,7 +72,7 @@ function f(e) {
                         (0, i.jsx)('div', {
                             className: g.swatch,
                             style: { backgroundColor: (0, a.Rf)(m.p6O) },
-                            children: f ? _ : null
+                            children: f ? v : null
                         }),
                         (0, i.jsx)(o.Text, {
                             className: g.swatchDescription,
@@ -95,7 +95,7 @@ function f(e) {
                             (0, i.jsx)('div', {
                                 className: s()(g.customSwatch, { [g.defaultSwatch]: C === m.p6O }),
                                 style: { '--custom-color': (0, a.Rf)(C) },
-                                children: f ? null : _
+                                children: f ? null : v
                             }),
                             (0, i.jsx)(o.Text, {
                                 className: g.swatchDescription,

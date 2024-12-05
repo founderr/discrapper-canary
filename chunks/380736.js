@@ -23,13 +23,13 @@ var i = n(200651),
     v = n(388032),
     g = n(176463);
 function E(e, t, n) {
-    return (0, i.jsx)(x, {
+    return (0, i.jsx)(C, {
         keybind: e,
         message: t,
         messageWithoutKeybind: n
     });
 }
-function x(e) {
+function C(e) {
     let { keybind: t, message: n, messageWithoutKeybind: l } = e,
         o = (0, c.o)();
     return (0, i.jsx)(i.Fragment, {
@@ -41,11 +41,11 @@ function x(e) {
             : l
     });
 }
-function C(e) {
+function x(e) {
     e.currentTarget.scrollTo(0, 0);
 }
 let Z = l.memo(function (e) {
-    let { maxBodyLines: t, expand: n = !1, onNotificationShow: o, onDismissClick: u, onConfirmClick: c, onCancelClick: h, onNotificationClick: f, hint: p, cancelText: E, confirmText: x, icon: Z, body: _, title: S, renderFooter: I, contentOpacity: N, status: b, containerRef: O } = e,
+    let { maxBodyLines: t, expand: n = !1, onNotificationShow: o, onDismissClick: u, onConfirmClick: c, onCancelClick: h, onNotificationClick: f, hint: p, cancelText: E, confirmText: C, icon: Z, body: _, title: S, renderFooter: I, contentOpacity: N, status: b, containerRef: O } = e,
         [y, j] = l.useState(!1),
         T = n || y || b === m._1z.FOCUSED;
     l.useEffect(() => {
@@ -63,13 +63,13 @@ let Z = l.memo(function (e) {
             },
             [c]
         ),
-        A = l.useCallback(
+        L = l.useCallback(
             (e) => {
                 e.stopPropagation(), null == h || h(e);
             },
             [h]
         ),
-        L = l.useCallback(() => {
+        A = l.useCallback(() => {
             j(!0);
         }, []),
         R = l.useCallback(() => {
@@ -79,11 +79,11 @@ let Z = l.memo(function (e) {
         children: [
             (0, i.jsx)('div', {
                 className: g.overflowWrapper,
-                onScroll: C,
+                onScroll: x,
                 children: (0, i.jsx)(a.Clickable, {
                     innerRef: O,
                     ignoreKeyPress: !0,
-                    onMouseOver: L,
+                    onMouseOver: A,
                     onMouseLeave: R,
                     onClick: f,
                     className: r()(g.container, { [g.clickable]: null != f }),
@@ -147,7 +147,7 @@ let Z = l.memo(function (e) {
                                                                         size: a.Button.Sizes.SMALL,
                                                                         color: a.Button.Colors.GREEN,
                                                                         onClick: w,
-                                                                        children: null != x ? x : v.intl.string(v.t.BddRzc)
+                                                                        children: null != C ? C : v.intl.string(v.t.BddRzc)
                                                                     })
                                                                   : null,
                                                               null != h
@@ -156,7 +156,7 @@ let Z = l.memo(function (e) {
                                                                         size: a.Button.Sizes.SMALL,
                                                                         look: a.Button.Looks.OUTLINED,
                                                                         color: a.Button.Colors.PRIMARY,
-                                                                        onClick: A,
+                                                                        onClick: L,
                                                                         children: null != E ? E : v.intl.string(v.t['ETE/oK'])
                                                                     })
                                                                   : null
@@ -212,10 +212,10 @@ function S(e) {
             id: a,
             props: { onNotificationShow: c, onDismissClick: d, onNotificationClick: h, onConfirmClick: m, onCancelClick: v, renderFooter: E }
         } = t,
-        x = l.useCallback(() => {
+        C = l.useCallback(() => {
             c(a);
         }, [c, a]),
-        C = l.useCallback(
+        x = l.useCallback(
             (e) => {
                 u.Z.updateNotificationStatus(a), null == d || d(e, a);
             },
@@ -241,8 +241,8 @@ function S(e) {
         ),
         b = l.useCallback((e) => (null == E ? void 0 : E(e, a)), [E, a]),
         {
-            props: { onNotificationShow: O, onDismissClick: y, renderFooter: j, onNotificationClick: T, onConfirmClick: k, onCancelClick: w, ...A },
-            status: L
+            props: { onNotificationShow: O, onDismissClick: y, renderFooter: j, onNotificationClick: T, onConfirmClick: k, onCancelClick: w, ...L },
+            status: A
         } = t,
         { ref: R, springs: M } = (0, p.X4)(t.id, r, s);
     return (0, i.jsx)(_, {
@@ -254,11 +254,11 @@ function S(e) {
             observe: 0 === n,
             className: g.clickZone,
             children: (0, i.jsx)(Z, {
-                ...A,
+                ...L,
                 containerRef: R,
                 notificationId: t.id,
-                onNotificationShow: 0 === n ? x : void 0,
-                onDismissClick: C,
+                onNotificationShow: 0 === n ? C : void 0,
+                onDismissClick: x,
                 onNotificationClick: null != h ? S : void 0,
                 onConfirmClick: null != m ? I : void 0,
                 onCancelClick: null != v ? N : void 0,
@@ -266,7 +266,7 @@ function S(e) {
                 expand: !1,
                 index: n,
                 locked: o,
-                status: L,
+                status: A,
                 contentOpacity: M.contentOpacity
             })
         })

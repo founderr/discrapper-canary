@@ -13,14 +13,14 @@ t.Z = r.memo(function (e) {
         { hasChanges: h, editingRule: g, createNewEditingRule: x, setEditingRule: p } = (0, a.V)(),
         { isLoading: f } = (0, a.w)(),
         [C] = r.useState(() => !(0, l.Vb)(t)),
-        _ = (null == g ? void 0 : g.id) === t.id || n,
-        v = (0, s.U)(null == t ? void 0 : t.id),
-        I = _ && null != g ? g : t,
+        v = (null == g ? void 0 : g.id) === t.id || n,
+        _ = (0, s.U)(null == t ? void 0 : t.id),
+        I = v && null != g ? g : t,
         N = r.useMemo(() => (0, o.af)(t.name), [null == t ? void 0 : t.name]),
         T = r.useCallback(() => {
             x(t.guildId, t.triggerType);
         }, [t.guildId, t.triggerType, x]),
-        j = r.useCallback(
+        b = r.useCallback(
             (e) => {
                 if (!f) p(e, !0);
             },
@@ -29,34 +29,34 @@ t.Z = r.memo(function (e) {
     r.useEffect(() => {
         m && p(t, !0);
     }, [m, t, p]);
-    let b = r.useCallback(() => {
-        _
+    let j = r.useCallback(() => {
+        v
             ? !h && p(null)
             : h
               ? N(() => {
                     p(t);
                 })
               : p(t);
-    }, [_, h, N, t, p]);
+    }, [v, h, N, t, p]);
     return (0, i.jsx)(d.Z, {
         renderHeader: (0, i.jsx)(u.Z, {
             rule: I,
-            forceSetup: C && !_ && !v,
+            forceSetup: C && !v && !_,
             triggerType: t.triggerType,
-            isEditMode: _,
-            isDefaultRule: v,
-            onChangeRule: j,
+            isEditMode: v,
+            isDefaultRule: _,
+            onChangeRule: b,
             onSetupRule: T
         }),
-        isStuck: _ && h,
-        isExpanded: _,
-        onExpand: b,
+        isStuck: v && h,
+        isExpanded: v,
+        onExpand: j,
         children:
-            _ &&
+            v &&
             (0, i.jsx)(c.Z, {
                 rule: I,
                 isLoading: f,
-                onChangeRule: j
+                onChangeRule: b
             })
     });
 });

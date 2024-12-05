@@ -15,8 +15,8 @@ var r = n(442837),
     p = n(999382),
     f = n(981631),
     C = n(611480),
-    _ = n(388032),
-    v = n(64462);
+    v = n(388032),
+    _ = n(64462);
 let I = {
         page: f.ZY5.GUILD_SETTINGS,
         section: f.jXE.GUILD_SETTINGS_STICKERS,
@@ -27,24 +27,24 @@ let I = {
             { analyticsLocations: n } = (0, a.ZP)(),
             r = (0, g.vn)(t.id)[f.Eu4.TIER_1] - t.premiumSubscriberCount;
         return (0, i.jsxs)('div', {
-            className: v.upsellContainer,
+            className: _.upsellContainer,
             children: [
                 (0, i.jsx)(l.Heading, {
-                    className: v.upsellHeader,
+                    className: _.upsellHeader,
                     variant: 'heading-xl/semibold',
-                    children: _.intl.string(_.t.hzCkys)
+                    children: v.intl.string(v.t.hzCkys)
                 }),
                 (0, i.jsx)(l.Text, {
-                    className: v.upsellDescription,
+                    className: _.upsellDescription,
                     variant: 'text-md/normal',
-                    children: _.intl.string(_.t.jcesAA)
+                    children: v.intl.string(v.t.jcesAA)
                 }),
                 (0, i.jsxs)('div', {
-                    className: v.upsellButtons,
+                    className: _.upsellButtons,
                     children: [
                         (0, i.jsx)(l.Button, {
-                            className: v.upsellButtonPrimary,
-                            innerClassName: v.upsellButton,
+                            className: _.upsellButtonPrimary,
+                            innerClassName: _.upsellButton,
                             color: l.Button.Colors.WHITE,
                             onClick: () =>
                                 (0, d.Z)({
@@ -53,17 +53,17 @@ let I = {
                                     guildId: t.id,
                                     totalNumberOfSlotsToAssign: r
                                 }),
-                            children: _.intl.string(_.t.Q5dbTk)
+                            children: v.intl.string(v.t.Q5dbTk)
                         }),
                         (0, i.jsx)(l.Button, {
-                            innerClassName: v.upsellButton,
+                            innerClassName: _.upsellButton,
                             color: l.Button.Colors.WHITE,
                             onClick: () =>
                                 (0, o.f)({
                                     guildId: t.id,
                                     location: { section: f.jXE.GUILD_SETTINGS_STICKERS }
                                 }),
-                            children: _.intl.string(_.t.hvVgAQ)
+                            children: v.intl.string(v.t.hvVgAQ)
                         })
                     ]
                 })
@@ -72,19 +72,19 @@ let I = {
     },
     T = () =>
         (0, i.jsxs)(l.FormSection, {
-            title: _.intl.string(_.t['9N2OWF']),
+            title: v.intl.string(v.t['9N2OWF']),
             children: [
                 (0, i.jsx)(l.FormText, {
                     type: l.FormTextTypes.DESCRIPTION,
-                    children: _.intl.format(_.t.hxLvi4, { fileSize: (0, h.IC)(C.Ht, { useKibibytes: !0 }) })
+                    children: v.intl.format(v.t.hxLvi4, { fileSize: (0, h.IC)(C.Ht, { useKibibytes: !0 }) })
                 }),
                 (0, i.jsx)(l.FormText, {
                     type: l.FormTextTypes.DESCRIPTION,
-                    children: _.intl.format(_.t.UBj0aW, { articleUrl: x.Z.getArticleURL(f.BhN.STICKERS_UPLOAD) })
+                    children: v.intl.format(v.t.UBj0aW, { articleUrl: x.Z.getArticleURL(f.BhN.STICKERS_UPLOAD) })
                 })
             ]
         }),
-    j = (e) => {
+    b = (e) => {
         let t,
             n,
             r,
@@ -97,9 +97,9 @@ let I = {
         return null == d || a === f.Eu4.TIER_3 || o > 0
             ? (0, i.jsx)(i.Fragment, {})
             : (m > u
-                  ? ((t = _.intl.formatToPlainString(_.t.ZtAY1d, { level: d })), (n = _.intl.formatToPlainString(_.t['13hOWl'], { level: d })), (r = f.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL))
-                  : ((t = _.intl.string(_.t.zT9Sxc)),
-                    (n = _.intl.formatToPlainString(_.t.YaW9wM, {
+                  ? ((t = v.intl.formatToPlainString(v.t.ZtAY1d, { level: d })), (n = v.intl.formatToPlainString(v.t['13hOWl'], { level: d })), (r = f.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL))
+                  : ((t = v.intl.string(v.t.zT9Sxc)),
+                    (n = v.intl.formatToPlainString(v.t.YaW9wM, {
                         level: d,
                         numAdditional: (0, g.ig)(d)
                     })),
@@ -132,13 +132,13 @@ t.Z = () => {
     return (0, i.jsx)(a.Gt, {
         value: n,
         children: (0, i.jsxs)(l.FormSection, {
-            title: _.intl.string(_.t.R5nQkZ),
+            title: v.intl.string(v.t.R5nQkZ),
             tag: l.FormTitleTags.H1,
             children: [
                 o
                     ? (0, i.jsxs)('div', {
                           children: [
-                              (0, i.jsx)(j, {
+                              (0, i.jsx)(b, {
                                   guild: e,
                                   guildStickers: t
                               }),
@@ -146,7 +146,7 @@ t.Z = () => {
                           ]
                       })
                     : (0, i.jsx)(N, { guild: e }),
-                (0, i.jsx)(l.FormDivider, { className: v.divider }),
+                (0, i.jsx)(l.FormDivider, { className: _.divider }),
                 (0, i.jsx)(m.Z, { guild: e })
             ]
         })

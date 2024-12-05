@@ -53,7 +53,7 @@ t.Z = l.memo(function (e) {
             [],
             c.HP
         ),
-        x = l.useCallback(
+        C = l.useCallback(
             (e) =>
                 (0, i.jsx)('div', {
                     className: t,
@@ -66,6 +66,6 @@ t.Z = l.memo(function (e) {
         items: E,
         renderItem: v,
         getItemKey: m,
-        wrapChildren: x
+        wrapChildren: C
     });
 });

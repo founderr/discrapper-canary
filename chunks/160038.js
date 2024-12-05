@@ -2,8 +2,8 @@ n(47120);
 var l = n(200651),
     s = n(192379),
     r = n(120356),
-    o = n.n(r),
-    i = n(46973),
+    i = n.n(r),
+    o = n(46973),
     a = n(481060),
     c = n(304680),
     u = n(706619),
@@ -16,9 +16,9 @@ var l = n(200651),
     f = n(981631),
     p = n(65154),
     E = n(388032),
-    I = n(51100);
-let T = () => {
-    h.Z.getMediaEngine().once(i.aB.ConnectionStats, (e) => {
+    m = n(51100);
+let I = () => {
+    h.Z.getMediaEngine().once(o.aB.ConnectionStats, (e) => {
         let t = Object.values(p.Yn)
             .map((t) => {
                 let n = e
@@ -49,7 +49,7 @@ t.Z = function (e) {
             null != t && t(), c.bA();
         }, [e]),
         n = (0, s.useCallback)(() => {
-            let { hostname: t, averagePing: n, lastPing: r, outboundLossRate: i } = e,
+            let { hostname: t, averagePing: n, lastPing: r, outboundLossRate: o } = e,
                 a = d.Sb.getSetting();
             return (0, l.jsxs)(s.Fragment, {
                 children: [
@@ -57,7 +57,7 @@ t.Z = function (e) {
                         (0, l.jsxs)('div', {
                             children: [
                                 (0, l.jsx)('div', {
-                                    className: I.graphContainer,
+                                    className: m.graphContainer,
                                     children: (0, l.jsx)(u.Z, {
                                         dataPoints: e.pings,
                                         width: 258,
@@ -65,32 +65,32 @@ t.Z = function (e) {
                                     })
                                 }),
                                 (0, l.jsx)('div', {
-                                    className: I.popoutText,
+                                    className: m.popoutText,
                                     children: (0, l.jsx)('strong', { children: C.Z.getShortHostname(t) })
                                 })
                             ]
                         }),
                     (0, l.jsx)('div', {
-                        className: I.popoutText,
+                        className: m.popoutText,
                         children: E.intl.format(E.t['X58/lJ'], { averagePing: n.toFixed(0) })
                     }),
                     null != r
                         ? (0, l.jsx)('div', {
-                              className: I.popoutText,
+                              className: m.popoutText,
                               children: E.intl.format(E.t['6iv2TE'], { lastPing: r.toFixed(0) })
                           })
                         : null,
-                    null != i
+                    null != o
                         ? (0, l.jsx)('div', {
-                              className: I.popoutText,
-                              children: E.intl.format(E.t.VIBJMz, { outboundLossRate: i.toFixed(1) })
+                              className: m.popoutText,
+                              children: E.intl.format(E.t.VIBJMz, { outboundLossRate: o.toFixed(1) })
                           })
                         : null,
                     (0, l.jsxs)('div', {
-                        className: o()(I.popoutText, I.popoutTextDetails),
+                        className: i()(m.popoutText, m.popoutTextDetails),
                         children: [
-                            null == i ? E.intl.formatToPlainString(E.t.vggaMj, { badPing: 250 }) : null,
-                            null != i
+                            null == o ? E.intl.formatToPlainString(E.t.vggaMj, { badPing: 250 }) : null,
+                            null != o
                                 ? E.intl.formatToPlainString(E.t['3pFz1N'], {
                                       badPing: 250,
                                       badLossRate: 10
@@ -101,9 +101,9 @@ t.Z = function (e) {
                 ]
             });
         }, [e]),
-        { connectionState: r, connectionTypeText: i } = e,
+        { connectionState: r, connectionTypeText: o } = e,
         g = d.Sb.getSetting(),
-        m = {
+        T = {
             [f.hes.AWAITING_ENDPOINT]: E.intl.format(E.t.Eu2vUV, { url: f.yXt.STATUS }),
             [f.hes.CONNECTING]: E.intl.string(E.t['y+E8aG']),
             [f.hes.AUTHENTICATING]: E.intl.string(E.t['5lGIZG']),
@@ -117,25 +117,25 @@ t.Z = function (e) {
         }[r];
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            'function' == typeof m
-                ? m()
+            'function' == typeof T
+                ? T()
                 : (0, l.jsx)('p', {
-                      className: o()(I.popoutText, I.popoutTextDetails),
-                      children: m
+                      className: i()(m.popoutText, m.popoutTextDetails),
+                      children: T
                   }),
-            (0, l.jsx)('hr', { className: I.separator }),
+            (0, l.jsx)('hr', { className: m.separator }),
             (0, l.jsxs)('div', {
-                className: I.popoutBottom,
+                className: m.popoutBottom,
                 children: [
                     (0, l.jsxs)('span', {
-                        className: o()(I.secured, I.textWithIcon),
+                        className: i()(m.secured, m.textWithIcon),
                         children: [
                             (0, l.jsx)(a.LockIcon, {
                                 size: 'xxs',
                                 color: a.tokens.colors.TEXT_POSITIVE.css,
-                                className: I.__invalid_icon
+                                className: m.__invalid_icon
                             }),
-                            i
+                            o
                         ]
                     }),
                     g &&
@@ -144,27 +144,27 @@ t.Z = function (e) {
                         (0, l.jsxs)(l.Fragment, {
                             children: [
                                 (0, l.jsxs)(a.Anchor, {
-                                    className: o()(I.debugButton, I.textWithIcon),
+                                    className: i()(m.debugButton, m.textWithIcon),
                                     onClick: t,
                                     children: [
                                         E.intl.string(E.t.KBoWg4),
                                         (0, l.jsx)(a.WindowLaunchIcon, {
                                             size: 'xxs',
                                             color: 'currentColor',
-                                            className: I.__invalid_icon
+                                            className: m.__invalid_icon
                                         })
                                     ]
                                 }),
                                 (0, l.jsxs)(a.Anchor, {
-                                    className: o()(I.copyStatsButton, I.textWithIcon),
-                                    onClick: T,
+                                    className: i()(m.copyStatsButton, m.textWithIcon),
+                                    onClick: I,
                                     title: 'Copy to clipboard',
                                     children: [
                                         E.intl.string(E.t['XEb+Sk']),
                                         (0, l.jsx)(a.CopyIcon, {
                                             size: 'xxs',
                                             color: 'currentColor',
-                                            className: I.__invalid_icon
+                                            className: m.__invalid_icon
                                         })
                                     ]
                                 })
@@ -173,7 +173,7 @@ t.Z = function (e) {
                     !g &&
                         !__OVERLAY__ &&
                         (0, l.jsx)(a.Anchor, {
-                            className: I.debugButton,
+                            className: m.debugButton,
                             href: N.Z.getArticleURL(f.BhN.VOICE_VIDEO_TROUBLESHOOTING),
                             children: E.intl.string(E.t.hvVgAQ)
                         })

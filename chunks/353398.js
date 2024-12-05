@@ -26,13 +26,13 @@ var i,
     p = n(881052),
     f = n(751189),
     C = n(409059),
-    _ = n(518936),
-    v = n(999382),
+    v = n(518936),
+    _ = n(999382),
     I = n(58346),
     N = n(388032),
     T = n(434881),
-    j = n(232186);
-function b(e, t, n) {
+    b = n(232186);
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,7 +47,7 @@ function b(e, t, n) {
 }
 class S extends (i = d.ZP.Store) {
     getTemplate() {
-        let e = v.Z.getProps().guild;
+        let e = _.Z.getProps().guild;
         if (null == e) return null;
         let t = C.Z.getForGuild(e.id);
         return null != t && t.state !== I.Rj.RESOLVING ? t : null;
@@ -58,10 +58,10 @@ class S extends (i = d.ZP.Store) {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'name', ''),
-            b(this, 'description', ''),
-            b(this, 'error', null),
-            b(this, 'reset', () => {
+            j(this, 'name', ''),
+            j(this, 'description', ''),
+            j(this, 'error', null),
+            j(this, 'reset', () => {
                 let e = this.getTemplate();
                 if (null != e) {
                     var t, n;
@@ -69,21 +69,21 @@ class S extends (i = d.ZP.Store) {
                 } else (this.name = ''), (this.description = '');
                 this.emitChange();
             }),
-            b(this, 'setName', (e) => {
+            j(this, 'setName', (e) => {
                 (this.name = e), this.emitChange();
             }),
-            b(this, 'setDescription', (e) => {
+            j(this, 'setDescription', (e) => {
                 (this.description = e), this.emitChange();
             }),
-            b(this, 'setError', (e) => {
+            j(this, 'setError', (e) => {
                 (this.error = e), this.emitChange();
             }),
-            b(this, 'save', async () => {
-                await f.Z.updateGuildTemplate(v.Z.getProps().guild.id, this.getTemplate().code, this.name, this.description), this.emitChange();
+            j(this, 'save', async () => {
+                await f.Z.updateGuildTemplate(_.Z.getProps().guild.id, this.getTemplate().code, this.name, this.description), this.emitChange();
             });
     }
 }
-b(S, 'displayName', 'GuildSettingsTemplateMetadataStore_');
+j(S, 'displayName', 'GuildSettingsTemplateMetadataStore_');
 let E = new S(h.Z);
 function R() {
     let [e, t] = l.useState(!1),
@@ -98,7 +98,7 @@ function R() {
 }
 function y() {
     return (0, r.jsx)(m.FormSection, {
-        className: j.marginBottom4,
+        className: b.marginBottom4,
         children: (0, r.jsxs)(m.HeadingLevel, {
             component: (0, r.jsx)(m.FormTitle, {
                 tag: m.FormTitleTags.H1,
@@ -106,7 +106,7 @@ function y() {
             }),
             children: [
                 (0, r.jsx)(m.FormText, {
-                    className: j.marginBottom20,
+                    className: b.marginBottom20,
                     type: m.FormTextTypes.DESCRIPTION,
                     children: N.intl.format(N.t.c0m8bG, {})
                 }),
@@ -118,7 +118,7 @@ function y() {
     });
 }
 function Z() {
-    let { guild: e } = v.Z.getProps();
+    let { guild: e } = _.Z.getProps();
     c()(null != e, 'guild cannot be null');
     let t = (0, d.e7)([E], () => E.error),
         [n, i] = l.useState(!0),
@@ -165,7 +165,7 @@ function Z() {
                   variant: 'text-sm/normal',
                   children: t.message
               })
-            : (0, r.jsx)(m.Spinner, { className: j.marginTop40 });
+            : (0, r.jsx)(m.Spinner, { className: b.marginTop40 });
     let o = null != t && null == t.getFirstFieldErrorMessage('name') && null == t.getFirstFieldErrorMessage('description');
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -176,7 +176,7 @@ function Z() {
             }),
             o
                 ? (0, r.jsx)(m.Text, {
-                      className: j.marginTop8,
+                      className: b.marginTop8,
                       color: 'text-danger',
                       variant: 'text-sm/normal',
                       children: t.getAnyErrorMessage()
@@ -305,7 +305,7 @@ function D() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(m.FormItem, {
-                className: j.marginBottom20,
+                className: b.marginBottom20,
                 title: N.intl.string(N.t.z1a9R0),
                 error: null == n ? void 0 : n.getFirstFieldErrorMessage('name'),
                 children: (0, r.jsx)(m.TextInput, {
@@ -316,7 +316,7 @@ function D() {
                 })
             }),
             (0, r.jsx)(m.FormItem, {
-                className: j.marginBottom20,
+                className: b.marginBottom20,
                 title: N.intl.string(N.t.GxirWV),
                 error: null == n ? void 0 : n.getFirstFieldErrorMessage('description'),
                 children: (0, r.jsx)(m.TextArea, {
@@ -340,18 +340,18 @@ function O(e) {
                       children: (0, r.jsx)(g.Z, {
                           buttonLook: m.Button.Looks.FILLED,
                           buttonColor: m.Button.Colors.BRAND,
-                          value: (0, _.Z)(n.code)
+                          value: (0, v.Z)(n.code)
                       })
                   }),
                   n.isDirty &&
                       (0, r.jsx)(m.Text, {
                           color: 'text-warning',
-                          className: j.marginTop8,
+                          className: b.marginTop8,
                           variant: 'text-sm/normal',
                           children: N.intl.string(N.t.aWsjtL)
                       }),
                   (0, r.jsxs)('div', {
-                      className: a()(j.marginTop20, T.buttonContainer),
+                      className: a()(b.marginTop20, T.buttonContainer),
                       children: [
                           n.isDirty &&
                               (0, r.jsx)(P, {

@@ -15,13 +15,13 @@ var i = n(200651),
     p = n(933557),
     f = n(471445),
     C = n(339085),
-    _ = n(565138),
-    v = n(372769),
+    v = n(565138),
+    _ = n(372769),
     I = n(690221),
     N = n(524329),
     T = n(575258),
-    j = n(514698),
-    b = n(592125),
+    b = n(514698),
+    j = n(592125),
     S = n(4912),
     E = n(626135),
     R = n(700785),
@@ -35,10 +35,10 @@ let k = 'WELCOME_CHANNEL',
     P = (e) => {
         var t;
         let l,
-            { guildId: a, welcomeChannel: o, onEdit: x, onChannelReorder: _, isDropHovered: v, index: I } = e,
+            { guildId: a, welcomeChannel: o, onEdit: x, onChannelReorder: v, isDropHovered: _, index: I } = e,
             [N, T] = r.useState(!1),
             E = r.useRef(null),
-            y = (0, u.e7)([b.Z], () => b.Z.getChannel(o.channel_id)),
+            y = (0, u.e7)([j.Z], () => j.Z.getChannel(o.channel_id)),
             Z = (0, u.e7)([C.ZP], () => (null != o.emoji_id ? C.ZP.getUsableCustomEmojiById(o.emoji_id) : null)),
             P = null != y && R.Uu(A.Plq.VIEW_CHANNEL, y),
             M = null !== (t = (0, f.KS)(y)) && void 0 !== t ? t : m.TextIcon,
@@ -50,16 +50,16 @@ let k = 'WELCOME_CHANNEL',
                     index: I
                 },
                 end: (e, t) => {
-                    null != e && !t.didDrop() && _(e.channel, null, !0);
+                    null != e && !t.didDrop() && v(e.channel, null, !0);
                 }
             }),
             [, U] = (0, d.L)({
                 accept: k,
                 hover: (e) => {
-                    _(e.channel, I, !1);
+                    v(e.channel, I, !1);
                 },
                 drop: (e) => {
-                    _(e.channel, I, !0);
+                    v(e.channel, I, !0);
                 }
             });
         return (
@@ -90,7 +90,7 @@ let k = 'WELCOME_CHANNEL',
                       className: O.warningIcon
                   })),
             (0, i.jsxs)('div', {
-                className: s()(O.welcomeChannel, { [O.dragging]: v }),
+                className: s()(O.welcomeChannel, { [O.dragging]: _ }),
                 ref: E,
                 'data-dnd-name': o.description,
                 onContextMenu: (e) => {
@@ -101,7 +101,7 @@ let k = 'WELCOME_CHANNEL',
                                 ...t,
                                 guildId: a,
                                 welcomeChannel: o,
-                                onChannelReorder: _,
+                                onChannelReorder: v,
                                 setShowConfirmModal: T,
                                 onEdit: x,
                                 index: I
@@ -154,7 +154,7 @@ let k = 'WELCOME_CHANNEL',
                         children: D.intl.string(D.t.bt75u7)
                     }),
                     N &&
-                        (0, i.jsx)(j.Z, {
+                        (0, i.jsx)(b.Z, {
                             onConfirm: () => x(),
                             onCancel: () => T(!1),
                             channelId: o.channel_id
@@ -170,9 +170,9 @@ t.Z = (e) => {
         [d, h] = r.useState(null),
         [g, p] = r.useState(!1),
         [f, C] = r.useState(!1),
-        { description: j, channels: b, enabled: R } = s,
+        { description: b, channels: j, enabled: R } = s,
         k = () => {
-            if (null != t) j !== a.description && ((0, N.Es)(t.id, { description: null == j ? void 0 : j.trim() }), p(!0));
+            if (null != t) b !== a.description && ((0, N.Es)(t.id, { description: null == b ? void 0 : b.trim() }), p(!0));
         },
         M = (e) => {
             if (null != t) !o()(e, a.channels) && ((0, N.Es)(t.id, { channels: e }), p(!0));
@@ -182,17 +182,17 @@ t.Z = (e) => {
         },
         B = (e) => {
             if (null == e) return;
-            let t = [...(null != b ? b : []), e];
+            let t = [...(null != j ? j : []), e];
             (0, N.VP)({ channels: t }), M(t);
         },
         U = (e) => (t) => {
-            let n = [...(null != b ? b : [])];
+            let n = [...(null != j ? j : [])];
             null == t ? n.splice(e, 1) : (n[e] = t), (0, N.VP)({ channels: n }), M(n), 0 === n.length && R && ((0, N.VP)({ enabled: !1 }), w(!1));
         },
         G = (e, t, n) => {
-            if (null == b) return;
-            let i = b.indexOf(e),
-                r = [...b];
+            if (null == j) return;
+            let i = j.indexOf(e),
+                r = [...j];
             null != t && t !== i && (r.splice(i, 1), r.splice(t, 0, e), (0, N.VP)({ channels: r })), n ? (M(r), h(null)) : h(t);
         },
         F = r.useRef(!1);
@@ -224,21 +224,21 @@ t.Z = (e) => {
                     let e = [],
                         n = [],
                         i = !1;
-                    null == b ||
-                        b.forEach((t) => {
+                    null == j ||
+                        j.forEach((t) => {
                             e.push(t.description), n.push(t.channel_id), null != t.emoji_id && (i = !0);
                         }),
                         E.default.track(A.rMx.GUILD_WELCOME_SCREEN_SETTINGS_UPDATED, {
                             guild_id: null == t ? void 0 : t.id,
                             options: e,
                             options_channel_ids: n,
-                            guild_description: j,
+                            guild_description: b,
                             has_custom_emojis: i,
                             is_enabled: R
                         });
                 }
             },
-            [g, b, j, R, t, F]
+            [g, j, b, R, t, F]
         ),
         r.useEffect(() => () => (0, N.sm)(), []);
     let H = r.useCallback(() => {
@@ -276,7 +276,7 @@ t.Z = (e) => {
                   (0, i.jsx)(Z.Z, {
                       enabled: R,
                       onPreview:
-                          (null == b ? void 0 : b.length) === 0
+                          (null == j ? void 0 : j.length) === 0
                               ? void 0
                               : () => {
                                     null != t &&
@@ -291,7 +291,7 @@ t.Z = (e) => {
                                         });
                                 },
                       onToggle:
-                          R || (null == b ? void 0 : b.length) !== 0
+                          R || (null == j ? void 0 : j.length) !== 0
                               ? () => {
                                     w(!R);
                                 }
@@ -306,8 +306,8 @@ t.Z = (e) => {
                           (0, i.jsxs)('div', {
                               className: O.welcomeHeader,
                               children: [
-                                  (0, i.jsx)(_.Z, {
-                                      size: _.Z.Sizes.LARGER,
+                                  (0, i.jsx)(v.Z, {
+                                      size: v.Z.Sizes.LARGER,
                                       className: O.icon,
                                       guild: t,
                                       animate: !0,
@@ -323,7 +323,7 @@ t.Z = (e) => {
                                                   'span',
                                                   {
                                                       children: [
-                                                          (0, i.jsx)(v.Z, {
+                                                          (0, i.jsx)(_.Z, {
                                                               guild: t,
                                                               className: O.headerGuildBadge,
                                                               flowerStarClassName: O.flowerStar
@@ -349,7 +349,7 @@ t.Z = (e) => {
                                           onKeyDown: (e) => {
                                               e.keyCode === A.yXg.ENTER && e.preventDefault();
                                           },
-                                          value: j,
+                                          value: b,
                                           maxLength: 140,
                                           disabled: !0
                                       })
@@ -366,9 +366,9 @@ t.Z = (e) => {
                                       className: O.addChannelSubtext,
                                       children: D.intl.string(D.t.VOnnn5)
                                   }),
-                                  null == b
+                                  null == j
                                       ? void 0
-                                      : b.map((e, n) =>
+                                      : j.map((e, n) =>
                                             (0, i.jsx)(
                                                 P,
                                                 {
@@ -382,7 +382,7 @@ t.Z = (e) => {
                                                 n
                                             )
                                         ),
-                                  (null == b || b.length < 5) &&
+                                  (null == j || j.length < 5) &&
                                       (0, i.jsx)(m.Button, {
                                           onClick: () =>
                                               (0, m.openModalLazy)(

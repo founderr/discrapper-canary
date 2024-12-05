@@ -37,7 +37,7 @@ let f = 8,
 t.Z = l.memo(function (e) {
     let { widgetId: t, tileWidth: n, layout: l, locked: o, streamParticipants: c, participantsVersion: v, pinned: g } = e,
         E = (9 / 16) * n,
-        x = c.map((e) => ({
+        C = c.map((e) => ({
             participant: e,
             key: e.user.id,
             width: n,
@@ -46,18 +46,18 @@ t.Z = l.memo(function (e) {
             height: E,
             pinned: g
         })),
-        C = (0, u.Z)(n),
+        x = (0, u.Z)(n),
         Z = l === d.C5.VERTICAL,
         _ = 0,
         S = 0,
         I = (0, a.useTransition)(
             Z
-                ? x.map((e, t) => ({
+                ? C.map((e, t) => ({
                       ...e,
                       y: (_ += e.height + (t > 0 ? f : 0)) - e.height,
                       x: 0
                   }))
-                : x.map((e, t) => ({
+                : C.map((e, t) => ({
                       ...e,
                       x: (S += e.width + (t > 0 ? f : 0)) - e.width,
                       y: 0
@@ -92,9 +92,9 @@ t.Z = l.memo(function (e) {
                     };
                 },
                 config: m,
-                trail: n !== C ? 0 : 100
+                trail: n !== x ? 0 : 100
             },
-            n !== C ? 'animate-never' : 'respect-motion-settings'
+            n !== x ? 'animate-never' : 'respect-motion-settings'
         );
     return (0, i.jsx)('div', {
         className: r()({
@@ -109,7 +109,7 @@ t.Z = l.memo(function (e) {
                 style: Object.assign({}, e, {
                     width: n,
                     height: E,
-                    zIndex: x.length - o
+                    zIndex: C.length - o
                 }),
                 children: p(t)
             })

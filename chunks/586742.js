@@ -19,8 +19,8 @@ var i = n(200651),
     v = n(592125),
     g = n(131951),
     E = n(944486),
-    x = n(906037),
-    C = n(501787),
+    C = n(906037),
+    x = n(501787),
     Z = n(65154),
     _ = n(827202);
 function S(e) {
@@ -45,7 +45,7 @@ function I(e) {
         },
         v = o.length > 0 && null != t && null != c && (!s || u.pinned);
     l.useEffect(() => {
-        (0, x.m3)(
+        (0, C.m3)(
             {
                 locked: s,
                 pinned: u.pinned,
@@ -97,10 +97,10 @@ function N(e) {
         r = (0, s.e7)([d.Z], () => (null != t ? d.Z.getParticipantsVersion(t.id) : 0)),
         a = 'boolean' != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
         { width: f, height: p, ref: g } = (0, c.Z)(),
-        { visibleParticipants: x, participantTileWidth: Z } = (0, m.ZB)(a ? (null != f ? f : e.width) : null != p ? p : e.height, o, {
-            tileWidth: C.OVERLAY_TILE_WIDTH,
-            tileMinWidth: C.OVERLAY_TILE_MIN_WIDTH,
-            tileMargin: C.OVERLAY_TILE_MARGIN,
+        { visibleParticipants: C, participantTileWidth: Z } = (0, m.ZB)(a ? (null != f ? f : e.width) : null != p ? p : e.height, o, {
+            tileWidth: x.OVERLAY_TILE_WIDTH,
+            tileMinWidth: x.OVERLAY_TILE_MIN_WIDTH,
+            tileMargin: x.OVERLAY_TILE_MARGIN,
             limit: 8,
             cropSelfVideo: !0,
             version: r
@@ -130,7 +130,7 @@ function N(e) {
             ...e,
             channel: t,
             title: null != n ? n : '',
-            participants: x,
+            participants: C,
             participantsVersion: r,
             width: a ? Z : null != f ? f : e.width,
             height: a ? (null != p ? p : e.height) : Z,

@@ -15,9 +15,9 @@ var r = n(780384),
     p = n(388032),
     f = n(792464);
 t.Z = function (e) {
-    let { guild: t, disabled: C, role: _ } = e,
-        v = (0, s.ZP)(),
-        I = (0, u.oC)(t.id, _),
+    let { guild: t, disabled: C, role: v } = e,
+        _ = (0, s.ZP)(),
+        I = (0, u.oC)(t.id, v),
         { analyticsLocations: N } = (0, o.ZP)(),
         T = () => {
             (0, l.openModalLazy)(async () => {
@@ -26,14 +26,14 @@ t.Z = function (e) {
                     (0, i.jsx)(e, {
                         ...n,
                         guildId: t.id,
-                        onUploadIcon: (e) => (0, h._l)(_.id, e, null),
-                        onSelectUnicodeEmoji: (e) => (0, h._l)(_.id, null, e)
+                        onUploadIcon: (e) => (0, h._l)(v.id, e, null),
+                        onSelectUnicodeEmoji: (e) => (0, h._l)(v.id, null, e)
                     });
             });
         },
-        j = t.features.has(g.oNc.ROLE_ICONS),
-        b = (e) => {
-            !j &&
+        b = t.features.has(g.oNc.ROLE_ICONS),
+        j = (e) => {
+            !b &&
                 ((0, a.yw)(g.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                     location: {
                         ...e,
@@ -58,9 +58,9 @@ t.Z = function (e) {
             guild: t,
             guildFeature: g.oNc.ROLE_ICONS,
             tooltipPosition: 'top',
-            hideTooltip: j,
+            hideTooltip: b,
             onClick: () =>
-                b({
+                j({
                     object: g.qAy.LEARN_MORE,
                     objectType: g.Qqv.TIER_2
                 })
@@ -98,19 +98,19 @@ t.Z = function (e) {
                     }),
                     (0, i.jsx)(l.Button, {
                         className: f.button,
-                        color: (0, r.ap)(v) ? l.Button.Colors.PRIMARY : l.Button.Colors.WHITE,
+                        color: (0, r.ap)(_) ? l.Button.Colors.PRIMARY : l.Button.Colors.WHITE,
                         look: l.Button.Looks.OUTLINED,
-                        onClick: () => (t.hasFeature(g.oNc.ROLE_ICONS) ? T() : b({ object: g.qAy.UPLOAD_IMAGE })),
+                        onClick: () => (t.hasFeature(g.oNc.ROLE_ICONS) ? T() : j({ object: g.qAy.UPLOAD_IMAGE })),
                         disabled: C,
                         children: p.intl.string(p.t.mD1oGB)
                     }),
                     null != I
                         ? (0, i.jsx)(l.Button, {
                               className: f.button,
-                              color: (0, r.ap)(v) ? l.Button.Colors.PRIMARY : l.Button.Colors.TRANSPARENT,
+                              color: (0, r.ap)(_) ? l.Button.Colors.PRIMARY : l.Button.Colors.TRANSPARENT,
                               look: l.Button.Looks.BLANK,
                               onClick: () => {
-                                  (0, h._l)(_.id, null, null);
+                                  (0, h._l)(v.id, null, null);
                               },
                               disabled: C,
                               children: p.intl.string(p.t['uY+Nk5'])

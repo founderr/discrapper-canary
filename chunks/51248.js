@@ -17,12 +17,12 @@ function m(e) {
     let { guildId: t, existingRules: n } = e,
         { cancelEditingRule: m, isLoading: h, hasChanges: g, editingRule: x, errorMessage: p, saveEditingRule: f } = (0, c.w)(),
         { updateRule: C } = (0, o.pH)(t),
-        _ = null != x,
-        v = _ && !(0, a.Vb)(x),
-        I = _ || g || v,
+        v = null != x,
+        _ = v && !(0, a.Vb)(x),
+        I = v || g || _,
         N = async () => {
-            if (!g && !v) return m();
-            null != x && !v && C(x);
+            if (!g && !_) return m();
+            null != x && !_ && C(x);
             let e = n.find((e) => {
                 let { id: t } = e;
                 return t === (null == x ? void 0 : x.id);
@@ -35,10 +35,10 @@ function m(e) {
             }
         },
         T = d.intl.string(d.t['ETE/oK']),
-        j = !g && _ ? d.intl.formatToPlainString(d.t.nula39, { ruleName: null == x ? void 0 : x.name }) : void 0;
+        b = !g && v ? d.intl.formatToPlainString(d.t.nula39, { ruleName: null == x ? void 0 : x.name }) : void 0;
     return (
         null != p &&
-            (j = (0, i.jsx)(l.Text, {
+            (b = (0, i.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'text-danger',
                 className: u.message,
@@ -56,7 +56,7 @@ function m(e) {
                         onSave: N,
                         onReset: m,
                         onResetText: T,
-                        message: j
+                        message: b
                     })
                 })
         })

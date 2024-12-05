@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return b;
     }
 }),
     n(47120),
@@ -21,17 +21,17 @@ var i = n(200651),
     p = n(65912),
     f = n(51248),
     C = n(546513),
-    _ = n(572456),
-    v = n(273504),
+    v = n(572456),
+    _ = n(273504),
     I = n(981631),
     N = n(388032),
     T = n(925144);
-function j(e) {
+function b(e) {
     var t, n;
-    let { guildId: j, setPreventNavigation: b = () => {} } = e,
+    let { guildId: b, setPreventNavigation: j = () => {} } = e,
         { editingRule: S, setEditingRule: E } = (0, p.V)(),
         { guild: R, subsection: y } = (0, l.cj)([o.Z], () => o.Z.getProps()),
-        Z = null !== (n = null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : j) && void 0 !== n ? n : I.lds,
+        Z = null !== (n = null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : b) && void 0 !== n ? n : I.lds,
         A = null != S,
         [L] = (0, h.RD)(Z),
         { rulesByTriggerType: D } = (0, h.pH)(Z),
@@ -74,8 +74,8 @@ function j(e) {
             return P(null !== (e = null == S ? void 0 : S.id) && void 0 !== e ? e : null, null !== (t = null == S ? void 0 : S.triggerType) && void 0 !== t ? t : null);
         }, [P, S]);
     r.useEffect(() => {
-        b(A, (0, _.af)(M));
-    }, [b, A, M]);
+        j(A, (0, v.af)(M));
+    }, [j, A, M]);
     let w = (0, g.Z6)(Z),
         B = (e) =>
             (0, i.jsx)(i.Fragment, {
@@ -87,7 +87,7 @@ function j(e) {
                             guildId: Z,
                             triggerType: e,
                             rules: null !== (t = D[e]) && void 0 !== t ? t : [],
-                            initWithEdit: y === I.KsC.AUTOMOD_MENTION_SPAM && e === v.fX.MENTION_SPAM
+                            initWithEdit: y === I.KsC.AUTOMOD_MENTION_SPAM && e === _.fX.MENTION_SPAM
                         },
                         e
                     );

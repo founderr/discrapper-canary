@@ -22,41 +22,41 @@ function p() {
     let { editStateId: e, guildId: t } = (0, o.N)(),
         [p, f] = c.XZ(e, t),
         C = (0, d.Z)(t, e),
-        { setCurrentTab: _ } = (0, h.dw)(),
-        v = () => _(h.ue.EMOJIS),
+        { setCurrentTab: v } = (0, h.dw)(),
+        _ = () => v(h.ue.EMOJIS),
         I = (0, r.e7)([s.Z], () => s.Z.getGuild(t)),
         N = null == I ? void 0 : I.getMaxRoleSubscriptionEmojiSlots();
     function T(e) {
         null == p ? f(new Set(e)) : f(new Set([...p, ...e]));
     }
-    function j(e) {
+    function b(e) {
         let t = new Set(p);
         t.delete(e), f(t);
     }
-    let b = (0, a.mY)();
+    let j = (0, a.mY)();
     return (0, i.jsxs)(l.FormSection, {
         title: g.intl.string(g.t.D0qeOz),
-        disabled: b,
+        disabled: j,
         children: [
             (0, i.jsxs)(l.FormText, {
                 type: l.FormText.Types.DESCRIPTION,
                 className: x.formDescription,
-                disabled: b,
-                children: [g.intl.format(g.t.zuwel5, { premiumEmojiMaximum: N }), (0, i.jsx)('br', {}), g.intl.format(g.t.sEkgBg, { handleTransitionToManageEmoji: v })]
+                disabled: j,
+                children: [g.intl.format(g.t.zuwel5, { premiumEmojiMaximum: N }), (0, i.jsx)('br', {}), g.intl.format(g.t.sEkgBg, { handleTransitionToManageEmoji: _ })]
             }),
             (0, i.jsx)(m.E, {
                 tierEmojiIds: p,
                 guildId: t,
                 onRemoveEmoji: function (e) {
                     e.roles.filter((e) => e !== (null == C ? void 0 : C.id)).length > 0
-                        ? j(e.id)
+                        ? b(e.id)
                         : (0, l.openModalLazy)(async () => {
                               let { default: t } = await n.e('59128').then(n.bind(n, 28564));
                               return (n) =>
                                   (0, i.jsx)(t, {
                                       ...n,
                                       onConfirmDelete: () => {
-                                          j(e.id), n.onClose();
+                                          b(e.id), n.onClose();
                                       }
                                   });
                           });
@@ -74,12 +74,12 @@ function p() {
                                 initialTierEmojiIds: p,
                                 onSubmit: T,
                                 transitionToManageEmoji: () => {
-                                    v(), n.onClose();
+                                    _(), n.onClose();
                                 }
                             });
                     });
                 },
-                disabled: b,
+                disabled: j,
                 children: g.intl.string(g.t.ouOOV1)
             })
         ]

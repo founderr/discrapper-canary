@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return x;
     }
 });
 var i = n(200651);
@@ -20,8 +20,8 @@ var l = n(13245),
     v = n(620954),
     g = n(987650),
     E = n(981631),
-    x = n(388032);
-function C(e, t, n, C) {
+    C = n(388032);
+function x(e, t, n, x) {
     var Z;
     let { icon: _, title: S, body: I } = (0, a.Xi)(e, t, n),
         { trackView: N, trackClick: b } = (0, v.R)(g.n0.TextChat, {
@@ -44,7 +44,7 @@ function C(e, t, n, C) {
                       hideSimpleEmbedContent: !1
                   }).content
                 : I,
-        hint: (e) => (e ? null : (0, m.Q)((0, v.P)(), x.t.ykjOAA, x.intl.string(x.t.jZkzVF))),
+        hint: (e) => (e ? null : (0, m.Q)((0, v.P)(), C.t.ykjOAA, C.intl.string(C.t.jZkzVF))),
         maxBodyLines: 2,
         renderFooter: (t, n) =>
             t
@@ -55,7 +55,7 @@ function C(e, t, n, C) {
                   })
                 : null,
         onNotificationShow: () => {
-            C && (0, c.GN)(s.Ay, s.yk), N();
+            x && (0, c.GN)(s.Ay, s.yk), N();
         },
         onNotificationClick: () => {
             let n = (0, h.QF)();

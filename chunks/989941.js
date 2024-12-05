@@ -1,21 +1,21 @@
-let r;
-t.d(n, {
+let l;
+n.d(t, {
     Z: function () {
-        return l;
+        return r;
     }
 });
-var i = t(145597);
-function l(e, n) {
+var s = n(145597);
+function r(e, t) {
     if (__OVERLAY__) {
-        let e = n.getGame(),
-            t = (0, i.QF)();
-        return null == e || null == t
+        let e = t.getGame(),
+            n = (0, s.QF)();
+        return null == e || null == n
             ? null
-            : (null == r ? void 0 : r.id) === e.id && (null == r ? void 0 : r.pid) === t
-              ? r
-              : (r = {
+            : (null == l ? void 0 : l.id) === e.id && (null == l ? void 0 : l.pid) === n
+              ? l
+              : (l = {
                     id: e.id,
-                    pid: t,
+                    pid: n,
                     pidPath: [],
                     nativeProcessObserverId: 0,
                     hidden: !1,

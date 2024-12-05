@@ -21,8 +21,8 @@ var i = n(200651),
     v = n(567409),
     g = n(74299),
     E = n(199902),
-    x = n(592125),
-    C = n(430824),
+    C = n(592125),
+    x = n(430824),
     Z = n(131951),
     _ = n(944486),
     S = n(574254),
@@ -35,8 +35,8 @@ var i = n(200651),
     T = n(145597),
     k = n(830917),
     w = n(86071),
-    A = n(681603),
-    L = n(915614),
+    L = n(681603),
+    A = n(915614),
     R = n(690336),
     M = n(333031),
     z = n(388627),
@@ -59,10 +59,10 @@ let Y = !y.isPlatformEmbedded && !1,
           })
         : null,
     K = null;
-function X(e) {
+function Q(e) {
     e.preventDefault();
 }
-function Q(e) {
+function X(e) {
     (0, c.jW)(e, async () => {
         let { default: e } = await n.e('17610').then(n.bind(n, 385620));
         return (t) =>
@@ -84,12 +84,12 @@ let J = l.memo(function (e) {
                 let { currentTarget: t, target: i, button: l } = e;
                 l === U.AeJ.PRIMARY && t === i && n();
             },
-            onContextMenu: Q,
+            onContextMenu: X,
             children: l
                 ? null
                 : (0, i.jsx)(M.Z, {
                       className: H.closeContainer,
-                      children: (0, i.jsx)(L.Z, {
+                      children: (0, i.jsx)(A.Z, {
                           keybind: t,
                           onClick: n,
                           IconComponent: u.XLargeIcon
@@ -102,7 +102,7 @@ let J = l.memo(function (e) {
         return t && n
             ? (0, i.jsx)(M.Z, {
                   className: H.closeContainer,
-                  children: (0, i.jsx)(L.Z, {
+                  children: (0, i.jsx)(A.Z, {
                       onClick: () => d.Z.setInputLocked(!1, (0, T.QF)()),
                       IconComponent: u.LockUnlockedIcon
                   })
@@ -135,7 +135,7 @@ function ei(e) {
             focused: S,
             incompatibleApp: O,
             hasValidResolution: y,
-            hasZeroSizeDimension: L,
+            hasZeroSizeDimension: A,
             keybind: M
         } = (0, s.cj)([N.Z, b.Z, I.Z], () => {
             let e = b.Z.windowSize((0, k.ZY)(c)),
@@ -184,8 +184,8 @@ function ei(e) {
             let e = l.useRef(!1),
                 t = (0, z.pL)(),
                 n = _.Z.getVoiceChannelId(),
-                i = x.Z.getChannel(n),
-                o = null != i ? C.Z.getGuild(i.guild_id) : null,
+                i = C.Z.getChannel(n),
+                o = null != i ? x.Z.getGuild(i.guild_id) : null,
                 r = null != E.Z.getCurrentUserActiveStream(),
                 a = null != n,
                 u = (0, g.Z)(Z.Z) && !r && null != t,
@@ -229,21 +229,21 @@ function ei(e) {
         (n = c),
         l.useEffect(() => {
             if (t) {
-                if (((0, a.Ay)(u.POPOUT_MODAL_CONTEXT), n.addEventListener('contextmenu', X, !1), null != K)) {
+                if (((0, a.Ay)(u.POPOUT_MODAL_CONTEXT), n.addEventListener('contextmenu', Q, !1), null != K)) {
                     let e = Date.now() - K;
                     d.Z.track(U.rMx.OVERLAY_LOCKED, { unlocked_duration: e }), (K = null);
                 }
                 return () => {
-                    n.removeEventListener('contextmenu', X, !1);
+                    n.removeEventListener('contextmenu', Q, !1);
                 };
             }
-            n.removeEventListener('contextmenu', X, !1), null == K && ((K = Date.now()), d.Z.track(U.rMx.OVERLAY_UNLOCKED));
+            n.removeEventListener('contextmenu', Q, !1), null == K && ((K = Date.now()), d.Z.track(U.rMx.OVERLAY_UNLOCKED));
         }, [t, n]),
         (0, i.jsx)(f.Gt, {
             value: W,
             children: (0, i.jsx)(u.RedesignIconContextProvider, {
                 children:
-                    L || O
+                    A || O
                         ? null
                         : (0, i.jsx)(u.ThemeProvider, {
                               theme: U.BRd.DARK,
@@ -280,7 +280,7 @@ function ei(e) {
                                                   locked: m,
                                                   focused: S
                                               }),
-                                          (0, i.jsx)(A.Z, {})
+                                          (0, i.jsx)(L.Z, {})
                                       ]
                                   })
                           })

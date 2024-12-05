@@ -35,7 +35,7 @@ function E(e) {
         children: e
     });
 }
-let x = (e) => l.useState(() => new d.AS(e))[0];
+let C = (e) => l.useState(() => new d.AS(e))[0];
 t.Z = l.memo(function (e) {
     let { locked: t } = e,
         n = (0, o.e7)(
@@ -59,7 +59,7 @@ t.Z = l.memo(function (e) {
             [t],
             a.E6
         ),
-        c = x(t);
+        c = C(t);
     return (
         l.useLayoutEffect(() => c.updateState(n, t)),
         l.useLayoutEffect(() => (c.initialize((0, u.i)()), () => c.cleanUp()), [c]),

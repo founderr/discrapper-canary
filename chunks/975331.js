@@ -23,19 +23,19 @@ function C() {
     var e;
     let { editStateId: t } = (0, u.N)(),
         [n, l] = m.TT(t),
-        [C, _] = m.F2(t),
-        v = (0, c.oC)(t),
-        { options: I } = (0, g.Z)(null !== (e = null == v ? void 0 : v.active_trial) && void 0 !== e ? e : null),
+        [C, v] = m.F2(t),
+        _ = (0, c.oC)(t),
+        { options: I } = (0, g.Z)(null !== (e = null == _ ? void 0 : _.active_trial) && void 0 !== e ? e : null),
         N = (0, h.Z)(),
         T = null != n,
-        j = r.useCallback(
+        b = r.useCallback(
             (e) => {
                 let t = I.find((e) => e.isDefault);
                 s()(null != t, 'Missing default trial duartion option'), l(e ? t.value : null);
             },
             [l, I]
         ),
-        b = (0, d.mY)(),
+        j = (0, d.mY)(),
         S = (0, o.Dt)(),
         E = (0, o.Dt)();
     return (0, i.jsxs)(x.Z, {
@@ -43,21 +43,21 @@ function C() {
         description: p.intl.string(p.t.urVijY),
         children: [
             (0, i.jsx)(a.FormSwitch, {
-                onChange: (e, t) => j(e),
+                onChange: (e, t) => b(e),
                 value: T,
-                disabled: b,
+                disabled: j,
                 hideBorder: !0,
                 children: p.intl.string(p.t['+hTmdX'])
             }),
             (0, i.jsxs)(a.FormSection, {
                 title: p.intl.string(p.t.m1KuWV),
                 titleId: S,
-                disabled: !T || b,
+                disabled: !T || j,
                 children: [
                     (0, i.jsx)(a.FormText, {
                         type: a.FormText.Types.DESCRIPTION,
                         className: f.formDescription,
-                        disabled: !T || b,
+                        disabled: !T || j,
                         children: p.intl.string(p.t.NB9NLC)
                     }),
                     (0, i.jsx)(a.Spacer, { size: 8 }),
@@ -69,7 +69,7 @@ function C() {
                         value: n,
                         onChange: l,
                         maxVisibleItems: 5,
-                        isDisabled: !T || b,
+                        isDisabled: !T || j,
                         look: a.SelectLooks.CUSTOM
                     })
                 ]
@@ -78,12 +78,12 @@ function C() {
             (0, i.jsxs)(a.FormSection, {
                 title: p.intl.string(p.t['/JD9oa']),
                 titleId: E,
-                disabled: !T || b,
+                disabled: !T || j,
                 children: [
                     (0, i.jsx)(a.FormText, {
                         type: a.FormText.Types.DESCRIPTION,
                         className: f.formDescription,
-                        disabled: !T || b,
+                        disabled: !T || j,
                         children: p.intl.string(p.t.Cg5eBg)
                     }),
                     (0, i.jsx)(a.SingleSelect, {
@@ -91,9 +91,9 @@ function C() {
                         options: N,
                         className: f.formInput,
                         value: C,
-                        onChange: _,
+                        onChange: v,
                         maxVisibleItems: 5,
-                        isDisabled: !T || b,
+                        isDisabled: !T || j,
                         look: a.SelectLooks.CUSTOM
                     })
                 ]

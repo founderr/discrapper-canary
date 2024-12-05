@@ -21,13 +21,13 @@ var i = n(200651),
     p = n(357156),
     f = n(208049),
     C = n(763296),
-    _ = n(22382),
-    v = n(747071),
+    v = n(22382),
+    _ = n(747071),
     I = n(286654),
     N = n(171368),
     T = n(430824),
-    j = n(594174),
-    b = n(15385),
+    b = n(594174),
+    j = n(15385),
     S = n(768581),
     E = n(267642),
     R = n(358085),
@@ -90,7 +90,7 @@ function B(e) {
                                   );
                               },
                               tabIndex: -1,
-                              children: (0, i.jsx)(b.Z, { ...e })
+                              children: (0, i.jsx)(j.Z, { ...e })
                           })
                   }),
                   O.intl.format(O.t.HHCdvb, {
@@ -153,13 +153,13 @@ function F(e) {
     r.useEffect(() => {
         (0, f.w)();
     }, []);
-    let x = r.useMemo(() => l.reduce((e, t) => ((e[t.soundId] = new Audio((0, _.Z)(t.soundId))), e), {}), [l]),
+    let x = r.useMemo(() => l.reduce((e, t) => ((e[t.soundId] = new Audio((0, v.Z)(t.soundId))), e), {}), [l]),
         I = 0 === l.length && !s;
     function N(e) {
         var t;
         null === (t = o.current) || void 0 === t || t.pause();
         let n = x[e.soundId];
-        null != n && ((o.current = n), (n.currentTime = 0), (n.volume = (0, v.Z)(e.volume)), n.play());
+        null != n && ((o.current = n), (n.currentTime = 0), (n.volume = (0, _.Z)(e.volume)), n.play());
     }
     r.useEffect(
         () => () => {
@@ -266,11 +266,11 @@ function F(e) {
 }
 function H(e) {
     let { sound: t, isPlaying: l, onPlaySound: a, guild: o } = e,
-        { soundId: d, name: g, user: x, userId: C, emojiId: _, emojiName: v } = t,
-        T = (0, c.e7)([j.default], () => (null != x ? x : j.default.getUser(C)), [C, x]),
-        { canManageGuildExpression: b } = (0, p.XJ)(o),
-        E = r.useMemo(() => b(t), [t, b]),
-        R = null != _ || null != v,
+        { soundId: d, name: g, user: x, userId: C, emojiId: v, emojiName: _ } = t,
+        T = (0, c.e7)([b.default], () => (null != x ? x : b.default.getUser(C)), [C, x]),
+        { canManageGuildExpression: j } = (0, p.XJ)(o),
+        E = r.useMemo(() => j(t), [t, j]),
+        R = null != v || null != _,
         [Z, A] = r.useState(!1),
         D = (0, I.z)(t, o.id);
     async function P() {
@@ -303,8 +303,8 @@ function H(e) {
         children: [
             R
                 ? (0, i.jsx)(h.Z, {
-                      emojiId: _,
-                      emojiName: v,
+                      emojiId: v,
+                      emojiName: _,
                       className: k.emoji
                   })
                 : (0, i.jsx)(u.ImageIcon, {

@@ -19,12 +19,12 @@ var i = n(200651),
     p = n(899667),
     f = n(626135),
     C = n(267642),
-    _ = n(63063),
-    v = n(999382),
+    v = n(63063),
+    _ = n(999382),
     I = n(981631),
     N = n(388032),
     T = n(981004);
-function j(e) {
+function b(e) {
     let { endsAt: t, appliedGuildBoostsToMaintain: n, tierName: r } = e,
         { days: l, hours: s } = (0, d.Z)(t);
     return n <= 0
@@ -44,7 +44,7 @@ function j(e) {
                         })
           });
 }
-function b(e) {
+function j(e) {
     let { appliedGuildBoosts: t, guildId: n } = e,
         r = (0, C.gZ)(t, n),
         l = (0, C.nW)((0, C.rF)(t.length, n));
@@ -57,7 +57,7 @@ function b(e) {
                 className: T.guildBoostingGracePeriodTitle,
                 children: N.intl.format(N.t.LG7vvr, {})
             }),
-            (0, i.jsx)(j, {
+            (0, i.jsx)(b, {
                 endsAt: r,
                 appliedGuildBoostsToMaintain: a,
                 tierName: l
@@ -86,7 +86,7 @@ function E() {
             (0, o.tZ)(), (0, c.Y2)();
         });
     }, []);
-    let e = (0, l.e7)([v.Z], () => v.Z.getGuild()),
+    let e = (0, l.e7)([_.Z], () => _.Z.getGuild()),
         t = (0, l.e7)([p.Z], () => (null != e ? p.Z.getAppliedGuildBoostsForGuild(e.id) : null)),
         n = (0, u.V)();
     return (0, i.jsxs)(i.Fragment, {
@@ -98,7 +98,7 @@ function E() {
                         children: N.intl.string(N.t.nLovSU)
                     }),
                     null != t && null != e
-                        ? (0, i.jsx)(b, {
+                        ? (0, i.jsx)(j, {
                               appliedGuildBoosts: t,
                               guildId: e.id
                           })
@@ -106,7 +106,7 @@ function E() {
                     (0, i.jsx)(s.FormText, {
                         type: s.FormText.Types.DESCRIPTION,
                         className: T.titleBlurb,
-                        children: N.intl.format(N.t.hLOkp6, { helpdeskArticle: _.Z.getArticleURL(I.BhN.GUILD_SUBSCRIPTIONS) })
+                        children: N.intl.format(N.t.hLOkp6, { helpdeskArticle: v.Z.getArticleURL(I.BhN.GUILD_SUBSCRIPTIONS) })
                     })
                 ]
             }),

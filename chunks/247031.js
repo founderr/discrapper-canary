@@ -21,13 +21,13 @@ var i = n(200651),
     p = n(246946),
     f = n(594174),
     C = n(251625),
-    _ = n(226951),
-    v = n(51144),
+    v = n(226951),
+    _ = n(51144),
     I = n(434404),
     N = n(372454),
     T = n(999382),
-    j = n(84613),
-    b = n(740903),
+    b = n(84613),
+    j = n(740903),
     S = n(1080),
     E = n(981631),
     R = n(388032),
@@ -71,7 +71,7 @@ function L(e) {
                     (0, i.jsx)(g.Z, {
                         size: g.Z.Sizes.SIZE_24,
                         className: y.userUsername,
-                        children: v.ZP.getUserTag(l, {
+                        children: _.ZP.getUserTag(l, {
                             mode: 'username',
                             identifiable: a ? 'never' : 'always'
                         })
@@ -143,7 +143,7 @@ class D extends r.PureComponent {
                 (0, i.jsxs)('div', {
                     className: y.username,
                     children: [
-                        v.ZP.getUserTag(e, {
+                        _.ZP.getUserTag(e, {
                             mode: 'username',
                             identifiable: t ? 'never' : 'always'
                         }),
@@ -188,7 +188,7 @@ class O extends r.PureComponent {
     makeFilter(e) {
         if (null == e || 0 === e.length) return (e) => null != e;
         {
-            let t = RegExp('^'.concat(_.Z.escape(e)), 'i');
+            let t = RegExp('^'.concat(v.Z.escape(e)), 'i');
             return (n) => null != n && (n.id === e || t.test(n.username));
         }
     }
@@ -205,7 +205,7 @@ class O extends r.PureComponent {
         });
     }
     handleModerationClick() {
-        I.Z.setSection(E.pNK.SAFETY), (0, j.K)(b.u.DM_AND_SPAM_PROTECTION);
+        I.Z.setSection(E.pNK.SAFETY), (0, b.K)(j.u.DM_AND_SPAM_PROTECTION);
     }
     handleQueryChange(e) {
         I.Z.setSearchQuery(e);

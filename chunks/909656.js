@@ -20,13 +20,13 @@ var i = n(200651),
     p = n(393238),
     f = n(313201),
     C = n(345861),
-    _ = n(208567),
-    v = n(73346),
+    v = n(208567),
+    _ = n(73346),
     I = n(624138),
     N = n(584825),
     T = n(723047),
-    j = n(927954),
-    b = n(164000),
+    b = n(927954),
+    j = n(164000),
     S = n(587431),
     E = n(293810),
     R = n(333866),
@@ -91,11 +91,11 @@ function D(e) {
 function O(e) {
     var t;
     let { guild: n, isGuildProducts: l = !1 } = e,
-        { format: s } = (0, b.Z)(n.id),
+        { format: s } = (0, j.Z)(n.id),
         a = (0, N.YB)(n.id),
         c = r.useCallback(() => {
             var e;
-            return (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, v._W)(a.cover_image_asset.application_id, a.cover_image_asset, A);
+            return (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, _._W)(a.cover_image_asset.application_id, a.cover_image_asset, A);
         }, [a]),
         [u, h] = r.useState(s),
         [p, I] = r.useState(null !== (t = null == a ? void 0 : a.description) && void 0 !== t ? t : ''),
@@ -103,7 +103,7 @@ function O(e) {
         [k, P] = r.useState(null == a ? void 0 : a.store_page_guild_products_default_sort),
         [M, w] = r.useState(null == a ? void 0 : a.server_shop_tab_order),
         { loading: B, error: U, updateSubscriptionsSettings: G } = (0, N.QV)(),
-        { imageCTA: F, imageAriaLabel: H, setFilename: z } = (0, j.Z)(null == a ? void 0 : a.cover_image_asset),
+        { imageCTA: F, imageAriaLabel: H, setFilename: z } = (0, b.Z)(null == a ? void 0 : a.cover_image_asset),
         W = (0, f.Dt)(),
         V = (0, f.Dt)(),
         Y = (0, f.Dt)();
@@ -117,7 +117,7 @@ function O(e) {
         X = null != p && '' !== p && null != L;
     r.useEffect(() => {
         var e;
-        (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null && O((0, v._W)(a.cover_image_asset.application_id, a.cover_image_asset, A));
+        (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null && O((0, _._W)(a.cover_image_asset.application_id, a.cover_image_asset, A));
     }, [null == a ? void 0 : a.cover_image_asset]);
     let Q = (0, T.mY)(),
         J = r.useMemo(
@@ -216,7 +216,7 @@ function O(e) {
                         disabled: Q,
                         children: y.intl.string(y.t.i2rCwc)
                     }),
-                    (0, i.jsx)(_.Z, {
+                    (0, i.jsx)(v.Z, {
                         image: L,
                         hint: F,
                         showIcon: !0,

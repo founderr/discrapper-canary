@@ -32,8 +32,8 @@ function f(e, t, n) {
     );
 }
 let C = -1,
-    _ = (0, h.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
-    v = (0, h.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
+    v = (0, h.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
+    _ = (0, h.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
     I = {
         tension: 140,
         friction: 30
@@ -45,7 +45,7 @@ let C = -1,
 class T extends (i = l.Component) {
     getTotalHeight() {
         let { tiers: e } = this.props;
-        return e[e.length - 1].y + v / 2;
+        return e[e.length - 1].y + _ / 2;
     }
     getProgressHeight(e) {
         let { tiers: t, progress: n } = this.props,
@@ -118,7 +118,7 @@ class T extends (i = l.Component) {
             u = null != c && e.key === c.key,
             h = e.key === a[0].key;
         l = h ? p.tierFirst : u ? p.tierCurrent : d ? p.tierAccomplished : p.tierInProgress;
-        let g = e.y - (h ? 0 : v / 2),
+        let g = e.y - (h ? 0 : _ / 2),
             x = this.state.tierMarkerActive === t,
             f = !h && u && x;
         return (0, r.jsx)(
@@ -161,7 +161,7 @@ class T extends (i = l.Component) {
                 (0, r.jsx)('rect', {
                     x: '0',
                     y: '0',
-                    width: _,
+                    width: v,
                     height: e,
                     fill: 'white'
                 }),
@@ -169,9 +169,9 @@ class T extends (i = l.Component) {
                     (0, r.jsx)(
                         'circle',
                         {
-                            cx: _ / 2,
+                            cx: v / 2,
                             cy: e.y,
-                            r: _ / 2,
+                            r: v / 2,
                             fill: 'black'
                         },
                         e.key
@@ -220,8 +220,8 @@ class T extends (i = l.Component) {
             style: { height: i },
             children: [
                 (0, r.jsxs)('svg', {
-                    viewBox: '0 0 '.concat(_, ' ').concat(i),
-                    width: _,
+                    viewBox: '0 0 '.concat(v, ' ').concat(i),
+                    width: v,
                     height: i,
                     children: [this.renderProgressMask(i), this.renderProgressBar(i, n)]
                 }),

@@ -14,13 +14,13 @@ var i = n(200651),
     p = n(210887),
     f = n(598077),
     C = n(699516),
-    _ = n(594174),
-    v = n(259580),
+    v = n(594174),
+    _ = n(259580),
     I = n(51144),
     N = n(426563),
     T = n(909746),
-    j = n(501801),
-    b = n(981631),
+    b = n(501801),
+    j = n(981631),
     S = n(388032),
     E = n(52330);
 class R extends r.PureComponent {
@@ -48,7 +48,7 @@ class y extends r.PureComponent {
     hasChangesToRender() {
         let { log: e } = this.props,
             { changes: t } = e;
-        return (e.actionType !== b.vB8.DELETE || e.action === b.rsA.MEMBER_BAN_ADD || e.action === b.rsA.MEMBER_KICK || e.action === b.rsA.MEMBER_PRUNE) && null != t && t.some((t) => !(0, j.xO)(e, t));
+        return (e.actionType !== j.vB8.DELETE || e.action === j.rsA.MEMBER_BAN_ADD || e.action === j.rsA.MEMBER_KICK || e.action === j.rsA.MEMBER_PRUNE) && null != t && t.some((t) => !(0, b.xO)(e, t));
     }
     renderTitle() {
         let { log: e, onUserContextMenu: t, onTargetContextMenu: n, onChannelContextMenu: r } = this.props,
@@ -78,7 +78,7 @@ class y extends r.PureComponent {
                           return S.intl.string(S.t['30mdIy']);
                       },
                       targetHook: (t, r) =>
-                          e.targetType === b.KFR.USER && e.target instanceof f.Z
+                          e.targetType === j.KFR.USER && e.target instanceof f.Z
                               ? (0, i.jsx)(
                                     R,
                                     {
@@ -96,7 +96,7 @@ class y extends r.PureComponent {
                                     r
                                 ),
                       count: a.count,
-                      channel: null == a.channel || 'string' == typeof a.channel ? a.channel : (0, h.F6)(a.channel, _.default, C.Z, !0),
+                      channel: null == a.channel || 'string' == typeof a.channel ? a.channel : (0, h.F6)(a.channel, v.default, C.Z, !0),
                       channelHook: (e, t) =>
                           (0, i.jsx)(
                               'span',
@@ -114,7 +114,7 @@ class y extends r.PureComponent {
     renderChangeSummary() {
         let { expanded: e, log: t, guild: n, onContentClick: r } = this.props;
         return e && null != n
-            ? (0, i.jsx)(j.tP, {
+            ? (0, i.jsx)(b.tP, {
                   log: t,
                   guild: n,
                   onContentClick: r
@@ -148,7 +148,7 @@ class y extends r.PureComponent {
                             e.stopPropagation(), n.onClick(e);
                         },
                         className: E.avatar,
-                        src: ((r = e), (l = t), r.action === b.rsA.AUTO_MODERATION_BLOCK_MESSAGE || r.action === b.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || r.action === b.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || r.action === b.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, N.j)() : null === (s = r.user) || void 0 === s ? void 0 : s.getAvatarURL(l, 40)),
+                        src: ((r = e), (l = t), r.action === j.rsA.AUTO_MODERATION_BLOCK_MESSAGE || r.action === j.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || r.action === j.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || r.action === j.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, N.j)() : null === (s = r.user) || void 0 === s ? void 0 : s.getAvatarURL(l, 40)),
                         'aria-hidden': !0,
                         size: d.AvatarSizes.SIZE_40
                     });
@@ -188,7 +188,7 @@ class y extends r.PureComponent {
                       variant: 'text-sm/normal',
                       children: [u, '\u2014', m]
                   });
-        let h = o ? l : b.dG4;
+        let h = o ? l : j.dG4;
         return (0, i.jsx)(a.mh, {
             id: t.id,
             children: (l) =>
@@ -201,7 +201,7 @@ class y extends r.PureComponent {
                             onClick: h,
                             ...l,
                             children: [
-                                (0, i.jsx)(j.mp, {
+                                (0, i.jsx)(b.mp, {
                                     action: t.action,
                                     actionType: t.actionType,
                                     targetType: t.targetType
@@ -218,7 +218,7 @@ class y extends r.PureComponent {
                                     ]
                                 }),
                                 o
-                                    ? (0, i.jsx)(v.Z, {
+                                    ? (0, i.jsx)(_.Z, {
                                           className: E.expand,
                                           foreground: E.expandForeground,
                                           expanded: r,

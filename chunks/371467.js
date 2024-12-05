@@ -15,8 +15,8 @@ var i,
     v = n(13245),
     g = n(435064),
     E = n(786761),
-    x = n(695346),
-    C = n(314897),
+    C = n(695346),
+    x = n(314897),
     Z = n(592125),
     _ = n(375954),
     S = n(292959),
@@ -29,8 +29,8 @@ var i,
     T = n(70956),
     k = n(150097),
     w = n(129724),
-    A = n(388627),
-    L = n(996050),
+    L = n(388627),
+    A = n(996050),
     R = n(609626),
     M = n(421824),
     z = n(777036),
@@ -52,10 +52,10 @@ let F = 5 * T.Z.Millis.SECOND,
         type: 0
     }),
     K = [],
-    X = !1,
-    Q = [];
+    Q = !1,
+    X = [];
 function J() {
-    if (X && null == K.find((e) => e.status === W._1z.FOCUSED)) for (let e of ((X = !1), (K = [...K, ...Q]), (Q = []), K.length > 40 && (K.length = 40), K)) e.timer.start();
+    if (Q && null == K.find((e) => e.status === W._1z.FOCUSED)) for (let e of ((Q = !1), (K = [...K, ...X]), (X = []), K.length > 40 && (K.length = 40), K)) e.timer.start();
 }
 function q() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3;
@@ -78,7 +78,7 @@ function $(e) {
             status: t
         }),
             K.unshift(e),
-            (X = !0);
+            (Q = !0);
         return;
     }
     t === W._1z.DISMISSED
@@ -133,21 +133,21 @@ function en(e, t) {
             },
             ...n
         },
-        r = X ? Q : [...K],
+        r = Q ? X : [...K],
         s = r.findIndex((e) => e.priority <= n.priority);
     if ((-1 === s ? r.push(o) : r.splice(s, 0, o), r.length > 40)) {
         let e = r.pop();
-        !X && e.timer.stop();
+        !Q && e.timer.stop();
     }
-    return !X && ((K = r), o.timer.start()), i;
+    return !Q && ((K = r), o.timer.start()), i;
 }
 function ei(e) {
     let { channelId: t, ringing: n } = e,
         i = et(t);
-    if (!n.includes(C.default.getId())) return $(i);
+    if (!n.includes(x.default.getId())) return $(i);
     if (null != i) return !1;
     let l = Z.Z.getChannel(t);
-    if (null == l || !l.isPrivate() || N.Z.getStatus() === W.Skl.DND || x.QZ.getSetting()) return !1;
+    if (null == l || !l.isPrivate() || N.Z.getStatus() === W.Skl.DND || C.QZ.getSetting()) return !1;
     let o = K.find((e) => 1 === e.type && e.channelId === t && e.messageType === W.uaV.CALL);
     null != o && $(o.id),
         en((0, z.Z)(l), {
@@ -182,7 +182,7 @@ let eo = new el(m.Z, {
     OVERLAY_MOUNTED: function (e) {
         let { nudges: t } = e;
         q(0);
-        let n = (0, V.Z)((0, A.pL)(), t);
+        let n = (0, V.Z)((0, L.pL)(), t);
         null != n &&
             en(n, {
                 priority: 2,
@@ -213,14 +213,14 @@ let eo = new el(m.Z, {
             let e = (function (e, t, n) {
                 var i;
                 let l, o;
-                if ((h()(null != t.activity, 'received null message activity'), n.id === C.default.getId())) return !1;
-                let r = (0, A.pL)(),
+                if ((h()(null != t.activity, 'received null message activity'), n.id === x.default.getId())) return !1;
+                let r = (0, L.pL)(),
                     s = null !== (i = null == r ? void 0 : r.altId) && void 0 !== i ? i : null == r ? void 0 : r.id;
                 if (null == r || null == s) return !1;
                 switch (t.activity.type) {
                     case W.mFx.JOIN:
                         if (null == (l = I.Z.getApplicationActivity(n.id, s)) || null == l.party || l.party.id !== t.activity.party_id) return !1;
-                        o = (0, L.Z)(e, t, n, r, l);
+                        o = (0, A.Z)(e, t, n, r, l);
                         break;
                     case W.mFx.JOIN_REQUEST:
                         if (null == (l = N.Z.getApplicationActivity(s)) || null == l.party || l.party.id !== t.activity.party_id) return !1;
@@ -267,7 +267,7 @@ let eo = new el(m.Z, {
     ACTIVITY_USER_ACTION: function (e) {
         let t,
             { actionType: n, user: i, applicationId: l } = e,
-            o = (0, A.pL)();
+            o = (0, L.pL)();
         if (null == o || (null == o ? void 0 : o.id) == null || (o.id !== l && o.altId !== l)) return !1;
         if (n === W.mFx.JOIN) t = (0, R.Z)(i, o);
         if (null == t) return !1;

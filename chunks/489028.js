@@ -15,13 +15,13 @@ var i = n(200651),
     p = n(626135),
     f = n(584825),
     C = n(723047),
-    _ = n(416867),
-    v = n(903773),
+    v = n(416867),
+    _ = n(903773),
     I = n(215124),
     N = n(326578),
     T = n(981631),
-    j = n(674563),
-    b = n(829857),
+    b = n(674563),
+    j = n(829857),
     S = n(388032),
     E = n(143614);
 function R(e) {
@@ -52,9 +52,9 @@ function y(e) {
             [n]
         ),
         p = async () => {
-            (await d(t, a, j.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
+            (await d(t, a, b.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
                 (h(t.id),
-                (0, _.B)({
+                (0, v.B)({
                     Icon: N.Z,
                     title: S.intl.string(S.t['AP/2qa']),
                     body: S.intl.string(S.t.kHMgaG)
@@ -98,16 +98,16 @@ t.Z = (e) => {
         c = t.isOwner(n),
         f = (0, o.Ob)(t),
         C = (0, l.e7)([x.Z], () => x.Z.isFocused()),
-        { teams: _, loading: N } = (0, h.Z)({ refreshOnDepChange: C }),
-        j = r.useMemo(
+        { teams: v, loading: N } = (0, h.Z)({ refreshOnDepChange: C }),
+        b = r.useMemo(
             () =>
-                _.filter((e) => {
+                v.filter((e) => {
                     var t;
-                    return e.payout_account_status !== b.C.BLOCKED && (0, m.Z)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : T.lds, e);
+                    return e.payout_account_status !== j.C.BLOCKED && (0, m.Z)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : T.lds, e);
                 }),
-            [_, n]
+            [v, n]
         ),
-        Z = j.length > 0,
+        Z = b.length > 0,
         A = r.useCallback(async () => {
             p.default.track(T.rMx.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
                 is_onboarding_v2: f,
@@ -133,7 +133,7 @@ t.Z = (e) => {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   !c &&
-                      (0, i.jsx)(v.Z, {
+                      (0, i.jsx)(_.Z, {
                           className: E.nonOwnerNotice,
                           children: S.intl.string(S.t.t56qWF)
                       }),
@@ -150,7 +150,7 @@ t.Z = (e) => {
                           Z
                               ? (0, i.jsx)(y, {
                                     guild: t,
-                                    eligibleTeams: j,
+                                    eligibleTeams: b,
                                     isGuildOwner: c
                                 })
                               : (0, i.jsx)(R, {

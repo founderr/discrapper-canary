@@ -43,10 +43,10 @@ function C(e, t) {
     if (n < 0) return !1;
     (h.resourceChannels[n] = { ...t }), (h.resourceChannels = [...h.resourceChannels]);
 }
-function _() {
+function v() {
     (g = !1), (h = l().cloneDeep(Object.assign({}, o.Z.getSettings(m))));
 }
-class v extends (i = s.ZP.PersistedStore) {
+class _ extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         null != e && (x = e.dismissedSuggestedChannelIdsByGuildId), this.waitFor(c.Z, o.Z);
     }
@@ -79,9 +79,9 @@ class v extends (i = s.ZP.PersistedStore) {
         return null == n ? null : n;
     }
 }
-d(v, 'displayName', 'GuildSettingsOnboardingHomeSettingsStore'),
-    d(v, 'persistKey', 'GuildSettingsOnboardingHomeSettingsStore'),
-    (t.Z = new v(a.Z, {
+d(_, 'displayName', 'GuildSettingsOnboardingHomeSettingsStore'),
+    d(_, 'persistKey', 'GuildSettingsOnboardingHomeSettingsStore'),
+    (t.Z = new _(a.Z, {
         GUILD_SETTINGS_INIT: p,
         GUILD_SETTINGS_SET_SECTION: p,
         GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESET: p,
@@ -91,8 +91,8 @@ d(v, 'displayName', 'GuildSettingsOnboardingHomeSettingsStore'),
         GUILD_HOME_SETTINGS_UPDATE_START: function () {
             g = !0;
         },
-        GUILD_HOME_SETTINGS_UPDATE_SUCCESS: _,
-        GUILD_HOME_SETTINGS_UPDATE_FAIL: _,
+        GUILD_HOME_SETTINGS_UPDATE_SUCCESS: v,
+        GUILD_HOME_SETTINGS_UPDATE_FAIL: v,
         GUILD_NEW_MEMBER_ACTION_UPDATE_SUCCESS: function (e) {
             let { action: t } = e;
             return f(t.channelId, t);

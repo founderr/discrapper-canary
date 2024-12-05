@@ -64,14 +64,14 @@ function p(e) {
     var t;
     let { initialValue: n, onChangeTags: l, onChangeNewTagValue: c, tagErrors: u = {}, placeholder: g, className: p, maxTags: f } = e,
         C = r.useRef(null),
-        _ = r.useRef(null),
         v = r.useRef(null),
+        _ = r.useRef(null),
         I = (0, m.V)(n),
         {
             handlePasteEvent: N,
             handleInputChange: T,
-            handleKeyDown: j,
-            handleContainerKeyUp: b,
+            handleKeyDown: b,
+            handleContainerKeyUp: j,
             handleRemoveTag: S,
             handleTagChangeEvent: E,
             handleSelectTag: R,
@@ -79,9 +79,9 @@ function p(e) {
             handleResetTagSelections: Z,
             handleInputBlurEvent: A
         } = (0, m.Q)(I, {
-            scrollerRef: v,
+            scrollerRef: _,
             mainInputRef: C,
-            mainContainerRef: _
+            mainContainerRef: v
         }),
         {
             state: { value: L, tags: D, selections: O, isSelecting: k }
@@ -119,7 +119,7 @@ function p(e) {
                                   null === (e = C.current) || void 0 === e || e.blur(),
                                       setTimeout(() => {
                                           var e;
-                                          return null === (e = _.current) || void 0 === e ? void 0 : e.focus();
+                                          return null === (e = v.current) || void 0 === e ? void 0 : e.focus();
                                       }, 16);
                               }));
                 } else y(e, !0), w(!0);
@@ -128,12 +128,12 @@ function p(e) {
         );
     return (0, i.jsxs)('div', {
         className: s()(h.mainContainer, p),
-        ref: _,
+        ref: v,
         tabIndex: 0,
-        onKeyUp: b,
+        onKeyUp: j,
         children: [
             (0, i.jsxs)(x, {
-                ref: v,
+                ref: _,
                 onClick: B,
                 children: [
                     D.map((e, t) =>
@@ -157,7 +157,7 @@ function p(e) {
                         className: s()(h.mainTextInput, { [h.isEditingOtherNodes]: M }),
                         ref: C,
                         onChange: T,
-                        onKeyDownCapture: j,
+                        onKeyDownCapture: b,
                         onPaste: N,
                         onBlur: A,
                         placeholder: 0 === D.length ? g : void 0,

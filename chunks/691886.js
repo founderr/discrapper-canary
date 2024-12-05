@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return b;
     }
 }),
     n(653041),
@@ -21,10 +21,10 @@ var i = n(200651),
     p = n(981631),
     f = n(388032),
     C = n(904685);
-function _(e) {
+function v(e) {
     return String(e);
 }
-function v(e) {
+function _(e) {
     let { icon: t, title: n, subtitle: r, className: l } = e;
     return (0, i.jsxs)('div', {
         className: s()(C.label, l),
@@ -53,7 +53,7 @@ function v(e) {
     });
 }
 function I() {
-    return (0, i.jsx)(v, {
+    return (0, i.jsx)(_, {
         icon: (0, i.jsx)(o.PlusSmallIcon, {
             size: 'md',
             color: 'currentColor',
@@ -72,7 +72,7 @@ function N(e) {
     let s = (0, d.KS)(r),
         a = (0, c.F6)(r, g.default, h.Z),
         o = null != l ? (0, c.F6)(l, g.default, h.Z) : void 0;
-    return (0, i.jsx)(v, {
+    return (0, i.jsx)(_, {
         icon: null != s && (0, i.jsx)(s, { className: C.labelIcon }),
         title: a,
         subtitle: o
@@ -82,12 +82,12 @@ function T(e) {
     let { value: t } = e;
     return null != t ? (0, i.jsx)(N, { channelId: t }) : (0, i.jsx)(I, {});
 }
-function j(e) {
-    let { guildId: t, value: l, initialChannelId: s, omitChannelIds: d, 'aria-labelledby': C, onChange: v } = e,
+function b(e) {
+    let { guildId: t, value: l, initialChannelId: s, omitChannelIds: d, 'aria-labelledby': C, onChange: _ } = e,
         I = f.intl.string(f.t.d7YJMD),
         N = (0, a.e7)([m.Z], () => m.Z.getCategories(t), [t]),
-        j = (0, x.m7)(null != l ? l : p.lds),
-        b = r.useMemo(() => {
+        b = (0, x.m7)(null != l ? l : p.lds),
+        j = r.useMemo(() => {
             let e = [
                     {
                         value: null,
@@ -108,17 +108,17 @@ function j(e) {
             return (
                 null != l &&
                     !t &&
-                    null != j &&
+                    null != b &&
                     e.push({
                         value: l,
-                        label: j.name
+                        label: b.name
                     }),
                 e
             );
-        }, [I, l, j, N, d, s]);
+        }, [I, l, b, N, d, s]);
     return (0, i.jsx)(o.Select, {
         placeholder: f.intl.string(f.t.r2pts7),
-        options: b,
+        options: j,
         select: function (e) {
             null == e
                 ? (0, o.openModalLazy)(async () => {
@@ -127,13 +127,13 @@ function j(e) {
                           (0, i.jsx)(e, {
                               ...n,
                               guildId: t,
-                              onSubmit: v
+                              onSubmit: _
                           });
                   })
-                : v(e);
+                : _(e);
         },
-        isSelected: (e) => null != l && _(e) === _(l),
-        serialize: _,
+        isSelected: (e) => null != l && v(e) === v(l),
+        serialize: v,
         renderOptionLabel: T,
         renderOptionValue: (e) => {
             let [t] = e;

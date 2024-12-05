@@ -1,80 +1,80 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return j;
+        return C;
     }
 }),
-    n(724458),
-    n(47120);
-var l = n(200651),
-    i = n(192379),
-    r = n(512722),
-    s = n.n(r),
-    a = n(392711),
-    o = n.n(a),
-    c = n(856901),
-    d = n(442837),
-    u = n(481060),
-    f = n(131951),
-    h = n(537135),
-    m = n(176940),
-    x = n(388032),
-    g = n(378967),
-    p = n(456963),
-    v = n(232186);
-function j(e) {
-    let { selectedSource: t, onChangeVideoDeviceSource: n, onChangeAudioDevice: r } = e;
-    s()(null != t, 'Camera capture device cannot be null');
-    let a = (0, m.Z)(),
-        j = (0, d.e7)([f.Z], () => f.Z.getInputDevices()),
-        [C, S] = i.useState(
-            (function (e, t, n) {
-                if (null != t && null != n) {
-                    let l = t.find((t) => t.id === e);
+    t(724458),
+    t(47120);
+var l = t(200651),
+    i = t(192379),
+    s = t(512722),
+    r = t.n(s),
+    a = t(392711),
+    o = t.n(a),
+    u = t(856901),
+    c = t(442837),
+    d = t(481060),
+    m = t(131951),
+    g = t(537135),
+    h = t(176940),
+    x = t(388032),
+    S = t(378967),
+    v = t(456963),
+    Z = t(232186);
+function C(e) {
+    let { selectedSource: n, onChangeVideoDeviceSource: t, onChangeAudioDevice: s } = e;
+    r()(null != n, 'Camera capture device cannot be null');
+    let a = (0, h.Z)(),
+        C = (0, c.e7)([m.Z], () => m.Z.getInputDevices()),
+        [f, j] = i.useState(
+            (function (e, n, t) {
+                if (null != n && null != t) {
+                    let l = n.find((n) => n.id === e);
                     if (null == l) return;
-                    let i = o().reduce(n, (e, t) => ((0, c.stringSimilarity)(l.name, t.name) > (0, c.stringSimilarity)(l.name, e.name) ? t : e));
+                    let i = o().reduce(t, (e, n) => ((0, u.stringSimilarity)(l.name, n.name) > (0, u.stringSimilarity)(l.name, e.name) ? n : e));
                     if (null != i) return i.id;
                 }
-            })(t.id, a, j)
+            })(n.id, a, C)
         );
     return (
-        null != C && r(C),
+        null != f && s(f),
         (0, l.jsx)(i.Fragment, {
-            children: (0, l.jsxs)(u.FormItem, {
+            children: (0, l.jsxs)(d.FormItem, {
                 title: 'Capture Device',
-                className: p.modalContent,
+                className: v.modalContent,
                 children: [
-                    (0, l.jsx)(u.FormItem, {
-                        className: v.marginTop8,
-                        children: (0, l.jsxs)(h.Z, {
+                    (0, l.jsx)(d.FormItem, {
+                        className: Z.marginTop8,
+                        children: (0, l.jsxs)(g.Z, {
                             children: [
                                 (0, l.jsx)('span', {
-                                    className: g.ellipsisText,
-                                    children: t.name
+                                    className: S.ellipsisText,
+                                    children: n.name
                                 }),
-                                (0, l.jsx)(u.Button, {
-                                    className: g.changeButton,
-                                    color: u.Button.Colors.PRIMARY,
-                                    size: u.Button.Sizes.SMALL,
-                                    onClick: n,
+                                (0, l.jsx)(d.Button, {
+                                    className: S.changeButton,
+                                    color: d.Button.Colors.PRIMARY,
+                                    size: d.Button.Sizes.SMALL,
+                                    onClick: t,
                                     children: x.intl.string(x.t.GEgsAw)
                                 })
                             ]
                         })
                     }),
-                    (0, l.jsx)(u.FormItem, {
-                        className: v.marginTop8,
+                    (0, l.jsx)(d.FormItem, {
+                        className: Z.marginTop8,
                         title: x.intl.string(x.t.y4ooen),
-                        children: (0, l.jsx)(u.SingleSelect, {
-                            value: C,
-                            className: v.__invalid_marginaTop8,
+                        children: (0, l.jsx)(d.SingleSelect, {
+                            value: f,
+                            className: Z.__invalid_marginaTop8,
                             onChange: (e) => {
-                                S(e), r(e);
+                                j(e), s(e);
                             },
-                            options: o().map(j, (e) => {
-                                let { id: t, name: n } = e;
+                            options: o().map(C, (e) => {
+                                let { id: n, name: t } = e;
                                 return {
-                                    value: t,
-                                    label: n
+                                    value: n,
+                                    label: t
                                 };
                             })
                         })

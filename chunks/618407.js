@@ -1,19 +1,19 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return u;
+        return d;
     }
 });
-var l = n(553813),
-    i = n.n(l),
-    r = n(579806),
-    s = n(131951),
-    a = n(358085),
-    o = n(70722),
-    c = n(65154),
-    d = n(388032);
-function u() {
-    if (!s.Z.supports(c.AN.SOUNDSHARE)) return d.intl.string(d.t['1b0Gm5']);
-    if ((0, a.isWindows)() && !i().satisfies(null === r.Z || void 0 === r.Z ? void 0 : r.Z.os.release, o.I9)) return d.intl.string(d.t.voRPTE);
-    if ((0, a.isMac)() && !i().satisfies(null === r.Z || void 0 === r.Z ? void 0 : r.Z.os.release, o.Ec)) return d.intl.string(d.t.v2y9PT);
+var l = t(553813),
+    i = t.n(l),
+    s = t(579806),
+    r = t(131951),
+    a = t(358085),
+    o = t(70722),
+    u = t(65154),
+    c = t(388032);
+function d() {
+    if (!r.Z.supports(u.AN.SOUNDSHARE)) return c.intl.string(c.t['1b0Gm5']);
+    if ((0, a.isWindows)() && !i().satisfies(null === s.Z || void 0 === s.Z ? void 0 : s.Z.os.release, o.I9)) return c.intl.string(c.t.voRPTE);
+    if ((0, a.isMac)() && !i().satisfies(null === s.Z || void 0 === s.Z ? void 0 : s.Z.os.release, o.Ec)) return c.intl.string(c.t.v2y9PT);
     return null;
 }

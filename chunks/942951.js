@@ -4,77 +4,77 @@ t.d(n, {
     }
 });
 var r = t(200651),
-    i = t(192379),
-    l = t(481060),
-    u = t(100527),
-    o = t(906732),
-    a = t(184301),
-    s = t(347475),
-    c = t(592125),
-    d = t(91047);
+    o = t(192379),
+    a = t(481060),
+    l = t(100527),
+    i = t(906732),
+    c = t(184301),
+    u = t(347475),
+    d = t(592125),
+    s = t(91047);
 function f(e) {
     var n, t;
-    let { user: f, channelId: m, guildId: v, messageId: p, stopPropagation: h = !1, ariaLabel: g } = e,
-        { analyticsLocations: b } = (0, o.ZP)(u.Z.USERNAME);
-    let x =
+    let { user: f, channelId: m, guildId: _, messageId: p, stopPropagation: x = !1, ariaLabel: h } = e,
+        { analyticsLocations: g } = (0, i.ZP)(l.Z.USERNAME);
+    let b =
         ((n = f),
         (t = m),
-        i.useCallback(
+        o.useCallback(
             (e) => {
-                let r = c.Z.getChannel(t);
-                null != r && null != n && (0, d.Pv)(e, n, r);
+                let r = d.Z.getChannel(t);
+                null != r && null != n && (0, s.Pv)(e, n, r);
             },
             [n, t]
         ));
-    return i.useCallback(
+    return o.useCallback(
         (e) => (n, t) => {
-            let i = (t) =>
-                    (0, r.jsx)(l.NameWithRoleAnchor, {
+            let o = (t) =>
+                    (0, r.jsx)(a.NameWithRoleAnchor, {
                         ...(null != t ? t : {}),
-                        onContextMenu: x,
+                        onContextMenu: b,
                         name: n,
                         color: null == e ? void 0 : e.colorString,
                         roleName: null == e ? void 0 : e.colorRoleName,
-                        'aria-label': g
+                        'aria-label': h
                     }),
-                u = (e) => (n) => {
-                    h && n.stopPropagation(), e(n);
+                l = (e) => (n) => {
+                    x && n.stopPropagation(), e(n);
                 };
             return (0, r.jsx)(
-                o.Gt,
+                i.Gt,
                 {
-                    value: b,
+                    value: g,
                     children:
                         null != f
-                            ? (0, r.jsx)(l.Popout, {
+                            ? (0, r.jsx)(a.Popout, {
                                   position: 'right',
                                   preload: () =>
-                                      (0, a.Z)(f.id, f.getAvatarURL(v, 80), {
-                                          guildId: v,
+                                      (0, c.Z)(f.id, f.getAvatarURL(_, 80), {
+                                          guildId: _,
                                           channelId: m
                                       }),
                                   renderPopout: (n) =>
-                                      (0, r.jsx)(s.Z, {
+                                      (0, r.jsx)(u.Z, {
                                           ...n,
                                           userId: f.id,
-                                          guildId: v,
+                                          guildId: _,
                                           channelId: m,
                                           messageId: p,
                                           roleId: null == e ? void 0 : e.colorRoleId
                                       }),
                                   children: (e) => {
                                       let { onClick: n, ...t } = e;
-                                      return i({
-                                          onClick: u(n),
+                                      return o({
+                                          onClick: l(n),
                                           ...t
                                       });
                                   }
                               })
-                            : i(void 0)
+                            : o(void 0)
                 },
                 t
             );
         },
-        [b, f, m, v, p, x, h, g]
+        [g, f, m, _, p, b, x, h]
     );
 }

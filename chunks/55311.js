@@ -1,24 +1,24 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return o;
     }
 });
 var r = n(200651);
 n(192379);
-var l = n(481060),
-    i = n(846027),
+var i = n(481060),
+    l = n(846027),
     a = n(468026),
-    o = n(388032);
-function u(e, t) {
+    u = n(388032);
+function o(e, t) {
     if (e) {
-        (0, l.openModal)((e) =>
+        (0, i.openModal)((e) =>
             (0, r.jsx)(a.default, {
                 ...e,
-                title: o.intl.string(o.t.QZ7WSU),
-                body: o.intl.string(o.t.Tl9JpK)
+                title: u.intl.string(u.t.QZ7WSU),
+                body: u.intl.string(u.t.Tl9JpK)
             })
         );
         return;
     }
-    i.Z.toggleSelfDeaf({ location: t });
+    l.Z.toggleSelfDeaf({ location: t });
 }

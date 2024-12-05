@@ -22,13 +22,13 @@ var i = n(200651),
     p = n(764260),
     f = n(946724),
     C = n(95242),
-    _ = n(530198),
-    v = n(420966),
+    v = n(530198),
+    _ = n(420966),
     I = n(203377),
     N = n(981631),
     T = n(856651),
-    j = n(388032),
-    b = n(312772),
+    b = n(388032),
+    j = n(312772),
     S = n(490909);
 let E = (0, h.hQ)();
 function R(e, t) {
@@ -37,26 +37,26 @@ function R(e, t) {
 function y(e) {
     let { handleAddVerificationClicked: t, locked: n } = e;
     return (0, i.jsxs)('div', {
-        className: b.headerNoConfigContainer,
+        className: j.headerNoConfigContainer,
         children: [
             (0, i.jsx)(d.Heading, {
-                className: b.headerHeading,
+                className: j.headerHeading,
                 variant: 'eyebrow',
-                children: j.intl.string(j.t.nMir29)
+                children: b.intl.string(b.t.nMir29)
             }),
             (0, i.jsx)(d.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: j.intl.format(j.t.q5f7tL, { helpdeskArticleUrl: g.Z.getArticleURL(N.BhN.CONNECTION_DETAILS_ADMIN) })
+                children: b.intl.format(b.t.q5f7tL, { helpdeskArticleUrl: g.Z.getArticleURL(N.BhN.CONNECTION_DETAILS_ADMIN) })
             }),
             (0, i.jsx)(d.Button, {
                 disabled: n,
-                className: b.addVerificationButton,
+                className: j.addVerificationButton,
                 size: d.Button.Sizes.MEDIUM,
                 look: d.Button.Looks.FILLED,
                 color: d.Button.Colors.BRAND,
                 onClick: t,
-                children: j.intl.string(j.t['OSvW5+'])
+                children: b.intl.string(b.t['OSvW5+'])
             })
         ]
     });
@@ -64,7 +64,7 @@ function y(e) {
 function Z(e) {
     let { guild: t, role: n, locked: l, setSelectedSection: a, integrations: o } = e,
         { headerHeight: h, headerRef: Z } = (0, C.Z)(0),
-        { scrolledToTop: A, handleScroll: L } = (0, v.V)(),
+        { scrolledToTop: A, handleScroll: L } = (0, _.V)(),
         D = (0, c.e7)(
             [x.Z],
             () => {
@@ -112,20 +112,20 @@ function Z(e) {
         let e = null;
         P.length < 10 &&
             (e = (0, i.jsx)(d.Button, {
-                className: s()(b.addVerificationButton, b.addVerificationButtonAppend),
+                className: s()(j.addVerificationButton, j.addVerificationButtonAppend),
                 size: d.Button.Sizes.LARGE,
                 look: d.Button.Looks.BLANK,
                 color: d.Button.Colors.LINK,
                 onClick: B,
                 disabled: l,
                 children: (0, i.jsxs)('div', {
-                    className: b.addVerificationButtonAppendTextContainer,
+                    className: j.addVerificationButtonAppendTextContainer,
                     children: [
                         (0, i.jsx)(d.CirclePlusIcon, {
                             size: 'xs',
                             color: 'currentColor'
                         }),
-                        j.intl.string(j.t['OSvW5+'])
+                        b.intl.string(b.t['OSvW5+'])
                     ]
                 })
             })),
@@ -136,45 +136,45 @@ function Z(e) {
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsxs)('div', {
-                                className: b.headerTitleContainer,
+                                className: j.headerTitleContainer,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: b.headerTitleTextContainer,
+                                        className: j.headerTitleTextContainer,
                                         children: (0, i.jsx)(d.Heading, {
                                             variant: 'eyebrow',
-                                            children: j.intl.string(j.t.nMir29)
+                                            children: b.intl.string(b.t.nMir29)
                                         })
                                     }),
                                     (0, i.jsx)(d.Button, {
-                                        className: b.headerTitleButton,
+                                        className: j.headerTitleButton,
                                         size: d.Button.Sizes.TINY,
                                         look: d.Button.Looks.LINK,
                                         color: d.Button.Colors.LINK,
                                         onClick: G,
                                         disabled: F,
-                                        children: j.intl.string(j.t.ntW1cX)
+                                        children: b.intl.string(b.t.ntW1cX)
                                     })
                                 ]
                             }),
                             (0, i.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
-                                children: j.intl.format(j.t.q5f7tL, { helpdeskArticleUrl: g.Z.getArticleURL(N.BhN.CONNECTION_DETAILS_ADMIN) })
+                                children: b.intl.format(b.t.q5f7tL, { helpdeskArticleUrl: g.Z.getArticleURL(N.BhN.CONNECTION_DETAILS_ADMIN) })
                             })
                         ]
                     })),
                     (function (e, t, n, r, l) {
                         let s = R(r, m.O1.OR);
                         return (0, i.jsx)(d.FormItem, {
-                            className: b.operatorContainer,
-                            title: j.intl.string(j.t.Xs7PHR),
+                            className: j.operatorContainer,
+                            title: b.intl.string(b.t.Xs7PHR),
                             children: (0, i.jsx)(d.RadioGroup, {
                                 options: [
                                     {
-                                        name: j.intl.string(j.t['W3iY5+']),
+                                        name: b.intl.string(b.t['W3iY5+']),
                                         value: m.O1.OR
                                     },
                                     {
-                                        name: j.intl.string(j.t.gHXS9P),
+                                        name: b.intl.string(b.t.gHXS9P),
                                         value: m.O1.AND
                                     }
                                 ],
@@ -234,10 +234,10 @@ function Z(e) {
                             });
                         }
                         return (0, i.jsx)('div', {
-                            className: b.configurationsContainer,
+                            className: j.configurationsContainer,
                             children: Array.from(a.values()).map((e) =>
                                 (0, i.jsx)(
-                                    _.Z,
+                                    v.Z,
                                     {
                                         configurationItems: e,
                                         onConfigurationChange: s,
@@ -254,7 +254,7 @@ function Z(e) {
             }));
     }
     return (0, i.jsx)(d.AdvancedScrollerAuto, {
-        className: b.scroller,
+        className: j.scroller,
         style: { scrollPaddingTop: h },
         onScroll: L,
         children: (0, i.jsxs)('div', {
@@ -263,7 +263,7 @@ function Z(e) {
                 (0, i.jsx)('div', {
                     className: s()(S.header, S.stickyHeader, { [S.stickyHeaderElevated]: !A }),
                     ref: Z,
-                    children: (0, i.jsx)(v.Z, {
+                    children: (0, i.jsx)(_.Z, {
                         guild: t,
                         role: n,
                         selectedSection: I.ZI.VERIFICATIONS,
@@ -272,19 +272,19 @@ function Z(e) {
                 }),
                 (null != D ? D : 0) > 0
                     ? (0, i.jsxs)('div', {
-                          className: b.warningContainer,
+                          className: j.warningContainer,
                           children: [
                               (0, i.jsx)(d.CircleWarningIcon, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,
                                   color: 'currentColor',
-                                  className: b.warningIcon
+                                  className: j.warningIcon
                               }),
                               (0, i.jsx)(d.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'text-normal',
-                                  children: j.intl.string(j.t['2aFeeX'])
+                                  children: b.intl.string(b.t['2aFeeX'])
                               })
                           ]
                       })

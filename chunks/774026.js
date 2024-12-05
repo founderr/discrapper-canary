@@ -1,51 +1,51 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return m;
+        return h;
     }
 });
-var l = n(200651);
-n(192379);
-var i = n(913527),
-    r = n.n(i),
-    s = n(793030),
-    a = n(461195),
-    o = n(739566),
-    c = n(942951),
-    d = n(63063),
-    u = n(981631),
-    f = n(388032),
-    h = n(417859);
-function m(e) {
-    var t;
-    let { streamingUntil: n, user: i, channel: m } = e,
-        x = (0, o.JZ)(i, m),
-        g = (0, c.l)({
+var l = t(200651);
+t(192379);
+var i = t(913527),
+    s = t.n(i),
+    r = t(793030),
+    a = t(461195),
+    o = t(739566),
+    u = t(942951),
+    c = t(63063),
+    d = t(981631),
+    m = t(388032),
+    g = t(417859);
+function h(e) {
+    var n;
+    let { streamingUntil: t, user: i, channel: h } = e,
+        x = (0, o.JZ)(i, h),
+        S = (0, u.l)({
             user: i,
-            channelId: m.id,
-            guildId: m.guild_id,
+            channelId: h.id,
+            guildId: h.guild_id,
             messageId: void 0
         })(x),
-        p = r()(n).diff(r()(), 'hours');
-    return p <= 0
+        v = s()(t).diff(s()(), 'hours');
+    return v <= 0
         ? null
         : (0, l.jsxs)('div', {
-              className: h.attribution,
+              className: g.attribution,
               children: [
-                  (0, l.jsx)(a.Z, { className: h.img }),
+                  (0, l.jsx)(a.Z, { className: g.img }),
                   (0, l.jsxs)('div', {
                       children: [
-                          (0, l.jsx)(s.X6, {
+                          (0, l.jsx)(r.X6, {
                               variant: 'heading-sm/bold',
-                              children: f.intl.string(f.t.K04rOD)
+                              children: m.intl.string(m.t.K04rOD)
                           }),
-                          (0, l.jsx)(s.xv, {
+                          (0, l.jsx)(r.xv, {
                               color: 'text-muted',
                               variant: 'text-sm/medium',
-                              children: f.intl.format(f.t.NZDuBg, {
-                                  actorName: null !== (t = i.globalName) && void 0 !== t ? t : i.username,
-                                  actorHook: g,
-                                  num: p,
-                                  helpCenterLink: d.Z.getArticleURL(u.BhN.HD_STREAMING_POTION)
+                              children: m.intl.format(m.t.NZDuBg, {
+                                  actorName: null !== (n = i.globalName) && void 0 !== n ? n : i.username,
+                                  actorHook: S,
+                                  num: v,
+                                  helpCenterLink: c.Z.getArticleURL(d.BhN.HD_STREAMING_POTION)
                               })
                           })
                       ]

@@ -19,13 +19,13 @@ var i = n(200651),
     p = n(208665),
     f = n(359191),
     C = n(84658),
-    _ = n(142961),
-    v = n(729311),
+    v = n(142961),
+    _ = n(729311),
     I = n(850864),
     N = n(729995),
     T = n(966301),
-    j = n(707076),
-    b = n(213956),
+    b = n(707076),
+    j = n(213956),
     S = n(388032),
     E = n(646231);
 function R() {
@@ -40,7 +40,7 @@ function y(e) {
             let e = (0, C.lg)(l);
             return null != e && !f.Z.isEducationUpsellDismissed(e);
         }),
-        p = (0, _.Z)(n),
+        p = (0, v.Z)(n),
         R = !p && m;
     switch (
         (r.useEffect(() => {
@@ -54,13 +54,13 @@ function y(e) {
                       completed: !0,
                       guildId: n
                   })
-                : (0, i.jsx)(j.Z, {});
+                : (0, i.jsx)(b.Z, {});
             break;
         case C.PG.SAFETY_CHECK:
-            t = (0, i.jsx)(b.Z, { hideChangelog: !0 });
+            t = (0, i.jsx)(j.Z, { hideChangelog: !0 });
             break;
         case C.PG.DEFAULT_CHANNELS:
-            t = (0, i.jsx)(v.Z, { saveOnClose: !p });
+            t = (0, i.jsx)(_.Z, { saveOnClose: !p });
             break;
         case C.PG.CUSTOMIZATION_QUESTIONS:
             t = (0, i.jsx)(T.ZP, { saveOnClose: !p });

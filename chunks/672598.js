@@ -1,25 +1,25 @@
 t.d(n, {
     Z: function () {
-        return o;
+        return i;
     }
 }),
     t(47120);
 var r = t(553813),
-    i = t.n(r),
-    l = t(358085);
-let u = { [l.PlatformTypes.WINDOWS]: { nvidia: '>=397.93.0' } };
-function o(e) {
-    let n = u[(0, l.getPlatform)()];
+    o = t.n(r),
+    a = t(358085);
+let l = { [a.PlatformTypes.WINDOWS]: { nvidia: '>=397.93.0' } };
+function i(e) {
+    let n = l[(0, a.getPlatform)()];
     if (null == n) return !1;
     for (let t of Object.keys(e)) {
         let r = e[t],
-            l = n[t];
-        if (null == r || null == l || null != r.error) continue;
-        let u = (function (e) {
+            a = n[t];
+        if (null == r || null == a || null != r.error) continue;
+        let l = (function (e) {
             var n, t;
             return ''.concat(null !== (n = e.major) && void 0 !== n ? n : 0, '.').concat(null !== (t = e.minor) && void 0 !== t ? t : 0, '.0');
         })(r);
-        if (!i().satisfies(u, l)) return !0;
+        if (!o().satisfies(l, a)) return !0;
     }
     return !1;
 }

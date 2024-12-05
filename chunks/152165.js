@@ -1,33 +1,33 @@
-var l = n(200651),
-    i = n(192379),
-    r = n(120356),
-    s = n.n(r),
-    a = n(442837),
-    o = n(607070),
-    c = n(468516);
-t.Z = i.memo(function (e) {
-    let { className: t, animated: n = !1 } = e,
-        r = i.useId();
+var l = i(200651),
+    r = i(192379),
+    n = i(120356),
+    s = i.n(n),
+    a = i(442837),
+    c = i(607070),
+    o = i(468516);
+t.Z = r.memo(function (e) {
+    let { className: t, animated: i = !1 } = e,
+        n = r.useId();
     function d(e) {
-        return ''.concat(r, '-').concat(e);
+        return ''.concat(n, '-').concat(e);
     }
-    function u(e) {
+    function f(e) {
         return 'url(#'.concat(d(e), ')');
     }
-    let f = (0, a.e7)([o.Z], () => o.Z.useReducedMotion);
+    let u = (0, a.e7)([c.Z], () => c.Z.useReducedMotion);
     return (0, l.jsx)('svg', {
-        className: s()(c.nativePickerGuide, t),
+        className: s()(o.nativePickerGuide, t),
         width: '392',
         height: '254',
         viewBox: '0 0 392 254',
         fill: 'none',
         xmlns: 'http://www.w3.org/2000/svg',
         children:
-            !0 !== n || f
+            !0 !== i || u
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsxs)('g', {
-                              clipPath: u('clip0'),
+                              clipPath: f('clip0'),
                               children: [
                                   (0, l.jsx)('rect', {
                                       width: '392',
@@ -37,7 +37,7 @@ t.Z = i.memo(function (e) {
                                       fillOpacity: '0.8'
                                   }),
                                   (0, l.jsx)('g', {
-                                      filter: u('filter0'),
+                                      filter: f('filter0'),
                                       children: (0, l.jsx)('rect', {
                                           x: '21',
                                           y: '-0.21051',
@@ -48,7 +48,7 @@ t.Z = i.memo(function (e) {
                                       })
                                   }),
                                   (0, l.jsx)('g', {
-                                      filter: u('filter1'),
+                                      filter: f('filter1'),
                                       children: (0, l.jsx)('rect', {
                                           x: '57.8317',
                                           y: '47.8552',
@@ -59,7 +59,7 @@ t.Z = i.memo(function (e) {
                                       })
                                   }),
                                   (0, l.jsx)('g', {
-                                      filter: u('filter2'),
+                                      filter: f('filter2'),
                                       children: (0, l.jsx)('rect', {
                                           x: '223.574',
                                           y: '11.5128',
@@ -70,7 +70,7 @@ t.Z = i.memo(function (e) {
                                       })
                                   }),
                                   (0, l.jsx)('g', {
-                                      filter: u('filter3'),
+                                      filter: f('filter3'),
                                       children: (0, l.jsx)('rect', {
                                           x: '142.545',
                                           y: '67.785',
@@ -81,14 +81,14 @@ t.Z = i.memo(function (e) {
                                       })
                                   }),
                                   (0, l.jsx)('g', {
-                                      filter: u('filter4'),
+                                      filter: f('filter4'),
                                       children: (0, l.jsx)('rect', {
                                           x: '152.558',
                                           y: '84',
                                           width: '86',
                                           height: '86',
                                           rx: '24',
-                                          fill: u('paint0')
+                                          fill: f('paint0')
                                       })
                                   }),
                                   (0, l.jsx)('path', {
@@ -415,12 +415,12 @@ t.Z = i.memo(function (e) {
                                       gradientTransform: 'translate(0 0)',
                                       children: [
                                           (0, l.jsx)('stop', {
-                                              className: c.screenIconHighlight_fill_g1_0,
+                                              className: o.screenIconHighlight_fill_g1_0,
                                               offset: '0%',
                                               stopColor: '#5f6be9'
                                           }),
                                           (0, l.jsx)('stop', {
-                                              className: c.screenIconHighlight_fill_g1_1,
+                                              className: o.screenIconHighlight_fill_g1_1,
                                               offset: '100%',
                                               stopColor: '#4d58ce'
                                           })
@@ -563,12 +563,12 @@ t.Z = i.memo(function (e) {
                                       gradientTransform: 'translate(0 0)',
                                       children: [
                                           (0, l.jsx)('stop', {
-                                              className: c.buttonOverWindowHighlight_fill_g1_0,
+                                              className: o.buttonOverWindowHighlight_fill_g1_0,
                                               offset: '0%',
                                               stopColor: '#606ceb'
                                           }),
                                           (0, l.jsx)('stop', {
-                                              className: c.buttonOverWindowHighlight_fill_g1_1,
+                                              className: o.buttonOverWindowHighlight_fill_g1_1,
                                               offset: '100%',
                                               stopColor: '#4b56cb'
                                           })
@@ -589,7 +589,7 @@ t.Z = i.memo(function (e) {
                                       opacity: '0.7',
                                       children: [
                                           (0, l.jsx)('g', {
-                                              filter: u('filter0'),
+                                              filter: f('filter0'),
                                               children: (0, l.jsx)('rect', {
                                                   width: '241.861',
                                                   height: '148.887',
@@ -600,7 +600,7 @@ t.Z = i.memo(function (e) {
                                               })
                                           }),
                                           (0, l.jsx)('g', {
-                                              filter: u('filter1'),
+                                              filter: f('filter1'),
                                               children: (0, l.jsx)('rect', {
                                                   width: '335.168',
                                                   height: '206.331',
@@ -611,7 +611,7 @@ t.Z = i.memo(function (e) {
                                               })
                                           }),
                                           (0, l.jsx)('g', {
-                                              filter: u('filter2'),
+                                              filter: f('filter2'),
                                               children: (0, l.jsx)('rect', {
                                                   width: '154.693',
                                                   height: '101.993',
@@ -622,7 +622,7 @@ t.Z = i.memo(function (e) {
                                               })
                                           }),
                                           (0, l.jsx)('g', {
-                                              filter: u('filter3'),
+                                              filter: f('filter3'),
                                               children: (0, l.jsx)('rect', {
                                                   width: '232.04',
                                                   height: '143.025',
@@ -635,15 +635,15 @@ t.Z = i.memo(function (e) {
                                       ]
                                   }),
                                   (0, l.jsx)('g', {
-                                      className: c.windowIcon_to,
+                                      className: o.windowIcon_to,
                                       transform: 'translate(195.557999,127)',
                                       children: (0, l.jsx)('g', {
-                                          className: c.windowIcon_ts,
+                                          className: o.windowIcon_ts,
                                           transform: 'scale(1,1)',
                                           children: (0, l.jsxs)('g', {
-                                              className: c.windowIcon,
+                                              className: o.windowIcon,
                                               transform: 'translate(-195.557999,-127)',
-                                              filter: u('filter4'),
+                                              filter: f('filter4'),
                                               children: [
                                                   (0, l.jsx)('rect', {
                                                       width: '86',
@@ -669,13 +669,13 @@ t.Z = i.memo(function (e) {
                                       })
                                   }),
                                   (0, l.jsx)('g', {
-                                      className: c.clydeIcon_to,
+                                      className: o.clydeIcon_to,
                                       transform: 'translate(87,127)',
                                       children: (0, l.jsx)('g', {
-                                          className: c.clydeIcon_ts,
+                                          className: o.clydeIcon_ts,
                                           transform: 'scale(1,1)',
                                           children: (0, l.jsxs)('g', {
-                                              className: c.clydeIcon,
+                                              className: o.clydeIcon,
                                               transform: 'translate(-87,-127)',
                                               children: [
                                                   (0, l.jsx)('rect', {
@@ -697,23 +697,23 @@ t.Z = i.memo(function (e) {
                                       })
                                   }),
                                   (0, l.jsx)('g', {
-                                      className: c.screenIcon_to,
+                                      className: o.screenIcon_to,
                                       transform: 'translate(304,127)',
                                       children: (0, l.jsx)('g', {
-                                          className: c.screenIcon_ts,
+                                          className: o.screenIcon_ts,
                                           transform: 'scale(1,1)',
                                           children: (0, l.jsxs)('g', {
-                                              className: c.screenIcon,
+                                              className: o.screenIcon,
                                               transform: 'translate(-304,-127)',
                                               children: [
                                                   (0, l.jsx)('rect', {
-                                                      className: c.screenIconHighlight,
+                                                      className: o.screenIconHighlight,
                                                       width: '86',
                                                       height: '86',
                                                       rx: '24',
                                                       ry: '24',
                                                       transform: 'translate(261 84)',
-                                                      fill: u('screenIconHighlight-fill'),
+                                                      fill: f('screenIconHighlight-fill'),
                                                       fillOpacity: '0.2'
                                                   }),
                                                   (0, l.jsxs)('g', {
@@ -734,20 +734,20 @@ t.Z = i.memo(function (e) {
                                       })
                                   }),
                                   (0, l.jsx)('g', {
-                                      className: c.windowCard_ts,
+                                      className: o.windowCard_ts,
                                       transform: 'translate(194.2121,124.850005) scale(0.5,0.5)',
                                       children: (0, l.jsxs)('g', {
-                                          className: c.windowCard,
+                                          className: o.windowCard,
                                           transform: 'translate(-109,-73.046998)',
                                           opacity: '0',
                                           children: [
                                               (0, l.jsxs)('g', {
-                                                  clipPath: u('windowCard-clip'),
+                                                  clipPath: f('windowCard-clip'),
                                                   children: [
                                                       (0, l.jsxs)('g', {
                                                           children: [
                                                               (0, l.jsx)('g', {
-                                                                  filter: u('filter5'),
+                                                                  filter: f('filter5'),
                                                                   children: (0, l.jsx)('rect', {
                                                                       width: '218',
                                                                       height: '150',
@@ -761,11 +761,11 @@ t.Z = i.memo(function (e) {
                                                                   children: [
                                                                       (0, l.jsx)('path', {
                                                                           d: 'M173.774,75.7111l1.235-7.2965c-2.097.1074-4.142.6951-5.974,1.7174-1.832,1.0222-3.404,2.4515-4.592,4.177-7.414,11.7126-17.41,21.5865-29.228,28.871-2.955,3.383-6.746,5.937-10.996,7.411l1.722,7.068l4.537,18.57.459-.143c28.711-12.647,43.239-27.755,56.044-46.5831.173-.2289.316-.4864.46-.7153.871-1.4703,1.456-3.0916,1.722-4.7785l-10.824-1.8313c-1.449-.2855-2.733-1.1169-3.583-2.3213s-1.202-2.6892-.982-4.1454Z',
-                                                                          fill: u('fill0')
+                                                                          fill: f('fill0')
                                                                       }),
                                                                       (0, l.jsx)('path', {
                                                                           d: 'M21.319,122.295c-1.1695-.128-2.3297-.329-3.4741-.601-.4737.269-.9249.575-1.3494.915-9.85782,7.969-18.49529,17.329-25.63905,27.785h26.44295l2.3543-16.31l1.6653-11.789Z',
-                                                                          fill: u('fill1')
+                                                                          fill: f('fill1')
                                                                       }),
                                                                       (0, l.jsx)('path', {
                                                                           d: 'M19.6537,134.083l-2.3256,16.31h116.5959l-3.445-14.049-4.537-18.571-106.2883,16.31Z',
@@ -773,7 +773,7 @@ t.Z = i.memo(function (e) {
                                                                       }),
                                                                       (0, l.jsx)('path', {
                                                                           d: 'M26.8024,122.266c-1.8232.186-3.6606.186-5.4838,0l-1.6653,11.789l106.2307-16.31-1.722-7.068c-1.854.673-3.782,1.124-5.742,1.345L26.8024,122.266Z',
-                                                                          fill: u('fill2')
+                                                                          fill: f('fill2')
                                                                       }),
                                                                       (0, l.jsx)('path', {
                                                                           d: 'M117.041,19.7425l-2.325.2576c3.708.5198,7.261,1.8289,10.416,3.8384c3.156,2.0094,5.841,4.6722,7.873,7.8074c5.35.4964,10.453,2.4792,14.729,5.7228-1.981-7.8825-6.768-14.7792-13.47-19.4062-6.703-4.6269-14.864-6.6688-22.965-5.7454L12.9922,23.3193L108.141,12.6749c2.118-.2257,4.24.3896,5.906,1.7126s2.742,3.247,2.994,5.355v0Z',
@@ -826,7 +826,7 @@ t.Z = i.memo(function (e) {
                                                                   ]
                                                               }),
                                                               (0, l.jsx)('g', {
-                                                                  filter: u('filter6'),
+                                                                  filter: f('filter6'),
                                                                   children: (0, l.jsx)('rect', {
                                                                       width: '218',
                                                                       height: '150',
@@ -875,21 +875,21 @@ t.Z = i.memo(function (e) {
                                       })
                                   }),
                                   (0, l.jsx)('g', {
-                                      className: c.buttonOverWindow_ts,
+                                      className: o.buttonOverWindow_ts,
                                       transform: 'translate(197,127) scale(0.8,0.8)',
                                       children: (0, l.jsxs)('g', {
-                                          className: c.buttonOverWindow,
+                                          className: o.buttonOverWindow,
                                           transform: 'translate(-87,-127)',
                                           opacity: '0',
                                           children: [
                                               (0, l.jsx)('rect', {
-                                                  className: c.buttonOverWindowHighlight,
+                                                  className: o.buttonOverWindowHighlight,
                                                   width: '86',
                                                   height: '86',
                                                   rx: '24',
                                                   ry: '24',
                                                   transform: 'translate(44 84)',
-                                                  fill: u('buttonOverWindowHighlight-fill'),
+                                                  fill: f('buttonOverWindowHighlight-fill'),
                                                   fillOpacity: '0.2'
                                               }),
                                               (0, l.jsxs)('g', {
@@ -909,13 +909,13 @@ t.Z = i.memo(function (e) {
                                       })
                                   }),
                                   (0, l.jsx)('g', {
-                                      className: c.cursor_to,
+                                      className: o.cursor_to,
                                       transform: 'translate(206.707,213.525767)',
                                       children: (0, l.jsx)('g', {
-                                          className: c.cursor_ts,
+                                          className: o.cursor_ts,
                                           transform: 'scale(1,1)',
                                           children: (0, l.jsxs)('g', {
-                                              className: c.cursor,
+                                              className: o.cursor,
                                               transform: 'translate(-206.5,-172.653503)',
                                               children: [
                                                   (0, l.jsx)('path', {

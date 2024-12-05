@@ -15,8 +15,8 @@ var o = n(200651),
     p = n(113434),
     m = n(566078),
     x = n(472144),
-    g = n(644646),
-    f = n(69439),
+    f = n(644646),
+    g = n(69439),
     h = n(46140),
     C = n(642145),
     v = n(388032),
@@ -24,7 +24,7 @@ var o = n(200651),
 let _ = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 function b(e) {
     var t, n, s;
-    let { quest: b, questContent: E, isHovering: N, contentPosition: T, rowIndex: B, onReceiveErrorHints: S } = e,
+    let { quest: b, questContent: E, isHovering: N, contentPosition: B, rowIndex: T, onReceiveErrorHints: S } = e,
         A = m.r.build(b.config),
         y = A.defaultReward.messages.name,
         R = A.defaultReward.messages.nameWithArticle,
@@ -58,7 +58,7 @@ function b(e) {
             [b.id]
         ),
         D = r.useMemo(() => (O ? Z(y) : v.intl.format(v.t['0IUT4e'], { rewardWithArticleHook: () => Z(R) })), [y, R, O, Z]),
-        H = r.useMemo(() => {
+        V = r.useMemo(() => {
             if (null != Q)
                 return (0, o.jsx)(c.Text, {
                     variant: 'text-sm/medium',
@@ -67,7 +67,7 @@ function b(e) {
                     children: Q
                 });
         }, [Q]),
-        V = (0, l.e7)([u.Z], () => u.Z.useReducedMotion);
+        H = (0, l.e7)([u.Z], () => u.Z.useReducedMotion);
     return (0, o.jsxs)('div', {
         className: a()(j.container),
         children: [
@@ -91,7 +91,7 @@ function b(e) {
                                                   className: j.confetti,
                                                   loop: !1,
                                                   autoplay: !1,
-                                                  shouldAnimate: !V
+                                                  shouldAnimate: !H
                                               }),
                                           (0, o.jsx)(x.Z, {
                                               quest: b,
@@ -100,7 +100,7 @@ function b(e) {
                                               percentCompleteText: N ? L : void 0,
                                               children: (0, o.jsx)('div', {
                                                   className: j.circularRewardTileWrapper,
-                                                  children: (0, o.jsx)(g.Z, {
+                                                  children: (0, o.jsx)(f.Z, {
                                                       quest: b,
                                                       questContent: E,
                                                       className: j.circularQuestRewardTileAsset,
@@ -110,7 +110,7 @@ function b(e) {
                                           })
                                       ]
                                   })
-                                : (0, o.jsx)(g.Z, {
+                                : (0, o.jsx)(f.Z, {
                                       quest: b,
                                       autoplay: N,
                                       questContent: E,
@@ -135,7 +135,7 @@ function b(e) {
                                 className: j.header,
                                 children: D
                             }),
-                            H
+                            V
                         ]
                     }),
                     q &&
@@ -147,11 +147,11 @@ function b(e) {
                         })
                 ]
             }),
-            (0, o.jsx)(f.Z, {
+            (0, o.jsx)(g.Z, {
                 quest: b,
                 location: E,
-                contentPosition: T,
-                rowIndex: B,
+                contentPosition: B,
+                rowIndex: T,
                 onReceiveErrorHints: S
             })
         ]

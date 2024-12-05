@@ -26,13 +26,13 @@ var i = n(200651),
     p = n(594174),
     f = n(63063),
     C = n(78451),
-    _ = n(434404),
-    v = n(999382),
+    v = n(434404),
+    _ = n(999382),
     I = n(181339),
     N = n(193544),
     T = n(981631),
-    j = n(388032),
-    b = n(686160);
+    b = n(388032),
+    j = n(686160);
 function S(e) {
     let { guild: t } = e,
         n = (0, o.e7)([g.Z], () => null != t && g.Z.can(T.Plq.MANAGE_GUILD, t), [t]),
@@ -40,9 +40,9 @@ function S(e) {
             async (e) => {
                 let { value: n } = e;
                 try {
-                    await _.Z.saveGuild(t.id, { verificationLevel: n }), _.Z.updateGuild({ verificationLevel: n });
+                    await v.Z.saveGuild(t.id, { verificationLevel: n }), v.Z.updateGuild({ verificationLevel: n });
                 } catch (e) {
-                    (0, c.showToast)((0, c.createToast)(j.intl.string(j.t['46Rs3t']), c.ToastType.FAILURE));
+                    (0, c.showToast)((0, c.createToast)(b.intl.string(b.t['46Rs3t']), c.ToastType.FAILURE));
                 }
             },
             [t]
@@ -56,25 +56,25 @@ function S(e) {
         }, [t]),
         a = r.useMemo(() => s.find((e) => e.value === (null == t ? void 0 : t.verificationLevel)), [t, s]);
     return (0, i.jsxs)('div', {
-        className: b.setupContainer,
+        className: j.setupContainer,
         children: [
             (0, i.jsxs)('div', {
-                className: b.switchItemTextContent,
+                className: j.switchItemTextContent,
                 children: [
                     (0, i.jsx)(c.Text, {
                         color: 'header-primary',
                         variant: 'text-md/semibold',
-                        children: j.intl.string(j.t.DpRdYG)
+                        children: b.intl.string(b.t.DpRdYG)
                     }),
                     (0, i.jsx)(c.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: j.intl.format(j.t.iuRk2t, {})
+                        children: b.intl.format(b.t.iuRk2t, {})
                     })
                 ]
             }),
             (0, i.jsx)(N.Z, {
-                changeTitle: j.intl.string(j.t.TxESJC),
+                changeTitle: b.intl.string(b.t.TxESJC),
                 value: null == a ? void 0 : a.value,
                 options: s,
                 disabled: !n,
@@ -90,9 +90,9 @@ function E(e) {
             async (e) => {
                 let { value: n } = e;
                 try {
-                    await _.Z.saveGuild(t.id, { explicitContentFilter: n }), _.Z.updateGuild({ explicitContentFilter: n });
+                    await v.Z.saveGuild(t.id, { explicitContentFilter: n }), v.Z.updateGuild({ explicitContentFilter: n });
                 } catch (e) {
-                    (0, c.showToast)((0, c.createToast)(j.intl.string(j.t['46Rs3t']), c.ToastType.FAILURE));
+                    (0, c.showToast)((0, c.createToast)(b.intl.string(b.t['46Rs3t']), c.ToastType.FAILURE));
                 }
             },
             [t.id]
@@ -107,27 +107,27 @@ function E(e) {
         m = r.useMemo(() => u.find((e) => e.value === (null == t ? void 0 : t.explicitContentFilter)), [t, u]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            l && (0, i.jsx)(c.FormDivider, { className: b.divider }),
+            l && (0, i.jsx)(c.FormDivider, { className: j.divider }),
             (0, i.jsxs)('div', {
-                className: s()(b.setupContainer, n),
+                className: s()(j.setupContainer, n),
                 children: [
                     (0, i.jsxs)('div', {
-                        className: b.switchItemTextContent,
+                        className: j.switchItemTextContent,
                         children: [
                             (0, i.jsx)(c.Text, {
                                 color: 'header-primary',
                                 variant: 'text-md/semibold',
-                                children: j.intl.string(j.t.Kd6OQU)
+                                children: b.intl.string(b.t.Kd6OQU)
                             }),
                             (0, i.jsx)(c.Text, {
                                 color: 'header-secondary',
                                 variant: 'text-sm/normal',
-                                children: j.intl.format(j.t.zOmxND, { helpdeskArticle: f.Z.getArticleURL(T.BhN.SAFE_DIRECT_MESSAGING) })
+                                children: b.intl.format(b.t.zOmxND, { helpdeskArticle: f.Z.getArticleURL(T.BhN.SAFE_DIRECT_MESSAGING) })
                             })
                         ]
                     }),
                     (0, i.jsx)(N.Z, {
-                        changeTitle: j.intl.string(j.t['eBd+Ul']),
+                        changeTitle: b.intl.string(b.t['eBd+Ul']),
                         value: null == m ? void 0 : m.value,
                         options: u,
                         disabled: !a,
@@ -141,7 +141,7 @@ function E(e) {
 async function R(e, t) {
     if (e.hasFeature(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) === t) return;
     let n = e.features;
-    return t ? n.add(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) : n.delete(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY), await _.Z.saveGuild(e.id, { features: n });
+    return t ? n.add(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) : n.delete(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY), await v.Z.saveGuild(e.id, { features: n });
 }
 function y(e) {
     let { guild: t } = e,
@@ -160,26 +160,26 @@ function y(e) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsxs)('div', {
-                      className: b.setupContainer,
+                      className: j.setupContainer,
                       children: [
                           (0, i.jsx)(c.FormSwitch, {
                               value: a,
                               onChange: u,
-                              className: b.switchItem,
+                              className: j.switchItem,
                               disabled: !n,
                               hideBorder: !0,
                               children: (0, i.jsxs)('div', {
-                                  className: b.switchItemTextContent,
+                                  className: j.switchItemTextContent,
                                   children: [
                                       (0, i.jsxs)(c.Text, {
                                           color: 'header-primary',
                                           variant: 'text-md/semibold',
-                                          children: [j.intl.string(j.t.jDarm5), (0, i.jsx)(m.Z, { className: b.betaTag })]
+                                          children: [b.intl.string(b.t.jDarm5), (0, i.jsx)(m.Z, { className: j.betaTag })]
                                       }),
                                       (0, i.jsx)(c.Text, {
                                           color: 'header-secondary',
                                           variant: 'text-sm/normal',
-                                          children: j.intl.string(j.t['/ee7yM'])
+                                          children: b.intl.string(b.t['/ee7yM'])
                                       })
                                   ]
                               })
@@ -187,11 +187,11 @@ function y(e) {
                           (0, i.jsx)(c.HelpMessage, {
                               messageType: c.HelpMessageTypes.INFO,
                               textVariant: 'text-xs/normal',
-                              children: j.intl.string(j.t.JxO639)
+                              children: b.intl.string(b.t.JxO639)
                           })
                       ]
                   }),
-                  (0, i.jsx)(c.FormDivider, { className: b.divider })
+                  (0, i.jsx)(c.FormDivider, { className: j.divider })
               ]
           });
 }
@@ -215,7 +215,7 @@ function Z(e) {
         h = n === T.BpS.ELEVATED,
         x = (0, a.throttle)(async (e) => {
             if (!!u && !m)
-                await _.Z.updateMFALevel({
+                await v.Z.updateMFALevel({
                     guildId: t.id,
                     level: e ? T.BpS.ELEVATED : T.BpS.NONE,
                     isEnabled: !e
@@ -224,28 +224,28 @@ function Z(e) {
     return l
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(c.FormDivider, { className: b.divider }),
+                  (0, i.jsx)(c.FormDivider, { className: j.divider }),
                   (0, i.jsxs)('div', {
-                      className: b.setupContainer,
+                      className: j.setupContainer,
                       children: [
                           (0, i.jsx)(c.FormSwitch, {
                               value: h,
                               onChange: x,
-                              className: b.switchItem,
+                              className: j.switchItem,
                               disabled: !u,
                               hideBorder: !0,
                               children: (0, i.jsxs)('div', {
-                                  className: b.switchItemTextContent,
+                                  className: j.switchItemTextContent,
                                   children: [
                                       (0, i.jsx)(c.Text, {
                                           color: 'header-primary',
                                           variant: 'text-md/semibold',
-                                          children: j.intl.string(j.t.lbBfER)
+                                          children: b.intl.string(b.t.lbBfER)
                                       }),
                                       (0, i.jsx)(c.Text, {
                                           color: 'header-secondary',
                                           variant: 'text-sm/normal',
-                                          children: j.intl.string(j.t.REr5AA)
+                                          children: b.intl.string(b.t.REr5AA)
                                       })
                                   ]
                               })
@@ -254,7 +254,7 @@ function Z(e) {
                               (0, i.jsx)(c.HelpMessage, {
                                   messageType: c.HelpMessageTypes.INFO,
                                   textVariant: 'text-xs/normal',
-                                  children: j.intl.format(j.t.Xz1O0d, {
+                                  children: b.intl.format(b.t.Xz1O0d, {
                                       onClick: function () {
                                           d.Z.open(T.oAB.ACCOUNT);
                                       }
@@ -267,16 +267,16 @@ function Z(e) {
         : null;
 }
 function A() {
-    let { guild: e, mfaLevel: t } = (0, o.cj)([v.Z], () => v.Z.getProps(), []),
+    let { guild: e, mfaLevel: t } = (0, o.cj)([_.Z], () => _.Z.getProps(), []),
         n = (0, o.e7)([x.Z], () => x.Z.enabled, []);
     return null == e
         ? null
         : n
           ? (0, i.jsx)(u.Z, {})
           : (0, i.jsxs)(c.FormSection, {
-                title: j.intl.string(j.t['suhY+f']),
+                title: b.intl.string(b.t['suhY+f']),
                 tag: c.FormTitleTags.H1,
-                titleClassName: b.headerContainer,
+                titleClassName: j.headerContainer,
                 children: [
                     (0, i.jsx)(y, { guild: e }),
                     (0, i.jsx)(S, { guild: e }),
@@ -285,9 +285,9 @@ function A() {
                         mfaLevel: t
                     }),
                     (0, i.jsx)(E, { guild: e }),
-                    (0, i.jsx)(c.FormDivider, { className: b.divider }),
+                    (0, i.jsx)(c.FormDivider, { className: j.divider }),
                     (0, i.jsx)('div', {
-                        className: s()(b.setupContainer),
+                        className: s()(j.setupContainer),
                         children: (0, i.jsx)(I.w, { guild: e })
                     })
                 ]

@@ -27,13 +27,13 @@ var i = n(200651),
     p = n(134432),
     f = n(813197),
     C = n(208567),
-    _ = n(496675),
-    v = n(768581),
+    v = n(496675),
+    _ = n(768581),
     I = n(63063),
     N = n(434404),
     T = n(999382),
-    j = n(450474),
-    b = n(190287),
+    b = n(450474),
+    j = n(190287),
     S = n(465520),
     E = n(981631),
     R = n(128449),
@@ -84,7 +84,7 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
         r.useEffect(() => {
             !d && null != n && ((0, g.le)(), (0, g.aC)(n.id), (0, g.i3)(n.id), L(!0));
         }, [n, d]);
-        let { canManageGuild: D } = (0, l.cj)([_.Z], () => ({ canManageGuild: _.Z.can(E.Plq.MANAGE_GUILD, n) })),
+        let { canManageGuild: D } = (0, l.cj)([v.Z], () => ({ canManageGuild: v.Z.can(E.Plq.MANAGE_GUILD, n) })),
             O = (0, l.e7)([T.Z], () => T.Z.isGuildMetadataLoaded()),
             k = (0, l.e7)([T.Z], () => (null != n ? T.Z.getMetadata() : null)),
             P = (0, l.e7)([T.Z], () => (null != n && (null == k ? void 0 : k.isPublished) ? T.Z.getSlug() : null)),
@@ -333,7 +333,7 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                         className: Z.formTitle,
                                                                         children: y.intl.string(y.t.oOPlPD)
                                                                     }),
-                                                                    (0, i.jsx)(j.Z, {
+                                                                    (0, i.jsx)(b.Z, {
                                                                         guild: n,
                                                                         guildMetadata: k,
                                                                         disabled: !D
@@ -386,7 +386,7 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                     (0, i.jsx)(C.Z, {
                                                                         image: n.discoverySplash,
                                                                         makeURL: (e) =>
-                                                                            v.ZP.getGuildDiscoverySplashURL({
+                                                                            _.ZP.getGuildDiscoverySplashURL({
                                                                                 id: n.id,
                                                                                 splash: e,
                                                                                 size: 512 * (0, p.x_)()
@@ -453,7 +453,7 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                         }),
                                                         (0, i.jsx)('div', {
                                                             className: Z.reasonToJoin,
-                                                            children: (0, i.jsx)(b.Z, {
+                                                            children: (0, i.jsx)(j.Z, {
                                                                 reasonMinLength: 10,
                                                                 reasonMaxLength: 128,
                                                                 guildId: n.id,

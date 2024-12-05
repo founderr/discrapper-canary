@@ -1,11 +1,11 @@
 n.d(t, {
     l: function () {
-        return o;
+        return u;
     }
 });
 var r = n(200651),
-    l = n(192379),
-    i = n(709014);
+    i = n(192379),
+    l = n(709014);
 let a = {
         deafen: {
             name: 'deafen',
@@ -28,40 +28,40 @@ let a = {
             duration: 70
         }
     },
-    o = (e) => {
-        let t = l.useRef(null),
-            o = l.useRef(e);
-        o.current = e;
-        let u = l.useMemo(
+    u = (e) => {
+        let t = i.useRef(null),
+            u = i.useRef(e);
+        u.current = e;
+        let o = i.useMemo(
                 () => () => {
                     null != t.current && t.current.play(e);
                 },
                 [e]
             ),
-            c = l.useCallback(() => {
+            s = i.useCallback(() => {
                 if (null == t.current) return;
                 let n = 'deafen' === e ? 'hover_undeafened' : 'hover_deafened';
                 t.current.play(n);
             }, [e]),
-            s = l.useCallback(() => {
+            c = i.useCallback(() => {
                 if (null == t.current) return;
                 let n = 'deafen' === e ? 'hover_undeafened' : 'hover_deafened';
                 t.current.stopIfPlaying(n);
             }, [e]);
         return {
             events: {
-                onClick: u,
-                onMouseEnter: c,
-                onMouseLeave: s
+                onClick: o,
+                onMouseEnter: s,
+                onMouseLeave: c
             },
-            play: u,
-            Component: l.useCallback(
+            play: o,
+            Component: i.useCallback(
                 (e) =>
-                    (0, r.jsx)(i.L, {
+                    (0, r.jsx)(l.L, {
                         ...e,
                         src: () => n.e('68449').then(n.t.bind(n, 406785, 19)),
                         ref: t,
-                        initialAnimation: o.current,
+                        initialAnimation: u.current,
                         markers: a
                     }),
                 []

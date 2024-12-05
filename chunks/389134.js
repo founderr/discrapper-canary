@@ -31,16 +31,16 @@ let C = () => ({
         brandPrimaryColor: p.ym['0'].primary,
         brandSecondaryColor: p.ym['0'].secondary
     }),
-    _ = C(),
-    v = d()(_),
+    v = C(),
+    _ = d()(v),
     I = !1,
     N = !1,
     T = {};
-class j extends (i = u.ZP.Store) {
+class b extends (i = u.ZP.Store) {
     getState() {
         return {
-            initialSettings: _,
-            settings: v,
+            initialSettings: v,
+            settings: _,
             dirty: I,
             errors: T,
             submitting: N
@@ -48,7 +48,7 @@ class j extends (i = u.ZP.Store) {
     }
 }
 (s = 'ClanSettingsStore'),
-    (l = 'displayName') in (r = j)
+    (l = 'displayName') in (r = b)
         ? Object.defineProperty(r, l, {
               value: s,
               enumerable: !0,
@@ -56,36 +56,36 @@ class j extends (i = u.ZP.Store) {
               writable: !0
           })
         : (r[l] = s),
-    (t.Z = new j(m.Z, {
+    (t.Z = new b(m.Z, {
         CLAN_SETTINGS_FETCH_START: function () {
-            (N = !1), (_ = C()), (v = d()(_)), (I = !1), (T = {});
+            (N = !1), (v = C()), (_ = d()(v)), (I = !1), (T = {});
         },
         CLAN_SETTINGS_FETCH_SUCCESS: function (e) {
             let { settings: t } = e;
-            (_ = {
+            (v = {
                 ...C(),
                 ...t
             }),
-                ((v = d()(_)).gameApplicationIds = f(v.gameApplicationIds)),
+                ((_ = d()(v)).gameApplicationIds = f(_.gameApplicationIds)),
                 (I = !1);
         },
         CLAN_SETTINGS_UPDATE: function (e) {
             let { updates: t } = e,
                 { gameApplicationIds: n } = t;
             for (let e in (null != n && (t.gameApplicationIds = f(n)),
-            (v = {
-                ...v,
+            (_ = {
+                ..._,
                 ...d()(t)
             }),
             t))
                 delete T[e], (T = { ...T });
-            I = !o().isEqual(o().omit(v, 'verificationForm'), o().omit(_, 'verificationForm'));
+            I = !o().isEqual(o().omit(_, 'verificationForm'), o().omit(v, 'verificationForm'));
         },
         CLAN_SETTINGS_SUBMIT: function () {
             (N = !0), (T = {});
         },
         CLAN_SETTINGS_SUBMIT_SUCCESS: function () {
-            (N = !1), (_ = d()(v)), (I = !1), (T = {});
+            (N = !1), (v = d()(_)), (I = !1), (T = {});
         },
         CLAN_SETTINGS_SUBMIT_ERROR: function (e) {
             let { error: t } = e;
@@ -102,19 +102,19 @@ class j extends (i = u.ZP.Store) {
         },
         MEMBER_VERIFICATION_FORM_UPDATE: function (e) {
             let { form: t, isLocalUpdate: n } = e;
-            if (null == v.verificationForm) return !1;
+            if (null == _.verificationForm) return !1;
             if (
-                ((v = {
-                    ...v,
+                ((_ = {
+                    ..._,
                     verificationForm: {
-                        ...v.verificationForm,
+                        ..._.verificationForm,
                         ...t
                     }
                 }),
                 n)
             ) {
                 var i;
-                I = !o().isEqual(v.verificationForm.formFields, null === (i = _.verificationForm) || void 0 === i ? void 0 : i.formFields);
+                I = !o().isEqual(_.verificationForm.formFields, null === (i = v.verificationForm) || void 0 === i ? void 0 : i.formFields);
             } else I = !1;
         }
     }));

@@ -1,4 +1,4 @@
-let l = (0, n(818083).B)({
+let l = (0, i(818083).B)({
     kind: 'user',
     id: '2023-06_golive_capture_card',
     label: 'GoLive Capture Card Support',

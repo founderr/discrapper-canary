@@ -3,7 +3,7 @@ n.d(t, {
         return ef;
     },
     Z: function () {
-        return e_;
+        return ev;
     }
 }),
     n(47120),
@@ -24,13 +24,13 @@ var i = n(200651),
     p = n(902840),
     f = n(410030),
     C = n(100527),
-    _ = n(367907),
-    v = n(906732),
+    v = n(367907),
+    _ = n(906732),
     I = n(740504),
     N = n(933557),
     T = n(471445),
-    j = n(890477),
-    b = n(34586),
+    b = n(890477),
+    j = n(34586),
     S = n(600164),
     E = n(688465),
     R = n(807582),
@@ -662,7 +662,7 @@ class eC extends r.PureComponent {
                 onChange: this.handleBannerChange,
                 hint: en.intl.string(en.t.uPvxqK),
                 onOpenImageSelectModal: () =>
-                    ev(
+                    e_(
                         ee.pC.GUILD_BANNER,
                         et.B,
                         this.handleBannerChange,
@@ -680,7 +680,7 @@ class eC extends r.PureComponent {
                 color: g.Button.Colors.BRAND,
                 className: ei.marginTop16,
                 onClick: () =>
-                    ev(
+                    e_(
                         ee.pC.GUILD_BANNER,
                         et.B,
                         this.handleBannerChange,
@@ -897,7 +897,7 @@ class eC extends r.PureComponent {
             es(this, 'handleShowModalUpsell', (e, t, n, i) => {
                 e.preventDefault(), e.stopPropagation();
                 let { guild: r, analyticsLocations: l } = this.props;
-                (0, _.yw)(J.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                (0, v.yw)(J.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                     location: {
                         section: t,
                         object: J.qAy.LEARN_MORE
@@ -963,11 +963,11 @@ class eC extends r.PureComponent {
             );
     }
 }
-function e_() {
+function ev() {
     var e;
     let { guild: t, errors: n, submitting: l, subsection: s } = (0, u.cj)([X.Z], () => X.Z.getProps()),
         a = (0, f.ZP)(),
-        { analyticsLocations: c } = (0, v.ZP)(C.Z.OVERVIEW);
+        { analyticsLocations: c } = (0, _.ZP)(C.Z.OVERVIEW);
     r.useEffect(() => {
         (0, D.Kw)(L.v6.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL);
     }, []);
@@ -978,10 +978,10 @@ function e_() {
             isGuildAdmin: G.Z.can(J.Plq.ADMINISTRATOR, t)
         })),
         x = (0, u.e7)([U.Z], () => U.Z.getMemberCount(null == t ? void 0 : t.id)),
-        p = (0, b.E)(t),
-        _ = (0, u.e7)([H.default], () => H.default.getCurrentUser());
-    o()(null != _, 'GuildSettingsOverview: currentUser cannot be undefined');
-    let { enableDeadchat: N } = j.Z.useExperiment(
+        p = (0, j.E)(t),
+        v = (0, u.e7)([H.default], () => H.default.getCurrentUser());
+    o()(null != v, 'GuildSettingsOverview: currentUser cannot be undefined');
+    let { enableDeadchat: N } = b.Z.useExperiment(
         {
             guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : J.lds,
             location: 'guild_settings'
@@ -993,7 +993,7 @@ function e_() {
     );
     return null == t
         ? null
-        : (0, i.jsx)(v.Gt, {
+        : (0, i.jsx)(_.Gt, {
               value: c,
               children: (0, i.jsx)(eC, {
                   channels: m,
@@ -1003,7 +1003,7 @@ function e_() {
                   guild: t,
                   errors: n,
                   submitting: l,
-                  currentUser: _,
+                  currentUser: v,
                   guildMemberCount: x,
                   isInventoryFeedEnabled: p,
                   theme: a,
@@ -1012,7 +1012,7 @@ function e_() {
               })
           });
 }
-function ev(e, t, r) {
+function e_(e, t, r) {
     let l = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
         s = arguments.length > 4 ? arguments[4] : void 0,
         a = arguments.length > 5 ? arguments[5] : void 0;

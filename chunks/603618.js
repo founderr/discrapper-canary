@@ -24,8 +24,8 @@ var i = n(200651),
     v = n(194082),
     g = n(297781),
     E = n(656709),
-    x = n(567409),
-    C = n(703656),
+    C = n(567409),
+    x = n(703656),
     Z = n(409057),
     _ = n(199902),
     S = n(592125),
@@ -38,8 +38,8 @@ var i = n(200651),
     T = n(998502),
     k = n(388627),
     w = n(981631),
-    A = n(388032),
-    L = n(13663);
+    L = n(388032),
+    A = n(13663);
 function R(e) {
     let { entry: t, currentUserActivity: n, idx: o } = e,
         c = (0, s.e7)([b.default], () => b.default.getUser(t.author_id)),
@@ -51,12 +51,12 @@ function R(e) {
             return () => clearTimeout(e);
         }
     }, [f]);
-    let x = null != n && (0, p.Z)(n, w.xjy.JOIN),
+    let C = null != n && (0, p.Z)(n, w.xjy.JOIN),
         Z = async (e) => {
             if (null != c && 'unsent' === f) {
                 e.stopPropagation();
                 try {
-                    if ((m('sending'), x))
+                    if ((m('sending'), C))
                         await u.Z.sendActivityInviteUser({
                             type: w.mFx.JOIN,
                             userId: c.id,
@@ -68,10 +68,10 @@ function R(e) {
                         let e = await d.Z.getOrEnsurePrivateChannel(c.id),
                             n = null !== (i = S.Z.getChannel(e)) && void 0 !== i ? i : null;
                         r()(null != n, 'Send channel must be defined'),
-                            (0, C.uL)(w.Z5c.CHANNEL(n.guild_id, n.id)),
+                            (0, x.uL)(w.Z5c.CHANNEL(n.guild_id, n.id)),
                             await (0, E.p)({
                                 channel: n,
-                                content: A.intl.string(A.t.DwAcMz),
+                                content: L.intl.string(L.t.DwAcMz),
                                 entry: t,
                                 whenReady: !0
                             });
@@ -92,10 +92,10 @@ function R(e) {
             if (null == c) return;
             let t = await d.Z.getOrEnsurePrivateChannel(c.id),
                 n = null !== (e = S.Z.getChannel(t)) && void 0 !== e ? e : null;
-            r()(null != n, 'Send channel must be defined'), (0, C.uL)(w.Z5c.CHANNEL(n.guild_id, n.id)), j.isPlatformEmbedded && T.ZP.focus();
+            r()(null != n, 'Send channel must be defined'), (0, x.uL)(w.Z5c.CHANNEL(n.guild_id, n.id)), j.isPlatformEmbedded && T.ZP.focus();
         },
-        I = x ? A.intl.string(A.t['3fRyS0']) : A.intl.string(A.t.y9eo7e),
-        N = x
+        I = C ? L.intl.string(L.t['3fRyS0']) : L.intl.string(L.t.y9eo7e),
+        N = C
             ? (0, i.jsx)(a.GroupPlusIcon, {
                   color: 'currentColor',
                   size: 'sm'
@@ -112,9 +112,9 @@ function R(e) {
                 ...e,
                 submitting: 'sending' === f,
                 onClick: v ? _ : Z,
-                className: L.inviteButton,
-                wrapperClassName: L.inviteButtonWrapper,
-                innerClassName: L.inviteButtonInner,
+                className: A.inviteButton,
+                wrapperClassName: A.inviteButtonWrapper,
+                innerClassName: A.inviteButtonInner,
                 color: a.ButtonColors.TRANSPARENT,
                 look: a.ButtonLooks.FILLED,
                 size: a.ButtonSizes.ICON,
@@ -159,7 +159,7 @@ function M(e) {
                 }
             }
         },
-        v = A.intl.string(A.t.OKsSCQ);
+        v = L.intl.string(L.t.OKsSCQ);
     return (0, i.jsx)(a.Tooltip, {
         text: v,
         'aria-label': v,
@@ -168,9 +168,9 @@ function M(e) {
                 ...e,
                 submitting: 'sending' === h,
                 onClick: m,
-                className: L.inviteButton,
-                wrapperClassName: L.inviteButtonWrapper,
-                innerClassName: L.inviteButtonInner,
+                className: A.inviteButton,
+                wrapperClassName: A.inviteButtonWrapper,
+                innerClassName: A.inviteButtonInner,
                 color: a.ButtonColors.TRANSPARENT,
                 look: a.ButtonLooks.FILLED,
                 size: a.ButtonSizes.ICON,
@@ -209,32 +209,32 @@ function z(e) {
     return null == o
         ? null
         : (0, i.jsxs)('div', {
-              className: L.row,
+              className: A.row,
               children: [
                   (0, i.jsx)(f.Z, {
-                      className: L.avatar,
+                      className: A.avatar,
                       user: o,
                       isMobile: u,
                       status: c
                   }),
                   (0, i.jsxs)('div', {
-                      className: L.details,
+                      className: A.details,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: L.usernameWrapper,
+                              className: A.usernameWrapper,
                               children: [
                                   (0, i.jsx)(a.Text, {
-                                      className: L.username,
+                                      className: A.username,
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
                                       children: y.ZP.getName(void 0, void 0, o)
                                   }),
-                                  null != r && (0, i.jsx)(v.ZP, { className: L.liveIndicator })
+                                  null != r && (0, i.jsx)(v.ZP, { className: A.liveIndicator })
                               ]
                           }),
                           (0, i.jsx)(g.Gk, {
                               location: g.Gt.OVERLAY,
-                              className: L.badgesContainer,
+                              className: A.badgesContainer,
                               children: [g.OV, g.wO, g.f, g.v1, g.pQ].map((e, n) => (0, i.jsx)(e, { entry: t }, 'entry-'.concat(n)))
                           })
                       ]
@@ -273,7 +273,7 @@ function P() {
     let e = (0, k.II)(),
         t = null == e ? void 0 : e.id,
         n = null == e ? void 0 : e.altId,
-        l = (0, x.Ns)(t),
+        l = (0, C.Ns)(t),
         o = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
         r = (0, s.e7)([I.Z], () => (null != n ? I.Z.getApplicationActivity(n) : null != t ? I.Z.getApplicationActivity(t) : null)),
         u = null != r && (0, p.Z)(r, w.xjy.JOIN),
@@ -282,11 +282,11 @@ function P() {
     return 0 === l.length && null == r
         ? null
         : (0, i.jsxs)('div', {
-              className: L.container,
+              className: A.container,
               children: [
                   null != r && null != o
                       ? (0, i.jsx)(Z.Z, {
-                            className: L.activityCard,
+                            className: A.activityCard,
                             activity: r,
                             user: o,
                             currentUser: o
@@ -294,11 +294,11 @@ function P() {
                       : null,
                   u && !h
                       ? (0, i.jsx)(a.Button, {
-                            className: L.inviteFriendsButton,
+                            className: A.inviteFriendsButton,
                             onClick: () => (0, c.h7)(r, !1, w.IlC.POPOUT),
                             size: a.ButtonSizes.SMALL,
                             color: a.ButtonColors.PRIMARY,
-                            children: A.intl.string(A.t['6Qgren'])
+                            children: L.intl.string(L.t['6Qgren'])
                         })
                       : null,
                   (0, i.jsx)(D, {

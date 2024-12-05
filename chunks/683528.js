@@ -14,8 +14,8 @@ var i = t(200651),
     d = t(549635),
     h = t(217702),
     m = t(388032),
-    f = t(52131);
-function p(e) {
+    p = t(52131);
+function f(e) {
     return 'media-view-scroll-thumbnail-'.concat(e);
 }
 let g = r.memo(function (e) {
@@ -47,7 +47,7 @@ function x(e) {
         u = r.useRef(null);
     return (
         r.useLayoutEffect(() => {
-            let e = document.getElementById(p(t));
+            let e = document.getElementById(f(t));
             null != u.current &&
                 null != e &&
                 u.current.scrollIntoViewNode({
@@ -57,10 +57,10 @@ function x(e) {
                 });
         }, [t]),
         (0, i.jsx)('div', {
-            className: f.galleryContainer,
+            className: p.galleryContainer,
             children: (0, i.jsx)(o.AdvancedScrollerThin, {
                 orientation: 'horizontal',
-                className: f.gallery,
+                className: p.gallery,
                 ref: u,
                 onClick: (e) => e.stopPropagation(),
                 children: n.map((e, r) => {
@@ -69,14 +69,14 @@ function x(e) {
                     return (0, i.jsxs)(
                         o.Clickable,
                         {
-                            id: p(r),
-                            className: f.galleryItem,
+                            id: f(r),
+                            className: p.galleryItem,
                             'aria-label': m.intl.formatToPlainString(u, {
                                 pageNumber: r + 1,
                                 totalPages: n.length
                             }),
                             onClick: () => a(r),
-                            children: [(0, i.jsx)('div', { className: l()(f.galleryItemOverlay, { [f.selected]: s }) }), (0, i.jsx)(g, { item: e })]
+                            children: [(0, i.jsx)('div', { className: l()(p.galleryItemOverlay, { [p.selected]: s }) }), (0, i.jsx)(g, { item: e })]
                         },
                         r
                     );

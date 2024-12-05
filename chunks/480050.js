@@ -6,8 +6,8 @@ var i = t(200651),
     o = t(956664),
     s = t(981656);
 n.Z = r.memo(function (e) {
-    let { children: n, active: t, onClick: a, className: u, style: c, width: d, height: h, maxWidth: m, maxHeight: f } = e,
-        p = (0, r.useRef)(null),
+    let { children: n, active: t, onClick: a, className: u, style: c, width: d, height: h, maxWidth: m, maxHeight: p } = e,
+        f = (0, r.useRef)(null),
         [g, x] = (0, r.useState)(!1),
         [_, C] = (0, r.useState)({
             x: 0,
@@ -63,7 +63,7 @@ n.Z = r.memo(function (e) {
             (e) => {
                 var n;
                 if (!g) return;
-                let t = null === (n = p.current) || void 0 === n ? void 0 : n.getBoundingClientRect();
+                let t = null === (n = f.current) || void 0 === n ? void 0 : n.getBoundingClientRect();
                 if (null == t) return;
                 let [i, r] = [t.width > window.innerWidth, t.height > window.innerHeight];
                 if (!i && !r) return;
@@ -81,22 +81,22 @@ n.Z = r.memo(function (e) {
             },
             [g, y, S.x, S.y]
         ),
-        M = t ? (0, o.vV)(d, h, m, f) : 1,
-        A = (0, r.useCallback)(() => {
-            let e = p.current;
+        M = t ? (0, o.vV)(d, h, m, p) : 1,
+        j = (0, r.useCallback)(() => {
+            let e = f.current;
             if (null == e) return !1;
             let n = null != M ? M : 1;
             return e.offsetWidth * n > window.innerWidth || e.offsetHeight * n > window.innerHeight;
         }, [M]);
     return (0, i.jsx)('div', {
-        ref: p,
+        ref: f,
         onMouseDown: I,
         onMouseUp: b,
         onMouseMove: L,
         onMouseLeave: () => x(!1),
         className: l()(u, s.wrapper, {
             [s.panning]: t && g,
-            [s.pannable]: t && A()
+            [s.pannable]: t && j()
         }),
         style: {
             ...(null != c ? c : {}),

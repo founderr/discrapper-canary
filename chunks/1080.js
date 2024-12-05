@@ -21,13 +21,13 @@ var i = n(200651),
     p = n(367907),
     f = n(906732),
     C = n(118012),
-    _ = n(218867),
-    v = n(733026),
+    v = n(218867),
+    _ = n(733026),
     I = n(246946),
     N = n(594174),
     T = n(626135),
-    j = n(136015),
-    b = n(51144),
+    b = n(136015),
+    j = n(51144),
     S = n(434404),
     E = n(999382),
     R = n(84613),
@@ -52,12 +52,12 @@ function O(e) {
     var t;
     let { transitionState: n, guild: l, user: s, ban: a, hideDiscriminator: o, onClose: c } = e,
         [u, g] = r.useState(!1),
-        [x, _] = r.useState(null),
-        { analyticsLocations: v } = (0, f.ZP)(),
-        I = null !== (t = null == v ? void 0 : v[0]) && void 0 !== t ? t : null;
+        [x, v] = r.useState(null),
+        { analyticsLocations: _ } = (0, f.ZP)(),
+        I = null !== (t = null == _ ? void 0 : _[0]) && void 0 !== t ? t : null;
     async function N() {
         if (null != l) {
-            _(null), g(!0);
+            v(null), g(!0);
             try {
                 await m.Z.unbanUser(l.id, s.id),
                     c(),
@@ -68,7 +68,7 @@ function O(e) {
                         location: I
                     });
             } catch (e) {
-                _(new h.Z(e)), g(!1);
+                v(new h.Z(e)), g(!1);
             }
         }
     }
@@ -83,7 +83,7 @@ function O(e) {
                     (0, i.jsx)(C.Z, {
                         size: C.Z.Sizes.SIZE_24,
                         className: L.userUsername,
-                        children: b.ZP.getUserTag(s, {
+                        children: j.ZP.getUserTag(s, {
                             mode: 'username',
                             identifiable: o ? 'never' : 'always'
                         })
@@ -141,7 +141,7 @@ function O(e) {
 class k extends r.PureComponent {
     render() {
         let { user: e, hideDiscriminator: t, guild: n } = this.props,
-            r = b.ZP.getGlobalName(e);
+            r = j.ZP.getGlobalName(e);
         return (0, i.jsxs)(d.Clickable, {
             className: s()(L.bannedUser),
             onClick: this.handleShowModal,
@@ -156,7 +156,7 @@ class k extends r.PureComponent {
                 (0, i.jsxs)('div', {
                     className: L.username,
                     children: [
-                        b.ZP.getUserTag(e, {
+                        j.ZP.getUserTag(e, {
                             mode: 'username',
                             identifiable: t ? 'never' : 'always'
                         }),
@@ -243,7 +243,7 @@ let P = r.forwardRef(function (e, t) {
             },
             [s, n, l, a]
         );
-    return (0, i.jsx)(_.Z, {
+    return (0, i.jsx)(v.Z, {
         role: 'listbox',
         listPadding: [8, 8, 8, 8],
         rowCount: l.length,
@@ -273,7 +273,7 @@ function M(e) {
             if (!a)
                 try {
                     o(!0);
-                    let [e, n] = (0, v.C)(l),
+                    let [e, n] = (0, _.C)(l),
                         i = e[0];
                     S.Z.setSearchQuery(l), await m.Z.searchGuildBans(t, i, n), o(!1);
                 } catch (e) {
@@ -336,18 +336,18 @@ function w() {
         h = null != u && u.trim().length > 0,
         p = (0, g.Z)(h),
         f = h !== p,
-        [C] = (0, c.e7)([E.Z], () => E.Z.getBans(), [], j.Q),
-        _ = null !== (e = null == C ? void 0 : C.size) && void 0 !== e ? e : 0,
+        [C] = (0, c.e7)([E.Z], () => E.Z.getBans(), [], b.Q),
+        v = null !== (e = null == C ? void 0 : C.size) && void 0 !== e ? e : 0,
         I = (0, x.ZP)(),
         T = null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : Z.lds,
-        b = r.useRef(null),
+        j = r.useRef(null),
         S = r.useCallback(
             (e) =>
                 null == e || 0 === e.length
                     ? (e) => null != e
                     : (t) => {
                           if (null == t || 0 === e.trim().length) return !1;
-                          let [[n], i] = (0, v.C)(e);
+                          let [[n], i] = (0, _.C)(e);
                           return !!i.includes(t.id) || (null != n && (!!(t.username.toLowerCase().includes(n.toLowerCase()) || (null != t.globalName && t.globalName.toLowerCase().includes(n.toLowerCase()))) || !1));
                       },
             []
@@ -364,7 +364,7 @@ function w() {
             },
             [S]
         ),
-        y = r.useMemo(() => R(C, u, _), [C, R, u, _]),
+        y = r.useMemo(() => R(C, u, v), [C, R, u, v]),
         D = null != C,
         O = y.length % 1000 == 0 && y.length > 0 && D,
         k = 0 === y.length,
@@ -390,7 +390,7 @@ function w() {
         F = r.useCallback(
             (e) => {
                 var t, n, i;
-                if ((null === (t = b.current) || void 0 === t || t.scrollToSectionTop(0), (e + 1) * w.pageSize > y.length && O && !h && ((H.current = null !== (i = null === (n = y[y.length - 1]) || void 0 === n ? void 0 : n.id) && void 0 !== i ? i : null), U(H.current)), null != G[e - 1] || !!O))
+                if ((null === (t = j.current) || void 0 === t || t.scrollToSectionTop(0), (e + 1) * w.pageSize > y.length && O && !h && ((H.current = null !== (i = null === (n = y[y.length - 1]) || void 0 === n ? void 0 : n.id) && void 0 !== i ? i : null), U(H.current)), null != G[e - 1] || !!O))
                     B((t) => ({
                         ...t,
                         currentPage: e
@@ -423,7 +423,7 @@ function w() {
                                   guild: l,
                                   bans: C,
                                   sortedBans: z,
-                                  ref: b
+                                  ref: j
                               }),
                           !O &&
                               k &&

@@ -19,19 +19,19 @@ var i = n(200651),
     p = n(305473),
     f = n(113679),
     C = n(440857),
-    _ = n(472596),
-    v = n(598948),
+    v = n(472596),
+    _ = n(598948),
     I = n(428936),
     N = n(41586),
     T = n(918192),
-    j = n(981631),
-    b = n(388032),
+    b = n(981631),
+    j = n(388032),
     S = n(758151);
 function E(e) {
     let { guildId: t } = e,
         n = (0, a.e7)([h.Z], () => h.Z.getGuild(t)),
         { analyticsLocations: l } = (0, d.ZP)(c.Z.GUILD_SETTINGS_MEMBERS_PAGE),
-        E = !1 == !!(null == n ? void 0 : n.hasFeature(j.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
+        E = !1 == !!(null == n ? void 0 : n.hasFeature(b.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
         R = (0, a.e7)([g.Z], () => g.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
         y = r.useCallback(
             (e) => {
@@ -40,7 +40,7 @@ function E(e) {
                         userId: e.userId,
                         guildId: e.guildId,
                         sourceAnalyticsLocations: l,
-                        analyticsLocation: { section: j.jXE.GUILD_SETTINGS_MEMBERS }
+                        analyticsLocation: { section: b.jXE.GUILD_SETTINGS_MEMBERS }
                     });
             },
             [l]
@@ -51,7 +51,7 @@ function E(e) {
             null === (e = Z.current) || void 0 === e || e.resetSearchText();
         }, []);
     if (null == n) return null;
-    let L = (0, _.xb)(!1, !1, R);
+    let L = (0, v.xb)(!1, !1, R);
     return (0, i.jsx)(d.Gt, {
         value: l,
         children: (0, i.jsx)('div', {
@@ -70,7 +70,7 @@ function E(e) {
                                     className: s()(S.header),
                                     children: (0, i.jsx)(o.FormTitle, {
                                         tag: o.FormTitleTags.H1,
-                                        children: b.intl.string(b.t['S40K6+'])
+                                        children: j.intl.string(j.t['S40K6+'])
                                     })
                                 },
                                 'header'
@@ -91,14 +91,14 @@ function E(e) {
                                                               guild: n,
                                                               ref: Z
                                                           }),
-                                                          (0, i.jsx)(v.Z, {
+                                                          (0, i.jsx)(_.Z, {
                                                               guild: n,
                                                               searchState: L,
                                                               compact: !0,
                                                               onSelectRow: y,
                                                               onResetForNewMembers: A
                                                           }),
-                                                          L !== _.po.SUCCESS_STILL_INDEXING && (0, i.jsx)(I.Z, { guildId: n.id })
+                                                          L !== v.po.SUCCESS_STILL_INDEXING && (0, i.jsx)(I.Z, { guildId: n.id })
                                                       ]
                                                   })
                                                 : (0, i.jsx)('div', {
@@ -113,7 +113,7 @@ function E(e) {
                                                               (0, i.jsx)(o.Text, {
                                                                   variant: 'text-md/normal',
                                                                   color: 'text-muted',
-                                                                  children: b.intl.format(b.t.Bf6yxM, {
+                                                                  children: j.intl.format(j.t.Bf6yxM, {
                                                                       onClick: (e) => {
                                                                           if (null != n) e.preventDefault(), u.Z.close(), (0, x._X)(n.id);
                                                                       }

@@ -21,8 +21,8 @@ var l = n(952265),
     v = n(981631),
     g = n(602091),
     E = n(701488),
-    x = n(388032),
-    C = n(176463),
+    C = n(388032),
+    x = n(176463),
     Z = n(802334);
 function _(e) {
     let { game: t } = e,
@@ -43,7 +43,7 @@ function S(e, t) {
                 let t = (null == e ? void 0 : e.altId) != null ? c.Z.getApplicationActivity(e.altId) : (null == e ? void 0 : e.id) != null ? c.Z.getApplicationActivity(e.id) : null;
                 null != t &&
                     (0, s.Z)(t, v.xjy.JOIN) &&
-                    ((E.cancelText = x.intl.string(x.t['6F9ivr'])),
+                    ((E.cancelText = C.intl.string(C.t['6F9ivr'])),
                     (E.onCancelClick = (e, n) => {
                         u('unlock'), r.Z.updateNotificationStatus(n), r.Z.setInputLocked(!1, (0, d.QF)()), (0, o.h7)(t, !1, v.IlC.POPOUT);
                     }));
@@ -51,14 +51,14 @@ function S(e, t) {
             }
             case m.nc.GO_LIVE_VOICE:
             case m.nc.GO_LIVE_NON_VOICE:
-                (E.confirmText = x.intl.string(x.t.U76Ft7)),
+                (E.confirmText = C.intl.string(C.t.U76Ft7)),
                     (E.onConfirmClick = (e, t) => {
                         u('unlock'),
                             r.Z.updateNotificationStatus(t),
                             r.Z.setInputLocked(!1, (0, d.QF)()),
                             (0, l.ZD)(
                                 async () => {
-                                    let { default: e } = await Promise.all([n.e('46746'), n.e('66913')]).then(n.bind(n, 60594));
+                                    let { default: e } = await Promise.all([n.e('79477'), n.e('81741')]).then(n.bind(n, 60594));
                                     return (t) =>
                                         (0, i.jsx)(e, {
                                             ...t,
@@ -92,12 +92,12 @@ function S(e, t) {
                 ? (0, i.jsx)(_, { game: e })
                 : (0, i.jsx)('img', {
                       src: n(328756),
-                      className: C.icon,
+                      className: x.icon,
                       alt: ''
                   }),
-        title: null != e ? e.name : x.intl.string(x.t.pkXAeH),
+        title: null != e ? e.name : C.intl.string(C.t.pkXAeH),
         body: null,
-        hint: () => (0, f.Q)((0, p.P)(), x.t.e6giBQ, x.intl.string(x.t.jZkzVF)),
+        hint: () => (0, f.Q)((0, p.P)(), C.t.e6giBQ, C.intl.string(C.t.jZkzVF)),
         onNotificationShow: (e) => {
             var t;
             a(), null === (t = E.onNotificationShow) || void 0 === t || t.call(E, e);

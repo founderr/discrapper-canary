@@ -171,14 +171,14 @@ function S(e) {
             variant: 'text-sm/normal',
             children:
                 null != n && null != r
-                    ? E.intl.format(E.t.zjYypa, {
+                    ? E.intl.format(E.t.nylPOT, {
                           termsHook: (e) => a(e, n),
                           privacyHook: (e) => a(e, r)
                       })
                     : null != n
-                      ? E.intl.format(E.t.YA1hw8, { termsHook: (e) => a(e, n) })
+                      ? E.intl.format(E.t['0cPyDw'], { termsHook: (e) => a(e, n) })
                       : null != r
-                        ? E.intl.format(E.t['0LMe/P'], { privacyHook: (e) => a(e, r) })
+                        ? E.intl.format(E.t.loYGCw, { privacyHook: (e) => a(e, r) })
                         : null
         })
     });

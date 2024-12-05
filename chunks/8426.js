@@ -15,7 +15,7 @@ n.d(t, {
         return x;
     },
     ad: function () {
-        return v;
+        return _;
     },
     bj: function () {
         return Z;
@@ -24,13 +24,13 @@ n.d(t, {
         return f;
     },
     hS: function () {
-        return _;
+        return v;
     },
     lq: function () {
-        return j;
+        return b;
     },
     mM: function () {
-        return b;
+        return j;
     },
     oo: function () {
         return S;
@@ -83,13 +83,13 @@ function C(e) {
         channelId: e
     });
 }
-function _(e) {
+function v(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_REORDER_NEW_MEMBER_ACTION',
         actions: e
     });
 }
-async function v(e, t, n, i) {
+async function _(e, t, n, i) {
     if (!i) return Promise.resolve();
     try {
         let i = await l.tn.patch({
@@ -139,13 +139,13 @@ function T(e) {
         resourceChannelId: e
     });
 }
-function j(e) {
+function b(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_REORDER_RESOURCE_CHANNEL',
         resourceChannels: e
     });
 }
-async function b(e, t, n) {
+async function j(e, t, n) {
     try {
         let i = await l.tn.put({
                 url: h.ANM.RESOURCE_CHANNEL(e, t),

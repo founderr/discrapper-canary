@@ -1,15 +1,15 @@
-n.d(t, {
+e.d(t, {
     i: function () {
-        return i;
+        return u;
     }
 });
-var r = n(981631),
-    l = n(388032);
-function i(e) {
-    let { username: t, usernameOnClickHandler: n = r.dG4, productName: i } = e;
-    return l.intl.formatToParts(l.t.w4iXs7, {
+var r = e(981631),
+    i = e(388032);
+function u(n) {
+    let { username: t, usernameOnClickHandler: e = r.dG4, productName: u } = n;
+    return i.intl.formatToParts(i.t.w4iXs7, {
         username: t,
-        usernameHook: n,
-        productName: i
+        usernameHook: e,
+        productName: u
     });
 }

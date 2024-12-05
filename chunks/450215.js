@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return b;
     }
 }),
     n(47120);
@@ -20,14 +20,14 @@ var i = n(200651),
     p = n(723047),
     f = n(727843),
     C = n(290348),
-    _ = n(857081),
-    v = n(869269),
+    v = n(857081),
+    _ = n(869269),
     I = n(981631),
     N = n(388032),
     T = n(83701);
-function j(e) {
+function b(e) {
     var t, n;
-    let { guildId: l, initialEditStateId: a, allSubscriptionListings: j, priceTiers: b, onDeleteEditState: S, groupListingId: E, onBeforeDispatchNewListing: R, onAfterDispatchNewListing: y } = e,
+    let { guildId: l, initialEditStateId: a, allSubscriptionListings: b, priceTiers: j, onDeleteEditState: S, groupListingId: E, onBeforeDispatchNewListing: R, onAfterDispatchNewListing: y } = e,
         [Z, A] = r.useState(a),
         L = (0, c.e7)([x.Z], () => x.Z.getSubscriptionListing(Z)),
         D = null == L,
@@ -58,7 +58,7 @@ function j(e) {
                         className: T.headerImageContainer,
                         children:
                             null == W
-                                ? (0, i.jsx)(_.Z, {
+                                ? (0, i.jsx)(v.Z, {
                                       className: T.starIcon,
                                       'aria-hidden': !0
                                   })
@@ -153,9 +153,9 @@ function j(e) {
                     editStateId: Z,
                     guildId: l,
                     groupListingId: E,
-                    children: (0, i.jsx)(v.Z, {
-                        allSubscriptionListings: j,
-                        priceTiers: b,
+                    children: (0, i.jsx)(_.Z, {
+                        allSubscriptionListings: b,
+                        priceTiers: j,
                         loading: et,
                         error: null != X ? X : $,
                         handlePublishTier: () => {
