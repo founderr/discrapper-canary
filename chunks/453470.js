@@ -76,7 +76,7 @@ function I(e) {
 }
 function E(e) {
     let { channelId: t, warningId: a, senderId: o } = e,
-        d = (0, C.E)(),
+        d = (0, C.E4)(),
         f = l.useCallback(() => {
             (0, u.T)(t, [a]);
         }, [t, a]),
@@ -122,7 +122,7 @@ function E(e) {
                             channelId: t,
                             warningId: a
                         }),
-                        learnMore: v.intl.format(v.t.UkH129, { learnMoreLink: C.D })
+                        learnMore: v.intl.format(v.t.UkH129, { learnMoreLink: C.D8 })
                     });
                 };
             });

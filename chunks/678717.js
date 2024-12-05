@@ -271,7 +271,7 @@ function $() {
         ? null
         : (0, r.jsxs)('div', {
               ref: e,
-              className: i()(Y.container),
+              className: i()(Y.container, 'DevTools'),
               style: {
                   minWidth: g.h,
                   width: n
