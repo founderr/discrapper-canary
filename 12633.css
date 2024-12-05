@@ -25339,6 +25339,13 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     border-color: Highlight
 }
 
+.soundmojiLabelContainer_af5dbb {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-4);
+    align-items: center
+}
+
 .container_ccd3df {
     bottom: 100%;
     margin-bottom: 12px;
