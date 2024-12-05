@@ -47381,8 +47381,10 @@ html.disable-forced-colors * {
     --redesign-button-positive-pressed-background: var(--green-460);
     --redesign-button-positive-text: var(--white);
     --redesign-button-premium-primary-blue-for-gradient: var(--premium-tier-0-blue-for-gradients-2);
+    --redesign-button-premium-primary-pink-for-gradient: var(--premium-tier-2-pink-for-gradients);
     --redesign-button-premium-primary-pressed-background: hsl(var(--black-hsl) / 0.1);
-    --redesign-button-premium-primary-purple-for-gradient: var(--premium-tier-0-purple-for-gradients);
+    --redesign-button-premium-primary-purple-for-gradient: var(--premium-tier-2-purple-for-gradients);
+    --redesign-button-premium-primary-purple-for-gradient-2: var(--premium-tier-2-purple-for-gradients-2);
     --redesign-button-primary-alt-background: hsl(var(--brand-500-hsl) / 0);
     --redesign-button-primary-alt-border: var(--brand-360);
     --redesign-button-primary-alt-on-blurple-background: hsl(var(--brand-530-hsl) / 0);
@@ -47998,11 +48000,17 @@ html.disable-forced-colors * {
         --redesign-button-premium-primary-blue-for-gradient: color-mix(in oklab,
                 var(--premium-tier-0-blue-for-gradients-2) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
+        --redesign-button-premium-primary-pink-for-gradient: color-mix(in oklab,
+                var(--premium-tier-2-pink-for-gradients) 100%,
+                var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
         --redesign-button-premium-primary-pressed-background: color-mix(in oklab,
                 hsl(var(--black-hsl) / 0.1) 100%,
                 hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.1) var(--theme-base-color-amount, 0%));
         --redesign-button-premium-primary-purple-for-gradient: color-mix(in oklab,
-                var(--premium-tier-0-purple-for-gradients) 100%,
+                var(--premium-tier-2-purple-for-gradients) 100%,
+                var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
+        --redesign-button-premium-primary-purple-for-gradient-2: color-mix(in oklab,
+                var(--premium-tier-2-purple-for-gradients-2) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
         --redesign-button-primary-alt-background: color-mix(in oklab,
                 hsl(var(--brand-500-hsl) / 0) 100%,
@@ -48463,8 +48471,10 @@ html.disable-forced-colors * {
     --redesign-button-positive-pressed-background: var(--green-460);
     --redesign-button-positive-text: var(--white);
     --redesign-button-premium-primary-blue-for-gradient: var(--premium-tier-0-blue-for-gradients-2);
+    --redesign-button-premium-primary-pink-for-gradient: var(--premium-tier-2-pink-for-gradients);
     --redesign-button-premium-primary-pressed-background: hsl(var(--black-hsl) / 0.1);
-    --redesign-button-premium-primary-purple-for-gradient: var(--premium-tier-0-purple-for-gradients);
+    --redesign-button-premium-primary-purple-for-gradient: var(--premium-tier-2-purple-for-gradients);
+    --redesign-button-premium-primary-purple-for-gradient-2: var(--premium-tier-2-purple-for-gradients-2);
     --redesign-button-primary-alt-background: hsl(var(--brand-500-hsl) / 0);
     --redesign-button-primary-alt-border: var(--brand-500);
     --redesign-button-primary-alt-on-blurple-background: hsl(var(--brand-530-hsl) / 0);
@@ -49076,11 +49086,17 @@ html.disable-forced-colors * {
         --redesign-button-premium-primary-blue-for-gradient: color-mix(in oklab,
                 var(--premium-tier-0-blue-for-gradients-2) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
+        --redesign-button-premium-primary-pink-for-gradient: color-mix(in oklab,
+                var(--premium-tier-2-pink-for-gradients) 100%,
+                var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
         --redesign-button-premium-primary-pressed-background: color-mix(in oklab,
                 hsl(var(--black-hsl) / 0.1) 100%,
                 hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.1) var(--theme-base-color-amount, 0%));
         --redesign-button-premium-primary-purple-for-gradient: color-mix(in oklab,
-                var(--premium-tier-0-purple-for-gradients) 100%,
+                var(--premium-tier-2-purple-for-gradients) 100%,
+                var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
+        --redesign-button-premium-primary-purple-for-gradient-2: color-mix(in oklab,
+                var(--premium-tier-2-purple-for-gradients-2) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
         --redesign-button-primary-alt-background: color-mix(in oklab,
                 hsl(var(--brand-500-hsl) / 0) 100%,
@@ -49539,8 +49555,10 @@ html.disable-forced-colors * {
     --redesign-button-positive-pressed-background: var(--green-460);
     --redesign-button-positive-text: var(--white);
     --redesign-button-premium-primary-blue-for-gradient: var(--premium-tier-0-blue-for-gradients-2);
+    --redesign-button-premium-primary-pink-for-gradient: var(--premium-tier-2-pink-for-gradients);
     --redesign-button-premium-primary-pressed-background: hsl(var(--black-hsl) / 0.1);
-    --redesign-button-premium-primary-purple-for-gradient: var(--premium-tier-0-purple-for-gradients);
+    --redesign-button-premium-primary-purple-for-gradient: var(--premium-tier-2-purple-for-gradients);
+    --redesign-button-premium-primary-purple-for-gradient-2: var(--premium-tier-2-purple-for-gradients-2);
     --redesign-button-primary-alt-background: hsl(var(--brand-500-hsl) / 0);
     --redesign-button-primary-alt-border: var(--brand-400);
     --redesign-button-primary-alt-on-blurple-background: hsl(var(--brand-530-hsl) / 0);
@@ -50154,11 +50172,17 @@ html.disable-forced-colors * {
         --redesign-button-premium-primary-blue-for-gradient: color-mix(in oklab,
                 var(--premium-tier-0-blue-for-gradients-2) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
+        --redesign-button-premium-primary-pink-for-gradient: color-mix(in oklab,
+                var(--premium-tier-2-pink-for-gradients) 100%,
+                var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
         --redesign-button-premium-primary-pressed-background: color-mix(in oklab,
                 hsl(var(--black-hsl) / 0.1) 100%,
                 hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.1) var(--theme-base-color-amount, 0%));
         --redesign-button-premium-primary-purple-for-gradient: color-mix(in oklab,
-                var(--premium-tier-0-purple-for-gradients) 100%,
+                var(--premium-tier-2-purple-for-gradients) 100%,
+                var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
+        --redesign-button-premium-primary-purple-for-gradient-2: color-mix(in oklab,
+                var(--premium-tier-2-purple-for-gradients-2) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
         --redesign-button-primary-alt-background: color-mix(in oklab,
                 hsl(var(--brand-500-hsl) / 0) 100%,
@@ -50619,8 +50643,10 @@ html.disable-forced-colors * {
     --redesign-button-positive-pressed-background: var(--green-460);
     --redesign-button-positive-text: var(--white);
     --redesign-button-premium-primary-blue-for-gradient: var(--premium-tier-0-blue-for-gradients-2);
+    --redesign-button-premium-primary-pink-for-gradient: var(--premium-tier-2-pink-for-gradients);
     --redesign-button-premium-primary-pressed-background: hsl(var(--black-hsl) / 0.1);
-    --redesign-button-premium-primary-purple-for-gradient: var(--premium-tier-0-purple-for-gradients);
+    --redesign-button-premium-primary-purple-for-gradient: var(--premium-tier-2-purple-for-gradients);
+    --redesign-button-premium-primary-purple-for-gradient-2: var(--premium-tier-2-purple-for-gradients-2);
     --redesign-button-primary-alt-background: hsl(var(--brand-500-hsl) / 0);
     --redesign-button-primary-alt-border: var(--brand-360);
     --redesign-button-primary-alt-on-blurple-background: hsl(var(--brand-530-hsl) / 0);
@@ -51236,11 +51262,17 @@ html.disable-forced-colors * {
         --redesign-button-premium-primary-blue-for-gradient: color-mix(in oklab,
                 var(--premium-tier-0-blue-for-gradients-2) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
+        --redesign-button-premium-primary-pink-for-gradient: color-mix(in oklab,
+                var(--premium-tier-2-pink-for-gradients) 100%,
+                var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
         --redesign-button-premium-primary-pressed-background: color-mix(in oklab,
                 hsl(var(--black-hsl) / 0.1) 100%,
                 hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.1) var(--theme-base-color-amount, 0%));
         --redesign-button-premium-primary-purple-for-gradient: color-mix(in oklab,
-                var(--premium-tier-0-purple-for-gradients) 100%,
+                var(--premium-tier-2-purple-for-gradients) 100%,
+                var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
+        --redesign-button-premium-primary-purple-for-gradient-2: color-mix(in oklab,
+                var(--premium-tier-2-purple-for-gradients-2) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
         --redesign-button-primary-alt-background: color-mix(in oklab,
                 hsl(var(--brand-500-hsl) / 0) 100%,

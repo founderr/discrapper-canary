@@ -33,41 +33,44 @@ t.Z = function (e) {
         { analyticsLocations: O } = (0, p.ZP)(m.Z.FRIENDS_LIST),
         { rows: R, section: j } = (0, s.cj)([E.ZP], () => E.ZP.getState()),
         D = (0, s.e7)([I.Z], () => I.Z.isFocused()),
-        M = (0, s.e7)([_.Z], () => _.Z.getRelationshipCount()),
-        w = (0, f.Do)({ location: 'PeopleList' }),
-        [k, U] = r.useState(() => {
+        { relationshipCount: M, hasBlockedOrIgnored: w } = (0, s.cj)([_.Z], () => ({
+            relationshipCount: _.Z.getRelationshipCount(),
+            hasBlockedOrIgnored: _.Z.getBlockedOrIgnoredIDs().length > 0
+        })),
+        k = (0, f.Do)({ location: 'PeopleList' }),
+        [U, G] = r.useState(() => {
             let e = {};
             for (let t of Object.values(L.pJs)) e[t] = '';
             return e;
         }),
-        G = () => {
+        B = () => {
             (0, o.openModalLazy)(async () => {
                 let { default: e } = await n.e('36312').then(n.bind(n, 153932));
                 return (t) => (0, i.jsx)(e, { ...t });
             });
         },
-        B = r.useCallback(
+        H = r.useCallback(
             (e) => {
-                U({
-                    ...k,
+                G({
+                    ...U,
                     [t]: e
                 });
             },
-            [k, t]
+            [U, t]
         ),
-        H = r.useCallback(() => {
-            U({
-                ...k,
+        V = r.useCallback(() => {
+            G({
+                ...U,
                 [t]: ''
             });
-        }, [k, t]),
-        V = t === L.pJs.PENDING && (R.filter(L.pJs.SPAM).length > 0 || R.filter(L.pJs.PENDING_IGNORED).length > 0),
-        F = R.filter(t, k[t]);
+        }, [U, t]),
+        F = t === L.pJs.PENDING && (R.filter(L.pJs.SPAM).length > 0 || R.filter(L.pJs.PENDING_IGNORED).length > 0),
+        z = R.filter(t, U[t]);
     if (
         (r.useEffect(() => {
             t === L.pJs.ALL && (0, g.d$)();
         }, [t]),
-        0 === F.length && '' === k[t])
+        0 === z.length && '' === U[t])
     )
         return (0, i.jsx)('div', {
             className: P.emptyStateContainer,
@@ -75,8 +78,8 @@ t.Z = function (e) {
                 N.Z,
                 {
                     type: t,
-                    onClick: V
-                        ? G
+                    onClick: F
+                        ? B
                         : t !== L.pJs.PENDING
                           ? () => {
                                 c.Z.setSection(L.pJs.ADD_FRIEND);
@@ -86,21 +89,21 @@ t.Z = function (e) {
                 j
             )
         });
-    let z = [F],
-        W = 0 === F.length && '' !== k[t],
-        Y = F.filter((e) => e.type === L.OGo.PENDING_INCOMING).length,
-        K = t === L.pJs.PENDING && Y > 0 && Y >= Z.yf;
+    let W = [z],
+        Y = 0 === z.length && '' !== U[t],
+        K = z.filter((e) => e.type === L.OGo.PENDING_INCOMING).length,
+        q = t === L.pJs.PENDING && K > 0 && K >= Z.yf;
     return (0, i.jsx)(p.Gt, {
         value: O,
         children: (0, i.jsxs)(u.Z, {
             section: L.jXE.FRIENDS_LIST,
             children: [
-                w && (0, i.jsx)(b.R, {}),
+                k && w && (0, i.jsx)(b.R, {}),
                 (0, i.jsx)(o.SearchBar, {
-                    className: a()(P.searchBar, W ? P.searchEmptyState : null),
-                    query: k[t],
-                    onChange: B,
-                    onClear: H,
+                    className: a()(P.searchBar, Y ? P.searchEmptyState : null),
+                    query: U[t],
+                    onChange: H,
+                    onClear: V,
                     size: o.SearchBar.Sizes.MEDIUM
                 }),
                 (0, i.jsxs)('div', {
@@ -121,30 +124,30 @@ t.Z = function (e) {
                                     default:
                                         return y.intl.formatToPlainString(y.t.rHRrhI, { count: t.toString() });
                                 }
-                            })(t, F.length)
+                            })(t, z.length)
                         }),
-                        K &&
+                        q &&
                             (0, i.jsx)(o.Button, {
                                 look: o.ButtonLooks.LINK,
                                 color: o.ButtonColors.LINK,
                                 className: P.clearButton,
                                 size: o.Button.Sizes.TINY,
                                 onClick: (e) => {
-                                    e.stopPropagation(), d.Z.confirmClearPendingRelationships(Y);
+                                    e.stopPropagation(), d.Z.confirmClearPendingRelationships(K);
                                 },
                                 'aria-label': y.intl.string(y.t.T3uOb2),
                                 children: y.intl.string(y.t.T3uOb2)
                             })
                     ]
                 }),
-                W
+                Y
                     ? (0, i.jsx)('div', {
                           className: P.emptyStateContainer,
                           children: (0, i.jsx)(N.Z, { type: N.j.SECTION_NO_RESULTS }, j)
                       })
                     : (0, i.jsx)(T.Z, {
                           relationshipCount: M,
-                          statusSections: z,
+                          statusSections: W,
                           renderRow: function (e) {
                               switch (t) {
                                   case L.pJs.BLOCKED:
@@ -177,18 +180,18 @@ t.Z = function (e) {
                               }
                           },
                           sectionFilter: t,
-                          searchQuery: k[t],
+                          searchQuery: U[t],
                           useReducedMotion: h.Z.useReducedMotion,
-                          footer: V
+                          footer: F
                               ? (0, i.jsx)(o.Button, {
                                     look: o.Button.Looks.LINK,
                                     color: P.viewSpamButtonColor,
                                     className: P.viewSpamButton,
-                                    onClick: () => G(),
+                                    onClick: () => B(),
                                     size: o.ButtonSizes.TINY,
                                     children: (0, i.jsx)(o.Text, {
                                         variant: 'text-xs/medium',
-                                        children: w ? y.intl.string(y.t.R40bU1) : y.intl.string(y.t.rXl8fn)
+                                        children: k ? y.intl.string(y.t.R40bU1) : y.intl.string(y.t.rXl8fn)
                                     })
                                 })
                               : null
