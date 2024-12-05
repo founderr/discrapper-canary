@@ -1,54 +1,56 @@
-e.r(t);
+e.r(a);
 var n = e(200651),
     o = e(192379),
     s = e(481060),
-    r = e(999752);
-t.default = function (a) {
-    let { onClose: t, onComplete: e, transitionState: c, webviewUrl: i } = a,
-        l = o.useCallback(() => {
-            t(), e();
-        }, [e, t]),
-        d = o.useCallback(
-            (a) => {
-                if ('' !== i && 'string' == typeof a.data)
+    r = e(388032),
+    c = e(999752);
+a.default = function (t) {
+    let { onClose: a, onComplete: e, transitionState: i, webviewUrl: l } = t,
+        d = o.useCallback(() => {
+            a(), e();
+        }, [e, a]),
+        u = o.useCallback(
+            (t) => {
+                if ('' !== l && 'string' == typeof t.data)
                     try {
-                        var t = JSON.parse(a.data);
-                        'AGE_CHECK_COMPLETE' === t.status && l();
-                    } catch (a) {}
+                        var a = JSON.parse(t.data);
+                        'AGE_CHECK_COMPLETE' === a.status && d();
+                    } catch (t) {}
             },
-            [i, l]
+            [l, d]
         );
     return (
         o.useEffect(
             () => (
-                window.addEventListener('message', d),
+                window.addEventListener('message', u),
                 () => {
-                    window.removeEventListener('message', d);
+                    window.removeEventListener('message', u);
                 }
             ),
-            [d]
+            [u]
         ),
         (0, n.jsx)(s.ModalRoot, {
-            transitionState: c,
-            className: r.root,
+            transitionState: i,
+            className: c.root,
             children: (0, n.jsxs)(s.ModalContent, {
-                className: r.content,
+                className: c.content,
                 children: [
                     (0, n.jsx)(s.Heading, {
                         variant: 'heading-xl/bold',
-                        children: 'Verify your age'
+                        children: r.intl.string(r.t.tYNaXF)
                     }),
                     (0, n.jsx)('iframe', {
                         id: 'frame',
-                        src: i,
-                        className: r.iframe,
+                        src: l,
+                        className: c.iframe,
                         allow: 'camera; microphone'
                     }),
                     (0, n.jsx)(s.Button, {
                         color: s.Button.Colors.TRANSPARENT,
-                        onClick: t,
-                        className: r.backButton,
-                        children: 'Back'
+                        look: s.Button.Looks.BLANK,
+                        onClick: a,
+                        className: c.cancelButton,
+                        children: r.intl.string(r.t['4gTnU1'])
                     })
                 ]
             })

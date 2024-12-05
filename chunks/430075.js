@@ -1,24 +1,26 @@
-n.r(t),
-    n.d(t, {
+t.r(n),
+    t.d(n, {
         default: function () {
-            return A;
+            return L;
         }
     });
-var i = n(200651);
-n(192379);
-var E = n(442837),
-    r = n(481060),
-    _ = n(703656),
-    I = n(314897),
-    o = n(518560),
-    a = n(800530),
-    S = n(981631),
-    N = n(388032),
-    c = n(33869);
+var i = t(200651);
+t(192379);
+var E = t(442837),
+    r = t(481060),
+    I = t(703656),
+    s = t(314897),
+    _ = t(103879),
+    a = t(236289),
+    o = t(518560),
+    c = t(800530),
+    S = t(981631),
+    N = t(388032),
+    l = t(33869);
 function u() {
     return (0, i.jsxs)(r.Notice, {
         color: r.NoticeColors.DANGER,
-        className: c.nagbar,
+        className: l.nagbar,
         children: [
             (0, i.jsx)(r.Text, {
                 tag: 'span',
@@ -27,7 +29,7 @@ function u() {
                 children: N.intl.string(N.t['MG+Bzc'])
             }),
             (0, i.jsx)(r.NoticeButtonAnchor, {
-                href: a.sQ.WARNING_SYSTEM_HELPCENTER_LINK,
+                href: c.sQ.WARNING_SYSTEM_HELPCENTER_LINK,
                 children: (0, i.jsx)(r.Text, {
                     variant: 'text-md/normal',
                     color: 'always-white',
@@ -37,18 +39,71 @@ function u() {
         ]
     });
 }
-function s() {
-    return (0, i.jsx)('div', {
-        className: c.pageContainer,
-        children: (0, i.jsx)(o.Z, {})
+function A(e) {
+    let {} = e,
+        n = (0, E.e7)([a.Z], () => a.Z.getAgeCheckStatus()),
+        t = () => {
+            (0, _._w)();
+        };
+    return n === c.oE.NONE
+        ? null
+        : n === c.oE.SUCCESS
+          ? (0, i.jsx)(r.HelpMessage, {
+                messageType: r.HelpMessageTypes.POSITIVE,
+                children: N.intl.string(N.t.maZDLy)
+            })
+          : n === c.oE.ERROR
+            ? (0, i.jsx)(r.HelpMessage, {
+                  messageType: r.HelpMessageTypes.ERROR,
+                  children: N.intl.string(N.t['4sILBQ'])
+              })
+            : n === c.oE.FAILURE
+              ? (0, i.jsx)(r.HelpMessage, {
+                    messageType: r.HelpMessageTypes.ERROR,
+                    children: (0, i.jsxs)('div', {
+                        className: l.helpMessageContent,
+                        children: [
+                            N.intl.string(N.t['40R63t']),
+                            (0, i.jsx)(r.Clickable, {
+                                className: l.clickableIcon,
+                                onClick: t,
+                                children: (0, i.jsx)(r.RefreshIcon, {})
+                            })
+                        ]
+                    })
+                })
+              : n === c.oE.LOADING
+                ? (0, i.jsx)(r.HelpMessage, {
+                      messageType: r.HelpMessageTypes.INFO,
+                      children: N.intl.string(N.t['nhhy/f'])
+                  })
+                : (0, i.jsx)(r.HelpMessage, {
+                      messageType: r.HelpMessageTypes.INFO,
+                      children: (0, i.jsxs)('div', {
+                          className: l.helpMessageContent,
+                          children: [
+                              N.intl.string(N.t['nhhy/f']),
+                              (0, i.jsx)(r.Clickable, {
+                                  className: l.clickableIcon,
+                                  onClick: t,
+                                  children: (0, i.jsx)(r.RefreshIcon, {})
+                              })
+                          ]
+                      })
+                  });
+}
+function T() {
+    return (0, i.jsxs)('div', {
+        className: l.pageContainer,
+        children: [(0, i.jsx)(A, {}), (0, i.jsx)(o.Z, {})]
     });
 }
-function A() {
+function L() {
     return (
-        null == (0, E.e7)([I.default], () => I.default.getSuspendedUserToken()) && (0, _.uL)(S.Z5c.LOGIN),
+        null == (0, E.e7)([s.default], () => s.default.getSuspendedUserToken()) && (0, I.uL)(S.Z5c.LOGIN),
         (0, i.jsxs)('div', {
-            className: c.container,
-            children: [(0, i.jsx)(u, {}), (0, i.jsx)(s, {})]
+            className: l.container,
+            children: [(0, i.jsx)(u, {}), (0, i.jsx)(T, {})]
         })
     );
 }

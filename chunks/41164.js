@@ -43,7 +43,8 @@ i.default = (e) => {
                     : (0, n.jsx)(r.Z, {
                           classificationId: p,
                           source: x,
-                          onError: v
+                          onError: v,
+                          onClose: v
                       })
             }),
             (0, n.jsx)(a.ModalFooter, {
