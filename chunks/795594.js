@@ -88,7 +88,7 @@ let Y = (e) => {
     X = (e) => {
         let { scopes: n, application: t, selectedChannelId: r, selectedGuildId: a, onDelete: o, disclosures: c, locale: u, id: m } = e,
             h = l.useMemo(() => S.Z.createFromServer(t), [t]),
-            f = A.Z.useExperiment({ location: 'Authorized Applications' }, { autoTrackExposure: !1 }).enabled,
+            f = A.Z.useExperiment({ location: 'Authorized Applications' }, { autoTrackExposure: !0 }).enabled,
             I = () => {
                 let e = G.intl.formatToPlainString(G.t.QWGvxM, { applicationName: t.name });
                 return (

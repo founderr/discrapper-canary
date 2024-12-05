@@ -17,7 +17,7 @@ function h(e, t) {
     let n = (0, l.e7)([a.Z], () => ((null == e ? void 0 : e.type) === d.fO.ACTIVITY ? a.Z.getApplication(e.id) : void 0)),
         h = (0, l.e7)([c.Z], () => c.Z.getChannel(t)),
         p = null == h ? void 0 : h.getGuildId();
-    return !1 === s.Z.useExperiment({ location: 'channel_call_overflow_menu' }, { autoTrackExposure: !1 }).enabled || null == e || e.type !== d.fO.ACTIVITY || null == n
+    return !1 === s.Z.useExperiment({ location: 'channel_call_overflow_menu' }, { autoTrackExposure: !0 }).enabled || null == e || e.type !== d.fO.ACTIVITY || null == n
         ? null
         : (0, i.jsx)(r.MenuGroup, {
               children: (0, i.jsx)(r.MenuItem, {

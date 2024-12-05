@@ -34,7 +34,7 @@ function b(e) {
             section_name: b,
             source: C.Z.lastShownEntrypoint()
         },
-        S = u.Z.useExperiment({ location: s.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU }, { autoTrackExposure: !1 }).enabled,
+        S = u.Z.useExperiment({ location: s.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU }, { autoTrackExposure: !0 }).enabled,
         y = (0, d.Z)({
             id: n.id,
             label: g.intl.string(g.t['+NP/b2'])

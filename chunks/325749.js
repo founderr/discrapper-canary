@@ -89,7 +89,7 @@ function k(e) {
                     .filter((e) => null != e && void 0 !== e),
             [O]
         ),
-        M = p.Z.useExperiment({ location: 'activity_popout_overflow_menu' }, { autoTrackExposure: !1 }).enabled,
+        M = p.Z.useExperiment({ location: 'activity_popout_overflow_menu' }, { autoTrackExposure: !0 }).enabled,
         U = r.useCallback(() => {
             let e = (0, j.QF)();
             c.Z.setInputLocked(!v.Z.isInputLocked(e), e);

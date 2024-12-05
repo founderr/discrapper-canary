@@ -11,7 +11,7 @@ var i = t(200651),
     d = t(592125),
     c = t(388032);
 function u(e, n) {
-    let t = l.Z.useExperiment({ location: 'activity_popout_overflow_menu' }, { autoTrackExposure: !1 }).enabled,
+    let t = l.Z.useExperiment({ location: 'activity_popout_overflow_menu' }, { autoTrackExposure: !0 }).enabled,
         u = (0, r.e7)([d.Z], () => d.Z.getChannel(n)),
         s = null == u ? void 0 : u.getGuildId();
     return !1 === t
