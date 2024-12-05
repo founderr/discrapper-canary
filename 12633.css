@@ -44014,6 +44014,10 @@ html.disable-forced-colors * {
     position: static
 }
 
+.visual-refresh .notAppAsidePanel_bd26cc:has(~.DevTools) .app_bd26cc {
+    position: relative
+}
+
 .mobileApp_bd26cc {
     z-index: auto;
     overflow: auto;

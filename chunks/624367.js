@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return y;
+        return I;
     }
 }),
     n(47120),
@@ -8,169 +8,103 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(568611),
-    l = n(442837),
-    a = n(477690),
-    o = n(481060),
-    s = n(668781),
-    c = n(2052),
-    d = n(100527),
-    u = n(906732),
-    m = n(895924),
-    h = n(835473),
-    f = n(523746),
-    p = n(592125),
-    _ = n(594174),
-    g = n(630388),
-    E = n(823379),
-    C = n(624138),
-    I = n(317381),
-    x = n(531826),
-    N = n(638880),
-    v = n(122613),
-    T = n(147865),
-    S = n(778569),
-    A = n(884338),
-    b = n(403404),
-    j = n(701488),
-    Z = n(981631),
-    R = n(388032),
-    P = n(258858);
-let L = (0, C.Mg)(a.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
-function y(e) {
-    var t, n, a, C;
-    let { applicationId: y, message: O } = e,
-        { analyticsLocations: M } = (0, u.ZP)(d.Z.ACTIVITY_BOOKMARK),
-        k = (0, c.O)(),
-        D = O.channel_id,
-        B = (0, l.e7)([p.Z], () => p.Z.getChannel(D), [D]),
-        U = null == B ? void 0 : B.guild_id,
-        w = null != B && (B.isGuildVoice() || B.isPrivate()),
-        F = (0, l.e7)([I.ZP], () => I.ZP.getSelfEmbeddedActivityForChannel(D)),
-        G = (null == F ? void 0 : F.applicationId) === y,
-        [V] = (0, h.Z)([y, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : '']),
-        H = (0, T.ZP)(null !== (a = null == V ? void 0 : V.maxParticipants) && void 0 !== a ? a : 0),
-        [z] = (0, l.Wu)([I.ZP], () => (w ? I.ZP.getEmbeddedActivitiesForChannel(D).filter((e) => e.applicationId === y) : []), [y, D, w]),
-        W = Array.from(null !== (C = null == z ? void 0 : z.userIds) && void 0 !== C ? C : []),
-        K = (0, l.Wu)([_.default], () => W.map((e) => _.default.getUser(e)).filter(E.lm), [W]),
-        Y = (0, S.Z)({
-            applicationId: y,
-            size: L,
+    l = n(477690),
+    a = n(481060),
+    o = n(493683),
+    s = n(100527),
+    c = n(906732),
+    d = n(835473),
+    u = n(630388),
+    m = n(624138),
+    h = n(122613),
+    f = n(147865),
+    p = n(778569),
+    _ = n(981631),
+    g = n(388032),
+    E = n(258858);
+let C = (0, m.Mg)(l.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+function I(e) {
+    var t, n, l;
+    let { applicationId: m } = e,
+        { analyticsLocations: I } = (0, c.ZP)(s.Z.ACTIVITY_BOOKMARK),
+        [x] = (0, d.Z)([m]),
+        N = null == x ? void 0 : null === (t = x.bot) || void 0 === t ? void 0 : t.id,
+        v = (0, f.ZP)(null !== (l = null == x ? void 0 : x.maxParticipants) && void 0 !== l ? l : 0),
+        T = (0, p.Z)({
+            applicationId: m,
+            size: C,
             names: ['embedded_cover']
         }),
-        X =
-            null !=
-            (0, x.ZP)({
-                application: null != V ? V : void 0,
-                channelId: D
-            }),
-        Q = K.length > 0 ? R.intl.string(R.t.VJlc0d) : R.intl.string(R.t.I0v0Qk),
-        q = async () => {
-            if (w) {
-                if (null != z && K.length > 0)
-                    await (0, N.Z)({
-                        applicationId: z.applicationId,
-                        activityChannelId: D,
-                        locationObject: k.location,
-                        analyticsLocations: M
+        S = async () => {
+            if (null != N)
+                try {
+                    let e = await o.Z.openPrivateChannel(N);
+                    await (0, h.Z)({
+                        targetApplicationId: null == x ? void 0 : x.id,
+                        channelId: e,
+                        analyticsLocations: I
                     });
-                else {
-                    let e = B.isPrivate() && !f.Z.isCallActive(D),
-                        t = async () =>
-                            await (0, v.Z)({
-                                targetApplicationId: y,
-                                channelId: D,
-                                analyticsLocations: M,
-                                commandOrigin: m.bB.ACTIVITY_BOOKMARK_EMBED
-                            });
-                    e
-                        ? s.Z.show({
-                              title: R.intl.string(R.t['8ZRTsr']),
-                              cancelText: R.intl.string(R.t['ETE/oK']),
-                              confirmText: R.intl.string(R.t['cY+Ooa']),
-                              onConfirm: () => t(),
-                              body: R.intl.string(R.t.jheQxs)
-                          })
-                        : t();
-                }
-            } else
-                (0, b.Z)({
-                    guildId: U,
-                    locationObject: k.location,
-                    openInPopout: X,
-                    initialSelectedApplicationId: y,
-                    initialSlide: j.ag.SELECT_CHANNEL,
-                    analyticsLocations: M
-                });
+                } catch (e) {}
         };
-    return null != V && (0, g.yE)(V.flags, Z.udG.EMBEDDED)
-        ? (0, i.jsx)(u.Gt, {
-              value: M,
+    return null != x && (0, u.yE)(x.flags, _.udG.EMBEDDED)
+        ? (0, i.jsx)(c.Gt, {
+              value: I,
               children: (0, i.jsxs)('div', {
-                  className: P.container,
+                  className: E.container,
                   children: [
                       (0, i.jsx)('div', {
-                          className: P.imgContainer,
+                          className: E.imgContainer,
                           children: (0, i.jsx)('img', {
-                              className: P.img,
-                              alt: V.name,
-                              src: Y.url
+                              className: E.img,
+                              alt: x.name,
+                              src: T.url
                           })
                       }),
                       (0, i.jsxs)('div', {
-                          className: P.content,
+                          className: E.content,
                           children: [
-                              (0, i.jsx)(o.Heading, {
-                                  className: P.heading,
+                              (0, i.jsx)(a.Heading, {
+                                  className: E.heading,
                                   variant: 'heading-xl/semibold',
-                                  children: V.name
+                                  children: x.name
                               }),
-                              (0, i.jsx)(o.Heading, {
-                                  className: P.description,
+                              (0, i.jsx)(a.Heading, {
+                                  className: E.description,
                                   variant: 'heading-sm/medium',
-                                  children: null === (t = V.description) || void 0 === t ? void 0 : t.trim()
+                                  children: null === (n = x.description) || void 0 === n ? void 0 : n.trim()
                               }),
-                              (0, i.jsx)(o.Heading, {
-                                  className: P.learnMore,
+                              (0, i.jsx)(a.Heading, {
+                                  className: E.learnMore,
                                   variant: 'heading-sm/medium',
                                   children: (0, i.jsx)(r.rU, {
-                                      to: Z.Z5c.ACTIVITY_DETAILS(y),
-                                      children: R.intl.string(R.t.hvVgAQ)
+                                      to: _.Z5c.ACTIVITY_DETAILS(m),
+                                      children: g.intl.string(g.t.hvVgAQ)
                                   })
                               }),
                               (0, i.jsxs)('div', {
-                                  className: P.cta,
+                                  className: E.cta,
                                   children: [
-                                      K.length > 0
-                                          ? (0, i.jsx)('div', {
-                                                className: P.avatars,
-                                                children: (0, i.jsx)(A.Z, {
-                                                    guildId: U,
-                                                    users: K,
-                                                    max: 4
-                                                })
-                                            })
-                                          : (0, i.jsxs)('div', {
-                                                className: P.maxParticipants,
-                                                children: [
-                                                    (0, i.jsx)(o.GroupIcon, {
-                                                        size: 'md',
-                                                        color: 'currentColor',
-                                                        className: P.peopleIcon
-                                                    }),
-                                                    (0, i.jsx)(o.Text, {
-                                                        variant: 'text-xs/semibold',
-                                                        children: H
-                                                    })
-                                                ]
-                                            }),
+                                      (0, i.jsxs)('div', {
+                                          className: E.maxParticipants,
+                                          children: [
+                                              (0, i.jsx)(a.GroupIcon, {
+                                                  size: 'md',
+                                                  color: 'currentColor',
+                                                  className: E.peopleIcon
+                                              }),
+                                              (0, i.jsx)(a.Text, {
+                                                  variant: 'text-xs/semibold',
+                                                  children: v
+                                              })
+                                          ]
+                                      }),
                                       (0, i.jsx)('div', {
-                                          className: P.buttonWrapper,
-                                          children: (0, i.jsx)(o.Button, {
-                                              onClick: q,
-                                              className: P.button,
-                                              color: o.ButtonColors.GREEN,
-                                              disabled: G,
-                                              children: Q
+                                          className: E.buttonWrapper,
+                                          children: (0, i.jsx)(a.Button, {
+                                              onClick: S,
+                                              className: E.button,
+                                              color: a.ButtonColors.GREEN,
+                                              children: g.intl.string(g.t.RscU7O)
                                           })
                                       })
                                   ]

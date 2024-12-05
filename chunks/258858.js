@@ -7,7 +7,6 @@ e.exports = {
     description: 'description_ef615b',
     learnMore: 'learnMore_ef615b',
     cta: 'cta_ef615b',
-    avatars: 'avatars_ef615b',
     maxParticipants: 'maxParticipants_ef615b',
     peopleIcon: 'peopleIcon_ef615b',
     buttonWrapper: 'buttonWrapper_ef615b',
