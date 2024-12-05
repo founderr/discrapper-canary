@@ -11,7 +11,9 @@ var r = n(570140),
     a = n(214629),
     s = n(981631);
 function o() {
-    return a.ZP.getCurrentConfig({ location: 'shouldOpenActivityInPopoutWindow' }).enabled;
+    var e;
+    let t = a.ZP.getCurrentConfig({ location: 'shouldOpenActivityInPopoutWindow' }).enabled;
+    return (null === (e = platform) || void 0 === e ? void 0 : e.name) !== 'Firefox' && t;
 }
 async function l(e) {
     let t;
