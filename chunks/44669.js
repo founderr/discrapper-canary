@@ -6,6 +6,7 @@ n.r(
         caretTopLeft: 'caretTopLeft_dafa63',
         caretBottomCenter: 'caretBottomCenter_dafa63',
         caretBottomLeft: 'caretBottomLeft_dafa63',
+        caretBottomRight: 'caretBottomRight_dafa63',
         caretLeftCenter: 'caretLeftCenter_dafa63',
         caretLeftTop: 'caretLeftTop_dafa63',
         caretRightCenter: 'caretRightCenter_dafa63',
