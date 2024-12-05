@@ -31,5 +31,8 @@ e.exports = {
     pdSparklesBottom: 'pdSparklesBottom_a8b566',
     bottomOfPageVisibilitySensor: 'bottomOfPageVisibilitySensor_a8b566',
     scroller: 'scroller_a8b566',
-    containerBackground: 'containerBackground_a8b566'
+    containerBackground: 'containerBackground_a8b566',
+    heroHeadingV2Container: 'heroHeadingV2Container_a8b566',
+    heroHeadingV2Art: 'heroHeadingV2Art_a8b566',
+    heroHeadingV2ArtContainer: 'heroHeadingV2ArtContainer_a8b566'
 };
