@@ -21,64 +21,65 @@ var i = n(200651),
     N = n(388032),
     S = n(890030);
 t.Z = function (e) {
-    let { applicationId: t, onSelectApplication: n, onScroll: T, initialTab: b } = e,
-        A = r.useRef(null),
-        x = (0, l.e7)([s.Z], () => s.Z.getApplication(t)),
-        Z = (0, l.e7)([s.Z], () => s.Z.getApplicationFetchState(t));
+    let { applicationId: t, onSelectApplication: n, onScroll: T, initialTab: b, onButtonsVisibilityChange: A } = e,
+        x = r.useRef(null),
+        Z = (0, l.e7)([s.Z], () => s.Z.getApplication(t)),
+        L = (0, l.e7)([s.Z], () => s.Z.getApplicationFetchState(t));
     r.useEffect(() => {
-        null != t && null == x && a.i6(t);
-    }, [t, x]);
-    let L = null == x ? void 0 : x.storefront_available,
-        [y, P] = r.useState(null != b ? b : C.GlobalDiscoveryAppsSections.ABOUT),
-        O = r.useCallback(
+        null != t && null == Z && a.i6(t);
+    }, [t, Z]),
+        r.useEffect(() => () => A(!1), [A]);
+    let y = null == Z ? void 0 : Z.storefront_available,
+        [P, O] = r.useState(null != b ? b : C.GlobalDiscoveryAppsSections.ABOUT),
+        R = r.useCallback(
             (e) => {
                 var t;
-                null === (t = A.current) || void 0 === t || t.scrollTo({ to: 0 }), P(C.GlobalDiscoveryAppsSections.ABOUT), n(e);
+                null === (t = x.current) || void 0 === t || t.scrollTo({ to: 0 }), O(C.GlobalDiscoveryAppsSections.ABOUT), n(e);
             },
             [n]
         );
     r.useEffect(() => {
-        (null == x ? void 0 : x.storefront_available) && null != t && (0, c.Z)(t);
-    }, [null == x ? void 0 : x.storefront_available, t]);
-    let R = r.useMemo(
+        (null == Z ? void 0 : Z.storefront_available) && null != t && (0, c.Z)(t);
+    }, [null == Z ? void 0 : Z.storefront_available, t]);
+    let j = r.useMemo(
             () => [
                 {
                     id: C.GlobalDiscoveryAppsSections.ABOUT,
-                    label: N.intl.string(N.t.JkjJBQ)
+                    label: N.intl.string(N.t.DkyHMD)
                 },
                 {
                     id: C.GlobalDiscoveryAppsSections.STORE,
-                    label: N.intl.string(N.t.NfuihY)
+                    label: N.intl.string(N.t.jgEXGB)
                 }
             ],
             []
         ),
-        j = r.useMemo(() => {
-            if (null == x) return null;
-            switch (y) {
+        D = r.useMemo(() => {
+            if (null == Z) return null;
+            switch (P) {
                 case C.GlobalDiscoveryAppsSections.ABOUT:
-                    return (0, i.jsx)(g.Z, { application: x });
+                    return (0, i.jsx)(g.Z, { application: Z });
                 case C.GlobalDiscoveryAppsSections.STORE:
-                    return (0, i.jsx)(I.Z, { application: x });
+                    return (0, i.jsx)(I.Z, { application: Z });
             }
-        }, [y, x]),
-        D = r.useCallback(
+        }, [P, Z]),
+        M = r.useCallback(
             (e) => {
-                P(e), e === C.GlobalDiscoveryAppsSections.ABOUT ? (0, p.Gp)(v.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t)) : (0, p.Gp)(v.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, e));
+                O(e), e === C.GlobalDiscoveryAppsSections.ABOUT ? (0, p.Gp)(v.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t)) : (0, p.Gp)(v.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, e));
             },
             [t]
         ),
-        M = r.useCallback((e) => {
+        w = r.useCallback((e) => {
             (0, p.pR)({ categoryId: e });
         }, []),
-        w = y === C.GlobalDiscoveryAppsSections.ABOUT;
+        k = P === C.GlobalDiscoveryAppsSections.ABOUT;
     return (0, i.jsx)(h.Z, {
         onScroll: T,
-        ref: A,
+        ref: x,
         children: (0, i.jsx)(d.Z, {
             children:
-                null == x
-                    ? null == Z || Z === s.M.FETCHING
+                null == Z
+                    ? null == L || L === s.M.FETCHING
                         ? (0, i.jsx)('div', {
                               className: S.centerContainer,
                               children: (0, i.jsx)(o.Z, { loading: !0 })
@@ -90,34 +91,37 @@ t.Z = function (e) {
                     : (0, i.jsxs)('div', {
                           className: S.detailContainer,
                           children: [
-                              (0, i.jsx)(f.Z, { application: x }),
+                              (0, i.jsx)(f.Z, {
+                                  application: Z,
+                                  onButtonsVisibilityChange: A
+                              }),
                               (0, i.jsxs)('div', {
                                   className: S.contentContainer,
                                   children: [
                                       (0, i.jsxs)('div', {
                                           className: S.contentTabsContainer,
                                           children: [
-                                              L &&
+                                              y &&
                                                   (0, i.jsx)('div', {
                                                       className: S.contentTabs,
                                                       children: (0, i.jsx)(u.Z, {
-                                                          tabs: R,
-                                                          onTabSelect: D,
-                                                          selectedTab: y
+                                                          tabs: j,
+                                                          onTabSelect: M,
+                                                          selectedTab: P
                                                       })
                                                   }),
-                                              j,
+                                              D,
                                               (0, i.jsx)(E.Z, {
-                                                  application: x,
-                                                  onSelectApplication: O
+                                                  application: Z,
+                                                  onSelectApplication: R
                                               })
                                           ]
                                       }),
-                                      w &&
+                                      k &&
                                           (0, i.jsx)(_.Z, {
                                               className: S.sidebar,
-                                              application: x,
-                                              onSelectCategory: M
+                                              application: Z,
+                                              onSelectCategory: w
                                           })
                                   ]
                               })

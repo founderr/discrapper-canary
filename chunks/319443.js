@@ -1,162 +1,189 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(442837),
-    a = n(481060),
-    s = n(674588),
-    o = n(264043),
-    c = n(894653),
-    d = n(34674),
-    u = n(979233),
-    h = n(88693),
-    m = n(611928),
-    p = n(922122),
-    g = n(680180),
-    f = n(703656),
-    _ = n(31569),
-    E = n(975907),
-    I = n(119014),
-    C = n(258971),
-    v = n(133743),
-    N = n(726941),
-    S = n(666697),
-    T = n(370648),
-    b = n(569527),
-    A = n(979007),
-    x = n(388032),
-    Z = n(544973);
-function L(e) {
-    let { applicationId: t, onClickBack: n } = e,
-        r = (0, l.e7)([o.Z], () => o.Z.getApplication(t));
+    l = n(120356),
+    a = n.n(l),
+    s = n(442837),
+    o = n(481060),
+    c = n(674588),
+    d = n(264043),
+    u = n(894653),
+    h = n(34674),
+    m = n(979233),
+    p = n(88693),
+    g = n(611928),
+    f = n(922122),
+    _ = n(680180),
+    E = n(703656),
+    I = n(31569),
+    C = n(975907),
+    v = n(119014),
+    N = n(258971),
+    S = n(133743),
+    T = n(726941),
+    b = n(666697),
+    A = n(548514),
+    x = n(370648),
+    Z = n(569527),
+    L = n(979007),
+    y = n(388032),
+    P = n(544973);
+function O(e) {
+    let { applicationId: t, showDetailHeaderButtons: n, onClickBack: l } = e,
+        c = (0, s.e7)([d.Z], () => d.Z.getApplication(t)),
+        [u, h] = r.useState(!n),
+        m = r.useCallback(() => {
+            h(!n);
+        }, [n]);
     return (0, i.jsxs)('div', {
-        className: Z.detailHeaderContainer,
+        className: P.detailHeaderContainer,
         children: [
             (0, i.jsx)('div', {
-                className: Z.detailHeaderSection,
-                children: (0, i.jsx)(m.Cm, {
-                    icon: a.ArrowLargeLeftIcon,
-                    onClick: n
+                className: P.detailHeaderSection,
+                children: (0, i.jsx)(g.Cm, {
+                    icon: o.ArrowLargeLeftIcon,
+                    onClick: l
                 })
             }),
-            (0, i.jsx)(a.Heading, {
+            (0, i.jsx)(o.Heading, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                className: Z.detailHeader,
+                className: P.detailHeader,
                 lineClamp: 1,
-                children: null == r ? void 0 : r.name
+                children: null == c ? void 0 : c.name
             }),
-            (0, i.jsx)('div', { className: Z.detailHeaderSection })
+            (0, i.jsx)('div', {
+                className: a()(P.detailHeaderSection, P.detailHeaderButtonsContainer, {
+                    [P.visible]: n,
+                    [P.hide]: !n && !u,
+                    [P.hidden]: !n && u
+                }),
+                onTransitionEnd: m,
+                children:
+                    null != c
+                        ? (0, i.jsx)(A.Z, {
+                              application: c,
+                              size: 'sm'
+                          })
+                        : null
+            })
         ]
     });
 }
 t.Z = function () {
     var e;
-    let { onScroll: t, scrollPosition: n, resetScrollPosition: o } = (0, u.M)(),
-        y = (0, C.Xh)(),
-        P = (null == y ? void 0 : y.type) === C.m_.CATEGORY ? y.categoryId : void 0,
-        { applicationId: O, section: R } = (null == y ? void 0 : y.type) === C.m_.APPLICATION ? y : {},
-        { query: j, categoryId: D } = (null == y ? void 0 : y.type) === C.m_.SEARCH ? y : {},
-        M = (0, l.e7)([c.Z], () => c.Z.getCategories()),
-        w = r.useMemo(() => [(0, d.KQ)(), ...M], [M]),
+    let { onScroll: t, scrollPosition: n, resetScrollPosition: l } = (0, m.M)(),
+        a = (0, N.Xh)(),
+        d = (null == a ? void 0 : a.type) === N.m_.CATEGORY ? a.categoryId : void 0,
+        { applicationId: A, section: R } = (null == a ? void 0 : a.type) === N.m_.APPLICATION ? a : {},
+        { query: j, categoryId: D } = (null == a ? void 0 : a.type) === N.m_.SEARCH ? a : {},
+        M = (0, s.e7)([u.Z], () => u.Z.getCategories()),
+        w = r.useMemo(() => [(0, h.KQ)(), ...M], [M]),
         k = r.useMemo(() => w.find((e) => e.id === Number(D)), [w, D]),
-        { tabs: U, selectedTab: G, onSelectTab: B } = (0, I.i)(null == P ? void 0 : P.toString());
+        { tabs: U, selectedTab: G, onSelectTab: B } = (0, v.i)(null == d ? void 0 : d.toString()),
+        [H, V] = r.useState(!1),
+        F = r.useCallback((e) => {
+            V(!e);
+        }, []);
     r.useEffect(() => {
-        s.CP();
+        c.CP();
     }, []),
         r.useEffect(() => {
-            s.g5();
+            c.g5();
         }, []),
-        r.useEffect(() => C.aQ.setState({ lastItem: y }), [y]);
-    let H = null != O,
-        V = (null == y ? void 0 : y.type) === C.m_.SEARCH,
-        { searchQuery: F, onSearchTextChange: z, onClearSearch: W, onSearchSubmit: Y } = (0, E.M)({ initialQuery: null != j ? j : '' }),
-        K = _.Z.useField('searchBarState'),
+        r.useEffect(() => N.aQ.setState({ lastItem: a }), [a]);
+    let z = null != A,
+        W = (null == a ? void 0 : a.type) === N.m_.SEARCH,
+        { searchQuery: Y, onSearchTextChange: K, onClearSearch: q, onSearchSubmit: X } = (0, C.M)({ initialQuery: null != j ? j : '' }),
+        Q = I.Z.useField('searchBarState'),
         {
-            onTabsAvailableWidthChange: q,
-            onCollapsedSearchBarClick: X,
-            onSearchBarBlur: Q
-        } = (0, h.U)({
+            onTabsAvailableWidthChange: J,
+            onCollapsedSearchBarClick: $,
+            onSearchBarBlur: ee
+        } = (0, p.U)({
             isSearchBarVisible: !0,
-            isSearchBarEmpty: '' === F.trim(),
-            searchBarState: K,
-            setSearchBarState: (e) => _.Z.setState({ searchBarState: e })
+            isSearchBarEmpty: '' === Y.trim(),
+            searchBarState: Q,
+            setSearchBarState: (e) => I.Z.setState({ searchBarState: e })
         }),
-        J = r.useCallback(
+        et = r.useCallback(
             (e) => {
-                B(e), V && W(), o();
+                B(e), W && q(), l();
             },
-            [V, W, B, o]
+            [W, q, B, l]
         ),
-        $ = r.useCallback((e) => (0, v.ph)({ applicationId: e }), []),
-        ee = H || V,
-        et = r.useCallback(() => {
-            null != (0, C.Uc)() ? (0, f.op)() : (0, v.Yp)();
+        en = r.useCallback((e) => (0, S.ph)({ applicationId: e }), []),
+        ei = z || W,
+        er = r.useCallback(() => {
+            null != (0, N.Uc)() ? (0, E.op)() : (0, S.Yp)();
         }, []);
     return (0, i.jsxs)('div', {
-        className: Z.container,
+        className: P.container,
         children: [
-            (0, i.jsxs)(m.ZP, {
-                variant: ee ? m._6.RELATIVE : m._6.OVERLAY,
+            (0, i.jsxs)(g.ZP, {
+                variant: ei ? g._6.RELATIVE : g._6.OVERLAY,
                 children: [
-                    !ee && (0, i.jsx)(m.z6, { scrollPosition: n }),
-                    H
-                        ? (0, i.jsx)(L, {
-                              applicationId: O,
-                              onClickBack: et
+                    !ei && (0, i.jsx)(g.z6, { scrollPosition: n }),
+                    z
+                        ? (0, i.jsx)(O, {
+                              applicationId: A,
+                              showDetailHeaderButtons: H,
+                              onClickBack: er
                           })
                         : (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  V
-                                      ? (0, i.jsx)(m.Cm, {
-                                            icon: a.ArrowLargeLeftIcon,
-                                            onClick: et
+                                  W
+                                      ? (0, i.jsx)(g.Cm, {
+                                            icon: o.ArrowLargeLeftIcon,
+                                            onClick: er
                                         })
-                                      : (0, i.jsx)(m.aV, { icon: a.AppsIcon }),
-                                  V
-                                      ? (0, i.jsx)(a.Heading, {
+                                      : (0, i.jsx)(g.aV, { icon: o.AppsIcon }),
+                                  W
+                                      ? (0, i.jsx)(o.Heading, {
                                             variant: 'heading-lg/semibold',
                                             color: 'header-primary',
-                                            className: Z.searchHeader,
-                                            children: null != j && '' !== j ? x.intl.formatToPlainString(x.t.zHdzqa, { query: j }) : x.intl.formatToPlainString(x.t.Qhj5Bg, { categoryName: null !== (e = null == k ? void 0 : k.name) && void 0 !== e ? e : x.intl.string(x.t.E407b2) })
+                                            className: P.searchHeader,
+                                            children: null != j && '' !== j ? y.intl.formatToPlainString(y.t.zHdzqa, { query: j }) : y.intl.formatToPlainString(y.t.Qhj5Bg, { categoryName: null !== (e = null == k ? void 0 : k.name) && void 0 !== e ? e : y.intl.string(y.t.E407b2) })
                                         })
-                                      : (0, i.jsx)(p.Z, {
+                                      : (0, i.jsx)(f.Z, {
                                             tabs: U,
                                             selectedTab: G,
-                                            onTabSelect: J,
-                                            onAvailableWidthChange: q
+                                            onTabSelect: et,
+                                            onAvailableWidthChange: J
                                         }),
-                                  (0, i.jsx)(g.Z, {
-                                      query: F,
-                                      placeholder: x.intl.string(x.t['7J5i+/']),
-                                      onTextChange: z,
-                                      onClear: W,
-                                      onSubmit: Y,
-                                      onCollapsedClick: X,
-                                      state: K,
-                                      onBlur: Q
+                                  (0, i.jsx)(_.Z, {
+                                      query: Y,
+                                      placeholder: y.intl.string(y.t.HPQXEB),
+                                      onTextChange: K,
+                                      onClear: q,
+                                      onSubmit: X,
+                                      onCollapsedClick: $,
+                                      state: Q,
+                                      onBlur: ee
                                   })
                               ]
                           })
                 ]
             }),
-            H
-                ? (0, i.jsx)(S.Z, {
+            z
+                ? (0, i.jsx)(b.Z, {
                       onScroll: t,
-                      onSelectApplication: $,
-                      applicationId: O,
-                      initialTab: R
+                      onSelectApplication: en,
+                      applicationId: A,
+                      initialTab: R,
+                      onButtonsVisibilityChange: F
                   })
-                : V
-                  ? (0, i.jsx)(b.Z, { onSelectApplication: $ })
-                  : G === A.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID
-                    ? (0, i.jsx)(T.Z, {
+                : W
+                  ? (0, i.jsx)(Z.Z, { onSelectApplication: en })
+                  : G === L.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID
+                    ? (0, i.jsx)(x.Z, {
                           onScroll: t,
-                          onSelectApplication: $
+                          onSelectApplication: en
                       })
-                    : (0, i.jsx)(N.Z, {
+                    : (0, i.jsx)(T.Z, {
                           tabId: Number(G),
                           onScroll: t,
-                          onSelectApplication: $
+                          onSelectApplication: en
                       })
         ]
     });
