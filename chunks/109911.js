@@ -59,7 +59,7 @@ let o = (0, a.B)({
             }
         ]
     });
-((r = i || (i = {}))[(r.BUTTON = 1)] = 'BUTTON'), (r[(r.UNREADS_AT_TOP = 2)] = 'UNREADS_AT_TOP');
+((r = i || (i = {}))[(r.UNREADS_AT_TOP = 1)] = 'UNREADS_AT_TOP'), (r[(r.UNREADS_AT_TOP_WITH_BADGE = 2)] = 'UNREADS_AT_TOP_WITH_BADGE');
 let u = (0, a.B)({
     kind: 'user',
     id: '2024-10_merge_notifications_tab',
@@ -71,7 +71,7 @@ let u = (0, a.B)({
     treatments: [
         {
             id: 1,
-            label: 'Merge notifications tab - keep as button on the top right of ICYMI tab',
+            label: 'Merge notifications tab - have mentions widget on top of ICYMI tab',
             config: {
                 enabled: !0,
                 variant: 1
@@ -79,7 +79,7 @@ let u = (0, a.B)({
         },
         {
             id: 2,
-            label: 'Merge notifications tab - move unread notifs to the top of ICYMI tab',
+            label: 'Merge notifications tab - have mentions widget that also moves badging on top of ICYMI tab',
             config: {
                 enabled: !0,
                 variant: 2
