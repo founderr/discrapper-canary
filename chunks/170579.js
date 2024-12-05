@@ -38,7 +38,7 @@ let N = (e) => {
 t.Z = function (e) {
     var t;
     let n;
-    let { hideCloseButton: l = !1, hideCloseOnFullScreen: S, shouldShowPrice: g, plan: A, renderAnimation: v, onClose: R, isGift: x, upgradeToPremiumType: I, headerTheme: M = T.nL.DEFAULT, className: P, showTrialBadge: y = !1, showDiscountBadge: b = !1 } = e,
+    let { hideCloseButton: l = !1, hideCloseOnFullScreen: S, shouldShowPrice: g, plan: A, renderAnimation: v, onClose: R, isGift: x, upgradeToPremiumType: I, headerTheme: P = T.nL.DEFAULT, className: M, showTrialBadge: y = !1, showDiscountBadge: b = !1 } = e,
         O = I === T.p9.TIER_2;
     n = I === T.p9.TIER_0 ? d.Z : I === T.p9.TIER_1 ? f.Z : c.Z;
     let Z = (0, r.e7)([s.Z], () => s.Z.useReducedMotion),
@@ -49,12 +49,12 @@ t.Z = function (e) {
         className: a()(
             {
                 [h.headerBackground]: !O,
-                [M === T.nL.WINTER ? h.tier2HeaderBackgroundWinterTheme : h.tier2HeaderBackground]: O
+                [P === T.nL.WINTER ? h.tier2HeaderBackgroundWinterTheme : h.tier2HeaderBackground]: O
             },
-            P
+            M
         ),
         children: [
-            Z || M !== T.nL.WINTER
+            Z || P !== T.nL.WINTER
                 ? null
                 : (0, i.jsx)(p.Z, {
                       className: h.snow,

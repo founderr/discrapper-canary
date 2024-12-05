@@ -41,18 +41,18 @@ t.Z = function (e) {
     let n = (0, h.Q)(),
         { sourceAnalyticsLocations: a, analyticsLocations: U } = (0, _.ZP)(p.Z.PREMIUM_MARKETING),
         D = (0, l.e7)([I.ZP], () => I.ZP.hasFetchedSubscriptions()),
-        G = (0, l.e7)([N.default], () => N.default.getCurrentUser()),
-        H = null == G ? void 0 : G.id,
-        V = (0, M.N)(),
+        H = (0, l.e7)([N.default], () => N.default.getCurrentUser()),
+        V = null == H ? void 0 : H.id,
+        G = (0, M.N)(),
         F = (0, B.Ng)(),
         W = (0, E.V)(),
         [z, Y] = r.useState(!0),
         K = r.useRef(0),
-        Q = (0, R.M5)(G, y.p9.TIER_2),
+        Q = (0, R.M5)(H, y.p9.TIER_2),
         J = (0, Z.n)(),
         q = null == J ? void 0 : J.countryCode,
         { enabled: X } = (0, P.Z)(),
-        $ = (0, l.e7)([v.Z], () => (null != G ? v.Z.getUserProfile(G.id) : null)),
+        $ = (0, l.e7)([v.Z], () => (null != H ? v.Z.getUserProfile(H.id) : null)),
         ee = (0, l.e7)([A.Z], () => A.Z.hasFetched);
     if (
         (r.useEffect(() => {
@@ -61,12 +61,12 @@ t.Z = function (e) {
         r.useEffect(() => {
             c.Z.wait(async () => {
                 let e = Date.now();
-                await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, g.Y2)(q, null, k.JjL.DISCOVERY), null != H && X && Q && (0, m.In)(H)]), (K.current = Date.now() - e), Y(!1);
+                await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, g.Y2)(q, null, k.JjL.DISCOVERY), null != V && X && Q && (0, m.In)(V)]), (K.current = Date.now() - e), Y(!1);
             });
-        }, [q, H, X, Q]),
+        }, [q, V, X, Q]),
         r.useEffect(() => {
-            n && (null != V || null != F) && (0, j.a)(V, F);
-        }, [n, V, F]),
+            n && (null != G || null != F) && (0, j.a)(G, F);
+        }, [n, G, F]),
         r.useEffect(() => {
             !z &&
                 S.default.track(k.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {

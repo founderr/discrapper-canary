@@ -118,9 +118,9 @@ t.Z = (e) => {
     var t;
     let n,
         { className: a, hideCTAs: Z = !1, headingOverride: B, hidePill: M = !1, selectedPlanColumnClassName: O, selectedPlanTier: D = A.p9.TIER_2 } = e,
-        { analyticsLocations: G } = (0, m.ZP)(g.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
-        H = (0, l.e7)([h.ZP], () => h.ZP.hasFetchedSubscriptions()),
-        V = (0, p.V)(),
+        { analyticsLocations: H } = (0, m.ZP)(g.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
+        V = (0, l.e7)([h.ZP], () => h.ZP.hasFetchedSubscriptions()),
+        G = (0, p.V)(),
         F = 'PlanComparisonTable';
     (0, d.j)({
         location: F + ' auto on',
@@ -146,7 +146,7 @@ t.Z = (e) => {
         er = (0, f.Z)(),
         ea = (0, I.n)(en, ei, $, et, er.fractionalState),
         es = (0, T.Vi)();
-    if (!H || !V) return null;
+    if (!V || !G) return null;
     let el = {
         label: (0, i.jsx)(c.Heading, {
             className: P.__invalid_textColor,
@@ -234,7 +234,7 @@ t.Z = (e) => {
                 : (0, i.jsx)(y, {}));
     let eo = J === A.Si.TIER_0 || q === A.p9.TIER_0 || D === A.p9.TIER_0;
     return (0, i.jsx)(m.Gt, {
-        value: G,
+        value: H,
         children: (0, i.jsxs)('div', {
             className: s()(P.root, a),
             'data-testid': 'v2-marketing-page-comparison-table',

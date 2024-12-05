@@ -20,8 +20,8 @@ var l = t(278074),
     h = t(987209),
     f = t(388032),
     v = t(975765),
-    S = t(241822);
-let g = x.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
+    g = t(241822);
+let S = x.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
 function E(e) {
     let { avatarDecoration: n } = e,
         {
@@ -34,7 +34,7 @@ function E(e) {
         });
     return (0, i.jsx)('div', {
         className: v.giftMainAnimationWrapper,
-        children: (0, i.jsx)(g, {
+        children: (0, i.jsx)(S, {
             ...l,
             avatarDecoration: t,
             src: r,
@@ -52,7 +52,7 @@ function j(e) {
         className: v.profileEffectContainer,
         children: [
             (0, i.jsx)('img', {
-                src: S,
+                src: g,
                 alt: null == l ? void 0 : l.accessibilityLabel,
                 className: v.profileEffectBackground
             }),

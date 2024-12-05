@@ -42,9 +42,9 @@ var i = n(200651),
     L = n(533525),
     U = n(232076),
     D = n(197115),
-    G = n(823188),
-    H = n(504865),
-    V = n(179984),
+    H = n(823188),
+    V = n(504865),
+    G = n(179984),
     F = n(938736),
     W = n(386733),
     z = n(474936),
@@ -68,10 +68,10 @@ function et(e) {
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (l || !c) &&
-                      (0, i.jsx)(G.Cy, {
+                      (0, i.jsx)(H.Cy, {
                           text: l ? K.intl.string(K.t.qYKftb) : K.intl.string(K.t.EyjDRE),
                           className: Q.topRimPillWithSparkles,
-                          colorOptions: (0, u.wj)(s) ? G.VE.PREMIUM_TIER_2_WHITE_FILL : G.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
+                          colorOptions: (0, u.wj)(s) ? H.VE.PREMIUM_TIER_2_WHITE_FILL : H.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                       }),
                   (l || !c) && (0, i.jsx)('div', { className: Q.rimGlowTier2 }),
                   (0, i.jsx)(g.Heading, {
@@ -104,7 +104,7 @@ function et(e) {
                   })
               ]
           })
-        : (0, i.jsx)(H.Z, {
+        : (0, i.jsx)(V.Z, {
               variant: void 0,
               subscriptionTier: z.Si.TIER_2,
               interval: f.interval
@@ -132,10 +132,10 @@ function en() {
                     d
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(G.mn, {
+                                  (0, i.jsx)(H.mn, {
                                       text: K.intl.string(K.t.uXF4c3),
                                       className: Q.fractionalPremiumTopRimPill,
-                                      colorOptions: G.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
+                                      colorOptions: H.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                                   }),
                                   (0, i.jsx)(g.Heading, {
                                       variant: 'heading-md/normal',
@@ -154,7 +154,7 @@ function en() {
                                 theme: r
                             })
                           : null,
-                    (0, i.jsx)(G.nT, { featureSet: d ? G.uZ.FRACTIONAL_PREMIUM : G.uZ.DEFAULT }),
+                    (0, i.jsx)(H.nT, { featureSet: d ? H.uZ.FRACTIONAL_PREMIUM : H.uZ.DEFAULT }),
                     (0, i.jsx)(g.Button, {
                         className: Q.tierCardButton,
                         color: g.Button.Colors.WHITE,
@@ -331,7 +331,7 @@ t.Z = function () {
             note: null
         });
     if ((!y && !D) || l) return (0, i.jsx)(g.Spinner, {});
-    let G = null !== n && null != n.trialId;
+    let H = null !== n && null != n.trialId;
     return (0, i.jsx)(v.Gt, {
         value: t,
         children: (0, i.jsxs)(i.Fragment, {
@@ -342,11 +342,11 @@ t.Z = function () {
                         (0, i.jsx)(en, {}),
                         (Z || M) && (0, i.jsx)(W.Z, { isInSettings: !0 }),
                         (0, i.jsx)(er, {}),
-                        (0, i.jsx)(V.Z, {
+                        (0, i.jsx)(G.Z, {
                             className: Q.__invalid_planComparisonTable,
                             hideCTAs: !0,
                             headingOverride: K.intl.string(K.t.dnVvQU),
-                            hidePill: !G,
+                            hidePill: !H,
                             selectedPlanColumnClassName: Q.tier2PlanComparisonTableBackground,
                             selectedPlanTier: z.p9.TIER_2
                         })

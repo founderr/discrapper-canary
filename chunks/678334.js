@@ -19,8 +19,8 @@ var i = t(200651),
     h = t(459965),
     f = t(858987),
     v = t(975060),
-    S = t(882712),
-    g = t(855775),
+    g = t(882712),
+    S = t(855775),
     E = t(626135),
     j = t(669079),
     y = t(74538),
@@ -33,32 +33,32 @@ var i = t(200651),
     _ = t(981631),
     O = t(374172);
 function A(e) {
-    let { premiumSubscription: n, setPurchaseState: t, onBack: r, onNext: A, legalTermsNodeRef: R, flashLegalTerms: Z, invoiceError: w, planError: M, onPurchaseError: L, baseAnalyticsData: k, flowStartTime: F, trialId: D, planGroup: U, analyticsLocation: B, purchaseTokenAuthState: G, openInvoiceId: H, metadata: W, backButtonEligible: V, disablePurchase: K, isTrial: z = !1 } = e,
+    let { premiumSubscription: n, setPurchaseState: t, onBack: r, onNext: A, legalTermsNodeRef: Z, flashLegalTerms: R, invoiceError: w, planError: M, onPurchaseError: L, baseAnalyticsData: k, flowStartTime: F, trialId: D, planGroup: U, analyticsLocation: B, purchaseTokenAuthState: G, openInvoiceId: H, metadata: W, backButtonEligible: V, disablePurchase: K, isTrial: z = !1 } = e,
         { selectedPlan: Y, priceOptions: X, setHasAcceptedTerms: q, setPurchaseError: J, purchaseType: Q, paymentSourceId: $, paymentSources: ee, selectedSkuId: en, skusById: et, skuPricePreviewsById: ei, referralCode: el, contextMetadata: er, invoicePreview: es, inReverseTrial: ea } = (0, P.usePaymentContext)(),
         { isGift: ec, selectedGiftStyle: eo, customGiftMessage: eu, emojiConfetti: ed, soundEffect: em, giftRecipient: ep, selectedGiftingPromotionReward: ex } = (0, I.wD)(),
         eh = (0, m.a5)(Y),
         ef = (0, j.MY)(ep),
         ev = {};
     (ev.gift_style = eo), (ev.reward_sku_ids = eh && (null == ex ? void 0 : ex.skuId) != null ? [null == ex ? void 0 : ex.skuId] : []), ef === j.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (s()(null != ep, 'Gift recipient must be set at purchase review step for these gift options.'), (ev.recipient_id = ep.id), (ev.custom_message = eu), (ev.emoji_id = null == ed ? void 0 : ed.id), (ev.emoji_name = (null == ed ? void 0 : ed.id) == null ? (null == ed ? void 0 : ed.surrogates) : void 0), (ev.sound_id = null == em ? void 0 : em.soundId));
-    let eS = null == Y ? void 0 : Y.id,
-        eg = (0, b.sE)(D, X.paymentSourceId, eS),
+    let eg = null == Y ? void 0 : Y.id,
+        eS = (0, b.sE)(D, X.paymentSourceId, eg),
         eE = (0, a.e7)([v.Z], () => v.Z.popupCallbackCalled),
         { analyticsLocations: ej } = (0, u.ZP)(),
         ey = null != $ ? ee[$] : null,
-        [eI, eP] = l.useState(eg),
+        [eI, eP] = l.useState(eS),
         [eT, eN] = l.useState(!1),
-        { hasEntitlements: eb } = (0, h.H)(eS, ec),
+        { hasEntitlements: eb } = (0, h.H)(eg, ec),
         eC = (0, y.Ap)(X.paymentSourceId),
-        e_ = eb || eg,
+        e_ = eb || eS,
         eO = (0, p.U)(),
         eA = null,
-        eR = null;
+        eZ = null;
     if (Q === _.GZQ.ONE_TIME) {
-        var eZ;
-        s()(null != en, 'SKU must be selected for one-time purchases'), (eA = null !== (eZ = et[en]) && void 0 !== eZ ? eZ : null), s()(null != eA, 'SKU must exist and be fetched.');
+        var eR;
+        s()(null != en, 'SKU must be selected for one-time purchases'), (eA = null !== (eR = et[en]) && void 0 !== eR ? eR : null), s()(null != eA, 'SKU must exist and be fetched.');
         let e = ei[en],
-            n = null != $ ? $ : g.c;
-        eR = null != e ? e[n] : null;
+            n = null != $ ? $ : S.c;
+        eZ = null != e ? e[n] : null;
     }
     let ew = async () => {
         await (0, T.H)({
@@ -84,7 +84,7 @@ function A(e) {
             onNext: A,
             metadata: W,
             sku: eA,
-            skuPricePreview: eR,
+            skuPricePreview: eZ,
             purchaseType: Q,
             referralCode: el,
             loadId: er.loadId,
@@ -111,24 +111,24 @@ function A(e) {
                 } finally {
                     eP(!1), (0, o.K2)();
                 }
-            else G === S.I.SUCCESS && (await ew());
+            else G === g.I.SUCCESS && (await ew());
         })();
     }, [eE]),
         l.useEffect(() => {
-            eg && !ec && null == n && ew();
-        }, [eg, ec, n]);
+            eS && !ec && null == n && ew();
+        }, [eS, ec, n]);
     let eM = null != H || (Q === _.GZQ.ONE_TIME && !ec);
-    return eg
+    return eS
         ? null
         : (0, i.jsxs)(c.ModalFooter, {
               align: d.Z.Align.CENTER,
               children: [
                   (0, i.jsx)(f.Z, {
-                      legalTermsNodeRef: R,
+                      legalTermsNodeRef: Z,
                       invoiceError: w,
                       planError: M,
                       disablePurchase: K,
-                      flashLegalTerms: Z,
+                      flashLegalTerms: R,
                       isSubmitting: eI,
                       premiumSubscription: n,
                       isGift: ec,

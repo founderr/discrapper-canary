@@ -6,7 +6,7 @@ s.d(t, {
         return N;
     },
     dX: function () {
-        return G;
+        return P;
     },
     j$: function () {
         return r;
@@ -27,19 +27,19 @@ var n,
     p = s(605236),
     f = s(765585),
     x = s(703656),
-    C = s(706454),
-    g = s(74538),
+    g = s(706454),
+    C = s(74538),
     _ = s(924540),
-    h = s(119269),
-    m = s(938736),
-    L = s(227140),
-    v = s(981631),
+    m = s(119269),
+    h = s(938736),
+    v = s(227140),
+    L = s(981631),
     A = s(921944),
     j = s(388032),
     E = s(762042);
 let O = 'url(#dark-purple-gradient)';
 function T(e) {
-    return e.toLocaleString(C.default.locale, {
+    return e.toLocaleString(g.default.locale, {
         minimumIntegerDigits: 2,
         useGrouping: !1
     });
@@ -86,14 +86,14 @@ let b = () =>
                     contentClassName: E.incentiveCoachtipContainer,
                     pointerClassName: E.incentiveTooltipPointer,
                     onTryFeature: () => {
-                        (0, x.uL)(v.Z5c.NITRO_HOME), S();
+                        (0, x.uL)(L.Z5c.NITRO_HOME), S();
                     },
                     art: (0, i.jsx)(i.Fragment, {
-                        children: (0, i.jsx)(h.ZP, {
+                        children: (0, i.jsx)(m.ZP, {
                             staticPercentage: 100,
                             iconClassName: E.incentiveIcon,
                             showAnimations: !1,
-                            progressCircleVariation: h.Qo.NITRO_LOGO,
+                            progressCircleVariation: m.Qo.NITRO_LOGO,
                             ellipseOpacity: 1,
                             circleColor: O,
                             circleStroke: O,
@@ -103,9 +103,9 @@ let b = () =>
                     position: 'right',
                     align: 'top',
                     tryItText: j.intl.string(j.t.RzWDqa),
-                    header: j.intl.formatToPlainString(j.t.md2GU1, { discountRate: m.Nq }),
+                    header: j.intl.formatToPlainString(j.t.md2GU1, { discountRate: h.Nq }),
                     hideDismissButton: !0,
-                    body: j.intl.formatToPlainString(j.t.mxPPxc, { discountRate: m.Nq }),
+                    body: j.intl.formatToPlainString(j.t.mxPPxc, { discountRate: h.Nq }),
                     dismissibleContent: l.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR,
                     maxWidth: 320
                 }),
@@ -131,11 +131,11 @@ let b = () =>
                       children: [
                           (0, i.jsx)('div', {
                               className: E.iconContainer,
-                              children: (0, i.jsx)(h.ZP, {
+                              children: (0, i.jsx)(m.ZP, {
                                   staticPercentage: 100,
                                   iconClassName: E.icon,
                                   showAnimations: !0,
-                                  progressCircleVariation: h.Qo.NITRO_LOGO,
+                                  progressCircleVariation: m.Qo.NITRO_LOGO,
                                   ellipseOpacity: 1,
                                   customAnimationClassName: E.customCircleAnimation,
                                   circleColor: 'url(#purple-gradient)'
@@ -175,7 +175,7 @@ let b = () =>
             a.useEffect(() => {
                 t && s();
             }, [t, s]),
-            (0, i.jsx)(L.Z, { copy: j.intl.string(j.t.y2b7CA) })
+            (0, i.jsx)(v.Z, { copy: j.intl.string(j.t.y2b7CA) })
         );
     },
     w = () =>
@@ -210,13 +210,13 @@ let b = () =>
             ]
         });
     },
-    G = (e) => {
+    P = (e) => {
         var t, s;
         let { isSelected: n, trialOffer: r, q4MarketingEnabled: o } = e,
             c = (0, p.wE)(l.z.TRIAL_FOR_ALL_MARKETING_PAGE_BADGE),
             d = null === (t = r.subscription_trial) || void 0 === t ? void 0 : t.interval,
             u = null === (s = r.subscription_trial) || void 0 === s ? void 0 : s.interval_count,
-            f = (0, g.a5)({
+            f = (0, C.a5)({
                 intervalType: null !== d ? d : void 0,
                 intervalCount: null !== u ? u : void 0
             });

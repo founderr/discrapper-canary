@@ -42,9 +42,9 @@ var s = n(399606),
     L = n(526761),
     U = n(332325),
     D = n(388032),
-    G = n(506829),
-    H = n(660372),
-    V = n(926433),
+    H = n(506829),
+    V = n(660372),
+    G = n(926433),
     F = n(302036),
     W = n(994554),
     z = n(704565),
@@ -405,7 +405,7 @@ t.Z = () => {
                 name: 'badge',
                 title: D.intl.string(D.t.dcFfSE),
                 subtitle: D.intl.string(D.t['37MFFh']),
-                perkImage: H,
+                perkImage: V,
                 description: D.intl.string(D.t.T1IS4u)
             },
             greyBadge: {
@@ -436,7 +436,7 @@ t.Z = () => {
                 name: 'customSoundsEverywhere',
                 title: D.intl.string(D.t.LWsAra),
                 subtitle: D.intl.string(D.t.bTzbVl),
-                perkImage: (0, M.gx)(t, V, F),
+                perkImage: (0, M.gx)(t, G, F),
                 description: D.intl.string(D.t.JLnOMz)
             },
             specialStickerAccess: {
@@ -492,7 +492,7 @@ t.Z = () => {
     if (null != eZ) {
         let { title: t, subtitle: n, description: i, pillText: r, ctaDescription: s, dismissibleContentType: l } = eZ,
             o = (0, a.jsx)('div', {
-                className: G.cardComponent,
+                className: H.cardComponent,
                 children: (0, a.jsx)(P.ZP, {
                     progressCircleVariation: P.Qo.AVATAR_DECO,
                     avatarDecoAssetId: y.VA,
@@ -526,7 +526,7 @@ t.Z = () => {
     if (null != eP) {
         let { title: t, subtitle: n, description: i, pillText: r, ctaDescription: s, dismissibleContentType: l } = eP,
             c = (0, a.jsx)('div', {
-                className: G.cardComponent,
+                className: H.cardComponent,
                 children: (0, a.jsx)(P.ZP, {
                     showAnimations: !0,
                     percentage: eA,
@@ -549,8 +549,8 @@ t.Z = () => {
         };
     }
     let eD = (0, O.kG)(),
-        { enabled: eG } = (0, S.Z)(),
-        eH = () => {
+        { enabled: eH } = (0, S.Z)(),
+        eV = () => {
             C.default.track(k.rMx.OPEN_MODAL, {
                 type: 'Tiered Tenure Badge Details',
                 location_stack: e,
@@ -564,14 +564,14 @@ t.Z = () => {
         };
     return (
         null != eD &&
-            eG &&
+            eH &&
             (eU.tenureBadge = {
                 name: 'tenureBadge',
                 title: D.intl.string(D.t.rnsqpa),
                 pillText: D.intl.string(D.t.jyYgZ2).toLocaleUpperCase(),
                 perkComponent: (0, a.jsx)(Z.Z, {}),
                 cardVariant: B.zW.NITRO_GRADIENT_HOVER_BORDER,
-                onClick: () => eH()
+                onClick: () => eV()
             }),
         (0, I.ZP)('usePerksDiscoverabilityCard') === I.P0.SUMMER_2024 &&
             (eU.shyProject = {

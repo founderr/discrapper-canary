@@ -19,8 +19,8 @@ var i = t(200651),
     h = t(115130),
     f = t(228624),
     v = t(925329),
-    S = t(215148),
-    g = t(653798),
+    g = t(215148),
+    S = t(653798),
     E = t(314182),
     j = t(251660),
     y = t(246946),
@@ -33,8 +33,8 @@ var i = t(200651),
     _ = t(669079),
     O = t(937615),
     A = t(987209),
-    R = t(563132),
-    Z = t(45572),
+    Z = t(563132),
+    R = t(45572),
     w = t(119226),
     M = t(981631),
     L = t(388032),
@@ -46,42 +46,42 @@ function F(e) {
         r = (0, f.ed)('SKUInvoice'),
         a = n.productLine === M.POd.COLLECTIBLES && r;
     return !t.tax_inclusive && t.tax > 0
-        ? (0, i.jsxs)(g.PO, {
+        ? (0, i.jsxs)(S.PO, {
               className: k.invoice,
               children: [
                   a
-                      ? (0, i.jsx)(S.C, {
+                      ? (0, i.jsx)(g.C, {
                             sku: n,
                             value: (0, O.T4)(l, t.currency),
                             className: k.subscriptionCostRow
                         })
-                      : (0, i.jsx)(g.R$, {
+                      : (0, i.jsx)(S.R$, {
                             label: n.name,
                             value: (0, O.T4)(l, t.currency),
                             className: k.subscriptionCostRow
                         }),
-                  (0, i.jsx)(g.R$, {
+                  (0, i.jsx)(S.R$, {
                       label: L.intl.string(L.t['/I8zmJ']),
                       value: (0, O.T4)(t.tax, t.currency),
                       className: k.subscriptionCostRow
                   }),
-                  (0, i.jsx)(g.KU, {}),
-                  (0, i.jsx)(g.Ji, {
+                  (0, i.jsx)(S.KU, {}),
+                  (0, i.jsx)(S.Ji, {
                       label: L.intl.format(L.t['+B5KfH'], {}),
                       value: (0, O.T4)(t.amount, t.currency),
                       className: k.subscriptionCostRow
                   })
               ]
           })
-        : (0, i.jsx)(g.PO, {
+        : (0, i.jsx)(S.PO, {
               className: k.invoice,
               children: a
-                  ? (0, i.jsx)(S.C, {
+                  ? (0, i.jsx)(g.C, {
                         sku: n,
                         value: (0, O.T4)(t.amount, t.currency),
                         className: k.subscriptionCostRow
                     })
-                  : (0, i.jsx)(g.R$, {
+                  : (0, i.jsx)(S.R$, {
                         label: n.name,
                         value: (0, O.T4)(t.amount, t.currency),
                         className: k.subscriptionCostRow
@@ -106,7 +106,7 @@ function D(e) {
 }
 function U(e) {
     let { hasLegalTermsFlash: n, legalTermsNodeRef: t, onPaymentSourceChange: r, handlePaymentSourceAdd: v } = e,
-        { application: O, purchaseState: U, paymentSources: B, paymentSourceId: G, setHasAcceptedTerms: H, skusById: W, skuPricePreviewsById: V, selectedSkuId: K, isEmbeddedIAP: z, purchaseType: Y, purchasePreviewError: X, devShelfFetchState: q } = (0, R.usePaymentContext)(),
+        { application: O, purchaseState: U, paymentSources: B, paymentSourceId: G, setHasAcceptedTerms: H, skusById: W, skuPricePreviewsById: V, selectedSkuId: K, isEmbeddedIAP: z, purchaseType: Y, purchasePreviewError: X, devShelfFetchState: q } = (0, Z.usePaymentContext)(),
         { isGift: J, giftRecipient: Q } = (0, A.wD)(),
         $ = J && (0, _.pO)(Q),
         { defaultPaymentSourceId: ee, hasFetchedPaymentSources: en } = (0, c.cj)([P.Z], () => ({
@@ -122,7 +122,7 @@ function U(e) {
     let es = (0, c.e7)([h.Z, N.Z], () => N.Z.inTestModeForApplication(O.id) || h.Z.inDevModeForApplication(O.id), [O.id]),
         ea = (0, c.e7)([y.Z], () => y.Z.enabled),
         ec = a.M.EEA_COUNTRIES.has(I.Z.ipCountryCodeWithFallback),
-        eo = U === Z.A.PURCHASING || U === Z.A.COMPLETED,
+        eo = U === R.A.PURCHASING || U === R.A.COMPLETED,
         eu = null != G ? B[G].type : null,
         ed = (0, f.ed)('SKUInvoice'),
         em = et.productLine === M.POd.COLLECTIBLES && ed;
@@ -180,15 +180,15 @@ function U(e) {
                             type: o.Spinner.Type.WANDERING_CUBES,
                             className: k.invoiceSpinner
                         })
-                      : (0, i.jsx)(g.PO, {
+                      : (0, i.jsx)(S.PO, {
                             className: k.invoice,
                             children: em
-                                ? (0, i.jsx)(S.C, {
+                                ? (0, i.jsx)(g.C, {
                                       sku: et,
                                       value: null,
                                       className: k.subscriptionCostRow
                                   })
-                                : (0, i.jsx)(g.R$, {
+                                : (0, i.jsx)(S.R$, {
                                       label: et.name,
                                       value: null,
                                       className: k.subscriptionCostRow

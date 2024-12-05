@@ -23,7 +23,7 @@ var i = n(200651),
 function m(e) {
     var t, n;
     let s,
-        { handleClose: m, planGroup: g, onSubscriptionConfirmation: E, renderPurchaseConfirmation: S, postSuccessGuild: y, followupSKUInfo: M, continueSession: Z } = e,
+        { handleClose: m, planGroup: g, onSubscriptionConfirmation: E, renderPurchaseConfirmation: S, postSuccessGuild: y, followupSKUInfo: M, continueSessionToInitialStep: Z } = e,
         { activeSubscription: I, paymentSources: v, paymentSourceId: P, selectedPlan: T, selectedSkuId: N, step: A, updatedSubscription: U, startingPremiumSubscriptionPlanIdRef: b } = (0, h.usePaymentContext)(),
         { isGift: k, giftRecipient: R, giftCode: O, hasSentMessage: w, isSendingMessage: H, sendGiftMessage: B, claimableRewards: F, selectedGiftingPromotionReward: G } = (0, x.wD)(),
         W = (0, C.id)(T, k, F),
@@ -45,7 +45,7 @@ function m(e) {
         (s =
             null != S
                 ? S(T, X, U)
-                : Z
+                : null != Z
                   ? (0, i.jsx)(u.VY, {})
                   : k
                     ? (0, i.jsx)(u.TB, {

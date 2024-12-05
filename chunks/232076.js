@@ -18,8 +18,8 @@ let p = function (e) {
         p = (0, o.t7)(),
         f = (0, l._O)(),
         { eligibleToFetch: x } = (0, d.N)(e),
-        C = x && (null == s ? void 0 : s.verified) === !0 && (0, a.M5)(s, u.p9.TIER_2) && !p && !f;
+        g = x && (null == s ? void 0 : s.verified) === !0 && (0, a.M5)(s, u.p9.TIER_2) && !p && !f;
     n.useEffect(() => {
-        C && !t && c.Z.checkAndFetchReferralsRemaining();
-    }, [C, t]);
+        g && !t && c.Z.checkAndFetchReferralsRemaining();
+    }, [g, t]);
 };

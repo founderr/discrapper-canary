@@ -1,9 +1,9 @@
-n.d(t, {
+s.d(t, {
     xP: function () {
         return r;
     }
 });
-let i = (0, n(818083).B)({
+let n = (0, s(818083).B)({
     kind: 'user',
     id: '2024-11_marketing_page_v2_experiment',
     label: 'Marketing Page V2 Experiment',
@@ -21,7 +21,7 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r(e) {
-    let { enabled: t } = i.useExperiment({ location: e }, { autoTrackExposure: !0 });
-    return t;
+function r(e, t) {
+    let { enabled: s } = n.useExperiment({ location: e }, { autoTrackExposure: null != t && t });
+    return s;
 }

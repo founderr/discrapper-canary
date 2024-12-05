@@ -18,56 +18,56 @@ var r = n(200651),
     f = n(388032),
     _ = n(811905);
 function p(e) {
-    let { smallerText: t, className: n, textColor: a } = e,
-        u = (0, o.e7)([c.Z], () => c.Z.affinities.slice(0, 3).reverse()),
-        p = u.map((e, t) =>
+    let { smallerText: t, className: n, textColor: a, isMarketingPageV2Enabled: u } = e,
+        p = (0, o.e7)([c.Z], () => c.Z.affinities.slice(0, 3).reverse()),
+        m = p.map((e, t) =>
             (0, r.jsx)(
                 h,
                 {
                     affinity: e,
-                    applyMask: t !== u.length - 1,
+                    applyMask: t !== p.length - 1,
                     size: d.EF.SIZE_32
                 },
                 e.id
             )
         ),
-        m = (e) => (null != e.globalName ? e.globalName : e.username),
-        g = i.useMemo(
+        g = (e) => (null != e.globalName ? e.globalName : e.username),
+        E = i.useMemo(
             () =>
-                3 === u.length
-                    ? f.intl.formatToPlainString(f.t.c7ETJC, { username: m(u[2]) })
-                    : 2 === u.length
+                3 === p.length
+                    ? f.intl.formatToPlainString(f.t.c7ETJC, { username: g(p[2]) })
+                    : 2 === p.length
                       ? f.intl.formatToPlainString(f.t.st8Rh4, {
-                            username: m(u[1]),
-                            otherUsername: m(u[0])
+                            username: g(p[1]),
+                            otherUsername: g(p[0])
                         })
-                      : 1 === u.length
-                        ? f.intl.formatToPlainString(f.t.dpjXPD, { username: m(u[0]) })
+                      : 1 === p.length
+                        ? f.intl.formatToPlainString(f.t.dpjXPD, { username: g(p[0]) })
                         : '',
-            [u]
+            [p]
         );
-    return 0 === u.length
+    return 0 === p.length
         ? null
         : (0, r.jsxs)('div', {
-              className: s()(_.container, n),
+              className: s()(_.container, n, { [_.v2Container]: u }),
               children: [
                   (0, r.jsx)('div', {
                       className: _.iconContainer,
-                      children: p
+                      children: m
                   }),
                   (0, r.jsx)('div', {
                       className: _.textContainer,
                       children: (0, r.jsx)(function () {
-                          return t
+                          return t || u
                               ? (0, r.jsx)(l.Text, {
-                                    variant: 'text-lg/medium',
+                                    variant: u ? 'text-sm/normal' : 'text-lg/medium',
                                     color: a,
-                                    children: g
+                                    children: E
                                 })
                               : (0, r.jsx)(l.Heading, {
                                     variant: 'heading-xl/medium',
                                     color: a,
-                                    children: g
+                                    children: E
                                 });
                       }, {})
                   })

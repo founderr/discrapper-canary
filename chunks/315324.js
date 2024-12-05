@@ -64,7 +64,7 @@ function E(e) {
                                 onClick: () => {
                                     s.default.selectVoiceChannel(E.id), (0, c.X)(n.id), null == v || v({ action: 'OPEN_VOICE_CHANNEL' }), null == I || I();
                                 },
-                                className: m.clickable,
+                                className: m.clickableText,
                                 children: (0, r.jsx)(a.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'interactive-normal',

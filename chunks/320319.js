@@ -40,26 +40,26 @@ let P = {
             [k, L] = r.useState(!1),
             U = (0, h.yQ)(),
             D = (0, h.IB)(),
-            [G, H] = r.useState(!1),
-            [V, F] = r.useState((t === C.u.FREE_BOOST || t === C.u.TENURE_REWARD_COLLECTIBLE) && D && (null == U ? void 0 : U.nitroTenureStatus) === I.EB.REDEEMABLE);
+            [H, V] = r.useState(!1),
+            [G, F] = r.useState((t === C.u.FREE_BOOST || t === C.u.TENURE_REWARD_COLLECTIBLE) && D && (null == U ? void 0 : U.nitroTenureStatus) === I.EB.REDEEMABLE);
         r.useEffect(() => {
             (t === C.u.FREE_BOOST || t === C.u.TENURE_REWARD_COLLECTIBLE) && D && (null == U ? void 0 : U.nitroTenureStatus) === I.EB.REDEEMABLE && F(!0);
         }, [D, t, U]);
         let W = r.useCallback(() => {
-                H(!0);
+                V(!0);
             }, []),
             z = T === v.R0.CARD_CAROUSEL_FIRST_ROW || T === v.R0.CARD_CAROUSEL_SECOND_ROW || T === v.R0.CARD_CAROUSEL_THIRD_ROW,
             Y = (0, C.Z)(),
             [K, Q] = (0, p.cv)((null != a && n) || a === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI ? [a] : []);
         r.useEffect(
             () => () => {
-                K === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && G && (0, f.EW)(K);
+                K === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && H && (0, f.EW)(K);
             },
-            [K, G]
+            [K, H]
         ),
             r.useEffect(() => {
-                K === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && G && (0, f.EW)(K);
-            }, [K, G]);
+                K === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && H && (0, f.EW)(K);
+            }, [K, H]);
         let { easterEggLevel: J, isEasterEggTriggered: q, onHover: X, onUnhover: $ } = (0, x.Z)(5),
             ee = (0, l.debounce)(() => {
                 _.default.track(S.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
@@ -156,7 +156,7 @@ let P = {
                                     ...e,
                                     ref: t === C.u.FREE_BOOST || t === C.u.TENURE_REWARD_COLLECTIBLE ? en : void 0
                                 }),
-                                V &&
+                                G &&
                                     (0, i.jsx)(E.Z, {
                                         speedValues: P,
                                         numBursts: 3,

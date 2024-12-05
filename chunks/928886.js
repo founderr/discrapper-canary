@@ -26,17 +26,17 @@ var i = n(200651),
 function g(e) {
     var t;
     let { renderHeader: n, referralTrialOfferId: a, handleClose: g } = e,
-        { selectedSkuId: A, step: v, selectedPlan: R, purchaseState: x, purchaseType: I, selectedSku: M } = (0, S.usePaymentContext)(),
-        { isGift: P, selectedGiftStyle: y, giftRecipient: b } = (0, L.wD)(),
-        O = P && (0, m.pO)(b) && v === p.h8.CONFIRM && null != y && (null == M ? void 0 : M.productLine) !== T.POd.COLLECTIBLES,
+        { selectedSkuId: A, step: v, selectedPlan: R, purchaseState: x, purchaseType: I, selectedSku: P } = (0, S.usePaymentContext)(),
+        { isGift: M, selectedGiftStyle: y, giftRecipient: b } = (0, L.wD)(),
+        O = M && (0, m.pO)(b) && v === p.h8.CONFIRM && null != y && (null == P ? void 0 : P.productLine) !== T.POd.COLLECTIBLES,
         Z = null != n && null != v,
         D = [p.h8.SKU_SELECT, p.h8.SELECT_FREE_SKU],
         k = null != v && !D.includes(v) && null != A,
-        w = (0, d.N)(a),
-        F = !P && null != w && null != A && E.nG[w.trial_id].skus.includes(A),
+        F = (0, d.N)(a),
+        w = !M && null != F && null != A && E.nG[F.trial_id].skus.includes(A),
         j = (0, c.Ng)(),
         H = null == j ? void 0 : null === (t = j.discount) || void 0 === t ? void 0 : t.plan_ids.some((e) => E.GP[e].skuId === A),
-        U = !P && null != j && null != A && H,
+        U = !M && null != j && null != A && H,
         { enabled: B } = u.ZP.useExperiment({ location: 'PaymentModalHeader' }, { autoTrackExposure: !1 }),
         W = (0, u.rK)(),
         V = B && W;
@@ -71,12 +71,12 @@ function g(e) {
                     purchaseState: x,
                     premiumType: E.y7[A],
                     onClose: g,
-                    showTrialBadge: F,
+                    showTrialBadge: w,
                     showDiscountBadge: U,
-                    isGift: P,
+                    isGift: M,
                     giftRecipient: b,
                     useWinterTheme: V
                 }));
         return e;
-    }, [y, g, x, n, R, A, v, F, U, O, k, Z, I, P, b, V]);
+    }, [y, g, x, n, R, A, v, w, U, O, k, Z, I, M, b, V]);
 }

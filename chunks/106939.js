@@ -44,16 +44,16 @@ var i = n(200651),
     L = n(921944),
     U = n(388032),
     D = n(228351);
-let G = {
+let H = {
         [w.dG.REQUESTS]: () => (0, i.jsx)(M.Z, {}),
         [w.dG.ACTIVITY]: () => (0, i.jsx)(B.Z, {}),
         [w.dG.SETTINGS]: () => (0, i.jsx)(O.Z, {})
     },
-    H = {
+    V = {
         [w.dG.REQUESTS]: () => (0, i.jsx)(M.Z, {}),
         [w.dG.ACTIVITY]: () => (0, i.jsx)(B.Z, {})
     };
-function V(e) {
+function G(e) {
     let { section: t, handleItemSelect: n } = e,
         r = (0, Z.gU)(),
         a = (0, P.Z)();
@@ -191,7 +191,7 @@ function W() {
               'aria-label': U.intl.string(U.t.RZqaJi),
               children: [
                   (0, i.jsx)(_.yY, { location: U.intl.string(U.t.RZqaJi) }),
-                  (0, i.jsx)(V, {
+                  (0, i.jsx)(G, {
                       section: g,
                       handleItemSelect: (e) => {
                           f(e);
@@ -201,7 +201,7 @@ function W() {
                       id: g,
                       'aria-labelledby': p,
                       className: D.contentPanel,
-                      children: (0, i.jsx)('div', { children: G[g]() })
+                      children: (0, i.jsx)('div', { children: H[g]() })
                   })
               ]
           });
@@ -215,10 +215,10 @@ function z() {
         b = (0, j.M)(),
         B = (0, c.e7)([v.Z], () => v.Z.theme),
         { selectedTab: M, handleTabChange: O } = (0, A.Z)(),
-        G = (0, h.Dt)(),
-        V = N.default.getCurrentUser(),
+        H = (0, h.Dt)(),
+        G = N.default.getCurrentUser(),
         W = null != t,
-        z = l && null != V && !W;
+        z = l && null != G && !W;
     r.useEffect(() => {
         g.Y(y.Z5c.FAMILY_CENTER),
             (0, C.e)('family-center'),
@@ -250,7 +250,7 @@ function z() {
         }, [z]);
     if (z) return null;
     let Y = M !== w.dG.SETTINGS ? M : w.dG.ACTIVITY,
-        K = H[Y];
+        K = V[Y];
     return (0, i.jsx)(p.Gt, {
         value: e,
         children: (0, i.jsxs)('main', {
@@ -267,7 +267,7 @@ function z() {
                 }),
                 (0, i.jsx)(u.TabBar.Panel, {
                     id: Y,
-                    'aria-labelledby': G,
+                    'aria-labelledby': H,
                     className: D.contentPanel,
                     children: (0, i.jsx)(u.Scroller, {
                         children: (0, i.jsx)('div', {

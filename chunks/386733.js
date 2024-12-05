@@ -137,16 +137,16 @@ t.Z = (e) => {
     let L = k.sent === E.Q,
         U = f.Z.getArticleURL(v.BhN.REFERRAL_PROGRAM),
         { analyticsLocations: D } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
-        G = r.useRef(null),
-        H = (k.sent / E.Q) * 100,
-        V = !1;
-    j && null != B && ((V = 0 < (t = Math.ceil((new Date(B).getTime() - new Date().getTime()) / 86400000)) && t < C.AV), (a = (100 * (C.AV - t)) / C.AV));
-    let F = V && null != t,
+        H = r.useRef(null),
+        V = (k.sent / E.Q) * 100,
+        G = !1;
+    j && null != B && ((G = 0 < (t = Math.ceil((new Date(B).getTime() - new Date().getTime()) / 86400000)) && t < C.AV), (a = (100 * (C.AV - t)) / C.AV));
+    let F = G && null != t,
         W = (0, i.jsxs)('div', {
             className: N.referralInfoContent,
             children: [
                 (0, i.jsx)(x.ZP, {
-                    percentage: F ? 0 : H,
+                    percentage: F ? 0 : V,
                     progressCircleVariation: x.Qo.NITRO_LOGO,
                     iconClassName: s()({
                         [N.referralProgressBarIcon]: !u,
@@ -192,7 +192,7 @@ t.Z = (e) => {
                                 helpdeskArticle: U,
                                 referralIncentiveLifecycleState: R,
                                 referralsStatuses: k,
-                                isWithinCountdownRange: V
+                                isWithinCountdownRange: G
                             })
                         }),
                         (0, i.jsxs)('div', {
@@ -254,7 +254,7 @@ t.Z = (e) => {
                 [N.containerWithGlowOnSettingsPage]: !F && z && u
             }),
             children: (0, i.jsxs)('div', {
-                ref: G,
+                ref: H,
                 className: s()({
                     [N.expandedProgressBarContainer]: !u,
                     [N.expandedProgressBarContainerSettingsPage]: u,

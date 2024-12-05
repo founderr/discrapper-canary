@@ -39,21 +39,21 @@ let c = 'url(#gradient)',
         }
     };
 t.Z = (e) => {
-    let { percentage: t = 0, children: s, animationClassName: c, initialPercentage: f = 0, progressCircleStrokeSize: x = 2, progressCircleVariation: C, progressCircleStroke: g } = e,
+    let { percentage: t = 0, children: s, animationClassName: c, initialPercentage: f = 0, progressCircleStrokeSize: x = 2, progressCircleVariation: g, progressCircleStroke: C } = e,
         _ = 43 + x / 2,
-        h = 2 * Math.PI * _,
-        [m, L] = r.useState(f);
+        m = 2 * Math.PI * _,
+        [h, v] = r.useState(f);
     r.useEffect(() => {
         let e = setTimeout(() => {
-            L(t);
+            v(t);
         }, 200);
         return () => clearTimeout(e);
     }, [t]);
-    let v = (0, a.ZP)(),
-        A = (0, i.ap)(v),
-        j = u(C),
-        E = d(C, A),
-        O = null != g ? g : p(A, C);
+    let L = (0, a.ZP)(),
+        A = (0, i.ap)(L),
+        j = u(g),
+        E = d(g, A),
+        O = null != C ? C : p(A, g);
     return (0, n.jsxs)('div', {
         className: l.circleContainer,
         children: [
@@ -62,7 +62,7 @@ t.Z = (e) => {
                 className: l.circleSVG,
                 children: [
                     (0, n.jsx)('circle', {
-                        className: C === o.Qo.NITRO_GEM || C === o.Qo.AVATAR_DECO ? l.baseProgressCircle : void 0,
+                        className: g === o.Qo.NITRO_GEM || g === o.Qo.AVATAR_DECO ? l.baseProgressCircle : void 0,
                         fill: 'transparent',
                         strokeWidth: x,
                         r: ''.concat(_),
@@ -75,9 +75,9 @@ t.Z = (e) => {
                         stroke: O,
                         strokeWidth: x,
                         strokeLinecap: 'round',
-                        strokeDasharray: ''.concat(h, ' ').concat(h),
+                        strokeDasharray: ''.concat(m, ' ').concat(m),
                         className: c,
-                        style: { strokeDashoffset: (1 - m / 100) * h },
+                        style: { strokeDashoffset: (1 - h / 100) * m },
                         r: ''.concat(_),
                         cx: '50%',
                         cy: '50%'

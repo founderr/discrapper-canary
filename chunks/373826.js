@@ -30,7 +30,7 @@ function u(e) {
     return null != n
         ? (0, r.jsx)(i.Clickable, {
               onClick: n,
-              className: l.clickable,
+              className: l.clickableText,
               children: f()
           })
         : f();

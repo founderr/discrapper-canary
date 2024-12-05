@@ -44,11 +44,11 @@ let O = new T.Z('CacheStore'),
     L = 0,
     U = !1,
     D = !1,
-    G = !1;
-function H(e) {
+    H = !1;
+function V(e) {
     O.log('Clearing cache store'), (L = Date.now()), d.K.remove(M.FsG), d.K.remove(M.ihW), d.K.remove(M.O42), (k = 'no-cache'), 'CLEAR_CACHES' === e.type && e.preventWritingCachesAgainThisSession && (y = !0);
 }
-async function V(e, t, n) {
+async function G(e, t, n) {
     let i = performance.now();
     if (null == e || null == n)
         return (
@@ -85,7 +85,7 @@ async function F(e, t, n) {
     let o = null !== (i = A.Z.getGuildId()) && void 0 !== i ? i : null,
         d = null !== (r = R.Z.getChannelId()) && void 0 !== r ? r : null,
         g = performance.now(),
-        m = I.Z.loadCachedMessages.measureAsyncWithoutNesting(() => V(e, o, d)),
+        m = I.Z.loadCachedMessages.measureAsyncWithoutNesting(() => G(e, o, d)),
         f = I.Z.fetchGuildCache.measureAsync(() => z(e, n)),
         p = I.Z.fetchGuildCache.measureAsync(() => Y(e, n)),
         _ = null != e ? l.Z.timeAsync('\uD83D\uDCBE', 'cache: private_channels', () => C.Z.getAsync(e, null)) : Promise.resolve([]),
@@ -359,7 +359,7 @@ class J extends (i = c.ZP.Store) {
         return L;
     }
     canWriteCaches(e) {
-        return (0, j.$8)() ? (y ? (O.log('Not writing cache because caches cleared'), !1) : !!e || !!G || (O.log('Not writing cache because never connected'), !1)) : (O.log('Not writing cache because not authenticated'), !1);
+        return (0, j.$8)() ? (y ? (O.log('Not writing cache because caches cleared'), !1) : !!e || !!H || (O.log('Not writing cache because never connected'), !1)) : (O.log('Not writing cache because not authenticated'), !1);
     }
     async loadCacheAsync(e, t) {
         let n = (0, P.h)(t);
@@ -405,11 +405,11 @@ class J extends (i = c.ZP.Store) {
         w
             ? {
                   CONNECTION_OPEN: function () {
-                      return (D = !0), (G = !0), !1;
+                      return (D = !0), (H = !0), !1;
                   },
-                  LOGOUT: H,
+                  LOGOUT: V,
                   CONNECTION_CLOSED: function () {
-                      return (D = !1), (G = !0), !1;
+                      return (D = !1), (H = !0), !1;
                   },
                   CACHE_LOADED: function () {
                       U = !0;
@@ -420,7 +420,7 @@ class J extends (i = c.ZP.Store) {
                   CACHE_LOADED_LAZY_NO_CACHE: function () {
                       k = 'no-cache';
                   },
-                  CLEAR_CACHES: H,
+                  CLEAR_CACHES: V,
                   WRITE_CACHES: function () {
                       O.verbose('Writing cache now'), (L = Date.now()), (U = !0), d.K.remove(M.FsG), d.K.remove(M.O42), d.K.remove(M.ihW);
                   }

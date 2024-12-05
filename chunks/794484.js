@@ -84,14 +84,14 @@ t.Z = (e) => {
         }),
         L = k.some((e) => null != e.pillText),
         [U, D] = r.useState(null),
-        G = r.useRef(new l.qA());
+        H = r.useRef(new l.qA());
     return (0, i.jsxs)(i.Fragment, {
         children: [
             ((null == O ? void 0 : null === (t = O.freeBoost) || void 0 === t ? void 0 : t.name) === m.u.FREE_BOOST || (null == O ? void 0 : null === (n = O.tenureRewardCollectible) || void 0 === n ? void 0 : n.name) === m.u.TENURE_REWARD_COLLECTIBLE) &&
                 (0, i.jsx)(l.O_, {
                     ref: D,
                     className: E.confettiCanvas,
-                    environment: G.current
+                    environment: H.current
                 }),
             (0, i.jsxs)('div', {
                 ref: S,

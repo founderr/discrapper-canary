@@ -34,7 +34,7 @@ function d(e) {
     });
 }
 function m(e) {
-    let { title: n, titleIcon: t, titleId: l, description: a, children: m, className: p, errors: x, disabled: h = !1, hideDivider: f = !1, showBorder: v = !1, borderType: S, hasBackground: g = !1, forcedDivider: E = !1, showPremiumIcon: j = !1 } = e;
+    let { title: n, titleIcon: t, titleId: l, description: a, children: m, className: p, errors: x, disabled: h = !1, hideDivider: f = !1, showBorder: v = !1, borderType: g, hasBackground: S = !1, forcedDivider: E = !1, showPremiumIcon: j = !1 } = e;
     return (0, i.jsx)('div', {
         className: r()(u.customizationSection, p, {
             [u.disabled]: h,
@@ -46,8 +46,8 @@ function m(e) {
             className: u.customizationSectionBorder,
             backgroundClassName: u.customizationSectionBackground,
             isShown: v,
-            type: S,
-            hasBackground: g,
+            type: g,
+            hasBackground: S,
             children: [
                 (0, i.jsxs)(s.FormTitle, {
                     className: u.title,
