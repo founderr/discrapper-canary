@@ -31,13 +31,15 @@ function L(e) {
     let M = (e) => {
         let t = e.skuId;
         return (0, i.jsx)(
-            d.Z,
+            'div',
             {
-                skuId: t,
-                price: _.intl.string(_.t.QQsaCQ),
-                isSelected: t === (null == E ? void 0 : E.skuId),
-                onSelect: () => g(e),
-                className: j.giftSelectItem
+                className: j.giftSelectItem,
+                children: (0, i.jsx)(d.Z, {
+                    skuId: t,
+                    price: _.intl.string(_.t.QQsaCQ),
+                    isSelected: t === (null == E ? void 0 : E.skuId),
+                    onSelect: () => g(e)
+                })
             },
             t
         );
@@ -77,8 +79,7 @@ function L(e) {
                                 (0, i.jsx)(C.Z, {
                                     avatarDecorationOverride: { asset: E.assetId },
                                     user: y,
-                                    guildId: null,
-                                    avatarSize: o.AvatarSizes.SIZE_152
+                                    guildId: null
                                 })
                         })
                     ]
