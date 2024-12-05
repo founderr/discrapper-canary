@@ -1,6 +1,6 @@
 n.d(t, {
     P: function () {
-        return C;
+        return x;
     }
 });
 var r = n(200651),
@@ -9,108 +9,136 @@ var r = n(200651),
     l = n.n(i),
     s = n(404759),
     o = n.n(s),
-    c = n(866442),
-    d = n(481060),
-    u = n(429368),
-    m = n(724994),
-    h = n(388032),
-    p = n(474083);
-let f = o()((e) => {
+    c = n(91192),
+    d = n(536895),
+    u = n(866442),
+    m = n(481060),
+    h = n(209613),
+    p = n(429368),
+    f = n(724994),
+    g = n(388032),
+    C = n(474083);
+let v = o()((e) => {
         let t = !1;
-        if (null != e && (0, c.FX)(e)) {
-            let n = (0, c._i)(e);
-            null != n && (t = 0.3 >= (0, c.Bd)(n));
+        if (null != e && (0, u.FX)(e)) {
+            let n = (0, u._i)(e);
+            null != n && (t = 0.3 >= (0, u.Bd)(n));
         }
-        return t ? d.tokens.unsafe_rawColors.PRIMARY_700.css : d.tokens.unsafe_rawColors.PRIMARY_200.css;
+        return t ? m.tokens.unsafe_rawColors.PRIMARY_700.css : m.tokens.unsafe_rawColors.PRIMARY_200.css;
     }),
-    g = (e) => {
-        let { variantGroupProduct: t, variant: n, variantIndex: i, totalVariants: s, selectedVariantIndex: o, onEnter: c, onLeave: g, minimal: C } = e,
-            { isPurchased: v } = (0, m.L)(n),
-            b = a.useCallback(
+    b = (e) => {
+        let { variantGroupProduct: t, variant: n, variantIndex: i, totalVariants: s, selectedVariantIndex: o, onEnter: u, onLeave: h, minimal: b } = e,
+            { isPurchased: x } = (0, f.L)(n),
+            { onFocus: _, ...k } = (0, c.JA)('shop-variants-group-'.concat(t.storeListingId, '-').concat(i)),
+            I = a.useCallback(
                 (e) => {
-                    e.preventDefault(), e.stopPropagation(), (0, u.$)(t, i);
+                    e.preventDefault(), e.stopPropagation(), (0, p.$)(t, i), _();
                 },
-                [t, i]
+                [_, t, i]
             );
-        return (0, r.jsx)(d.Tooltip, {
-            text: h.intl.string(h.t['/bUsx8']),
+        return (0, r.jsx)(m.Tooltip, {
+            text: g.intl.string(g.t['/bUsx8']),
             'aria-label': !1,
-            shouldShow: !C && v,
+            shouldShow: !b && x,
             children: (e) =>
-                (0, r.jsx)(d.Clickable, {
+                (0, r.jsx)(m.Clickable, {
+                    ...k,
                     tag: 'li',
                     onMouseEnter: () => {
                         var t;
-                        c(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
+                        u(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
                     },
                     onMouseLeave: () => {
                         var t;
-                        g(), null === (t = e.onMouseLeave) || void 0 === t || t.call(e);
+                        h(), null === (t = e.onMouseLeave) || void 0 === t || t.call(e);
                     },
-                    onClick: b,
-                    className: p.colorVariant,
+                    onFocus: () => {
+                        var t;
+                        u(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
+                    },
+                    onBlur: () => {
+                        var t;
+                        h(), null === (t = e.onMouseLeave) || void 0 === t || t.call(e);
+                    },
+                    onClick: I,
+                    onKeyDown: (e) => {
+                        e.key === d.R8.ENTER && I(e);
+                    },
+                    className: C.colorVariant,
                     children: (0, r.jsx)('div', {
-                        className: l()(p.colorSwatch, {
-                            [p.open]: !C,
-                            [p.selected]: i === o
+                        className: l()(C.colorSwatch, {
+                            [C.open]: !b,
+                            [C.selected]: i === o
                         }),
                         style: {
                             backgroundColor: n.variantValue,
                             zIndex: s - i
                         },
-                        children: v
-                            ? (0, r.jsx)(d.CheckmarkSmallBoldIcon, {
-                                  className: p.purchasedIndicator,
-                                  color: f(n.variantValue)
+                        children: x
+                            ? (0, r.jsx)(m.CheckmarkSmallBoldIcon, {
+                                  className: C.purchasedIndicator,
+                                  color: v(n.variantValue)
                               })
                             : null
                     })
                 })
         });
     },
-    C = (e) => {
-        var t, n, a;
-        let { variantGroupProduct: i, className: s, previewingVariantIndexProps: o, setIsHoveringOnSwitch: c, minimal: m, purchases: f } = e,
-            C = (0, u.o)(i, f),
-            v = o.previewingVariantIndex,
-            b = null === (t = i.variants) || void 0 === t ? void 0 : t[C],
-            x = null !== v ? (null === (n = i.variants) || void 0 === n ? void 0 : n[v]) : void 0;
-        if (null == b) return null;
-        let _ = null != x ? x.variantLabel : null == b ? void 0 : b.variantLabel;
-        return (0, r.jsxs)('div', {
-            className: l()(p.variantsPanel, s, { [p.minimalState]: m }),
-            onMouseEnter: () => (null == c ? void 0 : c(!0)),
-            onMouseLeave: () => (null == c ? void 0 : c(!1)),
-            children: [
-                (0, r.jsx)('ol', {
-                    className: p.variantsList,
-                    children:
-                        null === (a = i.variants) || void 0 === a
-                            ? void 0
-                            : a.map((e, t) => {
-                                  var n, a;
-                                  return (0, r.jsx)(
-                                      g,
-                                      {
-                                          variantGroupProduct: i,
-                                          variant: e,
-                                          variantIndex: t,
-                                          selectedVariantIndex: C,
-                                          totalVariants: null !== (a = null === (n = i.variants) || void 0 === n ? void 0 : n.length) && void 0 !== a ? a : 0,
-                                          onEnter: () => o.handleEntering(t),
-                                          onLeave: o.handleLeaving,
-                                          minimal: m
-                                      },
-                                      t
-                                  );
-                              })
-                }),
-                (0, r.jsx)(d.Text, {
-                    variant: 'text-xs/medium',
-                    color: 'text-secondary',
-                    className: p.variantLabel,
-                    children: m ? h.intl.string(h.t.wbgaj4) : _
-                })
-            ]
+    x = (e) => {
+        var t, n;
+        let { variantGroupProduct: a, className: i, previewingVariantIndexProps: s, setIsHoveringOnSwitch: o, minimal: u, purchases: f } = e,
+            v = (0, p.o)(a, f),
+            x = s.previewingVariantIndex,
+            _ = null === (t = a.variants) || void 0 === t ? void 0 : t[v],
+            k = null !== x ? (null === (n = a.variants) || void 0 === n ? void 0 : n[x]) : void 0,
+            I = (0, h.Z)('shop-variants-group-'.concat(a.storeListingId), d.hy.HORIZONTAL);
+        if (null == _) return null;
+        let j = null != k ? k.variantLabel : null == _ ? void 0 : _.variantLabel;
+        return (0, r.jsx)(c.bG, {
+            navigator: I,
+            children: (0, r.jsx)(c.SJ, {
+                children: (e) => {
+                    var t;
+                    let { ref: n, ...c } = e;
+                    return (0, r.jsxs)('div', {
+                        ref: n,
+                        ...c,
+                        className: l()(C.variantsPanel, i, { [C.minimalState]: u }),
+                        onMouseEnter: () => (null == o ? void 0 : o(!0)),
+                        onMouseLeave: () => (null == o ? void 0 : o(!1)),
+                        children: [
+                            (0, r.jsx)('ol', {
+                                className: C.variantsList,
+                                children:
+                                    null === (t = a.variants) || void 0 === t
+                                        ? void 0
+                                        : t.map((e, t) => {
+                                              var n, i;
+                                              return (0, r.jsx)(
+                                                  b,
+                                                  {
+                                                      variantGroupProduct: a,
+                                                      variant: e,
+                                                      variantIndex: t,
+                                                      selectedVariantIndex: v,
+                                                      totalVariants: null !== (i = null === (n = a.variants) || void 0 === n ? void 0 : n.length) && void 0 !== i ? i : 0,
+                                                      onEnter: () => s.handleEntering(t),
+                                                      onLeave: s.handleLeaving,
+                                                      minimal: u
+                                                  },
+                                                  t
+                                              );
+                                          })
+                            }),
+                            (0, r.jsx)(m.Text, {
+                                variant: 'text-xs/medium',
+                                color: 'text-secondary',
+                                className: C.variantLabel,
+                                children: u ? g.intl.string(g.t.wbgaj4) : j
+                            })
+                        ]
+                    });
+                }
+            })
         });
     };
