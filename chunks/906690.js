@@ -1,9 +1,9 @@
 n.d(t, {
     JY: function () {
-        return p;
+        return h;
     },
     yl: function () {
-        return g;
+        return E;
     }
 });
 var r = n(704215),
@@ -13,12 +13,13 @@ var r = n(704215),
     o = n(981631),
     l = n(388032),
     u = n(663211),
-    c = n(955604),
-    d = n(865338),
-    f = n(692557),
-    _ = n(430502);
-let p = 1,
-    h = [
+    c = n(14432),
+    d = n(955604),
+    f = n(865338),
+    _ = n(692557),
+    p = n(430502);
+let h = 1,
+    m = [
         {
             skuId: '1301993378484850769',
             assetId: 'a_b1da12c72766c550c1759bf5c9dc6c7a'
@@ -32,13 +33,13 @@ let p = 1,
             assetId: 'a_65cce62b814c5d0c17ee2be00e5f2f77'
         }
     ];
-function m(e, t) {
-    return t ? (e ? f.Z : _.Z) : e ? c.Z : d.Z;
+function g(e, t) {
+    return t ? (e ? _.Z : p.Z) : e ? d.Z : f.Z;
 }
-let g = {
-    dismissibleContentVersion: p,
-    rewards: h,
-    rewardAssetIdMap: (0, a.YV)(h),
+let E = {
+    dismissibleContentVersion: h,
+    rewards: m,
+    rewardAssetIdMap: (0, a.YV)(m),
     eligiblePlanIds: [s.Xh.PREMIUM_YEAR_TIER_2, s.Xh.PREMIUM_MONTH_TIER_2],
     chatIconAnimationData: () => n(485542),
     firstTimeNotice: {
@@ -53,7 +54,7 @@ let g = {
     },
     reminderNotice: {
         dismissibleContent: r.z.GIFTING_PROMOTION_REMINDER,
-        getImageUrl: m,
+        getImageUrl: g,
         title: () => l.intl.string(l.t.MzahXV),
         description: () => l.intl.formatToPlainString(l.t.Ls1ZSU, {}),
         cta: () => l.intl.string(l.t.RzWDqa),
@@ -70,7 +71,7 @@ let g = {
         heading: () => l.intl.string(l.t['FNVJ4+']),
         subheading: (e) => l.intl.formatToPlainString(l.t.IKZTRE, { optionCount: e }),
         gradient: ['#F6CFC6', '#008D4B'],
-        getImageUrl: m
+        getImageUrl: g
     },
     giftPurchaseConfirmation: {
         yearGiftText: l.t.N5nBuL,
@@ -79,6 +80,13 @@ let g = {
     },
     planSelectionBanner: {
         body: (e) => (e > 1 ? l.intl.formatToPlainString(l.t.XMBaKy, { optionCount: e }) : l.intl.string(l.t.pOmOBQ)),
-        getImageUrl: m
+        getImageUrl: g
+    },
+    billingSettingsMarketingBanner: {
+        getAnimatedImageData: () => n(974465),
+        getStaticImageUrl: () => u.Z,
+        getBackgroundImageUrl: () => c.Z,
+        title: () => l.intl.string(l.t.Q5E8qq),
+        body: () => l.intl.formatToPlainString(l.t.iX7i29, {})
     }
 };
