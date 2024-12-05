@@ -5022,6 +5022,25 @@ let { Themes: a } = r(15202).V,
                 opacity: 1
             }
         },
+        REDESIGN_BUTTON_PREMIUM_PRIMARY_PINK_FOR_GRADIENT: {
+            category: 'generic',
+            [a.DARK]: {
+                raw: 'PREMIUM_TIER_2_PINK_FOR_GRADIENTS',
+                opacity: 1
+            },
+            [a.LIGHT]: {
+                raw: 'PREMIUM_TIER_2_PINK_FOR_GRADIENTS',
+                opacity: 1
+            },
+            [a.MIDNIGHT]: {
+                raw: 'PREMIUM_TIER_2_PINK_FOR_GRADIENTS',
+                opacity: 1
+            },
+            [a.DARKER]: {
+                raw: 'PREMIUM_TIER_2_PINK_FOR_GRADIENTS',
+                opacity: 1
+            }
+        },
         REDESIGN_BUTTON_PREMIUM_PRIMARY_PRESSED_BACKGROUND: {
             category: 'generic',
             [a.DARK]: {
@@ -5044,19 +5063,38 @@ let { Themes: a } = r(15202).V,
         REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT: {
             category: 'generic',
             [a.DARK]: {
-                raw: 'PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS',
+                raw: 'PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS',
                 opacity: 1
             },
             [a.LIGHT]: {
-                raw: 'PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS',
+                raw: 'PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS',
                 opacity: 1
             },
             [a.MIDNIGHT]: {
-                raw: 'PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS',
+                raw: 'PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS',
                 opacity: 1
             },
             [a.DARKER]: {
-                raw: 'PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS',
+                raw: 'PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS',
+                opacity: 1
+            }
+        },
+        REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2: {
+            category: 'generic',
+            [a.DARK]: {
+                raw: 'PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2',
+                opacity: 1
+            },
+            [a.LIGHT]: {
+                raw: 'PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2',
+                opacity: 1
+            },
+            [a.MIDNIGHT]: {
+                raw: 'PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2',
+                opacity: 1
+            },
+            [a.DARKER]: {
+                raw: 'PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2',
                 opacity: 1
             }
         },
