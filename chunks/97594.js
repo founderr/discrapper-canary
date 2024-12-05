@@ -16,21 +16,21 @@ var i = t(200651),
     d = t(212459),
     h = t(730606),
     m = t(860153),
-    f = t(981631),
-    p = t(388032),
+    p = t(981631),
+    f = t(388032),
     g = t(176598);
 function x(e) {
     let { onClose: n, items: t, startingIndex: a, onIndexChange: x, shouldRedactExplicitContent: _, shouldHideMediaOptions: C = !1, className: S, transitionState: v, ...y } = e,
         [E, I] = r.useState(null != a ? a : 0),
         [b, L] = r.useState(!1),
-        [M, A] = r.useState(!0),
-        [j, O] = r.useState(void 0);
+        [M, j] = r.useState(!0),
+        [A, O] = r.useState(void 0);
     r.useEffect(() => {
         if (null != n)
             return (
-                c.S.subscribe(f.CkL.MEDIA_MODAL_CLOSE, n),
+                c.S.subscribe(p.CkL.MEDIA_MODAL_CLOSE, n),
                 () => {
-                    c.S.unsubscribe(f.CkL.MEDIA_MODAL_CLOSE, n);
+                    c.S.unsubscribe(p.CkL.MEDIA_MODAL_CLOSE, n);
                 }
             );
     }, [n]),
@@ -55,35 +55,38 @@ function x(e) {
                 zoomed: b,
                 setZoomed: L,
                 topBarVisible: M,
-                setTopBarVisible: A
+                setTopBarVisible: j
             }),
             [b, M]
         ),
         w = r.useCallback(() => {
-            !M && A(!0), clearTimeout(j), O(setTimeout(() => A(!1), 1000));
-        }, [M, j]),
-        k = r.useCallback(() => {
+            !M && j(!0), clearTimeout(A), O(setTimeout(() => j(!1), 1000));
+        }, [M, A]),
+        N = r.useCallback(() => {
             w(), null == n || n();
         }, [w, n]),
-        P = t[E];
+        k = t[E];
     return (0, i.jsx)(o.ThemeProvider, {
-        theme: f.BRd.DARK,
+        theme: p.BRd.DARK,
         children: (e) =>
             (0, i.jsx)(o.ModalRoot, {
                 hideShadow: !0,
-                className: l()(g.carouselModal, e),
+                className: l()(g.carouselModal, e, {
+                    [g.opening]: null != v && v <= o.ModalTransitionState.ENTERED,
+                    [g.closing]: null != v && v >= o.ModalTransitionState.EXITING
+                }),
                 transitionState: v,
                 ...y,
                 size: o.ModalSize.DYNAMIC,
                 fullscreenOnMobile: !1,
                 onMouseMove: w,
-                onClick: k,
-                'aria-label': p.intl.string(p.t.AMTX3t),
+                onClick: N,
+                'aria-label': f.intl.string(f.t.AMTX3t),
                 children: (0, i.jsxs)(d.z.Provider, {
                     value: R,
                     children: [
                         (0, i.jsx)(m.Z, {
-                            item: P,
+                            item: k,
                             onClose: n
                         }),
                         (0, i.jsx)(h.Z, {

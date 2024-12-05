@@ -16,8 +16,8 @@ var i = t(200651),
     d = t(481060),
     h = t(95398),
     m = t(247206),
-    f = t(134432),
-    p = t(169525),
+    p = t(134432),
+    f = t(169525),
     g = t(585483),
     x = t(212459),
     _ = t(73249),
@@ -46,7 +46,7 @@ function L(e) {
                   h.Z,
                   {
                       type: h.Z.Types.ATTACHMENT,
-                      reason: p.wk.EXPLICIT_CONTENT,
+                      reason: f.wk.EXPLICIT_CONTENT,
                       obscured: !0,
                       isSingleMosaicItem: !0,
                       onToggleObscurity: u,
@@ -65,31 +65,31 @@ function L(e) {
 }
 function M(e) {
     var n;
-    let { items: t, onIndexChange: a, startIndex: o = 0, shouldRedactExplicitContent: h = !1, shouldHideMediaOptions: p = !1 } = e,
+    let { items: t, onIndexChange: a, startIndex: o = 0, shouldRedactExplicitContent: h = !1, shouldHideMediaOptions: f = !1 } = e,
         [I, M] = r.useState(o),
-        A = r.useRef(o),
-        [j, O] = r.useState([]),
+        j = r.useRef(o),
+        [A, O] = r.useState([]),
         { zoomed: T, setZoomed: R } = (0, x.Y)();
     r.useEffect(() => {
         var e, n;
         let i = (((I + 1) % (e = t.length)) + e) % e;
         let r = (((I - 1) % (n = t.length)) + n) % n;
-        b(t[i]) && (0, f.po)(t[i].url), b(t[r]) && (0, f.po)(t[r].url);
+        b(t[i]) && (0, p.po)(t[i].url), b(t[r]) && (0, p.po)(t[r].url);
     }, [I, t]);
     let w = r.useCallback(
         (e) => {
             var n;
-            let i = e - A.current;
-            M((e = ((e % (n = t.length)) + n) % n)), (A.current = e), O((e) => [...e, i]), null == a || a(e), R(!1);
+            let i = e - j.current;
+            M((e = ((e % (n = t.length)) + n) % n)), (j.current = e), O((e) => [...e, i]), null == a || a(e), R(!1);
         },
         [a, t, R]
     );
     r.useEffect(() => {
         let e = s()(() => {
-                w(A.current + 1);
+                w(j.current + 1);
             }, 300),
             n = s()(() => {
-                w(A.current - 1);
+                w(j.current - 1);
             }, 300);
         return (
             g.S.subscribe(v.CkL.MODAL_CAROUSEL_NEXT, e),
@@ -99,29 +99,29 @@ function M(e) {
             }
         );
     }, [w, R]);
-    let k = t[I],
-        P = (0, m.KP)(
+    let N = t[I],
+        k = (0, m.KP)(
             {
                 type: m.lJ.GenericMedia,
-                media: k
+                media: N
             },
             h
         ),
-        D = p
+        P = f
             ? (e) => {
                   e.stopPropagation(), e.preventDefault();
               }
             : void 0,
-        N = (function (e) {
+        D = (function (e) {
             if (0 === e) return ['translateX(0)'];
             let n = ['translateX(100px)', 'translateX(-100px)'];
             return e > 0 ? n : n.toReversed();
-        })(null !== (n = j[j.length - 1]) && void 0 !== n ? n : 0),
-        Z = (0, d.useTransition)(k, {
-            key: k.url,
+        })(null !== (n = A[A.length - 1]) && void 0 !== n ? n : 0),
+        Z = (0, d.useTransition)(N, {
+            key: N.url,
             from: {
                 opacity: 0,
-                transform: N[0]
+                transform: D[0]
             },
             enter: {
                 opacity: 1,
@@ -129,7 +129,7 @@ function M(e) {
             },
             leave: {
                 opacity: 0,
-                transform: N[N.length - 1]
+                transform: D[D.length - 1]
             },
             config: {
                 friction: 20,
@@ -143,15 +143,18 @@ function M(e) {
                 className: E.wrapper,
                 children: [
                     B
-                        ? (0, i.jsx)(d.CircleIconButton, {
-                              className: l()(E.navPrev, { [E.hidden]: T }),
-                              size: d.CircleIconButtonSizes.SIZE_36,
-                              onClick: (e) => {
-                                  e.stopPropagation(), g.S.dispatch(v.CkL.MODAL_CAROUSEL_PREV);
-                              },
-                              icon: (0, i.jsx)(c.j, {}),
-                              tooltip: y.intl.string(y.t.vgfxaG),
-                              color: d.CircleIconButtonColors.PRIMARY
+                        ? (0, i.jsx)('div', {
+                              className: 'fadeInWrapper',
+                              children: (0, i.jsx)(d.CircleIconButton, {
+                                  className: l()(E.navPrev, { [E.hidden]: T }),
+                                  size: d.CircleIconButtonSizes.SIZE_36,
+                                  onClick: (e) => {
+                                      e.stopPropagation(), g.S.dispatch(v.CkL.MODAL_CAROUSEL_PREV);
+                                  },
+                                  icon: (0, i.jsx)(c.j, {}),
+                                  tooltip: y.intl.string(y.t.vgfxaG),
+                                  color: d.CircleIconButtonColors.PRIMARY
+                              })
                           })
                         : null,
                     (0, i.jsx)('div', {
@@ -164,7 +167,7 @@ function M(e) {
                                         style: e,
                                         className: E.mediaWrapper,
                                         children: (0, i.jsx)(L, {
-                                            isObscured: !T && P,
+                                            isObscured: !T && k,
                                             src: n.url,
                                             children: (e) =>
                                                 (0, i.jsx)(i.Fragment, {
@@ -174,7 +177,7 @@ function M(e) {
                                                         children: (0, i.jsx)(S.Z, {
                                                             media: n,
                                                             obscured: e,
-                                                            onContextMenu: D
+                                                            onContextMenu: P
                                                         })
                                                     })
                                                 })
@@ -186,36 +189,42 @@ function M(e) {
                         )
                     }),
                     B
-                        ? (0, i.jsx)(d.CircleIconButton, {
-                              className: l()(E.navNext, { [E.hidden]: T }),
-                              size: d.CircleIconButtonSizes.SIZE_36,
-                              onClick: (e) => {
-                                  e.stopPropagation(), g.S.dispatch(v.CkL.MODAL_CAROUSEL_NEXT);
-                              },
-                              icon: (0, i.jsx)(d.ArrowLargeRightIcon, {}),
-                              tooltip: y.intl.string(y.t.XiOHRU),
-                              color: d.CircleIconButtonColors.PRIMARY
+                        ? (0, i.jsx)('div', {
+                              className: 'fadeInWrapper',
+                              children: (0, i.jsx)(d.CircleIconButton, {
+                                  className: l()(E.navNext, { [E.hidden]: T }),
+                                  size: d.CircleIconButtonSizes.SIZE_36,
+                                  onClick: (e) => {
+                                      e.stopPropagation(), g.S.dispatch(v.CkL.MODAL_CAROUSEL_NEXT);
+                                  },
+                                  icon: (0, i.jsx)(d.ArrowLargeRightIcon, {}),
+                                  tooltip: y.intl.string(y.t.XiOHRU),
+                                  color: d.CircleIconButtonColors.PRIMARY
+                              })
                           })
                         : null
                 ]
             }),
-            (0, i.jsxs)('div', {
-                className: l()(E.chromeWrapper, { [E.hidden]: T }),
-                children: [
-                    B &&
-                        (0, i.jsx)(C.Z, {
-                            items: t,
-                            currentIndex: I,
-                            onGalleryItemClick: w
-                        }),
-                    (0, i.jsx)('div', {
-                        className: E.actionButtonContainer,
-                        children: (0, i.jsx)(_.Z, {
-                            item: k,
-                            hideMediaOptions: ('IMAGE' === k.type && null == k.original) || p
+            (0, i.jsx)('div', {
+                className: l()('fadeInWrapper', E.fadeInWrapper),
+                children: (0, i.jsxs)('div', {
+                    className: l()(E.chromeWrapper, { [E.hidden]: T }),
+                    children: [
+                        B &&
+                            (0, i.jsx)(C.Z, {
+                                items: t,
+                                currentIndex: I,
+                                onGalleryItemClick: w
+                            }),
+                        (0, i.jsx)('div', {
+                            className: E.actionButtonContainer,
+                            children: (0, i.jsx)(_.Z, {
+                                item: N,
+                                hideMediaOptions: ('IMAGE' === N.type && null == N.original) || f
+                            })
                         })
-                    })
-                ]
+                    ]
+                })
             })
         ]
     });
