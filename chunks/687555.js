@@ -10,123 +10,122 @@ var i = r(200651),
     c = r(481060),
     x = r(232567),
     h = r(461745),
-    p = r(434650),
-    f = r(210887),
-    u = r(51144),
-    m = r(281494),
-    _ = r(276444),
-    j = r(955839),
-    g = r(529840),
-    L = r(388032),
-    S = r(854540),
-    v = r(724531),
-    y = r(99713),
-    N = r(334202),
-    w = r(7234);
-function Z(e) {
-    let { numOfSelectedUsers: t } = e,
-        r = (0, d.e7)([_.Z], () => _.Z.getReferralsRemaining());
-    o()(null != r, 'Referrals remaining should not be null');
-    let s = r - t,
-        a = L.intl.formatToPlainString(L.t.GcKM5e, { numReferrals: r });
-    return (
-        s < r && ((a = L.intl.formatToPlainString(L.t.hZnIz8, { numFriends: s })), 1 === s && (a = L.intl.string(L.t.UfPk1t)), 0 === s && (a = L.intl.formatToPlainString(L.t['3PJw6e'], { numReferrals: r }))),
-        (0, i.jsxs)(i.Fragment, {
-            children: [
-                (0, i.jsxs)('div', {
-                    className: S.title,
-                    children: [
-                        (0, i.jsx)(M, { className: S.titleImage }),
-                        (0, i.jsx)(c.Heading, {
-                            variant: 'heading-xl/bold',
-                            children: L.intl.string(L.t.Lm2nFR)
-                        })
-                    ]
-                }),
-                (0, i.jsx)(c.Text, {
-                    className: S.description,
-                    variant: 'text-md/medium',
-                    color: 'header-secondary',
-                    children: a
-                })
-            ]
-        })
-    );
-}
-function F() {
+    p = r(480466),
+    f = r(434650),
+    u = r(210887),
+    m = r(51144),
+    _ = r(281494),
+    j = r(276444),
+    g = r(955839),
+    L = r(514020),
+    S = r(529840),
+    v = r(388032),
+    y = r(854540),
+    N = r(724531),
+    Z = r(99713),
+    w = r(334202),
+    F = r(7234);
+function R(e) {
+    let { numOfSelectedUsers: t, anySelected: r } = e,
+        s = (0, L.Z)({
+            numNewSelected: t,
+            anySelected: r
+        });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)('div', {
-                className: S.title,
-                children: (0, i.jsx)(c.Heading, {
-                    variant: 'heading-xl/bold',
-                    children: L.intl.string(L.t['PFp+aG'])
-                })
+            (0, i.jsxs)('div', {
+                className: y.title,
+                children: [
+                    (0, i.jsx)(A, { className: y.titleImage }),
+                    (0, i.jsx)(c.Heading, {
+                        variant: 'heading-xl/bold',
+                        children: v.intl.string(v.t.Lm2nFR)
+                    })
+                ]
             }),
             (0, i.jsx)(c.Text, {
-                className: S.description,
+                className: y.description,
                 variant: 'text-md/medium',
                 color: 'header-secondary',
-                children: L.intl.string(L.t.eBIGBw)
+                children: s
             })
         ]
     });
 }
-function R() {
+function U() {
+    return (0, i.jsxs)(i.Fragment, {
+        children: [
+            (0, i.jsx)('div', {
+                className: y.title,
+                children: (0, i.jsx)(c.Heading, {
+                    variant: 'heading-xl/bold',
+                    children: v.intl.string(v.t['PFp+aG'])
+                })
+            }),
+            (0, i.jsx)(c.Text, {
+                className: y.description,
+                variant: 'text-md/medium',
+                color: 'header-secondary',
+                children: v.intl.string(v.t.eBIGBw)
+            })
+        ]
+    });
+}
+function M() {
     return (0, i.jsx)('div', {
-        className: S.erroredContent,
+        className: y.erroredContent,
         children: (0, i.jsx)(c.Image, {
-            src: N,
+            src: w,
             width: 225,
             height: 160
         })
     });
 }
-function U(e) {
+function E(e) {
     let { onClose: t } = e;
     return (0, i.jsxs)('div', {
-        className: S.erroredContainer,
+        className: y.erroredContainer,
         children: [
             (0, i.jsxs)('div', {
-                className: n()(S.erroredHeader, S.headerSeparator),
+                className: n()(y.erroredHeader, y.headerSeparator),
                 children: [
                     (0, i.jsx)('div', {
-                        className: S.title,
+                        className: y.title,
                         children: (0, i.jsx)(c.Heading, {
                             variant: 'heading-xl/bold',
-                            children: L.intl.string(L.t.a9HOKi)
+                            children: v.intl.string(v.t.a9HOKi)
                         })
                     }),
                     (0, i.jsx)(c.Text, {
-                        className: S.description,
+                        className: y.description,
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        children: L.intl.string(L.t.JjjeZW)
+                        children: v.intl.string(v.t.JjjeZW)
                     })
                 ]
             }),
             (0, i.jsx)('div', {
-                className: S.erroredContent,
+                className: y.erroredContent,
                 children: (0, i.jsx)(c.Image, {
-                    src: y,
+                    src: Z,
                     width: 178,
                     height: 190
                 })
             }),
             (0, i.jsx)('div', {
-                className: n()(S.footer, S.footerSeparator),
+                className: n()(y.footer, y.footerSeparator),
                 children: (0, i.jsx)(c.Button, {
-                    className: S.submit,
+                    className: y.submit,
                     onClick: () => t(),
-                    children: L.intl.string(L.t.wpSqAQ)
+                    children: v.intl.string(v.t.wpSqAQ)
                 })
             })
         ]
     });
 }
-function E(e) {
+function B(e) {
     let { onShare: t } = e,
-        r = (0, d.e7)([_.Z], () => _.Z.getRecipientStatus()),
+        r = (0, d.e7)([j.Z], () => j.Z.getRecipientStatus()),
         [a, l] = s.useState([]),
         [o, C] = s.useState(new Set());
     return (
@@ -134,7 +133,7 @@ function E(e) {
             (async () => {
                 let e = [];
                 for (let [t, i] of r)
-                    if (i === m.Fe.PENDING) {
+                    if (i === _.Fe.PENDING) {
                         let r = await (0, x.PR)(t);
                         e.push(r);
                     }
@@ -142,34 +141,34 @@ function E(e) {
             })();
         }, [r]),
         (0, i.jsxs)('div', {
-            className: S.remindContainer,
+            className: y.remindContainer,
             children: [
                 (0, i.jsxs)('div', {
-                    className: n()(S.remindHeader, S.headerSeparator),
+                    className: n()(y.remindHeader, y.headerSeparator),
                     children: [
                         (0, i.jsxs)('div', {
-                            className: S.title,
+                            className: y.title,
                             children: [
-                                (0, i.jsx)(M, { className: S.titleImage }),
+                                (0, i.jsx)(A, { className: y.titleImage }),
                                 (0, i.jsx)(c.Heading, {
                                     variant: 'heading-xl/bold',
-                                    children: L.intl.string(L.t.SY9tyM)
+                                    children: v.intl.string(v.t.SY9tyM)
                                 })
                             ]
                         }),
                         (0, i.jsx)(c.Text, {
-                            className: S.description,
+                            className: y.description,
                             variant: 'text-md/medium',
                             color: 'header-secondary',
-                            children: L.intl.string(L.t.mPmPrq)
+                            children: v.intl.string(v.t.mPmPrq)
                         })
                     ]
                 }),
                 (0, i.jsx)('div', {
-                    className: S.list,
+                    className: y.list,
                     children: a.map((e) =>
                         (0, i.jsx)(
-                            g.Z,
+                            S.Z,
                             {
                                 user: e,
                                 checked: o.has(e),
@@ -185,83 +184,76 @@ function E(e) {
                     )
                 }),
                 (0, i.jsx)('div', {
-                    className: n()(S.footer, S.footerSeparator),
+                    className: n()(y.footer, y.footerSeparator),
                     children: (0, i.jsx)(c.Button, {
-                        className: S.submit,
+                        className: y.submit,
                         onClick: () => t([...o.values()]),
-                        children: L.intl.string(L.t.ItpQxs)
+                        children: v.intl.string(v.t.ItpQxs)
                     })
                 })
             ]
         })
     );
 }
-function M(e) {
+function A(e) {
     let { className: t } = e;
-    return 'light' === (0, d.e7)([f.Z], () => f.Z.theme)
+    return 'light' === (0, d.e7)([u.Z], () => u.Z.theme)
         ? (0, i.jsx)(c.Image, {
               className: t,
-              src: v,
+              src: N,
               width: 55,
               height: 38
           })
         : (0, i.jsx)(c.Image, {
               className: t,
-              src: w,
+              src: F,
               width: 55,
               height: 38
           });
 }
 t.Z = function (e) {
     let { onClose: t, onShare: r } = e,
-        a = (0, d.e7)([_.Z], () => _.Z.getReferralsRemaining()),
+        a = (0, d.e7)([j.Z], () => j.Z.getReferralsRemaining()),
         [l, x] = s.useState(''),
-        f = (function (e, t) {
-            let [r, i] = s.useState(e);
-            return (
-                s.useEffect(() => {
-                    let r = setTimeout(() => {
-                        i(e);
-                    }, t);
-                    return () => {
-                        clearTimeout(r);
-                    };
-                }, [e, t]),
-                r
-            );
-        })(l, 400),
-        [m, v] = s.useState(new Map()),
+        u = (0, p.Z)(l, 400),
+        [_, L] = s.useState(new Map()),
         {
-            eligibleUsers: y,
-            fetchUsers: N,
+            eligibleUsers: N,
+            fetchUsers: Z,
             hasError: w,
-            isFetching: M,
-            resendUsers: B
-        } = (0, j.q)({
-            searchQuery: f,
-            selectedUsers: m
-        });
+            isFetching: F,
+            resendUsers: A
+        } = (0, g.q)({
+            searchQuery: u,
+            selectedUsers: _
+        }),
+        k = s.useMemo(() => [..._.keys()].filter((e) => !A.has(e)), [_, A]);
     o()(null != a, 'Referrals remaining should not be null');
-    let A = (0, p.O)((e) => {
-        e && !M && N();
+    let I = (0, f.O)((e) => {
+        e && !F && Z();
     });
-    if (w) return (0, i.jsx)(U, { onClose: t });
-    if (0 === a) return (0, i.jsx)(E, { onShare: r });
-    let I = f.length > 0 && 0 === y.length;
+    if (w) return (0, i.jsx)(E, { onClose: t });
+    if (0 === a) return (0, i.jsx)(B, { onShare: r });
+    let O = u.length > 0 && 0 === N.length;
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsxs)('div', {
-                className: n()(S.header, S.headerSeparator),
+                className: n()(y.header, y.headerSeparator),
                 children: [
-                    I ? (0, i.jsx)(F, {}) : (0, i.jsx)(Z, { numOfSelectedUsers: m.size }),
+                    O
+                        ? (0, i.jsx)(U, {})
+                        : (0, i.jsx)(R, {
+                              numOfSelectedUsers: k.length,
+                              anySelected: _.size > 0
+                          }),
                     (0, i.jsx)(h.ZP, {
-                        className: S.searchbar,
+                        className: y.searchbar,
                         size: h.ZP.Sizes.MEDIUM,
-                        tags: [...m.values()].map((e) => u.ZP.getName(e)),
-                        placeholder: L.intl.string(L.t.Kd5RaG),
+                        tags: [..._.values()].map((e) => m.ZP.getName(e)),
+                        placeholder: v.intl.string(v.t.Kd5RaG),
                         query: l,
                         onRemoveTag: (e) => {
-                            v((t) => {
+                            L((t) => {
                                 let r = [...t.values()][e],
                                     i = new Map(t);
                                 return i.delete(r.id), i;
@@ -272,20 +264,20 @@ t.Z = function (e) {
                     })
                 ]
             }),
-            I
-                ? (0, i.jsx)(R, {})
+            O
+                ? (0, i.jsx)(M, {})
                 : (0, i.jsxs)(C.w0, {
-                      className: S.list,
+                      className: y.list,
                       children: [
-                          y.map((e) =>
+                          N.map((e) =>
                               (0, i.jsx)(
-                                  g.Z,
+                                  S.Z,
                                   {
-                                      disabled: [...m.values()].filter((e) => !B.has(e.id)).length >= a && !m.has(e.id) && !B.has(e.id),
-                                      checked: m.has(e.id),
+                                      disabled: [..._.values()].filter((e) => !A.has(e.id)).length >= a && !_.has(e.id) && !A.has(e.id),
+                                      checked: _.has(e.id),
                                       user: e,
                                       onChange: (e, t) => {
-                                          v((r) => {
+                                          L((r) => {
                                               let i = new Map(r);
                                               return t ? i.set(e.id, e) : i.delete(e.id), i;
                                           });
@@ -294,23 +286,23 @@ t.Z = function (e) {
                                   e.id
                               )
                           ),
-                          M && (0, i.jsx)(c.Spinner, {}),
-                          (0, i.jsx)('div', { ref: A })
+                          F && (0, i.jsx)(c.Spinner, {}),
+                          (0, i.jsx)('div', { ref: I })
                       ]
                   }),
             (0, i.jsx)('div', {
-                className: n()(S.footer, S.footerSeparator),
+                className: n()(y.footer, y.footerSeparator),
                 children: (0, i.jsx)(c.Button, {
-                    className: S.submit,
-                    disabled: 0 === m.size && !I,
+                    className: y.submit,
+                    disabled: 0 === _.size && !O,
                     onClick: () => {
-                        if (I) {
+                        if (O) {
                             t();
                             return;
                         }
-                        r([...m.values()]);
+                        r([..._.values()]);
                     },
-                    children: I ? L.intl.string(L.t.wpSqAQ) : L.intl.string(L.t.ItpQxs)
+                    children: O ? v.intl.string(v.t.wpSqAQ) : v.intl.string(v.t.ItpQxs)
                 })
             })
         ]
