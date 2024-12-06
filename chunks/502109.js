@@ -184,6 +184,7 @@ class N extends E {
         return this.renderButton({
             iconType: o.ZP.Types.G_PAY,
             buttonText: m.intl.string(m.t.p2jr2N),
+            submitting: !(0, c.isDesktop)() && this.state.submitting,
             ...e
         });
     }
