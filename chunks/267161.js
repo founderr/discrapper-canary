@@ -51,19 +51,21 @@ function T() {
         })
     );
 }
-function b() {
+function b(e) {
+    let { hasNotice: t } = e;
     r.useLayoutEffect(() => {
         E.ZP.setMinimumSize(v.J, v.N);
     }, []);
-    let e = S((e) => e.isOpen),
-        { hasBugReporterAccess: t } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
+    let n = S((e) => e.isOpen),
+        { hasBugReporterAccess: l } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     return (
         r.useLayoutEffect(() => {
             E.ZP.setMinimumSize(v.J, v.N);
         }, []),
         (0, i.jsx)(I.T, {
+            hasNotice: t,
             leading:
-                !e &&
+                !n &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Clickable, {
@@ -87,7 +89,7 @@ function b() {
                 }),
             title: !1,
             trailing: (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(p.Z, { className: N.button }), t ? (0, i.jsx)(h.Z, { className: N.button }) : (0, i.jsx)(u.Z, { className: N.button }), (0, i.jsx)(m.Z, { className: N.button })]
+                children: [(0, i.jsx)(p.Z, { className: N.button }), l ? (0, i.jsx)(h.Z, { className: N.button }) : (0, i.jsx)(u.Z, { className: N.button }), (0, i.jsx)(m.Z, { className: N.button })]
             })
         })
     );

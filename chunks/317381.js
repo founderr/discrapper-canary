@@ -65,72 +65,77 @@ function F(e) {
     return null != e ? e : '0';
 }
 function V(e) {
-    var t, n, i, a;
-    let { guildId: o, channelId: l, location: p, applicationId: E, launchId: I, compositeInstanceId: S, participants: y } = e,
-        N = (0, m.Z)(E);
-    if (null == N) return;
-    let D = null !== (n = O.get(l)) && void 0 !== n ? n : A,
-        L = 0 === D.length,
-        x = D.find((e) => e.applicationId === E),
-        w = y.map((e) => e.userId),
-        P = u.default.getId(),
-        M = w.some((e) => e === P),
-        k = null === (t = y.find((e) => e.userId === P)) || void 0 === t ? void 0 : t.sessionId,
-        G = y.some((e) => (0, g.J)(e)),
-        Z = C.get(E),
-        V = {
-            applicationId: E,
-            channelId: l,
-            guildId: o,
-            location: p,
-            launchId: I,
-            compositeInstanceId: S,
-            url: N,
-            userIds: new Set(w),
-            participants: y
+    var t, n, i, a, o, l, p;
+    let { guildId: E, channelId: I, location: S, applicationId: y, launchId: N, compositeInstanceId: L, participants: x } = e,
+        w = (0, m.Z)(y);
+    if (null == w) return;
+    let P = null !== (i = O.get(I)) && void 0 !== i ? i : A,
+        M = 0 === P.length,
+        k = P.find((e) => e.applicationId === y),
+        G = x.map((e) => e.userId),
+        Z = u.default.getId(),
+        V = G.some((e) => e === Z),
+        j = null === (t = x.find((e) => e.userId === Z)) || void 0 === t ? void 0 : t.sessionId,
+        Y = x.some((e) => (0, g.J)(e)),
+        K = C.get(y),
+        z = null === (n = D.get(H(I, y))) || void 0 === n ? void 0 : n.launchParams,
+        q = {
+            applicationId: y,
+            channelId: I,
+            guildId: E,
+            location: S,
+            launchId: N,
+            compositeInstanceId: L,
+            url: w,
+            userIds: new Set(G),
+            participants: x,
+            referrerId: null !== (a = null == K ? void 0 : K.referrerId) && void 0 !== a ? a : null == z ? void 0 : z.referrerId,
+            customId: null !== (o = null == K ? void 0 : K.customId) && void 0 !== o ? o : null == z ? void 0 : z.customId
         };
-    M &&
-        null != Z &&
-        C.set(Z.applicationId, {
-            ...Z,
-            ...V
+    V &&
+        null != K &&
+        C.set(K.applicationId, {
+            ...K,
+            ...q
         });
-    null != Z && l === Z.channelId && E === (null == Z ? void 0 : Z.applicationId) && ((!M && Array.from(Z.userIds).some((e) => e === P)) || !G)
-        ? (C.delete(E), _.S.dispatch(b.CkL.RELEASE_ACTIVITY_WEB_VIEW))
-        : M &&
-          (null == Z || Z.applicationId !== E || Z.channelId !== l) &&
-          k === u.default.getSessionId() &&
+    null != K && I === K.channelId && y === (null == K ? void 0 : K.applicationId) && ((!V && Array.from(K.userIds).some((e) => e === Z)) || !Y)
+        ? (C.delete(y), _.S.dispatch(b.CkL.RELEASE_ACTIVITY_WEB_VIEW))
+        : V &&
+          (null == K || K.applicationId !== y || K.channelId !== I) &&
+          j === u.default.getSessionId() &&
           (function (e) {
               var t, n;
-              let { channelId: i, applicationId: a, launchId: o, compositeInstanceId: l, location: p, participants: g, isFirstActivityInChannel: E, isStart: I } = e,
-                  S = (0, m.Z)(a),
-                  y = u.default.getSessionId();
-              if (null == S || null == y || (null === (t = C.get(a)) || void 0 === t ? void 0 : t.channelId) === i) return !1;
-              let A = c.Z.getChannel(i),
-                  N = null == A ? void 0 : A.getGuildId(),
-                  R = f.default.getCurrentUser();
-              if ((null == N && !(null !== (n = null == A ? void 0 : A.isPrivate()) && void 0 !== n && n)) || null == R) return !1;
+              let { channelId: i, applicationId: a, launchId: o, compositeInstanceId: l, location: p, participants: g, isFirstActivityInChannel: E, isStart: I, referrerId: S, customId: y } = e,
+                  A = (0, m.Z)(a),
+                  N = u.default.getSessionId();
+              if (null == A || null == N || (null === (t = C.get(a)) || void 0 === t ? void 0 : t.channelId) === i) return !1;
+              let R = c.Z.getChannel(i),
+                  O = null == R ? void 0 : R.getGuildId(),
+                  D = f.default.getCurrentUser();
+              if ((null == O && !(null !== (n = null == R ? void 0 : R.isPrivate()) && void 0 !== n && n)) || null == D) return !1;
               r = i;
-              let O = {
-                  guildId: N,
+              let L = {
+                  guildId: O,
                   channelId: i,
                   applicationId: a,
-                  url: S,
+                  url: A,
                   userIds: new Set(g.map((e) => e.userId)),
                   participants: g,
                   connectedSince: Date.now(),
                   launchId: o,
                   compositeInstanceId: l,
-                  location: p
+                  location: p,
+                  referrerId: S,
+                  customId: y
               };
-              C.set(a, O),
+              C.set(a, L),
                   _.S.dispatch(b.CkL.OPEN_EMBEDDED_ACTIVITY, {
                       channelId: i,
                       applicationId: a,
                       isFirstActivityInChannel: E,
                       isStart: I,
                       participants: g,
-                      embeddedActivity: O
+                      embeddedActivity: L
                   }),
                   (0, h.R)()
                       ? ((B = T.Ez.ACTIVITY_POPOUT_WINDOW),
@@ -140,19 +145,21 @@ function V(e) {
                       : (B = r !== d.Z.getChannelId() || (0, v.Z)(i) ? T.Ez.PIP : T.Ez.PANEL),
                   U.set(W(i, a), Date.now());
           })({
-              channelId: l,
-              applicationId: E,
-              launchId: I,
-              compositeInstanceId: S,
-              location: p,
-              participants: y,
-              isFirstActivityInChannel: L,
-              isStart: null == x
+              channelId: I,
+              applicationId: y,
+              launchId: N,
+              compositeInstanceId: L,
+              location: S,
+              participants: x,
+              isFirstActivityInChannel: M,
+              isStart: null == k,
+              referrerId: q.referrerId,
+              customId: q.customId
           });
-    let j = (null !== (i = O.get(l)) && void 0 !== i ? i : []).filter((e) => e.applicationId !== E),
-        H = F(o),
-        Y = (null !== (a = R.get(H)) && void 0 !== a ? a : []).filter((e) => !(e.applicationId === E && e.channelId === l));
-    w.length > 0 && (j.push(V), Y.push(V)), O.set(l, j), R.set(H, Y);
+    let Q = (null !== (l = O.get(I)) && void 0 !== l ? l : []).filter((e) => e.applicationId !== y),
+        X = F(E),
+        J = (null !== (p = R.get(X)) && void 0 !== p ? p : []).filter((e) => !(e.applicationId === y && e.channelId === I));
+    G.length > 0 && (Q.push(q), J.push(q)), O.set(I, Q), R.set(X, J);
 }
 function j(e) {
     let t = e.activity_instances;
@@ -351,10 +358,11 @@ let z = new K(s.Z, {
         }
     },
     EMBEDDED_ACTIVITY_LAUNCH_START: function (e) {
-        let { applicationId: t, channelId: n, componentId: r, commandOrigin: i } = e;
+        let { applicationId: t, channelId: n, componentId: r, commandOrigin: i, launchParams: a } = e;
         D.set(H(n, t), {
             isLaunching: !0,
-            componentId: r
+            componentId: r,
+            launchParams: a
         }),
             (G = i === l.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON ? T.MI.NO_CHAT : T.MI.RESIZABLE);
     },

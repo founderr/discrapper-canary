@@ -25,30 +25,32 @@ var r = n(568611),
 let C = (0, m.Mg)(l.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 function I(e) {
     var t, n, l;
-    let { applicationId: m } = e,
-        { analyticsLocations: I } = (0, c.ZP)(s.Z.ACTIVITY_BOOKMARK),
-        [x] = (0, d.Z)([m]),
-        N = null == x ? void 0 : null === (t = x.bot) || void 0 === t ? void 0 : t.id,
-        v = (0, f.ZP)(null !== (l = null == x ? void 0 : x.maxParticipants) && void 0 !== l ? l : 0),
-        T = (0, p.Z)({
+    let { applicationId: m, customId: I, referrerId: x } = e,
+        { analyticsLocations: N } = (0, c.ZP)(s.Z.ACTIVITY_BOOKMARK),
+        [v] = (0, d.Z)([m]),
+        T = null == v ? void 0 : null === (t = v.bot) || void 0 === t ? void 0 : t.id,
+        S = (0, f.ZP)(null !== (l = null == v ? void 0 : v.maxParticipants) && void 0 !== l ? l : 0),
+        A = (0, p.Z)({
             applicationId: m,
             size: C,
             names: ['embedded_cover']
         }),
-        S = async () => {
-            if (null != N)
+        b = async () => {
+            if (null != T)
                 try {
-                    let e = await o.Z.openPrivateChannel(N);
+                    let e = await o.Z.openPrivateChannel(T);
                     await (0, h.Z)({
-                        targetApplicationId: null == x ? void 0 : x.id,
+                        targetApplicationId: null == v ? void 0 : v.id,
                         channelId: e,
-                        analyticsLocations: I
+                        analyticsLocations: N,
+                        customId: I,
+                        referrerId: x
                     });
                 } catch (e) {}
         };
-    return null != x && (0, u.yE)(x.flags, _.udG.EMBEDDED)
+    return null != v && (0, u.yE)(v.flags, _.udG.EMBEDDED)
         ? (0, i.jsx)(c.Gt, {
-              value: I,
+              value: N,
               children: (0, i.jsxs)('div', {
                   className: E.container,
                   children: [
@@ -56,8 +58,8 @@ function I(e) {
                           className: E.imgContainer,
                           children: (0, i.jsx)('img', {
                               className: E.img,
-                              alt: x.name,
-                              src: T.url
+                              alt: v.name,
+                              src: A.url
                           })
                       }),
                       (0, i.jsxs)('div', {
@@ -66,12 +68,12 @@ function I(e) {
                               (0, i.jsx)(a.Heading, {
                                   className: E.heading,
                                   variant: 'heading-xl/semibold',
-                                  children: x.name
+                                  children: v.name
                               }),
                               (0, i.jsx)(a.Heading, {
                                   className: E.description,
                                   variant: 'heading-sm/medium',
-                                  children: null === (n = x.description) || void 0 === n ? void 0 : n.trim()
+                                  children: null === (n = v.description) || void 0 === n ? void 0 : n.trim()
                               }),
                               (0, i.jsx)(a.Heading, {
                                   className: E.learnMore,
@@ -94,14 +96,14 @@ function I(e) {
                                               }),
                                               (0, i.jsx)(a.Text, {
                                                   variant: 'text-xs/semibold',
-                                                  children: v
+                                                  children: S
                                               })
                                           ]
                                       }),
                                       (0, i.jsx)('div', {
                                           className: E.buttonWrapper,
                                           children: (0, i.jsx)(a.Button, {
-                                              onClick: S,
+                                              onClick: b,
                                               className: E.button,
                                               color: a.ButtonColors.GREEN,
                                               children: g.intl.string(g.t.RscU7O)

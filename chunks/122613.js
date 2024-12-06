@@ -16,28 +16,30 @@ function f(e) {
     return (0, s.C)(() => _(e));
 }
 async function _(e) {
-    let { targetApplicationId: t, locationObject: n, channelId: s, analyticsLocations: f, componentId: _, commandOrigin: p, sectionName: h, source: m, onExecutedCallback: g } = e,
-        E = (0, c.Z)(),
-        v = i.default.getCurrentUser();
+    let { targetApplicationId: t, locationObject: n, channelId: s, analyticsLocations: f, componentId: _, commandOrigin: p, sectionName: h, source: m, onExecutedCallback: g, referrerId: E, customId: v } = e,
+        I = (0, c.Z)(),
+        T = i.default.getCurrentUser();
     if (null == t) return !1;
-    let I = await (0, u.Z)(t, s);
+    let b = await (0, u.Z)(t, s);
     return null == s
         ? (a.S.dispatch(d.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: t }), !1)
         : null != r.Z.getChannel(s) &&
-              null != v &&
-              null != I &&
-              (o.tZ(I.id),
+              null != T &&
+              null != b &&
+              (o.tZ(b.id),
               await (0, l.af)({
                   channelId: s,
-                  applicationId: I.id,
+                  applicationId: b.id,
                   isStart: !0,
-                  embeddedActivitiesManager: E,
+                  embeddedActivitiesManager: I,
                   componentId: _,
                   commandOrigin: p,
                   sectionName: h,
                   locationObject: n,
                   analyticsLocations: f,
                   source: m,
-                  onExecutedCallback: g
+                  onExecutedCallback: g,
+                  referrerId: E,
+                  customId: v
               }));
 }
