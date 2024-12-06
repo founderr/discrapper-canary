@@ -1,6 +1,6 @@
 n.d(t, {
     M: function () {
-        return j;
+        return A;
     }
 }),
     n(653041);
@@ -25,76 +25,77 @@ var i = n(200651),
     I = n(579185),
     E = n(301076),
     b = n(411840),
+    N = n(127379),
     Z = n(981631),
-    N = n(921944),
-    S = n(388032),
-    T = n(812801);
-function j(e) {
-    let { channel: t, idle: n } = e,
-        j = (0, r.e7)([d.ZP], () => d.ZP.isLaunchingActivity()),
-        A = (0, p.KF)(t.id),
-        y = (0, p.g5)(A),
-        P = A !== p.jy.CAN_LAUNCH || j,
-        { isHovered: M, setIsHovered: R, onMouseEnter: L, onMouseLeave: k } = (0, I.Z)(200, 300),
-        { groupedButtons: O } = (0, b.Z)({ location: 'CenterControlTrayActivityButton' }),
-        D = (0, h.a)(),
-        w = (0, u.Z)({ channelId: t.id }),
-        B = !P,
-        U = l.useCallback(
+    S = n(921944),
+    T = n(388032),
+    j = n(812801);
+function A(e) {
+    let { channel: t, idle: n, whichPopoutIsOpen: A, setWhichPopoutIsOpen: y } = e,
+        P = (0, r.e7)([d.ZP], () => d.ZP.isLaunchingActivity()),
+        M = (0, p.KF)(t.id),
+        R = (0, p.g5)(M),
+        L = M !== p.jy.CAN_LAUNCH || P,
+        { isHovered: k, setIsHovered: O, onMouseEnter: D, onMouseLeave: w } = (0, I.Z)(200, 300),
+        { groupedButtons: B } = (0, b.Z)({ location: 'CenterControlTrayActivityButton' }),
+        U = (0, h.a)(),
+        H = (0, u.Z)({ channelId: t.id }),
+        G = !L,
+        F = l.useCallback(
             (e) => {
-                'focus' !== e.type && L();
+                'focus' !== e.type && D();
             },
-            [L]
+            [D]
         ),
-        H = (0, o.O)(),
-        G = (0, c.bp)() === Z.IlC.POPOUT,
-        { analyticsLocations: F } = (0, x.ZP)(),
-        V = F.length > 0 ? F[F.length - 1] : 'open-activity-shelf';
-    v.m1.useExperiment({ location: V }, { autoTrackExposure: !0 });
-    let z = l.useCallback(() => {
+        V = (0, o.O)(),
+        z = (0, c.bp)() === Z.IlC.POPOUT,
+        { analyticsLocations: W } = (0, x.ZP)(),
+        K = W.length > 0 ? W[W.length - 1] : 'open-activity-shelf';
+    v.m1.useExperiment({ location: K }, { autoTrackExposure: !0 });
+    let Y = l.useCallback(() => {
             (0, C.Z)({
                 channel: t,
                 guildId: t.guild_id,
-                locationObject: H.location,
-                openInPopout: G,
-                analyticsLocations: F,
+                locationObject: V.location,
+                openInPopout: z,
+                analyticsLocations: W,
                 opensAppLauncherModal: !0
             });
-        }, [H.location, F, t, G]),
-        W = [];
-    !P && W.push(a.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, m.Z)(t.id) && !P && W.push(a.z.ACTIVITY_GDM_ROCKET_SPARKLE);
-    let { enabled: K } = v.nS.useExperiment({ location: 'CenterControlTrayActivityButton' });
-    K && !P && W.push(a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP);
-    let Y = l.useRef(!1);
+        }, [V.location, W, t, z]),
+        q = [];
+    !L && q.push(a.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, m.Z)(t.id) && !L && q.push(a.z.ACTIVITY_GDM_ROCKET_SPARKLE);
+    let { enabled: X } = v.nS.useExperiment({ location: 'CenterControlTrayActivityButton' });
+    X && !L && q.push(a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP);
+    let J = l.useRef(!1);
     return (0, i.jsx)(_.ZP, {
-        contentTypes: W,
+        contentTypes: q,
         children: (e) => {
             let { visibleContent: l, markAsDismissed: r } = e,
-                o = l === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !n && !M;
+                o = l === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !n && !k;
             return (
-                !0 === Y.current && !1 === o && r(N.L.AUTO_DISMISS),
-                Y.current !== o && (Y.current = o),
+                !0 === J.current && !1 === o && r(S.L.AUTO_DISMISS),
+                J.current !== o && (J.current = o),
                 (0, i.jsx)(s.Popout, {
                     fixed: !0,
-                    shouldShow: M,
+                    shouldShow: k && (A === N.D.ACTIVITY || null == A),
                     animationPosition: 'bottom',
                     position: 'bottom',
                     align: 'center',
                     spacing: 16,
                     onRequestClose: () => {
-                        R(!1);
+                        O(!1), null == y || y(void 0);
                     },
                     renderPopout: (e) => {
                         let { closePopout: n, setPopoutRef: l } = e;
-                        return B
+                        return G
                             ? (0, i.jsx)(f.m, {
                                   ref: l,
                                   channel: t,
                                   closePopout: n,
-                                  onMouseEnter: L,
-                                  onMouseLeave: k,
-                                  isHovered: M,
-                                  onClick: () => r(N.L.UNKNOWN)
+                                  onMouseEnter: D,
+                                  onMouseLeave: w,
+                                  isHovered: k,
+                                  onClick: () => r(S.L.UNKNOWN)
                               })
                             : (0, i.jsx)(i.Fragment, {});
                     },
@@ -102,7 +103,7 @@ function j(e) {
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(s.Tooltip, {
-                                    text: S.intl.string(S.t.P8vmUl),
+                                    text: T.intl.string(T.t.P8vmUl),
                                     color: s.TooltipColors.BRAND,
                                     forceOpen: !0,
                                     shouldShow: o,
@@ -110,21 +111,21 @@ function j(e) {
                                         (0, i.jsx)('div', {
                                             ...e,
                                             children: (0, i.jsx)(E.Z, {
-                                                disabled: P,
-                                                'aria-label': y,
-                                                label: B ? void 0 : y,
-                                                isActivityActive: w || M,
-                                                className: O ? '' : T.controlButton,
+                                                disabled: L,
+                                                'aria-label': R,
+                                                label: G ? void 0 : R,
+                                                isActivityActive: H || (!B && k),
+                                                className: B ? '' : j.controlButton,
                                                 onClick: () => {
-                                                    z(), (l === a.z.ACTIVITIES_MINI_SHELF_SPARKLES || l === a.z.ACTIVITY_GDM_ROCKET_SPARKLE || l === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || l === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || l === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && r(N.L.TAKE_ACTION);
+                                                    Y(), (l === a.z.ACTIVITIES_MINI_SHELF_SPARKLES || l === a.z.ACTIVITY_GDM_ROCKET_SPARKLE || l === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || l === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || l === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && r(S.L.TAKE_ACTION);
                                                 },
-                                                onMouseEnter: U,
-                                                onMouseLeave: k
+                                                onMouseEnter: F,
+                                                onMouseLeave: w
                                             })
                                         })
                                 }),
-                                D
-                                    ? O
+                                U
+                                    ? B
                                         ? (0, i.jsx)(g.r, {
                                               top: 0,
                                               right: 0,
