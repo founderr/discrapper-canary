@@ -40,16 +40,20 @@ function E() {
             let t = new Set();
             return e.forEach((e) => t.add(e.type)), t;
         }, [e]);
-    return a().sortBy(o.Z.filter(t), [
-        (e) => {
-            var t;
-            return !(h.has(e.type) && Date.now() < (null !== (t = h.get(e.type)) && void 0 !== t ? t : 0) + m);
-        },
-        (e) => n.has(e.type),
-        (e) => e.hasMetadata,
-        (e) => !f.vbS.has(e.type),
-        (e) => e.name
-    ]);
+    return r.useMemo(
+        () =>
+            a().sortBy(o.Z.filter(t), [
+                (e) => {
+                    var t;
+                    return !(h.has(e.type) && Date.now() < (null !== (t = h.get(e.type)) && void 0 !== t ? t : 0) + m);
+                },
+                (e) => n.has(e.type),
+                (e) => e.hasMetadata,
+                (e) => !f.vbS.has(e.type),
+                (e) => e.name
+            ]),
+        [n, t]
+    );
 }
 function v(e) {
     let [t, n] = r.useState(!1);
@@ -75,3 +79,4 @@ function v(e) {
         ? f.ABu.TWITTER_LEGACY
         : e;
 }
+f.ABu.PLAYSTATION, f.ABu.XBOX, f.ABu.SPOTIFY, f.ABu.STEAM, f.ABu.TWITCH;
