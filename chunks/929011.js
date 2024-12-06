@@ -1,65 +1,80 @@
 e.d(t, {
     H: function () {
-        return c;
+        return m;
     },
     r: function () {
-        return d;
+        return v;
     }
 }),
-    e(789020);
-var l = e(200651),
-    i = e(481060),
+    e(789020),
+    e(47120);
+var i = e(200651),
+    l = e(481060),
     r = e(724870),
     u = e(87484),
-    a = e(171246),
-    o = e(689011),
-    s = e(981631);
-async function c(n) {
-    let { subscriptionPlanId: t, sku: u, subscriptionGroupPlanIds: c, activeSubscription: d, subscribeForGuild: f, analyticsLocations: p, analyticsLocation: v, disableGuildSelector: m = !1 } = n,
-        { promise: h, resolve: I } = Promise.withResolvers();
-    if ((0, a.KK)(u.flags) && !1 === m) {
+    a = e(509545),
+    o = e(78839),
+    s = e(55563),
+    c = e(270144),
+    d = e(171246),
+    f = e(689011),
+    p = e(981631);
+async function m(n) {
+    let { subscriptionPlanId: t, sku: u, subscriptionGroupPlanIds: m, initialSubscribeForGuild: v, analyticsLocations: S, analyticsLocation: h, disableGuildSelector: I = !1 } = n,
+        { promise: g, resolve: E } = Promise.withResolvers();
+    if ((0, d.KK)(u.flags) && !1 === I) {
         let { promise: n, resolve: t } = Promise.withResolvers();
-        (0, i.openModalLazy)(async () => {
+        (0, l.openModalLazy)(async () => {
             let { GuildSubscriptionSelectionModal: n } = await e.e('43889').then(e.bind(e, 279875));
             return (e) =>
-                (0, l.jsx)(n, {
+                (0, i.jsx)(n, {
                     transitionState: e.transitionState,
                     onClose: e.onClose,
                     sku: u,
                     onSelect: t,
-                    currentGuildId: f
+                    currentGuildId: v
                 });
         }),
-            (f = await n);
+            (v = await n);
     }
+    let Z = s.Z.getParentSKU(u.id),
+        A = null;
     return (
+        null != Z &&
+            ([A] = (0, c.E8)({
+                groupSku: Z,
+                SubscriptionStore: o.ZP,
+                SubscriptionPlanStore: a.Z,
+                mapSubscriptionItems: c.ec,
+                guildId: v
+            })),
         (0, r.h)({
             initialPlanId: t,
             skuId: u.id,
-            activeSubscription: null != d ? d : null,
+            activeSubscription: A,
             applicationId: u.applicationId,
-            planGroup: c,
-            guildId: f,
+            planGroup: m,
+            guildId: v,
             renderHeader: (n, t, e) =>
-                (0, l.jsx)(o.t, {
+                (0, i.jsx)(f.t, {
                     step: e,
                     onClose: () => t(!1)
                 }),
-            analyticsSubscriptionType: s.NYc.APPLICATION,
-            analyticsLocations: p,
-            analyticsLocation: v,
-            onComplete: I,
+            analyticsSubscriptionType: p.NYc.APPLICATION,
+            analyticsLocations: S,
+            analyticsLocation: h,
+            onComplete: E,
             showBenefitsFirst: !1,
             forcesTransitionToGuild: !1
         }),
-        h
+        g
     );
 }
-function d(n) {
-    let { appId: t, skuId: e, analyticsLocations: l } = n;
+function v(n) {
+    let { appId: t, skuId: e, analyticsLocations: i } = n;
     (0, u.Z)({
         applicationId: t,
         skuId: e,
-        analyticsLocations: l
+        analyticsLocations: i
     });
 }

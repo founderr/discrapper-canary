@@ -5,9 +5,9 @@ e.d(t, {
 }),
     e(390547),
     e(789020);
-var l = e(192379),
-    i = e(512722),
-    r = e.n(i),
+var i = e(192379),
+    l = e(512722),
+    r = e.n(l),
     u = e(442837),
     a = e(570140),
     o = e(821849),
@@ -16,81 +16,80 @@ var l = e(192379),
     d = e(680005),
     f = e(728345),
     p = e(509545),
-    v = e(55563),
-    m = e(551428),
-    h = e(270144),
-    I = e(488915),
-    S = e(171246),
+    m = e(55563),
+    v = e(551428),
+    S = e(270144),
+    h = e(488915),
+    I = e(171246),
     g = e(929011);
 function E(n) {
     var t, e;
-    let { subscribeForGuild: i, analyticsLocation: E, skuId: A, onComplete: N, disableGuildSelector: Z } = n,
-        x = (0, u.e7)([v.Z], () => (null != A ? v.Z.get(A) : void 0), [A]),
-        T = (0, u.e7)([m.Z], () => (null != A ? m.Z.getForSKU(A) : void 0), [A]),
-        L = null === (t = (0, u.Wu)([p.Z], () => (null != A ? p.Z.getForSKU(A) : []), [A])[0]) || void 0 === t ? void 0 : t.id,
-        b = (0, u.e7)([v.Z], () => (null != A ? v.Z.getParentSKU(A) : void 0), [A]),
-        C = null == b ? void 0 : b.bundledSkuIds,
-        P = (0, u.Wu)(
+    let { initialSubscribeForGuild: l, analyticsLocation: E, skuId: Z, onComplete: A, disableGuildSelector: b } = n,
+        N = (0, u.e7)([m.Z], () => (null != Z ? m.Z.get(Z) : void 0), [Z]),
+        x = (0, u.e7)([v.Z], () => (null != Z ? v.Z.getForSKU(Z) : void 0), [Z]),
+        T = null === (t = (0, u.Wu)([p.Z], () => (null != Z ? p.Z.getForSKU(Z) : []), [Z])[0]) || void 0 === t ? void 0 : t.id,
+        L = (0, u.e7)([m.Z], () => (null != Z ? m.Z.getParentSKU(Z) : void 0), [Z]),
+        P = null == L ? void 0 : L.bundledSkuIds,
+        C = (0, u.Wu)(
             [p.Z],
             () => {
                 var n;
-                return null !== (n = null == C ? void 0 : C.flatMap(p.Z.getForSKU)) && void 0 !== n ? n : [];
+                return null !== (n = null == P ? void 0 : P.flatMap(p.Z.getForSKU)) && void 0 !== n ? n : [];
             },
-            [C]
+            [P]
         ),
-        _ = l.useMemo(() => P.map((n) => n.id), [P]),
-        O = (0, S.KK)(null !== (e = null == x ? void 0 : x.flags) && void 0 !== e ? e : 0),
-        j = (0, u.e7)([I.Z], () => null != i && !1 !== O && I.Z.getEntitlementsForGuild(i, !0).some((n) => n.skuId === A), [O, A, i]),
-        D = null == x ? void 0 : x.applicationId,
-        R = (null == T ? void 0 : T.published) === !0 && (null == x ? void 0 : x.isAvailable()) === !0,
+        _ = i.useMemo(() => C.map((n) => n.id), [C]),
+        O = (0, I.KK)(null !== (e = null == N ? void 0 : N.flags) && void 0 !== e ? e : 0),
+        j = (0, u.e7)([h.Z], () => null != l && !1 !== O && h.Z.getEntitlementsForGuild(l, !0).some((n) => n.skuId === Z), [O, Z, l]),
+        D = null == N ? void 0 : N.applicationId,
+        R = (null == x ? void 0 : x.published) === !0 && (null == N ? void 0 : N.isAvailable()) === !0,
         { app: k } = (0, f.Rt)(D),
         { analyticsLocations: y } = (0, s.ZP)(),
-        M = (0, h.Ev)(b, null != i ? i : void 0),
+        M = (0, S.Ev)(L, null != l ? l : void 0),
         F = null == M ? void 0 : M.subscription,
-        U = null == M ? void 0 : M.subscriptionPlan,
-        G = (0, h.cr)(b, null != i ? i : void 0),
-        w = null == G ? void 0 : G.subscriptionPlan,
-        { entitlementsLoaded: B } = (0, h.LM)({ guildId: i });
-    null == i && (B = !0);
+        G = null == M ? void 0 : M.subscriptionPlan,
+        U = (0, S.cr)(L, null != l ? l : void 0),
+        w = null == U ? void 0 : U.subscriptionPlan,
+        { entitlementsLoaded: B } = (0, S.LM)({ guildId: l });
+    null == l && (B = !0);
     let K = (0, c.Z)(),
-        H = null != F && (0, S.Jf)(F, x),
-        Y = l.useMemo(() => {
-            if (!B || null == k || null == A) return d.rf.LOADING;
+        H = null != F && (0, I.Jf)(F, N),
+        Y = i.useMemo(() => {
+            if (!B || null == k || null == Z) return d.rf.LOADING;
             if (!R) return d.rf.UNAVAILABLE;
             if (!O) {
-                if ((null == U ? void 0 : U.skuId) === A) return d.rf.SUBSCRIBED;
-                if ((null == w ? void 0 : w.skuId) === A && !1 === H) return d.rf.UPCOMING_PLAN;
+                if ((null == G ? void 0 : G.skuId) === Z) return d.rf.SUBSCRIBED;
+                if ((null == w ? void 0 : w.skuId) === Z && !1 === H) return d.rf.UPCOMING_PLAN;
             }
             return d.rf.AVAILABLE;
-        }, [null == U ? void 0 : U.skuId, R, k, B, H, O, null == w ? void 0 : w.skuId, A]);
+        }, [null == G ? void 0 : G.skuId, R, k, B, H, O, null == w ? void 0 : w.skuId, Z]);
     return (
-        l.useEffect(() => {
+        i.useEffect(() => {
             R &&
-                null != A &&
+                null != Z &&
                 K &&
-                !(p.Z.isFetchingForSKU(A) || p.Z.isLoadedForSKU(A)) &&
+                !(p.Z.isFetchingForSKU(Z) || p.Z.isLoadedForSKU(Z)) &&
                 a.Z.wait(() => {
-                    (0, o.GZ)(A);
+                    (0, o.GZ)(Z);
                 });
-        }, [R, A, K]),
+        }, [R, Z, K]),
         {
-            openModal: l.useCallback(() => {
+            openModal: i.useCallback(() => {
                 r()(null != k, 'No application'),
-                    r()(null != A, 'No SKU ID'),
+                    r()(null != Z, 'No SKU ID'),
                     r()(R, 'Cannot purchase this unpublished plan'),
                     (0, g.H)({
-                        subscriptionPlanId: L,
-                        sku: x,
+                        subscriptionPlanId: T,
+                        sku: N,
                         subscriptionGroupPlanIds: _,
-                        activeSubscription: F,
-                        subscribeForGuild: i,
-                        disableGuildSelector: Z,
+                        initialSubscribeForGuild: l,
+                        disableGuildSelector: b,
                         analyticsLocations: y,
                         analyticsLocation: E
                     }).then(() => {
-                        null == N || N();
+                        null == A || A();
                     });
-            }, [k, A, R, L, x, _, i, Z, y, E, F, N]),
+            }, [k, Z, R, T, N, _, l, b, y, E, A]),
             subscriptionPurchaseButtonState: Y,
             isGuildSubscribed: j
         }
