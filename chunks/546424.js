@@ -31,9 +31,17 @@ function m(e) {
                     src: 'https://cdn.discordapp.com/assets/premium/roadblocks/soundboard_'.concat(n, '.png'),
                     alt: ''
                 }),
-                (0, r.jsx)(s.ModalCloseButton, {
+                (0, r.jsx)(s.Button, {
                     className: h.close,
-                    onClick: () => t(d.L.USER_DISMISS)
+                    'aria-label': p.intl.string(p.t.cpT0Cg),
+                    look: s.Button.Looks.BLANK,
+                    size: s.Button.Sizes.NONE,
+                    onClick: () => t(d.L.USER_DISMISS),
+                    children: (0, r.jsx)(s.XSmallIcon, {
+                        size: 'xs',
+                        className: h.closeIcon,
+                        color: 'white'
+                    })
                 })
             ]
         }),
