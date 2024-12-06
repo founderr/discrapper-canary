@@ -40,7 +40,7 @@ function U(e) {
     e.preventDefault(), e.stopPropagation();
 }
 let p = P.ZP.getEnableHardwareAcceleration() ? I.AnimatedAvatar : I.Avatar;
-function A(e) {
+function v(e) {
     let { channel: n } = e;
     return (0, l.jsx)(p, {
         src: (0, o.x)(n),
@@ -48,7 +48,7 @@ function A(e) {
         size: I.AvatarSizes.SIZE_20
     });
 }
-function v(e) {
+function A(e) {
     let { channel: n } = e,
         t = (0, s.e7)([m.default], () => m.default.getUser(null == n ? void 0 : n.recipients[0])),
         i = (0, s.e7)([f.Z], () => !(null == t || null == n || n.isMultiUserDM()) && null != f.Z.getTypingUsers(null == n ? void 0 : n.id)[null == t ? void 0 : t.id]),
@@ -93,11 +93,11 @@ let V = (e) => {
             switch (e.type) {
                 case g.d4z.DM:
                     return function () {
-                        return (0, l.jsx)(v, { channel: e });
+                        return (0, l.jsx)(A, { channel: e });
                     };
                 case g.d4z.GROUP_DM:
                     return function () {
-                        return (0, l.jsx)(A, { channel: e });
+                        return (0, l.jsx)(v, { channel: e });
                     };
                 default:
                     return (0, _.KS)(e, n, t);
@@ -142,8 +142,8 @@ function R(e) {
             onMouseDown: m,
             onMouseUp: P,
             onContextMenu: p,
-            connectDragPreview: A,
-            className: v,
+            connectDragPreview: v,
+            className: A,
             iconClassName: R,
             subtitle: C,
             subtitleColor: L,
@@ -158,27 +158,28 @@ function R(e) {
             mentionCount: k,
             resolvedUnreadSetting: F,
             isFavoriteSuggestion: Y,
-            withGuildIcon: w
+            withGuildIcon: w,
+            hasActiveEvent: q = !1
         } = e,
-        q = F === h.i.ALL_MESSAGES || (null != k && k > 0),
-        { role: B, ...X } = (0, a.JA)(t.id),
-        W = i.useRef(null),
+        B = F === h.i.ALL_MESSAGES || (null != k && k > 0),
+        { role: X, ...W } = (0, a.JA)(t.id),
         J = i.useRef(null),
-        K = (0, c.Z)(t),
-        Q = g.Z5c.CHANNEL(K, t.id),
-        $ = (0, T.ZP)(t),
-        ee = t.isGuildVocal(),
-        en = (0, l.jsx)('div', {
+        K = i.useRef(null),
+        Q = (0, c.Z)(t),
+        $ = g.Z5c.CHANNEL(Q, t.id),
+        ee = (0, T.ZP)(t),
+        en = t.isGuildVocal(),
+        et = (0, l.jsx)('div', {
             className: u()({ [M.favoritesSuggestion]: Y }),
-            ref: J,
+            ref: K,
             children: (0, l.jsxs)(E.Z, {
-                role: ee && !_ ? 'button' : 'link',
-                href: ee ? void 0 : Q,
+                role: en && !_ ? 'button' : 'link',
+                href: en ? void 0 : $,
                 target: '_blank',
-                ref: W,
+                ref: J,
                 className: M.link,
                 onClick: () => (null == f ? void 0 : f(t)),
-                ...X,
+                ...W,
                 'aria-label': G,
                 focusProps: { enabled: !1 },
                 children: [
@@ -194,9 +195,9 @@ function R(e) {
                                 withGuildIcon: w
                             }),
                             (0, l.jsx)(d.Z, {
-                                className: u()(M.name),
+                                className: u()(M.name, { [M.activeEvent]: q }),
                                 'aria-hidden': !0,
-                                children: null == r ? $ : r
+                                children: null == r ? ee : r
                             }),
                             i.Children.count(H) > 0
                                 ? (0, l.jsx)('div', {
@@ -222,8 +223,8 @@ function R(e) {
             })
         });
     return (0, l.jsx)(I.FocusRing, {
-        focusTarget: W,
-        ringTarget: J,
+        focusTarget: J,
+        ringTarget: K,
         offset: {
             top: 2,
             bottom: 2,
@@ -231,14 +232,14 @@ function R(e) {
         },
         children: (0, l.jsxs)('div', {
             className: u()(
-                v,
+                A,
                 null != f || null != P || null != m || j ? M.wrapper : M.notInteractive,
                 (() => {
                     if (o) return D.SELECTED;
                     if (_) return D.CONNECTED;
                     if (S) return D.LOCKED;
                     if (s) return D.MUTED;
-                    if (N) return q ? D.UNREAD_IMPORTANT : D.UNREAD_LESS_IMPORTANT;
+                    if (N) return B ? D.UNREAD_IMPORTANT : D.UNREAD_LESS_IMPORTANT;
                     return null;
                 })(),
                 (function (e) {
@@ -265,7 +266,7 @@ function R(e) {
             onContextMenu: (e) => (null == p ? void 0 : p(e, t)),
             onMouseEnter: y,
             onMouseLeave: Z,
-            children: [s || !N ? null : (0, l.jsx)('div', { className: u()(M.unread, q ? M.unreadImportant : void 0) }), null !== (n = null == A ? void 0 : A(en)) && void 0 !== n ? n : en]
+            children: [s || !N ? null : (0, l.jsx)('div', { className: u()(M.unread, B ? M.unreadImportant : void 0) }), null !== (n = null == v ? void 0 : v(et)) && void 0 !== n ? n : et]
         })
     });
 }

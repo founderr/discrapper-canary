@@ -25,5 +25,6 @@ e.exports = {
     iconWithGuildIcon: 'iconWithGuildIcon_d8bfb3',
     notInteractive: 'notInteractive_d8bfb3',
     unreadImportant: 'unreadImportant_d8bfb3',
-    numberBadge: 'numberBadge_d8bfb3'
+    numberBadge: 'numberBadge_d8bfb3',
+    activeEvent: 'activeEvent_d8bfb3'
 };

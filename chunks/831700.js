@@ -9,8 +9,8 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(442837),
-    o = n(846519),
+    o = n(442837),
+    a = n(846519),
     s = n(481060),
     c = n(475179),
     u = n(239091),
@@ -90,14 +90,14 @@ class $ extends H.ZP {
     renderSubtitle() {
         var e;
         let { channel: t, connected: n, enableHangStatus: l, allowChannelTopic: r } = this.props,
-            a = null === (e = (0, v.D)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle,
-            { hovered: o } = this.state;
+            o = null === (e = (0, v.D)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle,
+            { hovered: a } = this.state;
         return (0, i.jsx)(z.Z, {
             onClick: this.handleVoiceStatusClick,
             channel: t,
             connected: n,
-            subtitle: a,
-            hovered: o,
+            subtitle: o,
+            hovered: a,
             enableHangStatus: l,
             allowChannelTopic: r
         });
@@ -130,7 +130,7 @@ class $ extends H.ZP {
             : (0, i.jsx)(s.Tooltip, {
                   text: Q.intl.string(Q.t.gpF6QU),
                   children: (t) => {
-                      let { onMouseEnter: n, onMouseLeave: l, onFocus: a, onBlur: o } = t;
+                      let { onMouseEnter: n, onMouseLeave: l, onFocus: o, onBlur: a } = t;
                       return (0, i.jsx)(s.Clickable, {
                           className: r()(X.iconItem, X.alwaysShown),
                           onClick: () => {
@@ -139,8 +139,8 @@ class $ extends H.ZP {
                           'aria-label': Q.intl.string(Q.t.gpF6QU),
                           onMouseEnter: n,
                           onMouseLeave: l,
-                          onFocus: a,
-                          onBlur: o,
+                          onFocus: o,
+                          onBlur: a,
                           children: (0, i.jsx)(s.PotionIcon, {
                               size: 'xs',
                               color: 'currentColor',
@@ -151,7 +151,7 @@ class $ extends H.ZP {
               });
     }
     render() {
-        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: o, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: m, connectDragPreview: C, canReorderChannel: _, canMoveMembers: v, showTutorial: x, hasActiveEvent: b, embeddedApps: S, isSubscriptionGated: E, isFavoriteSuggestion: Z, withGuildIcon: N } = this.props,
+        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: o, mentionCount: a, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: m, connectDragPreview: C, canReorderChannel: _, canMoveMembers: v, showTutorial: x, hasActiveEvent: b, embeddedApps: S, isSubscriptionGated: E, isFavoriteSuggestion: Z, withGuildIcon: N } = this.props,
             { shouldShowActivities: y, shouldShowGuildVerificationPopout: T } = this.state,
             A = this.getVoiceStatesCount(),
             P = (0, i.jsxs)('li', {
@@ -177,12 +177,13 @@ class $ extends H.ZP {
                                             children: (0, i.jsxs)(F.Z, {
                                                 className: X.iconVisibility,
                                                 iconClassName: r()({ [X.iconLive]: b }),
+                                                hasActiveEvent: b,
                                                 channel: e,
                                                 selected: !Z && t,
                                                 connected: n,
                                                 unread: n ? l : void 0,
-                                                resolvedUnreadSetting: a,
-                                                mentionCount: o,
+                                                resolvedUnreadSetting: o,
+                                                mentionCount: a,
                                                 locked: c,
                                                 subtitle: this.renderSubtitle(),
                                                 onClick: () => {
@@ -196,7 +197,7 @@ class $ extends H.ZP {
                                                 'aria-label': (0, f.ZP)({
                                                     channel: e,
                                                     unread: l,
-                                                    mentionCount: o,
+                                                    mentionCount: a,
                                                     userCount: A,
                                                     embeddedActivitiesCount: S.length,
                                                     isSubscriptionGated: E
@@ -237,7 +238,7 @@ class $ extends H.ZP {
                 shouldShowGuildVerificationPopout: !1,
                 hovered: !1
             }),
-            J(this, 'activitiesHideTimeout', new o.V7()),
+            J(this, 'activitiesHideTimeout', new a.V7()),
             J(this, 'closeGuildVerificationPopout', () => {
                 this.setState({ shouldShowGuildVerificationPopout: !1 });
             }),
@@ -305,13 +306,13 @@ class $ extends H.ZP {
                     ));
             }),
             J(this, 'renderPopout', () => {
-                let { channel: e, voiceStates: t, sorting: n, isUserOver: l, selected: r, guild: a } = this.props,
-                    { shouldShowActivities: o, shouldShowGuildVerificationPopout: s } = this.state;
-                if (o && !n && !l && !s) {
-                    let n = P.SE.getSetting().includes(a.id);
+                let { channel: e, voiceStates: t, sorting: n, isUserOver: l, selected: r, guild: o } = this.props,
+                    { shouldShowActivities: a, shouldShowGuildVerificationPopout: s } = this.state;
+                if (a && !n && !l && !s) {
+                    let n = P.SE.getSetting().includes(o.id);
                     return (0, i.jsx)(W.Z, {
                         onAction: this.closePopout,
-                        guild: a,
+                        guild: o,
                         channel: e,
                         voiceStates: t,
                         isChannelSelected: r,
@@ -332,7 +333,7 @@ class $ extends H.ZP {
                     return (0, i.jsx)(s.Tooltip, {
                         text: Q.intl.string(Q.t.ZXxLQk),
                         children: (t) => {
-                            let { onMouseEnter: l, onMouseLeave: a, onFocus: o, onBlur: u } = t;
+                            let { onMouseEnter: l, onMouseLeave: o, onFocus: a, onBlur: u } = t;
                             return (0, i.jsx)(s.Clickable, {
                                 className: r()(X.iconItem, n ? X.alwaysShown : null),
                                 onClick: () => {
@@ -340,8 +341,8 @@ class $ extends H.ZP {
                                 },
                                 'aria-label': Q.intl.string(Q.t.ZXxLQk),
                                 onMouseEnter: l,
-                                onMouseLeave: a,
-                                onFocus: o,
+                                onMouseLeave: o,
+                                onFocus: a,
                                 onBlur: u,
                                 children: (0, i.jsx)(s.ChatIcon, {
                                     size: 'xs',
@@ -360,13 +361,13 @@ class $ extends H.ZP {
 }
 let ee = (0, d.B)((0, h.Q)($));
 function et(e) {
-    let { guild: t, channel: n, disableSorting: l, isFavoriteCategory: r, selected: o, collapsed: s, voiceStates: c } = e,
-        u = (0, a.cj)([O.ZP], () => ({
+    let { guild: t, channel: n, disableSorting: l, isFavoriteCategory: r, selected: a, collapsed: s, voiceStates: c } = e,
+        u = (0, o.cj)([O.ZP], () => ({
             unread: O.ZP.hasUnread(n.id),
             mentionCount: O.ZP.getMentionCount(n.id)
         })),
-        d = (0, a.e7)([k.ZP], () => k.ZP.resolveUnreadSetting(n)),
-        h = (0, a.cj)([M.Z, w.Z, D.Z], () => {
+        d = (0, o.e7)([k.ZP], () => k.ZP.resolveUnreadSetting(n)),
+        h = (0, o.cj)([M.Z, w.Z, D.Z], () => {
             let e = M.Z.getChannel(n.parent_id),
                 i = w.Z.getCheck(n.guild_id);
             return {
@@ -378,13 +379,13 @@ function et(e) {
                 unverifiedAccount: !i.canChat
             };
         }),
-        m = (0, a.e7)([G.Z], () => G.Z.hasVideo(n.id)),
+        m = (0, o.e7)([G.Z], () => G.Z.hasVideo(n.id)),
         f = (0, p.ZP)(n),
         g = (0, C.ZP)(n),
         _ = (0, N.qY)(n.id),
         { isSubscriptionGated: v, needSubscriptionToAccess: x } = (0, Z.Z)(n.id),
         I = (0, b.Z)(),
-        S = (0, a.e7)([k.ZP], () => k.ZP.isFavorite(t.id, n.id)),
+        S = (0, o.e7)([k.ZP], () => k.ZP.isFavorite(t.id, n.id)),
         E = e.connected || (null == I ? void 0 : I.channelId) === n.id,
         { enableHangStatus: y, allowChannelTopic: A } = T.n.useExperiment(
             {
@@ -395,7 +396,7 @@ function et(e) {
         ),
         j = (0, V.Z)({
             channel: n,
-            isChannelSelected: o,
+            isChannelSelected: a,
             isChannelCollapsed: s,
             voiceStates: c,
             isSubscriptionGated: v,

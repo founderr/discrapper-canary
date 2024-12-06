@@ -1,6 +1,6 @@
 n.d(t, {
     b: function () {
-        return E;
+        return I;
     }
 });
 var i = n(200651),
@@ -13,11 +13,12 @@ var i = n(200651),
     d = n(746508),
     u = n(210724),
     h = n(905423),
-    m = n(410575),
-    p = n(981631),
-    g = n(388032),
-    f = n(415281);
-function _(e) {
+    m = n(316173),
+    p = n(410575),
+    g = n(981631),
+    f = n(388032),
+    _ = n(415281);
+function E(e) {
     let t = (0, h.Z)((e) => {
         let { guildId: t } = e;
         return t;
@@ -27,7 +28,7 @@ function _(e) {
         guildId: t
     });
 }
-function E() {
+function I() {
     let e = (0, a.Q)('AppPanels'),
         t = r.useRef(null);
     return (
@@ -41,21 +42,22 @@ function E() {
         ),
         (0, i.jsxs)('section', {
             ref: t,
-            className: f.panels,
-            'aria-label': g.intl.string(g.t.StREWF),
+            className: _.panels,
+            'aria-label': f.intl.string(f.t.StREWF),
             children: [
+                e && (0, i.jsx)(m.Z, {}),
                 (0, i.jsx)(u.Z, {}),
                 (0, i.jsx)(c.Z, {}),
-                (0, i.jsx)(m.Z, {
-                    section: p.jXE.ACTIVITY_PANEL,
-                    children: (0, i.jsx)(_, { className: f.activityPanel })
+                (0, i.jsx)(p.Z, {
+                    section: g.jXE.ACTIVITY_PANEL,
+                    children: (0, i.jsx)(E, { className: _.activityPanel })
                 }),
-                (0, i.jsx)(m.Z, {
-                    section: p.jXE.RTC_CONNECTION_PANEL,
+                (0, i.jsx)(p.Z, {
+                    section: g.jXE.RTC_CONNECTION_PANEL,
                     children: (0, i.jsx)(d.Z, {})
                 }),
-                (0, i.jsx)(m.Z, {
-                    section: p.jXE.ACCOUNT_PANEL,
+                (0, i.jsx)(p.Z, {
+                    section: g.jXE.ACCOUNT_PANEL,
                     children: (0, i.jsx)(s.Z, {})
                 })
             ]

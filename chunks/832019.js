@@ -14,5 +14,6 @@ e.exports = {
     joinButton: 'joinButton_a6cd4e',
     rsvpButton: 'rsvpButton_a6cd4e',
     buttonIcon: 'buttonIcon_a6cd4e',
-    closeIcon: 'closeIcon_a6cd4e'
+    closeIcon: 'closeIcon_a6cd4e',
+    details: 'details_a6cd4e'
 };
