@@ -6,7 +6,7 @@ n.d(t, {
 var r = n(626135),
     i = n(981631);
 function a(e) {
-    let { type: t, source: n, userId: a, guildId: s, channelId: o, channelType: l, applicationId: u, partyId: c, messageId: d, locationObject: f, analyticsLocations: _ } = e;
+    let { type: t, source: n, userId: a, guildId: s, channelId: o, channelType: l, applicationId: u, partyId: c, messageId: d, locationObject: f, analyticsLocations: _, referrerId: p } = e;
     r.default.track(i.rMx.APPLICATION_OPENED, {
         type: t,
         source: n,
@@ -18,6 +18,7 @@ function a(e) {
         other_user_id: a,
         message_id: d,
         location: f,
-        location_stack: _
+        location_stack: _,
+        referrer_id: p
     });
 }
