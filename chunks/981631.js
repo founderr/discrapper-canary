@@ -4151,6 +4151,7 @@ let on = Object.freeze({
     (ah.CONNECTIONS_XBOX_RELINK_COACHMARK_CLICKED = 'connections_xbox_relink_coachmark_clicked'),
     (ah.CONNECTIONS_NEW_CONSOLE_COACHMARK_VIEWED = 'connections_new_console_coachmark_viewed'),
     (ah.CONNECTIONS_NEW_CONSOLE_COACHMARK_CLICKED = 'connections_new_console_coachmark_clicked'),
+    (ah.CONNECTIONS_EMPTY_STATE_CARD_CLICKED = 'connections_empty_state_card_clicked'),
     (ah.MESSAGE_REQUESTS_INITIALIZED = 'message_requests_initialized'),
     (ah.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED = 'guild_default_message_request_updated'),
     (ah.SPAM_MESSAGE_REQUESTS_VIEWED = 'spam_message_requests_viewed'),
