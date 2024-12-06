@@ -76,7 +76,8 @@ let E = {
     giftPurchaseConfirmation: {
         yearGiftText: l.t.N5nBuL,
         monthGiftText: l.t.QoRefn,
-        collectRewardButtonText: () => l.intl.string(l.t.kMYVws)
+        collectRewardButtonText: () => l.intl.string(l.t.kMYVws),
+        rewardCollectedText: () => l.intl.string(l.t.naT1rK)
     },
     planSelectionBanner: {
         body: (e) => (e > 1 ? l.intl.formatToPlainString(l.t.XMBaKy, { optionCount: e }) : l.intl.string(l.t.pOmOBQ)),
