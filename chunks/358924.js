@@ -22,8 +22,8 @@ var i,
     S = n(812206),
     T = n(933557),
     b = n(194082),
-    A = n(264165),
-    x = n(630186),
+    x = n(264165),
+    A = n(630186),
     Z = n(925329),
     L = n(102172),
     y = n(871118),
@@ -175,7 +175,7 @@ let J = (e) => {
     return null != i || null != r
         ? (0, l.jsx)(u.Clickable, {
               onClick: i,
-              className: o()(null != i ? F.clickableIcon : ''),
+              className: o()(null != i ? F.clickable : ''),
               onContextMenu: r,
               children: t
           })
@@ -183,17 +183,23 @@ let J = (e) => {
 };
 J.Src = i;
 let $ = (e) => {
-    let { priorityUser: t, title: n, subtitle: i, icon: r, onContextMenu: a, guildId: s } = e;
+    let { priorityUser: t, title: n, subtitle: i, icon: r, onSubtitleClick: a, onIconClick: s, onContextMenu: c, guildId: d } = e,
+        h = (0, l.jsx)(u.Text, {
+            color: 'header-secondary',
+            className: F.textContent,
+            variant: 'text-sm/normal',
+            children: i
+        });
     return (0, l.jsxs)('header', {
         className: null != r ? F.headerFull : F.headerSimple,
         children: [
             (0, l.jsx)(u.Avatar, {
-                src: t.user.getAvatarURL(s, 32),
+                src: t.user.getAvatarURL(d, 32),
                 'aria-label': t.user.username,
                 size: u.AvatarSizes.SIZE_32,
                 className: F.headerAvatar,
                 status: t.status,
-                onContextMenu: a
+                onContextMenu: c
             }),
             (0, l.jsxs)('div', {
                 className: F.__invalid_headerDetails,
@@ -203,15 +209,22 @@ let $ = (e) => {
                         variant: 'text-md/semibold',
                         children: n
                     }),
-                    (0, l.jsx)(u.Text, {
-                        color: 'header-secondary',
-                        className: F.textContent,
-                        variant: 'text-sm/normal',
-                        children: i
-                    })
+                    null != a
+                        ? (0, l.jsx)(u.Clickable, {
+                              className: F.clickable,
+                              onClick: a,
+                              children: h
+                          })
+                        : h
                 ]
             }),
-            null != r ? r : null
+            null != r && null != s
+                ? (0, l.jsx)(u.Clickable, {
+                      className: F.clickable,
+                      onClick: s,
+                      children: r
+                  })
+                : r
         ]
     });
 };
@@ -219,7 +232,7 @@ $.Icon = J;
 let ee = (e) => {
     let { children: t, className: n, ...i } = e;
     return (0, l.jsx)(u.FocusRing, {
-        children: (0, l.jsx)(x.Z, {
+        children: (0, l.jsx)(A.Z, {
             className: o()(n, F.wrapper),
             padded: !0,
             ...i,
@@ -230,7 +243,7 @@ let ee = (e) => {
 (ee.Header = $),
     (ee.Body = (e) => {
         let { children: t } = e;
-        return (0, l.jsx)(x.Z, {
+        return (0, l.jsx)(A.Z, {
             inset: !0,
             padded: !1,
             className: F.body,
@@ -390,7 +403,7 @@ let ee = (e) => {
             { name: c, details: d, assets: h, application_id: m } = i;
         if (null != h && (0, C.Z)(i)) {
             var g;
-            t = (0, l.jsx)(A.Z, {
+            t = (0, l.jsx)(x.Z, {
                 className: F.twitchSectionPreviewWrapper,
                 aspectRatio: 16 / 9,
                 children: (0, l.jsxs)(u.Clickable, {
