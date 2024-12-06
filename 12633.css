@@ -29928,6 +29928,10 @@ div.popoutCloseButton_d523a2:hover {
     display: contents
 }
 
+.custom-profile-theme .clickableContainer_ae1fa2>.card_ae1fa2 {
+    box-shadow: 0 4px 16px 0 hsl(var(--black-500-hsl)/8%)
+}
+
 .clickableContainer_ae1fa2:hover>.card_ae1fa2 {
     background: var(--bg-mod-subtle)
 }
