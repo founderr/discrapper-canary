@@ -36634,6 +36634,10 @@ img.thumbnail_c64476 {
     text-decoration: underline
 }
 
+.visual-refresh .notice_be03aa {
+    min-height: 40px
+}
+
 .enable-forced-colors .notice_be03aa {
     border-bottom: 2px solid CanvasText
 }
