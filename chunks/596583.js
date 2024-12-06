@@ -25,7 +25,7 @@ var s = r(120356),
 let N = (e, t) => {
         f.Z.hasLayers() && (0, x.xf)(), c.Z.openPrivateChannel(e), t();
     },
-    w = (e) => {
+    Z = (e) => {
         let { user: t, trialCreationResult: r, onClose: s } = e,
             { avatarSrc: n, eventHandlers: l } = (0, p.Z)({
                 user: t,
@@ -95,7 +95,7 @@ t.Z = (e) => {
     let { selectedUsers: t, trialCreationResult: r, onClose: s } = e,
         a = [...t].map((e) =>
             (0, i.jsx)(
-                w,
+                Z,
                 {
                     user: e,
                     trialCreationResult: r.get(e.id),

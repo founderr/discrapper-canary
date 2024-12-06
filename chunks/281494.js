@@ -91,29 +91,29 @@ let h = new (class e {
                 }
             )
     );
-async function g(e, t) {
-    let n = JSON.stringify({
+async function g(e, t, n) {
+    let r = JSON.stringify({
         index: e,
         searchQuery: t
     });
-    if (h.has(n)) return h.get(n);
-    let { users: r, next_index: i } = (
+    if (h.has(r)) return h.get(r);
+    let { users: i, next_index: a } = (
             await o.tn.post({
                 url: _.ANM.GET_REFERRAL_ELIGIBLE_USERS,
                 body: {
                     index: e,
-                    limit: 10,
+                    limit: null != n ? n : 10,
                     search_query: t
                 },
                 oldFormErrors: !0,
                 rejectWithError: !1
             })
         ).body,
-        a = {
-            users: r.map((e) => new c.Z(e)),
-            nextIndex: i
+        s = {
+            users: i.map((e) => new c.Z(e)),
+            nextIndex: a
         };
-    return h.set(n, a), a;
+    return h.set(r, s), s;
 }
 let E = () => (
         l.Z.dispatch({ type: 'BILLING_REFERRALS_REMAINING_FETCH_START' }),

@@ -20,8 +20,8 @@ var r = n(200651),
     _ = n(479446),
     k = n(981632),
     I = n(290026),
-    S = n(819640),
-    j = n(594174),
+    j = n(819640),
+    S = n(594174),
     E = n(626135),
     T = n(74538),
     N = n(335131),
@@ -46,8 +46,8 @@ var r = n(200651),
     K = n(558117),
     $ = n(141594),
     Y = n(566564),
-    q = n(531864),
-    J = n(302800),
+    J = n(531864),
+    q = n(302800),
     Q = n(215023),
     X = n(981631),
     ee = n(921944),
@@ -56,7 +56,7 @@ var r = n(200651),
     er = n(697526);
 function ea(e) {
     let { products: t, handleShopCardMount: n, header: a, category: i, isPremiumUser: l, isGiftEasterEggEnabled: s, showMysteryCard: o = !1 } = e,
-        d = (0, c.e7)([j.default], () => j.default.getCurrentUser());
+        d = (0, c.e7)([S.default], () => S.default.getCurrentUser());
     return null == d || 0 === t.length
         ? null
         : (0, r.jsxs)('div', {
@@ -123,7 +123,7 @@ function el(e) {
     let { category: t, isPremiumUser: n, initialItemCardRef: i, isGiftEasterEggEnabled: s, setIsGiftEasterEggEnabled: o, showEasterEggToggle: c, isFullScreen: d } = e,
         u = a.useRef(10 + 70 * Math.random()),
         [h, f] = a.useState(!1),
-        g = (0, J.M7)(t.skuId),
+        g = (0, q.M7)(t.skuId),
         C = (0, p.O)(
             (e) => {
                 f(e && null != g);
@@ -174,26 +174,26 @@ t.default = function (e) {
         { analyticsLocations: _ } = (0, g.ZP)([...p, f.Z.COLLECTIBLES_SHOP]),
         { sessionId: k, scrollerRef: w, scrollHandler: R } = (0, C._)(X.rMx.COLLECTIBLES_SHOP_SCROLLED, s),
         { feedState: F, catalogState: U, transitionToCatalog: z, transitionToFeed: K } = (0, A.B)(i, w),
-        [J, ea] = a.useState(!1),
+        [q, ea] = a.useState(!1),
         [ei, es] = a.useState(Q.IV),
         [eo, ec] = a.useState(),
         [ed, eu] = a.useState(),
-        em = (0, c.e7)([S.Z], () => S.Z.getLayers().includes(X.S9g.COLLECTIBLES_SHOP)),
+        em = (0, c.e7)([j.Z], () => j.Z.getLayers().includes(X.S9g.COLLECTIBLES_SHOP)),
         eh = (0, u.f9)(),
         { onClose: ep } = (0, M.Db)(),
-        ef = (0, c.e7)([j.default], () => j.default.getCurrentUser()),
+        ef = (0, c.e7)([S.default], () => S.default.getCurrentUser()),
         eg = T.ZP.canUseCollectibles(ef),
         { categories: eC, isFetchingCategories: ev, fetchCategoriesError: eb, fetchPurchasesError: ex, claimError: e_, refreshCategories: ek } = (0, Z.ZP)({ location: 'CollectiblesShop.web' }),
         eI = null !== (t = null != eb ? eb : ex) && void 0 !== t ? t : e_;
     (0, I.P)();
-    let eS = (0, O.O)(eC),
-        ej = a.useRef(null),
+    let ej = (0, O.O)(eC),
+        eS = a.useRef(null),
         [eE, eT] = a.useState(!1);
     (0, H.Kp)({
         categories: eC,
         isFetchingCategories: ev,
         isLayer: em,
-        initialItemCardRef: ej
+        initialItemCardRef: eS
     }),
         a.useEffect(() => {
             if (F === Q.f7.VISIBLE || U === Q.f7.VISIBLE) {
@@ -338,7 +338,7 @@ t.default = function (e) {
                                                         })
                                                       : (0, r.jsx)('div', {
                                                             className: er.categories,
-                                                            children: eS
+                                                            children: ej
                                                                 .filter((e) => null == e.unpublishedAt || e.unpublishedAt > new Date())
                                                                 .filter((e) => {
                                                                     let { products: t } = e;
@@ -354,7 +354,7 @@ t.default = function (e) {
                                                                                 children: (0, r.jsx)(el, {
                                                                                     isPremiumUser: eg,
                                                                                     category: e,
-                                                                                    initialItemCardRef: ej,
+                                                                                    initialItemCardRef: eS,
                                                                                     setIsGiftEasterEggEnabled: eT,
                                                                                     isGiftEasterEggEnabled: eE,
                                                                                     isFullScreen: n
@@ -377,13 +377,13 @@ t.default = function (e) {
                     U !== Q.f7.VISIBLE &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(q.Z, {
-                                peaking: J,
+                            (0, r.jsx)(J.Z, {
+                                peaking: q,
                                 transitioning: F === Q.f7.OUT
                             }),
-                            (0, r.jsx)(q.Z, {
+                            (0, r.jsx)(J.Z, {
                                 style: { left: 1850 },
-                                peaking: J,
+                                peaking: q,
                                 transitioning: F === Q.f7.OUT
                             })
                         ]

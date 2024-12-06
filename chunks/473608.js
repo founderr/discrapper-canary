@@ -37,7 +37,7 @@ let v = (e) => {
                   ...s
               });
     },
-    g = (e) => {
+    E = (e) => {
         var n;
         let { profileEffect: t, fallbackLabel: l } = e,
             r = (0, m.V)(null == t ? void 0 : t.id);
@@ -80,7 +80,7 @@ let v = (e) => {
                 a.Z.PROFILE_EFFECT,
                 () => (
                     r()(m.type === a.Z.PROFILE_EFFECT, 'ts-match checked the type'),
-                    (0, i.jsx)(g, {
+                    (0, i.jsx)(E, {
                         profileEffect: m,
                         fallbackLabel: o
                     })

@@ -11,47 +11,47 @@ var i = r(192379),
     n = r(281494),
     l = r(276444);
 let o = (e) => {
-    let { searchQuery: t, selectedUsers: r } = e,
-        o = (0, s.e7)([l.Z], () => l.Z.getRecipientStatus()),
-        [C, d] = i.useState(0),
-        [c, x] = i.useState([]),
-        [h, p] = i.useState(!1),
-        [f, u] = i.useState(!1),
-        [m, _] = i.useState(new Map());
+    let { searchQuery: t, selectedUsers: r, limit: o } = e,
+        C = (0, s.e7)([l.Z], () => l.Z.getRecipientStatus()),
+        [d, c] = i.useState(0),
+        [x, h] = i.useState([]),
+        [p, f] = i.useState(!1),
+        [u, m] = i.useState(!1),
+        [_, j] = i.useState(new Map());
     i.useEffect(() => {
-        j(0);
+        g(0, o);
     }, [t]);
-    let j = async (e) => {
-        try {
-            if (null == e) return;
-            p(!0);
-            let i = [...m.values()];
-            for (let [e, t] of o)
-                if (t === n.Fe.PENDING && !m.has(e)) {
-                    let t = await (0, a.PR)(e);
-                    i.push(t);
-                }
-            let s = await (0, n.iF)(e, t);
-            x((t) => {
-                let a = s.users.filter((e) => !r.has(e.id));
-                return ((i = i.filter((e) => !r.has(e.id))), 0 === e) ? [...r.values(), ...i.values(), ...a] : [...t, ...a];
-            }),
-                _((e) => {
-                    for (let t of i) e.set(t.id, t);
-                    return e;
+    let g = async (e, i) => {
+        if (!p && !u && null != e)
+            try {
+                f(!0);
+                let s = [..._.values()];
+                for (let [e, t] of C)
+                    if (t === n.Fe.PENDING && !_.has(e)) {
+                        let t = await (0, a.PR)(e);
+                        s.push(t);
+                    }
+                let l = await (0, n.iF)(e, t, i);
+                h((t) => {
+                    let i = l.users.filter((e) => !r.has(e.id));
+                    return ((s = s.filter((e) => !r.has(e.id))), 0 === e) ? [...r.values(), ...s.values(), ...i] : [...t, ...i];
                 }),
-                d(s.nextIndex);
-        } catch (e) {
-            u(!0);
-        } finally {
-            p(!1);
-        }
+                    j((e) => {
+                        for (let t of s) e.set(t.id, t);
+                        return e;
+                    }),
+                    c(l.nextIndex);
+            } catch (e) {
+                m(!0);
+            } finally {
+                f(!1);
+            }
     };
     return {
-        eligibleUsers: c,
-        fetchUsers: () => j(C),
-        hasError: f,
-        isFetching: h,
-        resendUsers: m
+        eligibleUsers: x,
+        fetchUsers: () => g(d, o),
+        hasError: u,
+        isFetching: p,
+        resendUsers: _
     };
 };

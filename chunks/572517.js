@@ -35,7 +35,7 @@ function p() {
                   }),
                   (0, i.jsx)(r.Text, {
                       variant: 'text-md/normal',
-                      color: 'always-white',
+                      className: c.bannerText,
                       children: x.body(h.length)
                   })
               ]

@@ -17,8 +17,8 @@ var i = t(512722),
     x = t(981631),
     h = t(474936);
 function f(e) {
-    let { analyticsData: n, initialPlanId: t, breadcrumbSteps: i, handleStepChange: f, referralTrialOfferId: v, onReturn: g, continueSessionToInitialStep: S } = e,
-        { contextMetadata: E, step: j, paymentSources: y, paymentSourceId: I, setPaymentSourceId: P, purchaseError: T, setPurchaseError: N, purchaseErrorBlockRef: b, paymentAuthenticationState: C, selectedSkuId: _, activeSubscription: O, previousStepRef: A, setPurchaseState: Z } = (0, u.usePaymentContext)(),
+    let { analyticsData: n, initialPlanId: t, breadcrumbSteps: i, handleStepChange: f, referralTrialOfferId: v, onReturn: E, continueSessionToInitialStep: S } = e,
+        { contextMetadata: g, step: j, paymentSources: y, paymentSourceId: I, setPaymentSourceId: P, purchaseError: T, setPurchaseError: N, purchaseErrorBlockRef: b, paymentAuthenticationState: C, selectedSkuId: _, activeSubscription: O, previousStepRef: A, setPurchaseState: Z } = (0, u.usePaymentContext)(),
         { isGift: R } = (0, o.wD)(),
         w = {
             ...(0, a.fL)(),
@@ -35,8 +35,8 @@ function f(e) {
         M = (0, s.N)(v),
         L = !R && null != M && null != _ && h.nG[M.trial_id].skus.includes(_),
         k =
-            null != g
-                ? g
+            null != E
+                ? E
                 : () => {
                       f(Object.values(y).length < 1 && null == t ? d.h8.PLAN_SELECT : d.h8.REVIEW, { trackedFromStep: d.h8.PAYMENT_TYPE });
                   };
@@ -53,7 +53,7 @@ function f(e) {
         usePaymentModalStep: !0,
         onReturn: k,
         onComplete: (e) => {
-            e === d.h8.AWAITING_BROWSER_CHECKOUT ? (Z(m.A.COMPLETED), f(d.h8.CONFIRM, { trackedFromStep: e })) : f(d.h8.REVIEW, { trackedFromStep: e });
+            e === d.h8.AWAITING_BROWSER_CHECKOUT || e === d.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY ? (Z(m.A.COMPLETED), f(d.h8.CONFIRM, { trackedFromStep: e })) : f(d.h8.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {
             let { currentStep: t, toStep: i } = e,
@@ -63,7 +63,7 @@ function f(e) {
                 from_step: t,
                 to_step: i,
                 step_duration_ms: l - F,
-                flow_duration_ms: l - E.startTime
+                flow_duration_ms: l - g.startTime
             });
         },
         isEligibleForTrial: L,

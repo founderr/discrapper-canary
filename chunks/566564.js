@@ -20,8 +20,8 @@ var r = n(200651),
     _ = n(744112),
     k = n(223143),
     I = n(937510),
-    S = n(297651),
-    j = n(823941),
+    j = n(297651),
+    S = n(823941),
     E = n(752053),
     T = n(38900),
     N = n(709999),
@@ -39,8 +39,8 @@ t.Z = (e) => {
         K = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
         $ = a.createRef(),
         Y = (0, x.m)('CollectiblesFeedShop'),
-        q = (0, _.b)('Collectibles Shop Button'),
-        J = (0, h.Z)('shop_disable_cache'),
+        J = (0, _.b)('Collectibles Shop Button'),
+        q = (0, h.Z)('shop_disable_cache'),
         Q = (0, h.Z)('shop_include_unpublished'),
         X = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         ee = (0, o.e7)([f.Z], () => f.Z.isFocused()),
@@ -67,7 +67,7 @@ t.Z = (e) => {
     let eh = (e) => {
             var t;
             let { category: n, showMostPopularBadge: a } = e,
-                { handleCardVisibilityChange: i } = (0, S.E)(n.skuId, 'home', 'marketing'),
+                { handleCardVisibilityChange: i } = (0, j.E)(n.skuId, 'home', 'marketing'),
                 s = !0 === a ? L.intl.string(L.t['o/oRJC']) : (null == n ? void 0 : n.unpublishedAt) != null ? L.intl.string(L.t['h/uBCQ']) : void 0,
                 o = (0, b.uV)(null !== (t = null == n ? void 0 : n.featuredBlock) && void 0 !== t ? t : '', {
                     size: y.J0,
@@ -104,8 +104,8 @@ t.Z = (e) => {
             g.Z.captureMessage(e.join('\n'), {
                 tags: {
                     isStaff: K.isStaff().toString(),
-                    preloadEnabled: q.toString(),
-                    disableCache: J.toString(),
+                    preloadEnabled: J.toString(),
+                    disableCache: q.toString(),
                     includeUnpublished: Q.toString()
                 }
             });
@@ -167,7 +167,7 @@ t.Z = (e) => {
                                                   children: [
                                                       (0, r.jsx)('img', {
                                                           className: P.heroHeaderLogo,
-                                                          src: (0, b.uV)(null !== (A = null !== (w = null == en ? void 0 : en.heroLogo) && void 0 !== w ? w : null == en ? void 0 : en.logo) && void 0 !== A ? A : '', { size: j.n }),
+                                                          src: (0, b.uV)(null !== (A = null !== (w = null == en ? void 0 : en.heroLogo) && void 0 !== w ? w : null == en ? void 0 : en.logo) && void 0 !== A ? A : '', { size: S.n }),
                                                           alt: null == en ? void 0 : en.name
                                                       }),
                                                       (0, r.jsx)(d.Text, {

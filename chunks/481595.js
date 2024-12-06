@@ -19,9 +19,9 @@ var i = t(200651),
     h = t(115130),
     f = t(228624),
     v = t(925329),
-    g = t(215148),
+    E = t(215148),
     S = t(653798),
-    E = t(314182),
+    g = t(314182),
     j = t(251660),
     y = t(246946),
     I = t(351402),
@@ -50,7 +50,7 @@ function F(e) {
               className: k.invoice,
               children: [
                   a
-                      ? (0, i.jsx)(g.C, {
+                      ? (0, i.jsx)(E.C, {
                             sku: n,
                             value: (0, O.T4)(l, t.currency),
                             className: k.subscriptionCostRow
@@ -76,7 +76,7 @@ function F(e) {
         : (0, i.jsx)(S.PO, {
               className: k.invoice,
               children: a
-                  ? (0, i.jsx)(g.C, {
+                  ? (0, i.jsx)(E.C, {
                         sku: n,
                         value: (0, O.T4)(t.amount, t.currency),
                         className: k.subscriptionCostRow
@@ -106,7 +106,7 @@ function D(e) {
 }
 function U(e) {
     let { hasLegalTermsFlash: n, legalTermsNodeRef: t, onPaymentSourceChange: r, handlePaymentSourceAdd: v } = e,
-        { application: O, purchaseState: U, paymentSources: B, paymentSourceId: G, setHasAcceptedTerms: H, skusById: W, skuPricePreviewsById: V, selectedSkuId: K, isEmbeddedIAP: z, purchaseType: Y, purchasePreviewError: X, devShelfFetchState: q } = (0, Z.usePaymentContext)(),
+        { application: O, purchaseState: U, paymentSources: G, paymentSourceId: B, setHasAcceptedTerms: H, skusById: W, skuPricePreviewsById: V, selectedSkuId: K, isEmbeddedIAP: z, purchaseType: Y, purchasePreviewError: X, devShelfFetchState: q } = (0, Z.usePaymentContext)(),
         { isGift: J, giftRecipient: Q } = (0, A.wD)(),
         $ = J && (0, _.pO)(Q),
         { defaultPaymentSourceId: ee, hasFetchedPaymentSources: en } = (0, c.cj)([P.Z], () => ({
@@ -116,20 +116,20 @@ function U(e) {
     s()(null != K, 'Expected selectedSkuId');
     let et = W[K],
         ei = V[K],
-        el = null != G ? G : T.c,
+        el = null != B ? B : T.c,
         er = null != ei ? ei[el] : null;
     s()(null != et, 'SKU must exist and be fetched.'), s()(null != O, 'Application must exist.');
     let es = (0, c.e7)([h.Z, N.Z], () => N.Z.inTestModeForApplication(O.id) || h.Z.inDevModeForApplication(O.id), [O.id]),
         ea = (0, c.e7)([y.Z], () => y.Z.enabled),
         ec = a.M.EEA_COUNTRIES.has(I.Z.ipCountryCodeWithFallback),
         eo = U === R.A.PURCHASING || U === R.A.COMPLETED,
-        eu = null != G ? B[G].type : null,
+        eu = null != B ? G[B].type : null,
         ed = (0, f.ed)('SKUInvoice'),
         em = et.productLine === M.POd.COLLECTIBLES && ed;
     return (
         l.useEffect(() => {
-            en && G === ee && ee !== T.c && null == er && (0, u.x2)(et.applicationId, et.id, ee, { isGift: J });
-        }, [ee, en, G, et.applicationId, et.id, er, J]),
+            en && B === ee && ee !== T.c && null == er && (0, u.x2)(et.applicationId, et.id, ee, { isGift: J });
+        }, [ee, en, B, et.applicationId, et.id, er, J]),
         (0, i.jsxs)('div', {
             className: k.stepBody,
             children: [
@@ -183,7 +183,7 @@ function U(e) {
                       : (0, i.jsx)(S.PO, {
                             className: k.invoice,
                             children: em
-                                ? (0, i.jsx)(g.C, {
+                                ? (0, i.jsx)(E.C, {
                                       sku: et,
                                       value: null,
                                       className: k.subscriptionCostRow
@@ -202,15 +202,15 @@ function U(e) {
                             children: L.intl.string(L.t.mmDvV1)
                         }),
                         (0, i.jsx)(p.Z, {
-                            paymentSources: Object.values(B),
-                            selectedPaymentSourceId: G,
+                            paymentSources: Object.values(G),
+                            selectedPaymentSourceId: B,
                             onChange: r,
                             onPaymentSourceAdd: v,
                             hidePersonalInformation: ea
                         })
                     ]
                 }),
-                (0, i.jsx)(E.Z, {
+                (0, i.jsx)(g.Z, {
                     isActive: n,
                     ref: t,
                     children: (0, i.jsx)(x.Z, {

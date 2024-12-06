@@ -20,9 +20,9 @@ var i = t(200651),
     h = t(669079),
     f = t(987209),
     v = t(563132),
-    g = t(409813),
+    E = t(409813),
     S = t(809144),
-    E = t(698708),
+    g = t(698708),
     j = t(614223),
     y = t(481595),
     I = t(51499),
@@ -35,38 +35,38 @@ function _(e) {
     var n, t;
     let r,
         { handleStepChange: _, trialId: O, trialFooterMessageOverride: A, reviewWarningMessage: Z, planGroup: R, openInvoiceId: w, analyticsData: M, analyticsLocation: L, referralTrialOfferId: k, initialPlanId: F, subscriptionTier: D, handleClose: U } = e,
-        { activeSubscription: B, setUpdatedSubscription: G, contextMetadata: H, currencies: W, paymentSourceId: V, paymentSources: K, priceOptions: z, purchaseError: Y, purchaseTokenAuthState: X, selectedPlan: q, selectedSkuId: J, setCurrency: Q, setPaymentSourceId: $, setPurchaseState: ee, setPurchaseError: en, step: et, purchaseState: ei, isPremium: el, setHasAcceptedTerms: er, purchaseType: es, setEntitlementsGranted: ea, startedPaymentFlowWithPaymentSourcesRef: ec, invoicePreview: eo, inReverseTrial: eu } = (0, v.usePaymentContext)(),
+        { activeSubscription: G, setUpdatedSubscription: B, contextMetadata: H, currencies: W, paymentSourceId: V, paymentSources: K, priceOptions: z, purchaseError: Y, purchaseTokenAuthState: X, selectedPlan: q, selectedSkuId: J, setCurrency: Q, setPaymentSourceId: $, setPurchaseState: ee, setPurchaseError: en, step: et, purchaseState: ei, isPremium: el, setHasAcceptedTerms: er, purchaseType: es, setEntitlementsGranted: ea, startedPaymentFlowWithPaymentSourcesRef: ec, invoicePreview: eo, inReverseTrial: eu } = (0, v.usePaymentContext)(),
         { isGift: ed, giftMessage: em, giftRecipient: ep, claimableRewards: ex } = (0, f.wD)();
     s()(null != et, 'Step should be set');
     let eh = l.useRef(null),
         [ef, ev] = (0, a.Z)(!1, 500);
     (0, x.t)();
-    let eg = null !== (t = null != O ? O : k) && void 0 !== t ? t : null,
-        eS = null != eg && (!el || N.nG[eg].skus.includes(J)) ? eg : null,
-        eE = (0, d.N)(k),
+    let eE = null !== (t = null != O ? O : k) && void 0 !== t ? t : null,
+        eS = null != eE && (!el || N.nG[eE].skus.includes(J)) ? eE : null,
+        eg = (0, d.N)(k),
         ej = (0, u.Ng)(),
-        ey = { user_trial_offer_id: null == eE ? void 0 : eE.id };
+        ey = { user_trial_offer_id: null == eg ? void 0 : eg.id };
     l.useEffect(() => {
         null != Y && null != eh.current && eh.current.scrollIntoView({ behavior: 'smooth' });
     }, [Y]);
     let eI = l.useCallback(
             (e, n) => {
-                G(e),
+                B(e),
                     null != n && ea(n),
-                    _(g.h8.CONFIRM, {
+                    _(E.h8.CONFIRM, {
                         fulfillment: {
                             subscription: e,
                             entitlements: n
                         }
                     });
             },
-            [_, G, ea]
+            [_, B, ea]
         ),
         eP = null != V ? K[V] : null,
         eT = null != q && N.o4.has(q.id) && null != eP && !(0, c.aQ)(eP) ? Error(C.intl.string(C.t['2ik8io'])) : null,
         eN = l.useRef(null),
         [eb, eC] = l.useState(null),
-        e_ = !ed && null != eE && null != J && N.nG[eE.trial_id].skus.includes(J),
+        e_ = !ed && null != eg && null != J && N.nG[eg.trial_id].skus.includes(J),
         eO = null == ej ? void 0 : null === (n = ej.discount) || void 0 === n ? void 0 : n.plan_ids,
         eA = !ed && null != ej && null != eO && null != q && eO.includes(q.id),
         eZ = ed && (0, h.pO)(ep),
@@ -82,14 +82,14 @@ function _(e) {
         ek = (0, o.id)(q, ed, ex),
         eF = l.useCallback(() => {
             if (ew) {
-                _(g.h8.SKU_SELECT);
+                _(E.h8.SKU_SELECT);
                 return;
             }
             if (ek) {
-                _(g.h8.SELECT_FREE_SKU);
+                _(E.h8.SELECT_FREE_SKU);
                 return;
             }
-            return eM ? _(g.h8.GIFT_CUSTOMIZATION) : _(g.h8.PLAN_SELECT);
+            return eM ? _(E.h8.GIFT_CUSTOMIZATION) : _(E.h8.PLAN_SELECT);
         }, [_, ew, eM, ek]),
         eD = !1;
     return (
@@ -98,10 +98,10 @@ function _(e) {
                   hasLegalTermsFlash: ef,
                   legalTermsNodeRef: eN,
                   onPaymentSourceChange: (e) => $(null != e ? e.id : null),
-                  handlePaymentSourceAdd: () => _(g.h8.ADD_PAYMENT_STEPS)
+                  handlePaymentSourceAdd: () => _(E.h8.ADD_PAYMENT_STEPS)
               }))
             : ((eD = ed ? null == eo : null != eP && es === b.GZ.SUBSCRIPTION && e_ && !eP.canRedeemTrial()),
-              null == B || eu || ed
+              null == G || eu || ed
                   ? (s()(null != q, 'Expected plan to be selected'),
                     (r = (0, i.jsx)(m.Z, {
                         selectedPlanId: q.id,
@@ -110,7 +110,7 @@ function _(e) {
                         priceOptions: z,
                         currencies: W,
                         onCurrencyChange: (e) => Q(e),
-                        handlePaymentSourceAdd: () => _(g.h8.ADD_PAYMENT_STEPS),
+                        handlePaymentSourceAdd: () => _(E.h8.ADD_PAYMENT_STEPS),
                         setHasAcceptedTerms: er,
                         legalTermsNodeRef: eN,
                         hasLegalTermsFlash: ef,
@@ -125,14 +125,14 @@ function _(e) {
                     })))
                   : (s()(null != q, 'Expected plan to be selected'),
                     (r = (0, i.jsx)(p.Z, {
-                        premiumSubscription: B,
+                        premiumSubscription: G,
                         paymentSources: K,
                         priceOptions: z,
                         onPaymentSourceChange: (e) => {
                             $(null != e ? e.id : null);
                         },
                         onPaymentSourceAdd: () => {
-                            _(g.h8.ADD_PAYMENT_STEPS);
+                            _(E.h8.ADD_PAYMENT_STEPS);
                         },
                         planId: q.id,
                         setHasAcceptedTerms: er,
@@ -151,11 +151,11 @@ function _(e) {
                 (0, i.jsx)(S.P, { giftMessage: em }),
                 !eZ && (0, i.jsx)(I.Z, { isEligibleForTrial: e_ }),
                 (0, i.jsxs)(T.C3, {
-                    children: [(0, i.jsx)(E.Z, {}), r]
+                    children: [(0, i.jsx)(g.Z, {}), r]
                 }),
                 (0, i.jsx)(T.O3, {
                     children: (0, i.jsx)(P.Z, {
-                        premiumSubscription: null != B ? B : null,
+                        premiumSubscription: null != G ? G : null,
                         setPurchaseState: ee,
                         onBack: eF,
                         onNext: eI,
