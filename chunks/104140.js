@@ -1,6 +1,6 @@
 n.d(t, {
     a: function () {
-        return w;
+        return M;
     }
 }),
     n(47120);
@@ -59,8 +59,12 @@ let I = {
     C = (e, t) => (e ? (t ? 'M0 26.5C0 15.1986 0 9.54789 2.93063 5.65518C3.6851 4.65301 4.56522 3.75597 5.54847 2.98698C9.36774 0 14.9118 0 26 0C37.0882 0 42.6323 0 46.4515 2.98698C47.4348 3.75597 48.3149 4.65301 49.0694 5.65518C52 9.54789 52 15.1986 52 26.5C52 37.8014 52 43.4521 49.0694 47.3448C48.3149 48.347 47.4348 49.244 46.4515 50.013C42.6323 53 37.0882 53 26 53C14.9118 53 9.36774 53 5.54847 50.013C4.56522 49.244 3.6851 48.347 2.93063 47.3448C0 43.4521 0 37.8014 0 26.5Z' : 'M0 22C0 12.6177 0 7.92655 2.47976 4.69486C3.11817 3.86288 3.86288 3.11817 4.69486 2.47976C7.92655 0 12.6177 0 22 0C31.3823 0 36.0735 0 39.3051 2.47976C40.1371 3.11817 40.8818 3.86288 41.5202 4.69486C44 7.92655 44 12.6177 44 22C44 31.3823 44 36.0735 41.5202 39.3051C40.8818 40.1371 40.1371 40.8818 39.3051 41.5202C36.0735 44 31.3823 44 22 44C12.6177 44 7.92655 44 4.69486 41.5202C3.86288 40.8818 3.11817 40.1371 2.47976 39.3051C0 36.0735 0 31.3823 0 22Z') : 'M0 24C0 16.5449 0 12.8174 1.21793 9.87706C2.84183 5.95662 5.95662 2.84183 9.87706 1.21793C12.8174 0 16.5449 0 24 0C31.4551 0 35.1826 0 38.1229 1.21793C42.0434 2.84183 45.1582 5.95662 46.7821 9.87706C48 12.8174 48 16.5449 48 24C48 31.4551 48 35.1826 46.7821 38.1229C45.1582 42.0434 42.0434 45.1582 38.1229 46.7821C35.1826 48 31.4551 48 24 48C16.5449 48 12.8174 48 9.87706 46.7821C5.95662 45.1582 2.84183 42.0434 1.21793 38.1229C0 35.1826 0 31.4551 0 24Z'),
     R = (e) => (e ? 'M44 22C44 34.1502 34.1502 44 22 44C9.84978 44 0 34.1502 0 22C0 9.84978 9.84978 0 22 0C34.1502 0 44 9.84978 44 22Z' : 'M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24Z'),
     O = (null === (r = window.SVGPathElement) || void 0 === r ? void 0 : r.prototype.getTotalLength) != null,
-    D = (e, t) => (O ? (0, u.interpolate)(R(e), C(e, t), { maxSegmentLength: 1.5 }) : (e) => e.toString());
-class L extends s.Component {
+    D = (e, t) => ''.concat(e, '-').concat(t),
+    L = new Map();
+function x(e) {
+    return e.toString();
+}
+class w extends s.Component {
     componentDidMount() {
         this.forceUpdate();
     }
@@ -88,18 +92,18 @@ class L extends s.Component {
         super(...e), v(this, 'timeoutId', void 0);
     }
 }
-function x(e) {
+function P(e) {
     let { selected: t, upperBadge: n, lowerBadge: r, highlight: i } = e;
     return t || null != n || null != r || !!i;
 }
-function w(e) {
+function M(e) {
     let t = (0, g.Q)('BlobMask');
-    return (0, a.jsx)(P, {
+    return (0, a.jsx)(k, {
         ...e,
         isVisualRefreshEnabled: t
     });
 }
-w.defaultProps = {
+M.defaultProps = {
     selected: !1,
     lowerBadgeSize: {
         width: 16,
@@ -107,15 +111,15 @@ w.defaultProps = {
     },
     highlight: !1
 };
-class P extends (i = s.Component) {
+class k extends (i = s.Component) {
     static getDerivedStateFromProps(e, t) {
         let { hasRenderedBadge: n, upperBadgeMask: r, lowerBadgeMask: i, borderRadiusMask: a, renderComplex: s } = t,
             { upperBadge: o, lowerBadge: l } = e,
             u = !1;
         return (
             ((null != o && null == r) || (null != l && null == i)) && ((u = !0), (n = !0), (r = new f.Controller({ spring: 0 })), (i = new f.Controller({ spring: 0 }))),
-            x(e) && null == a && ((u = !0), (a = new f.Controller({ spring: 0 }))),
-            !s && x(e) && ((u = !0), (s = !0)),
+            P(e) && null == a && ((u = !0), (a = new f.Controller({ spring: 0 }))),
+            !s && P(e) && ((u = !0), (s = !0)),
             u
                 ? {
                       hasRenderedBadge: n,
@@ -216,7 +220,7 @@ class P extends (i = s.Component) {
                               config: S
                           })
                           .start()),
-            !o || x(this.props) || this.timeout.isStarted() ? x(this.props) && this.timeout.isStarted() && this.timeout.stop() : this.timeout.start(d()(10800000, 18000000), this.handleTimeout);
+            !o || P(this.props) || this.timeout.isStarted() ? P(this.props) && this.timeout.isStarted() && this.timeout.stop() : this.timeout.start(d()(10800000, 18000000), this.handleTimeout);
     }
     getBadgePositionInterpolation(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
@@ -297,8 +301,8 @@ class P extends (i = s.Component) {
             R = ''.concat(d, '-lower_badge_masks'),
             O = ''.concat(d, '-blob_mask'),
             D = ''.concat(d, '-stroke_mask'),
-            x = ''.concat(d, '-highlight_mask'),
-            w = (null == i ? void 0 : i.width) != null ? i.width : 16,
+            L = ''.concat(d, '-highlight_mask'),
+            x = (null == i ? void 0 : i.width) != null ? i.width : 16,
             P = (null == i ? void 0 : i.height) != null ? i.height : 16;
         return (0, a.jsxs)(
             'div',
@@ -322,7 +326,7 @@ class P extends (i = s.Component) {
                                         c &&
                                             (0, a.jsx)(f.animated.path, {
                                                 d: this.getPathInterpolation(),
-                                                id: x
+                                                id: L
                                             }),
                                         (0, a.jsx)(f.animated.path, {
                                             d: this.getPathInterpolation(),
@@ -343,13 +347,13 @@ class P extends (i = s.Component) {
                                         v
                                             ? (0, a.jsx)(f.animated.rect, {
                                                   id: R,
-                                                  x: T - (w + 2 * S) + S,
+                                                  x: T - (x + 2 * S) + S,
                                                   y: T - (P + 2 * S) + S,
-                                                  width: w + 2 * S,
+                                                  width: x + 2 * S,
                                                   height: P + 2 * S,
                                                   rx: b / 2,
                                                   ry: b / 2,
-                                                  transform: this.getBadgePositionInterpolation(_, 1, w + S)
+                                                  transform: this.getBadgePositionInterpolation(_, 1, x + S)
                                               })
                                             : null
                                     ]
@@ -364,7 +368,7 @@ class P extends (i = s.Component) {
                                     children: [
                                         c &&
                                             (0, a.jsx)('use', {
-                                                href: '#'.concat(x),
+                                                href: '#'.concat(L),
                                                 fill: 'black'
                                             }),
                                         (0, a.jsx)('use', {
@@ -455,7 +459,7 @@ class P extends (i = s.Component) {
                         children: [
                             null != r
                                 ? (0, a.jsx)(
-                                      L,
+                                      w,
                                       {
                                           className: E.lowerBadge,
                                           animatedStyle: this.getLowerBadgeStyles(),
@@ -466,7 +470,7 @@ class P extends (i = s.Component) {
                                 : null,
                             null != u
                                 ? (0, a.jsx)(
-                                      L,
+                                      w,
                                       {
                                           className: E.upperBadge,
                                           animatedStyle: this.getUpperBadgeStyles(),
@@ -491,7 +495,17 @@ class P extends (i = s.Component) {
                 maskId: (0, _.Z)(),
                 focused: !1
             }),
-            v(this, 'interpolator', D(!!this.props.isVisualRefreshEnabled, !!this.props.isFolder)),
+            v(
+                this,
+                'interpolator',
+                (function (e, t) {
+                    if (L.has(D(e, t))) return L.get(D(e, t));
+                    let n = (function (e, t) {
+                        return O ? (0, u.interpolate)(R(e), C(e, t), { maxSegmentLength: 1.5 }) : x;
+                    })(e, t);
+                    return L.set(D(e, t), n), n;
+                })(!!this.props.isVisualRefreshEnabled, !!this.props.isFolder)
+            ),
             v(this, 'handleTimeout', () => {
                 this.timeout.stop(), this.setState({ renderComplex: !1 });
             }),
@@ -503,4 +517,4 @@ class P extends (i = s.Component) {
             });
     }
 }
-v(P, 'defaultProps', w.defaultProps);
+v(k, 'defaultProps', M.defaultProps);
