@@ -1,8 +1,8 @@
 n(47120);
 var l = n(200651),
-    s = n(192379),
-    r = n(120356),
-    i = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    i = n.n(s),
     o = n(481060),
     a = n(72416),
     c = n(476221),
@@ -27,7 +27,7 @@ let g = {
         [h.IE4.BAD]: x.rtcConnectionQualityBad,
         [h.IE4.UNKNOWN]: null
     };
-class f extends s.PureComponent {
+class f extends r.PureComponent {
     renderPopoutTarget(e) {
         let t = this.props.channelId;
         return null == t
@@ -40,7 +40,7 @@ class f extends s.PureComponent {
     }
     renderStatus() {
         let { hasVideo: e, state: t, channelId: n } = this.props,
-            { connectionStatus: s, connectionStatusText: r } = c.Z.getStatus(t, e);
+            { connectionStatus: r, connectionStatusText: s } = c.Z.getStatus(t, e);
         return this.renderPopoutTarget((e) => {
             let { onClick: t } = e;
             return (0, l.jsx)(o.Button, {
@@ -48,9 +48,9 @@ class f extends s.PureComponent {
                 size: o.Button.Sizes.NONE,
                 onClick: t,
                 children: (0, l.jsx)(d.Z, {
-                    text: r,
+                    text: s,
                     hasVideo: this.props.hasVideo,
-                    className: N[s],
+                    className: N[r],
                     hasConnectedChannel: null != n
                 })
             });
@@ -58,11 +58,11 @@ class f extends s.PureComponent {
     }
     render() {
         let e;
-        let { quality: t, smallPing: n, lastPing: s, state: r, className: a, children: c } = this.props;
+        let { quality: t, smallPing: n, lastPing: r, state: s, className: a, children: c } = this.props;
         return (
-            r === h.hes.RTC_CONNECTED &&
+            s === h.hes.RTC_CONNECTED &&
                 (e = (0, l.jsx)(o.Tooltip, {
-                    text: t !== h.IE4.UNKNOWN && null != s ? ''.concat(s.toFixed(0), ' ms') : null,
+                    text: t !== h.IE4.UNKNOWN && null != r ? ''.concat(r.toFixed(0), ' ms') : null,
                     color: g[t],
                     children: (e) =>
                         (0, l.jsx)(p, {
@@ -72,6 +72,7 @@ class f extends s.PureComponent {
                         })
                 })),
             (0, l.jsxs)('div', {
+                className: x.rtcConnectionStatusWrapper,
                 children: [
                     (0, l.jsxs)('div', {
                         className: i()(x.rtcConnectionStatus, C[t], a),
@@ -89,27 +90,27 @@ class f extends s.PureComponent {
         );
     }
     constructor(...e) {
-        var t, n, s;
+        var t, n, r;
         super(...e),
             (t = this),
             (n = 'renderPopout'),
-            (s = (e) => (t) =>
+            (r = (e) => (t) =>
                 (0, l.jsx)(u.Z, {
                     ...t,
                     channelId: e
                 })),
             n in t
                 ? Object.defineProperty(t, n, {
-                      value: s,
+                      value: r,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[n] = s);
+                : (t[n] = r);
     }
 }
 function p(e) {
-    let { quality: t, smallPing: n, ...s } = e;
+    let { quality: t, smallPing: n, ...r } = e;
     if (!(0, o.useRedesignIconContext)().enabled)
         return (0, l.jsx)(a.Z, {
             className: i()(x.ping, { [x.smallPing]: n }),
@@ -124,7 +125,7 @@ function p(e) {
         }[t];
         return (0, l.jsx)(e, {
             className: i()(x.ping, { [x.smallPing]: n }),
-            ...s
+            ...r
         });
     }
 }

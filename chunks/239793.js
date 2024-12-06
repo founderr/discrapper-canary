@@ -9,5 +9,6 @@ e.exports = {
     pingForeground: 'pingForeground_c02c63',
     rtcConnectionQualityAverage: 'rtcConnectionQualityAverage_c02c63',
     rtcConnectionQualityBad: 'rtcConnectionQualityBad_c02c63',
-    labelWrapper: 'labelWrapper_c02c63'
+    labelWrapper: 'labelWrapper_c02c63',
+    rtcConnectionStatusWrapper: 'rtcConnectionStatusWrapper_c02c63'
 };
