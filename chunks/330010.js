@@ -20,7 +20,11 @@ function l(e) {
             rejectWithError: !1
         })
         .then((t) => {
-            let n = t.body.map((e) => (null != e.user && (e.user = new s.Z(e.user)), null != e.application && (e.application = a.Z.createFromServer(e.application)), e));
+            let n = t.body.map((e) => ({
+                ...e,
+                application: 'application' in e && null != e.application ? a.Z.createFromServer(e.application) : void 0,
+                user: 'user' in e && null != e.user ? new s.Z(e.user) : void 0
+            }));
             return (
                 i.Z.dispatch({
                     type: 'GUILD_SETTINGS_LOADED_INTEGRATIONS',

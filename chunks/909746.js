@@ -1170,7 +1170,10 @@ function eN(e, t) {
                             );
                         case v.KFR.APPLICATION_COMMAND:
                             if (e.targetId === e.options.application_id) {
-                                let t = m.Z.integrations.find((t) => t.application_id === e.targetId);
+                                let t = m.Z.integrations.find((t) => {
+                                    var n;
+                                    return (null === (n = t.application) || void 0 === n ? void 0 : n.id) === e.targetId;
+                                });
                                 if (null != t) return t.name;
                                 return e.targetId;
                             }
