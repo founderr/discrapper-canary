@@ -6,7 +6,7 @@ n.d(t, {
         return p;
     },
     ui: function () {
-        return E;
+        return v;
     }
 });
 var r = n(200651),
@@ -34,6 +34,9 @@ function _(e, t, n) {
 }
 let p = 0.5;
 class h {
+    getId() {
+        return this.id;
+    }
     constructor({ questOrQuests: e, questContent: t, triggeredByStatusChange: n, trackGuildAndChannelMetadata: r, questContentPosition: i, questContentRowIndex: o, minViewTimeSeconds: m = 1 }) {
         var g = this;
         _(this, 'id', void 0),
@@ -163,8 +166,9 @@ let m = (e, t) => {
         let t = Array.isArray(e) ? null : (0, u.uk)(e),
             n = (0, o.Z)(t);
         return t !== n;
-    };
-function E(e) {
+    },
+    E = i.createContext(void 0);
+function v(e) {
     let { visible: t, visibleChanged: n, reference: a, focused: s, focusedChanged: o, impression: l } = e,
         u = g(e.questOrQuests);
     return (
@@ -191,6 +195,9 @@ function E(e) {
                     })),
                     l.current.start());
         }, [s, t, l, o, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, u, e.minViewTimeSeconds]),
-        (0, r.jsx)(r.Fragment, { children: e.children(a) })
+        (0, r.jsx)(E.Provider, {
+            value: l,
+            children: e.children(a, l)
+        })
     );
 }
