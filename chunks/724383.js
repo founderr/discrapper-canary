@@ -14,7 +14,7 @@ var i = n(200651),
     f = n(49898),
     _ = n(156212);
 t.Z = function () {
-    let e = (0, o.h)({ location: 'DiscoveryUISelectedTab' }),
+    let e = (0, o.h$)({ location: 'DiscoveryUISelectedTab' }),
         t = p.Z.useField('selectedTab'),
         n = (function (e) {
             switch (e) {

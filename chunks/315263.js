@@ -97,7 +97,7 @@ function M(e) {
                     guild_id: f,
                     channel_id: y.Z.getChannelId()
                 });
-                (0, _.K)({ location: 'embedded_link' })
+                (0, _.K0)({ location: 'embedded_link' })
                     ? n
                           .e('11866')
                           .then(n.bind(n, 749681))
@@ -167,7 +167,7 @@ function M(e) {
             a = t && 'categories' === r && 'featured' !== e[4];
         return (t) => {
             var r, s, o, l;
-            if ((null == t || t.preventDefault(), (0, _.K)({ location: 'embedded_link' }))) {
+            if ((null == t || t.preventDefault(), (0, _.K0)({ location: 'embedded_link' }))) {
                 let t, l, u;
                 if (i) {
                     let e = new URLSearchParams(k);

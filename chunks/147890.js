@@ -42,7 +42,7 @@ var i = n(749681),
     h = n(979007);
 let p = (e) => {
         let { view: t = l.ApplicationDirectoryViews.HOME, guildId: n, applicationId: s, applicationSection: o, entrypoint: p, skuId: E } = e;
-        if ((0, r.K)({ location: p.name })) {
+        if ((0, r.K0)({ location: p.name })) {
             let e = null == s ? void 0 : o === c.ApplicationDirectoryProfileSections.STORE ? h.GlobalDiscoveryAppsSections.STORE : h.GlobalDiscoveryAppsSections.ABOUT;
             (0, i.transitionToGlobalDiscovery)({
                 tab: u.GlobalDiscoveryTab.APPS,

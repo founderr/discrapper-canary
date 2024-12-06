@@ -76,7 +76,7 @@ function N(e) {
     });
 }
 t.Z = function () {
-    let e = (0, c.h)({ location: 'GlobalDiscoverySidebar' });
+    let e = (0, c.h$)({ location: 'GlobalDiscoverySidebar' });
     return (0, i.jsxs)('div', {
         className: v.container,
         children: [
