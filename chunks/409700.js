@@ -1,12 +1,12 @@
 n.d(t, {
     Dp: function () {
-        return T;
-    },
-    P6: function () {
         return I;
     },
+    P6: function () {
+        return v;
+    },
     ZP: function () {
-        return S;
+        return b;
     }
 }),
     n(47120);
@@ -15,93 +15,91 @@ var r = n(200651),
     a = n(831209),
     s = n(442837),
     o = n(481060),
-    l = n(208049),
-    u = n(695346),
-    c = n(914010),
-    d = n(594174),
-    f = n(74538),
-    _ = n(125900),
-    p = n(240479),
-    h = n(710111),
-    m = n(388032),
-    g = n(89107),
-    E = n(965965);
-function v() {
-    var e, t;
-    let n = null !== (t = null === (e = u.kU.useSetting()) || void 0 === e ? void 0 : e.volume) && void 0 !== t ? t : 100;
+    l = n(914010),
+    u = n(594174),
+    c = n(74538),
+    d = n(125900),
+    f = n(824690),
+    _ = n(240479),
+    p = n(710111),
+    h = n(388032),
+    m = n(89107),
+    g = n(965965);
+function E() {
+    let { volume: e, onVolumeChange: t } = (0, f.Z)();
     return (0, r.jsxs)(o.Clickable, {
-        className: g.sliderContainer,
+        className: m.sliderContainer,
         onClick: (e) => e.stopPropagation(),
         children: [
             (0, r.jsx)(o.Text, {
                 variant: 'text-sm/normal',
-                children: m.intl.string(m.t.kbFsAA)
+                children: h.intl.string(h.t.kbFsAA)
             }),
             (0, r.jsx)(o.Slider, {
-                onValueChange: (e) => (0, l.xz)(null != e ? e : n),
-                className: g.slider,
-                initialValue: n,
+                onValueChange: t,
+                className: m.slider,
+                initialValue: e,
                 maxValue: 100
             })
         ]
     });
 }
-function I(e) {
+function v(e) {
     let { sound: t, forceShowBetaLabel: n = !1 } = e,
-        i = (0, _.V)({ location: 'SoundmojiBanner' }),
-        l = (0, s.e7)([d.default], () => f.ZP.canUseSoundboardEverywhere(d.default.getCurrentUser())),
-        u = (0, s.e7)([c.Z], () => c.Z.getGuildId());
-    return n || l || t.guildId === h.X8 || t.guildId === u || !i
+        i = (0, d.V)({ location: 'SoundmojiBanner' }),
+        f = (0, s.e7)([u.default], () => c.ZP.canUseSoundboardEverywhere(u.default.getCurrentUser())),
+        _ = (0, s.e7)([l.Z], () => l.Z.getGuildId());
+    return n || f || t.guildId === p.X8 || t.guildId === _ || !i
         ? (0, r.jsx)('div', {
               children: (0, r.jsx)(o.TextBadge, {
                   text: 'BETA',
                   color: a.Z.BG_BRAND,
-                  className: g.betaBadge
+                  className: m.betaBadge
               })
           })
         : (0, r.jsxs)('div', {
-              className: g.infoNitroContainer,
+              className: m.infoNitroContainer,
               children: [
-                  (0, r.jsx)('div', { className: g.infoNitroBackground }),
+                  (0, r.jsx)('div', { className: m.infoNitroBackground }),
                   (0, r.jsxs)('div', {
-                      className: g.infoNitroTextContainer,
+                      className: m.infoNitroTextContainer,
                       children: [
                           (0, r.jsx)(o.NitroWheelIcon, {
                               size: 'xxs',
                               color: 'white',
-                              className: g.infoNitroIcon
+                              className: m.infoNitroIcon
                           }),
                           (0, r.jsx)(o.Text, {
                               variant: 'text-xs/medium',
                               color: 'always-white',
-                              className: g.infoNitroText,
-                              children: m.intl.string(m.t['BMw+7O'])
+                              className: m.infoNitroText,
+                              children: h.intl.string(h.t['BMw+7O'])
                           }),
                           (0, r.jsx)(o.TextBadge, {
                               text: 'BETA',
                               color: a.Z.BG_BRAND,
-                              className: g.infoNitroBadge
+                              className: m.infoNitroBadge
                           })
                       ]
                   })
               ]
           });
 }
-function T(e) {
+function I(e) {
     let { sound: t } = e;
     return (0, r.jsxs)('div', {
-        className: g.infoContainer,
+        className: m.infoContainer,
         children: [
-            (0, r.jsx)(I, { sound: t }),
+            (0, r.jsx)(v, { sound: t }),
             (0, r.jsxs)('div', {
-                className: g.infoSoundContainer,
+                className: m.infoSoundContainer,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: g.infoSoundInnerContainer,
+                        className: m.infoSoundInnerContainer,
                         children: [
                             (0, r.jsx)(o.SoundboardIcon, {
                                 size: 'sm',
-                                className: g.infoSoundIcon
+                                className: m.infoSoundIcon
                             }),
                             (0, r.jsx)(o.Text, {
                                 variant: 'text-md/semibold',
@@ -111,10 +109,10 @@ function T(e) {
                         ]
                     }),
                     (0, r.jsx)('div', {
-                        className: g.infoSoundInnerContainer,
+                        className: m.infoSoundInnerContainer,
                         children: (0, r.jsx)(o.Text, {
                             variant: 'text-sm/normal',
-                            children: m.intl.string(m.t.D6eYmZ)
+                            children: h.intl.string(h.t.D6eYmZ)
                         })
                     })
                 ]
@@ -122,7 +120,7 @@ function T(e) {
         ]
     });
 }
-function b(e) {
+function T(e) {
     let { renderPopout: t, position: n, tooltipText: a, children: s, setTooltipShowing: l } = e,
         [u, c] = i.useState(!1),
         [d, f] = i.useState(String(Date.now())),
@@ -173,42 +171,42 @@ function b(e) {
                             ...e,
                             'aria-label': a,
                             onClick: _,
-                            className: E.secondaryButtonRefresh,
+                            className: g.secondaryButtonRefresh,
                             children: s
                         })
                 })
         })
     );
 }
-function S(e) {
+function b(e) {
     let { sound: t, channel: n, setTooltipShowing: i } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(b, {
+            (0, r.jsx)(T, {
                 setTooltipShowing: i,
-                renderPopout: () => (0, r.jsx)(v, {}),
-                tooltipText: m.intl.string(m.t['19lt29']),
+                renderPopout: () => (0, r.jsx)(E, {}),
+                tooltipText: h.intl.string(h.t['19lt29']),
                 position: 'top',
                 children: (0, r.jsx)(o.VoiceNormalIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: E.secondaryIcon
+                    className: g.secondaryIcon
                 })
             }),
-            (0, r.jsx)(b, {
+            (0, r.jsx)(T, {
                 setTooltipShowing: i,
                 renderPopout: (e) =>
-                    (0, r.jsx)(p.Z, {
+                    (0, r.jsx)(_.Z, {
                         sound: t,
                         channel: n,
                         ...e
                     }),
-                tooltipText: m.intl.string(m.t.KVbJU1),
+                tooltipText: h.intl.string(h.t.KVbJU1),
                 position: 'right',
                 children: (0, r.jsx)(o.CircleInformationIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: E.secondaryIcon
+                    className: g.secondaryIcon
                 })
             })
         ]

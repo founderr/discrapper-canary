@@ -1,21 +1,24 @@
 n.d(t, {
+    A8: function () {
+        return c;
+    },
     D5: function () {
-        return v;
+        return I;
     },
     Gm: function () {
-        return T;
+        return b;
     },
     T4: function () {
-        return h;
+        return m;
     },
     r1: function () {
-        return d;
+        return f;
     },
     wA: function () {
-        return _;
+        return p;
     },
     yC: function () {
-        return g;
+        return E;
     }
 }),
     n(47120),
@@ -134,8 +137,8 @@ class u extends o.C {
         ]);
     }
 }
-new u();
-class c extends o.C {
+let c = new u();
+class d extends o.C {
     internalJsonWrite(e, t) {
         return this.refJsonWriter.scalar(r.wx.INT64, e.value, 'value', !1, !0);
     }
@@ -184,8 +187,8 @@ class c extends o.C {
         ]);
     }
 }
-let d = new c();
-class f extends o.C {
+let f = new d();
+class _ extends o.C {
     internalJsonWrite(e, t) {
         return this.refJsonWriter.scalar(r.wx.UINT64, e.value, 'value', !1, !0);
     }
@@ -234,8 +237,8 @@ class f extends o.C {
         ]);
     }
 }
-let _ = new f();
-class p extends o.C {
+let p = new _();
+class h extends o.C {
     internalJsonWrite(e, t) {
         return this.refJsonWriter.scalar(5, e.value, 'value', !1, !0);
     }
@@ -284,8 +287,8 @@ class p extends o.C {
         ]);
     }
 }
-let h = new p();
-class m extends o.C {
+let m = new h();
+class g extends o.C {
     internalJsonWrite(e, t) {
         return this.refJsonWriter.scalar(13, e.value, 'value', !1, !0);
     }
@@ -334,8 +337,8 @@ class m extends o.C {
         ]);
     }
 }
-let g = new m();
-class E extends o.C {
+let E = new g();
+class v extends o.C {
     internalJsonWrite(e, t) {
         return e.value;
     }
@@ -384,8 +387,8 @@ class E extends o.C {
         ]);
     }
 }
-let v = new E();
-class I extends o.C {
+let I = new v();
+class T extends o.C {
     internalJsonWrite(e, t) {
         return e.value;
     }
@@ -434,8 +437,8 @@ class I extends o.C {
         ]);
     }
 }
-let T = new I();
-class b extends o.C {
+let b = new T();
+class S extends o.C {
     internalJsonWrite(e, t) {
         return this.refJsonWriter.scalar(12, e.value, 'value', !1, !0);
     }
@@ -484,4 +487,4 @@ class b extends o.C {
         ]);
     }
 }
-new b();
+new S();

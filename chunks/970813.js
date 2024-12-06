@@ -1,0 +1,22 @@
+n.d(t, {
+    Z: function () {
+        return a;
+    }
+});
+var i = n(200651);
+n(192379);
+var s = n(722932),
+    r = n(824690),
+    l = n(674343);
+function a() {
+    let { volume: e, onVolumeChange: t } = (0, r.Z)();
+    return (0, s.X0)({ location: 'UserSettingsSoundmojiVolume' })
+        ? (0, i.jsx)(l.Z, {
+              title: 'Soundmoji',
+              description: 'Control how loud soundmojis are for you personally',
+              label: 'Soundmoji Volume',
+              volume: e,
+              onVolumeChange: t
+          })
+        : null;
+}
