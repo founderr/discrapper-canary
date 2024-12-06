@@ -80,7 +80,7 @@ let T = 2700,
             )
             .exhaustive();
 function y(e) {
-    let { user: t, sourceType: n, isVisible: i, isExpandable: s, interactionSourceId: T, moreButton: b } = e,
+    let { user: t, sourceType: n, isVisible: i, isExpandable: s, interactionSourceId: T, renderMoreButtonPopout: b } = e,
         { trackUserProfileAction: y } = (0, _.KZ)(),
         { pressReact: A, pressReply: N } = (0, h.Q)(n),
         C = (0, o.e7)([f.default], () => f.default.getId() === t.id),
@@ -101,6 +101,7 @@ function y(e) {
                   (0, r.jsx)(u.TooltipContainer, {
                       text: v.intl.string(v.t.nhaI4e),
                       shouldShow: i,
+                      className: I.tooltipContainer,
                       delay: 0,
                       'aria-label': !1,
                       children: (0, r.jsx)(c.zx, {
@@ -114,7 +115,7 @@ function y(e) {
                                       }),
                                   O === E.y0.BITE_SIZE && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
                           },
-                          className: a()(I.button, I.left),
+                          className: I.button,
                           'aria-label': S(E.P.REACT, n),
                           'aria-haspopup': 'dialog',
                           children: (0, r.jsx)(u.ReactionIcon, {
@@ -126,6 +127,7 @@ function y(e) {
                   (0, r.jsx)(u.TooltipContainer, {
                       text: v.intl.string(v.t.RmDYKC),
                       shouldShow: i,
+                      className: I.tooltipContainer,
                       delay: 0,
                       'aria-label': !1,
                       children: (0, r.jsx)(c.zx, {
@@ -148,14 +150,26 @@ function y(e) {
                           })
                       })
                   }),
-                  null != b &&
-                      (0, r.jsx)(u.TooltipContainer, {
-                          text: v.intl.string(v.t.UKOtz8),
-                          shouldShow: i,
-                          delay: 0,
-                          'aria-label': !1,
-                          children: b
-                      })
+                  null == b
+                      ? void 0
+                      : b((e) =>
+                            (0, r.jsx)(u.TooltipContainer, {
+                                text: v.intl.string(v.t.UKOtz8),
+                                shouldShow: i,
+                                className: I.tooltipContainer,
+                                delay: 0,
+                                'aria-label': !1,
+                                children: (0, r.jsx)(c.zx, {
+                                    ...e,
+                                    className: I.button,
+                                    'aria-label': v.intl.string(v.t.UKOtz8),
+                                    children: (0, r.jsx)(u.MoreHorizontalIcon, {
+                                        size: 'xs',
+                                        className: I.icon
+                                    })
+                                })
+                            })
+                        )
               ]
           });
 }

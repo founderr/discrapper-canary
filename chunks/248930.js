@@ -18,7 +18,7 @@ var i = n(120356),
     p = n(64621),
     h = n(582123),
     m = n(382405),
-    g = n(290274),
+    g = n(386019),
     E = n(228168),
     v = n(249942);
 function I(e) {
@@ -57,15 +57,17 @@ function I(e) {
                                       interactionSourceId: n.id,
                                       sourceType: E.n_.ACTIVITY,
                                       onShowToolbar: () => C({ action: 'HOVER_ACTIVITY_CARD' }),
-                                      moreButton: b
-                                          ? null
-                                          : (0, r.jsx)(g.Z, {
-                                                display: 'recent',
-                                                entry: n,
-                                                user: t,
-                                                onClose: T,
-                                                onRequestOpen: s
-                                            }),
+                                      renderMoreButtonPopout: b
+                                          ? void 0
+                                          : (e) =>
+                                                (0, r.jsx)(g.Z, {
+                                                    display: 'recent',
+                                                    entry: n,
+                                                    user: t,
+                                                    onClose: T,
+                                                    onRequestOpen: s,
+                                                    children: e
+                                                }),
                                       children: (0, r.jsx)(m.Z, {
                                           entry: n,
                                           user: t,
