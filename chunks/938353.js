@@ -11,11 +11,6 @@ n.d(t, {
 }),
     n(47120),
     n(789020),
-    n(315314),
-    n(610138),
-    n(216116),
-    n(78328),
-    n(815648),
     n(411104),
     n(390547);
 var i,
@@ -228,7 +223,7 @@ class e3 extends (i = l.Component) {
         return 0 === e.codedLinks.length
             ? null
             : e.codedLinks.map((t) => {
-                  let { type: n, code: i, url: l } = t;
+                  let { type: n, code: i } = t;
                   if (n === v.g.INVITE)
                       return this.shouldRenderInvite(i)
                           ? (0, r.jsx)(
@@ -261,22 +256,16 @@ class e3 extends (i = l.Component) {
                           },
                           i
                       );
-                  else if (n === v.g.ACTIVITY_BOOKMARK) {
-                      var a, o;
-                      let t = new URL(l),
-                          n = null !== (a = t.searchParams.get('referrer_id')) && void 0 !== a ? a : e.author.id,
-                          s = null !== (o = t.searchParams.get('custom_id')) && void 0 !== o ? o : void 0;
+                  else if (n === v.g.ACTIVITY_BOOKMARK)
                       return (0, r.jsx)(
                           _.Z,
                           {
                               applicationId: i,
-                              message: e,
-                              referrerId: n,
-                              customId: s
+                              message: e
                           },
                           i
                       );
-                  } else if (n === v.g.GUILD_PRODUCT) return (0, r.jsx)(D.Z, { code: i }, i);
+                  else if (n === v.g.GUILD_PRODUCT) return (0, r.jsx)(D.Z, { code: i }, i);
                   else if (n === v.g.SERVER_SHOP) return (0, r.jsx)(T.Z, { guildId: i }, i);
                   else if (n === v.g.QUESTS_EMBED) return (0, r.jsx)(en.Z, { questId: i }, i);
                   else if (n === v.g.APP_DIRECTORY_STOREFRONT)

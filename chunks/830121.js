@@ -124,13 +124,12 @@ function Y(e) {
         if (n.length >= 10) break;
         let { url: r, inviteHostRemainingPath: i, templateHostRemainingPath: l, primaryHostRemainingPath: u } = H(e);
         if (null == r || null == r.pathname) continue;
-        let h = (r, i) => {
-            !t.has(i) &&
-                (t.add(i),
+        let h = (e, r) => {
+            !t.has(r) &&
+                (t.add(r),
                 n.push({
-                    type: r,
-                    code: i,
-                    url: e
+                    type: e,
+                    code: r
                 }));
         };
         if ((null == i ? void 0 : i.match(v)) != null) {

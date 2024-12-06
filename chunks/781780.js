@@ -11,21 +11,19 @@ var i = t(200651),
 function d(e) {
     var n, t, d;
     let { channelId: c, guildId: u, embeddedActivity: s, application: p } = e,
-        m = {
+        v = {
             instance_id: null !== (d = null !== (t = s.compositeInstanceId) && void 0 !== t ? t : s.launchId) && void 0 !== d ? d : '',
             location_id: null === (n = s.location) || void 0 === n ? void 0 : n.id,
-            launch_id: s.launchId,
-            referrer_id: s.referrerId,
-            custom_id: s.customId
+            launch_id: s.launchId
         };
     return (
-        null != u && '' !== u && (m.guild_id = u),
-        null != c && '' !== c && (m.channel_id = c),
+        null != u && '' !== u && (v.guild_id = u),
+        null != c && '' !== c && (v.channel_id = c),
         (0, i.jsx)(a.J, {
             allowPopups: (0, r.h)(p),
             referrerPolicy: l.um.has(s.applicationId) ? 'no-referrer' : 'origin',
             url: s.url,
-            queryParams: m,
+            queryParams: v,
             className: o.iframe,
             shouldRefocus: !1
         })
