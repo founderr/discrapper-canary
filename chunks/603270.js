@@ -53,10 +53,7 @@ let P = O(function (e) {
         r.useEffect(() => {
             I === _.N.NONE && (0, o.k)(t), null == h && !p && !g && (0, u.UM)(t);
         }, [h, t, g, p, I]);
-        let P = (0, d.h)({
-                location: 'AppStorefrontMessageEmbed',
-                autoTrackExposure: !1
-            }),
+        let P = (0, d.h$)({ location: 'AppStorefrontMessageEmbed' }),
             L = E.subscriptions.length,
             O = E.otps.length,
             M = r.useMemo(
@@ -147,10 +144,7 @@ let P = O(function (e) {
                 skuId: u,
                 subscribeForGuild: k
             }),
-            G = (0, d.h)({
-                location: 'AppStorefrontSKUMessageEmbed',
-                autoTrackExposure: !1
-            });
+            G = (0, d.h$)({ location: 'AppStorefrontSKUMessageEmbed' });
         if (!B || null == v || null == I) return null;
         let V = I.type === A.epS.SUBSCRIPTION,
             H = !!V && (0, m.KW)(I.flags),

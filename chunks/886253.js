@@ -20,11 +20,8 @@ var l = t(442837),
     p = t(689762);
 function v(e) {
     let { appId: n, skuId: t, transitionState: v, onClose: _, onHeaderTitleClick: j, children: I, footer: N } = e,
-        k = (0, a.h)({
-            location: 'store_modal',
-            autoTrackExposure: !1
-        }),
-        S = (0, l.e7)(
+        S = (0, a.h$)({ location: 'store_modal' }),
+        k = (0, l.e7)(
             [s.Z, r.Z],
             () => {
                 var e;
@@ -32,9 +29,9 @@ function v(e) {
             },
             [n]
         );
-    if (null == S) return null;
-    let T = (0, d.y)(S, 25),
-        { termsOfServiceUrl: g, privacyPolicyUrl: C } = S;
+    if (null == k) return null;
+    let g = (0, d.y)(k, 25),
+        { termsOfServiceUrl: C, privacyPolicyUrl: R } = k;
     return (0, o.jsxs)(i.ModalRoot, {
         transitionState: v,
         size: i.ModalSize.DYNAMIC,
@@ -47,15 +44,15 @@ function v(e) {
                         className: f.modalTitle,
                         onClick: j,
                         children: [
-                            null != T &&
+                            null != g &&
                                 (0, o.jsx)('img', {
-                                    src: T.href,
+                                    src: g.href,
                                     alt: '',
                                     className: p.appIcon
                                 }),
                             (0, o.jsx)(i.Heading, {
                                 variant: 'heading-md/semibold',
-                                children: S.name
+                                children: k.name
                             })
                         ]
                     }),
@@ -69,13 +66,13 @@ function v(e) {
             (0, o.jsxs)(i.ModalFooter, {
                 className: p.footer,
                 children: [
-                    null != g || null != C
+                    null != C || null != R
                         ? (0, o.jsx)(i.Text, {
                               color: 'header-primary',
                               variant: 'text-sm/normal',
                               children: (0, o.jsx)(m.Z, {
-                                  termsOfServiceUrl: g,
-                                  privacyPolicyUrl: C
+                                  termsOfServiceUrl: C,
+                                  privacyPolicyUrl: R
                               })
                           })
                         : (0, o.jsx)(i.Text, {
@@ -98,7 +95,7 @@ function v(e) {
                                         let e = ''
                                             .concat(location.protocol, '//')
                                             .concat(location.host)
-                                            .concat(k ? x.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(n, t) : x.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(n, t));
+                                            .concat(S ? x.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(n, t) : x.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(n, t));
                                         (0, c.JG)(e), (0, i.showToast)((0, i.createToast)(h.intl.string(h.t['L/PwZW']), i.ToastType.SUCCESS)), (0, u.X)(n, u.B.DETAILS_MODAL, t);
                                     },
                                     children: (0, o.jsx)(i.LinkIcon, {

@@ -1,7 +1,7 @@
 c.r(t),
     c.d(t, {
         default: function () {
-            return r;
+            return l;
         }
     });
 var I = c(200651),
@@ -31,11 +31,8 @@ let R = a.lazy(() =>
             webpackId: 675869
         })
     );
-function r() {
-    return (0, _.h)({
-        location: 'ApplicationDirectoryRoutes',
-        autoTrackExposure: !1
-    })
+function l() {
+    return (0, _.h$)({ location: 'ApplicationDirectoryRoutes' })
         ? (0, I.jsx)(o.AW, {
               path: p.Z5c.APPLICATION_DIRECTORY,
               component: P.Z

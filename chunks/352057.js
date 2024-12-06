@@ -1,16 +1,22 @@
 n.d(t, {
-    K: function () {
+    K0: function () {
+        return o;
+    },
+    g: function () {
         return a;
     },
-    h: function () {
-        return i;
+    h$: function () {
+        return s;
     }
 });
-let r = (0, n(818083).B)({
+var r = n(818083),
+    i = n(987338);
+let a = (0, r.B)({
     kind: 'user',
     id: '2024-09_global_discovery_apps',
     label: 'Global Discovery Apps',
     defaultConfig: { enabled: !1 },
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
@@ -19,12 +25,11 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
-    let { location: t, autoTrackExposure: n = !0 } = e,
-        { enabled: i } = r.useExperiment({ location: t }, { autoTrackExposure: n });
-    return i;
-}
-function a(e) {
+function s(e) {
     let { location: t } = e;
-    return r.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
+    return a.useExperiment({ location: t }, { autoTrackExposure: !1 }).enabled;
+}
+function o(e) {
+    let { location: t } = e;
+    return a.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
 }
