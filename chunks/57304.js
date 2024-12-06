@@ -5,67 +5,70 @@ var i = n(200651),
     a = n(481060),
     s = n(23536),
     o = n(40851),
-    c = n(731290),
-    d = n(306680),
-    u = n(594174),
-    h = n(585483),
-    p = n(665149),
-    m = n(981631),
-    f = n(388032);
+    c = n(540059),
+    d = n(731290),
+    u = n(306680),
+    h = n(594174),
+    p = n(585483),
+    m = n(665149),
+    f = n(981631),
+    g = n(388032);
 t.Z = function (e) {
     let { channel: t } = e,
-        n = (0, r.e7)(
-            [c.Z, u.default],
+        n = (0, c.Q)('ChannelPinsButton'),
+        C = (0, r.e7)(
+            [d.Z, h.default],
             () => {
-                let e = u.default.getCurrentUser();
-                return null == e || (t.isNSFW() && (!e.nsfwAllowed || !c.Z.didAgree(t.getGuildId())));
+                let e = h.default.getCurrentUser();
+                return null == e || (t.isNSFW() && (!e.nsfwAllowed || !d.Z.didAgree(t.getGuildId())));
             },
             [t]
         ),
-        [g, C] = l.useState(!1),
-        x = (0, r.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
-        v = (0, o.Aq)(),
-        _ = l.useCallback(() => {
-            !n && C((e) => !e);
-        }, [n]);
-    function I(e) {
-        !(null == e ? void 0 : e.shiftKey) && v.dispatch(m.CkL.POPOUT_CLOSE);
+        [x, v] = l.useState(!1),
+        _ = (0, r.e7)([u.ZP], () => u.ZP.hasUnreadPins(t.id), [t]),
+        I = (0, o.Aq)(),
+        E = l.useCallback(() => {
+            !C && v((e) => !e);
+        }, [C]);
+    function b(e) {
+        !(null == e ? void 0 : e.shiftKey) && I.dispatch(f.CkL.POPOUT_CLOSE);
     }
     return (
         l.useEffect(
             () => (
-                h.S.subscribe(m.CkL.TOGGLE_CHANNEL_PINS, _),
+                p.S.subscribe(f.CkL.TOGGLE_CHANNEL_PINS, E),
                 () => {
-                    h.S.unsubscribe(m.CkL.TOGGLE_CHANNEL_PINS, _);
+                    p.S.unsubscribe(f.CkL.TOGGLE_CHANNEL_PINS, E);
                 }
             ),
-            [_]
+            [E]
         ),
         (0, i.jsx)(a.Popout, {
-            shouldShow: g,
+            shouldShow: x,
             animation: a.Popout.Animation.NONE,
             position: 'bottom',
             align: 'right',
             autoInvert: !1,
             ignoreModalClicks: !0,
-            onRequestClose: () => C(!1),
+            onRequestClose: () => v(!1),
             renderPopout: function (e) {
                 return (0, i.jsx)(s.Z, {
                     ...e,
-                    onJump: I,
+                    onJump: b,
                     channel: t
                 });
             },
             children: (e, t) => {
                 let { isShown: l } = t;
-                return (0, i.jsx)(p.JO, {
+                return (0, i.jsx)(m.JO, {
                     ...e,
-                    onClick: _,
-                    tooltip: l ? null : f.intl.string(f.t['mp1N//']),
+                    onClick: E,
+                    tooltip: l ? null : g.intl.string(g.t['mp1N//']),
                     icon: a.PinIcon,
-                    'aria-label': f.intl.string(f.t['mp1N//']),
-                    disabled: n,
-                    showBadge: x,
+                    iconSize: n ? 20 : void 0,
+                    'aria-label': g.intl.string(g.t['mp1N//']),
+                    disabled: C,
+                    showBadge: _,
                     selected: l
                 });
             }

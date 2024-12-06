@@ -19,76 +19,79 @@ var r = n(200651),
     _ = n(79712),
     p = n(815300);
 let h = (e) => {
-        let { className: t, iconClassName: n, children: i, selected: a = !1, disabled: o = !1, showBadge: l = !1, badgePosition: c = 'bottom', color: f, foreground: _, background: h, icon: m, onClick: g, onContextMenu: E, tooltip: v = null, tooltipColor: I, tooltipPosition: T = 'bottom', tooltipDisabled: b, hideOnClick: S = !0, role: y, 'aria-label': A, 'aria-hidden': N, 'aria-checked': C, 'aria-expanded': R, 'aria-haspopup': O } = e,
-            D = (0, r.jsx)(m, {
+        let { className: t, iconClassName: n, children: i, selected: a = !1, disabled: o = !1, showBadge: l = !1, badgePosition: c = 'bottom', color: _, foreground: h, background: m, icon: g, iconSize: E = 24, onClick: v, onContextMenu: I, tooltip: T = null, tooltipColor: b, tooltipPosition: S = 'bottom', tooltipDisabled: y, hideOnClick: A = !0, role: N, 'aria-label': C, 'aria-hidden': R, 'aria-checked': O, 'aria-expanded': D, 'aria-haspopup': L } = e,
+            x = (0, f.Q)('BaseHeaderBar'),
+            w = (0, r.jsx)(g, {
                 x: 0,
                 y: 0,
-                width: 24,
-                height: 24,
+                width: E,
+                height: E,
                 size: 'custom',
                 className: s()(n, p.icon),
-                colorClass: null != _ ? _ : void 0,
-                secondaryColorClass: null != h ? h : void 0,
-                color: null != f ? f : 'currentColor'
+                colorClass: null != h ? h : void 0,
+                secondaryColorClass: null != m ? m : void 0,
+                color: null != _ ? _ : 'currentColor'
             }),
-            L = A;
+            P = C;
         return (
-            null == L && 'string' == typeof v && (L = v),
+            null == P && 'string' == typeof T && (P = T),
             (0, r.jsx)(u.Tooltip, {
-                text: v,
-                color: I,
-                position: T,
-                hideOnClick: S,
-                shouldShow: !b,
+                text: T,
+                color: b,
+                position: S,
+                hideOnClick: A,
+                shouldShow: !y,
                 children: (e) => {
-                    let { onMouseEnter: v, onMouseLeave: I, onFocus: T, onBlur: b } = e;
-                    return null == g
+                    let { onMouseEnter: f, onMouseLeave: T, onFocus: b, onBlur: S } = e;
+                    return null == v
                         ? (0, r.jsx)('div', {
                               className: s()(t, [p.iconWrapper]),
-                              children: (0, r.jsx)(m, {
+                              children: (0, r.jsx)(g, {
                                   x: 0,
                                   y: 0,
-                                  width: 24,
-                                  height: 24,
+                                  width: E,
+                                  height: E,
                                   size: 'custom',
                                   className: s()(n, p.icon),
-                                  colorClass: null != _ ? _ : void 0,
-                                  secondaryColorClass: null != h ? h : void 0,
-                                  color: null != f ? f : 'currentColor',
-                                  'aria-hidden': N,
-                                  onMouseEnter: v,
-                                  onMouseLeave: I,
-                                  onFocus: T,
-                                  onBlur: b
+                                  colorClass: null != h ? h : void 0,
+                                  secondaryColorClass: null != m ? m : void 0,
+                                  color: null != _ ? _ : 'currentColor',
+                                  'aria-hidden': R,
+                                  onMouseEnter: f,
+                                  onMouseLeave: T,
+                                  onFocus: b,
+                                  onBlur: S
                               })
                           })
                         : (0, r.jsxs)(u.Clickable, {
                               tag: 'div',
-                              onClick: o ? void 0 : g,
-                              onContextMenu: o ? void 0 : E,
-                              onMouseEnter: v,
-                              onMouseLeave: I,
-                              onFocus: T,
-                              onBlur: b,
+                              onClick: o ? void 0 : v,
+                              onContextMenu: o ? void 0 : I,
+                              onMouseEnter: f,
+                              onMouseLeave: T,
+                              onFocus: b,
+                              onBlur: S,
                               className: s()(t, {
                                   [p.iconWrapper]: !0,
-                                  [p.clickable]: !o && null != g,
+                                  [p.clickable]: !o && null != v,
                                   [p.selected]: a
                               }),
-                              role: y,
-                              'aria-label': L,
-                              'aria-hidden': N,
-                              'aria-checked': C,
-                              'aria-haspopup': O,
-                              'aria-expanded': R,
-                              tabIndex: o || null == g ? -1 : 0,
+                              role: N,
+                              'aria-label': P,
+                              'aria-hidden': R,
+                              'aria-checked': O,
+                              'aria-haspopup': L,
+                              'aria-expanded': D,
+                              tabIndex: o || null == v ? -1 : 0,
                               children: [
                                   l
                                       ? (0, r.jsx)(d.ZP, {
                                             mask: 'top' === c ? d.ZP.Masks.HEADER_BAR_BADGE_TOP : d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
-                                            children: D
+                                            height: x ? E : void 0,
+                                            width: x ? E : void 0,
+                                            children: w
                                         })
-                                      : D,
+                                      : w,
                                   l ? (0, r.jsx)('span', { className: s()(p.iconBadge, 'top' === c ? p.iconBadgeTop : p.iconBadgeBottom) }) : null,
                                   i
                               ]
