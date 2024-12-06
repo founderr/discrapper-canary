@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(430824),
     E = n(496675),
     b = n(979651),
-    Z = n(88751),
-    N = n(252132),
+    N = n(88751),
+    Z = n(252132),
     S = n(248400),
     T = n(981631),
     j = n(354459),
@@ -58,7 +58,7 @@ let y = 16 / 9,
                     onContextMenu: (e) => u(n, e),
                     ...e,
                     children: (0, i.jsx)(
-                        N.Z,
+                        Z.Z,
                         {
                             participant: n,
                             aspectRatio: y,
@@ -81,7 +81,7 @@ let y = 16 / 9,
     M = (e) => {
         let { stageParticipant: t, rtcParticipant: n, channel: r, width: a, isModerator: d, onContextMenu: h, inPopout: x } = e,
             { reducedMotion: v } = l.useContext(o.AccessibilityPreferencesContext),
-            { id: Z, blocked: P, ignored: M } = t,
+            { id: N, blocked: P, ignored: M } = t,
             R = (0, s.Wu)([_.Z], () => _.Z.getAllActiveStreams(), []),
             { selectedParticipant: L, largeStream: k } = (0, s.cj)([p.Z], () => ({
                 selectedParticipant: null != r ? p.Z.getSelectedParticipant(r.id) : null,
@@ -98,7 +98,7 @@ let y = 16 / 9,
                 [R, r, L, k]
             );
         return (0, i.jsx)(
-            N.Z,
+            Z.Z,
             {
                 participant: n,
                 aspectRatio: y,
@@ -116,7 +116,7 @@ let y = 16 / 9,
                 width: a,
                 children: d && n.type === j.fO.USER && (0, i.jsx)(S.Z, {})
             },
-            Z
+            N
         );
     };
 t.Z = l.memo(function (e) {
@@ -127,7 +127,7 @@ t.Z = l.memo(function (e) {
     a()(null != u, 'Channel cannot be guildless');
     let { user: m } = l,
         f = (0, s.e7)([p.Z], () => p.Z.getParticipant(r.id, l.id), [r.id, l.id]),
-        g = (0, s.e7)([Z.ZP], () => Z.ZP.isModerator(m.id, r.id), [r.id, m.id]);
+        g = (0, s.e7)([N.ZP], () => N.ZP.isModerator(m.id, r.id), [r.id, m.id]);
     if (null == f || f.type === j.fO.ACTIVITY) return null;
     let C = (e, t) => {
             switch (e.type) {

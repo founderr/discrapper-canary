@@ -20,14 +20,14 @@ n.d(t, {
 var i,
     l,
     r = n(512969),
-    a = n(972959),
-    o = n(264043),
+    o = n(972959),
+    a = n(264043),
     s = n(34674),
     c = n(703656),
     u = n(979007),
     d = n(981631);
 ((l = i || (i = {})).HOME = 'home'), (l.SEARCH = 'search'), (l.APPLICATION = 'application'), (l.CATEGORY = 'category');
-let h = (0, a.H)(() => ({}));
+let h = (0, o.H)(() => ({}));
 function p() {
     let {
         location: { state: e }
@@ -63,12 +63,12 @@ function m() {
         let r = Number(e.get('page'));
         return null != r && r > 1 && (t.page = r), t;
     }
-    let a = (0, r.LX)(i, {
+    let o = (0, r.LX)(i, {
             path: [d.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(':categoryId')],
             exact: !0
         }),
-        { categoryId: h } = null !== (e = null == a ? void 0 : a.params) && void 0 !== e ? e : {};
-    if (null != a && null != h)
+        { categoryId: h } = null !== (e = null == o ? void 0 : o.params) && void 0 !== e ? e : {};
+    if (null != o && null != h)
         return {
             type: 'category',
             categoryId: h
@@ -79,7 +79,7 @@ function m() {
         }),
         { applicationId: m, section: f, skuId: g } = null !== (t = null == p ? void 0 : p.params) && void 0 !== t ? t : {};
     if (null != p && null != m) {
-        let e = null === (n = o.Z.getApplication(m)) || void 0 === n ? void 0 : n.name;
+        let e = null === (n = a.Z.getApplication(m)) || void 0 === n ? void 0 : n.name;
         return {
             type: 'application',
             applicationId: m,

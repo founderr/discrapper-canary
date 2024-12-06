@@ -27,9 +27,9 @@ var i = n(200651),
 function T() {
     let e = r.useRef((0, m.PM)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: T } = (0, a.M)(),
-        { tabs: b, selectedTab: A, setSelectedTab: x } = (0, _.Y)(),
-        Z = (0, m.lg)(A),
-        L = !C.MU.has(A),
+        { tabs: b, selectedTab: x, setSelectedTab: A } = (0, _.Y)(),
+        Z = (0, m.lg)(x),
+        L = !C.MU.has(x),
         { searchQuery: y, onSearchTextChange: P, onClearSearch: O, onSearchSubmit: R, isSearchVisible: j } = (0, f.H)({ loadId: e.current }),
         D = p.Z.useField('searchBarState'),
         {
@@ -46,9 +46,9 @@ function T() {
         G = u.Z.useField('fetchedQuery'),
         B = r.useCallback(
             (e) => {
-                x(e), j && O();
+                A(e), j && O();
             },
-            [j, O, x]
+            [j, O, A]
         ),
         H = r.useMemo(
             () =>
@@ -71,7 +71,7 @@ function T() {
         }, [Z]),
         r.useEffect(() => {
             T();
-        }, [A, T]),
+        }, [x, T]),
         r.useEffect(() => {
             !j && u.Z.setState({ scrollPosition: null });
         }, [j]),
@@ -92,7 +92,7 @@ function T() {
                             (0, i.jsx)(c.Z, {
                                 className: U,
                                 tabs: H,
-                                selectedTab: j ? null : A,
+                                selectedTab: j ? null : x,
                                 onTabSelect: B,
                                 onAvailableWidthChange: M
                             }),
@@ -123,7 +123,7 @@ function T() {
                           onGuildCardSeen: F
                       })
                     : (0, i.jsx)(E.Z, {
-                          selectedTab: A,
+                          selectedTab: x,
                           onScroll: t,
                           onGuildCardClick: z,
                           onGuildCardSeen: F

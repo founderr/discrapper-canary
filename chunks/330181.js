@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return f;
     }
 }),
     n(47120);
@@ -32,10 +32,10 @@ let m = (e) => {
         error: i
     };
 };
-function p(e) {
+function f(e) {
     let { groupListingId: t, subscription: n, className: a } = e,
         { analyticsLocations: l } = (0, c.ZP)(o.Z.PENDING_PLAN_CHANGE_NOTICE),
-        { resetRenewalMutation: p, submitting: f, error: _ } = m(l),
+        { resetRenewalMutation: f, submitting: p, error: _ } = m(l),
         h = (0, d._k)(t, { includeSoftDeleted: !0 }),
         { currentListing: E, nextListing: b } = r.useMemo(() => {
             if ((null == n ? void 0 : n.renewalMutations) == null)
@@ -60,8 +60,8 @@ function p(e) {
             changeDate: x
         }),
         error: null == _ ? void 0 : _.message,
-        onClick: () => p(n),
-        submitting: f,
+        onClick: () => f(n),
+        submitting: p,
         ctaMessage: g.intl.string(g.t.De4wIy),
         className: a
     });

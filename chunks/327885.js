@@ -14,36 +14,36 @@ var s = n(512722),
     d = n(660216),
     u = n(13245),
     m = n(825209),
-    g = n(887278),
-    h = n(630699),
+    h = n(887278),
+    g = n(630699),
     p = n(212632),
     x = n(32300),
-    T = n(809357),
-    S = n(556296),
-    _ = n(808506),
-    E = n(237997),
+    S = n(809357),
+    T = n(556296),
+    E = n(808506),
+    _ = n(237997),
     C = n(626135);
 n(63063);
-var f = n(13140),
-    I = n(981631),
+var I = n(13140),
+    f = n(981631),
     N = n(388032),
     A = n(893946);
 let b = v(null);
 function v(e) {
     var t;
-    let n = E.Z.getNotificationPositionMode(),
-        i = n !== I._vf.DISABLED,
-        s = S.Z.getOverlayKeybind(),
-        r = S.Z.getOverlayChatKeybind();
+    let n = _.Z.getNotificationPositionMode(),
+        i = n !== f._vf.DISABLED,
+        s = T.Z.getOverlayKeybind(),
+        r = T.Z.getOverlayChatKeybind();
     return {
-        enabled: _.Z.enabled,
+        enabled: E.Z.enabled,
         notifications_enabled: i,
         notifications_position: i ? n : null,
-        text_notifications_mode: E.Z.getTextChatNotificationMode(),
-        hotkey: null != s ? (0, f.BB)(s.shortcut) : null,
-        text_activation_hotkey: null != r ? (0, f.BB)(r.shortcut) : null,
-        text_opacity_slider: E.Z.getTextWidgetOpacity(),
-        old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : _.Z.enabled
+        text_notifications_mode: _.Z.getTextChatNotificationMode(),
+        hotkey: null != s ? (0, I.BB)(s.shortcut) : null,
+        text_activation_hotkey: null != r ? (0, I.BB)(r.shortcut) : null,
+        text_opacity_slider: _.Z.getTextWidgetOpacity(),
+        old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : E.Z.enabled
     };
 }
 function j(e) {
@@ -56,39 +56,39 @@ function j(e) {
 }
 function O(e) {
     let { className: t, showHeader: n = !0 } = e,
-        { enabled: s, legacyEnabled: l } = (0, o.cj)([_.Z], () => ({
-            enabled: _.Z.enabled,
-            legacyEnabled: _.Z.legacyEnabled
+        { enabled: s, legacyEnabled: l } = (0, o.cj)([E.Z], () => ({
+            enabled: E.Z.enabled,
+            legacyEnabled: E.Z.legacyEnabled
         })),
         {
-            avatarSizeMode: f,
+            avatarSizeMode: I,
             displayNameMode: O,
             displayUserMode: R,
             notificationPositionMode: P,
             textChatNotificationMode: D,
             shouldShowKeybindIndicators: y
-        } = (0, o.cj)([E.Z], () => ({
-            avatarSizeMode: E.Z.getAvatarSizeMode(),
-            displayNameMode: E.Z.getDisplayNameMode(),
-            displayUserMode: E.Z.getDisplayUserMode(),
-            notificationPositionMode: E.Z.getNotificationPositionMode(),
-            textChatNotificationMode: E.Z.getTextChatNotificationMode(),
-            shouldShowKeybindIndicators: E.Z.showKeybindIndicators
+        } = (0, o.cj)([_.Z], () => ({
+            avatarSizeMode: _.Z.getAvatarSizeMode(),
+            displayNameMode: _.Z.getDisplayNameMode(),
+            displayUserMode: _.Z.getDisplayUserMode(),
+            notificationPositionMode: _.Z.getNotificationPositionMode(),
+            textChatNotificationMode: _.Z.getTextChatNotificationMode(),
+            shouldShowKeybindIndicators: _.Z.showKeybindIndicators
         })),
-        B = (0, o.e7)([S.Z], () => S.Z.getOverlayKeybind()),
-        L = (0, T.Z)({ location: 'overlay_user_settings' }),
-        Z = (0, g.$1)(),
+        B = (0, o.e7)([T.Z], () => T.Z.getOverlayKeybind()),
+        L = (0, S.Z)({ location: 'overlay_user_settings' }),
+        Z = (0, h.$1)(),
         { useOverlayV3: F } = x.Z.useExperiment({ location: 'overlay_user_settings' });
     function M(e) {
         u.Z.setEnabled(e, l, !1),
-            C.default.track(I.rMx.OVERLAY_TOGGLED, {
+            C.default.track(f.rMx.OVERLAY_TOGGLED, {
                 enabled: e,
                 setting_type: 'overlay toggled - global'
             });
     }
     function k(e) {
         u.Z.setEnabled(s, e, !1),
-            C.default.track(I.rMx.OVERLAY_TOGGLED, {
+            C.default.track(f.rMx.OVERLAY_TOGGLED, {
                 enabled: e,
                 setting_type: 'overlay toggled - legacy'
             });
@@ -96,7 +96,7 @@ function O(e) {
     return (
         !(function () {
             let e = v(b);
-            !a().isEqual(e, b) && (C.default.track(I.rMx.OVERLAY_SETTINGS_UPDATED, e), (b = e));
+            !a().isEqual(e, b) && (C.default.track(f.rMx.OVERLAY_SETTINGS_UPDATED, e), (b = e));
         })(),
         (0, i.jsxs)(i.Fragment, {
             children: [
@@ -109,7 +109,7 @@ function O(e) {
                         (0, i.jsxs)('div', {
                             className: A.enableOverlaySection,
                             children: [
-                                (0, h.H)()
+                                (0, g.H)()
                                     ? (0, i.jsxs)(c.FormItem, {
                                           title: N.intl.string(N.t.XkaTrq),
                                           className: A.enableOverlayItem,
@@ -168,18 +168,18 @@ function O(e) {
                                 options: [
                                     {
                                         name: N.intl.string(N.t.YcOxtr),
-                                        value: I.ipw.LARGE
+                                        value: f.ipw.LARGE
                                     },
                                     {
                                         name: N.intl.string(N.t.BKIKq6),
-                                        value: I.ipw.SMALL
+                                        value: f.ipw.SMALL
                                     }
                                 ],
                                 onChange: (e) => {
                                     let { value: t } = e;
                                     return u.Z.setAvatarSizeMode(t);
                                 },
-                                value: f
+                                value: I
                             })
                         }),
                         (0, i.jsx)(j, {
@@ -188,15 +188,15 @@ function O(e) {
                                 options: [
                                     {
                                         name: N.intl.string(N.t.nBmDra),
-                                        value: I.wC$.ALWAYS
+                                        value: f.wC$.ALWAYS
                                     },
                                     {
                                         name: N.intl.string(N.t['2OvIZW']),
-                                        value: I.wC$.ONLY_WHILE_SPEAKING
+                                        value: f.wC$.ONLY_WHILE_SPEAKING
                                     },
                                     {
                                         name: N.intl.string(N.t.ekjlPD),
-                                        value: I.wC$.NEVER
+                                        value: f.wC$.NEVER
                                     }
                                 ],
                                 onChange: (e) => {
@@ -212,11 +212,11 @@ function O(e) {
                                 options: [
                                     {
                                         name: N.intl.string(N.t.nBmDra),
-                                        value: I.OYC.ALWAYS
+                                        value: f.OYC.ALWAYS
                                     },
                                     {
                                         name: N.intl.string(N.t['2OvIZW']),
-                                        value: I.OYC.ONLY_WHILE_SPEAKING
+                                        value: f.OYC.ONLY_WHILE_SPEAKING
                                     }
                                 ],
                                 onChange: (e) => {
@@ -256,10 +256,10 @@ function O(e) {
                               }),
                         (0, i.jsx)(j, {
                             children: (0, i.jsx)(c.FormSwitch, {
-                                value: P !== I._vf.DISABLED && D === I.Ypu.ENABLED,
-                                disabled: P === I._vf.DISABLED,
+                                value: P !== f._vf.DISABLED && D === f.Ypu.ENABLED,
+                                disabled: P === f._vf.DISABLED,
                                 onChange: function () {
-                                    let { ENABLED: e, DISABLED: t } = I.Ypu;
+                                    let { ENABLED: e, DISABLED: t } = f.Ypu;
                                     u.Z.setTextChatNotificationMode(D === e ? t : e);
                                 },
                                 hideBorder: !0,

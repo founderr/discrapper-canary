@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    o = n(752877),
+    o = n.n(r),
+    a = n(752877),
     s = n(866442),
     c = n(442837),
     u = n(477690),
@@ -27,7 +27,7 @@ let x = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
 function S(e) {
     let { guildId: t, animate: n, index: l } = e,
         r = (0, c.e7)([m.Z], () => m.Z.getGuild(t), [t]),
-        a = (0, h.Q)('GuildIcon');
+        o = (0, h.Q)('GuildIcon');
     return null == r
         ? (0, i.jsx)('div', {
               className: v.guildIconUnavailable,
@@ -36,16 +36,16 @@ function S(e) {
         : (0, i.jsx)(p.Z, {
               guild: r,
               animate: n,
-              size: a ? p.Z.Sizes.MINI : p.Z.Sizes.SMOL,
+              size: o ? p.Z.Sizes.MINI : p.Z.Sizes.SMOL,
               className: v.guildIcon,
               tabIndex: -1,
-              style: a ? { borderRadius: b[l] } : void 0
+              style: o ? { borderRadius: b[l] } : void 0
           });
 }
 function E(e) {
     let t,
         n,
-        { folderNode: r, hovered: a, expanded: c } = e,
+        { folderNode: r, hovered: o, expanded: c } = e,
         u = (0, h.Q)('FolderIconContent'),
         { color: p, children: m } = r,
         f = null != p ? p : C.Wyy,
@@ -69,7 +69,7 @@ function E(e) {
         T = _ ? y : void 0;
     return (
         (_ || E) &&
-            (t = (0, i.jsx)(o.animated.div, {
+            (t = (0, i.jsx)(a.animated.div, {
                 style: T,
                 className: v.expandedFolderIconWrapper,
                 children: (0, i.jsx)(d.FolderIcon, {
@@ -79,7 +79,7 @@ function E(e) {
                 })
             })),
         (_ || !E) &&
-            (n = (0, i.jsx)(o.animated.div, {
+            (n = (0, i.jsx)(a.animated.div, {
                 style: T,
                 className: v.closedFolderIconWrapper,
                 children: g.slice(0, 4).map((e, t) =>
@@ -88,7 +88,7 @@ function E(e) {
                         {
                             index: t,
                             guildId: e,
-                            animate: a
+                            animate: o
                         },
                         e
                     )
@@ -107,7 +107,7 @@ function Z(e) {
             folderNode: t,
             forceCircular: n,
             expanded: r,
-            sorting: o,
+            sorting: a,
             mediaState: s,
             mentionCount: c = 0,
             tooltipName: u,
@@ -121,11 +121,11 @@ function Z(e) {
         } = e,
         [Z, N] = l.useState(!1),
         y = l.useCallback(() => {
-            o || N(!0), null == x || x(!0);
-        }, [o, x]),
+            a || N(!0), null == x || x(!0);
+        }, [a, x]),
         T = l.useCallback(() => {
-            o || N(!1), null == x || x(!1);
-        }, [o, x]),
+            a || N(!1), null == x || x(!1);
+        }, [a, x]),
         A = (0, h.Q)('FolderHeader'),
         j = r || null == s ? null : (0, g.Or)(s),
         P = !r && c > 0 ? (0, g.Ne)(c) : null;
@@ -142,7 +142,7 @@ function Z(e) {
         lowerBadge: P,
         lowerBadgeSize: { width: (0, d.getBadgeWidthForValue)(c) },
         children: (0, i.jsx)(d.Clickable, {
-            className: a()(v.folder, { [v.hover]: Z }),
+            className: o()(v.folder, { [v.hover]: Z }),
             onClick: f,
             onContextMenu: C,
             onMouseEnter: y,

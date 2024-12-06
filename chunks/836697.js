@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(481060),
-    o = n(110924),
+    o = n(481060),
+    a = n(110924),
     s = n(693546),
     c = n(863249),
     u = n(937111),
@@ -27,7 +27,7 @@ function v(e) {
         d = l.useCallback(() => {
             c.ZP.clearCoachmark();
         }, []),
-        h = (0, o.Z)(s),
+        h = (0, a.Z)(s),
         p = l.useRef(null);
     return (
         l.useEffect(() => {
@@ -39,7 +39,7 @@ function v(e) {
         (0, i.jsxs)('div', {
             className: _.container,
             children: [
-                (0, i.jsx)(a.Popout, {
+                (0, i.jsx)(o.Popout, {
                     ref: p,
                     shouldShow: s,
                     renderPopout: () =>
@@ -52,21 +52,21 @@ function v(e) {
                                         (0, i.jsxs)('div', {
                                             className: _.coachmarkTextContainer,
                                             children: [
-                                                (0, i.jsx)(a.Heading, {
+                                                (0, i.jsx)(o.Heading, {
                                                     variant: 'heading-md/medium',
                                                     children: C.intl.string(C.t.fRUGzs)
                                                 }),
-                                                (0, i.jsx)(a.Text, {
+                                                (0, i.jsx)(o.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'text-muted',
                                                     children: C.intl.string(C.t.ja0Tg4)
                                                 })
                                             ]
                                         }),
-                                        (0, i.jsx)(a.Button, {
+                                        (0, i.jsx)(o.Button, {
                                             fullWidth: !0,
-                                            size: a.ButtonSizes.SMALL,
-                                            color: a.ButtonColors.BRAND,
+                                            size: o.ButtonSizes.SMALL,
+                                            color: o.ButtonColors.BRAND,
                                             onClick: d,
                                             children: C.intl.string(C.t.E0MgHh)
                                         })
@@ -96,7 +96,7 @@ function x(e) {
         I = (0, r.e7)([d.Z], () => d.Z.getGuildId()),
         b = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
         S = (0, m.Z)(),
-        E = (0, o.Z)(I),
+        E = (0, a.Z)(I),
         Z = l.useMemo(() => {
             let e = (0, p.qQ)({
                 folderId: h.S.PENDING_JOIN_REQUESTS_FOLDER,
@@ -128,7 +128,7 @@ function x(e) {
                   onExpandCollapse: () => {
                       x(!n), c.ZP.clearCoachmark();
                   },
-                  folderIconContent: (0, i.jsx)(a.HourglassIcon, {
+                  folderIconContent: (0, i.jsx)(o.HourglassIcon, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 24,

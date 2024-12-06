@@ -11,7 +11,7 @@ var i = n(100527),
     o = n(194811),
     l = n(582123),
     u = n(382405),
-    c = n(290274);
+    c = n(670451);
 function d(e) {
     let { user: t, entry: n, className: d, onClose: f, hideContextMenu: _ = !1 } = e,
         { analyticsLocations: p } = (0, a.ZP)(i.Z.USER_PROFILE_RECENT_ACTIVITY_CARD);

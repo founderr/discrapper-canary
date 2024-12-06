@@ -3,8 +3,8 @@ var o = n(200651),
     i = n(192379),
     c = n(442837),
     a = n(37234),
-    r = n(230711),
-    l = n(410575),
+    l = n(230711),
+    r = n(410575),
     s = n(503089),
     u = n(110924),
     d = n(100527),
@@ -16,8 +16,8 @@ var o = n(200651),
     S = n(113434),
     C = n(663389),
     k = n(210887),
-    p = n(996733),
-    B = n(991346),
+    B = n(996733),
+    p = n(991346),
     h = n(295545),
     Z = n(839469),
     T = n(981631),
@@ -44,7 +44,7 @@ let E = i.forwardRef(function () {
         }),
         I = (0, u.Z)(n),
         W = (0, u.Z)(E),
-        w = (0, p.Z7)(),
+        w = (0, B.Z7)(),
         { analyticsLocations: P } = (0, g.ZP)(d.Z.USER_SETTINGS);
     i.useEffect(() => {
         if (!!(null != n && (n !== I || E !== W)))
@@ -71,17 +71,17 @@ let E = i.forwardRef(function () {
     let v = (0, h.eA)({ location: 'user_settings' }),
         { hasSearchResults: G, searchResults: M } = (0, Z.E)(),
         H = i.useMemo(() => v && G, [v, G]),
-        D = (0, B.VO)(),
-        A = (0, B.q8)(M),
+        D = (0, p.VO)(),
+        A = (0, p.q8)(M),
         O = i.useMemo(() => (H ? A : D), [H, A, D]),
         y = (0, m.b)(),
         L = (0, S.iO)(),
         N = i.useCallback((e) => {
-            r.Z.setSection(e);
+            l.Z.setSection(e);
         }, []);
     return (0, o.jsx)(g.Gt, {
         value: P,
-        children: (0, o.jsx)(l.Z, {
+        children: (0, o.jsx)(r.Z, {
             root: !0,
             page: T.ZY5.USER_SETTINGS,
             children: (0, o.jsx)(s.ZP, {

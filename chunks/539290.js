@@ -22,10 +22,10 @@ let p = {
 };
 function f(t) {
     let { className: n, color: s = l.W.YELLOW, buttonPosition: i = p.BOTTOM, notice: f, ctaLabel: g, ctaLoading: x, ctaDisabled: E, ctaClassName: h, onClick: b } = t,
-        N = (0, a.ZP)();
+        m = (0, a.ZP)();
     return (0, e.jsx)(u.Z, {
         className: r()(d.statusWarningBlock, { [d.statusWarningBlockWithCta]: null != g }, n),
-        color: (0, o.wj)(N) ? s : l.W.BROWN,
+        color: (0, o.wj)(m) ? s : l.W.BROWN,
         children: (0, e.jsxs)('div', {
             className: i,
             children: [
@@ -39,8 +39,8 @@ function f(t) {
                     (0, e.jsx)('div', {
                         className: d.ctaButtonContainer,
                         children: (0, e.jsx)(c.Button, {
-                            className: r()(d.ctaButton, (0, o.wj)(N) ? void 0 : d.ctaBlackButton, h),
-                            color: (0, o.wj)(N) ? c.Button.Colors.WHITE : c.Button.Colors.CUSTOM,
+                            className: r()(d.ctaButton, (0, o.wj)(m) ? void 0 : d.ctaBlackButton, h),
+                            color: (0, o.wj)(m) ? c.Button.Colors.WHITE : c.Button.Colors.CUSTOM,
                             size: c.ButtonSizes.MEDIUM,
                             onClick: b,
                             disabled: E,

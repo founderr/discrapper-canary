@@ -36,7 +36,7 @@ function m(e) {
     var t;
     let { shouldHideTemporaryInviteToggle: n, maxAge: i, maxUses: a, temporary: m, onGenerateNewLink: v, onToggleTemporary: x, onSelectMaxAge: p, onSelectMaxUses: I } = e,
         S = c.find((e) => e.value === i),
-        N = g.find((e) => e.value === a);
+        T = g.find((e) => e.value === a);
     return (0, l.jsx)('div', {
         className: d.settingsContent,
         children: (0, l.jsxs)('form', {
@@ -56,7 +56,7 @@ function m(e) {
                     title: o.intl.string(o.t.jDqWHR),
                     className: r()(u.marginTop20, u.marginBottom4),
                     children: (0, l.jsx)(s.SingleSelect, {
-                        value: null == N ? void 0 : N.value,
+                        value: null == T ? void 0 : T.value,
                         options: g,
                         onChange: I
                     })

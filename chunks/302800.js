@@ -1,9 +1,9 @@
 n.d(e, {
     GX: function () {
-        return S;
+        return C;
     },
     M7: function () {
-        return v;
+        return h;
     },
     UY: function () {
         return m;
@@ -27,15 +27,15 @@ var r,
     d = n(388032),
     u = n(452823),
     f = n(744709),
-    p = n(39934),
-    g = n(681532),
-    h = n(12981);
+    g = n(39934),
+    p = n(681532),
+    v = n(12981);
 ((a = r || (r = {}))[(a.NONE = 0)] = 'NONE'), (a[(a.TOOLTIP = 1)] = 'TOOLTIP'), (a[(a.COACHTIP = 2)] = 'COACHTIP'), (a[(a.COACHTIP_HEADLINE_ONLY = 3)] = 'COACHTIP_HEADLINE_ONLY'), (a[(a.BADGE = 4)] = 'BADGE');
-let v = (t) =>
+let h = (t) =>
         (0, i.EQ)(t)
             .with(s.T.TIDE, () => ({
                 label: () => d.intl.string(d.t.kDb9hY),
-                iconSrc: h.Z,
+                iconSrc: v.Z,
                 style: {
                     background: 'linear-gradient(180deg, #103A8B -7.5%, #3390FD 128.75%)',
                     boxShadow: '0px 0px 15.4px 0px rgba(23, 160, 236, 0.5)',
@@ -45,7 +45,7 @@ let v = (t) =>
             .otherwise(() => null),
     b = {
         TIDE: {
-            imageSrc: g.Z,
+            imageSrc: p.Z,
             style: {
                 position: 'absolute',
                 width: '600px',
@@ -69,7 +69,7 @@ let v = (t) =>
             }
         },
         STORM: {
-            imageSrc: p.Z,
+            imageSrc: g.Z,
             style: {
                 position: 'absolute',
                 width: '850px'
@@ -100,7 +100,7 @@ let v = (t) =>
         (0, i.EQ)(t)
             .with('1262491137386614805', () => b.ROBERT)
             .otherwise(() => null),
-    S = {
+    C = {
         [c.C5.TIDE]: {
             artSrc: n(94899),
             backgroundSrc: n(987583),

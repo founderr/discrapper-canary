@@ -2,13 +2,13 @@ n.r(e);
 var i = n(200651),
     o = n(192379),
     s = n(442837),
-    l = n(481060),
-    r = n(955522),
-    a = n(138201),
-    c = n(103879),
+    r = n(481060),
+    l = n(955522),
+    c = n(138201),
+    a = n(103879),
     d = n(236289),
-    u = n(853178),
-    h = n(800530),
+    h = n(853178),
+    u = n(800530),
     x = n(388032),
     g = n(177872);
 let m = [
@@ -30,34 +30,34 @@ e.default = function (t) {
         p = (0, s.e7)([d.Z], () => d.Z.getAgeVerificationWebviewUrl()),
         b = (0, s.e7)([d.Z], () => d.Z.getIsLoadingAgeVerification()),
         j = o.useCallback(() => {
-            e(), u.Z.close();
+            e(), h.Z.close();
         }, [e]),
         N = o.useCallback(() => {
-            u.Z.success(), j();
+            h.Z.success(), j(), h.Z.start_verification_check();
         }, [j]);
     return (
         o.useEffect(() => {
             '' !== p &&
-                (0, r.F)({
+                (0, l.F)({
                     webviewUrl: p,
                     onComplete: N
                 });
         }, [p, N]),
-        (0, i.jsxs)(l.ModalRoot, {
+        (0, i.jsxs)(r.ModalRoot, {
             transitionState: n,
             className: g.root,
             children: [
-                (0, i.jsxs)(l.ModalContent, {
+                (0, i.jsxs)(r.ModalContent, {
                     className: g.content,
                     children: [
                         (0, i.jsxs)('div', {
                             className: g.header,
                             children: [
-                                (0, i.jsx)(l.Heading, {
+                                (0, i.jsx)(r.Heading, {
                                     variant: 'heading-xl/bold',
                                     children: x.intl.string(x.t['9SDLnp'])
                                 }),
-                                (0, i.jsx)(l.Heading, {
+                                (0, i.jsx)(r.Heading, {
                                     variant: 'heading-md/normal',
                                     color: 'header-secondary',
                                     children: x.intl.string(x.t['yvx///'])
@@ -72,7 +72,7 @@ e.default = function (t) {
                                     children: m.map((t, e) => {
                                         let { title: n, description: o } = t;
                                         return (0, i.jsx)(
-                                            a.Z,
+                                            c.Z,
                                             {
                                                 title: n,
                                                 description: o,
@@ -84,9 +84,9 @@ e.default = function (t) {
                                         );
                                     })
                                 }),
-                                (0, i.jsx)(l.Anchor, {
-                                    href: h.sQ.TOS_LINK,
-                                    children: (0, i.jsx)(l.Heading, {
+                                (0, i.jsx)(r.Anchor, {
+                                    href: u.sQ.TOS_LINK,
+                                    children: (0, i.jsx)(r.Heading, {
                                         variant: 'heading-sm/medium',
                                         color: 'text-link',
                                         children: x.intl.string(x.t['0WIC4O'])
@@ -97,7 +97,7 @@ e.default = function (t) {
                         (0, i.jsxs)('div', {
                             className: g.anotherOption,
                             children: [
-                                (0, i.jsx)(l.Text, {
+                                (0, i.jsx)(r.Text, {
                                     variant: 'text-sm/semibold',
                                     className: g.optionEyebrow,
                                     color: 'header-secondary',
@@ -105,30 +105,30 @@ e.default = function (t) {
                                 }),
                                 (0, i.jsx)('div', {
                                     className: g.table,
-                                    children: (0, i.jsx)(a.Z, {
+                                    children: (0, i.jsx)(c.Z, {
                                         title: x.intl.string(x.t.N9WJMD),
                                         description: x.intl.string(x.t['NHq38/']),
                                         buttonText: x.intl.string(x.t['9iy4lJ']),
-                                        buttonColor: l.Button.Colors.PRIMARY,
+                                        buttonColor: r.Button.Colors.PRIMARY,
                                         titleVariant: 'text-md/medium',
-                                        onButtonPress: () => window.open(h.sQ.AGE_VERIFICATION_LINK, '_blank')
+                                        onButtonPress: () => window.open(u.sQ.AGE_VERIFICATION_LINK, '_blank')
                                     })
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, i.jsxs)(l.ModalFooter, {
+                (0, i.jsxs)(r.ModalFooter, {
                     className: g.footer,
                     children: [
-                        (0, i.jsx)(l.Button, {
-                            onClick: c.FN,
+                        (0, i.jsx)(r.Button, {
+                            onClick: a.FN,
                             submitting: b,
                             children: x.intl.string(x.t['54b8V1'])
                         }),
-                        (0, i.jsx)(l.Button, {
-                            color: l.Button.Colors.TRANSPARENT,
-                            look: l.Button.Looks.BLANK,
+                        (0, i.jsx)(r.Button, {
+                            color: r.Button.Colors.TRANSPARENT,
+                            look: r.Button.Looks.BLANK,
                             onClick: j,
                             className: g.cancelButton,
                             children: x.intl.string(x.t.dKacJy)

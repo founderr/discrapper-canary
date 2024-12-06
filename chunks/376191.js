@@ -59,7 +59,7 @@ function T(e) {
         E = (0, r.e7)([p.Z], () => (null == c ? null : p.Z.getNickname(c.id))),
         T = !f && m,
         b = (0, _.c)(n),
-        { avatarDecorationSrc: A } = (0, u.Z)({
+        { avatarDecorationSrc: x } = (0, u.Z)({
             user: c,
             size: (0, d.y9)(l.AvatarSizes.SIZE_40),
             onlyAnimateOnHover: !0
@@ -69,7 +69,7 @@ function T(e) {
             (0, i.jsx)(S, {
                 className: v.avatar,
                 src: (0, h.x)(n, 40, T),
-                avatarDecoration: A,
+                avatarDecoration: x,
                 size: l.AvatarSizes.SIZE_40,
                 'aria-label': null !== (t = null == c ? void 0 : c.username) && void 0 !== t ? t : C.intl.string(C.t['30mdIy'])
             }),

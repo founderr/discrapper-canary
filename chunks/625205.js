@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 }),
     n(47120);
@@ -15,41 +15,41 @@ var s = n(392711),
     d = n(906732),
     u = n(600164),
     m = n(463395),
-    g = n(131951),
-    h = n(210887),
+    h = n(131951),
+    g = n(210887),
     p = n(962100),
     x = n(65154),
-    T = n(388032),
-    S = n(43824),
-    _ = n(232186);
-function E() {
+    S = n(388032),
+    T = n(43824),
+    E = n(232186);
+function _() {
     let e, t;
     let { analyticsLocations: s } = (0, d.ZP)(),
-        E = (0, l.e7)([h.Z], () => h.Z.theme),
+        _ = (0, l.e7)([g.Z], () => g.Z.theme),
         {
             canSetInputDevice: C,
-            canSetOutputDevice: f,
-            inputDeviceId: I,
+            canSetOutputDevice: I,
+            inputDeviceId: f,
             outputDeviceId: N
-        } = (0, l.cj)([g.Z], () => ({
-            canSetInputDevice: g.Z.supports(x.AN.AUDIO_INPUT_DEVICE),
-            canSetOutputDevice: g.Z.supports(x.AN.AUDIO_OUTPUT_DEVICE),
-            inputDeviceId: g.Z.getInputDeviceId(),
-            outputDeviceId: g.Z.getOutputDeviceId()
+        } = (0, l.cj)([h.Z], () => ({
+            canSetInputDevice: h.Z.supports(x.AN.AUDIO_INPUT_DEVICE),
+            canSetOutputDevice: h.Z.supports(x.AN.AUDIO_OUTPUT_DEVICE),
+            inputDeviceId: h.Z.getInputDeviceId(),
+            outputDeviceId: h.Z.getOutputDeviceId()
         })),
-        A = (0, l.e7)([g.Z], () => g.Z.getInputDevices()),
-        b = (0, l.e7)([g.Z], () => g.Z.getOutputDevices());
+        A = (0, l.e7)([h.Z], () => h.Z.getInputDevices()),
+        b = (0, l.e7)([h.Z], () => h.Z.getOutputDevices());
     !C &&
         (e = (0, i.jsx)(o.FormText, {
             type: o.FormText.Types.DESCRIPTION,
-            className: _.marginTop8,
-            children: T.intl.format(T.t['1iK6UV'], { onDownloadClick: () => (0, p.y)('Help Text Input Devices') })
+            className: E.marginTop8,
+            children: S.intl.format(S.t['1iK6UV'], { onDownloadClick: () => (0, p.y)('Help Text Input Devices') })
         })),
-        !f &&
+        !I &&
             (t = (0, i.jsx)(o.FormText, {
                 type: o.FormText.Types.DESCRIPTION,
-                className: _.marginTop8,
-                children: T.intl.format(T.t.Ow0dbG, { onDownloadClick: () => (0, p.y)('Help Text Output Devices') })
+                className: E.marginTop8,
+                children: S.intl.format(S.t.Ow0dbG, { onDownloadClick: () => (0, p.y)('Help Text Output Devices') })
             }));
     let v = r()(A).values().first(),
         j = null != v ? v.disabled : null != e,
@@ -59,20 +59,20 @@ function E() {
         let t,
             { label: s, value: r } = e;
         if (m.Z.isCertified(r)) {
-            let e = (0, a.ap)(E) ? n(561259) : n(887695);
+            let e = (0, a.ap)(_) ? n(561259) : n(887695);
             t = (0, i.jsx)('img', {
                 src: e,
                 alt: 'Certified',
-                className: S.deviceOptionCertified
+                className: T.deviceOptionCertified
             });
         }
         return (0, i.jsxs)(
             'span',
             {
-                className: S.deviceOption,
+                className: T.deviceOption,
                 children: [
                     (0, i.jsx)('span', {
-                        className: S.deviceOptionLabel,
+                        className: T.deviceOptionLabel,
                         children: m.Z.getCertifiedDeviceName(r, s)
                     }),
                     t
@@ -85,18 +85,18 @@ function E() {
         return P(e[0]);
     }
     return (0, i.jsxs)(u.Z, {
-        className: _.marginBottom20,
+        className: E.marginBottom20,
         children: [
             (0, i.jsxs)(u.Z.Child, {
                 basis: '50%',
                 children: [
                     (0, i.jsx)(o.FormTitle, {
                         tag: o.FormTitleTags.H5,
-                        className: _.marginBottom8,
-                        children: T.intl.string(T.t.hHMYbW)
+                        className: E.marginBottom8,
+                        children: S.intl.string(S.t.hHMYbW)
                     }),
                     (0, i.jsx)(o.SingleSelect, {
-                        value: I,
+                        value: f,
                         onChange: (e) =>
                             c.Z.setInputDevice(e, {
                                 location: 'Settings',
@@ -121,8 +121,8 @@ function E() {
                 children: [
                     (0, i.jsx)(o.FormTitle, {
                         tag: o.FormTitleTags.H5,
-                        className: _.marginBottom8,
-                        children: T.intl.string(T.t.dl18zc)
+                        className: E.marginBottom8,
+                        children: S.intl.string(S.t.dl18zc)
                     }),
                     (0, i.jsx)(o.SingleSelect, {
                         value: N,

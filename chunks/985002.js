@@ -14,13 +14,13 @@ function o(e) {
         [o, c] = i.useState(!1),
         [d, u] = i.useState(!1),
         [g, m] = i.useState(!1),
-        [p, f] = i.useState(!1),
+        [f, p] = i.useState(!1),
         [_, h] = i.useState(!1),
         [E, b] = i.useState(!1),
         [x, C] = i.useState(!1),
         [v, T] = i.useState(!1),
-        N = o || d || g || p || E || v,
-        S = i.useCallback(
+        N = o || d || g || f || E || v,
+        I = i.useCallback(
             async (e) => {
                 if (!N) {
                     c(!0);
@@ -36,7 +36,7 @@ function o(e) {
             },
             [N, t, n]
         ),
-        I = i.useCallback(
+        S = i.useCallback(
             async (e) => {
                 if (!N) {
                     u(!0);
@@ -71,14 +71,14 @@ function o(e) {
         A = i.useCallback(
             async (e) => {
                 if (!N) {
-                    f(!0);
+                    p(!0);
                     try {
                         await (0, a.fc)(e.id), null == n || n();
                     } catch (n) {
                         let e = new r.Hx(n);
                         null == t || t(e);
                     } finally {
-                        f(!1);
+                        p(!1);
                     }
                 }
             },
@@ -130,8 +130,8 @@ function o(e) {
             [E, t, n]
         );
     return {
-        acceptLinkRequest: S,
-        declineLinkRequest: I,
+        acceptLinkRequest: I,
+        declineLinkRequest: S,
         disconnectLinkRequest: R,
         cancelLinkRequest: A,
         selectTeenUser: P,
@@ -160,7 +160,7 @@ function o(e) {
         isAcceptLoading: o,
         isDeclineLoading: d,
         isDisconnectLoading: g,
-        isCancelLoading: p,
+        isCancelLoading: f,
         isGetLinkCodeLoading: _,
         isSelectTeenUserLoading: x,
         isRequestingLink: E,

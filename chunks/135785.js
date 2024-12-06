@@ -10,11 +10,11 @@ var r = n(120356),
     u = n(474936),
     g = n(981631),
     m = n(388032),
-    p = n(521671);
+    f = n(521671);
 t.Z = (e) => {
     let t,
         n,
-        { premiumSubscription: r, className: f, isFullscreen: _ = !1, textColor: h } = e,
+        { premiumSubscription: r, className: p, isFullscreen: _ = !1, textColor: h } = e,
         E = (0, d.Nx)();
     if (null == r) return null;
     let b = null != r ? c.ZP.getPremiumPlanItem(r) : null;
@@ -24,9 +24,9 @@ t.Z = (e) => {
     return (
         (n = null != h ? h : E || _ ? 'always-white' : 'text-normal'),
         (0, i.jsxs)(s.Card, {
-            className: a()(p.container, f, {
-                [p.lightTextLink]: _,
-                [p.centerText]: E
+            className: a()(f.container, p, {
+                [f.lightTextLink]: _,
+                [f.centerText]: E
             }),
             type: s.Card.Types.CUSTOM,
             children: [
@@ -35,7 +35,7 @@ t.Z = (e) => {
                     width: 20,
                     height: 20,
                     color: 'currentColor',
-                    className: a()(p.icon, { [p.lightThemeColorOnly]: E || _ })
+                    className: a()(f.icon, { [f.lightThemeColorOnly]: E || _ })
                 }),
                 (0, i.jsx)(s.Text, {
                     variant: 'text-sm/medium',

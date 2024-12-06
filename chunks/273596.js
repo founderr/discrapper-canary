@@ -33,13 +33,13 @@ let b = Object.freeze({
         left: 32,
         right: 202
     }),
-    A = Object.freeze({
+    x = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
         right: 32
     }),
-    x = {
+    A = {
         page: S.ZY5.GUILD_DISCOVERY,
         object: S.qAy.CARD,
         section: S.jXE.DISCOVER_SEARCH
@@ -181,7 +181,7 @@ function L(e) {
                             style: n,
                             children: (0, i.jsx)(N.ZP, {
                                 guildId: e,
-                                onClick: async (e) => await Q(e, t, y, x),
+                                onClick: async (e) => await Q(e, t, y, A),
                                 onView: (e) => z(e)
                             })
                         },
@@ -230,7 +230,7 @@ function L(e) {
                     { leading: !0 }
                 );
         }, [P, L]),
-        ee = M ? b : A;
+        ee = M ? b : x;
     return (0, i.jsx)('div', {
         className: T.container,
         ref: F,

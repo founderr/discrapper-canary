@@ -47,7 +47,7 @@ function g(e) {
         : null;
 }
 function p(e) {
-    let { color: t, id: s, role: r, guild: d, children: p, isDragging: x, selectedItem: f, onItemSelect: v, itemType: j, locked: C, lockTooltip: b, showContextMenu: T, theme: N, roleStyle: S, 'aria-label': Z } = e,
+    let { color: t, id: s, role: r, guild: d, children: p, isDragging: x, selectedItem: f, onItemSelect: v, itemType: C, locked: j, lockTooltip: b, showContextMenu: T, theme: N, roleStyle: S, 'aria-label': Z } = e,
         E = l.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
@@ -69,7 +69,7 @@ function p(e) {
               id: s,
               selectedItem: f,
               onItemSelect: v,
-              itemType: j,
+              itemType: C,
               'aria-label': null != b ? ''.concat(Z, ', ').concat(b) : Z,
               children: (0, i.jsxs)('div', {
                   className: m.roleContent,
@@ -86,7 +86,7 @@ function p(e) {
                                 className: m.roleCircle
                             }),
                       (function () {
-                          if (!C) return null;
+                          if (!j) return null;
                           let e = (0, a.wj)(N) ? n(27377) : n(514811);
                           return (0, i.jsx)(o.Tooltip, {
                               text: b,

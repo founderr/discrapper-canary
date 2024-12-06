@@ -20,8 +20,8 @@ var i = n(200651),
     x = n(685929),
     f = n(665906),
     v = n(210887),
-    j = n(131704),
-    C = n(533947),
+    C = n(131704),
+    j = n(533947),
     b = n(277053),
     T = n(388610),
     N = n(592125),
@@ -36,8 +36,8 @@ var i = n(200651),
     _ = n(856606),
     A = n(981631),
     M = n(388032),
-    D = n(816568);
-function B(e) {
+    B = n(816568);
+function D(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;
     h.ZP.trackWithMetadata(A.rMx.SETTINGS_PANE_VIEWED, {
@@ -49,7 +49,7 @@ function B(e) {
 }
 class P extends l.PureComponent {
     componentDidMount() {
-        B(this.props.section, null, this.props.analyticsLocation);
+        D(this.props.section, null, this.props.analyticsLocation);
     }
     componentWillUnmount() {
         a.Z.wait(() => (0, o.xv)());
@@ -57,7 +57,7 @@ class P extends l.PureComponent {
     componentDidUpdate(e) {
         let { formState: t, section: n } = e,
             { formState: i, section: l, canManageRoles: s, canManageChannels: r, canManageWebhooks: a } = this.props;
-        (r || s || a) && (i !== A.QZA.CLOSED || i === t) && (s || l !== A.CoT.PERMISSIONS) && (a || l !== A.CoT.INTEGRATIONS) ? l !== n && B(l, n) : (0, c.xf)();
+        (r || s || a) && (i !== A.QZA.CLOSED || i === t) && (s || l !== A.CoT.PERMISSIONS) && (a || l !== A.CoT.INTEGRATIONS) ? l !== n && D(l, n) : (0, c.xf)();
     }
     render() {
         let { theme: e, sidebarTheme: t, section: n, channel: l, category: s, canManageRoles: a, canManageChannels: h, canDeleteChannels: x, canManageWebhooks: f, canUnlinkChannel: v } = this.props;
@@ -73,7 +73,7 @@ class P extends l.PureComponent {
                       let { channel: t, category: n, canManageRoles: l, canManageChannels: s, canDeleteChannels: a, canManageWebhooks: d, canUnlinkChannel: h } = e,
                           x = (0, g.KS)(t),
                           { GUILD_CATEGORY: f } = A.d4z,
-                          v = j.Ec.has(t.type),
+                          v = C.Ec.has(t.type),
                           N = t.type === f ? M.intl.string(M.t.ifbXnJ) : v ? (t.isForumPost() ? M.intl.string(M.t.nEOg1N) : M.intl.string(M.t.H7vTe3)) : M.intl.string(M.t['8D8Rsb']);
                       return [
                           {
@@ -86,7 +86,7 @@ class P extends l.PureComponent {
                                                     ? (0, i.jsx)(x, {
                                                           size: 'xxs',
                                                           color: 'currentColor',
-                                                          className: D.channelIcon
+                                                          className: B.channelIcon
                                                       })
                                                     : null,
                                                 (0, m.F6)(t, E.default, Z.Z),
@@ -96,7 +96,7 @@ class P extends l.PureComponent {
                                                           variant: 'text-xs/semibold',
                                                           color: 'header-secondary',
                                                           lineClamp: 1,
-                                                          className: D.category,
+                                                          className: B.category,
                                                           children: (0, m.F6)(n, E.default, Z.Z)
                                                       })
                                                     : null
@@ -137,10 +137,10 @@ class P extends l.PureComponent {
                               ariaLabel: M.intl.string(M.t.s69NLC),
                               element: R.Z,
                               notice: {
-                                  stores: [C.Z],
+                                  stores: [j.Z],
                                   element: R.B
                               },
-                              predicate: () => (!!d || !!h) && j.Ti.has(t.type)
+                              predicate: () => (!!d || !!h) && C.Ti.has(t.type)
                           },
                           { section: u.ID.DIVIDER },
                           {

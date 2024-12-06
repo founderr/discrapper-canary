@@ -26,20 +26,20 @@ var i = n(200651),
     I = n(585483),
     E = n(233870),
     b = n(51144),
-    Z = n(998502),
-    N = n(276264),
+    N = n(998502),
+    Z = n(276264),
     S = n(981631),
     T = n(388032),
     j = n(973249);
 let A = [],
-    y = Z.ZP.getEnableHardwareAcceleration();
+    y = N.ZP.getEnableHardwareAcceleration();
 function P(e) {
     let { user: t, channel: l, status: d, activities: u } = e,
         h = (0, a.e7)([x.Z], () => null != x.Z.getTypingUsers(l.id)[t.id]),
         p = (0, a.e7)([v.default], () => v.default.getCurrentUser()),
         _ = (0, a.e7)([g.Z], () => g.Z.isMobileOnline(t.id)),
         E = (0, a.e7)([C.Z], () => C.Z.getNickname(t.id)),
-        Z = (e) => {
+        N = (e) => {
             (0, o.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('8634')]).then(n.bind(n, 354589));
                 return (n) =>
@@ -71,7 +71,7 @@ function P(e) {
         },
         children: (e) =>
             (0, i.jsx)(
-                N.Z,
+                Z.Z,
                 {
                     user: t,
                     currentUser: p,
@@ -82,7 +82,7 @@ function P(e) {
                     status: d,
                     activities: u,
                     channel: l,
-                    onContextMenu: Z,
+                    onContextMenu: N,
                     isMobile: _,
                     nick: E,
                     ...e

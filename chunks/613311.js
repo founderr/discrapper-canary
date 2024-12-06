@@ -22,8 +22,8 @@ var i = n(200651),
     S = n(606081),
     T = n(252618),
     b = n(100159),
-    A = n(646288),
-    x = n(984370),
+    x = n(646288),
+    A = n(984370),
     Z = n(706454),
     L = n(210887),
     y = n(430824),
@@ -134,24 +134,24 @@ class ec extends r.PureComponent {
     }
     renderHeader(e, t) {
         let { channel: n, isAuthenticated: l } = this.props;
-        return (0, i.jsx)(x.Z, {
+        return (0, i.jsx)(A.Z, {
             isAuthenticated: l,
             toolbar: this.renderHeaderToolbar(e, t),
             children:
                 null != n
                     ? (0, i.jsxs)(r.Fragment, {
                           children: [
-                              (0, i.jsx)(x.Z.Icon, {
+                              (0, i.jsx)(A.Z.Icon, {
                                   icon: d.TagIcon,
                                   'aria-label': ea.intl.string(ea.t['P1/Erq'])
                               }),
-                              (0, i.jsx)(x.Z.Title, { children: n.name })
+                              (0, i.jsx)(A.Z.Title, { children: n.name })
                           ]
                       })
                     : null != t && t.premium
                       ? (0, i.jsxs)(r.Fragment, {
                             children: [
-                                (0, i.jsx)(x.Z.Icon, {
+                                (0, i.jsx)(A.Z.Icon, {
                                     icon: d.NitroWheelIcon,
                                     'aria-label': ea.intl.string(ea.t.Ipxkoq)
                                 }),
@@ -161,11 +161,11 @@ class ec extends r.PureComponent {
                       : null != t
                         ? (0, i.jsxs)(r.Fragment, {
                               children: [
-                                  (0, i.jsx)(x.Z.Icon, {
+                                  (0, i.jsx)(A.Z.Icon, {
                                       icon: d.TagIcon,
                                       'aria-label': ea.intl.string(ea.t['P1/Erq'])
                                   }),
-                                  (0, i.jsx)(x.Z.Title, { children: t.name })
+                                  (0, i.jsx)(A.Z.Title, { children: t.name })
                               ]
                           })
                         : null
@@ -416,7 +416,7 @@ class ec extends r.PureComponent {
                 null != e &&
                     null != t &&
                     (0, d.openModalLazy)(async () => {
-                        let { default: r } = await Promise.all([n.e('7654'), n.e('54655')]).then(n.bind(n, 560114));
+                        let { default: r } = await Promise.all([n.e('7654'), n.e('86004')]).then(n.bind(n, 560114));
                         return (n) =>
                             (0, i.jsx)(r, {
                                 ...n,
@@ -513,7 +513,7 @@ class ec extends r.PureComponent {
                             children: (0, i.jsxs)('div', {
                                 className: a()(es.headerPurchase, { [es.active]: o }),
                                 children: [
-                                    null != t ? (0, A.Z)(t) : null,
+                                    null != t ? (0, x.Z)(t) : null,
                                     null != e && null != t ? (0, i.jsx)('div', { children: 'deprecated!' }) : null,
                                     (0, i.jsx)(Q.Z, {
                                         messageStyle: Q.G.SHORT,

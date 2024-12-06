@@ -1,8 +1,8 @@
 var i = n(200651),
     l = n(192379),
     r = n(636977),
-    a = n(481060),
-    o = n(571457),
+    o = n(481060),
+    a = n(571457),
     s = n(836768),
     c = n(749681),
     u = n(133743),
@@ -14,7 +14,7 @@ var i = n(200651),
 let g = l.forwardRef(function (e, t) {
     let { selected: n, className: g } = e,
         C = l.useCallback(() => {
-            (0, o.k5)({ source: h.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
+            (0, a.k5)({ source: h.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
             let e = s.Z.getField('selectedTab');
             switch (e) {
                 case h.GlobalDiscoveryTab.QUESTS:
@@ -41,7 +41,7 @@ let g = l.forwardRef(function (e, t) {
         onClick: C,
         selected: n,
         tooltip: f.intl.string(f.t['4nEZLi']),
-        icon: a.CompassIcon
+        icon: o.CompassIcon
     });
 });
 t.Z = g;

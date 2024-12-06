@@ -13,17 +13,17 @@ var i = n(200651),
     d = n(497321),
     u = n(100527),
     m = n(367907),
-    g = n(906732),
-    h = n(296810),
+    h = n(906732),
+    g = n(296810),
     p = n(921813),
     x = n(621853),
-    T = n(246946),
-    S = n(594174),
-    _ = n(63063),
-    E = n(74538),
+    S = n(246946),
+    T = n(594174),
+    E = n(63063),
+    _ = n(74538),
     C = n(18438),
-    f = n(778825),
-    I = n(856607),
+    I = n(778825),
+    f = n(856607),
     N = n(594496),
     A = n(856768),
     b = n(981631),
@@ -43,16 +43,16 @@ function j(e) {
 }
 function O(e) {
     let { selectedGuild: t } = e,
-        { analyticsLocations: n } = (0, g.ZP)(u.Z.GUILD_PROFILE),
-        r = (0, a.e7)([S.default], () => {
-            let e = S.default.getCurrentUser();
+        { analyticsLocations: n } = (0, h.ZP)(u.Z.GUILD_PROFILE),
+        r = (0, a.e7)([T.default], () => {
+            let e = T.default.getCurrentUser();
             return l()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
         }),
         O = (0, a.e7)([x.Z], () => !x.Z.isFetchingProfile(r.id, null == t ? void 0 : t.id)),
-        R = (0, a.e7)([T.Z], () => T.Z.hidePersonalInformation),
-        { source: P, ...D } = (0, a.cj)([f.Z], () => ({
-            ...f.Z.getAllPending(),
-            source: f.Z.getSource()
+        R = (0, a.e7)([S.Z], () => S.Z.hidePersonalInformation),
+        { source: P, ...D } = (0, a.cj)([I.Z], () => ({
+            ...I.Z.getAllPending(),
+            source: I.Z.getSource()
         }));
     return (s.useEffect(() => () => c.Z.wait(C.W3), []),
     s.useEffect(() => {
@@ -66,12 +66,12 @@ function O(e) {
     R)
         ? (0, i.jsx)(d.Z, {})
         : O
-          ? (0, i.jsxs)(g.Gt, {
+          ? (0, i.jsxs)(h.Gt, {
                 value: n,
                 children: [
                     (0, i.jsx)(o.Text, {
                         variant: 'text-sm/normal',
-                        children: v.intl.format(v.t['/PTB2N'], { helpCenterLink: _.Z.getArticleURL(b.BhN.GUILD_PROFILES) })
+                        children: v.intl.format(v.t['/PTB2N'], { helpCenterLink: E.Z.getArticleURL(b.BhN.GUILD_PROFILES) })
                     }),
                     null != t
                         ? (0, i.jsxs)(i.Fragment, {
@@ -82,12 +82,12 @@ function O(e) {
                                           null != e && (0, C.HP)(e);
                                       }
                                   }),
-                                  (0, i.jsx)(h.Z, {
+                                  (0, i.jsx)(g.Z, {
                                       previewTitle: v.intl.formatToPlainString(v.t.Tc0slJ, { guildName: null == t ? void 0 : t.name }),
                                       profilePreview: (0, i.jsx)(p.Z, {
                                           user: r,
                                           guild: t,
-                                          canUsePremiumCustomization: E.ZP.canUsePremiumProfileCustomization(r),
+                                          canUsePremiumCustomization: _.ZP.canUsePremiumProfileCustomization(r),
                                           onUpsellClick: j,
                                           ...D
                                       }),
@@ -95,7 +95,7 @@ function O(e) {
                                   })
                               ]
                           })
-                        : (0, i.jsx)(I.Z, {})
+                        : (0, i.jsx)(f.Z, {})
                 ]
             })
           : (0, i.jsx)(o.Spinner, {});

@@ -23,8 +23,8 @@ var r = n(243814),
     S = n(451478),
     T = n(630388),
     b = n(823379),
-    A = n(709054),
-    x = n(591759),
+    x = n(709054),
+    A = n(591759),
     Z = n(228488),
     L = n(996106),
     y = n(914946),
@@ -156,7 +156,7 @@ t.Z = {
             (0, Z.Pr)({}, null == o ? void 0 : o.document),
                 (0, a.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e('7654'), n.e('54655')]).then(n.bind(n, 560114));
+                        let { default: e } = await Promise.all([n.e('7654'), n.e('86004')]).then(n.bind(n, 560114));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
@@ -233,7 +233,7 @@ t.Z = {
             if (!(0, T.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, M.udG.EMBEDDED)) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'This application cannot access this API');
             let l = (0, O.Z)();
             if (null == l) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No channel found');
-            if (!x.Z.isDiscordCdnUrl(i)) throw new L.Z({ errorCode: M.lTL.INVALID_PAYLOAD }, 'mediaUrl must be a Discord CDN url');
+            if (!A.Z.isDiscordCdnUrl(i)) throw new L.Z({ errorCode: M.lTL.INVALID_PAYLOAD }, 'mediaUrl must be a Discord CDN url');
             (0, f.Z)({
                 applicationId: r,
                 channelId: l.id,
@@ -262,7 +262,7 @@ t.Z = {
                 void 0 !== l &&
                     (e = [
                         {
-                            id: A.default.cast(A.default.fromTimestamp(Date.now())),
+                            id: x.default.cast(x.default.fromTimestamp(Date.now())),
                             size: 0,
                             proxy_url: l.url,
                             filename: 'preview',
@@ -272,7 +272,7 @@ t.Z = {
                         }
                     ]),
                     (n = new I.ZP({
-                        id: A.default.cast(A.default.fromTimestamp(Date.now())),
+                        id: x.default.cast(x.default.fromTimestamp(Date.now())),
                         applicationId: o,
                         content: s,
                         components: a,

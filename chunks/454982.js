@@ -41,22 +41,22 @@ function u(e) {
     });
 }
 t.Z = function (e) {
-    let { onClose: t, onClaim: n, code: m, outboundPromotion: g, transitionState: h } = e,
+    let { onClose: t, onClaim: n, code: m, outboundPromotion: h, transitionState: g } = e,
         [p, x] = s.useState(null),
-        T = (0, a.Dt)();
+        S = (0, a.Dt)();
     return (
         s.useEffect(() => {
             null == m &&
-                (0, o.A2)(g.id)
+                (0, o.A2)(h.id)
                     .then((e) => n(e))
                     .catch((e) => {
                         var t;
                         return x(null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.code);
                     });
-        }, [m, g.id, n]),
+        }, [m, h.id, n]),
         (0, i.jsx)(r.ModalRoot, {
-            transitionState: h,
-            'aria-labelledby': T,
+            transitionState: g,
+            'aria-labelledby': S,
             children:
                 null != p
                     ? (0, i.jsx)(u, { onClose: t })
@@ -80,7 +80,7 @@ t.Z = function (e) {
                                         (0, i.jsx)(r.Text, {
                                             variant: 'text-md/normal',
                                             className: d.bodyText,
-                                            children: g.outboundRedemptionModalBody
+                                            children: h.outboundRedemptionModalBody
                                         }),
                                         (0, i.jsx)(r.FormDivider, { className: d.formDivider }),
                                         (0, i.jsxs)(r.FormSection, {
@@ -109,7 +109,7 @@ t.Z = function (e) {
                                         (0, i.jsx)(r.Button, {
                                             color: r.Button.Colors.BRAND,
                                             onClick: () => {
-                                                let e = (0, o.BU)(m, g);
+                                                let e = (0, o.BU)(m, h);
                                                 window.open(e, '_blank');
                                             },
                                             children: c.intl.string(c.t['+zx47e'])

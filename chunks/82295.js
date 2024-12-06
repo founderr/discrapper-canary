@@ -9,7 +9,7 @@ t.Z = (e) => {
     let { className: t, children: n, 'aria-label': i, id: u } = e;
     return (0, o.Q)('ListSectionItem')
         ? (0, r.jsx)(s.Text, {
-              variant: 'text-xs/semibold',
+              variant: 'text-sm/medium',
               className: a()(t, l.container),
               'aria-label': i,
               id: u,

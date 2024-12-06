@@ -22,8 +22,8 @@ var i = n(200651),
     S = n(133743),
     T = n(726941),
     b = n(666697),
-    A = n(548514),
-    x = n(370648),
+    x = n(548514),
+    A = n(370648),
     Z = n(569527),
     L = n(979007),
     y = n(388032),
@@ -61,7 +61,7 @@ function O(e) {
                 onTransitionEnd: m,
                 children:
                     null != c
-                        ? (0, i.jsx)(A.Z, {
+                        ? (0, i.jsx)(x.Z, {
                               application: c,
                               size: 'sm'
                           })
@@ -75,7 +75,7 @@ t.Z = function () {
     let { onScroll: t, scrollPosition: n, resetScrollPosition: l } = (0, m.M)(),
         a = (0, N.Xh)(),
         d = (null == a ? void 0 : a.type) === N.m_.CATEGORY ? a.categoryId : void 0,
-        { applicationId: A, section: R } = (null == a ? void 0 : a.type) === N.m_.APPLICATION ? a : {},
+        { applicationId: x, section: R } = (null == a ? void 0 : a.type) === N.m_.APPLICATION ? a : {},
         { query: j, categoryId: D } = (null == a ? void 0 : a.type) === N.m_.SEARCH ? a : {},
         M = (0, s.e7)([u.Z], () => u.Z.getCategories()),
         w = r.useMemo(() => [(0, h.KQ)(), ...M], [M]),
@@ -92,7 +92,7 @@ t.Z = function () {
             c.g5();
         }, []),
         r.useEffect(() => N.aQ.setState({ lastItem: a }), [a]);
-    let z = null != A,
+    let z = null != x,
         W = (null == a ? void 0 : a.type) === N.m_.SEARCH,
         { searchQuery: Y, onSearchTextChange: K, onClearSearch: q, onSearchSubmit: X } = (0, C.M)({ initialQuery: null != j ? j : '' }),
         Q = I.Z.useField('searchBarState'),
@@ -126,7 +126,7 @@ t.Z = function () {
                     !ei && (0, i.jsx)(g.z6, { scrollPosition: n }),
                     z
                         ? (0, i.jsx)(O, {
-                              applicationId: A,
+                              applicationId: x,
                               showDetailHeaderButtons: H,
                               onClickBack: er
                           })
@@ -169,14 +169,14 @@ t.Z = function () {
                 ? (0, i.jsx)(b.Z, {
                       onScroll: t,
                       onSelectApplication: en,
-                      applicationId: A,
+                      applicationId: x,
                       initialTab: R,
                       onButtonsVisibilityChange: F
                   })
                 : W
                   ? (0, i.jsx)(Z.Z, { onSelectApplication: en })
                   : G === L.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID
-                    ? (0, i.jsx)(x.Z, {
+                    ? (0, i.jsx)(A.Z, {
                           onScroll: t,
                           onSelectApplication: en
                       })

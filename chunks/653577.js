@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    o = n(442837),
+    o = n.n(r),
+    a = n(442837),
     s = n(481060),
     c = n(362721),
     u = n(12498),
@@ -20,7 +20,7 @@ var i = n(200651),
     C = n(665162);
 function _(e) {
     let { channel: t, connected: n, hovered: r, subtitle: _, onClick: v, enableHangStatus: x, allowChannelTopic: I } = e,
-        b = (0, o.e7)([u.Z], () => u.Z.getChannelStatus(t)),
+        b = (0, a.e7)([u.Z], () => u.Z.getChannelStatus(t)),
         S = null != b && b.length > 0,
         E = (0, c.ZP)(t, !0),
         Z = (!x || !!I) && E,
@@ -34,14 +34,14 @@ function _(e) {
     }, [t.id, S, t.guild_id]);
     let y = (0, s.useRedesignIconContext)().enabled ? 12 : 14;
     if (null == t.guild_id) return null;
-    let T = a()(g.statusDiv, n && Z ? g.hoverable : null);
+    let T = o()(g.statusDiv, n && Z ? g.hoverable : null);
     if (S)
         return (0, i.jsx)(s.Clickable, {
             className: T,
             onClick: Z ? v : void 0,
             children: (0, i.jsx)(s.Text, {
                 variant: 'text-xs/medium',
-                className: a()(g.statusText, C.markup),
+                className: o()(g.statusText, C.markup),
                 children: (0, i.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(b, !0, { channelId: t.id }) })
             })
         });

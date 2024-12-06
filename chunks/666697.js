@@ -21,20 +21,20 @@ var i = n(200651),
     N = n(388032),
     S = n(890030);
 t.Z = function (e) {
-    let { applicationId: t, onSelectApplication: n, onScroll: T, initialTab: b, onButtonsVisibilityChange: A } = e,
-        x = r.useRef(null),
+    let { applicationId: t, onSelectApplication: n, onScroll: T, initialTab: b, onButtonsVisibilityChange: x } = e,
+        A = r.useRef(null),
         Z = (0, l.e7)([s.Z], () => s.Z.getApplication(t)),
         L = (0, l.e7)([s.Z], () => s.Z.getApplicationFetchState(t));
     r.useEffect(() => {
         null != t && null == Z && a.i6(t);
     }, [t, Z]),
-        r.useEffect(() => () => A(!1), [A]);
+        r.useEffect(() => () => x(!1), [x]);
     let y = null == Z ? void 0 : Z.storefront_available,
         [P, O] = r.useState(null != b ? b : C.GlobalDiscoveryAppsSections.ABOUT),
         R = r.useCallback(
             (e) => {
                 var t;
-                null === (t = x.current) || void 0 === t || t.scrollTo({ to: 0 }), O(C.GlobalDiscoveryAppsSections.ABOUT), n(e);
+                null === (t = A.current) || void 0 === t || t.scrollTo({ to: 0 }), O(C.GlobalDiscoveryAppsSections.ABOUT), n(e);
             },
             [n]
         );
@@ -75,7 +75,7 @@ t.Z = function (e) {
         k = P === C.GlobalDiscoveryAppsSections.ABOUT;
     return (0, i.jsx)(h.Z, {
         onScroll: T,
-        ref: x,
+        ref: A,
         children: (0, i.jsx)(d.Z, {
             children:
                 null == Z
@@ -93,7 +93,7 @@ t.Z = function (e) {
                           children: [
                               (0, i.jsx)(f.Z, {
                                   application: Z,
-                                  onButtonsVisibilityChange: A
+                                  onButtonsVisibilityChange: x
                               }),
                               (0, i.jsxs)('div', {
                                   className: S.contentContainer,

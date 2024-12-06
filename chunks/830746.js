@@ -10,12 +10,12 @@ var r = n(399606),
     u = n(87792),
     g = n(302289),
     m = n(946690),
-    p = n(456771),
-    f = n(292352),
+    f = n(456771),
+    p = n(292352),
     _ = n(388032),
     h = n(23020);
 t.Z = () => {
-    let e = (0, c.mq)(f.ne.ACTIVE),
+    let e = (0, c.mq)(p.ne.ACTIVE),
         t = (0, o.c)(),
         n = (0, r.e7)([s.default], () => s.default.getCurrentUser()),
         E = (0, l.o)(_.intl.string(_.t['5RZ8Tk']), _.intl.string(_.t.bmhCnJ)),
@@ -46,7 +46,7 @@ t.Z = () => {
                               description: b
                           }),
                           (0, i.jsx)(m.Z, {
-                              icon: C ? a.QrCodeIcon : (0, a.makeIconCompat)(p.Z),
+                              icon: C ? a.QrCodeIcon : (0, a.makeIconCompat)(f.Z),
                               header: _.intl.string(_.t.hhOuMT),
                               description: x
                           })

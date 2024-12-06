@@ -13,24 +13,24 @@ var i = t(913527),
     c = t(388032),
     d = t(297229);
 function u(e) {
-    let { className: n, onScheduleChange: t, onRecurrenceChange: i, onTimeChange: u, timeSelected: x = !0, schedule: m, recurrenceRule: h, showEndDate: g = !1, requireEndDate: v = !1, disableStartDateTime: j = !1 } = e;
-    if (null == m) return null;
-    let f = null,
-        N = m.startDate,
+    let { className: n, onScheduleChange: t, onRecurrenceChange: i, onTimeChange: u, timeSelected: m = !0, schedule: x, recurrenceRule: h, showEndDate: g = !1, requireEndDate: v = !1, disableStartDateTime: j = !1 } = e;
+    if (null == x) return null;
+    let p = null,
+        f = x.startDate,
         I = r()(),
-        p = r()().add(s.G3, 'days'),
+        N = r()().add(s.G3, 'days'),
         C = r()().add(s.Ib, 'days');
-    null != h && (p.add(s.hn, 'years'), C.add(s.hn, 'years'));
+    null != h && (N.add(s.hn, 'years'), C.add(s.hn, 'years'));
     let E = (e) => {
         t({
-            ...m,
+            ...x,
             endDate: e
         });
     };
     return (
         g &&
-            (f =
-                null != m.endDate || v
+            (p =
+                null != x.endDate || v
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
                               (0, l.jsxs)('div', {
@@ -40,9 +40,9 @@ function u(e) {
                                           title: c.intl.string(c.t.CTLgZG),
                                           required: v,
                                           children: (0, l.jsx)(a.DateInput, {
-                                              value: m.endDate,
+                                              value: x.endDate,
                                               onSelect: E,
-                                              minDate: m.startDate,
+                                              minDate: x.startDate,
                                               maxDate: C
                                           })
                                       }),
@@ -50,7 +50,7 @@ function u(e) {
                                           title: c.intl.string(c.t.j2RuXF),
                                           required: v,
                                           children: (0, l.jsx)(a.TimeInput, {
-                                              value: m.endDate,
+                                              value: x.endDate,
                                               onChange: E
                                           })
                                       })
@@ -87,7 +87,7 @@ function u(e) {
                           look: a.Button.Looks.BLANK,
                           size: a.Button.Sizes.MIN,
                           onClick: () => {
-                              E(r()(m.startDate).add(1, 'hour'));
+                              E(r()(x.startDate).add(1, 'hour'));
                           },
                           children: (0, l.jsxs)('div', {
                               className: d.link,
@@ -116,15 +116,15 @@ function u(e) {
                             title: c.intl.string(c.t.kKOIwM),
                             required: !0,
                             children: (0, l.jsx)(a.DateInput, {
-                                value: m.startDate,
+                                value: x.startDate,
                                 onSelect: (e) => {
                                     t({
-                                        ...m,
+                                        ...x,
                                         startDate: e
                                     });
                                 },
                                 minDate: I,
-                                maxDate: p,
+                                maxDate: N,
                                 disabled: j
                             })
                         }),
@@ -132,27 +132,27 @@ function u(e) {
                             title: c.intl.string(c.t['6dGmCA']),
                             required: !0,
                             children: (0, l.jsx)(a.TimeInput, {
-                                value: m.startDate,
+                                value: x.startDate,
                                 onChange: (e) => {
                                     if (!!e.isValid())
                                         null == u || u(!0),
                                             t({
-                                                ...m,
+                                                ...x,
                                                 startDate: e
                                             });
                                 },
-                                hideValue: !x,
+                                hideValue: !m,
                                 disabled: j
                             })
                         })
                     ]
                 }),
-                f,
-                null != N &&
+                p,
+                null != f &&
                     null != i &&
                     (0, l.jsx)(o.Z, {
                         onRecurrenceChange: i,
-                        startDate: N,
+                        startDate: f,
                         recurrenceRule: h
                     })
             ]

@@ -21,10 +21,10 @@ var l = n(120356),
 function C(e) {
     var t, l;
     let { stream: a, applicationId: C, channel: x, exitFullScreen: v, appContext: _, analyticsLocation: I, className: E, ...b } = e,
-        Z = null == x ? void 0 : x.getGuildId(),
-        N = null == x ? void 0 : x.id,
-        S = (0, o.e7)([h.Z], () => (null != Z ? h.Z.getGuild(Z) : null), [Z]),
-        T = (0, o.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(N), [N]);
+        N = null == x ? void 0 : x.getGuildId(),
+        Z = null == x ? void 0 : x.id,
+        S = (0, o.e7)([h.Z], () => (null != N ? h.Z.getGuild(N) : null), [N]),
+        T = (0, o.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(Z), [Z]);
     if (((t = S), (l = x), !(null != t && null != l && p.Z.can(m.Plq.CREATE_INSTANT_INVITE, l)))) return null;
     let j = f.intl.string(f.t.VINpSE);
     return (
@@ -42,7 +42,7 @@ function C(e) {
                                 null == o || o(),
                                     (0, c.openModalLazy)(
                                         async () => {
-                                            let { default: e } = await Promise.all([n.e('7654'), n.e('54655')]).then(n.bind(n, 560114));
+                                            let { default: e } = await Promise.all([n.e('7654'), n.e('86004')]).then(n.bind(n, 560114));
                                             return (n) =>
                                                 (0, i.jsx)(e, {
                                                     ...n,

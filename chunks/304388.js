@@ -22,44 +22,44 @@ function c(e) {
     );
 }
 t.Z = l.forwardRef(function (e, t) {
-    let { renderPopout: n, children: d, align: u = 'left' } = e,
-        [h, p] = l.useState(!1),
-        { isHovered: m, setIsHovered: f, onMouseEnter: g, onMouseLeave: C, cancelTimers: x } = (0, a.Z)(200, 300);
-    function v(e) {
-        'focus' !== e.type && !h && g();
+    let { renderPopout: n, children: d, align: u = 'left', isPopoutBlocked: h, onPopoutOpen: p, onPopoutClose: m } = e,
+        [f, g] = l.useState(!1),
+        { isHovered: C, setIsHovered: x, onMouseEnter: v, onMouseLeave: _, cancelTimers: I } = (0, a.Z)(200, 300);
+    function E(e) {
+        'focus' !== e.type && !f && v();
     }
-    function _() {
-        !h && C();
+    function b() {
+        !f && _();
     }
-    function I(e) {
-        x(), p(!h), (!m || h) && e();
+    function N(e) {
+        I(), g(!f), f ? null == m || m() : null == p || p(), (!C || f) && e();
     }
     l.useImperativeHandle(
         t,
         () => ({
             hidePopout() {
-                f(!1), p(!1);
+                x(!1), g(!1);
             }
         }),
-        [f, p]
+        [x, g]
     );
-    let E = m || h;
+    let Z = (C && !h) || f;
     return (0, i.jsx)(r.Popout, {
         animation: r.Popout.Animation.FADE,
-        shouldShow: E,
+        shouldShow: Z,
         animationPosition: 'top',
         position: 'top',
         align: u,
         spacing: 16,
         onRequestClose: () => {
-            f(!1), p(!1);
+            x(!1), g(!1), null == m || m();
         },
         renderPopout: (e) =>
             (0, i.jsx)(c, {
-                isHovered: E,
-                onFocus: () => p(!0),
-                onMouseEnter: g,
-                onMouseLeave: _,
+                isHovered: Z,
+                onFocus: () => g(!0),
+                onMouseEnter: v,
+                onMouseLeave: b,
                 renderPopout: n,
                 ...e
             }),
@@ -67,15 +67,15 @@ t.Z = l.forwardRef(function (e, t) {
             let { onClick: t, onKeyDown: n } = e;
             return (0, i.jsx)(i.Fragment, {
                 children: d({
-                    onClick: (e) => I(() => t(e)),
+                    onClick: (e) => N(() => t(e)),
                     onKeyDown: (e) => {
                         var t, i;
-                        return (t = e), (i = n), void ((t.key === s.vn.ENTER || t.key === s.vn.SPACE) && I(() => i(t)));
+                        return (t = e), (i = n), void ((t.key === s.vn.ENTER || t.key === s.vn.SPACE) && N(() => i(t)));
                     },
                     className: o.actionBarButton,
-                    onMouseEnter: v,
-                    onMouseLeave: _,
-                    isActive: E
+                    onMouseEnter: E,
+                    onMouseLeave: b,
+                    isActive: f
                 })
             });
         }

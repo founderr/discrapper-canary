@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return I;
     }
 });
 var i = n(200651),
@@ -13,24 +13,24 @@ var i = n(200651),
     d = n(37234),
     u = n(410030),
     m = n(605236),
-    g = n(626135),
-    h = n(617136),
+    h = n(626135),
+    g = n(617136),
     p = n(497505),
     x = n(341907),
-    T = n(46140),
-    S = n(981631),
-    _ = n(388032),
-    E = n(839905),
+    S = n(46140),
+    T = n(981631),
+    E = n(388032),
+    _ = n(839905),
     C = n(66094);
-function f() {
+function I() {
     let e = (0, o.wj)((0, u.ZP)()),
         t = s.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []),
         n = s.useCallback(() => {
             (0, d.xf)(),
-                (0, x.navigateToQuestHome)(T.dr.USER_SETTINGS_GIFT_INVENTORY, p.jn.QUEST_HOME_MOVE_CALLOUT),
-                g.default.track(S.rMx.QUEST_CONTENT_CLICKED, {
-                    cta_name: h.jZ.VIEW_QUESTS,
-                    ...(0, h.mH)(p.jn.QUEST_HOME_MOVE_CALLOUT)
+                (0, x.navigateToQuestHome)(S.dr.USER_SETTINGS_GIFT_INVENTORY, p.jn.QUEST_HOME_MOVE_CALLOUT),
+                h.default.track(T.rMx.QUEST_CONTENT_CLICKED, {
+                    cta_name: g.jZ.VIEW_QUESTS,
+                    ...(0, g.mH)(p.jn.QUEST_HOME_MOVE_CALLOUT)
                 });
         }, []);
     return (
@@ -39,43 +39,43 @@ function f() {
         }, []),
         (0, m.un)(a.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME),
         (0, i.jsxs)('div', {
-            className: l()(E.container),
+            className: l()(_.container),
             style: t,
             children: [
                 !1,
                 (0, i.jsxs)('div', {
-                    className: E.textContainer,
+                    className: _.textContainer,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: E.headerContainer,
+                            className: _.headerContainer,
                             children: [
                                 (0, i.jsx)('img', {
                                     alt: '',
                                     src: C,
-                                    className: E.icon
+                                    className: _.icon
                                 }),
                                 (0, i.jsx)(c.Heading, {
                                     variant: 'heading-lg/bold',
                                     color: 'always-white',
-                                    children: _.intl.string(_.t.z8YP2N)
+                                    children: E.intl.string(E.t.z8YP2N)
                                 })
                             ]
                         }),
                         (0, i.jsx)(c.Text, {
                             variant: 'text-md/medium',
                             color: 'text-muted',
-                            children: _.intl.string(_.t.IqmRZ2)
+                            children: E.intl.string(E.t.IqmRZ2)
                         }),
                         (0, i.jsx)(c.Button, {
                             size: 'large',
                             color: e ? c.ButtonColors.BRAND : c.ButtonColors.WHITE,
-                            className: E.button,
+                            className: _.button,
                             onClick: n,
-                            innerClassName: E.innerButton,
+                            innerClassName: _.innerButton,
                             children: (0, i.jsx)(c.Text, {
                                 variant: 'text-md/medium',
                                 color: e ? 'always-white' : 'text-normal',
-                                children: _.intl.string(_.t.GURBQk)
+                                children: E.intl.string(E.t.GURBQk)
                             })
                         })
                     ]

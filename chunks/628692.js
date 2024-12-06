@@ -87,7 +87,7 @@ t.ZP = function (e) {
         L = i.useCallback(() => {
             var e;
             let t = new Audio((0, g.Z)(a));
-            null != d.current && d.current.pause(), (d.current = t), (t.currentTime = 0), (t.volume = (0, E.Z)(null !== (e = null == A ? void 0 : A.volume) && void 0 !== e ? e : 1)), t.play(), (t.onplay = () => O(!0)), (t.onpause = () => O(!1)), (t.onended = () => O(!1));
+            null != d.current && d.current.pause(), (d.current = t), (t.currentTime = 0), (t.volume = (0, E.Z)(null !== (e = null == A ? void 0 : A.volume) && void 0 !== e ? e : 1, I.AY.getSetting())), t.play(), (t.onplay = () => O(!0)), (t.onpause = () => O(!1)), (t.onended = () => O(!1));
         }, [a, A, d, O]);
     return D
         ? null == A

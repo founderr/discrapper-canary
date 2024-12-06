@@ -8,8 +8,8 @@ n.d(t, {
 var i,
     l = n(200651),
     r = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(873546),
     c = n(442837),
     u = n(481060),
@@ -204,7 +204,7 @@ class V extends r.PureComponent {
     }
     renderProtip() {
         return (0, l.jsx)(g.Z, {
-            className: o()(R.protip, { [R.hasContent]: this.state.query.length > 0 }),
+            className: a()(R.protip, { [R.hasContent]: this.state.query.length > 0 }),
             type: g.Z.Types.INLINE,
             children: P.intl.format(P.t.wukqXV, {
                 userSymbolHook: (e, t) => H(t, m.xQ.USER, P.intl.string(P.t.GQRCGh)),
@@ -225,10 +225,10 @@ class V extends r.PureComponent {
             'aria-label': P.intl.string(P.t.ZvKwYW),
             size: u.ModalSize.DYNAMIC,
             transitionState: this.props.transitionState,
-            className: o()(R.container, s.tq && R.mobileContainer),
+            className: a()(R.container, s.tq && R.mobileContainer),
             fullscreenOnMobile: !1,
             children: (0, l.jsxs)('div', {
-                className: o()(R.quickswitcher, s.tq && R.mobileQuickswitcher),
+                className: a()(R.quickswitcher, s.tq && R.mobileQuickswitcher),
                 onMouseMove: this.handleMouseMove,
                 children: [this.renderInput(), this.renderResults(), this.renderProtip(), this.renderTutorial()]
             })
@@ -262,7 +262,7 @@ class V extends r.PureComponent {
                 switch (t.type) {
                     case m.h8.GUILD:
                         return (0, d.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e('63288'), n.e('33053'), n.e('17298'), n.e('7654'), n.e('42309'), n.e('98479'), n.e('31113'), n.e('85552'), n.e('58227'), n.e('16114'), n.e('61720'), n.e('23956'), n.e('33213'), n.e('22179')]).then(n.bind(n, 545135));
+                            let { default: e } = await Promise.all([n.e('63288'), n.e('33053'), n.e('17298'), n.e('7654'), n.e('42309'), n.e('98479'), n.e('31113'), n.e('85552'), n.e('58227'), n.e('16114'), n.e('54770'), n.e('23956'), n.e('33213'), n.e('22179')]).then(n.bind(n, 545135));
                             return (n) =>
                                 (0, l.jsx)(e, {
                                     ...n,

@@ -58,7 +58,7 @@ function y(e) {
         Q = l.useMemo(
             () => [
                 g.WA,
-                E.Dd,
+                ...(P ? [E.Dd] : []),
                 S.n,
                 ...g.yp,
                 g.wo,
@@ -77,7 +77,7 @@ function y(e) {
                     }
                 }
             ],
-            [R, F, U]
+            [R, F, U, P]
         );
     return (0, i.jsxs)(u.Gt, {
         value: R,

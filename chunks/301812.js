@@ -14,8 +14,8 @@ var i = n(200651),
     d = n(51331),
     u = n(726985),
     m = n(736530),
-    g = n(981631),
-    h = n(388032);
+    h = n(981631),
+    g = n(388032);
 function p() {
     let e = (0, o.is)(),
         t = a.SE.useSetting().includes(e),
@@ -31,10 +31,10 @@ function p() {
         : (0, i.jsx)(c.U, {
               setting: u.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS_V2,
               children: (0, i.jsx)(d.Z, {
-                  title: h.intl.string(h.t.IQO6Bg),
+                  title: g.intl.string(g.t.IQO6Bg),
                   value: !t,
                   onChange: n,
-                  note: h.intl.format(h.t.v03Xpq, { helpdeskArticle: r.Z.getArticleURL(g.BhN.ACTIVITY_STATUS_SETTINGS) })
+                  note: g.intl.format(g.t.v03Xpq, { helpdeskArticle: r.Z.getArticleURL(h.BhN.ACTIVITY_STATUS_SETTINGS) })
               })
           });
 }

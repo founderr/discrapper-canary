@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return f;
     }
 }),
     n(47120),
@@ -15,20 +15,20 @@ var i = n(200651),
     d = n(726542),
     u = n(275759),
     m = n(231757),
-    g = n(888496),
-    h = n(706454),
+    h = n(888496),
+    g = n(706454),
     p = n(553795),
     x = n(63063),
-    T = n(981631),
-    S = n(856651),
-    _ = n(388032),
-    E = n(429779);
+    S = n(981631),
+    T = n(856651),
+    E = n(388032),
+    _ = n(429779);
 function C(e) {
     var t;
     let { account: n, refreshed: l, handleRefresh: o } = e,
         [c, d] = s.useState(!1),
         m = null !== (t = n.metadata) && void 0 !== t ? t : {},
-        p = (0, r.e7)([h.default], () => h.default.locale),
+        p = (0, r.e7)([g.default], () => g.default.locale),
         C = s.useCallback(async () => {
             d(!0);
             try {
@@ -37,62 +37,62 @@ function C(e) {
                 d(!1);
             }
         }, [n, o]),
-        f = null;
+        I = null;
     switch (n.type) {
-        case T.ABu.REDDIT:
-            f = (0, g.oP)(m, E.metadataItem);
+        case S.ABu.REDDIT:
+            I = (0, h.oP)(m, _.metadataItem);
             break;
-        case T.ABu.STEAM:
-            f = (0, g.Dq)(m, E.metadataItem);
+        case S.ABu.STEAM:
+            I = (0, h.Dq)(m, _.metadataItem);
             break;
-        case T.ABu.TWITTER:
-            f = (0, g.rJ)(m, E.metadataItem);
+        case S.ABu.TWITTER:
+            I = (0, h.rJ)(m, _.metadataItem);
             break;
-        case T.ABu.EBAY:
-            f = (0, g.ul)(m, E.metadataItem);
+        case S.ABu.EBAY:
+            I = (0, h.ul)(m, _.metadataItem);
             break;
-        case T.ABu.PAYPAL:
-            f = (0, g.li)(m, E.metadataItem);
+        case S.ABu.PAYPAL:
+            I = (0, h.li)(m, _.metadataItem);
             break;
-        case T.ABu.TIKTOK:
-            f = (0, g.hf)(m, E.metadataItem);
+        case S.ABu.TIKTOK:
+            I = (0, h.hf)(m, _.metadataItem);
     }
-    let I = (0, u.FI)(m[S.PC.CREATED_AT], p),
+    let f = (0, u.FI)(m[T.PC.CREATED_AT], p),
         N = null,
-        A = _.intl.string(_.t.wzzjk5);
+        A = E.intl.string(E.t.wzzjk5);
     return (
-        (null == f || 0 === f.length) &&
-            null == I &&
+        (null == I || 0 === I.length) &&
+            null == f &&
             ((N = (0, i.jsx)(
                 a.Text,
                 {
                     variant: 'text-xs/normal',
                     color: 'header-secondary',
-                    children: _.intl.format(_.t.Up2ni4, { helpdeskUrl: x.Z.getArticleURL(T.BhN.CONNECTION_DETAILS) })
+                    children: E.intl.format(E.t.Up2ni4, { helpdeskUrl: x.Z.getArticleURL(S.BhN.CONNECTION_DETAILS) })
                 },
                 'label'
             )),
-            (A = _.intl.string(_.t['LVh3//']))),
-        l && (A = _.intl.string(_.t.i4jeWV)),
+            (A = E.intl.string(E.t['LVh3//']))),
+        l && (A = E.intl.string(E.t.i4jeWV)),
         (0, i.jsxs)('div', {
-            className: E.metadataContainer,
+            className: _.metadataContainer,
             children: [
                 N,
-                null == f
+                null == I
                     ? void 0
-                    : f.map((e, t) =>
+                    : I.map((e, t) =>
                           (0, i.jsxs)(i.Fragment, {
-                              children: [e, t < f.length - 1 ? (0, i.jsx)('span', { className: E.dot }) : null]
+                              children: [e, t < I.length - 1 ? (0, i.jsx)('span', { className: _.dot }) : null]
                           })
                       ),
-                null != f && f.length > 0 && null != I ? (0, i.jsx)('div', { className: E.dot }) : null,
-                null != I
+                null != I && I.length > 0 && null != f ? (0, i.jsx)('div', { className: _.dot }) : null,
+                null != f
                     ? (0, i.jsx)(
                           a.Text,
                           {
                               variant: 'text-xs/normal',
                               color: 'header-secondary',
-                              children: _.intl.format(_.t['9rfonp'], { date: I })
+                              children: E.intl.format(E.t['9rfonp'], { date: f })
                           },
                           'member-since'
                       )
@@ -100,13 +100,13 @@ function C(e) {
                 (0, i.jsx)(
                     a.Button,
                     {
-                        className: E.metadataRefreshButton,
+                        className: _.metadataRefreshButton,
                         look: a.Button.Looks.OUTLINED,
                         color: l ? a.Button.Colors.GREEN : a.Button.Colors.PRIMARY,
                         size: a.Button.Sizes.MIN,
                         submitting: c,
                         disabled: l,
-                        'aria-label': _.intl.string(_.t.sCkLYG),
+                        'aria-label': E.intl.string(E.t.sCkLYG),
                         onClick: l ? void 0 : C,
                         children: A
                     },
@@ -116,53 +116,53 @@ function C(e) {
         })
     );
 }
-function f(e) {
+function I(e) {
     let { account: t, handleRefresh: n, refreshedAccountIds: r } = e,
-        [u, g] = s.useState(t.visibility),
-        [h, p] = s.useState(t.metadataVisibility),
+        [u, h] = s.useState(t.visibility),
+        [g, p] = s.useState(t.metadataVisibility),
         x = (0, c.ZP)();
     s.useEffect(() => {
-        g(t.visibility), p(t.metadataVisibility);
+        h(t.visibility), p(t.metadataVisibility);
     }, [t]);
-    let T = d.Z.get(t.type),
-        S = !0 === T.hasMetadata;
+    let S = d.Z.get(t.type),
+        T = !0 === S.hasMetadata;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: E.activityRow,
+                className: _.activityRow,
                 children: [
                     (0, i.jsx)('img', {
-                        alt: T.name,
-                        className: E.connectionIcon,
-                        src: (0, l.wj)(x) ? T.icon.darkSVG : T.icon.lightSVG
+                        alt: S.name,
+                        className: _.connectionIcon,
+                        src: (0, l.wj)(x) ? S.icon.darkSVG : S.icon.lightSVG
                     }),
                     (0, i.jsxs)('div', {
-                        className: E.activitySettings,
+                        className: _.activitySettings,
                         children: [
                             (0, i.jsxs)(a.FormSwitch, {
-                                className: E.visibilitySwitch,
+                                className: _.visibilitySwitch,
                                 hideBorder: !0,
                                 value: 1 === u,
                                 onChange: function (e) {
                                     let { verified: n } = t,
                                         i = e ? 1 : 0;
                                     if (e && !n) {
-                                        g(i),
+                                        h(i),
                                             (0, m.Z)({
                                                 platformType: t.type,
                                                 location: 'User Settings'
                                             });
                                         return;
                                     }
-                                    g(i), o.Z.setVisibility(t.type, t.id, i);
+                                    h(i), o.Z.setVisibility(t.type, t.id, i);
                                 },
                                 children: [
                                     (0, i.jsx)(a.Text, {
                                         variant: 'text-md/semibold',
                                         color: 'header-primary',
-                                        children: T.name
+                                        children: S.name
                                     }),
-                                    S &&
+                                    T &&
                                         (0, i.jsx)(C, {
                                             account: t,
                                             refreshed: r.includes(t.id),
@@ -170,12 +170,12 @@ function f(e) {
                                         })
                                 ]
                             }),
-                            S &&
+                            T &&
                                 (0, i.jsx)(a.FormSwitch, {
-                                    className: E.additionalDetailsSwitch,
+                                    className: _.additionalDetailsSwitch,
                                     hideBorder: !0,
                                     disabled: 1 !== u || null == t.metadata,
-                                    value: 1 === h,
+                                    value: 1 === g,
                                     onChange: function (e) {
                                         let { verified: n } = t,
                                             i = e ? 1 : 0;
@@ -192,18 +192,18 @@ function f(e) {
                                     children: (0, i.jsx)(a.Text, {
                                         variant: 'text-md/normal',
                                         color: 'header-secondary',
-                                        children: _.intl.string(_.t['3l78ws'])
+                                        children: E.intl.string(E.t['3l78ws'])
                                     })
                                 })
                         ]
                     })
                 ]
             }),
-            (0, i.jsx)('div', { className: E.divider })
+            (0, i.jsx)('div', { className: _.divider })
         ]
     });
 }
-function I() {
+function f() {
     let e = (0, r.e7)([p.Z], () => p.Z.getAccounts()),
         t = s.useMemo(() => e.filter((e) => d.Z.isSupported(e.type)), [e]),
         [n, l] = s.useState([]),
@@ -217,16 +217,16 @@ function I() {
     return 0 === t.length
         ? null
         : (0, i.jsxs)(a.FormSection, {
-              className: E.container,
+              className: _.container,
               children: [
                   (0, i.jsx)(a.FormTitle, {
                       tag: a.FormTitleTags.H5,
-                      className: E.title,
-                      children: _.intl.string(_.t.aw0GVV)
+                      className: _.title,
+                      children: E.intl.string(E.t.aw0GVV)
                   }),
                   t.map((e) =>
                       (0, i.jsx)(
-                          f,
+                          I,
                           {
                               account: e,
                               handleRefresh: c,

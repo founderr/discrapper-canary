@@ -6,27 +6,27 @@ n.d(t, {
         return o;
     },
     h7: function () {
-        return s;
+        return r;
     },
     rh: function () {
-        return r;
+        return s;
     }
 });
 var l = n(570140);
-function s(e, t, n) {
-    return new Promise((s) => {
+function r(e, t, n) {
+    return new Promise((r) => {
         setTimeout(() => {
             l.Z.dispatch({
                 type: 'ACTIVITY_INVITE_MODAL_OPEN',
                 activity: e,
                 isPrivate: t,
                 context: n,
-                resolve: s
+                resolve: r
             });
         }, 0);
     });
 }
-function r(e) {
+function s(e) {
     l.Z.dispatch({
         type: 'ACTIVITY_INVITE_MODAL_QUERY',
         query: e

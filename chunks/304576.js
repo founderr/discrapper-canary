@@ -10,8 +10,8 @@ var r = n(120356),
     u = n(140465),
     g = n(775412),
     m = n(650032),
-    p = n(104494),
-    f = n(639119),
+    f = n(104494),
+    p = n(639119),
     _ = n(105759),
     h = n(346497),
     E = n(422034),
@@ -21,7 +21,7 @@ var r = n(120356),
     v = n(474936),
     T = n(388032),
     N = n(337307);
-let S = (e) => {
+let I = (e) => {
     let t,
         { trialOffer: n, discountOffer: r } = e;
     if ((null != n ? (t = T.intl.string(T.t.IBYG5e)) : null != r && (t = T.intl.formatToPlainString(T.t.iiLbvr, { percent: r.discount.amount })), null != t))
@@ -36,12 +36,12 @@ let S = (e) => {
 };
 t.Z = (e) => {
     var t, n;
-    let { isFullscreen: r, className: I, buttonClassName: R, subscriptionTier: A, entrypoint: j, isDarkMode: P } = e,
+    let { isFullscreen: r, className: S, buttonClassName: R, subscriptionTier: A, entrypoint: j, isDarkMode: P } = e,
         { analyticsLocations: Z } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
         B = (0, g._O)(),
-        M = (0, p.Ng)(),
-        O = (0, p.Wp)(M, v.Si.TIER_2) ? v.Si.TIER_2 : void 0,
-        w = (0, f.N)(),
+        M = (0, f.Ng)(),
+        O = (0, f.Wp)(M, v.Si.TIER_2) ? v.Si.TIER_2 : void 0,
+        w = (0, p.N)(),
         y = (0, u.Nx)(),
         k = (0, h.Vi)(),
         L = (0, s.e7)([d.Z], () => d.Z.affinities),
@@ -52,13 +52,13 @@ t.Z = (e) => {
     return (0, i.jsx)(c.Gt, {
         value: Z,
         children: (0, i.jsx)('div', {
-            className: a()(N.container, N.marketingPageV2Container, I),
+            className: a()(N.container, N.marketingPageV2Container, S),
             'data-testid': 'v2-marketing-page-hero-header',
             children: (0, i.jsxs)('div', {
                 className: N.marketingPageV2TextContainer,
                 children: [
                     y &&
-                        (0, i.jsx)(S, {
+                        (0, i.jsx)(I, {
                             trialOffer: w,
                             discountOffer: M
                         }),

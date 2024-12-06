@@ -9,8 +9,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    o = n(91192),
+    o = n.n(r),
+    a = n(91192),
     s = n(442837),
     c = n(481060),
     u = n(493683),
@@ -42,7 +42,7 @@ let P = {
     }
 };
 function R() {
-    let e = (0, o.Ie)('favorites'),
+    let e = (0, a.Ie)('favorites'),
         { favoriteAdded: t, clearFavoriteAdded: r } = (0, E.up)(),
         [R, M] = l.useState(!1),
         { favoriteServerMuted: L, favoriteChannels: w } = (0, s.cj)([S.Z], () => ({
@@ -63,20 +63,20 @@ function R() {
                 }),
                 l = (0, s.e7)([_.Z], () => _.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
                 r = (0, s.e7)([I.Z], () => n && null != t && I.Z.hasVideo(t), [n, t]),
-                a = (0, s.Wu)([h.ZP], () => b.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
-                o = (0, s.e7)([h.ZP], () =>
+                o = (0, s.Wu)([h.ZP], () => b.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
+                a = (0, s.e7)([h.ZP], () =>
                     Array.from(h.ZP.getSelfEmbeddedActivities().values()).some((t) => {
                         let { channelId: n } = t;
                         return null != e[n];
                     })
                 ),
-                c = a.length > 0,
+                c = o.length > 0,
                 u = !1,
                 d = !1,
                 p = !1,
                 m = !1;
             return (
-                n ? ((u = !r), (d = r), (p = i), (m = o)) : ((p = l), (m = c)),
+                n ? ((u = !r), (d = r), (p = i), (m = a)) : ((p = l), (m = c)),
                 (0, f.Or)({
                     audio: u,
                     video: d,
@@ -129,7 +129,7 @@ function R() {
                                 });
                             },
                             children: (0, i.jsx)('div', {
-                                className: a()(j.ring, { [j.ringActive]: t }),
+                                className: o()(j.ring, { [j.ringActive]: t }),
                                 children: (0, i.jsx)(c.StarIcon, {
                                     size: 'custom',
                                     color: 'currentColor',

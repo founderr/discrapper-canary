@@ -8,22 +8,22 @@ var s = n(120356),
     c = n(243824);
 t.Z = (e) => {
     var t;
-    let { tabs: n, settingsSection: s, parentSetting: d, panelClassName: u, defaultTabIndex: m, onTabChange: g } = e,
-        { viewableTabs: h, filteredTab: p } = (0, o.a)(n, d),
+    let { tabs: n, settingsSection: s, parentSetting: d, panelClassName: u, defaultTabIndex: m, onTabChange: h } = e,
+        { viewableTabs: g, filteredTab: p } = (0, o.a)(n, d),
         x = null != m ? n[m] : null,
-        T = null !== (t = null != x ? x : p) && void 0 !== t ? t : h[0];
+        S = null !== (t = null != x ? x : p) && void 0 !== t ? t : g[0];
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(l.TabBar, {
                 className: c.tabBar,
-                selectedItem: T.setting,
+                selectedItem: S.setting,
                 onItemSelect: (e) => {
-                    a.Z.setSection(s, e), null == g || g(e);
+                    a.Z.setSection(s, e), null == h || h(e);
                 },
                 orientation: 'horizontal',
                 type: 'top',
                 look: 'brand',
-                children: h.map((e) =>
+                children: g.map((e) =>
                     (0, i.jsx)(
                         l.TabBar.Item,
                         {
@@ -37,13 +37,13 @@ t.Z = (e) => {
                 )
             }),
             (0, i.jsx)(l.TabBar.Panel, {
-                id: T.setting,
-                'aria-labelledby': T.title,
+                id: S.setting,
+                'aria-labelledby': S.title,
                 className: r()(c.tabBarPanel, u),
                 children: ((e) => {
                     let t = e.component;
                     return 'function' == typeof t ? (0, i.jsx)(t, {}) : t;
-                })(T)
+                })(S)
             })
         ]
     });

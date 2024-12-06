@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return h;
     }
 });
 var i = n(200651);
@@ -14,19 +14,19 @@ var s = n(120356),
     d = n(955204),
     u = n(674680),
     m = n(560285);
-function g(e) {
+function h(e) {
     let { achievementId: t, dateUnlocked: n } = e,
         s = (0, d.oX)(t);
     if (null == s) return null;
     let l = null != n,
-        { name: g, description: h, hideDescriptionUntilUnlock: p, onAction: x } = s,
-        T = p && !l,
-        S = l ? 'header-primary' : 'text-muted',
-        _ = l ? 'header-secondary' : 'text-muted',
-        E = a()(n),
+        { name: h, description: g, hideDescriptionUntilUnlock: p, onAction: x } = s,
+        S = p && !l,
+        T = l ? 'header-primary' : 'text-muted',
+        E = l ? 'header-secondary' : 'text-muted',
+        _ = a()(n),
         C = null != x && l,
-        f = C ? o.Clickable : 'div';
-    return (0, i.jsxs)(f, {
+        I = C ? o.Clickable : 'div';
+    return (0, i.jsxs)(I, {
         className: r()(m.container, C && m.actionable),
         onClick: () => {
             C && x();
@@ -48,17 +48,17 @@ function g(e) {
                             variant: 'text-xxs/semibold',
                             color: 'text-muted',
                             className: m.unlocked,
-                            children: (0, c.Y4)(E)
+                            children: (0, c.Y4)(_)
                         }),
                     (0, i.jsx)(o.Text, {
                         variant: 'text-md/medium',
-                        color: S,
-                        children: g()
+                        color: T,
+                        children: h()
                     }),
                     (0, i.jsx)(o.Text, {
                         variant: 'text-xs/normal',
-                        color: _,
-                        children: T ? '?????' : h()
+                        color: E,
+                        children: S ? '?????' : g()
                     })
                 ]
             })

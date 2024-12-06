@@ -8,8 +8,8 @@ var i = n(200651),
     d = n(709586),
     u = n(267642),
     m = n(981631),
-    g = n(388032),
-    h = n(567710);
+    h = n(388032),
+    g = n(567710);
 t.Z = function () {
     let e = s.useRef(null),
         { analyticsLocations: t } = (0, l.ZP)(),
@@ -27,7 +27,7 @@ t.Z = function () {
                 guild: n
             });
     }
-    async function T() {
+    async function S() {
         e.current = await (0, r.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 719228));
@@ -44,30 +44,30 @@ t.Z = function () {
             }
         );
     }
-    let S = (0, u.aq)({ fractionalState: p });
+    let T = (0, u.aq)({ fractionalState: p });
     return (0, i.jsxs)('div', {
-        className: h.wrapper,
+        className: g.wrapper,
         children: [
             (0, i.jsx)(d.Z, {
-                className: h.boostIcon,
+                className: g.boostIcon,
                 width: 16,
                 height: 16
             }),
             (0, i.jsx)(r.Text, {
-                className: h.copy,
+                className: g.copy,
                 color: 'header-secondary',
                 variant: 'text-sm/medium',
-                children: g.intl.format(g.t.kqC5vr, {
+                children: h.intl.format(h.t.kqC5vr, {
                     boostAnyGuildHook: (e, t) => {
-                        let n = null != S,
+                        let n = null != T,
                             s = (0, i.jsx)(
                                 r.Button,
                                 {
-                                    className: h.cta,
+                                    className: g.cta,
                                     disabled: n,
                                     color: r.Button.Colors.LINK,
                                     look: r.Button.Looks.LINK,
-                                    onClick: n ? void 0 : T,
+                                    onClick: n ? void 0 : S,
                                     children: e
                                 },
                                 t
@@ -76,8 +76,8 @@ t.Z = function () {
                             ? (0, i.jsx)(
                                   o.Z,
                                   {
-                                      text: S,
-                                      'aria-label': S.toString(),
+                                      text: T,
+                                      'aria-label': T.toString(),
                                       children: (e) =>
                                           (0, i.jsx)('span', {
                                               ...e,

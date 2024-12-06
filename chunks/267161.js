@@ -73,7 +73,7 @@ function b(e) {
                             onClick: () => {
                                 S.setState({ isOpen: !S.getState().isOpen });
                             },
-                            children: (0, i.jsx)(A, {})
+                            children: (0, i.jsx)(x, {})
                         }),
                         (0, i.jsx)(s.Clickable, {
                             className: N.button,
@@ -94,7 +94,7 @@ function b(e) {
         })
     );
 }
-function A() {
+function x() {
     return (0, i.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
         className: N.icon,

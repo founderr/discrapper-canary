@@ -8,11 +8,11 @@ var i = n(200651),
     d = n(644744),
     u = n(792423),
     m = n(674985),
-    g = n(594174),
-    h = n(843200),
+    h = n(594174),
+    g = n(843200),
     p = n(388032),
     x = n(906405);
-class T extends s.PureComponent {
+class S extends s.PureComponent {
     renderIntroHeader() {
         let { houseMembership: e } = this.props;
         return null == e ? p.intl.string(p.t.iZowCQ) : p.intl.string(p.t.e7fL7O);
@@ -35,7 +35,7 @@ class T extends s.PureComponent {
                 ]
             }),
             children: [
-                (0, i.jsx)(h.Z, {
+                (0, i.jsx)(g.Z, {
                     className: x.verificationNotice,
                     unclaimedNotice: p.intl.string(p.t.vZU8Ki),
                     unverifiedNotice: p.intl.string(p.t.T7TYEB)
@@ -51,8 +51,8 @@ class T extends s.PureComponent {
         });
     }
 }
-t.Z = a.ZP.connectStores([g.default, m.Z], () => {
-    let e = g.default.getCurrentUser();
+t.Z = a.ZP.connectStores([h.default, m.Z], () => {
+    let e = h.default.getCurrentUser();
     return (
         l()(null != e, 'UserSettingsHypeSquad: currentUser cannot be undefined'),
         {
@@ -61,4 +61,4 @@ t.Z = a.ZP.connectStores([g.default, m.Z], () => {
             isVerified: e.verified
         }
     );
-})(T);
+})(S);

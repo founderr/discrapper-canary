@@ -2,8 +2,8 @@ n(411104), n(47120);
 var i,
     l = n(200651),
     r = n(192379),
-    a = n(752877),
-    o = n(91192),
+    o = n(752877),
+    a = n(91192),
     s = n(442837),
     c = n(481060),
     u = n(239091),
@@ -118,7 +118,7 @@ class P extends (i = r.PureComponent) {
         let { channel: e, channelName: t, selected: n, badge: i, audio: r, video: s, stream: u, isCurrentUserInThisDMCall: d, unread: h, isGDMFacepileEnabled: p } = this.props,
             { hovered: m, animating: g } = this.state,
             C = e.isMultiUserDM() && null == e.icon && p;
-        return (0, l.jsx)(a.animated.div, {
+        return (0, l.jsx)(o.animated.div, {
             style: this.getAnimatedStyle(),
             children: (0, l.jsxs)(S.H, {
                 children: [
@@ -141,7 +141,7 @@ class P extends (i = r.PureComponent) {
                                 isCurrentUserConnected: d
                             }),
                             lowerBadgeSize: { width: (0, c.getBadgeWidthForValue)(i) },
-                            children: (0, l.jsx)(o.mh, {
+                            children: (0, l.jsx)(a.mh, {
                                 id: e.id,
                                 children: (i) =>
                                     (0, l.jsx)(c.NavItem, {
@@ -176,7 +176,7 @@ class P extends (i = r.PureComponent) {
             T(this, 'state', {
                 hovered: !1,
                 animating: !0,
-                controller: new a.Controller({
+                controller: new o.Controller({
                     scale: 0,
                     height: 0,
                     opacity: 0,
@@ -218,8 +218,8 @@ T(P, 'defaultProps', {
         let n = e.channel.id,
             i = (0, p.ZP)(e.channel),
             r = (0, s.e7)([C.Z], () => C.Z.getChannelId(), []),
-            a = (0, s.e7)([d.Z], () => (null != r ? d.Z.getMode(r) : N.WtW.VOICE), [r]),
-            o = (0, s.e7)([g.Z], () => g.Z.getAllApplicationStreamsForChannel(n).length > 0),
+            o = (0, s.e7)([d.Z], () => (null != r ? d.Z.getMode(r) : N.WtW.VOICE), [r]),
+            a = (0, s.e7)([g.Z], () => g.Z.getAllApplicationStreamsForChannel(n).length > 0),
             c = (0, s.e7)([v.Z], () => v.Z.getChannelId(), []),
             u = (0, s.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
             { isFacepileEnabled: h } = m.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
@@ -227,7 +227,7 @@ T(P, 'defaultProps', {
             x = !1,
             I = !1;
         return (
-            f && ((x = a === N.WtW.VOICE), (I = a === N.WtW.VIDEO)),
+            f && ((x = o === N.WtW.VOICE), (I = o === N.WtW.VIDEO)),
             (0, l.jsx)(P, {
                 ...e,
                 ref: t,
@@ -237,7 +237,7 @@ T(P, 'defaultProps', {
                 badge: u,
                 audio: x,
                 video: I,
-                stream: o,
+                stream: a,
                 isCurrentUserInThisDMCall: f,
                 isGDMFacepileEnabled: h
             })

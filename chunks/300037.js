@@ -9,61 +9,61 @@ var s = n(120356),
     d = n(623624),
     u = n(678558),
     m = n(430824),
-    g = n(709586),
-    h = n(267642),
+    h = n(709586),
+    g = n(267642),
     p = n(981631),
     x = n(474936),
-    T = n(388032),
-    S = n(719721);
+    S = n(388032),
+    T = n(719721);
 t.Z = function (e) {
     let { className: t, guildId: n, boostingVariant: s } = e,
-        _ = (0, l.e7)([m.Z], () => m.Z.getGuild(n), [n]),
-        { fractionalState: E } = (0, o.Z)(),
-        C = E === x.a$.FP_ONLY;
-    return null == _
+        E = (0, l.e7)([m.Z], () => m.Z.getGuild(n), [n]),
+        { fractionalState: _ } = (0, o.Z)(),
+        C = _ === x.a$.FP_ONLY;
+    return null == E
         ? (0, i.jsx)('div', {
-              className: r()(t, S.guildContainer),
+              className: r()(t, T.guildContainer),
               children: (0, i.jsx)('div', {
-                  className: S.guildInfoContainer,
+                  className: T.guildInfoContainer,
                   children: (0, i.jsx)(a.Text, {
                       variant: 'text-lg/bold',
-                      children: T.intl.string(T.t['6Kwwur'])
+                      children: S.intl.string(S.t['6Kwwur'])
                   })
               })
           })
         : (0, i.jsxs)('div', {
-              className: r()(t, S.guildContainer),
+              className: r()(t, T.guildContainer),
               children: [
                   (0, i.jsx)(c.Z, {
-                      className: S.__invalid_guildIcon,
-                      guild: _,
+                      className: T.__invalid_guildIcon,
+                      guild: E,
                       size: c.Z.Sizes.LARGER
                   }),
                   (0, i.jsxs)('div', {
-                      className: S.guildInfoContainer,
+                      className: T.guildInfoContainer,
                       children: [
                           (0, i.jsx)(a.Text, {
                               variant: 'text-lg/bold',
-                              children: _.name
+                              children: E.name
                           }),
                           (0, i.jsxs)('div', {
-                              className: S.guildBoostStatsContainer,
+                              className: T.guildBoostStatsContainer,
                               children: [
-                                  (0, i.jsx)(g.Z, {
-                                      className: S.guildBoostBadge,
+                                  (0, i.jsx)(h.Z, {
+                                      className: T.guildBoostBadge,
                                       width: 16,
                                       height: 16
                                   }),
                                   (0, i.jsx)(a.Text, {
                                       variant: 'text-sm/bold',
                                       color: 'text-muted',
-                                      children: T.intl.format(T.t['pob/cH'], { subscriptions: _.premiumSubscriberCount })
+                                      children: S.intl.format(S.t['pob/cH'], { subscriptions: E.premiumSubscriberCount })
                                   }),
-                                  (0, i.jsx)('div', { className: S.separator }),
+                                  (0, i.jsx)('div', { className: T.separator }),
                                   (0, i.jsx)(a.Text, {
                                       variant: 'text-sm/bold',
                                       color: 'text-muted',
-                                      children: (0, h.nW)(_.premiumTier, { useLevels: !1 })
+                                      children: (0, g.nW)(E.premiumTier, { useLevels: !1 })
                                   })
                               ]
                           })
@@ -71,7 +71,7 @@ t.Z = function (e) {
                   }),
                   s
                       ? (0, i.jsx)(u.Z, {
-                            guild: _,
+                            guild: E,
                             analyticsLocation: {
                                 page: p.ZY5.GUILD_BOOSTING_USER_SETTINGS,
                                 section: p.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
@@ -81,20 +81,20 @@ t.Z = function (e) {
                             pauseAnimation: !0,
                             size: a.Button.Sizes.MEDIUM,
                             color: a.Button.Colors.PRIMARY,
-                            buttonText: T.intl.string(T.t.aBHecH),
+                            buttonText: S.intl.string(S.t.aBHecH),
                             disabled: C
                         })
                       : (0, i.jsx)(a.Button, {
                             color: a.Button.Colors.PRIMARY,
                             onClick: () => {
                                 (0, d.f)({
-                                    guildId: _.id,
+                                    guildId: E.id,
                                     location: { section: p.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA }
                                 });
                             },
                             size: a.Button.Sizes.MEDIUM,
                             disabled: C,
-                            children: T.intl.string(T.t.KLOhbG)
+                            children: S.intl.string(S.t.KLOhbG)
                         })
               ]
           });

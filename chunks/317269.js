@@ -82,8 +82,8 @@ function g(e) {
 function E(e) {
     let t,
         n,
-        { planId: s, enableNoPaymentTrial: d, startingPremiumSubscriptionPlanId: u, onClose: c, followupSKUInfo: E, isDowngrade: S, hideClose: y, postSuccessGuild: M, paymentSourceType: Z } = e,
-        { theme: I } = (0, o.useThemeContext)(),
+        { planId: s, enableNoPaymentTrial: d, startingPremiumSubscriptionPlanId: u, onClose: c, followupSKUInfo: E, isDowngrade: S, hideClose: y, postSuccessGuild: M, paymentSourceType: I } = e,
+        { theme: Z } = (0, o.useThemeContext)(),
         v = (0, a.e7)([x.Z], () => (null != E ? x.Z.get(E.id) : null));
     l.useEffect(() => {
         if (null == E || null != v) return;
@@ -91,9 +91,9 @@ function E(e) {
         (0, C.$N)(e, t).catch(j.VqG);
     }, [E, v]);
     let P = (e) => {
-        if (e.skuId === _.Si.TIER_0) return j.X7u.has(null != Z ? Z : j.HeQ.UNKNOWN) ? L.intl.format(L.t.o6hBiY, {}) : L.intl.string(L.t['AGf/yc']);
-        if (e.skuId === _.Si.TIER_1) return j.X7u.has(null != Z ? Z : j.HeQ.UNKNOWN) ? L.intl.format(L.t.o6hBiY, {}) : L.intl.string(L.t.knvOV1);
-        return j.X7u.has(null != Z ? Z : j.HeQ.UNKNOWN) ? L.intl.format(L.t.A4THYm, {}) : d ? L.intl.string(L.t['g52y/v']) : L.intl.string(L.t.aTUr3d);
+        if (e.skuId === _.Si.TIER_0) return j.X7u.has(null != I ? I : j.HeQ.UNKNOWN) ? L.intl.format(L.t.o6hBiY, {}) : L.intl.string(L.t['AGf/yc']);
+        if (e.skuId === _.Si.TIER_1) return j.X7u.has(null != I ? I : j.HeQ.UNKNOWN) ? L.intl.format(L.t.o6hBiY, {}) : L.intl.string(L.t.knvOV1);
+        return j.X7u.has(null != I ? I : j.HeQ.UNKNOWN) ? L.intl.format(L.t.A4THYm, {}) : d ? L.intl.string(L.t['g52y/v']) : L.intl.string(L.t.aTUr3d);
     };
     if (null != v)
         t = (0, i.jsx)('div', {
@@ -137,9 +137,9 @@ function E(e) {
             children: [
                 (0, i.jsx)(f.C, {
                     className: m.banner,
-                    theme: I,
+                    theme: Z,
                     premiumType: T,
-                    type: j.X7u.has(null != Z ? Z : j.HeQ.UNKNOWN) ? f.C.Types.PREMIUM_PAYMENT_STARTED : null != u ? f.C.Types.PREMIUM_UPDATED : f.C.Types.PREMIUM_ACTIVATED
+                    type: j.X7u.has(null != I ? I : j.HeQ.UNKNOWN) ? f.C.Types.PREMIUM_PAYMENT_STARTED : null != u ? f.C.Types.PREMIUM_UPDATED : f.C.Types.PREMIUM_ACTIVATED
                 }),
                 t,
                 y

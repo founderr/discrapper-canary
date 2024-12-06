@@ -22,31 +22,31 @@ var i = n(200651),
     S = n(8521),
     T = n(760326),
     b = n(785203),
-    A = n(652785),
-    x = n(921944);
+    x = n(652785),
+    A = n(921944);
 function Z(e) {
     e.stopPropagation();
 }
 function L(e) {
     var t;
     let { guild: n } = e,
-        [d, m] = r.useState(null !== (t = s.K.get(A.Iv)) && void 0 !== t ? t : 0),
+        [d, m] = r.useState(null !== (t = s.K.get(x.Iv)) && void 0 !== t ? t : 0),
         g = (e) => {
-            s.K.set(A.Iv, e), m(e);
+            s.K.set(x.Iv, e), m(e);
         },
-        f = (0, l.Wu)(A.HG, () =>
-            A.XN.filter((e) => {
+        f = (0, l.Wu)(x.HG, () =>
+            x.XN.filter((e) => {
                 let { store: t } = e;
                 return null == t ? void 0 : t.channelNoticePredicate(n, d);
             }).map((e) => e.dismissibleContentType)
         );
     return (0, i.jsx)(c.ZP, {
         contentTypes: f,
-        groupName: x.R.CHANNEL_NOTICES,
+        groupName: A.R.CHANNEL_NOTICES,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: r } = e,
                 l = () => {
-                    g(Date.now()), r(x.L.UNKNOWN);
+                    g(Date.now()), r(A.L.UNKNOWN);
                 },
                 s = (() => {
                     switch (t) {
@@ -78,7 +78,7 @@ function L(e) {
                         case a.z.LINKED_ROLE_ADMIN_GUILD:
                             return (0, i.jsx)(o.Z, {
                                 guild: n,
-                                markAsDismissed: () => r(x.L.UNKNOWN)
+                                markAsDismissed: () => r(A.L.UNKNOWN)
                             });
                         default:
                             return null;

@@ -45,7 +45,7 @@ let E = {
     firstTimeNotice: {
         dismissibleContent: r.z.GIFTING_PROMOTION_MOBILE_FIRST_TIME_HALFSHEET,
         getImageUrl: (e, t) => u.Z,
-        coachmarkAnimationData: [() => n.e('2196').then(n.bind(n, 927928))],
+        coachmarkAnimationData: [() => Promise.resolve().then(n.bind(n, 974465))],
         title: () => l.intl.string(l.t.Ann2VF),
         description: () => l.intl.string(l.t.MVYCGB),
         cta: () => l.intl.string(l.t.RzWDqa),

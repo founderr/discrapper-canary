@@ -15,8 +15,8 @@ var i = n(200651),
     x = n(600164),
     f = n(156699),
     v = n(693196),
-    j = n(434404),
-    C = n(200498),
+    C = n(434404),
+    j = n(200498),
     b = n(146085),
     T = n(192079),
     N = n(277053),
@@ -31,8 +31,8 @@ var i = n(200651),
     _ = n(415236),
     A = n(182905),
     M = n(71080),
-    D = n(981631),
-    B = n(231338),
+    B = n(981631),
+    D = n(231338),
     P = n(388032),
     k = n(388171);
 function O(e) {
@@ -44,9 +44,9 @@ function O(e) {
             let u,
                 f,
                 v,
-                { section: j, row: b } = e,
+                { section: C, row: b } = e,
                 T = !1;
-            switch (j) {
+            switch (C) {
                 case M.m$.ROLES:
                     var N;
                     (v =
@@ -151,8 +151,8 @@ function O(e) {
                                                 onConfirm: () =>
                                                     (function (e, n) {
                                                         if (t.isGuildStageVoice()) {
-                                                            let i = (0, C._L)(e, n === M.aC.ROLE ? m.BN.ROLE : m.BN.MEMBER, t);
-                                                            (0, C.Os)(i) ? d.Z.clearPermissionOverwrite(t.id, i.id) : (0, h.hw)(t.id, [i]);
+                                                            let i = (0, j._L)(e, n === M.aC.ROLE ? m.BN.ROLE : m.BN.MEMBER, t);
+                                                            (0, j.Os)(i) ? d.Z.clearPermissionOverwrite(t.id, i.id) : (0, h.hw)(t.id, [i]);
                                                         } else d.Z.clearPermissionOverwrite(t.id, e);
                                                     })(e, i)
                                             }))
@@ -177,9 +177,9 @@ function O(e) {
             let { section: t } = e;
             switch (t) {
                 case M.m$.ROLES:
-                    return (0, i.jsx)(H, { title: P.intl.string(P.t.LPJmLy) }, 'roles-title');
+                    return (0, i.jsx)(U, { title: P.intl.string(P.t.LPJmLy) }, 'roles-title');
                 case M.m$.MEMBERS:
-                    return (0, i.jsx)(H, { title: P.intl.string(P.t['9Oq93t']) }, 'members-title');
+                    return (0, i.jsx)(U, { title: P.intl.string(P.t['9Oq93t']) }, 'members-title');
             }
         },
         sectionHeight: 49
@@ -190,7 +190,7 @@ function F(e) {
         c = (0, a.e7)([Z.Z], () => Z.Z.getRoles(t.id)),
         d = w.RZ(t, c, l, b.yP, s),
         u = (0, a.e7)([S.ZP], () => w.cR(S.ZP.getMemberIds(t.id), l, t, b.yP, s)),
-        h = (0, C.nG)(l.id);
+        h = (0, j.nG)(l.id);
     function m() {
         (0, o.openModalLazy)(async () => {
             let { default: e } = await n.e('46786').then(n.bind(n, 388131));
@@ -258,9 +258,9 @@ function F(e) {
 }
 function G(e) {
     let { guild: t, channel: l, isPrivateGuildChannel: s, roles: c, members: d } = e,
-        u = (0, a.e7)([E.Z], () => E.Z.can(B.Pl.ADMINISTRATOR, t)),
-        h = R.Uu(B.Pl.VIEW_CHANNEL, t),
-        m = R.Uu(B.Pl.ADMINISTRATOR, t);
+        u = (0, a.e7)([E.Z], () => E.Z.can(D.Pl.ADMINISTRATOR, t)),
+        h = R.Uu(D.Pl.VIEW_CHANNEL, t),
+        m = R.Uu(D.Pl.ADMINISTRATOR, t);
     async function g() {
         let e = l.accessPermissions,
             r = y.default.getCurrentUser();
@@ -277,7 +277,7 @@ function G(e) {
                             variant: 'text-md/normal',
                             children: P.intl.format(P.t.DwY2vL, {
                                 onClick: () => {
-                                    j.Z.open(t.id, D.pNK.ONBOARDING), n.onClose();
+                                    C.Z.open(t.id, B.pNK.ONBOARDING), n.onClose();
                                 }
                             })
                         })
@@ -293,7 +293,7 @@ function G(e) {
         formLabel: P.intl.string(P.t.P6eCbG)
     };
     return (
-        l.isCategory() ? ((p.title = P.intl.string(P.t.lEPAZ2)), (p.subtitle = P.intl.string(P.t['RQUk6+'])), (p.formLabel = P.intl.string(P.t['8VIxJi']))) : l.type === D.d4z.GUILD_VOICE && (p.subtitle = P.intl.string(P.t.cLjvKi)),
+        l.isCategory() ? ((p.title = P.intl.string(P.t.lEPAZ2)), (p.subtitle = P.intl.string(P.t['RQUk6+'])), (p.formLabel = P.intl.string(P.t['8VIxJi']))) : l.type === B.d4z.GUILD_VOICE && (p.subtitle = P.intl.string(P.t.cLjvKi)),
         (0, i.jsxs)('div', {
             className: r()(k.settingCard, { [k.active]: s }),
             children: [
@@ -377,7 +377,7 @@ function G(e) {
         })
     );
 }
-function H(e) {
+function U(e) {
     let { title: t } = e;
     return (0, i.jsxs)('div', {
         children: [
@@ -413,7 +413,7 @@ t.Z = a.ZP.connectStores([N.Z, E.Z, S.ZP, Z.Z], () => {
         }
     }
     return {
-        canSyncChannel: null != n && E.Z.can(B.Pl.MANAGE_ROLES, n),
+        canSyncChannel: null != n && E.Z.can(D.Pl.MANAGE_ROLES, n),
         category: n,
         channel: t,
         filteredMembers: l,
@@ -425,12 +425,12 @@ t.Z = a.ZP.connectStores([N.Z, E.Z, S.ZP, Z.Z], () => {
     };
 })(function (e) {
     let { canSyncChannel: t, category: s, channel: r, filteredMembers: a, filteredRoles: c, guild: d, isPrivateGuildChannel: h, locked: m, permissionUpdates: g } = e,
-        [p, x] = l.useState(!R.Uu(B.Pl.SEND_MESSAGES, r));
+        [p, x] = l.useState(!R.Uu(D.Pl.SEND_MESSAGES, r));
     if (null == r || null == d) return null;
     function v() {
-        w.$e(r, B.Pl.SEND_MESSAGES, p), x(!p);
+        w.$e(r, D.Pl.SEND_MESSAGES, p), x(!p);
     }
-    function j() {
+    function C() {
         if (null != s)
             (0, o.openModalLazy)(async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 170509));
@@ -447,19 +447,19 @@ t.Z = a.ZP.connectStores([N.Z, E.Z, S.ZP, Z.Z], () => {
                     });
             });
     }
-    let C = {
+    let j = {
         title: P.intl.string(P.t.BAZMBg),
         subtitle: P.intl.string(P.t.XLrZys)
     };
     return (
-        r.isCategory() && ((C.title = P.intl.string(P.t['/uELTk'])), (C.subtitle = P.intl.string(P.t['8iAg3d']))),
+        r.isCategory() && ((j.title = P.intl.string(P.t['/uELTk'])), (j.subtitle = P.intl.string(P.t['8iAg3d']))),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o.FormTitle, {
                     tag: 'h1',
-                    children: C.title
+                    children: j.title
                 }),
-                (0, i.jsx)(o.FormText, { children: C.subtitle }),
+                (0, i.jsx)(o.FormText, { children: j.subtitle }),
                 null != s && t
                     ? m
                         ? (0, i.jsx)(A.Z, {
@@ -472,7 +472,7 @@ t.Z = a.ZP.connectStores([N.Z, E.Z, S.ZP, Z.Z], () => {
                               canSync: !0,
                               icon: (0, o.makeIconCompat)(I.Z),
                               noticeText: P.intl.format(P.t.OIhm0N, { categoryName: s.name }),
-                              onClick: j
+                              onClick: C
                           })
                     : null,
                 r.isGuildStageVoice()

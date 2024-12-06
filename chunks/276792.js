@@ -25,7 +25,7 @@ function _(e) {
         { onClose: S } = E,
         T = null != _.button && '' !== _.button.copy ? _.button.copy : p.intl.string(p.t.YScQSE),
         b = (null === (t = _.button) || void 0 === t ? void 0 : t.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
-        A =
+        x =
             (null === (n = _.button) || void 0 === n ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE
                 ? () => {
                       (0, o.uL)(m.Z5c.APPLICATION_STORE), S();
@@ -43,7 +43,7 @@ function _(e) {
                               e && S();
                           }
                       }),
-        x =
+        A =
             '' !== _.helpArticleId
                 ? () =>
                       (0, i.jsxs)(i.Fragment, {
@@ -87,7 +87,7 @@ function _(e) {
         header: _.header,
         modalTopExtra: y,
         subHeader: _.subheader,
-        subHeaderExtra: x,
+        subHeaderExtra: A,
         body: _.body,
         heroArt: Z,
         featureCards: _.featureCards.map((e) => ({
@@ -111,7 +111,7 @@ function _(e) {
                         seconds_open: Math.round((Date.now() - e) / 1000),
                         target: N
                     }),
-                        A();
+                        x();
                 },
                 children: [
                     (0, i.jsx)('img', {

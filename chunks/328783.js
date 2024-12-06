@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(931240),
     u = n(353093),
     m = n(170871),
-    g = n(981631),
-    h = n(388032),
+    h = n(981631),
+    g = n(388032),
     p = n(735696);
 let x = (0, a.hQ)();
 t.Z = s.memo(function (e) {
@@ -20,7 +20,7 @@ t.Z = s.memo(function (e) {
             var e;
             return (0, u.vh)(null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId;
         }),
-        T = s.useMemo(
+        S = s.useMemo(
             () =>
                 t.reduce((e, t) => {
                     var n;
@@ -35,7 +35,7 @@ t.Z = s.memo(function (e) {
                 }, []),
             [t]
         ),
-        S = s.useCallback(
+        T = s.useCallback(
             (e) => {
                 var t, s;
                 if (null == e) return null;
@@ -55,36 +55,36 @@ t.Z = s.memo(function (e) {
             },
             [n]
         ),
-        _ = s.useCallback(
+        E = s.useCallback(
             (e) => {
                 let t = e[0];
-                return null == t ? null : (0, i.jsx)(i.Fragment, { children: S(t) });
+                return null == t ? null : (0, i.jsx)(i.Fragment, { children: T(t) });
             },
-            [S]
+            [T]
         ),
-        E = s.useCallback((e) => (0, d.nE)(e, !0, g.Sbl.USER_SETTINGS), []),
+        _ = s.useCallback((e) => (0, d.nE)(e, !0, h.Sbl.USER_SETTINGS), []),
         C = s.useCallback((e) => e === a, [a]),
-        f = s.useCallback((e) => e, []),
-        I = s.useCallback(() => (0, d.nE)(null, !1), []);
+        I = s.useCallback((e) => e, []),
+        f = s.useCallback(() => (0, d.nE)(null, !1), []);
     return (0, i.jsxs)(o.Z, {
-        title: h.intl.string(h.t.umdfaG),
+        title: g.intl.string(g.t.umdfaG),
         titleId: x,
         children: [
             (0, i.jsx)(l.Text, {
                 className: p.subtitle,
                 variant: 'text-sm/normal',
-                children: h.intl.string(h.t.Mrf7fX)
+                children: g.intl.string(g.t.Mrf7fX)
             }),
             (0, i.jsx)(l.Select, {
                 className: p.select,
                 optionClassName: p.selectPopout,
                 isSelected: C,
-                options: T,
-                select: E,
-                renderOptionValue: _,
-                renderOptionLabel: S,
-                serialize: f,
-                clear: I,
+                options: S,
+                select: _,
+                renderOptionValue: E,
+                renderOptionLabel: T,
+                serialize: I,
+                clear: f,
                 clearable: null != a
             })
         ]

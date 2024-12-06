@@ -10,9 +10,9 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    o = n(512722),
-    s = n.n(o),
+    o = n.n(r),
+    a = n(512722),
+    s = n.n(a),
     c = n(584922),
     u = n(749210),
     d = n(626135),
@@ -55,8 +55,8 @@ function _(e, t) {
     );
 }
 function v(e) {
-    let { name: t, targetNode: n, combine: r, below: o } = e,
-        s = l.useMemo(() => _([h.eD.GUILD, h.eD.FOLDER], n, o, r), [n, o, r]),
+    let { name: t, targetNode: n, combine: r, below: a } = e,
+        s = l.useMemo(() => _([h.eD.GUILD, h.eD.FOLDER], n, a, r), [n, a, r]),
         [{ canDrop: u, isOver: d }, p] = (0, c.L)(s),
         m = C([
             [u, g.autoPointerEvents],
@@ -67,17 +67,17 @@ function v(e) {
             (m.current = e), p(e);
         },
         'data-dnd-name': f.intl.formatToPlainString(f.t.A5aDw8, { itemName: t }),
-        className: a()(g.target)
+        className: o()(g.target)
     });
 }
 function x(e) {
     let { name: t, targetNode: n, onDragOverChanged: r } = e,
-        [{ canDrop: o, isOver: s }, u] = (0, c.L)(() => _([h.eD.GUILD], n, !0, !0));
+        [{ canDrop: a, isOver: s }, u] = (0, c.L)(() => _([h.eD.GUILD], n, !0, !0));
     l.useEffect(() => {
         null == r || r(s);
     }, [r, s]);
     let d = C([
-        [o, g.autoPointerEvents],
+        [a, g.autoPointerEvents],
         [s, g.dragOver]
     ]);
     return (0, i.jsx)(p.Z, {
@@ -91,13 +91,13 @@ function x(e) {
                 (d.current = e), u(e);
             },
             'data-dnd-name': f.intl.formatToPlainString(f.t.qiQ0QE, { itemName: t }),
-            className: a()(g.centerTarget, {})
+            className: o()(g.centerTarget, {})
         })
     });
 }
 function I(e) {
     let { name: t, targetNode: n } = e,
-        [{ canDrop: l, isOver: r }, o] = (0, c.L)(() => _([h.eD.GUILD], n, !0, !0)),
+        [{ canDrop: l, isOver: r }, a] = (0, c.L)(() => _([h.eD.GUILD], n, !0, !0)),
         s = C([[r, g.wrapperOver]]),
         u = C([
             [r, g.dragOver],
@@ -105,16 +105,16 @@ function I(e) {
         ]);
     return (0, i.jsx)('div', {
         ref: s,
-        className: a()(g.folderEndWrapper),
+        className: o()(g.folderEndWrapper),
         'aria-hidden': !0,
         children: (0, i.jsx)('div', {
             className: g.folderTarget,
             children: (0, i.jsx)('div', {
                 ref: (e) => {
-                    (u.current = e), o(e);
+                    (u.current = e), a(e);
                 },
                 'aria-label': 'At end of '.concat(t),
-                className: a()(g.target)
+                className: o()(g.target)
             })
         })
     });
@@ -128,8 +128,8 @@ function b(e) {
     });
 }
 t.ZP = l.memo(function (e) {
-    let { name: t, targetNode: n, noCombine: l = !1, below: r = !1, onDragOverChanged: a } = e,
-        o = !l && null == n.parentId;
+    let { name: t, targetNode: n, noCombine: l = !1, below: r = !1, onDragOverChanged: o } = e,
+        a = !l && null == n.parentId;
     return (0, i.jsxs)('div', {
         className: g.wrapper,
         'aria-hidden': !0,
@@ -139,11 +139,11 @@ t.ZP = l.memo(function (e) {
                 targetNode: n,
                 below: r
             }),
-            o
+            a
                 ? (0, i.jsx)(x, {
                       name: t,
                       targetNode: n,
-                      onDragOverChanged: a
+                      onDragOverChanged: o
                   })
                 : null
         ]

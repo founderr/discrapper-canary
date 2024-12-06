@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(631885),
     g = n(933970),
     m = n(340453),
-    p = n(292352),
-    f = n(388032),
+    f = n(292352),
+    p = n(388032),
     _ = n(659506);
 function h(e) {
     let { user: t } = e,
@@ -65,7 +65,7 @@ function h(e) {
                 className: _.details,
                 children: (0, i.jsx)(m.Z, {
                     otherUser: t,
-                    status: p.ne.PENDING
+                    status: f.ne.PENDING
                 })
             }),
             (0, i.jsx)('div', {
@@ -74,7 +74,7 @@ function h(e) {
                     ? (0, i.jsx)(g.Z, {
                           icon: o.XSmallIcon,
                           className: _.__invalid_actionDeny,
-                          tooltip: f.intl.string(f.t.e5iHmZ),
+                          tooltip: p.intl.string(p.t.e5iHmZ),
                           onClick: C
                       })
                     : (0, i.jsxs)(i.Fragment, {
@@ -84,13 +84,13 @@ function h(e) {
                                   : (0, i.jsx)(g.Z, {
                                         icon: o.CheckmarkLargeIcon,
                                         className: _.__invalid_actionAccept,
-                                        tooltip: f.intl.string(f.t.krWQZG),
+                                        tooltip: p.intl.string(p.t.krWQZG),
                                         onClick: b
                                     }),
                               (0, i.jsx)(g.Z, {
                                   icon: o.XSmallIcon,
                                   className: _.__invalid_actionDeny,
-                                  tooltip: f.intl.string(f.t.bBDeND),
+                                  tooltip: p.intl.string(p.t.bBDeND),
                                   onClick: x
                               })
                           ]

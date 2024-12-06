@@ -13,17 +13,17 @@ var i = n(200651),
     d = n(230711),
     u = n(825209),
     m = n(706454),
-    g = n(494620),
-    h = n(131951),
+    h = n(494620),
+    g = n(131951),
     p = n(556296),
     x = n(924557),
-    T = n(435064),
-    S = n(894694),
-    _ = n(779618),
-    E = n(39604),
+    S = n(435064),
+    T = n(894694),
+    E = n(779618),
+    _ = n(39604),
     C = n(442334),
-    f = n(356659),
-    I = n(981631),
+    I = n(356659),
+    f = n(981631),
     N = n(37113),
     A = n(526761),
     b = n(388032),
@@ -31,27 +31,27 @@ var i = n(200651),
     j = n(277253),
     O = n(232186);
 function R() {
-    let e = (0, a.e7)([h.Z], () => h.Z.getHardwareEncoding()),
-        { clipsEnabled: t, remindersEnabled: n, decoupledClipsEnabled: r, clipsLength: R, clipsQuality: P } = (0, a.cj)([T.Z], () => T.Z.getSettings()),
-        D = (0, a.e7)([T.Z], () => T.Z.getHardwareClassification()),
-        y = (0, a.e7)([p.Z], () => p.Z.getKeybindForAction(I.kg4.SAVE_CLIP, !0)),
-        B = T.Z.isDecoupledGameClippingEnabled(),
-        L = (0, _.Z)(h.Z),
+    let e = (0, a.e7)([g.Z], () => g.Z.getHardwareEncoding()),
+        { clipsEnabled: t, remindersEnabled: n, decoupledClipsEnabled: r, clipsLength: R, clipsQuality: P } = (0, a.cj)([S.Z], () => S.Z.getSettings()),
+        D = (0, a.e7)([S.Z], () => S.Z.getHardwareClassification()),
+        y = (0, a.e7)([p.Z], () => p.Z.getKeybindForAction(f.kg4.SAVE_CLIP, !0)),
+        B = S.Z.isDecoupledGameClippingEnabled(),
+        L = (0, E.Z)(g.Z),
         { showClipsHeaderEntrypoint: Z } = x.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
     l()(null != y, 'Save clip keybind unset');
     let F = (0, a.e7)([m.default], () => m.default.locale),
         M = s.useMemo(
             () => [
                 {
-                    value: f.OT.SECONDS_30,
+                    value: I.OT.SECONDS_30,
                     label: b.intl.formatToPlainString(b.t['bTFv//'], { count: 30 })
                 },
                 {
-                    value: f.OT.MINUTES_1,
+                    value: I.OT.MINUTES_1,
                     label: b.intl.formatToPlainString(b.t.ICo9Nj, { count: 1 })
                 },
                 {
-                    value: f.OT.MINUTES_2,
+                    value: I.OT.MINUTES_2,
                     label: b.intl.formatToPlainString(b.t.ICo9Nj, { count: 2 })
                 }
             ],
@@ -114,14 +114,14 @@ function R() {
                 disabled: !e,
                 children: [
                     !e &&
-                        (0, i.jsx)(g.Z, {
-                            look: g.z.WARNING,
+                        (0, i.jsx)(h.Z, {
+                            look: h.z.WARNING,
                             className: j.formItem,
-                            children: b.intl.format(b.t.kiaF4e, { onClick: () => d.Z.open(I.oAB.VOICE, null, { scrollPosition: A.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
+                            children: b.intl.format(b.t.kiaF4e, { onClick: () => d.Z.open(f.oAB.VOICE, null, { scrollPosition: A.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
                         }),
-                    D === S.x.BELOW_MINIMUM
-                        ? (0, i.jsx)(g.Z, {
-                              look: g.z.WARNING,
+                    D === T.x.BELOW_MINIMUM
+                        ? (0, i.jsx)(h.Z, {
+                              look: h.z.WARNING,
                               className: j.formItem,
                               children: b.intl.string(b.t.SIxrIC)
                           })
@@ -133,14 +133,14 @@ function R() {
                         value: t,
                         note: b.intl.string(b.t['4Qw3ND']),
                         onChange: (e) =>
-                            E.em({
+                            _.em({
                                 clipsEnabled: e,
                                 trackAnalytics: !0
                             }),
                         children: b.intl.string(b.t.h8rgrK)
                     }),
                     e &&
-                        (0, i.jsx)(g.Z, {
+                        (0, i.jsx)(h.Z, {
                             className: j.formItem,
                             children: b.intl.string(b.t['Z+Mfqa'])
                         })
@@ -161,7 +161,7 @@ function R() {
                                 value: r,
                                 note: b.intl.string(b.t.YP3ujo),
                                 onChange: (e) =>
-                                    E._Q({
+                                    _._Q({
                                         enabled: e,
                                         trackAnalytics: !0
                                     }),
@@ -181,7 +181,7 @@ function R() {
                                 className: j.formItem,
                                 value: n,
                                 note: b.intl.string(b.t.m4Cjj4),
-                                onChange: (e) => E.N0(e),
+                                onChange: (e) => _.N0(e),
                                 children: b.intl.string(b.t['3zwNf3'])
                             })
                         })
@@ -193,7 +193,7 @@ function R() {
                 children: [
                     (0, i.jsx)(C.Q, {
                         className: j.formItem,
-                        select: E.eU,
+                        select: _.eU,
                         title: b.intl.string(b.t.OgfUio),
                         note: b.intl.string(b.t.H7j4tb),
                         value: R,
@@ -202,7 +202,7 @@ function R() {
                     (0, i.jsx)(C.Q, {
                         className: j.formItem,
                         select: (e) =>
-                            E.yi({
+                            _.yi({
                                 resolution: e,
                                 frameRate: P.frameRate
                             }),
@@ -214,7 +214,7 @@ function R() {
                     (0, i.jsx)(C.Q, {
                         className: j.formItem,
                         select: (e) =>
-                            E.yi({
+                            _.yi({
                                 resolution: P.resolution,
                                 frameRate: e
                             }),

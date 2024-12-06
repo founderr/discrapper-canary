@@ -14,17 +14,17 @@ var s = n(512722),
     d = n(126631),
     u = n(433411),
     m = n(532432),
-    g = n(134795),
-    h = n(513901),
+    h = n(134795),
+    g = n(513901),
     p = n(451392),
     x = n(906364),
-    T = n(621853),
-    S = n(271383),
-    _ = n(594174),
-    E = n(74538),
+    S = n(621853),
+    T = n(271383),
+    E = n(594174),
+    _ = n(74538),
     C = n(51144),
-    f = n(18438),
-    I = n(778825),
+    I = n(18438),
+    f = n(778825),
     N = n(52597),
     A = n(430131),
     b = n(133484),
@@ -33,8 +33,8 @@ var s = n(512722),
 function O(e) {
     var t, n, s, O;
     let { guild: R } = e,
-        P = (0, l.e7)([_.default], () => {
-            let e = _.default.getCurrentUser();
+        P = (0, l.e7)([E.default], () => {
+            let e = E.default.getCurrentUser();
             return r()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
         }),
         {
@@ -46,8 +46,8 @@ function O(e) {
             pendingThemeColors: F,
             errors: M,
             guild: k
-        } = (0, l.cj)([I.Z], () => {
-            let { pendingAvatar: e, pendingNickname: t, pendingBio: n, pendingPronouns: i, pendingBanner: s, pendingThemeColors: r } = I.Z.getAllPending();
+        } = (0, l.cj)([f.Z], () => {
+            let { pendingAvatar: e, pendingNickname: t, pendingBio: n, pendingPronouns: i, pendingBanner: s, pendingThemeColors: r } = f.Z.getAllPending();
             return {
                 pendingAvatar: e,
                 pendingNickname: t,
@@ -55,16 +55,16 @@ function O(e) {
                 pendingBio: n,
                 pendingPronouns: i,
                 pendingThemeColors: r,
-                errors: I.Z.getErrors(),
-                guild: I.Z.getGuild()
+                errors: f.Z.getErrors(),
+                guild: f.Z.getGuild()
             };
         }),
         w = null != R ? R : k;
     r()(null != w, 'guild should not be null');
     let U = (0, o.gS)(w.id),
-        V = (0, l.e7)([S.ZP], () => (null == w.id ? null : S.ZP.getMember(w.id, P.id))),
-        G = (0, l.e7)([T.Z], () => T.Z.getGuildMemberProfile(P.id, w.id)),
-        Y = E.ZP.canUsePremiumProfileCustomization(P),
+        V = (0, l.e7)([T.ZP], () => (null == w.id ? null : T.ZP.getMember(w.id, P.id))),
+        G = (0, l.e7)([S.Z], () => S.Z.getGuildMemberProfile(P.id, w.id)),
+        Y = _.ZP.canUsePremiumProfileCustomization(P),
         H = (0, c.gd)(D, null == V ? void 0 : V.avatar),
         z = (0, c.f$)(B, null == G ? void 0 : G.banner),
         W = (0, N.p)(F, null == G ? void 0 : G.themeColors),
@@ -123,7 +123,7 @@ function O(e) {
                                 ]
                             }),
                             showRemoveAvatarButton: H,
-                            onAvatarChange: (e) => X(e, null == V ? void 0 : V.avatar, f.I5),
+                            onAvatarChange: (e) => X(e, null == V ? void 0 : V.avatar, I.I5),
                             errors: null == M ? void 0 : M.avatar,
                             guildId: w.id,
                             disabled: !Y
@@ -154,7 +154,7 @@ function O(e) {
                         'decoration'
                     ),
                     (0, i.jsx)(
-                        h.Z,
+                        g.Z,
                         {
                             sectionTitle: (0, i.jsxs)(i.Fragment, {
                                 children: [
@@ -177,11 +177,11 @@ function O(e) {
                         'effect'
                     ),
                     (0, i.jsx)(
-                        g.Z,
+                        h.Z,
                         {
                             showRemoveBannerButton: z,
                             errors: null == M ? void 0 : M.banner,
-                            onBannerChange: (e) => X(e, null == G ? void 0 : G.banner, f.g_),
+                            onBannerChange: (e) => X(e, null == G ? void 0 : G.banner, I.g_),
                             guildId: null == w ? void 0 : w.id,
                             disabled: !Y
                         },

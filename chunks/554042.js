@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return I;
     }
 }),
     n(47120);
@@ -14,14 +14,14 @@ var i = n(200651),
     d = n(153867),
     u = n(425493),
     m = n(918222),
-    g = n(607070),
-    h = n(304761),
+    h = n(607070),
+    g = n(304761),
     p = n(865427),
     x = n(358085),
-    T = n(210887),
-    S = n(981631),
-    _ = n(388032),
-    E = n(823879);
+    S = n(210887),
+    T = n(981631),
+    E = n(388032),
+    _ = n(823879);
 let C = [
     {
         label: 'Latin alphabet',
@@ -52,13 +52,13 @@ let C = [
         value: 'custom'
     }
 ];
-function f() {
+function I() {
     let [e, t] = s.useState(Math.round((window.outerWidth / window.innerWidth) * 100)),
-        { platformZoom: n, theme: r } = (0, a.cj)([T.Z, g.Z], () => ({
-            theme: T.Z.theme,
-            platformZoom: g.Z.zoom
+        { platformZoom: n, theme: r } = (0, a.cj)([S.Z, h.Z], () => ({
+            theme: S.Z.theme,
+            platformZoom: h.Z.zoom
         })),
-        [f, I] = s.useState('upright'),
+        [I, f] = s.useState('upright'),
         N = ['normal', 'medium', 'semibold', 'bold', 'extrabold'],
         A = new Map([
             ['normal', 400],
@@ -74,9 +74,9 @@ function f() {
             });
     }, []);
     let b = x.isPlatformEmbedded ? n : e,
-        v = (0, a.e7)([h.C], () => {
+        v = (0, a.e7)([g.C], () => {
             var e, t;
-            return (0, p.fD)() ? (null === (t = h.C.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web) : null;
+            return (0, p.fD)() ? (null === (t = g.C.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
         [j, O] = (0, m.R)('playground-overrideText', null),
         [R, P] = (0, m.R)('playground-defaultText', C[0].value),
@@ -91,16 +91,16 @@ function f() {
             [O, P]
         );
     return (0, i.jsx)('div', {
-        className: E.fullscreen,
+        className: _.fullscreen,
         style: {
-            '--playground-font-family': 'mono' === f ? 'gg mono' : 'gg sans',
-            '--playground-font-style': 'italic' === f ? 'italic' : 'normal'
+            '--playground-font-family': 'mono' === I ? 'gg mono' : 'gg sans',
+            '--playground-font-style': 'italic' === I ? 'italic' : 'normal'
         },
         children: (0, i.jsxs)(o.FormSection, {
             tag: o.FormTitleTags.H1,
             children: [
                 (0, i.jsxs)('div', {
-                    className: E.toolbar,
+                    className: _.toolbar,
                     children: [
                         (0, i.jsxs)('div', {
                             children: [
@@ -126,7 +126,7 @@ function f() {
                         }),
                         (0, i.jsx)(o.FormItem, {
                             children: (0, i.jsx)(o.SingleSelect, {
-                                className: E.select,
+                                className: _.select,
                                 options: C,
                                 onChange: (e) => D(e),
                                 value: R
@@ -134,7 +134,7 @@ function f() {
                         }),
                         (0, i.jsx)(o.FormItem, {
                             children: (0, i.jsx)('div', {
-                                className: E.input,
+                                className: _.input,
                                 children: (0, i.jsx)(o.TextInput, {
                                     placeholder: 'Enter custom input...',
                                     value: null != j ? j : '',
@@ -145,16 +145,16 @@ function f() {
                         (0, i.jsx)(o.FormItem, {
                             children: (0, i.jsx)(o.RadioGroup, {
                                 withTransparentBackground: !0,
-                                className: E.theme,
+                                className: _.theme,
                                 orientation: 'horizontal',
                                 options: [
                                     {
-                                        name: _.intl.string(_.t.b8Cei4),
-                                        value: S.BRd.DARK
+                                        name: E.intl.string(E.t.b8Cei4),
+                                        value: T.BRd.DARK
                                     },
                                     {
-                                        name: _.intl.string(_.t.K2sFfn),
-                                        value: S.BRd.LIGHT
+                                        name: E.intl.string(E.t.K2sFfn),
+                                        value: T.BRd.LIGHT
                                     }
                                 ],
                                 onChange: (e) => {
@@ -166,7 +166,7 @@ function f() {
                         (0, i.jsx)(o.FormItem, {
                             children: (0, i.jsx)(o.RadioGroup, {
                                 withTransparentBackground: !0,
-                                className: E.theme,
+                                className: _.theme,
                                 orientation: 'horizontal',
                                 options: [
                                     {
@@ -183,9 +183,9 @@ function f() {
                                     }
                                 ],
                                 onChange: (e) => {
-                                    I(e.value);
+                                    f(e.value);
                                 },
-                                value: f
+                                value: I
                             })
                         }),
                         (0, i.jsx)(u.Z, {
@@ -195,14 +195,14 @@ function f() {
                     ]
                 }),
                 (0, i.jsxs)('div', {
-                    className: E.textGrid,
+                    className: _.textGrid,
                     children: [
                         (0, i.jsx)('div', {}),
                         N.map((e) =>
                             (0, i.jsx)(
                                 'div',
                                 {
-                                    className: E.columnHeading,
+                                    className: _.columnHeading,
                                     children: (0, i.jsx)(o.Heading, {
                                         variant: 'eyebrow',
                                         children: e
@@ -219,7 +219,7 @@ function f() {
                                         (0, i.jsxs)(
                                             'div',
                                             {
-                                                className: E.fontSize,
+                                                className: _.fontSize,
                                                 children: [
                                                     (0, i.jsxs)(o.Heading, {
                                                         variant: 'eyebrow',
@@ -242,10 +242,10 @@ function f() {
                                             return (0, i.jsx)(
                                                 'div',
                                                 {
-                                                    className: E.textSample,
+                                                    className: _.textSample,
                                                     children: (0, i.jsxs)('div', {
                                                         title: ''.concat(e, 'px at ').concat(t),
-                                                        className: l()(E.text, { [E.breakAnywhere]: !s.includes(' ') }),
+                                                        className: l()(_.text, { [_.breakAnywhere]: !s.includes(' ') }),
                                                         style: {
                                                             fontSize: e,
                                                             fontWeight: A.get(t)

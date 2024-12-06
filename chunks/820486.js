@@ -62,7 +62,7 @@ function b(e, t, n) {
             }
           : e;
 }
-class A extends (i = a.ZP.DeviceSettingsStore) {
+class x extends (i = a.ZP.DeviceSettingsStore) {
     initialize(e) {
         this.waitFor(u.Z, c.Z), (f = null != e ? e : g);
     }
@@ -88,9 +88,9 @@ class A extends (i = a.ZP.DeviceSettingsStore) {
         return N;
     }
 }
-p(A, 'displayName', 'ConnectedDeviceStore'),
-    p(A, 'persistKey', 'ConnectedDeviceStore'),
-    (t.Z = new A(s.Z, {
+p(x, 'displayName', 'ConnectedDeviceStore'),
+    p(x, 'persistKey', 'ConnectedDeviceStore'),
+    (t.Z = new x(s.Z, {
         MEDIA_ENGINE_DEVICES: function (e) {
             let { inputDevices: t, outputDevices: n } = e,
                 i = {};

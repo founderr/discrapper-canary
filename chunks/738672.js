@@ -30,7 +30,7 @@ function u(e) {
                 C(String(E.current)), v(void 0 !== _ && _ < (null !== (t = null === (e = I.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 300) + 24), (E.current += 1);
             }
         }, [_, I, m]);
-    let { preventIdle: b, allowIdle: Z } = (0, d.Y)('popup');
+    let { preventIdle: b, allowIdle: N } = (0, d.Y)('popup');
     return (null == t ? void 0 : t.current) == null
         ? null
         : (0, i.jsx)(s.ZP, {
@@ -46,8 +46,8 @@ function u(e) {
                           ref: I,
                           onMouseOver: b,
                           onFocus: b,
-                          onBlur: Z,
-                          onMouseLeave: Z,
+                          onBlur: N,
+                          onMouseLeave: N,
                           children: h({
                               hidden: x || f || n,
                               onDismiss: u

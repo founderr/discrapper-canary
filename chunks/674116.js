@@ -14,17 +14,17 @@ var i = n(200651),
     d = n(153867),
     u = n(230711),
     m = n(313201),
-    g = n(111672),
-    h = n(921801),
+    h = n(111672),
+    g = n(921801),
     p = n(131951),
     x = n(663389),
-    T = n(63063),
-    S = n(358085),
-    _ = n(740492),
-    E = n(894939),
+    S = n(63063),
+    T = n(358085),
+    E = n(740492),
+    _ = n(894939),
     C = n(321499),
-    f = n(710808),
-    I = n(625205),
+    I = n(710808),
+    f = n(625205),
     N = n(325808),
     A = n(823087),
     b = n(546997),
@@ -40,7 +40,7 @@ var i = n(200651),
     Z = n(388032),
     F = n(232186);
 let M = (0, m.hQ)(),
-    k = ''.concat(T.Z.getArticleURL(B.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
+    k = ''.concat(S.Z.getArticleURL(B.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
 function w(e, t, n) {
     (0, o.openModal)((s) =>
         (0, i.jsx)(o.ConfirmModal, {
@@ -63,7 +63,7 @@ function U() {
             attenuation: n,
             attenuateWhileSpeakingSelf: r,
             attenuateWhileSpeakingOthers: m,
-            audioSubsystem: T,
+            audioSubsystem: S,
             silenceWarning: B,
             legacyAudioSubsystemSupported: U,
             experimentalAudioSubsystemSupported: V,
@@ -92,21 +92,21 @@ function U() {
             null == W || null === (e = W.current) || void 0 === e || e.scrollIntoView(), u.Z.clearSubsection();
         }
     }, [W, z]);
-    let K = g.Z.getCurrentConfig({ location: 'UserSettingsVoiceProcessing' }).sidechainAvailable && !(0, S.isWeb)(),
-        q = (0, a.e7)([_.ZP], () => _.ZP.disableVoiceChannelChangeAlert);
+    let K = h.Z.getCurrentConfig({ location: 'UserSettingsVoiceProcessing' }).sidechainAvailable && !(0, T.isWeb)(),
+        q = (0, a.e7)([E.ZP], () => E.ZP.disableVoiceChannelChangeAlert);
     return (0, i.jsxs)(o.FormSection, {
         tag: o.FormTitleTags.H1,
         title: Z.intl.string(Z.t.NiTd0d),
         children: [
-            (0, i.jsx)(h.F, {
+            (0, i.jsx)(g.F, {
                 setting: y.s6.VOICE_AND_VIDEO_DEVICES,
-                children: (0, i.jsx)(I.Z, {})
+                children: (0, i.jsx)(f.Z, {})
             }),
-            (0, i.jsx)(h.F, {
+            (0, i.jsx)(g.F, {
                 setting: y.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
                 children: (0, i.jsx)(P.Z, {})
             }),
-            (0, i.jsxs)(h.F, {
+            (0, i.jsxs)(g.F, {
                 setting: y.s6.VOICE_AND_VIDEO_MIC_TEST,
                 children: [
                     (0, i.jsx)(A.Z, {}),
@@ -118,30 +118,30 @@ function U() {
                     (0, i.jsx)(o.FormDivider, { className: l()(F.marginBottom20) })
                 ]
             }),
-            (0, i.jsx)(h.F, {
+            (0, i.jsx)(g.F, {
                 setting: y.s6.VOICE_AND_VIDEO_INPUT_MODE,
                 children: (0, i.jsx)(N.Z, {})
             }),
-            (0, i.jsxs)(h.F, {
+            (0, i.jsxs)(g.F, {
                 setting: y.s6.VOICE_AND_VIDEO_SENSITIVITY,
                 children: [e === L.pM.VOICE_ACTIVITY && (0, i.jsx)(R.Z, {}), (0, i.jsx)(o.FormDivider, { className: F.marginBottom40 })]
             }),
-            (0, i.jsx)(h.F, {
+            (0, i.jsx)(g.F, {
                 setting: y.s6.VOICE_AND_VIDEO_SOUNDBOARD,
                 children: (0, i.jsx)('div', {
                     style: { scrollMarginTop: '48px' },
                     ref: W
                 })
             }),
-            (0, i.jsx)(h.F, {
+            (0, i.jsx)(g.F, {
                 setting: y.s6.VOICE_AND_VIDEO_SOUNDS,
-                children: (0, i.jsx)(E.Z, {})
+                children: (0, i.jsx)(_.Z, {})
             }),
-            (0, i.jsx)(h.F, {
+            (0, i.jsx)(g.F, {
                 setting: y.s6.VOICE_AND_VIDEO_VIDEO,
                 children: (0, i.jsx)(j.Z, {})
             }),
-            (0, i.jsx)(h.F, {
+            (0, i.jsx)(g.F, {
                 setting: y.s6.VOICE_AND_VIDEO_ADVANCED,
                 children: (0, i.jsxs)(o.HeadingLevel, {
                     component: (0, i.jsx)(o.FormTitle, {
@@ -151,12 +151,12 @@ function U() {
                     }),
                     children: [
                         (0, i.jsx)(C.Z, {}),
-                        (0, i.jsx)(h.F, {
+                        (0, i.jsx)(g.F, {
                             setting: y.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
                             children: (0, i.jsx)(O.Z, {})
                         }),
                         (0, i.jsx)(v.Z, {}),
-                        (0, i.jsx)(h.F, {
+                        (0, i.jsx)(g.F, {
                             setting: y.s6.VOICE_AND_VIDEO_ADVANCED_QOS,
                             children: (0, i.jsx)(o.FormSection, {
                                 className: F.marginBottom20,
@@ -169,7 +169,7 @@ function U() {
                                 })
                             })
                         }),
-                        (0, i.jsx)(h.F, {
+                        (0, i.jsx)(g.F, {
                             setting: y.s6.VOICE_AND_VIDEO_ADVANCED_ATTENUATION,
                             children: (0, i.jsxs)(o.FormSection, {
                                 className: F.marginBottom20,
@@ -207,7 +207,7 @@ function U() {
                             })
                         }),
                         K &&
-                            (0, i.jsx)(h.F, {
+                            (0, i.jsx)(g.F, {
                                 setting: y.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_SIDECHAIN_COMPRESSION,
                                 children: (0, i.jsxs)(o.FormSection, {
                                     className: F.marginBottom20,
@@ -232,7 +232,7 @@ function U() {
                                     ]
                                 })
                             }),
-                        (0, i.jsx)(h.F, {
+                        (0, i.jsx)(g.F, {
                             setting: y.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM,
                             children: (0, i.jsxs)(o.FormSection, {
                                 className: F.marginBottom20,
@@ -240,7 +240,7 @@ function U() {
                                 children: [
                                     (0, i.jsx)(o.SingleSelect, {
                                         className: F.marginBottom20,
-                                        value: T,
+                                        value: S,
                                         options: (function (e, t, n) {
                                             let i = [
                                                 {
@@ -276,7 +276,7 @@ function U() {
                             })
                         }),
                         (0, i.jsx)(b.Z, {}),
-                        (0, i.jsx)(h.F, {
+                        (0, i.jsx)(g.F, {
                             setting: y.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING,
                             children: (0, i.jsx)(o.FormSection, {
                                 className: F.marginBottom20,
@@ -288,7 +288,7 @@ function U() {
                                 })
                             })
                         }),
-                        (0, i.jsxs)(h.F, {
+                        (0, i.jsxs)(g.F, {
                             setting: y.s6.VOICE_AND_VIDEO_SWITCH_CHANNEL_ALERT,
                             children: [
                                 (0, i.jsx)(o.FormSwitch, {
@@ -309,11 +309,11 @@ function U() {
                                 (0, i.jsx)(o.FormDivider, { className: F.marginBottom40 })
                             ]
                         }),
-                        (0, i.jsx)(h.F, {
+                        (0, i.jsx)(g.F, {
                             setting: y.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                            children: (0, i.jsx)(f.Z, {})
+                            children: (0, i.jsx)(I.Z, {})
                         }),
-                        (0, i.jsx)(h.F, {
+                        (0, i.jsx)(g.F, {
                             setting: y.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,
                             children: (0, i.jsx)(o.FormItem, {
                                 children: (0, i.jsx)(o.Button, {

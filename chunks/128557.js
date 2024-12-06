@@ -29,8 +29,8 @@ var i = n(200651),
     I = n(259580),
     E = n(585483),
     b = n(63063),
-    Z = n(358085),
-    N = n(709054),
+    N = n(358085),
+    Z = n(709054),
     S = n(967128),
     T = n(981631),
     j = n(231873),
@@ -77,7 +77,7 @@ function P(e) {
 function M(e) {
     let { channel: t } = e,
         r = (0, c.e7)([v.Z], () => (null != t ? v.Z.getGuild(t.getGuildId()) : null), [t]),
-        h = null != r && N.default.extractTimestamp(r.id) < Date.now() - T._8R,
+        h = null != r && Z.default.extractTimestamp(r.id) < Date.now() - T._8R,
         I = (0, c.e7)([x.default], () => (null == r ? void 0 : r.ownerId) === x.default.getId(), [r]),
         { canInvite: M, canManageGuild: R, canMessage: L } = (0, f.TE)(t, r),
         k = (0, c.e7)([_.default], () => {
@@ -99,7 +99,7 @@ function M(e) {
                     }),
                         null != e &&
                             (0, u.openModalLazy)(async () => {
-                                let { default: t } = await Promise.all([n.e('7654'), n.e('54655')]).then(n.bind(n, 560114));
+                                let { default: t } = await Promise.all([n.e('7654'), n.e('86004')]).then(n.bind(n, 560114));
                                 return (n) =>
                                     (0, i.jsx)(t, {
                                         ...n,
@@ -287,7 +287,7 @@ function M(e) {
                     'message'
                 )
             ),
-        (0, Z.isWeb)() &&
+        (0, N.isWeb)() &&
             Y.push(
                 (0, i.jsx)(
                     o.Z.div,

@@ -11,8 +11,8 @@ var r = n(120356),
     g = n(568147),
     m = n(332796);
 t.Z = (e) => {
-    let { className: t, imageClassName: n, textContainerOverrideStyles: r, location: p, analyticsLocation: f } = e,
-        { analyticsLocations: _ } = (0, l.ZP)(p),
+    let { className: t, imageClassName: n, textContainerOverrideStyles: r, location: f, analyticsLocation: p } = e,
+        { analyticsLocations: _ } = (0, l.ZP)(f),
         h = (0, o.rK)(),
         { enabled: E } = o.RO.useExperiment({ location: 'GiftNitro' }, { autoTrackExposure: h }),
         b = E && h;
@@ -41,7 +41,7 @@ t.Z = (e) => {
                             buttonText: d.intl.string(d.t.Ve9Ge3),
                             buttonTextClassName: u.giftButtonCTA,
                             color: s.Button.Colors.CUSTOM,
-                            premiumModalAnalyticsLocation: f
+                            premiumModalAnalyticsLocation: p
                         })
                     ]
                 }),

@@ -1,6 +1,6 @@
 n.d(t, {
     _: function () {
-        return f;
+        return p;
     }
 }),
     n(47120);
@@ -27,8 +27,8 @@ function m(e, t, n) {
         e
     );
 }
-let p = (0, u.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH),
-    f = Object.freeze({
+let f = (0, u.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH),
+    p = Object.freeze({
         BLACK: g.black,
         GRAY: g.gray
     });
@@ -40,7 +40,7 @@ class _ extends (i = a.Component) {
         window.removeEventListener('resize', this.computeBars);
     }
     roundToNearestStep(e) {
-        return Math.round(e / p) * p;
+        return Math.round(e / f) * f;
     }
     getProgressStyles() {
         let { progress: e } = this.props,

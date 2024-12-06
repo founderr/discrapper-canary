@@ -132,8 +132,8 @@ function _(e) {
         let e = (0, h.pP)(b);
         return (0, h.YP)(e, document.body), () => (0, h.UC)(e, document.body);
     }, [b]);
-    let A = 0 !== m,
-        x = (0, u.Q)('GlobalDiscoveryHeaderTabs');
+    let x = 0 !== m,
+        A = (0, u.Q)('GlobalDiscoveryHeaderTabs');
     return (0, i.jsxs)('div', {
         className: a()(g.container, t),
         ref: T,
@@ -170,7 +170,7 @@ function _(e) {
                     })
                 ]
             }),
-            A &&
+            x &&
                 (0, i.jsxs)(c.TabBar, {
                     type: 'top',
                     look: 'brand',
@@ -185,7 +185,7 @@ function _(e) {
                                     id: e.id,
                                     look: 'brand',
                                     'aria-label': e.label,
-                                    className: a()(g.tab, { [g.selected]: !x && n === e.id }),
+                                    className: a()(g.tab, { [g.selected]: !A && n === e.id }),
                                     children: e.label
                                 },
                                 e.id

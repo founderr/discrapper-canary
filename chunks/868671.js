@@ -33,7 +33,7 @@ function E(e) {
             channelId: E,
             guildId: b
         } = e,
-        [Z, N] = i.useState(!1),
+        [N, Z] = i.useState(!1),
         { requestId: S, entries: T, impressionCappedEntryIds: j, hasLeaderboardEntry: A } = (0, f.Z)(E),
         y = (0, l.e7)([h.Z], () => h.Z.hidden),
         P = (0, l.e7)([c.Z], () => c.Z.isFocused()),
@@ -44,7 +44,7 @@ function E(e) {
         [O, D, w, B] = i.useMemo(() => {
             let e;
             if (null == T || 0 === T.length || null == S || !k) return [t, n, I];
-            let i = Z ? T.length : A ? 4 : 3,
+            let i = N ? T.length : A ? 4 : 3,
                 l = T.slice(0, i);
             e = y
                 ? [{ type: a.so.HIDDEN_CONTENT_INVENTORY }]
@@ -61,7 +61,7 @@ function E(e) {
                 index: n.length,
                 title: _.intl.string(_.t['6gwSFR']),
                 onToggleExpand: () => {
-                    N((e) => {
+                    Z((e) => {
                         let t = !e;
                         return (
                             d.default.track(v.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
@@ -73,12 +73,12 @@ function E(e) {
                         );
                     });
                 },
-                expanded: Z,
+                expanded: N,
                 expandedCount: T.length,
                 feedHeight: e.map(g.iZ).reduce((e, t) => e + t, 0)
             };
             return [[r, ...t], [...n, r, ...e], Math.random(), e];
-        }, [E, T, Z, t, b, S, n, I, y, k, A]),
+        }, [E, T, N, t, b, S, n, I, y, k, A]),
         U = i.useRef(0),
         H = i.useRef(T),
         G = i.useRef(),

@@ -8,8 +8,8 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(493683),
     c = n(239091),
     u = n(146773),
@@ -64,7 +64,7 @@ class M extends Z.ZP {
               });
     }
     render() {
-        let { channel: e, guild: t, selected: n, muted: l, unread: a, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: f, canReorderChannel: g, isSubscriptionGated: C, isFavoriteSuggestion: _, subtitle: v, forceTopLevelThread: x, embeddedApps: I, resolvedUnreadSetting: b, withGuildIcon: S, enableActivities: E } = this.props,
+        let { channel: e, guild: t, selected: n, muted: l, unread: o, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: f, canReorderChannel: g, isSubscriptionGated: C, isFavoriteSuggestion: _, subtitle: v, forceTopLevelThread: x, embeddedApps: I, resolvedUnreadSetting: b, withGuildIcon: S, enableActivities: E } = this.props,
             Z = E && null != I && I.length > 0,
             N = (0, m.D)(v),
             T = (0, i.jsx)('li', {
@@ -75,7 +75,7 @@ class M extends Z.ZP {
                 'data-dnd-name': e.name,
                 onMouseEnter: c || Z ? this.handleMouseEnter : void 0,
                 onMouseLeave: c || Z ? this.handleMouseLeave : void 0,
-                children: (0, i.jsx)(o.Popout, {
+                children: (0, i.jsx)(a.Popout, {
                     position: 'right',
                     renderPopout: this.renderPopout,
                     spacing: 0,
@@ -88,7 +88,7 @@ class M extends Z.ZP {
                             guild: t,
                             selected: !_ && n,
                             muted: l,
-                            unread: a,
+                            unread: o,
                             mentionCount: u,
                             hasActiveThreads: s,
                             subtitle: null == N ? void 0 : N.subtitle,
@@ -102,7 +102,7 @@ class M extends Z.ZP {
                             withGuildIcon: S,
                             'aria-label': (0, p.ZP)({
                                 channel: e,
-                                unread: a,
+                                unread: o,
                                 mentionCount: u,
                                 isSubscriptionGated: C
                             }),
@@ -206,25 +206,25 @@ class M extends Z.ZP {
 }
 let L = (0, u.B)(M);
 function w(e) {
-    let { channel: t, guild: n, disableSorting: l, isFavoriteCategory: r, muted: o, selected: s } = e,
+    let { channel: t, guild: n, disableSorting: l, isFavoriteCategory: r, muted: a, selected: s } = e,
         { hasActiveThreads: c, hasMoreActiveThreads: u } = (0, C.JQ)(t),
-        p = (0, a.cj)([I.ZP], () => ({
+        p = (0, o.cj)([I.ZP], () => ({
             unread: I.ZP.hasUnread(t.id),
             ackMessageId: I.ZP.ackMessageId(t.id),
             mentionCount: I.ZP.getMentionCount(t.id)
         })),
-        m = (0, a.e7)([b.ZP], () => b.ZP.resolveUnreadSetting(t)),
-        v = (0, a.cj)([_.Z, x.Z], () => {
+        m = (0, o.e7)([b.ZP], () => b.ZP.resolveUnreadSetting(t)),
+        v = (0, o.cj)([_.Z, x.Z], () => {
             let e = _.Z.getChannel(t.parent_id);
             return {
                 canManageChannel: x.Z.can(A.Plq.MANAGE_CHANNELS, t),
                 canReorderChannel: !0 !== l && (n.id === j._ || (null != e ? x.Z.can(A.Plq.MANAGE_CHANNELS, e) : x.Z.can(A.Plq.MANAGE_CHANNELS, n)))
             };
         }),
-        E = (0, a.e7)([g.Z], () => g.Z.shouldIndicateNewChannel(n.id, t.id)),
+        E = (0, o.e7)([g.Z], () => g.Z.shouldIndicateNewChannel(n.id, t.id)),
         { needSubscriptionToAccess: Z, isSubscriptionGated: y } = (0, f.Z)(t.id),
-        T = (0, a.e7)([b.ZP], () => b.ZP.isFavorite(n.id, t.id)),
-        P = (0, a.e7)(
+        T = (0, o.e7)([b.ZP], () => b.ZP.isFavorite(n.id, t.id)),
+        P = (0, o.e7)(
             [S.default],
             () => {
                 let e = S.default.getCurrentUser();
@@ -240,7 +240,7 @@ function w(e) {
             isSubscriptionGated: y,
             needSubscriptionToAccess: Z,
             isNewChannel: E,
-            muted: o,
+            muted: a,
             enableActivities: R,
             resolvedUnreadSetting: m
         }),

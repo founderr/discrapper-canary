@@ -14,8 +14,8 @@ var s = n(442837),
     d = n(131951),
     u = n(36703),
     m = n(388032),
-    g = n(232186);
-let h = (0, c.hQ)(),
+    h = n(232186);
+let g = (0, c.hQ)(),
     p = (0, c.hQ)();
 function x() {
     let { analyticsLocations: e } = (0, a.ZP)(),
@@ -30,15 +30,15 @@ function x() {
                 basis: '50%',
                 children: [
                     (0, i.jsx)(r.FormTitle, {
-                        id: h,
+                        id: g,
                         tag: r.FormTitleTags.H5,
-                        className: g.marginBottom4,
+                        className: h.marginBottom4,
                         children: m.intl.string(m.t.OX2Bnp)
                     }),
                     (0, i.jsx)(r.Slider, {
                         initialValue: (0, u.P)(t),
                         asValueChanges: (t) => l.Z.setInputVolume((0, u.A)(t), { analyticsLocations: e }),
-                        'aria-labelledby': h
+                        'aria-labelledby': g
                     })
                 ]
             }),
@@ -48,7 +48,7 @@ function x() {
                     (0, i.jsx)(r.FormTitle, {
                         id: p,
                         tag: r.FormTitleTags.H5,
-                        className: g.marginBottom4,
+                        className: h.marginBottom4,
                         children: m.intl.string(m.t.eATD2N)
                     }),
                     (0, i.jsx)(r.Slider, {

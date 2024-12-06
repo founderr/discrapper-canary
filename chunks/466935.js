@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(481060),
-    o = n(970606),
+    o = n(481060),
+    a = n(970606),
     s = n(693546),
     c = n(826581),
     u = n(246364),
@@ -44,14 +44,14 @@ function v(e) {
             text: _.intl.string(_.t.tcvVXF),
             selected: n,
             onClick: () => {
-                (0, o.Q2)({
+                (0, a.Q2)({
                     guildId: t.id,
                     source: g.jXE.CHANNEL_LIST,
                     tab: C.oC.MEMBER_APPLICATIONS
                 }),
                     (0, h.uL)(g.Z5c.CHANNEL(t.id, C.oC.MEMBER_APPLICATIONS));
             },
-            trailing: I > 0 ? (0, i.jsx)(a.NumberBadge, { count: I }) : null
+            trailing: I > 0 ? (0, i.jsx)(o.NumberBadge, { count: I }) : null
         })
     );
 }

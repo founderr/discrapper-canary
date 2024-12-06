@@ -15,17 +15,17 @@ var i = n(200651),
     d = n(692547),
     u = n(481060),
     m = n(660216),
-    g = n(225433),
-    h = n(825209),
+    h = n(225433),
+    g = n(825209),
     p = n(721383),
     x = n(612226),
-    T = n(714338),
-    S = n(924557),
-    _ = n(600164),
-    E = n(74299),
+    S = n(714338),
+    T = n(924557),
+    E = n(600164),
+    _ = n(74299),
     C = n(131951),
-    f = n(556296),
-    I = n(808506),
+    I = n(556296),
+    f = n(808506),
     N = n(63063),
     A = n(358085),
     b = n(13140),
@@ -63,7 +63,7 @@ class k extends s.PureComponent {
     renderMessage() {
         let { keybind: e } = this.props,
             t = b.BB(e.shortcut);
-        return T.Z.hasBind(t)
+        return S.Z.hasBind(t)
             ? (0, i.jsx)(u.FormText, {
                   className: D.keybindMessage,
                   type: u.FormTextTypes.DESCRIPTION,
@@ -85,21 +85,21 @@ class k extends s.PureComponent {
     }
     render() {
         let { managed: e, enabled: t } = this.props.keybind;
-        return (0, i.jsxs)(_.Z, {
-            direction: _.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(E.Z, {
+            direction: E.Z.Direction.VERTICAL,
             className: l()(D.keybindGroup, y.card),
             children: [
                 !e &&
-                    (0, i.jsx)(g.Z, {
+                    (0, i.jsx)(h.Z, {
                         'aria-label': P.intl.string(P.t.qEHmmJ),
                         className: D.removeKeybind,
                         onClick: this.handleDeleteKeybind,
-                        look: g.Z.Looks.FILLED
+                        look: h.Z.Looks.FILLED
                     }),
-                (0, i.jsxs)(_.Z, {
+                (0, i.jsxs)(E.Z, {
                     className: B.marginBottom8,
                     children: [
-                        (0, i.jsx)(_.Z.Child, {
+                        (0, i.jsx)(E.Z.Child, {
                             basis: '45%',
                             children: (0, i.jsx)(u.FormItem, {
                                 title: P.intl.string(P.t.UUpADw),
@@ -112,18 +112,18 @@ class k extends s.PureComponent {
                                 })
                             })
                         }),
-                        (0, i.jsx)(_.Z.Child, {
+                        (0, i.jsx)(E.Z.Child, {
                             basis: '45%',
                             children: (0, i.jsx)(u.FormItem, {
                                 title: P.intl.string(P.t['1La4tL']),
                                 className: D.item,
-                                children: (0, i.jsx)(h.Z, {
+                                children: (0, i.jsx)(g.Z, {
                                     defaultValue: this.props.keybind.shortcut,
                                     onChange: this.handleShortcutChange
                                 })
                             })
                         }),
-                        (0, i.jsx)(_.Z.Child, {
+                        (0, i.jsx)(E.Z.Child, {
                             grow: 0,
                             shrink: 0,
                             children: (0, i.jsx)(u.FormItem, {
@@ -143,7 +143,7 @@ class k extends s.PureComponent {
                         })
                     ]
                 }),
-                (0, i.jsx)(_.Z.Child, { children: this.renderMessage() }),
+                (0, i.jsx)(E.Z.Child, { children: this.renderMessage() }),
                 this.renderExtraSettings()
             ]
         });
@@ -342,18 +342,18 @@ class w extends s.PureComponent {
                     children: A.isPlatformEmbedded
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsxs)(_.Z, {
-                                      justify: _.Z.Justify.BETWEEN,
+                                  (0, i.jsxs)(E.Z, {
+                                      justify: E.Z.Justify.BETWEEN,
                                       className: B.marginBottom20,
                                       children: [
-                                          (0, i.jsx)(_.Z.Child, {
+                                          (0, i.jsx)(E.Z.Child, {
                                               grow: 0,
                                               children: (0, i.jsx)(u.HelpMessage, {
                                                   messageType: u.HelpMessageTypes.WARNING,
                                                   children: P.intl.string(P.t.NoKjWF)
                                               })
                                           }),
-                                          (0, i.jsx)(_.Z.Child, {
+                                          (0, i.jsx)(E.Z.Child, {
                                               wrap: !0,
                                               grow: 0,
                                               children: (0, i.jsx)(u.Button, {
@@ -469,10 +469,10 @@ class w extends s.PureComponent {
     }
 }
 function U() {
-    let e = (0, c.e7)([f.Z], () => f.Z.getState()),
-        t = (0, c.e7)([C.Z], () => (0, E.Z)(C.Z)),
-        n = (0, c.e7)([I.Z], () => I.Z.isSupported()),
-        s = (0, S.Go)();
+    let e = (0, c.e7)([I.Z], () => I.Z.getState()),
+        t = (0, c.e7)([C.Z], () => (0, _.Z)(C.Z)),
+        n = (0, c.e7)([f.Z], () => f.Z.isSupported()),
+        s = (0, T.Go)();
     return (0, i.jsx)(w, {
         keybinds: e,
         canGoLive: t,

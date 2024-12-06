@@ -1,6 +1,6 @@
 n.d(t, {
     D: function () {
-        return E;
+        return _;
     }
 }),
     n(47120);
@@ -14,20 +14,20 @@ var i = n(200651),
     d = n(530618),
     u = n(74538),
     m = n(937615),
-    g = n(230916),
-    h = n(798769),
+    h = n(230916),
+    g = n(798769),
     p = n(474936),
     x = n(388032),
-    T = n(783899),
-    S = n(982404),
-    _ = n(299156);
-function E(e) {
-    let { premiumSubscription: t, premiumType: n, onClose: E, confettiCanvas: C, userWasChurned: f = !1, userDiscountOffer: I } = e,
+    S = n(783899),
+    T = n(982404),
+    E = n(299156);
+function _(e) {
+    let { premiumSubscription: t, premiumType: n, onClose: _, confettiCanvas: C, userWasChurned: I = !1, userDiscountOffer: f } = e,
         N = (0, o.ZP)(),
-        A = (0, l.wj)(N) ? S : _,
+        A = (0, l.wj)(N) ? T : E,
         b = s.useRef(null),
         [v, j] = s.useState(!1),
-        O = (0, g._)(t, p.Xh.PREMIUM_MONTH_TIER_2, I),
+        O = (0, h._)(t, p.Xh.PREMIUM_MONTH_TIER_2, f),
         R = (0, u.aS)(p.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId
@@ -38,53 +38,53 @@ function E(e) {
         (s.useEffect(() => {
             null != b.current && null != O && j(!0);
         }, [b, v, O]),
-        null == I || null == O)
+        null == f || null == O)
     )
         return null;
     let y = x.intl.format(x.t.gPzMHR, {
-            numMonths: I.discount.user_usage_limit,
+            numMonths: f.discount.user_usage_limit,
             discountedPrice: O,
             regularPrice: P
         }),
         B = (0, i.jsx)('div', {
-            className: T.whatYouLoseButtonContainer,
+            className: S.whatYouLoseButtonContainer,
             children: (0, i.jsx)(a.Button, {
                 color: a.Button.Colors.BRAND,
-                onClick: E,
+                onClick: _,
                 children: x.intl.string(x.t['/r8g/v'])
             })
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(h.Z, {
+            (0, i.jsx)(g.Z, {
                 premiumType: n,
-                className: T.cancellationHeader,
-                onClose: E
+                className: S.cancellationHeader,
+                onClose: _
             }),
             (0, i.jsx)('div', {
                 ref: b,
                 children: (0, i.jsx)(a.ModalContent, {
-                    className: T.body,
+                    className: S.body,
                     children:
                         null != O
                             ? (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsxs)('div', {
-                                          className: T.discountAppliedBody,
+                                          className: S.discountAppliedBody,
                                           children: [
                                               (0, i.jsx)('img', {
                                                   alt: '',
                                                   src: A,
-                                                  className: T.nitroIcon
+                                                  className: S.nitroIcon
                                               }),
                                               (0, i.jsx)(a.Heading, {
                                                   variant: 'heading-xl/bold',
-                                                  children: f ? x.intl.string(x.t.gOOPaG) : x.intl.string(x.t.PZSyRk)
+                                                  children: I ? x.intl.string(x.t.gOOPaG) : x.intl.string(x.t.PZSyRk)
                                               })
                                           ]
                                       }),
                                       (0, i.jsx)('div', {
-                                          className: T.bodyString,
+                                          className: S.bodyString,
                                           children: y
                                       }),
                                       B

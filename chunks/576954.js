@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(134612),
     E = n(981631),
     b = n(388032),
-    Z = n(771860);
-function N(e) {
+    N = n(771860);
+function Z(e) {
     let { senderId: t, channelId: n, warningId: r } = e,
         { isIgnored: d } = (0, a.cj)([m.Z], () => ({ isIgnored: m.Z.isIgnored(t) }), [t]),
         u = (0, h.Do)({ location: 'web_stranger_danger_more' }),
@@ -53,10 +53,10 @@ function N(e) {
         }, [n, r, t]);
     return u
         ? (0, i.jsxs)('div', {
-              className: Z.safetyAction,
+              className: N.safetyAction,
               children: [
                   (0, i.jsxs)('div', {
-                      className: Z.safetyActionText,
+                      className: N.safetyActionText,
                       children: [
                           (0, i.jsx)(s.Text, {
                               variant: 'text-md/semibold',
@@ -80,10 +80,10 @@ function N(e) {
               ]
           })
         : (0, i.jsxs)('div', {
-              className: Z.safetyAction,
+              className: N.safetyAction,
               children: [
                   (0, i.jsxs)('div', {
-                      className: Z.safetyActionText,
+                      className: N.safetyActionText,
                       children: [
                           (0, i.jsx)(s.Text, {
                               variant: 'text-md/semibold',
@@ -132,10 +132,10 @@ function N(e) {
 function S(e) {
     let { onClick: t } = e;
     return (0, i.jsxs)('div', {
-        className: Z.safetyAction,
+        className: N.safetyAction,
         children: [
             (0, i.jsxs)('div', {
-                className: Z.safetyActionText,
+                className: N.safetyActionText,
                 children: [
                     (0, i.jsx)(s.Text, {
                         variant: 'text-md/semibold',
@@ -166,7 +166,7 @@ function T(e) {
             (0, C.T)(t, [o]);
         }, [t, o]),
         g = (0, I.C2)(),
-        Z = l.useCallback(
+        N = l.useCallback(
             (e) => () => {
                 c.Z.addRelationship({
                     userId: h,
@@ -218,7 +218,7 @@ function T(e) {
                         ),
                         actions: (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(N, {
+                                (0, i.jsx)(Z, {
                                     senderId: h,
                                     channelId: t,
                                     warningId: o
@@ -242,7 +242,7 @@ function T(e) {
                     (0, i.jsx)(a, {
                         ...n,
                         userId: h,
-                        confirmBlock: Z(e),
+                        confirmBlock: N(e),
                         onCancel: () => {
                             null == r || r(),
                                 (0, v.qc)({

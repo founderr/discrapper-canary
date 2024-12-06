@@ -16,24 +16,24 @@ var i = n(200651),
     d = n(906732),
     u = n(238302),
     m = n(514361),
-    g = n(705262),
-    h = n(605236),
+    h = n(705262),
+    g = n(605236),
     p = n(104494),
     x = n(639119),
-    T = n(311476),
-    S = n(165583),
-    _ = n(197115),
-    E = n(504983),
+    S = n(311476),
+    T = n(165583),
+    E = n(197115),
+    _ = n(504983),
     C = n(626135),
-    f = n(981631),
-    I = n(921944),
+    I = n(981631),
+    f = n(921944),
     N = n(474936),
     A = n(388032),
     b = n(878088),
     v = n(232186);
 let j = () => {
-        (0, h.EW)(l.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
-            dismissAction: I.L.PRIMARY,
+        (0, g.EW)(l.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
+            dismissAction: f.L.PRIMARY,
             forceTrack: !0
         }),
             (0, u.Kq)(),
@@ -45,13 +45,13 @@ let j = () => {
             l = (0, r.e7)([m.Z], () => m.Z.isPreview),
             o = (null === (t = (0, x.N)()) || void 0 === t ? void 0 : null === (e = t.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === N.Si.TIER_2,
             u = (0, p.Ng)(),
-            h = (0, p.Wp)(u, N.Si.TIER_2),
-            I = !l || o,
-            { enabled: O } = T.Z.getCurrentConfig(
+            g = (0, p.Wp)(u, N.Si.TIER_2),
+            f = !l || o,
+            { enabled: O } = S.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceClientThemes' },
                 {
-                    autoTrackExposure: !I,
-                    disable: I
+                    autoTrackExposure: !f,
+                    disable: f
                 }
             ),
             R = () =>
@@ -65,10 +65,10 @@ let j = () => {
                                   onClick: () => j(),
                                   children: O ? A.intl.string(A.t.SKNnqq) : A.intl.string(A.t['E+COuL'])
                               }),
-                              (0, i.jsx)(_.Z, {
+                              (0, i.jsx)(E.Z, {
                                   showGradient: O,
                                   subscriptionTier: N.Si.TIER_2,
-                                  buttonText: O ? A.intl.string(A.t.pj0XBA) : h ? A.intl.formatToPlainString(A.t.bkQ4bG, { percent: null == u ? void 0 : u.discount.amount }) : A.intl.string(A.t.mr4K7O),
+                                  buttonText: O ? A.intl.string(A.t.pj0XBA) : g ? A.intl.formatToPlainString(A.t.bkQ4bG, { percent: null == u ? void 0 : u.discount.amount }) : A.intl.string(A.t.mr4K7O),
                                   className: b.premiumCta
                               })
                           ]
@@ -76,29 +76,29 @@ let j = () => {
         return (
             s.useEffect(() => {
                 l &&
-                    C.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
+                    C.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: N.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                         location_stack: n
                     });
             }, [l, n]),
             (0, i.jsxs)('div', {
                 children: [
-                    (0, i.jsx)(g.ZP, {
-                        type: g.yH.SETTINGS,
+                    (0, i.jsx)(h.ZP, {
+                        type: h.yH.SETTINGS,
                         children: O
-                            ? (0, i.jsx)(g.ZP.BasicAndGradient, {
+                            ? (0, i.jsx)(h.ZP.BasicAndGradient, {
                                   className: b.basicThemeSelectors,
                                   renderCTAButtons: R
                               })
                             : (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, i.jsx)(g.ZP.Basic, { className: b.basicThemeSelectors }),
-                                      (0, i.jsxs)(E.Z, {
+                                      (0, i.jsx)(h.ZP.Basic, { className: b.basicThemeSelectors }),
+                                      (0, i.jsxs)(_.Z, {
                                           className: b.featureBorder,
                                           isShown: l,
-                                          type: E.Y.PREMIUM,
+                                          type: _.Y.PREMIUM,
                                           children: [
-                                              (0, i.jsx)(g.ZP.Gradient, {
+                                              (0, i.jsx)(h.ZP.Gradient, {
                                                   disabled: l,
                                                   renderCTAButtons: R
                                               }),
@@ -113,7 +113,7 @@ let j = () => {
                                                               children: A.intl.string(A.t['E+COuL'])
                                                           }),
                                                           (0, i.jsx)('div', { className: b.premiumTier2Divider }),
-                                                          (0, i.jsx)(S.ZP, {
+                                                          (0, i.jsx)(T.ZP, {
                                                               type: N.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
                                                               subscriptionTier: N.Si.TIER_2
                                                           })

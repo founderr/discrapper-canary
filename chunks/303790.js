@@ -1,7 +1,7 @@
 e.exports = {
     wrapper: 'wrapper_cd82a7',
     section: 'section_cd82a7',
-    clickableIcon: 'clickableIcon_cd82a7',
+    clickable: 'clickable_cd82a7',
     textContent: 'textContent_cd82a7',
     separator: 'separator_cd82a7',
     inset: 'inset_cd82a7',

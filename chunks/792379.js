@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(280885),
     E = n(900927),
     b = n(678738),
-    Z = n(502762),
-    N = n(530),
+    N = n(502762),
+    Z = n(530),
     S = n(679332),
     T = n(544989),
     j = n(171368),
@@ -57,7 +57,7 @@ function R(e) {
         value: O,
         children: (0, i.jsx)(f.Mt, {
             value: D,
-            children: (0, i.jsxs)(Z.Z, {
+            children: (0, i.jsxs)(N.Z, {
                 ref: w,
                 user: t,
                 displayProfile: L,
@@ -92,7 +92,7 @@ function R(e) {
                             (0, i.jsxs)('div', {
                                 className: M.body,
                                 children: [
-                                    (0, i.jsx)(N.Z, {
+                                    (0, i.jsx)(Z.Z, {
                                         user: t,
                                         profileType: A.y0.PANEL,
                                         nickname: m.ZP.getName(null, n.id, t),
@@ -103,7 +103,7 @@ function R(e) {
                                             profileType: A.y0.PANEL
                                         })
                                     }),
-                                    (0, i.jsxs)(Z.Z.Overlay, {
+                                    (0, i.jsxs)(N.Z.Overlay, {
                                         className: M.overlay,
                                         children: [
                                             (0, i.jsx)(b.Z, {

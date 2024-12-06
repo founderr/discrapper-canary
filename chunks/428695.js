@@ -11,18 +11,18 @@ var i = n(200651),
     m = n(173549);
 let p = (0, s.debounce)(c.ZP.trackWithMetadata, 500);
 t.Z = function (e) {
-    let { guild: t, title: n, message: l, image: s, type: g, imageStyles: f, imageMarginX: _, imageMarginTop: E, trackingSource: I, undismissable: C, onDismissed: v, onClick: N, cta: S, ctaColor: T, centerText: b, className: A } = e;
+    let { guild: t, title: n, message: l, image: s, type: g, imageStyles: f, imageMarginX: _, imageMarginTop: E, trackingSource: I, undismissable: C, onDismissed: v, onClick: N, cta: S, ctaColor: T, centerText: b, className: x } = e;
     r.useEffect(() => {
         p(u.rMx.CHANNEL_NOTICE_VIEWED, {
             notice_type: g,
             guild_id: t.id
         });
     }, [t.id, g]);
-    let x = null;
+    let A = null;
     'function' == typeof S
-        ? (x = S())
+        ? (A = S())
         : null != S &&
-          (x = (0, i.jsx)(o.Button, {
+          (A = (0, i.jsx)(o.Button, {
               className: m.button,
               size: o.Button.Sizes.SMALL,
               onClick: () => {
@@ -60,7 +60,7 @@ t.Z = function (e) {
           }));
     let y = null != _ ? ''.concat(_, 'px') : '16px';
     return (0, i.jsxs)('div', {
-        className: a()(m.container, A),
+        className: a()(m.container, x),
         children: [
             !0 === C
                 ? null
@@ -93,7 +93,7 @@ t.Z = function (e) {
                 }),
             (0, i.jsxs)('div', {
                 className: m.message,
-                children: [Z, L, x]
+                children: [Z, L, A]
             })
         ]
     });

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return T;
     }
 }),
     n(47120),
@@ -15,8 +15,8 @@ var i = n(200651),
     d = n(246946),
     u = n(626135),
     m = n(669079),
-    g = n(981631),
-    h = n(388032),
+    h = n(981631),
+    g = n(388032),
     p = n(621550);
 function x(e, t, n) {
     return (
@@ -31,14 +31,14 @@ function x(e, t, n) {
         e
     );
 }
-class T extends s.Component {
+class S extends s.Component {
     get analyticsLocation() {
         let {
             analyticsContext: { location: e }
         } = this.props;
         return {
             ...e,
-            object: g.qAy.BUTTON_CTA
+            object: h.qAy.BUTTON_CTA
         };
     }
     render() {
@@ -46,9 +46,9 @@ class T extends s.Component {
             { codeInput: t, submitting: n, hasError: s, isPromoCode: r } = this.state;
         return (0, i.jsxs)(l.FormSection, {
             tag: l.FormTitleTags.H1,
-            title: h.intl.string(h.t['il+VCg']),
+            title: g.intl.string(g.t['il+VCg']),
             children: [
-                (0, i.jsx)(l.FormTitle, { children: h.intl.string(h.t.SeKIoa) }),
+                (0, i.jsx)(l.FormTitle, { children: g.intl.string(g.t.SeKIoa) }),
                 (0, i.jsx)('form', {
                     onSubmit: this.handleSubmit,
                     children: (0, i.jsxs)(o.Z, {
@@ -58,13 +58,13 @@ class T extends s.Component {
                                 value: t,
                                 onChange: this.handleChange,
                                 placeholder: 'WUMP-AAAAA-BBBBB-CCCCC',
-                                error: !r && s ? h.intl.string(h.t.Y11a2t) : null,
+                                error: !r && s ? g.intl.string(g.t.Y11a2t) : null,
                                 className: p.codeRedemptionInput
                             }),
                             (0, i.jsx)(l.Button, {
                                 type: 'submit',
                                 submitting: n,
-                                children: h.intl.string(h.t.KIpp7O)
+                                children: g.intl.string(g.t.KIpp7O)
                             })
                         ]
                     })
@@ -73,7 +73,7 @@ class T extends s.Component {
                     ? (0, i.jsx)(l.Text, {
                           className: p.errorMessage,
                           variant: 'text-sm/normal',
-                          children: h.intl.format(h.t.gPt3PD, {
+                          children: g.intl.format(g.t.gPt3PD, {
                               promoLink: () => {
                                   window.open('https://discord.com/billing/promotions/'.concat(t));
                               }
@@ -110,11 +110,11 @@ class T extends s.Component {
                 try {
                     let e = await a.Z.resolveGiftCode(n);
                     if (null != e && null != e.giftCode.promotion) throw (this.setState({ isPromoCode: !0 }), Error('Cannnot redeem promotion code as gift'));
-                    u.default.track(g.rMx.OPEN_MODAL, {
+                    u.default.track(h.rMx.OPEN_MODAL, {
                         type: 'gift_accept',
                         location: {
                             ...this.analyticsLocation,
-                            object: g.qAy.BUTTON_CTA
+                            object: h.qAy.BUTTON_CTA
                         }
                     }),
                         (0, c.V)({ processedCode: n }),
@@ -127,10 +127,10 @@ class T extends s.Component {
             });
     }
 }
-function S() {
+function T() {
     let e = s.useContext(u.AnalyticsContext),
         t = (0, r.e7)([d.Z], () => d.Z.enabled);
-    return (0, i.jsx)(T, {
+    return (0, i.jsx)(S, {
         analyticsContext: e,
         obscureInput: t
     });

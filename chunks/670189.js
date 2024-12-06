@@ -1,4 +1,4 @@
-t.r(
+n.r(
     (e.exports = {
         standardSidebarView: 'standardSidebarView_c25c6d',
         withUpsell: 'withUpsell_c25c6d',

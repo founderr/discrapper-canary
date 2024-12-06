@@ -10,8 +10,8 @@ var r = n(120356),
     u = n(639119),
     g = n(276800),
     m = n(474936),
-    p = n(981631),
-    f = n(388032),
+    f = n(981631),
+    p = n(388032),
     _ = n(763563);
 t.Z = function (e) {
     let { isFullScreen: t } = e,
@@ -20,7 +20,7 @@ t.Z = function (e) {
         { enabled: E } = d.Z.useExperiment({ location: 'Q4MomentBanner' + (t ? '-NitroHome' : '-NitroSettings') });
     if (!h || !E || null == r.expires_at) return null;
     let b = new Date(r.expires_at),
-        x = c.Z.getArticleURL(p.BhN.PREMIUM_TRIAL_FOR_ALL);
+        x = c.Z.getArticleURL(f.BhN.PREMIUM_TRIAL_FOR_ALL);
     return (0, i.jsx)(o.O, {
         newLocations: [l.Z.PREMIUM_MARKETING_PAGE_BANNER],
         children: (0, i.jsxs)('div', {
@@ -41,7 +41,7 @@ t.Z = function (e) {
                             (0, i.jsx)(s.Heading, {
                                 variant: 'display-sm',
                                 color: 'always-white',
-                                children: f.intl.string(f.t.krjl8v)
+                                children: p.intl.string(p.t.krjl8v)
                             }),
                             (0, i.jsx)(s.Text, {
                                 className: _.countdown,
@@ -52,7 +52,7 @@ t.Z = function (e) {
                             (0, i.jsx)(s.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'always-white',
-                                children: f.intl.format(f.t['5GKXe3'], { helpCenterLink: x })
+                                children: p.intl.format(p.t['5GKXe3'], { helpCenterLink: x })
                             })
                         ]
                     })

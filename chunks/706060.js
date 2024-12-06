@@ -21,10 +21,10 @@ function d(e) {
 }
 function u(e) {
     let { setting: t, children: n, depth: o } = e,
-        [m, g] = s.useState(1 === o),
-        h = s.useCallback(() => {
-            g(!m);
-        }, [m, g]);
+        [m, h] = s.useState(1 === o),
+        g = s.useCallback(() => {
+            h(!m);
+        }, [m, h]);
     if (0 === n.length)
         return (0, i.jsx)(
             'div',
@@ -65,7 +65,7 @@ function u(e) {
             children: [
                 (0, i.jsxs)(l.Clickable, {
                     className: c.headerBar,
-                    onClick: h,
+                    onClick: g,
                     children: [
                         (0, i.jsx)(d, {
                             setting: t,

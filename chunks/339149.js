@@ -9,8 +9,8 @@ n.d(t, {
 var i,
     l = n(200651),
     r = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(748780),
     c = n(442837),
     u = n(692547),
@@ -117,11 +117,11 @@ class Z extends r.PureComponent {
         super(...e),
             S(this, 'renderProgressBody', (e, t) => {
                 let { state: n, application: i } = this.props,
-                    { stage: l, progress: r, total: a, type: o } = n;
-                if (null == r || null == a || null == l) return null;
+                    { stage: l, progress: r, total: o, type: a } = n;
+                if (null == r || null == o || null == l) return null;
                 let s = (e[e.length - 1] / t) * 1000,
-                    c = 0 !== s ? Math.max(1, (a - r) / s) : null,
-                    u = E[o],
+                    c = 0 !== s ? Math.max(1, (o - r) / s) : null,
+                    u = E[a],
                     d = null != u ? Object.keys(u) : [],
                     { unit: h, time: p } = (0, m.CI)(null != c ? c / 60 : null, d);
                 if (null != u && null != h) {
@@ -162,7 +162,7 @@ class N extends (i = r.PureComponent) {
         let { percent: e, isPaused: t, className: n } = this.props;
         return (0, l.jsx)(s.Z.div, {
             style: { transform: [{ scale: this.state.animationScale }] },
-            className: o()(n, b.progressContainer),
+            className: a()(n, b.progressContainer),
             onClick: this.handleOnClick,
             children: (0, l.jsx)(h.Tooltip, {
                 text: this.getTooltipText(),

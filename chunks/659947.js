@@ -15,33 +15,33 @@ var i = n(200651),
     d = n(415795),
     u = n(592125),
     m = n(984933),
-    g = n(430824),
-    h = n(914010),
+    h = n(430824),
+    g = n(914010),
     p = n(727785),
     x = n(388032),
-    T = n(198491);
-function S() {}
-let _ = [p.h8.VOICE_CHANNEL];
-function E(e) {
+    S = n(198491);
+function T() {}
+let E = [p.h8.VOICE_CHANNEL];
+function _(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
 function C(e) {
     let { height: t } = e;
     return (0, i.jsx)('div', { style: { height: t } });
 }
-function f() {
+function I() {
     return (0, i.jsx)(C, { height: 16 }, 'footer');
 }
-function I() {
+function f() {
     return (0, i.jsx)(C, { height: 8 }, 'header');
 }
 function N() {
     return (0, i.jsx)('div', {
-        className: T.voiceListSearchEmpty,
+        className: S.voiceListSearchEmpty,
         children: (0, i.jsx)(l.Text, {
             variant: 'text-md/medium',
             color: 'text-muted',
-            className: T.noVoiceChannelSelected,
+            className: S.noVoiceChannelSelected,
             children: x.intl.string(x.t.zHjCd3)
         })
     });
@@ -69,12 +69,12 @@ function A(e) {
         }, []);
     return (0, i.jsx)(l.FormSection, {
         title: x.intl.string(x.t.q4JpMz),
-        className: T.channelIdSection,
+        className: S.channelIdSection,
         children: (0, i.jsxs)(c.Z, {
             align: c.Z.Align.STRETCH,
             children: [
                 (0, i.jsx)('div', {
-                    className: T.selectedVoiceChannel,
+                    className: S.selectedVoiceChannel,
                     children: (0, i.jsx)(v, { channelId: d })
                 }),
                 (0, i.jsx)(c.Z.Child, {
@@ -92,7 +92,7 @@ function A(e) {
 function b(e) {
     let { transitionState: t, onClose: n, onSelect: a } = e,
         c = s.useId(),
-        S = s.useRef(null),
+        T = s.useRef(null),
         {
             mouseFocusEnabled: C,
             enableMouseFocus: A,
@@ -117,15 +117,15 @@ function b(e) {
             queryResults: O
         } = (0, o.Z)({
             visible: !0,
-            autocompleterResultTypes: _,
-            autocompleterBeforeCreateSearchContext: E
+            autocompleterResultTypes: E,
+            autocompleterBeforeCreateSearchContext: _
         }),
         R = (function (e) {
             let t = '' !== e,
                 n = (0, r.Wu)(
-                    [m.ZP, u.Z, h.Z],
+                    [m.ZP, u.Z, g.Z],
                     () => {
-                        let e = h.Z.getGuildId();
+                        let e = g.Z.getGuildId();
                         if (t || null == e) return [];
                         let n = [];
                         for (let t of m.ZP.getVocalChannelIds(e)) {
@@ -151,7 +151,7 @@ function b(e) {
             );
         })(v);
     s.useEffect(() => {
-        let { current: e } = S;
+        let { current: e } = T;
         !(null == e || e.isItemVisible(0, P, !0)) &&
             e.scrollToIndex({
                 section: 0,
@@ -168,15 +168,15 @@ function b(e) {
             if ((null == t ? void 0 : t.type) === p.h8.VOICE_CHANNEL) return t.record.id;
         })();
     return (0, i.jsx)('div', {
-        className: T.voiceModalContainer,
+        className: S.voiceModalContainer,
         onMouseMove: A,
         children: (0, i.jsxs)(l.ModalRoot, {
             transitionState: t,
             size: l.ModalSize.MEDIUM,
-            className: T.voiceModalRootContainer,
+            className: S.voiceModalRootContainer,
             children: [
                 (0, i.jsx)('div', {
-                    className: T.inputWrapper,
+                    className: S.inputWrapper,
                     children: (0, i.jsx)(l.TextInput, {
                         value: v,
                         onChange: j,
@@ -219,7 +219,7 @@ function b(e) {
                         innerId: c,
                         innerRole: 'listbox',
                         'aria-label': x.intl.string(x.t['+N3fW1']),
-                        ref: S,
+                        ref: T,
                         sections: [y],
                         renderRow: function (e) {
                             let { row: t } = e,
@@ -230,7 +230,7 @@ function b(e) {
                                 })();
                             if (null == s) return null;
                             let r = null != s.parent_id ? u.Z.getChannel(s.parent_id) : void 0,
-                                l = g.Z.getGuild(s.guild_id);
+                                l = h.Z.getGuild(s.guild_id);
                             return (0, i.jsx)(
                                 d.$W,
                                 {
@@ -246,7 +246,7 @@ function b(e) {
                                     children:
                                         null != l
                                             ? (0, i.jsx)('div', {
-                                                  className: T.guildName,
+                                                  className: S.guildName,
                                                   children: l.name
                                               })
                                             : null
@@ -254,11 +254,11 @@ function b(e) {
                                 s.id
                             );
                         },
-                        renderListHeader: I,
-                        renderFooter: f,
+                        renderListHeader: f,
+                        renderFooter: I,
                         sectionHeight: 0,
                         rowHeight: 34,
-                        className: T.voiceChannelList,
+                        className: S.voiceChannelList,
                         listHeaderHeight: 8,
                         footerHeight: 16
                     })
@@ -272,13 +272,13 @@ function v(e) {
             channel: n,
             category: s,
             guild: a
-        } = (0, r.cj)([u.Z, g.Z], () => {
+        } = (0, r.cj)([u.Z, h.Z], () => {
             let e = null != t ? u.Z.getChannel(t) : void 0;
             return null != e
                 ? {
                       channel: e,
                       category: null != e.parent_id ? u.Z.getChannel(e.parent_id) : void 0,
-                      guild: null != e.guild_id ? g.Z.getGuild(e.guild_id) : void 0
+                      guild: null != e.guild_id ? h.Z.getGuild(e.guild_id) : void 0
                   }
                 : {
                       channel: void 0,
@@ -290,21 +290,21 @@ function v(e) {
         ? (0, i.jsx)(l.Text, {
               variant: 'text-md/medium',
               color: 'text-muted',
-              className: T.noVoiceChannelSelected,
+              className: S.noVoiceChannelSelected,
               children: x.intl.string(x.t['/fYIKy'])
           })
         : (0, i.jsx)(d.$W, {
               channel: n,
               id: n.id,
               category: s,
-              onClick: S,
-              onFocus: S,
-              onMouseEnter: S,
+              onClick: T,
+              onFocus: T,
+              onMouseEnter: T,
               focused: !1,
               children:
                   null != a
                       ? (0, i.jsx)('div', {
-                            className: T.guildName,
+                            className: S.guildName,
                             children: a.name
                         })
                       : null

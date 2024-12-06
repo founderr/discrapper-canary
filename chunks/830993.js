@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(481060),
-    o = n(616780),
+    o = n(481060),
+    a = n(616780),
     s = n(619915),
     c = n(620662),
     u = n(841784),
@@ -46,7 +46,7 @@ function Z(e) {
                               : []
                   };
         }, [e, t]);
-        (0, o.$)(n);
+        (0, a.$)(n);
     })(h, C);
     let I = (0, s.ZP)(h),
         Z = Array.from((0, s.uF)(I).values()),
@@ -60,16 +60,16 @@ function Z(e) {
                     y.forEach((t) => {
                         let n = m.Z.findActivity(t.user.id, T(t));
                         if (null != n && !(0, u.Z)(n)) {
-                            var i, l, r, a;
-                            let o = ''.concat(null !== (l = n.application_id) && void 0 !== l ? l : '', ':').concat(null !== (r = null === (i = n.party) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.user.id),
+                            var i, l, r, o;
+                            let a = ''.concat(null !== (l = n.application_id) && void 0 !== l ? l : '', ':').concat(null !== (r = null === (i = n.party) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.user.id),
                                 s =
-                                    null !== (a = e[o]) && void 0 !== a
-                                        ? a
+                                    null !== (o = e[a]) && void 0 !== o
+                                        ? o
                                         : {
                                               members: [],
                                               activity: n
                                           };
-                            s.members.push(t), !(0, c.Z)(s.activity, b.xjy.JOIN) && (s.activity = n), (e[o] = s);
+                            s.members.push(t), !(0, c.Z)(s.activity, b.xjy.JOIN) && (s.activity = n), (e[a] = s);
                         }
                     }),
                     Object.values(e)
@@ -80,7 +80,7 @@ function Z(e) {
         );
     return A.length + Z.length === 0
         ? null
-        : (0, i.jsxs)(a.Scroller, {
+        : (0, i.jsxs)(o.Scroller, {
               className: E.container,
               children: [
                   (0, i.jsx)(N, {
@@ -121,13 +121,13 @@ function Z(e) {
                               (0, i.jsx)('div', { className: E.headerDivider }),
                               (0, i.jsx)('div', {
                                   className: E.settingNudgeText,
-                                  children: (0, i.jsx)(a.Text, {
+                                  children: (0, i.jsx)(o.Text, {
                                       variant: 'text-xs/normal',
                                       tag: 'span',
                                       children: S.intl.format(S.t.ePyoY2, {
                                           onClick: () => {
-                                              (0, a.openModalLazy)(async () => {
-                                                  let { default: e } = await Promise.all([n.e('23217'), n.e('33053'), n.e('8016'), n.e('17298'), n.e('76540'), n.e('17938'), n.e('22646'), n.e('34842'), n.e('48923'), n.e('30419'), n.e('8821'), n.e('18824'), n.e('38175'), n.e('42309'), n.e('37229'), n.e('25183'), n.e('28044'), n.e('19081'), n.e('8876')]).then(n.bind(n, 241420));
+                                              (0, o.openModalLazy)(async () => {
+                                                  let { default: e } = await Promise.all([n.e('23217'), n.e('33053'), n.e('8016'), n.e('17298'), n.e('76540'), n.e('17938'), n.e('22646'), n.e('34842'), n.e('48923'), n.e('30419'), n.e('8821'), n.e('18824'), n.e('38175'), n.e('42309'), n.e('37229'), n.e('25183'), n.e('28044'), n.e('19081'), n.e('23419')]).then(n.bind(n, 241420));
                                                   return (t) =>
                                                       (0, i.jsx)(e, {
                                                           ...t,
@@ -145,12 +145,12 @@ function Z(e) {
 }
 function N(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: l } = e,
-        a = (0, r.e7)([p.Z], () => !p.Z.can(b.Plq.CONNECT, t)),
-        o = (0, r.e7)([f.Z], () => f.Z.hasVideo(t.id)),
+        o = (0, r.e7)([p.Z], () => !p.Z.can(b.Plq.CONNECT, t)),
+        a = (0, r.e7)([f.Z], () => f.Z.hasVideo(t.id)),
         s = (0, C.ZP)({
             channel: t,
-            locked: a,
-            video: o,
+            locked: o,
+            video: a,
             selected: n
         }),
         c = (0, r.e7)([h.Z], () => h.Z.getGuild(t.guild_id));
@@ -163,7 +163,7 @@ function N(e) {
                   s
                       ? (0, i.jsx)(x.Z, {
                             userCount: l,
-                            video: o,
+                            video: a,
                             channel: t
                         })
                       : (0, i.jsx)(I.Z, { userCount: l })

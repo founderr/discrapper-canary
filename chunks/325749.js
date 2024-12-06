@@ -14,15 +14,15 @@ var i = t(200651),
     u = t(753972),
     s = t(812206),
     p = t(726721),
-    v = t(610394),
-    m = t(390322),
+    m = t(610394),
+    v = t(390322),
     f = t(961048),
     h = t(871499),
     x = t(786915),
     Z = t(592125),
     I = t(271383),
-    C = t(594174),
-    _ = t(51144),
+    _ = t(594174),
+    C = t(51144),
     j = t(145597),
     g = t(214629),
     P = t(317381),
@@ -59,7 +59,7 @@ function k(e) {
                 var t;
                 if (null == e || void 0 === e || void 0 === n) return null;
                 let r = R.get(e.id),
-                    a = null !== (t = null == r ? void 0 : r.nick) && void 0 !== t ? t : _.ZP.getName(e);
+                    a = null !== (t = null == r ? void 0 : r.nick) && void 0 !== t ? t : C.ZP.getName(e);
                 return (0, i.jsx)(
                     d.TooltipContainer,
                     {
@@ -82,17 +82,17 @@ function k(e) {
         ),
         O = null == k ? void 0 : k.userIds,
         B = (0, o.Wu)(
-            [C.default],
+            [_.default],
             () =>
                 Array.from(null != O ? O : [])
-                    .map((e) => C.default.getUser(e))
+                    .map((e) => _.default.getUser(e))
                     .filter((e) => null != e && void 0 !== e),
             [O]
         ),
         M = p.Z.useExperiment({ location: 'activity_popout_overflow_menu' }, { autoTrackExposure: !0 }).enabled,
         U = r.useCallback(() => {
             let e = (0, j.QF)();
-            c.Z.setInputLocked(!v.Z.isInputLocked(e), e);
+            c.Z.setInputLocked(!m.Z.isInputLocked(e), e);
         }, []),
         z = (0, g.PR)();
     return null == a || null == t || null == w
@@ -159,7 +159,7 @@ function k(e) {
                                                   position: 'bottom',
                                                   renderPopout: (e) => {
                                                       let { closePopout: n } = e;
-                                                      return (0, i.jsx)(m.Z, {
+                                                      return (0, i.jsx)(v.Z, {
                                                           children: (0, i.jsx)(S.Z, {
                                                               application: a,
                                                               channelId: t,

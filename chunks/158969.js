@@ -19,7 +19,7 @@ var i = n(200651),
     I = n(73368),
     E = n(507304),
     b = n(665162);
-let Z = l.memo(function (e) {
+let N = l.memo(function (e) {
     let { message: t, notice: n, compact: l = !1, onDismiss: r } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -64,7 +64,7 @@ let Z = l.memo(function (e) {
 t.Z = l.memo(function (e) {
     var t, n;
     let { className: r, compact: s, message: d, children: m, content: f, onUpdate: v } = e,
-        N = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
+        Z = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
         S = l.useRef(!1),
         T = (0, c.e7)([p.Z], () => p.Z.getMessage(d.id), [d.id]),
         j = l.useCallback(() => {
@@ -73,7 +73,7 @@ t.Z = l.memo(function (e) {
     return (
         l.useLayoutEffect(() => {
             S.current ? null != v && v() : (S.current = !0);
-        }, [v, d.content, f, N, m]),
+        }, [v, d.content, f, Z, m]),
         (0, i.jsxs)('div', {
             id: (0, g.ut)(d),
             className: a()(r, b.markup, {
@@ -100,7 +100,7 @@ t.Z = l.memo(function (e) {
                             })
                         ]
                     }),
-                (0, i.jsx)(Z, {
+                (0, i.jsx)(N, {
                     notice: null !== (n = null == T ? void 0 : T.errorMessage) && void 0 !== n ? n : _.intl.string(_.t.zQ69pq),
                     message: d,
                     compact: s,

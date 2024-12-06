@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return g;
     }
 }),
     n(47120);
@@ -14,8 +14,8 @@ var i = n(200651),
     d = n(851718),
     u = n(238847),
     m = n(388032),
-    g = n(410507);
-function h(e) {
+    h = n(410507);
+function g(e) {
     let { onGoBack: t } = e,
         n = (0, r.Wu)([o.ZP], () => {
             var e, t;
@@ -42,7 +42,7 @@ function h(e) {
             children: [
                 c,
                 (0, i.jsx)('div', {
-                    className: g.subscriptionsContainer,
+                    className: h.subscriptionsContainer,
                     children: l
                         ? (0, i.jsx)(d.Z, {
                               subscriptions: n,
@@ -66,7 +66,7 @@ function h(e) {
 function p(e) {
     let { onBack: t, title: n } = e;
     return (0, i.jsxs)('div', {
-        className: g.title,
+        className: h.title,
         children: [
             (0, i.jsx)(l.Button, {
                 look: l.Button.Looks.BLANK,

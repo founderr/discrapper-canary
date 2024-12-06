@@ -3,7 +3,7 @@ n.d(t, {
         return Q;
     },
     n: function () {
-        return H;
+        return U;
     }
 }),
     n(724458),
@@ -25,8 +25,8 @@ var i = n(200651),
     x = n(852860),
     f = n(911969),
     v = n(410030),
-    j = n(607070),
-    C = n(940639),
+    C = n(607070),
+    j = n(940639),
     b = n(325476),
     T = n(146085),
     N = n(598077),
@@ -41,14 +41,14 @@ var i = n(200651),
     _ = n(63063),
     A = n(5192),
     M = n(233608),
-    D = n(700785),
-    B = n(51144),
+    B = n(700785),
+    D = n(51144),
     P = n(257017),
     k = n(188857),
     O = n(981631),
     F = n(388032),
     G = n(987791);
-let H = o.ZP.connectStores([S.Z, Z.Z], () => {
+let U = o.ZP.connectStores([S.Z, Z.Z], () => {
     let e = Z.Z.getChannel();
     return {
         submitting: S.Z.formState === O.QZA.SUBMITTING,
@@ -105,7 +105,7 @@ function V(e) {
                 let e;
                 if (t.type === f.BN.MEMBER) {
                     let n = R.default.getUser(t.id);
-                    null != n && (e = B.ZP.getName(n));
+                    null != n && (e = D.ZP.getName(n));
                 } else if (t.type === f.BN.ROLE) {
                     let i = y.Z.getGuild(n.getGuildId());
                     if (null != i) {
@@ -116,7 +116,7 @@ function V(e) {
                 P.X(e);
             }
         },
-        j = () => {
+        C = () => {
             let e = x();
             u.Z.show({
                 title: F.intl.string(F.t.GuPYQE),
@@ -125,7 +125,7 @@ function V(e) {
                 onConfirm: () => h.Z.clearPermissionOverwrite(c, g)
             });
         },
-        C = (e) => {
+        j = (e) => {
             let t = I.Z.can(O.Plq.ADMINISTRATOR, l) || I.Z.can(O.Plq.MANAGE_ROLES, n, void 0, void 0, !0);
             return n.isGuildStageVoice() && T.xS.has(e) ? F.intl.string(F.t.bTS5lZ) : !((!a.fS(e, O.Plq.MANAGE_ROLES) || t) && (null == e || I.Z.can(e, l) || t)) && F.intl.string(F.t.nOtPMD);
         },
@@ -149,7 +149,7 @@ function V(e) {
                         allow: t.allow,
                         deny: t.deny,
                         onChange: v,
-                        permissionRender: C,
+                        permissionRender: j,
                         className: G.permissionsForm
                     },
                     n
@@ -160,17 +160,17 @@ function V(e) {
                 : (0, i.jsx)(d.Button, {
                       look: d.Button.Looks.OUTLINED,
                       color: d.Button.Colors.RED,
-                      onClick: j,
+                      onClick: C,
                       children: F.intl.format(F.t.txPV7u, { name: x() })
                   })
         ]
     });
 }
-function U(e) {
+function H(e) {
     let { guildId: t, channelId: n, user: l } = e,
         s = l.getAvatarURL(t, 32),
         r = A.ZP.getNickname(t, n, l),
-        a = B.ZP.useUserTag(l),
+        a = D.ZP.useUserTag(l),
         o = null,
         c = null;
     return (
@@ -225,7 +225,7 @@ function z(e) {
     let { guild: t, channel: n, permissionOverwrites: l, onClose: s, onSelect: a, position: c } = e,
         d = (0, o.e7)([y.Z], () => y.Z.getRoles(t.id)),
         u = (0, o.Wu)([E.ZP], () => E.ZP.getMemberIds(t.id));
-    return (0, i.jsx)(C.Z, {
+    return (0, i.jsx)(j.Z, {
         label: F.intl.string(F.t.lT5Ztr),
         placeholder: F.intl.string(F.t.V2pZRk),
         'aria-label': F.intl.string(F.t['Uvt+p6']),
@@ -242,7 +242,7 @@ function z(e) {
                 );
             }
             if (e instanceof N.Z)
-                return (0, i.jsx)(U, {
+                return (0, i.jsx)(H, {
                     guildId: t.id,
                     channelId: n.id,
                     user: e
@@ -287,8 +287,8 @@ function X() {
             [a]
         ),
         x = (0, k.Z)(a, t),
-        C = (0, v.ZP)(),
-        T = (0, o.e7)([j.Z], () => j.Z.roleStyle);
+        j = (0, v.ZP)(),
+        T = (0, o.e7)([C.Z], () => C.Z.roleStyle);
     if (null == u || null == p || null == e || null == t) return null;
     let N = (n) => {
             let { position: l, closePopout: s } = n;
@@ -305,11 +305,11 @@ function X() {
             h.Z.updatePermissionOverwrite(e.id, {
                 id: t,
                 type: n,
-                allow: D.Hn,
-                deny: D.Hn
+                allow: B.Hn,
+                deny: B.Hn
             }).then(() => (0, m.Aj)(t));
         };
-    null != t && null == t[u.id] && (t[u.id] = D.we(u.id));
+    null != t && null == t[u.id] && (t[u.id] = B.we(u.id));
     let E = r()(t)
             .filter((e) => e.type === f.BN.ROLE)
             .map((e) => p[e.id])
@@ -319,7 +319,7 @@ function X() {
                 (0, i.jsx)(
                     g.Z,
                     {
-                        theme: C,
+                        theme: j,
                         roleStyle: T,
                         id: e.id,
                         role: e,
@@ -341,9 +341,9 @@ function X() {
                     {
                         id: e.id,
                         guild: u,
-                        theme: C,
+                        theme: j,
                         roleStyle: T,
-                        'aria-label': B.ZP.getUserTag(e, { decoration: 'never' }),
+                        'aria-label': D.ZP.getUserTag(e, { decoration: 'never' }),
                         children: (0, i.jsxs)('div', {
                             className: G.inline,
                             children: [
@@ -355,7 +355,7 @@ function X() {
                                 }),
                                 (0, i.jsx)('span', {
                                     className: G.username,
-                                    children: B.ZP.getUserTag(e)
+                                    children: D.ZP.getUserTag(e)
                                 })
                             ]
                         })
@@ -373,7 +373,7 @@ function X() {
             orientation: 'vertical',
             children: [
                 (() => {
-                    let e = (0, c.wj)(C) ? n(521715) : n(299603);
+                    let e = (0, c.wj)(j) ? n(521715) : n(299603);
                     return (0, i.jsx)(d.Popout, {
                         renderPopout: N,
                         position: 'bottom',

@@ -20,8 +20,8 @@ var i = n(200651),
     I = n(923973),
     E = n(829750),
     b = n(189771),
-    Z = n(294629),
-    N = n(793319),
+    N = n(294629),
+    Z = n(793319),
     S = n(411840),
     T = n(560688),
     j = n(390322),
@@ -135,7 +135,7 @@ function ea(e) {
         c = (0, s.e7)([V.Z], () => V.Z.getStageInstanceByChannel(t.id), [t.id]),
         u = (0, s.e7)([C.ZP], () => C.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)),
         h = (0, s.e7)([O.Z], () => O.Z.getVoiceChannelId() === t.id, [t.id]),
-        { suppress: p } = (0, Z.Z)(t),
+        { suppress: p } = (0, N.Z)(t),
         m = R.default.getId(),
         [f] = (0, Q.Z)(t),
         g = F.ZP.isModerator(m, t.id),
@@ -305,7 +305,7 @@ function eo(e) {
 }
 let ec = l.memo(function (e) {
     let { channel: t } = e,
-        { suppress: n, selfMute: l, mute: r } = (0, Z.Z)(t),
+        { suppress: n, selfMute: l, mute: r } = (0, N.Z)(t),
         c = (0, H.B)(t.id),
         d = (0, s.e7)([f.Z], () => null != f.Z.getAwaitingRemoteSessionInfo()),
         { cameraUnavailable: C, enabled: x } = (0, I.Z)(),
@@ -339,7 +339,7 @@ let ec = l.memo(function (e) {
                         hasPermission: v,
                         enabled: x,
                         cameraUnavailable: C,
-                        onChange: N.r,
+                        onChange: Z.r,
                         onCameraUnavailable: T.Z,
                         channelLimitReached: A,
                         channelLimit: _,
@@ -350,7 +350,7 @@ let ec = l.memo(function (e) {
             }),
             V
                 ? null
-                : (0, i.jsx)(N.NZ, {
+                : (0, i.jsx)(Z.NZ, {
                       channel: t,
                       currentUser: y,
                       exitFullScreen: () => null,
@@ -409,7 +409,7 @@ let ec = l.memo(function (e) {
                       className: et.buttonSection,
                       children: [
                           k && !n && G
-                              ? (0, i.jsx)(N.NZ, {
+                              ? (0, i.jsx)(Z.NZ, {
                                     channel: t,
                                     currentUser: y,
                                     exitFullScreen: () => null,

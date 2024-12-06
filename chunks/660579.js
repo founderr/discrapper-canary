@@ -8,11 +8,11 @@ var r = n(200651),
     i = n(192379),
     a = n(810097);
 function s(e) {
-    let { user: t, sourceType: n, className: s, children: o, interactionSourceId: l, moreButton: u, onShowToolbar: c } = e,
+    let { user: t, sourceType: n, className: s, children: o, interactionSourceId: l, onShowToolbar: u, renderMoreButtonPopout: c } = e,
         d = i.useRef(null),
         [f, _] = i.useState(!1),
         p = () => {
-            null == c || c(), _(!0);
+            null == u || u(), _(!0);
         },
         h = () => {
             _(!1);
@@ -35,7 +35,7 @@ function s(e) {
                 isVisible: f,
                 isExpandable: !1,
                 interactionSourceId: l,
-                moreButton: u
+                renderMoreButtonPopout: c
             })
         ]
     });

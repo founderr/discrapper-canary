@@ -1,9 +1,9 @@
 t.d(n, {
     ZP: function () {
-        return I;
+        return f;
     },
     so: function () {
-        return f;
+        return I;
     },
     wg: function () {
         return m;
@@ -35,15 +35,15 @@ function m(e) {
     let r = t.getChannel(a);
     return null != r && s.Uu(p.Plq.VIEW_CHANNEL, r);
 }
-function f(e) {
+function I(e) {
     let [n, t, i, s] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.ZP, c.Z, d.Z, r.Z];
     if ((0, _.Z2)(e)) return !1;
-    let { guild_id: p, channel_id: f } = e,
-        I = e.entity_type === u.WX.EXTERNAL ? n.getDefaultChannel(e.guild_id) : t.getChannel(f),
+    let { guild_id: p, channel_id: I } = e,
+        f = e.entity_type === u.WX.EXTERNAL ? n.getDefaultChannel(e.guild_id) : t.getChannel(I),
         g = i.getGuild(p),
-        C = s.getStageInstanceByChannel(f);
-    return !!(0, a.b)(l.Z, g, I, C) && null != I && m(e, [t]);
+        C = s.getStageInstanceByChannel(I);
+    return !!(0, a.b)(l.Z, g, f, C) && null != f && m(e, [t]);
 }
-function I(e) {
-    return (0, i.e7)([o.ZP, c.Z, d.Z, r.Z], () => f(e, [o.ZP, c.Z, d.Z, r.Z]), [e]);
+function f(e) {
+    return (0, i.e7)([o.ZP, c.Z, d.Z, r.Z], () => I(e, [o.ZP, c.Z, d.Z, r.Z]), [e]);
 }

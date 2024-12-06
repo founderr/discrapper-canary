@@ -11,16 +11,16 @@ var i = n(200651),
     m = n(494897);
 t.Z = function (e) {
     let { canAddBoosts: t, canApplyBoosts: n } = e,
-        g = (0, r.e7)([a.Z], () => a.Z.affinities),
-        h = (0, r.e7)([o.ZP], () => o.ZP.getFlattenedGuildIds()),
+        h = (0, r.e7)([a.Z], () => a.Z.affinities),
+        g = (0, r.e7)([o.ZP], () => o.ZP.getFlattenedGuildIds()),
         p = s.useMemo(() => {
-            let e = g.slice(0, 3).map((e) => e.guildId);
-            for (let t = 0; t < h.length && !(e.length >= 3); t++) {
-                let n = h[t];
+            let e = h.slice(0, 3).map((e) => e.guildId);
+            for (let t = 0; t < g.length && !(e.length >= 3); t++) {
+                let n = g[t];
                 !e.includes(n) && e.push(n);
             }
             return e;
-        }, [g, h]);
+        }, [h, g]);
     return 0 === p.length
         ? null
         : (0, i.jsxs)('div', {
@@ -43,7 +43,7 @@ t.Z = function (e) {
                           e
                       )
                   ),
-                  h.length > 3 && n && (0, i.jsx)(c.Z, {})
+                  g.length > 3 && n && (0, i.jsx)(c.Z, {})
               ]
           });
 };

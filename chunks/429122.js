@@ -9,8 +9,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(884338),
-    a = n(934415),
-    o = n(540126),
+    o = n(934415),
+    a = n(540126),
     s = n(700026),
     c = n(301342),
     u = n(327530),
@@ -21,22 +21,22 @@ let h = l.memo(function (e) {
     return null == r ? null : (0, i.jsx)(c.Qo, { category: r });
 });
 function p(e) {
-    let { sectionIndex: t, guildChannels: n, voiceStates: i, selectedChannelId: l, selectedVoiceChannelId: r, optInEnabled: a } = e;
+    let { sectionIndex: t, guildChannels: n, voiceStates: i, selectedChannelId: l, selectedVoiceChannelId: r, optInEnabled: o, visualRefreshEnabled: c } = e;
     if (t === n.voiceChannelsSectionNumber) return 44;
-    let { hasDivider: c, canHaveVoiceSummary: d } = (0, s.ie)(n, a, t),
-        h = c ? u.QP : 0;
-    if (!d || t === o.wZ) return h;
-    let p = n.getNamedCategoryFromSection(t);
-    return null == p
-        ? h
+    let { hasDivider: d, canHaveVoiceSummary: h } = (0, s.ie)(n, o, t),
+        p = d ? u.QP : 0;
+    if (!h || t === a.wZ) return p;
+    let m = n.getNamedCategoryFromSection(t);
+    return null == m
+        ? p
         : (0, s.V5)({
-                category: p,
+                category: m,
                 selectedChannelId: l,
                 selectedVoiceChannelId: r,
                 voiceStates: i
             })
-          ? u.Vf + h
-          : h;
+          ? (c ? 38 : u.Vf) + p
+          : p;
 }
 function m(e, t, n) {
     if (e === t.voiceChannelsSectionNumber) return 'voice-channels-button';
@@ -49,11 +49,11 @@ function m(e, t, n) {
 t.ZP = l.memo(function (e) {
     let { sectionIndex: t, guildChannels: n, guildChannelsVersion: c, voiceStates: u, guildId: p, selectedChannelId: m, selectedVoiceChannelId: f, optInEnabled: g } = e,
         { hasDivider: C, canHaveVoiceSummary: _ } = l.useMemo(() => (0, s.ie)(n, g, t), [n, g, t, c]),
-        v = l.useMemo(() => (t === o.wZ ? null : n.getCategoryFromSection(t)), [n, t, c]),
+        v = l.useMemo(() => (t === a.wZ ? null : n.getCategoryFromSection(t)), [n, t, c]),
         x = l.useMemo(
             () =>
                 null != v && v.isCollapsed
-                    ? (0, a.c4)({
+                    ? (0, o.c4)({
                           channels: v.getChannelRecords(),
                           selectedChannelId: m,
                           selectedVoiceChannelId: f,

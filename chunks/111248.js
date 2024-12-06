@@ -35,10 +35,10 @@ function v(e) {
             ];
         })(),
         b = l.useRef(null),
-        Z = null == v.getGuildId() ? 70 : 50,
-        N = (0, s.e7)([u.Z], () => u.Z.pipWidth(m.cL.CAMERA_PREVIEW)),
+        N = null == v.getGuildId() ? 70 : 50,
+        Z = (0, s.e7)([u.Z], () => u.Z.pipWidth(m.cL.CAMERA_PREVIEW)),
         S = _.length;
-    let T = N * (t = S) + 8 * (t - 1),
+    let T = Z * (t = S) + 8 * (t - 1),
         j = l.useMemo(() => {
             var e, t, n, i;
             return {
@@ -75,7 +75,7 @@ function v(e) {
             onResize: A,
             maxX: n,
             maxY: x,
-            edgeOffsetTop: Z,
+            edgeOffsetTop: N,
             edgeOffsetBottom: 70,
             edgeOffsetLeft: 16,
             edgeOffsetRight: 16,

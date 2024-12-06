@@ -79,13 +79,13 @@ var i,
     S = n(979651),
     T = n(70956),
     b = n(5192),
-    A = n(226951),
-    x = n(591759),
+    x = n(226951),
+    A = n(591759),
     Z = n(996106),
     L = n(863141),
     y = n(186901),
     P = n(981631);
-let O = null !== (r = null === (i = x.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)) || void 0 === i ? void 0 : i.host) && void 0 !== r ? r : 'localhost',
+let O = null !== (r = null === (i = A.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)) || void 0 === i ? void 0 : i.host) && void 0 !== r ? r : 'localhost',
     R = (function () {
         let e = O.split(':')[0];
         if (!e.includes('.')) return e;
@@ -93,7 +93,7 @@ let O = null !== (r = null === (i = x.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT
             n = t[t.length - 1];
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
     })(),
-    j = new RegExp('^'.concat(A.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(A.Z.escape(R), '|discordapp.com|discord.com)$')),
+    j = new RegExp('^'.concat(x.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(x.Z.escape(R), '|discordapp.com|discord.com)$')),
     D = 1 * T.Z.Millis.MINUTE,
     M = {};
 function w(e) {

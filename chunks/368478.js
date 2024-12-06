@@ -31,14 +31,14 @@ function g(e) {
         I = null != C && C.applicationId === a.id && C.channelId === t.id,
         { analyticsLocations: E } = (0, c.ZP)(o.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON),
         b = null != t.recipients ? t.recipients[0] : void 0,
-        Z = (0, h.ms)({
+        N = (0, h.ms)({
             channel: t,
             applicationId: a.id,
             botUserId: b
         });
     return {
         isExecutingLaunchInteraction: u,
-        buttonText: Z && _ ? (I ? f.intl.string(f.t['Hi1/aW']) : null != v ? v : f.intl.string(f.t.zKX8Nj)) : f.intl.string(x),
+        buttonText: N && _ ? (I ? f.intl.string(f.t['Hi1/aW']) : null != v ? v : f.intl.string(f.t.zKX8Nj)) : f.intl.string(x),
         hasActiveMatchingEmbeddedActivity: I,
         isEmbeddedApp: _,
         currentEmbeddedActivity: C,

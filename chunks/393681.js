@@ -9,17 +9,17 @@ var i = n(200651),
     d = n(780384),
     u = n(481060),
     m = n(816814),
-    g = n(809206),
-    h = n(497321),
+    h = n(809206),
+    g = n(497321),
     p = n(279837),
     x = n(952306),
-    T = n(600164),
-    S = n(690221),
-    _ = n(346585),
-    E = n(347649),
+    S = n(600164),
+    T = n(690221),
+    E = n(346585),
+    _ = n(347649),
     C = n(332473),
-    f = n(303172),
-    I = n(518560),
+    I = n(303172),
+    f = n(518560),
     N = n(921801),
     A = n(484459),
     b = n(430824),
@@ -52,7 +52,7 @@ class X extends s.PureComponent {
         (0, A.Z)(e.id, e.getAvatarURL(void 0, 80));
     }
     componentWillUnmount() {
-        m.Z.clearBackupCodes(), (0, g.Zy)();
+        m.Z.clearBackupCodes(), (0, h.Zy)();
     }
     renderAccountWarning() {
         let { currentUser: e } = this.props;
@@ -117,12 +117,12 @@ class X extends s.PureComponent {
                   className: K.accountWarningBodyText,
                   messageType: u.HelpMessageTypes.WARNING,
                   children: [
-                      this.props.forceMigrationExperiment ? W.intl.format(W.t.zT1hgo, { date: (0, _.IE)(this.props.locale) }) : W.intl.format(W.t.pdYZys, {}),
+                      this.props.forceMigrationExperiment ? W.intl.format(W.t.zT1hgo, { date: (0, E.IE)(this.props.locale) }) : W.intl.format(W.t.pdYZys, {}),
                       ' ',
                       '',
-                      (0, i.jsx)(S.Z, {
+                      (0, i.jsx)(T.Z, {
                           className: K.noticeTextButton,
-                          onClick: () => (0, f.Z)(z.Kq.USER_SETTINGS),
+                          onClick: () => (0, I.Z)(z.Kq.USER_SETTINGS),
                           children: W.intl.string(W.t.LhlgY2)
                       })
                   ]
@@ -184,17 +184,17 @@ class X extends s.PureComponent {
                 }),
                 (0, i.jsx)(N.F, {
                     setting: Y.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                    children: (0, i.jsxs)(T.Z, {
-                        align: T.Z.Align.STRETCH,
+                    children: (0, i.jsxs)(S.Z, {
+                        align: S.Z.Align.STRETCH,
                         children: [
-                            (0, i.jsx)(T.Z.Child, {
+                            (0, i.jsx)(S.Z.Child, {
                                 wrap: !0,
                                 children: (0, i.jsx)(k.Z, { backupCodes: e })
                             }),
                             t.mfaEnabled
                                 ? null
-                                : (0, i.jsx)(T.Z, {
-                                      align: T.Z.Align.CENTER,
+                                : (0, i.jsx)(S.Z, {
+                                      align: S.Z.Align.CENTER,
                                       basis: '323px',
                                       grow: 0,
                                       children: (0, i.jsx)('img', {
@@ -234,7 +234,7 @@ class X extends s.PureComponent {
                 confirmText: W.intl.string(W.t['8lQ2ra']),
                 cancelText: W.intl.string(W.t['ETE/oK']),
                 onCancel: e,
-                onConfirm: () => (0, g.ss)('', !0).then(e),
+                onConfirm: () => (0, h.ss)('', !0).then(e),
                 children: (0, i.jsx)(u.Text, {
                     variant: 'text-md/normal',
                     children: W.intl.string(W.t.FB4H1N)
@@ -310,7 +310,7 @@ class X extends s.PureComponent {
                     },
                     {
                         title: W.intl.string(W.t['Vov/9v']),
-                        component: I.Z,
+                        component: f.Z,
                         setting: Y.s6.PRIVACY_AND_SAFETY_STANDING
                     }
                 ]
@@ -319,7 +319,7 @@ class X extends s.PureComponent {
     }
     render() {
         return this.props.hide
-            ? (0, i.jsx)(h.Z, {})
+            ? (0, i.jsx)(g.Z, {})
             : this.props.isEligibleForSafetySettingsRedesign
               ? this.renderSafetySettingsRedesignV2()
               : (0, i.jsxs)('div', {
@@ -352,7 +352,7 @@ class X extends s.PureComponent {
         });
     }
     handleSubmitDisableAccount(e, t) {
-        return (0, g.ss)(e, t).then(H.dG4, this.handleDisableAccountError);
+        return (0, h.ss)(e, t).then(H.dG4, this.handleDisableAccountError);
     }
     handleDisableAccount() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -393,7 +393,7 @@ t.Z = () => {
         n = (0, c.e7)([j.Z], () => j.Z.hidePersonalInformation),
         s = (0, c.e7)([L.Z], () => L.Z.theme),
         r = (0, C.b)(),
-        l = (0, E.CC)(),
+        l = (0, _.CC)(),
         a = (0, c.e7)([y.default], () => y.default.locale),
         d = (0, B._p)({ location: 'UserSettingsAccount' }),
         u = (0, c.e7)([O.Z], () => O.Z.getSubsection());

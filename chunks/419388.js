@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: function () {
-        return Z;
+        return N;
     }
 }),
     n(47120),
@@ -574,7 +574,7 @@ class b {
         }
     }
 }
-function Z(e) {
+function N(e) {
     let { messages: t, channel: n, compact: l, hasUnreads: r, focusId: a, placeholderHeight: s, canLoadMore: o = !0, handleScrollToBottom: c, handleScrollFromBottom: u } = e,
         { windowId: h } = i.useContext(d.ZP),
         [p] = i.useState(

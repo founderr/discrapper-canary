@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return C;
     }
 });
 var i = n(200651),
@@ -19,12 +19,12 @@ var i = n(200651),
     x = n(981631),
     f = n(388032),
     v = n(28772);
-function j(e) {
+function C(e) {
     let { channel: t } = e,
         s = (0, a.e7)([m.Z], () => m.Z.can(x.Plq.MANAGE_CHANNELS, t), [t]),
         u = t.availableTags.length >= p.pC,
         g = t.availableTags.length > 0,
-        j = l.useCallback(() => {
+        C = l.useCallback(() => {
             let e = t.availableTags.length >= p.pC;
             s &&
                 !e &&
@@ -67,7 +67,7 @@ function j(e) {
             g
                 ? t.availableTags.map((e) =>
                       (0, i.jsx)(
-                          C,
+                          j,
                           {
                               tag: e,
                               availableTags: t.availableTags,
@@ -83,7 +83,7 @@ function j(e) {
                 : null,
             g
                 ? (0, i.jsx)(c.Clickable, {
-                      onClick: j,
+                      onClick: C,
                       className: r()(v.addTags, { [v.disabled]: !s || u }),
                       children: (0, i.jsx)(c.PlusSmallIcon, {
                           size: 'custom',
@@ -95,13 +95,13 @@ function j(e) {
                   })
                 : (0, i.jsx)(c.Button, {
                       disabled: !s,
-                      onClick: j,
+                      onClick: C,
                       children: f.intl.string(f.t['/jubeH'])
                   })
         ]
     });
 }
-function C(e) {
+function j(e) {
     let { tag: t, availableTags: n, canManageChannels: l, onTagClick: s, onDragComplete: a, onDragStart: o, onDragReset: c } = e,
         d = n.findIndex((e) => e.id === t.id),
         {

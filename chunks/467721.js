@@ -1,7 +1,7 @@
 var i,
     l = n(442837),
     r = n(570140);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,14 +14,14 @@ function a(e, t, n) {
         e
     );
 }
-function o() {
+function a() {
     return { lastTriggered: 0 };
 }
-let s = o();
+let s = a();
 class c extends (i = l.ZP.PersistedStore) {
     initialize(e) {
         s = {
-            ...o(),
+            ...a(),
             ...(null != e ? e : {})
         };
     }
@@ -32,11 +32,11 @@ class c extends (i = l.ZP.PersistedStore) {
         return s.lastTriggered >= Date.now() - 172800000;
     }
 }
-a(c, 'displayName', 'HDStreamingViewerStore'),
-    a(c, 'persistKey', 'HDStreamingViewerStore'),
+o(c, 'displayName', 'HDStreamingViewerStore'),
+    o(c, 'persistKey', 'HDStreamingViewerStore'),
     (t.Z = new c(r.Z, {
         LOGOUT: function () {
-            s = o();
+            s = a();
         },
         HD_STREAMING_VIEWER_UPDATE_LAST_TRIGGERED: function (e) {
             s.lastTriggered = Date.now();

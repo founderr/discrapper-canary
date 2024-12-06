@@ -13,8 +13,8 @@ var l = t(200651),
 function d(e) {
     let { startDate: n, recurrenceRule: t, onRecurrenceChange: d } = e,
         u = i.useMemo(() => (0, s.zi)(n, t), [t, n]),
-        x = (0, s.P8)(n),
-        m = (e) => e.toString(),
+        m = (0, s.P8)(n),
+        x = (e) => e.toString(),
         h = (0, l.jsxs)('div', {
             className: c.title,
             children: [
@@ -30,10 +30,10 @@ function d(e) {
         required: !0,
         children: (0, l.jsx)(r.Select, {
             placeholder: 'gaming',
-            options: x,
+            options: m,
             select: d,
-            serialize: m,
-            isSelected: (e) => null != u && m(e) === m(u)
+            serialize: x,
+            isSelected: (e) => null != u && x(e) === x(u)
         })
     });
 }

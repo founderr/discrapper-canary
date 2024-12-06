@@ -2,9 +2,9 @@ n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    o = n(512722),
-    s = n.n(o),
+    o = n.n(r),
+    a = n(512722),
+    s = n.n(a),
     c = n(442837),
     u = n(481060),
     d = n(570140),
@@ -122,11 +122,11 @@ class ei extends l.PureComponent {
     }
     renderEmbeddedActivity() {
         let e;
-        let { application: t, embeddedActivity: n, channel: l, channelName: r, guildForConnectedChannel: a } = this.props;
+        let { application: t, embeddedActivity: n, channel: l, channelName: r, guildForConnectedChannel: o } = this.props;
         if (null == n || null == l || null == t) return null;
-        let o = { start: n.connectedSince },
+        let a = { start: n.connectedSince },
             s = r;
-        null != a ? ((e = $.Z5c.CHANNEL(a.id, l.id)), (s = ''.concat(s, ' / ').concat(a.name))) : (e = $.Z5c.CHANNEL($.ME, l.id));
+        null != o ? ((e = $.Z5c.CHANNEL(o.id, l.id)), (s = ''.concat(s, ' / ').concat(o.name))) : (e = $.Z5c.CHANNEL($.ME, l.id));
         let c = (0, i.jsx)(R.Z, {
             href: e,
             onClick: this.handleApplicationOrChannelLinkClick,
@@ -154,17 +154,17 @@ class ei extends l.PureComponent {
                                 children: t.name
                             })
                         }),
-                        (0, w.Qm)(l.type) ? c : (0, i.jsx)(en, { timestamps: o })
+                        (0, w.Qm)(l.type) ? c : (0, i.jsx)(en, { timestamps: a })
                     ]
                 })
             ]
         });
     }
     render() {
-        let { canGoLive: e, embeddedActivity: t, runningGame: n, isStreaming: l, streamMetadata: r, application: o, activity: s, className: c } = this.props;
-        return l || (((0, X.y)(o, s, t) || e) && (null != n || null != t))
+        let { canGoLive: e, embeddedActivity: t, runningGame: n, isStreaming: l, streamMetadata: r, application: a, activity: s, className: c } = this.props;
+        return l || (((0, X.y)(a, s, t) || e) && (null != n || null != t))
             ? (0, i.jsx)('div', {
-                  className: a()(et.panel, c),
+                  className: o()(et.panel, c),
                   children: (0, i.jsxs)('div', {
                       className: et.body,
                       children: [(() => (null == n || (l && (null == r ? void 0 : r.pid) == null) ? (null != t ? this.renderEmbeddedActivity() : this.renderScreenshare()) : this.renderGame()))(), this.renderActions()]
@@ -196,20 +196,20 @@ t.Z = (0, f.Z)(function (e) {
     var t;
     let { guildId: n, ...l } = e,
         r = (0, c.e7)([O.default], () => O.default.getId()),
-        a = (0, c.e7)([Z.ZP, Y.Z], () => (0, P.Z)(Z.ZP, Y.Z)),
-        o = (0, c.e7)([W.Z, k.Z], () => k.Z.getChannel(W.Z.getVoiceChannelId())),
+        o = (0, c.e7)([Z.ZP, Y.Z], () => (0, P.Z)(Z.ZP, Y.Z)),
+        a = (0, c.e7)([W.Z, k.Z], () => k.Z.getChannel(W.Z.getVoiceChannelId())),
         s = (0, c.e7)([x.ZP], () => x.ZP.getConnectedActivityChannelId()),
         u = (0, c.e7)([k.Z], () => k.Z.getChannel(s)),
         d = (0, c.e7)([U.Z], () => U.Z.getGuild(null == u ? void 0 : u.guild_id)),
         [h, p] = (0, c.Wu)([D.Z], () => [D.Z.getCurrentUserActiveStream(), D.Z.getStreamerActiveStreamMetadata()]),
         m = (0, c.e7)([g.Z], () => g.Z.useReducedMotion),
         f = (0, c.e7)([x.ZP], () => (null != u ? x.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
-        v = (0, c.e7)([U.Z, H.Z, G.ZP], () => (null != o ? y.JL(o, U.Z, H.Z, !1) : null != n && y.h_(G.ZP.getChannels(n), U.Z, H.Z).length > 0)),
+        v = (0, c.e7)([U.Z, H.Z, G.ZP], () => (null != a ? y.JL(a, U.Z, H.Z, !1) : null != n && y.h_(G.ZP.getChannels(n), U.Z, H.Z).length > 0)),
         [S] = (0, I.Z)([
             null !==
                 (t = (function () {
                     if (null != p && null != p.id) return p.id;
-                    if (null != a && null != a.id) return a.id;
+                    if (null != o && null != o.id) return o.id;
                     if (null != f) return f.applicationId;
                 })()) && void 0 !== t
                 ? t
@@ -229,7 +229,7 @@ t.Z = (0, f.Z)(function (e) {
         activity: j,
         embeddedActivity: f,
         userId: r,
-        runningGame: a,
+        runningGame: o,
         application: S,
         useReducedMotion: m,
         isStreaming: R,

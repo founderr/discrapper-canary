@@ -3,8 +3,8 @@ var i = n(200651);
 n(192379);
 var l = n(392711),
     r = n(848246),
-    a = n(481060),
-    o = n(570140),
+    o = n(481060),
+    a = n(570140),
     s = n(904245),
     c = n(317770),
     u = n(100527),
@@ -58,14 +58,14 @@ function z(e, t, n) {
 }
 class Y extends c.Z {
     _initialize() {
-        __OVERLAY__ ? o.Z.subscribe('PREMIUM_PAYMENT_MODAL_OPEN', this._handlePremiumPaymentModalOpen) : (o.Z.subscribe('PREMIUM_PAYMENT_MODAL_CLOSE', this._handlePremiumPaymentModalClose), o.Z.subscribe('MESSAGE_LENGTH_UPSELL', this.handleMessageLengthUpsell), o.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchPremiumOffer), o.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchCheckoutRecovery), o.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchUserAffinities), o.Z.subscribe('POST_CONNECTION_OPEN', this._trackCustomNotificationSoundsExposure), o.Z.subscribe('POST_CONNECTION_OPEN', this._trackSkyLoadExposure), o.Z.subscribe('RTC_CONNECTION_STATE', this.maybeShowHDStreamingPerksDemoPostUpsellModal), o.Z.subscribe('MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED', this.maybeShowHDStreamingViewerUpsellMessage));
+        __OVERLAY__ ? a.Z.subscribe('PREMIUM_PAYMENT_MODAL_OPEN', this._handlePremiumPaymentModalOpen) : (a.Z.subscribe('PREMIUM_PAYMENT_MODAL_CLOSE', this._handlePremiumPaymentModalClose), a.Z.subscribe('MESSAGE_LENGTH_UPSELL', this.handleMessageLengthUpsell), a.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchPremiumOffer), a.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchCheckoutRecovery), a.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchUserAffinities), a.Z.subscribe('POST_CONNECTION_OPEN', this._trackCustomNotificationSoundsExposure), a.Z.subscribe('POST_CONNECTION_OPEN', this._trackSkyLoadExposure), a.Z.subscribe('RTC_CONNECTION_STATE', this.maybeShowHDStreamingPerksDemoPostUpsellModal), a.Z.subscribe('MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED', this.maybeShowHDStreamingViewerUpsellMessage));
     }
     _terminate() {
-        __OVERLAY__ ? o.Z.unsubscribe('PREMIUM_PAYMENT_MODAL_OPEN', this._handlePremiumPaymentModalOpen) : (o.Z.unsubscribe('PREMIUM_PAYMENT_MODAL_CLOSE', this._handlePremiumPaymentModalClose), o.Z.unsubscribe('MESSAGE_LENGTH_UPSELL', this.handleMessageLengthUpsell), o.Z.unsubscribe('POST_CONNECTION_OPEN', this._maybeFetchPremiumOffer), o.Z.unsubscribe('POST_CONNECTION_OPEN', this._maybeFetchCheckoutRecovery), o.Z.unsubscribe('POST_CONNECTION_OPEN', this._maybeFetchUserAffinities), o.Z.unsubscribe('POST_CONNECTION_OPEN', this._trackCustomNotificationSoundsExposure), o.Z.unsubscribe('POST_CONNECTION_OPEN', this._trackSkyLoadExposure), o.Z.unsubscribe('RTC_CONNECTION_STATE', this.maybeShowHDStreamingPerksDemoPostUpsellModal), o.Z.unsubscribe('MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED', this.maybeShowHDStreamingViewerUpsellMessage));
+        __OVERLAY__ ? a.Z.unsubscribe('PREMIUM_PAYMENT_MODAL_OPEN', this._handlePremiumPaymentModalOpen) : (a.Z.unsubscribe('PREMIUM_PAYMENT_MODAL_CLOSE', this._handlePremiumPaymentModalClose), a.Z.unsubscribe('MESSAGE_LENGTH_UPSELL', this.handleMessageLengthUpsell), a.Z.unsubscribe('POST_CONNECTION_OPEN', this._maybeFetchPremiumOffer), a.Z.unsubscribe('POST_CONNECTION_OPEN', this._maybeFetchCheckoutRecovery), a.Z.unsubscribe('POST_CONNECTION_OPEN', this._maybeFetchUserAffinities), a.Z.unsubscribe('POST_CONNECTION_OPEN', this._trackCustomNotificationSoundsExposure), a.Z.unsubscribe('POST_CONNECTION_OPEN', this._trackSkyLoadExposure), a.Z.unsubscribe('RTC_CONNECTION_STATE', this.maybeShowHDStreamingPerksDemoPostUpsellModal), a.Z.unsubscribe('MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED', this.maybeShowHDStreamingViewerUpsellMessage));
     }
     handleMessageLengthUpsell(e) {
         let { channel: t, content: l } = e;
-        (0, a.openModalLazy)(async () => {
+        (0, o.openModalLazy)(async () => {
             let { default: e } = await n.e('33184').then(n.bind(n, 465836));
             return (n) =>
                 (0, i.jsx)(e, {
@@ -99,7 +99,7 @@ class Y extends c.Z {
         return new Promise((e, r) => {
             (this._premiumPaymentModalCloseResolve = e),
                 (this._premiumPaymentModalCloseReject = r),
-                o.Z.dispatch({
+                a.Z.dispatch({
                     type: 'PREMIUM_PAYMENT_MODAL_OPEN',
                     initialPlanId: t,
                     subscriptionTier: n,
@@ -116,15 +116,15 @@ class Y extends c.Z {
         let i = T.Z.hasActiveDemo(r.q.STREAM_HIGH_QUALITY);
         if (
             (i &&
-                o.Z.dispatch({
+                a.Z.dispatch({
                     type: 'PREMIUM_PERKS_DEMO_COMPLETE',
                     perkType: r.q.STREAM_HIGH_QUALITY
                 }),
             !i)
         )
             return;
-        let { resolution: l, fps: a } = m.Z.getState();
-        !(0, A.mc)(l, a) && (0, w.Z)(n.guild_id);
+        let { resolution: l, fps: o } = m.Z.getState();
+        !(0, A.mc)(l, o) && (0, w.Z)(n.guild_id);
     }
     constructor(...e) {
         super(...e),
@@ -136,7 +136,7 @@ class Y extends c.Z {
                     let t = !(0, x.I5)(e) && _.Z.shouldFetchOffer();
                     await (0, M.T)('PremiumManager', void 0, t);
                 }
-                o.Z.dispatch({ type: 'PREMIUM_MARKETING_DATA_READY' });
+                a.Z.dispatch({ type: 'PREMIUM_MARKETING_DATA_READY' });
             }),
             z(this, '_maybeFetchCheckoutRecovery', async () => {
                 let e = C.default.getCurrentUser();
@@ -157,7 +157,7 @@ class Y extends c.Z {
                     ...e,
                     analyticsLocations: [u.Z.OVERLAY],
                     onClose: (e) => {
-                        o.Z.dispatch({
+                        a.Z.dispatch({
                             type: 'PREMIUM_PAYMENT_MODAL_CLOSE',
                             didSucceed: e
                         });
@@ -178,10 +178,10 @@ class Y extends c.Z {
                 (0, l.debounce)((e, t, n) => {
                     var i, l;
                     let r = d.Z.getSelectedParticipant(e),
-                        a = (0, y.o)(r, n),
-                        { sendNitroMessage: o } = (0, Z.TD)(a),
+                        o = (0, y.o)(r, n),
+                        { sendNitroMessage: a } = (0, Z.TD)(o),
                         c = null !== (l = null === (i = g.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : H.Eu4.NONE;
-                    if (N.Z.cooldownIsActive() || !o || c >= H.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== V.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
+                    if (N.Z.cooldownIsActive() || !a || c >= H.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== V.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
                     E.I();
                     let u = W.intl.formatToPlainString(W.t.AbyeZG, {
                         nickname: r.userNick,

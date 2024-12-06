@@ -31,8 +31,8 @@ var i = n(200651),
     I = n(768581),
     E = n(63063),
     b = n(946734),
-    Z = n(99843),
-    N = n(372564),
+    N = n(99843),
+    Z = n(372564),
     S = n(984370),
     T = n(217314),
     j = n(981631),
@@ -189,7 +189,7 @@ function R(e) {
                             className: P.avatar
                         })
                     }),
-                    (0, i.jsx)(Z.Z, { channel: t }, 'channel-'.concat(t.id))
+                    (0, i.jsx)(N.Z, { channel: t }, 'channel-'.concat(t.id))
                 ]
             });
         case j.d4z.GUILD_ANNOUNCEMENT:
@@ -236,10 +236,10 @@ function R(e) {
         case j.d4z.ANNOUNCEMENT_THREAD:
         case j.d4z.PUBLIC_THREAD:
         case j.d4z.PRIVATE_THREAD:
-            let N = null;
+            let Z = null;
             if (!o && null != r) {
                 let e = (0, p.KS)(r, s);
-                N = (0, i.jsxs)(l.Fragment, {
+                Z = (0, i.jsxs)(l.Fragment, {
                     children: [
                         O(e, y.intl.string(y.t.Pnajj4)),
                         (0, i.jsx)(S.Z.Title, {
@@ -256,7 +256,7 @@ function R(e) {
             let A = (null == r ? void 0 : r.type) != null && j.TPd.GUILD_THREADS_ONLY.has(r.type);
             return (0, i.jsxs)(l.Fragment, {
                 children: [
-                    N,
+                    Z,
                     O(A ? null : v, y.intl.string(y.t['7Xm5QE'])),
                     (0, i.jsx)(S.Z.Title, {
                         level: E,
@@ -320,7 +320,7 @@ function k(e, t) {
         case j.d4z.GROUP_DM:
             return null != t
                 ? (0, i.jsx)(
-                      N.Z,
+                      Z.Z,
                       {
                           channel: e,
                           guild: t

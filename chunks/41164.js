@@ -1,26 +1,26 @@
-t.r(i);
-var n = t(200651);
-t(192379);
-var a = t(481060),
-    l = t(230711),
-    o = t(187819),
-    s = t(181211),
-    r = t(188879),
-    c = t(981631),
-    d = t(726985),
-    u = t(388032),
-    m = t(280322),
-    h = t(170143);
-i.default = (e) => {
-    let { transitionState: i, onClose: t, classificationId: p, source: x } = e,
+i.r(t);
+var n = i(200651);
+i(192379);
+var a = i(481060),
+    l = i(230711),
+    o = i(187819),
+    s = i(181211),
+    r = i(188879),
+    c = i(981631),
+    d = i(726985),
+    u = i(388032),
+    m = i(280322),
+    h = i(170143);
+t.default = (e) => {
+    let { transitionState: t, onClose: i, classificationId: p, source: x } = e,
         f = (0, s.Z)(),
         g = (0, o._p)({ location: 'classification-detail-modal' }),
-        v = () => {
-            t(), g ? l.Z.open(c.oAB.ACCOUNT, d.s6.PRIVACY_AND_SAFETY_STANDING) : l.Z.open(c.oAB.PRIVACY_AND_SAFETY, d.s6.PRIVACY_ACCOUNT_STANDING);
+        _ = () => {
+            i(), g ? l.Z.open(c.oAB.ACCOUNT, d.s6.PRIVACY_AND_SAFETY_STANDING) : l.Z.open(c.oAB.PRIVACY_AND_SAFETY, d.s6.PRIVACY_ACCOUNT_STANDING);
         };
     return (0, n.jsxs)(a.ModalRoot, {
         className: m.modalRoot,
-        transitionState: i,
+        transitionState: t,
         children: [
             (0, n.jsxs)('div', {
                 className: m.modalHeader,
@@ -32,7 +32,7 @@ i.default = (e) => {
                     }),
                     (0, n.jsx)(a.ModalCloseButton, {
                         className: m.modalClose,
-                        onClick: t
+                        onClick: i
                     })
                 ]
             }),
@@ -43,8 +43,8 @@ i.default = (e) => {
                     : (0, n.jsx)(r.Z, {
                           classificationId: p,
                           source: x,
-                          onError: v,
-                          onClose: v
+                          onError: _,
+                          onClose: _
                       })
             }),
             (0, n.jsx)(a.ModalFooter, {
@@ -52,7 +52,7 @@ i.default = (e) => {
                     className: m.__invalid_button,
                     type: 'button',
                     color: a.Button.Colors.BRAND,
-                    onClick: v,
+                    onClick: _,
                     children: u.intl.string(u.t.elrEjI)
                 })
             })

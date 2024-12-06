@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return k;
+        return M;
     }
 });
 var r = n(200651),
@@ -32,41 +32,40 @@ var r = n(200651),
     O = n(582123),
     D = n(262210),
     L = n(666984),
-    x = n(290274),
+    x = n(386019),
     w = n(228168),
-    P = n(518919),
-    M = n(249942);
-function k(e) {
+    P = n(249942);
+function M(e) {
     var t;
-    let { user: n, currentUser: a, activity: k, guild: U, channel: B, className: G, onClose: Z, profileGuildId: F } = e,
-        { profileType: V } = (0, b.z)(),
-        j = { [M.fullSize]: V === w.y0.FULL_SIZE },
-        { interactionSource: H, interactionSourceId: Y } = (0, v.Xo)(),
-        W = (0, _.Z)({
-            activity: k,
+    let { user: n, currentUser: a, activity: M, guild: k, channel: U, className: B, onClose: G, profileGuildId: Z } = e,
+        { profileType: F } = (0, b.z)(),
+        V = { [P.fullSize]: F === w.y0.FULL_SIZE },
+        { interactionSource: j, interactionSourceId: H } = (0, v.Xo)(),
+        Y = (0, _.Z)({
+            activity: M,
             user: n
         }),
-        K = (0, g.Z)(k),
-        { largeImage: z } = (0, d.FO)(k),
-        { analyticsLocations: q } = (0, c.ZP)(u.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        Q = (0, h.Z)({
+        W = (0, g.Z)(M),
+        { largeImage: K } = (0, d.FO)(M),
+        { analyticsLocations: z } = (0, c.ZP)(u.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        q = (0, h.Z)({
             display: 'live',
             user: n,
-            activity: k,
-            entry: W,
-            analyticsLocations: q
+            activity: M,
+            entry: Y,
+            analyticsLocations: z
         }),
-        X = (0, m.Z)({
+        Q = (0, m.Z)({
             userId: n.id,
-            onAction: Q
+            onAction: q
         });
-    if (!(0, l.Z)(k)) return null;
-    let J = () => {
+    if (!(0, l.Z)(M)) return null;
+    let X = () => {
             var e, t;
-            let a = null !== (t = null === (e = k.state) || void 0 === e ? void 0 : e.split(';')) && void 0 !== t ? t : [];
+            let a = null !== (t = null === (e = M.state) || void 0 === e ? void 0 : e.split(';')) && void 0 !== t ? t : [];
             return 0 === a.length
                 ? null
-                : null == k.sync_id
+                : null == M.sync_id
                   ? (0, r.jsx)(C.Z, {
                         variant: 'text-xs/normal',
                         text: a.join(', ')
@@ -79,9 +78,9 @@ function k(e) {
                                 {
                                     children: [
                                         (0, r.jsx)(o.Clickable, {
-                                            className: s()(M.clickableText, M.inline),
+                                            className: s()(P.clickableText, P.inline),
                                             onClick: () => {
-                                                Q({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, p.d$)(k, n.id, t);
+                                                q({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, p.d$)(M, n.id, t);
                                             },
                                             children: e
                                         }),
@@ -93,8 +92,8 @@ function k(e) {
                         )
                     });
         },
-        $ = () => {
-            let { timestamps: e } = k;
+        J = () => {
+            let { timestamps: e } = M;
             if (null == e) return null;
             let { start: t, end: n } = e;
             return null == t || null == n
@@ -104,114 +103,115 @@ function k(e) {
                       end: n
                   });
         },
-        ee = () =>
-            null == U || null == B
+        $ = () =>
+            null == k || null == U
                 ? null
                 : (0, r.jsx)(R.Z, {
                       user: n,
-                      guild: U,
-                      channel: B,
-                      onAction: Q,
-                      onClose: Z
+                      guild: k,
+                      channel: U,
+                      onAction: q,
+                      onClose: G
                   }),
-        et = () =>
+        ee = () =>
             n.id === a.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: s()(M.actions, j),
+                      className: s()(P.actions, V),
                       children: (0, r.jsx)(L.Z, {
                           user: n,
-                          activity: k,
-                          onAction: Q
+                          activity: M,
+                          onAction: q
                       })
                   });
-    if (null === V) return null;
-    let en = null !== (t = k.application_id) && void 0 !== t ? t : k.name,
-        er = H === w.n_.ACTIVITY && Y === en;
+    if (null === F) return null;
+    let et = null !== (t = M.application_id) && void 0 !== t ? t : M.name,
+        en = j === w.n_.ACTIVITY && H === et;
     return (0, r.jsx)(c.Gt, {
-        value: q,
+        value: z,
         children: (0, r.jsx)(S.Z, {
             sourceType: w.n_.ACTIVITY,
             user: n,
             children: (0, r.jsx)(O.Z, {
                 user: n,
-                onClose: Z,
+                onClose: G,
                 children: (e) => {
                     let { onAutoDismiss: t } = e;
                     return (0, r.jsx)(I.Z, {
                         user: n,
-                        guildId: F,
-                        profileType: V,
-                        sourceId: en,
-                        sourceDetails: null == W ? (0, E.Z)(k) : null,
-                        entry: W,
+                        guildId: Z,
+                        profileType: F,
+                        sourceId: et,
+                        sourceDetails: null == Y ? (0, E.Z)(M) : null,
+                        entry: Y,
                         sourceType: w.n_.ACTIVITY,
                         children: () =>
                             (0, r.jsx)(T.Z, {
                                 user: n,
-                                className: M.toolbarContainer,
+                                className: P.toolbarContainer,
                                 sourceType: w.n_.ACTIVITY,
-                                interactionSourceId: en,
-                                moreButton: (0, r.jsx)(x.Z, {
-                                    display: 'live',
-                                    user: n,
-                                    activity: k,
-                                    entry: W,
-                                    onClose: Z,
-                                    onRequestOpen: t,
-                                    className: P.button
-                                }),
-                                onShowToolbar: () => Q({ action: 'HOVER_ACTIVITY_CARD' }),
+                                interactionSourceId: et,
+                                renderMoreButtonPopout: (e) =>
+                                    (0, r.jsx)(x.Z, {
+                                        display: 'live',
+                                        user: n,
+                                        activity: M,
+                                        entry: Y,
+                                        onClose: G,
+                                        onRequestOpen: t,
+                                        children: e
+                                    }),
+                                onShowToolbar: () => q({ action: 'HOVER_ACTIVITY_CARD' }),
                                 children: (0, r.jsxs)(A.Z, {
-                                    ref: X,
-                                    className: s()(G, { [M.hoisted]: er }),
-                                    onAction: Q,
-                                    onClose: Z,
+                                    ref: Q,
+                                    className: s()(B, { [P.hoisted]: en }),
+                                    onAction: q,
+                                    onClose: G,
                                     children: [
-                                        (0, r.jsx)(N.Z, { ...K }),
+                                        (0, r.jsx)(N.Z, { ...W }),
                                         (0, r.jsxs)('div', {
-                                            className: M.body,
+                                            className: P.body,
                                             children: [
                                                 (0, r.jsxs)('div', {
-                                                    className: s()(M.content, j),
+                                                    className: s()(P.content, V),
                                                     children: [
                                                         (0, r.jsx)(f.E, {
-                                                            image: z,
+                                                            image: K,
                                                             onClick: () => {
-                                                                Q({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, p.Z5)(k, n.id);
+                                                                q({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, p.Z5)(M, n.id);
                                                             },
                                                             size: f.J.SIZE_60
                                                         }),
                                                         (0, r.jsxs)('div', {
-                                                            className: M.details,
+                                                            className: P.details,
                                                             children: [
                                                                 (0, r.jsxs)('div', {
                                                                     children: [
                                                                         (0, r.jsx)(C.Z, {
                                                                             variant: 'heading-sm/semibold',
-                                                                            text: k.details,
+                                                                            text: M.details,
                                                                             onClick: () => {
-                                                                                Q({ action: 'OPEN_SPOTIFY_TRACK' }), (0, p.aG)(k);
+                                                                                q({ action: 'OPEN_SPOTIFY_TRACK' }), (0, p.aG)(M);
                                                                             }
                                                                         }),
-                                                                        J()
+                                                                        X()
                                                                     ]
                                                                 }),
                                                                 (0, r.jsx)(y.Z, {
                                                                     user: n,
-                                                                    activity: k,
-                                                                    className: M.badges
+                                                                    activity: M,
+                                                                    className: P.badges
                                                                 }),
-                                                                $()
+                                                                J()
                                                             ]
                                                         }),
-                                                        V === w.y0.FULL_SIZE && et()
+                                                        F === w.y0.FULL_SIZE && ee()
                                                     ]
                                                 }),
-                                                ee()
+                                                $()
                                             ]
                                         }),
-                                        V !== w.y0.FULL_SIZE && et()
+                                        F !== w.y0.FULL_SIZE && ee()
                                     ]
                                 })
                             })

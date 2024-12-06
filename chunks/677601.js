@@ -20,8 +20,8 @@ var i = n(200651),
     I = n(393238),
     E = n(110924),
     b = n(40851),
-    Z = n(636449),
-    N = n(115130),
+    N = n(636449),
+    Z = n(115130),
     S = n(317381),
     T = n(596040),
     j = n(349619),
@@ -74,8 +74,8 @@ var i = n(200651),
     eI = n(358221),
     eE = n(414910),
     eb = n(887012),
-    eZ = n(909820),
-    eN = n(493010),
+    eN = n(909820),
+    eZ = n(493010),
     eS = n(742603),
     eT = n(221888),
     ej = n(900211),
@@ -305,7 +305,7 @@ class ew extends l.PureComponent {
                     children:
                         r &&
                         (!d || !this.popoutOpen || this.inPopout) &&
-                        (0, i.jsx)(eN.Z, {
+                        (0, i.jsx)(eZ.Z, {
                             channel: t,
                             guild: n,
                             maxWidth: o
@@ -452,7 +452,7 @@ class ew extends l.PureComponent {
                         let t = e.getGuildId();
                         null != t && (0, G.uL)((0, eg.LY)(t)), U.hP(e);
                     };
-                !t || (0, Z.R)() ? n() : (0, j.Z)(n);
+                !t || (0, N.R)() ? n() : (0, j.Z)(n);
             }),
             ek(this, 'handleStayOnTop', (e) => {
                 U.hY(eM.KJ3.CHANNEL_CALL_POPOUT, e);
@@ -625,7 +625,7 @@ class ew extends l.PureComponent {
                 let { showChatToasts: e, chatOpen: t, channel: n, inCall: l } = this.props;
                 return !e || t || (this.popoutOpen && !this.inPopout && l)
                     ? null
-                    : (0, i.jsx)(eZ.ZP, {
+                    : (0, i.jsx)(eN.ZP, {
                           children: (0, i.jsx)(q.Z, {
                               className: eL.chatToasts,
                               channelId: n.id
@@ -682,7 +682,7 @@ t.Z = function (e) {
             return (null !== (e = null == C ? void 0 : C.channelId) && void 0 !== e ? e : eh.Z.getVoiceChannelId()) === n.id;
         }),
         {
-            participants: Z,
+            participants: N,
             filteredParticipants: j,
             participantsVersion: y,
             mode: M,
@@ -732,10 +732,10 @@ t.Z = function (e) {
         }, []),
         et = null !== (t = null == V ? void 0 : V.id) && void 0 !== t ? t : null,
         en = (0, T.Z)(et, n.id),
-        ei = (0, c.e7)([N.Z], () => N.Z.getFetchState(), []),
+        ei = (0, c.e7)([Z.Z], () => Z.Z.getFetchState(), []),
         el = (0, E.Z)(ei);
     l.useEffect(() => {
-        ei === N.O.ERROR && el !== N.O.ERROR && (0, h.showToast)((0, h.createToast)(eR.intl.string(eR.t.AlJyIy), h.ToastType.FAILURE));
+        ei === Z.O.ERROR && el !== Z.O.ERROR && (0, h.showToast)((0, h.createToast)(eR.intl.string(eR.t.AlJyIy), h.ToastType.FAILURE));
     }, [ei, el]);
     let ep = (0, c.e7)([S.ZP], () => S.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
     l.useEffect(() => {
@@ -758,7 +758,7 @@ t.Z = function (e) {
         value: eg,
         children: (0, i.jsx)(_.Z, {
             page: eM.ZY5.CHANNEL_CALL,
-            children: (0, i.jsx)(eZ.B2, {
+            children: (0, i.jsx)(eN.B2, {
                 children: (0, i.jsxs)(eA._A, {
                     children: [
                         (0, i.jsx)(ew, {
@@ -775,7 +775,7 @@ t.Z = function (e) {
                             selectedStream: G,
                             mode: M,
                             inCall: v,
-                            participants: Z,
+                            participants: N,
                             filteredParticipants: j,
                             participantsVersion: y,
                             layout: R,
@@ -804,7 +804,7 @@ t.Z = function (e) {
                             currentChannelActivities: eC
                         }),
                         !n.isPrivate() && (0, i.jsx)(eA.YR, {}),
-                        (0, i.jsx)(eZ.H_, {})
+                        (0, i.jsx)(eN.H_, {})
                     ]
                 })
             })

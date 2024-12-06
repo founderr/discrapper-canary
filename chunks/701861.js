@@ -22,7 +22,7 @@ var i = n(200651),
     S = n(65154),
     T = n(388032),
     b = n(401207);
-function A(e, t, n) {
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function A(e, t, n) {
         e
     );
 }
-function x(e) {
+function A(e) {
     let { user: t, onSelect: n } = e,
         r = () => {
             u.Z.removeFriend(t.id, { location: 'Friends' });
@@ -154,20 +154,20 @@ class Z extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            A(this, 'peopleListItemRef', r.createRef()),
-            A(this, 'state', { isActiveRow: !1 }),
-            A(this, 'handleOpenPrivateChannel', (e) => {
+            x(this, 'peopleListItemRef', r.createRef()),
+            x(this, 'state', { isActiveRow: !1 }),
+            x(this, 'handleOpenPrivateChannel', (e) => {
                 let { user: t } = this.props;
                 e.stopPropagation();
                 let n = a().find(p.Z.getMutablePrivateChannels(), (e) => e.type === N.d4z.DM && e.getRecipientId() === t.id);
                 null != n ? (0, m.uL)(N.Z5c.CHANNEL(N.ME, n.id)) : c.Z.openPrivateChannel(t.id);
             }),
-            A(this, 'handleOpenActionsMenu', (e) => {
+            x(this, 'handleOpenActionsMenu', (e) => {
                 let { user: t } = this.props;
                 (0, d.vq)(
                     e,
                     (e) =>
-                        (0, i.jsx)(x, {
+                        (0, i.jsx)(A, {
                             ...e,
                             user: t
                         }),

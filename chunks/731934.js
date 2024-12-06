@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(82295),
     g = n(863653),
     m = n(785681),
-    p = n(485664),
-    f = n(880257),
+    f = n(485664),
+    p = n(880257),
     _ = n(631885),
     h = n(895328),
     E = n(568671),
@@ -21,16 +21,16 @@ var i = n(200651),
     v = n(292352),
     T = n(134612),
     N = n(388032),
-    S = n(259289),
-    I = n(232186),
+    I = n(259289),
+    S = n(232186),
     R = n(926895);
 function A(e) {
     let { header: t, description: n, stepNumber: r } = e;
     return (0, i.jsxs)('div', {
-        className: S.step,
+        className: I.step,
         children: [
             (0, i.jsx)('div', {
-                className: S.stepNumber,
+                className: I.stepNumber,
                 children: (0, i.jsx)(c.Heading, {
                     variant: 'heading-md/semibold',
                     color: 'text-brand',
@@ -55,36 +55,36 @@ function A(e) {
 }
 function j() {
     return (0, i.jsxs)('div', {
-        className: s()(S.box, S.linkingBanner, S.linkingBannerParent),
+        className: s()(I.box, I.linkingBanner, I.linkingBannerParent),
         children: [
             (0, i.jsxs)('div', {
-                className: s()(S.linkingBannerUpper),
+                className: s()(I.linkingBannerUpper),
                 children: [
                     (0, i.jsxs)('div', {
-                        className: S.__invalid_header,
+                        className: I.__invalid_header,
                         children: [
                             (0, i.jsx)(c.Heading, {
-                                className: I.marginBottom8,
+                                className: S.marginBottom8,
                                 variant: 'heading-xl/medium',
                                 children: (0, i.jsx)(c.HeadingLevel, { children: N.intl.string(N.t.pHEnV1) })
                             }),
                             (0, i.jsx)(c.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'text-muted',
-                                className: I.marginBottom20,
+                                className: S.marginBottom20,
                                 children: N.intl.string(N.t['1J/gZ2'])
                             })
                         ]
                     }),
                     (0, i.jsx)('img', {
-                        className: S.bannerArt,
+                        className: I.bannerArt,
                         src: R,
                         alt: N.intl.string(N.t['r+PDmp'])
                     })
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: S.steps,
+                className: I.steps,
                 children: [
                     (0, i.jsx)(A, {
                         header: N.intl.string(N.t['7xxAnp']),
@@ -109,26 +109,26 @@ function j() {
 function P() {
     let e = (0, _.VM)();
     return (0, i.jsxs)('div', {
-        className: s()(S.box, S.linkingBanner),
+        className: s()(I.box, I.linkingBanner),
         children: [
             (0, i.jsxs)('div', {
                 children: [
                     (0, i.jsx)(c.Heading, {
-                        className: I.marginBottom8,
+                        className: S.marginBottom8,
                         variant: 'heading-xl/medium',
                         children: (0, i.jsx)(c.HeadingLevel, { children: N.intl.string(N.t.zUCWEB) })
                     }),
                     (0, i.jsx)(c.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-muted',
-                        className: I.marginBottom20,
+                        className: S.marginBottom20,
                         children: N.intl.format(N.t.yMnoDg, { link: 'https://support.discord.com/hc/articles/14155060633623' })
                     }),
                     e ? null : (0, i.jsx)(E.Z, {})
                 ]
             }),
             (0, i.jsx)('img', {
-                className: S.bannerArt,
+                className: I.bannerArt,
                 src: R,
                 alt: N.intl.string(N.t['r+PDmp'])
             })
@@ -159,14 +159,14 @@ function Z(e) {
             },
             [a, t]
         ),
-        p = r.useCallback(
+        f = r.useCallback(
             () =>
                 (0, i.jsx)(
                     u.Z,
                     {
-                        className: S.__invalid_sectionTitle,
+                        className: I.__invalid_sectionTitle,
                         children: (0, i.jsx)(c.Text, {
-                            className: I.marginBottom8,
+                            className: S.marginBottom8,
                             variant: 'eyebrow',
                             color: 'header-secondary',
                             children: n
@@ -177,7 +177,7 @@ function Z(e) {
             [n]
         );
     return (0, i.jsx)('div', {
-        className: S.section,
+        className: I.section,
         children: (0, i.jsx)(o.bG, {
             navigator: g,
             children: (0, i.jsx)(o.SJ, {
@@ -186,7 +186,7 @@ function Z(e) {
                     return (0, i.jsx)(
                         c.List,
                         {
-                            className: S.__invalid_list,
+                            className: I.__invalid_list,
                             innerRole: r,
                             innerAriaLabel: n,
                             ref: (e) => {
@@ -195,7 +195,7 @@ function Z(e) {
                             },
                             sectionHeight: v.zE,
                             rowHeight: v.ip,
-                            renderSection: p,
+                            renderSection: f,
                             renderRow: m,
                             sections: [a.length],
                             chunkSize: 30,
@@ -210,7 +210,7 @@ function Z(e) {
     });
 }
 let B = () => {
-        let e = (0, f.Z)(),
+        let e = (0, p.Z)(),
             t = (0, _.mq)(v.ne.ACTIVE),
             n = e ? v.AG : v.i0,
             r = {
@@ -227,16 +227,16 @@ let B = () => {
                           requests: t
                       })
                     : (0, i.jsxs)('div', {
-                          className: S.section,
+                          className: I.section,
                           children: [
                               (0, i.jsx)(c.Text, {
-                                  className: I.marginBottom8,
+                                  className: S.marginBottom8,
                                   variant: 'eyebrow',
                                   color: 'header-secondary',
                                   children: a
                               }),
                               (0, i.jsx)('div', {
-                                  className: S.box,
+                                  className: I.box,
                                   children: (0, i.jsx)(h.Z, { text: N.intl.string(N.t.C4ScLC) })
                               })
                           ]
@@ -245,11 +245,11 @@ let B = () => {
     },
     M = () => {
         let e = (0, _.VM)(),
-            t = (0, f.Z)() ? v.AG : v.i0,
+            t = (0, p.Z)() ? v.AG : v.i0,
             n = (0, m.o)(N.intl.formatToPlainString(N.t['1/PzIi'], { maxConnections: t }), N.intl.formatToPlainString(N.t.RcTgiI, { maxConnections: t }));
         return e
             ? (0, i.jsx)('div', {
-                  className: S.maxConnectionInfo,
+                  className: I.maxConnectionInfo,
                   children: (0, i.jsx)(c.Text, {
                       variant: 'text-xxs/medium',
                       color: 'text-muted',
@@ -259,7 +259,7 @@ let B = () => {
             : null;
     },
     O = () => {
-        let e = (0, p.o)(),
+        let e = (0, f.o)(),
             t = (0, g.zF)('family-center-requests-page-desktop'),
             n = (0, l.EQ)({
                 helpline: e,
@@ -271,10 +271,10 @@ let B = () => {
         return null == n
             ? null
             : (0, i.jsxs)('div', {
-                  className: s()(S.__invalid_helpLineInfo, I.marginTop20),
+                  className: s()(I.__invalid_helpLineInfo, S.marginTop20),
                   children: [
                       (0, i.jsx)(c.Heading, {
-                          className: S.supportHeader,
+                          className: I.supportHeader,
                           variant: 'heading-sm/semibold',
                           children: (0, i.jsx)(c.HeadingLevel, { children: N.intl.string(N.t['7/tVho']) })
                       }),
@@ -298,9 +298,9 @@ let B = () => {
               });
     };
 t.Z = () => {
-    let e = (0, f.Z)();
+    let e = (0, p.Z)();
     return (0, i.jsxs)('div', {
-        className: S.container,
+        className: I.container,
         children: [e ? (0, i.jsx)(j, {}) : (0, i.jsx)(P, {}), (0, i.jsx)(B, {}), (0, i.jsx)(w, {}), (0, i.jsx)(M, {}), (0, i.jsx)(O, {})]
     });
 };

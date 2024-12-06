@@ -60,7 +60,7 @@ let b = l.memo(function (e) {
                 })
         });
     }),
-    Z = l.memo(function (e) {
+    N = l.memo(function (e) {
         let { value: t, multiplier: n } = e,
             { color: r, square: s, flair: o } = l.useMemo(() => (0, v.yz)(n), [n]),
             d = (0, h.Lq)(r);
@@ -133,12 +133,12 @@ t.Z = l.memo(function (e) {
         { ref: h, width: f = 0 } = (0, d.Z)(),
         [g, v] = l.useState(!1),
         I = (0, _.Z)(t),
-        N = a && u && r;
+        Z = a && u && r;
     l.useEffect(() => {
-        N && v(!0);
-        let e = setTimeout(() => v(N), 1000);
+        Z && v(!0);
+        let e = setTimeout(() => v(Z), 1000);
         return () => clearTimeout(e);
-    }, [N]);
+    }, [Z]);
     let S = (0, c.useSpring)({
             opacity: g ? 1 : 0,
             transform: g ? 'translateY(0)' : 'translateY(100%)',
@@ -161,10 +161,10 @@ t.Z = l.memo(function (e) {
     }, [T]);
     let { multiplier: A, value: y } = l.useMemo(
         () => ({
-            value: N ? T.value : j.current.value,
-            multiplier: N ? T.multiplier : j.current.multiplier
+            value: Z ? T.value : j.current.value,
+            multiplier: Z ? T.multiplier : j.current.multiplier
         }),
-        [N, T, j]
+        [Z, T, j]
     );
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -176,7 +176,7 @@ t.Z = l.memo(function (e) {
                 ref: h,
                 className: E.combo,
                 style: S,
-                children: (0, i.jsx)(Z, {
+                children: (0, i.jsx)(N, {
                     value: y,
                     multiplier: A
                 })

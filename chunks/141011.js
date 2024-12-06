@@ -8,17 +8,17 @@ var r = n(200651),
     d = n(302221),
     u = n(884697),
     f = n(372654),
-    p = n(695935);
+    g = n(695935);
 e.Z = (t) => {
-    let { asset: e, size: n = f.yV, className: i, style: g, children: h, categoryBannerOverride: v } = t,
+    let { asset: e, size: n = f.yV, className: i, style: p, children: v, categoryBannerOverride: h } = t,
         b = (0, s.e7)([c.Z], () => c.Z.saturation),
         m = a.useMemo(() => {
-            if (null == e) return g;
+            if (null == e) return p;
             let t = (0, u.uV)(e, {
                     size: n,
                     format: 'jpg'
                 }),
-                r = (null == v ? void 0 : v.blur)
+                r = (null == h ? void 0 : h.blur)
                     ? {
                           filter: 'blur(2px)',
                           transform: 'scale(1.02)'
@@ -26,8 +26,8 @@ e.Z = (t) => {
                     : {};
             if (1 === b)
                 return {
-                    ...g,
-                    backgroundImage: (null == v ? void 0 : v.addGradient) ? 'url('.concat(t, '), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)') : 'url('.concat(t, ')'),
+                    ...p,
+                    backgroundImage: (null == h ? void 0 : h.addGradient) ? 'url('.concat(t, '), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)') : 'url('.concat(t, ')'),
                     backgroundBlendMode: 'multiply',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
@@ -35,17 +35,17 @@ e.Z = (t) => {
                 };
             let a = (0, d.aD)(l.ZP.unsafe_rawColors.BLACK_500, 1 - b);
             return {
-                ...g,
+                ...p,
                 backgroundImage: 'linear-gradient('.concat(a, ', ').concat(a, '), url(').concat(t, ')'),
                 backgroundBlendMode: 'saturation',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 ...r
             };
-        }, [e, n, b, g, null == v ? void 0 : v.blur, null == v ? void 0 : v.addGradient]);
+        }, [e, n, b, p, null == h ? void 0 : h.blur, null == h ? void 0 : h.addGradient]);
     return (0, r.jsx)('div', {
-        className: o()(p.banner, i),
+        className: o()(g.banner, i),
         style: m,
-        children: h
+        children: v
     });
 };

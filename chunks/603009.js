@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(353093),
     E = n(940725),
     b = n(114487),
-    Z = n(979264),
-    N = n(981631),
+    N = n(979264),
+    Z = n(981631),
     S = n(921944),
     T = n(388032),
     j = n(431972);
@@ -37,7 +37,7 @@ function A(e) {
         C = l.useRef(null),
         v = (0, x.Cc)(n.id),
         E = (0, u.ZP)(),
-        N = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
+        Z = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
         S = (0, _.nP)(null == v ? void 0 : null === (t = v.branding) || void 0 === t ? void 0 : t.primaryColor, [c.tokens.colors.BG_BRAND, 0.5]),
         A = c.tokens.colors.BG_SURFACE_OVERLAY.resolve({
             theme: E,
@@ -79,7 +79,7 @@ function A(e) {
             r,
             {
                 from: {
-                    transform: N ? 'translateY(0)' : 'translateY(16px)',
+                    transform: Z ? 'translateY(0)' : 'translateY(16px)',
                     opacity: 0,
                     pointerEvents: 'none'
                 },
@@ -89,7 +89,7 @@ function A(e) {
                     pointerEvents: 'all'
                 },
                 leave: {
-                    transform: N ? 'translateY(0)' : 'translateY(16px)',
+                    transform: Z ? 'translateY(0)' : 'translateY(16px)',
                     opacity: 0,
                     pointerEvents: 'none'
                 },
@@ -135,7 +135,7 @@ function A(e) {
                                     }),
                                     (0, i.jsx)('div', {
                                         className: j.guildTagContainer,
-                                        children: (0, i.jsx)(Z.aG, {
+                                        children: (0, i.jsx)(N.aG, {
                                             guildId: n.id,
                                             clanTag: null === (l = n.clan) || void 0 === l ? void 0 : l.tag,
                                             clanBadge: null === (r = n.clan) || void 0 === r ? void 0 : r.badge,
@@ -192,9 +192,9 @@ function y(e) {
             n &&
                 (c.current = window.setTimeout(() => {
                     s(!0),
-                        C.default.track(N.rMx.DISMISSIBLE_CONTENT_SHOWN, {
+                        C.default.track(Z.rMx.DISMISSIBLE_CONTENT_SHOWN, {
                             type: o.C[o.C.ADOPT_CLAN_IDENTITY_NOTICE],
-                            guild_id: null != t ? t : N.lds
+                            guild_id: null != t ? t : Z.lds
                         });
                 }, 2500)),
             () => {
@@ -207,7 +207,7 @@ function y(e) {
             if ((s(!1), null != t)) (0, v.SJ)(t);
         }, [, t]),
         h = l.useCallback(() => {
-            if ((s(!1), null != t)) (0, p.Qd)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : N.lds, !0, S.L.DISMISS);
+            if ((s(!1), null != t)) (0, p.Qd)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : Z.lds, !0, S.L.DISMISS);
         }, [t]);
     return n && null != t && null != r
         ? (0, i.jsx)(A, {

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return S;
     }
 });
 var i = n(200651),
@@ -13,30 +13,30 @@ var i = n(200651),
     d = n(1585),
     u = n(580747),
     m = n(345861),
-    g = n(150039),
-    h = n(993413),
+    h = n(150039),
+    g = n(993413),
     p = n(388032),
     x = n(887669);
-function T(e) {
-    let { user: t, guild: n, className: r, sectionTitle: m, forcedDivider: T = !1, withTutorial: _ = !1, isTryItOutFlow: E = !1 } = e,
+function S(e) {
+    let { user: t, guild: n, className: r, sectionTitle: m, forcedDivider: S = !1, withTutorial: E = !1, isTryItOutFlow: _ = !1 } = e,
         { analyticsLocations: C } = (0, o.ZP)(),
-        f = null != n,
-        { userAvatarDecoration: I, guildAvatarDecoration: N, pendingAvatarDecoration: A, pendingErrors: b } = (0, g.$U)(t, n),
+        I = null != n,
+        { userAvatarDecoration: f, guildAvatarDecoration: N, pendingAvatarDecoration: A, pendingErrors: b } = (0, h.$U)(t, n),
         v = (0, u.Z)('enable_avatar_decoration_uploads'),
         j = s.useCallback(
             () =>
                 (0, d.ps)({
                     analyticsLocations: C,
-                    isTryItOutFlow: E,
+                    isTryItOutFlow: _,
                     guild: n
                 }),
-            [C, E, n]
+            [C, _, n]
         ),
-        O = E || void 0 !== A ? null != A : (f ? N : I) != null,
-        R = _ ? a.ShinyButton : a.Button;
-    return (0, i.jsxs)(h.Z, {
+        O = _ || void 0 !== A ? null != A : (I ? N : f) != null,
+        R = E ? a.ShinyButton : a.Button;
+    return (0, i.jsxs)(g.Z, {
         className: r,
-        forcedDivider: T,
+        forcedDivider: S,
         hasBackground: !0,
         title: m,
         errors: b,
@@ -47,7 +47,7 @@ function T(e) {
                     (0, i.jsx)(R, {
                         size: a.Button.Sizes.SMALL,
                         onClick: j,
-                        className: l()({ [x.buttonHighlighted]: _ }),
+                        className: l()({ [x.buttonHighlighted]: E }),
                         children: p.intl.string(p.t['Tna/TU'])
                     }),
                     O &&
@@ -57,17 +57,17 @@ function T(e) {
                             look: a.Button.Looks.LINK,
                             size: a.Button.Sizes.SMALL,
                             onClick: function () {
-                                (0, g.PO)(null == n ? void 0 : n.id, null);
+                                (0, h.PO)(null == n ? void 0 : n.id, null);
                             },
                             children: (0, c.ad)(t, n) ? p.intl.string(p.t['GsW4/v']) : p.intl.string(p.t.GReZ6O)
                         })
                 ]
             }),
-            t.isStaff() && v && (0, i.jsx)(S, { user: t })
+            t.isStaff() && v && (0, i.jsx)(T, { user: t })
         ]
     });
 }
-let S = (e) => {
+let T = (e) => {
     let { user: t } = e;
     return (0, i.jsxs)('div', {
         className: x.overrideButtonsContainer,

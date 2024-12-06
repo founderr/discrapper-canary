@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return f;
     }
 });
 var i = n(200651),
@@ -13,46 +13,46 @@ var i = n(200651),
     d = n(623196),
     u = n(993315),
     m = n(883382),
-    g = n(940021),
-    h = n(402583),
+    h = n(940021),
+    g = n(402583),
     p = n(230341),
     x = n(893996),
-    T = n(266132),
-    S = n(726985),
-    _ = n(388032);
-function E() {
+    S = n(266132),
+    T = n(726985),
+    E = n(388032);
+function _() {
     let { enabled: e } = (0, l.S)({ location: 'UserSettingsDataAndPrivacy' });
     return e
         ? (0, i.jsxs)(x.Z, {
-              title: _.intl.string(_.t.WWaFn5),
-              description: _.intl.formatToPlainString(_.t['/6sFWV'], { helpArticle: (0, a.uV)() }),
-              webSetting: S.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
-              children: [(0, i.jsx)(p.Z, {}), (0, i.jsx)(T.Z, {})]
+              title: E.intl.string(E.t.WWaFn5),
+              description: E.intl.formatToPlainString(E.t['/6sFWV'], { helpArticle: (0, a.uV)() }),
+              webSetting: T.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
+              children: [(0, i.jsx)(p.Z, {}), (0, i.jsx)(S.Z, {})]
           })
         : null;
 }
 function C() {
     return (0, i.jsx)(x.Z, {
-        title: _.intl.string(_.t.BG7Qsb),
-        webSetting: S.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY,
+        title: E.intl.string(E.t.BG7Qsb),
+        webSetting: T.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY,
         children: (0, i.jsx)(d.Z, {})
     });
 }
-function f() {
+function I() {
     return (0, i.jsxs)(x.Z, {
-        title: _.intl.string(_.t.SRZyHh),
-        webSetting: S.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
-        children: [(0, i.jsx)(h.Z, {}), (0, i.jsx)(g.Z, {}), (0, i.jsx)(m.Z, {}), (0, i.jsx)(u.Z, {})]
+        title: E.intl.string(E.t.SRZyHh),
+        webSetting: T.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
+        children: [(0, i.jsx)(g.Z, {}), (0, i.jsx)(h.Z, {}), (0, i.jsx)(m.Z, {}), (0, i.jsx)(u.Z, {})]
     });
 }
-function I() {
+function f() {
     return (
         s.useEffect(() => {
             (0, r.I)(), (0, o.A)();
         }, []),
         (0, i.jsxs)(c.N, {
-            header: _.intl.string(_.t.OAuOHB),
-            children: [(0, i.jsx)(f, {}), (0, i.jsx)(C, {}), (0, i.jsx)(E, {})]
+            header: E.intl.string(E.t.OAuOHB),
+            children: [(0, i.jsx)(I, {}), (0, i.jsx)(C, {}), (0, i.jsx)(_, {})]
         })
     );
 }

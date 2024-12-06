@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(91192),
-    a = n(442837),
-    o = n(433517),
+    o = n(442837),
+    a = n(433517),
     s = n(481060),
     c = n(339149),
     u = n(327943),
@@ -48,7 +48,7 @@ let M = {
 };
 function L(e) {
     let { selected: t, user: n, badge: h, link: m, showProgressBadge: f } = e,
-        g = (0, a.e7)([u.Z], () => u.Z.isEditorOpen),
+        g = (0, o.e7)([u.Z], () => u.Z.isEditorOpen),
         [C, _] = l.useState(!1),
         [v, x] = l.useState(!1),
         [I, S] = l.useState(null),
@@ -59,7 +59,7 @@ function L(e) {
         };
     if (null == n) return null;
     let O = P.intl.string(P.t.YUU0RE);
-    v && (O = o.K.get(T.wli) ? P.intl.string(P.t.nkq1l5) : P.intl.string(P.t.Be8Q5O));
+    v && (O = a.K.get(T.wli) ? P.intl.string(P.t.nkq1l5) : P.intl.string(P.t.Be8Q5O));
     let k = null;
     !t &&
         f &&
@@ -79,9 +79,9 @@ function L(e) {
                 onClick: () => {
                     if (!__OVERLAY__ && (null != I && clearTimeout(I), S(setTimeout(D, 500)), L(A + 1), 15 === A)) {
                         D();
-                        let e = !o.K.get(T.wli);
-                        o.K.set(T.wli, e),
-                            e && o.K.set(j.O5, !0),
+                        let e = !a.K.get(T.wli);
+                        a.K.set(T.wli, e),
+                            e && a.K.set(j.O5, !0),
                             e ? (0, b.GN)('discodo') : (0, b.GN)('user_leave'),
                             x(!0),
                             setTimeout(() => {
@@ -132,20 +132,20 @@ function L(e) {
 }
 function w() {
     let e = (0, S.n)(),
-        t = (0, a.e7)([x.Z, v.Z], () => {
+        t = (0, o.e7)([x.Z, v.Z], () => {
             let e = (0, c.E)(x.Z.activeItems, v.Z),
                 { total: t, progress: n } = I.lK(e),
                 i = I.xI(n, t);
             return i > 0 && i < 100;
         }),
-        n = (0, a.e7)([m.Z], () => m.Z.getPendingCount()),
+        n = (0, o.e7)([m.Z], () => m.Z.getPendingCount()),
         l = Object.keys(A.nG),
-        { unviewedTrialCount: r, unviewedDiscountCount: o } = (0, a.cj)([C.Z], () => ({
+        { unviewedTrialCount: r, unviewedDiscountCount: a } = (0, o.cj)([C.Z], () => ({
             unviewedTrialCount: C.Z.getUnacknowledgedOffers(l).length,
             unviewedDiscountCount: C.Z.getUnacknowledgedDiscountOffers().length
         })),
-        s = r + o,
-        u = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
+        s = r + a,
+        u = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
         d = (0, h.q)(),
         p = n + s + d,
         b = p === s && s > 0 && n + d === 0,

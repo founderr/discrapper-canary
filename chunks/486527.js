@@ -6,13 +6,13 @@ t.d(n, {
         return o;
     },
     Pp: function () {
-        return I;
+        return f;
     },
     VX: function () {
         return d;
     },
     b7: function () {
-        return f;
+        return I;
     },
     sE: function () {
         return l;
@@ -31,7 +31,7 @@ var i,
     p = t(981631),
     m = t(388032);
 ((i = o || (o = {}))[(i.GUILD = 0)] = 'GUILD'), (i[(i.GUILD_SCHEDULED_EVENT = 1)] = 'GUILD_SCHEDULED_EVENT'), ((a = d || (d = {})).GUILD_TEMPLATES = 'guild-templates'), (a.CUSTOMIZE_NEW_GUILD = 'customize-new-guild'), (a.CHOOSE_GUILD = 'choose-guild'), (a.CUSTOMIZE_EXISTING_GUILD = 'customize-existing-guild'), (a.CONFIRMATION = 'confirmation'), ((r = l || (l = {})).CREATE = 'CREATE'), (r.HUB_SCHOOL_CLUB = 'HUB_SCHOOL_CLUB'), (r.HUB_STUDY = 'HUB_STUDY'), (r.HUB_CLASS = 'HUB_CLASS'), (r.HUB_SOCIAL = 'HUB_SOCIAL'), (r.HUB_MAJOR = 'HUB_MAJOR'), (r.HUB_DORM = 'HUB_DORM'), ((c = s || (s = {}))[(c.ALL = -1)] = 'ALL'), (c[(c.UNCATEGORIZED = 0)] = 'UNCATEGORIZED'), (c[(c.SCHOOL_CLUB = 1)] = 'SCHOOL_CLUB'), (c[(c.CLASS = 2)] = 'CLASS'), (c[(c.STUDY_SOCIAL = 3)] = 'STUDY_SOCIAL'), (c[(c.MISC = 5)] = 'MISC');
-function f(e) {
+function I(e) {
     return '883060064561299456' === e
         ? [
               {
@@ -72,7 +72,7 @@ function f(e) {
               }
           ];
 }
-function I() {
+function f() {
     return {
         CREATE: {
             id: 'CREATE',

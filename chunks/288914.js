@@ -26,8 +26,8 @@ var i = n(200651),
     S = n(785717),
     T = n(687158),
     b = n(899007),
-    A = n(648052),
-    x = n(867176),
+    x = n(648052),
+    A = n(867176),
     Z = n(483424),
     L = n(681837),
     y = n(502762),
@@ -321,7 +321,7 @@ function en(e) {
                         (0, i.jsxs)('header', {
                             className: J.header,
                             children: [
-                                (0, i.jsx)(x.Z, {
+                                (0, i.jsx)(A.Z, {
                                     user: n,
                                     displayProfile: ei,
                                     profileType: q.y0.BITE_SIZE
@@ -355,7 +355,7 @@ function en(e) {
                                     nickname: B.ZP.getName(null, null, n),
                                     onOpenProfile: en ? void 0 : ef,
                                     pronouns: null == ei ? void 0 : ei.pronouns,
-                                    tags: (0, i.jsx)(A.Z, {
+                                    tags: (0, i.jsx)(x.Z, {
                                         displayProfile: ei,
                                         profileType: q.y0.BITE_SIZE,
                                         onClose: G

@@ -17,8 +17,8 @@ var i = n(200651),
     u = n(481060),
     g = n(150063),
     m = n(758119),
-    p = n(100527),
-    f = n(906732),
+    f = n(100527),
+    p = n(906732),
     _ = n(252618),
     h = n(313201),
     E = n(605236),
@@ -28,8 +28,8 @@ var i = n(200651),
     v = n(210887),
     T = n(695346),
     N = n(594174),
-    S = n(626135),
-    I = n(260722),
+    I = n(626135),
+    S = n(260722),
     R = n(914788),
     A = n(841409),
     j = n(652262),
@@ -155,14 +155,14 @@ function W() {
         n = (0, E.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         a = (0, c.e7)([R.Z], () => R.Z.getIsInitialized()),
         l = (0, j.M)(),
-        { selectedTab: g, handleTabChange: p } = (0, A.Z)(),
-        f = (0, h.Dt)(),
+        { selectedTab: g, handleTabChange: f } = (0, A.Z)(),
+        p = (0, h.Dt)(),
         b = N.default.getCurrentUser(),
         v = null != e,
         T = a && null != b && !v;
     return (r.useEffect(() => {
         (0, C.e)('family-center'),
-            I.ZP.initialPageLoad(),
+            S.ZP.initialPageLoad(),
             !n &&
                 (0, E.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
                     dismissAction: L.L.AUTO,
@@ -172,7 +172,7 @@ function W() {
     r.useEffect(() => {
         a &&
             v &&
-            (S.default.track(y.rMx.FAMILY_CENTER_VIEWED, {
+            (I.default.track(y.rMx.FAMILY_CENTER_VIEWED, {
                 is_considered_adult: e,
                 num_of_accepted_links: t,
                 selected_teen_id: l,
@@ -194,12 +194,12 @@ function W() {
                   (0, i.jsx)(G, {
                       section: g,
                       handleItemSelect: (e) => {
-                          p(e);
+                          f(e);
                       }
                   }),
                   (0, i.jsx)(u.TabBar.Panel, {
                       id: g,
-                      'aria-labelledby': f,
+                      'aria-labelledby': p,
                       className: D.contentPanel,
                       children: (0, i.jsx)('div', { children: H[g]() })
                   })
@@ -207,7 +207,7 @@ function W() {
           });
 }
 function z() {
-    let { analyticsLocations: e } = (0, f.ZP)(p.Z.FAMILY_CENTER),
+    let { analyticsLocations: e } = (0, p.ZP)(f.Z.FAMILY_CENTER),
         t = (0, P.Z)(),
         n = (0, Z.M8)(),
         a = (0, E.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
@@ -222,7 +222,7 @@ function z() {
     r.useEffect(() => {
         g.Y(y.Z5c.FAMILY_CENTER),
             (0, C.e)('family-center'),
-            !R.Z.isLoading() && R.Z.canRefetch() && I.ZP.initialPageLoad(),
+            !R.Z.isLoading() && R.Z.canRefetch() && S.ZP.initialPageLoad(),
             !a &&
                 (0, E.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
                     dismissAction: L.L.AUTO,
@@ -232,7 +232,7 @@ function z() {
         r.useEffect(() => {
             l &&
                 W &&
-                (S.default.track(y.rMx.FAMILY_CENTER_VIEWED, {
+                (I.default.track(y.rMx.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: t,
                     num_of_accepted_links: n,
                     selected_teen_id: b,
@@ -251,7 +251,7 @@ function z() {
     if (z) return null;
     let Y = M !== w.dG.SETTINGS ? M : w.dG.ACTIVITY,
         K = V[Y];
-    return (0, i.jsx)(f.Gt, {
+    return (0, i.jsx)(p.Gt, {
         value: e,
         children: (0, i.jsxs)('main', {
             className: s()(D.container, D.containerSidenav),

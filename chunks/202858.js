@@ -1,6 +1,6 @@
 n.d(t, {
     Yn: function () {
-        return g;
+        return h;
     }
 }),
     n(411104),
@@ -44,7 +44,7 @@ function m(e, t) {
         });
     });
 }
-function g() {
+function h() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return new Promise((t) => {
         (0, l.openModalLazy)(
@@ -63,7 +63,7 @@ function g() {
         );
     });
 }
-async function h() {
+async function g() {
     let e = await new Promise((e, t) => {
         (0, l.openModalLazy)(async () => {
             let { default: s } = await n.e('24642').then(n.bind(n, 279837));
@@ -97,6 +97,6 @@ async function h() {
         }));
         await m(e, null == s ? void 0 : s.token);
     } else await m(e);
-    await g();
+    await h();
 }
-t.ZP = { enableMFA: h };
+t.ZP = { enableMFA: g };

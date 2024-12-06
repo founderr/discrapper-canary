@@ -7,31 +7,31 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(481060),
-    o = n(738523);
+    o = n(481060),
+    a = n(738523);
 function s(e) {
     let { total: t, users: n, videoLimit: l } = e;
     return (0, i.jsxs)('div', {
-        className: o.wrapper,
+        className: a.wrapper,
         children: [
             (0, i.jsxs)('span', {
-                className: r()(o.users, {
-                    [o.video]: l,
-                    [o.extraLong]: n >= 100
+                className: r()(a.users, {
+                    [a.video]: l,
+                    [a.extraLong]: n >= 100
                 }),
                 children: [
                     l
-                        ? (0, i.jsx)(a.VideoIcon, {
+                        ? (0, i.jsx)(o.VideoIcon, {
                               size: 'md',
                               color: 'currentColor',
-                              className: o.videoIcon
+                              className: a.videoIcon
                           })
                         : null,
                     n.toString().padStart(2, '0')
                 ]
             }),
             (0, i.jsx)('span', {
-                className: r()(o.total, { [o.extraLong]: t >= 100 }),
+                className: r()(a.total, { [a.extraLong]: t >= 100 }),
                 children: t.toString().padStart(2, '0')
             })
         ]

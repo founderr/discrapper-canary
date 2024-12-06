@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return E;
     }
 }),
     n(724458);
@@ -14,12 +14,12 @@ var i = n(200651),
     d = n(663389),
     u = n(960412),
     m = n(151662),
-    g = n(930441),
-    h = n(726985),
+    h = n(930441),
+    g = n(726985),
     p = n(388032),
     x = n(774927),
-    T = n(232186);
-function S(e) {
+    S = n(232186);
+function T(e) {
     let { label: t, onChange: n, enabled: s, subLabel: r } = e;
     return (0, i.jsx)(o.FormSwitch, {
         value: !!s,
@@ -28,40 +28,40 @@ function S(e) {
         children: t
     });
 }
-function _() {
+function E() {
     let e = (0, a.e7)([d.Z], () => d.Z.getSubsection()),
         t = s.createRef(),
         { categories: n, initialized: r } = (0, a.cj)([m.Z], () => m.Z.getEmailSettings());
     s.useEffect(() => {
         if (null == r) (0, u.Y7)();
-        else if (e === g.vG.toUpperCase()) {
+        else if (e === h.vG.toUpperCase()) {
             var n;
             null == t || null === (n = t.current) || void 0 === n || n.scrollIntoView(!0);
         }
     }, [r, t, e]);
-    let _ = g.M0.reduce((e, t) => e || !!n[t], !1),
-        E = {
-            [g.$Z.COMMUNICATION]: h.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
-            [g.$Z.SOCIAL]: h.s6.NOTIFICATIONS_EMAILS_SOCIAL,
-            [g.$Z.UPDATES_AND_ANNOUNCEMENTS]: h.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
-            [g.$Z.TIPS]: h.s6.NOTIFICATIONS_EMAILS_TIPS,
-            [g.$Z.RECOMMENDATIONS_AND_EVENTS]: h.s6.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS
+    let E = h.M0.reduce((e, t) => e || !!n[t], !1),
+        _ = {
+            [h.$Z.COMMUNICATION]: g.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
+            [h.$Z.SOCIAL]: g.s6.NOTIFICATIONS_EMAILS_SOCIAL,
+            [h.$Z.UPDATES_AND_ANNOUNCEMENTS]: g.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
+            [h.$Z.TIPS]: g.s6.NOTIFICATIONS_EMAILS_TIPS,
+            [h.$Z.RECOMMENDATIONS_AND_EVENTS]: g.s6.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS
         };
     return r
         ? (0, i.jsxs)(c.F, {
-              setting: h.s6.NOTIFICATIONS_EMAILS,
+              setting: g.s6.NOTIFICATIONS_EMAILS,
               children: [
                   (0, i.jsx)('div', { ref: t }),
                   (0, i.jsxs)(o.FormSection, {
-                      className: l()(T.marginTop40),
+                      className: l()(S.marginTop40),
                       tag: o.FormTitleTags.H1,
                       title: p.intl.string(p.t.TPchzM),
                       children: [
-                          g.Od.map((e) => {
+                          h.Od.map((e) => {
                               let { category: t, label: s, subLabel: r } = e,
-                                  l = E[t],
+                                  l = _[t],
                                   a = (0, i.jsx)(
-                                      S,
+                                      T,
                                       {
                                           label: s(),
                                           subLabel: r(),
@@ -85,11 +85,11 @@ function _() {
                                   : a;
                           }),
                           (0, i.jsxs)(c.F, {
-                              setting: h.s6.NOTIFICATIONS_EMAILS_UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS,
+                              setting: g.s6.NOTIFICATIONS_EMAILS_UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS,
                               children: [
                                   (0, i.jsx)(o.Button, {
                                       className: x.marketingUnsubscribeButton,
-                                      disabled: !_,
+                                      disabled: !E,
                                       look: o.ButtonLooks.LINK,
                                       color: o.ButtonColors.LINK,
                                       onClick: u.oc,
@@ -99,7 +99,7 @@ function _() {
                                       type: o.FormTextTypes.DESCRIPTION,
                                       children: p.intl.string(p.t.iYjQ8f)
                                   }),
-                                  (0, i.jsx)(o.FormDivider, { className: l()(T.marginTop40, T.marginBottom40) })
+                                  (0, i.jsx)(o.FormDivider, { className: l()(S.marginTop40, S.marginBottom40) })
                               ]
                           })
                       ]

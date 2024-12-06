@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(827313),
     E = n(228168),
     b = n(981631),
-    Z = n(388032),
-    N = n(866669);
+    N = n(388032),
+    Z = n(866669);
 function S(e) {
     let { user: t, currentUser: n, displayProfile: S, channel: T, isHovering: j, onOpenProfile: A } = e,
         y = (0, l.e7)([a.Z], () => a.Z.getRelationshipType(t.id)),
@@ -35,7 +35,7 @@ function S(e) {
             return null === (e = c.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         });
     return (0, i.jsxs)('div', {
-        className: N.body,
+        className: Z.body,
         children: [
             (0, i.jsx)(_.Z, {
                 user: t,
@@ -71,16 +71,16 @@ function S(e) {
             (0, i.jsx)(p.Z, {
                 user: t,
                 currentUser: n,
-                className: N.activity
+                className: Z.activity
             }),
             (0, i.jsxs)(v.Z.Overlay, {
-                className: N.overlay,
+                className: Z.overlay,
                 children: [
                     !P &&
                         (null == S ? void 0 : S.bio) != null &&
                         (null == S ? void 0 : S.bio) !== '' &&
                         (0, i.jsx)(x.Z, {
-                            heading: Z.intl.string(Z.t['61W33d']),
+                            heading: N.intl.string(N.t['61W33d']),
                             headingColor: 'header-primary',
                             children: (0, i.jsx)(h.Z, {
                                 userBio: S.bio,
@@ -96,7 +96,7 @@ function S(e) {
                             channel: T
                         }),
                     (0, i.jsx)(x.Z, {
-                        heading: t.bot ? Z.intl.string(Z.t['A//N4u']) : Z.intl.string(Z.t.a6XYDw),
+                        heading: t.bot ? N.intl.string(N.t['A//N4u']) : N.intl.string(N.t.a6XYDw),
                         headingColor: 'header-primary',
                         children: (0, i.jsx)(g.Z, { userId: t.id })
                     })

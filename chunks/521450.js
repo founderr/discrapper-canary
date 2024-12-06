@@ -9,14 +9,14 @@ var i = n(200651),
     u = n(37234),
     g = n(960412),
     m = n(151662),
-    p = n(695346),
-    f = n(981631),
+    f = n(695346),
+    p = n(981631),
     _ = n(930441),
     h = n(388032),
     E = n(660728),
     b = n(232186);
 t.Z = () => {
-    let e = p.Ex.useSetting(),
+    let e = f.Ex.useSetting(),
         { categories: t, initialized: n } = (0, c.cj)([m.Z], () => m.Z.getEmailSettings());
     return (
         r.useEffect(() => {
@@ -35,7 +35,7 @@ t.Z = () => {
                     value: e,
                     note: h.intl.string(h.t['5MdB3t']),
                     hideBorder: !0,
-                    onChange: p.Ex.updateSetting,
+                    onChange: f.Ex.updateSetting,
                     children: h.intl.string(h.t.zkEceX)
                 }),
                 e
@@ -57,7 +57,7 @@ t.Z = () => {
                                       children: (0, i.jsx)(l.rU, {
                                           onClick: u.xf,
                                           to: {
-                                              pathname: f.Z5c.FAMILY_CENTER,
+                                              pathname: p.Z5c.FAMILY_CENTER,
                                               state: { scrollRestoration: !1 }
                                           },
                                           children: h.intl.string(h.t.cUIXFR)

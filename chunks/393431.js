@@ -1,23 +1,23 @@
-t.d(n, {
+e.d(t, {
     Z: function () {
-        return u;
+        return s;
     }
 });
-var r = t(200651);
-t(192379);
-var o = t(481060),
-    i = t(906732),
-    l = t(453925),
-    a = t(821564),
-    c = t(632304);
-function u() {
-    let { analyticsLocations: e } = (0, i.ZP)();
+var u = e(200651);
+e(192379);
+var i = e(481060),
+    l = e(906732),
+    o = e(453925),
+    r = e(821564),
+    c = e(632304);
+function s() {
+    let { analyticsLocations: n } = (0, l.ZP)();
     return [
-        (0, r.jsx)(o.MenuGroup, { children: (0, a.Z)(e) }, 'input-mode-items'),
-        (0, r.jsxs)(
-            o.MenuGroup,
+        (0, u.jsx)(i.MenuGroup, { children: (0, r.Z)(n) }, 'input-mode-items'),
+        (0, u.jsxs)(
+            i.MenuGroup,
             {
-                children: [(0, l.Z)(e), (0, c.Z)(e)]
+                children: [(0, o.Z)(n), (0, c.Z)(n)]
             },
             'input-output'
         )

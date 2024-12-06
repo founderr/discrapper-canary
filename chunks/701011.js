@@ -13,8 +13,8 @@ var i = t(200651),
     u = t(788983),
     s = t(214629),
     p = t(317381),
-    v = t(781780),
-    m = t(325749),
+    m = t(781780),
+    v = t(325749),
     f = t(981631),
     h = t(175911);
 function x() {
@@ -42,7 +42,7 @@ function x() {
             let e = null == n ? void 0 : n.applicationId;
             return null == e ? void 0 : d.Z.getApplication(e);
         }),
-        C = (0, s.PR)();
+        _ = (0, s.PR)();
     return (0, i.jsx)('div', {
         className: h.container,
         children:
@@ -55,21 +55,21 @@ function x() {
                           children: [
                               (0, i.jsx)('div', {
                                   className: h.headerContainer,
-                                  children: (0, i.jsx)(m.Z, {
+                                  children: (0, i.jsx)(v.Z, {
                                       applicationId: I.id,
                                       channelId: t
                                   })
                               }),
                               (0, i.jsx)('div', {
                                   className: h.iframeContainer,
-                                  children: (0, i.jsx)(v.Z, {
+                                  children: (0, i.jsx)(m.Z, {
                                       channelId: t,
                                       guildId: null !== (e = n.guildId) && void 0 !== e ? e : void 0,
                                       embeddedActivity: n,
                                       application: I
                                   })
                               }),
-                              C ? (0, i.jsx)(c.Z, { isEmbeddedActivity: !0 }) : null
+                              _ ? (0, i.jsx)(c.Z, { isEmbeddedActivity: !0 }) : null
                           ]
                       })
                   })

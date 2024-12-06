@@ -17,7 +17,7 @@ var i = n(120356),
 let g = (e) => {
     let { handleDone: t, headerId: n, modalState: i, shouldHideTemporaryInviteToggle: g, onGenerateNewLink: m, onToggleTemporary: v, onSelectMaxAge: x, onSelectMaxUses: p } = e,
         I = (0, a.ZP)(),
-        { maxAge: S, maxUses: N, temporary: T } = i;
+        { maxAge: S, maxUses: T, temporary: N } = i;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(s.ModalHeader, {
@@ -40,8 +40,8 @@ let g = (e) => {
             (0, l.jsx)(o.Z, {
                 shouldHideTemporaryInviteToggle: g,
                 maxAge: S,
-                maxUses: N,
-                temporary: T,
+                maxUses: T,
+                temporary: N,
                 onToggleTemporary: v,
                 onSelectMaxAge: x,
                 onSelectMaxUses: p,

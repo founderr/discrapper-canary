@@ -21,8 +21,8 @@ let I = new Set(),
     S = null,
     T = null,
     b = null,
-    A = null,
     x = null,
+    A = null,
     Z = h.K.get(E.kf) || !1;
 function L(e) {
     let t = e.getGuildId(),
@@ -32,7 +32,7 @@ function L(e) {
 function y() {
     if (((T = g.Z.getChannel()), (b = g.Z.getCategory()), null == T)) return !1;
     let e = T.getGuildId();
-    (S = N = L(T)), null == N[A] && (A = e), (r = null != b), (i = p.o4(T, b)), (x = null), (v = !1), (C = _.QZA.CLOSED), I.clear();
+    (S = N = L(T)), null == N[x] && (x = e), (r = null != b), (i = p.o4(T, b)), (A = null), (v = !1), (C = _.QZA.CLOSED), I.clear();
 }
 class P extends (l = u.ZP.Store) {
     initialize() {
@@ -54,7 +54,7 @@ class P extends (l = u.ZP.Store) {
         return N;
     }
     get selectedOverwriteId() {
-        return A;
+        return x;
     }
     get formState() {
         return C;
@@ -111,14 +111,14 @@ class P extends (l = u.ZP.Store) {
         },
         CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
             let { id: t } = e;
-            if (null != N && null != N[t]) A = t;
+            if (null != N && null != N[t]) x = t;
             else {
                 if (null == T) return !1;
-                x = t;
+                A = t;
             }
         },
         CHANNEL_SETTINGS_CLOSE: function () {
-            (C = _.QZA.CLOSED), (N = null), (S = null), (T = null), (b = null), (v = !1), I.clear(), (A = null), (x = null);
+            (C = _.QZA.CLOSED), (N = null), (S = null), (T = null), (b = null), (v = !1), I.clear(), (x = null), (A = null);
         },
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e;
@@ -142,9 +142,9 @@ class P extends (l = u.ZP.Store) {
                             (N = {
                                 ...T.permissionOverwrites,
                                 ...n
-                            })[A]
-                                ? (A = t)
-                                : null != x && null != N[x] && ((A = x), (x = null)),
+                            })[x]
+                                ? (x = t)
+                                : null != A && null != N[A] && ((x = A), (A = null)),
                             (i = p.o4(T, b)),
                             !0
                         );

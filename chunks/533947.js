@@ -20,8 +20,8 @@ let C = [],
     S = I.QZA.CLOSED,
     T = {},
     b = !1,
-    A = null;
-function x() {
+    x = null;
+function A() {
     if (((i = null != (r = g.Z.getChannel()) ? f.Z.getGuild(r.guild_id) : null), (C = null != r && null != i && _.Z.can(I.Plq.MANAGE_WEBHOOKS, r) ? E.Z.getWebhooksForChannel(i.id, r.id) : []), null != v)) {
         let e = L(v.id);
         null != e && (v = e);
@@ -65,7 +65,7 @@ class y extends (a = h.ZP.Store) {
             webhooks: C,
             editedWebhook: v,
             section: l,
-            sectionId: A,
+            sectionId: x,
             hasChanges: this.hasChanges(),
             isFetching: N,
             errors: T
@@ -86,20 +86,20 @@ let P = new y(
     __OVERLAY__
         ? {}
         : {
-              INTEGRATION_SETTINGS_INIT: x,
-              INTEGRATION_SETTINGS_SAVE_SUCCESS: x,
+              INTEGRATION_SETTINGS_INIT: A,
+              INTEGRATION_SETTINGS_SAVE_SUCCESS: A,
               CHANNEL_SETTINGS_SET_SECTION: function (e) {
                   let { section: t } = e;
                   if (t !== I.CoT.INTEGRATIONS) return !1;
                   if (((l = I.b4C.OVERVIEW), null == i)) {
                       let e = g.Z.getChannel(),
                           t = null == e ? void 0 : e.getGuildId();
-                      null != e && null != t && (p.Z.fetchForChannel(t, e.id), (N = !0)), x();
+                      null != e && null != t && (p.Z.fetchForChannel(t, e.id), (N = !0)), A();
                   }
               },
               INTEGRATION_SETTINGS_SET_SECTION: function (e) {
                   let { section: t, sectionId: n } = e;
-                  (l = t), (A = n);
+                  (l = t), (x = n);
               },
               INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function (e) {
                   let { webhookId: t } = e,

@@ -15,13 +15,13 @@ var s = n(120356),
     d = n(409813),
     u = n(3409),
     m = n(388032),
-    g = n(517978),
-    h = n(652849);
+    h = n(517978),
+    g = n(652849);
 function p(e) {
     let { transitionState: t, analyticsLocation: n, onClose: s, onAddPaymentSource: l, toastContent: c, initialStep: p = d.h8.PAYMENT_TYPE, overwriteSubscriptionPaymentSource: x = !1 } = e,
-        T = (0, u.fL)(),
-        S = (0, u.vP)({
-            paymentModalArgs: T,
+        S = (0, u.fL)(),
+        T = (0, u.vP)({
+            paymentModalArgs: S,
             initialStep: p,
             prependSteps: [],
             appendSteps: [],
@@ -33,7 +33,7 @@ function p(e) {
             },
             onStepChange: () => {},
             header: (0, i.jsxs)('div', {
-                className: r()(g.modalTitle, h.flex, h.justifyBetween, h.alignCenter),
+                className: r()(h.modalTitle, g.flex, g.justifyBetween, g.alignCenter),
                 children: [
                     (0, i.jsx)(o.FormTitle, {
                         tag: o.FormTitleTags.H4,
@@ -50,14 +50,14 @@ function p(e) {
     return (0, i.jsx)(o.ModalRoot, {
         transitionState: t,
         size: o.ModalSize.SMALL,
-        className: g.modal,
+        className: h.modal,
         'aria-label': m.intl.string(m.t.eQ2bLi),
         children: (0, i.jsx)('form', {
-            className: g.form,
+            className: h.form,
             onSubmit: function (e) {
                 e.preventDefault();
             },
-            children: S
+            children: T
         })
     });
 }

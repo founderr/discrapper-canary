@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return S;
     }
 });
 var i = n(200651);
@@ -14,11 +14,11 @@ var s = n(442837),
     d = n(293389),
     u = n(327885),
     m = n(326528),
-    g = n(332325),
-    h = n(981631),
+    h = n(332325),
+    g = n(981631),
     p = n(388032),
     x = n(16344);
-function T() {
+function S() {
     let e = (0, m.b)(),
         t = (0, s.e7)([o.Z], () => o.Z.getSubsection()),
         n = null != t && e.some((e) => e.id === t) ? t : e[0].id;
@@ -33,7 +33,7 @@ function T() {
                 className: x.tabBar,
                 selectedItem: n,
                 onItemSelect: (e) => {
-                    l.Z.setSection(h.oAB.GAMES, e);
+                    l.Z.setSection(g.oAB.GAMES, e);
                 },
                 orientation: 'horizontal',
                 type: 'top',
@@ -62,22 +62,22 @@ function T() {
             }),
             (() => {
                 switch (n) {
-                    case g.Z.CLIPS:
+                    case h.Z.CLIPS:
                         return (0, i.jsx)(a.Z, {
                             className: x.body,
                             showHeader: !1
                         });
-                    case g.Z.OVERLAY:
+                    case h.Z.OVERLAY:
                         return (0, i.jsx)(u.Z, {
                             className: x.body,
                             showHeader: !1
                         });
-                    case g.Z.ACTIVITY_PRIVACY:
+                    case h.Z.ACTIVITY_PRIVACY:
                         return (0, i.jsx)(c.Z, {
                             className: x.body,
                             showHeader: !1
                         });
-                    case g.Z.MY_GAMES:
+                    case h.Z.MY_GAMES:
                     default:
                         return (0, i.jsx)(d.Z, {
                             className: x.body,

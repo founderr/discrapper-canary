@@ -1,6 +1,6 @@
 n.d(t, {
     h: function () {
-        return E;
+        return _;
     }
 }),
     n(47120);
@@ -14,12 +14,12 @@ var i = n(200651),
     d = n(906732),
     u = n(313201),
     m = n(73346),
-    g = n(584825),
-    h = n(305342),
+    h = n(584825),
+    g = n(305342),
     p = n(293810),
     x = n(388032),
-    T = n(196844);
-let S = (e) => {
+    S = n(196844);
+let T = (e) => {
         let [t, n] = s.useState(!1),
             [i, r] = s.useState(null);
         return {
@@ -36,20 +36,20 @@ let S = (e) => {
             submitting: t
         };
     },
-    _ = (e) => {
+    E = (e) => {
         var t;
-        let { transitionState: n, groupListing: s, guildId: r, listing: o, subscription: _, onClose: E } = e,
+        let { transitionState: n, groupListing: s, guildId: r, listing: o, subscription: E, onClose: _ } = e,
             C = (0, u.Dt)(),
-            f = (0, g.YB)(r),
-            I = (null == f ? void 0 : null === (t = f.cover_image_asset) || void 0 === t ? void 0 : t.application_id) != null ? (0, m._W)(f.cover_image_asset.application_id, f.cover_image_asset, 440) : void 0,
+            I = (0, h.YB)(r),
+            f = (null == I ? void 0 : null === (t = I.cover_image_asset) || void 0 === t ? void 0 : t.application_id) != null ? (0, m._W)(I.cover_image_asset.application_id, I.cover_image_asset, 440) : void 0,
             { analyticsLocations: N } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
-            { cancelSubscription: A, error: b, submitting: v } = S(N),
+            { cancelSubscription: A, error: b, submitting: v } = T(N),
             j = async () => {
-                (await A(_.id)) && E();
+                (await A(E.id)) && _();
             },
             O = o.role_benefits.benefits.filter((e) => e.ref_type === p.Qs.CHANNEL),
             R = o.role_benefits.benefits.filter((e) => e.ref_type === p.Qs.INTANGIBLE),
-            P = l()(_.currentPeriodEnd).format('MMMM Do, YYYY'),
+            P = l()(E.currentPeriodEnd).format('MMMM Do, YYYY'),
             D = x.intl.formatToPlainString(x.t.KsMRPz, {
                 numChannels: O.length,
                 numAdditionalBenefits: R.length,
@@ -57,47 +57,47 @@ let S = (e) => {
             });
         return (0, i.jsxs)(a.ModalRoot, {
             transitionState: n,
-            className: T.__invalid_modal,
+            className: S.__invalid_modal,
             'aria-labelledby': C,
             children: [
                 (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsx)('img', {
-                            src: I,
+                            src: f,
                             alt: '',
-                            className: T.headerImage
+                            className: S.headerImage
                         }),
                         (0, i.jsx)(a.ModalCloseButton, {
                             withCircleBackground: !0,
-                            className: T.closeButton,
-                            onClick: E
+                            className: S.closeButton,
+                            onClick: _
                         })
                     ]
                 }),
                 null != b ? (0, i.jsx)(a.FormErrorBlock, { children: b.message }) : null,
                 (0, i.jsxs)(a.ModalContent, {
-                    className: T.content,
+                    className: S.content,
                     children: [
                         (0, i.jsx)(a.Heading, {
                             id: C,
                             variant: 'text-md/medium',
-                            className: T.title,
+                            className: S.title,
                             children: x.intl.string(x.t.O6l5tL)
                         }),
                         (0, i.jsx)(a.Text, {
-                            className: T.description,
+                            className: S.description,
                             variant: 'text-sm/normal',
                             children: D
                         }),
-                        (0, i.jsx)(h.c, {
+                        (0, i.jsx)(g.c, {
                             listingId: o.id,
                             guildId: s.guild_id,
-                            className: T.benefits
+                            className: S.benefits
                         })
                     ]
                 }),
                 (0, i.jsxs)(a.ModalFooter, {
-                    className: T.footer,
+                    className: S.footer,
                     children: [
                         (0, i.jsx)(a.Button, {
                             color: a.Button.Colors.RED,
@@ -108,8 +108,8 @@ let S = (e) => {
                         (0, i.jsx)(a.Button, {
                             look: a.Button.Looks.LINK,
                             color: a.Button.Colors.WHITE,
-                            className: T.goBackButton,
-                            onClick: E,
+                            className: S.goBackButton,
+                            onClick: _,
                             children: x.intl.string(x.t.EP6EPT)
                         })
                     ]
@@ -117,9 +117,9 @@ let S = (e) => {
             ]
         });
     },
-    E = (e) => {
+    _ = (e) => {
         (0, a.openModal)((t) =>
-            (0, i.jsx)(_, {
+            (0, i.jsx)(E, {
                 ...t,
                 ...e
             })

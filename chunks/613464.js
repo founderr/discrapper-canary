@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return Z;
     }
 }),
     n(47120);
@@ -25,9 +25,9 @@ var i = n(200651),
     I = n(189357),
     E = n(718617),
     b = n(327250),
-    Z = n(764948);
-function N(e) {
-    let { userId: t, guildId: n, onClose: r, className: N, infoPanelClassName: S, style: T } = e,
+    N = n(764948);
+function Z(e) {
+    let { userId: t, guildId: n, onClose: r, className: Z, infoPanelClassName: S, style: T } = e,
         j = (0, I.ms)(n),
         A = (0, s.e7)([_.default], () => _.default.getUser(t), [t]),
         y = (0, s.e7)([v.ZP], () => v.ZP.getMember(n, t), [n, t]),
@@ -72,7 +72,7 @@ function N(e) {
     j)
         ? P || null == A || null == y
             ? (0, i.jsx)('div', {
-                  className: a()(Z.sidebarContainer, Z.loadingContainer, N),
+                  className: a()(N.sidebarContainer, N.loadingContainer, Z),
                   style: T,
                   children: (0, i.jsx)(o.Spinner, {
                       animated: !0,
@@ -82,7 +82,7 @@ function N(e) {
             : (0, i.jsx)(m.Gt, {
                   value: k,
                   children: (0, i.jsx)('div', {
-                      className: a()(Z.sidebarContainer, N),
+                      className: a()(N.sidebarContainer, Z),
                       style: T,
                       children: (0, i.jsx)(x.Z, {
                           user: A,
@@ -90,9 +90,9 @@ function N(e) {
                           profileType: null,
                           themeOverride: D,
                           forceShowPremium: !0,
-                          className: Z.profileThemedContainer,
+                          className: N.profileThemedContainer,
                           children: (0, i.jsxs)('div', {
-                              className: Z.innerContainer,
+                              className: N.innerContainer,
                               children: [
                                   (0, i.jsx)(b.Z, {
                                       userId: t,

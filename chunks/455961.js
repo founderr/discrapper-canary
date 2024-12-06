@@ -26,14 +26,14 @@ var i = n(200651),
     I = n(1163),
     E = n(738672),
     b = n(981631),
-    Z = n(37113),
-    N = n(388032),
+    N = n(37113),
+    Z = n(388032),
     S = n(235726);
 function T(e) {
     let { className: t, onDismiss: n } = e;
     return (0, i.jsx)(u.Button, {
         className: t,
-        'aria-label': N.intl.string(N.t.cpT0Cg),
+        'aria-label': Z.intl.string(Z.t.cpT0Cg),
         look: u.Button.Looks.BLANK,
         size: u.Button.Sizes.NONE,
         onClick: n,
@@ -44,8 +44,8 @@ function T(e) {
         })
     });
 }
-let j = Z.LY.RESOLUTION_1440,
-    A = Z.ws.FPS_60;
+let j = N.LY.RESOLUTION_1440,
+    A = N.ws.FPS_60;
 function y(e) {
     let { channel: t } = e,
         n = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
@@ -104,7 +104,7 @@ function y(e) {
         className: S.optInButton,
         onClick: I,
         submitting: r,
-        children: N.intl.string(N.t['Rpn/09'])
+        children: Z.intl.string(Z.t['Rpn/09'])
     });
 }
 function P(e) {
@@ -130,7 +130,7 @@ function P(e) {
                         (0, i.jsx)(o.xv, {
                             className: S.variant2Text,
                             variant: 'text-sm/medium',
-                            children: r ? N.intl.string(N.t.ZYQ2zc) : N.intl.string(N.t.kr8AEx)
+                            children: r ? Z.intl.string(Z.t.ZYQ2zc) : Z.intl.string(Z.t.kr8AEx)
                         }),
                         (0, i.jsx)(y, { channel: t })
                     ]

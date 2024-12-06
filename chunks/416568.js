@@ -2,9 +2,9 @@ n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    o = n(392711),
-    s = n.n(o),
+    o = n.n(r),
+    a = n(392711),
+    s = n.n(a),
     c = n(512969),
     u = n(91192),
     d = n(374470),
@@ -127,13 +127,13 @@ class et {
             }),
             (this.isItemVisible = (e, t, n) => {
                 let { iconTotalSize: i, badgeVisibleBuffer: l, heightBeforeIcons: r } = this.sizes,
-                    a = this.scrollerRef.current;
-                if (null == a) return !1;
-                let o = n.findIndex((t) => ('string' == typeof t || null == t ? t === e : t.includes(e)));
-                if (o < 0) return !1;
-                let s = i * o + r;
+                    o = this.scrollerRef.current;
+                if (null == o) return !1;
+                let a = n.findIndex((t) => ('string' == typeof t || null == t ? t === e : t.includes(e)));
+                if (a < 0) return !1;
+                let s = i * a + r;
                 !t && (s += l);
-                let c = a.getScrollerState();
+                let c = o.getScrollerState();
                 return (!t && !!(s >= c.scrollTop)) || (!!t && !!(s + i <= c.scrollTop + c.offsetHeight)) || !1;
             }),
             (this.handleScroll = () => {
@@ -151,7 +151,7 @@ class et {
     }
 }
 function en(e) {
-    let { disableAppDownload: t = P.isPlatformEmbedded, isOverlay: n = !1, className: r, themeOverride: o } = e,
+    let { disableAppDownload: t = P.isPlatformEmbedded, isOverlay: n = !1, className: r, themeOverride: a } = e,
         s = (0, I.Q)('GuildsBar'),
         { density: d } = (0, f.useThemeContext)(),
         [p] = (0, h.Wu)([j.ZP], () => {
@@ -164,9 +164,9 @@ function en(e) {
         en = C.concat($),
         ei = (0, h.e7)([x.Z], () => x.Z.isFullscreenInContext()),
         el = (0, h.e7)([A.Z], () => A.Z.getGeoRestrictedGuilds()),
-        [er, ea] = l.useState(!1),
-        eo = l.useCallback(() => ea(!0), []),
-        es = l.useCallback(() => ea(!1), []),
+        [er, eo] = l.useState(!1),
+        ea = l.useCallback(() => eo(!0), []),
+        es = l.useCallback(() => eo(!1), []),
         ec = l.useRef(!1),
         [eu] = l.useState(() => new m.V7()),
         ed = l.useRef(null),
@@ -245,7 +245,7 @@ function en(e) {
                         setNodeRef: e_.setNodeRef,
                         draggable: !0,
                         sorting: er,
-                        onDragStart: eo,
+                        onDragStart: ea,
                         onDragEnd: es,
                         renderChildNode: eE
                     },
@@ -259,7 +259,7 @@ function en(e) {
                         setRef: e_.setNodeRef,
                         draggable: !0,
                         sorting: er,
-                        onDragStart: eo,
+                        onDragStart: ea,
                         onDragEnd: es
                     },
                     e.id
@@ -286,10 +286,10 @@ function en(e) {
     return (0, i.jsx)(v.Gt, {
         value: ev,
         children: (0, i.jsx)(f.ThemeProvider, {
-            theme: o,
+            theme: a,
             children: (e) =>
                 (0, i.jsx)('nav', {
-                    className: a()(J.wrapper, r, e, { [J.hidden]: ei }),
+                    className: o()(J.wrapper, r, e, { [J.hidden]: ei }),
                     'aria-label': X.intl.string(X.t.PjnF2t),
                     children: (0, i.jsxs)('ul', {
                         ref: ep,
@@ -309,7 +309,7 @@ function en(e) {
                                 className: J.itemsContainer,
                                 children: [
                                     (0, i.jsxs)(f.AdvancedScrollerNone, {
-                                        className: a()({
+                                        className: o()({
                                             [J.scroller]: !0,
                                             [J.scrolling]: eg
                                         }),
@@ -362,7 +362,7 @@ function en(e) {
                                 ref: eh,
                                 isVisible: e_.isItemVisible,
                                 onJumpTo: e_.handleJumpToGuild,
-                                className: a()(J.unreadMentionsIndicatorBottom, { [J.unreadMentionsFixedFooter]: !n }),
+                                className: o()(J.unreadMentionsIndicatorBottom, { [J.unreadMentionsFixedFooter]: !n }),
                                 barClassName: J.unreadMentionsBar
                             })
                         ]

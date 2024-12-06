@@ -15,8 +15,8 @@ var i = n(200651),
     u = n(846027),
     g = n(794347),
     m = n(131951),
-    p = n(19780),
-    f = n(626135),
+    f = n(19780),
+    p = n(626135),
     _ = n(981631),
     h = n(388032),
     E = n(621519);
@@ -51,7 +51,7 @@ class x extends r.PureComponent {
                 isDetectingInput: !0,
                 didDeafenUser: d
             }),
-            f.default.track(_.rMx.MIC_TESTING_STARTED, {
+            p.default.track(_.rMx.MIC_TESTING_STARTED, {
                 input_device_name: t,
                 input_device_volume: n,
                 output_device_name: i,
@@ -75,7 +75,7 @@ class x extends r.PureComponent {
             }),
             null != this._micTestStartTime)
         )
-            f.default.track(_.rMx.MIC_TESTING_STOPPED, { testing_duration: Math.round((Date.now() - this._micTestStartTime) / 1000) });
+            p.default.track(_.rMx.MIC_TESTING_STOPPED, { testing_duration: Math.round((Date.now() - this._micTestStartTime) / 1000) });
     }
     renderCaption() {
         let { captionVoice: e, captionNoVoice: t } = this.props,
@@ -89,7 +89,7 @@ class x extends r.PureComponent {
     render() {
         let { isVoiceConnected: e, title: t, description: n, notchBackground: r, buttonTest: a, buttonStop: s, buttonClassName: l, buttonColor: o, isDeafened: c } = this.props,
             { isMicTesting: u, volume: m } = this.state,
-            p = e && !u ? h.intl.string(h.t['9viE2N']) : null;
+            f = e && !u ? h.intl.string(h.t['9viE2N']) : null;
         return (
             u && e && !c && this._micTestStop(),
             (0, i.jsxs)('div', {
@@ -110,7 +110,7 @@ class x extends r.PureComponent {
                         className: E.micTest,
                         children: [
                             (0, i.jsx)(d.Tooltip, {
-                                text: p,
+                                text: f,
                                 children: (e) => {
                                     let { onMouseEnter: t, onMouseLeave: n } = e;
                                     return (0, i.jsx)(d.Button, {
@@ -172,7 +172,7 @@ class x extends r.PureComponent {
             });
     }
 }
-t.Z = l.ZP.connectStores([p.Z, m.Z], () => {
+t.Z = l.ZP.connectStores([f.Z, m.Z], () => {
     let e = m.Z.getInputDeviceId(),
         t = m.Z.getInputDevices(),
         n = s().find(t, (t) => {
@@ -187,7 +187,7 @@ t.Z = l.ZP.connectStores([p.Z, m.Z], () => {
         }),
         l = m.Z.getModeOptions();
     return {
-        isVoiceConnected: p.Z.isConnected(),
+        isVoiceConnected: f.Z.isConnected(),
         inputVolume: m.Z.getInputVolume(),
         outputVolume: m.Z.getOutputVolume(),
         inputMode: m.Z.getMode(),

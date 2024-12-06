@@ -1,14 +1,14 @@
 let l;
 n.d(t, {
     Z: function () {
-        return r;
+        return s;
     }
 });
-var s = n(145597);
-function r(e, t) {
+var r = n(145597);
+function s(e, t) {
     if (__OVERLAY__) {
         let e = t.getGame(),
-            n = (0, s.QF)();
+            n = (0, r.QF)();
         return null == e || null == n
             ? null
             : (null == l ? void 0 : l.id) === e.id && (null == l ? void 0 : l.pid) === n

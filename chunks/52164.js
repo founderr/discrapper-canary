@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return T;
     }
 }),
     n(47120);
@@ -15,68 +15,68 @@ var s = n(512722),
     d = n(74538),
     u = n(937615),
     m = n(374649),
-    g = n(474936),
-    h = n(981631),
+    h = n(474936),
+    g = n(981631),
     p = n(388032),
     x = n(168910);
-function T(e) {
+function S(e) {
     let t,
         { subscription: n, withOverheadSeparator: s } = e,
-        { analyticsLocations: T } = (0, o.ZP)(),
-        [S] = (0, m.ED)({
+        { analyticsLocations: S } = (0, o.ZP)(),
+        [T] = (0, m.ED)({
             subscriptionId: n.id,
             renewal: !0,
-            analyticsLocations: T,
+            analyticsLocations: S,
             analyticsLocation: a.Z.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
         });
-    if (null == S) return null;
-    let _ = s ? x.finePrintWithOverheadSeparator : x.finePrint,
-        E = S.invoiceItems.find((e) => {
+    if (null == T) return null;
+    let E = s ? x.finePrintWithOverheadSeparator : x.finePrint,
+        _ = T.invoiceItems.find((e) => {
             let { subscriptionPlanId: t } = e;
             return (0, d.uZ)(t);
         });
-    if (null == E) return null;
-    let C = E.subscriptionPlanId,
-        f = c.Z.get(C);
-    r()(null != f, 'Missing plan');
-    let I = (0, u.T4)(S.total, S.currency);
+    if (null == _) return null;
+    let C = _.subscriptionPlanId,
+        I = c.Z.get(C);
+    r()(null != I, 'Missing plan');
+    let f = (0, u.T4)(T.total, T.currency);
     return (
-        f.interval === g.rV.YEAR
+        I.interval === h.rV.YEAR
             ? (t = p.intl.format(p.t['jPz/39'], {
-                  price: I,
-                  termsUrl: h.EYA.TERMS,
-                  paidURL: h.EYA.PAID_TERMS,
-                  privacyUrl: h.EYA.PRIVACY
+                  price: f,
+                  termsUrl: g.EYA.TERMS,
+                  paidURL: g.EYA.PAID_TERMS,
+                  privacyUrl: g.EYA.PRIVACY
               }))
-            : f.interval === g.rV.MONTH &&
+            : I.interval === h.rV.MONTH &&
               (t =
-                  1 === f.intervalCount
+                  1 === I.intervalCount
                       ? p.intl.format(p.t.m27GpK, {
-                            price: I,
-                            termsUrl: h.EYA.TERMS,
-                            paidURL: h.EYA.PAID_TERMS,
-                            privacyUrl: h.EYA.PRIVACY
+                            price: f,
+                            termsUrl: g.EYA.TERMS,
+                            paidURL: g.EYA.PAID_TERMS,
+                            privacyUrl: g.EYA.PRIVACY
                         })
                       : p.intl.format(p.t['9xf5V1'], {
-                            price: I,
-                            termsUrl: h.EYA.TERMS,
-                            paidURL: h.EYA.PAID_TERMS,
-                            privacyUrl: h.EYA.PRIVACY,
-                            intervalCount: f.intervalCount
+                            price: f,
+                            termsUrl: g.EYA.TERMS,
+                            paidURL: g.EYA.PAID_TERMS,
+                            privacyUrl: g.EYA.PRIVACY,
+                            intervalCount: I.intervalCount
                         })),
         (0, i.jsx)(l.Text, {
             color: 'text-muted',
-            className: _,
+            className: E,
             variant: 'text-xs/normal',
             children: t
         })
     );
 }
-function S(e) {
+function T(e) {
     let { subscription: t, withOverheadSeparator: n } = e;
-    return t.status === h.O0b.CANCELED || t.isPurchasedExternally
+    return t.status === g.O0b.CANCELED || t.isPurchasedExternally
         ? null
-        : (0, i.jsx)(T, {
+        : (0, i.jsx)(S, {
               subscription: t,
               withOverheadSeparator: n
           });

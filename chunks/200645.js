@@ -20,7 +20,7 @@ function m(e, t, n) {
         e
     );
 }
-class g extends s.PureComponent {
+class h extends s.PureComponent {
     async componentDidMount() {
         this.setState({
             openOnStartup: await c.ZP.getSetting('OPEN_ON_STARTUP', !0),
@@ -88,4 +88,4 @@ class g extends s.PureComponent {
             });
     }
 }
-t.Z = g;
+t.Z = h;

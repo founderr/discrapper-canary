@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(256916),
-    o = n(664915),
+    o = n(256916),
+    a = n(664915),
     s = n(888369),
     c = n(358652),
     u = n(771845),
@@ -26,8 +26,8 @@ let x = (0, p.oH)((e, t, n) => ['null', ...t, ...e, C, m.x8Z.E3_SERVER_DISCOVERY
 t.Z = l.forwardRef(function (e, t) {
     let n = (0, r.Wu)([u.ZP, c.Z, s.default], () => x(u.ZP.getGuildFolders(), c.Z.getUnreadPrivateChannelIds(), s.default.getStoreChangeSentinel())),
         l = (0, r.e7)([h.Z], () => h.Z.isFocused()),
-        d = (0, r.e7)([o.Z], () => o.Z.getExpandedFolders());
-    return (0, i.jsx)(a.Z, {
+        d = (0, r.e7)([a.Z], () => a.Z.getExpandedFolders());
+    return (0, i.jsx)(o.Z, {
         ...e,
         ref: t,
         items: n,

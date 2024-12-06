@@ -1,40 +1,40 @@
-t.d(i, {
+i.d(t, {
     Z: function () {
-        return P;
+        return U;
     }
 }),
-    t(47120),
-    t(773603);
-var n = t(200651),
-    a = t(192379),
-    l = t(392711),
-    o = t(442837),
-    s = t(481060),
-    r = t(640108),
-    c = t(406432),
-    d = t(169525),
-    u = t(786761),
-    m = t(499376),
-    h = t(3148),
-    p = t(492593),
-    x = t(219797),
-    f = t(524444),
-    g = t(884182),
-    v = t(25015),
-    _ = t(963550),
-    A = t(845080),
-    E = t(594174),
-    C = t(956664),
-    j = t(709054),
-    T = t(236289),
-    N = t(788080),
-    y = t(800530),
-    S = t(981631),
-    I = t(217702),
-    L = t(453486);
-let w = (e, i, t, n) => {
+    i(47120),
+    i(773603);
+var n = i(200651),
+    a = i(192379),
+    l = i(392711),
+    o = i(442837),
+    s = i(481060),
+    r = i(640108),
+    c = i(406432),
+    d = i(169525),
+    u = i(786761),
+    m = i(499376),
+    h = i(3148),
+    p = i(492593),
+    x = i(219797),
+    f = i(524444),
+    g = i(884182),
+    _ = i(25015),
+    v = i(963550),
+    A = i(845080),
+    E = i(594174),
+    T = i(956664),
+    C = i(709054),
+    j = i(236289),
+    N = i(788080),
+    y = i(800530),
+    S = i(981631),
+    I = i(217702),
+    L = i(453486);
+let w = (e, t, i, n) => {
         let a = e.attachments.map((e) => {
-            var t, n, a, l;
+            var i, n, a, l;
             let o = {
                 ...e,
                 filename: (0, N.eS)(e),
@@ -44,15 +44,15 @@ let w = (e, i, t, n) => {
             if (!((0, c.CO)(e.filename) || (0, c.NU)(e.filename))) return o;
             return {
                 ...o,
-                width: null !== (a = null === (t = i[e.id]) || void 0 === t ? void 0 : t.width) && void 0 !== a ? a : y.Sv,
-                height: null !== (l = null === (n = i[e.id]) || void 0 === n ? void 0 : n.height) && void 0 !== l ? l : y.EY
+                width: null !== (a = null === (i = t[e.id]) || void 0 === i ? void 0 : i.width) && void 0 !== a ? a : y.Sv,
+                height: null !== (l = null === (n = t[e.id]) || void 0 === n ? void 0 : n.height) && void 0 !== l ? l : y.EY
             };
         });
         return (0, u.e5)({
             ...(0, h.ZP)({
                 author:
-                    null != t
-                        ? t
+                    null != i
+                        ? i
                         : {
                               id: '',
                               avatar: void 0,
@@ -64,46 +64,46 @@ let w = (e, i, t, n) => {
                 type: S.uaV.DEFAULT,
                 channelId: S.lds
             }),
-            timestamp: new Date(j.default.extractTimestamp(e.id)).toISOString(),
+            timestamp: new Date(C.default.extractTimestamp(e.id)).toISOString(),
             attachments: a,
             state: S.yb.SENT
         });
     },
-    k = (e) => {
-        let { message: i } = e,
-            { attachments: t } = i;
-        if (0 === t.length) return null;
-        let a = (e, i, t) => {
+    P = (e) => {
+        let { message: t } = e,
+            { attachments: i } = t;
+        if (0 === i.length) return null;
+        let a = (e, t, i) => {
                 let a = y.Sv,
                     o = y.EY;
-                if (null != i.width && null != i.height) {
-                    let e = (0, C.Dc)({
-                        width: i.width,
-                        height: i.height,
+                if (null != t.width && null != t.height) {
+                    let e = (0, T.Dc)({
+                        width: t.width,
+                        height: t.height,
                         maxWidth: y.Sv,
                         maxHeight: y.EY
                     });
-                    (a = (0, l.clamp)(Math.round(i.width * e), 0, y.Sv)), (o = (0, l.clamp)(Math.round(i.height * e), 0, y.EY));
+                    (a = (0, l.clamp)(Math.round(t.width * e), 0, y.Sv)), (o = (0, l.clamp)(Math.round(t.height * e), 0, y.EY));
                 }
                 return (0, n.jsx)('div', {
                     style: {
-                        width: t ? a : '100%',
-                        height: t ? o : '100%'
+                        width: i ? a : '100%',
+                        height: i ? o : '100%'
                     },
                     children: (0, n.jsx)(r.ZP, {
                         className: e.className,
                         forceExternal: !1,
-                        src: i.url,
-                        width: t ? a : '100%',
-                        height: t ? o : '100%',
+                        src: t.url,
+                        width: i ? a : '100%',
+                        height: i ? o : '100%',
                         responsive: !0,
                         volume: e.volume,
                         autoPlay: !1,
                         autoMute: !1,
                         type: r.ZP.Types.VIDEO,
                         mediaLayoutType: e.mediaLayoutType,
-                        fileName: i.filename,
-                        fileSize: null == i.size ? void 0 : i.size.toString(),
+                        fileName: t.filename,
+                        fileSize: null == t.size ? void 0 : t.size.toString(),
                         playable: !0,
                         renderLinkComponent: f.iT,
                         onClick: e.onClick,
@@ -115,14 +115,14 @@ let w = (e, i, t, n) => {
                     })
                 });
             },
-            o = 1 === t.length;
-        function s(e, i) {
-            return (0, d.dn)(e.originalItem, i);
+            o = 1 === i.length;
+        function s(e, t) {
+            return (0, d.dn)(e.originalItem, t);
         }
         return (0, n.jsx)('div', {
             className: L.classificationEvidenceMessageAttachment,
             children: (0, n.jsx)(g.Z, {
-                items: t.map((e) => ({
+                items: i.map((e) => ({
                     item: {
                         uniqueId: e.id,
                         originalItem: e,
@@ -133,13 +133,13 @@ let w = (e, i, t, n) => {
                         spoiler: e.spoiler,
                         contentType: e.content_type
                     },
-                    message: i,
+                    message: t,
                     mediaLayoutType: I.hV.MOSAIC,
                     autoPlayGif: !1,
                     canRemoveItem: !1,
                     isSingleMosaicItem: o,
                     onRemoveItem: l.noop,
-                    renderVideoComponent: (i) => a(i, e, o),
+                    renderVideoComponent: (t) => a(t, e, o),
                     renderImageComponent: (e) =>
                         (0, n.jsx)(x.dS, {
                             ...e,
@@ -157,16 +157,16 @@ let w = (e, i, t, n) => {
             })
         });
     };
-function P(e) {
-    var i;
-    let { flaggedContent: t } = e,
+function U(e) {
+    var t;
+    let { flaggedContent: i } = e,
         l = (0, o.e7)([E.default], () => E.default.getCurrentUser()),
         [r, d] = a.useState({}),
         [u, m] = a.useState(!0),
-        h = (0, o.e7)([T.Z], () => T.Z.getUsername()),
-        x = t[0],
+        h = (0, o.e7)([j.Z], () => j.Z.getUsername()),
+        x = i[0],
         f = w(x, r, l, h),
-        g = (0, v.Z)(f, {
+        g = (0, _.Z)(f, {
             hideSimpleEmbedContent: !1,
             allowList: !1,
             allowHeading: !1,
@@ -177,44 +177,44 @@ function P(e) {
         Promise.all(
             x.attachments
                 .filter((e) => {
-                    let { filename: i } = e;
-                    return (0, c.CO)(i) || (0, c.NU)(i);
+                    let { filename: t } = e;
+                    return (0, c.CO)(t) || (0, c.NU)(t);
                 })
                 .map((e) => {
-                    var i;
-                    return ((i = e),
-                    new Promise((e, t) => {
-                        if ((0, c.CO)(i.filename)) {
+                    var t;
+                    return ((t = e),
+                    new Promise((e, i) => {
+                        if ((0, c.CO)(t.filename)) {
                             let n = new Image();
-                            (n.src = i.url),
+                            (n.src = t.url),
                                 (n.onload = () => {
                                     e(n);
                                 }),
                                 (n.onerror = () => {
-                                    t();
+                                    i();
                                 });
-                        } else if ((0, c.NU)(i.filename)) {
+                        } else if ((0, c.NU)(t.filename)) {
                             let n = document.createElement('video');
-                            (n.src = i.url),
+                            (n.src = t.url),
                                 (n.onloadedmetadata = () => {
-                                    let i = n.videoWidth;
+                                    let t = n.videoWidth;
                                     e({
-                                        width: i,
+                                        width: t,
                                         height: n.videoHeight
                                     });
                                 }),
                                 (n.onerror = () => {
-                                    t();
+                                    i();
                                 });
                         } else
                             e({
                                 width: 0,
                                 height: 0
                             });
-                    })).then((i) =>
-                        d((t) => ({
-                            ...t,
-                            [e.id]: i
+                    })).then((t) =>
+                        d((i) => ({
+                            ...i,
+                            [e.id]: t
                         }))
                     );
                 })
@@ -232,7 +232,7 @@ function P(e) {
                             author: {
                                 ...l,
                                 colorString: '',
-                                nick: null !== (i = null == l ? void 0 : l.username) && void 0 !== i ? i : h
+                                nick: null !== (t = null == l ? void 0 : l.username) && void 0 !== t ? t : h
                             },
                             message: f,
                             channel: void 0,
@@ -243,8 +243,8 @@ function P(e) {
                             roleIcon: void 0,
                             hideTimestamp: !1
                         }),
-                        childrenAccessories: (0, n.jsx)(k, { message: f }),
-                        childrenMessageContent: (0, _.Z)({ message: f }, g.content),
+                        childrenAccessories: (0, n.jsx)(P, { message: f }),
+                        childrenMessageContent: (0, v.Z)({ message: f }, g.content),
                         hasThread: !1,
                         hasReply: !1
                     })

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return N;
     }
 });
 var i = n(200651),
@@ -25,7 +25,7 @@ var i = n(200651),
     E = n(388032);
 let b = l.memo(function (e) {
     var t;
-    let { baseMessage: n, referencedMessage: b, channel: Z, compact: N = !1, referencedUsernameProfile: S, referencedAvatarProfile: T, setPopout: j, isReplySpineClickable: A, showReplySpine: y } = e,
+    let { baseMessage: n, referencedMessage: b, channel: N, compact: Z = !1, referencedUsernameProfile: S, referencedAvatarProfile: T, setPopout: j, isReplySpineClickable: A, showReplySpine: y } = e,
         P = b.state === p.Y.LOADED ? b.message : void 0,
         M = (0, C.Uj)(P),
         R = (0, c.p)(),
@@ -34,7 +34,7 @@ let b = l.memo(function (e) {
             if (null == P) return null;
             let e = (0, s.Z)(P);
             if (e.type === I.uaV.USER_JOIN) {
-                let t = f.Z.getWelcomeMessageKind(Z.guild_id);
+                let t = f.Z.getWelcomeMessageKind(N.guild_id);
                 return (0, a.Rp)(
                     E.intl.formatToParts(f.Z.getSystemMessageUserJoin(e.id, t), {
                         username: null != M ? M.nick : e.author.username,
@@ -46,7 +46,7 @@ let b = l.memo(function (e) {
                 return (0, a.Rp)(
                     (0, o.PA)({
                         username: null != M ? M.nick : e.author.username,
-                        guildId: null == Z ? void 0 : Z.guild_id,
+                        guildId: null == N ? void 0 : N.guild_id,
                         roleSubscriptionData: e.roleSubscriptionData
                     })
                 );
@@ -78,7 +78,7 @@ let b = l.memo(function (e) {
                         allowLinks: !0,
                         shouldFilterKeywords: R
                     },
-                    n = e.isFirstMessageInForumPost(Z)
+                    n = e.isFirstMessageInForumPost(N)
                         ? {
                               ...t,
                               noStyleAndInteraction: !0,
@@ -94,7 +94,7 @@ let b = l.memo(function (e) {
                 return (0, g.ZP)(e, n).content;
             }
             return null;
-        }, [P, M, Z, L, R]),
+        }, [P, M, N, L, R]),
         { isReplyAuthorBlocked: O, isReplyAuthorIgnored: D } = (0, r.cj)(
             [m.Z],
             () => ({
@@ -103,9 +103,9 @@ let b = l.memo(function (e) {
             }),
             [P]
         ),
-        w = (0, _.wq)(null == P ? void 0 : P.author.id, Z.id),
+        w = (0, _.wq)(null == P ? void 0 : P.author.id, N.id),
         B = (0, _.$3)(n, P, O, D),
-        U = (0, _.Wl)(P, Z, S, j),
+        U = (0, _.Wl)(P, N, S, j),
         H = (0, _.rY)(T, j),
         G = l.useCallback(
             () =>
@@ -119,11 +119,11 @@ let b = l.memo(function (e) {
     return (0, i.jsx)(x.Z, {
         repliedAuthor: M,
         baseMessage: n,
-        channel: Z,
+        channel: N,
         baseAuthor: F,
         referencedMessage: b,
         content: k,
-        compact: N,
+        compact: Z,
         isReplyAuthorBlocked: O,
         isReplyAuthorIgnored: D,
         showAvatarPopout: T,
@@ -138,7 +138,7 @@ let b = l.memo(function (e) {
         showReplySpine: y
     });
 });
-function Z(e) {
+function N(e) {
     let { message: t, channel: n, compact: l, setPopout: r, referencedUsernameProfile: a, referencedAvatarProfile: s, replyReference: o, replyMessage: c, isReplySpineClickable: d, showReplySpine: u = !0 } = e,
         h =
             null != o &&

@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(91192),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(44315),
     c = n(563534),
     u = n(846121),
@@ -19,7 +19,7 @@ var i = n(200651),
     g = n(47622);
 function C(e, t) {
     return (0, i.jsx)(
-        o.Text,
+        a.Text,
         {
             variant: 'text-xs/bold',
             color: 'text-normal',
@@ -30,8 +30,8 @@ function C(e, t) {
 }
 let _ = l.memo(function (e) {
     let { guild: t } = e,
-        n = (0, a.e7)([c.Z], () => c.Z.getNewMemberActions(t.id), [t.id]),
-        _ = (0, a.e7)([u.Z], () => u.Z.getCompletedActions(t.id)),
+        n = (0, o.e7)([c.Z], () => c.Z.getNewMemberActions(t.id), [t.id]),
+        _ = (0, o.e7)([u.Z], () => u.Z.getCompletedActions(t.id)),
         v = l.useMemo(() => {
             if (null == n || null == _) return 0;
             let e = 0;
@@ -46,7 +46,7 @@ let _ = l.memo(function (e) {
         I = (0, r.JA)('progress-bar-'.concat(t.id));
     return (0, i.jsxs)('li', {
         children: [
-            (0, i.jsxs)(o.Clickable, {
+            (0, i.jsxs)(a.Clickable, {
                 ...I,
                 role: 'button',
                 focusProps: { offset: { right: 4 } },
@@ -58,14 +58,14 @@ let _ = l.memo(function (e) {
                     (0, i.jsxs)('div', {
                         className: g.progressBarText,
                         children: [
-                            (0, i.jsx)(o.Heading, {
+                            (0, i.jsx)(a.Heading, {
                                 variant: 'heading-sm/bold',
                                 children: f.intl.string(f.t.SnrR39)
                             }),
                             (0, i.jsxs)('div', {
                                 className: g.rightContainer,
                                 children: [
-                                    (0, i.jsx)(o.Text, {
+                                    (0, i.jsx)(a.Text, {
                                         variant: 'text-xs/medium',
                                         color: 'text-muted',
                                         className: g.rightText,
@@ -85,7 +85,7 @@ let _ = l.memo(function (e) {
                             })
                         ]
                     }),
-                    (0, i.jsx)(o.Progress, {
+                    (0, i.jsx)(a.Progress, {
                         className: g.progressBar,
                         foregroundGradientColor: [(0, s.Lq)(p.Ilk.GREEN_300), (0, s.Lq)(p.Ilk.GREEN_230)],
                         percent: (v / x) * 100 + 3,

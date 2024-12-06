@@ -14,17 +14,17 @@ var i,
     d = n(442837),
     u = n(692547),
     m = n(481060),
-    g = n(37234),
-    h = n(607070),
+    h = n(37234),
+    g = n(607070),
     p = n(578361),
     x = n(585483),
-    T = n(557177),
-    S = n(57562),
-    _ = n(955204),
-    E = n(64078),
+    S = n(557177),
+    T = n(57562),
+    E = n(955204),
+    _ = n(64078),
     C = n(351780),
-    f = n(954794),
-    I = n(112843),
+    I = n(954794),
+    f = n(112843),
     N = n(524484),
     A = n(981631),
     b = n(388032),
@@ -116,12 +116,12 @@ function F(e) {
             settings: { enabled: t, warningSeen: n },
             updateSettings: i
         } = e,
-        s = (0, d.e7)([h.Z], () => h.Z.useReducedMotion);
+        s = (0, d.e7)([g.Z], () => g.Z.useReducedMotion);
     return (0, a.jsx)(m.FormSwitch, {
         value: t,
         note: b.intl.string(b.t.KuYbWF),
         onChange: (e) => {
-            !e && (0, S.T)(_.hn.DISABLE_POGGERMODE),
+            !e && (0, T.T)(E.hn.DISABLE_POGGERMODE),
                 e && (!n || s)
                     ? (0, m.openModal)((e) =>
                           (0, a.jsx)(m.ConfirmModal, {
@@ -262,10 +262,10 @@ function w(e) {
             settings: { enabled: t, screenshakeEnabled: n, shakeIntensity: i, screenshakeEnabledLocations: s },
             updateSettings: r
         } = e,
-        l = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
+        l = (0, d.e7)([g.Z], () => g.Z.useReducedMotion),
         o = !t || !n || l,
         c = (e, t) => {
-            null != e.shakeIntensity && e.shakeIntensity > i && (0, S.T)(_.hn.MORE), r(e, t);
+            null != e.shakeIntensity && e.shakeIntensity > i && (0, T.T)(E.hn.MORE), r(e, t);
         };
     return (0, a.jsxs)(m.FormSection, {
         tag: m.FormTitleTags.H1,
@@ -327,7 +327,7 @@ function U(e) {
                             enabled: !1,
                             settingsVisible: !1
                         }),
-                            (0, g.xf)();
+                            (0, h.xf)();
                     },
                     children: b.intl.string(b.t.qz65yc)
                 })
@@ -392,7 +392,7 @@ function Y(e) {
             x: 0,
             y: 0
         }),
-        l = (0, I.Z)();
+        l = (0, f.Z)();
     function c(e, t, n, i) {
         return (null != t ? t : e) && (null != i ? i : n);
     }
@@ -400,15 +400,15 @@ function Y(e) {
             if (e.enabled && !1 === i.enabled) {
                 var t;
                 n(!0),
-                    (0, T.GN)('poggermode_enabled'),
+                    (0, S.GN)('poggermode_enabled'),
                     x.S.dispatch(A.CkL.SHAKE_APP, {
                         duration: 2000,
                         intensity: null !== (t = e.shakeIntensity) && void 0 !== t ? t : i.shakeIntensity
                     });
             }
         },
-        g = (e, t) => {
-            if ((u(e), (0, E.AI)(e), null == t)) return;
+        h = (e, t) => {
+            if ((u(e), (0, _.AI)(e), null == t)) return;
             let n = c(i.confettiEnabled, e.confettiEnabled, i.enabled, e.enabled);
             0 === t && n && l.fire(s.x, s.y, { settings: e });
             let r = c(i.screenshakeEnabled, e.screenshakeEnabled, i.enabled, e.enabled);
@@ -420,14 +420,14 @@ function Y(e) {
                 });
             }
         },
-        h = (e) => {
+        g = (e) => {
             r({
                 x: e.clientX,
                 y: e.clientY
             });
         };
     return (
-        o.useEffect(() => (window.addEventListener('mousemove', h), () => window.removeEventListener('mousemove', h)), []),
+        o.useEffect(() => (window.addEventListener('mousemove', g), () => window.removeEventListener('mousemove', g)), []),
         (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsx)(m.Heading, {
@@ -437,22 +437,22 @@ function Y(e) {
                 }),
                 (0, a.jsx)(F, {
                     settings: i,
-                    updateSettings: g
+                    updateSettings: h
                 }),
                 (0, a.jsx)(V, { onChangePage: t }),
                 (0, a.jsx)(k, {
                     settings: i,
-                    updateSettings: g
+                    updateSettings: h
                 }),
                 (0, a.jsx)(w, {
                     settings: i,
-                    updateSettings: g
+                    updateSettings: h
                 }),
                 (0, a.jsx)(M, {
                     settings: i,
-                    updateSettings: g
+                    updateSettings: h
                 }),
-                (0, a.jsx)(U, { updateSettings: g })
+                (0, a.jsx)(U, { updateSettings: h })
             ]
         })
     );
@@ -468,7 +468,7 @@ let H = (e, t, n) => {
                     setShowEnableAnimation: n
                 });
             case 1:
-                return (0, a.jsx)(f.Z, { onBackClick: i(0) });
+                return (0, a.jsx)(I.Z, { onBackClick: i(0) });
             default:
                 return null;
         }
@@ -478,7 +478,7 @@ function W() {
     let [e, t] = o.useState(0),
         [n, i] = o.useState(z(e)),
         [s, r] = o.useState(!1),
-        l = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
+        l = (0, d.e7)([g.Z], () => g.Z.useReducedMotion),
         c = s && !l;
     return (
         o.useEffect(() => {
@@ -488,7 +488,7 @@ function W() {
             return () => clearTimeout(t);
         }, [e]),
         o.useEffect(() => {
-            Math.random() > 0.99 && (0, S.T)(_.hn.VISITOR_100);
+            Math.random() > 0.99 && (0, T.T)(E.hn.VISITOR_100);
         }, []),
         (0, a.jsxs)(a.Fragment, {
             children: [

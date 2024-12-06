@@ -48,9 +48,9 @@ t.Z = function (e) {
             var e;
             return null !== (e = u.Z.getSearchResults(S)) && void 0 !== e ? e : _;
         }),
-        A = null !== (t = (0, o.Z)(b)) && void 0 !== t ? t : _,
-        { results: x, totalPages: Z } = r.useMemo(() => (T === d.M.FETCHING ? A : b), [T, A, b]),
-        L = r.useMemo(() => (null == x ? void 0 : x.filter((e) => !(e.type !== l.s.APPLICATION))), [x]),
+        x = null !== (t = (0, o.Z)(b)) && void 0 !== t ? t : _,
+        { results: A, totalPages: Z } = r.useMemo(() => (T === d.M.FETCHING ? x : b), [T, x, b]),
+        L = r.useMemo(() => (null == A ? void 0 : A.filter((e) => !(e.type !== l.s.APPLICATION))), [A]),
         y = r.useCallback((e) => {
             let { page: t, activeCategoryId: n, onSuccessCallback: i, guildId: r, fetchCounts: l } = e;
             l &&

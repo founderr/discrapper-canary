@@ -9,26 +9,26 @@ var s = n(120356),
     d = n(122021),
     u = n(231757),
     m = n(626135),
-    g = n(981631),
-    h = n(915976);
+    h = n(981631),
+    g = n(915976);
 t.Z = (e) => {
     let { disabled: t = !1, type: n, className: s, innerClassName: p, onConnect: x } = e,
-        T = (0, o.ZP)(),
-        S = c.Z.get((0, d.rR)(n));
+        S = (0, o.ZP)(),
+        T = c.Z.get((0, d.rR)(n));
     return (0, i.jsx)(a.Tooltip, {
-        text: S.name,
+        text: T.name,
         children: (e) => {
             let { onMouseEnter: o, onMouseLeave: d } = e;
             return (0, i.jsx)('div', {
-                className: r()(h.wrapper, s),
+                className: r()(g.wrapper, s),
                 children: (0, i.jsx)(a.FocusRing, {
                     children: (0, i.jsx)('button', {
                         onMouseEnter: o,
                         onMouseLeave: d,
-                        className: r()(h.inner, p),
+                        className: r()(g.inner, p),
                         type: 'button',
                         disabled: t,
-                        style: { backgroundImage: "url('".concat((0, l.wj)(T) ? S.icon.darkSVG : S.icon.lightSVG, "')") },
+                        style: { backgroundImage: "url('".concat((0, l.wj)(S) ? T.icon.darkSVG : T.icon.lightSVG, "')") },
                         onClick:
                             null != x
                                 ? x
@@ -39,13 +39,13 @@ t.Z = (e) => {
                                               platformType: t.type,
                                               location: 'Friends List'
                                           }),
-                                              m.default.track(g.rMx.ACCOUNT_LINK_STEP, {
+                                              m.default.track(h.rMx.ACCOUNT_LINK_STEP, {
                                                   previous_step: 'desktop connections',
                                                   current_step: 'desktop oauth',
                                                   platform_type: t.type
                                               });
                                       })(n),
-                        'aria-label': S.name
+                        'aria-label': T.name
                     })
                 })
             });

@@ -26,31 +26,31 @@ n.d(t, {
 var i = n(34674),
     l = n(749681),
     r = n(703656),
-    a = n(258971),
-    o = n(981631),
+    o = n(258971),
+    a = n(981631),
     s = n(49898);
 let c = () => {
-        let e = { previousView: (0, a.Xh)() };
-        (0, r.uL)(o.Z5c.GLOBAL_DISCOVERY_APPS, { state: e });
+        let e = { previousView: (0, o.Xh)() };
+        (0, r.uL)(a.Z5c.GLOBAL_DISCOVERY_APPS, { state: e });
     },
     u = (e) => {
         let { categoryId: t } = e,
-            n = { previousView: (0, a.Xh)() };
-        (0, r.uL)(o.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(t), { state: n });
+            n = { previousView: (0, o.Xh)() };
+        (0, r.uL)(a.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(t), { state: n });
     },
     d = (e) => {
         let { applicationId: t } = e,
-            n = { previousView: (0, a.Xh)() };
-        (0, r.uL)(o.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t), { state: n });
+            n = { previousView: (0, o.Xh)() };
+        (0, r.uL)(a.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t), { state: n });
     },
     h = function () {
         let { query: e, categoryId: t, page: n } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            l = { previousView: (0, a.Xh)() },
+            l = { previousView: (0, o.Xh)() },
             s = new URLSearchParams();
         null != e && '' !== e && s.set('q', e),
             null != t && t !== i.MU && s.set('category_id', t.toString()),
             null != n && n > 1 && s.set('page', n.toString()),
-            (0, r.uL)(o.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, {
+            (0, r.uL)(a.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, {
                 state: l,
                 search: s.toString()
             });
@@ -62,21 +62,21 @@ let c = () => {
         (0, r.dL)(e, t);
     };
 function m() {
-    let { lastItem: e } = a.aQ.getState();
+    let { lastItem: e } = o.aQ.getState();
     if (null != e)
         switch (e.type) {
-            case a.m_.APPLICATION:
+            case o.m_.APPLICATION:
                 return (0, l.transitionToGlobalDiscovery)({
                     tab: s.GlobalDiscoveryTab.APPS,
                     applicationId: e.applicationId,
                     section: e.section
                 });
-            case a.m_.CATEGORY:
+            case o.m_.CATEGORY:
                 return (0, l.transitionToGlobalDiscovery)({
                     tab: s.GlobalDiscoveryTab.APPS,
                     categoryId: Number(e.categoryId)
                 });
-            case a.m_.SEARCH:
+            case o.m_.SEARCH:
                 var t;
                 return (0, l.transitionToGlobalDiscovery)({
                     tab: s.GlobalDiscoveryTab.APPS,

@@ -12,7 +12,7 @@ var i = n(442837),
     l = n(594174),
     u = n(169413),
     c = n(328756),
-    d = n(265174);
+    d = n(131812);
 function f(e) {
     let { maxRewardImageSrc: t, claimableRewards: n, size: f } = e,
         _ = (0, i.e7)([l.default], () => l.default.getCurrentUser()),
@@ -33,7 +33,7 @@ function f(e) {
                           'aria-label': null == _ ? void 0 : _.username,
                           size: f,
                           className: u.firstPromotionalAvatar,
-                          src: d,
+                          src: 1 === n.length ? (null == _ ? void 0 : _.getAvatarURL(void 0, (0, a.getAvatarSize)(f), !p)) : d,
                           avatarDecoration: (0, o.Z)(n[0].assetId, f, !p)
                       }),
                   2 === n.length &&
