@@ -12,12 +12,18 @@ async function _(e, t, n) {
     try {
         return await e();
     } catch (e) {
-        var r;
-        (null === (r = e.body) || void 0 === r ? void 0 : r.code) === d.evJ.NON_MODERATED_TAG_REQUIRED &&
-            a.Z.show({
-                title: t,
-                body: n
-            });
+        var r, i, s;
+        (null === (r = e.body) || void 0 === r ? void 0 : r.code) === d.evJ.NON_MODERATED_TAG_REQUIRED
+            ? a.Z.show({
+                  title: t,
+                  body: n
+              })
+            : (null === (i = e.body) || void 0 === i ? void 0 : i.code) === d.evJ.INVALID_FORM_BODY &&
+              (null === (s = e.body) || void 0 === s ? void 0 : s.errors.emoji) &&
+              a.Z.show({
+                  title: f.intl.string(f.t.T8sBLC),
+                  body: f.intl.string(f.t.aHt1BQ)
+              });
     }
 }
 t.Z = {
