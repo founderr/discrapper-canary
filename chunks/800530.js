@@ -1,12 +1,15 @@
-t.d(n, {
+n.d(t, {
     Cg: function () {
         return R;
     },
+    Cp: function () {
+        return g;
+    },
     Cs: function () {
-        return A;
+        return l;
     },
     EY: function () {
-        return M;
+        return G;
     },
     I5: function () {
         return D;
@@ -18,19 +21,25 @@ t.d(n, {
         return d;
     },
     SU: function () {
-        return c;
+        return S;
     },
     Sv: function () {
         return m;
     },
+    TX: function () {
+        return U;
+    },
     ZW: function () {
-        return G;
+        return M;
     },
     bK: function () {
-        return u;
+        return A;
     },
     n0: function () {
         return N;
+    },
+    o6: function () {
+        return h;
     },
     oE: function () {
         return L;
@@ -39,51 +48,51 @@ t.d(n, {
         return T;
     },
     s: function () {
-        return l;
+        return u;
     },
     sQ: function () {
         return p;
     },
     wo: function () {
-        return S;
+        return c;
     }
 });
 var i,
     E,
     r,
     I,
-    s,
     _,
-    a,
     o,
-    c,
+    s,
+    a,
     S,
+    c,
     N,
-    l,
     u,
     A,
+    l,
     T,
     L,
-    C = t(990547),
-    f = t(981631);
-function O(e, n, t) {
+    C = n(990547),
+    f = n(981631);
+function O(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = t),
+            : (e[t] = n),
         e
     );
 }
-((i = c || (c = {})).SETTINGS = 'SETTINGS'), (i.ACCOUNT_STANDING = 'ACCOUNT_STANDING'), (i.GUILD_SETTINGS = 'GUILD_SETTINGS'), (i.ENCRYPTION = 'ENCRYPTION'), (i.CONTENT_AND_SOCIAL = 'CONTENT_AND_SOCIAL'), (i.DATA_PRIVACY = 'DATA_PRIVACY');
+((i = S || (S = {})).SETTINGS = 'SETTINGS'), (i.ACCOUNT_STANDING = 'ACCOUNT_STANDING'), (i.GUILD_SETTINGS = 'GUILD_SETTINGS'), (i.ENCRYPTION = 'ENCRYPTION'), (i.CONTENT_AND_SOCIAL = 'CONTENT_AND_SOCIAL'), (i.DATA_PRIVACY = 'DATA_PRIVACY');
 class p {}
 O(p, 'TOS_LINK', 'https://discord.com/terms'), O(p, 'COMMUNITY_GUIDELINES', 'https://discord.com/guidelines'), O(p, 'APPEALS_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), O(p, 'WARNING_SYSTEM_HELPCENTER_LINK', 'https://support.discord.com/hc/articles/18210965981847'), O(p, 'AGE_VERIFICATION_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), O(p, 'SPAM_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__');
 class R {}
-O(R, 'CLASSIFICATION_ID', 'classification_id'), O(R, 'INCIDENT_TIMESTAMP', 'incident_time'), ((E = S || (S = {})).POLICY_VIOLATION_DETAIL = 'policy_violation_detail'), (E.LEARN_MORE_LINK = 'learn_more_link');
+O(R, 'CLASSIFICATION_ID', 'classification_id'), O(R, 'INCIDENT_TIMESTAMP', 'incident_time'), ((E = c || (c = {})).POLICY_VIOLATION_DETAIL = 'policy_violation_detail'), (E.LEARN_MORE_LINK = 'learn_more_link');
 class D {}
 O(D, 'ICON_TYPE', 'icon_type'),
     O(D, 'HEADER', 'header'),
@@ -102,7 +111,7 @@ O(D, 'ICON_TYPE', 'icon_type'),
     (r[(r.ClickLearnMoreLink = 5)] = 'ClickLearnMoreLink'),
     (r[(r.ClickCommunityGuidelinesLink = 6)] = 'ClickCommunityGuidelinesLink'),
     (r[(r.ClickWarningSystemHelpcenterLink = 7)] = 'ClickWarningSystemHelpcenterLink'),
-    ((I = l || (l = {}))[(I.SystemDM = 0)] = 'SystemDM'),
+    ((I = u || (u = {}))[(I.SystemDM = 0)] = 'SystemDM'),
     (I[(I.StandingTab = 1)] = 'StandingTab'),
     (I[(I.AppealIngestion = 2)] = 'AppealIngestion'),
     Object.freeze({
@@ -113,15 +122,15 @@ O(D, 'ICON_TYPE', 'icon_type'),
         THANKS: f.jXE.APPEAL_INGESTION_THANKS,
         SPAM: f.jXE.APPEAL_INGESTION_SPAM
     }),
-    ((s = u || (u = {}))[(s.DIDNT_VIOLATE_POLICY = 0)] = 'DIDNT_VIOLATE_POLICY'),
-    (s[(s.TOO_STRICT_UNFAIR = 1)] = 'TOO_STRICT_UNFAIR'),
-    (s[(s.DONT_AGREE_PENALTY = 2)] = 'DONT_AGREE_PENALTY'),
-    (s[(s.SOMETHING_ELSE = 3)] = 'SOMETHING_ELSE');
+    ((_ = A || (A = {}))[(_.DIDNT_VIOLATE_POLICY = 0)] = 'DIDNT_VIOLATE_POLICY'),
+    (_[(_.TOO_STRICT_UNFAIR = 1)] = 'TOO_STRICT_UNFAIR'),
+    (_[(_.DONT_AGREE_PENALTY = 2)] = 'DONT_AGREE_PENALTY'),
+    (_[(_.SOMETHING_ELSE = 3)] = 'SOMETHING_ELSE');
 let d = [0, 1, 2, 3],
     m = 372,
-    M = 279,
-    G = { impression_group: C.ImpressionGroups.APPEAL_INGESTION };
-((_ = A || (A = {})).SPEED_BUMP = 'speed-bump'), (_.COLLECT_SIGNAL = 'collect-signal'), (_.CONFIRM_SUBMISSION = 'confirm-submission'), (_.REQUEST_SENT = 'request-sent'), (_.THANKS = 'thanks');
+    G = 279,
+    M = { impression_group: C.ImpressionGroups.APPEAL_INGESTION };
+((o = l || (l = {})).SPEED_BUMP = 'speed-bump'), (o.COLLECT_SIGNAL = 'collect-signal'), (o.CONFIRM_SUBMISSION = 'confirm-submission'), (o.REQUEST_SENT = 'request-sent'), (o.THANKS = 'thanks');
 let P = {
     'speed-bump': {
         next: 'collect-signal',
@@ -140,4 +149,7 @@ let P = {
         prev: null
     }
 };
-((a = T || (T = {}))[(a.USER = 1)] = 'USER'), (a[(a.GUILD_OWNER = 2)] = 'GUILD_OWNER'), (a[(a.GUILD_MEMBER = 3)] = 'GUILD_MEMBER'), ((o = L || (L = {})).PENDING = 'pending'), (o.LOADING = 'loading'), (o.ERROR = 'error'), (o.SUCCESS = 'success'), (o.FAILURE = 'failure'), (o.NONE = 'none');
+((s = T || (T = {}))[(s.USER = 1)] = 'USER'), (s[(s.GUILD_OWNER = 2)] = 'GUILD_OWNER'), (s[(s.GUILD_MEMBER = 3)] = 'GUILD_MEMBER'), ((a = L || (L = {})).LOADING = 'loading'), (a.ERROR = 'error'), (a.SUCCESS = 'success'), (a.FAILURE = 'failure'), (a.NONE = 'none');
+let U = 2000,
+    g = 15000,
+    h = 5;

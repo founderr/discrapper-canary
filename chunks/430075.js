@@ -1,39 +1,38 @@
-t.r(n),
-    t.d(n, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return L;
+            return T;
         }
     });
-var i = t(200651);
-t(192379);
-var E = t(442837),
-    r = t(481060),
-    I = t(703656),
-    s = t(314897),
-    _ = t(103879),
-    a = t(236289),
-    o = t(518560),
-    c = t(800530),
-    S = t(981631),
-    N = t(388032),
-    l = t(33869);
+var i = n(200651);
+n(192379);
+var E = n(442837),
+    r = n(481060),
+    I = n(703656),
+    _ = n(314897),
+    o = n(236289),
+    s = n(518560),
+    a = n(800530),
+    S = n(981631),
+    c = n(388032),
+    N = n(33869);
 function u() {
     return (0, i.jsxs)(r.Notice, {
         color: r.NoticeColors.DANGER,
-        className: l.nagbar,
+        className: N.nagbar,
         children: [
             (0, i.jsx)(r.Text, {
                 tag: 'span',
                 color: 'always-white',
                 variant: 'text-md/normal',
-                children: N.intl.string(N.t['MG+Bzc'])
+                children: c.intl.string(c.t['MG+Bzc'])
             }),
             (0, i.jsx)(r.NoticeButtonAnchor, {
-                href: c.sQ.WARNING_SYSTEM_HELPCENTER_LINK,
+                href: a.sQ.WARNING_SYSTEM_HELPCENTER_LINK,
                 children: (0, i.jsx)(r.Text, {
                     variant: 'text-md/normal',
                     color: 'always-white',
-                    children: N.intl.string(N.t['9JceHB'])
+                    children: c.intl.string(c.t['9JceHB'])
                 })
             })
         ]
@@ -41,69 +40,41 @@ function u() {
 }
 function A(e) {
     let {} = e,
-        n = (0, E.e7)([a.Z], () => a.Z.getAgeCheckStatus()),
-        t = () => {
-            (0, _._w)();
-        };
-    return n === c.oE.NONE
+        t = (0, E.e7)([o.Z], () => o.Z.getAgeCheckStatus());
+    return t === a.oE.NONE
         ? null
-        : n === c.oE.SUCCESS
+        : t === a.oE.SUCCESS
           ? (0, i.jsx)(r.HelpMessage, {
                 messageType: r.HelpMessageTypes.POSITIVE,
-                children: N.intl.string(N.t.maZDLy)
+                children: c.intl.string(c.t.maZDLy)
             })
-          : n === c.oE.ERROR
+          : t === a.oE.ERROR
             ? (0, i.jsx)(r.HelpMessage, {
                   messageType: r.HelpMessageTypes.ERROR,
-                  children: N.intl.string(N.t['4sILBQ'])
+                  children: c.intl.string(c.t['4sILBQ'])
               })
-            : n === c.oE.FAILURE
+            : t === a.oE.FAILURE
               ? (0, i.jsx)(r.HelpMessage, {
                     messageType: r.HelpMessageTypes.ERROR,
-                    children: (0, i.jsxs)('div', {
-                        className: l.helpMessageContent,
-                        children: [
-                            N.intl.string(N.t['40R63t']),
-                            (0, i.jsx)(r.Clickable, {
-                                className: l.clickableIcon,
-                                onClick: t,
-                                children: (0, i.jsx)(r.RefreshIcon, {})
-                            })
-                        ]
-                    })
+                    children: c.intl.string(c.t['40R63t'])
                 })
-              : n === c.oE.LOADING
-                ? (0, i.jsx)(r.HelpMessage, {
-                      messageType: r.HelpMessageTypes.INFO,
-                      children: N.intl.string(N.t['nhhy/f'])
-                  })
-                : (0, i.jsx)(r.HelpMessage, {
-                      messageType: r.HelpMessageTypes.INFO,
-                      children: (0, i.jsxs)('div', {
-                          className: l.helpMessageContent,
-                          children: [
-                              N.intl.string(N.t['nhhy/f']),
-                              (0, i.jsx)(r.Clickable, {
-                                  className: l.clickableIcon,
-                                  onClick: t,
-                                  children: (0, i.jsx)(r.RefreshIcon, {})
-                              })
-                          ]
-                      })
-                  });
+              : (0, i.jsx)(r.HelpMessage, {
+                    messageType: r.HelpMessageTypes.INFO,
+                    children: c.intl.string(c.t['nhhy/f'])
+                });
 }
-function T() {
+function l() {
     return (0, i.jsxs)('div', {
-        className: l.pageContainer,
-        children: [(0, i.jsx)(A, {}), (0, i.jsx)(o.Z, {})]
+        className: N.pageContainer,
+        children: [(0, i.jsx)(A, {}), (0, i.jsx)(s.Z, {})]
     });
 }
-function L() {
+function T() {
     return (
-        null == (0, E.e7)([s.default], () => s.default.getSuspendedUserToken()) && (0, I.uL)(S.Z5c.LOGIN),
+        null == (0, E.e7)([_.default], () => _.default.getSuspendedUserToken()) && (0, I.uL)(S.Z5c.LOGIN),
         (0, i.jsxs)('div', {
-            className: l.container,
-            children: [(0, i.jsx)(u, {}), (0, i.jsx)(T, {})]
+            className: N.container,
+            children: [(0, i.jsx)(u, {}), (0, i.jsx)(l, {})]
         })
     );
 }
