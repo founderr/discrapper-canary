@@ -42,22 +42,24 @@ class h extends (r = a.PureComponent) {
     }
     renderInput(e) {
         var t;
-        let { value: n, mode: r } = this.props,
-            a = null === (t = this.context) || void 0 === t ? void 0 : t.titleId;
+        let { value: n, mode: r, autoFocus: a, spellCheck: s, inputClassName: l } = this.props,
+            u = null === (t = this.context) || void 0 === t ? void 0 : t.titleId;
         return (0, i.jsx)('input', {
-            className: o()((0, c.l)(f, 'input', r), { [f.inputHidden]: e }),
+            className: o()((0, c.l)(f, 'input', r), l, { [f.inputHidden]: e }),
             ref: this.inputRef,
             type: 'text',
             value: n,
             onClick: this.handleInputClick,
             readOnly: !0,
-            'aria-labelledby': a
+            'aria-labelledby': u,
+            autoFocus: a,
+            spellCheck: s
         });
     }
     render() {
         let e;
-        let { text: t = d.intl.string(d.t.OpuAlJ), mode: n, hideMessage: r, className: a, buttonLook: s } = this.props,
-            _ = null != r;
+        let { text: t = d.intl.string(d.t.OpuAlJ), mode: n, hideMessage: r, className: a, buttonLook: s, supportsCopy: _, disabled: h } = this.props,
+            m = null != r;
         switch (n) {
             case p.SUCCESS:
                 e = l.ButtonColors.GREEN;
@@ -80,8 +82,8 @@ class h extends (r = a.PureComponent) {
                         (0, i.jsxs)(u.Z, {
                             className: f.inputWrapper,
                             children: [
-                                this.renderInput(_),
-                                _
+                                this.renderInput(m),
+                                m
                                     ? (0, i.jsx)('div', {
                                           className: f.hiddenMessage,
                                           children: r
@@ -89,19 +91,22 @@ class h extends (r = a.PureComponent) {
                                     : null
                             ]
                         }),
-                        (0, i.jsx)(u.Z, {
-                            shrink: 1,
-                            grow: 0,
-                            style: { margin: 0 },
-                            children: (0, i.jsx)(l.Button, {
-                                className: f.button,
-                                onClick: this.handleButtonClick,
-                                size: l.ButtonSizes.MIN,
-                                color: e,
-                                look: s,
-                                children: t
-                            })
-                        })
+                        _
+                            ? (0, i.jsx)(u.Z, {
+                                  shrink: 1,
+                                  grow: 0,
+                                  style: { margin: 0 },
+                                  children: (0, i.jsx)(l.Button, {
+                                      className: f.button,
+                                      onClick: this.handleButtonClick,
+                                      size: l.ButtonSizes.MIN,
+                                      color: e,
+                                      look: s,
+                                      disabled: h,
+                                      children: t
+                                  })
+                              })
+                            : null
                     ]
                 })
             })

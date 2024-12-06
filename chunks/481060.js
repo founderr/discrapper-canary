@@ -534,6 +534,9 @@ n.r(t),
         CopyInputModes: function () {
             return tu.u;
         },
+        CopyInputProps: function () {
+            return tu.CopyInputProps;
+        },
         CreditCardIcon: function () {
             return tR.ciH;
         },
