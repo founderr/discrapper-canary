@@ -31,8 +31,8 @@ var i = t(200651),
     N = t(602683),
     w = t(916028),
     y = t(749912),
-    b = t(815183),
-    I = t(899457),
+    I = t(815183),
+    b = t(899457),
     A = t(102787);
 function _(e, s, t) {
     return (
@@ -151,7 +151,7 @@ let k = '1193992107035983872',
 function Z() {
     var e, s, r, o, d, _, V, k, Z, B, H, K, q, Y;
     let [Q, U] = a.useState(R),
-        [X, W] = a.useState(I.a.UNENROLLED),
+        [X, W] = a.useState(b.a.UNENROLLED),
         [z, G] = a.useState(!1),
         [J, $] = a.useState(!1),
         [ee, es] = a.useState(null);
@@ -572,24 +572,24 @@ function Z() {
                     }),
                     (0, i.jsx)('div', {
                         className: A.fields,
-                        children: (0, i.jsx)(b.Z, {})
+                        children: (0, i.jsx)(I.Z, {})
                     }),
-                    (0, i.jsx)(I.Z, {
+                    (0, i.jsx)(b.Z, {
                         onChange: function (e) {
                             switch ((W(e), e)) {
-                                case I.a.UNENROLLED:
+                                case b.a.UNENROLLED:
                                     U({
                                         ...Q,
                                         userStatus: null
                                     });
                                     break;
-                                case I.a.ENROLLED:
+                                case b.a.ENROLLED:
                                     U({
                                         ...Q,
                                         userStatus: F({ enrolledAt: new Date().toISOString() })
                                     });
                                     break;
-                                case I.a.COMPLETED_25:
+                                case b.a.COMPLETED_25:
                                     U({
                                         ...Q,
                                         userStatus: F({
@@ -598,7 +598,7 @@ function Z() {
                                         })
                                     });
                                     break;
-                                case I.a.COMPLETED_50:
+                                case b.a.COMPLETED_50:
                                     U({
                                         ...Q,
                                         userStatus: F({
@@ -607,7 +607,7 @@ function Z() {
                                         })
                                     });
                                     break;
-                                case I.a.COMPLETED_75:
+                                case b.a.COMPLETED_75:
                                     U({
                                         ...Q,
                                         userStatus: F({
@@ -616,7 +616,7 @@ function Z() {
                                         })
                                     });
                                     break;
-                                case I.a.COMPLETED_100:
+                                case b.a.COMPLETED_100:
                                     U({
                                         ...Q,
                                         userStatus: F({
@@ -626,7 +626,7 @@ function Z() {
                                         })
                                     });
                                     break;
-                                case I.a.CLAIMED:
+                                case b.a.CLAIMED:
                                     U({
                                         ...Q,
                                         userStatus: F({
@@ -776,6 +776,7 @@ function Z() {
                                                 var t;
                                                 return (0, i.jsx)(e, {
                                                     ...s,
+                                                    videoSessionId: 'fake-quest-session-id',
                                                     questId: null !== (t = Q.id) && void 0 !== t ? t : 'fake-quest-id',
                                                     overrideQuest: Q,
                                                     autoplay: !0
