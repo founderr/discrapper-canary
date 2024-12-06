@@ -237,6 +237,7 @@ var n, r;
     (r.STAGE_VIDEO_LIMIT = 'stage video limit'),
     (r.ACTIVITIES_MINI_SHELF = 'activities mini shelf'),
     (r.ACTIVITIES_MINI_SHELF_BANNER = 'activities mini shelf banner'),
+    (r.APP_OAUTH2_LINK_EMBED = 'application oauth2 embed'),
     (r.APP_DMS_ENTRY_POINT_COMMAND_BUTTON = 'app_dms_entry_point_command_button'),
     (r.APP_LAUNCHER = 'app launcher'),
     (r.APP_DETAIL = 'app detail'),
