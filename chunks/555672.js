@@ -22,7 +22,10 @@ function p(e) {
 }
 t.ZP = i.memo((e) => {
     let { entry: t, channel: n, selected: i } = e,
-        { largeImage: a } = (0, s.rv)({ entry: t }),
+        { largeImage: a } = (0, s.rv)({
+            entry: t,
+            showCoverImage: !1
+        }),
         _ = (0, l.Nq)(t);
     return null != _ && p(_)
         ? (0, r.jsxs)(c.Zb, {
