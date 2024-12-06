@@ -21,15 +21,16 @@ function a(e) {
         renderThreadAccessory: m,
         renderComponentAccessory: h,
         renderSuppressEmbeds: f,
-        forceAddReactions: p,
-        className: _
+        renderReactions: p,
+        forceAddReactions: _,
+        className: g
     } = e;
     return d
         ? null
         : (0, i.jsx)(r.Z, {
               message: t,
               children: (0, i.jsx)(l.ZP, {
-                  className: _,
+                  className: g,
                   isInteracting: c,
                   message: t,
                   channel: n,
@@ -40,7 +41,8 @@ function a(e) {
                   renderThreadAccessory: m,
                   renderComponentAccessory: h,
                   renderSuppressEmbeds: f,
-                  forceAddReactions: p
+                  forceAddReactions: _,
+                  renderReactions: p
               })
           });
 }
