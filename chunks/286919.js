@@ -9,6 +9,7 @@ e.exports = {
     premiumTierCardsContainerSettings: 'premiumTierCardsContainerSettings_a8b566 premiumTierCardsContainer_a8b566',
     premiumTierCardsContainerFullscreen: 'premiumTierCardsContainerFullscreen_a8b566 premiumTierCardsContainer_a8b566',
     promoBannerContainer: 'promoBannerContainer_a8b566',
+    giftPromoCard: 'giftPromoCard_a8b566',
     marginTopForButtons: 'marginTopForButtons_a8b566',
     buttonShine: 'buttonShine_a8b566',
     perkCardsContainerSpacingSettings: 'perkCardsContainerSpacingSettings_a8b566 perkCardsContainer_a8b566',
