@@ -1,18 +1,21 @@
 n.d(t, {
+    Ae: function () {
+        return I;
+    },
     GE: function () {
-        return N;
+        return C;
     },
     GL: function () {
         return h;
     },
     Jd: function () {
-        return O;
+        return D;
     },
     Jg: function () {
-        return T;
+        return b;
     },
     Nq: function () {
-        return S;
+        return y;
     },
     Ol: function () {
         return v;
@@ -24,40 +27,40 @@ n.d(t, {
         return _;
     },
     V5: function () {
-        return y;
-    },
-    ap: function () {
-        return C;
-    },
-    bT: function () {
-        return R;
-    },
-    dw: function () {
         return A;
     },
+    ap: function () {
+        return R;
+    },
+    bT: function () {
+        return O;
+    },
+    dw: function () {
+        return N;
+    },
     ig: function () {
-        return w;
+        return P;
     },
     kr: function () {
         return E;
     },
     n2: function () {
-        return I;
+        return T;
     },
     q_: function () {
-        return L;
+        return x;
     },
     vU: function () {
-        return D;
+        return L;
     },
     yA: function () {
-        return b;
+        return S;
     },
     yh: function () {
         return m;
     },
     zo: function () {
-        return x;
+        return w;
     }
 });
 var r = n(164369),
@@ -147,28 +150,31 @@ function v(e) {
     return null !== (n = null === (t = g(e, s.N.FIRST_TIME)) || void 0 === t ? void 0 : t.first_time) && void 0 !== n && n;
 }
 function I(e) {
-    return null != e.expires_at && new Date(e.expires_at) < new Date();
+    return u.default.age(e.id) / l.Z.Millis.HOUR < 48;
 }
 function T(e) {
-    return E(e) && !I(e);
+    return null != e.expires_at && new Date(e.expires_at) < new Date();
 }
 function b(e) {
-    var t;
-    return null === (t = g(e, s.N.DURATION_SECONDS)) || void 0 === t ? void 0 : t.duration_seconds;
+    return E(e) && !T(e);
 }
 function S(e) {
     var t;
-    return null === (t = g(e, s.N.AGGREGATE_RANGE)) || void 0 === t ? void 0 : t.range;
+    return null === (t = g(e, s.N.DURATION_SECONDS)) || void 0 === t ? void 0 : t.duration_seconds;
 }
 function y(e) {
     var t;
-    return null === (t = g(e, s.N.MARATHON)) || void 0 === t ? void 0 : t.marathon;
+    return null === (t = g(e, s.N.AGGREGATE_RANGE)) || void 0 === t ? void 0 : t.range;
 }
 function A(e) {
+    var t;
+    return null === (t = g(e, s.N.MARATHON)) || void 0 === t ? void 0 : t.marathon;
+}
+function N(e) {
     let t = g(e, s.N.RESURRECTED);
     return (null == t ? void 0 : t.resurrected_last_played) != null ? new Date(t.resurrected_last_played) : void 0;
 }
-function N(e) {
+function C(e) {
     let {
         months: t = 0,
         weeks: n = 0,
@@ -183,7 +189,7 @@ function N(e) {
         days: t > 0 || n > 0 ? 0 : i
     });
 }
-function C(e) {
+function R(e) {
     if (null == e || '' === e) return null;
     let t = /\w+ (\d+), \w+ (\d+)/.exec(e);
     return null == t
@@ -193,7 +199,7 @@ function C(e) {
               episodeNum: t[2]
           });
 }
-function R(e, t) {
+function O(e, t) {
     var n, r, i, a;
     let s = null !== (i = null == t ? void 0 : null === (n = t.size) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : void 0,
         o = null !== (a = null == t ? void 0 : null === (r = t.size) || void 0 === r ? void 0 : r[1]) && void 0 !== a ? a : void 0,
@@ -206,21 +212,21 @@ function R(e, t) {
                 : void 0;
     return null != l && null != e ? ''.concat(e, ' (').concat(l, ')') : null != e ? e : l;
 }
-function O(e) {
+function D(e) {
     return e.content_type === o.s.TOP_GAME;
 }
-function D(e) {
+function L(e) {
     var t;
     return null === (t = g(e, s.N.STREAK_DAYS)) || void 0 === t ? void 0 : t.streak_count_days;
 }
-function L(e) {
-    let t = D(e);
+function x(e) {
+    let t = L(e);
     if (null == t || t < 3) return !1;
     let n = u.default.extractTimestamp(e.id);
     return !(Date.now() - n > 48 * l.Z.Millis.HOUR) && !0;
 }
-function x(e) {
-    let t = b(e);
+function w(e) {
+    let t = S(e);
     if (null == t)
         return {
             text: null,
@@ -237,7 +243,7 @@ function x(e) {
               tooltipText: c.intl.formatToPlainString(c.t['S5F48/'], { hours: n })
           };
 }
-function w(e) {
+function P(e) {
     var t;
     return null === (t = g(e, s.N.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending;
 }

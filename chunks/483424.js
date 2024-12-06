@@ -1,53 +1,52 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 }),
     n(47120);
-var r = n(200651);
-n(192379);
-var i = n(369566),
-    a = n(565640),
-    s = n(151545),
-    o = n(744802),
-    l = n(493043);
-function u(e) {
-    let { user: t, currentUser: n, profileGuildId: u, className: c, onClose: d } = e,
-        {
-            live: [f],
-            recent: [_],
-            stream: p
-        } = (0, i.Z)(t.id),
-        h = (0, a.Z)(t.id, 'UserProfileFeaturedActivity'),
-        m = t.id === n.id ? _ : h;
-    return null != p
-        ? (0, r.jsx)(l.Z, {
+var r = n(200651),
+    i = n(192379),
+    a = n(561308),
+    s = n(369566),
+    o = n(565640),
+    l = n(151545),
+    u = n(744802),
+    c = n(493043);
+function d(e) {
+    let { user: t, currentUser: n, profileGuildId: d, className: f, onClose: _ } = e,
+        { live: p, recent: h, stream: m } = (0, s.Z)(t.id),
+        [g] = p,
+        E = t.id === n.id,
+        v = (0, o.Z)(t.id, 'UserProfileFeaturedActivity'),
+        I = i.useMemo(() => (E ? h.find(a.Ae) : v), [E, h, v]);
+    return null != m
+        ? (0, r.jsx)(c.Z, {
               location: 'UserProfileFeaturedActivity',
               user: t,
               currentUser: n,
-              stream: p,
-              profileGuildId: u,
-              className: c,
-              onClose: d
+              stream: m,
+              profileGuildId: d,
+              className: f,
+              onClose: _
           })
-        : null != f
-          ? (0, r.jsx)(s.Z, {
+        : null != g
+          ? (0, r.jsx)(l.Z, {
                 user: t,
                 currentUser: n,
-                activity: f,
-                profileGuildId: u,
-                className: c,
-                onClose: d
+                activity: g,
+                profileGuildId: d,
+                className: f,
+                onClose: _
             })
-          : null != m
-            ? (0, r.jsx)(o.Z, {
+          : null != I
+            ? (0, r.jsx)(u.Z, {
                   location: 'UserProfileFeaturedActivity',
                   user: t,
                   currentUser: n,
-                  entry: m,
-                  profileGuildId: u,
-                  className: c,
-                  onClose: d
+                  entry: I,
+                  profileGuildId: d,
+                  className: f,
+                  onClose: _
               })
             : null;
 }
