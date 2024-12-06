@@ -1,6 +1,6 @@
 n.d(t, {
     S: function () {
-        return f;
+        return g;
     }
 });
 var i = n(200651),
@@ -8,25 +8,27 @@ var i = n(200651),
     r = n(120356),
     a = n.n(r),
     o = n(481060),
-    s = n(593214),
-    c = n(981631),
-    u = n(388032),
-    d = n(134123),
-    h = n(782451),
-    p = n(572488);
-function m() {
+    s = n(540059),
+    c = n(593214),
+    u = n(981631),
+    d = n(388032),
+    h = n(134123),
+    p = n(782451),
+    m = n(572488);
+function f() {
     return (0, i.jsx)('div', {
-        className: a()(h.row, h.rowGuildName),
+        className: a()(p.row, p.rowGuildName),
         children: (0, i.jsx)('span', {
-            className: a()(h.guildNameText, h.guildNameTextLimitedSize, d.tooltipText),
-            children: u.intl.string(u.t['4tSWQk'])
+            className: a()(p.guildNameText, p.guildNameTextLimitedSize, h.tooltipText),
+            children: d.intl.string(d.t['4tSWQk'])
         })
     });
 }
-let f = l.memo(function (e) {
+let g = l.memo(function (e) {
     let { 'aria-label': t = !1, children: n } = e,
-        r = (function () {
-            let { favoriteAdded: e, clearFavoriteAdded: t } = (0, s.up)();
+        r = (0, s.Q)('FavoritesAddedTooltip'),
+        a = (function () {
+            let { favoriteAdded: e, clearFavoriteAdded: t } = (0, c.up)();
             return (
                 l.useEffect(() => {
                     if (e) {
@@ -42,20 +44,20 @@ let f = l.memo(function (e) {
             );
         })();
     return (0, i.jsx)(o.Tooltip, {
-        forceOpen: r,
+        forceOpen: a,
         color: o.TooltipColors.GREEN,
         hideOnClick: !0,
-        spacing: 20,
+        spacing: r ? 12 : 20,
         position: 'right',
         align: 'center',
-        text: (0, i.jsx)(m, {}),
+        text: (0, i.jsx)(f, {}),
         'aria-label': t,
-        tooltipClassName: p.listItemTooltip,
+        tooltipClassName: m.listItemTooltip,
         children: (e) =>
             (0, i.jsx)('div', {
                 ...e,
-                onMouseEnter: c.dG4,
-                onMouseLeave: c.dG4,
+                onMouseEnter: u.dG4,
+                onMouseLeave: u.dG4,
                 children: n
             })
     });
