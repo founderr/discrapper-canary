@@ -217,7 +217,7 @@ function ef(e) {
         }, [eR, null == ep ? void 0 : ep.length, B, eE]),
         [e$, e0] = s.useState(null);
     s.useEffect(() => {
-        eJ && R.ZP.fetchApplication(L).then((e) => e0(M.Z.createFromServer(e)));
+        eJ && R.ZP.fetchApplication(L).then((e) => e0(M.ZP.createFromServer(e)));
     }, [L, eJ]);
     let e1 = s.useMemo(() => {
             var e, t;

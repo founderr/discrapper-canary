@@ -174,7 +174,7 @@ function _(e) {
             () => {
                 if (null == t) {
                     let t = s.Z.getApplication(e);
-                    if (null != t) return o.Z.createFromServer(t);
+                    if (null != t) return o.ZP.createFromServer(t);
                 }
                 return t;
             },

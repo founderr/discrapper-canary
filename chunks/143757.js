@@ -39,7 +39,7 @@ async function O(e, t, n) {
     if (null == i)
         try {
             var r, l, a;
-            i = null !== (a = null === (r = A.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = v.Z.createFromServer(await (0, x.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
+            i = null !== (a = null === (r = A.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = v.ZP.createFromServer(await (0, x.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
         } catch (e) {
             t(void 0);
             return;

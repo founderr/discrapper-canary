@@ -80,7 +80,7 @@ t.Z = (e) => {
     if (null == c) return null;
     let A = null != c.guild ? new f.ZP(c.guild) : null,
         L = null != c.channel ? (0, p.jD)(c.channel) : null,
-        P = null != c.target_application ? new h.Z(c.target_application) : null,
+        P = null != c.target_application ? new h.ZP(c.target_application) : null,
         R = I || null == c.inviter ? null : new g.Z(c.inviter),
         j = !((null != c.approximate_member_count && c.approximate_member_count > 100) || (null != A && A.hasFeature(_.oNc.COMMUNITY))) && null != R,
         w = null,

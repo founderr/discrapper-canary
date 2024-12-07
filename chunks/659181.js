@@ -33,7 +33,7 @@ class d extends a.Z {
             id: e.id,
             type: e.type,
             applicationId: e.application_id,
-            application: null != e.application ? o.Z.createFromServer(e.application) : null,
+            application: null != e.application ? o.ZP.createFromServer(e.application) : null,
             productLine: e.product_line,
             name: null !== (t = e.name) && void 0 !== t ? t : '',
             releaseDate: null != e.release_date ? i()(e.release_date) : null,

@@ -90,7 +90,7 @@ function S(e) {
     return E(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, p.udG.PROMOTED);
 }
 function y(e) {
-    return E(e) && T(e) ? (e instanceof u.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+    return E(e) && T(e) ? (e instanceof u.ZP ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
 function A(e) {
     let { command: t, optionValues: n, context: a, commandTargetId: u, maxSizeCallback: c, sectionName: d, commandOrigin: _ = s.bB.APPLICATION_LAUNCHER } = e,
@@ -146,7 +146,7 @@ function N(e) {
           };
 }
 function C(e) {
-    return !!E(e) && (e instanceof u.Z ? e.isMonetized : e.is_monetized);
+    return !!E(e) && (e instanceof u.ZP ? e.isMonetized : e.is_monetized);
 }
 function R(e) {
     let t = y(e);
@@ -176,7 +176,7 @@ function L(e) {
     return t;
 }
 function x(e) {
-    return e instanceof u.Z
+    return e instanceof u.ZP
         ? {
               applicationId: e.id,
               customInstallUrl: e.customInstallUrl,

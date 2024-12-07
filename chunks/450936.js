@@ -72,7 +72,7 @@ function C(e) {
                 })) || void 0 === t
                 ? void 0
                 : t.application,
-        y = i.useMemo(() => (null != A ? m.Z.createFromServer(A) : void 0), [A]),
+        y = i.useMemo(() => (null != A ? m.ZP.createFromServer(A) : void 0), [A]),
         P = (0, u.q)(null == y && x ? N : void 0),
         M = null !== (n = null != y ? y : P) && void 0 !== n ? n : void 0,
         R = null == M || (j && 0 === T.length);

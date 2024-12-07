@@ -32,7 +32,7 @@ function h(e) {
             (null == C ? void 0 : C.isGuildVoice()) ? (_ = !v) : !(0, l.WS)(C) && (_ = !0);
     }
     if (f !== r.JS.LEAVE) {
-        let e = h instanceof s.Z ? h.embeddedActivityConfig : h.embedded_activity_config,
+        let e = h instanceof s.ZP ? h.embeddedActivityConfig : h.embedded_activity_config,
             t = (0, o.Z)((0, u.getOS)());
         null == e || e.supported_platforms.includes(t) ? (null == C ? void 0 : C.isThread()) && ((_ = !0), (n = p.intl.string(p.t.ddSR3t))) : ((_ = !1), (n = p.intl.string(p.t.z2YTgI)));
     }

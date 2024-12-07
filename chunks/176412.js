@@ -1,6 +1,6 @@
 t.d(n, {
     Bm: function () {
-        return S;
+        return P;
     },
     P7: function () {
         return j;
@@ -55,7 +55,7 @@ function j(e) {
         }),
         I = (0, N.Q)(E),
         j = (0, o.e7)([x.Z], () => x.Z.entrypoint()),
-        S = (0, d.w1)({
+        P = (0, d.w1)({
             applicationId: t.id,
             embeddedActivitiesManager: u.Z,
             channelId: n.id,
@@ -77,19 +77,19 @@ function j(e) {
             source: j,
             fetchesApplication: C
         }),
-        y = s.ButtonColors.BRAND,
-        P = null != a ? a : A.intl.string(A.t.zKX8Nj);
+        S = s.ButtonColors.BRAND,
+        y = null != a ? a : A.intl.string(A.t.zKX8Nj);
     return (
-        I === d.JS.JOIN ? ((y = s.ButtonColors.GREEN), (P = A.intl.string(A.t.d9PsMj))) : I === d.JS.LEAVE && !f && ((y = s.ButtonColors.RED), (P = A.intl.string(A.t['Hi1/aW']))),
+        I === d.JS.JOIN ? ((S = s.ButtonColors.GREEN), (y = A.intl.string(A.t.d9PsMj))) : I === d.JS.LEAVE && !f && ((S = s.ButtonColors.RED), (y = A.intl.string(A.t['Hi1/aW']))),
         {
-            onActivityItemSelected: S,
+            onActivityItemSelected: P,
             activityAction: I,
-            buttonColor: y,
-            buttonText: P
+            buttonColor: S,
+            buttonText: y
         }
     );
 }
-function S(e, n) {
+function P(e, n) {
     let t = x.Z.entrypoint(),
         a = i.useMemo(
             () =>

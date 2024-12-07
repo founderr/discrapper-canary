@@ -25,7 +25,7 @@ class m extends (i = u.ZP.Store) {
     getApplicationRecord(e) {
         if (null == e) return;
         let t = f[e];
-        if (null != t) return d.Z.createFromServer(t);
+        if (null != t) return d.ZP.createFromServer(t);
     }
     getApplications() {
         return f;

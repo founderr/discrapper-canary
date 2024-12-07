@@ -367,7 +367,7 @@ async function $() {
                 rejectWithError: !0
             }),
             t = e.body.applications,
-            n = t.map((e) => S.Z.createFromServer(e));
+            n = t.map((e) => S.ZP.createFromServer(e));
         a.Z.dispatch({
             type: 'DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS',
             applications: n,
@@ -466,7 +466,7 @@ async function en(e) {
                 }),
             {
                 activityConfigs: l,
-                applications: u.map((e) => S.Z.createFromServer(e))
+                applications: u.map((e) => S.ZP.createFromServer(e))
             }
         );
     } catch (e) {

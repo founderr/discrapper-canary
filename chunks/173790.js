@@ -30,8 +30,8 @@ function b(e) {
         b = (0, a.e7)([m.Z], () => m.Z.entrypoint()),
         I = null !== (n = (0, u.q)(s.id === _.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
         j = (0, h.ye)(I) ? E : x.Z,
-        S = l.useRef(null),
-        [y, P] = l.useState(!1),
+        P = l.useRef(null),
+        [S, y] = l.useState(!1),
         { iconURL: T, name: L } = l.useMemo(
             () =>
                 (0, h.sl)(I, {
@@ -51,7 +51,7 @@ function b(e) {
         (0, i.jsxs)(r.ScrollerNone, {
             className: g.container,
             fade: !0,
-            ref: S,
+            ref: P,
             role: 'region',
             'aria-label': N.intl.formatToPlainString(N.t['4OP4Ul'], { applicationName: L }),
             children: [
@@ -60,7 +60,7 @@ function b(e) {
                     channel: t,
                     name: L,
                     iconURL: T,
-                    scrollerRef: S,
+                    scrollerRef: P,
                     sectionName: c
                 }),
                 null != T &&
@@ -73,7 +73,7 @@ function b(e) {
                     channel: t,
                     application: I,
                     sectionName: c,
-                    hasCommands: y
+                    hasCommands: S
                 }),
                 b === p._b.TEXT
                     ? (0, i.jsx)(C.Z, {
@@ -81,7 +81,7 @@ function b(e) {
                           application: I,
                           sectionName: c,
                           installOnDemand: k,
-                          setHasCommands: P
+                          setHasCommands: y
                       })
                     : null
             ]

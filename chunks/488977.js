@@ -34,12 +34,12 @@ function b(e) {
             section_name: b,
             source: C.Z.lastShownEntrypoint()
         },
-        S = u.Z.useExperiment({ location: s.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU }, { autoTrackExposure: !0 }).enabled,
-        y = (0, d.Z)({
+        P = u.Z.useExperiment({ location: s.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU }, { autoTrackExposure: !0 }).enabled,
+        S = (0, d.Z)({
             id: n.id,
             label: g.intl.string(g.t['+NP/b2'])
         }),
-        P = (0, x.P)({ application: n });
+        y = (0, x.P)({ application: n });
     return (0, i.jsxs)('div', {
         className: A.container,
         children: [
@@ -89,7 +89,7 @@ function b(e) {
                                               }
                                           })
                                         : null,
-                                    S && n instanceof p.Z
+                                    P && n instanceof p.ZP
                                         ? (0, i.jsx)(o.MenuItem, {
                                               id: 'report-app',
                                               color: 'danger',
@@ -107,8 +107,8 @@ function b(e) {
                                         : null
                                 ]
                             }),
-                            null != P && (0, i.jsxs)(o.MenuGroup, { children: [...P] }),
-                            (0, i.jsx)(o.MenuGroup, { children: y })
+                            null != y && (0, i.jsxs)(o.MenuGroup, { children: [...y] }),
+                            (0, i.jsx)(o.MenuGroup, { children: S })
                         ]
                     });
                 },

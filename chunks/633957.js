@@ -56,7 +56,7 @@ function A(e) {
             return null == t ? null : null === (e = C.Z.findActivity(t, (e) => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
         }),
         B = r.useMemo(() => {
-            let e = new _.Z(n);
+            let e = new _.ZP(n);
             return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = v.wT), e;
         }, [n]),
         U = (0, u.s5)({

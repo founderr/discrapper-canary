@@ -10,7 +10,7 @@ var i = n(726542),
     l = n(973616),
     r = n(388032);
 let o = 'twitch:';
-class a extends l.Z {
+class a extends l.ZP {
     getIconURL() {
         return i.Z.get('twitch').icon.lightPNG;
     }

@@ -37,10 +37,10 @@ function x(e) {
         E = l.useRef(null),
         I = l.useRef(null),
         j = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
-        S = (0, c.ZP)('number' == typeof x ? '' : x, null != j ? j : ''),
-        y = l.useMemo(() => {
+        P = (0, c.ZP)('number' == typeof x ? '' : x, null != j ? j : ''),
+        S = l.useMemo(() => {
             var e, n;
-            let t = (0, a.compact)([d.Z.parseHexString(S), d.Z.parseHexString(g ? '#000000' : '#ffffff')]);
+            let t = (0, a.compact)([d.Z.parseHexString(P), d.Z.parseHexString(g ? '#000000' : '#ffffff')]);
             return null !==
                 (n =
                     null ===
@@ -52,9 +52,9 @@ function x(e) {
                         ? void 0
                         : e.toHexString()) && void 0 !== n
                 ? n
-                : S;
-        }, [S, g]),
-        P = v(A),
+                : P;
+        }, [P, g]),
+        y = v(A),
         T = v(b),
         L = l.useCallback(() => {
             var e, n, t, i, l, o, r, s, c, d;
@@ -62,7 +62,7 @@ function x(e) {
                 m = A.current,
                 p = E.current,
                 h = null == I ? void 0 : I.current,
-                f = parseInt(null !== (e = null == P ? void 0 : P.height) && void 0 !== e ? e : ''),
+                f = parseInt(null !== (e = null == y ? void 0 : y.height) && void 0 !== e ? e : ''),
                 C = parseInt(null !== (n = null == T ? void 0 : T.height) && void 0 !== n ? n : '');
             if (null != u && null != m && null != p && !isNaN(f) && !isNaN(C)) {
                 let e = null !== (t = u.scrollTop) && void 0 !== t ? t : 0,
@@ -74,9 +74,9 @@ function x(e) {
                 if (
                     ((m.style.filter = 'brightness('.concat(1 + ((g ? 1.4 : 0.6) - (r = 1)) * N, ')')),
                     (m.style.backgroundColor = 'color-mix(in oklab,'
-                        .concat(S, ' ')
+                        .concat(P, ' ')
                         .concat((1 - N) * 100, '%, ')
-                        .concat(y, ')')),
+                        .concat(S, ')')),
                     (p.style.opacity = ''.concat(0 + (1 - (s = 0)) * N)),
                     (p.style.transform = 'translateY('.concat((c = f / 4) + (0 - c) * N, 'px)')),
                     null != h)
@@ -84,7 +84,7 @@ function x(e) {
                     h.style.opacity = ''.concat(1 + (0 - (d = 1)) * N);
                 }
             }
-        }, [y, S, null == T ? void 0 : T.height, g, _, null == P ? void 0 : P.height]);
+        }, [S, P, null == T ? void 0 : T.height, g, _, null == y ? void 0 : y.height]);
     return (
         l.useEffect(() => {
             L();
@@ -143,7 +143,7 @@ function x(e) {
                 (0, i.jsx)('div', {
                     ref: b,
                     className: f.bannerBackground,
-                    style: { backgroundColor: S }
+                    style: { backgroundColor: P }
                 })
             ]
         })

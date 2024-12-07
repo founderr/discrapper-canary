@@ -38,9 +38,9 @@ var i,
     E = t(695103),
     I = t(880448),
     j = t(768581),
-    S = t(541099),
-    y = t(783097),
-    P = t(695676),
+    P = t(541099),
+    S = t(783097),
+    y = t(695676),
     T = t(176412),
     L = t(226026),
     R = t(570949),
@@ -85,8 +85,8 @@ function H(e) {
     let { application: n, onClick: t, children: i, sectionName: l, resultsPosition: r, sectionOverallPosition: c, tracksImpression: m, disabled: p, containerStyle: h, look: f } = e,
         C = o.useCallback(
             (e) => {
-                if ((0, y.BQ)(n)) {
-                    let t = n instanceof b.Z ? n : b.Z.createFromServer(n);
+                if ((0, S.BQ)(n)) {
+                    let t = n instanceof b.ZP ? n : b.ZP.createFromServer(n);
                     (0, u.vq)(e, (e) =>
                         (0, a.jsx)(R.Z, {
                             application: t,
@@ -97,7 +97,7 @@ function H(e) {
             },
             [n]
         ),
-        { name: v, description: x } = o.useMemo(() => (0, y.sl)(n, { fakeAppIconURL: B }), [n]),
+        { name: v, description: x } = o.useMemo(() => (0, S.sl)(n, { fakeAppIconURL: B }), [n]),
         { trackItemImpressionRef: _ } = (0, L.Z)({
             applicationId: n.id,
             sectionName: l,
@@ -136,7 +136,7 @@ function H(e) {
 }
 function V(e) {
     let { application: n, imageStyle: t, children: i } = e,
-        { name: l, iconURL: r } = o.useMemo(() => (0, y.sl)(n, { fakeAppIconURL: B }), [n]);
+        { name: l, iconURL: r } = o.useMemo(() => (0, S.sl)(n, { fakeAppIconURL: B }), [n]);
     return (0, a.jsx)(d.Tooltip, {
         tooltipContentClassName: U.tooltipContent,
         text: l,
@@ -160,14 +160,14 @@ function V(e) {
 }
 function W(e) {
     let { application: n, look: t, imageStyle: i, enableVideoBanner: l, disableBannerFadeIn: r, children: u } = e,
-        { iconURL: m, name: p, description: f } = o.useMemo(() => (0, y.sl)(n, { fakeAppIconURL: B }), [n]),
+        { iconURL: m, name: p, description: f } = o.useMemo(() => (0, S.sl)(n, { fakeAppIconURL: B }), [n]),
         C = o.useMemo(() => (null == f ? null : (0, T.ae)(f)), [f]),
         v = (0, g.ZP)(m, ''),
         [x, _] = o.useState(!1),
         N = o.useCallback(() => {
             !0 === l && _(!0);
         }, [l]),
-        A = (0, y.lf)(n),
+        A = (0, S.lf)(n),
         b = 'large_banner' === t || 'medium_banner' === t,
         I = o.useCallback(() => _(!1), []),
         j = (0, c.e7)([h.Z, E.Z], () => h.Z.inDevModeForApplication(n.id) || E.Z.inTestModeForApplication(n.id), [n.id]);
@@ -282,8 +282,8 @@ function F() {
 }
 function G(e) {
     let { application: n } = e,
-        t = (0, y.yJ)(n);
-    if (null == t || !(0, y.BQ)(n)) return null;
+        t = (0, S.yJ)(n);
+    if (null == t || !(0, S.BQ)(n)) return null;
     let i = (0, v.fD)(n, t);
     return null == i
         ? null
@@ -300,8 +300,8 @@ function G(e) {
 }
 function z(e) {
     let { application: n, fallbackColor: t, showVideo: i, disableFadeIn: l } = e;
-    if ((0, y.BQ)(n)) {
-        if ((0, y.ye)(n))
+    if ((0, S.BQ)(n)) {
+        if ((0, S.ye)(n))
             return (0, a.jsx)(Y, {
                 application: n,
                 showVideo: i,
@@ -327,7 +327,7 @@ function Y(e) {
             names: ['embedded_cover']
         }),
         r = o.useMemo(() => {
-            let e = (0, y.yJ)(n);
+            let e = (0, S.yJ)(n);
             return null != e && null != e.activity_preview_video_asset_id ? (0, C.Z)(n.id, e.activity_preview_video_asset_id) : null;
         }, [n]),
         [c, d] = o.useState(t);
@@ -391,7 +391,7 @@ function q(e) {
 }
 function J(e) {
     let { application: n, sectionName: t, resultsPosition: i, query: l, installOnDemand: a, location: r } = e,
-        { pushHistory: s } = (0, P.hH)();
+        { pushHistory: s } = (0, y.hH)();
     return o.useCallback(
         (e) => {
             e.stopPropagation(),
@@ -399,12 +399,12 @@ function J(e) {
                     application_id: n.id,
                     section_name: t,
                     search_results_position: i,
-                    source: S.Z.entrypoint(),
+                    source: P.Z.entrypoint(),
                     location: r,
                     query: l
                 }),
                 s({
-                    type: P.gc.APPLICATION,
+                    type: y.gc.APPLICATION,
                     application: n,
                     installOnDemand: a,
                     sectionName: t
@@ -422,7 +422,7 @@ function Q(e) {
 }
 function K(e) {
     let { channel: n, application: t, location: i, sectionName: l, isOneClickCTA: r, fetchesApplication: s = !0, ...u } = e;
-    if (!(0, y.BQ)(t)) throw Error('PerformActivityActionAppCard was passed the Built-in App, which is not supported.');
+    if (!(0, S.BQ)(t)) throw Error('PerformActivityActionAppCard was passed the Built-in App, which is not supported.');
     let m = o.useId(),
         [p, h] = (0, c.Wu)([f.ZP], () => [f.ZP.isLaunchingActivity(), f.ZP.getLaunchState(t.id, n.id)]),
         C = null != h && h.isLaunching && h.componentId === m,

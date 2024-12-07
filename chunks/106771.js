@@ -21,7 +21,7 @@ function f(e) {
         _ = l.useCallback(
             (e) => {
                 if ((0, s.BQ)(f)) {
-                    let n = f instanceof r.Z ? f : r.Z.createFromServer(f);
+                    let n = f instanceof r.ZP ? f : r.ZP.createFromServer(f);
                     (0, o.vq)(e, (e) =>
                         (0, i.jsx)(d.Z, {
                             application: n,

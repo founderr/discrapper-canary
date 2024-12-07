@@ -1,6 +1,6 @@
 t.d(n, {
     Q2: function () {
-        return S;
+        return P;
     },
     pe: function () {
         return j;
@@ -117,8 +117,8 @@ function j(e) {
             includeEmbeddedApps: f,
             includeNonEmbeddedApps: s
         }),
-        S = (0, d.Z)({ guildId: n.getGuildId() }),
-        y = i.useMemo(() => {
+        P = (0, d.Z)({ guildId: n.getGuildId() }),
+        S = i.useMemo(() => {
             var e;
             if (!r) return [];
             return (0, x.N)(C, {
@@ -205,11 +205,11 @@ function j(e) {
                 ]
             });
         }, [r, C, l, n, t]),
-        P = i.useMemo(() => {
-            if (0 === y.length) return [];
+        y = i.useMemo(() => {
+            if (0 === S.length) return [];
             let e = new Map(j.map((e) => [e.id, e]));
             return a().compact(
-                y.map((n) => {
+                S.map((n) => {
                     var t;
                     let i = e.get(n.applicationId);
                     if (null == i) return null;
@@ -221,7 +221,7 @@ function j(e) {
                     };
                 })
             );
-        }, [j, y, v]),
+        }, [j, S, v]),
         T = i.useMemo(() => {
             var e;
             let i = [];
@@ -234,7 +234,7 @@ function j(e) {
                 );
                 i.push(...j),
                     i.push(
-                        ...S.filter((n) => {
+                        ...P.filter((n) => {
                             let {
                                 application: { id: t }
                             } = n;
@@ -296,11 +296,11 @@ function j(e) {
                 ],
                 sortComparers: [b, E]
             });
-        }, [s, f, o, n, t, j, S]),
-        L = P.length > 0,
+        }, [s, f, o, n, t, j, P]),
+        L = y.length > 0,
         R = T.length > 0;
     return {
-        commandResults: P,
+        commandResults: y,
         hasCommandResults: L,
         applicationResults: T,
         hasApplicationResults: R,
@@ -308,7 +308,7 @@ function j(e) {
         loading: _ && r
     };
 }
-function S(e) {
+function P(e) {
     let { channel: n, query: t, fetches: l = !0, pageLimit: a = 1 / 0, entrypoint: c } = e;
     t.startsWith(''.concat(A.GI)) && (t = t.substring(1));
     let d = c === _._b.VOICE,

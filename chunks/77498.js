@@ -43,7 +43,7 @@ function T(e) {
     };
 }
 function b(e) {
-    let t = e instanceof d.Z ? T(e) : e;
+    let t = e instanceof d.ZP ? T(e) : e;
     for (let n of (h.set(e.id, t), (m[e.name.toLowerCase()] = t), e.aliases)) m[n.toLowerCase()] = t;
     if ((0, f.isDesktop)()) for (let n of e.executables) g[n.name] = t;
 }
@@ -124,7 +124,7 @@ _(S, 'displayName', 'GameStore'),
                 };
             return {
                 detectableGamesEtag: e.detectableGamesEtag,
-                detectableGames: null !== (n = null === (t = e.detectableGames) || void 0 === t ? void 0 : t.map((e) => T(new d.Z(e)))) && void 0 !== n ? n : []
+                detectableGames: null !== (n = null === (t = e.detectableGames) || void 0 === t ? void 0 : t.map((e) => T(new d.ZP(e)))) && void 0 !== n ? n : []
             };
         },
         (e) =>
@@ -155,13 +155,13 @@ _(S, 'displayName', 'GameStore'),
                         return {
                             id: e.id,
                             name: e.name,
-                            executables: (null !== (t = e.executables) && void 0 !== t ? t : []).map(d.B),
+                            executables: (null !== (t = e.executables) && void 0 !== t ? t : []).map(d.BA),
                             overlay: null !== (n = e.overlay) && void 0 !== n && n,
                             overlayWarn: null !== (r = e.overlay_warn) && void 0 !== r && r,
                             overlayCompatibilityHook: null !== (i = e.overlay_compatibility_hook) && void 0 !== i && i,
                             hook: null === (a = e.hook) || void 0 === a || a,
                             aliases: null !== (s = e.aliases) && void 0 !== s ? s : [],
-                            supportsOutOfProcessOverlay: d.Z.supportsOutOfProcessOverlay(e.overlay_methods)
+                            supportsOutOfProcessOverlay: d.ZP.supportsOutOfProcessOverlay(e.overlay_methods)
                         };
                     })(e)
                 );

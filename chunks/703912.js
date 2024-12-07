@@ -51,7 +51,7 @@ async function T(e, t, n) {
             let n = null !== (t = u.Z.getApplicationLastUpdated(e)) && void 0 !== t ? t : 0;
             return n < Date.now() - 5000;
         })(G.id)) &&
-        (G = f.Z.createFromServer(await (0, g.UM)(S, k)));
+        (G = f.ZP.createFromServer(await (0, g.UM)(S, k)));
     let B = null != G && (0, E.yE)(G.flags, N.udG.EMBEDDED) && (null === (i = G.integrationTypesConfig) || void 0 === i ? void 0 : i[r.Y.USER_INSTALL]) != null;
     o = null == M ? (B ? r.Y.USER_INSTALL : r.Y.GUILD_INSTALL) : Number(M);
     try {

@@ -33,7 +33,7 @@ t.Z = (e) => {
         activityActionType: null != f.activity ? f.activity.type : null,
         partyId: null != f.activity ? f.activity.party_id : null,
         userId: f.author.id,
-        application: null != (t = f).application ? o.Z.createFromServer(t.application) : null != t.activity && null != t.activity.party_id && (0, m.Ps)(t.activity.party_id) ? s.r9 : void 0,
+        application: null != (t = f).application ? o.ZP.createFromServer(t.application) : null != t.activity && null != t.activity.party_id && (0, m.Ps)(t.activity.party_id) ? s.r9 : void 0,
         message: f,
         channelId: n.id,
         guildId: n.getGuildId(),

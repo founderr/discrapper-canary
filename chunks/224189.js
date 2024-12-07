@@ -23,7 +23,7 @@ async function u(e, t) {
     if (c(null == p ? void 0 : p.application)) return null == p ? void 0 : p.application;
     {
         let t = await (0, i.UM)(e);
-        return a.Z.createFromServer(t);
+        return a.ZP.createFromServer(t);
     }
 }
 function c(e) {

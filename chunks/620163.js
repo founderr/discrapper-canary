@@ -98,7 +98,7 @@ var s = n(990547),
 let ew = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
     eU = ev.Z,
     eV = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eV, impressionSource: eG, numOfPendingFamilyRequests: eY, isOverlaySupported: eH, isClipsBetaTagShowing: ez = !1, shouldMergeGameSettings: eW, isUserSettingsSearchEnabled: eK, isKeywordFilteringEnabled: eq, isStaff: eX, isInappropriateConversationWarningEnabled: eQ, paymentsBlocked: eJ, isEligibleForQuests: e$, showGiftNitro: e0, isStricterMessageRequestsEnabled: e1, hasLibraryApplication: e2, hasTOTPEnabled: e6, developerMode: e3, isSafetySettingsV2Enabled: e8, isAdultUser: e7, hasSecureFramesVerifiedUserIds: e4, hypeSquadRemoved: e5, stealthRemediationEnabled: e9, hasIgnoredUsers: te, hasBlockedUsers: tt, showAppDMsQuickLauncher: tn } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eV, impressionSource: eG, numOfPendingFamilyRequests: eY, isOverlaySupported: eH, isClipsBetaTagShowing: ez = !1, shouldMergeGameSettings: eW, isUserSettingsSearchEnabled: eK, isKeywordFilteringEnabled: eq, isStaff: eX, isInappropriateConversationWarningEnabled: eQ, paymentsBlocked: eJ, isEligibleForQuests: e$, showGiftNitro: e0, isStricterMessageRequestsEnabled: e1, hasLibraryApplication: e2, hasTOTPEnabled: e6, developerMode: e3, isSafetySettingsV2Enabled: e8, isAdultUser: e4, hasSecureFramesVerifiedUserIds: e7, hypeSquadRemoved: e5, stealthRemediationEnabled: e9, hasIgnoredUsers: te, hasBlockedUsers: tt, showAppDMsQuickLauncher: tn } = e;
         return Object.freeze({
             [eB.s6.SEARCH_NO_RESULTS]: {
                 section: h.ID.CUSTOM,
@@ -531,7 +531,7 @@ let ew = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eL.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [eM.intl.string(eM.t.qFsx5u)],
                 parent: eB.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => eQ && !e7
+                predicate: () => eQ && !e4
             },
             [eB.s6.PRIVACY_ACCOUNT_STANDING]: {
                 section: eL.oAB.PRIVACY_AND_SAFETY,
@@ -557,7 +557,7 @@ let ew = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eL.oAB.DATA_AND_PRIVACY,
                 searchableTitles: [eM.intl.string(eM.t['5b3FND'])],
                 parent: eB.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
-                predicate: () => e4
+                predicate: () => e7
             },
             [eB.s6.PRIVACY_FAMILY_CENTER]: {
                 section: eL.oAB.FAMILY_CENTER,

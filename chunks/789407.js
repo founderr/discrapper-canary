@@ -13,7 +13,7 @@ var i = n(726542),
     r = n(973616);
 let l = 'spotify',
     a = i.Z.get(l);
-class o extends r.Z {
+class o extends r.ZP {
     getIconURL(e) {
         return a.icon.lightPNG;
     }

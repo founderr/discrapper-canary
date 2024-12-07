@@ -151,7 +151,7 @@ function O(e) {
         U = null != w,
         B = null != f.stage_instance,
         H = null == f.guild && null == f.channel && null != f.inviter;
-    if (null != G) (t = null == w ? void 0 : w.name), (n = v.Z.createFromServer(G).getCoverImageURL(1024));
+    if (null != G) (t = null == w ? void 0 : w.name), (n = v.ZP.createFromServer(G).getCoverImageURL(1024));
     else if (null != w)
         (t = w.name),
             (n = E.ZP.getGuildSplashURL({

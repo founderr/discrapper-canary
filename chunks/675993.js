@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return y;
+        return S;
     }
 }),
     t(47120);
@@ -28,8 +28,8 @@ var i = t(200651),
     E = t(783685),
     I = t(388032),
     j = t(580062),
-    S = t(665162);
-function y(e) {
+    P = t(665162);
+function S(e) {
     let { channel: n, application: t, videoUrl: a, imageCoverUrl: s, sectionName: d, hasCommands: m } = e,
         p = l.useMemo(() => {
             var e;
@@ -97,12 +97,12 @@ function y(e) {
                         })
                     ]
                 }),
-                (0, i.jsx)(P, { application: t })
+                (0, i.jsx)(y, { application: t })
             ]
         })
     );
 }
-function P(e) {
+function y(e) {
     let { application: n } = e,
         t = (0, N.Cb)(n),
         l = (0, N.Hu)(n);
@@ -205,7 +205,7 @@ function R(e) {
     var n;
     let { application: t } = e;
     if (!(0, N.ye)(t)) return null;
-    let l = null !== (n = (0, N.BQ)(t) ? (t instanceof _.Z ? t.maxParticipants : t.max_participants) : 0) && void 0 !== n ? n : 0;
+    let l = null !== (n = (0, N.BQ)(t) ? (t instanceof _.ZP ? t.maxParticipants : t.max_participants) : 0) && void 0 !== n ? n : 0;
     return (0, i.jsxs)('div', {
         className: j.tagContainer,
         children: [
@@ -325,7 +325,7 @@ function Z(e) {
                 onTransitionEnd: h,
                 children: (0, i.jsx)(s.Text, {
                     ref: r,
-                    className: S.markup,
+                    className: P.markup,
                     variant: 'text-sm/medium',
                     lineClamp: f ? void 0 : 1,
                     style: { maxHeight: f ? void 0 : u.minHeightOverride },

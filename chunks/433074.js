@@ -125,7 +125,7 @@ function T(e) {
                         className: v.applicationInfoContainer,
                         children: [
                             (0, i.jsx)(d.Z.Icon, {
-                                application: m.Z.createFromServer(b),
+                                application: m.ZP.createFromServer(b),
                                 className: v.applicationIcon,
                                 onClick: () => D('application_icon')
                             }),

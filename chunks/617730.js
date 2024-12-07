@@ -30,7 +30,7 @@ function m(e) {
     if (null == t) return null;
     let f = null != t.guild ? new a.ZP(t.guild) : null,
         _ = null != t.channel ? (0, l.jD)(t.channel) : null,
-        x = null != t.target_application ? new s.Z(t.target_application) : null,
+        x = null != t.target_application ? new s.ZP(t.target_application) : null,
         E = m || null == t.inviter ? null : new o.Z(t.inviter),
         I = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != f && f.hasFeature(d.oNc.COMMUNITY))) && null != E && (0, c.WT)(t),
         v = p(t),

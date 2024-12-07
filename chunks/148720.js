@@ -23,7 +23,7 @@ async function g(e) {
         S = E;
     if (null == S) {
         let e = await i.ZP.fetchApplication(n);
-        S = s.Z.createFromServer(e);
+        S = s.ZP.createFromServer(e);
     }
     if (null == b || null == S) return;
     let y = c.default.getCurrentUser(),

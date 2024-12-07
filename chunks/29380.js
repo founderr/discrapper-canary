@@ -32,13 +32,13 @@ function x(e) {
             onSubmissionComplete: A
         }),
         [I, j] = l.useState(!1),
-        S = (0, o.Qv)({
+        P = (0, o.Qv)({
             applicationId: t.id,
             channelId: n.id
         }),
-        y = l.useMemo(() => (0, m.XZ)(_.displayName), [_.displayName]),
+        S = l.useMemo(() => (0, m.XZ)(_.displayName), [_.displayName]),
         {
-            onActivityItemSelected: P,
+            onActivityItemSelected: y,
             buttonColor: T,
             buttonText: L
         } = (0, h.P7)({
@@ -46,15 +46,15 @@ function x(e) {
             application: t,
             location: r.Vh.APP_LAUNCHER_APPLICATION_VIEW,
             sectionName: x,
-            commandName: y,
-            autoDismissOnClick: S === o.JS.LEAVE,
+            commandName: S,
+            autoDismissOnClick: P === o.JS.LEAVE,
             launchingComponentId: g,
             submitting: null != E ? E : b
         }),
         { disabled: R, reason: M } = (0, u.Z)({
             channelId: n.id,
             application: t,
-            activityAction: S
+            activityAction: P
         });
     return (0, i.jsx)(a.Tooltip, {
         shouldShow: null != M,
@@ -71,7 +71,7 @@ function x(e) {
                 submitting: I,
                 onClick: () => {
                     j(!0),
-                        P(),
+                        y(),
                         null == n || n(),
                         s.default.track(f.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                             application_id: t.id,
