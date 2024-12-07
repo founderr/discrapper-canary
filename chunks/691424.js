@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return B;
+        return G;
     }
 }),
     n(47120);
@@ -33,12 +33,13 @@ var r = n(200651),
     O = n(69626),
     D = n(142990),
     L = n(532901),
-    x = n(981631),
-    w = n(176505),
-    P = n(665162),
-    M = n(763971);
+    x = n(311739),
+    w = n(981631),
+    P = n(176505),
+    M = n(665162),
+    k = n(763971);
 n(896715);
-function k(e) {
+function U(e) {
     let { text: t } = e,
         [n, a] = i.useState(!1);
     return (0, r.jsx)(l.Clickable, {
@@ -60,14 +61,14 @@ function k(e) {
               })
     });
 }
-let U = {
+let B = {
     blockQuote: {
         react: (e, t, n) =>
             (0, r.jsxs)(
                 'div',
                 {
-                    className: P.blockquoteContainer,
-                    children: [(0, r.jsx)('div', { className: P.blockquoteDivider }), (0, r.jsx)('blockquote', { children: t(e.content, n) })]
+                    className: M.blockquoteContainer,
+                    children: [(0, r.jsx)('div', { className: M.blockquoteDivider }), (0, r.jsx)('blockquote', { children: t(e.content, n) })]
                 },
                 n.key
             )
@@ -100,19 +101,19 @@ let U = {
         react(e, t, i) {
             let a = () =>
                 (0, r.jsx)('code', {
-                    className: s()(M.scrollbarGhostHairline, 'hljs'),
+                    className: s()(k.scrollbarGhostHairline, 'hljs'),
                     children: (0, A.S)(e, t, i)
                 });
             return (0, r.jsx)(
                 'pre',
                 {
                     children: (0, r.jsxs)('div', {
-                        className: P.codeContainer,
+                        className: M.codeContainer,
                         children: [
                             y.wS
                                 ? (0, r.jsx)('div', {
-                                      className: P.codeActions,
-                                      children: (0, r.jsx)(k, { text: e.content })
+                                      className: M.codeActions,
+                                      children: (0, r.jsx)(U, { text: e.content })
                                   })
                                 : null,
                             (0, r.jsx)(d.GI, {
@@ -126,7 +127,7 @@ let U = {
                                         return null == n
                                             ? a()
                                             : (0, r.jsx)('code', {
-                                                  className: s()(M.scrollbarGhostHairline, 'hljs', n.language),
+                                                  className: s()(k.scrollbarGhostHairline, 'hljs', n.language),
                                                   dangerouslySetInnerHTML: { __html: n.value }
                                               });
                                     }
@@ -174,18 +175,18 @@ let U = {
                                   let r = S.Z.getGuild(e);
                                   if (null == e || null == r) return;
                                   let i = (t) => {
-                                      r.hasFeature(x.oNc.COMMUNITY) && (0, T.uL)(x.Z5c.CHANNEL(e, t));
+                                      r.hasFeature(w.oNc.COMMUNITY) && (0, T.uL)(w.Z5c.CHANNEL(e, t));
                                   };
                                   switch (t) {
                                       case 'home':
                                       case 'guide':
-                                          i(w.oC.GUILD_HOME);
+                                          i(P.oC.GUILD_HOME);
                                           break;
                                       case 'browse':
-                                          i(w.oC.CHANNEL_BROWSER);
+                                          i(P.oC.CHANNEL_BROWSER);
                                           break;
                                       case 'customize':
-                                          i(w.oC.CUSTOMIZE_COMMUNITY);
+                                          i(P.oC.CUSTOMIZE_COMMUNITY);
                                           break;
                                       case 'linked-roles':
                                           if (null != n) {
@@ -225,7 +226,7 @@ let U = {
                 i = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
             return (0, o.reactElement)(r, ''.concat(n.key), {
                 start: e.start,
-                className: n.formatInline ? P.inlineFormat : null,
+                className: n.formatInline ? M.inlineFormat : null,
                 style: { '--totalCharacters': i },
                 children: e.items.map((e, r) => {
                     let i = (0, o.reactElement)('span', ''.concat(n.key, '-').concat(r, '-innerSpan'), { children: t(e, n) });
@@ -239,7 +240,7 @@ let U = {
             let r = (0, o.reactElement)('span', ''.concat(n.key, '-innerSpan'), { children: t(e.content, n) });
             return (0, o.reactElement)('h' + e.level, (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
                 children: r,
-                className: n.formatInline ? P.inlineFormat : null
+                className: n.formatInline ? M.inlineFormat : null
             });
         }
     },
@@ -273,15 +274,15 @@ let U = {
             let r = (0, o.reactElement)('span', ''.concat(n.key, '-innerSpan'), { children: t(e.content, n) });
             return (0, o.reactElement)('small', (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
                 children: r,
-                className: n.formatInline ? P.inlineFormat : null
+                className: n.formatInline ? M.inlineFormat : null
             });
         }
     },
     silentPrefix: { react: (e, t, n) => ('string' == typeof e.content ? (0, r.jsx)('span', { children: e.content }, n.key) : (0, r.jsx)('span', { children: t(e.content, n) }, n.key)) }
 };
-function B(e) {
+function G(e) {
     return {
-        ...U,
+        ...B,
         link: (0, L.Z)(e),
         devLink: (0, D.Z)(e),
         emoji: (function (e) {
@@ -335,6 +336,7 @@ function B(e) {
         })(e),
         channelMention: (0, R.Z)(e),
         commandMention: (0, O.ZP)(e),
-        attachmentLink: (0, C.Z)(e)
+        attachmentLink: (0, C.Z)(e),
+        shopLink: (0, x.Z)(e)
     };
 }

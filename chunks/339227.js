@@ -31,6 +31,7 @@ let g = {
         channelOrMessageUrl: { type: 'skip' },
         mediaPostLink: { type: 'skip' },
         attachmentLink: { type: 'skip' },
+        shopLink: { type: 'skip' },
         newline: { type: 'verbatim' },
         br: { type: 'verbatim' },
         paragraph: { type: 'verbatim' },

@@ -29,6 +29,7 @@ n.d(t, {
     (i.CHANNEL = 'channel'),
     (i.GUILD = 'guild'),
     (i.ATTACHMENT_LINK = 'attachmentLink'),
+    (i.SHOP_LINK = 'shopLink'),
     (i.SOUNDBOARD = 'soundboard'),
     (i.STATIC_ROUTE_LINK = 'staticRouteLink'),
     (i.ROLE_MENTION = 'roleMention'),

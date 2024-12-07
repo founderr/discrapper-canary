@@ -11895,6 +11895,12 @@ div.modalHeader_c5e09c {
     background-color: var(--background-primary)
 }
 
+.icon_c4defd {
+    vertical-align: middle;
+    margin-bottom: .2rem;
+    margin-right: var(--spacing-4)
+}
+
 .hljs {
     display: block;
     overflow-x: auto;

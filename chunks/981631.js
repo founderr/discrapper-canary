@@ -4921,6 +4921,7 @@ let on = Object.freeze({
     (ah.APP_ICON_UPDATED = 'app_icon_updated'),
     (ah.APP_ICON_PREVIEW_VIEWED = 'app_icon_preview_viewed'),
     (ah.CHANNEL_LIST_END_REACHED = 'channel_list_end_reached'),
+    (ah.SHOP_LINK_MENTION_CLICKED = 'shop_link_mention_clicked'),
     (ah.COLLECTIBLES_SHOP_VIEWED = 'collectibles_shop_viewed'),
     (ah.COLLECTIBLES_SHOP_SCROLLED = 'collectibles_shop_scrolled'),
     (ah.COLLECTIBLES_EXPIRY_MODAL_CLOSED = 'collectibles_expiry_modal_closed'),
