@@ -31,7 +31,10 @@ t.Z = (e) => {
             let e = !1;
             return (
                 (async () => {
-                    let n = await (0, c.i)(b);
+                    let n = null;
+                    try {
+                        n = await (0, c.i)(b);
+                    } catch {}
                     if (e || null == n) return;
                     let r = n.find((e) => {
                         var n;

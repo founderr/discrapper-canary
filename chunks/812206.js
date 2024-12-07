@@ -31,7 +31,7 @@ function h(e) {
     delete _[e.id];
 }
 function m(e) {
-    h(s.Z.createFromServer(e));
+    h(s.ZP.createFromServer(e));
 }
 function g(e) {
     let { userId: t, applicationId: n } = e,
@@ -57,7 +57,7 @@ function g(e) {
 function E(e) {
     let { entitlements: t } = e,
         n = !1;
-    for (let { sku: e } of t) (null == e ? void 0 : e.application) != null && (h(s.Z.createFromServer(e.application)), (n = !0));
+    for (let { sku: e } of t) (null == e ? void 0 : e.application) != null && (h(s.ZP.createFromServer(e.application)), (n = !0));
     return n;
 }
 class v extends (r = i.ZP.PersistedStore) {
@@ -128,7 +128,7 @@ o(v, 'displayName', 'ApplicationStore'),
         },
         OVERLAY_INITIALIZE: function (e) {
             let { applications: t } = e;
-            for (let e of t) h(new s.Z(e));
+            for (let e of t) h(new s.ZP(e));
         },
         APPLICATION_FETCH: function (e) {
             let { applicationId: t } = e,
@@ -155,7 +155,7 @@ o(v, 'displayName', 'ApplicationStore'),
         },
         APPLICATIONS_FETCH_SUCCESS: function (e) {
             let { applications: t } = e;
-            for (let e of t) h(s.Z.createFromServer(e));
+            for (let e of t) h(s.ZP.createFromServer(e));
         },
         APPLICATIONS_FETCH_FAIL: function (e) {
             let { applicationIds: t } = e,
@@ -173,17 +173,10 @@ o(v, 'displayName', 'ApplicationStore'),
         APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: E,
         ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: E,
         ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: E,
-        GUILD_SETTINGS_LOADED_INTEGRATIONS: function (e) {
-            let { integrations: t, guildId: n } = e,
-                r = !1,
-                i = [];
-            for (let { application: e } of t) null != e && (h(e), i.push(e.id), (r = !0));
-            return r && (c[n] = i), r;
-        },
         GUILD_APPLICATIONS_FETCH_SUCCESS: function (e) {
             let { guildId: t, applications: n } = e,
                 r = [];
-            for (let e of n) r.push(e.id), h(s.Z.createFromServer(e));
+            for (let e of n) r.push(e.id), h(s.ZP.createFromServer(e));
             c[t] = r;
         },
         BILLING_PAYMENTS_FETCH_SUCCESS: function (e) {
@@ -192,7 +185,7 @@ o(v, 'displayName', 'ApplicationStore'),
             for (let e of t) {
                 var r;
                 let t = null === (r = e.sku) || void 0 === r ? void 0 : r.application;
-                !(null == t || n.has(t.id)) && h(s.Z.createFromServer(t));
+                !(null == t || n.has(t.id)) && h(s.ZP.createFromServer(t));
             }
             return n.size > 0;
         },
@@ -200,27 +193,27 @@ o(v, 'displayName', 'ApplicationStore'),
             var t;
             let { payment: n } = e;
             if ((null === (t = n.sku) || void 0 === t ? void 0 : t.application) == null) return !1;
-            h(s.Z.createFromServer(n.sku.application));
+            h(s.ZP.createFromServer(n.sku.application));
         },
         INVITE_RESOLVE_SUCCESS: function (e) {
             let { invite: t } = e;
             if (null == t.target_application) return !1;
-            h(s.Z.createFromServer(t.target_application));
+            h(s.ZP.createFromServer(t.target_application));
         },
         GIFT_CODE_RESOLVE_SUCCESS: function (e) {
             var t;
             let { giftCode: n } = e;
             if ((null === (t = n.store_listing) || void 0 === t ? void 0 : t.sku.application) == null) return !1;
-            h(s.Z.createFromServer(n.store_listing.sku.application));
+            h(s.ZP.createFromServer(n.store_listing.sku.application));
         },
         LIBRARY_FETCH_SUCCESS: function (e) {
             let { libraryApplications: t } = e;
-            for (let e of t) h(s.Z.createFromServer(e.application));
+            for (let e of t) h(s.ZP.createFromServer(e.application));
         },
         STORE_LISTING_FETCH_SUCCESS: function (e) {
             let { storeListing: t } = e;
             if (null == t.sku.application) return !1;
-            h(s.Z.createFromServer(t.sku.application));
+            h(s.ZP.createFromServer(t.sku.application));
         },
         LOAD_MESSAGES_SUCCESS: function (e) {
             let { messages: t } = e;
@@ -230,7 +223,7 @@ o(v, 'displayName', 'ApplicationStore'),
                     null === (t = e.attachments) ||
                         void 0 === t ||
                         t.forEach((e) => {
-                            null != e.application && h(s.Z.createFromServer(e.application));
+                            null != e.application && h(s.ZP.createFromServer(e.application));
                         });
                 })(e)
             );
@@ -239,7 +232,7 @@ o(v, 'displayName', 'ApplicationStore'),
             let { recommendations: t } = e;
             t.forEach((e) => {
                 e.items.forEach((e) => {
-                    h(s.Z.createFromServer(e.application));
+                    h(s.ZP.createFromServer(e.application));
                 });
             });
         },
@@ -263,7 +256,7 @@ o(v, 'displayName', 'ApplicationStore'),
         },
         USER_AUTHORIZED_APPS_UPDATE: function (e) {
             e.apps.forEach((e) => {
-                h(s.Z.createFromServer(e.application));
+                h(s.ZP.createFromServer(e.application));
                 let t = e.application.bot;
                 null != t &&
                     g({

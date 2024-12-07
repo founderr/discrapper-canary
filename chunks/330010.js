@@ -8,9 +8,9 @@ var r = n(544891),
     a = n(973616),
     s = n(598077),
     o = n(981631);
-function l(e) {
-    return r.tn
-        .get({
+async function l(e) {
+    let t = (
+        await r.tn.get({
             url: o.ANM.GUILD_INTEGRATIONS(e),
             query: {
                 include_applications: !0,
@@ -19,20 +19,17 @@ function l(e) {
             oldFormErrors: !0,
             rejectWithError: !1
         })
-        .then((t) => {
-            let n = t.body.map((e) => ({
-                ...e,
-                application: 'application' in e && null != e.application ? a.Z.createFromServer(e.application) : void 0,
-                user: 'user' in e && null != e.user ? new s.Z(e.user) : void 0
-            }));
-            return (
-                i.Z.dispatch({
-                    type: 'GUILD_SETTINGS_LOADED_INTEGRATIONS',
-                    guildId: e,
-                    integrations: n
-                }),
-                n
-            );
-        })
-        .catch(() => {});
+    ).body.map((e) => ({
+        ...e,
+        application: 'application' in e && null != e.application ? a.ZN.createFromServer(e.application) : void 0,
+        user: 'user' in e && null != e.user ? new s.Z(e.user) : void 0
+    }));
+    return (
+        i.Z.dispatch({
+            type: 'GUILD_SETTINGS_LOADED_INTEGRATIONS',
+            guildId: e,
+            integrations: t
+        }),
+        t
+    );
 }
