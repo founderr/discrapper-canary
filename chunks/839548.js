@@ -142,10 +142,12 @@ class d extends a.Z {
     }
     getLocalWant(e) {
         var t, n;
-        let r = this.remoteVideoSinkWants[null !== (n = null != e ? e : null === (t = this.videoStreamParameters[0]) || void 0 === t ? void 0 : t.ssrc) && void 0 !== n ? n : 0];
-        if (null != r && r > 0) return r;
-        let i = this.remoteVideoSinkWants.any;
-        return null != i && i > 0 ? i : 100;
+        let r = this.videoStreamParameters.some((t) => t.ssrc === e && t.quality === l.y7) || void 0 === e,
+            i = this.context === l.Yn.DEFAULT || r,
+            a = this.remoteVideoSinkWants[null !== (n = null != e ? e : null === (t = this.videoStreamParameters[0]) || void 0 === t ? void 0 : t.ssrc) && void 0 !== n ? n : 0];
+        if (null != a && a > 0) return a;
+        let s = this.remoteVideoSinkWants.any;
+        return null != s && s > 0 && i ? s : i ? 100 : 0;
     }
     getRemoteVideoSinkWants(e) {
         return this.remoteVideoSinkWants[e];
