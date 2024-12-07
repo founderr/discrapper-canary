@@ -1,5 +1,5 @@
-var a,
-    i = n(442837),
+var i,
+    a = n(442837),
     o = n(570140);
 function c(e, t, n) {
     return (
@@ -19,7 +19,7 @@ let s = {
     isFetchingWowMomentMedia: !1,
     wowMomentWumpusMediaUrl: null
 };
-class d extends (a = i.ZP.PersistedStore) {
+class d extends (i = a.ZP.PersistedStore) {
     initialize(e) {
         null != e && (s = e), (s.canPlayWowMoment = !1), (s.isFetchingWowMomentMedia = !1), (s.wowMomentWumpusMediaUrl = null);
     }

@@ -7,22 +7,22 @@ a.r(n),
 var t = a(200651);
 a(192379);
 var o = a(355467),
-    r = a(106976),
-    i = a(703656),
+    i = a(106976),
+    r = a(703656),
     l = a(914010),
     d = a(563132),
     c = a(791785),
     s = a(981631);
 function f(e) {
     let { onClose: n, onComplete: a, forcesTransitionToGuild: f, ...u } = e,
-        { subscriptionMetadataRequest: _ } = (0, d.usePaymentContext)();
+        { subscriptionMetadataRequest: b } = (0, d.usePaymentContext)();
     return (0, t.jsx)(c.PaymentModal, {
         ...u,
         onComplete: a,
         onClose: (e) => {
             n(e);
-            let t = null == _ ? void 0 : _.guild_id;
-            e && null != t && (o.jg(), (0, r.i1)(t), null == a || a(), null != t && (f || l.Z.getGuildId() !== t) && (0, i.uL)(s.Z5c.CHANNEL(t)));
+            let t = null == b ? void 0 : b.guild_id;
+            e && null != t && (o.jg(), (0, i.i1)(t), null == a || a(), null != t && (f || l.Z.getGuildId() !== t) && (0, r.uL)(s.Z5c.CHANNEL(t)));
         },
         forceNewPaymentModal: !0
     });

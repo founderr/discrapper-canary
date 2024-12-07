@@ -142,7 +142,7 @@ let P = O(function (e) {
         let U = (0, l.e7)([g.Z], () => (null != u ? g.Z.getParentSKU(u) : void 0), [u]),
             { openModal: w, subscriptionPurchaseButtonState: F } = (0, h.Z)({
                 skuId: u,
-                subscribeForGuild: k
+                initialSubscribeForGuild: k
             }),
             G = (0, d.h$)({ location: 'AppStorefrontSKUMessageEmbed' });
         if (!B || null == v || null == I) return null;

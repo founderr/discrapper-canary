@@ -19,8 +19,8 @@ var n = t(200651),
     b = t(479446),
     m = t(522489),
     g = t(717401),
-    h = t(286961),
-    x = t(93127),
+    x = t(286961),
+    h = t(93127),
     v = t(814443),
     C = t(590783),
     I = t(699516),
@@ -36,20 +36,20 @@ var n = t(200651),
     w = t(388032),
     A = t(431852);
 function O(e) {
-    let { giftCode: i, application: t, sku: r, subscriptionPlan: s, selectedGiftStyle: l, onClose: u, hasSentMessage: f, giftRecipient: b, giftMessageError: x, isSendingMessage: v } = e,
+    let { giftCode: i, application: t, sku: r, subscriptionPlan: s, selectedGiftStyle: l, onClose: u, hasSentMessage: f, giftRecipient: b, giftMessageError: h, isSendingMessage: v } = e,
         [I, k] = a.useState(d.CopyInput.Modes.DEFAULT),
         O = (0, c.e7)([S.Z], () => S.Z.enabled),
         R = f || (null != l && null != b),
         L = (null == r ? void 0 : r.productLine) === E.POd.COLLECTIBLES,
-        M = (0, h.Z)(),
+        M = (0, x.Z)(),
         { selectedGiftingPromotionReward: D } = (0, P.wD)(),
         G = null == M ? void 0 : M.giftPurchaseConfirmation,
         H = (0, g.tK)(null == D ? void 0 : D.skuId),
         U = (0, g.a5)(s) && null != H && null != G,
-        W = () => (null != s ? s.skuId : null != r ? r.id : null),
-        F = () => {
+        F = () => (null != s ? s.skuId : null != r ? r.id : null),
+        W = () => {
             let e;
-            return null != x
+            return null != h
                 ? w.intl.string(w.t.qB8ayc)
                 : null == s
                   ? null
@@ -122,7 +122,7 @@ function O(e) {
                             game: t,
                             className: A.__invalid_icon,
                             size: _.Z.Sizes.LARGE,
-                            skuId: W()
+                            skuId: F()
                         })
                       : null,
                   (0, n.jsx)(d.Spinner, { type: d.SpinnerTypes.PULSING_ELLIPSIS })
@@ -136,7 +136,7 @@ function O(e) {
                             game: t,
                             className: A.__invalid_icon,
                             size: _.Z.Sizes.LARGE,
-                            skuId: W()
+                            skuId: F()
                         })
                       : null,
                   (0, n.jsx)(d.Heading, {
@@ -145,9 +145,9 @@ function O(e) {
                           [A.header]: null == l && !L,
                           [A.headerCustomGifting]: null != l && !L
                       }),
-                      children: null != b || (f && null == x) ? w.intl.string(w.t.zOmK9P) : null != x ? w.intl.string(w.t.d1lrmZ) : w.intl.string(w.t['/s1xR0'])
+                      children: null != b || (f && null == h) ? w.intl.string(w.t.zOmK9P) : null != h ? w.intl.string(w.t.d1lrmZ) : w.intl.string(w.t['/s1xR0'])
                   }),
-                  (f && null != b && null == x) || R
+                  (f && null != b && null == h) || R
                       ? (0, n.jsxs)(n.Fragment, {
                             children: [
                                 (0, n.jsx)(p.Z, {
@@ -166,7 +166,7 @@ function O(e) {
                                 }),
                                 (0, n.jsx)('div', {
                                     className: A.giftSentMessage,
-                                    children: F()
+                                    children: W()
                                 })
                             ]
                         })
@@ -183,10 +183,10 @@ function O(e) {
                                 children: [
                                     (0, n.jsx)('div', {
                                         className: A.blurb,
-                                        children: F()
+                                        children: W()
                                     }),
                                     !t &&
-                                        null == x &&
+                                        null == h &&
                                         (0, n.jsx)(Z, {
                                             giftCode: i,
                                             onClose: u
@@ -202,16 +202,16 @@ function O(e) {
 let Z = (e) => {
     let { giftCode: i, onClose: t } = e;
     a.useEffect(() => {
-        f.Z.fetchRelationships(), (0, x.W)();
+        f.Z.fetchRelationships(), (0, h.W)();
     }, []);
     let [r, o] = a.useState(),
         [s, _] = a.useState(!1),
         [m, g] = a.useState(!1),
-        { userAffinities: h, isLoading: C } = (0, c.cj)([v.Z], () => ({
+        { userAffinities: x, isLoading: C } = (0, c.cj)([v.Z], () => ({
             userAffinities: v.Z.getUserAffinitiesUserIds(),
             isLoading: v.Z.getFetching()
         })),
-        S = Array.from(h.values()),
+        S = Array.from(x.values()),
         y = (0, c.e7)([I.Z], () => I.Z.getFriendIDs()),
         T = l().difference(y, S),
         B = [...S, ...T],

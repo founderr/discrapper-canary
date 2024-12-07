@@ -182,7 +182,7 @@ function E(e) {
         { openModal: l } = (0, h.Z)({
             analyticsLocation: p.Sbl.APP_SUBSCRIPTIONS_MANAGEMENT,
             skuId: t.skuId,
-            subscribeForGuild: n,
+            initialSubscribeForGuild: n,
             disableGuildSelector: !0,
             onComplete: s
         });

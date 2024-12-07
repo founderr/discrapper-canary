@@ -19,8 +19,8 @@ var i = n(200651),
     L = n(987209),
     S = n(563132),
     p = n(409813),
-    T = n(981631),
-    E = n(474936),
+    E = n(981631),
+    T = n(474936),
     h = n(231338),
     N = n(467474);
 function g(e) {
@@ -28,18 +28,18 @@ function g(e) {
     let { renderHeader: n, referralTrialOfferId: a, handleClose: g } = e,
         { selectedSkuId: A, step: v, selectedPlan: R, purchaseState: x, purchaseType: I, selectedSku: P } = (0, S.usePaymentContext)(),
         { isGift: M, selectedGiftStyle: y, giftRecipient: b } = (0, L.wD)(),
-        O = M && (0, m.pO)(b) && v === p.h8.CONFIRM && null != y && (null == P ? void 0 : P.productLine) !== T.POd.COLLECTIBLES,
+        O = M && (0, m.pO)(b) && v === p.h8.CONFIRM && null != y && (null == P ? void 0 : P.productLine) !== E.POd.COLLECTIBLES,
         Z = null != n && null != v,
         D = [p.h8.SKU_SELECT, p.h8.SELECT_FREE_SKU],
-        k = null != v && !D.includes(v) && null != A,
-        F = (0, d.N)(a),
-        w = !M && null != F && null != A && E.nG[F.trial_id].skus.includes(A),
+        F = null != v && !D.includes(v) && null != A,
+        k = (0, d.N)(a),
+        w = !M && null != k && null != A && T.nG[k.trial_id].skus.includes(A),
         j = (0, c.Ng)(),
-        H = null == j ? void 0 : null === (t = j.discount) || void 0 === t ? void 0 : t.plan_ids.some((e) => E.GP[e].skuId === A),
+        H = null == j ? void 0 : null === (t = j.discount) || void 0 === t ? void 0 : t.plan_ids.some((e) => T.GP[e].skuId === A),
         U = !M && null != j && null != A && H,
         { enabled: B } = u.ZP.useExperiment({ location: 'PaymentModalHeader' }, { autoTrackExposure: !1 }),
-        W = (0, u.rK)(),
-        V = B && W;
+        V = (0, u.rK)(),
+        W = B && V;
     return l.useMemo(() => {
         if (null == v) return;
         let e = null;
@@ -64,19 +64,19 @@ function g(e) {
                 step: v,
                 onClose: g
             });
-        else if (k)
-            r()(A in E.y7, 'invalid sku id: '.concat(A)),
+        else if (F)
+            r()(A in T.y7, 'invalid sku id: '.concat(A)),
                 (e = (0, i.jsx)(C.Z, {
                     currentStep: null != v ? v : void 0,
                     purchaseState: x,
-                    premiumType: E.y7[A],
+                    premiumType: T.y7[A],
                     onClose: g,
                     showTrialBadge: w,
                     showDiscountBadge: U,
                     isGift: M,
                     giftRecipient: b,
-                    useWinterTheme: V
+                    useWinterTheme: W
                 }));
         return e;
-    }, [y, g, x, n, R, A, v, w, U, O, k, Z, I, M, b, V]);
+    }, [y, g, x, n, R, A, v, w, U, O, F, Z, I, M, b, W]);
 }

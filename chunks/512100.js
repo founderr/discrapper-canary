@@ -5,8 +5,8 @@ t.d(n, {
 });
 var o = t(200651);
 t(192379);
-var l = t(409794),
-    i = t(777207),
+var i = t(409794),
+    l = t(777207),
     r = t(541822),
     s = t(330711),
     a = t(189090);
@@ -51,14 +51,14 @@ function c(e) {
                                 className: a.details,
                                 children: [
                                     null != u && (0, o.jsx)('div', { children: u }),
-                                    (0, o.jsx)(l.X, {
+                                    (0, o.jsx)(i.X, {
                                         color: 'header-primary',
                                         variant: 'heading-xl/semibold',
                                         children: d
                                     }),
                                     null != t &&
                                         '' !== t &&
-                                        (0, o.jsx)(i.x, {
+                                        (0, o.jsx)(l.x, {
                                             color: 'text-normal',
                                             variant: 'text-md/normal',
                                             className: a.description,
@@ -70,7 +70,7 @@ function c(e) {
                                 (0, o.jsxs)('div', {
                                     className: a.benefits,
                                     children: [
-                                        (0, o.jsx)(i.x, {
+                                        (0, o.jsx)(l.x, {
                                             color: 'header-secondary',
                                             variant: 'eyebrow',
                                             children: s.Z.Messages.STOREFRONT_BENEFITS_TITLE

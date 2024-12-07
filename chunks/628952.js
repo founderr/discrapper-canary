@@ -16,7 +16,7 @@ var a = t(120356),
     m = t(388032),
     g = t(505069);
 i.Z = (e) => {
-    let { skuId: i, isSelected: t, price: a, onSelect: h, shouldDisplayHeader: x = !1, className: v } = e,
+    let { skuId: i, isSelected: t, price: a, onSelect: x, shouldDisplayHeader: h = !1, className: v } = e,
         { product: C } = (0, p.T)(i),
         { giftRecipient: I, giftRecipientError: S } = (0, c.wD)(),
         k = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
@@ -27,7 +27,7 @@ i.Z = (e) => {
     return (0, n.jsxs)('div', {
         className: v,
         children: [
-            x &&
+            h &&
                 (0, n.jsxs)('div', {
                     className: g.previewTitleContainer,
                     children: [
@@ -70,7 +70,7 @@ i.Z = (e) => {
             (0, n.jsxs)(l.Clickable, {
                 tag: 'div',
                 onClick: () => {
-                    null != i && null != h && h(i);
+                    null != i && null != x && x(i);
                 },
                 className: r()(g.previewContainer, {
                     [g.previewContainerSelected]: t && null == S,

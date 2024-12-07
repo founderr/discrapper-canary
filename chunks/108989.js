@@ -64,8 +64,8 @@ function c(e) {
         [_, m] = l.useState(null),
         [L, S] = l.useState(null),
         p = (0, a.uR)(L, _),
-        T = l.useMemo(() => new a.qA({ wind: c }), [c]),
-        E = l.useCallback(() => {
+        E = l.useMemo(() => new a.qA({ wind: c }), [c]),
+        T = l.useCallback(() => {
             let e = null == L ? void 0 : L.getCanvas();
             if (null == e) return;
             let t = e.getBoundingClientRect();
@@ -87,15 +87,15 @@ function c(e) {
         }, [p, L, C]);
     return (
         l.useEffect(() => {
-            let e = n ? setInterval(E, s) : null;
+            let e = n ? setInterval(T, s) : null;
             return () => clearInterval(e);
-        }, [n, E]),
+        }, [n, T]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(a.O_, {
                     ref: S,
                     className: t,
-                    environment: T
+                    environment: E
                 }),
                 (0, i.jsx)(a.Ji, {
                     ref: m,

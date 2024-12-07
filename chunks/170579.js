@@ -15,16 +15,16 @@ var l = n(120356),
     L = n(104494),
     S = n(639119),
     p = n(108989),
-    T = n(474936),
-    E = n(388032),
+    E = n(474936),
+    T = n(388032),
     h = n(779655);
 let N = (e) => {
     let { isTier0: t, discountAmount: n } = e,
         l = (0, S.N)(),
-        r = null != l && l.trial_id === T.a7,
-        s = E.intl.string(E.t.IBYG5e);
+        r = null != l && l.trial_id === E.a7,
+        s = T.intl.string(T.t.IBYG5e);
     return (
-        void 0 !== n ? (s = E.intl.formatToPlainString(E.t.iiLbvr, { percent: n })) : r && (s = E.intl.string(E.t.gtNqJS)),
+        void 0 !== n ? (s = T.intl.formatToPlainString(T.t.iiLbvr, { percent: n })) : r && (s = T.intl.string(T.t.gtNqJS)),
         (0, i.jsx)('div', {
             className: h.trialBadgeContainer,
             children: (0, i.jsx)(o.Text, {
@@ -38,23 +38,23 @@ let N = (e) => {
 t.Z = function (e) {
     var t;
     let n;
-    let { hideCloseButton: l = !1, hideCloseOnFullScreen: S, shouldShowPrice: g, plan: A, renderAnimation: v, onClose: R, isGift: x, upgradeToPremiumType: I, headerTheme: P = T.nL.DEFAULT, className: M, showTrialBadge: y = !1, showDiscountBadge: b = !1 } = e,
-        O = I === T.p9.TIER_2;
-    n = I === T.p9.TIER_0 ? d.Z : I === T.p9.TIER_1 ? f.Z : c.Z;
+    let { hideCloseButton: l = !1, hideCloseOnFullScreen: S, shouldShowPrice: g, plan: A, renderAnimation: v, onClose: R, isGift: x, upgradeToPremiumType: I, headerTheme: P = E.nL.DEFAULT, className: M, showTrialBadge: y = !1, showDiscountBadge: b = !1 } = e,
+        O = I === E.p9.TIER_2;
+    n = I === E.p9.TIER_0 ? d.Z : I === E.p9.TIER_1 ? f.Z : c.Z;
     let Z = (0, r.e7)([s.Z], () => s.Z.useReducedMotion),
         D = (0, L.Ng)(),
-        k = null == D ? void 0 : null === (t = D.discount) || void 0 === t ? void 0 : t.amount;
+        F = null == D ? void 0 : null === (t = D.discount) || void 0 === t ? void 0 : t.amount;
     return (0, i.jsxs)('div', {
         'aria-hidden': !0,
         className: a()(
             {
                 [h.headerBackground]: !O,
-                [P === T.nL.WINTER ? h.tier2HeaderBackgroundWinterTheme : h.tier2HeaderBackground]: O
+                [h.tier2HeaderBackground]: O
             },
             M
         ),
         children: [
-            Z || P !== T.nL.WINTER
+            Z || P !== E.nL.WINTER
                 ? null
                 : (0, i.jsx)(p.Z, {
                       className: h.snow,
@@ -72,8 +72,8 @@ t.Z = function (e) {
                             (0, i.jsx)(n, { className: a()(h.headerIcon, { [h.nonTier2]: !O }) }),
                             (y || b) &&
                                 (0, i.jsx)(N, {
-                                    isTier0: I === T.p9.TIER_0,
-                                    discountAmount: b ? k : void 0
+                                    isTier0: I === E.p9.TIER_0,
+                                    discountAmount: b ? F : void 0
                                 })
                         ]
                     }),
@@ -94,10 +94,10 @@ t.Z = function (e) {
                               l = (0, m.T4)(n.amount, n.currency);
                           if (t) return l;
                           switch (i) {
-                              case T.rV.MONTH:
-                                  return E.intl.formatToPlainString(E.t.AbOLNj, { price: l });
-                              case T.rV.YEAR:
-                                  return E.intl.formatToPlainString(E.t.rS8FAw, { price: l });
+                              case E.rV.MONTH:
+                                  return T.intl.formatToPlainString(T.t.AbOLNj, { price: l });
+                              case E.rV.YEAR:
+                                  return T.intl.formatToPlainString(T.t.rS8FAw, { price: l });
                           }
                       })(A, x)
                   })

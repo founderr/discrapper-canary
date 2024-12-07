@@ -1,4 +1,4 @@
-let a = (0, n(818083).B)({
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-12_premium_wow_moment',
     label: 'Premium Wow Moment',
@@ -11,4 +11,4 @@ let a = (0, n(818083).B)({
         }
     ]
 });
-t.Z = a;
+t.Z = i;

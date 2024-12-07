@@ -18,7 +18,7 @@ var l = n(120356),
     _ = n(388032),
     m = n(622694);
 function L(e) {
-    let { currentStep: t, className: n, purchaseState: l, premiumType: L, useWinterTheme: S = !1, onClose: p, hideCloseButton: T, showTrialBadge: E, showDiscountBadge: h, isGift: N, giftRecipient: g } = e,
+    let { currentStep: t, className: n, purchaseState: l, premiumType: L, useWinterTheme: S = !1, onClose: p, hideCloseButton: E, showTrialBadge: T, showDiscountBadge: h, isGift: N, giftRecipient: g } = e,
         A = (0, r.e7)([s.Z], () => s.Z.useReducedMotion),
         v = S ? C.nL.WINTER : C.nL.DEFAULT;
     return N && (0, c.pO)(g) && t !== u.h8.CONFIRM
@@ -55,7 +55,7 @@ function L(e) {
               separator: !1,
               children: (0, i.jsx)(d.Z, {
                   hideCloseOnFullScreen: !0,
-                  hideCloseButton: T,
+                  hideCloseButton: E,
                   shouldShowPrice: !0,
                   upgradeToPremiumType: L,
                   renderAnimation: () =>
@@ -84,7 +84,7 @@ function L(e) {
                   className: m.header,
                   onClose: p,
                   headerTheme: v,
-                  showTrialBadge: E,
+                  showTrialBadge: T,
                   showDiscountBadge: h
               })
           });

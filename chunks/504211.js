@@ -1,13 +1,13 @@
 e.d(t, {
     B: function () {
-        return i;
+        return l;
     },
     X: function () {
         return a;
     }
 });
-var l,
-    i,
+var i,
+    l,
     r = e(626135),
     u = e(981631);
 function a(n, t, e) {
@@ -17,4 +17,4 @@ function a(n, t, e) {
         sku_id: e
     });
 }
-((l = i || (i = {})).STORE_MODAL = 'store_modal'), (l.DETAILS_MODAL = 'details_modal'), (l.STORE_EMBED = 'store_embed'), (l.SKU_EMBED = 'sku_embed');
+((i = l || (l = {})).STORE_MODAL = 'store_modal'), (i.DETAILS_MODAL = 'details_modal'), (i.STORE_EMBED = 'store_embed'), (i.SKU_EMBED = 'sku_embed');

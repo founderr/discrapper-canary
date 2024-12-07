@@ -8,8 +8,8 @@ t.d(n, {
 });
 var o = t(200651);
 t(192379);
-var l = t(628028),
-    i = t(220427),
+var i = t(628028),
+    l = t(220427),
     r = t(777207),
     s = t(692547),
     a = t(330711),
@@ -19,11 +19,11 @@ function d(e) {
     return (0, o.jsx)(u, {
         icon:
             'user' === n
-                ? (0, o.jsx)(i.t, {
+                ? (0, o.jsx)(l.t, {
                       size: 'xxs',
                       color: s.Z.colors.INTERACTIVE_NORMAL
                   })
-                : (0, o.jsx)(l.Q, {
+                : (0, o.jsx)(i.Q, {
                       size: 'xxs',
                       color: s.Z.colors.INTERACTIVE_NORMAL
                   }),

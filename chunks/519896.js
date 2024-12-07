@@ -5,8 +5,8 @@ t.r(n),
         }
     });
 var o = t(200651),
-    l = t(192379),
-    i = t(269210),
+    i = t(192379),
+    l = t(269210),
     r = t(752843),
     s = t(481060),
     a = t(757746),
@@ -24,11 +24,11 @@ function v(e) {
         { data: g } = (0, c.H)(I),
         C = g[0],
         { data: R } = (0, a.Z)(I),
-        T = l.useMemo(() => {
+        T = i.useMemo(() => {
             var e;
             return (null == R ? void 0 : R.thumbnail) != null && null !== (e = x.Z.toURLSafe((0, m._W)(v, R.thumbnail, 256))) && void 0 !== e ? e : void 0;
         }, [v, null == R ? void 0 : R.thumbnail]),
-        E = l.useMemo(() => {
+        E = i.useMemo(() => {
             let e = null == R ? void 0 : R.benefits;
             if (null != e && 0 !== e.length)
                 return e.map((e) => ({
@@ -40,7 +40,7 @@ function v(e) {
         }, [v, null == R ? void 0 : R.benefits]),
         { openModal: Z, subscriptionPurchaseButtonState: b } = (0, u.Z)({
             skuId: I,
-            subscribeForGuild: null != N ? N : void 0
+            initialSubscribeForGuild: null != N ? N : void 0
         });
     return null == R
         ? null
@@ -65,7 +65,7 @@ function v(e) {
                       null != E
                           ? E.map((e) =>
                                 (0, o.jsx)(
-                                    i.Gm,
+                                    l.Gm,
                                     {
                                         header: e.title,
                                         icon: e.icon,

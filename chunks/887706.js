@@ -3,8 +3,8 @@ e.d(t, {
         return r;
     }
 });
-var l = e(399606),
-    i = e(314897);
+var i = e(399606),
+    l = e(314897);
 function r() {
-    return (0, l.e7)([i.default], () => i.default.isAuthenticated());
+    return (0, i.e7)([l.default], () => l.default.isAuthenticated());
 }

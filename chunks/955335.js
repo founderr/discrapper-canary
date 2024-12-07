@@ -9,8 +9,8 @@ var t = e(481060),
     r = e(630388),
     s = e(981631),
     d = e(388032),
-    u = e(755522);
-let a = {
+    a = e(755522);
+let u = {
     size: 'md',
     color: t.tokens.colors.INTERACTIVE_NORMAL
 };
@@ -20,12 +20,12 @@ function o(n) {
     return (0, l.jsx)(t.Heading, {
         variant: 'heading-lg/semibold',
         color: e,
-        className: u.heading,
+        className: a.heading,
         children: o
             ? (0, l.jsxs)(l.Fragment, {
                   children: [
                       (0, l.jsx)(t.ServerIcon, {
-                          ...a,
+                          ...u,
                           color: 'currentColor'
                       }),
                       d.intl.string(d.t.XIhSoq)
@@ -34,7 +34,7 @@ function o(n) {
             : (0, l.jsxs)(l.Fragment, {
                   children: [
                       (0, l.jsx)(t.UserIcon, {
-                          ...a,
+                          ...u,
                           color: 'currentColor'
                       }),
                       d.intl.string(d.t.dxfZpq)

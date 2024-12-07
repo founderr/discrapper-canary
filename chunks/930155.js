@@ -5,16 +5,16 @@ e.d(t, {
 }),
     e(47120),
     e(411104);
-var l = e(192379),
-    i = e(442837),
+var i = e(192379),
+    l = e(442837),
     r = e(821849),
     u = e(509545);
 function a(n) {
-    let [t, e] = l.useState(!1),
-        a = (0, i.Wu)([u.Z], () => u.Z.getForSKU(n), [n]),
-        o = (0, i.e7)([u.Z], () => u.Z.isFetchingForSKU(n), [n]);
+    let [t, e] = i.useState(!1),
+        a = (0, l.Wu)([u.Z], () => u.Z.getForSKU(n), [n]),
+        o = (0, l.e7)([u.Z], () => u.Z.isFetchingForSKU(n), [n]);
     return (
-        l.useEffect(() => {
+        i.useEffect(() => {
             !o &&
                 (e(!1),
                 (0, r.GZ)(n)
