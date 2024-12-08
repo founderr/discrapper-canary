@@ -456,7 +456,7 @@ class e3 extends (i = l.Component) {
         let { renderEmbeds: t } = this.props;
         return 0 !== e.embeds.length && t
             ? e.embeds.map((t, n) => {
-                  if (eV.b.has(t.type) || (0, eE.l3)(t) || ((0, F.b)(t) && !(0, G.M)(e))) return null;
+                  if (eV.b.has(t.type) || (0, eE.l3)(t) || ((0, F.b)(t) && !(0, G.M)(e)) || (0, eE.jz)(t)) return null;
                   let i = {
                       renderImageComponent: eB.Yi,
                       renderVideoComponent: eB.lV,
