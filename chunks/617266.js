@@ -8,8 +8,8 @@ var l = n(200651),
     i = n(120356),
     s = n.n(i),
     a = n(913527),
-    u = n.n(a),
-    o = n(91192),
+    o = n.n(a),
+    u = n(91192),
     c = n(442837),
     d = n(481060),
     h = n(700582),
@@ -17,8 +17,8 @@ var l = n(200651),
     m = n(724757),
     g = n(212819),
     p = n(933557),
-    x = n(266076),
-    b = n(810123),
+    b = n(266076),
+    x = n(810123),
     v = n(448486),
     C = n(987509),
     S = n(131704),
@@ -36,17 +36,17 @@ var l = n(200651),
     A = n(490897),
     R = n(388032),
     k = n(5859);
-function I(e) {
-    let { destination: t, icon: n, label: i, subLabel: a, selected: u, disabled: c, onPressDestination: h, 'aria-setsize': m, 'aria-posinset': g } = e,
-        p = (0, o.JA)(t.id),
-        x = r.useRef(!1),
-        b = r.useCallback(() => {
-            null == h || h(t);
-        }, [h, t]);
+function D(e) {
+    let { destination: t, icon: n, label: i, subLabel: a, selected: o, disabled: c, onPressDestination: h, 'aria-setsize': m, 'aria-posinset': g } = e,
+        p = (0, u.JA)(t.id),
+        b = r.useRef(!1),
+        x = r.useCallback(() => {
+            !c && (null == h || h(t));
+        }, [h, c, t]);
     return (
         (0, f.Z)(() => {
-            x.current &&
-                ((x.current = !1),
+            b.current &&
+                ((b.current = !1),
                 null == h ||
                     h(t, {
                         transitionToDestination: !1,
@@ -55,8 +55,8 @@ function I(e) {
         }),
         (0, l.jsxs)(d.Clickable, {
             className: s()(k.destinationRow, { [k.disabled]: c }),
-            onClick: b,
-            'aria-selected': u,
+            onClick: x,
+            'aria-selected': o,
             'aria-setsize': m,
             'aria-posinset': g,
             ...p,
@@ -92,26 +92,26 @@ function I(e) {
                     type: d.Checkbox.Types.INVERTED,
                     displayOnly: !0,
                     size: 24,
-                    value: u,
+                    value: o,
                     className: k.checkbox
                 })
             ]
         })
     );
 }
-function D(e) {
+function I(e) {
     let { user: t, subLabel: n, ...r } = e,
         i = P.ZP.useName(t),
         s = P.ZP.useUserTag(t, { decoration: 'never' }),
         a = (0, c.e7)([E.Z], () => E.Z.getNickname(t.id)),
-        u = (0, c.e7)([_.Z], () => _.Z.getStatus(t.id));
-    return (0, l.jsx)(I, {
+        o = (0, c.e7)([_.Z], () => _.Z.getStatus(t.id));
+    return (0, l.jsx)(D, {
         ...r,
         icon: (0, l.jsx)(h.Z, {
             'aria-hidden': !0,
             size: d.AvatarSizes.SIZE_32,
             user: t,
-            status: u
+            status: o
         }),
         label: null != a ? a : i,
         subLabel: null != n ? n : s
@@ -121,9 +121,9 @@ function F(e) {
     let { channel: t, subLabel: n, ...r } = e,
         i = (0, p.ZP)(t),
         s = (0, v._)(t);
-    return (0, l.jsx)(I, {
+    return (0, l.jsx)(D, {
         ...r,
-        icon: (0, l.jsx)(x.Z, {
+        icon: (0, l.jsx)(b.Z, {
             'aria-hidden': !0,
             size: d.AvatarSizes.SIZE_32,
             channel: t,
@@ -141,7 +141,7 @@ function H(e) {
             let e = Z.Z.getChannel(t.parent_id);
             return null == e ? null : (0, p.F6)(e, M.default, E.Z, !1);
         }),
-        o = (0, c.e7)([j.ZP], () => j.ZP.lastMessageTimestamp(t.id, A.W.CHANNEL)),
+        u = (0, c.e7)([j.ZP], () => j.ZP.lastMessageTimestamp(t.id, A.W.CHANNEL)),
         h = null == i ? void 0 : i.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? d.ForumIcon : d.TextIcon;
@@ -158,7 +158,7 @@ function H(e) {
                     lineClamp: 1,
                     children: a
                 }),
-                null != o
+                null != u
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
                               (0, l.jsx)(d.Text, {
@@ -170,7 +170,7 @@ function H(e) {
                               (0, l.jsx)(d.Text, {
                                   variant: 'text-xs/medium',
                                   color: 'text-secondary',
-                                  children: (0, L.Xf)(u()(o))
+                                  children: (0, L.Xf)(o()(u))
                               })
                           ]
                       })
@@ -178,10 +178,10 @@ function H(e) {
             ]
         });
     }
-    return (0, l.jsx)(I, {
+    return (0, l.jsx)(D, {
         ...r,
-        icon: (0, l.jsx)(b.Z, {
-            size: b.E.SMALL_32,
+        icon: (0, l.jsx)(x.Z, {
+            size: x.E.SMALL_32,
             guild: i,
             channel: t
         }),
@@ -190,21 +190,21 @@ function H(e) {
     });
 }
 function U(e) {
-    let { rowData: t, selectedDestinations: n, handleToggleDestination: i, disableSelection: s, ...a } = e,
-        u = r.useMemo(() => [t.length], [t.length]),
-        c = r.useCallback(() => 48, []),
-        h = r.useMemo(() => {
+    let { rowData: t, selectedDestinations: n, handleToggleDestination: i, disableSelection: s, originDestination: a, ...o } = e,
+        c = r.useMemo(() => [t.length], [t.length]),
+        h = r.useCallback(() => 48, []),
+        f = r.useMemo(() => {
             var e;
             return null !== (e = null == n ? void 0 : n.map(C.hC)) && void 0 !== e ? e : [];
         }, [n]),
-        f = r.useCallback(
+        p = r.useCallback(
             (e) => {
                 let { section: n, row: r } = e;
                 if (n > 0) return;
-                let { type: a, record: u } = t[r];
-                if (a === g.h8.HEADER) return;
-                let o =
-                        a === g.h8.USER
+                let { type: o, record: u } = t[r];
+                if (o === g.h8.HEADER) return;
+                let c =
+                        o === g.h8.USER
                             ? {
                                   type: 'user',
                                   id: u.id
@@ -213,61 +213,63 @@ function U(e) {
                                   type: 'channel',
                                   id: u.id
                               },
-                    c = (0, C.hC)(o),
-                    d = (function (e) {
-                        if (e instanceof S.Sf && (0, S.Km)(e.type)) {
-                            if (null != e.rateLimitPerUser && e.rateLimitPerUser > 0 && !(y.Z.can(w.Plq.MANAGE_CHANNELS, e) || y.Z.can(w.Plq.MANAGE_MESSAGES, e))) return { label: R.intl.string(R.t.Icu3bW) };
-                            if (e.isThread() || e.isForumPost() || !y.Z.can(w.Plq.USE_APPLICATION_COMMANDS, e)) return { label: R.intl.string(R.t.v8MLq6) };
+                    d = (0, C.hC)(c),
+                    h = (function (e, t) {
+                        if (t instanceof S.Sf && (0, S.Km)(t.type)) {
+                            if (null != t.rateLimitPerUser && t.rateLimitPerUser > 0 && !(y.Z.can(w.Plq.MANAGE_CHANNELS, t) || y.Z.can(w.Plq.MANAGE_MESSAGES, t))) return { label: R.intl.string(R.t.Icu3bW) };
+                            if (t.isThread() || t.isForumPost() || !y.Z.can(w.Plq.USE_APPLICATION_COMMANDS, t)) return { label: R.intl.string(R.t.v8MLq6) };
+                            let n = (0, C.dL)(t.id);
+                            if (e.id === n.id) return { label: R.intl.string(R.t.mD4gqa) };
                         }
-                    })(u),
-                    f = h.includes(c),
-                    m = {
-                        key: c,
-                        destination: o,
-                        subLabel: null != d ? d.label : void 0,
-                        disabled: (s && !f) || null != d,
-                        selected: f,
+                    })(a, u),
+                    m = f.includes(d),
+                    p = {
+                        key: d,
+                        destination: c,
+                        subLabel: null != h ? h.label : void 0,
+                        disabled: (s && !m) || null != h,
+                        selected: m,
                         onPressDestination: i,
                         'aria-posinset': r + 1,
                         'aria-setsize': t.length
                     };
-                if (a === g.h8.USER)
-                    return (0, l.jsx)(D, {
+                if (o === g.h8.USER)
+                    return (0, l.jsx)(I, {
                         user: u,
-                        ...m
+                        ...p
                     });
-                if (a === g.h8.GROUP_DM)
+                if (o === g.h8.GROUP_DM)
                     return (0, l.jsx)(F, {
                         channel: u,
-                        ...m
+                        ...p
                     });
-                if (a === g.h8.TEXT_CHANNEL || a === g.h8.VOICE_CHANNEL)
+                if (o === g.h8.TEXT_CHANNEL || o === g.h8.VOICE_CHANNEL)
                     return (0, l.jsx)(H, {
                         channel: u,
-                        ...m
+                        ...p
                     });
-                else (0, T.vE)(a);
+                else (0, T.vE)(o);
             },
-            [s, i, t, h]
+            [s, i, a, t, f]
         ),
-        p = r.useRef(null),
-        x = (0, m.Z)('share-command-modal', p);
-    return (0, l.jsx)(o.bG, {
+        b = r.useRef(null),
+        x = (0, m.Z)('share-command-modal', b);
+    return (0, l.jsx)(u.bG, {
         navigator: x,
-        children: (0, l.jsx)(o.SJ, {
+        children: (0, l.jsx)(u.SJ, {
             children: (e) => {
                 let { ref: t, ...n } = e;
                 return (0, l.jsx)(d.ModalListContent, {
                     scrollerRef: (e) => {
                         var n;
-                        (p.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
+                        (b.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
                     },
                     ...n,
-                    ...a,
-                    sections: u,
+                    ...o,
+                    sections: c,
                     sectionHeight: 0,
-                    renderRow: f,
-                    rowHeight: c
+                    renderRow: p,
+                    rowHeight: h
                 });
             }
         })
