@@ -3,9 +3,7 @@ e.exports = {
     highlighted: 'highlighted_bdf0de',
     focusRing: 'focusRing_bdf0de',
     scrollableContainer: 'scrollableContainer_bdf0de',
-    sansAttachButton: 'sansAttachButton_bdf0de',
     button: 'button_bdf0de',
-    buttons: 'buttons_bdf0de',
     themedBackground: 'themedBackground_bdf0de',
     indentCharacterCount: 'indentCharacterCount_bdf0de',
     textArea: 'textArea_bdf0de',
@@ -13,6 +11,7 @@ e.exports = {
     hasStackedBar: 'hasStackedBar_bdf0de',
     inner: 'inner_bdf0de',
     innerDisabled: 'innerDisabled_bdf0de inner_bdf0de',
+    sansAttachButton: 'sansAttachButton_bdf0de',
     sansAttachButtonCreateThread: 'sansAttachButtonCreateThread_bdf0de',
     sansAttachButtonCreatePost: 'sansAttachButtonCreatePost_bdf0de',
     sansAttachButtonUserProfileReply: 'sansAttachButtonUserProfileReply_bdf0de',
@@ -27,6 +26,7 @@ e.exports = {
     textAreaForOverlayInlineReply: 'textAreaForOverlayInlineReply_bdf0de',
     textAreaCustomGift: 'textAreaCustomGift_bdf0de',
     textAreaDisabled: 'textAreaDisabled_bdf0de textArea_bdf0de',
+    buttons: 'buttons_bdf0de',
     buttonContainer: 'buttonContainer_bdf0de',
     emojiButton: 'emojiButton_bdf0de button_bdf0de',
     stickerButton: 'stickerButton_bdf0de',
@@ -42,5 +42,9 @@ e.exports = {
     newMemberActionBar: 'newMemberActionBar_bdf0de',
     stackedBars: 'stackedBars_bdf0de',
     expressionPickerPositionLayer: 'expressionPickerPositionLayer_bdf0de',
-    textAreaMobileThemed: 'textAreaMobileThemed_bdf0de'
+    textAreaMobileThemed: 'textAreaMobileThemed_bdf0de',
+    accessoryBar: 'accessoryBar_bdf0de',
+    accessoryBarLeft: 'accessoryBarLeft_bdf0de',
+    accessoryBarRight: 'accessoryBarRight_bdf0de',
+    rightAccessories: 'rightAccessories_bdf0de'
 };

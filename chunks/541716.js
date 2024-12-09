@@ -175,7 +175,8 @@ let o = {
         disableAutoFocus: !0,
         showCharacterCount: !0,
         hideAttachmentArea: !0,
-        upsellLongMessages: { iconOnly: !0 }
+        upsellLongMessages: { iconOnly: !0 },
+        showSlowmodeIndicator: !1
     },
     p = {
         analyticsName: 'create_forum_post',

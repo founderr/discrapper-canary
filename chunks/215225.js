@@ -2,8 +2,6 @@ e.exports = {
     text: 'text_d7ebeb',
     ellipsis: 'ellipsis_d7ebeb',
     typingDots: 'typingDots_d7ebeb',
-    cooldownWrapper: 'cooldownWrapper_d7ebeb',
-    slowModeIcon: 'slowModeIcon_d7ebeb',
     typing: 'typing_d7ebeb base_d7ebeb',
     isComboing: 'isComboing_d7ebeb',
     activityInviteEducation: 'activityInviteEducation_d7ebeb base_d7ebeb',

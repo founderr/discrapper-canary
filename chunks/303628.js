@@ -12,31 +12,32 @@ var r = n(200651),
     _ = n(607070),
     p = n(209613),
     h = n(998698),
-    m = n(661824),
-    g = n(703558),
-    E = n(117530),
-    v = n(459273),
-    I = n(444282),
-    T = n(898463),
-    b = n(981631),
-    S = n(995987),
-    y = n(763971);
-let A = [];
-function N(e) {
+    m = n(540059),
+    g = n(661824),
+    E = n(703558),
+    v = n(117530),
+    I = n(459273),
+    T = n(444282),
+    b = n(898463),
+    S = n(981631),
+    y = n(995987),
+    A = n(763971);
+let N = [];
+function C(e) {
     let { channelId: t, type: n } = e,
         a = (0, u.e7)([_.Z], () => _.Z.keyboardModeEnabled),
-        N = (0, p.Z)('attachments', l.hy.HORIZONTAL),
-        C = (0, u.e7)([E.Z], () => E.Z.getUploads(t, n.drafts.type)),
+        C = (0, p.Z)('attachments', l.hy.HORIZONTAL),
+        R = (0, u.e7)([v.Z], () => v.Z.getUploads(t, n.drafts.type)),
         {
-            isApplicationCommand: R,
-            commandOptions: O,
-            commandOptionStates: D
+            isApplicationCommand: O,
+            commandOptions: D,
+            commandOptionStates: L
         } = (0, u.cj)([h.Z], () => {
             let e = h.Z.getActiveCommand(t);
             if (null == e)
                 return {
                     isApplicationCommand: !1,
-                    commandOptions: A,
+                    commandOptions: N,
                     commandOptionStates: null
                 };
             let n = h.Z.getOptionStates(t);
@@ -46,62 +47,63 @@ function N(e) {
                 commandOptionStates: n
             };
         }),
-        L = i.useMemo(() => {
+        x = i.useMemo(() => {
             var e;
             return null !==
                 (e =
-                    null == O
+                    null == D
                         ? void 0
-                        : O.filter((e) => {
+                        : D.filter((e) => {
                               var t;
-                              return e.type === f.jw.ATTACHMENT && (null == D ? void 0 : null === (t = D[e.name]) || void 0 === t ? void 0 : t.hasValue);
+                              return e.type === f.jw.ATTACHMENT && (null == L ? void 0 : null === (t = L[e.name]) || void 0 === t ? void 0 : t.hasValue);
                           })) && void 0 !== e
                 ? e
                 : [];
-        }, [O, D]),
-        [x, w] = i.useState([]);
+        }, [D, L]),
+        [w, P] = i.useState([]);
     i.useEffect(() => {
         let e = () => {
             d.Z.clearAll(t, n.drafts.type);
         };
         return c.Z.subscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e), () => c.Z.unsubscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e);
     }, [t, n]);
-    let P = i.useCallback(() => {
-        N.focusFirstVisibleItem();
-    }, [N]);
-    return ((0, v.yp)({
-        event: b.CkL.FOCUS_ATTACHMENT_AREA,
-        handler: P
+    let M = i.useCallback(() => {
+        C.focusFirstVisibleItem();
+    }, [C]);
+    (0, I.yp)({
+        event: S.CkL.FOCUS_ATTACHMENT_AREA,
+        handler: M
     }),
-    i.useEffect(() => {
-        if (R) {
-            let e = [];
-            x.forEach((t) => {
-                !L.some((e) => t.name === e.name) && e.push(t);
-            }),
-                e.forEach((e) => {
-                    d.Z.remove(t, e.name, n.drafts.type);
+        i.useEffect(() => {
+            if (O) {
+                let e = [];
+                w.forEach((t) => {
+                    !x.some((e) => t.name === e.name) && e.push(t);
                 }),
-                w(L);
-        }
-    }, [t, L.length, n]),
-    (!R && 0 === C.length) || (R && 0 === L.length))
+                    e.forEach((e) => {
+                        d.Z.remove(t, e.name, n.drafts.type);
+                    }),
+                    P(x);
+            }
+        }, [t, x.length, n]);
+    let k = (0, m.Q3)('ChannelAttachmentArea');
+    return (!O && 0 === R.length) || (O && 0 === x.length)
         ? null
         : (0, r.jsxs)(i.Fragment, {
               children: [
                   (0, r.jsx)(o.bG, {
-                      navigator: N,
+                      navigator: C,
                       children: (0, r.jsx)(o.SJ, {
                           children: (e) => {
                               let { ref: i, ...o } = e;
                               return (0, r.jsx)('ul', {
                                   ref: i,
                                   ...o,
-                                  className: s()(S.channelAttachmentArea, y.scrollbarGhost),
-                                  children: R
-                                      ? L.map((e) =>
+                                  className: s()(y.channelAttachmentArea, A.scrollbarGhost),
+                                  children: O
+                                      ? x.map((e) =>
                                             (0, r.jsx)(
-                                                I.Z,
+                                                T.Z,
                                                 {
                                                     channelId: t,
                                                     keyboardModeEnabled: a,
@@ -110,9 +112,9 @@ function N(e) {
                                                 e.name
                                             )
                                         )
-                                      : C.map((e) =>
+                                      : R.map((e) =>
                                             (0, r.jsx)(
-                                                T.Z,
+                                                b.Z,
                                                 {
                                                     channelId: t,
                                                     draftType: n.drafts.type,
@@ -127,14 +129,14 @@ function N(e) {
                           }
                       })
                   }),
-                  n.drafts.type === g.d.FirstThreadMessage ? null : (0, r.jsx)(m.Z, {})
+                  n.drafts.type === E.d.FirstThreadMessage || k ? null : (0, r.jsx)(g.Z, {})
               ]
           });
 }
 t.Z = i.memo(function (e) {
     let { channelId: t, type: n, canAttachFiles: i } = e;
     return i
-        ? (0, r.jsx)(N, {
+        ? (0, r.jsx)(C, {
               channelId: t,
               type: n
           })
