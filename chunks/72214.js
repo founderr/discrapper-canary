@@ -9,8 +9,8 @@ var l = n(192379),
     i = n(38618),
     s = n(51596),
     a = n(516373),
-    u = n(314897),
-    o = n(580005),
+    o = n(314897),
+    u = n(580005),
     c = n(987509),
     d = n(601565),
     h = n(41837);
@@ -29,7 +29,7 @@ function f(e) {
 }
 function m(e) {
     let { targetDestination: t, selectedDestinations: n, originDestination: s, includeMissingDMs: h = !1 } = e,
-        m = (0, r.e7)([u.default], () => u.default.getId()),
+        m = (0, r.e7)([o.default], () => o.default.getId()),
         g = l.useMemo(
             () => ({
                 searchOptions: {
@@ -40,7 +40,7 @@ function m(e) {
             }),
             [m]
         ),
-        { search: p, query: x, results: b } = (0, d.Z)(g),
+        { search: p, query: b, results: x } = (0, d.Z)(g),
         [v, C] = l.useState(f('')),
         S = l.useCallback((e) => C(f(e)), [C]),
         { queryMode: Z } = v,
@@ -54,14 +54,14 @@ function m(e) {
             y(null != n ? n : []);
     }, [p, v]),
         (0, a.D)();
-    let _ = (0, r.e7)([o.Z], () => o.Z.getFrequentlyWithoutFetchingLatest()),
+    let _ = (0, r.e7)([u.Z], () => u.Z.getFrequentlyWithoutFetchingLatest()),
         j = (0, r.e7)([i.Z], () => i.Z.isConnected()),
-        E = '' !== x;
+        E = '' !== b;
     return {
         results: l.useMemo(
             () =>
                 (0, c.ZP)({
-                    results: b,
+                    results: x,
                     hasQuery: E,
                     queryMode: Z,
                     targetDestination: t,
@@ -72,7 +72,7 @@ function m(e) {
                     includeMissingDMs: h,
                     isConnected: j
                 }),
-            [b, E, Z, t, _, n, N, s, h, j]
+            [x, E, Z, t, _, n, N, s, h, j]
         ),
         updateSearchText: S
     };
