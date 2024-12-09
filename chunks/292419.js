@@ -58,6 +58,7 @@ let d = (e, t) => ({
             case r.re.CHANNEL_SELECT:
             case r.re.TEXT_DISPLAY:
             case r.re.MEDIA_GALLERY:
+            case r.re.FILE:
             case r.re.SEPARATOR:
                 return !0;
             case r.re.CONTENT_INVENTORY_ENTRY:
@@ -194,6 +195,15 @@ function h(e) {
                                 description: e.description,
                                 spoiler: e.spoiler
                             }))
+                        };
+                    case r.re.FILE:
+                        return {
+                            type: r.re.FILE,
+                            id: m(i),
+                            file: (0, a.ym)(t.file),
+                            name: t.name,
+                            size: t.size,
+                            spoiler: t.spoiler
                         };
                     case r.re.SEPARATOR:
                         return {

@@ -100,6 +100,7 @@ n.d(t, {
     (D[(D.CHANNEL_SELECT = 8)] = 'CHANNEL_SELECT'),
     (D[(D.TEXT_DISPLAY = 10)] = 'TEXT_DISPLAY'),
     (D[(D.MEDIA_GALLERY = 12)] = 'MEDIA_GALLERY'),
+    (D[(D.FILE = 13)] = 'FILE'),
     (D[(D.SEPARATOR = 14)] = 'SEPARATOR'),
     (D[(D.CONTENT_INVENTORY_ENTRY = 16)] = 'CONTENT_INVENTORY_ENTRY'),
     ((L = p || (p = {}))[(L.PRIMARY = 1)] = 'PRIMARY'),

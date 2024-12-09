@@ -16,7 +16,7 @@ var i = n(200651),
     d = n(367907),
     u = n(605984),
     h = n(453470),
-    p = n(858644),
+    p = n(40330),
     m = n(600084),
     f = n(62764),
     g = n(79712),
@@ -62,8 +62,9 @@ function et(e) {
     return null != e && e.type === Q.ys_.MESSAGE && e.content.id === e.groupId;
 }
 let en = l.memo(function (e) {
-    let { file: t, channel: n, user: l, isGroupStart: r } = e;
+    let { file: t, channel: n, user: l, isGroupStart: r, compact: a } = e;
     return (0, i.jsx)(G.Z, {
+        compact: a,
         isGroupStart: r,
         channel: n,
         message: new A.ZP({
@@ -74,7 +75,7 @@ let en = l.memo(function (e) {
             channel_id: n.id,
             customRenderedContent: {
                 hasSpoilerEmbeds: !1,
-                content: (0, i.jsx)(p.g, {
+                content: (0, i.jsx)(p.p, {
                     filename: t.name,
                     progress: null != t.progress ? t.progress : 0,
                     size: t.currentSize,
@@ -222,7 +223,8 @@ function ei(e) {
                             file: e,
                             channel: p,
                             user: em,
-                            isGroupStart: n
+                            isGroupStart: n,
+                            compact: er
                         },
                         'upload-'.concat(e.id)
                     )
