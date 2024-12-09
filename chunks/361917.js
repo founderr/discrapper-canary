@@ -28,10 +28,10 @@ var i = t(200651),
     b = t(541099),
     E = t(827498),
     I = t(87005),
-    j = t(219066),
-    P = t(106066),
-    S = t(783097),
-    y = t(695676),
+    P = t(219066),
+    j = t(106066),
+    y = t(783097),
+    S = t(695676),
     T = t(98880),
     L = t(804307),
     R = t(888617),
@@ -63,15 +63,15 @@ function F(e) {
     let { channel: n, entrypoint: t, searchQuery: a, setSearchQuery: o, setScroller: r, isScrollCloseToBottom: s } = e,
         u = (0, c.e7)([m.Z], () => m.Z.getIsEnabled(), []),
         h = t === E._b.TEXT && !n.isPrivate(),
-        f = (0, S.Yn)(t),
-        C = !(0, S.Yn)(t),
+        f = (0, y.Yn)(t),
+        C = !(0, y.Yn)(t),
         v = t === E._b.TEXT,
         [x, _] = K(!0),
         [N, g] = K(h),
         [A, b] = K(f),
-        [I, j] = K(C),
-        P = x && N && A && I,
-        y = (f || h) && !P,
+        [I, P] = K(C),
+        j = x && N && A && I,
+        S = (f || h) && !j,
         T = C && u;
     l.useEffect(() => {
         (0, p.w1)({
@@ -124,14 +124,14 @@ function F(e) {
                               C &&
                                   (0, i.jsx)(X, {
                                       channel: n,
-                                      onEmptyState: j
+                                      onEmptyState: P
                                   }),
-                              P &&
+                              j &&
                                   (0, i.jsx)(M.A, {
                                       type: E.LG.HOME_EMPTY,
                                       textContent: t === E._b.TEXT ? w.intl.string(w.t.iKZctb) : w.intl.string(w.t.RL7Ncn)
                                   }),
-                              y && (0, i.jsx)(k.Z, {})
+                              S && (0, i.jsx)(k.Z, {})
                           ]
                       })
             })
@@ -335,7 +335,7 @@ function X(e) {
             numItems: a.length,
             numVisibleItems: a.length
         }),
-        s = (0, P.s)('ActivitiesShelfSection'),
+        s = (0, j.s)('ActivitiesShelfSection'),
         c = 0 === a.length;
     return (l.useEffect(() => {
         t(c);
@@ -375,7 +375,7 @@ function X(e) {
 function q(e) {
     let { channel: n, onEmptyState: t } = e,
         a = E.L3.APPS_IN_THIS_SERVER,
-        { appsInThisServer: o, isLoading: r } = (0, j.Z)({ channel: n }),
+        { appsInThisServer: o, isLoading: r } = (0, P.Z)({ channel: n }),
         { items: s, handleViewMore: c } = $({
             title: w.intl.string(w.t.KfkuGR),
             look: T.U4.ROW,
@@ -470,7 +470,7 @@ function J(e) {
                 m = t === r.I.APP_LAUNCHER_VOICE;
             return {
                 fetchState: s,
-                recommendationsSections: l.useMemo(() => (m ? (0, S.pF)(d) : d), [d, m]),
+                recommendationsSections: l.useMemo(() => (m ? (0, y.pF)(d) : d), [d, m]),
                 isInstallOnDemand: o
             };
         })({
@@ -642,7 +642,7 @@ function K(e) {
 }
 function $(e) {
     let { title: n, look: t, items: i, limit: a, sectionName: o, sectionOverallPosition: r } = e,
-        { pushHistory: s } = (0, y.hH)();
+        { pushHistory: s } = (0, S.hH)();
     return l.useMemo(
         () =>
             i.length <= a
@@ -659,7 +659,7 @@ function $(e) {
                               num: i.length
                           }),
                               s({
-                                  type: y.gc.LIST,
+                                  type: S.gc.LIST,
                                   title: n,
                                   look: t,
                                   items: i,

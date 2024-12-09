@@ -29,9 +29,9 @@ function b(e) {
     let { channel: t, application: s, sectionName: c } = e,
         b = (0, a.e7)([m.Z], () => m.Z.entrypoint()),
         I = null !== (n = (0, u.q)(s.id === _.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
-        j = (0, h.ye)(I) ? E : x.Z,
-        P = l.useRef(null),
-        [S, y] = l.useState(!1),
+        P = (0, h.ye)(I) ? E : x.Z,
+        j = l.useRef(null),
+        [y, S] = l.useState(!1),
         { iconURL: T, name: L } = l.useMemo(
             () =>
                 (0, h.sl)(I, {
@@ -51,7 +51,7 @@ function b(e) {
         (0, i.jsxs)(r.ScrollerNone, {
             className: g.container,
             fade: !0,
-            ref: P,
+            ref: j,
             role: 'region',
             'aria-label': N.intl.formatToPlainString(N.t['4OP4Ul'], { applicationName: L }),
             children: [
@@ -60,7 +60,7 @@ function b(e) {
                     channel: t,
                     name: L,
                     iconURL: T,
-                    scrollerRef: P,
+                    scrollerRef: j,
                     sectionName: c
                 }),
                 null != T &&
@@ -69,11 +69,11 @@ function b(e) {
                         className: g.appIcon
                     }),
                 (0, i.jsx)(o.Z, { size: 54 }),
-                (0, i.jsx)(j, {
+                (0, i.jsx)(P, {
                     channel: t,
                     application: I,
                     sectionName: c,
-                    hasCommands: S
+                    hasCommands: y
                 }),
                 b === p._b.TEXT
                     ? (0, i.jsx)(C.Z, {
@@ -81,7 +81,7 @@ function b(e) {
                           application: I,
                           sectionName: c,
                           installOnDemand: k,
-                          setHasCommands: y
+                          setHasCommands: S
                       })
                     : null
             ]

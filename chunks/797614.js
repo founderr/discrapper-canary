@@ -70,8 +70,8 @@ t.Z = new (class e {
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: '1733762387458',
-                            build_number: '351642'
+                            built_at: '1733772140195',
+                            build_number: '351696'
                         }
                     },
                     retries: 1,

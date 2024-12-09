@@ -40,7 +40,7 @@ function N(e) {
             switch (t) {
                 case E.GlobalDiscoveryTab.QUESTS:
                     return (
-                        C && (0, p.B)(),
+                        C && p.Z.resetState(),
                         (0, _.transitionToGlobalDiscovery)({
                             tab: E.GlobalDiscoveryTab.QUESTS,
                             location: I.dr.DISCOVERY_SIDEBAR,
@@ -49,11 +49,11 @@ function N(e) {
                     );
                 case E.GlobalDiscoveryTab.APPS:
                     if (!C) return (0, u.XL)();
-                    (0, d.x)(), (0, _.transitionToGlobalDiscovery)({ tab: t });
+                    d.Z.resetState(), (0, _.transitionToGlobalDiscovery)({ tab: t });
                     return;
                 case E.GlobalDiscoveryTab.SERVERS:
                     if (!C) return (0, _.transitionToGlobalDiscovery)({ tab: t });
-                    (0, h.V)(), (0, m.O)();
+                    h.Z.resetState(), m.Z.resetState();
                     return;
                 default:
                     return (0, _.transitionToGlobalDiscovery)({ tab: t });

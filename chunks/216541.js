@@ -14,8 +14,8 @@ var a = n(120356),
     d = n(328456),
     u = n(616066),
     f = n(379252),
-    g = n(63243),
-    p = n(244488);
+    p = n(63243),
+    g = n(244488);
 let v = (t) => {
     let { product: e, isPurchased: n, isHighlighted: a, user: v, forCollectedModal: h, profileEffectClassName: b } = t,
         { firstProfileEffect: m, firstAvatarDecoration: x } = (0, d.R)(e),
@@ -45,7 +45,7 @@ let v = (t) => {
                           avatarSize: s.AvatarSizes.SIZE_120,
                           isPurchased: n,
                           isHighlighted: a,
-                          avatarPlaceholderSrc: S ? p : g
+                          avatarPlaceholderSrc: S ? g : p
                       })
                   })
                 : null

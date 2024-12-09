@@ -25,7 +25,7 @@ function C(e) {
         b = (0, a.e7)([p.Z], () => (null != A ? p.Z.can(h.Plq.MANAGE_GUILD, A) : null)),
         E = (0, c.LD)(x, !0),
         I = (0, c.PL)(!0, !0),
-        { isUserApp: j, isGuildApp: P } = l.useMemo(() => {
+        { isUserApp: P, isGuildApp: j } = l.useMemo(() => {
             var e, n, t, i;
             if (null == g)
                 return {
@@ -48,10 +48,10 @@ function C(e) {
     l.useEffect(() => {
         t(360606);
     }, []);
-    let S = l.useCallback(() => {
+    let y = l.useCallback(() => {
             if ((null == A ? void 0 : A.id) != null) d.Z.open(A.id, h.pNK.INTEGRATIONS), r.Z.setSection(h.b4C.APPLICATION, g), null == N || N();
         }, [g, null == A ? void 0 : A.id, N]),
-        y = l.useCallback(() => {
+        S = l.useCallback(() => {
             s.Z.open(h.oAB.AUTHORIZED_APPS);
             let e = '';
             null != v ? (e = v.name) : null != C && (e = C.username), '' !== e && u.J.setState({ searchQuery: e }), null == N || N();
@@ -59,7 +59,7 @@ function C(e) {
     if (_ === h.IlC.POPOUT) return null;
     let T = [];
     return (
-        P &&
+        j &&
             b &&
             T.push(
                 (0, i.jsx)(
@@ -67,19 +67,19 @@ function C(e) {
                     {
                         id: 'manage-server-integration',
                         label: f.intl.string(f.t.IuSJT0),
-                        action: S
+                        action: y
                     },
                     'manage-server-integration'
                 )
             ),
-        j &&
+        P &&
             T.push(
                 (0, i.jsx)(
                     o.MenuItem,
                     {
                         id: 'manage-authorized-app',
                         label: f.intl.string(f.t.V8ruv7),
-                        action: y
+                        action: S
                     },
                     'manage-authorized-app'
                 )

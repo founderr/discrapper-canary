@@ -13,14 +13,14 @@ var r = n(192379),
     c = n(388032);
 let d = (t) => {
     let { product: e, onSuccess: d, onError: u } = t,
-        [f, g] = r.useState(!1),
-        { firstAvatarDecoration: p, firstProfileEffect: v } = (0, l.R)(e),
+        [f, p] = r.useState(!1),
+        { firstAvatarDecoration: g, firstProfileEffect: v } = (0, l.R)(e),
         h = (0, s.x6)(e) ? c.intl.string(c.t.tf1ZZ2) : e.type === a.Z.AVATAR_DECORATION ? c.intl.string(c.t.zOA4a2) : c.intl.string(c.t.SWm2am);
     return {
         handleUseNow: r.useCallback(async () => {
-            g(!0);
+            p(!0);
             try {
-                if ((null != p && (await (0, i.Mn)({ avatarDecoration: p })), null != v)) {
+                if ((null != g && (await (0, i.Mn)({ avatarDecoration: g })), null != v)) {
                     let t = { profile_effect_id: v.id };
                     await (0, o.Z)(t);
                 }
@@ -38,9 +38,9 @@ let d = (t) => {
             } catch (t) {
                 null == u || u(t);
             } finally {
-                g(!1);
+                p(!1);
             }
-        }, [p, v, d, h, u]),
+        }, [g, v, d, h, u]),
         isApplying: f
     };
 };

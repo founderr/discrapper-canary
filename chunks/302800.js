@@ -27,8 +27,8 @@ var r,
     d = n(388032),
     u = n(452823),
     f = n(744709),
-    g = n(39934),
-    p = n(681532),
+    p = n(39934),
+    g = n(681532),
     v = n(12981);
 ((a = r || (r = {}))[(a.NONE = 0)] = 'NONE'), (a[(a.TOOLTIP = 1)] = 'TOOLTIP'), (a[(a.COACHTIP = 2)] = 'COACHTIP'), (a[(a.COACHTIP_HEADLINE_ONLY = 3)] = 'COACHTIP_HEADLINE_ONLY'), (a[(a.BADGE = 4)] = 'BADGE');
 let h = (t) =>
@@ -45,7 +45,7 @@ let h = (t) =>
             .otherwise(() => null),
     b = {
         TIDE: {
-            imageSrc: p.Z,
+            imageSrc: g.Z,
             style: {
                 position: 'absolute',
                 width: '600px',
@@ -69,7 +69,7 @@ let h = (t) =>
             }
         },
         STORM: {
-            imageSrc: g.Z,
+            imageSrc: p.Z,
             style: {
                 position: 'absolute',
                 width: '850px'

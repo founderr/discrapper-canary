@@ -26,12 +26,12 @@ function m() {
             }),
             (0, r.jsx)(o.Button, {
                 size: o.Button.Sizes.SMALL,
-                onClick: c.u,
+                onClick: c.Z.resetState,
                 children: 'Reset Global Discovery State'
             }),
             (0, r.jsx)(o.Button, {
                 size: o.Button.Sizes.SMALL,
-                onClick: d.O,
+                onClick: d.Z.resetState,
                 children: 'Reset Global Discovery Servers State'
             })
         ]

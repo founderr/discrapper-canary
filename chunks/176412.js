@@ -1,9 +1,9 @@
 t.d(n, {
     Bm: function () {
-        return P;
+        return j;
     },
     P7: function () {
-        return j;
+        return P;
     },
     ae: function () {
         return I;
@@ -45,7 +45,7 @@ let b = {
         ['commandMention', 'customEmoji', 'em', 'emoji', 'emoticon', 'highlight', 'inlineCode', 'looseEm', 's', 'strong', 'text', 'timestamp', 'u', 'spoiler']
     ),
     I = r.w4(E);
-function j(e) {
+function P(e) {
     let { channel: n, application: t, location: i, sectionName: l, commandName: a, autoDismissOnClick: r = !0, launchingComponentId: h, submitting: f = !1, fetchesApplication: C = !0 } = e,
         b = (0, c.O)(),
         E = (0, d.Qv)({
@@ -54,8 +54,8 @@ function j(e) {
             fetchesApplication: C
         }),
         I = (0, N.Q)(E),
-        j = (0, o.e7)([x.Z], () => x.Z.entrypoint()),
-        P = (0, d.w1)({
+        P = (0, o.e7)([x.Z], () => x.Z.entrypoint()),
+        j = (0, d.w1)({
             applicationId: t.id,
             embeddedActivitiesManager: u.Z,
             channelId: n.id,
@@ -68,28 +68,28 @@ function j(e) {
                         application_id: n,
                         section_name: l,
                         action: I,
-                        source: j
+                        source: P
                     });
             },
             launchingComponentId: h,
             commandOrigin: p.bB.APPLICATION_LAUNCHER,
             sectionName: l,
-            source: j,
+            source: P,
             fetchesApplication: C
         }),
-        S = s.ButtonColors.BRAND,
-        y = null != a ? a : A.intl.string(A.t.zKX8Nj);
+        y = s.ButtonColors.BRAND,
+        S = null != a ? a : A.intl.string(A.t.zKX8Nj);
     return (
-        I === d.JS.JOIN ? ((S = s.ButtonColors.GREEN), (y = A.intl.string(A.t.d9PsMj))) : I === d.JS.LEAVE && !f && ((S = s.ButtonColors.RED), (y = A.intl.string(A.t['Hi1/aW']))),
+        I === d.JS.JOIN ? ((y = s.ButtonColors.GREEN), (S = A.intl.string(A.t.d9PsMj))) : I === d.JS.LEAVE && !f && ((y = s.ButtonColors.RED), (S = A.intl.string(A.t['Hi1/aW']))),
         {
-            onActivityItemSelected: P,
+            onActivityItemSelected: j,
             activityAction: I,
-            buttonColor: S,
-            buttonText: y
+            buttonColor: y,
+            buttonText: S
         }
     );
 }
-function P(e, n) {
+function j(e, n) {
     let t = x.Z.entrypoint(),
         a = i.useMemo(
             () =>

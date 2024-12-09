@@ -1,6 +1,6 @@
 n.d(e, {
     Z: function () {
-        return T;
+        return f;
     },
     x: function () {
         return r;
@@ -27,13 +27,13 @@ let A = {
         [r.SMALL]: h.moreGuildsSmall,
         [r.LARGE]: h.moreGuildsLarge
     },
-    f = {
+    T = {
         [r.SMALL]: h.iconSmall,
         [r.LARGE]: h.iconLarge
     };
-function T(t) {
+function f(t) {
     var e, n, i;
-    let { application: c, mutualGuilds: s, mutualGuildShownMax: L = 4, className: T, textVariant: O = 'text-sm/normal', compact: _, guildIconSize: R = r.LARGE, guildsClassName: g } = t,
+    let { application: c, mutualGuilds: s, mutualGuildShownMax: L = 4, className: f, textVariant: O = 'text-sm/normal', compact: _, guildIconSize: R = r.LARGE, guildsClassName: g } = t,
         P = (0, u.e7)([I.default], () => I.default.locale),
         m = new Intl.ListFormat(P),
         v = null !== (n = null === (e = c.directory_entry) || void 0 === e ? void 0 : e.guild_count) && void 0 !== n ? n : 0,
@@ -72,7 +72,7 @@ function T(t) {
     return 0 === D.length && null == w
         ? null
         : (0, o.jsxs)('div', {
-              className: a()(T, h.wrapper),
+              className: a()(f, h.wrapper),
               children: [
                   (0, o.jsx)('div', {
                       className: a()(h.icons, g),
@@ -94,7 +94,7 @@ function T(t) {
                                                     children: (t) =>
                                                         (0, o.jsx)('img', {
                                                             ...t,
-                                                            className: a()(h.icon, f[R]),
+                                                            className: a()(h.icon, T[R]),
                                                             src: r,
                                                             alt: ''
                                                         })
