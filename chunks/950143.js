@@ -4,23 +4,24 @@ var r = n(533800),
     a = n(305325),
     s = n(82085),
     o = n(630388),
-    l = n(981631);
-function u(e) {
-    var t, n, i;
-    let { guild: u, flags: c } = e.invite;
-    if (null != u && (null == u ? void 0 : null === (t = u.features) || void 0 === t ? void 0 : t.includes(l.oNc.HUB))) {
+    l = n(461014),
+    u = n(981631);
+function c(e) {
+    var t;
+    let { guild: n, flags: i } = e.invite;
+    if (null != n && (null == n ? void 0 : null === (t = n.features) || void 0 === t ? void 0 : t.includes(u.oNc.HUB))) {
         s.Z.onOpenHubInvite(e.invite);
         return;
     }
-    !(0, o.yE)(null != c ? c : 0, r.$.IS_GUEST_INVITE) && null != u && (null == u ? void 0 : null === (n = u.features) || void 0 === n ? void 0 : n.includes(l.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) && !(null == u ? void 0 : null === (i = u.features) || void 0 === i ? void 0 : i.includes(l.oNc.PREVIEW_ENABLED)) && (0, a.hk)(u.id);
+    !(0, o.yE)(null != i ? i : 0, r.$.IS_GUEST_INVITE) && null != n && (0, l.u)(n) && (0, a.hk)(n.id);
 }
-class c extends i.Z {
+class d extends i.Z {
     constructor(...e) {
         var t, n, r;
         super(...e),
             (t = this),
             (n = 'actions'),
-            (r = { INVITE_ACCEPT_SUCCESS: u }),
+            (r = { INVITE_ACCEPT_SUCCESS: c }),
             n in t
                 ? Object.defineProperty(t, n, {
                       value: r,
@@ -31,4 +32,4 @@ class c extends i.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new c();
+t.Z = new d();
