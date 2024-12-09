@@ -30129,6 +30129,28 @@ div.popoutCloseButton_d523a2:hover {
     background: linear-gradient(rgb(var(--bg-overlay-color-inverse)/5%), rgb(var(--bg-overlay-color-inverse)/5%)), var(--profile-gradient-end)
 }
 
+.clickableImage_ae1fa2:after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black-500);
+    border-radius: var(--radius-xs);
+    opacity: 0;
+    cursor: pointer
+}
+
+.full-motion .clickableImage_ae1fa2:after {
+    transition: opacity var(--custom-button-transition-duration)ease
+}
+
+.clickableImage_ae1fa2:hover:after {
+    opacity: .2
+}
+
 .clickableText_ae1fa2 {
     cursor: pointer;
     width: -moz-max-content;

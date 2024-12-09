@@ -1,47 +1,49 @@
-t.d(n, {
+n.d(t, {
     w: function () {
-        return h;
+        return p;
     }
 });
-var i = t(200651);
-t(192379);
-var l = t(512722),
-    s = t.n(l),
-    a = t(481060),
-    r = t(563132),
-    o = t(698708),
-    d = t(614277),
-    c = t(388032),
-    u = t(786698);
-function h(e) {
-    let { handleClose: n } = e,
-        { skusById: t, selectedSkuId: l, application: h } = (0, r.usePaymentContext)();
-    s()(null != l, 'Expected selectedSkuId'), s()(null != h, 'Expected application');
-    let f = t[l];
-    s()(null != f, 'Expected sku');
-    let x = c.intl.formatToPlainString(c.t.wK0IbG, {
-        applicationName: h.name,
-        itemName: f.name
+var i = n(200651);
+n(192379);
+var o = n(512722),
+    a = n.n(o),
+    r = n(481060),
+    c = n(563132),
+    d = n(698708),
+    s = n(844068),
+    l = n(614277),
+    f = n(388032),
+    u = n(786698);
+function p(e) {
+    let { handleClose: t } = e,
+        { skusById: n, selectedSkuId: o, application: p } = (0, c.usePaymentContext)();
+    a()(null != o, 'Expected selectedSkuId'), a()(null != p, 'Expected application');
+    let _ = n[o];
+    a()(null != _, 'Expected sku');
+    let b = f.intl.formatToPlainString(f.t.wK0IbG, {
+        applicationName: p.name,
+        itemName: _.name
     });
-    return (0, i.jsxs)(d.C3, {
+    return (0, i.jsxs)(l.C3, {
         children: [
-            (0, i.jsx)(o.Z, {}),
+            (0, i.jsx)(s.Z, {}),
+            (0, i.jsx)(d.Z, {}),
             (0, i.jsxs)('div', {
                 className: u.confirmation,
                 children: [
-                    (0, i.jsx)(a.Heading, {
+                    (0, i.jsx)(r.Heading, {
                         variant: 'heading-xxl/bold',
                         className: u.confirmationHeader,
                         children: 'Success!'
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(r.Text, {
                         variant: 'text-md/normal',
-                        children: x
+                        children: b
                     }),
                     (0, i.jsx)('div', { className: u.divider }),
-                    (0, i.jsx)(a.Button, {
-                        onClick: n,
-                        children: c.intl.string(c.t.cpT0Cg)
+                    (0, i.jsx)(r.Button, {
+                        onClick: t,
+                        children: f.intl.string(f.t.cpT0Cg)
                     })
                 ]
             })

@@ -12,19 +12,22 @@ n.d(t, {
         return o;
     },
     ZP: function () {
-        return ei;
+        return ea;
+    },
+    lq: function () {
+        return en;
     },
     mn: function () {
         return q;
     },
     nT: function () {
-        return en;
+        return er;
     },
     uZ: function () {
         return u;
     },
     wp: function () {
-        return er;
+        return ei;
     }
 });
 var r,
@@ -403,6 +406,67 @@ function et(e) {
     });
 }
 function en(e) {
+    var t;
+    let { showWumpus: n, showYearlyPrice: r, className: i, isGift: a = !1, priceOptions: s } = e,
+        o = (0, U.N)(),
+        l = null == o ? void 0 : null === (t = o.subscription_trial) || void 0 === t ? void 0 : t.sku_id;
+    return (0, d.jsxs)('div', {
+        className: _()(W.tier0, W.card, i),
+        children: [
+            n
+                ? (0, d.jsx)('div', {
+                      className: W.wumpusImageContainer,
+                      children: (0, d.jsx)(v.Image, {
+                          src: K,
+                          mediaLayoutType: H.hV.RESPONSIVE,
+                          width: 270,
+                          height: 242,
+                          zoomable: !1,
+                          imageClassName: W.wumpusImage
+                      })
+                  })
+                : null,
+            (0, d.jsxs)('div', {
+                children: [
+                    (0, d.jsxs)('div', {
+                        children: [
+                            (0, d.jsx)(O.Z, { className: _()(W.title, W.tier0Title) }),
+                            (0, d.jsx)($, {
+                                isGift: a,
+                                premiumTier: j.p9.TIER_0,
+                                offerType: 0,
+                                offerTierMatchesCard: l === j.Si.TIER_0,
+                                showYearlyPrice: r,
+                                priceOptions: s
+                            })
+                        ]
+                    }),
+                    (0, d.jsxs)('div', {
+                        children: [
+                            (0, d.jsx)(X, {
+                                Icon: v.UploadIcon,
+                                text: Y.intl.formatToPlainString(Y.t.p8QVLS, { maxUploadPremium: (0, L.v9)(j.p9.TIER_0, { useSpace: !1 }) })
+                            }),
+                            (0, d.jsx)(X, {
+                                Icon: v.ReactionIcon,
+                                text: Y.intl.string(Y.t.KjrZ8f)
+                            }),
+                            (0, d.jsx)(X, {
+                                Icon: v.PaintPaletteIcon,
+                                text: Y.intl.string(Y.t.OuItFh)
+                            }),
+                            (0, d.jsx)(X, {
+                                Icon: v.NitroWheelIcon,
+                                text: Y.intl.string(Y.t['8ukxAQ'])
+                            })
+                        ]
+                    })
+                ]
+            })
+        ]
+    });
+}
+function er(e) {
     let { featureSet: t = 0, isModal: n = !1, isGift: r = !1 } = e,
         i = (0, m.e7)([y.default], () => y.default.locale),
         a = (0, m.e7)([x.Z], () => x.Z.affinities),
@@ -493,7 +557,7 @@ function en(e) {
             });
     }
 }
-function er(e) {
+function ei(e) {
     var t;
     let { showWumpus: n, ctaButton: r, showYearlyPrice: i, featureSet: a = 0, className: s, isGift: o = !1, isModal: l = !1, priceOptions: u, showPromotionalGiftBanner: c = !1 } = e,
         f = (0, m.e7)([N.ZP], () => N.ZP.getPremiumTypeSubscription()),
@@ -608,7 +672,7 @@ function er(e) {
                         ]
                     }),
                     (0, d.jsx)('div', {
-                        children: (0, d.jsx)(en, {
+                        children: (0, d.jsx)(er, {
                             featureSet: a,
                             isModal: l,
                             isGift: o
@@ -622,7 +686,7 @@ function er(e) {
         ]
     });
 }
-function ei(e) {
+function ea(e) {
     let { showWumpus: t, tier0CTAButton: n, tier2CTAButton: r, className: i } = e,
         { analyticsLocations: a } = (0, b.ZP)(T.Z.PREMIUM_MARKETING_TIER_CARD);
     return (0, d.jsx)(b.Gt, {
@@ -634,7 +698,7 @@ function ei(e) {
                     showWumpus: t,
                     ctaButton: n
                 }),
-                (0, d.jsx)(er, {
+                (0, d.jsx)(ei, {
                     showWumpus: t,
                     ctaButton: r
                 })

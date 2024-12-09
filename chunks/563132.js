@@ -103,56 +103,56 @@ function G(e) {
                 }
             );
         }),
-        { selectedSkuId: eA, selectedPlan: eN, setSelectedSkuId: eC, setSelectedPlanId: eR } = (0, b.Z)(),
-        [eO, eD] = (0, l.Wu)([h.Z], () => [h.Z.purchaseTokenAuthState, h.Z.purchaseTokenHash]),
-        [eL, ex] = (0, l.Wu)([w.Z], () => [w.Z.browserCheckoutState, w.Z.loadId]),
-        [ew, eP] = i.useState(null),
+        { selectedSkuId: eA, selectedPlan: eN, selectedPlanNotification: eC, setSelectedSkuId: eR, setSelectedPlanId: eO, setSelectedPlanNotification: eD } = (0, b.Z)(),
+        [eL, ex] = (0, l.Wu)([h.Z], () => [h.Z.purchaseTokenAuthState, h.Z.purchaseTokenHash]),
+        [ew, eP] = (0, l.Wu)([w.Z], () => [w.Z.browserCheckoutState, w.Z.loadId]),
         [eM, ek] = i.useState(null),
         [eU, eB] = i.useState(null),
         [eG, eZ] = i.useState(null),
         [eF, eV] = i.useState(null),
-        [ej, eH] = i.useState(void 0),
-        [eY, eW] = i.useState([]),
-        eK = i.useMemo(() => null == eN || (0, I.PV)(eN.id), [eN]),
-        ez = i.useRef(null != B ? B.planId : null);
+        [ej, eH] = i.useState(null),
+        [eY, eW] = i.useState(void 0),
+        [eK, ez] = i.useState([]),
+        eq = i.useMemo(() => null == eN || (0, I.PV)(eN.id), [eN]),
+        eQ = i.useRef(null != B ? B.planId : null);
     i.useEffect(() => {
-        null == ez.current && null != B && (ez.current = B.planId);
+        null == eQ.current && null != B && (eQ.current = B.planId);
     }, [B]);
     let {
-            skusById: eq,
-            hasFetchedSkus: eQ,
-            skuPricePreviewsById: eX,
-            previewErrorsById: eJ
+            skusById: eX,
+            hasFetchedSkus: eJ,
+            skuPricePreviewsById: e$,
+            previewErrorsById: e0
         } = (0, D.Z)({
             applicationId: null != W ? W : M.CL,
             skuIDs: F,
             currentPaymentSourceId: ee,
             isGift: V
         }),
-        e$ = null != eA ? eJ[eA] : null,
-        e0 = i.useMemo(() => {
+        e1 = null != eA ? e0[eA] : null,
+        e2 = i.useMemo(() => {
             if (null == eA) return null;
-            let e = eX[eA];
+            let e = e$[eA];
             return null == e ? null : e[null != ee ? ee : m.c];
-        }, [eA, eX, ee]),
-        { data: e1 } = (0, f.IX)(W),
-        e2 = p.Sb.useSetting(),
-        e3 = (0, l.e7)([u.Z], () => u.Z.getFetchState());
+        }, [eA, e$, ee]),
+        { data: e3 } = (0, f.IX)(W),
+        e4 = p.Sb.useSetting(),
+        e6 = (0, l.e7)([u.Z], () => u.Z.getFetchState());
     i.useEffect(() => {
-        null != e1 && (0, v.yE)(e1.flags, P.udG.EMBEDDED) && e2 && null == e3 && (0, c.$h)();
-    }, [e1, e2, e3]);
-    let e4 = (0, v.yE)(null !== (t = null == e1 ? void 0 : e1.flags) && void 0 !== t ? t : 0, P.udG.EMBEDDED) && (0, v.yE)(null !== (n = null == e1 ? void 0 : e1.flags) && void 0 !== n ? n : 0, P.udG.EMBEDDED_IAP),
-        e6 = (0, l.e7)([d.ZP], () =>
+        null != e3 && (0, v.yE)(e3.flags, P.udG.EMBEDDED) && e4 && null == e6 && (0, c.$h)();
+    }, [e3, e4, e6]);
+    let e5 = (0, v.yE)(null !== (t = null == e3 ? void 0 : e3.flags) && void 0 !== t ? t : 0, P.udG.EMBEDDED) && (0, v.yE)(null !== (n = null == e3 ? void 0 : e3.flags) && void 0 !== n ? n : 0, P.udG.EMBEDDED_IAP),
+        e7 = (0, l.e7)([d.ZP], () =>
             Array.from(d.ZP.getSelfEmbeddedActivities().values()).find((e) => {
                 let { applicationId: t } = e;
                 return t === W;
             })
         ),
-        e5 = null == e6 ? void 0 : e6.compositeInstanceId,
-        e7 = (0, l.e7)([g.Z], () => (null != eA ? g.Z.getForSKU(eA) : null), [eA]),
-        e8 = eq[null != eA ? eA : ''],
-        [e9, te] = i.useState(null),
-        tt = null !== (E = null == B ? void 0 : B.inReverseTrial) && void 0 !== E && E && !V;
+        e8 = null == e7 ? void 0 : e7.compositeInstanceId,
+        e9 = (0, l.e7)([g.Z], () => (null != eA ? g.Z.getForSKU(eA) : null), [eA]),
+        te = eX[null != eA ? eA : ''],
+        [tt, tn] = i.useState(null),
+        tr = null !== (E = null == B ? void 0 : B.inReverseTrial) && void 0 !== E && E && !V;
     return (0, r.jsx)(k.Provider, {
         value: {
             stripe: q,
@@ -161,10 +161,10 @@ function G(e) {
             activeSubscription: B,
             hasFetchedSubscriptions: X,
             hasFetchedSubscriptionPlans: ei,
-            updatedSubscription: eG,
-            setUpdatedSubscription: eZ,
-            subscriptionMetadataRequest: eF,
-            setSubscriptionMetadataRequest: eV,
+            updatedSubscription: eF,
+            setUpdatedSubscription: eV,
+            subscriptionMetadataRequest: ej,
+            setSubscriptionMetadataRequest: eH,
             hasFetchedPaymentSources: en,
             paymentSources: J,
             hasPaymentSources: $,
@@ -189,46 +189,48 @@ function G(e) {
             paymentError: ev,
             purchaseError: eT,
             setPurchaseError: eS,
-            purchasePreviewError: e$,
+            purchasePreviewError: e1,
             purchaseErrorBlockRef: eb,
-            purchaseTokenAuthState: eO,
-            purchaseTokenHash: eD,
-            browserCheckoutState: eL,
-            browserCheckoutStateLoadId: ex,
-            bodyNode: ew,
-            setBodyNode: eP,
-            footerNode: eM,
-            setFooterNode: ek,
-            modalOverlayNode: eU,
-            setModalOverlayNode: eB,
+            purchaseTokenAuthState: eL,
+            purchaseTokenHash: ex,
+            browserCheckoutState: ew,
+            browserCheckoutStateLoadId: eP,
+            bodyNode: eM,
+            setBodyNode: ek,
+            footerNode: eU,
+            setFooterNode: eB,
+            modalOverlayNode: eG,
+            setModalOverlayNode: eZ,
             selectedSkuId: eA,
-            selectedSku: e8,
-            selectedStoreListing: e7,
+            selectedSku: te,
+            selectedStoreListing: e9,
             selectedPlan: eN,
-            setSelectedSkuId: eC,
-            setSelectedPlanId: eR,
-            readySlideId: ej,
-            setReadySlideId: eH,
+            setSelectedSkuId: eR,
+            setSelectedPlanId: eO,
+            selectedPlanNotification: eC,
+            setSelectedPlanNotification: eD,
+            readySlideId: eY,
+            setReadySlideId: eW,
             defaultPlanId: H,
-            isPremium: eK,
+            isPremium: eq,
             startedPaymentFlowWithPaymentSourcesRef: er,
-            startingPremiumSubscriptionPlanIdRef: ez,
-            hasFetchedSkus: eQ,
-            skusById: eq,
-            skuPricePreviewsById: eX,
-            selectedSkuPricePreview: e0,
-            application: e1,
+            startingPremiumSubscriptionPlanIdRef: eQ,
+            hasFetchedSkus: eJ,
+            skusById: eX,
+            skuPricePreviewsById: e$,
+            selectedSkuPricePreview: e2,
+            application: e3,
             purchaseType: Y,
-            isEmbeddedIAP: e4,
-            activitySessionId: e5,
-            devShelfFetchState: e3,
-            entitlementsGranted: eY,
-            setEntitlementsGranted: eW,
+            isEmbeddedIAP: e5,
+            activitySessionId: e8,
+            devShelfFetchState: e6,
+            entitlementsGranted: eK,
+            setEntitlementsGranted: ez,
             referralCode: K,
-            invoicePreview: e9,
-            setInvoicePreview: te,
+            invoicePreview: tt,
+            setInvoicePreview: tn,
             repeatPurchase: z,
-            inReverseTrial: tt
+            inReverseTrial: tr
         },
         children: (0, r.jsx)(a.Elements, {
             options: P.OBo,

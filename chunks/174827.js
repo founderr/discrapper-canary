@@ -1,6 +1,6 @@
 n.d(t, {
     x: function () {
-        return H;
+        return B;
     }
 }),
     n(47120);
@@ -20,128 +20,130 @@ var i = n(200651),
     f = n(572517),
     _ = n(104494),
     j = n(639119),
-    L = n(642530),
-    m = n(381507),
+    m = n(642530),
+    L = n(381507),
     g = n(314404),
     E = n(594174),
     S = n(509545),
-    y = n(669079),
+    I = n(669079),
     M = n(63063),
-    I = n(74538),
-    Z = n(987209),
-    v = n(563132),
-    P = n(409813),
-    T = n(51499),
-    N = n(456251),
+    y = n(74538),
+    v = n(987209),
+    T = n(563132),
+    N = n(409813),
+    P = n(51499),
+    Z = n(456251),
     A = n(614277),
     U = n(809144),
     k = n(698708),
-    b = n(981631),
-    R = n(474936),
-    O = n(388032),
-    w = n(242582);
-function H(e) {
+    O = n(844068),
+    R = n(981631),
+    b = n(474936),
+    w = n(388032),
+    H = n(242582);
+function B(e) {
     var t, n, s;
-    let { handleStepChange: H, initialPlanId: B, subscriptionTier: F, trialId: G, referralTrialOfferId: W, handleClose: D } = e,
-        { activeSubscription: Y, hasFetchedSubscriptions: K, paymentSourceId: V, paymentSources: X, selectedSkuId: Q, selectedPlan: z, step: q, defaultPlanId: J, priceOptions: $, isPremium: ee } = (0, v.usePaymentContext)(),
-        { isGift: et, giftRecipient: en, giftMessage: ei, claimableRewards: el } = (0, Z.wD)(),
-        es = (0, h.a5)(z),
-        er = et && es && null != el && el.length > 0,
-        ea = null != V ? X[V] : null,
-        { newPlans: eo } = u.ZP.useExperiment({ location: 'd17fd6_3' }, { autoTrackExposure: !1 }),
-        eC = (0, a.e7)([E.default], () => E.default.getCurrentUser()),
-        ed = !et && null != Q && Q === R.Si.TIER_2 && null != eC && eC.hasHadPremium() && K && null == Y && (0, u.aQ)(ea),
-        eu = (0, j.N)(W),
-        ec = !et && null != eu && null != Q && R.nG[eu.trial_id].skus.includes(Q),
-        ep = (0, _.Ng)(),
-        ex = null == ep ? void 0 : null === (t = ep.discount) || void 0 === t ? void 0 : t.plan_ids.some((e) => R.GP[e].skuId === Q),
-        eh = !et && null != ep && null != Q && ex,
-        ef = null !== (n = ec || eh) && void 0 !== n && n,
-        { defaultToMonthlyPlan: e_ } = x.k.useExperiment({ location: 'd17fd6_4' }, { autoTrackExposure: !1 }),
-        ej = l.useMemo(
+    let { handleStepChange: B, initialPlanId: F, subscriptionTier: G, trialId: D, referralTrialOfferId: W, handleClose: Y } = e,
+        { activeSubscription: K, hasFetchedSubscriptions: V, paymentSourceId: X, paymentSources: Q, selectedSkuId: z, selectedPlan: q, step: J, defaultPlanId: $, priceOptions: ee, isPremium: et } = (0, T.usePaymentContext)(),
+        { isGift: en, giftRecipient: ei, giftMessage: el, claimableRewards: es } = (0, v.wD)(),
+        er = (0, h.a5)(q),
+        ea = en && er && null != es && es.length > 0,
+        eo = null != X ? Q[X] : null,
+        { newPlans: eC } = u.ZP.useExperiment({ location: 'd17fd6_3' }, { autoTrackExposure: !1 }),
+        ed = (0, a.e7)([E.default], () => E.default.getCurrentUser()),
+        eu = !en && null != z && z === b.Si.TIER_2 && null != ed && ed.hasHadPremium() && V && null == K && (0, u.aQ)(eo),
+        ec = (0, j.N)(W),
+        ep = !en && null != ec && null != z && b.nG[ec.trial_id].skus.includes(z),
+        ex = (0, _.Ng)(),
+        eh = null == ex ? void 0 : null === (t = ex.discount) || void 0 === t ? void 0 : t.plan_ids.some((e) => b.GP[e].skuId === z),
+        ef = !en && null != ex && null != z && eh,
+        e_ = null !== (n = ep || ef) && void 0 !== n && n,
+        { defaultToMonthlyPlan: ej } = x.k.useExperiment({ location: 'd17fd6_4' }, { autoTrackExposure: !1 }),
+        em = l.useMemo(
             () =>
-                (0, I.V7)({
-                    skuId: Q,
-                    isPremium: ee,
-                    multiMonthPlans: ed ? eo : [],
-                    currentSubscription: Y,
-                    isGift: et,
-                    isEligibleForTrial: ec,
-                    defaultPlanId: J,
-                    defaultToMonthlyPlan: e_
+                (0, y.V7)({
+                    skuId: z,
+                    isPremium: et,
+                    multiMonthPlans: eu ? eC : [],
+                    currentSubscription: K,
+                    isGift: en,
+                    isEligibleForTrial: ep,
+                    defaultPlanId: $,
+                    defaultToMonthlyPlan: ej
                 }),
-            [Q, ee, eo, Y, ed, et, ec, J, e_]
+            [z, et, eC, K, eu, en, ep, $, ej]
         ),
-        eL = eh && ej.includes(R.Xh.PREMIUM_MONTH_TIER_2) ? R.Xh.PREMIUM_MONTH_TIER_2 : ej[0],
-        em = (0, a.e7)([S.Z], () => S.Z.get(eL)),
-        eg = [
+        eL = ef && em.includes(b.Xh.PREMIUM_MONTH_TIER_2) ? b.Xh.PREMIUM_MONTH_TIER_2 : em[0],
+        eg = (0, a.e7)([S.Z], () => S.Z.get(eL)),
+        eE = [
             {
-                planId: null == em ? void 0 : em.id,
+                planId: null == eg ? void 0 : eg.id,
                 quantity: 1
             }
         ],
-        [eE, eS] = l.useState(ef),
-        [ey, eM] = (0, c.ED)({
-            items: eg,
+        [eS, eI] = l.useState(e_),
+        [eM, ey] = (0, c.ED)({
+            items: eE,
             renewal: !1,
-            preventFetch: !ef,
+            preventFetch: !e_,
             applyEntitlements: !0,
-            trialId: G,
-            paymentSourceId: $.paymentSourceId,
-            currency: $.currency
+            trialId: D,
+            paymentSourceId: ee.paymentSourceId,
+            currency: ee.currency
         });
     l.useEffect(() => {
-        ef && eS((null == ey ? void 0 : ey.subscriptionPeriodEnd) == null);
-    }, [ey, ef]),
+        e_ && eI((null == eM ? void 0 : eM.subscriptionPeriodEnd) == null);
+    }, [eM, e_]),
         (0, C.Z)(
             'Payment Modal Plan Select Step',
-            eE,
+            eS,
             5,
             {
-                proratedInvoicePreview: ey,
-                proratedInvoiceError: eM,
-                isEligibleForOffer: ef
+                proratedInvoicePreview: eM,
+                proratedInvoiceError: ey,
+                isEligibleForOffer: e_
             },
             { tags: { app_context: 'billing' } }
         );
-    let eI = null !== (s = null == eM ? void 0 : eM.message) && void 0 !== s ? s : O.intl.string(O.t.R0RpRU),
-        eZ = ef && null == eM,
-        ev = ef && null != eM,
-        eP = eZ && null == Y && !!ef && (null == ey ? void 0 : ey.subscriptionPeriodEnd) == null,
-        { enabled: eT } = p._.useExperiment({ location: 'PremiumPaymentPlanSelectStep' }, { autoTrackExposure: !1 }),
-        eN = !et && (null == em ? void 0 : em.skuId) === R.Si.TIER_2 && (null == eu ? void 0 : eu.referrer_id) != null && eT,
-        eA = null;
-    return ((eA = eN ? (0, i.jsx)(m.Z, {}) : (0, i.jsx)(L.Z, {})), eP)
-        ? (0, i.jsx)(N.Z, {})
-        : (r()(null != q, 'Step should be set'),
-          r()(ej.length > 0, 'Premium plan options should be set'),
+    let ev = null !== (s = null == ey ? void 0 : ey.message) && void 0 !== s ? s : w.intl.string(w.t.R0RpRU),
+        eT = e_ && null == ey,
+        eN = e_ && null != ey,
+        eP = eT && null == K && !!e_ && (null == eM ? void 0 : eM.subscriptionPeriodEnd) == null,
+        { enabled: eZ } = p._.useExperiment({ location: 'PremiumPaymentPlanSelectStep' }, { autoTrackExposure: !1 }),
+        eA = !en && (null == eg ? void 0 : eg.skuId) === b.Si.TIER_2 && (null == ec ? void 0 : ec.referrer_id) != null && eZ,
+        eU = null;
+    return ((eU = eA ? (0, i.jsx)(L.Z, {}) : (0, i.jsx)(m.Z, {})), eP)
+        ? (0, i.jsx)(Z.Z, {})
+        : (r()(null != J, 'Step should be set'),
+          r()(em.length > 0, 'Premium plan options should be set'),
           (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(U.P, { giftMessage: ei }),
-                  !(et && (0, y.pO)(en)) && (0, i.jsx)(T.Z, { isEligibleForTrial: ec }),
+                  (0, i.jsx)(U.P, { giftMessage: el }),
+                  !(en && (0, I.pO)(ei)) && (0, i.jsx)(P.Z, { isEligibleForTrial: ep }),
                   (0, i.jsxs)(A.C3, {
                       children: [
-                          eZ && (0, i.jsx)('hr', { className: w.planSelectSeparatorUpper }),
-                          eA,
+                          eT && (0, i.jsx)('hr', { className: H.planSelectSeparatorUpper }),
+                          eU,
+                          (0, i.jsx)(O.Z, {}),
                           (0, i.jsx)(k.Z, {}),
-                          ev
-                              ? (0, i.jsx)(o.FormErrorBlock, { children: eI })
+                          eN
+                              ? (0, i.jsx)(o.FormErrorBlock, { children: ev })
                               : (0, i.jsx)(g.O, {
-                                    planOptions: ej,
-                                    eligibleForMultiMonthPlans: ed,
+                                    planOptions: em,
+                                    eligibleForMultiMonthPlans: eu,
                                     referralTrialOfferId: W,
-                                    selectedPlanId: null == z ? void 0 : z.id,
-                                    subscriptionPeriodEnd: null == ey ? void 0 : ey.subscriptionPeriodEnd,
-                                    discountInvoiceItems: eh ? (null == ey ? void 0 : ey.invoiceItems) : void 0,
-                                    handleClose: D
+                                    selectedPlanId: null == q ? void 0 : q.id,
+                                    subscriptionPeriodEnd: null == eM ? void 0 : eM.subscriptionPeriodEnd,
+                                    discountInvoiceItems: ef ? (null == eM ? void 0 : eM.invoiceItems) : void 0,
+                                    handleClose: Y
                                 }),
-                          eZ &&
+                          eT &&
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, i.jsx)('hr', { className: w.planSelectSeparatorLower }),
+                                      (0, i.jsx)('hr', { className: H.planSelectSeparatorLower }),
                                       (0, i.jsx)(o.Text, {
                                           variant: 'text-xs/normal',
-                                          children: O.intl.format(O.t.BHtnqK, { link: M.Z.getArticleURL(b.BhN.PREMIUM_DETAILS_CANCEL_SUB) })
+                                          children: w.intl.format(w.t.BHtnqK, { link: M.Z.getArticleURL(R.BhN.PREMIUM_DETAILS_CANCEL_SUB) })
                                       })
                                   ]
                               })
@@ -149,17 +151,17 @@ function H(e) {
                   }),
                   (0, i.jsxs)(A.O3, {
                       children: [
-                          er && (0, i.jsx)(f.c, {}),
+                          ea && (0, i.jsx)(f.c, {}),
                           (0, i.jsx)(o.ModalFooter, {
                               justify: d.Z.Justify.BETWEEN,
                               align: d.Z.Align.CENTER,
                               children: (0, i.jsx)(g.y, {
-                                  onStepChange: H,
-                                  onBackClick: () => H(P.h8.SKU_SELECT),
-                                  showBackButton: null == B && null == F,
-                                  planOptions: ej,
-                                  shouldRenderUpdatedPaymentModal: eZ,
-                                  isTrial: ec
+                                  onStepChange: B,
+                                  onBackClick: () => B(N.h8.SKU_SELECT),
+                                  showBackButton: null == F && null == G,
+                                  planOptions: em,
+                                  shouldRenderUpdatedPaymentModal: eT,
+                                  isTrial: ep
                               })
                           })
                       ]
