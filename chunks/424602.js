@@ -1,15 +1,12 @@
 n.d(t, {
-    Kv: function () {
-        return l;
-    },
     T: function () {
         return a;
     },
     _f: function () {
-        return c;
+        return u;
     },
     aq: function () {
-        return u;
+        return l;
     },
     m1: function () {
         return s;
@@ -75,20 +72,6 @@ let a = (0, r.B)({
     }),
     l = (0, r.B)({
         kind: 'user',
-        id: '2024-09_open_platform_link_sharing_mobile',
-        label: 'Open Platform Link Sharing Mobile',
-        defaultConfig: { enabled: !1 },
-        commonTriggerPoint: i.$P.CONNECTION_OPEN,
-        treatments: [
-            {
-                id: 1,
-                label: 'Enable app link sharing and install flow improvements on mobile',
-                config: { enabled: !0 }
-            }
-        ]
-    }),
-    u = (0, r.B)({
-        kind: 'user',
         id: '2024-08_open_platform_app_launcher_holdout',
         label: 'Open Platform App Launcher Holdout',
         commonTriggerPoint: i.$P.VOICE_CALL,
@@ -106,7 +89,7 @@ let a = (0, r.B)({
             }
         ]
     }),
-    c = (0, r.B)({
+    u = (0, r.B)({
         kind: 'user',
         id: '2024-09_user_app_install_education',
         label: 'User App Install Education Experiment',

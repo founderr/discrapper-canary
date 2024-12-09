@@ -4508,6 +4508,7 @@ let on = Object.freeze({
     (ah.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED = 'app_launcher_activity_item_selected'),
     (ah.APP_LAUNCHER_SEARCH_FOCUSED = 'app_launcher_search_focused'),
     (ah.APP_LAUNCHER_EXPANDED = 'app_launcher_expanded'),
+    (ah.APP_LAUNCHER_APPLICATION_LINK_COPIED = 'app_launcher_application_link_copied'),
     (ah.APP_OAUTH2_LINK_EMBED_URL_SENT = 'app_oauth2_link_embed_url_sent'),
     (ah.APP_OAUTH2_LINK_EMBED_CTA_CLICKED = 'app_oauth2_link_embed_cta_clicked'),
     (ah.APP_OAUTH2_LINK_EMBED_URL_CLICKED = 'app_oauth2_link_embed_url_clicked'),
