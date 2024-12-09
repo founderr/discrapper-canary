@@ -1,8 +1,3 @@
-n.d(t, {
-    O: function () {
-        return a;
-    }
-});
 var i = n(972959);
 let r = Object.freeze({
         selectedTab: null,
@@ -11,7 +6,4 @@ let r = Object.freeze({
         searchBarState: n(49898).GlobalDiscoverySearchBarState.DEFAULT
     }),
     s = (0, i.H)(() => r);
-function a() {
-    s.setState(r);
-}
 t.Z = s;

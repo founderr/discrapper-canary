@@ -22,6 +22,9 @@ function l(e) {
     function u(e) {
         return (t) => t[e];
     }
+    let c = (e) => {
+        (0, s.j)(() => t.setState(e));
+    };
     return {
         useState: n,
         getState: l,
@@ -42,8 +45,9 @@ function l(e) {
         subscribe: function (e, n, r) {
             return t.subscribe(e, n, r);
         },
-        setState: (e) => {
-            (0, s.j)(() => t.setState(e));
+        setState: c,
+        resetState: function () {
+            c(t.getInitialState());
         }
     };
 }
