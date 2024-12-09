@@ -510,7 +510,8 @@ let eo = i.memo(function (e) {
                 formatInline: !1,
                 allowList: !0,
                 allowHeading: !0,
-                previewLinkTarget: !0
+                previewLinkTarget: !0,
+                allowLinks: !0
             }),
             s = (0, S.Z)(
                 {
