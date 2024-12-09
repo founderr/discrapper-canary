@@ -2,46 +2,50 @@ var i = n(200651),
     l = n(192379),
     r = n(636977),
     o = n(481060),
-    a = n(571457),
-    s = n(836768),
-    c = n(749681),
-    u = n(133743),
-    d = n(603592),
-    h = n(49898),
-    p = n(128449),
-    m = n(46140),
-    f = n(388032);
-let g = l.forwardRef(function (e, t) {
-    let { selected: n, className: g } = e,
-        C = l.useCallback(() => {
-            (0, a.k5)({ source: h.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
-            let e = s.Z.getField('selectedTab');
+    a = n(132871),
+    s = n(147890),
+    c = n(571457),
+    u = n(836768),
+    d = n(749681),
+    h = n(603592),
+    p = n(49898),
+    m = n(128449),
+    f = n(46140),
+    g = n(388032);
+let C = l.forwardRef(function (e, t) {
+    let { selected: n, className: C } = e,
+        _ = l.useCallback(() => {
+            (0, c.k5)({ source: p.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
+            let e = u.Z.getField('selectedTab');
             switch (e) {
-                case h.GlobalDiscoveryTab.QUESTS:
-                    return (0, c.transitionToGlobalDiscovery)({
-                        tab: h.GlobalDiscoveryTab.QUESTS,
-                        location: m.dr.DISCOVERY_COMPASS,
+                case p.GlobalDiscoveryTab.QUESTS:
+                    return (0, d.transitionToGlobalDiscovery)({
+                        tab: p.GlobalDiscoveryTab.QUESTS,
+                        location: f.dr.DISCOVERY_COMPASS,
                         questContent: r.j.DISCOVERY_COMPASS
                     });
-                case h.GlobalDiscoveryTab.SERVERS:
-                    return (0, c.transitionToGlobalDiscovery)({
-                        tab: h.GlobalDiscoveryTab.SERVERS,
-                        entrypoint: p.Qq.GUILDS_BAR
+                case p.GlobalDiscoveryTab.SERVERS:
+                    return (0, d.transitionToGlobalDiscovery)({
+                        tab: p.GlobalDiscoveryTab.SERVERS,
+                        entrypoint: m.Qq.GUILDS_BAR
                     });
-                case h.GlobalDiscoveryTab.APPS:
-                    return (0, u.XL)();
+                case p.GlobalDiscoveryTab.APPS:
+                    return (0, s.goToAppDirectory)({
+                        restorePreviousView: !0,
+                        entrypoint: { name: a.ApplicationDirectoryEntrypointNames.GLOBAL_DISCOVERY_BUTTON }
+                    });
                 default:
-                    return (0, c.transitionToGlobalDiscovery)({ tab: e });
+                    return (0, d.transitionToGlobalDiscovery)({ tab: e });
             }
         }, []);
-    return (0, i.jsx)(d.Z, {
+    return (0, i.jsx)(h.Z, {
         id: 'guild-discover-button',
         ref: t,
-        className: g,
-        onClick: C,
+        className: C,
+        onClick: _,
         selected: n,
-        tooltip: f.intl.string(f.t['4nEZLi']),
+        tooltip: g.intl.string(g.t['4nEZLi']),
         icon: o.CompassIcon
     });
 });
-t.Z = g;
+t.Z = C;

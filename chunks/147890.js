@@ -1,28 +1,28 @@
 n.r(t),
     n.d(t, {
         goHome: function () {
-            return f;
+            return A;
         },
         goSearch: function () {
-            return _;
+            return P;
         },
         goToAppDirectory: function () {
-            return p;
+            return I;
         },
         goToApplication: function () {
-            return g;
+            return O;
         },
         goToApplicationSection: function () {
-            return m;
+            return d;
         },
         goToApplicationStoreSku: function () {
-            return v;
-        },
-        goToCategory: function () {
             return E;
         },
+        goToCategory: function () {
+            return _;
+        },
         replaceAppDirectoryURLWith: function () {
-            return x;
+            return y;
         }
     }),
     n(610138),
@@ -30,97 +30,101 @@ n.r(t),
     n(78328),
     n(815648),
     n(47120);
-var i = n(749681),
-    r = n(352057),
-    s = n(703656),
-    a = n(626135),
-    o = n(34674),
-    l = n(132871),
-    c = n(272242),
-    d = n(981631),
-    u = n(49898),
-    h = n(979007);
-let p = (e) => {
-        let { view: t = l.ApplicationDirectoryViews.HOME, guildId: n, applicationId: s, applicationSection: o, entrypoint: p, skuId: E } = e;
-        if ((0, r.K0)({ location: p.name })) {
-            let e = null == s ? void 0 : o === c.ApplicationDirectoryProfileSections.STORE ? h.GlobalDiscoveryAppsSections.STORE : h.GlobalDiscoveryAppsSections.ABOUT;
-            (0, i.transitionToGlobalDiscovery)({
-                tab: u.GlobalDiscoveryTab.APPS,
-                applicationId: s,
+var r = n(749681),
+    o = n(352057),
+    i = n(703656),
+    l = n(626135),
+    c = n(34674),
+    a = n(132871),
+    u = n(272242),
+    s = n(981631),
+    p = n(49898),
+    S = n(979007);
+let I = (e) => {
+        let { view: t = a.ApplicationDirectoryViews.HOME, guildId: n, applicationId: i, applicationSection: c, entrypoint: I, skuId: _, restorePreviousView: y } = e;
+        if ((0, o.K0)({ location: I.name })) {
+            let e = null == i ? void 0 : c === u.ApplicationDirectoryProfileSections.STORE ? S.GlobalDiscoveryAppsSections.STORE : S.GlobalDiscoveryAppsSections.ABOUT;
+            return (0, r.transitionToGlobalDiscovery)({
+                tab: p.GlobalDiscoveryTab.APPS,
+                applicationId: i,
                 section: e,
-                skuId: e === h.GlobalDiscoveryAppsSections.STORE ? E : void 0
+                skuId: e === S.GlobalDiscoveryAppsSections.STORE ? _ : void 0,
+                newSessionState: {
+                    guildId: null != n ? n : null,
+                    entrypoint: I,
+                    restorePreviousView: y
+                }
             });
-            return;
         }
-        let x = {
-            ...p,
+        let L = {
+            ...I,
             pathname: window.location.pathname
         };
-        switch ((a.default.track(d.rMx.APP_DIRECTORY_OPENED, { source: null == x ? void 0 : x.name }), (0, l.resetApplicationDirectoryHistory)(), (0, l.setEntrypoint)(x), null != n && (0, l.setGuildId)(n), t === l.ApplicationDirectoryViews.APPLICATION && null == s && (t = l.ApplicationDirectoryViews.HOME), t)) {
-            case l.ApplicationDirectoryViews.HOME:
-                f();
+        switch ((l.default.track(s.rMx.APP_DIRECTORY_OPENED, { source: null == L ? void 0 : L.name }), (0, a.resetApplicationDirectoryHistory)(), (0, a.setEntrypoint)(L), null != n && (0, a.setGuildId)(n), t === a.ApplicationDirectoryViews.APPLICATION && null == i && (t = a.ApplicationDirectoryViews.HOME), t)) {
+            case a.ApplicationDirectoryViews.HOME:
+                A();
                 break;
-            case l.ApplicationDirectoryViews.SEARCH:
-                _();
+            case a.ApplicationDirectoryViews.SEARCH:
+                P();
                 break;
-            case l.ApplicationDirectoryViews.APPLICATION:
-                if (null != s) {
-                    if (null != o) {
-                        if (o === c.ApplicationDirectoryProfileSections.STORE && null != E) {
-                            v({
-                                applicationId: s,
-                                skuId: E
+            case a.ApplicationDirectoryViews.APPLICATION:
+                if (null != i) {
+                    if (null != c) {
+                        if (c === u.ApplicationDirectoryProfileSections.STORE && null != _) {
+                            E({
+                                applicationId: i,
+                                skuId: _
                             });
                             break;
                         }
-                        m({
-                            applicationId: s,
-                            section: o
+                        d({
+                            applicationId: i,
+                            section: c
                         });
                         break;
                     }
-                    g({ applicationId: s });
+                    O({ applicationId: i });
                 }
         }
     },
-    f = () => {
-        let e = { previousView: (0, l.getCurrentView)() };
-        (0, s.uL)(d.Z5c.APPLICATION_DIRECTORY, { state: e });
+    A = () => {
+        let e = { previousView: (0, a.getCurrentView)() };
+        (0, i.uL)(s.Z5c.APPLICATION_DIRECTORY, { state: e });
     },
-    g = (e) => {
+    O = (e) => {
         let { applicationId: t } = e,
-            n = { previousView: (0, l.getCurrentView)() };
-        (0, s.uL)(d.Z5c.APPLICATION_DIRECTORY_PROFILE(t), { state: n });
+            n = { previousView: (0, a.getCurrentView)() };
+        (0, i.uL)(s.Z5c.APPLICATION_DIRECTORY_PROFILE(t), { state: n });
     },
-    m = (e) => {
+    d = (e) => {
         let { applicationId: t, section: n } = e,
-            i = { previousView: (0, l.getCurrentView)() };
-        (0, s.uL)(d.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(t, n), { state: i });
-    },
-    v = (e) => {
-        let { applicationId: t, skuId: n } = e,
-            i = { previousView: (0, l.getCurrentView)() };
-        (0, s.uL)(d.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(t, n), { state: i });
-    },
-    _ = function () {
-        let { query: e, categoryId: t, page: n } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            i = new URLSearchParams(),
-            r = { previousView: (0, l.getCurrentView)() };
-        null != e && i.set('q', e),
-            null != t && i.set('category_id', t.toString()),
-            null != n && i.set('page', n.toString()),
-            (0, s.uL)(d.Z5c.APPLICATION_DIRECTORY_SEARCH, {
-                search: i.toString(),
-                state: r
-            });
+            r = { previousView: (0, a.getCurrentView)() };
+        (0, i.uL)(s.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(t, n), { state: r });
     },
     E = (e) => {
-        let { categoryId: t } = e;
-        _({ categoryId: null != t ? t : o.MU });
+        let { applicationId: t, skuId: n } = e,
+            r = { previousView: (0, a.getCurrentView)() };
+        (0, i.uL)(s.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(t, n), { state: r });
     },
-    x = (e) => {
+    P = function () {
+        let { query: e, categoryId: t, page: n } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            r = new URLSearchParams(),
+            o = { previousView: (0, a.getCurrentView)() };
+        null != e && r.set('q', e),
+            null != t && r.set('category_id', t.toString()),
+            null != n && r.set('page', n.toString()),
+            (0, i.uL)(s.Z5c.APPLICATION_DIRECTORY_SEARCH, {
+                search: r.toString(),
+                state: o
+            });
+    },
+    _ = (e) => {
+        let { categoryId: t } = e;
+        P({ categoryId: null != t ? t : c.MU });
+    },
+    y = (e) => {
         let {
             location: { state: t }
-        } = (0, s.s1)();
-        (0, s.dL)(e, t);
+        } = (0, i.s1)();
+        (0, i.dL)(e, t);
     };

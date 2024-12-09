@@ -1,21 +1,18 @@
 n.d(t, {
     Gp: function () {
-        return p;
-    },
-    O4: function () {
         return u;
     },
-    XL: function () {
-        return m;
+    O4: function () {
+        return o;
     },
     Yp: function () {
-        return c;
+        return s;
     },
     pR: function () {
-        return h;
+        return d;
     },
     ph: function () {
-        return d;
+        return c;
     }
 }),
     n(610138),
@@ -24,66 +21,38 @@ n.d(t, {
     n(815648),
     n(47120);
 var i = n(34674),
-    l = n(749681),
     r = n(703656),
-    o = n(258971),
-    a = n(981631),
-    s = n(49898);
-let c = () => {
-        let e = { previousView: (0, o.Xh)() };
+    l = n(258971),
+    a = n(981631);
+let s = () => {
+        let e = { previousView: (0, l.Xh)() };
         (0, r.uL)(a.Z5c.GLOBAL_DISCOVERY_APPS, { state: e });
     },
-    u = (e) => {
+    o = (e) => {
         let { categoryId: t } = e,
-            n = { previousView: (0, o.Xh)() };
+            n = { previousView: (0, l.Xh)() };
         (0, r.uL)(a.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(t), { state: n });
     },
-    d = (e) => {
+    c = (e) => {
         let { applicationId: t } = e,
-            n = { previousView: (0, o.Xh)() };
+            n = { previousView: (0, l.Xh)() };
         (0, r.uL)(a.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t), { state: n });
     },
-    h = function () {
+    d = function () {
         let { query: e, categoryId: t, page: n } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            l = { previousView: (0, o.Xh)() },
-            s = new URLSearchParams();
-        null != e && '' !== e && s.set('q', e),
-            null != t && t !== i.MU && s.set('category_id', t.toString()),
-            null != n && n > 1 && s.set('page', n.toString()),
+            s = { previousView: (0, l.Xh)() },
+            o = new URLSearchParams();
+        null != e && '' !== e && o.set('q', e),
+            null != t && t !== i.MU && o.set('category_id', t.toString()),
+            null != n && n > 1 && o.set('page', n.toString()),
             (0, r.uL)(a.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, {
-                state: l,
-                search: s.toString()
+                state: s,
+                search: o.toString()
             });
     },
-    p = (e) => {
+    u = (e) => {
         let {
             location: { state: t }
         } = (0, r.s1)();
         (0, r.dL)(e, t);
     };
-function m() {
-    let { lastItem: e } = o.aQ.getState();
-    if (null != e)
-        switch (e.type) {
-            case o.m_.APPLICATION:
-                return (0, l.transitionToGlobalDiscovery)({
-                    tab: s.GlobalDiscoveryTab.APPS,
-                    applicationId: e.applicationId,
-                    section: e.section
-                });
-            case o.m_.CATEGORY:
-                return (0, l.transitionToGlobalDiscovery)({
-                    tab: s.GlobalDiscoveryTab.APPS,
-                    categoryId: Number(e.categoryId)
-                });
-            case o.m_.SEARCH:
-                var t;
-                return (0, l.transitionToGlobalDiscovery)({
-                    tab: s.GlobalDiscoveryTab.APPS,
-                    query: null !== (t = e.query) && void 0 !== t ? t : '',
-                    page: e.page,
-                    categoryId: null != e.categoryId ? Number(e.categoryId) : void 0
-                });
-        }
-    return (0, l.transitionToGlobalDiscovery)({ tab: s.GlobalDiscoveryTab.APPS });
-}

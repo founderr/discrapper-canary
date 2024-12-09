@@ -9,26 +9,30 @@ var i = n(200651),
     d = n(264043),
     u = n(894653),
     h = n(34674),
-    m = n(979233),
-    p = n(88693),
-    g = n(611928),
-    f = n(922122),
-    _ = n(680180),
-    E = n(703656),
-    I = n(31569),
-    C = n(975907),
-    v = n(119014),
-    N = n(258971),
-    S = n(133743),
-    T = n(726941),
-    b = n(666697),
-    x = n(548514),
-    A = n(370648),
-    Z = n(569527),
-    L = n(979007),
-    y = n(388032),
-    P = n(544973);
-function O(e) {
+    m = n(132871),
+    p = n(979233),
+    g = n(88693),
+    f = n(611928),
+    _ = n(922122),
+    E = n(680180),
+    I = n(726115),
+    C = n(703656),
+    v = n(626135),
+    N = n(31569),
+    S = n(975907),
+    T = n(119014),
+    b = n(258971),
+    A = n(133743),
+    x = n(726941),
+    Z = n(666697),
+    L = n(548514),
+    y = n(370648),
+    P = n(569527),
+    O = n(979007),
+    R = n(981631),
+    j = n(388032),
+    D = n(544973);
+function M(e) {
     let { applicationId: t, showDetailHeaderButtons: n, onClickBack: l } = e,
         c = (0, s.e7)([d.Z], () => d.Z.getApplication(t)),
         [u, h] = r.useState(!n),
@@ -36,11 +40,11 @@ function O(e) {
             h(!n);
         }, [n]);
     return (0, i.jsxs)('div', {
-        className: P.detailHeaderContainer,
+        className: D.detailHeaderContainer,
         children: [
             (0, i.jsx)('div', {
-                className: P.detailHeaderSection,
-                children: (0, i.jsx)(g.Cm, {
+                className: D.detailHeaderSection,
+                children: (0, i.jsx)(f.Cm, {
                     icon: o.ArrowLargeLeftIcon,
                     onClick: l
                 })
@@ -48,20 +52,20 @@ function O(e) {
             (0, i.jsx)(o.Heading, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                className: P.detailHeader,
+                className: D.detailHeader,
                 lineClamp: 1,
                 children: null == c ? void 0 : c.name
             }),
             (0, i.jsx)('div', {
-                className: a()(P.detailHeaderSection, P.detailHeaderButtonsContainer, {
-                    [P.visible]: n,
-                    [P.hide]: !n && !u,
-                    [P.hidden]: !n && u
+                className: a()(D.detailHeaderSection, D.detailHeaderButtonsContainer, {
+                    [D.visible]: n,
+                    [D.hide]: !n && !u,
+                    [D.hidden]: !n && u
                 }),
                 onTransitionEnd: m,
                 children:
                     null != c
-                        ? (0, i.jsx)(x.Z, {
+                        ? (0, i.jsx)(L.Z, {
                               application: c,
                               size: 'sm'
                           })
@@ -72,118 +76,135 @@ function O(e) {
 }
 t.Z = function () {
     var e;
-    let { onScroll: t, scrollPosition: n, resetScrollPosition: l } = (0, m.M)(),
-        a = (0, N.Xh)(),
-        d = (null == a ? void 0 : a.type) === N.m_.CATEGORY ? a.categoryId : void 0,
-        { applicationId: x, section: R } = (null == a ? void 0 : a.type) === N.m_.APPLICATION ? a : {},
-        { query: j, categoryId: D } = (null == a ? void 0 : a.type) === N.m_.SEARCH ? a : {},
-        M = (0, s.e7)([u.Z], () => u.Z.getCategories()),
-        w = r.useMemo(() => [(0, h.KQ)(), ...M], [M]),
-        k = r.useMemo(() => w.find((e) => e.id === Number(D)), [w, D]),
-        { tabs: U, selectedTab: G, onSelectTab: B } = (0, v.i)(null == d ? void 0 : d.toString()),
-        [H, V] = r.useState(!1),
-        F = r.useCallback((e) => {
-            V(!e);
-        }, []);
+    let { onScroll: t, scrollPosition: n, resetScrollPosition: l } = (0, p.M)(),
+        a = (0, b.Xh)(),
+        d = (null == a ? void 0 : a.type) === b.m_.CATEGORY ? a.categoryId : void 0,
+        { applicationId: L, section: w } = (null == a ? void 0 : a.type) === b.m_.APPLICATION ? a : {},
+        { query: k, categoryId: U } = (null == a ? void 0 : a.type) === b.m_.SEARCH ? a : {},
+        G = (0, s.e7)([u.Z], () => u.Z.getCategories()),
+        B = r.useMemo(() => [(0, h.KQ)(), ...G], [G]),
+        H = r.useMemo(() => B.find((e) => e.id === Number(U)), [B, U]),
+        { tabs: V, selectedTab: F, onSelectTab: z } = (0, T.i)(null == d ? void 0 : d.toString()),
+        [W, Y] = r.useState(!1),
+        K = r.useCallback((e) => {
+            Y(!e);
+        }, []),
+        q = b.z8.useField('trackedOpenedFromExternalEntrypoint'),
+        X = b.z8.useField('sessionId');
     r.useEffect(() => {
-        c.CP();
-    }, []),
+        if (!q && null == X) {
+            let e = (0, I.PM)();
+            v.default.track(R.rMx.APP_DIRECTORY_OPENED, {
+                source: m.ApplicationDirectoryEntrypointNames.EXTERNAL,
+                session_id: e
+            }),
+                b.z8.setState({
+                    trackedOpenedFromExternalEntrypoint: !0,
+                    sessionId: e,
+                    entrypoint: { name: m.ApplicationDirectoryEntrypointNames.EXTERNAL },
+                    guildId: null
+                });
+        }
+    }, [X, q]),
+        r.useEffect(() => {
+            c.CP();
+        }, []),
         r.useEffect(() => {
             c.g5();
         }, []),
-        r.useEffect(() => N.aQ.setState({ lastItem: a }), [a]);
-    let z = null != x,
-        W = (null == a ? void 0 : a.type) === N.m_.SEARCH,
-        { searchQuery: Y, onSearchTextChange: K, onClearSearch: q, onSearchSubmit: X } = (0, C.M)({ initialQuery: null != j ? j : '' }),
-        Q = I.Z.useField('searchBarState'),
+        r.useEffect(() => b.aQ.setState({ lastItem: a }), [a]);
+    let Q = null != L,
+        J = (null == a ? void 0 : a.type) === b.m_.SEARCH,
+        { searchQuery: $, onSearchTextChange: ee, onClearSearch: et, onSearchSubmit: en } = (0, S.M)({ initialQuery: null != k ? k : '' }),
+        ei = N.Z.useField('searchBarState'),
         {
-            onTabsAvailableWidthChange: J,
-            onCollapsedSearchBarClick: $,
-            onSearchBarBlur: ee
-        } = (0, p.U)({
+            onTabsAvailableWidthChange: er,
+            onCollapsedSearchBarClick: el,
+            onSearchBarBlur: ea
+        } = (0, g.U)({
             isSearchBarVisible: !0,
-            isSearchBarEmpty: '' === Y.trim(),
-            searchBarState: Q,
-            setSearchBarState: (e) => I.Z.setState({ searchBarState: e })
+            isSearchBarEmpty: '' === $.trim(),
+            searchBarState: ei,
+            setSearchBarState: (e) => N.Z.setState({ searchBarState: e })
         }),
-        et = r.useCallback(
+        es = r.useCallback(
             (e) => {
-                B(e), W && q(), l();
+                z(e), J && et(), l();
             },
-            [W, q, B, l]
+            [J, et, z, l]
         ),
-        en = r.useCallback((e) => (0, S.ph)({ applicationId: e }), []),
-        ei = z || W,
-        er = r.useCallback(() => {
-            null != (0, N.Uc)() ? (0, E.op)() : (0, S.Yp)();
+        eo = r.useCallback((e) => (0, A.ph)({ applicationId: e }), []),
+        ec = Q || J,
+        ed = r.useCallback(() => {
+            null != (0, b.Uc)() ? (0, C.op)() : (0, A.Yp)();
         }, []);
     return (0, i.jsxs)('div', {
-        className: P.container,
+        className: D.container,
         children: [
-            (0, i.jsxs)(g.ZP, {
-                variant: ei ? g._6.RELATIVE : g._6.OVERLAY,
+            (0, i.jsxs)(f.ZP, {
+                variant: ec ? f._6.RELATIVE : f._6.OVERLAY,
                 children: [
-                    !ei && (0, i.jsx)(g.z6, { scrollPosition: n }),
-                    z
-                        ? (0, i.jsx)(O, {
-                              applicationId: x,
-                              showDetailHeaderButtons: H,
-                              onClickBack: er
+                    !ec && (0, i.jsx)(f.z6, { scrollPosition: n }),
+                    Q
+                        ? (0, i.jsx)(M, {
+                              applicationId: L,
+                              showDetailHeaderButtons: W,
+                              onClickBack: ed
                           })
                         : (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  W
-                                      ? (0, i.jsx)(g.Cm, {
+                                  J
+                                      ? (0, i.jsx)(f.Cm, {
                                             icon: o.ArrowLargeLeftIcon,
-                                            onClick: er
+                                            onClick: ed
                                         })
-                                      : (0, i.jsx)(g.aV, { icon: o.AppsIcon }),
-                                  W
+                                      : (0, i.jsx)(f.aV, { icon: o.AppsIcon }),
+                                  J
                                       ? (0, i.jsx)(o.Heading, {
                                             variant: 'heading-lg/semibold',
                                             color: 'header-primary',
-                                            className: P.searchHeader,
-                                            children: null != j && '' !== j ? y.intl.formatToPlainString(y.t.zHdzqa, { query: j }) : y.intl.formatToPlainString(y.t.Qhj5Bg, { categoryName: null !== (e = null == k ? void 0 : k.name) && void 0 !== e ? e : y.intl.string(y.t.E407b2) })
+                                            className: D.searchHeader,
+                                            children: null != k && '' !== k ? j.intl.formatToPlainString(j.t.zHdzqa, { query: k }) : j.intl.formatToPlainString(j.t.Qhj5Bg, { categoryName: null !== (e = null == H ? void 0 : H.name) && void 0 !== e ? e : j.intl.string(j.t.E407b2) })
                                         })
-                                      : (0, i.jsx)(f.Z, {
-                                            tabs: U,
-                                            selectedTab: G,
-                                            onTabSelect: et,
-                                            onAvailableWidthChange: J
+                                      : (0, i.jsx)(_.Z, {
+                                            tabs: V,
+                                            selectedTab: F,
+                                            onTabSelect: es,
+                                            onAvailableWidthChange: er
                                         }),
-                                  (0, i.jsx)(_.Z, {
-                                      query: Y,
-                                      placeholder: y.intl.string(y.t.HPQXEB),
-                                      onTextChange: K,
-                                      onClear: q,
-                                      onSubmit: X,
-                                      onCollapsedClick: $,
-                                      state: Q,
-                                      onBlur: ee
+                                  (0, i.jsx)(E.Z, {
+                                      query: $,
+                                      placeholder: j.intl.string(j.t.HPQXEB),
+                                      onTextChange: ee,
+                                      onClear: et,
+                                      onSubmit: en,
+                                      onCollapsedClick: el,
+                                      state: ei,
+                                      onBlur: ea
                                   })
                               ]
                           })
                 ]
             }),
-            z
-                ? (0, i.jsx)(b.Z, {
+            Q
+                ? (0, i.jsx)(Z.Z, {
                       onScroll: t,
-                      onSelectApplication: en,
-                      applicationId: x,
-                      initialTab: R,
-                      onButtonsVisibilityChange: F
+                      onSelectApplication: eo,
+                      applicationId: L,
+                      initialTab: w,
+                      onButtonsVisibilityChange: K
                   })
-                : W
-                  ? (0, i.jsx)(Z.Z, { onSelectApplication: en })
-                  : G === L.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID
-                    ? (0, i.jsx)(A.Z, {
+                : J
+                  ? (0, i.jsx)(P.Z, { onSelectApplication: eo })
+                  : F === O.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID
+                    ? (0, i.jsx)(y.Z, {
                           onScroll: t,
-                          onSelectApplication: en
+                          onSelectApplication: eo
                       })
-                    : (0, i.jsx)(T.Z, {
-                          tabId: Number(G),
+                    : (0, i.jsx)(x.Z, {
+                          tabId: Number(F),
                           onScroll: t,
-                          onSelectApplication: en
+                          onSelectApplication: eo
                       })
         ]
     });

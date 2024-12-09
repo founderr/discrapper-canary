@@ -1,90 +1,102 @@
-n.d(t, {
-    Uc: function () {
-        return p;
-    },
-    Xh: function () {
-        return m;
-    },
-    aQ: function () {
-        return h;
-    },
-    m_: function () {
-        return i;
-    }
-}),
+if (
+    (n.d(t, {
+        Uc: function () {
+            return A;
+        },
+        Xh: function () {
+            return O;
+        },
+        aQ: function () {
+            return S;
+        },
+        m_: function () {
+            return r;
+        },
+        z8: function () {
+            return I;
+        }
+    }),
     n(610138),
     n(216116),
     n(78328),
     n(815648),
-    n(47120);
-var i,
-    l,
-    r = n(512969),
-    o = n(972959),
-    a = n(264043),
-    s = n(34674),
-    c = n(703656),
-    u = n(979007),
-    d = n(981631);
-((l = i || (i = {})).HOME = 'home'), (l.SEARCH = 'search'), (l.APPLICATION = 'application'), (l.CATEGORY = 'category');
-let h = (0, o.H)(() => ({}));
-function p() {
+    n(47120),
+    12633 == n.j)
+)
+    var r,
+        o,
+        i = n(512969);
+var l = n(972959),
+    c = n(264043),
+    a = n(34674),
+    u = n(703656),
+    s = n(979007),
+    p = n(981631);
+((o = r || (r = {})).HOME = 'home'), (o.SEARCH = 'search'), (o.APPLICATION = 'application'), (o.CATEGORY = 'category');
+let S = (0, l.H)(() => ({})),
+    I = (0, l.H)(() => ({
+        sessionId: null,
+        guildId: null,
+        entrypoint: null,
+        trackedOpenedFromExternalEntrypoint: !1
+    }));
+function A() {
     let {
         location: { state: e }
-    } = (0, c.s1)();
+    } = (0, u.s1)();
     return null == e ? void 0 : e.previousView;
 }
-function m() {
+function O() {
     var e, t, n;
     let {
-        location: { pathname: i, search: l }
-    } = (0, c.s1)();
+        location: { pathname: r, search: o }
+    } = (0, u.s1)();
     if (
         null !=
-        (0, r.LX)(i, {
-            path: d.Z5c.GLOBAL_DISCOVERY_APPS,
+        (0, i.LX)(r, {
+            path: p.Z5c.GLOBAL_DISCOVERY_APPS,
             exact: !0
         })
     )
         return { type: 'home' };
     if (
         null !=
-        (0, r.LX)(i, {
-            path: d.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH,
+        (0, i.LX)(r, {
+            path: p.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH,
             exact: !0
         })
     ) {
-        let e = new URLSearchParams(l),
+        let e = new URLSearchParams(o),
             t = { type: 'search' },
             n = e.get('q');
         null != n && '' !== n && (t.query = n);
-        let i = Number(e.get('category_id'));
-        Number.isInteger(i) && i !== s.MU && (t.categoryId = i.toString());
-        let r = Number(e.get('page'));
-        return null != r && r > 1 && (t.page = r), t;
+        let r = Number(e.get('category_id'));
+        Number.isInteger(r) && r !== a.MU && (t.categoryId = r.toString());
+        let i = Number(e.get('page'));
+        return null != i && i > 1 && (t.page = i), t;
     }
-    let o = (0, r.LX)(i, {
-            path: [d.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(':categoryId')],
+    let l = (0, i.LX)(r, {
+            path: [p.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(':categoryId')],
             exact: !0
         }),
-        { categoryId: h } = null !== (e = null == o ? void 0 : o.params) && void 0 !== e ? e : {};
-    if (null != o && null != h)
+        { categoryId: S } = null !== (e = null == l ? void 0 : l.params) && void 0 !== e ? e : {};
+    if (null != l && null != S)
         return {
             type: 'category',
-            categoryId: h
+            categoryId: S
         };
-    let p = (0, r.LX)(i, {
-            path: [d.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId'), d.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', ':section'), d.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId')],
+    let I = (0, i.LX)(r, {
+            path: [p.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId'), p.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', ':section'), p.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId')],
             exact: !0
         }),
-        { applicationId: m, section: f, skuId: g } = null !== (t = null == p ? void 0 : p.params) && void 0 !== t ? t : {};
-    if (null != p && null != m) {
-        let e = null === (n = a.Z.getApplication(m)) || void 0 === n ? void 0 : n.name;
+        { applicationId: A, section: O, skuId: d } = null !== (t = null == I ? void 0 : I.params) && void 0 !== t ? t : {};
+    if (null != I && null != A) {
+        let e = null === (n = c.Z.getApplication(A)) || void 0 === n ? void 0 : n.name;
         return {
             type: 'application',
-            applicationId: m,
+            applicationId: A,
             applicationName: e,
-            section: null != f ? f : null != g ? u.GlobalDiscoveryAppsSections.STORE : u.GlobalDiscoveryAppsSections.ABOUT
+            section: null != O ? O : null != d ? s.GlobalDiscoveryAppsSections.STORE : s.GlobalDiscoveryAppsSections.ABOUT
         };
     }
 }
