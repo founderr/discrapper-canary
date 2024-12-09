@@ -107,6 +107,7 @@ function K(e) {
                       image: ec,
                       smallImage: ed,
                       size: h.J.SIZE_60,
+                      className: W.clickableImage,
                       aspectRatio: e,
                       onClick: (e) => {
                           eo({ action: 'PRESS_IMAGE' }), ef(e);

@@ -16,6 +16,7 @@ e.exports = {
     customButton: 'customButton_ae1fa2',
     badges: 'badges_ae1fa2',
     clickableContainer: 'clickableContainer_ae1fa2',
+    clickableImage: 'clickableImage_ae1fa2',
     clickableText: 'clickableText_ae1fa2',
     inline: 'inline_ae1fa2',
     gameState: 'gameState_ae1fa2',

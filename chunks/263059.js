@@ -177,6 +177,7 @@ function M(e) {
                                                     children: [
                                                         (0, r.jsx)(f.E, {
                                                             image: K,
+                                                            className: P.clickableImage,
                                                             onClick: () => {
                                                                 q({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, p.Z5)(M, n.id);
                                                             },

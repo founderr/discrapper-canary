@@ -47,60 +47,66 @@ function h(e) {
 }
 function m(e) {
     var t, n;
-    let { image: r, smallImage: i, aspectRatio: s, onClick: m, size: g } = e,
-        { imageSize: E, smallImageSize: v, mask: I } = p[g],
-        T = (0, a.jsx)(c.f, {
-            src: null == r ? void 0 : r.src,
-            alt: null !== (n = null !== (t = null == r ? void 0 : r.alt) && void 0 !== t ? t : null == r ? void 0 : r.text) && void 0 !== n ? n : d.intl.string(d.t['2B/phI']),
-            size: E,
-            className: o()(f.contentImage, _[null != s ? s : 'default']),
+    let { image: r, smallImage: i, aspectRatio: s, onClick: m, size: g, className: E } = e,
+        { imageSize: v, smallImageSize: I, mask: T } = p[g];
+    if (null == r)
+        return (0, a.jsx)(c.f, {
+            src: void 0,
+            alt: d.intl.string(d.t['2B/phI']),
+            size: v,
+            className: o()(f.contentImage, _[null != s ? s : 'default'], E),
             constrain: 'width'
         });
-    return null == r
-        ? T
-        : (0, a.jsxs)('div', {
-              className: f.imagePosition,
-              children: [
-                  (0, a.jsx)(l.Tooltip, {
-                      text: r.text,
-                      children: (e) =>
-                          (0, a.jsx)(h, {
-                              onClick: m,
-                              children:
-                                  null != i
-                                      ? (0, a.jsx)(u.ZP, {
-                                            ...e,
-                                            className: f.imageContainer,
-                                            mask: I,
-                                            width: E,
-                                            height: E,
-                                            children: T
-                                        })
-                                      : (0, a.jsx)('div', {
-                                            ...e,
-                                            className: f.imageContainer,
-                                            children: T
-                                        })
-                          })
-                  }),
-                  null != i &&
-                      (0, a.jsx)(l.Tooltip, {
-                          text: i.text,
-                          children: (e) => {
-                              var t;
-                              return (0, a.jsx)('div', {
-                                  ...e,
-                                  className: f.smallImageContainer,
-                                  children: (0, a.jsx)(c.f, {
-                                      src: i.src,
-                                      alt: null !== (t = i.alt) && void 0 !== t ? t : i.text,
-                                      size: v,
-                                      className: f.contentImage,
-                                      constrain: 'width'
+    let b = (0, a.jsx)(c.f, {
+        src: r.src,
+        alt: null !== (n = null !== (t = r.alt) && void 0 !== t ? t : r.text) && void 0 !== n ? n : d.intl.string(d.t['2B/phI']),
+        size: v,
+        className: o()(f.contentImage, _[null != s ? s : 'default']),
+        constrain: 'width'
+    });
+    return (0, a.jsxs)('div', {
+        className: o()(f.imagePosition, E),
+        children: [
+            (0, a.jsx)(l.Tooltip, {
+                text: r.text,
+                children: (e) =>
+                    (0, a.jsx)(h, {
+                        onClick: m,
+                        children:
+                            null != i
+                                ? (0, a.jsx)(u.ZP, {
+                                      ...e,
+                                      className: f.imageContainer,
+                                      mask: T,
+                                      width: v,
+                                      height: v,
+                                      children: b
                                   })
-                              });
-                          }
-                      })
-              ]
-          });
+                                : (0, a.jsx)('div', {
+                                      ...e,
+                                      className: f.imageContainer,
+                                      children: b
+                                  })
+                    })
+            }),
+            null != i &&
+                (0, a.jsx)(l.Tooltip, {
+                    text: i.text,
+                    children: (e) => {
+                        var t;
+                        return (0, a.jsx)('div', {
+                            ...e,
+                            className: f.smallImageContainer,
+                            children: (0, a.jsx)(c.f, {
+                                src: i.src,
+                                alt: null !== (t = i.alt) && void 0 !== t ? t : i.text,
+                                size: I,
+                                className: f.contentImage,
+                                constrain: 'width'
+                            })
+                        });
+                    }
+                })
+        ]
+    });
 }

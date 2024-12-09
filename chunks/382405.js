@@ -117,10 +117,11 @@ function k(e) {
                           children: [
                               (0, r.jsx)(h.E, {
                                   image: p,
+                                  size: h.J.SIZE_60,
+                                  className: M.clickableImage,
                                   onClick: (e) => {
                                       I({ action: 'PRESS_IMAGE' }), g(e), d !== w.y0.FULL_SIZE && (null == c || c());
-                                  },
-                                  size: h.J.SIZE_60
+                                  }
                               }),
                               (0, r.jsxs)('div', {
                                   className: M.details,
@@ -178,17 +179,21 @@ function U(e) {
                 children: (0, r.jsxs)('div', {
                     className: a()(M.content, d),
                     children: [
-                        (0, r.jsx)(h.E, {
-                            aspectRatio: 'crunchyroll',
-                            image: f,
-                            size: h.J.SIZE_60,
-                            onClick:
-                                null == p || '' === p
-                                    ? void 0
-                                    : () => {
-                                          E({ action: 'PRESS_IMAGE' }), (0, m.Y)(p);
-                                      }
-                        }),
+                        null == p || '' === p
+                            ? (0, r.jsx)(h.E, {
+                                  aspectRatio: 'crunchyroll',
+                                  image: f,
+                                  size: h.J.SIZE_60
+                              })
+                            : (0, r.jsx)(h.E, {
+                                  aspectRatio: 'crunchyroll',
+                                  image: f,
+                                  size: h.J.SIZE_60,
+                                  className: M.clickableImage,
+                                  onClick: () => {
+                                      E({ action: 'PRESS_IMAGE' }), (0, m.Y)(p);
+                                  }
+                              }),
                         (0, r.jsxs)('div', {
                             className: M.details,
                             children: [
@@ -270,6 +275,7 @@ function B(e) {
                               (0, r.jsx)(h.E, {
                                   image: p,
                                   size: h.J.SIZE_60,
+                                  className: M.clickableImage,
                                   onClick: () => {
                                       E({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, m.o)(P.Hw.ALBUM, T.external_parent_id);
                                   }
@@ -341,6 +347,7 @@ function G(e) {
                         (0, r.jsx)(h.E, {
                             image: d,
                             size: h.J.SIZE_60,
+                            className: M.clickableImage,
                             onClick: () => {
                                 p({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, m.o)(P.Hw.ALBUM, n.extra.media.external_parent_id);
                             }
@@ -417,6 +424,7 @@ function Z(e) {
                         (0, r.jsx)(h.E, {
                             image: m,
                             size: h.J.SIZE_60,
+                            className: M.clickableImage,
                             onClick: () => {
                                 v({ action: 'PRESS_IMAGE' }), T();
                             }
