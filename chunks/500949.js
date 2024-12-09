@@ -1,12 +1,12 @@
 n.d(t, {
     $R: function () {
-        return Y;
+        return K;
     },
     A0: function () {
         return ee;
     },
     GU: function () {
-        return X;
+        return Y;
     },
     H8: function () {
         return r;
@@ -45,13 +45,13 @@ n.d(t, {
         return a;
     },
     jC: function () {
-        return z;
+        return U;
     },
     jQ: function () {
         return G;
     },
     lT: function () {
-        return K;
+        return X;
     },
     rd: function () {
         return es;
@@ -91,19 +91,19 @@ var r,
     _ = n(135164),
     T = n(940172),
     S = n(81011),
-    y = n(981613),
-    N = n(762399),
-    I = n(232112),
-    E = n(53796),
-    k = n(402332),
-    w = n(375924),
+    N = n(981613),
+    y = n(762399),
+    k = n(232112),
+    I = n(53796),
+    w = n(402332),
+    E = n(375924),
     Z = n(596136),
     R = n(341901),
     O = n(856308),
-    A = n(665352),
-    L = n(394900),
-    P = n(661105),
-    B = n(525169),
+    B = n(665352),
+    A = n(394900),
+    L = n(661105),
+    P = n(525169),
     D = n(433517),
     F = n(190558),
     M = n(231338);
@@ -125,20 +125,20 @@ let H = {
         Lab: _.Z,
         Lab_D65: T.Z,
         Luv: S.Z,
-        OKLCH: y.Z,
-        OKLab: N.Z,
-        P3: I.Z,
-        ProPhoto: E.Z,
-        REC_2020: k.Z,
-        REC_2100_HLG: w.Z,
+        OKLCH: N.Z,
+        OKLab: y.Z,
+        P3: k.Z,
+        ProPhoto: I.Z,
+        REC_2020: w.Z,
+        REC_2100_HLG: E.Z,
         REC_2100_PQ: Z.Z,
         XYZ_D50: R.Z,
         XYZ_D65: O.Z
     },
     G = Object.fromEntries(Object.keys(H).map((e) => [e, e]));
-Object.values(H).forEach((e) => A.Z.register(e));
-let { SemanticColors: U } = F.V,
-    z = U,
+Object.values(H).forEach((e) => B.Z.register(e));
+let { SemanticColors: z } = F.V,
+    U = z,
     V = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
 function W(e, t) {
     let [n, r] = o.useState(() => {
@@ -152,8 +152,8 @@ function W(e, t) {
         [n, r]
     );
 }
-function Y(e) {
-    let t = z[e];
+function K(e) {
+    let t = U[e];
     return {
         name: e,
         colors: Object.fromEntries(
@@ -168,7 +168,7 @@ function Y(e) {
         highlight: !1
     };
 }
-function K(e, t, n, r, a) {
+function X(e, t, n, r, a) {
     return {
         name: t,
         colors: {
@@ -181,14 +181,14 @@ function K(e, t, n, r, a) {
         highlight: !1
     };
 }
-function X(e) {
+function Y(e) {
     return {
         ...e,
         highlight: !e.highlight
     };
 }
 function q(e) {
-    return (0, L.Z)((0, P.Z)(e, s.Z), { format: 'hex' });
+    return (0, A.Z)((0, L.Z)(e, s.Z), { format: 'hex' });
 }
 function $() {
     return (function (e, t) {
@@ -217,10 +217,10 @@ function $() {
     });
 }
 ((l = r || (r = {})).TOKENS = 'Tokens'), (l.PALETTES = 'Palettes');
-let Q = [100, 130, 160, 200, 230, 260, 300, 330, 345, 360, 400, 430, 460, 500, 530, 560, 600, 630, 660, 700, 730, 760, 800, 830, 860, 900],
-    J = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
+let J = [100, 130, 160, 200, 230, 260, 300, 330, 345, 360, 400, 430, 460, 500, 530, 560, 600, 630, 660, 700, 730, 760, 800, 830, 860, 900],
+    Q = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
 function ee(e) {
-    return 'plum' === e ? J : Q;
+    return 'plum' === e ? Q : J;
 }
 function et(e, t) {
     let n = ee(t),
@@ -239,24 +239,24 @@ function et(e, t) {
 function en(e) {
     let { name: t, base: n, steps: r = 26, darkness: a, lightness: l, easingStrength: i = 1 } = e,
         o = H[e.colorSpace],
-        c = (0, P.Z)(n, o),
-        d = (0, B.CD)(c, 'white', 1 - a, {
+        c = (0, L.Z)(n, o),
+        d = (0, P.CD)(c, 'white', 1 - a, {
             space: o,
             outputSpace: s.Z
         }),
-        u = (0, B.CD)(c, 'black', 1 - l, {
+        u = (0, P.CD)(c, 'black', 1 - l, {
             space: o,
             outputSpace: s.Z
         }),
         h = Math.floor(r / 2),
         m = r - h,
-        x = (0, B.w6)(d, c, {
+        x = (0, P.w6)(d, c, {
             steps: h,
             outputSpace: o,
             space: o,
             progression: (e) => e ** i
         }),
-        f = (0, B.w6)(u, c, {
+        f = (0, P.w6)(u, c, {
             steps: m,
             outputSpace: o,
             space: o,

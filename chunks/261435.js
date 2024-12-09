@@ -1,10 +1,10 @@
 n(47120), n(653041);
 var i,
-    r,
     s,
+    r,
     a,
-    o,
     l,
+    o,
     c,
     d,
     u = n(512722),
@@ -19,119 +19,119 @@ var i,
     x = n(181912),
     Z = n(791288),
     S = n(194295),
-    I = n(998033),
-    C = n(181364),
+    C = n(998033),
+    I = n(181364),
     y = n(435064),
-    T = n(668761),
-    N = n(86071),
+    N = n(668761),
+    T = n(86071),
     b = n(358446),
     O = n(695346),
-    A = n(314897),
-    L = n(592125),
-    P = n(292959),
-    R = n(158776),
-    j = n(944486),
-    w = n(885110),
-    D = n(246946),
-    M = n(594174),
-    k = n(974180),
+    j = n(314897),
+    A = n(592125),
+    M = n(292959),
+    P = n(158776),
+    L = n(944486),
+    R = n(885110),
+    w = n(246946),
+    k = n(594174),
+    D = n(974180),
     z = n(237997),
-    V = n(70956),
-    U = n(150097),
-    B = n(129724),
-    G = n(449224),
-    W = n(981631),
+    B = n(70956),
+    V = n(150097),
+    U = n(129724),
+    W = n(449224),
+    G = n(981631),
     F = n(987650),
     H = n(388032);
-((a = i || (i = {}))[(a.GENERIC = 0)] = 'GENERIC'), (a[(a.TEXT = 1)] = 'TEXT'), (a[(a.INCOMING_CALL = 2)] = 'INCOMING_CALL'), ((o = r || (r = {}))[(o.NORMAL = 0)] = 'NORMAL'), (o[(o.HIGH = 1)] = 'HIGH'), (o[(o.URGENT = 2)] = 'URGENT');
-let Y = 5 * V.Z.Millis.SECOND,
-    K = 8 * V.Z.Millis.SECOND,
-    X = 30 * V.Z.Millis.SECOND,
-    q = Object.freeze({
+((a = i || (i = {}))[(a.GENERIC = 0)] = 'GENERIC'), (a[(a.TEXT = 1)] = 'TEXT'), (a[(a.INCOMING_CALL = 2)] = 'INCOMING_CALL'), ((l = s || (s = {}))[(l.NORMAL = 0)] = 'NORMAL'), (l[(l.HIGH = 1)] = 'HIGH'), (l[(l.URGENT = 2)] = 'URGENT');
+let Y = 5 * B.Z.Millis.SECOND,
+    K = 8 * B.Z.Millis.SECOND,
+    X = 30 * B.Z.Millis.SECOND,
+    Q = Object.freeze({
         priority: 0,
         duration: Y,
         expirationExternallyManaged: !1,
         type: 0
     }),
-    Q = [],
+    q = [],
     J = (e, t, n) => {
-        let i = t ? W._1z.TIMED_OUT : W._1z.DISMISSED;
+        let i = t ? G._1z.TIMED_OUT : G._1z.DISMISSED;
         return setTimeout(() => m.Z.updateNotificationStatus(e, i), null != n ? n : Y);
     };
 function $(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : W._1z.DISMISSED;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : G._1z.DISMISSED;
     if (null == e) return !1;
-    let n = Q.findIndex((t) => t.id === e);
+    let n = q.findIndex((t) => t.id === e);
     if (-1 === n) return !1;
-    let i = Q[n];
+    let i = q[n];
     clearTimeout(i.timerId),
-        (Q = [...Q]),
-        t === W._1z.DISMISSED
-            ? Q.splice(n, 1)
-            : (Q[n] = {
+        (q = [...q]),
+        t === G._1z.DISMISSED
+            ? q.splice(n, 1)
+            : (q[n] = {
                   ...i,
                   status: t
               });
 }
 function ee(e) {
-    let t = Q.length;
-    return (Q = Q.filter((t) => 1 !== t.type || t.channelId !== e || !1)).length !== t;
+    let t = q.length;
+    return (q = q.filter((t) => 1 !== t.type || t.channelId !== e || !1)).length !== t;
 }
 function et(e) {
-    let t = Q.find((t) => 2 === t.type && t.channelId === e);
+    let t = q.find((t) => 2 === t.type && t.channelId === e);
     return null != t ? t.id : null;
 }
 function en(e, t) {
     let n = {
-        ...q,
+        ...Q,
         ...t
     };
     if (2 !== n.priority && !z.Z.isInstanceFocused()) return null;
     let i = (0, p.Z)(),
-        r = {
+        s = {
             id: i,
-            status: W._1z.ACTIVE,
+            status: G._1z.ACTIVE,
             timerId: J(i, n.expirationExternallyManaged, n.duration),
             props: e,
             ...n
         },
-        s = (Q = [...Q]).findIndex((e) => e.priority <= n.priority);
-    return -1 === s ? Q.push(r) : Q.splice(s, 0, r), Q.length > 10 && clearTimeout(Q.pop().timerId), i;
+        r = (q = [...q]).findIndex((e) => e.priority <= n.priority);
+    return -1 === r ? q.push(s) : q.splice(r, 0, s), q.length > 10 && clearTimeout(q.pop().timerId), i;
 }
 function ei(e) {
     let { channelId: t, ringing: n } = e,
         i = et(t);
-    if (!n.includes(A.default.getId())) return $(i);
+    if (!n.includes(j.default.getId())) return $(i);
     if (null != i) return !1;
-    let r = L.Z.getChannel(t);
-    if (null == r || !r.isPrivate() || w.Z.getStatus() === W.Skl.DND || O.QZ.getSetting()) return !1;
-    let s = Q.find((e) => 1 === e.type && e.channelId === t && e.messageType === W.uaV.CALL);
-    null != s && $(s.id),
-        en((0, x.Z)(r), {
+    let s = A.Z.getChannel(t);
+    if (null == s || !s.isPrivate() || R.Z.getStatus() === G.Skl.DND || O.QZ.getSetting()) return !1;
+    let r = q.find((e) => 1 === e.type && e.channelId === t && e.messageType === G.uaV.CALL);
+    null != r && $(r.id),
+        en((0, x.Z)(s), {
             priority: 1,
             expirationExternallyManaged: !0,
             type: 2,
-            channelId: r.id
+            channelId: s.id
         });
 }
-class er extends (s = f.ZP.Store) {
+class es extends (r = f.ZP.Store) {
     initialize() {
-        this.waitFor(L.Z, M.default);
+        this.waitFor(A.Z, k.default);
     }
     getNotifications() {
-        return Q;
+        return q;
     }
 }
 (d = 'OverlayNotificationsStore'),
-    (c = 'displayName') in (l = er)
-        ? Object.defineProperty(l, c, {
+    (c = 'displayName') in (o = es)
+        ? Object.defineProperty(o, c, {
               value: d,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[c] = d),
-    (t.Z = new er(
+        : (o[c] = d),
+    (t.Z = new es(
         g.Z,
         __OVERLAY__
             ? {
@@ -150,7 +150,7 @@ class er extends (s = f.ZP.Store) {
                                       return (0, b.Z)(e);
                                   case F.nc.NEWS:
                                   default:
-                                      return (0, C.Z)(e);
+                                      return (0, I.Z)(e);
                               }
                           })(t[0]);
                       null != n &&
@@ -162,8 +162,8 @@ class er extends (s = f.ZP.Store) {
                   OVERLAY_SET_INPUT_LOCKED: function (e) {
                       let { locked: t } = e;
                       if (t) return !1;
-                      Q = Q.map((e) =>
-                          e.status === W._1z.ACTIVE
+                      q = q.map((e) =>
+                          e.status === G._1z.ACTIVE
                               ? (clearTimeout(e.timerId),
                                 {
                                     ...e,
@@ -174,42 +174,42 @@ class er extends (s = f.ZP.Store) {
                   },
                   MESSAGE_CREATE: function (e) {
                       var t, n, i;
-                      let { channelId: r, message: s } = e,
-                          a = L.Z.getChannel(r),
-                          o = M.default.getUser(null === (t = s.author) || void 0 === t ? void 0 : t.id);
-                      if (null == a || null == o) return !1;
-                      if ((null === (n = s.activity) || void 0 === n ? void 0 : n.type) === W.mFx.JOIN || (null === (i = s.activity) || void 0 === i ? void 0 : i.type) === W.mFx.JOIN_REQUEST) {
-                          if (!(0, U.eF)(s, r, !0, !0)) return !1;
+                      let { channelId: s, message: r } = e,
+                          a = A.Z.getChannel(s),
+                          l = k.default.getUser(null === (t = r.author) || void 0 === t ? void 0 : t.id);
+                      if (null == a || null == l) return !1;
+                      if ((null === (n = r.activity) || void 0 === n ? void 0 : n.type) === G.mFx.JOIN || (null === (i = r.activity) || void 0 === i ? void 0 : i.type) === G.mFx.JOIN_REQUEST) {
+                          if (!(0, V.eF)(r, s, !0, !0)) return !1;
                           let e = (function (e, t, n) {
-                              let i, r;
-                              if ((h()(null != t.activity, 'received null message activity'), n.id === A.default.getId())) return !1;
-                              let s = G.Z.getGame();
-                              if (null == s) return !1;
-                              switch (t.activity.type) {
-                                  case W.mFx.JOIN:
-                                      if (null == (i = R.Z.getApplicationActivity(n.id, s.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
-                                      r = (0, v.Z)(e, t, n, s, i);
-                                      break;
-                                  case W.mFx.JOIN_REQUEST:
-                                      if (null == (i = w.Z.getApplicationActivity(s.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
-                                      r = (0, S.Z)(e, n, s, i);
-                              }
+                              let i, s;
+                              if ((h()(null != t.activity, 'received null message activity'), n.id === j.default.getId())) return !1;
+                              let r = W.Z.getGame();
                               if (null == r) return !1;
-                              let a = en(r, {
+                              switch (t.activity.type) {
+                                  case G.mFx.JOIN:
+                                      if (null == (i = P.Z.getApplicationActivity(n.id, r.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
+                                      s = (0, v.Z)(e, t, n, r, i);
+                                      break;
+                                  case G.mFx.JOIN_REQUEST:
+                                      if (null == (i = R.Z.getApplicationActivity(r.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
+                                      s = (0, S.Z)(e, n, r, i);
+                              }
+                              if (null == s) return !1;
+                              let a = en(s, {
                                   priority: 2,
                                   expirationExternallyManaged: !0,
                                   channelId: e.id
                               });
                               return null != a && J(a, !1, X), !0;
-                          })(a, s, o);
+                          })(a, r, l);
                           if (!1 !== e) return e;
                       }
-                      if (((!z.Z.isInstanceLocked() || z.Z.isPinned(W.Odu.TEXT)) && r === j.Z.getChannelId()) || z.Z.getTextChatNotificationMode() === W.Ypu.DISABLED || D.Z.disableNotifications || !(0, U.eF)(s, r)) return !1;
-                      let l = !P.Z.isSoundDisabled(k.Ay);
-                      en((0, I.Z)(a, s, o, l), {
+                      if (((!z.Z.isInstanceLocked() || z.Z.isPinned(G.Odu.TEXT)) && s === L.Z.getChannelId()) || z.Z.getTextChatNotificationMode() === G.Ypu.DISABLED || w.Z.disableNotifications || !(0, V.eF)(r, s)) return !1;
+                      let o = !M.Z.isSoundDisabled(D.Ay);
+                      en((0, C.Z)(a, r, l, o), {
                           type: 1,
                           channelId: a.id,
-                          messageType: s.type
+                          messageType: r.type
                       });
                   },
                   CHANNEL_SELECT: function (e) {
@@ -228,10 +228,10 @@ class er extends (s = f.ZP.Store) {
                   },
                   ACTIVITY_USER_ACTION: function (e) {
                       let t,
-                          { actionType: n, user: i, applicationId: r } = e,
-                          s = G.Z.getGame();
-                      if (null == s || s.id !== r) return !1;
-                      if (n === W.mFx.JOIN) t = (0, _.Z)(i, s);
+                          { actionType: n, user: i, applicationId: s } = e,
+                          r = W.Z.getGame();
+                      if (null == r || r.id !== s) return !1;
+                      if (n === G.mFx.JOIN) t = (0, _.Z)(i, r);
                       if (null == t) return !1;
                       en(t, {
                           priority: 2,
@@ -239,30 +239,30 @@ class er extends (s = f.ZP.Store) {
                       });
                   },
                   CLIPS_SAVE_CLIP_START: function () {
-                      en((0, T.f)(H.intl.string(H.t.NBMK9v)));
+                      en((0, N.f)(H.intl.string(H.t.NBMK9v)));
                   },
                   CLIPS_SAVE_CLIP: function () {
-                      en((0, T.f)(H.intl.formatToPlainString(H.t.KLhk6u, { duration: (0, B.A)(y.Z.getSettings().clipsLength / 1000, !0) })));
+                      en((0, N.f)(H.intl.formatToPlainString(H.t.KLhk6u, { duration: (0, U.A)(y.Z.getSettings().clipsLength / 1000, !0) })));
                   },
                   CLIPS_SAVE_CLIP_ERROR: function () {
-                      en((0, T.f)(H.intl.string(H.t['1ZbZur'])));
+                      en((0, N.f)(H.intl.string(H.t['1ZbZur'])));
                   },
                   STREAM_START: function (e) {
-                      let t = (0, T.y)();
+                      let t = (0, N.y)();
                       null != t && en(t);
                   },
                   OVERLAY_CONTENT_INVENTORY_READY: function (e) {
                       let { contentInventoryEntries: t } = e;
                       if (0 === t.length) return;
-                      let n = G.Z.getGame();
+                      let n = W.Z.getGame();
                       if (null == n) return;
-                      let { enabled: i } = N.Z.getCurrentConfig({ location: 'OverlayNotificationsStore' }, { autoTrackExposure: !0 });
+                      let { enabled: i } = T.Z.getCurrentConfig({ location: 'OverlayNotificationsStore' }, { autoTrackExposure: !0 });
                       i &&
                           en((0, Z.Z)(n, t), {
                               priority: 2,
                               type: 0,
                               expirationExternallyManaged: !0,
-                              duration: 30 * V.Z.Millis.SECOND
+                              duration: 30 * B.Z.Millis.SECOND
                           });
                   }
               }

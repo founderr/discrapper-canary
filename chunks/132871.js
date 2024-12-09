@@ -38,7 +38,7 @@ var r,
     c = n(703656),
     d = n(264043),
     f = n(981631);
-((r = a || (a = {})).HOME = 'home'), (r.SEARCH = 'search'), (r.APPLICATION = 'application'), ((i = s || (s = {})).EXTERNAL = 'External'), (i.KEYBOARD_SHORTCUT = 'Keyboard Shortcut'), (i.APPLICATION_DIRECTORY_URL = 'Application Directory URL'), (i.APPLICATION_DIRECTORY_PROFILE_EMBED = 'Application Directory Profile Embed'), (i.APPLICATION_DIRECTORY_UPSELL_MODAL = 'Application Directory Upsell Modal'), (i.GUILD_HEADER_POPOUT = 'Guild Header Popout'), (i.GUILD_SETTINGS = 'Guild Settings'), (i.GUILD_INTEGRATION_SETTINGS = 'Guild Integration Settings'), (i.GUILD_CONTEXT_MENU = 'Guild Context Menu'), (i.OAUTH2_EMBED = 'OAuth2 Embed');
+((r = a || (a = {})).HOME = 'home'), (r.SEARCH = 'search'), (r.APPLICATION = 'application'), ((i = s || (s = {})).EXTERNAL = 'External'), (i.KEYBOARD_SHORTCUT = 'Keyboard Shortcut'), (i.APPLICATION_DIRECTORY_URL = 'Application Directory URL'), (i.APPLICATION_DIRECTORY_PROFILE_EMBED = 'Application Directory Profile Embed'), (i.APPLICATION_DIRECTORY_UPSELL_MODAL = 'Application Directory Upsell Modal'), (i.GUILD_HEADER_POPOUT = 'Guild Header Popout'), (i.GUILD_SETTINGS = 'Guild Settings'), (i.GUILD_INTEGRATION_SETTINGS = 'Guild Integration Settings'), (i.GUILD_CONTEXT_MENU = 'Guild Context Menu'), (i.OAUTH2_EMBED = 'OAuth2 Embed'), (i.GLOBAL_DISCOVERY_BUTTON = 'Global Discovery Button'), (i.GLOBAL_DISCOVERY_SIDEBAR = 'Global Discovery Sidebar');
 let _ = (0, l.U)(() => ({
         guildId: null,
         entrypoint: null,

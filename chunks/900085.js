@@ -25,14 +25,14 @@ var i,
     x = n(430824),
     I = n(306680),
     b = n(944486),
-    S = n(938475),
-    E = n(585483),
+    E = n(938475),
+    S = n(585483),
     Z = n(63063),
     N = n(51596),
     y = n(823385),
     T = n(415795),
-    A = n(670512),
-    j = n(981631),
+    j = n(670512),
+    A = n(981631),
     P = n(388032),
     R = n(449532);
 function M(e, t, n) {
@@ -60,7 +60,7 @@ let L = 10,
                 (0, l.jsx)('div', {
                     className: R.emptyStateCTA,
                     children: (0, l.jsx)(u.Anchor, {
-                        href: Z.Z.getArticleURL(j.BhN.QUICK_SWITCHER_TUTORIAL),
+                        href: Z.Z.getArticleURL(A.BhN.QUICK_SWITCHER_TUTORIAL),
                         children: P.intl.string(P.t['4iPfEB'])
                     })
                 })
@@ -87,16 +87,16 @@ let O = c.ZP.connectStores([I.ZP, _.Z], (e) => {
             category: _.Z.getChannel(t.parent_id)
         };
     })(D),
-    k = c.ZP.connectStores([S.ZP], (e) => {
+    k = c.ZP.connectStores([E.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id) throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
-        return { voiceStates: S.ZP.getVoiceStates(t.guild_id)[t.id] };
+        return { voiceStates: E.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(D),
-    G = c.ZP.connectStores([v.default], (e) => {
+    U = c.ZP.connectStores([v.default], (e) => {
         let { guild: t } = e;
         return { unread: v.default.hasUnread(t.id) };
     })(T.ic),
-    U = c.ZP.connectStores([I.ZP], (e) => {
+    G = c.ZP.connectStores([I.ZP], (e) => {
         let { channel: t } = e;
         return { mentions: I.ZP.getMentionCount(t.id) };
     })(T.PZ),
@@ -197,7 +197,7 @@ class V extends r.PureComponent {
                 });
     }
     focusNode(e) {
-        E.S.dispatch(j.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
+        S.S.dispatch(A.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
     }
     getRowId(e) {
         return 'quick-switcher-'.concat(this._listId, '-item-').concat(e);
@@ -211,14 +211,14 @@ class V extends r.PureComponent {
                 textChannelSymbolHook: (e, t) => H(t, m.xQ.TEXT_CHANNEL, P.intl.string(P.t.wrwhub)),
                 voiceChannelSymbolHook: (e, t) => H(t, m.xQ.VOICE_CHANNEL, P.intl.string(P.t['jz+hJi'])),
                 guildSymbolHook: (e, t) => H(t, m.xQ.GUILD, P.intl.string(P.t.WuwCWl)),
-                helpdeskArticle: Z.Z.getArticleURL(j.BhN.QUICK_SWITCHER_TUTORIAL)
+                helpdeskArticle: Z.Z.getArticleURL(A.BhN.QUICK_SWITCHER_TUTORIAL)
             })
         });
     }
     renderTutorial() {
         let { query: e } = this.state,
             { seenTutorial: t, results: n } = this.props;
-        return t ? null : (0, l.jsx)(A.Z, { hasQuery: e.length > 0 && n.length > 0 });
+        return t ? null : (0, l.jsx)(j.Z, { hasQuery: e.length > 0 && n.length > 0 });
     }
     render() {
         return (0, l.jsx)(u.ModalRoot, {
@@ -277,10 +277,10 @@ class V extends r.PureComponent {
                             r = x.Z.getGuild(i.getGuildId());
                         if (null == r) return;
                         switch (i.type) {
-                            case j.d4z.GUILD_TEXT:
-                            case j.d4z.GUILD_ANNOUNCEMENT:
-                            case j.d4z.GUILD_FORUM:
-                            case j.d4z.GUILD_MEDIA:
+                            case A.d4z.GUILD_TEXT:
+                            case A.d4z.GUILD_ANNOUNCEMENT:
+                            case A.d4z.GUILD_FORUM:
+                            case A.d4z.GUILD_MEDIA:
                                 return (0, d.jW)(e, async () => {
                                     let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('54310')]).then(n.bind(n, 373651));
                                     return (t) =>
@@ -291,8 +291,8 @@ class V extends r.PureComponent {
                                             onSelect: N.Cp
                                         });
                                 });
-                            case j.d4z.GUILD_VOICE:
-                            case j.d4z.GUILD_STAGE_VOICE:
+                            case A.d4z.GUILD_VOICE:
+                            case A.d4z.GUILD_STAGE_VOICE:
                                 return (0, d.jW)(e, async () => {
                                     let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331')]).then(n.bind(n, 213202));
                                     return (t) =>
@@ -303,9 +303,9 @@ class V extends r.PureComponent {
                                             onSelect: N.Cp
                                         });
                                 });
-                            case j.d4z.ANNOUNCEMENT_THREAD:
-                            case j.d4z.PUBLIC_THREAD:
-                            case j.d4z.PRIVATE_THREAD:
+                            case A.d4z.ANNOUNCEMENT_THREAD:
+                            case A.d4z.PUBLIC_THREAD:
+                            case A.d4z.PRIVATE_THREAD:
                                 return (0, d.jW)(e, async () => {
                                     let { default: e } = await n.e('40157').then(n.bind(n, 422200));
                                     return (t) =>
@@ -315,7 +315,7 @@ class V extends r.PureComponent {
                                             onSelect: N.Cp
                                         });
                                 });
-                            case j.d4z.GUILD_STORE:
+                            case A.d4z.GUILD_STORE:
                                 return (0, d.jW)(e, async () => {
                                     let { default: e } = await n.e('99905').then(n.bind(n, 649400));
                                     return (t) =>
@@ -326,7 +326,7 @@ class V extends r.PureComponent {
                                             onSelect: N.Cp
                                         });
                                 });
-                            case j.d4z.GUILD_DIRECTORY:
+                            case A.d4z.GUILD_DIRECTORY:
                                 return (0, d.jW)(e, async () => {
                                     let { default: e } = await n.e('70623').then(n.bind(n, 99334));
                                     return (t) =>
@@ -439,7 +439,7 @@ class V extends r.PureComponent {
                         );
                     case m.h8.GUILD:
                         return (0, l.jsx)(
-                            G,
+                            U,
                             {
                                 id: this.getRowId(t),
                                 focused: i >= 0 && t === i,
@@ -470,7 +470,7 @@ class V extends r.PureComponent {
                         );
                     case m.h8.GROUP_DM:
                         return (0, l.jsx)(
-                            U,
+                            G,
                             {
                                 id: this.getRowId(t),
                                 focused: i >= 0 && t === i,

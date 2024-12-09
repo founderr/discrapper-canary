@@ -6,7 +6,7 @@ n.d(t, {
         return b;
     },
     ZP: function () {
-        return x;
+        return A;
     }
 }),
     n(47120);
@@ -33,25 +33,25 @@ var i = n(200651),
     S = n(388032);
 let T = 'Email Verification',
     b = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
-function x() {
+function A() {
     let { action: e, theme: t } = (0, a.cj)([E.Z, _.Z], () => ({
             action: E.Z.getAction(),
             theme: _.Z.theme
         })),
-        x = I.Z.getVerificationTypes(e),
-        [A, Z] = r.useState(0),
-        L = (0, h.Z)(x);
+        A = I.Z.getVerificationTypes(e),
+        [x, Z] = r.useState(0),
+        L = (0, h.Z)(A);
     (0, p.Z)(
         {
             type: l.ImpressionTypes.MODAL,
             name: l.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
-                verification_type: x[0],
-                verification_types: x
+                verification_type: A[0],
+                verification_types: A
             }
         },
         {},
-        [x.toString()]
+        [A.toString()]
     );
     let y = () => {
             (0, u.FD)(),
@@ -94,7 +94,7 @@ function x() {
         ),
         r.useEffect(() => {
             (null == L ? void 0 : L[0]) === v.PUi.PHONE &&
-                (null == x ? void 0 : x[0]) === v.PUi.EMAIL &&
+                (null == A ? void 0 : A[0]) === v.PUi.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
@@ -112,10 +112,10 @@ function x() {
                         onCloseCallback: y
                     }
                 );
-        }, [x, L]),
+        }, [A, L]),
         (0, i.jsx)(C.Z, {
-            types: x,
-            captchaKey: A,
+            types: A,
+            captchaKey: x,
             onCaptchaVerify: (e) => {
                 s.tn
                     .post({

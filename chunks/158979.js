@@ -5,19 +5,19 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    s = n(13245),
+var s = n(481060),
+    r = n(13245),
     a = n(312839),
-    o = n(981631),
-    l = n(987650),
+    l = n(981631),
+    o = n(987650),
     c = n(388032),
     d = n(114057);
 function u() {
     return (0, i.jsx)('div', {
         className: d.footer,
-        children: (0, i.jsx)(r.Button, {
-            color: r.Button.Colors.GREEN,
-            size: r.Button.Sizes.SMALL,
+        children: (0, i.jsx)(s.Button, {
+            color: s.Button.Colors.GREEN,
+            size: s.Button.Sizes.SMALL,
             className: d.ctaButton,
             children: c.intl.string(c.t.U76Ft7)
         })
@@ -25,9 +25,9 @@ function u() {
 }
 function h(e) {
     switch (e.type) {
-        case l.nc.GO_LIVE_VOICE: {
+        case o.nc.GO_LIVE_VOICE: {
             let { game: t, voiceGuild: d } = e,
-                { trackView: h, trackClick: p } = (0, a.R)(l.n0.GoLiveNudge, { notif_type: l.n0.GoLiveNudge });
+                { trackView: h, trackClick: p } = (0, a.R)(o.n0.GoLiveNudge, { notif_type: o.n0.GoLiveNudge });
             return {
                 icon: n(847881),
                 title: null,
@@ -42,16 +42,16 @@ function h(e) {
                 },
                 onNotificationClick: (e, t) => {
                     p('unlock'),
-                        s.Z.updateNotificationStatus(t),
-                        s.Z.setInstanceLocked(!1),
-                        (0, r.openModalLazy)(async () => {
+                        r.Z.updateNotificationStatus(t),
+                        r.Z.setInstanceLocked(!1),
+                        (0, s.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('67911')]).then(n.bind(n, 60594));
                             return (t) =>
                                 (0, i.jsx)(e, {
                                     ...t,
                                     selectSource: !1,
                                     guildId: d.id,
-                                    analyticsLocation: o.Sbl.OVERLAY_NUDGE
+                                    analyticsLocation: l.Sbl.OVERLAY_NUDGE
                                 });
                         });
                 },
@@ -60,9 +60,9 @@ function h(e) {
                 }
             };
         }
-        case l.nc.GO_LIVE_NON_VOICE: {
+        case o.nc.GO_LIVE_NON_VOICE: {
             let { game: t } = e,
-                { trackView: d, trackClick: h } = (0, a.R)(l.n0.GoLiveNonVoiceNudge, { notif_type: l.n0.GoLiveNonVoiceNudge });
+                { trackView: d, trackClick: h } = (0, a.R)(o.n0.GoLiveNonVoiceNudge, { notif_type: o.n0.GoLiveNonVoiceNudge });
             return {
                 icon: n(847881),
                 title: null,
@@ -74,16 +74,16 @@ function h(e) {
                 },
                 onNotificationClick: (e, t) => {
                     h('unlock'),
-                        s.Z.updateNotificationStatus(t),
-                        s.Z.setInstanceLocked(!1),
-                        (0, r.openModalLazy)(async () => {
+                        r.Z.updateNotificationStatus(t),
+                        r.Z.setInstanceLocked(!1),
+                        (0, s.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('67911')]).then(n.bind(n, 60594));
                             return (t) =>
                                 (0, i.jsx)(e, {
                                     ...t,
                                     selectSource: !1,
                                     selectGuild: !0,
-                                    analyticsLocation: o.Sbl.OVERLAY_NUDGE
+                                    analyticsLocation: l.Sbl.OVERLAY_NUDGE
                                 });
                         });
                 },

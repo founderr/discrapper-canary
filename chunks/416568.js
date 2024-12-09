@@ -19,14 +19,14 @@ var i = n(200651),
     x = n(358221),
     I = n(540059),
     b = n(706590),
-    S = n(940777),
-    E = n(41776),
+    E = n(940777),
+    S = n(41776),
     Z = n(905423),
     N = n(802718),
     y = n(796974),
     T = n(271383),
-    A = n(430824),
-    j = n(771845),
+    j = n(430824),
+    A = n(771845),
     P = n(358085),
     R = n(709054),
     M = n(727258),
@@ -35,8 +35,8 @@ var i = n(200651),
     D = n(741616),
     O = n(187835),
     k = n(118122),
-    G = n(193154),
-    U = n(602147),
+    U = n(193154),
+    G = n(602147),
     B = n(416637),
     H = n(222059),
     V = n(751277),
@@ -47,8 +47,8 @@ var i = n(200651),
     K = n(836697),
     q = n(921230),
     Q = n(981631),
-    X = n(388032),
-    J = n(192069);
+    J = n(388032),
+    X = n(192069);
 function $(e, t, n) {
     return (
         t in e
@@ -154,16 +154,16 @@ function en(e) {
     let { disableAppDownload: t = P.isPlatformEmbedded, isOverlay: n = !1, className: r, themeOverride: a } = e,
         s = (0, I.Q3)('GuildsBar'),
         { density: d } = (0, f.useThemeContext)(),
-        [p] = (0, h.Wu)([j.ZP], () => {
-            let e = j.ZP.getGuildsTree();
+        [p] = (0, h.Wu)([A.ZP], () => {
+            let e = A.ZP.getGuildsTree();
             return [e, e.version];
         }),
-        g = (0, h.e7)([E.Z], () => E.Z.lurkingGuildIds()),
+        g = (0, h.e7)([S.Z], () => S.Z.lurkingGuildIds()),
         C = l.useMemo(() => (n ? [] : g), [g, n]),
-        $ = (0, h.Wu)([A.Z, T.ZP], () => R.default.keys(A.Z.getGuilds()).filter((e) => T.ZP.isCurrentUserGuest(e))),
+        $ = (0, h.Wu)([j.Z, T.ZP], () => R.default.keys(j.Z.getGuilds()).filter((e) => T.ZP.isCurrentUserGuest(e))),
         en = C.concat($),
         ei = (0, h.e7)([x.Z], () => x.Z.isFullscreenInContext()),
-        el = (0, h.e7)([A.Z], () => A.Z.getGeoRestrictedGuilds()),
+        el = (0, h.e7)([j.Z], () => j.Z.getGeoRestrictedGuilds()),
         [er, eo] = l.useState(!1),
         ea = l.useCallback(() => eo(!0), []),
         es = l.useCallback(() => eo(!1), []),
@@ -229,13 +229,13 @@ function en(e) {
                 n !== t && ((t = n), e_.scrollToGuild(t, !1));
             });
         }, [p, e_]);
-    let eS = l.useCallback(() => {
+    let eE = l.useCallback(() => {
         e_.scrollTo({
             to: 0,
             animate: !1
         });
     }, [e_]);
-    function eE(e) {
+    function eS(e) {
         switch (e.type) {
             case M.eD.FOLDER:
                 return (0, i.jsx)(
@@ -247,7 +247,7 @@ function en(e) {
                         sorting: er,
                         onDragStart: ea,
                         onDragEnd: es,
-                        renderChildNode: eE
+                        renderChildNode: eS
                     },
                     e.id
                 );
@@ -274,7 +274,7 @@ function en(e) {
         ey = (0, N.U)(),
         eT = el.map((e) =>
             (0, i.jsx)(
-                G.Z,
+                U.Z,
                 {
                     id: e.id,
                     name: e.name,
@@ -289,29 +289,29 @@ function en(e) {
             theme: a,
             children: (e) =>
                 (0, i.jsx)('nav', {
-                    className: o()(J.wrapper, r, e, { [J.hidden]: ei }),
-                    'aria-label': X.intl.string(X.t.PjnF2t),
+                    className: o()(X.wrapper, r, e, { [X.hidden]: ei }),
+                    'aria-label': J.intl.string(J.t.PjnF2t),
                     children: (0, i.jsxs)('ul', {
                         ref: ep,
                         ...em,
                         ...ef,
                         role: 'tree',
-                        className: J.tree,
+                        className: X.tree,
                         children: [
                             (0, i.jsx)(w.Z, {
                                 ref: ed,
                                 isVisible: e_.isItemVisible,
                                 onJumpTo: e_.handleJumpToGuild,
-                                className: J.unreadMentionsIndicatorTop,
-                                barClassName: J.unreadMentionsBar
+                                className: X.unreadMentionsIndicatorTop,
+                                barClassName: X.unreadMentionsBar
                             }),
                             (0, i.jsxs)('div', {
-                                className: J.itemsContainer,
+                                className: X.itemsContainer,
                                 children: [
                                     (0, i.jsxs)(f.AdvancedScrollerNone, {
                                         className: o()({
-                                            [J.scroller]: !0,
-                                            [J.scrolling]: eg
+                                            [X.scroller]: !0,
+                                            [X.scrolling]: eg
                                         }),
                                         experimental_useStack: s,
                                         gap: 'xs',
@@ -319,22 +319,22 @@ function en(e) {
                                         onScroll: e_.handleScroll,
                                         children: [
                                             (0, i.jsx)(H.u, {}),
-                                            eN ? (0, i.jsx)(S.Z, {}) : null,
+                                            eN ? (0, i.jsx)(E.Z, {}) : null,
                                             (0, i.jsx)(V.Z, { isOnHubVerificationRoute: eb }),
                                             (0, i.jsx)(D.Z, {}),
                                             ey,
                                             en.map((e) => (0, i.jsx)(q.Z, { guildId: e }, e)),
-                                            (0, i.jsx)(K.Z, { onActivate: eS }),
+                                            (0, i.jsx)(K.Z, { onActivate: eE }),
                                             (0, i.jsx)(F.Z, {}),
                                             s
                                                 ? (0, i.jsx)(f.Stack, {
                                                       gap: 'xs',
-                                                      'aria-label': X.intl.string(X.t['7hB4kp']),
-                                                      children: eZ.map(eE)
+                                                      'aria-label': J.intl.string(J.t['7hB4kp']),
+                                                      children: eZ.map(eS)
                                                   })
                                                 : (0, i.jsx)('div', {
-                                                      'aria-label': X.intl.string(X.t['7hB4kp']),
-                                                      children: eZ.map(eE)
+                                                      'aria-label': J.intl.string(J.t['7hB4kp']),
+                                                      children: eZ.map(eS)
                                                   }),
                                             eT,
                                             n
@@ -350,9 +350,9 @@ function en(e) {
                                     n
                                         ? null
                                         : (0, i.jsx)(B.g, {
-                                              children: (0, i.jsx)(U.Z, {
+                                              children: (0, i.jsx)(G.Z, {
                                                   selected: eI,
-                                                  className: J.fixedDiscoveryIcon
+                                                  className: X.fixedDiscoveryIcon
                                               })
                                           })
                                 ]
@@ -362,8 +362,8 @@ function en(e) {
                                 ref: eh,
                                 isVisible: e_.isItemVisible,
                                 onJumpTo: e_.handleJumpToGuild,
-                                className: o()(J.unreadMentionsIndicatorBottom, { [J.unreadMentionsFixedFooter]: !n }),
-                                barClassName: J.unreadMentionsBar
+                                className: o()(X.unreadMentionsIndicatorBottom, { [X.unreadMentionsFixedFooter]: !n }),
+                                barClassName: X.unreadMentionsBar
                             })
                         ]
                     })

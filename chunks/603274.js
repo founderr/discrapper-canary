@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return j;
     }
 }),
     n(47120),
@@ -27,17 +27,17 @@ var l = n(120356),
     x = n(709054),
     I = n(853856),
     b = n(981631),
-    S = n(388032),
-    E = n(782451),
+    E = n(388032),
+    S = n(782451),
     Z = n(572488);
 function N(e, t) {
     return 0 === t.length
         ? null
         : (0, i.jsxs)('div', {
-              className: E.row,
+              className: S.row,
               children: [
                   (0, i.jsx)(e, {
-                      className: E.activityIcon,
+                      className: S.activityIcon,
                       color: 'currentColor'
                   }),
                   (0, i.jsx)(d.Z, {
@@ -70,7 +70,7 @@ function y() {
                 ),
             [r]
         ),
-        S = (0, s.Wu)([p.Z], () =>
+        E = (0, s.Wu)([p.Z], () =>
             a().flatMap(o, (e) =>
                 p.Z.getMutableParticipants(e, m.pV.SPEAKER)
                     .filter((e) => e.type === m.Ui.VOICE)
@@ -106,24 +106,24 @@ function y() {
             },
             [l]
         ),
-        A = (0, s.Wu)([C.default], () => T.map((e) => C.default.getUser(e)), [T]),
-        j = (0, s.Wu)([C.default], () => y.map((e) => C.default.getUser(e)), [y]),
+        j = (0, s.Wu)([C.default], () => T.map((e) => C.default.getUser(e)), [T]),
+        A = (0, s.Wu)([C.default], () => y.map((e) => C.default.getUser(e)), [y]),
         P = N(
             c.VoiceNormalIcon,
             h.filter((e) => !y.includes(e.id) && !T.includes(e.id))
         );
     let R =
-            ((e = S),
+            ((e = E),
             (t = Z),
             0 === e.length
                 ? null
                 : (0, i.jsxs)('div', {
-                      className: E.row,
+                      className: S.row,
                       children: [
                           (0, i.jsx)(c.StageIcon, {
                               size: 'lg',
                               color: 'currentColor',
-                              className: E.activityIcon
+                              className: S.activityIcon
                           }),
                           (0, i.jsx)(d.Z, {
                               guildId: void 0,
@@ -131,14 +131,14 @@ function y() {
                               max: 3
                           }),
                           (0, i.jsxs)('div', {
-                              className: E.stageListenerPill,
+                              className: S.stageListenerPill,
                               children: [
                                   (0, i.jsx)(c.HeadphonesIcon, {
                                       size: 'xs',
                                       color: 'currentColor'
                                   }),
                                   (0, i.jsx)(c.Text, {
-                                      className: E.stageListenerCount,
+                                      className: S.stageListenerCount,
                                       color: 'text-normal',
                                       variant: 'text-xs/medium',
                                       children: t
@@ -149,9 +149,9 @@ function y() {
                   })),
         M = N(
             c.ScreenArrowIcon,
-            j.filter((e) => null != e && !T.includes(e.id))
+            A.filter((e) => null != e && !T.includes(e.id))
         ),
-        L = N(c.ActivitiesIcon, A);
+        L = N(c.ActivitiesIcon, j);
     return (0, i.jsxs)(i.Fragment, {
         children: [R, P, M, L]
     });
@@ -160,17 +160,17 @@ function T() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                className: r()(E.row, E.rowGuildName),
+                className: r()(S.row, S.rowGuildName),
                 children: (0, i.jsx)('span', {
-                    className: r()(E.guildNameText, E.guildNameTextLimitedSize),
-                    children: S.intl.string(S.t.wMWycn)
+                    className: r()(S.guildNameText, S.guildNameTextLimitedSize),
+                    children: E.intl.string(E.t.wMWycn)
                 })
             }),
             (0, i.jsx)(y, {})
         ]
     });
 }
-function A(e) {
+function j(e) {
     let { 'aria-label': t = !1, onShow: n, children: l } = e,
         r = (0, h.Q3)('FavoritesTooltip');
     return (0, i.jsx)(c.Tooltip, {

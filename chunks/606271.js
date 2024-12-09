@@ -27,8 +27,8 @@ var i = n(392711),
     S = n(238679),
     T = n(863141),
     b = n(981631),
-    x = n(701488),
-    A = n(65154);
+    A = n(701488),
+    x = n(65154);
 function Z(e, t, n) {
     return (
         t in e
@@ -105,7 +105,7 @@ class L {
     handleSpeaking(e) {
         if (0 === this.rpcServer.subscriptions.length) return;
         let t = 0 !== e.speakingFlags ? b.zMe.SPEAKING_START : b.zMe.SPEAKING_STOP;
-        if (e.context === A.Yn.DEFAULT) {
+        if (e.context === x.Yn.DEFAULT) {
             let n = f.Z.getVoiceChannelId();
             if (null != n) {
                 let i = c.Z.getChannel(n);
@@ -159,7 +159,7 @@ class L {
     handleActivityLayoutModeUpdate(e) {
         let { applicationId: t, layoutMode: n } = e;
         if (0 === this.rpcServer.subscriptions.length) return;
-        let i = n !== x.cE.FOCUSED;
+        let i = n !== A.cE.FOCUSED;
         this.rpcServer.dispatchToSubscriptions(b.zMe.ACTIVITY_PIP_MODE_UPDATE, (e) => e.socket.application.id === t, { is_pip_mode: i });
         this.rpcServer.dispatchToSubscriptions(b.zMe.ACTIVITY_LAYOUT_MODE_UPDATE, (e) => e.socket.application.id === t, { layout_mode: n });
     }

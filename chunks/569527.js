@@ -34,9 +34,9 @@ function T(e) {
     let { onSelectApplication: n } = e,
         T = r.useRef(null),
         b = (0, l.TH)(),
-        x = r.useRef(null),
+        A = r.useRef(null),
         {
-            query: A,
+            query: x,
             page: Z,
             categoryId: L
         } = r.useMemo(() => {
@@ -53,14 +53,14 @@ function T(e) {
     r.useEffect(() => {
         var e;
         null === (e = T.current) || void 0 === e || e.scrollTo({ to: 0 }),
-            A !== x.current &&
-                ((x.current = A),
+            x !== A.current &&
+                ((A.current = x),
                 u.yC({
-                    query: A,
+                    query: x,
                     options: { source: s.F.APP_DIRECTORY }
                 })),
             u.yC({
-                query: A,
+                query: x,
                 options: {
                     categoryId: L,
                     page: Z,
@@ -68,17 +68,17 @@ function T(e) {
                     source: s.F.APP_DIRECTORY
                 }
             });
-    }, [L, Z, A]);
+    }, [L, Z, x]);
     let { fetchState: y, searchResults: P } = (0, o.cj)([m.Z], () => ({
             fetchState: m.Z.getFetchState({
-                query: A,
+                query: x,
                 categoryId: L,
                 page: Z,
                 pageSize: N.PAGE_SIZE,
                 source: s.F.APP_DIRECTORY
             }),
             searchResults: m.Z.getSearchResults({
-                query: A,
+                query: x,
                 categoryId: L,
                 page: Z,
                 pageSize: N.PAGE_SIZE,
@@ -87,7 +87,7 @@ function T(e) {
         })),
         O = (0, o.cj)([m.Z], () => {
             let e = m.Z.getSearchResults({
-                query: A,
+                query: x,
                 source: s.F.APP_DIRECTORY
             });
             return null != e
@@ -102,21 +102,21 @@ function T(e) {
         D = r.useCallback(
             (e) => {
                 (0, I.pR)({
-                    query: A,
+                    query: x,
                     categoryId: L,
                     page: e
                 });
             },
-            [L, A]
+            [L, x]
         ),
         M = r.useCallback(
             (e) => {
                 (0, I.pR)({
-                    query: A,
+                    query: x,
                     categoryId: e
                 });
             },
-            [A]
+            [x]
         );
     return (0, i.jsxs)('div', {
         className: S.container,

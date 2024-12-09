@@ -6,10 +6,10 @@ n.d(t, {
         return T;
     },
     kw: function () {
-        return j;
+        return A;
     },
     rj: function () {
-        return A;
+        return j;
     }
 });
 var i = n(200651),
@@ -32,19 +32,19 @@ var i = n(200651),
     x = n(203818),
     I = n(438144),
     b = n(981631),
-    S = n(388032),
-    E = n(147903);
+    E = n(388032),
+    S = n(147903);
 function Z(e) {
     e.stopPropagation();
 }
 let N = l.memo(function (e) {
     let t,
-        { channel: r, connectChannelDragSource: h, connectChannelDropTarget: x, disableManageChannels: I, position: N, sortingPosition: y, hideIcon: T, children: A } = e,
-        j = (0, f.Q3)('CategoryChannel'),
+        { channel: r, connectChannelDragSource: h, connectChannelDropTarget: x, disableManageChannels: I, position: N, sortingPosition: y, hideIcon: T, children: j } = e,
+        A = (0, f.Q3)('CategoryChannel'),
         P = (0, s.e7)([v.ZP], () => v.ZP.isChannelMuted(r.getGuildId(), r.id)),
         R = (0, s.e7)([g.Z], () => g.Z.isCollapsed(r.id)),
         M = (0, s.e7)([_.Z], () => _.Z.can(b.Plq.MANAGE_CHANNELS, r));
-    t = null != y ? (N > y ? E.containerDragAfter : E.containerDragBefore) : E.containerDefault;
+    t = null != y ? (N > y ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
     let L = l.useCallback(() => {
             R ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
         }, [r.id, R]),
@@ -81,15 +81,15 @@ let N = l.memo(function (e) {
                         });
                 });
         }, [r]),
-        { role: O, tabIndex: k, ...G } = (0, a.JA)(r.id),
-        U = l.useRef(null),
+        { role: O, tabIndex: k, ...U } = (0, a.JA)(r.id),
+        G = l.useRef(null),
         B = l.useRef(null),
         H = (0, i.jsxs)('li', {
             className: t,
             'data-dnd-name': r.name,
             children: [
                 (0, i.jsx)(c.FocusRing, {
-                    focusTarget: U,
+                    focusTarget: G,
                     ringTarget: B,
                     offset: {
                         left: 4,
@@ -97,57 +97,57 @@ let N = l.memo(function (e) {
                     },
                     children: (0, i.jsxs)('div', {
                         ref: B,
-                        className: o()(E.iconVisibility, E.wrapper, {
-                            [E.collapsed]: R,
-                            [E.muted]: P,
-                            [E.clickable]: !0
+                        className: o()(S.iconVisibility, S.wrapper, {
+                            [S.collapsed]: R,
+                            [S.muted]: P,
+                            [S.clickable]: !0
                         }),
                         onContextMenu: w,
                         children: [
                             (0, i.jsxs)(c.Clickable, {
-                                innerRef: U,
-                                className: E.mainContent,
+                                innerRef: G,
+                                className: S.mainContent,
                                 tabIndex: k,
-                                ...G,
+                                ...U,
                                 onClick: L,
-                                'aria-label': S.intl.formatToPlainString(S.t.y5l3Jy, { categoryName: r.name }),
+                                'aria-label': E.intl.formatToPlainString(E.t.y5l3Jy, { categoryName: r.name }),
                                 'aria-expanded': !R,
                                 focusProps: { enabled: !1 },
                                 children: [
-                                    j || T
+                                    A || T
                                         ? null
                                         : (0, i.jsx)(c.ChevronSmallDownIcon, {
                                               size: 'md',
                                               color: 'currentColor',
-                                              className: E.icon
+                                              className: S.icon
                                           }),
                                     (0, i.jsx)(p.Z, {
-                                        className: E.name,
+                                        className: S.name,
                                         children: (0, i.jsx)(m.Z, { children: r.name })
                                     }),
-                                    j && !T
+                                    A && !T
                                         ? (0, i.jsx)(c.ChevronSmallDownIcon, {
                                               size: 'md',
                                               color: 'currentColor',
-                                              className: E.icon
+                                              className: S.icon
                                           })
                                         : null
                                 ]
                             }),
                             (0, i.jsx)('div', {
                                 onClick: Z,
-                                className: E.children,
+                                className: S.children,
                                 children:
                                     M && !I
                                         ? (0, i.jsx)(c.Tooltip, {
-                                              text: S.intl.string(S.t['fUYU+v']),
+                                              text: E.intl.string(E.t['fUYU+v']),
                                               children: (e) => {
                                                   let { onMouseEnter: t, onMouseLeave: n } = e;
                                                   return (0, i.jsx)(c.Button, {
-                                                      'aria-label': S.intl.string(S.t['fUYU+v']),
+                                                      'aria-label': E.intl.string(E.t['fUYU+v']),
                                                       look: c.Button.Looks.BLANK,
                                                       size: c.Button.Sizes.NONE,
-                                                      className: o()(E.addButton, E.forceVisible),
+                                                      className: o()(S.addButton, S.forceVisible),
                                                       onClick: D,
                                                       onMouseEnter: t,
                                                       onMouseLeave: n,
@@ -160,16 +160,16 @@ let N = l.memo(function (e) {
                                                               left: -4
                                                           }
                                                       },
-                                                      children: j
+                                                      children: A
                                                           ? (0, i.jsx)(c.PlusMediumIcon, {
                                                                 size: 'refresh_sm',
                                                                 color: 'currentColor',
-                                                                className: E.addButtonIcon
+                                                                className: S.addButtonIcon
                                                             })
                                                           : (0, i.jsx)(c.PlusSmallIcon, {
                                                                 size: 'sm',
                                                                 color: 'currentColor',
-                                                                className: E.addButtonIcon
+                                                                className: S.addButtonIcon
                                                             })
                                                   });
                                               }
@@ -179,7 +179,7 @@ let N = l.memo(function (e) {
                         ]
                     })
                 }),
-                A
+                j
             ]
         });
     return null != x && null != h ? x(h(H)) : H;
@@ -188,28 +188,28 @@ t.ZP = (0, h.B)(N);
 let y = l.memo(function (e) {
         let { name: t, onDismiss: n, className: l } = e;
         return (0, i.jsx)('li', {
-            className: o()(l, E.containerDefault),
+            className: o()(l, S.containerDefault),
             children: (0, i.jsxs)('div', {
-                className: o()(E.iconVisibility, E.wrapperStatic),
+                className: o()(S.iconVisibility, S.wrapperStatic),
                 children: [
                     (0, i.jsx)('div', {
-                        className: E.mainContent,
+                        className: S.mainContent,
                         children: (0, i.jsx)(p.Z, {
-                            className: E.name,
+                            className: S.name,
                             children: (0, i.jsx)(m.Z, { children: t })
                         })
                     }),
                     null != n
                         ? (0, i.jsx)(c.TooltipContainer, {
-                              text: S.intl.string(S.t['5qNmsb']),
-                              className: E.dismissWrapper,
+                              text: E.intl.string(E.t['5qNmsb']),
+                              className: S.dismissWrapper,
                               children: (0, i.jsx)(c.Clickable, {
-                                  className: E.dismissButton,
+                                  className: S.dismissButton,
                                   onClick: n,
                                   children: (0, i.jsx)(c.CircleXIcon, {
                                       size: 'md',
                                       color: 'currentColor',
-                                      className: E.dismiss
+                                      className: S.dismiss
                                   })
                               })
                           })
@@ -226,62 +226,62 @@ let y = l.memo(function (e) {
             }, [t.guild.id, n]);
         return n
             ? (0, i.jsxs)(c.Clickable, {
-                  className: E.voiceChannelsButton,
+                  className: S.voiceChannelsButton,
                   onClick: r,
                   children: [
                       (0, i.jsx)(c.VoiceNormalIcon, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: E.voiceChannelsToggleIcon
+                          className: S.voiceChannelsToggleIcon
                       }),
                       (0, i.jsx)(c.Text, {
                           variant: 'text-sm/medium',
-                          children: S.intl.string(S.t['/eB9Bg'])
+                          children: E.intl.string(E.t['/eB9Bg'])
                       })
                   ]
               })
             : (0, i.jsxs)(c.Clickable, {
-                  className: E.voiceChannelsButton,
+                  className: S.voiceChannelsButton,
                   onClick: r,
                   children: [
                       (0, i.jsx)(c.VoiceNormalIcon, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: E.voiceChannelsToggleIcon
+                          className: S.voiceChannelsToggleIcon
                       }),
                       (0, i.jsx)(c.Text, {
                           variant: 'text-sm/medium',
-                          children: S.intl.string(S.t.Q2gPWl)
+                          children: E.intl.string(E.t.Q2gPWl)
                       })
                   ]
               });
     }),
-    A = l.memo(function (e) {
+    j = l.memo(function (e) {
         let { category: t, channel: n } = e,
             l = (0, s.e7)([x.Z], () => x.Z.isVoiceCategoryCollapsed(t.guild.id));
         return l || null == n || n.record.type === b.d4z.GUILD_CATEGORY
             ? l
                 ? (0, i.jsx)('li', {
-                      className: o()(E.containerDefault),
+                      className: o()(S.containerDefault),
                       children: (0, i.jsx)('div', {
-                          className: o()(E.iconVisibility, E.wrapperStatic),
+                          className: o()(S.iconVisibility, S.wrapperStatic),
                           children: (0, i.jsx)(p.Z, {
-                              className: E.name,
-                              children: (0, i.jsx)(m.Z, { children: S.intl.string(S.t['V/u9Dw']) })
+                              className: S.name,
+                              children: (0, i.jsx)(m.Z, { children: E.intl.string(E.t['V/u9Dw']) })
                           })
                       })
                   })
                 : null
             : (0, i.jsx)('div', { style: { height: 16 } });
     }),
-    j = l.memo(function (e) {
+    A = l.memo(function (e) {
         let { channel: t } = e;
         return (0, i.jsx)('li', {
-            className: o()(E.containerDefault),
+            className: o()(S.containerDefault),
             children: (0, i.jsx)('div', {
-                className: o()(E.iconVisibility, E.wrapperStatic),
+                className: o()(S.iconVisibility, S.wrapperStatic),
                 children: (0, i.jsx)(p.Z, {
-                    className: E.name,
+                    className: S.name,
                     children: (0, i.jsx)(m.Z, { children: t.name })
                 })
             })

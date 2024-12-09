@@ -19,14 +19,14 @@ var i,
     x = n(82295),
     I = n(313201),
     b = n(860144),
-    S = n(214852),
-    E = n(518311),
+    E = n(214852),
+    S = n(518311),
     Z = n(355298),
     N = n(869404),
     y = n(333984),
     T = n(210887),
-    A = n(592125),
-    j = n(158776),
+    j = n(592125),
+    A = n(158776),
     P = n(55589),
     R = n(515753),
     M = n(981631),
@@ -296,7 +296,7 @@ class k extends (l = a.Component) {
                     c = n.some((e) => (0, v.Z)(e)),
                     u = {
                         num_users_visible: o.length,
-                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && j.Z.isMobileOnline(e)).length
+                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && A.Z.isMobileOnline(e)).length
                     };
                 (this.hasReportedAnalytics = !0),
                     C.ZP.trackWithMetadata(M.rMx.DM_LIST_VIEWED, {
@@ -365,7 +365,7 @@ class k extends (l = a.Component) {
                                       className: w.headerText,
                                       children: L.intl.string(L.t.YUU0RE)
                                   }),
-                                  (0, o.jsx)(E.Z, {
+                                  (0, o.jsx)(S.Z, {
                                       tooltip: L.intl.string(L.t['6Urw1t']),
                                       tooltipPosition: 'top',
                                       popoutAlign: 'left',
@@ -389,7 +389,7 @@ D(k, 'defaultProps', { padding: 8 });
 t.Z = (e) => {
     let { version: t, theme: n, children: i, showDMHeader: l } = e,
         r = a.Children.count(i),
-        s = A.Z.getMutablePrivateChannels(),
+        s = j.Z.getMutablePrivateChannels(),
         c = (0, N.k1)(s),
         p = (0, h.Wu)(
             [P.Z, Z.Z, y.Z],
@@ -399,11 +399,11 @@ t.Z = (e) => {
             },
             []
         );
-    (0, S.z)(b.R);
-    let m = (0, h.cj)([g.Z, T.Z, A.Z], () => ({
+    (0, E.z)(b.R);
+    let m = (0, h.cj)([g.Z, T.Z, j.Z], () => ({
             theme: T.Z.darkSidebar ? M.BRd.DARK : n,
             keyboardModeEnabled: g.Z.keyboardModeEnabled,
-            version: null != t ? ''.concat(t, ':').concat(A.Z.getPrivateChannelsVersion()) : A.Z.getPrivateChannelsVersion()
+            version: null != t ? ''.concat(t, ':').concat(j.Z.getPrivateChannelsVersion()) : j.Z.getPrivateChannelsVersion()
         })),
         f = a.useRef(null),
         C = a.useCallback((e) => {
@@ -444,7 +444,7 @@ t.Z = (e) => {
             []
         ),
         x = (0, I.Dt)(),
-        E = (0, d.ZP)({
+        S = (0, d.ZP)({
             id: 'private-channels-'.concat(x),
             isEnabled: m.keyboardModeEnabled,
             scrollToStart: _,
@@ -453,7 +453,7 @@ t.Z = (e) => {
             setFocus: C
         });
     return (0, o.jsx)(u.bG, {
-        navigator: E,
+        navigator: S,
         children: (0, o.jsx)(k, {
             channels: c,
             privateChannelIds: p,

@@ -24,15 +24,15 @@ var i = n(200651),
     x = n(252686),
     I = n(682662),
     b = n(662146),
-    S = n(388032),
-    E = n(10448),
+    E = n(388032),
+    S = n(10448),
     Z = n(284923);
 let N = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     y = (0, s.animated)(d.Stack);
 function T(e) {
     var t;
-    let { folderNode: n, setNodeRef: r, selected: s, expanded: u, mediaState: f, mentionCount: T = 0, unread: A = !1, defaultFolderName: j, useCircleMask: P = !1, draggable: R = !1, sorting: M = !1, onDragStart: L, onDragEnd: w, onExpandCollapse: D, onContextMenu: O, renderChildNode: k, folderIconContent: G } = e,
-        { id: U, name: B, children: H } = n,
+    let { folderNode: n, setNodeRef: r, selected: s, expanded: u, mediaState: f, mentionCount: T = 0, unread: j = !1, defaultFolderName: A, useCircleMask: P = !1, draggable: R = !1, sorting: M = !1, onDragStart: L, onDragEnd: w, onExpandCollapse: D, onContextMenu: O, renderChildNode: k, folderIconContent: U } = e,
+        { id: G, name: B, children: H } = n,
         V = (0, p.Q3)('FolderItem'),
         [F, W] = l.useState(!1),
         [z, Y] = l.useState(!1),
@@ -54,18 +54,18 @@ function T(e) {
             },
             collect: (e) => ({ dragging: e.isDragging() })
         }),
-        X = l.useCallback((e) => {
+        J = l.useCallback((e) => {
             Y(e);
         }, []),
-        J = l.useCallback(
+        X = l.useCallback(
             (e) => {
                 (('ArrowRight' === e.key && !u) || ('ArrowLeft' === e.key && u)) && D();
             },
             [D, u]
         ),
-        $ = null != B && '' !== B ? B : null != j && '' !== j ? j : S.intl.string(S.t.xV9hVl),
-        ee = (0, c.Ie)(''.concat(U)),
-        et = 'folder-items-'.concat(U);
+        $ = null != B && '' !== B ? B : null != A && '' !== A ? A : E.intl.string(E.t.xV9hVl),
+        ee = (0, c.Ie)(''.concat(G)),
+        et = 'folder-items-'.concat(G);
     let { iconHeight: en, iconMargin: ei } = {
             iconHeight: (t = V) ? 44 : 48,
             iconMargin: 8
@@ -77,14 +77,14 @@ function T(e) {
             leave: { height: 0 },
             config: { duration: N }
         }),
-        eo = l.useCallback((e) => (null == r ? void 0 : r(U, e)), [r, U]),
+        eo = l.useCallback((e) => (null == r ? void 0 : r(G, e)), [r, G]),
         ea = (0, i.jsxs)(I.H, {
             children: [
                 (0, i.jsx)(C.Z, {
                     disabled: q || u,
                     hovered: F,
                     selected: s,
-                    unread: A,
+                    unread: j,
                     className: Z.pill
                 }),
                 (0, i.jsx)(b.Z, {
@@ -110,9 +110,9 @@ function T(e) {
                                   onClick: D,
                                   onContextMenu: O,
                                   onHoverChange: W,
-                                  onKeyDown: J,
+                                  onKeyDown: X,
                                   treeItemProps: ee,
-                                  folderIconContent: G
+                                  folderIconContent: U
                               })
                     })
                 }),
@@ -120,20 +120,20 @@ function T(e) {
                     ? (0, i.jsx)(v.ZP, {
                           name: $,
                           targetNode: n,
-                          onDragOverChanged: X
+                          onDragOverChanged: J
                       })
                     : null
             ]
         });
     return (0, i.jsxs)('div', {
         ref: eo,
-        className: E.wrapper,
+        className: S.wrapper,
         children: [
             !q &&
                 (0, i.jsx)('span', {
-                    className: o()(E.expandedFolderBackground, {
-                        [E.collapsed]: !u,
-                        [E.hover]: K
+                    className: o()(S.expandedFolderBackground, {
+                        [S.collapsed]: !u,
+                        [S.hover]: K
                     })
                 }),
             ea,

@@ -9,18 +9,18 @@ n.d(t, {
     n(47120);
 var i = n(200651);
 n(192379);
-var r = n(704215),
-    s = n(481060),
+var s = n(704215),
+    r = n(481060),
     a = n(13245),
-    o = n(312839),
-    l = n(706140),
+    l = n(312839),
+    o = n(706140),
     c = n(809357),
     d = n(987650),
     u = n(921944),
     h = n(388032),
     p = n(60944);
 function f() {
-    let [e, t] = (0, l.cv)([r.z.OVERLAY_KEYBIND_NOTIFICATION]),
+    let [e, t] = (0, o.cv)([s.z.OVERLAY_KEYBIND_NOTIFICATION]),
         n = (0, c.Z)({
             location: 'Overlay',
             options: { autoTrackExposure: !1 }
@@ -32,7 +32,7 @@ function f() {
 }
 function g(e) {
     let { markAsDismissed: t } = e,
-        { trackView: n, trackClick: r } = (0, o.R)(d.n0.KeybindIndicatorsNotification, { notif_type: d.n0.KeybindIndicatorsNotification });
+        { trackView: n, trackClick: s } = (0, l.R)(d.n0.KeybindIndicatorsNotification, { notif_type: d.n0.KeybindIndicatorsNotification });
     return {
         icon: null,
         body: (0, i.jsxs)('div', {
@@ -40,21 +40,21 @@ function g(e) {
             children: [
                 (0, i.jsx)('div', {
                     className: p.iconContainer,
-                    children: (0, i.jsx)(s.MicrophoneIcon, {
+                    children: (0, i.jsx)(r.MicrophoneIcon, {
                         size: 'custom',
                         color: 'currentColor',
                         height: 28,
                         width: 28
                     })
                 }),
-                (0, i.jsx)(s.Text, {
+                (0, i.jsx)(r.Text, {
                     variant: 'text-sm/normal',
                     children: h.intl.string(h.t.EFRNtL)
                 })
             ]
         }),
         onDismissClick: (e, n) => {
-            r('dismiss'), t(u.L.DISMISS), a.Z.updateNotificationStatus(n);
+            s('dismiss'), t(u.L.DISMISS), a.Z.updateNotificationStatus(n);
         },
         onNotificationShow: () => {
             t(u.L.AUTO_DISMISS), n();

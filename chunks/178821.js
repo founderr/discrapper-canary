@@ -133,8 +133,8 @@ function p(e) {
                 i
             ];
         })(j, v),
-        y = performance.now() - i.current < 5000,
-        N = C(c, b.current);
+        N = performance.now() - i.current < 5000,
+        y = C(c, b.current);
     a.useEffect(
         () => (
             T(),
@@ -144,7 +144,7 @@ function p(e) {
         ),
         []
     );
-    let I = a.useCallback(() => {
+    let k = a.useCallback(() => {
         m(), _(), T();
     }, [m, _, T]);
     return (0, r.jsxs)('div', {
@@ -183,7 +183,7 @@ function p(e) {
                         className: d.secondaryInfoText,
                         children: ['(Dropped: ', ((p.current / g.current) * 100).toFixed(4), '%)']
                     }),
-                    y &&
+                    N &&
                         (0, r.jsx)(s.Tooltip, {
                             position: 'left',
                             text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
@@ -244,10 +244,10 @@ function p(e) {
                                 (0, r.jsxs)(s.Text, {
                                     tag: 'span',
                                     variant: 'text-md/semibold',
-                                    color: N > 1 ? 'text-danger' : 'text-secondary',
-                                    children: [N.toFixed(2), 'ms']
+                                    color: y > 1 ? 'text-danger' : 'text-secondary',
+                                    children: [y.toFixed(2), 'ms']
                                 }),
-                                y &&
+                                N &&
                                     (0, r.jsx)(s.Tooltip, {
                                         position: 'left',
                                         text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
@@ -271,7 +271,7 @@ function p(e) {
                 className: d.bottomPanelButton,
                 children: (0, r.jsx)(s.Button, {
                     size: s.Button.Sizes.SMALL,
-                    onClick: I,
+                    onClick: k,
                     children: 'Reset Frame Data'
                 })
             })

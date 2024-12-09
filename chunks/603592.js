@@ -11,18 +11,18 @@ var i = n(200651),
     h = n(662146),
     p = n(187643);
 let m = l.forwardRef(function (e, t) {
-    let { id: n, onClick: r, onContextMenu: m, icon: f, selected: g, tooltip: C, upperBadge: _, lowerBadge: v, lowerBadgeSize: x, showPill: I = !0, className: b, 'aria-label': S, children: E, onMouseEnter: Z, onMouseLeave: N, onMouseDown: y } = e,
+    let { id: n, onClick: r, onContextMenu: m, icon: f, selected: g, tooltip: C, upperBadge: _, lowerBadge: v, lowerBadgeSize: x, showPill: I = !0, className: b, 'aria-label': E, children: S, onMouseEnter: Z, onMouseLeave: N, onMouseDown: y } = e,
         T = (0, c.Q3)('ButtonListItem'),
-        A = (0, a.Ie)(n),
-        [j, P] = l.useState(!1),
-        R = 'string' == typeof C && null == S ? C : S;
+        j = (0, a.Ie)(n),
+        [A, P] = l.useState(!1),
+        R = 'string' == typeof C && null == E ? C : E;
     return (0, i.jsxs)(d.H, {
         children: [
             I
                 ? (0, i.jsx)('div', {
                       className: p.pill,
                       children: (0, i.jsx)(u.Z, {
-                          hovered: j,
+                          hovered: A,
                           selected: g
                       })
                   })
@@ -31,7 +31,7 @@ let m = l.forwardRef(function (e, t) {
                 text: C,
                 selected: g,
                 children: (0, i.jsx)(s.BlobMask, {
-                    selected: !!T || g || j,
+                    selected: !!T || g || A,
                     upperBadge: _,
                     lowerBadge: v,
                     lowerBadgeSize: x,
@@ -44,12 +44,12 @@ let m = l.forwardRef(function (e, t) {
                             null == N || N(), P(!1);
                         },
                         onMouseDown: y,
-                        className: o()(p.circleIconButton, b, { [p.selected]: g || j }),
+                        className: o()(p.circleIconButton, b, { [p.selected]: g || A }),
                         onClick: r,
                         'aria-label': R,
                         onContextMenu: m,
                         focusProps: { enabled: !1 },
-                        ...A,
+                        ...j,
                         children:
                             null != f &&
                             (0, i.jsx)(f, {
@@ -59,7 +59,7 @@ let m = l.forwardRef(function (e, t) {
                     })
                 })
             }),
-            E
+            S
         ]
     });
 });

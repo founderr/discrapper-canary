@@ -28,12 +28,12 @@ function S(e) {
         S = (0, E.ZP)(t),
         T = (0, h.K)(),
         b = (0, h.V)(),
-        x = (0, l.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
-        A = (0, l.e7)([u.Z], () => u.Z.isSpam(t.id)),
+        A = (0, l.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
+        x = (0, l.e7)([u.Z], () => u.Z.isSpam(t.id)),
         Z = (0, p.V)(t.id, t.getRecipientId()),
         L = r.useCallback(() => {
-            f.Z.closeChannelSidebar(_.uZ), x && T && (0, g.Kh)(t.id), A && b && (0, g.Kh)(t.id);
-        }, [t.id, A, b, x, T]),
+            f.Z.closeChannelSidebar(_.uZ), A && T && (0, g.Kh)(t.id), x && b && (0, g.Kh)(t.id);
+        }, [t.id, x, b, A, T]),
         y = r.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(C.intl.string(C.t.pIQ3h4), a.ToastType.FAILURE));
         }, []),
@@ -64,7 +64,7 @@ function S(e) {
                     inSidebar: !0
                 })
             }),
-            A &&
+            x &&
                 (0, i.jsxs)('div', {
                     className: N.hamBanner,
                     children: [

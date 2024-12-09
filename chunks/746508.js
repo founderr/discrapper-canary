@@ -22,8 +22,8 @@ var i = n(200651),
     S = n(40851),
     T = n(317381),
     b = n(596040),
-    x = n(588580),
-    A = n(374065),
+    A = n(588580),
+    x = n(374065),
     Z = n(451576),
     L = n(119315),
     y = n(403404),
@@ -76,8 +76,8 @@ var i = n(200651),
     eS = n(979651),
     eT = n(938475),
     eb = n(626135),
-    ex = n(63063),
-    eA = n(51144),
+    eA = n(63063),
+    ex = n(51144),
     eZ = n(870569),
     eL = n(345243),
     ey = n(594117),
@@ -151,7 +151,7 @@ function eU() {
                         children: (0, i.jsx)('div', { className: eD.krispLogo })
                     }),
                     (0, i.jsx)(f.Anchor, {
-                        href: ex.Z.getArticleURL(eO.BhN.NOISE_SUPPRESSION),
+                        href: eA.Z.getArticleURL(eO.BhN.NOISE_SUPPRESSION),
                         className: eD.krispLink,
                         onClick: (e) => ek(e),
                         children: ej.intl.string(ej.t.hvVgAQ)
@@ -195,7 +195,7 @@ function eB(e) {
             [t, I]
         ),
         v = u || n || h,
-        { Component: N, play: b, events: x } = (0, p.o)(o.enabled ? 'disable' : 'enable');
+        { Component: N, play: b, events: A } = (0, p.o)(o.enabled ? 'disable' : 'enable');
     return (
         r.useEffect(() => () => b(), [o.enabled, b]),
         (0, i.jsx)(eh.Z, {
@@ -237,11 +237,11 @@ function eB(e) {
                                     },
                                     onMouseEnter: () => {
                                         var t, n;
-                                        null === (t = e.onMouseEnter) || void 0 === t || t.call(e), null === (n = u.onMouseEnter) || void 0 === n || n.call(u), x.onMouseEnter();
+                                        null === (t = e.onMouseEnter) || void 0 === t || t.call(e), null === (n = u.onMouseEnter) || void 0 === n || n.call(u), A.onMouseEnter();
                                     },
                                     onMouseLeave: () => {
                                         var t;
-                                        null === (t = e.onMouseLeave) || void 0 === t || t.call(e), x.onMouseLeave();
+                                        null === (t = e.onMouseLeave) || void 0 === t || t.call(e), A.onMouseLeave();
                                     },
                                     onContextMenu: (t) => {
                                         var n;
@@ -278,12 +278,12 @@ function eH(e) {
         o = (0, S.bp)(),
         { analyticsLocations: c } = (0, O.ZP)(),
         m = o === eO.IlC.POPOUT,
-        p = (0, A.KF)(r.id),
-        g = (0, A.g5)(p),
+        p = (0, x.KF)(r.id),
+        g = (0, x.g5)(p),
         { userInActivity: _ } = (0, d.cj)([T.ZP], () => ({ userInActivity: null != T.ZP.getSelfEmbeddedActivityForChannel(r.id) })),
         E = (0, N.O)(),
-        I = (0, x.a)(),
-        C = p !== A.jy.CAN_LAUNCH,
+        I = (0, A.a)(),
+        C = p !== x.jy.CAN_LAUNCH,
         { enabled: v } = R.nS.useExperiment({ location: 'RTCConnection' }, { autoTrackExposure: !0 }),
         { Component: b, events: Z, play: P } = (0, u.s)(),
         { Component: j, events: D, play: M } = (0, h.w)();
@@ -366,10 +366,10 @@ function eV(e) {
     let N = null != C || v.length > 0,
         S = p ? ej.intl.string(ej.t.fjBNo6) : ej.intl.string(ej.t.uQn9Bw),
         b = _ || s || E,
-        x = null != C,
-        { Component: A, events: Z, play: L } = (0, m.P)(x ? 'disable' : 'enable');
-    r.useEffect(() => () => L(), [L, x]);
-    let y = (0, i.jsx)(A, {
+        A = null != C,
+        { Component: x, events: Z, play: L } = (0, m.P)(A ? 'disable' : 'enable');
+    r.useEffect(() => () => L(), [L, A]);
+    let y = (0, i.jsx)(x, {
         size: c ? 'md' : 'sm',
         color: 'currentColor',
         className: a()(eD.buttonIcon, { [eD.withText]: !b })
@@ -703,7 +703,7 @@ t.Z = (0, v.Z)(function (e) {
             noiseCancellationError: eE.Z.isNoiseCancellationError(),
             canGoLive: (0, B.Z)(eE.Z)
         })),
-        p = (0, d.e7)([eE.Z, F.Z], () => F.Z.hasHotspot(eR.v.VOICE_PANEL_INTRODUCTION) && (0, eA.EO)(a) && !eE.Z.isInteractionRequired() && !(null == c ? void 0 : c.isGuildStageVoice())),
+        p = (0, d.e7)([eE.Z, F.Z], () => F.Z.hasHotspot(eR.v.VOICE_PANEL_INTRODUCTION) && (0, ex.EO)(a) && !eE.Z.isInteractionRequired() && !(null == c ? void 0 : c.isGuildStageVoice())),
         g = (0, d.e7)([eS.Z], () => null != s && eS.Z.hasVideo(s), [s]),
         _ = (0, d.e7)([em.Z], () => em.Z.getCurrentUserActiveStream()),
         E = (0, d.e7)([e_.Z], () => e_.Z.hasLayers()),
@@ -711,7 +711,7 @@ t.Z = (0, v.Z)(function (e) {
         C = (0, d.e7)([eI.Z], () => I && !eI.Z.can(eO.Plq.VIEW_CHANNEL, c), [I, c]),
         v = ei.Fg.useSetting(),
         [N, S, T] = (0, d.Wu)([eT.ZP, X.Z], () => ((null == c ? void 0 : c.isGuildStageVoice()) ? [X.Z.getMutableParticipants(c.id, Q.pV.SPEAKER), X.Z.getParticipantsVersion(c.id), null] : [null, null, null != c ? eT.ZP.getVoiceStatesForChannel(c) : null]), [c]),
-        x = r.useMemo(() => {
+        A = r.useMemo(() => {
             var e, t;
             return null !==
                 (t =
@@ -732,7 +732,7 @@ t.Z = (0, v.Z)(function (e) {
                 ? t
                 : [];
         }, [N, S, T]),
-        [A, L] = r.useState(!1);
+        [x, L] = r.useState(!1);
     r.useEffect(() => {
         (I || C) && L(!1);
     }, [I, C, L]);
@@ -761,14 +761,14 @@ t.Z = (0, v.Z)(function (e) {
                     hasVideo: g,
                     selfStream: _,
                     hasLayers: E,
-                    voiceStates: x,
+                    voiceStates: A,
                     showVoiceStates: v,
                     shouldShowVoicePanelIntroduction: p,
                     isPrivateChannelWithEnabledActivities: j,
                     analyticsLocations: y,
                     isVisualRefreshEnabled: t
                 }),
-                !A && I && null != u
+                !x && I && null != u
                     ? (0, i.jsxs)('div', {
                           className: eD.viewAsRolesWarning,
                           children: [

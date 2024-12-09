@@ -158,7 +158,7 @@ function f(e) {
     });
 }
 function N() {
-    let e = (0, a.e7)([m.Z], () => m.Z.getBlockedIDs());
+    let e = (0, a.Wu)([m.Z], () => m.Z.getBlockedIDs());
     return (0, i.jsx)(f, {
         setting: S.s6.BLOCKED_USERS,
         userIds: e,
@@ -166,7 +166,7 @@ function N() {
     });
 }
 function A() {
-    let e = (0, a.e7)([m.Z], () => m.Z.getIgnoredIDs());
+    let e = (0, a.Wu)([m.Z], () => m.Z.getIgnoredIDs());
     return (0, i.jsx)(f, {
         setting: S.s6.IGNORED_USERS,
         userIds: e,

@@ -1,12 +1,12 @@
 n.d(t, {
     K2: function () {
-        return l;
+        return a;
     },
     jS: function () {
-        return r;
+        return i;
     }
 });
-let i = (0, n(818083).B)({
+let r = (0, n(818083).B)({
     kind: 'guild',
     id: '2024-11_member_verification_rollout',
     label: 'Member verification rollout',
@@ -19,8 +19,8 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r(e, t) {
-    return i.useExperiment(
+function i(e, t) {
+    return r.useExperiment(
         {
             guildId: e,
             location: t
@@ -28,8 +28,8 @@ function r(e, t) {
         { autoTrackExposure: !0 }
     ).enabled;
 }
-function l(e, t) {
-    return i.getCurrentConfig(
+function a(e, t) {
+    return r.getCurrentConfig(
         {
             guildId: e,
             location: t

@@ -24,14 +24,14 @@ var i = n(200651),
     x = n(594174),
     I = n(855981),
     b = n(55543),
-    S = n(626135),
-    E = n(768581),
+    E = n(626135),
+    S = n(768581),
     Z = n(358085),
     N = n(998502),
     y = n(379164),
     T = n(590965),
-    A = n(981631),
-    j = n(474936),
+    j = n(981631),
+    A = n(474936),
     P = n(388032),
     R = n(939661),
     M = n(232186);
@@ -39,19 +39,19 @@ function L() {
     let { analyticsLocations: e, sourceAnalyticsLocations: t } = (0, d.ZP)(u.Z.PREMIUM_UPSELL_TOOLTIP);
     return (
         l.useEffect(() => {
-            S.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: j.cd.GUILD_CAP_INLINE_INVITE_MODAL,
-                location: { page: A.ZY5.NATIVE_INVITE_MODAL },
+            E.default.track(j.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: A.cd.GUILD_CAP_INLINE_INVITE_MODAL,
+                location: { page: j.ZY5.NATIVE_INVITE_MODAL },
                 location_stack: t
             });
         }, [t]),
         (0, i.jsxs)(s.Clickable, {
             onClick: () =>
                 (0, _.Z)({
-                    analyticsSource: { page: A.Sbl.EXTERNAL_INVITE_LINK_MODAL },
+                    analyticsSource: { page: j.Sbl.EXTERNAL_INVITE_LINK_MODAL },
                     analyticsLocation: {
-                        page: A.Sbl.EXTERNAL_INVITE_LINK_MODAL,
-                        section: A.jXE.GUILD_CAP_UPSELL_MODAL
+                        page: j.Sbl.EXTERNAL_INVITE_LINK_MODAL,
+                        section: j.jXE.GUILD_CAP_UPSELL_MODAL
                     },
                     analyticsLocations: e
                 }),
@@ -140,21 +140,21 @@ function O(e) {
         !__OVERLAY__ && Z.isPlatformEmbedded && ((0, Z.isWindows)() ? N.ZP.minimize() : N.ZP.restore(), N.ZP.focus());
     }, []);
     let b = (0, g.Dt)(),
-        { analyticsLocations: S } = (0, d.ZP)(u.Z.INVITE_MODAL);
+        { analyticsLocations: E } = (0, d.ZP)(u.Z.INVITE_MODAL);
     if (null == f) return null;
-    if (f.state === A.r2o.EXPIRED || f.state === A.r2o.BANNED || f.state === A.r2o.ERROR) return (0, i.jsx)(D, { transitionState: r });
+    if (f.state === j.r2o.EXPIRED || f.state === j.r2o.BANNED || f.state === j.r2o.ERROR) return (0, i.jsx)(D, { transitionState: r });
     if (null == f.channel) return null;
-    function j() {
+    function A() {
         null != f && y.Z.acceptInvite(f);
     }
-    let { guild: w, channel: O, inviter: k, target_application: G } = f,
-        U = null != w,
+    let { guild: w, channel: O, inviter: k, target_application: U } = f,
+        G = null != w,
         B = null != f.stage_instance,
         H = null == f.guild && null == f.channel && null != f.inviter;
-    if (null != G) (t = null == w ? void 0 : w.name), (n = v.ZP.createFromServer(G).getCoverImageURL(1024));
+    if (null != U) (t = null == w ? void 0 : w.name), (n = v.ZP.createFromServer(U).getCoverImageURL(1024));
     else if (null != w)
         (t = w.name),
-            (n = E.ZP.getGuildSplashURL({
+            (n = S.ZP.getGuildSplashURL({
                 id: w.id,
                 splash: w.splash
             }));
@@ -164,7 +164,7 @@ function O(e) {
     return (
         H && (F = P.intl.string(P.t['e/6Ogo'])),
         (0, i.jsx)(d.Gt, {
-            value: S,
+            value: E,
             children: (0, i.jsxs)(s.ModalRoot, {
                 size: s.ModalSize.DYNAMIC,
                 'aria-labelledby': b,
@@ -185,7 +185,7 @@ function O(e) {
                                         className: M.marginBottom20,
                                         children: (0, i.jsx)(c.Z, {
                                             invite: f,
-                                            disableUser: U,
+                                            disableUser: G,
                                             error: _
                                         })
                                     }),
@@ -202,7 +202,7 @@ function O(e) {
                                     (0, i.jsxs)('div', {
                                         children: [
                                             V ? (0, i.jsx)(L, {}) : null,
-                                            null == G
+                                            null == U
                                                 ? (0, i.jsx)(s.Tooltip, {
                                                       text: V ? P.intl.string(P.t.iLyuDA) : null,
                                                       position: 'bottom',
@@ -210,7 +210,7 @@ function O(e) {
                                                           let { onMouseEnter: t, onMouseLeave: n } = e;
                                                           return (0, i.jsx)(h.zx, {
                                                               size: h.zx.Sizes.LARGE,
-                                                              onClick: j,
+                                                              onClick: A,
                                                               submitting: I,
                                                               disabled: V,
                                                               color: B ? h.zx.Colors.GREEN : h.zx.Colors.BRAND,
@@ -225,14 +225,14 @@ function O(e) {
                                                       children: [
                                                           (0, i.jsx)(h.zx, {
                                                               size: h.zx.Sizes.LARGE,
-                                                              onClick: j,
+                                                              onClick: A,
                                                               submitting: I,
                                                               children: P.intl.string(P.t.RscU7O)
                                                           }),
                                                           (0, i.jsx)(h.zx, {
                                                               color: h.zx.Colors.PRIMARY,
                                                               size: h.zx.Sizes.LARGE,
-                                                              onClick: j,
+                                                              onClick: A,
                                                               submitting: I,
                                                               children: P.intl.string(P.t.eylRaW)
                                                           })

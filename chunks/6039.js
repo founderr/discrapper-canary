@@ -23,8 +23,8 @@ var i = n(200651),
 t.Z = (e) => {
     var t;
     let n, T;
-    let { guildId: b, inviteCode: x } = e,
-        [A, Z] = r.useState(v.hO.INITIAL),
+    let { guildId: b, inviteCode: A } = e,
+        [x, Z] = r.useState(v.hO.INITIAL),
         L = (0, l.e7)([p.Z], () => p.Z.get(b)),
         y = (0, l.e7)([f.Z], () => f.Z.getRequest(b)),
         P = (0, l.e7)([c.Z], () => c.Z.getGuild(b)),
@@ -50,7 +50,7 @@ t.Z = (e) => {
     let w =
             ((n = N.intl.format(N.t['9ZezpK'], { name: null == R ? void 0 : R.toString() })),
             (T = () => {
-                Z(Math.max(A, v.hO.FILLING)), h.Z.removeGuildJoinRequest(b), (0, o.uL)(C.Z5c.ME);
+                Z(Math.max(x, v.hO.FILLING)), h.Z.removeGuildJoinRequest(b), (0, o.uL)(C.Z5c.ME);
             }),
             () => {
                 (0, a.openModal)((e) =>
@@ -81,7 +81,7 @@ t.Z = (e) => {
         children: (0, i.jsxs)(s.Z, {
             embedded: !0,
             splash: k,
-            waveState: A,
+            waveState: x,
             showLogo: !1,
             updateWaveState: j,
             children: [
@@ -107,7 +107,7 @@ t.Z = (e) => {
                             default:
                                 return (0, i.jsx)(I.Z, {
                                     guildId: b,
-                                    inviteCode: x,
+                                    inviteCode: A,
                                     onComplete: D,
                                     disableVerification: !0
                                 });

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return k;
+        return w;
     }
 }),
     n(47120);
@@ -45,7 +45,7 @@ let S = [
         }
     }
 ];
-function y(e) {
+function N(e) {
     let { actionLog: t } = e,
         n = a.useMemo(
             () =>
@@ -62,7 +62,7 @@ function y(e) {
         })
     });
 }
-let N = [
+let y = [
     {
         id: 'action',
         name: 'Action',
@@ -102,17 +102,17 @@ let N = [
         name: 'Store Handlers',
         render(e) {
             let { actionLog: t } = e;
-            return (0, r.jsx)(y, { actionLog: t });
+            return (0, r.jsx)(N, { actionLog: t });
         }
     }
 ];
-function I(e) {
+function k(e) {
     let { actionLog: t, initialHeight: n } = e,
         l = a.useMemo(
             () =>
                 t.error
                     ? [
-                          ...N,
+                          ...y,
                           {
                               id: 'error',
                               name: (0, r.jsxs)(r.Fragment, {
@@ -143,7 +143,7 @@ function I(e) {
                               }
                           }
                       ]
-                    : N,
+                    : y,
             [t]
         ),
         { TabBar: o, renderSelectedTab: s } = (0, j.Z)({ tabs: l }, [l]);
@@ -167,7 +167,7 @@ function I(e) {
         ]
     });
 }
-let E = [
+let I = [
     {
         key: 'action',
         cellClassName: C.actionColumn,
@@ -187,7 +187,7 @@ let E = [
         }
     }
 ];
-function k() {
+function w() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
         l = (function (e) {
@@ -243,7 +243,7 @@ function k() {
             ),
             []
         ),
-        y = a.useCallback(
+        N = a.useCallback(
             (e) => {
                 h(s), g(e);
             },
@@ -259,8 +259,8 @@ function k() {
         a.useEffect(() => {
             T.current = null;
         }, []);
-    let N = t.trim().length > 0,
-        k = a.useMemo(() => (N ? x : p ? c : s), [s, x, N, p, c]);
+    let y = t.trim().length > 0,
+        w = a.useMemo(() => (y ? x : p ? c : s), [s, x, y, p, c]);
     return (0, r.jsxs)('div', {
         ref: e,
         className: i()(_.panel, C.panel),
@@ -273,7 +273,7 @@ function k() {
                         className: C.pausedEvents,
                         children: (0, r.jsx)(d.Switch, {
                             checked: !p,
-                            onChange: (e) => y(!e)
+                            onChange: (e) => N(!e)
                         })
                     }),
                     (0, r.jsx)(d.SearchBar, {
@@ -286,13 +286,13 @@ function k() {
                 ]
             }),
             (0, r.jsx)(v.Z, {
-                columns: E,
-                data: k,
+                columns: I,
+                data: w,
                 selectedRowKey: null == b ? void 0 : b.id.toString(),
                 onClickRow: (e) => j(e.actionLog)
             }),
             null != b &&
-                (0, r.jsx)(I, {
+                (0, r.jsx)(k, {
                     actionLog: b,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
                 })

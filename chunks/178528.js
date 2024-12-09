@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return M;
+        return k;
     }
 }),
     n(47120);
 var i = n(200651),
-    r = n(192379),
-    s = n(752877),
+    s = n(192379),
+    r = n(752877),
     a = n(442837),
-    o = n(481060),
-    l = n(619915),
+    l = n(481060),
+    o = n(619915),
     c = n(554747),
     d = n(373274),
     u = n(315174),
@@ -24,18 +24,18 @@ var i = n(200651),
     x = n(430824),
     Z = n(496675),
     S = n(878884),
-    I = n(19780),
-    C = n(944486),
+    C = n(19780),
+    I = n(944486),
     y = n(9156),
-    T = n(938475),
-    N = n(518084),
+    N = n(938475),
+    T = n(518084),
     b = n(669083),
     O = n(711553),
-    A = n(981631),
-    L = n(647086),
-    P = n(388032),
-    R = n(389645);
-function j(e, t, n) {
+    j = n(981631),
+    A = n(647086),
+    M = n(388032),
+    P = n(389645);
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,8 +48,8 @@ function j(e, t, n) {
         e
     );
 }
-let w = 54;
-class D extends r.PureComponent {
+let R = 54;
+class w extends s.PureComponent {
     static getDerivedStateFromProps(e) {
         let { guild: t } = e;
         return null == t || null == t.banner
@@ -81,8 +81,8 @@ class D extends r.PureComponent {
         if (null != t && (null != t.banner || !!n)) null != t.banner ? this.setAnimatedValueForBanner(e) : this.setAnimatedValueForCommunityInfo(e);
     }
     setAnimatedValueForBanner(e) {
-        let { renderBanner: t, communityInfoVisible: n, bannerVisible: i, controller: r } = this.state;
-        ((e >= w && i) || (e < w && !i)) && (i = !i),
+        let { renderBanner: t, communityInfoVisible: n, bannerVisible: i, controller: s } = this.state;
+        ((e >= R && i) || (e < R && !i)) && (i = !i),
             ((e >= 78 && !t) || (e < 78 && t)) && (t = !t),
             (n = i),
             (t !== this.state.renderBanner || i !== this.state.bannerVisible || n !== this.state.communityInfoVisible) &&
@@ -91,7 +91,7 @@ class D extends r.PureComponent {
                     bannerVisible: i,
                     communityInfoVisible: n
                 }),
-            r
+            s
                 .update({
                     value: Math.min(1, Math.max(0, 1 - e / 78)),
                     immediate: !0
@@ -111,33 +111,33 @@ class D extends r.PureComponent {
     render() {
         let { onDragStart: e, ...t } = this.props,
             { guild: n } = t,
-            { controller: r, renderBanner: s, bannerVisible: a, communityInfoVisible: l } = this.state,
-            c = n.id === L._ ? d.j : d.E;
+            { controller: s, renderBanner: r, bannerVisible: a, communityInfoVisible: o } = this.state,
+            c = n.id === A._ ? d.j : d.E;
         return (0, i.jsxs)(O.Z, {
             header: (0, i.jsx)(u.ZP, {
                 guild: n,
-                controller: r,
-                renderBanner: s,
+                controller: s,
+                renderBanner: r,
                 bannerVisible: a,
-                className: R.guildHeader,
-                headerClassName: R.guildHeaderInner,
+                className: P.guildHeader,
+                headerClassName: P.guildHeaderInner,
                 onMouseDown: e,
                 disableBannerAnimation: !1,
-                communityInfoVisible: l,
-                children: (0, i.jsx)(o.Popout, {
+                communityInfoVisible: o,
+                children: (0, i.jsx)(l.Popout, {
                     position: 'right',
                     renderPopout: this.renderSettings,
                     children: (e) =>
-                        (0, i.jsx)(N.ZP.Icon, {
-                            icon: o.SettingsIcon,
-                            label: P.intl.string(P.t['3D5yo6']),
+                        (0, i.jsx)(T.ZP.Icon, {
+                            icon: l.SettingsIcon,
+                            label: M.intl.string(M.t['3D5yo6']),
                             ...e
                         })
                 })
             }),
             children: [
                 (0, i.jsx)('div', {
-                    className: R.channelList,
+                    className: P.channelList,
                     children: (0, i.jsx)(c, {
                         ...t,
                         guild: n,
@@ -146,8 +146,8 @@ class D extends r.PureComponent {
                     })
                 }),
                 (0, i.jsx)('section', {
-                    className: R.panels,
-                    'aria-label': P.intl.string(P.t.StREWF),
+                    className: P.panels,
+                    'aria-label': M.intl.string(M.t.StREWF),
                     children: (0, i.jsx)(h.Z, { guildId: n.id })
                 })
             ]
@@ -155,8 +155,8 @@ class D extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            j(this, 'state', {
-                controller: new s.Controller({
+            L(this, 'state', {
+                controller: new r.Controller({
                     value: 1,
                     immediate: !0
                 }),
@@ -164,58 +164,58 @@ class D extends r.PureComponent {
                 bannerVisible: !1,
                 communityInfoVisible: !1
             }),
-            j(this, 'handleScroll', (e) => {
+            L(this, 'handleScroll', (e) => {
                 let { scrollTop: t } = e;
                 this.setAnimatedValue(t);
             });
     }
 }
-function M(e) {
+function k(e) {
     var t;
     let { guildId: n } = e,
-        r = (0, a.e7)([x.Z], () => x.Z.getGuild(n)),
-        s = (0, a.e7)([_.ZP], () => _.ZP.getChannels(n)),
-        o = (0, a.e7)([v.Z], () => v.Z.getCategories(n)),
+        s = (0, a.e7)([x.Z], () => x.Z.getGuild(n)),
+        r = (0, a.e7)([_.ZP], () => _.ZP.getChannels(n)),
+        l = (0, a.e7)([v.Z], () => v.Z.getCategories(n)),
         { mutedChannels: d, collapseMuted: u } = (0, a.cj)([y.ZP], () => ({
             mutedChannels: y.ZP.getMutedChannels(n),
             collapseMuted: y.ZP.isGuildCollapsed(n)
         })),
-        h = (0, a.e7)([T.ZP], () => T.ZP.getVoiceStates(n)),
-        N = (0, a.e7)([g.Z], () => g.Z.getCollapsed()),
+        h = (0, a.e7)([N.ZP], () => N.ZP.getVoiceStates(n)),
+        T = (0, a.e7)([g.Z], () => g.Z.getCollapsed()),
         { scrollTo: b } = (0, a.e7)([m.Z], () => m.Z.getGuildDimensions(n)),
         O = (0, p.Z)((e) => {
             let { channelId: t } = e;
             return t;
         }),
-        L = (0, a.e7)([C.Z], () => C.Z.getVoiceChannelId()),
-        P = (0, a.e7)([Z.Z], () => Z.Z.getGuildVersion(n)),
-        R = (0, a.e7)([f.Z], () => f.Z.version),
-        j = (0, a.e7)([E.default], () => E.default.getGuildChangeSentinel(n)),
-        w = (0, l.QN)(null == r ? void 0 : r.id),
-        M = (0, c.gM)(null == r ? void 0 : r.id),
-        k = null !== (t = null == r ? void 0 : r.hasFeature(A.oNc.COMMUNITY)) && void 0 !== t && t,
-        z = (0, a.e7)([I.Z], () => I.Z.getChannelId()),
-        V = (0, a.e7)([S.Z], () => S.Z.desyncedVoiceStatesCount);
-    return (0, i.jsx)(D, {
+        A = (0, a.e7)([I.Z], () => I.Z.getVoiceChannelId()),
+        M = (0, a.e7)([Z.Z], () => Z.Z.getGuildVersion(n)),
+        P = (0, a.e7)([f.Z], () => f.Z.version),
+        L = (0, a.e7)([E.default], () => E.default.getGuildChangeSentinel(n)),
+        R = (0, o.QN)(null == s ? void 0 : s.id),
+        k = (0, c.gM)(null == s ? void 0 : s.id),
+        D = null !== (t = null == s ? void 0 : s.hasFeature(j.oNc.COMMUNITY)) && void 0 !== t && t,
+        z = (0, a.e7)([C.Z], () => C.Z.getChannelId()),
+        B = (0, a.e7)([S.Z], () => S.Z.desyncedVoiceStatesCount);
+    return (0, i.jsx)(w, {
         guildId: n,
-        guild: r,
-        channels: s,
-        categories: o,
+        guild: s,
+        channels: r,
+        categories: l,
         mutedChannels: d,
         scrollToChannel: b,
         selectedChannelId: O,
-        selectedVoiceChannelId: L,
+        selectedVoiceChannelId: A,
         voiceStates: h,
         rtcConnectedChannelId: z,
-        rtcDesyncedVoiceStatesCount: V,
-        collapsedChannels: N,
+        rtcDesyncedVoiceStatesCount: B,
+        collapsedChannels: T,
         collapseMuted: u,
-        guildReadStateSentinel: j,
-        permissionVersion: P,
-        categoryCollapseVersion: R,
-        embeddedAppsByChannel: w,
-        activeEventsByChannel: M,
-        showNewUnreadsBar: k,
+        guildReadStateSentinel: L,
+        permissionVersion: M,
+        categoryCollapseVersion: P,
+        embeddedAppsByChannel: R,
+        activeEventsByChannel: k,
+        showNewUnreadsBar: D,
         optInEnabled: !1
     });
 }

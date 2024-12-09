@@ -18,13 +18,13 @@ var i = n(200651),
     x = n(135724),
     I = n(25601),
     b = n(207055),
-    S = n(981631),
-    E = n(124368),
+    E = n(981631),
+    S = n(124368),
     Z = n(388032),
     N = n(831746),
     y = n(193877),
     T = n(329986);
-function A(e) {
+function j(e) {
     let { style: t, withGuildIcon: n } = e;
     return (0, i.jsx)('svg', {
         className: o()(T.spine, { [T.spineWithGuildIcon]: n }),
@@ -41,7 +41,7 @@ function A(e) {
     });
 }
 t.Z = l.memo(function (e) {
-    let { thread: t, isSelectedChannel: r, isSelectedVoice: T, isLast: j, withGuildIcon: P } = e,
+    let { thread: t, isSelectedChannel: r, isSelectedVoice: T, isLast: A, withGuildIcon: P } = e,
         R = (0, s.e7)([_.ZP], () => _.ZP.getVoiceStatesForChannel(t), [t]),
         M = (0, s.e7)([C.Z], () => C.Z.hasVideo(t.id)),
         { unread: L, mentionCount: w } = (0, s.cj)([g.ZP], () => ({
@@ -51,14 +51,14 @@ t.Z = l.memo(function (e) {
         D = (0, s.e7)([p.Z], () => p.Z.isMuted(t.id)),
         O = l.useCallback(
             (e) => {
-                (0, m.ok)(t, !e.shiftKey, E.on.CHANNEL_LIST);
+                (0, m.ok)(t, !e.shiftKey, S.on.CHANNEL_LIST);
             },
             [t]
         ),
         k = l.useCallback(() => {
             u.Z.preload(t.guild_id, t.id);
         }, [t.guild_id, t.id]),
-        G = l.useCallback(
+        U = l.useCallback(
             (e) => {
                 let l = f.Z.getChannel(t.id);
                 null != l &&
@@ -73,7 +73,7 @@ t.Z = l.memo(function (e) {
             },
             [t.id]
         ),
-        U = null == R ? 0 : R.length,
+        G = null == R ? 0 : R.length,
         { role: B, ...H } = (0, a.JA)(t.id),
         V = l.useRef(null),
         F =
@@ -89,10 +89,10 @@ t.Z = l.memo(function (e) {
         role: B,
         className: o()(N.containerDefault, { [N.selected]: r }),
         children: [
-            (0, i.jsx)(A, { withGuildIcon: P }),
-            j
+            (0, i.jsx)(j, { withGuildIcon: P }),
+            A
                 ? null
-                : (0, i.jsx)(A, {
+                : (0, i.jsx)(j, {
                       withGuildIcon: P,
                       style: { transform: 'rotateX(180deg) translateY(-9px)' }
                   }),
@@ -112,7 +112,7 @@ t.Z = l.memo(function (e) {
                         [y.withGuildIcon]: P
                     }),
                     onMouseDown: k,
-                    onContextMenu: G,
+                    onContextMenu: U,
                     children: [
                         !L || D || r ? null : (0, i.jsx)('div', { className: o()(y.unread, y.unreadImportant) }),
                         (0, i.jsx)(c.Clickable, {
@@ -133,9 +133,9 @@ t.Z = l.memo(function (e) {
                                     (0, i.jsxs)('div', {
                                         className: y.children,
                                         children: [
-                                            U > 0 && t.userLimit > 0
+                                            G > 0 && t.userLimit > 0
                                                 ? (0, i.jsx)(x.Z, {
-                                                      userCount: U,
+                                                      userCount: G,
                                                       video: M,
                                                       channel: t
                                                   })
@@ -154,7 +154,7 @@ t.Z = l.memo(function (e) {
                 collapsed: !T,
                 collapsedMax: 6,
                 voiceStates: R,
-                location: S.Sbl.GUILD_CHANNEL_LIST
+                location: E.Sbl.GUILD_CHANNEL_LIST
             })
         ]
     });

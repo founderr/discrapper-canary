@@ -52,8 +52,8 @@ let C = { offset: 2 },
     };
 function N(e) {
     var t, r;
-    let { channel: l, user: p, nick: N, mute: S, deaf: T, serverMute: b, serverDeaf: x } = e,
-        A = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
+    let { channel: l, user: p, nick: N, mute: S, deaf: T, serverMute: b, serverDeaf: A } = e,
+        x = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
         Z = (0, d.Z)({
             userId: p.id,
             checkSoundSharing: !0
@@ -74,11 +74,11 @@ function N(e) {
                 else if (l) return v.localMute;
                 else if (r) return v.mute;
             })({
-                serverDeaf: x,
+                serverDeaf: A,
                 deaf: T,
                 serverMute: b,
                 mute: S,
-                localMute: A
+                localMute: x
             })) && void 0 !== r
             ? r
             : {},

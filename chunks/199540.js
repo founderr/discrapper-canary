@@ -24,7 +24,7 @@ var i = n(200651),
 let x = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     I = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
     b = ['12px 4px 4px 4px', '4px 12px 4px 4px', '4px 4px 4px 12px', '4px 4px 12px 4px'];
-function S(e) {
+function E(e) {
     let { guildId: t, animate: n, index: l } = e,
         r = (0, c.e7)([m.Z], () => m.Z.getGuild(t), [t]),
         o = (0, h.Q3)('GuildIcon');
@@ -42,7 +42,7 @@ function S(e) {
               style: o ? { borderRadius: b[l] } : void 0
           });
 }
-function E(e) {
+function S(e) {
     let t,
         n,
         { folderNode: r, hovered: o, expanded: c } = e,
@@ -51,7 +51,7 @@ function E(e) {
         f = null != p ? p : C.Wyy,
         g = m.map((e) => e.id),
         [_, b] = l.useState(!1),
-        [E, Z] = l.useState(c),
+        [S, Z] = l.useState(c),
         N = c ? 0 : -I,
         y = (0, d.useSpring)(
             {
@@ -68,7 +68,7 @@ function E(e) {
         ),
         T = _ ? y : void 0;
     return (
-        (_ || E) &&
+        (_ || S) &&
             (t = (0, i.jsx)(a.animated.div, {
                 style: T,
                 className: v.expandedFolderIconWrapper,
@@ -78,13 +78,13 @@ function E(e) {
                     style: { color: (0, s.Rf)(f) }
                 })
             })),
-        (_ || !E) &&
+        (_ || !S) &&
             (n = (0, i.jsx)(a.animated.div, {
                 style: T,
                 className: v.closedFolderIconWrapper,
                 children: g.slice(0, 4).map((e, t) =>
                     (0, i.jsx)(
-                        S,
+                        E,
                         {
                             index: t,
                             guildId: e,
@@ -117,7 +117,7 @@ function Z(e) {
             onContextMenu: C,
             onHoverChange: x,
             onKeyDown: I,
-            treeItemProps: { onFocus: b, ...S }
+            treeItemProps: { onFocus: b, ...E }
         } = e,
         [Z, N] = l.useState(!1),
         y = l.useCallback(() => {
@@ -126,19 +126,19 @@ function Z(e) {
         T = l.useCallback(() => {
             a || N(!1), null == x || x(!1);
         }, [a, x]),
-        A = (0, h.Q3)('FolderHeader'),
-        j = r || null == s ? null : (0, g.Or)(s),
+        j = (0, h.Q3)('FolderHeader'),
+        A = r || null == s ? null : (0, g.Or)(s),
         P = !r && c > 0 ? (0, g.Ne)(c) : null;
     return (0, i.jsx)(d.BlobMask, {
         isFolder: !0,
-        style: A
+        style: j
             ? {
                   width: 52,
                   height: 52
               }
             : void 0,
-        selected: !!A || !n,
-        upperBadge: j,
+        selected: !!j || !n,
+        upperBadge: A,
         lowerBadge: P,
         lowerBadgeSize: { width: (0, d.getBadgeWidthForValue)(c) },
         children: (0, i.jsx)(d.Clickable, {
@@ -156,7 +156,7 @@ function Z(e) {
             'aria-expanded': r,
             'aria-owns': p,
             focusProps: { enabled: !1 },
-            ...S,
+            ...E,
             role: 'treeitem',
             children:
                 null != m
@@ -164,7 +164,7 @@ function Z(e) {
                           className: v.expandedFolderIconWrapper,
                           children: m
                       })
-                    : (0, i.jsx)(E, {
+                    : (0, i.jsx)(S, {
                           folderNode: t,
                           hovered: Z,
                           expanded: r

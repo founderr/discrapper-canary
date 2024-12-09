@@ -1,10 +1,10 @@
 n(47120);
 var i,
-    r = n(200651),
-    s = n(192379),
+    s = n(200651),
+    r = n(192379),
     a = n(120356),
-    o = n.n(a),
-    l = n(442837),
+    l = n.n(a),
+    o = n(442837),
     c = n(552062),
     d = n(416568),
     u = n(914010),
@@ -30,14 +30,14 @@ function E(e, t, n) {
 }
 function x(e) {
     let { closePopout: t } = e;
-    return (0, r.jsx)(f.Z, { onClose: t });
+    return (0, s.jsx)(f.Z, { onClose: t });
 }
-class Z extends (i = s.PureComponent) {
+class Z extends (i = r.PureComponent) {
     render() {
         let { selectedGuildId: e, locked: t, contained: n } = this.props,
             i =
                 null != e
-                    ? (0, r.jsx)(
+                    ? (0, s.jsx)(
                           p.Z,
                           {
                               guildId: e,
@@ -45,17 +45,17 @@ class Z extends (i = s.PureComponent) {
                           },
                           e
                       )
-                    : (0, r.jsx)(m.Z, {
+                    : (0, s.jsx)(m.Z, {
                           title: v.intl.string(v.t.YUU0RE),
                           renderSettings: x,
                           onDragStart: this.onDragStart,
-                          children: (0, r.jsx)(g.Z, {})
+                          children: (0, s.jsx)(g.Z, {})
                       }),
-            s = n ? 'div' : h.ZP;
-        return (0, r.jsxs)(s, {
-            className: o()(_.base, { [_.widget]: !n }),
+            r = n ? 'div' : h.ZP;
+        return (0, s.jsxs)(r, {
+            className: l()(_.base, { [_.widget]: !n }),
             children: [
-                (0, r.jsx)(d.Z, {
+                (0, s.jsx)(d.Z, {
                     isOverlay: !0,
                     disableAppDownload: !0,
                     isVisible: !t
@@ -72,4 +72,4 @@ class Z extends (i = s.PureComponent) {
             });
     }
 }
-E(Z, 'defaultProps', { contained: !1 }), (t.Z = l.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(Z));
+E(Z, 'defaultProps', { contained: !1 }), (t.Z = o.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(Z));

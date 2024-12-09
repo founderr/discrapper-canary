@@ -26,14 +26,14 @@ var l = n(120356),
     x = n(215339),
     I = n(832382),
     b = n(446226),
-    S = n(305325),
-    E = n(281956),
+    E = n(305325),
+    S = n(281956),
     Z = n(66999),
     N = n(554747),
     y = n(378844),
     T = n(574176),
-    A = n(359110),
-    j = n(155409),
+    j = n(359110),
+    A = n(155409),
     P = n(695346),
     R = n(447564),
     M = n(592125),
@@ -42,8 +42,8 @@ var l = n(120356),
     D = n(496675),
     O = n(306680),
     k = n(9156),
-    G = n(979651),
-    U = n(934415),
+    U = n(979651),
+    G = n(934415),
     B = n(63063),
     H = n(98597),
     V = n(648501),
@@ -54,8 +54,8 @@ var l = n(120356),
     K = n(981631),
     q = n(647086),
     Q = n(388032),
-    X = n(831746);
-function J(e, t, n) {
+    J = n(831746);
+function X(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -79,13 +79,13 @@ class $ extends H.ZP {
     }
     isFull() {
         let { channel: e } = this.props;
-        return (0, U.rY)(e, G.Z, L.Z);
+        return (0, G.rY)(e, U.Z, L.Z);
     }
     getModeClass() {
         let { position: e, sortingPosition: t, isUserOver: n } = this.props;
-        if (n) return X.containerUserOver;
-        if (null != t) return e > t ? X.containerDragAfter : X.containerDragBefore;
-        return X.containerDefault;
+        if (n) return J.containerUserOver;
+        if (null != t) return e > t ? J.containerDragAfter : J.containerDragBefore;
+        return J.containerDefault;
     }
     renderSubtitle() {
         var e;
@@ -119,7 +119,7 @@ class $ extends H.ZP {
         return null == e
             ? null
             : (0, i.jsx)('div', {
-                  className: X.channelInfo,
+                  className: J.channelInfo,
                   children: e
               });
     }
@@ -132,7 +132,7 @@ class $ extends H.ZP {
                   children: (t) => {
                       let { onMouseEnter: n, onMouseLeave: l, onFocus: o, onBlur: a } = t;
                       return (0, i.jsx)(s.Clickable, {
-                          className: r()(X.iconItem, X.alwaysShown),
+                          className: r()(J.iconItem, J.alwaysShown),
                           onClick: () => {
                               (0, x.X)('VoiceChannel') ? (0, R.openHDPotionModal)(e, 'VoiceChannel') : window.open(B.Z.getArticleURL(K.BhN.HD_STREAMING_POTION), '_blank');
                           },
@@ -144,18 +144,18 @@ class $ extends H.ZP {
                           children: (0, i.jsx)(s.PotionIcon, {
                               size: 'xs',
                               color: 'currentColor',
-                              className: X.actionIcon
+                              className: J.actionIcon
                           })
                       });
                   }
               });
     }
     render() {
-        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: o, mentionCount: a, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: m, connectDragPreview: C, canReorderChannel: _, canMoveMembers: v, showTutorial: x, hasActiveEvent: b, embeddedApps: S, isSubscriptionGated: E, isFavoriteSuggestion: Z, withGuildIcon: N } = this.props,
+        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: o, mentionCount: a, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: m, connectDragPreview: C, canReorderChannel: _, canMoveMembers: v, showTutorial: x, hasActiveEvent: b, embeddedApps: E, isSubscriptionGated: S, isFavoriteSuggestion: Z, withGuildIcon: N } = this.props,
             { shouldShowActivities: y, shouldShowGuildVerificationPopout: T } = this.state,
-            A = this.getVoiceStatesCount(),
+            j = this.getVoiceStatesCount(),
             P = (0, i.jsxs)('li', {
-                className: r()(this.getModeClass(), { [X.disabled]: this.isDisabled() }),
+                className: r()(this.getModeClass(), { [J.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
                 children: [
                     (0, i.jsx)('div', {
@@ -175,8 +175,8 @@ class $ extends H.ZP {
                                         return (0, i.jsx)(I.Z, {
                                             channel: e,
                                             children: (0, i.jsxs)(F.Z, {
-                                                className: X.iconVisibility,
-                                                iconClassName: r()({ [X.iconLive]: b }),
+                                                className: J.iconVisibility,
+                                                iconClassName: r()({ [J.iconLive]: b }),
                                                 hasActiveEvent: b,
                                                 channel: e,
                                                 selected: !Z && t,
@@ -198,13 +198,13 @@ class $ extends H.ZP {
                                                     channel: e,
                                                     unread: l,
                                                     mentionCount: a,
-                                                    userCount: A,
-                                                    embeddedActivitiesCount: S.length,
-                                                    isSubscriptionGated: E
+                                                    userCount: j,
+                                                    embeddedActivitiesCount: E.length,
+                                                    isSubscriptionGated: S
                                                 }),
                                                 'aria-describedby': (0, g.Z)({
                                                     channel: e,
-                                                    embeddedApps: S
+                                                    embeddedApps: E
                                                 }),
                                                 withGuildIcon: N,
                                                 ...h,
@@ -222,7 +222,7 @@ class $ extends H.ZP {
             v && (P = m(P)),
             _ && (P = h(p(P))),
             x &&
-                (P = (0, i.jsx)(j.Z, {
+                (P = (0, i.jsx)(A.Z, {
                     tutorialId: 'voice-conversations',
                     position: 'right',
                     offsetX: -20,
@@ -233,16 +233,16 @@ class $ extends H.ZP {
     }
     constructor(...e) {
         super(...e),
-            J(this, 'state', {
+            X(this, 'state', {
                 shouldShowActivities: !1,
                 shouldShowGuildVerificationPopout: !1,
                 hovered: !1
             }),
-            J(this, 'activitiesHideTimeout', new a.V7()),
-            J(this, 'closeGuildVerificationPopout', () => {
+            X(this, 'activitiesHideTimeout', new a.V7()),
+            X(this, 'closeGuildVerificationPopout', () => {
                 this.setState({ shouldShowGuildVerificationPopout: !1 });
             }),
-            J(this, 'handleVoiceConnect', () => {
+            X(this, 'handleVoiceConnect', () => {
                 let { locked: e, connected: t, channel: n, unverifiedAccount: i, needSubscriptionToAccess: l } = this.props;
                 i && this.setState({ shouldShowGuildVerificationPopout: !0 }),
                     _.Z.handleVoiceConnect({
@@ -252,7 +252,7 @@ class $ extends H.ZP {
                         locked: e
                     });
             }),
-            J(this, 'handleContextMenu', (e) => {
+            X(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
                     l = L.Z.getGuild(t.getGuildId());
                 null != l &&
@@ -266,14 +266,14 @@ class $ extends H.ZP {
                             });
                     });
             }),
-            J(this, 'handleMouseEnter', () => {
+            X(this, 'handleMouseEnter', () => {
                 this.activitiesHideTimeout.stop(),
                     this.setState({
                         shouldShowActivities: !0,
                         hovered: !0
                     });
             }),
-            J(this, 'handleMouseLeave', () => {
+            X(this, 'handleMouseLeave', () => {
                 this.activitiesHideTimeout.start(100, () =>
                     this.setState({
                         shouldShowActivities: !1,
@@ -281,15 +281,15 @@ class $ extends H.ZP {
                     })
                 );
             }),
-            J(this, 'closePopout', () => {
+            X(this, 'closePopout', () => {
                 this.activitiesHideTimeout.stop(), this.setState({ shouldShowActivities: !1 });
             }),
-            J(this, 'handleClick', () => {
+            X(this, 'handleClick', () => {
                 let { channel: e } = this.props,
                     t = e.getGuildId();
-                null != t && (0, E.n)(t) && (0, S.hk)(t), this.handleVoiceConnect();
+                null != t && (0, S.n)(t) && (0, E.hk)(t), this.handleVoiceConnect();
             }),
-            J(this, 'handleVoiceStatusClick', (e) => {
+            X(this, 'handleVoiceStatusClick', (e) => {
                 let { connected: t, channel: l } = this.props;
                 t &&
                     (e.stopPropagation(),
@@ -305,7 +305,7 @@ class $ extends H.ZP {
                         { modalKey: m.VOICE_CHANNEL_STATUS_MODAL_KEY }
                     ));
             }),
-            J(this, 'renderPopout', () => {
+            X(this, 'renderPopout', () => {
                 let { channel: e, voiceStates: t, sorting: n, isUserOver: l, selected: r, guild: o } = this.props,
                     { shouldShowActivities: a, shouldShowGuildVerificationPopout: s } = this.state;
                 if (a && !n && !l && !s) {
@@ -327,7 +327,7 @@ class $ extends H.ZP {
                     });
                 throw Error('VoiceChannel.renderPopout: There must always be something to render');
             }),
-            J(this, 'renderOpenChatButton', () => {
+            X(this, 'renderOpenChatButton', () => {
                 let { channel: e, locked: t, forceShowButtons: n } = this.props;
                 if (!t)
                     return (0, i.jsx)(s.Tooltip, {
@@ -335,9 +335,9 @@ class $ extends H.ZP {
                         children: (t) => {
                             let { onMouseEnter: l, onMouseLeave: o, onFocus: a, onBlur: u } = t;
                             return (0, i.jsx)(s.Clickable, {
-                                className: r()(X.iconItem, n ? X.alwaysShown : null),
+                                className: r()(J.iconItem, n ? J.alwaysShown : null),
                                 onClick: () => {
-                                    c.Z.updateChatOpen(e.id, !0), (0, A.Kh)(e.id);
+                                    c.Z.updateChatOpen(e.id, !0), (0, j.Kh)(e.id);
                                 },
                                 'aria-label': Q.intl.string(Q.t.ZXxLQk),
                                 onMouseEnter: l,
@@ -347,13 +347,13 @@ class $ extends H.ZP {
                                 children: (0, i.jsx)(s.ChatIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: X.actionIcon
+                                    className: J.actionIcon
                                 })
                             });
                         }
                     });
             }),
-            J(this, 'getTooltipText', () => {
+            X(this, 'getTooltipText', () => {
                 let { connected: e } = this.props;
                 return this.isFull() && !e ? Q.intl.string(Q.t.rZfiNj) : null;
             });
@@ -379,22 +379,22 @@ function et(e) {
                 unverifiedAccount: !i.canChat
             };
         }),
-        m = (0, o.e7)([G.Z], () => G.Z.hasVideo(n.id)),
+        m = (0, o.e7)([U.Z], () => U.Z.hasVideo(n.id)),
         f = (0, p.ZP)(n),
         g = (0, C.ZP)(n),
         _ = (0, N.qY)(n.id),
         { isSubscriptionGated: v, needSubscriptionToAccess: x } = (0, Z.Z)(n.id),
         I = (0, b.Z)(),
-        S = (0, o.e7)([k.ZP], () => k.ZP.isFavorite(t.id, n.id)),
-        E = e.connected || (null == I ? void 0 : I.channelId) === n.id,
-        { enableHangStatus: y, allowChannelTopic: A } = T.n.useExperiment(
+        E = (0, o.e7)([k.ZP], () => k.ZP.isFavorite(t.id, n.id)),
+        S = e.connected || (null == I ? void 0 : I.channelId) === n.id,
+        { enableHangStatus: y, allowChannelTopic: j } = T.n.useExperiment(
             {
                 guildId: n.guild_id,
                 location: 'VoiceChannel'
             },
             { autoTrackExposure: !1 }
         ),
-        j = (0, V.Z)({
+        A = (0, V.Z)({
             channel: n,
             isChannelSelected: a,
             isChannelCollapsed: s,
@@ -404,7 +404,7 @@ function et(e) {
             enableConnectedUserLimit: !0,
             enableActivities: !0
         }),
-        P = E && null == j;
+        P = S && null == A;
     return (0, i.jsx)(ee, {
         channelName: g,
         embeddedApps: f,
@@ -416,12 +416,12 @@ function et(e) {
         ...u,
         ...h,
         ...e,
-        connected: E,
-        isFavoriteSuggestion: r && !S,
+        connected: S,
+        isFavoriteSuggestion: r && !E,
         forceShowButtons: P,
-        channelInfo: j,
+        channelInfo: A,
         enableHangStatus: y,
-        allowChannelTopic: A,
+        allowChannelTopic: j,
         resolvedUnreadSetting: d
     });
 }

@@ -28,8 +28,8 @@ var i = n(200651),
     S = n(13228),
     T = n(211644),
     b = n(605236),
-    x = n(243778),
-    A = n(492162),
+    A = n(243778),
+    x = n(492162),
     Z = n(818634),
     L = n(596557),
     y = n(817520),
@@ -264,7 +264,7 @@ class eE extends r.PureComponent {
     }
     renderFooter() {
         let { shouldRenderClipsEducation: e } = this.props;
-        return (0, i.jsx)(x.ZP, {
+        return (0, i.jsx)(A.ZP, {
             contentTypes: [],
             children: (t) => {
                 let { visibleContent: n } = t;
@@ -403,10 +403,10 @@ function eI(e) {
     let { guildId: n, hideSelectedChannel: l, selectedChannelId: s } = e,
         u = (0, c.e7)([q.Z], () => q.Z.getGuild(n));
     (0, f.J_)(n);
-    let m = (0, A.Z)(n),
+    let m = (0, x.Z)(n),
         p = (0, c.e7)([z.Z], () => z.Z.getGuildDimensions(n).scrollTo),
         g = (0, c.e7)([$.Z], () => $.Z.getChannelId()),
-        [N, x, O] = (0, c.Wu)([Q.Z], () => [Q.Z.can(eo.Plq.MANAGE_GUILD, u), Q.Z.can(eo.Plq.MANAGE_ROLES, u), Q.Z.can(eo.Plq.MANAGE_THREADS, u)]),
+        [N, A, O] = (0, c.Wu)([Q.Z], () => [Q.Z.can(eo.Plq.MANAGE_GUILD, u), Q.Z.can(eo.Plq.MANAGE_ROLES, u), Q.Z.can(eo.Plq.MANAGE_THREADS, u)]),
         D = (0, c.e7)([W.Z], () => W.Z.isUnavailable(n)),
         k = (0, c.e7)([ee.default], () => ee.default.getCurrentUser()),
         G = (0, c.e7)([V.Z], () => (V.Z.darkSidebar ? eo.BRd.DARK : V.Z.theme)),
@@ -427,12 +427,12 @@ function eI(e) {
         eI = N && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(),
         eC = (0, c.e7)([K.Z], () => K.Z.getMemberCount(n)),
         ev = N && null != eC && eC >= 30 && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(),
-        eN = x && null != u && (u.hasFeature(eo.oNc.COMMUNITY) || (null != eC && eC > 50)),
+        eN = A && null != u && (u.hasFeature(eo.oNc.COMMUNITY) || (null != eC && eC > 50)),
         eS = (0, P.Z)(n),
         eT = (null == u ? void 0 : u.hasFeature(eo.oNc.HUB)) === !0,
         eb = N && (null == u ? void 0 : u.hasFeature(eo.oNc.DISCOVERABLE)) === !0,
-        ex = (0, C.Q)(),
-        eA = (N || (null == u ? void 0 : u.premiumTier) === eo.Eu4.NONE) && !en.s.isDisallowPopupsSet() && !ex,
+        eA = (0, C.Q)(),
+        ex = (N || (null == u ? void 0 : u.premiumTier) === eo.Eu4.NONE) && !en.s.isDisallowPopupsSet() && !eA,
         eZ = (0, c.e7)([R.Z, X.Z], () => null != u && null != k && N && !X.Z.hasLayers() && R.Z.shouldShowGuildTemplateDirtyTooltip(n)),
         eL = (0, c.e7)([F.Z], () => F.Z.getChannel(s)),
         { isPopoutOpen: ey } = (0, Z.y)(),
@@ -466,7 +466,7 @@ function eI(e) {
         anyLayerOpen: ep || eg,
         showGuildBoostingProgressBarUpsell: eI,
         showGuildBoostingProgressBarSizeUpsell: ev,
-        showInviteSplashUpsell: eA,
+        showInviteSplashUpsell: ex,
         showDiscoveryLandingPageSettingsUpsell: eb,
         showGuildHeaderTutorial: e_,
         showGuildTemplateDirtyTooltip: eZ,

@@ -1,24 +1,24 @@
 n.d(t, {
     $_: function () {
-        return _;
+        return P;
     },
     KQ: function () {
-        return m;
+        return d;
     },
     MU: function () {
-        return h;
+        return S;
     },
     RF: function () {
-        return Z;
+        return L;
     },
     m0: function () {
-        return g;
+        return O;
     },
     rf: function () {
-        return E;
+        return _;
     },
     tu: function () {
-        return v;
+        return E;
     }
 }),
     n(610138),
@@ -27,90 +27,90 @@ n.d(t, {
     n(815648),
     n(47120),
     n(315314);
-var i = n(860911),
-    r = n(477690),
-    s = n(481060),
-    a = n(911969),
-    o = n(134432),
-    l = n(703656),
-    c = n(768581),
-    d = n(981631),
-    u = n(388032);
-let h = 0,
-    { API_ENDPOINT: p, CDN_HOST: f } = window.GLOBAL_ENV;
-function g(e) {
-    return e.id === h;
+var r = n(860911),
+    o = n(477690),
+    i = n(481060),
+    l = n(911969),
+    c = n(134432),
+    a = n(703656),
+    u = n(768581),
+    s = n(981631),
+    p = n(388032);
+let S = 0,
+    { API_ENDPOINT: I, CDN_HOST: A } = window.GLOBAL_ENV;
+function O(e) {
+    return e.id === S;
 }
-function m() {
+function d() {
     return {
-        id: h,
-        name: u.intl.string(u.t.E407b2)
+        id: S,
+        name: p.intl.string(p.t.E407b2)
     };
 }
-function v(e) {
+function E(e) {
     switch (e.id) {
         case 0:
-            return s.GlobeEarthIcon;
+            return i.GlobeEarthIcon;
         case 4:
-            return s.TvIcon;
+            return i.TvIcon;
         case 5:
-            return s.AnalyticsIcon;
+            return i.AnalyticsIcon;
         case 6:
-            return s.GameControllerIcon;
+            return i.GameControllerIcon;
         case 8:
             break;
         case 9:
-            return s.FriendsIcon;
+            return i.FriendsIcon;
         case 10:
-            return s.WrenchIcon;
+            return i.WrenchIcon;
     }
-    return s.AsteriskIcon;
+    return i.AsteriskIcon;
 }
-function _(e) {
+function P(e) {
     let { itemId: t, hash: n } = e,
-        i = new URLSearchParams({ size: (0, o.oO)(parseFloat(r.Z.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) * (0, o.x_)()).toString() }).toString(),
-        s = c.$k ? 'webp' : 'png';
-    return null != f
-        ? ''.concat(location.protocol, '//').concat(f, '/app-assets/application-directory/collection-items/').concat(t, '/').concat(n, '.').concat(s, '?').concat(i)
+        r = new URLSearchParams({ size: (0, c.oO)(parseFloat(o.Z.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) * (0, c.x_)()).toString() }).toString(),
+        i = u.$k ? 'webp' : 'png';
+    return null != A
+        ? ''.concat(location.protocol, '//').concat(A, '/app-assets/application-directory/collection-items/').concat(t, '/').concat(n, '.').concat(i, '?').concat(r)
         : ''
               .concat(location.protocol)
-              .concat(p)
-              .concat(d.ANM.APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE(t, n, s), '?')
-              .concat(i);
+              .concat(I)
+              .concat(s.ANM.APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE(t, n, i), '?')
+              .concat(r);
 }
-function E() {
+function _() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = new URL(location.href);
     for (let n in e) {
-        let i = e[n];
-        t.searchParams.set(n, i);
+        let r = e[n];
+        t.searchParams.set(n, r);
     }
     let n = t.pathname + t.search,
-        r = (0, i.Ui)(n, !1);
-    (0, l.uL)(r);
+        o = (0, r.Ui)(n, !1);
+    (0, a.uL)(o);
 }
-let x = (e) => {
+let y = (e) => {
     if (null == e) return null;
     let t = e.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/);
     return null != t ? t[1] : null;
 };
-function Z(e) {
+function L(e) {
     switch (e.type) {
-        case a.ee.MEDIA_PROXY:
+        case l.ee.MEDIA_PROXY:
             var t;
             let n = null !== (t = e.proxy_url) && void 0 !== t ? t : e.url;
             return {
-                type: d.s9s.IMG,
+                type: s.s9s.IMG,
                 width: 0,
                 height: 0,
                 src: n
             };
-        case a.ee.YOUTUBE:
-            let i = x(e.url);
-            if (null != i)
+        case l.ee.YOUTUBE:
+            let r = y(e.url);
+            if (null != r)
                 return {
-                    type: d.s9s.YOUTUBE_VIDEO,
-                    youtubeVideoId: i
+                    type: s.s9s.YOUTUBE_VIDEO,
+                    youtubeVideoId: r
                 };
     }
     return console.warn('Unsupported carousel item', e), null;

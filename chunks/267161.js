@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return x;
+            return A;
         },
         useAppSidebarState: function () {
             return T;
@@ -52,7 +52,7 @@ function b() {
         })
     );
 }
-function x(e) {
+function A(e) {
     let { hasNotice: t } = e;
     r.useLayoutEffect(() => {
         I.ZP.setMinimumSize(N.J, N.N);
@@ -76,7 +76,7 @@ function x(e) {
                             onClick: () => {
                                 T.setState({ isOpen: !T.getState().isOpen });
                             },
-                            children: (0, i.jsx)(A, {})
+                            children: (0, i.jsx)(x, {})
                         }),
                         (0, i.jsx)(s.Clickable, {
                             className: S.button,
@@ -97,7 +97,7 @@ function x(e) {
         })
     );
 }
-function A() {
+function x() {
     return (0, i.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
         className: S.icon,

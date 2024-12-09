@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return A;
     }
 }),
     n(653041),
@@ -28,10 +28,10 @@ var i = n(200651),
     S = n(981631),
     T = n(388032);
 let b = d.Z.get(S.ABu.XBOX).name;
-function x(e) {
+function A(e) {
     let { currentActivities: t } = e,
         n = t.length > 1,
-        x = (function (e) {
+        A = (function (e) {
             let { currentActivities: t } = e,
                 n = (0, l.e7)([f.Z], () => f.Z.getAccounts().some((e) => e.type === d.Z.get(S.ABu.XBOX).type)),
                 r = t.some((e) => {
@@ -46,7 +46,7 @@ function x(e) {
                       label: T.intl.formatToPlainString(T.t.XWSHTU, { platform: b })
                   });
         })(e),
-        A = (function (e) {
+        x = (function (e) {
             let { currentActivities: t } = e,
                 n = r.useContext(C.AnalyticsContext);
             return (0, l.Wu)(
@@ -78,7 +78,7 @@ function x(e) {
             );
         })(e),
         Z = [];
-    for (let e of A) {
+    for (let e of x) {
         let { activity: t } = e;
         null != t &&
             null != t.type &&
@@ -124,5 +124,5 @@ function x(e) {
                 })(e, n)
             );
     }
-    return [x, ...Z];
+    return [A, ...Z];
 }

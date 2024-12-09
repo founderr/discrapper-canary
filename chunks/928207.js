@@ -22,7 +22,7 @@ var r = n(120356),
     S = n(474936),
     T = n(388032),
     b = n(707858);
-let x = o.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser() }))(
+let A = o.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser() }))(
     (0, m.Z)(
         (0, h.Z)((e) => {
             let { analyticsLocations: t } = (0, f.ZP)(g.Z.HOME_PAGE_PREMIUM_TAB),
@@ -68,4 +68,4 @@ let x = o.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser(
         })
     )
 );
-t.Z = x;
+t.Z = A;

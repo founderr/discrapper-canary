@@ -25,8 +25,8 @@ var i,
     x = n(607070),
     I = n(585483),
     b = n(557177),
-    S = n(264549),
-    E = n(981631),
+    E = n(264549),
+    S = n(981631),
     Z = n(388032),
     N = n(521287);
 function y(e, t, n) {
@@ -49,21 +49,21 @@ let T = {
     LEFT: h().throttle(() => (0, b.GN)('ddr-left'), 100),
     RIGHT: h().throttle(() => (0, b.GN)('ddr-right'), 100)
 };
-function A(e) {
+function j(e) {
     switch (e.keyCode) {
-        case E.yXg.ARROW_UP:
+        case S.yXg.ARROW_UP:
             return 'UP';
-        case E.yXg.ARROW_DOWN:
+        case S.yXg.ARROW_DOWN:
             return 'DOWN';
-        case E.yXg.ARROW_LEFT:
+        case S.yXg.ARROW_LEFT:
             return 'LEFT';
-        case E.yXg.ARROW_RIGHT:
+        case S.yXg.ARROW_RIGHT:
             return 'RIGHT';
         default:
             return null;
     }
 }
-let j = [C.Q2.MESSAGE, C.Q2.NAVIGATION, C.Q2.VOICE_AND_VIDEO, C.Q2.CHAT, C.Q2.MISCELLANEOUS];
+let A = [C.Q2.MESSAGE, C.Q2.NAVIGATION, C.Q2.VOICE_AND_VIDEO, C.Q2.CHAT, C.Q2.MISCELLANEOUS];
 function P(e) {
     let { showBackdrop: t } = e;
     return (0, r.jsx)('div', { className: s()(N.backdrop, { [N.show]: t }) });
@@ -78,7 +78,7 @@ function R() {
     );
     return (0, r.jsx)('div', {
         className: N.keyboardShortcutList,
-        children: j.map((t) => {
+        children: A.map((t) => {
             let n = e[t],
                 i = (0, C.UD)(t),
                 l = (0, C.U6)(t);
@@ -148,10 +148,10 @@ function R() {
 }
 class M extends o.PureComponent {
     componentDidMount() {
-        (this.lastInputedKeys = []), I.S.subscribe(E.CkL.SCROLL_PAGE_UP, this.scrollPageUp), I.S.subscribe(E.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.addEventListener('keyup', this.handleKeyUp, { capture: !0 });
+        (this.lastInputedKeys = []), I.S.subscribe(S.CkL.SCROLL_PAGE_UP, this.scrollPageUp), I.S.subscribe(S.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.addEventListener('keyup', this.handleKeyUp, { capture: !0 });
     }
     componentWillUnmount() {
-        I.S.unsubscribe(E.CkL.SCROLL_PAGE_UP, this.scrollPageUp), I.S.unsubscribe(E.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.removeEventListener('keyup', this.handleKeyUp, { capture: !0 });
+        I.S.unsubscribe(S.CkL.SCROLL_PAGE_UP, this.scrollPageUp), I.S.unsubscribe(S.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.removeEventListener('keyup', this.handleKeyUp, { capture: !0 });
     }
     render() {
         let { UP: e, DOWN: t, LEFT: n, RIGHT: i } = this.state;
@@ -277,13 +277,13 @@ class M extends o.PureComponent {
                 ]
             })),
             y(this, 'handleKeyDown', (e) => {
-                if ((this.lastInputedKeys.push(e.keyCode), (this.lastInputedKeys = this.lastInputedKeys.slice(-5)), this.lastInputedKeys[0] === E.yXg.H && this.lastInputedKeys[1] === E.yXg.H && this.lastInputedKeys[2] === E.yXg.ARROW_RIGHT && this.lastInputedKeys[3] === E.yXg.N && this.lastInputedKeys[4] === E.yXg.K && this.props.activateRagingDemon(), this.props.keyboardModeEnabled)) return;
-                let t = A(e);
+                if ((this.lastInputedKeys.push(e.keyCode), (this.lastInputedKeys = this.lastInputedKeys.slice(-5)), this.lastInputedKeys[0] === S.yXg.H && this.lastInputedKeys[1] === S.yXg.H && this.lastInputedKeys[2] === S.yXg.ARROW_RIGHT && this.lastInputedKeys[3] === S.yXg.N && this.lastInputedKeys[4] === S.yXg.K && this.props.activateRagingDemon(), this.props.keyboardModeEnabled)) return;
+                let t = j(e);
                 null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowDown({ direction: t }));
             }),
             y(this, 'handleKeyUp', (e) => {
                 if (this.props.keyboardModeEnabled) return;
-                let t = A(e);
+                let t = j(e);
                 null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowUp({ direction: t }));
             }),
             y(this, 'onArrowClick', (e) => {
@@ -332,7 +332,7 @@ function w(e) {
                     component: 'div',
                     children: i
                         ? (0, r.jsx)(
-                              S.Z,
+                              E.Z,
                               {
                                   handleDemonClose: function () {
                                       c(!1), setTimeout(n, 500);

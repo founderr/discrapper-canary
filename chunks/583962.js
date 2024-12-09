@@ -27,14 +27,14 @@ var i = n(200651),
     x = n(267642),
     I = n(624138),
     b = n(667815),
-    S = n(531572),
-    E = n(26323),
+    E = n(531572),
+    S = n(26323),
     Z = n(30513),
     N = n(981631),
     y = n(388032),
     T = n(976019);
-let A = (0, I.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
-    j = (e) => {
+let j = (0, I.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+    A = (e) => {
         let { guild: t, onSelect: n } = e,
             [r, o] = l.useState(t.premiumProgressBarEnabled),
             [a, s] = l.useState(!1),
@@ -57,7 +57,7 @@ let A = (0, I.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
         });
     },
     P = 57,
-    R = 57 + A,
+    R = 57 + j,
     M = {
         tension: 180,
         friction: 80
@@ -67,13 +67,13 @@ t.ZP = (e) => {
         r = (0, g.Q3)('GuildBoostingSidebarDisplay'),
         { analyticsLocations: u } = (0, f.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
         { premiumSubscriberCount: C, id: I } = t,
-        A = (0, x.rF)(C, I),
-        P = (0, x.FZ)(A, t.id),
+        j = (0, x.rF)(C, I),
+        P = (0, x.FZ)(j, t.id),
         R = null == P,
-        L = null != P ? P : A,
-        w = (0, c.e7)([S.Z], () => {
+        L = null != P ? P : j,
+        w = (0, c.e7)([E.Z], () => {
             var e;
-            return null !== (e = S.Z.getCountForGuild(I)) && void 0 !== e ? e : 0;
+            return null !== (e = E.Z.getCountForGuild(I)) && void 0 !== e ? e : 0;
         }),
         D = (0, c.e7)([_.Z], () => _.Z.can(N.Plq.MANAGE_GUILD, t));
     l.useEffect(() => {
@@ -81,19 +81,19 @@ t.ZP = (e) => {
     }, [I, w, C]);
     let O = ''.concat(Math.min(100, (C / (0, x.vn)(t.id)[L]) * 100), '%'),
         { current: k } = l.useRef(O),
-        G = {
+        U = {
             from: { width: w === C ? k : '0%' },
             to: { width: O },
             config: M
         },
-        [U, B] = (0, d.useSpring)(() => G),
+        [G, B] = (0, d.useSpring)(() => U),
         H = () => {
             (0, m.yw)(N.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                 location: { section: N.jXE.PREMIUM_GUILD_PROGRESS_BAR },
                 guild_id: I,
                 location_stack: u
             }),
-                (0, E.Z)({
+                (0, S.Z)({
                     analyticsLocations: u,
                     analyticsSourceLocation: {
                         page: N.ZY5.GUILD_CHANNEL,
@@ -134,13 +134,13 @@ t.ZP = (e) => {
                     onClick: H,
                     onMouseEnter: () => {
                         var t;
-                        null === (t = e.onMouseEnter) || void 0 === t || t.call(e), B(G);
+                        null === (t = e.onMouseEnter) || void 0 === t || t.call(e), B(U);
                     },
                     className: o()(T.container, { [T.containerWithMargin]: n }),
                     onContextMenu: (e) => {
                         D &&
                             (0, h.vq)(e, (e) =>
-                                (0, i.jsx)(j, {
+                                (0, i.jsx)(A, {
                                     ...e,
                                     guild: t
                                 })
@@ -184,7 +184,7 @@ t.ZP = (e) => {
                             children: [
                                 (0, i.jsx)(a.animated.div, {
                                     className: T.progressBar,
-                                    style: U
+                                    style: G
                                 }),
                                 R
                                     ? (0, i.jsx)('span', {

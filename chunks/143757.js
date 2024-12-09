@@ -27,8 +27,8 @@ var i = n(200651),
     S = n(626135),
     T = n(823379),
     b = n(404295),
-    x = n(728345),
-    A = n(812206),
+    A = n(728345),
+    x = n(812206),
     Z = n(981631),
     L = n(388032),
     y = n(914333),
@@ -39,7 +39,7 @@ async function O(e, t, n) {
     if (null == i)
         try {
             var r, l, a;
-            i = null !== (a = null === (r = A.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = v.ZP.createFromServer(await (0, x.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
+            i = null !== (a = null === (r = x.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = v.ZP.createFromServer(await (0, A.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
         } catch (e) {
             t(void 0);
             return;

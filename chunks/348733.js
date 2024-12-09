@@ -1,33 +1,33 @@
 var i = n(200651),
-    r = n(192379),
-    s = n(120356),
-    a = n.n(s),
-    o = n(442837),
-    l = n(261435),
+    s = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    l = n(442837),
+    o = n(261435),
     c = n(237997),
     d = n(438015),
     u = n(981631),
     h = n(544690);
-class p extends r.Component {
+class p extends s.Component {
     render() {
-        let { keybind: e, notifications: t, position: n, locked: r } = this.props;
+        let { keybind: e, notifications: t, position: n, locked: s } = this.props;
         if (n === u._vf.DISABLED) return null;
-        let s = -1;
+        let r = -1;
         return (0, i.jsx)('div', {
             className: a()(h.container, h[n]),
             children: t.map((t) =>
-                r && t.status === u._1z.TIMED_OUT
+                s && t.status === u._1z.TIMED_OUT
                     ? null
-                    : ((s += 1),
+                    : ((r += 1),
                       (0, i.jsx)(
                           d.Z,
                           {
-                              index: s,
-                              zIndex: 100 - s,
+                              index: r,
+                              zIndex: 100 - r,
                               position: n,
                               notification: t,
                               keybind: e,
-                              locked: r
+                              locked: s
                           },
                           t.id
                       ))
@@ -35,7 +35,7 @@ class p extends r.Component {
         });
     }
 }
-t.Z = o.ZP.connectStores([l.Z, c.Z], () => ({
-    notifications: l.Z.getNotifications(),
+t.Z = l.ZP.connectStores([o.Z, c.Z], () => ({
+    notifications: o.Z.getNotifications(),
     position: c.Z.getNotificationPositionMode()
 }))(p);

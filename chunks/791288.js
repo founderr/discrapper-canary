@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return w;
+        return R;
     }
 }),
     n(47120);
 var i = n(200651),
-    r = n(192379),
-    s = n(512722),
-    a = n.n(s),
-    o = n(442837),
-    l = n(481060),
+    s = n(192379),
+    r = n(512722),
+    a = n.n(r),
+    l = n(442837),
+    o = n(481060),
     c = n(493683),
     d = n(13245),
     u = n(99690),
@@ -24,30 +24,30 @@ var i = n(200651),
     x = n(703656),
     Z = n(199902),
     S = n(592125),
-    I = n(158776),
-    C = n(594174),
+    C = n(158776),
+    I = n(594174),
     y = n(5192),
-    T = n(312839),
-    N = n(981631),
+    N = n(312839),
+    T = n(981631),
     b = n(701488),
     O = n(987650),
-    A = n(388032),
-    L = n(522634);
-function P(e) {
+    j = n(388032),
+    A = n(522634);
+function M(e) {
     let { game: t } = e,
         n = (0, h.q)(t.id);
     if (null == n) return null;
-    let r = n.getIconURL(b.Si.LARGE);
+    let s = n.getIconURL(b.Si.LARGE);
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
-            className: L.header,
+            className: A.header,
             children: [
                 (0, i.jsx)(f.f, {
-                    src: r,
+                    src: s,
                     size: 32
                 }),
-                (0, i.jsx)(l.Text, {
-                    className: L.gameInfo,
+                (0, i.jsx)(o.Text, {
+                    className: A.gameInfo,
                     variant: 'text-md/semibold',
                     color: 'header-primary',
                     children: n.name
@@ -56,97 +56,97 @@ function P(e) {
         })
     });
 }
-function R(e) {
+function P(e) {
     let { entry: t, idx: n } = e,
-        s = (0, o.e7)([C.default], () => C.default.getUser(t.author_id)),
+        r = (0, l.e7)([I.default], () => I.default.getUser(t.author_id)),
         h = (0, _.kr)(t),
-        f = h ? l.tokens.colors.TEXT_POSITIVE : l.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
-        [E, T] = r.useState('unsent'),
-        [b, O] = r.useState(!1),
-        P = (0, o.e7)([Z.Z], () => (null != s ? Z.Z.getAnyStreamForUser(s.id) : null), [s]),
-        { isMobileOnline: R, status: j } = (0, o.cj)(
-            [I.Z],
+        f = h ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
+        [E, N] = s.useState('unsent'),
+        [b, O] = s.useState(!1),
+        M = (0, l.e7)([Z.Z], () => (null != r ? Z.Z.getAnyStreamForUser(r.id) : null), [r]),
+        { isMobileOnline: P, status: L } = (0, l.cj)(
+            [C.Z],
             () =>
-                null == s
+                null == r
                     ? {
                           isMobileOnline: void 0,
                           status: void 0
                       }
                     : {
-                          isMobileOnline: I.Z.isMobileOnline(s.id),
-                          status: I.Z.getStatus(s.id)
+                          isMobileOnline: C.Z.isMobileOnline(r.id),
+                          status: C.Z.getStatus(r.id)
                       },
-            [s]
+            [r]
         );
-    r.useEffect(() => {
+    s.useEffect(() => {
         if ('sent' === E) {
             let e = setTimeout(() => O(!0), 2000);
             return () => clearTimeout(e);
         }
     }, [E]);
-    let w = async (e) => {
-            if (null != s && 'unsent' === E) {
+    let R = async (e) => {
+            if (null != r && 'unsent' === E) {
                 e.stopPropagation();
                 try {
                     var i;
-                    T('sending');
-                    let e = await c.Z.getOrEnsurePrivateChannel(s.id),
-                        r = null !== (i = S.Z.getChannel(e)) && void 0 !== i ? i : null;
-                    a()(null != r, 'Send channel must be defined'),
-                        (0, x.uL)(N.Z5c.CHANNEL(r.guild_id, r.id)),
+                    N('sending');
+                    let e = await c.Z.getOrEnsurePrivateChannel(r.id),
+                        s = null !== (i = S.Z.getChannel(e)) && void 0 !== i ? i : null;
+                    a()(null != s, 'Send channel must be defined'),
+                        (0, x.uL)(T.Z5c.CHANNEL(s.guild_id, s.id)),
                         await (0, v.p)({
-                            channel: r,
-                            content: A.intl.string(A.t.DwAcMz),
+                            channel: s,
+                            content: j.intl.string(j.t.DwAcMz),
                             entry: t,
                             whenReady: !0
                         }),
-                        d.Z.track(N.rMx.OVERLAY_GAME_INVITE_SENT, {
-                            target_user_id: s.id,
+                        d.Z.track(T.rMx.OVERLAY_GAME_INVITE_SENT, {
+                            target_user_id: r.id,
                             target_content_entry_id: t.id,
                             target_index: n
                         }),
-                        T('sent');
+                        N('sent');
                 } catch (e) {
-                    T('unsent');
+                    N('unsent');
                 }
             }
         },
-        D = async () => {
+        w = async () => {
             var e;
-            if (null == s) return;
-            let t = await c.Z.getOrEnsurePrivateChannel(s.id),
+            if (null == r) return;
+            let t = await c.Z.getOrEnsurePrivateChannel(r.id),
                 n = null !== (e = S.Z.getChannel(t)) && void 0 !== e ? e : null;
-            a()(null != n, 'Send channel must be defined'), (0, x.uL)(N.Z5c.CHANNEL(n.guild_id, n.id));
+            a()(null != n, 'Send channel must be defined'), (0, x.uL)(T.Z5c.CHANNEL(n.guild_id, n.id));
         };
-    return null == s
+    return null == r
         ? null
         : (0, i.jsxs)('div', {
-              className: L.userRow,
+              className: A.userRow,
               children: [
                   (0, i.jsx)(u.Z, {
-                      className: L.avatarContainer,
-                      user: s,
-                      isMobile: R,
-                      status: j
+                      className: A.avatarContainer,
+                      user: r,
+                      isMobile: P,
+                      status: L
                   }),
                   (0, i.jsxs)('div', {
-                      className: L.userInfo,
+                      className: A.userInfo,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: L.usernameWrapper,
+                              className: A.usernameWrapper,
                               children: [
-                                  (0, i.jsx)(l.Text, {
-                                      className: L.username,
+                                  (0, i.jsx)(o.Text, {
+                                      className: A.username,
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: y.ZP.getName(void 0, void 0, s)
+                                      children: y.ZP.getName(void 0, void 0, r)
                                   }),
-                                  null != P && (0, i.jsx)(p.ZP, {})
+                                  null != M && (0, i.jsx)(p.ZP, {})
                               ]
                           }),
                           (0, i.jsxs)(g.m7, {
                               children: [
-                                  (0, i.jsx)(l.GameControllerIcon, {
+                                  (0, i.jsx)(o.GameControllerIcon, {
                                       size: 'xxs',
                                       color: f
                                   }),
@@ -160,43 +160,43 @@ function R(e) {
                       ]
                   }),
                   (0, i.jsx)('div', {
-                      className: L.inviteButtonWrapper,
-                      children: (0, i.jsx)(l.Button, {
+                      className: A.inviteButtonWrapper,
+                      children: (0, i.jsx)(o.Button, {
                           submitting: 'sending' === E,
-                          onClick: b ? D : w,
-                          className: L.inviteButton,
-                          color: l.ButtonColors.PRIMARY,
-                          look: 'sent' === E ? l.ButtonLooks.OUTLINED : l.ButtonLooks.FILLED,
-                          size: l.ButtonSizes.MAX,
+                          onClick: b ? w : R,
+                          className: A.inviteButton,
+                          color: o.ButtonColors.PRIMARY,
+                          look: 'sent' === E ? o.ButtonLooks.OUTLINED : o.ButtonLooks.FILLED,
+                          size: o.ButtonSizes.MAX,
                           children:
                               'sent' === E
                                   ? b
-                                      ? (0, i.jsx)(l.ChatIcon, { size: 'sm' })
-                                      : (0, i.jsx)(l.CheckmarkSmallBoldIcon, {
+                                      ? (0, i.jsx)(o.ChatIcon, { size: 'sm' })
+                                      : (0, i.jsx)(o.CheckmarkSmallBoldIcon, {
                                             size: 'sm',
-                                            color: l.tokens.colors.WHITE
+                                            color: o.tokens.colors.WHITE
                                         })
-                                  : (0, i.jsx)(l.SendMessageIcon, { size: 'sm' })
+                                  : (0, i.jsx)(o.SendMessageIcon, { size: 'sm' })
                       })
                   })
               ]
           });
 }
-function j(e) {
+function L(e) {
     let { entries: t } = e,
         n = t.slice(0, 5);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(E.iz, {}),
-            (0, i.jsxs)(l.Text, {
-                className: L.helpText,
+            (0, i.jsxs)(o.Text, {
+                className: A.helpText,
                 variant: 'text-sm/medium',
                 color: 'header-secondary',
-                children: [(0, i.jsx)(l.ChatPlusIcon, { size: 'xxs' }), A.intl.string(A.t.y9eo7e)]
+                children: [(0, i.jsx)(o.ChatPlusIcon, { size: 'xxs' }), j.intl.string(j.t.y9eo7e)]
             }),
             n.map((e, t) =>
                 (0, i.jsx)(
-                    R,
+                    P,
                     {
                         idx: t,
                         entry: e
@@ -207,26 +207,26 @@ function j(e) {
         ]
     });
 }
-function w(e, t) {
-    let { trackView: n, trackClick: r } = (0, T.R)(O.n0.SendGameInvitesNotification, { notif_type: O.n0.SendGameInvitesNotification });
+function R(e, t) {
+    let { trackView: n, trackClick: s } = (0, N.R)(O.n0.SendGameInvitesNotification, { notif_type: O.n0.SendGameInvitesNotification });
     return (
         a()(t.length > 0, 'Some entries must be present'),
         {
             icon: null,
-            title: (0, i.jsx)(P, { game: e }),
-            body: (0, i.jsx)(j, { entries: t }),
+            title: (0, i.jsx)(M, { game: e }),
+            body: (0, i.jsx)(L, { entries: t }),
             onNotificationShow: () => {
                 n(),
-                    d.Z.track(N.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
+                    d.Z.track(T.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
                         user_ids: t.map((e) => e.author_id),
                         entry_ids: t.map((e) => e.id)
                     });
             },
             onNotificationClick: (e, t) => {
-                r('unlock'), d.Z.setInstanceLocked(!1);
+                s('unlock'), d.Z.setInstanceLocked(!1);
             },
             onDismissClick: () => {
-                r('dismiss');
+                s('dismiss');
             }
         }
     );

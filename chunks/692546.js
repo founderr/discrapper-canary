@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return C;
     }
 }),
     n(47120);
 var i,
-    r = n(192379),
-    s = n(392711),
-    a = n.n(s),
-    o = n(995295),
-    l = n(374470),
+    s = n(192379),
+    r = n(392711),
+    a = n.n(r),
+    l = n(995295),
+    o = n(374470),
     c = n(902704),
     d = n(846519),
     u = n(13245),
@@ -78,7 +78,7 @@ function Z(e, t) {
               })()));
 }
 let S = !1;
-class I extends (i = r.PureComponent) {
+class C extends (i = s.PureComponent) {
     componentDidMount() {
         this.props.observe ? this.observeZone() : this.updateZone();
     }
@@ -90,7 +90,7 @@ class I extends (i = r.PureComponent) {
         t !== e.observe && (t ? this.observeZone() : this.interval.stop());
     }
     render() {
-        return r.Children.only(this.props.children);
+        return s.Children.only(this.props.children);
     }
     observeZone() {
         this.updateZone(), this.interval.start(this.props.observeInterval, this.updateZone);
@@ -104,9 +104,9 @@ class I extends (i = r.PureComponent) {
             m(this, 'zone', a().uniqueId('ClickArea')),
             m(this, 'interval', new d.Xp()),
             m(this, 'updateZone', () => {
-                let e = (0, o.findDOMNode)(this);
-                if ((0, l.k)(e)) {
-                    let { left: t, top: n, right: i, bottom: r } = e.getBoundingClientRect();
+                let e = (0, l.findDOMNode)(this);
+                if ((0, o.k)(e)) {
+                    let { left: t, top: n, right: i, bottom: s } = e.getBoundingClientRect();
                     Z(this.zone, {
                         instance: this,
                         zone: {
@@ -114,14 +114,14 @@ class I extends (i = r.PureComponent) {
                             left: Math.ceil(t),
                             top: Math.ceil(n),
                             right: Math.ceil(i),
-                            bottom: Math.ceil(r)
+                            bottom: Math.ceil(s)
                         }
                     });
                 }
             });
     }
 }
-m(I, 'defaultProps', {
+m(C, 'defaultProps', {
     observe: !0,
     observeInterval: 1000
 });

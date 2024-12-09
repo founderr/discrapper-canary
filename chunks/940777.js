@@ -26,14 +26,14 @@ var i = n(200651),
     x = n(944486),
     I = n(979651),
     b = n(709054),
-    S = n(853856),
-    E = n(593214),
+    E = n(853856),
+    S = n(593214),
     Z = n(919755),
     N = n(110977),
     y = n(603274),
     T = n(981631),
-    A = n(388032),
-    j = n(120555);
+    j = n(388032),
+    A = n(120555);
 let P = {
     analyticsSource: {
         page: T.ZY5.GUILD_CHANNEL,
@@ -43,16 +43,16 @@ let P = {
 };
 function R() {
     let e = (0, a.Ie)('favorites'),
-        { favoriteAdded: t, clearFavoriteAdded: r } = (0, E.up)(),
+        { favoriteAdded: t, clearFavoriteAdded: r } = (0, S.up)(),
         [R, M] = l.useState(!1),
-        { favoriteServerMuted: L, favoriteChannels: w } = (0, s.cj)([S.Z], () => ({
-            favoriteChannels: S.Z.getFavoriteChannels(),
-            favoriteServerMuted: S.Z.favoriteServerMuted
+        { favoriteServerMuted: L, favoriteChannels: w } = (0, s.cj)([E.Z], () => ({
+            favoriteChannels: E.Z.getFavoriteChannels(),
+            favoriteServerMuted: E.Z.favoriteServerMuted
         })),
         D = (0, s.e7)([x.Z], () => x.Z.getChannelId(T.I_8)),
         O = (0, s.e7)([v.Z], () => v.Z.getChannel(D)),
         k = (0, C.Z)((e) => e.guildId) === T.I_8,
-        { badge: G, unread: U } = (0, Z.Z)(w),
+        { badge: U, unread: G } = (0, Z.Z)(w),
         B = (function (e) {
             let t = (0, s.e7)([x.Z], () => x.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
@@ -87,7 +87,7 @@ function R() {
                 })
             );
         })(w),
-        H = G > 0 ? (0, g.N)(G) : null,
+        H = U > 0 ? (0, g.N)(U) : null,
         V = l.useCallback(() => {
             r();
         }, [r]);
@@ -96,8 +96,8 @@ function R() {
             (0, i.jsx)(p.Z, {
                 selected: k,
                 hovered: R,
-                unread: U && !L,
-                className: j.pill
+                unread: G && !L,
+                className: A.pill
             }),
             (0, i.jsx)(y.Z, {
                 onShow: V,
@@ -108,9 +108,9 @@ function R() {
                         lowerBadge: H,
                         children: (0, i.jsx)(c.NavItem, {
                             ...e,
-                            ariaLabel: A.intl.formatToPlainString(A.t['/uzRsr'], {
-                                guildName: A.intl.string(A.t.wMWycn),
-                                mentions: G
+                            ariaLabel: j.intl.formatToPlainString(j.t['/uzRsr'], {
+                                guildName: j.intl.string(j.t.wMWycn),
+                                mentions: U
                             }),
                             to: {
                                 pathname: T.Z5c.CHANNEL(T.I_8, D),
@@ -129,11 +129,11 @@ function R() {
                                 });
                             },
                             children: (0, i.jsx)('div', {
-                                className: o()(j.ring, { [j.ringActive]: t }),
+                                className: o()(A.ring, { [A.ringActive]: t }),
                                 children: (0, i.jsx)(c.StarIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
-                                    className: j.favoriteIcon,
+                                    className: A.favoriteIcon,
                                     width: 20,
                                     height: 20
                                 })

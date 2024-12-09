@@ -1,30 +1,30 @@
-n.d(e, {
+n.d(t, {
     Z: function () {
-        return a;
+        return o;
     }
 });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(120356),
-    o = n.n(i),
-    l = n(481060),
-    c = n(496008);
-function a(t) {
-    let { loading: e, children: n } = t;
-    return (0, r.jsxs)('div', {
-        className: c.container,
+var r = n(120356),
+    l = n.n(r),
+    c = n(481060),
+    s = n(496008);
+function o(e) {
+    let { loading: t, children: n } = e;
+    return (0, i.jsxs)('div', {
+        className: s.container,
         children: [
-            e
-                ? (0, r.jsx)('div', {
-                      className: c.spinnerContainer,
-                      children: (0, r.jsx)(l.Spinner, {
-                          className: c.spinner,
-                          type: l.Spinner.Type.SPINNING_CIRCLE
+            t
+                ? (0, i.jsx)('div', {
+                      className: s.spinnerContainer,
+                      children: (0, i.jsx)(c.Spinner, {
+                          className: s.spinner,
+                          type: c.Spinner.Type.SPINNING_CIRCLE
                       })
                   })
                 : null,
-            (0, r.jsx)('div', {
-                className: o()({ [c.loading]: e }),
+            (0, i.jsx)('div', {
+                className: l()({ [s.loading]: t }),
                 children: n
             })
         ]

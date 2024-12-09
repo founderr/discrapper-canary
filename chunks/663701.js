@@ -27,8 +27,8 @@ var i = n(200651),
     S = n(243778),
     T = n(922409),
     b = n(899740),
-    x = n(28476),
-    A = n(880257),
+    A = n(28476),
+    x = n(880257),
     Z = n(631885),
     L = n(522558),
     y = n(795448),
@@ -140,7 +140,7 @@ let ee = (e) => {
         let { selected: t } = e,
             n = (0, c.JA)('messageRequests'),
             { channelId: r } = (0, T._)();
-        if (!(0, x.a)()) return null;
+        if (!(0, A.a)()) return null;
         let l = null == r ? void 0 : () => g.Z.preload(q.ME, r);
         return (0, i.jsx)(W.Qj, {
             selected: t,
@@ -157,7 +157,7 @@ let ee = (e) => {
             n = J.intl.string(J.t.Rkdixs),
             l = (0, c.JA)('family-center'),
             a = k.Ex.useSetting(),
-            s = (0, A.Z)(),
+            s = (0, x.Z)(),
             [o, d] = r.useState(!0);
         return a && s
             ? (0, i.jsx)(W.Qj, {
