@@ -14,9 +14,9 @@ var i = n(200651),
     o = n(625128),
     E = n(362762),
     p = n(703656),
-    m = n(626135),
-    u = n(981631),
-    _ = n(186901),
+    m = n(617136),
+    _ = n(981631),
+    u = n(186901),
     b = n(388032),
     N = n(574714),
     x = n(821744);
@@ -30,14 +30,17 @@ function h(e) {
         (a.useEffect(() => {
             if (!g)
                 null == n
-                    ? (m.default.track(u.rMx.QUEST_SHARE_LINK_DEEP_LINKED_INTO_DESKTOP_CLIENT, { quest_id: r }),
-                      o.Z.openNativeAppModal('quests', u.Etm.DEEP_LINK, {
-                          type: _.jE.QUEST_HOME,
+                    ? ((0, m.dA)({
+                          questId: r,
+                          event: _.rMx.QUEST_SHARE_LINK_DEEP_LINKED_INTO_DESKTOP_CLIENT
+                      }),
+                      o.Z.openNativeAppModal('quests', _.Etm.DEEP_LINK, {
+                          type: u.jE.QUEST_HOME,
                           params: { questId: r }
                       }))
-                    : n === u.kEZ.OPEN_FAIL &&
+                    : n === _.kEZ.OPEN_FAIL &&
                       (0, p.dL)({
-                          pathname: u.Z5c.QUEST_HOME,
+                          pathname: _.Z5c.QUEST_HOME,
                           hash: r
                       });
         }, [n, r]),
@@ -63,7 +66,7 @@ function h(e) {
                 })
             ]
         });
-    let h = null == n || n === u.kEZ.OPENING || n === u.kEZ.OPEN_FAIL;
+    let h = null == n || n === _.kEZ.OPENING || n === _.kEZ.OPEN_FAIL;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(c.Z, {
