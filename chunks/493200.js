@@ -16,6 +16,5 @@ e.exports = {
     buttons: 'buttons_a0e502',
     easterEggContainer: 'easterEggContainer_a0e502',
     seaonalButtonGradient: 'seaonalButtonGradient_a0e502',
-    seasonalBanner: 'seasonalBanner_a0e502',
-    seasonalBackgroundGradient: 'seasonalBackgroundGradient_a0e502'
+    seasonalBanner: 'seasonalBanner_a0e502'
 };
