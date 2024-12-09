@@ -173,7 +173,7 @@ function eG() {
 }
 function eB(e) {
     let { channel: t, enableActivities: n, disabled: l } = e,
-        s = (0, w.Q)('ConnectedVideoButton'),
+        s = (0, w.Q3)('ConnectedVideoButton'),
         o = (0, er.Z)(),
         c = (0, ea.Z)(t),
         u = (0, d.cj)([T.ZP], () => null != T.ZP.getSelfEmbeddedActivityForChannel(t.id)),
@@ -274,7 +274,7 @@ function eH(e) {
     let t,
         n,
         { channel: r, enableActivities: l } = e,
-        s = (0, w.Q)('ConnectedVideoButton'),
+        s = (0, w.Q3)('ConnectedVideoButton'),
         o = (0, S.bp)(),
         { analyticsLocations: c } = (0, O.ZP)(),
         m = o === eO.IlC.POPOUT,
@@ -350,7 +350,7 @@ function eH(e) {
 function eV(e) {
     let t,
         { channel: n, canGoLive: l, enableActivities: s, disabled: o } = e,
-        c = (0, w.Q)('ConnectedStreamButton'),
+        c = (0, w.Q3)('ConnectedStreamButton'),
         u = (0, d.e7)([eN.default], () => eN.default.getCurrentUser()),
         h = (0, d.Wu)([em.Z], () => em.Z.getAllActiveStreams()),
         p = (0, ea.Z)(n),
@@ -675,7 +675,7 @@ function ez(e) {
     );
 }
 t.Z = (0, v.Z)(function (e) {
-    let t = (0, w.Q)('ConnectedRTCConnection'),
+    let t = (0, w.Q3)('ConnectedRTCConnection'),
         n = (0, U.Z)(),
         l = (0, d.e7)([k.Z], () => k.Z.getAwaitingRemoteSessionInfo()),
         a = (0, d.e7)([eN.default], () => eN.default.getCurrentUser()),

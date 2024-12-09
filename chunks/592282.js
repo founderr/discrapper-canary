@@ -19,7 +19,7 @@ var r = n(200651),
 function m(e) {
     let { color: t = 'default', label: n, checked: a, subtext: m, disabled: g, isFocused: E, menuItemProps: v, action: I, className: T, focusedClassName: b } = e,
         S = i.useRef(null),
-        y = (0, d.Q)('MenuCheckboxItem');
+        y = (0, d.Q3)('MenuCheckboxItem');
     return (
         i.useEffect(() => {
             E && (0, u.F)(S);

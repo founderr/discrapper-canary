@@ -42,13 +42,13 @@ function C(e) {
     let { label: t, style: i, disabled: m, emoji: x, url: C, skuId: g } = e,
         { executeStateUpdate: I, visualState: b, isDisabled: j } = (0, p.Ee)(e),
         S = (0, d.s)(g),
-        N = null != g && i === u.ZJ.PREMIUM,
-        E = N && (null == S ? void 0 : S.disabled),
-        T = N ? (null == S ? void 0 : S.label) : t,
+        T = null != g && i === u.ZJ.PREMIUM,
+        N = T && (null == S ? void 0 : S.disabled),
+        E = T ? (null == S ? void 0 : S.label) : t,
         y = null != x,
-        Z = null != T && T.length > 0,
+        Z = null != E && E.length > 0,
         k = i === u.ZJ.LINK && null != C && C.length > 0,
-        L = b === h.gH.LOADING || (N && null == S);
+        L = b === h.gH.LOADING || (T && null == S);
     return (
         (n = k
             ? () => {
@@ -57,7 +57,7 @@ function C(e) {
                       shouldConfirm: !0
                   });
               }
-            : N
+            : T
               ? null != S && !1 === S.disabled
                   ? S.onClick
                   : a.noop
@@ -77,7 +77,7 @@ function C(e) {
                 }
             })(i),
             size: o.Button.Sizes.SMALL,
-            disabled: m || b === h.gH.DISABLED || j || E,
+            disabled: m || b === h.gH.DISABLED || j || N,
             onClick: n,
             onContextMenu: (e) => {
                 k &&
@@ -93,11 +93,11 @@ function C(e) {
                 (0, l.jsxs)('div', {
                     className: r()(v.content, {
                         [v.hidden]: L,
-                        [v.premium]: N
+                        [v.premium]: T
                     }),
                     'aria-hidden': L,
                     children: [
-                        N
+                        T
                             ? (0, l.jsx)('div', {
                                   className: v.shopIcon,
                                   children: (0, l.jsx)(o.ShopIcon, {
@@ -118,7 +118,7 @@ function C(e) {
                         Z
                             ? (0, l.jsx)('div', {
                                   className: v.label,
-                                  children: T
+                                  children: E
                               })
                             : null,
                         k

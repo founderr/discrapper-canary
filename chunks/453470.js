@@ -30,12 +30,12 @@ function v(e) {
                     (0, i.jsx)(a.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: C.intl.string(C.t['UVp+4+'])
+                        children: C.intl.string(C.t.ftIK2N)
                     }),
                     (0, i.jsx)(a.Text, {
                         variant: 'text-xs/medium',
                         color: 'header-secondary',
-                        children: C.intl.string(C.t.VS47BA)
+                        children: C.intl.string(C.t.w2ve0t)
                     })
                 ]
             }),
@@ -50,12 +50,12 @@ function v(e) {
                             channelId: n,
                             warningId: l,
                             senderId: t,
-                            warningType: u.pj.STRANGER_DANGER,
+                            warningType: u.pj.LIKELY_ATO,
                             cta: h.NM.USER_MODAL_MUTE
                         }),
                         r();
                 },
-                children: C.intl.string(C.t['UVp+4+'])
+                children: C.intl.string(C.t.ftIK2N)
             })
         ]
     });

@@ -41,7 +41,7 @@ t.Z = i.memo(
                 (0, f.RO)(g.X1.GIF, a);
             }, [a]),
             { Component: O, events: D, play: L } = (0, u.V)(),
-            x = (0, d.Q)('ChannelGIFPickerButton');
+            x = (0, d.Q3)('ChannelGIFPickerButton');
         if (n) return null;
         let w = S === g.X1.GIF && y === a;
         return (0, r.jsx)(c.Tooltip, {

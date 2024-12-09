@@ -18,7 +18,7 @@ t.Z = i.memo(function (e) {
         E = (0, f.Ft)(i),
         { Component: v, events: I, play: T } = (0, a.$)(),
         { enabled: b } = d.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
-        S = (0, u.Q)('ChannelPremiumGiftButton'),
+        S = (0, u.Q3)('ChannelPremiumGiftButton'),
         y = i.type === p.d4z.DM;
     if (t) return null;
     let A = () => {

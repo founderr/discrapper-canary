@@ -29,7 +29,7 @@ var i = n(200651),
     b = n(382290);
 function x(e) {
     let { channel: t, iconClassName: l, className: x, innerClassName: A, ...Z } = e,
-        L = (0, p.Q)('SoundBoardRTCPanelButton'),
+        L = (0, p.Q3)('SoundBoardRTCPanelButton'),
         { mute: y, suppress: P } = (0, f.Z)(t),
         O = (0, s.e7)([_.Z], () => _.Z.isDeaf()),
         R = y || P || O,

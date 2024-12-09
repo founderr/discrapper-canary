@@ -375,7 +375,7 @@ class S extends (i = o.PureComponent) {
 }
 function y(e) {
     let { active: t, keyboardFocused: n, children: r } = e,
-        i = (0, E.Q)('Slider'),
+        i = (0, E.Q3)('Slider'),
         [a, s] = o.useState(!1),
         l = (0, p.q)({
             '--grabber-size': n || t || a ? '20px' : '16px',

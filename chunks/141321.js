@@ -22,7 +22,7 @@ var i = n(200651),
 function C(e) {
     let { onOpen: t, onClose: n, className: C } = e,
         I = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
-        x = (0, o.Q)('RecentsButton'),
+        x = (0, o.Q3)('RecentsButton'),
         N = r.useRef(null),
         v = (0, l.e7)([m.ZP], () => (null == I ? void 0 : I.id) != null && m.ZP.getMentionCount(I.id, _.W.NOTIFICATION_CENTER) > 0),
         { enabled: T } = c.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),

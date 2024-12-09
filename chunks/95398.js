@@ -129,7 +129,7 @@ class b extends (i = o.PureComponent) {
                               'aria-label': p ? void 0 : this.ariaLabel,
                               'aria-expanded': p,
                               style: r,
-                              className: u()(n, h.spoilerContent, h.spoilerContainer, {
+                              className: u()(n, h.spoilerContent, h.spoilerContainer, h.attachmentContainer, {
                                   [h.hidden]: !p,
                                   [h.constrainedObscureContent]: o
                               }),
@@ -160,7 +160,7 @@ class b extends (i = o.PureComponent) {
                               'aria-label': p ? void 0 : this.ariaLabel,
                               'aria-expanded': p,
                               style: r,
-                              className: u()(n, h.spoilerContent, h.spoilerContainer, {
+                              className: u()(n, h.spoilerContent, h.spoilerContainer, h.attachmentContainer, {
                                   [h.hidden]: !p,
                                   [h.hiddenSpoiler]: !p
                               }),
@@ -195,7 +195,7 @@ class b extends (i = o.PureComponent) {
                           'aria-label': o ? void 0 : this.ariaLabel,
                           'aria-expanded': c,
                           style: n,
-                          className: u()(t, h.spoilerContent, h.spoilerContainer, { [h.hidden]: !c }),
+                          className: u()(t, h.spoilerContent, h.spoilerContainer, h.embedContainer, { [h.hidden]: !c }),
                           role: c ? 'presentation' : 'button',
                           tabIndex: c ? -1 : 0,
                           children: [
@@ -221,7 +221,7 @@ class b extends (i = o.PureComponent) {
                     : (0, s.jsxs)(d.Clickable, {
                           'aria-label': this.ariaLabel,
                           'aria-expanded': c,
-                          className: u()(t, h.spoilerContent, h.spoilerContainer, { [h.hidden]: !c }),
+                          className: u()(t, h.spoilerContent, h.spoilerContainer, h.embedContainer, { [h.hidden]: !c }),
                           onClick: c ? void 0 : this.removeObscurity,
                           style: n,
                           role: c ? 'presentation' : 'button',

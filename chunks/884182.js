@@ -162,7 +162,7 @@ function L(e) {
         };
     return (0, i.jsx)(m.h.Provider, {
         value: n.gifFavoriteButton,
-        children: (0, i.jsx)(h.Z, {
+        children: (0, i.jsx)(h.ZP, {
             ...u,
             footer: a
         })

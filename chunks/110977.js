@@ -26,7 +26,7 @@ function f() {
 }
 let g = l.memo(function (e) {
     let { 'aria-label': t = !1, children: n } = e,
-        r = (0, s.Q)('FavoritesAddedTooltip'),
+        r = (0, s.Q3)('FavoritesAddedTooltip'),
         o = (function () {
             let { favoriteAdded: e, clearFavoriteAdded: t } = (0, c.up)();
             return (

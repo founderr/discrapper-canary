@@ -325,7 +325,7 @@ let B = Object.freeze({
                     }),
                     (0, _.ZI)({ theme: e }, r);
             },
-            f = (0, E.Q)('appearance_settings');
+            f = (0, E.Q3)('appearance_settings');
         return (0, a.jsxs)(a.Fragment, {
             children: [
                 !n &&

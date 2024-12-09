@@ -21,7 +21,7 @@ function f(e) {
         n,
         { header: a, children: f, confirmText: _, cancelText: p, className: h, onConfirm: m, onCancel: g, onClose: E, onCloseCallback: v, bodyClassName: I, transitionState: T, loading: b = !1, confirmButtonColor: S = o.zx.Colors.RED, focusCancel: y = !1, impression: A } = e,
         N = i.useRef(null),
-        C = (0, u.Q)('ConfirmModal');
+        C = (0, u.Q3)('ConfirmModal');
     return (
         i.useEffect(() => {
             !y &&

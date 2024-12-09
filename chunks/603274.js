@@ -172,7 +172,7 @@ function T() {
 }
 function A(e) {
     let { 'aria-label': t = !1, onShow: n, children: l } = e,
-        r = (0, h.Q)('FavoritesTooltip');
+        r = (0, h.Q3)('FavoritesTooltip');
     return (0, i.jsx)(c.Tooltip, {
         hideOnClick: !0,
         spacing: r ? 12 : 20,

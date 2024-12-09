@@ -22,7 +22,7 @@ function f(e) {
     let { onTabSelect: t, tabs: n, selectedTab: l } = e,
         s = (0, d.ZP)(),
         h = (0, o.wj)(s),
-        f = (0, u.Q)('GlobalDiscoveryHeaderMoreTab'),
+        f = (0, u.Q3)('GlobalDiscoveryHeaderMoreTab'),
         _ = r.useMemo(
             () =>
                 null !=
@@ -133,7 +133,7 @@ function _(e) {
         return (0, h.YP)(e, document.body), () => (0, h.UC)(e, document.body);
     }, [b]);
     let x = 0 !== m,
-        A = (0, u.Q)('GlobalDiscoveryHeaderTabs');
+        A = (0, u.Q3)('GlobalDiscoveryHeaderTabs');
     return (0, i.jsxs)('div', {
         className: a()(g.container, t),
         ref: T,

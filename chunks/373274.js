@@ -785,7 +785,7 @@ let eh = (e) => {
         null != n && N(n);
     }, [n, N]);
     let T = (0, y.Z)(t),
-        A = (0, v.Q)('NavigableChannels');
+        A = (0, v.Q3)('NavigableChannels');
     return (0, l.jsx)(C.Gt, {
         value: a,
         children: (0, l.jsx)(m.Z, {

@@ -27,7 +27,7 @@ let x = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
 function S(e) {
     let { guildId: t, animate: n, index: l } = e,
         r = (0, c.e7)([m.Z], () => m.Z.getGuild(t), [t]),
-        o = (0, h.Q)('GuildIcon');
+        o = (0, h.Q3)('GuildIcon');
     return null == r
         ? (0, i.jsx)('div', {
               className: v.guildIconUnavailable,
@@ -46,7 +46,7 @@ function E(e) {
     let t,
         n,
         { folderNode: r, hovered: o, expanded: c } = e,
-        u = (0, h.Q)('FolderIconContent'),
+        u = (0, h.Q3)('FolderIconContent'),
         { color: p, children: m } = r,
         f = null != p ? p : C.Wyy,
         g = m.map((e) => e.id),
@@ -126,7 +126,7 @@ function Z(e) {
         T = l.useCallback(() => {
             a || N(!1), null == x || x(!1);
         }, [a, x]),
-        A = (0, h.Q)('FolderHeader'),
+        A = (0, h.Q3)('FolderHeader'),
         j = r || null == s ? null : (0, g.Or)(s),
         P = !r && c > 0 ? (0, g.Ne)(c) : null;
     return (0, i.jsx)(d.BlobMask, {

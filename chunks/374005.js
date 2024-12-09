@@ -29,7 +29,7 @@ function E(e) {
     });
 }
 function I() {
-    let e = (0, a.Q)('AppPanels'),
+    let e = (0, a.Q3)('AppPanels'),
         t = r.useRef(null);
     return (
         (0, l.P)(

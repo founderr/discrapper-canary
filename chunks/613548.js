@@ -105,7 +105,7 @@ function K(e) {
         X = (0, _.o)(O, K),
         J = (0, v.lL)('CallHeader', !0, K, X),
         { enabled: Q, inInbox: $ } = b.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
-        ee = (0, f.Q)('ChannelCallHeaderToolbar'),
+        ee = (0, f.Q3)('ChannelCallHeaderToolbar'),
         { preventIdle: et, allowIdle: en } = (0, T.Y)('popup'),
         ei = [];
     if (Y) {

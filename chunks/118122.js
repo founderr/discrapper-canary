@@ -48,7 +48,7 @@ function E(e) {
         N = l.useMemo(() => E.some((e) => e.isOwner(Z)), [E, Z]),
         y = (0, o.useModalsStore)((e) => (0, o.hasModalOpenSelector)(e, v.PU)),
         { analyticsLocations: T } = (0, s.ZP)(),
-        A = (0, u.Q)('CreateJoinGuildButton'),
+        A = (0, u.Q3)('CreateJoinGuildButton'),
         j = (0, i.jsx)(C.Z, {
             showPill: !1,
             id: 'create-join-button',

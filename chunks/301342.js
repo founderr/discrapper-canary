@@ -40,7 +40,7 @@ function Z(e) {
 let N = l.memo(function (e) {
     let t,
         { channel: r, connectChannelDragSource: h, connectChannelDropTarget: x, disableManageChannels: I, position: N, sortingPosition: y, hideIcon: T, children: A } = e,
-        j = (0, f.Q)('CategoryChannel'),
+        j = (0, f.Q3)('CategoryChannel'),
         P = (0, s.e7)([v.ZP], () => v.ZP.isChannelMuted(r.getGuildId(), r.id)),
         R = (0, s.e7)([g.Z], () => g.Z.isCollapsed(r.id)),
         M = (0, s.e7)([_.Z], () => _.Z.can(b.Plq.MANAGE_CHANNELS, r));

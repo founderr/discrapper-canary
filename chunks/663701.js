@@ -227,7 +227,7 @@ let eo = (e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
         }, s.X),
-        u = (0, N.Q)('PrivateChannels');
+        u = (0, N.Q3)('PrivateChannels');
     return (0, i.jsxs)('nav', {
         className: $.privateChannels,
         'aria-label': J.intl.string(J.t.ZH9aPz),

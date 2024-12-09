@@ -120,17 +120,17 @@ function _(e) {
             executeStateUpdate: b,
             visualState: j,
             isDisabled: S,
-            error: N
+            error: T
         } = (0, d.Ee)(e, {
             type: n,
             values: g
         }),
-        E = s > 1,
-        T = j === m.gH.LOADING,
+        N = s > 1,
+        E = j === m.gH.LOADING,
         [y, Z] = i.useState(!1),
         [k, L] = i.useState(() => new Set(t.filter((e) => e.default).map((e) => e.value))),
         [R, O] = i.useState(k),
-        P = i.useMemo(() => t.some((e) => null != e.emoji), [t]);
+        M = i.useMemo(() => t.some((e) => null != e.emoji), [t]);
     i.useEffect(() => {
         if ((null == I ? void 0 : I.type) === c.re.STRING_SELECT) {
             let e = new Set(I.values);
@@ -140,7 +140,7 @@ function _(e) {
             L(e), O(e);
         }
     }, [r, g, I]);
-    let M = i.useCallback(() => {
+    let P = i.useCallback(() => {
         if (R !== k)
             b({
                 type: c.re.STRING_SELECT,
@@ -148,10 +148,10 @@ function _(e) {
             }) && O(k);
     }, [k, R, O, b]);
     i.useEffect(() => {
-        if (!(y || (k.size === R.size && Array.from(R).every((e) => k.has(e))))) M();
-    }, [y, k, R, M]);
+        if (!(y || (k.size === R.size && Array.from(R).every((e) => k.has(e))))) P();
+    }, [y, k, R, P]);
     let A = o.singleSelect;
-    E ? (A = o.multiSelect) : 0 === _ && (A = o.toggleSelect);
+    N ? (A = o.multiSelect) : 0 === _ && (A = o.toggleSelect);
     let B = (0, o.useVariableSelect)({
         value: k,
         onChange: (e) => L(e),
@@ -167,24 +167,24 @@ function _(e) {
                         className: p.select,
                         options: t.map((e) => ({
                             ...e,
-                            disabled: E && !k.has(e.value) && k.size === s
+                            disabled: N && !k.has(e.value) && k.size === s
                         })),
                         placeholder: null != a ? a : f.intl.string(f.t.Otr6W1),
                         onClose: () => Z(!1),
                         onOpen: () => Z(!0),
                         maxVisibleItems: 5,
-                        closeOnSelect: !E,
+                        closeOnSelect: !N,
                         optionClassName: p.selectOption,
                         renderOptionLabel: (e) =>
                             (0, l.jsx)(h, {
                                 ...e,
-                                isDisabled: E && !k.has(e.value) && k.size === s,
-                                isOffset: P
+                                isDisabled: N && !k.has(e.value) && k.size === s,
+                                isOffset: M
                             }),
-                        renderOptionValue: (e) => (E ? (0, l.jsx)(v, { options: e }) : (0, l.jsx)(x, { ...e[0] })),
+                        renderOptionValue: (e) => (N ? (0, l.jsx)(v, { options: e }) : (0, l.jsx)(x, { ...e[0] })),
                         ...B
                     }),
-                    T
+                    E
                         ? (0, l.jsx)('div', {
                               className: p.__invalid_loading,
                               children: (0, l.jsx)(o.Dots, {
@@ -195,9 +195,9 @@ function _(e) {
                         : null
                 ]
             }),
-            null != N
+            null != T
                 ? (0, l.jsx)(u.st, {
-                      ...(0, u.c4)(N),
+                      ...(0, u.c4)(T),
                       className: p.error
                   })
                 : null

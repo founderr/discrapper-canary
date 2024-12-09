@@ -97,7 +97,7 @@ function P(e) {
     return t || null != n || null != r || !!i;
 }
 function M(e) {
-    let t = (0, g.Q)('BlobMask');
+    let t = (0, g.Q3)('BlobMask');
     return (0, a.jsx)(k, {
         ...e,
         isVisualRefreshEnabled: t

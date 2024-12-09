@@ -52,7 +52,7 @@ var i,
     H = n(832019);
 let V = a.memo(function (e) {
     let { heading: t, location: n, locationIcon: i, details: r, detailsIcon: a, topic: s, onClickCloseIcon: c, onClickTopicText: u, children: h } = e,
-        m = (0, g.Q)('GuildNoticeBody'),
+        m = (0, g.Q3)('GuildNoticeBody'),
         p = (0, l.jsx)(d.Text, {
             color: 'header-primary',
             variant: 'text-md/semibold',
@@ -205,7 +205,7 @@ function z(e) {
 function W(e) {
     var t;
     let { guildEvent: n, noticeType: i } = e,
-        r = (0, g.Q)('GuildUpcomingEventNotice'),
+        r = (0, g.Q3)('GuildUpcomingEventNotice'),
         s = (0, M.cS)(n),
         c = null != s ? (0, O.m)(s, !0) : null,
         u = (0, M.nE)(n),

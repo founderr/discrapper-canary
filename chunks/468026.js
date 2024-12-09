@@ -18,7 +18,7 @@ t.default = (e) => {
         n,
         i,
         { body: m, cancelText: g, className: E, confirmColor: v, confirmText: I = p.intl.string(p.t.BddRzc), secondaryConfirmText: T, onCancel: b, onClose: S, onConfirm: y, onConfirmSecondary: A, title: N, transitionState: C, titleClassName: R } = e,
-        O = (0, _.Q)('ConfirmModal'),
+        O = (0, _.Q3)('ConfirmModal'),
         D = O ? s.zx.Sizes.MEDIUM : s.zx.Sizes.LARGE;
     return (
         null != g &&

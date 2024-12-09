@@ -308,7 +308,7 @@ function V(e) {
 }
 function j(e) {
     let { guild: t, disabled: n = !1, 'aria-label': a = !1, children: s, includeActivity: o = !0 } = e,
-        l = (0, h.Q)('GuildTooltip');
+        l = (0, h.Q3)('GuildTooltip');
     return (0, r.jsx)(c.Tooltip, {
         hideOnClick: !0,
         spacing: l ? 12 : 20,

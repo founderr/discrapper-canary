@@ -26,7 +26,7 @@ let p = (e) => {
         n,
         { backgroundStyle: a = 'always', children: p, icon: h, name: m, ariaLabel: g, className: E, style: v, to: I, onClick: T, selected: b = !1, ...S } = e,
         y = (0, o.k6)(),
-        A = (0, u.Q)('NavItem');
+        A = (0, u.Q3)('NavItem');
     if (null == h && null != m) {
         var N;
         n = null !== (N = f[(t = (0, c.Zg)(m)).length - 1]) && void 0 !== N ? N : f[f.length - 1];

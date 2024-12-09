@@ -16,7 +16,7 @@ var l = n(442837),
     d = n(630117),
     h = n(441319);
 function p() {
-    let e = (0, o.Q)('AppIconHome'),
+    let e = (0, o.Q3)('AppIconHome'),
         [t, n, p] = (0, l.Wu)([a.default, c.Z], () => [c.Z.getCurrentDesktopIcon(), c.Z.isEditorOpen, s.ZP.isPremium(a.default.getCurrentUser())]),
         m = (0, h.aW)(t),
         f = t !== u.aH.DEFAULT && (p || n),

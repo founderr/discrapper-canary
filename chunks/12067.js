@@ -50,7 +50,7 @@ function x(e) {
         let t = e.originalItem;
         return (0, a.lK)(t.media, n, t.spoiler);
     }
-    let N = e.items.map((e, t) => {
+    let T = e.items.map((e, t) => {
         let l = e.media,
             i = null == g ? void 0 : g(l),
             r = {
@@ -87,5 +87,5 @@ function x(e) {
             });
         return a in j && (r.onClick = j[a]), r;
     });
-    return (0, l.jsx)('div', { children: (0, l.jsx)(u.Z, { items: N }) });
+    return (0, l.jsx)('div', { children: (0, l.jsx)(u.Z, { items: T }) });
 }

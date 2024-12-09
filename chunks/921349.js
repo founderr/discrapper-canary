@@ -703,7 +703,7 @@ function B(e) {
 }
 function G(e) {
     let { isSelected: t, multi: n } = e,
-        i = (0, C.Q)('SearchableSelectOption'),
+        i = (0, C.Q3)('SearchableSelectOption'),
         a = i ? 24 : 20;
     return n
         ? i

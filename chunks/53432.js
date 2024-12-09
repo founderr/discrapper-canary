@@ -31,7 +31,7 @@ function h() {
             useSystemTheme: m.ZP.useSystemTheme,
             useForcedColors: c.Z.useForcedColors
         })),
-        x = (0, s.Q)('appearance_settings'),
+        x = (0, s.Q3)('appearance_settings'),
         C = (e, o) =>
             (0, r.jsx)(i.MenuRadioItem, {
                 id: e,

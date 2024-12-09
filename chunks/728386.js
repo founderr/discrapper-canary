@@ -42,7 +42,7 @@ t.Z = i.memo(
             );
         }, [E]);
         let { Component: S, events: y, play: A } = (0, l.z)(),
-            N = (0, c.Q)('ChannelStickerPickerButton');
+            N = (0, c.Q3)('ChannelStickerPickerButton');
         return n
             ? null
             : (0, r.jsx)('div', {

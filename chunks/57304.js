@@ -15,7 +15,7 @@ var i = n(200651),
     g = n(388032);
 t.Z = function (e) {
     let { channel: t } = e,
-        n = (0, c.Q)('ChannelPinsButton'),
+        n = (0, c.Q3)('ChannelPinsButton'),
         C = (0, r.e7)(
             [d.Z, h.default],
             () => {

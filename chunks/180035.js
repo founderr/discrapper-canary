@@ -10,7 +10,7 @@ var r = n(399606),
 function o(e, t) {
     let n = (0, i.ZP)(),
         o = (0, r.e7)([a.Z], () => a.Z.saturation),
-        l = (0, s.Q)('useToken');
+        l = (0, s.Q3)('useToken');
     return e.resolve({
         theme: null != t ? t : n,
         saturation: o,

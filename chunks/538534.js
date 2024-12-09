@@ -51,7 +51,7 @@ let T = {
 };
 function b(e) {
     let { checked: t, radioItemIconClassName: n, icon: r } = e;
-    return (0, h.Q)('RadioGroup')
+    return (0, h.Q3)('RadioGroup')
         ? (0, i.jsxs)('svg', {
               className: o()(v.radioIndicator, n),
               viewBox: '0 0 24 24',

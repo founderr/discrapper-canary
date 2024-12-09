@@ -110,7 +110,7 @@ T(y, 'Types', r),
         reverse: !1
     });
 function A(e) {
-    let t = (0, E.Q)('Checkbox'),
+    let t = (0, E.Q3)('Checkbox'),
         { indicatorClassName: n, value: r, size: i, shape: a, checkboxColor: s, type: o, color: c, disabled: f } = e,
         m = (function (e, t) {
             var n;

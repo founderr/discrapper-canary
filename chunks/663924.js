@@ -90,7 +90,7 @@ function S(e) {
 }
 t.Z = l.memo(function (e) {
     let { positionTargetRef: t, ...n } = e,
-        l = (0, u.Q)('AppLauncherPopup');
+        l = (0, u.Q3)('AppLauncherPopup');
     return (0, i.jsx)('span', {
         style: _.u$,
         children: (0, i.jsx)(h.W5, {

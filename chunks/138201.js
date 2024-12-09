@@ -53,7 +53,7 @@ function l(e) {
                     null != l &&
                         (0, r.jsx)(s.Text, {
                             variant: u,
-                            color: 'header-secondary',
+                            color: 'text-secondary',
                             children: l
                         })
                 ]

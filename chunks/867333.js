@@ -19,7 +19,7 @@ var r = n(200651),
 function m(e) {
     let { color: t = 'default', label: n, checked: a, subtext: m, disabled: g, isFocused: E, menuItemProps: v, action: I } = e,
         T = i.useRef(null),
-        b = (0, d.Q)('MenuRadioItem');
+        b = (0, d.Q3)('MenuRadioItem');
     return (
         i.useEffect(() => {
             E && (0, u.F)(T);

@@ -10,7 +10,7 @@ var r = n(120356),
     d = n(586802);
 t.Z = function (e) {
     let { className: t, hasVideo: n, text: r, hasConnectedChannel: h } = e,
-        x = (0, a.Q)('RTCConnectionStatusText'),
+        x = (0, a.Q3)('RTCConnectionStatusText'),
         { enabled: g } = (0, c.S)({ location: 'RTCConnectionStatusText' }),
         N = n ? u.intl.string(u.t.IlHdW1) : u.intl.string(u.t.WsOisr);
     return (0, l.jsx)(o.Z, {

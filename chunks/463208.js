@@ -38,7 +38,7 @@ let g = {
 };
 function E(e) {
     let { error: t } = e,
-        n = (0, _.Q)('TextInputError'),
+        n = (0, _.Q3)('TextInputError'),
         r = (0, d.useTransition)(t, {
             config: {
                 tension: 250,

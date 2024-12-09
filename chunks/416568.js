@@ -152,7 +152,7 @@ class et {
 }
 function en(e) {
     let { disableAppDownload: t = P.isPlatformEmbedded, isOverlay: n = !1, className: r, themeOverride: a } = e,
-        s = (0, I.Q)('GuildsBar'),
+        s = (0, I.Q3)('GuildsBar'),
         { density: d } = (0, f.useThemeContext)(),
         [p] = (0, h.Wu)([j.ZP], () => {
             let e = j.ZP.getGuildsTree();

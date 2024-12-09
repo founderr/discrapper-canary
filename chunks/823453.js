@@ -42,7 +42,7 @@ t.Z = i.memo(function (e) {
                 let x = (0, b.Z)(window, __OVERLAY__ || n),
                     w = (0, c.e7)([h.Z], () => h.Z.sidebarWidth),
                     P = (0, f.useRedesignIconContext)().enabled,
-                    M = (0, p.Q)('AppHelmet');
+                    M = (0, p.Q3)('AppHelmet');
                 return (0, r.jsx)('html', {
                     lang: t,
                     style: 'font-size: '.concat(S, '%; --saturation-factor: ').concat(N, '; --devtools-sidebar-width: ').concat(w, 'px;'),

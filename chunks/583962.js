@@ -64,7 +64,7 @@ let A = (0, I.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     };
 t.ZP = (e) => {
     let { guild: t, withMargin: n } = e,
-        r = (0, g.Q)('GuildBoostingSidebarDisplay'),
+        r = (0, g.Q3)('GuildBoostingSidebarDisplay'),
         { analyticsLocations: u } = (0, f.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
         { premiumSubscriberCount: C, id: I } = t,
         A = (0, x.rF)(C, I),

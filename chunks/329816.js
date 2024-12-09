@@ -77,7 +77,7 @@ let eo = (0, J.Un)({
         webpackId: 177741
     }),
     el = i.memo(function (e) {
-        let t = (0, k.Q)('ChannelSidebar'),
+        let t = (0, k.Q3)('ChannelSidebar'),
             n = (0, c.e7)([q.Z], () => q.Z.isFocused());
         return t
             ? null

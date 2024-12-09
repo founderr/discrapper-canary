@@ -33,7 +33,7 @@ function T(e) {
     var t;
     let { folderNode: n, setNodeRef: r, selected: s, expanded: u, mediaState: f, mentionCount: T = 0, unread: A = !1, defaultFolderName: j, useCircleMask: P = !1, draggable: R = !1, sorting: M = !1, onDragStart: L, onDragEnd: w, onExpandCollapse: D, onContextMenu: O, renderChildNode: k, folderIconContent: G } = e,
         { id: U, name: B, children: H } = n,
-        V = (0, p.Q)('FolderItem'),
+        V = (0, p.Q3)('FolderItem'),
         [F, W] = l.useState(!1),
         [z, Y] = l.useState(!1),
         K = F || z;

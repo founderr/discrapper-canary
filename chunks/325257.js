@@ -49,7 +49,7 @@ t.Z = l.memo(function (e) {
     var t, n, r, p, L;
     let { guildNode: w, setRef: D, onDragStart: O, onDragEnd: k, route: G, guild: U, animatable: B, selected: H = !1, unread: V = !1, mediaState: F, unavailable: W = !1, badge: z = 0, contextMenu: Y = M, draggable: K = !1, sorting: q = !1, preloadOnClick: Q = !0, guildJoinRequestStatus: X } = e,
         { id: J, parentId: $ } = w,
-        ee = (0, f.Q)('GuildItem'),
+        ee = (0, f.Q3)('GuildItem'),
         et = null !== (t = e.upperBadge) && void 0 !== t ? t : W ? (0, T.Ny)() : null != F ? (0, T.Or)(F) : void 0,
         en = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
     null == en && z > 0 ? (en = null !== (r = (0, T.Ne)(z)) && void 0 !== r ? r : void 0) : null == en && null != X && (en = null !== (p = (0, T.jt)({ guildJoinRequestStatus: X })) && void 0 !== p ? p : void 0);

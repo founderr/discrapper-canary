@@ -102,7 +102,7 @@ let eL = eC.ZP.getEnableHardwareAcceleration() ? m.AnimatedAvatar : m.Avatar,
     eP = 30 * ef.Z.Millis.DAY;
 function eO(e) {
     let { speaking: t, streaming: n, currentUser: r, status: l, handleMouseLeave: s, renderNameTag: o } = e,
-        c = (0, w.Q)('RTC Avatar'),
+        c = (0, w.Q3)('RTC Avatar'),
         d = (0, T.Z)(null == r ? void 0 : r.avatarDecoration),
         u = (0, ep.NZ)({
             avatarDecoration: d,

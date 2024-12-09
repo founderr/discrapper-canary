@@ -37,7 +37,7 @@ function A(e) {
     let { children: t, className: n, channelId: r, guildId: l, innerClassname: o, transparent: s = !1, toolbar: _, mobileToolbar: g, 'aria-label': N, 'aria-labelledby': v, scrollable: A, role: b, hideSearch: j, showDivider: Z } = e,
         { hasBugReporterAccess: R } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 }),
         { enabled: P, inInbox: L } = h.Z.useExperiment({ location: 'HeaderBar' }),
-        y = (0, u.Q)('HeaderBar');
+        y = (0, u.Q3)('HeaderBar');
     return (0, i.jsx)(E.ZP, {
         className: n,
         innerClassName: o,

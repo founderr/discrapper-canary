@@ -20,7 +20,7 @@ var r = n(200651),
     p = n(815300);
 let h = (e) => {
         let { className: t, iconClassName: n, children: i, selected: a = !1, disabled: o = !1, showBadge: l = !1, badgePosition: c = 'bottom', color: _, foreground: h, background: m, icon: g, iconSize: E = 24, onClick: v, onContextMenu: I, tooltip: T = null, tooltipColor: b, tooltipPosition: S = 'bottom', tooltipDisabled: y, hideOnClick: A = !0, role: N, 'aria-label': C, 'aria-hidden': R, 'aria-checked': O, 'aria-expanded': D, 'aria-haspopup': L } = e,
-            x = (0, f.Q)('BaseHeaderBar'),
+            x = (0, f.Q3)('BaseHeaderBar'),
             w = (0, r.jsx)(g, {
                 x: 0,
                 y: 0,
@@ -102,7 +102,7 @@ let h = (e) => {
     },
     m = (e) => {
         let { className: t } = e;
-        return (0, f.Q)('BaseHeaderBar.Divider') ? (0, r.jsx)(_.Z, { className: s()(p.dot, t) }) : (0, r.jsx)('div', { className: s()(p.divider, t) });
+        return (0, f.Q3)('BaseHeaderBar.Divider') ? (0, r.jsx)(_.Z, { className: s()(p.dot, t) }) : (0, r.jsx)('div', { className: s()(p.divider, t) });
     },
     g = (e) => {
         let { className: t, innerClassName: n, children: a, childrenBottom: d, toolbar: f, onDoubleClick: _, 'aria-label': h, 'aria-labelledby': m, role: g, scrollable: E, transparent: v = !1 } = e,
@@ -153,7 +153,7 @@ let h = (e) => {
 (g.Icon = h),
     (g.Title = (e) => {
         let { className: t, wrapperClassName: n, children: i, onContextMenu: a, onClick: o, id: l, muted: c = !1, level: d = 1 } = e,
-            _ = (0, f.Q)('BaseHeaderBar'),
+            _ = (0, f.Q3)('BaseHeaderBar'),
             h = (0, r.jsx)(u.HeadingLevel, {
                 forceLevel: d,
                 children: (0, r.jsx)(u.Heading, {

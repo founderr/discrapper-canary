@@ -75,7 +75,7 @@ t.Z = i.memo(function (e) {
                 n = f.Z.getRecipientEligibility(q.id);
             return [Y && t && n, n];
         }),
-        J = (0, d.Q)('ChannelTextAreaButtons');
+        J = (0, d.Q3)('ChannelTextAreaButtons');
     return (!a.tq &&
         (w.isDM() &&
             (null === (h = L.gifts) || void 0 === h ? void 0 : h.button) != null &&

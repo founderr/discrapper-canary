@@ -70,16 +70,16 @@ function _(e) {
 }
 function C(e) {
     let { entry: n, channel: t, title: i, subtitle: x, thumbnailUrl: C, titleClickable: g, subtitleClickable: I, thumbnailClickable: b, providerIconProps: j, style: S = {} } = e,
-        N = (0, m.Dt)(),
-        { primaryColor: E, secondaryColor: T } = (0, u.Z)(C);
+        T = (0, m.Dt)(),
+        { primaryColor: N, secondaryColor: E } = (0, u.Z)(C);
     return (
-        null != C && (S.background = 'linear-gradient(45deg, '.concat(E, ', ').concat(T, ')')),
+        null != C && (S.background = 'linear-gradient(45deg, '.concat(N, ', ').concat(E, ')')),
         (0, l.jsx)(a.ThemeProvider, {
             theme: f.BR.DARK,
             children: (e) =>
                 (0, l.jsxs)('figure', {
                     'aria-roledescription': p.intl.string(p.t.zFfUhI),
-                    'aria-labelledby': N,
+                    'aria-labelledby': T,
                     'data-disable-adaptive-theme': !0,
                     className: r()(h.container, e),
                     style: S,
@@ -108,7 +108,7 @@ function C(e) {
                                     clickable: g,
                                     className: h.clickableText,
                                     children: (0, l.jsx)(a.Heading, {
-                                        id: N,
+                                        id: T,
                                         variant: 'heading-md/medium',
                                         lineClamp: 1,
                                         className: r()(h.textPrimary, h.truncatedText),
