@@ -81,11 +81,13 @@ class T extends (r = i.ZP.PersistedStore) {
             n = null !== (e = h.isFetching) && void 0 !== e && e;
         return null == t ? !n : !n && Date.now() - 172800000 > t;
     }
-    shouldFetchReferralOffer() {
-        var e;
-        let t = h.userOffersLastFetchedAtDate,
-            n = null !== (e = h.isFetching) && void 0 !== e && e;
-        return null == t ? !n : !n && Date.now() - 600000 > t;
+    shouldFetchReferralOffer(e) {
+        var t;
+        let n = h.userOffersLastFetchedAtDate,
+            r = null !== (t = h.isFetching) && void 0 !== t && t;
+        if (null == n) return !r;
+        let i = Date.now() - 600000 > n;
+        return !r && (i || (null != e ? e : 0) > n);
     }
     shouldFetchAnnualOffer() {
         let e = h.userAnnualOfferLastFetchedAtDate;
