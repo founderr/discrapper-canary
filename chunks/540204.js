@@ -24,11 +24,12 @@ function x() {
     let { selectedGuildId: e, setSelectedGuildId: t } = (0, u.xu)(),
         n = (0, r.e7)([c.ZP], () => c.ZP.getFlattenedGuildIds()),
         h = (0, r.e7)([o.Z], () => o.Z.getGuilds()),
-        { hideGuildOptions: x, hideGlobalOption: S } = (0, m.b)();
+        { hideGuildOptions: x, hideGlobalOption: S } = (0, m.b)(),
+        T = n[0];
     s.useEffect(() => {
-        e === u.Th && S && t(n[0]), e !== u.Th && x && t(u.Th);
-    }, [e, t, S, x, n]);
-    let T = s.useMemo(() => {
+        if (!S || !x) e === u.Th && e !== T && S && t(T), e !== u.Th && x && t(u.Th);
+    }, [e, t, S, x, T]);
+    let E = s.useMemo(() => {
             let e = x
                 ? []
                 : n
@@ -51,7 +52,7 @@ function x() {
                 e
             );
         }, [x, n, S, h]),
-        E = s.useCallback(
+        C = s.useCallback(
             (e) => {
                 let t = (null == e ? void 0 : e.label) === p.label() && (null == e ? void 0 : e.value) === p.value;
                 return null == e || '' === e.value || t
@@ -79,7 +80,7 @@ function x() {
             t(e);
         },
         value: e,
-        options: T,
-        renderOptionPrefix: E
+        options: E,
+        renderOptionPrefix: C
     });
 }
