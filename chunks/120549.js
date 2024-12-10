@@ -71,7 +71,7 @@ function f(e) {
                           category: e,
                           count: o,
                           selected: a === l,
-                          onSelectCategory: n
+                          onSelectCategory: () => n(e)
                       },
                       a
                   );
@@ -105,9 +105,10 @@ function _(e) {
         ),
         _ = r.useCallback(
             (e) => {
-                l(Number(e));
+                let t = g.find((t) => t.id === Number(e));
+                null != t && l(t);
             },
-            [l]
+            [l, g]
         ),
         E = r.useMemo(() => g.find((e) => e.id === a), [a, g]);
     return 0 === f.length
