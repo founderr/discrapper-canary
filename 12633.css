@@ -2683,6 +2683,16 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     border-color: var(--background-tertiary)
 }
 
+.visual-refresh .card_a298b8 {
+    border-radius: var(--radius-sm)
+}
+
+.visual-refresh .cardPrimary_a298b8,
+.visual-refresh .cardPrimary_a298b8.editable_a298b8 {
+    background: var(--card-primary-bg);
+    border: 1px solid var(--border-subtle)
+}
+
 .checkboxWrapper_f6cde8 {
     display: flex;
     position: relative;
@@ -35363,7 +35373,8 @@ img.thumbnail_c64476 {
     font-size: 14px;
     line-height: 14px;
     font-weight: 600;
-    position: relative
+    position: relative;
+    --tab-item-color: var(--text-primary)
 }
 
 :where(.visual-refresh) .top_a0 .item_a0:hover:after,
