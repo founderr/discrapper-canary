@@ -158,6 +158,7 @@ var n, r;
     (r.QUEST_EMBED = 'quest embed'),
     (r.PREMIUM_MARKETING_SURFACE = 'premium marketing surface'),
     (r.PREMIUM_MARKETING_HERO_CTA = 'premium marketing hero cta'),
+    (r.PREMIUM_MARKETING_FOOTER_CTA = 'premium marketing footer cta'),
     (r.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR = 'premium marketing referral program progress bar'),
     (r.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL = 'premium marketing referral program share modal'),
     (r.PREMIUM_MARKETING_TIER_1_CTA = 'premium marketing tier 1 cta'),

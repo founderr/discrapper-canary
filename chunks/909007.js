@@ -7,6 +7,7 @@ e.exports = {
     yourSpaceBackground: 'yourSpaceBackground_dbabb4',
     noLimitsBackground: 'noLimitsBackground_dbabb4',
     emojisBackground: 'emojisBackground_dbabb4',
+    whatsNewSideGradient: 'whatsNewSideGradient_dbabb4',
     whatsNewBoxContainer: 'whatsNewBoxContainer_dbabb4',
     whatsNewArtContainer: 'whatsNewArtContainer_dbabb4',
     perkBoxVideo: 'perkBoxVideo_dbabb4',

@@ -55,10 +55,10 @@ let b = (e) => {
         O = () => {
             null != S.current && ((S.current.currentTime = R), S.current.play());
         },
-        y = () => {
+        w = () => {
             null != S.current && (A(S.current.currentTime), S.current.pause());
         },
-        w = () =>
+        y = () =>
             (0, i.jsxs)('div', {
                 className: s()({
                     [E.whatsNewTextBoxOuter]: !T,
@@ -127,14 +127,14 @@ let b = (e) => {
         }),
         onMouseEnter: O,
         onFocus: O,
-        onBlur: y,
-        onMouseLeave: y,
+        onBlur: w,
+        onMouseLeave: w,
         children: L
             ? (0, i.jsxs)(i.Fragment, {
-                  children: [(0, i.jsx)(w, {}), (0, i.jsx)(k, { isLeft: L })]
+                  children: [(0, i.jsx)(y, {}), (0, i.jsx)(k, { isLeft: L })]
               })
             : (0, i.jsxs)(i.Fragment, {
-                  children: [(0, i.jsx)(k, { isLeft: L }), (0, i.jsx)(w, {})]
+                  children: [(0, i.jsx)(k, { isLeft: L }), (0, i.jsx)(y, {})]
               })
     });
 };
@@ -164,19 +164,22 @@ t.Z = r.memo(function (e) {
                     )
                 ),
                 null != l &&
-                    (0, i.jsx)('div', {
+                    (0, i.jsxs)('div', {
                         className: E.compactBoxOuterContainer,
-                        children: l.map((e, t) =>
-                            (0, i.jsx)(
-                                b,
-                                {
-                                    shouldLoadVideo: n,
-                                    index: t,
-                                    ...e
-                                },
-                                e.name
-                            )
-                        )
+                        children: [
+                            l.map((e, t) =>
+                                (0, i.jsx)(
+                                    b,
+                                    {
+                                        shouldLoadVideo: n,
+                                        index: t,
+                                        ...e
+                                    },
+                                    e.name
+                                )
+                            ),
+                            (0, i.jsx)('div', { className: E.whatsNewSideGradient })
+                        ]
                     })
             ]
         })
