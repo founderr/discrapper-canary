@@ -111,7 +111,21 @@ function _(e) {
                                 _(), r();
                             }
                         }),
-                        learnMore: C.intl.format(C.t.UkH129, { learnMoreLink: f.D8 })
+                        learnMore: (0, i.jsx)(a.Clickable, {
+                            onClick: () =>
+                                (0, h.qc)({
+                                    channelId: t,
+                                    warningId: s,
+                                    senderId: c,
+                                    warningType: u.pj.LIKELY_ATO,
+                                    cta: h.NM.USER_MODAL_LEARN_MORE
+                                }),
+                            children: (0, i.jsx)(a.Heading, {
+                                variant: 'heading-sm/medium',
+                                color: 'text-link',
+                                children: C.intl.format(C.t.UkH129, { learnMoreLink: f.D8 })
+                            })
+                        })
                     });
                 };
             });

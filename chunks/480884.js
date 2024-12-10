@@ -17,7 +17,7 @@ var a = t(200651),
     x = t(388032),
     b = t(636370);
 function _(n) {
-    let { transitionState: e, onClose: t, channelId: _, warningId: v, senderId: g, description: h, safetyTips: N, actions: p, learnMore: k } = n,
+    let { transitionState: e, onClose: t, channelId: _, warningId: v, senderId: g, description: N, safetyTips: h, actions: p, learnMore: k } = n,
         j = (0, i.e7)([r.ZP], () => r.ZP.getChannelSafetyWarning(_, v));
     return (
         o.useEffect(() => {
@@ -48,7 +48,7 @@ function _(n) {
                                     (0, a.jsx)(c.Heading, {
                                         variant: 'heading-xl/bold',
                                         color: 'status-positive-text',
-                                        children: h
+                                        children: N
                                     })
                                 ]
                             }),
@@ -75,7 +75,7 @@ function _(n) {
                                 children: [
                                     (0, a.jsx)('div', {
                                         className: b.tipsSection,
-                                        children: N.map((n, e) =>
+                                        children: h.map((n, e) =>
                                             (0, a.jsxs)(
                                                 'div',
                                                 {
@@ -94,15 +94,7 @@ function _(n) {
                                             )
                                         )
                                     }),
-                                    null != k
-                                        ? (0, a.jsx)('div', {
-                                              children: (0, a.jsx)(c.Heading, {
-                                                  variant: 'heading-sm/medium',
-                                                  color: 'text-link',
-                                                  children: k
-                                              })
-                                          })
-                                        : null
+                                    null != k ? k : null
                                 ]
                             }),
                             (0, a.jsxs)('div', {
