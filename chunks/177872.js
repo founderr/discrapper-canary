@@ -7,5 +7,6 @@ t.exports = {
     anotherOption: 'anotherOption_e4c51c',
     optionEyebrow: 'optionEyebrow_e4c51c',
     cancelButton: 'cancelButton_e4c51c',
-    listContent: 'listContent_e4c51c'
+    listContent: 'listContent_e4c51c',
+    learnMore: 'learnMore_e4c51c'
 };
