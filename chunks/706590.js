@@ -17,7 +17,7 @@ var r = n(392711),
     c = n(362658),
     d = n(231338);
 function f(e, t, n) {
-    let { canShow: r, isFavoritesPerk: a } = c.Z.getCurrentConfig({ location: '7993a7_1' }, { autoTrackExposure: !1 });
+    let { canShow: r, isFavoritesPerk: a } = c.Z.getCurrentConfig({ location: 'isFavoritesGuildVisible' }, { autoTrackExposure: !1 });
     if (a) return !0;
     if (!r) return !1;
     let s = e.getFavoriteChannels();
@@ -29,7 +29,7 @@ function f(e, t, n) {
     return !i().isEmpty(o) && !0;
 }
 function _() {
-    let { canShow: e, isFavoritesPerk: t } = (0, c.z)('7993a7_2'),
+    let { canShow: e, isFavoritesPerk: t } = (0, c.z)('useIsFavoritesGuildVisible'),
         n = (0, a.e7)([u.Z, s.Z, o.Z], () => e && f(u.Z, s.Z, o.Z));
     return !!t || n;
 }
