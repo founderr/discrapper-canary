@@ -42,17 +42,12 @@ function l(e) {
                     title: null === (n = r.entries[0]) || void 0 === n ? void 0 : null === (t = n.media) || void 0 === t ? void 0 : t.title
                 };
             })
-            .otherwise(() => ({
-                message: null,
-                title: null
-            }));
-    return null == c || '' === c
-        ? null
-        : (0, r.jsx)('div', {
-              className: n,
-              children: (0, r.jsx)(a.DD, {
-                  text: o.intl.format(u, { title: c }),
-                  className: l
-              })
-          });
+            .exhaustive();
+    return (0, r.jsx)('div', {
+        className: n,
+        children: (0, r.jsx)(a.DD, {
+            text: o.intl.format(u, { title: c }),
+            className: l
+        })
+    });
 }
