@@ -1,6 +1,6 @@
 n.d(t, {
     A: function () {
-        return R;
+        return Z;
     }
 });
 var i = n(200651);
@@ -30,9 +30,9 @@ var r = n(442837),
     A = n(801461),
     b = n(474936),
     j = n(388032),
-    Z = n(230278);
-let R = (e) => {
-    let { dismissibleContent: t, noticeType: R } = e,
+    R = n(230278);
+let Z = (e) => {
+    let { dismissibleContent: t, noticeType: Z } = e,
         P = (0, r.e7)([I.ZP], () => I.ZP.getNotice()),
         L = (0, r.e7)([C.default], () => C.default.locale);
     return (0, i.jsx)(v.ZP, {
@@ -48,14 +48,14 @@ let R = (e) => {
                         children: [
                             (0, i.jsx)(a.NoticeCloseButton, {
                                 onClick: () => r(T.L.UNKNOWN),
-                                noticeType: R
+                                noticeType: Z
                             }),
                             j.intl.string(j.t['+xn1o6']),
-                            (0, i.jsx)('i', { className: Z.iconApple }),
-                            (0, i.jsx)('i', { className: Z.iconAndroid }),
-                            (0, i.jsx)('i', { className: Z.iconWindows }),
+                            (0, i.jsx)('i', { className: R.iconApple }),
+                            (0, i.jsx)('i', { className: R.iconAndroid }),
+                            (0, i.jsx)('i', { className: R.iconWindows }),
                             (0, i.jsx)(a.PrimaryCTANoticeButton, {
-                                noticeType: R,
+                                noticeType: Z,
                                 onClick: () => {
                                     (0, a.openModalLazy)(async () => {
                                         let { default: e } = await Promise.resolve().then(n.bind(n, 431583));
@@ -76,9 +76,9 @@ let R = (e) => {
                         children: [
                             (0, i.jsx)(a.NoticeCloseButton, {
                                 onClick: () => r(T.L.UNKNOWN),
-                                noticeType: R
+                                noticeType: Z
                             }),
-                            (0, i.jsx)(x.Z, { className: Z.platformIcon }),
+                            (0, i.jsx)(x.Z, { className: R.platformIcon }),
                             j.intl.string(j.t['5NUVHB']),
                             (0, i.jsx)(a.PrimaryCTANoticeButton, {
                                 onClick: () =>
@@ -86,7 +86,7 @@ let R = (e) => {
                                         platformType: S.ABu.SPOTIFY,
                                         location: 'Notice Bar'
                                     }),
-                                noticeType: R,
+                                noticeType: Z,
                                 children: j.intl.string(j.t.S0W8Z2)
                             })
                         ]
@@ -98,7 +98,7 @@ let R = (e) => {
                             (0, i.jsx)(a.NoticeCloseButton, { onClick: () => r(T.L.UNKNOWN) }),
                             (0, i.jsx)('img', {
                                 alt: '',
-                                className: Z.platformIcon,
+                                className: R.platformIcon,
                                 src: c.Z.get(S.ABu.PLAYSTATION).icon.whiteSVG
                             }),
                             j.intl.string(j.t.WHWgoa),
@@ -118,12 +118,12 @@ let R = (e) => {
                         children: [
                             (0, i.jsx)(a.NoticeCloseButton, {
                                 onClick: () => r(T.L.UNKNOWN),
-                                noticeType: R
+                                noticeType: Z
                             }),
                             j.intl.string(j.t.B2hnhY),
                             (0, i.jsx)(a.PrimaryCTANoticeButton, {
                                 onClick: () => s.Z.open(S.oAB.ACCOUNT),
-                                noticeType: R,
+                                noticeType: Z,
                                 children: j.intl.string(j.t['50KYxs'])
                             })
                         ]
@@ -132,14 +132,14 @@ let R = (e) => {
                     return (0, i.jsxs)(a.Notice, {
                         color: a.NoticeColors.PREMIUM_TIER_2,
                         children: [
-                            (0, i.jsx)('span', { className: Z.premiumLogo }),
+                            (0, i.jsx)('span', { className: R.premiumLogo }),
                             (0, i.jsx)('span', {
-                                className: Z.premiumText,
+                                className: R.premiumText,
                                 children: j.intl.string(j.t['+urf7+'])
                             }),
                             (0, i.jsx)(a.PrimaryCTANoticeButton, {
-                                className: Z.premiumAction,
-                                noticeType: R,
+                                className: R.premiumAction,
+                                noticeType: Z,
                                 onClick: () => {
                                     N.default.track(S.rMx.PREMIUM_PROMOTION_OPENED, {
                                         location_section: S.jXE.NOTIFICATION_BAR,
@@ -153,7 +153,7 @@ let R = (e) => {
                                 onClick: () => {
                                     r(T.L.UNKNOWN), (0, o.mB)(S.xW$.PREMIUM_PROMO_DISMISSED, !0);
                                 },
-                                noticeType: R
+                                noticeType: Z
                             })
                         ]
                     });
@@ -172,12 +172,12 @@ let R = (e) => {
                         color: a.NoticeColors.PREMIUM_TIER_2,
                         children: [
                             (0, i.jsx)(a.NoticeCloseButton, {
-                                noticeType: R,
+                                noticeType: Z,
                                 onClick: () => r(T.L.UNKNOWN)
                             }),
                             j.intl.string(j.t['0KFB2N']),
                             (0, i.jsx)(a.PrimaryCTANoticeButton, {
-                                noticeType: R,
+                                noticeType: Z,
                                 onClick: () => {
                                     r(T.L.UNKNOWN), s.Z.open(S.oAB.PREMIUM);
                                 },
@@ -188,7 +188,7 @@ let R = (e) => {
                 case l.z.NAGBAR_NOTICE_LOCALIZED_PRICING:
                     return (0, i.jsx)(_.Z, {
                         notice: P,
-                        noticeType: R,
+                        noticeType: Z,
                         dismissCurrentNotice: () => r(T.L.UNKNOWN)
                     });
                 case l.z.NAGBAR_BOUNCED_EMAIL_NOTICE:
@@ -197,11 +197,11 @@ let R = (e) => {
                         children: [
                             (0, i.jsx)(a.NoticeCloseButton, {
                                 onClick: () => r(T.L.UNKNOWN),
-                                noticeType: R
+                                noticeType: Z
                             }),
                             j.intl.string(j.t['7490vb']),
                             (0, i.jsx)(a.PrimaryCTANoticeButton, {
-                                noticeType: R,
+                                noticeType: Z,
                                 onClick: () => {
                                     (0, E.uL)(S.Z5c.SETTINGS('account'));
                                 },
@@ -216,11 +216,11 @@ let R = (e) => {
                         children: [
                             (0, i.jsx)(a.NoticeCloseButton, {
                                 onClick: () => r(T.L.UNKNOWN),
-                                noticeType: R
+                                noticeType: Z
                             }),
                             j.intl.string(j.t.pJ4hJC),
                             (0, i.jsx)(a.PrimaryCTANoticeButton, {
-                                noticeType: R,
+                                noticeType: Z,
                                 onClick: () => {
                                     r(T.L.PRIMARY), (0, E.uL)(1 === C.length ? S.Z5c.GUILD_SETTINGS(C[0], 'role-subscriptions') : S.Z5c.PICK_GUILD_SETTINGS('role-subscriptions', void 0, 'server-subscriptions-finish-setting-up'));
                                 },
@@ -234,12 +234,12 @@ let R = (e) => {
                         children: [
                             (0, i.jsx)(a.NoticeCloseButton, {
                                 onClick: () => r(T.L.UNKNOWN),
-                                noticeType: R
+                                noticeType: Z
                             }),
                             j.intl.format(j.t.pdYZys, {}),
                             (0, i.jsx)(a.PrimaryCTANoticeButton, {
                                 onClick: () => (0, p.Z)(A.Kq.NOTICE),
-                                noticeType: R,
+                                noticeType: Z,
                                 children: j.intl.string(j.t.LhlgY2)
                             })
                         ]
@@ -250,12 +250,12 @@ let R = (e) => {
                         children: [
                             (0, i.jsx)(a.NoticeCloseButton, {
                                 onClick: () => r(T.L.UNKNOWN),
-                                noticeType: R
+                                noticeType: Z
                             }),
                             j.intl.format(j.t.zT1hgo, { date: (0, f.IE)(L) }),
                             (0, i.jsx)(a.PrimaryCTANoticeButton, {
                                 onClick: () => (0, p.Z)(A.Kq.NOTICE),
-                                noticeType: R,
+                                noticeType: Z,
                                 children: j.intl.string(j.t.LhlgY2)
                             })
                         ]
@@ -266,7 +266,7 @@ let R = (e) => {
                         children: [
                             (0, i.jsx)(a.NoticeCloseButton, {
                                 onClick: () => r(T.L.UNKNOWN),
-                                noticeType: R
+                                noticeType: Z
                             }),
                             j.intl.string(j.t['O9GI+v']),
                             (0, i.jsx)(a.PrimaryCTANoticeButton, {
@@ -278,7 +278,7 @@ let R = (e) => {
                                         onClose: () => r(T.L.UNKNOWN)
                                     });
                                 },
-                                noticeType: R,
+                                noticeType: Z,
                                 children: j.intl.string(j.t.Zi69Dw)
                             })
                         ]

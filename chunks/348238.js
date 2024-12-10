@@ -6,13 +6,13 @@ n.d(t, {
         return U;
     },
     JC: function () {
-        return R;
+        return Z;
     },
     NU: function () {
         return O;
     },
     Nk: function () {
-        return Z;
+        return R;
     },
     R9: function () {
         return L;
@@ -105,11 +105,11 @@ function j(e, t, n, i) {
     let r = S('referencedUsernameProfile', n, i);
     return A(null == e ? void 0 : e.author.id, t.id, r);
 }
-function Z(e, t, n, i) {
+function R(e, t, n, i) {
     let r = S('interactionUsernameProfile', n, i);
     return A(null == e ? void 0 : e.user.id, t.id, r);
 }
-function R(e, t, n, i) {
+function Z(e, t, n, i) {
     let r = S('referencedUsernameProfile', n, i);
     return A(e, t.id, r);
 }

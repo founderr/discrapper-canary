@@ -60,7 +60,7 @@ function j(e) {
         children: n
     });
 }
-function Z(e) {
+function R(e) {
     let { className: t, children: n } = e,
         i = (0, d.useRadioGroup)({ orientation: 'vertical' });
     return (0, l.jsx)('div', {
@@ -70,7 +70,7 @@ function Z(e) {
         children: n
     });
 }
-function R(e) {
+function Z(e) {
     let { className: t, onClick: n, isSelected: i, isFirstAnswer: r, children: a } = e,
         { pollAnswerRef: o } = (0, v.dv)();
     return (0, l.jsx)(d.Clickable, {
@@ -104,7 +104,7 @@ function L(e) {
             answersInteraction: n
         })
             .with({ answersInteraction: x.Y7.RADIO_BUTTONS }, () => ({
-                ContainerComponent: Z,
+                ContainerComponent: R,
                 answerElementType: 1
             }))
             .with({ answersInteraction: x.Y7.CHECKBOXES }, () => ({
@@ -173,7 +173,7 @@ function y(e) {
                 children: i
             });
         case 2:
-            return (0, l.jsx)(R, {
+            return (0, l.jsx)(Z, {
                 className: s()(t, m),
                 onClick: f,
                 isSelected: h,

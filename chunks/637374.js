@@ -25,8 +25,8 @@ var i = n(200651),
     A = n(594174),
     b = n(509545),
     j = n(55563),
-    Z = n(199480),
-    R = n(626135),
+    R = n(199480),
+    Z = n(626135),
     P = n(669079),
     L = n(74538),
     y = n(296848),
@@ -291,7 +291,7 @@ class V extends r.Component {
                 let { channelId: t, code: n, content: i, type: r, giftInfo: l } = this.props;
                 e.preventDefault(),
                     e.stopPropagation(),
-                    R.default.track(k.rMx.OPEN_MODAL, {
+                    Z.default.track(k.rMx.OPEN_MODAL, {
                         type: 'gift_accept',
                         location: {
                             ...this.analyticsLocation,
@@ -339,7 +339,7 @@ class V extends r.Component {
                                 className: U.snow,
                                 wind: 5
                             }),
-                        r && (0, i.jsx)(Z.Z, { className: U.headerIcon }),
+                        r && (0, i.jsx)(R.Z, { className: U.headerIcon }),
                         null != e.giftStyle &&
                             (0, i.jsx)(I.Z, {
                                 defaultAnimationState: e.redeemed ? E.SR.LOOP : E.SR.IDLE,

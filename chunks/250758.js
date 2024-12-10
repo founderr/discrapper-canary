@@ -204,7 +204,7 @@ function j(e) {
         autocompletes: a.map((e) => ((null == e ? void 0 : e.group) === C.rtL.HISTORY ? null : e))
     });
 }
-function Z() {
+function R() {
     let e = _.Z.getCurrentSearchId();
     if (null == e || null == I[e]) return;
     let { query: t, mode: n, tokens: i, cursorScope: r } = I[e];
@@ -217,7 +217,7 @@ function Z() {
         autocompletes: A(e, n)
     });
 }
-class R extends (i = o.ZP.Store) {
+class Z extends (i = o.ZP.Store) {
     initialize() {
         this.waitFor(p.ZP, g.Z);
     }
@@ -227,7 +227,7 @@ class R extends (i = o.ZP.Store) {
     }
 }
 (a = 'SearchAutocompleteStore'),
-    (l = 'displayName') in (r = R)
+    (l = 'displayName') in (r = Z)
         ? Object.defineProperty(r, l, {
               value: a,
               enumerable: !0,
@@ -235,7 +235,7 @@ class R extends (i = o.ZP.Store) {
               writable: !0
           })
         : (r[l] = a);
-let P = new R(s.Z, {
+let P = new Z(s.Z, {
     SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function (e) {
         var t;
         let n,
@@ -270,8 +270,8 @@ let P = new R(s.Z, {
     },
     CHANNEL_CREATE: b,
     CHANNEL_DELETE: b,
-    STREAMER_MODE_UPDATE: Z,
-    SEARCH_SCREEN_OPEN: Z,
+    STREAMER_MODE_UPDATE: R,
+    SEARCH_SCREEN_OPEN: R,
     SEARCH_CLEAR_HISTORY: function (e) {
         let { searchId: t } = e;
         null != t ? j(t) : Object.keys(I).forEach(j);

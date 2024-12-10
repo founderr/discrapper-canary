@@ -28,8 +28,8 @@ var i = n(200651),
 function T(e) {
     var t, n, T;
     let { code: S, message: A } = e,
-        [b, j, Z] = (0, o.Wu)([E.Z], () => [E.Z.getApplication(S), E.Z.isInvalidApplication(S), E.Z.getApplicationFetchState(S)], [S]),
-        R = (0, o.e7)([u.default], () => u.default.locale),
+        [b, j, R] = (0, o.Wu)([E.Z], () => [E.Z.getApplication(S), E.Z.isInvalidApplication(S), E.Z.getApplicationFetchState(S)], [S]),
+        Z = (0, o.e7)([u.default], () => u.default.locale),
         P = (0, o.e7)([h.Z], () => {
             var e;
             return null !== (e = h.Z.getGuildId()) && void 0 !== e ? e : void 0;
@@ -45,7 +45,7 @@ function T(e) {
     }, [S]),
         r.useEffect(() => {
             y &&
-                Z === E.M.FETCHED &&
+                R === E.M.FETCHED &&
                 p.default.track(x.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
                     application_id: S,
                     device_platform: l.tq ? 'mobile_web' : 'desktop_web',
@@ -53,7 +53,7 @@ function T(e) {
                     guild_id: P,
                     channel_id: A.channel_id
                 });
-        }, [y, S, null == L ? void 0 : L.id, A.channel_id, P, A.author.id, Z]),
+        }, [y, S, null == L ? void 0 : L.id, A.channel_id, P, A.author.id, R]),
         r.useEffect(() => {
             y &&
                 j &&
@@ -99,12 +99,12 @@ function T(e) {
                 })
             ]
         });
-    if (null == b || Z === E.M.FETCHING)
+    if (null == b || R === E.M.FETCHING)
         return (0, i.jsxs)(d.Z, {
             containerRef: k,
             children: [(0, i.jsx)(d.Z.Header, { text: N.intl.string(N.t.m9hXGR) }), (0, i.jsx)(d.Z.Body, { resolving: !0 })]
         });
-    let B = new Intl.NumberFormat(R, {
+    let B = new Intl.NumberFormat(Z, {
             notation: 'compact',
             compactDisplay: 'short'
         }),

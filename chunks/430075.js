@@ -8,8 +8,8 @@ var i = n(200651);
 n(192379);
 var E = n(442837),
     r = n(481060),
-    I = n(703656),
-    _ = n(314897),
+    _ = n(703656),
+    I = n(314897),
     o = n(236289),
     s = n(518560),
     a = n(800530),
@@ -46,7 +46,7 @@ function A(e) {
         : t === a.oE.SUCCESS
           ? (0, i.jsx)(r.HelpMessage, {
                 messageType: r.HelpMessageTypes.POSITIVE,
-                children: c.intl.string(c.t.maZDLy)
+                children: c.intl.format(c.t.maZDLy, { login: '/login' })
             })
           : t === a.oE.ERROR
             ? (0, i.jsx)(r.HelpMessage, {
@@ -71,7 +71,7 @@ function l() {
 }
 function T() {
     return (
-        null == (0, E.e7)([_.default], () => _.default.getSuspendedUserToken()) && (0, I.uL)(S.Z5c.LOGIN),
+        null == (0, E.e7)([I.default], () => I.default.getSuspendedUserToken()) && (0, _.uL)(S.Z5c.LOGIN),
         (0, i.jsxs)('div', {
             className: N.container,
             children: [(0, i.jsx)(u, {}), (0, i.jsx)(l, {})]

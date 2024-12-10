@@ -3,7 +3,7 @@ n.d(t, {
         return b;
     },
     h: function () {
-        return Z;
+        return R;
     }
 }),
     n(47120);
@@ -32,9 +32,9 @@ var i = n(200651),
     S = n(388032),
     A = n(826310);
 function b(e) {
-    let { setTab: t, onJump: n, showTutorial: l, setSeenTutorial: o, closePopout: b, badgeState: Z } = e,
-        R = r.useRef(null),
-        [P, L] = (0, v.ZP)(R),
+    let { setTab: t, onJump: n, showTutorial: l, setSeenTutorial: o, closePopout: b, badgeState: R } = e,
+        Z = r.useRef(null),
+        [P, L] = (0, v.ZP)(Z),
         { loadState: y, channels: O } = P,
         { maybeLoadMore: M, markAllRead: k } = L;
     (function (e, t, n) {
@@ -51,7 +51,7 @@ function b(e) {
             let { scrollTop: s, offsetHeight: c } = l.getScrollerState();
             (o.offsetTop < s || o.offsetTop > s + c) && l.scrollTo({ to: o.offsetTop });
         });
-    })(R, P, L),
+    })(Z, P, L),
         (function (e, t) {
             r.useEffect(() => {
                 let n = () => {
@@ -92,7 +92,7 @@ function b(e) {
             [b]
         );
     let D = (0, d.e7)([f.Z], () => f.Z.messageGroupSpacing),
-        B = (0, p.Z)('unreads', R);
+        B = (0, p.Z)('unreads', Z);
     if (0 === O.length) {
         var U;
         return (0, i.jsxs)('div', {
@@ -101,7 +101,7 @@ function b(e) {
                 (0, i.jsx)(x.Z, {
                     tab: u.X.UNREADS,
                     setTab: t,
-                    badgeState: Z,
+                    badgeState: R,
                     closePopout: b
                 }),
                 (0, i.jsx)(I.Z, {
@@ -119,7 +119,7 @@ function b(e) {
             (0, i.jsx)(x.Z, {
                 tab: u.X.UNREADS,
                 setTab: t,
-                badgeState: Z,
+                badgeState: R,
                 closePopout: b,
                 children: (0, i.jsx)(C.Z, {
                     type: 'top-header',
@@ -134,7 +134,7 @@ function b(e) {
                         return (0, i.jsxs)(m.AdvancedScrollerThin, {
                             ref: (e) => {
                                 var n;
-                                (R.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
+                                (Z.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
                             },
                             ...r,
                             onScroll: y === v.jd.Done ? void 0 : M,
@@ -182,7 +182,7 @@ function j(e) {
         ]
     });
 }
-function Z(e) {
+function R(e) {
     let { setTab: t, badgeState: n, closePopout: r } = e;
     return (0, i.jsxs)('div', {
         className: A.container,

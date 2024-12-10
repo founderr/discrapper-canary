@@ -25,8 +25,8 @@ var i = n(200651),
     A = n(944486),
     b = n(914010),
     j = n(246946),
-    Z = n(594174),
-    R = n(585483),
+    R = n(594174),
+    Z = n(585483),
     P = n(63063),
     L = n(405656),
     y = n(51144),
@@ -56,7 +56,7 @@ let U = m()('2015-05-15').local(),
         var r, l, a;
         let { user: o, text: s } = n;
         if (null == o) return (0, i.jsx)('strong', { children: s });
-        let c = Z.default.getUser(o.id),
+        let c = R.default.getUser(o.id),
             d = N.Z.getChannel(e),
             u = (null == d ? void 0 : d.isPrivate()) ? T.Z.getNickname(o.id) : null,
             m = null !== (l = null !== (r = v.ZP.getNick(e, o.id)) && void 0 !== r ? r : u) && void 0 !== l ? l : y.ZP.getName(o),
@@ -98,11 +98,11 @@ let U = m()('2015-05-15').local(),
             className: D.resultChannel,
             children: [
                 null != o ? (0, i.jsx)(o, { className: D.searchResultChannelIcon }) : null,
-                (0, i.jsx)('strong', { children: (0, I.F6)(r, Z.default, T.Z) }),
+                (0, i.jsx)('strong', { children: (0, I.F6)(r, R.default, T.Z) }),
                 null != a
                     ? (0, i.jsx)('span', {
                           className: D.searchResultChannelCategory,
-                          children: (0, I.F6)(a, Z.default, T.Z)
+                          children: (0, I.F6)(a, R.default, T.Z)
                       })
                     : null
             ]
@@ -382,7 +382,7 @@ class W extends r.PureComponent {
                     l = 0;
                 null != i.token ? (l = i.token.start) : (null == r ? void 0 : r.currentToken) != null && (l = r.currentToken.end);
                 let a = null != i.token ? i.token.end : l;
-                R.S.dispatch(M.CkL.SET_SEARCH_QUERY, {
+                Z.S.dispatch(M.CkL.SET_SEARCH_QUERY, {
                     query: e,
                     anchor: l,
                     focus: a,
@@ -425,7 +425,7 @@ class W extends r.PureComponent {
                 this.setSearchQuery(this.state.dateHint, !0);
             }),
             B(this, 'performSearch', (e) => {
-                R.S.dispatch(M.CkL.PERFORM_SEARCH, null != e ? e : {});
+                Z.S.dispatch(M.CkL.PERFORM_SEARCH, null != e ? e : {});
             }),
             B(this, 'renderAutocompletes', () => {
                 let { selectedIndex: e } = this.state,

@@ -26,7 +26,7 @@ function g(e) {
         I,
         { onTransitionToInviteChannel: x, onAcceptInstantInvite: N, guild: v, invite: T, author: S, currentUserId: A } = e,
         b = A === S.id,
-        { channel: j, approximate_member_count: Z, approximate_presence_count: R } = T,
+        { channel: j, approximate_member_count: R, approximate_presence_count: Z } = T,
         P = T.state === f.r2o.ACCEPTING,
         L = null != j ? (0, s.jD)(j) : null,
         y = null != v,
@@ -90,10 +90,10 @@ function g(e) {
                       })
                   ]
               })))
-            : (null != Z && Z >= 5) || (null != R && R > 0)
+            : (null != R && R >= 5) || (null != Z && Z > 0)
               ? (E = (0, i.jsx)(o.Z.Data, {
-                    members: Z,
-                    membersOnline: R
+                    members: R,
+                    membersOnline: Z
                 }))
               : O &&
                 (E = (0, i.jsx)(o.Z.Channel, {

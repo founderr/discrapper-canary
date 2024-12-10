@@ -24,10 +24,10 @@ var i = n(200651),
     A = n(145807),
     b = n(56744),
     j = n(981631),
-    Z = n(46124);
+    R = n(46124);
 t.Z = r.memo(function (e) {
     var t, n;
-    let { message: r, compact: l = !1, className: R, onContextMenu: P, onClick: L, hideSimpleEmbedContent: y = !0, channel: O, isGroupStart: M, animateAvatar: k, subscribeToComponentDispatch: D, renderThreadAccessory: B, trackAnnouncementViews: U = !1, ...w } = e,
+    let { message: r, compact: l = !1, className: Z, onContextMenu: P, onClick: L, hideSimpleEmbedContent: y = !0, channel: O, isGroupStart: M, animateAvatar: k, subscribeToComponentDispatch: D, renderThreadAccessory: B, trackAnnouncementViews: U = !1, ...w } = e,
         F = r.type === j.uaV.POLL_RESULT || (null !== (t = e.disableInteraction) && void 0 !== t && t),
         G = r.isFirstMessageInForumPost(O),
         V = (0, d.A)((null !== (n = r.editedTimestamp) && void 0 !== n ? n : r.timestamp).valueOf()),
@@ -58,9 +58,9 @@ t.Z = r.memo(function (e) {
         et = (0, C.Gx)(r);
     return (0, i.jsx)(E.Z, {
         compact: l,
-        className: a()(R, {
-            [Z.ephemeral]: (0, p.Pv)(r),
-            [Z.disableInteraction]: F
+        className: a()(Z, {
+            [R.ephemeral]: (0, p.Pv)(r),
+            [R.disableInteraction]: F
         }),
         disableInteraction: F,
         childrenRepliedMessage: (0, b.Z)(r, O, W, K, l),

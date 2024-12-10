@@ -31,8 +31,8 @@ n.d(t, {
 var i = n(913527),
     E = n.n(i),
     r = n(406432),
-    I = n(531441),
-    _ = n(800530),
+    _ = n(531441),
+    I = n(800530),
     o = n(981631),
     s = n(959517),
     a = n(388032);
@@ -48,26 +48,26 @@ function N(e) {
     if (null == e.fields) return;
     let r = e.fields.reduce((e, t) => ((e[t.rawName] = t.rawValue), e), {});
     return {
-        header: null !== (t = r[_.I5.HEADER]) && void 0 !== t ? t : '',
-        icon: r[_.I5.ICON_TYPE],
-        body: null !== (n = r[_.I5.BODY]) && void 0 !== n ? n : '',
-        ctas: (null !== (i = r[_.I5.CTAS]) && void 0 !== i ? i : '').split(',').filter((e) => '' !== e),
-        timestamp: parseFloat(null !== (E = r[_.I5.TIMESTAMP]) && void 0 !== E ? E : 0),
-        theme: r[_.I5.THEME],
-        learn_more_link: r[_.I5.LEARN_MORE_LINK],
-        classification_id: r[_.I5.CLASSIFICATION_ID]
+        header: null !== (t = r[I.I5.HEADER]) && void 0 !== t ? t : '',
+        icon: r[I.I5.ICON_TYPE],
+        body: null !== (n = r[I.I5.BODY]) && void 0 !== n ? n : '',
+        ctas: (null !== (i = r[I.I5.CTAS]) && void 0 !== i ? i : '').split(',').filter((e) => '' !== e),
+        timestamp: parseFloat(null !== (E = r[I.I5.TIMESTAMP]) && void 0 !== E ? E : 0),
+        theme: r[I.I5.THEME],
+        learn_more_link: r[I.I5.LEARN_MORE_LINK],
+        classification_id: r[I.I5.CLASSIFICATION_ID]
     };
 }
 function u(e) {
-    if (e.type === I.lK.MESSAGE) return '' === e.content && 0 === e.attachments.length;
+    if (e.type === _.lK.MESSAGE) return '' === e.content && 0 === e.attachments.length;
     return !0;
 }
 let A = (e) =>
         ({
-            [_.bK.DIDNT_VIOLATE_POLICY]: a.intl.string(a.t.mZffAg),
-            [_.bK.TOO_STRICT_UNFAIR]: a.intl.string(a.t.wgZVAg),
-            [_.bK.DONT_AGREE_PENALTY]: a.intl.string(a.t.eu8G4u),
-            [_.bK.SOMETHING_ELSE]: a.intl.string(a.t.XU3s6u)
+            [I.bK.DIDNT_VIOLATE_POLICY]: a.intl.string(a.t.mZffAg),
+            [I.bK.TOO_STRICT_UNFAIR]: a.intl.string(a.t.wgZVAg),
+            [I.bK.DONT_AGREE_PENALTY]: a.intl.string(a.t.eu8G4u),
+            [I.bK.SOMETHING_ELSE]: a.intl.string(a.t.XU3s6u)
         })[e],
     l = (e) => (null == e || 0 === e.length ? '' : 1 === e.length ? e.toUpperCase() : ''.concat(e.charAt(0).toUpperCase()).concat(e.slice(1)));
 function T(e) {

@@ -25,10 +25,10 @@ var r = n(120356),
     x = n(388032),
     N = n(695436);
 function v(e) {
-    var t, n, r, v, T, S, A, b, j, Z;
-    let { message: R, channel: P } = e,
+    var t, n, r, v, T, S, A, b, j, R;
+    let { message: Z, channel: P } = e,
         L =
-            null === (r = R.embeds[0]) || void 0 === r
+            null === (r = Z.embeds[0]) || void 0 === r
                 ? void 0
                 : null === (n = r.fields) || void 0 === n
                   ? void 0
@@ -40,7 +40,7 @@ function v(e) {
                     ? void 0
                     : t.rawValue,
         y =
-            null === (S = R.embeds[0]) || void 0 === S
+            null === (S = Z.embeds[0]) || void 0 === S
                 ? void 0
                 : null === (T = S.fields) || void 0 === T
                   ? void 0
@@ -54,17 +54,17 @@ function v(e) {
         O = (0, a.e7)([_.Z], () => _.Z.getGuild(L)),
         M = (0, a.e7)([p.Z], () => p.Z.getChannel(y)),
         k = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
-        D = (0, a.e7)([], () => R.author.id === (null == k ? void 0 : k.id)),
-        B = null === (A = P.recipients) || void 0 === A ? void 0 : A.find((e) => e !== R.author.id),
+        D = (0, a.e7)([], () => Z.author.id === (null == k ? void 0 : k.id)),
+        B = null === (A = P.recipients) || void 0 === A ? void 0 : A.find((e) => e !== Z.author.id),
         U = (0, a.e7)([g.default], () => (null != B ? g.default.getUser(B) : null)),
-        w = (0, u.ZP)(R),
+        w = (0, u.ZP)(Z),
         F = (0, C._T)(P.getGuildId(), P.id, U),
         G = (0, a.Wu)([E.ZP], () => (null != M ? E.ZP.getVoiceStatesForChannel(M) : []), [M]),
         V = G.some((e) => e.user.id === (null == k ? void 0 : k.id)),
         H =
-            null === (Z = R.embeds[0]) || void 0 === Z
+            null === (R = Z.embeds[0]) || void 0 === R
                 ? void 0
-                : null === (j = Z.fields) || void 0 === j
+                : null === (j = R.fields) || void 0 === j
                   ? void 0
                   : null ===
                           (b = j.find((e) => {

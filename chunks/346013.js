@@ -30,8 +30,8 @@ var i = n(200651),
     A = n(271383),
     b = n(594174),
     j = n(768581),
-    Z = n(900849),
-    R = n(506071),
+    R = n(900849),
+    Z = n(506071),
     P = n(495114),
     L = n(170140),
     y = n(981631),
@@ -46,7 +46,7 @@ function B(e) {
         { setPopout: F } = (0, N.Z)(B.id, O.d$),
         G = (0, x.qo)(B, U, F, !0),
         V = S.QK.useSetting(),
-        H = (0, R.n)(),
+        H = (0, Z.n)(),
         [z, W] = r.useState(!1),
         [K, Y] = r.useState((null == w ? void 0 : w.coverImage) == null),
         X = (0, u.e7)([h.Z], () => h.Z.useReducedMotion),
@@ -80,7 +80,7 @@ function B(e) {
                     can_access: w.canAccess,
                     is_member: Q
                 }),
-                w.canAccess ? (0, C.Z)(y.Z5c.CHANNEL(w.guildId, w.threadId, w.messageId)) : Q ? (0, C.Z)(y.Z5c.CHANNEL(w.guildId, w.parentChannelId)) : await Z.Ub(w.guildId, {}, { channelId: w.parentChannelId }));
+                w.canAccess ? (0, C.Z)(y.Z5c.CHANNEL(w.guildId, w.threadId, w.messageId)) : Q ? (0, C.Z)(y.Z5c.CHANNEL(w.guildId, w.parentChannelId)) : await R.Ub(w.guildId, {}, { channelId: w.parentChannelId }));
         }, [w, U, Q]),
         eo = r.useCallback(
             () => (

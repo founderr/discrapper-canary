@@ -37,14 +37,14 @@ function S(e) {
 t.Z = r.memo(function (e) {
     var t, n, l, a, A, b;
     let j,
-        { channel: Z, messageId: R, interactionData: P } = e,
+        { channel: R, messageId: Z, interactionData: P } = e,
         { analyticsLocations: L } = (0, d.ZP)(),
-        { onCopy: y, copyRef: O } = (0, u.Z)(Z, null == P ? void 0 : null === (t = P.application_command) || void 0 === t ? void 0 : t.id),
-        M = (0, o.e7)([_.Z], () => _.Z.getGuild(Z.guild_id), [Z.guild_id]);
+        { onCopy: y, copyRef: O } = (0, u.Z)(R, null == P ? void 0 : null === (t = P.application_command) || void 0 === t ? void 0 : t.id),
+        M = (0, o.e7)([_.Z], () => _.Z.getGuild(R.guild_id), [R.guild_id]);
     if (
         (r.useEffect(() => {
-            (null == P || (P.type === c.yU.CHAT && void 0 === P.application_command)) && m.OG(Z.id, R);
-        }, [Z.id, R, P]),
+            (null == P || (P.type === c.yU.CHAT && void 0 === P.application_command)) && m.OG(R.id, Z);
+        }, [R.id, Z, P]),
         null == P)
     )
         j = (0, i.jsx)(s.Spinner, {
@@ -59,8 +59,8 @@ t.Z = r.memo(function (e) {
                 (function e(t) {
                     var n, l, a, o, d, u, m;
                     let N,
-                        { option: A, channel: b, guild: j, messageId: Z, parentOptionKey: R, commandOptionSpec: P, sourceAnalyticsLocations: L } = t,
-                        y = null != R ? R + ' ' + A.name : A.name;
+                        { option: A, channel: b, guild: j, messageId: R, parentOptionKey: Z, commandOptionSpec: P, sourceAnalyticsLocations: L } = t,
+                        y = null != Z ? Z + ' ' + A.name : A.name;
                     if (A.type === c.jw.SUB_COMMAND || A.type === c.jw.SUB_COMMAND_GROUP) {
                         let t = [
                                 (0, i.jsxs)(
@@ -84,7 +84,7 @@ t.Z = r.memo(function (e) {
                                     option: n,
                                     channel: b,
                                     guild: j,
-                                    messageId: Z,
+                                    messageId: R,
                                     parentOptionKey: y,
                                     commandOptionSpec: c[n.name],
                                     sourceAnalyticsLocations: L
@@ -107,7 +107,7 @@ t.Z = r.memo(function (e) {
                                                 userId: t.id,
                                                 guildId: b.guild_id,
                                                 channelId: b.id,
-                                                messageId: Z,
+                                                messageId: R,
                                                 sourceAnalyticsLocations: L,
                                                 analyticsLocation: { section: C.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
                                             }),
@@ -189,9 +189,9 @@ t.Z = r.memo(function (e) {
                     );
                 })({
                     option: n,
-                    channel: Z,
+                    channel: R,
                     guild: M,
-                    messageId: R,
+                    messageId: Z,
                     parentOptionKey: null,
                     commandOptionSpec: t[n.name],
                     sourceAnalyticsLocations: L

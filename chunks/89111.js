@@ -7,7 +7,7 @@ e.exports = {
     spinner: 'spinner_cf58b5',
     spinnerItem: 'spinnerItem_cf58b5',
     messagesErrorBar: 'messagesErrorBar_cf58b5 bottomBar_cf58b5 barBase_cf58b5',
-    newMessagesBar: 'newMessagesBar_cf58b5 bgdarBase',
+    newMessagesBar: 'newMessagesBar_cf58b5 barBase_cf58b5',
     containerMarginTop: 'containerMarginTop_cf58b5',
     barButtonMain: 'barButtonMain_cf58b5 barButtonBase_cf58b5',
     span: 'span_cf58b5',

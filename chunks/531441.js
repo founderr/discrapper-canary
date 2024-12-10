@@ -1,4 +1,4 @@
-var i, E, r, I, _, o, s, a, S, c, N, u, A, l, T;
+var i, E, r, _, I, o, s, a, S, c, N, u, A, l, T;
 n.d(t, {
     OY: function () {
         return a;
@@ -25,7 +25,7 @@ n.d(t, {
     ((c = r || (r = {}))[(c.REVIEW_PENDING = 1)] = 'REVIEW_PENDING'),
     (c[(c.CLASSIFICATION_UPHELD = 2)] = 'CLASSIFICATION_UPHELD'),
     (c[(c.CLASSIFICATION_INVALIDATED = 3)] = 'CLASSIFICATION_INVALIDATED'),
-    ((N = I || (I = {}))[(N.UNSPECIFIED = 0)] = 'UNSPECIFIED'),
+    ((N = _ || (_ = {}))[(N.UNSPECIFIED = 0)] = 'UNSPECIFIED'),
     (N[(N.UNKNOWN = 1)] = 'UNKNOWN'),
     (N[(N.UNSOLICITED_PORNOGRAPHY = 100)] = 'UNSOLICITED_PORNOGRAPHY'),
     (N[(N.NONCONSENSUAL_PORNOGRAPHY = 200)] = 'NONCONSENSUAL_PORNOGRAPHY'),
@@ -37,7 +37,7 @@ n.d(t, {
     (N[(N.TEST_CLASSIFICATION = 9000)] = 'TEST_CLASSIFICATION'),
     (N[(N.TEST_CLASSIFICATION_LOW = 9001)] = 'TEST_CLASSIFICATION_LOW'),
     (N[(N.TEST_CLASSIFICATION_SEVERE = 9002)] = 'TEST_CLASSIFICATION_SEVERE'),
-    ((u = _ || (_ = {}))[(u.BAN = 0)] = 'BAN'),
+    ((u = I || (I = {}))[(u.BAN = 0)] = 'BAN'),
     (u[(u.TEMP_BAN = 1)] = 'TEMP_BAN'),
     (u[(u.GLOBAL_QUARANTINE = 2)] = 'GLOBAL_QUARANTINE'),
     (u[(u.REQUIRE_VERIFICATION = 3)] = 'REQUIRE_VERIFICATION'),

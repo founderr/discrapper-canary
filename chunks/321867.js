@@ -25,20 +25,20 @@ function x(e) {
         x = (0, r.e7)([g.default], () => g.default.getCurrentUser()),
         E = p.ZP.canUseAnimatedAvatar(x),
         b = p.ZP.canUsePremiumProfileCustomization(x),
-        C = (n === h.pC.BANNER && b) || (n === h.pC.AVATAR && E),
-        { sourceAnalyticsLocations: I } = (0, c.ZP)(a.Z.PREMIUM_PREVIEW_UPSELL_HEADER);
+        I = (n === h.pC.BANNER && b) || (n === h.pC.AVATAR && E),
+        { sourceAnalyticsLocations: B } = (0, c.ZP)(a.Z.PREMIUM_PREVIEW_UPSELL_HEADER);
     if (
         (o.useEffect(() => {
-            !C &&
+            !I &&
                 f.default.track(_.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: i,
-                    location_stack: I
+                    location_stack: B
                 });
-        }, [C, i, I]),
-        C)
+        }, [I, i, B]),
+        I)
     )
         return null;
-    let B = (0, t.jsx)(u.Z, {
+    let C = (0, t.jsx)(u.Z, {
         className: m.__invalid_getNitroLink,
         size: l.Button.Sizes.SMALL,
         look: l.Button.Looks.LINK,
@@ -58,6 +58,6 @@ function x(e) {
         text: T.intl.format(T.t.Og8039, {}),
         textSize: s.Z.Sizes.SIZE_14,
         textColor: s.Z.Colors.HEADER_PRIMARY,
-        button: B
+        button: C
     });
 }

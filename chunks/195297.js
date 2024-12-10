@@ -24,14 +24,14 @@ var t = n(200651),
     m = n(388032),
     x = n(415617);
 function E(e) {
-    let { transitionState: i, onClose: r, onComplete: E, uploadType: b, showUpsellHeader: C, analyticsPage: I } = e,
-        [B, j] = o.useState(!1),
+    let { transitionState: i, onClose: r, onComplete: E, uploadType: b, showUpsellHeader: I, analyticsPage: B } = e,
+        [C, j] = o.useState(!1),
         R = (0, a.useModalContext)(),
         A = (0, d.Dt)(),
         { analyticsLocations: P } = (0, s.ZP)(c.Z.GIF_PICKER);
     async function Z(e) {
         let { gifSrc: i } = e;
-        if (null == i || B) return;
+        if (null == i || C) return;
         j(!0);
         let o = (0, h.Q)(i),
             l = await fetch(o),
@@ -46,7 +46,7 @@ function E(e) {
                             file: new File([c], 'tenor.gif', { type: 'image/gif' }),
                             onCrop: E,
                             uploadType: b,
-                            showUpsellHeader: C,
+                            showUpsellHeader: I,
                             ...i
                         });
                 },
@@ -56,9 +56,9 @@ function E(e) {
     o.useEffect(() => {
         p.default.track(N.rMx.OPEN_MODAL, {
             type: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
-            location: { page: I }
+            location: { page: B }
         });
-    }, [I]);
+    }, [B]);
     let k = b === T.pC.AVATAR || b === T.pC.BANNER,
         v = (0, g.M)(!k);
     return (0, t.jsx)(s.Gt, {
@@ -68,11 +68,11 @@ function E(e) {
             transitionState: i,
             size: a.ModalSize.SMALL,
             children: [
-                C &&
+                I &&
                     !v &&
                     (0, t.jsx)(_.Z, {
                         type: b,
-                        analyticsPage: I,
+                        analyticsPage: B,
                         analyticsSection: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
                         isGIF: !0
                     }),
@@ -94,15 +94,15 @@ function E(e) {
                 (0, t.jsxs)('div', {
                     children: [
                         (0, t.jsx)(u.Z, {
-                            contentClassName: l()({ [x.gifPickerContent]: C && v }),
-                            className: l()(x.gifPicker, { [x.loadingOverlay]: B }),
+                            contentClassName: l()({ [x.gifPickerContent]: I && v }),
+                            className: l()(x.gifPicker, { [x.loadingOverlay]: C }),
                             onSelectGIF: Z,
                             hideFavorites: !0
                         }),
-                        B && (0, t.jsx)(a.Spinner, { className: x.spinner })
+                        C && (0, t.jsx)(a.Spinner, { className: x.spinner })
                     ]
                 }),
-                C &&
+                I &&
                     v &&
                     (0, t.jsx)(f.Z, {
                         uploadType: b,

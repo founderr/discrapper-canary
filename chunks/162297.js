@@ -30,8 +30,8 @@ var i = n(200651),
     A = n(944486),
     b = n(914010),
     j = n(768581),
-    Z = n(585483),
-    R = n(135431),
+    R = n(585483),
+    Z = n(135431),
     P = n(728345),
     L = n(812206),
     y = n(981631),
@@ -46,7 +46,7 @@ function B(e) {
         null == n && !l && !a && P.ZP.fetchApplication(t);
     }, [n, l, a, t]),
     null != n &&
-        (0, R.Eb)({
+        (0, Z.Eb)({
             customInstallUrl: n.customInstallUrl,
             installParams: n.installParams,
             integrationTypesConfig: n.integrationTypesConfig
@@ -161,7 +161,7 @@ function U(e) {
                                     onClick: () => {
                                         var e;
                                         a.Y.USER_INSTALL in (null !== (e = j.integrationTypesConfig) && void 0 !== e ? e : {}) || Q
-                                            ? Z.S.dispatchToLastSubscribed(y.CkL.OPEN_APP_LAUNCHER, { applicationId: j.id })
+                                            ? R.S.dispatchToLastSubscribed(y.CkL.OPEN_APP_LAUNCHER, { applicationId: j.id })
                                             : (0, x.goToAppDirectory)({
                                                   guildId: B,
                                                   view: I.ApplicationDirectoryViews.APPLICATION,
@@ -178,7 +178,7 @@ function U(e) {
                                     size: s.Button.Sizes.MEDIUM,
                                     onClick: () => {
                                         p.ZP.trackWithMetadata(y.rMx.APP_OAUTH2_LINK_EMBED_CTA_CLICKED, { application_id: j.id }),
-                                            (0, R.LO)({
+                                            (0, Z.LO)({
                                                 applicationId: j.id,
                                                 customInstallUrl: j.customInstallUrl,
                                                 installParams: j.installParams,

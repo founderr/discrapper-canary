@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return R;
     }
 }),
     n(47120);
@@ -163,7 +163,7 @@ class j extends r.Component {
                 : (t[n] = i);
     }
 }
-function Z(e) {
+function R(e) {
     let { userTrialOfferId: t, canRenderReferralEmbed: n } = e,
         { trialOffer: r, isResolving: l } = (0, d.cj)(
             [x.Z],

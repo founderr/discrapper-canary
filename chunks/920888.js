@@ -35,10 +35,10 @@ class N extends r.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: r, isGuest: l, isPendingMember: C, isForumToolbar: I, channel: x, className: N, forceAddReactions: v, reactionClassName: T, useChatFontScaling: S, forceHideReactionCreates: A, remainingReactions: b, combinedReactions: j, visibleReactionsCount: Z } = this.props,
-            { disableTransitionAppear: R } = this.state,
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: r, isGuest: l, isPendingMember: C, isForumToolbar: I, channel: x, className: N, forceAddReactions: v, reactionClassName: T, useChatFontScaling: S, forceHideReactionCreates: A, remainingReactions: b, combinedReactions: j, visibleReactionsCount: R } = this.props,
+            { disableTransitionAppear: Z } = this.state,
             P = S ? E : g,
-            L = Z > 0;
+            L = R > 0;
         if (!L && !v) return null;
         let { enabled: y } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
             { canShowImprovedReactionButton: O } = d.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
@@ -48,7 +48,7 @@ class N extends r.PureComponent {
         return (0, i.jsxs)(o.W, {
             component: 'div',
             className: a()(P.reactions, N, { [P.largeReactions]: D }),
-            transitionAppear: !R,
+            transitionAppear: !Z,
             role: 'group',
             transitionLeave: !1,
             id: (0, h.bY)(e),

@@ -44,8 +44,8 @@ var i,
     A = n(25610),
     b = n(703751),
     j = n(761538),
-    Z = n(674611),
-    R = n(346610),
+    R = n(674611),
+    Z = n(346610),
     P = n(868643),
     L = n(294734),
     y = n(426275),
@@ -98,8 +98,8 @@ var i,
     eA = n(461157),
     eb = n(901461),
     ej = n(432376),
-    eZ = n(384203),
-    eR = n(633957),
+    eR = n(384203),
+    eZ = n(633957),
     eP = n(530472),
     eL = n(29909),
     ey = n(782658),
@@ -213,7 +213,7 @@ class e3 extends (i = l.Component) {
         return n
             ? (0, r.jsx)('div', {
                   className: eY.ctaButtonContainer,
-                  children: (0, r.jsx)(Z.Z, {
+                  children: (0, r.jsx)(R.Z, {
                       messageId: e.id,
                       channelId: t.id
                   })
@@ -245,7 +245,7 @@ class e3 extends (i = l.Component) {
                   if (n === v.g.EVENT) return (0, r.jsx)(B.Z, { code: i }, i);
                   else if (n === v.g.CHANNEL_LINK)
                       return (0, r.jsx)(
-                          eZ.Z,
+                          eR.Z,
                           {
                               code: i,
                               messageData: e
@@ -630,7 +630,7 @@ class e3 extends (i = l.Component) {
         let { application: t, activityInstance: n } = e;
         return null == t || null == n
             ? null
-            : (0, r.jsx)(eR.Z, {
+            : (0, r.jsx)(eZ.Z, {
                   application: t,
                   channelId: this.props.channel.id,
                   guildId: this.props.channel.guild_id
@@ -704,15 +704,15 @@ class e3 extends (i = l.Component) {
             A = this.renderSafetyPolicyNotice(t),
             b = this.renderSafetySystemNotification(t),
             j = this.renderVoiceChannelInvite(t, n),
-            Z = this.renderMediaObscureNotice(t),
-            R = this.renderPoll(t, i),
+            R = this.renderMediaObscureNotice(t),
+            Z = this.renderPoll(t, i),
             P = this.renderForwardedMessage(t);
-        return null == s && null == u && null == f && null == p && null == _ && null == c && null == d && null == g && null == E && null == C && null == I && null == x && null == v && null == N && null == S && null == A && null != T && null == R && null == j && null == P
+        return null == s && null == u && null == f && null == p && null == _ && null == c && null == d && null == g && null == E && null == C && null == I && null == x && null == v && null == N && null == S && null == A && null != T && null == Z && null == j && null == P
             ? null
             : (0, r.jsxs)('div', {
                   id: (0, eM.bX)(t),
                   className: o()(e, eY.container),
-                  children: [P, N, R, s, c, d, S, u, m, f, Z, p, C, x, v, T, h, _, g, E, l && this.renderSuppressConfirmModal(), a && this.renderRemoveAttachmentConfirmModal(), I, A, b, j]
+                  children: [P, N, Z, s, c, d, S, u, m, f, R, p, C, x, v, T, h, _, g, E, l && this.renderSuppressConfirmModal(), a && this.renderRemoveAttachmentConfirmModal(), I, A, b, j]
               });
     }
     constructor(...e) {
@@ -834,7 +834,7 @@ function e2(e) {
         T = o === i.author.id && N && !a,
         S = i.author.id === o,
         j = i.isFirstMessageInForumPost(n),
-        Z = (0, ej.Z)({
+        R = (0, ej.Z)({
             channel: n,
             canChat: f,
             renderReactions: m,
@@ -850,14 +850,14 @@ function e2(e) {
         O = (0, J.Z)(i),
         D = (0, A.V)(n.id, i.author.id),
         B = (0, b.r)(i.id),
-        { hasInlineForwardButton: U } = (0, R.yk)({ location: 'MessageAccessories' }),
+        { hasInlineForwardButton: U } = (0, Z.yk)({ location: 'MessageAccessories' }),
         w = (0, P.a)(i) && U,
         F = (0, eS._)(n);
     return (0, r.jsx)(e3, {
         canSuppressEmbeds: v,
         canDeleteAttachments: T,
-        ...Z,
-        disableReactionReads: !!j || Z.disableReactionReads,
+        ...R,
+        disableReactionReads: !!j || R.disableReactionReads,
         ...e,
         hasSpoilerEmbeds: e.hasSpoilerEmbeds && F,
         isLurking: p && f,

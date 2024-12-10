@@ -23,11 +23,11 @@ var r = n(399606),
 function C(e) {
     let { guildProductListing: t, guildId: n, location: C, shouldShowFullDescriptionButton: I = !0, hideRoleTag: x = !1, lineClamp: N = 1, cardWidth: v, cardHeight: T, thumbnailHeight: S, descriptionTextVariant: A = 'text-sm/normal', showOpaqueBackground: b = !1 } = e,
         j = (0, r.e7)([s.Z], () => s.Z.getGuild(n), [n]),
-        Z = (0, r.e7)([s.Z], () => {
+        R = (0, r.e7)([s.Z], () => {
             var e;
             return s.Z.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : E.lds);
         }),
-        R = (0, l.U)(t, 600),
+        Z = (0, l.U)(t, 600),
         P = (0, f.C)(t),
         L = (0, d.SO)(j),
         { shouldHideGuildPurchaseEntryPoints: y } = (0, o.uP)(n),
@@ -66,11 +66,11 @@ function C(e) {
     return (0, i.jsx)(
         h.Z,
         {
-            imageUrl: R,
+            imageUrl: Z,
             name: t.name,
             description: t.description,
             formattedPrice: O,
-            role: Z,
+            role: R,
             ctaComponent: (0, i.jsx)(g.Z, {
                 guildId: n,
                 guildProductListingId: t.id,

@@ -57,7 +57,7 @@ function j(e) {
             roleFilter: g.Z.roleFilter,
             everyoneFilter: g.Z.everyoneFilter
         })),
-        Z = (0, d.Z)(x),
+        R = (0, d.Z)(x),
         P = (0, d.Z)(A),
         y = (0, d.Z)(j);
     r.useEffect(() => {
@@ -65,8 +65,8 @@ function j(e) {
             b(h, !0);
             return;
         }
-        ((null != Z && x !== Z) || (null != P && A !== P) || (null != y && j !== y)) && b(h, !0);
-    }, [Z, x, P, A, y, j, h, !0]);
+        ((null != R && x !== R) || (null != P && A !== P) || (null != y && j !== y)) && b(h, !0);
+    }, [R, x, P, A, y, j, h, !0]);
     r.useEffect(() => {
         (null == p ? void 0 : p.some(u.k5)) && (s.Z.clearMentions(), b(h, !0));
     }, []),
@@ -107,13 +107,13 @@ function j(e) {
             canCloseAllMessages: !0,
             renderHeader: O,
             renderEmptyState: L,
-            renderMessage: R,
+            renderMessage: Z,
             'aria-label': T.intl.string(T.t.jbV6MD),
             listName: 'recents'
         })
     });
 }
-function Z(e, t) {
+function R(e, t) {
     return [
         (0, i.jsx)(
             P,
@@ -125,7 +125,7 @@ function Z(e, t) {
         )
     ];
 }
-function R(e, t) {
+function Z(e, t) {
     return [
         (0, i.jsx)(
             P,

@@ -33,8 +33,8 @@ var i,
     A = n(487419),
     b = n(715903),
     j = n(223606),
-    Z = n(160404),
-    R = n(41776),
+    R = n(160404),
+    Z = n(41776),
     P = n(347649),
     L = n(332473),
     y = n(30684),
@@ -87,8 +87,8 @@ var i,
     eA = n(941128),
     eb = n(981631),
     ej = n(188785),
-    eZ = n(474936),
-    eR = n(46140),
+    eR = n(474936),
+    eZ = n(46140),
     eP = n(231338),
     eL = n(65154);
 let ey = {
@@ -204,7 +204,7 @@ let eH = [eb.kVF.QUARANTINED, eb.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eb.kVF.VI
         [eb.kVF.VIEWING_ROLES]: {
             predicate: (e) => {
                 let { selectedGuildId: t } = e;
-                return Z.Z.isViewingRoles(t);
+                return R.Z.isViewingRoles(t);
             }
         },
         [eb.kVF.INVITED_TO_SPEAK]: {
@@ -216,7 +216,7 @@ let eH = [eb.kVF.QUARANTINED, eb.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eb.kVF.VI
         [eb.kVF.LURKING_GUILD]: {
             predicate: (e) => {
                 let { selectedGuildId: t } = e;
-                return null != t && R.Z.isLurking(t);
+                return null != t && Z.Z.isLurking(t);
             }
         },
         [eb.kVF.VOICE_DISABLED]: { predicate: () => null != eo.Z.getRemoteDisconnectVoiceChannelId() },
@@ -360,15 +360,15 @@ let eH = [eb.kVF.QUARANTINED, eb.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eb.kVF.VI
             metadata: () => ({ dismissUntil: s()().add(5, 'days').toDate() })
         },
         [eb.kVF.CONNECT_PLAYSTATION]: { predicate: () => $.Z.isSuggestedAccountType(eb.ABu.PLAYSTATION) && null == $.Z.getAccount(null, eb.ABu.PLAYSTATION) && !eV(eb.kVF.CONNECT_PLAYSTATION) },
-        [eb.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: { predicate: () => eC.Z.getAlmostExpiringTrialOffers([eZ.Si.TIER_2]).length > 0 && !eV(eb.kVF.PREMIUM_TIER_2_TRIAL_ENDING) },
-        [eb.kVF.PREMIUM_TIER_0_TRIAL_ENDING]: { predicate: () => eC.Z.getAlmostExpiringTrialOffers([eZ.Si.TIER_0]).length > 0 && !eV(eb.kVF.PREMIUM_TIER_0_TRIAL_ENDING) },
+        [eb.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: { predicate: () => eC.Z.getAlmostExpiringTrialOffers([eR.Si.TIER_2]).length > 0 && !eV(eb.kVF.PREMIUM_TIER_2_TRIAL_ENDING) },
+        [eb.kVF.PREMIUM_TIER_0_TRIAL_ENDING]: { predicate: () => eC.Z.getAlmostExpiringTrialOffers([eR.Si.TIER_0]).length > 0 && !eV(eb.kVF.PREMIUM_TIER_0_TRIAL_ENDING) },
         [eb.kVF.PREMIUM_UNCANCEL]: {
             predicate: (e) => {
                 let { premiumSubscription: t, currentUser: n } = e,
                     i = null != t ? s()(t.currentPeriodEnd).diff(s()().startOf('day'), 'days') : 0,
                     r = (null == t ? void 0 : t.canceledAt) != null && (null == t ? void 0 : t.status) === eb.O0b.CANCELED && 1 >= s()().diff(s()(t.canceledAt), 'days'),
                     l = null != t && s()(t.currentPeriodEnd).isBefore(s()()),
-                    a = null != t && t.status === eb.O0b.CANCELED && !l && i <= 7 && i >= 0 && (0, ev.M5)(n, eZ.p9.TIER_2) && !r && !n.hasFreePremium() && !t.isPurchasedExternally;
+                    a = null != t && t.status === eb.O0b.CANCELED && !l && i <= 7 && i >= 0 && (0, ev.M5)(n, eR.p9.TIER_2) && !r && !n.hasFreePremium() && !t.isPurchasedExternally;
                 return !eV(eb.kVF.PREMIUM_UNCANCEL) && a;
             },
             metadata: (e) => {
@@ -389,8 +389,8 @@ let eH = [eb.kVF.QUARANTINED, eb.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eb.kVF.VI
                     i = null != t ? s()(t.currentPeriodEnd).diff(s()().startOf('day'), 'days') : 0,
                     r = null != t ? s()(t.currentPeriodEnd).diff(s()(t.currentPeriodStart).startOf('day'), 'days') : 0,
                     l = null != t && s()(t.currentPeriodEnd).isBefore(s()()),
-                    a = eI.Z.applicationIdsFetched.has(eZ.CL),
-                    o = eI.Z.getForApplication(eZ.CL),
+                    a = eI.Z.applicationIdsFetched.has(eR.CL),
+                    o = eI.Z.getForApplication(eR.CL),
                     c = null != t ? (0, ev.Af)(t) : null,
                     d = null != c ? ev.ZP.getSkuIdForPlan(c.planId) : null,
                     u =
@@ -525,7 +525,7 @@ let eH = [eb.kVF.QUARANTINED, eb.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eb.kVF.VI
                 if (null == e) return !1;
                 let t = (0, v.V9)(e),
                     n = G.Z.getStreamHeartbeatFailure(t);
-                return null != n && Date.now() - n.firstFailedAt >= eR.Ot;
+                return null != n && Date.now() - n.firstFailedAt >= eZ.Ot;
             },
             metadata: () => {
                 let e = Y.Z.getCurrentUserActiveStream();
@@ -599,7 +599,7 @@ function eY() {
 }
 class eX extends (i = c.ZP.Store) {
     initialize() {
-        this.syncWith([em.Z, ea.Z, ee.Z, ec.Z, U.Z, eC.Z, Q.Z, $.Z, K.Z, A.Z, G.Z, Y.Z], eK), this.waitFor(ef.default, ed.Z, en.Z, et.ZP, eo.Z, ei.Z, eu.Z, I.Z, ec.Z, eh.Z, z.Z, x.ZP, ea.Z, eT.Z, eS.Z, ex.Z, er.Z, eE.ZP, eA.Z, ee.Z, eg.Z, el.Z, U.Z, eI.Z, eC.Z, $.Z, R.Z, E.Z, F.Z, G.Z, Y.Z);
+        this.syncWith([em.Z, ea.Z, ee.Z, ec.Z, U.Z, eC.Z, Q.Z, $.Z, K.Z, A.Z, G.Z, Y.Z], eK), this.waitFor(ef.default, ed.Z, en.Z, et.ZP, eo.Z, ei.Z, eu.Z, I.Z, ec.Z, eh.Z, z.Z, x.ZP, ea.Z, eT.Z, eS.Z, ex.Z, er.Z, eE.ZP, eA.Z, ee.Z, eg.Z, el.Z, U.Z, eI.Z, eC.Z, $.Z, Z.Z, E.Z, F.Z, G.Z, Y.Z);
     }
     hasNotice() {
         return null != ew && null != ew.type;

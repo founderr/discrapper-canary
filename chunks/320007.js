@@ -38,8 +38,8 @@ function E(e) {
         A = null != v && v.newClipIds.length > 0,
         b = (0, f.n)((e) => e.clipsButtonRef),
         j = (0, f.n)((e) => e.setClipsButtonRef),
-        Z = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
-        { preventIdle: R, allowIdle: P } = (0, s.Y)('animation');
+        R = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
+        { preventIdle: Z, allowIdle: P } = (0, s.Y)('animation');
     function L() {
         (0, a.openModalLazy)(
             async () => {
@@ -49,7 +49,7 @@ function E(e) {
             { modalKey: _.Qr }
         );
     }
-    return (r.useEffect(() => (S ? R() : P(), () => P()), [S, R, P]), I && C && x)
+    return (r.useEffect(() => (S ? Z() : P(), () => P()), [S, Z, P]), I && C && x)
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   null != b &&
@@ -57,7 +57,7 @@ function E(e) {
                       T &&
                       A &&
                       !(0, a.hasAnyModalOpen)() &&
-                      !Z &&
+                      !R &&
                       (0, i.jsx)(p.Z, {
                           clipIconRef: b,
                           lastClipsSession: v,

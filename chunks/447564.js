@@ -90,10 +90,10 @@ function b(e) {
             [t.id]
         ),
         b = (0, a.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == g ? void 0 : g.type) === C.qc2.DEVELOPER_GIFT ? 1 : T ? 2 : 0) : 3), [t.isHDStreamSplashed, n, null == g ? void 0 : g.type, T]),
-        Z = (0, a.useMemo)(() => b(), [b]);
+        R = (0, a.useMemo)(() => b(), [b]);
     return (0, l.jsx)(j, {
         channel: t,
-        buttonState: Z,
+        buttonState: R,
         price: s,
         onActionClick: () => {
             r(!0), (T ? A : S)();
@@ -111,7 +111,7 @@ let j = (e) => {
                     children: [
                         (0, l.jsxs)('div', {
                             className: N.modal,
-                            children: [(0, l.jsx)(Z, {}), (0, l.jsx)(R, { channel: t })]
+                            children: [(0, l.jsx)(R, {}), (0, l.jsx)(Z, { channel: t })]
                         }),
                         (0, l.jsx)(P, {
                             buttonState: n,
@@ -121,13 +121,13 @@ let j = (e) => {
                     ]
                 });
     },
-    Z = () =>
+    R = () =>
         (0, l.jsx)('img', {
             className: N.image,
             src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
             alt: x.intl.string(x.t.DdigcX)
         }),
-    R = (e) => {
+    Z = (e) => {
         let { channel: t } = e;
         return (0, l.jsxs)(l.Fragment, {
             children: [

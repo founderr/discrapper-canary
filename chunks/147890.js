@@ -4,22 +4,22 @@ n.r(t),
             return A;
         },
         goSearch: function () {
-            return P;
+            return _;
         },
         goToAppDirectory: function () {
             return I;
         },
         goToApplication: function () {
-            return O;
+            return d;
         },
         goToApplicationSection: function () {
-            return d;
+            return O;
         },
         goToApplicationStoreSku: function () {
             return E;
         },
         goToCategory: function () {
-            return _;
+            return P;
         },
         replaceAppDirectoryURLWith: function () {
             return y;
@@ -41,14 +41,14 @@ var r = n(749681),
     p = n(49898),
     S = n(979007);
 let I = (e) => {
-        let { view: t = a.ApplicationDirectoryViews.HOME, guildId: n, applicationId: i, applicationSection: c, entrypoint: I, skuId: _, restorePreviousView: y } = e;
+        let { view: t = a.ApplicationDirectoryViews.HOME, guildId: n, applicationId: i, applicationSection: c, entrypoint: I, skuId: P, restorePreviousView: y } = e;
         if ((0, o.K0)({ location: I.name })) {
             let e = null == i ? void 0 : c === u.ApplicationDirectoryProfileSections.STORE ? S.GlobalDiscoveryAppsSections.STORE : S.GlobalDiscoveryAppsSections.ABOUT;
             return (0, r.transitionToGlobalDiscovery)({
                 tab: p.GlobalDiscoveryTab.APPS,
                 applicationId: i,
                 section: e,
-                skuId: e === S.GlobalDiscoveryAppsSections.STORE ? _ : void 0,
+                skuId: e === S.GlobalDiscoveryAppsSections.STORE ? P : void 0,
                 newSessionState: {
                     guildId: null != n ? n : null,
                     entrypoint: I,
@@ -65,25 +65,25 @@ let I = (e) => {
                 A();
                 break;
             case a.ApplicationDirectoryViews.SEARCH:
-                P();
+                _();
                 break;
             case a.ApplicationDirectoryViews.APPLICATION:
                 if (null != i) {
                     if (null != c) {
-                        if (c === u.ApplicationDirectoryProfileSections.STORE && null != _) {
+                        if (c === u.ApplicationDirectoryProfileSections.STORE && null != P) {
                             E({
                                 applicationId: i,
-                                skuId: _
+                                skuId: P
                             });
                             break;
                         }
-                        d({
+                        O({
                             applicationId: i,
                             section: c
                         });
                         break;
                     }
-                    O({ applicationId: i });
+                    d({ applicationId: i });
                 }
         }
     },
@@ -91,12 +91,12 @@ let I = (e) => {
         let e = { previousView: (0, a.getCurrentView)() };
         (0, i.uL)(s.Z5c.APPLICATION_DIRECTORY, { state: e });
     },
-    O = (e) => {
+    d = (e) => {
         let { applicationId: t } = e,
             n = { previousView: (0, a.getCurrentView)() };
         (0, i.uL)(s.Z5c.APPLICATION_DIRECTORY_PROFILE(t), { state: n });
     },
-    d = (e) => {
+    O = (e) => {
         let { applicationId: t, section: n } = e,
             r = { previousView: (0, a.getCurrentView)() };
         (0, i.uL)(s.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(t, n), { state: r });
@@ -106,7 +106,7 @@ let I = (e) => {
             r = { previousView: (0, a.getCurrentView)() };
         (0, i.uL)(s.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(t, n), { state: r });
     },
-    P = function () {
+    _ = function () {
         let { query: e, categoryId: t, page: n } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             r = new URLSearchParams(),
             o = { previousView: (0, a.getCurrentView)() };
@@ -118,9 +118,9 @@ let I = (e) => {
                 state: o
             });
     },
-    _ = (e) => {
+    P = (e) => {
         let { categoryId: t } = e;
-        P({ categoryId: null != t ? t : c.MU });
+        _({ categoryId: null != t ? t : c.MU });
     },
     y = (e) => {
         let {

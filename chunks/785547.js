@@ -44,7 +44,7 @@ function j(e, t, n) {
     );
 }
 ((l = i || (i = {})).PLAY = 'play'), (l.NOW_PLAYING = 'now_playing'), (l.INSTALL = 'install'), (l.UPDATE = 'update'), (l.PAUSED = 'paused'), (l.LOCATE = 'locate'), (l.UNINSTALLING = 'uninstalling'), (l.QUEUED = 'queued'), (l.DOWNLOADING = 'downloading'), (l.UNSUPPORTED_OS = 'unsupported_os'), (l.ADD_TO_LIBRARY = 'add_to_library'), (l.PREORDER_WAIT = 'preorder_wait');
-let Z = Object.freeze({
+let R = Object.freeze({
         [S.apO.PLAY]: 'play',
         [S.apO.INSTALL]: 'install',
         [S.apO.UPDATE]: 'update',
@@ -52,7 +52,7 @@ let Z = Object.freeze({
         [S.apO.MOVE_UP]: 'queued',
         [S.apO.RESUME]: 'paused'
     }),
-    R = () => [A.intl.string(A.t.r9wmKi), A.intl.string(A.t['6CpimZ']), A.intl.string(A.t.ysbNDQ), A.intl.string(A.t.TLnXx8), A.intl.string(A.t.Qi8mnZ), A.intl.string(A.t.yvMu3d), A.intl.string(A.t.PnNUZ2), A.intl.string(A.t.hU2TEB), A.intl.string(A.t.YyY519), A.intl.string(A.t.PbHJb2)];
+    Z = () => [A.intl.string(A.t.r9wmKi), A.intl.string(A.t['6CpimZ']), A.intl.string(A.t.ysbNDQ), A.intl.string(A.t.TLnXx8), A.intl.string(A.t.Qi8mnZ), A.intl.string(A.t.yvMu3d), A.intl.string(A.t.PnNUZ2), A.intl.string(A.t.hU2TEB), A.intl.string(A.t.YyY519), A.intl.string(A.t.PbHJb2)];
 class P extends (r = o.Component) {
     get analyticsLocation() {
         return {
@@ -72,7 +72,7 @@ class P extends (r = o.Component) {
             case 'locate':
                 return A.intl.string(A.t['nIj+a2']);
             case 'uninstalling':
-                let t = R();
+                let t = Z();
                 return null == this._uninstallStringIndex && (this._uninstallStringIndex = Math.floor(Math.random() * t.length)), t[this._uninstallStringIndex];
             case 'queued':
                 return A.intl.string(A.t.TiJg5u);
@@ -90,7 +90,7 @@ class P extends (r = o.Component) {
         let { libraryApplication: e, dispatchState: t, actionState: n } = this.props;
         if (e.isHidden()) return 'add_to_library';
         if (e.isPreorder()) return 'preorder_wait';
-        let i = null != n ? Z[n] : null;
+        let i = null != n ? R[n] : null;
         return null != i ? i : null != t && t.type === S.vxO.UNINSTALLING ? 'uninstalling' : (0, x.isWeb)() ? 'play' : 'unsupported_os';
     }
     renderPlayButton() {

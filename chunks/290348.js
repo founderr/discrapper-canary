@@ -264,7 +264,7 @@ function X(e) {
             }));
         });
 }
-async function J(e) {
+async function Q(e) {
     let { guildId: t, editStateId: n } = e,
         i = I.Z.getSubscriptionListing(n);
     l()(null != i, 'listing doesnt exist');
@@ -317,7 +317,7 @@ async function J(e) {
         await Promise.all([...l, ...u]);
     }
 }
-async function Q(e) {
+async function J(e) {
     let { guildId: t, editStateId: n, groupListingId: i, onBeforeDispatchNewListing: r } = e,
         o = b.n.getState().listings[n];
     l()(null != o, 'edit state does not exist');
@@ -386,7 +386,7 @@ function $() {
                         });
                 else {
                     var _, p;
-                    let e = await Q({
+                    let e = await J({
                         guildId: n,
                         editStateId: d,
                         groupListingId: u,
@@ -407,7 +407,7 @@ function $() {
                         null == c || c(e);
                 }
                 return (
-                    await J({
+                    await Q({
                         guildId: n,
                         editStateId: d
                     }),

@@ -34,8 +34,8 @@ async function S() {
     }
 }
 function A(e) {
-    let { children: t, className: n, channelId: r, guildId: l, innerClassname: o, transparent: s = !1, toolbar: _, mobileToolbar: g, 'aria-label': N, 'aria-labelledby': v, scrollable: A, role: b, hideSearch: j, showDivider: Z } = e,
-        { hasBugReporterAccess: R } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 }),
+    let { children: t, className: n, channelId: r, guildId: l, innerClassname: o, transparent: s = !1, toolbar: _, mobileToolbar: g, 'aria-label': N, 'aria-labelledby': v, scrollable: A, role: b, hideSearch: j, showDivider: R } = e,
+        { hasBugReporterAccess: Z } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 }),
         { enabled: P, inInbox: L } = h.Z.useExperiment({ location: 'HeaderBar' }),
         y = (0, u.Q3)('HeaderBar');
     return (0, i.jsx)(E.ZP, {
@@ -47,7 +47,7 @@ function A(e) {
             return a.tq
                 ? g
                 : (0, i.jsxs)(i.Fragment, {
-                      children: [_, e ? (0, i.jsx)(p.Z, { className: T.search }, null != l ? l : r) : null, Z && (0, i.jsx)(E.ZP.Divider, {}), !y && (0, i.jsx)(x.Z, {}), (0, i.jsx)(d.Z, { canShowReminder: !0 }), !y && (0, i.jsx)(m.Z, {}), P && !L ? (0, i.jsx)(f.Z, {}) : null, !y && (R ? (0, i.jsx)(I.Z, {}) : (0, i.jsx)(C.Z, {}))]
+                      children: [_, e ? (0, i.jsx)(p.Z, { className: T.search }, null != l ? l : r) : null, R && (0, i.jsx)(E.ZP.Divider, {}), !y && (0, i.jsx)(x.Z, {}), (0, i.jsx)(d.Z, { canShowReminder: !0 }), !y && (0, i.jsx)(m.Z, {}), P && !L ? (0, i.jsx)(f.Z, {}) : null, !y && (Z ? (0, i.jsx)(I.Z, {}) : (0, i.jsx)(C.Z, {}))]
                   });
         })(),
         transparent: s,

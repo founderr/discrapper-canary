@@ -46,7 +46,7 @@ function j() {
         ]
     });
 }
-function Z(e) {
+function R(e) {
     let { message: t, snapshot: n, index: u } = e,
         m = r.useMemo(() => new N.r(t, n, u), [t, n, u]),
         h = (0, a.e7)([_.Z, x.default, I.Z, C.Z, E.Z, d.Z], () => m.getForwardInfo(_.Z, x.default, I.Z, C.Z, E.Z, d.Z).footerInfo, [m], o.Z),
@@ -79,7 +79,7 @@ function Z(e) {
               ]
           });
 }
-function R(e) {
+function Z(e) {
     var t;
     let { message: n, snapshot: l, index: o } = e,
         s = r.useMemo(() => (0, T.Z)(n, l), [n, l]),
@@ -126,7 +126,7 @@ function R(e) {
                                   isMessageSnapshot: !0,
                                   renderThreadAccessory: !1
                               }),
-                              (0, i.jsx)(Z, {
+                              (0, i.jsx)(R, {
                                   message: n,
                                   snapshot: l,
                                   index: o
@@ -143,7 +143,7 @@ function P(e) {
     return (0, i.jsx)(i.Fragment, {
         children: t.messageSnapshots.map((e, n) =>
             (0, i.jsx)(
-                R,
+                Z,
                 {
                     message: t,
                     snapshot: e,

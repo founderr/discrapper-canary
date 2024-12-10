@@ -24,8 +24,8 @@ var i = n(200651),
     A = n(896083),
     b = n(939872),
     j = n(265985),
-    Z = n(293810),
-    R = n(981631),
+    R = n(293810),
+    Z = n(981631),
     P = n(388032);
 t.Z = (e, t, n, l) => {
     let o;
@@ -47,9 +47,9 @@ t.Z = (e, t, n, l) => {
         { loading: Y, getTrialPurchaseEligibility: X } = (0, A.F)(),
         Q = (0, v.oC)(null == e ? void 0 : e.id),
         { analyticsLocations: q } = (0, h.ZP)(),
-        J = (null == F ? void 0 : F.paymentGateway) === R.gg$.APPLE_PARTNER;
+        J = (null == F ? void 0 : F.paymentGateway) === Z.gg$.APPLE_PARTNER;
     M ? (o = P.intl.string(P.t.pQK5ho)) : L && !y ? (o = P.intl.string(P.t.pQK5ho)) : z === D ? (o = P.intl.formatToPlainString(P.t.UlBRTk, { changeDate: null != F ? s()(F.currentPeriodEnd).format('MMM DD, YYYY') : '' })) : W ? (o = P.intl.string(P.t.ePFYOT)) : K ? (o = P.intl.string(P.t['0lPoT0'])) : J && (o = P.intl.string(P.t.cEMaCg));
-    let $ = (0, m.Z)(Z.iP);
+    let $ = (0, m.Z)(R.iP);
     r.useEffect(() => {
         B &&
             null != U &&
@@ -68,7 +68,7 @@ t.Z = (e, t, n, l) => {
             }
             (0, C.Z)({
                 activeSubscription: F,
-                analyticsSubscriptionType: R.NYc.GUILD,
+                analyticsSubscriptionType: Z.NYc.GUILD,
                 trialId: n,
                 trialFooterMessageOverride:
                     (null == Q ? void 0 : Q.active_trial) != null
@@ -76,10 +76,10 @@ t.Z = (e, t, n, l) => {
                               buttonText: P.intl.string(P.t.BEeXiY),
                               interval: (0, N.iG)(k),
                               days: 1,
-                              contactLink: R.EYA.CONTACT,
-                              cancelSubscriptionArticle: x.Z.getArticleURL(R.BhN.ROLE_SUBSCRIPTION_CANCEL),
-                              helpdeskArticle: x.Z.getArticleURL(R.BhN.ROLE_SUBSCRIPTION_TRIAL),
-                              paidServiceTermsArticle: x.Z.getArticleURL(R.BhN.PAID_TERMS),
+                              contactLink: Z.EYA.CONTACT,
+                              cancelSubscriptionArticle: x.Z.getArticleURL(Z.BhN.ROLE_SUBSCRIPTION_CANCEL),
+                              helpdeskArticle: x.Z.getArticleURL(Z.BhN.ROLE_SUBSCRIPTION_TRIAL),
+                              paidServiceTermsArticle: x.Z.getArticleURL(Z.BhN.PAID_TERMS),
                               tierName: k.name
                           })
                         : void 0,

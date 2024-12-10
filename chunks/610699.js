@@ -32,8 +32,8 @@ var i = n(200651),
     A = n(496675),
     b = n(594174),
     j = n(624138),
-    Z = n(358595),
-    R = n(981631),
+    R = n(358595),
+    Z = n(981631),
     P = n(245335),
     L = n(388032),
     y = n(823578);
@@ -174,7 +174,7 @@ function U(e) {
             });
         }),
         Q = T.Z.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
-        q = (0, c.e7)([A.Z], () => null != Q && A.Z.can(R.Plq.USE_EMBEDDED_ACTIVITIES, Q), [Q]),
+        q = (0, c.e7)([A.Z], () => null != Q && A.Z.can(Z.Plq.USE_EMBEDDED_ACTIVITIES, Q), [Q]),
         { analyticsLocations: J } = (0, E.ZP)(g.Z.INVITE_EMBED),
         $ = (0, f.Z)({
             applicationId: w.id,
@@ -192,10 +192,10 @@ function U(e) {
             [Q, w.id]
         ),
         et = (0, c.Wu)([b.default], () => ee.map((e) => b.default.getUser(e)), [ee]),
-        en = d.state === R.r2o.ACCEPTING,
+        en = d.state === Z.r2o.ACCEPTING,
         ei = null != W;
     if (null == W) {
-        if (null == d.guild) return (0, i.jsx)(Z.Z, {});
+        if (null == d.guild) return (0, i.jsx)(R.Z, {});
         W = new v.ZP(d.guild);
     }
     let er = (ei && !q) || (ei && Y),

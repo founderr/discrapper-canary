@@ -29,8 +29,8 @@ var i = n(200651),
     A = n(51144),
     b = n(937889),
     j = n(739566),
-    Z = n(779125),
-    R = n(890410),
+    R = n(779125),
+    Z = n(890410),
     P = n(464891),
     L = n(507418),
     y = n(348238),
@@ -230,7 +230,7 @@ let Q = r.memo(function (e) {
             () =>
                 (0, i.jsx)('div', {
                     className: G.channelNameContainer,
-                    children: (0, i.jsx)(Z.Z, {
+                    children: (0, i.jsx)(R.Z, {
                         channel: l,
                         className: G.channelName,
                         openChatWithoutConnecting: !0
@@ -249,7 +249,7 @@ function q(e) {
             eventHandlers: { onMouseEnter: T, onMouseLeave: S }
         } = (0, M.m)(!0),
         { onFocus: A, ...j } = (0, c.JA)(null != n ? n : ''),
-        { isFocused: Z, handleFocus: L, handleBlur: O } = (0, y.bb)(A),
+        { isFocused: R, handleFocus: L, handleBlur: O } = (0, y.bb)(A),
         D = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled),
         H = (0, u.e7)([v.Z], () => v.Z.can(B.Plq.MANAGE_MESSAGES, s), [s]),
         { ruleName: K, embedChannel: Y, decisionId: q, keywordMatchedContent: J, keyword: $, content: ee, flaggedMessageId: et, timeoutDuration: en, decisionReason: ei, alertActionsExecution: er, quarantineType: el, interactionUserId: ea } = (0, g.ZP)(o),
@@ -327,7 +327,7 @@ function q(e) {
                     }),
                     (0, i.jsx)('div', {
                         className: a()(G.messageContent, { [G.compact]: l }),
-                        children: (0, i.jsx)(R.Z, {
+                        children: (0, i.jsx)(Z.Z, {
                             ...j,
                             message: o,
                             channel: Y,
@@ -337,7 +337,7 @@ function q(e) {
                             hideTimestamp: !0,
                             className: a()(G.embedCard, {
                                 [G.compact]: l,
-                                [G.selected]: es || (D && Z),
+                                [G.selected]: es || (D && R),
                                 [G.isClickable]: null != et && null != Y
                             }),
                             childrenAccessories: (0, i.jsxs)(i.Fragment, {

@@ -3,26 +3,26 @@ function t(e, i, n, t) {
         r = i.width / 2,
         a = i.height / 2,
         l = (e.width / 2 - r - n.x) * o,
-        c = (e.height / 2 - a - n.y) * o,
-        s = i.width * o,
-        d = i.height * o,
-        u = Math.min(s, t.width),
-        g = Math.min(d, t.height);
+        d = (e.height / 2 - a - n.y) * o,
+        c = i.width * o,
+        s = i.height * o,
+        u = Math.min(c, t.width),
+        g = Math.min(s, t.height);
     return {
         x: l,
-        y: c,
-        scaledCropWidth: s,
-        scaledCropHeight: d,
+        y: d,
+        scaledCropWidth: c,
+        scaledCropHeight: s,
         canvasWidth: u,
         canvasHeight: g
     };
 }
 function o(e, i, n, o) {
-    let { x: r, y: a, scaledCropWidth: l, scaledCropHeight: c, canvasWidth: s, canvasHeight: d } = t(e, i, n, o),
+    let { x: r, y: a, scaledCropWidth: l, scaledCropHeight: d, canvasWidth: c, canvasHeight: s } = t(e, i, n, o),
         u = document.createElement('canvas');
-    (u.width = s), (u.height = d);
+    (u.width = c), (u.height = s);
     let g = u.getContext('2d');
-    return null != g && g.drawImage(e, r, a, l, c, 0, 0, u.width, u.height), u.toDataURL('image/png');
+    return null != g && g.drawImage(e, r, a, l, d, 0, 0, u.width, u.height), u.toDataURL('image/png');
 }
 function r(e, i, n) {
     let t = e.naturalWidth / e.naturalHeight,

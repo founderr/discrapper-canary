@@ -25,11 +25,11 @@ var i = n(200651),
     A = n(419922),
     b = n(688179),
     j = n(981631),
-    Z = n(474936),
-    R = n(388032),
+    R = n(474936),
+    Z = n(388032),
     P = n(751296),
     L = n(124396);
-let y = (e, t) => (t ? R.intl.format(R.t.auckX1, { stickerPackName: e.name }) : R.intl.format(R.t.OzB6e3, { stickerPackName: e.name })),
+let y = (e, t) => (t ? Z.intl.format(Z.t.auckX1, { stickerPackName: e.name }) : Z.intl.format(Z.t.OzB6e3, { stickerPackName: e.name })),
     O = (e) => {
         let { sticker: t, stickerPack: n } = e;
         return r.useMemo(() => (null == n ? [] : n.stickers.slice(0, 4).reduce((e, n) => (3 !== e.length && n.id !== t.id ? e.concat(n) : e), [])), [t, n]);
@@ -133,7 +133,7 @@ let D = (e) => {
                                               }),
                                               t();
                                       },
-                                      children: R.intl.string(R.t.GPy3Ag)
+                                      children: Z.intl.string(Z.t.GPy3Ag)
                                   },
                                   'view-sticker-pack'
                               )
@@ -173,12 +173,12 @@ let D = (e) => {
             K = !1,
             Y = 'Custom Sticker Popout';
         O
-            ? (t = B ? (z ? R.intl.string(R.t.fZ0DiI) : R.intl.string(R.t['1f6D9v'])) : W ? R.intl.string(R.t.yHmoR0) : R.intl.string(R.t.vZaScH))
+            ? (t = B ? (z ? Z.intl.string(Z.t.fZ0DiI) : Z.intl.string(Z.t['1f6D9v'])) : W ? Z.intl.string(Z.t.yHmoR0) : Z.intl.string(Z.t.vZaScH))
             : B
-              ? (z ? (t = R.intl.string(R.t.jNphpq)) : (t = R.intl.string(R.t.lyD5ZW)), (K = !0), (Y = 'Custom Sticker Popout (Upsell)'))
+              ? (z ? (t = Z.intl.string(Z.t.jNphpq)) : (t = Z.intl.string(Z.t.lyD5ZW)), (K = !0), (Y = 'Custom Sticker Popout (Upsell)'))
               : W
-                ? ((t = R.intl.string(R.t.IuXYcn)), (K = !0), (Y = 'Custom Sticker Popout (Upsell)'))
-                : ((t = R.intl.format(R.t.hGWuxc, {
+                ? ((t = Z.intl.string(Z.t.IuXYcn)), (K = !0), (Y = 'Custom Sticker Popout (Upsell)'))
+                : ((t = Z.intl.format(Z.t.hGWuxc, {
                       openPremiumSettings: () => {
                           M(l), m();
                       }
@@ -217,10 +217,10 @@ let D = (e) => {
                                   K &&
                                       (0, i.jsx)(E.Z, {
                                           className: L.ctaButton,
-                                          subscriptionTier: Z.Si.TIER_2,
+                                          subscriptionTier: R.Si.TIER_2,
                                           size: s.Button.Sizes.SMALL,
                                           fullWidth: !0,
-                                          buttonText: R.intl.string(R.t['gl/XHB']),
+                                          buttonText: Z.intl.string(Z.t['gl/XHB']),
                                           onSubscribeModalClose: (t) => (t ? e() : m()),
                                           postSuccessGuild: B || null == v ? void 0 : v,
                                           premiumModalAnalyticsLocation: V
@@ -231,7 +231,7 @@ let D = (e) => {
                                           className: L.ctaButton,
                                           fullWidth: !0,
                                           onClick: e,
-                                          children: R.intl.string(R.t.riu2R0)
+                                          children: Z.intl.string(Z.t.riu2R0)
                                       })
                               ]
                           });
@@ -250,7 +250,7 @@ let D = (e) => {
                                   children: [
                                       (0, i.jsx)(s.FormTitle, {
                                           className: L.guildTitle,
-                                          children: B ? R.intl.string(R.t.kx6pEB) : R.intl.string(R.t.pDE7GR)
+                                          children: B ? Z.intl.string(Z.t.kx6pEB) : Z.intl.string(Z.t.pDE7GR)
                                       }),
                                       (0, i.jsx)(p.Oe, {
                                           expressionSourceGuild: r,
@@ -271,7 +271,7 @@ let D = (e) => {
                                                                   className: L.__invalid_showMoreEmojisLabel,
                                                                   variant: 'text-xs/normal',
                                                                   color: 'none',
-                                                                  children: R.intl.string(R.t.vtH5ho)
+                                                                  children: Z.intl.string(Z.t.vtH5ho)
                                                               }),
                                                               (0, i.jsx)(s.ChevronSmallDownIcon, {
                                                                   size: 'md',
@@ -338,7 +338,7 @@ function U(e) {
         className: P.popoutContent,
         children: (0, i.jsx)(k, {
             sticker: r,
-            description: R.intl.format(R.t.hGWuxc, {
+            description: Z.intl.format(Z.t.hGWuxc, {
                 openPremiumSettings: () => {
                     n(), M(t);
                 }

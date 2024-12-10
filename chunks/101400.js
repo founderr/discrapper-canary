@@ -65,7 +65,7 @@ function f(e) {
                                             a.Clickable,
                                             {
                                                 className: g.category,
-                                                onClick: () => f(e.id),
+                                                onClick: () => f(e),
                                                 children: (0, i.jsx)(l.xv, {
                                                     variant: 'text-sm/semibold',
                                                     color: 'redesign-button-tertiary-text',

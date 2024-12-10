@@ -28,8 +28,8 @@ var i = n(200651),
     T = n(981631),
     S = n(388032);
 function A(e) {
-    let { onOpen: t, onClose: n, children: A, badgeState: b, popoutPosition: j, popoutAlign: Z } = e,
-        { analyticsLocations: R } = (0, d.ZP)(c.Z.NOTIFICATION_CENTER),
+    let { onOpen: t, onClose: n, children: A, badgeState: b, popoutPosition: j, popoutAlign: R } = e,
+        { analyticsLocations: Z } = (0, d.ZP)(c.Z.NOTIFICATION_CENTER),
         [P, L] = r.useState(!1),
         [y, O] = (function () {
             let e = (0, a.e7)([_.Z], () => {
@@ -90,11 +90,11 @@ function A(e) {
         [D]
     );
     return (0, i.jsx)(d.Gt, {
-        value: R,
+        value: Z,
         children: (0, i.jsx)(s.Popout, {
             animation: s.Popout.Animation.NONE,
             position: j,
-            align: Z,
+            align: R,
             autoInvert: !1,
             shouldShow: P,
             onRequestClose: D,

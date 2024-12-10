@@ -32,8 +32,8 @@ var i = n(200651),
     A = n(906732),
     b = n(812206),
     j = n(391650),
-    Z = n(600164),
-    R = n(605236),
+    R = n(600164),
+    Z = n(605236),
     P = n(749277),
     L = n(131130),
     y = n(492435),
@@ -167,15 +167,15 @@ let eN =
                   case eh.kVF.INVITED_TO_SPEAK:
                       return (0, i.jsx)(J.Z, {});
                   case eh.kVF.GUILD_RAID_NOTIFICATION:
-                      let { dismissUntil: eZ } = em.metadata;
-                      return (0, i.jsx)(M.Z, { onDismiss: () => ex(eZ) });
-                  case eh.kVF.WIN32_DEPRECATED_MESSAGE:
                       let { dismissUntil: eR } = em.metadata;
+                      return (0, i.jsx)(M.Z, { onDismiss: () => ex(eR) });
+                  case eh.kVF.WIN32_DEPRECATED_MESSAGE:
+                      let { dismissUntil: eZ } = em.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.WARNING,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ex(eR),
+                                  onClick: () => ex(eZ),
                                   noticeType: eh.kVF.WIN32_DEPRECATED_MESSAGE
                               }),
                               eg.intl.format(eg.t['08KQ1N'], { helpCenterLink: ec.Z.getArticleURL(eh.BhN.WIN32_DEPRECATE) })
@@ -613,8 +613,8 @@ let eN =
                                   onClick: () => ex(),
                                   noticeType: eh.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS
                               }),
-                              (0, i.jsxs)(Z.Z, {
-                                  justify: Z.Z.Justify.CENTER,
+                              (0, i.jsxs)(R.Z, {
+                                  justify: R.Z.Justify.CENTER,
                                   children: [
                                       null != eH
                                           ? eg.intl.formatToPlainString(eg.t['pHj+z8'], {
@@ -639,9 +639,9 @@ let eN =
                       if (null != ea.Z.testModeEmbeddedApplicationId)
                           return (0, i.jsx)(c.Notice, {
                               color: c.NoticeColors.WARNING,
-                              children: (0, i.jsxs)(Z.Z, {
-                                  justify: Z.Z.Justify.CENTER,
-                                  align: Z.Z.Align.CENTER,
+                              children: (0, i.jsxs)(R.Z, {
+                                  justify: R.Z.Justify.CENTER,
+                                  align: R.Z.Align.CENTER,
                                   children: [
                                       (0, i.jsx)('div', { children: eg.intl.format(eg.t['1qxVe3'], { applicationName: em.metadata.applicationName }) }),
                                       (0, i.jsx)(c.NoticeCloseButton, {
@@ -653,9 +653,9 @@ let eN =
                           });
                       return (0, i.jsx)(c.Notice, {
                           color: c.NoticeColors.WARNING,
-                          children: (0, i.jsxs)(Z.Z, {
-                              justify: Z.Z.Justify.CENTER,
-                              align: Z.Z.Align.CENTER,
+                          children: (0, i.jsxs)(R.Z, {
+                              justify: R.Z.Justify.CENTER,
+                              align: R.Z.Align.CENTER,
                               children: [
                                   (0, i.jsx)('div', { children: eg.intl.format(eg.t.Fv5HrK, { applicationName: em.metadata.applicationName }) }),
                                   (0, i.jsx)(eu.Z, {
@@ -918,7 +918,7 @@ let eN =
                       let eX = a()().add(5, 'days').toDate();
                       return (0, i.jsx)(Y.Z, {
                           dismissCurrentNotice: () => {
-                              (0, R.EW)(eo.m9[eh.kVF.PREMIUM_TIER_2_TRIAL_ENDING]), ex(eX);
+                              (0, Z.EW)(eo.m9[eh.kVF.PREMIUM_TIER_2_TRIAL_ENDING]), ex(eX);
                           },
                           subscriptionTier: ef.Si.TIER_2
                       });

@@ -30,8 +30,8 @@ var i = n(200651),
     A = n(11705),
     b = n(81273),
     j = n(293810),
-    Z = n(981631),
-    R = n(388032),
+    R = n(981631),
+    Z = n(388032),
     P = n(720843);
 let L = (e) => {
         let { benefits: t, header: n, guildId: l } = e,
@@ -39,7 +39,7 @@ let L = (e) => {
             c = a ? t : t.slice(0, 5),
             u = t.length > 5,
             m = t.length - 5,
-            h = R.intl.formatToPlainString(R.t['XSdy7+'], { numTruncated: m }),
+            h = Z.intl.formatToPlainString(Z.t['XSdy7+'], { numTruncated: m }),
             p = (0, d.Dt)();
         return 0 === t.length
             ? null
@@ -97,7 +97,7 @@ let L = (e) => {
                           variant: 'text-xs/bold',
                           color: 'header-secondary',
                           className: P.sectionHeader,
-                          children: R.intl.format(R.t.NAnXEh, { count: a.length })
+                          children: Z.intl.format(Z.t.NAnXEh, { count: a.length })
                       }),
                       (0, i.jsx)(s.Spacer, { size: 12 }),
                       (0, i.jsx)('div', {
@@ -153,7 +153,7 @@ let L = (e) => {
                                   variant: 'text-xs/bold',
                                   color: 'header-secondary',
                                   className: P.sectionHeader,
-                                  children: R.intl.string(R.t.FJZmY2)
+                                  children: Z.intl.string(Z.t.FJZmY2)
                               }),
                               children: [
                                   (0, i.jsx)(s.Spacer, { size: 8 }),
@@ -165,12 +165,12 @@ let L = (e) => {
                               ]
                           }),
                       (0, i.jsx)(L, {
-                          header: R.intl.string(R.t.LtfhAg),
+                          header: Z.intl.string(Z.t.LtfhAg),
                           benefits: c,
                           guildId: n
                       }),
                       (0, i.jsx)(L, {
-                          header: R.intl.string(R.t['8oxWpK']),
+                          header: Z.intl.string(Z.t['8oxWpK']),
                           benefits: d,
                           guildId: n
                       }),
@@ -188,7 +188,7 @@ let L = (e) => {
             (t = r
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          R.intl.string(R.t['r/xxPT']),
+                          Z.intl.string(Z.t['r/xxPT']),
                           (0, i.jsx)(s.ChevronSmallUpIcon, {
                               size: 'md',
                               color: 'currentColor',
@@ -224,7 +224,7 @@ t.Z = (e) => {
         L = (0, o.e7)([m.Z], () => m.Z.isSyncing),
         { activeSubscription: y, activeSubscriptionListing: k } = (0, g.Z)(d),
         D = (null == k ? void 0 : k.id) === n,
-        B = (null == y ? void 0 : y.status) === Z.O0b.CANCELED,
+        B = (null == y ? void 0 : y.status) === R.O0b.CANCELED,
         [U, w] = r.useState(!1),
         [F, G] = r.useState(!1),
         V = r.useCallback((e) => {
@@ -243,7 +243,7 @@ t.Z = (e) => {
         ee = (0, o.e7)([u.Z], () => u.Z.isViewingServerShop(l)),
         et = (null == C ? void 0 : C.published) === !0,
         en = (null == C ? void 0 : C.soft_deleted) === !0,
-        ei = R.intl.string(R.t.KzmEAw);
+        ei = Z.intl.string(Z.t.KzmEAw);
     return (et || ee) && !en
         ? (0, i.jsxs)('article', {
               className: P.container,
@@ -253,7 +253,7 @@ t.Z = (e) => {
                       (0, i.jsxs)('div', {
                           className: a()(P.tierTrialIndicator, P.tierTopIndicator),
                           children: [
-                              R.intl.format(R.t.L2ouio, {
+                              Z.intl.format(Z.t.L2ouio, {
                                   trialPeriodDuration: (0, f.iG)({
                                       interval: W.interval,
                                       interval_count: W.interval_count
@@ -261,7 +261,7 @@ t.Z = (e) => {
                               }),
                               (0, i.jsx)(s.Tooltip, {
                                   clickableOnMobile: !0,
-                                  text: R.intl.formatToPlainString(R.t.FYyR4u, { activeTrialUserLimit: null != K ? K : 0 }),
+                                  text: Z.intl.formatToPlainString(Z.t.FYyR4u, { activeTrialUserLimit: null != K ? K : 0 }),
                                   children: (e) =>
                                       (0, i.jsx)(s.CircleInformationIcon, {
                                           size: 'xs',
@@ -299,7 +299,7 @@ t.Z = (e) => {
                                                         look: s.Button.Looks.OUTLINED,
                                                         color: s.Button.Colors.PRIMARY,
                                                         disabled: !0,
-                                                        children: B ? R.intl.string(R.t.iKHmu7) : R.intl.string(R.t.XvAuMj)
+                                                        children: B ? Z.intl.string(Z.t.iKHmu7) : Z.intl.string(Z.t.XvAuMj)
                                                     })
                                                   : (0, i.jsx)(s.Tooltip, {
                                                         text: x ? null : v,
@@ -312,7 +312,7 @@ t.Z = (e) => {
                                                                 submitting: T,
                                                                 onClick: I,
                                                                 onlyShineOnHover: !0,
-                                                                children: R.intl.string(R.t.fM5Zsb)
+                                                                children: Z.intl.string(Z.t.fM5Zsb)
                                                             })
                                                     }),
                                               (0, i.jsx)(s.Spacer, { size: 16 }),

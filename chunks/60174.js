@@ -1,6 +1,6 @@
 n.d(t, {
     X: function () {
-        return Z;
+        return R;
     }
 }),
     n(789020),
@@ -43,7 +43,7 @@ function j(e, t, n) {
         e
     );
 }
-class Z extends r.Component {
+class R extends r.Component {
     render() {
         let { type: e, message: t, className: n, children: r, useChatFontScaling: l, tabIndex: o = 0 } = this.props,
             { isReactionPickerActive: s } = this.state,
@@ -56,11 +56,11 @@ class Z extends r.Component {
         !p && h && (_ = (0, i.jsx)(m.X, { tooltipText: S.intl.string(S.t.Kfcszs) }));
         let T = l ? b : A,
             { canShowImprovedReactionButton: j } = I.Z.getCurrentConfig({ location: 'ButtonAddReaction' }, { autoTrackExposure: !this.props.isForumToolbar }),
-            Z = j && !this.props.isForumToolbar,
-            R = {
+            R = j && !this.props.isForumToolbar,
+            Z = {
                 size: 'sm',
                 color: 'currentColor',
-                className: a()(T.icon, { [T.largeIcon]: Z })
+                className: a()(T.icon, { [T.largeIcon]: R })
             };
         return (0, i.jsx)(d.Popout, {
             shouldShow: s,
@@ -86,11 +86,11 @@ class Z extends r.Component {
                             T.reactionBtn,
                             {
                                 [T.active]: l,
-                                [T.largeReactionBtn]: Z
+                                [T.largeReactionBtn]: R
                             },
                             n
                         ),
-                        children: [h ? (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(d.SuperReactionIcon, { ...R }) }) : (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(d.ReactionIcon, { ...R }) }), r]
+                        children: [h ? (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(d.SuperReactionIcon, { ...Z }) }) : (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(d.ReactionIcon, { ...Z }) }), r]
                     })
                 });
             }

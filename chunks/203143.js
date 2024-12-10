@@ -33,8 +33,8 @@ var i = n(512722),
     A = n(316758),
     b = n(467531),
     j = n(798628),
-    Z = n(918088),
-    R = n(981631),
+    R = n(918088),
+    Z = n(981631),
     P = n(388032);
 function L(e, t) {
     let n = [...t],
@@ -59,7 +59,7 @@ function y(e) {
         confirmText: P.intl.string(P.t['9VLmlZ']),
         cancelText: P.intl.string(P.t['2m+Sqq']),
         onConfirm: () => {
-            u.Z.joinGuild(t, { source: R.vtS.POLL_ALERT });
+            u.Z.joinGuild(t, { source: Z.vtS.POLL_ALERT });
         }
     });
 }
@@ -277,7 +277,7 @@ async function w(e) {
                                   }, 0)
                                 : 0;
                     return (
-                        f.ZP.trackWithMetadata(R.rMx.POLL_SHOW_RESULTS_CLICKED, {
+                        f.ZP.trackWithMetadata(Z.rMx.POLL_SHOW_RESULTS_CLICKED, {
                             channel_id: t,
                             message_id: n,
                             show_results: l,
@@ -394,7 +394,7 @@ t.Z = {
                     };
                 throw (r()(null != i, 'Tapped on a non-existent poll message'), Error());
             })(l),
-            { tapShouldOpenVotersModal: c } = null !== (n = (0, Z.Tk)(s)) && void 0 !== n ? n : {};
+            { tapShouldOpenVotersModal: c } = null !== (n = (0, R.Tk)(s)) && void 0 !== n ? n : {};
         if (!0 === c) {
             O({
                 channelId: a,
@@ -410,7 +410,7 @@ t.Z = {
                 let e = new Set([i]),
                     { analyticsSelectedAnswerIds: t, selectedTextAnswersCount: r, selectedEmojiAnswersCount: l } = L(null === (n = s.poll) || void 0 === n ? void 0 : n.answers, e);
                 return (
-                    f.ZP.trackWithMetadata(R.rMx.POLL_VOTE_SELECTED, {
+                    f.ZP.trackWithMetadata(Z.rMx.POLL_VOTE_SELECTED, {
                         channel_id: a,
                         message_id: o,
                         selected_answer_ids: t,
@@ -435,7 +435,7 @@ t.Z = {
             }
             let { analyticsSelectedAnswerIds: c, selectedTextAnswersCount: u, selectedEmojiAnswersCount: m } = L(null === (t = s.poll) || void 0 === t ? void 0 : t.answers, l);
             return (
-                f.ZP.trackWithMetadata(R.rMx.POLL_VOTE_SELECTED, {
+                f.ZP.trackWithMetadata(Z.rMx.POLL_VOTE_SELECTED, {
                     channel_id: a,
                     message_id: o,
                     selected_answer_ids: c,

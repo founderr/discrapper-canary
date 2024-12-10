@@ -94,7 +94,7 @@ function T(e) {
                     disableWrapper: !0,
                     children: (0, i.jsx)('div', {
                         ref: R ? Q : void 0,
-                        className: o()({ [Z.wobble]: !q && z && !u }),
+                        className: o()(S.folderIcon, { [Z.wobble]: !q && z && !u }),
                         'data-dnd-name': $,
                         children: q
                             ? (0, i.jsx)(x.Z, {})
@@ -127,7 +127,7 @@ function T(e) {
         });
     return (0, i.jsxs)('div', {
         ref: eo,
-        className: S.wrapper,
+        className: o()(S.wrapper, u && S.isExpanded),
         children: [
             !q &&
                 (0, i.jsx)('span', {

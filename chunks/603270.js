@@ -34,8 +34,8 @@ var i = n(200651),
     A = n(981631),
     b = n(272242),
     j = n(979007),
-    Z = n(388032),
-    R = n(94913);
+    R = n(388032),
+    Z = n(94913);
 let P = O(function (e) {
         let { appId: t, message: s } = e,
             m = (0, T.R)(t),
@@ -59,15 +59,15 @@ let P = O(function (e) {
             M = r.useMemo(
                 () =>
                     L > 0 && O > 0
-                        ? Z.intl.formatToPlainString(Z.t['jA648/'], {
+                        ? R.intl.formatToPlainString(R.t['jA648/'], {
                               subCount: L,
                               itemCount: O
                           })
                         : L > 0
-                          ? Z.intl.formatToPlainString(Z.t.GSfibG, { count: L })
+                          ? R.intl.formatToPlainString(R.t.GSfibG, { count: L })
                           : O > 0
-                            ? Z.intl.formatToPlainString(Z.t.j7Go5O, { count: O })
-                            : Z.intl.string(Z.t.rMA98v),
+                            ? R.intl.formatToPlainString(R.t.j7Go5O, { count: O })
+                            : R.intl.string(R.t.rMA98v),
                 [O, L]
             );
         if (!m || null == h) return null;
@@ -85,7 +85,7 @@ let P = O(function (e) {
         };
         return (0, i.jsx)(y, {
             appName: h.name,
-            title: Z.intl.formatToPlainString(Z.t.XDRjs7, { appName: h.name }),
+            title: R.intl.formatToPlainString(R.t.XDRjs7, { appName: h.name }),
             description: M,
             link: ''
                 .concat(location.protocol, '//')
@@ -110,8 +110,8 @@ let P = O(function (e) {
                             area: 'open_store_button'
                         });
                 },
-                className: R.openStoreButton,
-                children: Z.intl.string(Z.t.kRvlKC)
+                className: Z.openStoreButton,
+                children: R.intl.string(R.t.kRvlKC)
             })
         });
     }),
@@ -200,7 +200,7 @@ let P = O(function (e) {
                                   height: 12
                               }),
                               ' ',
-                              Z.intl.string(Z.t.wnifjI)
+                              R.intl.string(R.t.wnifjI)
                           ]
                       })
                     : (0, i.jsxs)(i.Fragment, {
@@ -211,7 +211,7 @@ let P = O(function (e) {
                                   height: 12
                               }),
                               ' ',
-                              Z.intl.string(Z.t.NRC3am)
+                              R.intl.string(R.t.NRC3am)
                           ]
                       })
                 : null == P
@@ -248,7 +248,7 @@ let P = O(function (e) {
                     });
             },
             children: (0, i.jsxs)('div', {
-                className: R.skuPurchaseButtons,
+                className: Z.skuPurchaseButtons,
                 children: [
                     (0, i.jsx)(a.Button, {
                         color: a.ButtonColors.CUSTOM,
@@ -260,8 +260,8 @@ let P = O(function (e) {
                                     area: 'view_details'
                                 });
                         },
-                        className: R.viewDetailsButton,
-                        children: Z.intl.string(Z.t.DXYfjI)
+                        className: Z.viewDetailsButton,
+                        children: R.intl.string(R.t.DXYfjI)
                     }),
                     V
                         ? null != M
@@ -280,7 +280,7 @@ let P = O(function (e) {
                               })
                             : (0, i.jsx)(a.Button, {
                                   onClick: W,
-                                  children: Z.intl.string(Z.t.uuzaAA)
+                                  children: R.intl.string(R.t.uuzaAA)
                               })
                         : (0, i.jsx)(S.YG, {
                               appId: v.id,
@@ -298,13 +298,13 @@ let P = O(function (e) {
 function y(e) {
     let { appName: t, title: n, description: r, link: l, iconSrc: o, onIconClick: s, onLinkCopy: c, children: d } = e;
     return (0, i.jsxs)('div', {
-        className: R.wrapper,
+        className: Z.wrapper,
         children: [
             (0, i.jsxs)('div', {
-                className: R.header,
+                className: Z.header,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: R.headerTitle,
+                        className: Z.headerTitle,
                         children: [
                             (0, i.jsx)(a.ShopIcon, { size: 'xxs' }),
                             (0, i.jsx)(a.Text, {
@@ -318,19 +318,19 @@ function y(e) {
                         (0, i.jsx)(a.Button, {
                             look: a.ButtonLooks.BLANK,
                             size: a.ButtonSizes.ICON,
-                            'aria-label': Z.intl.string(Z.t.WqhZsr),
+                            'aria-label': R.intl.string(R.t.WqhZsr),
                             onClick: () => {
-                                (0, I.JG)(l), (0, a.showToast)((0, a.createToast)(Z.intl.string(Z.t['L/PwZW']), a.ToastType.SUCCESS)), c();
+                                (0, I.JG)(l), (0, a.showToast)((0, a.createToast)(R.intl.string(R.t['L/PwZW']), a.ToastType.SUCCESS)), c();
                             },
                             children: (0, i.jsx)(a.LinkIcon, { size: 'xs' })
                         })
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: R.content,
+                className: Z.content,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: R.contentTextWrapper,
+                        className: Z.contentTextWrapper,
                         children: [
                             null != o &&
                                 (0, i.jsx)(a.Button, {
@@ -340,11 +340,11 @@ function y(e) {
                                     children: (0, i.jsx)('img', {
                                         src: o.href,
                                         alt: '',
-                                        className: R.appIcon
+                                        className: Z.appIcon
                                     })
                                 }),
                             (0, i.jsxs)('div', {
-                                className: R.contentText,
+                                className: Z.contentText,
                                 style: null == r ? { justifyContent: 'space-evenly' } : void 0,
                                 children: [
                                     (0, i.jsx)(a.Text, {
@@ -357,7 +357,7 @@ function y(e) {
                                             variant: 'heading-md/medium',
                                             color: 'text-muted',
                                             tag: 'div',
-                                            className: R.description,
+                                            className: Z.description,
                                             children: r
                                         })
                                 ]

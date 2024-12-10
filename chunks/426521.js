@@ -29,8 +29,8 @@ var i = n(200651),
     A = n(388032),
     b = n(586210),
     j = n(756688),
-    Z = n(886765);
-function R(e) {
+    R = n(886765);
+function Z(e) {
     var t, n, r;
     let { item: o } = e,
         s = null === (t = o.message) || void 0 === t ? void 0 : t.content;
@@ -70,7 +70,7 @@ function P(e) {
 }
 function L(e) {
     let { item: t } = e,
-        n = Z,
+        n = R,
         r = A.intl.string(A.t.SJTHJS);
     return (
         t.completed && ((n = j), (r = A.intl.string(A.t.f6RTAA))),
@@ -137,7 +137,7 @@ let y = r.memo(function (e) {
             }, [a, h, m]),
             j = null;
         a.type === E.O7.INCOMING_FRIEND_REQUESTS && null != a.other_user && (j = (0, i.jsx)(v.Z, { userId: a.other_user.id }));
-        let Z = null != a.local_id,
+        let R = null != a.local_id,
             y = (0, I.Z)(a);
         return (0, i.jsxs)('div', {
             className: b.row,
@@ -159,7 +159,7 @@ let y = r.memo(function (e) {
                                     color: h ? 'text-muted' : 'text-normal',
                                     children: 'string' != typeof y ? y : c.Z.parse(y)
                                 }),
-                                (null === (t = a.message) || void 0 === t ? void 0 : t.content) != null ? (0, i.jsx)(R, { item: a }) : null,
+                                (null === (t = a.message) || void 0 === t ? void 0 : t.content) != null ? (0, i.jsx)(Z, { item: a }) : null,
                                 null != a.callout ? (0, i.jsx)(P, { item: a }) : null,
                                 (0, i.jsx)(l.Text, {
                                     variant: 'text-xs/medium',
@@ -171,7 +171,7 @@ let y = r.memo(function (e) {
                         })
                     ]
                 }),
-                Z ? null : (0, i.jsx)(T.z, { item: a })
+                R ? null : (0, i.jsx)(T.z, { item: a })
             ]
         });
     }),

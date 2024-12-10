@@ -1,9 +1,9 @@
 n.d(t, {
     Tk: function () {
-        return Z;
+        return R;
     },
     ZP: function () {
-        return R;
+        return Z;
     },
     ef: function () {
         return A;
@@ -98,7 +98,7 @@ let b = (e) =>
 function j(e) {
     return null == e.poll || (m.Z.getMessage(e.channel_id, e.id) === e && !0);
 }
-function Z(e, t) {
+function R(e, t) {
     var n, i, r, l;
     let { formattedExpirationLabel: a } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { poll: o } = e;
@@ -115,9 +115,9 @@ function Z(e, t) {
     }
     let A = _.size > 0,
         b = x.some((e) => !0 === e.me_vote),
-        Z = !C && b,
-        R = Z || p || I,
-        P = h && T && (!b || C || R),
+        R = !C && b,
+        Z = R || p || I,
+        P = h && T && (!b || C || Z),
         L = null === (i = d.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i),
         y = null != L ? u.ZP.getSelfMember(L) : null,
         O = (0, s.EY)(y),
@@ -125,12 +125,12 @@ function Z(e, t) {
     return {
         poll: o,
         canTapAnswers: P,
-        canRemoveVote: Z && h && !p,
-        canShowVoteCounts: R,
-        canSubmitVote: !E && A && !Z && h && !O && !M,
+        canRemoveVote: R && h && !p,
+        canShowVoteCounts: Z,
+        canSubmitVote: !E && A && !R && h && !O && !M,
         expirationLabel: f,
         hasSelectedAnswer: A,
-        hasVoted: Z,
+        hasVoted: R,
         hasVoteRecorded: b,
         isEditingVote: C,
         isExpired: p,
@@ -139,11 +139,11 @@ function Z(e, t) {
         reactions: x,
         selectedAnswerIds: _,
         submitting: E,
-        tapShouldOpenVotersModal: R,
+        tapShouldOpenVotersModal: Z,
         showResults: I
     };
 }
-function R(e, t) {
+function Z(e, t) {
     var n, s;
     let { animateEmoji: c = !1, theme: u = 'dark', formattedExpirationLabel: m } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { poll: g } = e;
@@ -153,21 +153,21 @@ function R(e, t) {
     let v = l.Z.useReducedMotion,
         S = null === (s = d.Z.getChannel(e.getChannelId())) || void 0 === s ? void 0 : null === (n = s.getGuildId) || void 0 === n ? void 0 : n.call(s),
         j = (0, I.E)(N, S),
-        R = g.answers,
+        Z = g.answers,
         P = g.layout_type,
-        L = Z(e, t, { formattedExpirationLabel: m });
+        L = R(e, t, { formattedExpirationLabel: m });
     if (null == L) return;
     let { canTapAnswers: y, canRemoveVote: O, canShowVoteCounts: M, canSubmitVote: k, expirationLabel: D = T.intl.string(T.t['e+J3JS']), hasSelectedAnswer: B, hasVoted: U, isEditingVote: w, isExpired: F, isInteractive: G, reactions: V, selectedAnswerIds: H, submitting: z, tapShouldOpenVotersModal: W, showResults: K } = L,
         Y = (0, E.cZ)(V),
         X = T.intl.formatToPlainString(T.t.XRkuoa, { count: Y.toLocaleString() }),
         Q = Math.max(
-            ...R.map((e) => {
+            ...Z.map((e) => {
                 var t, n;
                 let i = A(V, ''.concat(e.answer_id));
                 return null !== (n = null == i ? void 0 : null === (t = i.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0;
             })
         ),
-        q = R.map((e) => {
+        q = Z.map((e) => {
             var t, n, l;
             let s = ''.concat(e.answer_id),
                 d = A(V, s),

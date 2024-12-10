@@ -22,15 +22,15 @@ function m(e) {
         case c.O7.FRIEND_REQUESTS_GROUPED:
             let b = s.ZP.getName(a.default.getUser(null === (f = e.other_users) || void 0 === f ? void 0 : null === (h = f[0]) || void 0 === h ? void 0 : h.id)),
                 j = s.ZP.getName(a.default.getUser(null === (_ = e.other_users) || void 0 === _ ? void 0 : null === (p = _[1]) || void 0 === p ? void 0 : p.id)),
-                Z = Math.max((null !== (E = null === (g = e.other_users) || void 0 === g ? void 0 : g.length) && void 0 !== E ? E : 0) - 2, 0);
+                R = Math.max((null !== (E = null === (g = e.other_users) || void 0 === g ? void 0 : g.length) && void 0 !== E ? E : 0) - 2, 0);
             return u.intl.format(u.t.g5xyIC, {
                 user: b,
                 user2: j,
-                count: Z
+                count: R
             });
         case c.O7.MOBILE_NATIVE_UPDATE_AVAILABLE:
-            let R = null !== (I = null === (C = e.local_id) || void 0 === C ? void 0 : C.split('_').pop()) && void 0 !== I ? I : 'unknown';
-            return 'Update to build '.concat(R, ' available!');
+            let Z = null !== (I = null === (C = e.local_id) || void 0 === C ? void 0 : C.split('_').pop()) && void 0 !== I ? I : 'unknown';
+            return 'Update to build '.concat(Z, ' available!');
         case c.DY.FRIEND_SUGGESTION_CREATED:
             return l.Z.getRelationshipType(S), d.OGo.PENDING_OUTGOING, null !== (x = e.body) && void 0 !== x ? x : '';
         case c.DY.GUILD_SCHEDULED_EVENT_STARTED:

@@ -53,8 +53,8 @@ let j = {
     }
 };
 ((a = r || (r = {})).TOP_LEFT = 'TOP_LEFT'), (a.TOP_RIGHT = 'TOP_RIGHT'), (a.BOTTOM_LEFT = 'BOTTOM_LEFT'), (a.BOTTOM_RIGHT = 'BOTTOM_RIGHT');
-let Z = ['TOP_LEFT', 'TOP_RIGHT'],
-    R = (0, h.Mg)(f.Z.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
+let R = ['TOP_LEFT', 'TOP_RIGHT'],
+    Z = (0, h.Mg)(f.Z.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
     P = {
         leafPosition: {
             x: 85,
@@ -159,7 +159,7 @@ function U(e) {
                 case 'enter':
                     return 'confetti';
                 case 'confetti':
-                    if (Z.includes(t)) return 'leaf_peel';
+                    if (R.includes(t)) return 'leaf_peel';
                     return 'exit';
                 case 'leaf_peel':
                     return 'leaf_fall';
@@ -169,7 +169,7 @@ function U(e) {
                     return 'enter';
             }
         })(c, f),
-        v = Z.includes(f),
+        v = R.includes(f),
         T = v && 'exit' === c,
         S = s.useCallback((e) => {
             h(e);
@@ -185,7 +185,7 @@ function U(e) {
             if ('confetti' === c) {
                 let { confettiVelocityDirection: e } = L[f],
                     t = (function (e, t) {
-                        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : R,
+                        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Z,
                             i = null == e ? void 0 : e.getBoundingClientRect();
                         if (null == i)
                             return {
@@ -317,10 +317,10 @@ function w(e) {
         { createMultipleConfettiAt: u, addClickListener: m } = s.useContext(g.h),
         [h, f] = s.useState(!1),
         j = s.useRef(null),
-        { reducedMotion: Z } = s.useContext(p.AccessibilityPreferencesContext),
-        R = (0, v.ZH)(n),
-        P = R.nick,
-        L = l(R);
+        { reducedMotion: R } = s.useContext(p.AccessibilityPreferencesContext),
+        Z = (0, v.ZH)(n),
+        P = Z.nick,
+        L = l(Z);
     t =
         null == c || null == r
             ? d > 1
@@ -348,14 +348,14 @@ function w(e) {
                     newTierName: (0, N.nW)(c)
                 });
     let O = s.useCallback(() => {
-            if (!Z.enabled)
+            if (!R.enabled)
                 if (h || 0 !== Math.floor(50 * Math.random())) {
                     var e;
                     let t = null === (e = j.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
                     if (null == t) return;
                     u(t.left + t.width / 2, t.top + t.height / 2);
                 } else f(!0);
-        }, [u, Z, h]),
+        }, [u, R, h]),
         M = s.useCallback(() => {
             f(!1);
         }, []),

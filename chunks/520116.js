@@ -81,8 +81,8 @@ function j(e) {
         x = _.jU.useSetting(),
         A = (0, s.e7)([E.Z], () => E.Z.can(v.Plq.CREATE_INSTANT_INVITE, l)),
         j = (0, h.P1)(l),
-        Z = !1,
-        R = 0 === r.messages.length || a()(r.messages[0].timestamp).isSame(a()(), 'day'),
+        R = !1,
+        Z = 0 === r.messages.length || a()(r.messages[0].timestamp).isSame(a()(), 'day'),
         P = null !== (n = null === (t = C.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(v.xW$.SPAMMER)) && void 0 !== n && n,
         L = [];
     if (!r.collapsed) {
@@ -91,7 +91,7 @@ function j(e) {
             n = r.messages.slice(0, N.hC);
         n.forEach((n) => {
             if (!(0, u.Z)(n, A)) {
-                if (!R && (null == e || !e.isSame(n.timestamp, 'day'))) {
+                if (!Z && (null == e || !e.isSame(n.timestamp, 'day'))) {
                     let t = (0, I.vc)(n.timestamp, 'LL');
                     L.push(
                         (0, i.jsx)(
@@ -107,7 +107,7 @@ function j(e) {
                 }
                 let r = null == t || (0, m.Z)(l, t, n);
                 (t = n),
-                    (Z = Z || (0, h.DQ)(n)),
+                    (R = R || (0, h.DQ)(n)),
                     L.push(
                         (0, i.jsx)(
                             b,
@@ -140,7 +140,7 @@ function j(e) {
             0 === L.length && (L = [(0, i.jsx)(c.Spinner, {}, 'spinner')]);
     }
     return (
-        Z && j && d.Z.trackExposure({ location: '20e3b0_2' }),
+        R && j && d.Z.trackExposure({ location: '20e3b0_2' }),
         (0, i.jsx)('div', {
             className: S.messages,
             children: L

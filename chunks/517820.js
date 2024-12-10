@@ -29,8 +29,8 @@ var i = n(200651),
     A = n(271383),
     b = n(594174),
     j = n(464891),
-    Z = n(348238),
-    R = n(83561),
+    R = n(348238),
+    Z = n(83561),
     P = n(834129),
     L = n(981631),
     y = n(674563),
@@ -218,7 +218,7 @@ function F(e) {
         x = (0, m.e7)([S.Z], () => S.Z.getChannel(n.channel_id), [n.channel_id]),
         N = null !== (t = null == x ? void 0 : x.guild_id) && void 0 !== t ? t : null,
         { shouldShowIncidentActions: v } = (0, g.mI)(N),
-        T = (0, Z.sR)(n.author.id, n.channel_id),
+        T = (0, R.sR)(n.author.id, n.channel_id),
         A = r.useCallback(() => {
             let e = null == x ? void 0 : x.guild_id;
             null != e && (0, I.kW)(n.id, e);
@@ -446,7 +446,7 @@ function H(e) {
         {
             avatarSrc: o,
             eventHandlers: { onMouseEnter: s, onMouseLeave: c }
-        } = (0, R.m)(!0),
+        } = (0, Z.m)(!0),
         { notificationType: u } = (0, C.FL)(r),
         m = null == u || u === d.p.RAID;
     return (0, i.jsx)('div', {
@@ -454,7 +454,7 @@ function H(e) {
         onMouseLeave: c,
         children: (0, i.jsx)(P.Z, {
             className: a()(M.mainContainer, { [M.compact]: n }),
-            iconNode: n ? null : (0, i.jsx)(R.S, { src: o }),
+            iconNode: n ? null : (0, i.jsx)(Z.S, { src: o }),
             iconContainerClassName: M.iconContainer,
             compact: n,
             children: (0, i.jsxs)('div', {

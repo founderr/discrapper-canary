@@ -25,8 +25,8 @@ var i = n(200651),
     A = n(405656),
     b = n(181389),
     j = n(854709),
-    Z = n(778177),
-    R = n(981631),
+    R = n(778177),
+    Z = n(981631),
     P = n(388032),
     L = n(105993);
 function y(e, t, n) {
@@ -48,7 +48,7 @@ let O = (0, C.hQ)(),
 class k extends r.PureComponent {
     componentDidMount() {
         var e, t;
-        T.S.subscribe(R.CkL.PERFORM_SEARCH, this.search), T.S.subscribe(R.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), T.S.subscribe(R.CkL.FOCUS_SEARCH, this.handleFocusSearch), null === (t = this._editorRef) || void 0 === t || null === (e = t.editor) || void 0 === e || e.setAttribute('aria-haspopup', 'listbox');
+        T.S.subscribe(Z.CkL.PERFORM_SEARCH, this.search), T.S.subscribe(Z.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), T.S.subscribe(Z.CkL.FOCUS_SEARCH, this.handleFocusSearch), null === (t = this._editorRef) || void 0 === t || null === (e = t.editor) || void 0 === e || e.setAttribute('aria-haspopup', 'listbox');
     }
     componentDidUpdate(e) {
         let { editorState: t, searchId: n } = this.props;
@@ -59,7 +59,7 @@ class k extends r.PureComponent {
         }
     }
     componentWillUnmount() {
-        T.S.unsubscribe(R.CkL.PERFORM_SEARCH, this.search), T.S.unsubscribe(R.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), T.S.unsubscribe(R.CkL.FOCUS_SEARCH, this.handleFocusSearch);
+        T.S.unsubscribe(Z.CkL.PERFORM_SEARCH, this.search), T.S.unsubscribe(Z.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), T.S.unsubscribe(Z.CkL.FOCUS_SEARCH, this.handleFocusSearch);
     }
     tokenize(e) {
         let t = A.kG(S.Sq(e)).filter((e) => e.type !== f.ZP.NON_TOKEN_TYPE);
@@ -172,7 +172,7 @@ class k extends r.PureComponent {
                 null === (n = this._editorRef) || void 0 === n || null === (t = n.editor) || void 0 === t || t.setAttribute('aria-activedescendant', null != e ? ''.concat(O, '-').concat(e) : void 0), this.setState({ selectedIndex: e });
             }),
             y(this, 'renderPopout', () =>
-                (0, i.jsx)(Z.ZP, {
+                (0, i.jsx)(R.ZP, {
                     ref: this._searchPopoutRef,
                     navId: O,
                     onSelectedIndexChanged: this.handleSelectedIndexChanged
@@ -221,7 +221,7 @@ class k extends r.PureComponent {
                     let { _editorRef: e } = this;
                     null == e || e.focus(),
                         this.handleSetSearchQuery({
-                            query: p.ZP[R.dCx.FILTER_IN].key + '#'.concat(l, ' '),
+                            query: p.ZP[Z.dCx.FILTER_IN].key + '#'.concat(l, ' '),
                             replace: !0
                         });
                 });
@@ -239,7 +239,7 @@ class k extends r.PureComponent {
             }),
             y(this, 'onFocus', () => {
                 let { searchType: e } = this.props;
-                E.ZP.trackWithMetadata(R.rMx.SEARCH_OPENED, { search_type: e }), this.setState({ focused: !0 });
+                E.ZP.trackWithMetadata(Z.rMx.SEARCH_OPENED, { search_type: e }), this.setState({ focused: !0 });
             }),
             y(this, 'onBlur', () => {
                 this.setState({ focused: !1 }, () => {

@@ -40,8 +40,8 @@ var i,
     A = n(131704),
     b = n(592125),
     j = n(984933),
-    Z = n(731290),
-    R = n(430824),
+    R = n(731290),
+    Z = n(430824),
     P = n(375954),
     L = n(496675),
     y = n(306680),
@@ -381,7 +381,7 @@ function W(e, t, n, i) {
     if (!r.isPrivate() && !L.Z.can(U.Plq.READ_MESSAGE_HISTORY, r)) return;
     let l = y.ZP.ackMessageId(i);
     if (null == l) {
-        let e = R.Z.getGuild(r.guild_id);
+        let e = Z.Z.getGuild(r.guild_id);
         if (null == e || null == e.joinedAt) return;
         l = B.default.fromTimestamp(e.joinedAt.getTime());
     }
@@ -425,7 +425,7 @@ function W(e, t, n, i) {
         })(n, i, o),
         order: 0
     };
-    r.isNSFW() && !Z.Z.didAgree(r.guild_id)
+    r.isNSFW() && !R.Z.didAgree(r.guild_id)
         ? t.push({
               ...d,
               type: 'nsfw'

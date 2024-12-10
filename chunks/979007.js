@@ -17,7 +17,7 @@ r.r(t),
             return i;
         }
     });
-let _ = 'featured',
+let _ = 0,
     o = '',
     E = 100,
     i = 48;

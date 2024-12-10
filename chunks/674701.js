@@ -32,8 +32,8 @@ var i,
     A = n(795448),
     b = n(441623),
     j = n(317271),
-    Z = n(474936),
-    R = n(981631),
+    R = n(474936),
+    Z = n(981631),
     P = n(182294),
     L = n(957825),
     y = n(388032),
@@ -55,7 +55,7 @@ function M(e) {
         });
     }, [t, n]);
     let V = () => {
-            if (t === Z.hX.FRIEND_ANNIVERSARY) return y.intl.formatToPlainString(y.t['L2s/Nz'], { numberOfYears: G });
+            if (t === R.hX.FRIEND_ANNIVERSARY) return y.intl.formatToPlainString(y.t['L2s/Nz'], { numberOfYears: G });
             return (0, S.Ou)(t);
         },
         H = 'coachmark' === n,
@@ -107,7 +107,7 @@ function M(e) {
                                     color: H ? 'header-primary' : 'always-white',
                                     lineClamp: 3,
                                     children: (() => {
-                                        if (t === Z.hX.FRIEND_ANNIVERSARY) return y.intl.formatToPlainString(y.t.BWJvAA, { friendUserName: T.ZP.getName(i) });
+                                        if (t === R.hX.FRIEND_ANNIVERSARY) return y.intl.formatToPlainString(y.t.BWJvAA, { friendUserName: T.ZP.getName(i) });
                                         return (0, S.Ou)(t);
                                     })()
                                 }),
@@ -115,7 +115,7 @@ function M(e) {
                                     className: Y,
                                     variant: 'text-sm/normal',
                                     children: (() => {
-                                        if (t === Z.hX.FRIEND_ANNIVERSARY) return y.intl.formatToPlainString(y.t.S3fdq6, { numberOfYears: G });
+                                        if (t === R.hX.FRIEND_ANNIVERSARY) return y.intl.formatToPlainString(y.t.S3fdq6, { numberOfYears: G });
                                         return (0, S.Ou)(t);
                                     })()
                                 })
@@ -131,13 +131,13 @@ function M(e) {
                                 className: s()(O.button, J),
                                 onClick: (e) => {
                                     e.stopPropagation(),
-                                        v.default.track(R.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
+                                        v.default.track(Z.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
                                             gift_intent_type: t,
                                             cta_type: U
                                         }),
-                                        U === Z.X2.VIEW_ALL
-                                            ? ((0, x.uL)(R.Z5c.FRIENDS), f.Z.setSection(R.pJs.ALL))
-                                            : U === Z.X2.SEND_MESSAGE &&
+                                        U === R.X2.VIEW_ALL
+                                            ? ((0, x.uL)(Z.Z5c.FRIENDS), f.Z.setSection(Z.pJs.ALL))
+                                            : U === R.X2.SEND_MESSAGE &&
                                               ((0, A.PV)(i.id),
                                               h.Z.openPrivateChannel(i.id).then(() => {
                                                   setTimeout(() => {
@@ -158,9 +158,9 @@ function M(e) {
                                         className: s()(O.buttonText, $),
                                         children: (() => {
                                             switch (U) {
-                                                case Z.X2.VIEW_ALL:
+                                                case R.X2.VIEW_ALL:
                                                     return y.intl.string(y.t.WkxniI);
-                                                case Z.X2.SEND_MESSAGE:
+                                                case R.X2.SEND_MESSAGE:
                                                     return y.intl.string(y.t.I61IsL);
                                                 default:
                                                     return;
@@ -183,8 +183,8 @@ function M(e) {
                                     analyticsObject: {
                                         page: k,
                                         section: D,
-                                        object: R.qAy.BUTTON_CTA,
-                                        objectType: R.Qqv.GIFT
+                                        object: Z.qAy.BUTTON_CTA,
+                                        objectType: Z.Qqv.GIFT
                                     },
                                     giftMessage: V()
                                 });

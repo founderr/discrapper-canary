@@ -4,7 +4,7 @@ if (
             return A;
         },
         Xh: function () {
-            return O;
+            return d;
         },
         aQ: function () {
             return S;
@@ -46,7 +46,7 @@ function A() {
     } = (0, u.s1)();
     return null == e ? void 0 : e.previousView;
 }
-function O() {
+function d() {
     var e, t, n;
     let {
         location: { pathname: r, search: o }
@@ -89,14 +89,14 @@ function O() {
             path: [p.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId'), p.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', ':section'), p.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId')],
             exact: !0
         }),
-        { applicationId: A, section: O, skuId: d } = null !== (t = null == I ? void 0 : I.params) && void 0 !== t ? t : {};
+        { applicationId: A, section: d, skuId: O } = null !== (t = null == I ? void 0 : I.params) && void 0 !== t ? t : {};
     if (null != I && null != A) {
         let e = null === (n = c.Z.getApplication(A)) || void 0 === n ? void 0 : n.name;
         return {
             type: 'application',
             applicationId: A,
             applicationName: e,
-            section: null != O ? O : null != d ? s.GlobalDiscoveryAppsSections.STORE : s.GlobalDiscoveryAppsSections.ABOUT
+            section: null != d ? d : null != O ? s.GlobalDiscoveryAppsSections.STORE : s.GlobalDiscoveryAppsSections.ABOUT
         };
     }
 }

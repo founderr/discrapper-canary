@@ -33,10 +33,10 @@ n.d(t, {
         return y;
     },
     lv: function () {
-        return Z;
+        return R;
     },
     nR: function () {
-        return R;
+        return Z;
     },
     q0: function () {
         return l.a;
@@ -137,7 +137,7 @@ function b(e, t) {
 function j(e) {
     return e.getCurrentContent().getFirstBlock().getText();
 }
-function Z(e, t) {
+function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         i = t.getCurrentContent(),
         r = i.getFirstBlock(),
@@ -178,7 +178,7 @@ function Z(e, t) {
         t
     );
 }
-function R(e) {
+function Z(e) {
     return i.EditorState.createEmpty(new i.CompositeDecorator(e));
 }
 function P(e) {

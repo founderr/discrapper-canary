@@ -104,16 +104,16 @@ function j(e) {
                 },
                 [l]
             )),
-        { isTruncated: j, ExpandableTextContainer: Z } = (0, I.s)(),
-        R = (null !== (n = null == h ? void 0 : null === (t = h.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0,
+        { isTruncated: j, ExpandableTextContainer: R } = (0, I.s)(),
+        Z = (null !== (n = null == h ? void 0 : null === (t = h.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0,
         [P, L] = r.useState(1),
         y = (0, c.Z)('(max-width: 1439px)'),
         { selectedTab: O, isPhantomPreview: M } = (0, x.m)(),
         k = O === N.y.GUILD_PRODUCTS_PREVIEW ? T.intl.string(T.t['LvXy/P']) : T.intl.string(T.t.XyqKh4),
-        D = R
+        D = Z
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, i.jsx)(Z, {
+                      (0, i.jsx)(R, {
                           lineClamp: y || 2 === P ? 2 : 3,
                           children: (0, i.jsx)(s.Text, {
                               variant: 'text-sm/normal',

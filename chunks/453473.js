@@ -33,8 +33,8 @@ var i = n(200651),
     A = n(324701),
     b = n(575016),
     j = n(768943),
-    Z = n(686478),
-    R = n(664559),
+    R = n(686478),
+    Z = n(664559),
     P = n(767893),
     L = n(206697),
     y = n(74551),
@@ -65,7 +65,7 @@ function B(e) {
 }
 function U(e) {
     let { closePopout: t } = e,
-        n = (0, R.Z)();
+        n = (0, Z.Z)();
     return ((0, E.Z)(
         {
             type: u.ImpressionTypes.POPOUT,
@@ -166,7 +166,7 @@ function G(e) {
                         channel_id: t.saveData.channelId,
                         message_id: t.saveData.messageId,
                         message_author_id: null === (i = t.message) || void 0 === i ? void 0 : i.author.id,
-                        type: null != t.saveData.dueAt ? Z._l.REMINDER : Z._l.BOOKMARK,
+                        type: null != t.saveData.dueAt ? R._l.REMINDER : R._l.BOOKMARK,
                         due_duration: null != t.saveData.dueAt ? d()().diff(t.saveData.dueAt) : void 0
                     });
             },

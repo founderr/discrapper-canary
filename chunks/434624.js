@@ -22,17 +22,17 @@ let _ = r.memo(function (e) {
             n,
             { useChatFontScaling: r, hideEmoji: l, emoji: c, className: _, count: g, me: E, me_burst: C, burst_count: I, burst_colors: x, readOnly: N, isLurking: v, isGuest: T, isPendingMember: S, type: A, emojiSize: b } = e,
             j = A === m.O.BURST,
-            Z = (0, h.y4)(E, C, A),
-            R = (0, u.v)(j && null != x ? x : []),
+            R = (0, h.y4)(E, C, A),
+            Z = (0, u.v)(j && null != x ? x : []),
             P = r ? p : f,
             L = j ? I : g,
             y = (0, d.y)(L, h.aO),
             O = {};
-        if (j && null != R) {
+        if (j && null != Z) {
             var M;
-            let { accentColor: e, backgroundColor: i, opacity: r } = R,
+            let { accentColor: e, backgroundColor: i, opacity: r } = Z,
                 l = null !== (M = (0, o.wK)(null != i ? i : '', r)) && void 0 !== M ? M : '';
-            Z && (O.borderColor = i), (O.background = l), (t = e), (n = e);
+            R && (O.borderColor = i), (O.background = l), (t = e), (n = e);
         }
         let k = {
             minWidth: y,
@@ -41,7 +41,7 @@ let _ = r.memo(function (e) {
         };
         return (0, i.jsxs)('div', {
             className: a()(P.reaction, P.reactionInner, _, {
-                [P.reactionMe]: Z,
+                [P.reactionMe]: R,
                 [P.reactionReadOnly]: N && !v && !S && !T
             }),
             style: O,

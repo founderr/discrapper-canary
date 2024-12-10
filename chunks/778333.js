@@ -44,7 +44,7 @@ function g(e) {
     x ? ((S = p.intl.string(p.t.xhxnPj)), (A = s.Z.Button.Colors.PRIMARY)) : C && ((S = p.intl.string(p.t.ib7Ng4)), (A = s.Z.Button.Colors.PRIMARY));
     let b = C ? p.intl.string(p.t.eQyu1N) : p.intl.string(p.t.PYJHW1),
         j = null != n.inviter ? ''.concat(n.inviter.username) : '',
-        Z = null != n.inviter ? h.ZP.getUserTag(n.inviter) : '';
+        R = null != n.inviter ? h.ZP.getUserTag(n.inviter) : '';
     return (0, i.jsxs)(s.Z, {
         children: [
             (0, i.jsx)(s.Z.Header, { text: b }),
@@ -60,7 +60,7 @@ function g(e) {
                             (0, i.jsx)(s.Z.Info, {
                                 title: j,
                                 onClick: x ? T : void 0,
-                                children: Z
+                                children: R
                             })
                         ]
                     }),

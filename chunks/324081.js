@@ -110,7 +110,7 @@ function j(e) {
         _ = t.isMultiUserDM()
             ? x.intl.formatToPlainString(x.t.CxSA5O, { members: t.recipients.length + 1 })
             : t.isPrivate()
-              ? (0, i.jsx)(Z, { channel: t })
+              ? (0, i.jsx)(R, { channel: t })
               : (0, i.jsx)(s.Clickable, {
                     className: l()(N.subtext, N.guildName),
                     onClick: n,
@@ -157,7 +157,7 @@ function j(e) {
         ]
     });
 }
-function Z(e) {
+function R(e) {
     let { channel: t } = e,
         {
             user: n,

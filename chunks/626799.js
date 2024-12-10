@@ -171,7 +171,7 @@ class b extends (i = l.Component) {
 }
 A(b, 'defaultProps', { renderFallback: v.dG4 });
 let j = [I.Z, C.Z, E.Z, x.Z];
-function Z(e) {
+function R(e) {
     let { skuId: t } = e,
         n = I.Z.get(t),
         i = null != n ? g.Z.getApplication(n.applicationId) : null;
@@ -184,6 +184,6 @@ function Z(e) {
         libraryApplication: null != n ? E.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
     };
 }
-let R = (0, _.Z)((0, p.Z)(b));
-t.Z = o.ZP.connectStores(j, Z)(R);
-let P = (0, p.Z)(o.ZP.connectStores(j, Z)(b));
+let Z = (0, _.Z)((0, p.Z)(b));
+t.Z = o.ZP.connectStores(j, R)(Z);
+let P = (0, p.Z)(o.ZP.connectStores(j, R)(b));

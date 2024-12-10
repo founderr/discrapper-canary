@@ -33,7 +33,7 @@ function S(e) {
         { loading: S, subscriptionsSettings: A } = (0, C.H)(n),
         { listingsLoaded: b } = (0, f.eD)(n),
         j = (0, f.ue)(n, { publishedOnly: !0 }),
-        Z = r.useCallback(async () => {
+        R = r.useCallback(async () => {
             E.default.track(N.rMx.GUILD_SHOP_EMBED_CLICKED, { ...(0, u.hH)(n) }), await (0, p.Z)(N.Z5c.SERVER_SHOP(n));
         }, [n]);
     (0, m.Z)(
@@ -43,7 +43,7 @@ function S(e) {
         },
         { disableTrack: null == l }
     );
-    let R = j.length > 0 ? new Date(Math.min(...j.map((e) => Date.parse(e.published_at)))) : void 0;
+    let Z = j.length > 0 ? new Date(Math.min(...j.map((e) => Date.parse(e.published_at)))) : void 0;
     return S || !b
         ? (0, i.jsx)('div', {
               className: a()(T.guildShopEmbed, T.spinnerContainer),
@@ -102,19 +102,19 @@ function S(e) {
                                             children: v.intl.format(v.t.tKZNlZ, { listingCount: j.length })
                                         })
                                     }),
-                                    null != R &&
+                                    null != Z &&
                                         (0, i.jsx)('li', {
                                             children: (0, i.jsx)(d.Text, {
                                                 variant: 'text-sm/normal',
                                                 color: 'text-muted',
-                                                children: v.intl.format(v.t['kXr8+f'], { createdYear: R.getFullYear() })
+                                                children: v.intl.format(v.t['kXr8+f'], { createdYear: Z.getFullYear() })
                                             })
                                         })
                                 ]
                             }),
                             (0, i.jsx)(d.Button, {
                                 className: T.guildShopEmbedCta,
-                                onClick: Z,
+                                onClick: R,
                                 children: (0, i.jsxs)('div', {
                                     className: T.guildShopEmbedCtaContent,
                                     children: [

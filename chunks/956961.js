@@ -64,7 +64,7 @@ function b(e) {
                     })
                 ]
             }),
-            0 === m.length ? (0, i.jsx)(Z, {}) : (0, i.jsx)(u.AdvancedScrollerThin, { children: m.map((e) => (0, i.jsx)(j, { messageReminder: e }, e.saveData.messageId)) })
+            0 === m.length ? (0, i.jsx)(R, {}) : (0, i.jsx)(u.AdvancedScrollerThin, { children: m.map((e) => (0, i.jsx)(j, { messageReminder: e }, e.saveData.messageId)) })
         ]
     });
 }
@@ -187,6 +187,6 @@ function j(e) {
               ]
           });
 }
-function Z() {
+function R() {
     return null;
 }
