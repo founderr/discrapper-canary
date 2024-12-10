@@ -1,24 +1,26 @@
 n(411104);
 var l = n(991637),
-    a = n.n(l),
-    i = n(388123),
+    i = n.n(l),
+    a = n(388123),
     r = n(904245),
-    s = n(957730),
-    o = n(592125),
-    c = n(496675),
-    u = n(784384);
-let d = {
+    s = n(761080),
+    o = n(957730),
+    c = n(592125),
+    u = n(496675),
+    d = n(784384);
+let h = {
     async sendForward(e, t, n) {
-        let l = o.Z.getChannel(t),
-            a = o.Z.getChannel(e.channel_id);
-        if (null == a) throw Error('Unable to find original channel for message');
+        let l = c.Z.getChannel(t),
+            i = c.Z.getChannel(e.channel_id),
+            h = (null == n ? void 0 : n.isICYMIGameContentForwarding) ? s.KF : null == i ? void 0 : i.guild_id;
+        if (null == i && null == h) throw Error('Unable to find original channel for message');
         if (null == l) throw Error('Unable to find destination channel for message');
-        let d = s.ZP.parse(l, ''),
-            h = {
-                guild_id: a.guild_id,
+        let f = o.ZP.parse(l, ''),
+            _ = {
+                guild_id: h,
                 channel_id: e.channel_id,
                 message_id: e.id,
-                type: i.U.FORWARD,
+                type: a.U.FORWARD,
                 forward_only:
                     (null == n ? void 0 : n.onlyAttachmentIds) != null || (null == n ? void 0 : n.onlyEmbedIndices) != null
                         ? {
@@ -27,12 +29,12 @@ let d = {
                           }
                         : void 0
             };
-        await r.Z.sendMessage(l.id, d, !1, {
-            messageReference: h,
+        await r.Z.sendMessage(l.id, f, !1, {
+            messageReference: _,
             eagerDispatch: !1
         }),
-            (null == n ? void 0 : n.withMessage) != null && !(0, u.pU)(l, c.Z) && (await r.Z.sendMessage(l.id, s.ZP.parse(l, n.withMessage), !1));
+            (null == n ? void 0 : n.withMessage) != null && !(0, d.pU)(l, u.Z) && (await r.Z.sendMessage(l.id, o.ZP.parse(l, n.withMessage), !1));
     },
-    sendForwards: (e, t, n) => a()(t.map((t) => d.sendForward(e, t, n)))
+    sendForwards: (e, t, n) => i()(t.map((t) => h.sendForward(e, t, n)))
 };
-t.Z = d;
+t.Z = h;
