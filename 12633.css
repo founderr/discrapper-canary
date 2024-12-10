@@ -14553,6 +14553,14 @@ div.cardContainer_c22357 {
     border-bottom-right-radius: 17px
 }
 
+.tier2SideGradient_c87d73 {
+    position: absolute;
+    width: 100vw;
+    height: 1e3px;
+    background: radial-gradient(80%70%at 100%50%, #2d01dc 0%, transparent 100%), radial-gradient(80%70%at 100%50%, #b182ff 0%, transparent 100%);
+    opacity: .4
+}
+
 .heading_aac415 {
     margin-bottom: 8px
 }

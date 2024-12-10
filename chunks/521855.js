@@ -44,5 +44,6 @@ e.exports = {
     rimGlowTier0: 'rimGlowTier0_c87d73',
     rimGlowTier2: 'rimGlowTier2_c87d73',
     trialHeader: 'trialHeader_c87d73',
-    withPromotionalGradientBanner: 'withPromotionalGradientBanner_c87d73'
+    withPromotionalGradientBanner: 'withPromotionalGradientBanner_c87d73',
+    tier2SideGradient: 'tier2SideGradient_c87d73'
 };

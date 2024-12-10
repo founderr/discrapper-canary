@@ -688,6 +688,7 @@ function eo(e) {
             [K.withPromotionalGradientBanner]: u
         }),
         children: [
+            (0, d.jsx)('div', { className: K.tier2SideGradient }),
             (0, d.jsx)('img', {
                 src: z,
                 className: K.v2starBackground,

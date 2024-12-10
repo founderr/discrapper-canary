@@ -15,6 +15,7 @@ e.exports = {
     perkCardsContainerSpacingSettings: 'perkCardsContainerSpacingSettings_a8b566 perkCardsContainer_a8b566',
     perkCardsContainerSpacingFullscreen: 'perkCardsContainerSpacingFullscreen_a8b566 perkCardsContainer_a8b566',
     planComparisonTable: 'planComparisonTable_a8b566',
+    planComparisonTableV2: 'planComparisonTableV2_a8b566',
     planComparisonTableContainer: 'planComparisonTableContainer_a8b566',
     tableLeftSideDecoration: 'tableLeftSideDecoration_a8b566',
     tableRightSideDecoration: 'tableRightSideDecoration_a8b566',
