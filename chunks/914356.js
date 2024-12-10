@@ -5,7 +5,6 @@ e.exports = {
     icon: 'icon_f46c86',
     filenameWrapper: 'filenameWrapper_f46c86',
     filename: 'filename_f46c86',
-    metadata: 'metadata_f46c86',
     progressContainer: 'progressContainer_f46c86 metadata_f46c86',
     progress: 'progress_f46c86',
     size: 'size_f46c86',

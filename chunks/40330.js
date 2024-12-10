@@ -101,8 +101,9 @@ t.Z = (e) => {
                                     children: i
                                 })
                             }),
-                            (0, r.jsx)('div', {
-                                className: d.metadata,
+                            (0, r.jsx)(l.Text, {
+                                variant: 'text-xs/normal',
+                                color: 'text-muted',
                                 children: o().filesize(s)
                             })
                         ]
