@@ -414,6 +414,8 @@ class ew extends l.PureComponent {
                                         d
                                     );
                                 case eM.d4z.GUILD_VOICE:
+                                case eM.d4z.PUBLIC_THREAD:
+                                case eM.d4z.PRIVATE_THREAD:
                                     let h = a.getGuildId();
                                     return (
                                         o()(null != h, 'GuildID null for guild voice channel'),
