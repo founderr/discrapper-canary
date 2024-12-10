@@ -2,12 +2,6 @@ n.d(e, {
     Cf: function () {
         return u;
     },
-    LD: function () {
-        return o;
-    },
-    RU: function () {
-        return s;
-    },
     kg: function () {
         return c;
     }

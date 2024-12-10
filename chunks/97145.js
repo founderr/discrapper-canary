@@ -1,8 +1,11 @@
 r.d(t, {
-    R: function () {
+    R7: function () {
         return n;
     },
-    f: function () {
+    eQ: function () {
+        return o;
+    },
+    fe: function () {
         return _;
     }
 });
@@ -26,4 +29,8 @@ function _(e) {
             _ = Math.round(e / 1000 / 60 / 60);
         return a.minute.slot !== n && ((a.minute.slot = n), (a.minute.budgetUsed = 0)), a.hour.slot !== _ && ((a.hour.slot = _), (a.hour.budgetUsed = 0)), !!(a.minute.budgetUsed < t) && (a.minute.budgetUsed++, !!(a.hour.budgetUsed < r)) && (a.hour.budgetUsed++, !0);
     };
+}
+function o() {
+    let e = window;
+    return null != e.jQuery || null != e.$ || null != e.BetterDiscord || null != e.BdApi || null != e.rambox;
 }

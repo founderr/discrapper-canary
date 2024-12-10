@@ -1,9 +1,6 @@
 r.d(t, {
-    e: function () {
-        return s;
-    },
     j: function () {
-        return I;
+        return l;
     }
 }),
     r(47120);
@@ -13,26 +10,22 @@ var a = r(509068),
     o = r(233517),
     E = r(931327),
     i = r(97145);
-let c = ['oppobrowser', 'realmebrowser', 'heytapbrowser'];
-function s() {
-    let e = window;
-    return null != e.jQuery || null != e.$ || null != e.BetterDiscord || null != e.BdApi || null != e.rambox;
-}
-let l = (0, i.f)({
-    maxBudgetMinute: 1,
-    maxBudgetHour: 3
-});
-function I() {
+let c = ['oppobrowser', 'realmebrowser', 'heytapbrowser'],
+    s = (0, i.fe)({
+        maxBudgetMinute: 1,
+        maxBudgetHour: 3
+    });
+function l() {
     var e;
     a.S1({
         tunnel: '/error-reporting-proxy/web',
         dsn: 'https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984',
         autoSessionTracking: !1,
         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-        release: 'discord_web-aa561e0f2f3059ffcd0a6dcc03801a2b3f80d317',
+        release: 'discord_web-62e22c56eba2f1a2a2fb52d063e3de627b06ce4d',
         beforeSend: function (e, t) {
             var r, a;
-            return !((null != (r = e).exception && null != r.exception.values && r.exception.values.every((e) => null == e.stacktrace || (null != e.stacktrace.frames && 1 === e.stacktrace.frames.length)) && 'canary' !== window.GLOBAL_ENV.RELEASE_CHANNEL) || c.some((e) => window.navigator.appVersion.toLowerCase().indexOf(e) >= 0)) && !s() && !('Aborted' === (a = e).message || 'cancel captcha' === a.message) && l() ? e : null;
+            return !((null != (r = e).exception && null != r.exception.values && r.exception.values.every((e) => null == e.stacktrace || (null != e.stacktrace.frames && 1 === e.stacktrace.frames.length)) && 'canary' !== window.GLOBAL_ENV.RELEASE_CHANNEL) || c.some((e) => window.navigator.appVersion.toLowerCase().indexOf(e) >= 0)) && !(0, i.eQ)() && !('Aborted' === (a = e).message || 'cancel captcha' === a.message) && s() ? e : null;
         },
         integrations: [
             n.k({
@@ -51,8 +44,8 @@ function I() {
         ignoreErrors: ['EADDRINUSE', 'BetterDiscord', 'EnhancedDiscord', 'Powercord', 'RecipeWebview', 'jQuery', 'localStorage', 'has already been declared', 'Cannot call hover while not dragging.', 'Cannot call beginDrag while dragging.', 'getHostNode', 'setupCSS', 'on missing remote object', 'ChunkLoadError', "Cannot find module 'discord_utils'", 'Failed to setup Krisp module', "Error invoking remote method 'DISCORD_NATIVE_MODULES_INSTALL': Error: Module updater is not available!", 'Non-Error promise rejection captured with keys:', 'Request has been terminated', 'Cannot resolve a Slate point from DOM point', 'Failed to fetch', 'no suitable image found', 'ResizeObserver loop limit exceeded', 'ResizeObserver loop completed with undelivered notifications.', 'The play() request was interrupted', 'could not play audio', 'notosans-400-normalitalic'],
         denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
     }),
-        o.YA('buildNumber', ((e = '352181'), '352181'));
-    o.YA('builtAt', String('1733864386673'));
+        o.YA('buildNumber', ((e = '352256'), '352256'));
+    o.YA('builtAt', String('1733870936058'));
     let t = window.GLOBAL_ENV.SENTRY_TAGS;
     if (null != t && 'object' == typeof t) for (let e in t) o.YA(e, t[e]);
     return E;
