@@ -9,8 +9,8 @@ n.d(t, {
     n(47120);
 var i = n(512722),
     o = n.n(i),
-    s = n(15729),
-    a = n(313361),
+    a = n(15729),
+    s = n(313361),
     l = n(683860),
     r = n(731965),
     c = n(442837),
@@ -31,7 +31,7 @@ function h(e, t, n) {
 }
 let m = new Set(),
     p = {
-        layoutType: a.X.LIST,
+        layoutType: s.X.LIST,
         sortOrder: l.z.CREATION_DATE,
         tagFilter: m,
         scrollPosition: 0
@@ -95,7 +95,7 @@ class f {
             });
     }
 }
-let g = (0, s.U)((e, t) => new f(e, t)),
+let g = (0, a.U)((e, t) => new f(e, t)),
     v = (e) => {
         let t = g();
         return null == (0, c.e7)([d.Z], () => d.Z.getChannel(e)) ? p : t.getChannelState(e);

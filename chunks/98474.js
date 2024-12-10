@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     o = n(192379),
-    s = n(703533),
-    a = n(752877),
+    a = n(703533),
+    s = n(752877),
     l = n(748780),
     r = n(481060),
     c = n(596454),
@@ -22,10 +22,10 @@ let v = [];
 function b(e) {
     let { messageId: t, emoji: n, startPosition: b, targetPosition: T } = e,
         [x, _] = o.useState(0),
-        [S, C] = o.useState(0),
-        [I, j] = o.useState(null),
-        { confettiCanvas: E } = o.useContext(d.h),
-        R = (0, s.uR)(E, I),
+        [j, C] = o.useState(0),
+        [S, E] = o.useState(null),
+        { confettiCanvas: R } = o.useContext(d.h),
+        I = (0, a.uR)(R, S),
         N = o.useMemo(
             () => [
                 {
@@ -82,32 +82,32 @@ function b(e) {
     return (
         o.useEffect(() => {
             x > 0 &&
-                S > 0 &&
-                R.createConfetti({
+                j > 0 &&
+                I.createConfetti({
                     ...f.We,
                     position: {
                         type: 'static',
                         value: {
                             x: x,
-                            y: S
+                            y: j
                         }
                     }
                 });
-        }, [R, x, S]),
+        }, [I, x, j]),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(s.Ji, {
-                    ref: j,
+                (0, i.jsx)(a.Ji, {
+                    ref: E,
                     sprites: N,
                     colors: v,
                     spriteWidth: f.Ko,
                     spriteHeight: f.Ko
                 }),
                 (0, i.jsx)(u.ZP, {
-                    children: (0, i.jsx)(a.animated.div, {
+                    children: (0, i.jsx)(s.animated.div, {
                         style: { ...A },
                         className: g.emojiContainer,
-                        children: (0, i.jsx)(a.animated.div, {
+                        children: (0, i.jsx)(s.animated.div, {
                             style: {
                                 ...O,
                                 opacity: O.opacity

@@ -9,8 +9,8 @@ var l = n(200651),
     c = n(499254),
     d = n(827498),
     m = n(541716),
-    h = n(706454),
-    x = n(823379),
+    x = n(706454),
+    h = n(823379),
     C = n(5192),
     p = n(379357),
     v = n(192918),
@@ -22,12 +22,12 @@ var l = n(200651),
     P = n(797342),
     L = n(981631),
     T = n(388032);
-let N = (e, t) =>
+let y = (e, t) =>
         T.intl.formatToPlainString(T.t.tAwI1t, {
             username: t.username,
             activity: e.extra.activity_name
         }),
-    y = (e, t, n) => {
+    N = (e, t, n) => {
         let l = T.t['bES+y8'],
             a = C.ZP.getName(t.guild_id, t.id, n),
             i = e.extra.activity_name;
@@ -58,7 +58,7 @@ t.ZP = (e) => {
         }),
         { user: S, details: R, activity: M, embeddedActivity: k } = (0, P.n)(n),
         { primaryColor: w, secondaryColor: O } = (0, I.Z)(null == E ? void 0 : E.src),
-        b = (0, i.e7)([h.default], () => h.default.locale),
+        b = (0, i.e7)([x.default], () => x.default.locale),
         { displayParticipants: H, participant1: V, participant2: B, numOtherParticipants: D } = (0, v.Z)(n, 3),
         U = () => {
             c.__(d._b.TEXT, m.I.NORMAL, { applicationId: n.extra.application_id });
@@ -74,7 +74,7 @@ t.ZP = (e) => {
                               users: [V, B],
                               countOthers: D
                           })
-                        : y(n, t, S);
+                        : N(n, t, S);
                 return (0, f.C4)({
                     entry: n,
                     applicationImageSrc: null == E ? void 0 : E.src,
@@ -123,7 +123,7 @@ t.ZP = (e) => {
             IconComponent: r.AppsIcon,
             children: T.intl.string(T.t.GDWYR0)
         }),
-        J = [W ? q : F].filter(x.lm);
+        J = [W ? q : F].filter(h.lm);
     return (0, l.jsxs)(Z.yR, {
         children: [
             Y,
@@ -134,7 +134,7 @@ t.ZP = (e) => {
                     user: S,
                     channel: t,
                     generateReactionImage: z,
-                    reactionImageAltText: N(n, S),
+                    reactionImageAltText: y(n, S),
                     entry: n,
                     buttons: J
                 })

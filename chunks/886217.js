@@ -9,8 +9,8 @@ var l = n(200651),
     c = n(908841),
     d = n(823379),
     m = n(5192),
-    h = n(561308),
-    x = n(319604),
+    x = n(561308),
+    h = n(319604),
     C = n(31074),
     p = n(206295),
     v = n(278399),
@@ -40,22 +40,22 @@ let L = (e, t, n, l) => {
         });
 t.Z = (e) => {
     let { channel: t, entry: n, onReaction: i, onVoiceChannelPreview: m } = e,
-        { parent_title: N, provider: y, image_url: _ } = n.extra.media,
+        { parent_title: y, provider: N, image_url: _ } = n.extra.media,
         A = n.extra.artist.name,
         E = (0, o.e7)([u.default], () => u.default.getUser(n.author_id)),
         { primaryColor: S, secondaryColor: R } = (0, p.Z)(_),
-        M = (0, h.Nq)(n),
+        M = (0, x.Nq)(n),
         k = a.useCallback(() => {
             if (null == t || null == E || !(0, d.Hi)(M, v.y9)) return;
             let e = L(n, t, E, M);
-            return (0, x.CR)({
+            return (0, h.CR)({
                 user: E,
                 channel: t,
                 mediaImageSrc: _,
                 artist: A,
                 description: e,
                 colors: [S, R],
-                badges: (0, x.UU)(n)
+                badges: (0, h.UU)(n)
             });
         }, [_, A, t, n, S, M, R, E]),
         w = (0, C.Z)(j.ABu.SPOTIFY);
@@ -78,7 +78,7 @@ t.Z = (e) => {
                 channel: t,
                 entry: n,
                 headerIcons:
-                    y === r.p.SPOTIFY
+                    N === r.p.SPOTIFY
                         ? (0, l.jsx)(I.Z, {
                               onClick: w,
                               Icon: c.Z,
@@ -86,7 +86,7 @@ t.Z = (e) => {
                           })
                         : null,
                 userDescription: P.t.CcVI1d,
-                title: N,
+                title: y,
                 subtitle: A,
                 badges: (0, l.jsx)(g.Gk, {
                     location: g.Gt.POPOUT,

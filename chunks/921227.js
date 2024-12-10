@@ -1,7 +1,7 @@
-var i,
-    o = n(442837),
-    s = n(570140);
-function a(e, t, n) {
+var r,
+    i = n(442837),
+    a = n(570140);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,22 +14,22 @@ function a(e, t, n) {
         e
     );
 }
-let l = {};
-class r extends (i = o.ZP.PersistedStore) {
+let o = {};
+class l extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        Object.assign(l, e);
+        Object.assign(o, e);
     }
     getState() {
-        return l;
+        return o;
     }
     shouldShowEducation(e) {
-        return !0 !== l[e];
+        return !0 !== o[e];
     }
 }
-a(r, 'displayName', 'ActivityInviteEducationStore'),
-    a(r, 'persistKey', 'ActivityInviteEducationExperimentStore'),
-    (t.Z = new r(s.Z, {
+s(l, 'displayName', 'ActivityInviteEducationStore'),
+    s(l, 'persistKey', 'ActivityInviteEducationExperimentStore'),
+    (t.Z = new l(a.Z, {
         ACTIVITY_INVITE_EDUCATION_DISMISS: function (e) {
-            return (l[e.key] = e.value), !0;
+            return (o[e.key] = e.value), !0;
         }
     }));

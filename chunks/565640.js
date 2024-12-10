@@ -26,7 +26,7 @@ function p(e, t) {
             ? null !==
                   (t = a()(n)
                       .unionBy(i, (e) => e.id)
-                      .filter((t) => t.author_id === e && !(0, u.kr)(t) && (0, o.LP)(t) && (0, u.Ae)(t))
+                      .filter((t) => t.author_id === e && !(0, u.kr)(t) && (0, o.Rh)(t) && (0, u.Ae)(t))
                       .uniqWith((e, t) => 'application_id' in e.extra && 'application_id' in t.extra && e.extra.application_id === t.extra.application_id)
                       .orderBy((e) => {
                           let { id: t } = e;

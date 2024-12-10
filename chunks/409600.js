@@ -13,15 +13,15 @@ n(192379);
 var o = n(100527),
     a = n(906732),
     r = n(987209),
-    d = n(563132),
-    c = n(791785),
+    c = n(563132),
+    d = n(791785),
     s = n(961830),
     l = n(231338);
 function f(e) {
     let { onClose: t, onComplete: n, transitionState: o, applicationId: r, analyticsLocationObject: s, skuId: l } = e,
-        {} = (0, d.usePaymentContext)(),
+        {} = (0, c.usePaymentContext)(),
         { analyticsLocations: f } = (0, a.ZP)();
-    return (0, i.jsx)(c.PaymentModal, {
+    return (0, i.jsx)(d.PaymentModal, {
         onClose: t,
         onComplete: n,
         applicationId: r,
@@ -34,15 +34,15 @@ function f(e) {
 }
 let u = [s.WA, s.s2, ...s.yp, s.wo, s.F7];
 function p(e) {
-    let { loadId: t, applicationId: n, skuId: c, analyticsLocations: s } = e,
+    let { loadId: t, applicationId: n, skuId: d, analyticsLocations: s } = e,
         { analyticsLocations: p } = (0, a.ZP)(s, o.Z.PREMIUM_PAYMENT_MODAL);
     return (0, i.jsx)(a.Gt, {
         value: p,
-        children: (0, i.jsx)(d.PaymentContextProvider, {
+        children: (0, i.jsx)(c.PaymentContextProvider, {
             loadId: t,
             stepConfigs: u,
             applicationId: n,
-            skuIDs: [c],
+            skuIDs: [d],
             activeSubscription: null,
             purchaseType: l.GZ.ONE_TIME,
             children: (0, i.jsx)(r.KB, { children: (0, i.jsx)(f, { ...e }) })

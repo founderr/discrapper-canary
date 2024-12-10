@@ -19,27 +19,27 @@ var i = n(200651),
     f = n(409813),
     _ = n(614277),
     j = n(981631),
-    L = n(388032),
-    m = n(732721);
+    m = n(388032),
+    L = n(732721);
 function g(e) {
     let { handleStepChange: t, handleClose: n } = e,
         { selectedPlan: s, selectedSkuId: g, step: E } = (0, h.usePaymentContext)(),
-        { setSelectedGiftingPromotionReward: S, selectedGiftingPromotionReward: y, claimableRewards: M } = (0, x.wD)(),
-        I = (0, a.e7)([c.default], () => c.default.getCurrentUser());
+        { setSelectedGiftingPromotionReward: S, selectedGiftingPromotionReward: I, claimableRewards: M } = (0, x.wD)(),
+        y = (0, a.e7)([c.default], () => c.default.getCurrentUser());
     l.useEffect(() => {
         let e = null != M && M.length > 0;
-        null == y && e && S(M[0]);
-    }, [M, y, S]);
-    let Z = (e) => {
+        null == I && e && S(M[0]);
+    }, [M, I, S]);
+    let v = (e) => {
         let t = e.skuId;
         return (0, i.jsx)(
             d.Z,
             {
                 skuId: t,
-                price: L.intl.string(L.t.QQsaCQ),
-                isSelected: t === (null == y ? void 0 : y.skuId),
+                price: m.intl.string(m.t.QQsaCQ),
+                isSelected: t === (null == I ? void 0 : I.skuId),
                 onSelect: () => S(e),
-                className: m.giftSelectItem
+                className: L.giftSelectItem
             },
             t
         );
@@ -51,34 +51,34 @@ function g(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: m.stepBodySkuSelect,
+                    className: L.stepBodySkuSelect,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: m.bodyColumnLeft,
+                            className: L.bodyColumnLeft,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: m.header,
+                                    className: L.header,
                                     children: (0, i.jsx)(o.Heading, {
                                         variant: 'heading-lg/bold',
                                         color: 'header-primary',
-                                        children: L.intl.string(L.t['Rp0+ZG'])
+                                        children: m.intl.string(m.t['Rp0+ZG'])
                                     })
                                 }),
-                                null == M ? void 0 : M.map((e) => Z(e))
+                                null == M ? void 0 : M.map((e) => v(e))
                             ]
                         }),
                         (0, i.jsx)(o.ModalCloseButton, {
                             onClick: n,
-                            className: m.closeButton
+                            className: L.closeButton
                         }),
                         (0, i.jsx)('div', {
-                            className: m.bodyColumnRight,
+                            className: L.bodyColumnRight,
                             children:
-                                null != y &&
                                 null != I &&
+                                null != y &&
                                 (0, i.jsx)(C.Z, {
-                                    avatarDecorationOverride: { asset: y.assetId },
-                                    user: I,
+                                    avatarDecorationOverride: { asset: I.assetId },
+                                    user: y,
                                     guildId: null,
                                     avatarSize: o.AvatarSizes.SIZE_152
                                 })
@@ -87,14 +87,14 @@ function g(e) {
                 }),
                 (0, i.jsx)(_.O3, {
                     children: (0, i.jsx)(o.ModalFooter, {
-                        className: m.modalFooter,
+                        className: L.modalFooter,
                         children: (0, i.jsx)(u.y, {
                             onStepChange: (e) => {
-                                null != I &&
-                                    null != y &&
+                                null != y &&
+                                    null != I &&
                                     p.default.track(j.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
-                                        user_id: I.id,
-                                        reward_sku_id: y.skuId
+                                        user_id: y.id,
+                                        reward_sku_id: I.skuId
                                     }),
                                     t(e);
                             },

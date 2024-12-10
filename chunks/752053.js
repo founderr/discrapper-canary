@@ -1,61 +1,61 @@
-t.d(n, {
+n.d(t, {
     i: function () {
-        return l;
+        return o;
     }
 });
 var i,
-    l,
-    s = t(200651);
-t(192379);
-var a = t(442837),
-    r = t(780384),
-    o = t(481060),
-    d = t(410030),
-    c = t(594174),
-    u = t(388032),
-    h = t(259319),
-    f = t(982240),
-    x = t(533854);
-((i = l || (l = {}))[(i.SHOP_PAGE = 0)] = 'SHOP_PAGE'), (i[(i.GIFT_MODAL = 1)] = 'GIFT_MODAL');
-n.Z = (e) => {
-    let { onRetry: n, errorOrigin: t, errorMessage: i } = e,
-        l = (0, d.ZP)(),
-        C = (0, a.e7)([c.default], () => {
-            let e = c.default.getCurrentUser();
+    o,
+    a = n(200651);
+n(192379);
+var r = n(442837),
+    c = n(780384),
+    d = n(481060),
+    s = n(410030),
+    l = n(594174),
+    f = n(388032),
+    u = n(259319),
+    p = n(982240),
+    _ = n(533854);
+((i = o || (o = {}))[(i.SHOP_PAGE = 0)] = 'SHOP_PAGE'), (i[(i.GIFT_MODAL = 1)] = 'GIFT_MODAL');
+t.Z = (e) => {
+    let { onRetry: t, errorOrigin: n, errorMessage: i } = e,
+        o = (0, s.ZP)(),
+        b = (0, r.e7)([l.default], () => {
+            let e = l.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
-        m = 1 === t ? h.giftModalContainer : h.shopPageContainer,
-        g = 1 === t ? u.intl.string(u.t['+2QBZW']) : u.intl.string(u.t.LuhKs7);
-    return (0, s.jsxs)('div', {
-        className: m,
+        x = 1 === n ? u.giftModalContainer : u.shopPageContainer,
+        g = 1 === n ? f.intl.string(f.t['+2QBZW']) : f.intl.string(f.t.LuhKs7);
+    return (0, a.jsxs)('div', {
+        className: x,
         children: [
-            (0, s.jsx)('img', {
-                className: h.__invalid_loadIssueImg,
-                src: (0, r.wj)(l) ? f : x,
+            (0, a.jsx)('img', {
+                className: u.__invalid_loadIssueImg,
+                src: (0, c.wj)(o) ? p : _,
                 alt: ''
             }),
-            (0, s.jsx)(o.Heading, {
-                className: h.heading1,
+            (0, a.jsx)(d.Heading, {
+                className: u.heading1,
                 variant: 'heading-xl/semibold',
-                children: u.intl.string(u.t['i5SQ7+'])
+                children: f.intl.string(f.t['i5SQ7+'])
             }),
-            (0, s.jsx)(o.Text, {
-                className: h.description,
+            (0, a.jsx)(d.Text, {
+                className: u.description,
                 variant: 'text-md/normal',
                 children: g
             }),
-            C &&
+            b &&
                 null != i &&
-                (0, s.jsx)(o.Text, {
+                (0, a.jsx)(d.Text, {
                     variant: 'text-md/normal',
                     children: 'staff-only debug: ' + i
                 }),
-            (0, s.jsx)(o.Button, {
-                className: h.reload,
-                size: o.Button.Sizes.MEDIUM,
-                color: o.Button.Colors.BRAND,
-                onClick: n,
-                children: u.intl.string(u.t['+hivLS'])
+            (0, a.jsx)(d.Button, {
+                className: u.reload,
+                size: d.Button.Sizes.MEDIUM,
+                color: d.Button.Colors.BRAND,
+                onClick: t,
+                children: f.intl.string(f.t['+hivLS'])
             })
         ]
     });

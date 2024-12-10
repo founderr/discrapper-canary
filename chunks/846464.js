@@ -1,6 +1,6 @@
 n.d(t, {
     q: function () {
-        return m;
+        return L;
     }
 });
 var i = n(200651);
@@ -20,14 +20,14 @@ var l = n(120356),
     f = n(48175),
     _ = n(474936),
     j = n(388032),
-    L = n(82227);
-function m(e) {
+    m = n(82227);
+function L(e) {
     let { handleStepChange: t, handleClose: n, referralTrialOfferId: l } = e,
         { setSelectedSkuId: s, activeSubscription: r, startedPaymentFlowWithPaymentSourcesRef: C, setSelectedPlanId: d, priceOptions: j } = (0, p.usePaymentContext)(),
-        { isGift: L, claimableRewards: m } = (0, c.wD)(),
-        E = L && null != m && m.length > 0,
+        { isGift: m, claimableRewards: L } = (0, c.wD)(),
+        E = m && null != L && L.length > 0,
         S = (0, o.N)(l),
-        y = (0, a.Nx)();
+        I = (0, a.Nx)();
     return (0, i.jsx)(g, {
         selectSku: (e) =>
             (function (e) {
@@ -53,14 +53,14 @@ function m(e) {
                 newSkuId: e,
                 setSelectedSkuId: s,
                 handleStepChange: t,
-                isGift: L,
+                isGift: m,
                 userTrialOffer: S,
                 startedPaymentFlowWithPaymentSources: C.current,
                 setSelectedPlanId: d
             }),
         onClose: n,
-        isGift: L,
-        inOfferExperience: y,
+        isGift: m,
+        inOfferExperience: I,
         priceOptions: j,
         showPromotionalGiftBanner: E
     });
@@ -70,7 +70,7 @@ function g(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(r.ModalHeader, {
-                className: L.skuSelectModalHeader,
+                className: m.skuSelectModalHeader,
                 separator: !1,
                 children: [
                     (0, i.jsx)(r.FormTitle, {
@@ -81,11 +81,11 @@ function g(e) {
                 ]
             }),
             (0, i.jsxs)(r.ModalContent, {
-                className: s()(L.skuSelectModalContent, { [L.modalPadding]: a }),
+                className: s()(m.skuSelectModalContent, { [m.modalPadding]: a }),
                 children: [
                     (0, i.jsx)(C.Z, {
                         fromBoostCancelModal: !1,
-                        className: L.legacyPricingNotice
+                        className: m.legacyPricingNotice
                     }),
                     (0, i.jsx)(d.Z, {
                         onSelectSku: (e) => t((0, u.Wz)(e)),

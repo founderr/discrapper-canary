@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i,
     o,
-    s = n(200651),
-    a = n(192379),
+    a = n(200651),
+    s = n(192379),
     l = n(442837),
     r = n(481060),
     c = n(749210),
@@ -21,13 +21,13 @@ var i,
 t.Z = (e) => {
     let { type: t, guild: i, closePopout: o, ctaRef: g } = e,
         v = (0, d.Dt)(),
-        [b, T] = a.useState(!1),
+        [b, T] = s.useState(!1),
         x = (0, l.e7)([h.Z], () => h.Z.isLurking(i.id), [i.id]);
-    a.useEffect(() => {
+    s.useEffect(() => {
         b && !x && o();
     }, [b, x, o]);
     let _ = null,
-        S = p.intl.string(p.t.d7b1p6);
+        j = p.intl.string(p.t.d7b1p6);
     switch (t) {
         case 0:
             _ = p.intl.string(p.t.Xiwf1d);
@@ -47,38 +47,38 @@ t.Z = (e) => {
             T(!1);
         }
     };
-    return (0, s.jsxs)(r.Dialog, {
+    return (0, a.jsxs)(r.Dialog, {
         className: f.container,
         'aria-labelledby': v,
         children: [
-            (0, s.jsx)('img', {
+            (0, a.jsx)('img', {
                 alt: '',
                 className: f.image,
                 src: n(64395)
             }),
-            (0, s.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 className: f.content,
                 children: [
-                    (0, s.jsx)(r.Heading, {
+                    (0, a.jsx)(r.Heading, {
                         variant: 'heading-md/semibold',
                         id: v,
                         children: _
                     }),
-                    (0, s.jsx)(r.Text, {
+                    (0, a.jsx)(r.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: S
+                        children: j
                     }),
-                    (0, s.jsxs)('div', {
+                    (0, a.jsxs)('div', {
                         className: f.buttonContainer,
                         children: [
-                            (0, s.jsx)(r.Button, {
+                            (0, a.jsx)(r.Button, {
                                 buttonRef: g,
                                 onClick: C,
                                 submitting: b,
                                 children: p.intl.string(p.t['9VLmlZ'])
                             }),
-                            (0, s.jsx)(r.Button, {
+                            (0, a.jsx)(r.Button, {
                                 onClick: o,
                                 look: r.Button.Looks.BLANK,
                                 className: f.cancel,

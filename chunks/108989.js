@@ -9,8 +9,8 @@ var i = n(200651),
     a = n(703533);
 let r = [n(123353)],
     o = ['#FFFFFF'],
-    s = 1000 / 60,
-    u = {
+    u = 1000 / 60,
+    s = {
         velocity: {
             type: 'static-random',
             minValue: {
@@ -64,13 +64,13 @@ function c(e) {
         [_, m] = l.useState(null),
         [L, S] = l.useState(null),
         p = (0, a.uR)(L, _),
-        E = l.useMemo(() => new a.qA({ wind: c }), [c]),
-        T = l.useCallback(() => {
+        T = l.useMemo(() => new a.qA({ wind: c }), [c]),
+        E = l.useCallback(() => {
             let e = null == L ? void 0 : L.getCanvas();
             if (null == e) return;
             let t = e.getBoundingClientRect();
             p.createConfetti({
-                ...u,
+                ...s,
                 ...C,
                 position: {
                     type: 'static-random',
@@ -87,15 +87,15 @@ function c(e) {
         }, [p, L, C]);
     return (
         l.useEffect(() => {
-            let e = n ? setInterval(T, s) : null;
+            let e = n ? setInterval(E, u) : null;
             return () => clearInterval(e);
-        }, [n, T]),
+        }, [n, E]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(a.O_, {
                     ref: S,
                     className: t,
-                    environment: E
+                    environment: T
                 }),
                 (0, i.jsx)(a.Ji, {
                     ref: m,

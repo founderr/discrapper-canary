@@ -1,8 +1,8 @@
 t(47120);
 var u,
     r,
-    l,
     i,
+    l,
     o = t(512722),
     a = t.n(o),
     d = t(442837),
@@ -10,62 +10,62 @@ var u,
     s = t(344185),
     f = t(592125),
     g = t(306680);
-let m = {},
-    Z = new Set();
-class h extends (u = d.ZP.Store) {
+let Z = {},
+    m = new Set();
+class v extends (u = d.ZP.Store) {
     initialize() {
         this.waitFor(s.Z, f.Z, g.ZP);
     }
     getCount(e) {
-        return m[e];
+        return Z[e];
     }
     getThreadIdsMissingCounts(e, n) {
-        return a()(s.Z.hasLoaded(e), 'must wait for THREAD_LIST_SYNC before calling this'), n.filter((e) => !(e in m) && !Z.has(e));
+        return a()(s.Z.hasLoaded(e), 'must wait for THREAD_LIST_SYNC before calling this'), n.filter((e) => !(e in Z) && !m.has(e));
     }
 }
-(i = 'ForumPostUnreadCountStore'),
-    (l = 'displayName') in (r = h)
-        ? Object.defineProperty(r, l, {
-              value: i,
+(l = 'ForumPostUnreadCountStore'),
+    (i = 'displayName') in (r = v)
+        ? Object.defineProperty(r, i, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[l] = i),
-    (n.Z = new h(c.Z, {
+        : (r[i] = l),
+    (n.Z = new v(c.Z, {
         CONNECTION_OPEN: function () {
-            (m = {}), (Z = new Set());
+            (Z = {}), (m = new Set());
         },
         THREAD_CREATE: function (e) {
             let { channel: n, isNewlyCreated: t } = e;
             if (!t || !s.Z.hasLoaded(n.guild_id)) return !1;
-            m[n.id] = 0;
+            Z[n.id] = 0;
         },
         MESSAGE_CREATE: function (e) {
             let { channelId: n, optimistic: t, isPushNotification: u } = e;
-            if (t || u || !(n in m)) return !1;
-            m[n]++;
+            if (t || u || !(n in Z)) return !1;
+            Z[n]++;
         },
         FORUM_UNREADS: function (e) {
             let { threads: n } = e;
             n.forEach((e) => {
-                null != e.count && (m[e.threadId] = e.count);
+                null != e.count && (Z[e.threadId] = e.count);
             });
         },
         MESSAGE_ACK: function (e) {
             let { channelId: n } = e;
-            if (!(n in m)) {
+            if (!(n in Z)) {
                 let e = f.Z.getChannel(n),
                     t = f.Z.getChannel(null == e ? void 0 : e.parent_id);
                 if (!(null == t ? void 0 : t.isForumLikeChannel())) return !1;
             }
-            m[n] = g.ZP.getUnreadCount(n);
+            Z[n] = g.ZP.getUnreadCount(n);
         },
         REQUEST_FORUM_UNREADS: function (e) {
             let { threads: n } = e;
             n.forEach((e) => {
                 let { threadId: n } = e;
-                return Z.add(n);
+                return m.add(n);
             });
         }
     }));

@@ -13,8 +13,8 @@ var l = n(200651),
     c = n(420660),
     d = n(429589),
     m = n(757182),
-    h = n(706454),
-    x = n(374129),
+    x = n(706454),
+    h = n(374129),
     C = n(639351),
     p = n(823379),
     v = n(379357),
@@ -26,8 +26,8 @@ var l = n(200651),
     P = n(31074),
     L = n(206295),
     T = n(91140),
-    N = n(297781),
-    y = n(591853),
+    y = n(297781),
+    N = n(591853),
     _ = n(410441),
     A = n(797342),
     E = n(981631),
@@ -40,14 +40,14 @@ let R = {
     [i.z.IOS]: null,
     [i.z.ANDROID]: null,
     [i.z.XBOX]: C.Z,
-    [i.z.PLAYSTATION]: x.Z
+    [i.z.PLAYSTATION]: h.Z
 };
 t.Z = (e) => {
-    let { channel: t, entry: n, disableGameProfileLinks: x, onReaction: C, onVoiceChannelPreview: M, onUserPopoutClosed: k, trackRankingItemInteraction: w } = e,
+    let { channel: t, entry: n, disableGameProfileLinks: h, onReaction: C, onVoiceChannelPreview: M, onUserPopoutClosed: k, trackRankingItemInteraction: w } = e,
         { largeImage: O } = (0, v.rv)({ entry: n }),
         { user: b, details: H, appName: V, activity: B } = (0, A.n)(n),
         { primaryColor: D, secondaryColor: U } = (0, L.Z)(null == O ? void 0 : O.src),
-        z = (0, r.e7)([h.default], () => h.default.locale),
+        z = (0, r.e7)([x.default], () => x.default.locale),
         { streamPreviewUrl: G, stream: Y } = (0, f.Z)(n),
         { displayParticipants: W, participant1: q, participant2: F, numOtherParticipants: J } = (0, g.Z)(n, 3),
         X = n.extra.platform,
@@ -79,13 +79,13 @@ t.Z = (e) => {
             [null == O ? void 0 : O.src, t, W, n, z, J, q, F, D, U, b]
         );
     if (null == b) return null;
-    let et = (0, l.jsx)(N.Gk, {
-            location: null == G ? N.Gt.POPOUT : N.Gt.STREAMING_POPOUT,
+    let et = (0, l.jsx)(y.Gk, {
+            location: null == G ? y.Gt.POPOUT : y.Gt.STREAMING_POPOUT,
             children: T.W.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
         }),
         en =
             null == G
-                ? (0, l.jsx)(y.wG, {
+                ? (0, l.jsx)(N.wG, {
                       channel: t,
                       headerIcons:
                           null == K
@@ -100,11 +100,11 @@ t.Z = (e) => {
                       subtitle: H,
                       badges: et,
                       entry: n,
-                      disableGameProfileLinks: x,
+                      disableGameProfileLinks: h,
                       onUserPopoutClosed: k,
                       trackRankingItemInteraction: w
                   })
-                : (0, l.jsx)(y.jL, {
+                : (0, l.jsx)(N.jL, {
                       channel: t,
                       streamPreviewSrc: G,
                       title: n.extra.game_name,
@@ -122,7 +122,7 @@ t.Z = (e) => {
                       activity: B,
                       user: b,
                       ButtonComponent: (e) =>
-                          (0, l.jsx)(y.Ll, {
+                          (0, l.jsx)(N.Ll, {
                               IconComponent: o.GameControllerIcon,
                               ...e
                           })
@@ -134,18 +134,18 @@ t.Z = (e) => {
                 ? (0, l.jsx)(m.Z, {
                       activity: B,
                       ButtonComponent: (e) =>
-                          (0, l.jsx)(y.Ll, {
+                          (0, l.jsx)(N.Ll, {
                               IconComponent: o.EyeIcon,
                               ...e
                           })
                   })
                 : null
         ].filter(p.lm);
-    return (0, l.jsxs)(y.yR, {
+    return (0, l.jsxs)(N.yR, {
         children: [
             en,
-            (0, l.jsx)(y.St, {
-                children: (0, l.jsx)(y.WT, {
+            (0, l.jsx)(N.St, {
+                children: (0, l.jsx)(N.WT, {
                     onReaction: C,
                     onVoiceChannelPreview: M,
                     user: b,

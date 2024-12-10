@@ -10,8 +10,8 @@ n.r(t),
 var i = n(200651);
 n(192379);
 var o = n(481060),
-    s = n(230711),
-    a = n(104494),
+    a = n(230711),
+    s = n(104494),
     l = n(639119),
     r = n(790527),
     c = n(474936),
@@ -24,11 +24,11 @@ function p(e) {
     let { onClose: o, analyticsSource: p, ...f } = e,
         g = u.intl.format(u.t['JmbS+f'], {
             onClick: () => {
-                s.Z.open(d.oAB.PREMIUM), o();
+                a.Z.open(d.oAB.PREMIUM), o();
             }
         }),
         v = (0, l.N)(),
-        b = (0, a.Ng)(),
+        b = (0, s.Ng)(),
         T = null != v || null != b;
     return (0, i.jsx)(r.Z, {
         artURL: m,

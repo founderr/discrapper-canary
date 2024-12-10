@@ -15,7 +15,7 @@ var i = n(100527),
 function d(e) {
     let { user: t, entry: n, className: d, onClose: f, hideContextMenu: _ = !1 } = e,
         { analyticsLocations: p } = (0, a.ZP)(i.Z.USER_PROFILE_RECENT_ACTIVITY_CARD);
-    return (0, s.LP)(n)
+    return (0, s.Rh)(n)
         ? (0, r.jsx)(a.Gt, {
               value: p,
               children: (0, r.jsx)(l.Z, {

@@ -9,8 +9,8 @@ var l = n(200651),
     c = n(5192),
     d = n(591759),
     m = n(379357),
-    h = n(561308),
-    x = n(685270),
+    x = n(561308),
+    h = n(685270),
     C = n(31074),
     p = n(206295),
     v = n(335326),
@@ -38,27 +38,27 @@ let P = (e, t, n) => {
         });
 t.Z = (e) => {
     let { channel: t, entry: n, onReaction: c, onVoiceChannelPreview: T } = e,
-        N = (0, i.e7)([s.default], () => s.default.getUser(n.author_id)),
-        { largeImage: y } = (0, m.rv)({ entry: n }),
-        { primaryColor: _, secondaryColor: A } = (0, p.Z)(null == y ? void 0 : y.src),
+        y = (0, i.e7)([s.default], () => s.default.getUser(n.author_id)),
+        { largeImage: N } = (0, m.rv)({ entry: n }),
+        { primaryColor: _, secondaryColor: A } = (0, p.Z)(null == N ? void 0 : N.src),
         E = (0, i.e7)([o.default], () => o.default.locale),
         S = (0, C.Z)(j.ABu.CRUNCHYROLL),
-        R = (0, h.ap)(n.extra.media_assets_large_text),
+        R = (0, x.ap)(n.extra.media_assets_large_text),
         M = a.useCallback(
             (e) => {
-                if (null != N && (null == y ? void 0 : y.src) != null)
-                    return (0, x.B)({
+                if (null != y && (null == N ? void 0 : N.src) != null)
+                    return (0, h.B)({
                         entry: n,
-                        mediaImageSrc: null == y ? void 0 : y.src,
-                        avatarSrc: N.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
-                        description: P(n, t, N),
-                        timestamp: (0, h.yh)(n, E),
+                        mediaImageSrc: null == N ? void 0 : N.src,
+                        avatarSrc: y.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
+                        description: P(n, t, y),
+                        timestamp: (0, x.yh)(n, E),
                         episodeDescription: R,
                         colors: [_, A],
                         channelId: e
                     });
             },
-            [t, n, R, E, null == y ? void 0 : y.src, _, A, N]
+            [t, n, R, E, null == N ? void 0 : N.src, _, A, y]
         ),
         k = () => {
             if (null == n.extra.url) return;
@@ -69,14 +69,14 @@ t.Z = (e) => {
                     trusted: !1
                 });
         };
-    return null == N
+    return null == y
         ? null
         : (0, l.jsxs)(f.yR, {
               children: [
                   (0, l.jsx)(f.wG, {
                       channel: t,
                       entry: n,
-                      userDescription: (0, h.kr)(n) ? Z.t['LH+Z39'] : Z.t.YuKgmp,
+                      userDescription: (0, x.kr)(n) ? Z.t['LH+Z39'] : Z.t.YuKgmp,
                       title: n.extra.media_title,
                       subtitle: n.extra.media_subtitle,
                       headerIcons: (0, l.jsx)(I.Z, {
@@ -95,10 +95,10 @@ t.Z = (e) => {
                       children: (0, l.jsx)(f.WT, {
                           onReaction: c,
                           onVoiceChannelPreview: T,
-                          user: N,
+                          user: y,
                           channel: t,
                           generateReactionImage: M,
-                          reactionImageAltText: L(n, N),
+                          reactionImageAltText: L(n, y),
                           entry: n
                       })
                   })

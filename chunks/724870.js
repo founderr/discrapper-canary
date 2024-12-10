@@ -24,7 +24,7 @@ function p(n) {
         async () => {
             let { PaymentContextProvider: n } = await Promise.resolve().then(e.bind(e, 563132)),
                 u = (await Promise.all([e.e('52249'), e.e('26182'), e.e('32776'), e.e('62347')]).then(e.bind(e, 405083))).default,
-                { getApplicationPaymentSteps: f } = await Promise.all([e.e('77298'), e.e('23357'), e.e('12013'), e.e('68956'), e.e('26182'), e.e('95900'), e.e('52808')]).then(e.bind(e, 759386)),
+                { getApplicationPaymentSteps: f } = await Promise.all([e.e('77298'), e.e('23357'), e.e('12013'), e.e('68956'), e.e('26182'), e.e('95900'), e.e('34958')]).then(e.bind(e, 759386)),
                 Z = f({
                     guildId: v,
                     showBenefitsFirst: I

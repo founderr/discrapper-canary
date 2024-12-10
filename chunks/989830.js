@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return l;
     }
 });
-var i = n(442837),
-    o = n(314897),
-    s = n(351780),
-    a = n(843693);
-function l(e, t) {
+var r = n(442837),
+    i = n(314897),
+    a = n(351780),
+    s = n(843693);
+function o(e, t) {
     return e === t || ((null == e ? void 0 : e.channelId) === (null == t ? void 0 : t.channelId) && (null == e ? void 0 : e.value) === (null == t ? void 0 : t.value) && (null == e ? void 0 : e.multiplier) === (null == t ? void 0 : t.multiplier) && !0);
 }
-function r(e) {
-    let t = (0, i.e7)([s.Z], () => !!s.Z.isEnabled() && s.Z.combosEnabled);
-    return (0, i.e7)([a.ZP, o.default], () => (t ? a.ZP.getUserCombo(o.default.getId(), e) : void 0), [e, t], l);
+function l(e) {
+    let t = (0, r.e7)([a.Z], () => !!a.Z.isEnabled() && a.Z.combosEnabled);
+    return (0, r.e7)([s.ZP, i.default], () => (t ? s.ZP.getUserCombo(i.default.getId(), e) : void 0), [e, t], o);
 }

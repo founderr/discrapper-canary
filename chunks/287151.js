@@ -6,18 +6,18 @@ n.d(t, {
         return er;
     },
     op: function () {
-        return es;
+        return ea;
     },
     y4: function () {
-        return ea;
+        return es;
     }
 }),
     n(47120);
 var i,
     o = n(200651),
-    s = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    a = n(192379),
+    s = n(120356),
+    l = n.n(s),
     r = n(772848),
     c = n(748780),
     d = n(866442),
@@ -32,29 +32,29 @@ var i,
     T = n(436774),
     x = n(98474),
     _ = n(339085),
-    S = n(906411),
+    j = n(906411),
     C = n(56314),
-    I = n(231053),
-    j = n(944386),
-    E = n(305325),
-    R = n(33154),
+    S = n(231053),
+    E = n(944386),
+    R = n(305325),
+    I = n(33154),
     N = n(692147),
     Z = n(197115),
     y = n(659215),
     A = n(222677),
     O = n(995774),
     M = n(695346),
-    w = n(592125),
-    P = n(430824),
+    P = n(592125),
+    w = n(430824),
     L = n(542578),
     k = n(914010),
     U = n(594174),
     B = n(451478),
-    D = n(626135),
-    F = n(74538),
+    F = n(626135),
+    D = n(74538),
     V = n(960020),
-    H = n(566006),
-    G = n(886132),
+    G = n(566006),
+    H = n(886132),
     W = n(183023),
     z = n(524444),
     K = n(89729),
@@ -81,7 +81,7 @@ function ei(e, t, n) {
     );
 }
 let eo = 9;
-function es(e, t, n) {
+function ea(e, t, n) {
     (0, m.openModal)((e) =>
         (0, o.jsx)(f.default, {
             ...e,
@@ -90,10 +90,10 @@ function es(e, t, n) {
         })
     );
 }
-function ea(e, t, n) {
-    return (n === H.O.BURST && t) || (n === H.O.NORMAL && e);
+function es(e, t, n) {
+    return (n === G.O.BURST && t) || (n === G.O.NORMAL && e);
 }
-class el extends (i = s.PureComponent) {
+class el extends (i = a.PureComponent) {
     componentWillAppear(e) {
         this.animateIn(e);
     }
@@ -123,27 +123,27 @@ class el extends (i = s.PureComponent) {
     }
     render() {
         let e, t;
-        let { count: n, burst_count: i, colors: s, isBurstReaction: a, hideCount: r, emoji: u, readOnly: h, isLurking: f, isGuest: g, isPendingMember: b, className: T, useChatFontScaling: _, message: S, hideEmoji: C, animationStartPosition: I, emojiSize: j } = this.props,
-            { shouldShowTooltip: E, tooltipTextAria: R, reactionRef: Z, tooltipPositionKey: y } = this.state,
+        let { count: n, burst_count: i, colors: a, isBurstReaction: s, hideCount: r, emoji: u, readOnly: h, isLurking: f, isGuest: g, isPendingMember: b, className: T, useChatFontScaling: _, message: j, hideEmoji: C, animationStartPosition: S, emojiSize: E } = this.props,
+            { shouldShowTooltip: R, tooltipTextAria: I, reactionRef: Z, tooltipPositionKey: y } = this.state,
             A = _ ? et : ee,
             M = {
                 transform: [{ scale: this.scale }],
                 opacity: this.opacity
             },
-            w = a ? i : n;
-        if (a && null != s) {
-            var P;
-            let { accentColor: n, backgroundColor: i, opacity: o } = s,
-                a = null !== (P = (0, d.wK)(null != i ? i : '', o)) && void 0 !== P ? P : '';
-            this.isMe() && (M.borderColor = i), (M.background = a), (e = n), (t = n);
+            P = s ? i : n;
+        if (s && null != a) {
+            var w;
+            let { accentColor: n, backgroundColor: i, opacity: o } = a,
+                s = null !== (w = (0, d.wK)(null != i ? i : '', o)) && void 0 !== w ? w : '';
+            this.isMe() && (M.borderColor = i), (M.background = s), (e = n), (t = n);
         }
         let L = null == Z ? void 0 : Z.getBoundingClientRect(),
-            k = null != I && null != L,
-            U = null == I;
+            k = null != S && null != L,
+            U = null == S;
         return (0, o.jsx)(o.Fragment, {
             children: (0, o.jsx)(m.Popout, {
-                shouldShow: E,
-                'aria-label': null != R && R,
+                shouldShow: R,
+                'aria-label': null != I && I,
                 renderPopout: this.renderTooltip,
                 nudgeAlignIntoViewport: !0,
                 position: 'top',
@@ -158,7 +158,7 @@ class el extends (i = s.PureComponent) {
                             className: l()(A.reaction, T, {
                                 [A.reactionMe]: this.isMe(),
                                 [A.reactionReadOnly]: h && !f && !b && !g,
-                                [A.shakeReaction]: C && null == I
+                                [A.shakeReaction]: C && null == S
                             }),
                             style: M,
                             children: (0, o.jsx)(m.Popout, {
@@ -170,34 +170,34 @@ class el extends (i = s.PureComponent) {
                                         className: A.reactionInner,
                                         onClick: this.handleClick,
                                         'aria-disabled': h,
-                                        'aria-label': (0, O.iD)(this.isMe(), w, u, a),
+                                        'aria-label': (0, O.iD)(this.isMe(), P, u, s),
                                         'aria-pressed': this.isMe(),
                                         children: [
                                             (0, o.jsx)('div', {
-                                                className: l()({ [A.burstGlow]: a }),
+                                                className: l()({ [A.burstGlow]: s }),
                                                 style: { boxShadow: '0 0 16px '.concat(t) }
                                             }),
                                             (0, o.jsxs)('div', {
                                                 children: [
-                                                    a
+                                                    s
                                                         ? (0, o.jsxs)(o.Fragment, {
                                                               children: [
                                                                   k &&
                                                                       (0, o.jsx)(x.Z, {
-                                                                          messageId: S.id,
+                                                                          messageId: j.id,
                                                                           emoji: u,
-                                                                          startPosition: I,
+                                                                          startPosition: S,
                                                                           targetPosition: L
                                                                       }),
                                                                   U &&
                                                                       (0, o.jsx)(X.Z, {
                                                                           count: i,
                                                                           emoji: u,
-                                                                          channelId: S.getChannelId(),
-                                                                          messageId: S.id,
+                                                                          channelId: j.getChannelId(),
+                                                                          messageId: j.id,
                                                                           useChatFontScaling: _,
                                                                           color: t,
-                                                                          emojiSize: 'reactionLarge' === j ? J.M.NORMAL_NEW : J.M.NORMAL
+                                                                          emojiSize: 'reactionLarge' === E ? J.M.NORMAL_NEW : J.M.NORMAL
                                                                       })
                                                               ]
                                                           })
@@ -206,7 +206,7 @@ class el extends (i = s.PureComponent) {
                                                         className: l()({ [A.hideEmoji]: C }),
                                                         emojiId: u.id,
                                                         emojiName: u.name,
-                                                        size: j,
+                                                        size: E,
                                                         animated: u.animated
                                                     })
                                                 ]
@@ -215,12 +215,12 @@ class el extends (i = s.PureComponent) {
                                                 ? null
                                                 : (0, o.jsx)(v.Z, {
                                                       className: A.reactionCount,
-                                                      value: w,
+                                                      value: P,
                                                       color: e,
                                                       digitWidth: eo
                                                   }),
                                             (0, o.jsx)(N.Z, {
-                                                count: w,
+                                                count: P,
                                                 reactionRef: Z
                                             })
                                         ]
@@ -239,8 +239,8 @@ class el extends (i = s.PureComponent) {
             ei(this, 'opacity', new c.Z.Value(1)),
             ei(this, 'timeout', new h.V7()),
             ei(this, 'hideTimeout', new h.V7()),
-            ei(this, 'ctaRef', s.createRef()),
-            ei(this, 'type', H.O.NORMAL),
+            ei(this, 'ctaRef', a.createRef()),
+            ei(this, 'type', G.O.NORMAL),
             ei(this, 'colors', {
                 backgroundColor: void 0,
                 borderColor: void 0,
@@ -258,9 +258,9 @@ class el extends (i = s.PureComponent) {
             ei(this, 'userCanBurstReact', () => this.props.userHasPremium),
             ei(this, 'handleClick', (e) => {
                 e.stopPropagation();
-                let { message: t, emoji: n, readOnly: i, isBurstReaction: o, isPendingMember: s, isLurking: a, isGuest: l, isForumToolbar: r } = this.props,
-                    c = w.Z.getChannel(t.getChannelId());
-                if (a || l) {
+                let { message: t, emoji: n, readOnly: i, isBurstReaction: o, isPendingMember: a, isLurking: s, isGuest: l, isForumToolbar: r } = this.props,
+                    c = P.Z.getChannel(t.getChannelId());
+                if (s || l) {
                     var d, u;
                     null === (u = this.ctaRef) || void 0 === u || null === (d = u.current) || void 0 === d || d.focus();
                     return;
@@ -278,7 +278,7 @@ class el extends (i = s.PureComponent) {
                     });
                     return;
                 }
-                s
+                a
                     ? this.handleShowVerificationGate()
                     : !i &&
                       (this.isMe()
@@ -292,12 +292,12 @@ class el extends (i = s.PureComponent) {
                           : (0, A.rU)(h, t.id, n, m, { burst: o }));
             }),
             ei(this, 'handleEnter', (e) => {
-                let { emoji: t, message: n, type: i, reduceMotion: o, animateEmoji: s, autoUnfurlReactionTooltip: a } = this.props,
-                    l = i === H.O.BURST;
+                let { emoji: t, message: n, type: i, reduceMotion: o, animateEmoji: a, autoUnfurlReactionTooltip: s } = this.props,
+                    l = i === G.O.BURST;
                 l &&
                     !this.isReactionEventActive &&
                     !o &&
-                    s &&
+                    a &&
                     (0, A.T6)({
                         channelId: n.getChannelId(),
                         messageId: n.id,
@@ -306,7 +306,7 @@ class el extends (i = s.PureComponent) {
                     }),
                     (this.isReactionEventActive = !0),
                     (this.isKeyboardNavigation = 'focus' === e.type),
-                    this.timeout.start(l ? 750 : a ? 200 : 500, this.showTooltip, !1);
+                    this.timeout.start(l ? 750 : s ? 200 : 500, this.showTooltip, !1);
             }),
             ei(this, 'handleEnterTooltip', () => {
                 (this.isReactionEventActive = !0), this.handleShowTooltip();
@@ -321,11 +321,11 @@ class el extends (i = s.PureComponent) {
                 (this.isReactionEventActive = !1), (this.isKeyboardNavigation = !1), this.timeout.stop(), L.Z.removeChangeListener(this.updateTooltipText), this.hideTimeout.start(200, this.hideTooltip, !1);
             }),
             ei(this, 'hideTooltip', () => {
-                this.setState({ shouldShowTooltip: !1 }), this.hasShownTooltip && D.default.track(Y.rMx.CLOSE_POPOUT, { nonce: this.nonce });
+                this.setState({ shouldShowTooltip: !1 }), this.hasShownTooltip && F.default.track(Y.rMx.CLOSE_POPOUT, { nonce: this.nonce });
             }),
             ei(this, 'isMe', () => {
                 let { me: e, me_burst: t, type: n } = this.props;
-                return ea(e, t, n);
+                return es(e, t, n);
             }),
             ei(this, 'updateTooltipText', () => {
                 let { message: e, emoji: t, type: n } = this.props,
@@ -340,13 +340,13 @@ class el extends (i = s.PureComponent) {
             ei(this, 'renderLurkerModeUpsellPopout', (e) => {
                 let { closePopout: t } = e,
                     { message: n, isLurking: i } = this.props,
-                    s = w.Z.getChannel(n.getChannelId()),
-                    a = P.Z.getGuild(null == s ? void 0 : s.getGuildId());
-                return i && null != a
-                    ? (0, o.jsx)(R.Z, {
+                    a = P.Z.getChannel(n.getChannelId()),
+                    s = w.Z.getGuild(null == a ? void 0 : a.getGuildId());
+                return i && null != s
+                    ? (0, o.jsx)(I.Z, {
                           ctaRef: this.ctaRef,
-                          type: R.s.REACTIONS,
-                          guild: a,
+                          type: I.s.REACTIONS,
+                          guild: s,
                           closePopout: t
                       })
                     : (0, o.jsx)(o.Fragment, {});
@@ -364,28 +364,28 @@ class el extends (i = s.PureComponent) {
                 );
             }),
             ei(this, 'renderTooltip', () => {
-                let { emoji: e, message: t, type: n, me_burst: i, isBurstReaction: s = !1 } = this.props,
-                    { tooltipText: a } = this.state,
+                let { emoji: e, message: t, type: n, me_burst: i, isBurstReaction: a = !1 } = this.props,
+                    { tooltipText: s } = this.state,
                     r = (n) => {
-                        let i = w.Z.getChannel(t.getChannelId());
+                        let i = P.Z.getChannel(t.getChannelId());
                         if (null != i)
                             this.handleLeave(),
-                                es(i, t, {
+                                ea(i, t, {
                                     emoji: e,
-                                    reactionType: s ? H.O.BURST : H.O.NORMAL
+                                    reactionType: a ? G.O.BURST : G.O.NORMAL
                                 });
                     },
-                    c = 'string' == typeof a ? '' === a.trim() : null == a,
+                    c = 'string' == typeof s ? '' === s.trim() : null == s,
                     d = () =>
-                        c || null == a
+                        c || null == s
                             ? null
                             : (0, o.jsx)(m.Text, {
                                   variant: 'text-sm/normal',
                                   className: en.reactionTooltipText,
-                                  'aria-label': a,
-                                  children: a
+                                  'aria-label': s,
+                                  children: s
                               });
-                return n === H.O.BURST
+                return n === G.O.BURST
                     ? (0, o.jsxs)('div', {
                           className: en.reactionTooltip,
                           onMouseEnter: this.handleEnterTooltip,
@@ -414,7 +414,7 @@ class el extends (i = s.PureComponent) {
                                       return (0, o.jsxs)('div', {
                                           className: l()(en.burstReactionTooltipPrompt, en.burstReactionTooltipSpacer),
                                           children: [
-                                              (0, F.I5)(e) &&
+                                              (0, D.I5)(e) &&
                                                   (0, o.jsx)(m.NitroWheelIcon, {
                                                       size: 'md',
                                                       className: en.burstReactionTooltipNitroIcon,
@@ -503,9 +503,9 @@ class el extends (i = s.PureComponent) {
             ei(this, 'handleShowVerificationGate', () => {
                 let { message: e, isPendingMember: t } = this.props;
                 if (!t) return null;
-                let n = w.Z.getChannel(e.getChannelId()),
-                    i = P.Z.getGuild(null == n ? void 0 : n.getGuildId());
-                null != i && (0, E.hk)(i.id);
+                let n = P.Z.getChannel(e.getChannelId()),
+                    i = w.Z.getGuild(null == n ? void 0 : n.getGuildId());
+                null != i && (0, R.hk)(i.id);
             }),
             ei(this, 'handleSetReactionRef', (e) => {
                 this.setState({ reactionRef: e });
@@ -513,11 +513,11 @@ class el extends (i = s.PureComponent) {
             ei(this, 'trackReactionTooltipViewed', () => {
                 let { emoji: e, message: t, type: n } = this.props,
                     i = U.default.getCurrentUser(),
-                    o = w.Z.getChannel(t.getChannelId()),
-                    s = n === H.O.BURST,
-                    a = (0, F.I5)(i),
-                    l = s ? q.cd.EMOJI_IN_BURST_REACTION_HOVER : q.cd.EMOJI_IN_REACTION_HOVER;
-                s && !this.userCanBurstReact() && !a && (l = q.cd.EMOJI_IN_BURST_REACTION_HOVER_UPSELL),
+                    o = P.Z.getChannel(t.getChannelId()),
+                    a = n === G.O.BURST,
+                    s = (0, D.I5)(i),
+                    l = a ? q.cd.EMOJI_IN_BURST_REACTION_HOVER : q.cd.EMOJI_IN_REACTION_HOVER;
+                a && !this.userCanBurstReact() && !s && (l = q.cd.EMOJI_IN_BURST_REACTION_HOVER_UPSELL),
                     b.ZP.trackWithMetadata(Y.rMx.EXPRESSION_TOOLTIP_VIEWED, {
                         type: l,
                         expression_id: e.id,
@@ -526,11 +526,11 @@ class el extends (i = s.PureComponent) {
                         is_custom: null != e.id,
                         nonce: this.nonce
                     }),
-                    s &&
+                    a &&
                         null != o &&
-                        !a &&
+                        !s &&
                         !this.userCanBurstReact() &&
-                        D.default.track(Y.rMx.PREMIUM_UPSELL_VIEWED, {
+                        F.default.track(Y.rMx.PREMIUM_UPSELL_VIEWED, {
                             type: q.cd.BURST_REACTION_UPSELL,
                             location: {
                                 page: (null == o ? void 0 : o.getGuildId()) != null ? Y.ZY5.GUILD_CHANNEL : Y.ZY5.DM_CHANNEL,
@@ -542,21 +542,21 @@ class el extends (i = s.PureComponent) {
     }
 }
 ei(el, 'defaultProps', { emojiSizeTooltip: 'jumbo' });
-let er = s.memo((e) => {
-        let { type: t, burst_colors: n, message: i, emoji: s } = e,
-            a = t === H.O.BURST,
-            l = (0, C.v)(a && null != n ? n : []),
-            r = (0, u.e7)([V.Z], () => void 0 !== V.Z.getEffectForEmojiId(i.getChannelId(), i.id, s)),
+let er = a.memo((e) => {
+        let { type: t, burst_colors: n, message: i, emoji: a } = e,
+            s = t === G.O.BURST,
+            l = (0, C.v)(s && null != n ? n : []),
+            r = (0, u.e7)([V.Z], () => void 0 !== V.Z.getEffectForEmojiId(i.getChannelId(), i.id, a)),
             c = (0, u.e7)([g.Z], () => g.Z.useReducedMotion),
             d = M.Yk.useSetting(),
             h = U.default.getCurrentUser(),
-            m = (0, F.I5)(h),
-            p = (0, u.e7)([V.Z], () => V.Z.getReactionPickerAnimation(i.id, s.name, s.id)),
-            f = a && (r || null != p);
+            m = (0, D.I5)(h),
+            p = (0, u.e7)([V.Z], () => V.Z.getReactionPickerAnimation(i.id, a.name, a.id)),
+            f = s && (r || null != p);
         return (0, o.jsx)(el, {
             ...e,
             colors: l,
-            isBurstReaction: a,
+            isBurstReaction: s,
             hideEmoji: f,
             userHasPremium: m,
             reduceMotion: c,
@@ -566,35 +566,35 @@ let er = s.memo((e) => {
     }),
     ec = (e) => {
         var t, n, i;
-        let { emojiId: s, expressionSourceGuild: a, hasJoinedExpressionSourceGuild: l, onClose: r, popoutData: c, currentGuildId: d, nonce: u } = e;
-        (0, j.u)({
-            emojiId: s,
+        let { emojiId: a, expressionSourceGuild: s, hasJoinedExpressionSourceGuild: l, onClose: r, popoutData: c, currentGuildId: d, nonce: u } = e;
+        (0, E.u)({
+            emojiId: a,
             currentGuildId: d,
             popoutData: c,
-            emojiSourceGuildId: null == a ? void 0 : a.id,
+            emojiSourceGuildId: null == s ? void 0 : s.id,
             nonce: u
         });
-        let h = null !== (n = null == a ? void 0 : a.isDiscoverable()) && void 0 !== n && n,
-            p = null != a && h,
-            f = (null !== (i = null == a ? void 0 : null === (t = a.emojis) || void 0 === t ? void 0 : t.length) && void 0 !== i ? i : 0) > 1;
+        let h = null !== (n = null == s ? void 0 : s.isDiscoverable()) && void 0 !== n && n,
+            p = null != s && h,
+            f = (null !== (i = null == s ? void 0 : null === (t = s.emojis) || void 0 === t ? void 0 : t.length) && void 0 !== i ? i : 0) > 1;
         return (0, o.jsx)(o.Fragment, {
             children: p
-                ? null == a
+                ? null == s
                     ? null
                     : (0, o.jsxs)(o.Fragment, {
                           children: [
                               (0, o.jsx)('div', {
                                   className: Q.reactionEmojiDetailsUnfurlGuildDetails,
                                   children: (0, o.jsx)(W.Oe, {
-                                      expressionSourceGuild: a,
+                                      expressionSourceGuild: s,
                                       hasJoinedExpressionSourceGuild: l,
-                                      isDisplayingJoinGuildButtonInPopout: c.type === G.$.JOIN_GUILD
+                                      isDisplayingJoinGuildButtonInPopout: c.type === H.$.JOIN_GUILD
                                   })
                               }),
                               f &&
                                   (0, o.jsx)(W.n_, {
-                                      emojiId: s,
-                                      expressionSourceGuild: a,
+                                      emojiId: a,
+                                      expressionSourceGuild: s,
                                       hasJoinedEmojiSourceGuild: l,
                                       onClose: r,
                                       popoutData: c,
@@ -611,27 +611,27 @@ let er = s.memo((e) => {
     },
     ed = (e) => {
         var t;
-        let { emojiId: n, refreshPositionKey: i, onClose: a, nonce: r } = e,
-            { joinedEmojiSourceGuild: c } = (0, u.cj)([_.ZP, P.Z], () => {
+        let { emojiId: n, refreshPositionKey: i, onClose: s, nonce: r } = e,
+            { joinedEmojiSourceGuild: c } = (0, u.cj)([_.ZP, w.Z], () => {
                 let e = _.ZP.getCustomEmojiById(n);
-                return { joinedEmojiSourceGuild: (null == e ? void 0 : e.type) === S.B.GUILD ? P.Z.getGuild(null == e ? void 0 : e.guildId) : void 0 };
+                return { joinedEmojiSourceGuild: (null == e ? void 0 : e.type) === j.B.GUILD ? w.Z.getGuild(null == e ? void 0 : e.guildId) : void 0 };
             }),
-            [d, h] = s.useState(void 0),
-            [p, f] = s.useState(void 0),
-            [g, v] = s.useState(null),
-            [b, T] = s.useState(!1),
-            [x, C] = s.useState(!1),
-            [j, E] = s.useState(!1),
-            R = null != c,
+            [d, h] = a.useState(void 0),
+            [p, f] = a.useState(void 0),
+            [g, v] = a.useState(null),
+            [b, T] = a.useState(!1),
+            [x, C] = a.useState(!1),
+            [E, R] = a.useState(!1),
+            I = null != c,
             N = null !== (t = null == d ? void 0 : d.isDiscoverable()) && void 0 !== t && t,
             Z = k.Z.getGuildId(),
             y = null != Z && (Z === (null == d ? void 0 : d.id) || Z === (null == c ? void 0 : c.id)),
             A = U.default.getCurrentUser(),
-            O = (0, G.a)({
+            O = (0, H.a)({
                 sourceType: g,
                 expressionSourceApplication: null != p ? p : null,
-                isPremium: F.ZP.isPremium(A),
-                hasJoinedEmojiSourceGuild: R,
+                isPremium: D.ZP.isPremium(A),
+                hasJoinedEmojiSourceGuild: I,
                 isDiscoverable: N,
                 emojiComesFromCurrentGuild: y,
                 isUnusableRoleSubscriptionEmoji: !1,
@@ -639,36 +639,36 @@ let er = s.memo((e) => {
                 isRoleSubscriptionEmoji: !1,
                 shouldHideRoleSubscriptionCTA: !1
             });
-        s.useEffect(() => {
-            if (!!b && !j)
+        a.useEffect(() => {
+            if (!!b && !E)
                 (async () => {
                     i(), C(!0);
-                    let e = null != n ? await (0, I.Fi)(n) : null;
+                    let e = null != n ? await (0, S.Fi)(n) : null;
                     if (null != e)
                         switch ((v(e.type), e.type)) {
-                            case I.w6.APPLICATION:
+                            case S.w6.APPLICATION:
                                 f(e.application);
                                 break;
-                            case I.w6.GUILD:
+                            case S.w6.GUILD:
                                 h(e.guild);
                         }
                     else h(null);
-                    C(!1), E(!0), i();
+                    C(!1), R(!0), i();
                 })();
-        }, [n, b, j, i]);
-        if (R) return null;
+        }, [n, b, E, i]);
+        if (I) return null;
         let M = () => {
                 T(!b);
             },
-            w = b && (void 0 !== d || void 0 !== p);
+            P = b && (void 0 !== d || void 0 !== p);
         return (0, o.jsxs)('div', {
             children: [
-                w
+                P
                     ? (0, o.jsxs)(o.Fragment, {
                           children: [
                               (0, o.jsx)('div', { className: Q.reactionEmojiDetailsDivider }),
                               null != O.emojiDescription &&
-                                  O.type !== G.$.UNAVAILABLE &&
+                                  O.type !== H.$.UNAVAILABLE &&
                                   (0, o.jsx)(m.Text, {
                                       variant: 'text-sm/normal',
                                       'aria-label': O.type,
@@ -698,12 +698,12 @@ let er = s.memo((e) => {
                       })(),
                 x
                     ? (0, o.jsx)(z.SE, { className: Q.emojiDetailsLoader })
-                    : w &&
+                    : P &&
                       (0, o.jsx)(ec, {
                           emojiId: n,
                           expressionSourceGuild: d,
-                          hasJoinedExpressionSourceGuild: R,
-                          onClose: a,
+                          hasJoinedExpressionSourceGuild: I,
+                          onClose: s,
                           popoutData: O,
                           currentGuildId: Z,
                           nonce: r

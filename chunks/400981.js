@@ -21,8 +21,8 @@ function h(e) {
         f = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
         _ = (0, l.e7)([r.Z], () => r.Z.useReducedMotion),
         { analyticsLocations: j } = (0, a.ZP)(),
-        L = s.AvatarSizes.SIZE_32,
-        m = (0, o.Z)(null == h ? void 0 : h.assetId, L, !_),
+        m = s.AvatarSizes.SIZE_32,
+        L = (0, o.Z)(null == h ? void 0 : h.assetId, m, !_),
         g = (0, u.Z)(),
         E = null == g ? void 0 : g.giftPurchaseConfirmation;
     return null == n || null == E
@@ -35,9 +35,9 @@ function h(e) {
                       children: [
                           (0, i.jsx)(s.AnimatedAvatar, {
                               'aria-label': null == f ? void 0 : f.username,
-                              size: L,
-                              src: null == f ? void 0 : f.getAvatarURL(void 0, (0, s.getAvatarSize)(L), !_),
-                              avatarDecoration: m
+                              size: m,
+                              src: null == f ? void 0 : f.getAvatarURL(void 0, (0, s.getAvatarSize)(m), !_),
+                              avatarDecoration: L
                           }),
                           (0, i.jsx)(s.Button, {
                               onClick: () => {

@@ -8,8 +8,8 @@ n.d(t, {
 });
 var i,
     o,
-    s = n(200651),
-    a = n(192379),
+    a = n(200651),
+    s = n(192379),
     l = n(120356),
     r = n.n(l),
     c = n(500923),
@@ -30,11 +30,11 @@ let v = async (e) => {
 };
 function b(e) {
     let { className: t, effect: n, onComplete: i, emojiSize: o = 16 } = e,
-        l = a.useRef(null),
+        l = s.useRef(null),
         c = o * p.Vz,
         m = (c + o) / 2;
     return (
-        a.useEffect(() => {
+        s.useEffect(() => {
             let e;
             if (null != n)
                 return (
@@ -68,9 +68,9 @@ function b(e) {
                     }
                 );
         }, [i, n, o]),
-        (0, s.jsx)('div', {
+        (0, a.jsx)('div', {
             className: g.effectsWrapper,
-            children: (0, s.jsx)('div', {
+            children: (0, a.jsx)('div', {
                 className: r()(g.effect, t),
                 style: {
                     transform: 'translateY('.concat(m, 'px)'),
