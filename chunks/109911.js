@@ -4,9 +4,6 @@ n.d(t, {
     },
     XN: function () {
         return c;
-    },
-    jH: function () {
-        return i;
     }
 });
 var r,
@@ -59,30 +56,51 @@ let o = (0, a.B)({
             }
         ]
     });
-((r = i || (i = {}))[(r.UNREADS_AT_TOP = 1)] = 'UNREADS_AT_TOP'), (r[(r.UNREADS_AT_TOP_WITH_BADGE = 2)] = 'UNREADS_AT_TOP_WITH_BADGE');
+((r = i || (i = {}))[(r.NO_BADGE = 1)] = 'NO_BADGE'), (r[(r.RED_BADGE = 2)] = 'RED_BADGE'), (r[(r.BLUE_BADGE = 3)] = 'BLUE_BADGE');
 let u = (0, a.B)({
     kind: 'user',
     id: '2024-10_merge_notifications_tab',
     label: 'Merge notifications tab',
     defaultConfig: {
         enabled: !1,
-        variant: 1
+        tabBadgeVariant: 1,
+        removeHomeMentionBadges: !1
     },
     treatments: [
         {
             id: 1,
-            label: 'Merge notifications tab - have mentions widget on top of ICYMI tab',
+            label: 'Merge notifications tab - no badging changes',
             config: {
                 enabled: !0,
-                variant: 1
+                tabBadgeVariant: 1,
+                removeHomeMentionBadges: !1
             }
         },
         {
             id: 2,
-            label: 'Merge notifications tab - have mentions widget that also moves badging on top of ICYMI tab',
+            label: 'Merge notifications tab - move recent mentions badges to ICYMI',
             config: {
                 enabled: !0,
-                variant: 2
+                tabBadgeVariant: 2,
+                removeHomeMentionBadges: !0
+            }
+        },
+        {
+            id: 3,
+            label: 'Merge notifications tab - duplciate recent mentions tab badges to ICYMI',
+            config: {
+                enabled: !0,
+                tabBadgeVariant: 2,
+                removeHomeMentionBadges: !1
+            }
+        },
+        {
+            id: 4,
+            label: 'Merge notifications tab - blue badge ICYMI tab when there are new recent mentinos',
+            config: {
+                enabled: !0,
+                tabBadgeVariant: 3,
+                removeHomeMentionBadges: !1
             }
         }
     ]
@@ -91,7 +109,11 @@ function c(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         r = s.Z.get('hide_icymi_tab'),
         i = d(t, !1),
-        { enabled: a, variant: o } = u.getCurrentConfig(
+        {
+            enabled: a,
+            tabBadgeVariant: o,
+            removeHomeMentionBadges: l
+        } = u.getCurrentConfig(
             { location: t },
             {
                 autoTrackExposure: n,
@@ -100,7 +122,8 @@ function c(e) {
         );
     return {
         enabled: a && !r && i,
-        variant: o
+        tabBadgeVariant: o,
+        removeHomeMentionBadges: l
     };
 }
 function d(e) {
