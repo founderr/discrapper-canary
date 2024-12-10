@@ -196,13 +196,13 @@ class ed extends (i = r.PureComponent) {
         });
     }
     renderList() {
-        let { guildChannels: e, guild: t, guildBanner: n, hasGuildSubheader: i, selectedGuildId: r } = this.props,
-            o = {};
-        r === el.I_8 && (o['data-favorites'] = !0);
-        let { ref: a, ...s } = this.context,
-            c = 0;
+        let { guildChannels: e, guild: t, guildBanner: n, hasGuildSubheader: i, selectedGuildId: r, isRefreshEnabled: o } = this.props,
+            a = {};
+        r === el.I_8 && (a['data-favorites'] = !0);
+        let { ref: s, ...c } = this.context,
+            u = 0;
         return (
-            null != n ? (c = ei.Q0) : t.hasCommunityInfoSubheader() && !i && (c = ei.JD),
+            null != n ? (u = o ? ei.hl : ei.Q0) : t.hasCommunityInfoSubheader() && !i && (u = ei.JD),
             (0, l.jsx)(d.FocusJumpSection, {
                 children: (t) =>
                     (0, l.jsx)(
@@ -215,7 +215,7 @@ class ed extends (i = r.PureComponent) {
                             sectionHeight: this.getSectionHeight,
                             footerHeight: this.getSectionFooterHeight,
                             rowHeight: this.getRowHeight,
-                            paddingTop: c,
+                            paddingTop: u,
                             paddingBottom: ei.$k,
                             renderSection: this.renderSection,
                             renderFooter: this.renderSectionFooter,
@@ -227,9 +227,9 @@ class ed extends (i = r.PureComponent) {
                             innerAriaLabel: eo.intl.string(eo.t.OGiMXF),
                             innerTag: 'ul',
                             getAnchorId: this.getAnchorId,
-                            ...s,
+                            ...c,
                             ...t,
-                            ...o
+                            ...a
                         },
                         'guild-channels'
                     )
@@ -819,9 +819,11 @@ function ep(e) {
 }
 function em(e) {
     let t = (0, O.Z)(e.guild),
-        n = (0, u.cj)([w.Z], () => w.Z.getGuild(e.guildId, { guildActionRows: t }));
+        n = (0, u.cj)([w.Z], () => w.Z.getGuild(e.guildId, { guildActionRows: t })),
+        i = (0, _.Q3)('GuildChannelList');
     return (0, l.jsx)(eh, {
         ...e,
-        ...n
+        ...n,
+        isRefreshEnabled: i
     });
 }
