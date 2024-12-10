@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     },
     nm: function () {
-        return p;
+        return I;
     },
     pU: function () {
         return A;
@@ -15,8 +15,8 @@ n.d(t, {
     n(47120),
     n(390547);
 var l = n(192379),
-    i = n(106351),
-    a = n(442837),
+    a = n(106351),
+    i = n(442837),
     r = n(933557),
     s = n(987509),
     o = n(926491),
@@ -28,28 +28,28 @@ var l = n(192379),
     _ = n(594174),
     g = n(408433),
     m = n(823379),
-    E = n(981631),
-    I = n(388032);
-function p(e) {
+    p = n(981631),
+    E = n(388032);
+function I(e) {
     let t = e.map(s.hl).find(m.lm),
-        n = (0, a.e7)([d.Z], () => d.Z.getChannel(t), [t]);
+        n = (0, i.e7)([d.Z], () => d.Z.getChannel(t), [t]);
     return l.useMemo(
         () =>
             null != n
                 ? n
                 : (0, u.kt)({
                       id: '1',
-                      type: i.d.DM
+                      type: a.d.DM
                   }),
         [n]
     );
 }
 function S(e, t, n) {
     let l = n instanceof u.Sf;
-    if (t.isNSFW() && !(l && n.isNSFW())) return { label: I.intl.string(I.t.KgPx1N) };
+    if (t.isNSFW() && !(l && n.isNSFW())) return { label: E.intl.string(E.t.KgPx1N) };
     if (l && (0, u.Km)(n.type)) {
-        if ((e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) && !h.Z.can(E.Plq.ATTACH_FILES, n)) return { label: I.intl.string(I.t.P7yvbm) };
-        if ((e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) && !(0, g.eC)(n, h.Z) && !(0, g.En)(e)) return { label: I.intl.string(I.t.Wr4RIS) };
+        if ((e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) && !h.Z.can(p.Plq.ATTACH_FILES, n)) return { label: E.intl.string(E.t.P7yvbm) };
+        if ((e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) && !(0, g.eC)(n, h.Z) && !(0, g.En)(e)) return { label: E.intl.string(E.t.Wr4RIS) };
         let t = [
             ...(0, c.cv)(e),
             ...e.messageSnapshots.flatMap((e) => {
@@ -59,7 +59,7 @@ function S(e, t, n) {
         ];
         if (
             t.length > 0 &&
-            !h.Z.can(E.Plq.USE_EXTERNAL_STICKERS, n) &&
+            !h.Z.can(p.Plq.USE_EXTERNAL_STICKERS, n) &&
             t.some((e) =>
                 (function (e, t) {
                     let n = o.Z.getStickerById(e.id);
@@ -67,15 +67,15 @@ function S(e, t, n) {
                 })(e, n)
             )
         )
-            return { label: I.intl.string(I.t['0Yyrub']) };
-        if ((e.hasFlag(E.iLy.IS_VOICE_MESSAGE) || e.messageSnapshots.some((e) => e.message.hasFlag(E.iLy.IS_VOICE_MESSAGE))) && !h.Z.can(E.Plq.SEND_VOICE_MESSAGES, n)) return { label: I.intl.string(I.t.quj4DQ) };
+            return { label: E.intl.string(E.t['0Yyrub']) };
+        if ((e.hasFlag(p.iLy.IS_VOICE_MESSAGE) || e.messageSnapshots.some((e) => e.message.hasFlag(p.iLy.IS_VOICE_MESSAGE))) && !h.Z.can(p.Plq.SEND_VOICE_MESSAGES, n)) return { label: E.intl.string(E.t.quj4DQ) };
     }
 }
 function A(e, t) {
-    return null != e.rateLimitPerUser && !!(e.rateLimitPerUser > 0) && !(t.can(E.Plq.MANAGE_CHANNELS, e) || t.can(E.Plq.MANAGE_MESSAGES, e));
+    return null != e.rateLimitPerUser && !!(e.rateLimitPerUser > 0) && !(t.can(p.Plq.MANAGE_CHANNELS, e) || t.can(p.Plq.MANAGE_MESSAGES, e));
 }
 function C(e) {
-    let t = (0, a.Wu)(
+    let t = (0, i.Wu)(
         [d.Z, h.Z],
         () =>
             e
@@ -87,5 +87,5 @@ function C(e) {
                 .filter((e) => A(e, h.Z)),
         [e]
     );
-    return (0, a.Wu)([_.default, f.Z], () => t.map((e) => (0, r.F6)(e, _.default, f.Z, !0)), [t]);
+    return (0, i.Wu)([_.default, f.Z], () => t.map((e) => (0, r.F6)(e, _.default, f.Z, !0)), [t]);
 }

@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var l = n(442837),
-    i = n(496675),
-    a = n(408433);
+    a = n(496675),
+    i = n(408433);
 function r(e) {
     var t, n, r;
     let { message: s, channel: o, forwardOptions: c } = e,
@@ -16,7 +16,7 @@ function r(e) {
     null != u ? (f = h.attachments.filter((e) => u.includes(e.id))) : null != d && (f = []);
     let _ = [];
     return (
-        !(0, l.e7)([i.Z], () => null != o && !(0, a.eC)(o, i.Z) && (0, a.En)(s)) && ((_ = h.embeds), null != d ? (_ = h.embeds.filter((e, t) => d.includes(t))) : null != u && (_ = [])),
+        !(0, l.e7)([a.Z], () => null != o && !(0, i.eC)(o, a.Z) && (0, i.En)(s)) && ((_ = h.embeds), null != d ? (_ = h.embeds.filter((e, t) => d.includes(t))) : null != u && (_ = [])),
         (null != d || ('' === h.content && _.length > 0)) && (h = h.set('content', _.map((e) => e.url).join('\n'))),
         '' === h.content && (null === (n = h.embeds[0]) || void 0 === n ? void 0 : n.rawDescription) != null && (h = h.set('content', h.embeds[0].rawDescription)),
         {

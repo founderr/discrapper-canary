@@ -12,24 +12,24 @@ var l = n(481060),
     o = n(868807),
     c = n(388032);
 function d(e) {
-    let { channel: t, buttonSize: n = l.ButtonSizes.TINY, className: d, onReportClick: u, onReportSubmit: h, onMouseEnter: p, onMouseLeave: m } = e,
-        { error: f, loaded: g } = (0, o.a)(t),
-        C = t.isDM() ? t.getRecipientId() : null,
-        x = (0, s.V)(t.id, C);
-    if (null == x && (g || f)) return null;
-    let v = () => {
-        null == h || h(), r.Z.closePrivateChannel(t.id);
+    let { channel: t, buttonSize: n = l.ButtonSizes.TINY, color: d = l.Button.Colors.RED, className: u, onReportClick: h, onReportSubmit: p, onMouseEnter: m, onMouseLeave: f } = e,
+        { error: g, loaded: C } = (0, o.a)(t),
+        x = t.isDM() ? t.getRecipientId() : null,
+        v = (0, s.V)(t.id, x);
+    if (null == v && (C || g)) return null;
+    let _ = () => {
+        null == p || p(), r.Z.closePrivateChannel(t.id);
     };
     return (0, i.jsx)(l.Button, {
-        className: d,
+        className: u,
         size: n,
-        color: l.Button.Colors.RED,
-        disabled: null == x,
+        color: d,
+        disabled: null == v,
         onClick: (e) => {
-            e.stopPropagation(), null == u || u(), null != x && (0, a.WL)(x, v);
+            e.stopPropagation(), null == h || h(), null != v && (0, a.WL)(v, _);
         },
-        onMouseEnter: p,
-        onMouseLeave: m,
+        onMouseEnter: m,
+        onMouseLeave: f,
         children: c.intl.string(c.t['+78Pfn'])
     });
 }
