@@ -2,8 +2,8 @@ var i = n(200651);
 n(192379);
 var l = n(399606),
     r = n(704215),
-    a = n(481060),
-    o = n(239091),
+    o = n(481060),
+    a = n(239091),
     s = n(765585),
     c = n(870569),
     u = n(819640),
@@ -14,9 +14,9 @@ var l = n(399606),
     f = n(39604),
     g = n(981631),
     C = n(388032),
-    _ = n(703757);
-function v(e) {
-    (0, o.jW)(e, async () => {
+    v = n(703757);
+function _(e) {
+    (0, a.jW)(e, async () => {
         let { default: e } = await n.e('21960').then(n.bind(n, 999466));
         return (t) => (0, i.jsx)(e, { ...t });
     });
@@ -29,7 +29,7 @@ let I = (e) => {
         l = (e, t) => {
             e.stopPropagation(), e.preventDefault(), null == t || t();
         };
-    return (0, i.jsx)(a.Popout, {
+    return (0, i.jsx)(o.Popout, {
         shouldShow: !1,
         position: 'top',
         align: 'center',
@@ -39,32 +39,32 @@ let I = (e) => {
                 dismissibleContent: r.z.CLIPS_ONBOARDING_CLIP_BUTTON_COACHMARK,
                 shouldUseHorizontalButtons: !0,
                 inlineArt: !0,
-                artClassName: _.clipsEducationArt,
+                artClassName: v.clipsEducationArt,
                 position: 'top',
                 header: (0, i.jsx)('div', {
-                    className: _.header,
+                    className: v.header,
                     children: C.intl.format(C.t['o+srEx'], {
                         keybind: t,
                         keybindHook: () =>
                             (0, i.jsx)('span', {
-                                className: _.keybindHintKeys,
-                                children: (0, i.jsx)(a.KeyCombo, {
-                                    className: _.keybindShortcut,
+                                className: v.keybindHintKeys,
+                                children: (0, i.jsx)(o.KeyCombo, {
+                                    className: v.keybindShortcut,
                                     shortcut: t
                                 })
                             })
                     })
                 }),
-                headerClassName: _.clipsEducationHeader,
+                headerClassName: v.clipsEducationHeader,
                 body: (0, i.jsx)(i.Fragment, {
-                    children: (0, i.jsx)(a.Text, {
+                    children: (0, i.jsx)(o.Text, {
                         variant: 'text-sm/normal',
                         color: 'always-white',
-                        className: _.bodyText,
+                        className: v.bodyText,
                         children: C.intl.format(C.t.DWeRm5, {
                             keybindHook: () =>
                                 (0, i.jsx)('div', {
-                                    className: _.keyCombo,
+                                    className: v.keyCombo,
                                     children: t
                                 }),
                             keybind: t
@@ -86,17 +86,17 @@ t.Z = () => {
             clipsEnabled: m.Z.getSettings().clipsEnabled,
             isAtMaxSavingClipsOperations: m.Z.getIsAtMaxSaveClipOperations()
         })),
-        o = (0, l.e7)([d.Z], () => d.Z.getKeybindForAction(g.kg4.SAVE_CLIP));
-    if (!(t && n) || null == o || e) return null;
-    let s = h.BB(o.shortcut, !0);
+        a = (0, l.e7)([d.Z], () => d.Z.getKeybindForAction(g.kg4.SAVE_CLIP));
+    if (!(t && n) || null == a || e) return null;
+    let s = h.BB(a.shortcut, !0);
     return (0, i.jsx)(I, {
         keybindString: s,
         children: (0, i.jsx)(c.Z, {
             disabled: r,
-            tooltipText: null != o ? C.intl.formatToPlainString(C.t.HIMcv7, { hotkey: h.BB(null == o ? void 0 : o.shortcut, !0) }) : C.intl.string(C.t.s52pjo),
+            tooltipText: null != a ? C.intl.formatToPlainString(C.t.HIMcv7, { hotkey: h.BB(null == a ? void 0 : a.shortcut, !0) }) : C.intl.string(C.t.s52pjo),
             onClick: x,
-            onContextMenu: v,
-            icon: a.ClipsIcon
+            onContextMenu: _,
+            icon: o.ClipsIcon
         })
     });
 };

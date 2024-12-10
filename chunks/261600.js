@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(399606),
-    a = n(481060),
-    o = n(592125),
+    o = n(481060),
+    a = n(592125),
     s = n(922482),
     c = n(750154),
     u = n(427679),
@@ -19,19 +19,19 @@ function h(e) {
         m = (0, r.e7)([u.Z], () => u.Z.getStageInstanceByChannel(p), [p]),
         f = l.useRef(null),
         g = l.useCallback(() => {
-            let e = o.Z.getChannel(p);
+            let e = a.Z.getChannel(p);
             null != e && s.Cq(e);
         }, [p]),
         C = null !== (n = null == m ? void 0 : m.topic) && void 0 !== n ? n : h.name,
-        _ = d.intl.formatToPlainString(d.t['T+DNAA'], { channel: C });
+        v = d.intl.formatToPlainString(d.t['T+DNAA'], { channel: C });
     return (0, i.jsx)('div', {
         ref: f,
-        children: (0, i.jsx)(a.Clickable, {
+        children: (0, i.jsx)(o.Clickable, {
             onClick: g,
             focusProps: { ringTarget: f },
-            children: (0, i.jsx)(a.Heading, {
+            children: (0, i.jsx)(o.Heading, {
                 variant: 'heading-sm/semibold',
-                children: _
+                children: v
             })
         })
     });

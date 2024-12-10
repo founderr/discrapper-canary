@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(91192),
-    a = n(442837),
-    o = n(433517),
+    o = n(442837),
+    a = n(433517),
     s = n(481060),
     c = n(339149),
     u = n(327943),
@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(944486),
     g = n(594174),
     C = n(431),
-    _ = n(774343),
-    v = n(417363),
+    v = n(774343),
+    _ = n(417363),
     x = n(941128),
     I = n(780570),
     b = n(557177),
@@ -48,9 +48,9 @@ let M = {
 };
 function L(e) {
     let { selected: t, user: n, badge: h, link: m, showProgressBadge: f } = e,
-        g = (0, a.e7)([u.Z], () => u.Z.isEditorOpen),
-        [C, _] = l.useState(!1),
-        [v, x] = l.useState(!1),
+        g = (0, o.e7)([u.Z], () => u.Z.isEditorOpen),
+        [C, v] = l.useState(!1),
+        [_, x] = l.useState(!1),
         [I, E] = l.useState(null),
         [j, L] = l.useState(0),
         w = (0, r.Ie)('home'),
@@ -59,7 +59,7 @@ function L(e) {
         };
     if (null == n) return null;
     let O = P.intl.string(P.t.YUU0RE);
-    v && (O = o.K.get(T.wli) ? P.intl.string(P.t.nkq1l5) : P.intl.string(P.t.Be8Q5O));
+    _ && (O = a.K.get(T.wli) ? P.intl.string(P.t.nkq1l5) : P.intl.string(P.t.Be8Q5O));
     let k = null;
     !t &&
         f &&
@@ -74,14 +74,14 @@ function L(e) {
             upperBadge: k,
             lowerBadgeSize: { width: (0, s.getBadgeWidthForValue)(h) },
             children: (0, i.jsx)(s.NavItem, {
-                onMouseEnter: () => _(!0),
-                onMouseLeave: () => _(!1),
+                onMouseEnter: () => v(!0),
+                onMouseLeave: () => v(!1),
                 onClick: () => {
                     if (!__OVERLAY__ && (null != I && clearTimeout(I), E(setTimeout(D, 500)), L(j + 1), 15 === j)) {
                         D();
-                        let e = !o.K.get(T.wli);
-                        o.K.set(T.wli, e),
-                            e && o.K.set(A.O5, !0),
+                        let e = !a.K.get(T.wli);
+                        a.K.set(T.wli, e),
+                            e && a.K.set(A.O5, !0),
                             e ? (0, b.GN)('discodo') : (0, b.GN)('user_leave'),
                             x(!0),
                             setTimeout(() => {
@@ -132,24 +132,24 @@ function L(e) {
 }
 function w() {
     let e = (0, E.n)(),
-        t = (0, a.e7)([x.Z, v.Z], () => {
-            let e = (0, c.E)(x.Z.activeItems, v.Z),
+        t = (0, o.e7)([x.Z, _.Z], () => {
+            let e = (0, c.E)(x.Z.activeItems, _.Z),
                 { total: t, progress: n } = I.lK(e),
                 i = I.xI(n, t);
             return i > 0 && i < 100;
         }),
-        n = (0, a.e7)([m.Z], () => m.Z.getPendingCount()),
+        n = (0, o.e7)([m.Z], () => m.Z.getPendingCount()),
         l = Object.keys(j.nG),
-        { unviewedTrialCount: r, unviewedDiscountCount: o } = (0, a.cj)([C.Z], () => ({
+        { unviewedTrialCount: r, unviewedDiscountCount: a } = (0, o.cj)([C.Z], () => ({
             unviewedTrialCount: C.Z.getUnacknowledgedOffers(l).length,
             unviewedDiscountCount: C.Z.getUnacknowledgedDiscountOffers().length
         })),
-        s = r + o,
-        u = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
+        s = r + a,
+        u = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
         d = (0, h.q)(),
         p = n + s + d,
         b = p === s && s > 0 && n + d === 0,
-        S = _.Z.getHomeLink();
+        S = v.Z.getHomeLink();
     return (
         b && (S = T.Z5c.APPLICATION_STORE),
         (0, i.jsx)(L, {

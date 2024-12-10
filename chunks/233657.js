@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(704215),
-    a = n(481060),
-    o = n(239091),
+    o = n(481060),
+    a = n(239091),
     s = n(605236),
     c = n(554747),
     u = n(306680),
@@ -19,7 +19,7 @@ var l = n(442837),
     f = n(193877);
 function g(e) {
     let { guild: t, selected: g } = e,
-        { hasUnread: C, mentionCount: _ } = (0, l.cj)(
+        { hasUnread: C, mentionCount: v } = (0, l.cj)(
             [u.ZP],
             () => ({
                 hasUnread: u.ZP.hasUnread(t.id, p.W.GUILD_EVENT),
@@ -27,9 +27,9 @@ function g(e) {
             }),
             [t.id]
         ),
-        v = (0, l.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
+        _ = (0, l.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
     async function x() {
-        await (0, a.openModalLazy)(async () => {
+        await (0, o.openModalLazy)(async () => {
             let { default: e } = await Promise.all([n.e('22347'), n.e('56236'), n.e('22506')]).then(n.bind(n, 17671));
             return (n) =>
                 (0, i.jsx)(e, {
@@ -44,7 +44,7 @@ function g(e) {
     return (0, i.jsx)(h.m, {
         id: 'upcoming-events-'.concat(t.id),
         renderIcon: (e) =>
-            (0, i.jsx)(a.CalendarIcon, {
+            (0, i.jsx)(o.CalendarIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: e
@@ -53,7 +53,7 @@ function g(e) {
         selected: g,
         onClick: x,
         onContextMenu: (e) => {
-            (0, o.jW)(e, async () => {
+            (0, a.jW)(e, async () => {
                 let { default: e } = await n.e('95307').then(n.bind(n, 867757));
                 return (n) =>
                     (0, i.jsx)(e, {
@@ -62,13 +62,13 @@ function g(e) {
                     });
             });
         },
-        showUnread: C && !v,
+        showUnread: C && !_,
         trailing:
-            !v && _ > 0
-                ? (0, i.jsx)(a.NumberBadge, {
+            !_ && v > 0
+                ? (0, i.jsx)(o.NumberBadge, {
                       className: f.numberBadge,
                       disableColor: !0,
-                      count: _
+                      count: v
                   })
                 : null
     });

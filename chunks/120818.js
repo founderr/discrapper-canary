@@ -1,13 +1,13 @@
 n.d(t, {
     T: function () {
-        return _;
+        return v;
     }
 });
 var i = n(200651),
     l = n(192379),
     r = n(91192),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(44315),
     c = n(563534),
     u = n(846121),
@@ -19,7 +19,7 @@ var i = n(200651),
     g = n(47622);
 function C(e, t) {
     return (0, i.jsx)(
-        o.Text,
+        a.Text,
         {
             variant: 'text-xs/bold',
             color: 'text-normal',
@@ -28,25 +28,25 @@ function C(e, t) {
         t
     );
 }
-let _ = l.memo(function (e) {
+let v = l.memo(function (e) {
     let { guild: t } = e,
-        n = (0, a.e7)([c.Z], () => c.Z.getNewMemberActions(t.id), [t.id]),
-        _ = (0, a.e7)([u.Z], () => u.Z.getCompletedActions(t.id)),
-        v = l.useMemo(() => {
-            if (null == n || null == _) return 0;
+        n = (0, o.e7)([c.Z], () => c.Z.getNewMemberActions(t.id), [t.id]),
+        v = (0, o.e7)([u.Z], () => u.Z.getCompletedActions(t.id)),
+        _ = l.useMemo(() => {
+            if (null == n || null == v) return 0;
             let e = 0;
             return (
                 n.forEach((t) => {
-                    null != _[t.channelId] && e++;
+                    null != v[t.channelId] && e++;
                 }),
                 e
             );
-        }, [_, n]),
+        }, [v, n]),
         x = null == n ? 0 : n.length,
         I = (0, r.JA)('progress-bar-'.concat(t.id));
     return (0, i.jsxs)('li', {
         children: [
-            (0, i.jsxs)(o.Clickable, {
+            (0, i.jsxs)(a.Clickable, {
                 ...I,
                 role: 'button',
                 focusProps: { offset: { right: 4 } },
@@ -58,21 +58,21 @@ let _ = l.memo(function (e) {
                     (0, i.jsxs)('div', {
                         className: g.progressBarText,
                         children: [
-                            (0, i.jsx)(o.Heading, {
+                            (0, i.jsx)(a.Heading, {
                                 variant: 'heading-sm/bold',
                                 children: f.intl.string(f.t.SnrR39)
                             }),
                             (0, i.jsxs)('div', {
                                 className: g.rightContainer,
                                 children: [
-                                    (0, i.jsx)(o.Text, {
+                                    (0, i.jsx)(a.Text, {
                                         variant: 'text-xs/medium',
                                         color: 'text-muted',
                                         className: g.rightText,
                                         children: f.intl.format(f.t.eqZ1lZ, {
                                             numberHook: C,
                                             total: x.toString(),
-                                            completed: v.toString()
+                                            completed: _.toString()
                                         })
                                     }),
                                     (0, i.jsx)(h.Z, {
@@ -85,10 +85,10 @@ let _ = l.memo(function (e) {
                             })
                         ]
                     }),
-                    (0, i.jsx)(o.Progress, {
+                    (0, i.jsx)(a.Progress, {
                         className: g.progressBar,
                         foregroundGradientColor: [(0, s.Lq)(p.Ilk.GREEN_300), (0, s.Lq)(p.Ilk.GREEN_230)],
-                        percent: (v / x) * 100 + 3,
+                        percent: (_ / x) * 100 + 3,
                         animate: !0
                     })
                 ]

@@ -9,8 +9,8 @@ n.d(t, {
 var i,
     l = n(200651),
     r = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(748780),
     c = n(442837),
     u = n(692547),
@@ -21,8 +21,8 @@ var i,
     f = n(703656),
     g = n(417363),
     C = n(941128),
-    _ = n(780570),
-    v = n(353042),
+    v = n(780570),
+    _ = n(353042),
     x = n(981631),
     I = n(388032),
     b = n(282115);
@@ -101,7 +101,7 @@ class Z extends r.PureComponent {
         if (e.type === x.vxO.UPDATING || e.type === x.vxO.REPAIRING || e.type === x.vxO.INSTALLING) {
             if (t) return I.intl.string(I.t['5oxtFR']);
             if (e.stage === x.f07.PATCHING || e.stage === x.f07.REPAIRING)
-                return (0, l.jsx)(v.Z, {
+                return (0, l.jsx)(_.Z, {
                     getHistoricalTotalBytes: g.Z.getHistoricalTotalBytesWritten,
                     updateInterval: 5000,
                     children: this.renderProgressBody
@@ -117,11 +117,11 @@ class Z extends r.PureComponent {
         super(...e),
             E(this, 'renderProgressBody', (e, t) => {
                 let { state: n, application: i } = this.props,
-                    { stage: l, progress: r, total: a, type: o } = n;
-                if (null == r || null == a || null == l) return null;
+                    { stage: l, progress: r, total: o, type: a } = n;
+                if (null == r || null == o || null == l) return null;
                 let s = (e[e.length - 1] / t) * 1000,
-                    c = 0 !== s ? Math.max(1, (a - r) / s) : null,
-                    u = S[o],
+                    c = 0 !== s ? Math.max(1, (o - r) / s) : null,
+                    u = S[a],
                     d = null != u ? Object.keys(u) : [],
                     { unit: h, time: p } = (0, m.CI)(null != c ? c / 60 : null, d);
                 if (null != u && null != h) {
@@ -162,7 +162,7 @@ class N extends (i = r.PureComponent) {
         let { percent: e, isPaused: t, className: n } = this.props;
         return (0, l.jsx)(s.Z.div, {
             style: { transform: [{ scale: this.state.animationScale }] },
-            className: o()(n, b.progressContainer),
+            className: a()(n, b.progressContainer),
             onClick: this.handleOnClick,
             children: (0, l.jsx)(h.Tooltip, {
                 text: this.getTooltipText(),
@@ -204,9 +204,9 @@ function y(e, t) {
 t.Z = c.ZP.connectStores([C.Z, g.Z, p.Z], () => {
     let e = C.Z.activeItems,
         t = y(e, g.Z),
-        { total: n, progress: i } = _.lK(t);
+        { total: n, progress: i } = v.lK(t);
     return {
-        percent: _.xI(i, n),
+        percent: v.xI(i, n),
         isPaused: C.Z.paused,
         firstApplication: e.length > 0 ? p.Z.getApplication(e[0].applicationId) : null,
         firstState: t.length > 0 ? t[0] : null

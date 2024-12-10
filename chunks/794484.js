@@ -71,27 +71,27 @@ t.Z = (e) => {
         }, [S, A, P, Z]);
     let M = (0, _.Op)(P),
         O = (0, m.Z)(),
-        y = (0, _.mN)(),
-        { fractionalState: w } = (0, c.Z)(),
+        w = (0, _.mN)(),
+        { fractionalState: y } = (0, c.Z)(),
         k = (0, _.sP)({
             perksCards: O,
             variant: x,
             shopMarketingVariation: j,
             isFullScreen: I,
             showTenureCard: null == R ? void 0 : R.showCard,
-            isPremiumSubscriber: y,
-            fractionalState: w
+            isPremiumSubscriber: w,
+            fractionalState: y
         }),
         L = k.some((e) => null != e.pillText),
         [U, D] = r.useState(null),
-        H = r.useRef(new l.qA());
+        G = r.useRef(new l.qA());
     return (0, i.jsxs)(i.Fragment, {
         children: [
             ((null == O ? void 0 : null === (t = O.freeBoost) || void 0 === t ? void 0 : t.name) === m.u.FREE_BOOST || (null == O ? void 0 : null === (n = O.tenureRewardCollectible) || void 0 === n ? void 0 : n.name) === m.u.TENURE_REWARD_COLLECTIBLE) &&
                 (0, i.jsx)(l.O_, {
                     ref: D,
                     className: E.confettiCanvas,
-                    environment: H.current
+                    environment: G.current
                 }),
             (0, i.jsxs)('div', {
                 ref: S,

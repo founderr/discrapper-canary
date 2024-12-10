@@ -1,7 +1,7 @@
 var i,
     l = n(442837),
     r = n(570140);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,26 +14,26 @@ function a(e, t, n) {
         e
     );
 }
-let o = {};
+let a = {};
 class s extends (i = l.ZP.PersistedStore) {
     initialize(e) {
         null != e &&
             Object.keys(e).forEach((t) => {
-                'number' == typeof e[t] && (o[t] = e[t]);
+                'number' == typeof e[t] && (a[t] = e[t]);
             });
     }
     getState() {
-        return o;
+        return a;
     }
     hasViewed(e) {
-        return null != o[e];
+        return null != a[e];
     }
 }
-a(s, 'displayName', 'ViewHistoryStore'),
-    a(s, 'persistKey', 'ViewHistoryStore'),
+o(s, 'displayName', 'ViewHistoryStore'),
+    o(s, 'persistKey', 'ViewHistoryStore'),
     (t.Z = new s(r.Z, {
         VIEW_HISTORY_MARK_VIEW: function (e) {
             let { key: t } = e;
-            o[t] = Date.now();
+            a[t] = Date.now();
         }
     }));

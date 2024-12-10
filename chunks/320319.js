@@ -36,30 +36,30 @@ let P = {
         let { name: t, canReveal: n = !0, dismissibleContentType: a, forceShadow: b, cardType: T, confettiCanvas: N } = e,
             M = null == e ? void 0 : e.onCtaClick,
             O = (0, c.e7)([g.Z], () => g.Z.useReducedMotion),
-            [y, w] = r.useState(!1),
+            [w, y] = r.useState(!1),
             [k, L] = r.useState(!1),
             U = (0, h.yQ)(),
             D = (0, h.IB)(),
-            [H, V] = r.useState(!1),
-            [G, F] = r.useState((t === C.u.FREE_BOOST || t === C.u.TENURE_REWARD_COLLECTIBLE) && D && (null == U ? void 0 : U.nitroTenureStatus) === I.EB.REDEEMABLE);
+            [G, H] = r.useState(!1),
+            [V, F] = r.useState((t === C.u.FREE_BOOST || t === C.u.TENURE_REWARD_COLLECTIBLE) && D && (null == U ? void 0 : U.nitroTenureStatus) === I.EB.REDEEMABLE);
         r.useEffect(() => {
             (t === C.u.FREE_BOOST || t === C.u.TENURE_REWARD_COLLECTIBLE) && D && (null == U ? void 0 : U.nitroTenureStatus) === I.EB.REDEEMABLE && F(!0);
         }, [D, t, U]);
         let W = r.useCallback(() => {
-                V(!0);
+                H(!0);
             }, []),
             z = T === v.R0.CARD_CAROUSEL_FIRST_ROW || T === v.R0.CARD_CAROUSEL_SECOND_ROW || T === v.R0.CARD_CAROUSEL_THIRD_ROW,
             Y = (0, C.Z)(),
             [K, Q] = (0, p.cv)((null != a && n) || a === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI ? [a] : []);
         r.useEffect(
             () => () => {
-                K === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && H && (0, f.EW)(K);
+                K === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && G && (0, f.EW)(K);
             },
-            [K, H]
+            [K, G]
         ),
             r.useEffect(() => {
-                K === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && H && (0, f.EW)(K);
-            }, [K, H]);
+                K === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && G && (0, f.EW)(K);
+            }, [K, G]);
         let { easterEggLevel: q, isEasterEggTriggered: J, onHover: X, onUnhover: $ } = (0, x.Z)(5),
             ee = (0, l.debounce)(() => {
                 _.default.track(S.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
@@ -88,8 +88,8 @@ let P = {
         };
         let ei = K !== a || null == a || k || a === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
         return (r.useEffect(() => {
-            O && y && (L(!0), _.default.track(S.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != a && Q(R.L.TAKE_ACTION));
-        }, [O, y, a, t, Q]),
+            O && w && (L(!0), _.default.track(S.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != a && Q(R.L.TAKE_ACTION));
+        }, [O, w, a, t, Q]),
         (0, m.Z)(
             {
                 type: o.ImpressionTypes.VIEW,
@@ -156,7 +156,7 @@ let P = {
                                     ...e,
                                     ref: t === C.u.FREE_BOOST || t === C.u.TENURE_REWARD_COLLECTIBLE ? en : void 0
                                 }),
-                                G &&
+                                V &&
                                     (0, i.jsx)(E.Z, {
                                         speedValues: P,
                                         numBursts: 3,
@@ -176,14 +176,14 @@ let P = {
                   : (0, i.jsx)('div', {
                         className: s()(j.flipCardContainer, { [j.forceShadow]: b }),
                         children: (0, i.jsxs)(u.Clickable, {
-                            onClick: () => w(!0),
+                            onClick: () => y(!0),
                             className: s()(j.flipCard, j.clickable, {
-                                [j.flipped]: y,
-                                [j.partialFlipCard]: !k && !y,
+                                [j.flipped]: w,
+                                [j.partialFlipCard]: !k && !w,
                                 [j.reducedMotion]: O
                             }),
                             onTransitionEnd: (e) => {
-                                if (!!y && 'transform' === e.propertyName && !!e.target.classList.contains(j.flipCard)) L(!0), _.default.track(S.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != a && Q(R.L.TAKE_ACTION);
+                                if (!!w && 'transform' === e.propertyName && !!e.target.classList.contains(j.flipCard)) L(!0), _.default.track(S.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != a && Q(R.L.TAKE_ACTION);
                             },
                             children: [
                                 (0, i.jsx)('div', {
@@ -208,7 +208,7 @@ let P = {
                                 (0, i.jsx)('div', {
                                     className: j.flipCardButtonContainer,
                                     children: (0, i.jsx)(u.Button, {
-                                        onClick: () => w(!0),
+                                        onClick: () => y(!0),
                                         children: A.intl.string(A.t.dcztdX)
                                     })
                                 })

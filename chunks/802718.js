@@ -1,13 +1,13 @@
 n.d(t, {
     U: function () {
-        return _;
+        return v;
     }
 });
 var i = n(200651),
     l = n(192379),
     r = n(91192),
-    a = n(481060),
-    o = n(442837),
+    o = n(481060),
+    a = n(442837),
     s = n(239091),
     c = n(410030),
     u = n(377171),
@@ -19,9 +19,9 @@ var i = n(200651),
     g = n(477090);
 function C(e) {
     let { target: t } = e,
-        o = (0, r.Ie)('fakedoor'),
+        a = (0, r.Ie)('fakedoor'),
         p = l.useCallback(() => {
-            (0, a.openModalLazy)(async () => {
+            (0, o.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('22862'), n.e('96252')]).then(n.bind(n, 646202));
                 return (n) =>
                     (0, i.jsx)(e, {
@@ -43,19 +43,19 @@ function C(e) {
             },
             [t]
         ),
-        _ = 'url('.concat(t.backgroundAssetUrl, ') black top / cover no-repeat'),
-        v = (0, i.jsxs)('div', {
+        v = 'url('.concat(t.backgroundAssetUrl, ') black top / cover no-repeat'),
+        _ = (0, i.jsxs)('div', {
             className: g.tooltipContainer,
             children: [
                 (0, i.jsx)('div', {
                     className: g.tooltipBackground,
-                    style: { background: _ }
+                    style: { background: v }
                 }),
-                (0, i.jsx)(a.Heading, {
+                (0, i.jsx)(o.Heading, {
                     variant: 'heading-sm/medium',
                     children: t.tooltipHeader
                 }),
-                (0, i.jsx)(a.Text, {
+                (0, i.jsx)(o.Text, {
                     variant: 'text-xs/normal',
                     children: f.intl.string(f.t.IIbwAg)
                 })
@@ -64,24 +64,24 @@ function C(e) {
         x = (0, c.Fg)();
     return (0, i.jsxs)(d.H, {
         children: [
-            (0, i.jsx)(a.ThemeContextProvider, {
+            (0, i.jsx)(o.ThemeContextProvider, {
                 theme: m.BRd.DARK,
                 children: (0, i.jsx)(h.Z, {
-                    text: v,
+                    text: _,
                     tooltipClass: g.tooltip,
                     tooltipContentClass: g.tooltipContent,
-                    children: (0, i.jsx)(a.ThemeContextProvider, {
+                    children: (0, i.jsx)(o.ThemeContextProvider, {
                         theme: x,
-                        children: (0, i.jsx)(a.BlobMask, {
-                            lowerBadge: (0, i.jsx)(a.NumberBadge, {
+                        children: (0, i.jsx)(o.BlobMask, {
+                            lowerBadge: (0, i.jsx)(o.NumberBadge, {
                                 count: 1,
                                 color: u.Z.BG_BRAND
                             }),
-                            children: (0, i.jsx)(a.NavItem, {
-                                ...o,
+                            children: (0, i.jsx)(o.NavItem, {
+                                ...a,
                                 onClick: p,
                                 onContextMenu: C,
-                                children: (0, i.jsx)(a.BellIcon, { color: u.Z.TEXT_NORMAL })
+                                children: (0, i.jsx)(o.BellIcon, { color: u.Z.TEXT_NORMAL })
                             })
                         })
                     })
@@ -89,7 +89,7 @@ function C(e) {
             }),
             (0, i.jsx)('div', {
                 style: {
-                    background: _,
+                    background: v,
                     width: 0,
                     height: 0
                 }
@@ -97,7 +97,7 @@ function C(e) {
         ]
     });
 }
-function _() {
-    let e = (0, o.e7)([p.Z], () => p.Z.getActiveUserSignUp());
+function v() {
+    let e = (0, a.e7)([p.Z], () => p.Z.getActiveUserSignUp());
     return null == e ? null : (0, i.jsx)(C, { target: e });
 }

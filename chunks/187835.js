@@ -7,10 +7,10 @@ var i = n(200651);
 n(192379);
 var l = n(481060),
     r = n(603592),
-    a = n(388032);
-let o = 'DOWNLOAD_APPS';
+    o = n(388032);
+let a = 'DOWNLOAD_APPS';
 function s() {
-    let e = (0, l.useModalsStore)((e) => (0, l.hasModalOpenSelector)(e, o));
+    let e = (0, l.useModalsStore)((e) => (0, l.hasModalOpenSelector)(e, a));
     return (0, i.jsx)(r.Z, {
         id: 'app-download-button',
         onClick: () => {
@@ -23,11 +23,11 @@ function s() {
                             ...t
                         });
                 },
-                { modalKey: o }
+                { modalKey: a }
             );
         },
         selected: e,
-        tooltip: a.intl.string(a.t.Z7jwrK),
+        tooltip: o.intl.string(o.t.Z7jwrK),
         icon: l.DownloadIcon
     });
 }

@@ -2,8 +2,8 @@ n(653041), n(47120), n(724458);
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(239091),
-    o = n(749210),
+    o = n(239091),
+    a = n(749210),
     s = n(905423),
     c = n(664915),
     u = n(888369),
@@ -14,7 +14,7 @@ var i = n(200651),
     f = n(981631);
 t.Z = l.memo(function (e) {
     let { folderNode: t, ...g } = e,
-        { id: C, name: _, color: v, children: x } = t,
+        { id: C, name: v, color: _, children: x } = t,
         I = x.map((e) => e.id),
         b = (0, s.Z)((e) => e.guildId),
         E = (0, r.e7)([c.Z], () => c.Z.isFolderExpanded(C)),
@@ -37,23 +37,23 @@ t.Z = l.memo(function (e) {
             unread: I.some((e) => u.default.hasUnread(e))
         })),
         T = l.useCallback(() => {
-            o.Z.toggleGuildFolderExpand(C);
+            a.Z.toggleGuildFolderExpand(C);
         }, [C]),
         j = l.useCallback(
             (e) => {
-                (0, a.jW)(e, async () => {
+                (0, o.jW)(e, async () => {
                     let { default: e } = await n.e('52590').then(n.bind(n, 205784));
                     return (t) =>
                         (0, i.jsx)(e, {
                             ...t,
                             folderId: C,
-                            folderName: _,
-                            folderColor: v,
+                            folderName: v,
+                            folderColor: _,
                             unread: y || N > 0
                         });
                 });
             },
-            [C, _, v, y, N]
+            [C, v, _, y, N]
         );
     return (0, i.jsx)(p.Z, {
         ...g,

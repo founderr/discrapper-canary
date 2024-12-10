@@ -38,22 +38,22 @@ var i = n(200651),
     B = n(830746),
     M = n(731934),
     O = n(521450),
-    y = n(292352),
-    w = n(981631),
+    w = n(292352),
+    y = n(981631),
     k = n(723359),
     L = n(921944),
     U = n(388032),
     D = n(228351);
-let H = {
-        [y.dG.REQUESTS]: () => (0, i.jsx)(M.Z, {}),
-        [y.dG.ACTIVITY]: () => (0, i.jsx)(B.Z, {}),
-        [y.dG.SETTINGS]: () => (0, i.jsx)(O.Z, {})
+let G = {
+        [w.dG.REQUESTS]: () => (0, i.jsx)(M.Z, {}),
+        [w.dG.ACTIVITY]: () => (0, i.jsx)(B.Z, {}),
+        [w.dG.SETTINGS]: () => (0, i.jsx)(O.Z, {})
     },
-    V = {
-        [y.dG.REQUESTS]: () => (0, i.jsx)(M.Z, {}),
-        [y.dG.ACTIVITY]: () => (0, i.jsx)(B.Z, {})
+    H = {
+        [w.dG.REQUESTS]: () => (0, i.jsx)(M.Z, {}),
+        [w.dG.ACTIVITY]: () => (0, i.jsx)(B.Z, {})
     };
-function G(e) {
+function V(e) {
     let { section: t, handleItemSelect: n } = e,
         r = (0, Z.gU)(),
         a = (0, P.Z)();
@@ -67,12 +67,12 @@ function G(e) {
         children: [
             (0, i.jsx)(u.TabBar.Item, {
                 className: D.settingsTabBarItem,
-                id: y.dG.ACTIVITY,
+                id: w.dG.ACTIVITY,
                 children: U.intl.string(U.t.bdBmq6)
             }),
             (0, i.jsxs)(u.TabBar.Item, {
                 className: D.settingsTabBarItem,
-                id: y.dG.REQUESTS,
+                id: w.dG.REQUESTS,
                 'aria-label': U.intl.string(U.t['gVWG+/']),
                 children: [
                     U.intl.string(U.t['gVWG+/']),
@@ -87,7 +87,7 @@ function G(e) {
             a
                 ? (0, i.jsx)(u.TabBar.Item, {
                       className: D.settingsTabBarItem,
-                      id: y.dG.SETTINGS,
+                      id: w.dG.SETTINGS,
                       children: U.intl.string(U.t['3D5yo6'])
                   })
                 : null
@@ -125,12 +125,12 @@ function F(e) {
                         className: D.__invalid_tabBar,
                         children: [
                             (0, i.jsx)(u.TabBar.Item, {
-                                id: y.dG.ACTIVITY,
+                                id: w.dG.ACTIVITY,
                                 className: D.item,
                                 children: U.intl.string(U.t.bdBmq6)
                             }),
                             (0, i.jsxs)(u.TabBar.Item, {
-                                id: y.dG.REQUESTS,
+                                id: w.dG.REQUESTS,
                                 className: D.item,
                                 'aria-label': U.intl.string(U.t['gVWG+/']),
                                 children: [
@@ -172,12 +172,12 @@ function W() {
     r.useEffect(() => {
         a &&
             v &&
-            (I.default.track(w.rMx.FAMILY_CENTER_VIEWED, {
+            (I.default.track(y.rMx.FAMILY_CENTER_VIEWED, {
                 is_considered_adult: e,
                 num_of_accepted_links: t,
                 selected_teen_id: l,
-                initial_page: y.QH[g],
-                source: y._6[y.Mu.SIDENAV]
+                initial_page: w.QH[g],
+                source: w._6[w.Mu.SIDENAV]
             }),
             x.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
     }, [a, v]),
@@ -191,7 +191,7 @@ function W() {
               'aria-label': U.intl.string(U.t.RZqaJi),
               children: [
                   (0, i.jsx)(_.yY, { location: U.intl.string(U.t.RZqaJi) }),
-                  (0, i.jsx)(G, {
+                  (0, i.jsx)(V, {
                       section: g,
                       handleItemSelect: (e) => {
                           f(e);
@@ -201,7 +201,7 @@ function W() {
                       id: g,
                       'aria-labelledby': p,
                       className: D.contentPanel,
-                      children: (0, i.jsx)('div', { children: H[g]() })
+                      children: (0, i.jsx)('div', { children: G[g]() })
                   })
               ]
           });
@@ -215,12 +215,12 @@ function z() {
         b = (0, j.M)(),
         B = (0, c.e7)([v.Z], () => v.Z.theme),
         { selectedTab: M, handleTabChange: O } = (0, A.Z)(),
-        H = (0, h.Dt)(),
-        G = N.default.getCurrentUser(),
+        G = (0, h.Dt)(),
+        V = N.default.getCurrentUser(),
         W = null != t,
-        z = l && null != G && !W;
+        z = l && null != V && !W;
     r.useEffect(() => {
-        g.Y(w.Z5c.FAMILY_CENTER),
+        g.Y(y.Z5c.FAMILY_CENTER),
             (0, C.e)('family-center'),
             !R.Z.isLoading() && R.Z.canRefetch() && S.ZP.initialPageLoad(),
             !a &&
@@ -232,12 +232,12 @@ function z() {
         r.useEffect(() => {
             l &&
                 W &&
-                (I.default.track(w.rMx.FAMILY_CENTER_VIEWED, {
+                (I.default.track(y.rMx.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: t,
                     num_of_accepted_links: n,
                     selected_teen_id: b,
-                    initial_page: y.QH[M],
-                    source: y._6[y.Mu.SIDENAV]
+                    initial_page: w.QH[M],
+                    source: w._6[w.Mu.SIDENAV]
                 }),
                 x.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
         }, [l, W]),
@@ -249,8 +249,8 @@ function z() {
             z && (0, m.mN)(k.L0.FAMILY_CENTER);
         }, [z]);
     if (z) return null;
-    let Y = M !== y.dG.SETTINGS ? M : y.dG.ACTIVITY,
-        K = V[Y];
+    let Y = M !== w.dG.SETTINGS ? M : w.dG.ACTIVITY,
+        K = H[Y];
     return (0, i.jsx)(p.Gt, {
         value: e,
         children: (0, i.jsxs)('main', {
@@ -267,7 +267,7 @@ function z() {
                 }),
                 (0, i.jsx)(u.TabBar.Panel, {
                     id: Y,
-                    'aria-labelledby': H,
+                    'aria-labelledby': G,
                     className: D.contentPanel,
                     children: (0, i.jsx)(u.Scroller, {
                         children: (0, i.jsx)('div', {

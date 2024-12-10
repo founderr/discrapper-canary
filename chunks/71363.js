@@ -34,10 +34,10 @@ t.Z = (e) => {
         [Z, B] = r.useState(!1),
         M = (0, f.ZP)('perks-discoverability'),
         O = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        y = (0, x.mN)(),
-        { fractionalState: w } = (0, m.Z)();
+        w = (0, x.mN)(),
+        { fractionalState: y } = (0, m.Z)();
     return (
-        y ? ((t = v.intl.string(v.t['+vt7w8'])), (n = v.intl.string(v.t.LgHbnJ))) : ((t = v.intl.string(v.t.LgHbnJ)), (n = v.intl.string(v.t['+vt7w8']))),
+        w ? ((t = v.intl.string(v.t['+vt7w8'])), (n = v.intl.string(v.t.LgHbnJ))) : ((t = v.intl.string(v.t.LgHbnJ)), (n = v.intl.string(v.t['+vt7w8']))),
         (0, i.jsx)(c.AdvancedScrollerAuto, {
             className: s()(T.allPerksScroller, {
                 [T.open]: a,
@@ -75,9 +75,9 @@ t.Z = (e) => {
                                         perksCards: j,
                                         variant: b.R0.CARD_CAROUSEL_FIRST_ROW,
                                         shopMarketingVariation: M,
-                                        isPremiumSubscriber: y,
+                                        isPremiumSubscriber: w,
                                         isFullScreen: R,
-                                        fractionalState: w
+                                        fractionalState: y
                                     }),
                                     cardType: b.R0.CARD_CAROUSEL_FIRST_ROW
                                 }),
@@ -93,9 +93,9 @@ t.Z = (e) => {
                                         perksCards: j,
                                         variant: b.R0.CARD_CAROUSEL_SECOND_ROW,
                                         shopMarketingVariation: M,
-                                        isPremiumSubscriber: y,
+                                        isPremiumSubscriber: w,
                                         isFullScreen: R,
-                                        fractionalState: w
+                                        fractionalState: y
                                     }),
                                     cardType: b.R0.CARD_CAROUSEL_SECOND_ROW
                                 }),
@@ -111,9 +111,9 @@ t.Z = (e) => {
                                         perksCards: j,
                                         variant: b.R0.CARD_CAROUSEL_THIRD_ROW,
                                         shopMarketingVariation: M,
-                                        isPremiumSubscriber: y,
+                                        isPremiumSubscriber: w,
                                         isFullScreen: R,
-                                        fractionalState: w
+                                        fractionalState: y
                                     }),
                                     cardType: b.R0.CARD_CAROUSEL_THIRD_ROW
                                 })

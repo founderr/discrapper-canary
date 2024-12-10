@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(727637),
     x = n(410030),
     g = n(100527),
-    P = n(906732),
-    I = n(1585),
+    I = n(906732),
+    P = n(1585),
     _ = n(786761),
     b = n(3148),
     w = n(739566),
@@ -142,7 +142,7 @@ let ex = (e) => {
             })
         });
     },
-    eP = (e) => {
+    eI = (e) => {
         let { product: t, user: n } = e;
         return (0, F.x6)(t)
             ? (0, i.jsx)(eg, {
@@ -156,10 +156,10 @@ let ex = (e) => {
                 })
               : null;
     },
-    eI = (e) => {
+    eP = (e) => {
         var t, n;
         let { product: r, user: o, category: c, onClose: p, returnRef: g, previewingVariantIndexProps: _, selectedVariantIndex: b } = e,
-            { analyticsLocations: w } = (0, P.ZP)(),
+            { analyticsLocations: w } = (0, I.ZP)(),
             T = O.ZP.canUseCollectibles(o),
             { previewingVariantIndex: E } = _,
             S = (0, es.N)(r, E),
@@ -178,7 +178,7 @@ let ex = (e) => {
             { firstAvatarDecoration: eu, firstProfileEffect: em } = (0, q.R)(null != S ? S : A),
             ex = l.useMemo(() => (0, F.BH)(A, T), [A, T]),
             eg = (0, H.m)('CollectiblesCollectedModal'),
-            eI = (0, F.x6)(A) || eg,
+            eP = (0, F.x6)(A) || eg,
             { handleUseNow: e_, isApplying: eb } = (0, W.W)({
                 product: A,
                 onSuccess: p
@@ -187,7 +187,7 @@ let ex = (e) => {
             eT = (0, G.T)(A),
             ej = l.useCallback(() => {
                 if ((p(), (0, C.xf)(), Y(), null != eu)) {
-                    (0, I.ps)({
+                    (0, P.ps)({
                         initialSelectedDecoration: eu,
                         analyticsLocations: w
                     });
@@ -235,7 +235,7 @@ let ex = (e) => {
                         display: 'modal'
                     })
                 }),
-                (0, i.jsx)(eP, {
+                (0, i.jsx)(eI, {
                     product: null != S ? S : A,
                     user: o
                 }),
@@ -293,7 +293,7 @@ let ex = (e) => {
                                             ? (0, i.jsx)(v.Button, {
                                                   className: ep.button,
                                                   look: v.Button.Looks.FILLED,
-                                                  onClick: eI ? e_ : ej,
+                                                  onClick: eP ? e_ : ej,
                                                   submitting: eb,
                                                   children: eh.intl.string(eh.t.MAS7uL)
                                               })
@@ -433,12 +433,12 @@ t.default = (e) => {
         h = (0, eu.f)(a),
         { previewingVariantIndex: p } = h,
         x = (0, m.e7)([D.Z], () => D.Z.purchases),
-        I = (0, M.o)(a, x),
+        P = (0, M.o)(a, x),
         _ = (0, es.N)(a, p),
-        b = (0, ec.W)(a, I);
+        b = (0, ec.W)(a, P);
     s()(null != b, 'Selected product should not be null');
-    let { analyticsLocations: w } = (0, P.ZP)([...f, g.Z.COLLECTIBLES_SHOP_DETAILS_MODAL]);
-    (0, X.u9)(b);
+    let { analyticsLocations: w } = (0, I.ZP)([...f, g.Z.COLLECTIBLES_SHOP_DETAILS_MODAL]);
+    (0, X.u9)(b.skuId);
     let [T] = b.items,
         j = (0, V.s)('CollectiblesShopProductDetailsModal');
     if (
@@ -460,7 +460,7 @@ t.default = (e) => {
     )
         return null;
     let k = (0, em.ZS)(o.skuId);
-    return (0, i.jsx)(P.Gt, {
+    return (0, i.jsx)(I.Gt, {
         value: w,
         children: (0, i.jsx)(v.ModalRoot, {
             hideShadow: !0,
@@ -471,13 +471,13 @@ t.default = (e) => {
             children: (0, i.jsxs)(v.ModalContent, {
                 className: ep.modalContent,
                 children: [
-                    (0, i.jsx)(eI, {
+                    (0, i.jsx)(eP, {
                         user: C,
                         product: a,
                         category: o,
                         onClose: r,
                         previewingVariantIndexProps: h,
-                        selectedVariantIndex: I
+                        selectedVariantIndex: P
                     }),
                     (0, i.jsxs)('div', {
                         className: b.type === d.Z.AVATAR_DECORATION ? ep.collectiblePreviewsContainerWithChat : ep.collectiblePreviewsContainerNoChat,

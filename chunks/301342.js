@@ -15,8 +15,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    o = n(91192),
+    o = n.n(r),
+    a = n(91192),
     s = n(442837),
     c = n(481060),
     u = n(211739),
@@ -27,8 +27,8 @@ var i = n(200651),
     f = n(540059),
     g = n(680089),
     C = n(430824),
-    _ = n(496675),
-    v = n(9156),
+    v = n(496675),
+    _ = n(9156),
     x = n(203818),
     I = n(438144),
     b = n(981631),
@@ -41,9 +41,9 @@ let N = l.memo(function (e) {
     let t,
         { channel: r, connectChannelDragSource: h, connectChannelDropTarget: x, disableManageChannels: I, position: N, sortingPosition: y, hideIcon: T, children: j } = e,
         A = (0, f.Q3)('CategoryChannel'),
-        P = (0, s.e7)([v.ZP], () => v.ZP.isChannelMuted(r.getGuildId(), r.id)),
+        P = (0, s.e7)([_.ZP], () => _.ZP.isChannelMuted(r.getGuildId(), r.id)),
         R = (0, s.e7)([g.Z], () => g.Z.isCollapsed(r.id)),
-        M = (0, s.e7)([_.Z], () => _.Z.can(b.Plq.MANAGE_CHANNELS, r));
+        M = (0, s.e7)([v.Z], () => v.Z.can(b.Plq.MANAGE_CHANNELS, r));
     t = null != y ? (N > y ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
     let L = l.useCallback(() => {
             R ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
@@ -81,7 +81,7 @@ let N = l.memo(function (e) {
                         });
                 });
         }, [r]),
-        { role: O, tabIndex: k, ...U } = (0, o.JA)(r.id),
+        { role: O, tabIndex: k, ...U } = (0, a.JA)(r.id),
         G = l.useRef(null),
         B = l.useRef(null),
         H = (0, i.jsxs)('li', {
@@ -97,7 +97,7 @@ let N = l.memo(function (e) {
                     },
                     children: (0, i.jsxs)('div', {
                         ref: B,
-                        className: a()(S.iconVisibility, S.wrapper, {
+                        className: o()(S.iconVisibility, S.wrapper, {
                             [S.collapsed]: R,
                             [S.muted]: P,
                             [S.clickable]: !0
@@ -147,7 +147,7 @@ let N = l.memo(function (e) {
                                                       'aria-label': E.intl.string(E.t['fUYU+v']),
                                                       look: c.Button.Looks.BLANK,
                                                       size: c.Button.Sizes.NONE,
-                                                      className: a()(S.addButton, S.forceVisible),
+                                                      className: o()(S.addButton, S.forceVisible),
                                                       onClick: D,
                                                       onMouseEnter: t,
                                                       onMouseLeave: n,
@@ -188,9 +188,9 @@ t.ZP = (0, h.B)(N);
 let y = l.memo(function (e) {
         let { name: t, onDismiss: n, className: l } = e;
         return (0, i.jsx)('li', {
-            className: a()(l, S.containerDefault),
+            className: o()(l, S.containerDefault),
             children: (0, i.jsxs)('div', {
-                className: a()(S.iconVisibility, S.wrapperStatic),
+                className: o()(S.iconVisibility, S.wrapperStatic),
                 children: [
                     (0, i.jsx)('div', {
                         className: S.mainContent,
@@ -262,9 +262,9 @@ let y = l.memo(function (e) {
         return l || null == n || n.record.type === b.d4z.GUILD_CATEGORY
             ? l
                 ? (0, i.jsx)('li', {
-                      className: a()(S.containerDefault),
+                      className: o()(S.containerDefault),
                       children: (0, i.jsx)('div', {
-                          className: a()(S.iconVisibility, S.wrapperStatic),
+                          className: o()(S.iconVisibility, S.wrapperStatic),
                           children: (0, i.jsx)(p.Z, {
                               className: S.name,
                               children: (0, i.jsx)(m.Z, { children: E.intl.string(E.t['V/u9Dw']) })
@@ -277,9 +277,9 @@ let y = l.memo(function (e) {
     A = l.memo(function (e) {
         let { channel: t } = e;
         return (0, i.jsx)('li', {
-            className: a()(S.containerDefault),
+            className: o()(S.containerDefault),
             children: (0, i.jsx)('div', {
-                className: a()(S.iconVisibility, S.wrapperStatic),
+                className: o()(S.iconVisibility, S.wrapperStatic),
                 children: (0, i.jsx)(p.Z, {
                     className: S.name,
                     children: (0, i.jsx)(m.Z, { children: t.name })

@@ -221,7 +221,7 @@ let B = () => {
             options: a
         });
     },
-    y = (e) => {
+    w = (e) => {
         let { userId: t } = e,
             n = (0, E.Z)(),
             r = (0, b.mq)(S.ne.ACTIVE),
@@ -252,7 +252,7 @@ t.Z = (e) => {
                 children: [
                     (0, i.jsx)('div', {
                         className: j.header,
-                        children: (0, i.jsx)(y, { userId: t.id })
+                        children: (0, i.jsx)(w, { userId: t.id })
                     }),
                     (0, i.jsxs)('div', {
                         className: j.content,

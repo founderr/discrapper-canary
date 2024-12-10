@@ -93,7 +93,7 @@ let v = o()((e) => {
             k = null !== x ? (null === (n = a.variants) || void 0 === n ? void 0 : n[x]) : void 0,
             I = (0, h.Z)('shop-variants-group-'.concat(a.storeListingId), d.hy.HORIZONTAL);
         if (null == _) return null;
-        let j = null != k ? k.variantLabel : null == _ ? void 0 : _.variantLabel;
+        let S = null != k ? k.variantLabel : null == _ ? void 0 : _.variantLabel;
         return (0, r.jsx)(c.bG, {
             navigator: I,
             children: (0, r.jsx)(c.SJ, {
@@ -134,7 +134,7 @@ let v = o()((e) => {
                                 variant: 'text-xs/medium',
                                 color: 'text-secondary',
                                 className: C.variantLabel,
-                                children: u ? g.intl.string(g.t.wbgaj4) : j
+                                children: u ? g.intl.string(g.t.wbgaj4) : S
                             })
                         ]
                     });

@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    o = n(399606),
+    o = n.n(r),
+    a = n(399606),
     s = n(481060),
     c = n(588705),
     u = n(100527),
@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(436774),
     g = n(313201),
     C = n(451603),
-    _ = n(885714),
-    v = n(973616),
+    v = n(885714),
+    _ = n(973616),
     x = n(594174),
     I = n(855981),
     b = n(55543),
@@ -47,7 +47,7 @@ function L() {
         }, [t]),
         (0, i.jsxs)(s.Clickable, {
             onClick: () =>
-                (0, _.Z)({
+                (0, v.Z)({
                     analyticsSource: { page: j.Sbl.EXTERNAL_INVITE_LINK_MODAL },
                     analyticsLocation: {
                         page: j.Sbl.EXTERNAL_INVITE_LINK_MODAL,
@@ -78,7 +78,7 @@ function w(e) {
     let { className: t } = e;
     return (0, i.jsxs)('div', {
         'aria-hidden': 'true',
-        className: a()(R.iconContainer, t),
+        className: o()(R.iconContainer, t),
         children: [
             (0, i.jsx)(I.Z, { className: R.iconSparklePlus }),
             (0, i.jsx)(s.LinkIcon, {
@@ -131,11 +131,11 @@ function O(e) {
     let t,
         n,
         { transitionState: r } = e;
-    (0, o.e7)([x.default], () => {
+    (0, a.e7)([x.default], () => {
         var e;
         return null === (e = x.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType;
     });
-    let { invite: f, error: _, submitting: I } = (0, o.cj)([T.Z], () => T.Z.getProps());
+    let { invite: f, error: v, submitting: I } = (0, a.cj)([T.Z], () => T.Z.getProps());
     l.useEffect(() => {
         !__OVERLAY__ && Z.isPlatformEmbedded && ((0, Z.isWindows)() ? N.ZP.minimize() : N.ZP.restore(), N.ZP.focus());
     }, []);
@@ -151,7 +151,7 @@ function O(e) {
         G = null != w,
         B = null != f.stage_instance,
         H = null == f.guild && null == f.channel && null != f.inviter;
-    if (null != U) (t = null == w ? void 0 : w.name), (n = v.ZP.createFromServer(U).getCoverImageURL(1024));
+    if (null != U) (t = null == w ? void 0 : w.name), (n = _.ZP.createFromServer(U).getCoverImageURL(1024));
     else if (null != w)
         (t = w.name),
             (n = S.ZP.getGuildSplashURL({
@@ -186,12 +186,12 @@ function O(e) {
                                         children: (0, i.jsx)(c.Z, {
                                             invite: f,
                                             disableUser: G,
-                                            error: _
+                                            error: v
                                         })
                                     }),
                                     B && null != w
                                         ? (0, i.jsx)('div', {
-                                              className: a()(M.marginBottom20, R.stage),
+                                              className: o()(M.marginBottom20, R.stage),
                                               children: (0, i.jsx)(p.Z, {
                                                   isCard: !0,
                                                   stageInstance: f.stage_instance,

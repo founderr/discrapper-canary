@@ -6,10 +6,10 @@ n.d(t, {
         return u;
     },
     mC: function () {
-        return a;
+        return o;
     },
     mU: function () {
-        return o;
+        return a;
     },
     qJ: function () {
         return s;
@@ -29,10 +29,10 @@ var i = n(704215),
 function r(e) {
     return 'user' === e.type;
 }
-function a(e) {
+function o(e) {
     return 'guild' === e.type;
 }
-function o(e) {
+function a(e) {
     return JSON.stringify({
         playstyle: e.playstyle,
         acknowledgeCap: e.acknowledgeCap,

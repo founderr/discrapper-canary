@@ -8,8 +8,8 @@ n.d(t, {
 var i,
     l = n(200651),
     r = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(873546),
     c = n(442837),
     u = n(481060),
@@ -20,8 +20,8 @@ var i,
     f = n(14429),
     g = n(576855),
     C = n(313201),
-    _ = n(592125),
-    v = n(888369),
+    v = n(592125),
+    _ = n(888369),
     x = n(430824),
     I = n(306680),
     b = n(944486),
@@ -79,12 +79,12 @@ class D extends (i = r.Component) {
     }
 }
 M(D, 'defaultProps', { unread: !1 });
-let O = c.ZP.connectStores([I.ZP, _.Z], (e) => {
+let O = c.ZP.connectStores([I.ZP, v.Z], (e) => {
         let { channel: t } = e;
         return {
             unread: I.ZP.hasUnread(t.id),
             mentions: I.ZP.getMentionCount(t.id),
-            category: _.Z.getChannel(t.parent_id)
+            category: v.Z.getChannel(t.parent_id)
         };
     })(D),
     k = c.ZP.connectStores([E.ZP], (e) => {
@@ -92,17 +92,17 @@ let O = c.ZP.connectStores([I.ZP, _.Z], (e) => {
         if (null == t.guild_id) throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
         return { voiceStates: E.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(D),
-    U = c.ZP.connectStores([v.default], (e) => {
+    U = c.ZP.connectStores([_.default], (e) => {
         let { guild: t } = e;
-        return { unread: v.default.hasUnread(t.id) };
+        return { unread: _.default.hasUnread(t.id) };
     })(T.ic),
     G = c.ZP.connectStores([I.ZP], (e) => {
         let { channel: t } = e;
         return { mentions: I.ZP.getMentionCount(t.id) };
     })(T.PZ),
-    B = c.ZP.connectStores([_.Z, I.ZP], (e) => {
+    B = c.ZP.connectStores([v.Z, I.ZP], (e) => {
         let { user: t } = e,
-            n = _.Z.getDMFromUserId(t.id);
+            n = v.Z.getDMFromUserId(t.id);
         return { mentions: null != n ? I.ZP.getMentionCount(n) : 0 };
     })(T.n5);
 function H(e, t, n) {
@@ -204,7 +204,7 @@ class V extends r.PureComponent {
     }
     renderProtip() {
         return (0, l.jsx)(g.Z, {
-            className: o()(R.protip, { [R.hasContent]: this.state.query.length > 0 }),
+            className: a()(R.protip, { [R.hasContent]: this.state.query.length > 0 }),
             type: g.Z.Types.INLINE,
             children: P.intl.format(P.t.wukqXV, {
                 userSymbolHook: (e, t) => H(t, m.xQ.USER, P.intl.string(P.t.GQRCGh)),
@@ -225,10 +225,10 @@ class V extends r.PureComponent {
             'aria-label': P.intl.string(P.t.ZvKwYW),
             size: u.ModalSize.DYNAMIC,
             transitionState: this.props.transitionState,
-            className: o()(R.container, s.tq && R.mobileContainer),
+            className: a()(R.container, s.tq && R.mobileContainer),
             fullscreenOnMobile: !1,
             children: (0, l.jsxs)('div', {
-                className: o()(R.quickswitcher, s.tq && R.mobileQuickswitcher),
+                className: a()(R.quickswitcher, s.tq && R.mobileQuickswitcher),
                 onMouseMove: this.handleMouseMove,
                 children: [this.renderInput(), this.renderResults(), this.renderProtip(), this.renderTutorial()]
             })

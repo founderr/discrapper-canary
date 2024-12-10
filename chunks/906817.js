@@ -9,8 +9,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(997638),
-    a = n(362658),
-    o = n(216306),
+    o = n(362658),
+    a = n(216306),
     s = n(155409),
     c = n(540126),
     u = n(301342),
@@ -51,14 +51,14 @@ function g(e, t) {
     }
 }
 t.ZP = l.memo(function (e) {
-    let { sectionIndex: t, guild: n, guildChannels: f, guildChannelsVersion: g, selectedChannelId: C, disableManageChannels: _ } = e,
-        { isFavoritesPerk: v } = (0, a.z)('ChannelListSection'),
+    let { sectionIndex: t, guild: n, guildChannels: f, guildChannelsVersion: g, selectedChannelId: C, disableManageChannels: v } = e,
+        { isFavoritesPerk: _ } = (0, o.z)('ChannelListSection'),
         x = l.useCallback(() => {
             let e = f.getCategoryFromSection(f.recentsSectionNumber);
             if (null == e) return;
             let t = null,
                 i = e.getShownChannelAndThreadIds();
-            null != C && i.includes(C) && (t = (0, o.KY)(f)), (0, o.Uo)(n.id, i, t);
+            null != C && i.includes(C) && (t = (0, a.KY)(f)), (0, a.Uo)(n.id, i, t);
         }, [n.id, C, f, g]);
     switch (t) {
         case c.wZ:
@@ -67,7 +67,7 @@ t.ZP = l.memo(function (e) {
             if (n.hasFeature(h.oNc.HUB)) return null;
             return (0, i.jsx)('div', { style: { height: d.$k } });
         case c.p2:
-            return (0, i.jsx)(u.P, { name: v ? p.intl.string(p.t.mlPMCw) : p.intl.string(p.t.k8fFjo) });
+            return (0, i.jsx)(u.P, { name: _ ? p.intl.string(p.t.mlPMCw) : p.intl.string(p.t.k8fFjo) });
         case f.recentsSectionNumber:
             return (0, i.jsx)(u.P, {
                 name: p.intl.string(p.t.gKcrqK),
@@ -94,7 +94,7 @@ t.ZP = l.memo(function (e) {
             return (0, i.jsx)(u.ZP, {
                 channel: e.record,
                 position: e.position,
-                disableManageChannels: _,
+                disableManageChannels: v,
                 children: (0, i.jsx)(s.Z, {
                     inlineSpecs: d.MF,
                     arrowAlignment: r.cy.TOP,
@@ -109,7 +109,7 @@ t.ZP = l.memo(function (e) {
             return (0, i.jsx)(u.ZP, {
                 channel: e.record,
                 position: e.position,
-                disableManageChannels: _
+                disableManageChannels: v
             });
         }
     }

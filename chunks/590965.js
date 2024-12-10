@@ -2,8 +2,8 @@ let i;
 n(47120), n(653041);
 var l,
     r,
-    a,
     o,
+    a,
     s = n(442837),
     c = n(570140),
     u = n(413605),
@@ -14,8 +14,8 @@ var l,
     f = n(430824),
     g = n(701190),
     C = n(496675),
-    _ = n(594174),
-    v = n(998502),
+    v = n(594174),
+    _ = n(998502),
     x = n(981631),
     I = n(176505);
 let b = x.IlC.APP,
@@ -27,7 +27,7 @@ function N() {
 }
 class y extends (l = s.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, g.Z, _.default);
+        this.waitFor(f.Z, g.Z, v.default);
     }
     isOpen() {
         let e = __OVERLAY__ ? x.IlC.OVERLAY : x.IlC.APP;
@@ -41,15 +41,15 @@ class y extends (l = s.ZP.Store) {
         };
     }
 }
-(o = 'InviteModalStore'),
-    (a = 'displayName') in (r = y)
-        ? Object.defineProperty(r, a, {
-              value: o,
+(a = 'InviteModalStore'),
+    (o = 'displayName') in (r = y)
+        ? Object.defineProperty(r, o, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[a] = o),
+        : (r[o] = a),
     (t.Z = new y(c.Z, {
         OVERLAY_INITIALIZE: N,
         CONNECTION_OPEN: N,
@@ -63,7 +63,7 @@ class y extends (l = s.ZP.Store) {
                 let { channel: e, guild: n } = t;
                 if (null == e) return !1;
                 if ((0, h.bc)(e.type)) {
-                    if (null != m.Z.getChannel(e.id)) return (0, d.XU)(x.ME, e.id), v.ZP.focus(), !1;
+                    if (null != m.Z.getChannel(e.id)) return (0, d.XU)(x.ME, e.id), _.ZP.focus(), !1;
                 } else {
                     if (null == n) return !1;
                     if (null != f.Z.getGuild(n.id) && !(0, u.TY)(t)) {
@@ -76,7 +76,7 @@ class y extends (l = s.ZP.Store) {
                             }
                             return null;
                         })(t);
-                        return (0, d.XU)(n.id, e), v.ZP.focus(), !1;
+                        return (0, d.XU)(n.id, e), _.ZP.focus(), !1;
                     }
                 }
             }
@@ -89,15 +89,15 @@ class y extends (l = s.ZP.Store) {
                 return !1;
             (b = e.context), (S = !1);
             let n = (function (e) {
-                let { approximate_member_count: t, approximate_presence_count: n, code: i, state: l, target_type: r, target_user: a, target_application: o, stage_instance: s, type: c, channel: u, guild: d } = e,
+                let { approximate_member_count: t, approximate_presence_count: n, code: i, state: l, target_type: r, target_user: o, target_application: a, stage_instance: s, type: c, channel: u, guild: d } = e,
                     h = {
                         code: i,
                         state: l,
                         approximate_member_count: t,
                         approximate_presence_count: n,
                         target_type: r,
-                        target_user: a,
-                        target_application: o,
+                        target_user: o,
+                        target_application: a,
                         stage_instance: s,
                         type: c
                     };

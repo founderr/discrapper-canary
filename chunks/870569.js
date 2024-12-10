@@ -7,11 +7,11 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(481060),
-    o = n(686546),
+    o = n(481060),
+    a = n(686546),
     s = n(32986);
 function c(e) {
-    let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: u, icon: d, iconForeground: h, innerClassName: p, tooltipClassName: m, onMouseEnter: f, onMouseLeave: g, 'aria-label': C, 'aria-checked': _, role: v, tooltipColor: x, tooltipForceOpen: I, tooltipContentClassName: b } = e,
+    let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: u, icon: d, iconForeground: h, innerClassName: p, tooltipClassName: m, onMouseEnter: f, onMouseLeave: g, 'aria-label': C, 'aria-checked': v, role: _, tooltipColor: x, tooltipForceOpen: I, tooltipContentClassName: b } = e,
         E =
             'function' == typeof d
                 ? (0, i.jsx)(d, {
@@ -22,7 +22,7 @@ function c(e) {
                       color: 'currentColor'
                   })
                 : d;
-    return (0, i.jsx)(a.Tooltip, {
+    return (0, i.jsx)(o.Tooltip, {
         tooltipClassName: m,
         text: t,
         'aria-label': C,
@@ -31,10 +31,10 @@ function c(e) {
         forceOpen: I,
         children: (e) => {
             let { onClick: t, onMouseEnter: d, onMouseLeave: h, ...m } = e;
-            return (0, i.jsxs)(a.Button, {
+            return (0, i.jsxs)(o.Button, {
                 ...m,
-                look: a.Button.Looks.BLANK,
-                size: a.Button.Sizes.NONE,
+                look: o.Button.Looks.BLANK,
+                size: o.Button.Sizes.NONE,
                 disabled: u,
                 innerClassName: p,
                 wrapperClassName: s.button,
@@ -52,14 +52,14 @@ function c(e) {
                     null == h || h(), null == g || g();
                 },
                 onContextMenu: l,
-                role: v,
-                'aria-checked': _,
+                role: _,
+                'aria-checked': v,
                 children: [
                     null != n
-                        ? (0, i.jsx)(o.ZP, {
+                        ? (0, i.jsx)(a.ZP, {
                               width: 20,
                               height: 20,
-                              mask: o.ZP.Masks.PANEL_BUTTON,
+                              mask: a.ZP.Masks.PANEL_BUTTON,
                               children: E
                           })
                         : E,

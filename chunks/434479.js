@@ -7,22 +7,22 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(91192),
-    o = n(589440),
+    o = n(91192),
+    a = n(589440),
     s = n(481060),
     c = n(23202),
     u = n(831746),
     d = n(193877);
 function h(e) {
     var t;
-    let { id: n, className: l, innerClassName: h, renderIcon: p, text: m, selected: f, trailing: g, showUnread: C = !1, ..._ } = e,
-        v = (0, a.JA)(n),
-        x = null !== (t = (0, o.q)(m)) && void 0 !== t ? t : '';
+    let { id: n, className: l, innerClassName: h, renderIcon: p, text: m, selected: f, trailing: g, showUnread: C = !1, ...v } = e,
+        _ = (0, o.JA)(n),
+        x = null !== (t = (0, a.q)(m)) && void 0 !== t ? t : '';
     return (0, i.jsx)('li', {
         children: (0, i.jsxs)(s.ClickableContainer, {
-            ..._,
+            ...v,
             buttonProps: {
-                ...v,
+                ..._,
                 id: n,
                 role: 'button'
             },
@@ -36,8 +36,8 @@ function h(e) {
                 }
             },
             onContextMenu:
-                null != _.onContextMenu
-                    ? _.onContextMenu
+                null != v.onContextMenu
+                    ? v.onContextMenu
                     : (e) => {
                           e.stopPropagation();
                       },

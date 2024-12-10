@@ -10,8 +10,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    o = n(752877),
+    o = n.n(r),
+    a = n(752877),
     s = n(91192),
     c = n(442837),
     u = n(477690),
@@ -22,8 +22,8 @@ var i = n(200651),
     f = n(906732),
     g = n(540059),
     C = n(434404),
-    _ = n(496675),
-    v = n(259580),
+    v = n(496675),
+    _ = n(259580),
     x = n(267642),
     I = n(624138),
     b = n(667815),
@@ -36,11 +36,11 @@ var i = n(200651),
 let j = (0, I.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     A = (e) => {
         let { guild: t, onSelect: n } = e,
-            [r, a] = l.useState(t.premiumProgressBarEnabled),
-            [o, s] = l.useState(!1),
-            u = (0, c.e7)([_.Z], () => _.Z.can(N.Plq.MANAGE_GUILD, t)),
+            [r, o] = l.useState(t.premiumProgressBarEnabled),
+            [a, s] = l.useState(!1),
+            u = (0, c.e7)([v.Z], () => v.Z.can(N.Plq.MANAGE_GUILD, t)),
             p = async () => {
-                if (!!u) s(!0), await C.Z.saveGuild(t.id, { premiumProgressBarEnabled: !r }), a(!r), s(!1);
+                if (!!u) s(!0), await C.Z.saveGuild(t.id, { premiumProgressBarEnabled: !r }), o(!r), s(!1);
             };
         return (0, i.jsx)(d.Menu, {
             navId: 'progress-bar-context',
@@ -51,7 +51,7 @@ let j = (0, I.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                 id: 'progress-bar-enabled',
                 label: y.intl.string(y.t['0CJWPz']),
                 checked: r,
-                disabled: o,
+                disabled: a,
                 action: p
             })
         });
@@ -75,7 +75,7 @@ t.ZP = (e) => {
             var e;
             return null !== (e = E.Z.getCountForGuild(I)) && void 0 !== e ? e : 0;
         }),
-        D = (0, c.e7)([_.Z], () => _.Z.can(N.Plq.MANAGE_GUILD, t));
+        D = (0, c.e7)([v.Z], () => v.Z.can(N.Plq.MANAGE_GUILD, t));
     l.useEffect(() => {
         w !== C && (0, b.v)(I, C);
     }, [I, w, C]);
@@ -136,7 +136,7 @@ t.ZP = (e) => {
                         var t;
                         null === (t = e.onMouseEnter) || void 0 === t || t.call(e), B(U);
                     },
-                    className: a()(T.container, { [T.containerWithMargin]: n }),
+                    className: o()(T.container, { [T.containerWithMargin]: n }),
                     onContextMenu: (e) => {
                         D &&
                             (0, h.vq)(e, (e) =>
@@ -169,20 +169,20 @@ t.ZP = (e) => {
                                             className: T.progressText,
                                             children: F
                                         }),
-                                        (0, i.jsx)(v.Z, {
+                                        (0, i.jsx)(_.Z, {
                                             className: T.count,
                                             height: 16,
                                             width: 16,
-                                            direction: v.Z.Directions.RIGHT
+                                            direction: _.Z.Directions.RIGHT
                                         })
                                     ]
                                 })
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: a()(T.progressBarContainer, { [T.progressBarContainerComplete]: R }),
+                            className: o()(T.progressBarContainer, { [T.progressBarContainerComplete]: R }),
                             children: [
-                                (0, i.jsx)(o.animated.div, {
+                                (0, i.jsx)(a.animated.div, {
                                     className: T.progressBar,
                                     style: G
                                 }),

@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    o = n(752877),
+    o = n.n(r),
+    a = n(752877),
     s = n(442837),
     c = n(692547),
     u = n(481060),
@@ -18,15 +18,15 @@ var i = n(200651),
     f = n(934415),
     g = n(968847),
     C = n(388032),
-    _ = n(706091);
-let v = {
+    v = n(706091);
+let _ = {
     friction: 30,
     tension: 300
 };
 function x(e) {
     var t;
     let { guildChannels: n, jumpToVoiceChannels: r } = e,
-        o = n.getCategoryFromSection(n.voiceChannelsSectionNumber),
+        a = n.getCategoryFromSection(n.voiceChannelsSectionNumber),
         s = (0, h.Z)(n.id),
         d = l.useCallback(
             (e) => {
@@ -34,7 +34,7 @@ function x(e) {
             },
             [r]
         ),
-        m = null !== (t = null == o ? void 0 : o.getChannelRecords()) && void 0 !== t ? t : [],
+        m = null !== (t = null == a ? void 0 : a.getChannelRecords()) && void 0 !== t ? t : [],
         g = (0, f.c4)({
             channels: m,
             selectedChannelId: null,
@@ -42,12 +42,12 @@ function x(e) {
             voiceStates: s
         });
     return (0, i.jsxs)(u.Clickable, {
-        className: a()(_.bar),
+        className: o()(v.bar),
         onClick: d,
         children: [
             (0, i.jsx)(u.VoiceNormalIcon, {
                 size: 'custom',
-                className: _.voiceChannelsIcon,
+                className: v.voiceChannelsIcon,
                 width: 14,
                 height: 14,
                 color: c.Z.unsafe_rawColors.GREEN_330.css
@@ -55,12 +55,12 @@ function x(e) {
             (0, i.jsx)(u.Text, {
                 variant: 'text-xs/semibold',
                 color: 'text-positive',
-                className: _.barText,
+                className: v.barText,
                 children: C.intl.format(C.t['fDlr+P'], { count: g.length })
             }),
             (0, i.jsx)(p.Z, {
                 guildId: n.id,
-                className: _.voiceChannelsUsers,
+                className: v.voiceChannelsUsers,
                 users: g.slice(0, 4),
                 renderMoreUsers: () => null,
                 max: 4,
@@ -79,7 +79,7 @@ function I(e) {
         y = (0, u.useSpring)(
             {
                 to: { transform: N ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
-                config: v
+                config: _
             },
             b ? 'respect-motion-settings' : 'animate-never'
         ),
@@ -90,53 +90,53 @@ function I(e) {
             [h, Z]
         );
     return (0, i.jsx)('div', {
-        className: a()(_.container, {
-            [_.top]: 'top' === t,
-            [_.bottom]: 'bottom' === t
+        className: o()(v.container, {
+            [v.top]: 'top' === t,
+            [v.bottom]: 'bottom' === t
         }),
-        children: (0, i.jsx)(o.animated.div, {
-            className: _.containerPadding,
+        children: (0, i.jsx)(a.animated.div, {
+            className: v.containerPadding,
             style: y,
             'aria-hidden': N,
             children:
                 E === g.x.HIDDEN
-                    ? (0, i.jsx)('div', { className: a()(_.bar, _.emptyBar) })
+                    ? (0, i.jsx)('div', { className: o()(v.bar, v.emptyBar) })
                     : E === g.x.UNREAD
                       ? (0, i.jsxs)(u.Clickable, {
-                            className: _.bar,
+                            className: v.bar,
                             onClick: T,
                             children: [
                                 'bottom' === t
                                     ? (0, i.jsx)(u.ChevronSmallDownIcon, {
                                           size: 'custom',
                                           color: 'currentColor',
-                                          className: _.unreadIcon,
+                                          className: v.unreadIcon,
                                           height: 14,
                                           width: 14
                                       })
                                     : (0, i.jsx)(u.ChevronSmallUpIcon, {
                                           size: 'custom',
                                           color: 'currentColor',
-                                          className: _.unreadIcon,
+                                          className: v.unreadIcon,
                                           height: 14,
                                           width: 14
                                       }),
                                 (0, i.jsx)(u.Text, {
                                     variant: 'text-xs/semibold',
                                     color: 'interactive-normal',
-                                    className: _.barText,
+                                    className: v.barText,
                                     children: C.intl.string(C.t.FCRiT0)
                                 })
                             ]
                         })
                       : E === g.x.MENTIONS
                         ? (0, i.jsx)(u.Clickable, {
-                              className: a()(_.bar, _.mentionsBar),
+                              className: o()(v.bar, v.mentionsBar),
                               onClick: T,
                               children: (0, i.jsx)(u.Text, {
                                   variant: 'text-xs/semibold',
                                   color: p ? 'text-primary' : 'status-danger-text',
-                                  className: _.barText,
+                                  className: v.barText,
                                   children: C.intl.format(C.t.EQcLys, { count: S })
                               })
                           })

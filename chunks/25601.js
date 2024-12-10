@@ -1,17 +1,17 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return a;
     }
 });
 var i = n(200651);
 n(192379);
 var l = n(831209),
     r = n(481060),
-    a = n(953498);
-function o(e) {
+    o = n(953498);
+function a(e) {
     let { mentionsCount: t } = e;
     return (0, i.jsx)('div', {
-        className: a.mentionsBadge,
+        className: o.mentionsBadge,
         'aria-hidden': !0,
         children: (0, i.jsx)(r.NumberBadge, {
             count: t,

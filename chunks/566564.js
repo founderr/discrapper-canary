@@ -20,8 +20,8 @@ var r = n(200651),
     _ = n(744112),
     k = n(223143),
     I = n(937510),
-    j = n(297651),
-    S = n(823941),
+    S = n(297651),
+    j = n(823941),
     E = n(752053),
     T = n(38900),
     N = n(709999),
@@ -32,10 +32,10 @@ var r = n(200651),
     Z = n(196315);
 t.Z = (e) => {
     var t, n, i, O, w, A;
-    let { handleTransition: R, numVisibleItems: H } = e,
-        { categories: F, isFetchingCategories: D, fetchCategoriesError: V, fetchPurchasesError: M, claimError: W, refreshCategories: U } = (0, k.ZP)({ location: 'CollectiblesFeedShop' }),
+    let { handleTransition: R, numVisibleItems: F } = e,
+        { categories: H, isFetchingCategories: D, fetchCategoriesError: V, fetchPurchasesError: M, claimError: W, refreshCategories: U } = (0, k.ZP)({ location: 'CollectiblesFeedShop' }),
         G = null !== (t = null != V ? V : M) && void 0 !== t ? t : W,
-        z = Array.from(F.values()),
+        z = Array.from(H.values()),
         K = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
         $ = a.createRef(),
         Y = (0, x.m)('CollectiblesFeedShop'),
@@ -67,7 +67,7 @@ t.Z = (e) => {
     let eh = (e) => {
             var t;
             let { category: n, showMostPopularBadge: a } = e,
-                { handleCardVisibilityChange: i } = (0, j.E)(n.skuId, 'home', 'marketing'),
+                { handleCardVisibilityChange: i } = (0, S.E)(n.skuId, 'home', 'marketing'),
                 s = !0 === a ? L.intl.string(L.t['o/oRJC']) : (null == n ? void 0 : n.unpublishedAt) != null ? L.intl.string(L.t['h/uBCQ']) : void 0,
                 o = (0, b.uV)(null !== (t = null == n ? void 0 : n.featuredBlock) && void 0 !== t ? t : '', {
                     size: y.J0,
@@ -167,7 +167,7 @@ t.Z = (e) => {
                                                   children: [
                                                       (0, r.jsx)('img', {
                                                           className: P.heroHeaderLogo,
-                                                          src: (0, b.uV)(null !== (A = null !== (w = null == en ? void 0 : en.heroLogo) && void 0 !== w ? w : null == en ? void 0 : en.logo) && void 0 !== A ? A : '', { size: S.n }),
+                                                          src: (0, b.uV)(null !== (A = null !== (w = null == en ? void 0 : en.heroLogo) && void 0 !== w ? w : null == en ? void 0 : en.logo) && void 0 !== A ? A : '', { size: j.n }),
                                                           alt: null == en ? void 0 : en.name
                                                       }),
                                                       (0, r.jsx)(d.Text, {
@@ -286,7 +286,7 @@ t.Z = (e) => {
                             children: D
                                 ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(T.K, {}, t + 1)) })
                                 : (0, r.jsx)(r.Fragment, {
-                                      children: eu.slice(0, H).map((e, t) => {
+                                      children: eu.slice(0, F).map((e, t) => {
                                           let n = v.Z.getCategoryForProduct(e.skuId);
                                           return null == e || null == n
                                               ? null
@@ -314,7 +314,7 @@ t.Z = (e) => {
                                       })
                                   })
                         }),
-                        H >= y.iA &&
+                        F >= y.iA &&
                             (0, r.jsxs)('div', {
                                 className: P.endOfFeed,
                                 children: [

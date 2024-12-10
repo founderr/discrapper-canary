@@ -124,8 +124,8 @@ t.Z = (e) => {
         { referralSentUsers: P, hasSentAllReferrals: Z, refreshAt: B } = (0, E.G)(),
         M = r.useMemo(() => P.map((e) => new g.Z(e)), [P]),
         { subscriberHomeVariant: O } = h.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
-        y = R === v.g2L.UNAPPLIED || R === v.g2L.QUALIFIED,
-        w = O === h.p.VARIANT_2,
+        w = R === v.g2L.UNAPPLIED || R === v.g2L.QUALIFIED,
+        y = O === h.p.VARIANT_2,
         k = {
             redeemed: 0,
             converted: 0,
@@ -137,16 +137,16 @@ t.Z = (e) => {
     let L = k.sent === E.Q,
         U = f.Z.getArticleURL(v.BhN.REFERRAL_PROGRAM),
         { analyticsLocations: D } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
-        H = r.useRef(null),
-        V = (k.sent / E.Q) * 100,
-        G = !1;
-    j && null != B && ((G = 0 < (t = Math.ceil((new Date(B).getTime() - new Date().getTime()) / 86400000)) && t < C.AV), (a = (100 * (C.AV - t)) / C.AV));
-    let F = G && null != t,
+        G = r.useRef(null),
+        H = (k.sent / E.Q) * 100,
+        V = !1;
+    j && null != B && ((V = 0 < (t = Math.ceil((new Date(B).getTime() - new Date().getTime()) / 86400000)) && t < C.AV), (a = (100 * (C.AV - t)) / C.AV));
+    let F = V && null != t,
         W = (0, i.jsxs)('div', {
             className: N.referralInfoContent,
             children: [
                 (0, i.jsx)(x.ZP, {
-                    percentage: F ? 0 : V,
+                    percentage: F ? 0 : H,
                     progressCircleVariation: x.Qo.NITRO_LOGO,
                     iconClassName: s()({
                         [N.referralProgressBarIcon]: !u,
@@ -192,14 +192,14 @@ t.Z = (e) => {
                                 helpdeskArticle: U,
                                 referralIncentiveLifecycleState: R,
                                 referralsStatuses: k,
-                                isWithinCountdownRange: G
+                                isWithinCountdownRange: V
                             })
                         }),
                         (0, i.jsxs)('div', {
                             className: s()(N.expandedProgressBarButtonContainer, { [N.expandedProgressBarButtonContainerLayout]: !u }),
                             children: [
                                 !u &&
-                                    !w &&
+                                    !y &&
                                     (0, i.jsx)(b.Z, {
                                         color: o.ButtonColors.CUSTOM,
                                         buttonText: T.intl.string(T.t.Ve9Ge3),
@@ -246,25 +246,25 @@ t.Z = (e) => {
         value: D,
         children: (0, i.jsx)('div', {
             className: s()({
-                [N.containerWithGlowWithoutBanner]: !F && z && !y,
-                [N.containerWithGlowWithBanner]: !F && z && y,
+                [N.containerWithGlowWithoutBanner]: !F && z && !w,
+                [N.containerWithGlowWithBanner]: !F && z && w,
                 [N.containerWithoutGlow]: F || !z,
                 [N.containerWithMargins]: !u,
-                [N.marginWithBanner]: y,
+                [N.marginWithBanner]: w,
                 [N.containerWithGlowOnSettingsPage]: !F && z && u
             }),
             children: (0, i.jsxs)('div', {
-                ref: H,
+                ref: G,
                 className: s()({
                     [N.expandedProgressBarContainer]: !u,
                     [N.expandedProgressBarContainerSettingsPage]: u,
-                    [N.expandedProgressBarContainerVariant1]: !w && !u,
-                    [N.expandedProgressBarContainerVariant2]: w && !u,
+                    [N.expandedProgressBarContainerVariant1]: !y && !u,
+                    [N.expandedProgressBarContainerVariant2]: y && !u,
                     [N.allReferralsSentBorder]: !F && z,
-                    [N.containerWithBanner]: !F && y
+                    [N.containerWithBanner]: !F && w
                 }),
                 children: [
-                    y &&
+                    w &&
                         !F &&
                         (0, i.jsx)('div', {
                             className: s()(N.banner, {

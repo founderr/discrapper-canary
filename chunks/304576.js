@@ -41,14 +41,14 @@ t.Z = (e) => {
         B = (0, g._O)(),
         M = (0, f.Ng)(),
         O = (0, f.Wp)(M, v.Si.TIER_2) ? v.Si.TIER_2 : void 0,
-        y = (0, p.N)(),
-        w = (0, u.Nx)(),
+        w = (0, p.N)(),
+        y = (0, u.Nx)(),
         k = (0, h.Vi)(),
         L = (0, s.e7)([d.Z], () => d.Z.affinities),
         U = (0, _.Z)(),
         { enabled: D } = m._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
-        H = j === v.EZ.ApplicationStoreHome && null != U && D,
-        V = L.length > 0;
+        G = j === v.EZ.ApplicationStoreHome && null != U && D,
+        H = L.length > 0;
     return (0, i.jsx)(c.Gt, {
         value: Z,
         children: (0, i.jsx)('div', {
@@ -57,9 +57,9 @@ t.Z = (e) => {
             children: (0, i.jsxs)('div', {
                 className: N.marketingPageV2TextContainer,
                 children: [
-                    w &&
+                    y &&
                         (0, i.jsx)(I, {
-                            trialOffer: y,
+                            trialOffer: w,
                             discountOffer: M
                         }),
                     (0, i.jsx)(l.Heading, {
@@ -68,12 +68,12 @@ t.Z = (e) => {
                         color: 'header-primary',
                         children: T.intl.string(T.t.YCZldH)
                     }),
-                    H
+                    G
                         ? (0, i.jsx)(b.Z, {
                               referrer: U,
                               isMarketingPageV2Enabled: !0
                           })
-                        : V &&
+                        : H &&
                           (0, i.jsx)('div', {
                               className: a()(N.affinityDescriptionV2),
                               children: (0, i.jsx)(E.Z, {
@@ -84,16 +84,16 @@ t.Z = (e) => {
                           }),
                     k || B
                         ? (0, i.jsx)('div', {
-                              className: a()(N.buttonContainer, N.marketingPageV2CTAContainer, { [N.marketingPageV2CTAMargin]: !(V || H) }),
+                              className: a()(N.buttonContainer, N.marketingPageV2CTAContainer, { [N.marketingPageV2CTAMargin]: !(H || G) }),
                               children: (0, i.jsx)(x.Z, {
                                   className: a()(N.button, R),
                                   forceWhite: !0
                               })
                           })
                         : (0, i.jsx)(C.PK, {
-                              subscriptionTier: null !== (n = null != A ? A : null == y ? void 0 : null === (t = y.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : O,
-                              inOfferExperience: w,
-                              containerClassName: a()(N.marketingPageV2CTAContainer, { [N.marketingPageV2CTAMargin]: !(V || H) }),
+                              subscriptionTier: null !== (n = null != A ? A : null == w ? void 0 : null === (t = w.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : O,
+                              inOfferExperience: y,
+                              containerClassName: a()(N.marketingPageV2CTAContainer, { [N.marketingPageV2CTAMargin]: !(H || G) }),
                               buttonClassName: R,
                               isMarketingPageV2Enabled: !0,
                               isDarkMode: P

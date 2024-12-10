@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(481060),
-    o = n(110924),
+    o = n(481060),
+    a = n(110924),
     s = n(693546),
     c = n(863249),
     u = n(937111),
@@ -20,14 +20,14 @@ var i = n(200651),
     f = n(179809),
     g = n(588275),
     C = n(388032),
-    _ = n(738945);
-function v(e) {
+    v = n(738945);
+function _(e) {
     let { onActivate: t, children: n } = e,
         s = (0, r.e7)([u.Z], () => u.Z.hasJoinRequestCoackmark()),
         d = l.useCallback(() => {
             c.ZP.clearCoachmark();
         }, []),
-        h = (0, o.Z)(s),
+        h = (0, a.Z)(s),
         p = l.useRef(null);
     return (
         l.useEffect(() => {
@@ -37,42 +37,42 @@ function v(e) {
             }
         }, [p, s, h, t]),
         (0, i.jsxs)('div', {
-            className: _.container,
+            className: v.container,
             children: [
-                (0, i.jsx)(a.Popout, {
+                (0, i.jsx)(o.Popout, {
                     ref: p,
                     shouldShow: s,
                     renderPopout: () =>
                         (0, i.jsxs)('div', {
-                            className: _.popoutContainer,
+                            className: v.popoutContainer,
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: _.popoutContent,
+                                    className: v.popoutContent,
                                     children: [
                                         (0, i.jsxs)('div', {
-                                            className: _.coachmarkTextContainer,
+                                            className: v.coachmarkTextContainer,
                                             children: [
-                                                (0, i.jsx)(a.Heading, {
+                                                (0, i.jsx)(o.Heading, {
                                                     variant: 'heading-md/medium',
                                                     children: C.intl.string(C.t.fRUGzs)
                                                 }),
-                                                (0, i.jsx)(a.Text, {
+                                                (0, i.jsx)(o.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'text-muted',
                                                     children: C.intl.string(C.t.ja0Tg4)
                                                 })
                                             ]
                                         }),
-                                        (0, i.jsx)(a.Button, {
+                                        (0, i.jsx)(o.Button, {
                                             fullWidth: !0,
-                                            size: a.ButtonSizes.SMALL,
-                                            color: a.ButtonColors.BRAND,
+                                            size: o.ButtonSizes.SMALL,
+                                            color: o.ButtonColors.BRAND,
                                             onClick: d,
                                             children: C.intl.string(C.t.E0MgHh)
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)('div', { className: _.popoutCaretLeft })
+                                (0, i.jsx)('div', { className: v.popoutCaretLeft })
                             ]
                         }),
                     position: 'right',
@@ -82,7 +82,7 @@ function v(e) {
                     children: (e) =>
                         (0, i.jsx)('div', {
                             ...e,
-                            className: _.popoutAnchor
+                            className: v.popoutAnchor
                         })
                 }),
                 n
@@ -96,7 +96,7 @@ function x(e) {
         I = (0, r.e7)([d.Z], () => d.Z.getGuildId()),
         b = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
         E = (0, m.Z)(),
-        S = (0, o.Z)(I),
+        S = (0, a.Z)(I),
         Z = l.useMemo(() => {
             let e = (0, p.qQ)({
                 folderId: h.S.PENDING_JOIN_REQUESTS_FOLDER,
@@ -116,7 +116,7 @@ function x(e) {
     }, [n, N, S, I]),
     0 === E.length)
         ? null
-        : (0, i.jsx)(v, {
+        : (0, i.jsx)(_, {
               onActivate: t,
               children: (0, i.jsx)(f.Z, {
                   folderNode: Z,
@@ -128,12 +128,12 @@ function x(e) {
                   onExpandCollapse: () => {
                       x(!n), c.ZP.clearCoachmark();
                   },
-                  folderIconContent: (0, i.jsx)(a.HourglassIcon, {
+                  folderIconContent: (0, i.jsx)(o.HourglassIcon, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 24,
                       height: 24,
-                      className: _.pendingIcon
+                      className: v.pendingIcon
                   }),
                   renderChildNode: function (e) {
                       return e.type !== p.eD.GUILD ? null : (0, i.jsx)(g.Z, { guildNode: e }, e.id);

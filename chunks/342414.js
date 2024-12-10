@@ -30,7 +30,7 @@ var r = n(120356),
     P = n(578478);
 let Z = (e) => {
         let { className: t } = e,
-            { headingText: n, headingTop: r, headingBottom: s } = y();
+            { headingText: n, headingTop: r, headingBottom: s } = w();
         return (0, i.jsx)(i.Fragment, {
             children: (0, i.jsxs)('div', {
                 className: a()(A.container, t),
@@ -70,7 +70,7 @@ let Z = (e) => {
         let { location: t } = e,
             { subscriberHomeVariant: n } = h.g.useExperiment({ location: t }, { autoTrackExposure: !1 }),
             r = n === h.p.VARIANT_2,
-            { headingText: a, headingTop: s, headingBottom: o } = y();
+            { headingText: a, headingTop: s, headingBottom: o } = w();
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('img', {
@@ -109,7 +109,7 @@ let Z = (e) => {
         });
     },
     M = () => {
-        let { headingText: e } = y();
+        let { headingText: e } = w();
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('img', {
@@ -138,7 +138,7 @@ let Z = (e) => {
             ]
         });
     },
-    [O, y] = (0, f.Z)();
+    [O, w] = (0, f.Z)();
 t.Z = (e) => {
     let { className: t, location: n } = e,
         { analyticsLocations: r } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
@@ -150,11 +150,11 @@ t.Z = (e) => {
         N = (0, i.jsx)(Z, { className: t }),
         j = R.intl.string(R.t.ifwQZW),
         P = !1,
-        { fractionalState: y, endsAt: w } = (0, u.Z)(),
-        k = (0, d.Z)(w, d.a.ENDS_IN);
+        { fractionalState: w, endsAt: y } = (0, u.Z)(),
+        k = (0, d.Z)(y, d.a.ENDS_IN);
     l ? ((j = R.intl.string(R.t.ifwQZW)), (N = (0, i.jsx)(M, {}))) : (x || v) && ((h = R.intl.string(R.t.qYKftb)), (j = R.intl.string(R.t.ifwQZW)), (N = (0, i.jsx)(B, { location: n })));
     let L = null;
-    if (y !== I.a$.NONE) {
+    if (w !== I.a$.NONE) {
         (f = !0), (h = R.intl.string(R.t.vaqFvb)), (P = !0);
         let e = R.intl.format(R.t['yR+oDA'], { helpCenterLink: p.Z.getArticleURL(S.BhN.FRACTIONAL_PREMIUM_ABOUT) });
         L = (0, i.jsx)(g.Z, {

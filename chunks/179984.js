@@ -31,7 +31,7 @@ var i = n(200651),
     B = n(768236),
     M = n(314907),
     O = n(826701);
-let y = () => {
+let w = () => {
         let e = (0, T.W1)();
         return (0, i.jsx)(N.Cy, {
             text: e,
@@ -39,7 +39,7 @@ let y = () => {
             colorOptions: N.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
         });
     },
-    w = () =>
+    y = () =>
         (0, i.jsx)('div', {
             className: P.mostPopularPill,
             children: (0, i.jsx)(c.Heading, {
@@ -118,9 +118,9 @@ t.Z = (e) => {
     var t;
     let n,
         { className: a, hideCTAs: Z = !1, headingOverride: B, hidePill: M = !1, selectedPlanColumnClassName: O, selectedPlanTier: D = A.p9.TIER_2 } = e,
-        { analyticsLocations: H } = (0, m.ZP)(g.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
-        V = (0, l.e7)([h.ZP], () => h.ZP.hasFetchedSubscriptions()),
-        G = (0, p.V)(),
+        { analyticsLocations: G } = (0, m.ZP)(g.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
+        H = (0, l.e7)([h.ZP], () => h.ZP.hasFetchedSubscriptions()),
+        V = (0, p.V)(),
         F = 'PlanComparisonTable';
     (0, d.j)({
         location: F + ' auto on',
@@ -146,7 +146,7 @@ t.Z = (e) => {
         er = (0, f.Z)(),
         ea = (0, I.n)(en, ei, $, et, er.fractionalState),
         es = (0, T.Vi)();
-    if (!V || !G) return null;
+    if (!H || !V) return null;
     let el = {
         label: (0, i.jsx)(c.Heading, {
             className: P.__invalid_textColor,
@@ -230,11 +230,11 @@ t.Z = (e) => {
                     colorOptions: q === A.Si.TIER_0 ? (z ? N.VE.PREMIUM_TIER_0_GRADIENT_FILL : N.VE.PREMIUM_TIER_0_WHITE_FILL) : z ? (K ? N.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : N.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL) : N.VE.PREMIUM_TIER_2_WHITE_FILL
                 })
               : es
-                ? (0, i.jsx)(y, {})
-                : (0, i.jsx)(w, {}));
+                ? (0, i.jsx)(w, {})
+                : (0, i.jsx)(y, {}));
     let eo = q === A.Si.TIER_0 || J === A.p9.TIER_0 || D === A.p9.TIER_0;
     return (0, i.jsx)(m.Gt, {
-        value: H,
+        value: G,
         children: (0, i.jsxs)('div', {
             className: s()(P.root, a),
             'data-testid': 'v2-marketing-page-comparison-table',
