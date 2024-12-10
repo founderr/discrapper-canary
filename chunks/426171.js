@@ -1,16 +1,15 @@
 n.d(t, {
     Kp: function () {
-        return C;
+        return b;
     },
     u9: function () {
-        return f;
+        return C;
     },
     xV: function () {
-        return v;
+        return x;
     }
 }),
     n(757143),
-    n(47120),
     n(653041);
 var r = n(192379),
     a = n(512969),
@@ -18,95 +17,104 @@ var r = n(192379),
     l = n(607070),
     s = n(100527),
     o = n(906732),
-    c = n(328347),
-    d = n(237031),
-    u = n(981631);
-let m = ''.concat('#').concat('itemSkuId', '='),
-    h = new RegExp('^'.concat(m, '(\\d+)$')),
-    p = [u.Z5c.COLLECTIBLES_SHOP, u.Z5c.COLLECTIBLES_SHOP_FULLSCREEN],
-    f = (e) => {
+    c = n(597688),
+    d = n(328347),
+    u = n(429368),
+    m = n(237031),
+    h = n(981631);
+let p = ''.concat('#').concat('itemSkuId', '='),
+    f = new RegExp('^'.concat(p, '(\\d+)$')),
+    g = [h.Z5c.COLLECTIBLES_SHOP, h.Z5c.COLLECTIBLES_SHOP_FULLSCREEN],
+    C = (e) => {
         let t = (0, a.TH)();
         r.useEffect(() => {
-            if (null != e && p.includes(t.pathname))
+            if (null != e && g.includes(t.pathname))
                 return (
-                    window.location.replace(''.concat(m).concat(e.skuId)),
+                    window.location.replace(''.concat(p).concat(e)),
                     () => {
-                        window.location.hash.startsWith(m) && window.location.replace('#');
+                        window.location.hash.startsWith(p) && window.location.replace('#');
                     }
                 );
-        }, []);
+        }, [e]);
     },
-    g = (e) => {
-        let { categories: t, productSkuId: n, analyticsLocations: r, analyticsSource: a, initialItemCardRef: i, reducedMotion: l = !1 } = e;
-        for (let e of t.values()) {
-            let t = e.products.find((e) => e.skuId === n);
-            if (null != t) {
-                var s;
-                null === (s = i.current) ||
-                    void 0 === s ||
-                    s.scrollIntoView({
-                        behavior: l ? 'instant' : 'smooth',
-                        block: 'center',
-                        inline: 'center'
+    v = (e) => {
+        let { productSkuId: t, analyticsLocations: n, analyticsSource: r, initialItemCardRef: a, reducedMotion: i = !1 } = e,
+            l = c.Z.getProduct(t),
+            s = c.Z.getCategoryForProduct(t);
+        if (null != l && null != s) {
+            var o;
+            null === (o = a.current) ||
+                void 0 === o ||
+                o.scrollIntoView({
+                    behavior: i ? 'instant' : 'smooth',
+                    block: 'center',
+                    inline: 'center'
+                });
+            let e = l,
+                d = setTimeout(() => {
+                    let i = document.getElementById('shop-item-'.concat(e.skuId));
+                    if ((i !== document.activeElement && (null == i || i.focus()), null != l.variantGroupStoreListingId)) {
+                        let n = c.Z.getProductByStoreListingId(l.variantGroupStoreListingId);
+                        if (null != n) {
+                            var o;
+                            e = n;
+                            let r = null === (o = n.variants) || void 0 === o ? void 0 : o.findIndex((e) => e.skuId === t);
+                            null != r && r > -1 && (0, u.$)(n, r);
+                        }
+                    }
+                    (0, m.T)({
+                        product: e,
+                        category: s,
+                        analyticsSource: r,
+                        analyticsLocations: n,
+                        returnRef: a
                     });
-                let n = setTimeout(() => {
-                    let n = document.getElementById('shop-item-'.concat(t.skuId));
-                    n !== document.activeElement && (null == n || n.focus()),
-                        (0, d.T)({
-                            product: t,
-                            category: e,
-                            analyticsSource: a,
-                            analyticsLocations: r,
-                            returnRef: i
-                        });
                 }, 750);
-                return () => clearTimeout(n);
-            }
+            return () => clearTimeout(d);
         }
         return () => {};
     },
-    C = (e) => {
-        let { categories: t, isFetchingCategories: n, isLayer: d, initialItemCardRef: m } = e,
-            p = (0, i.e7)([l.Z], () => l.Z.useReducedMotion),
-            f = r.useRef(null),
-            C = (0, a.TH)(),
-            v = C.pathname === u.Z5c.COLLECTIBLES_SHOP ? s.Z.HOME_PAGE_SHOP_TAB : C.pathname === u.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? s.Z.COLLECTIBLES_SHOP_FULLSCREEN : s.Z.COLLECTIBLES_SHOP,
-            { analyticsLocations: b } = (0, o.ZP)(v);
-        r.useEffect(() => {
-            if (d) return;
-            let e = h.exec(C.hash);
-            if (null != e) {
-                let t = e[1];
-                f.current = t;
-            }
-        }, []);
-        let x = (0, i.e7)([c.Z], () => c.Z.initialProductSkuId);
+    b = (e) => {
+        let { isFetchingCategories: t, isLayer: n, initialItemCardRef: c } = e,
+            u = (0, i.e7)([l.Z], () => l.Z.useReducedMotion),
+            m = r.useRef(null),
+            p = (0, a.TH)(),
+            g = p.pathname === h.Z5c.COLLECTIBLES_SHOP ? s.Z.HOME_PAGE_SHOP_TAB : p.pathname === h.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? s.Z.COLLECTIBLES_SHOP_FULLSCREEN : s.Z.COLLECTIBLES_SHOP,
+            { analyticsLocations: C } = (0, o.ZP)(g);
         r.useEffect(() => {
             if (n) return;
+            let e = f.exec(p.hash);
+            if (null != e) {
+                let t = e[1];
+                m.current = t;
+            }
+        }, []);
+        let b = (0, i.e7)([d.Z], () => d.Z.initialProductSkuId);
+        r.useEffect(() => {
+            if (t) return;
             let e = null;
-            if ((d && null != x && (e = x), !d && null != f.current && (e = f.current), null != e)) {
-                let n = [],
-                    r = setTimeout(() => {
-                        let r = g({
-                            categories: t,
+            if ((n && null != b && (e = b), !n && null != m.current && (e = m.current), null != e)) {
+                let t = [],
+                    n = setTimeout(() => {
+                        let n = v({
                             productSkuId: e,
-                            analyticsLocations: b,
-                            analyticsSource: v,
-                            initialItemCardRef: m,
-                            reducedMotion: p
+                            analyticsLocations: C,
+                            analyticsSource: g,
+                            initialItemCardRef: c,
+                            reducedMotion: u
                         });
-                        n.push(r);
+                        t.push(n);
                     }, 250);
                 return (
-                    n.push(() => clearTimeout(r)),
+                    t.push(() => clearTimeout(n)),
                     () => {
-                        n.forEach((e) => e());
+                        t.forEach((e) => e());
                     }
                 );
             }
-        }, [d, b, v, t, n, x, m, p]);
+        }, [n, C, g, t, b, c, u]);
     },
-    v = (e) => {
+    x = (e) => {
         let t = r.useRef({}),
             n = (0, i.e7)([l.Z], () => l.Z.useReducedMotion),
             a = r.useCallback((e, n) => {
