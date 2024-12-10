@@ -1,6 +1,6 @@
 n.d(e, {
     O: function () {
-        return h;
+        return d;
     }
 });
 var r = n(573736),
@@ -63,19 +63,19 @@ function c() {
 function a(t) {
     return c().withScope(t);
 }
-function l(t, e) {
+function h(t, e) {
     let n = c();
     return n.withScope(() => ((n.getStackTop().scope = t), e(t)));
 }
-function f(t) {
+function _(t) {
     return c().withScope(() => t(c().getIsolationScope()));
 }
-function h() {
+function d() {
     return {
-        withIsolationScope: f,
+        withIsolationScope: _,
         withScope: a,
-        withSetScope: l,
-        withSetIsolationScope: (t, e) => f(e),
+        withSetScope: h,
+        withSetIsolationScope: (t, e) => _(e),
         getCurrentScope: () => c().getScope(),
         getIsolationScope: () => c().getIsolationScope()
     };

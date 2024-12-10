@@ -1,6 +1,6 @@
 n.d(e, {
     s: function () {
-        return f;
+        return _;
     }
 });
 var r = n(731889),
@@ -10,12 +10,12 @@ var r = n(731889),
     u = n(622916),
     c = n(112797),
     a = n(99342);
-class l {
+class h {
     constructor() {
         (this._notifyingListeners = !1), (this._scopeListeners = []), (this._eventProcessors = []), (this._breadcrumbs = []), (this._attachments = []), (this._user = {}), (this._tags = {}), (this._extra = {}), (this._contexts = {}), (this._sdkProcessingMetadata = {}), (this._propagationContext = (0, r.Q)());
     }
     clone() {
-        let t = new l();
+        let t = new h();
         return (t._breadcrumbs = [...this._breadcrumbs]), (t._tags = { ...this._tags }), (t._extra = { ...this._extra }), (t._contexts = { ...this._contexts }), (t._user = this._user), (t._level = this._level), (t._session = this._session), (t._transactionName = this._transactionName), (t._fingerprint = this._fingerprint), (t._eventProcessors = [...this._eventProcessors]), (t._requestSession = this._requestSession), (t._attachments = [...this._attachments]), (t._sdkProcessingMetadata = { ...this._sdkProcessingMetadata }), (t._propagationContext = { ...this._propagationContext }), (t._client = this._client), (t._lastEventId = this._lastEventId), (0, a.D)(t, (0, a.Y)(this)), t;
     }
     setClient(t) {
@@ -119,8 +119,8 @@ class l {
     update(t) {
         if (!t) return this;
         let e = 'function' == typeof t ? t(this) : t,
-            [n, r] = e instanceof f ? [e.getScopeData(), e.getRequestSession()] : (0, i.PO)(e) ? [t, t.requestSession] : [],
-            { tags: s, extra: o, user: u, contexts: c, level: a, fingerprint: l = [], propagationContext: h } = n || {};
+            [n, r] = e instanceof _ ? [e.getScopeData(), e.getRequestSession()] : (0, i.PO)(e) ? [t, t.requestSession] : [],
+            { tags: s, extra: o, user: u, contexts: c, level: a, fingerprint: h = [], propagationContext: d } = n || {};
         return (
             (this._tags = {
                 ...this._tags,
@@ -136,8 +136,8 @@ class l {
             }),
             u && Object.keys(u).length && (this._user = u),
             a && (this._level = a),
-            l.length && (this._fingerprint = l),
-            h && (this._propagationContext = h),
+            h.length && (this._fingerprint = h),
+            d && (this._propagationContext = d),
             r && (this._requestSession = r),
             this
         );
@@ -259,4 +259,4 @@ class l {
             (this._notifyingListeners = !1));
     }
 }
-let f = l;
+let _ = h;

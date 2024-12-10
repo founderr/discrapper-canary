@@ -360,7 +360,7 @@ t.default = {
         let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
             a = String(e);
         if (
-            (!u.R.includes(a) &&
+            (!u.R7.includes(a) &&
                 _.Z.addBreadcrumb({
                     category: 'analytics',
                     message: ''.concat(a)

@@ -16,6 +16,6 @@ function o(t, e) {
             timestamp: (0, r.yW)(),
             ...t
         },
-        l = u ? (0, i.Cf)(() => u(a, e)) : a;
-    null !== l && (n.emit && n.emit('beforeAddBreadcrumb', l, e), o.addBreadcrumb(l, c));
+        h = u ? (0, i.Cf)(() => u(a, e)) : a;
+    null !== h && (n.emit && n.emit('beforeAddBreadcrumb', h, e), o.addBreadcrumb(h, c));
 }
