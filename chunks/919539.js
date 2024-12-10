@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return _;
     }
 }),
     n(47120);
@@ -21,14 +21,14 @@ var i = n(200651),
     S = n(726985),
     T = n(736530),
     E = n(981631),
-    _ = n(388032);
-function C() {
+    C = n(388032);
+function _() {
     let e = (0, m.is)(),
         t = (0, m.c_)(),
         n = u.iG.useSetting(),
-        C = u.h2.useSetting().includes(e),
-        I = u.mX.useSetting(),
-        f = u.zA.useSetting().includes(e),
+        _ = u.h2.useSetting().includes(e),
+        f = u.mX.useSetting(),
+        I = u.zA.useSetting().includes(e),
         N = s.useCallback(
             (t) => {
                 let n = (0, d.gl)();
@@ -48,17 +48,17 @@ function C() {
         children:
             e === T.T
                 ? (0, i.jsx)(g.Z, {
-                      title: _.intl.string(_.t['3o2ojo']),
-                      value: !n && !I,
+                      title: C.intl.string(C.t['3o2ojo']),
+                      value: !n && !f,
                       onChange: () => {
                           var e;
                           return (
-                              (e = !I),
+                              (e = !f),
                               void (0, p.V)({
-                                  header: _.intl.string(_.t.yAfu1t),
-                                  body: _.intl.string(_.t['Ry2z7+']),
-                                  confirmText: _.intl.string(_.t.gm1Ven),
-                                  cancelText: _.intl.string(_.t.p89ACg),
+                                  header: C.intl.string(C.t.yAfu1t),
+                                  body: C.intl.string(C.t['Ry2z7+']),
+                                  confirmText: C.intl.string(C.t.gm1Ven),
+                                  cancelText: C.intl.string(C.t.p89ACg),
                                   confirmButtonColor: r.Button.Colors.BRAND,
                                   onConfirm: () => {
                                       u.mX.updateSetting(e), A(e, !1);
@@ -70,14 +70,14 @@ function C() {
                           );
                       },
                       disabled: n,
-                      note: _.intl.format(_.t.wkm9a2, { helpdeskArticle: o.Z.getArticleURL(E.BhN.MESSAGE_REQUESTS) })
+                      note: C.intl.format(C.t.wkm9a2, { helpdeskArticle: o.Z.getArticleURL(E.BhN.MESSAGE_REQUESTS) })
                   })
                 : (0, i.jsx)(g.Z, {
-                      title: _.intl.string(_.t['3o2ojo']),
-                      value: !f,
+                      title: C.intl.string(C.t['3o2ojo']),
+                      value: !I,
                       onChange: N,
-                      disabled: C,
-                      note: t ? _.intl.format(_.t.WpnWLS, { helpdeskArticle: o.Z.getArticleURL(E.BhN.MESSAGE_REQUESTS) }) : _.intl.format(_.t.wkm9a2, { helpdeskArticle: o.Z.getArticleURL(E.BhN.MESSAGE_REQUESTS) })
+                      disabled: _,
+                      note: t ? C.intl.format(C.t.WpnWLS, { helpdeskArticle: o.Z.getArticleURL(E.BhN.MESSAGE_REQUESTS) }) : C.intl.format(C.t.wkm9a2, { helpdeskArticle: o.Z.getArticleURL(E.BhN.MESSAGE_REQUESTS) })
                   })
     });
 }

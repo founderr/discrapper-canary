@@ -2,30 +2,30 @@ var i = n(200651),
     r = n(192379),
     l = n(392711),
     a = n.n(l),
-    s = n(481060),
-    o = n(367907),
+    o = n(481060),
+    s = n(367907),
     c = n(626135),
     d = n(986332),
     u = n(428695),
     h = n(981631),
     m = n(388032),
     p = n(3030);
-let g = a().debounce(o.ZP.trackWithMetadata, 500),
+let g = a().debounce(s.ZP.trackWithMetadata, 500),
     f = (e) => {
-        let { guild: t, title: n, message: l, image: a, type: d, imageMarginX: u, imageMarginTop: f, trackingSource: _, undismissable: E, onDismissed: I, onClick: C, cta: v, ctaColor: N } = e;
+        let { guild: t, title: n, message: l, image: a, type: d, imageMarginX: u, imageMarginTop: f, trackingSource: _, undismissable: E, onDismissed: I, onClick: C, cta: v, ctaColor: S } = e;
         r.useEffect(() => {
             g(h.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: d,
                 guild_id: t.id
             });
         }, [t.id, d]);
-        let S = null;
+        let N = null;
         'function' == typeof v
-            ? (S = v())
+            ? (N = v())
             : null != v &&
-              (S = (0, i.jsx)(s.Button, {
+              (N = (0, i.jsx)(o.Button, {
                   className: p.btn,
-                  size: s.Button.Sizes.SMALL,
+                  size: o.Button.Sizes.SMALL,
                   onClick: () => {
                       null != d &&
                           c.default.track(h.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
@@ -36,7 +36,7 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
                           null == C || C();
                   },
                   fullWidth: !0,
-                  color: N,
+                  color: S,
                   children: v
               }));
         let T = null != u ? ''.concat(u, 'px') : '16px';
@@ -45,13 +45,13 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
             children: [
                 !0 === E
                     ? null
-                    : (0, i.jsx)(s.Clickable, {
+                    : (0, i.jsx)(o.Clickable, {
                           onClick: () => {
-                              o.ZP.trackWithMetadata(h.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: d }), null == I || I();
+                              s.ZP.trackWithMetadata(h.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: d }), null == I || I();
                           },
                           className: p.close,
                           'aria-label': m.intl.string(m.t.WAI6xs),
-                          children: (0, i.jsx)(s.XSmallIcon, {
+                          children: (0, i.jsx)(o.XSmallIcon, {
                               size: 'md',
                               color: 'currentColor',
                               className: p.closeIcon
@@ -74,17 +74,17 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
                     className: p.message,
                     children: [
                         null != n
-                            ? (0, i.jsx)(s.Heading, {
+                            ? (0, i.jsx)(o.Heading, {
                                   variant: 'heading-md/semibold',
                                   className: p.title,
                                   children: n
                               })
                             : null,
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(o.Text, {
                             variant: 'text-sm/normal',
                             children: l
                         }),
-                        S
+                        N
                     ]
                 })
             ]

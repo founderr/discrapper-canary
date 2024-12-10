@@ -13,8 +13,8 @@ var i,
     r,
     l = n(200651),
     a = n(192379),
-    s = n(120356),
-    o = n.n(s),
+    o = n(120356),
+    s = n.n(o),
     c = n(481060),
     d = n(706454),
     u = n(600419);
@@ -69,7 +69,7 @@ function m(e) {
 }
 ((i = r || (r = {})).FILLED = 'FILLED'), (i.TRANSPARENT = 'TRANSPARENT');
 function p(e) {
-    let { items: t, title: n, onSelect: i, selected: r, variant: s = 'TRANSPARENT', ...d } = e,
+    let { items: t, title: n, onSelect: i, selected: r, variant: o = 'TRANSPARENT', ...d } = e,
         m = a.useMemo(
             () =>
                 (function (e) {
@@ -79,8 +79,8 @@ function p(e) {
                         case 'TRANSPARENT':
                             return;
                     }
-                })(s),
-            [s]
+                })(o),
+            [o]
         );
     return (0, l.jsx)(c.Popout, {
         renderPopout: (e) => {
@@ -99,7 +99,7 @@ function p(e) {
             let { isShown: i } = t;
             return (0, l.jsxs)('div', {
                 ...e,
-                className: o()(u.filter, m),
+                className: s()(u.filter, m),
                 children: [
                     (0, l.jsx)(c.Text, {
                         variant: 'text-sm/medium',

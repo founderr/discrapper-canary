@@ -1,49 +1,49 @@
-_.r(t),
-    _.d(t, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return P;
+            return s;
         }
     }),
-    _(610138),
-    _(216116),
-    _(78328),
-    _(815648),
-    _(47120);
-var I = _(200651);
-_(192379);
-var a = _(512969),
-    O = _(272242),
-    o = _(981631),
-    R = _(979007);
-function P() {
-    let c = new URLSearchParams(location.search);
+    n(610138),
+    n(216116),
+    n(78328),
+    n(815648),
+    n(47120);
+var i = n(200651);
+n(192379);
+var r = n(512969),
+    l = n(272242),
+    a = n(981631),
+    o = n(979007);
+function s() {
+    let e = new URLSearchParams(location.search);
     return (
-        c.delete('page'),
-        (0, I.jsxs)(a.rs, {
+        e.delete('page'),
+        (0, i.jsxs)(r.rs, {
             children: [
-                (0, I.jsx)(a.l_, {
-                    path: o.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(':categoryId'),
-                    to: ''.concat(o.Z5c.APPLICATION_DIRECTORY_SEARCH, '?category_id=:categoryId')
+                (0, i.jsx)(r.l_, {
+                    path: a.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(':categoryId'),
+                    to: ''.concat(a.Z5c.APPLICATION_DIRECTORY_SEARCH, '?category_id=:categoryId')
                 }),
-                (0, I.jsx)(a.l_, {
-                    path: o.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH,
-                    to: ''.concat(o.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(c.toString())
+                (0, i.jsx)(r.l_, {
+                    path: a.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH,
+                    to: ''.concat(a.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(e.toString())
                 }),
-                (0, I.jsx)(a.l_, {
-                    path: o.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId'),
-                    to: o.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(':applicationId', ':skuId')
+                (0, i.jsx)(r.l_, {
+                    path: a.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId'),
+                    to: a.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(':applicationId', ':skuId')
                 }),
-                (0, I.jsx)(a.l_, {
-                    path: o.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', R.GlobalDiscoveryAppsSections.STORE),
-                    to: o.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(':applicationId', O.ApplicationDirectoryProfileSections.STORE)
+                (0, i.jsx)(r.l_, {
+                    path: a.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', o.GlobalDiscoveryAppsSections.STORE),
+                    to: a.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(':applicationId', l.ApplicationDirectoryProfileSections.STORE)
                 }),
-                (0, I.jsx)(a.l_, {
-                    path: o.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId'),
-                    to: o.Z5c.APPLICATION_DIRECTORY_PROFILE(':applicationId')
+                (0, i.jsx)(r.l_, {
+                    path: a.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId'),
+                    to: a.Z5c.APPLICATION_DIRECTORY_PROFILE(':applicationId')
                 }),
-                (0, I.jsx)(a.l_, {
-                    path: o.Z5c.GLOBAL_DISCOVERY_APPS,
-                    to: o.Z5c.APPLICATION_DIRECTORY
+                (0, i.jsx)(r.l_, {
+                    path: a.Z5c.GLOBAL_DISCOVERY_APPS,
+                    to: a.Z5c.APPLICATION_DIRECTORY
                 })
             ]
         })

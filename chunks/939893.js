@@ -1,25 +1,25 @@
-var a = n(200651);
+var s = n(200651);
 n(192379);
 var i = n(302454),
-    s = n.n(i),
+    a = n.n(i),
     r = n(481060),
     l = n(447543),
     o = n(15470),
-    d = n(960904),
-    c = n(830121),
-    u = n(746878),
-    h = n(241209);
+    h = n(960904),
+    d = n(830121),
+    c = n(746878),
+    u = n(241209);
 let p = /^discord.gg\/[a-zA-Z0-9-]+/,
     m = {
-        ...h.Z.rules,
+        ...u.Z.rules,
         heading: { ...o.i.heading },
-        image: { ...s().defaultRules.image },
+        image: { ...a().defaultRules.image },
         inviteLink: {
-            order: h.Z.rules.link.order + 1,
+            order: u.Z.rules.link.order + 1,
             match: (e, t) => (t.inline ? p.exec(e) : null),
             parse: (e, t, n) => {
-                let a = (0, c.zO)(e[0]);
-                return null == a || a.type !== d.g.INVITE
+                let s = (0, d.zO)(e[0]);
+                return null == s || s.type !== h.g.INVITE
                     ? {
                           type: 'text',
                           content: e[0]
@@ -35,7 +35,7 @@ let p = /^discord.gg\/[a-zA-Z0-9-]+/,
                           onClick: () => {
                               var e;
                               l.Z.acceptInviteAndTransitionToInviteChannel({
-                                  inviteKey: a.code,
+                                  inviteKey: s.code,
                                   context: { location: 'Application Directory' }
                               }),
                                   null === (e = n.closeModal) || void 0 === e || e.call(n);
@@ -43,13 +43,13 @@ let p = /^discord.gg\/[a-zA-Z0-9-]+/,
                       };
             },
             react: (e, t, n) =>
-                (0, a.jsx)(
+                (0, s.jsx)(
                     r.Anchor,
                     {
                         onClick: (t) => {
                             t.preventDefault(), e.onClick();
                         },
-                        children: (0, u.S)(e, t, n)
+                        children: (0, c.S)(e, t, n)
                     },
                     n.key
                 )

@@ -28,7 +28,7 @@ function E(e, t, n) {
         e
     );
 }
-class _ extends (i = r.PureComponent) {
+class C extends (i = r.PureComponent) {
     render() {
         let { paymentSource: e, isDefault: t, isEditing: n, index: i, hideDivider: r, isForSubscription: l, locale: a, removing: c, submitting: d, onSubmit: m, onCancel: h, onDelete: x } = this.props;
         return n
@@ -81,12 +81,12 @@ class _ extends (i = r.PureComponent) {
             });
     }
 }
-E(_, 'defaultProps', {
+E(C, 'defaultProps', {
     isEditing: !1,
     hideDivider: !1,
     onEditClick: () => {}
 });
-class C extends r.PureComponent {
+class _ extends r.PureComponent {
     renderFooter() {
         let { paymentSources: e } = this.props;
         return (0, s.jsxs)(u.Z, {
@@ -123,7 +123,7 @@ class C extends r.PureComponent {
             m = c.findIndex((e) => e.id === d),
             g = c.map((t, a) =>
                 (0, s.jsx)(
-                    _,
+                    C,
                     {
                         locale: n,
                         paymentSource: t,
@@ -215,4 +215,4 @@ class C extends r.PureComponent {
             });
     }
 }
-t.Z = C;
+t.Z = _;

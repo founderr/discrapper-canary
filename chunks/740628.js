@@ -15,8 +15,8 @@ var i = t(200651),
     u = t(323090),
     f = t(296391),
     m = t(384816),
-    I = t(389190),
-    x = t(428927),
+    x = t(389190),
+    I = t(428927),
     p = t(228168),
     h = t(388032),
     v = t(731218),
@@ -31,12 +31,12 @@ function g(e) {
               onClose: s
           })
         : n === p.oh.MUTUAL_FRIENDS
-          ? (0, i.jsx)(I.Z, {
+          ? (0, i.jsx)(x.Z, {
                 user: l,
                 onClose: s
             })
           : n === p.oh.MUTUAL_GUILDS
-            ? (0, i.jsx)(x.Z, {
+            ? (0, i.jsx)(I.Z, {
                   user: l,
                   onClose: s
               })
@@ -60,45 +60,45 @@ function g(e) {
 }
 function j(e) {
     var n, t, d;
-    let { user: u, currentUser: f, displayProfile: m, items: I, initialSection: x = p.oh.USER_INFO, initialSubsection: j, onClose: _ } = e,
+    let { user: u, currentUser: f, displayProfile: m, items: x, initialSection: I = p.oh.USER_INFO, initialSubsection: j, onClose: _ } = e,
         { trackUserProfileAction: b } = (0, a.KZ)(),
         E = (0, o.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        [{ section: N, subsection: T }, S] = l.useState({
+        [{ section: N, subsection: S }, y] = l.useState({
             section:
                 null !==
                     (d =
                         null ===
-                            (n = I.find((e) => {
+                            (n = x.find((e) => {
                                 let { section: n } = e;
-                                return n === x;
+                                return n === I;
                             })) || void 0 === n
                             ? void 0
                             : n.section) && void 0 !== d
                     ? d
-                    : null === (t = I[0]) || void 0 === t
+                    : null === (t = x[0]) || void 0 === t
                       ? void 0
                       : t.section,
             subsection: j
         });
     l.useEffect(() => {
-        if (null == I.find((e) => e.section === N))
-            S({
-                section: I[0].section,
+        if (null == x.find((e) => e.section === N))
+            y({
+                section: x[0].section,
                 subsection: void 0
             });
-    }, [I, N]);
-    let y = l.useCallback(
+    }, [x, N]);
+    let T = l.useCallback(
         (e) => {
             b({
                 action: 'PRESS_SECTION',
                 section: e
             }),
-                S({
+                y({
                     section: e,
                     subsection: void 0
                 });
         },
-        [b, S]
+        [b, y]
     );
     return E
         ? (0, i.jsx)('div', {
@@ -121,8 +121,8 @@ function j(e) {
                       className: Z.tabBar,
                       type: 'top',
                       selectedItem: N,
-                      onItemSelect: y,
-                      children: I.map((e) => {
+                      onItemSelect: T,
+                      children: x.map((e) => {
                           let { section: n, text: t } = e;
                           return (0, i.jsx)(
                               r.n.Item,
@@ -140,9 +140,9 @@ function j(e) {
                       })
                   }),
                   (0, i.jsx)(g, {
-                      items: I,
+                      items: x,
                       section: N,
-                      subsection: T,
+                      subsection: S,
                       user: u,
                       currentUser: f,
                       displayProfile: m,

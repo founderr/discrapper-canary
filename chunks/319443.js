@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    s = n(442837),
-    o = n(481060),
+    o = n(442837),
+    s = n(481060),
     c = n(674588),
     d = n(264043),
     u = n(894653),
@@ -18,12 +18,12 @@ var i = n(200651),
     I = n(726115),
     C = n(703656),
     v = n(626135),
-    N = n(31569),
-    S = n(975907),
+    S = n(31569),
+    N = n(975907),
     T = n(119014),
     b = n(258971),
-    A = n(133743),
-    x = n(726941),
+    x = n(133743),
+    A = n(726941),
     Z = n(666697),
     L = n(548514),
     y = n(370648),
@@ -34,7 +34,7 @@ var i = n(200651),
     D = n(544973);
 function M(e) {
     let { applicationId: t, showDetailHeaderButtons: n, onClickBack: l } = e,
-        c = (0, s.e7)([d.Z], () => d.Z.getApplication(t)),
+        c = (0, o.e7)([d.Z], () => d.Z.getApplication(t)),
         [u, h] = r.useState(!n),
         m = r.useCallback(() => {
             h(!n);
@@ -45,11 +45,11 @@ function M(e) {
             (0, i.jsx)('div', {
                 className: D.detailHeaderSection,
                 children: (0, i.jsx)(f.Cm, {
-                    icon: o.ArrowLargeLeftIcon,
+                    icon: s.ArrowLargeLeftIcon,
                     onClick: l
                 })
             }),
-            (0, i.jsx)(o.Heading, {
+            (0, i.jsx)(s.Heading, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
                 className: D.detailHeader,
@@ -81,7 +81,7 @@ t.Z = function () {
         d = (null == a ? void 0 : a.type) === b.m_.CATEGORY ? a.categoryId : void 0,
         { applicationId: L, section: w } = (null == a ? void 0 : a.type) === b.m_.APPLICATION ? a : {},
         { query: k, categoryId: U } = (null == a ? void 0 : a.type) === b.m_.SEARCH ? a : {},
-        G = (0, s.e7)([u.Z], () => u.Z.getCategories()),
+        G = (0, o.e7)([u.Z], () => u.Z.getCategories()),
         B = r.useMemo(() => [(0, h.KQ)(), ...G], [G]),
         H = r.useMemo(() => B.find((e) => e.id === Number(U)), [B, U]),
         { tabs: V, selectedTab: F, onSelectTab: z } = (0, T.i)(null == d ? void 0 : d.toString()),
@@ -115,8 +115,8 @@ t.Z = function () {
         r.useEffect(() => b.aQ.setState({ lastItem: a }), [a]);
     let Q = null != L,
         J = (null == a ? void 0 : a.type) === b.m_.SEARCH,
-        { searchQuery: $, onSearchTextChange: ee, onClearSearch: et, onSearchSubmit: en } = (0, S.M)({ initialQuery: null != k ? k : '' }),
-        ei = N.Z.useField('searchBarState'),
+        { searchQuery: $, onSearchTextChange: ee, onClearSearch: et, onSearchSubmit: en } = (0, N.M)({ initialQuery: null != k ? k : '' }),
+        ei = S.Z.useField('searchBarState'),
         {
             onTabsAvailableWidthChange: er,
             onCollapsedSearchBarClick: el,
@@ -125,18 +125,18 @@ t.Z = function () {
             isSearchBarVisible: !0,
             isSearchBarEmpty: '' === $.trim(),
             searchBarState: ei,
-            setSearchBarState: (e) => N.Z.setState({ searchBarState: e })
+            setSearchBarState: (e) => S.Z.setState({ searchBarState: e })
         }),
-        es = r.useCallback(
+        eo = r.useCallback(
             (e) => {
                 z(e), J && et(), l();
             },
             [J, et, z, l]
         ),
-        eo = r.useCallback((e) => (0, A.ph)({ applicationId: e }), []),
+        es = r.useCallback((e) => (0, x.ph)({ applicationId: e }), []),
         ec = Q || J,
         ed = r.useCallback(() => {
-            null != (0, b.Uc)() ? (0, C.op)() : (0, A.Yp)();
+            null != (0, b.Uc)() ? (0, C.op)() : (0, x.Yp)();
         }, []);
     return (0, i.jsxs)('div', {
         className: D.container,
@@ -155,12 +155,12 @@ t.Z = function () {
                               children: [
                                   J
                                       ? (0, i.jsx)(f.Cm, {
-                                            icon: o.ArrowLargeLeftIcon,
+                                            icon: s.ArrowLargeLeftIcon,
                                             onClick: ed
                                         })
-                                      : (0, i.jsx)(f.aV, { icon: o.AppsIcon }),
+                                      : (0, i.jsx)(f.aV, { icon: s.AppsIcon }),
                                   J
-                                      ? (0, i.jsx)(o.Heading, {
+                                      ? (0, i.jsx)(s.Heading, {
                                             variant: 'heading-lg/semibold',
                                             color: 'header-primary',
                                             className: D.searchHeader,
@@ -169,7 +169,7 @@ t.Z = function () {
                                       : (0, i.jsx)(_.Z, {
                                             tabs: V,
                                             selectedTab: F,
-                                            onTabSelect: es,
+                                            onTabSelect: eo,
                                             onAvailableWidthChange: er
                                         }),
                                   (0, i.jsx)(E.Z, {
@@ -189,22 +189,22 @@ t.Z = function () {
             Q
                 ? (0, i.jsx)(Z.Z, {
                       onScroll: t,
-                      onSelectApplication: eo,
+                      onSelectApplication: es,
                       applicationId: L,
                       initialTab: w,
                       onButtonsVisibilityChange: K
                   })
                 : J
-                  ? (0, i.jsx)(P.Z, { onSelectApplication: eo })
+                  ? (0, i.jsx)(P.Z, { onSelectApplication: es })
                   : F === O.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID
                     ? (0, i.jsx)(y.Z, {
                           onScroll: t,
-                          onSelectApplication: eo
+                          onSelectApplication: es
                       })
-                    : (0, i.jsx)(x.Z, {
+                    : (0, i.jsx)(A.Z, {
                           tabId: Number(F),
                           onScroll: t,
-                          onSelectApplication: eo
+                          onSelectApplication: es
                       })
         ]
     });

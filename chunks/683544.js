@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     l = n(209173),
     a = n(399606),
-    s = n(481060),
-    o = n(699682),
+    o = n(481060),
+    s = n(699682),
     c = n(674588),
     d = n(368862),
     u = n(809547),
@@ -21,13 +21,13 @@ t.Z = function (e) {
     var t;
     let { categoryId: n, onSelectApplication: E, resetScroll: I } = e,
         [C, v] = r.useState(1),
-        N = r.useCallback((e) => {
+        S = r.useCallback((e) => {
             v(e);
         }, []);
     r.useEffect(() => {
         v(1);
     }, [n]);
-    let S = r.useMemo(
+    let N = r.useMemo(
             () => ({
                 query: g.EMPTY_QUERY,
                 page: C,
@@ -46,11 +46,11 @@ t.Z = function (e) {
         ),
         b = (0, a.cj)([u.Z], () => {
             var e;
-            return null !== (e = u.Z.getSearchResults(S)) && void 0 !== e ? e : _;
+            return null !== (e = u.Z.getSearchResults(N)) && void 0 !== e ? e : _;
         }),
-        A = null !== (t = (0, o.Z)(b)) && void 0 !== t ? t : _,
-        { results: x, totalPages: Z } = r.useMemo(() => (T === d.M.FETCHING ? A : b), [T, A, b]),
-        L = r.useMemo(() => (null == x ? void 0 : x.filter((e) => !(e.type !== l.s.APPLICATION))), [x]),
+        x = null !== (t = (0, s.Z)(b)) && void 0 !== t ? t : _,
+        { results: A, totalPages: Z } = r.useMemo(() => (T === d.M.FETCHING ? x : b), [T, x, b]),
+        L = r.useMemo(() => (null == A ? void 0 : A.filter((e) => !(e.type !== l.s.APPLICATION))), [A]),
         y = r.useCallback((e) => {
             let { page: t, activeCategoryId: n, onSuccessCallback: i, guildId: r, fetchCounts: l } = e;
             l &&
@@ -105,14 +105,14 @@ t.Z = function (e) {
                                     return null;
                                 })
                   }),
-                  (0, i.jsx)(s.Paginator, {
+                  (0, i.jsx)(o.Paginator, {
                       className: f.paginationInput,
                       totalCount: Math.min(Z * g.PAGE_SIZE, g.MAX_PAGES * g.PAGE_SIZE),
                       pageSize: g.PAGE_SIZE,
                       disablePaginationGap: !0,
                       hideMaxPage: !0,
                       currentPage: C,
-                      onPageChange: N
+                      onPageChange: S
                   })
               ]
           });

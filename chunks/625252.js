@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return f;
     }
 });
 var i = n(200651),
@@ -20,9 +20,9 @@ var i = n(200651),
     S = n(46140),
     T = n(981631),
     E = n(388032),
-    _ = n(839905),
-    C = n(66094);
-function I() {
+    C = n(839905),
+    _ = n(66094);
+function f() {
     let e = (0, o.wj)((0, u.ZP)()),
         t = s.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []),
         n = s.useCallback(() => {
@@ -39,20 +39,20 @@ function I() {
         }, []),
         (0, m.un)(a.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME),
         (0, i.jsxs)('div', {
-            className: l()(_.container),
+            className: l()(C.container),
             style: t,
             children: [
                 !1,
                 (0, i.jsxs)('div', {
-                    className: _.textContainer,
+                    className: C.textContainer,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: _.headerContainer,
+                            className: C.headerContainer,
                             children: [
                                 (0, i.jsx)('img', {
                                     alt: '',
-                                    src: C,
-                                    className: _.icon
+                                    src: _,
+                                    className: C.icon
                                 }),
                                 (0, i.jsx)(c.Heading, {
                                     variant: 'heading-lg/bold',
@@ -69,9 +69,9 @@ function I() {
                         (0, i.jsx)(c.Button, {
                             size: 'large',
                             color: e ? c.ButtonColors.BRAND : c.ButtonColors.WHITE,
-                            className: _.button,
+                            className: C.button,
                             onClick: n,
-                            innerClassName: _.innerButton,
+                            innerClassName: C.innerButton,
                             children: (0, i.jsx)(c.Text, {
                                 variant: 'text-md/medium',
                                 color: e ? 'always-white' : 'text-normal',

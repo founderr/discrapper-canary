@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 }),
     n(47120);
@@ -20,7 +20,7 @@ function a(e, t, n) {
         e
     );
 }
-function s(e) {
+function o(e) {
     return class extends r.Component {
         componentDidMount() {
             l.default.addChangeListener(this.onStoreChange);

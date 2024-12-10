@@ -33,8 +33,8 @@ var v = n(392750),
     y = n(916790),
     k = n(645973),
     I = n(903502),
-    w = n(912072),
-    E = n(272193),
+    E = n(912072),
+    w = n(272193),
     Z = n(735959),
     R = n(246992),
     O = n(496025),
@@ -46,8 +46,8 @@ var v = n(392750),
     F = n(958328),
     M = n(514866),
     H = n(678639),
-    G = n(351930),
-    z = n(771751),
+    z = n(351930),
+    G = n(771751),
     U = n(596768),
     V = n(621060),
     W = n(388032),
@@ -148,7 +148,7 @@ function q() {
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
-                    render: () => (0, r.jsx)(w.Z, { devSettingsCategory: b.zU.OVERLAYS })
+                    render: () => (0, r.jsx)(E.Z, { devSettingsCategory: b.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
@@ -158,7 +158,7 @@ function q() {
                 e.push({
                     id: 'reporting',
                     name: 'Reporting',
-                    render: () => (0, r.jsx)(w.Z, { devSettingsCategory: b.zU.REPORTING })
+                    render: () => (0, r.jsx)(E.Z, { devSettingsCategory: b.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
@@ -190,7 +190,7 @@ function q() {
                     (e.push({
                         id: 'trials',
                         name: 'Trials',
-                        render: () => (0, r.jsx)(z.Z, {})
+                        render: () => (0, r.jsx)(G.Z, {})
                     }),
                     e.push({
                         id: 'payments',
@@ -200,7 +200,7 @@ function q() {
                     e.push({
                         id: 'subscriptions',
                         name: 'Subscriptions',
-                        render: () => (0, r.jsx)(G.Z, {})
+                        render: () => (0, r.jsx)(z.Z, {})
                     }),
                     e.push({
                         id: 'billing',
@@ -210,7 +210,7 @@ function q() {
                 e.push({
                     id: 'gifting_intent',
                     name: 'Gifting Intent',
-                    render: () => (0, r.jsx)(E.Z, {})
+                    render: () => (0, r.jsx)(w.Z, {})
                 }),
                 e
             );

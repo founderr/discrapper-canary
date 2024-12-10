@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = n(200651);
@@ -8,14 +8,14 @@ n(192379);
 var r = n(481060),
     l = n(812206),
     a = n(531826);
-function s(e) {
-    let { applicationId: t, channelId: s, mediaUrl: o } = e,
+function o(e) {
+    let { applicationId: t, channelId: o, mediaUrl: s } = e,
         c = l.Z.getApplication(t),
         d =
             null !=
             (0, a.ZP)({
                 application: c,
-                channelId: s
+                channelId: o
             })
                 ? r.POPOUT_MODAL_CONTEXT
                 : r.DEFAULT_MODAL_CONTEXT;
@@ -25,8 +25,8 @@ function s(e) {
             return (n) =>
                 (0, i.jsx)(e, {
                     applicationId: t,
-                    channelId: s,
-                    mediaUrl: o,
+                    channelId: o,
+                    mediaUrl: s,
                     ...n
                 });
         },

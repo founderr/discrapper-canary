@@ -7,8 +7,8 @@ var i = n(200651),
     r = n(192379),
     l = n(286379),
     a = n(481060),
-    s = n(797614),
-    o = n(359110),
+    o = n(797614),
+    s = n(359110),
     c = n(6025),
     d = n(433355),
     u = n(26373),
@@ -21,17 +21,17 @@ function _(e) {
     let { active: t, user: n, channel: _ } = e,
         E = (0, u.V)(),
         I = r.useCallback(() => {
-            (0, a.showToast)((0, a.createToast)(g.intl.string(g.t.pIQ3h4), a.ToastType.FAILURE)), s.Z.increment({ name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
+            (0, a.showToast)((0, a.createToast)(g.intl.string(g.t.pIQ3h4), a.ToastType.FAILURE)), o.Z.increment({ name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
         }, []),
         C = r.useCallback(() => {
             c.Z.closeChannelSidebar(d.uZ);
         }, []),
         v = r.useCallback(() => {
-            c.Z.closeChannelSidebar(d.uZ), E && (0, o.Kh)(_.id);
+            c.Z.closeChannelSidebar(d.uZ), E && (0, s.Kh)(_.id);
         }, [_.id, E]),
         {
-            acceptMessageRequest: N,
-            isAcceptLoading: S,
+            acceptMessageRequest: S,
+            isAcceptLoading: N,
             isUserProfileLoading: T,
             isOptimisticAccepted: b
         } = (0, h.m)({
@@ -40,8 +40,8 @@ function _(e) {
             onRejectSuccess: C,
             onError: I
         }),
-        A = S || T,
-        x = A || b;
+        x = N || T,
+        A = x || b;
     return (0, i.jsxs)('div', {
         className: f.container,
         children: [
@@ -58,10 +58,10 @@ function _(e) {
                         color: a.ButtonColors.PRIMARY,
                         size: a.Button.Sizes.SMALL,
                         onClick: (e) => {
-                            N(_.id), e.stopPropagation();
+                            S(_.id), e.stopPropagation();
                         },
-                        disabled: x,
-                        submitting: A,
+                        disabled: A,
+                        submitting: x,
                         children: g.intl.string(g.t.vicfl5)
                     }),
                     (0, i.jsx)(p.Z, {

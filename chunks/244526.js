@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return C;
     }
 });
 var i,
@@ -20,7 +20,7 @@ var i,
     S = n(624138),
     T = n(388032),
     E = n(506850);
-class _ extends (l = o.PureComponent) {
+class C extends (l = o.PureComponent) {
     get typeString() {
         let { paymentSource: e } = this.props;
         if (e instanceof p.qo) return g.ZP.Types.PAYPAL;
@@ -164,7 +164,7 @@ class _ extends (l = o.PureComponent) {
     showPaymentSourceIcon: !1,
     showLabels: !1
 }),
-    (s = 'defaultProps') in (i = _)
+    (s = 'defaultProps') in (i = C)
         ? Object.defineProperty(i, s, {
               value: r,
               enumerable: !0,

@@ -12,8 +12,8 @@ var i = n(200651),
     r = n(192379),
     l = n(512969),
     a = n(209173),
-    s = n(288385),
-    o = n(442837),
+    o = n(288385),
+    s = n(442837),
     c = n(481060),
     d = n(110924),
     u = n(674588),
@@ -27,16 +27,16 @@ var i = n(200651),
     I = n(133743),
     C = n(120549),
     v = n(753511),
-    N = n(979007),
-    S = n(378105);
+    S = n(979007),
+    N = n(378105);
 function T(e) {
     var t;
     let { onSelectApplication: n } = e,
         T = r.useRef(null),
         b = (0, l.TH)(),
-        A = r.useRef(null),
+        x = r.useRef(null),
         {
-            query: x,
+            query: A,
             page: Z,
             categoryId: L
         } = r.useMemo(() => {
@@ -53,42 +53,42 @@ function T(e) {
     r.useEffect(() => {
         var e;
         null === (e = T.current) || void 0 === e || e.scrollTo({ to: 0 }),
-            x !== A.current &&
-                ((A.current = x),
+            A !== x.current &&
+                ((x.current = A),
                 u.yC({
-                    query: x,
-                    options: { source: s.F.APP_DIRECTORY }
+                    query: A,
+                    options: { source: o.F.APP_DIRECTORY }
                 })),
             u.yC({
-                query: x,
+                query: A,
                 options: {
                     categoryId: L,
                     page: Z,
-                    pageSize: N.PAGE_SIZE,
-                    source: s.F.APP_DIRECTORY
+                    pageSize: S.PAGE_SIZE,
+                    source: o.F.APP_DIRECTORY
                 }
             });
-    }, [L, Z, x]);
-    let { fetchState: y, searchResults: P } = (0, o.cj)([m.Z], () => ({
+    }, [L, Z, A]);
+    let { fetchState: y, searchResults: P } = (0, s.cj)([m.Z], () => ({
             fetchState: m.Z.getFetchState({
-                query: x,
+                query: A,
                 categoryId: L,
                 page: Z,
-                pageSize: N.PAGE_SIZE,
-                source: s.F.APP_DIRECTORY
+                pageSize: S.PAGE_SIZE,
+                source: o.F.APP_DIRECTORY
             }),
             searchResults: m.Z.getSearchResults({
-                query: x,
+                query: A,
                 categoryId: L,
                 page: Z,
-                pageSize: N.PAGE_SIZE,
-                source: s.F.APP_DIRECTORY
+                pageSize: S.PAGE_SIZE,
+                source: o.F.APP_DIRECTORY
             })
         })),
-        O = (0, o.cj)([m.Z], () => {
+        O = (0, s.cj)([m.Z], () => {
             let e = m.Z.getSearchResults({
-                query: x,
-                source: s.F.APP_DIRECTORY
+                query: A,
+                source: o.F.APP_DIRECTORY
             });
             return null != e
                 ? {
@@ -102,33 +102,33 @@ function T(e) {
         D = r.useCallback(
             (e) => {
                 (0, I.pR)({
-                    query: x,
+                    query: A,
                     categoryId: L,
                     page: e
                 });
             },
-            [L, x]
+            [L, A]
         ),
         M = r.useCallback(
             (e) => {
                 (0, I.pR)({
-                    query: x,
+                    query: A,
                     categoryId: e
                 });
             },
-            [x]
+            [A]
         );
     return (0, i.jsxs)('div', {
-        className: S.container,
+        className: N.container,
         children: [
             (0, i.jsx)(_.Z, {
                 ref: T,
                 children: (0, i.jsx)(f.Z, {
                     children: (0, i.jsxs)('div', {
-                        className: S.contentContainer,
+                        className: N.contentContainer,
                         children: [
                             (0, i.jsx)('div', {
-                                className: S.topFilterContainer,
+                                className: N.topFilterContainer,
                                 children: (0, i.jsx)(C.V, {
                                     countsByCategory: O,
                                     selectedCategoryId: L,
@@ -144,7 +144,7 @@ function T(e) {
                                               searchAllCategories: () => M(p.MU)
                                           })
                                         : (0, i.jsx)('div', {
-                                              className: S.content,
+                                              className: N.content,
                                               children:
                                                   null == j
                                                       ? void 0
@@ -166,9 +166,9 @@ function T(e) {
                                           })
                             }),
                             (0, i.jsx)(c.Paginator, {
-                                className: S.paginationInput,
-                                totalCount: Math.min((null !== (t = null == j ? void 0 : j.totalPages) && void 0 !== t ? t : 0) * N.PAGE_SIZE, N.MAX_PAGES * N.PAGE_SIZE),
-                                pageSize: N.PAGE_SIZE,
+                                className: N.paginationInput,
+                                totalCount: Math.min((null !== (t = null == j ? void 0 : j.totalPages) && void 0 !== t ? t : 0) * S.PAGE_SIZE, S.MAX_PAGES * S.PAGE_SIZE),
+                                pageSize: S.PAGE_SIZE,
                                 disablePaginationGap: !0,
                                 hideMaxPage: !0,
                                 currentPage: Z,
@@ -179,9 +179,9 @@ function T(e) {
                 })
             }),
             (0, i.jsx)('div', {
-                className: S.sideFilterContainer,
+                className: N.sideFilterContainer,
                 children: (0, i.jsx)('div', {
-                    className: S.sideFilterContent,
+                    className: N.sideFilterContent,
                     children: (0, i.jsx)(C.Z, {
                         countsByCategory: O,
                         selectedCategoryId: L,

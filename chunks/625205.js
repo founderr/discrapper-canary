@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return C;
     }
 }),
     n(47120);
@@ -22,14 +22,14 @@ var s = n(392711),
     S = n(388032),
     T = n(43824),
     E = n(232186);
-function _() {
+function C() {
     let e, t;
     let { analyticsLocations: s } = (0, d.ZP)(),
-        _ = (0, l.e7)([g.Z], () => g.Z.theme),
+        C = (0, l.e7)([g.Z], () => g.Z.theme),
         {
-            canSetInputDevice: C,
-            canSetOutputDevice: I,
-            inputDeviceId: f,
+            canSetInputDevice: _,
+            canSetOutputDevice: f,
+            inputDeviceId: I,
             outputDeviceId: N
         } = (0, l.cj)([h.Z], () => ({
             canSetInputDevice: h.Z.supports(x.AN.AUDIO_INPUT_DEVICE),
@@ -39,13 +39,13 @@ function _() {
         })),
         A = (0, l.e7)([h.Z], () => h.Z.getInputDevices()),
         b = (0, l.e7)([h.Z], () => h.Z.getOutputDevices());
-    !C &&
+    !_ &&
         (e = (0, i.jsx)(o.FormText, {
             type: o.FormText.Types.DESCRIPTION,
             className: E.marginTop8,
             children: S.intl.format(S.t['1iK6UV'], { onDownloadClick: () => (0, p.y)('Help Text Input Devices') })
         })),
-        !I &&
+        !f &&
             (t = (0, i.jsx)(o.FormText, {
                 type: o.FormText.Types.DESCRIPTION,
                 className: E.marginTop8,
@@ -59,7 +59,7 @@ function _() {
         let t,
             { label: s, value: r } = e;
         if (m.Z.isCertified(r)) {
-            let e = (0, a.ap)(_) ? n(561259) : n(887695);
+            let e = (0, a.ap)(C) ? n(561259) : n(887695);
             t = (0, i.jsx)('img', {
                 src: e,
                 alt: 'Certified',
@@ -96,7 +96,7 @@ function _() {
                         children: S.intl.string(S.t.hHMYbW)
                     }),
                     (0, i.jsx)(o.SingleSelect, {
-                        value: f,
+                        value: I,
                         onChange: (e) =>
                             c.Z.setInputDevice(e, {
                                 location: 'Settings',

@@ -15,8 +15,8 @@ var l = t(442837),
     u = t(785717),
     f = t(250822),
     m = t(771362),
-    I = t(280885),
-    x = t(819602),
+    x = t(280885),
+    I = t(819602),
     p = t(900927),
     h = t(678738),
     v = t(652853),
@@ -26,10 +26,10 @@ var l = t(442837),
     _ = t(64406);
 function b(e) {
     let { user: n, currentUser: t, displayProfile: b, subsection: E, onClose: N } = e,
-        { theme: T } = (0, v.z)(),
-        { trackUserProfileAction: S } = (0, u.KZ)(),
-        y = null == b ? void 0 : b.guildId,
-        P = (0, l.e7)([a.Z], () => (null != y ? a.Z.getGuild(y) : null)),
+        { theme: S } = (0, v.z)(),
+        { trackUserProfileAction: y } = (0, u.KZ)(),
+        T = null == b ? void 0 : b.guildId,
+        P = (0, l.e7)([a.Z], () => (null != T ? a.Z.getGuild(T) : null)),
         C = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
         A = (0, l.e7)([c.default], () => c.default.locale),
         L = (0, m.Z)(n.id),
@@ -40,7 +40,7 @@ function b(e) {
         children: [
             (null == b ? void 0 : b.bio) != null &&
                 (null == b ? void 0 : b.bio) !== '' &&
-                (0, i.jsx)(I.Z, {
+                (0, i.jsx)(x.Z, {
                     userBio: b.bio,
                     setLineClamp: !1
                 }),
@@ -64,11 +64,11 @@ function b(e) {
                 (0, i.jsx)(h.Z, {
                     heading: j.intl.string(j.t['3fe7U1']),
                     scrollIntoView: E === g.Tb.CONNECTIONS,
-                    children: (0, i.jsx)(x.OA, {
+                    children: (0, i.jsx)(I.OA, {
                         connectedAccounts: L,
                         className: _.connections,
                         userId: n.id,
-                        theme: T,
+                        theme: S,
                         locale: A
                     })
                 }),
@@ -77,13 +77,13 @@ function b(e) {
                     heading: j.intl.string(j.t.PHjkRE),
                     children: M.map((e) =>
                         (0, i.jsx)(
-                            x.tH,
+                            I.tH,
                             {
                                 className: _.appsConnections,
                                 applicationRoleConnection: e,
                                 locale: A,
                                 onApplicationClicked: () => {
-                                    S({ action: 'PRESS_APP_CONNECTION' }), N();
+                                    y({ action: 'PRESS_APP_CONNECTION' }), N();
                                 },
                                 selectedGuildId: null != C ? C : void 0
                             },
@@ -98,7 +98,7 @@ function b(e) {
                     userId: n.id,
                     className: _.note,
                     autoFocus: E === g.Tb.NOTE,
-                    onUpdate: () => S({ action: 'SET_NOTE' })
+                    onUpdate: () => y({ action: 'SET_NOTE' })
                 })
             })
         ]

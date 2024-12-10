@@ -8,15 +8,15 @@ n(192379);
 var r = n(481060),
     l = n(740492),
     a = n(626135),
-    s = n(358085),
-    o = n(998502),
+    o = n(358085),
+    s = n(998502),
     c = n(258220),
     d = n(981631);
 let u = 'activity-hardware-acceleration-modal';
 function h(e) {
     !l.ZP.disableActivityHardwareAccelerationPrompt &&
-        s.isPlatformEmbedded &&
-        !o.ZP.getEnableHardwareAcceleration() &&
+        o.isPlatformEmbedded &&
+        !s.ZP.getEnableHardwareAcceleration() &&
         (0, r.openModalLazy)(
             async () => {
                 let { default: t } = await Promise.resolve().then(n.bind(n, 258220));

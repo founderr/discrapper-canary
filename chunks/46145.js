@@ -1,11 +1,11 @@
 n(47120), n(733860);
-var r,
-    i = n(442837),
+var i,
+    r = n(442837),
     l = n(570140),
     a = n(592125),
-    u = n(271383),
-    o = n(430824);
-function s(e, t, n) {
+    o = n(271383),
+    s = n(430824);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,29 +18,29 @@ function s(e, t, n) {
         e
     );
 }
-let c = [],
-    d = new Set();
-class f extends (r = i.ZP.PersistedStore) {
+let d = [],
+    u = new Set();
+class h extends (i = r.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        this.waitFor(u.ZP, o.Z, a.Z), (d = new Set([...(c = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : [])]));
+        this.waitFor(o.ZP, s.Z, a.Z), (u = new Set([...(d = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : [])]));
     }
     getState() {
-        return { channelHistory: c };
+        return { channelHistory: d };
     }
     getChannelHistory() {
-        return c;
+        return d;
     }
 }
-s(f, 'displayName', 'RecentVoiceChannelStore'), s(f, 'persistKey', 'RecentVoiceChannelStore');
-let h = new f(l.Z, {
+c(h, 'displayName', 'RecentVoiceChannelStore'), c(h, 'persistKey', 'RecentVoiceChannelStore');
+let m = new h(l.Z, {
     POST_CONNECTION_OPEN: function () {
-        d = new Set([...c]);
+        u = new Set([...d]);
     },
     VOICE_CHANNEL_SELECT: function (e) {
         var t, n;
-        let { channelId: r } = e;
-        return !(null == r || !(null !== (n = null === (t = a.Z.getChannel(r)) || void 0 === t ? void 0 : t.isVocal()) && void 0 !== n && n) || d.has(r)) && (c.unshift(r), d.add(r), c.length > 10 && ((c.length = 10), (d = new Set([...c]))), !0);
+        let { channelId: i } = e;
+        return !(null == i || !(null !== (n = null === (t = a.Z.getChannel(i)) || void 0 === t ? void 0 : t.isVocal()) && void 0 !== n && n) || u.has(i)) && (d.unshift(i), u.add(i), d.length > 10 && ((d.length = 10), (u = new Set([...d]))), !0);
     }
 });
-t.Z = h;
+t.Z = m;

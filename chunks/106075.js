@@ -7,8 +7,8 @@ var i = n(200651),
     r = n(192379),
     l = n(481060),
     a = n(979233),
-    s = n(88693),
-    o = n(611928),
+    o = n(88693),
+    s = n(611928),
     c = n(922122),
     d = n(680180),
     u = n(164991),
@@ -22,14 +22,14 @@ var i = n(200651),
     I = n(273596),
     C = n(128449),
     v = n(49898),
-    N = n(388032),
-    S = n(608576);
+    S = n(388032),
+    N = n(608576);
 function T() {
     let e = r.useRef((0, m.PM)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: T } = (0, a.M)(),
-        { tabs: b, selectedTab: A, setSelectedTab: x } = (0, _.Y)(),
-        Z = (0, m.lg)(A),
-        L = !C.MU.has(A),
+        { tabs: b, selectedTab: x, setSelectedTab: A } = (0, _.Y)(),
+        Z = (0, m.lg)(x),
+        L = !C.MU.has(x),
         { searchQuery: y, onSearchTextChange: P, onClearSearch: O, onSearchSubmit: R, isSearchVisible: j } = (0, f.H)({ loadId: e.current }),
         D = p.Z.useField('searchBarState'),
         {
@@ -37,7 +37,7 @@ function T() {
             onCollapsedSearchBarClick: w,
             onSearchBarBlur: k,
             tabsClassName: U
-        } = (0, s.U)({
+        } = (0, o.U)({
             isSearchBarVisible: L,
             isSearchBarEmpty: '' === y.trim(),
             searchBarState: D,
@@ -46,9 +46,9 @@ function T() {
         G = u.Z.useField('fetchedQuery'),
         B = r.useCallback(
             (e) => {
-                x(e), j && O();
+                A(e), j && O();
             },
-            [j, O, x]
+            [j, O, A]
         ),
         H = r.useMemo(
             () =>
@@ -71,28 +71,28 @@ function T() {
         }, [Z]),
         r.useEffect(() => {
             T();
-        }, [A, T]),
+        }, [x, T]),
         r.useEffect(() => {
             !j && u.Z.setState({ scrollPosition: null });
         }, [j]),
         (0, i.jsxs)('div', {
-            className: S.container,
+            className: N.container,
             children: [
-                (0, i.jsxs)(o.ZP, {
-                    variant: j ? o._6.RELATIVE : o._6.OVERLAY,
+                (0, i.jsxs)(s.ZP, {
+                    variant: j ? s._6.RELATIVE : s._6.OVERLAY,
                     children: [
-                        !j && (0, i.jsx)(o.z6, { scrollPosition: n }),
+                        !j && (0, i.jsx)(s.z6, { scrollPosition: n }),
                         j
-                            ? (0, i.jsx)(o.Cm, {
+                            ? (0, i.jsx)(s.Cm, {
                                   icon: l.ArrowLargeLeftIcon,
                                   onClick: O
                               })
-                            : (0, i.jsx)(o.aV, { icon: l.ServerIcon }),
+                            : (0, i.jsx)(s.aV, { icon: l.ServerIcon }),
                         !j &&
                             (0, i.jsx)(c.Z, {
                                 className: U,
                                 tabs: H,
-                                selectedTab: j ? null : A,
+                                selectedTab: j ? null : x,
                                 onTabSelect: B,
                                 onAvailableWidthChange: M
                             }),
@@ -100,13 +100,13 @@ function T() {
                             (0, i.jsx)(l.Heading, {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
-                                className: S.searchResultsHeader,
-                                children: N.intl.format(N.t.zHdzqa, { query: G })
+                                className: N.searchResultsHeader,
+                                children: S.intl.format(S.t.zHdzqa, { query: G })
                             }),
                         L &&
                             (0, i.jsx)(d.Z, {
                                 query: y,
-                                placeholder: N.intl.string(N.t['5h0QOD']),
+                                placeholder: S.intl.string(S.t['5h0QOD']),
                                 onTextChange: P,
                                 onClear: O,
                                 onSubmit: R,
@@ -123,7 +123,7 @@ function T() {
                           onGuildCardSeen: F
                       })
                     : (0, i.jsx)(E.Z, {
-                          selectedTab: A,
+                          selectedTab: x,
                           onScroll: t,
                           onGuildCardClick: z,
                           onGuildCardSeen: F

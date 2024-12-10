@@ -20,7 +20,7 @@ var i = n(200651),
     S = n(388032),
     T = n(184057);
 function E(e) {
-    let { user: t, guild: n, className: r, sectionTitle: E, forcedDivider: _ = !1, withTutorial: C = !1, showBorder: I = !1, isTryItOutFlow: f = !1, initialSelectedEffectId: N } = e,
+    let { user: t, guild: n, className: r, sectionTitle: E, forcedDivider: C = !1, withTutorial: _ = !1, showBorder: f = !1, isTryItOutFlow: I = !1, initialSelectedEffectId: N } = e,
         A = (0, m.Kg)(t, n),
         b = u.ZP.canUsePremiumProfileCustomization(t),
         { analyticsLocations: v } = (0, o.ZP)(),
@@ -42,14 +42,14 @@ function E(e) {
             });
     }, [b, v]);
     let P = null != n,
-        D = f || void 0 !== j ? null != j : null != A,
-        y = C ? a.ShinyButton : a.Button;
+        D = I || void 0 !== j ? null != j : null != A,
+        y = _ ? a.ShinyButton : a.Button;
     return (0, i.jsx)(h.Z, {
-        forcedDivider: _,
+        forcedDivider: C,
         borderType: g.Y.PREMIUM,
         hasBackground: !0,
         title: E,
-        showBorder: I,
+        showBorder: f,
         errors: O,
         className: r,
         children: (0, i.jsxs)('div', {
@@ -58,7 +58,7 @@ function E(e) {
                 (0, i.jsx)(y, {
                     size: a.Button.Sizes.SMALL,
                     onClick: R,
-                    className: l()({ [T.buttonHighlighted]: C }),
+                    className: l()({ [T.buttonHighlighted]: _ }),
                     children: S.intl.string(S.t['0nEVoK'])
                 }),
                 D &&

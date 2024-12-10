@@ -3,8 +3,8 @@ n(192379);
 var r = n(481060),
     l = n(570140),
     a = n(317770);
-let s = 'CONNECTIONS_GRID_MODAL_KEY';
-class o extends a.Z {
+let o = 'CONNECTIONS_GRID_MODAL_KEY';
+class s extends a.Z {
     _initialize() {
         l.Z.subscribe('CONNECTIONS_GRID_MODAL_SHOW', this.handleShow), l.Z.subscribe('CONNECTIONS_GRID_MODAL_HIDE', this.handleHide);
     }
@@ -12,8 +12,8 @@ class o extends a.Z {
         l.Z.unsubscribe('CONNECTIONS_GRID_MODAL_SHOW', this.handleShow), l.Z.unsubscribe('CONNECTIONS_GRID_MODAL_HIDE', this.handleHide);
     }
     handleShow(e) {
-        let { onComplete: t, excludedPlatformTypes: l, includedPlatformTypes: a, integrations: o, onCompleteApplication: c } = e;
-        !(0, r.hasModalOpen)(s) &&
+        let { onComplete: t, excludedPlatformTypes: l, includedPlatformTypes: a, integrations: s, onCompleteApplication: c } = e;
+        !(0, r.hasModalOpen)(o) &&
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await n.e('28538').then(n.bind(n, 51299));
                 return (n) =>
@@ -21,14 +21,14 @@ class o extends a.Z {
                         onComplete: t,
                         excludedPlatformTypes: l,
                         includedPlatformTypes: a,
-                        integrations: o,
+                        integrations: s,
                         onCompleteApplication: c,
                         ...n
                     });
             });
     }
     handleHide() {
-        (0, r.closeModal)(s);
+        (0, r.closeModal)(o);
     }
 }
-t.Z = new o();
+t.Z = new s();

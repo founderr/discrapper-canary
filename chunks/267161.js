@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return A;
+            return x;
         },
         useAppSidebarState: function () {
             return T;
@@ -11,8 +11,8 @@ var i = n(200651),
     r = n(192379),
     l = n(15729),
     a = n(442837),
-    s = n(481060),
-    o = n(230711),
+    o = n(481060),
+    s = n(230711),
     c = n(174556),
     d = n(540059),
     u = n(565138),
@@ -26,8 +26,8 @@ var i = n(200651),
     I = n(998502),
     C = n(950796),
     v = n(981631),
-    N = n(741764),
-    S = n(553512);
+    S = n(741764),
+    N = n(553512);
 let T = (0, l.U)(() => ({ isOpen: !0 }));
 function b() {
     let e = (0, a.e7)([E.Z], () => E.Z.getChannelId()),
@@ -36,15 +36,15 @@ function b() {
     return (
         null != n &&
         (0, i.jsxs)('div', {
-            className: S.guild,
+            className: N.guild,
             children: [
                 (0, i.jsx)(u.Z, {
                     guild: n,
                     size: u.Z.Sizes.SMALLER,
                     active: !0,
-                    className: S.guildIcon
+                    className: N.guildIcon
                 }),
-                (0, i.jsx)(s.Text, {
+                (0, i.jsx)(o.Text, {
                     variant: 'text-sm/medium',
                     children: n.name
                 })
@@ -52,17 +52,17 @@ function b() {
         })
     );
 }
-function A(e) {
+function x(e) {
     let { hasNotice: t } = e;
     r.useLayoutEffect(() => {
-        I.ZP.setMinimumSize(N.J, N.N);
+        I.ZP.setMinimumSize(S.J, S.N);
     }, []);
     let n = (0, d.TH)('AppTitleBar'),
         l = T((e) => e.isOpen),
         { hasBugReporterAccess: a } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     return (
         r.useLayoutEffect(() => {
-            I.ZP.setMinimumSize(N.J, N.N);
+            I.ZP.setMinimumSize(S.J, S.N);
         }, []),
         (0, i.jsx)(C.T, {
             hasNotice: t,
@@ -71,19 +71,19 @@ function A(e) {
                 n &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(s.Clickable, {
-                            className: S.button,
+                        (0, i.jsx)(o.Clickable, {
+                            className: N.button,
                             onClick: () => {
                                 T.setState({ isOpen: !T.getState().isOpen });
                             },
-                            children: (0, i.jsx)(x, {})
+                            children: (0, i.jsx)(A, {})
                         }),
-                        (0, i.jsx)(s.Clickable, {
-                            className: S.button,
+                        (0, i.jsx)(o.Clickable, {
+                            className: N.button,
                             onClick: () => {
-                                o.Z.open(v.oAB.ACCOUNT);
+                                s.Z.open(v.oAB.ACCOUNT);
                             },
-                            children: (0, i.jsx)(s.SettingsIcon, {
+                            children: (0, i.jsx)(o.SettingsIcon, {
                                 size: 'xs',
                                 color: 'currentColor'
                             })
@@ -92,15 +92,15 @@ function A(e) {
                 }),
             title: !1,
             trailing: (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(g.Z, { className: S.button }), a ? (0, i.jsx)(m.Z, { className: S.button }) : (0, i.jsx)(h.Z, { className: S.button }), (0, i.jsx)(p.Z, { className: S.button })]
+                children: [(0, i.jsx)(g.Z, { className: N.button }), a ? (0, i.jsx)(m.Z, { className: N.button }) : (0, i.jsx)(h.Z, { className: N.button }), (0, i.jsx)(p.Z, { className: N.button })]
             })
         })
     );
 }
-function x() {
+function A() {
     return (0, i.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
-        className: S.icon,
+        className: N.icon,
         width: '24',
         height: '24',
         viewBox: '0 0 24 24',

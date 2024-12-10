@@ -2,8 +2,8 @@ var i = n(200651),
     r = n(192379),
     l = n(442837),
     a = n(481060),
-    s = n(674588),
-    o = n(303383),
+    o = n(674588),
+    s = n(303383),
     c = n(924489),
     d = n(125909),
     u = n(824606),
@@ -12,21 +12,21 @@ var i = n(200651),
     p = n(69812);
 function g(e) {
     var t, n, l;
-    let { application: s, onSelectApplication: o } = e,
-        d = (0, u.Z)({ application: s }),
-        m = null === (t = s.categories) || void 0 === t ? void 0 : t[0],
+    let { application: o, onSelectApplication: s } = e,
+        d = (0, u.Z)({ application: o }),
+        m = null === (t = o.categories) || void 0 === t ? void 0 : t[0],
         g = r.useMemo(
             () =>
                 h.ZP.getApplicationIconURL({
-                    id: s.id,
-                    icon: s.icon,
+                    id: o.id,
+                    icon: o.icon,
                     size: 48
                 }),
-            [s]
+            [o]
         ),
         f = r.useCallback(() => {
-            o(s.id);
-        }, [o, s.id]);
+            s(o.id);
+        }, [s, o.id]);
     return (0, i.jsxs)(a.Clickable, {
         onClick: f,
         className: p.appContainer,
@@ -54,7 +54,7 @@ function g(e) {
                                     variant: 'heading-md/semibold',
                                     color: 'header-primary',
                                     className: p.appName,
-                                    children: s.name
+                                    children: o.name
                                 })
                             }),
                             null != m
@@ -74,10 +74,10 @@ function g(e) {
                 variant: 'text-sm/medium',
                 color: 'header-secondary',
                 lineClamp: 2,
-                children: null !== (l = null === (n = s.directory_entry) || void 0 === n ? void 0 : n.short_description) && void 0 !== l ? l : s.description
+                children: null !== (l = null === (n = o.directory_entry) || void 0 === n ? void 0 : n.short_description) && void 0 !== l ? l : o.description
             }),
             (0, i.jsx)(c.Z, {
-                application: s,
+                application: o,
                 textVariant: 'text-xs/medium',
                 mutualGuilds: d,
                 mutualGuildShownMax: 3,
@@ -89,13 +89,13 @@ function g(e) {
 }
 t.Z = function (e) {
     let { application: t, onSelectApplication: n } = e,
-        c = (0, l.e7)([o.Z], () => o.Z.getFetchState({ applicationId: t.id })),
-        u = (0, l.e7)([o.Z], () => o.Z.getSimilarApplications({ applicationId: t.id }));
+        c = (0, l.e7)([s.Z], () => s.Z.getFetchState({ applicationId: t.id })),
+        u = (0, l.e7)([s.Z], () => s.Z.getSimilarApplications({ applicationId: t.id }));
     r.useEffect(() => {
-        s.T4({ applicationId: t.id });
+        o.T4({ applicationId: t.id });
     }, [t.id]);
     let h = r.useMemo(() => (null == u ? void 0 : u.applications.slice(0, 3)), [u]);
-    return c !== o.M.FETCHING && (null == h || 0 === h.length)
+    return c !== s.M.FETCHING && (null == h || 0 === h.length)
         ? null
         : (0, i.jsxs)('div', {
               className: p.sectionContainer,
@@ -108,7 +108,7 @@ t.Z = function (e) {
                       children: m.intl.string(m.t.E8wCnp)
                   }),
                   (0, i.jsx)(d.Z, {
-                      loading: c === o.M.FETCHING,
+                      loading: c === s.M.FETCHING,
                       children: (0, i.jsx)('div', {
                           className: p.contentContainer,
                           children:

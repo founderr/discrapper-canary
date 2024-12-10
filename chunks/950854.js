@@ -1,37 +1,37 @@
-n.d(t, {
+i.d(t, {
     Z: function () {
         return c;
     }
 });
-var i = n(200651);
-n(192379);
-var a = n(120356),
-    r = n.n(a),
-    l = n(481060),
-    o = n(388032),
-    s = n(746220);
+var n = i(200651);
+i(192379);
+var a = i(120356),
+    r = i.n(a),
+    o = i(481060),
+    l = i(388032),
+    s = i(746220);
 function c(e) {
-    let { className: t, onClick: n, imageSrc: a, iconSrc: c, header: d, headerClassName: u, subheaderVariant: p = 'text-sm/normal', subheader: m, children: _, animatesOnHover: h, ...f } = e,
+    let { className: t, onClick: i, imageSrc: a, iconSrc: c, header: d, headerClassName: u, subheaderVariant: h = 'text-sm/normal', subheader: p, children: m, animatesOnHover: _, ...f } = e,
         g = null != a,
-        v = (0, i.jsxs)(i.Fragment, {
+        x = (0, n.jsxs)(n.Fragment, {
             children: [
                 g &&
-                    (0, i.jsx)('div', {
+                    (0, n.jsx)('div', {
                         className: s.imageContainer,
-                        children: (0, i.jsx)('img', {
+                        children: (0, n.jsx)('img', {
                             alt: '',
                             className: s.image,
                             src: a
                         })
                     }),
-                (0, i.jsxs)('div', {
+                (0, n.jsxs)('div', {
                     className: s.textContainer,
                     children: [
-                        (0, i.jsxs)('div', {
+                        (0, n.jsxs)('div', {
                             className: r()(s.topRowContainer),
                             children: [
                                 null != c &&
-                                    (0, i.jsx)('img', {
+                                    (0, n.jsx)('img', {
                                         className: s.icon,
                                         alt: '',
                                         'aria-hidden': !0,
@@ -39,43 +39,43 @@ function c(e) {
                                         width: 48,
                                         height: 48
                                     }),
-                                (0, i.jsxs)('div', {
+                                (0, n.jsxs)('div', {
                                     className: s.headerContainer,
                                     children: [
-                                        (0, i.jsx)(l.Heading, {
+                                        (0, n.jsx)(o.Heading, {
                                             variant: 'heading-md/medium',
                                             className: u,
                                             children: d
                                         }),
-                                        null != m &&
-                                            (0, i.jsx)(l.Text, {
+                                        null != p &&
+                                            (0, n.jsx)(o.Text, {
                                                 className: s.subheader,
                                                 color: 'header-secondary',
-                                                variant: p,
-                                                children: m
+                                                variant: h,
+                                                children: p
                                             })
                                     ]
                                 })
                             ]
                         }),
-                        _
+                        m
                     ]
                 })
             ]
         }),
-        I = r()(t, s.container, { [s.hasImage]: g });
-    return null != n
-        ? (0, i.jsx)(l.ClickableContainer, {
+        C = r()(t, s.container, { [s.hasImage]: g });
+    return null != i
+        ? (0, n.jsx)(o.ClickableContainer, {
               tag: 'article',
-              'aria-label': o.intl.formatToPlainString(o.t['0cVQIC'], { name: d }),
-              onClick: n,
-              className: r()(I, s.clickable, { [s.animatesOnHoverContainer]: h }),
+              'aria-label': l.intl.formatToPlainString(l.t['0cVQIC'], { name: d }),
+              onClick: i,
+              className: r()(C, s.clickable, { [s.animatesOnHoverContainer]: _ }),
               focusProps: { offset: 4 },
-              children: v
+              children: x
           })
-        : (0, i.jsx)('article', {
-              className: I,
+        : (0, n.jsx)('article', {
+              className: C,
               ...f,
-              children: v
+              children: x
           });
 }

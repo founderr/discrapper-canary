@@ -9,8 +9,8 @@ var i = n(836560),
     r = n(317381),
     l = n(626135),
     a = n(585483),
-    s = n(70956),
-    o = n(996106),
+    o = n(70956),
+    s = n(996106),
     c = n(631467),
     d = n(452426),
     u = n(186901),
@@ -28,7 +28,7 @@ function m(e, t, n) {
         e
     );
 }
-let p = 10 * s.Z.Millis.SECOND,
+let p = 10 * o.Z.Millis.SECOND,
     g = new Map(),
     f = new Set(),
     _ = (e, t, n) => {
@@ -43,19 +43,19 @@ class E extends i.EventEmitter {
         let [r, l] = n;
         switch (r) {
             case c.Z.HANDSHAKE:
-                if (null != e) throw new o.Z({ closeCode: h.$VG.CLOSE_UNSUPPORTED }, 'Already connected');
+                if (null != e) throw new s.Z({ closeCode: h.$VG.CLOSE_UNSUPPORTED }, 'Already connected');
                 return this.handleHandshake(t, l, i);
             case c.Z.FRAME:
-                if (null == e) throw new o.Z({ closeCode: h.$VG.CLOSE_UNSUPPORTED }, 'Not connected');
+                if (null == e) throw new s.Z({ closeCode: h.$VG.CLOSE_UNSUPPORTED }, 'Not connected');
                 return this.handleFrame(t, e, l);
             case c.Z.CLOSE:
-                if (null == e) throw new o.Z({ closeCode: h.$VG.CLOSE_UNSUPPORTED }, 'Not connected');
+                if (null == e) throw new s.Z({ closeCode: h.$VG.CLOSE_UNSUPPORTED }, 'Not connected');
                 return this.handleClose(e, l);
             default:
-                throw new o.Z({ closeCode: h.$VG.CLOSE_UNSUPPORTED }, 'Invalid opcode');
+                throw new s.Z({ closeCode: h.$VG.CLOSE_UNSUPPORTED }, 'Invalid opcode');
         }
     }
-    constructor(e, t, i, s) {
+    constructor(e, t, i, o) {
         var c;
         super(),
             (c = this),
@@ -122,7 +122,7 @@ class E extends i.EventEmitter {
                 try {
                     this.routeEvent(i, t, e, n);
                 } catch (e) {
-                    if (e instanceof o.Z && e.errorCode === h.lTL.INVALID_PAYLOAD) throw e;
+                    if (e instanceof s.Z && e.errorCode === h.lTL.INVALID_PAYLOAD) throw e;
                     null != i
                         ? this.disconnectSocket(
                               i,
@@ -145,11 +145,11 @@ class E extends i.EventEmitter {
             m(this, 'handleFrame', (e, t, n) => {
                 var i;
                 let r;
-                if (e !== t.origin) throw new o.Z({ closeCode: h.$VG.INVALID_ORIGIN }, 'Origin has changed');
+                if (e !== t.origin) throw new s.Z({ closeCode: h.$VG.INVALID_ORIGIN }, 'Origin has changed');
                 try {
                     r = 'string' == typeof n ? JSON.parse(n) : n;
                 } catch (e) {
-                    throw new o.Z({ closeCode: h.$VG.CLOSE_UNSUPPORTED }, 'Payload not recognized encoding');
+                    throw new s.Z({ closeCode: h.$VG.CLOSE_UNSUPPORTED }, 'Payload not recognized encoding');
                 }
                 null === (i = this.onFrameHandled) || void 0 === i || i.call(this, r, this.logger, t), this.emit('request', t, r);
             }),
@@ -171,10 +171,10 @@ class E extends i.EventEmitter {
                             })
                     );
                 } catch (e) {
-                    throw new o.Z({ closeCode: h.$VG.CLOSE_UNSUPPORTED }, e.message);
+                    throw new s.Z({ closeCode: h.$VG.CLOSE_UNSUPPORTED }, e.message);
                 }
-                let s = t.frame_id;
-                if (!f.has(s)) throw (this.logger.error('Unrecognized frame ID '.concat(s)), new o.Z({ closeCode: h.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(s)));
+                let o = t.frame_id;
+                if (!f.has(o)) throw (this.logger.error('Unrecognized frame ID '.concat(o)), new s.Z({ closeCode: h.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(o)));
                 null != t.sdk_version &&
                     l.default.track(h.rMx.ACTIVITY_HANDSHAKE, {
                         application_id: t.client_id,
@@ -185,7 +185,7 @@ class E extends i.EventEmitter {
                     r = this.createPostMessageProxySocket({
                         origin: e,
                         postMessageToRPCClient: i,
-                        frameId: s,
+                        frameId: o,
                         version: Number(t.v),
                         logger: this.logger,
                         postClose: _,
@@ -196,8 +196,8 @@ class E extends i.EventEmitter {
                 }
                 this.logger.info('Socket Opened: '.concat(r.id));
                 try {
-                    if ((await this.validateSocketClient(r, e, t.client_id), !f.has(s))) throw (this.logger.error('Frame ID '.concat(s, ' no longer exists')), new o.Z({ closeCode: h.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(s)));
-                    g.set(e, r), f.delete(s), r.authorization.scopes.push(u.b_), this.emit('connect', r), this.logger.info('Socket Validated: '.concat(r.id));
+                    if ((await this.validateSocketClient(r, e, t.client_id), !f.has(o))) throw (this.logger.error('Frame ID '.concat(o, ' no longer exists')), new s.Z({ closeCode: h.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(o)));
+                    g.set(e, r), f.delete(o), r.authorization.scopes.push(u.b_), this.emit('connect', r), this.logger.info('Socket Validated: '.concat(r.id));
                 } catch (e) {
                     throw (this.logger.info('Socket Closed: '.concat(r.id, ', ').concat(e.message)), e);
                 }
@@ -215,7 +215,7 @@ class E extends i.EventEmitter {
                             })
                     );
                 } catch (e) {
-                    throw new o.Z({ closeCode: h.$VG.CLOSE_UNSUPPORTED }, e.message);
+                    throw new s.Z({ closeCode: h.$VG.CLOSE_UNSUPPORTED }, e.message);
                 }
                 this.disconnectSocket(e, t);
             }),
@@ -224,6 +224,6 @@ class E extends i.EventEmitter {
             (this.validateSocketClient = e),
             (this.logger = t),
             (this.createPostMessageProxySocket = i),
-            (this.onFrameHandled = s);
+            (this.onFrameHandled = o);
     }
 }

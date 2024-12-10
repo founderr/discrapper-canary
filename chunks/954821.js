@@ -1,6 +1,6 @@
 n.d(t, {
     h: function () {
-        return _;
+        return C;
     }
 }),
     n(47120);
@@ -38,14 +38,14 @@ let T = (e) => {
     },
     E = (e) => {
         var t;
-        let { transitionState: n, groupListing: s, guildId: r, listing: o, subscription: E, onClose: _ } = e,
-            C = (0, u.Dt)(),
-            I = (0, h.YB)(r),
-            f = (null == I ? void 0 : null === (t = I.cover_image_asset) || void 0 === t ? void 0 : t.application_id) != null ? (0, m._W)(I.cover_image_asset.application_id, I.cover_image_asset, 440) : void 0,
+        let { transitionState: n, groupListing: s, guildId: r, listing: o, subscription: E, onClose: C } = e,
+            _ = (0, u.Dt)(),
+            f = (0, h.YB)(r),
+            I = (null == f ? void 0 : null === (t = f.cover_image_asset) || void 0 === t ? void 0 : t.application_id) != null ? (0, m._W)(f.cover_image_asset.application_id, f.cover_image_asset, 440) : void 0,
             { analyticsLocations: N } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
             { cancelSubscription: A, error: b, submitting: v } = T(N),
             j = async () => {
-                (await A(E.id)) && _();
+                (await A(E.id)) && C();
             },
             O = o.role_benefits.benefits.filter((e) => e.ref_type === p.Qs.CHANNEL),
             R = o.role_benefits.benefits.filter((e) => e.ref_type === p.Qs.INTANGIBLE),
@@ -58,19 +58,19 @@ let T = (e) => {
         return (0, i.jsxs)(a.ModalRoot, {
             transitionState: n,
             className: S.__invalid_modal,
-            'aria-labelledby': C,
+            'aria-labelledby': _,
             children: [
                 (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsx)('img', {
-                            src: f,
+                            src: I,
                             alt: '',
                             className: S.headerImage
                         }),
                         (0, i.jsx)(a.ModalCloseButton, {
                             withCircleBackground: !0,
                             className: S.closeButton,
-                            onClick: _
+                            onClick: C
                         })
                     ]
                 }),
@@ -79,7 +79,7 @@ let T = (e) => {
                     className: S.content,
                     children: [
                         (0, i.jsx)(a.Heading, {
-                            id: C,
+                            id: _,
                             variant: 'text-md/medium',
                             className: S.title,
                             children: x.intl.string(x.t.O6l5tL)
@@ -109,7 +109,7 @@ let T = (e) => {
                             look: a.Button.Looks.LINK,
                             color: a.Button.Colors.WHITE,
                             className: S.goBackButton,
-                            onClick: _,
+                            onClick: C,
                             children: x.intl.string(x.t.EP6EPT)
                         })
                     ]
@@ -117,7 +117,7 @@ let T = (e) => {
             ]
         });
     },
-    _ = (e) => {
+    C = (e) => {
         (0, a.openModal)((t) =>
             (0, i.jsx)(E, {
                 ...t,

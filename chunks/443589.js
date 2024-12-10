@@ -7,8 +7,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    s = n(752877),
-    o = n(990547),
+    o = n(752877),
+    s = n(990547),
     c = n(873546),
     d = n(481060),
     u = n(906732),
@@ -22,12 +22,12 @@ var i = n(200651),
     I = n(441623),
     C = n(317271),
     v = n(674701),
-    N = n(474936),
-    S = n(981631),
+    S = n(474936),
+    N = n(981631),
     T = n(388032),
     b = n(378480),
-    A = n(423360);
-let x = {
+    x = n(423360);
+let A = {
     width: 14,
     height: 14
 };
@@ -39,8 +39,8 @@ function Z(e) {
     r.useEffect(() => {
         let e = g.Z.getUserAffinity(t.id);
         (0, h.h)({
-            name: o.ImpressionNames.GIFT_INTENT_ACTION_BUTTON,
-            type: o.ImpressionTypes.VIEW,
+            name: s.ImpressionNames.GIFT_INTENT_ACTION_BUTTON,
+            type: s.ImpressionTypes.VIEW,
             properties: {
                 gift_intent_type: n,
                 affinity: null == e ? void 0 : e.affinity
@@ -56,7 +56,7 @@ function Z(e) {
         M = (e) => {
             e.stopPropagation();
             let i = g.Z.getUserAffinity(t.id);
-            f.default.track(S.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
+            f.default.track(N.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
                 gift_intent_type: n,
                 affinity: null == i ? void 0 : i.affinity
             }),
@@ -68,19 +68,19 @@ function Z(e) {
                     analyticsLocations: L,
                     analyticsObject: {
                         page: l,
-                        section: S.jXE.FRIENDS_LIST_FRIEND_ROW,
-                        object: S.qAy.BUTTON_CTA,
-                        objectType: S.Qqv.GIFT
+                        section: N.jXE.FRIENDS_LIST_FRIEND_ROW,
+                        object: N.qAy.BUTTON_CTA,
+                        objectType: N.Qqv.GIFT
                     },
                     giftMessage: w()
                 });
         },
         w = () => {
-            if (n === N.hX.FRIEND_ANNIVERSARY) return T.intl.formatToPlainString(T.t['L2s/Nz'], { numberOfYears: I.Z.getFriendAnniversaryYears(t.id) });
+            if (n === S.hX.FRIEND_ANNIVERSARY) return T.intl.formatToPlainString(T.t['L2s/Nz'], { numberOfYears: I.Z.getFriendAnniversaryYears(t.id) });
             return (0, _.Ou)(n);
         },
         k = () => {
-            if (n === N.hX.FRIEND_ANNIVERSARY) return T.intl.string(T.t['4LohBA']);
+            if (n === S.hX.FRIEND_ANNIVERSARY) return T.intl.string(T.t['4LohBA']);
             return (0, _.Ou)(n);
         },
         U = () =>
@@ -88,13 +88,13 @@ function Z(e) {
                 ? (0, i.jsx)(d.Clickable, {
                       'aria-label': k(),
                       onClick: M,
-                      className: a()(A.actionButton, b.popoutButton, {
-                          [A.highlight]: Z,
-                          [A.actionButtonMobile]: c.tq
+                      className: a()(x.actionButton, b.popoutButton, {
+                          [x.highlight]: Z,
+                          [x.actionButtonMobile]: c.tq
                       }),
                       onMouseEnter: D,
                       onMouseLeave: R,
-                      children: (0, i.jsx)(s.animated.div, {
+                      children: (0, i.jsx)(o.animated.div, {
                           className: b.spriteContainer,
                           children: (0, i.jsx)('div', { className: b.sprite })
                       })
@@ -108,8 +108,8 @@ function Z(e) {
                           children: [
                               (0, i.jsx)(d.GiftIcon, {
                                   size: 'custom',
-                                  width: x.width,
-                                  height: x.height,
+                                  width: A.width,
+                                  height: A.height,
                                   color: 'currentColor'
                               }),
                               (0, i.jsx)(d.Text, {
@@ -141,8 +141,8 @@ function Z(e) {
                 onMouseLeave: R,
                 popoutPosition: e.position,
                 analyticsPage: l,
-                analyticsSection: S.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,
-                giftIntentSecondaryAction: N.X2.SEND_MESSAGE,
+                analyticsSection: N.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,
+                giftIntentSecondaryAction: S.X2.SEND_MESSAGE,
                 glow: !0
             }),
         children: () => U()

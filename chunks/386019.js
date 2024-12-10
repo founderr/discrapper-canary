@@ -13,44 +13,44 @@ var r = n(200651),
     u = n(848966),
     c = n(388032);
 function d(e) {
-    let { children: t, user: n, activity: d, entry: f, display: _, onSelect: p, onClose: h, onRequestOpen: m } = e,
-        [g, E] = i.useState(!1),
-        { analyticsLocations: v } = (0, o.ZP)(s.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        I = (0, l.Z)({
+    let { children: t, user: n, activity: d, entry: f, display: _, onSelect: p, onClose: h } = e,
+        [m, g] = i.useState(!1),
+        { analyticsLocations: E } = (0, o.ZP)(s.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
+        v = (0, l.Z)({
             display: _,
             user: n,
             activity: d,
             entry: f,
-            analyticsLocations: v
+            analyticsLocations: E
         }),
-        T = (0, u.Z)({
+        I = (0, u.Z)({
             entry: f,
             activity: d,
             user: n,
             display: _,
             onClose: h,
-            onAction: I,
-            isMenuOpen: g
+            onAction: v,
+            isMenuOpen: m
         });
-    return 0 === T.length || n.bot
+    return 0 === I.length || n.bot
         ? null
         : (0, r.jsx)(a.Popout, {
               align: 'top',
               position: 'right',
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  I({ action: 'OPEN_MENU' }), E(!0), null == m || m();
+                  v({ action: 'OPEN_MENU' }), g(!0);
               },
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, r.jsx)(a.Menu, {
                       navId: 'content-inventory-context',
                       onClose: () => {
-                          t(), E(!1);
+                          t(), g(!1);
                       },
                       'aria-label': c.intl.string(c.t.PlAQz8),
                       onSelect: p,
-                      children: (0, r.jsx)(a.MenuGroup, { children: T })
+                      children: (0, r.jsx)(a.MenuGroup, { children: I })
                   });
               },
               children: t

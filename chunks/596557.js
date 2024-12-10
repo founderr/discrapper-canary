@@ -7,8 +7,8 @@ var i = n(200651),
     r = n(192379),
     l = n(704215),
     a = n(481060),
-    s = n(785697),
-    o = n(626135),
+    o = n(785697),
+    s = n(626135),
     c = n(700785),
     d = n(645041),
     u = n(981631),
@@ -17,7 +17,7 @@ var i = n(200651),
     p = n(135899);
 function g(e) {
     var t;
-    let g = (0, s.SE)(e),
+    let g = (0, o.SE)(e),
         f = p.$X.some((t) => (null == e ? void 0 : e.id) !== m._ && c.oz(t, e)),
         _ = (null == e ? void 0 : e.defaultMessageNotifications) === u.bL.ALL_MESSAGES,
         E = (0, d.FT)(l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds),
@@ -43,7 +43,7 @@ function g(e) {
                 },
                 { onCloseCallback: C }
             ),
-                o.default.track(u.rMx.DISMISSIBLE_CONTENT_SHOWN, {
+                s.default.track(u.rMx.DISMISSIBLE_CONTENT_SHOWN, {
                     type: l.C[l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE],
                     guild_id: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds
                 }),

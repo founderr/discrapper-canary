@@ -3,8 +3,8 @@ n(192379);
 var r = n(120356),
     l = n.n(r),
     a = n(512969),
-    s = n(674746),
-    o = n(442837),
+    o = n(674746),
+    s = n(442837),
     c = n(780384),
     d = n(481060),
     u = n(410575),
@@ -18,25 +18,25 @@ var r = n(120356),
     I = n(278605),
     C = n(299657),
     v = n(594174),
-    N = n(981631),
-    S = n(474936),
+    S = n(981631),
+    N = n(474936),
     T = n(388032),
     b = n(707858);
-let A = o.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser() }))(
+let x = s.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser() }))(
     (0, m.Z)(
         (0, h.Z)((e) => {
             let { analyticsLocations: t } = (0, f.ZP)(g.Z.HOME_PAGE_PREMIUM_TAB),
                 n = (0, I.xP)('ApplicationStoreHome'),
                 r = (0, p.ZP)(),
-                { isAuthenticated: o, user: h } = e;
-            return o
+                { isAuthenticated: s, user: h } = e;
+            return s
                 ? (0, i.jsxs)('div', {
                       className: b.homeWrapperNormal,
                       children: [
                           (0, i.jsx)(u.Z, {
-                              section: N.jXE.NAVIGATION,
+                              section: S.jXE.NAVIGATION,
                               children: (0, i.jsxs)(E.Z, {
-                                  isAuthenticated: o,
+                                  isAuthenticated: s,
                                   className: l()(b.headerBar, {
                                       [b.headerBarV2LightBackground]: n && !(0, c.wj)(r),
                                       [b.headerBarV2DarkBackground]: n && (0, c.wj)(r)
@@ -45,7 +45,7 @@ let A = o.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser(
                                       (0, i.jsx)(E.Z.Icon, {
                                           icon: d.NitroWheelIcon,
                                           'aria-hidden': !0,
-                                          color: n ? s.Z.PREMIUM_TIER_2_PINK : void 0
+                                          color: n ? o.Z.PREMIUM_TIER_2_PINK : void 0
                                       }),
                                       (0, i.jsx)(E.Z.Title, { children: T.intl.string(T.t.Ipxkoq) })
                                   ]
@@ -60,12 +60,12 @@ let A = o.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser(
                                             justify: _.Z.Justify.CENTER,
                                             children: (0, i.jsx)(d.Spinner, { className: b.spinner })
                                         })
-                                      : (0, i.jsx)(C.Z, { entrypoint: S.EZ.ApplicationStoreHome })
+                                      : (0, i.jsx)(C.Z, { entrypoint: N.EZ.ApplicationStoreHome })
                           })
                       ]
                   })
-                : (0, i.jsx)(a.l_, { to: N.Z5c.LOGIN });
+                : (0, i.jsx)(a.l_, { to: S.Z5c.LOGIN });
         })
     )
 );
-t.Z = A;
+t.Z = x;

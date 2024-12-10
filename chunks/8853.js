@@ -9,8 +9,8 @@ var i = n(230367),
     r = n(320215),
     l = n(240773),
     a = n(495852),
-    s = n(740111);
-class o extends a.C {
+    o = n(740111);
+class s extends a.C {
     create(e) {
         let t = {
             properties: { oneofKind: void 0 },
@@ -40,7 +40,7 @@ class o extends a.C {
                 case 2:
                     l.properties = {
                         oneofKind: 'announcementModalVariant1',
-                        announcementModalVariant1: s.xY.internalBinaryRead(e, e.uint32(), n, l.properties.announcementModalVariant1)
+                        announcementModalVariant1: o.xY.internalBinaryRead(e, e.uint32(), n, l.properties.announcementModalVariant1)
                     };
                     break;
                 case 3:
@@ -49,14 +49,14 @@ class o extends a.C {
                 default:
                     let a = n.readUnknownField;
                     if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-                    let o = e.skip(r);
-                    !1 !== a && (!0 === a ? i.z.onRead : a)(this.typeName, l, t, r, o);
+                    let s = e.skip(r);
+                    !1 !== a && (!0 === a ? i.z.onRead : a)(this.typeName, l, t, r, s);
             }
         }
         return l;
     }
     internalBinaryWrite(e, t, n) {
-        'placeholder' === e.properties.oneofKind && t.tag(1, i.TD.LengthDelimited).string(e.properties.placeholder), 'announcementModalVariant1' === e.properties.oneofKind && s.xY.internalBinaryWrite(e.properties.announcementModalVariant1, t.tag(2, i.TD.LengthDelimited).fork(), n).join(), '' !== e.contentIdentifier && t.tag(3, i.TD.LengthDelimited).string(e.contentIdentifier);
+        'placeholder' === e.properties.oneofKind && t.tag(1, i.TD.LengthDelimited).string(e.properties.placeholder), 'announcementModalVariant1' === e.properties.oneofKind && o.xY.internalBinaryWrite(e.properties.announcementModalVariant1, t.tag(2, i.TD.LengthDelimited).fork(), n).join(), '' !== e.contentIdentifier && t.tag(3, i.TD.LengthDelimited).string(e.contentIdentifier);
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t;
     }
@@ -74,7 +74,7 @@ class o extends a.C {
                 name: 'announcement_modal_variant_1',
                 kind: 'message',
                 oneof: 'properties',
-                T: () => s.xY
+                T: () => o.xY
             },
             {
                 no: 3,
@@ -85,4 +85,4 @@ class o extends a.C {
         ]);
     }
 }
-let c = new o();
+let c = new s();

@@ -98,8 +98,8 @@ function F(e, t) {
     let n = M(e),
         r = L(n),
         i = U(n, r),
-        { enabled: s, variant: l } = (0, a.XN)({ location: 'GuildReadStateStore.recountGuild' }),
-        u = s && l === a.jH.UNREADS_AT_TOP_WITH_BADGE,
+        { enabled: s, removeHomeMentionBadges: l } = (0, a.XN)({ location: 'GuildReadStateStore.recountGuild' }),
+        u = s && l,
         c = !1;
     if (
         (t.forEach((e) => {
@@ -131,8 +131,8 @@ function V(e, t) {
 function j(e, t) {
     let n = M(e),
         r = D(n),
-        { enabled: i, variant: c } = (0, a.XN)({ location: 'GuildReadStateStore.recountGuild' }),
-        f = i && c === a.jH.UNREADS_AT_TOP_WITH_BADGE;
+        { enabled: i, removeHomeMentionBadges: c } = (0, a.XN)({ location: 'GuildReadStateStore.recountGuild' }),
+        f = i && c;
     if (null == n) {
         let e = p.Z.getMutablePrivateChannels();
         for (let t in e) {

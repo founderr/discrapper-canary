@@ -3,14 +3,14 @@ var i = n(413135),
     r = n(836560),
     l = n(392711),
     a = n.n(l),
-    s = n(710845),
-    o = n(998502),
+    o = n(710845),
+    s = n(998502),
     c = n(901077),
     d = n(76238),
     u = n(852926),
     h = n(981631);
-let m = o.ZP.requireModule('discord_rpc').RPCIPC,
-    p = new s.Z('RPCServer:IPC'),
+let m = s.ZP.requireModule('discord_rpc').RPCIPC,
+    p = new o.Z('RPCServer:IPC'),
     g = {
         HANDSHAKE: 0,
         FRAME: 1,
@@ -130,7 +130,7 @@ class v extends d.Z {
             (this.socket = e);
     }
 }
-class N extends r.EventEmitter {
+class S extends r.EventEmitter {
     handleConnection(e) {
         f(e, !1),
             e.pause(),
@@ -192,4 +192,4 @@ class N extends r.EventEmitter {
             });
     }
 }
-t.Z = new N();
+t.Z = new S();

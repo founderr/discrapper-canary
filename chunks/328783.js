@@ -62,10 +62,10 @@ t.Z = s.memo(function (e) {
             },
             [T]
         ),
-        _ = s.useCallback((e) => (0, d.nE)(e, !0, h.Sbl.USER_SETTINGS), []),
-        C = s.useCallback((e) => e === a, [a]),
-        I = s.useCallback((e) => e, []),
-        f = s.useCallback(() => (0, d.nE)(null, !1), []);
+        C = s.useCallback((e) => (0, d.nE)(e, !0, h.Sbl.USER_SETTINGS), []),
+        _ = s.useCallback((e) => e === a, [a]),
+        f = s.useCallback((e) => e, []),
+        I = s.useCallback(() => (0, d.nE)(null, !1), []);
     return (0, i.jsxs)(o.Z, {
         title: g.intl.string(g.t.umdfaG),
         titleId: x,
@@ -78,13 +78,13 @@ t.Z = s.memo(function (e) {
             (0, i.jsx)(l.Select, {
                 className: p.select,
                 optionClassName: p.selectPopout,
-                isSelected: C,
+                isSelected: _,
                 options: S,
-                select: _,
+                select: C,
                 renderOptionValue: E,
                 renderOptionLabel: T,
-                serialize: I,
-                clear: f,
+                serialize: f,
+                clear: I,
                 clearable: null != a
             })
         ]

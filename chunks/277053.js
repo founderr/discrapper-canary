@@ -2,8 +2,8 @@ let i, r;
 n(47120);
 var l,
     a,
-    s,
     o,
+    s,
     c = n(392711),
     d = n.n(c),
     u = n(442837),
@@ -17,12 +17,12 @@ var l,
 let I = new Set(),
     C = _.QZA.CLOSED,
     v = !1,
-    N = null,
     S = null,
+    N = null,
     T = null,
     b = null,
-    A = null,
     x = null,
+    A = null,
     Z = h.K.get(E.kf) || !1;
 function L(e) {
     let t = e.getGuildId(),
@@ -32,7 +32,7 @@ function L(e) {
 function y() {
     if (((T = g.Z.getChannel()), (b = g.Z.getCategory()), null == T)) return !1;
     let e = T.getGuildId();
-    (S = N = L(T)), null == N[A] && (A = e), (r = null != b), (i = p.o4(T, b)), (x = null), (v = !1), (C = _.QZA.CLOSED), I.clear();
+    (N = S = L(T)), null == S[x] && (x = e), (r = null != b), (i = p.o4(T, b)), (A = null), (v = !1), (C = _.QZA.CLOSED), I.clear();
 }
 class P extends (l = u.ZP.Store) {
     initialize() {
@@ -45,16 +45,16 @@ class P extends (l = u.ZP.Store) {
         return this.hasChanges();
     }
     getPermissionOverwrite(e) {
-        return null == N ? void 0 : N[e];
+        return null == S ? void 0 : S[e];
     }
     get editedPermissionIds() {
         return Array.from(I);
     }
     get permissionOverwrites() {
-        return N;
+        return S;
     }
     get selectedOverwriteId() {
-        return A;
+        return x;
     }
     get formState() {
         return C;
@@ -75,15 +75,15 @@ class P extends (l = u.ZP.Store) {
         return Z;
     }
 }
-(o = 'ChannelSettingsPermissionsStore'),
-    (s = 'displayName') in (a = P)
-        ? Object.defineProperty(a, s, {
-              value: o,
+(s = 'ChannelSettingsPermissionsStore'),
+    (o = 'displayName') in (a = P)
+        ? Object.defineProperty(a, o, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[s] = o),
+        : (a[o] = s),
     (t.Z = new P(m.Z, {
         CHANNEL_SETTINGS_SET_SECTION: function (e) {
             let { section: t } = e;
@@ -93,32 +93,32 @@ class P extends (l = u.ZP.Store) {
         CHANNEL_SETTINGS_PERMISSIONS_INIT: y,
         CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION: function (e) {
             let { id: t, allow: n, deny: r } = e,
-                l = null == N ? void 0 : N[t];
+                l = null == S ? void 0 : S[t];
             if (null == l || null == T) return !1;
             (l = {
                 ...l,
                 allow: n,
                 deny: r
             }),
-                (N = {
-                    ...N,
+                (S = {
+                    ...S,
                     [t]: l
                 }),
                 I.add(t),
                 (C = _.QZA.OPEN),
-                (v = !d().isEqual(N, S)),
+                (v = !d().isEqual(S, N)),
                 (i = p.o4(T, b));
         },
         CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
             let { id: t } = e;
-            if (null != N && null != N[t]) A = t;
+            if (null != S && null != S[t]) x = t;
             else {
                 if (null == T) return !1;
-                x = t;
+                A = t;
             }
         },
         CHANNEL_SETTINGS_CLOSE: function () {
-            (C = _.QZA.CLOSED), (N = null), (S = null), (T = null), (b = null), (v = !1), I.clear(), (A = null), (x = null);
+            (C = _.QZA.CLOSED), (S = null), (N = null), (T = null), (b = null), (v = !1), I.clear(), (x = null), (A = null);
         },
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e;
@@ -131,20 +131,20 @@ class P extends (l = u.ZP.Store) {
                         b = g.Z.getCategory();
                         let t = T.getGuildId();
                         if (null == t) return !1;
-                        S = L(T);
+                        N = L(T);
                         let n = {};
                         return (
                             I.forEach((e) => {
-                                null != N && (n[e] = N[e]);
+                                null != S && (n[e] = S[e]);
                             }),
                             null == n[t] && null == T.permissionOverwrites[t] && (n[t] = p.we(t)),
                             null ==
-                            (N = {
+                            (S = {
                                 ...T.permissionOverwrites,
                                 ...n
-                            })[A]
-                                ? (A = t)
-                                : null != x && null != N[x] && ((A = x), (x = null)),
+                            })[x]
+                                ? (x = t)
+                                : null != A && null != S[A] && ((x = A), (A = null)),
                             (i = p.o4(T, b)),
                             !0
                         );

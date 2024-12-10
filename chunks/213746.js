@@ -8,8 +8,8 @@ var i = n(200651),
     r = n(192379),
     l = n(793030),
     a = n(442837),
-    s = n(481060),
-    o = n(794295),
+    o = n(481060),
+    s = n(794295),
     c = n(765717),
     d = n(283836),
     u = n(507608),
@@ -25,7 +25,7 @@ function C(e) {
     let { application: t } = e;
     return (0, i.jsxs)('div', {
         className: I.storeContainer,
-        children: [(0, i.jsx)(v, { application: t }), (0, i.jsx)(S, { application: t })]
+        children: [(0, i.jsx)(v, { application: t }), (0, i.jsx)(N, { application: t })]
     });
 }
 function v(e) {
@@ -88,30 +88,30 @@ function v(e) {
             (0, i.jsx)(c.Z, {
                 path: _.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId'),
                 exact: !0,
-                render: (e) => (0, i.jsx)(N, { ...e })
+                render: (e) => (0, i.jsx)(S, { ...e })
             })
         ]
     });
 }
-function N(e) {
+function S(e) {
     let {
             match: {
                 params: { applicationId: t, skuId: l }
             }
         } = e,
-        o = (0, a.e7)([p.Z], () => p.Z.get(l), [l]),
+        s = (0, a.e7)([p.Z], () => p.Z.get(l), [l]),
         c = (0, a.e7)([p.Z], () => (null != l ? p.Z.getParentSKU(l) : void 0), [l]),
         d = r.useId(),
         u = r.useCallback(() => (0, g.Gp)(_.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, f.GlobalDiscoveryAppsSections.STORE)), [t]);
     return (
         r.useLayoutEffect(() => {
             var e, r, a, d, u;
-            switch (null == o ? void 0 : o.type) {
+            switch (null == s ? void 0 : s.type) {
                 case _.epS.CONSUMABLE:
                 case _.epS.DURABLE:
                     (e = t),
                         (r = l),
-                        (0, s.openModalLazy)(
+                        (0, o.openModalLazy)(
                             async () => {
                                 let { ItemDetailsModal: t } = await Promise.resolve().then(n.bind(n, 147496));
                                 return (n) =>
@@ -129,7 +129,7 @@ function N(e) {
                     (a = t),
                         (d = l),
                         (u = (0, m.KW)(c.flags) ? 'user' : 'guild'),
-                        (0, s.openModalLazy)(
+                        (0, o.openModalLazy)(
                             async () => {
                                 let { SubscriptionDetailsModal: e } = await Promise.resolve().then(n.bind(n, 519896));
                                 return (t) =>
@@ -144,23 +144,23 @@ function N(e) {
                             { onCloseCallback: () => (0, g.Gp)(_.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(a, f.GlobalDiscoveryAppsSections.STORE)) }
                         );
             }
-        }, [t, d, u, null == c ? void 0 : c.flags, null == o ? void 0 : o.flags, null == o ? void 0 : o.type, l]),
+        }, [t, d, u, null == c ? void 0 : c.flags, null == s ? void 0 : s.flags, null == s ? void 0 : s.type, l]),
         r.useLayoutEffect(
             () => () => {
-                (0, s.closeModal)(d);
+                (0, o.closeModal)(d);
             },
             [d]
         ),
         null
     );
 }
-function S(e) {
+function N(e) {
     let { application: t } = e,
         n = t.terms_of_service_url,
         r = t.privacy_policy_url;
     if (null == n && null == r) return null;
     let a = (e, t) =>
-        (0, i.jsx)(o.Z, {
+        (0, i.jsx)(s.Z, {
             href: t,
             children: e
         });

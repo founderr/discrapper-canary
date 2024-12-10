@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return f;
     }
 }),
     n(47120);
@@ -21,12 +21,12 @@ var i = n(200651),
     S = n(897237),
     T = n(587987),
     E = n(652849),
-    _ = n(232186);
-let C = (0, h.hQ)();
-function I() {
+    C = n(232186);
+let _ = (0, h.hQ)();
+function f() {
     let [e, t] = s.useState(-100),
         [n, r] = s.useState(!1),
-        { threshold: I, autoThreshold: f } = (0, a.cj)([g.Z], () => g.Z.getModeOptions()),
+        { threshold: f, autoThreshold: I } = (0, a.cj)([g.Z], () => g.Z.getModeOptions()),
         {
             inputMode: N,
             automaticVADSupported: A,
@@ -59,12 +59,12 @@ function I() {
     let O = (0, i.jsx)('section', {
         className: l()(S.inputSensitivityToggle, S.manual),
         children: (0, i.jsx)(u.Slider, {
-            initialValue: I + 100,
+            initialValue: f + 100,
             onValueRender: (e) => ''.concat((-((100 - e) * 1)).toFixed(0), 'dB'),
-            onValueChange: (e) => j(-((100 - e) * 1), f),
+            onValueChange: (e) => j(-((100 - e) * 1), I),
             barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
-            'aria-labelledby': C,
+            'aria-labelledby': _,
             children: (0, i.jsxs)('div', {
                 className: l()(S.sliderBar, S.microphone, S.inputSensitivityBar, T.bar),
                 children: [
@@ -78,7 +78,7 @@ function I() {
         })
     });
     return (
-        f &&
+        I &&
             (O = (0, i.jsxs)('section', {
                 className: S.inputSensitivityToggle,
                 children: [
@@ -88,7 +88,7 @@ function I() {
                     }),
                     (0, i.jsx)(u.FormText, {
                         type: u.FormText.Types.DESCRIPTION,
-                        className: _.marginBottom8,
+                        className: C.marginBottom8,
                         children: x.intl.string(x.t.W3K5Ii)
                     })
                 ]
@@ -97,9 +97,9 @@ function I() {
             className: S.sensitivity,
             children: [
                 (0, i.jsx)(u.FormTitle, {
-                    id: C,
+                    id: _,
                     tag: u.FormTitleTags.H5,
-                    className: _.marginBottom8,
+                    className: C.marginBottom8,
                     children: x.intl.string(x.t['sqUm+v'])
                 }),
                 (0, i.jsxs)('div', {
@@ -108,11 +108,11 @@ function I() {
                             (0, i.jsx)(h.FG, {
                                 children: (e) =>
                                     (0, i.jsxs)('div', {
-                                        className: l()(E.horizontal, _.marginBottom4),
+                                        className: l()(E.horizontal, C.marginBottom4),
                                         children: [
                                             (0, i.jsx)(u.FormTitle, {
                                                 tag: u.FormTitleTags.H3,
-                                                className: _.marginReset,
+                                                className: C.marginReset,
                                                 children: (0, i.jsx)('label', {
                                                     htmlFor: e,
                                                     children: x.intl.string(x.t.I1Zuq6)
@@ -120,8 +120,8 @@ function I() {
                                             }),
                                             (0, i.jsx)(u.Switch, {
                                                 id: e,
-                                                checked: f,
-                                                onChange: (e) => j(I, e)
+                                                checked: I,
+                                                onChange: (e) => j(f, e)
                                             })
                                         ]
                                     })
@@ -132,7 +132,7 @@ function I() {
                 !b &&
                     (0, i.jsx)(u.FormText, {
                         type: u.FormText.Types.DESCRIPTION,
-                        className: l()(S.inputDisabledWarning, _.marginBottom8),
+                        className: l()(S.inputDisabledWarning, C.marginBottom8),
                         children: x.intl.format(x.t['O13I+P'], { onEnableClick: () => m.Z.enable(!0) })
                     })
             ]

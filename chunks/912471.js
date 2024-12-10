@@ -8,8 +8,8 @@ var i = n(433517),
     r = n(570140),
     l = n(188471),
     a = n(581567),
-    s = n(594190),
-    o = n(19780),
+    o = n(594190),
+    s = n(19780),
     c = n(626135),
     d = n(70956),
     u = n(848479),
@@ -64,20 +64,20 @@ async function v() {
             client_heartbeat_initialization_timestamp: t.initialized,
             client_heartbeat_version: 17
         },
-        o = u.Z.getMemoryUsageElectronRenderer();
-    null != o && (r.client_heartbeat_renderer_memory = o);
+        s = u.Z.getMemoryUsageElectronRenderer();
+    null != s && (r.client_heartbeat_renderer_memory = s);
     let d = u.Z.getMemoryUsageElectronRendererUsedHeapSize();
     null != d && (r.client_heartbeat_renderer_memory_used_heap = d);
     {
-        let e = s.ZP.getCurrentGameForAnalytics();
+        let e = o.ZP.getCurrentGameForAnalytics();
         null != e && ((r.client_heartbeat_current_game_id = e.id), (r.client_heartbeat_current_game_name = e.name), (r.client_heartbeat_current_game_executable = (0, a.N6)(e.exePath)), (r.client_heartbeat_current_game_distributor = e.distributor));
     }
     c.default.track(p.rMx.CLIENT_HEARTBEAT, r), i.K.set(g, Date.now().toString()), (0, l.Z)();
 }
-let N = null,
-    S = !0;
+let S = null,
+    N = !0;
 function T() {
-    if (S || (null != N && N !== p.hes.DISCONNECTED && N !== p.hes.RTC_DISCONNECTED))
+    if (N || (null != S && S !== p.hes.DISCONNECTED && S !== p.hes.RTC_DISCONNECTED))
         try {
             I();
         } catch (e) {
@@ -89,20 +89,20 @@ function T() {
         })();
 }
 function b() {
-    h.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), o.Z.addChangeListener(x), r.Z.subscribe('WINDOW_FOCUS', Z), r.Z.subscribe('APP_STATE_UPDATE', L), r.Z.subscribe('LOGIN_SUCCESS', A), T();
-}
-function A() {
-    v();
+    h.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), s.Z.addChangeListener(A), r.Z.subscribe('WINDOW_FOCUS', Z), r.Z.subscribe('APP_STATE_UPDATE', L), r.Z.subscribe('LOGIN_SUCCESS', x), T();
 }
 function x() {
-    let e = o.Z.getState();
-    N !== e && ((N = e), T());
+    v();
+}
+function A() {
+    let e = s.Z.getState();
+    S !== e && ((S = e), T());
 }
 function Z(e) {
     let { focused: t } = e;
-    (S = t), T();
+    (N = t), T();
 }
 function L(e) {
     let { state: t } = e;
-    (S = t === p.$7l.ACTIVE), T();
+    (N = t === p.$7l.ACTIVE), T();
 }

@@ -8,8 +8,8 @@ var i,
     r,
     l = n(200651),
     a = n(192379),
-    s = n(120356),
-    o = n.n(s),
+    o = n(120356),
+    s = n.n(o),
     c = n(91192),
     d = n(442837),
     u = n(704215),
@@ -23,12 +23,12 @@ var i,
     I = n(975298),
     C = n(605236),
     v = n(243778),
-    N = n(819640),
-    S = n(594174),
+    S = n(819640),
+    N = n(594174),
     T = n(351402),
     b = n(78839),
-    A = n(626135),
-    x = n(74538),
+    x = n(626135),
+    A = n(74538),
     Z = n(502087),
     L = n(657041),
     y = n(769415),
@@ -63,13 +63,13 @@ let en = (e) => {
         n,
         i,
         r,
-        { selected: s, route: en, locationState: ei, ...er } = e,
-        el = (0, d.e7)([S.default], () => S.default.getCurrentUser()),
+        { selected: o, route: en, locationState: ei, ...er } = e,
+        el = (0, d.e7)([N.default], () => N.default.getCurrentUser()),
         ea = (0, d.e7)([b.ZP], () => b.ZP.getPremiumTypeSubscription()),
-        es = (0, d.e7)([_.Z], () => _.Z.useReducedMotion),
-        eo = (0, h.ap)((0, f.ZP)()),
+        eo = (0, d.e7)([_.Z], () => _.Z.useReducedMotion),
+        es = (0, h.ap)((0, f.ZP)()),
         [ec, ed] = a.useState(!1),
-        eu = (0, x.Qo)(el, ea),
+        eu = (0, A.Qo)(el, ea),
         eh = (0, c.JA)('nitro'),
         em = (0, j.N)(),
         ep = (0, R.Ng)(),
@@ -81,15 +81,15 @@ let en = (e) => {
     (0, g.Z)(new Date(2024, 10, 21), 1000, void 0, !eI);
     let eC = (0, M.$_)(),
         ev = (0, B.V6)(),
-        eN = (0, V.Kn)(ee),
-        eS = (0, V.vx)(ee),
+        eS = (0, V.Kn)(ee),
+        eN = (0, V.vx)(ee),
         eT = (0, V.wG)(ee),
         eb = (0, d.e7)([Z.Z], () => Z.Z.getCreatedAtOverride()),
-        eA = (0, d.e7)([N.Z], () => N.Z.hasLayers()),
-        { fractionalState: ex, endsAt: eZ, currentEntitlementId: eL } = (0, I.Z)({ forceFetch: !0 }),
-        [ey, eP] = (0, v.XR)(ex !== z.a$.NONE ? u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, ex !== z.a$.NONE ? Number(eL) : 0),
+        ex = (0, d.e7)([S.Z], () => S.Z.hasLayers()),
+        { fractionalState: eA, endsAt: eZ, currentEntitlementId: eL } = (0, I.Z)({ forceFetch: !0 }),
+        [ey, eP] = (0, v.XR)(eA !== z.a$.NONE ? u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, eA !== z.a$.NONE ? Number(eL) : 0),
         eO = null != eb ? eb : null == el ? void 0 : el.createdAt,
-        eR = s || null != em || null != ep || eE || eS || eT || null != eC || null != ev || eu,
+        eR = o || null != em || null != ep || eE || eN || eT || null != eC || null != ev || eu,
         { enabled: ej } = P._.useExperiment({ location: ee }, { autoTrackExposure: !1 }),
         { enabled: eD } = y.Z.useExperiment(
             { location: ee },
@@ -102,7 +102,7 @@ let en = (e) => {
         [ew, ek] = (0, v.US)(eg ? [u.z.REVERSE_TRIAL_NITRO_TAB_BADGE] : [], void 0, !0);
     if (!(eR = eR || (null != el && null != eO && Date.now() - eO.getTime() > et))) return null;
     if (
-        (ex !== z.a$.NONE &&
+        (eA !== z.a$.NONE &&
             ((r = 9),
             (i = (0, l.jsx)(O.Z, {
                 className: '',
@@ -119,7 +119,7 @@ let en = (e) => {
             (i = (0, l.jsxs)(l.Fragment, {
                 children: [
                     (0, l.jsx)(G.dX, {
-                        isSelected: s,
+                        isSelected: o,
                         trialOffer: em,
                         q4MarketingEnabled: eD
                     }),
@@ -127,15 +127,15 @@ let en = (e) => {
                         (0, l.jsx)('div', {
                             className: q.tabBackground,
                             children: (0, l.jsx)('img', {
-                                className: o()(q.tabBackgroundImage, { [q.tabBackgroundImageHovered]: ec }),
-                                src: ((eU = es), (eG = eo), (eB = ec), eG ? (eU || !eB ? $.Z : J.Z) : eU || !eB ? Q.Z : X.Z),
+                                className: s()(q.tabBackgroundImage, { [q.tabBackgroundImageHovered]: ec }),
+                                src: ((eU = eo), (eG = es), (eB = ec), eG ? (eU || !eB ? $.Z : J.Z) : eU || !eB ? Q.Z : X.Z),
                                 alt: ''
                             })
                         })
                 ]
             }));
     } else
-        eS
+        eN
             ? ((t = q.referralIncentive), (r = 7))
             : eT
               ? ((i = (0, l.jsx)(H.Z, { copy: K.intl.string(K.t.jyYgZ2) })), (r = 8))
@@ -162,36 +162,36 @@ let en = (e) => {
                       : null != ep
                         ? ((i = (0, l.jsx)(U.GN, {
                               userDiscount: ep,
-                              isTabSelected: s,
+                              isTabSelected: o,
                               includesAmountOff: !1
                           })),
                           (r = 3))
                         : null == em || eM
-                          ? eN
+                          ? eS
                               ? ((i = (0, l.jsx)(G.lH, {
-                                    isSelected: s,
+                                    isSelected: o,
                                     onSelect: () => (0, C.EW)(u.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: Y.L.TAKE_ACTION })
                                 })),
                                 (r = 6))
-                              : e_ && ((i = (0, l.jsx)(w.k, { entryPoint: w.U.PrivateMessages })), !s && (t = q.localizeBadge), (r = 5))
+                              : e_ && ((i = (0, l.jsx)(w.k, { entryPoint: w.U.PrivateMessages })), !o && (t = q.localizeBadge), (r = 5))
                           : ((i = (0, l.jsx)(U.$H, {
                                 trialOffer: em,
-                                isTabSelected: s
+                                isTabSelected: o
                             })),
                             (r = 4));
     let eH = (0, l.jsx)(p.Qj, {
-        selected: s,
+        selected: o,
         route: en,
         icon: m.NitroWheelIcon,
         text: K.intl.string(K.t.Ipxkoq),
         locationState: ei,
         onClick: () => {
             ey === u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eP(Y.L.TAKE_ACTION),
-                A.default.track(W.rMx.NITRO_TAB_VISITED, {
+                x.default.track(W.rMx.NITRO_TAB_VISITED, {
                     badge_decorator: r,
                     has_premium: eu
                 }),
-                eS || eT ? ((0, C.EW)(u.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: Y.L.TAKE_ACTION }), eT && (0, C.EW)(u.z.REFERRAL_INCENTIVE_AWARDED_INFO, { dismissAction: Y.L.TAKE_ACTION })) : null != ew && ek(Y.L.USER_DISMISS);
+                eN || eT ? ((0, C.EW)(u.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: Y.L.TAKE_ACTION }), eT && (0, C.EW)(u.z.REFERRAL_INCENTIVE_AWARDED_INFO, { dismissAction: Y.L.TAKE_ACTION })) : null != ew && ek(Y.L.USER_DISMISS);
         },
         onMouseEnter: () => {
             ed(!0);
@@ -211,12 +211,12 @@ let en = (e) => {
               trialOffer: em,
               children: eH
           })
-        : eN
+        : eS
           ? (0, l.jsx)(G.CI, {
                 variant: G.j$.REFERRAL_PROGRAM,
                 children: eH
             })
-          : eS && !eA
+          : eN && !ex
             ? (0, l.jsx)(G.A7, { children: () => eH })
             : eH;
 };

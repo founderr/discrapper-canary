@@ -23,17 +23,17 @@ var i = n(200651),
     S = n(311476),
     T = n(165583),
     E = n(197115),
-    _ = n(504983),
-    C = n(626135),
-    I = n(981631),
-    f = n(921944),
+    C = n(504983),
+    _ = n(626135),
+    f = n(981631),
+    I = n(921944),
     N = n(474936),
     A = n(388032),
     b = n(878088),
     v = n(232186);
 let j = () => {
         (0, g.EW)(l.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
-            dismissAction: f.L.PRIMARY,
+            dismissAction: I.L.PRIMARY,
             forceTrack: !0
         }),
             (0, u.Kq)(),
@@ -46,12 +46,12 @@ let j = () => {
             o = (null === (t = (0, x.N)()) || void 0 === t ? void 0 : null === (e = t.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === N.Si.TIER_2,
             u = (0, p.Ng)(),
             g = (0, p.Wp)(u, N.Si.TIER_2),
-            f = !l || o,
+            I = !l || o,
             { enabled: O } = S.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceClientThemes' },
                 {
-                    autoTrackExposure: !f,
-                    disable: f
+                    autoTrackExposure: !I,
+                    disable: I
                 }
             ),
             R = () =>
@@ -76,7 +76,7 @@ let j = () => {
         return (
             s.useEffect(() => {
                 l &&
-                    C.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
+                    _.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: N.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                         location_stack: n
                     });
@@ -93,10 +93,10 @@ let j = () => {
                             : (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)(h.ZP.Basic, { className: b.basicThemeSelectors }),
-                                      (0, i.jsxs)(_.Z, {
+                                      (0, i.jsxs)(C.Z, {
                                           className: b.featureBorder,
                                           isShown: l,
-                                          type: _.Y.PREMIUM,
+                                          type: C.Y.PREMIUM,
                                           children: [
                                               (0, i.jsx)(h.ZP.Gradient, {
                                                   disabled: l,

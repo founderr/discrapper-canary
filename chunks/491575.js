@@ -2,8 +2,8 @@ var i = n(200651),
     r = n(192379),
     l = n(512722),
     a = n.n(l),
-    s = n(481060),
-    o = n(176299),
+    o = n(481060),
+    s = n(176299),
     c = n(512847),
     d = n(612226),
     u = n(714338),
@@ -37,19 +37,19 @@ t.Z = r.memo(function () {
             [t]
         ),
         (0, m.Z)(),
-        (0, i.jsxs)(s.Shakeable, {
+        (0, i.jsxs)(o.Shakeable, {
             ref: e,
             className: v.app,
             children: [
                 (0, i.jsx)(I.Z, {
                     className: v.layers,
-                    children: (0, i.jsx)(o.Z, {})
+                    children: (0, i.jsx)(s.Z, {})
                 }),
                 (0, i.jsx)(p.Z, {}),
                 (0, i.jsx)(c.Z, {}),
                 (0, i.jsx)(E.Z, {}),
                 (0, i.jsx)(g.Z, {}),
-                (0, i.jsx)(s.DnDKeyboardHelpBar, {})
+                (0, i.jsx)(o.DnDKeyboardHelpBar, {})
             ]
         })
     );

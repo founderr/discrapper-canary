@@ -2,10 +2,10 @@ var i,
     r,
     l,
     a,
-    s = n(442837),
-    o = n(570140);
+    o = n(442837),
+    s = n(570140);
 let c = {};
-class d extends (a = s.ZP.Store) {
+class d extends (a = o.ZP.Store) {
     getSkuIdForChannel(e) {
         return c[e];
     }
@@ -19,7 +19,7 @@ class d extends (a = s.ZP.Store) {
               writable: !0
           })
         : (i[r] = l),
-    (t.Z = new d(o.Z, {
+    (t.Z = new d(s.Z, {
         CONNECTION_OPEN: function () {
             c = {};
         },

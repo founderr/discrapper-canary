@@ -8,8 +8,8 @@ var i = n(200651),
     r = n(192379),
     l = n(990547),
     a = n(399606),
-    s = n(481060),
-    o = n(232567),
+    o = n(481060),
+    s = n(232567),
     c = n(213609),
     d = n(313201),
     u = n(23434),
@@ -22,7 +22,7 @@ function g(e) {
         [f, _] = r.useState(!1),
         E = (0, d.Dt)();
     async function I() {
-        return _(!0), g === h.c2C.AGREEMENTS && _(await (0, o.Lr)()), null;
+        return _(!0), g === h.c2C.AGREEMENTS && _(await (0, s.Lr)()), null;
     }
     return (
         (0, c.Z)(
@@ -34,21 +34,21 @@ function g(e) {
             {},
             []
         ),
-        (0, i.jsxs)(s.ModalRoot, {
+        (0, i.jsxs)(o.ModalRoot, {
             'aria-labelledby': E,
             transitionState: t,
             children: [
                 (0, i.jsx)('div', { id: E }),
-                (0, i.jsx)(s.ModalHeader, {
+                (0, i.jsx)(o.ModalHeader, {
                     separator: !1,
-                    children: (0, i.jsx)(s.Heading, {
+                    children: (0, i.jsx)(o.Heading, {
                         variant: 'heading-lg/semibold',
                         children: m.intl.string(m.t['7glvXl'])
                     })
                 }),
-                (0, i.jsxs)(s.ModalContent, {
+                (0, i.jsxs)(o.ModalContent, {
                     children: [
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(o.Text, {
                             variant: 'text-md/normal',
                             children: g === h.c2C.AGREEMENTS ? m.intl.format(m.t.zHolhY, {}) : null
                         }),
@@ -66,18 +66,18 @@ function g(e) {
                                 })
                             ]
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(o.Text, {
                             variant: 'text-md/normal',
                             className: p.agreementDescription,
                             children: m.intl.string(m.t['+USXQE'])
                         })
                     ]
                 }),
-                (0, i.jsx)(s.ModalFooter, {
-                    children: (0, i.jsx)(s.Button, {
+                (0, i.jsx)(o.ModalFooter, {
+                    children: (0, i.jsx)(o.Button, {
                         submitting: f,
                         onClick: I,
-                        color: s.Button.Colors.GREEN,
+                        color: o.Button.Colors.GREEN,
                         children: m.intl.string(m.t['+TBKLy'])
                     })
                 })

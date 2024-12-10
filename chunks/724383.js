@@ -2,8 +2,8 @@ var i = n(200651),
     r = n(192379),
     l = n(512969),
     a = n(509451),
-    s = n(252618),
-    o = n(352057),
+    o = n(252618),
+    s = n(352057),
     c = n(319443),
     d = n(106075),
     u = n(121711),
@@ -14,7 +14,7 @@ var i = n(200651),
     f = n(49898),
     _ = n(156212);
 t.Z = function () {
-    let e = (0, o.h$)({ location: 'DiscoveryUISelectedTab' }),
+    let e = (0, s.h$)({ location: 'DiscoveryUISelectedTab' }),
         t = p.Z.useField('selectedTab'),
         n = (function (e) {
             switch (e) {
@@ -42,6 +42,6 @@ t.Z = function () {
         ? (0, i.jsx)(a.default, {})
         : (0, i.jsxs)('section', {
               className: _.container,
-              children: [(0, i.jsx)(s.yY, { location: (0, g.s)(t) }), (0, i.jsx)('div', { className: _.dragRegion }), n]
+              children: [(0, i.jsx)(o.yY, { location: (0, g.s)(t) }), (0, i.jsx)('div', { className: _.dragRegion }), n]
           });
 };

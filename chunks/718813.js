@@ -8,8 +8,8 @@ var i,
     r = n(200651),
     l = n(192379),
     a = n(120356),
-    s = n.n(a),
-    o = n(748780),
+    o = n.n(a),
+    s = n(748780),
     c = n(442837),
     d = n(215569),
     u = n(481060),
@@ -23,7 +23,7 @@ var i,
     I = n(585483),
     C = n(981631),
     v = n(294981);
-function N(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function N(e, t, n) {
         e
     );
 }
-let S = (0, g.Un)({
+let N = (0, g.Un)({
         createPromise: () => Promise.all([n.e('23217'), n.e('33053'), n.e('8016'), n.e('17298'), n.e('76540'), n.e('17938'), n.e('22646'), n.e('34842'), n.e('48923'), n.e('30419'), n.e('8821'), n.e('18824'), n.e('38175'), n.e('43697')]).then(n.bind(n, 989804)),
         webpackId: 989804,
         name: 'UserSettings'
@@ -51,15 +51,15 @@ let S = (0, g.Un)({
         webpackId: 838819,
         name: 'CollectiblesShop'
     }),
-    A = (0, g.Un)({
+    x = (0, g.Un)({
         createPromise: () => Promise.all([n.e('63288'), n.e('33053'), n.e('17298'), n.e('7654'), n.e('98479'), n.e('31113'), n.e('85552'), n.e('58227'), n.e('16114'), n.e('54770')]).then(n.bind(n, 994763)),
         webpackId: 994763,
         name: 'GuildSettings'
     }),
-    x = {
-        [C.S9g.USER_SETTINGS]: () => (0, r.jsx)(S, {}),
+    A = {
+        [C.S9g.USER_SETTINGS]: () => (0, r.jsx)(N, {}),
         [C.S9g.CHANNEL_SETTINGS]: () => (0, r.jsx)(T, {}),
-        [C.S9g.GUILD_SETTINGS]: () => (0, r.jsx)(A, {}),
+        [C.S9g.GUILD_SETTINGS]: () => (0, r.jsx)(x, {}),
         [C.S9g.COLLECTIBLES_SHOP]: () => (0, r.jsx)(b, {})
     },
     Z = 'SHOWN',
@@ -95,12 +95,12 @@ class O extends (i = l.PureComponent) {
     animateIn(e) {
         c.ZP.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
-        o.Z.parallel([
-            o.Z.spring(t, {
+        s.Z.parallel([
+            s.Z.spring(t, {
                 toValue: 1,
                 ...y
             }),
-            o.Z.spring(n, {
+            s.Z.spring(n, {
                 toValue: 1,
                 ...y
             })
@@ -110,12 +110,12 @@ class O extends (i = l.PureComponent) {
         c.ZP.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
         I.S.dispatch(C.CkL.LAYER_POP_START),
-            o.Z.parallel([
-                o.Z.spring(t, {
+            s.Z.parallel([
+                s.Z.spring(t, {
                     toValue: 0,
                     ...y
                 }),
-                o.Z.spring(n, {
+                s.Z.spring(n, {
                     toValue: 1.1,
                     ...y
                 })
@@ -126,12 +126,12 @@ class O extends (i = l.PureComponent) {
     animateUnder() {
         c.ZP.Emitter.pause(500);
         let { opacity: e, scale: t } = this.state;
-        o.Z.parallel([
-            o.Z.spring(e, {
+        s.Z.parallel([
+            s.Z.spring(e, {
                 toValue: 0,
                 ...y
             }),
-            o.Z.spring(t, {
+            s.Z.spring(t, {
                 toValue: 0.93,
                 ...y
             })
@@ -144,10 +144,10 @@ class O extends (i = l.PureComponent) {
         let { animating: e } = this.state,
             { mode: t, children: n, baseLayer: i, ...l } = this.props,
             a = e || t === L ? this.getAnimatedStyle() : null,
-            c = (0, r.jsx)(o.Z.div, {
+            c = (0, r.jsx)(s.Z.div, {
                 ref: (e) => (this.containerRef.current = null != e ? e.refs.node : void 0),
                 'aria-hidden': t === L,
-                className: s()(v.layer, {
+                className: o()(v.layer, {
                     [v.baseLayer]: i,
                     [v.animating]: e,
                     'stop-animations': t === L
@@ -172,19 +172,19 @@ class O extends (i = l.PureComponent) {
         };
     }
     constructor(e) {
-        super(e), N(this, 'containerRef', l.createRef());
+        super(e), S(this, 'containerRef', l.createRef());
         let t = 1,
             n = 1;
         e.mode === L && ((t = 0.93), (n = 0)),
             (this.state = {
                 animating: !1,
-                scale: new o.Z.Value(t),
-                opacity: new o.Z.Value(n),
+                scale: new s.Z.Value(t),
+                opacity: new s.Z.Value(n),
                 mode: e.mode
             });
     }
 }
-N(O, 'defaultProps', { baseLayer: !1 }), N(O, 'contextType', u.AccessibilityPreferencesContext);
+S(O, 'defaultProps', { baseLayer: !1 }), S(O, 'contextType', u.AccessibilityPreferencesContext);
 class R extends l.PureComponent {
     componentDidMount() {
         I.S.subscribe(C.CkL.LAYER_POP_ESCAPE_KEY, h.xf);
@@ -215,7 +215,7 @@ class R extends l.PureComponent {
     renderComponent(e, t, n) {
         let i;
         return (
-            (i = 'string' == typeof e ? x[e]() : (0, r.jsx)(e, {})),
+            (i = 'string' == typeof e ? A[e]() : (0, r.jsx)(e, {})),
             (0, r.jsxs)(
                 O,
                 {
@@ -229,7 +229,7 @@ class R extends l.PureComponent {
     renderArtisanalHack() {
         return (0, r.jsx)(u.ThemeProvider, {
             theme: this.props.sidebarTheme,
-            children: (e) => (0, r.jsx)('div', { className: s()(v.bg, e) })
+            children: (e) => (0, r.jsx)('div', { className: o()(v.bg, e) })
         });
     }
     render() {
@@ -238,7 +238,7 @@ class R extends l.PureComponent {
                 this.renderArtisanalHack(),
                 (0, r.jsx)(d.W, {
                     component: 'div',
-                    className: s()(v.layers, this.props.className),
+                    className: o()(v.layers, this.props.className),
                     children: this.renderLayers()
                 })
             ]

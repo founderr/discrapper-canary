@@ -1,6 +1,6 @@
 n.d(t, {
     __: function () {
-        return w;
+        return y;
     },
     dm: function () {
         return r;
@@ -39,7 +39,7 @@ var i,
     M = n(377679),
     O = n(825087);
 ((i = r || (r = {})).NEW_APP_STYLES = 'newAppStyles'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.SERVER_PROFILES = 'serverProfiles'), (i.SHOW_YOUR_STYLE = 'showYourStyle'), (i.YOUR_SPACE = 'yourSpace'), (i.EMOJIS = 'emojis'), (i.NO_LIMITS = 'noLimits');
-let w = () => {
+let y = () => {
     let e = (0, c.rO)();
     return {
         emojis: {

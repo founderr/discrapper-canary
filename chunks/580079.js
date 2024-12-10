@@ -3,8 +3,8 @@ var i,
     r,
     l,
     a,
-    s = n(392711),
-    o = n.n(s),
+    o = n(392711),
+    s = n.n(o),
     c = n(442837),
     d = n(570140),
     u = n(592125);
@@ -19,11 +19,11 @@ function E(e) {
     let t = g[e];
     if (null == t) return;
     let n = h.default.fromTimestamp(Date.now() - 900000),
-        i = o().findIndex(t, (e) => h.default.compare(e.id, n) > 0);
+        i = s().findIndex(t, (e) => h.default.compare(e.id, n) > 0);
     if (-1 === i) g[e] = [];
     else {
         let n = Math.max(i, t.length - 26);
-        g[e] = o().slice(t, n);
+        g[e] = s().slice(t, n);
     }
     f[e] = Date.now();
 }
@@ -75,7 +75,7 @@ class v extends (i = c.ZP.Store) {
                 var t;
                 E(e), (null === (t = g[e]) || void 0 === t ? void 0 : t.length) === 0 && delete g[e];
             });
-            let r = o()
+            let r = s()
                 .chain(Array.from(i))
                 .filter((e) => e in g)
                 .sortBy((e) => {
@@ -91,9 +91,9 @@ class v extends (i = c.ZP.Store) {
             if (r || l) return !1;
             let a = u.Z.getChannel(n);
             if (null == a) return !1;
-            let s = a.guild_id;
-            if (null == s || null == p[s]) return !1;
-            I(s, n, i.id, null === (t = i.author) || void 0 === t ? void 0 : t.id);
+            let o = a.guild_id;
+            if (null == o || null == p[o]) return !1;
+            I(o, n, i.id, null === (t = i.author) || void 0 === t ? void 0 : t.id);
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e;

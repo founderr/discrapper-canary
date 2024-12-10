@@ -2,8 +2,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    s = n(442837),
-    o = n(481060),
+    o = n(442837),
+    s = n(481060),
     c = n(782568),
     d = n(326135),
     u = n(299206),
@@ -37,88 +37,88 @@ t.Z = function (e) {
         ),
         C = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(g.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e)),
         v = r.useCallback(() => {
-            (0, m.JG)(C(n.id)), (0, o.showToast)((0, o.createToast)(f.intl.string(f.t['L/PwZW']), o.ToastType.SUCCESS));
+            (0, m.JG)(C(n.id)), (0, s.showToast)((0, s.createToast)(f.intl.string(f.t['L/PwZW']), s.ToastType.SUCCESS));
         }, [n.id]),
-        N = (0, s.e7)([h.default], () => h.default.locale),
-        S = r.useCallback(() => {
+        S = (0, o.e7)([h.default], () => h.default.locale),
+        N = r.useCallback(() => {
             null != n &&
                 (0, c.Z)(
                     (0, d.G)({
                         id: n.id,
                         name: n.name,
-                        locale: N
+                        locale: S
                     })
                 );
-        }, [N, n]),
+        }, [S, n]),
         T = (0, u.Z)({
             id: null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : '',
             label: f.intl.string(f.t['FfCL+/']),
-            onSuccess: () => (0, o.showToast)((0, o.createToast)(f.intl.string(f.t.eNjAam), o.ToastType.SUCCESS))
+            onSuccess: () => (0, s.showToast)((0, s.createToast)(f.intl.string(f.t.eNjAam), s.ToastType.SUCCESS))
         }),
         b = r.useCallback(
             (e) =>
-                (0, i.jsxs)(o.Menu, {
+                (0, i.jsxs)(s.Menu, {
                     navId: 'application-directory-profile',
                     'aria-label': f.intl.string(f.t['/7I4/P']),
                     onClose: e,
                     onSelect: void 0,
                     children: [
-                        (0, i.jsx)(o.MenuGroup, {
-                            children: (0, i.jsx)(o.MenuItem, {
+                        (0, i.jsx)(s.MenuGroup, {
+                            children: (0, i.jsx)(s.MenuItem, {
                                 id: 'report',
                                 label: f.intl.string(f.t.NgA5vr),
                                 color: 'danger',
-                                action: S
+                                action: N
                             })
                         }),
-                        null != T ? (0, i.jsx)(o.MenuGroup, { children: T }) : null
+                        null != T ? (0, i.jsx)(s.MenuGroup, { children: T }) : null
                     ]
                 }),
-            [T, S]
+            [T, N]
         );
     return (0, i.jsxs)('div', {
         className: _.actionContainer,
         children: [
-            (0, i.jsx)(o.Button, {
-                size: 'sm' === l ? o.Button.Sizes.SMALL : o.Button.Sizes.MEDIUM,
-                color: o.Button.Colors.BRAND,
+            (0, i.jsx)(s.Button, {
+                size: 'sm' === l ? s.Button.Sizes.SMALL : s.Button.Sizes.MEDIUM,
+                color: s.Button.Colors.BRAND,
                 onClick: E,
                 disabled: !I,
                 children: f.intl.string(f.t.NgXl3N)
             }),
             m.wS
-                ? (0, i.jsx)(o.Button, {
-                      look: o.Button.Looks.FILLED,
-                      size: o.Button.Sizes.ICON,
-                      color: o.Button.Colors.PRIMARY,
+                ? (0, i.jsx)(s.Button, {
+                      look: s.Button.Looks.FILLED,
+                      size: s.Button.Sizes.ICON,
+                      color: s.Button.Colors.PRIMARY,
                       className: a()(_.iconButton, { [_.small]: 'sm' === l }),
                       innerClassName: _.innerIconButton,
                       'aria-label': f.intl.string(f.t.z4sP5O),
                       onClick: v,
-                      children: (0, i.jsx)(o.LinkIcon, {
+                      children: (0, i.jsx)(s.LinkIcon, {
                           size: 'xs',
                           color: 'currentColor'
                       })
                   })
                 : null,
-            (0, i.jsx)(o.Popout, {
+            (0, i.jsx)(s.Popout, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return b(t);
                 },
                 position: 'left',
                 align: 'top',
-                animation: o.Popout.Animation.NONE,
+                animation: s.Popout.Animation.NONE,
                 children: (e) =>
-                    (0, i.jsx)(o.Button, {
-                        look: o.Button.Looks.FILLED,
-                        size: o.Button.Sizes.ICON,
-                        color: o.Button.Colors.PRIMARY,
+                    (0, i.jsx)(s.Button, {
+                        look: s.Button.Looks.FILLED,
+                        size: s.Button.Sizes.ICON,
+                        color: s.Button.Colors.PRIMARY,
                         className: a()(_.iconButton, { [_.small]: 'sm' === l }),
                         innerClassName: _.innerIconButton,
                         'aria-label': f.intl.string(f.t.UKOtz8),
                         ...e,
-                        children: (0, i.jsx)(o.MoreHorizontalIcon, {
+                        children: (0, i.jsx)(s.MoreHorizontalIcon, {
                             size: 'xs',
                             color: 'currentColor'
                         })

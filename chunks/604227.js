@@ -19,13 +19,13 @@ var s = n(525654),
 function m() {
     var e, t, n, s, m, h;
     let g = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        p = '351845',
-        x = ((e = 'ef2e142d8deba6371a75d0f854c88cff2018b9f6'), e.substring(0, 7)),
+        p = '351894',
+        x = ((e = '26c954a959f45cc1239776ef46427ef0494c23d1'), e.substring(0, 7)),
         S = null === a.Z || void 0 === a.Z ? void 0 : a.Z.remoteApp.getVersion(),
         T = null === a.Z || void 0 === a.Z ? void 0 : null === (t = (n = a.Z.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(n),
         E = null === a.Z || void 0 === a.Z ? void 0 : null === (s = (m = a.Z.remoteApp).getAppArch) || void 0 === s ? void 0 : s.call(m),
-        _ = null === (h = o.C.getCurrentBuildOverride().overrides) || void 0 === h ? void 0 : h.discord_web,
-        C = (function () {
+        C = null === (h = o.C.getCurrentBuildOverride().overrides) || void 0 === h ? void 0 : h.discord_web,
+        _ = (function () {
             var e;
             let t = null === r() || void 0 === r() ? void 0 : null === (e = r().os) || void 0 === e ? void 0 : e.toString();
             if (null == t || null == a.Z) return null;
@@ -33,13 +33,13 @@ function m() {
                 [i, s, l] = n.split('.').map((e) => parseInt(e, 10));
             return t.includes('Windows 10') && void 0 !== l && l >= 22000 && (t = t.replace('Windows 10', 'Windows 11')), t.includes('OS X 10.15.7') && void 0 !== i && i >= 20 && (t = 'macOS '.concat(i - 9)), ''.concat(t, ' (').concat(n, ')');
         })(),
-        I = [g, p, '('.concat(x, ')')];
+        f = [g, p, '('.concat(x, ')')];
     return (
-        null != S && (I.push('Host '.concat(S)), null != E && I.push(E.toLowerCase()), null != T && I.push('('.concat(T, ')'))),
-        I.push('Build Override: '.concat(null != _ ? _.id : 'N/A')),
-        null != C && I.push(C),
+        null != S && (f.push('Host '.concat(S)), null != E && f.push(E.toLowerCase()), null != T && f.push('('.concat(T, ')'))),
+        f.push('Build Override: '.concat(null != C ? C.id : 'N/A')),
+        null != _ && f.push(_),
         (0, i.jsx)(c.Z, {
-            copyValue: I.join(' '),
+            copyValue: f.join(' '),
             text: d.intl.string(d.t['9Al4QU']),
             'aria-label': !1,
             children: (e) =>
@@ -96,13 +96,13 @@ function m() {
                                       ]
                                   })
                                 : null,
-                            null != C
+                            null != _
                                 ? (0, i.jsx)(l.Text, {
                                       tag: 'span',
                                       className: u.line,
                                       variant: 'text-xs/normal',
                                       color: 'text-muted',
-                                      children: C
+                                      children: _
                                   })
                                 : null
                         ]

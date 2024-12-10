@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     l = n(622535),
     a = n(481060),
-    s = n(783097),
-    o = n(768581),
+    o = n(783097),
+    s = n(768581),
     c = n(956965),
     d = n(548514),
     u = n(388032),
@@ -14,7 +14,7 @@ t.Z = function (e) {
     let { application: t, onButtonsVisibilityChange: n } = e,
         p = r.useMemo(
             () =>
-                o.ZP.getApplicationIconURL({
+                s.ZP.getApplicationIconURL({
                     id: t.id,
                     icon: t.icon,
                     size: 96
@@ -23,7 +23,7 @@ t.Z = function (e) {
         ),
         g = r.useMemo(() => {
             let e = [];
-            return (0, s.vJ)(t) && e.push(u.intl.string(u.t.LO4f0N)), (0, s.Cb)(t) && (0 !== e.length && e.push('\u2022'), e.push(u.intl.string(u.t['8z5B2d']))), (0, s.Hu)(t) && (0 !== e.length && e.push('\u2022'), e.push(u.intl.string(u.t['5khEk5']))), e;
+            return (0, o.vJ)(t) && e.push(u.intl.string(u.t.LO4f0N)), (0, o.Cb)(t) && (0 !== e.length && e.push('\u2022'), e.push(u.intl.string(u.t['8z5B2d']))), (0, o.Hu)(t) && (0 !== e.length && e.push('\u2022'), e.push(u.intl.string(u.t['5khEk5']))), e;
         }, [t]);
     return (0, i.jsxs)(i.Fragment, {
         children: [

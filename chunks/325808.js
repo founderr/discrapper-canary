@@ -20,10 +20,10 @@ var i = n(200651),
     S = n(962100),
     T = n(981631),
     E = n(388032),
-    _ = n(973936),
-    C = n(232186);
-let I = !x.isPlatformEmbedded,
-    f = (0, g.hQ)();
+    C = n(973936),
+    _ = n(232186);
+let f = !x.isPlatformEmbedded,
+    I = (0, g.hQ)();
 function N(e) {
     return e >= 1000 ? ((e /= 1000), ''.concat(e.toFixed(2), 's')) : ''.concat(e.toFixed(0), ' ms');
 }
@@ -36,16 +36,16 @@ function A(e) {
             x.isPlatformEmbedded || n !== T.pM4.PUSH_TO_TALK
                 ? (0, i.jsx)(o.FormText, {
                       type: o.FormText.Types.DESCRIPTION,
-                      className: l()(_.pttToolsMessage, C.marginBottom8),
+                      className: l()(C.pttToolsMessage, _.marginBottom8),
                       children: E.intl.format(E.t.HVvn5e, { onClick: () => d.Z.setSection(T.oAB.KEYBINDS) })
                   })
                 : (0, i.jsx)(o.FormText, {
                       type: o.FormText.Types.DESCRIPTION,
-                      className: l()(_.pttToolsMessage, _.pttToolsWarning, C.marginBottom8),
+                      className: l()(C.pttToolsMessage, C.pttToolsWarning, _.marginBottom8),
                       children: E.intl.format(E.t.zvMPOT, { onDownloadClick: () => (0, S.y)('Help Text PTT') })
                   })),
         (0, i.jsxs)('div', {
-            className: _.pttTools,
+            className: C.pttTools,
             children: [
                 (0, i.jsxs)(h.Z, {
                     children: [
@@ -64,9 +64,9 @@ function A(e) {
                             children: (0, i.jsxs)(o.FormItem, {
                                 children: [
                                     (0, i.jsx)(o.FormTitle, {
-                                        id: f,
+                                        id: I,
                                         tag: o.FormTitleTags.H5,
-                                        className: C.marginBottom8,
+                                        className: _.marginBottom8,
                                         children: E.intl.string(E.t.y0ShVl)
                                     }),
                                     (0, i.jsx)(o.Slider, {
@@ -74,7 +74,7 @@ function A(e) {
                                         onValueChange: (e) => c.Z.setMode(n, { delay: e }),
                                         onValueRender: N,
                                         maxValue: T.qhL,
-                                        'aria-labelledby': f
+                                        'aria-labelledby': I
                                     })
                                 ]
                             })
@@ -96,14 +96,14 @@ function b() {
             },
             {
                 value: T.pM4.PUSH_TO_TALK,
-                name: I ? E.intl.string(E.t['1AINrK']) : E.intl.string(E.t.Q8gkVF)
+                name: f ? E.intl.string(E.t['1AINrK']) : E.intl.string(E.t.Q8gkVF)
             }
         ],
         l = s.useCallback(
             (t) => {
                 let { value: s } = t;
                 s === T.pM4.PUSH_TO_TALK &&
-                    I &&
+                    f &&
                     (0, o.openModalLazy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
                         return (t) =>
@@ -124,7 +124,7 @@ function b() {
         children: [
             (0, i.jsx)(o.FormItem, {
                 title: E.intl.string(E.t['pS+K2N']),
-                className: C.marginBottom20,
+                className: _.marginBottom20,
                 children: (0, i.jsx)(o.RadioGroup, {
                     onChange: l,
                     options: r,

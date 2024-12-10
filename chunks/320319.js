@@ -36,7 +36,7 @@ let P = {
         let { name: t, canReveal: n = !0, dismissibleContentType: a, forceShadow: b, cardType: T, confettiCanvas: N } = e,
             M = null == e ? void 0 : e.onCtaClick,
             O = (0, c.e7)([g.Z], () => g.Z.useReducedMotion),
-            [w, y] = r.useState(!1),
+            [y, w] = r.useState(!1),
             [k, L] = r.useState(!1),
             U = (0, h.yQ)(),
             D = (0, h.IB)(),
@@ -60,7 +60,7 @@ let P = {
             r.useEffect(() => {
                 K === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && H && (0, f.EW)(K);
             }, [K, H]);
-        let { easterEggLevel: J, isEasterEggTriggered: q, onHover: X, onUnhover: $ } = (0, x.Z)(5),
+        let { easterEggLevel: q, isEasterEggTriggered: J, onHover: X, onUnhover: $ } = (0, x.Z)(5),
             ee = (0, l.debounce)(() => {
                 _.default.track(S.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
                     card_type: (0, l.snakeCase)(t),
@@ -88,8 +88,8 @@ let P = {
         };
         let ei = K !== a || null == a || k || a === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
         return (r.useEffect(() => {
-            O && w && (L(!0), _.default.track(S.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != a && Q(R.L.TAKE_ACTION));
-        }, [O, w, a, t, Q]),
+            O && y && (L(!0), _.default.track(S.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != a && Q(R.L.TAKE_ACTION));
+        }, [O, y, a, t, Q]),
         (0, m.Z)(
             {
                 type: o.ImpressionTypes.VIEW,
@@ -119,9 +119,9 @@ let P = {
                       onBlur: $,
                       children: (0, i.jsxs)('div', {
                           className: s()(j.flipCard, {
-                              [j.partialFlipCard]: !q,
-                              [j.ultraFlipCard]: q,
-                              [j.rotateCard]: q && 3 === J,
+                              [j.partialFlipCard]: !J,
+                              [j.ultraFlipCard]: J,
+                              [j.rotateCard]: J && 3 === q,
                               [j.reducedMotion]: O
                           }),
                           children: [
@@ -176,14 +176,14 @@ let P = {
                   : (0, i.jsx)('div', {
                         className: s()(j.flipCardContainer, { [j.forceShadow]: b }),
                         children: (0, i.jsxs)(u.Clickable, {
-                            onClick: () => y(!0),
+                            onClick: () => w(!0),
                             className: s()(j.flipCard, j.clickable, {
-                                [j.flipped]: w,
-                                [j.partialFlipCard]: !k && !w,
+                                [j.flipped]: y,
+                                [j.partialFlipCard]: !k && !y,
                                 [j.reducedMotion]: O
                             }),
                             onTransitionEnd: (e) => {
-                                if (!!w && 'transform' === e.propertyName && !!e.target.classList.contains(j.flipCard)) L(!0), _.default.track(S.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != a && Q(R.L.TAKE_ACTION);
+                                if (!!y && 'transform' === e.propertyName && !!e.target.classList.contains(j.flipCard)) L(!0), _.default.track(S.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != a && Q(R.L.TAKE_ACTION);
                             },
                             children: [
                                 (0, i.jsx)('div', {
@@ -208,7 +208,7 @@ let P = {
                                 (0, i.jsx)('div', {
                                     className: j.flipCardButtonContainer,
                                     children: (0, i.jsx)(u.Button, {
-                                        onClick: () => y(!0),
+                                        onClick: () => w(!0),
                                         children: A.intl.string(A.t.dcztdX)
                                     })
                                 })

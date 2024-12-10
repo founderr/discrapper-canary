@@ -31,12 +31,12 @@ var i = n(200651),
     B = n(104494),
     M = n(639119),
     O = n(2359),
-    w = n(132547),
-    y = n(474936),
+    y = n(132547),
+    w = n(474936),
     k = n(981631),
     L = n(579521);
 t.Z = function (e) {
-    let { entrypoint: t = y.EZ.UserSettings } = e;
+    let { entrypoint: t = w.EZ.UserSettings } = e;
     (0, C.z)(x.X);
     let n = (0, h.Q)(),
         { sourceAnalyticsLocations: a, analyticsLocations: U } = (0, _.ZP)(p.Z.PREMIUM_MARKETING),
@@ -48,9 +48,9 @@ t.Z = function (e) {
         W = (0, E.V)(),
         [z, Y] = r.useState(!0),
         K = r.useRef(0),
-        Q = (0, R.M5)(H, y.p9.TIER_2),
-        J = (0, Z.n)(),
-        q = null == J ? void 0 : J.countryCode,
+        Q = (0, R.M5)(H, w.p9.TIER_2),
+        q = (0, Z.n)(),
+        J = null == q ? void 0 : q.countryCode,
         { enabled: X } = (0, P.Z)(),
         $ = (0, l.e7)([v.Z], () => (null != H ? v.Z.getUserProfile(H.id) : null)),
         ee = (0, l.e7)([A.Z], () => A.Z.hasFetched);
@@ -61,9 +61,9 @@ t.Z = function (e) {
         r.useEffect(() => {
             c.Z.wait(async () => {
                 let e = Date.now();
-                await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, g.Y2)(q, null, k.JjL.DISCOVERY), null != V && X && Q && (0, m.In)(V)]), (K.current = Date.now() - e), Y(!1);
+                await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, g.Y2)(J, null, k.JjL.DISCOVERY), null != V && X && Q && (0, m.In)(V)]), (K.current = Date.now() - e), Y(!1);
             });
-        }, [q, V, X, Q]),
+        }, [J, V, X, Q]),
         r.useEffect(() => {
             n && (null != G || null != F) && (0, j.a)(G, F);
         }, [n, G, F]),
@@ -78,7 +78,7 @@ t.Z = function (e) {
     )
         return (0, i.jsx)(f.Z, {});
     if (n) return (0, i.jsx)(b.c8, {});
-    if (t === y.EZ.ApplicationStoreHome && Q)
+    if (t === w.EZ.ApplicationStoreHome && Q)
         return X && null == $
             ? (0, i.jsx)('div', {
                   className: s()(L.container, L.loading),
@@ -86,7 +86,7 @@ t.Z = function (e) {
               })
             : (0, i.jsx)(_.Gt, {
                   value: U,
-                  children: (0, i.jsx)(w.Z, {})
+                  children: (0, i.jsx)(y.Z, {})
               });
     return D && W && !z
         ? (0, i.jsx)(_.Gt, {

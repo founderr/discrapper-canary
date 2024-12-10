@@ -92,8 +92,8 @@ function v(e) {
                 j();
         },
         I = (null === (t = x.GP[v.planIdFromItems]) || void 0 === t ? void 0 : t.premiumType) === x.p9.TIER_0,
-        w = null === (n = v.metadata) || void 0 === n ? void 0 : n.ended_at,
-        E = null != w ? new Date(w).toISOString().substring(0, 10) : '';
+        E = null === (n = v.metadata) || void 0 === n ? void 0 : n.ended_at,
+        w = null != E ? new Date(E).toISOString().substring(0, 10) : '';
     return (0, r.jsx)(r.Fragment, {
         children: (0, r.jsxs)('div', {
             className: i()(p.card, I ? p.gradientWrapperTier0 : p.gradientWrapperTier2),
@@ -217,7 +217,7 @@ function v(e) {
                                         className: f.formSection,
                                         children: (0, r.jsx)('input', {
                                             type: 'date',
-                                            value: E,
+                                            value: w,
                                             onChange: (e) => k({ endedAt: e.target.value })
                                         })
                                     })

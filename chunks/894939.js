@@ -21,10 +21,10 @@ var i = n(200651),
     S = n(63063),
     T = n(581883),
     E = n(918257),
-    _ = n(970813),
-    C = n(726985),
-    I = n(981631),
-    f = n(710111),
+    C = n(970813),
+    _ = n(726985),
+    f = n(981631),
+    I = n(710111),
     N = n(388032),
     A = n(518782),
     b = n(232186);
@@ -32,12 +32,12 @@ function v(e) {
     return (0, r.e7)([h.Z], () => {
         if (null == e) return null;
         let { guildId: t, soundId: n } = e;
-        return h.Z.getSound(t === f.hY ? f.X8 : t, n);
+        return h.Z.getSound(t === I.hY ? I.X8 : t, n);
     });
 }
 function j() {
     let { analyticsLocations: e } = (0, o.ZP)(),
-        [t, n] = s.useState(f.hY),
+        [t, n] = s.useState(I.hY),
         a = (0, p.tT)(t),
         T = v(a),
         j = (0, r.e7)([h.Z], () => h.Z.hasFetchedAllSounds()),
@@ -60,11 +60,11 @@ function j() {
         title: N.intl.string(N.t.ABjMWF),
         children: [
             (0, i.jsxs)(u.F, {
-                setting: C.s6.VOICE_AND_VIDEO_SOUNDBOARD,
-                children: [(0, i.jsx)(E.Z, {}), (0, i.jsx)(_.Z, {})]
+                setting: _.s6.VOICE_AND_VIDEO_SOUNDBOARD,
+                children: [(0, i.jsx)(E.Z, {}), (0, i.jsx)(C.Z, {})]
             }),
             (0, i.jsxs)(u.F, {
-                setting: C.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
+                setting: _.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
                 children: [
                     (0, i.jsx)(l.FormDivider, { className: A.callSoundsDivider }),
                     (0, i.jsx)(l.Heading, {
@@ -76,16 +76,16 @@ function j() {
                     (0, i.jsx)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: N.intl.format(N.t.u9RWmp, { helpdeskArticle: S.Z.getArticleURL(I.BhN.SOUNDBOARD) })
+                        children: N.intl.format(N.t.u9RWmp, { helpdeskArticle: S.Z.getArticleURL(f.BhN.SOUNDBOARD) })
                     }),
                     (0, i.jsx)(c.Z, {
                         guildId: t,
                         className: A.guildSelector,
                         globalOption: {
                             label: N.intl.string(N.t.CpEUPz),
-                            value: f.hY
+                            value: I.hY
                         },
-                        onChange: (e) => n(null == e ? f.hY : e.id),
+                        onChange: (e) => n(null == e ? I.hY : e.id),
                         renderOptionSuffix: D,
                         hideDivider: !0
                     }),

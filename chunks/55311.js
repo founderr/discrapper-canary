@@ -1,21 +1,21 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(481060),
+var r = n(481060),
     l = n(846027),
     a = n(468026),
-    u = n(388032);
-function o(e, t) {
+    o = n(388032);
+function s(e, t) {
     if (e) {
-        (0, i.openModal)((e) =>
-            (0, r.jsx)(a.default, {
+        (0, r.openModal)((e) =>
+            (0, i.jsx)(a.default, {
                 ...e,
-                title: u.intl.string(u.t.QZ7WSU),
-                body: u.intl.string(u.t.Tl9JpK)
+                title: o.intl.string(o.t.QZ7WSU),
+                body: o.intl.string(o.t.Tl9JpK)
             })
         );
         return;

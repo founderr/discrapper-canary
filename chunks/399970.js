@@ -32,11 +32,11 @@ function E(e) {
             authorizationError: g.Z.error,
             authorizing: g.Z.isFetchingAuthorization
         })),
-        [_, C] = l.useState(null != i ? i : ''),
-        [I, f] = l.useState('8080'),
+        [C, _] = l.useState(null != i ? i : ''),
+        [f, I] = l.useState('8080'),
         [N, A] = l.useState('localhost'),
         b = (0, h.Dt)(),
-        v = T.test(_);
+        v = T.test(C);
     async function j() {
         d.q$();
         let e = (function (e, t, n) {
@@ -47,14 +47,14 @@ function E(e) {
                 case 'proxy':
                     return (0, u.Z)(n);
             }
-        })(N, I, _);
-        null != (await d.Wt(_, e)) && t();
+        })(N, f, C);
+        null != (await d.Wt(C, e)) && t();
     }
     l.useEffect(() => () => c.Z.wait(() => d.q$()), []);
-    let O = null != i && i === _,
+    let O = null != i && i === C,
         R = O
             ? function () {
-                  d.mc(), C(''), A(null);
+                  d.mc(), _(''), A(null);
               }
             : j;
     return (0, r.jsxs)(o.ModalRoot, {
@@ -101,11 +101,11 @@ function E(e) {
                                     title: p.intl.string(p.t.P6TzgI),
                                     required: !0,
                                     children: (0, r.jsx)(o.TextInput, {
-                                        value: _,
+                                        value: C,
                                         maxLength: 19,
                                         error: v ? null : p.intl.string(p.t.gPNgKC),
                                         onChange: function (e) {
-                                            C(e);
+                                            _(e);
                                         },
                                         disabled: E
                                     })
@@ -114,7 +114,7 @@ function E(e) {
                                     className: x.inputWrapper,
                                     title: p.intl.string(p.t['/GTqXF']),
                                     children: (0, r.jsx)(o.SingleSelect, {
-                                        isDisabled: !v || '' === _,
+                                        isDisabled: !v || '' === C,
                                         value: N,
                                         options: [
                                             {
@@ -141,16 +141,16 @@ function E(e) {
                                           title: p.intl.string(p.t.fF4zxs),
                                           required: !0,
                                           children: (0, r.jsx)(o.TextInput, {
-                                              value: I,
+                                              value: f,
                                               maxLength: 5,
-                                              onChange: (e) => f(e),
+                                              onChange: (e) => I(e),
                                               disabled: E
                                           })
                                       }),
                                 (0, r.jsx)(o.Button, {
                                     submitting: E,
                                     type: 'submit',
-                                    disabled: !v || 0 === _.length || ('localhost' === N && 0 === I.length),
+                                    disabled: !v || 0 === C.length || ('localhost' === N && 0 === f.length),
                                     color: O ? o.Button.Colors.RED : o.Button.Colors.GREEN,
                                     children: O ? p.intl.string(p.t.d6TR3N) : p.intl.string(p.t.qwuK5O)
                                 })

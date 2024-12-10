@@ -1,8 +1,8 @@
 let i, r, l;
 n(47120);
 var a,
-    s,
     o,
+    s,
     c,
     d = n(442837),
     u = n(570140);
@@ -20,14 +20,14 @@ class m extends (a = d.ZP.Store) {
     }
 }
 (c = 'ApplicationStatisticsStore'),
-    (o = 'displayName') in (s = m)
-        ? Object.defineProperty(s, o, {
+    (s = 'displayName') in (o = m)
+        ? Object.defineProperty(o, s, {
               value: c,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[o] = c),
+        : (o[s] = c),
     (t.Z = new m(u.Z, {
         APPLICATION_ACTIVITY_STATISTICS_FETCH_START: function (e) {
             let { applicationId: t } = e;

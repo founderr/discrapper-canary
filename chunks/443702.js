@@ -20,10 +20,10 @@ var i = n(200651),
     S = n(246946),
     T = n(594174),
     E = n(351402),
-    _ = n(853872),
-    C = n(78839),
-    I = n(706454),
-    f = n(726985),
+    C = n(853872),
+    _ = n(78839),
+    f = n(706454),
+    I = n(726985),
     N = n(981631),
     A = n(388032),
     b = n(729061);
@@ -49,7 +49,7 @@ class v extends s.PureComponent {
                                 children: (0, i.jsx)(o.Spinner, {})
                             })
                           : (0, i.jsx)(x.F, {
-                                setting: f.s6.BILLING_PAYMENT_METHODS,
+                                setting: I.s6.BILLING_PAYMENT_METHODS,
                                 children: (0, i.jsx)(g.Z, {
                                     paymentSources: n,
                                     defaultPaymentSourceId: s,
@@ -60,7 +60,7 @@ class v extends s.PureComponent {
                                 })
                             }),
                       (0, i.jsx)(x.F, {
-                          setting: f.s6.BILLING_TRANSACTION_HISTORY,
+                          setting: I.s6.BILLING_TRANSACTION_HISTORY,
                           children: (0, i.jsx)('div', {
                               className: b.paymentHistory,
                               children: (0, i.jsxs)(o.HeadingLevel, {
@@ -82,19 +82,19 @@ class v extends s.PureComponent {
     }
 }
 function j() {
-    let e = (0, a.cj)([I.default, E.Z, _.Z, T.default, S.Z, C.ZP], () => {
-        let e = C.ZP.getPremiumTypeSubscription(),
+    let e = (0, a.cj)([f.default, E.Z, C.Z, T.default, S.Z, _.ZP], () => {
+        let e = _.ZP.getPremiumTypeSubscription(),
             t = T.default.getCurrentUser();
         return (
             l()(null != t, 'UserSettingsBilling: currentUser cannot be undefined'),
             {
-                locale: I.default.locale,
+                locale: f.default.locale,
                 hide: S.Z.enabled,
                 isClaimed: t.isClaimed(),
                 isVerified: t.verified,
                 premiumSubscription: e,
-                defaultPaymentSourceId: _.Z.defaultPaymentSourceId,
-                paymentSources: _.Z.paymentSources,
+                defaultPaymentSourceId: C.Z.defaultPaymentSourceId,
+                paymentSources: C.Z.paymentSources,
                 syncing: E.Z.isSyncing,
                 isRemovingPaymentSource: E.Z.isRemovingPaymentSource,
                 isUpdatingPaymentSource: E.Z.isUpdatingPaymentSource

@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    s = n(887003),
-    o = n(442837),
+    o = n(887003),
+    s = n(442837),
     c = n(780384),
     d = n(481060),
     u = n(393238),
@@ -18,13 +18,13 @@ var i = n(200651),
     I = n(113434),
     C = n(497505),
     v = n(475595),
-    N = n(352084),
-    S = n(685613),
+    S = n(352084),
+    N = n(685613),
     T = n(981631),
     b = n(388032),
-    A = n(625844);
+    x = n(625844);
 t.Z = (0, r.memo)(function (e) {
-    var t, n, l, x, Z;
+    var t, n, l, A, Z;
     let { quest: L } = e,
         [y, P] = (0, r.useState)(!1),
         [O, R] = (0, r.useState)(24),
@@ -32,17 +32,17 @@ t.Z = (0, r.memo)(function (e) {
         M = (0, r.useRef)(null),
         w = (0, r.useRef)(null),
         k = (0, r.useRef)(null),
-        U = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
+        U = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
         { ref: G, height: B = 0 } = (0, u.Z)(),
         H = (0, h.ZP)(),
         V = (0, I.B6)(null === (t = L.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
             month: 'numeric',
             day: 'numeric'
         }),
-        F = null !== (x = null === (n = L.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== x ? x : 0,
+        F = null !== (A = null === (n = L.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== A ? A : 0,
         z = L.config.rewards[F],
-        W = (null == z ? void 0 : z.type) === s.w.COLLECTIBLE,
-        Y = (null == z ? void 0 : z.type) === s.w.FRACTIONAL_PREMIUM,
+        W = (null == z ? void 0 : z.type) === o.w.COLLECTIBLE,
+        Y = (null == z ? void 0 : z.type) === o.w.FRACTIONAL_PREMIUM,
         { product: K } = (0, p.T)(W && null != z ? z.skuId : null),
         q = null == K ? void 0 : null === (l = K.items) || void 0 === l ? void 0 : l[0];
     (0, u.P)(M, (e) => {
@@ -83,13 +83,13 @@ t.Z = (0, r.memo)(function (e) {
                   onBlur: et,
                   onMouseEnter: ee,
                   onMouseLeave: et,
-                  className: a()(A.container, { [A.hovered]: y }),
+                  className: a()(x.container, { [x.hovered]: y }),
                   children: [
                       null != U &&
                           W &&
                           (0, i.jsx)('div', {
                               ref: k,
-                              className: A.decoWrapper,
+                              className: x.decoWrapper,
                               style: { top: O },
                               children: (0, i.jsx)(m.Z, {
                                   avatarDecorationOverride: q,
@@ -98,11 +98,11 @@ t.Z = (0, r.memo)(function (e) {
                               })
                           }),
                       Y
-                          ? (0, i.jsx)(N.Z, { className: A.image })
+                          ? (0, i.jsx)(S.Z, { className: x.image })
                           : J.isAnimated
                             ? (0, i.jsx)(i.Fragment, {
                                   children: (0, i.jsx)(g.Z, {
-                                      className: A.assetBlurred,
+                                      className: x.assetBlurred,
                                       autoPlay: !1,
                                       children: (0, i.jsx)('source', {
                                           src: J.url,
@@ -112,33 +112,33 @@ t.Z = (0, r.memo)(function (e) {
                                   })
                               })
                             : (0, i.jsx)('img', {
-                                  className: A.image,
+                                  className: x.image,
                                   src: J.url,
                                   alt: L.config.messages.questName,
                                   onError: () => en(J.url)
                               }),
                       (0, i.jsx)('div', {
-                          className: a()(A.overlay, {
-                              [A.darkThemeGradient]: X,
-                              [A.lightThemeGradient]: !X
+                          className: a()(x.overlay, {
+                              [x.darkThemeGradient]: X,
+                              [x.lightThemeGradient]: !X
                           })
                       }),
                       (0, i.jsx)('div', {
                           ref: w,
-                          className: A.logoContainer,
+                          className: x.logoContainer,
                           style: { transform: 'translateY(-'.concat($, 'px)') },
-                          children: (0, i.jsx)(S.ZP, {
-                              logotypeClassName: a()(A.logo, { [A.logoWithCosponsor]: Q }),
+                          children: (0, i.jsx)(N.ZP, {
+                              logotypeClassName: a()(x.logo, { [x.logoWithCosponsor]: Q }),
                               quest: L,
                               withGameTile: !1
                           })
                       }),
                       (0, i.jsxs)('div', {
                           ref: G,
-                          className: A.details,
+                          className: x.details,
                           children: [
                               (0, i.jsx)(d.Heading, {
-                                  className: A.title,
+                                  className: x.title,
                                   variant: 'heading-md/semibold',
                                   color: 'always-white',
                                   children: b.intl.format(b.t.EAYZAg, { questName: L.config.messages.questName })

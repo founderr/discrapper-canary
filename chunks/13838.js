@@ -3,8 +3,8 @@ var i = n(392711),
     r = n.n(i),
     l = n(243814),
     a = n(902704),
-    s = n(812206),
-    o = n(594190),
+    o = n(812206),
+    s = n(594190),
     c = n(199902),
     d = n(592125),
     u = n(271383),
@@ -18,12 +18,12 @@ var i = n(392711),
     I = n(238679),
     C = n(452426),
     v = n(295424),
-    N = n(277272),
-    S = n(863141),
+    S = n(277272),
+    N = n(863141),
     T = n(186901),
     b = n(981631);
-let A = (e) => (0, C.Z)(e).required().keys({ channel_id: e.string().required() });
-function x(e) {
+let x = (e) => (0, C.Z)(e).required().keys({ channel_id: e.string().required() });
+function A(e) {
     var t;
     let {
             args: { channel_id: n },
@@ -54,7 +54,7 @@ let y = {
                 let { prevState: i, dispatch: l } = e,
                     a = h.Z.getGuild(t);
                 if (null == a) return;
-                let s = {
+                let o = {
                     guild: {
                         id: a.id,
                         name: a.name,
@@ -62,7 +62,7 @@ let y = {
                     },
                     online: 0
                 };
-                return !r().isEqual(i, s) && l(s), s;
+                return !r().isEqual(i, o) && l(o), o;
             };
         }
     },
@@ -81,16 +81,16 @@ let y = {
                     l = d.Z.getChannel(t);
                 if (null == l) return;
                 let a = l.getGuildId(),
-                    s = Object.values(f.Z.getVoiceStatesForChannel(l.id));
+                    o = Object.values(f.Z.getVoiceStatesForChannel(l.id));
                 return (
                     n &&
                         r()
-                            .differenceBy(s, n, (e) => {
+                            .differenceBy(o, n, (e) => {
                                 let { userId: t } = e;
                                 return t;
                             })
                             .forEach((e) => i((0, E.aE)(a, l.id, e))),
-                    s
+                    o
                 );
             };
         }
@@ -110,15 +110,15 @@ let y = {
                     l = d.Z.getChannel(t);
                 if (null == l) return;
                 let a = l.getGuildId(),
-                    s = Object.values(f.Z.getVoiceStatesForChannel(l.id));
+                    o = Object.values(f.Z.getVoiceStatesForChannel(l.id));
                 return (
                     r()
-                        .differenceBy(n, s, (e) => {
+                        .differenceBy(n, o, (e) => {
                             let { userId: t } = e;
                             return t;
                         })
                         .forEach((e) => i((0, E.aE)(a, l.id, e))),
-                    s
+                    o
                 );
             };
         }
@@ -138,12 +138,12 @@ let y = {
                     l = d.Z.getChannel(t);
                 if (null == l) return;
                 let a = l.getGuildId(),
-                    s = Object.values(f.Z.getVoiceStatesForChannel(l.id)).map((e) => (0, E.aE)(a, l.id, e));
+                    o = Object.values(f.Z.getVoiceStatesForChannel(l.id)).map((e) => (0, E.aE)(a, l.id, e));
                 return (
                     r()
-                        .differenceWith(s, n, r().isEqual)
+                        .differenceWith(o, n, r().isEqual)
                         .forEach((e) => i(e)),
-                    s
+                    o
                 );
             };
         }
@@ -166,18 +166,18 @@ let y = {
     },
     [b.zMe.MESSAGE_CREATE]: {
         scope: l.x.RPC,
-        validation: A,
-        handler: x
+        validation: x,
+        handler: A
     },
     [b.zMe.MESSAGE_UPDATE]: {
         scope: l.x.RPC,
-        validation: A,
-        handler: x
+        validation: x,
+        handler: A
     },
     [b.zMe.MESSAGE_DELETE]: {
         scope: l.x.RPC,
-        validation: A,
-        handler: x
+        validation: x,
+        handler: A
     },
     [b.zMe.SPEAKING_START]: {
         scope: {
@@ -279,7 +279,7 @@ let y = {
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 i = { currentUser: g.default.getCurrentUser() };
-            return null != i.currentUser && (null == t || !(0, a.Z)(i, t)) && n((0, S.Z)(i.currentUser)), i;
+            return null != i.currentUser && (null == t || !(0, a.Z)(i, t)) && n((0, N.Z)(i.currentUser)), i;
         }
     },
     [b.zMe.CURRENT_GUILD_MEMBER_UPDATE]: {
@@ -293,7 +293,7 @@ let y = {
             return (e) => {
                 let { prevState: n, dispatch: i } = e,
                     r = { currentGuildMember: u.ZP.getSelfMember(t) };
-                return null != r.currentGuildMember && (null == n || !(0, a.Z)(r, n)) && i((0, N.Z)(r.currentGuildMember)), r;
+                return null != r.currentGuildMember && (null == n || !(0, a.Z)(r, n)) && i((0, S.Z)(r.currentGuildMember)), r;
             };
         }
     },
@@ -317,8 +317,8 @@ let y = {
             var t, n;
             let { prevState: i, dispatch: l } = e,
                 a = c.Z.getStreamerActiveStreamMetadata(),
-                d = (null == a ? void 0 : a.pid) != null ? o.ZP.getGameForPID(a.pid) : null,
-                u = (null == d ? void 0 : d.id) != null ? s.Z.getApplication(d.id) : null,
+                d = (null == a ? void 0 : a.pid) != null ? s.ZP.getGameForPID(a.pid) : null,
+                u = (null == d ? void 0 : d.id) != null ? o.Z.getApplication(d.id) : null,
                 h = null != u ? (0, v.Z)(u) : null,
                 m = null == a ? void 0 : a.sourceName,
                 p = {

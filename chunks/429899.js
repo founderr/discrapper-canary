@@ -3,19 +3,19 @@ var i = n(200651),
     r = n(192379),
     l = n(558381),
     a = n(613311);
-class s extends r.Component {
+class o extends r.Component {
     componentDidMount() {
         this.fetchStoreListing();
     }
     render() {
-        let { skuId: e, applicationId: t, slug: n, storeListingId: r, pageSize: l, location: s } = this.props;
+        let { skuId: e, applicationId: t, slug: n, storeListingId: r, pageSize: l, location: o } = this.props;
         return (0, i.jsx)(a.Z, {
             inputSkuId: e,
             applicationId: t,
             fetchStoreListing: this.fetchStoreListing,
             slug: n,
             storeListingId: r,
-            location: s,
+            location: o,
             pageSize: l
         });
     }
@@ -41,4 +41,4 @@ class s extends r.Component {
                 : (t[n] = i);
     }
 }
-t.Z = s;
+t.Z = o;

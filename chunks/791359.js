@@ -8,8 +8,8 @@ var i = n(200651),
     r = n(192379),
     l = n(392711),
     a = n.n(l),
-    s = n(954955),
-    o = n.n(s),
+    o = n(954955),
+    s = n.n(o),
     c = n(442837),
     d = n(481060),
     u = n(570140),
@@ -23,18 +23,18 @@ var i = n(200651),
     I = n(70956),
     C = n(225559),
     v = n(910436),
-    N = n(203028),
-    S = n(358924),
+    S = n(203028),
+    N = n(358924),
     T = n(292140),
     b = n(525296),
-    A = n(981631),
-    x = n(674563),
+    x = n(981631),
+    A = n(674563),
     Z = n(388032),
     L = n(721925);
 let y = 15 * I.Z.Millis.MINUTE,
     P = (0, b.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
-            s = (0, i.jsx)(N.Z, {
+            o = (0, i.jsx)(S.Z, {
                 party: t,
                 onUserContextMenu: n
             }),
@@ -52,10 +52,10 @@ let y = 15 * I.Z.Millis.MINUTE,
                 let e = m
                     .filter((e) => {
                         var t, n;
-                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === x.wW.GAME;
+                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === A.wW.GAME;
                     })
                     .map((e) => e.game.name);
-                E.default.track(A.rMx.NOW_PLAYING_CARD_HOVERED, {
+                E.default.track(x.rMx.NOW_PLAYING_CARD_HOVERED, {
                     num_users: g,
                     num_streams: f,
                     num_activities: _,
@@ -63,8 +63,8 @@ let y = 15 * I.Z.Millis.MINUTE,
                     games_detected: e
                 });
             }, [g, f, _, I, m]),
-            b = o()(C, y);
-        return null != s || null != c
+            b = s()(C, y);
+        return null != o || null != c
             ? (0, i.jsx)(d.Popout, {
                   position: 'left',
                   renderPopout: (e) => {
@@ -77,14 +77,14 @@ let y = 15 * I.Z.Millis.MINUTE,
                   spacing: 8,
                   children: (e, t) => {
                       let { isShown: n } = t;
-                      return (0, i.jsx)(S.Z, {
+                      return (0, i.jsx)(N.Z, {
                           ...e,
                           onMouseEnter: b,
                           'aria-haspopup': 'menu',
                           className: L.itemCard,
                           active: n,
                           children: (0, i.jsxs)('div', {
-                              children: [s, c]
+                              children: [o, c]
                           })
                       });
                   }
@@ -106,24 +106,24 @@ function R() {
             fetching: g.Z.getFetching(),
             currentUser: f.default.getCurrentUser()
         })),
-        s = (0, c.e7)([h.Z], () => h.Z.quests);
+        o = (0, c.e7)([h.Z], () => h.Z.quests);
     r.useEffect(() => (u.Z.wait(() => C.L()), () => u.Z.wait(() => C.v())), [null == a ? void 0 : a.id]),
         r.useEffect(() => {
             n && !l && O();
         }, [n, l]);
-    let o = r.useMemo(() => {
+    let s = r.useMemo(() => {
             let t = new Map(),
                 n = new Set();
             for (let i of e)
                 i.party.currentActivities.forEach((e) => {
                     let { activity: r } = e;
                     if (null != r) {
-                        let e = (0, m.ZZ)(s, r);
+                        let e = (0, m.ZZ)(o, r);
                         null != e && !n.has(e.id) && (t.set(i.party.id, e), n.add(e.id));
                     }
                 });
             return t;
-        }, [e, s]),
+        }, [e, o]),
         p = null;
     return t
         ? ((p =
@@ -134,7 +134,7 @@ function R() {
                             P,
                             {
                                 party: t,
-                                quest: o.get(t.id)
+                                quest: s.get(t.id)
                             },
                             t.id
                         );

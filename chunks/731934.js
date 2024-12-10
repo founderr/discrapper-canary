@@ -286,7 +286,7 @@ let B = () => {
                   ]
               });
     },
-    w = () => {
+    y = () => {
         let e = (0, _.mq)(v.ne.PENDING),
             t = (0, m.o)(N.intl.formatToPlainString(N.t.IkAgkJ, { count: e.length }), N.intl.formatToPlainString(N.t.Q8XnAQ, { count: e.length }));
         return 0 === e.length
@@ -301,6 +301,6 @@ t.Z = () => {
     let e = (0, p.Z)();
     return (0, i.jsxs)('div', {
         className: I.container,
-        children: [e ? (0, i.jsx)(j, {}) : (0, i.jsx)(P, {}), (0, i.jsx)(B, {}), (0, i.jsx)(w, {}), (0, i.jsx)(M, {}), (0, i.jsx)(O, {})]
+        children: [e ? (0, i.jsx)(j, {}) : (0, i.jsx)(P, {}), (0, i.jsx)(B, {}), (0, i.jsx)(y, {}), (0, i.jsx)(M, {}), (0, i.jsx)(O, {})]
     });
 };

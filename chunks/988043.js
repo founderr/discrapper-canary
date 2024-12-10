@@ -25,20 +25,20 @@ function E() {
         t = (0, u.c_)(),
         n = d.h2.useSetting().includes(e),
         E = d.iG.useSetting(),
-        _ = s.useCallback(
+        C = s.useCallback(
             (t) => {
                 let n = (0, c.YK)();
                 t ? n.delete(e) : n.add(e), d.h2.updateSetting(Array.from(n));
             },
             [e]
         );
-    function C(e, t) {
+    function _(e, t) {
         a.default.track(S.rMx.GUILD_DEFAULT_DMS_UPDATED, {
             default_guilds_restricted: e,
             applied_to_existing_guilds: t
         });
     }
-    let I = (e) => {
+    let f = (e) => {
         (0, g.V)({
             header: T.intl.string(T.t['uUr+GR']),
             body: T.intl.string(T.t.hjGJBg),
@@ -46,10 +46,10 @@ function E() {
             cancelText: T.intl.string(T.t.p89ACg),
             confirmButtonColor: r.Button.Colors.BRAND,
             onConfirm: () => {
-                d.iG.updateSetting(e), C(e, !1);
+                d.iG.updateSetting(e), _(e, !1);
             },
             onCancel: () => {
-                d.iG.updateSetting(e), d.h2.updateSetting(e ? o.default.keys(l.Z.getGuilds()) : []), C(e, !0);
+                d.iG.updateSetting(e), d.h2.updateSetting(e ? o.default.keys(l.Z.getGuilds()) : []), _(e, !0);
             }
         });
     };
@@ -62,14 +62,14 @@ function E() {
                       note: T.intl.string(T.t.wbYDfX),
                       value: !E,
                       onChange: (e) => {
-                          I(!e);
+                          f(!e);
                       }
                   })
                 : (0, i.jsx)(h.Z, {
                       title: T.intl.string(T.t.RAQUSE),
                       note: t ? T.intl.string(T.t.V0ka0d) : T.intl.string(T.t.G7c3Xl),
                       value: !n,
-                      onChange: _
+                      onChange: C
                   })
     });
 }

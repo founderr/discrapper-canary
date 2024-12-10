@@ -26,10 +26,10 @@ function T() {
         s = h.R$.useSetting(),
         T = h.cC.useSetting(),
         E = h.vF.useSetting(),
-        _ = h.H1.useSetting(),
-        C = h.ev.useSetting(),
-        I = h.x4.useSetting(),
-        f = h.RS.useSetting(),
+        C = h.H1.useSetting(),
+        _ = h.ev.useSetting(),
+        f = h.x4.useSetting(),
+        I = h.RS.useSetting(),
         N = h.NA.useSetting(),
         A = h.nc.useSetting(),
         { analyticsLocations: b } = (0, o.ZP)(a.Z.TEXT_AND_IMAGES);
@@ -48,7 +48,7 @@ function T() {
                         setting: g.s6.CHAT_INLINE_MEDIA_LINKS,
                         children: (0, i.jsx)(l.FormSwitch, {
                             className: r()(S.marginTop8, S.marginBottom20),
-                            value: f,
+                            value: I,
                             onChange: h.RS.updateSetting,
                             children: x.intl.string(x.t.U47N1t)
                         })
@@ -57,7 +57,7 @@ function T() {
                         setting: g.s6.CHAT_INLINE_MEDIA_UPLOADS,
                         children: (0, i.jsx)(l.FormSwitch, {
                             className: r()(S.marginTop8, S.marginBottom20),
-                            value: I,
+                            value: f,
                             note: x.intl.formatToPlainString(x.t.qjjvqK, { maxSize: 10 }),
                             onChange: h.x4.updateSetting,
                             children: x.intl.string(x.t.VP11Nj)
@@ -67,7 +67,7 @@ function T() {
                         setting: g.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS,
                         children: (0, i.jsx)(l.FormSwitch, {
                             className: r()(S.marginTop8, S.marginBottom40),
-                            value: _,
+                            value: C,
                             note: x.intl.string(x.t.T0rbtL),
                             onChange: h.H1.updateSetting,
                             children: x.intl.string(x.t['w8j+yc'])
@@ -113,7 +113,7 @@ function T() {
                         setting: g.s6.CHAT_EMOJI_EMOTICONS,
                         children: (0, i.jsx)(l.FormSwitch, {
                             className: S.marginBottom40,
-                            value: C,
+                            value: _,
                             note: d.Z.parse(x.intl.string(x.t['20dvub'])),
                             onChange: h.ev.updateSetting,
                             children: x.intl.string(x.t['79qal5'])

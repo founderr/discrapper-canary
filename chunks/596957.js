@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    s = n(442837),
-    o = n(481060),
+    o = n(442837),
+    s = n(481060),
     c = n(529103),
     d = n(194359),
     u = n(410575),
@@ -18,12 +18,12 @@ var i = n(200651),
     I = n(451478),
     C = n(434184),
     v = n(701861),
-    N = n(437314),
-    S = n(696577),
+    S = n(437314),
+    N = n(696577),
     T = n(163417),
     b = n(830880),
-    A = n(492347),
-    x = n(42575),
+    x = n(492347),
+    A = n(42575),
     Z = n(617015),
     L = n(981631),
     y = n(388032),
@@ -31,9 +31,9 @@ var i = n(200651),
 t.Z = function (e) {
     let { sectionFilter: t, titleId: l } = e,
         { analyticsLocations: O } = (0, p.ZP)(m.Z.FRIENDS_LIST),
-        { rows: R, section: j } = (0, s.cj)([E.ZP], () => E.ZP.getState()),
-        D = (0, s.e7)([I.Z], () => I.Z.isFocused()),
-        { relationshipCount: M, hasBlockedOrIgnored: w } = (0, s.cj)([_.Z], () => ({
+        { rows: R, section: j } = (0, o.cj)([E.ZP], () => E.ZP.getState()),
+        D = (0, o.e7)([I.Z], () => I.Z.isFocused()),
+        { relationshipCount: M, hasBlockedOrIgnored: w } = (0, o.cj)([_.Z], () => ({
             relationshipCount: _.Z.getRelationshipCount(),
             hasBlockedOrIgnored: _.Z.getBlockedOrIgnoredIDs().length > 0
         })),
@@ -44,7 +44,7 @@ t.Z = function (e) {
             return e;
         }),
         B = () => {
-            (0, o.openModalLazy)(async () => {
+            (0, s.openModalLazy)(async () => {
                 let { default: e } = await n.e('36312').then(n.bind(n, 153932));
                 return (t) => (0, i.jsx)(e, { ...t });
             });
@@ -75,7 +75,7 @@ t.Z = function (e) {
         return (0, i.jsx)('div', {
             className: P.emptyStateContainer,
             children: (0, i.jsx)(
-                N.Z,
+                S.Z,
                 {
                     type: t,
                     onClick: F
@@ -99,17 +99,17 @@ t.Z = function (e) {
             section: L.jXE.FRIENDS_LIST,
             children: [
                 k && w && (0, i.jsx)(b.R, {}),
-                (0, i.jsx)(o.SearchBar, {
+                (0, i.jsx)(s.SearchBar, {
                     className: a()(P.searchBar, Y ? P.searchEmptyState : null),
                     query: U[t],
                     onChange: H,
                     onClear: V,
-                    size: o.SearchBar.Sizes.MEDIUM
+                    size: s.SearchBar.Sizes.MEDIUM
                 }),
                 (0, i.jsxs)('div', {
                     className: P.sectionTitle,
                     children: [
-                        (0, i.jsx)(A.Z, {
+                        (0, i.jsx)(x.Z, {
                             id: l,
                             title: (function (e, t) {
                                 switch (e) {
@@ -127,11 +127,11 @@ t.Z = function (e) {
                             })(t, z.length)
                         }),
                         q &&
-                            (0, i.jsx)(o.Button, {
-                                look: o.ButtonLooks.LINK,
-                                color: o.ButtonColors.LINK,
+                            (0, i.jsx)(s.Button, {
+                                look: s.ButtonLooks.LINK,
+                                color: s.ButtonColors.LINK,
                                 className: P.clearButton,
-                                size: o.Button.Sizes.TINY,
+                                size: s.Button.Sizes.TINY,
                                 onClick: (e) => {
                                     e.stopPropagation(), d.Z.confirmClearPendingRelationships(K);
                                 },
@@ -143,7 +143,7 @@ t.Z = function (e) {
                 Y
                     ? (0, i.jsx)('div', {
                           className: P.emptyStateContainer,
-                          children: (0, i.jsx)(N.Z, { type: N.j.SECTION_NO_RESULTS }, j)
+                          children: (0, i.jsx)(S.Z, { type: S.j.SECTION_NO_RESULTS }, j)
                       })
                     : (0, i.jsx)(T.Z, {
                           relationshipCount: M,
@@ -156,12 +156,12 @@ t.Z = function (e) {
                                           isFocused: D
                                       });
                                   case L.pJs.PENDING:
-                                      return (0, i.jsx)(S.Z, {
+                                      return (0, i.jsx)(N.Z, {
                                           ...e,
                                           isFocused: D
                                       });
                                   case L.pJs.SUGGESTIONS:
-                                      return (0, i.jsx)(x.Z, {
+                                      return (0, i.jsx)(A.Z, {
                                           ...e,
                                           isFocused: D
                                       });
@@ -183,13 +183,13 @@ t.Z = function (e) {
                           searchQuery: U[t],
                           useReducedMotion: h.Z.useReducedMotion,
                           footer: F
-                              ? (0, i.jsx)(o.Button, {
-                                    look: o.Button.Looks.LINK,
+                              ? (0, i.jsx)(s.Button, {
+                                    look: s.Button.Looks.LINK,
                                     color: P.viewSpamButtonColor,
                                     className: P.viewSpamButton,
                                     onClick: () => B(),
-                                    size: o.ButtonSizes.TINY,
-                                    children: (0, i.jsx)(o.Text, {
+                                    size: s.ButtonSizes.TINY,
+                                    children: (0, i.jsx)(s.Text, {
                                         variant: 'text-xs/medium',
                                         children: k ? y.intl.string(y.t.R40bU1) : y.intl.string(y.t.rXl8fn)
                                     })

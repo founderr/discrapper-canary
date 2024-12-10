@@ -3,14 +3,14 @@ n(192379);
 var r = n(105862),
     l = n(322665),
     a = n(17845),
-    s = n(374939),
-    o = n(283293),
+    o = n(374939),
+    s = n(283293),
     c = n(499692),
     d = n(388032),
     u = n(894183);
 t.Z = function (e) {
     let { onScroll: t, onSelectApplication: n } = e;
-    return (0, i.jsxs)(o.Z, {
+    return (0, i.jsxs)(s.Z, {
         onScroll: t,
         children: [
             (0, i.jsx)(a.Z, {
@@ -18,7 +18,7 @@ t.Z = function (e) {
                 description: d.intl.string(d.t.XxFts7),
                 children: (0, i.jsx)(l.Z, {})
             }),
-            (0, i.jsx)(s.Z, {
+            (0, i.jsx)(o.Z, {
                 children: (0, i.jsxs)('div', {
                     className: u.contentContainer,
                     children: [

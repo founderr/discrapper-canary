@@ -8,17 +8,17 @@ var i = n(200651),
     r = n(192379),
     l = n(481060),
     a = n(860719),
-    s = n(63063),
-    o = n(49012),
+    o = n(63063),
+    s = n(49012),
     c = n(981631),
     d = n(388032),
     u = n(349778);
-let h = s.Z.getArticleURL(c.BhN.BOT_DATA_ACCESS);
+let h = o.Z.getArticleURL(c.BhN.BOT_DATA_ACCESS);
 function m(e) {
     let { application: t } = e,
-        { hasMessageContent: n, hasGuildPresences: s, hasGuildMembers: c, hasIntents: m } = (0, a.w)({ flags: null == t ? void 0 : t.flags }),
+        { hasMessageContent: n, hasGuildPresences: o, hasGuildMembers: c, hasIntents: m } = (0, a.w)({ flags: null == t ? void 0 : t.flags }),
         g = r.useCallback(() => {
-            null != t.privacy_policy_url && (0, o.q)({ href: t.privacy_policy_url });
+            null != t.privacy_policy_url && (0, s.q)({ href: t.privacy_policy_url });
         }, [t.privacy_policy_url]);
     return (0, i.jsxs)('div', {
         className: u.sectionContainer,
@@ -46,7 +46,7 @@ function m(e) {
                                         heading: d.intl.string(d.t.gJpBOz),
                                         body: d.intl.string(d.t['L+QVbm'])
                                     }),
-                                s &&
+                                o &&
                                     (0, i.jsx)(p, {
                                         icon: l.UserCircleStatusIcon,
                                         heading: d.intl.string(d.t.jo0oj4),

@@ -38,12 +38,12 @@ function x() {
                 label: g.intl.string(g.t.S49UaW)
             }
         ],
-        _ = {
+        C = {
             value: s.Q4.SHOW,
             label: g.intl.string(g.t['5k5OFh'])
         };
     return (
-        t && (T.unshift(_), E.unshift(_)),
+        t && (T.unshift(C), E.unshift(C)),
         (0, i.jsxs)(d.U, {
             setting: m.s6.PRIVACY_SENSITIVE_MEDIA_V2,
             scrollPosition: u.to.EXPLICIT_MEDIA_REDACTION_V2,

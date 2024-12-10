@@ -7,8 +7,8 @@ var i = n(200651),
     r = n(192379),
     l = n(481060),
     a = n(194359),
-    s = n(906732),
-    o = n(388380),
+    o = n(906732),
+    s = n(388380),
     c = n(171368),
     d = n(626135),
     u = n(321488),
@@ -20,7 +20,7 @@ var i = n(200651),
 function _(e) {
     let { user: t, nickname: n, status: _, isFocused: E } = e,
         I = r.useContext(d.AnalyticsContext),
-        { analyticsLocations: C } = (0, s.ZP)(),
+        { analyticsLocations: C } = (0, o.ZP)(),
         v = (e) => {
             null == e || e.stopPropagation(),
                 a.Z.addRelationship({
@@ -31,10 +31,10 @@ function _(e) {
                     fromFriendSuggestion: !0
                 });
         },
-        N = (e) => {
-            null == e || e.stopPropagation(), o.Z.ignore(t.id);
+        S = (e) => {
+            null == e || e.stopPropagation(), s.Z.ignore(t.id);
         },
-        S = _ === p.Skl.OFFLINE ? p.Skl.UNKNOWN : _;
+        N = _ === p.Skl.OFFLINE ? p.Skl.UNKNOWN : _;
     return (0, i.jsx)(h.Z, {
         isFocused: E,
         user: t,
@@ -58,7 +58,7 @@ function _(e) {
                         icon: l.XSmallIcon,
                         actionType: u.Z.ActionTypes.DENY,
                         tooltip: g.intl.string(g.t.xuio0N),
-                        onClick: N,
+                        onClick: S,
                         shouldHighlight: e
                     })
                 ]
@@ -69,7 +69,7 @@ function _(e) {
                     (0, i.jsx)(m.Z, {
                         user: t,
                         hovered: e,
-                        status: S,
+                        status: N,
                         subText: n,
                         className: f.__invalid_userInfo
                     }),

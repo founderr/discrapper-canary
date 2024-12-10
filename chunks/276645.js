@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = n(200651);
@@ -8,23 +8,23 @@ n(192379);
 var r = n(481060),
     l = n(970731),
     a = n(388032),
-    s = n(733926);
-function o(e) {
-    let { guildId: t, markAsDismissed: o } = e;
+    o = n(733926);
+function s(e) {
+    let { guildId: t, markAsDismissed: s } = e;
     return (0, i.jsx)(l.ZP, {
-        className: s.container,
+        className: o.container,
         asset: (0, i.jsx)('img', {
-            className: s.image,
+            className: o.image,
             src: n(297806),
             alt: ''
         }),
         header: a.intl.string(a.t['2l9beX']),
-        headerClassName: s.header,
+        headerClassName: o.header,
         content: a.intl.string(a.t.gdqdND),
         buttonCTA: a.intl.string(a.t.RzWDqa),
         buttonProps: {
             color: r.ButtonColors.WHITE,
-            innerClassName: s.primaryButton
+            innerClassName: o.primaryButton
         },
         onClick: () => {
             (0, r.openModalLazy)(async () => {
@@ -41,6 +41,6 @@ function o(e) {
             look: r.ButtonLooks.LINK,
             color: r.ButtonColors.WHITE
         },
-        markAsDismissed: o
+        markAsDismissed: s
     });
 }

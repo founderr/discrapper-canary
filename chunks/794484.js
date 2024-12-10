@@ -71,16 +71,16 @@ t.Z = (e) => {
         }, [S, A, P, Z]);
     let M = (0, _.Op)(P),
         O = (0, m.Z)(),
-        w = (0, _.mN)(),
-        { fractionalState: y } = (0, c.Z)(),
+        y = (0, _.mN)(),
+        { fractionalState: w } = (0, c.Z)(),
         k = (0, _.sP)({
             perksCards: O,
             variant: x,
             shopMarketingVariation: j,
             isFullScreen: I,
             showTenureCard: null == R ? void 0 : R.showCard,
-            isPremiumSubscriber: w,
-            fractionalState: y
+            isPremiumSubscriber: y,
+            fractionalState: w
         }),
         L = k.some((e) => null != e.pillText),
         [U, D] = r.useState(null),

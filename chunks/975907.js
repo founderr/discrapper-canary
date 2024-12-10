@@ -13,16 +13,16 @@ function a(e) {
     let a = i.useCallback((e) => {
             r.Z.setState({ query: e });
         }, []),
-        s = i.useCallback(() => {
+        o = i.useCallback(() => {
             r.Z.setState({ query: '' });
         }, []),
-        o = i.useCallback(() => {
+        s = i.useCallback(() => {
             (0, l.pR)({ query: n });
         }, [n]);
     return {
         searchQuery: n,
         onSearchTextChange: a,
-        onClearSearch: s,
-        onSearchSubmit: o
+        onClearSearch: o,
+        onSearchSubmit: s
     };
 }

@@ -60,8 +60,8 @@ var i,
     r,
     l = n(729594),
     a = n(243814),
-    s = n(544891),
-    o = n(63023),
+    o = n(544891),
+    s = n(63023),
     c = n(433517),
     d = n(904245),
     u = n(155268),
@@ -75,17 +75,17 @@ var i,
     I = n(131951),
     C = n(375954),
     v = n(158776),
-    N = n(594174),
-    S = n(979651),
+    S = n(594174),
+    N = n(979651),
     T = n(70956),
     b = n(5192),
-    A = n(226951),
-    x = n(591759),
+    x = n(226951),
+    A = n(591759),
     Z = n(996106),
     L = n(863141),
     y = n(186901),
     P = n(981631);
-let O = null !== (r = null === (i = x.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)) || void 0 === i ? void 0 : i.host) && void 0 !== r ? r : 'localhost',
+let O = null !== (r = null === (i = A.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)) || void 0 === i ? void 0 : i.host) && void 0 !== r ? r : 'localhost',
     R = (function () {
         let e = O.split(':')[0];
         if (!e.includes('.')) return e;
@@ -93,7 +93,7 @@ let O = null !== (r = null === (i = x.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT
             n = t[t.length - 1];
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
     })(),
-    j = new RegExp('^'.concat(A.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(A.Z.escape(R), '|discordapp.com|discord.com)$')),
+    j = new RegExp('^'.concat(x.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(x.Z.escape(R), '|discordapp.com|discord.com)$')),
     D = 1 * T.Z.Millis.MINUTE,
     M = {};
 function w(e) {
@@ -128,8 +128,8 @@ function G(e, t) {
             ),
         Promise.all(n).then(() => {
             var n;
-            let r = (!e.isNSFW() || (null === (n = N.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? C.Z.getMessages(e.id).toArray().map(B) : [],
-                l = Object.values(S.Z.getVoiceStatesForChannel(e.id)).map((t) => H(i, e.id, t));
+            let r = (!e.isNSFW() || (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? C.Z.getMessages(e.id).toArray().map(B) : [],
+                l = Object.values(N.Z.getVoiceStatesForChannel(e.id)).map((t) => H(i, e.id, t));
             return {
                 id: e.id,
                 name: e.name,
@@ -172,9 +172,9 @@ function B(e) {
     };
 }
 function H(e, t, n) {
-    let { mute: i, deaf: r, selfMute: l, selfDeaf: a, suppress: s, userId: o } = n,
-        c = N.default.getUser(o);
-    if (null == c) throw Error('Invalid user id: '.concat(o));
+    let { mute: i, deaf: r, selfMute: l, selfDeaf: a, suppress: o, userId: s } = n,
+        c = S.default.getUser(s);
+    if (null == c) throw Error('Invalid user id: '.concat(s));
     return {
         nick: b.ZP.getName(e, t, c),
         mute: I.Z.isLocalMute(c.id),
@@ -185,14 +185,14 @@ function H(e, t, n) {
             deaf: r,
             self_mute: l,
             self_deaf: a,
-            suppress: s
+            suppress: o
         },
         user: (0, L.Z)(c)
     };
 }
 function V(e, t, n) {
     let { isSpamRequest: i, applicationId: r, userIgnored: l } = null != n ? n : {},
-        a = N.default.getUser(t);
+        a = S.default.getUser(t);
     return {
         type: e,
         user: null != a ? (0, L.Z)(a) : null,
@@ -241,7 +241,7 @@ function K(e, t, n) {
     return !1;
 }
 function q(e, t, n) {
-    return s.tn
+    return o.tn
         .get({
             url: P.ANM.APPLICATION_RPC(t),
             oldFormErrors: !0,
@@ -251,7 +251,7 @@ function q(e, t, n) {
         .then(
             (i) => {
                 let {
-                    body: { rpc_origins: r, id: l, name: a, icon: s, cover_image: o, flags: c }
+                    body: { rpc_origins: r, id: l, name: a, icon: o, cover_image: s, flags: c }
                 } = i;
                 if ('string' == typeof n) {
                     if (e.transport === y.He.POST_MESSAGE) {
@@ -262,8 +262,8 @@ function q(e, t, n) {
                 e.application = {
                     id: l,
                     name: a,
-                    icon: s,
-                    coverImage: o,
+                    icon: o,
+                    coverImage: s,
                     flags: c
                 };
             },
@@ -274,7 +274,7 @@ function q(e, t, n) {
 }
 async function X(e, t) {
     let n = M[e];
-    null == n && ((n = new o.Z(t ? 2 : 60, D)), (M[e] = n)), await n.process();
+    null == n && ((n = new s.Z(t ? 2 : 60, D)), (M[e] = n)), await n.process();
 }
 function Q(e, t) {
     null == t && (e.authorization.scopes = [y.lH]);

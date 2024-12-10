@@ -31,8 +31,8 @@ var i = n(200651),
     B = n(346497),
     M = n(218390),
     O = n(823188),
-    w = n(241158),
-    y = n(135785),
+    y = n(241158),
+    w = n(135785),
     k = n(498765),
     L = n(635921),
     U = n(177839),
@@ -46,8 +46,8 @@ var i = n(200651),
     Y = n(71363),
     K = n(781800),
     Q = n(474936),
-    J = n(981631),
-    q = n(869783),
+    q = n(981631),
+    J = n(869783),
     X = n(388032),
     $ = n(286919),
     ee = n(865215),
@@ -74,9 +74,9 @@ let ea = (e) => {
                               variant: z.R0.WHATS_NEW,
                               isFullScreen: t
                           }),
-                      l && (0, i.jsx)(w.Z, { shouldLoadVideo: a }),
+                      l && (0, i.jsx)(y.Z, { shouldLoadVideo: a }),
                       l &&
-                          (0, i.jsx)(w.Z, {
+                          (0, i.jsx)(y.Z, {
                               isBestOfNitro: !0,
                               shouldLoadVideo: a
                           }),
@@ -108,7 +108,7 @@ let ea = (e) => {
     };
 t.Z = (e) => {
     var t, n;
-    let { isFullscreen: a, entrypoint: w } = e;
+    let { isFullscreen: a, entrypoint: y } = e;
     (0, E.z)(h.X);
     let k = r.useRef(null),
         U = r.useRef(null),
@@ -205,7 +205,7 @@ t.Z = (e) => {
             }),
             'data-cy': 'tier-0-marketing-page',
             children: [
-                (0, i.jsx)(y.Z, {
+                (0, i.jsx)(w.Z, {
                     premiumSubscription: eh,
                     className: s()(a ? $.fullscreenExistingSubscriberSpacing : $.existingSubscriberSpacing, { [$.zIndex1]: eA }),
                     isFullscreen: a
@@ -231,7 +231,7 @@ t.Z = (e) => {
                                       ? (0, i.jsx)(F.Z, {
                                             subscriptionTier: ex,
                                             isFullscreen: a || eA,
-                                            entrypoint: w,
+                                            entrypoint: y,
                                             isDarkMode: K
                                         })
                                       : (0, i.jsx)(L.ZP, {
@@ -246,7 +246,7 @@ t.Z = (e) => {
                                                 [$.settingsHeroBogoMarginFullscreen]: a && ej,
                                                 [$.noTopPaddingOverride]: null != eh
                                             }),
-                                            entrypoint: w,
+                                            entrypoint: y,
                                             isDarkMode: K
                                         })
                               }),
@@ -263,7 +263,7 @@ t.Z = (e) => {
                                           ref: U,
                                           children: (0, i.jsx)('source', {
                                               src: er.Z,
-                                              type: q.m.WEBM
+                                              type: J.m.WEBM
                                           })
                                       })
                                   })
@@ -274,7 +274,7 @@ t.Z = (e) => {
                     children: [(0, i.jsx)(j.Z, { isFullScreen: a }), (0, i.jsx)(A.Z, { isFullScreen: a }), a && ev && (0, i.jsx)(P.Z, { localizedPricingPromo: eC })]
                 }),
                 !eo && eM,
-                w === Q.EZ.UserSettings &&
+                y === Q.EZ.UserSettings &&
                     null != eP &&
                     (0, i.jsx)(M.C, {
                         className: $.giftPromoCard,
@@ -326,7 +326,7 @@ t.Z = (e) => {
                 }),
                 (0, i.jsx)(o.$, {
                     onChange: (e) => {
-                        e && !em && (x.default.track(J.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eZ }), ef(!0));
+                        e && !em && (x.default.track(q.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eZ }), ef(!0));
                     },
                     children: (0, i.jsx)('div', { className: $.bottomOfPageVisibilitySensor })
                 }),

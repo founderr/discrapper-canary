@@ -3,7 +3,7 @@ var i = n(710845),
     r = n(914946),
     l = n(452426),
     a = n(981631);
-let s = new i.Z(a.BZL);
+let o = new i.Z(a.BZL);
 t.Z = {
     [a.Etm.CAPTURE_LOG]: {
         validation: (e) =>
@@ -23,19 +23,19 @@ t.Z = {
                 a = ''.concat(l, ' - ').concat(i);
             switch (n) {
                 case 'log':
-                    s.log(a);
+                    o.log(a);
                     break;
                 case 'warn':
-                    s.warn(a);
+                    o.warn(a);
                     break;
                 case 'debug':
-                    s.verbose(a);
+                    o.verbose(a);
                     break;
                 case 'info':
-                    s.info(a);
+                    o.info(a);
                     break;
                 case 'error':
-                    s.error(a);
+                    o.error(a);
             }
         }
     }

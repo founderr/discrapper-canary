@@ -7,8 +7,8 @@ var i = n(200651),
     r = n(192379),
     l = n(481060),
     a = n(581364),
-    s = n(665692),
-    o = n(388032),
+    o = n(665692),
+    s = n(388032),
     c = n(765853);
 function d(e) {
     let { application: t } = e,
@@ -33,7 +33,7 @@ function d(e) {
                   (0, i.jsx)(l.Heading, {
                       variant: 'heading-lg/semibold',
                       color: 'header-primary',
-                      children: o.intl.string(o.t.swIgTE)
+                      children: s.intl.string(s.t.swIgTE)
                   }),
                   (0, i.jsx)('div', {
                       className: c.contentContainer,
@@ -47,7 +47,7 @@ function d(e) {
                                           className: c.commandName,
                                           variant: 'code',
                                           color: 'header-primary',
-                                          children: [s.GI, e.displayName]
+                                          children: [o.GI, e.displayName]
                                       }),
                                       (0, i.jsx)(l.Text, {
                                           variant: 'text-md/normal',

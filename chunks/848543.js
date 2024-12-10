@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return x;
     }
 }),
     n(47120);
@@ -8,8 +8,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    s = n(399606),
-    o = n(704215),
+    o = n(399606),
+    s = n(704215),
     c = n(582019),
     d = n(481060),
     u = n(239091),
@@ -23,15 +23,15 @@ var i = n(200651),
     I = n(242291),
     C = n(792165),
     v = n(603074),
-    N = n(981631),
-    S = n(921944),
+    S = n(981631),
+    N = n(921944),
     T = n(388032),
     b = n(382290);
-function A(e) {
-    let { channel: t, iconClassName: l, className: A, innerClassName: x, ...Z } = e,
+function x(e) {
+    let { channel: t, iconClassName: l, className: x, innerClassName: A, ...Z } = e,
         L = (0, p.Q3)('SoundBoardRTCPanelButton'),
         { mute: y, suppress: P } = (0, f.Z)(t),
-        O = (0, s.e7)([_.Z], () => _.Z.isDeaf()),
+        O = (0, o.e7)([_.Z], () => _.Z.isDeaf()),
         R = y || P || O,
         [j, D] = r.useState(!1),
         M = t.getGuildId(),
@@ -67,7 +67,7 @@ function A(e) {
                         channel: t,
                         onClose: n,
                         gridNotice:
-                            k === o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                            k === s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
                             (0, i.jsx)(C.o, {
                                 onClose: n,
                                 markAsDismissed: U
@@ -80,16 +80,16 @@ function A(e) {
                         children: (0, i.jsx)(d.Button, {
                             ...e,
                             ...t,
-                            className: a()(A, {
+                            className: a()(x, {
                                 [b.buttonActive]: j,
                                 [b.disabled]: R
                             }),
-                            wrapperClassName: A,
-                            innerClassName: x,
+                            wrapperClassName: x,
+                            innerClassName: A,
                             disabled: R,
                             onClick: () => {
                                 var t, n;
-                                null != k && k !== o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && U(S.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!j), V();
+                                null != k && k !== s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && U(N.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!j), V();
                             },
                             onMouseEnter: (t) => {
                                 var n, i;
@@ -116,7 +116,7 @@ function A(e) {
         }, [R, j]);
     return (
         (0, E.yp)({
-            event: N.CkL.TOGGLE_SOUNDBOARD,
+            event: S.CkL.TOGGLE_SOUNDBOARD,
             handler: Y
         }),
         (0, i.jsx)(m.Gt, {

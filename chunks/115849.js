@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return N;
     }
 }),
     n(47120);
@@ -8,8 +8,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    s = n(512722),
-    o = n.n(s),
+    o = n(512722),
+    s = n.n(o),
     c = n(481060),
     d = n(194359),
     u = n(313201),
@@ -28,7 +28,7 @@ let E = {
     I = (0, u.hQ)(),
     C = ''.concat(I, '-decription'),
     v = ''.concat(I, '-error');
-function N(e, t) {
+function S(e, t) {
     switch (t.type) {
         case 'RESET':
             return E;
@@ -51,18 +51,18 @@ function N(e, t) {
             };
     }
 }
-function S() {
+function N() {
     let e = r.createRef(),
         t = r.createRef(),
-        [n, l] = r.useReducer(N, E),
-        { canSend: s, hint: u, success: S, error: T } = n;
+        [n, l] = r.useReducer(S, E),
+        { canSend: o, hint: u, success: N, error: T } = n;
     return (
         r.useEffect(() => {
-            null != S && (o()(null != e.current, 'Input is submitting when not mounted'), (e.current.value = ''), e.current.focus());
-        }, [S, e]),
+            null != N && (s()(null != e.current, 'Input is submitting when not mounted'), (e.current.value = ''), e.current.focus());
+        }, [N, e]),
         (0, i.jsxs)('form', {
             onSubmit: (t) => {
-                t.preventDefault(), o()(null != e.current, 'Input is submitted when not mounted');
+                t.preventDefault(), s()(null != e.current, 'Input is submitted when not mounted');
                 let n = e.current.value.trim();
                 !n.includes('#') && n.startsWith('@') && (n = n.substring(1));
                 let i = (0, h.Zy)(n);
@@ -105,7 +105,7 @@ function S() {
                     children: (0, i.jsxs)('div', {
                         ref: t,
                         className: a()(f.addFriendInputWrapper, {
-                            [f.success]: S,
+                            [f.success]: N,
                             [f.error]: T
                         }),
                         children: [
@@ -118,7 +118,7 @@ function S() {
                                     let n = t.currentTarget.value;
                                     if (t.key !== p.mR.Enter) {
                                         if (n.includes('#')) {
-                                            o()(null != e.current, 'Input is handling keypress when not mounted');
+                                            s()(null != e.current, 'Input is handling keypress when not mounted');
                                             let i = n.indexOf('#'),
                                                 r = e.current.selectionStart,
                                                 l = t.key === p.mR.Backspace || t.key === p.mR.ArrowRight || t.key === p.mR.ArrowLeft,
@@ -160,7 +160,7 @@ function S() {
                                 }),
                             (0, i.jsx)(c.Button, {
                                 size: c.Button.Sizes.SMALL,
-                                disabled: !s,
+                                disabled: !o,
                                 type: 'submit',
                                 children: g.intl.string(g.t['PMsq/f'])
                             })
@@ -175,12 +175,12 @@ function S() {
                         className: _.marginTop8,
                         children: T
                     }),
-                null != S &&
+                null != N &&
                     (0, i.jsx)(c.FormText, {
                         role: 'status',
                         type: c.FormText.Types.SUCCESS,
                         className: _.marginTop8,
-                        children: S
+                        children: N
                     })
             ]
         })

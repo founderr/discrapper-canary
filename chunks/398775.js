@@ -1,9 +1,9 @@
 n.d(t, {
     Sz: function () {
-        return C;
+        return _;
     },
     of: function () {
-        return _;
+        return C;
     }
 }),
     n(653041),
@@ -32,7 +32,7 @@ async function E(e) {
         s(!0), r(!1);
     }
 }
-function _(e) {
+function C(e) {
     let { premiumType: t, onClose: n, pauseDuration: r, setPauseDuration: l, footer: o, premiumSubscription: d } = e,
         u = s.useCallback(
             (e) => {
@@ -109,11 +109,11 @@ function _(e) {
         })
     );
 }
-function C(e) {
+function _(e) {
     let { premiumSubscription: t, premiumType: n, onClose: r, pauseDuration: a, analyticsLocation: d } = e,
-        [g, _] = s.useState(!1),
-        { analyticsLocations: C } = (0, m.ZP)(),
-        [I, f] = s.useState(!1),
+        [g, C] = s.useState(!1),
+        { analyticsLocations: _ } = (0, m.ZP)(),
+        [f, I] = s.useState(!1),
         N = (0, u.ZP)(),
         A = null,
         b = null,
@@ -177,15 +177,15 @@ function C(e) {
                         children: [
                             (0, i.jsx)(c.Button, {
                                 color: c.Button.Colors.RED,
-                                disabled: I || null == a,
+                                disabled: f || null == a,
                                 onClick: async () => {
                                     await E({
                                         premiumSubscription: t,
                                         pauseDuration: a,
-                                        setIsCancelling: f,
-                                        setHasError: _,
+                                        setIsCancelling: I,
+                                        setHasError: C,
                                         onClose: r,
-                                        analyticsLocations: C,
+                                        analyticsLocations: _,
                                         analyticsLocation: d
                                     });
                                 },

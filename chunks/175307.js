@@ -1,6 +1,6 @@
 n.d(t, {
     u: function () {
-        return o;
+        return s;
     }
 });
 var i = n(200651);
@@ -8,17 +8,17 @@ n(192379);
 var r = n(780384),
     l = n(481060),
     a = n(410030),
-    s = n(656867);
-function o(e) {
+    o = n(656867);
+function s(e) {
     let { text: t, onClick: n } = e,
-        o = (0, a.ZP)(),
-        c = (0, r.wj)(o);
+        s = (0, a.ZP)(),
+        c = (0, r.wj)(s);
     return (0, i.jsxs)(l.Button, {
         size: 'medium',
         color: c ? l.ButtonColors.TRANSPARENT : l.ButtonColors.WHITE,
-        className: s.button,
+        className: o.button,
         onClick: n,
-        innerClassName: s.innerButton,
+        innerClassName: o.innerButton,
         children: [
             (0, i.jsx)(l.Text, {
                 variant: 'text-sm/semibold',

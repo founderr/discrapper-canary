@@ -8,13 +8,13 @@ n(192379);
 var r = n(481060),
     l = n(388032);
 function a(e) {
-    let { tabs: t, selectedTab: n, onTabSelect: a, onClose: s } = e;
+    let { tabs: t, selectedTab: n, onTabSelect: a, onClose: o } = e;
     return (0, i.jsx)(r.Menu, {
         navId: 'global-discovery-tabs-overflow-menu',
         'aria-label': l.intl.string(l.t.riPnr6),
         hideScroller: !0,
-        onClose: s,
-        onSelect: s,
+        onClose: o,
+        onSelect: o,
         children: (0, i.jsx)(
             r.MenuGroup,
             {

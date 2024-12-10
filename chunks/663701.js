@@ -8,8 +8,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    s = n(232713),
-    o = n(990547),
+    o = n(232713),
+    s = n(990547),
     c = n(91192),
     d = n(873546),
     u = n(442837),
@@ -23,12 +23,12 @@ var i = n(200651),
     I = n(143757),
     C = n(463119),
     v = n(377171),
-    N = n(540059),
-    S = n(243778),
+    S = n(540059),
+    N = n(243778),
     T = n(922409),
     b = n(899740),
-    A = n(28476),
-    x = n(880257),
+    x = n(28476),
+    A = n(880257),
     Z = n(631885),
     L = n(522558),
     y = n(795448),
@@ -59,15 +59,15 @@ let ee = (e) => {
         let { selected: t, ...n } = e,
             l = (0, c.JA)('friends'),
             a = (0, u.e7)([G.Z], () => G.Z.getPendingCount()),
-            s = (0, u.e7)([P.Z], () => P.Z.canShowFriendsTabBadge()),
+            o = (0, u.e7)([P.Z], () => P.Z.canShowFriendsTabBadge()),
             d = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
             { enabled: h } = L.w.useExperiment({ location: 'Friends Tab' }, { autoTrackExposure: !1 }),
-            m = s && h;
+            m = o && h;
         r.useEffect(() => {
             m &&
                 (0, E.h)({
-                    name: o.ImpressionNames.GIFT_INTENT_BADGE,
-                    type: o.ImpressionTypes.VIEW,
+                    name: s.ImpressionNames.GIFT_INTENT_BADGE,
+                    type: s.ImpressionTypes.VIEW,
                     properties: { gift_intent_type: Q.hX.FRIEND_ANNIVERSARY }
                 });
         }, [m]);
@@ -140,7 +140,7 @@ let ee = (e) => {
         let { selected: t } = e,
             n = (0, c.JA)('messageRequests'),
             { channelId: r } = (0, T._)();
-        if (!(0, A.a)()) return null;
+        if (!(0, x.a)()) return null;
         let l = null == r ? void 0 : () => g.Z.preload(q.ME, r);
         return (0, i.jsx)(W.Qj, {
             selected: t,
@@ -157,9 +157,9 @@ let ee = (e) => {
             n = J.intl.string(J.t.Rkdixs),
             l = (0, c.JA)('family-center'),
             a = k.Ex.useSetting(),
-            s = (0, x.Z)(),
-            [o, d] = r.useState(!0);
-        return a && s
+            o = (0, A.Z)(),
+            [s, d] = r.useState(!0);
+        return a && o
             ? (0, i.jsx)(W.Qj, {
                   selected: t,
                   route: q.Z5c.FAMILY_CENTER,
@@ -173,7 +173,7 @@ let ee = (e) => {
                   },
                   interactiveClassName: $.familyCenterLinkButton,
                   ...l,
-                  children: (0, i.jsx)(el, { isParentHovered: o })
+                  children: (0, i.jsx)(el, { isParentHovered: s })
               })
             : null;
     },
@@ -195,7 +195,7 @@ let ee = (e) => {
                     className: $.familyCenterPendingBadge,
                     children: (0, i.jsx)(p.NumberBadge, { count: r })
                 })
-              : (0, i.jsx)(S.ZP, {
+              : (0, i.jsx)(N.ZP, {
                     contentTypes: [h.z.FAMILY_CENTER_NEW_BADGE],
                     children: (e) => {
                         let { visibleContent: t } = e;
@@ -209,7 +209,7 @@ let ee = (e) => {
                 });
     },
     ea = () => (0, j.$Z)('DM_SEARCH');
-function es(e) {
+function eo(e) {
     switch (e) {
         case q.Z5c.APPLICATION_LIBRARY:
             return q.ZY5.LIBRARY;
@@ -221,13 +221,13 @@ function es(e) {
     if (e.startsWith(q.Z5c.APPLICATION_STORE)) return e === q.Z5c.APPLICATION_STORE ? q.ZY5.STORE_DIRECTORY_HOME : e.startsWith(q.Z5c.APPLICATION_STORE) ? q.ZY5.STORE_DIRECTORY_BROWSE : q.ZY5.STORE_LISTING;
     return q.ZY5.DM_CHANNEL;
 }
-let eo = (e) => {
+let es = (e) => {
     let { showLibrary: t, hasLibraryApplication: n, homeLink: r, premiumTabSelected: l } = e,
-        [o, c] = (0, D.Z)((e) => {
+        [s, c] = (0, D.Z)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
-        }, s.X),
-        u = (0, N.Q3)('PrivateChannels');
+        }, o.X),
+        u = (0, S.Q3)('PrivateChannels');
     return (0, i.jsxs)('nav', {
         className: $.privateChannels,
         'aria-label': J.intl.string(J.t.ZH9aPz),
@@ -258,7 +258,7 @@ let eo = (e) => {
             (0, i.jsxs)(Y.Z, {
                 ...e,
                 version: c,
-                selectedChannelId: o,
+                selectedChannelId: s,
                 showDMHeader: !0,
                 children: [
                     (0, i.jsx)(ee, { selected: null != c ? c === q.Z5c.FRIENDS : r === q.Z5c.FRIENDS }, 'friends'),
@@ -279,7 +279,7 @@ let eo = (e) => {
                             route: q.Z5c.APPLICATION_STORE,
                             locationState: {
                                 analyticsSource: {
-                                    page: es(r),
+                                    page: eo(r),
                                     section: q.jXE.NAVIGATION,
                                     object: q.qAy.NAVIGATION_LINK
                                 }
@@ -294,7 +294,7 @@ let eo = (e) => {
                             selected: c === q.Z5c.COLLECTIBLES_SHOP || (null == r ? void 0 : r.startsWith(q.Z5c.COLLECTIBLES_SHOP)),
                             locationState: {
                                 analyticsSource: {
-                                    page: es(r),
+                                    page: eo(r),
                                     section: q.jXE.NAVIGATION,
                                     object: q.qAy.NAVIGATION_LINK
                                 }
@@ -328,7 +328,7 @@ function ec() {
         { theme: r } = (0, u.cj)([w.Z], () => ({ theme: w.Z.theme })),
         l = (0, u.e7)([U.Z], () => U.Z.hasLibraryApplication()),
         a = (0, u.e7)([B.Z], () => B.Z.getCurrentPath());
-    return (0, i.jsx)(eo, {
+    return (0, i.jsx)(es, {
         theme: r,
         showLibrary: n,
         hasLibraryApplication: l,

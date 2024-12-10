@@ -20,10 +20,10 @@ var i = n(200651),
     S = n(199778),
     T = n(296533),
     E = n(901750),
-    _ = n(112863),
-    C = n(701157),
-    I = n(912152),
-    f = n(615603),
+    C = n(112863),
+    _ = n(701157),
+    f = n(912152),
+    I = n(615603),
     N = n(474936),
     A = n(734943);
 function b(e) {
@@ -54,7 +54,7 @@ function b(e) {
                 canAddBoosts: k
             }),
             F === N.a$.NONE &&
-                (0, i.jsx)(I.Z, {
+                (0, i.jsx)(f.Z, {
                     hasAppliedGuildBoosts: B,
                     hasBoostPerk: w,
                     hasGuildAffinitiesOrInGuild: P,
@@ -65,7 +65,7 @@ function b(e) {
                 containerClassName: A.FPContainer,
                 pillClassName: A.FPPill
             }),
-            !P && (0, i.jsx)(_.Z, {}),
+            !P && (0, i.jsx)(C.Z, {}),
             (null == t ? void 0 : t.isPaused) && F === N.a$.NONE
                 ? (0, i.jsx)(T.r, {
                       appliedGuildBoosts: Z,
@@ -75,11 +75,11 @@ function b(e) {
                       guildBoostSlots: n,
                       premiumSubscription: t
                   }),
-            (0, i.jsx)(f.Z, {
+            (0, i.jsx)(I.Z, {
                 guildBoostSlots: b,
                 fractionalPremiumState: F
             }),
-            (0, i.jsx)(C.Z, {
+            (0, i.jsx)(_.Z, {
                 canAddBoosts: B && k,
                 canApplyBoosts: L
             }),

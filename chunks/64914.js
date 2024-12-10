@@ -25,16 +25,16 @@ function T() {
         n = h.Sb.useSetting(),
         T = (0, r.e7)([d.Z], () => d.Z.testModeApplicationId),
         E = (0, r.e7)([m.ZP], () => m.ZP.showPlayAgain),
-        _ = s.useCallback((e) => {
+        C = s.useCallback((e) => {
             h.bm.updateSetting(!e);
         }, []),
-        C = s.useCallback((e) => {
+        _ = s.useCallback((e) => {
             e ? (0, l.openModal)((e) => (0, i.jsx)(g.Z, { ...e })) : a.mc();
         }, []),
-        I = s.useCallback((e) => {
+        f = s.useCallback((e) => {
             o.ZP.updatedUnsyncedSettings({ showPlayAgain: e });
         }, []),
-        f = s.useCallback((e) => {
+        I = s.useCallback((e) => {
             (0, l.openModal)((t) =>
                 (0, i.jsx)(l.ConfirmModal, {
                     header: S.intl.string(S.t.aqpAvr),
@@ -66,7 +66,7 @@ function T() {
                 setting: p.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
                 children: (0, i.jsx)(l.FormSwitch, {
                     value: e,
-                    onChange: f,
+                    onChange: I,
                     note: S.intl.string(S.t.Afc7l5),
                     children: S.intl.string(S.t['eOC/Fx'])
                 })
@@ -75,7 +75,7 @@ function T() {
                 setting: p.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
                 children: (0, i.jsx)(l.FormSwitch, {
                     value: !t,
-                    onChange: _,
+                    onChange: C,
                     note: S.intl.string(S.t['8mYp39']),
                     children: S.intl.string(S.t.fi3UQE)
                 })
@@ -85,7 +85,7 @@ function T() {
                 children: (0, i.jsx)(l.FormSwitch, {
                     value: null != T,
                     note: S.intl.string(S.t['52hMnJ']),
-                    onChange: C,
+                    onChange: _,
                     children: S.intl.string(S.t.erOqlp)
                 })
             }),
@@ -94,7 +94,7 @@ function T() {
                 children: (0, i.jsx)(l.FormSwitch, {
                     value: E,
                     note: S.intl.string(S.t['B/qU4O']),
-                    onChange: I,
+                    onChange: f,
                     children: S.intl.string(S.t.qDZryM)
                 })
             })

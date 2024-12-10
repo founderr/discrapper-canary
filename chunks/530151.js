@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    s = n(392711),
-    o = n.n(s),
+    o = n(392711),
+    s = n.n(o),
     c = n(442837),
     d = n(692547),
     u = n(780384),
@@ -18,12 +18,12 @@ var i = n(200651),
     I = n(812206),
     C = n(44315),
     v = n(600164),
-    N = n(167533),
-    S = n(925329),
+    S = n(167533),
+    N = n(925329),
     T = n(707409),
     b = n(210887),
-    A = n(283595),
-    x = n(417363),
+    x = n(283595),
+    A = n(417363),
     Z = n(941128),
     L = n(451478),
     y = n(424218),
@@ -178,57 +178,57 @@ let H = {
 function V(e, t, n, i, r) {
     let l = H[t],
         a = null != l ? Object.keys(l) : [],
-        { unit: s, time: o } = (0, T.CI)(null != e ? e / 60 : null, a);
-    if (null != l && null != s) {
-        let e = l[s];
-        return null != e ? e(n, i, r, o) : null;
+        { unit: o, time: s } = (0, T.CI)(null != e ? e / 60 : null, a);
+    if (null != l && null != o) {
+        let e = l[o];
+        return null != e ? e(n, i, r, s) : null;
     }
     return null;
 }
 function F(e) {
     let { type: t, stage: n, percent: i, progress: r, total: l, secondsRemaining: a } = e,
-        s = B(l, n),
-        o = B(r, n);
+        o = B(l, n),
+        s = B(r, n);
     switch (n) {
         case j.f07.QUEUED:
             if (0 === r) return D.intl.string(D.t.RpfBqa);
             return D.intl.formatToPlainString(D.t.uNjCXV, {
                 percent: i,
-                progress: o,
-                total: s
+                progress: s,
+                total: o
             });
         case j.f07.PLANNING:
             return D.intl.formatToPlainString(D.t.sfuCUV, { percent: i });
         case j.f07.ALLOCATING_DISK:
             return D.intl.formatToPlainString(D.t.XigoJy, { percent: i });
         case j.f07.PATCHING:
-            return V(a, t, i, o, s);
+            return V(a, t, i, s, o);
         case j.f07.FINALIZING:
             return D.intl.formatToPlainString(D.t['6PHDUF'], { percent: i });
         case j.f07.PAUSING:
             return D.intl.formatToPlainString(D.t.vjxhWl, {
                 percent: i,
-                progress: o,
-                total: s
+                progress: s,
+                total: o
             });
         case j.f07.VERIFYING:
             return D.intl.formatToPlainString(D.t.bbilvr, {
                 percent: i,
-                progress: o,
-                total: s
+                progress: s,
+                total: o
             });
         case j.f07.POST_INSTALL_SCRIPTS:
             return D.intl.formatToPlainString(D.t.c5vRUl, {
                 percent: i,
-                progress: o,
-                total: s
+                progress: s,
+                total: o
             });
         case j.f07.REPAIRING:
-            if (t === j.vxO.REPAIRING) return V(a, t, i, o, s);
+            if (t === j.vxO.REPAIRING) return V(a, t, i, s, o);
             return D.intl.formatToPlainString(D.t.OCzETU, {
                 percent: i,
-                progress: o,
-                total: s
+                progress: s,
+                total: o
             });
     }
     throw Error('Invalid Dispatch stage');
@@ -296,16 +296,16 @@ class K extends r.PureComponent {
             if (null != i && null != r) {
                 let n = B(r, l),
                     a = B(i, l),
-                    s = Math.floor((t = P.xI(i, r)));
+                    o = Math.floor((t = P.xI(i, r)));
                 e =
                     l === j.f07.PAUSING
                         ? D.intl.formatToPlainString(D.t.vjxhWl, {
-                              percent: s,
+                              percent: o,
                               progress: a,
                               total: n
                           })
                         : D.intl.formatToPlainString(D.t.voT3Bg, {
-                              percent: s,
+                              percent: o,
                               progress: a,
                               total: n
                           });
@@ -345,7 +345,7 @@ class K extends r.PureComponent {
     }
     renderProgressPatching() {
         return (0, i.jsx)(O.Z, {
-            getHistoricalTotalBytes: x.Z.getHistoricalTotalBytesWritten,
+            getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesWritten,
             updateInterval: 5000,
             children: this.renderProgressPatchingBody
         });
@@ -393,22 +393,22 @@ class K extends r.PureComponent {
                     item: { state: n }
                 } = this.props;
                 if (null == n) return null;
-                let { stage: i, progress: r, total: l, type: a, readerProgress: s } = n;
+                let { stage: i, progress: r, total: l, type: a, readerProgress: o } = n;
                 if (null == r || null == l || null == i) return null;
-                let o = P.xI(r, l),
-                    c = P.xI(null != s ? s : 0, l),
+                let s = P.xI(r, l),
+                    c = P.xI(null != o ? o : 0, l),
                     d = (e[e.length - 1] / t) * 1000,
                     u = l - r,
                     h = F({
                         type: a,
                         stage: i,
-                        percent: Math.floor(o),
+                        percent: Math.floor(s),
                         progress: r,
                         total: l,
                         secondsRemaining: 0 !== d ? Math.max(1, u / d) : null
                     });
                 return this.renderStackedProgress({
-                    percents: [o, c],
+                    percents: [s, c],
                     message: h
                 });
             });
@@ -450,10 +450,10 @@ let q = () =>
                 (0, i.jsxs)(v.Z, {
                     align: v.Z.Align.CENTER,
                     children: [
-                        (0, i.jsx)(S.Z, {
+                        (0, i.jsx)(N.Z, {
                             game: e.application,
                             className: M.__invalid_gameIcon,
-                            size: S.Z.Sizes.SMALL
+                            size: N.Z.Sizes.SMALL
                         }),
                         (0, i.jsx)('div', {
                             className: M.nameCellText,
@@ -519,7 +519,7 @@ class ee extends r.PureComponent {
             (this.isUnmounted = !0);
     }
     render() {
-        let { applications: e, paused: t, isFocused: r, theme: l, analyticsContext: s } = this.props;
+        let { applications: e, paused: t, isFocused: r, theme: l, analyticsContext: o } = this.props;
         return 0 === e.length
             ? null
             : (0, i.jsxs)('div', {
@@ -531,20 +531,20 @@ class ee extends r.PureComponent {
                               (0, i.jsx)(R.Z, {
                                   className: a()(M.headerCell, M.networkProgress),
                                   title: D.intl.string(D.t.ytoXKi),
-                                  getHistoricalTotalBytes: x.Z.getHistoricalTotalBytesDownloaded,
+                                  getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesDownloaded,
                                   color: j.Ilk.GREEN_360,
                                   animate: r
                               }),
                               (0, i.jsx)(R.Z, {
                                   className: a()(M.headerCell, M.diskProgress),
                                   title: D.intl.string(D.t.SjohhI),
-                                  getHistoricalTotalBytes: x.Z.getHistoricalTotalBytesWritten,
+                                  getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesWritten,
                                   color: j.Ilk.BLUE_345,
                                   animate: r
                               })
                           ]
                       }),
-                      (0, i.jsx)(N.Z, {
+                      (0, i.jsx)(S.Z, {
                           hasHeader: !1,
                           columns: $,
                           data: e,
@@ -562,7 +562,7 @@ class ee extends r.PureComponent {
                                   return (
                                       (r = e),
                                       (l = t),
-                                      (a = s),
+                                      (a = o),
                                       void p.jW(r, async () => {
                                           let { default: e } = await n.e('98335').then(n.bind(n, 485292));
                                           return (t) =>
@@ -588,7 +588,7 @@ class ee extends r.PureComponent {
             w(
                 this,
                 'throttledUpdateHeight',
-                o().throttle(() => {
+                s().throttle(() => {
                     if (this.isUnmounted) return;
                     let { height: e, onHeightTallerThanHalfViewportChange: t } = this.props,
                         n = e > window.innerHeight / 2;
@@ -599,18 +599,18 @@ class ee extends r.PureComponent {
 }
 function et(e, t, n, i) {
     return e.reduce((e, r, l) => {
-        let { applicationId: a, branchId: s } = r,
-            o = n.getApplication(a),
-            c = i.getState(a, s);
+        let { applicationId: a, branchId: o } = r,
+            s = n.getApplication(a),
+            c = i.getState(a, o);
         return (
-            null != o &&
+            null != s &&
                 e.push({
-                    key: ''.concat(a, ':').concat(s),
+                    key: ''.concat(a, ':').concat(o),
                     applicationId: a,
-                    branchId: s,
+                    branchId: o,
                     state: c,
-                    application: o,
-                    libraryApplication: A.Z.getLibraryApplication(a, s),
+                    application: s,
+                    libraryApplication: x.Z.getLibraryApplication(a, o),
                     finished: t,
                     index: l
                 }),
@@ -619,10 +619,10 @@ function et(e, t, n, i) {
     }, []);
 }
 t.Z = (0, E.Z)(
-    c.ZP.connectStores([I.Z, x.Z, Z.Z, b.Z, L.Z], () => {
-        let e = et(Z.Z.activeItems, !1, I.Z, x.Z);
+    c.ZP.connectStores([I.Z, A.Z, Z.Z, b.Z, L.Z], () => {
+        let e = et(Z.Z.activeItems, !1, I.Z, A.Z);
         return {
-            applications: [...e, ...et(Z.Z.finishedItems, !0, I.Z, x.Z)],
+            applications: [...e, ...et(Z.Z.finishedItems, !0, I.Z, A.Z)],
             paused: Z.Z.paused,
             isFocused: L.Z.isFocused(),
             theme: b.Z.theme

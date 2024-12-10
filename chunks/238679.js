@@ -16,8 +16,8 @@ var i = n(392711),
     r = n.n(i),
     l = n(570140),
     a = n(317381),
-    s = n(594174),
-    o = n(823379),
+    o = n(594174),
+    s = n(823379),
     c = n(5192),
     d = n(863141),
     u = n(186901);
@@ -27,14 +27,14 @@ function h() {
     let { guildId: t, channelId: n } = e;
     return {
         participants: Array.from(e.userIds, (e) => {
-            let i = s.default.getUser(e);
+            let i = o.default.getUser(e);
             if (null == i) return;
             let r = (0, c.y)(t, n, i);
             return {
                 ...(0, d.Z)(i),
                 nickname: null != r ? r : void 0
             };
-        }).filter(o.lm)
+        }).filter(s.lm)
     };
 }
 let m = { [u.Gp.ANY]: [u.wE] },

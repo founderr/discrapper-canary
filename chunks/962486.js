@@ -8,8 +8,8 @@ var i = n(200651),
     r = n(192379),
     l = n(481060),
     a = n(322665),
-    s = n(17845),
-    o = n(374939),
+    o = n(17845),
+    s = n(374939),
     c = n(283293),
     d = n(726115),
     u = n(294330),
@@ -26,7 +26,7 @@ function g(e) {
         I = (0, d.a$)(t),
         C = (0, d.QW)(t),
         v = (0, d.lg)(t),
-        N = r.useMemo(() => {
+        S = r.useMemo(() => {
             let e = h ? 30 : n.length,
                 t = [];
             for (let a = 0; a < e; a++) {
@@ -49,12 +49,12 @@ function g(e) {
     return (0, i.jsxs)(c.Z, {
         onScroll: g,
         children: [
-            (0, i.jsx)(s.Z, {
+            (0, i.jsx)(o.Z, {
                 title: E,
                 description: I,
                 children: (0, i.jsx)(a.Z, {})
             }),
-            (0, i.jsxs)(o.Z, {
+            (0, i.jsxs)(s.Z, {
                 children: [
                     (0, i.jsx)(l.Heading, {
                         className: m.sectionTitle,
@@ -64,7 +64,7 @@ function g(e) {
                     }),
                     (0, i.jsx)('div', {
                         className: m.content,
-                        children: N
+                        children: S
                     })
                 ]
             })

@@ -3,8 +3,8 @@ var i = n(230711),
     r = n(782568),
     l = n(636449),
     a = n(317381),
-    s = n(611577),
-    o = n(812206),
+    o = n(611577),
+    s = n(812206),
     c = n(12647),
     d = n(49012),
     u = n(358085),
@@ -34,7 +34,7 @@ t.Z = {
                     c.Z.focus(e, !0);
                 }
                 let t = a.ZP.getCurrentEmbeddedActivity(),
-                    i = o.Z.getApplication(null == t ? void 0 : t.applicationId),
+                    i = s.Z.getApplication(null == t ? void 0 : t.applicationId),
                     h = null == t ? void 0 : t.channelId;
                 return new Promise((t) =>
                     (0, d.q)(
@@ -50,7 +50,7 @@ t.Z = {
                         },
                         void 0,
                         void 0,
-                        (0, s.z)({
+                        (0, o.z)({
                             application: i,
                             channelId: h
                         })

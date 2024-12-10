@@ -15,8 +15,8 @@ var l = t(442837),
     u = t(621853),
     f = t(172351),
     m = t(280885),
-    I = t(900927),
-    x = t(678738),
+    x = t(900927),
+    I = t(678738),
     p = t(179828),
     h = t(228168),
     v = t(388032),
@@ -26,11 +26,11 @@ function g(e) {
     let { user: t, currentUser: g, displayProfile: j, subsection: _, onClose: b } = e,
         { trackUserProfileAction: E } = (0, d.KZ)(),
         N = (0, l.e7)([c.Z], () => ((null == j ? void 0 : j.guildId) != null ? c.Z.getGuild(j.guildId) : null)),
-        T = (0, l.e7)([u.Z], () => {
+        S = (0, l.e7)([u.Z], () => {
             var e;
             return null === (e = u.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         }),
-        S = (0, l.e7)([s.Z, a.Z], () => s.Z.getChannel(a.Z.getChannelId()));
+        y = (0, l.e7)([s.Z, a.Z], () => s.Z.getChannel(a.Z.getChannelId()));
     return (0, i.jsxs)(o.ScrollerThin, {
         fade: !0,
         className: Z.scroller,
@@ -41,12 +41,12 @@ function g(e) {
                     userBio: j.bio,
                     setLineClamp: !1
                 }),
-            (null == T ? void 0 : T.popularApplicationCommandIds) != null &&
-                null != S &&
+            (null == S ? void 0 : S.popularApplicationCommandIds) != null &&
+                null != y &&
                 (0, i.jsx)(f.Z, {
-                    applicationId: T.id,
-                    commandIds: T.popularApplicationCommandIds,
-                    channel: S,
+                    applicationId: S.id,
+                    commandIds: S.popularApplicationCommandIds,
+                    channel: y,
                     guildId: null !== (n = null == j ? void 0 : j.guildId) && void 0 !== n ? n : void 0,
                     onClick: b
                 }),
@@ -57,15 +57,15 @@ function g(e) {
                     guild: N,
                     scrollIntoView: _ === h.Tb.ROLES
                 }),
-            (0, i.jsx)(x.Z, {
+            (0, i.jsx)(I.Z, {
                 heading: v.intl.string(v.t['A//N4u']),
-                children: (0, i.jsx)(I.Z, {
+                children: (0, i.jsx)(x.Z, {
                     userId: t.id,
                     guildId: null == j ? void 0 : j.guildId,
                     tooltipDelay: h.vB
                 })
             }),
-            (0, i.jsx)(x.Z, {
+            (0, i.jsx)(I.Z, {
                 heading: v.intl.string(v.t.PbMNh4),
                 scrollIntoView: _ === h.Tb.NOTE,
                 children: (0, i.jsx)(r.Z, {

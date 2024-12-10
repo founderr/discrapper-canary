@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = n(200651);
@@ -8,20 +8,20 @@ n(192379);
 var r = n(145641),
     l = n(322701),
     a = n(617015);
-function s(e) {
-    let { relationshipCount: t, statusSections: n, renderRow: s, searchQuery: o, sectionFilter: c, useReducedMotion: d, footer: u } = e;
+function o(e) {
+    let { relationshipCount: t, statusSections: n, renderRow: o, searchQuery: s, sectionFilter: c, useReducedMotion: d, footer: u } = e;
     return t >= a.nG
         ? (0, i.jsx)(r.Z, {
               statusSections: n,
-              renderRow: s,
-              searchQuery: o,
+              renderRow: o,
+              searchQuery: s,
               footer: u
           })
         : (0, i.jsx)(l.Z, {
               statusSections: n,
-              renderRow: s,
+              renderRow: o,
               sectionFilter: c,
-              searchQuery: o,
+              searchQuery: s,
               useReducedMotion: d,
               footer: u
           });

@@ -7,8 +7,8 @@ var i = n(200651),
     r = n(192379),
     l = n(34674),
     a = n(823379),
-    s = n(448021),
-    o = n(405411),
+    o = n(448021),
+    s = n(405411),
     c = n(215453),
     d = n(24746),
     u = n(669401),
@@ -22,12 +22,12 @@ function m(e) {
     return (0, i.jsxs)('div', {
         className: h.aboutContainer,
         children: [
-            (0, i.jsx)(s.Z, {
+            (0, i.jsx)(o.Z, {
                 application: t,
                 carouselItems: n
             }),
             (0, i.jsx)(d.Z, { application: t }),
-            (0, i.jsx)(o.Z, { application: t }),
+            (0, i.jsx)(s.Z, { application: t }),
             (0, i.jsx)(u.Z, { application: t }),
             (0, i.jsx)(c.Z, { application: t })
         ]

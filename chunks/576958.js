@@ -7,12 +7,12 @@ var i = n(200651);
 n(192379);
 var a = n(481060),
     r = n(463571),
-    l = n(744142),
-    o = n(981631),
+    o = n(744142),
+    l = n(981631),
     s = n(388032),
     c = n(535040);
 function d(e) {
-    let { applications: t, className: n, listingClassName: l, title: d, showViewAll: p, onViewOne: m, onViewAll: _ } = e;
+    let { applications: t, className: n, listingClassName: o, title: d, showViewAll: p, onViewOne: m, onViewAll: _ } = e;
     return (0, i.jsxs)('div', {
         className: n,
         children: [
@@ -41,9 +41,9 @@ function d(e) {
                     (0, i.jsx)(
                         r.Z,
                         {
-                            href: o.Z5c.APPLICATION_DIRECTORY_PROFILE(e.id),
+                            href: l.Z5c.APPLICATION_DIRECTORY_PROFILE(e.id),
                             children: (0, i.jsx)(u, {
-                                className: l,
+                                className: o,
                                 application: e,
                                 onClick: (t) => {
                                     let { mutualGuilds: n } = t;
@@ -62,5 +62,5 @@ function d(e) {
     });
 }
 function u(e) {
-    return (0, i.jsx)(l.Z, { ...e });
+    return (0, i.jsx)(o.Z, { ...e });
 }

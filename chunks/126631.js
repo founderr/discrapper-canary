@@ -23,15 +23,15 @@ let p = (0, c.hQ)(),
     }),
     S = (0, c.hQ)();
 function T(e) {
-    let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: T, currentBio: E, disabled: _ = !1 } = e,
-        [C, I] = s.useState(null != d ? d : E),
-        [f, N] = s.useState((0, a.JM)(C)),
+    let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: T, currentBio: E, disabled: C = !1 } = e,
+        [_, f] = s.useState(null != d ? d : E),
+        [I, N] = s.useState((0, a.JM)(_)),
         A = s.useRef(!1);
     return (
         s.useEffect(() => {
             if (void 0 === d) {
                 let e = (0, a.JM)(E);
-                I(E), N(e);
+                f(E), N(e);
             }
         }, [d, E]),
         (0, i.jsxs)(u.Z, {
@@ -39,7 +39,7 @@ function T(e) {
             titleId: p,
             description: h.intl.string(h.t.Bbw6AQ),
             errors: n,
-            disabled: _,
+            disabled: C,
             children: [
                 (0, i.jsx)(o.Z, {
                     'aria-describedby': S,
@@ -47,12 +47,12 @@ function T(e) {
                     innerClassName: g.bioTextArea,
                     maxCharacterCount: m.tPV,
                     onChange: function (e, t, n) {
-                        t !== C && (I(t), N(n), c(t));
+                        t !== _ && (f(t), N(n), c(t));
                     },
                     placeholder: T,
                     channel: x,
-                    textValue: C,
-                    richValue: f,
+                    textValue: _,
+                    richValue: I,
                     type: l.I.PROFILE_BIO_INPUT,
                     onBlur: () => {
                         A.current = !1;

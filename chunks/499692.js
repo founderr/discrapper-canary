@@ -2,8 +2,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    s = n(873199),
-    o = n(442837),
+    o = n(873199),
+    s = n(442837),
     c = n(481060),
     d = n(674588),
     u = n(368862),
@@ -14,13 +14,13 @@ var i = n(200651),
     f = n(318708);
 t.Z = function (e) {
     let { onSelectApplication: t } = e,
-        n = (0, o.e7)([m.default], () => m.default.appDirectoryIncludesInactiveCollections),
-        l = (0, o.e7)([u.Z], () => u.Z.getFetchState({ includesInactive: n })),
-        _ = (0, o.e7)([u.Z], () => u.Z.getCollections({ includesInactive: n }));
+        n = (0, s.e7)([m.default], () => m.default.appDirectoryIncludesInactiveCollections),
+        l = (0, s.e7)([u.Z], () => u.Z.getFetchState({ includesInactive: n })),
+        _ = (0, s.e7)([u.Z], () => u.Z.getCollections({ includesInactive: n }));
     r.useEffect(() => {
         d.bG({ includesInactive: n });
     }, [n]);
-    let E = r.useMemo(() => (null == _ ? void 0 : _.filter((e) => e.type !== s.o.GALLERY)), [_]);
+    let E = r.useMemo(() => (null == _ ? void 0 : _.filter((e) => e.type !== o.o.GALLERY)), [_]);
     return l === u.M.ERROR
         ? (0, i.jsx)('div', {
               className: f.errorContainer,

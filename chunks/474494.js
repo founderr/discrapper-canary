@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return w;
+        return y;
     }
 }),
     n(47120);
@@ -68,7 +68,7 @@ let O = new Map([
     ['PL', A],
     ['HR', _]
 ]);
-function w(e) {
+function y(e) {
     let { className: t, countryCode: n } = e;
     if (null == n || !O.has(n)) return null;
     let r = O.get(n);

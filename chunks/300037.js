@@ -18,8 +18,8 @@ var s = n(120356),
 t.Z = function (e) {
     let { className: t, guildId: n, boostingVariant: s } = e,
         E = (0, l.e7)([m.Z], () => m.Z.getGuild(n), [n]),
-        { fractionalState: _ } = (0, o.Z)(),
-        C = _ === x.a$.FP_ONLY;
+        { fractionalState: C } = (0, o.Z)(),
+        _ = C === x.a$.FP_ONLY;
     return null == E
         ? (0, i.jsx)('div', {
               className: r()(t, T.guildContainer),
@@ -82,7 +82,7 @@ t.Z = function (e) {
                             size: a.Button.Sizes.MEDIUM,
                             color: a.Button.Colors.PRIMARY,
                             buttonText: S.intl.string(S.t.aBHecH),
-                            disabled: C
+                            disabled: _
                         })
                       : (0, i.jsx)(a.Button, {
                             color: a.Button.Colors.PRIMARY,
@@ -93,7 +93,7 @@ t.Z = function (e) {
                                 });
                             },
                             size: a.Button.Sizes.MEDIUM,
-                            disabled: C,
+                            disabled: _,
                             children: S.intl.string(S.t.KLOhbG)
                         })
               ]

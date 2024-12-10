@@ -15,8 +15,8 @@ var i = t(200651),
     u = t(785717),
     f = t(687158),
     m = t(899007),
-    I = t(648052),
-    x = t(867176),
+    x = t(648052),
+    I = t(867176),
     p = t(280885),
     h = t(900927),
     v = t(678738),
@@ -27,15 +27,15 @@ var i = t(200651),
     b = t(228168),
     E = t(981631),
     N = t(388032),
-    T = t(171865),
-    S = t(64406),
-    y = t(893302);
+    S = t(171865),
+    y = t(64406),
+    T = t(893302);
 function P(e) {
     let { user: n, guildId: t, channelId: P, messageId: C, roleId: A, sessionId: L, transitionState: M, onClose: R, sourceAnalyticsLocations: O = [] } = e,
         U = t === E.ME ? void 0 : t,
         B = (0, f.ZP)(n.id, U),
-        { analyticsLocations: D } = (0, c.ZP)([...O, s.Z.SIMPLIFIED_PROFILE_MODAL]),
-        F = (0, u.ZB)({
+        { analyticsLocations: F } = (0, c.ZP)([...O, s.Z.SIMPLIFIED_PROFILE_MODAL]),
+        D = (0, u.ZB)({
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
             sourceSessionId: L,
@@ -47,12 +47,12 @@ function P(e) {
         G = l.createRef(),
         w = (0, r.Z)(G);
     return (0, i.jsx)(c.Gt, {
-        value: D,
+        value: F,
         children: (0, i.jsx)(u.Mt, {
-            value: F,
+            value: D,
             children: (0, i.jsxs)(o.ModalRoot, {
                 transitionState: M,
-                className: T.root,
+                className: S.root,
                 hideShadow: !0,
                 'aria-label': N.intl.string(N.t['3N/J2t']),
                 children: [
@@ -68,13 +68,13 @@ function P(e) {
                             }),
                             (0, i.jsxs)('header', {
                                 children: [
-                                    (0, i.jsx)(x.Z, {
+                                    (0, i.jsx)(I.Z, {
                                         user: n,
                                         displayProfile: B,
                                         profileType: b.y0.FULL_SIZE
                                     }),
                                     (0, i.jsx)('div', {
-                                        className: T.headerInner,
+                                        className: S.headerInner,
                                         children: (0, i.jsx)(m.Z, {
                                             user: n,
                                             displayProfile: B,
@@ -86,7 +86,7 @@ function P(e) {
                                 ]
                             }),
                             (0, i.jsxs)('div', {
-                                className: T.body,
+                                className: S.body,
                                 children: [
                                     (0, i.jsx)(g.Z, {
                                         user: n,
@@ -94,26 +94,26 @@ function P(e) {
                                         nickname: d.ZP.getName(U, P, n),
                                         pronouns: null == B ? void 0 : B.pronouns,
                                         nicknameVariant: 'heading-xl/bold',
-                                        tags: (0, i.jsx)(I.Z, {
+                                        tags: (0, i.jsx)(x.Z, {
                                             displayProfile: B,
                                             profileType: b.y0.FULL_SIZE,
                                             onClose: R
                                         })
                                     }),
                                     (0, i.jsx)(Z.Z.Overlay, {
-                                        className: T.overlay,
+                                        className: S.overlay,
                                         children: (0, i.jsxs)('div', {
-                                            className: y.container,
+                                            className: T.container,
                                             children: [
                                                 (0, i.jsx)(o.TabBar, {
-                                                    className: y.tabBar,
+                                                    className: T.tabBar,
                                                     type: 'top',
                                                     selectedItem: b.oh.BOT_INFO,
                                                     onItemSelect: E.dG4,
                                                     children: (0, i.jsx)(
                                                         o.TabBar.Item,
                                                         {
-                                                            className: y.tabBarItem,
+                                                            className: T.tabBarItem,
                                                             id: b.oh.BOT_INFO,
                                                             'aria-label': N.intl.string(N.t.jGoPJS),
                                                             children: (0, i.jsx)(o.Text, {
@@ -126,7 +126,7 @@ function P(e) {
                                                 }),
                                                 (0, i.jsxs)(o.ScrollerThin, {
                                                     fade: !0,
-                                                    className: S.scroller,
+                                                    className: y.scroller,
                                                     children: [
                                                         (0, i.jsx)(p.Z, {
                                                             userId: n.id,

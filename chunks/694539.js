@@ -16,7 +16,7 @@ var i = n(200651),
     S = n(658234),
     T = n(346537),
     E = n(830318);
-let _ = (e) => {
+let C = (e) => {
     let [t, n] = e.split(','),
         i = atob(n),
         s = t.split(';')[0],
@@ -28,8 +28,8 @@ let _ = (e) => {
 t.Z = (e) => {
     let { effect: t, back: n } = e,
         { upsertConfig: r } = (0, g.E)(),
-        C = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
-        [I, f] = s.useState(!0),
+        _ = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
+        [f, I] = s.useState(!0),
         N = s.useRef(null),
         [A, b] = s.useState(!1),
         [v, j] = s.useState(!1),
@@ -41,7 +41,7 @@ t.Z = (e) => {
         e.length > 0 &&
             D(
                 [...e].map((e) => {
-                    let t = _(e.base64),
+                    let t = C(e.base64),
                         n = URL.createObjectURL(t);
                     return (e.src = n), e;
                 })
@@ -54,7 +54,7 @@ t.Z = (e) => {
             config: { effects: P }
         });
     }, [P, y]),
-    null == C)
+    null == _)
         ? (0, i.jsx)('div', {})
         : (0, i.jsxs)('div', {
               className: S.root,
@@ -77,7 +77,7 @@ t.Z = (e) => {
                                       alt: '',
                                       width: 450
                                   }),
-                                  I &&
+                                  f &&
                                       (0, i.jsx)(x.Z, {
                                           config: {
                                               type: a.Z.PROFILE_EFFECT,
@@ -216,7 +216,7 @@ t.Z = (e) => {
                                           (0, i.jsx)(c.Button, {
                                               color: c.ButtonColors.BRAND,
                                               onClick: () => {
-                                                  f(!1), setTimeout(() => f(!0), 100);
+                                                  I(!1), setTimeout(() => I(!0), 100);
                                               },
                                               children: 'Replay Animation'
                                           }),
@@ -275,7 +275,7 @@ t.Z = (e) => {
                                               className: l()(S.userProfilePreview, S.preview),
                                               children: [
                                                   (0, i.jsx)(u.Z, {
-                                                      user: C,
+                                                      user: _,
                                                       pendingAvatar: void 0,
                                                       pendingProfileEffectId: null,
                                                       canUsePremiumCustomization: !0,

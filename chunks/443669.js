@@ -1,24 +1,24 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = n(200651),
     r = n(816988),
     l = n(331541),
     a = n(288914);
-function s(e) {
-    let { currentUser: t, onClose: n, setPopoutRef: s } = e,
-        { permanentEntryPointsEnabled: o } = (0, r.u)({ location: 'AccountProfilePopout' });
-    return o
+function o(e) {
+    let { currentUser: t, onClose: n, setPopoutRef: o } = e,
+        { permanentEntryPointsEnabled: s } = (0, r.u)({ location: 'AccountProfilePopout' });
+    return s
         ? (0, i.jsx)(a.Z, {
               currentUser: t,
               onClose: n,
-              setPopoutRef: s
+              setPopoutRef: o
           })
         : (0, i.jsx)(l.Z, {
               currentUser: t,
               onClose: n,
-              setPopoutRef: s
+              setPopoutRef: o
           });
 }

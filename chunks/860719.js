@@ -4,17 +4,17 @@ n.d(t, {
     }
 }),
     n(789020);
-var a = n(85025);
+var s = n(85025);
 function i(e) {
     let { flags: t } = e,
-        n = (0, a.O)(t),
+        n = (0, s.O)(t),
         i = null != n && ((null == n ? void 0 : n.messageContent) || (null == n ? void 0 : n.messageContentLimited)),
-        s = null != n && ((null == n ? void 0 : n.guildPresences) || (null == n ? void 0 : n.guildPresencesLimited)),
+        a = null != n && ((null == n ? void 0 : n.guildPresences) || (null == n ? void 0 : n.guildPresencesLimited)),
         r = null != n && ((null == n ? void 0 : n.guildMembers) || (null == n ? void 0 : n.guildMembersLimited));
     return {
         hasMessageContent: i,
-        hasGuildPresences: s,
+        hasGuildPresences: a,
         hasGuildMembers: r,
-        hasIntents: i || s || r
+        hasIntents: i || a || r
     };
 }

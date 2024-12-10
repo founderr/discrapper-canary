@@ -3,8 +3,8 @@ var i,
     r = n(392711),
     l = n.n(r),
     a = n(442837),
-    s = n(570140),
-    o = n(194359),
+    o = n(570140),
+    s = n(194359),
     c = n(81825),
     d = n(5254),
     u = n(441623),
@@ -30,14 +30,14 @@ function v(e, t, n) {
         e
     );
 }
-function N(e) {
+function S(e) {
     let t = E.default.getUser(e);
     return {
         user: t,
         usernameLower: null != t ? t.username.toLowerCase() : null
     };
 }
-function S(e) {
+function N(e) {
     return {
         status: f.Z.getStatus(e),
         isMobile: f.Z.isMobileOnline(e),
@@ -69,7 +69,7 @@ class b extends c.Z {
         super(), v(this, 'key', void 0), v(this, 'type', void 0), v(this, 'status', void 0), v(this, 'isMobile', void 0), v(this, 'activities', void 0), v(this, 'applicationStream', void 0), v(this, 'user', void 0), v(this, 'usernameLower', void 0), v(this, 'mutualGuildsLength', void 0), v(this, 'mutualGuilds', void 0), v(this, 'nickname', void 0), v(this, 'spam', void 0), v(this, 'giftIntentType', void 0), v(this, 'ignoredUser', void 0), (this.key = e.key), (this.type = e.type), (this.status = e.status), (this.activities = e.activities), (this.applicationStream = e.applicationStream), (this.user = e.user), (this.isMobile = e.isMobile), (this.usernameLower = e.usernameLower), (this.mutualGuildsLength = e.mutualGuildsLength), (this.mutualGuilds = e.mutualGuilds), (this.nickname = e.nickname), (this.spam = e.spam), (this.giftIntentType = e.giftIntentType), (this.ignoredUser = e.ignoredUser);
     }
 }
-class A {
+class x {
     reset() {
         let e = l().map(
                 _.Z.getRelationships(),
@@ -78,8 +78,8 @@ class A {
                         key: t,
                         type: e,
                         nickname: _.Z.getNickname(t),
-                        ...N(t),
                         ...S(t),
+                        ...N(t),
                         ...T(t),
                         spam: (0, h.A)({ location: 'friend-store' }) && _.Z.isSpam(t),
                         ignoredUser: _.Z.isIgnored(t),
@@ -93,15 +93,15 @@ class A {
                         key: e.key,
                         type: 99,
                         nickname: e.name,
-                        ...N(e.key),
                         ...S(e.key),
+                        ...N(e.key),
                         ...T(e.key)
                     })
             );
-        return new A(l().concat(e, t));
+        return new x(l().concat(e, t));
     }
     clone() {
-        return new A(this._rows);
+        return new x(this._rows);
     }
     update(e) {
         let t = !1;
@@ -163,23 +163,23 @@ class A {
         v(this, '_rows', void 0), (this._rows = e);
     }
 }
-let x = !0,
+let A = !0,
     Z = !1,
     L = I.pJs.ONLINE,
-    y = new A(),
+    y = new x(),
     P = !0,
     O = !1;
 function R() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    x && (e || (L !== I.pJs.ONLINE && L !== I.pJs.ADD_FRIEND)) && !Z && ((x = !1), (Z = !0), o.Z.fetchRelationships());
+    A && (e || (L !== I.pJs.ONLINE && L !== I.pJs.ADD_FRIEND)) && !Z && ((A = !1), (Z = !0), s.Z.fetchRelationships());
 }
 function j() {
-    if (((x = !0), P ? (Z = !1) : R(), (y = y.reset()), O)) return;
+    if (((A = !0), P ? (Z = !1) : R(), (y = y.reset()), O)) return;
     let e = y.getRelationshipCounts();
     L = 0 === e[I.OGo.FRIEND] ? (0 !== e[I.OGo.PENDING_INCOMING] ? I.pJs.PENDING : I.pJs.ADD_FRIEND) : I.pJs.ONLINE;
 }
 function D() {
-    y = P ? new A() : y.reset();
+    y = P ? new x() : y.reset();
 }
 function M(e) {
     return function () {
@@ -188,7 +188,7 @@ function M(e) {
 }
 class w extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, f.Z, E.default, g.Z, p.ZP, m.Z, d.Z), this.syncWith([_.Z], D), this.syncWith([d.Z], D), this.syncWith([u.Z], D), this.syncWith([E.default], M(N)), this.syncWith([f.Z, m.Z], M(S)), j();
+        this.waitFor(_.Z, f.Z, E.default, g.Z, p.ZP, m.Z, d.Z), this.syncWith([_.Z], D), this.syncWith([d.Z], D), this.syncWith([u.Z], D), this.syncWith([E.default], M(S)), this.syncWith([f.Z, m.Z], M(N)), j();
     }
     getState() {
         return {
@@ -200,7 +200,7 @@ class w extends (i = a.ZP.Store) {
     }
 }
 v(w, 'displayName', 'FriendsStore'),
-    (t.ZP = new w(s.Z, {
+    (t.ZP = new w(o.Z, {
         CONNECTION_OPEN: function () {
             j();
         },
@@ -215,7 +215,7 @@ v(w, 'displayName', 'FriendsStore'),
             Z = !1;
         },
         LOAD_RELATIONSHIPS_FAILURE: function () {
-            (x = !0), (Z = !0);
+            (A = !0), (Z = !0);
         },
         DRAWER_SELECT_TAB: function (e) {
             let { tab: t } = e;

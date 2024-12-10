@@ -1,10 +1,10 @@
 n.d(t, {
     l: function () {
-        return u;
+        return o;
     }
 });
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     l = n(709014);
 let a = {
         deafen: {
@@ -28,40 +28,40 @@ let a = {
             duration: 70
         }
     },
-    u = (e) => {
-        let t = i.useRef(null),
-            u = i.useRef(e);
-        u.current = e;
-        let o = i.useMemo(
+    o = (e) => {
+        let t = r.useRef(null),
+            o = r.useRef(e);
+        o.current = e;
+        let s = r.useMemo(
                 () => () => {
                     null != t.current && t.current.play(e);
                 },
                 [e]
             ),
-            s = i.useCallback(() => {
+            c = r.useCallback(() => {
                 if (null == t.current) return;
                 let n = 'deafen' === e ? 'hover_undeafened' : 'hover_deafened';
                 t.current.play(n);
             }, [e]),
-            c = i.useCallback(() => {
+            d = r.useCallback(() => {
                 if (null == t.current) return;
                 let n = 'deafen' === e ? 'hover_undeafened' : 'hover_deafened';
                 t.current.stopIfPlaying(n);
             }, [e]);
         return {
             events: {
-                onClick: o,
-                onMouseEnter: s,
-                onMouseLeave: c
+                onClick: s,
+                onMouseEnter: c,
+                onMouseLeave: d
             },
-            play: o,
-            Component: i.useCallback(
+            play: s,
+            Component: r.useCallback(
                 (e) =>
-                    (0, r.jsx)(l.L, {
+                    (0, i.jsx)(l.L, {
                         ...e,
                         src: () => n.e('68449').then(n.t.bind(n, 406785, 19)),
                         ref: t,
-                        initialAnimation: u.current,
+                        initialAnimation: o.current,
                         markers: a
                     }),
                 []

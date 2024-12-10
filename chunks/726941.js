@@ -2,8 +2,8 @@ var i = n(200651),
     r = n(192379),
     l = n(442837),
     a = n(894653),
-    s = n(322665),
-    o = n(17845),
+    o = n(322665),
+    s = n(17845),
     c = n(374939),
     d = n(283293),
     u = n(493646),
@@ -25,10 +25,10 @@ t.Z = function (e) {
         onScroll: f,
         ref: _,
         children: [
-            (0, i.jsx)(o.Z, {
+            (0, i.jsx)(s.Z, {
                 title: null !== (t = null == C ? void 0 : C.name) && void 0 !== t ? t : '',
                 description: v,
-                children: (0, i.jsx)(s.Z, {})
+                children: (0, i.jsx)(o.Z, {})
             }),
             (0, i.jsx)(c.Z, {
                 children:

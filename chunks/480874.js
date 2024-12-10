@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return x;
     }
 });
 var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    s = n(91192),
-    o = n(286379),
+    o = n(91192),
+    s = n(286379),
     c = n(481060),
     d = n(183126),
     u = n(209613),
@@ -22,17 +22,17 @@ var i = n(200651),
     I = n(355350),
     C = n(307947),
     v = n(125855),
-    N = n(687683),
-    S = n(981631),
+    S = n(687683),
+    N = n(981631),
     T = n(388032),
     b = n(300755);
-function A() {
+function x() {
     let e = r.useRef(null),
         t = (0, E.Z)(),
         n = (0, I.w)(),
         l = (0, g.V)(),
-        A = (0, d.N)(),
-        x = (0, u.Z)('message-requests-spam-list'),
+        x = (0, d.N)(),
+        A = (0, u.Z)('message-requests-spam-list'),
         { channelId: Z } = (0, _._)(),
         L = r.useCallback(() => {
             (0, c.showToast)((0, c.createToast)(T.intl.string(T.t.EDYbS0), c.ToastType.FAILURE));
@@ -42,25 +42,25 @@ function A() {
             y(t.map((e) => e.channel.id));
         }, [t, y]);
     r.useEffect(() => {
-        p.default.track(S.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), m.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
+        p.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), m.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_VIEW });
     }, []);
     let O = r.useCallback(
             (e) => {
                 var n, r;
-                let { row: s } = e,
-                    o = t[s],
-                    c = null === (r = t[s + 1]) || void 0 === r ? void 0 : null === (n = r.channel) || void 0 === n ? void 0 : n.id,
-                    d = o.channel.id;
+                let { row: o } = e,
+                    s = t[o],
+                    c = null === (r = t[o + 1]) || void 0 === r ? void 0 : null === (n = r.channel) || void 0 === n ? void 0 : n.id,
+                    d = s.channel.id;
                 return (0, i.jsx)(
                     v.Z,
                     {
-                        index: s,
+                        index: o,
                         className: a()({
                             [b.selected]: null != Z && Z === d,
                             [b.siblingSelected]: null != Z && Z === c
                         }),
-                        channel: o.channel,
-                        user: o.user,
+                        channel: s.channel,
+                        user: s.user,
                         hasSingleMessageRequest: l
                     },
                     d
@@ -76,7 +76,7 @@ function A() {
                         className: b.sectionTitle,
                         children: [
                             T.intl.format(T.t.C79Edn, { count: n }),
-                            A && n > 0
+                            x && n > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(c.Text, {
@@ -102,13 +102,13 @@ function A() {
                     },
                     'message-requests-spam-title'
                 ),
-            [n, P, A]
+            [n, P, x]
         );
     return 0 === t.length
-        ? (0, i.jsx)(C.Z, { section: N.pS.SPAM })
-        : (0, i.jsx)(s.bG, {
-              navigator: x,
-              children: (0, i.jsx)(s.SJ, {
+        ? (0, i.jsx)(C.Z, { section: S.pS.SPAM })
+        : (0, i.jsx)(o.bG, {
+              navigator: A,
+              children: (0, i.jsx)(o.SJ, {
                   children: (n) => {
                       let { ref: r, role: l, ...a } = n;
                       return (0, i.jsx)(
@@ -123,8 +123,8 @@ function A() {
                               },
                               paddingTop: 24,
                               paddingBottom: 24,
-                              sectionHeight: N.oi,
-                              rowHeight: N.WN,
+                              sectionHeight: S.oi,
+                              rowHeight: S.WN,
                               renderSection: R,
                               renderRow: O,
                               sections: [t.length],

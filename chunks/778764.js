@@ -22,13 +22,13 @@ var i = n(200651),
     S = n(15980),
     T = n(755733),
     E = n(981631),
-    _ = n(388032),
-    C = n(421333);
-function I(e) {
+    C = n(388032),
+    _ = n(421333);
+function f(e) {
     let { transitionState: t, onClose: l, ticket: o, challenge: c } = e,
         m = (0, d.Dt)(),
-        [S, I] = s.useState(''),
-        [f, N] = s.useState(!0),
+        [S, f] = s.useState(''),
+        [I, N] = s.useState(!0),
         [A, b] = s.useState(T.x.INIT),
         [v, j] = s.useState(''),
         [O, R] = s.useState(null),
@@ -39,7 +39,7 @@ function I(e) {
             try {
                 e = await t;
             } catch (e) {
-                g.Z.captureException(e), R(_.intl.string(_.t.xSCvBQ)), b(T.x.INIT);
+                g.Z.captureException(e), R(C.intl.string(C.t.xSCvBQ)), b(T.x.INIT);
                 return;
             }
             j(e), b(T.x.NAME);
@@ -49,17 +49,17 @@ function I(e) {
         'aria-labelledby': m,
         children: [
             (0, i.jsxs)(a.ModalHeader, {
-                className: C.header,
+                className: _.header,
                 separator: !1,
                 children: [
                     (0, i.jsxs)(a.Heading, {
                         id: m,
                         variant: 'heading-lg/semibold',
-                        children: [A === T.x.INIT && _.intl.string(_.t.vrOCCg), A === T.x.REGISTER && _.intl.string(_.t.wePEBA), A === T.x.NAME && _.intl.string(_.t['cY/IOj'])]
+                        children: [A === T.x.INIT && C.intl.string(C.t.vrOCCg), A === T.x.REGISTER && C.intl.string(C.t.wePEBA), A === T.x.NAME && C.intl.string(C.t['cY/IOj'])]
                     }),
                     (0, i.jsx)(a.ModalCloseButton, {
                         onClick: l,
-                        className: C.modalCloseButton
+                        className: _.modalCloseButton
                     })
                 ]
             }),
@@ -71,10 +71,10 @@ function I(e) {
                         id: T.x.INIT,
                         children: [
                             (0, i.jsxs)(a.ModalContent, {
-                                className: C.content,
+                                className: _.content,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: C.icon,
+                                        className: _.icon,
                                         children: (0, i.jsx)('img', {
                                             alt: '',
                                             src: n(773072)
@@ -92,7 +92,7 @@ function I(e) {
                                     (0, i.jsx)('div', {
                                         children: (0, i.jsx)(a.Text, {
                                             variant: 'text-md/normal',
-                                            children: _.intl.string(_.t.Lh5vTU)
+                                            children: C.intl.string(C.t.Lh5vTU)
                                         })
                                     })
                                 ]
@@ -100,7 +100,7 @@ function I(e) {
                             (0, i.jsx)(a.ModalFooter, {
                                 children: (0, i.jsx)(a.Button, {
                                     onClick: P,
-                                    children: _.intl.string(_.t.oibaQU)
+                                    children: C.intl.string(C.t.oibaQU)
                                 })
                             })
                         ]
@@ -109,10 +109,10 @@ function I(e) {
                         id: T.x.REGISTER,
                         children: [
                             (0, i.jsxs)(a.ModalContent, {
-                                className: C.content,
+                                className: _.content,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: C.icon,
+                                        className: _.icon,
                                         children: (0, i.jsx)('img', {
                                             alt: '',
                                             src: n(773072)
@@ -121,7 +121,7 @@ function I(e) {
                                     (0, i.jsx)('div', {
                                         children: (0, i.jsx)(a.Text, {
                                             variant: 'text-md/normal',
-                                            children: _.intl.string(_.t.aVMiX1)
+                                            children: C.intl.string(C.t.aVMiX1)
                                         })
                                     })
                                 ]
@@ -140,15 +140,15 @@ function I(e) {
                                         })
                                         .then(() => l())
                                         .catch(() => {
-                                            R(_.intl.string(_.t.fEptJC)), b(T.x.INIT);
+                                            R(C.intl.string(C.t.fEptJC)), b(T.x.INIT);
                                         });
                             },
                             children: [
                                 (0, i.jsxs)(a.ModalContent, {
-                                    className: C.content,
+                                    className: _.content,
                                     children: [
                                         (0, i.jsx)('div', {
-                                            className: C.icon,
+                                            className: _.icon,
                                             children: (0, i.jsx)('img', {
                                                 alt: '',
                                                 src: n(637163)
@@ -158,13 +158,13 @@ function I(e) {
                                             children: [
                                                 (0, i.jsx)(a.Text, {
                                                     variant: 'text-md/normal',
-                                                    children: _.intl.string(_.t['Jzd+z8'])
+                                                    children: C.intl.string(C.t['Jzd+z8'])
                                                 }),
                                                 (0, i.jsx)(a.TextInput, {
-                                                    className: C.input,
+                                                    className: _.input,
                                                     value: S,
                                                     onChange: (e) => {
-                                                        I(e), N(0 === e.length);
+                                                        f(e), N(0 === e.length);
                                                     },
                                                     autoFocus: !0,
                                                     minLength: 1
@@ -174,12 +174,12 @@ function I(e) {
                                     ]
                                 }),
                                 (0, i.jsxs)(a.ModalFooter, {
-                                    className: C.footer,
+                                    className: _.footer,
                                     children: [
                                         (0, i.jsx)(a.Button, {
                                             type: 'submit',
-                                            disabled: f,
-                                            children: _.intl.string(_.t['5dyZ1d'])
+                                            disabled: I,
+                                            children: C.intl.string(C.t['5dyZ1d'])
                                         }),
                                         (0, i.jsx)(a.Button, {
                                             look: a.Button.Looks.LINK,
@@ -187,7 +187,7 @@ function I(e) {
                                             onClick: () => {
                                                 b(T.x.INIT);
                                             },
-                                            children: _.intl.string(_.t['13/7kZ'])
+                                            children: C.intl.string(C.t['13/7kZ'])
                                         })
                                     ]
                                 })
@@ -199,17 +199,17 @@ function I(e) {
         ]
     });
 }
-function f(e) {
+function I(e) {
     let { onSelect: t, credential: s } = e;
     return (0, i.jsxs)(a.Menu, {
         navId: 'webauthn-credential-actions',
         onClose: o.Zy,
-        'aria-label': _.intl.string(_.t['+nrTbG']),
+        'aria-label': C.intl.string(C.t['+nrTbG']),
         onSelect: t,
         children: [
             (0, i.jsx)(a.MenuItem, {
                 id: 'webauthn-edit-credential-'.concat(s.id),
-                label: _.intl.string(_.t.bt75u7),
+                label: C.intl.string(C.t.bt75u7),
                 action: () => {
                     (0, a.openModalLazy)(async () => {
                         let { default: e } = await n.e('804').then(n.bind(n, 89616));
@@ -223,7 +223,7 @@ function f(e) {
             }),
             (0, i.jsx)(a.MenuItem, {
                 id: 'webauthn-delete-credential-'.concat(s.id),
-                label: _.intl.string(_.t['+xgS+P']),
+                label: C.intl.string(C.t['+xgS+P']),
                 color: 'danger',
                 action: () => {
                     (0, x.cT)(s);
@@ -242,27 +242,27 @@ function N() {
     }, [t]);
     let [n, r] = s.useState(!1);
     return (0, i.jsxs)(a.FormSection, {
-        title: _.intl.string(_.t.y7SXYW),
-        className: C.settings,
+        title: C.intl.string(C.t.y7SXYW),
+        className: _.settings,
         children: [
             (0, i.jsx)(a.FormText, {
                 type: a.FormText.Types.DESCRIPTION,
-                className: C.description,
-                children: _.intl.string(_.t.TMukAA)
+                className: _.description,
+                children: C.intl.string(C.t.TMukAA)
             }),
             e.length > 0 &&
                 (0, i.jsx)('div', {
-                    className: C.credentialList,
+                    className: _.credentialList,
                     children: e.map((e) =>
                         (0, i.jsx)(
                             c.Z,
                             {
                                 avatar: null,
                                 name: e.name,
-                                className: C.credentialItem,
+                                className: _.credentialItem,
                                 onContextMenu: (t) => {
                                     (0, o.vq)(t, (t) =>
-                                        (0, i.jsx)(f, {
+                                        (0, i.jsx)(I, {
                                             ...t,
                                             credential: e
                                         })
@@ -274,19 +274,19 @@ function N() {
                                     size: a.Button.Sizes.ICON,
                                     onClick: (t) => {
                                         (0, o.vq)(t, (t) =>
-                                            (0, i.jsx)(f, {
+                                            (0, i.jsx)(I, {
                                                 ...t,
                                                 credential: e
                                             })
                                         );
                                     },
-                                    'aria-label': _.intl.string(_.t['+nrTbG']),
-                                    innerClassName: C.credentialOptions,
+                                    'aria-label': C.intl.string(C.t['+nrTbG']),
+                                    innerClassName: _.credentialOptions,
                                     children: (0, i.jsx)(a.MoreVerticalIcon, {
                                         size: 'md',
                                         color: 'currentColor',
-                                        className: C.__invalid_overflowIcon,
-                                        colorClass: C.__invalid_overflowIconFg,
+                                        className: _.__invalid_overflowIcon,
+                                        colorClass: _.__invalid_overflowIconFg,
                                         'aria-hidden': !0
                                     })
                                 })
@@ -303,7 +303,7 @@ function N() {
                                 .then((e) => {
                                     let { ticket: t, challenge: n } = e;
                                     (0, a.openModal)((e) =>
-                                        (0, i.jsx)(I, {
+                                        (0, i.jsx)(f, {
                                             ...e,
                                             ticket: t,
                                             challenge: n
@@ -311,7 +311,7 @@ function N() {
                                     );
                                 })
                                 .catch((e) => {
-                                    e.message !== _.intl.string(_.t.N2yb9f) && g.Z.captureException(e);
+                                    e.message !== C.intl.string(C.t.N2yb9f) && g.Z.captureException(e);
                                 })
                                 .finally(() => {
                                     r(!1);
@@ -320,7 +320,7 @@ function N() {
                     submitting: n,
                     disabled: !m.Ae,
                     size: a.Button.Sizes.SMALL,
-                    children: _.intl.string(_.t.vrOCCg)
+                    children: C.intl.string(C.t.vrOCCg)
                 })
             })
         ]

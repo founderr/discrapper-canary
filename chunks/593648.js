@@ -22,10 +22,10 @@ var i = n(200651),
     S = n(688465),
     T = n(487419),
     E = n(197344),
-    _ = n(476756),
-    C = n(734934),
-    I = n(223683),
-    f = n(312400),
+    C = n(476756),
+    _ = n(734934),
+    f = n(223683),
+    I = n(312400),
     N = n(115345),
     A = n(392888),
     b = n(106371),
@@ -92,7 +92,7 @@ function H(e) {
 function z(e) {
     let { disabledSounds: t, disableAllSounds: n, notifyMessagesInSelectedChannel: r } = e,
         a = s.useRef(),
-        o = (0, C.p)(),
+        o = (0, _.p)(),
         c = s.useCallback((e, t) => {
             t.stopPropagation(), t.preventDefault(), null != a.current && a.current.stop(), (a.current = B.GN(e));
         }, []),
@@ -210,7 +210,7 @@ function z(e) {
                                   className: G.marginBottom20,
                                   children: U.intl.string(U.t.fgSHf3)
                               }),
-                              (0, i.jsx)(_.Z, {})
+                              (0, i.jsx)(C.Z, {})
                           ]
                       })
                     : null,
@@ -518,8 +518,8 @@ function X() {
         : null;
 }
 function Q() {
-    let e = f.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
-        { manuallyOpen: t } = f.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
+    let e = I.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
+        { manuallyOpen: t } = I.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
         n = (0, c.e7)([R.ZP], () => R.ZP.useNewNotifications),
         [r, a] = s.useState(!1);
     return e && (n || t)
@@ -565,7 +565,7 @@ function Q() {
                                       (0, i.jsx)(j.F, {
                                           setting: M.s6.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT,
                                           children: (0, i.jsx)(u.Button, {
-                                              onClick: I.KP,
+                                              onClick: f.KP,
                                               children: 'Restore most recent snapshot'
                                           })
                                       }),
@@ -601,7 +601,7 @@ function Q() {
 }
 async function J(e) {
     e(!0);
-    let t = await (0, I.Tn)();
+    let t = await (0, f.Tn)();
     0 === t.length
         ? await (0, N.oL)()
         : m.Z.show({
@@ -614,7 +614,7 @@ async function J(e) {
         e(!1);
 }
 function $(e) {
-    let t = (0, C.p)();
+    let t = (0, _.p)();
     return (0, i.jsx)(K, {
         ...e,
         focusMode: t

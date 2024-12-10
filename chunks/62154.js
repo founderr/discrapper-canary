@@ -15,8 +15,8 @@ var l = t(442837),
     u = t(681837),
     f = t(91433),
     m = t(944043),
-    I = t(502762),
-    x = t(530),
+    x = t(502762),
+    I = t(530),
     p = t(740628),
     h = t(643518),
     v = t(228168),
@@ -24,8 +24,8 @@ var l = t(442837),
     g = t(171865);
 function j(e) {
     var n;
-    let { user: t, currentUser: j, channelId: _, displayProfile: b, initialSection: E, initialSubsection: N, friendToken: T, onClose: S } = e,
-        y = (0, l.e7)([o.Z], () => o.Z.getRelationshipType(t.id)),
+    let { user: t, currentUser: j, channelId: _, displayProfile: b, initialSection: E, initialSubsection: N, friendToken: S, onClose: y } = e,
+        T = (0, l.e7)([o.Z], () => o.Z.getRelationshipType(t.id)),
         P = (0, h.Z)({
             user: t,
             currentUser: j,
@@ -38,7 +38,7 @@ function j(e) {
     return (0, i.jsxs)('div', {
         className: g.body,
         children: [
-            (0, i.jsx)(x.Z, {
+            (0, i.jsx)(I.Z, {
                 user: t,
                 profileType: v.y0.FULL_SIZE,
                 nickname: C,
@@ -48,17 +48,17 @@ function j(e) {
                 tags: (0, i.jsx)(a.Z, {
                     displayProfile: b,
                     profileType: v.y0.FULL_SIZE,
-                    onClose: S
+                    onClose: y
                 })
             }),
-            y === Z.OGo.PENDING_INCOMING &&
-                (0, i.jsx)(I.Z.Overlay, {
+            T === Z.OGo.PENDING_INCOMING &&
+                (0, i.jsx)(x.Z.Overlay, {
                     className: g.friendRequestBannerOverlay,
                     children: (0, i.jsx)(f.Z, {
                         user: t,
                         guildId: null !== (n = null == b ? void 0 : b.guildId) && void 0 !== n ? n : void 0,
                         channelId: _,
-                        friendToken: T,
+                        friendToken: S,
                         className: g.friendRequestBanner
                     })
                 }),
@@ -67,9 +67,9 @@ function j(e) {
                 A &&
                 (0, i.jsx)(d.Z, {
                     isPremiumUser: M,
-                    onInteraction: S
+                    onInteraction: y
                 }),
-            (0, i.jsx)(I.Z.Overlay, {
+            (0, i.jsx)(x.Z.Overlay, {
                 className: g.overlay,
                 children: (0, i.jsx)(p.Z, {
                     user: t,
@@ -78,7 +78,7 @@ function j(e) {
                     items: P,
                     initialSection: E,
                     initialSubsection: N,
-                    onClose: S
+                    onClose: y
                 })
             })
         ]

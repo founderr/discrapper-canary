@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return eC;
+        return e_;
     }
 }),
     n(47120),
@@ -23,10 +23,10 @@ var i,
     S = n(668781),
     T = n(924628),
     E = n(809206),
-    _ = n(230711),
-    C = n(241420),
-    I = n(600164),
-    f = n(651530),
+    C = n(230711),
+    _ = n(241420),
+    f = n(600164),
+    I = n(651530),
     N = n(247206),
     A = n(294602),
     b = n(778825),
@@ -110,9 +110,9 @@ function em() {
                       guildId: n.id,
                       onChange: i
                   }),
-                  (0, r.jsx)(C.ConnectedPrivacySettings, {
+                  (0, r.jsx)(_.ConnectedPrivacySettings, {
                       guild: n,
-                      ingress: C.PrivacySettingSurfaces.USER_SETTINGS_PRIVACY_SAFETY
+                      ingress: _.PrivacySettingSurfaces.USER_SETTINGS_PRIVACY_SAFETY
                   })
               ]
           });
@@ -397,7 +397,7 @@ function eE(e) {
         body: t
     });
 }
-class e_ extends l.PureComponent {
+class eC extends l.PureComponent {
     componentDidMount() {
         (0, T.I)(),
             (0, E.ol)().then(
@@ -691,7 +691,7 @@ class e_ extends l.PureComponent {
                             className: ed.marginBottom20,
                             children: ea.intl.format(ea.t.R5N31N, {
                                 onClick: () => {
-                                    _.Z.setSection(er.oAB.ACCOUNT);
+                                    C.Z.setSection(er.oAB.ACCOUNT);
                                 }
                             })
                         }),
@@ -737,7 +737,7 @@ class e_ extends l.PureComponent {
                     })
                 })),
                 (a = null)),
-            null != a && (a = (0, r.jsx)(I.Z, { children: a })),
+            null != a && (a = (0, r.jsx)(f.Z, { children: a })),
             (0, r.jsxs)(l.Fragment, {
                 children: [
                     (0, r.jsx)(p.FormTitle, {
@@ -943,7 +943,7 @@ class e_ extends l.PureComponent {
         };
     }
 }
-function eC() {
+function e_() {
     let e = (0, h.e7)([V.default], () => {
             let e = V.default.getCurrentUser();
             return d()(null != e, 'ConnectedUserSettingsPrivacySafety: currentUser cannot be undefined'), e;
@@ -955,13 +955,13 @@ function eC() {
         })),
         n = (0, h.e7)([y.Z], () => y.Z.getFetchError()),
         i = (0, h.e7)([U.Z], () => U.Z.getSubsection()),
-        s = (0, f.yh)(),
+        s = (0, I.yh)(),
         l = (0, j.Xo)({ location: 'web_user_privacy_and_safety_settings' }),
         { hasSearchResults: a, searchResults: o } = (0, ee.E)(),
         c = (0, O.p)(),
         u = (0, R.Z)(),
         { enabled: m } = (0, D.S)({ location: 'PrivacySafetySettings' });
-    return (0, r.jsx)(e_, {
+    return (0, r.jsx)(eC, {
         currentUser: e,
         defaultGuildsRestricted: q.iG.useSetting(),
         nonSpamRetrainingOptIn: q.kJ.useSetting(),

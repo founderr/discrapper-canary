@@ -1,13 +1,13 @@
 n.d(t, {
     $: function () {
-        return s;
+        return o;
     }
 });
 var i = n(544891),
     r = n(570140),
     l = n(34756),
     a = n(981631);
-async function s(e) {
+async function o(e) {
     r.Z.dispatch({
         type: 'APPLICATION_ACTIVITY_STATISTICS_FETCH_START',
         applicationId: e

@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    s = n(512722),
-    o = n.n(s),
+    o = n(512722),
+    s = n.n(o),
     c = n(481060),
     d = n(100527),
     u = n(600164),
@@ -18,7 +18,7 @@ var i = n(200651),
     I = n(981631),
     C = n(388032),
     v = n(730873);
-function N(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function N(e, t, n) {
         e
     );
 }
-let S = {
+let N = {
     HOST: 5,
     LISTENER: 4
 };
@@ -76,7 +76,7 @@ class T extends r.PureComponent {
                     className: v.party,
                     children: (0, i.jsx)(p.Z, {
                         users: this.props.party,
-                        max: this.isHost() ? S.HOST : S.LISTENER,
+                        max: this.isHost() ? N.HOST : N.LISTENER,
                         renderUser: this.renderPartyMember,
                         renderMoreUsers: this.renderPartyMemberOverflow
                     })
@@ -90,10 +90,10 @@ class T extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            N(this, 'renderPartyMember', (e, t) => {
+            S(this, 'renderPartyMember', (e, t) => {
                 let n;
                 if (null == e) return null;
-                let { host: l, onUserContextMenu: s } = this.props;
+                let { host: l, onUserContextMenu: o } = this.props;
                 return (
                     (n = (null == l ? void 0 : l.id) === e.id ? C.intl.string(C.t.N9bqDw) : C.intl.string(C.t.Z2Y4c3)),
                     (0, i.jsx)(
@@ -101,7 +101,7 @@ class T extends r.PureComponent {
                         {
                             preload: () => (0, h.Z)(e.id, e.getAvatarURL(void 0, 80)),
                             renderPopout: (t) => (
-                                o()(null != e, ''),
+                                s()(null != e, ''),
                                 (0, i.jsx)(m.Z, {
                                     ...t,
                                     userId: e.id,
@@ -114,7 +114,7 @@ class T extends r.PureComponent {
                                 (0, i.jsx)(c.Tooltip, {
                                     text: n,
                                     children: (n) => {
-                                        let { onMouseEnter: i, onMouseLeave: o } = n;
+                                        let { onMouseEnter: i, onMouseLeave: s } = n;
                                         return (0, r.createElement)(c.Avatar, {
                                             ...l,
                                             key: e.id,
@@ -123,8 +123,8 @@ class T extends r.PureComponent {
                                             className: a()(v.avatar, t),
                                             'aria-label': e.username,
                                             onMouseEnter: i,
-                                            onMouseLeave: o,
-                                            onContextMenu: (t) => void (null != e && (null == s || s(t, e)))
+                                            onMouseLeave: s,
+                                            onContextMenu: (t) => void (null != e && (null == o || o(t, e)))
                                         });
                                     }
                                 })
@@ -133,7 +133,7 @@ class T extends r.PureComponent {
                     )
                 );
             }),
-            N(this, 'renderPartyMemberOverflow', (e, t, n) => {
+            S(this, 'renderPartyMemberOverflow', (e, t, n) => {
                 let { renderOverflowPopout: r } = this.props;
                 return (0, i.jsx)(
                     c.Popout,

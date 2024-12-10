@@ -3,8 +3,8 @@ var i = n(392711),
     r = n.n(i),
     l = n(243814),
     a = n(447543),
-    s = n(287734),
-    o = n(703656),
+    o = n(287734),
+    s = n(703656),
     c = n(131704),
     d = n(592125),
     u = n(430824),
@@ -93,7 +93,7 @@ t.Z = {
                 socket: n,
                 args: { channel_id: i, timeout: r = 0, force: l = !1, navigate: a = !1 }
             } = e;
-            if (!i) return s.default.selectVoiceChannel(null), null;
+            if (!i) return o.default.selectVoiceChannel(null), null;
             let E = m.Z.getVoiceChannelId();
             if (null != E && E !== i && !1 === l) throw new f.Z({ errorCode: v.lTL.SELECT_VOICE_FORCE_REQUIRED }, 'User is already joined to a voice channel.');
             return t
@@ -112,7 +112,7 @@ t.Z = {
                         if ((0, g.rY)(t, p.Z, u.Z)) throw new f.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Channel is full');
                         if (!h.Z.can(v.Plq.CONNECT, t)) throw new f.Z({ errorCode: v.lTL.INVALID_PERMISSIONS }, 'Connect permission required to join channel');
                     }
-                    return s.default.selectVoiceChannel(t.id), a && (0, o.dL)(v.Z5c.CHANNEL(t.guild_id, t.id)), n;
+                    return o.default.selectVoiceChannel(t.id), a && (0, s.dL)(v.Z5c.CHANNEL(t.guild_id, t.id)), n;
                 });
         }
     },
@@ -156,9 +156,9 @@ t.Z = {
                       .then((e) => {
                           let [t, n] = e;
                           if (n.guild_id && !h.Z.can(v.Plq.VIEW_CHANNEL, t)) throw new f.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'No permission to see channel');
-                          return n.guild_id ? (0, o.dL)(v.Z5c.CHANNEL(n.guild_id, t.id)) : s.default.selectPrivateChannel(t.id), n;
+                          return n.guild_id ? (0, s.dL)(v.Z5c.CHANNEL(n.guild_id, t.id)) : o.default.selectPrivateChannel(t.id), n;
                       })
-                : ((0, o.uL)(v.Z5c.ME), null);
+                : ((0, s.uL)(v.Z5c.ME), null);
         }
     },
     [v.Etm.CREATE_CHANNEL_INVITE]: {

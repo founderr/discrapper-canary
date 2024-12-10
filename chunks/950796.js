@@ -7,8 +7,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    s = n(481060),
-    o = n(428548),
+    o = n(481060),
+    s = n(428548),
     c = n(679219),
     d = n(939039),
     u = n(358085),
@@ -22,21 +22,21 @@ let g = (e) => h.ZP.close(e),
     };
 function E(e) {
     let { windowKey: t, showDivider: n } = e,
-        r = (0, i.jsx)(s.Clickable, {
+        r = (0, i.jsx)(o.Clickable, {
             className: a()(p.winButton, p.winButtonClose),
             onClick: () => g(t),
             'aria-label': m.intl.string(m.t.ZdNUj4),
             tabIndex: -1,
-            children: (0, i.jsx)(o.Z, {})
+            children: (0, i.jsx)(s.Z, {})
         }),
-        l = (0, i.jsx)(s.Clickable, {
+        l = (0, i.jsx)(o.Clickable, {
             className: a()(p.winButton, p.winButtonMinMax),
             onClick: (e) => _(t, e),
             'aria-label': m.intl.string(m.t.G1u0hI),
             tabIndex: -1,
             children: (0, i.jsx)(c.Z, {})
         }),
-        u = (0, i.jsx)(s.Clickable, {
+        u = (0, i.jsx)(o.Clickable, {
             className: a()(p.winButton, p.winButtonMinMax),
             onClick: () => f(t),
             'aria-label': m.intl.string(m.t.CxOC4e),
@@ -49,7 +49,7 @@ function E(e) {
     });
 }
 function I(e) {
-    let { leading: t, title: n, trailing: l, windowKey: s, hasNotice: o } = e,
+    let { leading: t, title: n, trailing: l, windowKey: o, hasNotice: s } = e,
         c = (0, u.getPlatform)(),
         d = r.useCallback(() => {
             (0, u.isMac)() && h.ZP.maximize();
@@ -58,7 +58,7 @@ function I(e) {
         e.stopPropagation();
     }
     return (0, i.jsxs)('div', {
-        className: a()(p.bar, { [p.barWithNotice]: o }),
+        className: a()(p.bar, { [p.barWithNotice]: s }),
         onDoubleClick: d,
         children: [
             (0, i.jsx)('div', {
@@ -77,7 +77,7 @@ function I(e) {
                     l,
                     c === u.PlatformTypes.WINDOWS &&
                         (0, i.jsx)(E, {
-                            windowKey: s,
+                            windowKey: o,
                             showDivider: null != l
                         })
                 ]

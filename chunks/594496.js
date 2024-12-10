@@ -21,10 +21,10 @@ var s = n(512722),
     S = n(621853),
     T = n(271383),
     E = n(594174),
-    _ = n(74538),
-    C = n(51144),
-    I = n(18438),
-    f = n(778825),
+    C = n(74538),
+    _ = n(51144),
+    f = n(18438),
+    I = n(778825),
     N = n(52597),
     A = n(430131),
     b = n(133484),
@@ -46,8 +46,8 @@ function O(e) {
             pendingThemeColors: F,
             errors: M,
             guild: k
-        } = (0, l.cj)([f.Z], () => {
-            let { pendingAvatar: e, pendingNickname: t, pendingBio: n, pendingPronouns: i, pendingBanner: s, pendingThemeColors: r } = f.Z.getAllPending();
+        } = (0, l.cj)([I.Z], () => {
+            let { pendingAvatar: e, pendingNickname: t, pendingBio: n, pendingPronouns: i, pendingBanner: s, pendingThemeColors: r } = I.Z.getAllPending();
             return {
                 pendingAvatar: e,
                 pendingNickname: t,
@@ -55,8 +55,8 @@ function O(e) {
                 pendingBio: n,
                 pendingPronouns: i,
                 pendingThemeColors: r,
-                errors: f.Z.getErrors(),
-                guild: f.Z.getGuild()
+                errors: I.Z.getErrors(),
+                guild: I.Z.getGuild()
             };
         }),
         w = null != R ? R : k;
@@ -64,7 +64,7 @@ function O(e) {
     let U = (0, o.gS)(w.id),
         V = (0, l.e7)([T.ZP], () => (null == w.id ? null : T.ZP.getMember(w.id, P.id))),
         G = (0, l.e7)([S.Z], () => S.Z.getGuildMemberProfile(P.id, w.id)),
-        Y = _.ZP.canUsePremiumProfileCustomization(P),
+        Y = C.ZP.canUsePremiumProfileCustomization(P),
         H = (0, c.gd)(D, null == V ? void 0 : V.avatar),
         z = (0, c.f$)(B, null == G ? void 0 : G.banner),
         W = (0, N.p)(F, null == G ? void 0 : G.themeColors),
@@ -80,7 +80,7 @@ function O(e) {
                 A.Z,
                 {
                     errors: null !== (s = null == M ? void 0 : M.nick) && void 0 !== s ? s : null == U ? void 0 : U.nick,
-                    username: C.ZP.getName(P),
+                    username: _.ZP.getName(P),
                     pendingNick: y,
                     currentNick: null == V ? void 0 : V.nick,
                     guild: w
@@ -123,7 +123,7 @@ function O(e) {
                                 ]
                             }),
                             showRemoveAvatarButton: H,
-                            onAvatarChange: (e) => X(e, null == V ? void 0 : V.avatar, I.I5),
+                            onAvatarChange: (e) => X(e, null == V ? void 0 : V.avatar, f.I5),
                             errors: null == M ? void 0 : M.avatar,
                             guildId: w.id,
                             disabled: !Y
@@ -181,7 +181,7 @@ function O(e) {
                         {
                             showRemoveBannerButton: z,
                             errors: null == M ? void 0 : M.banner,
-                            onBannerChange: (e) => X(e, null == G ? void 0 : G.banner, I.g_),
+                            onBannerChange: (e) => X(e, null == G ? void 0 : G.banner, f.g_),
                             guildId: null == w ? void 0 : w.id,
                             disabled: !Y
                         },

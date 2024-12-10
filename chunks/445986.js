@@ -1,38 +1,38 @@
 n.d(t, {
     Q: function () {
-        return h;
+        return u;
     }
 }),
     n(653041),
     n(47120);
-var a = n(200651),
+var s = n(200651),
     i = n(192379),
-    s = n(481060),
+    a = n(481060),
     r = n(33122),
     l = n(761705),
     o = n(9807),
-    d = n(843445),
-    c = n(981631),
-    u = n(388032);
-function h(e) {
+    h = n(843445),
+    d = n(981631),
+    c = n(388032);
+function u(e) {
     return ''.concat(e.split('?')[0], '?size=').concat(2048);
 }
 let p = (e) => {
     let { index: t, items: n, ...i } = e,
-        s = n[t],
+        a = n[t],
         r = 0,
         o = [];
     for (let e of n)
-        if (e.type === c.s9s.IMG) {
-            let { width: t, height: n, src: a } = e;
-            e === s && (r = o.length),
+        if (e.type === d.s9s.IMG) {
+            let { width: t, height: n, src: s } = e;
+            e === a && (r = o.length),
                 o.push({
-                    src: h(a),
+                    src: u(s),
                     width: t,
                     height: n
                 });
         }
-    return (0, a.jsx)(l.Z, {
+    return (0, s.jsx)(l.Z, {
         ...i,
         items: o,
         startWith: r
@@ -41,8 +41,8 @@ let p = (e) => {
 class m extends i.Component {
     render() {
         let { pageSize: e, ...t } = this.props,
-            n = e === d.b.SMALL ? o.Z : r.Z;
-        return (0, a.jsx)(n, {
+            n = e === h.b.SMALL ? o.Z : r.Z;
+        return (0, s.jsx)(n, {
             ...t,
             onCurrentItemClick: this.handleCurrentItemClick
         });
@@ -53,14 +53,14 @@ class m extends i.Component {
             (t = this),
             (n = 'handleCurrentItemClick'),
             (i = (e, t) => {
-                e.type === c.s9s.IMG &&
-                    !(0, s.hasAnyModalOpen)() &&
-                    (0, s.openModal)((e) =>
-                        (0, a.jsx)(s.ModalRoot, {
-                            size: s.ModalSize.DYNAMIC,
-                            'aria-label': u.intl.string(u.t.X4IxWF),
+                e.type === d.s9s.IMG &&
+                    !(0, a.hasAnyModalOpen)() &&
+                    (0, a.openModal)((e) =>
+                        (0, s.jsx)(a.ModalRoot, {
+                            size: a.ModalSize.DYNAMIC,
+                            'aria-label': c.intl.string(c.t.X4IxWF),
                             ...e,
-                            children: (0, a.jsx)(p, {
+                            children: (0, s.jsx)(p, {
                                 ...e,
                                 index: t,
                                 items: this.props.items

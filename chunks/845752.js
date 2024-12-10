@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = n(392711),
     r = n.n(i),
     l = n(243814),
     a = n(186901),
-    s = n(981631);
-function o(e, t) {
+    o = n(981631);
+function s(e, t) {
     return {
-        [s.zMe.VOICE_SETTINGS_UPDATE]: {
+        [o.zMe.VOICE_SETTINGS_UPDATE]: {
             scope: {
                 [a.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
             },
@@ -20,7 +20,7 @@ function o(e, t) {
                 return !r().isEqual(l, n) && i(l), l;
             }
         },
-        [s.zMe.VOICE_SETTINGS_UPDATE_2]: {
+        [o.zMe.VOICE_SETTINGS_UPDATE_2]: {
             scope: a.lH,
             handler(e) {
                 let { socket: n } = e;

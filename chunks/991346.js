@@ -36,10 +36,10 @@ var i = n(192379),
     S = n(223639),
     T = n(160913),
     E = n(725727),
-    _ = n(977156),
-    C = n(922611),
-    I = n(921157),
-    f = n(237292),
+    C = n(977156),
+    _ = n(922611),
+    f = n(921157),
+    I = n(237292),
     N = n(314897),
     A = n(283595),
     b = n(699516),
@@ -75,7 +75,7 @@ function w(e) {
             },
             {
                 divider: !0,
-                settings: [F.s6.CHANGELOG, F.s6.MERCHANDISE, F.s6.HYPESQUAD, F.s6.TOWNHALL, F.s6.EXPERIMENTS, F.s6.DEVELOPER_OPTIONS, F.s6.HOTSPOT_OPTIONS, F.s6.DISMISSIBLE_CONTENT_OPTIONS, F.s6.PAYMENT_FLOW_MODALS, F.s6.DESIGN_SYSTEMS, F.s6.TEXT_PLAYGROUND, F.s6.TEXT_COMPONENTS, F.s6.INTL_TESTING, F.s6.PROFILE_EFFECTS_PREVIEW_TOOL, F.s6.WEB_SETTING_TREE_TOOL, F.s6.QUEST_PREVIEW_TOOL]
+                settings: [F.s6.CHANGELOG, F.s6.MERCHANDISE, F.s6.HYPESQUAD, F.s6.TOWNHALL, F.s6.EXPERIMENTS, F.s6.DEVELOPER_OPTIONS, F.s6.HOTSPOT_OPTIONS, F.s6.DISMISSIBLE_CONTENT_OPTIONS, F.s6.PAYMENT_FLOW_MODALS, F.s6.PAYMENT_COMPONENTS, F.s6.DESIGN_SYSTEMS, F.s6.TEXT_PLAYGROUND, F.s6.TEXT_COMPONENTS, F.s6.INTL_TESTING, F.s6.PROFILE_EFFECTS_PREVIEW_TOOL, F.s6.WEB_SETTING_TREE_TOOL, F.s6.QUEST_PREVIEW_TOOL]
             },
             {
                 divider: !0,
@@ -115,9 +115,9 @@ function U() {
         Y = (0, B.eA)({ location: 'settings' }),
         H = (0, h.Xo)({ location: 'settings' }),
         z = null !== (n = null === (e = j.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== n && n,
-        W = (0, f.y0)({ location: 'settings' }),
+        W = (0, I.y0)({ location: 'settings' }),
         K = (0, c.Q)(),
-        q = (0, _.Zy)({ location: M.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
+        q = (0, C.Zy)({ location: M.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         { enabled: X } = S.Z.useExperiment({ location: 'UserSettingsInventory' }, { autoTrackExposure: !0 }),
         Q = (0, s.e7)([A.Z], () => A.Z.hasLibraryApplication()),
         J = (0, s.e7)([N.default], () => N.default.hasTOTPEnabled()),
@@ -126,8 +126,8 @@ function U() {
         et = (0, R._p)({ location: 'settings-renderer-utils-web' }),
         { hypeSquadRemoved: en } = m.Z.useExperiment({ location: 'settings' }),
         ei = null === (i = (0, p.Z)()) || void 0 === i || i,
-        es = (null === (t = (0, I.s)()) || void 0 === t ? void 0 : t.length) > 0,
-        er = (0, C.Do)({ location: 'settings_renderer_utils' }),
+        es = (null === (t = (0, f.s)()) || void 0 === t ? void 0 : t.length) > 0,
+        er = (0, _.Do)({ location: 'settings_renderer_utils' }),
         { hasBlockedUsers: el, hasIgnoredUsers: ea } = (0, s.cj)([b.Z], () => ({
             hasBlockedUsers: b.Z.getBlockedIDs().length > 0,
             hasIgnoredUsers: b.Z.getIgnoredIDs().length > 0

@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i,
     r,
     l,
     a,
-    s = n(358085);
-function o(e) {
-    if ((0, s.isIOS)()) return e;
-    if (!(0, s.isAndroid)()) return -1;
+    o = n(358085);
+function s(e) {
+    if ((0, o.isIOS)()) return e;
+    if (!(0, o.isAndroid)()) return -1;
     switch (e) {
         case 0:
             return 0;

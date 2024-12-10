@@ -8,8 +8,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    s = n(442837),
-    o = n(481060),
+    o = n(442837),
+    s = n(481060),
     c = n(493683),
     d = n(239091),
     u = n(317381),
@@ -23,12 +23,12 @@ var i = n(200651),
     I = n(82295),
     C = n(740492),
     v = n(973616),
-    N = n(592125),
-    S = n(626135),
+    S = n(592125),
+    N = n(626135),
     T = n(823379),
     b = n(404295),
-    A = n(728345),
-    x = n(812206),
+    x = n(728345),
+    A = n(812206),
     Z = n(981631),
     L = n(388032),
     y = n(914333),
@@ -39,21 +39,21 @@ async function O(e, t, n) {
     if (null == i)
         try {
             var r, l, a;
-            i = null !== (a = null === (r = x.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = v.ZP.createFromServer(await (0, A.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
+            i = null !== (a = null === (r = A.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = v.ZP.createFromServer(await (0, x.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
         } catch (e) {
             t(void 0);
             return;
         }
     if (null != i) {
         let r,
-            l = null == N.Z.getDMFromUserId(i.id);
+            l = null == S.Z.getDMFromUserId(i.id);
         try {
             r = await c.Z.openPrivateChannel([i.id], !1, !1, m.Z.APP_DMS_QUICK_LAUNCHER);
         } catch (e) {
             t(void 0);
         }
         if (
-            (S.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
+            (N.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
                 application_id: e.id,
                 is_new_dm: l,
                 channel_id: r
@@ -84,19 +84,19 @@ async function O(e, t, n) {
 }
 function R(e) {
     let { application: t, loadingAppId: n, setLoadingAppId: r, botUserId: l, analyticsLocations: c } = e,
-        d = (0, s.e7)([N.Z], () => N.Z.getDMFromUserId(l)),
-        h = (0, s.e7)([u.ZP], () => u.ZP.getCurrentEmbeddedActivity()),
+        d = (0, o.e7)([S.Z], () => S.Z.getDMFromUserId(l)),
+        h = (0, o.e7)([u.ZP], () => u.ZP.getCurrentEmbeddedActivity()),
         m = null != h && h.applicationId === t.id && h.channelId === d,
         p = n === t.id,
         g = null != n;
-    return (0, i.jsx)(o.Clickable, {
+    return (0, i.jsx)(s.Clickable, {
         className: a()(y.clickable, { [y.disabledClickable]: g }),
         onClick: () => (m || g ? null : O(t, r, c)),
         'aria-label': L.intl.formatToPlainString(L.t['zLhr9/'], {
             applicationName: t.name,
             applicationDescription: t.description
         }),
-        children: (0, i.jsx)(o.Tooltip, {
+        children: (0, i.jsx)(s.Tooltip, {
             tooltipContentClassName: y.tooltipContent,
             text: t.name,
             children: (e) => {
@@ -112,8 +112,8 @@ function R(e) {
                             rendersPlaceholder: !0
                         }),
                         p || m
-                            ? (0, i.jsx)(o.Spinner, {
-                                  type: o.Spinner.Type.PULSING_ELLIPSIS,
+                            ? (0, i.jsx)(s.Spinner, {
+                                  type: s.Spinner.Type.PULSING_ELLIPSIS,
                                   className: y.spinner,
                                   itemClassName: m ? y.spinnerInnerRunning : void 0
                               })
@@ -159,8 +159,8 @@ function M() {
             includeAuthorizedAppsAndFetch: !1
         }),
         [n, l] = r.useState(void 0),
-        { analyticsLocations: o } = (0, p.ZP)(m.Z.APP_DMS_QUICK_LAUNCHER),
-        c = (0, s.e7)([C.ZP], () => C.ZP.showPlayAgain) && e && t.length > 0,
+        { analyticsLocations: s } = (0, p.ZP)(m.Z.APP_DMS_QUICK_LAUNCHER),
+        c = (0, o.e7)([C.ZP], () => C.ZP.showPlayAgain) && e && t.length > 0,
         [d, u] = r.useState(!1),
         h = r.useMemo(
             () =>
@@ -172,7 +172,7 @@ function M() {
         );
     return (r.useLayoutEffect(() => {
         var e;
-        if (!d && !!c) u(!0), S.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = h.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
+        if (!d && !!c) u(!0), N.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = h.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
     }, [c, h, d]),
     c)
         ? (0, i.jsx)(I.Z, {
@@ -192,7 +192,7 @@ function M() {
                           frecentApps: h,
                           loadingAppId: n,
                           setLoadingAppId: l,
-                          analyticsLocations: o
+                          analyticsLocations: s
                       })
                   ]
               })

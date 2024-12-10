@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return _;
     }
 }),
     n(47120),
@@ -22,7 +22,7 @@ var i = n(200651),
     S = n(981631),
     T = n(388032),
     E = n(565696);
-let _ = (e) => {
+let C = (e) => {
     (0, o.openModalLazy)(async () => {
         let { default: t } = await n.e('25120').then(n.bind(n, 926281));
         return (n) =>
@@ -32,25 +32,25 @@ let _ = (e) => {
             });
     });
 };
-function C() {
+function _() {
     let e = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
         { currentHarvestType: t, awaitingInitialRequest: n } = (0, a.cj)([g.Z], () => ({
             currentHarvestType: g.Z.harvestType,
             awaitingInitialRequest: g.Z.requestingHarvest
         })),
-        [r, C] = s.useState(!1);
+        [r, _] = s.useState(!1);
     if (null == e) return null;
-    let I = (0, m.$6)(t, e) || n,
-        f = I && null != t,
+    let f = (0, m.$6)(t, e) || n,
+        I = f && null != t,
         N = () => {
-            _({
+            C({
                 header: T.intl.string(T.t.jxXMEx),
                 body: T.intl.format(T.t.fSv59f, { helpdeskArticle: u.Z.getArticleURL(S.BhN.GDPR_PACKAGE_CONTENTS) }),
                 confirmText: T.intl.string(T.t.NYgNg4),
                 cancelText: T.intl.string(T.t.jpVjsr),
                 confirmButtonColor: o.Button.Colors.BRAND,
                 onConfirm: (e) => {
-                    C(!0),
+                    _(!0),
                         (0, h.h)(e)
                             .then(
                                 (e) => {
@@ -67,7 +67,7 @@ function C() {
                                         body: T.intl.string(T.t['0F5Jys'])
                                     })
                             )
-                            .finally(() => C(!1));
+                            .finally(() => _(!1));
                 }
             });
         };
@@ -78,7 +78,7 @@ function C() {
                 header: T.intl.string(T.t.XAHCgI),
                 description: T.intl.format(T.t.P3kNfn, { helpdeskArticle: u.Z.getArticleURL(S.BhN.GDPR_REQUEST_DATA) })
             }),
-            f
+            I
                 ? (0, i.jsx)(o.Card, {
                       className: E.card,
                       children: (0, i.jsx)(o.Text, {
@@ -93,7 +93,7 @@ function C() {
                           children: (e) => {
                               let { onMouseEnter: t, onMouseLeave: s } = e;
                               return (0, i.jsx)(o.Button, {
-                                  disabled: I,
+                                  disabled: f,
                                   onClick: N,
                                   onMouseEnter: t,
                                   onMouseLeave: s,

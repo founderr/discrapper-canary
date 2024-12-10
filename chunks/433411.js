@@ -18,21 +18,21 @@ var i = n(200651),
     p = n(388032),
     x = n(887669);
 function S(e) {
-    let { user: t, guild: n, className: r, sectionTitle: m, forcedDivider: S = !1, withTutorial: E = !1, isTryItOutFlow: _ = !1 } = e,
-        { analyticsLocations: C } = (0, o.ZP)(),
-        I = null != n,
-        { userAvatarDecoration: f, guildAvatarDecoration: N, pendingAvatarDecoration: A, pendingErrors: b } = (0, h.$U)(t, n),
+    let { user: t, guild: n, className: r, sectionTitle: m, forcedDivider: S = !1, withTutorial: E = !1, isTryItOutFlow: C = !1 } = e,
+        { analyticsLocations: _ } = (0, o.ZP)(),
+        f = null != n,
+        { userAvatarDecoration: I, guildAvatarDecoration: N, pendingAvatarDecoration: A, pendingErrors: b } = (0, h.$U)(t, n),
         v = (0, u.Z)('enable_avatar_decoration_uploads'),
         j = s.useCallback(
             () =>
                 (0, d.ps)({
-                    analyticsLocations: C,
-                    isTryItOutFlow: _,
+                    analyticsLocations: _,
+                    isTryItOutFlow: C,
                     guild: n
                 }),
-            [C, _, n]
+            [_, C, n]
         ),
-        O = _ || void 0 !== A ? null != A : (I ? N : f) != null,
+        O = C || void 0 !== A ? null != A : (f ? N : I) != null,
         R = E ? a.ShinyButton : a.Button;
     return (0, i.jsxs)(g.Z, {
         className: r,

@@ -1,6 +1,6 @@
 n.d(t, {
     q: function () {
-        return w;
+        return y;
     }
 }),
     n(47120),
@@ -38,15 +38,15 @@ var o = n(149765),
     B = n(864631),
     M = n(981631);
 let O = new T.Z('CacheStore'),
-    w = !1,
     y = !1,
+    w = !1,
     k = 'initializing',
     L = 0,
     U = !1,
     D = !1,
     H = !1;
 function V(e) {
-    O.log('Clearing cache store'), (L = Date.now()), d.K.remove(M.FsG), d.K.remove(M.ihW), d.K.remove(M.O42), (k = 'no-cache'), 'CLEAR_CACHES' === e.type && e.preventWritingCachesAgainThisSession && (y = !0);
+    O.log('Clearing cache store'), (L = Date.now()), d.K.remove(M.FsG), d.K.remove(M.ihW), d.K.remove(M.O42), (k = 'no-cache'), 'CLEAR_CACHES' === e.type && e.preventWritingCachesAgainThisSession && (w = !0);
 }
 async function G(e, t, n) {
     let i = performance.now();
@@ -92,7 +92,7 @@ async function F(e, t, n) {
         h = null == e ? Promise.resolve({}) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_settings', () => x.Z.getAll(e)),
         v = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: read_states', () => E.Z.getAll(e)),
         T = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_guild_settings', () => b.Z.getAll(e)),
-        [[S, j], P, Z, M, w, y, k] = await Promise.all([m, f, p, _, h, v, T]),
+        [[S, j], P, Z, M, y, w, k] = await Promise.all([m, f, p, _, h, v, T]),
         L = performance.now() - g;
     if ((O.verbose('cache loaded in '.concat(L, 'ms (channel_history ').concat(S, 'ms)')), null == j)) return (0, B.Z)('database:history_cache_null'), O.verbose('finished without dispatching CACHE_LOADED'), [!1, null, 0];
     {
@@ -111,9 +111,9 @@ async function F(e, t, n) {
                         users: [...j.users],
                         messages: null == j.channelId ? {} : { [j.channelId]: j.messages },
                         guildMembers: null == j.guildId ? {} : { [j.guildId]: i },
-                        userSettings: w,
+                        userSettings: y,
                         userGuildSettings: k,
-                        readStates: y
+                        readStates: w
                     });
                 }),
                     l.Z.time('\uD83D\uDCBE', 'socket.processFirstQueuedDispatch()', () => s.dispatcher.processFirstQueuedDispatch(new Set(['INITIAL_GUILD'])));
@@ -134,8 +134,8 @@ async function F(e, t, n) {
                     .concat(j.users.length, '\n            initial_guild:\n              id: ')
                     .concat(g, '\n              channels: ')
                     .concat(null === (a = Z.channels) || void 0 === a ? void 0 : a.length, '\n            user_settings: ')
-                    .concat(Object.keys(w).length, '\n            read_states: ')
-                    .concat(y.length, '\n            user_guild_settings: ')
+                    .concat(Object.keys(y).length, '\n            read_states: ')
+                    .concat(w.length, '\n            user_guild_settings: ')
                     .concat(k.length, '\n      )')
             ),
             O.verbose('finished dispatching CACHE_LOADED'),
@@ -345,21 +345,21 @@ function Q(e) {
     }),
         !n && I.Z.loadLazyCache.recordEnd();
 }
-class J extends (i = c.ZP.Store) {
+class q extends (i = c.ZP.Store) {
     initialize() {
-        !w && N.Z.getSocket().dispatcher.unpauseDispatchQueue();
+        !y && N.Z.getSocket().dispatcher.unpauseDispatchQueue();
     }
     hasCache() {
-        return !w || U;
+        return !y || U;
     }
     getLazyCacheStatus() {
-        return w ? k : 'no-cache';
+        return y ? k : 'no-cache';
     }
     get lastWriteTime() {
         return L;
     }
     canWriteCaches(e) {
-        return (0, j.$8)() ? (y ? (O.log('Not writing cache because caches cleared'), !1) : !!e || !!H || (O.log('Not writing cache because never connected'), !1)) : (O.log('Not writing cache because not authenticated'), !1);
+        return (0, j.$8)() ? (w ? (O.log('Not writing cache because caches cleared'), !1) : !!e || !!H || (O.log('Not writing cache because never connected'), !1)) : (O.log('Not writing cache because not authenticated'), !1);
     }
     async loadCacheAsync(e, t) {
         let n = (0, P.h)(t);
@@ -392,7 +392,7 @@ class J extends (i = c.ZP.Store) {
     }
 }
 (s = 'CacheStore'),
-    (a = 'displayName') in (r = J)
+    (a = 'displayName') in (r = q)
         ? Object.defineProperty(r, a, {
               value: s,
               enumerable: !0,
@@ -400,9 +400,9 @@ class J extends (i = c.ZP.Store) {
               writable: !0
           })
         : (r[a] = s),
-    new J(
+    new q(
         u.Z,
-        w
+        y
             ? {
                   CONNECTION_OPEN: function () {
                       return (D = !0), (H = !0), !1;

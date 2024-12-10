@@ -19,8 +19,8 @@ var i,
     r,
     l = n(200651),
     a = n(192379),
-    s = n(120356),
-    o = n.n(s),
+    o = n(120356),
+    s = n.n(o),
     c = n(752877),
     d = n(481060),
     u = n(406014);
@@ -64,7 +64,7 @@ function g(e) {
             [n]
         );
     return (0, l.jsx)('div', {
-        className: o()(u.headerBar, r, t),
+        className: s()(u.headerBar, r, t),
         children: i
     });
 }

@@ -1209,19 +1209,19 @@ let { Themes: r } = n(15202).V,
             HEADER_SECONDARY: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_8',
+                        raw: 'NEUTRAL_5',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'NEUTRAL_49',
+                        raw: 'NEUTRAL_55',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_20',
+                        raw: 'NEUTRAL_17',
                         opacity: 1
                     },
                     [r.DARKER]: {
-                        raw: 'NEUTRAL_16',
+                        raw: 'NEUTRAL_13',
                         opacity: 1
                     }
                 }
@@ -1761,19 +1761,19 @@ let { Themes: r } = n(15202).V,
             TEXT_NORMAL: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'NEUTRAL_8',
+                        raw: 'NEUTRAL_5',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'NEUTRAL_49',
+                        raw: 'NEUTRAL_55',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'NEUTRAL_20',
+                        raw: 'NEUTRAL_17',
                         opacity: 1
                     },
                     [r.DARKER]: {
-                        raw: 'NEUTRAL_16',
+                        raw: 'NEUTRAL_13',
                         opacity: 1
                     }
                 }

@@ -3,8 +3,8 @@ var i = n(748780),
     r = n(570140),
     l = n(317770),
     a = n(716578),
-    s = n(928518);
-function o(e, t, n) {
+    o = n(928518);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,10 +19,10 @@ function o(e, t, n) {
 }
 class c extends l.Z {
     _initialize() {
-        s.Z.addChangeListener(this.handlePopoutWindowChange), r.Z.subscribe('WINDOW_FOCUS', this.handleMainWindowFocus);
+        o.Z.addChangeListener(this.handlePopoutWindowChange), r.Z.subscribe('WINDOW_FOCUS', this.handleMainWindowFocus);
     }
     _terminate() {
-        s.Z.removeChangeListener(this.handlePopoutWindowChange), r.Z.unsubscribe('WINDOW_FOCUS', this.handleMainWindowFocus), this.injectWindowAnimationFrame(window);
+        o.Z.removeChangeListener(this.handlePopoutWindowChange), r.Z.unsubscribe('WINDOW_FOCUS', this.handleMainWindowFocus), this.injectWindowAnimationFrame(window);
     }
     injectWindowAnimationFrame(e) {
         let t = (t) => e.requestAnimationFrame(t),
@@ -31,13 +31,13 @@ class c extends l.Z {
     }
     constructor(...e) {
         super(...e),
-            o(this, 'handleMainWindowFocus', (e) => {
+            s(this, 'handleMainWindowFocus', (e) => {
                 e.focused && e.windowId === window.__DISCORD_WINDOW_ID && this.injectWindowAnimationFrame(window);
             }),
-            o(this, 'handlePopoutWindowChange', () => {
-                let e = s.Z.getWindowKeys().find((e) => s.Z.getWindowFocused(e));
+            s(this, 'handlePopoutWindowChange', () => {
+                let e = o.Z.getWindowKeys().find((e) => o.Z.getWindowFocused(e));
                 if (null == e) return this.injectWindowAnimationFrame(window);
-                let t = s.Z.getWindow(e);
+                let t = o.Z.getWindow(e);
                 if (null == t || t.closed) return this.injectWindowAnimationFrame(window);
                 this.injectWindowAnimationFrame(t);
             });

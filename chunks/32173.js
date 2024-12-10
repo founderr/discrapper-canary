@@ -36,8 +36,8 @@ var s = n(399606),
     B = n(391110),
     M = n(75077),
     O = n(976465),
-    w = n(474936),
-    y = n(735825),
+    y = n(474936),
+    w = n(735825),
     k = n(981631),
     L = n(526761),
     U = n(332325),
@@ -51,8 +51,8 @@ var s = n(399606),
     Y = n(393305),
     K = n(338879),
     Q = n(609926),
-    J = n(203302),
-    q = n(766491),
+    q = n(203302),
+    J = n(766491),
     X = n(193943),
     $ = n(707046),
     ee = n(488459),
@@ -78,13 +78,13 @@ var s = n(399606),
 t.Z = () => {
     let { analyticsLocations: e } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD),
         t = (0, c.ZP)(),
-        i = (0, v.BU)(w.Uq / 1024, { useKibibytes: !0 }),
+        i = (0, v.BU)(y.Uq / 1024, { useKibibytes: !0 }),
         r = (0, s.e7)([x.ZP], () => x.ZP.getPremiumTypeSubscription()),
         eb = null != r ? N.ZP.getPremiumPlanItem(r) : null,
-        ex = (null != eb ? N.ZP.getSkuIdForPlan(eb.planId) : null) === w.Si.TIER_2,
+        ex = (null != eb ? N.ZP.getSkuIdForPlan(eb.planId) : null) === y.Si.TIER_2,
         eC = b.default.getCurrentUser(),
-        ev = (0, N.I5)(eC, w.p9.TIER_2),
-        eT = (0, N.I5)(eC, w.p9.TIER_0),
+        ev = (0, N.I5)(eC, y.p9.TIER_2),
+        eT = (0, N.I5)(eC, y.p9.TIER_0),
         { flipped: eN } = (0, R.JP)(),
         { flipped: eI } = (0, R.as)(),
         eS = (0, A.bq)({ showAnimations: !0 }),
@@ -93,14 +93,14 @@ t.Z = () => {
         ej = (0, m.Z)(E.Z),
         eP = (0, j.ZP)(),
         eZ = (0, j.aJ)(),
-        eB = (0, A.Kb)(y.qY),
+        eB = (0, A.Kb)(w.qY),
         { fractionalState: eM } = (0, g.Z)(),
-        eO = eM === w.a$.FP_ONLY,
-        ew = (0, p.Z)({
+        eO = eM === y.a$.FP_ONLY,
+        ey = (0, p.Z)({
             scrollPosition: L.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }),
-        ey = () => {
+        ew = () => {
             o.Z.open(k.oAB.VOICE, L.GA, {
                 openWithoutBackstack: !0,
                 analyticsLocations: e
@@ -122,7 +122,7 @@ t.Z = () => {
                       descriptionCta: D.intl.string(D.t.dBJVnZ),
                       onCtaClick: ek,
                       pillText: D.intl.string(D.t.EYxi0t),
-                      perkImage: J,
+                      perkImage: q,
                       canReveal: eN
                   }
                 : {
@@ -131,7 +131,7 @@ t.Z = () => {
                       subtitle: D.intl.string(D.t['1QvWws']),
                       description: D.intl.string(D.t['2GPNr6']),
                       pillText: D.intl.string(D.t.EYxi0t),
-                      perkImage: J,
+                      perkImage: q,
                       canReveal: eN
                   },
             clientThemes: {
@@ -166,7 +166,7 @@ t.Z = () => {
                           : () => {
                                 window.open(T.Z.getArticleURL(k.BhN.CLIPS), '_blank');
                             },
-                      perkImage: q
+                      perkImage: J
                   }
                 : {
                       name: 'clips',
@@ -174,7 +174,7 @@ t.Z = () => {
                       subtitle: D.intl.string(D.t['hxy0/f']),
                       description: D.intl.string(D.t.X9IeNz),
                       pillText: D.intl.string(D.t.EYxi0t),
-                      perkImage: q
+                      perkImage: J
                   },
             earlyAccess: ev
                 ? {
@@ -215,7 +215,7 @@ t.Z = () => {
                       subtitle: D.intl.string(D.t['7ZCYvL']),
                       description: D.intl.string(D.t.mUT8bG),
                       descriptionCta: D.intl.string(D.t.jVcuVV),
-                      onCtaClick: ey,
+                      onCtaClick: ew,
                       perkImage: en
                   }
                 : {
@@ -232,7 +232,7 @@ t.Z = () => {
                       subtitle: D.intl.string(D.t['7ZCYvL']),
                       description: D.intl.string(D.t.mUT8bG),
                       descriptionCta: D.intl.string(D.t.jVcuVV),
-                      onCtaClick: ey,
+                      onCtaClick: ew,
                       perkImage: ei
                   }
                 : {
@@ -269,7 +269,7 @@ t.Z = () => {
                 subtitle: D.intl.string(D.t.Mt3U1d),
                 description: D.intl.string(D.t.kWcDKy),
                 descriptionCta: D.intl.string(D.t.jVcuVV),
-                onCtaClick: ew,
+                onCtaClick: ey,
                 perkImage: Y
             },
             remixing: ev
@@ -485,7 +485,7 @@ t.Z = () => {
                 subtitle: D.intl.string(D.t.HMSHeH),
                 descriptionCta: ev ? D.intl.string(D.t.jVcuVV) : D.intl.string(D.t.JST6jo),
                 isPremiumGetCta: !ev,
-                onCtaClick: ev ? ew : void 0,
+                onCtaClick: ev ? ey : void 0,
                 perkImage: ec
             }
         };
@@ -495,7 +495,7 @@ t.Z = () => {
                 className: H.cardComponent,
                 children: (0, a.jsx)(P.ZP, {
                     progressCircleVariation: P.Qo.AVATAR_DECO,
-                    avatarDecoAssetId: y.VA,
+                    avatarDecoAssetId: w.VA,
                     avatarDecoAssetDescription: D.intl.string(D.t['9o4F4+']),
                     showAnimations: !0,
                     percentage: eA,

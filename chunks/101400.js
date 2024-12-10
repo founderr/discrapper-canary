@@ -7,8 +7,8 @@ var i = n(200651),
     r = n(192379),
     l = n(793030),
     a = n(481060),
-    s = n(924489),
-    o = n(214912),
+    o = n(924489),
+    s = n(214912),
     c = n(824606),
     d = n(900849),
     u = n(682807),
@@ -36,12 +36,12 @@ function f(e) {
     return (0, i.jsxs)('div', {
         className: t,
         children: [
-            (0, i.jsx)(s.Z, {
+            (0, i.jsx)(o.Z, {
                 application: n,
                 mutualGuilds: _,
                 mutualGuildShownMax: 3,
                 className: g.guildCountContainer,
-                guildIconSize: s.x.SMALL,
+                guildIconSize: o.x.SMALL,
                 guildsClassName: g.guildsIconContainer,
                 compact: !0
             }),
@@ -96,7 +96,7 @@ function f(e) {
                                     color: 'header-primary',
                                     children: p.intl.string(p.t.KJEO29)
                                 }),
-                                (0, i.jsx)(o.Z, {
+                                (0, i.jsx)(s.Z, {
                                     guild: n.guild,
                                     onClick: I
                                 })

@@ -7,8 +7,8 @@ var i,
     r = n(392711),
     l = n.n(r),
     a = n(442837),
-    s = n(570140),
-    o = n(846027),
+    o = n(570140),
+    s = n(846027),
     c = n(581883),
     d = n(358085),
     u = n(131951),
@@ -37,14 +37,14 @@ let g = {},
         id: null,
         justChanged: !1
     },
-    N = {
+    S = {
         id: null,
         justChanged: !1
     },
-    S = /\(([^)]+)\)/;
+    N = /\(([^)]+)\)/;
 function T(e) {
     if ((0, d.getPlatform)() === d.PlatformTypes.WINDOWS) {
-        let t = e.name.match(S);
+        let t = e.name.match(N);
         if (null != t) return t[1];
     }
     return e.name;
@@ -62,7 +62,7 @@ function b(e, t, n) {
             }
           : e;
 }
-class A extends (i = a.ZP.DeviceSettingsStore) {
+class x extends (i = a.ZP.DeviceSettingsStore) {
     initialize(e) {
         this.waitFor(u.Z, c.Z), (f = null != e ? e : g);
     }
@@ -85,12 +85,12 @@ class A extends (i = a.ZP.DeviceSettingsStore) {
         return I;
     }
     get lastOutputSystemDevice() {
-        return N;
+        return S;
     }
 }
-p(A, 'displayName', 'ConnectedDeviceStore'),
-    p(A, 'persistKey', 'ConnectedDeviceStore'),
-    (t.Z = new A(s.Z, {
+p(x, 'displayName', 'ConnectedDeviceStore'),
+    p(x, 'persistKey', 'ConnectedDeviceStore'),
+    (t.Z = new x(o.Z, {
         MEDIA_ENGINE_DEVICES: function (e) {
             let { inputDevices: t, outputDevices: n } = e,
                 i = {};
@@ -104,12 +104,12 @@ p(A, 'displayName', 'ConnectedDeviceStore'),
                 });
             let r = {};
             if (
-                ((N.justChanged = !1),
+                ((S.justChanged = !1),
                 n.forEach((e) => {
                     if (((r[T(e)] = e.id), e.id === m.w5)) {
                         var t;
                         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-                        n !== N.id && (N.justChanged = !0), (N.id = n);
+                        n !== S.id && (S.justChanged = !0), (S.id = n);
                     }
                 }),
                 !_)
@@ -118,25 +118,25 @@ p(A, 'displayName', 'ConnectedDeviceStore'),
                 return;
             }
             let a = Object.keys(E),
-                s = Object.keys(i),
-                o = Object.keys(I),
+                o = Object.keys(i),
+                s = Object.keys(I),
                 c = Object.keys(r),
-                d = l().difference(a, s),
-                u = l().difference(o, c);
+                d = l().difference(a, o),
+                u = l().difference(s, c);
             return (
                 d.length > 0 || u.length > 0
                     ? (C = {})
                     : (l()
-                          .difference(s, a)
+                          .difference(o, a)
                           .forEach((e) => {
                               C[e] = b(C[e], e, h.QyF.INPUT);
                           }),
                       l()
-                          .difference(c, o)
+                          .difference(c, s)
                           .forEach((e) => {
                               C[e] = b(C[e], e, h.QyF.OUTPUT);
                           })),
-                !(l().isEqual(a, s) && l().isEqual(o, c)) && ((E = i), (I = r), !0)
+                !(l().isEqual(a, o) && l().isEqual(s, c)) && ((E = i), (I = r), !0)
             );
         },
         CONNECTED_DEVICE_SET: function (e) {
@@ -144,11 +144,11 @@ p(A, 'displayName', 'ConnectedDeviceStore'),
             !(function (e, t, n) {
                 if (t === h.aVf.INPUT || t === h.aVf.INPUT_AND_OUTPUT) {
                     let t = E[e];
-                    null != t && s.Z.wait(() => o.Z.setInputDevice(t, { location: n }));
+                    null != t && o.Z.wait(() => s.Z.setInputDevice(t, { location: n }));
                 }
                 if (t === h.aVf.OUTPUT || t === h.aVf.INPUT_AND_OUTPUT) {
                     let t = I[e];
-                    s.Z.wait(() => o.Z.setOutputDevice(t, { location: n }));
+                    o.Z.wait(() => s.Z.setOutputDevice(t, { location: n }));
                 }
             })(t, n, i),
                 delete C[t];

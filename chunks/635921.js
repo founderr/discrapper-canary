@@ -75,8 +75,8 @@ t.ZP = (e) => {
         { analyticsLocations: B } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
         M = (0, m._O)(),
         O = (0, p.Ng)(),
-        w = (0, p.Wp)(O, N.Si.TIER_2) ? N.Si.TIER_2 : void 0,
-        y = (0, _.N)(),
+        y = (0, p.Wp)(O, N.Si.TIER_2) ? N.Si.TIER_2 : void 0,
+        w = (0, _.N)(),
         k = (0, g.Nx)(),
         L = (0, E.Vi)(),
         U = (0, s.e7)([u.Z], () => u.Z.affinities),
@@ -121,7 +121,7 @@ t.ZP = (e) => {
                                   })
                               })
                             : (0, i.jsx)(R, {
-                                  subscriptionTier: null !== (n = null != T ? T : null == y ? void 0 : null === (t = y.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : w,
+                                  subscriptionTier: null !== (n = null != T ? T : null == w ? void 0 : null === (t = w.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : y,
                                   inOfferExperience: k,
                                   buttonClassName: x,
                                   isDarkMode: Z

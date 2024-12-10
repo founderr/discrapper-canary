@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     l = n(622535),
     a = n(481060),
-    s = n(783097),
-    o = n(924489),
+    o = n(783097),
+    s = n(924489),
     c = n(824606),
     d = n(66637),
     u = n(768581),
@@ -15,13 +15,13 @@ let g = 28;
 t.Z = function (e) {
     var t, n, f, _, E;
     let { application: I, onSelectApplication: C, showCategory: v = !1 } = e,
-        N = (0, c.Z)({ application: I }),
-        S = null === (t = I.categories) || void 0 === t ? void 0 : t[0],
+        S = (0, c.Z)({ application: I }),
+        N = null === (t = I.categories) || void 0 === t ? void 0 : t[0],
         [T, b] = r.useState(!1),
-        A = r.useCallback((e) => {
+        x = r.useCallback((e) => {
             e && b(!0);
         }, []),
-        x = (0, s.lf)(I),
+        A = (0, o.lf)(I),
         Z = r.useCallback(() => {
             C(I.id);
         }, [C, I.id]),
@@ -36,18 +36,18 @@ t.Z = function (e) {
                     : void 0,
             [T, I]
         ),
-        y = (null !== (_ = null === (n = I.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== _ ? _ : 0) > 0 || N.length > 0,
-        P = (0, i.jsx)(o.Z, {
+        y = (null !== (_ = null === (n = I.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== _ ? _ : 0) > 0 || S.length > 0,
+        P = (0, i.jsx)(s.Z, {
             application: I,
             textVariant: 'text-xs/medium',
-            mutualGuilds: N,
+            mutualGuilds: S,
             mutualGuildShownMax: 3,
-            guildIconSize: o.x.SMALL,
+            guildIconSize: s.x.SMALL,
             compact: !0
         }),
-        O = v && null != S;
+        O = v && null != N;
     return (0, i.jsx)(l.$, {
-        onChange: A,
+        onChange: x,
         active: !T,
         children: (0, i.jsx)('div', {
             className: p.container,
@@ -107,7 +107,7 @@ t.Z = function (e) {
                                     })
                                 })
                             }),
-                            O || x
+                            O || A
                                 ? (0, i.jsxs)('div', {
                                       className: p.infoContainer,
                                       children: [
@@ -116,17 +116,17 @@ t.Z = function (e) {
                                                     className: p.appCategory,
                                                     variant: 'text-xs/medium',
                                                     color: 'text-normal',
-                                                    children: S.name
+                                                    children: N.name
                                                 })
                                               : null,
-                                          O && x
+                                          O && A
                                               ? (0, i.jsx)(a.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-secondary',
                                                     children: '\u2022'
                                                 })
                                               : null,
-                                          x
+                                          A
                                               ? (0, i.jsx)(a.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-secondary',
@@ -140,7 +140,7 @@ t.Z = function (e) {
                                 className: p.description,
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
-                                lineClamp: O || x ? 2 : 3,
+                                lineClamp: O || A ? 2 : 3,
                                 children: null !== (E = null === (f = I.directory_entry) || void 0 === f ? void 0 : f.short_description) && void 0 !== E ? E : I.description
                             }),
                             y

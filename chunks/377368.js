@@ -4,8 +4,8 @@ n(192379);
 var r = n(481060),
     l = n(570140),
     a = n(536442),
-    s = n(810788),
-    o = n(592125),
+    o = n(810788),
+    s = n(592125),
     c = n(131951),
     d = n(944486),
     u = n(556296),
@@ -31,7 +31,7 @@ function v(e, t, n) {
         e
     );
 }
-class N extends h.Z {
+class S extends h.Z {
     _initialize() {
         super._initialize(), !__OVERLAY__ && l.Z.subscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest);
     }
@@ -76,12 +76,12 @@ class N extends h.Z {
             }),
             v(this, '_handleOpenEducationModal', (e, t) => {
                 if (null == e) return;
-                let l = o.Z.getChannel(t),
+                let l = s.Z.getChannel(t),
                     c = u.Z.getKeybindForAction(I.kg4.SOUNDBOARD_HOLD);
                 null != l &&
                     (0, g.Z)(l) &&
                     null != c &&
-                    s.Z.hasHotspot(a.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL) &&
+                    o.Z.hasHotspot(a.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL) &&
                     (0, r.openModalLazy)(async () => {
                         let { default: t } = await n.e('69208').then(n.bind(n, 490166));
                         return (n) =>
@@ -95,4 +95,4 @@ class N extends h.Z {
             });
     }
 }
-t.Z = new N();
+t.Z = new S();

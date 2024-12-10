@@ -2,8 +2,8 @@ var i,
     r,
     l,
     a,
-    s = n(442837),
-    o = n(570140),
+    o = n(442837),
+    s = n(570140),
     c = n(656063),
     d = n(814443),
     u = n(158776),
@@ -39,13 +39,13 @@ function I(e) {
                 var n, i, r, l;
                 let a = (0, c.Z)(e);
                 if (null == a) return E(t.id);
-                let s = f[t.id];
-                null != s && s.gameId !== a && E(t.id);
-                let o = null !== (i = null === (n = e.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== i ? i : Date.now(),
+                let o = f[t.id];
+                null != o && o.gameId !== a && E(t.id);
+                let s = null !== (i = null === (n = e.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== i ? i : Date.now(),
                     d = {
                         userId: t.id,
                         activity: e,
-                        startedPlaying: o
+                        startedPlaying: s
                     };
                 return (
                     (r = a),
@@ -91,7 +91,7 @@ function C() {
     }
     return (p = !d.Z.needsRefresh()), e;
 }
-class v extends (a = s.ZP.Store) {
+class v extends (a = o.ZP.Store) {
     initialize() {
         this.waitFor(d.Z), this.syncWith([d.Z], C);
     }
@@ -120,7 +120,7 @@ class v extends (a = s.ZP.Store) {
               writable: !0
           })
         : (i[r] = l),
-    (t.Z = new v(o.Z, {
+    (t.Z = new v(s.Z, {
         CONNECTION_OPEN: function () {
             (g = {}), (f = {});
         },

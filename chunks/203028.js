@@ -9,8 +9,8 @@ n(192379);
 var r = n(512722),
     l = n.n(r),
     a = n(841784),
-    s = n(503438),
-    o = n(802856),
+    o = n(503438),
+    s = n(802856),
     c = n(810568),
     d = n(168524),
     u = n(707409),
@@ -24,8 +24,8 @@ function E(e) {
     var t, r;
     let { party: E, onUserContextMenu: I } = e,
         { priorityMembers: C, guildContext: v } = E,
-        N = C[0],
-        S = (function (e) {
+        S = C[0],
+        N = (function (e) {
             let { priorityMembers: t, partiedMembers: n } = e,
                 i = new Set(
                     t.map((e) => {
@@ -59,14 +59,14 @@ function E(e) {
                 I = c.length - E,
                 C = h[0],
                 v = null == C ? void 0 : C.activity,
-                N = null == C ? void 0 : C.startedPlayingTime,
-                S = { name: null !== (t = null == v ? void 0 : v.name) && void 0 !== t ? t : '' };
+                S = null == C ? void 0 : C.startedPlayingTime,
+                N = { name: null !== (t = null == v ? void 0 : v.name) && void 0 !== t ? t : '' };
             if ((0, a.Z)(v) && null != v)
                 return {
                     subtitle: (0, i.jsx)(u.ZP, {
-                        start: N,
+                        start: S,
                         location: u.ZP.Locations.ACTIVITY_FEED_NEW,
-                        messageProps: S
+                        messageProps: N
                     }),
                     icon: null
                 };
@@ -81,16 +81,16 @@ function E(e) {
                 if (null != t) return t;
                 switch (v.type) {
                     case f.IIU.PLAYING:
-                        if ((0, o.Z)(v))
+                        if ((0, s.Z)(v))
                             return {
                                 subtitle: _.intl.string(_.t.tO8wOz),
                                 icon: (0, i.jsx)(p.Z.Header.Icon, { src: p.Z.Header.Icon.Src.XBOX })
                             };
                         return {
                             subtitle: (0, i.jsx)(u.ZP, {
-                                start: N,
+                                start: S,
                                 location: u.ZP.Locations.ACTIVITY_FEED_NEW,
-                                messageProps: S
+                                messageProps: N
                             }),
                             icon: null != e ? (0, i.jsx)(p.Z.Header.Icon, { src: null != e.getIconURL(g.Z) ? e.getIconURL(g.Z) : n(211827) }) : null
                         };
@@ -102,7 +102,7 @@ function E(e) {
                     case f.IIU.LISTENING:
                         let r;
                         return (
-                            (r = (0, s.Z)(v) ? (0, i.jsx)(p.Z.Header.Icon, { src: p.Z.Header.Icon.Src.SPOTIFY }) : null != e.getIconURL(g.Z) ? (0, i.jsx)(p.Z.Header.Icon, { src: e.getIconURL(g.Z) }) : (0, i.jsx)(p.Z.Header.Icon, { src: n(211827) })),
+                            (r = (0, o.Z)(v) ? (0, i.jsx)(p.Z.Header.Icon, { src: p.Z.Header.Icon.Src.SPOTIFY }) : null != e.getIconURL(g.Z) ? (0, i.jsx)(p.Z.Header.Icon, { src: e.getIconURL(g.Z) }) : (0, i.jsx)(p.Z.Header.Icon, { src: n(211827) })),
                             {
                                 subtitle: _.intl.formatToPlainString(_.t.NF5xoq, { name: v.name }),
                                 icon: r
@@ -153,7 +153,7 @@ function E(e) {
                         subtitle: (0, i.jsx)(u.ZP, {
                             start: r,
                             location: u.ZP.Locations.ACTIVITY_FEED_NEW,
-                            messageProps: S
+                            messageProps: N
                         }),
                         icon: null != n && null != n.getIconURL(g.Z) ? (0, i.jsx)(p.Z.Header.Icon, { src: n.getIconURL(g.Z) }) : null
                     }
@@ -164,19 +164,19 @@ function E(e) {
                 icon: (0, i.jsx)(p.Z.Header.Icon, { src: p.Z.Header.Icon.Src.MULTIPLE })
             };
         })(E),
-        A = (0, d.Z)({
+        x = (0, d.Z)({
             applicationId: null === (r = E.currentActivities[0]) || void 0 === r ? void 0 : null === (t = r.activity) || void 0 === t ? void 0 : t.application_id,
             location: 'FriendsActivityFeed',
             source: c.m1.FriendsActivityFeed
         });
     return (0, i.jsx)(p.Z.Header, {
-        priorityUser: N,
+        priorityUser: S,
         guildId: null == v ? void 0 : v.id,
-        title: S,
+        title: N,
         subtitle: T,
         icon: b,
-        onSubtitleClick: A,
-        onIconClick: A,
-        onContextMenu: (e) => I(e, N.user)
+        onSubtitleClick: x,
+        onIconClick: x,
+        onContextMenu: (e) => I(e, S.user)
     });
 }

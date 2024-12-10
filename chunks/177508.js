@@ -23,7 +23,7 @@ var i = n(200651),
 let S = Object.keys(d.Button.Colors).filter((e) => 'CUSTOM' !== e),
     T = Object.keys(d.Button.Looks).filter((e) => 'BLANK' !== e),
     E = Object.keys(d.Button.Sizes).filter((e) => 'NONE' !== e);
-function _() {
+function C() {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(d.LinkButton, {
@@ -48,9 +48,9 @@ function _() {
         ]
     });
 }
-let C = ['neutral', 'blue_new', 'blurple', 'green_new', 'red_new', 'teal_new', 'yellow_new', 'orange_new'],
-    I = ['background-surface-highest', 'background-surface-higher', 'background-surface-high', 'background-base-low', 'background-base-lower', 'background-base-lowest'],
-    f = ['background-mod-subtle', 'background-mod-normal', 'background-mod-strong'];
+let _ = ['neutral', 'blue_new', 'blurple', 'green_new', 'red_new', 'teal_new', 'yellow_new', 'orange_new'],
+    f = ['background-surface-highest', 'background-surface-higher', 'background-surface-high', 'background-base-low', 'background-base-lower', 'background-base-lowest'],
+    I = ['background-mod-subtle', 'background-mod-normal', 'background-mod-strong'];
 function N() {
     return (0, i.jsxs)('div', {
         children: [
@@ -59,7 +59,7 @@ function N() {
                 className: x.heading,
                 children: 'Background Colors'
             }),
-            I.map((e) =>
+            f.map((e) =>
                 (0, i.jsxs)(
                     'div',
                     {
@@ -79,7 +79,7 @@ function N() {
                                     gap: 8,
                                     gridAutoFlow: 'column'
                                 },
-                                children: f.map((e) =>
+                                children: I.map((e) =>
                                     (0, i.jsx)(
                                         'div',
                                         {
@@ -108,7 +108,7 @@ function N() {
                 className: x.heading,
                 children: 'Scales'
             }),
-            C.map((e) =>
+            _.map((e) =>
                 (0, i.jsxs)(
                     'div',
                     {
@@ -155,7 +155,7 @@ function A() {
         tabs: [
             {
                 title: 'Components',
-                component: () => (0, i.jsx)(_, {}),
+                component: () => (0, i.jsx)(C, {}),
                 setting: h.s6.DESIGN_SYSTEMS_COMPONENTS
             },
             {

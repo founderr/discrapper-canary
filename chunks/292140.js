@@ -7,8 +7,8 @@ var i = n(200651),
     r = n(192379),
     l = n(481060),
     a = n(626135),
-    s = n(144145),
-    o = n(555927),
+    o = n(144145),
+    s = n(555927),
     c = n(738762),
     d = n(244080),
     u = n(247530),
@@ -22,8 +22,8 @@ function f(e) {
         E = (0, h.Z)(t),
         I = (0, u.Z)(t),
         C = (0, d.Z)(t),
-        v = (0, s.Z)(t),
-        N = (0, o.Z)(t);
+        v = (0, o.Z)(t),
+        S = (0, s.Z)(t);
     return (
         r.useEffect(() => {
             let e = t.currentActivities
@@ -49,7 +49,7 @@ function f(e) {
                 }),
                 (0, i.jsx)(l.MenuGroup, { children: C }),
                 (0, i.jsx)(l.MenuGroup, { children: v }),
-                N
+                S
             ]
         })
     );

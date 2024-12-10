@@ -2,8 +2,8 @@ var i = n(200651),
     r = n(192379),
     l = n(481060),
     a = n(239091),
-    s = n(129861),
-    o = n(600164),
+    o = n(129861),
+    s = n(600164),
     c = n(484010);
 class d extends r.PureComponent {
     handleContextMenu(e, t) {
@@ -20,10 +20,10 @@ class d extends r.PureComponent {
         return null == e
             ? null
             : (0, i.jsxs)(
-                  o.Z,
+                  s.Z,
                   {
                       className: c.user,
-                      align: o.Z.Align.CENTER,
+                      align: s.Z.Align.CENTER,
                       onContextMenu: (t) => {
                           null != e && this.handleContextMenu(t, e);
                       },
@@ -34,7 +34,7 @@ class d extends r.PureComponent {
                               size: l.AvatarSizes.SIZE_24,
                               className: c.avatar
                           }),
-                          (0, i.jsx)(s.Z, {
+                          (0, i.jsx)(o.Z, {
                               user: e,
                               className: c.tag,
                               usernameClass: c.username,

@@ -3,8 +3,8 @@ n(192379);
 var r = n(481060),
     l = n(570140),
     a = n(531826),
-    s = n(812206),
-    o = n(69580),
+    o = n(812206),
+    s = n(69580),
     c = n(32300),
     d = n(808506),
     u = n(358085),
@@ -16,18 +16,18 @@ var r = n(481060),
 t.Z = (0, p.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: p, redirectUri: _, codeChallenge: E, codeChallengeMethod: I, state: C, guildId: v, channelId: N, prompt: S, disableGuildSelect: T, disclosures: b, integrationType: A, pid: x } = e,
-            Z = 'OAuth2Authorize_'.concat(n, '_').concat(v, '_').concat(N),
-            L = null != A ? (null == d ? void 0 : d.get(A)) : void 0,
-            y = null !== (t = null == L ? void 0 : L.application) && void 0 !== t ? t : s.Z.getApplication(n);
+        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: p, redirectUri: _, codeChallenge: E, codeChallengeMethod: I, state: C, guildId: v, channelId: S, prompt: N, disableGuildSelect: T, disclosures: b, integrationType: x, pid: A } = e,
+            Z = 'OAuth2Authorize_'.concat(n, '_').concat(v, '_').concat(S),
+            L = null != x ? (null == d ? void 0 : d.get(x)) : void 0,
+            y = null !== (t = null == L ? void 0 : L.application) && void 0 !== t ? t : o.Z.getApplication(n);
         return new Promise((e, t) => {
-            let s = (0, g.jU)(x),
+            let o = (0, g.jU)(A),
                 L = (i) => {
                     let { clientId: r, location: a } = i;
-                    if (null == r || r === n) s.lock(), l.Z.unsubscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', L), null != location ? e(a) : t(new m.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
+                    if (null == r || r === n) o.lock(), l.Z.unsubscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', L), null != location ? e(a) : t(new m.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
                 },
                 P = (0, c.R)();
-            if (s.context === f.IlC.OVERLAY && !P) {
+            if (o.context === f.IlC.OVERLAY && !P) {
                 l.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', L),
                     l.Z.dispatch({
                         type: 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN',
@@ -44,17 +44,17 @@ t.Z = (0, p.Z)(
                             state: C,
                             permissions: h.toString(),
                             guildId: v,
-                            channelId: N,
-                            prompt: S,
+                            channelId: S,
+                            prompt: N,
                             disableGuildSelect: 'boolean' == typeof T ? T : 'true' === T,
-                            integrationType: A
+                            integrationType: x
                         }
                     });
                 return;
             }
             (0, r.openModal)(
                 (e) =>
-                    (0, i.jsx)(o.OAuth2AuthorizeModal, {
+                    (0, i.jsx)(s.OAuth2AuthorizeModal, {
                         ...e,
                         authorizations: d,
                         clientId: n,
@@ -68,10 +68,10 @@ t.Z = (0, p.Z)(
                         state: C,
                         permissions: h,
                         guildId: v,
-                        channelId: N,
-                        prompt: S,
+                        channelId: S,
+                        prompt: N,
                         disableGuildSelect: 'boolean' == typeof T ? T : 'true' === T,
-                        integrationType: A
+                        integrationType: x
                     }),
                 {
                     modalKey: Z,
@@ -83,7 +83,7 @@ t.Z = (0, p.Z)(
                     null !=
                         (0, a.ZP)({
                             application: y,
-                            channelId: N
+                            channelId: S
                         })
                     ? r.POPOUT_MODAL_CONTEXT
                     : r.DEFAULT_MODAL_CONTEXT

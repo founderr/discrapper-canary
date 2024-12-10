@@ -1,9 +1,9 @@
 n.d(t, {
     M: function () {
-        return o;
+        return s;
     },
     s: function () {
-        return s;
+        return o;
     }
 });
 var i = n(200651);
@@ -11,9 +11,9 @@ n(192379);
 var r = n(481060),
     l = n(522474),
     a = n(981631);
-let s = 'command-share-modal';
-function o(e) {
-    let { applicationId: t, channel: o, command: c, previewMessage: d } = e,
+let o = 'command-share-modal';
+function s(e) {
+    let { applicationId: t, channel: s, command: c, previewMessage: d } = e,
         u = l.Z.getWindowOpen(a.KJ3.ACTIVITY_POPOUT) ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
     (0, r.openModalLazy)(
         async () => {
@@ -21,14 +21,14 @@ function o(e) {
             return (n) =>
                 (0, i.jsx)(e, {
                     applicationId: t,
-                    channel: o,
+                    channel: s,
                     command: c,
                     previewMessage: d,
                     ...n
                 });
         },
         {
-            modalKey: s,
+            modalKey: o,
             contextKey: u
         }
     );

@@ -1,9 +1,9 @@
 n.d(t, {
     Rw: function () {
-        return w;
+        return y;
     },
     V6: function () {
-        return y;
+        return w;
     },
     f9: function () {
         return P;
@@ -144,14 +144,14 @@ let S = () => {
             t = (0, s.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription());
         return null == e || null == t || null == t.premiumSince ? null : (0, d.RZ)(e, t.premiumSince);
     },
-    w = () => ({
+    y = () => ({
         badge: S(),
         image: j(),
         name: Z(),
         earnedOnDate: O(),
         tenureRequirement: M()
     }),
-    y = () => {
+    w = () => {
         let e = R(),
             { enabled: t } = (0, p.Z)(!0),
             [n] = (0, c.US)(t && null != e ? [l.z.WHATS_NEW_TENURE_BADGE_REWARD] : []);

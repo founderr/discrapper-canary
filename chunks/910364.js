@@ -15,8 +15,8 @@ var i = t(200651),
     u = t(906732),
     f = t(680295),
     m = t(699516),
-    I = t(5192),
-    x = t(785717),
+    x = t(5192),
+    I = t(785717),
     p = t(221292),
     h = t(816988),
     v = t(687158),
@@ -27,9 +27,9 @@ var i = t(200651),
     b = t(451834),
     E = t(502762),
     N = t(544989),
-    T = t(705556),
-    S = t(481932),
-    y = t(195387),
+    S = t(705556),
+    y = t(481932),
+    T = t(195387),
     P = t(272510),
     C = t(748283),
     A = t(902423),
@@ -39,8 +39,8 @@ var i = t(200651),
     O = t(412317),
     U = t(228168),
     B = t(981631),
-    D = t(388032),
-    F = t(171865);
+    F = t(388032),
+    D = t(171865);
 function G(e) {
     let { user: n, currentUser: t, guildId: G, channelId: w, messageId: k, roleId: V, sessionId: W, friendToken: z, initialSection: K, initialSubsection: Y, transitionState: H, onClose: J, showGuildProfile: X = !0, sourceAnalyticsLocations: q = [] } = e,
         { analyticsLocations: Q } = (0, u.ZP)([...q, d.Z.SIMPLIFIED_PROFILE_MODAL]),
@@ -49,7 +49,7 @@ function G(e) {
             currentUser: t,
             location: B.Sbl.SIMPLIFIED_USER_PROFILE
         }),
-        ee = (0, x.ZB)({
+        ee = (0, I.ZB)({
             layout: $ ? 'SIMPLIFIED_MODAL' : 'SIMPLIFIED_MODAL_RESTRICTED_BLOCKER_PROFILE',
             userId: n.id,
             sourceSessionId: W,
@@ -79,8 +79,8 @@ function G(e) {
                 : (null == ei ? void 0 : ei.guildId) != null
                   ? (0, i.jsx)(s.MenuItem, {
                         id: 'view-main-profile',
-                        label: D.intl.string(D.t.GISTtb),
-                        subtext: D.intl.formatToPlainString(D.t['mn/nW1'], { displayName: I.ZP.getName(void 0, void 0, n) }),
+                        label: F.intl.string(F.t.GISTtb),
+                        subtext: F.intl.formatToPlainString(F.t['mn/nW1'], { displayName: x.ZP.getName(void 0, void 0, n) }),
                         action: () => {
                             J(),
                                 (0, M.openUserProfileModal)({
@@ -98,8 +98,8 @@ function G(e) {
                     })
                   : (0, i.jsx)(s.MenuItem, {
                         id: 'view-server-profile',
-                        label: D.intl.string(D.t.DisZzM),
-                        subtext: D.intl.formatToPlainString(D.t['mn/nW1'], { displayName: I.ZP.getName(G, w, n) }),
+                        label: F.intl.string(F.t.DisZzM),
+                        subtext: F.intl.formatToPlainString(F.t['mn/nW1'], { displayName: x.ZP.getName(G, w, n) }),
                         action: () => {
                             J(),
                                 (0, M.openUserProfileModal)({
@@ -117,15 +117,15 @@ function G(e) {
                     });
     return (0, i.jsx)(u.Gt, {
         value: Q,
-        children: (0, i.jsx)(x.Mt, {
+        children: (0, i.jsx)(I.Mt, {
             value: ee,
             children: (0, i.jsx)(g.NJ, {
                 value: en,
                 children: (0, i.jsxs)(s.ModalRoot, {
                     transitionState: H,
-                    className: F.root,
+                    className: D.root,
                     hideShadow: !0,
-                    'aria-label': D.intl.string(D.t['3N/J2t']),
+                    'aria-label': F.intl.string(F.t['3N/J2t']),
                     children: [
                         (0, i.jsxs)(E.Z, {
                             user: n,
@@ -147,14 +147,14 @@ function G(e) {
                                                     })
                                                 ]
                                             }),
-                                        (0, i.jsx)(y.Z, {
+                                        (0, i.jsx)(T.Z, {
                                             shouldShowTooltip: null === en.interactionType,
                                             user: n,
                                             guildId: G,
                                             channelId: w,
                                             onClose: J
                                         }),
-                                        (0, i.jsx)(S.Z, {
+                                        (0, i.jsx)(y.Z, {
                                             shouldShowTooltip: null === en.interactionType,
                                             profileType: U.y0.FULL_SIZE,
                                             user: n,
@@ -177,15 +177,15 @@ function G(e) {
                                         (0, i.jsx)(b.Z, {
                                             userId: n.id,
                                             onClose: J,
-                                            className: F.toast
+                                            className: D.toast
                                         }),
                                         null != en.interactionType &&
                                             (0, i.jsx)(o.animated.div, {
                                                 style: et,
-                                                className: F.backdrop
+                                                className: D.backdrop
                                             }),
                                         (0, i.jsxs)('div', {
-                                            className: F.headerInner,
+                                            className: D.headerInner,
                                             children: [
                                                 (0, i.jsx)(j.Z, {
                                                     location: 'UserProfileModal',
@@ -206,7 +206,7 @@ function G(e) {
                                                     onCloseProfile: J
                                                 }),
                                                 (0, i.jsxs)('div', {
-                                                    className: F.headerButtons,
+                                                    className: D.headerButtons,
                                                     children: [
                                                         (0, i.jsx)(O.Z, {
                                                             isCurrentUser: er,
@@ -215,7 +215,7 @@ function G(e) {
                                                             friendToken: z,
                                                             onClose: J
                                                         }),
-                                                        (0, i.jsx)(T.Z, {
+                                                        (0, i.jsx)(S.Z, {
                                                             user: n,
                                                             guildId: G,
                                                             onClose: J

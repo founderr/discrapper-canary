@@ -8,15 +8,15 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    s = n(442837),
-    o = n(481060),
+    o = n(442837),
+    s = n(481060),
     c = n(706454),
     d = n(388032),
     u = n(181169);
 let h = (0, d.getAvailableLocales)();
 function m(e) {
     let { application: t, className: n } = e,
-        l = (0, s.e7)([c.default], () => c.default.locale),
+        l = (0, o.e7)([c.default], () => c.default.locale),
         { supportedLanguages: m, usersLanguageIsFirst: p } = r.useMemo(() => {
             var e;
             if ((null === (e = t.directory_entry) || void 0 === e ? void 0 : e.supported_locales) != null) {
@@ -39,7 +39,7 @@ function m(e) {
     return (0, i.jsxs)('div', {
         className: n,
         children: [
-            (0, i.jsx)(o.Heading, {
+            (0, i.jsx)(s.Heading, {
                 variant: 'heading-sm/semibold',
                 color: 'header-primary',
                 children: d.intl.string(d.t.Fbjlu7)
@@ -51,7 +51,7 @@ function m(e) {
                         'li',
                         {
                             className: a()(u.innerContainer, u.languageItem),
-                            children: (0, i.jsx)(o.Text, {
+                            children: (0, i.jsx)(s.Text, {
                                 variant: 0 === t && p ? 'text-sm/bold' : 'text-sm/normal',
                                 children: e
                             })

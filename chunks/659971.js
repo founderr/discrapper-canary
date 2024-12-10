@@ -2,13 +2,13 @@ var i,
     r,
     l,
     a,
-    s = n(873546),
-    o = n(442837),
+    o = n(873546),
+    s = n(442837),
     c = n(570140);
 let d = !1;
-class u extends (a = o.ZP.Store) {
+class u extends (a = s.ZP.Store) {
     getIsOpen() {
-        return !s.tq || d;
+        return !o.tq || d;
     }
 }
 (l = 'MobileWebSidebarStore'),
