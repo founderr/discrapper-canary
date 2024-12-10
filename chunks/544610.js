@@ -46,7 +46,13 @@ function R() {
                     t
                         .reduce((e, t) => {
                             let n = E.default.getUser(t);
-                            return null == n || n.isProvisional ? e : (e.push({ user: n }), e);
+                            return null == n || n.isProvisional
+                                ? e
+                                : (e.push({
+                                      user: n,
+                                      comparator: C.ZP.getName(n)
+                                  }),
+                                  e);
                         }, [])
                         .sort(k)
                 );
@@ -103,14 +109,17 @@ function k(e, t) {
 }
 function O(e) {
     let { results: t } = e;
-    if (!!N && '' !== Z)
-        (T = t
-            .map((e) => {
-                let { id: t } = e;
-                return { user: E.default.getUser(t) };
-            })
-            .filter((e) => null != e.user)),
-            G.emitChange();
+    if (!N || '' === Z) return;
+    let n = [];
+    for (let { id: e, comparator: i } of t) {
+        let t = E.default.getUser(e);
+        null != t &&
+            n.push({
+                user: t,
+                comparator: i
+            });
+    }
+    (T = n), G.emitChange();
 }
 function D() {
     return null != i && (i.destroy(), (i = null)), h.Z.getSearchContext(O, 1000);
