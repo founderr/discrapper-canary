@@ -66,6 +66,7 @@ function p() {
     let [e, t] = r.useState(() => c.isAfter(Date.now()));
     return (
         r.useEffect(() => {
+            if (!e) return;
             let n = new s.V7(),
                 r = () => {
                     let e = Math.min(c.diff(Date.now(), 'millisecond'), 86400000);
@@ -74,8 +75,8 @@ function p() {
                             c.isBefore(Date.now()) ? t(!1) : r();
                         });
                 };
-            return e && r(), () => n.stop();
-        }),
+            return r(), () => n.stop();
+        }, [e]),
         e
     );
 }
