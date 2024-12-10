@@ -2,8 +2,8 @@ n(47120);
 var i,
     l,
     r,
-    o,
-    a = n(442837),
+    a,
+    o = n(442837),
     s = n(570140),
     c = n(131704),
     u = n(251625),
@@ -24,7 +24,7 @@ function _(e) {
         n = d.Z.getChannel(t);
     return !!(null != n && (0, c.hv)(n.type)) && g();
 }
-class v extends (i = a.ZP.Store) {
+class v extends (i = o.ZP.Store) {
     initialize() {
         this.waitFor(m.Z, d.Z, p.Z, h.ZP);
     }
@@ -32,15 +32,15 @@ class v extends (i = a.ZP.Store) {
         return f;
     }
 }
-(o = 'PrivateChannelReadStateStore'),
+(a = 'PrivateChannelReadStateStore'),
     (r = 'displayName') in (l = v)
         ? Object.defineProperty(l, r, {
-              value: o,
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = o),
+        : (l[r] = a),
     (t.Z = new v(s.Z, {
         CONNECTION_OPEN: C,
         OVERLAY_INITIALIZE: C,

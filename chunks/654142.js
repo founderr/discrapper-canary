@@ -2,8 +2,8 @@ n(653041), n(47120), n(724458);
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    o = n(239091),
-    a = n(749210),
+    a = n(239091),
+    o = n(749210),
     s = n(905423),
     c = n(664915),
     u = n(888369),
@@ -37,11 +37,11 @@ t.Z = l.memo(function (e) {
             unread: I.some((e) => u.default.hasUnread(e))
         })),
         T = l.useCallback(() => {
-            a.Z.toggleGuildFolderExpand(C);
+            o.Z.toggleGuildFolderExpand(C);
         }, [C]),
         j = l.useCallback(
             (e) => {
-                (0, o.jW)(e, async () => {
+                (0, a.jW)(e, async () => {
                     let { default: e } = await n.e('52590').then(n.bind(n, 205784));
                     return (t) =>
                         (0, i.jsx)(e, {

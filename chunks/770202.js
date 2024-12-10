@@ -2,8 +2,8 @@ n(411104), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    o = n.n(r),
-    a = n(442837),
+    a = n.n(r),
+    o = n(442837),
     s = n(493683),
     c = n(239091),
     u = n(146773),
@@ -37,9 +37,9 @@ function b(e, t) {
 }
 class E extends g.ZP {
     render() {
-        let { channel: e, selected: t, connectChannelDropTarget: n, connectChannelDragSource: l, connectDragPreview: r, canReorderChannel: a } = this.props,
+        let { channel: e, selected: t, connectChannelDropTarget: n, connectChannelDragSource: l, connectDragPreview: r, canReorderChannel: o } = this.props,
             s = (0, i.jsx)('li', {
-                className: o()(this.getClassName(), { [x.disabled]: this.isDisabled() }),
+                className: a()(this.getClassName(), { [x.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
                 children: (0, i.jsxs)(C.Z, {
                     className: x.iconVisibility,
@@ -48,13 +48,13 @@ class E extends g.ZP {
                     onClick: this.handleClick,
                     onMouseDown: b,
                     onContextMenu: this.handleContextMenu,
-                    connectDragPreview: a ? r : null,
+                    connectDragPreview: o ? r : null,
                     'aria-label': (0, d.ZP)({ channel: e }),
                     resolvedUnreadSetting: v.i.ONLY_MENTIONS,
                     children: [this.renderInviteButton(), this.renderEditButton()]
                 })
             });
-        return a ? n(l(s)) : s;
+        return o ? n(l(s)) : s;
     }
     constructor(...e) {
         super(...e),
@@ -92,7 +92,7 @@ class E extends g.ZP {
 let S = (0, u.B)(E);
 t.Z = l.memo(function (e) {
     let { channel: t, guild: n, disableSorting: l } = e,
-        r = (0, a.cj)([p.Z, f.Z], () => {
+        r = (0, o.cj)([p.Z, f.Z], () => {
             let e = p.Z.getChannel(t.parent_id);
             return {
                 canManageChannel: f.Z.can(_.Plq.MANAGE_CHANNELS, t),

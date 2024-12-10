@@ -2,9 +2,9 @@ n(653041), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    o = n.n(r),
-    a = n(392711),
-    s = n.n(a),
+    a = n.n(r),
+    o = n(392711),
+    s = n.n(o),
     c = n(714338),
     u = n(585483),
     d = n(981631),
@@ -156,17 +156,17 @@ class g extends l.PureComponent {
     }
     render() {
         let { renderSecondary: e, offsetX: t, offsetY: n, animating: l, scale: r } = this.state,
-            a = [this.renderPrimary()];
+            o = [this.renderPrimary()];
         return (
-            e && a.push(this.renderSecondary(t, n)),
+            e && o.push(this.renderSecondary(t, n)),
             (0, i.jsx)('div', {
-                className: o()(h.container, { [h.animate]: l }),
+                className: a()(h.container, { [h.animate]: l }),
                 style: {
                     top: this.props.top,
                     left: this.props.left,
                     transform: 'scale('.concat(r, ')')
                 },
-                children: a
+                children: o
             })
         );
     }
@@ -199,7 +199,7 @@ class _ extends l.PureComponent {
     }
     render() {
         return (0, i.jsx)('div', {
-            className: o()(h.ragingDemon, { [h.visible]: this.state.visible }),
+            className: a()(h.ragingDemon, { [h.visible]: this.state.visible }),
             children: this.children
         });
     }

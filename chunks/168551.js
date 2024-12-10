@@ -40,7 +40,7 @@ let u = 'data-client-themes',
                         .join('\n'),
                     '\n    '
                 );
-            return '.'.concat(c, ' {\n      --custom-theme-background: ').concat(t, ';\n      ').concat(u, '\n    }');
+            return '.'.concat(c, ' {\n      --custom-theme-background: ').concat(t, ';\n      --custom-theme-primary-color: ').concat(n, ';\n      --custom-theme-secondary-color: ').concat(r, ';\n      ').concat(u, '\n    }');
         }, [e]);
     };
 t.ZP = () => {

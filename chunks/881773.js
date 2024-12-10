@@ -79,7 +79,7 @@ function j(e) {
         E = (e) =>
             (0, r.jsx)(d.Clickable, {
                 ...e,
-                onClick: p,
+                onClick: !0 === c ? void 0 : p,
                 className: o()(_.videoControlsBtnCont, { [_.videoControlsBtnContDisabled]: c }),
                 'aria-label': l,
                 'aria-disabled': c,

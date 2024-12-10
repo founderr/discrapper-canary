@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    o = n.n(r),
-    a = n(399606),
+    a = n.n(r),
+    o = n(399606),
     s = n(481060),
     c = n(588705),
     u = n(100527),
@@ -78,7 +78,7 @@ function w(e) {
     let { className: t } = e;
     return (0, i.jsxs)('div', {
         'aria-hidden': 'true',
-        className: o()(R.iconContainer, t),
+        className: a()(R.iconContainer, t),
         children: [
             (0, i.jsx)(I.Z, { className: R.iconSparklePlus }),
             (0, i.jsx)(s.LinkIcon, {
@@ -131,11 +131,11 @@ function O(e) {
     let t,
         n,
         { transitionState: r } = e;
-    (0, a.e7)([x.default], () => {
+    (0, o.e7)([x.default], () => {
         var e;
         return null === (e = x.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType;
     });
-    let { invite: f, error: _, submitting: I } = (0, a.cj)([T.Z], () => T.Z.getProps());
+    let { invite: f, error: _, submitting: I } = (0, o.cj)([T.Z], () => T.Z.getProps());
     l.useEffect(() => {
         !__OVERLAY__ && Z.isPlatformEmbedded && ((0, Z.isWindows)() ? N.ZP.minimize() : N.ZP.restore(), N.ZP.focus());
     }, []);
@@ -191,7 +191,7 @@ function O(e) {
                                     }),
                                     B && null != w
                                         ? (0, i.jsx)('div', {
-                                              className: o()(M.marginBottom20, R.stage),
+                                              className: a()(M.marginBottom20, R.stage),
                                               children: (0, i.jsx)(p.Z, {
                                                   isCard: !0,
                                                   stageInstance: f.stage_instance,

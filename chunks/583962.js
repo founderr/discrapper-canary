@@ -10,8 +10,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    o = n.n(r),
-    a = n(752877),
+    a = n.n(r),
+    o = n(752877),
     s = n(91192),
     c = n(442837),
     u = n(477690),
@@ -36,11 +36,11 @@ var i = n(200651),
 let j = (0, I.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     A = (e) => {
         let { guild: t, onSelect: n } = e,
-            [r, o] = l.useState(t.premiumProgressBarEnabled),
-            [a, s] = l.useState(!1),
+            [r, a] = l.useState(t.premiumProgressBarEnabled),
+            [o, s] = l.useState(!1),
             u = (0, c.e7)([_.Z], () => _.Z.can(N.Plq.MANAGE_GUILD, t)),
             p = async () => {
-                if (!!u) s(!0), await C.Z.saveGuild(t.id, { premiumProgressBarEnabled: !r }), o(!r), s(!1);
+                if (!!u) s(!0), await C.Z.saveGuild(t.id, { premiumProgressBarEnabled: !r }), a(!r), s(!1);
             };
         return (0, i.jsx)(d.Menu, {
             navId: 'progress-bar-context',
@@ -51,7 +51,7 @@ let j = (0, I.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                 id: 'progress-bar-enabled',
                 label: y.intl.string(y.t['0CJWPz']),
                 checked: r,
-                disabled: a,
+                disabled: o,
                 action: p
             })
         });
@@ -136,7 +136,7 @@ t.ZP = (e) => {
                         var t;
                         null === (t = e.onMouseEnter) || void 0 === t || t.call(e), B(U);
                     },
-                    className: o()(T.container, { [T.containerWithMargin]: n }),
+                    className: a()(T.container, { [T.containerWithMargin]: n }),
                     onContextMenu: (e) => {
                         D &&
                             (0, h.vq)(e, (e) =>
@@ -180,9 +180,9 @@ t.ZP = (e) => {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: o()(T.progressBarContainer, { [T.progressBarContainerComplete]: R }),
+                            className: a()(T.progressBarContainer, { [T.progressBarContainerComplete]: R }),
                             children: [
-                                (0, i.jsx)(a.animated.div, {
+                                (0, i.jsx)(o.animated.div, {
                                     className: T.progressBar,
                                     style: G
                                 }),

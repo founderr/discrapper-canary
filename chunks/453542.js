@@ -1,6 +1,6 @@
 n.d(t, {
     X: function () {
-        return o;
+        return a;
     }
 }),
     n(724458),
@@ -8,7 +8,7 @@ n.d(t, {
 var i = n(868854),
     l = n(801077),
     r = n(674563);
-function o() {
+function a() {
     let e = (0, i.a)();
     return (function (e, t) {
         let n = e.reduce((e, t) => {

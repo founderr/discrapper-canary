@@ -2,8 +2,8 @@ n(47120);
 var i,
     l,
     r,
-    o,
-    a = n(442837),
+    a,
+    o = n(442837),
     s = n(570140),
     c = n(445507);
 let u = {
@@ -18,7 +18,7 @@ let u = {
 function m() {
     for (let e in ((d = null), h)) delete h[e];
 }
-class f extends (i = a.ZP.Store) {
+class f extends (i = o.ZP.Store) {
     getActiveUserSignUp() {
         return d;
     }
@@ -30,15 +30,15 @@ class f extends (i = a.ZP.Store) {
         return p.has(e);
     }
 }
-(o = 'SignUpStore'),
+(a = 'SignUpStore'),
     (r = 'displayName') in (l = f)
         ? Object.defineProperty(l, r, {
-              value: o,
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = o),
+        : (l[r] = a),
     (t.Z = new f(s.Z, {
         ENABLE_USER_SIGN_UP: function (e) {
             let { key: t } = e,

@@ -18,8 +18,8 @@ n.d(t, {
 var i,
     l,
     r,
-    o,
-    a = n(200651),
+    a,
+    o = n(200651),
     s = n(192379),
     c = n(120356),
     u = n.n(c),
@@ -49,23 +49,23 @@ function j(e, t) {
 function A(e) {
     let { channel: t, disableManageChannels: n, tabIndex: i, forceShowButtons: l, hasChannelInfo: r = !1 } = e;
     if ((0, d.e7)([b.Z, E.Z], () => n || E.Z.getGuildId() === Z.I_8 || (!b.Z.can(Z.Plq.MANAGE_CHANNELS, t) && !b.Z.can(Z.Plq.MANAGE_ROLES, t) && !b.Z.can(Z.Plq.MANAGE_WEBHOOKS, t)) || ((0, v.r8)(t.type) && !b.Z.can(Z.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !b.Z.can(Z.Plq.CONNECT, t)) || !v.dF.has(t.type))) return null;
-    function o() {
+    function a() {
         p.ZP.open(t.id);
     }
-    return (0, a.jsx)(h.Tooltip, {
+    return (0, o.jsx)(h.Tooltip, {
         text: N.intl.string(N.t['3gUsJS']),
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n, onFocus: s, onBlur: c } = e;
-            return (0, a.jsx)(h.Clickable, {
+            return (0, o.jsx)(h.Clickable, {
                 className: u()(y.iconItem, l ? y.alwaysShown : void 0, r ? y.iconWithChannelInfo : y.iconNoChannelInfo),
-                onClick: o,
+                onClick: a,
                 tabIndex: i,
                 'aria-label': N.intl.string(N.t['3gUsJS']),
                 onMouseEnter: t,
                 onMouseLeave: n,
                 onFocus: s,
                 onBlur: c,
-                children: (0, a.jsx)(h.SettingsIcon, {
+                children: (0, o.jsx)(h.SettingsIcon, {
                     size: 'xs',
                     color: 'currentColor',
                     className: y.actionIcon
@@ -75,7 +75,7 @@ function A(e) {
     });
 }
 function P(e) {
-    let { channel: t, isDefaultChannel: i = !1, locked: l, tabIndex: r, forceShowButtons: o, hasChannelInfo: s = !1 } = e,
+    let { channel: t, isDefaultChannel: i = !1, locked: l, tabIndex: r, forceShowButtons: a, hasChannelInfo: s = !1 } = e,
         c = (0, d.e7)([I.Z], () => I.Z.getGuild(t.getGuildId())),
         p = (0, d.e7)([C.Z], () => C.Z.getStageInstanceByChannel(t.id), [t.id]),
         g = (0, d.e7)([m.ZP], () => m.ZP.getActiveEventByChannel(t.id), [t.id]),
@@ -88,7 +88,7 @@ function P(e) {
             (0, h.openModalLazy)(async () => {
                 let { default: i } = await Promise.all([n.e('7654'), n.e('86004')]).then(n.bind(n, 560114));
                 return (n) =>
-                    (0, a.jsx)(i, {
+                    (0, o.jsx)(i, {
                         ...n,
                         guild: c,
                         channel: t,
@@ -99,23 +99,23 @@ function P(e) {
             });
         }
     }
-    let T = (0, a.jsx)(h.GroupPlusIcon, {
+    let T = (0, o.jsx)(h.GroupPlusIcon, {
         size: 'xs',
         className: y.actionIcon,
         'aria-hidden': !0
     });
     return (
         i &&
-            (T = (0, a.jsx)(_.Z, {
+            (T = (0, o.jsx)(_.Z, {
                 tutorialId: 'instant-invite',
                 position: 'left',
-                children: (0, a.jsx)('div', { children: T })
+                children: (0, o.jsx)('div', { children: T })
             })),
-        (0, a.jsx)(h.Tooltip, {
+        (0, o.jsx)(h.Tooltip, {
             text: E,
             children: (e) =>
-                (0, a.jsx)(h.Clickable, {
-                    className: u()(y.iconItem, o ? y.alwaysShown : void 0, s ? y.iconWithChannelInfo : y.iconNoChannelInfo),
+                (0, o.jsx)(h.Clickable, {
+                    className: u()(y.iconItem, a ? y.alwaysShown : void 0, s ? y.iconWithChannelInfo : y.iconNoChannelInfo),
                     ...e,
                     onClick: S,
                     tabIndex: r,
@@ -130,15 +130,15 @@ function R(e) {
         n = () => {
             (0, g._U)(t.guild_id, t.id);
         };
-    return (0, a.jsx)(h.Tooltip, {
+    return (0, o.jsx)(h.Tooltip, {
         text: N.intl.string(N.t.ROh4T0),
         children: (e) =>
-            (0, a.jsx)(h.Clickable, {
+            (0, o.jsx)(h.Clickable, {
                 className: y.iconItem,
                 ...e,
                 onClick: n,
                 'aria-label': N.intl.string(N.t.ROh4T0),
-                children: (0, a.jsx)(h.XSmallIcon, {
+                children: (0, o.jsx)(h.XSmallIcon, {
                     size: 'xs',
                     color: 'currentColor',
                     className: y.actionIcon
@@ -151,15 +151,15 @@ function M(e) {
         n = () => {
             (0, g.dM)(t.guild_id, t.id, !0, { section: Z.jXE.CHANNEL_LIST });
         };
-    return (0, a.jsx)(h.Tooltip, {
+    return (0, o.jsx)(h.Tooltip, {
         text: N.intl.string(N.t['N2c/Ul']),
         children: (e) =>
-            (0, a.jsx)(h.Clickable, {
+            (0, o.jsx)(h.Clickable, {
                 className: y.iconItem,
                 ...e,
                 onClick: n,
                 'aria-label': N.intl.string(N.t['N2c/Ul']),
-                children: (0, a.jsx)(h.CheckmarkLargeIcon, {
+                children: (0, o.jsx)(h.CheckmarkLargeIcon, {
                     size: 'xs',
                     color: 'currentColor',
                     className: y.actionIcon
@@ -167,18 +167,18 @@ function M(e) {
             })
     });
 }
-class L extends (o = s.PureComponent) {
+class L extends (a = s.PureComponent) {
     renderEditButton() {
-        return (0, a.jsx)(A, { ...this.props });
+        return (0, o.jsx)(A, { ...this.props });
     }
     renderInviteButton() {
-        return (0, a.jsx)(P, { ...this.props });
+        return (0, o.jsx)(P, { ...this.props });
     }
     renderRemoveSuggestionButton() {
-        return (0, a.jsx)(R, { ...this.props });
+        return (0, o.jsx)(R, { ...this.props });
     }
     renderAcceptSuggestionButton() {
-        return (0, a.jsx)(M, { ...this.props });
+        return (0, o.jsx)(M, { ...this.props });
     }
     getClassName() {
         let { position: e, sortingPosition: t } = this.props;

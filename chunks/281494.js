@@ -185,7 +185,7 @@ async function I(e) {
             let e = await o.tn.post({
                     url: _.ANM.CREATE_REFERRAL(i),
                     oldFormErrors: !0,
-                    rejectWithError: !1
+                    rejectWithError: !0
                 }),
                 a = null !== (r = e.body) && void 0 !== r ? r : null;
             null != a && t.push(a), n.set(i, 1);

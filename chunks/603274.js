@@ -10,8 +10,8 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    o = n(392711),
-    a = n.n(o),
+    a = n(392711),
+    o = n.n(a),
     s = n(442837),
     c = n(481060),
     u = n(317381),
@@ -58,11 +58,11 @@ function y() {
         ),
         l = n.map((e) => e.id),
         r = n.filter((e) => e.type === b.d4z.GUILD_VOICE),
-        o = n.filter((e) => e.type === b.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
+        a = n.filter((e) => e.type === b.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
         h = (0, s.Wu)(
             [_.ZP],
             () =>
-                a().flatMap(r, (e) =>
+                o().flatMap(r, (e) =>
                     _.ZP.getVoiceStatesForChannel(e).map((e) => {
                         let { user: t } = e;
                         return t;
@@ -71,7 +71,7 @@ function y() {
             [r]
         ),
         E = (0, s.Wu)([p.Z], () =>
-            a().flatMap(o, (e) =>
+            o().flatMap(a, (e) =>
                 p.Z.getMutableParticipants(e, m.pV.SPEAKER)
                     .filter((e) => e.type === m.Ui.VOICE)
                     .map((e) => {
@@ -82,7 +82,7 @@ function y() {
         ),
         Z = (0, s.e7)([p.Z], () => {
             let e = 0;
-            for (let t of o) e += p.Z.getParticipantCount(t, m.pV.AUDIENCE);
+            for (let t of a) e += p.Z.getParticipantCount(t, m.pV.AUDIENCE);
             return e;
         }),
         y = (0, s.Wu)(

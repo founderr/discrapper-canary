@@ -8,8 +8,8 @@ n.d(t, {
 var i,
     l = n(200651),
     r = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(873546),
     c = n(442837),
     u = n(481060),
@@ -204,7 +204,7 @@ class V extends r.PureComponent {
     }
     renderProtip() {
         return (0, l.jsx)(g.Z, {
-            className: a()(R.protip, { [R.hasContent]: this.state.query.length > 0 }),
+            className: o()(R.protip, { [R.hasContent]: this.state.query.length > 0 }),
             type: g.Z.Types.INLINE,
             children: P.intl.format(P.t.wukqXV, {
                 userSymbolHook: (e, t) => H(t, m.xQ.USER, P.intl.string(P.t.GQRCGh)),
@@ -225,10 +225,10 @@ class V extends r.PureComponent {
             'aria-label': P.intl.string(P.t.ZvKwYW),
             size: u.ModalSize.DYNAMIC,
             transitionState: this.props.transitionState,
-            className: a()(R.container, s.tq && R.mobileContainer),
+            className: o()(R.container, s.tq && R.mobileContainer),
             fullscreenOnMobile: !1,
             children: (0, l.jsxs)('div', {
-                className: a()(R.quickswitcher, s.tq && R.mobileQuickswitcher),
+                className: o()(R.quickswitcher, s.tq && R.mobileQuickswitcher),
                 onMouseMove: this.handleMouseMove,
                 children: [this.renderInput(), this.renderResults(), this.renderProtip(), this.renderTutorial()]
             })

@@ -3,7 +3,7 @@ n.d(t, {
         return r;
     },
     lN: function () {
-        return o;
+        return a;
     }
 });
 var i = n(818083),
@@ -22,7 +22,7 @@ let r = (0, i.B)({
         }
     ]
 });
-function o(e) {
+function a(e) {
     let { alwaysShowDirectory: t } = r.useExperiment({ location: 'useShowBrowseChannelsExperiment' });
     return t || !e;
 }

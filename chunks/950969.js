@@ -1,8 +1,8 @@
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    o = n(718528),
-    a = n(256916),
+    a = n(718528),
+    o = n(256916),
     s = n(220444),
     c = n(569471),
     u = n(592125),
@@ -24,9 +24,9 @@ function f(e) {
 }
 t.Z = l.forwardRef(function (e, t) {
     let { guildId: n, guildChannels: l, guildChannelsVersion: s, ...c } = e,
-        u = (0, o.T)(n, l, s, { withVoiceChannels: !1 }, { ignoreRecents: !0 }),
+        u = (0, a.T)(n, l, s, { withVoiceChannels: !1 }, { ignoreRecents: !0 }),
         d = (0, r.e7)([p.Z], () => p.Z.isFocused());
-    return (0, i.jsx)(a.Z, {
+    return (0, i.jsx)(o.Z, {
         ref: t,
         ...c,
         isUnread: m,

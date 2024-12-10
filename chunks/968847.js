@@ -7,8 +7,8 @@ n.d(t, {
 var i,
     l,
     r,
-    o,
     a,
+    o,
     s,
     c = n(392711),
     u = n.n(c),
@@ -60,8 +60,8 @@ function M(e) {
     let { guildChannels: l } = S.Z.getGuildWithoutChangingGuildActionRows(e),
         r = l.getChannels(null !== (t = j[e]) && void 0 !== t ? t : []);
     if (null == r || 0 === r.length) return !1;
-    let o = null,
-        a = null,
+    let a = null,
+        o = null,
         s = null,
         c = null,
         d = !0,
@@ -81,7 +81,7 @@ function M(e) {
     if (h || d)
         for (let e = g.length - 1; e >= 0; e--) {
             let t = g[e];
-            (A(t.id) || u().some(t.threadIds, A)) && (null == a && (a = t.id), (I = !0)), (P(t.id) || u().some(t.threadIds, P)) && (null == o && (o = t.id), (x += v.ZP.getMentionCount(t.id) + u().sumBy(t.threadIds, v.ZP.getMentionCount)));
+            (A(t.id) || u().some(t.threadIds, A)) && (null == o && (o = t.id), (I = !0)), (P(t.id) || u().some(t.threadIds, P)) && (null == a && (a = t.id), (x += v.ZP.getMentionCount(t.id) + u().sumBy(t.threadIds, v.ZP.getMentionCount)));
         }
     if (h || d)
         for (let e = 0; e < _.length; e++) {
@@ -115,14 +115,14 @@ function M(e) {
             ? (y = {
                   mode: 'mentions',
                   mentionCount: x,
-                  targetChannelId: o
+                  targetChannelId: a
               })
             : h &&
               I &&
               (y = {
                   mode: 'unread',
                   mentionCount: 0,
-                  targetChannelId: a
+                  targetChannelId: o
               });
     let L = null != y && (null == Z || ('mentions' !== Z.mode && 'mentions' === y.mode)),
         w = null != Z && ('mentions' === Z.mode || !L);
@@ -175,14 +175,14 @@ class G extends (l = d.ZP.Store) {
     }
 }
 (s = 'ChannelListUnreadsStore'),
-    (a = 'displayName') in (o = G)
-        ? Object.defineProperty(o, a, {
+    (o = 'displayName') in (a = G)
+        ? Object.defineProperty(a, o, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (o[a] = s),
+        : (a[o] = s),
     (t.Z = new G(h.Z, {
         UPDATE_CHANNEL_LIST_DIMENSIONS: function (e) {
             let { guildId: t, channelIds: n } = e,

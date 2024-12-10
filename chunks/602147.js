@@ -1,8 +1,8 @@
 var i = n(200651),
     l = n(192379),
     r = n(636977),
-    o = n(481060),
-    a = n(132871),
+    a = n(481060),
+    o = n(132871),
     s = n(147890),
     c = n(571457),
     u = n(836768),
@@ -32,7 +32,7 @@ let C = l.forwardRef(function (e, t) {
                 case p.GlobalDiscoveryTab.APPS:
                     return (0, s.goToAppDirectory)({
                         restorePreviousView: !0,
-                        entrypoint: { name: a.ApplicationDirectoryEntrypointNames.GLOBAL_DISCOVERY_BUTTON }
+                        entrypoint: { name: o.ApplicationDirectoryEntrypointNames.GLOBAL_DISCOVERY_BUTTON }
                     });
                 default:
                     return (0, d.transitionToGlobalDiscovery)({ tab: e });
@@ -45,7 +45,7 @@ let C = l.forwardRef(function (e, t) {
         onClick: _,
         selected: n,
         tooltip: g.intl.string(g.t['4nEZLi']),
-        icon: o.CompassIcon
+        icon: a.CompassIcon
     });
 });
 t.Z = C;

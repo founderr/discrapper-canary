@@ -1,12 +1,12 @@
 n.d(t, {
     H: function () {
-        return o;
+        return a;
     }
 });
 var i = n(200651),
     l = n(192379),
     r = n(940722);
-let o = l.forwardRef((e, t) => {
+let a = l.forwardRef((e, t) => {
     let { children: n } = e;
     return (0, i.jsx)('div', {
         className: r.listItem,
@@ -14,4 +14,4 @@ let o = l.forwardRef((e, t) => {
         children: n
     });
 });
-o.displayName = 'ListItem';
+a.displayName = 'ListItem';

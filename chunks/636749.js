@@ -33,8 +33,8 @@ function v() {
 function g(n) {
     let { channelId: e, warningId: t, senderId: s, safetyWarning: _ } = n,
         g = o.useMemo(() => (null == _ ? void 0 : _.feedback_type) === u.ny.UPVOTE, [_]),
-        h = o.useMemo(() => (null == _ ? void 0 : _.feedback_type) === u.ny.DOWNVOTE, [_]),
-        N = o.useCallback(
+        N = o.useMemo(() => (null == _ ? void 0 : _.feedback_type) === u.ny.DOWNVOTE, [_]),
+        h = o.useCallback(
             (n, o) => {
                 (null == _ ? void 0 : _.feedback_type) !== n &&
                     ((0, d.Ms)(e, t, n),
@@ -62,7 +62,7 @@ function g(n) {
                 children: [
                     (0, a.jsx)(c.Clickable, {
                         className: i()([b.buttonsBackground, g ? b.buttonsBackgroundActive : b.buttonsBackgroundInactive, { [b.disabled]: g }]),
-                        onClick: () => N(u.ny.UPVOTE, m.NM.FEEDBACK_UPVOTE),
+                        onClick: () => h(u.ny.UPVOTE, m.NM.FEEDBACK_UPVOTE),
                         'aria-label': x.intl.string(x.t['2GrOCA']),
                         children: (0, a.jsx)(r.Z, {
                             className: b.__invalid_buttonIcon,
@@ -70,8 +70,8 @@ function g(n) {
                         })
                     }),
                     (0, a.jsx)(c.Clickable, {
-                        className: i()([b.buttonsBackground, h ? b.buttonsBackgroundActive : b.buttonsBackgroundInactive, { [b.disabled]: h }]),
-                        onClick: () => N(u.ny.DOWNVOTE, m.NM.FEEDBACK_DOWNVOTE),
+                        className: i()([b.buttonsBackground, N ? b.buttonsBackgroundActive : b.buttonsBackgroundInactive, { [b.disabled]: N }]),
+                        onClick: () => h(u.ny.DOWNVOTE, m.NM.FEEDBACK_DOWNVOTE),
                         'aria-label': x.intl.string(x.t.COp9BA),
                         children: (0, a.jsx)(l.Z, {
                             className: b.__invalid_buttonIcon,

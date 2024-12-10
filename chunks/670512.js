@@ -2,8 +2,8 @@ n(47120);
 var i,
     l = n(200651),
     r = n(192379),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(748780),
     c = n(846519),
     u = n(481060),
@@ -49,10 +49,10 @@ class C extends (i = r.PureComponent) {
     }
     renderArrowGroup(e) {
         return (0, l.jsxs)('div', {
-            className: a()(m.arrowGroup, e),
+            className: o()(m.arrowGroup, e),
             children: [
                 (0, l.jsx)(s.Z.div, {
-                    className: a()(m.arrowContainer, m.horizontal),
+                    className: o()(m.arrowContainer, m.horizontal),
                     style: this.getStyle(),
                     children: (0, l.jsx)('img', {
                         alt: '',
@@ -61,7 +61,7 @@ class C extends (i = r.PureComponent) {
                     })
                 }),
                 (0, l.jsx)('div', {
-                    className: a()(m.arrowContainer, m.diag1),
+                    className: o()(m.arrowContainer, m.diag1),
                     children: (0, l.jsx)('img', {
                         alt: '',
                         src: n(536404),
@@ -69,7 +69,7 @@ class C extends (i = r.PureComponent) {
                     })
                 }),
                 (0, l.jsx)('div', {
-                    className: a()(m.arrowContainer, m.diag2),
+                    className: o()(m.arrowContainer, m.diag2),
                     children: (0, l.jsx)('img', {
                         alt: '',
                         src: n(569347),
@@ -99,7 +99,7 @@ class C extends (i = r.PureComponent) {
             { shown: t } = this.state;
         return (0, l.jsxs)('div', {
             ref: this.rootRef,
-            className: a()(m.tutorial, {
+            className: o()(m.tutorial, {
                 [m.shown]: t,
                 [m.hasQuery]: e
             }),

@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    o = n(481060),
-    a = n(925329),
+    a = n(481060),
+    o = n(925329),
     s = n(810568),
     c = n(168524),
     u = n(115530),
@@ -22,7 +22,7 @@ function p(e) {
             source: s.m1.RtcPanel,
             trackEntryPointImpression: !0
         });
-    return (0, i.jsx)(o.Clickable, {
+    return (0, i.jsx)(a.Clickable, {
         onClick: l,
         className: r()(null != l && h.clickableGameName),
         children: (0, i.jsx)(u.Z, {
@@ -41,13 +41,13 @@ function m(e) {
             (0, i.jsxs)('div', {
                 className: h.gameIconWrapper,
                 children: [
-                    (0, i.jsx)(a.Z, {
+                    (0, i.jsx)(o.Z, {
                         className: h.gameIcon,
                         game: r,
                         pid: null == s ? void 0 : s.pid
                     }),
                     l
-                        ? (0, i.jsx)(o.VideoIcon, {
+                        ? (0, i.jsx)(a.VideoIcon, {
                               size: 'md',
                               color: 'currentColor',
                               className: h.liveBadge

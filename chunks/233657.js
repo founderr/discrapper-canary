@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(704215),
-    o = n(481060),
-    a = n(239091),
+    a = n(481060),
+    o = n(239091),
     s = n(605236),
     c = n(554747),
     u = n(306680),
@@ -29,7 +29,7 @@ function g(e) {
         ),
         v = (0, l.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
     async function x() {
-        await (0, o.openModalLazy)(async () => {
+        await (0, a.openModalLazy)(async () => {
             let { default: e } = await Promise.all([n.e('22347'), n.e('56236'), n.e('22506')]).then(n.bind(n, 17671));
             return (n) =>
                 (0, i.jsx)(e, {
@@ -44,7 +44,7 @@ function g(e) {
     return (0, i.jsx)(h.m, {
         id: 'upcoming-events-'.concat(t.id),
         renderIcon: (e) =>
-            (0, i.jsx)(o.CalendarIcon, {
+            (0, i.jsx)(a.CalendarIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: e
@@ -53,7 +53,7 @@ function g(e) {
         selected: g,
         onClick: x,
         onContextMenu: (e) => {
-            (0, a.jW)(e, async () => {
+            (0, o.jW)(e, async () => {
                 let { default: e } = await n.e('95307').then(n.bind(n, 867757));
                 return (n) =>
                     (0, i.jsx)(e, {
@@ -65,7 +65,7 @@ function g(e) {
         showUnread: C && !v,
         trailing:
             !v && _ > 0
-                ? (0, i.jsx)(o.NumberBadge, {
+                ? (0, i.jsx)(a.NumberBadge, {
                       className: f.numberBadge,
                       disableColor: !0,
                       count: _

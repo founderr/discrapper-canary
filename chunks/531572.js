@@ -1,7 +1,7 @@
 var i,
     l = n(442837),
     r = n(570140);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,25 +14,25 @@ function o(e, t, n) {
         e
     );
 }
-let a = {};
+let o = {};
 class s extends (i = l.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (a = e);
+        null != e && (o = e);
     }
     getState() {
-        return a;
+        return o;
     }
     getCountForGuild(e) {
-        return a[e];
+        return o[e];
     }
 }
-o(s, 'displayName', 'GuildBoostingProgressBarPersistedStore'),
-    o(s, 'persistKey', 'PremiumGuildProgressBarPersistedStore'),
+a(s, 'displayName', 'GuildBoostingProgressBarPersistedStore'),
+    a(s, 'persistKey', 'PremiumGuildProgressBarPersistedStore'),
     (t.Z = new s(r.Z, {
         APPLIED_GUILD_BOOST_COUNT_UPDATE: (e) => {
             let { guildId: t, premiumCount: n } = e;
-            a = {
-                ...a,
+            o = {
+                ...o,
                 [t]: n
             };
         }

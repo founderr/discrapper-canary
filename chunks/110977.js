@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    o = n.n(r),
-    a = n(481060),
+    a = n.n(r),
+    o = n(481060),
     s = n(540059),
     c = n(593214),
     u = n(981631),
@@ -17,9 +17,9 @@ var i = n(200651),
     m = n(572488);
 function f() {
     return (0, i.jsx)('div', {
-        className: o()(p.row, p.rowGuildName),
+        className: a()(p.row, p.rowGuildName),
         children: (0, i.jsx)('span', {
-            className: o()(p.guildNameText, p.guildNameTextLimitedSize, h.tooltipText),
+            className: a()(p.guildNameText, p.guildNameTextLimitedSize, h.tooltipText),
             children: d.intl.string(d.t['4tSWQk'])
         })
     });
@@ -27,7 +27,7 @@ function f() {
 let g = l.memo(function (e) {
     let { 'aria-label': t = !1, children: n } = e,
         r = (0, s.Q3)('FavoritesAddedTooltip'),
-        o = (function () {
+        a = (function () {
             let { favoriteAdded: e, clearFavoriteAdded: t } = (0, c.up)();
             return (
                 l.useEffect(() => {
@@ -43,9 +43,9 @@ let g = l.memo(function (e) {
                 e
             );
         })();
-    return (0, i.jsx)(a.Tooltip, {
-        forceOpen: o,
-        color: a.TooltipColors.GREEN,
+    return (0, i.jsx)(o.Tooltip, {
+        forceOpen: a,
+        color: o.TooltipColors.GREEN,
         hideOnClick: !0,
         spacing: r ? 12 : 20,
         position: 'right',

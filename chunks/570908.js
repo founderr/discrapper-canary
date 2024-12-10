@@ -1,34 +1,34 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return o;
     }
 });
 var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    o = n(743483);
-function a(e) {
-    let { selected: t, muted: n = !1, highlighted: l = !1, wrapContent: a = !1, avatar: s, decorators: c, name: u, subText: d, avatarClassName: h, innerClassName: p } = e;
+    a = n(743483);
+function o(e) {
+    let { selected: t, muted: n = !1, highlighted: l = !1, wrapContent: o = !1, avatar: s, decorators: c, name: u, subText: d, avatarClassName: h, innerClassName: p } = e;
     return (0, i.jsxs)('div', {
-        className: r()(p, o.layout, {
-            [o.muted]: !t && n,
-            [o.highlighted]: l,
-            [o.wrappedLayout]: a
+        className: r()(p, a.layout, {
+            [a.muted]: !t && n,
+            [a.highlighted]: l,
+            [a.wrappedLayout]: o
         }),
         children: [
             (0, i.jsx)('div', {
-                className: r()(o.avatar, h),
+                className: r()(a.avatar, h),
                 children: s
             }),
             (0, i.jsxs)('div', {
-                className: o.content,
+                className: a.content,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: o.nameAndDecorators,
+                        className: a.nameAndDecorators,
                         children: [
                             (0, i.jsx)('div', {
-                                className: r()(o.name, { [o.wrappedName]: a }),
+                                className: r()(a.name, { [a.wrappedName]: o }),
                                 children: u
                             }),
                             c
@@ -36,7 +36,7 @@ function a(e) {
                     }),
                     null != d
                         ? (0, i.jsx)('div', {
-                              className: o.subText,
+                              className: a.subText,
                               children: d
                           })
                         : null
