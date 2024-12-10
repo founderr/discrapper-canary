@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Y;
+        return H;
     }
 });
 var r = n(200651);
@@ -36,103 +36,82 @@ var i = n(120356),
     x = n(194811),
     w = n(373826),
     P = n(315324),
-    M = n(582123),
-    k = n(262210),
-    U = n(103479),
-    B = n(670451),
-    G = n(553375),
-    Z = n(228168),
-    F = n(981631),
-    V = n(701488),
-    j = n(388032),
-    H = n(249942);
-function Y(e) {
-    let { user: t, currentUser: n, activity: i, application: Y, guild: W, channel: K, className: z, onClose: q } = e,
-        { analyticsLocations: Q } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        { profileType: X } = (0, R.z)(),
-        J = { [H.fullSize]: X === Z.y0.FULL_SIZE },
-        $ = (0, v.Z)({
+    M = n(262210),
+    k = n(103479),
+    U = n(670451),
+    B = n(553375),
+    G = n(228168),
+    Z = n(981631),
+    F = n(701488),
+    V = n(388032),
+    j = n(249942);
+function H(e) {
+    let { user: t, currentUser: n, activity: i, application: H, guild: Y, channel: W, className: K, onClose: z } = e,
+        { analyticsLocations: q } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        { profileType: Q } = (0, R.z)(),
+        X = { [j.fullSize]: Q === G.y0.FULL_SIZE },
+        J = (0, v.Z)({
             activity: i,
             user: t
         }),
-        ee = (0, T.Z)({
+        $ = (0, T.Z)({
             location: 'UserProfileActivityCard',
             source: I.m1.UserProfile,
             trackEntryPointImpression: !0,
-            ...(0, G.nK)({
+            ...(0, B.nK)({
                 user: t,
                 activity: i,
-                entry: $
+                entry: J
             })
         }),
-        et = (0, y.Z)({
+        ee = (0, y.Z)({
             display: 'live',
             user: t,
             activity: i,
-            entry: $,
-            analyticsLocations: Q
+            entry: J,
+            analyticsLocations: q
         }),
-        en = (0, A.Z)({
+        et = (0, A.Z)({
             userId: t.id,
-            onAction: et
+            onAction: ee
         }),
-        er = () => {
-            null != Y && (null == q || q(), p.__(h._b.TEXT, m.I.NORMAL, { applicationId: Y.id }));
+        en = () => {
+            null != H && (null == z || z(), p.__(h._b.TEXT, m.I.NORMAL, { applicationId: H.id }));
         },
-        ei = (0, N.Z)(i),
-        { largeImage: ea, smallImage: es } = (0, g.FO)(i, Y),
-        eo = (0, s.EQ)(i)
-            .when(u.Z, () => (null != Y ? er : void 0))
-            .when(c.Z, () => ee)
+        er = (0, N.Z)(i),
+        { largeImage: ei, smallImage: ea } = (0, g.FO)(i, H),
+        es = (0, s.EQ)(i)
+            .when(u.Z, () => (null != H ? en : void 0))
+            .when(c.Z, () => $)
             .when(l.Z, () => {
                 if (t.id !== n.id)
                     return () =>
-                        (0, U.s)({
+                        (0, k.s)({
                             activity: i,
                             user: t,
                             index: 0
                         });
             })
             .otherwise(() => void 0),
-        el = () => {
-            let e = (0, l.Z)(i) ? 'crunchyroll' : 'default';
-            return null == eo
-                ? (0, r.jsx)(E.E, {
-                      image: ea,
-                      smallImage: es,
-                      size: E.J.SIZE_60,
-                      aspectRatio: e
-                  })
-                : (0, r.jsx)(E.E, {
-                      image: ea,
-                      smallImage: es,
-                      size: E.J.SIZE_60,
-                      className: H.clickableImage,
-                      aspectRatio: e,
-                      onClick: (e) => {
-                          et({ action: 'PRESS_IMAGE' }), eo(e);
-                      }
-                  });
-        },
-        eu = () => {
+        eo = () => {
             var e;
-            return i.type === F.IIU.HANG_STATUS
+            return i.type === Z.IIU.HANG_STATUS
                 ? (0, r.jsx)(w.Z, {
                       variant: 'heading-sm/semibold',
                       text: (0, b.O8)(i)
                   })
-                : (0, d.Z)(i) && null != K
+                : (0, d.Z)(i) && null != W
                   ? (0, r.jsxs)('div', {
-                        className: H.voiceChannelText,
+                        className: j.voiceChannelText,
                         children: [
                             (0, r.jsx)(o.VoiceNormalIcon, {
                                 size: 'xxs',
                                 color: o.tokens.colors.TEXT_NORMAL,
-                                className: H.voiceIcon
+                                className: j.voiceIcon
                             }),
                             (0, r.jsx)(w.Z, {
                                 variant: 'heading-sm/semibold',
-                                text: K.name
+                                text: W.name
                             })
                         ]
                     })
@@ -146,15 +125,15 @@ function Y(e) {
                           text: null !== (e = i.details) && void 0 !== e ? e : i.name
                       });
         },
-        ec = () =>
-            i.type === F.IIU.HANG_STATUS
+        el = () =>
+            i.type === Z.IIU.HANG_STATUS
                 ? null
-                : (0, d.Z)(i) && null != W
+                : (0, d.Z)(i) && null != Y
                   ? (0, r.jsx)(w.Z, {
                         variant: 'text-xs/normal',
-                        text: j.intl.formatToPlainString(j.t['hq/Qzc'], { guildName: W.name }),
+                        text: V.intl.formatToPlainString(V.t['hq/Qzc'], { guildName: Y.name }),
                         onClick: () => {
-                            (0, S.X)(W.id), et({ action: 'OPEN_VOICE_GUILD' }), null == q || q();
+                            (0, S.X)(Y.id), ee({ action: 'OPEN_VOICE_GUILD' }), null == z || z();
                         }
                     })
                   : (0, c.Z)(i)
@@ -166,22 +145,22 @@ function Y(e) {
                           text: i.state,
                           variant: 'text-xs/normal'
                       }),
-        ed = () => {
+        eu = () => {
             var e;
-            return i.type === F.IIU.WATCHING
+            return i.type === Z.IIU.WATCHING
                 ? null
                 : (0, c.Z)(i)
-                  ? ef()
+                  ? ec()
                   : (0, r.jsx)(w.Z, {
                         text: null === (e = i.assets) || void 0 === e ? void 0 : e.large_text,
                         variant: 'text-xs/normal'
                     });
         },
-        ef = () => {
+        ec = () => {
             var e, t, n, a;
-            return (null === (e = i.party) || void 0 === e ? void 0 : e.size) == null && i.application_id === V.Zc
+            return (null === (e = i.party) || void 0 === e ? void 0 : e.size) == null && i.application_id === F.Zc
                 ? (0, r.jsxs)('div', {
-                      className: H.gameState,
+                      className: j.gameState,
                       children: [
                           (0, r.jsx)(w.Z, {
                               variant: 'text-xs/normal',
@@ -189,16 +168,16 @@ function Y(e) {
                           }),
                           (0, r.jsx)(w.Z, {
                               variant: 'text-xs/normal',
-                              text: j.intl.formatToPlainString(j.t['u//9Bw'], {
+                              text: V.intl.formatToPlainString(V.t['u//9Bw'], {
                                   count: '0',
-                                  max: null !== (a = null == Y ? void 0 : Y.getMaxParticipants()) && void 0 !== a ? a : 0
+                                  max: null !== (a = null == H ? void 0 : H.getMaxParticipants()) && void 0 !== a ? a : 0
                               })
                           })
                       ]
                   })
                 : (0, u.Z)(i) && (null === (t = i.party) || void 0 === t ? void 0 : t.size) != null && (null === (n = i.party) || void 0 === n ? void 0 : n.size.length) >= 2
                   ? (0, r.jsxs)('div', {
-                        className: H.gameState,
+                        className: j.gameState,
                         children: [
                             (0, r.jsx)(w.Z, {
                                 variant: 'text-xs/normal',
@@ -206,7 +185,7 @@ function Y(e) {
                             }),
                             (0, r.jsx)(w.Z, {
                                 variant: 'text-xs/normal',
-                                text: j.intl.formatToPlainString(j.t['u//9Bw'], {
+                                text: V.intl.formatToPlainString(V.t['u//9Bw'], {
                                     count: i.party.size[0],
                                     max: i.party.size[1]
                                 })
@@ -220,103 +199,110 @@ function Y(e) {
                       })
                     : null;
         },
-        e_ = () => {
-            if (!(0, C.Z)(i)) return null;
-            let { start: e, end: t } = i.timestamps;
-            return (0, r.jsx)(k.Z, {
-                start: e,
-                end: t
-            });
-        },
-        ep = () =>
-            null == eo
-                ? (0, r.jsxs)('div', {
-                      children: [eu(), ec(), ed()]
-                  })
-                : (0, r.jsxs)(o.Clickable, {
-                      className: H.clickableText,
-                      onClick: (e) => {
-                          et({ action: 'PRESS_TEXT' }), eo(e);
-                      },
-                      children: [eu(), ec(), ed()]
-                  }),
-        eh = () =>
-            null == W || null == K
-                ? null
-                : (0, r.jsx)(P.Z, {
-                      user: t,
-                      guild: W,
-                      channel: K,
-                      onAction: et,
-                      onClose: q
-                  }),
-        em = () =>
+        ed = () =>
             t.id === n.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: a()(H.actions, J),
+                      className: a()(j.actions, X),
                       children: (0, r.jsx)(O.Z, {
                           activity: i,
                           user: t,
                           currentUser: n,
-                          onAction: et,
-                          onClose: q
+                          onAction: ee,
+                          onClose: z
                       })
                   });
     return (0, r.jsx)(_.Gt, {
-        value: Q,
-        children: (0, r.jsx)(M.Z, {
-            user: t,
-            onClose: q,
-            children: (e) => {
-                let { onAutoDismiss: n } = e;
-                return (0, r.jsxs)(L.Z, {
-                    ref: en,
-                    className: a()(H.card, z),
-                    onAction: et,
-                    onClose: q,
+        value: q,
+        children: (0, r.jsxs)(L.Z, {
+            ref: et,
+            className: a()(j.card, K),
+            onAction: ee,
+            onClose: z,
+            children: [
+                (0, r.jsx)(x.Z, {
+                    ...er,
+                    contextMenu: (0, r.jsx)(U.Z, {
+                        display: 'live',
+                        user: t,
+                        activity: i,
+                        entry: J,
+                        onClose: z
+                    })
+                }),
+                (0, r.jsxs)('div', {
+                    className: j.body,
                     children: [
-                        (0, r.jsx)(x.Z, {
-                            ...ei,
-                            contextMenu: (0, r.jsx)(B.Z, {
-                                display: 'live',
-                                user: t,
-                                activity: i,
-                                entry: $,
-                                onClose: q,
-                                onRequestOpen: n
-                            })
-                        }),
                         (0, r.jsxs)('div', {
-                            className: H.body,
+                            className: a()(j.content, X),
                             children: [
+                                !t.bot &&
+                                    (() => {
+                                        let e = (0, l.Z)(i) ? 'crunchyroll' : 'default';
+                                        return null == es
+                                            ? (0, r.jsx)(E.E, {
+                                                  image: ei,
+                                                  smallImage: ea,
+                                                  size: E.J.SIZE_60,
+                                                  aspectRatio: e
+                                              })
+                                            : (0, r.jsx)(E.E, {
+                                                  image: ei,
+                                                  smallImage: ea,
+                                                  size: E.J.SIZE_60,
+                                                  className: j.clickableImage,
+                                                  aspectRatio: e,
+                                                  onClick: (e) => {
+                                                      ee({ action: 'PRESS_IMAGE' }), es(e);
+                                                  }
+                                              });
+                                    })(),
                                 (0, r.jsxs)('div', {
-                                    className: a()(H.content, J),
+                                    className: j.details,
                                     children: [
-                                        !t.bot && el(),
-                                        (0, r.jsxs)('div', {
-                                            className: H.details,
-                                            children: [
-                                                ep(),
-                                                !t.bot &&
-                                                    (0, r.jsx)(D.Z, {
-                                                        user: t,
-                                                        activity: i,
-                                                        className: H.badges
-                                                    }),
-                                                e_()
-                                            ]
-                                        }),
-                                        X === Z.y0.FULL_SIZE && em()
+                                        null == es
+                                            ? (0, r.jsxs)('div', {
+                                                  children: [eo(), el(), eu()]
+                                              })
+                                            : (0, r.jsxs)(o.Clickable, {
+                                                  className: j.clickableText,
+                                                  onClick: (e) => {
+                                                      ee({ action: 'PRESS_TEXT' }), es(e);
+                                                  },
+                                                  children: [eo(), el(), eu()]
+                                              }),
+                                        !t.bot &&
+                                            (0, r.jsx)(D.Z, {
+                                                user: t,
+                                                activity: i,
+                                                className: j.badges
+                                            }),
+                                        (() => {
+                                            if (!(0, C.Z)(i)) return null;
+                                            let { start: e, end: t } = i.timestamps;
+                                            return (0, r.jsx)(M.Z, {
+                                                start: e,
+                                                end: t
+                                            });
+                                        })()
                                     ]
                                 }),
-                                eh()
+                                Q === G.y0.FULL_SIZE && ed()
                             ]
                         }),
-                        X !== Z.y0.FULL_SIZE && em()
+                        null == Y || null == W
+                            ? null
+                            : (0, r.jsx)(P.Z, {
+                                  user: t,
+                                  guild: Y,
+                                  channel: W,
+                                  onAction: ee,
+                                  onClose: z
+                              })
                     ]
-                });
-            }
+                }),
+                Q !== G.y0.FULL_SIZE && ed()
+            ]
         })
     });
 }

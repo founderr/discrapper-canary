@@ -1,103 +1,92 @@
 t.d(n, {
     Z: function () {
-        return _;
+        return v;
     }
 });
-var i = t(200651),
-    l = t(192379),
-    o = t(442837),
-    r = t(704215),
-    s = t(481060),
-    c = t(353647),
-    a = t(605236),
-    d = t(63063),
-    u = t(369566),
-    f = t(678738),
-    m = t(151545),
-    I = t(744802),
-    x = t(493043),
-    p = t(228168),
-    h = t(981631),
-    v = t(921944),
-    Z = t(388032),
-    g = t(189144),
-    j = t(731218);
-function _(e) {
-    let { user: n, currentUser: t, profileGuildId: _, subsection: b, onClose: E } = e,
-        { live: N, recent: T, stream: S } = (0, u.Z)(n.id),
-        y = N.length > 0 || T.length > 0 || null != S,
-        P = (0, o.e7)([c.Z], () => c.Z.isFetchingUserOutbox(n.id)),
-        C = n.id === t.id,
-        A = (0, a.wE)(r.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
-    return (l.useEffect(() => {
-        if (!!C && !A)
-            (0, a.EW)(r.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
-                dismissAction: v.L.AUTO_DISMISS,
-                forceTrack: !0
-            });
-    }, [C, A]),
-    !y && P)
+var i = t(200651);
+t(192379);
+var l = t(442837),
+    o = t(481060),
+    r = t(353647),
+    s = t(63063),
+    c = t(369566),
+    a = t(678738),
+    d = t(151545),
+    u = t(744802),
+    f = t(493043),
+    m = t(228168),
+    x = t(981631),
+    I = t(388032),
+    p = t(189144),
+    h = t(731218);
+function v(e) {
+    let { user: n, currentUser: t, profileGuildId: v, subsection: Z, onClose: g } = e,
+        { live: j, recent: _, stream: b } = (0, c.Z)(n.id),
+        E = j.length > 0 || _.length > 0 || null != b,
+        N = (0, l.e7)([r.Z], () => r.Z.isFetchingUserOutbox(n.id));
+    return !E && N
         ? (0, i.jsx)('div', {
-              className: j.empty,
-              children: (0, i.jsx)(s.Spinner, {})
+              className: h.empty,
+              children: (0, i.jsx)(o.Spinner, {})
           })
-        : (0, i.jsxs)(s.ScrollerThin, {
-              className: g.scroller,
+        : (0, i.jsxs)(o.ScrollerThin, {
+              className: p.scroller,
               fade: !0,
               children: [
-                  (0, i.jsxs)(f.Z, {
+                  (0, i.jsxs)(a.Z, {
                       children: [
-                          null != S &&
-                              (0, i.jsx)(x.Z, {
+                          null != b &&
+                              (0, i.jsx)(f.Z, {
                                   location: 'UserProfileModalActivity',
                                   user: n,
                                   currentUser: t,
-                                  stream: S,
-                                  onClose: E,
-                                  profileGuildId: _
+                                  stream: b,
+                                  onClose: g,
+                                  profileGuildId: v
                               }),
-                          N.map((e, l) =>
+                          j.map((e, l) =>
                               (0, i.jsx)(
-                                  m.Z,
+                                  d.Z,
                                   {
                                       user: n,
                                       currentUser: t,
                                       activity: e,
-                                      onClose: E,
-                                      profileGuildId: _
+                                      onClose: g,
+                                      profileGuildId: v
                                   },
                                   'live-'.concat(l)
                               )
                           )
                       ]
                   }),
-                  T.length > 0 &&
-                      (0, i.jsx)(f.Z, {
-                          heading: Z.intl.string(Z.t.M0zgnZ),
-                          subheading: C
-                              ? Z.intl.format(Z.t['4bk9Ag'], {
-                                    learnMoreHook: (e, n) =>
-                                        (0, i.jsx)(
-                                            s.Anchor,
-                                            {
-                                                href: d.Z.getArticleURL(h.BhN.ACTIVITY_STATUS_SETTINGS),
-                                                children: e
-                                            },
-                                            n
-                                        )
-                                })
-                              : void 0,
-                          scrollIntoView: b === p.Tb.RECENT_ACTIVITY,
-                          children: T.map((e) =>
+                  _.length > 0 &&
+                      (0, i.jsx)(a.Z, {
+                          heading: I.intl.string(I.t.M0zgnZ),
+                          subheading:
+                              n.id === t.id
+                                  ? I.intl.format(I.t['4bk9Ag'], {
+                                        learnMoreHook: (e, n) =>
+                                            (0, i.jsx)(
+                                                o.Anchor,
+                                                {
+                                                    href: s.Z.getArticleURL(x.BhN.ACTIVITY_STATUS_SETTINGS),
+                                                    children: e
+                                                },
+                                                n
+                                            )
+                                    })
+                                  : void 0,
+                          scrollIntoView: Z === m.Tb.RECENT_ACTIVITY,
+                          children: _.map((e) =>
                               (0, i.jsx)(
-                                  I.Z,
+                                  u.Z,
                                   {
                                       location: 'UserProfileModalActivity',
                                       user: n,
                                       currentUser: t,
                                       entry: e,
-                                      profileGuildId: _,
-                                      onClose: E
+                                      profileGuildId: v,
+                                      onClose: g
                                   },
                                   e.id
                               )

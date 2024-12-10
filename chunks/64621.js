@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return y;
     }
 }),
     n(47120);
@@ -16,110 +16,114 @@ var r = n(200651),
     f = n(594174),
     _ = n(984173),
     p = n(718107),
-    h = n(652853),
-    m = n(228168),
-    g = n(388032),
-    E = n(493248),
-    v = n(425637),
-    I = n(895982),
-    T = n(685741),
-    b = n(20818);
-function S(e) {
-    var t, n, S;
-    let { sourceType: y, children: A, user: N } = e,
-        { profileType: C } = (0, h.z)(),
-        { avatarReactReplyEnabled: R, statusReactReplyEnabled: O } = (0, p.t)({ location: 'UserProfilePopoutInteractionCoachmark' }),
-        { activityReactReplyEnabled: D, allProfileReactReplyEnabled: L } = (0, _.F)({ location: 'UserProfilePopoutInteractionCoachmark' }),
-        x = (0, a.e7)([f.default], () => {
+    h = n(456644),
+    m = n(652853),
+    g = n(228168),
+    E = n(388032),
+    v = n(493248),
+    I = n(425637),
+    T = n(895982),
+    b = n(685741),
+    S = n(20818);
+function y(e) {
+    var t, n, y, A, N;
+    let { sourceType: C, children: R, user: O } = e,
+        { profileType: D } = (0, m.z)(),
+        { avatarReactReplyEnabled: L, statusReactReplyEnabled: x } = (0, p.t)({ location: 'UserProfilePopoutInteractionCoachmark' }),
+        { activityReactReplyEnabled: w, allProfileReactReplyEnabled: P } = (0, _.F)({ location: 'UserProfilePopoutInteractionCoachmark' }),
+        { recentActivityEnabled: M } = (0, h.i)({ location: 'UserProfilePopoutInteractionCoachmark' }),
+        k = (0, a.e7)([f.default], () => {
             var e;
-            return (null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === N.id;
+            return (null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === O.id;
         }),
-        w = y === m.n_.AVATAR && R,
-        P = y === m.n_.STATUS && !R && O,
-        M = y === m.n_.AVATAR && L,
-        k = y === m.n_.ACTIVITY && D && !L,
-        U = !x && C === m.y0.BITE_SIZE && (w || P || M || k),
-        [B, G] = i.useState(!1);
-    (0, l.Z)(() => G(!0), U ? 200 : null);
+        U = C === g.n_.AVATAR && L,
+        B = C === g.n_.STATUS && !L && x,
+        G = C === g.n_.AVATAR && P,
+        Z = C === g.n_.ACTIVITY && (w || M) && !P,
+        F = !k && D === g.y0.BITE_SIZE && (U || B || G || Z),
+        [V, j] = i.useState(!1);
+    (0, l.Z)(() => j(!0), F ? 200 : null);
     let {
-            asset: Z,
-            assetClassName: F,
-            className: V,
-            content: j,
-            header: H,
-            spacing: Y,
-            dismissibleContentType: W
-        } = ((t = O),
-        (n = R),
-        (S = D),
-        L
+            asset: H,
+            assetClassName: Y,
+            className: W,
+            content: K,
+            header: z,
+            spacing: q,
+            dismissibleContentType: Q
+        } = ((t = x),
+        (n = L),
+        (y = w),
+        (A = P),
+        (N = M),
+        A
             ? {
-                  asset: T,
-                  assetClassName: E.profileImage,
-                  className: E.profileCoachmark,
-                  content: g.intl.string(g.t.HEGlIC),
-                  header: g.intl.string(g.t['R/RaKy']),
+                  asset: b,
+                  assetClassName: v.profileImage,
+                  className: v.profileCoachmark,
+                  content: E.intl.string(E.t.HEGlIC),
+                  header: E.intl.string(E.t['R/RaKy']),
                   spacing: 30,
                   dismissibleContentType: s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ALL
               }
-            : S
+            : y || N
               ? {
-                    asset: v,
+                    asset: I,
                     assetClassName: void 0,
-                    className: E.activityCoachmark,
-                    content: g.intl.string(g.t.LQ32TU),
-                    header: g.intl.string(g.t.XDBiPT),
+                    className: v.activityCoachmark,
+                    content: E.intl.string(E.t.LQ32TU),
+                    header: E.intl.string(E.t.XDBiPT),
                     spacing: 32,
                     dismissibleContentType: s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ACTIVITY
                 }
               : t && n
                 ? {
-                      asset: T,
-                      assetClassName: E.profileImage,
-                      className: E.profileCoachmark,
-                      content: g.intl.string(g.t['yzj+dn']),
-                      header: g.intl.string(g.t['R/RaKy']),
+                      asset: b,
+                      assetClassName: v.profileImage,
+                      className: v.profileCoachmark,
+                      content: E.intl.string(E.t['yzj+dn']),
+                      header: E.intl.string(E.t['R/RaKy']),
                       spacing: 30,
                       dismissibleContentType: s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK
                   }
                 : t
                   ? {
-                        asset: b,
+                        asset: S,
                         assetClassName: void 0,
-                        className: E.statusCoachmark,
-                        content: g.intl.string(g.t.MYYTWV),
-                        header: g.intl.string(g.t['X/My/v']),
+                        className: v.statusCoachmark,
+                        content: E.intl.string(E.t.MYYTWV),
+                        header: E.intl.string(E.t['X/My/v']),
                         spacing: 16,
                         dismissibleContentType: s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_STATUS
                     }
                   : {
-                        asset: I,
-                        assetClassName: E.avatarImage,
-                        className: E.avatarCoachmark,
-                        content: g.intl.string(g.t['65191t']),
-                        header: g.intl.string(g.t['3FagAQ']),
+                        asset: T,
+                        assetClassName: v.avatarImage,
+                        className: v.avatarCoachmark,
+                        content: E.intl.string(E.t['65191t']),
+                        header: E.intl.string(E.t['3FagAQ']),
                         spacing: 30,
                         dismissibleContentType: s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_AVATAR
                     }),
-        K = (0, u.N)(s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK),
-        [z, q] = (0, c.US)(B && !K ? [W] : []);
+        X = (0, u.N)(s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK),
+        [J, $] = (0, c.US)(V && !X ? [Q] : []);
     return (0, r.jsx)(o.Popout, {
         align: 'center',
-        position: y === m.n_.AVATAR ? 'left' : 'right',
-        shouldShow: null != z,
-        spacing: Y,
+        position: C === g.n_.AVATAR ? 'left' : 'right',
+        shouldShow: null != J,
+        spacing: q,
         renderPopout: (e) => {
             let { position: t, closePopout: n, setPopoutRef: i } = e;
             return (0, r.jsx)(o.Dialog, {
                 ref: i,
                 children: (0, r.jsx)(d.ZP, {
-                    className: V,
+                    className: W,
                     asset: (0, r.jsx)('img', {
                         alt: '',
-                        src: Z,
-                        className: F
+                        src: H,
+                        className: Y
                     }),
-                    buttonCTA: g.intl.string(g.t['+IrDzM']),
+                    buttonCTA: E.intl.string(E.t['+IrDzM']),
                     buttonLayout: d._F.STACKED,
                     buttonProps: {
                         color: o.ButtonColors.BRAND_INVERTED,
@@ -129,15 +133,15 @@ function S(e) {
                     content: (0, r.jsx)(o.Text, {
                         variant: 'text-xs/normal',
                         color: 'always-white',
-                        children: j
+                        children: K
                     }),
-                    header: H,
-                    headerClassName: E.tooltipHeader,
-                    markAsDismissed: q,
+                    header: z,
+                    headerClassName: v.tooltipHeader,
+                    markAsDismissed: $,
                     onClick: n
                 })
             });
         },
-        children: () => A
+        children: () => R
     });
 }

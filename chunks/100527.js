@@ -139,7 +139,6 @@ var n, r;
     (r.USER_PROFILE_LIVE_ACTIVITY_CARD = 'user profile live activity card'),
     (r.USER_PROFILE_RECENT_ACTIVITY_CARD = 'user profile recent activity card'),
     (r.USER_PROFILE_ACTIVITY_CONTEXT_MENU = 'user profile activity context menu'),
-    (r.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP = 'user profile activity education tooltip'),
     (r.GUILD_PROFILE = 'guild profile'),
     (r.EDIT_AVATAR = 'edit avatar'),
     (r.EDIT_BANNER = 'edit banner'),
