@@ -31,9 +31,9 @@ function u(e) {
                 className: d.bottomControls,
                 children: [
                     (0, r.jsx)(o.Z, {
-                        grow: 0,
-                        shrink: 1,
+                        grow: 1,
                         align: o.Z.Align.CENTER,
+                        className: d.edgeControls,
                         children: null == i ? void 0 : i()
                     }),
                     (0, r.jsx)(o.Z, {
@@ -42,11 +42,12 @@ function u(e) {
                         align: o.Z.Align.CENTER,
                         children: null == l ? void 0 : l()
                     }),
+                    ' ',
                     (0, r.jsx)(o.Z, {
-                        grow: 0,
-                        shrink: 1,
+                        grow: 1,
                         justify: o.Z.Justify.END,
                         align: o.Z.Align.CENTER,
+                        className: d.edgeControls,
                         children: null == a ? void 0 : a()
                     })
                 ]
