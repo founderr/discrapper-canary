@@ -29,7 +29,14 @@ function u(e) {
 }
 class h extends l.PureComponent {
     render() {
-        let { className: e, textValue: t, richValue: n, message: l, channel: r, onCancel: a, children: s } = this.props;
+        let { className: e, textValue: t, richValue: n, message: l, channel: r, onCancel: a, children: s, isRefreshEnabled: d } = this.props,
+            h = (0, i.jsx)('div', {
+                className: c.operations,
+                children: o.intl.format(o.t.wDsPXl, {
+                    onCancel: () => a(r.id),
+                    onSave: this.onClickSave
+                })
+            });
         return (0, i.jsxs)('div', {
             className: e,
             ref: this.node,
@@ -42,15 +49,10 @@ class h extends l.PureComponent {
                     channel: r,
                     onChange: this.onChange,
                     onSubmit: this.onSubmit,
-                    onKeyDown: this.onKeyDown
+                    onKeyDown: this.onKeyDown,
+                    renderLeftAccessories: () => h
                 }),
-                (0, i.jsx)('div', {
-                    className: c.operations,
-                    children: o.intl.format(o.t.wDsPXl, {
-                        onCancel: () => a(r.id),
-                        onSave: this.onClickSave
-                    })
-                })
+                d ? null : h
             ]
         });
     }

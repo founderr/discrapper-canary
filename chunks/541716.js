@@ -121,7 +121,8 @@ let o = {
         expressionPicker: { onlyEmojis: !0 },
         permissions: { requireSendMessages: !0 },
         submit: { useDisabledStylesOnSubmit: !0 },
-        showCharacterCount: !0
+        showCharacterCount: !0,
+        showSlowmodeIndicator: !1
     },
     d = {
         analyticsName: 'forum',
