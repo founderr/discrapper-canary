@@ -1,15 +1,21 @@
 n.d(t, {
     Q3: function () {
-        return i;
+        return u;
     },
     TH: function () {
-        return a;
+        return c;
     },
-    i5: function () {
-        return r;
+    i9: function () {
+        return o;
+    },
+    o9: function () {
+        return l;
     }
 });
-let r = (0, n(818083).B)({
+var r = n(442837),
+    i = n(818083),
+    a = n(740492);
+let s = (0, i.B)({
     id: '2024-05_desktop_visual_refresh',
     label: 'Desktop Visual Refresh',
     kind: 'user',
@@ -44,9 +50,21 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
-    return r.useExperiment({ location: e }, { autoTrackExposure: !0 }).enabled;
+function o(e) {
+    let t = s.getCurrentConfig({ location: e }).enabled,
+        n = a.ZP.disableVisualRefresh;
+    return !!t && !n;
 }
-function a(e) {
-    return r.useExperiment({ location: e }, { autoTrackExposure: !0 }).enableCollapsibleSidebar;
+function l(e) {
+    return s.useExperiment({ location: e }, { autoTrackExposure: !0 }).enabled;
+}
+function u(e) {
+    let t = l(e),
+        n = (0, r.e7)([a.ZP], () => a.ZP.disableVisualRefresh);
+    return !!t && !n;
+}
+function c(e) {
+    let t = u(e),
+        n = s.useExperiment({ location: e }, { autoTrackExposure: !0 }).enableCollapsibleSidebar;
+    return !!t && n;
 }

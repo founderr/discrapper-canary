@@ -151,6 +151,10 @@ class I extends (o = c.ZP.DeviceSettingsStore) {
         var e;
         return null === (e = v.showPlayAgain) || void 0 === e || e;
     }
+    get disableVisualRefresh() {
+        var e;
+        return null !== (e = v.disableVisualRefresh) && void 0 !== e && e;
+    }
 }
 m(I, 'displayName', 'UnsyncedUserSettingsStore'),
     m(I, 'persistKey', 'UnsyncedUserSettingsStore'),

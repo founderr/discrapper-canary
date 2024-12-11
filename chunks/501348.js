@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return J;
+        return $;
     }
 }),
     n(47120);
@@ -22,28 +22,29 @@ var i = n(200651),
     T = n(514361),
     E = n(600164),
     C = n(313201),
-    _ = n(605236),
-    f = n(786761),
-    I = n(3148),
-    N = n(739566),
-    A = n(753206),
-    b = n(311476),
-    v = n(921801),
-    j = n(594174),
-    O = n(358085),
-    R = n(210887),
-    P = n(740492),
-    D = n(695346),
-    y = n(329013),
-    B = n(333859),
-    L = n(726985),
-    Z = n(981631),
-    F = n(921944),
-    M = n(959517),
-    k = n(388032),
-    w = n(201032),
-    U = n(232186);
-function V(e, t, n) {
+    _ = n(540059),
+    f = n(605236),
+    I = n(786761),
+    N = n(3148),
+    A = n(739566),
+    b = n(753206),
+    v = n(311476),
+    j = n(921801),
+    O = n(594174),
+    R = n(358085),
+    P = n(210887),
+    D = n(740492),
+    y = n(695346),
+    B = n(329013),
+    L = n(333859),
+    Z = n(726985),
+    F = n(981631),
+    M = n(921944),
+    k = n(959517),
+    w = n(388032),
+    U = n(201032),
+    V = n(232186);
+function G(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -56,62 +57,62 @@ function V(e, t, n) {
         e
     );
 }
-let G = {
+let Y = {
         COZY: 'cozy',
         COMPACT: 'compact'
     },
-    Y = (0, C.hQ)(),
     H = (0, C.hQ)(),
     z = (0, C.hQ)(),
-    W = '1337',
-    K = (e) => {
+    W = (0, C.hQ)(),
+    K = '1337',
+    q = (e) => {
         let t = 0;
         return [
-            (0, f.e5)({
-                ...(0, I.ZP)({
-                    channelId: W,
-                    content: k.intl.string(k.t.oZxkEh)
+            (0, I.e5)({
+                ...(0, N.ZP)({
+                    channelId: K,
+                    content: w.intl.string(w.t.oZxkEh)
                 }),
-                state: Z.yb.SENT,
+                state: F.yb.SENT,
                 id: ''.concat(t++)
             }),
-            (0, f.e5)({
-                ...(0, I.ZP)({
-                    channelId: W,
-                    content: (0, d.wj)(e) ? k.intl.string(k.t['WGb/v7']) : k.intl.string(k.t['62m4m5'])
+            (0, I.e5)({
+                ...(0, N.ZP)({
+                    channelId: K,
+                    content: (0, d.wj)(e) ? w.intl.string(w.t['WGb/v7']) : w.intl.string(w.t['62m4m5'])
                 }),
-                state: Z.yb.SENT,
+                state: F.yb.SENT,
                 id: ''.concat(t++)
             }),
-            (0, f.e5)({
-                ...(0, I.ZP)({
-                    channelId: W,
-                    content: k.intl.string(k.t.a0Byo6)
+            (0, I.e5)({
+                ...(0, N.ZP)({
+                    channelId: K,
+                    content: w.intl.string(w.t.a0Byo6)
                 }),
-                state: Z.yb.SENT,
+                state: F.yb.SENT,
                 id: ''.concat(t++)
             }),
-            (0, f.e5)({
-                ...(0, I.ZP)({
-                    channelId: W,
-                    content: k.intl.string(k.t.bmwEWF)
+            (0, I.e5)({
+                ...(0, N.ZP)({
+                    channelId: K,
+                    content: w.intl.string(w.t.bmwEWF)
                 }),
-                state: Z.yb.SENT,
+                state: F.yb.SENT,
                 id: ''.concat(t++)
             }),
-            (0, f.e5)({
-                ...(0, I.ZP)({
-                    channelId: W,
-                    content: k.intl.string(k.t.hK9QW1)
+            (0, I.e5)({
+                ...(0, N.ZP)({
+                    channelId: K,
+                    content: w.intl.string(w.t.hK9QW1)
                 }),
-                state: Z.yb.SENT,
+                state: F.yb.SENT,
                 id: ''.concat(t)
             })
         ];
     },
-    q = () => {
+    X = () => {
         let e = (0, a.e7)([T.Z], () => T.Z.isPreview),
-            { enabled: t } = b.Z.useExperiment(
+            { enabled: t } = v.Z.useExperiment(
                 { location: 'GradientSelectorsTitle' },
                 {
                     autoTrackExposure: !1,
@@ -121,41 +122,41 @@ let G = {
         return t
             ? null
             : (0, i.jsxs)('div', {
-                  className: w.themeTitle,
+                  className: U.themeTitle,
                   children: [
                       (0, i.jsx)('div', {
-                          className: w.title,
-                          children: k.intl.string(k.t.Ksh3io)
+                          className: U.title,
+                          children: w.intl.string(w.t.Ksh3io)
                       }),
-                      (0, i.jsx)(y.g, {})
+                      (0, i.jsx)(B.g, {})
                   ]
               });
     };
-class X extends s.Component {
+class Q extends s.Component {
     renderZoomSlider() {
-        return O.isPlatformEmbedded
+        return R.isPlatformEmbedded
             ? (0, i.jsxs)(u.FormItem, {
-                  className: U.marginTop20,
+                  className: V.marginTop20,
                   children: [
                       (0, i.jsx)(u.FormTitle, {
-                          id: Y,
+                          id: H,
                           tag: u.FormTitleTags.H5,
-                          className: U.marginBottom8,
-                          children: k.intl.string(k.t.i19n5O)
+                          className: V.marginBottom8,
+                          children: w.intl.string(w.t.i19n5O)
                       }),
                       (0, i.jsx)(u.Slider, {
-                          className: l()(U.marginTop20, U.marginBottom4),
+                          className: l()(V.marginTop20, V.marginBottom4),
                           initialValue: this.props.zoom,
-                          defaultValue: Z.yqN.ZOOM_DEFAULT,
-                          markers: Z.yqN.ZOOM_SCALES,
+                          defaultValue: F.yqN.ZOOM_DEFAULT,
+                          markers: F.yqN.ZOOM_SCALES,
                           stickToMarkers: !0,
                           onValueChange: this.handleZoomChange,
                           onValueRender: this.handleSliderRender,
-                          'aria-labelledby': Y
+                          'aria-labelledby': H
                       }),
                       (0, i.jsx)(u.FormText, {
                           type: u.FormText.Types.DESCRIPTION,
-                          children: k.intl.format(k.t.OMkSUl, { modKey: g.Z.modKey })
+                          children: w.intl.format(w.t.OMkSUl, { modKey: g.Z.modKey })
                       })
                   ]
               })
@@ -163,27 +164,27 @@ class X extends s.Component {
     }
     renderFontScaleSlider() {
         return (0, i.jsxs)(u.FormItem, {
-            className: U.marginTop20,
+            className: V.marginTop20,
             children: [
                 (0, i.jsx)(u.FormTitle, {
-                    id: H,
+                    id: z,
                     tag: u.FormTitleTags.H5,
-                    className: U.marginBottom8,
-                    children: k.intl.string(k.t.qPOqoK)
+                    className: V.marginBottom8,
+                    children: w.intl.string(w.t.qPOqoK)
                 }),
                 (0, i.jsx)(E.Z, {
                     align: E.Z.Align.CENTER,
                     children: (0, i.jsx)(u.Slider, {
-                        className: l()(U.marginTop20, U.marginBottom4),
+                        className: l()(V.marginTop20, V.marginBottom4),
                         initialValue: this.props.fontSize,
-                        defaultValue: Z.yqN.FONT_SIZE_DEFAULT,
-                        markers: Z.yqN.FONT_SIZES,
+                        defaultValue: F.yqN.FONT_SIZE_DEFAULT,
+                        markers: F.yqN.FONT_SIZES,
                         stickToMarkers: !0,
                         onValueChange: this.handleFontSizeChange,
                         onValueRender: this.handleSliderRenderPX,
                         onMarkerRender: this.handleSliderRenderPX,
                         getAriaValueText: this.handleSliderValueText,
-                        'aria-labelledby': H
+                        'aria-labelledby': z
                     })
                 })
             ]
@@ -192,25 +193,25 @@ class X extends s.Component {
     renderMessageGroupSpacingSlider() {
         let { messageDisplayCompact: e, messageGroupSpacing: t } = this.props;
         return (0, i.jsxs)(u.FormItem, {
-            className: U.marginTop20,
+            className: V.marginTop20,
             children: [
                 (0, i.jsx)(u.FormTitle, {
-                    id: z,
+                    id: W,
                     tag: u.FormTitleTags.H5,
-                    className: U.marginBottom8,
-                    children: k.intl.string(k.t.Q6lKkp)
+                    className: V.marginBottom8,
+                    children: w.intl.string(w.t.Q6lKkp)
                 }),
                 (0, i.jsx)(u.Slider, {
-                    className: l()(U.marginTop20, U.marginBottom4),
+                    className: l()(V.marginTop20, V.marginBottom4),
                     initialValue: t,
-                    defaultValue: e ? M.c8 : M.pq,
-                    markers: M.fP,
+                    defaultValue: e ? k.c8 : k.pq,
+                    markers: k.fP,
                     stickToMarkers: !0,
                     onValueChange: this.handleMessageSpacingChange,
                     onValueRender: this.handleSliderRenderPX,
                     onMarkerRender: this.handleSliderRenderPX,
                     getAriaValueText: this.handleSliderValueText,
-                    'aria-labelledby': z
+                    'aria-labelledby': W
                 })
             ]
         });
@@ -220,18 +221,18 @@ class X extends s.Component {
             r = (0, d.wj)(t) ? this.darkMessages : this.lightMessages;
         return (0, i.jsx)(u.FocusBlock, {
             children: (0, i.jsx)(u.Card, {
-                className: l()(w.preview, U.marginBottom40, e ? w.compactPreview : void 0, 'group-spacing-'.concat(null != n ? n : e ? M.c8 : M.pq)),
+                className: l()(U.preview, V.marginBottom40, e ? U.compactPreview : void 0, 'group-spacing-'.concat(null != n ? n : e ? k.c8 : k.pq)),
                 outline: !0,
                 'aria-hidden': !0,
                 children: r.map((t, n) =>
                     (0, i.jsx)(
-                        A.Z,
+                        b.Z,
                         {
-                            author: (0, N.ZH)(t),
+                            author: (0, A.ZH)(t),
                             message: t,
                             compact: e,
                             isGroupStart: n % 2 == 0,
-                            className: 0 === n ? w.firstMessage : void 0,
+                            className: 0 === n ? U.firstMessage : void 0,
                             hideSimpleEmbedContent: s
                         },
                         t.id
@@ -244,70 +245,70 @@ class X extends s.Component {
         let { theme: e, useForcedColors: t, darkSidebar: n, gradientPreset: s } = this.props;
         return t
             ? (0, i.jsx)(u.FormItem, {
-                  className: l()(U.marginTop8, U.marginBottom40),
+                  className: l()(V.marginTop8, V.marginBottom40),
                   title: (0, i.jsx)('div', {
-                      className: w.themeTitle,
+                      className: U.themeTitle,
                       children: (0, i.jsx)('div', {
-                          className: w.title,
-                          children: k.intl.string(k.t.Ksh3io)
+                          className: U.title,
+                          children: w.intl.string(w.t.Ksh3io)
                       })
                   }),
                   children: (0, i.jsx)(u.FormText, {
                       type: u.FormText.Types.DEFAULT,
-                      className: w.forcedColorsWarning,
+                      className: U.forcedColorsWarning,
                       children: (0, S.b)()
-                          ? k.intl.format(k.t.Jae48P, {
+                          ? w.intl.format(w.t.Jae48P, {
                                 onClick: () => {
-                                    h.Z.open(Z.oAB.ACCESSIBILITY);
+                                    h.Z.open(F.oAB.ACCESSIBILITY);
                                 }
                             })
-                          : k.intl.string(k.t.AUMSZG)
+                          : w.intl.string(w.t.AUMSZG)
                   })
               })
             : (0, i.jsxs)(u.FormItem, {
-                  className: U.marginTop8,
-                  title: (0, i.jsx)(q, {}),
+                  className: V.marginTop8,
+                  title: (0, i.jsx)(X, {}),
                   children: [
-                      (0, i.jsx)(y.i, {}),
-                      (0, i.jsx)(v.F, {
-                          setting: L.s6.APPEARANCE_ICON,
-                          children: (0, i.jsx)(B.c, {})
+                      (0, i.jsx)(B.i, {}),
+                      (0, i.jsx)(j.F, {
+                          setting: Z.s6.APPEARANCE_ICON,
+                          children: (0, i.jsx)(L.c, {})
                       }),
                       (0, i.jsx)(u.FormSwitch, {
                           value: n && (0, d.ap)(e) && !t,
-                          disabled: e !== Z.BRd.LIGHT || t || null != s,
+                          disabled: e !== F.BRd.LIGHT || t || null != s,
                           onChange: this.handleDarkSidebarChecked,
-                          className: U.marginTop20,
-                          children: k.intl.string(k.t.yF54Ki)
+                          className: V.marginTop20,
+                          children: w.intl.string(w.t.yF54Ki)
                       })
                   ]
               });
     }
     renderDisplayMode() {
         return (0, i.jsxs)(u.FormItem, {
-            title: k.intl.string(k.t.ZEoGMT),
-            className: U.marginTop8,
+            title: w.intl.string(w.t.ZEoGMT),
+            className: V.marginTop8,
             children: [
                 (0, i.jsx)(u.RadioGroup, {
                     options: [
                         {
-                            name: k.intl.string(k.t.KZIadn),
-                            value: G.COZY
+                            name: w.intl.string(w.t.KZIadn),
+                            value: Y.COZY
                         },
                         {
-                            name: k.intl.string(k.t['6+nTjY']),
-                            value: G.COMPACT
+                            name: w.intl.string(w.t['6+nTjY']),
+                            value: Y.COMPACT
                         }
                     ],
                     onChange: this.handleMessageDisplayModeChange,
-                    value: this.props.messageDisplayCompact ? G.COMPACT : G.COZY
+                    value: this.props.messageDisplayCompact ? Y.COMPACT : Y.COZY
                 }),
                 (0, i.jsx)(u.FormSwitch, {
                     value: this.props.messageDisplayCompact && this.props.displayCompactAvatars,
                     disabled: !this.props.messageDisplayCompact,
                     onChange: this.handleDisplayCompactAvatarsChanged,
-                    className: U.marginTop20,
-                    children: k.intl.string(k.t['7FVjFB'])
+                    className: V.marginTop20,
+                    children: w.intl.string(w.t['7FVjFB'])
                 })
             ]
         });
@@ -317,7 +318,7 @@ class X extends s.Component {
     }
     renderScalingAndSpacing() {
         return (0, i.jsxs)(i.Fragment, {
-            children: [this.renderFontScaleSlider(), this.renderMessageGroupSpacingSlider(), this.renderZoomSlider(), (0, i.jsx)(u.FormDivider, { className: U.marginTop20 })]
+            children: [this.renderFontScaleSlider(), this.renderMessageGroupSpacingSlider(), this.renderZoomSlider(), (0, i.jsx)(u.FormDivider, { className: V.marginTop20 })]
         });
     }
     renderTimestampHourCycle() {
@@ -325,58 +326,73 @@ class X extends s.Component {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(u.FormItem, {
-                    title: k.intl.string(k.t.dyamEB),
-                    className: U.marginTop20,
+                    title: w.intl.string(w.t.dyamEB),
+                    className: V.marginTop20,
                     children: (0, i.jsx)(u.RadioGroup, {
                         options: [
                             {
-                                name: k.intl.string(k.t.FMWYvb),
+                                name: w.intl.string(w.t.FMWYvb),
                                 value: c.hg.AUTO
                             },
                             {
-                                name: k.intl.string(k.t.p8NOws),
+                                name: w.intl.string(w.t.p8NOws),
                                 value: c.hg.H12
                             },
                             {
-                                name: k.intl.string(k.t['+o/sOj']),
+                                name: w.intl.string(w.t['+o/sOj']),
                                 value: c.hg.H23
                             }
                         ],
-                        onChange: (e) => D.hg.updateSetting(e.value),
+                        onChange: (e) => y.hg.updateSetting(e.value),
                         value: e
                     })
                 }),
-                (0, i.jsx)(u.FormDivider, { className: U.marginTop8 })
+                (0, i.jsx)(u.FormDivider, { className: V.marginTop8 })
             ]
         });
+    }
+    renderVisualRefreshOverride() {
+        let { isRefreshEnabled: e, isRefreshExperimentEnabled: t } = this.props;
+        return t
+            ? (0, i.jsx)(u.FormItem, {
+                  className: V.marginTop8,
+                  children: (0, i.jsx)(u.FormSwitch, {
+                      value: e,
+                      onChange: this.handleDesktopRefreshEnabledChanged,
+                      className: V.marginTop20,
+                      children: 'Enable Desktop Refresh'
+                  })
+              })
+            : null;
     }
     render() {
         return (0, i.jsxs)(u.FormSection, {
             tag: u.FormTitleTags.H1,
-            title: k.intl.string(k.t['iHH+k5']),
+            title: w.intl.string(w.t['iHH+k5']),
             children: [
-                (0, i.jsxs)(v.F, {
-                    setting: L.s6.APPEARANCE_THEME,
+                this.renderVisualRefreshOverride(),
+                (0, i.jsxs)(j.F, {
+                    setting: Z.s6.APPEARANCE_THEME,
                     children: [this.renderPreview(), this.renderTheme()]
                 }),
-                (0, i.jsx)(v.F, {
-                    setting: L.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
+                (0, i.jsx)(j.F, {
+                    setting: Z.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
                     children: this.renderDisplayMode()
                 }),
-                (0, i.jsx)(v.F, {
-                    setting: L.s6.APPEARANCE_SCALING_SPACING,
+                (0, i.jsx)(j.F, {
+                    setting: Z.s6.APPEARANCE_SCALING_SPACING,
                     children: this.renderScalingAndSpacing()
                 }),
-                (0, i.jsx)(v.F, {
-                    setting: L.s6.APPEARANCE_TIMESTAMP_HOUR_CYCLE,
+                (0, i.jsx)(j.F, {
+                    setting: Z.s6.APPEARANCE_TIMESTAMP_HOUR_CYCLE,
                     children: this.renderTimestampHourCycle()
                 }),
                 (0, i.jsx)(u.Text, {
                     variant: 'text-md/normal',
-                    className: U.marginTop20,
-                    children: k.intl.format(k.t['5LEQdX'], {
+                    className: V.marginTop20,
+                    children: w.intl.format(w.t['5LEQdX'], {
                         onAccessibilityClick() {
-                            h.Z.open(Z.oAB.ACCESSIBILITY);
+                            h.Z.open(F.oAB.ACCESSIBILITY);
                         }
                     })
                 })
@@ -390,7 +406,7 @@ class X extends s.Component {
         return ''.concat(e.toFixed(0), 'px');
     }
     handleSliderValueText(e) {
-        return k.intl.formatToPlainString(k.t['0hpvOT'], { value: e });
+        return w.intl.formatToPlainString(w.t['0hpvOT'], { value: e });
     }
     handleFontSizeChange(e) {
         (0, p.oL)(e);
@@ -410,53 +426,60 @@ class X extends s.Component {
     }
     constructor(...e) {
         super(...e),
-            V(this, 'darkMessages', K(Z.BRd.DARK)),
-            V(this, 'lightMessages', K(Z.BRd.LIGHT)),
-            V(this, 'handleDisplayCompactAvatarsChanged', (e) => {
+            G(this, 'darkMessages', q(F.BRd.DARK)),
+            G(this, 'lightMessages', q(F.BRd.LIGHT)),
+            G(this, 'handleDisplayCompactAvatarsChanged', (e) => {
                 m.ZP.updatedUnsyncedSettings({ displayCompactAvatars: e });
             }),
-            V(this, 'handleMessageDisplayModeChange', (e) => {
+            G(this, 'handleDesktopRefreshEnabledChanged', (e) => {
+                m.ZP.updatedUnsyncedSettings({ disableVisualRefresh: !e });
+            }),
+            G(this, 'handleMessageDisplayModeChange', (e) => {
                 let { value: t } = e;
-                D.jU.updateSetting(t === G.COMPACT), (0, p.ZZ)();
+                y.jU.updateSetting(t === Y.COMPACT), (0, p.ZZ)();
             });
     }
 }
-let Q = (e) => {
-    !(0, _.un)(e) &&
-        (0, _.EW)(e, {
-            dismissAction: F.L.AUTO,
+let J = (e) => {
+    !(0, f.un)(e) &&
+        (0, f.EW)(e, {
+            dismissAction: M.L.AUTO,
             forceTrack: !0
         });
 };
-function J() {
-    let e = D.jU.useSetting(),
-        t = D.RS.useSetting(),
-        n = D.NA.useSetting(),
-        r = D.L1.useSetting(),
-        l = D.hg.useSetting();
+function $() {
+    let e = y.jU.useSetting(),
+        t = y.RS.useSetting(),
+        n = y.NA.useSetting(),
+        r = y.L1.useSetting(),
+        l = y.hg.useSetting();
     s.useEffect(() => {
-        Q(o.z.CLIENT_THEMES_SETTINGS_BADGE), Q(o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), Q(o.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
+        J(o.z.CLIENT_THEMES_SETTINGS_BADGE), J(o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), J(o.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
     }, []);
-    let c = (0, a.cj)([R.Z, P.ZP, x.Z, j.default, T.Z], () => {
-        var e, t;
-        return {
-            theme: R.Z.theme,
-            useForcedColors: x.Z.useForcedColors,
-            useSystemTheme: P.ZP.useSystemTheme,
-            darkSidebar: R.Z.darkSidebar,
-            fontSize: x.Z.fontSize,
-            zoom: x.Z.zoom,
-            messageGroupSpacing: x.Z.messageGroupSpacing,
-            displayCompactAvatars: P.ZP.displayCompactAvatars,
-            isStaff: null !== (t = null === (e = j.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
-            gradientPreset: T.Z.gradientPreset
-        };
-    });
-    return (0, i.jsx)(X, {
+    let c = (0, a.cj)([P.Z, D.ZP, x.Z, O.default, T.Z], () => {
+            var e, t;
+            return {
+                theme: P.Z.theme,
+                useForcedColors: x.Z.useForcedColors,
+                useSystemTheme: D.ZP.useSystemTheme,
+                darkSidebar: P.Z.darkSidebar,
+                fontSize: x.Z.fontSize,
+                zoom: x.Z.zoom,
+                messageGroupSpacing: x.Z.messageGroupSpacing,
+                displayCompactAvatars: D.ZP.displayCompactAvatars,
+                isStaff: null !== (t = null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
+                gradientPreset: T.Z.gradientPreset
+            };
+        }),
+        d = (0, _.o9)('UserSettingsAppearance'),
+        u = (0, _.Q3)('UserSettingsAppearance');
+    return (0, i.jsx)(Q, {
         messageDisplayCompact: e,
         hideSimpleEmbedContent: t && n,
         clientTheme: r,
         timestampHourCycle: l,
+        isRefreshEnabled: u,
+        isRefreshExperimentEnabled: d,
         ...c
     });
 }
