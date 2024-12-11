@@ -18,8 +18,8 @@ var a,
     d = n(120356),
     r = n.n(d),
     u = n(752877),
-    m = n(442837),
-    l = n(544891),
+    l = n(442837),
+    m = n(544891),
     M = n(481060),
     p = n(570140),
     w = n(607070),
@@ -37,18 +37,18 @@ var a,
     y = n(426401),
     Z = n(926734),
     C = n(601046),
-    U = n(421391),
-    F = n(153911),
-    H = n(588369);
-async function O(e, t) {
+    F = n(421391),
+    U = n(153911),
+    O = n(588369);
+async function x(e, t) {
     try {
         p.Z.dispatch({ type: 'PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA' });
         let n = 1012,
             i = e ? y.Z : Z.Z;
-        window.matchMedia('(min-width: 1012px) and (max-width: 1980px)').matches || window.matchMedia('(min-height: 720px) and (max-height: 1408px)').matches ? ((n = 1980), (i = e ? C.Z : U.Z)) : (window.matchMedia('(min-width: 1980px)').matches || window.matchMedia('(min-height: 1408px)').matches) && ((n = 2880), (i = e ? F.Z : H.Z));
+        window.matchMedia('(min-width: 1012px) and (max-width: 1980px)').matches || window.matchMedia('(min-height: 720px) and (max-height: 1408px)').matches ? ((n = 1980), (i = e ? C.Z : F.Z)) : (window.matchMedia('(min-width: 1980px)').matches || window.matchMedia('(min-height: 1408px)').matches) && ((n = 2880), (i = e ? U.Z : O.Z));
         let { enabled: a } = g.Z.getCurrentConfig({ location: 'PremiumSubscriptionWowMoment.prefetch' }, { autoTrackExposure: !1 });
         a && E.default.track(S.rMx.PREMIUM_WOW_MOMENT_MEDIA_PREFETCH_TRIGGER, { client_width: n });
-        let o = await l.tn.get({
+        let o = await m.tn.get({
                 url: i,
                 binary: !0,
                 rejectWithError: !0
@@ -63,29 +63,29 @@ async function O(e, t) {
         W.Z.captureException(e), p.Z.dispatch({ type: 'PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE' });
     }
 }
-function x() {
-    let e = (0, m.e7)([w.Z], () => w.Z.useReducedMotion),
+function H() {
+    let e = (0, l.e7)([w.Z], () => w.Z.useReducedMotion),
         [t, n] = s.useState(null),
-        { isFetchingMedia: a, canPlayWowMoment: o } = (0, m.cj)([I.Z], () => ({
+        { isFetchingMedia: a, canPlayWowMoment: o } = (0, l.cj)([I.Z], () => ({
             isFetchingMedia: I.Z.isFetchingWowMomentMedia,
             canPlayWowMoment: I.Z.canPlayWowMoment
         })),
-        [d, l] = s.useState(!1),
+        [d, m] = s.useState(!1),
         p = (0, f.vu)(),
         W = (0, f.rO)(),
         b = p > 52 || -1 === p || W,
         g = W ? 'video/mp4' : 'video/webm',
         y = b && !e && o && null === t && !1 === a;
     s.useEffect(() => {
-        y && O(W, n);
+        y && x(W, n);
     }, [y, W, n]),
         s.useEffect(() => {
             function t() {
                 !e &&
                     I.Z.canPlayWowMoment &&
-                    (l(!0),
+                    (m(!0),
                     (i = setTimeout(() => {
-                        l(!1), C(!0), E.default.track(S.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'gradient_highlight' }), (0, T.H)(!1);
+                        m(!1), C(!0), E.default.track(S.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'gradient_highlight' }), (0, T.H)(!1);
                     }, 2000)));
             }
             return (
@@ -96,24 +96,24 @@ function x() {
             );
         }, [e, b]);
     let [Z, C] = s.useState(!1),
-        [U, F] = s.useState(!1),
-        H = (0, M.useSpring)({
+        [F, U] = s.useState(!1),
+        O = (0, M.useSpring)({
             opacity: Z ? 0.2 : 0,
             config: { duration: 100 }
         }),
-        x = (0, M.useSpring)(
+        H = (0, M.useSpring)(
             {
-                x: U ? '100%' : '-100%',
+                x: F ? '100%' : '-100%',
                 config: { duration: 500 }
             },
-            U ? 'respect-motion-settings' : 'animate-never'
+            F ? 'respect-motion-settings' : 'animate-never'
         );
     s.useEffect(() => {
         let e = -1;
         return (
             Z &&
                 (e = window.setTimeout(() => {
-                    F(!0);
+                    U(!0);
                 }, 1000)),
             () => {
                 window.clearTimeout(e);
@@ -123,15 +123,15 @@ function x() {
         s.useEffect(() => {
             let e = -1;
             return (
-                U &&
+                F &&
                     (e = window.setTimeout(() => {
-                        F(!1), C(!1);
+                        U(!1), C(!1);
                     }, 1000)),
                 () => {
                     window.clearTimeout(e);
                 }
             );
-        }, [U]);
+        }, [F]);
     let R = d && null !== t,
         v = R || Z;
     return (0, c.jsxs)('div', {
@@ -147,11 +147,8 @@ function x() {
                     onPlay: () => {
                         clearTimeout(i), E.default.track(S.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: 'wumpus_flight' });
                     },
-                    onTimeUpdate: (e) => {
-                        e.currentTarget.currentTime > 4 && (0, T.H)(!0);
-                    },
                     onEnded: () => {
-                        l(!1), (0, T.H)(!1), window.URL.revokeObjectURL(t), n(null);
+                        m(!1), (0, T.H)(!1), window.URL.revokeObjectURL(t), n(null);
                     },
                     children: (0, c.jsx)('source', {
                         src: t,
@@ -160,11 +157,11 @@ function x() {
                 }),
             (0, c.jsx)(u.animated.div, {
                 className: P.gadientHighlight,
-                style: H
+                style: O
             }),
             (0, c.jsx)(u.animated.div, {
                 className: P.swipeWrapper,
-                style: x,
+                style: H,
                 children: (0, c.jsxs)('svg', {
                     className: P.swipe,
                     viewBox: '0 0 848 1024',
@@ -187,5 +184,5 @@ function x() {
 ((o = a || (a = {})).WUMPUS_FLIGHT = 'wumpus_flight'), (o.GRADIENT_HIGHLIGHT = 'gradient_highlight');
 t.default = function () {
     let { enabled: e } = b.Z.useExperiment({ location: 'PremiumSubscriptionWowMoment' });
-    return e ? (0, c.jsx)(x, {}) : null;
+    return e ? (0, c.jsx)(H, {}) : null;
 };
