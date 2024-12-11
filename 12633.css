@@ -10218,6 +10218,10 @@ div.modalHeader_c5e09c {
     box-shadow: 0 0 0 hsl(var(--black-500-hsl)/0)
 }
 
+:where(.visual-refresh) .newMessagesBar_cf58b5 {
+    color: var(--white)
+}
+
 .newMessagesPillContainer_cf58b5 {
     position: absolute;
     top: 16px;
