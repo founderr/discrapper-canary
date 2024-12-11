@@ -51,25 +51,28 @@ let p = ''.concat('#').concat('itemSkuId', '='),
                     inline: 'center'
                 });
             let e = l,
-                d = setTimeout(() => {
-                    let i = document.getElementById('shop-item-'.concat(e.skuId));
-                    if ((i !== document.activeElement && (null == i || i.focus()), null != l.variantGroupStoreListingId)) {
-                        let n = c.Z.getProductByStoreListingId(l.variantGroupStoreListingId);
-                        if (null != n) {
-                            var o;
-                            e = n;
-                            let r = null === (o = n.variants) || void 0 === o ? void 0 : o.findIndex((e) => e.skuId === t);
-                            null != r && r > -1 && (0, u.$)(n, r);
+                d = setTimeout(
+                    () => {
+                        let i = document.getElementById('shop-item-'.concat(e.skuId));
+                        if ((i !== document.activeElement && (null == i || i.focus()), null != l.variantGroupStoreListingId)) {
+                            let n = c.Z.getProductByStoreListingId(l.variantGroupStoreListingId);
+                            if (null != n) {
+                                var o;
+                                e = n;
+                                let r = null === (o = n.variants) || void 0 === o ? void 0 : o.findIndex((e) => e.skuId === t);
+                                null != r && r > -1 && (0, u.$)(n, r);
+                            }
                         }
-                    }
-                    (0, m.T)({
-                        product: e,
-                        category: s,
-                        analyticsSource: r,
-                        analyticsLocations: n,
-                        returnRef: a
-                    });
-                }, 750);
+                        (0, m.T)({
+                            product: e,
+                            category: s,
+                            analyticsSource: r,
+                            analyticsLocations: n,
+                            returnRef: a
+                        });
+                    },
+                    null != a.current ? 750 : 0
+                );
             return () => clearTimeout(d);
         }
         return () => {};
