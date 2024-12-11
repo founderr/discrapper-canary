@@ -36814,6 +36814,10 @@ img.thumbnail_c64476 {
     padding: 10px 20px
 }
 
+.visual-refresh .notice_be03aa {
+    grid-area: notice
+}
+
 .platform-osx .notice_be03aa {
     -webkit-app-region: drag
 }
@@ -37020,10 +37024,6 @@ img.thumbnail_c64476 {
     border: none;
     -webkit-text-decoration: underline;
     text-decoration: underline
-}
-
-.visual-refresh .notice_be03aa {
-    min-height: 40px
 }
 
 .enable-forced-colors .notice_be03aa {

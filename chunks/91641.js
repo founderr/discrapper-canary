@@ -17,7 +17,8 @@ n.d(t, {
     }
 }),
     n(411104),
-    n(47120);
+    n(47120),
+    n(987338);
 class i {
     registeredExperimentIds() {
         return this.experiments.map((e) => e.definition.id);
