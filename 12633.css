@@ -30285,7 +30285,7 @@ div.popoutCloseButton_d523a2:hover {
     background-color: var(--black-500);
     border-radius: var(--radius-xs);
     opacity: 0;
-    cursor: pointer
+    pointer-events: none
 }
 
 .full-motion .clickableImage_ae1fa2:after {
