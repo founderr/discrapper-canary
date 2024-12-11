@@ -464,7 +464,7 @@ function eG() {
                     children: (0, i.jsxs)('div', {
                         className: ep.base,
                         children: [
-                            C ? (0, i.jsx)(ef, { hasNotice: t }) : null,
+                            C && (0, i.jsx)(ef, {}),
                             d.tq ? null : (0, i.jsx)(eo.Z, {}),
                             (0, i.jsxs)('div', {
                                 className: ep.content,

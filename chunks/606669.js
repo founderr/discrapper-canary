@@ -7,18 +7,18 @@ var r = t(200651);
 t(192379);
 var o = t(442837),
     i = t(481060),
-    l = t(857595),
-    a = t(607070),
+    a = t(857595),
+    l = t(607070),
     c = t(388032);
 function u() {
     let {
             saturation: e,
             useReducedMotion: n,
             roleStyle: t
-        } = (0, o.cj)([a.Z], () => ({
-            saturation: a.Z.saturation,
-            useReducedMotion: a.Z.useReducedMotion,
-            roleStyle: a.Z.roleStyle
+        } = (0, o.cj)([l.Z], () => ({
+            saturation: l.Z.saturation,
+            useReducedMotion: l.Z.useReducedMotion,
+            roleStyle: l.Z.roleStyle
         })),
         u = [
             {
@@ -42,7 +42,7 @@ function u() {
                     id: 'reduced-motion',
                     label: c.intl.string(c.t.b3XBzs),
                     checked: n,
-                    action: () => (0, l.Zt)(n ? 'no-preference' : 'reduce')
+                    action: () => (0, a.Zt)(n ? 'no-preference' : 'reduce')
                 })
             },
             'reduced-motion'
@@ -58,7 +58,7 @@ function u() {
                             ...n,
                             ref: t,
                             value: 100 * e,
-                            onChange: (e) => (0, l.o2)(e / 100),
+                            onChange: (e) => (0, a.o2)(e / 100),
                             'aria-label': c.intl.string(c.t['5PWWCQ'])
                         })
                 })
@@ -80,7 +80,7 @@ function u() {
                                 group: 'role-colors',
                                 checked: o === t,
                                 label: n,
-                                action: () => (0, l.u1)(o)
+                                action: () => (0, a.u1)(o)
                             },
                             o
                         );

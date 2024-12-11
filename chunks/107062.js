@@ -5,14 +5,14 @@ var l = n(200651),
     r = n(481060),
     o = n(620662),
     s = n(841784),
-    u = n(429589),
-    c = n(499254),
+    c = n(429589),
+    u = n(499254),
     d = n(827498),
     m = n(541716),
-    x = n(706454),
-    h = n(823379),
-    C = n(5192),
-    p = n(379357),
+    h = n(706454),
+    x = n(823379),
+    p = n(5192),
+    C = n(379357),
     v = n(192918),
     g = n(561308),
     f = n(907152),
@@ -22,14 +22,14 @@ var l = n(200651),
     P = n(797342),
     L = n(981631),
     T = n(388032);
-let y = (e, t) =>
+let N = (e, t) =>
         T.intl.formatToPlainString(T.t.tAwI1t, {
             username: t.username,
             activity: e.extra.activity_name
         }),
-    N = (e, t, n) => {
+    y = (e, t, n) => {
         let l = T.t['bES+y8'],
-            a = C.ZP.getName(t.guild_id, t.id, n),
+            a = p.ZP.getName(t.guild_id, t.id, n),
             i = e.extra.activity_name;
         return T.intl
             .formatToMarkdownString(l, {
@@ -44,26 +44,26 @@ let y = (e, t) =>
         return T.intl
             .formatToMarkdownString(i, {
                 gameName: t.extra.activity_name,
-                user1: C.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, l[0]),
-                user2: C.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, l[1]),
+                user1: p.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, l[0]),
+                user2: p.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, l[1]),
                 countOthers: a
             })
             .replaceAll('*', '');
     };
 t.ZP = (e) => {
-    let { channel: t, entry: n, onReaction: C, onVoiceChannelPreview: A } = e,
-        { largeImage: E } = (0, p.rv)({
+    let { channel: t, entry: n, onReaction: p, onVoiceChannelPreview: A } = e,
+        { largeImage: E } = (0, C.rv)({
             entry: n,
             showCoverImage: !1
         }),
         { user: S, details: R, activity: M, embeddedActivity: k } = (0, P.n)(n),
         { primaryColor: w, secondaryColor: O } = (0, I.Z)(null == E ? void 0 : E.src),
-        b = (0, i.e7)([x.default], () => x.default.locale),
+        b = (0, i.e7)([h.default], () => h.default.locale),
         { displayParticipants: H, participant1: V, participant2: B, numOtherParticipants: D } = (0, v.Z)(n, 3),
         U = () => {
-            c.__(d._b.TEXT, m.Ie.NORMAL, { applicationId: n.extra.application_id });
+            u.__(d._b.TEXT, m.Ie.NORMAL, { applicationId: n.extra.application_id });
         },
-        z = a.useCallback(
+        G = a.useCallback(
             (e) => {
                 if ((null == E ? void 0 : E.src) == null || null == t || null == S) return;
                 let l =
@@ -74,7 +74,7 @@ t.ZP = (e) => {
                               users: [V, B],
                               countOthers: D
                           })
-                        : N(n, t, S);
+                        : y(n, t, S);
                 return (0, f.C4)({
                     entry: n,
                     applicationImageSrc: null == E ? void 0 : E.src,
@@ -88,7 +88,7 @@ t.ZP = (e) => {
             [null == E ? void 0 : E.src, t, H, n, b, D, V, B, w, O, S]
         );
     if (null == S) return null;
-    let G = (0, l.jsx)(j.PZ, {
+    let z = (0, l.jsx)(j.PZ, {
             location: j.Gt.POPOUT,
             entry: n
         }),
@@ -97,7 +97,7 @@ t.ZP = (e) => {
             userDescription: (0, g.kr)(n) ? T.t.vPg1JS : T.t.rPqqtr,
             title: n.extra.activity_name,
             subtitle: R,
-            badges: G,
+            badges: z,
             entry: n,
             showCoverImage: !1,
             onClickTitle: U,
@@ -106,7 +106,7 @@ t.ZP = (e) => {
         }),
         W = (0, o.Z)(M, L.xjy.JOIN) || (0, s.Z)(M),
         q = W
-            ? (0, l.jsx)(u.Z, {
+            ? (0, l.jsx)(c.Z, {
                   isEmbedded: (0, s.Z)(M),
                   embeddedActivity: k,
                   activity: M,
@@ -123,18 +123,18 @@ t.ZP = (e) => {
             IconComponent: r.AppsIcon,
             children: T.intl.string(T.t.GDWYR0)
         }),
-        J = [W ? q : F].filter(h.lm);
+        J = [W ? q : F].filter(x.lm);
     return (0, l.jsxs)(Z.yR, {
         children: [
             Y,
             (0, l.jsx)(Z.St, {
                 children: (0, l.jsx)(Z.WT, {
-                    onReaction: C,
+                    onReaction: p,
                     onVoiceChannelPreview: A,
                     user: S,
                     channel: t,
-                    generateReactionImage: z,
-                    reactionImageAltText: y(n, S),
+                    generateReactionImage: G,
+                    reactionImageAltText: N(n, S),
                     entry: n,
                     buttons: J
                 })

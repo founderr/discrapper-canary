@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return h;
     }
 });
 var l = n(200651);
@@ -10,34 +10,34 @@ var a = n(481060),
     r = n(299206),
     o = n(810568),
     s = n(168524),
-    u = n(37258),
-    c = n(26033),
+    c = n(37258),
+    u = n(26033),
     d = n(388032),
     m = n(607655);
-function x(e) {
+function h(e) {
     var t;
-    let { user: n, guildId: x, channel: h, entry: C, onSelect: p, disableGameProfileLinks: v } = e,
-        g = (0, u.Z)({
+    let { user: n, guildId: h, channel: x, entry: p, onSelect: C, disableGameProfileLinks: v } = e,
+        g = (0, c.Z)({
             userId: n.id,
-            guildId: x,
-            channelId: null == h ? void 0 : h.id
+            guildId: h,
+            channelId: null == x ? void 0 : x.id
         }),
         f = (0, r.Z)({
             id: n.id,
             label: d.intl.string(d.t['/AXYnJ'])
         }),
-        I = 'application_id' in C.extra ? C.extra.application_id : null,
+        I = 'application_id' in p.extra ? p.extra.application_id : null,
         j = (0, r.Z)({
             id: I,
             label: d.intl.string(d.t['FfCL+/'])
         }),
-        Z = (0, c.dX)(C),
+        Z = (0, u.dX)(p),
         P = (0, s.Z)({
             location: 'ContentPopoutContextMenu',
-            applicationId: Z && !0 !== v ? (null === (t = C.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
+            applicationId: Z && !0 !== v ? (null === (t = p.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
             source: o.m1.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
-            sourceUserId: C.author_id
+            sourceUserId: p.author_id
         });
     return (0, l.jsx)(a.Popout, {
         align: 'top',
@@ -51,7 +51,7 @@ function x(e) {
                     (0, i.Zy)(), t();
                 },
                 'aria-label': d.intl.string(d.t.liqwPD),
-                onSelect: p,
+                onSelect: C,
                 children: (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsxs)(a.MenuGroup, {

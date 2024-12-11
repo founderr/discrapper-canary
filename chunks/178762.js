@@ -16,14 +16,14 @@ var l = n(200651),
     r = n.n(i),
     o = n(91192),
     s = n(876215),
-    u = n(442837),
-    c = n(704215),
+    c = n(442837),
+    u = n(704215),
     d = n(481060),
     m = n(239091),
-    x = n(607070),
-    h = n(100527),
-    C = n(605236),
-    p = n(704041),
+    h = n(607070),
+    x = n(100527),
+    p = n(605236),
+    C = n(704041),
     v = n(475676),
     g = n(439170),
     f = n(594174),
@@ -33,8 +33,8 @@ var l = n(200651),
     P = n(91140),
     L = n(227172),
     T = n(551228),
-    y = n(678869),
-    N = n(278399),
+    N = n(678869),
+    y = n(278399),
     _ = n(886217),
     A = n(555672),
     E = n(644548),
@@ -66,7 +66,7 @@ let H = (e) => {
                     entry: t
                 });
             case s.s.TOP_ARTIST:
-                return (0, l.jsx)(N.ZP, {
+                return (0, l.jsx)(y.ZP, {
                     ...n,
                     entry: t
                 });
@@ -133,7 +133,7 @@ let H = (e) => {
                     entry: t
                 });
             case s.s.LISTENED_SESSION:
-                return (0, l.jsx)(y.Z, {
+                return (0, l.jsx)(N.Z, {
                     ...n,
                     entry: t
                 });
@@ -145,9 +145,9 @@ let H = (e) => {
             case s.s.LEADERBOARD:
                 var a;
                 return (null === (a = n.channel) || void 0 === a ? void 0 : a.guild_id) != null
-                    ? (0, l.jsx)(p.Z, {
+                    ? (0, l.jsx)(C.Z, {
                           guildId: n.channel.guild_id,
-                          source: h.Z.MEMBER_LIST,
+                          source: x.Z.MEMBER_LIST,
                           trackRankingItemInteraction: n.trackRankingItemInteraction
                       })
                     : null;
@@ -157,28 +157,28 @@ let H = (e) => {
     };
 t.ZP = a.memo((e) => {
     var t;
-    let { index: i, ...h } = e,
-        [p, v] = a.useState('default'),
+    let { index: i, ...x } = e,
+        [C, v] = a.useState('default'),
         g = (0, o.JA)(''.concat(i)),
         j = null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
-        { isRich: Z, appName: P } = (0, M.n)(h.entry),
+        { isRich: Z, appName: P } = (0, M.n)(x.entry),
         L = a.useMemo(
             () => ({
-                entry: h.entry,
-                channelId: h.channel.id,
-                guildId: h.channel.guild_id,
-                requestId: h.requestId,
+                entry: x.entry,
+                channelId: x.channel.id,
+                guildId: x.channel.guild_id,
+                requestId: x.requestId,
                 richPresenceName: Z ? P : void 0
             }),
-            [P, h.channel.guild_id, h.channel.id, h.entry, h.requestId, Z]
+            [P, x.channel.guild_id, x.channel.id, x.entry, x.requestId, Z]
         ),
         T = a.useRef(!1),
-        [y, N] = a.useState(!1),
+        [N, y] = a.useState(!1),
         [_, A] = a.useState(!1),
-        E = (0, u.e7)([x.Z], () => x.Z.keyboardModeEnabled);
+        E = (0, c.e7)([h.Z], () => h.Z.keyboardModeEnabled);
     a.useEffect(() => {
-        y && E && A(!0);
-    }, [y, E]);
+        N && E && A(!0);
+    }, [N, E]);
     let S = a.useCallback(
             (e) => {
                 if (!!j)
@@ -186,12 +186,12 @@ t.ZP = a.memo((e) => {
                         let { default: e } = await n.e('153').then(n.bind(n, 330150));
                         return () =>
                             (0, l.jsx)(e, {
-                                entry: h.entry,
-                                requestId: h.requestId
+                                entry: x.entry,
+                                requestId: x.requestId
                             });
                     });
             },
-            [h, j]
+            [x, j]
         ),
         R = a.useCallback(() => {
             v(String(Date.now()));
@@ -222,15 +222,15 @@ t.ZP = a.memo((e) => {
         B = () => {
             (T.current = !1),
                 setTimeout(() => {
-                    !T.current && (N(!1), A(E));
+                    !T.current && (y(!1), A(E));
                 }, 100);
         };
     return (0, l.jsx)('div', {
         onMouseEnter: () => {
-            h.entry.content_type === s.s.LEADERBOARD && !(0, C.un)(c.z.LEADERBOARD_NUX_COACHMARK) && (0, C.EW)(c.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: w.L.SECONDARY }),
+            x.entry.content_type === s.s.LEADERBOARD && !(0, p.un)(u.z.LEADERBOARD_NUX_COACHMARK) && (0, p.EW)(u.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: w.L.SECONDARY }),
                 (T.current = !0),
                 setTimeout(() => {
-                    T.current && N(!0), b(L);
+                    T.current && y(!0), b(L);
                 }, 100);
         },
         onMouseLeave: B,
@@ -241,12 +241,12 @@ t.ZP = a.memo((e) => {
                     closePopout: t,
                     updatePopoutPosition: R,
                     trackRankingItemInteraction: O,
-                    ...h
+                    ...x
                 });
             },
             position: 'left',
-            shouldShow: y,
-            positionKey: p,
+            shouldShow: N,
+            positionKey: C,
             onRequestOpen: () => b(L),
             onRequestClose: () => {
                 _ && B();
@@ -266,11 +266,11 @@ t.ZP = a.memo((e) => {
                         }
                     },
                     onClick: () => {
-                        !y && N(!0);
+                        !N && y(!0);
                     },
                     onContextMenu: S,
                     children: (0, l.jsx)(H, {
-                        ...h,
+                        ...x,
                         selected: n,
                         hovered: T.current
                     })

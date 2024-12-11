@@ -1,6 +1,6 @@
 n.d(t, {
     B: function () {
-        return c;
+        return u;
     }
 }),
     n(653041);
@@ -14,7 +14,7 @@ let s = (e, t, n) => ({
         ...(null != t && { MediaImage: t }),
         ...(null != n && { ApplicationImage: n })
     }),
-    u = (e, t) => {
+    c = (e, t) => {
         let n = [
             {
                 iconPath: o.i6,
@@ -30,14 +30,14 @@ let s = (e, t, n) => ({
             n
         );
     },
-    c = async (e) => {
-        let { mediaImageSrc: t, entry: n, avatarSrc: c, description: d, timestamp: m, episodeDescription: x, colors: h, channelId: C } = e,
-            p = n.extra.media_title,
-            v = s(c, t);
+    u = async (e) => {
+        let { mediaImageSrc: t, entry: n, avatarSrc: u, description: d, timestamp: m, episodeDescription: h, colors: x, channelId: p } = e,
+            C = n.extra.media_title,
+            v = s(u, t);
         return await (0, i.f)({
             assetsToLoad: v,
             drawImage: (e) => {
-                let t = h.map((e, t) => ({
+                let t = x.map((e, t) => ({
                     color: e,
                     stop: t
                 }));
@@ -131,7 +131,7 @@ let s = (e, t, n) => ({
                         },
                         !0
                     );
-                let i = u(m, x);
+                let i = c(m, h);
                 (0, r.J)({
                     canvas: e,
                     badges: i,
@@ -142,9 +142,9 @@ let s = (e, t, n) => ({
             exportConfigs: {
                 format: a.kH.CloudUpload,
                 quality: 1,
-                fileName: 'user-reacting-to-'.concat(p, '.png').toLowerCase(),
+                fileName: 'user-reacting-to-'.concat(C, '.png').toLowerCase(),
                 fileType: 'png',
-                channelId: C
+                channelId: p
             }
         });
     };

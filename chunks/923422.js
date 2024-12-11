@@ -2,56 +2,56 @@ t.r(n), t(47120), t(757143);
 var r = t(200651),
     o = t(192379),
     i = t(481060),
-    l = t(239091),
-    a = t(230711),
+    a = t(239091),
+    l = t(230711),
     c = t(493544),
     u = t(108843),
-    d = t(100527),
-    s = t(906732),
+    s = t(100527),
+    d = t(906732),
     g = t(386506),
     m = t(366953),
     b = t(991346),
     f = t(606669),
     p = t(53432),
-    _ = t(74869),
-    h = t(45570),
+    h = t(74869),
+    _ = t(45570),
     S = t(308512),
     x = t(594791),
     C = t(393431),
     M = t(69021),
     Z = t(981631),
-    v = t(388032);
+    k = t(388032);
 n.default = (0, u.Z)(
     function (e) {
         let { webBuildOverride: n, onSelect: t } = e,
-            [u, d] = o.useState(!1),
-            I = (0, h.Z)(),
-            k = (0, S.Z)(),
-            B = (0, p.Z)(),
-            j = (0, f.Z)(),
+            [u, s] = o.useState(!1),
+            v = (0, _.Z)(),
+            I = (0, S.Z)(),
+            j = (0, p.Z)(),
+            B = (0, f.Z)(),
             E = (0, C.Z)(),
             R = (0, x.Z)(),
-            T = (0, _.Z)(),
+            T = (0, h.Z)(),
             D = (0, M.Z)(),
-            { analyticsLocations: G } = (0, s.ZP)(),
+            { analyticsLocations: G } = (0, d.ZP)(),
             O = o.useMemo(() => (0, m.j)(), []);
         async function w() {
             try {
-                d(!0), await (0, g.bF)(), window.location.reload(!0);
+                s(!0), await (0, g.bF)(), window.location.reload(!0);
             } catch (e) {
-                d(!1);
+                s(!1);
             }
         }
         let U = (e) => {
                 switch (e) {
                     case Z.oAB.GAMES:
-                        return I;
+                        return v;
                     case Z.oAB.STREAMER_MODE:
-                        return k;
+                        return I;
                     case Z.oAB.APPEARANCE:
-                        return B;
-                    case Z.oAB.ACCESSIBILITY:
                         return j;
+                    case Z.oAB.ACCESSIBILITY:
+                        return B;
                     case Z.oAB.VOICE:
                         return E;
                     case Z.oAB.TEXT:
@@ -70,32 +70,32 @@ n.default = (0, u.Z)(
                     return n !== c.ID.HEADER && n !== c.ID.CUSTOM && n !== c.ID.DIVIDER && 'logout' !== n;
                 })
                 .filter((e) => null == e.predicate || e.predicate());
-        return (0, r.jsx)(s.Gt, {
+        return (0, r.jsx)(d.Gt, {
             value: G,
             children: (0, r.jsxs)(i.Menu, {
                 navId: 'user-settings-cog',
-                onClose: l.Zy,
-                'aria-label': v.intl.string(v.t.opYYHh),
+                onClose: a.Zy,
+                'aria-label': k.intl.string(k.t.opYYHh),
                 onSelect: t,
                 children: [
                     y.map((e) => {
                         let { section: n, label: t, onClick: o } = e,
-                            l = n.replace(/\W/gi, '_');
+                            a = n.replace(/\W/gi, '_');
                         return (0, r.jsx)(
                             i.MenuItem,
                             {
-                                id: l,
+                                id: a,
                                 label: t,
                                 action: () =>
                                     null != o
                                         ? o()
                                         : (function (e, n) {
                                               let t = Object.values(Z.oAB).filter((n) => n === e)[0];
-                                              null != t && a.Z.open(t, void 0, { analyticsLocations: n });
+                                              null != t && l.Z.open(t, void 0, { analyticsLocations: n });
                                           })(n, G),
                                 children: U(n)
                             },
-                            l
+                            a
                         );
                     }),
                     e.user.isStaff() && O.length > 0
@@ -126,7 +126,7 @@ n.default = (0, u.Z)(
                               children: (0, r.jsx)(i.MenuItem, {
                                   id: 'clear-build-override',
                                   disabled: u,
-                                  label: v.intl.string(v.t['/Nz9ra']),
+                                  label: k.intl.string(k.t['/Nz9ra']),
                                   action: w,
                                   color: 'danger'
                               })
@@ -136,5 +136,5 @@ n.default = (0, u.Z)(
             })
         });
     },
-    [d.Z.CONTEXT_MENU, d.Z.USER_SETTINGS_MENU]
+    [s.Z.CONTEXT_MENU, s.Z.USER_SETTINGS_MENU]
 );

@@ -46,7 +46,7 @@ function C() {
         if (null != i) return i;
         let a = null === (t = v.Z.settings.appearance) || void 0 === t ? void 0 : t.theme;
         if (null == a) return y;
-        if (!_.i5.getCurrentConfig({ location: 'ThemeStore' }).enabled) return a === o.Q2.LIGHT ? T.BRd.LIGHT : T.BRd.DARK;
+        if (!(0, _.i9)('ThemeStore')) return a === o.Q2.LIGHT ? T.BRd.LIGHT : T.BRd.DARK;
         switch (a) {
             case o.Q2.LIGHT:
                 return T.BRd.LIGHT;

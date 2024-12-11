@@ -6,7 +6,7 @@ n.d(t, {
         return r;
     },
     VY: function () {
-        return u;
+        return c;
     }
 }),
     n(627494),
@@ -35,7 +35,7 @@ let r = (e, t) =>
             })
             .replaceAll('*', '');
     },
-    u = (e) => {
+    c = (e) => {
         let { entry: t, channel: n, users: r, countOthers: o } = e,
             s = (0, a.kr)(t) ? i.t.QaUWPT : i.t['7j/5mp'];
         return i.intl

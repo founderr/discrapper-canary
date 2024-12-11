@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return s;
+        return d;
     }
 }),
     t(653041);
@@ -8,31 +8,31 @@ var r = t(200651);
 t(192379);
 var o = t(442837),
     i = t(481060),
-    l = t(179658),
-    a = t(482215),
+    a = t(179658),
+    l = t(482215),
     c = t(906467),
     u = t(857192),
-    d = t(594174);
-function s() {
+    s = t(594174);
+function d() {
     let {
             layoutDebuggingEnabled: e,
             isStaff: n,
             isDeveloper: t
-        } = (0, o.cj)([u.default, d.default, c.Z], () => {
+        } = (0, o.cj)([u.default, s.default, c.Z], () => {
             var e;
             return {
                 layoutDebuggingEnabled: u.default.layoutDebuggingEnabled,
-                isStaff: (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) === !0,
+                isStaff: (null === (e = s.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) === !0,
                 isDeveloper: c.Z.isDeveloper
             };
         }),
-        { horizontalSpacing: s, verticalSpacing: g, maxHorizontalSpacing: m, maxVerticalSpacing: b } = (0, a.i)(),
-        { setHorizontalSpacing: f, setVerticalSpacing: p } = a.i.getState(),
-        _ = [];
+        { horizontalSpacing: d, verticalSpacing: g, maxHorizontalSpacing: m, maxVerticalSpacing: b } = (0, l.i)(),
+        { setHorizontalSpacing: f, setVerticalSpacing: p } = l.i.getState(),
+        h = [];
     return (
         n &&
             t &&
-            (_.push(
+            (h.push(
                 (0, r.jsx)(
                     i.MenuCheckboxItem,
                     {
@@ -40,14 +40,14 @@ function s() {
                         label: 'Enable Layout Debugging',
                         checked: e,
                         action: () => {
-                            (0, l.y)({ layoutDebuggingEnabled: !e });
+                            (0, a.y)({ layoutDebuggingEnabled: !e });
                         }
                     },
                     'layout-debugging'
                 )
             ),
             e &&
-                (_.push(
+                (h.push(
                     (0, r.jsx)(
                         i.MenuControlItem,
                         {
@@ -57,7 +57,7 @@ function s() {
                                 (0, r.jsx)(i.MenuSliderControl, {
                                     ...e,
                                     ref: n,
-                                    value: s,
+                                    value: d,
                                     minValue: 0,
                                     maxValue: m,
                                     onChange: (e) => f(e),
@@ -68,7 +68,7 @@ function s() {
                         'horizontal-spacing'
                     )
                 ),
-                _.push(
+                h.push(
                     (0, r.jsx)(
                         i.MenuControlItem,
                         {
@@ -89,6 +89,6 @@ function s() {
                         'vertical-spacing'
                     )
                 ))),
-        0 === _.length ? null : (0, r.jsx)(r.Fragment, { children: _ })
+        0 === h.length ? null : (0, r.jsx)(r.Fragment, { children: h })
     );
 }

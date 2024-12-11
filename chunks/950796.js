@@ -49,17 +49,17 @@ function E(e) {
     });
 }
 function I(e) {
-    let { leading: t, title: n, trailing: l, windowKey: o, hasNotice: s } = e,
-        c = (0, u.getPlatform)(),
-        d = r.useCallback(() => {
+    let { leading: t, title: n, trailing: l, windowKey: a } = e,
+        o = (0, u.getPlatform)() === u.PlatformTypes.WINDOWS,
+        s = r.useCallback(() => {
             (0, u.isMac)() && h.ZP.maximize();
         }, []);
-    function m(e) {
+    function c(e) {
         e.stopPropagation();
     }
     return (0, i.jsxs)('div', {
-        className: a()(p.bar, { [p.barWithNotice]: s }),
-        onDoubleClick: d,
+        className: p.bar,
+        onDoubleClick: s,
         children: [
             (0, i.jsx)('div', {
                 className: p.title,
@@ -67,17 +67,17 @@ function I(e) {
             }),
             (0, i.jsx)('div', {
                 className: p.leading,
-                onDoubleClick: m,
+                onDoubleClick: c,
                 children: t
             }),
             (0, i.jsxs)('div', {
                 className: p.trailing,
-                onDoubleClick: m,
+                onDoubleClick: c,
                 children: [
                     l,
-                    c === u.PlatformTypes.WINDOWS &&
+                    o &&
                         (0, i.jsx)(E, {
-                            windowKey: o,
+                            windowKey: a,
                             showDivider: null != l
                         })
                 ]

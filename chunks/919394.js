@@ -14,57 +14,57 @@ n(220082);
 var o = n(693824),
     s = n(690725);
 n(706454), n(594174);
-var u = n(70956),
-    c = n(709054),
+var c = n(70956),
+    u = n(709054),
     d = n(561308);
 n(206295);
 var m = n(737583);
 n(438226);
-var x = n(169040),
-    h = n(388032);
-let C = (e, t) => ({
+var h = n(169040),
+    x = n(388032);
+let p = (e, t) => ({
         AvatarImage1: e[0],
         ...(null != e[1] && { AvatarImage2: e[1] }),
         ...(null != e[2] && { AvatarImage3: e[2] }),
         ...(null != t && { ApplicationImage: t })
     }),
-    p = (e, t) => {
+    C = (e, t) => {
         let n = [
                 {
-                    iconPath: x.NM,
+                    iconPath: h.NM,
                     text: t
                 }
             ],
-            l = c.default.extractTimestamp(e.extra.application_id);
+            l = u.default.extractTimestamp(e.extra.application_id);
         if (
             (7 >= a()().diff(a()(l), 'days') &&
                 n.push({
-                    iconPath: x.As,
-                    text: h.intl.string(h.t.vYuyWV)
+                    iconPath: h.As,
+                    text: x.intl.string(x.t.vYuyWV)
                 }),
             (0, d.Ol)(e) &&
                 n.push({
-                    iconPath: x.fO,
-                    text: h.intl.string(h.t.keY6mZ)
+                    iconPath: h.fO,
+                    text: x.intl.string(x.t.keY6mZ)
                 }),
             (0, d.q_)(e))
         ) {
             let t = (0, d.vU)(e);
             n.push({
-                iconPath: x.t1,
-                text: h.intl.formatToPlainString(h.t['Klie/P'], { days: t })
+                iconPath: h.t1,
+                text: x.intl.formatToPlainString(x.t['Klie/P'], { days: t })
             });
         }
         (0, d.ig)(e) === i.o.GLOBAL &&
             n.push({
-                iconPath: x.Op,
-                text: h.intl.string(h.t.kAlUs7)
+                iconPath: h.Op,
+                text: x.intl.string(x.t.kAlUs7)
             });
         let r = (0, d.dw)(e);
         if (
             (null != r &&
                 n.push({
-                    iconPath: x.Z,
+                    iconPath: h.Z,
                     text: (0, d.GE)(r)
                 }),
             (0, d.V5)(e))
@@ -72,18 +72,18 @@ let C = (e, t) => ({
             let { text: t } = (0, d.zo)(e);
             null != t &&
                 n.push({
-                    iconPath: x.Md,
+                    iconPath: h.Md,
                     text: t
                 });
         }
         if ((0, d.Jd)(e)) {
             let t = (0, d.yA)(e);
             if (null != t) {
-                let e = h.intl.formatToPlainString(h.t.C0Axoa, { hours: Math.round(t / u.Z.Seconds.HOUR) });
+                let e = x.intl.formatToPlainString(x.t.C0Axoa, { hours: Math.round(t / c.Z.Seconds.HOUR) });
                 return [
                     {
-                        iconPath: x.eF,
-                        text: ''.concat(h.intl.string(h.t['/50eHh']), ' \u2014 ').concat(e)
+                        iconPath: h.eF,
+                        text: ''.concat(x.intl.string(x.t['/50eHh']), ' \u2014 ').concat(e)
                     }
                 ];
             }
@@ -92,32 +92,32 @@ let C = (e, t) => ({
     },
     v = (e, t) => {
         let { timestamp: n, colors: l, description: a, entry: i, numAvatars: s } = t,
-            u = l.map((e, t) => ({
+            c = l.map((e, t) => ({
                 color: e,
                 stop: t
             }));
         e.setSize(
             {
-                w: x.nx,
-                h: x.bg
+                w: h.nx,
+                h: h.bg
             },
             4
         ),
             e.drawRoundedGradientRect(
-                u,
+                c,
                 {
                     x: 0,
-                    y: x.bg
+                    y: h.bg
                 },
                 {
-                    x: x.nx,
+                    x: h.nx,
                     y: 0
                 },
                 {
                     x: 0,
                     y: 0,
-                    h: x.bg,
-                    w: x.nx
+                    h: h.bg,
+                    w: h.nx
                 },
                 8
             ),
@@ -125,20 +125,20 @@ let C = (e, t) => ({
             e.drawRoundedImage(
                 'ApplicationImage',
                 {
-                    x: x.sB,
-                    y: x.sB
+                    x: h.sB,
+                    y: h.sB
                 },
                 {
-                    w: x.Pu,
-                    h: x.Pu
+                    w: h.Pu,
+                    h: h.Pu
                 },
                 8
             ) === o.vP.Failure &&
                 e.drawPath(
                     r.Cv,
                     {
-                        x: x.sB,
-                        y: x.sB
+                        x: h.sB,
+                        y: h.sB
                     },
                     !0,
                     2 + 2 / 3
@@ -147,40 +147,40 @@ let C = (e, t) => ({
             canvas: e,
             avatarSrcs: ['AvatarImage1', 'AvatarImage2', 'AvatarImage3'].slice(0, s),
             position: {
-                x: x.Iq,
-                y: x.sB
+                x: h.Iq,
+                y: h.sB
             },
-            avatarImageSize: x.$S
+            avatarImageSize: h.$S
         }),
             e.setColor('white'),
             e.setFont({
                 size: 16,
-                family: x.I8,
-                weight: x.Ue,
+                family: h.I8,
+                weight: h.Ue,
                 truncate: o.GX.Wrap
             }),
             e.drawText(
                 a,
                 {
-                    x: x.Iq,
+                    x: h.Iq,
                     y: 64,
                     h: 32,
-                    w: x.kC
+                    w: h.kC
                 },
                 !0
             );
-        let c = p(i, n);
+        let u = C(i, n);
         (0, m.J)({
             canvas: e,
-            badges: c,
-            startPosition: x.Iq,
-            maxWidth: x.kC
+            badges: u,
+            startPosition: h.Iq,
+            maxWidth: h.kC
         });
     },
     g = async (e) => {
-        let { applicationImageSrc: t, entry: n, avatarSrcs: l, description: a, timestamp: i, colors: r, channelId: u } = e,
-            c = n.extra.game_name,
-            d = C(l, t);
+        let { applicationImageSrc: t, entry: n, avatarSrcs: l, description: a, timestamp: i, colors: r, channelId: c } = e,
+            u = n.extra.game_name,
+            d = p(l, t);
         return await (0, s.f)({
             assetsToLoad: d,
             drawImage: (e) =>
@@ -194,9 +194,9 @@ let C = (e, t) => ({
             exportConfigs: {
                 format: o.kH.CloudUpload,
                 quality: 1,
-                fileName: 'user-reacting-to-'.concat(c, '.png').toLowerCase(),
+                fileName: 'user-reacting-to-'.concat(u, '.png').toLowerCase(),
                 fileType: 'png',
-                channelId: u
+                channelId: c
             }
         });
     };

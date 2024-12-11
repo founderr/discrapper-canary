@@ -5,14 +5,14 @@ var l = n(200651),
     r = n(423875),
     o = n(442837),
     s = n(18323),
-    u = n(594174),
-    c = n(908841),
+    c = n(594174),
+    u = n(908841),
     d = n(823379),
     m = n(5192),
-    x = n(561308),
-    h = n(319604),
-    C = n(31074),
-    p = n(206295),
+    h = n(561308),
+    x = n(319604),
+    p = n(31074),
+    C = n(206295),
     v = n(278399),
     g = n(297781),
     f = n(591853),
@@ -40,25 +40,25 @@ let L = (e, t, n, l) => {
         });
 t.Z = (e) => {
     let { channel: t, entry: n, onReaction: i, onVoiceChannelPreview: m } = e,
-        { parent_title: y, provider: N, image_url: _ } = n.extra.media,
+        { parent_title: N, provider: y, image_url: _ } = n.extra.media,
         A = n.extra.artist.name,
-        E = (0, o.e7)([u.default], () => u.default.getUser(n.author_id)),
-        { primaryColor: S, secondaryColor: R } = (0, p.Z)(_),
-        M = (0, x.Nq)(n),
+        E = (0, o.e7)([c.default], () => c.default.getUser(n.author_id)),
+        { primaryColor: S, secondaryColor: R } = (0, C.Z)(_),
+        M = (0, h.Nq)(n),
         k = a.useCallback(() => {
             if (null == t || null == E || !(0, d.Hi)(M, v.y9)) return;
             let e = L(n, t, E, M);
-            return (0, h.CR)({
+            return (0, x.CR)({
                 user: E,
                 channel: t,
                 mediaImageSrc: _,
                 artist: A,
                 description: e,
                 colors: [S, R],
-                badges: (0, h.UU)(n)
+                badges: (0, x.UU)(n)
             });
         }, [_, A, t, n, S, M, R, E]),
-        w = (0, C.Z)(j.ABu.SPOTIFY);
+        w = (0, p.Z)(j.ABu.SPOTIFY);
     if (null == E || !(0, d.Hi)(M, v.y9)) return null;
     let O = () => {
         let e = Z.Hw.ALBUM,
@@ -78,15 +78,15 @@ t.Z = (e) => {
                 channel: t,
                 entry: n,
                 headerIcons:
-                    N === r.p.SPOTIFY
+                    y === r.p.SPOTIFY
                         ? (0, l.jsx)(I.Z, {
                               onClick: w,
-                              Icon: c.Z,
+                              Icon: u.Z,
                               'aria-label': P.intl.string(P.t['0ZB/XF'])
                           })
                         : null,
                 userDescription: P.t.CcVI1d,
-                title: y,
+                title: N,
                 subtitle: A,
                 badges: (0, l.jsx)(g.Gk, {
                     location: g.Gt.POPOUT,
