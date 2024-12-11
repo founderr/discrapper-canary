@@ -144,36 +144,36 @@ function C(e) {
 async function p(e, n) {
     await d.ZP.updateVerificationForm(e, n);
 }
-async function N(e, n) {
+async function T(e, n) {
     await d.ZP.updateVerificationFormDescription(e, n);
 }
 function I(e) {
     var n, t, a;
-    let { guild: o, isClanContext: h = !1, onFieldsSave: g, onDescriptionSave: I, verificationForm: T } = e,
-        [F, b] = l.useState(h),
-        w = l.useRef(!1),
-        y = l.useCallback(() => {
-            w.current = !0;
+    let { guild: o, isClanContext: h = !1, onFieldsSave: g, onDescriptionSave: I, verificationForm: N } = e,
+        [R, y] = l.useState(h),
+        F = l.useRef(!1),
+        E = l.useCallback(() => {
+            F.current = !0;
         }, []),
-        R = null !== (n = (0, x.A)({ guildId: o.id })) && void 0 !== n ? n : 0,
-        E = (0, r.e7)([u.Z], () => (null != T ? T : u.Z.get(o.id))),
-        k = null !== (t = null == E ? void 0 : E.formFields) && void 0 !== t ? t : [];
+        b = null !== (n = (0, x.A)({ guildId: o.id })) && void 0 !== n ? n : 0,
+        w = (0, r.e7)([u.Z], () => (null != N ? N : u.Z.get(o.id))),
+        M = null !== (t = null == w ? void 0 : w.formFields) && void 0 !== t ? t : [];
     l.useEffect(() => {
         d.ZP.fetchVerificationForm(o.id);
     }, [o.id]);
-    let M = null != E,
+    let k = null != w,
         L = !h;
     return (0, i.jsx)(c.Z, {
         renderHeader: L
             ? (0, i.jsx)(C, {
                   guild: o,
-                  isExpanded: F,
-                  emptyFormFields: (null == k ? void 0 : k.length) == null || (null == k ? void 0 : k.length) === 0,
-                  hasTermsField: null == k ? void 0 : k.some((e) => e.field_type === m.QJ.TERMS)
+                  isExpanded: R,
+                  emptyFormFields: (null == M ? void 0 : M.length) == null || (null == M ? void 0 : M.length) === 0,
+                  hasTermsField: null == M ? void 0 : M.some((e) => e.field_type === m.QJ.TERMS)
               })
             : null,
-        isExpanded: F,
-        onExpand: () => b(!F),
+        isExpanded: R,
+        onExpand: () => y(!R),
         disableAnimation: h,
         disableBackground: !L,
         children: (0, i.jsx)('div', {
@@ -182,17 +182,17 @@ function I(e) {
                 [j.rulesScreeningItemsNoBorder]: !L
             }),
             children:
-                M &&
+                k &&
                 (0, i.jsx)(f.Z, {
                     guild: o,
-                    submittedGuildJoinRequestsCount: R,
-                    formFields: k,
-                    onFormFieldUpdate: y,
+                    submittedGuildJoinRequestsCount: b,
+                    formFields: M,
+                    onFormFieldUpdate: E,
                     hideVerificationLevelField: !0,
                     isClanContext: h,
                     onFieldsSave: null != g ? g : p,
-                    onDescriptionSave: null != I ? I : N,
-                    formDescription: null !== (a = null == E ? void 0 : E.description) && void 0 !== a ? a : ''
+                    onDescriptionSave: null != I ? I : T,
+                    formDescription: null !== (a = null == w ? void 0 : w.description) && void 0 !== a ? a : ''
                 })
         })
     });

@@ -383,9 +383,9 @@ let U = (e) => {
         subtext: T.Z
     },
     Z = (0, N.Z)([G, S.Z]),
-    F = i().omit(Z, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'subtext']),
-    V = i().omit(Z, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'autolink', 'url', 'attachmentLink', 'mention', 'roleMention', 'channelMention', 'channelOrMessageUrl', 'mediaPostLink', 'subtext']),
-    j = i().omit(Z, ['codeBlock', 'br', 'mention', 'channel', 'roleMention', 'attachmentLink', 'subtext']),
+    F = i().omit(Z, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'subtext', 'soundboard']),
+    V = i().omit(Z, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'autolink', 'url', 'attachmentLink', 'mention', 'roleMention', 'channelMention', 'channelOrMessageUrl', 'mediaPostLink', 'subtext', 'soundboard']),
+    j = i().omit(Z, ['codeBlock', 'br', 'mention', 'channel', 'roleMention', 'attachmentLink', 'subtext', 'soundboard']),
     H = i().omit(
         (0, N.Z)([
             Z,
@@ -403,7 +403,7 @@ let U = (e) => {
         ['blockQuote', 'codeBlock', 'br']
     ),
     Y = i().omit(Z, ['codeBlock', 'br', 'blockQuote']),
-    W = i().omit(Z, ['codeBlock', 'br', 'attachmentLink', 'mention', 'roleMention', 'channel', 'paragraph', 'newline', 'subtext']),
+    W = i().omit(Z, ['codeBlock', 'br', 'attachmentLink', 'mention', 'roleMention', 'channel', 'paragraph', 'newline', 'subtext', 'soundboard']),
     K = i().omit(Z, ['codeBlock', 'blockQuote', 'br']),
     z = i().omit(Z, ['codeBlock', 'br', 'inlineCode']);
 function q(e, t) {

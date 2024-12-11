@@ -23,10 +23,10 @@ let h = { NITRO_BASIC: u.nitroBasic },
     f = l.memo(function (e) {
         let { message: t, handleClick: n, handleClose: s, buttonText: f, useInitialGlow: _, useGlowOnHover: j, handleImageClick: m, className: L, analyticsLocations: g, upsellType: E, themeOverride: S = h.NITRO_BASIC } = e,
             [I, M] = l.useState(_),
-            [y, v] = l.useState(p);
+            [v, y] = l.useState(p);
         return (
             l.useEffect(() => {
-                v(c);
+                y(c);
             }, [S]),
             l.useEffect(() => {
                 setTimeout(() => M(!1), 3000);
@@ -61,7 +61,7 @@ let h = { NITRO_BASIC: u.nitroBasic },
                                     children: (0, i.jsx)('img', {
                                         alt: '',
                                         className: u.image,
-                                        src: y
+                                        src: v
                                     })
                                 }),
                                 (0, i.jsx)('div', {

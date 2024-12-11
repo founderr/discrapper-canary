@@ -27,7 +27,7 @@ var i = n(200651),
 function E(e) {
     let { value: t, channel: n } = e;
     return (0, C.v)({
-        type: o.I.EDIT,
+        type: o.Ie.EDIT,
         content: t,
         channel: n,
         restrictMentions: !1,
@@ -116,7 +116,7 @@ function N(e) {
                 textValue: t,
                 richValue: n,
                 channel: a,
-                type: o.I.EDIT,
+                type: o.Ie.EDIT,
                 onChange: s,
                 onSubmit: (e) => {
                     let { value: t } = e;

@@ -27,16 +27,16 @@ var i = n(200651),
     S = n(509545),
     I = n(669079),
     M = n(63063),
-    y = n(74538),
-    v = n(987209),
+    v = n(74538),
+    y = n(987209),
     T = n(563132),
     N = n(409813),
     P = n(51499),
     Z = n(456251),
     A = n(614277),
     U = n(809144),
-    k = n(698708),
-    O = n(844068),
+    O = n(698708),
+    k = n(844068),
     R = n(981631),
     b = n(474936),
     w = n(388032),
@@ -45,7 +45,7 @@ function B(e) {
     var t, n, s;
     let { handleStepChange: B, initialPlanId: F, subscriptionTier: G, trialId: D, referralTrialOfferId: W, handleClose: Y } = e,
         { activeSubscription: K, hasFetchedSubscriptions: V, paymentSourceId: X, paymentSources: Q, selectedSkuId: z, selectedPlan: q, step: J, defaultPlanId: $, priceOptions: ee, isPremium: et } = (0, T.usePaymentContext)(),
-        { isGift: en, giftRecipient: ei, giftMessage: el, claimableRewards: es } = (0, v.wD)(),
+        { isGift: en, giftRecipient: ei, giftMessage: el, claimableRewards: es } = (0, y.wD)(),
         er = (0, h.a5)(q),
         ea = en && er && null != es && es.length > 0,
         eo = null != X ? Q[X] : null,
@@ -61,7 +61,7 @@ function B(e) {
         { defaultToMonthlyPlan: ej } = x.k.useExperiment({ location: 'd17fd6_4' }, { autoTrackExposure: !1 }),
         em = l.useMemo(
             () =>
-                (0, y.V7)({
+                (0, v.V7)({
                     skuId: z,
                     isPremium: et,
                     multiMonthPlans: eu ? eC : [],
@@ -82,7 +82,7 @@ function B(e) {
             }
         ],
         [eS, eI] = l.useState(e_),
-        [eM, ey] = (0, c.ED)({
+        [eM, ev] = (0, c.ED)({
             items: eE,
             renewal: !1,
             preventFetch: !e_,
@@ -100,14 +100,14 @@ function B(e) {
             5,
             {
                 proratedInvoicePreview: eM,
-                proratedInvoiceError: ey,
+                proratedInvoiceError: ev,
                 isEligibleForOffer: e_
             },
             { tags: { app_context: 'billing' } }
         );
-    let ev = null !== (s = null == ey ? void 0 : ey.message) && void 0 !== s ? s : w.intl.string(w.t.R0RpRU),
-        eT = e_ && null == ey,
-        eN = e_ && null != ey,
+    let ey = null !== (s = null == ev ? void 0 : ev.message) && void 0 !== s ? s : w.intl.string(w.t.R0RpRU),
+        eT = e_ && null == ev,
+        eN = e_ && null != ev,
         eP = eT && null == K && !!e_ && (null == eM ? void 0 : eM.subscriptionPeriodEnd) == null,
         { enabled: eZ } = p._.useExperiment({ location: 'PremiumPaymentPlanSelectStep' }, { autoTrackExposure: !1 }),
         eA = !en && (null == eg ? void 0 : eg.skuId) === b.Si.TIER_2 && (null == ec ? void 0 : ec.referrer_id) != null && eZ,
@@ -124,10 +124,10 @@ function B(e) {
                       children: [
                           eT && (0, i.jsx)('hr', { className: H.planSelectSeparatorUpper }),
                           eU,
-                          (0, i.jsx)(O.Z, {}),
                           (0, i.jsx)(k.Z, {}),
+                          (0, i.jsx)(O.Z, {}),
                           eN
-                              ? (0, i.jsx)(o.FormErrorBlock, { children: ev })
+                              ? (0, i.jsx)(o.FormErrorBlock, { children: ey })
                               : (0, i.jsx)(g.O, {
                                     planOptions: em,
                                     eligibleForMultiMonthPlans: eu,

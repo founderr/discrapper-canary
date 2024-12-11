@@ -26,7 +26,7 @@ let C = (e) => {
             u = (0, p.y6)(n.id),
             d = r.useCallback(() => {
                 (0, f.v)({
-                    type: o.I.FORM,
+                    type: o.Ie.FORM,
                     content: '',
                     channel: t
                 }).then((e) => {

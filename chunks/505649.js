@@ -28,10 +28,6 @@ async function T(e) {
     if (null == e) return;
     let { error: t } = await (0, _.oe)(e);
     if (null != t) {
-        l.Z.dispatch({
-            type: 'PAYMENT_AUTHENTICATION_ERROR',
-            error: new d.ZP(h.intl.string(h.t.khEaRE))
-        });
         let e = Error(t);
         (0, f.q2)(e, { extra: { authenticationError: t } });
     }
@@ -40,7 +36,11 @@ function b(e) {
     let { payment: t } = e,
         n = [p.PyE.COMPLETED, p.PyE.FAILED, p.PyE.CANCELED];
     if (!m || t.id !== g || !n.includes(t.status)) return !1;
-    (m = !1), (g = null), t.status === p.PyE.FAILED ? (E = new d.ZP(h.intl.string(h.t.khEaRE))) : ((E = null), l.Z.wait(u.fw), l.Z.wait(c.pB));
+    if (((m = !1), (g = null), t.status === p.PyE.FAILED)) {
+        var r;
+        let e = null;
+        (null === (r = t.metadata) || void 0 === r ? void 0 : r.billing_error_code) === d.SM.BILLING_INSUFFICIENT_FUNDS && (e = d.SM.BILLING_INSUFFICIENT_FUNDS), (E = new d.ZP(h.intl.string(h.t.khEaRE), e));
+    } else (E = null), l.Z.wait(u.fw), l.Z.wait(c.pB);
 }
 class S extends (r = o.ZP.Store) {
     get isAwaitingAuthentication() {

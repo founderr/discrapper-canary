@@ -35,18 +35,18 @@ var i = n(200651),
     S = n(92594),
     I = n(293858),
     M = n(183813),
-    y = n(614223),
-    v = n(174827),
+    v = n(614223),
+    y = n(174827),
     T = n(846464),
     N = n(184160),
     P = n(48175),
     Z = n(981631),
     A = n(474936),
     U = n(388032),
-    k = n(809186);
-let O = [f.h8.PLAN_SELECT, f.h8.ADD_PAYMENT_STEPS, f.h8.REVIEW, f.h8.CONFIRM];
+    O = n(809186);
+let k = [f.h8.PLAN_SELECT, f.h8.ADD_PAYMENT_STEPS, f.h8.REVIEW, f.h8.CONFIRM];
 function R(e) {
-    let { analyticsLocation: t, analyticsObject: n, analyticsSourceLocation: s, onComplete: o, transitionState: d, initialPlanId: c, subscriptionTier: j, onClose: m, trialId: L, trialFooterMessageOverride: g, reviewWarningMessage: E, openInvoiceId: S, onSubscriptionConfirmation: I, renderPurchaseConfirmation: M, postSuccessGuild: y, followupSKUInfo: v, renderHeader: T, applicationId: N, guildId: P, referralTrialOfferId: U, skuId: k, returnRef: O, skipConfirm: R = !1, continueSessionToInitialStep: b } = e,
+    let { analyticsLocation: t, analyticsObject: n, analyticsSourceLocation: s, onComplete: o, transitionState: d, initialPlanId: c, subscriptionTier: j, onClose: m, trialId: L, trialFooterMessageOverride: g, reviewWarningMessage: E, openInvoiceId: S, onSubscriptionConfirmation: I, renderPurchaseConfirmation: M, postSuccessGuild: v, followupSKUInfo: y, renderHeader: T, applicationId: N, guildId: P, referralTrialOfferId: U, skuId: O, returnRef: k, skipConfirm: R = !1, continueSessionToInitialStep: b } = e,
         { analyticsLocations: w } = (0, C.ZP)();
     l.useEffect(() => {
         !u.Z.isLoadedForPremiumSKUs() && r.Z.wait(() => (0, a.Y2)());
@@ -74,16 +74,16 @@ function R(e) {
         openInvoiceId: S,
         onSubscriptionConfirmation: I,
         renderPurchaseConfirmation: M,
-        postSuccessGuild: y,
-        followupSKUInfo: v,
+        postSuccessGuild: v,
+        followupSKUInfo: y,
         renderHeader: T,
         applicationId: N,
         guildId: P,
         referralTrialOfferId: U,
-        skuId: k,
+        skuId: O,
         shakeWhilePurchasing: !0,
         isLargeModal: D,
-        returnRef: O,
+        returnRef: k,
         skipConfirm: R,
         continueSessionToInitialStep: b
     });
@@ -91,7 +91,7 @@ function R(e) {
 function b(e) {
     let { startedPaymentFlowWithPaymentSourcesRef: t, selectedSkuId: n } = (0, h.usePaymentContext)(),
         { isGift: i } = (0, x.wD)();
-    return (0, y.Kp)({
+    return (0, v.Kp)({
         isTrial: null != e && e,
         isGift: i,
         selectedSkuId: n,
@@ -113,7 +113,7 @@ function w(e) {
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(j.J, {
             ...e,
-            breadcrumbSteps: O,
+            breadcrumbSteps: k,
             onReturn: () => {
                 let e = Object.values(s),
                     i = e.length < 1 && null == t ? f.h8.PLAN_SELECT : f.h8.REVIEW;
@@ -145,7 +145,7 @@ let H = [
     },
     {
         key: f.h8.PLAN_SELECT,
-        renderStep: (e) => (0, i.jsx)(v.x, { ...e }),
+        renderStep: (e) => (0, i.jsx)(y.x, { ...e }),
         options: {
             renderHeader: !0,
             useBreadcrumbLabel: (e) => (b(e) ? null : U.intl.string(U.t['r+SebW']))
@@ -183,7 +183,7 @@ let H = [
         key: f.h8.SELECT_FREE_SKU,
         renderStep: (e) => (0, i.jsx)(M.S, { ...e }),
         options: {
-            bodyClassName: k.selectFreeSku,
+            bodyClassName: O.selectFreeSku,
             isDynamicModal: !0
         }
     }

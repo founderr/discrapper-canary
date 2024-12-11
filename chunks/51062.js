@@ -41,7 +41,7 @@ function v(e, t, n) {
         { canMentionEveryone: P, hidePersonalInformation: M } = (0, a.cj)(
             [d.Z, f.Z],
             () => ({
-                canMentionEveryone: N.isPrivate() || w || C === l.I.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, N),
+                canMentionEveryone: N.isPrivate() || w || C === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, N),
                 hidePersonalInformation: f.Z.hidePersonalInformation
             }),
             [N, C, w]
@@ -66,8 +66,8 @@ function v(e, t, n) {
             canMentionEveryone: P,
             canMentionClyde: x,
             hidePersonalInformation: M,
-            hideMentionDescription: C === l.I.RULES_INPUT,
-            emojiIntention: C === l.I.RULES_INPUT ? E.Hz.COMMUNITY_CONTENT : E.Hz.CHAT,
+            hideMentionDescription: C === l.Ie.RULES_INPUT,
+            emojiIntention: C === l.Ie.RULES_INPUT ? E.Hz.COMMUNITY_CONTENT : E.Hz.CHAT,
             currentWord: null !== (y = null == G ? void 0 : G.word) && void 0 !== y ? y : '',
             currentWordIsAtStart: (null == G ? void 0 : G.isAtStart) === !0,
             optionText: null != U ? (0, s.KF)({ [U.name]: null !== (A = null === (T = e.editorRef.current) || void 0 === T ? void 0 : T.getCurrentCommandOptionValue()) && void 0 !== A ? A : [] }, U.name) : ''

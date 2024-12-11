@@ -118,7 +118,7 @@ function f(t) {
                                         S(n), z(e);
                                     },
                                     onSubmit: M,
-                                    type: o.I.VOICE_CHANNEL_STATUS,
+                                    type: o.Ie.VOICE_CHANNEL_STATUS,
                                     canMentionRoles: !1,
                                     canMentionChannels: !1,
                                     allowNewLines: !1,

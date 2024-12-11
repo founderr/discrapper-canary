@@ -18,7 +18,7 @@ function u(e) {
         m = (0, o.Jg)(n) ? c.t.vPg1JS : c.t.rPqqtr,
         f = {
             onClick: () => {
-                l.__(i._b.TEXT, a.I.NORMAL, { applicationId: n.extra.application_id });
+                l.__(i._b.TEXT, a.Ie.NORMAL, { applicationId: n.extra.application_id });
             },
             ariaDescription: c.intl.formatToPlainString(c.t.NTHttL, { title: d })
         };

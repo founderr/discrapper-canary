@@ -141,7 +141,7 @@ function M(e) {
                                               ((0, A.PV)(i.id),
                                               h.Z.openPrivateChannel(i.id).then(() => {
                                                   setTimeout(() => {
-                                                      (0, C.PG)(L.X1.GIF, E.I.NORMAL),
+                                                      (0, C.PG)(L.X1.GIF, E.Ie.NORMAL),
                                                           setTimeout(() => {
                                                               (0, C.ql)(y.intl.string(y.t.jrtJi4), !0);
                                                           }, 50);

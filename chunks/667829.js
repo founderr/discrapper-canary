@@ -176,7 +176,7 @@ class P extends i.Component {
                 accessibilityLabel: B,
                 disabled: c || !1,
                 submitting: G,
-                isEdit: g === b.I.EDIT,
+                isEdit: g === b.Ie.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
                 onPaste: this.handlePaste,
@@ -191,11 +191,11 @@ class P extends i.Component {
                 onKeyDown: _,
                 onSubmit: h,
                 textAreaPaddingClassName: s()(w[E], {
-                    [D.textAreaWithoutAttachmentButton]: g !== b.I.NORMAL && g !== b.I.OVERLAY && g !== b.I.THREAD_CREATION && g !== b.I.SIDEBAR,
-                    [D.textAreaForPostCreation]: g === b.I.CREATE_FORUM_POST,
-                    [D.textAreaCustomGift]: g === b.I.CUSTOM_GIFT,
-                    [D.textAreaForUserProfile]: g === b.I.USER_PROFILE,
-                    [D.textAreaForOverlayInlineReply]: g === b.I.OVERLAY_INLINE_REPLY
+                    [D.textAreaWithoutAttachmentButton]: g !== b.Ie.NORMAL && g !== b.Ie.OVERLAY && g !== b.Ie.THREAD_CREATION && g !== b.Ie.SIDEBAR,
+                    [D.textAreaForPostCreation]: g === b.Ie.CREATE_FORUM_POST,
+                    [D.textAreaCustomGift]: g === b.Ie.CUSTOM_GIFT,
+                    [D.textAreaForUserProfile]: g === b.Ie.USER_PROFILE,
+                    [D.textAreaForOverlayInlineReply]: g === b.Ie.OVERLAY_INLINE_REPLY
                 }),
                 spellcheckEnabled: T,
                 useNewSlashCommands: y,

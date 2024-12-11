@@ -87,7 +87,7 @@ function S(e) {
                         onMouseDown: () => C(r),
                         children: (0, t.jsx)(v.Z, {
                             innerClassName: B.rulesTextAreaInput,
-                            type: p.I.RULES_INPUT,
+                            type: p.Ie.RULES_INPUT,
                             textValue: b,
                             richValue: _,
                             channel: n,

@@ -265,7 +265,7 @@ class tt extends l.PureComponent {
             {
                 channel: e,
                 guild: n,
-                chatInputType: M.I.NORMAL
+                chatInputType: M.Ie.NORMAL
             },
             null != n ? n.id : 'home'
         );

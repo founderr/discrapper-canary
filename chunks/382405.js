@@ -334,7 +334,7 @@ function B(e) {
             onAction: v
         }),
         T = () => {
-            null == o || o(), (0, c.__)(d._b.TEXT, f.I.NORMAL, { applicationId: n.extra.application_id });
+            null == o || o(), (0, c.__)(d._b.TEXT, f.Ie.NORMAL, { applicationId: n.extra.application_id });
         };
     return (0, r.jsxs)(D.Z, {
         ref: I,

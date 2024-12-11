@@ -12,12 +12,12 @@ n.Z = l.memo(function (e) {
     let { renderHeader: n, children: t, isExpanded: a, isStuck: m, onExpand: x, disableAnimation: f, disableBackground: h } = e,
         [g, v] = l.useState(!0),
         [j, C] = l.useState(!1),
-        { ref: p, height: N = 0 } = (0, c.Z)(),
-        { ref: I, height: T = 0 } = (0, c.Z)(),
-        [F, b] = l.useState(a),
-        w = (0, o.useSpring)(
+        { ref: p, height: T = 0 } = (0, c.Z)(),
+        { ref: I, height: N = 0 } = (0, c.Z)(),
+        [R, y] = l.useState(a),
+        F = (0, o.useSpring)(
             {
-                height: F ? T + N : N,
+                height: R ? N + T : T,
                 config: {
                     ...r.config.stiff,
                     clamp: !0
@@ -33,7 +33,7 @@ n.Z = l.memo(function (e) {
         );
     return (
         l.useLayoutEffect(() => {
-            C(!1), b(a);
+            C(!1), y(a);
         }, [a]),
         l.useLayoutEffect(() => {
             let e = setTimeout(() => {
@@ -48,7 +48,7 @@ n.Z = l.memo(function (e) {
             }),
             children: (0, i.jsxs)(r.animated.div, {
                 className: s()(u.contentExpandContainer, { [u.showOverflow]: a && j }),
-                style: w,
+                style: F,
                 children: [
                     (0, i.jsx)(o.Clickable, {
                         innerRef: p,

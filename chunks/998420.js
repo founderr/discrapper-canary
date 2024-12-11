@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     o = n(442837),
     a = n(100527),
-    l = n(906732),
-    c = n(252618),
+    c = n(906732),
+    l = n(252618),
     s = n(598077),
     d = n(430824),
     u = n(693546),
@@ -16,37 +16,37 @@ var i = n(200651),
     C = n(251806);
 t.default = function (e) {
     let { guildId: t } = e,
-        { analyticsLocations: n } = (0, l.ZP)(a.Z.GUILD_MEMBER_APPLICATION_REVIEW),
+        { analyticsLocations: n } = (0, c.ZP)(a.Z.GUILD_MEMBER_APPLICATION_REVIEW),
         x = (0, b.L)({ guildId: t }),
         { user: v } = null != x ? x : {},
         I = r.useMemo(() => (null != v ? new s.Z(v) : null), [v]),
-        h = (0, o.e7)([d.Z], () => d.Z.getGuild(t), [t]);
-    (0, c.Tt)({
+        g = (0, o.e7)([d.Z], () => d.Z.getGuild(t), [t]);
+    (0, l.Tt)({
         subsection: p.intl.string(p.t.nqrK8f),
-        location: null == h ? void 0 : h.name
+        location: null == g ? void 0 : g.name
     }),
         r.useEffect(() => {
             f.ZP.fetchVerificationForm(t);
         }, [t]);
-    let g = null != x && null != h && null != I;
-    return (0, i.jsxs)(l.Gt, {
+    let h = null != x && null != g && null != I;
+    return (0, i.jsxs)(c.Gt, {
         value: n,
         children: [
             (0, i.jsx)('div', {
                 className: C.content,
                 children: (0, i.jsx)(_.Z, {
                     guildId: t,
-                    isSidebarOpen: g
+                    isSidebarOpen: h
                 })
             }),
-            g &&
+            h &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)('div', { className: C.sidebarSeparator }),
                         (0, i.jsx)('section', {
                             className: C.sidebar,
                             children: (0, i.jsx)(m.Z, {
-                                guild: h,
+                                guild: g,
                                 guildJoinRequest: x,
                                 guildJoinRequestUser: I,
                                 onClose: () => u.Z.setSelectedGuildJoinRequest(t, null)

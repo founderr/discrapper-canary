@@ -55,7 +55,7 @@ function E(e) {
                         channel: v,
                         textValue: I,
                         richValue: T,
-                        type: c.I.CUSTOM_GIFT,
+                        type: c.Ie.CUSTOM_GIFT,
                         onBlur: () => {
                             b.current = !1;
                         },

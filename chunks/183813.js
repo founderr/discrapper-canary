@@ -25,12 +25,12 @@ function g(e) {
     let { handleStepChange: t, handleClose: n } = e,
         { selectedPlan: s, selectedSkuId: g, step: E } = (0, h.usePaymentContext)(),
         { setSelectedGiftingPromotionReward: S, selectedGiftingPromotionReward: I, claimableRewards: M } = (0, x.wD)(),
-        y = (0, a.e7)([c.default], () => c.default.getCurrentUser());
+        v = (0, a.e7)([c.default], () => c.default.getCurrentUser());
     l.useEffect(() => {
         let e = null != M && M.length > 0;
         null == I && e && S(M[0]);
     }, [M, I, S]);
-    let v = (e) => {
+    let y = (e) => {
         let t = e.skuId;
         return (0, i.jsx)(
             d.Z,
@@ -64,7 +64,7 @@ function g(e) {
                                         children: m.intl.string(m.t['Rp0+ZG'])
                                     })
                                 }),
-                                null == M ? void 0 : M.map((e) => v(e))
+                                null == M ? void 0 : M.map((e) => y(e))
                             ]
                         }),
                         (0, i.jsx)(o.ModalCloseButton, {
@@ -75,10 +75,10 @@ function g(e) {
                             className: L.bodyColumnRight,
                             children:
                                 null != I &&
-                                null != y &&
+                                null != v &&
                                 (0, i.jsx)(C.Z, {
                                     avatarDecorationOverride: { asset: I.assetId },
-                                    user: y,
+                                    user: v,
                                     guildId: null,
                                     avatarSize: o.AvatarSizes.SIZE_152
                                 })
@@ -90,10 +90,10 @@ function g(e) {
                         className: L.modalFooter,
                         children: (0, i.jsx)(u.y, {
                             onStepChange: (e) => {
-                                null != y &&
+                                null != v &&
                                     null != I &&
                                     p.default.track(j.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
-                                        user_id: y.id,
+                                        user_id: v.id,
                                         reward_sku_id: I.skuId
                                     }),
                                     t(e);

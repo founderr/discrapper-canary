@@ -20,7 +20,7 @@ function m(e) {
     let { markAsDismissed: t } = e,
         n = (0, a.e7)([c.Z], () => c.Z.theme) === _.BR.LIGHT ? 'light' : 'dark',
         m = i.useCallback(() => {
-            (0, l.RO)(f.X1.SOUNDBOARD, o.I.NORMAL);
+            (0, l.RO)(f.X1.SOUNDBOARD, o.Ie.NORMAL);
         }, []);
     return (0, r.jsx)(u.ZP, {
         asset: (0, r.jsxs)('div', {

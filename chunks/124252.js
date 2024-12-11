@@ -22,7 +22,7 @@ function c(e, t) {
     let { mediaAttachments: d, hasThumbnail: u } = (function (e) {
             let [t, n] = a.useState(null),
                 o = (0, i.Wu)([l.Z], () => {
-                    let t = l.Z.getUploads(e.id, r.I.CREATE_FORUM_POST.drafts.type),
+                    let t = l.Z.getUploads(e.id, r.Ie.CREATE_FORUM_POST.drafts.type),
                         n = t.find((e) => e.isThumbnail);
                     return null != n ? [n] : t.filter((e) => e.isVideo || e.isImage);
                 }),

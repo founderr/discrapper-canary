@@ -61,7 +61,7 @@ t.ZP = (e) => {
         b = (0, i.e7)([x.default], () => x.default.locale),
         { displayParticipants: H, participant1: V, participant2: B, numOtherParticipants: D } = (0, v.Z)(n, 3),
         U = () => {
-            c.__(d._b.TEXT, m.I.NORMAL, { applicationId: n.extra.application_id });
+            c.__(d._b.TEXT, m.Ie.NORMAL, { applicationId: n.extra.application_id });
         },
         z = a.useCallback(
             (e) => {

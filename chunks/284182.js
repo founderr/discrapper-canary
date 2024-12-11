@@ -17,7 +17,7 @@ var i = n(399606),
 function h(e) {
     let { parentChannel: t } = e,
         n = (0, i.Wu)([d.Z], () => {
-            let e = d.Z.getUploads(t.id, l.I.CREATE_FORUM_POST.drafts.type);
+            let e = d.Z.getUploads(t.id, l.Ie.CREATE_FORUM_POST.drafts.type);
             return null == e ? void 0 : e.filter((e) => !0 !== e.isThumbnail);
         });
     return (0, a.jsxs)('div', {
@@ -47,7 +47,7 @@ function h(e) {
                                     o.Z,
                                     {
                                         channelId: t.id,
-                                        draftType: l.I.CREATE_FORUM_POST.drafts.type,
+                                        draftType: l.Ie.CREATE_FORUM_POST.drafts.type,
                                         upload: e,
                                         keyboardModeEnabled: !0,
                                         hideFileName: !0,

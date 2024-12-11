@@ -10,9 +10,9 @@ var s = r(120356),
     d = r(481060),
     c = r(493683),
     x = r(37234),
-    h = r(410030),
-    p = r(518950),
-    f = r(819640),
+    f = r(410030),
+    h = r(518950),
+    p = r(819640),
     u = r(63063),
     m = r(51144),
     _ = r(281494),
@@ -20,15 +20,15 @@ var s = r(120356),
     g = r(792451),
     L = r(814667),
     S = r(263885),
-    v = r(981631),
-    y = r(388032),
+    y = r(981631),
+    v = r(388032),
     N = r(790877);
 let Z = (e, t) => {
-        f.Z.hasLayers() && (0, x.xf)(), c.Z.openPrivateChannel(e), t();
+        p.Z.hasLayers() && (0, x.xf)(), c.Z.openPrivateChannel(e), t();
     },
     w = (e) => {
         let { user: t, trialCreationResult: r, onClose: s } = e,
-            { avatarSrc: n, eventHandlers: l } = (0, p.Z)({
+            { avatarSrc: n, eventHandlers: l } = (0, h.Z)({
                 user: t,
                 size: d.AvatarSizes.SIZE_56
             }),
@@ -59,12 +59,12 @@ let Z = (e, t) => {
                                       (0, i.jsx)(d.Text, {
                                           variant: 'text-md/medium',
                                           className: N.userName,
-                                          children: y.intl.format(y.t.RO3T4O, { userName: o })
+                                          children: v.intl.format(v.t.RO3T4O, { userName: o })
                                       })
                                   ]
                               })
                             : (0, i.jsx)(d.Tooltip, {
-                                  text: y.intl.string(y.t.xkVQPD),
+                                  text: v.intl.string(v.t.xkVQPD),
                                   position: 'right',
                                   children: (e) => {
                                       let { onMouseEnter: r, onMouseLeave: a } = e;
@@ -107,13 +107,13 @@ t.Z = (e) => {
         ),
         n = (0, o.e7)([j.Z], () => j.Z.getReferralsRemaining());
     l()(null !== n, 'Referrals remaining should not be null');
-    let c = (0, h.Fg)(),
+    let c = (0, f.Fg)(),
         x = (0, C.ap)(c) ? L.Z : g.Z,
-        p = y.intl.string(y.t.Pcb7KC),
-        f = [...r.values()].filter((e) => e === _.Fz.SUCCESS).length;
+        h = v.intl.string(v.t.Pcb7KC),
+        p = [...r.values()].filter((e) => e === _.Fz.SUCCESS).length;
     return (
-        n > 0 && (p = y.intl.formatToPlainString(y.t.iWtOfH, { numReferrals: f })),
-        0 === f && (p = y.intl.string(y.t['7VBEub'])),
+        n > 0 && (h = v.intl.formatToPlainString(v.t.iWtOfH, { numReferrals: p })),
+        0 === p && (h = v.intl.string(v.t['7VBEub'])),
         (0, i.jsxs)('div', {
             className: N.confrimationContainer,
             children: [
@@ -130,7 +130,7 @@ t.Z = (e) => {
                 (0, i.jsx)(d.Heading, {
                     variant: 'heading-lg/bold',
                     className: N.heading,
-                    children: p
+                    children: h
                 }),
                 (0, i.jsx)('div', {
                     className: N.confirmedUserContainer,
@@ -138,9 +138,9 @@ t.Z = (e) => {
                 }),
                 (0, i.jsx)(d.Text, {
                     variant: 'text-md/medium',
-                    children: y.intl.format(y.t.CZaMHh, {
+                    children: v.intl.format(v.t.CZaMHh, {
                         days: S.p,
-                        helpdeskArticle: u.Z.getArticleURL(v.BhN.REFERRAL_PROGRAM)
+                        helpdeskArticle: u.Z.getArticleURL(y.BhN.REFERRAL_PROGRAM)
                     })
                 })
             ]

@@ -53,7 +53,7 @@ function T(e) {
                     channel: x,
                     textValue: _,
                     richValue: I,
-                    type: l.I.PROFILE_BIO_INPUT,
+                    type: l.Ie.PROFILE_BIO_INPUT,
                     onBlur: () => {
                         A.current = !1;
                     },

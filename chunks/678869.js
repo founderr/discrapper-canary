@@ -49,7 +49,7 @@ let S = (e, t, n) => {
 function R(e) {
     let { activity: t } = e,
         n = t.timestamps,
-        i = (0, L.tS)(),
+        { now: i } = (0, L.tS)(),
         { durationTimestamp: r, seekBarStyles: o } = a.useMemo(() => {
             var e;
             let { start: n, end: l } = null !== (e = t.timestamps) && void 0 !== e ? e : {};

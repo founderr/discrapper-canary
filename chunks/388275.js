@@ -85,7 +85,7 @@ function I(e) {
                                 channel: T,
                                 textValue: R,
                                 richValue: w,
-                                type: o.I.FORWARD_MESSAGE_INPUT,
+                                type: o.Ie.FORWARD_MESSAGE_INPUT,
                                 onBlur: j,
                                 onFocus: M,
                                 focused: O,

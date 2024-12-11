@@ -228,7 +228,7 @@ class eC extends l.PureComponent {
                                         channel: ep,
                                         textValue: this.state.textTopicValue,
                                         richValue: this.state.richTopicValue,
-                                        type: j.I.FORUM_CHANNEL_GUIDELINES,
+                                        type: j.Ie.FORUM_CHANNEL_GUIDELINES,
                                         onBlur: () => {
                                             this.setState({ topicFocused: !1 });
                                         },

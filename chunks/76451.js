@@ -96,7 +96,7 @@ function y(e) {
             'animate-always'
         ),
         f = (0, o.e7)([u.Z], () => u.Z.keyboardModeEnabled),
-        C = (0, o.e7)([p.Z], () => p.Z.getUploads(t, m.I.CREATE_FORUM_POST.drafts.type));
+        C = (0, o.e7)([p.Z], () => p.Z.getUploads(t, m.Ie.CREATE_FORUM_POST.drafts.type));
     return (0, a.jsx)(s.animated.div, {
         className: _.popoutContainer,
         onMouseLeave: () => {
@@ -125,7 +125,7 @@ function y(e) {
                             g.Z,
                             {
                                 channelId: t,
-                                draftType: m.I.CREATE_FORUM_POST.drafts.type,
+                                draftType: m.Ie.CREATE_FORUM_POST.drafts.type,
                                 upload: e,
                                 keyboardModeEnabled: f,
                                 hideFileName: !0,
@@ -142,7 +142,7 @@ function y(e) {
 function E(e) {
     let { channelId: t } = e,
         [n, r] = i.useState(!1),
-        l = (0, o.e7)([p.Z], () => p.Z.getUploads(t, m.I.CREATE_FORUM_POST.drafts.type)),
+        l = (0, o.e7)([p.Z], () => p.Z.getUploads(t, m.Ie.CREATE_FORUM_POST.drafts.type)),
         s = l.length,
         c = s > 0;
     i.useEffect(() => {

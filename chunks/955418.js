@@ -31,7 +31,7 @@ function g(e) {
     return (0, r.jsx)(l.Z, {
         innerClassName: h.inner,
         editorClassName: h.editor,
-        type: s.I.USER_PROFILE,
+        type: s.Ie.USER_PROFILE,
         placeholder: p.intl.formatToPlainString(p.t['0ZQw/f'], { name: c.ZP.getName(n, u, t) }),
         channel: m,
         textValue: v,

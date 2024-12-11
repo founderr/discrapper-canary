@@ -502,7 +502,7 @@ class eJ extends l.PureComponent {
         let t;
         let { channel: n, guild: l, keyboardModeEnabled: r, hasModalOpen: s, pendingReply: o, chatInputType: c, placeholder: u, accessibilityLabel: p, showQuarantinedUserBanner: m, filterAfterTimestamp: f, communicationDisabledUntil: g, shakeIntensity: C, poggermodeEnabled: _, isSelectedResourceChannel: I, showAutomodUserProfileChatBlocker: E, showAppLauncherButton: b, showAppDMsUI: N, isInitialLoading: Z, entryPointCommandButtonRef: S, isFailedAppDMLoad: T, isRefreshEnabled: j } = this.props,
             { textAreaFocused: A, textAreaHighlighted: y } = this.state,
-            P = c === U.I.SIDEBAR;
+            P = c === U.Ie.SIDEBAR;
         t = P && n.type === eG.d4z.GUILD_VOICE ? eF.t.pnnyFR : P && n.type === eG.d4z.GUILD_STAGE_VOICE ? eF.t.YInSkp : d.T.THREADS.has(n.type) ? eF.t['OkzL+f'] : eF.t.UbNmGR;
         let M = (0, i.jsx)('div', {
                 className: eV.channelBottomBarArea,
@@ -692,10 +692,10 @@ class eJ extends l.PureComponent {
                 if (!!t)
                     switch (e.which) {
                         case eG.yXg.ARROW_LEFT:
-                            n === U.I.SIDEBAR && eA.S.dispatch(eG.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: eb.Z.getChannelId() });
+                            n === U.Ie.SIDEBAR && eA.S.dispatch(eG.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: eb.Z.getChannelId() });
                             return;
                         case eG.yXg.ARROW_RIGHT:
-                            n === U.I.NORMAL && eA.S.dispatch(eG.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: eC.ZP.getCurrentSidebarChannelId(i.id) });
+                            n === U.Ie.NORMAL && eA.S.dispatch(eG.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: eC.ZP.getCurrentSidebarChannelId(i.id) });
                     }
             }),
             eW(this, 'handleOpenExpressionPicker', (e) => {

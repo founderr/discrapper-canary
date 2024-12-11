@@ -122,7 +122,7 @@ function O(e) {
                 emojiPickerCloseOnModalOuterClick: !0,
                 innerClassName: A.inner,
                 editorClassName: A.editor,
-                type: u.I.USER_PROFILE_REPLY,
+                type: u.Ie.USER_PROFILE_REPLY,
                 placeholder: y.intl.formatToPlainString(R(f), { username: p.ZP.getName(n, a, t) }),
                 channel: N,
                 textValue: U,

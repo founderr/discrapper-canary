@@ -42,7 +42,7 @@ function y(e) {
                 if (R) {
                     let e = p.Z.getCurrentlySelectedChannelId(),
                         t = _.Z.getChannel(e),
-                        r = null != f.ZP.getSidebarState(e) || (null == t ? void 0 : t.isGuildVocal()) ? d.I.SIDEBAR : d.I.NORMAL;
+                        r = null != f.ZP.getSidebarState(e) || (null == t ? void 0 : t.isGuildVocal()) ? d.Ie.SIDEBAR : d.Ie.NORMAL;
                     l.__(u._b.TEXT, r, { applicationId: A.id }), (0, s.closeModal)((0, I.z)(O, C)), null == n || n(), h.default.track(b.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: A.id });
                 } else
                     (0, E.LO)({

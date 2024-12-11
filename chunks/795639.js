@@ -86,8 +86,8 @@ let E = (e) => {
         }, [C]),
         P = i.useCallback(
             (e) => {
-                null != j && m.Z.remove(r.id, j.id, g.I.CREATE_FORUM_POST.drafts.type),
-                    (0, _.d)(e.currentTarget.files, r, g.I.CREATE_FORUM_POST.drafts.type, {
+                null != j && m.Z.remove(r.id, j.id, g.Ie.CREATE_FORUM_POST.drafts.type),
+                    (0, _.d)(e.currentTarget.files, r, g.Ie.CREATE_FORUM_POST.drafts.type, {
                         requireConfirm: !0,
                         isThumbnail: !0
                     }),
@@ -106,10 +106,10 @@ let E = (e) => {
                             ...n,
                             upload: e,
                             channelId: r.id,
-                            draftType: g.I.CREATE_FORUM_POST.drafts.type,
+                            draftType: g.Ie.CREATE_FORUM_POST.drafts.type,
                             onSubmit: (t) => {
                                 let { name: n, description: a, spoiler: i } = t;
-                                m.Z.update(r.id, e.id, g.I.CREATE_FORUM_POST.drafts.type, {
+                                m.Z.update(r.id, e.id, g.Ie.CREATE_FORUM_POST.drafts.type, {
                                     filename: n,
                                     description: a,
                                     spoiler: i
@@ -192,7 +192,7 @@ let E = (e) => {
                               (0, a.jsx)(x.Z, {
                                   className: N.action,
                                   tooltip: T.intl.string(T.t.vN7REx),
-                                  onClick: () => m.Z.remove(r.id, j.id, g.I.CREATE_FORUM_POST.drafts.type),
+                                  onClick: () => m.Z.remove(r.id, j.id, g.Ie.CREATE_FORUM_POST.drafts.type),
                                   dangerous: !0,
                                   children: (0, a.jsx)(u.TrashIcon, {
                                       size: 'md',
@@ -201,7 +201,7 @@ let E = (e) => {
                               })
                           ]
                       }),
-                      draftType: g.I.CREATE_FORUM_POST.drafts.type,
+                      draftType: g.Ie.CREATE_FORUM_POST.drafts.type,
                       id: j.id,
                       channelId: r.id,
                       handleEditModal: M,

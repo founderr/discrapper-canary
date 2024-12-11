@@ -29,7 +29,7 @@ function _(e) {
             i = [];
         return (
             null != t.guild_id &&
-                n !== c.I.SIDEBAR &&
+                n !== c.Ie.SIDEBAR &&
                 i.push(
                     (0, r.jsx)(u.Z, {
                         guildId: t.guild_id,

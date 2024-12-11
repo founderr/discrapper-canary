@@ -48,7 +48,7 @@ function I(e) {
         ),
         N = r.useCallback(async () => {
             let { valid: e } = await (0, _.v)({
-                type: s.I.FORM,
+                type: s.Ie.FORM,
                 content: '',
                 channel: n
             });

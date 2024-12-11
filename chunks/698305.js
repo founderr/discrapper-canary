@@ -14,7 +14,7 @@ var r = n(493683),
 let c = async (e) => {
     let { userId: t, content: n, location: c, openChannel: d = !0, whenReady: f, entry: _ } = e,
         { valid: p, failureReason: h } = await (0, u.v)({
-            type: a.I.NORMAL,
+            type: a.Ie.NORMAL,
             content: n,
             channel: null
         });

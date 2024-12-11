@@ -57,7 +57,7 @@ function v(e) {
         channel: n,
         textValue: _,
         richValue: S,
-        type: a.I.OVERLAY_INLINE_REPLY,
+        type: a.Ie.OVERLAY_INLINE_REPLY,
         onBlur: O,
         onFocus: b,
         focused: I,

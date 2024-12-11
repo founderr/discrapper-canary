@@ -17,7 +17,7 @@ function C(e) {
             user: r,
             size: n.AvatarSizes.SIZE_32
         }),
-        h = null !== (t = r.globalName) && void 0 !== t ? t : r.username;
+        f = null !== (t = r.globalName) && void 0 !== t ? t : r.username;
     return (0, i.jsxs)('div', {
         className: o.container,
         children: [
@@ -27,14 +27,14 @@ function C(e) {
                     (0, i.jsx)(n.Avatar, {
                         className: a()({ [o.muted]: d }),
                         src: c,
-                        'aria-label': h,
+                        'aria-label': f,
                         size: n.AvatarSizes.SIZE_32,
                         ...x
                     }),
                     (0, i.jsx)(n.Text, {
                         color: d ? 'text-muted' : 'text-normal',
                         variant: 'text-md/semibold',
-                        children: h
+                        children: f
                     })
                 ]
             }),

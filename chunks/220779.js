@@ -73,7 +73,7 @@ function P(t) {
         C = () => {
             y(''), Z((0, c.JM)(''));
         },
-        I = u.I.ATOMIC_REACTOR_REPLY_INPUT,
+        I = u.Ie.ATOMIC_REACTOR_REPLY_INPUT,
         S = l.useRef(null);
     return (0, i.jsx)(d.Z, {
         ref: S,

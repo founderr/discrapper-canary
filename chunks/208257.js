@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     o = n(442837),
     a = n(481060),
-    l = n(970606),
-    c = n(122051),
+    c = n(970606),
+    l = n(122051),
     s = n(650774),
     d = n(430824),
     u = n(496675),
@@ -17,22 +17,22 @@ var i = n(200651),
     x = n(223312),
     v = n(571728),
     I = n(572940),
-    h = n(80487),
-    g = n(146463),
+    g = n(80487),
+    h = n(146463),
     T = n(981631),
-    E = n(388032),
-    R = n(991154);
+    R = n(388032),
+    E = n(991154);
 function S(e) {
     let { guild: t } = e;
     return (0, i.jsxs)('div', {
-        className: R.setupHeader,
+        className: E.setupHeader,
         children: [
             (0, i.jsxs)('div', {
-                className: R.previewContainer,
+                className: E.previewContainer,
                 children: [
                     (0, i.jsx)(a.Heading, {
                         variant: 'heading-lg/bold',
-                        children: E.intl.string(E.t.aOQWKi)
+                        children: R.intl.string(R.t.aOQWKi)
                     }),
                     (0, i.jsxs)(a.Button, {
                         color: a.Button.Colors.TRANSPARENT,
@@ -48,23 +48,23 @@ function S(e) {
                             });
                         },
                         size: a.ButtonSizes.SMALL,
-                        'aria-label': E.intl.string(E.t.rqfRdX),
-                        innerClassName: R.previewButton,
+                        'aria-label': R.intl.string(R.t.rqfRdX),
+                        innerClassName: E.previewButton,
                         children: [
                             (0, i.jsx)(a.EyeIcon, {
                                 size: 'xs',
                                 color: 'currentColor'
                             }),
-                            E.intl.string(E.t.rqfRdX)
+                            R.intl.string(R.t.rqfRdX)
                         ]
                     })
                 ]
             }),
             (0, i.jsx)(a.Text, {
-                className: R.description,
+                className: E.description,
                 variant: 'text-sm/medium',
                 color: 'header-secondary',
-                children: E.intl.format(E.t.xpB4Ym, { guildName: t.name })
+                children: R.intl.format(R.t.xpB4Ym, { guildName: t.name })
             })
         ]
     });
@@ -116,7 +116,7 @@ function j(e) {
                 if (B !== e) {
                     if (
                         (P(e),
-                        (0, l.Q2)({
+                        (0, c.Q2)({
                             guildId: j,
                             source: T.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
                             tab: e
@@ -138,7 +138,7 @@ function j(e) {
         q = null !== (n = null == F ? void 0 : F.hasFeature(T.oNc.CLAN)) && void 0 !== n && n;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(h.Z, {
+            (0, i.jsx)(g.Z, {
                 currentTab: B,
                 onTabItemSelect: U,
                 pendingGuildJoinRequestsTotal: M,
@@ -147,16 +147,16 @@ function j(e) {
                 isSidebarOpen: A
             }),
             (0, i.jsx)('div', {
-                className: R.content,
+                className: E.content,
                 children:
                     'REVIEW_APPLICATION' === B
                         ? null != F
                             ? (0, i.jsx)(a.ScrollerThin, {
                                   children: (0, i.jsxs)('div', {
-                                      className: R.scrollerContent,
+                                      className: E.scrollerContent,
                                       children: [
                                           (0, i.jsx)(S, { guild: F }),
-                                          (0, i.jsx)(c.Z, {
+                                          (0, i.jsx)(l.Z, {
                                               guild: F,
                                               isClanContext: !0
                                           })
@@ -171,24 +171,24 @@ function j(e) {
                                       (0, i.jsx)(a.HelpMessage, {
                                           messageType: a.HelpMessageTypes.WARNING,
                                           textVariant: 'text-sm/medium',
-                                          className: R.headerWarning,
-                                          children: E.intl.format(E.t.o3mLzM, { count: null == F ? void 0 : F.maxMembers })
+                                          className: E.headerWarning,
+                                          children: R.intl.format(R.t.o3mLzM, { count: null == F ? void 0 : F.maxMembers })
                                       }),
                                   (0, i.jsx)('div', {
-                                      className: R.listControls,
+                                      className: E.listControls,
                                       children: (0, i.jsx)(I.Z, {
-                                          className: R.sortSelect,
+                                          className: E.sortSelect,
                                           sortOrder: N,
                                           onSortChange: D
                                       })
                                   }),
                                   (0, i.jsx)(a.Text, {
-                                      className: R.description,
+                                      className: E.description,
                                       variant: 'text-xs/normal',
                                       color: 'header-secondary',
-                                      children: E.intl.string(E.t.OCorGR)
+                                      children: R.intl.string(R.t.OCorGR)
                                   }),
-                                  (0, i.jsx)(g.Z, {
+                                  (0, i.jsx)(h.Z, {
                                       applicationStatus: B,
                                       guildJoinRequests: Z,
                                       guildId: j,

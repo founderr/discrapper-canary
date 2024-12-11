@@ -18875,6 +18875,11 @@ span.clanTag_a31c43 {
     display: inline
 }
 
+.gameIcon_b245a4 {
+    width: 24px;
+    height: 24px
+}
+
 .leaderboardTitle_b245a4 {
     color: var(--content-inventory-overlay-text-secondary);
     flex: 1

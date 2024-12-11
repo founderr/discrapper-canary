@@ -27,7 +27,7 @@ function v(e) {
         v = l.useCallback(() => {
             x
                 ? h.yT(p.ti.DISMISSED)
-                : (h.__(p._b.TEXT, m.I.NORMAL, { applicationId: C }),
+                : (h.__(p._b.TEXT, m.Ie.NORMAL, { applicationId: C }),
                   (0, c.yw)(g.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
                       application_id: C,
                       location: o.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,

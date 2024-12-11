@@ -88,7 +88,7 @@ function N(e) {
                     {
                         channel: t,
                         guild: null,
-                        chatInputType: o.I.SIDEBAR
+                        chatInputType: o.Ie.SIDEBAR
                     },
                     t.id
                 )

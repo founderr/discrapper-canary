@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     o = n(120356),
     a = n.n(o),
-    l = n(21260),
-    c = n(780384),
+    c = n(21260),
+    l = n(780384),
     s = n(481060),
     d = n(410030),
     u = n(984370),
@@ -68,8 +68,8 @@ let C = (e) => {
     };
 function v(e) {
     let { onTabSelect: t, tabs: n, selectedTab: o } = e,
-        l = (0, d.ZP)(),
-        u = (0, c.wj)(l),
+        c = (0, d.ZP)(),
+        u = (0, l.wj)(c),
         f = r.useMemo(
             () =>
                 null !=
@@ -122,27 +122,27 @@ function v(e) {
     });
 }
 t.Z = function (e) {
-    let { pendingGuildJoinRequestsTotal: t, currentTab: n, onTabItemSelect: o, showSetupTab: a, canActionJoinRequests: c, isSidebarOpen: d } = e,
+    let { pendingGuildJoinRequestsTotal: t, currentTab: n, onTabItemSelect: o, showSetupTab: a, canActionJoinRequests: l, isSidebarOpen: d } = e,
         [_, C] = r.useState(0),
         I = r.useRef(null),
-        h = r.useRef(_),
-        g = x(a, c, t),
+        g = r.useRef(_),
+        h = x(a, l, t),
         {
             lastVisibleIndex: T,
-            onItemLayout: E,
-            overflowItemsRef: R
-        } = (0, l.zP)({
-            items: g,
+            onItemLayout: R,
+            overflowItemsRef: E
+        } = (0, c.zP)({
+            items: h,
             itemGapPx: 16,
             maxLines: 1,
             containerWidth: _ - 400
         }),
-        S = r.useMemo(() => g.slice(0, T + 1), [T, g]),
-        j = r.useMemo(() => g.slice(T + 1), [T, g]),
+        S = r.useMemo(() => h.slice(0, T + 1), [T, h]),
+        j = r.useMemo(() => h.slice(T + 1), [T, h]),
         A = r.useCallback(() => {
             var e;
             let t = null === (e = I.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
-            null != t && h.current !== t.width && (C(t.width), (h.current = t.width));
+            null != t && g.current !== t.width && (C(t.width), (g.current = t.width));
         }, []);
     return (
         r.useEffect(() => {
@@ -174,12 +174,12 @@ t.Z = function (e) {
                             (0, i.jsxs)('div', {
                                 className: p.measurements,
                                 children: [
-                                    g.map((e, t) =>
+                                    h.map((e, t) =>
                                         (0, i.jsx)(
-                                            l.AJ,
+                                            c.AJ,
                                             {
                                                 index: t,
-                                                onItemLayout: E,
+                                                onItemLayout: R,
                                                 children: (0, i.jsx)(s.TabBar.Item, {
                                                     id: e.id,
                                                     'aria-label': e.label,
@@ -190,7 +190,7 @@ t.Z = function (e) {
                                         )
                                     ),
                                     (0, i.jsx)('div', {
-                                        ref: R,
+                                        ref: E,
                                         children: (0, i.jsx)(v, {
                                             tabs: j,
                                             onTabSelect: o,

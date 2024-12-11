@@ -76,7 +76,7 @@ function H(e) {
             onAction: ee
         }),
         en = () => {
-            null != H && (null == z || z(), p.__(h._b.TEXT, m.I.NORMAL, { applicationId: H.id }));
+            null != H && (null == z || z(), p.__(h._b.TEXT, m.Ie.NORMAL, { applicationId: H.id }));
         },
         er = (0, N.Z)(i),
         { largeImage: ei, smallImage: ea } = (0, g.FO)(i, H),

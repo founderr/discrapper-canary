@@ -102,7 +102,7 @@ class ei extends s.Component {
                         ...n,
                         renderAttachButton: this.renderAttachButton,
                         channel: e,
-                        type: I.I.OVERLAY,
+                        type: I.Ie.OVERLAY,
                         onFocus: () => this.setState({ focused: !0 }),
                         onBlur: () => this.setState({ focused: !1 }),
                         placeholder: t,
@@ -171,7 +171,7 @@ class ei extends s.Component {
                       })
                     : (0, F.v)({
                           openWarningPopout: (e) => this.setState({ contentWarningProps: e }),
-                          type: I.I.OVERLAY,
+                          type: I.Ie.OVERLAY,
                           content: t,
                           channel: n
                       }).then((e) => {

@@ -57,7 +57,7 @@ t.Z = function (e) {
                     {
                         channel: t,
                         guild: n,
-                        chatInputType: u.I.SIDEBAR
+                        chatInputType: u.Ie.SIDEBAR
                     },
                     t.id
                 )

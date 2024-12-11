@@ -23,36 +23,36 @@ var i = n(200651),
 function L(e) {
     var t, n;
     let s,
-        { handleClose: L, planGroup: g, onSubscriptionConfirmation: E, renderPurchaseConfirmation: S, postSuccessGuild: I, followupSKUInfo: M, continueSessionToInitialStep: y } = e,
-        { activeSubscription: v, paymentSources: T, paymentSourceId: N, selectedPlan: P, selectedSkuId: Z, step: A, updatedSubscription: U, startingPremiumSubscriptionPlanIdRef: k } = (0, h.usePaymentContext)(),
-        { isGift: O, giftRecipient: R, giftCode: b, hasSentMessage: w, isSendingMessage: H, sendGiftMessage: B, claimableRewards: F, selectedGiftingPromotionReward: G } = (0, x.wD)(),
-        D = (0, C.id)(P, O, F),
+        { handleClose: L, planGroup: g, onSubscriptionConfirmation: E, renderPurchaseConfirmation: S, postSuccessGuild: I, followupSKUInfo: M, continueSessionToInitialStep: v } = e,
+        { activeSubscription: y, paymentSources: T, paymentSourceId: N, selectedPlan: P, selectedSkuId: Z, step: A, updatedSubscription: U, startingPremiumSubscriptionPlanIdRef: O } = (0, h.usePaymentContext)(),
+        { isGift: k, giftRecipient: R, giftCode: b, hasSentMessage: w, isSendingMessage: H, sendGiftMessage: B, claimableRewards: F, selectedGiftingPromotionReward: G } = (0, x.wD)(),
+        D = (0, C.id)(P, k, F),
         W = (0, d.Z)(),
         Y = (0, C.a5)(P),
         K = (0, C.tK)(null == G ? void 0 : G.skuId),
-        V = O && null != G && Y;
+        V = k && null != G && Y;
     r()(null != P, 'Expected plan to selected'), r()(null != Z, 'Expected selectedSkuId'), r()(null != A, 'Step should be set');
     let X = l.useCallback(() => {
         L(), null == E || E();
     }, [L, E]);
     return (
         l.useEffect(() => {
-            if (!(!O || null == R || null == b || w || H || (0, c.pO)(R))) o.F.getCurrentConfig({ location: '36b986_1' }).enabled && B({ onSubscriptionConfirmation: E });
-        }, [B, O, R, b, w, H, E]),
+            if (!(!k || null == R || null == b || w || H || (0, c.pO)(R))) o.F.getCurrentConfig({ location: '36b986_1' }).enabled && B({ onSubscriptionConfirmation: E });
+        }, [B, k, R, b, w, H, E]),
         l.useEffect(() => {
             null != W && null != W.reminderNotice && D && (0, a.wH)(W.reminderNotice.dismissibleContent, W.dismissibleContentVersion, { dismissAction: m.L.INDIRECT_ACTION });
         }, [W, D]),
         (s =
             null != S
                 ? S(P, X, U)
-                : null != y
+                : null != v
                   ? (0, i.jsx)(u.VY, {})
-                  : O
+                  : k
                     ? (0, i.jsx)(u.TB, {
                           planId: P.id,
                           onClose: X
                       })
-                    : k.current === P.id
+                    : O.current === P.id
                       ? (0, i.jsx)(u.ZP, {
                             planId: P.id,
                             postSuccessGuild: I,
@@ -61,10 +61,10 @@ function L(e) {
                         })
                       : (0, i.jsx)(u.ZP, {
                             followupSKUInfo: M,
-                            startingPremiumSubscriptionPlanId: k.current,
+                            startingPremiumSubscriptionPlanId: O.current,
                             planId: P.id,
                             onClose: X,
-                            isDowngrade: null != v && (0, p.GY)(v, P.id, g),
+                            isDowngrade: null != y && (0, p.GY)(y, P.id, g),
                             paymentSourceType: null === (n = T[null != N ? N : '']) || void 0 === n ? void 0 : n.type
                         })),
         (0, i.jsxs)(i.Fragment, {

@@ -102,7 +102,7 @@ function A(e) {
                     {
                         channel: y,
                         guild: P,
-                        chatInputType: g.I.SIDEBAR
+                        chatInputType: g.Ie.SIDEBAR
                     },
                     t
                 )

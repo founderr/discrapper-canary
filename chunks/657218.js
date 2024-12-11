@@ -46,7 +46,7 @@ var i = n(200651),
     G = n(388032),
     F = n(51572),
     V = n(678606);
-let z = g.I.THREAD_CREATION;
+let z = g.Ie.THREAD_CREATION;
 function W(e) {
     let { parentChannelId: t, parentMessageId: n, location: l } = e,
         r = (0, s.e7)([j.Z], () => j.Z.getChannel(t)),
