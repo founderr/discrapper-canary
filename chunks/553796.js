@@ -9,6 +9,7 @@ e.exports = {
     textArea: 'textArea_bdf0de',
     channelTextAreaDisabled: 'channelTextAreaDisabled_bdf0de',
     hasStackedBar: 'hasStackedBar_bdf0de',
+    inlineContainer: 'inlineContainer_bdf0de',
     inner: 'inner_bdf0de',
     innerDisabled: 'innerDisabled_bdf0de inner_bdf0de',
     sansAttachButton: 'sansAttachButton_bdf0de',

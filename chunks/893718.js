@@ -133,7 +133,7 @@ t.Z = i.memo(
                     ...o
                 };
             })(eB, eG, th, eM),
-            tS = eG.toolbarType === X.O.STATIC,
+            tS = eG.toolbarType === X.OW.STATIC,
             ty = !Z.dN.useSetting() && !(0, q.isAndroidWeb)() && null != window.ResizeObserver,
             tA = !ty || !(null === (a = eG.commands) || void 0 === a ? void 0 : a.enabled) || !eZ || eR !== eu.GI,
             tN = (0, P.Z)(),
@@ -274,7 +274,7 @@ t.Z = i.memo(
             i.useCallback(
                 (e) => {
                     var t, n;
-                    ey === X.I.CREATE_FORUM_POST ? null === (n = eA.current) || void 0 === n || n.insertGIF(e) : eS(e.url, void 0, void 0, !0), (0, R._Q)(), null === (t = eA.current) || void 0 === t || t.focus();
+                    ey === X.Ie.CREATE_FORUM_POST ? null === (n = eA.current) || void 0 === n || n.insertGIF(e) : eS(e.url, void 0, void 0, !0), (0, R._Q)(), null === (t = eA.current) || void 0 === t || t.focus();
                 },
                 [eA, eS, ey]
             ));
@@ -409,7 +409,7 @@ t.Z = i.memo(
             t2 = null;
         null != th ? (t2 = null == eV ? void 0 : eV(th, tm, ed.attachButton)) : (!tv || tT) && (t2 = null == eF ? void 0 : eF(t0, ed.attachButton));
         let t3 = ty && null != eO && !tv && eG.showCharacterCount && null == th,
-            t4 = ty && !__OVERLAY__ && null != eO && null == th && eG.toolbarType !== X.O.NONE,
+            t4 = ty && !__OVERLAY__ && null != eO && null == th && eG.toolbarType !== X.OW.NONE,
             t6 = (function (e, t, n, r) {
                 var i, a;
                 let s = (0, D.pR)(),
@@ -426,7 +426,10 @@ t.Z = i.memo(
             t7 = !!(null === (e_ = eG.emojis) || void 0 === e_ ? void 0 : e_.button) && tY <= 44,
             t8 = 0 === eR.trim().length,
             t9 = (0, er.G)(eB.id, eG, t8),
-            ne = (0, r.jsx)(er.Z, {
+            ne = !0 === eG.showSlowmodeIndicator,
+            nt = !0 === eG.showTypingIndicator,
+            nn = ts && eG.layout === X.gy.INLINE,
+            nr = (0, r.jsx)(er.Z, {
                 type: eG,
                 disabled: tv,
                 channel: eB,
@@ -435,7 +438,7 @@ t.Z = i.memo(
                 showAllButtons: t_,
                 children: ts ? (null == ej ? void 0 : ej()) : null
             }),
-            nt = ts
+            ni = ts
                 ? (0, r.jsxs)('div', {
                       className: ed.accessoryBar,
                       children: [
@@ -444,21 +447,21 @@ t.Z = i.memo(
                               children: [
                                   null == eH ? void 0 : eH(),
                                   t2,
-                                  (0, r.jsx)(m.Z, {
-                                      channel: eB,
-                                      poggermodeEnabled: !1
-                                  })
+                                  nt
+                                      ? (0, r.jsx)(m.Z, {
+                                            channel: eB,
+                                            poggermodeEnabled: !1
+                                        })
+                                      : null
                               ]
                           }),
                           (0, r.jsx)('div', {
                               className: ed.accessoryBarRight,
-                              children: ne
+                              children: nr
                           })
                       ]
                   })
-                : null,
-            nn = ts && eG !== X.I.FORWARD_MESSAGE_INPUT,
-            nr = !1 !== eG.showSlowmodeIndicator;
+                : null;
         return (0, r.jsx)(N.f6, {
             value: tx,
             children: (0, r.jsxs)(I.Gt, {
@@ -494,7 +497,8 @@ t.Z = i.memo(
                                 className: s()(eL, {
                                     [ed.scrollableContainer]: !0,
                                     [ed.themedBackground]: !tt,
-                                    [ed.hasStackedBar]: t5.stacked.length > 0
+                                    [ed.hasStackedBar]: t5.stacked.length > 0,
+                                    [ed.inlineContainer]: nn
                                 }),
                                 children: [
                                     (0, r.jsx)(ee.Z, {
@@ -511,10 +515,10 @@ t.Z = i.memo(
                                     (0, r.jsxs)('div', {
                                         className: s()(ed.inner, {
                                             [ed.innerDisabled]: t1,
-                                            [ed.sansAttachButton]: eG !== X.I.EDIT && (null != t2 || (t1 && null == t2) || tg),
-                                            [ed.sansAttachButtonCreateThread]: eG === X.I.THREAD_CREATION,
-                                            [ed.sansAttachButtonCreatePost]: eG === X.I.CREATE_FORUM_POST || eG === X.I.FORWARD_MESSAGE_INPUT,
-                                            [ed.sansAttachButtonUserProfileReply]: eG === X.I.USER_PROFILE_REPLY
+                                            [ed.sansAttachButton]: eG !== X.Ie.EDIT && (null != t2 || (t1 && null == t2) || tg),
+                                            [ed.sansAttachButtonCreateThread]: eG === X.Ie.THREAD_CREATION,
+                                            [ed.sansAttachButtonCreatePost]: eG === X.Ie.CREATE_FORUM_POST || eG === X.Ie.FORWARD_MESSAGE_INPUT,
+                                            [ed.sansAttachButtonUserProfileReply]: eG === X.Ie.USER_PROFILE_REPLY
                                         }),
                                         onMouseDown: t$,
                                         children: [
@@ -559,20 +563,20 @@ t.Z = i.memo(
                                                     canOnlyUseTextCommands: t0,
                                                     className: s()(
                                                         {
-                                                            [ed.textAreaThreadCreation]: eG === X.I.THREAD_CREATION,
-                                                            [ed.profileBioInput]: eG === X.I.PROFILE_BIO_INPUT,
-                                                            [ed.overlayInlineReply]: eG === X.I.OVERLAY_INLINE_REPLY
+                                                            [ed.textAreaThreadCreation]: eG === X.Ie.THREAD_CREATION,
+                                                            [ed.profileBioInput]: eG === X.Ie.PROFILE_BIO_INPUT,
+                                                            [ed.overlayInlineReply]: eG === X.Ie.OVERLAY_INLINE_REPLY
                                                         },
                                                         ex
                                                     ),
                                                     'aria-labelledby': e7
                                                 })
                                             }),
-                                            nn
+                                            ts
                                                 ? (0, r.jsxs)('div', {
                                                       className: ed.rightAccessories,
                                                       children: [
-                                                          nr ? (0, r.jsx)(A.Z, { channel: eB }) : null,
+                                                          ne ? (0, r.jsx)(A.Z, { channel: eB }) : null,
                                                           (null === (ep = eG.submit) || void 0 === ep ? void 0 : ep.button) != null && ((null === (eh = eG.submit) || void 0 === eh ? void 0 : eh.ignorePreference) || tC)
                                                               ? (0, r.jsx)($.Z, {
                                                                     onClick: tk,
@@ -581,10 +585,10 @@ t.Z = i.memo(
                                                               : null
                                                       ]
                                                   })
-                                                : ne
+                                                : nr
                                         ]
                                     }),
-                                    nn ? nt : null
+                                    ts ? ni : null
                                 ]
                             }),
                             tA
