@@ -11,5 +11,6 @@ e.exports = {
     soundRowNitroLocked: 'soundRowNitroLocked_ca5acd',
     lastSoundRow: 'lastSoundRow_ca5acd',
     settingsClickArea: 'settingsClickArea_ca5acd',
+    settingsSoundmojiClickArea: 'settingsSoundmojiClickArea_ca5acd',
     settingsIcon: 'settingsIcon_ca5acd'
 };
