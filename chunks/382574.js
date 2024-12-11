@@ -5,8 +5,8 @@ var l = t(73880),
     s = t(388032),
     r = t(31619);
 n.Z = function (e) {
-    let { formField: n, index: t, isDragEnabled: o, isDropHovered: c, onDrop: d, onEdit: u, onRemove: m, canRemove: x, actionsLocation: f } = e,
-        { label: h, placeholder: g } = n;
+    let { formField: n, index: t, isDragEnabled: o, isDropHovered: c, onDrop: d, onEdit: u, onRemove: m, canRemove: x, actionsLocation: f, fieldStyle: h } = e,
+        { label: g, placeholder: v } = n;
     return (0, i.jsx)(a.Z, {
         field: n,
         index: t,
@@ -15,12 +15,13 @@ n.Z = function (e) {
         onDrop: d,
         onEdit: u,
         onRemove: m,
-        title: h,
+        title: g,
         canRemove: x,
         actionsLocation: f,
+        fieldStyle: h,
         children: (0, i.jsx)(l.Q8, {
             className: r.fieldBackground,
-            placeholder: null != g ? g : s.intl.string(s.t['Sqn+Wl']),
+            placeholder: null != v ? v : s.intl.string(s.t['Sqn+Wl']),
             disabled: !0
         })
     });

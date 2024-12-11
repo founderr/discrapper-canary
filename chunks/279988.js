@@ -11,10 +11,10 @@ var l = t(120356),
     u = t(388032),
     m = t(31619);
 n.Z = function (e) {
-    let { channelId: n, formField: t, index: l, isDragEnabled: x, isDropHovered: f, onDrop: h, onEdit: g, onRemove: v, canRemove: j, title: C, actionsLocation: p } = e,
-        N = t.values,
-        I = N.slice(0, 1),
-        T = N.length - I.length;
+    let { channelId: n, formField: t, index: l, isDragEnabled: x, isDropHovered: f, onDrop: h, onEdit: g, onRemove: v, canRemove: j, title: C, actionsLocation: p, fieldStyle: T } = e,
+        I = t.values,
+        N = I.slice(0, 1),
+        R = I.length - N.length;
     return (0, i.jsxs)(d.Z, {
         field: t,
         index: l,
@@ -26,20 +26,21 @@ n.Z = function (e) {
         title: C,
         canRemove: j,
         actionsLocation: p,
+        fieldStyle: T,
         children: [
             (0, i.jsx)(c.EK, {
-                className: a()(m.fieldBackground, { [m.withFooter]: 0 !== T }),
-                terms: I,
+                className: a()(m.fieldBackground, { [m.withFooter]: 0 !== R }),
+                terms: N,
                 channelId: n
             }),
-            0 !== T &&
+            0 !== R &&
                 (0, i.jsxs)(r.Clickable, {
                     className: a()(m.fieldFooterContainer, m.clickable),
                     onClick: g,
                     children: [
                         (0, i.jsx)(r.FormText, {
                             className: m.clickable,
-                            children: u.intl.format(u.t.jnhD0d, { count: T })
+                            children: u.intl.format(u.t.jnhD0d, { count: R })
                         }),
                         (0, i.jsx)(o.Z, {
                             className: m.termsFieldCaretIcon,

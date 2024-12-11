@@ -6,8 +6,8 @@ var l = t(120356),
     r = t(137158),
     o = t(31619);
 n.Z = function (e) {
-    let { formField: n, index: t, isDragEnabled: l, isDropHovered: c, onDrop: d, onEdit: u, onRemove: m, canRemove: x, actionsLocation: f } = e,
-        { label: h } = n;
+    let { formField: n, index: t, isDragEnabled: l, isDropHovered: c, onDrop: d, onEdit: u, onRemove: m, canRemove: x, actionsLocation: f, fieldStyle: h } = e,
+        { label: g } = n;
     return (0, i.jsx)(r.Z, {
         field: n,
         index: t,
@@ -16,9 +16,10 @@ n.Z = function (e) {
         onDrop: d,
         onEdit: u,
         onRemove: m,
-        title: h,
+        title: g,
         canRemove: x,
         actionsLocation: f,
+        fieldStyle: h,
         children: (0, i.jsx)(s.BO, {
             field: n,
             value: void 0,

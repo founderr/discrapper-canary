@@ -2,9 +2,13 @@ e.exports = {
     spacingContainer: 'spacingContainer_ceff93',
     formFieldContainer: 'formFieldContainer_ceff93',
     actionButtonsContainer: 'actionButtonsContainer_ceff93',
+    compact: 'compact_ceff93',
+    canRemove: 'canRemove_ceff93',
     actionButton: 'actionButton_ceff93',
     backgroundContainer: 'backgroundContainer_ceff93',
     containerPadding: 'containerPadding_ceff93',
+    compactContainer: 'compactContainer_ceff93',
+    compactTitle: 'compactTitle_ceff93',
     dragContainer: 'dragContainer_ceff93',
     dragIcon: 'dragIcon_ceff93',
     dragIconContainer: 'dragIconContainer_ceff93',
@@ -35,5 +39,6 @@ e.exports = {
     addFormField: 'addFormField_ceff93',
     addFormFieldText: 'addFormFieldText_ceff93',
     multipleChoiceFixedTextColor: 'multipleChoiceFixedTextColor_ceff93',
-    errorText: 'errorText_ceff93'
+    errorText: 'errorText_ceff93',
+    typeTag: 'typeTag_ceff93'
 };

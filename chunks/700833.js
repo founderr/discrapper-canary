@@ -18,26 +18,26 @@ var l = t(392711),
     u = t(981631),
     m = t(388032);
 function x(e) {
-    let { dropHoveredIndex: n, formField: u, guild: x, index: f, isDragEnabled: g, submittedGuildJoinRequestsCount: v, removeFormField: j, updateFormField: C, updateFormFieldOrder: p, canRemove: N, actionsLocation: I } = e,
-        T = async () => {
+    let { dropHoveredIndex: n, formField: u, guild: x, index: f, isDragEnabled: g, submittedGuildJoinRequestsCount: v, removeFormField: j, updateFormField: C, updateFormFieldOrder: p, canRemove: T, actionsLocation: I, fieldStyle: N } = e,
+        R = async () => {
             await j(f);
         },
-        F = async (e) => {
+        y = async (e) => {
             await C(f, e);
         },
-        b = async (e, n, t) => {
+        F = async (e, n, t) => {
             await p(e, n, t);
         },
-        w = (0, l.uniqueId)(),
-        y = n === f,
-        R = {
-            key: w,
+        E = (0, l.uniqueId)(),
+        b = n === f,
+        w = {
+            key: E,
             index: f,
             isDragEnabled: g,
-            isDropHovered: y,
+            isDropHovered: b,
             onEdit: () => {
                 0 === v
-                    ? h(u, F, x)
+                    ? h(u, y, x)
                     : (0, a.openModalLazy)(async () => {
                           let { default: e } = await t.e('74673').then(t.bind(t, 394045));
                           return (n) =>
@@ -45,37 +45,38 @@ function x(e) {
                                   ...n,
                                   guildId: x.id,
                                   submittedGuildJoinRequestsCount: v,
-                                  onConfirm: () => h(u, F, x)
+                                  onConfirm: () => h(u, y, x)
                               });
                       });
             },
-            onRemove: T,
-            onDrop: b,
-            canRemove: N,
-            actionsLocation: I
+            onRemove: R,
+            onDrop: F,
+            canRemove: T,
+            actionsLocation: I,
+            fieldStyle: N
         };
     switch (u.field_type) {
         case s.QJ.TERMS:
             return (0, i.jsx)(c.Z, {
                 channelId: x.rulesChannelId,
-                title: m.intl.string(m.t['53vNcH']),
+                title: N === s.it.COMPACT ? m.intl.string(m.t['55+giY']) : m.intl.string(m.t['53vNcH']),
                 formField: u,
-                ...R
+                ...w
             });
         case s.QJ.PARAGRAPH:
             return (0, i.jsx)(o.Z, {
                 formField: u,
-                ...R
+                ...w
             });
         case s.QJ.TEXT_INPUT:
             return (0, i.jsx)(d.Z, {
                 formField: u,
-                ...R
+                ...w
             });
         case s.QJ.MULTIPLE_CHOICE:
             return (0, i.jsx)(r.Z, {
                 formField: u,
-                ...R
+                ...w
             });
         default:
             return null;

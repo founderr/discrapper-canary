@@ -73,7 +73,8 @@ function x(e) {
                     updateFormField: T,
                     updateFormFieldOrder: b,
                     canRemove: s.length > 1,
-                    actionsLocation: 'side'
+                    actionsLocation: 'side',
+                    fieldStyle: a.it.COMPACT
                 })
             ),
             !v &&
