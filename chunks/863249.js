@@ -46,7 +46,8 @@ let E = async (e, t) => {
                         description: a.description,
                         formFields: a.form_fields,
                         guild: a.guild
-                    }
+                    },
+                    fromFetch: !0
                 }),
                 a
             );

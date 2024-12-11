@@ -8,7 +8,7 @@ var l = t(481060),
     c = t(388032),
     d = t(117225);
 function u(e) {
-    let { addFormField: n, onSelect: t, guild: u } = e;
+    let { addFormField: n, onSelect: t, guild: u, allowTerms: m } = e;
     return (0, i.jsx)(l.Menu, {
         navId: 'add-questions',
         className: d.menu,
@@ -34,21 +34,29 @@ function u(e) {
                     icon: l.ListBulletsIcon,
                     label: c.intl.string(c.t.ooKh3t),
                     action: () => (0, o.Md)(s.QJ.MULTIPLE_CHOICE, n, u)
-                })
+                }),
+                m &&
+                    (0, i.jsx)(l.MenuItem, {
+                        id: 'terms',
+                        icon: l.BookCheckIcon,
+                        label: c.intl.string(c.t['3pz9t7']),
+                        action: () => (0, o.Md)(s.QJ.TERMS, n, u)
+                    })
             ]
         })
     });
 }
 n.Z = function (e) {
-    let { addFormField: n, guild: t } = e,
-        r = (e) => {
+    let { addFormField: n, guild: t, allowTerms: r } = e,
+        s = (e) => {
             (0, a.vq)(
                 e,
                 (e) =>
                     (0, i.jsx)(u, {
                         ...e,
                         addFormField: n,
-                        guild: t
+                        guild: t,
+                        allowTerms: r
                     }),
                 {
                     position: 'top',
@@ -62,7 +70,7 @@ n.Z = function (e) {
             (0, i.jsxs)(l.Clickable, {
                 ...e,
                 className: d.container,
-                onClick: r,
+                onClick: s,
                 children: [
                     (0, i.jsx)(l.PlusSmallIcon, {
                         size: 'md',

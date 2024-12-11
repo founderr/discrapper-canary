@@ -1,6 +1,6 @@
 n.d(t, {
     r: function () {
-        return u;
+        return g;
     }
 });
 var i = n(200651),
@@ -8,14 +8,14 @@ var i = n(200651),
     l = n(793030),
     s = n(442837),
     a = n(481060),
-    o = n(999382),
-    c = n(388032),
-    d = n(229311);
-function u() {
-    let e = (0, s.e7)([o.Z], () => {
-            var e;
-            return null === (e = o.Z.getProps().guild) || void 0 === e ? void 0 : e.id;
-        }),
+    o = n(944163),
+    c = n(894376),
+    d = n(999382),
+    u = n(548522),
+    m = n(388032),
+    h = n(229311);
+function g() {
+    let e = (0, s.e7)([d.Z], () => d.Z.getProps().guild),
         t = r.useCallback(() => {
             if (null != e)
                 (0, a.openModalLazy)(async () => {
@@ -23,70 +23,43 @@ function u() {
                     return (n) =>
                         (0, i.jsx)(t, {
                             ...n,
-                            guildId: e,
+                            guildId: e.id,
                             isPreview: !0
                         });
                 });
         }, [e]),
-        u = r.useMemo(
-            () => [
-                {
-                    text: c.intl.string(c.t.EOwiEh),
-                    onClick: () => null
-                },
-                {
-                    text: c.intl.string(c.t.jqrNDg),
-                    onClick: () => null
-                },
-                {
-                    text: c.intl.string(c.t.I5q8vr),
-                    onClick: () => null
-                }
-            ],
-            []
-        );
+        g = (0, s.e7)([o.Z], () => o.Z.get(null == e ? void 0 : e.id)),
+        x = (0, s.e7)([c.Z], () => c.Z.pendingVerificationFields);
+    if (null == e) return null;
+    let p = null != x ? x : null == g ? void 0 : g.formFields;
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(l.X6, {
                 variant: 'heading-md/semibold',
                 color: 'header-primary',
-                children: c.intl.string(c.t.AHJddH)
+                children: m.intl.string(m.t.AHJddH)
             }),
             (0, i.jsx)(l.xv, {
                 variant: 'text-sm/medium',
                 color: 'text-secondary',
-                className: d.applicationBody,
-                children: c.intl.string(c.t.Z7TCtb)
+                className: h.applicationBody,
+                children: m.intl.string(m.t.Z7TCtb)
             }),
             (0, i.jsx)(a.LinkButton, {
-                text: c.intl.string(c.t.SKNnqq),
+                text: m.intl.string(m.t.SKNnqq),
                 icon: a.WindowLaunchIcon,
                 variant: 'primary',
                 onClick: t
             }),
-            (0, i.jsx)(l.X6, {
-                variant: 'text-xs/bold',
-                color: 'text-muted',
-                className: d.examplesHeader,
-                children: c.intl.string(c.t.ID04cH)
-            }),
             (0, i.jsx)('div', {
-                className: d.examples,
-                children: u.map((e) =>
-                    (0, i.jsx)(
-                        a.Clickable,
-                        {
-                            className: d.pill,
-                            onClick: e.onClick,
-                            children: (0, i.jsx)(l.xv, {
-                                variant: 'text-sm/medium',
-                                color: 'interactive-normal',
-                                children: e.text
-                            })
-                        },
-                        e.text
-                    )
-                )
+                className: h.form,
+                children:
+                    null != p
+                        ? (0, i.jsx)(u.y, {
+                              guild: e,
+                              formFields: p
+                          })
+                        : (0, i.jsx)(a.Spinner, {})
             })
         ]
     });

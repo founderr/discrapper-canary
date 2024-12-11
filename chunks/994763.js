@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return e$;
+            return e1;
         },
         getGuildSettingsSections: function () {
-            return eq;
+            return eQ;
         }
     }),
     n(47120);
@@ -67,66 +67,68 @@ var i = n(200651),
     el = n(559368),
     es = n(600553),
     ea = n(360606),
-    eo = n(946724),
-    ec = n(999382),
-    ed = n(44550),
-    eu = n(853714),
-    em = n(359191),
-    eh = n(84658),
-    eg = n(142961),
-    ex = n(730910),
-    ep = n(475013),
-    ef = n(213956),
-    eC = n(702478),
-    ev = n(247031),
-    e_ = n(787561),
-    eI = n(579648),
-    eN = n(511480),
-    eT = n(460461),
-    eb = n(29605),
-    ej = n(365307),
-    eS = n(497666),
-    eE = n(324330),
-    eR = n(495300),
-    ey = n(312397),
-    eZ = n(651780),
-    eA = n(279542),
-    eL = n(413335),
-    eD = n(665324),
-    eO = n(208150),
-    ek = n(353398),
-    eP = n(365774),
-    eM = n(803288),
-    ew = n(804153),
-    eB = n(708510),
-    eU = n(981631),
-    eG = n(308083),
-    eF = n(190378),
-    eH = n(135899),
-    ez = n(388032),
-    eW = n(413929);
-function eV(e) {
-    return '' !== e.toString() ? e.toString() : ez.intl.string(ez.t['154/bG']);
+    eo = n(894376),
+    ec = n(946724),
+    ed = n(999382),
+    eu = n(44550),
+    em = n(853714),
+    eh = n(359191),
+    eg = n(84658),
+    ex = n(142961),
+    ep = n(730910),
+    ef = n(475013),
+    eC = n(213956),
+    ev = n(702478),
+    e_ = n(247031),
+    eI = n(787561),
+    eN = n(579648),
+    eT = n(511480),
+    eb = n(460461),
+    ej = n(29605),
+    eS = n(365307),
+    eE = n(497666),
+    eR = n(324330),
+    ey = n(495300),
+    eZ = n(312397),
+    eA = n(651780),
+    eL = n(279542),
+    eD = n(413335),
+    eO = n(665324),
+    ek = n(208150),
+    eP = n(353398),
+    eM = n(365774),
+    ew = n(803288),
+    eB = n(804153),
+    eU = n(708510),
+    eG = n(237245),
+    eF = n(981631),
+    eH = n(308083),
+    ez = n(190378),
+    eW = n(135899),
+    eV = n(388032),
+    eY = n(413929);
+function eK(e) {
+    return '' !== e.toString() ? e.toString() : eV.intl.string(eV.t['154/bG']);
 }
-function eY(e, t) {
-    if (y.Z.getEnabled(e)) return ez.intl.string(ez.t.pPSmxs).toUpperCase();
-    if ((0, eg.C)(e)) return ez.intl.string(ez.t.HDF4o6).toUpperCase();
-    let n = eh.ug,
+function eq(e, t) {
+    if (y.Z.getEnabled(e)) return eV.intl.string(eV.t.pPSmxs).toUpperCase();
+    if ((0, ex.C)(e)) return eV.intl.string(eV.t.HDF4o6).toUpperCase();
+    let n = eg.ug,
         i = n.findIndex((e) => e === t);
     if (-1 !== i)
-        return ez.intl.formatToPlainString(ez.t['5r28iY'], {
+        return eV.intl.formatToPlainString(eV.t['5r28iY'], {
             count: i + 1,
             total: n.length
         });
 }
-function eK(e) {
+function eX(e) {
     var t;
     let { guild: r, isGuildAdmin: s, canManageGuild: d, canViewAuditLog: m, canManageRoles: h, canManageGuildExpressions: g, canManageWebhooks: b, canUnlinkChannels: E, canManageBans: R, canAccessMembersPage: y, canViewGuildAnalytics: A, isOwner: B, isOwnerWithRequiredMfaLevel: U, showDirtyGuildTemplateIndicator: F, memberCount: z, showAccessRate: W, onboardingStep: V, onboardingEnabled: K, welcomeScreenEmpty: X, guildMetadata: Q, section: J, canAccessClanSettings: et, memberVerificationRolloutEnabled: er } = e,
         el = es.$.getCurrentConfig({
             guildId: r.id,
             location: 'generateSections'
         }).enabled,
-        eh = () =>
+        eg = () =>
             (0, k.X$)({
                 guild: r,
                 isOwner: B,
@@ -137,37 +139,37 @@ function eK(e) {
                 isUserInCreatorMonetizationEligibleCountry: (0, _.DB)(),
                 shouldRestrictUpdatingRoleSubscriptionSettings: (0, I.cu)(r.id)
             }),
-        eg = (0, L.p)(r.id, 'guild_settings'),
-        eK = !1 === r.hasFeature(eU.oNc.CREATOR_MONETIZABLE) && !1 === r.hasFeature(eU.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
-        eq =
-            eg && eK
+        ex = (0, L.p)(r.id, 'guild_settings'),
+        eX = !1 === r.hasFeature(eF.oNc.CREATOR_MONETIZABLE) && !1 === r.hasFeature(eF.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
+        eQ =
+            ex && eX
                 ? {
                       label: (0, i.jsx)('div', {
-                          className: eW.roleSubLabel,
-                          children: ez.intl.string(ez.t.Tn7Koq)
+                          className: eY.roleSubLabel,
+                          children: eV.intl.string(eV.t.Tn7Koq)
                       }),
-                      ariaLabel: ez.intl.string(ez.t.Tn7Koq)
+                      ariaLabel: eV.intl.string(eV.t.Tn7Koq)
                   }
                 : {
                       label: (0, i.jsx)('div', {
-                          className: eW.roleSubLabel,
-                          children: ez.intl.string(ez.t['KzCF//'])
+                          className: eY.roleSubLabel,
+                          children: eV.intl.string(eV.t['KzCF//'])
                       }),
-                      ariaLabel: ez.intl.string(ez.t['KzCF//'])
+                      ariaLabel: eV.intl.string(eV.t['KzCF//'])
                   },
-        eX = (null === (t = r.clan) || void 0 === t ? void 0 : t.badge) != null ? (0, f.ky)(r.id, r.clan.badge, eG.NC.SIZE_16) : null,
-        eQ = {
-            section: eU.pNK.DELETE,
+        eJ = (null === (t = r.clan) || void 0 === t ? void 0 : t.badge) != null ? (0, f.ky)(r.id, r.clan.badge, eH.NC.SIZE_16) : null,
+        e$ = {
+            section: eF.pNK.DELETE,
             onClick() {
                 let e = $.default.getCurrentUser();
                 if (null == e) return;
                 let t = r.toString(),
                     l = {
-                        header: ez.intl.formatToPlainString(ez.t.us7mCw, { name: t }),
-                        confirmText: ez.intl.string(ez.t.l3hWPz),
-                        cancelText: ez.intl.string(ez.t['ETE/oK']),
+                        header: eV.intl.formatToPlainString(eV.t.us7mCw, { name: t }),
+                        confirmText: eV.intl.string(eV.t.l3hWPz),
+                        cancelText: eV.intl.string(eV.t['ETE/oK']),
                         onConfirm: () => {
-                            ee.S.subscribeOnce(eU.CkL.LAYER_POP_COMPLETE, () => {
+                            ee.S.subscribeOnce(eF.CkL.LAYER_POP_COMPLETE, () => {
                                 ei.Z.deleteGuild(r.id, t).then(() => {
                                     if ((0, N.un)(a.z.GUILD_DELETE_FEEDBACK)) return;
                                     en.Z.trackExposure({ location: 'e4be39_1' });
@@ -193,7 +195,7 @@ function eK(e) {
                               ...l,
                               children: (0, i.jsx)(o.Text, {
                                   variant: 'text-md/normal',
-                                  children: ez.intl.format(ez.t['Zuo+VV'], { name: t })
+                                  children: eV.intl.format(eV.t['Zuo+VV'], { name: t })
                               })
                           })
                       )
@@ -204,75 +206,79 @@ function eK(e) {
                                   ...n,
                                   ...l,
                                   validationText: t,
-                                  instructionText: ez.intl.string(ez.t.abprOD),
-                                  errorText: ez.intl.string(ez.t['c2/DS0']),
-                                  children: ez.intl.format(ez.t['Zuo+VV'], { name: t })
+                                  instructionText: eV.intl.string(eV.t.abprOD),
+                                  errorText: eV.intl.string(eV.t['c2/DS0']),
+                                  children: eV.intl.format(eV.t['Zuo+VV'], { name: t })
                               });
                       });
             },
-            label: ez.intl.string(ez.t.l3hWPz),
-            ariaLabel: ez.intl.string(ez.t.l3hWPz),
+            label: eV.intl.string(eV.t.l3hWPz),
+            ariaLabel: eV.intl.string(eV.t.l3hWPz),
             icon: (0, i.jsx)(o.TrashIcon, {
                 size: 'xs',
                 color: 'currentColor'
             }),
             predicate: () => U
         },
-        eJ = er
+        e0 = er
             ? {
-                  section: eU.pNK.DISCOVERY,
+                  section: eF.pNK.DISCOVERY,
                   impressionName: l.ImpressionNames.GUILD_SETTINGS_DISCOVERY,
-                  label: ez.intl.string(ez.t.oGaVGx),
-                  element: eB.O,
+                  label: eV.intl.string(eV.t.oGaVGx),
+                  element: eU.O,
+                  notice: {
+                      stores: [eo.Z],
+                      element: eG.w
+                  },
                   predicate: () => d,
-                  ariaLabel: ez.intl.string(ez.t.oGaVGx)
+                  ariaLabel: eV.intl.string(eV.t.oGaVGx)
               }
             : {
-                  section: eU.pNK.DISCOVERY,
+                  section: eF.pNK.DISCOVERY,
                   impressionName: l.ImpressionNames.GUILD_SETTINGS_DISCOVERY,
-                  label: ez.intl.string(ez.t.oGaVGx),
-                  element: eN.Z,
+                  label: eV.intl.string(eV.t.oGaVGx),
+                  element: eT.Z,
                   notice: {
-                      stores: [ec.Z],
-                      element: eN.s
+                      stores: [ed.Z],
+                      element: eT.s
                   },
-                  predicate: () => d && r.hasFeature(eU.oNc.COMMUNITY),
-                  ariaLabel: r.hasFeature(eU.oNc.DISCOVERABLE) ? ez.intl.string(ez.t.oGaVGx) : ez.intl.string(ez.t.XU0S6u)
+                  predicate: () => d && r.hasFeature(eF.oNc.COMMUNITY),
+                  ariaLabel: r.hasFeature(eF.oNc.DISCOVERABLE) ? eV.intl.string(eV.t.oGaVGx) : eV.intl.string(eV.t.XU0S6u)
               };
     if (el) {
         let e = [
                 { section: u.ID.DIVIDER },
                 {
                     section: u.ID.HEADER,
-                    label: ez.intl.string(ez.t.zrSbNj)
+                    label: eV.intl.string(eV.t.zrSbNj)
                 },
                 {
-                    section: eU.pNK.EMOJI,
+                    section: eF.pNK.EMOJI,
                     impressionName: l.ImpressionNames.GUILD_SETTINGS_EMOJI,
-                    label: ez.intl.string(ez.t.sMOuub),
-                    element: eb.ZP,
+                    label: eV.intl.string(eV.t.sMOuub),
+                    element: ej.ZP,
                     predicate: () => g
                 },
                 {
-                    section: eU.pNK.STICKERS,
+                    section: eF.pNK.STICKERS,
                     impressionName: l.ImpressionNames.GUILD_SETTINGS_STICKERS,
-                    label: ez.intl.string(ez.t.R5nQkZ),
-                    ariaLabel: ez.intl.string(ez.t.R5nQkZ),
+                    label: eV.intl.string(eV.t.R5nQkZ),
+                    ariaLabel: eV.intl.string(eV.t.R5nQkZ),
+                    element: ek.Z,
+                    predicate: () => g
+                },
+                {
+                    section: eF.pNK.SOUNDBOARD,
+                    impressionName: l.ImpressionNames.GUILD_SETTINGS_SOUNDBOARD,
+                    label: eV.intl.string(eV.t.OWQNYm),
+                    ariaLabel: eV.intl.string(eV.t.OWQNYm),
                     element: eO.Z,
                     predicate: () => g
                 },
                 {
-                    section: eU.pNK.SOUNDBOARD,
-                    impressionName: l.ImpressionNames.GUILD_SETTINGS_SOUNDBOARD,
-                    label: ez.intl.string(ez.t.OWQNYm),
-                    ariaLabel: ez.intl.string(ez.t.OWQNYm),
-                    element: eD.Z,
-                    predicate: () => g
-                },
-                {
-                    section: eU.pNK.APP_DIRECTORY,
-                    label: ez.intl.string(ez.t.PHjkRE),
-                    ariaLabel: ez.intl.string(ez.t.PHjkRE),
+                    section: eF.pNK.APP_DIRECTORY,
+                    label: eV.intl.string(eV.t.PHjkRE),
+                    ariaLabel: eV.intl.string(eV.t.PHjkRE),
                     onClick() {
                         (0, p.goToAppDirectory)({
                             guildId: r.id,
@@ -285,14 +291,14 @@ function eK(e) {
                     }
                 },
                 {
-                    section: eU.pNK.INTEGRATIONS,
+                    section: eF.pNK.INTEGRATIONS,
                     impressionName: l.ImpressionNames.GUILD_SETTINGS_INTEGRATION,
-                    label: ez.intl.string(ez.t.CIsNZ2),
-                    ariaLabel: ez.intl.string(ez.t.CIsNZ2),
-                    element: ej.Z,
+                    label: eV.intl.string(eV.t.CIsNZ2),
+                    ariaLabel: eV.intl.string(eV.t.CIsNZ2),
+                    element: eS.Z,
                     notice: {
-                        stores: [ea.default, ec.Z],
-                        element: ej.j
+                        stores: [ea.default, ed.Z],
+                        element: eS.j
                     },
                     predicate: () => d || b || E
                 }
@@ -303,41 +309,41 @@ function eK(e) {
                           { section: u.ID.DIVIDER },
                           {
                               section: u.ID.HEADER,
-                              label: ez.intl.string(ez.t.WqkqPj)
+                              label: eV.intl.string(eV.t.WqkqPj)
                           },
                           {
-                              section: eU.pNK.ROLES,
+                              section: eF.pNK.ROLES,
                               impressionName: l.ImpressionNames.GUILD_SETTINGS_ROLES,
-                              label: ez.intl.string(ez.t.LPJmLy),
-                              element: ep.Z,
+                              label: eV.intl.string(eV.t.LPJmLy),
+                              element: ef.Z,
                               type: u.bT.MINIMAL,
-                              ariaLabel: ez.intl.string(ez.t.KXcECw),
+                              ariaLabel: eV.intl.string(eV.t.KXcECw),
                               notice: {
-                                  stores: [eo.Z],
-                                  element: ep._
+                                  stores: [ec.Z],
+                                  element: ef._
                               },
                               predicate: () => h
                           },
                           {
-                              section: eU.pNK.MEMBERS,
+                              section: eF.pNK.MEMBERS,
                               impressionName: l.ImpressionNames.GUILD_SETTINGS_MEMBERS,
-                              label: (0, i.jsx)(eE.$, {}),
-                              ariaLabel: ez.intl.string(ez.t['9Oq93t']),
-                              element: eE.Z,
+                              label: (0, i.jsx)(eR.$, {}),
+                              ariaLabel: eV.intl.string(eV.t['9Oq93t']),
+                              element: eR.Z,
                               type: u.bT.CUSTOM,
                               predicate: () => y
                           },
                           {
-                              section: eU.pNK.INSTANT_INVITES,
+                              section: eF.pNK.INSTANT_INVITES,
                               impressionName: l.ImpressionNames.GUILD_SETTINGS_INVITES,
-                              label: ez.intl.string(ez.t['9F90iY']),
-                              element: eS.Z,
+                              label: eV.intl.string(eV.t['9F90iY']),
+                              element: eE.Z,
                               type: u.bT.CUSTOM,
                               predicate: () => d
                           }
                       ]
                     : [],
-            n = r.hasFeature(eU.oNc.COMMUNITY),
+            n = r.hasFeature(eF.oNc.COMMUNITY),
             s = d && n,
             o = d && !n,
             f = !n && ((0, j.Nb)(r.id) || (0, j.ze)(r.id)),
@@ -347,122 +353,122 @@ function eK(e) {
                           { section: u.ID.DIVIDER },
                           {
                               section: u.ID.HEADER,
-                              label: ez.intl.string(ez.t['02hvfn'])
+                              label: eV.intl.string(eV.t['02hvfn'])
                           },
                           {
-                              section: eU.pNK.SAFETY,
+                              section: eF.pNK.SAFETY,
                               impressionName: l.ImpressionNames.GUILD_SETTINGS_SAFETY,
-                              label: ez.intl.string(ez.t['suhY+f']),
-                              ariaLabel: ez.intl.string(ez.t['suhY+f']),
-                              element: ef.Z,
+                              label: eV.intl.string(eV.t['suhY+f']),
+                              ariaLabel: eV.intl.string(eV.t['suhY+f']),
+                              element: eC.Z,
                               newIndicatorDismissibleContentTypes: [a.z.COMMUNITY_GUILD_SETTINGS_SAFETY],
                               predicate: () => s
                           },
                           {
-                              section: eU.pNK.MODERATION,
+                              section: eF.pNK.MODERATION,
                               impressionName: l.ImpressionNames.GUILD_SETTINGS_MODERATION,
-                              label: ez.intl.string(ez.t['suhY+f']),
-                              element: eA.ZP,
+                              label: eV.intl.string(eV.t['suhY+f']),
+                              element: eL.ZP,
                               predicate: () => o
                           },
                           {
-                              section: eU.pNK.GUILD_AUTOMOD,
+                              section: eF.pNK.GUILD_AUTOMOD,
                               label: (0, i.jsx)('div', {
-                                  className: eW.landingPageTabLink,
-                                  children: ez.intl.string(ez.t.uRelg4)
+                                  className: eY.landingPageTabLink,
+                                  children: eV.intl.string(eV.t.uRelg4)
                               }),
-                              ariaLabel: ez.intl.string(ez.t.uRelg4),
+                              ariaLabel: eV.intl.string(eV.t.uRelg4),
                               element: S.Z,
                               newIndicatorDismissibleContentTypes: null,
                               predicate: () => f
                           },
                           {
-                              section: eU.pNK.AUDIT_LOG,
+                              section: eF.pNK.AUDIT_LOG,
                               impressionName: l.ImpressionNames.GUILD_SETTINGS_AUDIT_LOG,
-                              label: ez.intl.string(ez.t.SPWLyc),
-                              element: eu.Z,
+                              label: eV.intl.string(eV.t.SPWLyc),
+                              element: em.Z,
                               type: u.bT.CUSTOM,
                               predicate: () => m
                           },
                           {
-                              section: eU.pNK.BANS,
+                              section: eF.pNK.BANS,
                               impressionName: l.ImpressionNames.GUILD_SETTINGS_BANS,
-                              label: ez.intl.string(ez.t.ZbeITU),
-                              element: ev.Z,
+                              label: eV.intl.string(eV.t.ZbeITU),
+                              element: e_.Z,
                               predicate: () => R
                           }
                       ]
                     : [],
             I = (0, Z.wC)(r.id),
             N = n && A,
-            k = d && (r.hasFeature(eU.oNc.DISCOVERABLE) || !!(null == Q ? void 0 : Q.isPublished)),
-            B = d && !X && !r.hasFeature(eU.oNc.GUILD_SERVER_GUIDE),
+            k = d && (r.hasFeature(eF.oNc.DISCOVERABLE) || !!(null == Q ? void 0 : Q.isPublished)),
+            B = d && !X && !r.hasFeature(eF.oNc.GUILD_SERVER_GUIDE),
             $ =
                 n && (d || I || N || k || B)
                     ? [
                           { section: u.ID.DIVIDER },
                           {
                               section: u.ID.HEADER,
-                              label: ez.intl.string(ez.t['1g9A/f'])
+                              label: eV.intl.string(eV.t['1g9A/f'])
                           },
                           {
-                              section: eU.pNK.COMMUNITY,
+                              section: eF.pNK.COMMUNITY,
                               impressionName: l.ImpressionNames.GUILD_SETTINGS_COMMUNITY_OVERVIEW,
-                              label: ez.intl.string(ez.t['/dp6yc']),
-                              element: e_.Z,
-                              ariaLabel: ez.intl.string(ez.t['/dp6yc']),
+                              label: eV.intl.string(eV.t['/dp6yc']),
+                              element: eI.Z,
+                              ariaLabel: eV.intl.string(eV.t['/dp6yc']),
                               notice: {
-                                  stores: [ec.Z],
-                                  element: e_.X
+                                  stores: [ed.Z],
+                                  element: eI.X
                               },
                               predicate: () => d
                           },
                           {
-                              section: eU.pNK.ONBOARDING,
-                              label: ez.intl.string(ez.t.LdxCKy),
-                              element: eR.Z,
-                              ariaLabel: ez.intl.string(ez.t.LdxCKy),
+                              section: eF.pNK.ONBOARDING,
+                              label: eV.intl.string(eV.t.LdxCKy),
+                              element: ey.Z,
+                              ariaLabel: eV.intl.string(eV.t.LdxCKy),
                               newIndicatorDismissibleContentTypes: K ? null : [a.z.COMMUNITY_ONBOARDING_NEW_BADGE],
                               notice: {
-                                  stores: [em.Z],
-                                  element: ex.Z
+                                  stores: [eh.Z],
+                                  element: ep.Z
                               },
                               predicate: () => I,
-                              decoration: eY(r.id, V)
+                              decoration: eq(r.id, V)
                           },
                           {
-                              section: eU.pNK.ANALYTICS,
+                              section: eF.pNK.ANALYTICS,
                               impressionName: l.ImpressionNames.GUILD_SETTINGS_ANALYTICS,
-                              label: ez.intl.string(ez.t['0wWfUF']),
-                              ariaLabel: ez.intl.string(ez.t['0wWfUF']),
-                              element: eC.Z,
-                              newIndicator: G.Z.hasHotspot(eF.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU),
+                              label: eV.intl.string(eV.t['0wWfUF']),
+                              ariaLabel: eV.intl.string(eV.t['0wWfUF']),
+                              element: ev.Z,
+                              newIndicator: G.Z.hasHotspot(ez.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU),
                               newIndicatorDismissibleContentTypes: W ? [a.z.GUILD_INSIGHTS_ACCESS_RATE_NEW] : null,
                               predicate: () => N
                           },
-                          eJ,
+                          e0,
                           {
-                              section: eU.pNK.DISCOVERY_LANDING_PAGE,
+                              section: eF.pNK.DISCOVERY_LANDING_PAGE,
                               impressionName: l.ImpressionNames.GUILD_SETTINGS_DISCOVERY_LANDING_PAGE,
                               label: (0, i.jsxs)('div', {
-                                  className: eW.landingPageTabLink,
-                                  children: [ez.intl.string(ez.t.kGlQGB), ' ', (0, i.jsx)(T.Z, {})]
+                                  className: eY.landingPageTabLink,
+                                  children: [eV.intl.string(eV.t.kGlQGB), ' ', (0, i.jsx)(T.Z, {})]
                               }),
-                              ariaLabel: ez.intl.string(ez.t.kGlQGB),
-                              element: eT.Z,
+                              ariaLabel: eV.intl.string(eV.t.kGlQGB),
+                              element: eb.Z,
                               notice: {
-                                  stores: [ec.Z],
-                                  element: eT.J
+                                  stores: [ed.Z],
+                                  element: eb.J
                               },
                               type: u.bT.CUSTOM,
                               predicate: () => k
                           },
                           {
-                              section: eU.pNK.COMMUNITY_WELCOME,
+                              section: eF.pNK.COMMUNITY_WELCOME,
                               impressionName: l.ImpressionNames.GUILD_SETTINGS_COMMUNITY_WELCOME,
-                              label: ez.intl.string(ez.t['2rkmDg']),
-                              ariaLabel: ez.intl.string(ez.t['2rkmDg']),
-                              element: eI.Z,
+                              label: eV.intl.string(eV.t['2rkmDg']),
+                              ariaLabel: eV.intl.string(eV.t['2rkmDg']),
+                              element: eN.Z,
                               notice: {
                                   stores: [Y.Z],
                                   element: q.Z
@@ -471,48 +477,48 @@ function eK(e) {
                           }
                       ]
                     : [],
-            ee = eh()
+            ee = eg()
                 ? [
                       { section: u.ID.DIVIDER },
                       {
                           section: u.ID.HEADER,
-                          label: ez.intl.string(ez.t.mbn3bW)
+                          label: eV.intl.string(eV.t.mbn3bW)
                       },
                       {
-                          ...eq,
-                          section: eU.pNK.ROLE_SUBSCRIPTIONS,
+                          ...eQ,
+                          section: eF.pNK.ROLE_SUBSCRIPTIONS,
                           element: M.Z,
                           type: u.bT.CUSTOM,
                           newIndicatorDismissibleContentTypes: (0, P.sO)(r) ? [a.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE] : null
                       },
                       {
-                          section: eU.pNK.GUILD_PRODUCTS,
-                          label: ez.intl.string(ez.t.X6h2g4),
-                          ariaLabel: ez.intl.string(ez.t.X6h2g4),
+                          section: eF.pNK.GUILD_PRODUCTS,
+                          label: eV.intl.string(eV.t.X6h2g4),
+                          ariaLabel: eV.intl.string(eV.t.X6h2g4),
                           element: D.Z,
                           predicate: () => (0, L.p)(r.id, 'guild_product_settings_predicate') && (0, O.sy)(r)
                       },
                       {
-                          section: eU.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE,
+                          section: eF.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE,
                           impressionName: l.ImpressionNames.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_GUILD_SETTINGS,
                           newIndicator: 2022 === new Date().getFullYear(),
-                          label: ez.intl.string(ez.t.ipTYsr),
-                          ariaLabel: ez.intl.string(ez.t.ipTYsr),
+                          label: eV.intl.string(eV.t.ipTYsr),
+                          ariaLabel: eV.intl.string(eV.t.ipTYsr),
                           element: w.Z,
                           predicate: () => (0, O.sy)(r)
                       }
                   ]
                 : [],
             en = null != et && et,
-            ei = d && !r.hasFeature(eU.oNc.COMMUNITY),
+            ei = d && !r.hasFeature(eF.oNc.COMMUNITY),
             er =
                 en || ei || d
                     ? [
                           { section: u.ID.DIVIDER },
                           {
-                              section: eU.pNK.CLAN,
-                              label: ez.intl.string(ez.t['6g8uHB']),
-                              ariaLabel: ez.intl.string(ez.t['6g8uHB']),
+                              section: eF.pNK.CLAN,
+                              label: eV.intl.string(eV.t['6g8uHB']),
+                              ariaLabel: eV.intl.string(eV.t['6g8uHB']),
                               onClick() {
                                   (0, H.q4)(
                                       (e) => {
@@ -522,54 +528,54 @@ function eK(e) {
                                               guildId: r.id
                                           });
                                       },
-                                      { layerKey: eG.q2 }
+                                      { layerKey: eH.q2 }
                                   ),
                                       (0, c.xf)();
                               },
                               predicate: () => en,
-                              icon: null != eX ? (0, i.jsx)(v.KQ, { src: eX }) : null
+                              icon: null != eJ ? (0, i.jsx)(v.KQ, { src: eJ }) : null
                           },
                           {
-                              section: eU.pNK.COMMUNITY,
+                              section: eF.pNK.COMMUNITY,
                               impressionName: l.ImpressionNames.GUILD_SETTINGS_ENABLE_COMMUNITY,
-                              label: ez.intl.string(ez.t.ElKTeX),
-                              element: e_.Z,
-                              ariaLabel: ez.intl.string(ez.t.ElKTeX),
-                              newIndicator: null != z && z >= eH.U3 && G.Z.hasHotspot(eF.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
+                              label: eV.intl.string(eV.t.ElKTeX),
+                              element: eI.Z,
+                              ariaLabel: eV.intl.string(eV.t.ElKTeX),
+                              newIndicator: null != z && z >= eW.U3 && G.Z.hasHotspot(ez.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
                               notice: {
-                                  stores: [ec.Z],
-                                  element: e_.X
+                                  stores: [ed.Z],
+                                  element: eI.X
                               },
                               predicate: () => ei
                           },
-                          ei ? eJ : void 0,
+                          ei ? e0 : void 0,
                           {
-                              section: eU.pNK.WIDGET,
+                              section: eF.pNK.WIDGET,
                               impressionName: l.ImpressionNames.GUILD_SETTINGS_WIDGET,
-                              label: ez.intl.string(ez.t.ACjbTk),
-                              element: ew.Z,
+                              label: eV.intl.string(eV.t.ACjbTk),
+                              element: eB.Z,
                               predicate: () => d
                           },
                           {
-                              section: eU.pNK.VANITY_URL,
+                              section: eF.pNK.VANITY_URL,
                               impressionName: l.ImpressionNames.GUILD_SETTINGS_VANITY_URL,
-                              label: ez.intl.string(ez.t['5XZKy8']),
-                              element: eM.Z,
+                              label: eV.intl.string(eV.t['5XZKy8']),
+                              element: ew.Z,
                               notice: {
-                                  stores: [ed.Z],
-                                  element: eM.T
+                                  stores: [eu.Z],
+                                  element: ew.T
                               },
                               predicate: () => d
                           },
                           {
-                              section: eU.pNK.GUILD_TEMPLATES,
+                              section: eF.pNK.GUILD_TEMPLATES,
                               impressionName: l.ImpressionNames.GUILD_SETTINGS_TEMPLATE,
-                              label: (0, i.jsx)(eP.Z, { showDirtyIndicator: F }),
-                              ariaLabel: ez.intl.string(ez.t.KUw7Sk),
-                              element: ek.ZP,
+                              label: (0, i.jsx)(eM.Z, { showDirtyIndicator: F }),
+                              ariaLabel: eV.intl.string(eV.t.KUw7Sk),
+                              element: eP.ZP,
                               notice: {
-                                  stores: [ek.Sf],
-                                  element: ek.Q5
+                                  stores: [eP.Sf],
+                                  element: eP.Q5
                               },
                               predicate: () => d
                           }
@@ -578,17 +584,17 @@ function eK(e) {
         return [
             {
                 section: u.ID.HEADER,
-                label: eV(r)
+                label: eK(r)
             },
             {
-                section: eU.pNK.OVERVIEW,
+                section: eF.pNK.OVERVIEW,
                 impressionName: l.ImpressionNames.GUILD_SETTINGS_OVERVIEW,
-                label: ez.intl.string(ez.t['/dp6yc']),
-                ariaLabel: ez.intl.string(ez.t['/dp6yc']),
-                element: ey.Z,
+                label: eV.intl.string(eV.t['/dp6yc']),
+                ariaLabel: eV.intl.string(eV.t['/dp6yc']),
+                element: eZ.Z,
                 notice: {
-                    stores: [ec.Z],
-                    element: ey.O
+                    stores: [ed.Z],
+                    element: eZ.O
                 }
             },
             ...e,
@@ -598,101 +604,101 @@ function eK(e) {
             ...ee,
             { section: u.ID.DIVIDER },
             {
-                section: eU.pNK.GUILD_PREMIUM,
+                section: eF.pNK.GUILD_PREMIUM,
                 impressionName: l.ImpressionNames.GUILD_SETTINGS_BOOST_STATUS,
-                label: ez.intl.string(ez.t['8+VX4+']),
-                ariaLabel: ez.intl.string(ez.t['8+VX4+']),
-                element: eZ.Z,
-                className: eW.serverBoostTabItem,
-                icon: (0, i.jsx)(eL.Z, { className: eW.icon })
+                label: eV.intl.string(eV.t['8+VX4+']),
+                ariaLabel: eV.intl.string(eV.t['8+VX4+']),
+                element: eA.Z,
+                className: eY.serverBoostTabItem,
+                icon: (0, i.jsx)(eD.Z, { className: eY.icon })
             },
             ...er,
             {
                 section: u.ID.DIVIDER,
                 predicate: () => U
             },
-            eQ
+            e$
         ];
     }
     return [
         {
             section: u.ID.HEADER,
-            label: eV(r)
+            label: eK(r)
         },
         {
-            section: eU.pNK.OVERVIEW,
+            section: eF.pNK.OVERVIEW,
             impressionName: l.ImpressionNames.GUILD_SETTINGS_OVERVIEW,
-            label: ez.intl.string(ez.t['/dp6yc']),
-            ariaLabel: ez.intl.string(ez.t['/dp6yc']),
-            element: ey.Z,
+            label: eV.intl.string(eV.t['/dp6yc']),
+            ariaLabel: eV.intl.string(eV.t['/dp6yc']),
+            element: eZ.Z,
             notice: {
-                stores: [ec.Z],
-                element: ey.O
+                stores: [ed.Z],
+                element: eZ.O
             }
         },
         {
-            section: eU.pNK.ROLES,
+            section: eF.pNK.ROLES,
             impressionName: l.ImpressionNames.GUILD_SETTINGS_ROLES,
-            label: ez.intl.string(ez.t.LPJmLy),
-            element: ep.Z,
+            label: eV.intl.string(eV.t.LPJmLy),
+            element: ef.Z,
             type: u.bT.MINIMAL,
-            ariaLabel: ez.intl.string(ez.t.KXcECw),
+            ariaLabel: eV.intl.string(eV.t.KXcECw),
             notice: {
-                stores: [eo.Z],
-                element: ep._
+                stores: [ec.Z],
+                element: ef._
             },
             predicate: () => h
         },
         {
-            section: eU.pNK.EMOJI,
+            section: eF.pNK.EMOJI,
             impressionName: l.ImpressionNames.GUILD_SETTINGS_EMOJI,
-            label: ez.intl.string(ez.t.sMOuub),
-            element: eb.ZP,
+            label: eV.intl.string(eV.t.sMOuub),
+            element: ej.ZP,
             predicate: () => g
         },
         {
-            section: eU.pNK.STICKERS,
+            section: eF.pNK.STICKERS,
             impressionName: l.ImpressionNames.GUILD_SETTINGS_STICKERS,
-            label: ez.intl.string(ez.t.R5nQkZ),
-            ariaLabel: ez.intl.string(ez.t.R5nQkZ),
+            label: eV.intl.string(eV.t.R5nQkZ),
+            ariaLabel: eV.intl.string(eV.t.R5nQkZ),
+            element: ek.Z,
+            predicate: () => g
+        },
+        {
+            section: eF.pNK.SOUNDBOARD,
+            impressionName: l.ImpressionNames.GUILD_SETTINGS_SOUNDBOARD,
+            label: eV.intl.string(eV.t.OWQNYm),
+            ariaLabel: eV.intl.string(eV.t.OWQNYm),
             element: eO.Z,
             predicate: () => g
         },
         {
-            section: eU.pNK.SOUNDBOARD,
-            impressionName: l.ImpressionNames.GUILD_SETTINGS_SOUNDBOARD,
-            label: ez.intl.string(ez.t.OWQNYm),
-            ariaLabel: ez.intl.string(ez.t.OWQNYm),
-            element: eD.Z,
-            predicate: () => g
-        },
-        {
-            section: eU.pNK.WIDGET,
+            section: eF.pNK.WIDGET,
             impressionName: l.ImpressionNames.GUILD_SETTINGS_WIDGET,
-            label: ez.intl.string(ez.t.ACjbTk),
-            element: ew.Z,
+            label: eV.intl.string(eV.t.ACjbTk),
+            element: eB.Z,
             predicate: () => d
         },
         {
-            section: eU.pNK.GUILD_TEMPLATES,
+            section: eF.pNK.GUILD_TEMPLATES,
             impressionName: l.ImpressionNames.GUILD_SETTINGS_TEMPLATE,
-            label: (0, i.jsx)(eP.Z, { showDirtyIndicator: F }),
-            ariaLabel: ez.intl.string(ez.t.KUw7Sk),
-            element: ek.ZP,
+            label: (0, i.jsx)(eM.Z, { showDirtyIndicator: F }),
+            ariaLabel: eV.intl.string(eV.t.KUw7Sk),
+            element: eP.ZP,
             notice: {
-                stores: [ek.Sf],
-                element: ek.Q5
+                stores: [eP.Sf],
+                element: eP.Q5
             },
             predicate: () => d
         },
         {
-            section: eU.pNK.VANITY_URL,
+            section: eF.pNK.VANITY_URL,
             impressionName: l.ImpressionNames.GUILD_SETTINGS_VANITY_URL,
-            label: ez.intl.string(ez.t['5XZKy8']),
-            element: eM.Z,
+            label: eV.intl.string(eV.t['5XZKy8']),
+            element: ew.Z,
             notice: {
-                stores: [ed.Z],
-                element: eM.T
+                stores: [eu.Z],
+                element: ew.T
             },
             predicate: () => s
         },
@@ -702,25 +708,25 @@ function eK(e) {
         },
         {
             section: u.ID.HEADER,
-            label: ez.intl.string(ez.t.PHjkRE),
+            label: eV.intl.string(eV.t.PHjkRE),
             predicate: () => d || b
         },
         {
-            section: eU.pNK.INTEGRATIONS,
+            section: eF.pNK.INTEGRATIONS,
             impressionName: l.ImpressionNames.GUILD_SETTINGS_INTEGRATION,
-            label: ez.intl.string(ez.t.CIsNZ2),
-            ariaLabel: ez.intl.string(ez.t.CIsNZ2),
-            element: ej.Z,
+            label: eV.intl.string(eV.t.CIsNZ2),
+            ariaLabel: eV.intl.string(eV.t.CIsNZ2),
+            element: eS.Z,
             notice: {
-                stores: [ea.default, ec.Z],
-                element: ej.j
+                stores: [ea.default, ed.Z],
+                element: eS.j
             },
             predicate: () => d || b
         },
         {
-            section: eU.pNK.APP_DIRECTORY,
-            label: ez.intl.string(ez.t.AKcFUl),
-            ariaLabel: ez.intl.string(ez.t.AKcFUl),
+            section: eF.pNK.APP_DIRECTORY,
+            label: eV.intl.string(eV.t.AKcFUl),
+            ariaLabel: eV.intl.string(eV.t.AKcFUl),
             onClick() {
                 (0, p.goToAppDirectory)({
                     guildId: r.id,
@@ -738,49 +744,49 @@ function eK(e) {
         },
         {
             section: u.ID.HEADER,
-            label: ez.intl.string(ez.t['5tbTdX']),
+            label: eV.intl.string(eV.t['5tbTdX']),
             predicate: () => d
         },
         {
-            section: eU.pNK.SAFETY,
+            section: eF.pNK.SAFETY,
             impressionName: l.ImpressionNames.GUILD_SETTINGS_SAFETY,
-            label: ez.intl.string(ez.t['suhY+f']),
-            ariaLabel: ez.intl.string(ez.t['suhY+f']),
-            element: ef.Z,
+            label: eV.intl.string(eV.t['suhY+f']),
+            ariaLabel: eV.intl.string(eV.t['suhY+f']),
+            element: eC.Z,
             newIndicatorDismissibleContentTypes: [a.z.COMMUNITY_GUILD_SETTINGS_SAFETY],
-            predicate: () => d && r.hasFeature(eU.oNc.COMMUNITY)
+            predicate: () => d && r.hasFeature(eF.oNc.COMMUNITY)
         },
         {
-            section: eU.pNK.MODERATION,
+            section: eF.pNK.MODERATION,
             impressionName: l.ImpressionNames.GUILD_SETTINGS_MODERATION,
-            label: ez.intl.string(ez.t['suhY+f']),
-            element: eA.ZP,
-            predicate: () => d && !r.hasFeature(eU.oNc.COMMUNITY)
+            label: eV.intl.string(eV.t['suhY+f']),
+            element: eL.ZP,
+            predicate: () => d && !r.hasFeature(eF.oNc.COMMUNITY)
         },
         {
-            section: eU.pNK.GUILD_AUTOMOD,
+            section: eF.pNK.GUILD_AUTOMOD,
             label: (0, i.jsx)('div', {
-                className: eW.landingPageTabLink,
-                children: ez.intl.string(ez.t.uRelg4)
+                className: eY.landingPageTabLink,
+                children: eV.intl.string(eV.t.uRelg4)
             }),
-            ariaLabel: ez.intl.string(ez.t.uRelg4),
+            ariaLabel: eV.intl.string(eV.t.uRelg4),
             element: S.Z,
             newIndicatorDismissibleContentTypes: null,
-            predicate: () => !r.hasFeature(eU.oNc.COMMUNITY) && ((0, j.Nb)(r.id) || (0, j.ze)(r.id))
+            predicate: () => !r.hasFeature(eF.oNc.COMMUNITY) && ((0, j.Nb)(r.id) || (0, j.ze)(r.id))
         },
         {
-            section: eU.pNK.AUDIT_LOG,
+            section: eF.pNK.AUDIT_LOG,
             impressionName: l.ImpressionNames.GUILD_SETTINGS_AUDIT_LOG,
-            label: ez.intl.string(ez.t.SPWLyc),
-            element: eu.Z,
+            label: eV.intl.string(eV.t.SPWLyc),
+            element: em.Z,
             type: u.bT.CUSTOM,
             predicate: () => m
         },
         {
-            section: eU.pNK.BANS,
+            section: eF.pNK.BANS,
             impressionName: l.ImpressionNames.GUILD_SETTINGS_BANS,
-            label: ez.intl.string(ez.t.ZbeITU),
-            element: ev.Z,
+            label: eV.intl.string(eV.t.ZbeITU),
+            element: e_.Z,
             predicate: () => R
         },
         {
@@ -789,13 +795,13 @@ function eK(e) {
         },
         {
             section: u.ID.HEADER,
-            label: ez.intl.string(ez.t['1g9A/f']),
+            label: eV.intl.string(eV.t['1g9A/f']),
             predicate: () => !et && (d || A)
         },
         {
-            section: eU.pNK.CLAN,
-            label: ez.intl.string(ez.t['6g8uHB']),
-            ariaLabel: ez.intl.string(ez.t['6g8uHB']),
+            section: eF.pNK.CLAN,
+            label: eV.intl.string(eV.t['6g8uHB']),
+            ariaLabel: eV.intl.string(eV.t['6g8uHB']),
             onClick() {
                 (0, H.q4)(
                     (e) => {
@@ -805,140 +811,140 @@ function eK(e) {
                             guildId: r.id
                         });
                     },
-                    { layerKey: eG.q2 }
+                    { layerKey: eH.q2 }
                 ),
                     (0, c.xf)();
             },
             predicate: () => null != et && et,
-            icon: null != eX ? (0, i.jsx)(v.KQ, { src: eX }) : null
+            icon: null != eJ ? (0, i.jsx)(v.KQ, { src: eJ }) : null
         },
         {
-            section: eU.pNK.COMMUNITY,
-            impressionName: r.hasFeature(eU.oNc.COMMUNITY) ? l.ImpressionNames.GUILD_SETTINGS_COMMUNITY_OVERVIEW : l.ImpressionNames.GUILD_SETTINGS_ENABLE_COMMUNITY,
-            label: r.hasFeature(eU.oNc.COMMUNITY) ? ez.intl.string(ez.t['/dp6yc']) : ez.intl.string(ez.t.ElKTeX),
-            element: e_.Z,
-            ariaLabel: r.hasFeature(eU.oNc.COMMUNITY) ? ez.intl.string(ez.t['/dp6yc']) : ez.intl.string(ez.t.ElKTeX),
-            newIndicator: !r.hasFeature(eU.oNc.COMMUNITY) && null != z && z >= eH.U3 && G.Z.hasHotspot(eF.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
+            section: eF.pNK.COMMUNITY,
+            impressionName: r.hasFeature(eF.oNc.COMMUNITY) ? l.ImpressionNames.GUILD_SETTINGS_COMMUNITY_OVERVIEW : l.ImpressionNames.GUILD_SETTINGS_ENABLE_COMMUNITY,
+            label: r.hasFeature(eF.oNc.COMMUNITY) ? eV.intl.string(eV.t['/dp6yc']) : eV.intl.string(eV.t.ElKTeX),
+            element: eI.Z,
+            ariaLabel: r.hasFeature(eF.oNc.COMMUNITY) ? eV.intl.string(eV.t['/dp6yc']) : eV.intl.string(eV.t.ElKTeX),
+            newIndicator: !r.hasFeature(eF.oNc.COMMUNITY) && null != z && z >= eW.U3 && G.Z.hasHotspot(ez.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
             notice: {
-                stores: [ec.Z],
-                element: e_.X
+                stores: [ed.Z],
+                element: eI.X
             },
             predicate: () => d
         },
         {
-            section: eU.pNK.ONBOARDING,
-            label: ez.intl.string(ez.t.LdxCKy),
-            element: eR.Z,
-            ariaLabel: ez.intl.string(ez.t.LdxCKy),
+            section: eF.pNK.ONBOARDING,
+            label: eV.intl.string(eV.t.LdxCKy),
+            element: ey.Z,
+            ariaLabel: eV.intl.string(eV.t.LdxCKy),
             newIndicatorDismissibleContentTypes: K ? null : [a.z.COMMUNITY_ONBOARDING_NEW_BADGE],
             notice: {
-                stores: [em.Z],
-                element: ex.Z
+                stores: [eh.Z],
+                element: ep.Z
             },
             predicate: () => (0, Z.wC)(r.id),
-            decoration: eY(r.id, V)
+            decoration: eq(r.id, V)
         },
         {
-            section: eU.pNK.ANALYTICS,
+            section: eF.pNK.ANALYTICS,
             impressionName: l.ImpressionNames.GUILD_SETTINGS_ANALYTICS,
-            label: ez.intl.string(ez.t['0wWfUF']),
-            ariaLabel: ez.intl.string(ez.t['0wWfUF']),
-            element: eC.Z,
-            newIndicator: G.Z.hasHotspot(eF.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU),
+            label: eV.intl.string(eV.t['0wWfUF']),
+            ariaLabel: eV.intl.string(eV.t['0wWfUF']),
+            element: ev.Z,
+            newIndicator: G.Z.hasHotspot(ez.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU),
             newIndicatorDismissibleContentTypes: W ? [a.z.GUILD_INSIGHTS_ACCESS_RATE_NEW] : null,
-            predicate: () => A && r.hasFeature(eU.oNc.COMMUNITY)
+            predicate: () => A && r.hasFeature(eF.oNc.COMMUNITY)
         },
-        eJ,
+        e0,
         {
-            section: eU.pNK.DISCOVERY_LANDING_PAGE,
+            section: eF.pNK.DISCOVERY_LANDING_PAGE,
             impressionName: l.ImpressionNames.GUILD_SETTINGS_DISCOVERY_LANDING_PAGE,
             label: (0, i.jsxs)('div', {
-                className: eW.landingPageTabLink,
-                children: [ez.intl.string(ez.t.kGlQGB), ' ', (0, i.jsx)(T.Z, {})]
+                className: eY.landingPageTabLink,
+                children: [eV.intl.string(eV.t.kGlQGB), ' ', (0, i.jsx)(T.Z, {})]
             }),
-            ariaLabel: ez.intl.string(ez.t.kGlQGB),
-            element: eT.Z,
+            ariaLabel: eV.intl.string(eV.t.kGlQGB),
+            element: eb.Z,
             notice: {
-                stores: [ec.Z],
-                element: eT.J
+                stores: [ed.Z],
+                element: eb.J
             },
             type: u.bT.CUSTOM,
-            predicate: () => d && (r.hasFeature(eU.oNc.DISCOVERABLE) || !!(null == Q ? void 0 : Q.isPublished))
+            predicate: () => d && (r.hasFeature(eF.oNc.DISCOVERABLE) || !!(null == Q ? void 0 : Q.isPublished))
         },
         {
-            section: eU.pNK.COMMUNITY_WELCOME,
+            section: eF.pNK.COMMUNITY_WELCOME,
             impressionName: l.ImpressionNames.GUILD_SETTINGS_COMMUNITY_WELCOME,
-            label: ez.intl.string(ez.t['2rkmDg']),
-            ariaLabel: ez.intl.string(ez.t['2rkmDg']),
-            element: eI.Z,
+            label: eV.intl.string(eV.t['2rkmDg']),
+            ariaLabel: eV.intl.string(eV.t['2rkmDg']),
+            element: eN.Z,
             notice: {
                 stores: [Y.Z],
                 element: q.Z
             },
-            predicate: () => d && r.hasFeature(eU.oNc.COMMUNITY) && !X && !r.hasFeature(eU.oNc.GUILD_SERVER_GUIDE)
+            predicate: () => d && r.hasFeature(eF.oNc.COMMUNITY) && !X && !r.hasFeature(eF.oNc.GUILD_SERVER_GUIDE)
         },
         {
             section: u.ID.DIVIDER,
-            predicate: eh
+            predicate: eg
         },
         {
             section: u.ID.HEADER,
-            label: ez.intl.string(ez.t.mbn3bW),
-            predicate: eh
+            label: eV.intl.string(eV.t.mbn3bW),
+            predicate: eg
         },
         {
-            ...eq,
-            section: eU.pNK.ROLE_SUBSCRIPTIONS,
+            ...eQ,
+            section: eF.pNK.ROLE_SUBSCRIPTIONS,
             element: M.Z,
             type: u.bT.CUSTOM,
-            predicate: eh,
+            predicate: eg,
             newIndicatorDismissibleContentTypes: (0, P.sO)(r) ? [a.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE] : null
         },
         {
-            section: eU.pNK.GUILD_PRODUCTS,
-            label: ez.intl.string(ez.t.X6h2g4),
-            ariaLabel: ez.intl.string(ez.t.X6h2g4),
+            section: eF.pNK.GUILD_PRODUCTS,
+            label: eV.intl.string(eV.t.X6h2g4),
+            ariaLabel: eV.intl.string(eV.t.X6h2g4),
             element: D.Z,
-            predicate: () => eh() && (0, L.p)(r.id, 'guild_product_settings_predicate') && (0, O.sy)(r)
+            predicate: () => eg() && (0, L.p)(r.id, 'guild_product_settings_predicate') && (0, O.sy)(r)
         },
         {
-            section: eU.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE,
+            section: eF.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE,
             impressionName: l.ImpressionNames.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_GUILD_SETTINGS,
             newIndicator: 2022 === new Date().getFullYear(),
-            label: ez.intl.string(ez.t.ipTYsr),
-            ariaLabel: ez.intl.string(ez.t.ipTYsr),
+            label: eV.intl.string(eV.t.ipTYsr),
+            ariaLabel: eV.intl.string(eV.t.ipTYsr),
             element: w.Z,
-            predicate: () => eh() && (0, O.sy)(r)
+            predicate: () => eg() && (0, O.sy)(r)
         },
         { section: u.ID.DIVIDER },
         {
-            section: eU.pNK.GUILD_PREMIUM,
+            section: eF.pNK.GUILD_PREMIUM,
             impressionName: l.ImpressionNames.GUILD_SETTINGS_BOOST_STATUS,
-            label: ez.intl.string(ez.t['8+VX4+']),
-            ariaLabel: ez.intl.string(ez.t['8+VX4+']),
-            element: eZ.Z,
-            className: eW.serverBoostTabItem,
-            icon: (0, i.jsx)(eL.Z, { className: eW.icon })
+            label: eV.intl.string(eV.t['8+VX4+']),
+            ariaLabel: eV.intl.string(eV.t['8+VX4+']),
+            element: eA.Z,
+            className: eY.serverBoostTabItem,
+            icon: (0, i.jsx)(eD.Z, { className: eY.icon })
         },
         { section: u.ID.DIVIDER },
         {
             section: u.ID.HEADER,
-            label: ez.intl.string(ez.t['+OecxM'])
+            label: eV.intl.string(eV.t['+OecxM'])
         },
         {
-            section: eU.pNK.MEMBERS,
+            section: eF.pNK.MEMBERS,
             impressionName: l.ImpressionNames.GUILD_SETTINGS_MEMBERS,
-            label: (0, i.jsx)(eE.$, {}),
-            ariaLabel: ez.intl.string(ez.t['9Oq93t']),
-            element: eE.Z,
+            label: (0, i.jsx)(eR.$, {}),
+            ariaLabel: eV.intl.string(eV.t['9Oq93t']),
+            element: eR.Z,
             type: u.bT.CUSTOM,
             predicate: () => y
         },
         {
-            section: eU.pNK.INSTANT_INVITES,
+            section: eF.pNK.INSTANT_INVITES,
             impressionName: l.ImpressionNames.GUILD_SETTINGS_INVITES,
-            label: ez.intl.string(ez.t['9F90iY']),
-            element: eS.Z,
+            label: eV.intl.string(eV.t['9F90iY']),
+            element: eE.Z,
             type: u.bT.CUSTOM,
             predicate: () => d
         },
@@ -946,20 +952,20 @@ function eK(e) {
             section: u.ID.DIVIDER,
             predicate: () => U
         },
-        eQ
+        e$
     ];
 }
-function eq(e, t) {
+function eQ(e, t) {
     let n = J.Z.getGuildPermissionProps(e),
         i = (0, z.p)(e.id).length > 0,
         r = (0, E.K2)(e.id, 'getGuildSettingsSections');
-    return eK({
+    return eX({
         channels: t,
         showDirtyGuildTemplateIndicator: !1,
         ...n,
         canUnlinkChannels: i,
         showAccessRate: !1,
-        canAccessClanSettings: n.isGuildAdmin && e.hasFeature(eU.oNc.CLAN),
+        canAccessClanSettings: n.isGuildAdmin && e.hasFeature(eF.oNc.CLAN),
         welcomeScreenEmpty: K.Z.isEmpty(e.id),
         memberVerificationRolloutEnabled: r
     })
@@ -969,17 +975,17 @@ function eq(e, t) {
         })
         .filter((e) => null == e.predicate || e.predicate());
 }
-function eX(e) {
+function eJ(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;
-    h.ZP.trackWithMetadata(eU.rMx.SETTINGS_PANE_VIEWED, {
+    h.ZP.trackWithMetadata(eF.rMx.SETTINGS_PANE_VIEWED, {
         settings_type: 'guild',
         origin_pane: t,
         destination_pane: e,
         location: n
     });
 }
-let eQ = {
+let e$ = {
     canManageGuild: !1,
     canManageChannels: !1,
     canManageRoles: !1,
@@ -994,9 +1000,9 @@ let eQ = {
     isOwnerWithRequiredMfaLevel: !1,
     isGuildAdmin: !1
 };
-class eJ extends r.PureComponent {
+class e0 extends r.PureComponent {
     componentDidMount() {
-        eX(this.props.section, null, this.props.analyticsLocation);
+        eJ(this.props.section, null, this.props.analyticsLocation);
     }
     componentWillUnmount() {
         ei.Z.close();
@@ -1004,13 +1010,13 @@ class eJ extends r.PureComponent {
     componentDidUpdate(e) {
         let { section: t } = e,
             { section: n, isGuildAdmin: i, canManageGuild: r, canManageRoles: l, canManageBans: s, canManageNicknames: a, canManageGuildExpressions: o, canViewAuditLog: d, canManageWebhooks: u, canAccessMembersPage: m, canViewGuildAnalytics: h } = this.props;
-        n !== t && eX(n, t), ((!i && !r && !l && !s && !a && !o && !d && !m && !u) || (!d && n === eU.pNK.AUDIT_LOG) || (!l && n === eU.pNK.ROLES) || (!o && n === eU.pNK.EMOJI) || (!o && n === eU.pNK.STICKERS) || (!o && n === eU.pNK.SOUNDBOARD) || (!s && n === eU.pNK.BANS) || (!h && n === eU.pNK.ANALYTICS) || (!m && n === eU.pNK.MEMBERS)) && (0, c.xf)();
+        n !== t && eJ(n, t), ((!i && !r && !l && !s && !a && !o && !d && !m && !u) || (!d && n === eF.pNK.AUDIT_LOG) || (!l && n === eF.pNK.ROLES) || (!o && n === eF.pNK.EMOJI) || (!o && n === eF.pNK.STICKERS) || (!o && n === eF.pNK.SOUNDBOARD) || (!s && n === eF.pNK.BANS) || (!h && n === eF.pNK.ANALYTICS) || (!m && n === eF.pNK.MEMBERS)) && (0, c.xf)();
     }
     render() {
         var e, t;
         let { theme: n, sidebarTheme: r, section: l, guild: s, channels: a, isGuildAdmin: o, canManageGuild: u, canViewAuditLog: m, canManageRoles: h, canManageGuildExpressions: g, canManageWebhooks: x, canUnlinkChannels: p, canManageBans: f, canAccessMembersPage: C, canViewGuildAnalytics: v, isOwner: _, isOwnerWithRequiredMfaLevel: I, showDirtyGuildTemplateIndicator: N, memberCount: T, showAccessRate: b, onboardingStep: j, onboardingEnabled: S, welcomeScreenEmpty: E, guildMetadata: R, canAccessClanSettings: y, memberVerificationRolloutEnabled: Z } = this.props;
         if (null == s) return null;
-        let A = eK({
+        let A = eX({
                 guild: s,
                 channels: a,
                 isGuildAdmin: o,
@@ -1042,10 +1048,10 @@ class eJ extends r.PureComponent {
                 (0, i.jsx)(d.ZP, {
                     theme: n,
                     sidebarTheme: r,
-                    section: L && null != l ? l : eU.pNK.OVERVIEW,
+                    section: L && null != l ? l : eF.pNK.OVERVIEW,
                     onSetSection: ei.Z.setSection,
                     onClose: c.xf,
-                    title: eV(s),
+                    title: eK(s),
                     sections: A
                 }),
                 (0, i.jsx)(F.d, { guildId: s.id })
@@ -1053,14 +1059,14 @@ class eJ extends r.PureComponent {
         });
     }
 }
-function e$() {
+function e1() {
     var e;
-    let { guild: t, section: n, analyticsLocation: l, guildMetadata: a, isGuildMetadataLoaded: o } = (0, s.cj)([ec.Z], () => ec.Z.getProps()),
+    let { guild: t, section: n, analyticsLocation: l, guildMetadata: a, isGuildMetadataLoaded: o } = (0, s.cj)([ed.Z], () => ed.Z.getProps()),
         { analyticsLocations: c } = (0, g.ZP)(m.Z.GUILD_SETTINGS),
         d = (0, s.e7)([W.Z], () => W.Z.theme),
-        u = (0, s.e7)([W.Z], () => (W.Z.darkSidebar ? eU.BRd.DARK : void 0)),
+        u = (0, s.e7)([W.Z], () => (W.Z.darkSidebar ? eF.BRd.DARK : void 0)),
         h = (0, s.e7)([X.ZP], () => (null != t ? X.ZP.getChannels(t.id).SELECTABLE : null), [t]),
-        x = (0, s.cj)([J.Z], () => (null != t ? J.Z.getGuildPermissionProps(t) : eQ)),
+        x = (0, s.cj)([J.Z], () => (null != t ? J.Z.getGuildPermissionProps(t) : e$)),
         p = null == t ? void 0 : t.id,
         f = (0, s.e7)([J.Z], () => null != t && J.Z.canAccessGuildSettings(t)),
         C = null != t && (0, et.Fv)(t.id),
@@ -1076,7 +1082,7 @@ function e$() {
         r.useEffect(() => {
             v && _ && I && null != p && (0, er.r2)(p);
         }, [v, _, I, p]);
-    let T = null !== (e = null == t ? void 0 : t.hasFeature(eU.oNc.COMMUNITY)) && void 0 !== e && e;
+    let T = null !== (e = null == t ? void 0 : t.hasFeature(eF.oNc.COMMUNITY)) && void 0 !== e && e;
     r.useEffect(() => {
         null != p && T && ((0, R.eM)(p), (0, V.RM)(p));
     }, [p, T]),
@@ -1084,7 +1090,7 @@ function e$() {
             null != p && (0, A.cP)(p);
         }, [p]);
     let { showAccessRate: j } = (0, et.eA)(null == t ? void 0 : t.id, !N || !_ || !v),
-        S = x.isGuildAdmin && (null == t ? void 0 : t.hasFeature(eU.oNc.CLAN)),
+        S = x.isGuildAdmin && (null == t ? void 0 : t.hasFeature(eF.oNc.CLAN)),
         Z = (0, s.e7)(
             [U.Z],
             () => {
@@ -1100,14 +1106,14 @@ function e$() {
         r.useEffect(() => {
             !v && ei.Z.close();
         }, [v]);
-    let D = (0, s.e7)([em.Z], () => em.Z.getCurrentPage()),
+    let D = (0, s.e7)([eh.Z], () => eh.Z.getCurrentPage()),
         O = (0, s.e7)([y.Z], () => null != p && y.Z.getEnabled(p)),
         k = (0, s.e7)([K.Z], () => null != p && K.Z.isEmpty(p)),
         P = (0, z.F)(p).length > 0,
         M = (0, E.jS)(p, 'GuildSettings');
     return (0, i.jsx)(g.Gt, {
         value: c,
-        children: (0, i.jsx)(eJ, {
+        children: (0, i.jsx)(e0, {
             guild: t,
             section: n,
             theme: d,
