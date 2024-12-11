@@ -28,8 +28,8 @@ var i = n(200651),
     N = n(906732),
     T = n(676742),
     b = n(1585),
-    x = n(304761),
-    A = n(865427),
+    A = n(304761),
+    x = n(865427),
     Z = n(571250),
     L = n(628581),
     y = n(55311),
@@ -82,8 +82,8 @@ var i = n(200651),
     eN = n(115530),
     eT = n(981631),
     eb = n(215023),
-    ex = n(388032),
-    eA = n(628005);
+    eA = n(388032),
+    ex = n(628005);
 function eZ(e, t, n) {
     return (
         t in e
@@ -116,7 +116,7 @@ function eO(e) {
                   renderPopout: (e) => {
                       let { closePopout: t, setPopoutRef: n } = e;
                       return (0, i.jsx)('div', {
-                          className: eA.accountProfilePopoutWrapper,
+                          className: ex.accountProfilePopoutWrapper,
                           children: (0, i.jsx)(H.Z, {
                               currentUser: r,
                               setPopoutRef: n,
@@ -139,8 +139,8 @@ function eO(e) {
                   children: (e) =>
                       (0, i.jsxs)(m.Clickable, {
                           ...e,
-                          'aria-label': ex.intl.string(ex.t['3Uj+2t']),
-                          className: eA.avatarWrapper,
+                          'aria-label': eA.intl.string(eA.t['3Uj+2t']),
+                          className: ex.avatarWrapper,
                           children: [
                               (0, i.jsx)(eL, {
                                   size: c ? m.AvatarSizes.SIZE_44 : m.AvatarSizes.SIZE_32,
@@ -149,10 +149,10 @@ function eO(e) {
                                   'aria-label': r.username,
                                   status: n ? eT.Skl.STREAMING : l,
                                   isSpeaking: t,
-                                  className: eA.avatar
+                                  className: ex.avatar
                               }),
                               (0, i.jsx)('div', {
-                                  className: a()(eA.nameTag, { [eA.canCopy]: eg.wS }),
+                                  className: a()(ex.nameTag, { [ex.canCopy]: eg.wS }),
                                   children: s()
                               })
                           ]
@@ -175,7 +175,7 @@ class eR extends r.PureComponent {
     }
     renderCopiedSuccess() {
         let { copiedStreak: e } = this.state,
-            t = [ex.intl.string(ex.t.MSaeTU), ex.intl.string(ex.t.UmrCw8), ex.intl.string(ex.t.gKE0Ji), ex.intl.string(ex.t['4DSKbm']), ex.intl.string(ex.t['+8ENdX']), ex.intl.string(ex.t.GlWHv7), ex.intl.string(ex.t.hIzxU1), ex.intl.string(ex.t['26uMPD']), ex.intl.string(ex.t.uFs7R0), ex.intl.string(ex.t.bLXdcX), ex.intl.string(ex.t.gPg9fX)],
+            t = [eA.intl.string(eA.t.MSaeTU), eA.intl.string(eA.t.UmrCw8), eA.intl.string(eA.t.gKE0Ji), eA.intl.string(eA.t['4DSKbm']), eA.intl.string(eA.t['+8ENdX']), eA.intl.string(eA.t.GlWHv7), eA.intl.string(eA.t.hIzxU1), eA.intl.string(eA.t['26uMPD']), eA.intl.string(eA.t.uFs7R0), eA.intl.string(eA.t.bLXdcX), eA.intl.string(eA.t.gPg9fX)],
             n = Math.min(Math.max(0, e - 1), t.length - 1);
         return (0, i.jsx)(m.Shaker, {
             isShaking: this.isCopiedStreakGodlike,
@@ -198,19 +198,19 @@ class eR extends r.PureComponent {
                     children: c
                         ? (0, i.jsx)(M.Z, {
                               activity: n,
-                              emojiClassName: eA.emoji,
-                              className: eA.customStatus
+                              emojiClassName: ex.emoji,
+                              className: ex.customStatus
                           })
                         : eI.ZP.humanizeStatus(a)
                 })),
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)('div', {
-                        className: eA.panelTitleContainer,
+                        className: ex.panelTitleContainer,
                         children: (0, i.jsx)(eN.Z, { children: o })
                     }),
                     (0, i.jsx)('div', {
-                        className: eA.panelSubtextContainer,
+                        className: ex.panelSubtextContainer,
                         children: (0, i.jsx)(eS.Z, { children: null != e ? e : r })
                     })
                 ]
@@ -251,21 +251,21 @@ class eR extends r.PureComponent {
             : (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsxs)('div', {
-                          className: eA.container,
+                          className: ex.container,
                           onMouseEnter: this.handleMouseEnter,
                           onMouseLeave: this.handleMouseLeave,
                           children: [
                               this.renderNameZone(),
                               (0, i.jsxs)(j.Z, {
                                   grow: 0,
-                                  className: eA.buttons,
+                                  className: ex.buttons,
                                   children: [
                                       (0, i.jsx)(eM, {
                                           selfMute: n,
                                           serverMute: l,
                                           suppress: o,
                                           awaitingRemote: r,
-                                          tooltipText: d ? ex.intl.string(ex.t['29gnR0']) : (0, L.Z)(n, l, o, r),
+                                          tooltipText: d ? eA.intl.string(eA.t['29gnR0']) : (0, L.Z)(n, l, o, r),
                                           tooltipColor: d ? m.TooltipColors.GREEN : void 0,
                                           tooltipForceOpen: d || void 0,
                                           onMouseEnter: this.handleMouseEnterMute,
@@ -508,9 +508,9 @@ function ej() {
         }),
         { mute: f, selfMute: _, suppress: v } = (0, ei.Z)(g),
         { selfDeaf: T, deaf: b } = (0, en.Z)(g),
-        Z = (0, o.e7)([x.C], () => {
+        Z = (0, o.e7)([A.C], () => {
             var e;
-            return (0, A.fD)() ? (null === (e = x.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
+            return (0, x.fD)() ? (null === (e = A.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
         L = (0, o.e7)([eh.ZP], () => eh.ZP.getPremiumTypeSubscription()),
         y = (0, o.e7)([eo.Z], () => eo.Z.getSpeakingWhileMuted()),
@@ -604,20 +604,20 @@ function eD(e) {
                     color: 'currentColor',
                     width: 9,
                     height: 9,
-                    className: eA.hasBuildOverride,
+                    className: ex.hasBuildOverride,
                     'aria-hidden': !0
                 }))
               : n &&
                 (o = (0, i.jsx)(m.CircleBadge, {
                     color: R.Z.STATUS_DANGER,
-                    className: eA.hasBuildOverride,
+                    className: ex.hasBuildOverride,
                     'aria-hidden': !0
                 })),
         (0, i.jsx)(ev.Z, {
-            tooltipText: null != t ? ex.intl.formatToPlainString(ex.t.Gzh6ZG, { webBuildOverride: t.id }) : ex.intl.string(ex.t.cduTBA),
+            tooltipText: null != t ? eA.intl.formatToPlainString(eA.t.Gzh6ZG, { webBuildOverride: t.id }) : eA.intl.string(eA.t.cduTBA),
             onClick: r,
             onContextMenu: l,
-            innerClassName: null != t || n ? eA.buildOverrideButton : null,
+            innerClassName: null != t || n ? ex.buildOverrideButton : null,
             icon: s,
             ...c.events,
             children: o
@@ -655,11 +655,11 @@ function eM(e) {
                 height: 20,
                 color: f ? m.tokens.colors.STATUS_DANGER : 'currentColor'
             }),
-            iconForeground: f ? eA.strikethrough : null,
+            iconForeground: f ? ex.strikethrough : null,
             onClick: p,
             onContextMenu: T,
             role: 'switch',
-            'aria-label': ex.intl.string(ex.t['w4m94+']),
+            'aria-label': eA.intl.string(eA.t['w4m94+']),
             'aria-checked': f,
             disabled: a
         })
@@ -696,10 +696,10 @@ function ew(e) {
             }),
             onClick: o,
             onContextMenu: E,
-            innerClassName: a()({ [eA.redIcon]: n }),
-            iconForeground: c ? eA.strikethrough : null,
+            innerClassName: a()({ [ex.redIcon]: n }),
+            iconForeground: c ? ex.strikethrough : null,
             role: 'switch',
-            'aria-label': ex.intl.string(ex.t.wjcRFR),
+            'aria-label': eA.intl.string(eA.t.wjcRFR),
             'aria-checked': c,
             disabled: l
         })

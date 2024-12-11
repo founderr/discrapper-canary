@@ -13,8 +13,8 @@ var s = n(399606),
     c = n(410030),
     d = n(100527),
     u = n(906732),
-    g = n(975298),
-    m = n(779618),
+    m = n(975298),
+    g = n(779618),
     f = n(832149),
     p = n(300284),
     _ = n(703656),
@@ -23,8 +23,8 @@ var s = n(399606),
     b = n(594174),
     x = n(78839),
     C = n(626135),
-    v = n(424218),
-    T = n(63063),
+    T = n(424218),
+    v = n(63063),
     N = n(74538),
     I = n(860489),
     S = n(471309),
@@ -33,17 +33,17 @@ var s = n(399606),
     j = n(687362),
     P = n(119269),
     Z = n(467685),
-    B = n(391110),
-    M = n(75077),
+    M = n(391110),
+    B = n(75077),
     O = n(976465),
     w = n(474936),
-    y = n(735825),
-    k = n(981631),
+    k = n(735825),
+    y = n(981631),
     L = n(526761),
     U = n(332325),
     D = n(388032),
-    G = n(506829),
-    H = n(660372),
+    H = n(506829),
+    G = n(660372),
     V = n(926433),
     F = n(302036),
     W = n(994554),
@@ -67,8 +67,8 @@ var s = n(399606),
     ec = n(909910),
     ed = n(637810),
     eu = n(570423),
-    eg = n(912429),
-    em = n(91394),
+    em = n(912429),
+    eg = n(91394),
     ef = n(209672),
     ep = n(698173),
     e_ = n(926262),
@@ -78,49 +78,49 @@ var s = n(399606),
 t.Z = () => {
     let { analyticsLocations: e } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD),
         t = (0, c.ZP)(),
-        i = (0, v.BU)(w.Uq / 1024, { useKibibytes: !0 }),
+        i = (0, T.BU)(w.Uq / 1024, { useKibibytes: !0 }),
         r = (0, s.e7)([x.ZP], () => x.ZP.getPremiumTypeSubscription()),
         eb = null != r ? N.ZP.getPremiumPlanItem(r) : null,
         ex = (null != eb ? N.ZP.getSkuIdForPlan(eb.planId) : null) === w.Si.TIER_2,
         eC = b.default.getCurrentUser(),
-        ev = (0, N.I5)(eC, w.p9.TIER_2),
-        eT = (0, N.I5)(eC, w.p9.TIER_0),
+        eT = (0, N.I5)(eC, w.p9.TIER_2),
+        ev = (0, N.I5)(eC, w.p9.TIER_0),
         { flipped: eN } = (0, R.JP)(),
         { flipped: eI } = (0, R.as)(),
         eS = (0, A.bq)({ showAnimations: !0 }),
         eR = null != eS ? eS.initialPercentage : void 0,
         eA = null != eS ? eS.percentage : void 0,
-        ej = (0, m.Z)(E.Z),
+        ej = (0, g.Z)(E.Z),
         eP = (0, j.ZP)(),
         eZ = (0, j.aJ)(),
-        eB = (0, A.Kb)(y.qY),
-        { fractionalState: eM } = (0, g.Z)(),
-        eO = eM === w.a$.FP_ONLY,
+        eM = (0, A.Kb)(k.qY),
+        { fractionalState: eB } = (0, m.Z)(),
+        eO = eB === w.a$.FP_ONLY,
         ew = (0, p.Z)({
             scrollPosition: L.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }),
-        ey = () => {
-            o.Z.open(k.oAB.VOICE, L.GA, {
+        ek = () => {
+            o.Z.open(y.oAB.VOICE, L.GA, {
                 openWithoutBackstack: !0,
                 analyticsLocations: e
             });
         },
-        ek = () => {
-            (0, _.uL)(k.Z5c.COLLECTIBLES_SHOP);
+        ey = () => {
+            (0, _.uL)(y.Z5c.COLLECTIBLES_SHOP);
         },
         eL = () => {
-            o.Z.open(k.oAB.APPEARANCE, null, { scrollPosition: L.h1.CUSTOM_APP_ICONS });
+            o.Z.open(y.oAB.APPEARANCE, null, { scrollPosition: L.h1.CUSTOM_APP_ICONS });
         },
         eU = {
-            avatarDecorations: ev
+            avatarDecorations: eT
                 ? {
                       name: 'avatarDecorations',
                       title: D.intl.string(D.t['5YcGTk']),
                       subtitle: D.intl.string(D.t.QcJ6cX),
                       description: D.intl.string(D.t.MCvgWl),
                       descriptionCta: D.intl.string(D.t.dBJVnZ),
-                      onCtaClick: ek,
+                      onCtaClick: ey,
                       pillText: D.intl.string(D.t.EYxi0t),
                       perkImage: q,
                       canReveal: eN
@@ -141,14 +141,14 @@ t.Z = () => {
                 description: D.intl.string(D.t.jBTTws),
                 descriptionCta: D.intl.string(D.t.jVcuVV),
                 onCtaClick: () => {
-                    o.Z.open(k.oAB.APPEARANCE, null, {
+                    o.Z.open(y.oAB.APPEARANCE, null, {
                         openWithoutBackstack: !0,
                         analyticsLocations: e
                     });
                 },
                 perkImage: z
             },
-            clips: ev
+            clips: eT
                 ? {
                       name: 'clips',
                       title: D.intl.string(D.t.z2jK6e),
@@ -164,7 +164,7 @@ t.Z = () => {
                                 });
                             }
                           : () => {
-                                window.open(T.Z.getArticleURL(k.BhN.CLIPS), '_blank');
+                                window.open(v.Z.getArticleURL(y.BhN.CLIPS), '_blank');
                             },
                       perkImage: J
                   }
@@ -176,7 +176,7 @@ t.Z = () => {
                       pillText: D.intl.string(D.t.EYxi0t),
                       perkImage: J
                   },
-            earlyAccess: ev
+            earlyAccess: eT
                 ? {
                       name: 'earlyAccess',
                       title: D.intl.string(D.t.UkLVeH),
@@ -192,7 +192,7 @@ t.Z = () => {
                       isPremiumGetCta: !0,
                       perkImage: $
                   },
-            earlyAccessSeeAllVariant: ev
+            earlyAccessSeeAllVariant: eT
                 ? {
                       name: 'earlyAccessSeeAllVariant',
                       title: D.intl.string(D.t.UkLVeH),
@@ -208,14 +208,14 @@ t.Z = () => {
                       isPremiumGetCta: !0,
                       perkImage: ee
                   },
-            entranceSounds: ev
+            entranceSounds: eT
                 ? {
                       name: 'entranceSounds',
                       title: D.intl.string(D.t['f4M+Hx']),
                       subtitle: D.intl.string(D.t['7ZCYvL']),
                       description: D.intl.string(D.t.mUT8bG),
                       descriptionCta: D.intl.string(D.t.jVcuVV),
-                      onCtaClick: ey,
+                      onCtaClick: ek,
                       perkImage: en
                   }
                 : {
@@ -225,14 +225,14 @@ t.Z = () => {
                       description: D.intl.string(D.t['3smf/f']),
                       perkImage: en
                   },
-            entranceSoundsSeeAllVariation: ev
+            entranceSoundsSeeAllVariation: eT
                 ? {
                       name: 'entranceSoundsSeeAllVariation',
                       title: D.intl.string(D.t['f4M+Hx']),
                       subtitle: D.intl.string(D.t['7ZCYvL']),
                       description: D.intl.string(D.t.mUT8bG),
                       descriptionCta: D.intl.string(D.t.jVcuVV),
-                      onCtaClick: ey,
+                      onCtaClick: ek,
                       perkImage: ei
                   }
                 : {
@@ -242,14 +242,14 @@ t.Z = () => {
                       description: D.intl.string(D.t['3smf/f']),
                       perkImage: ei
                   },
-            profileEffects: ev
+            profileEffects: eT
                 ? {
                       name: 'profileEffects',
                       title: D.intl.string(D.t.c7OKaG),
                       subtitle: D.intl.string(D.t.eVvkDw),
                       description: D.intl.string(D.t['0mUM/P']),
                       descriptionCta: D.intl.string(D.t.dBJVnZ),
-                      onCtaClick: ek,
+                      onCtaClick: ey,
                       pillText: D.intl.string(D.t.EYxi0t),
                       perkImage: es,
                       canReveal: eI
@@ -272,7 +272,7 @@ t.Z = () => {
                 onCtaClick: ew,
                 perkImage: Y
             },
-            remixing: ev
+            remixing: eT
                 ? {
                       name: 'remixing',
                       title: D.intl.string(D.t['H+v6eX']),
@@ -298,7 +298,7 @@ t.Z = () => {
                 onCtaClick: eO
                     ? void 0
                     : () => {
-                          o.Z.open(k.oAB.GUILD_BOOSTING, null, {
+                          o.Z.open(y.oAB.GUILD_BOOSTING, null, {
                               openWithoutBackstack: !0,
                               analyticsLocations: e
                           });
@@ -315,14 +315,14 @@ t.Z = () => {
                 perkImage: eh.Z,
                 imageOverlayText: D.intl.string(D.t.lcYttb)
             },
-            specialMemberPricing: ev
+            specialMemberPricing: eT
                 ? {
                       name: 'specialMemberPricing',
                       title: D.intl.string(D.t['0Mykgo']),
                       subtitle: D.intl.string(D.t.opgqDQ),
                       description: D.intl.string(D.t['t+QZSU']),
                       descriptionCta: D.intl.string(D.t.dBJVnZ),
-                      onCtaClick: ek,
+                      onCtaClick: ey,
                       perkImage: ed
                   }
                 : {
@@ -333,14 +333,14 @@ t.Z = () => {
                       isPremiumGetCta: !0,
                       perkImage: ed
                   },
-            specialMemberPricingSeeAllVariant: ev
+            specialMemberPricingSeeAllVariant: eT
                 ? {
                       name: 'specialMemberPricingSeeAllVariant',
                       title: D.intl.string(D.t['0Mykgo']),
                       subtitle: D.intl.string(D.t.opgqDQ),
                       description: D.intl.string(D.t['t+QZSU']),
                       descriptionCta: D.intl.string(D.t.dBJVnZ),
-                      onCtaClick: ek,
+                      onCtaClick: ey,
                       perkImage: eu
                   }
                 : {
@@ -351,14 +351,14 @@ t.Z = () => {
                       isPremiumGetCta: !0,
                       perkImage: eu
                   },
-            specialShopPerks: ev
+            specialShopPerks: eT
                 ? {
                       name: 'specialShopPerks',
                       title: D.intl.string(D.t.U68LpK),
                       subtitle: D.intl.string(D.t.chRZiY),
                       description: D.intl.string(D.t['t+QZSU']),
                       descriptionCta: D.intl.string(D.t.dBJVnZ),
-                      onCtaClick: ek,
+                      onCtaClick: ey,
                       perkImage: ed
                   }
                 : {
@@ -367,10 +367,10 @@ t.Z = () => {
                       subtitle: D.intl.string(D.t.chRZiY),
                       description: D.intl.string(D.t['JE/EWV']),
                       descriptionCta: D.intl.string(D.t.dBJVnZ),
-                      onCtaClick: ek,
+                      onCtaClick: ey,
                       perkImage: ed
                   },
-            unlimitedSuperReactions: ev
+            unlimitedSuperReactions: eT
                 ? {
                       name: 'unlimitedSuperReactions',
                       title: D.intl.string(D.t.hpgmOz),
@@ -405,7 +405,7 @@ t.Z = () => {
                 name: 'badge',
                 title: D.intl.string(D.t.dcFfSE),
                 subtitle: D.intl.string(D.t['37MFFh']),
-                perkImage: H,
+                perkImage: G,
                 description: D.intl.string(D.t.T1IS4u)
             },
             greyBadge: {
@@ -436,14 +436,14 @@ t.Z = () => {
                 name: 'customSoundsEverywhere',
                 title: D.intl.string(D.t.LWsAra),
                 subtitle: D.intl.string(D.t.bTzbVl),
-                perkImage: (0, M.gx)(t, V, F),
+                perkImage: (0, B.gx)(t, V, F),
                 description: D.intl.string(D.t.JLnOMz)
             },
             specialStickerAccess: {
                 name: 'specialStickerAccess',
                 title: D.intl.string(D.t.tzdIwM),
                 subtitle: D.intl.string(D.t.FXlU29),
-                perkImage: (0, M.gx)(t, W, eg),
+                perkImage: (0, B.gx)(t, W, em),
                 description: D.intl.string(D.t.e7FKCg)
             },
             largeUploads: {
@@ -457,7 +457,7 @@ t.Z = () => {
                 name: 'hdVideo',
                 title: D.intl.string(D.t.RSXQYG),
                 subtitle: D.intl.string(D.t.ymCPxs),
-                perkImage: em,
+                perkImage: eg,
                 description: D.intl.string(D.t['4WgB//'])
             },
             newAppStylesUpdateJune2024: {
@@ -465,16 +465,16 @@ t.Z = () => {
                 title: D.intl.string(D.t.XQCSrq),
                 subtitle: D.intl.string(D.t.HC5wVV),
                 description: D.intl.string(D.t.ee7wQ0),
-                descriptionCta: ev || eT ? D.intl.string(D.t.y9TxXV) : D.intl.string(D.t.d8o6lZ),
-                isPremiumGetCta: !(ev || eT),
-                onCtaClick: ev || eT ? eL : void 0,
+                descriptionCta: eT || ev ? D.intl.string(D.t.y9TxXV) : D.intl.string(D.t.d8o6lZ),
+                isPremiumGetCta: !(eT || ev),
+                onCtaClick: eT || ev ? eL : void 0,
                 perkImage: er
             },
             referralProgram: {
                 name: 'referralProgram',
                 title: D.intl.string(D.t.tPY4o6),
                 subtitle: D.intl.string(D.t.JY0grK),
-                description: D.intl.format(D.t['2JqTFx'], { helpdeskArticle: T.Z.getArticleURL(k.BhN.REFERRAL_PROGRAM) }),
+                description: D.intl.format(D.t['2JqTFx'], { helpdeskArticle: v.Z.getArticleURL(y.BhN.REFERRAL_PROGRAM) }),
                 descriptionCta: D.intl.string(D.t.JST6jo),
                 isPremiumGetCta: !ex || void 0,
                 perkImage: el
@@ -483,19 +483,19 @@ t.Z = () => {
                 name: 'serverProfiles',
                 title: D.intl.string(D.t.I9TYMj),
                 subtitle: D.intl.string(D.t.HMSHeH),
-                descriptionCta: ev ? D.intl.string(D.t.jVcuVV) : D.intl.string(D.t.JST6jo),
-                isPremiumGetCta: !ev,
-                onCtaClick: ev ? ew : void 0,
+                descriptionCta: eT ? D.intl.string(D.t.jVcuVV) : D.intl.string(D.t.JST6jo),
+                isPremiumGetCta: !eT,
+                onCtaClick: eT ? ew : void 0,
                 perkImage: ec
             }
         };
     if (null != eZ) {
         let { title: t, subtitle: n, description: i, pillText: r, ctaDescription: s, dismissibleContentType: l } = eZ,
             o = (0, a.jsx)('div', {
-                className: G.cardComponent,
+                className: H.cardComponent,
                 children: (0, a.jsx)(P.ZP, {
                     progressCircleVariation: P.Qo.AVATAR_DECO,
-                    avatarDecoAssetId: y.VA,
+                    avatarDecoAssetId: k.VA,
                     avatarDecoAssetDescription: D.intl.string(D.t['9o4F4+']),
                     showAnimations: !0,
                     percentage: eA,
@@ -510,15 +510,15 @@ t.Z = () => {
             perkComponent: o,
             descriptionCta: s,
             onCtaClick: () => {
-                if (null != eB)
+                if (null != eM)
                     (0, f.Z)({
-                        product: eB,
+                        product: eM,
                         title: D.intl.string(D.t.wRAXra),
                         description: D.intl.string(D.t.sQX6HR),
                         analyticsLocations: e
                     });
             },
-            cardVariant: B.zW.REWARD,
+            cardVariant: M.zW.REWARD,
             pillText: r,
             dismissibleContentType: l
         };
@@ -526,7 +526,7 @@ t.Z = () => {
     if (null != eP) {
         let { title: t, subtitle: n, description: i, pillText: r, ctaDescription: s, dismissibleContentType: l } = eP,
             c = (0, a.jsx)('div', {
-                className: G.cardComponent,
+                className: H.cardComponent,
                 children: (0, a.jsx)(P.ZP, {
                     showAnimations: !0,
                     percentage: eA,
@@ -541,17 +541,17 @@ t.Z = () => {
             perkComponent: c,
             descriptionCta: s,
             onCtaClick: () => {
-                o.Z.open(k.oAB.GUILD_BOOSTING, null, { analyticsLocations: e });
+                o.Z.open(y.oAB.GUILD_BOOSTING, null, { analyticsLocations: e });
             },
-            cardVariant: B.zW.REWARD,
+            cardVariant: M.zW.REWARD,
             pillText: r,
             dismissibleContentType: l
         };
     }
     let eD = (0, O.kG)(),
-        { enabled: eG } = (0, S.Z)(),
-        eH = () => {
-            C.default.track(k.rMx.OPEN_MODAL, {
+        { enabled: eH } = (0, S.Z)(),
+        eG = () => {
+            C.default.track(y.rMx.OPEN_MODAL, {
                 type: 'Tiered Tenure Badge Details',
                 location_stack: e,
                 location: d.Z.PREMIUM_MARKETING_PERK_CARD,
@@ -564,26 +564,26 @@ t.Z = () => {
         };
     return (
         null != eD &&
-            eG &&
+            eH &&
             (eU.tenureBadge = {
                 name: 'tenureBadge',
                 title: D.intl.string(D.t.rnsqpa),
                 pillText: D.intl.string(D.t.jyYgZ2).toLocaleUpperCase(),
                 perkComponent: (0, a.jsx)(Z.Z, {}),
-                cardVariant: B.zW.NITRO_GRADIENT_HOVER_BORDER,
-                onClick: () => eH()
+                cardVariant: M.zW.NITRO_GRADIENT_HOVER_BORDER,
+                onClick: () => eG()
             }),
         (0, I.ZP)('usePerksDiscoverabilityCard') === I.P0.SUMMER_2024 &&
             (eU.shyProject = {
                 name: 'shyProject',
                 title: D.intl.string(D.t['0Mykgo']),
                 subtitle: D.intl.string(D.t.opgqDQ),
-                description: ev ? D.intl.string(D.t['t+QZSU']) : D.intl.string(D.t['JE/EWV']),
+                description: eT ? D.intl.string(D.t['t+QZSU']) : D.intl.string(D.t['JE/EWV']),
                 descriptionCta: D.intl.string(D.t.dBJVnZ),
                 pillText: D.intl.string(D.t.tahjbG).toLocaleUpperCase(),
-                onCtaClick: ev ? ek : void 0,
+                onCtaClick: eT ? ey : void 0,
                 perkImage: Q,
-                isPremiumGetCta: !ev
+                isPremiumGetCta: !eT
             }),
         eU
     );

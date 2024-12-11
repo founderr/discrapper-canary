@@ -33,8 +33,8 @@ var i,
     N = n(496675),
     T = n(938475),
     b = n(626135),
-    x = n(823379),
-    A = n(15274),
+    A = n(823379),
+    x = n(15274),
     Z = n(924301),
     L = n(504160),
     y = n(151864),
@@ -227,7 +227,7 @@ function W(e) {
                     className: H.textBlock,
                     children: [
                         (0, l.jsx)(d.Clickable, {
-                            onClick: () => (0, A.bO)({ eventId: n.id }),
+                            onClick: () => (0, x.bO)({ eventId: n.id }),
                             className: H.eventNameClickable,
                             children: (0, l.jsx)(d.Text, {
                                 color: 'header-primary',
@@ -326,7 +326,7 @@ function Y(e) {
 function K(e) {
     let { guildEvent: t } = e,
         n = a.useCallback(() => {
-            (0, A.bO)({ eventId: t.id });
+            (0, x.bO)({ eventId: t.id });
         }, [t]);
     return (0, l.jsx)(d.Button, {
         fullWidth: !0,
@@ -400,7 +400,7 @@ function Q(e) {
             p = B.intl.string(B.t.wBoE6O);
             break;
         default:
-            (0, x.vE)(i);
+            (0, A.vE)(i);
     }
     return null == r
         ? null

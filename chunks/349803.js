@@ -8,15 +8,15 @@ var r = n(120356),
     c = n(639119),
     d = n(318747),
     u = n(409100),
-    g = n(474936),
-    m = n(981631),
+    m = n(474936),
+    g = n(981631),
     f = n(798849);
 t.Z = function (e) {
     var t, n;
     let { isVisible: r, isFullscreen: p, subscriptionTier: _ } = e,
         h = null === (t = (0, c.N)()) || void 0 === t ? void 0 : t.subscription_trial,
         E = (0, o.Ng)(),
-        b = (0, o.Wp)(E, g.Si.TIER_2) ? g.Si.TIER_2 : void 0,
+        b = (0, o.Wp)(E, m.Si.TIER_2) ? m.Si.TIER_2 : void 0,
         x = (0, l.useSpring)({
             transform: r ? 'translateY(-100%)' : 'translateY(0%)',
             opacity: r ? 1 : 0,
@@ -25,7 +25,7 @@ t.Z = function (e) {
                 friction: 12
             }
         }),
-        C = { section: m.jXE.MARKETING_FLOATING_CTA };
+        C = { section: g.jXE.MARKETING_FLOATING_CTA };
     return (0, i.jsx)(s.animated.div, {
         className: a()(f.wrapper, {
             [f.fullscreenWrapper]: p,

@@ -13,8 +13,8 @@ var i = n(200651),
     c = n(906732),
     d = n(584825),
     u = n(931547),
-    g = n(388032);
-let m = (e) => {
+    m = n(388032);
+let g = (e) => {
     let [t, n] = r.useState(!1),
         [i, a] = r.useState(null);
     return {
@@ -35,7 +35,7 @@ let m = (e) => {
 function f(e) {
     let { groupListingId: t, subscription: n, className: a } = e,
         { analyticsLocations: l } = (0, c.ZP)(o.Z.PENDING_PLAN_CHANGE_NOTICE),
-        { resetRenewalMutation: f, submitting: p, error: _ } = m(l),
+        { resetRenewalMutation: f, submitting: p, error: _ } = g(l),
         h = (0, d._k)(t, { includeSoftDeleted: !0 }),
         { currentListing: E, nextListing: b } = r.useMemo(() => {
             if ((null == n ? void 0 : n.renewalMutations) == null)
@@ -54,7 +54,7 @@ function f(e) {
     if (null == n || null == E || null == b) return null;
     let x = s()(n.currentPeriodEnd).format('MMM DD, YYYY');
     return (0, i.jsx)(u.Z, {
-        message: g.intl.format(g.t.chw89f, {
+        message: m.intl.format(m.t.chw89f, {
             currentListing: E.name,
             nextListing: b.name,
             changeDate: x
@@ -62,7 +62,7 @@ function f(e) {
         error: null == _ ? void 0 : _.message,
         onClick: () => f(n),
         submitting: p,
-        ctaMessage: g.intl.string(g.t.De4wIy),
+        ctaMessage: m.intl.string(m.t.De4wIy),
         className: a
     });
 }

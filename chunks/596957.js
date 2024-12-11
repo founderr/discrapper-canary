@@ -22,8 +22,8 @@ var i = n(200651),
     N = n(696577),
     T = n(163417),
     b = n(830880),
-    x = n(492347),
-    A = n(42575),
+    A = n(492347),
+    x = n(42575),
     Z = n(617015),
     L = n(981631),
     y = n(388032),
@@ -109,7 +109,7 @@ t.Z = function (e) {
                 (0, i.jsxs)('div', {
                     className: P.sectionTitle,
                     children: [
-                        (0, i.jsx)(x.Z, {
+                        (0, i.jsx)(A.Z, {
                             id: l,
                             title: (function (e, t) {
                                 switch (e) {
@@ -161,7 +161,7 @@ t.Z = function (e) {
                                           isFocused: D
                                       });
                                   case L.pJs.SUGGESTIONS:
-                                      return (0, i.jsx)(A.Z, {
+                                      return (0, i.jsx)(x.Z, {
                                           ...e,
                                           isFocused: D
                                       });

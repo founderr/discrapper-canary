@@ -15,8 +15,8 @@ var i,
     c = n(526167),
     d = n(63063),
     u = n(981631),
-    g = n(526761),
-    m = n(388032),
+    m = n(526761),
+    g = n(388032),
     f = n(509614),
     p = n(880511),
     _ = n(985443),
@@ -25,8 +25,8 @@ var i,
     b = n(872532),
     x = n(91342),
     C = n(181708),
-    v = n(821721),
-    T = n(158897),
+    T = n(821721),
+    v = n(158897),
     N = n(290650),
     I = n(751125),
     S = n(904505),
@@ -35,8 +35,8 @@ var i,
     j = n(845571),
     P = n(220046),
     Z = n(385874),
-    B = n(371000),
-    M = n(377679),
+    M = n(371000),
+    B = n(377679),
     O = n(825087);
 ((i = r || (r = {})).NEW_APP_STYLES = 'newAppStyles'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.SERVER_PROFILES = 'serverProfiles'), (i.SHOW_YOUR_STYLE = 'showYourStyle'), (i.YOUR_SPACE = 'yourSpace'), (i.EMOJIS = 'emojis'), (i.NO_LIMITS = 'noLimits');
 let w = () => {
@@ -44,16 +44,16 @@ let w = () => {
     return {
         emojis: {
             name: 'emojis',
-            title: m.intl.string(m.t.zY5PPT),
-            description: m.intl.string(m.t.R5Xag4),
+            title: g.intl.string(g.t.zY5PPT),
+            description: g.intl.string(g.t.R5Xag4),
             previewImage: f,
             videoUrl: e ? x.Z : C.Z,
             isCompact: !0
         },
         noLimits: {
             name: 'noLimits',
-            title: m.intl.string(m.t['6b3ydH']),
-            description: m.intl.string(m.t['Y+IJys']),
+            title: g.intl.string(g.t['6b3ydH']),
+            description: g.intl.string(g.t['Y+IJys']),
             previewImage: p,
             videoUrl: e ? N.Z : I.Z,
             isCompact: !0
@@ -63,7 +63,7 @@ let w = () => {
 t.ZP = (e) => {
     let { analyticsLocations: t } = (0, l.ZP)(s.Z.PREMIUM_MARKETING_BENTO_BOX),
         n = (0, o.Z)({
-            scrollPosition: g.Y_.TRY_IT_OUT,
+            scrollPosition: m.Y_.TRY_IT_OUT,
             analyticsLocations: t
         }),
         i = () => {
@@ -77,48 +77,48 @@ t.ZP = (e) => {
         p = {
             serverProfiles: {
                 name: 'serverProfiles',
-                title: m.intl.string(m.t.I9TYMj),
-                description: m.intl.string(m.t.HMSHeH),
-                descriptionCta: m.intl.string(m.t.jVcuVV),
+                title: g.intl.string(g.t.I9TYMj),
+                description: g.intl.string(g.t.HMSHeH),
+                descriptionCta: g.intl.string(g.t.jVcuVV),
                 onClick: n,
                 previewImage: b,
                 videoUrl: r ? j.Z : P.Z
             },
             referralProgram: {
                 name: 'referralProgram',
-                title: m.intl.string(m.t.tPY4o6),
-                description: m.intl.format(m.t.jRPQUF, { learnMoreLink: f }),
+                title: g.intl.string(g.t.tPY4o6),
+                description: g.intl.format(g.t.jRPQUF, { learnMoreLink: f }),
                 previewImage: R.Z,
                 videoUrl: r ? S.Z : A.Z
             },
             newAppStyles: {
                 name: 'newAppStyles',
-                title: m.intl.string(m.t.XQCSrq),
-                description: m.intl.string(m.t.HC5wVV),
-                descriptionCta: m.intl.string(m.t.jVcuVV),
+                title: g.intl.string(g.t.XQCSrq),
+                description: g.intl.string(g.t.HC5wVV),
+                descriptionCta: g.intl.string(g.t.jVcuVV),
                 onClick: i,
                 previewImage: E,
-                videoUrl: r ? v.Z : T.Z
+                videoUrl: r ? T.Z : v.Z
             }
         },
         x = {
             showYourStyle: {
                 name: 'showYourStyle',
-                title: m.intl.string(m.t.Ij3Zmp),
-                description: m.intl.string(m.t.UsOUxc),
-                descriptionCta: m.intl.string(m.t.jVcuVV),
+                title: g.intl.string(g.t.Ij3Zmp),
+                description: g.intl.string(g.t.UsOUxc),
+                descriptionCta: g.intl.string(g.t.jVcuVV),
                 previewImage: h,
                 onClick: n,
-                videoUrl: r ? Z.Z : B.Z
+                videoUrl: r ? Z.Z : M.Z
             },
             yourSpace: {
                 name: 'yourSpace',
-                title: m.intl.string(m.t.Wme3nZ),
-                description: m.intl.string(m.t['/aAIqa']),
-                descriptionCta: m.intl.string(m.t.jVcuVV),
+                title: g.intl.string(g.t.Wme3nZ),
+                description: g.intl.string(g.t['/aAIqa']),
+                descriptionCta: g.intl.string(g.t.jVcuVV),
                 previewImage: _,
                 onClick: i,
-                videoUrl: r ? M.Z : O.Z
+                videoUrl: r ? B.Z : O.Z
             }
         };
     return e ? x : p;

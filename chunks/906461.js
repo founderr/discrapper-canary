@@ -8,15 +8,15 @@ var r = n(120356),
     c = n(63063),
     d = n(769415),
     u = n(639119),
-    g = n(276800),
-    m = n(474936),
+    m = n(276800),
+    g = n(474936),
     f = n(981631),
     p = n(388032),
     _ = n(763563);
 t.Z = function (e) {
     let { isFullScreen: t } = e,
         r = (0, u.N)(),
-        h = (null == r ? void 0 : r.trial_id) === m.jz,
+        h = (null == r ? void 0 : r.trial_id) === g.jz,
         { enabled: E } = d.Z.useExperiment({ location: 'Q4MomentBanner' + (t ? '-NitroHome' : '-NitroSettings') });
     if (!h || !E || null == r.expires_at) return null;
     let b = new Date(r.expires_at),
@@ -47,7 +47,7 @@ t.Z = function (e) {
                                 className: _.countdown,
                                 variant: 'text-sm/bold',
                                 color: 'always-white',
-                                children: (0, i.jsx)(g.Z, { endDate: b })
+                                children: (0, i.jsx)(m.Z, { endDate: b })
                             }),
                             (0, i.jsx)(s.Text, {
                                 variant: 'text-sm/medium',

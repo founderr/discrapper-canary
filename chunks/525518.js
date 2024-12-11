@@ -23,7 +23,7 @@ function d(e) {
         onClick: n,
         innerClassName: u.buttonContent,
         className: u.button,
-        children: (0, i.jsx)(r.ShareIcon, {
+        children: (0, i.jsx)(r.LinkIcon, {
             size: 'md',
             color: 'currentColor',
             className: u.shareIcon

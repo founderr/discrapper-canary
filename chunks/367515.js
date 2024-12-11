@@ -12,8 +12,8 @@ var i = n(200651),
     c = n(594174),
     d = n(880257),
     u = n(631885),
-    g = n(933970),
-    m = n(340453),
+    m = n(933970),
+    g = n(340453),
     f = n(292352),
     p = n(388032),
     _ = n(659506);
@@ -63,7 +63,7 @@ function h(e) {
         children: [
             (0, i.jsx)('div', {
                 className: _.details,
-                children: (0, i.jsx)(m.Z, {
+                children: (0, i.jsx)(g.Z, {
                     otherUser: t,
                     status: f.ne.PENDING
                 })
@@ -71,7 +71,7 @@ function h(e) {
             (0, i.jsx)('div', {
                 className: _.actions,
                 children: a
-                    ? (0, i.jsx)(g.Z, {
+                    ? (0, i.jsx)(m.Z, {
                           icon: o.XSmallIcon,
                           className: _.__invalid_actionDeny,
                           tooltip: p.intl.string(p.t.e5iHmZ),
@@ -81,13 +81,13 @@ function h(e) {
                           children: [
                               h
                                   ? null
-                                  : (0, i.jsx)(g.Z, {
+                                  : (0, i.jsx)(m.Z, {
                                         icon: o.CheckmarkLargeIcon,
                                         className: _.__invalid_actionAccept,
                                         tooltip: p.intl.string(p.t.krWQZG),
                                         onClick: b
                                     }),
-                              (0, i.jsx)(g.Z, {
+                              (0, i.jsx)(m.Z, {
                                   icon: o.XSmallIcon,
                                   className: _.__invalid_actionDeny,
                                   tooltip: p.intl.string(p.t.bBDeND),

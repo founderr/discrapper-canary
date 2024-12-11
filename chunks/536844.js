@@ -8,8 +8,8 @@ var r = n(120356),
     c = n(197115),
     d = n(388032),
     u = n(587362),
-    g = n(568147),
-    m = n(332796);
+    m = n(568147),
+    g = n(332796);
 t.Z = (e) => {
     let { className: t, imageClassName: n, textContainerOverrideStyles: r, location: f, analyticsLocation: p } = e,
         { analyticsLocations: _ } = (0, l.ZP)(f),
@@ -46,7 +46,7 @@ t.Z = (e) => {
                     ]
                 }),
                 (0, i.jsx)('img', {
-                    src: b ? m : g,
+                    src: b ? g : m,
                     className: a()(u.bannerImage, n),
                     alt: 'gift nitro banner'
                 })

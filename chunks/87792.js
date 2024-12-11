@@ -8,8 +8,8 @@ var i = n(200651),
     c = n(626135),
     d = n(709054),
     u = n(914788),
-    g = n(546791),
-    m = n(259756),
+    m = n(546791),
+    g = n(259756),
     f = n(785681),
     p = n(985002),
     _ = n(858719),
@@ -18,8 +18,8 @@ var i = n(200651),
     b = n(631885),
     x = n(240351),
     C = n(792258),
-    v = n(657825),
-    T = n(198952),
+    T = n(657825),
+    v = n(198952),
     N = n(329242),
     I = n(895328),
     S = n(292352),
@@ -56,7 +56,7 @@ function Z(e) {
         { loadMore: u, isMoreLoading: f } = (0, p.G)({ onError: n }),
         h = S.tx.get(t),
         [b, x] = r.useState(S.iB),
-        T = (0, m.Xi)({ location: 'family_center_activity_section_web' }),
+        v = (0, g.Xi)({ location: 'family_center_activity_section_web' }),
         N = r.useCallback(() => {
             x((e) => e + S.iB), u(t);
         }, [t, u]);
@@ -66,9 +66,9 @@ function Z(e) {
             (e) => {
                 let { row: t } = e,
                     n = l[t];
-                return (0, g.iB)(n)
+                return (0, m.iB)(n)
                     ? (0, i.jsx)(
-                          v.Z,
+                          T.Z,
                           {
                               userId: n.entity_id,
                               timestamp: d.default.extractTimestamp(n.event_id),
@@ -76,7 +76,7 @@ function Z(e) {
                           },
                           n.event_id
                       )
-                    : (0, g.f0)(n)
+                    : (0, m.f0)(n)
                       ? (0, i.jsx)(C.Z, { guildId: n.entity_id }, n.event_id)
                       : void 0;
             },
@@ -97,12 +97,12 @@ function Z(e) {
                                   className: j.sectionDescription,
                                   variant: 'text-md/medium',
                                   color: 'text-muted',
-                                  children: h.sectionDescription(null != a && a, T)
+                                  children: h.sectionDescription(null != a && a, v)
                               })
                             : null
                     ]
                 }),
-            [I, h, a, T]
+            [I, h, a, v]
         );
     if (0 === l.length) return null;
     let Z = l.slice(0, b);
@@ -135,11 +135,11 @@ function Z(e) {
         ]
     });
 }
-let B = () => {
+let M = () => {
         let e = (0, E.Z)(),
             t = (0, b.mq)(S.ne.ACTIVE),
             n = (0, f.o)(A.intl.formatToPlainString(A.t['7hqFl5'], { activeLinks: t.length }), A.intl.string(A.t['Q/D/0d'])),
-            r = (0, g.Qr)(!!e),
+            r = (0, m.Qr)(!!e),
             a = (0, b.Rd)(r);
         return e && t.length > 1
             ? (0, i.jsx)(o.Text, {
@@ -162,7 +162,7 @@ let B = () => {
                   ]
               });
     },
-    M = (e) => {
+    B = (e) => {
         let { userId: t, subText: n, avatarSize: r = o.AvatarSizes.SIZE_40 } = e,
             a = (0, h.I)(t);
         return void 0 === a
@@ -170,7 +170,7 @@ let B = () => {
             : (0, i.jsxs)('div', {
                   className: j.accountRow,
                   children: [
-                      (0, i.jsx)(T.r, {
+                      (0, i.jsx)(v.r, {
                           user: a,
                           avatarSize: r
                       }),
@@ -200,7 +200,7 @@ let B = () => {
             })),
             s = r.useCallback(
                 (e) =>
-                    (0, i.jsx)(M, {
+                    (0, i.jsx)(B, {
                         userId: e.value,
                         avatarSize: o.AvatarSizes.SIZE_24
                     }),
@@ -225,11 +225,11 @@ let B = () => {
         let { userId: t } = e,
             n = (0, E.Z)(),
             r = (0, b.mq)(S.ne.ACTIVE),
-            a = (0, g.Qr)(!!n),
+            a = (0, m.Qr)(!!n),
             s = (0, b.Rd)(a);
         return n && 1 !== r.length
             ? (0, i.jsx)(O, {})
-            : (0, i.jsx)(M, {
+            : (0, i.jsx)(B, {
                   userId: t,
                   subText: s
               });
@@ -238,14 +238,14 @@ t.Z = (e) => {
     let { user: t } = e,
         n = Array.from(S.tx.entries()),
         r = (0, _.kE)(),
-        a = (0, g.t3)(),
+        a = (0, m.t3)(),
         s = (0, b.Rd)(a);
     return (0, i.jsxs)('div', {
         className: j.container,
         children: [
             (0, i.jsxs)('div', {
                 className: j.connectedCounter,
-                children: [(0, i.jsx)(B, {}), (0, i.jsx)(P, {})]
+                children: [(0, i.jsx)(M, {}), (0, i.jsx)(P, {})]
             }),
             (0, i.jsxs)('div', {
                 className: j.card,

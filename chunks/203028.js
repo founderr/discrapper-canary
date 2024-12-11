@@ -164,7 +164,7 @@ function E(e) {
                 icon: (0, i.jsx)(p.Z.Header.Icon, { src: p.Z.Header.Icon.Src.MULTIPLE })
             };
         })(E),
-        x = (0, d.Z)({
+        A = (0, d.Z)({
             applicationId: null === (r = E.currentActivities[0]) || void 0 === r ? void 0 : null === (t = r.activity) || void 0 === t ? void 0 : t.application_id,
             location: 'FriendsActivityFeed',
             source: c.m1.FriendsActivityFeed
@@ -175,8 +175,8 @@ function E(e) {
         title: N,
         subtitle: T,
         icon: b,
-        onSubtitleClick: x,
-        onIconClick: x,
+        onSubtitleClick: A,
+        onIconClick: A,
         onContextMenu: (e) => I(e, S.user)
     });
 }

@@ -8,8 +8,8 @@ var i = n(200651),
     c = n(481060),
     d = n(634894),
     u = n(410030),
-    g = n(100527),
-    m = n(906732),
+    m = n(100527),
+    g = n(906732),
     f = n(975298),
     p = n(15640),
     _ = n(594174),
@@ -18,8 +18,8 @@ var i = n(200651),
     b = n(775412),
     x = n(104494),
     C = n(639119),
-    v = n(230916),
-    T = n(346497),
+    T = n(230916),
+    v = n(346497),
     N = n(823188),
     I = n(21023),
     S = n(318747),
@@ -28,18 +28,18 @@ var i = n(200651),
     j = n(388032),
     P = n(808112),
     Z = n(102655),
-    B = n(768236),
-    M = n(314907),
+    M = n(768236),
+    B = n(314907),
     O = n(826701);
 let w = () => {
-        let e = (0, T.W1)();
+        let e = (0, v.W1)();
         return (0, i.jsx)(N.Cy, {
             text: e,
             className: P.bogoPillWithSparkles,
             colorOptions: N.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
         });
     },
-    y = () =>
+    k = () =>
         (0, i.jsx)('div', {
             className: P.mostPopularPill,
             children: (0, i.jsx)(c.Heading, {
@@ -48,11 +48,11 @@ let w = () => {
                 children: j.intl.string(j.t['o/oRJC'])
             })
         }),
-    k = (e) => {
+    y = (e) => {
         let t,
             { premiumType: n } = e,
             r = (0, u.ZP)();
-        t = n === A.p9.TIER_0 ? ((0, o.wj)(r) ? Z : B) : (0, o.wj)(r) ? M : O;
+        t = n === A.p9.TIER_0 ? ((0, o.wj)(r) ? Z : M) : (0, o.wj)(r) ? B : O;
         let a = (0, E.Px)(n);
         return (0, i.jsx)('img', {
             src: t,
@@ -117,9 +117,9 @@ let w = () => {
 t.Z = (e) => {
     var t;
     let n,
-        { className: a, hideCTAs: Z = !1, headingOverride: B, hidePill: M = !1, selectedPlanColumnClassName: O, selectedPlanTier: D = A.p9.TIER_2 } = e,
-        { analyticsLocations: G } = (0, m.ZP)(g.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
-        H = (0, l.e7)([h.ZP], () => h.ZP.hasFetchedSubscriptions()),
+        { className: a, hideCTAs: Z = !1, headingOverride: M, hidePill: B = !1, selectedPlanColumnClassName: O, selectedPlanTier: D = A.p9.TIER_2 } = e,
+        { analyticsLocations: H } = (0, g.ZP)(m.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
+        G = (0, l.e7)([h.ZP], () => h.ZP.hasFetchedSubscriptions()),
         V = (0, p.V)(),
         F = 'PlanComparisonTable';
     (0, d.j)({
@@ -139,22 +139,22 @@ t.Z = (e) => {
         J = (0, b.rT)(),
         X = (0, x.Ng)(),
         $ = null != X && (0, x.Wp)(X, A.Si.TIER_2),
-        ee = (0, v.A)(A.Xh.PREMIUM_MONTH_TIER_2),
+        ee = (0, T.A)(A.Xh.PREMIUM_MONTH_TIER_2),
         et = ''.concat(ee, '/').concat((0, E.eP)(A.rV.MONTH)),
         en = (0, E.CY)(A.Xh.PREMIUM_MONTH_TIER_0),
         ei = (0, E.CY)(A.Xh.PREMIUM_MONTH_TIER_2),
         er = (0, f.Z)(),
         ea = (0, I.n)(en, ei, $, et, er.fractionalState),
-        es = (0, T.Vi)();
-    if (!H || !V) return null;
+        es = (0, v.Vi)();
+    if (!G || !V) return null;
     let el = {
         label: (0, i.jsx)(c.Heading, {
             className: P.__invalid_textColor,
             variant: 'heading-lg/extrabold',
             children: j.intl.string(j.t.ED4UVF)
         }),
-        column1: (0, i.jsx)(k, { premiumType: A.p9.TIER_0 }),
-        column2: (0, i.jsx)(k, { premiumType: A.p9.TIER_2 })
+        column1: (0, i.jsx)(y, { premiumType: A.p9.TIER_0 }),
+        column2: (0, i.jsx)(y, { premiumType: A.p9.TIER_2 })
     };
     Z
         ? ea.push({
@@ -221,7 +221,7 @@ t.Z = (e) => {
               withBottomBorderRadius: !0,
               buttonsRow: null == q
           }),
-        (n = M
+        (n = B
             ? null
             : null != q || null != J
               ? (0, i.jsx)(N.Cy, {
@@ -231,10 +231,10 @@ t.Z = (e) => {
                 })
               : es
                 ? (0, i.jsx)(w, {})
-                : (0, i.jsx)(y, {}));
+                : (0, i.jsx)(k, {}));
     let eo = q === A.Si.TIER_0 || J === A.p9.TIER_0 || D === A.p9.TIER_0;
-    return (0, i.jsx)(m.Gt, {
-        value: G,
+    return (0, i.jsx)(g.Gt, {
+        value: H,
         children: (0, i.jsxs)('div', {
             className: s()(P.root, a),
             'data-testid': 'v2-marketing-page-comparison-table',
@@ -242,7 +242,7 @@ t.Z = (e) => {
                 (0, i.jsx)(c.Heading, {
                     className: s()(P.titleText, P.__invalid_textColor),
                     variant: 'heading-xxl/extrabold',
-                    children: null != B ? B : j.intl.string(j.t.FIbMh4)
+                    children: null != M ? M : j.intl.string(j.t.FIbMh4)
                 }),
                 (0, i.jsxs)('div', {
                     className: P.tableWrapper,

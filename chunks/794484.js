@@ -8,8 +8,8 @@ var i = n(200651),
     c = n(975298),
     d = n(410154),
     u = n(314684),
-    g = n(565626),
-    m = n(32173),
+    m = n(565626),
+    g = n(32173),
     f = n(976465),
     p = n(391110),
     _ = n(75077),
@@ -47,18 +47,18 @@ let b = (e) => {
 };
 t.Z = (e) => {
     var t, n;
-    let { className: a, variant: x = p.R0.PERKS_DISCOVERABILITY, noBackground: C = !1, leftAlignHeaders: v = !1, showAllPerksButton: T, headerClassname: N, isFullScreen: I = !0 } = e,
+    let { className: a, variant: x = p.R0.PERKS_DISCOVERABILITY, noBackground: C = !1, leftAlignHeaders: T = !1, showAllPerksButton: v, headerClassname: N, isFullScreen: I = !0 } = e,
         S = r.useRef(null),
         R = (0, u.yQ)(),
-        A = (0, g.Ag)(R),
+        A = (0, m.Ag)(R),
         j = (0, d.ZP)('perks-discoverability');
-    (0, g.I2)();
+    (0, m.I2)();
     let P = x === p.R0.WHATS_NEW,
         Z = (0, u.IY)(),
-        B = (0, f.x$)();
+        M = (0, f.x$)();
     r.useEffect(() => {
-        P && !A && (Z(), B());
-    }, [Z, B, P, A]),
+        P && !A && (Z(), M());
+    }, [Z, M, P, A]),
         r.useEffect(() => {
             let e = S.current;
             if (null == e || !A || !P) return;
@@ -69,76 +69,76 @@ t.Z = (e) => {
                 cancelAnimationFrame(t), P && Z();
             };
         }, [S, A, P, Z]);
-    let M = (0, _.Op)(P),
-        O = (0, m.Z)(),
+    let B = (0, _.Op)(P),
+        O = (0, g.Z)(),
         w = (0, _.mN)(),
-        { fractionalState: y } = (0, c.Z)(),
-        k = (0, _.sP)({
+        { fractionalState: k } = (0, c.Z)(),
+        y = (0, _.sP)({
             perksCards: O,
             variant: x,
             shopMarketingVariation: j,
             isFullScreen: I,
             showTenureCard: null == R ? void 0 : R.showCard,
             isPremiumSubscriber: w,
-            fractionalState: y
+            fractionalState: k
         }),
-        L = k.some((e) => null != e.pillText),
+        L = y.some((e) => null != e.pillText),
         [U, D] = r.useState(null),
-        G = r.useRef(new l.qA());
+        H = r.useRef(new l.qA());
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            ((null == O ? void 0 : null === (t = O.freeBoost) || void 0 === t ? void 0 : t.name) === m.u.FREE_BOOST || (null == O ? void 0 : null === (n = O.tenureRewardCollectible) || void 0 === n ? void 0 : n.name) === m.u.TENURE_REWARD_COLLECTIBLE) &&
+            ((null == O ? void 0 : null === (t = O.freeBoost) || void 0 === t ? void 0 : t.name) === g.u.FREE_BOOST || (null == O ? void 0 : null === (n = O.tenureRewardCollectible) || void 0 === n ? void 0 : n.name) === g.u.TENURE_REWARD_COLLECTIBLE) &&
                 (0, i.jsx)(l.O_, {
                     ref: D,
                     className: E.confettiCanvas,
-                    environment: G.current
+                    environment: H.current
                 }),
             (0, i.jsxs)('div', {
                 ref: S,
                 className: s()(
                     E.section,
                     {
-                        [E.centerAlignSection]: !v,
-                        [E.leftAlignSection]: v
+                        [E.centerAlignSection]: !T,
+                        [E.leftAlignSection]: T
                     },
                     a
                 ),
                 children: [
                     (0, i.jsx)(b, {
-                        showAllPerksButton: T,
-                        leftAlignHeaders: v,
-                        title: M.title,
+                        showAllPerksButton: v,
+                        leftAlignHeaders: T,
+                        title: B.title,
                         headerClassname: N
                     }),
                     (0, i.jsx)(o.Text, {
                         variant: 'text-lg/normal',
                         color: 'header-primary',
                         className: s()(E.subtitle, {
-                            [E.subtitle]: null == T || v,
-                            [E.subtitleWithButton]: null != T && !v,
-                            [E.fullWidth]: P || v,
+                            [E.subtitle]: null == v || T,
+                            [E.subtitleWithButton]: null != v && !T,
+                            [E.fullWidth]: P || T,
                             [E.moreSubtitleMargin]: L,
-                            [E.leftAlignSubtitle]: v,
-                            [E.centerAlignSubtitle]: !v
+                            [E.leftAlignSubtitle]: T,
+                            [E.centerAlignSubtitle]: !T
                         }),
-                        children: M.subtitle
+                        children: B.subtitle
                     }),
-                    !v &&
-                        null != T &&
+                    !T &&
+                        null != v &&
                         (0, i.jsx)('div', {
                             className: s()(E.showAllPerksButtonCenter),
-                            children: T
+                            children: v
                         }),
                     (0, i.jsx)('div', {
                         className: s()({
                             [E.cardContainer]: I,
                             [E.cardContainerNarrowWidth]: !I
                         }),
-                        children: k.map((e, t) =>
+                        children: y.map((e, t) =>
                             (0, i.jsx)(
                                 h.Z,
                                 {
-                                    confettiCanvas: e.name === m.u.FREE_BOOST || e.name === m.u.TENURE_REWARD_COLLECTIBLE ? U : void 0,
+                                    confettiCanvas: e.name === g.u.FREE_BOOST || e.name === g.u.TENURE_REWARD_COLLECTIBLE ? U : void 0,
                                     ...e,
                                     forceShadow: C
                                 },

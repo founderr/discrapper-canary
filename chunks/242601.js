@@ -28,8 +28,8 @@ var i = n(200651),
     N = n(13228),
     T = n(540059),
     b = n(211644),
-    x = n(605236),
-    A = n(243778),
+    A = n(605236),
+    x = n(243778),
     Z = n(492162),
     L = n(818634),
     y = n(596557),
@@ -248,7 +248,7 @@ class eS extends r.PureComponent {
     }
     renderFooter() {
         let { shouldRenderClipsEducation: e } = this.props;
-        return (0, i.jsx)(A.ZP, {
+        return (0, i.jsx)(x.ZP, {
             contentTypes: [],
             children: (t) => {
                 let { visibleContent: n } = t;
@@ -329,9 +329,9 @@ class eS extends r.PureComponent {
             }),
             ef(this, 'handleCloseStudentHubPrivacySettingsTooltip', () => {
                 var e;
-                let t = (0, x.un)(d.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
+                let t = (0, A.un)(d.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
                     n = null === (e = this.props.guild) || void 0 === e ? void 0 : e.hasFeature(ed.oNc.HUB);
-                !t && n && (0, x.EW)(d.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, { dismissAction: eh.L.AUTO });
+                !t && n && (0, A.EW)(d.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, { dismissAction: eh.L.AUTO });
             }),
             ef(this, 'handleCloseSubscribeTooltip', () => {
                 this.showTimeout.stop(), this.state.shouldShowSubscribeTooltip && this.setState({ shouldShowSubscribeTooltip: !1 });
@@ -412,7 +412,7 @@ function eN(e) {
     let m = (0, Z.Z)(n),
         p = (0, c.e7)([W.Z], () => W.Z.getGuildDimensions(n).scrollTo),
         g = (0, c.e7)([ee.Z], () => ee.Z.getChannelId()),
-        [S, A, R] = (0, c.Wu)([J.Z], () => [J.Z.can(ed.Plq.MANAGE_GUILD, u), J.Z.can(ed.Plq.MANAGE_ROLES, u), J.Z.can(ed.Plq.MANAGE_THREADS, u)]),
+        [S, x, R] = (0, c.Wu)([J.Z], () => [J.Z.can(ed.Plq.MANAGE_GUILD, u), J.Z.can(ed.Plq.MANAGE_ROLES, u), J.Z.can(ed.Plq.MANAGE_THREADS, u)]),
         M = (0, c.e7)([Y.Z], () => Y.Z.isUnavailable(n)),
         U = (0, c.e7)([et.default], () => et.default.getCurrentUser()),
         B = (0, c.e7)([F.Z], () => (F.Z.darkSidebar ? ed.BRd.DARK : F.Z.theme)),
@@ -433,12 +433,12 @@ function eN(e) {
         eE = S && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !ei.s.isDisallowPopupsSet(),
         eI = (0, c.e7)([q.Z], () => q.Z.getMemberCount(n)),
         ev = S && null != eI && eI >= 30 && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !ei.s.isDisallowPopupsSet(),
-        eN = A && null != u && (u.hasFeature(ed.oNc.COMMUNITY) || (null != eI && eI > 50)),
+        eN = x && null != u && (u.hasFeature(ed.oNc.COMMUNITY) || (null != eI && eI > 50)),
         eT = (0, O.Z)(n),
         eb = (null == u ? void 0 : u.hasFeature(ed.oNc.HUB)) === !0,
-        ex = S && (null == u ? void 0 : u.hasFeature(ed.oNc.DISCOVERABLE)) === !0,
-        eA = (0, C.Q)(),
-        eZ = (S || (null == u ? void 0 : u.premiumTier) === ed.Eu4.NONE) && !ei.s.isDisallowPopupsSet() && !eA,
+        eA = S && (null == u ? void 0 : u.hasFeature(ed.oNc.DISCOVERABLE)) === !0,
+        ex = (0, C.Q)(),
+        eZ = (S || (null == u ? void 0 : u.premiumTier) === ed.Eu4.NONE) && !ei.s.isDisallowPopupsSet() && !ex,
         eL = (0, c.e7)([j.Z, Q.Z], () => null != u && null != U && S && !Q.Z.hasLayers() && j.Z.shouldShowGuildTemplateDirtyTooltip(n)),
         ey = (0, c.e7)([z.Z], () => z.Z.getChannel(o)),
         { isPopoutOpen: eP } = (0, L.y)(),
@@ -448,7 +448,7 @@ function eN(e) {
         eD = er && !ej,
         eM = (0, N.Z)(U);
     (0, y.Z)(u);
-    let ew = (0, x.wE)(d.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
+    let ew = (0, A.wE)(d.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
         ek = (0, w.Z)(n),
         eU = (0, P.Z)(n),
         eG = (0, c.e7)([ee.Z], () => ee.Z.getChannelId()),
@@ -474,7 +474,7 @@ function eN(e) {
         showGuildBoostingProgressBarUpsell: eE,
         showGuildBoostingProgressBarSizeUpsell: ev,
         showInviteSplashUpsell: eZ,
-        showDiscoveryLandingPageSettingsUpsell: ex,
+        showDiscoveryLandingPageSettingsUpsell: eA,
         showGuildHeaderTutorial: e_,
         showGuildTemplateDirtyTooltip: eL,
         showRoleSubscriptionUpsell: eT,

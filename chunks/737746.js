@@ -3,8 +3,8 @@ n.d(t, {
         return i;
     }
 });
-var r = n(468194);
+var r = n(513431);
 function i(e) {
     let t = getComputedStyle(document.documentElement).getPropertyValue('--space-'.concat(e));
-    return (0, r.Mg)(t);
+    return (0, r.M)(t);
 }

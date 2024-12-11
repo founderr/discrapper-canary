@@ -23,7 +23,7 @@ var i = n(200651),
     T = n(388032),
     b = n(890030);
 t.Z = function (e) {
-    let { applicationId: t, onSelectApplication: n, onScroll: x, initialTab: A, onButtonsVisibilityChange: Z } = e,
+    let { applicationId: t, onSelectApplication: n, onScroll: A, initialTab: x, onButtonsVisibilityChange: Z } = e,
         L = r.useRef(null),
         y = (0, l.e7)([o.Z], () => o.Z.getApplication(t)),
         P = (0, l.e7)([o.Z], () => o.Z.getApplicationFetchState(t));
@@ -32,7 +32,7 @@ t.Z = function (e) {
     }, [t, y]),
         r.useEffect(() => () => Z(!1), [Z]);
     let O = null == y ? void 0 : y.storefront_available,
-        [R, j] = r.useState(null != A ? A : S.GlobalDiscoveryAppsSections.ABOUT),
+        [R, j] = r.useState(null != x ? x : S.GlobalDiscoveryAppsSections.ABOUT),
         D = r.useCallback(
             (e) => {
                 var t;
@@ -81,7 +81,7 @@ t.Z = function (e) {
         }, []),
         G = R === S.GlobalDiscoveryAppsSections.ABOUT;
     return (0, i.jsx)(h.Z, {
-        onScroll: x,
+        onScroll: A,
         ref: L,
         children: (0, i.jsx)(d.Z, {
             children:

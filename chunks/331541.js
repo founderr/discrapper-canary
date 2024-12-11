@@ -26,8 +26,8 @@ var i = n(200651),
     N = n(648052),
     T = n(867176),
     b = n(537006),
-    x = n(483424),
-    A = n(681837),
+    A = n(483424),
+    x = n(681837),
     Z = n(502762),
     L = n(530),
     y = n(309494),
@@ -358,7 +358,7 @@ function ee(e) {
                                     }),
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, i.jsx)(A.Z, { userId: n.id }),
+                                            (0, i.jsx)(x.Z, { userId: n.id }),
                                             (0, i.jsx)(y.Z, {
                                                 user: n,
                                                 isHovering: el
@@ -377,7 +377,7 @@ function ee(e) {
                                         isPremiumUser: ep,
                                         onInteraction: k
                                     }),
-                                (0, i.jsx)(x.Z, {
+                                (0, i.jsx)(A.Z, {
                                     user: n,
                                     currentUser: n,
                                     onClose: k

@@ -8,8 +8,8 @@ var r = n(120356),
     c = n(372769),
     d = n(914788),
     u = n(981631),
-    g = n(388032),
-    m = n(77659);
+    m = n(388032),
+    g = n(77659);
 let f = [18, 18, 16, 16, 14, 12, 10];
 t.Z = (e) => {
     let { guildId: t } = e,
@@ -25,14 +25,14 @@ t.Z = (e) => {
         E = null !== (b = f[(h = (0, s.Zg)(p)).length - 1]) && void 0 !== b ? b : f[f.length - 1];
     }
     return (0, i.jsxs)('div', {
-        className: m.container,
+        className: g.container,
         children: [
             (0, i.jsxs)('div', {
                 style: { fontSize: E },
                 children: [
                     null != h
                         ? (0, i.jsx)('div', {
-                              className: a()(m.childWrapper, m.acronym),
+                              className: a()(g.childWrapper, g.acronym),
                               'aria-hidden': !0,
                               children: h
                           })
@@ -47,17 +47,17 @@ t.Z = (e) => {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: m.descriptors,
+                className: g.descriptors,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: m.header,
+                        className: g.header,
                         children: [
                             r
                                 ? (0, i.jsx)(c.Z, {
                                       guild: n,
                                       tooltipPosition: 'bottom',
                                       tooltipColor: o.Tooltip.Colors.PRIMARY,
-                                      className: m.guildBadge
+                                      className: g.guildBadge
                                   })
                                 : null,
                             (0, i.jsx)(o.Text, {
@@ -70,7 +70,7 @@ t.Z = (e) => {
                         ? (0, i.jsx)(o.Text, {
                               variant: 'text-xs/medium',
                               color: 'text-muted',
-                              children: g.intl.format(g.t['5JmNgo'], { members: n.approximateMemberCount })
+                              children: m.intl.format(m.t['5JmNgo'], { members: n.approximateMemberCount })
                           })
                         : null
                 ]

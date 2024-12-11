@@ -3,8 +3,8 @@ var t = r(658722),
     o = r.n(t),
     l = r(954955),
     i = r.n(l),
-    a = r(226951),
-    u = r(624138),
+    u = r(226951),
+    a = r(624138),
     c = r(620490);
 let s = {
         UPDATE_USERS: 'UPDATE_USERS',
@@ -42,12 +42,12 @@ function m(e, n) {
     let { query: l, limit: i, filters: s, blacklist: d, whitelist: p } = n,
         b = null != s && s.strict && null !== (r = s.guild) && void 0 !== r ? r : null,
         g = null !== (t = n.boosters) && void 0 !== t ? t : {},
-        m = RegExp('^'.concat(a.Z.escape(l)), 'i'),
-        w = RegExp(a.Z.escape(l), 'i'),
+        m = RegExp('^'.concat(u.Z.escape(l)), 'i'),
+        w = RegExp(u.Z.escape(l), 'i'),
         U = [];
     if ('' === l) return R(l, U, e);
     let y = l.toLocaleLowerCase(),
-        _ = (0, u.Fv)(y);
+        _ = (0, a.Fv)(y);
     f.forEach((e, n) => {
         let r;
         if (
@@ -72,27 +72,27 @@ function m(e, n) {
               })
             : Object.keys(e).forEach((l) => {
                   let i;
-                  let a = e[l];
-                  if ('boolean' == typeof a || null == a || (null != b && l !== v && l !== E && l !== h && b !== l)) return;
-                  let c = (0, u._I)(a.toLocaleLowerCase());
-                  m.test(a)
+                  let u = e[l];
+                  if ('boolean' == typeof u || null == u || (null != b && l !== v && l !== E && l !== h && b !== l)) return;
+                  let c = (0, a._I)(u.toLocaleLowerCase());
+                  m.test(u)
                       ? (i = {
-                            comparator: a,
+                            comparator: u,
                             score: S(10, g[n])
                         })
-                      : w.test(a)
+                      : w.test(u)
                         ? (i = {
-                              comparator: a,
+                              comparator: u,
                               score: S(5, g[n])
                           })
                         : o()(y, c)
                           ? (i = {
-                                comparator: a,
+                                comparator: u,
                                 score: S(1, g[n])
                             })
-                          : o()(_, (0, u.Fv)(c)) &&
+                          : o()(_, (0, a.Fv)(c)) &&
                             (i = {
-                                comparator: a,
+                                comparator: u,
                                 score: S(1, g[n])
                             }),
                       null != i &&
@@ -133,14 +133,14 @@ self.addEventListener('message', (e) => {
                     var n;
                     let { id: o, ...l } = e,
                         i = null !== (n = f.get(o)) && void 0 !== n ? n : null,
-                        a = {
+                        u = {
                             ...i,
                             ...l
                         };
-                    f.set(o, a),
+                    f.set(o, u),
                         d.size > 0 &&
-                            ((a.isFriend !== (null == i ? void 0 : i.isFriend) || a.friendNickname !== (null == i ? void 0 : i.friendNickname)) && (r = !0),
-                            Object.keys(a).forEach((e) => {
+                            ((u.isFriend !== (null == i ? void 0 : i.isFriend) || u.friendNickname !== (null == i ? void 0 : i.friendNickname)) && (r = !0),
+                            Object.keys(u).forEach((e) => {
                                 if (!b.has(e)) t.add(e);
                             }));
                 }),

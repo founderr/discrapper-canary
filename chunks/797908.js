@@ -18,10 +18,10 @@ t.Z = function (e) {
         S = (0, c.Z)({ application: I }),
         N = null === (t = I.categories) || void 0 === t ? void 0 : t[0],
         [T, b] = r.useState(!1),
-        x = r.useCallback((e) => {
+        A = r.useCallback((e) => {
             e && b(!0);
         }, []),
-        A = (0, o.lf)(I),
+        x = (0, o.lf)(I),
         Z = r.useCallback(() => {
             C(I.id);
         }, [C, I.id]),
@@ -47,7 +47,7 @@ t.Z = function (e) {
         }),
         O = v && null != N;
     return (0, i.jsx)(l.$, {
-        onChange: x,
+        onChange: A,
         active: !T,
         children: (0, i.jsx)('div', {
             className: p.container,
@@ -107,7 +107,7 @@ t.Z = function (e) {
                                     })
                                 })
                             }),
-                            O || A
+                            O || x
                                 ? (0, i.jsxs)('div', {
                                       className: p.infoContainer,
                                       children: [
@@ -119,14 +119,14 @@ t.Z = function (e) {
                                                     children: N.name
                                                 })
                                               : null,
-                                          O && A
+                                          O && x
                                               ? (0, i.jsx)(a.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-secondary',
                                                     children: '\u2022'
                                                 })
                                               : null,
-                                          A
+                                          x
                                               ? (0, i.jsx)(a.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-secondary',
@@ -140,7 +140,7 @@ t.Z = function (e) {
                                 className: p.description,
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
-                                lineClamp: O || A ? 2 : 3,
+                                lineClamp: O || x ? 2 : 3,
                                 children: null !== (E = null === (f = I.directory_entry) || void 0 === f ? void 0 : f.short_description) && void 0 !== E ? E : I.description
                             }),
                             y

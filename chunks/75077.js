@@ -6,7 +6,7 @@ n.d(t, {
         return E;
     },
     Gw: function () {
-        return v;
+        return T;
     },
     Op: function () {
         return j;
@@ -30,7 +30,7 @@ n.d(t, {
         return A;
     },
     t2: function () {
-        return T;
+        return v;
     },
     vZ: function () {
         return b;
@@ -47,8 +47,8 @@ var i = n(278074),
     c = n(74538),
     d = n(331119),
     u = n(575595),
-    g = n(650032),
-    m = n(391110),
+    m = n(650032),
+    g = n(391110),
     f = n(474936),
     p = n(735825),
     _ = n(388032);
@@ -111,7 +111,7 @@ let h = (e) => {
                 return;
         }
     },
-    v = (e) => {
+    T = (e) => {
         switch (e) {
             case p.EB.PENDING:
                 return _.intl.string(_.t.LAFMBQ);
@@ -122,7 +122,7 @@ let h = (e) => {
                 return;
         }
     };
-function T(e, t) {
+function v(e, t) {
     switch (e) {
         case p.EB.PENDING:
             return null != t ? _.intl.formatToPlainString(_.t.FULtam, { days: t }) : '';
@@ -158,10 +158,10 @@ let I = (e, t, n) => ((0, a.wj)(e) ? t : n),
             c = () => {
                 a !== s.C5.DEFAULT ? o({ card: n.specialShopPerks }) : o({ card: n.specialMemberPricing });
             },
-            { enabled: m } = g._.getCurrentConfig({ location: S }, { autoTrackExposure: !1 }),
+            { enabled: g } = m._.getCurrentConfig({ location: S }, { autoTrackExposure: !1 }),
             { enabled: f } = u.r.getCurrentConfig({ location: S }, { autoTrackExposure: !1 }),
             { enabled: p } = d.C.getCurrentConfig({ location: S }, { autoTrackExposure: !1 }),
-            _ = m && !f && !p,
+            _ = g && !f && !p,
             h = Z();
         return null != n.tenureRewardCollectible && !0 === r && o({ card: n.tenureRewardCollectible }), null != n.freeBoost && !0 === r && o({ card: n.freeBoost }), null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.shyProject && o({ card: n.shyProject }), i && h ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : i && !h && (_ || null != n.shyProject ? _ && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
     },
@@ -169,7 +169,7 @@ let I = (e, t, n) => ((0, a.wj)(e) ? t : n),
         let { perksCards: t, variant: n, shopMarketingVariation: r, isFullScreen: a, showTenureCard: s, isPremiumSubscriber: l, fractionalState: o } = e,
             c = [];
         switch (n) {
-            case m.R0.PERKS_DISCOVERABILITY:
+            case g.R0.PERKS_DISCOVERABILITY:
                 c = (0, i.EQ)({
                     isPremiumSubscriber: l,
                     fractionalState: o
@@ -178,7 +178,7 @@ let I = (e, t, n) => ((0, a.wj)(e) ? t : n),
                     .with({ fractionalState: f.a$.FP_ONLY }, () => [t.profiles, t.clientThemes, t.hdVideo])
                     .otherwise(() => [t.profiles, t.clientThemes, t.serverBoosts]);
                 break;
-            case m.R0.WHATS_NEW:
+            case g.R0.WHATS_NEW:
                 c = R({
                     cards: c,
                     perksCards: t,
@@ -187,12 +187,12 @@ let I = (e, t, n) => ((0, a.wj)(e) ? t : n),
                     shopMarketingVariation: r
                 });
                 break;
-            case m.R0.CARD_CAROUSEL_FIRST_ROW:
+            case g.R0.CARD_CAROUSEL_FIRST_ROW:
                 c = (0, i.EQ)({ isPremiumSubscriber: l })
                     .with({ isPremiumSubscriber: !1 }, () => [t.serverBoosts, t.superReactions, t.earlyAccessSeeAllVariant, t.specialShopPerks])
                     .otherwise(() => [t.customAppIcons, t.moreEmojiPower, t.customSoundsEverywhere, t.specialStickerAccess]);
                 break;
-            case m.R0.CARD_CAROUSEL_SECOND_ROW:
+            case g.R0.CARD_CAROUSEL_SECOND_ROW:
                 c = (0, i.EQ)({
                     isPremiumSubscriber: l,
                     fractionalState: o
@@ -201,7 +201,7 @@ let I = (e, t, n) => ((0, a.wj)(e) ? t : n),
                     .with({ fractionalState: f.a$.FP_ONLY }, () => [t.greyServerBoosts, t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions])
                     .otherwise(() => [t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions]);
                 break;
-            case m.R0.CARD_CAROUSEL_THIRD_ROW:
+            case g.R0.CARD_CAROUSEL_THIRD_ROW:
                 c = (0, i.EQ)({ fractionalState: o })
                     .with({ fractionalState: f.a$.FP_ONLY }, () => [t.entranceSoundsSeeAllVariation, t.greyBadge])
                     .otherwise(() => [t.entranceSoundsSeeAllVariation, t.badge]);

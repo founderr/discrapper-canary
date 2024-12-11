@@ -51,15 +51,15 @@ let N = (0, g.Un)({
         webpackId: 838819,
         name: 'CollectiblesShop'
     }),
-    x = (0, g.Un)({
+    A = (0, g.Un)({
         createPromise: () => Promise.all([n.e('63288'), n.e('33053'), n.e('17298'), n.e('7654'), n.e('98479'), n.e('31113'), n.e('85552'), n.e('58227'), n.e('16114'), n.e('54770')]).then(n.bind(n, 994763)),
         webpackId: 994763,
         name: 'GuildSettings'
     }),
-    A = {
+    x = {
         [C.S9g.USER_SETTINGS]: () => (0, r.jsx)(N, {}),
         [C.S9g.CHANNEL_SETTINGS]: () => (0, r.jsx)(T, {}),
-        [C.S9g.GUILD_SETTINGS]: () => (0, r.jsx)(x, {}),
+        [C.S9g.GUILD_SETTINGS]: () => (0, r.jsx)(A, {}),
         [C.S9g.COLLECTIBLES_SHOP]: () => (0, r.jsx)(b, {})
     },
     Z = 'SHOWN',
@@ -215,7 +215,7 @@ class R extends l.PureComponent {
     renderComponent(e, t, n) {
         let i;
         return (
-            (i = 'string' == typeof e ? A[e]() : (0, r.jsx)(e, {})),
+            (i = 'string' == typeof e ? x[e]() : (0, r.jsx)(e, {})),
             (0, r.jsxs)(
                 O,
                 {

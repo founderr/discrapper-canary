@@ -29,8 +29,8 @@ var i = n(200651),
     N = n(134433),
     T = n(225104),
     b = n(981631),
-    x = n(388032),
-    A = n(698948),
+    A = n(388032),
+    x = n(698948),
     Z = n(795661);
 function L(e, t) {
     (0, c.openModalLazy)(async () => {
@@ -75,36 +75,36 @@ t.default = function (e) {
     return (0, i.jsxs)(c.ModalRoot, {
         transitionState: l,
         'aria-labelledby': w,
-        className: A.modal,
+        className: x.modal,
         children: [
             (0, i.jsxs)(c.ModalHeader, {
                 separator: !1,
                 children: [
                     (0, i.jsx)(N.Z, {
-                        className: A.headerIcon,
+                        className: x.headerIcon,
                         size: 24
                     }),
                     (0, i.jsx)(c.Heading, {
                         variant: 'text-md/medium',
                         color: 'header-primary',
-                        children: x.intl.string(x.t.ghtnsr)
+                        children: A.intl.string(A.t.ghtnsr)
                     }),
                     (0, i.jsx)(c.ModalCloseButton, {
-                        className: A.modalCloseButton,
+                        className: x.modalCloseButton,
                         onClick: y
                     })
                 ]
             }),
             (0, i.jsxs)(c.ModalContent, {
-                className: A.container,
+                className: x.container,
                 children: [
                     (0, i.jsx)(c.Heading, {
                         variant: 'heading-md/semibold',
                         color: 'header-primary',
-                        children: x.intl.format(x.t['Y+TsER'], { helpdeskArticleUrl: S.Z.getArticleURL(b.BhN.CONNECTION_DETAILS) })
+                        children: A.intl.format(A.t['Y+TsER'], { helpdeskArticleUrl: S.Z.getArticleURL(b.BhN.CONNECTION_DETAILS) })
                     }),
                     (0, i.jsx)('div', {
-                        className: A.verifiedRoles,
+                        className: x.verifiedRoles,
                         children: k.map((e) => {
                             let l = R.roles.includes(e.id),
                                 o = (function (e) {
@@ -124,7 +124,7 @@ t.default = function (e) {
                                                     ? (0, i.jsx)('img', {
                                                           src: new _.Z(r.bot).getAvatarURL(t, 24),
                                                           alt: '',
-                                                          className: a()(A.botAvatar, Z.avatar)
+                                                          className: a()(x.botAvatar, Z.avatar)
                                                       })
                                                     : null;
                                         } else {
@@ -142,7 +142,7 @@ t.default = function (e) {
                             return (0, i.jsxs)(
                                 c.Clickable,
                                 {
-                                    className: a()(A.verifiedRole, l ? A.verifiedRoleHasRole : null),
+                                    className: a()(x.verifiedRole, l ? x.verifiedRoleHasRole : null),
                                     onClick: l ? void 0 : () => L(e, t),
                                     onContextMenu: l
                                         ? (r) => {
@@ -166,7 +166,7 @@ t.default = function (e) {
                                     children: [
                                         l
                                             ? (0, i.jsx)('div', {
-                                                  className: A.roleCheckmark,
+                                                  className: x.roleCheckmark,
                                                   children: (0, i.jsx)(c.CheckmarkSmallIcon, {
                                                       size: 'xs',
                                                       color: 'currentColor'
@@ -179,19 +179,19 @@ t.default = function (e) {
                                             size: 24
                                         }),
                                         (0, i.jsxs)('div', {
-                                            className: A.verifiedRoleNameDescriptionContainer,
+                                            className: x.verifiedRoleNameDescriptionContainer,
                                             children: [
                                                 (0, i.jsx)(c.Text, {
                                                     variant: 'text-md/medium',
                                                     color: 'header-primary',
-                                                    className: A.verifiedRoleName,
+                                                    className: x.verifiedRoleName,
                                                     children: e.name
                                                 }),
                                                 void 0 !== e.description
                                                     ? (0, i.jsx)(c.Text, {
                                                           variant: 'text-xs/normal',
                                                           color: 'header-secondary',
-                                                          className: A.verifiedRoleDescription,
+                                                          className: x.verifiedRoleDescription,
                                                           children: e.description
                                                       })
                                                     : null

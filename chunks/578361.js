@@ -13,12 +13,12 @@ var i,
     d = n(215569),
     u = n(383583);
 ((i = r || (r = {}))[(i.RIGHT = -1)] = 'RIGHT'), (i[(i.LEFT = 1)] = 'LEFT');
-let g = {
+let m = {
     friction: 7,
     tension: 40,
     clamp: !0
 };
-class m extends s.PureComponent {
+class g extends s.PureComponent {
     componentWillEnter(e) {
         this._animated.setValue(-this.props.direction),
             c.Z.spring(this._animated, {
@@ -79,12 +79,12 @@ class m extends s.PureComponent {
     }
 }
 t.Z = (e) => {
-    let { children: t, step: n, direction: i, className: r, springSettings: s = g, fadeInOut: l = !1 } = e;
+    let { children: t, step: n, direction: i, className: r, springSettings: s = m, fadeInOut: l = !1 } = e;
     return (0, a.jsx)(d.W, {
         component: 'div',
         className: o()(u.animator, r),
         children: (0, a.jsx)(
-            m,
+            g,
             {
                 direction: i,
                 springSettings: s,

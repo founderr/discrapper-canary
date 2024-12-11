@@ -13,8 +13,8 @@ var i,
     c = n(477690),
     d = n(162168),
     u = n(624138),
-    g = n(261886);
-function m(e, t, n) {
+    m = n(261886);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,8 +29,8 @@ function m(e, t, n) {
 }
 let f = (0, u.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH),
     p = Object.freeze({
-        BLACK: g.black,
-        GRAY: g.gray
+        BLACK: m.black,
+        GRAY: m.gray
     });
 class _ extends (i = a.Component) {
     componentDidMount() {
@@ -61,20 +61,20 @@ class _ extends (i = a.Component) {
         let { className: e, notchBackground: t } = this.props,
             { barWidth: n } = this.state;
         return (0, r.jsx)('div', {
-            className: g.wrapper,
+            className: m.wrapper,
             ref: this.sizerRef,
             children: (0, r.jsxs)('div', {
-                className: l()(g.container, e),
+                className: l()(m.container, e),
                 style: this.getGradientStyles(),
                 children: [
                     (0, r.jsx)('div', {
-                        className: g.progress,
+                        className: m.progress,
                         style: this.getProgressStyles()
                     }),
                     0 !== n &&
                         (0, r.jsx)(d.Z, {
                             width: n,
-                            className: l()(g.notches, t)
+                            className: l()(m.notches, t)
                         })
                 ]
             })
@@ -82,15 +82,15 @@ class _ extends (i = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            m(this, 'state', { barWidth: 0 }),
-            m(this, 'sizerRef', a.createRef()),
-            m(this, 'computeBars', () => {
+            g(this, 'state', { barWidth: 0 }),
+            g(this, 'sizerRef', a.createRef()),
+            g(this, 'computeBars', () => {
                 let { current: e } = this.sizerRef;
                 this.setState({ barWidth: null != e ? this.roundToNearestStep(e.clientWidth) : 0 });
             });
     }
 }
-m(_, 'defaultProps', {
+g(_, 'defaultProps', {
     gradientStart: o.Z.unsafe_rawColors.YELLOW_260.css,
     gradientEnd: o.Z.unsafe_rawColors.GREEN_360.css
 }),

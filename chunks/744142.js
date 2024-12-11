@@ -25,7 +25,7 @@ function u(e) {
         L = a.useCallback(() => {
             x({ mutualGuilds: I });
         }, [x, I]),
-        T = (0, n.jsx)(l.Z, {
+        A = (0, n.jsx)(l.Z, {
             application: m,
             textVariant: 'text-xs/normal',
             mutualGuilds: I,
@@ -62,7 +62,7 @@ function u(e) {
             N &&
                 (0, n.jsx)('div', {
                     className: d.bottomGuildCountContainer,
-                    children: T
+                    children: A
                 })
         ]
     });

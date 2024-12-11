@@ -28,7 +28,7 @@ var i = n(200651),
     N = n(981631),
     T = n(388032),
     b = n(32304);
-function x(e, t, n) {
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function x(e, t, n) {
         e
     );
 }
-let A = (0, f.Un)({
+let x = (0, f.Un)({
     createPromise: () => Promise.all([n.e('1868'), n.e('99838')]).then(n.bind(n, 496691)),
     webpackId: 496691
 });
@@ -76,7 +76,7 @@ class L extends r.PureComponent {
                       className: b.applicationStore,
                       children: this.renderContent()
                   })
-                : (0, i.jsx)(A, {
+                : (0, i.jsx)(x, {
                       className: b.applicationStore,
                       location: t,
                       render: this.renderContent
@@ -88,8 +88,8 @@ class L extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            x(this, 'stopListeningToHistory', void 0),
-            x(this, 'renderStoreListing', (e) => {
+            A(this, 'stopListeningToHistory', void 0),
+            A(this, 'renderStoreListing', (e) => {
                 let {
                         match: {
                             params: { skuId: t, applicationId: n, slug: r }
@@ -111,7 +111,7 @@ class L extends r.PureComponent {
                     })
                 });
             }),
-            x(this, 'renderContent', () =>
+            A(this, 'renderContent', () =>
                 (0, i.jsxs)(a.rs, {
                     children: [
                         (0, i.jsx)(a.AW, {

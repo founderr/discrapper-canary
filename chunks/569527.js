@@ -31,8 +31,8 @@ var i = n(200651),
     N = n(133743),
     T = n(120549),
     b = n(753511),
-    x = n(979007),
-    A = n(981631),
+    A = n(979007),
+    x = n(981631),
     Z = n(378105);
 function L(e) {
     var t;
@@ -52,14 +52,14 @@ function L(e) {
             return {
                 query: null !== (e = n.get('q')) && void 0 !== e ? e : '',
                 page: r,
-                categoryId: null !== (t = Number(n.get('category_id'))) && void 0 !== t ? t : x.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID
+                categoryId: null !== (t = Number(n.get('category_id'))) && void 0 !== t ? t : A.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID
             };
         }, [P.search]),
         M = (0, s.e7)([m.Z], () => m.Z.getCategories()),
         w = r.useMemo(() => (null == M ? void 0 : M.find((e) => e.id === D)), [M, D]),
         k = r.useCallback(
             (e) => {
-                (0, C.z)(A.rMx.APP_DIRECTORY_SEARCHED, {
+                (0, C.z)(x.rMx.APP_DIRECTORY_SEARCHED, {
                     search_term: R,
                     num_results: e,
                     current_page: S.m_.SEARCH,
@@ -84,7 +84,7 @@ function L(e) {
                 options: {
                     categoryId: D,
                     page: j,
-                    pageSize: x.PAGE_SIZE,
+                    pageSize: A.PAGE_SIZE,
                     source: o.F.APP_DIRECTORY
                 },
                 onSuccessCallback: k
@@ -95,14 +95,14 @@ function L(e) {
                 query: R,
                 categoryId: D,
                 page: j,
-                pageSize: x.PAGE_SIZE,
+                pageSize: A.PAGE_SIZE,
                 source: o.F.APP_DIRECTORY
             }),
             searchResults: p.Z.getSearchResults({
                 query: R,
                 categoryId: D,
                 page: j,
-                pageSize: x.PAGE_SIZE,
+                pageSize: A.PAGE_SIZE,
                 source: o.F.APP_DIRECTORY
             })
         })),
@@ -132,7 +132,7 @@ function L(e) {
         ),
         z = r.useCallback(
             (e) => {
-                (0, C.z)(A.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
+                (0, C.z)(x.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
                     category: e.name,
                     category_id: e.id,
                     current_page: S.m_.SEARCH
@@ -146,7 +146,7 @@ function L(e) {
         ),
         W = r.useCallback(
             (e, t) => {
-                (0, C.z)(A.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
+                (0, C.z)(x.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
                     current_page: S.m_.SEARCH,
                     application_id: e,
                     load_id: null == V ? void 0 : V.loadId,
@@ -208,8 +208,8 @@ function L(e) {
                             }),
                             (0, i.jsx)(c.Paginator, {
                                 className: Z.paginationInput,
-                                totalCount: Math.min((null !== (t = null == V ? void 0 : V.totalPages) && void 0 !== t ? t : 0) * x.PAGE_SIZE, x.MAX_PAGES * x.PAGE_SIZE),
-                                pageSize: x.PAGE_SIZE,
+                                totalCount: Math.min((null !== (t = null == V ? void 0 : V.totalPages) && void 0 !== t ? t : 0) * A.PAGE_SIZE, A.MAX_PAGES * A.PAGE_SIZE),
+                                pageSize: A.PAGE_SIZE,
                                 disablePaginationGap: !0,
                                 hideMaxPage: !0,
                                 currentPage: j,

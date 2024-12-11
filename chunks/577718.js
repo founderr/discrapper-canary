@@ -22,8 +22,8 @@ var i = n(200651),
     N = n(30513),
     T = n(474936),
     b = n(388032),
-    x = n(325382),
-    A = n(44669),
+    A = n(325382),
+    x = n(44669),
     Z = n(741160),
     L = n(829972),
     y = n(31932),
@@ -94,7 +94,7 @@ t.Z = r.memo(function (e) {
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: M,
-                                className: A.fullWidthImage
+                                className: x.fullWidthImage
                             }),
                             content: b.intl.format(b.t.ujItEh, {}),
                             buttonCTA: b.intl.string(b.t.UzVPra),
@@ -113,7 +113,7 @@ t.Z = r.memo(function (e) {
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: M,
-                                className: A.fullWidthImage
+                                className: x.fullWidthImage
                             }),
                             content: b.intl.format(b.t.zK1hpq, {}),
                             buttonCTA: b.intl.string(b.t.UzVPra),
@@ -150,7 +150,7 @@ t.Z = r.memo(function (e) {
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: Z,
-                                className: A.fullWidthImage
+                                className: x.fullWidthImage
                             }),
                             content: e,
                             buttonCTA: t,
@@ -169,7 +169,7 @@ t.Z = r.memo(function (e) {
                 case l.z.GUILD_HEADER_ACTIVE_THREADS_NOTICE:
                     return (0, i.jsx)(j, {
                         renderPopout: (0, i.jsx)(_.ZP, {
-                            className: x.tooltipOverrideColor,
+                            className: A.tooltipOverrideColor,
                             header: b.intl.string(b.t.hLUL3t),
                             content: b.intl.string(b.t.ahWaPT),
                             buttonCTA: b.intl.string(b.t['NX+WJC']),
@@ -188,7 +188,7 @@ t.Z = r.memo(function (e) {
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: P,
-                                className: A.fullWidthImage
+                                className: x.fullWidthImage
                             }),
                             onClick: () => {
                                 m.Z.open(r.id, v.pNK.ROLES), m.Z.selectRole(r.getEveryoneRoleId(), b.intl.string(b.t.Bco7ND));

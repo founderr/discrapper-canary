@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return A;
     }
 }),
     n(47120),
@@ -71,8 +71,8 @@ let N = [],
             ]
         });
     };
-function x(e) {
-    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: T, modalDismissibleContent: x, modalTopExtra: A, header: Z, headerClassName: L, subHeader: y, subHeaderExtra: P, featureCards: O, changeLogId: R, button: j, body: D } = e,
+function A(e) {
+    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: T, modalDismissibleContent: A, modalTopExtra: x, header: Z, headerClassName: L, subHeader: y, subHeaderExtra: P, featureCards: O, changeLogId: R, button: j, body: D } = e,
         { onClose: M, transitionState: w } = n,
         k = (0, h.Dt)(),
         U = O.length % 2 == 0,
@@ -152,7 +152,7 @@ function x(e) {
             [R, l.type]
         ),
         r.useEffect(() => {
-            null != x && (0, p.kk)(x);
+            null != A && (0, p.kk)(A);
             let e = Date.now();
             return (
                 f.default.track(I.rMx.CHANGE_LOG_OPENED, { change_log_id: R }),
@@ -161,10 +161,10 @@ function x(e) {
                         change_log_id: R,
                         seconds_open: Math.round((Date.now() - e) / 1000)
                     }),
-                        null != x && (0, p.EW)(x, { dismissAction: C.L.DISMISS });
+                        null != A && (0, p.EW)(A, { dismissAction: C.L.DISMISS });
                 }
             );
-        }, [x, R]),
+        }, [A, R]),
         (0, i.jsxs)(s.ModalRoot, {
             className: a()(S.root, t),
             transitionState: w,
@@ -175,7 +175,7 @@ function x(e) {
                     onClick: M
                 }),
                 (0, i.jsx)(E.Z, { className: S.splash }),
-                null == A ? void 0 : A(),
+                null == x ? void 0 : x(),
                 (0, i.jsxs)(s.ModalContent, {
                     className: S.content,
                     children: [

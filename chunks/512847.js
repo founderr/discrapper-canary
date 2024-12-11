@@ -26,15 +26,15 @@ var i = n(200651),
     N = n(979651),
     T = n(938475),
     b = n(823379),
-    x = n(557177),
-    A = n(981631);
+    A = n(557177),
+    x = n(981631);
 function Z(e, t, n, i) {
     r.useEffect(() => {
         let r = t(),
             l = new o.Fh(e, () => {
                 let e = t(),
                     l = n(r, e);
-                null != l && !I.Z.isSoundDisabled(l) && (0, x.GN)(l, null != i ? i : 0.4), (r = e);
+                null != l && !I.Z.isSoundDisabled(l) && (0, A.GN)(l, null != i ? i : 0.4), (r = e);
             });
         return l.attach('useSound'), () => l.detach();
     });
@@ -80,8 +80,8 @@ function y() {
                 return {
                     channelType: t,
                     guildId: n,
-                    connected: r === A.hes.RTC_CONNECTED,
-                    connectHasStarted: (!i && r !== A.hes.DISCONNECTED) || r === A.hes.RTC_CONNECTED,
+                    connected: r === x.hes.RTC_CONNECTED,
+                    connectHasStarted: (!i && r !== x.hes.DISCONNECTED) || r === x.hes.RTC_CONNECTED,
                     awaitingRemote: null != c.Z.getAwaitingRemoteSessionInfo(),
                     connectedRemote: null != c.Z.getRemoteSessionId()
                 };
@@ -113,7 +113,7 @@ function P() {
             (e, t) => {
                 if (e !== t) {
                     let e = E.Z.isSelfMute();
-                    if (E.Z.getMode() === A.pM4.PUSH_TO_TALK && !e) return t ? 'ptt_start' : 'ptt_stop';
+                    if (E.Z.getMode() === x.pM4.PUSH_TO_TALK && !e) return t ? 'ptt_start' : 'ptt_stop';
                 }
             }
         ),
@@ -128,7 +128,7 @@ function O() {
             (e, t) => {
                 if (e !== t) {
                     let e = E.Z.isSelfMute();
-                    if (E.Z.getMode() === A.pM4.VOICE_ACTIVITY && !e) return t ? 'ptt_stop' : 'ptt_start';
+                    if (E.Z.getMode() === x.pM4.VOICE_ACTIVITY && !e) return t ? 'ptt_stop' : 'ptt_start';
                 }
             }
         ),
@@ -182,7 +182,7 @@ function D() {
                 }
                 let s = null;
                 return (
-                    (null == (s = 1 === o.length ? o[0] : p.Z.getCurrentUserActiveStream()) ? void 0 : s.state) === A.jm8.CONNECTING && (s = null),
+                    (null == (s = 1 === o.length ? o[0] : p.Z.getCurrentUserActiveStream()) ? void 0 : s.state) === x.jm8.CONNECTING && (s = null),
                     null != s && ((l = (0, d.V9)(s)), (a = p.Z.getViewerIds(l).filter((e) => e !== i).length)),
                     {
                         channelType: e,

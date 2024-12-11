@@ -40,8 +40,8 @@ function _(e) {
             onRejectSuccess: C,
             onError: I
         }),
-        x = N || T,
-        A = x || b;
+        A = N || T,
+        x = A || b;
     return (0, i.jsxs)('div', {
         className: f.container,
         children: [
@@ -60,8 +60,8 @@ function _(e) {
                         onClick: (e) => {
                             S(_.id), e.stopPropagation();
                         },
-                        disabled: A,
-                        submitting: x,
+                        disabled: x,
+                        submitting: A,
                         children: g.intl.string(g.t.vicfl5)
                     }),
                     (0, i.jsx)(p.Z, {

@@ -3,10 +3,10 @@ n.d(t, {
         return u;
     },
     aJ: function () {
-        return g;
+        return m;
     },
     vi: function () {
-        return m;
+        return g;
     }
 });
 var i = n(704215),
@@ -32,7 +32,7 @@ function u() {
             dismissibleContentType: e.nitroTenureStatus === c.EB.REDEEMABLE ? i.z.TENURE_REWARD_REDEEMABLE_CONFETTI : void 0
         };
 }
-function g() {
+function m() {
     let e = (0, o.yQ)(),
         t = (0, l.cG)({ location: a.MQ.HOME });
     if (null != e && e.tenureRewardType === c.nW.AVATAR_DECO && !!t)
@@ -45,6 +45,6 @@ function g() {
             dismissibleContentType: e.nitroTenureStatus === c.EB.REDEEMABLE ? i.z.TENURE_REWARD_REDEEMABLE_CONFETTI : void 0
         };
 }
-function m(e) {
+function g(e) {
     return (null == e ? void 0 : e.showNotification) === !0 && (0, o.rM)(e).some((e) => !(0, r.un)(e));
 }

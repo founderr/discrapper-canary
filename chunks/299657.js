@@ -8,8 +8,8 @@ var i = n(200651),
     c = n(570140),
     d = n(355467),
     u = n(179360),
-    g = n(821849),
-    m = n(232567),
+    m = n(821849),
+    g = n(232567),
     f = n(497321),
     p = n(100527),
     _ = n(906732),
@@ -18,8 +18,8 @@ var i = n(200651),
     b = n(89057),
     x = n(464824),
     C = n(214852),
-    v = n(621853),
-    T = n(246946),
+    T = n(621853),
+    v = n(246946),
     N = n(594174),
     I = n(78839),
     S = n(626135),
@@ -28,31 +28,31 @@ var i = n(200651),
     j = n(937579),
     P = n(471309),
     Z = n(91802),
-    B = n(104494),
-    M = n(639119),
+    M = n(104494),
+    B = n(639119),
     O = n(2359),
     w = n(132547),
-    y = n(474936),
-    k = n(981631),
+    k = n(474936),
+    y = n(981631),
     L = n(579521);
 t.Z = function (e) {
-    let { entrypoint: t = y.EZ.UserSettings } = e;
+    let { entrypoint: t = k.EZ.UserSettings } = e;
     (0, C.z)(x.X);
     let n = (0, h.Q)(),
         { sourceAnalyticsLocations: a, analyticsLocations: U } = (0, _.ZP)(p.Z.PREMIUM_MARKETING),
         D = (0, l.e7)([I.ZP], () => I.ZP.hasFetchedSubscriptions()),
-        G = (0, l.e7)([N.default], () => N.default.getCurrentUser()),
-        H = null == G ? void 0 : G.id,
-        V = (0, M.N)(),
-        F = (0, B.Ng)(),
+        H = (0, l.e7)([N.default], () => N.default.getCurrentUser()),
+        G = null == H ? void 0 : H.id,
+        V = (0, B.N)(),
+        F = (0, M.Ng)(),
         W = (0, E.V)(),
         [z, Y] = r.useState(!0),
         K = r.useRef(0),
-        Q = (0, R.M5)(G, y.p9.TIER_2),
+        Q = (0, R.M5)(H, k.p9.TIER_2),
         q = (0, Z.n)(),
         J = null == q ? void 0 : q.countryCode,
         { enabled: X } = (0, P.Z)(),
-        $ = (0, l.e7)([v.Z], () => (null != G ? v.Z.getUserProfile(G.id) : null)),
+        $ = (0, l.e7)([T.Z], () => (null != H ? T.Z.getUserProfile(H.id) : null)),
         ee = (0, l.e7)([A.Z], () => A.Z.hasFetched);
     if (
         (r.useEffect(() => {
@@ -61,24 +61,24 @@ t.Z = function (e) {
         r.useEffect(() => {
             c.Z.wait(async () => {
                 let e = Date.now();
-                await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, g.Y2)(J, null, k.JjL.DISCOVERY), null != H && X && Q && (0, m.In)(H)]), (K.current = Date.now() - e), Y(!1);
+                await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(J, null, y.JjL.DISCOVERY), null != G && X && Q && (0, g.In)(G)]), (K.current = Date.now() - e), Y(!1);
             });
-        }, [J, H, X, Q]),
+        }, [J, G, X, Q]),
         r.useEffect(() => {
             n && (null != V || null != F) && (0, j.a)(V, F);
         }, [n, V, F]),
         r.useEffect(() => {
             !z &&
-                S.default.track(k.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
+                S.default.track(y.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
                     location_stack: a,
                     load_duration_ms: K.current
                 });
         }, [a, z]),
-        (0, l.e7)([T.Z], () => T.Z.enabled))
+        (0, l.e7)([v.Z], () => v.Z.enabled))
     )
         return (0, i.jsx)(f.Z, {});
     if (n) return (0, i.jsx)(b.c8, {});
-    if (t === y.EZ.ApplicationStoreHome && Q)
+    if (t === k.EZ.ApplicationStoreHome && Q)
         return X && null == $
             ? (0, i.jsx)('div', {
                   className: s()(L.container, L.loading),

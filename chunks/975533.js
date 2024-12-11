@@ -21,7 +21,7 @@ var i = n(570140),
     N = n(554174),
     T = n(981631),
     b = n(65154);
-let x = {
+let A = {
     [T.kg4.TOGGLE_PRIORITY_SPEAKER]: {
         onTrigger() {},
         keyEvents: {}
@@ -32,7 +32,7 @@ let x = {
     },
     [T.kg4.PUSH_TO_TALK]: {
         onTrigger(e, t) {
-            E.Z.getMode(t.context) === T.pM4.PUSH_TO_TALK && ((x[T.kg4.PUSH_TO_TALK].isPressed = e), E.Z.getMediaEngine().eachConnection((t) => t.setForceAudioInput(e, !1), t.context));
+            E.Z.getMode(t.context) === T.pM4.PUSH_TO_TALK && ((A[T.kg4.PUSH_TO_TALK].isPressed = e), E.Z.getMediaEngine().eachConnection((t) => t.setForceAudioInput(e, !1), t.context));
         },
         keyEvents: {
             keyup: !0,
@@ -42,7 +42,7 @@ let x = {
     },
     [T.kg4.PUSH_TO_TALK_PRIORITY]: {
         onTrigger(e) {
-            E.Z.getMode() === T.pM4.PUSH_TO_TALK && ((x[T.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e), E.Z.getMediaEngine().eachConnection((t) => t.setForceAudioInput(e, !0), b.Yn.DEFAULT));
+            E.Z.getMode() === T.pM4.PUSH_TO_TALK && ((A[T.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e), E.Z.getMediaEngine().eachConnection((t) => t.setForceAudioInput(e, !0), b.Yn.DEFAULT));
         },
         keyEvents: {
             keyup: !0,
@@ -52,7 +52,7 @@ let x = {
     },
     [T.kg4.PUSH_TO_MUTE]: {
         onTrigger(e) {
-            if (E.Z.getMode() === T.pM4.VOICE_ACTIVITY) (x[T.kg4.PUSH_TO_MUTE].isPressed = e), r.Z.setTemporarySelfMute(e);
+            if (E.Z.getMode() === T.pM4.VOICE_ACTIVITY) (A[T.kg4.PUSH_TO_MUTE].isPressed = e), r.Z.setTemporarySelfMute(e);
         },
         keyEvents: {
             keyup: !0,
@@ -221,15 +221,15 @@ let x = {
         }
     }
 };
-class A extends c.Z {
+class x extends c.Z {
     _initialize() {
         i.Z.wait(() =>
             i.Z.dispatch({
                 type: 'KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS',
-                keybinds: x
+                keybinds: A
             })
         );
     }
     _terminate() {}
 }
-t.Z = new A();
+t.Z = new x();

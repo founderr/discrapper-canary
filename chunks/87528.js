@@ -29,15 +29,15 @@ function g(e) {
         [I, v] = a.useState(4),
         N = parseFloat(o.Z.COLLECTION_LIST_CARD_GAP),
         L = (0, u.useApplicationDirectoryHistory)((e) => e.guildId),
-        T = (0, m.Z)({ collection: t });
+        A = (0, m.Z)({ collection: t });
     a.useEffect(() => {
         function e() {
             var e;
-            let t = null === (e = T.current) || void 0 === e ? void 0 : e.offsetWidth,
+            let t = null === (e = A.current) || void 0 === e ? void 0 : e.offsetWidth,
                 i = 1;
             return null == t ? 300 : (t >= 500 && (i = 2), t >= 700 && (i = 3), t >= 1000 && (i = 4), v(i), (t - (i - 1) * N) / i);
         }
-        let t = T.current;
+        let t = A.current;
         if (null == t) return;
         let i = new ResizeObserver(() => {
             b(e());
@@ -49,13 +49,13 @@ function g(e) {
                 i.disconnect();
             }
         );
-    }, [N, T]);
-    let j = (0, l.Dt)();
+    }, [N, A]);
+    let T = (0, l.Dt)();
     return (0, n.jsx)('div', {
-        ref: T,
+        ref: A,
         children: (0, n.jsx)(p.Z, {
             header: g,
-            headerId: j,
+            headerId: T,
             tileWidth: C,
             tileMargin: N,
             onScroll: (e) => {
@@ -72,7 +72,7 @@ function g(e) {
                 });
             },
             children: (0, n.jsx)('ul', {
-                'aria-labelledby': j,
+                'aria-labelledby': T,
                 className: f.itemsContainer,
                 children: x.map((e) => {
                     let { id: t, type: a, application: o } = e;

@@ -13,12 +13,12 @@ var r = n(780384),
     c = n(955204),
     d = n(231338),
     u = n(262284);
-let g = {
+let m = {
         trophy: d.Il.PRIMARY_400,
         locked: d.Il.PRIMARY_400,
         unlocked: d.Il.GREEN_330
     },
-    m = {
+    g = {
         trophy: d.Il.PRIMARY_400,
         locked: d.Il.PRIMARY_400,
         unlocked: d.Il.GREEN_330
@@ -32,12 +32,12 @@ function f(e) {
     let h = (0, a.getAvatarSpecs)(f),
         { name: E, rarity: b } = _,
         { color: x } = (0, c.F7)(b),
-        C = (0, r.wj)(p) ? g : m,
-        v = (h.size - h.offset - 2 * h.stroke) * 0.8,
-        T = h.size - h.stroke,
+        C = (0, r.wj)(p) ? m : g,
+        T = (h.size - h.offset - 2 * h.stroke) * 0.8,
+        v = h.size - h.stroke,
         N = {
-            width: 0.4 * v,
-            height: 0.4 * v
+            width: 0.4 * T,
+            height: 0.4 * T
         },
         I = {
             width: N.width + 1,
@@ -49,8 +49,8 @@ function f(e) {
     return (0, i.jsxs)('div', {
         className: u.container,
         style: {
-            width: T,
-            height: T,
+            width: v,
+            height: v,
             padding: h.stroke
         },
         'aria-label': ''.concat(null !== (t = E()) && void 0 !== t ? t : ''),
@@ -60,8 +60,8 @@ function f(e) {
                 children: (0, i.jsx)(a.TrophyIcon, {
                     size: 'custom',
                     color: d ? x : (0, l.Lq)(C.trophy),
-                    width: v,
-                    height: v
+                    width: T,
+                    height: T
                 })
             }),
             !d &&

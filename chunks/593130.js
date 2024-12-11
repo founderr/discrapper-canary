@@ -91,7 +91,7 @@ function N(e) {
                         (0, a.jsx)('div', { className: j.spacer }),
                         I
                             ? (0, a.jsx)(o.Button, {
-                                  size: o.Button.Sizes.MIN,
+                                  size: o.Button.Sizes.TINY,
                                   className: j.createButton,
                                   onClick: () => {
                                       r(), (0, f.R6)(t, void 0, 'Thread Browser Toolbar');

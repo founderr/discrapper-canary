@@ -8,14 +8,14 @@ var r = n(120356),
     c = n(743612),
     d = n(735825),
     u = n(506829),
-    g = n(721239),
-    m = n(557634),
+    m = n(721239),
+    g = n(557634),
     f = n(992429);
 t.Z = (e) => {
     var t;
     let n,
         r,
-        { title: p, titleClassName: _, buttonClassName: h, perkImage: E, isCarousel: b, onCtaClick: x, perkComponent: C, subtitle: v = '', descriptionCta: T = '', cardVariant: N, subtitleClassName: I, imageOverlayText: S } = e,
+        { title: p, titleClassName: _, buttonClassName: h, perkImage: E, isCarousel: b, onCtaClick: x, perkComponent: C, subtitle: T = '', descriptionCta: v = '', cardVariant: N, subtitleClassName: I, imageOverlayText: S } = e,
         R = (0, o._)(N),
         A = (0, l.yQ)(),
         j = (null == A ? void 0 : A.nitroTenureStatus) === d.EB.REDEEMABLE;
@@ -24,10 +24,10 @@ t.Z = (e) => {
             (n = f), (r = 'unlocked icon');
             break;
         case d.EB.PENDING:
-            (n = g), (r = 'locked icon');
+            (n = m), (r = 'locked icon');
             break;
         case d.EB.REDEEMED:
-            (n = m), (r = 'thumbs up icon');
+            (n = g), (r = 'thumbs up icon');
             break;
         default:
             (n = void 0), (r = '');
@@ -41,7 +41,7 @@ t.Z = (e) => {
                 shouldShowElement: (e) => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
                 cardVariantStyleInfo: R,
                 titleClassName: _,
-                subtitle: v,
+                subtitle: T,
                 subtitleClassName: I
             }),
             null != E &&
@@ -71,7 +71,7 @@ t.Z = (e) => {
                         className: u.cardIllustrationNoHover,
                         children: [
                             C,
-                            0 !== T.length &&
+                            0 !== v.length &&
                                 null != x &&
                                 (0, i.jsx)(s.Button, {
                                     className: h,
@@ -85,7 +85,7 @@ t.Z = (e) => {
                                                 alt: r,
                                                 src: n
                                             }),
-                                            T
+                                            v
                                         ]
                                     })
                                 })

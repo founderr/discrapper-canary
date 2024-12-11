@@ -8,8 +8,8 @@ var r = n(399606),
     c = n(631885),
     d = n(552045),
     u = n(87792),
-    g = n(302289),
-    m = n(946690),
+    m = n(302289),
+    g = n(946690),
     f = n(456771),
     p = n(292352),
     _ = n(388032),
@@ -34,25 +34,25 @@ t.Z = () => {
                   (0, i.jsxs)('div', {
                       className: h.featureCards,
                       children: [
-                          (0, i.jsx)(m.Z, {
+                          (0, i.jsx)(g.Z, {
                               iconClassName: h.chatCheckIcon,
                               icon: a.ChatCheckIcon,
                               header: _.intl.string(_.t['001l3t']),
                               description: E
                           }),
-                          (0, i.jsx)(m.Z, {
+                          (0, i.jsx)(g.Z, {
                               icon: a.EyeIcon,
                               header: _.intl.string(_.t.yipAeH),
                               description: b
                           }),
-                          (0, i.jsx)(m.Z, {
+                          (0, i.jsx)(g.Z, {
                               icon: C ? a.QrCodeIcon : (0, a.makeIconCompat)(f.Z),
                               header: _.intl.string(_.t.hhOuMT),
                               description: x
                           })
                       ]
                   }),
-                  0 === e.length ? (0, i.jsx)(g.Z, {}) : null,
+                  0 === e.length ? (0, i.jsx)(m.Z, {}) : null,
                   void 0 !== t && e.length > 0 ? (0, i.jsx)(u.Z, { user: t }) : null
               ]
           });

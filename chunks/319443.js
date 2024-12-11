@@ -22,8 +22,8 @@ var i = n(200651),
     N = n(626135),
     T = n(31569),
     b = n(881294),
-    x = n(975907),
-    A = n(119014),
+    A = n(975907),
+    x = n(119014),
     Z = n(258971),
     L = n(133743),
     y = n(726941),
@@ -87,7 +87,7 @@ t.Z = function () {
         V = (0, s.e7)([h.Z], () => h.Z.getCategories()),
         F = r.useMemo(() => [(0, m.KQ)(), ...V], [V]),
         z = r.useMemo(() => F.find((e) => e.id === Number(H)), [F, H]),
-        { tabs: W, selectedTab: Y, onSelectTab: K } = (0, A.i)(null == u ? void 0 : u.toString()),
+        { tabs: W, selectedTab: Y, onSelectTab: K } = (0, x.i)(null == u ? void 0 : u.toString()),
         [q, X] = r.useState(!1),
         Q = r.useCallback((e) => {
             X(!e);
@@ -120,7 +120,7 @@ t.Z = function () {
         r.useEffect(() => Z.aQ.setState({ lastItem: a }), [a]);
     let et = null != O,
         en = (null == a ? void 0 : a.type) === Z.m_.SEARCH,
-        { searchQuery: ei, onSearchTextChange: er, onClearSearch: el, onSearchSubmit: ea } = (0, x.M)({ initialQuery: null != B ? B : '' }),
+        { searchQuery: ei, onSearchTextChange: er, onClearSearch: el, onSearchSubmit: ea } = (0, A.M)({ initialQuery: null != B ? B : '' }),
         eo = T.Z.useField('searchBarState'),
         {
             onTabsAvailableWidthChange: es,

@@ -10,7 +10,7 @@ var i = n(200651),
 t.Z = (e) => {
     let { cards: t, className: n, cardType: a } = e,
         u = () => (window.innerWidth < 910 ? 1 : window.innerWidth < 1400 ? 2 : 3),
-        [g, m] = r.useState(0),
+        [m, g] = r.useState(0),
         [f, p] = r.useState(u()),
         [_, h] = r.useState(!1),
         E = t.length;
@@ -26,9 +26,9 @@ t.Z = (e) => {
         );
     }, []),
         r.useEffect(() => {
-            E > f && g > E - f ? m(E - f) : E <= f && m(0);
+            E > f && m > E - f ? g(E - f) : E <= f && g(0);
         }, [E, f]);
-    let b = r.useCallback((e) => ({ x: (e - g) * 100 }), [g]),
+    let b = r.useCallback((e) => ({ x: (e - m) * 100 }), [m]),
         [x, C] = (0, o.useSprings)(t.length, b);
     return (
         r.useEffect(() => {
@@ -43,7 +43,7 @@ t.Z = (e) => {
                         (0, i.jsx)(o.Clickable, {
                             onClick: _
                                 ? () => {
-                                      m((e) => (0 === e ? E - f : e - 1));
+                                      g((e) => (0 === e ? E - f : e - 1));
                                   }
                                 : void 0,
                             className: s()({
@@ -80,7 +80,7 @@ t.Z = (e) => {
                     E > f &&
                         (0, i.jsx)(o.Clickable, {
                             onClick: () => {
-                                m((e) => (e >= E - f ? (h(!0), 0) : e + 1));
+                                g((e) => (e >= E - f ? (h(!0), 0) : e + 1));
                             },
                             className: d.rightArrow,
                             children: (0, i.jsx)(o.ArrowSmallRightIcon, {
@@ -92,7 +92,7 @@ t.Z = (e) => {
                         (0, i.jsx)('div', {
                             className: d.cardProgressBar,
                             children: t.map((e, t) => {
-                                if (!(t > E - f)) return (0, i.jsx)('div', { className: t === g ? d.selectedDot : d.dot }, 'progress_bar_dot_'.concat(t));
+                                if (!(t > E - f)) return (0, i.jsx)('div', { className: t === m ? d.selectedDot : d.dot }, 'progress_bar_dot_'.concat(t));
                             })
                         })
                 ]

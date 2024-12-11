@@ -9,8 +9,8 @@ var r = n(120356),
     c = n(906732),
     d = n(927359),
     u = n(975298),
-    g = n(125529),
-    m = n(78839),
+    m = n(125529),
+    g = n(78839),
     f = n(975104),
     p = n(63063),
     _ = n(775412),
@@ -19,8 +19,8 @@ var r = n(120356),
     b = n(533525),
     x = n(197115),
     C = n(823188),
-    v = n(184176),
-    T = n(938736),
+    T = n(184176),
+    v = n(938736),
     N = n(386733),
     I = n(474936),
     S = n(981631),
@@ -66,7 +66,7 @@ let Z = (e) => {
             })
         });
     },
-    B = (e) => {
+    M = (e) => {
         let { location: t } = e,
             { subscriberHomeVariant: n } = h.g.useExperiment({ location: t }, { autoTrackExposure: !1 }),
             r = n === h.p.VARIANT_2,
@@ -108,7 +108,7 @@ let Z = (e) => {
             ]
         });
     },
-    M = () => {
+    B = () => {
         let { headingText: e } = w();
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -131,7 +131,7 @@ let Z = (e) => {
                                     children: e
                                 })
                             }),
-                            (0, i.jsx)(v.Z, {})
+                            (0, i.jsx)(T.Z, {})
                         ]
                     })
                 })
@@ -142,22 +142,22 @@ let Z = (e) => {
 t.Z = (e) => {
     let { className: t, location: n } = e,
         { analyticsLocations: r } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
-        l = (0, s.e7)([m.ZP], () => m.ZP.inReverseTrial()),
+        l = (0, s.e7)([g.ZP], () => g.ZP.inReverseTrial()),
         f = (0, _._O)(),
         h = R.intl.string(R.t.qYKftb),
         x = (0, b.b)(n),
-        v = (0, T.pn)(n),
+        T = (0, v.pn)(n),
         N = (0, i.jsx)(Z, { className: t }),
         j = R.intl.string(R.t.ifwQZW),
         P = !1,
-        { fractionalState: w, endsAt: y } = (0, u.Z)(),
-        k = (0, d.Z)(y, d.a.ENDS_IN);
-    l ? ((j = R.intl.string(R.t.ifwQZW)), (N = (0, i.jsx)(M, {}))) : (x || v) && ((h = R.intl.string(R.t.qYKftb)), (j = R.intl.string(R.t.ifwQZW)), (N = (0, i.jsx)(B, { location: n })));
+        { fractionalState: w, endsAt: k } = (0, u.Z)(),
+        y = (0, d.Z)(k, d.a.ENDS_IN);
+    l ? ((j = R.intl.string(R.t.ifwQZW)), (N = (0, i.jsx)(B, {}))) : (x || T) && ((h = R.intl.string(R.t.qYKftb)), (j = R.intl.string(R.t.ifwQZW)), (N = (0, i.jsx)(M, { location: n })));
     let L = null;
     if (w !== I.a$.NONE) {
         (f = !0), (h = R.intl.string(R.t.vaqFvb)), (P = !0);
         let e = R.intl.format(R.t['yR+oDA'], { helpCenterLink: p.Z.getArticleURL(S.BhN.FRACTIONAL_PREMIUM_ABOUT) });
-        L = (0, i.jsx)(g.Z, {
+        L = (0, i.jsx)(m.Z, {
             text: e,
             'aria-label': e.toString(),
             tooltipClassName: A.tooltip,
@@ -167,7 +167,7 @@ t.Z = (e) => {
                     ...e,
                     className: A.pillContainer,
                     children: (0, i.jsx)(E.Z, {
-                        countdownText: k,
+                        countdownText: y,
                         showInfoIcon: !0
                     })
                 })

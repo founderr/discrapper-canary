@@ -8,8 +8,8 @@ var i = n(200651),
     c = n(607070),
     d = n(100527),
     u = n(906732),
-    g = n(66595),
-    m = n(535322),
+    m = n(66595),
+    g = n(535322),
     f = n(477734),
     p = n(626135),
     _ = n(881100),
@@ -38,7 +38,7 @@ let x = (e) => (e ? E.intl.string(E.t.QX14gI) : E.intl.string(E.t.RGadQU)),
             ]
         });
     },
-    v = (e) => {
+    T = (e) => {
         let { title: t, description: n, className: r, imageSource: a, imageClassName: l, titleBadge: c, isNew: f = !1, isEarlyAccess: p = !1 } = e,
             { analyticsLocations: _ } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD);
         return (0, i.jsx)(u.Gt, {
@@ -47,13 +47,13 @@ let x = (e) => (e ? E.intl.string(E.t.QX14gI) : E.intl.string(E.t.RGadQU)),
                 className: s()(b.perkCard, r),
                 children: [
                     f
-                        ? (0, i.jsx)(m.Z, {
+                        ? (0, i.jsx)(g.Z, {
                               className: b.perkCardNewBadge,
                               shouldInheritBackgroundColor: !0,
                               shouldInheritTextColor: !0
                           })
                         : null,
-                    p ? (0, i.jsx)(g.Z, { className: b.perkCardEarlyAccessBadge }) : null,
+                    p ? (0, i.jsx)(m.Z, { className: b.perkCardEarlyAccessBadge }) : null,
                     (0, i.jsx)('img', {
                         src: a,
                         alt: '',
@@ -80,16 +80,16 @@ let x = (e) => (e ? E.intl.string(E.t.QX14gI) : E.intl.string(E.t.RGadQU)),
 t.Z = (e) => {
     let { className: t, isSubscriberNitroHome: n = !1 } = e,
         [a, d] = r.useState(!1),
-        g = (0, _.N)({ styles: b }),
-        m = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
+        m = (0, _.N)({ styles: b }),
+        g = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         { analyticsLocations: E } = (0, u.ZP)(),
-        T = (0, f._f)(),
-        N = [g.emoji, g.streaming, g.upload, g.customAppIcons, g.soundboard, T ? g.remix : g.videoBackground, g.superReactions, g.stickersPerkDiscoverability, g.badgeAlt];
+        v = (0, f._f)(),
+        N = [m.emoji, m.streaming, m.upload, m.customAppIcons, m.soundboard, v ? m.remix : m.videoBackground, m.superReactions, m.stickersPerkDiscoverability, m.badgeAlt];
     return (0, i.jsxs)('div', {
         className: s()(b.perksContainer, t, {
             [b.partiallyHidden]: n && !a,
             [b.subscriberNitroHome]: n,
-            [b.reducedMotion]: m
+            [b.reducedMotion]: g
         }),
         children: [
             (0, i.jsx)(o.Heading, {
@@ -99,7 +99,7 @@ t.Z = (e) => {
             }),
             (0, i.jsx)('div', {
                 className: s()(b.perkCardContainer, { [b.perkCardContainerExpanded]: a }),
-                children: N.map((e) => null != e && (0, i.jsx)(v, { ...e }, e.title))
+                children: N.map((e) => null != e && (0, i.jsx)(T, { ...e }, e.title))
             }),
             n &&
                 (0, i.jsxs)(i.Fragment, {
