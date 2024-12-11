@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return ec;
+        return ed;
     }
 }),
     n(47120);
@@ -303,13 +303,18 @@ let es = (e) => {
                         'discord-shop'
                     ),
                     (0, i.jsx)(er, { selected: (null != r && r.startsWith(q.Z5c.FAMILY_CENTER)) || (null != c && c.startsWith(q.Z5c.FAMILY_CENTER)) }, 'family-center'),
-                    (0, i.jsx)(I.Z, {}, 'dm-quick-launcher')
+                    (0, i.jsx)(ec, {}),
+                    (0, i.jsx)(I.Z, {}, 'dm-quick-launcher'),
+                    (0, i.jsx)(ec, {})
                 ]
             })
         ]
     });
 };
 function ec() {
+    return (0, S.Q3)('SectionDivider') ? (0, i.jsx)('div', { className: $.sectionDivider }) : null;
+}
+function ed() {
     let e = (0, u.e7)([V.Z], () => V.Z.getHomeLink()),
         t = (0, u.e7)(
             [H.Z],
