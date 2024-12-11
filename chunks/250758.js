@@ -6,8 +6,8 @@ var i,
     o = n(442837),
     s = n(570140),
     c = n(999650),
-    d = n(279779),
-    u = n(483360),
+    u = n(279779),
+    d = n(483360),
     m = n(892880),
     h = n(405656),
     f = n(51144),
@@ -25,7 +25,7 @@ function N(e) {
         null == o &&
             ((o = {
                 results: [],
-                context: d.Z.getSearchContext(v.bind(null, t))
+                context: u.Z.getSearchContext(v.bind(null, t))
             }),
             (x[t] = o)),
         {
@@ -70,15 +70,15 @@ function v(e, t) {
                 e
             );
         })(n, o));
-    let { query: s, mode: c, tokens: d, cursorScope: u } = r,
+    let { query: s, mode: c, tokens: u, cursorScope: d } = r,
         { autocompletes: m } = r;
     (m = A(e, c)),
         (I[e] = N({
             searchId: e,
             query: s,
             mode: c,
-            tokens: d,
-            cursorScope: u,
+            tokens: u,
+            cursorScope: d,
             autocompletes: m
         })),
         P.emitChange();
@@ -92,7 +92,7 @@ function T(e, t, n) {
         null == e
             ? (i = null)
             : ((null == t || 0 === t.getFullMatch().trim().length) &&
-                  (e.results = u.ZP.getRecentlyTalked(n, 10).map((e) => {
+                  (e.results = d.ZP.getRecentlyTalked(n, 10).map((e) => {
                       let { record: t } = e;
                       return {
                           user: t,
@@ -244,12 +244,12 @@ let P = new Z(s.Z, {
             o = (0, h.qc)(l, r),
             s = null !== (t = I[i]) && void 0 !== t ? t : {},
             c = x[i],
-            d = !0;
-        if (a === s.query && (null == s.mode || s.mode.filter === o.filter)) (n = s.autocompletes), (d = !1);
+            u = !0;
+        if (a === s.query && (null == s.mode || s.mode.filter === o.filter)) (n = s.autocompletes), (u = !1);
         else if (o.type === C.Sap.EMPTY || (o.type === C.Sap.FILTER && o.filter !== C.dCx.FILTER_FROM && o.filter !== C.dCx.FILTER_MENTIONS)) null != c && (c.context.clearQuery(), (c.results = [])), (n = A(i, o));
         else if (null != c) {
             let { token: e } = o;
-            null != e && e.getFullMatch().trim().length > 0 ? (m.Z.requestMembers(i, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), { guild: i }), (n = s.autocompletes), (d = !1)) : (c.context.clearQuery(), (n = A(i, o)));
+            null != e && e.getFullMatch().trim().length > 0 ? (m.Z.requestMembers(i, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), { guild: i }), (n = s.autocompletes), (u = !1)) : (c.context.clearQuery(), (n = A(i, o)));
         }
         return (
             (I[i] = N({
@@ -260,7 +260,7 @@ let P = new Z(s.Z, {
                 cursorScope: l,
                 autocompletes: n
             })),
-            d
+            u
         );
     },
     SEARCH_EDITOR_STATE_CLEAR: function (e) {

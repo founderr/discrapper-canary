@@ -1,4 +1,4 @@
 e.exports = {
-    stickersHeaderWithEmojiResults: 'stickersHeaderWithEmojiResults_f81d65',
-    emojiStickersDivider: 'emojiStickersDivider_f81d65'
+    secondarySection: 'secondarySection_f81d65',
+    divider: 'divider_f81d65'
 };

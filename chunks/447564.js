@@ -18,8 +18,8 @@ var i,
     o = n(311570),
     s = n(692547),
     c = n(481060),
-    d = n(100527),
-    u = n(906732),
+    u = n(100527),
+    d = n(906732),
     m = n(997323),
     h = n(324085),
     f = n(688465),
@@ -62,7 +62,7 @@ function b(e) {
         { price: s, fetchingPrice: f, error: _ } = (0, h.R2)(I.FX),
         { entitlement: g, fetchedEntitlement: E, error: x } = (0, h.t6)(I.FX),
         N = _ || x,
-        { analyticsLocations: v } = (0, u.ZP)([d.Z.HD_STREAMING_POTION_MODAL]),
+        { analyticsLocations: v } = (0, d.ZP)([u.Z.HD_STREAMING_POTION_MODAL]),
         T = null != g && !g.consumed;
     (0, a.useEffect)(
         () => (

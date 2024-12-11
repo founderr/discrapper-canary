@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(399606),
     s = n(481060),
     c = n(493683),
-    d = n(434650),
-    u = n(122613),
+    u = n(434650),
+    d = n(122613),
     m = n(778569),
     h = n(182906),
     f = n(100527),
@@ -80,7 +80,7 @@ function U(e) {
         W = r.useCallback((e) => {
             e && z(!0);
         }, []),
-        K = (0, d.O)(W);
+        K = (0, u.O)(W);
     r.useEffect(() => {
         H &&
             (0, g.h)({
@@ -100,7 +100,7 @@ function U(e) {
             if (null != P)
                 try {
                     let e = await c.Z.openPrivateChannel(P);
-                    await (0, u.Z)({
+                    await (0, d.Z)({
                         targetApplicationId: j.id,
                         channelId: e,
                         analyticsLocations: ee

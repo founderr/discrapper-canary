@@ -29,8 +29,8 @@ var i = n(200651),
     o = n(981729),
     s = n(481060),
     c = n(543651),
-    d = n(519320),
-    u = n(592125),
+    u = n(519320),
+    d = n(592125),
     m = n(52824),
     h = n(630388),
     f = n(591759),
@@ -124,21 +124,21 @@ function v(e) {
         l = r.useCallback(
             (e, n, r) => {
                 var l;
-                (0, d.tb)(t.id, null !== (l = i.duration_secs) && void 0 !== l ? l : null, n, t.author.id);
+                (0, u.tb)(t.id, null !== (l = i.duration_secs) && void 0 !== l ? l : null, n, t.author.id);
             },
             [t, i.duration_secs]
         ),
         a = r.useCallback(
             (e, n) => {
                 var r;
-                (0, d.EW)(t.id, null !== (r = i.duration_secs) && void 0 !== r ? r : null, e, t.author.id, n);
+                (0, u.EW)(t.id, null !== (r = i.duration_secs) && void 0 !== r ? r : null, e, t.author.id, n);
             },
             [t, i.duration_secs]
         ),
         o = r.useCallback(
             (e) => {
                 var n;
-                (0, d.Np)(t.id, null !== (n = null == e ? void 0 : e.message) && void 0 !== n ? n : null);
+                (0, u.Np)(t.id, null !== (n = null == e ? void 0 : e.message) && void 0 !== n ? n : null);
             },
             [t]
         );
@@ -185,19 +185,19 @@ function b(e) {
     var t;
     let { attachment: n, message: r } = e,
         a = r.channel_id,
-        o = (0, l.e7)([u.Z], () => {
+        o = (0, l.e7)([d.Z], () => {
             var e;
-            return null === (e = u.Z.getBasicChannel(a)) || void 0 === e ? void 0 : e.guild_id;
+            return null === (e = d.Z.getBasicChannel(a)) || void 0 === e ? void 0 : e.guild_id;
         }),
-        { clip_created_at: s, clip_participants: d, title: m, application: h } = n;
+        { clip_created_at: s, clip_participants: u, title: m, application: h } = n;
     return (0, i.jsx)(c.Z, {
         createdAt: null != s ? Date.parse(s) : void 0,
         participantIds:
             null !==
                 (t =
-                    null == d
+                    null == u
                         ? void 0
-                        : d.map((e) => {
+                        : u.map((e) => {
                               let { id: t } = e;
                               return t;
                           })) && void 0 !== t

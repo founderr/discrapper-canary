@@ -193,7 +193,7 @@ function e(t) {
         },
         [E.Pl.USE_EXTERNAL_APPS.toString()]: {
             title: l.intl.string(l.t.TtA5rK),
-            description: t.externalAppsEnabled ? l.t.mzLoDQ : ''.concat(l.intl.string(l.t.mzLoDQ), ' ').concat(l.intl.string(l.t['5qxqGh'])),
+            description: l.t.mzLoDQ,
             flag: E.Pl.USE_EXTERNAL_APPS
         },
         [E.Pl.SEND_VOICE_MESSAGES.toString()]: {

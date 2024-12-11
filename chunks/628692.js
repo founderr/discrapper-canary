@@ -45,7 +45,7 @@ function y(e) {
 function A(e) {
     let { soundId: t } = e,
         n = (0, o.e7)([h.Z], () => h.Z.getSoundById(t));
-    return (0, d.V)({ location: 'SoundboardMentionInline' }) ? (null == n ? (0, r.jsx)(y, {}) : (0, r.jsx)(N, { sound: n })) : null;
+    return (0, d.V2)({ location: 'SoundboardMentionInline' }) ? (null == n ? (0, r.jsx)(y, {}) : (0, r.jsx)(N, { sound: n })) : null;
 }
 function N(e) {
     let { sound: t, playSound: n, isPlaying: i } = e,

@@ -20,7 +20,7 @@ var r,
 function _(e, t, n, r) {
     let i = e.guildId === d.X8,
         _ = (0, o.e7)([l.default], () => u.ZP.canUseSoundboardEverywhere(l.default.getCurrentUser())),
-        p = (0, c.V)({ location: 'useSoundmojiGuildInfoData' }),
+        p = (0, c.V2)({ location: 'useSoundmojiGuildInfoData' }),
         h = e.guildId !== (null == t ? void 0 : t.guild_id),
         m = a.useMemo(() => (i || !p ? 2 : p && !_ ? 1 : n || null == r ? 2 : 0), [i, _, p, n, r]);
     return {

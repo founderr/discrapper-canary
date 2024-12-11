@@ -16,8 +16,8 @@ function a(e) {
         hasSpoilerEmbeds: o,
         handleContextMenu: s,
         isInteracting: c,
-        isAutomodBlockedMessage: d,
-        isMessageSnapshot: u,
+        isAutomodBlockedMessage: u,
+        isMessageSnapshot: d,
         renderThreadAccessory: m,
         renderComponentAccessory: h,
         renderSuppressEmbeds: f,
@@ -25,7 +25,7 @@ function a(e) {
         forceAddReactions: _,
         className: g
     } = e;
-    return d
+    return u
         ? null
         : (0, i.jsx)(r.Z, {
               message: t,
@@ -36,7 +36,7 @@ function a(e) {
                   channel: n,
                   compact: a,
                   hasSpoilerEmbeds: o,
-                  isMessageSnapshot: u,
+                  isMessageSnapshot: d,
                   onMediaItemContextMenu: s,
                   renderThreadAccessory: m,
                   renderComponentAccessory: h,
@@ -47,7 +47,7 @@ function a(e) {
           });
 }
 function o(e, t) {
-    let { message: n, channel: r, compact: a = !1, renderThreadAccessory: o, disableReactionCreates: s, disableReactionUpdates: c, isSearchResult: d } = e;
+    let { message: n, channel: r, compact: a = !1, renderThreadAccessory: o, disableReactionCreates: s, disableReactionUpdates: c, isSearchResult: u } = e;
     return (0, i.jsx)(l.$p, {
         message: n,
         channel: r,
@@ -56,6 +56,6 @@ function o(e, t) {
         renderThreadAccessory: o,
         disableReactionCreates: s,
         disableReactionUpdates: c,
-        isSearchResult: d
+        isSearchResult: u
     });
 }

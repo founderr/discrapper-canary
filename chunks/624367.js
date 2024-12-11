@@ -13,8 +13,8 @@ var r = n(568611),
     o = n(493683),
     s = n(100527),
     c = n(906732),
-    d = n(835473),
-    u = n(630388),
+    u = n(835473),
+    d = n(630388),
     m = n(624138),
     h = n(122613),
     f = n(147865),
@@ -27,7 +27,7 @@ function I(e) {
     var t, n, l;
     let { applicationId: m, customId: I, referrerId: x } = e,
         { analyticsLocations: N } = (0, c.ZP)(s.Z.ACTIVITY_BOOKMARK),
-        [v] = (0, d.Z)([m]),
+        [v] = (0, u.Z)([m]),
         T = null == v ? void 0 : null === (t = v.bot) || void 0 === t ? void 0 : t.id,
         S = (0, f.ZP)(null !== (l = null == v ? void 0 : v.maxParticipants) && void 0 !== l ? l : 0),
         A = (0, p.Z)({
@@ -48,7 +48,7 @@ function I(e) {
                     });
                 } catch (e) {}
         };
-    return null != v && (0, u.yE)(v.flags, _.udG.EMBEDDED)
+    return null != v && (0, d.yE)(v.flags, _.udG.EMBEDDED)
         ? (0, i.jsx)(c.Gt, {
               value: N,
               children: (0, i.jsxs)('div', {

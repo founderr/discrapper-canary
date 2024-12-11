@@ -61,7 +61,7 @@ function N(e) {
         I = (0, s.e7)([h.Z], () => h.Z.getGuild(t.guildId)),
         T = !m && null != I,
         [N, C] = i.useState(),
-        R = (0, g.V)({ location: 'SoundmojiGuildInfo' }),
+        R = (0, g.V2)({ location: 'SoundmojiGuildInfo' }),
         O = m || T || null != N || !R,
         [D, L] = i.useState(!O);
     i.useEffect(() => {

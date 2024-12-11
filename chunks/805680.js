@@ -130,7 +130,7 @@ t.Z = i.memo(function (e) {
         eo = (0, N.fQ)(K),
         { renderWindow: el, windowDispatch: eu } = i.useContext(E.ZP),
         ec = (0, d.e7)([C.Z], () => !C.Z.hasLoadedStickerPacks),
-        ed = (0, y.V)({ location: 'expression_picker' }),
+        ed = (0, y.V2)({ location: 'expression_picker' }),
         ef = null != $,
         e_ = (0, _.Jw)(null != $ ? $ : ''),
         ep = i.useCallback(

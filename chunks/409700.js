@@ -47,7 +47,7 @@ function v() {
 }
 function I(e) {
     let { sound: t, forceShowBetaLabel: n = !1 } = e,
-        i = (0, f.V)({ location: 'SoundmojiBanner' }),
+        i = (0, f.V2)({ location: 'SoundmojiBanner' }),
         c = (0, s.e7)([u.default], () => d.ZP.canUseSoundboardEverywhere(u.default.getCurrentUser())),
         _ = (0, s.e7)([l.Z], () => l.Z.getGuildId());
     return n || c || t.guildId === h.X8 || t.guildId === _ || !i

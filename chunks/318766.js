@@ -82,7 +82,7 @@ t.Z = function (e) {
         [Q, X] = i.useState(!1),
         J = B && !O && z,
         [$, ee] = i.useState(!1),
-        et = (0, m.V)({ location: 'EmojiButton' }),
+        et = (0, m.V2)({ location: 'EmojiButton' }),
         [en, er] = (0, _.US)(w && et ? [u.z.SOUNDMOJI_COACHMARK] : []),
         ei = !Q && en === u.z.SOUNDMOJI_COACHMARK && !$;
     return (0, r.jsx)(c.Popout, {
