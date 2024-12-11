@@ -18,51 +18,52 @@ var i = n(200651),
     x = n(388032),
     h = n(988113);
 function f() {
-    let { purchaseError: e, setPurchaseError: t, selectedSkuId: n, selectedPlan: f, setSelectedSkuId: _, setSelectedPlanId: j, setSelectedPlanNotification: m } = (0, c.usePaymentContext)(),
-        [L, g] = l.useState(!1),
-        [E, S] = l.useState(!1),
-        [I, M] = l.useState(!1);
+    let { purchaseError: e, paymentError: t, setPurchaseError: n, selectedSkuId: f, selectedPlan: _, setSelectedSkuId: j, setSelectedPlanId: m, setSelectedPlanNotification: L } = (0, c.usePaymentContext)(),
+        [g, E] = l.useState(!1),
+        [S, I] = l.useState(!1),
+        [M, v] = l.useState(!1);
     return (
         l.useEffect(() => {
-            let t = setTimeout(() => {
-                n === p.Si.TIER_2 && (null == e ? void 0 : e.code) === o.SM.BILLING_INSUFFICIENT_FUNDS && M(!0);
+            let n = setTimeout(() => {
+                if (f === p.Si.TIER_2) ((null == e ? void 0 : e.code) === o.SM.BILLING_INSUFFICIENT_FUNDS || (null == t ? void 0 : t.code) === o.SM.BILLING_INSUFFICIENT_FUNDS) && v(!0);
             }, 1500);
-            return () => clearTimeout(t);
-        }, [e, n, M]),
+            return () => clearTimeout(n);
+        }, [t, e, f, v]),
         (0, i.jsxs)('div', {
             className: h.upsellContainer,
-            hidden: E,
+            hidden: S,
             children: [
                 (0, i.jsx)(d.H, {}),
                 (0, i.jsx)(d.Z, {
-                    show: I,
+                    show: M,
                     children: (0, i.jsx)(C.L, {
                         message: x.intl.format(x.t.dk8zl5, {
                             perkHover: (e, t) =>
                                 (0, i.jsx)(
                                     'span',
                                     {
-                                        onMouseEnter: () => g(!0),
-                                        onMouseLeave: () => g(!1),
+                                        onMouseEnter: () => E(!0),
+                                        onMouseLeave: () => E(!1),
                                         children: e
                                     },
-                                    'post-upsell-action-perk-hover'
+                                    'post-failure-nitro-basic-upsell-perk-hover'
                                 )
                         }),
                         handleClick: () => {
-                            s.Z.wait(r.fw), s.Z.wait(a.pB), t(null), m(x.intl.string(x.t['/5p4ws'])), _(p.Si.TIER_0);
+                            n(null), s.Z.wait(a.pB), s.Z.wait(r.fw), L(x.intl.string(x.t['/5p4ws'])), j(p.Si.TIER_0);
                             let e = p.Xh.PREMIUM_MONTH_TIER_0;
-                            (null == f ? void 0 : f.id) === p.Xh.PREMIUM_YEAR_TIER_2 && (e = p.Xh.PREMIUM_YEAR_TIER_0), j(e), S(!0);
+                            (null == _ ? void 0 : _.id) === p.Xh.PREMIUM_YEAR_TIER_2 && (e = p.Xh.PREMIUM_YEAR_TIER_0), m(e), I(!0);
                         },
-                        handleClose: () => S(!0),
+                        handleClose: () => I(!0),
                         handleImageClick: () => {},
                         buttonText: x.intl.string(x.t['7aa9vr']),
                         useInitialGlow: !0,
                         useGlowOnHover: !0,
-                        upsellType: C.T.NITRO_BASIC
+                        upsellType: 'post-failure-nitro-basic-upsell',
+                        themeOverride: C.T.NITRO_BASIC
                     })
                 }),
-                L &&
+                g &&
                     (0, i.jsxs)('div', {
                         className: h.tooltip,
                         children: [
