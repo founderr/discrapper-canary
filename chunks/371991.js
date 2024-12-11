@@ -23,24 +23,27 @@ var r = n(200651),
 function m(e) {
     let [t, n] = i.useState(Date.now()),
         r = (0, _.n)(),
-        a = (0, o.e7)([c.Z], () => c.Z.useReducedMotion);
+        a = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+        s = !r || (a && !e);
     return (
         i.useEffect(() => {
-            let t = new l.Xp();
+            let e = new l.Xp();
             return (
-                t.start(f.Z.Millis.SECOND, () => {
+                e.start(s ? 15 * f.Z.Millis.SECOND : f.Z.Millis.SECOND, () => {
                     n(Date.now());
                 }),
-                (!r || (a && !e)) && t.stop(),
-                () => t.stop()
+                () => e.stop()
             );
-        }, [r, a, e]),
-        t
+        }, [s]),
+        {
+            now: t,
+            slowTickMode: s
+        }
     );
 }
 let g = (e) => {
     let { entry: t, inline: n = !1, textColor: a, hovered: o = !1, bold: l = !1, scaleFontToUserSetting: c = !1 } = e,
-        d = m(o),
+        { now: d } = m(o),
         f = i.useMemo(() => (0, p.T_)(t, d), [t, d]),
         _ = i.useRef(f);
     return (

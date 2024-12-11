@@ -35,10 +35,10 @@ function p(e) {
     };
 }
 t.ZP = i.memo(function (e) {
-    let { entry: t, channel: n, selected: i } = e,
-        { activity: a, artist: s } = p(t),
-        { largeImage: l } = (0, o.rv)({ entry: t });
-    return null == a
+    let { entry: t, channel: n, selected: i, hovered: a } = e,
+        { activity: s, artist: l } = p(t),
+        { largeImage: h } = (0, o.rv)({ entry: t });
+    return null == s
         ? (0, r.jsx)(d.cA, {})
         : (0, r.jsxs)(d.Zb, {
               selected: i,
@@ -50,15 +50,24 @@ t.ZP = i.memo(function (e) {
                               channelId: n.id,
                               guildId: n.guild_id
                           }),
-                          (0, r.jsx)(d.ll, { children: s }),
+                          (0, r.jsx)(d.ll, { children: l }),
                           (0, r.jsx)(c.Gk, {
                               location: c.Gt.CARD,
-                              children: _.map((e, n) => (0, r.jsx)(e, { entry: t }, n))
+                              children: _.map((e, n) =>
+                                  (0, r.jsx)(
+                                      e,
+                                      {
+                                          entry: t,
+                                          hovered: a
+                                      },
+                                      n
+                                  )
+                              )
                           })
                       ]
                   }),
                   (0, r.jsx)(u.f, {
-                      src: null == l ? void 0 : l.src,
+                      src: null == h ? void 0 : h.src,
                       size: 48,
                       className: f.thumbnail
                   })
