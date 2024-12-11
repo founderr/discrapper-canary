@@ -1,4 +1,4 @@
-let i = (0, n(818083).B)({
+let a = (0, n(818083).B)({
     kind: 'user',
     id: '2024-12_premium_wow_moment_fetch_analytics',
     label: 'Premium Wow Moment Fetch Analytics',
@@ -11,4 +11,4 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-t.Z = i;
+t.Z = a;

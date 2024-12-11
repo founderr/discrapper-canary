@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var l = n(200651),
     o = n(192379),
-    a = n(498607),
-    i = n.n(a),
+    i = n(498607),
+    a = n.n(i),
     r = n(752877),
     s = n(748780),
     c = n(692547),
@@ -24,7 +24,7 @@ let u = {
         clamp: !0
     };
 function h(e) {
-    let { value: t, children: n, equalityFn: a = i(), style: s, ...h } = e,
+    let { value: t, children: n, equalityFn: i = a(), style: s, ...h } = e,
         x = (0, d.Z)(t),
         [{ spring: b }, f] = (0, C.useSpring)(() => ({ spring: 0 }), 'animate-always'),
         g = (0, C.useToken)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
@@ -41,8 +41,8 @@ function h(e) {
                 });
         }, [f]);
     o.useEffect(() => {
-        if (!(null == t || null == x || a(t, x))) H();
-    }, [H, t, x, a]);
+        if (!(null == t || null == x || i(t, x))) H();
+    }, [H, t, x, i]);
     let j =
             null == b
                 ? void 0

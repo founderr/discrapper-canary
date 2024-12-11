@@ -1,16 +1,16 @@
 t.d(n, {
     n: function () {
-        return r;
+        return i;
     }
 });
-var i = t(192379),
-    l = t(941028);
-function r(e) {
-    i.useEffect(
+var l = t(192379),
+    r = t(941028);
+function i(e) {
+    l.useEffect(
         () => (
-            l.k$(e),
+            r.k$(e),
             () => {
-                l.kr(e);
+                r.kr(e);
             }
         ),
         [e]

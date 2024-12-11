@@ -1,30 +1,30 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return x;
     }
 });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
+var s = n(120356),
+    r = n.n(s),
     l = n(481060),
-    o = n(906732),
-    c = n(171368),
-    s = n(768581),
+    a = n(906732),
+    o = n(171368),
+    c = n(768581),
     d = n(51144),
     u = n(981631),
     m = n(388032),
-    f = n(64371);
-function b(e) {
-    let { user: t, joinRequestId: n, className: r } = e,
-        { username: b } = t,
-        x = s.ZP.getUserAvatarURL(t),
-        { analyticsLocations: h } = (0, o.ZP)(),
-        p = () => {
-            (0, c.openUserProfileModal)({
+    h = n(64371);
+function x(e) {
+    let { user: t, joinRequestId: n, className: s } = e,
+        { username: x } = t,
+        j = c.ZP.getUserAvatarURL(t),
+        { analyticsLocations: g } = (0, a.ZP)(),
+        v = () => {
+            (0, o.openUserProfileModal)({
                 userId: t.id,
                 joinRequestId: n,
-                sourceAnalyticsLocations: h,
+                sourceAnalyticsLocations: g,
                 analyticsLocation: {
                     section: u.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
                     object: u.qAy.JOIN_REQUEST
@@ -32,26 +32,26 @@ function b(e) {
             });
         };
     return (0, i.jsxs)('div', {
-        className: a()(f.container, r),
+        className: r()(h.container, s),
         children: [
             (0, i.jsx)(l.Anchor, {
-                onClick: p,
+                onClick: v,
                 children: (0, i.jsx)(l.Avatar, {
-                    src: x,
+                    src: j,
                     size: l.AvatarSizes.SIZE_80,
-                    'aria-label': b,
-                    className: f.avatar
+                    'aria-label': x,
+                    className: h.avatar
                 })
             }),
             (0, i.jsx)('div', {
-                className: f.username,
+                className: h.username,
                 children: (0, i.jsx)(l.Heading, {
                     variant: 'heading-lg/semibold',
                     children: d.ZP.getFormattedName(t)
                 })
             }),
             (0, i.jsx)(l.Anchor, {
-                onClick: p,
+                onClick: v,
                 children: m.intl.string(m.t.iXAna2)
             })
         ]

@@ -2,8 +2,8 @@ var i = t(200651);
 t(192379);
 var l = t(481060),
     a = t(239091),
-    r = t(838221),
-    s = t(246364),
+    s = t(838221),
+    r = t(246364),
     o = t(700833),
     c = t(388032),
     d = t(117225);
@@ -19,36 +19,36 @@ function u(e) {
             children: [
                 (0, i.jsx)(l.MenuItem, {
                     id: 'text-input',
-                    icon: (0, l.makeIconCompat)(r.Z),
+                    icon: (0, l.makeIconCompat)(s.Z),
                     label: c.intl.string(c.t.w6Q9w8),
-                    action: () => (0, o.Md)(s.QJ.TEXT_INPUT, n, u)
+                    action: () => (0, o.Md)(r.QJ.TEXT_INPUT, n, u)
                 }),
                 (0, i.jsx)(l.MenuItem, {
                     id: 'paragraph',
                     icon: l.ChannelListIcon,
                     label: c.intl.string(c.t.gG0JBA),
-                    action: () => (0, o.Md)(s.QJ.PARAGRAPH, n, u)
+                    action: () => (0, o.Md)(r.QJ.PARAGRAPH, n, u)
                 }),
                 (0, i.jsx)(l.MenuItem, {
                     id: 'multiple-choice',
                     icon: l.ListBulletsIcon,
                     label: c.intl.string(c.t.ooKh3t),
-                    action: () => (0, o.Md)(s.QJ.MULTIPLE_CHOICE, n, u)
+                    action: () => (0, o.Md)(r.QJ.MULTIPLE_CHOICE, n, u)
                 }),
                 m &&
                     (0, i.jsx)(l.MenuItem, {
                         id: 'terms',
                         icon: l.BookCheckIcon,
                         label: c.intl.string(c.t['3pz9t7']),
-                        action: () => (0, o.Md)(s.QJ.TERMS, n, u)
+                        action: () => (0, o.Md)(r.QJ.TERMS, n, u)
                     })
             ]
         })
     });
 }
 n.Z = function (e) {
-    let { addFormField: n, guild: t, allowTerms: r } = e,
-        s = (e) => {
+    let { addFormField: n, guild: t, allowTerms: s } = e,
+        r = (e) => {
             (0, a.vq)(
                 e,
                 (e) =>
@@ -56,7 +56,7 @@ n.Z = function (e) {
                         ...e,
                         addFormField: n,
                         guild: t,
-                        allowTerms: r
+                        allowTerms: s
                     }),
                 {
                     position: 'top',
@@ -70,7 +70,7 @@ n.Z = function (e) {
             (0, i.jsxs)(l.Clickable, {
                 ...e,
                 className: d.container,
-                onClick: s,
+                onClick: r,
                 children: [
                     (0, i.jsx)(l.PlusSmallIcon, {
                         size: 'md',

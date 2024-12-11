@@ -2,8 +2,8 @@ t(47120);
 var i = t(200651),
     l = t(192379),
     a = t(481060),
-    r = t(881052),
-    s = t(484455),
+    s = t(881052),
+    r = t(484455),
     o = t(592286),
     c = t(388032),
     d = t(31619);
@@ -26,14 +26,14 @@ n.Z = function (e) {
                 await t(n, h);
             } catch (e) {
                 if (j.current) return;
-                f(new r.Hx(e).getAnyErrorMessage());
+                f(new s.Hx(e).getAnyErrorMessage());
             } finally {
                 if (j.current) return;
                 v.current = !1;
             }
         }
     }, [h, n, t]);
-    return (0, i.jsxs)(s.Z, {
+    return (0, i.jsxs)(r.Z, {
         title: c.intl.string(c.t.aDJAfn),
         children: [
             (0, i.jsx)(a.TextArea, {

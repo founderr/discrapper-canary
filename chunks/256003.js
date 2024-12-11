@@ -6,17 +6,17 @@ n.d(t, {
     n(47120);
 var l = n(232713),
     o = n(65400),
-    a = n(731965);
-let i = (0, o.F)((e, t) => ({
+    i = n(731965);
+let a = (0, o.F)((e, t) => ({
         selectedUserIds: {},
         addUsers: (n, l) => {
             var o;
-            let { selectedUserIds: i } = t(),
-                r = new Set([...(null !== (o = i[n]) && void 0 !== o ? o : new Set()), ...l]);
-            (0, a.j)(() => {
+            let { selectedUserIds: a } = t(),
+                r = new Set([...(null !== (o = a[n]) && void 0 !== o ? o : new Set()), ...l]);
+            (0, i.j)(() => {
                 e({
                     selectedUserIds: {
-                        ...i,
+                        ...a,
                         [n]: r
                     }
                 });
@@ -24,10 +24,10 @@ let i = (0, o.F)((e, t) => ({
         },
         removeUser: (n, l) => {
             let { selectedUserIds: o } = t(),
-                i = o[n];
-            if (null == i) return;
-            let r = [...i].filter((e) => e !== l);
-            (0, a.j)(() => {
+                a = o[n];
+            if (null == a) return;
+            let r = [...a].filter((e) => e !== l);
+            (0, i.j)(() => {
                 e({
                     selectedUserIds: {
                         ...o,
@@ -39,7 +39,7 @@ let i = (0, o.F)((e, t) => ({
         clearSelection: (n) => {
             let { selectedUserIds: l } = t();
             null != l &&
-                (0, a.j)(() => {
+                (0, i.j)(() => {
                     e({
                         selectedUserIds: {
                             ...l,
@@ -51,7 +51,7 @@ let i = (0, o.F)((e, t) => ({
     })),
     r = new Set();
 function s(e) {
-    return i((t) => {
+    return a((t) => {
         var n;
         return {
             selectedUserIds: null !== (n = t.selectedUserIds[e]) && void 0 !== n ? n : r,

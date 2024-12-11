@@ -2,8 +2,8 @@ var i = t(200651);
 t(192379);
 var l = t(707592),
     a = t(137158),
-    r = t(388032),
-    s = t(31619);
+    s = t(388032),
+    r = t(31619);
 n.Z = function (e) {
     let { formField: n, index: t, isDragEnabled: o, isDropHovered: c, onDrop: d, onEdit: u, onRemove: m, canRemove: x, actionsLocation: f } = e,
         { label: h, placeholder: g } = n;
@@ -19,8 +19,8 @@ n.Z = function (e) {
         canRemove: x,
         actionsLocation: f,
         children: (0, i.jsx)(l.Gi, {
-            className: s.fieldBackground,
-            placeholder: null != g ? g : r.intl.string(r.t['Sqn+Wl']),
+            className: r.fieldBackground,
+            placeholder: null != g ? g : s.intl.string(s.t['Sqn+Wl']),
             disabled: !0
         })
     });

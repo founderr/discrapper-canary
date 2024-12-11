@@ -5,8 +5,8 @@ n.d(t, {
 });
 var l = n(200651),
     o = n(192379),
-    a = n(498607),
-    i = n.n(a),
+    i = n(498607),
+    a = n.n(i),
     r = n(399606),
     s = n(481060),
     c = n(203893),
@@ -18,36 +18,36 @@ var l = n(200651),
     x = n(389173);
 function b(e) {
     let { guildId: t, onClose: n } = e,
-        a = (0, r.e7)([d.Z], () => d.Z.getSearchStateByGuildId(t), [t], i()),
+        i = (0, r.e7)([d.Z], () => d.Z.getSearchStateByGuildId(t), [t], a()),
         b = (0, C.dW)(t),
         f = o.useCallback(() => {
-            !a.requireUnusualDmActivity && b(C.aY.UNUSUAL_DM_ACTIVITY),
+            !i.requireUnusualDmActivity && b(C.aY.UNUSUAL_DM_ACTIVITY),
                 (0, u.Dr)(t, {
-                    ...a,
-                    requireUnusualDmActivity: !a.requireUnusualDmActivity
+                    ...i,
+                    requireUnusualDmActivity: !i.requireUnusualDmActivity
                 });
-        }, [t, a, b]),
+        }, [t, i, b]),
         g = o.useCallback(() => {
-            !a.requireCommunicationDisabled && b(C.aY.COMMUNICATION_DISABLED),
+            !i.requireCommunicationDisabled && b(C.aY.COMMUNICATION_DISABLED),
                 (0, u.Dr)(t, {
-                    ...a,
-                    requireCommunicationDisabled: !a.requireCommunicationDisabled
+                    ...i,
+                    requireCommunicationDisabled: !i.requireCommunicationDisabled
                 });
-        }, [t, a, b]),
+        }, [t, i, b]),
         p = o.useCallback(() => {
-            !a.requireUnusualAccountActivity && b(C.aY.UNUSUAL_ACCOUNT_ACTIVITY),
+            !i.requireUnusualAccountActivity && b(C.aY.UNUSUAL_ACCOUNT_ACTIVITY),
                 (0, u.Dr)(t, {
-                    ...a,
-                    requireUnusualAccountActivity: !a.requireUnusualAccountActivity
+                    ...i,
+                    requireUnusualAccountActivity: !i.requireUnusualAccountActivity
                 });
-        }, [t, a, b]),
+        }, [t, i, b]),
         H = o.useCallback(() => {
-            !a.requireUsernameQuarantined && b(C.aY.USERNAME_QUARANTINED),
+            !i.requireUsernameQuarantined && b(C.aY.USERNAME_QUARANTINED),
                 (0, u.Dr)(t, {
-                    ...a,
-                    requireUsernameQuarantined: !a.requireUsernameQuarantined
+                    ...i,
+                    requireUsernameQuarantined: !i.requireUsernameQuarantined
                 });
-        }, [t, a, b]);
+        }, [t, i, b]);
     return (0, l.jsx)(s.Menu, {
         navId: 'member-safety-flags',
         onClose: n,
@@ -71,7 +71,7 @@ function b(e) {
                         ]
                     }),
                     action: f,
-                    checked: a.requireUnusualDmActivity
+                    checked: i.requireUnusualDmActivity
                 }),
                 (0, l.jsx)(s.MenuCheckboxItem, {
                     id: 'toggle-require-communication-disabled',
@@ -89,7 +89,7 @@ function b(e) {
                         ]
                     }),
                     action: g,
-                    checked: a.requireCommunicationDisabled
+                    checked: i.requireCommunicationDisabled
                 }),
                 (0, l.jsxs)(l.Fragment, {
                     children: [
@@ -107,7 +107,7 @@ function b(e) {
                                 ]
                             }),
                             action: p,
-                            checked: a.requireUnusualAccountActivity
+                            checked: i.requireUnusualAccountActivity
                         }),
                         (0, l.jsx)(s.MenuCheckboxItem, {
                             id: 'toggle-require-username-quarantined',
@@ -125,7 +125,7 @@ function b(e) {
                                 ]
                             }),
                             action: H,
-                            checked: a.requireUsernameQuarantined
+                            checked: i.requireUsernameQuarantined
                         })
                     ]
                 })

@@ -1,8 +1,8 @@
 n(47120);
 var l = n(200651),
     o = n(192379),
-    a = n(392711),
-    i = n.n(a),
+    i = n(392711),
+    a = n.n(i),
     r = n(442837),
     s = n(481060),
     c = n(48210),
@@ -12,7 +12,7 @@ var l = n(200651),
     m = n(388032),
     h = n(321883);
 t.Z = (e) => {
-    let { guild: t, transitionState: n, onClose: a } = e,
+    let { guild: t, transitionState: n, onClose: i } = e,
         [x, b] = o.useState(7),
         [f, g] = o.useState(null),
         [p, H] = o.useState([]),
@@ -26,7 +26,7 @@ t.Z = (e) => {
         [u.Z, d.Z],
         () => {
             let e = u.Z.getHighestRole(t);
-            return i()(d.Z.getRoles(t.id))
+            return a()(d.Z.getRoles(t.id))
                 .sortBy((e) => e.position)
                 .filter((e) => !(0, C.pM)(t.id, e.id))
                 .filter((n) => u.Z.isRoleHigher(t, e, n))
@@ -108,14 +108,14 @@ t.Z = (e) => {
                 children: [
                     (0, l.jsx)(s.Button, {
                         onClick: () => {
-                            c.Z.prune(t.id, x, p), a();
+                            c.Z.prune(t.id, x, p), i();
                         },
                         children: m.intl.string(m.t['2mIlKS'])
                     }),
                     (0, l.jsx)(s.Button, {
                         look: s.Button.Looks.LINK,
                         color: s.Button.Colors.PRIMARY,
-                        onClick: a,
+                        onClick: i,
                         children: m.intl.string(m.t['ETE/oK'])
                     })
                 ]

@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var l = n(200651),
     o = n(192379),
-    a = n(120356),
-    i = n.n(a),
+    i = n(120356),
+    a = n.n(i),
     r = n(498607),
     s = n.n(r),
     c = n(399606),
@@ -29,16 +29,16 @@ var l = n(200651),
     I = n(338648),
     _ = n(216412);
 function M(e) {
-    let { label: t, onFilter: n, isFiltered: o, isSorted: a, className: r, ...s } = e,
+    let { label: t, onFilter: n, isFiltered: o, isSorted: i, className: r, ...s } = e,
         c = o ? 'header-primary' : 'header-secondary';
     return (
-        a && (c = 'text-brand'),
+        i && (c = 'text-brand'),
         (0, l.jsx)('th', {
-            className: i()(I.tableHeaderCellContainer, r),
+            className: a()(I.tableHeaderCellContainer, r),
             children: (0, l.jsxs)(d.Clickable, {
                 ...s,
                 onClick: n,
-                className: i()(I.tableHeaderCell, { [I.tableHeaderCellWithFilter]: null != n }),
+                className: a()(I.tableHeaderCell, { [I.tableHeaderCellWithFilter]: null != n }),
                 children: [
                     (0, l.jsx)(d.Text, {
                         variant: 'eyebrow',
@@ -64,17 +64,17 @@ function M(e) {
 let Z = 'member-safety-force-show-signals-tooltip';
 function R(e) {
     let { guildId: t, currentPagedMembers: n } = e,
-        a = (0, c.e7)([b.Z], () => b.Z.getSearchStateByGuildId(t), [t], s()),
+        i = (0, c.e7)([b.Z], () => b.Z.getSearchStateByGuildId(t), [t], s()),
         r = (0, c.e7)([m.Z, u.Z], () => m.Z.can(N.Plq.MANAGE_GUILD, u.Z.getGuild(t)), [t]),
         { selectedUserIds: R, addUsers: D, clearSelection: S } = (0, f.Z)(t),
-        V = a.requireUnusualDmActivity || a.requireCommunicationDisabled || a.requireUnusualAccountActivity || a.requireUsernameQuarantined,
-        T = a.selectedRoleIds.size > 0,
-        E = null != a.selectedJoinDateOption.afterDate,
-        w = a.selectedSort === h.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
-        k = null != a.selectedAccountAgeOption.afterDate,
-        A = a.selectedSort === h.d$.ORDER_BY_USER_ID_ASC || a.selectedSort === h.d$.ORDER_BY_USER_ID_DESC,
-        y = null != a.selectedSourceInviteCode && '' !== a.selectedSourceInviteCode,
-        B = null != a.selectedJoinSourceType,
+        V = i.requireUnusualDmActivity || i.requireCommunicationDisabled || i.requireUnusualAccountActivity || i.requireUsernameQuarantined,
+        T = i.selectedRoleIds.size > 0,
+        E = null != i.selectedJoinDateOption.afterDate,
+        w = i.selectedSort === h.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
+        A = null != i.selectedAccountAgeOption.afterDate,
+        k = i.selectedSort === h.d$.ORDER_BY_USER_ID_ASC || i.selectedSort === h.d$.ORDER_BY_USER_ID_DESC,
+        y = null != i.selectedSourceInviteCode && '' !== i.selectedSourceInviteCode,
+        B = null != i.selectedJoinSourceType,
         O = y || B,
         [U, P] = o.useState(null == C.K.get(Z, null)),
         F = o.useCallback(() => {
@@ -93,7 +93,7 @@ function R(e) {
             children: [
                 G &&
                     (0, l.jsx)('th', {
-                        className: i()(I.tableHeaderCellContainer, _.xsmallCol),
+                        className: a()(I.tableHeaderCellContainer, _.xsmallCol),
                         children: (0, l.jsx)(d.Tooltip, {
                             shouldShow: !q,
                             text: L.intl.string(L.t.tJEY0N),
@@ -151,8 +151,8 @@ function R(e) {
                                       return (0, l.jsx)(M, {
                                           label: L.intl.string(L.t.sPph4O),
                                           onFilter: t,
-                                          isFiltered: k,
-                                          isSorted: A,
+                                          isFiltered: A,
+                                          isSorted: k,
                                           className: _.smallCol,
                                           ...n
                                       });
@@ -217,7 +217,7 @@ function R(e) {
                             label: L.intl.string(L.t['2SZsWV']),
                             onFilter: t,
                             isFiltered: T,
-                            className: i()(_.mediumCol),
+                            className: a()(_.mediumCol),
                             ...n
                         });
                     }
@@ -251,7 +251,7 @@ function R(e) {
                                         F(), null === (l = t.onClick) || void 0 === l || l.call(t, n), null === (o = e.onClick) || void 0 === o || o.call(e);
                                     },
                                     isFiltered: V,
-                                    className: i()(_.smallCol),
+                                    className: a()(_.smallCol),
                                     onMouseEnter: () => {
                                         var n, l;
                                         F(), null === (n = e.onMouseEnter) || void 0 === n || n.call(e), null === (l = t.onMouseEnter) || void 0 === l || l.call(t);

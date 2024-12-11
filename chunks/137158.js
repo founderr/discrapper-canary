@@ -7,8 +7,8 @@ t.d(n, {
 var i = t(200651),
     l = t(192379),
     a = t(120356),
-    r = t.n(a),
-    s = t(392711),
+    s = t.n(a),
+    r = t(392711),
     o = t(999153),
     c = t(584922),
     d = t(692547),
@@ -16,7 +16,7 @@ var i = t(200651),
     m = t(388032),
     x = t(31619);
 function f(e) {
-    let { title: n, children: t, onEdit: l, onRemove: a, canRemove: s, actionsLocation: o } = e;
+    let { title: n, children: t, onEdit: l, onRemove: a, canRemove: r, actionsLocation: o } = e;
     return (0, i.jsxs)('div', {
         className: x.backgroundContainer,
         children: [
@@ -37,15 +37,15 @@ function f(e) {
                     children: [
                         (0, i.jsx)(u.Tooltip, {
                             text: m.intl.string(m.t.B3Jj1N),
-                            shouldShow: !s,
+                            shouldShow: !r,
                             children: (e) =>
                                 (0, i.jsx)(u.Button, {
                                     ...e,
-                                    className: r()(x.removeButton, x.button),
+                                    className: s()(x.removeButton, x.button),
                                     size: u.Button.Sizes.SMALL,
                                     look: u.Button.Looks.BLANK,
                                     onClick: a,
-                                    disabled: !s,
+                                    disabled: !r,
                                     children: m.intl.string(m.t.N86XcH)
                                 })
                         }),
@@ -64,7 +64,7 @@ function f(e) {
 let h = 'FORM_FIELD';
 function g(e) {
     let { index: n, field: t, isDropHovered: a, onDrop: m } = e,
-        g = (0, s.debounce)(async (e, n, t) => {
+        g = (0, r.debounce)(async (e, n, t) => {
             await m(e, n, t);
         }),
         v = l.useRef(null),
@@ -84,11 +84,11 @@ function g(e) {
                 var i;
                 let { index: l } = e,
                     a = null === (i = v.current) || void 0 === i ? void 0 : i.getBoundingClientRect(),
-                    r = t.getClientOffset();
-                if (null == a || null == r) return;
-                let s = (a.bottom - a.top) / 2,
-                    o = r.y - a.top;
-                (!(l < n) || !(o < s)) && (!(l > n) || !(o < s)) && l !== n && g(e.field, n, !1);
+                    s = t.getClientOffset();
+                if (null == a || null == s) return;
+                let r = (a.bottom - a.top) / 2,
+                    o = s.y - a.top;
+                (!(l < n) || !(o < r)) && (!(l > n) || !(o < r)) && l !== n && g(e.field, n, !1);
             },
             drop: (e) => {
                 g(e.field, n, !0);
@@ -107,7 +107,7 @@ function g(e) {
         (0, i.jsxs)('div', {
             ref: v,
             'data-dnd-name': 'field-'.concat(n),
-            className: r()(x.dragContainer, { [x.dropHovered]: a }),
+            className: s()(x.dragContainer, { [x.dropHovered]: a }),
             children: [
                 (0, i.jsx)('div', {
                     className: x.dragIconContainer,

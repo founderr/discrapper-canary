@@ -2,8 +2,8 @@ t(47120);
 var i = t(200651),
     l = t(192379),
     a = t(442837),
-    r = t(481060),
-    s = t(496675),
+    s = t(481060),
+    r = t(496675),
     o = t(63568),
     c = t(246364),
     d = t(983736),
@@ -18,37 +18,37 @@ var i = t(200651),
     C = t(388032);
 n.Z = function (e) {
     let { guild: n, submittedGuildJoinRequestsCount: t, onFormFieldUpdate: p, hideVerificationLevelField: N, isClanContext: I, formDescription: T, onFieldsSave: F, onDescriptionSave: b } = e,
-        y = l.useRef(!1),
-        [R, w] = l.useState(null),
+        w = l.useRef(!1),
+        [y, R] = l.useState(null),
         [E, k] = l.useState(e.formFields);
     l.useEffect(() => k(e.formFields), [e.formFields]);
     let M = l.useRef(e.formFields),
         L = l.useMemo(() => E.filter(d.kT), [E]),
-        Z = l.useMemo(() => E.filter(d._C), [E]),
-        P = Z.length,
+        P = l.useMemo(() => E.filter(d._C), [E]),
+        Z = P.length,
         S = l.useMemo(() => E.length === v.nx, [E]),
         A = l.useMemo(() => E.some(c.J), [E]),
         _ = l.useMemo(() => E.some((e) => !(0, c.J)(e)), [E]),
-        H = P > 0,
+        H = Z > 0,
         D = (0, o.K2)(n.id, 'verification form builder') || n.hasFeature(j.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) || I,
         J = l.useCallback(() => {
-            (0, r.showToast)((0, r.createToast)(C.intl.string(C.t.R0RpRU), r.ToastType.FAILURE));
+            (0, s.showToast)((0, s.createToast)(C.intl.string(C.t.R0RpRU), s.ToastType.FAILURE));
         }, []),
-        B = (0, a.e7)([s.Z], () => s.Z.can(j.Plq.MANAGE_GUILD, n)),
+        B = (0, a.e7)([r.Z], () => r.Z.can(j.Plq.MANAGE_GUILD, n)),
         z = l.useCallback(
             async (e) => {
-                if (!y.current) {
-                    (y.current = !0), I && (e = e.filter((e) => e.field_type !== c.QJ.TERMS));
+                if (!w.current) {
+                    (w.current = !0), I && (e = e.filter((e) => e.field_type !== c.QJ.TERMS));
                     try {
                         await F(n.id, e), p(), k(e), (M.current = e);
                     } catch (e) {
                         throw (k(M.current), e);
                     } finally {
-                        null != R && w(null), (y.current = !1);
+                        null != y && R(null), (w.current = !1);
                     }
                 }
             },
-            [R, n.id, p, F, I]
+            [y, n.id, p, F, I]
         ),
         G = l.useCallback(
             async (e) => {
@@ -71,13 +71,13 @@ n.Z = function (e) {
                     l = [...E];
                 if ((null != n && n !== i && (l.splice(i, 1), l.splice(n, 0, e), k(l)), t))
                     try {
-                        await z(l), null !== R && w(null);
+                        await z(l), null !== y && R(null);
                     } catch (e) {
                         J();
                     }
-                else R !== n && w(n);
+                else y !== n && R(n);
             },
-            [R, E, z, J]
+            [y, E, z, J]
         ),
         O = l.useCallback(
             async (e) => {
@@ -108,7 +108,7 @@ n.Z = function (e) {
                     }),
                 L.map((e) =>
                     (0, g.a0)({
-                        dropHoveredIndex: R,
+                        dropHoveredIndex: y,
                         formField: e,
                         guild: n,
                         index: E.indexOf(e),
@@ -134,9 +134,9 @@ n.Z = function (e) {
                           guild: n,
                           showHeader: !I
                       }),
-                  Z.map((e) =>
+                  P.map((e) =>
                       (0, g.a0)({
-                          dropHoveredIndex: R,
+                          dropHoveredIndex: y,
                           formField: e,
                           guild: n,
                           index: E.indexOf(e),
@@ -145,7 +145,7 @@ n.Z = function (e) {
                           removeFormField: O,
                           updateFormField: Q,
                           updateFormFieldOrder: U,
-                          canRemove: !(I && Z.length <= 1) && B,
+                          canRemove: !(I && P.length <= 1) && B,
                           actionsLocation: q
                       })
                   ),

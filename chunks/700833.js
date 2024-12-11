@@ -10,8 +10,8 @@ var i = t(200651);
 t(192379);
 var l = t(392711),
     a = t(481060),
-    r = t(246364),
-    s = t(405545),
+    s = t(246364),
+    r = t(405545),
     o = t(382574),
     c = t(279988),
     d = t(786127),
@@ -28,13 +28,13 @@ function x(e) {
         b = async (e, n, t) => {
             await p(e, n, t);
         },
-        y = (0, l.uniqueId)(),
-        R = n === f,
-        w = {
-            key: y,
+        w = (0, l.uniqueId)(),
+        y = n === f,
+        R = {
+            key: w,
             index: f,
             isDragEnabled: g,
-            isDropHovered: R,
+            isDropHovered: y,
             onEdit: () => {
                 0 === v
                     ? h(u, F, x)
@@ -55,36 +55,36 @@ function x(e) {
             actionsLocation: I
         };
     switch (u.field_type) {
-        case r.QJ.TERMS:
+        case s.QJ.TERMS:
             return (0, i.jsx)(c.Z, {
                 channelId: x.rulesChannelId,
                 title: m.intl.string(m.t['53vNcH']),
                 formField: u,
-                ...w
+                ...R
             });
-        case r.QJ.PARAGRAPH:
+        case s.QJ.PARAGRAPH:
             return (0, i.jsx)(o.Z, {
                 formField: u,
-                ...w
+                ...R
             });
-        case r.QJ.TEXT_INPUT:
+        case s.QJ.TEXT_INPUT:
             return (0, i.jsx)(d.Z, {
                 formField: u,
-                ...w
+                ...R
             });
-        case r.QJ.MULTIPLE_CHOICE:
-            return (0, i.jsx)(s.Z, {
+        case s.QJ.MULTIPLE_CHOICE:
+            return (0, i.jsx)(r.Z, {
                 formField: u,
-                ...w
+                ...R
             });
         default:
             return null;
     }
 }
 function f(e, n, l) {
-    let s = { onCloseRequest: u.dG4 };
+    let r = { onCloseRequest: u.dG4 };
     switch (e) {
-        case r.QJ.TERMS:
+        case s.QJ.TERMS:
             return (0, a.openModalLazy)(async () => {
                 let { default: e } = await t.e('5945').then(t.bind(t, 92451));
                 return (t) =>
@@ -94,8 +94,8 @@ function f(e, n, l) {
                         onSave: n,
                         guild: l
                     });
-            }, s);
-        case r.QJ.PARAGRAPH:
+            }, r);
+        case s.QJ.PARAGRAPH:
             return (0, a.openModalLazy)(async () => {
                 let { ParagraphFormFieldModal: e } = await t.e('6595').then(t.bind(t, 457042));
                 return (t) =>
@@ -104,8 +104,8 @@ function f(e, n, l) {
                         field: void 0,
                         onSave: n
                     });
-            }, s);
-        case r.QJ.TEXT_INPUT:
+            }, r);
+        case s.QJ.TEXT_INPUT:
             return (0, a.openModalLazy)(async () => {
                 let { TextInputFormFieldModal: e } = await t.e('6595').then(t.bind(t, 457042));
                 return (t) =>
@@ -114,8 +114,8 @@ function f(e, n, l) {
                         field: void 0,
                         onSave: n
                     });
-            }, s);
-        case r.QJ.MULTIPLE_CHOICE:
+            }, r);
+        case s.QJ.MULTIPLE_CHOICE:
             return (0, a.openModalLazy)(async () => {
                 let { default: e } = await t.e('94064').then(t.bind(t, 607569));
                 return (t) =>
@@ -124,13 +124,13 @@ function f(e, n, l) {
                         field: void 0,
                         onSave: n
                     });
-            }, s);
+            }, r);
     }
 }
 function h(e, n, l) {
-    let s = { onCloseRequest: u.dG4 };
+    let r = { onCloseRequest: u.dG4 };
     switch (e.field_type) {
-        case r.QJ.TERMS:
+        case s.QJ.TERMS:
             return (0, a.openModalLazy)(async () => {
                 let { default: a } = await t.e('5945').then(t.bind(t, 92451));
                 return (t) =>
@@ -140,8 +140,8 @@ function h(e, n, l) {
                         onSave: n,
                         guild: l
                     });
-            }, s);
-        case r.QJ.PARAGRAPH:
+            }, r);
+        case s.QJ.PARAGRAPH:
             return (0, a.openModalLazy)(async () => {
                 let { ParagraphFormFieldModal: l } = await t.e('6595').then(t.bind(t, 457042));
                 return (t) =>
@@ -150,8 +150,8 @@ function h(e, n, l) {
                         field: e,
                         onSave: n
                     });
-            }, s);
-        case r.QJ.TEXT_INPUT:
+            }, r);
+        case s.QJ.TEXT_INPUT:
             return (0, a.openModalLazy)(async () => {
                 let { TextInputFormFieldModal: l } = await t.e('6595').then(t.bind(t, 457042));
                 return (t) =>
@@ -160,8 +160,8 @@ function h(e, n, l) {
                         field: e,
                         onSave: n
                     });
-            }, s);
-        case r.QJ.MULTIPLE_CHOICE:
+            }, r);
+        case s.QJ.MULTIPLE_CHOICE:
             return (0, a.openModalLazy)(async () => {
                 let { default: l } = await t.e('94064').then(t.bind(t, 607569));
                 return (t) =>
@@ -170,6 +170,6 @@ function h(e, n, l) {
                         field: e,
                         onSave: n
                     });
-            }, s);
+            }, r);
     }
 }

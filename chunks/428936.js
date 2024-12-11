@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var l = n(200651),
     o = n(192379),
-    a = n(120356),
-    i = n.n(a),
+    i = n(120356),
+    a = n.n(i),
     r = n(399606),
     s = n(481060),
     c = n(823596),
@@ -18,7 +18,7 @@ var l = n(200651),
     h = n(77714);
 function x(e) {
     let { guildId: t, onPageChange: n } = e,
-        [a, x] = o.useTransition(),
+        [i, x] = o.useTransition(),
         b = (0, r.e7)([d.Z], () => d.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
         f = (0, r.cj)([d.Z], () => d.Z.getPaginationStateByGuildId(t), [t]),
         g = (0, C.$j)(t),
@@ -35,10 +35,10 @@ function x(e) {
         v = b > f.pageSize || g,
         N = b > c.LU['0'];
     return (0, l.jsxs)('div', {
-        className: i()(h.paginationContainer),
+        className: a()(h.paginationContainer),
         children: [
             (0, l.jsx)('div', {
-                className: i()(h.pageSizeSelection),
+                className: a()(h.pageSizeSelection),
                 children: N
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
@@ -71,7 +71,7 @@ function x(e) {
                                       (0, l.jsx)(s.Text, {
                                           variant: 'text-md/normal',
                                           color: 'text-muted',
-                                          className: i()(h.pageLabel),
+                                          className: a()(h.pageLabel),
                                           ...e,
                                           children: j
                                       })
@@ -85,11 +85,11 @@ function x(e) {
                       })
             }),
             (0, l.jsx)('div', {
-                className: i()(h.pagination),
+                className: a()(h.pagination),
                 children:
                     v &&
                     (0, l.jsx)(s.Paginator, {
-                        className: i()(h.paginationInput),
+                        className: a()(h.paginationInput),
                         totalCount: b,
                         pageSize: f.pageSize,
                         disablePaginationGap: !0,

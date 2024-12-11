@@ -1,127 +1,127 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return C;
+        return h;
     }
 }),
-    n(47120);
-var i = n(200651),
-    o = n(192379),
-    s = n(120356),
-    r = n.n(s),
-    a = n(831209),
-    l = n(481060),
-    d = n(367907),
-    c = n(177862),
-    x = n(981631),
-    u = n(388032),
-    h = n(506452);
-function C(e) {
-    let { guildId: t, transitionState: n, onClose: s } = e,
-        [C, m] = o.useState([]),
-        [p, _] = o.useState(),
+    t(47120);
+var l = t(200651),
+    r = t(192379),
+    i = t(120356),
+    a = t.n(i),
+    o = t(831209),
+    s = t(481060),
+    c = t(367907),
+    d = t(177862),
+    u = t(981631),
+    x = t(388032),
+    m = t(506452);
+function h(e) {
+    let { guildId: n, transitionState: t, onClose: i } = e,
+        [h, b] = r.useState([]),
+        [_, C] = r.useState(),
         j = [
             {
-                text: u.intl.string(u.t['//3pvr']),
-                value: c.C2.DM_SPAM
+                text: x.intl.string(x.t['//3pvr']),
+                value: d.C2.DM_SPAM
             },
             {
-                text: u.intl.string(u.t.SdVsio),
-                value: c.C2.MENTION_SPAM
+                text: x.intl.string(x.t.SdVsio),
+                value: d.C2.MENTION_SPAM
             },
             {
-                text: u.intl.string(u.t.uTiSVF),
-                value: c.C2.CHANNEL_SPAM
+                text: x.intl.string(x.t.uTiSVF),
+                value: d.C2.CHANNEL_SPAM
             },
             {
-                text: u.intl.string(u.t.GQczU1),
-                value: c.C2.SUS_NEW_MEMBERS
+                text: x.intl.string(x.t.GQczU1),
+                value: d.C2.SUS_NEW_MEMBERS
             },
             {
-                text: u.intl.string(u.t.AAgqy8),
-                value: c.C2.CHANGING_SETTINGS
+                text: x.intl.string(x.t.AAgqy8),
+                value: d.C2.CHANGING_SETTINGS
             },
             {
-                text: u.intl.string(u.t.ryPKb2),
-                value: c.C2.OTHER
+                text: x.intl.string(x.t.ryPKb2),
+                value: d.C2.OTHER
             }
         ];
     function g(e) {
-        C.includes(e) ? m((t) => t.filter((t) => t !== e)) : m((t) => [...t, e]);
+        h.includes(e) ? b((n) => n.filter((n) => n !== e)) : b((n) => [...n, e]);
     }
-    return null == t
-        ? (s(), null)
-        : (0, i.jsxs)(l.ModalRoot, {
-              transitionState: n,
-              size: l.ModalSize.MEDIUM,
+    return null == n
+        ? (i(), null)
+        : (0, l.jsxs)(s.ModalRoot, {
+              transitionState: t,
+              size: s.ModalSize.MEDIUM,
               children: [
-                  (0, i.jsx)(l.ModalHeader, {
+                  (0, l.jsx)(s.ModalHeader, {
                       separator: !0,
-                      children: (0, i.jsxs)('div', {
-                          className: h.headerContainer,
+                      children: (0, l.jsxs)('div', {
+                          className: m.headerContainer,
                           children: [
-                              (0, i.jsxs)('div', {
-                                  className: h.headerText,
+                              (0, l.jsxs)('div', {
+                                  className: m.headerText,
                                   children: [
-                                      (0, i.jsx)(l.LockIcon, {
+                                      (0, l.jsx)(s.LockIcon, {
                                           size: 'xs',
-                                          color: a.Z.INTERACTIVE_NORMAL
+                                          color: o.Z.INTERACTIVE_NORMAL
                                       }),
-                                      (0, i.jsx)(l.Heading, {
+                                      (0, l.jsx)(s.Heading, {
                                           color: 'header-primary',
                                           variant: 'heading-md/semibold',
-                                          children: u.intl.string(u.t.f5hd9P)
+                                          children: x.intl.string(x.t.f5hd9P)
                                       })
                                   ]
                               }),
-                              (0, i.jsx)(l.Clickable, {
-                                  onClick: s,
-                                  children: (0, i.jsx)(l.XSmallIcon, {
+                              (0, l.jsx)(s.Clickable, {
+                                  onClick: i,
+                                  children: (0, l.jsx)(s.XSmallIcon, {
                                       size: 'xs',
                                       color: 'currentColor',
-                                      className: h.closeIcon
+                                      className: m.closeIcon
                                   })
                               })
                           ]
                       })
                   }),
-                  (0, i.jsx)(l.ModalContent, {
-                      children: (0, i.jsx)('div', {
-                          className: h.options,
+                  (0, l.jsx)(s.ModalContent, {
+                      children: (0, l.jsx)('div', {
+                          className: m.options,
                           children: j.map((e) => {
-                              let { text: t, value: n } = e;
-                              return (0, i.jsxs)(
+                              let { text: n, value: t } = e;
+                              return (0, l.jsxs)(
                                   'div',
                                   {
-                                      className: r()(h.optionContainer, { [h.optionContainerOther]: n === c.C2.OTHER }),
+                                      className: a()(m.optionContainer, { [m.optionContainerOther]: t === d.C2.OTHER }),
                                       children: [
-                                          (0, i.jsxs)(l.Clickable, {
-                                              className: h.optionText,
-                                              onClick: () => g(n),
+                                          (0, l.jsxs)(s.Clickable, {
+                                              className: m.optionText,
+                                              onClick: () => g(t),
                                               children: [
-                                                  (0, i.jsx)('div', {
-                                                      children: (0, i.jsx)(l.Checkbox, {
-                                                          type: l.Checkbox.Types.INVERTED,
+                                                  (0, l.jsx)('div', {
+                                                      children: (0, l.jsx)(s.Checkbox, {
+                                                          type: s.Checkbox.Types.INVERTED,
                                                           size: 20,
-                                                          value: C.includes(n),
-                                                          onChange: () => g(n)
+                                                          value: h.includes(t),
+                                                          onChange: () => g(t)
                                                       })
                                                   }),
-                                                  (0, i.jsx)(l.Text, {
+                                                  (0, l.jsx)(s.Text, {
                                                       variant: 'text-md/medium',
-                                                      color: C.includes(n) ? 'interactive-active' : 'interactive-normal',
-                                                      children: t
+                                                      color: h.includes(t) ? 'interactive-active' : 'interactive-normal',
+                                                      children: n
                                                   })
                                               ]
                                           }),
-                                          n === c.C2.OTHER &&
-                                              C.includes(c.C2.OTHER) &&
-                                              (0, i.jsx)('div', {
-                                                  className: h.textboxContainer,
-                                                  children: (0, i.jsx)(l.TextArea, {
-                                                      className: h.serverLockdownReasonText,
-                                                      placeholder: u.intl.string(u.t['PAM+JS']),
-                                                      onChange: (e) => _(e),
-                                                      value: p,
+                                          t === d.C2.OTHER &&
+                                              h.includes(d.C2.OTHER) &&
+                                              (0, l.jsx)('div', {
+                                                  className: m.textboxContainer,
+                                                  children: (0, l.jsx)(s.TextArea, {
+                                                      className: m.serverLockdownReasonText,
+                                                      placeholder: x.intl.string(x.t['PAM+JS']),
+                                                      onChange: (e) => C(e),
+                                                      value: _,
                                                       rows: 2,
                                                       autoFocus: !0,
                                                       flex: !0
@@ -129,25 +129,25 @@ function C(e) {
                                               })
                                       ]
                                   },
-                                  n
+                                  t
                               );
                           })
                       })
                   }),
-                  (0, i.jsx)(l.ModalFooter, {
-                      children: (0, i.jsx)(l.Button, {
+                  (0, l.jsx)(s.ModalFooter, {
+                      children: (0, l.jsx)(s.Button, {
                           onClick: function () {
-                              (0, d.yw)(x.rMx.GUILD_RAID_LOCKDOWN_FEEDBACK, {
-                                  raid_lockdown_feedback_type: C,
-                                  raid_lockdown_feedback_other_reason: p,
-                                  guild_id: t
+                              (0, c.yw)(u.rMx.GUILD_RAID_LOCKDOWN_FEEDBACK, {
+                                  raid_lockdown_feedback_type: h,
+                                  raid_lockdown_feedback_other_reason: _,
+                                  guild_id: n
                               }),
-                                  s();
+                                  i();
                           },
-                          color: l.Button.Colors.BRAND,
-                          look: l.Button.Looks.FILLED,
+                          color: s.Button.Colors.BRAND,
+                          look: s.Button.Looks.FILLED,
                           submitting: !1,
-                          children: u.intl.string(u.t.nAt0rK)
+                          children: x.intl.string(x.t.nAt0rK)
                       })
                   })
               ]

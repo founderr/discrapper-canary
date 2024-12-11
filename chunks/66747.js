@@ -1,8 +1,8 @@
 n(47120);
 var l = n(200651),
     o = n(192379),
-    a = n(120356),
-    i = n.n(a),
+    i = n(120356),
+    a = n.n(i),
     r = n(392711),
     s = n(498607),
     c = n.n(s),
@@ -32,8 +32,8 @@ var l = n(200651),
     T = n(241559),
     E = n(893966),
     w = n(685244),
-    k = n(16829),
-    A = n(256003),
+    A = n(16829),
+    k = n(256003),
     y = n(472596),
     B = n(285173),
     O = n(981631),
@@ -42,9 +42,9 @@ var l = n(200651),
 let F = o.memo(function (e) {
         let { member: t } = e,
             n = o.useMemo(() => (0, p.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
-            a = o.useMemo(() => (null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil)), [t.communicationDisabledUntil]);
+            i = o.useMemo(() => (null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil)), [t.communicationDisabledUntil]);
         return (0, l.jsxs)('div', {
-            className: i()(P.flagContainer),
+            className: a()(P.flagContainer),
             children: [
                 t.hasUnusualDmActivity &&
                     (0, l.jsx)(u.Tooltip, {
@@ -70,7 +70,7 @@ let F = o.memo(function (e) {
                             children: [
                                 (0, l.jsx)('div', { children: U.intl.string(U.t['xfJP+v']) }),
                                 (0, l.jsx)(f.Z, {
-                                    deadline: a,
+                                    deadline: i,
                                     showUnits: !0,
                                     stopAtOneSec: !0
                                 })
@@ -122,26 +122,26 @@ let F = o.memo(function (e) {
     }),
     G = o.memo(function (e) {
         let { member: t, highestRole: n } = e,
-            a = (0, C.e7)([N.Z], () => N.Z.getGuild(t.guildId), [t.guildId]),
+            i = (0, C.e7)([N.Z], () => N.Z.getGuild(t.guildId), [t.guildId]),
             r = t.roles.length - 1,
             s = o.useMemo(() => new Intl.NumberFormat(U.intl.currentLocale).format(r), [r]),
             c = (0, y.vN)(t),
             d = (0, y.vN)(t, !0),
-            m = (0, C.e7)([L.Z], () => L.Z.can(O.Plq.MANAGE_ROLES, a), [a]);
-        return null == a
+            m = (0, C.e7)([L.Z], () => L.Z.can(O.Plq.MANAGE_ROLES, i), [i]);
+        return null == i
             ? null
             : (0, l.jsxs)('div', {
-                  className: i()(P.roleContainer),
+                  className: a()(P.roleContainer),
                   children: [
                       null != n &&
                           (0, l.jsx)(B.Z, {
-                              className: i()(P.roleTooltipItem, P.highestRole),
+                              className: a()(P.roleTooltipItem, P.highestRole),
                               role: n,
                               guildId: t.guildId
                           }),
                       r > 0 &&
                           (0, l.jsx)(u.Clickable, {
-                              className: i()(P.otherRoles),
+                              className: a()(P.otherRoles),
                               onMouseEnter: (e) => d(e),
                               children: (0, l.jsxs)(u.Text, {
                                   variant: 'text-xs/medium',
@@ -155,14 +155,14 @@ let F = o.memo(function (e) {
                               children: (e) => {
                                   let { onMouseEnter: t, onMouseLeave: n } = e;
                                   return (0, l.jsx)(u.Clickable, {
-                                      className: i()(P.otherRoles, P.addRoleContainer),
+                                      className: a()(P.otherRoles, P.addRoleContainer),
                                       onClick: c,
                                       onMouseEnter: t,
                                       onMouseLeave: n,
                                       children: (0, l.jsx)(u.PlusSmallIcon, {
                                           size: 'custom',
                                           color: 'currentColor',
-                                          className: i()(P.addRoleIcon),
+                                          className: a()(P.addRoleIcon),
                                           width: 16,
                                           height: 16
                                       })
@@ -174,7 +174,7 @@ let F = o.memo(function (e) {
     }),
     z = o.memo(function (e) {
         var t;
-        let { member: n, user: a } = e,
+        let { member: n, user: i } = e,
             { analyticsLocations: r } = (0, x.ZP)(),
             s = o.useCallback(
                 (e) => {
@@ -182,18 +182,18 @@ let F = o.memo(function (e) {
                 },
                 [n, r]
             );
-        return null == a || null == n
+        return null == i || null == n
             ? null
             : (0, l.jsxs)('div', {
-                  className: i()(P.memberNameContainer),
+                  className: a()(P.memberNameContainer),
                   children: [
                       (0, l.jsx)(u.Clickable, {
-                          className: i()(P.memberAvatar),
+                          className: a()(P.memberAvatar),
                           onClick: s,
-                          children: (0, l.jsx)(m.Z, { user: a })
+                          children: (0, l.jsx)(m.Z, { user: i })
                       }),
                       (0, l.jsx)('div', {
-                          className: i()(P.memberName),
+                          className: a()(P.memberName),
                           children: (0, l.jsx)(u.Text, {
                               variant: 'text-sm/medium',
                               children: (0, l.jsxs)(u.Clickable, {
@@ -201,13 +201,13 @@ let F = o.memo(function (e) {
                                   className: P.nameContainer,
                                   children: [
                                       (0, l.jsx)(u.NameWithRole, {
-                                          name: Z.ZP.getName(n.guildId, null, a),
+                                          name: Z.ZP.getName(n.guildId, null, i),
                                           color: null !== (t = n.colorString) && void 0 !== t ? t : void 0,
-                                          className: i()(P.memberNameText)
+                                          className: a()(P.memberNameText)
                                       }),
                                       (0, l.jsx)(b.ZP, {
-                                          clan: null == a ? void 0 : a.clan,
-                                          userId: null == a ? void 0 : a.id,
+                                          clan: null == i ? void 0 : i.clan,
+                                          userId: null == i ? void 0 : i.id,
                                           contextGuildId: n.guildId,
                                           containerClassName: P.memberClanTag
                                       })
@@ -216,7 +216,7 @@ let F = o.memo(function (e) {
                           })
                       }),
                       (0, l.jsx)('div', {
-                          className: i()(P.memberGlobalName),
+                          className: a()(P.memberGlobalName),
                           children: (0, l.jsx)(u.Text, {
                               variant: 'text-xs/normal',
                               color: 'header-secondary',
@@ -224,7 +224,7 @@ let F = o.memo(function (e) {
                               children: (0, l.jsx)(u.Clickable, {
                                   onClick: s,
                                   tag: 'span',
-                                  children: D.ZP.getUserTag(a)
+                                  children: D.ZP.getUserTag(i)
                               })
                           })
                       })
@@ -239,7 +239,7 @@ function q(e) {
     };
 }
 function Y(e) {
-    let { member: t, showLongDate: n, isSortedBy: a } = e,
+    let { member: t, showLongDate: n, isSortedBy: i } = e,
         [r, s] = o.useState(null);
     o.useEffect(() => {
         s(q(t.joinedAtTimestamp));
@@ -247,12 +247,12 @@ function Y(e) {
         (0, h.Z)(() => {
             s(q(t.joinedAtTimestamp));
         }, 10000);
-    let c = a ? 'text-brand' : 'text-normal';
+    let c = i ? 'text-brand' : 'text-normal';
     return (null == r ? void 0 : r.short) == null
         ? null
         : n
           ? (0, l.jsx)('div', {
-                className: i()(P.__invalid_joinedAtContainer),
+                className: a()(P.__invalid_joinedAtContainer),
                 children: (0, l.jsx)(u.Text, {
                     variant: 'text-sm/medium',
                     color: c,
@@ -260,7 +260,7 @@ function Y(e) {
                 })
             })
           : (0, l.jsx)('div', {
-                className: i()(P.__invalid_joinedAtContainer),
+                className: a()(P.__invalid_joinedAtContainer),
                 children: (0, l.jsx)(u.Tooltip, {
                     align: 'left',
                     text: r.long,
@@ -275,8 +275,8 @@ function Y(e) {
             });
 }
 let W = o.memo(function (e) {
-        let { member: t, showLongDate: n, isSortedBy: a } = e,
-            { accountCreationDateShort: i, accountCreationDateLong: r } = o.useMemo(() => {
+        let { member: t, showLongDate: n, isSortedBy: i } = e,
+            { accountCreationDateShort: a, accountCreationDateLong: r } = o.useMemo(() => {
                 let e = R.default.extractTimestamp(t.userId),
                     n = (0, S.fv)(e, S.jq.ACCOUNT_AGE);
                 return {
@@ -284,7 +284,7 @@ let W = o.memo(function (e) {
                     accountCreationDateLong: new Date(e).toLocaleDateString(U.intl.currentLocale, S.I)
                 };
             }, [t.userId]),
-            s = a ? 'text-brand' : 'text-normal';
+            s = i ? 'text-brand' : 'text-normal';
         return n
             ? (0, l.jsx)(u.Text, {
                   variant: 'text-sm/medium',
@@ -299,14 +299,14 @@ let W = o.memo(function (e) {
                           ...e,
                           variant: 'text-sm/medium',
                           color: s,
-                          children: i
+                          children: a
                       })
               });
     }),
     K = o.memo(function (e) {
-        let { member: t, user: n, highestRole: a, isHoldingAdvancedInfoKey: r, onOpenModerationMenu: s, onOpenProfileMenu: d, compact: m } = e,
+        let { member: t, user: n, highestRole: i, isHoldingAdvancedInfoKey: r, onOpenModerationMenu: s, onOpenProfileMenu: d, compact: m } = e,
             h = (0, C.e7)([L.Z, N.Z], () => L.Z.can(O.Plq.MANAGE_GUILD, N.Z.getGuild(t.guildId)), [t.guildId]),
-            { selectedUserIds: x, addUsers: b, removeUser: f } = (0, A.Z)(t.guildId),
+            { selectedUserIds: x, addUsers: b, removeUser: f } = (0, k.Z)(t.guildId),
             g = (0, T.xC)(t.guildId),
             p = (0, T.hB)(t.guildId, g, t.userId),
             j = (0, H.ms)(t.guildId),
@@ -338,7 +338,7 @@ let W = o.memo(function (e) {
                             (0, l.jsx)('td', {
                                 ...e,
                                 children: (0, l.jsx)('div', {
-                                    className: i()(P.__invalid_checkbox, P.xsmallCol),
+                                    className: a()(P.__invalid_checkbox, P.xsmallCol),
                                     children: (0, l.jsx)(u.Clickable, {
                                         onClick: I,
                                         children: (0, l.jsx)(u.Checkbox, {
@@ -351,14 +351,14 @@ let W = o.memo(function (e) {
                             })
                     }),
                 (0, l.jsx)('td', {
-                    className: i()({ [P.compact]: m }),
+                    className: a()({ [P.compact]: m }),
                     children: (0, l.jsx)(z, {
                         member: t,
                         user: n
                     })
                 }),
                 (0, l.jsx)('td', {
-                    className: i()(P.smallCol, { [P.compact]: m }),
+                    className: a()(P.smallCol, { [P.compact]: m }),
                     children: (0, l.jsx)(Y, {
                         showLongDate: r,
                         member: t,
@@ -366,7 +366,7 @@ let W = o.memo(function (e) {
                     })
                 }),
                 (0, l.jsx)('td', {
-                    className: i()(P.smallCol, { [P.compact]: m }),
+                    className: a()(P.smallCol, { [P.compact]: m }),
                     children: (0, l.jsx)(W, {
                         showLongDate: r,
                         member: t,
@@ -375,27 +375,27 @@ let W = o.memo(function (e) {
                 }),
                 h &&
                     (0, l.jsx)('td', {
-                        className: i()(P.smallCol, { [P.compact]: m }),
-                        children: (0, l.jsx)(k.ZP, {
+                        className: a()(P.smallCol, { [P.compact]: m }),
+                        children: (0, l.jsx)(A.ZP, {
                             userId: t.userId,
                             guildId: t.guildId
                         })
                     }),
                 (0, l.jsx)('td', {
-                    className: i()(P.mediumCol, { [P.compact]: m }),
+                    className: a()(P.mediumCol, { [P.compact]: m }),
                     children: (0, l.jsx)(G, {
                         member: t,
-                        highestRole: a
+                        highestRole: i
                     })
                 }),
                 (0, l.jsx)('td', {
-                    className: i()(P.smallCol, { [P.compact]: m }),
+                    className: a()(P.smallCol, { [P.compact]: m }),
                     children: (0, l.jsx)(F, { member: t })
                 }),
                 (0, l.jsx)('td', {
-                    className: i()(P.smallCol, { [P.compact]: m }),
+                    className: a()(P.smallCol, { [P.compact]: m }),
                     children: (0, l.jsxs)('div', {
-                        className: i()(P.actionCell),
+                        className: a()(P.actionCell),
                         children: [
                             (0, l.jsx)(u.Tooltip, {
                                 text: j ? U.intl.string(U.t.nHfkf3) : U.intl.string(U.t.uTre29),
@@ -405,7 +405,7 @@ let W = o.memo(function (e) {
                                         onMouseEnter: t,
                                         onMouseLeave: n,
                                         onClick: d,
-                                        className: i()(P.button),
+                                        className: a()(P.button),
                                         children: j
                                             ? (0, l.jsx)(M.Z, {
                                                   width: J,
@@ -428,7 +428,7 @@ let W = o.memo(function (e) {
                                         onMouseEnter: t,
                                         onMouseLeave: n,
                                         onClick: s,
-                                        className: i()(P.button),
+                                        className: a()(P.button),
                                         children: (0, l.jsx)(u.MoreVerticalIcon, {
                                             size: 'custom',
                                             color: 'currentColor',
@@ -447,7 +447,7 @@ let W = o.memo(function (e) {
     J = 18,
     X = ['sourceInviteCode', 'joinSourceType', 'inviterId', 'integrationType', 'joinedAt', 'joinedAtTimestamp'];
 t.Z = o.memo(function (e) {
-    let { userId: t, guildId: n, style: a, onSelect: s, rowSelected: d, isLoading: u = !1, isHoldingAdvancedInfoKey: m = !1, compact: h = !1 } = e,
+    let { userId: t, guildId: n, style: i, onSelect: s, rowSelected: d, isLoading: u = !1, isHoldingAdvancedInfoKey: m = !1, compact: h = !1 } = e,
         x = (0, C.e7)([v.ZP], () => v.ZP.getGuildSidebarState(n), [n]),
         b = (null == x ? void 0 : x.details.userId) === t,
         f = (0, C.e7)([E.Z], () => E.Z.getEnhancedMember(n, t), [n, t]),
@@ -478,8 +478,8 @@ t.Z = o.memo(function (e) {
         : (0, l.jsx)(w.Z, {
               role: 'row',
               value: f,
-              style: a,
-              className: i()(P.roundedRow, P.memberRowContainer, d && P.selected, b && P.memberSelected, u && P.loading),
+              style: i,
+              className: a()(P.roundedRow, P.memberRowContainer, d && P.selected, b && P.memberSelected, u && P.loading),
               equalityFn: _,
               onClick: N,
               onContextMenu: j,

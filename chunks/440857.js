@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var l = n(200651),
     o = n(192379),
-    a = n(692547),
-    i = n(215569),
+    i = n(692547),
+    a = n(215569),
     r = n(180035),
     s = n(481060),
     c = n(749210),
@@ -53,7 +53,7 @@ function H(e) {
                     size: 'custom',
                     width: 24,
                     height: 24,
-                    color: (0, r.d)(a.Z.unsafe_rawColors.PRIMARY_500).hex()
+                    color: (0, r.d)(i.Z.unsafe_rawColors.PRIMARY_500).hex()
                 }),
                 (0, l.jsx)(s.Text, {
                     variant: 'heading-md/bold',
@@ -85,7 +85,7 @@ function H(e) {
             ]
         });
     return H
-        ? (0, l.jsx)(i.W, {
+        ? (0, l.jsx)(a.W, {
               component: 'div',
               className: p.saveNoticeContainer,
               children:

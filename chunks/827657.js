@@ -5,8 +5,8 @@ n.d(t, {
 });
 var l = n(200651),
     o = n(192379),
-    a = n(120356),
-    i = n.n(a),
+    i = n(120356),
+    a = n.n(i),
     r = n(481060),
     s = n(994463),
     c = n(472596),
@@ -33,10 +33,10 @@ function m(e) {
     return null == n
         ? null
         : (0, l.jsxs)('div', {
-              className: i()(u.noResultsContainer),
+              className: a()(u.noResultsContainer),
               children: [
                   (0, l.jsx)('div', {
-                      className: i()(u.__invalid_noResultsIconContainer),
+                      className: a()(u.__invalid_noResultsIconContainer),
                       children: n.icon
                   }),
                   (0, l.jsx)(r.Text, {

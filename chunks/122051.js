@@ -7,8 +7,8 @@ t.d(n, {
 var i = t(200651),
     l = t(192379),
     a = t(120356),
-    r = t.n(a),
-    s = t(442837),
+    s = t.n(a),
+    r = t(442837),
     o = t(481060),
     c = t(11265),
     d = t(863249),
@@ -21,7 +21,7 @@ var i = t(200651),
     v = t(232203),
     j = t(713960);
 function C(e) {
-    let { guild: n, isExpanded: a, emptyFormFields: r, hasTermsField: s } = e,
+    let { guild: n, isExpanded: a, emptyFormFields: s, hasTermsField: r } = e,
         c = n.hasVerificationGate(),
         [u, m] = l.useState(c),
         x = (e) => {
@@ -35,7 +35,7 @@ function C(e) {
             }
         },
         C = (e) => {
-            e && r
+            e && s
                 ? (0, o.openModalLazy)(async () => {
                       let { ConfirmModal: n } = await Promise.resolve().then(t.bind(t, 481060));
                       return (t) =>
@@ -75,7 +75,7 @@ function C(e) {
                         color: 'header-primary',
                         children: g.intl.string(g.t.NEXim5)
                     }),
-                    (a || (r && !u)) &&
+                    (a || (s && !u)) &&
                         (0, i.jsx)(o.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
@@ -85,7 +85,7 @@ function C(e) {
                         (0, i.jsx)('div', {
                             className: j.pillRow,
                             children:
-                                s &&
+                                r &&
                                 (0, i.jsxs)(o.Text, {
                                     color: 'interactive-normal',
                                     variant: 'text-xs/medium',
@@ -106,7 +106,7 @@ function C(e) {
             (0, i.jsx)('div', {
                 className: j.previewAndEnable,
                 children:
-                    a || u || !r
+                    a || u || !s
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(o.Clickable, {
@@ -151,12 +151,12 @@ function I(e) {
     var n, t, a;
     let { guild: o, isClanContext: h = !1, onFieldsSave: g, onDescriptionSave: I, verificationForm: T } = e,
         [F, b] = l.useState(h),
-        y = l.useRef(!1),
-        R = l.useCallback(() => {
-            y.current = !0;
+        w = l.useRef(!1),
+        y = l.useCallback(() => {
+            w.current = !0;
         }, []),
-        w = null !== (n = (0, x.A)({ guildId: o.id })) && void 0 !== n ? n : 0,
-        E = (0, s.e7)([u.Z], () => (null != T ? T : u.Z.get(o.id))),
+        R = null !== (n = (0, x.A)({ guildId: o.id })) && void 0 !== n ? n : 0,
+        E = (0, r.e7)([u.Z], () => (null != T ? T : u.Z.get(o.id))),
         k = null !== (t = null == E ? void 0 : E.formFields) && void 0 !== t ? t : [];
     l.useEffect(() => {
         d.ZP.fetchVerificationForm(o.id);
@@ -177,7 +177,7 @@ function I(e) {
         disableAnimation: h,
         disableBackground: !L,
         children: (0, i.jsx)('div', {
-            className: r()(v.itemBodyContainer, {
+            className: s()(v.itemBodyContainer, {
                 [v.noPadding]: !L,
                 [j.rulesScreeningItemsNoBorder]: !L
             }),
@@ -185,9 +185,9 @@ function I(e) {
                 M &&
                 (0, i.jsx)(f.Z, {
                     guild: o,
-                    submittedGuildJoinRequestsCount: w,
+                    submittedGuildJoinRequestsCount: R,
                     formFields: k,
-                    onFormFieldUpdate: R,
+                    onFormFieldUpdate: y,
                     hideVerificationLevelField: !0,
                     isClanContext: h,
                     onFieldsSave: null != g ? g : p,

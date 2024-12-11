@@ -5,8 +5,8 @@ n.d(t, {
 });
 var l = n(200651),
     o = n(192379),
-    a = n(498607),
-    i = n.n(a),
+    i = n(498607),
+    a = n.n(i),
     r = n(399606),
     s = n(481060),
     c = n(588215),
@@ -17,15 +17,15 @@ var l = n(200651),
 let h = [c.d$.ORDER_BY_GUILD_JOINED_AT_DESC, c.d$.ORDER_BY_GUILD_JOINED_AT_ASC, c.d$.ORDER_BY_USER_ID_DESC, c.d$.ORDER_BY_USER_ID_ASC];
 function x(e) {
     let { guildId: t, onClose: n } = e,
-        a = (0, r.e7)([C.Z], () => C.Z.getSearchStateByGuildId(t), [t], i()),
+        i = (0, r.e7)([C.Z], () => C.Z.getSearchStateByGuildId(t), [t], a()),
         x = o.useCallback(
             (e) => {
                 (0, d.Dr)(t, {
-                    ...a,
+                    ...i,
                     selectedSort: e
                 });
             },
-            [t, a]
+            [t, i]
         );
     return (0, l.jsx)(s.Menu, {
         navId: 'members-table-sort-menu',
@@ -55,7 +55,7 @@ function x(e) {
                                     return null;
                             }
                         })(e),
-                        checked: ((t = e), (n = a.selectedSort) === c.d$.ORDER_BY_UNSPECIFIED || null == n ? t === c.d$.ORDER_BY_GUILD_JOINED_AT_DESC : t === n),
+                        checked: ((t = e), (n = i.selectedSort) === c.d$.ORDER_BY_UNSPECIFIED || null == n ? t === c.d$.ORDER_BY_GUILD_JOINED_AT_DESC : t === n),
                         disabled: !1,
                         action: () => x(e),
                         group: 'members-table-sort'

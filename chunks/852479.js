@@ -5,8 +5,8 @@ n.d(t, {
 });
 var l = n(200651),
     o = n(192379),
-    a = n(120356),
-    i = n.n(a),
+    i = n(120356),
+    a = n.n(i),
     r = n(913527),
     s = n.n(r),
     c = n(399606),
@@ -19,7 +19,7 @@ var l = n(200651),
     b = n(216412),
     f = n(115251);
 function g(e) {
-    let { guild: t, onSubmit: a } = e,
+    let { guild: t, onSubmit: i } = e,
         r = (0, c.e7)([m.Z], () => m.Z.getMembersCountByGuildId(t.id, d.R_.NEW_GUILD_MEMBER), [t.id]),
         g = (0, c.e7)(
             [m.Z],
@@ -31,8 +31,8 @@ function g(e) {
         ),
         p = (0, c.e7)([m.Z], () => m.Z.hasDefaultSearchStateByGuildId(t.id), [t.id]),
         H = o.useCallback(() => {
-            (0, h.YO)(t.id), null == a || a();
-        }, [t.id, a]),
+            (0, h.YO)(t.id), null == i || i();
+        }, [t.id, i]),
         j = o.useCallback(() => {
             p
                 ? H()
@@ -52,7 +52,7 @@ function g(e) {
     return 0 === r
         ? null
         : (0, l.jsxs)('tr', {
-              className: i()(f.newMembersNotice),
+              className: a()(f.newMembersNotice),
               onClick: j,
               children: [
                   (0, l.jsx)('td', {
@@ -70,16 +70,16 @@ function g(e) {
                   (0, l.jsx)('td', {
                       colSpan: 2,
                       children: (0, l.jsx)('div', {
-                          className: i()(b.actionCell),
+                          className: a()(b.actionCell),
                           children: (0, l.jsx)(C.Button, {
                               size: C.Button.Sizes.SMALL,
                               color: C.Button.Colors.TRANSPARENT,
                               look: C.Button.Looks.LINK,
-                              className: i()(f.memberNoticeActionButton),
+                              className: a()(f.memberNoticeActionButton),
                               children: (0, l.jsxs)(C.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'always-white',
-                                  className: i()(f.memberNoticeAction),
+                                  className: a()(f.memberNoticeAction),
                                   children: [
                                       (0, l.jsx)('div', { children: x.intl.string(x.t.rkyOzM) }),
                                       (0, l.jsx)(C.UserIcon, {
@@ -87,7 +87,7 @@ function g(e) {
                                           color: 'currentColor',
                                           width: 20,
                                           height: 20,
-                                          className: i()(f.memberNoticeActionIcon)
+                                          className: a()(f.memberNoticeActionIcon)
                                       })
                                   ]
                               })
