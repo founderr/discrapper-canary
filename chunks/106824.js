@@ -122,26 +122,28 @@ class d extends r.EventEmitter {
             p = r || (n && ((null === (e = this.state.query) || void 0 === e ? void 0 : e.queryText) !== _ || (null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo) !== f)),
             h = s.fq.getSetting();
         i.allowStickers = i.allowStickers ? h : i.allowStickers;
-        let { results: m, metadata: g } = f.queryResults(this.props.channel, this.props.guild, _, i, p),
-            E = 0;
-        for (let e of Object.values(m)) Array.isArray(e) && (E += e.length);
-        let v = !0 === m.isLoading,
-            I = this.shouldShow(E, v, f),
-            T = this.state.selectedIndex;
-        !I || v ? (T = null) : null != T && T >= E && (T = E - 1),
-            I && !this.state.isVisible && (0, a.a7)(d, this.props.channel, g),
+        let m = s.eR.getSetting();
+        i.allowSoundmoji = i.allowSoundmoji ? m : i.allowSoundmoji;
+        let { results: g, metadata: E } = f.queryResults(this.props.channel, this.props.guild, _, i, p),
+            v = 0;
+        for (let e of Object.values(g)) Array.isArray(e) && (v += e.length);
+        let I = !0 === g.isLoading,
+            T = this.shouldShow(v, I, f),
+            b = this.state.selectedIndex;
+        !T || I ? (b = null) : null != b && b >= v && (b = v - 1),
+            T && !this.state.isVisible && (0, a.a7)(d, this.props.channel, E),
             this.setState({
                 query: {
                     type: d,
                     typeInfo: f,
                     queryText: _,
-                    results: m,
-                    resultCount: E,
+                    results: g,
+                    resultCount: v,
                     options: i,
-                    isLoading: v
+                    isLoading: I
                 },
-                isVisible: I,
-                selectedIndex: T
+                isVisible: T,
+                selectedIndex: b
             });
     }
     shouldShow(e, t, n) {

@@ -1,5 +1,8 @@
 n.d(t, {
-    ZP: function () {
+    YM: function () {
+        return g;
+    },
+    cK: function () {
         return m;
     }
 }),
@@ -34,12 +37,7 @@ let _ = [],
         });
     }, 350);
 function m(e, t, n, r, a) {
-    if (0 === e.length) return _;
-    let s = t.reduce((e, t) => {
-            for (let n of t.items) t.categoryInfo.type !== c.bg.FAVORITES && n.type === c.vB.SOUND && e.push(n.sound);
-            return e;
-        }, []),
-        u = s.reduce(
+    let s = t.reduce(
             (t, s) => (
                 p(a, null == r ? void 0 : r.id),
                 (t[s.soundId] = (function (e, t, n, r) {
@@ -56,6 +54,20 @@ function m(e, t, n, r, a) {
             ),
             {}
         ),
-        f = s.filter((e) => u[e.soundId] > 0).sort((e, t) => u[t.soundId] - u[e.soundId]);
-    return h(f, a, null == r ? void 0 : r.id, e), f;
+        u = t.filter((e) => s[e.soundId] > 0).sort((e, t) => s[t.soundId] - s[e.soundId]);
+    return h(u, a, null == r ? void 0 : r.id, e), u;
+}
+function g(e, t, n, r, i) {
+    return 0 === e.length
+        ? _
+        : m(
+              e,
+              t.reduce((e, t) => {
+                  for (let n of t.items) t.categoryInfo.type !== c.bg.FAVORITES && n.type === c.vB.SOUND && e.push(n.sound);
+                  return e;
+              }, []),
+              n,
+              r,
+              i
+          );
 }

@@ -1,63 +1,60 @@
 n.d(t, {
     ZP: function () {
-        return p;
+        return f;
     },
     hf: function () {
-        return _;
+        return d;
     }
 });
 var r = n(763296),
     i = n(375954),
-    a = n(914010),
-    s = n(594174),
-    o = n(768581),
-    l = n(74538),
-    u = n(722932),
-    c = n(801606),
-    d = n(981631),
-    f = n(710111);
-let _ = /^<sound:(\d+):(\d+)>/;
-function p(e, t) {
+    a = n(768581),
+    s = n(722932),
+    o = n(801606),
+    l = n(12327),
+    u = n(277078),
+    c = n(981631);
+let d = /^<sound:(\d+):(\d+)>/;
+function f(e, t) {
     var n;
-    let _ = e[1],
-        p = e[2],
-        { messageId: h, channelId: m } = t,
-        g = (function (e, t, n) {
-            if (!u.zv.getCurrentConfig({ location: 'getSoundmojiASTFromString' }, { autoTrackExposure: !1 }).enabled) return;
-            let o = r.Z.getSoundById(n),
-                _ = a.Z.getGuildId(),
-                p = l.ZP.canUseSoundboardEverywhere(s.default.getCurrentUser()) || (null == o ? void 0 : o.guildId) === f.X8 || (null == o ? void 0 : o.guildId) === _;
+    let d = e[1],
+        f = e[2],
+        { messageId: _, channelId: p } = t,
+        h = (function (e, t, n) {
+            if (!s.zv.getCurrentConfig({ location: 'getSoundmojiASTFromString' }, { autoTrackExposure: !1 }).enabled) return;
+            let a = r.Z.getSoundById(n),
+                l = (0, u.Z)(a, e);
             if (null != t && null != e) {
-                let r = (0, c.Z)(e, t, n);
-                if (p && null == r) {
+                let r = (0, o.Z)(e, t, n);
+                if (l && null == r) {
                     let n = i.Z.getMessage(e, t);
-                    if ((null == n ? void 0 : n.state) !== d.yb.SENT) return o;
+                    if ((null == n ? void 0 : n.state) !== c.yb.SENT) return a;
                 }
                 return r;
             }
-            if (!!p) {
-                if (null != o) return o;
+            if (!!l) {
+                if (null != a) return a;
             }
-        })(m, h, p);
-    if (null == g)
+        })(p, _, f);
+    if (null == h)
         return {
             type: 'text',
-            content: '<sound:'.concat(_, ':').concat(p, '>')
+            content: (0, l.Z)(d, f)
         };
-    let E = null !== (n = null == g ? void 0 : g.name) && void 0 !== n ? n : p;
+    let m = null !== (n = null == h ? void 0 : h.name) && void 0 !== n ? n : f;
     return {
         type: 'soundboard',
-        soundId: p,
-        guildId: _,
+        soundId: f,
+        guildId: d,
         messageId: t.messageId,
         channelId: t.channelId,
-        content: E,
-        emojiId: null == g ? void 0 : g.emojiId,
-        emojiName: null == g ? void 0 : g.emojiName,
+        content: m,
+        emojiId: null == h ? void 0 : h.emojiId,
+        emojiName: null == h ? void 0 : h.emojiName,
         emojiSrc:
-            (null == g ? void 0 : g.emojiId) != null
-                ? (0, o.gT)({
-                      id: null == g ? void 0 : g.emojiId,
+            (null == h ? void 0 : h.emojiId) != null
+                ? (0, a.gT)({
+                      id: null == h ? void 0 : h.emojiId,
                       animated: !1,
                       size: 16
                   })

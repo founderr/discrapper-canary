@@ -1511,6 +1511,9 @@ class ep extends k.C {
                 case 30:
                     i.keywordFilterSettings = e_.internalBinaryRead(e, e.uint32(), n, i.keywordFilterSettings);
                     break;
+                case 31:
+                    i.includeSoundmojiInAutocomplete = U.D5.internalBinaryRead(e, e.uint32(), n, i.includeSoundmojiInAutocomplete);
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
@@ -1526,7 +1529,7 @@ class ep extends k.C {
         for (let n = 0; n < e.stickerPickerCollapsedSections.length; n++) t.tag(6, w.TD.LengthDelimited).string(e.stickerPickerCollapsedSections[n]);
         e.viewImageDescriptions && U.D5.internalBinaryWrite(e.viewImageDescriptions, t.tag(7, w.TD.LengthDelimited).fork(), n).join(), e.showCommandSuggestions && U.D5.internalBinaryWrite(e.showCommandSuggestions, t.tag(8, w.TD.LengthDelimited).fork(), n).join(), e.inlineAttachmentMedia && U.D5.internalBinaryWrite(e.inlineAttachmentMedia, t.tag(9, w.TD.LengthDelimited).fork(), n).join(), e.inlineEmbedMedia && U.D5.internalBinaryWrite(e.inlineEmbedMedia, t.tag(10, w.TD.LengthDelimited).fork(), n).join(), e.gifAutoPlay && U.D5.internalBinaryWrite(e.gifAutoPlay, t.tag(11, w.TD.LengthDelimited).fork(), n).join(), e.renderEmbeds && U.D5.internalBinaryWrite(e.renderEmbeds, t.tag(12, w.TD.LengthDelimited).fork(), n).join(), e.renderReactions && U.D5.internalBinaryWrite(e.renderReactions, t.tag(13, w.TD.LengthDelimited).fork(), n).join(), e.animateEmoji && U.D5.internalBinaryWrite(e.animateEmoji, t.tag(14, w.TD.LengthDelimited).fork(), n).join(), e.animateStickers && U.yC.internalBinaryWrite(e.animateStickers, t.tag(15, w.TD.LengthDelimited).fork(), n).join(), e.enableTtsCommand && U.D5.internalBinaryWrite(e.enableTtsCommand, t.tag(16, w.TD.LengthDelimited).fork(), n).join(), e.messageDisplayCompact && U.D5.internalBinaryWrite(e.messageDisplayCompact, t.tag(17, w.TD.LengthDelimited).fork(), n).join(), e.explicitContentFilter && U.yC.internalBinaryWrite(e.explicitContentFilter, t.tag(19, w.TD.LengthDelimited).fork(), n).join(), e.viewNsfwGuilds && U.D5.internalBinaryWrite(e.viewNsfwGuilds, t.tag(20, w.TD.LengthDelimited).fork(), n).join(), e.convertEmoticons && U.D5.internalBinaryWrite(e.convertEmoticons, t.tag(21, w.TD.LengthDelimited).fork(), n).join(), e.expressionSuggestionsEnabled && U.D5.internalBinaryWrite(e.expressionSuggestionsEnabled, t.tag(22, w.TD.LengthDelimited).fork(), n).join(), e.viewNsfwCommands && U.D5.internalBinaryWrite(e.viewNsfwCommands, t.tag(23, w.TD.LengthDelimited).fork(), n).join(), e.useLegacyChatInput && U.D5.internalBinaryWrite(e.useLegacyChatInput, t.tag(24, w.TD.LengthDelimited).fork(), n).join();
         for (let n = 0; n < e.soundboardPickerCollapsedSections.length; n++) t.tag(25, w.TD.LengthDelimited).string(e.soundboardPickerCollapsedSections[n]);
-        e.dmSpamFilter && U.yC.internalBinaryWrite(e.dmSpamFilter, t.tag(26, w.TD.LengthDelimited).fork(), n).join(), 0 !== e.dmSpamFilterV2 && t.tag(27, w.TD.Varint).int32(e.dmSpamFilterV2), e.includeStickersInAutocomplete && U.D5.internalBinaryWrite(e.includeStickersInAutocomplete, t.tag(28, w.TD.LengthDelimited).fork(), n).join(), e.explicitContentSettings && ed.internalBinaryWrite(e.explicitContentSettings, t.tag(29, w.TD.LengthDelimited).fork(), n).join(), e.keywordFilterSettings && e_.internalBinaryWrite(e.keywordFilterSettings, t.tag(30, w.TD.LengthDelimited).fork(), n).join();
+        e.dmSpamFilter && U.yC.internalBinaryWrite(e.dmSpamFilter, t.tag(26, w.TD.LengthDelimited).fork(), n).join(), 0 !== e.dmSpamFilterV2 && t.tag(27, w.TD.Varint).int32(e.dmSpamFilterV2), e.includeStickersInAutocomplete && U.D5.internalBinaryWrite(e.includeStickersInAutocomplete, t.tag(28, w.TD.LengthDelimited).fork(), n).join(), e.explicitContentSettings && ed.internalBinaryWrite(e.explicitContentSettings, t.tag(29, w.TD.LengthDelimited).fork(), n).join(), e.keywordFilterSettings && e_.internalBinaryWrite(e.keywordFilterSettings, t.tag(30, w.TD.LengthDelimited).fork(), n).join(), e.includeSoundmojiInAutocomplete && U.D5.internalBinaryWrite(e.includeSoundmojiInAutocomplete, t.tag(31, w.TD.LengthDelimited).fork(), n).join();
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? w.z.onWrite : r)(this.typeName, e, t), t;
     }
@@ -1708,6 +1711,12 @@ class ep extends k.C {
                 name: 'keyword_filter_settings',
                 kind: 'message',
                 T: () => e_
+            },
+            {
+                no: 31,
+                name: 'include_soundmoji_in_autocomplete',
+                kind: 'message',
+                T: () => U.D5
             }
         ]);
     }

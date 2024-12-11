@@ -38,6 +38,7 @@ let o = {
             allowSending: !0,
             autoSuggest: !0
         },
+        soundmoji: { allowSending: !0 },
         users: { allowMentioning: !0 },
         submit: {
             button: !0,
@@ -101,6 +102,7 @@ let o = {
             allowSending: !0,
             autoSuggest: !0
         },
+        soundmoji: { allowSending: !0 },
         users: { allowMentioning: !0 },
         submit: {
             button: !0,
@@ -117,6 +119,7 @@ let o = {
         analyticsName: 'edit',
         drafts: { type: s.d.ChannelMessage },
         emojis: { button: !0 },
+        soundmoji: { allowSending: !0 },
         users: { allowMentioning: !0 },
         expressionPicker: { onlyEmojis: !0 },
         permissions: { requireSendMessages: !0 },
@@ -167,6 +170,7 @@ let o = {
         emojis: { button: !0 },
         gifs: { allowSending: !0 },
         stickers: { allowSending: !0 },
+        soundmoji: { allowSending: !0 },
         users: { allowMentioning: !0 },
         permissions: { requireCreateTherads: !0 },
         submit: {
@@ -185,6 +189,7 @@ let o = {
         drafts: { type: s.d.FirstThreadMessage },
         gifs: { allowSending: !0 },
         stickers: { allowSending: !0 },
+        soundmoji: { allowSending: !0 },
         users: { allowMentioning: !0 },
         permissions: { requireSendMessages: !0 },
         submit: {
@@ -337,6 +342,7 @@ let o = {
             analyticsName: 'forward_message_input',
             drafts: { type: s.d.ChannelMessage },
             emojis: { button: !0 },
+            soundmoji: { allowSending: !0 },
             permissions: { requireSendMessages: !0 },
             submit: { useDisabledStylesOnSubmit: !0 },
             users: { allowMentioning: !0 },

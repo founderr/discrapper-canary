@@ -20,8 +20,8 @@ var r = n(911969),
     u = n(185923);
 function c(e) {
     var t;
-    let { activeCommandOption: n, canMentionUsers: s = !0, canMentionRoles: o = !0, canMentionChannels: u = !0, canMentionEveryone: c, canMentionClyde: d = !1, useNewSlashCommands: f, canOnlyUseTextCommands: _, canSendStickers: p, hideMentionDescription: h, hidePersonalInformation: m, type: g, emojiIntention: E, editorRef: v, onSendMessage: I, onSendSticker: T, setValue: b } = e,
-        S = {
+    let { activeCommandOption: n, canMentionUsers: s = !0, canMentionRoles: o = !0, canMentionChannels: u = !0, canMentionEveryone: c, canMentionClyde: d = !1, useNewSlashCommands: f, canOnlyUseTextCommands: _, canSendStickers: p, canSendSoundmoji: h, hideMentionDescription: m, hidePersonalInformation: g, type: E, emojiIntention: v, editorRef: I, onSendMessage: T, onSendSticker: b, setValue: S } = e,
+        y = {
             mentions: {
                 channel: l.nS.DENY,
                 global: l.VV.DENY,
@@ -31,30 +31,31 @@ function c(e) {
             },
             commands: l.L8.DISABLED,
             allowStickers: !0 === p,
+            allowSoundmoji: !0 === h,
             forNonStringCommandOption: null != n && n.type !== r.jw.STRING,
-            hideMentionDescription: !0 === h,
-            hidePersonalInformation: !0 === m,
-            chatInputType: g,
-            emojiIntention: E,
-            sendMessage: I,
-            sendSticker: T,
+            hideMentionDescription: !0 === m,
+            hidePersonalInformation: !0 === g,
+            chatInputType: E,
+            emojiIntention: v,
+            sendMessage: T,
+            sendSticker: b,
             insertText: (e, t) => {
                 var n;
-                null === (n = v.current) || void 0 === n || n.insertAutocomplete(e, null != t ? t : e);
+                null === (n = I.current) || void 0 === n || n.insertAutocomplete(e, null != t ? t : e);
             },
             replaceText: (e, t) => {
-                b(e, null != t ? t : (0, a.JM)(e));
+                S(e, null != t ? t : (0, a.JM)(e));
             },
             getCommandOptionValues: () => {
                 var e;
-                return null === (e = v.current) || void 0 === e ? void 0 : e.getCommandOptionValues();
+                return null === (e = I.current) || void 0 === e ? void 0 : e.getCommandOptionValues();
             }
         };
     if (null != n) {
         let e = (0, i.$z)(n);
-        e.canMentionChannels && (S.mentions.channel = l.nS.ALLOW_SELECTABLE), e.canMentionEveryone && (S.mentions.global = e.canMentionHere ? l.VV.ALLOW_EVERYONE_OR_HERE : l.VV.ALLOW_EVERYONE), e.canMentionRoles && (S.mentions.role = e.canMentionNonMentionableRoles ? l.Fw.ALLOW_ALL : l.Fw.ALLOW_MENTIONABLE), e.canMentionUsers && (S.mentions.user = e.canMentionAnyGuildUser ? l.h3.ALLOW_GUILD : l.h3.ALLOW_CHANNEL), (S.hideMentionDescription = !0);
-    } else u && (S.mentions.channel = l.nS.ALLOW_SELECTABLE), o && (S.mentions.role = l.Fw.ALLOW_MENTIONABLE), s && (S.mentions.user = l.h3.ALLOW_CHANNEL), c && (S.mentions.global = l.VV.ALLOW_EVERYONE_OR_HERE), d && (S.mentions.clyde = l.cz.ALLOW);
-    return (null === (t = g.commands) || void 0 === t ? void 0 : t.enabled) && (f ? (S.commands = _ ? l.L8.NEW_TEXT_ONLY : l.L8.NEW) : (S.commands = l.L8.OLD_BUILT_INS)), null != n && null != n.channelTypes && (S.allowedChannelTypes = n.channelTypes), S;
+        e.canMentionChannels && (y.mentions.channel = l.nS.ALLOW_SELECTABLE), e.canMentionEveryone && (y.mentions.global = e.canMentionHere ? l.VV.ALLOW_EVERYONE_OR_HERE : l.VV.ALLOW_EVERYONE), e.canMentionRoles && (y.mentions.role = e.canMentionNonMentionableRoles ? l.Fw.ALLOW_ALL : l.Fw.ALLOW_MENTIONABLE), e.canMentionUsers && (y.mentions.user = e.canMentionAnyGuildUser ? l.h3.ALLOW_GUILD : l.h3.ALLOW_CHANNEL), (y.hideMentionDescription = !0);
+    } else u && (y.mentions.channel = l.nS.ALLOW_SELECTABLE), o && (y.mentions.role = l.Fw.ALLOW_MENTIONABLE), s && (y.mentions.user = l.h3.ALLOW_CHANNEL), c && (y.mentions.global = l.VV.ALLOW_EVERYONE_OR_HERE), d && (y.mentions.clyde = l.cz.ALLOW);
+    return (null === (t = E.commands) || void 0 === t ? void 0 : t.enabled) && (f ? (y.commands = _ ? l.L8.NEW_TEXT_ONLY : l.L8.NEW) : (y.commands = l.L8.OLD_BUILT_INS)), null != n && null != n.channelTypes && (y.allowedChannelTypes = n.channelTypes), y;
 }
 function d(e) {
     let { type: t, channel: n, guild: r, query: i, isAtStart: a, options: s } = e,

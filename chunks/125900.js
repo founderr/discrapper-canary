@@ -1,8 +1,11 @@
 n.d(t, {
-    J: function () {
+    J2: function () {
         return a;
     },
-    V: function () {
+    V2: function () {
+        return o;
+    },
+    dX: function () {
         return s;
     }
 });
@@ -23,6 +26,10 @@ let a = (0, r.B)({
     ]
 });
 function s(e) {
+    let { location: t } = e;
+    return a.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
+}
+function o(e) {
     let { location: t } = e;
     return a.useExperiment({ location: t }, { autoTrackExposure: !1 }).enabled;
 }

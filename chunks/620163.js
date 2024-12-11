@@ -1195,6 +1195,16 @@ let eU = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [ek.intl.string(ek.t['29xPVV'])],
                 parent: eL.s6.CHAT_STICKERS
             },
+            [eL.s6.CHAT_SOUNDMOJI]: {
+                section: eZ.oAB.TEXT,
+                searchableTitles: [ek.intl.string(ek.t.EHlAMT)],
+                parent: eL.s6.CHAT
+            },
+            [eL.s6.CHAT_SOUNDMOJI_AUTOCOMPLETE]: {
+                section: eZ.oAB.TEXT,
+                searchableTitles: [ek.intl.string(ek.t['CtYr+f'])],
+                parent: eL.s6.CHAT_SOUNDMOJI
+            },
             [eL.s6.CHAT_TEXT_BOX]: {
                 section: eZ.oAB.TEXT,
                 searchableTitles: [ek.intl.string(ek.t.afR0pK)],
