@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return T;
     }
 }),
     n(47120);
@@ -8,136 +8,151 @@ var l = n(200651),
     a = n(192379),
     i = n(442837),
     r = n(481060),
-    o = n(297781),
-    s = n(443487),
+    o = n(835473),
+    s = n(297781),
+    c = n(443487),
     u = n(314897),
-    c = n(594174),
-    d = n(626135),
-    m = n(5192),
+    d = n(594174),
+    m = n(626135),
+    h = n(5192),
     x = n(873128),
-    h = n(246627),
+    p = n(246627),
     C = n(709737),
-    p = n(69589),
-    v = n(531501),
-    g = n(463031),
-    f = n(981631),
-    I = n(388032),
-    j = n(51130);
-function Z() {
+    v = n(69589),
+    g = n(531501),
+    f = n(463031),
+    I = n(981631),
+    j = n(701488),
+    Z = n(388032),
+    P = n(51130);
+function L(e) {
+    let { application: t } = e,
+        n = t.getIconURL(j.Si.LARGE),
+        a =
+            null == n
+                ? null
+                : (0, l.jsx)('img', {
+                      className: P.gameIcon,
+                      src: n,
+                      'aria-hidden': !0,
+                      alt: ''
+                  });
     return (0, l.jsxs)('div', {
-        className: j.gameTitleContainer,
+        className: P.gameTitleContainer,
         children: [
-            (0, l.jsx)(r.LeagueOfLegendsBrandIcon, { size: 'xs' }),
+            a,
             (0, l.jsx)(r.Text, {
                 variant: 'text-sm/medium',
-                className: j.gameTitle,
-                children: 'League of Legends'
+                className: P.gameTitle,
+                children: t.name
             })
         ]
     });
 }
-function P(e) {
-    var t, n, v, j;
-    let P,
-        { selected: T, channel: y } = e,
-        N = y.guild_id,
-        _ = (0, x.Z)({
-            guildId: N,
-            leaderboardId: g._,
+function T(e) {
+    var t, n, g, j, P;
+    let T,
+        { selected: y, channel: _ } = e,
+        A = _.guild_id,
+        E = (0, x.Z)({
+            guildId: A,
+            leaderboardId: f._,
             intervalOffset: 0
         }),
-        { rankChanges: A } = (0, h.Z)({
-            guildId: N,
-            leaderboardId: g._,
-            intervalStart: null !== (v = null == _ ? void 0 : _.interval_start) && void 0 !== v ? v : ''
+        { rankChanges: S } = (0, p.Z)({
+            guildId: A,
+            leaderboardId: f._,
+            intervalStart: null !== (j = null == E ? void 0 : E.interval_start) && void 0 !== j ? j : ''
         }),
-        E = (0, i.e7)([u.default], () => u.default.getId()),
-        [S, R] = a.useMemo(() => {
-            let e = A.find((e) => e.userId === E),
-                t = A[0],
+        R = (0, i.e7)([u.default], () => u.default.getId()),
+        [M, k] = a.useMemo(() => {
+            let e = S.find((e) => e.userId === R),
+                t = S[0],
                 n = null != e ? e : t,
-                l = null == _ ? void 0 : _.users.find((e) => e.user_id === (null == n ? void 0 : n.userId));
+                l = null == E ? void 0 : E.users.find((e) => e.user_id === (null == n ? void 0 : n.userId));
             return [n, l];
-        }, [_, A, E]),
-        M = (0, i.e7)([c.default], () => c.default.getUser(null == S ? void 0 : S.userId)),
-        k = m.ZP.getName(N, void 0, M);
-    if (
-        (!(function (e) {
-            let { leaderboard: t, guildId: n } = e,
-                l = null == t ? void 0 : t.leaderboard_id;
-            a.useEffect(() => {
-                null != l &&
-                    d.default.track(f.rMx.LEADERBOARD_MEMBERLIST_CARD_VIEWED, {
-                        leaderboard_id: l,
-                        guild_id: n
-                    });
-            }, [l, n]);
-        })({
-            leaderboard: _,
-            guildId: N
-        }),
-        null == _)
-    )
-        return null;
-    if (0 === _.users.length || null == S || null == M) return (0, l.jsx)(L, { selected: T });
-    let { sort_by_statistic_id: w } = _.guild_settings,
-        O = null !== (j = null == R ? void 0 : null === (n = R.statistics) || void 0 === n ? void 0 : null === (t = n[w]) || void 0 === t ? void 0 : t.value) && void 0 !== j ? j : 0,
-        { currentRank: b } = S;
+        }, [E, S, R]),
+        w = (0, i.e7)([d.default], () => d.default.getUser(null == M ? void 0 : M.userId)),
+        O = h.ZP.getName(A, void 0, w);
+    !(function (e) {
+        let { leaderboard: t, guildId: n } = e,
+            l = null == t ? void 0 : t.leaderboard_id;
+        a.useEffect(() => {
+            null != l &&
+                m.default.track(I.rMx.LEADERBOARD_MEMBERLIST_CARD_VIEWED, {
+                    leaderboard_id: l,
+                    guild_id: n
+                });
+        }, [l, n]);
+    })({
+        leaderboard: E,
+        guildId: A
+    });
+    let b = (0, o.q)(null == E ? void 0 : null === (t = E.settings) || void 0 === t ? void 0 : t.application_id);
+    if (null == E || null == b) return null;
+    if (0 === E.users.length || null == M || null == w)
+        return (0, l.jsx)(N, {
+            application: b,
+            selected: y
+        });
+    let { sort_by_statistic_id: H } = E.guild_settings,
+        V = null !== (P = null == k ? void 0 : null === (g = k.statistics) || void 0 === g ? void 0 : null === (n = g[H]) || void 0 === n ? void 0 : n.value) && void 0 !== P ? P : 0,
+        { currentRank: B } = M;
     return (
-        (P =
-            S.userId === E
-                ? I.intl.formatToPlainString(I.t['eU+JxM'], { rank: b })
-                : I.intl.formatToPlainString(I.t['8BLSQ0'], {
-                      rank: b,
-                      username: k
+        (T =
+            M.userId === R
+                ? Z.intl.formatToPlainString(Z.t['eU+JxM'], { rank: B })
+                : Z.intl.formatToPlainString(Z.t['8BLSQ0'], {
+                      rank: B,
+                      username: O
                   })),
-        (0, l.jsxs)(s.Zb, {
-            selected: T,
+        (0, l.jsxs)(c.Zb, {
+            selected: y,
             children: [
-                (0, l.jsxs)(s.e$, {
+                (0, l.jsxs)(c.e$, {
                     children: [
-                        (0, l.jsx)(Z, {}),
+                        (0, l.jsx)(L, { application: b }),
                         (0, l.jsx)(r.Spacer, { size: 2 }),
-                        (0, l.jsx)(s.ll, { children: P }),
-                        (0, l.jsx)(o.Gk, {
-                            location: o.Gt.CARD,
+                        (0, l.jsx)(c.ll, { children: T }),
+                        (0, l.jsx)(s.Gk, {
+                            location: s.Gt.CARD,
                             children: (0, l.jsx)(C.DC, {
-                                value: O,
-                                statisticId: w
+                                value: V,
+                                statisticId: H
                             })
                         })
                     ]
                 }),
-                (0, l.jsx)(p.Z, {
-                    user: M,
-                    rank: b
+                (0, l.jsx)(v.Z, {
+                    user: w,
+                    rank: B
                 })
             ]
         })
     );
 }
-function L(e) {
-    let { selected: t } = e;
-    return (0, l.jsxs)(s.Zb, {
+function N(e) {
+    let { selected: t, application: n } = e;
+    return (0, l.jsxs)(c.Zb, {
         selected: t,
         children: [
-            (0, l.jsxs)(s.e$, {
+            (0, l.jsxs)(c.e$, {
                 children: [
-                    (0, l.jsx)(Z, {}),
+                    (0, l.jsx)(L, { application: n }),
                     (0, l.jsx)(r.Spacer, { size: 2 }),
-                    (0, l.jsx)(s.ll, { children: I.intl.string(I.t['t+b0DA']) }),
-                    (0, l.jsx)(o.Gk, {
-                        location: o.Gt.CARD,
-                        children: (0, l.jsx)(C.ZR, { text: I.intl.string(I.t.zX8HUl) })
+                    (0, l.jsx)(c.ll, { children: Z.intl.string(Z.t['t+b0DA']) }),
+                    (0, l.jsx)(s.Gk, {
+                        location: s.Gt.CARD,
+                        children: (0, l.jsx)(C.ZR, { text: Z.intl.string(Z.t.zX8HUl) })
                     })
                 ]
             }),
-            (0, l.jsx)(v.Z, {
+            (0, l.jsx)(g.Z, {
                 color: '#5B5A56',
                 children: (0, l.jsx)('img', {
                     src: 'https://cdn.discordapp.com/assets/content/173a83bdbe0a455bf0d251f4cc9c2c027cd3da855384773916f3eb08298a880c.png',
                     alt: '',
-                    className: j.emptyStateImage
+                    className: P.emptyStateImage
                 })
             })
         ]
