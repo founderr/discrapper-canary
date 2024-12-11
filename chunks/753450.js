@@ -41,8 +41,8 @@ var i = n(200651),
     E = n(241209),
     A = n(341176),
     L = n(312097),
-    k = n(422559),
-    R = n(703656),
+    R = n(422559),
+    k = n(703656),
     B = n(280885),
     O = n(706454),
     Z = n(314897),
@@ -125,7 +125,7 @@ function eS(e) {
         eP = a.useMemo(() => (null == ej ? void 0 : ej.slice(0, 3)), [ej]),
         eE = (0, _.e7)([V.Z], () => V.Z.getApplicationFetchState(m)),
         [eA, eL] = a.useState(void 0),
-        ek = a.useCallback(
+        eR = a.useCallback(
             (e) => {
                 if (null != m) {
                     if (e === eu.ApplicationDirectoryProfileSections.GENERAL) {
@@ -137,7 +137,7 @@ function eS(e) {
             },
             [m]
         ),
-        eR = (0, _.e7)([w.Z], () => w.Z.isFocused()),
+        ek = (0, _.e7)([w.Z], () => w.Z.isFocused()),
         eB = (0, _.e7)([O.default], () => O.default.locale),
         eO = a.useRef(m),
         eZ = (0, _.e7)([V.Z], () => {
@@ -169,7 +169,7 @@ function eS(e) {
         if (T && null != eH && 'true' === e.searchParams.get(ex)) {
             e.searchParams.delete(ex);
             let t = e.pathname + e.search;
-            (0, R.dL)(t), eD();
+            (0, k.dL)(t), eD();
         }
     }, [T, eD, eH, eZ]);
     let eF = a.useCallback(() => {
@@ -231,11 +231,11 @@ function eS(e) {
     let eY = a.useMemo(() => {
             var e;
             let t = null == eZ ? void 0 : null === (e = eZ.install_params) || void 0 === e ? void 0 : e.permissions;
-            if (null != t) return k.VY.filter((e) => p.e$(p.vB(t), e));
+            if (null != t) return R.VY.filter((e) => p.e$(p.vB(t), e));
         }, [null == eZ ? void 0 : null === (r = eZ.install_params) || void 0 === r ? void 0 : r.permissions]),
         eK = a.useCallback(
             (e) => {
-                ek(e),
+                eR(e),
                     (null == eZ ? void 0 : eZ.id) != null &&
                         H.default.track(ep.rMx.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
                             application_id: eZ.id,
@@ -243,7 +243,7 @@ function eS(e) {
                             tab_name: e
                         });
             },
-            [null == eZ ? void 0 : eZ.id, h, ek]
+            [null == eZ ? void 0 : eZ.id, h, eR]
         ),
         eq = a.useMemo(() => {
             var e, t, n;
@@ -345,8 +345,7 @@ function eS(e) {
         [e1, e6] = (0, b.Z)(!1, 1000),
         e2 = a.useCallback(() => {
             if (null != eZ)
-                H.default.track(ep.rMx.APP_SHARE_BUTTON_CLICKED, {
-                    source: 'product_page',
+                H.default.track(ep.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, {
                     application_id: eZ.id,
                     guild_id: h
                 }),
@@ -358,7 +357,7 @@ function eS(e) {
         if (T && 'true' === e.searchParams.get(eb)) {
             e.searchParams.delete(eb);
             let t = e.pathname + e.search;
-            (0, R.dL)(t), eV('product_page');
+            (0, k.dL)(t), eV('product_page');
         }
     }, [T, eV]);
     let e3 = a.useCallback(() => {
@@ -512,7 +511,7 @@ function eS(e) {
                                 themedPagination: !0,
                                 items: eq,
                                 autoplayInterval: 8000,
-                                paused: !eR,
+                                paused: !ek,
                                 videoAutoPlay: !0,
                                 onCurrentItemClick: eX,
                                 errorComponent: t,
@@ -579,7 +578,7 @@ function eS(e) {
                     )
                 )
             );
-        }, [f, eM, eZ, eA, e4, e8, eq, eR, eX, tr, m, ti, ta, eY]),
+        }, [f, eM, eZ, eA, e4, e8, eq, ek, eX, tr, m, ti, ta, eY]),
         tl = a.useMemo(() => {
             let e = [
                 {

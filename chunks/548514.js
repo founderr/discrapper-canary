@@ -10,13 +10,14 @@ var i = n(200651),
     h = n(706454),
     m = n(572004),
     p = n(135431),
-    g = n(981631),
-    f = n(388032),
-    _ = n(914045);
+    g = n(881294),
+    f = n(981631),
+    _ = n(388032),
+    E = n(914045);
 t.Z = function (e) {
     var t;
     let { application: n, size: l } = e,
-        E = r.useCallback(() => {
+        I = r.useCallback(() => {
             (0, p.LO)({
                 applicationId: n.id,
                 customInstallUrl: n.custom_install_url,
@@ -26,7 +27,7 @@ t.Z = function (e) {
                 source: 'product_page'
             });
         }, [n]),
-        I = r.useMemo(
+        C = r.useMemo(
             () =>
                 (0, p.Eb)({
                     customInstallUrl: n.custom_install_url,
@@ -35,66 +36,66 @@ t.Z = function (e) {
                 }),
             [n]
         ),
-        C = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(g.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e)),
-        v = r.useCallback(() => {
-            (0, m.JG)(C(n.id)), (0, s.showToast)((0, s.createToast)(f.intl.string(f.t['L/PwZW']), s.ToastType.SUCCESS));
+        v = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(f.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e)),
+        S = r.useCallback(() => {
+            (0, g.z)(f.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }), (0, m.JG)(v(n.id)), (0, s.showToast)((0, s.createToast)(_.intl.string(_.t['L/PwZW']), s.ToastType.SUCCESS));
         }, [n.id]),
-        S = (0, o.e7)([h.default], () => h.default.locale),
-        N = r.useCallback(() => {
+        N = (0, o.e7)([h.default], () => h.default.locale),
+        T = r.useCallback(() => {
             null != n &&
                 (0, c.Z)(
                     (0, d.G)({
                         id: n.id,
                         name: n.name,
-                        locale: S
+                        locale: N
                     })
                 );
-        }, [S, n]),
-        T = (0, u.Z)({
+        }, [N, n]),
+        b = (0, u.Z)({
             id: null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : '',
-            label: f.intl.string(f.t['FfCL+/']),
-            onSuccess: () => (0, s.showToast)((0, s.createToast)(f.intl.string(f.t.eNjAam), s.ToastType.SUCCESS))
+            label: _.intl.string(_.t['FfCL+/']),
+            onSuccess: () => (0, s.showToast)((0, s.createToast)(_.intl.string(_.t.eNjAam), s.ToastType.SUCCESS))
         }),
-        b = r.useCallback(
+        A = r.useCallback(
             (e) =>
                 (0, i.jsxs)(s.Menu, {
                     navId: 'application-directory-profile',
-                    'aria-label': f.intl.string(f.t['/7I4/P']),
+                    'aria-label': _.intl.string(_.t['/7I4/P']),
                     onClose: e,
                     onSelect: void 0,
                     children: [
                         (0, i.jsx)(s.MenuGroup, {
                             children: (0, i.jsx)(s.MenuItem, {
                                 id: 'report',
-                                label: f.intl.string(f.t.NgA5vr),
+                                label: _.intl.string(_.t.NgA5vr),
                                 color: 'danger',
-                                action: N
+                                action: T
                             })
                         }),
-                        null != T ? (0, i.jsx)(s.MenuGroup, { children: T }) : null
+                        null != b ? (0, i.jsx)(s.MenuGroup, { children: b }) : null
                     ]
                 }),
-            [T, N]
+            [b, T]
         );
     return (0, i.jsxs)('div', {
-        className: _.actionContainer,
+        className: E.actionContainer,
         children: [
             (0, i.jsx)(s.Button, {
                 size: 'sm' === l ? s.Button.Sizes.SMALL : s.Button.Sizes.MEDIUM,
                 color: s.Button.Colors.BRAND,
-                onClick: E,
-                disabled: !I,
-                children: f.intl.string(f.t.NgXl3N)
+                onClick: I,
+                disabled: !C,
+                children: _.intl.string(_.t.NgXl3N)
             }),
             m.wS
                 ? (0, i.jsx)(s.Button, {
                       look: s.Button.Looks.FILLED,
                       size: s.Button.Sizes.ICON,
                       color: s.Button.Colors.PRIMARY,
-                      className: a()(_.iconButton, { [_.small]: 'sm' === l }),
-                      innerClassName: _.innerIconButton,
-                      'aria-label': f.intl.string(f.t.z4sP5O),
-                      onClick: v,
+                      className: a()(E.iconButton, { [E.small]: 'sm' === l }),
+                      innerClassName: E.innerIconButton,
+                      'aria-label': _.intl.string(_.t.z4sP5O),
+                      onClick: S,
                       children: (0, i.jsx)(s.LinkIcon, {
                           size: 'xs',
                           color: 'currentColor'
@@ -104,7 +105,7 @@ t.Z = function (e) {
             (0, i.jsx)(s.Popout, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return b(t);
+                    return A(t);
                 },
                 position: 'left',
                 align: 'top',
@@ -114,9 +115,9 @@ t.Z = function (e) {
                         look: s.Button.Looks.FILLED,
                         size: s.Button.Sizes.ICON,
                         color: s.Button.Colors.PRIMARY,
-                        className: a()(_.iconButton, { [_.small]: 'sm' === l }),
-                        innerClassName: _.innerIconButton,
-                        'aria-label': f.intl.string(f.t.UKOtz8),
+                        className: a()(E.iconButton, { [E.small]: 'sm' === l }),
+                        innerClassName: E.innerIconButton,
+                        'aria-label': _.intl.string(_.t.UKOtz8),
                         ...e,
                         children: (0, i.jsx)(s.MoreHorizontalIcon, {
                             size: 'xs',
