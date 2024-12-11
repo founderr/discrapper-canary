@@ -32,9 +32,10 @@ function u(e) {
     });
 }
 t.ZP = function (e) {
-    let { className: t, children: n } = e;
+    let { className: t, children: n, ...i } = e;
     return (0, r.jsx)('div', {
         className: a()(t, o.wrapper),
+        ...i,
         children: n
     });
 };
