@@ -155,13 +155,14 @@ function eS(e) {
                 (null == eZ ? void 0 : eZ.id) != null &&
                     H.default.track(ep.rMx.APP_DIRECTORY_SUPPORT_SERVER_JOINED, {
                         application_id: eZ.id,
-                        guild_id: t
+                        guild_id: h,
+                        support_guild_id: t
                     });
                 let e = { page: ep.ZY5.APPLICATION_DIRECTORY };
                 await (0, U.Ub)(t, e, { setsHistorySnapshot: !1 });
             }
         } catch {}
-    }, [eZ]);
+    }, [eZ, h]);
     a.useEffect(() => {
         if (null == eZ) return;
         let e = new URL(location.href);
