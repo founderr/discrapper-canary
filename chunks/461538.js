@@ -2,6 +2,7 @@ e.exports = {
     premiumSubscriptionAccountCredit: 'premiumSubscriptionAccountCredit_b7f69f',
     fractionalPremiumAccountCredit: 'fractionalPremiumAccountCredit_b7f69f',
     accountCreditRow: 'accountCreditRow_b7f69f',
+    accountCreditsContainer: 'accountCreditsContainer_b7f69f',
     iconBackgroundTier0: 'iconBackgroundTier0_b7f69f iconBackground_b7f69f',
     iconBackgroundTier1: 'iconBackgroundTier1_b7f69f iconBackground_b7f69f',
     iconBackgroundTier2: 'iconBackgroundTier2_b7f69f iconBackground_b7f69f',

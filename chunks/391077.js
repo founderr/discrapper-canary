@@ -64,32 +64,36 @@ t.Z = function (e) {
         children: (0, i.jsxs)('div', {
             className: r()(s, u.fractionalPremiumAccountCredit),
             children: [
-                ((t = g),
-                (0, i.jsxs)('div', {
-                    className: u.accountCreditRow,
-                    children: [
-                        (0, i.jsx)('div', {
-                            className: u.iconBackgroundFractional,
-                            children: (0, i.jsx)(l.NitroWheelIcon, {
-                                size: 'md',
-                                color: 'white',
-                                className: u.iconFractional
-                            })
-                        }),
-                        (0, i.jsx)('div', {
-                            className: u.rowDetails,
-                            children: (0, i.jsx)(l.Heading, {
-                                variant: 'heading-md/semibold',
-                                children: d.intl.string(d.t.DFMPWV)
-                            })
-                        }),
-                        (0, i.jsx)(l.Text, {
-                            className: u.rowCreditCount,
-                            variant: 'text-md/semibold',
-                            children: t.length > 0 ? t : d.intl.string(d.t['B66Z+f'])
-                        })
-                    ]
-                })),
+                (0, i.jsx)('div', {
+                    className: u.accountCreditsContainer,
+                    children:
+                        ((t = g),
+                        (0, i.jsxs)('div', {
+                            className: u.accountCreditRow,
+                            children: [
+                                (0, i.jsx)('div', {
+                                    className: u.iconBackgroundFractional,
+                                    children: (0, i.jsx)(l.NitroWheelIcon, {
+                                        size: 'md',
+                                        color: 'white',
+                                        className: u.iconFractional
+                                    })
+                                }),
+                                (0, i.jsx)('div', {
+                                    className: u.rowDetails,
+                                    children: (0, i.jsx)(l.Heading, {
+                                        variant: 'heading-md/semibold',
+                                        children: d.intl.string(d.t.DFMPWV)
+                                    })
+                                }),
+                                (0, i.jsx)(l.Text, {
+                                    className: u.rowCreditCount,
+                                    variant: 'text-md/semibold',
+                                    children: t.length > 0 ? t : d.intl.string(d.t['B66Z+f'])
+                                })
+                            ]
+                        }))
+                }),
                 (0, i.jsx)(m, {
                     showChargingUpState: p,
                     rowValueText: S,
