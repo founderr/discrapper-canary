@@ -20727,7 +20727,7 @@ h3.improved_f017d0:after {
 :not(.keyboard-mode).full-motion .popover_cf8aee:focus-within,
 :not(.keyboard-mode).full-motion .popover_cf8aee:hover {
     opacity: 0;
-    animation: hoverIn_cf8aee.15s ease forwards
+    animation: fadeIn_cf8aee.15s ease forwards
 }
 
 :not(.keyboard-mode).full-motion .popover_cf8aee.visible_cf8aee.expandable_cf8aee,
@@ -20736,7 +20736,17 @@ h3.improved_f017d0:after {
     animation-delay: .45s
 }
 
-@keyframes hoverIn_cf8aee {
+:not(.keyboard-mode).full-motion .popover_cf8aee.fadeInAndOut_cf8aee {
+    opacity: 0;
+    animation: fadeIn_cf8aee.15s ease-in forwards, fadeOut_cf8aee.15s 2s ease-out forwards
+}
+
+.reduce-motion .popover_cf8aee.fadeInAndOut_cf8aee {
+    opacity: 0;
+    animation: fadeIn_cf8aee 0s ease-in forwards, fadeOut_cf8aee 0s 2s ease-out forwards
+}
+
+@keyframes fadeIn_cf8aee {
     0% {
         top: -14px;
         opacity: 0;
@@ -20751,6 +20761,24 @@ h3.improved_f017d0:after {
         top: -16px;
         opacity: 1;
         pointer-events: all
+    }
+}
+
+@keyframes fadeOut_cf8aee {
+    0% {
+        top: -16px;
+        opacity: 1;
+        pointer-events: all
+    }
+
+    1% {
+        pointer-events: none
+    }
+
+    to {
+        top: -14px;
+        opacity: 0;
+        pointer-events: none
     }
 }
 
