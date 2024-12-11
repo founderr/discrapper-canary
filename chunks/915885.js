@@ -1,35 +1,57 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return _;
     }
 });
 var i = n(200651),
     l = n(192379),
-    r = n(704215),
-    o = n(481060),
-    a = n(566840),
-    s = n(434479),
-    c = n(527379),
-    u = n(388032);
-function d(e) {
+    r = n(442837),
+    o = n(704215),
+    a = n(481060),
+    s = n(566840),
+    c = n(693546),
+    u = n(826581),
+    d = n(63568),
+    h = n(246364),
+    p = n(98493),
+    m = n(434479),
+    f = n(496675),
+    g = n(527379),
+    C = n(981631),
+    v = n(388032);
+function _(e) {
     let { guild: t, selected: n } = e,
-        d = l.useCallback(() => {
-            (0, c._X)(t.id);
+        _ = (0, d.jS)(t.id, 'Guild Sidebar'),
+        x = (0, r.e7)([f.Z], () => f.Z.can(C.Plq.KICK_MEMBERS, t)),
+        I = (0, r.e7)([u.Z], () => u.Z.getSubmittedGuildJoinRequestTotal(t.id)),
+        b = _ && x && null != I ? I : 0;
+    l.useEffect(() => {
+        x &&
+            _ &&
+            c.Z.fetchGuildJoinRequests({
+                guildId: t.id,
+                status: h.wB.SUBMITTED,
+                limit: p.p
+            });
+    }, [x, t.id, _]);
+    let E = l.useCallback(() => {
+            (0, g._X)(t.id);
         }, [t.id]),
-        h = (0, a.XL)(t.id, r.z.MEMBERS_LAUNCH_UPSELL);
+        S = (0, s.XL)(t.id, o.z.MEMBERS_LAUNCH_UPSELL);
     return (0, i.jsx)('div', {
-        ref: h,
-        children: (0, i.jsx)(s.m, {
+        ref: S,
+        children: (0, i.jsx)(m.m, {
             id: 'members-'.concat(t.id),
             renderIcon: (e) =>
-                (0, i.jsx)(o.GroupIcon, {
+                (0, i.jsx)(a.GroupIcon, {
                     size: 'md',
                     color: 'currentColor',
                     className: e
                 }),
-            text: u.intl.string(u.t.oclz3d),
+            text: v.intl.string(v.t.oclz3d),
             selected: n,
-            onClick: d
+            onClick: E,
+            trailing: b > 0 ? (0, i.jsx)(a.NumberBadge, { count: b }) : null
         })
     });
 }
