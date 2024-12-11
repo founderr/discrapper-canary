@@ -14,5 +14,6 @@ e.exports = {
     legacyPricingNotice: 'legacyPricingNotice_d439ef',
     customGiftMessageWrapper: 'customGiftMessageWrapper_d439ef',
     customGiftMessage: 'customGiftMessage_d439ef',
-    selectGiftTitle: 'selectGiftTitle_d439ef'
+    selectGiftTitle: 'selectGiftTitle_d439ef',
+    equalDistantBackButton: 'equalDistantBackButton_d439ef'
 };
