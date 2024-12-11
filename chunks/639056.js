@@ -80,7 +80,7 @@ t.Z = function (e) {
         : (0, i.jsxs)('div', {
               children: [
                   (0, i.jsx)('div', {
-                      className: r()(t, S.premiumSubscriptionAccountCredit),
+                      className: r()(t, S.premiumSubscriptionAccountCredit, S.accountCreditsContainer),
                       children: Object.keys(s).map((e) =>
                           (0, i.jsx)(
                               T,
