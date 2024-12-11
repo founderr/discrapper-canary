@@ -395,13 +395,14 @@ function k(e) {
                               })
                     ]
                 }),
-                (0, r.jsx)('div', {
-                    children: (0, r.jsxs)(c.Text, {
-                        variant: 'eyebrow',
-                        color: 'text-normal',
-                        children: [k.amount, '% off']
-                    })
-                }),
+                (null == k ? void 0 : k.amount) != null &&
+                    (0, r.jsx)('div', {
+                        children: (0, r.jsxs)(c.Text, {
+                            variant: 'eyebrow',
+                            color: 'text-normal',
+                            children: [k.amount, '% off']
+                        })
+                    }),
                 (0, r.jsxs)('div', {
                     className: v.badgeContainer,
                     children: [
