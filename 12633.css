@@ -24793,6 +24793,14 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     color: var(--interactive-hover)
 }
 
+.settingsSoundmojiClickArea_ca5acd {
+    padding: 0
+}
+
+.settingsSoundmojiClickArea_ca5acd:last-child {
+    padding-right: 0
+}
+
 .settingsIcon_ca5acd {
     width: 24px;
     height: 24px
