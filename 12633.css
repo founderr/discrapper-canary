@@ -2588,6 +2588,19 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     color: var(--interactive-active)
 }
 
+.visual-refresh .primary_e258f5,
+.visual-refresh .secondary_e258f5,
+.visual-refresh .tertiary_e258f5 {
+    background-color: var(--button-secondary-background);
+    color: var(--button-secondary-text)
+}
+
+.visual-refresh .primary_e258f5:hover,
+.visual-refresh .secondary_e258f5:hover,
+.visual-refresh .tertiary_e258f5:hover {
+    background-color: var(--button-secondary-background-hover)
+}
+
 .size24_e258f5 {
     padding: 4px;
     width: 24px;
@@ -10185,6 +10198,10 @@ div.modalHeader_c5e09c {
 
 .visual-refresh .messagesErrorBar_cf58b5 .spinnerItem_cf58b5 {
     background-color: var(--text-feedback-critical)
+}
+
+.visual-refresh .jumpToPresentBar_cf58b5 {
+    color: var(--text-default)
 }
 
 .newMessagesBar_cf58b5 {
@@ -17969,6 +17986,11 @@ span.clanTag_a31c43 {
     margin-top: -1px;
     font-weight: 600;
     border-radius: 8px
+}
+
+.visual-refresh .content_c2654d {
+    background: none;
+    padding-left: var(--space-4)
 }
 
 .isUnread_c2654d .content_c2654d {
