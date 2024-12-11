@@ -33,7 +33,7 @@ var i = t(200651),
     _ = t(981631),
     O = t(374172);
 function A(e) {
-    let { premiumSubscription: n, setPurchaseState: t, onBack: r, onNext: A, legalTermsNodeRef: Z, flashLegalTerms: R, invoiceError: w, planError: M, onPurchaseError: L, baseAnalyticsData: k, flowStartTime: F, trialId: D, planGroup: U, analyticsLocation: G, purchaseTokenAuthState: B, openInvoiceId: H, metadata: W, backButtonEligible: V, disablePurchase: K, isTrial: z = !1 } = e,
+    let { premiumSubscription: n, setPurchaseState: t, onBack: r, onNext: A, legalTermsNodeRef: Z, flashLegalTerms: R, invoiceError: w, planError: M, onPurchaseError: L, baseAnalyticsData: k, flowStartTime: F, trialId: D, planGroup: U, analyticsLocation: B, purchaseTokenAuthState: G, openInvoiceId: H, metadata: W, backButtonEligible: V, disablePurchase: K, isTrial: z = !1 } = e,
         { selectedPlan: Y, priceOptions: X, setHasAcceptedTerms: q, setPurchaseError: J, purchaseType: Q, paymentSourceId: $, paymentSources: ee, selectedSkuId: en, skusById: et, skuPricePreviewsById: ei, referralCode: el, contextMetadata: er, invoicePreview: es, inReverseTrial: ea } = (0, P.usePaymentContext)(),
         { isGift: ec, selectedGiftStyle: eo, customGiftMessage: eu, emojiConfetti: ed, soundEffect: em, giftRecipient: ep, selectedGiftingPromotionReward: ex } = (0, I.wD)(),
         eh = (0, m.a5)(Y),
@@ -70,7 +70,7 @@ function A(e) {
             setHasRedirectURL: eN,
             isGift: ec,
             baseAnalyticsData: k,
-            analyticsLocation: G,
+            analyticsLocation: B,
             analyticsLocations: ej,
             flowStartTime: F,
             subscriptionPlan: Y,
@@ -111,7 +111,7 @@ function A(e) {
                 } finally {
                     eP(!1), (0, o.K2)();
                 }
-            else B === E.I.SUCCESS && (await ew());
+            else G === E.I.SUCCESS && (await ew());
         })();
     }, [eg]),
         l.useEffect(() => {

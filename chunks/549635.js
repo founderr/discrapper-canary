@@ -4,9 +4,9 @@ t.d(n, {
     }
 });
 var i = t(200651),
-    r = t(192379),
-    a = t(120356),
-    l = t.n(a),
+    a = t(192379),
+    r = t(120356),
+    l = t.n(r),
     o = t(378409),
     s = t(124347),
     u = t(80966),
@@ -14,32 +14,32 @@ var i = t(200651),
     d = t(524444),
     h = t(52824),
     m = t(956664),
-    f = t(589530),
-    p = t(591759),
+    p = t(589530),
+    f = t(591759),
     g = t(212459),
     _ = t(427244);
 function x(e) {
-    let n = p.Z.toURLSafe(e);
+    let n = f.Z.toURLSafe(e);
     return null == n ? null : (n.searchParams.append('format', 'webp'), n.toString());
 }
-n.Z = r.memo(function (e) {
+n.Z = a.memo(function (e) {
     let n,
-        { media: t, obscured: r = !1, onContextMenu: a } = e,
-        { width: C, height: S, url: v, proxyUrl: y, alt: E, type: I, maxWidth: b, maxHeight: L, ...M } = t,
+        { media: t, obscured: a = !1, onContextMenu: r } = e,
+        { width: C, height: S, url: v, proxyUrl: E, alt: I, type: y, maxWidth: b, maxHeight: L, ...M } = t,
         { zoomed: A, setZoomed: j } = (0, g.Y)(),
         O = (function (e, n, t) {
-            return e && p.Z.isDiscordUrl(n, !0)
+            return e && f.Z.isDiscordUrl(n, !0)
                 ? (0, o.s$)(n)
                 : (0, h.q)({
                       proxyURL: t,
                       url: n
                   });
-        })(A, v, y),
+        })(A, v, E),
         { width: T, height: R } = (0, m.zp)(null != C ? C : 0, null != S ? S : 0),
         w = !(null == C || 0 === C || null == S || 0 === S);
-    if ('VIDEO' === I && w && null != y) {
+    if ('VIDEO' === y && w && null != E) {
         var N;
-        let e = x(y);
+        let e = x(E);
         if (null == e) return null;
         let n = null !== (N = t.renderLinkComponent) && void 0 !== N ? N : d.iT;
         return (0, i.jsx)(u.Z, {
@@ -52,18 +52,18 @@ n.Z = r.memo(function (e) {
             poster: e,
             naturalWidth: C,
             naturalHeight: S,
-            volume: f.FC,
-            autoMute: f.rs,
-            onVolumeChange: f.jA,
-            onMute: f.Zj,
+            volume: p.FC,
+            autoMute: p.rs,
+            onVolumeChange: p.jA,
+            onMute: p.Zj,
             renderLinkComponent: n,
-            autoPlay: !r,
-            alt: E,
-            onContextMenu: a
+            autoPlay: !a,
+            alt: I,
+            onContextMenu: r
         });
     }
     return (
-        'IMAGE' === I &&
+        'IMAGE' === y &&
             (n = w
                 ? (0, i.jsx)(s.ZP, {
                       ...M,
@@ -74,16 +74,16 @@ n.Z = r.memo(function (e) {
                       maxWidth: T,
                       maxHeight: R,
                       useFullWidth: !0,
-                      animated: !r && t.animated,
-                      autoPlay: !r,
-                      alt: E,
+                      animated: !a && t.animated,
+                      autoPlay: !a,
+                      alt: I,
                       zoomThumbnailPlaceholder: t.zoomThumbnailPlaceholder,
-                      onContextMenu: a
+                      onContextMenu: r
                   })
                 : (0, i.jsx)('img', {
                       src: O,
-                      alt: E,
-                      onContextMenu: a,
+                      alt: I,
+                      onContextMenu: r,
                       className: _.dimensionlessImage
                   })),
         null != n

@@ -175,27 +175,27 @@ function M() {
         if (!d && !!c) u(!0), N.default.track(Z.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = h.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
     }, [c, h, d]),
     c)
-        ? (0, i.jsx)(I.Z, {
-              className: a()(y.headerContainer, P.privateChannelsHeaderContainer),
-              children: (0, i.jsxs)('div', {
-                  className: y.container,
-                  onContextMenu: D,
-                  children: [
-                      (0, i.jsx)('div', {
+        ? (0, i.jsxs)('div', {
+              className: y.container,
+              onContextMenu: D,
+              children: [
+                  (0, i.jsx)(I.Z, {
+                      className: a()(y.headerContainer, P.privateChannelsHeaderContainer),
+                      children: (0, i.jsx)('div', {
                           className: y.textContainer,
                           children: (0, i.jsx)('span', {
                               className: P.headerText,
                               children: L.intl.string(L.t.vayAzs)
                           })
-                      }),
-                      (0, i.jsx)(j, {
-                          frecentApps: h,
-                          loadingAppId: n,
-                          setLoadingAppId: l,
-                          analyticsLocations: s
                       })
-                  ]
-              })
+                  }),
+                  (0, i.jsx)(j, {
+                      frecentApps: h,
+                      loadingAppId: n,
+                      setLoadingAppId: l,
+                      analyticsLocations: s
+                  })
+              ]
           })
         : null;
 }

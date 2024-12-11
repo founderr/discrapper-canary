@@ -1,18 +1,18 @@
 t.d(n, {
     Y: function () {
-        return a;
+        return r;
     },
     z: function () {
-        return r;
+        return a;
     }
 });
 var i = t(192379);
-let r = (0, i.createContext)({
+let a = (0, i.createContext)({
     zoomed: !1,
     setZoomed: () => {},
     topBarVisible: !1,
     setTopBarVisible: () => {}
 });
-function a() {
-    return (0, i.useContext)(r);
+function r() {
+    return (0, i.useContext)(a);
 }

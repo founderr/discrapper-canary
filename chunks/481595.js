@@ -106,7 +106,7 @@ function D(e) {
 }
 function U(e) {
     let { hasLegalTermsFlash: n, legalTermsNodeRef: t, onPaymentSourceChange: r, handlePaymentSourceAdd: v } = e,
-        { application: O, purchaseState: U, paymentSources: G, paymentSourceId: B, setHasAcceptedTerms: H, skusById: W, skuPricePreviewsById: V, selectedSkuId: K, isEmbeddedIAP: z, purchaseType: Y, purchasePreviewError: X, devShelfFetchState: q } = (0, Z.usePaymentContext)(),
+        { application: O, purchaseState: U, paymentSources: B, paymentSourceId: G, setHasAcceptedTerms: H, skusById: W, skuPricePreviewsById: V, selectedSkuId: K, isEmbeddedIAP: z, purchaseType: Y, purchasePreviewError: X, devShelfFetchState: q } = (0, Z.usePaymentContext)(),
         { isGift: J, giftRecipient: Q } = (0, A.wD)(),
         $ = J && (0, _.pO)(Q),
         { defaultPaymentSourceId: ee, hasFetchedPaymentSources: en } = (0, c.cj)([P.Z], () => ({
@@ -116,20 +116,20 @@ function U(e) {
     s()(null != K, 'Expected selectedSkuId');
     let et = W[K],
         ei = V[K],
-        el = null != B ? B : T.c,
+        el = null != G ? G : T.c,
         er = null != ei ? ei[el] : null;
     s()(null != et, 'SKU must exist and be fetched.'), s()(null != O, 'Application must exist.');
     let es = (0, c.e7)([h.Z, N.Z], () => N.Z.inTestModeForApplication(O.id) || h.Z.inDevModeForApplication(O.id), [O.id]),
         ea = (0, c.e7)([y.Z], () => y.Z.enabled),
         ec = a.M.EEA_COUNTRIES.has(I.Z.ipCountryCodeWithFallback),
         eo = U === R.A.PURCHASING || U === R.A.COMPLETED,
-        eu = null != B ? G[B].type : null,
+        eu = null != G ? B[G].type : null,
         ed = (0, f.ed)('SKUInvoice'),
         em = et.productLine === M.POd.COLLECTIBLES && ed;
     return (
         l.useEffect(() => {
-            en && B === ee && ee !== T.c && null == er && (0, u.x2)(et.applicationId, et.id, ee, { isGift: J });
-        }, [ee, en, B, et.applicationId, et.id, er, J]),
+            en && G === ee && ee !== T.c && null == er && (0, u.x2)(et.applicationId, et.id, ee, { isGift: J });
+        }, [ee, en, G, et.applicationId, et.id, er, J]),
         (0, i.jsxs)('div', {
             className: k.stepBody,
             children: [
@@ -202,8 +202,8 @@ function U(e) {
                             children: L.intl.string(L.t.mmDvV1)
                         }),
                         (0, i.jsx)(p.Z, {
-                            paymentSources: Object.values(G),
-                            selectedPaymentSourceId: B,
+                            paymentSources: Object.values(B),
+                            selectedPaymentSourceId: G,
                             onChange: r,
                             onPaymentSourceAdd: v,
                             hidePersonalInformation: ea

@@ -40,7 +40,7 @@ var i = t(200651),
 function L(e) {
     var n;
     let t,
-        { premiumSubscription: r, paymentSources: x, priceOptions: h, onPaymentSourceChange: T, onPaymentSourceAdd: C, planId: A, setHasAcceptedTerms: w, legalTermsNodeRef: L, hasLegalTermsFlash: B, onInvoiceError: H, planGroup: W, currencies: V, onCurrencyChange: K, hasOpenInvoice: z, purchaseState: Y, handleClose: X } = e,
+        { premiumSubscription: r, paymentSources: x, priceOptions: h, onPaymentSourceChange: T, onPaymentSourceAdd: C, planId: A, setHasAcceptedTerms: w, legalTermsNodeRef: L, hasLegalTermsFlash: G, onInvoiceError: H, planGroup: W, currencies: V, onCurrencyChange: K, hasOpenInvoice: z, purchaseState: Y, handleClose: X } = e,
         { selectedSkuId: q, defaultPlanId: J, isPremium: Q, startedPaymentFlowWithPaymentSourcesRef: $ } = (0, v.usePaymentContext)(),
         { isGift: ee } = (0, f.wD)(),
         en = h.paymentSourceId,
@@ -97,7 +97,7 @@ function L(e) {
                           priceOptions: h,
                           preventFetch: er
                       })
-                    : (0, i.jsx)(G, {
+                    : (0, i.jsx)(B, {
                           premiumSubscription: r,
                           newPlan: et,
                           planGroup: W,
@@ -165,7 +165,7 @@ function L(e) {
                     ]
                 }),
                 (0, i.jsx)(_.Z, {
-                    isActive: B,
+                    isActive: G,
                     ref: L,
                     children:
                         null != r && (0, P.R4)(r, A, W)
@@ -407,7 +407,7 @@ function U(e) {
         ]
     });
 }
-function G(e) {
+function B(e) {
     let n,
         { premiumSubscription: t, newPlan: l, planGroup: r, priceOptions: s, preventFetch: a } = e,
         { analyticsLocations: c } = (0, h.ZP)(),

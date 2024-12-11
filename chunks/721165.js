@@ -1,39 +1,39 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return x;
     }
 }),
-    t(789020);
-var i = t(200651),
-    r = t(192379),
-    o = t(442837),
-    a = t(131388),
-    l = t(171246),
-    c = t(689011),
-    d = t(931905),
-    s = t(430824),
-    u = t(563132),
-    f = t(409813),
-    p = t(586585),
-    m = t(614277),
-    b = t(750143),
-    _ = t(388032);
+    n(789020);
+var i = n(200651),
+    r = n(192379),
+    o = n(442837),
+    a = n(131388),
+    l = n(171246),
+    c = n(689011),
+    s = n(931905),
+    d = n(430824),
+    u = n(563132),
+    f = n(409813),
+    p = n(586585),
+    m = n(614277),
+    b = n(750143),
+    _ = n(388032);
 function x(e) {
-    let { handleStepChange: n, handleClose: t } = e,
+    let { handleStepChange: t, handleClose: n } = e,
         { subscriptionMetadataRequest: x, selectedSku: g, selectedStoreListing: h, application: C } = (0, u.usePaymentContext)(),
         v = (0, a.Z)(b.i),
-        S = (0, o.e7)([s.Z], () => s.Z.getGuild(null == x ? void 0 : x.guild_id)),
-        j = r.useCallback(() => n(f.h8.REVIEW), [n]);
+        S = (0, o.e7)([d.Z], () => d.Z.getGuild(null == x ? void 0 : x.guild_id)),
+        j = r.useCallback(() => t(f.h8.REVIEW), [t]);
     if (null == g) return null;
     let k = (0, l.KW)(g.flags);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(m.C3, {
                 children: v
-                    ? (0, i.jsx)(d.h, {
+                    ? (0, i.jsx)(s.h, {
                           confirmCta: _.intl.string(_.t.PBHFSk),
                           onConfirm: j,
-                          onCancel: t,
+                          onCancel: n,
                           title: _.intl.format(_.t['6n6oXF'], { tier: g.name }),
                           subtitle: k ? _.intl.string(_.t.lzAoKC) : _.intl.formatToPlainString(_.t['GqaY/v'], { guildName: null == S ? void 0 : S.name }),
                           showOpenDiscord: !1
@@ -50,7 +50,7 @@ function x(e) {
             !v &&
                 (0, i.jsx)(m.O3, {
                     children: (0, i.jsx)(p.Z, {
-                        onBack: t,
+                        onBack: n,
                         backText: _.intl.string(_.t.TQBY1N),
                         onPrimary: j,
                         primaryCTA: p.g.CONTINUE,

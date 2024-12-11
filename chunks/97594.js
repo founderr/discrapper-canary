@@ -6,9 +6,9 @@ t.r(n),
     }),
     t(47120);
 var i = t(200651),
-    r = t(192379),
-    a = t(120356),
-    l = t.n(a),
+    a = t(192379),
+    r = t(120356),
+    l = t.n(r),
     o = t(481060),
     s = t(376641),
     u = t(714338),
@@ -16,25 +16,25 @@ var i = t(200651),
     d = t(212459),
     h = t(730606),
     m = t(860153),
-    f = t(981631),
-    p = t(388032),
+    p = t(981631),
+    f = t(388032),
     g = t(176598);
 function _(e) {
-    let { onClose: n, items: t, startingIndex: a, onIndexChange: _, shouldRedactExplicitContent: x, shouldHideMediaOptions: C = !1, className: S, transitionState: v, ...y } = e,
-        [E, I] = r.useState(null != a ? a : 0),
-        [b, L] = r.useState(!1),
-        [M, A] = r.useState(!0),
-        [j, O] = r.useState(void 0);
-    r.useEffect(() => {
+    let { onClose: n, items: t, startingIndex: r, onIndexChange: _, shouldRedactExplicitContent: x, shouldHideMediaOptions: C = !1, className: S, transitionState: v, ...E } = e,
+        [I, y] = a.useState(null != r ? r : 0),
+        [b, L] = a.useState(!1),
+        [M, A] = a.useState(!0),
+        [j, O] = a.useState(void 0);
+    a.useEffect(() => {
         if (null != n)
             return (
-                c.S.subscribe(f.CkL.MEDIA_MODAL_CLOSE, n),
+                c.S.subscribe(p.CkL.MEDIA_MODAL_CLOSE, n),
                 () => {
-                    c.S.unsubscribe(f.CkL.MEDIA_MODAL_CLOSE, n);
+                    c.S.unsubscribe(p.CkL.MEDIA_MODAL_CLOSE, n);
                 }
             );
     }, [n]),
-        r.useEffect(
+        a.useEffect(
             () => (
                 v === o.ModalTransitionState.ENTERED && (u.Z.disable(), u.Z.enableTemp(s.P)),
                 v === o.ModalTransitionState.HIDDEN && (u.Z.disable(), u.Z.enableTemp(s.v)),
@@ -44,13 +44,13 @@ function _(e) {
             ),
             [v]
         );
-    let T = r.useCallback(
+    let T = a.useCallback(
             (e) => {
-                I(e), null == _ || _(e);
+                y(e), null == _ || _(e);
             },
             [_]
         ),
-        R = r.useMemo(
+        R = a.useMemo(
             () => ({
                 zoomed: b,
                 setZoomed: L,
@@ -59,15 +59,15 @@ function _(e) {
             }),
             [b, M]
         ),
-        w = r.useCallback(() => {
+        w = a.useCallback(() => {
             !M && A(!0), clearTimeout(j), O(setTimeout(() => A(!1), 1000));
         }, [M, j]),
-        N = r.useCallback(() => {
+        N = a.useCallback(() => {
             w(), null == n || n();
         }, [w, n]),
-        k = t[E];
+        k = t[I];
     return (0, i.jsx)(o.ThemeProvider, {
-        theme: f.BRd.DARK,
+        theme: p.BRd.DARK,
         children: (e) =>
             (0, i.jsx)(o.ModalRoot, {
                 hideShadow: !0,
@@ -76,12 +76,12 @@ function _(e) {
                     [g.closing]: null != v && v >= o.ModalTransitionState.EXITING
                 }),
                 transitionState: v,
-                ...y,
+                ...E,
                 size: o.ModalSize.DYNAMIC,
                 fullscreenOnMobile: !1,
                 onMouseMove: w,
                 onClick: N,
-                'aria-label': p.intl.string(p.t.AMTX3t),
+                'aria-label': f.intl.string(f.t.AMTX3t),
                 children: (0, i.jsxs)(d.z.Provider, {
                     value: R,
                     children: [
@@ -91,7 +91,7 @@ function _(e) {
                         }),
                         (0, i.jsx)(h.Z, {
                             items: t,
-                            startIndex: E,
+                            startIndex: I,
                             onIndexChange: T,
                             shouldRedactExplicitContent: x,
                             shouldHideMediaOptions: C

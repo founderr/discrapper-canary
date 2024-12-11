@@ -318,7 +318,7 @@ function $(e) {
         children: (e) => {
             let { role: t, ...n } = e;
             return (0, i.jsx)(Z.Z, {
-                className: W.channel,
+                className: o()(W.channel, W.dm),
                 role: t,
                 focusProps: {
                     ...Y,

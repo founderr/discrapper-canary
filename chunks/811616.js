@@ -47,7 +47,7 @@ function y(e) {
                 className: j.planOptionDiscount,
                 children: g.intl.format(g.t.IAybsL, { discount: (0, h.T3)(b, w / 100) })
             }),
-        G = () =>
+        B = () =>
             (C.interval === S.rV.YEAR && null != n) || (k && !Z)
                 ? C.interval === S.rV.YEAR && null != n
                     ? (0, i.jsxs)('span', {
@@ -99,7 +99,7 @@ function y(e) {
                                             [j.optionSelected]: s || A,
                                             [j.updatedOptionSelected]: I && (s || A)
                                         }),
-                                        children: [(0, f.L7)(C.interval, _, L, C.intervalCount, A, (0, f.Rd)(C.id)), A && G()]
+                                        children: [(0, f.L7)(C.interval, _, L, C.intervalCount, A, (0, f.Rd)(C.id)), A && B()]
                                     }),
                                     A &&
                                         (0, i.jsx)('div', {
@@ -113,7 +113,7 @@ function y(e) {
                                     className: j.planOptionCurrentPlan,
                                     children: ['(', g.intl.string(g.t.ymSxh4), ')']
                                 }),
-                            !A && G()
+                            !A && B()
                         ]
                     }),
                     I
