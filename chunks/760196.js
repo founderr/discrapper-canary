@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     },
     c: function () {
-        return h;
+        return _;
     }
 }),
     n(653041);
@@ -11,61 +11,57 @@ var r = n(200651),
     i = n(192379),
     a = n(442837),
     s = n(998698),
-    o = n(824203),
-    l = n(713583),
-    u = n(920455),
-    c = n(931981),
-    d = n(898188),
-    f = n(541716),
-    _ = n(407661),
-    p = n(553796);
-function h(e) {
-    let { channel: t, type: n, activeCommand: h, pendingReply: m } = e,
-        { activeCommandOption: g, activeCommandOptionStates: E } = (0, a.cj)([s.Z], () => ({
+    o = n(713583),
+    l = n(931981),
+    u = n(898188),
+    c = n(541716),
+    d = n(407661),
+    f = n(553796);
+function _(e) {
+    let { channel: t, type: n, activeCommand: _, pendingReply: p } = e,
+        { activeCommandOption: h, activeCommandOptionStates: m } = (0, a.cj)([s.Z], () => ({
             activeCommandOption: s.Z.getActiveOption(t.id),
             activeCommandOptionStates: s.Z.getOptionStates(t.id)
         })),
-        v = (0, c.e)(t),
-        I = (0, o.__)(h, t, { location: 'ChannelTextAreaBars' });
+        g = (0, l.e)(t);
     return i.useMemo(() => {
         let e = [],
             i = [];
         return (
             null != t.guild_id &&
-                n !== f.I.SIDEBAR &&
+                n !== c.I.SIDEBAR &&
                 i.push(
-                    (0, r.jsx)(d.Z, {
+                    (0, r.jsx)(u.Z, {
                         guildId: t.guild_id,
                         channel: t,
-                        className: p.newMemberActionBar
+                        className: f.newMemberActionBar
                     })
                 ),
-            null != h &&
-                (I && e.push((0, r.jsx)(u.Z, { activeCommand: h })),
+            null != _ &&
                 e.push(
-                    (0, r.jsx)(l.Z, {
-                        activeCommand: h,
-                        activeOption: null != g ? g : null,
-                        optionStates: E,
+                    (0, r.jsx)(o.Z, {
+                        activeCommand: _,
+                        activeOption: null != h ? h : null,
+                        optionStates: m,
                         channelId: t.id
                     })
-                )),
-            null != m &&
+                ),
+            null != p &&
                 e.push(
-                    (0, r.jsx)(_.Z, {
-                        reply: m,
+                    (0, r.jsx)(d.Z, {
+                        reply: p,
                         chatInputType: n
                     })
                 ),
-            v && e.push((0, r.jsx)(c.V, {})),
+            g && e.push((0, r.jsx)(l.V, {})),
             {
                 stacked: e,
                 floating: i
             }
         );
-    }, [h, g, E, t, m, v, I, n]);
+    }, [_, h, m, t, p, g, n]);
 }
-function m(e) {
+function p(e) {
     let { bars: t } = e,
         n = t.stacked.map((e, t) => (0, r.jsx)('div', { children: e }, t)),
         a = t.floating.map((e, t) => (0, r.jsx)(i.Fragment, { children: e }, t));
@@ -75,12 +71,12 @@ function m(e) {
               children: [
                   a.length > 0 &&
                       (0, r.jsx)('div', {
-                          className: p.floatingBars,
+                          className: f.floatingBars,
                           children: a
                       }),
                   n.length > 0 &&
                       (0, r.jsx)('div', {
-                          className: p.stackedBars,
+                          className: f.stackedBars,
                           children: n
                       })
               ]
