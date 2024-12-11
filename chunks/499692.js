@@ -43,7 +43,8 @@ function C(e) {
                 (0, g.z)(E.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                     collection_id: t.id,
                     item_position: i,
-                    collection_position: n
+                    collection_position: n,
+                    application_id: e
                 }),
                     l(e);
             },
