@@ -52,23 +52,21 @@ function b() {
         })
     );
 }
-function A(e) {
-    let { hasNotice: t } = e;
+function A() {
     r.useLayoutEffect(() => {
         I.ZP.setMinimumSize(S.J, S.N);
     }, []);
-    let n = (0, d.TH)('AppTitleBar'),
-        l = T((e) => e.isOpen),
-        { hasBugReporterAccess: a } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
+    let e = (0, d.TH)('AppTitleBar'),
+        t = T((e) => e.isOpen),
+        { hasBugReporterAccess: n } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     return (
         r.useLayoutEffect(() => {
             I.ZP.setMinimumSize(S.J, S.N);
         }, []),
         (0, i.jsx)(C.T, {
-            hasNotice: t,
             leading:
-                !l &&
-                n &&
+                !t &&
+                e &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(o.Clickable, {
@@ -92,7 +90,7 @@ function A(e) {
                 }),
             title: !1,
             trailing: (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(g.Z, { className: N.button }), a ? (0, i.jsx)(m.Z, { className: N.button }) : (0, i.jsx)(h.Z, { className: N.button }), (0, i.jsx)(p.Z, { className: N.button })]
+                children: [(0, i.jsx)(g.Z, { className: N.button }), n ? (0, i.jsx)(m.Z, { className: N.button }) : (0, i.jsx)(h.Z, { className: N.button }), (0, i.jsx)(p.Z, { className: N.button })]
             })
         })
     );

@@ -1,6 +1,5 @@
 e.exports = {
     bar: 'bar_a5e357',
-    barWithNotice: 'barWithNotice_a5e357',
     title: 'title_a5e357',
     leading: 'leading_a5e357',
     trailing: 'trailing_a5e357',
