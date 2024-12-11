@@ -257,7 +257,10 @@ t.ZP = i.forwardRef(function (e, t) {
                                 B
                             ),
                             ...e,
-                            onClick: ew,
+                            onClick: () => {
+                                var t;
+                                null == e || null === (t = e.onClick) || void 0 === t || t.call(e), null == ew || ew();
+                            },
                             onContextMenu: V && !eS ? el : void 0,
                             onMouseOver: () => {
                                 var t;
