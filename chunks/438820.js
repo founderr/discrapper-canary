@@ -1,47 +1,40 @@
-var i,
-    a = n(442837),
-    o = n(570140);
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let s = {
+var a,
+    i,
+    o,
+    c,
+    s = n(442837),
+    d = n(570140);
+let r = {
     canPlayWowMoment: !1,
     isFetchingWowMomentMedia: !1,
     wowMomentWumpusMediaUrl: null
 };
-class d extends (i = a.ZP.PersistedStore) {
-    initialize(e) {
-        null != e && (s = e), (s.canPlayWowMoment = !1), (s.isFetchingWowMomentMedia = !1), (s.wowMomentWumpusMediaUrl = null);
-    }
+class u extends (c = s.ZP.Store) {
     getState() {
-        return s;
+        return r;
     }
     get canPlayWowMoment() {
-        return s.canPlayWowMoment;
+        return r.canPlayWowMoment;
     }
     get isFetchingWowMomentMedia() {
-        return s.isFetchingWowMomentMedia;
+        return r.isFetchingWowMomentMedia;
     }
     get wowMomentWumpusMedia() {
-        return s.wowMomentWumpusMediaUrl;
+        return r.wowMomentWumpusMediaUrl;
     }
 }
-c(d, 'displayName', 'PurchasedItemsFestivityStore'),
-    c(d, 'persistKey', 'PurchasedItemsFestivityStore'),
-    c(d, 'migrations', [(e) => ({ ...e })]),
-    (t.Z = new d(o.Z, {
+(o = 'PurchasedItemsFestivityStore'),
+    (i = 'displayName') in (a = u)
+        ? Object.defineProperty(a, i, {
+              value: o,
+              enumerable: !0,
+              configurable: !0,
+              writable: !0
+          })
+        : (a[i] = o),
+    (t.Z = new u(d.Z, {
         LOGOUT: function () {
-            s = {
+            r = {
                 canPlayWowMoment: !1,
                 isFetchingWowMomentMedia: !1,
                 wowMomentWumpusMediaUrl: null
@@ -49,16 +42,16 @@ c(d, 'displayName', 'PurchasedItemsFestivityStore'),
         },
         PURCHASED_ITEMS_FESTIVITY_SET_CAN_PLAY_WOW_MOMENT: function (e) {
             let { value: t } = e;
-            s.canPlayWowMoment = t;
+            r.canPlayWowMoment = t;
         },
         PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA: function () {
-            s.isFetchingWowMomentMedia = !0;
+            r.isFetchingWowMomentMedia = !0;
         },
         PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_SUCCESS: function (e) {
             let { wumpusMedia: t } = e;
-            (s.wowMomentWumpusMediaUrl = t), (s.isFetchingWowMomentMedia = !1);
+            (r.wowMomentWumpusMediaUrl = t), (r.isFetchingWowMomentMedia = !1);
         },
         PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE: function () {
-            (s.isFetchingWowMomentMedia = !1), (s.canPlayWowMoment = !1);
+            (r.isFetchingWowMomentMedia = !1), (r.canPlayWowMoment = !1);
         }
     }));
