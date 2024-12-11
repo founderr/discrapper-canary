@@ -360,4 +360,5 @@ var n, r;
     (r.DEEPLINK = 'deeplink'),
     (r.HOLIDAY_COACHMARK = 'holiday coachmark'),
     (r.USER_SETTINGS_COACHMARK = 'user settings coachmark'),
+    (r.CONNECTED_ACCOUNT_RELINK_BUTTON = 'connected account relink button'),
     (t.Z = n);
