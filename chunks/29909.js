@@ -43,7 +43,7 @@ t.Z = i.memo(function (e) {
         children: (e) =>
             (0, r.jsx)(o.Clickable, {
                 ...e,
-                className: s()(m, _.size, _.gifFavoriteButton, {
+                className: s()(m, _.gifFavoriteButton, {
                     [_.selected]: v,
                     [_.showPulse]: g
                 }),
@@ -52,7 +52,10 @@ t.Z = i.memo(function (e) {
                 onDoubleClick: (e) => e.preventDefault(),
                 children: (0, r.jsx)(T, {
                     color: 'currentColor',
-                    className: _.icon
+                    className: _.icon,
+                    size: 'custom',
+                    width: 20,
+                    height: 20
                 })
             })
     });
