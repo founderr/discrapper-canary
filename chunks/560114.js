@@ -19,8 +19,8 @@ var l,
     T = n(100527),
     N = n(906732),
     C = n(835473),
-    E = n(447003),
-    f = n(471445),
+    f = n(447003),
+    E = n(471445),
     _ = n(259473),
     j = n(600164),
     Z = n(687516),
@@ -28,8 +28,8 @@ var l,
     M = n(301935),
     w = n(397195),
     b = n(427679),
-    A = n(199902),
-    U = n(439170),
+    U = n(199902),
+    A = n(439170),
     R = n(592125),
     B = n(984933),
     P = n(341165),
@@ -104,7 +104,7 @@ class eu extends (l = r.PureComponent) {
                 }),
             null != s)
         ) {
-            let e = A.Z.getStreamForUser(s, n.id),
+            let e = U.Z.getStreamForUser(s, n.id),
                 t = (0, Z.L2)(e, L.Z);
             O.default.track(X.rMx.OPEN_MODAL, {
                 type: 'Send Stream Invite',
@@ -140,7 +140,7 @@ class eu extends (l = r.PureComponent) {
     }
     renderChannelWarning() {
         let { inviteChannel: e } = this.props;
-        return (0, E.Z)(e)
+        return (0, f.Z)(e)
             ? (0, i.jsxs)('div', {
                   className: en.warningContainer,
                   children: [
@@ -166,7 +166,7 @@ class eu extends (l = r.PureComponent) {
             g = null,
             m = null;
         if (((e = o ? null : null != r ? et.intl.string(et.t['6VQaqa']) : null != s ? et.intl.formatToPlainString(et.t.ZdK3dX, { applicationName: s.name }) : null != l ? et.intl.string(et.t.JKV4FB) : (null == d ? void 0 : d.isGuildStageVoice()) ? et.intl.string(et.t.zTrsHx) : et.intl.format(et.t.NvVBJS, { name: t.toString() })), null != d)) {
-            let e = (0, f.KS)(d, t);
+            let e = (0, E.KS)(d, t);
             null != e &&
                 (m = (0, i.jsxs)('div', {
                     className: en.headerChannelContainer,
@@ -560,28 +560,28 @@ es(eu, 'defaultProps', {
 }),
     (t.default = r.forwardRef(function (e, t) {
         var n;
-        let { channel: l, guild: s, source: a, guildScheduledEvent: o, streamUserId: d, applicationId: u, transitionState: c, onClose: h, welcomeToServer: v, page: x, analyticsLocation: f } = e,
+        let { channel: l, guild: s, source: a, guildScheduledEvent: o, streamUserId: d, applicationId: u, transitionState: c, onClose: h, welcomeToServer: v, page: x, analyticsLocation: E } = e,
             [j, Z] = r.useState(x === J.RV.GUEST ? g.$.IS_GUEST_INVITE : 0),
             { analyticsLocations: y } = (0, N.ZP)(T.Z.INSTANT_INVITE_MODAL),
-            A = (0, m.e7)([R.Z, k.Z], () => {
+            U = (0, m.e7)([R.Z, k.Z], () => {
                 let e = k.Z.getVoiceChannelId();
                 if (null == e) return null;
                 let t = R.Z.getChannel(e);
                 return (null == t ? void 0 : t.guild_id) === s.id ? t : null;
             }),
-            L = null != A && !(0, E.Z)(A) && [X.t4x.GUILD_CONTEXT_MENU, X.t4x.GUILD_HEADER].includes(a),
+            L = null != U && !(0, f.Z)(U) && [X.t4x.GUILD_CONTEXT_MENU, X.t4x.GUILD_HEADER].includes(a),
             D = (0, w.Z)(s.id),
             O = (0, m.e7)(
                 [k.Z, R.Z, B.ZP],
                 () => {
-                    if (L && ((0, H.yE)(j, g.$.IS_GUEST_INVITE) || x === J.RV.GUEST)) return A;
+                    if (L && ((0, H.yE)(j, g.$.IS_GUEST_INVITE) || x === J.RV.GUEST)) return U;
                     if (x === J.RV.GUEST) return 1 === D.length ? D[0] : void 0;
                     if (null != l) return l;
                     let e = k.Z.getChannelId(),
                         t = null == e || (0, ee.AB)(e) ? void 0 : R.Z.getChannel(e);
                     return (null == t ? void 0 : t.isThread()) && (t = R.Z.getChannel(t.parent_id)), null != t ? t : B.ZP.getDefaultChannel(s.id, !0, X.Plq.CREATE_INSTANT_INVITE);
                 },
-                [L, j, x, l, s.id, A, D]
+                [L, j, x, l, s.id, U, D]
             ),
             [q, W] = r.useState(null),
             z = null != q ? q : O,
@@ -603,10 +603,10 @@ es(eu, 'defaultProps', {
                 [z, K, d, u]
             ),
             [$, et, en, el, ei] = (0, m.Wu)(
-                [V.Z, F.ZP, U.ZP],
+                [V.Z, F.ZP, A.ZP],
                 () => {
                     let e = null != z ? z.id : null;
-                    return [V.Z.getInviteSuggestionRows(), V.Z.getTotalSuggestionsCount() >= 1, V.Z.getInitialCounts(), null != l && null != z ? F.ZP.getVoiceStatesForChannel(z) : null, null != Y ? U.ZP.getProps(Y, e) : null];
+                    return [V.Z.getInviteSuggestionRows(), V.Z.getTotalSuggestionsCount() >= 1, V.Z.getInitialCounts(), null != l && null != z ? F.ZP.getVoiceStatesForChannel(z) : null, null != Y ? A.ZP.getProps(Y, e) : null];
                 },
                 [z, l, Y]
             ),
@@ -624,7 +624,7 @@ es(eu, 'defaultProps', {
                           null != ei &&
                           K !== J.Iq.EMBEDDED_APPLICATION &&
                           ei.rows.forEach((t) => {
-                              t.type === U.so.MEMBER && e.add(t.userId);
+                              t.type === A.so.MEMBER && e.add(t.userId);
                           }),
                     e
                 );
@@ -648,9 +648,9 @@ es(eu, 'defaultProps', {
             eS = null == Q ? void 0 : Q.temporary,
             eT = s.vanityURLCode,
             eN = null != eT && eT.length > 0,
-            eC = !(null == z ? void 0 : z.isGuildVocal()) && eN,
-            eE = (null == z ? void 0 : z.type) === X.d4z.GUILD_VOICE,
-            ef = (0, E.Z)(z);
+            eC = !er && !(null == z ? void 0 : z.isGuildVocal()) && eN,
+            ef = (null == z ? void 0 : z.type) === X.d4z.GUILD_VOICE,
+            eE = (0, f.Z)(z);
         !er && (null == eg ? void 0 : eg.invite_code) != null && (ex = eg.invite_code);
         let [e_, ej] = r.useState({
                 query: '',
@@ -678,7 +678,7 @@ es(eu, 'defaultProps', {
                 },
                 [e_.currentPage, eZ]
             ),
-            eM = (eE || L) && x !== J.RV.GUEST && !eC && !es && !ef,
+            eM = (ef || L) && x !== J.RV.GUEST && !eC && !es && !eE,
             { enabled: ew } = M.o.useExperiment(
                 {
                     guildId: null == s ? void 0 : s.id,
@@ -686,19 +686,20 @@ es(eu, 'defaultProps', {
                 },
                 { autoTrackExposure: eM }
             ),
-            { maxAge: eb, maxUses: eA, temporary: eU, savedMaxAge: eR } = e_,
+            { maxAge: eb, maxUses: eU, temporary: eA, savedMaxAge: eR } = e_,
             eB = r.useCallback(() => {
                 let { currentPage: e, lastPage: t } = e_;
                 e === J.RV.SETTINGS && null != t ? ey(t) : h();
             }, [ey, e_, h]),
             eP = r.useCallback(() => {
                 let e = null == z ? void 0 : z.id;
-                0 === eA && 0 === eb && !eU && eC
+                0 === eU && 0 === eb && !eA && eC
                     ? eZ({
                           networkError: void 0,
                           showVanityURL: !0
                       })
-                    : null != e &&
+                    : er &&
+                      null != e &&
                       (eZ({
                           networkError: void 0,
                           showVanityURL: !1
@@ -707,11 +708,11 @@ es(eu, 'defaultProps', {
                           e,
                           {
                               max_age: eb,
-                              max_uses: eA,
+                              max_uses: eU,
                               target_type: K,
                               target_user_id: d,
                               target_application_id: null == em ? void 0 : em.id,
-                              temporary: eU,
+                              temporary: eA,
                               flags: j
                           },
                           a
@@ -722,15 +723,15 @@ es(eu, 'defaultProps', {
                           })
                       )),
                     eb !== ea.value && eR !== ea.value && eZ({ savedMaxAge: ea.value });
-            }, [eC, z, a, null == em ? void 0 : em.id, K, d, eb, eA, eU, j, eZ, eR]),
+            }, [eC, er, z, a, null == em ? void 0 : em.id, K, d, eb, eU, eA, j, eZ, eR]),
             eV = (0, S.Z)(z),
             eG = (0, S.Z)(j),
             eL = eV !== z,
             ek = eG !== j;
         return (
             r.useEffect(() => {
-                (eL || ek) && eP();
-            }, [eP, eL, ek]),
+                !eC && (eL || ek) && eP();
+            }, [eP, eL, ek, eC]),
             (0, i.jsx)(N.Gt, {
                 value: y,
                 children: (0, i.jsx)(eu, {
@@ -752,7 +753,7 @@ es(eu, 'defaultProps', {
                     source: a,
                     welcomeToServer: v,
                     analyticsLocations: y,
-                    analyticsLocation: f,
+                    analyticsLocation: E,
                     transitionState: c,
                     onClose: h,
                     canShowVanityURL: eC,
