@@ -27,21 +27,22 @@ var i,
     A = n(151851),
     N = n(587061),
     w = n(392358),
-    j = n(314910),
-    P = n(892254),
-    R = n(706454),
-    M = n(210887),
-    O = n(740492),
-    L = n(451478),
-    k = n(358085),
-    D = n(62883),
-    U = n(998502),
-    V = n(473159),
-    F = n(928518),
-    W = n(981631),
-    B = n(388032),
-    G = n(81796);
-function z(e, t, n) {
+    j = n(540059),
+    P = n(314910),
+    R = n(892254),
+    M = n(706454),
+    O = n(210887),
+    L = n(740492),
+    k = n(451478),
+    D = n(358085),
+    U = n(62883),
+    V = n(998502),
+    F = n(473159),
+    W = n(928518),
+    B = n(981631),
+    G = n(388032),
+    z = n(81796);
+function H(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -54,11 +55,11 @@ function z(e, t, n) {
         e
     );
 }
-class H extends (i = a.Component) {
+class Y extends (i = a.Component) {
     componentDidMount() {
         let { guestWindow: e } = this.props,
             t = e.document;
-        null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), this.updateForcedColors(), (0, V.O)(e), e.addEventListener('blur', this.handleBlur), k.isPlatformEmbedded ? t.addEventListener('contextmenu', D.contextMenuCallbackNative, !1) : t.addEventListener('contextmenu', D.contextMenuCallbackWeb, !1), e.addEventListener('beforeunload', this.beforeUnload);
+        null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), this.updateForcedColors(), (0, F.O)(e), e.addEventListener('blur', this.handleBlur), D.isPlatformEmbedded ? t.addEventListener('contextmenu', U.contextMenuCallbackNative, !1) : t.addEventListener('contextmenu', U.contextMenuCallbackWeb, !1), e.addEventListener('beforeunload', this.beforeUnload);
     }
     componentDidUpdate(e) {
         let { title: t, fontScale: n, locale: i, clientThemesCSS: l } = this.props;
@@ -68,7 +69,7 @@ class H extends (i = a.Component) {
         let { guestWindow: e } = this.props,
             t = e.document;
         e.removeEventListener('blur', this.handleBlur),
-            k.isPlatformEmbedded ? t.removeEventListener('contextmenu', D.contextMenuCallbackNative) : t.removeEventListener('contextmenu', D.contextMenuCallbackWeb),
+            D.isPlatformEmbedded ? t.removeEventListener('contextmenu', U.contextMenuCallbackNative) : t.removeEventListener('contextmenu', U.contextMenuCallbackWeb),
             (0, d.j)(() =>
                 f.useModalsStore.setState((e) => ({
                     ...e,
@@ -115,17 +116,18 @@ class H extends (i = a.Component) {
         n.document.documentElement.classList.toggle('disable-forced-colors', !e && 'active' === t);
     }
     render() {
-        let { theme: e, forcedColors: t, focused: n, appFocused: i, children: a, windowKey: r, mouseModeEnabled: o, reducedMotionEnabled: c, fontScaleClass: d, withTitleBar: m, guestWindow: h, clientThemesClassName: S, contentClassName: I, appWrapperClassName: _ } = this.props,
-            x = (0, k.getPlatform)(),
-            E = s()(d, {
-                'mouse-mode': o,
-                'reduce-motion': c,
-                'full-motion': !c,
-                'app-focused': n || i
+        let { theme: e, forcedColors: t, focused: n, appFocused: i, children: a, windowKey: r, isRefreshEnabled: o, mouseModeEnabled: c, reducedMotionEnabled: d, fontScaleClass: m, withTitleBar: h, guestWindow: S, clientThemesClassName: I, contentClassName: _, appWrapperClassName: x } = this.props,
+            E = (0, D.getPlatform)(),
+            C = s()(m, {
+                'mouse-mode': c,
+                'reduce-motion': d,
+                'full-motion': !d,
+                'app-focused': n || i,
+                'visual-refresh': o
             });
         return (0, l.jsx)(u.VK, {
             children: (0, l.jsx)(
-                P.Z,
+                R.Z,
                 {
                     children: (0, l.jsx)(f.ThemeProvider, {
                         theme: e,
@@ -134,7 +136,7 @@ class H extends (i = a.Component) {
                                 children: (0, l.jsx)('div', {
                                     'data-popout-root': !0,
                                     ref: this.rootRef,
-                                    className: s()(e, (0, Z.Z)(), E, S, _),
+                                    className: s()(e, (0, Z.Z)(), C, I, x),
                                     children: (0, l.jsx)(f.FocusRingScope, {
                                         containerRef: this.rootRef,
                                         children: (0, l.jsx)(v.Z, {
@@ -142,30 +144,30 @@ class H extends (i = a.Component) {
                                                 children: [
                                                     (0, l.jsx)(b.Co, {}),
                                                     (0, l.jsx)(g.Wu, {
-                                                        appContext: W.IlC.POPOUT,
-                                                        renderWindow: h,
-                                                        children: (0, l.jsxs)(j.yP, {
+                                                        appContext: B.IlC.POPOUT,
+                                                        renderWindow: S,
+                                                        children: (0, l.jsxs)(P.yP, {
                                                             children: [
                                                                 (0, l.jsxs)('div', {
-                                                                    className: G.popout,
+                                                                    className: z.popout,
                                                                     children: [
-                                                                        m && null != x
+                                                                        h && null != E
                                                                             ? (0, l.jsx)(A.Z, {
                                                                                   focused: n,
-                                                                                  type: x,
+                                                                                  type: E,
                                                                                   windowKey: r,
                                                                                   macOSFrame: !0
                                                                               })
                                                                             : null,
                                                                         (0, l.jsx)('div', {
-                                                                            className: s()(G.content, I),
+                                                                            className: s()(z.content, _),
                                                                             children: a
                                                                         })
                                                                     ]
                                                                 }),
                                                                 (0, l.jsx)(f.Modals, {}),
                                                                 (0, l.jsx)(p.Z, {}),
-                                                                (0, l.jsx)(j.Un, {})
+                                                                (0, l.jsx)(P.Un, {})
                                                             ]
                                                         })
                                                     })
@@ -183,76 +185,78 @@ class H extends (i = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            z(this, 'rootRef', a.createRef()),
-            z(this, '_cleanupWindowActionCreators', void 0),
-            z(this, 'beforeUnload', (e) => {
+            H(this, 'rootRef', a.createRef()),
+            H(this, '_cleanupWindowActionCreators', void 0),
+            H(this, 'beforeUnload', (e) => {
                 let t = () => {
-                    F.Z.unmountWindow(this.props.windowKey), k.isPlatformEmbedded && U.ZP.close(this.props.windowKey);
+                    W.Z.unmountWindow(this.props.windowKey), D.isPlatformEmbedded && V.ZP.close(this.props.windowKey);
                 };
-                if (this.props.connectedToEmbeddedActivity && !O.ZP.disableEmbeddedActivityPopOutAlert) {
-                    if (!k.isPlatformEmbedded) return;
+                if (this.props.connectedToEmbeddedActivity && !L.ZP.disableEmbeddedActivityPopOutAlert) {
+                    if (!D.isPlatformEmbedded) return;
                     (0, S.R)()
                         ? t()
-                        : ((e.returnValue = B.intl.string(B.t['bST/Y2'])),
+                        : ((e.returnValue = G.intl.string(G.t['bST/Y2'])),
                           (0, _.Z)(() => {
                               t();
                           }));
                 } else t();
             }),
-            z(this, 'handleBlur', () => {
+            H(this, 'handleBlur', () => {
                 var e, t;
                 null === (e = (t = this.props).onBlur) || void 0 === e || e.call(t);
             });
     }
 }
-z(H, 'defaultProps', { withTitleBar: !0 });
-let Y = a.forwardRef(function (e, t) {
-    let { guestWindow: n, focused: i } = (0, m.cj)([F.Z], () => ({
-        guestWindow: F.Z.getWindow(e.windowKey),
-        focused: F.Z.getWindowFocused(e.windowKey)
+H(Y, 'defaultProps', { withTitleBar: !0 });
+let J = a.forwardRef(function (e, t) {
+    let { guestWindow: n, focused: i } = (0, m.cj)([W.Z], () => ({
+        guestWindow: W.Z.getWindow(e.windowKey),
+        focused: W.Z.getWindowFocused(e.windowKey)
     }));
     c()(null != n, 'Missing guestWindow reference');
-    let a = (0, m.e7)([L.Z], () => L.Z.isFocused()),
-        { locale: r, theme: s } = (0, m.cj)([M.Z, R.default], () => ({
-            locale: R.default.locale,
-            theme: M.Z.theme
+    let a = (0, j.Q3)('PopoutWindow'),
+        r = (0, m.e7)([k.Z], () => k.Z.isFocused()),
+        { locale: s, theme: o } = (0, m.cj)([O.Z, M.default], () => ({
+            locale: M.default.locale,
+            theme: O.Z.theme
         })),
-        o = (0, m.e7)([h.Z], () => (h.Z.useForcedColors ? 'yes' : 'no')),
-        { accessibilitySettings: u, appWrapperClassName: d } = (0, T.I)(),
-        p = (0, m.e7)([I.ZP], () => null != e.channelId && null !== I.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
+        u = (0, m.e7)([h.Z], () => (h.Z.useForcedColors ? 'yes' : 'no')),
+        { accessibilitySettings: d, appWrapperClassName: p } = (0, T.I)(),
+        g = (0, m.e7)([I.ZP], () => null != e.channelId && null !== I.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
     (0, N.Z)(n, !1);
-    let g = (0, w.Z)(n, i),
-        { analyticsLocations: v } = (0, E.ZP)(x.Z.POPOUT_WINDOW),
-        { clientThemesClassName: S, clientThemesCSS: _ } = (0, C.ZP)();
+    let v = (0, w.Z)(n, i),
+        { analyticsLocations: S } = (0, E.ZP)(x.Z.POPOUT_WINDOW),
+        { clientThemesClassName: _, clientThemesCSS: Z } = (0, C.ZP)();
     return null == n
         ? null
         : (0, l.jsx)(f.DnDProvider, {
               children: (0, l.jsx)(E.Gt, {
-                  value: v,
-                  children: (0, l.jsx)(H, {
+                  value: S,
+                  children: (0, l.jsx)(Y, {
                       ref: t,
                       ...e,
                       guestWindow: n,
                       focused: i,
-                      appFocused: a,
-                      locale: r,
-                      theme: s,
-                      forcedColors: o,
-                      useForcedColors: u.useForcedColors,
-                      systemForcedColors: u.systemForcedColors,
-                      fontScale: u.fontScale,
-                      keyboardModeEnabled: u.keyboardModeEnabled,
-                      mouseModeEnabled: g,
-                      reducedMotionEnabled: u.useReducedMotion,
-                      connectedToEmbeddedActivity: p,
-                      fontScaleClass: u.fontScaleClass,
-                      saturation: u.saturation,
-                      alwaysShowLinkDecorations: u.alwaysShowLinkDecorations,
-                      clientThemesClassName: S,
-                      clientThemesCSS: _,
-                      appWrapperClassName: d
+                      appFocused: r,
+                      locale: s,
+                      theme: o,
+                      forcedColors: u,
+                      useForcedColors: d.useForcedColors,
+                      systemForcedColors: d.systemForcedColors,
+                      fontScale: d.fontScale,
+                      keyboardModeEnabled: d.keyboardModeEnabled,
+                      mouseModeEnabled: v,
+                      reducedMotionEnabled: d.useReducedMotion,
+                      connectedToEmbeddedActivity: g,
+                      fontScaleClass: d.fontScaleClass,
+                      saturation: d.saturation,
+                      alwaysShowLinkDecorations: d.alwaysShowLinkDecorations,
+                      clientThemesClassName: _,
+                      clientThemesCSS: Z,
+                      appWrapperClassName: p,
+                      isRefreshEnabled: a
                   })
               })
           });
 });
-t.Z = Y;
+t.Z = J;
