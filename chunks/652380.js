@@ -280,7 +280,8 @@ function Z() {
             : (0, S.openQuestsRewardCodeModal)({
                   questId: Q.id,
                   location: g.jn.GIFT_INVENTORY_FOR_YOU,
-                  preview: !0
+                  preview: !0,
+                  previewQuest: Q
               });
     }
     let ec = a.useMemo(() => {
