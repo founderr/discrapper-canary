@@ -60,7 +60,6 @@ function W(e) {
         eF = (0, N.Ng)(),
         ew = null != S && !eb && (0, N.Wp)(eF, S),
         [ej, eH] = l.useState({
-            continue_session_initial_step: eo,
             load_id: eE.loadId,
             payment_type: H.Zuq[ex],
             location: null != n ? n : a,
@@ -94,6 +93,7 @@ function W(e) {
         l.useEffect(() => {
             (0, C.U)({
                 ...ej,
+                continue_session_initial_step: eo,
                 has_saved_payment_source: eA
             });
         }, []),
@@ -136,6 +136,7 @@ function W(e) {
                     x.default.track(H.rMx.PAYMENT_FLOW_LOADED, {
                         ...ej,
                         initial_step: null != o ? o : e,
+                        continue_session_initial_step: eo,
                         has_saved_payment_source: eA
                     });
                     return;
@@ -149,7 +150,7 @@ function W(e) {
                     flow_duration_ms: r - eE.startTime
                 });
             },
-            [eL, et, eS, em, eT, ej, eW, eE.startTime, eB, d, er, eV, eA]
+            [eL, et, eS, em, eT, eo, ej, eW, eE.startTime, eB, d, er, eV, eA]
         );
     (0, h.bp)(eT, ep, eY, ec), (0, y.dZ)(eT, es, ec), (0, g.p)(eT, eN, eY), (0, _.Z)(eV), (0, A.w)(eh, () => R(!1), eb), (0, h.D6)(ep);
     let ez = (0, F.U)({
