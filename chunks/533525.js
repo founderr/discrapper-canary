@@ -7,9 +7,10 @@ var n = s(442837),
     r = s(276444),
     i = s(912244),
     a = s(232076);
-let o = (e) => {
-    let { enabled: t, eligibleToFetch: s } = (0, i.N)(e);
-    (0, a.B)(e, !s);
-    let o = (0, n.e7)([r.Z], () => r.Z.getIsEligibleToSendReferrals());
-    return t && o;
+let o = function (e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        { enabled: s, eligibleToFetch: o } = (0, i.N)(e);
+    (0, a.B)(e, !o || t);
+    let l = (0, n.e7)([r.Z], () => r.Z.getIsEligibleToSendReferrals());
+    return s && l;
 };
