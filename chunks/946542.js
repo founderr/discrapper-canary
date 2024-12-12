@@ -1,48 +1,46 @@
 var i = n(200651),
     r = n(192379),
-    l = n(442837),
-    a = n(481060),
-    o = n(674588),
-    s = n(303383),
-    c = n(924489),
-    d = n(125909),
-    u = n(824606),
-    h = n(768581),
-    m = n(388032),
-    p = n(69812);
-function g(e) {
-    var t, n, l;
-    let { application: o, onSelectApplication: s } = e,
-        d = (0, u.Z)({ application: o }),
-        m = null === (t = o.categories) || void 0 === t ? void 0 : t[0],
+    l = n(481060),
+    a = n(303383),
+    o = n(924489),
+    s = n(125909),
+    c = n(824606),
+    d = n(768581),
+    u = n(388032),
+    h = n(69812);
+function m(e) {
+    var t, n, a;
+    let { application: s, onSelectApplication: u } = e,
+        m = (0, c.Z)({ application: s }),
+        p = null === (t = s.categories) || void 0 === t ? void 0 : t[0],
         g = r.useMemo(
             () =>
-                h.ZP.getApplicationIconURL({
-                    id: o.id,
-                    icon: o.icon,
+                d.ZP.getApplicationIconURL({
+                    id: s.id,
+                    icon: s.icon,
                     size: 48
                 }),
-            [o]
+            [s]
         ),
         f = r.useCallback(() => {
-            s(o.id);
-        }, [s, o.id]);
-    return (0, i.jsxs)(a.Clickable, {
+            u(s.id);
+        }, [u, s.id]);
+    return (0, i.jsxs)(l.Clickable, {
         onClick: f,
-        className: p.appContainer,
+        className: h.appContainer,
         children: [
             (0, i.jsxs)('div', {
-                className: p.appHeader,
+                className: h.appHeader,
                 children: [
                     (0, i.jsx)('img', {
                         src: g,
                         alt: '',
-                        className: p.avatar,
+                        className: h.avatar,
                         height: 48,
                         width: 48
                     }),
                     (0, i.jsxs)('div', {
-                        className: p.titleContainer,
+                        className: h.titleContainer,
                         children: [
                             (0, i.jsx)('div', {
                                 style: {
@@ -50,76 +48,70 @@ function g(e) {
                                     minWidth: 0,
                                     overflow: 'hidden'
                                 },
-                                children: (0, i.jsx)(a.Heading, {
+                                children: (0, i.jsx)(l.Heading, {
                                     variant: 'heading-md/semibold',
                                     color: 'header-primary',
-                                    className: p.appName,
-                                    children: o.name
+                                    className: h.appName,
+                                    children: s.name
                                 })
                             }),
-                            null != m
-                                ? (0, i.jsx)(a.Text, {
-                                      className: p.appCategory,
+                            null != p
+                                ? (0, i.jsx)(l.Text, {
+                                      className: h.appCategory,
                                       variant: 'text-xs/medium',
                                       color: 'text-muted',
-                                      children: m.name
+                                      children: p.name
                                   })
                                 : null
                         ]
                     })
                 ]
             }),
-            (0, i.jsx)(a.Text, {
-                className: p.appDescription,
+            (0, i.jsx)(l.Text, {
+                className: h.appDescription,
                 variant: 'text-sm/medium',
                 color: 'header-secondary',
                 lineClamp: 2,
-                children: null !== (l = null === (n = o.directory_entry) || void 0 === n ? void 0 : n.short_description) && void 0 !== l ? l : o.description
+                children: null !== (a = null === (n = s.directory_entry) || void 0 === n ? void 0 : n.short_description) && void 0 !== a ? a : s.description
             }),
-            (0, i.jsx)(c.Z, {
-                application: o,
+            (0, i.jsx)(o.Z, {
+                application: s,
                 textVariant: 'text-xs/medium',
-                mutualGuilds: d,
+                mutualGuilds: m,
                 mutualGuildShownMax: 3,
-                guildIconSize: c.x.SMALL,
+                guildIconSize: o.x.SMALL,
                 compact: !0
             })
         ]
     });
 }
 t.Z = function (e) {
-    let { application: t, onSelectApplication: n } = e,
-        c = (0, l.e7)([s.Z], () => s.Z.getFetchState({ applicationId: t.id })),
-        u = (0, l.e7)([s.Z], () => s.Z.getSimilarApplications({ applicationId: t.id }));
-    r.useEffect(() => {
-        o.T4({ applicationId: t.id });
-    }, [t.id]);
-    let h = r.useMemo(() => (null == u ? void 0 : u.applications.slice(0, 3)), [u]);
-    return c !== s.M.FETCHING && (null == h || 0 === h.length)
+    let { fetchState: t, similarApplications: n, onSelectApplication: r } = e;
+    return t !== a.M.FETCHING && (null == n || 0 === n.length)
         ? null
         : (0, i.jsxs)('div', {
-              className: p.sectionContainer,
+              className: h.sectionContainer,
               children: [
-                  (0, i.jsx)('div', { className: p.divider }),
-                  (0, i.jsx)(a.Heading, {
+                  (0, i.jsx)('div', { className: h.divider }),
+                  (0, i.jsx)(l.Heading, {
                       variant: 'heading-sm/semibold',
                       color: 'header-primary',
-                      className: p.sectionHeader,
-                      children: m.intl.string(m.t.E8wCnp)
+                      className: h.sectionHeader,
+                      children: u.intl.string(u.t.E8wCnp)
                   }),
-                  (0, i.jsx)(d.Z, {
-                      loading: c === s.M.FETCHING,
+                  (0, i.jsx)(s.Z, {
+                      loading: t === a.M.FETCHING,
                       children: (0, i.jsx)('div', {
-                          className: p.contentContainer,
+                          className: h.contentContainer,
                           children:
-                              null == h
+                              null == n
                                   ? void 0
-                                  : h.map((e) =>
+                                  : n.map((e) =>
                                         (0, i.jsx)(
-                                            g,
+                                            m,
                                             {
                                                 application: e,
-                                                onSelectApplication: n
+                                                onSelectApplication: r
                                             },
                                             e.id
                                         )

@@ -4766,6 +4766,7 @@ let on = Object.freeze({
     (ah.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED = 'app_directory_profile_embed_url_clicked'),
     (ah.APP_DIRECTORY_PROFILE_EMBED_SENT = 'app_directory_profile_embed_sent'),
     (ah.APP_DIRECTORY_PAGE_SCROLLED = 'app_directory_page_scrolled'),
+    (ah.APP_DIRECTORY_INSTALL_CLICKED = 'app_directory_install_clicked'),
     (ah.POPULAR_CHANNEL_CLICKED = 'popular_channel_clicked'),
     (ah.URL_CLICKED = 'url_clicked'),
     (ah.LINK_CLICKED = 'link_clicked'),

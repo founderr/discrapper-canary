@@ -18,14 +18,15 @@ t.Z = function (e) {
     var t;
     let { application: n, size: l } = e,
         I = r.useCallback(() => {
-            (0, p.LO)({
-                applicationId: n.id,
-                customInstallUrl: n.custom_install_url,
-                installParams: n.install_params,
-                integrationTypesConfig: n.integration_types_config,
-                guildId: void 0,
-                source: 'product_page'
-            });
+            (0, g.z)(f.rMx.APP_DIRECTORY_INSTALL_CLICKED, { application_id: n.id }),
+                (0, p.LO)({
+                    applicationId: n.id,
+                    customInstallUrl: n.custom_install_url,
+                    installParams: n.install_params,
+                    integrationTypesConfig: n.integration_types_config,
+                    guildId: void 0,
+                    source: 'product_page'
+                });
         }, [n]),
         C = r.useMemo(
             () =>
