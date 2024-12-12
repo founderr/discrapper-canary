@@ -24,23 +24,32 @@ function l(e, n, r) {
     (e[(e.UNKNOWN = 0)] = 'UNKNOWN'), (e[(e.PENDING = 1)] = 'PENDING'), (e[(e.DONE = 2)] = 'DONE');
 })(i || (i = {}));
 let u = 0,
-    c = null;
-function d(e) {
+    c = null,
+    d = null,
+    f = null;
+function _(e) {
     (u = 1), (c = e.loadId);
 }
-function f(e) {
-    c === e.loadId && (u = 2);
+function h(e) {
+    var n, r;
+    if (c === e.loadId) (d = null !== (n = e.skuId) && void 0 !== n ? n : null), (f = null !== (r = e.skuSubscriptionPlanId) && void 0 !== r ? r : null), (u = 2);
 }
-class _ extends (a = s.ZP.Store) {
+class p extends (a = s.ZP.Store) {
     get browserCheckoutState() {
         return u;
     }
     get loadId() {
         return c;
     }
+    get skuId() {
+        return d;
+    }
+    get planId() {
+        return f;
+    }
 }
-l(_, 'displayName', 'BrowserCheckoutStateStore'),
-    (n.Z = new _(o.Z, {
-        USER_PAYMENT_BROWSER_CHECKOUT_STARTED: d,
-        USER_PAYMENT_BROWSER_CHECKOUT_DONE: f
+l(p, 'displayName', 'BrowserCheckoutStateStore'),
+    (n.Z = new p(o.Z, {
+        USER_PAYMENT_BROWSER_CHECKOUT_STARTED: _,
+        USER_PAYMENT_BROWSER_CHECKOUT_DONE: h
     }));

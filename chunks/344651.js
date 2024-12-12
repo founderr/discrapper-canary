@@ -1125,7 +1125,9 @@ H(
     j(['USER_PAYMENT_BROWSER_CHECKOUT_DONE'], (e) => {
         W({
             type: 'USER_PAYMENT_BROWSER_CHECKOUT_DONE',
-            loadId: e.load_id
+            loadId: e.load_id,
+            skuId: e.sku_id,
+            skuSubscriptionPlanId: e.sku_subscription_plan_id
         });
     }),
     j(['USER_PAYMENT_CLIENT_ADD'], (e) => {
